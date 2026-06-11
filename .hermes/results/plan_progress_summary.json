@@ -1,0 +1,40 @@
+{
+  "phase_1": {
+    "discovery_artifacts_present": {
+      "available_skills.json": true,
+      "phase1_top50_candidates.md": true,
+      "installed_skill_names.txt": true
+    },
+    "batch1_skills": [
+      "subagent-driven-development",
+      "fastmcp",
+      "docker-management",
+      "watchers",
+      "inference-sh-cli",
+      "scrapling",
+      "web-pentest",
+      "rest-graphql-debug",
+      "guidance",
+      "instructor"
+    ],
+    "installed_in_batch1": [
+      "fastmcp",
+      "docker-management",
+      "inference-sh-cli",
+      "guidance",
+      "instructor"
+    ],
+    "not_installed_in_batch1": [
+      "subagent-driven-development",
+      "watchers",
+      "scrapling",
+      "web-pentest",
+      "rest-graphql-debug"
+    ]
+  },
+  "phase_2": {
+    "install_results_present": false,
+    "note": "No .hermes/results/skills_install_batch1.json found"
+  },
+  "phase_3_to_9": "Not started"
+}

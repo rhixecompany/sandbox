@@ -1,0 +1,352 @@
+[
+  {
+    "name": "antigravity-cli",
+    "identifier": "official/autonomous-ai-agents\\antigravity-cli",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Operate the Antigravity CLI (agy): plugins, auth, sandbox."
+  },
+  {
+    "name": "blackbox",
+    "identifier": "official/autonomous-ai-agents\\blackbox",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Delegate coding tasks to Blackbox AI CLI agent. Multi-model agent with built-in judge that runs tasks through multiple LLMs and picks the best result. Requires the blackbox CLI and a Blackbox AI API k"
+  },
+  {
+    "name": "grok",
+    "identifier": "official/autonomous-ai-agents\\grok",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Delegate coding to xAI Grok Build CLI (features, PRs)."
+  },
+  {
+    "name": "honcho",
+    "identifier": "official/autonomous-ai-agents\\honcho",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Configure and use Honcho memory with Hermes -- cross-session user modeling, multi-profile peer isolation, observation config, dialectic reasoning, session summaries, and context budget enforcement. Us"
+  },
+  {
+    "name": "openhands",
+    "identifier": "official/autonomous-ai-agents\\openhands",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Delegate coding to OpenHands CLI (model-agnostic, LiteLLM)."
+  },
+  {
+    "name": "evm",
+    "identifier": "official/blockchain\\evm",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Read-only EVM client: wallets, tokens, gas across 8 chains."
+  },
+  {
+    "name": "hyperliquid",
+    "identifier": "official/blockchain\\hyperliquid",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Hyperliquid market data, account history, trade review."
+  },
+  {
+    "name": "solana",
+    "identifier": "official/blockchain\\solana",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Query Solana blockchain data with USD pricing \u2014 wallet balances, token portfolios with values, transaction details, NFTs, whale detection, and live network stats. Uses Solana RPC + CoinGecko. No API k"
+  },
+  {
+    "name": "one-three-one-rule",
+    "identifier": "official/communication\\one-three-one-rule",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Structured decision-making framework for technical proposals and trade-off analysis. When the user faces a choice between multiple approaches (architecture decisions, tool selection, refactoring strat"
+  },
+  {
+    "name": "baoyu-article-illustrator",
+    "identifier": "official/creative\\baoyu-article-illustrator",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Article illustrations: type \u00d7 style \u00d7 palette consistency."
+  },
+  {
+    "name": "baoyu-comic",
+    "identifier": "official/creative\\baoyu-comic",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Knowledge comics (\u77e5\u8bc6\u6f2b\u753b): educational, biography, tutorial."
+  },
+  {
+    "name": "blender-mcp",
+    "identifier": "official/creative\\blender-mcp",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Control Blender directly from Hermes via socket connection to the blender-mcp addon. Create 3D objects, materials, animations, and run arbitrary Blender Python (bpy) code. Use when user wants to creat"
+  },
+  {
+    "name": "concept-diagrams",
+    "identifier": "official/creative\\concept-diagrams",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Generate flat, minimal light/dark-aware SVG diagrams as standalone HTML files, using a unified educational visual language with 9 semantic color ramps, sentence-case typography, and automatic dark mod"
+  },
+  {
+    "name": "ideation",
+    "identifier": "official/creative\\creative-ideation",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Generate project ideas via creative constraints."
+  },
+  {
+    "name": "hyperframes",
+    "identifier": "official/creative\\hyperframes",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head videos, audio-reactive visuals, and shader transitions using HyperFrames. HTML is the source of trut"
+  },
+  {
+    "name": "kanban-video-orchestrator",
+    "identifier": "official/creative\\kanban-video-orchestrator",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when the user wants to make ANY video \u2014 narrative film, product/marketing, music video, explainer, ASCII/"
+  },
+  {
+    "name": "meme-generation",
+    "identifier": "official/creative\\meme-generation",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Generate real meme images by picking a template and overlaying text with Pillow. Produces actual .png meme files."
+  },
+  {
+    "name": "pixel-art",
+    "identifier": "official/creative\\pixel-art",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Pixel art w/ era palettes (NES, Game Boy, PICO-8)."
+  },
+  {
+    "name": "inference-sh-cli",
+    "identifier": "official/devops\\cli",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Run 150+ AI apps via inference.sh CLI (infsh) \u2014 image generation, video creation, LLMs, search, 3D, social automation. Uses the terminal tool. Triggers: inference.sh, infsh, ai apps, flux, veo, image "
+  },
+  {
+    "name": "docker-management",
+    "identifier": "official/devops\\docker-management",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Manage Docker containers, images, volumes, networks, and Compose stacks \u2014 lifecycle ops, debugging, cleanup, and Dockerfile optimization."
+  },
+  {
+    "name": "hermes-s6-container-supervision",
+    "identifier": "official/devops\\hermes-s6-container-supervision",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Modify, debug, or extend the s6-overlay supervision tree inside the Hermes Agent Docker image \u2014 adding new services, debugging profile gateways, understanding the Architecture B main-program pattern."
+  },
+  {
+    "name": "pinggy-tunnel",
+    "identifier": "official/devops\\pinggy-tunnel",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Zero-install localhost tunnels over SSH via Pinggy."
+  },
+  {
+    "name": "watchers",
+    "identifier": "official/devops\\watchers",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Poll RSS, JSON APIs, and GitHub with watermark dedup."
+  },
+  {
+    "name": "adversarial-ux-test",
+    "identifier": "official/dogfood\\adversarial-ux-test",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Roleplay the most difficult, tech-resistant user for your product. Browse the app as that persona, find every UX pain point, then filter complaints through a pragmatism layer to separate real problems"
+  },
+  {
+    "name": "agentmail",
+    "identifier": "official/email\\agentmail",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Give the agent its own dedicated email inbox via AgentMail. Send, receive, and manage email autonomously using agent-owned email addresses (e.g. hermes-agent@agentmail.to)."
+  },
+  {
+    "name": "3-statement-model",
+    "identifier": "official/finance\\3-statement-model",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A roll-forwards, debt schedule, and the plugs that make cash and retained earnings tie. Pairs with exc"
+  },
+  {
+    "name": "comps-analysis",
+    "identifier": "official/finance\\comps-analysis",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build comparable company analysis in Excel \u2014 operating metrics, valuation multiples, statistical benchmarking vs peer sets. Pairs with excel-author. Use for public-company valuation, IPO pricing, sect"
+  },
+  {
+    "name": "dcf-model",
+    "identifier": "official/finance\\dcf-model",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build institutional-quality DCF valuation models in Excel \u2014 revenue projections, FCF build, WACC, terminal value, Bear/Base/Bull scenarios, 5x5 sensitivity tables. Pairs with excel-author. Use for int"
+  },
+  {
+    "name": "excel-author",
+    "identifier": "official/finance\\excel-author",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build auditable Excel workbooks headless with openpyxl \u2014 blue/black/green cell conventions, formulas over hardcodes, named ranges, balance checks, sensitivity tables. Use for financial models, audit o"
+  },
+  {
+    "name": "lbo-model",
+    "identifier": "official/finance\\lbo-model",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build leveraged buyout models in Excel \u2014 sources & uses, debt schedule, cash sweep, exit multiple, IRR/MOIC sensitivity. Pairs with excel-author. Use for PE screening, sponsor-case valuation, or illus"
+  },
+  {
+    "name": "merger-model",
+    "identifier": "official/finance\\merger-model",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build accretion/dilution (merger) models in Excel \u2014 pro-forma P&L, synergies, financing mix, EPS impact. Pairs with excel-author. Use for M&A pitches, board materials, or deal evaluation."
+  },
+  {
+    "name": "pptx-author",
+    "identifier": "official/finance\\pptx-author",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build PowerPoint decks headless with python-pptx. Pairs with excel-author for model-backed decks where every number traces to a workbook cell. Use for pitch decks, IC memos, earnings notes."
+  },
+  {
+    "name": "stocks",
+    "identifier": "official/finance\\stocks",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Stock quotes, history, search, compare, crypto via Yahoo."
+  },
+  {
+    "name": "minecraft-modpack-server",
+    "identifier": "official/gaming\\minecraft-modpack-server",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Host modded Minecraft servers (CurseForge, Modrinth)."
+  },
+  {
+    "name": "pokemon-player",
+    "identifier": "official/gaming\\pokemon-player",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Play Pokemon via headless emulator + RAM reads."
+  },
+  {
+    "name": "fitness-nutrition",
+    "identifier": "official/health\\fitness-nutrition",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Gym workout planner and nutrition tracker. Search 690+ exercises by muscle, equipment, or category via wger. Look up macros and calories for 380,000+ foods via USDA FoodData Central. Compute BMI, TDEE"
+  },
+  {
+    "name": "neuroskill-bci",
+    "identifier": "official/health\\neuroskill-bci",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Connect to a running NeuroSkill instance and incorporate the user's real-time cognitive and emotional state (focus, relaxation, mood, cognitive load, drowsiness, heart rate, HRV, sleep staging, and 40"
+  },
+  {
+    "name": "fastmcp",
+    "identifier": "official/mcp\\fastmcp",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Build, test, inspect, install, and deploy MCP servers with FastMCP in Python. Use when creating a new MCP server, wrapping an API or database as MCP tools, exposing resources or prompts, or preparing "
+  },
+  {
+    "name": "mcporter",
+    "identifier": "official/mcp\\mcporter",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation."
+  },
+  {
+    "name": "openclaw-migration",
+    "identifier": "official/migration\\openclaw-migration",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Migrate a user's OpenClaw customization footprint into Hermes Agent. Imports Hermes-compatible memories, SOUL.md, command allowlists, user skills, and selected workspace assets from ~/.openclaw, then "
+  },
+  {
+    "name": "huggingface-accelerate",
+    "identifier": "official/mlops\\accelerate",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). I"
+  },
+  {
+    "name": "chroma",
+    "identifier": "official/mlops\\chroma",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production c"
+  },
+  {
+    "name": "clip",
+    "identifier": "official/mlops\\clip",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content m"
+  },
+  {
+    "name": "faiss",
+    "identifier": "official/mlops\\faiss",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search,"
+  },
+  {
+    "name": "optimizing-attention-flash",
+    "identifier": "official/mlops\\flash-attention",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory iss"
+  },
+  {
+    "name": "guidance",
+    "identifier": "official/mlops\\guidance",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained genera"
+  },
+  {
+    "name": "huggingface-tokenizers",
+    "identifier": "official/mlops\\huggingface-tokenizers",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignme"
+  },
+  {
+    "name": "outlines",
+    "identifier": "official/mlops\\inference\\outlines",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Outlines: structured JSON/regex/Pydantic LLM generation."
+  },
+  {
+    "name": "instructor",
+    "identifier": "official/mlops\\instructor",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-te"
+  },
+  {
+    "name": "lambda-labs-gpu-cloud",
+    "identifier": "official/mlops\\lambda-labs",
+    "source": "official",
+    "trust_level": "builtin",
+    "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clust"
+  }
+]
