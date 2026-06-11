@@ -17,7 +17,10 @@ threats=("ignore previous" "system prompt" "reveal your" "bypass" "jailbreak")
 for threat in "${threats[@]}"; do
   if echo "$prompt" | grep -qi "$threat"; then
     echo "{\"status\": \"threat-detected\", \"pattern\": \"$threat\"}" >&2
-    logger -t hermes-governance "THREAT: $threat session=${session_id:-unknown} turn=${turn_id:-unknown}"
+    # Log to syslog if available, otherwise just continue
+    if command -v logger >/dev/null 2>&1; then
+      logger -t hermes-governance "THREAT: $threat session=${session_id:-unknown} turn=${turn_id:-unknown}"
+    fi
     break
   fi
 done
