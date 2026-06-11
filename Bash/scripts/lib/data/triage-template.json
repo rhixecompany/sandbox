@@ -1,0 +1,88 @@
+{
+  "$schema": "./report-schemas.json",
+  "description": "Template for TRIAGE_REPORT.json output - shows expected structure with placeholder values",
+  "example": {
+    "timestamp": "2026-05-15T14:30:00Z",
+    "summary": {
+      "total_repos": 20,
+      "average_health_score": 72.5,
+      "health_distribution": {
+        "healthy": 8,
+        "caution": 7,
+        "warning": 3,
+        "critical": 2
+      }
+    },
+    "repos": [
+      {
+        "name": "frontend-app",
+        "org": "acme-corp",
+        "url": "https://github.com/acme-corp/frontend-app",
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\frontend-app",
+        "health_score": 92,
+        "health_category": "healthy",
+        "issue_count": 2,
+        "total_vulnerabilities": 0,
+        "detected_managers": ["npm", "yarn"],
+        "days_since_last_commit": 1
+      },
+      {
+        "name": "backend-api",
+        "org": "acme-corp",
+        "url": "https://github.com/acme-corp/backend-api",
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\backend-api",
+        "health_score": 85,
+        "health_category": "healthy",
+        "issue_count": 5,
+        "total_vulnerabilities": 3,
+        "detected_managers": ["pip", "poetry"],
+        "days_since_last_commit": 2
+      },
+      {
+        "name": "legacy-monolith",
+        "org": "acme-legacy",
+        "url": "https://github.com/acme-legacy/legacy-monolith",
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-legacy\\legacy-monolith",
+        "health_score": 45,
+        "health_category": "warning",
+        "issue_count": 28,
+        "total_vulnerabilities": 15,
+        "detected_managers": ["npm", "maven"],
+        "days_since_last_commit": 180
+      },
+      {
+        "name": "abandoned-tool",
+        "org": "acme-legacy",
+        "url": "https://github.com/acme-legacy/abandoned-tool",
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-legacy\\abandoned-tool",
+        "health_score": 25,
+        "health_category": "critical",
+        "issue_count": 42,
+        "total_vulnerabilities": 31,
+        "detected_managers": ["pip"],
+        "days_since_last_commit": 730
+      }
+    ]
+  },
+  "field_descriptions": {
+    "timestamp": "ISO 8601 datetime when triage analysis completed",
+    "summary.total_repos": "Total number of repositories analyzed",
+    "summary.average_health_score": "Mean health score across all repos (0-100)",
+    "summary.health_distribution.healthy": "Repos with score >= 80",
+    "summary.health_distribution.caution": "Repos with score 60-79",
+    "summary.health_distribution.warning": "Repos with score 40-59",
+    "summary.health_distribution.critical": "Repos with score < 40",
+    "repos": "Array of per-repository triage results",
+    "repo.name": "Repository name",
+    "repo.org": "Organization or owner name",
+    "repo.url": "GitHub URL",
+    "repo.path": "Local filesystem path",
+    "repo.health_score": "Overall health score (0-100)",
+    "repo.health_category": "Category: healthy, caution, warning, or critical",
+    "repo.issue_count": "Number of issues detected (bugs, code smells, etc)",
+    "repo.total_vulnerabilities": "Count of security vulnerabilities found",
+    "repo.detected_managers": "Package managers found (npm, pip, maven, etc)",
+    "repo.days_since_last_commit": "Days since most recent commit"
+  },
+  "title": "TRIAGE_REPORT Template"
+}

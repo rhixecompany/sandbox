@@ -1,0 +1,22 @@
+{
+  "agents": ["./agents"],
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "commands": ["./commands"],
+  "description": "Comprehensive collection for writing tests, test automation, and test-driven development including unit tests, integration tests, and end-to-end testing strategies.",
+  "keywords": [
+    "testing",
+    "tdd",
+    "automation",
+    "unit-tests",
+    "integration",
+    "playwright",
+    "jest",
+    "nunit"
+  ],
+  "license": "MIT",
+  "name": "testing-automation",
+  "repository": "https://github.com/github/awesome-copilot",
+  "version": "1.0.0"
+}

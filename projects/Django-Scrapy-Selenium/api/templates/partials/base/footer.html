@@ -1,0 +1,35 @@
+{% load static i18n %}
+
+{% include "partials/base/scrolltop.html" %}
+<div class="bottom-[-40px] sm:bottom-0"
+     style="position: absolute;
+            width: 100%">
+  <footer>
+    <div class="border-gray-200 h-18 bg-themecolor text-center">
+      <div class="inline-block items-center px-3 py-1.5 hover:cursor-pointer hover:bg-gray-900 hover:bg-opacity-40">
+        <a href='{% url "privacy" %}'><span class="text-[13px] text-white sm:text-sm">{% translate "Privacy Policy" %}</span></a>
+      </div>
+      <div class="inline-block items-center px-3 py-1.5 hover:cursor-pointer hover:bg-gray-900 hover:bg-opacity-40">
+        <a href='{% url "digital" %}'><span class="text-[13px] text-white sm:text-sm">{% translate "Digital Millennium Copyright Act" %}</span></a>
+      </div>
+      <div class="inline-block items-center px-3 py-1.5 hover:cursor-pointer hover:bg-gray-900 hover:bg-opacity-40">
+        <a href='{% url "terms" %}'><span class="text-[13px] text-white sm:text-sm">{% translate "Terms of Service" %}</span></a>
+      </div>
+    </div>
+    <div class="flex justify-center items-center border-gray-200 h-24 bg-[#222222]">
+      <span class="mr-0 h-10 w-10 sm:h-12 sm:w-12"><a href='{% url "index" %}'>
+        <img alt="Rhixescans Logo"
+             loading="lazy"
+             width="0"
+             height="0"
+             decoding="async"
+             data-nimg="1"
+             class="object-cover"
+             style="color: transparent;
+                    width: 100%;
+                    height: 100%"
+             src="{% static 'logos/logo.webp' %}" />
+      </a></span>
+    </div>
+  </footer>
+</div>

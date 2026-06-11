@@ -1,0 +1,86 @@
+import { auth } from '@/auth';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+
+import { SignOut } from '@/components/sign-out';
+import { UserIcon } from 'lucide-react';
+import Link from 'next/link';
+
+const UserButton = async () => {
+  const session = await auth();
+
+  if (!session) {
+    return (
+      <Button
+        className='justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#6F2598] text-white hover:bg-[#5a1f78] flex items-center gap-0.5 w-20'
+        asChild
+      >
+        <Link href='/sign-in'>
+          <UserIcon /> Sign In
+        </Link>
+      </Button>
+    );
+  }
+
+  const firstInitial = session.user?.name?.charAt(0).toUpperCase() ?? 'U';
+
+  return (
+    <div className='flex gap-2 items-center'>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <div className='flex items-center'>
+            <Button
+              variant='ghost'
+              className='relativee w-8 h-8 rounded-full ml-2 flex items-center justify-center bg-gray-200'
+            >
+              {firstInitial}
+            </Button>
+          </div>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className='w-56' align='end' forceMount>
+          <DropdownMenuLabel className='font-normal'>
+            <div className='flex flex-col space-y-1'>
+              <div className='text-sm font-medium leading-none'>
+                {session.user?.name}
+              </div>
+              <div className='text-sm text-muted-foreground leading-none'>
+                {session.user?.email}
+              </div>
+            </div>
+          </DropdownMenuLabel>
+
+          <DropdownMenuItem>
+            <Link href='/user/profile' className='w-full'>
+              User Profile
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href='/user/orders' className='w-full'>
+              Order History
+            </Link>
+          </DropdownMenuItem>
+
+          {session?.user?.role === 'admin' && (
+            <DropdownMenuItem>
+              <Link href='/admin' className='w-full'>
+                Admin
+              </Link>
+            </DropdownMenuItem>
+          )}
+
+          <DropdownMenuItem className='p-0 mb-1'>
+            <SignOut />
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  );
+};
+
+export default UserButton;

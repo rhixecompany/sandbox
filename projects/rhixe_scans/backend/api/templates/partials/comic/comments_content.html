@@ -1,0 +1,31 @@
+{% load static i18n %}
+
+<!-- Comments Content -->
+<div class="bg-[#222222]">
+  <div class="border-b-[1px] border-b-[#A2A2A2]/20 px-5 py-2">
+    <h3 class="text-base font-semibold text-white">Comments</h3>
+  </div>
+  <div class="space-y-4 p-4">
+    <h2>Form</h2>
+    <form method="post"  enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+      {{ form.non_form_errors }}
+      <div class="grid grid-cols-6 gap-2">
+        {% for field in form %}
+          <div class="col-span-6">
+            <label for="{{ field.id }}"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ field.label }}</label>
+            {{ field }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="mt-4">
+        <button type="submit"
+                class="bg-themecolor text-sm text-white py-2 px-4 rounded-lg w-full sm:w-auto focus:outline-none focus:shadow-outline">
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

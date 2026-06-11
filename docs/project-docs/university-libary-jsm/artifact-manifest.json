@@ -1,0 +1,17 @@
+{
+  "project": "university-libary-jsm",
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "sourceFiles": {
+    "AGENTS.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\AGENTS.md",
+    "package.json": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\package.json"
+  },
+  "artifacts": [
+    {"file": "technology-stack.md", "description": "Next.js + Drizzle tech stack", "status": "created"},
+    {"file": "folder-structure.md", "description": "Project directory structure", "status": "created"},
+    {"file": "architecture.md", "description": "Library system architecture", "status": "created"},
+    {"file": "project-workflow.md", "description": "Development workflow", "status": "created"},
+    {"file": "code-exemplars.md", "description": "Drizzle schema and Server Action examples", "status": "created"},
+    {"file": "copilot-instructions.md", "description": "Agent conventions", "status": "created"},
+    {"file": "readme.md", "description": "Project overview", "status": "created"}
+  ]
+}

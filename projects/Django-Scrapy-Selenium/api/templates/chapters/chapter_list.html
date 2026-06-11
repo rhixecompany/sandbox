@@ -1,0 +1,16 @@
+{% extends "chapters/base.html" %}
+
+{% comment %} djlint:on {% endcomment %}
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'Chapters List' %}
+{% endblock head_title %}
+{% block content %}
+  <main>
+    <div class="px-2 pt-3">
+      <!-- Container -->
+      {% include "partials/chapters/container.html" %}
+    </div>
+  </main>
+{% endblock content %}

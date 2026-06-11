@@ -1,0 +1,14 @@
+{% load static i18n partials widget_tweaks %}
+
+{% partialdef container-section inline %}
+<div id='container'
+     class="rounded-lg border border-gray-200  p-2 shadow-sm dark:border-gray-700  sm:p-3">
+  <!-- Card header -->
+  {% include "partials/chapters/hero.html" %}
+  <!-- Table -->
+  {% include "partials/chapters/table.html" %}
+  {% include "partials/htmx/spinner.html" %}
+  <!-- Card Footer -->
+  {% include "partials/chapters/pagination.html" %}
+</div>
+{% endpartialdef %}

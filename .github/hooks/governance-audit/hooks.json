@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "on_session_start": [
+      {
+        "type": "command",
+        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/audit-session-start.sh",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ],
+    "on_session_end": [
+      {
+        "type": "command",
+        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/audit-session-end.sh",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ],
+    "pre_llm_call": [
+      {
+        "type": "command",
+        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/audit-prompt.sh",
+        "cwd": ".",
+        "env": {
+          "GOVERNANCE_LEVEL": "standard",
+          "BLOCK_ON_THREAT": "false"
+        },
+        "timeoutSec": 10
+      }
+    ]
+  },
+  "version": 1
+}

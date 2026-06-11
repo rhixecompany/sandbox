@@ -1,0 +1,28 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 1.0,
+  "has_safety_section": true,
+  "md_size_kb": 7.2,
+  "prompt_name": "bash-scripts-fix",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "subagent-driven-development",
+    "systematic-debugging",
+    "simplify"
+  ],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "bash",
+    "scripts",
+    "typescript",
+    "automation",
+    "refactoring"
+  ],
+  "title": "Bash Scripts Fix - Modernize and Consolidate Scripts",
+  "trigger": "/bash-scripts-fix",
+  "txt_size_kb": 7.2
+}

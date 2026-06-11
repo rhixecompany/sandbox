@@ -1,0 +1,14 @@
+{% extends "./base.html" %}
+
+{% load static i18n %}
+
+{% block content %}
+  <div class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+    <div class="float-left w-[100%] max-[600px]:w-[100%] min-[882px]:w-[70%]">
+      {% include "partials/bookmarks/left_content.html" %}
+    </div>
+    <div class="float-right w-[100%] max-[600px]:w-[100%] min-[882px]:w-[30%]">
+      {% include "partials/index/right_content.html" %}
+    </div>
+  </div>
+{% endblock content %}

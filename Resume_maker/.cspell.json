@@ -1,0 +1,32 @@
+{
+  "ignorePaths": ["node_modules/**", "*.pdf", "bun.lock", "*.lock", "*.csv"],
+  "ignoreRegExpList": ["/\\[[\\w]+\\]\\([\\w:\\/.-]+\\)/g"],
+  "language": "en",
+  "version": "0.2",
+  "words": [
+    "Iseghohi",
+    "bunx",
+    "markdown",
+    "prettier",
+    "cspell",
+    "linting",
+    "eslint",
+    "typescript",
+    "ResumeData",
+    "ContactInfo",
+    "Experience",
+    "Education",
+    "fintech",
+    "johndoe",
+    "rhixe",
+    "rhixecompany",
+    "Wellfound",
+    "libary",
+    "ecom",
+    "iseoghohi",
+    "Xamehitv",
+    "xamehitv",
+    "headshot",
+    "untracked"
+  ]
+}

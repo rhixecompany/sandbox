@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'View Chapter List' %}
+{% endblock %}
+{% block content %}
+  {% include 'partials/chapters/container.html' %}
+{% endblock %}
+{% comment %} {% block injs %}
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/datatables.min.js' %}"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#chapter_table").DataTable()
+
+    })
+  </script>
+{% endblock %} {% endcomment %}

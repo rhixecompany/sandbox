@@ -1,0 +1,539 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Logo-5" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Logo-5" [ref=e5]
+      - button "Get a Demo" [ref=e7] [cursor=pointer]:
+        - link "Get a Demo" [ref=e9]:
+          - /url: /request-a-demo/
+  - navigation [ref=e10]:
+    - link "logo-scrolled":
+      - /url: /
+      - img "logo-scrolled"
+    - list [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Platform Platform" [ref=e14] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e15]: Platform Platform
+      - listitem [ref=e16]:
+        - link "Solutions Solutions" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e18]: Solutions Solutions
+      - listitem [ref=e19]:
+        - link "Why Checkmarx Why Checkmarx" [ref=e20] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e21]: Why Checkmarx Why Checkmarx
+      - listitem [ref=e22]:
+        - link "Resources Resources" [ref=e23] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e24]: Resources Resources
+      - listitem [ref=e25]:
+        - link "Company Company" [ref=e26] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e27]: Company Company
+      - listitem [ref=e28]:
+        - link "Plans and Pricing Plans and Pricing" [ref=e29] [cursor=pointer]:
+          - /url: /packaging/
+          - generic [ref=e30]: Plans and Pricing Plans and Pricing
+      - listitem [ref=e31]:
+        - button [ref=e32] [cursor=pointer]:
+          - img [ref=e34]
+  - main [ref=e36]:
+    - generic [ref=e38]:
+      - link "← Zero Blog" [ref=e39] [cursor=pointer]:
+        - /url: https://checkmarx.com/zero/research/
+      - 'heading "CVE-2021-33829: Stored XSS Vulnerability Discovered in CKEditor4 Affects Widely-Used CMS" [level=1] [ref=e41]'
+      - generic [ref=e43]:
+        - generic [ref=e45]:
+          - img "Or Sahar" [ref=e46]
+          - link "Or Sahar" [ref=e48] [cursor=pointer]:
+            - /url: https://checkmarx.com/author/orsahar/
+        - generic [ref=e49]:
+          - img "calendar icon" [ref=e50]
+          - text: June 14, 2021
+        - generic [ref=e51]:
+          - img "reading time icon" [ref=e52]
+          - text: 6 min. read
+    - generic [ref=e53]:
+      - complementary [ref=e54]:
+        - navigation [ref=e55]:
+          - heading "Table of Contents" [level=2] [ref=e56]
+          - list [ref=e57]:
+            - listitem [ref=e58]:
+              - link "Impact Summary" [ref=e59] [cursor=pointer]:
+                - /url: "#article-anchor-1"
+            - listitem [ref=e60]:
+              - link "CVSS Score" [ref=e61] [cursor=pointer]:
+                - /url: "#article-anchor-2"
+            - listitem [ref=e62]:
+              - link "Description" [ref=e63] [cursor=pointer]:
+                - /url: "#article-anchor-3"
+            - listitem [ref=e64]:
+              - link "Original Proof-of-Concept for CVE-2020-9281" [ref=e65] [cursor=pointer]:
+                - /url: "#article-anchor-4"
+            - listitem [ref=e66]:
+              - link "CVE-2020-9281 Fix With the Payload Above" [ref=e67] [cursor=pointer]:
+                - /url: "#article-anchor-5"
+            - listitem [ref=e68]:
+              - link "Proof-of-Concept of the Flawed Fix of CVE-2020-9281" [ref=e69] [cursor=pointer]:
+                - /url: "#article-anchor-6"
+            - listitem [ref=e70]:
+              - link "Proof-of-Concept of the Flawed Fix of CVE-2020-9281 in Drupal" [ref=e71] [cursor=pointer]:
+                - /url: "#article-anchor-7"
+            - listitem [ref=e72]:
+              - link "Proof-of-Concept of the Flawed Fix of CVE-2020-9281 in django-ckeditor" [ref=e73] [cursor=pointer]:
+                - /url: "#article-anchor-8"
+            - listitem [ref=e74]:
+              - link "Vulnerability Analysis" [ref=e75] [cursor=pointer]:
+                - /url: "#article-anchor-9"
+            - listitem [ref=e76]:
+              - link "Recommendations:" [ref=e77] [cursor=pointer]:
+                - /url: "#article-anchor-10"
+      - article [ref=e78]:
+        - paragraph [ref=e79]:
+          - text: CKEditor 4 is a popular WYSIWYG editor, widely used in websites, web frameworks, and content management systems (CMS) such as Drupal and Backdrop. According to its
+          - link "website" [ref=e80] [cursor=pointer]:
+            - /url: https://ckeditor.com/ckeditor-4/
+          - text: ", the editor is “approved by millions, fully customizable, and the #1 rich text editor with the most features.” The Checkmarx Security Research Team discovered a stored cross-site scripting (XSS) vulnerability – assigned CVE-2021-33829 – that affects CKEditor 4 users in edit mode."
+        - heading "Impact Summary" [level=2] [ref=e81]
+        - paragraph [ref=e82]:
+          - text: CKEditor 4 is commonly used and may affect a variety of environments, such as blogs, content management systems, and other websites that accept rich text content from users. Successful exploitation of the vulnerability leads to arbitrary web script injection. The impact depends on where the plugin is used. It may lead to account takeover, credential stealing, sensitive data exposure, etc.
+          - text: When we found the vulnerability in CKEditor 4, we informed the maintainers. They didn’t initially consider our finding as a security issue, but released a new version with the fix (4.16.1). We continued our research and found that Drupal and django-ckeditor are vulnerable to XSS because of the issue we found. We informed both, and they pulled the CKEditor 4 version 4.16.1.
+          - text: From here, we asked MITRE to issue a CVE because we strive to inform all CKEditor 4 dependents to get the CKEditor 4 latest version. Later on, CKEditor 4 realized the significance of our finding took the responsibility to issue CVE-2021-33829.
+        - heading "CVSS Score" [level=2] [ref=e83]
+        - paragraph [ref=e84]:
+          - text: "CVSS: 3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          - text: "Score: 6.1 (Medium)"
+        - heading "Description" [level=2] [ref=e85]
+        - paragraph [ref=e86]:
+          - text: In June 2020,
+          - link "CVE-2020-9281" [ref=e87] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+          - text: was published due to a cross-site scripting CKEditor 4. The cause for this issue is in the HTML data processor that doesn’t sanitize a payload that contains the reserved ck_protected keyword.
+          - text: The reserved “cke_protected” keyword is used internally by CKEditor 4 developers. It is an HTML comment that’s content is encoded. For simplicity, we’ll use the term ‘protected ‘comment’ in this blog.
+          - text: The CKEditor 4 developers’
+          - link "solution" [ref=e88] [cursor=pointer]:
+            - /url: "#diff-4ec00c059a3ff2eacfa410e9bf58df799153ea84a6887d3daabcf7eb2c4931aa"
+          - text: was to ensure there are no externally injected protected comments before parsing by removing instances of the protected comment. Since the keyword is only removed once, nesting the keyword yields the keyword (e.g., keykeywordword -> keyword). This allows an attacker to bypass this protection mechanism and exploit the XSS vulnerability, which was assumed to be fixed.
+        - heading "Original Proof-of-Concept for CVE-2020-9281" [level=2] [ref=e89]:
+          - text: Original Proof-of-Concept for
+          - link "CVE-2020-9281" [ref=e90] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+        - list [ref=e91]:
+          - listitem [ref=e92]: Click the source button in CKEditor 4
+          - listitem [ref=e93]: "Paste the following payload:"
+        - paragraph [ref=e94]:
+          - code [ref=e95]: "Xss<!--{cke_protected} --!><img src=1 onerror=alert(`XSS`)> -->Attack"
+        - list [ref=e96]:
+          - listitem [ref=e97]: Click the source button again to return to the regular editor.
+        - paragraph [ref=e98]:
+          - link [ref=e99] [cursor=pointer]:
+            - /url: https://checkmarx.com/wp-content/uploads/2021/06/Picture1-2.png
+        - heading "CVE-2020-9281 Fix With the Payload Above" [level=2] [ref=e100]:
+          - link "CVE-2020-9281" [ref=e101] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+          - text: Fix With the Payload Above
+        - list [ref=e102]:
+          - listitem [ref=e103]: Click the source button in CKEditor 4
+          - listitem [ref=e104]: "Paste the following payload:"
+        - paragraph [ref=e105]:
+          - code [ref=e106]: "Xss<!--{cke_protected} --!><img src=1 onerror=alert(`XSS`)>-->Attack"
+        - list [ref=e107]:
+          - listitem [ref=e108]: Click the source button again to return to the regular editor
+        - paragraph [ref=e109]:
+          - link [ref=e110] [cursor=pointer]:
+            - /url: https://checkmarx.com/wp-content/uploads/2021/06/Picture2-1.png
+        - heading "Proof-of-Concept of the Flawed Fix of CVE-2020-9281" [level=2] [ref=e111]:
+          - text: Proof-of-Concept of the Flawed Fix of
+          - link "CVE-2020-9281" [ref=e112] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+        - list [ref=e113]:
+          - listitem [ref=e114]: Click the source button in CKEditor 4
+          - listitem [ref=e115]: "Paste the following payload:"
+        - paragraph [ref=e116]:
+          - code [ref=e117]: "Xss<!--{cke{cke_protected}_protected} --!><img src=1 onerror=alert(`XSS`)> Attack"
+        - list [ref=e118]:
+          - listitem [ref=e119]: Click the source button again to return to the regular editor.
+        - paragraph [ref=e120]:
+          - link [ref=e121] [cursor=pointer]:
+            - /url: https://checkmarx.com/wp-content/uploads/2021/06/Picture3-2.png
+        - heading "Proof-of-Concept of the Flawed Fix of CVE-2020-9281 in Drupal" [level=2] [ref=e122]:
+          - text: Proof-of-Concept of the Flawed Fix of
+          - link "CVE-2020-9281" [ref=e123] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+          - text: in Drupal
+        - list [ref=e124]:
+          - listitem [ref=e125]: Edit a basic page
+          - listitem [ref=e126]: Click the source button in CKEditor4
+          - listitem [ref=e127]: "Paste the following payload:"
+        - paragraph [ref=e128]:
+          - code [ref=e129]: "Xss<!--{cke{cke_protected}_protected} --!><img src=1 onerror=alert(`XSS`)> Attack"
+        - list [ref=e130]:
+          - listitem [ref=e131]: Save the page
+          - listitem [ref=e132]: "The following user that edits the same page is exposed, as demonstrated in the screenshot below:"
+        - paragraph [ref=e133]:
+          - link [ref=e134] [cursor=pointer]:
+            - /url: https://checkmarx.com/wp-content/uploads/2021/06/Picture4-1.png
+        - heading "Proof-of-Concept of the Flawed Fix of CVE-2020-9281 in django-ckeditor" [level=2] [ref=e135]:
+          - text: Proof-of-Concept of the Flawed Fix of
+          - link "CVE-2020-9281" [ref=e136] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/CVE-2020-9281
+          - text: in django-ckeditor
+        - list [ref=e137]:
+          - listitem [ref=e138]: Click the source button in CKEditor4
+          - listitem [ref=e139]: "Paste the following payload:"
+        - paragraph [ref=e140]:
+          - code [ref=e141]: "Xss<!--{cke{cke_protected}_protected} --!><img src=1 onerror=alert(`XSS`)> Attack"
+        - list [ref=e142]:
+          - listitem [ref=e143]: Click the source button again to return to the regular editor or click the save button
+        - paragraph [ref=e144]:
+          - link [ref=e145] [cursor=pointer]:
+            - /url: https://checkmarx.com/wp-content/uploads/2021/06/Picture5-1.png
+        - heading "Vulnerability Analysis" [level=2] [ref=e146]
+        - paragraph [ref=e147]:
+          - text: The htmldataprocessor’s
+          - link "removeReserveKeywords" [ref=e148] [cursor=pointer]:
+            - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L969
+          - text: function aims to ensure there are no externally injected protected comment keywords before parsing. However, it fails to remove instances of the protected comment recursively.
+        - list [ref=e149]:
+          - listitem [ref=e150]:
+            - text: The
+            - link "removeReserveKeywords" [ref=e151] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L969
+            - text: removes instances of the protected comment keyword.
+          - listitem [ref=e152]: The parse method splits to elements array what is left from the payload using a regular expression.
+          - listitem [ref=e153]:
+            - text: The
+            - link "regular expression" [ref=e154] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmlparser.js#L18
+            - text: identifies comments with the following structure
+        - paragraph [ref=e155]:
+          - code [ref=e156]: <!--Comment -->.
+          - text: If the input contains a comment with an extra exclamation mark, like this
+          - code [ref=e157]: <!--comment --!>,
+          - text: the regular expression does not consider the – -!> suffix as a closing tag of the comment and treats the rest of the input as a comment until a proper closing suffix appears, like this “- ->”.
+        - list [ref=e158]:
+          - listitem [ref=e159]:
+            - text: The third element of the array that resulted from the regular expression processing is a
+            - link "comment" [ref=e160] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmlparser.js#L132
+            - text: .
+          - listitem [ref=e161]:
+            - text: The
+            - link "protectRealComments" [ref=e162] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L860
+            - text: encodes the third element of the array if it considers it as a real comment. In a case of a nested protected comment, the
+            - link "protectedRealComments" [ref=e163] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L860
+            - text: input contains a protected comment. For that reason, the
+            - link "protectedRealComments" [ref=e164] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L860
+            - text: doesn’t encode it.
+          - listitem [ref=e165]: "The browser identifies the suffix of the following input <- -comment – -!> as an error and mutates the input into proper html comment: <!- -comment – ->. The remainder of the payload stays out of the html comment unencoded."
+        - paragraph [ref=e166]: "When the algorithm processes the new Proof-of-Concept, the following occurs:"
+        - list [ref=e167]:
+          - listitem [ref=e168]: An attacker injects this payload
+        - paragraph [ref=e169]:
+          - code [ref=e170]: "Xss<!--{cke_{cke_protected}protected}--!><img src=1 onerror=alert(`xss`)> -->Attack"
+        - list [ref=e171]:
+          - listitem [ref=e172]:
+            - text: The
+            - link "removeReserveKeywords" [ref=e173] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L969
+            - text: "removes the {cke_protected} and what is left from the payload is:"
+        - paragraph [ref=e174]:
+          - code [ref=e175]: "Xss<!--{cke_protected}--!><img src=1 onerror=alert(`xss`)> -->Attack"
+        - list [ref=e176]:
+          - listitem [ref=e177]: Since –!> is not treated as a comment end tag , the CKEditor4 parse method considers the whole highlighted text as a protected comment
+        - paragraph [ref=e178]:
+          - code [ref=e179]: "Xss<!--{cke_protected}--!><img src=1 onerror=alert(`xss`)> -->Attack"
+        - list [ref=e180]:
+          - listitem [ref=e181]:
+            - text: The
+            - link "protectRealComments" [ref=e182] [cursor=pointer]:
+              - /url: https://github.com/ckeditor/ckeditor4/blob/17a1555f7fbb0e83f737c9efe27650dca8dff36f/core/htmldataprocessor.js#L860
+            - text: identifies the comment as protected comment and doesn’t encode its content.
+          - listitem [ref=e183]: The browser mutates the payload, and the exclamation mark is removed. Because of that, the comment is closed, and the rest of the payload remains unsanitized, with the ineffectual closing comment at the end.
+        - paragraph [ref=e184]:
+          - code [ref=e185]: "Xss<!--{cke_protected}--><img src=1 onerror=alert(`xss`)> -->Attack"
+        - list [ref=e186]:
+          - listitem [ref=e187]: The browser runs the unsanitized img onerror event
+        - heading "Recommendations:" [level=2] [ref=e188]
+        - paragraph [ref=e189]:
+          - text: The fix for this issue has been released, and it is highly recommended to update CKEditor 4 and Drupal to the latest available version. Regarding CKEditor, moving to CKEditor 5 is also an option.
+          - text: While CKEditor 5 exists, CKEditor 4 is still maintained because they are not entirely alike. CKEditor 5 doesn’t have an out-of-the-box source button for freestyle HTML coding. It’s possible to achieve the source button functionality by developing a plugin or consuming a plugin of third parties.
+        - heading "Timeline of Disclosure:" [level=2] [ref=e190]
+        - paragraph [ref=e191]: April 28, 2021 – Disclosure to CKSource
+        - paragraph [ref=e192]: May 18, 2021 – Disclosure to Drupal
+        - paragraph [ref=e193]: May 20, 2021 – CKEditor4.16.1 release, mitigating the vulnerability
+        - paragraph [ref=e194]:
+          - text: May 26, 2021 – Drupal 9.2 release and
+          - link "security advisory" [ref=e195] [cursor=pointer]:
+            - /url: https://www.drupal.org/sa-core-2021-003
+          - text: mitigating the vulnerability
+        - paragraph [ref=e196]:
+          - text: May 26, 2021 – Backdrop CMS (a fork of Drupal) 1.19.1 release and
+          - link "security advisory" [ref=e197] [cursor=pointer]:
+            - /url: https://backdropcms.org/security/backdrop-sa-core-2021-003
+          - text: mitigating the vulnerability
+        - paragraph [ref=e198]: May 29, 2021 – django-ckeditor 6.1.0 release, mitigating the vulnerability
+        - paragraph [ref=e199]:
+          - text: June 03, 2021 –
+          - link "CVE-2021-33829" [ref=e200] [cursor=pointer]:
+            - /url: https://nvd.nist.gov/vuln/detail/cve-2021-33829
+          - text: assigned
+        - paragraph [ref=e201]: June 14, 2021 – Public disclosure
+        - heading "Conclusion" [level=2] [ref=e202]
+        - paragraph [ref=e203]:
+          - text: This type of activity is part of the Checkmarx Security Research Team’s ongoing efforts to protect the software supply chain. Once the Checkmarx Security Team reveals a vulnerability in a package or a component, we immediately inform and help the maintainers mitigate the vulnerability. We also warn CxSCA customers if they use the vulnerable solution. Once the maintainer releases a fix, Checkmarx customers are the first to know.
+          - text: No matter how a code is secured, using third party components exposes websites, services, and other software solutions. Therefore, it’s extremely important to mitigate vulnerabilities in widely used components and protect the supply chain.
+        - generic [ref=e205]:
+          - generic [ref=e206]: "Tags:"
+          - paragraph [ref=e207]: Application Security
+          - paragraph [ref=e208]: Application Security Testing
+          - paragraph [ref=e209]: Checkmarx Security Research Team
+          - paragraph [ref=e210]: CVE
+          - paragraph [ref=e211]: Security Vulnerability
+      - complementary
+  - contentinfo [ref=e212]:
+    - generic [ref=e215]:
+      - paragraph [ref=e216]: Follow us
+      - list [ref=e217]:
+        - listitem [ref=e218]:
+          - link "icon-x" [ref=e219] [cursor=pointer]:
+            - /url: https://twitter.com/checkmarx
+            - img "icon-x" [ref=e220]
+        - listitem [ref=e221]:
+          - link "icon-yb" [ref=e222] [cursor=pointer]:
+            - /url: https://www.youtube.com/@CheckmarxOfficial
+            - img "icon-yb" [ref=e223]
+        - listitem [ref=e224]:
+          - link "icon-ln" [ref=e225] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/checkmarx
+            - img "icon-ln" [ref=e226]
+        - listitem [ref=e227]:
+          - link "icon-fb" [ref=e228] [cursor=pointer]:
+            - /url: https://www.facebook.com/Checkmarx.Source.Code.Analysis
+            - img "icon-fb" [ref=e229]
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - paragraph [ref=e234]: Trusted by
+        - generic [ref=e236]:
+          - img "logo-citi" [ref=e239]
+          - img "logo-cisco" [ref=e242]
+          - img "logo-accenture" [ref=e245]
+          - img "logo-wipro" [ref=e248]
+      - generic [ref=e249]:
+        - paragraph [ref=e250]: Awards & Recognition
+        - generic [ref=e252]:
+          - img "logo-cyber-2021" [ref=e255]
+          - img "logo-gartner" [ref=e258]
+          - img "logo-cyber-2022" [ref=e261]
+          - img "logo-dev-insider" [ref=e264]
+    - generic [ref=e266]:
+      - generic [ref=e267]:
+        - paragraph [ref=e268]:
+          - link "footer-logo" [ref=e269] [cursor=pointer]:
+            - /url: /
+            - img "footer-logo" [ref=e270]
+        - paragraph [ref=e271]: Checkmarx is the leader in agentic application security, delivering enterprise-grade protection while lowering engineering costs and accelerating development velocity. The Checkmarx One platform scans trillions of lines of code each year for companies, cutting vulnerability density by more than half. Its autonomous security agents detect and counter AI-driven threats across the SDLC, providing prevention-first protection for legacy, modern, and AI-generated code at enterprise scale.
+      - navigation [ref=e272]:
+        - list [ref=e273]:
+          - listitem [ref=e274]:
+            - link "Platforms":
+              - /url: "#"
+            - list [ref=e275]:
+              - listitem [ref=e276]:
+                - link "Checkmarx One Platform" [ref=e277] [cursor=pointer]:
+                  - /url: /product/application-security-platform/
+              - listitem [ref=e278]:
+                - link "SAST" [ref=e279] [cursor=pointer]:
+                  - /url: https://checkmarx.com/cxsast-source-code-scanning/
+              - listitem [ref=e280]:
+                - link "SCA" [ref=e281] [cursor=pointer]:
+                  - /url: https://checkmarx.com/cxsca-open-source-scanning/
+              - listitem [ref=e282]:
+                - link "Checkmarx One Assist" [ref=e283] [cursor=pointer]:
+                  - /url: /product/checkmarx-one-assist/
+              - listitem [ref=e284]:
+                - link "API Security" [ref=e285] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/api-security/
+              - listitem [ref=e286]:
+                - link "ASPM" [ref=e287] [cursor=pointer]:
+                  - /url: /product/aspm/
+              - listitem [ref=e288]:
+                - link "Codebashing" [ref=e289] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/codebashing-secure-code-training/
+              - listitem [ref=e290]:
+                - link "Container Security" [ref=e291] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/container-security/
+              - listitem [ref=e292]:
+                - link "DAST" [ref=e293] [cursor=pointer]:
+                  - /url: /checkmarx-dast/
+              - listitem [ref=e294]:
+                - link "IaC Security" [ref=e295] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/iac-security/
+              - listitem [ref=e296]:
+                - link "Malicious Package Protection" [ref=e297] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/malicious-packages/
+              - listitem [ref=e298]:
+                - link "MPIAPI" [ref=e299] [cursor=pointer]:
+                  - /url: /malicious-packages-identification-api/
+              - listitem [ref=e300]:
+                - link "Secrets Detection" [ref=e301] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/secrets-detection/
+              - listitem [ref=e302]:
+                - link "Repository Health" [ref=e303] [cursor=pointer]:
+                  - /url: https://checkmarx.com/product/repository-health/
+          - listitem [ref=e304]:
+            - link "Solutions":
+              - /url: "#"
+            - list [ref=e305]:
+              - listitem [ref=e306]:
+                - link "Code to Cloud" [ref=e307] [cursor=pointer]:
+                  - /url: https://checkmarx.com/solutions/code-to-cloud/
+              - listitem [ref=e308]:
+                - link "Developer Experience" [ref=e309] [cursor=pointer]:
+                  - /url: https://checkmarx.com/solutions/developer-experience/
+              - listitem [ref=e310]:
+                - link "DevSecOps" [ref=e311] [cursor=pointer]:
+                  - /url: https://checkmarx.com/solutions/devsecops/
+              - listitem [ref=e312]:
+                - link "Software Supply Chain Security" [ref=e313] [cursor=pointer]:
+                  - /url: /solutions/software-supply-chain-security/
+          - listitem [ref=e314]:
+            - link "On Premises":
+              - /url: "#"
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - link "On-prem SAST" [ref=e317] [cursor=pointer]:
+                  - /url: /product/cxsast-on-prem-source-code-scanning/
+          - listitem [ref=e318]:
+            - link "Services":
+              - /url: "#"
+            - list [ref=e319]:
+              - listitem [ref=e320]:
+                - link "Premium Services" [ref=e321] [cursor=pointer]:
+                  - /url: https://checkmarx.com/appsec-services/
+              - listitem [ref=e322]:
+                - link "Support" [ref=e323] [cursor=pointer]:
+                  - /url: https://checkmarx.com/support/
+              - listitem [ref=e324]:
+                - link "Maturity Assessment" [ref=e325] [cursor=pointer]:
+                  - /url: https://checkmarx.com/apma-appsec-maturity-methodology-assessment/
+          - listitem [ref=e326]:
+            - link "Resources":
+              - /url: "#"
+            - list [ref=e327]:
+              - listitem [ref=e328]:
+                - link "Checkmarx One Packages" [ref=e329] [cursor=pointer]:
+                  - /url: https://checkmarx.com/packaging/
+              - listitem [ref=e330]:
+                - link "Blog" [ref=e331] [cursor=pointer]:
+                  - /url: https://checkmarx.com/blog/
+              - listitem [ref=e332]:
+                - link "Customer Testimonials" [ref=e333] [cursor=pointer]:
+                  - /url: /resources/resource-type/customer-testimonials/
+              - listitem [ref=e334]:
+                - link "Documentation" [ref=e335] [cursor=pointer]:
+                  - /url: https://docs.checkmarx.com/
+              - listitem [ref=e336]:
+                - link "Whitepapers & Reports" [ref=e337] [cursor=pointer]:
+                  - /url: /resources/resource-type/whitepapers-reports/
+              - listitem [ref=e338]:
+                - link "Events" [ref=e339] [cursor=pointer]:
+                  - /url: /company/events/
+              - listitem [ref=e340]:
+                - link "Glossary" [ref=e341] [cursor=pointer]:
+                  - /url: https://checkmarx.com/glossary/
+              - listitem [ref=e342]:
+                - link "Videos" [ref=e343] [cursor=pointer]:
+                  - /url: /resources/resource-type/videos/
+              - listitem [ref=e344]:
+                - link "Webinars" [ref=e345] [cursor=pointer]:
+                  - /url: /webinars/
+              - listitem [ref=e346]:
+                - link "Resources" [ref=e347] [cursor=pointer]:
+                  - /url: /resources/
+          - listitem [ref=e348]:
+            - link "Compare To":
+              - /url: "#"
+            - list [ref=e349]:
+              - listitem [ref=e350]:
+                - link "Fortify" [ref=e351] [cursor=pointer]:
+                  - /url: https://checkmarx.com/fortify/
+              - listitem [ref=e352]:
+                - link "GitHub" [ref=e353] [cursor=pointer]:
+                  - /url: https://checkmarx.com/github/
+              - listitem [ref=e354]:
+                - link "Snyk" [ref=e355] [cursor=pointer]:
+                  - /url: https://checkmarx.com/snyk/
+              - listitem [ref=e356]:
+                - link "Black Duck (Synopsys)" [ref=e357] [cursor=pointer]:
+                  - /url: https://checkmarx.com/black-duck-synopsys/
+              - listitem [ref=e358]:
+                - link "Veracode" [ref=e359] [cursor=pointer]:
+                  - /url: https://checkmarx.com/veracode/
+              - listitem [ref=e360]:
+                - link "SemGrep" [ref=e361] [cursor=pointer]:
+                  - /url: https://checkmarx.com/semgrep/
+              - listitem [ref=e362]:
+                - link "Wiz" [ref=e363] [cursor=pointer]:
+                  - /url: /wiz/
+              - listitem [ref=e364]:
+                - link "Endor Labs" [ref=e365] [cursor=pointer]:
+                  - /url: /endor-labs/
+          - listitem [ref=e366]:
+            - link "Company":
+              - /url: "#"
+            - list [ref=e367]:
+              - listitem [ref=e368]:
+                - link "About Us" [ref=e369] [cursor=pointer]:
+                  - /url: https://checkmarx.com/company/about-checkmarx/
+              - listitem [ref=e370]:
+                - link "Awards" [ref=e371] [cursor=pointer]:
+                  - /url: https://checkmarx.com/company/awards/
+              - listitem [ref=e372]:
+                - link "Careers" [ref=e373] [cursor=pointer]:
+                  - /url: https://checkmarx.com/company/careers/
+              - listitem [ref=e374]:
+                - link "Customers" [ref=e375] [cursor=pointer]:
+                  - /url: /company/about-checkmarx/#customers
+              - listitem [ref=e376]:
+                - link "Events" [ref=e377] [cursor=pointer]:
+                  - /url: /company/events/
+              - listitem [ref=e378]:
+                - link "Leadership" [ref=e379] [cursor=pointer]:
+                  - /url: /company/about-checkmarx/#who-we-are
+              - listitem [ref=e380]:
+                - link "News" [ref=e381] [cursor=pointer]:
+                  - /url: https://checkmarx.com/company/news/
+              - listitem [ref=e382]:
+                - link "Press Releases" [ref=e383] [cursor=pointer]:
+                  - /url: https://checkmarx.com/press-releases/
+              - listitem [ref=e384]:
+                - link "Trust & Security" [ref=e385] [cursor=pointer]:
+                  - /url: https://checkmarx.com/trust/
+              - listitem [ref=e386]:
+                - link "Our Company" [ref=e387] [cursor=pointer]:
+                  - /url: https://checkmarx.com/company/
+          - listitem [ref=e388]:
+            - link "Connect":
+              - /url: "#"
+            - list [ref=e389]:
+              - listitem [ref=e390]:
+                - link "Contact Us" [ref=e391] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e392]:
+                - link "Support Portal" [ref=e393] [cursor=pointer]:
+                  - /url: https://support.checkmarx.com/CheckmarxCustomerServiceCommunity/s/login/
+    - generic [ref=e395]:
+      - paragraph [ref=e396]: ©2026 Checkmarx Ltd. All Rights Reserved. iISO/IEC 27001:2013 Certified
+      - list [ref=e397]:
+        - listitem [ref=e398]:
+          - link "Privacy Policy" [ref=e399] [cursor=pointer]:
+            - /url: /legal/privacy-policy/
+        - listitem [ref=e400]:
+          - link "Terms of Use" [ref=e401] [cursor=pointer]:
+            - /url: /legal/terms-of-use/

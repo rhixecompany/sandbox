@@ -1,0 +1,43 @@
+name: Bash Scripts CI
+on:
+  pull_request:
+    paths:
+      - 'Bash/**'
+      - '.github/workflows/**'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          if command -v bun >/dev/null 2>&1; then
+            bun install || true
+          else
+            npm ci || true
+          fi
+      - name: shfmt check
+        run: |
+          if command -v shfmt >/dev/null 2>&1; then
+            shfmt -d .
+          else
+            echo "shfmt missing; install if you want format checks"
+          fi
+      - name: ShellCheck
+        run: |
+          if command -v shellcheck >/dev/null 2>&1; then
+            shellcheck $(git ls-files | grep -E '\.sh$' || true) || true
+          else
+            echo "shellcheck missing; skipping"
+          fi
+      - name: Run verify-dryrun
+        run: |
+          bash ./Bash/tests/verify-dryrun.sh
+      - name: Run TypeScript tests
+        run: |
+          bun run test || npm run test || true

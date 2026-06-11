@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+
+{% load static i18n %}
+
+{% block header %}
+  {{ form.media }}
+{% endblock header %}
+{% block head_title %}
+  {% translate 'Create' %}
+{% endblock %}
+{% block content %}
+  <div class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+    <div class="sm:mt-[-20px]">
+      <div class="text-white">{% include 'partials/comicimages/form.html' %}</div>
+      <div id="_rht_toaster"
+           style="position: fixed;
+                  z-index: 9999;
+                  inset: 16px;
+                  pointer-events: none"></div>
+    </div>
+  </div>
+{% endblock %}

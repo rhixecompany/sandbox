@@ -1,0 +1,688 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-18 14:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+msgid "Home"
+msgstr ""
+
+msgid "Libary"
+msgstr ""
+
+msgid "Search for chapters"
+msgstr ""
+
+msgid "Categorys"
+msgstr ""
+
+msgid "Search for comics"
+msgstr ""
+
+msgid "Search for users"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search comics..."
+msgstr ""
+
+msgid "Search chapters..."
+msgstr ""
+
+msgid "Enter Title"
+msgstr ""
+
+msgid "Enter Slug"
+msgstr ""
+
+msgid "0.0"
+msgstr ""
+
+msgid "Enter Serialization"
+msgstr ""
+
+msgid "Enter Link"
+msgstr ""
+
+msgid "Enter Checksum"
+msgstr ""
+
+msgid "Enter Name"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Currently"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "SVG, PNG, JPG or GIF (MAX. 800x400px)."
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Slug"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Serialization"
+msgstr ""
+
+msgid "Account Inactive"
+msgstr ""
+
+msgid "This account is inactive."
+msgstr ""
+
+#, python-format
+msgid ""
+"We've sent a code to %(recipient)s. The code expires shortly, so please "
+"enter it soon."
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Confirm Access"
+msgstr ""
+
+msgid "Please reauthenticate to safeguard your account."
+msgstr ""
+
+msgid "Alternative options"
+msgstr ""
+
+msgid "Email Verification"
+msgstr ""
+
+msgid "Enter Email Verification Code"
+msgstr ""
+
+msgid "Sign In"
+msgstr ""
+
+msgid "Enter Sign-In Code"
+msgstr ""
+
+msgid "Password Reset"
+msgstr ""
+
+msgid "Enter Password Reset Code"
+msgstr ""
+
+msgid "Phone Verification"
+msgstr ""
+
+msgid "Enter Phone Verification Code"
+msgstr ""
+
+msgid "Email Addresses"
+msgstr ""
+
+msgid "The following email addresses are associated with your account:"
+msgstr ""
+
+msgid "Verified"
+msgstr ""
+
+msgid "Unverified"
+msgstr ""
+
+msgid "Primary"
+msgstr ""
+
+msgid "Make Primary"
+msgstr ""
+
+msgid "Re-send Verification"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Add Email Address"
+msgstr ""
+
+msgid "Add Email"
+msgstr ""
+
+msgid "Do you really want to remove the selected email address?"
+msgstr ""
+
+#, python-format
+msgid ""
+"You are receiving this email because you or someone else tried to signup for "
+"an\n"
+"account using email address:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"However, an account using that email address already exists.  In case you "
+"have\n"
+"forgotten about this, please use the password forgotten procedure to "
+"recover\n"
+"your account:\n"
+"\n"
+"%(password_reset_url)s"
+msgstr ""
+
+msgid "Account Already Exists"
+msgstr ""
+
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr ""
+
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+msgid ""
+"You are receiving this mail because the following change was made to your "
+"account:"
+msgstr ""
+
+#, python-format
+msgid ""
+"If you do not recognize this change then please take proper security "
+"precautions immediately. The change to your account originates from:\n"
+"\n"
+"- IP address: %(ip)s\n"
+"- Browser: %(user_agent)s\n"
+"- Date: %(timestamp)s"
+msgstr ""
+
+#, python-format
+msgid "Your email has been changed from %(from_email)s to %(to_email)s."
+msgstr ""
+
+msgid "Email Changed"
+msgstr ""
+
+msgid "Your email has been confirmed."
+msgstr ""
+
+msgid "Email Confirmation"
+msgstr ""
+
+#, python-format
+msgid ""
+"You're receiving this email because user %(user_display)s has given your "
+"email address to register an account on %(site_domain)s."
+msgstr ""
+
+msgid ""
+"Your email verification code is listed below. Please enter it in your open "
+"browser window."
+msgstr ""
+
+#, python-format
+msgid "To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+
+msgid "Please Confirm Your Email Address"
+msgstr ""
+
+#, python-format
+msgid "Email address %(deleted_email)s has been removed from your account."
+msgstr ""
+
+msgid "Email Removed"
+msgstr ""
+
+msgid ""
+"Your sign-in code is listed below. Please enter it in your open browser "
+"window."
+msgstr ""
+
+msgid "This mail can be safely ignored if you did not initiate this action."
+msgstr ""
+
+msgid "Sign-In Code"
+msgstr ""
+
+msgid "Your password has been changed."
+msgstr ""
+
+msgid "Password Changed"
+msgstr ""
+
+msgid ""
+"Your password reset code is listed below. Please enter it in your open "
+"browser window."
+msgstr ""
+
+msgid "Password Reset Code"
+msgstr ""
+
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password reset for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+msgid "Password Reset Email"
+msgstr ""
+
+msgid "Your password has been reset."
+msgstr ""
+
+msgid "Your password has been set."
+msgstr ""
+
+msgid "Password Set"
+msgstr ""
+
+#, python-format
+msgid ""
+"You are receiving this email because you, or someone else, tried to access "
+"an account with email %(email)s. However, we do not have any record of such "
+"an account in our database."
+msgstr ""
+
+msgid "If it was you, you can sign up for an account using the link below."
+msgstr ""
+
+msgid "Unknown Account"
+msgstr ""
+
+msgid "Email Address"
+msgstr ""
+
+msgid "Current email"
+msgstr ""
+
+msgid "Changing to"
+msgstr ""
+
+msgid "Your email address is still pending verification."
+msgstr ""
+
+msgid "Cancel Change"
+msgstr ""
+
+msgid "Change to"
+msgstr ""
+
+msgid "Change Email"
+msgstr ""
+
+msgid "Confirm Email Address"
+msgstr ""
+
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new email confirmation request</a>."
+msgstr ""
+
+#, python-format
+msgid ""
+"If you have not created an account yet, then please %(link)ssign "
+"up%(end_link)s first."
+msgstr ""
+
+msgid "Sign in with a passkey"
+msgstr ""
+
+msgid "Send me a sign-in code"
+msgstr ""
+
+msgid "Sign Out"
+msgstr ""
+
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#, python-format
+msgid "You cannot remove your primary email address (%(email)s)."
+msgstr ""
+
+#, python-format
+msgid "Confirmation email sent to %(email)s."
+msgstr ""
+
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#, python-format
+msgid "Removed email address %(email)s."
+msgstr ""
+
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+msgid "You have signed out."
+msgstr ""
+
+#, python-format
+msgid "A sign-in code has been sent to %(recipient)s."
+msgstr ""
+
+msgid "Password successfully changed."
+msgstr ""
+
+msgid "Password successfully set."
+msgstr ""
+
+#, python-format
+msgid "You have verified phone number %(phone)s."
+msgstr ""
+
+msgid "Primary email address set."
+msgstr ""
+
+msgid "Your primary email address must be verified."
+msgstr ""
+
+msgid "Change Password"
+msgstr ""
+
+msgid "Forgot Password?"
+msgstr ""
+
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+
+msgid "Reset My Password"
+msgstr ""
+
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+msgid ""
+"We have sent you an email. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr ""
+
+msgid "Bad Token"
+msgstr ""
+
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+msgid "Your password is now changed."
+msgstr ""
+
+msgid "Set Password"
+msgstr ""
+
+msgid "Change Phone"
+msgstr ""
+
+msgid "Current phone"
+msgstr ""
+
+msgid "Your phone number is still pending verification."
+msgstr ""
+
+msgid "Enter your password:"
+msgstr ""
+
+msgid "You will receive a special code for a password-free sign-in."
+msgstr ""
+
+msgid "Request Code"
+msgstr ""
+
+msgid "Other sign-in options"
+msgstr ""
+
+msgid "Signup"
+msgstr ""
+
+msgid "Sign Up"
+msgstr ""
+
+#, python-format
+msgid "Already have an account? Then please %(link)ssign in%(end_link)s."
+msgstr ""
+
+msgid "Sign up using a passkey"
+msgstr ""
+
+msgid "Passkey Sign Up"
+msgstr ""
+
+msgid "Other options"
+msgstr ""
+
+msgid "Sign Up Closed"
+msgstr ""
+
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+#, python-format
+msgid "You are already logged in as %(user_display)s."
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid ""
+"You currently do not have any email address set up. You should really add an "
+"email address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+msgid "Verify Your Email Address"
+msgstr ""
+
+msgid ""
+"We have sent an email to you for verification. Follow the link provided to "
+"finalize the signup process. If you do not see the verification email in "
+"your main inbox, check your spam folder. Please contact us if you do not "
+"receive the verification email within a few minutes."
+msgstr ""
+
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your email address. "
+msgstr ""
+
+msgid ""
+"We have sent an email to you for\n"
+"verification. Please click on the link inside that email. If you do not see "
+"the verification email in your main inbox, check your spam folder. "
+"Otherwise\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
+"email address</a>."
+msgstr ""
+
+msgid "Rhixescans"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Sorry for the inconvenience but You aren't allowed here."
+msgstr ""
+
+msgid "Go home"
+msgstr ""
+
+msgid "Dmca"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid "Terms Of Service"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Delete:"
+msgstr ""
+
+msgid "Update:"
+msgstr ""
+
+msgid "View:"
+msgstr ""
+
+msgid "View Chapter List"
+msgstr ""
+
+msgid "View Comic List"
+msgstr ""
+
+msgid "Bookmarks"
+msgstr ""
+
+msgid "Comics"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "Personal info"
+msgstr ""
+
+msgid "Permissions"
+msgstr ""
+
+msgid "Important dates"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "This email has already been taken."
+msgstr ""
+
+msgid "Enter your Email"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Password Confirm"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "UserName"
+msgstr ""
+
+msgid "FirstName"
+msgstr ""
+
+msgid "LastName"
+msgstr ""
+
+msgid "Custom dropdown filter"
+msgstr ""
+
+msgid "Option 1"
+msgstr ""
+
+msgid "Option 2"
+msgstr ""
+
+msgid "Custom filter"
+msgstr ""
+
+msgid "Full Name of User"
+msgstr ""
+
+msgid "First Name of User"
+msgstr ""
+
+msgid "Last Name of User"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "email address"
+msgstr ""
+
+msgid "User Name of User"
+msgstr ""
+
+msgid "Information successfully updated"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Japanese"
+msgstr ""
+
+msgid "French"
+msgstr ""
+
+msgid "Portuguese"
+msgstr ""

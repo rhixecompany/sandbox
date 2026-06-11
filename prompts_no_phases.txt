@@ -1,0 +1,3 @@
+.github\prompts\debug-issue.prompt.md
+.github\prompts\skills-debug-prompt.prompt.md
+Prompts\workspace-consolidate.prompts.md

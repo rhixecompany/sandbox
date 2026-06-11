@@ -1,0 +1,15 @@
+{% extends "chapters/base.html" %}
+
+{% load static i18n %}
+
+{% block head_title %}
+  {% trans "Chapter" %}
+{% endblock head_title %}
+{% block content %}
+  <div hx-get='{{ hx_url }}'
+       hx-trigger='revealed'
+       hx-indicator="#spinner"
+       class="flex flex-col items-center space-y-2 pt-6 px-5 text-center">
+    {% include "partials/htmx/spinner.html" %}
+  </div>
+{% endblock content %}

@@ -1,0 +1,624 @@
+{
+  "version": 1,
+  "installed": {
+    "docker-management": {
+      "source": "official",
+      "identifier": "official/devops\\docker-management",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b3b0513a7dc104fa",
+      "install_path": "docker-management",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-04T19:27:48.558593+00:00",
+      "updated_at": "2026-06-04T19:27:48.558593+00:00"
+    },
+    "fastmcp": {
+      "source": "official",
+      "identifier": "official/mcp\\fastmcp",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:a0120960ce882db9",
+      "install_path": "fastmcp",
+      "files": [
+        "SKILL.md",
+        "references\\fastmcp-cli.md",
+        "scripts\\scaffold_fastmcp.py",
+        "templates\\api_wrapper.py",
+        "templates\\database_server.py",
+        "templates\\file_processor.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T09:03:30.011171+00:00",
+      "updated_at": "2026-06-05T09:03:30.011171+00:00"
+    },
+    "watchers": {
+      "source": "official",
+      "identifier": "official/devops\\watchers",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:a72baa43ec6f1935",
+      "install_path": "watchers",
+      "files": [
+        "SKILL.md",
+        "scripts\\watch_github.py",
+        "scripts\\watch_http_json.py",
+        "scripts\\watch_rss.py",
+        "scripts\\_watermark.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T09:03:31.049434+00:00",
+      "updated_at": "2026-06-05T09:03:31.049434+00:00"
+    },
+    "scrapling": {
+      "source": "official",
+      "identifier": "official/research\\scrapling",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:d360d73e74744838",
+      "install_path": "scrapling",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-04T19:27:49.906180+00:00",
+      "updated_at": "2026-06-04T19:27:49.906180+00:00"
+    },
+    "1password": {
+      "source": "official",
+      "identifier": "official/security\\1password",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:72f7552fb8637ad4",
+      "install_path": "1password",
+      "files": [
+        "SKILL.md",
+        "references\\cli-examples.md",
+        "references\\get-started.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T09:03:31.851906+00:00",
+      "updated_at": "2026-06-05T09:03:31.851906+00:00"
+    },
+    "rest-graphql-debug": {
+      "source": "official",
+      "identifier": "official/software-development\\rest-graphql-debug",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:4ff99e0538f23af7",
+      "install_path": "rest-graphql-debug",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-04T19:27:50.733793+00:00",
+      "updated_at": "2026-06-04T19:27:50.733793+00:00"
+    },
+    "gitnexus-explorer": {
+      "source": "official",
+      "identifier": "official/research\\gitnexus-explorer",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b5781b52cf76e6c6",
+      "install_path": "gitnexus-explorer",
+      "files": [
+        "SKILL.md",
+        "scripts\\proxy.mjs"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T09:03:32.569752+00:00",
+      "updated_at": "2026-06-05T09:03:32.569752+00:00"
+    },
+    "parallel-cli": {
+      "source": "official",
+      "identifier": "official/research\\parallel-cli",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:282c47f1ccf02e00",
+      "install_path": "parallel-cli",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-04T19:27:51.527323+00:00",
+      "updated_at": "2026-06-04T19:27:51.527323+00:00"
+    },
+    "pinecone": {
+      "source": "official",
+      "identifier": "official/mlops\\pinecone",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:fe800e6de5bd7221",
+      "install_path": "pinecone",
+      "files": [
+        "SKILL.md",
+        "references\\deployment.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T09:03:33.443549+00:00",
+      "updated_at": "2026-06-05T09:03:33.443549+00:00"
+    },
+    "adversarial-ux-test": {
+      "source": "official",
+      "identifier": "official/dogfood\\adversarial-ux-test",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e2b5234a7ea6857b",
+      "install_path": "adversarial-ux-test",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-04T19:27:52.342830+00:00",
+      "updated_at": "2026-06-04T19:27:52.342830+00:00"
+    },
+    "3-statement-model": {
+      "source": "official",
+      "identifier": "official/finance\\3-statement-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:678149f0d87680f6",
+      "install_path": "3-statement-model",
+      "files": [
+        "SKILL.md",
+        "references\\formatting.md",
+        "references\\formulas.md",
+        "references\\sec-filings.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:34:18.199397+00:00",
+      "updated_at": "2026-06-08T17:34:18.199397+00:00"
+    },
+    "agentmail": {
+      "source": "official",
+      "identifier": "official/email\\agentmail",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:98f1ec2d8201e472",
+      "install_path": "agentmail",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:34:22.187802+00:00",
+      "updated_at": "2026-06-08T17:34:22.187802+00:00"
+    },
+    "antigravity-cli": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\antigravity-cli",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:84fcbeb349a4f49f",
+      "install_path": "antigravity-cli",
+      "files": [
+        "SKILL.md",
+        "references\\cli-docs.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:34:26.543122+00:00",
+      "updated_at": "2026-06-08T17:34:26.543122+00:00"
+    },
+    "axolotl": {
+      "source": "official",
+      "identifier": "official/mlops\\training\\axolotl",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:214b99bf079532f6",
+      "install_path": "axolotl",
+      "files": [
+        "SKILL.md",
+        "references\\api.md",
+        "references\\dataset-formats.md",
+        "references\\index.md",
+        "references\\other.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:34:33.246206+00:00",
+      "updated_at": "2026-06-08T17:34:33.246206+00:00"
+    },
+    "bioinformatics": {
+      "source": "official",
+      "identifier": "official/research\\bioinformatics",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:a8c6045133b473cb",
+      "install_path": "bioinformatics",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:34:37.138181+00:00",
+      "updated_at": "2026-06-08T17:34:37.138181+00:00"
+    },
+    "blackbox": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\blackbox",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:0521570777866c6a",
+      "install_path": "blackbox",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:11.807777+00:00",
+      "updated_at": "2026-06-08T17:35:11.807777+00:00"
+    },
+    "blender-mcp": {
+      "source": "official",
+      "identifier": "official/creative\\blender-mcp",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e568bc061765717b",
+      "install_path": "blender-mcp",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:15.619589+00:00",
+      "updated_at": "2026-06-08T17:35:15.619589+00:00"
+    },
+    "canvas": {
+      "source": "official",
+      "identifier": "official/productivity\\canvas",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:5ab9b170a1cec246",
+      "install_path": "canvas",
+      "files": [
+        "SKILL.md",
+        "scripts\\canvas_api.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:19.503630+00:00",
+      "updated_at": "2026-06-08T17:35:19.503630+00:00"
+    },
+    "chroma": {
+      "source": "official",
+      "identifier": "official/mlops\\chroma",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:35ad395e6b13abae",
+      "install_path": "chroma",
+      "files": [
+        "SKILL.md",
+        "references\\integration.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:23.693210+00:00",
+      "updated_at": "2026-06-08T17:35:23.693210+00:00"
+    },
+    "clip": {
+      "source": "official",
+      "identifier": "official/mlops\\clip",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:3f6c1b58906d826e",
+      "install_path": "clip",
+      "files": [
+        "SKILL.md",
+        "references\\applications.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:27.650295+00:00",
+      "updated_at": "2026-06-08T17:35:27.650295+00:00"
+    },
+    "code-wiki": {
+      "source": "official",
+      "identifier": "official/software-development\\code-wiki",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:d890ae3bef0fd0a2",
+      "install_path": "code-wiki",
+      "files": [
+        "SKILL.md",
+        "templates\\architecture.md",
+        "templates\\getting-started.md",
+        "templates\\module.md",
+        "templates\\README.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:35:58.827706+00:00",
+      "updated_at": "2026-06-08T17:35:58.827706+00:00"
+    },
+    "comps-analysis": {
+      "source": "official",
+      "identifier": "official/finance\\comps-analysis",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:97f5d4bdfb744a0a",
+      "install_path": "comps-analysis",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:02.057060+00:00",
+      "updated_at": "2026-06-08T17:36:02.057060+00:00"
+    },
+    "concept-diagrams": {
+      "source": "official",
+      "identifier": "official/creative\\concept-diagrams",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:84c4ce2d18fa277c",
+      "install_path": "concept-diagrams",
+      "files": [
+        "SKILL.md",
+        "examples\\apartment-floor-plan-conversion.md",
+        "examples\\automated-password-reset-flow.md",
+        "examples\\autonomous-llm-research-agent-flow.md",
+        "examples\\banana-journey-tree-to-smoothie.md",
+        "examples\\commercial-aircraft-structure.md",
+        "examples\\cpu-ooo-microarchitecture.md",
+        "examples\\electricity-grid-flow.md",
+        "examples\\feature-film-production-pipeline.md",
+        "examples\\hospital-emergency-department-flow.md",
+        "examples\\ml-benchmark-grouped-bar-chart.md",
+        "examples\\place-order-uml-sequence.md",
+        "examples\\smart-city-infrastructure.md",
+        "examples\\smartphone-layer-anatomy.md",
+        "examples\\sn2-reaction-mechanism.md",
+        "examples\\wind-turbine-structure.md",
+        "references\\dashboard-patterns.md",
+        "references\\infrastructure-patterns.md",
+        "references\\physical-shape-cookbook.md",
+        "templates\\template.html"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:06.357954+00:00",
+      "updated_at": "2026-06-08T17:36:06.357954+00:00"
+    },
+    "darwinian-evolver": {
+      "source": "official",
+      "identifier": "official/research\\darwinian-evolver",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:54582b24e4385867",
+      "install_path": "darwinian-evolver",
+      "files": [
+        "SKILL.md",
+        "scripts\\parrot_openrouter.py",
+        "scripts\\show_snapshot.py",
+        "templates\\custom_problem_template.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:09.475693+00:00",
+      "updated_at": "2026-06-08T17:36:09.475693+00:00"
+    },
+    "dcf-model": {
+      "source": "official",
+      "identifier": "official/finance\\dcf-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:7c0a14b486b97e0a",
+      "install_path": "dcf-model",
+      "files": [
+        "requirements.txt",
+        "SKILL.md",
+        "TROUBLESHOOTING.md",
+        "scripts\\validate_dcf.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:12.821625+00:00",
+      "updated_at": "2026-06-08T17:36:12.821625+00:00"
+    },
+    "torchtitan": {
+      "source": "official",
+      "identifier": "official/mlops\\torchtitan",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:eb8032883af5ed09",
+      "install_path": "torchtitan",
+      "files": [
+        "SKILL.md",
+        "references\\checkpoint.md",
+        "references\\custom-models.md",
+        "references\\float8.md",
+        "references\\fsdp.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:37.486561+00:00",
+      "updated_at": "2026-06-08T17:36:37.486561+00:00"
+    },
+    "evm": {
+      "source": "official",
+      "identifier": "official/blockchain\\evm",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:8dbfdd89d5813d6e",
+      "install_path": "evm",
+      "files": [
+        "SKILL.md",
+        "scripts\\evm_client.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:40.780212+00:00",
+      "updated_at": "2026-06-08T17:36:40.780212+00:00"
+    },
+    "sherlock": {
+      "source": "official",
+      "identifier": "official/security\\sherlock",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:62a5dc6bf75d237e",
+      "install_path": "sherlock",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:43.876395+00:00",
+      "updated_at": "2026-06-08T17:36:43.876395+00:00"
+    },
+    "oss-forensics": {
+      "source": "official",
+      "identifier": "official/security\\oss-forensics",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:fb04c43eef714115",
+      "install_path": "oss-forensics",
+      "files": [
+        "SKILL.md",
+        "references\\evidence-types.md",
+        "references\\github-archive-guide.md",
+        "references\\investigation-templates.md",
+        "references\\recovery-techniques.md",
+        "scripts\\evidence-store.py",
+        "templates\\forensic-report.md",
+        "templates\\malicious-package-report.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:47.220395+00:00",
+      "updated_at": "2026-06-08T17:36:47.220395+00:00"
+    },
+    "security-and-hardening": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/addyosmani/agent-skills/security-and-hardening",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:c5143490857b195a",
+      "install_path": "security-and-hardening",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:36:53.852659+00:00",
+      "updated_at": "2026-06-08T17:36:53.852659+00:00"
+    },
+    "java-mcp-server-generator": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/github/awesome-copilot/java-mcp-server-generator",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:9fefc63216e2fb55",
+      "install_path": "java-mcp-server-generator",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:37:29.876092+00:00",
+      "updated_at": "2026-06-08T17:37:29.876092+00:00"
+    },
+    "build-mcp-server": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/anthropics/claude-plugins-official/build-mcp-server",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:89e90d8263f08412",
+      "install_path": "build-mcp-server",
+      "files": [
+        "SKILL.md",
+        "references/auth.md",
+        "references/deploy-cloudflare-workers.md",
+        "references/elicitation.md",
+        "references/remote-http-scaffold.md",
+        "references/resources-and-prompts.md",
+        "references/server-capabilities.md",
+        "references/tool-design.md",
+        "references/versions.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:39:45.138856+00:00",
+      "updated_at": "2026-06-08T17:39:45.138856+00:00"
+    },
+    "devops-automation": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/claude-office-skills/skills/devops-automation",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:ec6351cee293784e",
+      "install_path": "devops-automation",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:39:59.026801+00:00",
+      "updated_at": "2026-06-08T17:39:59.026801+00:00"
+    },
+    "shopify-automation": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/claude-office-skills/skills/shopify-automation",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:a58aacebc5dda0f4",
+      "install_path": "shopify-automation",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:40:41.578933+00:00",
+      "updated_at": "2026-06-08T17:40:41.578933+00:00"
+    },
+    "workflow-automation": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/sickn33/antigravity-awesome-skills/workflow-automation",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:3ca06dc2b0d98bae",
+      "install_path": "workflow-automation",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:40:48.834728+00:00",
+      "updated_at": "2026-06-08T17:40:48.834728+00:00"
+    },
+    "automation-workflows": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/jk-0001/skills/automation-workflows",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e8c90fe1af755161",
+      "install_path": "automation-workflows",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:40:54.748034+00:00",
+      "updated_at": "2026-06-08T17:40:54.748034+00:00"
+    },
+    "office-productivity": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/sickn33/antigravity-awesome-skills/office-productivity",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:ff104b145cb40877",
+      "install_path": "office-productivity",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:41:08.679436+00:00",
+      "updated_at": "2026-06-08T17:41:08.679436+00:00"
+    },
+    "typescript-mcp-server-generator": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/github/awesome-copilot/typescript-mcp-server-generator",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:47b7c0d1c86df500",
+      "install_path": "typescript-mcp-server-generator",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:46:50.022602+00:00",
+      "updated_at": "2026-06-08T17:46:50.022602+00:00"
+    },
+    "security-triage": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/steipete/clawdis/security-triage",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:95fa9ad5fa97aea8",
+      "install_path": "security-triage",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-08T17:47:13.383788+00:00",
+      "updated_at": "2026-06-08T17:47:13.383788+00:00"
+    }
+  }
+}

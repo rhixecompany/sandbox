@@ -1,0 +1,12 @@
+{% load static i18n %}
+
+<div id='container'
+     class="w-full min-[768px]:w-[100%] bg-[#222222] min-[880px]:w-[98%] min-[912px]:w-[98%] lg:w-[100%] mb-2">
+  <div class="relative flex justify-between align-baseline font-500 bg-[#222222] border-b-[1px] border-[#312f40] px-[15px] py-[8px] p-2 mt-5 sm:mt-0">
+    <h3 class="text-[15px] text-white font-semibold leading-5 m-0">{% translate "Series list" %}</h3>
+  </div>
+  {% include "partials/home/series/hero.html" %}
+  {% include "partials/home/series/grids.html" with items=comics %}
+  {% include "partials/htmx/spinner.html" %}
+  {% include "partials/home/series/pagination.html" with items=comics %}
+</div>

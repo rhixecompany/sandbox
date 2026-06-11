@@ -1,0 +1,33 @@
+{
+	"configurations": [
+		{
+			"console": "integratedTerminal",
+			"name": "Python Debugger: Current File",
+			"program": "${file}",
+			"request": "launch",
+			"type": "debugpy"
+		},
+		{
+			"console": "integratedTerminal",
+			"name": "Python Debugger: Module",
+			"module": "pytest",
+			"request": "launch",
+			"type": "debugpy"
+		},
+		{
+			"console": "integratedTerminal",
+			"name": "Bun: Current File",
+			"program": "${file}",
+			"request": "launch",
+			"runtimeExecutable": "bun",
+			"type": "node"
+		},
+		{
+			"console": "integratedTerminal",
+			"name": "Node.js: Current File",
+			"program": "${file}",
+			"request": "launch",
+			"type": "node"
+		}
+	]
+}

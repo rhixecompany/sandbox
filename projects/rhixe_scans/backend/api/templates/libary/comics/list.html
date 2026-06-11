@@ -1,0 +1,76 @@
+{% extends './base.html' %}
+
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'View Comic List' %}
+{% endblock %}
+{% block content %}
+  {% include 'partials/comics/container.html' %}
+{% endblock %}
+{% comment %} {% block injs %}
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/datatables.min.js' %}"></script>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                $("#comic_table").DataTable()
+
+              })
+            </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#comic_table").DataTable()
+      $("#comic_submit").on("click", function() {
+        $title = $("#id_title").val()
+        $slug = $("#id_slug").val()
+        $description = $("#id_description").val()
+        $rating = $("#id_rating").val()
+        $updated_at = $("#id_updated_at").val()
+        $status = $("#id_status").val()
+        $website = $("#id_website").val()
+        $category = $("#id_category").val()
+        $author = $("#id_author").val()
+        $artist = $("#id_artist").val()
+        $genres = $("#id_genres").val()
+
+        if ($title == "" || $slug == "" || $description == "" || $rating == "" || $updated_at == "" || $status == "" || $website == "" || $category == "" || $author == "" || $artist == "" || $genres == "") {
+          alert("Please complete field")
+        } else {
+          $.ajax({
+            type: "POST",
+            url: "{% url 'comics:create' %}",
+            data: {
+              title: $title,
+              slug: $slug,
+              description: $description,
+              rating: $rating,
+              updated_at: $updated_at,
+              status: $status,
+              website: $website,
+              category: $category,
+              author: $author,
+              artist: $artist,
+              genres: $genres,
+              csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: function() {
+              alert("Save Data")
+              $("#id_title").val("")
+              $("#id_slug").val("")
+              $("#id_description").val("")
+              $("#id_rating").val("")
+              $("#id_updated_at").val("")
+              $("#id_status").val("")
+              $("#id_website").val("")
+              $("#id_category").val("")
+              $("#id_author").val("")
+              $("#id_artist").val("")
+              $("#id_genres").val("")
+              window.location = "{% url 'comics:list' %}"
+            }
+          })
+        }
+      })
+    })
+  </script>
+{% endblock %} {% endcomment %}

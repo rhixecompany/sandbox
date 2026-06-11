@@ -1,0 +1,171 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+
+{% render_bundle 'carousel' 'js' attrs='defer' %}
+<div class="carousel-root" id="default-carousel">
+  <div class="carousel-slider carousel" style="width: 100%">
+    <ul class="control-dots">
+      {% for item in items %}
+        {% if forloop.first %}
+          <button id="carousel-indicator-{{ forloop.counter }}"
+                  type="button"
+                  class='dot'
+                  aria-current="true"
+                  aria-label="Slide {{ forloop.counter }}"></button>
+        {% else %}
+          <button id="carousel-indicator-{{ forloop.counter }}"
+                  type="button"
+                  class='dot'
+                  aria-current="false"
+                  aria-label="Slide {{ forloop.counter }}"></button>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <button id="data-carousel-prev"
+            type="button"
+            aria-label="previous slide / item"
+            class="control-arrow control-prev control-disabled"></button>
+    <div class="slider-wrapper axis-horizontal">
+      <ul class="slider animated"
+          style="-webkit-transform: translate3d(-100%, 0, 0);
+                 -ms-transform: translate3d(-100%, 0, 0);
+                 -o-transform: translate3d(-100%, 0, 0);
+                 transform: translate3d(-100%, 0, 0);
+                 -webkit-transition-duration: 350ms;
+                 -moz-transition-duration: 350ms;
+                 -o-transition-duration: 350ms;
+                 transition-duration: 350ms;
+                 -ms-transition-duration: 350ms">
+        {% for item in items %}
+          <li class="slide" id="carousel-item-{{ forloop.counter }}">
+            <div class="bg-card text-card-foreground w-full rounded-lg border shadow-sm">
+              <div class="relative h-[280px] select-none">
+                <div>
+                  {% with images=item.get_comic_images_children %}
+                    {% for img in images|slice:":1" %}
+                      <img fetchpriority="high"
+                           loading="eager"
+                           decoding="async"
+                           data-nimg="fill"
+                           class="blur-lg brightness-[0.2]"
+                           style="position: absolute;
+                                  height: 100%;
+                                  width: 100%;
+                                  left: 0;
+                                  top: 0;
+                                  right: 0;
+                                  bottom: 0;
+                                  object-fit: cover;
+                                  color: transparent"
+                           alt="{{ item.title|title }}  poster"
+                           src="{{ img.image.url }}" />
+                    {% endfor %}
+                  {% endwith %}
+                </div>
+                <div class="slide-content relative grid grid-cols-12">
+                  <div class="col-span-9 pr-3.5 text-white sm:col-span-9 sm:pr-5">
+                    <div class="info-left">
+                      <div class="rating">
+                        <div class="vote">
+                          <div class="site-vote">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512"
+                                 fill="#f3d872">
+                              <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                              </path>
+                            </svg>
+                            <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-xs italic text-[#0a0a0a]">{{ item.rating }}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ellipsis">
+                        <span>
+                          <a href="{{ item.get_absolute_url }}" class="hover:text-[#f3d872]">{{ item.title }}</a>
+                        </span>
+                        <br />
+                        <span class="release-year">{{ item.type.name }}</span>
+                      </div>
+                    </div>
+                    <span class="extra-category mt-[68px] block text-[12px] sm:hidden">
+                      {% for genre in item.genres.all %}
+                        <a href='#'
+                           class="cursor-pointer text-white hover:text-themecolor"
+                           style="margin-bottom: -10px">{{ genre.name }},</a>
+                      {% endfor %}
+                      <a class="cursor-pointer text-white hover:text-themecolor"
+                         style="margin-bottom: -10px"></a>
+                    </span>
+                    <span class="extra-category mt-[68px] hidden text-[12px] sm:block">
+                      {% for genre in item.genres.all %}
+                        <a href='#'
+                           class="cursor-pointer text-white hover:text-themecolor"
+                           style="margin-bottom: -10px">{{ genre.name }},</a>
+                      {% endfor %}
+                    </span>
+                    <span class="title mt-2 block uppercase"><strong>summary</strong></span>
+                    <div class="summary mt-1 hidden justify-between text-left sm:block">{{ item.description|truncatewords:10 }}...</div>
+                    <div class="summary mt-1 justify-between text-left sm:hidden">{{ item.description|truncatewords:20 }}...</div>
+                    <span class="mt-1 block text-[13px]">
+                      Status:
+                      {{ item.get_status_display }}
+                      <br />
+                      <span>Author:
+                        {{ item.author.name }}
+                      </span>
+                    </span>
+                  </div>
+                  <div class="col-span-3">
+                    <a href="{{ item.get_absolute_url }}">
+                      <div class="poster relative hidden xs:flex">
+                        {% with images=item.get_comic_images_children %}
+                          {% for img in images|slice:":1" %}
+                            <img loading="lazy"
+                                 width="0"
+                                 height="0"
+                                 decoding="async"
+                                 data-nimg="1"
+                                 class="rounded-[4px]"
+                                 style="color: transparent;
+                                        width: 100%;
+                                        max-height: 180px;
+                                        object-fit: contain;
+                                        object-position: 100% 15%"
+                                 alt="{{ item.title|title }}  poster"
+                                 src="{{ img.image.url }}" />
+                          {% endfor %}
+                        {% endwith %}
+                      </div>
+                      <div class="relative xs:hidden">
+                        {% with images=item.get_comic_images_children %}
+                          {% for img in images|slice:":1" %}
+                            <img loading="lazy"
+                                 width="0"
+                                 height="0"
+                                 decoding="async"
+                                 data-nimg="1"
+                                 class="rounded-[4px]"
+                                 style="color: transparent;
+                                        width: 100%;
+                                        max-height: 125px;
+                                        object-fit: cover;
+                                        object-position: 100% 15%"
+                                 alt="{{ item.title|title }}  poster"
+                                 src="{{ img.image.url }}" />
+                          {% endfor %}
+                        {% endwith %}
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <button id="data-carousel-next"
+            type="button"
+            aria-label="next slide / item"
+            class="control-arrow control-next control-disabled"></button>
+  </div>
+</div>

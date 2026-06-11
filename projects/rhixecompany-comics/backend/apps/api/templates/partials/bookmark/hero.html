@@ -1,0 +1,199 @@
+{% load static i18n %}
+
+<div x-data="{ openGenres: false }">
+  <div class="grid grid-cols-2 gap-[3px] bg-[#222222] px-2.5 pt-[12px] sm:grid-cols-5 sm:gap-[6px] sm:px-3">
+    <div class="m-[4px] bg-[#222222] sm:m-[2px]">
+      <button @click="openGenres = !openGenres"
+              class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-[2px] border-solid bg-[#333] px-4 py-2 pl-[20px] align-middle text-[12px] font-normal text-[#ccc] transition-colors hover:cursor-pointer hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+        <span class="mt-0.5 capitalize">Genre All</span>
+        <svg width="14"
+             height="14"
+             viewBox="0 0 15 15"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             class="ml-0">
+          <path d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z" fill="none" stroke="currentColor" stroke-width="1">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="m-[4px] bg-[#222222] sm:m-[2px]">
+      <button class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-[2px] border-solid bg-[#333] px-4 py-2 pl-[20px] align-middle text-[12px] font-normal text-[#ccc] transition-colors hover:cursor-pointer hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+        <span class="mt-0.5 capitalize">Status All</span>
+        <svg width="14"
+             height="14"
+             viewBox="0 0 15 15"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             class="ml-0">
+          <path d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z" fill="none" stroke="currentColor" stroke-width="1">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="m-[4px] bg-[#222222] sm:m-[2px]">
+      <button class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-[2px] border-solid bg-[#333] px-4 py-2 pl-[20px] align-middle text-[12px] font-normal text-[#ccc] transition-colors hover:cursor-pointer hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+        <span class="mt-0.5 capitalize">Type All</span>
+        <svg width="14"
+             height="14"
+             viewBox="0 0 15 15"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             class="ml-0">
+          <path d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z" fill="none" stroke="currentColor" stroke-width="1">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="m-[4px] bg-[#222222] sm:m-[2px]">
+      <button class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-[2px] border-solid bg-[#333] px-4 py-2 pl-[20px] align-middle text-[12px] font-normal text-[#ccc] transition-colors hover:cursor-pointer hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+        <span class="mt-0.5 capitalize">Order by Last Up...</span>
+        <svg width="14"
+             height="14"
+             viewBox="0 0 15 15"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             class="ml-0">
+          <path d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z" fill="none" stroke="currentColor" stroke-width="1">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="mb-[2px] ml-[2px] mr-[3px] mt-[2px] hidden bg-[#222222] sm:block">
+      <button class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-none border-none bg-themecolor px-4 py-2 text-[12px] font-normal text-white transition-colors hover:cursor-pointer hover:bg-[#333] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              type="submit"
+              form="hook-form">
+        <svg width="15"
+             height="15"
+             viewBox="0 0 15 15"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             class="mr-0.5">
+          <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z" fill="none" fill-rule="evenodd" clip-rule="evenodd" stroke="currentColor" stroke-width="1">
+          </path>
+        </svg>
+        <span class="pt-0.5">Search</span>
+      </button>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 gap-1 bg-[#222222] p-4 pb-1 pt-2 sm:hidden">
+    <button class="ring-offset-background focus-visible:ring-ring inline-flex h-[26px] w-full items-center justify-center whitespace-nowrap rounded-[2px] border-solid bg-themecolor px-4 py-2 text-[12px] font-normal text-white transition-colors hover:cursor-pointer hover:bg-[#333] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+      <svg width="15"
+           height="15"
+           viewBox="0 0 15 15"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+           class="mr-0.5">
+        <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z" fill="none" fill-rule="evenodd" clip-rule="evenodd" stroke="currentColor" stroke-width="1">
+        </path>
+      </svg>
+      <span class="pt-0.5">Search</span>
+    </button>
+  </div>
+  <div x-show="openGenres"
+       x-trap="openGenres"
+       class="bg-[#222222] border-[#222222] sm:pr-3 sm:pl-3 overflow-hidden">
+    <div class="bg-[#333] sm:max-h-[240px] overflow-hidden overflow-y-auto w-[68%] border-[#333333] mt-[-30px] sm:mt-1 absolute rounded-none z-10  max-[600px]:w-[100%] max-[768px]:w-[96.5%] max-[860px]:w-[93%] max-[882px]:w-[63%] max-[912px]:w-[66%] ">
+      <div class="p-1">
+        <div class="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="flex flex-row items-start space-x-1 space-y-0">
+            <button type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-state="unchecked"
+                    value="on"
+                    class="ring-offset-background focus-visible:ring-ring peer mt-1 h-[13px] w-[13px] shrink-0 rounded-sm border border-[#5d5d5d] bg-[#5d5d5d] hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:h-4 data-[state=checked]:w-4 data-[state=checked]:border-[#333333] data-[state=checked]:bg-[#333333] data-[state=checked]:font-bold data-[state=checked]:text-[#28a745]"
+                    id=":re2:-form-item"
+                    aria-describedby=":re2:-form-item-description"
+                    aria-invalid="false"></button>
+            <input aria-hidden="true"
+                   tabindex="-1"
+                   type="checkbox"
+                   value="on"
+                   style="transform: translateX(-100%);
+                          position: absolute;
+                          pointer-events: none;
+                          opacity: 0;
+                          margin: 0px;
+                          width: 13px;
+                          height: 13px" />
+            <label class="text-[12px] font-medium text-[#ccc] hover:cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                   for=":re2:-form-item">Action</label>
+          </div>
+          <div class="flex flex-row items-start space-x-1 space-y-0">
+            <button type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-state="unchecked"
+                    value="on"
+                    class="ring-offset-background focus-visible:ring-ring peer mt-1 h-[13px] w-[13px] shrink-0 rounded-sm border border-[#5d5d5d] bg-[#5d5d5d] hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:h-4 data-[state=checked]:w-4 data-[state=checked]:border-[#333333] data-[state=checked]:bg-[#333333] data-[state=checked]:font-bold data-[state=checked]:text-[#28a745]"
+                    id=":re3:-form-item"
+                    aria-describedby=":re3:-form-item-description"
+                    aria-invalid="false"></button>
+            <input aria-hidden="true"
+                   tabindex="-1"
+                   type="checkbox"
+                   value="on"
+                   style="transform: translateX(-100%);
+                          position: absolute;
+                          pointer-events: none;
+                          opacity: 0;
+                          margin: 0px;
+                          width: 13px;
+                          height: 13px" />
+            <label class="text-[12px] font-medium text-[#ccc] hover:cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                   for=":re3:-form-item">Adaptation</label>
+          </div>
+          <div class="flex flex-row items-start space-x-1 space-y-0">
+            <button type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-state="unchecked"
+                    value="on"
+                    class="ring-offset-background focus-visible:ring-ring peer mt-1 h-[13px] w-[13px] shrink-0 rounded-sm border border-[#5d5d5d] bg-[#5d5d5d] hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:h-4 data-[state=checked]:w-4 data-[state=checked]:border-[#333333] data-[state=checked]:bg-[#333333] data-[state=checked]:font-bold data-[state=checked]:text-[#28a745]"
+                    id=":re4:-form-item"
+                    aria-describedby=":re4:-form-item-description"
+                    aria-invalid="false"></button>
+            <input aria-hidden="true"
+                   tabindex="-1"
+                   type="checkbox"
+                   value="on"
+                   style="transform: translateX(-100%);
+                          position: absolute;
+                          pointer-events: none;
+                          opacity: 0;
+                          margin: 0px;
+                          width: 13px;
+                          height: 13px" />
+            <label class="text-[12px] font-medium text-[#ccc] hover:cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                   for=":re4:-form-item">Adult</label>
+          </div>
+          <div class="flex flex-row items-start space-x-1 space-y-0">
+            <button type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-state="unchecked"
+                    value="on"
+                    class="ring-offset-background focus-visible:ring-ring peer mt-1 h-[13px] w-[13px] shrink-0 rounded-sm border border-[#5d5d5d] bg-[#5d5d5d] hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:h-4 data-[state=checked]:w-4 data-[state=checked]:border-[#333333] data-[state=checked]:bg-[#333333] data-[state=checked]:font-bold data-[state=checked]:text-[#28a745]"
+                    id=":re5:-form-item"
+                    aria-describedby=":re5:-form-item-description"
+                    aria-invalid="false"></button>
+            <input aria-hidden="true"
+                   tabindex="-1"
+                   type="checkbox"
+                   value="on"
+                   style="transform: translateX(-100%);
+                          position: absolute;
+                          pointer-events: none;
+                          opacity: 0;
+                          margin: 0px;
+                          width: 13px;
+                          height: 13px" />
+            <label class="text-[12px] font-medium text-[#ccc] hover:cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                   for=":re5:-form-item">Adventure</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

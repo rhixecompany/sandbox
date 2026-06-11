@@ -1,0 +1,21 @@
+{% load static i18n %}
+
+<div class="flex items-center p-1 mr-3 space-x-1.5">
+  {% for img in record.get_images|slice:'0:1' %}
+    {% if img.image %}
+      <img class="w-12 h-12 rounded-full"
+           src="{{ img.image.url }}"
+           alt="{{ record.title }} avatar" />
+    {% else %}
+      <img class="w-12 h-12 rounded-full"
+           src="{% static 'images/files/01J3QRQXHSBQVGA2KHKP2D3S3S-thumb-small.webp' %}"
+           alt="{{ record.title }} avatar" />
+    {% endif %}
+  {% endfor %}
+  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+    <div class="text-base font-semibold text-gray-900 dark:text-white">
+      <a href="{{ record.get_absolute_url }}">{{ record.title }}</a>
+    </div>
+    <div class="text-sm font-normal text-gray-500 dark:text-gray-400">{{ record.category.name }}</div>
+  </div>
+</div>

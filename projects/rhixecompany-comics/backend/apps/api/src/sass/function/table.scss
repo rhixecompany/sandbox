@@ -1,0 +1,11 @@
+.mytable {
+  @apply w-full text-left text-sm text-neutral-600 dark:text-neutral-300;
+}
+
+.mytablerow {
+  @apply even:bg-black/5 dark:even:bg-white/10;
+}
+
+.mytablecol {
+  @apply p-1 whitespace-nowrap;
+}

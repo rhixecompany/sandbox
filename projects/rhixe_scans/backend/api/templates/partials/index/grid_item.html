@@ -1,0 +1,109 @@
+{% load static i18n %}
+
+<div class="grid grid-cols-1 grid-rows-1 bg-[#222222] p-3 pb-0 sm:grid-cols-2">
+  {% for item in items %}
+    <div class="w-full border-b-[1px] border-b-[#312f40] p-1 pb-3 pt-1">
+      <div class="m-2 grid grid-cols-12 grid-rows-1">
+        <div class="col-span-3">
+          <div class="relative h-32 w-[100%]">
+            <a href="{{ item.get_absolute_url }}">
+              {% for img in item.get_images|slice:"0:1" %}
+                {% if img.image %}
+                  <img alt="{{ item.title }}"
+                       loading="lazy"
+                       width="0"
+                       height="0"
+                       decoding="async"
+                       data-nimg="1"
+                       class="rounded-md object-cover"
+                       src="{{ img.image.url }}"
+                       style="color: transparent;
+                              width: 100px;
+                              max-height: 130px;
+                              object-fit: cover;
+                              object-position: 100% 25%" />
+                </a>
+              {% else %}
+                <img alt="{{ item.title }}"
+                     loading="lazy"
+                     width="0"
+                     height="0"
+                     decoding="async"
+                     data-nimg="1"
+                     class="rounded-md object-cover"
+                     src="{% static 'images/files/01J3QRQXHSBQVGA2KHKP2D3S3S-thumb-small.webp' %}"
+                     style="color: transparent;
+                            width: 100px;
+                            max-height: 130px;
+                            object-fit: cover;
+                            object-position: 100% 25%" />
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-span-9 space-y-1.5 overflow-hidden pl-[9px]">
+        <span class="hover:text-themecolor text-[15px] font-medium hover:cursor-pointer">
+          <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
+        </span>
+        <div class="flex list-disc flex-col gap-y-1.5">
+          {% for chapter in item.get_chapters|slice:"0:3" %}
+            <span class="mt-1 inline-block flex-1">
+              <div class="flex flex-row justify-between rounded-sm">
+                <div class="flex text-sm font-medium text-[#999] hover:text-white">
+                  <a href="{{ chapter.get_absolute_url }}" class="">
+                    <span class="flex">
+                      <svg width="15"
+                           height="15"
+                           viewBox="0 0 15 15"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="mt-[2px] text-[#9d4942]">
+                        <path d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z" fill="currentColor">
+                        </path>
+                      </svg>
+                      <div class="flex gap-1">
+                        <p class="w-[80px]">{{ chapter.name }}</p>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+                <p class="ml-2 flex items-end text-[12px] text-[#555555]">{{ chapter.updated_at|timesince }}</p>
+              </div>
+            </span>
+          {% empty %}
+            <span class="mt-1 inline-block flex-1">
+              <div class="flex flex-row justify-between rounded-sm">
+                <div class="flex text-sm font-medium text-[#999] hover:text-white">
+                  <span class="flex">
+                    <svg width="15"
+                         height="15"
+                         viewBox="0 0 15 15"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg"
+                         class="mt-[2px] text-[#9d4942]">
+                      <path d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z" fill="currentColor">
+                      </path>
+                    </svg>
+                    <div class="flex gap-1">
+                      <p class="w-[80px]">No Chapter</p>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% empty %}
+  <div class="w-full border-b-[1px] border-b-[#312f40] p-1 pb-3 pt-1">
+    <div class="m-2 grid grid-cols-12 grid-rows-1">
+      <div class="col-span-9 space-y-1.5 overflow-hidden pl-[9px]">
+        <span class="hover:text-themecolor text-red-900 text-[15px] font-medium hover:cursor-pointer">No Results!!!</span>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>

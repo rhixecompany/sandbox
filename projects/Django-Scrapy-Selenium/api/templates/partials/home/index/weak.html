@@ -1,0 +1,44 @@
+{% load static i18n %}
+
+<div class="hidden overflow-hidden min-[882px]:hidden min-[883px]:block">
+  <div class="relative ml-2.5 h-[280px] cursor-pointer">
+    {% for item in items|slice:"1:2" %}
+      <a>
+        <img alt="Trending Crown"
+             fetchpriority="high"
+             loading="eager"
+             width="40"
+             height="40"
+             decoding="async"
+             data-nimg="1"
+             style="color: transparent;
+                    top: 10px;
+                    right: 5px;
+                    position: absolute;
+                    background-size: 100px;
+                    z-index: 1"
+             src="{% static 'svg/crown.webp' %}" />
+        <div class="z-1 bg-blackw absolute left-0 top-0 h-full w-full text-white">
+          <div class="mt-[40%] px-[5%] py-0 text-left uppercase leading-[19px]">
+            <span class="block text-[16px]">Rhixe Scans
+              <b>Trending</b>
+              This Week
+            </span>
+            <span class="mt-[5px] block h-[55px] overflow-hidden text-[17px]">
+              <b>{{ item.title|title }}</b>
+            </span>
+          </div>
+        </div>
+        <div class="bg-[auto 100%] bg-[top center] h-full w-full overflow-hidden bg-black opacity-20">
+          {% with images=item.get_comic_images_children %}
+            {% for img in images|slice:":1" %}
+              <div class="h-full w-full bg-cover bg-center"
+                   style="background-image: url({{ img.image.url }});
+                          background-size: cover"></div>
+            {% endfor %}
+          {% endwith %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>

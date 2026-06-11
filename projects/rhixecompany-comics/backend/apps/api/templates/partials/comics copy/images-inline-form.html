@@ -1,0 +1,63 @@
+{% load static i18n widget_tweaks example %}
+
+<form id='image-upload-form'
+      action='.'
+      method="POST"
+      enctype="multipart/form-data"
+      class="p-1"
+      hx-post='{% if url %}{{ url }}{% else %}.{% endif %}'
+      hx-swap="outerHTML"
+      hx-encoding="multipart/form-data"
+      hx-indicator="#spinner"
+      {% if form.instance.id %} hx-trigger='submit, change from:#id_image delay:500ms' {% else %} hx-trigger='submit' {% endif %}>
+  {% csrf_token %}
+  {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+  {{ form.non_form_errors }}
+  <div class="grid gap-1 mb-1 grid-cols-2">
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.url.name }}" class="custom_label">{{ form.url.label }}</label>
+      {{ form.url|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.url.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.url.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.image.name }}" class="custom_label">{{ form.image.label }}</label>
+      <div class="align-center flex justify-between xl:block 2xl:flex 2xl:space-x-4">
+        {{ form.image|add_classes:'custom_image_input' }}
+        <div class="ml-3 text-xs text-red-400">{{ form.image.errors }}</div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+        <div id="upload-progress"
+             class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+             style="width: 0%"></div>
+      </div>
+      <script>
+        htmx.on('#image-upload-form', 'htmx:xhr:progress', function(evt) {
+
+          const progress = evt.detail.loaded / evt.detail.total * 100;
+          const errorSpan = document.createElement('span');
+          errorSpan.textContent = `${progress}%`;
+          htmx.find('#upload-progress').setAttribute('style', `width: ${progress}%`);
+          htmx.find('#upload-progress').appendChild(errorSpan);
+
+        });
+      </script>
+    </div>
+  </div>
+  <div class="mt-4 flex justify-between gap-2 items-center">
+    <button type="submit"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+      {% trans "Submit" %}
+    </button>
+    <button href=' {{ comic_url }}'
+            hx-get=' {{ comic_url }}'
+            hx-swap="outerHTML"
+            hx-target='#form-container'
+            hx-indicator="#spinner"
+            hx-push-url='true'
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+      {% trans "Cancel" %}
+    </button>
+  </div>
+</div>
+</form>

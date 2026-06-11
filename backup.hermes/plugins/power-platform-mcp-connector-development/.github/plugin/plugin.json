@@ -1,0 +1,19 @@
+{
+  "agents": ["./agents"],
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "commands": ["./commands"],
+  "description": "Complete toolkit for developing Power Platform custom connectors with Model Context Protocol integration for Microsoft Copilot Studio",
+  "keywords": [
+    "power-platform",
+    "mcp",
+    "copilot-studio",
+    "custom-connector",
+    "json-rpc"
+  ],
+  "license": "MIT",
+  "name": "power-platform-mcp-connector-development",
+  "repository": "https://github.com/github/awesome-copilot",
+  "version": "1.0.0"
+}

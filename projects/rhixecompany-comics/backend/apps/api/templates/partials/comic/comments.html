@@ -1,0 +1,33 @@
+{% load static i18n widget_tweaks %}
+
+<div class="bg-[#222222]">
+    <div class="border-b-[1px] border-b-[#A2A2A2]/20 px-5 py-2">
+        <h3 class="text-base font-semibold text-white">{% translate "Comments" %}</h3>
+    </div>
+    <div class="space-y-4 p-4">
+        <form class='space-y-2 mb-2  mx-auto'
+              style="margin-bottom: 12px"
+              action='.'
+              method="POST"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="grid grid-cols-6 gap-2">
+                <!-- Comment Form -->
+                {% for field in commentform %}
+                    <div class="col-span-6">
+                        <p class="p-1.5 text-red-500">{{ field.errors }}</p>
+                        <label for="{{ field.label }}" class="custom_label">{{ field.label }}</label>
+                        {% render_field field %}
+                        {% if field.help_text %}<p class="mt-2 text-gray-500">{{ field.help_text|safe }}</p>{% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="mt-4 flex justify-between gap-2 items-center">
+                <button type="submit"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    {% trans "Submit" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

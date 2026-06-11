@@ -1,0 +1,20 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 96.0,
+  "has_safety_section": true,
+  "md_size_kb": 3.5,
+  "prompt_name": "dev-init",
+  "skills_required": ["brainstorming", "plans-and-specs"],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "planning",
+    "initialization",
+    "prompts",
+    "conversion"
+  ],
+  "title": "Dev Init - Development Initialization Planning",
+  "trigger": "/dev-init",
+  "txt_size_kb": 0.4
+}

@@ -1,0 +1,69 @@
+{% load static i18n %}
+
+<li id='image-{{ object.id }}'
+    class="py-3 sm:py-4  border-b  border-gray-200 dark:border-gray-700">
+  <div class="flex items-center">
+    <div class="p-2 whitespace-nowrap">
+      <label for="comic_image_{{ object.pk }}"
+             class="flex items-center cursor-pointer text-neutral-600 dark:text-neutral-300 ">
+        <div class="relative flex items-center">
+          <input type="checkbox"
+                 id="comic_image_{{ object.pk }}"
+                 name='mycheck'
+                 value="{{ object.pk }}"
+                 x-model="comicimages"
+                 class="before:content[''] peer relative size-4 cursor-pointer appearance-none overflow-hidden rounded border border-neutral-300 bg-white before:absolute before:inset-0 checked:border-black checked:before:bg-black focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-neutral-800 checked:focus:outline-black active:outline-offset-0 dark:border-neutral-700 dark:bg-neutral-900 dark:checked:border-white dark:checked:before:bg-white dark:focus:outline-neutral-300 dark:checked:focus:outline-white"
+                 :checked="comicimages" />
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               aria-hidden="true"
+               stroke="currentColor"
+               fill="none"
+               stroke-width="4"
+               class="pointer-events-none invisible absolute left-1/2 top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 text-neutral-100 peer-checked:visible dark:text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+        </div>
+      </label>
+    </div>
+    <div class="flex-shrink-0 ml-2">
+      <img class="w-8 h-8 rounded-full"
+           src="{{ object.image.url }}"
+           alt="{{ object.comic }} image" />
+    </div>
+    <div class="flex-1 min-w-0 ms-4">
+      <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+        <a href="{{ object.comic.get_absolute_url }}">{{ object.url }}</a>
+      </p>
+      <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+        <a href="{{ object.comic.get_absolute_url }}">{{ object.comic.title }}</a>
+      </p>
+    </div>
+    <div class="inline-flex items-center "
+         hx-swap='outerHTML'
+         hx-indicator="#spinner">
+      <div class='pr-2'>
+        <button hx-get="{{ object.get_hx_edit_url }}"
+                hx-target="#image-{{ object.id }}"
+                hx-on::before-request="this.closest('li').classList.add('hidden')"
+                hx-on::after-request="this.closest('li').classList.remove('hidden'); if (!event.detail.successfull) { const errorSpan = document.createElement('span'); errorSpan.textContent = 'Failed to delete comic'; errorSpan.classList.add('text-gray-300'); this.closest('button').appendChild(errorSpan) } "
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+          Edit
+        </button>
+      </div>
+      <div>
+        <button hx-delete='{{ object.get_delete_url }}'
+                hx-trigger='confirmed'
+                onClick="Swal.fire({title: 'Delete', icon: 'error', confirmButtonText: 'Confirm', text:'Are you sure you want to delete {{ object.image.url }}?'}).then((result)=>{ if(result.isConfirmed){ htmx.trigger(this, 'confirmed'); } })"
+                hx-target="this"
+                hx-on::before-request="this.closest('li').classList.add('hidden')"
+                hx-on::after-request="this.closest('li').classList.remove('hidden'); if (!event.detail.successfull) { const errorSpan = document.createElement('span'); errorSpan.textContent = 'Failed to delete comic'; errorSpan.classList.add('text-gray-300'); this.closest('button').appendChild(errorSpan) } "
+                hx-on:comic-image-deleted="this.closest('li').classList.add('hidden')"
+                hx-on:comic-image-deleted="this.closest('li').remove()"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</li>

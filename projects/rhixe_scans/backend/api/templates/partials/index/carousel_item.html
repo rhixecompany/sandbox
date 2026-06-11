@@ -1,0 +1,206 @@
+{% load static i18n format_json %}
+{% load render_bundle from webpack_loader %}
+
+{% render_bundle 'carousel' 'js' attrs='defer' %}
+<div class="loop owl-carousel full owl-loaded">
+  <div>
+    <div class="carousel-root">
+      <div class="carousel-slider carousel" style="width: 100%">
+        <ul id="dots" class="control-dots">
+          {% for item in items %}
+            {% if forloop.first %}
+              <li class="dot selected"
+                  value="{{ forloop.counter0 }}"
+                  role="button"
+                  tabindex="{{ forloop.counter0 }}"
+                  aria-label="slide item {{ forloop.counter }}"></li>
+            {% else %}
+              <li class="dot"
+                  value="{{ forloop.counter0 }}"
+                  role="button"
+                  tabindex="{{ forloop.counter0 }}"
+                  aria-label="slide item {{ forloop.counter }}"></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <button id="left"
+                type="button"
+                aria-label="previous slide / item"
+                class="control-arrow control-prev"></button>
+        <div class="slider-wrapper axis-horizontal">
+          <ul id="slider"
+              class="slider animated"
+              style="transition-duration: 350ms">
+            {% for item in items %}
+              <li class="slide">
+                <div class="bg-card text-card-foreground w-full rounded-lg border shadow-sm">
+                  <div class="relative h-[280px] select-none">
+                    <div>
+                      {% for img in item.get_images|slice:"0:1" %}
+                        {% if img.image %}
+                          <img alt="{{ item.title }}"
+                               fetchpriority="high"
+                               loading="eager"
+                               decoding="async"
+                               data-nimg="fill"
+                               class="blur-lg brightness-[0.2]"
+                               style="position: absolute;
+                                      height: 100%;
+                                      width: 100%;
+                                      left: 0;
+                                      top: 0;
+                                      right: 0;
+                                      bottom: 0;
+                                      object-fit: cover;
+                                      color: transparent"
+                               src="{{ img.image.url }}" />
+                        {% else %}
+                          <img alt="{{ item.title }}"
+                               fetchpriority="high"
+                               loading="eager"
+                               decoding="async"
+                               data-nimg="fill"
+                               class="blur-lg brightness-[0.2]"
+                               style="position: absolute;
+                                      height: 100%;
+                                      width: 100%;
+                                      left: 0;
+                                      top: 0;
+                                      right: 0;
+                                      bottom: 0;
+                                      object-fit: cover;
+                                      color: transparent"
+                               src="{% static 'images/files/01JMXEGD436DMA4BZ3MB22HDPY-thumb-small.webp' %}" />
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                    <div class="slide-content relative grid grid-cols-12">
+                      <div class="col-span-9 pr-3.5 text-white sm:col-span-9 sm:pr-5">
+                        <div class="info-left">
+                          <div class="rating">
+                            <div class="vote">
+                              <div class="site-vote">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 576 512"
+                                     fill="#f3d872">
+                                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                  </path>
+                                </svg>
+                                <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-xs italic text-[#0a0a0a]">{{ item.rating }}</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ellipsis">
+                            <span><a href="{{ item.get_absolute_url }}" class="hover:text-[#f3d872]">{{ item.title }}</a></span>
+                            <br />
+                            <span class="release-year">{{ item.category.name }}</span>
+                          </div>
+                        </div>
+                        <span class="extra-category mt-[68px] block text-[12px] sm:hidden">
+                          {% for genre in item.genres.all|slice:"0:5" %}
+                            <a class="cursor-pointer text-white hover:text-themecolor"
+                               style="margin-bottom: -10px">
+                              <!-- -->{{ genre.name }}<!-- -->,
+                            </a>
+                          {% endfor %}
+                          <a class="cursor-pointer text-white hover:text-themecolor"
+                             style="margin-bottom: -10px">
+                            <!-- -->...</a></span><span class="extra-category mt-[68px] hidden text-[12px] sm:block">
+                            {% for genre in item.genres.all|slice:"0:4" %}
+                              <a class="cursor-pointer text-white hover:text-themecolor"
+                                 style="margin-bottom: -10px">{{ genre.name }}<!-- -->, </a>
+                            {% endfor %}
+                          </span><span class="title mt-2 block uppercase"><strong>summary</strong></span>
+                          <div class="summary mt-1 hidden justify-between text-left sm:block">{{ item.description|safe|slice:"0:150" }}</div>
+                          <div class="summary mt-1 justify-between text-left sm:hidden">{{ item.description|safe|slice:"0:100" }} ...</div>
+                          <span class="mt-1 block text-[13px]">Status:
+                            <!-- -->{{ item.get_status_display }}<!-- -->
+                            <br />
+                            <span>Author:
+                              <!-- -->{{ item.author.name }}</span></span>
+                            </div>
+                            <div class="col-span-3">
+                              <a href="{{ item.get_absolute_url }}">
+                                <div class="xs:flex poster relative hidden">
+                                  {% for img in item.get_images|slice:"0:1" %}
+                                    {% if img.image %}
+                                      <img alt="{{ item.title }}"
+                                           loading="lazy"
+                                           width="0"
+                                           height="0"
+                                           decoding="async"
+                                           data-nimg="1"
+                                           class="rounded-[4px]"
+                                           style="color: transparent;
+                                                  width: 100%;
+                                                  max-height: 180px;
+                                                  object-fit: contain;
+                                                  object-position: 100% 15%"
+                                           src="{{ img.image.url }}" />
+                                    {% else %}
+                                      <img alt="{{ item.title }}"
+                                           loading="lazy"
+                                           width="0"
+                                           height="0"
+                                           decoding="async"
+                                           data-nimg="1"
+                                           class="rounded-[4px]"
+                                           style="color: transparent;
+                                                  width: 100%;
+                                                  max-height: 180px;
+                                                  object-fit: contain;
+                                                  object-position: 100% 15%"
+                                           src="{% static 'images/files/01JMXEGD436DMA4BZ3MB22HDPY-thumb-small.webp' %}" />
+                                    {% endif %}
+                                  {% endfor %}
+                                </div>
+                                <div class="xs:hidden relative">
+                                  {% for img in item.get_images|slice:"0:1" %}
+                                    {% if img.image %}
+                                      <img alt="{{ item.title }}"
+                                           loading="lazy"
+                                           width="0"
+                                           height="0"
+                                           decoding="async"
+                                           data-nimg="1"
+                                           class="rounded-[4px]"
+                                           style="color: transparent;
+                                                  width: 100%;
+                                                  max-height: 125px;
+                                                  object-fit: cover;
+                                                  object-position: 100% 15%"
+                                           src="{{ img.image.url }}" />
+                                    {% else %}
+                                      <img alt="{{ item.title }}"
+                                           loading="lazy"
+                                           width="0"
+                                           height="0"
+                                           decoding="async"
+                                           data-nimg="1"
+                                           class="rounded-[4px]"
+                                           style="color: transparent;
+                                                  width: 100%;
+                                                  max-height: 125px;
+                                                  object-fit: cover;
+                                                  object-position: 100% 15%"
+                                           src="{% static 'images/files/01JMXEGD436DMA4BZ3MB22HDPY-thumb-small.webp' %}" />
+                                    {% endif %}
+                                  {% endfor %}
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <button id="right"
+                      type="button"
+                      aria-label="next slide / item"
+                      class="control-arrow control-next"></button>
+            </div>
+          </div>
+        </div>
+      </div>

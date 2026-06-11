@@ -1,0 +1,11 @@
+{% load static i18n %}
+
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3 p-4">
+  {% for comic in items %}
+    {% include "partials/home/series/grid_item.html" with item=comic %}
+  {% empty %}
+    <div class="ml-3 text-xs text-red-400">
+      <p>No Series Available!!!</p>
+    </div>
+  {% endfor %}
+</div>

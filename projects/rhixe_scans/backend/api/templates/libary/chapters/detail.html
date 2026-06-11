@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+
+{% block header %}
+  {{ form.media }}
+{% endblock header %}
+{% block meta %}
+{% endblock meta %}
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'View:' %} {{ object.name }}
+{% endblock %}
+{% block content %}
+  <div class="w-[100%]">{% include 'partials/chapter/container.html' %}</div>
+{% endblock %}

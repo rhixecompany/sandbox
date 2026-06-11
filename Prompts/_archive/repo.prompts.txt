@@ -1,0 +1,63 @@
+# rhixecompany-comics migration and consolidation prompt
+
+## Goal
+Create a new consolidated project at `projects/rhixecompany-comics` using:
+- Django (Python) for backend
+- Next.js 16 App Router for frontend
+
+Source projects to consolidate:
+- `projects/comicwise`
+- `projects/Django-Scrapy-Selenium`
+- `projects/selenium_webdriver`
+
+Important scope rule:
+- Remove or disable workflows related to `projects/comicwise`.
+- Focus all active migration and implementation work on `projects/rhixecompany-comics`.
+
+## Skills to load
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+
+## Phase 1: Discovery and triage
+1. Inventory all relevant projects and dependencies under `projects/`.
+2. Identify overlapping modules, scripts, pipelines, and docs.
+3. Save findings to `docs/sandbox-projects-list-context.md`.
+4. Read the full context file before planning.
+
+## Phase 2: Implementation plan
+1. Create a migration and merge plan at `docs/sandbox-projects-merge-plan.md`.
+2. Include architecture, ownership boundaries, migration order, and rollback strategy.
+3. Define what moves to Django backend, Next.js frontend, shared tooling, and what gets retired.
+
+## Phase 3: Execution
+1. Execute the approved plan for `projects/rhixecompany-comics`.
+2. Migrate selected capabilities from source projects.
+3. Remove or replace `projects/comicwise`-specific workflows in active automation paths.
+4. Execute or regenerate `docs/sandbox-projects-merge-prompt.md` as the operational migration prompt.
+
+## Phase 4: Verification
+1. Verify all migration tasks are complete and traceable.
+2. Validate backend/frontend integration and build/test workflows.
+3. Update docs to reflect the new source of truth at `projects/rhixecompany-comics`.
+4. Confirm `docs/sandbox-projects-merge-prompt.md` has been executed completely and evidence is captured.
+
+## Definition of done
+- `projects/rhixecompany-comics` is the active project target.
+- Deprecated `projects/comicwise` workflows are removed from active use.
+- Plan, execution notes, and verification artifacts are documented in `docs/`.
+/brainstorming /plans-and-specs  /dispatching-parallel-agents /subagent-driven-development  /systematic-debugging  /simplify  /plan /prompt-engineering   for migrating all projects at "C:\Users\Alexa\Desktop\SandBox\Rhixe-company" to "C:\Users\Alexa\Desktop\SandBox\rhixecompany".
+Phase 1
+list,triage all projects at "C:\Users\Alexa\Desktop\SandBox\Rhixe-company" and "C:\Users\Alexa\Desktop\SandBox\rhixecompany" then save the report to  docs/sandbox-projects-list-context.md
+then Read all docs/sandbox-projects-list-context.md to understand all projects we are working with.
+Phase 2
+Create an implementation plan for dedupe,merging,creating,updating all projects at "C:\Users\Alexa\Desktop\SandBox\Rhixe-company" to "C:\Users\Alexa\Desktop\SandBox\rhixecompany" called sandbox-projects-merge-plan.md at docs format with markdown
+
+Phase 3
+execute docs/sandbox-projects-merge-plan.md
+Phase 4
+verify docs/sandbox-projects-merge-plan.md was executed completely
+so for each projects it creates 2 branchs called development and production set the default branch to production but must be on development with sync deletes all branchs and verify only branch development and production exist locally and remotely

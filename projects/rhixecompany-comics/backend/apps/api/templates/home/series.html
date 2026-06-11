@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+
+{% load static i18n %}
+
+{% block head_title %}
+  {% trans "Series" %}
+{% endblock head_title %}
+{% block content %}
+  <div class="lg:my-0 relative max-[786px]:p-0 max-[882px]:p-4 min[925px]:p-0">
+    <div class="w-[100%] float-left min-[882px]:w-[68.5%] min-[1030px]:w-[70%] max-[600px]:w-[100%] relative z-0">
+      {% include "partials/home/series/container.html" %}
+    </div>
+    {% include "partials/home/index/accordian.html" %}
+  </div>
+{% endblock content %}

@@ -1,0 +1,309 @@
+{% load static i18n example %}
+
+<header class="bg-themecolor py-1">
+  <div class="mx-auto flex max-w-[1220px] items-center justify-between gap-5 px-2">
+    <div class="flex items-center gap-2">
+      <a href="{% url 'index' %}" class="flex h-12 w-12">
+        <img class="object-cover"
+             src="{% static 'images/favicons/logo.webp' %}"
+             alt="Rhixe Logo" />
+      </a>
+      <ul class="hidden flex-row md:flex">
+        <li>
+          <a href="{% url 'index' %}"><span class="block pb-0 pl-[8px] pr-[10px] pt-0 text-[13px] leading-[42px] tracking-wider text-white hover:bg-gray-900 hover:bg-opacity-40 hover:text-white">{% translate 'Home' %}</span></a>
+        </li>
+        <li>
+          <a href="{% url 'bookmarks' %}"><span class="block pb-0 pl-[8px] pr-[10px] pt-0 text-[13px] leading-[42px] tracking-wider text-white hover:bg-gray-900 hover:bg-opacity-40 hover:text-white">{% translate 'Bookmarks' %}</span></a>
+        </li>
+        <li>
+          <a href="{% url 'series' %}"><span class="block pb-0 pl-[8px] pr-[10px] pt-0 text-[13px] leading-[42px] tracking-wider text-white hover:bg-gray-900 hover:bg-opacity-40 hover:text-white">{% translate 'Comics' %}</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex w-full">
+      <div id="mobile-search-menu" class="hidden w-full items-center space-x-2">
+        <form class="flex-1" action="{% url 'series' %}">
+          <div class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="lucide lucide-search absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/70">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            {{ myfilter.form.search1|add_classes:'custom_search1' }}
+          </div>
+        </form>
+        <button id="mobile-search-btn-close"
+                class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-white transition-colors hover:bg-purple-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-x h-5 w-5">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="default-search-menu" class="w-full flex-row items-center gap-3.5">
+        <div class="hidden w-full flex-row items-center gap-3.5 md:flex">
+          <form class="hidden w-full items-center justify-end md:flex"
+                action="{% url 'series' %}">
+            {{ myfilter.form.search|add_classes:'custom_search' }}
+            <svg class="absolute h-8 w-8 cursor-not-allowed pt-1 text-white"
+                 viewBox="0 0 20 20"
+                 fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+              </path>
+            </svg>
+          </form>
+          {% if request.user.is_authenticated %}
+            <div style="opacity: 1">
+              <div x-data="dropdown"
+                   class="hidden flex-row items-center gap-3.5 md:flex">
+                {% comment %} <div style="width: auto; opacity: 1; transform: none">
+                  <div class="flex items-center justify-between">
+                    <button class="ring-offset-background focus-visible:ring-ring ml-1 flex h-10 items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-[#6F2598] px-2 py-2 text-sm font-medium text-white transition-colors hover:bg-[#5a1f78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-up h-3.5 w-3.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m16 12-4-4-4 4"></path>
+                        <path d="M12 16V8"></path>
+                      </svg>
+                      <p>Upgrade</p>
+                    </button>
+                  </div>
+                </div> {% endcomment %}
+                <div>
+                  <div class="relative" data-headlessui-state="">
+                    <button class="flex w-full items-center justify-center"
+                            id="notification-dropdown-btn"
+                            @click="notificationtoggle"
+                            type="button"
+                            aria-haspopup="menu"
+                            aria-expanded="false"
+                            data-headlessui-state="">
+                      <div style="opacity: 1; transform: none">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="lucide lucide-bell h-6 w-6">
+                          <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+                          <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
+                          </path>
+                        </svg>
+                        <span class="absolute end-0 top-5 -translate-y-1/2 translate-x-1/2 transform rounded-full bg-red-500 px-1.5 py-0.5 text-xs font-medium text-white">1</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div id="_rht_toaster"
+                       style="position: fixed;
+                              z-index: 9999;
+                              inset: 16px;
+                              pointer-events: none"></div>
+                </div>
+                <button @click="usertoggle"
+                        class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors hover:bg-purple-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                        type="button"
+                        id="user-dropdown-btn"
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        data-state="closed">
+                  {% for data in avatar %}
+                    {% if data.image %}
+                      <img src="{{ data.image.url }}"
+                           alt="User"
+                           class="h-8 w-8 rounded-full ring-2 ring-purple-400/20" />
+                    {% else %}
+                      <img src="{% static 'images/files/profile-picture.webp' %}"
+                           alt="User"
+                           class="h-8 w-8 rounded-full ring-2 ring-purple-400/20" />
+                    {% endif %}
+                  {% endfor %}
+                </button>
+                {% include 'partials/base/menu_dropdown.html' %}
+              </div>
+            </div>
+          {% else %}
+            <div style="width: auto">
+              <a class="flex items-center justify-center rounded-full bg-[#121212]"
+                 href="{% url 'account_login' %}">
+                <button class="ring-offset-background focus-visible:ring-ring flex h-10 w-20 items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-[#6F2598] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#5a1f78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       width="24"
+                       height="24"
+                       viewBox="0 0 24 24"
+                       fill="none"
+                       stroke="currentColor"
+                       stroke-width="2"
+                       stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-user-round h-3 w-3">
+                    <circle cx="12" cy="8" r="5"></circle>
+                    <path d="M20 21a8 8 0 0 0-16 0"></path>
+                  </svg>
+                  <p>{% translate 'Login' %}</p>
+                </button>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="gap3.5 flex flex-row items-center md:hidden">
+          <div class="flex flex-grow flex-row items-center justify-end space-x-1">
+            {% if request.user.is_authenticated %}
+              {% comment %} <div style="width: auto; opacity: 1; transform: none">
+                <div class="flex items-center justify-between">
+                  <button class="ring-offset-background focus-visible:ring-ring ml-1 flex h-10 items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-[#6F2598] px-2 py-2 text-sm font-medium text-white transition-colors hover:bg-[#5a1f78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-up h-3.5 w-3.5">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="m16 12-4-4-4 4"></path>
+                      <path d="M12 16V8"></path>
+                    </svg>
+                    <p>Upgrade</p>
+                  </button>
+                </div>
+              </div> {% endcomment %}
+              <button id="mobile-search-btn"
+                      class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-white transition-colors hover:bg-purple-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-search h-5 w-5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+              <div style="opacity: 1">
+                <div>
+                  <div class="relative" data-headlessui-state="">
+                    <button class="flex w-full items-center justify-center"
+                            id="headlessui-menu-button-:r8:"
+                            type="button"
+                            aria-haspopup="menu"
+                            aria-expanded="false"
+                            data-headlessui-state="">
+                      <div style="opacity: 1; transform: none">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="lucide lucide-bell h-6 w-6">
+                          <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+                          <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
+                          </path>
+                        </svg>
+                        <span class="absolute end-0 top-5 -translate-y-1/2 translate-x-1/2 transform rounded-full bg-red-500 px-1.5 py-0.5 text-xs font-medium text-white">1</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div id="_rht_toaster"
+                       style="position: fixed;
+                              z-index: 9999;
+                              inset: 16px;
+                              pointer-events: none"></div>
+                </div>
+              </div>
+            {% endif %}
+            {% comment %}search mobile{% endcomment %}
+            {% if not request.user.is_authenticated %}
+              <button id="mobile-search-btn"
+                      class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-white transition-colors hover:bg-purple-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-search h-5 w-5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+              <div style="width: auto">
+                <a class="flex items-center justify-center rounded-full bg-[#121212]"
+                   href="{% url 'account_login' %}">
+                  <button class="ring-offset-background focus-visible:ring-ring flex h-10 w-20 items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-[#6F2598] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#5a1f78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         class="lucide lucide-user-round h-3 w-3">
+                      <circle cx="12" cy="8" r="5"></circle>
+                      <path d="M20 21a8 8 0 0 0-16 0"></path>
+                    </svg>
+                    <p>{% translate 'Login' %}</p>
+                  </button>
+                </a>
+              </div>
+            {% endif %}
+            {% comment %}mobile menu button{% endcomment %}
+            <div class="block md:hidden">
+              <button id="mobile-menu-btn"
+                      class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-white transition-colors hover:bg-purple-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-expanded="false"
+                      aria-controls="mobile-menu"
+                      data-state="closed">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-menu h-5 w-5">
+                  <line x1="4" x2="20" y1="12" y2="12"></line>
+                  <line x1="4" x2="20" y1="6" y2="6"></line>
+                  <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br />
+{% include 'partials/base/message.html' %}
+<br />

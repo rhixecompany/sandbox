@@ -1,0 +1,17 @@
+{
+  "project": "selenium_webdriver",
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "sourceFiles": {
+    "AGENTS.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\AGENTS.md",
+    "package.json": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\package.json"
+  },
+  "artifacts": [
+    {"file": "technology-stack.md", "description": "Node.js + Selenium stack", "status": "created"},
+    {"file": "folder-structure.md", "description": "Scripts directory structure", "status": "created"},
+    {"file": "architecture.md", "description": "Selenium scraper architecture", "status": "created"},
+    {"file": "project-workflow.md", "description": "Running scrapers workflow", "status": "created"},
+    {"file": "code-exemplars.md", "description": "WebDriver and retry examples", "status": "created"},
+    {"file": "copilot-instructions.md", "description": "Selenium conventions", "status": "created"},
+    {"file": "readme.md", "description": "Project overview", "status": "created"}
+  ]
+}

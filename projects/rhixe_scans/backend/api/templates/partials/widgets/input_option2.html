@@ -1,0 +1,9 @@
+{% include "partials/widgets/input.html" %}
+{% if widget.wrap_label %}
+  <label class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
+         {% if widget.attrs.id %}for="{{ widget.attrs.id }}"{% endif %}>
+  {% endif %}
+  {% if widget.wrap_label %}
+    {{ widget.label }}
+  </label>
+{% endif %}

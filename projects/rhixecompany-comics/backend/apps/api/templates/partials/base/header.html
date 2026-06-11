@@ -1,0 +1,435 @@
+{% load static i18n example %}
+
+{% comment %} {% include "partials/base/topbar.html" %} {% endcomment %}
+<header class="bg-themecolor sm:mb-3  lg:mb-[35px]">
+  <div class="h-[55px] flex items-center justify-between"
+       style="max-width:1220px;
+              padding:0px 20px;
+              margin:0 auto">
+    <div class="flex items-center gap-x-6">
+      <a class="flex" href="{% url 'index' %}"><span class="h-10 w-10 sm:h-12 sm:w-12">
+        <img alt="Rhixe Logo"
+             fetchpriority="high"
+             width="0"
+             height="0"
+             decoding="async"
+             data-nimg="1"
+             class="object-cover"
+             style="color:transparent;
+                    width:100%;
+                    height:auto;
+                    max-height:50px"
+             src="{% static 'files/logo.webp' %}" />
+      </span></a>
+      <ul class=" flex-row hidden md:flex lg:space-x-3 lg:mt-0 m-0 p-0">
+        <li>
+          <a href="{% url 'index' %}"><span class="block pt-0 pr-[10px] pb-0 pl-[8px] leading-[42px] text-white text-[13px] tracking-wider hover:text-white hover:bg-gray-900 hover:bg-opacity-40">Home</span></a>
+        </li>
+        <li>
+          <a href="{% url 'bookmarks:bookmark_list' %}"><span class="block pt-0 pr-[10px] pb-0 pl-[8px] leading-[42px] text-white text-[13px] tracking-wider hover:text-white hover:bg-gray-900 hover:bg-opacity-40">Bookmarks</span></a>
+        </li>
+        <li>
+          <a href="{% url 'series' %}"><span class="block pt-0 pr-[10px] pb-0 pl-[8px] leading-[42px] text-white text-[13px] tracking-wider hover:text-white hover:bg-gray-900 hover:bg-opacity-40">Comics</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-x-2 md:gap-x-[5px] w-full">
+      <div class="flex justify-end items-center w-full">
+        {{ myfilter.form.search | add_classes:'custom_search_input' }}
+        <svg class="h-8 w-8 absolute pt-1 text-white cursor-not-allowed"
+             viewBox="0 0 20 20"
+             fill="currentColor"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+          </path>
+        </svg>
+      </div>
+      {% if request.user.is_authenticated %}
+        {% comment %} <div class="hidden md:block justify-between items-center">
+          <button class="justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 py-2 bg-[#6F2598] text-white hover:bg-[#5a1f78] flex items-center px-2 gap-0.5 ml-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-circle w-3.5 h-3.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m16 12-4-4-4 4"></path>
+              <path d="M12 16V8"></path>
+            </svg>
+            <p>{% translate "Upgrade" %}</p>
+          </button>
+        </div> {% endcomment %}
+        <div class="z-auto mr-1">
+          <div class="text-right ">
+            <div class="relative inline-bfirstlock text-left">
+              <div class="pt-2">
+                <button class="w-full  relative items-center justify-center"
+                        id="headlessui-menu-button-:ri:"
+                        type="button">
+                  <div>
+                    <svg width="25"
+                         height="26"
+                         viewBox="0 0 34 35"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_379_402" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="35" style="mask-type: alpha;">
+                      <rect y="0.5" width="34" height="34" fill="url(#pattern0_379_402)"></rect>
+                      </mask>
+                      <g mask="url(#mask0_379_402)">
+                      <rect y="0.5" width="34" height="34" fill="white"></rect>
+                      </g>
+                      <defs>
+                      <pattern id="pattern0_379_402" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use href="#image0_379_402" transform="scale(0.00195312)"></use>
+                      </pattern>
+                      <image id="image0_379_402"
+                             width="512"
+                             height="512"
+                             href="data:image/png;base64,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" />
+                      </defs>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div style="position: fixed;
+                        z-index: 9999;
+                        inset: 16px;
+                        pointer-events: none"></div>
+          </div>
+        {% endif %}
+      </div>
+      {% if request.user.is_authenticated %}
+        <div class="hidden md:block">
+          <div class="flex justify-center items-center">
+            <div class="text-right">
+              <div class="relative inline-block text-left">
+                <div class="pt-2">
+                  <button id="userdropdownButton"
+                          data-dropdown-toggle="userdropdown"
+                          class="inline-flex w-full items-center justify-center"
+                          type="button">
+                    <div class="h-9 w-9 sm:h-10 sm:w-10 rounded-full">
+                      {% for data in avatar %}
+                        {% if data.image %}
+                          <img alt="profile"
+                               loading="lazy"
+                               width="36"
+                               height="36"
+                               decoding="async"
+                               data-nimg="1"
+                               class="h-full w-full rounded-full object-cover"
+                               src="{{ data.image.url }}"
+                               style="color: transparent" />
+                        {% else %}
+                          <img alt="profile"
+                               loading="lazy"
+                               width="36"
+                               height="36"
+                               decoding="async"
+                               data-nimg="1"
+                               class="h-full w-full rounded-full object-cover"
+                               src="{% static 'files/profile-picture.webp' %}"
+                               style="color: transparent" />
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </button>
+                </div>
+                <div id="userdropdown"
+                     class="absolute right-0 z-10 mt-2 hidden w-40 origin-top-right rounded-md border border-[#121212] bg-[#121212] p-4 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                     style="--button-width: 40px">
+                  <div class="space-y-0.5" aria-labelledby="userdropdownButton">
+                    <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                       href="{% url 'users:redirect_user' %}">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke-width="1.5"
+                           stroke="currentColor"
+                           class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                      </svg>
+                      {% translate "Profile" %}
+                    </a>
+                    <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                       href='{% url "bookmarks:bookmark_list" %}'>
+                      <svg class="size-6"
+                           xmlns="http://www.w3.org/2000/svg"
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke-width="1.5"
+                           stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                      </svg>
+                      {% translate "Bookmarks" %}
+                    </a>
+                  </div>
+                  <a href="{% url 'account_logout' %}"
+                     class="group flex w-full cursor-pointer items-center gap-x-2 rounded-md px-2 py-1.5 text-base text-[#FF4D49] hover:bg-themecolor">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                    </svg>
+                    {% translate "Log out" %}
+                  </a>
+                  {% if request.user.is_superuser %}
+                    <button id="cruddropdownButton"
+                            data-dropdown-toggle="cruddropdown"
+                            type="button"
+                            class="group flex w-full cursor-pointer items-center gap-x-2 rounded-md px-2 py-1.5 text-base text-new-white/70 hover:bg-themecolor">
+                      <svg class="size-6"
+                           fill="currentColor"
+                           viewBox="0 0 20 20"
+                           xmlns="http://www.w3.org/2000/svg"
+                           aria-hidden="true">
+                        <path clip-rule="evenodd" fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z">
+                        </path>
+                      </svg>
+                      {% translate "Crud" %}
+                    </button>
+                    <div id="cruddropdown"
+                         class="absolute right-0 z-10 mt-2 hidden w-40 origin-top-right rounded-md border border-[#121212] bg-[#121212] p-4 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                         style="--button-width: 40px">
+                      <div class="space-y-0.5" aria-labelledby="cruddropdownButton">
+                        <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                           href="{% url 'comics:comic_list' %}">{% translate "Comics" %}</a>
+                        <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                           href='{% url "chapters:chapter_list" %}'>{% translate "Chapters" %}</a>
+                        <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                           href='{% url "users:user_list" %}'>{% translate "Users" %}</a>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block md:hidden z-auto">
+          <div class="text-right">
+            <div class="relative inline-block text-left z-10">
+              <div class="pt-2">
+                <button class="inline-flex w-full items-center justify-center"
+                        id="userdropdownButton1"
+                        data-dropdown-toggle="userdropdown1"
+                        type="button">
+                  <div class="h-9 w-9 sm:h-10 sm:w-10 rounded-full">
+                    {% for data in avatar %}
+                      {% if data.image %}
+                        <img alt="profile"
+                             loading="lazy"
+                             width="36"
+                             height="36"
+                             decoding="async"
+                             data-nimg="1"
+                             class="h-full w-full rounded-full object-cover"
+                             src="{{ data.image.url }}"
+                             style="color: transparent" />
+                      {% else %}
+                        <img alt="profile"
+                             loading="lazy"
+                             width="36"
+                             height="36"
+                             decoding="async"
+                             data-nimg="1"
+                             class="h-full w-full rounded-full object-cover"
+                             src="{% static 'files/profile-picture.webp' %}"
+                             style="color: transparent" />
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </button>
+              </div>
+              <div id="userdropdown1"
+                   class="absolute right-0 z-10 mt-2 hidden w-40 origin-top-right rounded-md border border-[#121212] bg-[#121212] p-4 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                   style="--button-width: 40px">
+                <div class="space-y-0.5" aria-labelledby="userdropdownButton1">
+                  <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                     href="{% url 'users:redirect_user' %}">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    {% translate "Profile" %}
+                  </a>
+                  <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                     href='{% url "bookmarks:bookmark_list" %}'>
+                    <svg class="size-6"
+                         xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                    {% translate "Bookmarks" %}
+                  </a>
+                </div>
+                <a href="{% url 'account_logout' %}"
+                   class="group flex w-full cursor-pointer items-center gap-x-2 rounded-md px-2 py-1.5 text-base text-[#FF4D49] hover:bg-themecolor">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       fill="none"
+                       viewBox="0 0 24 24"
+                       stroke-width="1.5"
+                       stroke="currentColor"
+                       class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                  </svg>
+                  {% translate "Log out" %}
+                </a>
+                {% if request.user.is_superuser %}
+                  <button id="cruddropdownButton1"
+                          data-dropdown-toggle="cruddropdown1"
+                          type="button"
+                          class=" group flex w-full cursor-pointer items-center gap-x-2 rounded-md px-2 py-1.5 text-base text-new-white/70 hover:bg-themecolor">
+                    <svg class="size-6"
+                         fill="currentColor"
+                         viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true">
+                      <path clip-rule="evenodd" fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z">
+                      </path>
+                    </svg>
+                    {% translate "Crud" %}
+                  </button>
+                  <div id="cruddropdown1"
+                       class="absolute right-0 z-10 mt-2 hidden w-40 origin-top-right rounded-md border border-[#121212] bg-[#121212] p-4 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                       style="--button-width: 40px">
+                    <div class="space-y-0.5" aria-labelledby="cruddropdownButton1">
+                      <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                         href="{% url 'comics:comic_list' %}">{% translate "Comics" %}</a>
+                      <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                         href='{% url "chapters:chapter_list" %}'>{% translate "Chapters" %}</a>
+                      <a class="text-new-white/70 group flex w-full items-center gap-x-2 rounded-md px-2 py-1.5 text-base"
+                         href='{% url "users:user_list" %}'>{% translate "Users" %}</a>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="hidden md:block">
+          <a class="flex h-9 w-9 items-center justify-center rounded-full bg-[#121212] sm:h-10 sm:w-16 sm:rounded-lg"
+             href="{% url 'account_login' %}">
+            <button class="ring-offset-background focus-visible:ring-ring flex h-10 w-20 items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-[#6F2598] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#5a1f78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-user-round h-3 w-3">
+                <circle cx="12" cy="8" r="5"></circle>
+                <path d="M20 21a8 8 0 0 0-16 0"></path>
+              </svg>
+              <p>{% translate "Login" %}</p>
+            </button>
+          </a>
+        </div>
+        <div class="z-50 block md:hidden">
+          <div class="text-right">
+            <a class="flex h-9 w-9 items-center justify-center rounded-full bg-[#121212] sm:h-10 sm:w-10"
+               href="{% url 'account_login' %}">
+              <div class="h-9 w-9 rounded-full sm:h-10 sm:w-10">
+                <img alt="profile"
+                     width="36"
+                     height="36"
+                     decoding="async"
+                     data-nimg="1"
+                     class="h-full w-full rounded-full object-cover"
+                     src="{% static 'files/profile-picture.webp' %}"
+                     style="color: transparent" />
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      <div class="block md:hidden">
+        <button id='mobile-menu-btn' class="text-white   mt-[6px]">
+          <svg class="h-8 w-8"
+               fill="currentColor"
+               stroke="currentColor"
+               viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <g class="">
+            <rect x="4" y="5" width="16" height="2" rx="0.2" ry="0.2"></rect>
+            <rect x="4" y="11" width="16" height="2" rx="0.2" ry="0.2"></rect>
+            <rect x="4" y="17" width="16" height="2" rx="0.2" ry="0.2"></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div id='mobile-menu' class="fixed inset-0 z-50 hidden md:hidden">
+        <div class="flex justify-end p-4 bg-[#1E1D20] bg-opacity-90">
+          <button id='mobile-menu-btn-close' class="text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col items-left h-full bg-[#1E1D20]">
+          <ul class="flex flex-col font-small lg:flex-row lg:space-x-8 lg:mt-0 mx-6 m-0 p-0">
+            <li>
+              <a class="px-2 inline-flex items-center hover:text-white hover:bg-black hover:bg-opacity-40 w-32"
+                 href="{% url 'index' %}">
+                <img alt="Menu Icon"
+                     loading="lazy"
+                     width="18"
+                     height="18"
+                     decoding="async"
+                     data-nimg="1"
+                     class="size-[18px]"
+                     src="{% static 'svg/home.svg' %}"
+                     style="color: transparent" />
+                <span class="block text-white text-md font-semibold" style="padding: 8px;">Home</span></a>
+            </li>
+            <li>
+              <a class="px-2 inline-flex items-center hover:text-white hover:bg-black hover:bg-opacity-40 w-32"
+                 href="{% url 'bookmarks:bookmark_list' %}">
+                <img alt="Menu Icon"
+                     loading="lazy"
+                     width="18"
+                     height="18"
+                     decoding="async"
+                     data-nimg="1"
+                     class="size-[18px]"
+                     src="{% static 'svg/bookmark.svg' %}"
+                     style="color: transparent" />
+                <span class="block text-white text-md font-semibold" style="padding: 8px;">Bookmarks</span></a>
+            </li>
+            <li>
+              <a class="px-2 inline-flex items-center hover:text-white hover:bg-black hover:bg-opacity-40 w-32"
+                 href="{% url 'series' %}">
+                <img alt="Menu Icon"
+                     loading="lazy"
+                     width="18"
+                     height="18"
+                     decoding="async"
+                     data-nimg="1"
+                     class="size-[18px]"
+                     src="{% static 'svg/book-open-cover.svg' %}"
+                     style="color: transparent" />
+                <span class="block text-white text-md font-semibold" style="padding: 8px;">Comics</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  {% comment %} <div class="w-full flex justify-center">
+    <a href="{% url 'index' %}" target="_blank" style="text-decoration: none">
+      <img class="flex justify-center items-center w-[80vw]  max-w-[1300px] " src="{% static 'files/39E9yO0.png' %}" alt="Centered Image" style="object-fit: contain" />
+    </a>
+    <div id="main-menu-ads"></div>
+  </div> {% endcomment %}
+  {% include "partials/base/message.html" %}

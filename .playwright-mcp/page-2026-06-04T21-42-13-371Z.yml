@@ -1,0 +1,1767 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - banner:
+      - generic:
+        - generic [ref=e6]:
+          - text: menu
+          - link "Google Cloud Documentation" [ref=e8] [cursor=pointer]:
+            - /url: /
+            - img "Google Cloud Documentation" [ref=e10]
+          - generic [ref=e11]:
+            - navigation "Upper tabs" [ref=e14]:
+              - generic [ref=e15]:
+                - button "Dropdown menu for Extended Navigation" [ref=e16] [cursor=pointer]: arrow_drop_down More
+                - text: arrow_drop_down arrow_drop_down
+            - generic [ref=e20]:
+              - combobox "Search" [ref=e21]
+              - img [ref=e23]
+              - generic [ref=e26]: /
+          - link "display_settings Console" [ref=e27] [cursor=pointer]:
+            - /url: //console.cloud.google.com/
+          - generic [ref=e28]:
+            - 'button "Appearance: Light theme" [ref=e29] [cursor=pointer]': light_mode
+            - text: light_mode dark_mode brightness_medium
+          - generic "Select your language preference." [ref=e30]:
+            - button "Language" [ref=e31] [cursor=pointer]:
+              - img
+              - generic [ref=e32]: Language
+              - img
+          - link "Sign in" [ref=e35] [cursor=pointer]:
+            - /url: https://docs.cloud.google.com/_d/signin?continue=https%3A%2F%2Fdocs.cloud.google.com%2Fpython%2Fdjango%2Frun&prompt=select_account
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e40]:
+              - link [ref=e41] [cursor=pointer]:
+                - /url: https://docs.cloud.google.com/python/docs
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Python" [ref=e46] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/python/docs
+            - link "Start free" [ref=e48] [cursor=pointer]:
+              - /url: //console.cloud.google.com/freetrial
+          - navigation "Lower tabs" [ref=e51]:
+            - link "Overview" [ref=e53] [cursor=pointer]:
+              - /url: https://docs.cloud.google.com/python/docs
+            - link "Guides, selected" [ref=e55] [cursor=pointer]:
+              - /url: https://docs.cloud.google.com/python/docs/setup
+              - text: Guides
+            - link "Reference" [ref=e57] [cursor=pointer]:
+              - /url: https://docs.cloud.google.com/python/docs/reference
+            - link "Samples" [ref=e59] [cursor=pointer]:
+              - /url: https://docs.cloud.google.com/docs/samples/?language=python
+            - text: arrow_drop_down
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - text: filter_list
+        - searchbox "Type to filter" [ref=e63]
+        - text: close
+      - navigation "Side menu" [ref=e64]:
+        - text: arrow_back
+        - generic [ref=e65]:
+          - text: arrow_forward arrow_forward
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - generic [ref=e70]: Discover
+            - listitem [ref=e71]:
+              - link "Supported Python versions" [ref=e72] [cursor=pointer]:
+                - /url: /python/docs/supported-python-versions
+                - generic [ref=e73]: Supported Python versions
+            - listitem [ref=e74]:
+              - link "Python 2 support on Google Cloud" [ref=e75] [cursor=pointer]:
+                - /url: /python/docs/python2-sunset
+                - generic [ref=e76]: Python 2 support on Google Cloud
+            - listitem [ref=e77]:
+              - generic [ref=e79]: Get started
+            - listitem [ref=e80]:
+              - link "Set up a Python development environment" [ref=e81] [cursor=pointer]:
+                - /url: /python/docs/setup
+                - generic [ref=e82]: Set up a Python development environment
+            - listitem [ref=e83]:
+              - link "Get started with Python" [ref=e84] [cursor=pointer]:
+                - /url: /python/docs/getting-started
+                - generic [ref=e85]: Get started with Python
+            - listitem [ref=e86]:
+              - generic [ref=e87]:
+                - generic [ref=e88] [cursor=pointer]: arrow_drop_down
+                - button "Start by use case" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90]: Start by use case
+                - list [ref=e91]:
+                  - listitem [ref=e92]:
+                    - link "Deploying apps to Compute Engine" [ref=e93] [cursor=pointer]:
+                      - /url: /python/docs/getting-started/getting-started-on-compute-engine
+                      - generic [ref=e94]: Deploying apps to Compute Engine
+                  - listitem [ref=e95]:
+                    - link "Deploying apps with Cloud Deployment Manager" [ref=e96] [cursor=pointer]:
+                      - /url: /python/tutorials/bookshelf-deployment-manager
+                      - generic [ref=e97]: Deploying apps with Cloud Deployment Manager
+                  - listitem [ref=e98]:
+                    - link "Handling sessions with Firestore" [ref=e99] [cursor=pointer]:
+                      - /url: /python/docs/getting-started/session-handling-with-firestore
+                      - generic [ref=e100]: Handling sessions with Firestore
+                  - listitem [ref=e101]:
+                    - link "Background processing" [ref=e102] [cursor=pointer]:
+                      - /url: /python/docs/getting-started/background-processing
+                      - generic [ref=e103]: Background processing
+                  - listitem [ref=e104]:
+                    - generic [ref=e105]:
+                      - generic [ref=e106] [cursor=pointer]: arrow_drop_down
+                      - button "Working with Django" [ref=e107] [cursor=pointer]:
+                        - generic [ref=e108]: Working with Django
+                      - list [ref=e109]:
+                        - listitem [ref=e110]:
+                          - link "Overview" [ref=e111] [cursor=pointer]:
+                            - /url: /python/django
+                            - generic [ref=e112]: Overview
+                        - listitem [ref=e113]:
+                          - link "Django on App Engine standard environment" [ref=e114] [cursor=pointer]:
+                            - /url: /python/django/appengine
+                            - generic [ref=e115]: Django on App Engine standard environment
+                        - listitem [ref=e116]:
+                          - link "Django on App Engine flexible environment" [ref=e117] [cursor=pointer]:
+                            - /url: /python/django/flexible-environment
+                            - generic [ref=e118]: Django on App Engine flexible environment
+                        - listitem [ref=e119]:
+                          - link "Django on Cloud Run" [ref=e120] [cursor=pointer]:
+                            - /url: /python/django/run
+                            - generic [ref=e121]: Django on Cloud Run
+                        - listitem [ref=e122]:
+                          - link "Django on Google Kubernetes Engine" [ref=e123] [cursor=pointer]:
+                            - /url: /python/django/kubernetes-engine
+                            - generic [ref=e124]: Django on Google Kubernetes Engine
+                  - listitem [ref=e125]:
+                    - generic [ref=e126]:
+                      - generic [ref=e127] [cursor=pointer]: arrow_drop_down
+                      - button "Monitoring and debugging your app" [ref=e128] [cursor=pointer]:
+                        - generic [ref=e129]: Monitoring and debugging your app
+                  - listitem [ref=e130]:
+                    - generic [ref=e131]:
+                      - generic [ref=e132] [cursor=pointer]: arrow_drop_down
+                      - button "Authenticating users" [ref=e133] [cursor=pointer]:
+                        - generic [ref=e134]: Authenticating users
+            - listitem [ref=e135]:
+              - generic [ref=e137]: Develop
+            - listitem [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140] [cursor=pointer]: arrow_drop_down
+                - button "Debugging" [ref=e141] [cursor=pointer]:
+                  - generic [ref=e142]: Debugging
+            - listitem [ref=e143]:
+              - generic [ref=e145]: Other client library languages
+            - listitem [ref=e146]:
+              - link "C++" [ref=e147] [cursor=pointer]:
+                - /url: /cpp/docs
+                - generic [ref=e148]: C++
+            - listitem [ref=e149]:
+              - link "C#" [ref=e150] [cursor=pointer]:
+                - /url: /dotnet/docs
+                - generic [ref=e151]: C#
+            - listitem [ref=e152]:
+              - link "Go" [ref=e153] [cursor=pointer]:
+                - /url: /go/docs
+                - generic [ref=e154]: Go
+            - listitem [ref=e155]:
+              - link "Java" [ref=e156] [cursor=pointer]:
+                - /url: /java/docs
+                - generic [ref=e157]: Java
+            - listitem [ref=e158]:
+              - link "Node.js" [ref=e159] [cursor=pointer]:
+                - /url: /nodejs/docs
+                - generic [ref=e160]: Node.js
+            - listitem [ref=e161]:
+              - link "PHP" [ref=e162] [cursor=pointer]:
+                - /url: /php/docs
+                - generic [ref=e163]: PHP
+            - listitem [ref=e164]:
+              - link "Ruby" [ref=e165] [cursor=pointer]:
+                - /url: /ruby/docs
+                - generic [ref=e166]: Ruby
+            - listitem [ref=e167]:
+              - link "Rust" [ref=e168] [cursor=pointer]:
+                - /url: /rust
+                - generic [ref=e169]: Rust
+    - button "Hide side navigation" [expanded] [ref=e170] [cursor=pointer]:
+      - generic [ref=e171]: chevron_left
+    - generic [ref=e172]:
+      - main [ref=e173]:
+        - generic [ref=e174]:
+          - article [ref=e175]:
+            - navigation [ref=e176]:
+              - list "Breadcrumb" [ref=e177]:
+                - listitem [ref=e178]:
+                  - link "Home" [ref=e179] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/
+                - listitem [ref=e180]:
+                  - generic [ref=e181]: chevron_right
+                  - link "Documentation" [ref=e182] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/docs
+                - listitem [ref=e183]:
+                  - generic [ref=e184]: chevron_right
+                  - link "Developer tools" [ref=e185] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/docs/costs-usage
+                - listitem [ref=e186]:
+                  - generic [ref=e187]: chevron_right
+                  - link "Python" [ref=e188] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/python/docs
+                - listitem [ref=e189]:
+                  - generic [ref=e190]: chevron_right
+                  - link "Guides" [ref=e191] [cursor=pointer]:
+                    - /url: https://docs.cloud.google.com/python/docs/setup
+              - form "Was this helpful?" [ref=e193]:
+                - generic [ref=e194]: Was this helpful?
+                - generic [ref=e195]:
+                  - button "Helpful" [ref=e196] [cursor=pointer]:
+                    - img
+                  - button "Not helpful" [ref=e197] [cursor=pointer]:
+                    - img
+            - button "Send feedback" [ref=e199] [cursor=pointer]
+            - heading "Running Django on the Cloud Run environment LLM Tools" [level=1] [ref=e200]:
+              - text: Running Django on the Cloud Run environment
+              - generic [ref=e201]:
+                - listbox "Bookmark collections drop down" [ref=e204] [cursor=pointer]:
+                  - button "Open dropdown" [ref=e205]:
+                    - generic:
+                      - generic [ref=e206]: bookmark_border
+                      - text: bookmark
+                    - text: arrow_drop_down
+                - group "LLM Tools" [ref=e208]:
+                  - button "Copy page as markdown" [ref=e210] [cursor=pointer]:
+                    - generic [ref=e211]: content_copy
+                  - button "More LLM Tools options" [ref=e214] [cursor=pointer]: arrow_drop_down
+            - list [ref=e216]:
+              - listitem [ref=e217]:
+                - heading "On this page" [level=2] [ref=e218]:
+                  - generic [ref=e219]: On this page
+                - button "expand_more" [ref=e220] [cursor=pointer]
+              - listitem [ref=e221]:
+                - link "Objectives" [ref=e222] [cursor=pointer]:
+                  - /url: "#objectives"
+                  - generic [ref=e223]: Objectives
+              - listitem [ref=e224]:
+                - link "Costs" [ref=e225] [cursor=pointer]:
+                  - /url: "#costs"
+                  - generic [ref=e226]: Costs
+              - listitem [ref=e227]:
+                - link "Before you begin" [ref=e228] [cursor=pointer]:
+                  - /url: "#before-you-begin"
+                  - generic [ref=e229]: Before you begin
+              - listitem [ref=e230]:
+                - link "Prepare your environment" [ref=e231] [cursor=pointer]:
+                  - /url: "#setup"
+                  - generic [ref=e232]: Prepare your environment
+                - list [ref=e233]:
+                  - listitem [ref=e234]:
+                    - link "Clone a sample app" [ref=e235] [cursor=pointer]:
+                      - /url: "#clone_a_sample_app"
+                      - generic [ref=e236]: Clone a sample app
+              - listitem [ref=e237]:
+                - button "more_horiz" [ref=e238] [cursor=pointer]
+            - generic [ref=e240]:
+              - generic [ref=e241]:
+                - paragraph [ref=e242]: Deploying stateful applications to Cloud Run like Django involves integrating services to interact with each other to form a cohesive project.
+                - paragraph [ref=e243]:
+                  - text: This tutorial assumes that you're familiar with Django web development. If you're new to Django development, it's a good idea to work through
+                  - link "writing your first Django app" [ref=e244] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/intro/tutorial01/
+                  - text: before continuing.
+                - paragraph [ref=e245]:
+                  - text: While this tutorial demonstrates Django specifically, you can use this deployment process with other Django-based frameworks, such as
+                  - link "Wagtail" [ref=e246] [cursor=pointer]:
+                    - /url: https://wagtail.org/
+                  - text: and
+                  - link "Django CMS" [ref=e247] [cursor=pointer]:
+                    - /url: https://www.django-cms.org/en/
+                  - text: .
+                - paragraph [ref=e248]:
+                  - text: This tutorial uses Django 5,
+                  - link "which requires at least Python 3.10" [ref=e249] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/faq/install/#what-python-version-can-i-use-with-django
+                  - text: .
+              - generic [ref=e250]:
+                - heading "Objectives" [level=2] [ref=e251]
+                - paragraph [ref=e252]: "In this tutorial, you will:"
+                - list [ref=e253]:
+                  - listitem [ref=e254]: Create and connect a Cloud SQL database.
+                  - listitem [ref=e255]: Create and use Secret Manager secret values.
+                  - listitem [ref=e256]:
+                    - paragraph [ref=e257]: Deploy a Django app to Cloud Run.
+                  - listitem [ref=e258]:
+                    - paragraph [ref=e259]: Host static files on Cloud Storage.
+                  - listitem [ref=e260]:
+                    - paragraph [ref=e261]: Use Cloud Build to automate deployment.
+              - generic [ref=e262]:
+                - heading "Costs" [level=2] [ref=e263]
+                - paragraph [ref=e264]: "In this document, you use the following billable components of Google Cloud:"
+                - list [ref=e265]:
+                  - listitem [ref=e266]:
+                    - link "Cloud SQL" [ref=e267] [cursor=pointer]:
+                      - /url: https://cloud.google.com/sql/pricing
+                  - listitem [ref=e268]:
+                    - link "Cloud Storage" [ref=e269] [cursor=pointer]:
+                      - /url: https://cloud.google.com/storage/pricing
+                  - listitem [ref=e270]:
+                    - link "Cloud Run" [ref=e271] [cursor=pointer]:
+                      - /url: https://cloud.google.com/run/pricing
+                  - listitem [ref=e272]:
+                    - link "Cloud Build" [ref=e273] [cursor=pointer]:
+                      - /url: https://cloud.google.com/build/pricing
+                  - listitem [ref=e274]:
+                    - link "Artifact Registry" [ref=e275] [cursor=pointer]:
+                      - /url: https://cloud.google.com/artifact-registry/pricing
+                  - listitem [ref=e276]:
+                    - link "Secret Manager" [ref=e277] [cursor=pointer]:
+                      - /url: https://cloud.google.com/secret-manager/pricing
+                - paragraph [ref=e278]:
+                  - text: To generate a cost estimate based on your projected usage, use the
+                  - link "pricing calculator" [ref=e279] [cursor=pointer]:
+                    - /url: /products/calculator
+                  - text: .
+                - generic [ref=e280]:
+                  - text: New Google Cloud users might be eligible for a
+                  - link "free trial" [ref=e281] [cursor=pointer]:
+                    - /url: /free
+                  - text: .
+                - paragraph
+              - generic [ref=e282]:
+                - heading "Before you begin" [level=2] [ref=e283]
+                - list [ref=e284]:
+                  - generic [ref=e285]:
+                    - generic [ref=e286]:
+                      - listitem [ref=e287]:
+                        - text: Sign in to your Google Cloud account. If you're new to Google Cloud,
+                        - link "create an account" [ref=e288] [cursor=pointer]:
+                          - /url: https://console.cloud.google.com/freetrial
+                        - text: to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads.
+                      - listitem [ref=e289]:
+                        - paragraph [ref=e290]: In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+                        - button "add_circle Roles required to select or create a project" [ref=e292]:
+                          - paragraph [ref=e293]: add_circle Roles required to select or create a project
+                        - complementary [ref=e294]: "Note: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project."
+                        - paragraph [ref=e295]:
+                          - link "Go to project selector" [ref=e296] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/projectselector2/home/dashboard
+                      - listitem [ref=e297]:
+                        - paragraph [ref=e298]:
+                          - link "Verify that billing is enabled for your Google Cloud project" [ref=e299] [cursor=pointer]:
+                            - /url: /billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project
+                          - text: .
+                      - listitem [ref=e300]:
+                        - paragraph [ref=e301]: Enable the Cloud Run, Cloud SQL, Cloud Build, Secret Manager, Artifact Registry, and Compute Engine APIs.
+                        - button "add_circle Roles required to enable APIs" [ref=e303]:
+                          - paragraph [ref=e304]: add_circle Roles required to enable APIs
+                        - paragraph [ref=e305]:
+                          - link "Enable the APIs" [ref=e306] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/apis/enableflow?apiid=run.googleapis.com,sql-component.googleapis.com,sqladmin.googleapis.com,compute.googleapis.com,cloudbuild.googleapis.com,secretmanager.googleapis.com,artifactregistry.googleapis.com
+                      - listitem [ref=e307]:
+                        - paragraph [ref=e308]:
+                          - link "Install" [ref=e309] [cursor=pointer]:
+                            - /url: /sdk/docs/install
+                          - text: the
+                          - link "gcloud CLI" [ref=e310] [cursor=pointer]:
+                            - /url: /sdk/gcloud
+                          - text: .
+                      - listitem [ref=e311]:
+                        - paragraph [ref=e312]:
+                          - text: If you're using an external identity provider (IdP), you must first
+                          - link "sign in to the gcloud CLI with your federated identity" [ref=e313] [cursor=pointer]:
+                            - /url: /iam/docs/workforce-log-in-gcloud
+                          - text: .
+                      - listitem [ref=e314]:
+                        - paragraph [ref=e315]:
+                          - text: To
+                          - link "initialize" [ref=e316] [cursor=pointer]:
+                            - /url: /sdk/docs/initializing
+                          - text: "the gcloud CLI, run the following command:"
+                        - generic [ref=e318]: gcloud init
+                        - complementary [ref=e319]:
+                          - strong [ref=e320]: "Note:"
+                          - text: You can run the gcloud CLI in the Google Cloud console without installing the
+                          - link "gcloud CLI" [ref=e321] [cursor=pointer]:
+                            - /url: /sdk/gcloud
+                          - text: . To run the gcloud CLI in the Google Cloud console,
+                          - link "use Cloud Shell" [ref=e322] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/?cloudshell=true
+                          - text: .
+                    - text: add_circle add_circle
+                  - listitem [ref=e323]:
+                    - text: Ensure sufficient permissions are available to the account used for this tutorial.
+                    - paragraph
+                    - complementary [ref=e324]:
+                      - strong [ref=e325]: "Note:"
+                      - generic [ref=e326]:
+                        - text: In cases where the
+                        - code [ref=e327]: Owner
+                        - text: "role cannot be used, the following minimum roles are required to complete the tutorial: Cloud SQL Admin, Storage Admin, Cloud Run Admin, Artifact Registry Admin, and Secret Manager Admin."
+              - generic [ref=e328]:
+                - heading "Prepare your environment" [level=2] [ref=e329]
+                - heading "Clone a sample app" [level=3] [ref=e330]
+                - paragraph [ref=e331]:
+                  - text: The code for the Django sample app is in the
+                  - link "GoogleCloudPlatform/python-docs-samples" [ref=e332] [cursor=pointer]:
+                    - /url: https://github.com/GoogleCloudPlatform/python-docs-samples
+                  - text: repository on GitHub.
+                - list [ref=e333]:
+                  - listitem [ref=e334]:
+                    - paragraph [ref=e335]:
+                      - text: You can either
+                      - link "download the sample" [ref=e336] [cursor=pointer]:
+                        - /url: https://github.com/GoogleCloudPlatform/python-docs-samples/archive/master.zip
+                      - text: "as a ZIP file and extract it or clone the repository to your local machine:"
+                    - code [ref=e339]: git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
+                  - listitem [ref=e340]:
+                    - paragraph [ref=e341]: "Go to the directory that contains the sample code:"
+                    - generic [ref=e343]:
+                      - tablist [ref=e344]:
+                        - generic [ref=e345]:
+                          - tab "Linux/macOS" [selected] [ref=e346]:
+                            - button "Linux/macOS" [expanded] [ref=e347] [cursor=pointer]
+                          - tab "Windows" [ref=e348]:
+                            - button "Windows" [ref=e349] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Linux/macOS" [ref=e350]:
+                        - code [ref=e353]: cd python-docs-samples/run/django
+                - heading "Confirm your Python setup" [level=3] [ref=e354]
+                - paragraph [ref=e355]: This tutorial relies on Python to run the sample application on your machine. The sample code also requires installing dependencies
+                - paragraph [ref=e356]:
+                  - text: For more details, refer to the
+                  - link "Python development environment guide" [ref=e357] [cursor=pointer]:
+                    - /url: /python/docs/setup
+                  - text: .
+                - list [ref=e358]:
+                  - listitem [ref=e359]:
+                    - paragraph [ref=e360]: Confirm your Python is at least version 3.10.
+                    - code [ref=e363]: python -V
+                    - paragraph [ref=e364]:
+                      - text: You should see
+                      - code [ref=e365]: Python 3.10.0
+                      - text: or higher.
+                    - complementary [ref=e366]:
+                      - strong [ref=e367]: "Note:"
+                      - generic [ref=e368]:
+                        - text: If you see a version number starting with "2", you may need to run
+                        - code [ref=e369]: python3
+                        - text: instead of
+                        - code [ref=e370]: python
+                        - text: . If so, remember to reference your chosen Python installation when running
+                        - code [ref=e371]: python
+                        - text: commands.
+                  - listitem [ref=e372]:
+                    - paragraph [ref=e373]: "Create a Python virtual environment and install dependencies:"
+                    - generic [ref=e375]:
+                      - tablist [ref=e376]:
+                        - generic [ref=e377]:
+                          - tab "Linux/macOS" [selected] [ref=e378]:
+                            - button "Linux/macOS" [expanded] [ref=e379] [cursor=pointer]
+                          - tab "Windows" [ref=e380]:
+                            - button "Windows" [ref=e381] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Linux/macOS" [ref=e382]:
+                        - code [ref=e385]: python -m venv venv source venv/bin/activate pip install --upgrade pip pip install -r requirements.txt
+                - heading "Download Cloud SQL Auth Proxy to connect to Cloud SQL from your local machine" [level=3] [ref=e386]
+                - complementary [ref=e387]:
+                  - strong [ref=e388]: "Note:"
+                  - text: If you are completing this tutorial from Cloud Shell, this section is not required.
+                - paragraph [ref=e389]:
+                  - text: When deployed, your app uses the Cloud SQL Auth Proxy that is built into the Cloud Run environment to communicate with your Cloud SQL instance. However, to test your app locally, you must install and use a local copy of the proxy in your development environment. For more details, refer to the
+                  - link "Cloud SQL Auth Proxy guide" [ref=e390] [cursor=pointer]:
+                    - /url: /sql/docs/postgres/sql-proxy
+                  - text: .
+                - paragraph [ref=e391]:
+                  - text: The Cloud SQL Auth Proxy uses the Cloud SQL API to interact with your SQL instance. To do this, it requires application authentication through the
+                  - link "gcloud CLI" [ref=e392] [cursor=pointer]:
+                    - /url: /sdk/gcloud
+                  - text: .
+                - list [ref=e393]:
+                  - listitem [ref=e394]:
+                    - paragraph [ref=e395]: "Authenticate and acquire credentials for the API:"
+                    - code [ref=e398]: gcloud auth application-default login
+                  - listitem [ref=e399]:
+                    - paragraph [ref=e400]: Download and install the Cloud SQL Auth Proxy to your local machine.
+                    - paragraph [ref=e401]: Before you begin, you must determine your machine's architecture.
+                    - paragraph [ref=e402]: "If running on Linux or Mac, you can find this by running the following command:"
+                    - generic [ref=e404]: uname -a
+                    - generic [ref=e405]:
+                      - tablist [ref=e406]:
+                        - generic [ref=e407]:
+                          - tab "Linux 64-bit" [selected] [ref=e408]:
+                            - button "Linux 64-bit" [expanded] [ref=e409] [cursor=pointer]
+                          - tab "Linux 32-bit" [ref=e410]:
+                            - button "Linux 32-bit" [ref=e411] [cursor=pointer]
+                          - tab "macOS 64-bit" [ref=e412]:
+                            - button "macOS 64-bit" [ref=e413] [cursor=pointer]
+                          - tab "Mac M1" [ref=e414]:
+                            - button "Mac M1" [ref=e415] [cursor=pointer]
+                          - tab "More Options" [ref=e416]:
+                            - button "More Options" [ref=e417] [cursor=pointer]: arrow_drop_down More
+                      - tabpanel "Linux 64-bit" [ref=e418]:
+                        - list [ref=e419]:
+                          - listitem [ref=e420]:
+                            - text: "Download the Cloud SQL Auth Proxy:"
+                            - generic [ref=e422]: curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.22.0/cloud-sql-proxy.linux.amd64
+                          - listitem [ref=e423]:
+                            - text: "Make the Cloud SQL Auth Proxy executable:"
+                            - generic [ref=e425]: chmod +x cloud-sql-proxy
+                    - paragraph [ref=e426]:
+                      - text: You can choose to move the download to somewhere common, such as a location on your
+                      - code [ref=e427]: PATH
+                      - text: ", or your home directory. If you choose to do this, when you start the Cloud SQL Auth Proxy later on in the tutorial, remember to reference your chosen location when using"
+                      - code [ref=e428]: cloud-sql-proxy
+                      - text: commands.
+                - heading "Create backing services" [level=2] [ref=e429]
+                - paragraph [ref=e430]:
+                  - text: This tutorial uses several Google Cloud services to provide the database, media storage, and secret storage that support the deployed Django project. These services are deployed in a specific region. For efficiency between services, all services should be deployed in the same region. For more information about the closest region to you, see
+                  - link "Products available by region" [ref=e431] [cursor=pointer]:
+                    - /url: https://cloud.google.com/about/locations#products-available-by-location
+                  - text: .
+                - text: This tutorial uses the integrated static asset hosting mechanisms in Cloud Run.
+                - heading "Set up a Cloud SQL for PostgreSQL instance" [level=3] [ref=e432]
+                - paragraph [ref=e433]: Django officially supports multiple relational databases, but offers the most support for PostgreSQL. PostgreSQL is supported by Cloud SQL, so this tutorial chooses to use that type of database.
+                - paragraph [ref=e434]: The following section describes the creation of a PostgreSQL instance, database, and database user for the app.
+                - list [ref=e435]:
+                  - listitem [ref=e436]:
+                    - paragraph [ref=e437]: "Create the PostgreSQL instance:"
+                    - generic [ref=e439]:
+                      - tablist [ref=e440]:
+                        - generic [ref=e441]:
+                          - tab "Console" [selected] [ref=e442]:
+                            - button "Console" [expanded] [ref=e443] [cursor=pointer]
+                          - tab "gcloud" [ref=e444]:
+                            - button "gcloud" [ref=e445] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Console" [ref=e446]:
+                        - list [ref=e447]:
+                          - listitem [ref=e448]:
+                            - paragraph [ref=e449]:
+                              - text: In the Google Cloud console, go to the
+                              - strong [ref=e450]: Cloud SQL Instances
+                              - text: page.
+                            - paragraph [ref=e451]:
+                              - link "Go to the Cloud SQL Instances page" [ref=e452] [cursor=pointer]:
+                                - /url: https://console.cloud.google.com/sql/instances
+                          - listitem [ref=e453]:
+                            - paragraph [ref=e454]:
+                              - text: Click
+                              - strong [ref=e455]: Create Instance
+                              - text: .
+                          - listitem [ref=e456]:
+                            - paragraph [ref=e457]:
+                              - text: Click
+                              - strong [ref=e458]: Choose PostgreSQL
+                              - text: .
+                          - listitem [ref=e459]:
+                            - paragraph [ref=e460]:
+                              - text: For
+                              - strong [ref=e461]: SQL Edition
+                              - text: ", choose \"Enterprise\"."
+                          - listitem [ref=e462]:
+                            - paragraph [ref=e463]:
+                              - text: For
+                              - strong [ref=e464]: Edition Preset
+                              - text: ", choose \"Sandbox\"."
+                          - listitem [ref=e465]:
+                            - paragraph [ref=e466]:
+                              - text: In the
+                              - strong [ref=e467]: Instance ID
+                              - text: field, enter
+                              - code [ref=e468]:
+                                - generic [ref=e470]:
+                                  - text: close
+                                  - generic "Edit Cloud SQL instance name" [ref=e471] [cursor=pointer]:
+                                    - text: INSTANCE_NAME
+                                    - button "edit" [ref=e472]
+                              - text: .
+                          - listitem [ref=e473]:
+                            - paragraph [ref=e474]: Enter a password for the postgres user.
+                          - listitem [ref=e475]:
+                            - paragraph [ref=e476]: Keep the default values for the other fields.
+                          - listitem [ref=e477]:
+                            - paragraph [ref=e478]:
+                              - text: Click
+                              - strong [ref=e479]: Create Instance
+                              - text: .
+                        - paragraph [ref=e480]: It takes a few minutes for the instance to be ready for use.
+                      - text: close edit close edit
+                  - listitem [ref=e481]:
+                    - paragraph [ref=e482]: "Within the created instance, create a database:"
+                    - generic [ref=e484]:
+                      - tablist [ref=e485]:
+                        - generic [ref=e486]:
+                          - tab "Console" [selected] [ref=e487]:
+                            - button "Console" [expanded] [ref=e488] [cursor=pointer]
+                          - tab "gcloud" [ref=e489]:
+                            - button "gcloud" [ref=e490] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Console" [ref=e491]:
+                        - list [ref=e492]:
+                          - listitem [ref=e493]:
+                            - text: Within your instance page, go to the
+                            - strong [ref=e494]: Databases
+                            - text: tab.
+                          - listitem [ref=e495]:
+                            - text: Click
+                            - strong [ref=e496]: Create database
+                            - text: .
+                          - listitem [ref=e497]:
+                            - text: In the
+                            - strong [ref=e498]: Database Name
+                            - text: dialog, enter
+                            - code [ref=e499]:
+                              - generic [ref=e501]:
+                                - text: close
+                                - generic "Edit Cloud SQL database name" [ref=e502] [cursor=pointer]:
+                                  - text: DATABASE_NAME
+                                  - button "edit" [ref=e503]
+                            - text: .
+                          - listitem [ref=e504]:
+                            - text: Click
+                            - strong [ref=e505]: Create
+                            - text: .
+                      - text: close edit close edit
+                  - listitem [ref=e506]:
+                    - paragraph [ref=e507]: "Create a database user:"
+                    - complementary [ref=e508]:
+                      - strong [ref=e509]: "Note:"
+                      - generic [ref=e510]:
+                        - text: Users created this way get additional database rights. See
+                        - link "Limit the database user privileges" [ref=e511] [cursor=pointer]:
+                          - /url: "#limit-db-user-privileges"
+                        - text: for an alternative method.
+                    - generic [ref=e513]:
+                      - tablist [ref=e514]:
+                        - generic [ref=e515]:
+                          - tab "Console" [selected] [ref=e516]:
+                            - button "Console" [expanded] [ref=e517] [cursor=pointer]
+                          - tab "gcloud" [ref=e518]:
+                            - button "gcloud" [ref=e519] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Console" [ref=e520]:
+                        - list [ref=e521]:
+                          - listitem [ref=e522]:
+                            - text: Within your instance page, go to the
+                            - strong [ref=e523]: Users
+                            - text: tab.
+                          - listitem [ref=e524]:
+                            - text: Click
+                            - strong [ref=e525]: Add User Account
+                            - text: .
+                          - listitem [ref=e526]:
+                            - text: In the
+                            - strong [ref=e527]: Choose how to authenticate
+                            - text: "dialog under \"Built-in Authentication\":"
+                          - listitem [ref=e528]:
+                            - text: Enter the username
+                            - code [ref=e529]:
+                              - generic [ref=e531]:
+                                - text: close
+                                - generic "Edit Django database username" [ref=e532] [cursor=pointer]:
+                                  - text: DATABASE_USERNAME
+                                  - button "edit" [ref=e533]
+                            - text: .
+                          - listitem [ref=e534]:
+                            - text: Enter the password
+                            - code [ref=e535]:
+                              - generic [ref=e537]:
+                                - text: close
+                                - generic "Edit Django database user password" [ref=e538] [cursor=pointer]:
+                                  - text: DATABASE_PASSWORD
+                                  - button "edit" [ref=e539]
+                          - listitem [ref=e540]:
+                            - text: Click
+                            - strong [ref=e541]: Add
+                            - text: .
+                      - text: close edit close edit close edit
+                - heading "Set up Artifact Registry" [level=3] [ref=e542]
+                - paragraph [ref=e543]: Use Artifact Registry to create a registry to store your container image.
+                - complementary [ref=e544]:
+                  - strong [ref=e545]: "Note:"
+                  - generic [ref=e546]:
+                    - text: This repository is automatically created when using
+                    - link "Cloud Run Source Deploys" [ref=e547] [cursor=pointer]:
+                      - /url: /run/docs/deploying-source-code
+                    - text: ", and may already exist in your project."
+                - generic [ref=e549]:
+                  - tablist [ref=e550]:
+                    - generic [ref=e551]:
+                      - tab "Console" [selected] [ref=e552]:
+                        - button "Console" [expanded] [ref=e553] [cursor=pointer]
+                      - tab "gcloud" [ref=e554]:
+                        - button "gcloud" [ref=e555] [cursor=pointer]
+                      - text: arrow_drop_down
+                  - tabpanel "Console" [ref=e556]:
+                    - list [ref=e557]:
+                      - listitem [ref=e558]:
+                        - paragraph [ref=e559]:
+                          - text: In the Google Cloud console, go to the
+                          - strong [ref=e560]: Artifact Registry
+                          - text: page.
+                        - paragraph [ref=e561]:
+                          - link "Go to the Artifact Registry page" [ref=e562] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/artifacts
+                      - listitem [ref=e563]:
+                        - paragraph [ref=e564]:
+                          - text: Click
+                          - strong [ref=e565]: Create Repository
+                          - text: .
+                      - listitem [ref=e566]:
+                        - paragraph [ref=e567]: "Enter the following:"
+                        - list [ref=e568]:
+                          - listitem [ref=e569]:
+                            - text: For
+                            - strong [ref=e570]: Name
+                            - text: ", enter \"cloud-run-source-deploy\"."
+                          - listitem [ref=e571]:
+                            - text: For
+                            - strong [ref=e572]: Format
+                            - text: ", select \"Docker\"."
+                          - listitem [ref=e573]:
+                            - text: For
+                            - strong [ref=e574]: Region
+                            - text: ", select"
+                            - generic [ref=e576]: REGION
+                            - text: .
+                      - listitem [ref=e577]:
+                        - paragraph [ref=e578]: Keep the default values for the other fields.
+                      - listitem [ref=e579]:
+                        - paragraph [ref=e580]:
+                          - text: Click
+                          - strong [ref=e581]: Create
+                          - text: .
+                - heading "Set up a Cloud Storage bucket" [level=3] [ref=e582]
+                - paragraph [ref=e583]:
+                  - text: You can store Django's included static assets, as well as user-uploaded media, in highly-available object storage using Cloud Storage. The
+                  - link "django-storages[google]" [ref=e584] [cursor=pointer]:
+                    - /url: https://django-storages.readthedocs.io/
+                    - code [ref=e585]: django-storages[google]
+                  - text: package handles Django's interaction with this storage backend.
+                - generic [ref=e587]:
+                  - tablist [ref=e588]:
+                    - generic [ref=e589]:
+                      - tab "Console" [selected] [ref=e590]:
+                        - button "Console" [expanded] [ref=e591] [cursor=pointer]
+                      - tab "gcloud" [ref=e592]:
+                        - button "gcloud" [ref=e593] [cursor=pointer]
+                      - text: arrow_drop_down
+                  - tabpanel "Console" [ref=e594]:
+                    - list [ref=e595]:
+                      - listitem [ref=e596]:
+                        - paragraph [ref=e597]:
+                          - text: In the Google Cloud console, go to the
+                          - strong [ref=e598]: Cloud Storage
+                          - text: page.
+                        - paragraph [ref=e599]:
+                          - link "Go to the Cloud Storage page" [ref=e600] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/storage
+                      - listitem [ref=e601]:
+                        - paragraph [ref=e602]:
+                          - text: Click
+                          - strong [ref=e603]: Create Bucket
+                          - text: .
+                      - listitem [ref=e604]:
+                        - paragraph [ref=e605]: "Enter the following (clicking \"Continue\" where needed):"
+                        - list [ref=e606]:
+                          - listitem [ref=e607]:
+                            - text: For
+                            - strong [ref=e608]: Name
+                            - text: ", enter \""
+                            - generic [ref=e610]: PROJECT_ID
+                            - text: _
+                            - generic [ref=e612]:
+                              - text: close
+                              - generic "Edit Cloud storage media bucket" [ref=e613] [cursor=pointer]:
+                                - text: MEDIA_BUCKET
+                                - button "edit" [ref=e614]
+                            - text: "\"."
+                          - listitem [ref=e615]:
+                            - text: For
+                            - strong [ref=e616]: Region
+                            - text: ", select"
+                            - generic [ref=e618]: REGION
+                            - text: .
+                          - listitem [ref=e619]:
+                            - text: For
+                            - strong [ref=e620]: Storage Class
+                            - text: ", keep the defaults."
+                          - listitem [ref=e621]:
+                            - text: For
+                            - strong [ref=e622]: Prevent public access
+                            - text: ", clear \"Enforce public access prevention\"."
+                          - listitem [ref=e623]:
+                            - text: For
+                            - strong [ref=e624]: Access Control
+                            - text: ", select \"Fine-grained\"."
+                      - listitem [ref=e625]:
+                        - paragraph [ref=e626]: Keep the default values for the other fields.
+                      - listitem [ref=e627]:
+                        - paragraph [ref=e628]:
+                          - text: Click
+                          - strong [ref=e629]: Create
+                          - text: .
+                  - text: close edit close edit
+                - heading "Store secret values in Secret Manager" [level=3] [ref=e630]
+                - paragraph [ref=e631]: Now that the backing services are configured, Django needs information about these services. Instead of putting these values directly into the Django source code, this tutorial uses Secret Manager to store this information securely.
+                - heading "Create Django environment file as a Secret Manager secret" [level=4] [ref=e632]
+                - paragraph [ref=e633]:
+                  - text: You store the settings required to start Django in a secured env file. The sample app uses the Secret Manager API to retrieve the secret value, and the
+                  - link "django-environ" [ref=e634] [cursor=pointer]:
+                    - /url: https://django-environ.readthedocs.io/
+                    - code [ref=e635]: django-environ
+                  - text: package to load the values into the Django environment. The secret is configured to be accessible by Cloud Run and Cloud Build.
+                - list [ref=e636]:
+                  - listitem [ref=e637]:
+                    - paragraph [ref=e638]:
+                      - text: Create a file called
+                      - code [ref=e639]: .env
+                      - text: ", defining the database connection string, the media bucket name, and a new"
+                      - link "SECRET_KEY" [ref=e640] [cursor=pointer]:
+                        - /url: https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-SECRET_KEY
+                        - code [ref=e641]: SECRET_KEY
+                      - text: "value:"
+                    - code [ref=e644]:
+                      - text: echo DATABASE_URL=postgres://
+                      - generic [ref=e646]:
+                        - text: close
+                        - generic "Edit Django database username" [ref=e647] [cursor=pointer]:
+                          - text: DATABASE_USERNAME
+                          - button "edit" [ref=e648]
+                      - text: ":"
+                      - generic [ref=e650]:
+                        - text: close
+                        - generic "Edit Django database user password" [ref=e651] [cursor=pointer]:
+                          - text: DATABASE_PASSWORD
+                          - button "edit" [ref=e652]
+                      - text: "@//cloudsql/"
+                      - generic [ref=e654]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e655] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e656]
+                      - text: ":"
+                      - generic [ref=e658]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e659] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e660]
+                      - text: ":"
+                      - generic [ref=e662]:
+                        - text: close
+                        - generic "Edit Cloud SQL instance name" [ref=e663] [cursor=pointer]:
+                          - text: INSTANCE_NAME
+                          - button "edit" [ref=e664]
+                      - text: /
+                      - generic [ref=e666]:
+                        - text: close
+                        - generic "Edit Cloud SQL database name" [ref=e667] [cursor=pointer]:
+                          - text: DATABASE_NAME
+                          - button "edit" [ref=e668]
+                      - text: "> .env echo GS_BUCKET_NAME="
+                      - generic [ref=e670]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e671] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e672]
+                      - text: _
+                      - generic [ref=e674]:
+                        - text: close
+                        - generic "Edit Cloud storage media bucket" [ref=e675] [cursor=pointer]:
+                          - text: MEDIA_BUCKET
+                          - button "edit" [ref=e676]
+                      - text: ">> .env echo SECRET_KEY=$(cat /dev/urandom | LC_ALL=C tr -dc '[:alpha:]'| fold -w 50 | head -n1) >> .env"
+                  - listitem [ref=e677]:
+                    - paragraph [ref=e678]: "Store the secret in Secret Manager:"
+                    - generic [ref=e680]:
+                      - tablist [ref=e681]:
+                        - generic [ref=e682]:
+                          - tab "Console" [selected] [ref=e683]:
+                            - button "Console" [expanded] [ref=e684] [cursor=pointer]
+                          - tab "gcloud" [ref=e685]:
+                            - button "gcloud" [ref=e686] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Console" [ref=e687]:
+                        - list [ref=e688]:
+                          - listitem [ref=e689]:
+                            - paragraph [ref=e690]:
+                              - text: In the Google Cloud console, go to the
+                              - strong [ref=e691]: Secret Manager page
+                              - text: .
+                            - paragraph [ref=e692]:
+                              - link "Go to the Secret Manager page" [ref=e693] [cursor=pointer]:
+                                - /url: https://console.cloud.google.com/security/secret-manager?project=_
+                          - listitem [ref=e694]:
+                            - paragraph [ref=e695]:
+                              - text: Click
+                              - strong [ref=e696]: Create secret
+                          - listitem [ref=e697]:
+                            - paragraph [ref=e698]:
+                              - text: In the
+                              - strong [ref=e699]: Name
+                              - text: field, enter
+                              - code [ref=e700]: django_settings
+                              - text: .
+                          - listitem [ref=e701]:
+                            - paragraph [ref=e702]:
+                              - text: In the
+                              - strong [ref=e703]: Secret value
+                              - text: dialog, paste the contents of your
+                              - code [ref=e704]: .env
+                              - text: file.
+                          - listitem [ref=e705]:
+                            - paragraph [ref=e706]:
+                              - text: Click
+                              - strong [ref=e707]: Create secret
+                              - text: .
+                          - listitem [ref=e708]:
+                            - paragraph [ref=e709]:
+                              - text: Delete the local file to prevent
+                              - link "local setting overrides" [ref=e710] [cursor=pointer]:
+                                - /url: "#local-secret-overrides"
+                              - text: .
+                  - listitem [ref=e711]:
+                    - paragraph [ref=e712]: "Configure access to the secret:"
+                    - generic [ref=e714]:
+                      - tablist [ref=e715]:
+                        - generic [ref=e716]:
+                          - tab "Console" [selected] [ref=e717]:
+                            - button "Console" [expanded] [ref=e718] [cursor=pointer]
+                          - tab "gcloud" [ref=e719]:
+                            - button "gcloud" [ref=e720] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Console" [ref=e721]:
+                        - list [ref=e722]:
+                          - listitem [ref=e723]:
+                            - paragraph [ref=e724]:
+                              - text: In
+                              - strong [ref=e725]: "Secret: django_settings"
+                              - text: ", note the project number:"
+                            - code [ref=e728]:
+                              - generic [ref=e729]:
+                                - text: projects/
+                                - generic [ref=e731]:
+                                  - text: close
+                                  - generic "Edit Google Cloud Project Number" [ref=e732] [cursor=pointer]:
+                                    - text: PROJECTNUM
+                                    - button "edit" [ref=e733]
+                                - text: /secrets/django_settings
+                          - listitem [ref=e734]:
+                            - paragraph [ref=e735]:
+                              - text: Click the
+                              - strong [ref=e736]: Permissions
+                              - text: tab.
+                          - listitem [ref=e737]:
+                            - paragraph [ref=e738]:
+                              - text: Click
+                              - strong [ref=e739]: Grant access
+                              - text: .
+                          - listitem [ref=e740]:
+                            - paragraph [ref=e741]:
+                              - text: In the
+                              - strong [ref=e742]: New Members
+                              - text: field, enter
+                              - code [ref=e743]: PROJECTNUM-compute@developer.gserviceaccount.com
+                              - text: ", and then press"
+                              - code [ref=e744]: Enter
+                              - text: .
+                          - listitem [ref=e745]:
+                            - paragraph [ref=e746]:
+                              - text: In the
+                              - strong [ref=e747]: Role
+                              - text: drop-down menu, select
+                              - strong [ref=e748]: Secret Manager Secret Accessor
+                              - text: .
+                          - listitem [ref=e749]:
+                            - paragraph [ref=e750]:
+                              - text: Click
+                              - strong [ref=e751]: Save
+                              - text: .
+                      - text: close edit close edit
+                - heading "Create secret for Django's admin password" [level=4] [ref=e752]
+                - paragraph [ref=e753]:
+                  - text: The Django admin user is normally created by running the interactive management command
+                  - code [ref=e754]: createsuperuser
+                  - text: .
+                - paragraph [ref=e755]: This tutorial uses a data migration to create the admin user, retrieving the admin password from Secret Manager.
+                - generic [ref=e757]:
+                  - tablist [ref=e758]:
+                    - generic [ref=e759]:
+                      - tab "Console" [selected] [ref=e760]:
+                        - button "Console" [expanded] [ref=e761] [cursor=pointer]
+                      - tab "gcloud" [ref=e762]:
+                        - button "gcloud" [ref=e763] [cursor=pointer]
+                      - text: arrow_drop_down
+                  - tabpanel "Console" [ref=e764]:
+                    - list [ref=e765]:
+                      - listitem [ref=e766]:
+                        - text: In the Google Cloud console, go to the
+                        - strong [ref=e767]: Secret Manager page
+                        - text: .
+                      - listitem [ref=e768]:
+                        - paragraph [ref=e769]:
+                          - text: Click
+                          - strong [ref=e770]: Create secret
+                          - text: .
+                      - listitem [ref=e771]:
+                        - paragraph [ref=e772]:
+                          - text: In the
+                          - strong [ref=e773]: Name
+                          - text: field, enter
+                          - code [ref=e774]: superuser_password
+                          - text: .
+                      - listitem [ref=e775]:
+                        - paragraph [ref=e776]:
+                          - text: In the
+                          - strong [ref=e777]: Secret value
+                          - text: field, enter a random, unique password.
+                      - listitem [ref=e778]:
+                        - paragraph [ref=e779]:
+                          - text: Click
+                          - strong [ref=e780]: Create secret
+                          - text: .
+                      - listitem [ref=e781]:
+                        - paragraph [ref=e782]:
+                          - text: In
+                          - strong [ref=e783]:
+                            - text: Details for
+                            - code [ref=e784]: superuser_password
+                          - text: ", make a note of the project number ("
+                          - code [ref=e785]:
+                            - text: projects/
+                            - generic [ref=e787]: PROJECTNUM
+                            - text: /secrets/superuser_password
+                          - text: ).
+                      - listitem [ref=e788]:
+                        - paragraph [ref=e789]:
+                          - text: Click the
+                          - strong [ref=e790]: Permissions
+                          - text: tab.
+                      - listitem [ref=e791]:
+                        - paragraph [ref=e792]:
+                          - text: Click
+                          - strong [ref=e793]: Add
+                          - text: .
+                      - listitem [ref=e794]:
+                        - paragraph [ref=e795]:
+                          - text: In the
+                          - strong [ref=e796]: New Members
+                          - text: field, enter
+                          - code [ref=e797]: PROJECTNUM-compute@developer.gserviceaccount.com
+                          - text: ", and then press"
+                          - code [ref=e798]: Enter
+                          - text: .
+                      - listitem [ref=e799]:
+                        - paragraph [ref=e800]:
+                          - text: In the
+                          - strong [ref=e801]: Role
+                          - text: drop-down menu, select
+                          - strong [ref=e802]: Secret Manager Secret Accessor
+                          - text: .
+                      - listitem [ref=e803]:
+                        - paragraph [ref=e804]:
+                          - text: Click
+                          - strong [ref=e805]: Save
+                  - text: close edit
+                - paragraph
+                - paragraph
+                - heading "Run the app on your local computer" [level=2] [ref=e806]
+                - paragraph [ref=e807]:
+                  - text: With the backing services configured, you can now run the app on your computer. This setup allows for local development, and applying database migrations. Note that database migrations are also applied in Cloud Build, but you will need to have this local setup in order to
+                  - code [ref=e808]: makemigrations
+                  - text: .
+                - list [ref=e809]:
+                  - listitem [ref=e810]:
+                    - paragraph [ref=e811]: "In a separate terminal, start the Cloud SQL Auth Proxy:"
+                    - generic [ref=e813]:
+                      - tablist [ref=e814]:
+                        - generic [ref=e815]:
+                          - tab "Linux/macOS" [selected] [ref=e816]:
+                            - button "Linux/macOS" [expanded] [ref=e817] [cursor=pointer]
+                          - tab "Windows" [ref=e818]:
+                            - button "Windows" [ref=e819] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Linux/macOS" [ref=e820]:
+                        - code [ref=e823]:
+                          - text: ./cloud-sql-proxy
+                          - generic [ref=e825]:
+                            - text: close
+                            - generic "Edit Google Cloud Project ID" [ref=e826] [cursor=pointer]:
+                              - text: PROJECT_ID
+                              - button "edit" [ref=e827]
+                          - text: ":"
+                          - generic [ref=e829]:
+                            - text: close
+                            - generic "Edit Google Cloud region" [ref=e830] [cursor=pointer]:
+                              - text: REGION
+                              - button "edit" [ref=e831]
+                          - text: ":"
+                          - generic [ref=e833]:
+                            - text: close
+                            - generic "Edit Cloud SQL instance name" [ref=e834] [cursor=pointer]:
+                              - text: INSTANCE_NAME
+                              - button "edit" [ref=e835]
+                      - text: close edit close edit close edit
+                    - paragraph [ref=e836]: This step establishes a connection from your local computer to your Cloud SQL instance for local testing purposes. Keep the Cloud SQL Auth Proxy running the entire time you test your app locally. Running this process in a separate terminal allows you to keep working while this process runs.
+                  - listitem [ref=e837]:
+                    - paragraph [ref=e838]:
+                      - text: In the original terminal, set the Project ID locally (
+                      - link "used by the Secret Manager API" [ref=e839] [cursor=pointer]:
+                        - /url: "#understanding-secrets"
+                      - text: "):"
+                    - generic [ref=e841]:
+                      - tablist [ref=e842]:
+                        - generic [ref=e843]:
+                          - tab "Linux/macOS" [selected] [ref=e844]:
+                            - button "Linux/macOS" [expanded] [ref=e845] [cursor=pointer]
+                          - tab "Windows" [ref=e846]:
+                            - button "Windows" [ref=e847] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Linux/macOS" [ref=e848]:
+                        - code [ref=e851]:
+                          - text: export GOOGLE_CLOUD_PROJECT=
+                          - generic [ref=e853]:
+                            - text: close
+                            - generic "Edit PROJECT_ID" [ref=e854] [cursor=pointer]:
+                              - text: PROJECT_ID
+                              - button "edit" [ref=e855]
+                      - text: close edit
+                  - listitem [ref=e856]:
+                    - paragraph [ref=e857]:
+                      - text: Set an environment variable to indicate you are using Cloud SQL Auth Proxy (this value is
+                      - link "recognised in the code" [ref=e858] [cursor=pointer]:
+                        - /url: "#database_connection"
+                      - text: "):"
+                    - generic [ref=e860]:
+                      - tablist [ref=e861]:
+                        - generic [ref=e862]:
+                          - tab "Linux/macOS" [selected] [ref=e863]:
+                            - button "Linux/macOS" [expanded] [ref=e864] [cursor=pointer]
+                          - tab "Windows" [ref=e865]:
+                            - button "Windows" [ref=e866] [cursor=pointer]
+                          - text: arrow_drop_down
+                      - tabpanel "Linux/macOS" [ref=e867]:
+                        - code [ref=e870]: export USE_CLOUD_SQL_AUTH_PROXY=true
+                  - listitem [ref=e871]:
+                    - paragraph [ref=e872]: "Run the Django migrations to set up your models and assets:"
+                    - code [ref=e875]: python manage.py makemigrations python manage.py makemigrations polls python manage.py migrate python manage.py collectstatic
+                  - listitem [ref=e876]:
+                    - paragraph [ref=e877]: "Start the Django web server:"
+                    - code [ref=e880]: python manage.py runserver 8080
+                  - listitem [ref=e881]:
+                    - paragraph [ref=e882]:
+                      - text: In your browser, go to
+                      - link "http://localhost:8080" [ref=e883] [cursor=pointer]:
+                        - /url: http://localhost:8080
+                      - text: .
+                    - paragraph [ref=e884]:
+                      - text: If you are in Cloud Shell, click the
+                      - strong [ref=e885]: Web Preview
+                      - text: button, and select
+                      - strong [ref=e886]: Preview on port 8080
+                      - text: .
+                    - paragraph [ref=e887]: "The page displays the following text: \"Hello, world. You're at the polls index.\" The Django web server running on your computer delivers the sample app pages."
+                  - listitem [ref=e888]:
+                    - paragraph [ref=e889]:
+                      - text: Press
+                      - code [ref=e890]: Ctrl
+                      - text: /
+                      - code [ref=e891]: Cmd
+                      - text: +
+                      - code [ref=e892]: C
+                      - text: to stop the local web server.
+                - heading "Deploy the app to Cloud Run" [level=2] [ref=e893]
+                - paragraph
+                - paragraph [ref=e894]: With the backing services setup, you can now deploy the Cloud Run service.
+                - list [ref=e895]:
+                  - listitem [ref=e896]:
+                    - paragraph [ref=e897]:
+                      - text: Using the supplied
+                      - code [ref=e898]: cloudmigrate.yaml
+                      - text: ", use Cloud Build to build the image,"
+                      - link "run the database migrations" [ref=e899] [cursor=pointer]:
+                        - /url: "#cloudbuild-automation"
+                      - text: ", and populate the static assets:"
+                    - code [ref=e902]:
+                      - text: gcloud builds submit --config cloudmigrate.yaml \ --substitutions _INSTANCE_NAME=
+                      - generic [ref=e904]:
+                        - text: close
+                        - generic "Edit Cloud SQL instance name" [ref=e905] [cursor=pointer]:
+                          - text: INSTANCE_NAME
+                          - button "edit" [ref=e906]
+                      - text: ",_REGION="
+                      - generic [ref=e908]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e909] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e910]
+                    - paragraph [ref=e911]: This first build takes a few minutes to complete.
+                  - listitem [ref=e912]:
+                    - paragraph [ref=e913]: "When the build is successful, deploy the Cloud Run service for the first time, setting the service region, base image, and connected Cloud SQL instance:"
+                    - code [ref=e916]:
+                      - text: gcloud run deploy polls-service \ --region
+                      - generic [ref=e918]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e919] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e920]
+                      - text: \ --image
+                      - generic [ref=e922]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e923] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e924]
+                      - text: "-docker.pkg.dev/"
+                      - generic [ref=e926]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e927] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e928]
+                      - text: /cloud-run-source-deploy/polls-service \ --add-cloudsql-instances
+                      - generic [ref=e930]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e931] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e932]
+                      - text: ":"
+                      - generic [ref=e934]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e935] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e936]
+                      - text: ":"
+                      - generic [ref=e938]:
+                        - text: close
+                        - generic "Edit Cloud SQL instance name" [ref=e939] [cursor=pointer]:
+                          - text: INSTANCE_NAME
+                          - button "edit" [ref=e940]
+                      - text: \ --allow-unauthenticated
+                    - paragraph [ref=e941]: "You should see output that shows the deployment succeeded, with a service URL:"
+                    - code [ref=e944]:
+                      - text: "Service [polls-service] revision [polls-service-00001-tug] has been deployed and is serving 100 percent of traffic. Service URL: https://polls-service-"
+                      - generic [ref=e946]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e947] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e948]
+                      - text: .
+                      - generic [ref=e950]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e951] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e952]
+                      - text: .run.app
+                  - listitem [ref=e953]:
+                    - paragraph [ref=e954]: Update the service to the service URLs as an environment variable.
+                    - code [ref=e957]:
+                      - text: CLOUDRUN_SERVICE_URLS=$(gcloud run services describe polls-service \ --region $REGION \ --format "value(metadata.annotations[\"run.googleapis.com/urls\"])" | tr -d '"[]') gcloud run services update polls-service \ --region
+                      - generic [ref=e959]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e960] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e961]
+                      - text: \ --update-env-vars "^##^CLOUDRUN_SERVICE_URLS=$CLOUDRUN_SERVICE_URLS"
+                    - complementary [ref=e962]:
+                      - strong [ref=e963]: "Note:"
+                      - generic [ref=e964]:
+                        - text: This configures
+                        - link "CSRF" [ref=e965] [cursor=pointer]:
+                          - /url: "#csrf_configurations"
+                        - text: .
+                  - listitem [ref=e966]:
+                    - paragraph [ref=e967]: To see the deployed service, go to the service URL.
+                  - listitem [ref=e968]:
+                    - paragraph [ref=e969]:
+                      - text: To log into the Django admin, append
+                      - code [ref=e970]: /admin
+                      - text: to the URL, and login with the username
+                      - code [ref=e971]: admin
+                      - text: ", and the password set earlier."
+                    - paragraph [ref=e972]: "To retrieve the superuser password from Secret Manager:"
+                    - code [ref=e975]: gcloud secrets versions access latest --secret superuser_password && echo ""
+                - heading "Updating the application" [level=2] [ref=e976]
+                - paragraph [ref=e977]: "While the initial provisioning and deployment steps were complex, making updates is a simpler process:"
+                - list [ref=e978]:
+                  - listitem [ref=e979]:
+                    - paragraph [ref=e980]: "Run the Cloud Build build and migration script:"
+                    - code [ref=e983]:
+                      - text: gcloud builds submit --config cloudmigrate.yaml \ --substitutions _INSTANCE_NAME=
+                      - generic [ref=e985]:
+                        - text: close
+                        - generic "Edit Cloud SQL instance name" [ref=e986] [cursor=pointer]:
+                          - text: INSTANCE_NAME
+                          - button "edit" [ref=e987]
+                      - text: ",_REGION="
+                      - generic [ref=e989]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e990] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e991]
+                  - listitem [ref=e992]:
+                    - paragraph [ref=e993]: "Deploy the service, specifying only the region and image:"
+                    - code [ref=e996]:
+                      - text: gcloud run deploy polls-service \ --region
+                      - generic [ref=e998]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e999] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e1000]
+                      - text: \ --image
+                      - generic [ref=e1002]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e1003] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e1004]
+                      - text: "-docker.pkg.dev/"
+                      - generic [ref=e1006]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e1007] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e1008]
+                      - text: /cloud-run-source-deploy/polls-service
+                - heading "Configuring for production" [level=2] [ref=e1009]
+                - paragraph [ref=e1010]: You now have a working Django deployment, but there are further steps you can take to ensure that your application is production-ready.
+                - heading "Disable debugging" [level=3] [ref=e1011]
+                - paragraph [ref=e1012]:
+                  - text: Confirm that the
+                  - code [ref=e1013]: DEBUG
+                  - text: variable in
+                  - code [ref=e1014]: mysite/settings.py
+                  - text: is set to
+                  - code [ref=e1015]: "False"
+                  - text: . This will prevent detailed error pages from being displayed to the user, which can
+                  - link "leak information about the configurations" [ref=e1016] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/howto/error-reporting/#error-reporting
+                  - text: .
+                - heading "Limit the database user privileges" [level=3] [ref=e1017]
+                - paragraph [ref=e1018]:
+                  - text: Any users that are created by using Cloud SQL have the privileges associated with the
+                  - link "cloudsqlsuperuser role" [ref=e1019] [cursor=pointer]:
+                    - /url: https://cloud.google.com/sql/docs/postgres/users#other_postgresql_users
+                    - code [ref=e1020]: cloudsqlsuperuser
+                    - text: role
+                  - text: ":"
+                  - code [ref=e1021]: CREATEROLE
+                  - text: ","
+                  - code [ref=e1022]: CREATEDB
+                  - text: ", and"
+                  - code [ref=e1023]: LOGIN
+                  - text: .
+                - paragraph [ref=e1024]:
+                  - text: To prevent the Django database user from having these permissions, manually create the user in PostgreSQL. You will need to have the
+                  - link "psql interactive terminal" [ref=e1025] [cursor=pointer]:
+                    - /url: https://www.postgresql.org/docs/current/app-psql.html
+                    - code [ref=e1026]: psql
+                    - text: interactive terminal
+                  - text: installed, or use Cloud Shell which has this tool pre-installed.
+                - generic [ref=e1028]:
+                  - tablist [ref=e1029]:
+                    - generic [ref=e1030]:
+                      - tab "Console" [selected] [ref=e1031]:
+                        - button "Console" [expanded] [ref=e1032] [cursor=pointer]
+                      - tab "gcloud" [ref=e1033]:
+                        - button "gcloud" [ref=e1034] [cursor=pointer]
+                      - text: arrow_drop_down
+                  - tabpanel "Console" [ref=e1035]:
+                    - paragraph
+                    - list [ref=e1036]:
+                      - listitem [ref=e1037]:
+                        - paragraph [ref=e1038]: In the Google Cloud console, activate Cloud Shell.
+                        - paragraph [ref=e1039]:
+                          - link "Activate Cloud Shell" [ref=e1040] [cursor=pointer]:
+                            - /url: https://console.cloud.google.com/?cloudshell=true
+                      - listitem [ref=e1041]:
+                        - paragraph [ref=e1042]:
+                          - text: In Cloud Shell, use the built-in terminal to connect to your
+                          - code [ref=e1043]:
+                            - generic [ref=e1045]:
+                              - text: close
+                              - generic "Edit Cloud SQL instance name" [ref=e1046] [cursor=pointer]:
+                                - text: INSTANCE_NAME
+                                - button "edit" [ref=e1047]
+                          - text: "instance:"
+                        - code [ref=e1050]:
+                          - generic [ref=e1051]:
+                            - text: gcloud sql connect
+                            - generic [ref=e1053]:
+                              - text: close
+                              - generic "Edit Cloud SQL instance name" [ref=e1054] [cursor=pointer]:
+                                - text: INSTANCE_NAME
+                                - button "edit" [ref=e1055]
+                            - text: "--user postgres"
+                      - listitem [ref=e1056]:
+                        - paragraph [ref=e1057]: Enter the postgres user password.
+                        - paragraph [ref=e1058]:
+                          - text: You are now using
+                          - code [ref=e1059]: psql
+                          - text: . You should see the
+                          - code [ref=e1060]: postgres=>
+                          - text: prompt.
+                      - listitem [ref=e1061]:
+                        - paragraph [ref=e1062]: "Create a user:"
+                        - code [ref=e1065]:
+                          - generic [ref=e1066]:
+                            - text: CREATE USER
+                            - generic [ref=e1068]:
+                              - text: close
+                              - generic "Edit Django database username" [ref=e1069] [cursor=pointer]:
+                                - text: DATABASE_USERNAME
+                                - button "edit" [ref=e1070]
+                            - text: WITH PASSWORD '
+                            - generic [ref=e1072]:
+                              - text: close
+                              - generic "Edit Django database user password" [ref=e1073] [cursor=pointer]:
+                                - text: DATABASE_PASSWORD
+                                - button "edit" [ref=e1074]
+                            - text: "';"
+                        - paragraph [ref=e1075]:
+                          - text: Replace
+                          - code [ref=e1076]: PASSWORD
+                          - text: with a random, unique password.
+                      - listitem [ref=e1077]:
+                        - paragraph [ref=e1078]: "Grant full rights on the new database to the new user:"
+                        - code [ref=e1081]:
+                          - generic [ref=e1082]:
+                            - text: GRANT ALL PRIVILEGES ON DATABASE
+                            - generic [ref=e1084]:
+                              - text: close
+                              - generic "Edit Cloud SQL database name" [ref=e1085] [cursor=pointer]:
+                                - text: DATABASE_NAME
+                                - button "edit" [ref=e1086]
+                            - text: TO
+                            - generic [ref=e1088]:
+                              - text: close
+                              - generic "Edit Django database username" [ref=e1089] [cursor=pointer]:
+                                - text: DATABASE_USERNAME
+                                - button "edit" [ref=e1090]
+                            - text: ;
+                      - listitem [ref=e1091]:
+                        - paragraph [ref=e1092]:
+                          - text: Exit
+                          - code [ref=e1093]: psql
+                          - text: ":"
+                        - code [ref=e1096]: \q
+                  - text: close edit close edit close edit close edit close edit
+                - heading "Setting minimum permissions" [level=3] [ref=e1097]
+                - paragraph [ref=e1098]:
+                  - text: By default, this service is deployed with the
+                  - link "default compute service account" [ref=e1099] [cursor=pointer]:
+                    - /url: /compute/docs/access/service-accounts#default_service_account
+                  - text: . However, in some cases, using the default service account can provide too many permissions. If you want to be more restrictive, you need to create your own service account and assign only the permissions that are required by your service. The permissions required can vary from service to service, depending on the resources used by a particular service.
+                - paragraph [ref=e1100]: "The minimum project roles required by this service are the following:"
+                - list [ref=e1101]:
+                  - listitem [ref=e1102]: Cloud Run Invoker
+                  - listitem [ref=e1103]: Cloud SQL Client
+                  - listitem [ref=e1104]: Storage Admin, on the media bucket
+                  - listitem [ref=e1105]: Secret Manager Accessor, on the Django settings secret. (Access to the Django admin secret is not required by the service itself.)
+                - paragraph [ref=e1106]: "To create a service account with the required permissions, and assign it to the service, run the following:"
+                - list [ref=e1107]:
+                  - listitem [ref=e1108]:
+                    - paragraph [ref=e1109]:
+                      - text: In the gcloud CLI,
+                      - link "create a service account" [ref=e1110] [cursor=pointer]:
+                        - /url: /iam/docs/creating-managing-service-accounts#creating
+                      - text: "with the required roles:"
+                    - code [ref=e1113]:
+                      - text: gcloud iam service-accounts create polls-service-account SERVICE_ACCOUNT=polls-service-account@
+                      - generic [ref=e1115]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e1116] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e1117]
+                      - text: ".iam.gserviceaccount.com # Cloud SQL Client gcloud projects add-iam-policy-binding"
+                      - generic [ref=e1119]:
+                        - text: close
+                        - generic "Edit Google Cloud Project ID" [ref=e1120] [cursor=pointer]:
+                          - text: PROJECT_ID
+                          - button "edit" [ref=e1121]
+                      - text: "\\ --member serviceAccount:${SERVICE_ACCOUNT} \\ --role roles/cloudsql.client # Storage Admin, on the media bucket gcloud storage buckets add-iam-policy-binding gs://"
+                      - generic [ref=e1123]:
+                        - text: close
+                        - generic "Edit Cloud storage media bucket" [ref=e1124] [cursor=pointer]:
+                          - text: MEDIA_BUCKET
+                          - button "edit" [ref=e1125]
+                      - text: "\\ --member=serviceAccount:${SERVICE_ACCOUNT} \\ --role=roles/storage.objectAdmin # Secret Accessor, on the Django settings secret. gcloud secrets add-iam-policy-binding django_settings \\ --member serviceAccount:${SERVICE_ACCOUNT} \\ --role roles/secretmanager.secretAccessor # Secret Accessor, on the Django super user password. gcloud secrets add-iam-policy-binding superuser_password \\ --member serviceAccount:${SERVICE_ACCOUNT} \\ --role roles/secretmanager.secretAccessor"
+                  - listitem [ref=e1126]:
+                    - paragraph [ref=e1127]: "Deploy the service, associating it with the new service account:"
+                    - code [ref=e1130]:
+                      - text: gcloud run services update polls-service \ --region
+                      - generic [ref=e1132]:
+                        - text: close
+                        - generic "Edit Google Cloud region" [ref=e1133] [cursor=pointer]:
+                          - text: REGION
+                          - button "edit" [ref=e1134]
+                      - text: "\\ --service-account ${SERVICE_ACCOUNT}"
+                  - listitem [ref=e1135]:
+                    - paragraph [ref=e1136]:
+                      - text: Update the Cloud Run jobs in
+                      - code [ref=e1137]: cloudmigrate.yaml
+                      - text: to also have this
+                      - code [ref=e1138]: "--service-account"
+                      - text: setting.
+                - heading "Understand the code" [level=2] [ref=e1139]
+                - heading "Sample application" [level=3] [ref=e1140]
+                - paragraph [ref=e1141]: "The Django sample app was created using standard Django tooling. The following commands create the project and the polls app:"
+                - code [ref=e1144]: django-admin startproject mysite python manage.py startapp polls
+                - paragraph [ref=e1145]:
+                  - text: The base views, models, and route configurations were copied from
+                  - link "Writing your first Django app" [ref=e1146] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/#first-steps
+                  - text: (
+                  - link "Part 1" [ref=e1147] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/intro/tutorial01/
+                  - text: and
+                  - link "Part 2" [ref=e1148] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/intro/tutorial02/
+                  - text: ).
+                - heading "Secrets from Secret Manager" [level=3] [ref=e1149]
+                - paragraph [ref=e1150]:
+                  - text: The
+                  - code [ref=e1151]: settings.py
+                  - text: file contains code that uses the Secret Manager Python API to retrieve the latest version of the named secret, and pull it into the environment (using
+                  - link "django-environ" [ref=e1152] [cursor=pointer]:
+                    - /url: https://django-environ.readthedocs.io/
+                    - code [ref=e1153]: django-environ
+                  - text: "):"
+                - paragraph
+                - code [ref=e1157]: "# SECURITY WARNING: don't run with debug turned on in production! # Change this to \"False\" when you are ready for production env = environ.Env(DEBUG=(bool, True)) env_file = os.path.join(BASE_DIR, \".env\") # Attempt to load the Project ID into the environment, safely failing on error. try: _, os.environ[\"GOOGLE_CLOUD_PROJECT\"] = google.auth.default() except google.auth.exceptions.DefaultCredentialsError: pass if os.path.isfile(env_file): # Use a local secret file, if provided env.read_env(env_file) # ... elif os.environ.get(\"GOOGLE_CLOUD_PROJECT\", None): # Pull secrets from Secret Manager project_id = os.environ.get(\"GOOGLE_CLOUD_PROJECT\") client = secretmanager.SecretManagerServiceClient() settings_name = os.environ.get(\"SETTINGS_NAME\", \"django_settings\") name = f\"projects/{project_id}/secrets/{settings_name}/versions/latest\" payload = client.access_secret_version(name=name).payload.data.decode(\"UTF-8\") env.read_env(io.StringIO(payload)) else: raise Exception(\"No local .env or GOOGLE_CLOUD_PROJECT detected. No secrets found.\")"
+                - paragraph
+                - paragraph [ref=e1158]: The secret is used to store multiple secret values to reduce the number of different secrets that needed to be configured.
+                - heading "CSRF configurations" [level=3] [ref=e1159]
+                - paragraph [ref=e1160]:
+                  - text: Django has built-in protection against
+                  - link "Cross Site Request Forgery (CSRF)" [ref=e1161] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/ref/csrf/#how-it-works
+                  - text: . Starting in Django 4.0, changes to the way this works mean that it's important to tell Django what it's hosted URL is, so it can offer the best protections for users submitting data.
+                - paragraph [ref=e1162]:
+                  - text: You supply the app's URL as an environment variable in the
+                  - code [ref=e1163]: settings.py
+                  - text: file This is the value that Django uses for the relevant settings.
+                - paragraph
+                - code [ref=e1167]: "# SECURITY WARNING: It's recommended that you use this when # running in production. The URLs will be known once you first deploy # to Cloud Run. This code takes the URLs and converts it to both these settings formats. CLOUDRUN_SERVICE_URLS = env(\"CLOUDRUN_SERVICE_URLS\", default=None) if CLOUDRUN_SERVICE_URLS: CSRF_TRUSTED_ORIGINS = env(\"CLOUDRUN_SERVICE_URLS\").split(\",\") # Remove the scheme from URLs for ALLOWED_HOSTS ALLOWED_HOSTS = [urlparse(url).netloc for url in CSRF_TRUSTED_ORIGINS] SECURE_SSL_REDIRECT = True SECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\") else: ALLOWED_HOSTS = [\"*\"]"
+                - heading "Local secret overrides" [level=3] [ref=e1168]
+                - paragraph [ref=e1169]:
+                  - text: If a
+                  - code [ref=e1170]: .env
+                  - text: file is found on the local filesystem, it is used instead of the value from Secret Manager. Creating a
+                  - code [ref=e1171]: .env
+                  - text: file locally can help with local testing (e.g. local development against a SQLite database, or other local settings).
+                - heading "Database connection" [level=3] [ref=e1172]
+                - paragraph [ref=e1173]:
+                  - text: The
+                  - code [ref=e1174]: settings.py
+                  - text: file contains the configuration for your SQL database. It uses the
+                  - code [ref=e1175]: env.db()
+                  - text: helper from
+                  - code [ref=e1176]: django-environ
+                  - text: to load the connection string set in
+                  - code [ref=e1177]: DATABASE_URL
+                  - text: into the
+                  - code [ref=e1178]: DATABASES
+                  - text: setting.
+                - paragraph [ref=e1179]:
+                  - text: When running the application locally and using the Cloud SQL Auth Proxy to access the hosted database, the
+                  - code [ref=e1180]: USE_CLOUD_SQL_AUTH_PROXY
+                  - text: flag adjusts the database settings to use the proxy.
+                - paragraph
+                - code [ref=e1184]: "# Use django-environ to parse the connection string DATABASES = {\"default\": env.db()} # If the flag as been set, configure to use proxy if os.getenv(\"USE_CLOUD_SQL_AUTH_PROXY\", None): DATABASES[\"default\"][\"HOST\"] = \"127.0.0.1\" DATABASES[\"default\"][\"PORT\"] = 5432"
+                - paragraph
+                - heading "Cloud-stored static" [level=3] [ref=e1185]
+                - paragraph [ref=e1186]:
+                  - text: The
+                  - code [ref=e1187]: settings.py
+                  - text: file also uses
+                  - link "django-storages" [ref=e1188] [cursor=pointer]:
+                    - /url: https://django-storages.readthedocs.io/en/latest/backends/gcloud.html
+                    - code [ref=e1189]: django-storages
+                  - text: "to integrate the Cloud Storage media bucket directly into the project:"
+                - paragraph
+                - code [ref=e1193]: "# Define static storage via django-storages[google] GS_BUCKET_NAME = env(\"GS_BUCKET_NAME\") STATIC_URL = \"/static/\" STORAGES = { \"default\": { \"BACKEND\": \"storages.backends.gcloud.GoogleCloudStorage\", }, \"staticfiles\": { \"BACKEND\": \"storages.backends.gcloud.GoogleCloudStorage\", }, } GS_DEFAULT_ACL = \"publicRead\""
+                - heading "Automation with Cloud Build" [level=3] [ref=e1194]
+                - paragraph [ref=e1195]:
+                  - text: The
+                  - code [ref=e1196]: cloudmigrate.yaml
+                  - text: handles all the steps required to create a new container image, and use it to apply database migrations.
+                - paragraph [ref=e1197]:
+                  - text: This tutorial opts to use buildpacks to build the container image, and
+                  - link "custom entrypoints in the Procfile" [ref=e1198] [cursor=pointer]:
+                    - /url: /docs/buildpacks/overview#use_to_containerize_your_code
+                    - text: custom entrypoints in the
+                    - code [ref=e1199]: Procfile
+                  - text: to handle management commands. These can then be referenced by Cloud Run jobs to perform the commands.
+                - code [ref=e1203]: "steps: - id: \"Build Container Image\" name: gcr.io/k8s-skaffold/pack args: [\"build\", \"${_IMAGE_NAME}\", \"--builder=gcr.io/buildpacks/builder\"] - id: \"Push Container Image\" name: \"gcr.io/cloud-builders/docker\" args: [\"push\", \"${_IMAGE_NAME}\"] - id: \"Migrate database\" name: \"gcr.io/google.com/cloudsdktool/cloud-sdk\" entrypoint: /bin/bash args: - \"-c\" - | gcloud run jobs create migrate-job \\ --region ${_REGION} \\ --image ${_IMAGE_NAME} \\ --set-cloudsql-instances ${_CLOUD_SQL_CONNECTION_NAME} \\ --set-env-vars SETTINGS_NAME=${_SECRET_SETTINGS_NAME} \\ --command migrate \\ --execute-now - id: \"Create superuser\" name: \"gcr.io/google.com/cloudsdktool/cloud-sdk\" entrypoint: /bin/bash args: - \"-c\" - | gcloud run jobs create superuser-job \\ --region ${_REGION} \\ --image ${_IMAGE_NAME} \\ --set-cloudsql-instances ${_CLOUD_SQL_CONNECTION_NAME} \\ --set-env-vars SETTINGS_NAME=${_SECRET_SETTINGS_NAME} \\ --set-env-vars DJANGO_SUPERUSER_EMAIL=${_ADMIN_EMAIL} \\ --set-secrets DJANGO_SUPERUSER_PASSWORD=${_ADMIN_PASSWORD_NAME}:latest \\ --command createsuperuser \\ --execute-now options: dynamicSubstitutions: true substitutions: _INSTANCE_NAME: django-instance _CLOUD_SQL_CONNECTION_NAME: ${PROJECT_ID}:${_REGION}:${_INSTANCE_NAME} _REGION: us-central1 _SERVICE_NAME: polls-service _SECRET_SETTINGS_NAME: django_settings _ARTIFACT_REGISTRY: cloud-run-source-deploy _IMAGE_NAME: ${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY}/${_SERVICE_NAME} _ADMIN_EMAIL: example@example.com _ADMIN_PASSWORD_NAME: superuser_password images: - \"${_IMAGE_NAME}\""
+                - paragraph [ref=e1204]:
+                  - link "Substitution variables" [ref=e1205] [cursor=pointer]:
+                    - /url: /build/docs/configuring-builds/substitute-variable-values
+                  - text: are used in this configuration.
+                - heading "Superuser creation with Cloud Run Jobs" [level=3] [ref=e1206]
+                - paragraph [ref=e1207]:
+                  - text: The Django management command
+                  - link "createsuperuser" [ref=e1208] [cursor=pointer]:
+                    - /url: https://docs.djangoproject.com/en/stable/ref/django-admin/#createsuperuser
+                    - code [ref=e1209]: createsuperuser
+                  - text: can be run non-interactively by setting
+                  - code [ref=e1210]: DJANGO_SUPERUSER_EMAIL
+                  - text: and
+                  - code [ref=e1211]: DJANGO_SUPERUSER_PASSWORD
+                  - text: .
+                - paragraph [ref=e1212]:
+                  - text: This tutorial opts to use Cloud Run Jobs to run this command. This is done by adding a custom entry into the
+                  - code [ref=e1213]: Procfile
+                  - text: which runs
+                  - code [ref=e1214]: createsuperuser
+                  - text: .
+                - code [ref=e1218]: "# Create superuser (requires DJANGO_SUPERUSER_PASSWORD and DJANGO_SUPERUSER_EMAIL envvars) createsuperuser: python manage.py createsuperuser --username admin --noinput || echo \"User already exists.\""
+              - generic [ref=e1219]:
+                - heading "Clean up" [level=2] [ref=e1220]
+                - paragraph [ref=e1221]: To avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources.
+                - heading "Delete the project" [level=3] [ref=e1222]
+                - list [ref=e1223]:
+                  - complementary [ref=e1224]:
+                    - text: error
+                    - strong [ref=e1225]: Caution
+                    - text: ": Deleting a project has the following effects:"
+                    - list [ref=e1226]:
+                      - listitem [ref=e1227]:
+                        - strong [ref=e1228]: Everything in the project is deleted.
+                        - text: If you used an existing project for the tasks in this document, when you delete it, you also delete any other work you've done in the project.
+                      - listitem [ref=e1229]:
+                        - strong [ref=e1230]: Custom project IDs are lost.
+                        - text: When you created this project, you might have created a custom project ID that you want to use in the future. To preserve the URLs that use the project ID, such as an
+                        - code [ref=e1231]: appspot.com
+                        - text: URL, delete selected resources inside the project instead of deleting the whole project.
+                    - paragraph [ref=e1232]: If you plan to explore multiple architectures, tutorials, or quickstarts, reusing projects can help you avoid exceeding project quota limits.
+                  - listitem [ref=e1233]:
+                    - text: In the Google Cloud console, go to the Manage resources page.
+                    - paragraph [ref=e1234]:
+                      - link "Go to Manage resources" [ref=e1235] [cursor=pointer]:
+                        - /url: https://console.cloud.google.com/iam-admin/projects
+                  - listitem [ref=e1236]: In the project list, select the project that you want to delete, and then click Delete.
+                  - listitem [ref=e1237]: In the dialog, type the project ID, and then click Shut down to delete the project.
+              - generic [ref=e1238]:
+                - heading "What's next" [level=2] [ref=e1239]
+                - list [ref=e1240]:
+                  - listitem [ref=e1241]:
+                    - text: Learn how to
+                    - link "configure PostgreSQL for production" [ref=e1242] [cursor=pointer]:
+                      - /url: /solutions/setting-up-cloud-sql-for-postgresql-for-production
+                  - listitem [ref=e1243]:
+                    - text: Learn more about
+                    - link "Django on Google Cloud" [ref=e1244] [cursor=pointer]:
+                      - /url: /python/django
+            - form "Was this helpful?" [ref=e1246]:
+              - generic [ref=e1247]: Was this helpful?
+              - generic [ref=e1248]:
+                - button "Helpful" [ref=e1249] [cursor=pointer]:
+                  - img
+                - button "Not helpful" [ref=e1250] [cursor=pointer]:
+                  - img
+            - button "Send feedback" [ref=e1252] [cursor=pointer]
+          - generic [ref=e1253]:
+            - paragraph [ref=e1254]:
+              - text: Except as otherwise noted, the content of this page is licensed under the
+              - link "Creative Commons Attribution 4.0 License" [ref=e1255] [cursor=pointer]:
+                - /url: https://creativecommons.org/licenses/by/4.0/
+              - text: ", and code samples are licensed under the"
+              - link "Apache 2.0 License" [ref=e1256] [cursor=pointer]:
+                - /url: https://www.apache.org/licenses/LICENSE-2.0
+              - text: . For details, see the
+              - link "Google Developers Site Policies" [ref=e1257] [cursor=pointer]:
+                - /url: https://developers.google.com/site-policies
+              - text: . Java is a registered trademark of Oracle and/or its affiliates.
+            - paragraph [ref=e1258]: Last updated 2026-06-03 UTC.
+      - navigation "Footer links" [ref=e1261]:
+        - list [ref=e1262]:
+          - listitem [ref=e1263]:
+            - heading "Products and pricing" [level=3] [ref=e1264]
+            - list [ref=e1265]:
+              - listitem [ref=e1266]:
+                - link "See all products" [ref=e1267] [cursor=pointer]:
+                  - /url: //cloud.google.com/products/
+              - listitem [ref=e1268]:
+                - link "Google Cloud pricing" [ref=e1269] [cursor=pointer]:
+                  - /url: //cloud.google.com/pricing/
+              - listitem [ref=e1270]:
+                - link "Google Cloud Marketplace" [ref=e1271] [cursor=pointer]:
+                  - /url: //cloud.google.com/marketplace/
+              - listitem [ref=e1272]:
+                - link "Contact sales" [ref=e1273] [cursor=pointer]:
+                  - /url: //cloud.google.com/contact/
+          - listitem [ref=e1274]:
+            - heading "Support" [level=3] [ref=e1275]
+            - list [ref=e1276]:
+              - listitem [ref=e1277]:
+                - link "Community forums" [ref=e1278] [cursor=pointer]:
+                  - /url: //discuss.google.dev/c/google-cloud/14/
+              - listitem [ref=e1279]:
+                - link "Support" [ref=e1280] [cursor=pointer]:
+                  - /url: //cloud.google.com/support-hub/
+              - listitem [ref=e1281]:
+                - link "Release Notes" [ref=e1282] [cursor=pointer]:
+                  - /url: //docs.cloud.google.com/release-notes
+              - listitem [ref=e1283]:
+                - link "System status" [ref=e1284] [cursor=pointer]:
+                  - /url: //status.cloud.google.com
+          - listitem [ref=e1285]:
+            - heading "Resources" [level=3] [ref=e1286]
+            - list [ref=e1287]:
+              - listitem [ref=e1288]:
+                - link "GitHub" [ref=e1289] [cursor=pointer]:
+                  - /url: //github.com/googlecloudPlatform/
+              - listitem [ref=e1290]:
+                - link "Getting Started with Google Cloud" [ref=e1291] [cursor=pointer]:
+                  - /url: /docs/get-started/
+              - listitem [ref=e1292]:
+                - link "Code samples" [ref=e1293] [cursor=pointer]:
+                  - /url: /docs/samples
+              - listitem [ref=e1294]:
+                - link "Cloud Architecture Center" [ref=e1295] [cursor=pointer]:
+                  - /url: /architecture/
+              - listitem [ref=e1296]:
+                - link "Training and Certification" [ref=e1297] [cursor=pointer]:
+                  - /url: //cloud.google.com/learn/training/
+          - listitem [ref=e1298]:
+            - heading "Engage" [level=3] [ref=e1299]
+            - list [ref=e1300]:
+              - listitem [ref=e1301]:
+                - link "Blog" [ref=e1302] [cursor=pointer]:
+                  - /url: //cloud.google.com/blog/
+              - listitem [ref=e1303]:
+                - link "Events" [ref=e1304] [cursor=pointer]:
+                  - /url: //cloud.google.com/events/
+              - listitem [ref=e1305]:
+                - link "X (Twitter)" [ref=e1306] [cursor=pointer]:
+                  - /url: //x.com/googlecloud
+              - listitem [ref=e1307]:
+                - link "Google Cloud on YouTube" [ref=e1308] [cursor=pointer]:
+                  - /url: //www.youtube.com/googlecloud
+              - listitem [ref=e1309]:
+                - link "Google Cloud Tech on YouTube" [ref=e1310] [cursor=pointer]:
+                  - /url: //www.youtube.com/googlecloudplatform
+      - navigation "Utility links" [ref=e1313]:
+        - list [ref=e1314]:
+          - listitem [ref=e1315]:
+            - link "About Google" [ref=e1316] [cursor=pointer]:
+              - /url: //about.google/
+          - listitem [ref=e1317]:
+            - text: "|"
+            - link "Privacy" [ref=e1318] [cursor=pointer]:
+              - /url: //policies.google.com/privacy
+          - listitem [ref=e1319]:
+            - text: "|"
+            - link "Site terms" [ref=e1320] [cursor=pointer]:
+              - /url: //policies.google.com/terms?hl=en
+          - listitem [ref=e1321]:
+            - text: "|"
+            - link "Google Cloud terms" [ref=e1322] [cursor=pointer]:
+              - /url: //cloud.google.com/product-terms
+          - text: "|"
+          - listitem [ref=e1323]:
+            - text: "|"
+            - 'link "Our third decade of climate action: join us" [ref=e1324] [cursor=pointer]':
+              - /url: //cloud.google.com/sustainability
+          - listitem [ref=e1325]:
+            - generic [ref=e1326]: Sign up for the Google Cloud newsletter
+            - link "Subscribe" [ref=e1327] [cursor=pointer]:
+              - /url: //cloud.google.com/newsletter/
+        - generic "Select your language preference." [ref=e1328]:
+          - button "Language" [ref=e1329] [cursor=pointer]:
+            - img
+            - generic [ref=e1330]: Language
+            - img

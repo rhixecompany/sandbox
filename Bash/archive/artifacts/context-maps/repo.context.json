@@ -1,0 +1,28 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 19.8,
+  "has_safety_section": true,
+  "md_size_kb": 9.4,
+  "prompt_name": "repo",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "systematic-debugging",
+    "simplify"
+  ],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "migration",
+    "repository",
+    "project-management",
+    "consolidation",
+    "patching",
+    "documentation"
+  ],
+  "title": "Repository Migration - Rhixe-company Projects",
+  "trigger": "/repo-migration",
+  "txt_size_kb": 0.9
+}

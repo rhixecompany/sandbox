@@ -1,0 +1,25 @@
+{
+  "dependency_scanning": {
+    "npm_enabled": true,
+    "pip_enabled": true,
+    "cargo_enabled": true,
+    "timeout_seconds": 60
+  },
+  "health_scoring": {
+    "issue_weight": 0.5,
+    "vulnerability_weight": 2.0,
+    "stale_commit_threshold_days": 30
+  },
+  "output": {
+    "triage_report_file": "REPO_AUDIT/TRIAGE_REPORT.json",
+    "catalog_file": "REPO_AUDIT/CATALOG.md",
+    "pretty_print": true
+  },
+  "triage": {
+    "analyze_languages": true,
+    "analyze_size": true,
+    "analyze_commit_history": true,
+    "scan_dependencies": true,
+    "fetch_github_issues": true
+  }
+}

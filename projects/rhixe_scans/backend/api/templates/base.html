@@ -1,0 +1,65 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" class="dark font-sans">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Alexander E Iseghohi" />
+    <title>
+      {% block title %}
+        {% translate 'Rhixescans' %}
+      {% endblock title %}
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet" />
+    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
+    {% block meta %}
+      <meta name="description" content="Read Comics Online!!!" />
+      <meta property="og:title" content="Rhixe Scans" />
+      <meta property="og:description" content="Read Comics Online!!!" />
+      <meta property="og:url" content="{% url 'index' %}" />
+      <meta property="og:site_name" content="Rhixe Scans" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Rhixe Scans" />
+      <meta name="twitter:description" content="Read Comics" />
+    {% endblock meta %}
+    {% block header %}
+    {% endblock header %}
+    {% block css %}
+      <!-- Your stuff: Third-party CSS libraries go here -->
+      <!-- This file stores project-specific CSS -->
+      {% render_bundle 'project' 'css' %}
+    {% endblock css %}
+    <!--                          Le javascript
+    ==================================================                          -->
+    {# Placed at the top of the document so pages load faster with defer #}
+    {% block javascript %}
+      <!-- Vendor dependencies bundled as one file -->
+      {% render_bundle 'vendors' 'js' attrs='defer' %}
+      <!-- place project specific Javascript in this file -->
+      {% render_bundle 'project' 'js' attrs='defer' %}
+    {% endblock javascript %}
+  </head>
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+        class="min-h-screen antialiased bg-secondarybackground"
+        style="margin: 0 !important">
+    {% block body %}
+      {% include 'partials/base/header.html' %}
+      {% block main %}
+        {% block content %}
+        {% endblock content %}
+      {% endblock main %}
+      {% include 'partials/base/footer.html' %}
+      {% include 'partials/base/mobile_menu.html' %}
+    {% endblock body %}
+  </body>
+  {% block injs %}
+  {% endblock injs %}
+</html>

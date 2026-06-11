@@ -1,0 +1,61 @@
+# import the required libraries
+import asyncio
+import csv
+
+import nodriver as uc
+
+
+async def scraper():
+    # start a new Chrome instance
+    driver = await uc.start()
+
+    # visit the target website
+    page = await driver.get("https://www.scrapingcourse.com/ecommerce/")
+
+    page.sleep(10)
+
+    # product array to collect data
+    product_data = []
+
+    while True:
+        # extract all the product containers
+        products = await page.select_all(".product")
+
+        # loop through each container to extract names and prices
+        for product in products:
+            product_name = await product.query_selector(
+                ".woocommerce-loop-product__title"
+            )
+            product_price = await product.query_selector(".price")
+
+            # get all product texts into a dictionary
+            data = {"Name": product_name.text_all, "Price": product_price.text_all}
+
+            # append each product data to the product data array
+            product_data.append(data)
+
+        # find the "Next" button
+        next_page_element = await page.query_selector(".next.page-numbers")
+
+        if next_page_element:
+            await next_page_element.click()
+            # wait for the content to load
+            await page.sleep(10)
+        else:
+            break
+
+    # save the data to a CSV file
+    keys = product_data[0].keys()
+    with open("product_data.csv", "w", newline="", encoding="utf-8") as output_file:
+        dict_writer = csv.DictWriter(output_file, fieldnames=keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(product_data)
+        print("CSV created successfully")
+
+    # close the page
+    await page.close()
+
+
+# run the scraper function with asyncio
+if __name__ == "__main__":
+    asyncio.run(scraper())

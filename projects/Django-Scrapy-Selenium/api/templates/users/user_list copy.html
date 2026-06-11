@@ -1,0 +1,16 @@
+{% extends "users/base.html" %}
+
+{% comment %} djlint:on {% endcomment %}
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'Users List' %}
+{% endblock head_title %}
+{% block content %}
+  <main>
+    <div class="px-2 pt-3">
+      <!-- Container -->
+      {% include "partials/users/container.html" %}
+    </div>
+  </main>
+{% endblock content %}

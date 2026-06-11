@@ -1,0 +1,92 @@
+# Node modules (install in container)
+node_modules/
+
+# Build artifacts (recreate in container)
+.next/
+out/
+dist/
+build/
+
+# Development dependencies
+.turbo/
+.eslintcache
+.stylelintcache
+.cache/
+.vite/
+
+# Test & coverage (don't need in image)
+coverage/
+.nyc_output/
+*.lcov
+
+# Environment files (use env_file: instead)
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# VCS & CI/CD
+.git/
+.github/
+.gitlab-ci.yml
+.gitignore
+.gitattributes
+
+# IDE & Editor config (not needed in container)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.prettierignore
+.prettierrc.ts
+.editorconfig
+
+# Documentation & examples (keep minimal)
+docs/
+examples/
+README*.md
+CONTRIBUTING.md
+CHANGELOG.md
+LICENSE
+
+# Config files not needed at runtime
+tsconfig.json
+eslint.config.mts
+playwright.config.mts
+vitest.config.mts
+postcss.config.mjs
+.cursorrules
+.schemas/
+patches/
+
+# Package management (keep pnpm files)
+package-lock.json
+yarn.lock
+
+# Temporary & logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.cache
+.parcel-cache
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+
+# Scripts (if not needed)
+*.sh
+*.ps1
+cleanup.*
+dev.*
+setup-dev.*
+quality-gate.*

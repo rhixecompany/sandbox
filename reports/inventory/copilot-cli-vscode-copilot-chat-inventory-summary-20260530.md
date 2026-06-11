@@ -1,0 +1,1163 @@
+# Copilot CLI + VS Code Copilot Chat Inventory Summary (2026-05-30)
+
+## Scope
+
+- Workspace repo customizations: agents, prompts, instructions, hooks, plugins
+- VS Code Copilot Chat extension skill packs (awesome-copilot plugin catalog + whatidid)
+- Built-in VS Code Copilot extension skills
+- MCP-related server definitions from repo and machine-level config
+
+## Top Summary
+
+- Instructions (repo): 34
+- Agents (repo): 475
+- Prompts (repo): 349
+- Hooks (repo): 2
+- Plugins (repo): 21
+- VS Code Copilot Chat Extension Skills: 142
+- VS Code Copilot Built-in Skills: 13
+
+## Category Summary (VS Code Copilot Chat Extension Skills)
+
+| Category | Skill Count |
+|---|---:|
+| acreadiness-cockpit | 3 |
+| ai-team-orchestration | 1 |
+| arize-ax | 9 |
+| automate-this | 1 |
+| awesome-copilot | 3 |
+| azure-cloud-development | 4 |
+| clojure-interactive-programming | 1 |
+| cms-development | 3 |
+| context-engineering | 3 |
+| context-matic | 2 |
+| copilot-sdk | 1 |
+| csharp-dotnet-development | 8 |
+| database-data-management | 4 |
+| dataverse-sdk-for-python | 4 |
+| devops-oncall | 2 |
+| doublecheck | 1 |
+| ember | 1 |
+| eyeball | 1 |
+| fastah-ip-geo-tools | 1 |
+| flowstudio-power-automate | 5 |
+| frontend-web-dev | 2 |
+| go-mcp-development | 1 |
+| java-development | 4 |
+| java-mcp-development | 1 |
+| kotlin-mcp-development | 1 |
+| mcp-m365-copilot | 3 |
+| napkin | 1 |
+| noob-mode | 1 |
+| openapi-to-application-csharp-dotnet | 1 |
+| openapi-to-application-go | 1 |
+| openapi-to-application-java-spring-boot | 1 |
+| openapi-to-application-nodejs-nestjs | 1 |
+| openapi-to-application-python-fastapi | 1 |
+| oracle-to-postgres-migration-expert | 7 |
+| ospo-sponsorship | 1 |
+| phoenix | 3 |
+| php-mcp-development | 1 |
+| power-apps-code-apps | 1 |
+| power-bi-development | 4 |
+| power-platform-architect | 1 |
+| power-platform-mcp-connector-development | 2 |
+| project-documenter | 2 |
+| project-planning | 8 |
+| python-mcp-development | 1 |
+| react18-upgrade | 7 |
+| react19-upgrade | 3 |
+| roundup | 2 |
+| ruby-mcp-development | 1 |
+| rust-mcp-development | 1 |
+| salesforce-development | 3 |
+| security-best-practices | 1 |
+| skill-image-gen | 1 |
+| structured-autonomy | 3 |
+| swift-mcp-development | 1 |
+| technical-spike | 1 |
+| testing-automation | 5 |
+| typescript-mcp-development | 1 |
+| typespec-m365-copilot | 3 |
+| whatidid | 1 |
+
+Reference categories requested include:
+- context-engineering
+- database-data-management
+- frontend-web-dev
+- project-documenter
+- react19-upgrade
+- testing-automation
+- typescript-mcp-development
+- whatidid
+
+## VS Code Copilot Chat Extension Skills
+
+- acreadiness-cockpit/skills/acreadiness-assess/SKILL.md
+- acreadiness-cockpit/skills/acreadiness-generate-instructions/SKILL.md
+- acreadiness-cockpit/skills/acreadiness-policy/SKILL.md
+- ai-team-orchestration/skills/ai-team-orchestration/SKILL.md
+- arize-ax/skills/arize-ai-provider-integration/SKILL.md
+- arize-ax/skills/arize-annotation/SKILL.md
+- arize-ax/skills/arize-dataset/SKILL.md
+- arize-ax/skills/arize-evaluator/SKILL.md
+- arize-ax/skills/arize-experiment/SKILL.md
+- arize-ax/skills/arize-instrumentation/SKILL.md
+- arize-ax/skills/arize-link/SKILL.md
+- arize-ax/skills/arize-prompt-optimization/SKILL.md
+- arize-ax/skills/arize-trace/SKILL.md
+- automate-this/skills/automate-this/SKILL.md
+- awesome-copilot/skills/suggest-awesome-github-copilot-agents/SKILL.md
+- awesome-copilot/skills/suggest-awesome-github-copilot-instructions/SKILL.md
+- awesome-copilot/skills/suggest-awesome-github-copilot-skills/SKILL.md
+- azure-cloud-development/skills/az-cost-optimize/SKILL.md
+- azure-cloud-development/skills/azure-pricing/SKILL.md
+- azure-cloud-development/skills/azure-resource-health-diagnose/SKILL.md
+- azure-cloud-development/skills/import-infrastructure-as-code/SKILL.md
+- clojure-interactive-programming/skills/remember-interactive-programming/SKILL.md
+- cms-development/skills/content-management-systems/SKILL.md
+- cms-development/skills/markdown-to-html/SKILL.md
+- cms-development/skills/quasi-coder/SKILL.md
+- context-engineering/skills/context-map/SKILL.md
+- context-engineering/skills/refactor-plan/SKILL.md
+- context-engineering/skills/what-context-needed/SKILL.md
+- context-matic/skills/integrate-context-matic/SKILL.md
+- context-matic/skills/onboard-context-matic/SKILL.md
+- copilot-sdk/skills/copilot-sdk/SKILL.md
+- csharp-dotnet-development/skills/aspnet-minimal-api-openapi/SKILL.md
+- csharp-dotnet-development/skills/csharp-async/SKILL.md
+- csharp-dotnet-development/skills/csharp-mstest/SKILL.md
+- csharp-dotnet-development/skills/csharp-nunit/SKILL.md
+- csharp-dotnet-development/skills/csharp-tunit/SKILL.md
+- csharp-dotnet-development/skills/csharp-xunit/SKILL.md
+- csharp-dotnet-development/skills/dotnet-best-practices/SKILL.md
+- csharp-dotnet-development/skills/dotnet-upgrade/SKILL.md
+- database-data-management/skills/postgresql-code-review/SKILL.md
+- database-data-management/skills/postgresql-optimization/SKILL.md
+- database-data-management/skills/sql-code-review/SKILL.md
+- database-data-management/skills/sql-optimization/SKILL.md
+- dataverse-sdk-for-python/skills/dataverse-python-advanced-patterns/SKILL.md
+- dataverse-sdk-for-python/skills/dataverse-python-production-code/SKILL.md
+- dataverse-sdk-for-python/skills/dataverse-python-quickstart/SKILL.md
+- dataverse-sdk-for-python/skills/dataverse-python-usecase-builder/SKILL.md
+- devops-oncall/skills/azure-resource-health-diagnose/SKILL.md
+- devops-oncall/skills/multi-stage-dockerfile/SKILL.md
+- doublecheck/skills/doublecheck/SKILL.md
+- ember/skills/from-the-other-side-vega/SKILL.md
+- eyeball/skills/eyeball/SKILL.md
+- fastah-ip-geo-tools/skills/geofeed-tuner/SKILL.md
+- flowstudio-power-automate/skills/flowstudio-power-automate-build/SKILL.md
+- flowstudio-power-automate/skills/flowstudio-power-automate-debug/SKILL.md
+- flowstudio-power-automate/skills/flowstudio-power-automate-governance/SKILL.md
+- flowstudio-power-automate/skills/flowstudio-power-automate-mcp/SKILL.md
+- flowstudio-power-automate/skills/flowstudio-power-automate-monitoring/SKILL.md
+- frontend-web-dev/skills/playwright-explore-website/SKILL.md
+- frontend-web-dev/skills/playwright-generate-test/SKILL.md
+- go-mcp-development/skills/go-mcp-server-generator/SKILL.md
+- java-development/skills/create-spring-boot-java-project/SKILL.md
+- java-development/skills/java-docs/SKILL.md
+- java-development/skills/java-junit/SKILL.md
+- java-development/skills/java-springboot/SKILL.md
+- java-mcp-development/skills/java-mcp-server-generator/SKILL.md
+- kotlin-mcp-development/skills/kotlin-mcp-server-generator/SKILL.md
+- mcp-m365-copilot/skills/mcp-create-adaptive-cards/SKILL.md
+- mcp-m365-copilot/skills/mcp-create-declarative-agent/SKILL.md
+- mcp-m365-copilot/skills/mcp-deploy-manage-agents/SKILL.md
+- napkin/skills/napkin/SKILL.md
+- noob-mode/skills/noob-mode/SKILL.md
+- openapi-to-application-csharp-dotnet/skills/openapi-to-application-code/SKILL.md
+- openapi-to-application-go/skills/openapi-to-application-code/SKILL.md
+- openapi-to-application-java-spring-boot/skills/openapi-to-application-code/SKILL.md
+- openapi-to-application-nodejs-nestjs/skills/openapi-to-application-code/SKILL.md
+- openapi-to-application-python-fastapi/skills/openapi-to-application-code/SKILL.md
+- oracle-to-postgres-migration-expert/skills/creating-oracle-to-postgres-master-migration-plan/SKILL.md
+- oracle-to-postgres-migration-expert/skills/creating-oracle-to-postgres-migration-bug-report/SKILL.md
+- oracle-to-postgres-migration-expert/skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md
+- oracle-to-postgres-migration-expert/skills/migrating-oracle-to-postgres-stored-procedures/SKILL.md
+- oracle-to-postgres-migration-expert/skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md
+- oracle-to-postgres-migration-expert/skills/reviewing-oracle-to-postgres-migration/SKILL.md
+- oracle-to-postgres-migration-expert/skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md
+- ospo-sponsorship/skills/sponsor-finder/SKILL.md
+- phoenix/skills/phoenix-cli/SKILL.md
+- phoenix/skills/phoenix-evals/SKILL.md
+- phoenix/skills/phoenix-tracing/SKILL.md
+- php-mcp-development/skills/php-mcp-server-generator/SKILL.md
+- power-apps-code-apps/skills/power-apps-code-app-scaffold/SKILL.md
+- power-bi-development/skills/power-bi-dax-optimization/SKILL.md
+- power-bi-development/skills/power-bi-model-design-review/SKILL.md
+- power-bi-development/skills/power-bi-performance-troubleshooting/SKILL.md
+- power-bi-development/skills/power-bi-report-design-consultation/SKILL.md
+- power-platform-architect/skills/power-platform-architect/SKILL.md
+- power-platform-mcp-connector-development/skills/mcp-copilot-studio-server-generator/SKILL.md
+- power-platform-mcp-connector-development/skills/power-platform-mcp-connector-suite/SKILL.md
+- project-documenter/skills/drawio/SKILL.md
+- project-documenter/skills/md-to-docx/SKILL.md
+- project-planning/skills/breakdown-epic-arch/SKILL.md
+- project-planning/skills/breakdown-epic-pm/SKILL.md
+- project-planning/skills/breakdown-feature-implementation/SKILL.md
+- project-planning/skills/breakdown-feature-prd/SKILL.md
+- project-planning/skills/create-github-issues-feature-from-implementation-plan/SKILL.md
+- project-planning/skills/create-implementation-plan/SKILL.md
+- project-planning/skills/create-technical-spike/SKILL.md
+- project-planning/skills/update-implementation-plan/SKILL.md
+- python-mcp-development/skills/python-mcp-server-generator/SKILL.md
+- react18-upgrade/skills/react18-batching-patterns/SKILL.md
+- react18-upgrade/skills/react18-dep-compatibility/SKILL.md
+- react18-upgrade/skills/react18-enzyme-to-rtl/SKILL.md
+- react18-upgrade/skills/react18-legacy-context/SKILL.md
+- react18-upgrade/skills/react18-lifecycle-patterns/SKILL.md
+- react18-upgrade/skills/react18-string-refs/SKILL.md
+- react18-upgrade/skills/react-audit-grep-patterns/SKILL.md
+- react19-upgrade/skills/react19-concurrent-patterns/SKILL.md
+- react19-upgrade/skills/react19-source-patterns/SKILL.md
+- react19-upgrade/skills/react19-test-patterns/SKILL.md
+- roundup/skills/roundup/SKILL.md
+- roundup/skills/roundup-setup/SKILL.md
+- ruby-mcp-development/skills/ruby-mcp-server-generator/SKILL.md
+- rust-mcp-development/skills/rust-mcp-server-generator/SKILL.md
+- salesforce-development/skills/salesforce-apex-quality/SKILL.md
+- salesforce-development/skills/salesforce-component-standards/SKILL.md
+- salesforce-development/skills/salesforce-flow-design/SKILL.md
+- security-best-practices/skills/ai-prompt-engineering-safety-review/SKILL.md
+- skill-image-gen/skills/generate-image/SKILL.md
+- structured-autonomy/skills/structured-autonomy-generate/SKILL.md
+- structured-autonomy/skills/structured-autonomy-implement/SKILL.md
+- structured-autonomy/skills/structured-autonomy-plan/SKILL.md
+- swift-mcp-development/skills/swift-mcp-server-generator/SKILL.md
+- technical-spike/skills/create-technical-spike/SKILL.md
+- testing-automation/skills/ai-prompt-engineering-safety-review/SKILL.md
+- testing-automation/skills/csharp-nunit/SKILL.md
+- testing-automation/skills/java-junit/SKILL.md
+- testing-automation/skills/playwright-explore-website/SKILL.md
+- testing-automation/skills/playwright-generate-test/SKILL.md
+- typescript-mcp-development/skills/typescript-mcp-server-generator/SKILL.md
+- typespec-m365-copilot/skills/typespec-api-operations/SKILL.md
+- typespec-m365-copilot/skills/typespec-create-agent/SKILL.md
+- typespec-m365-copilot/skills/typespec-create-api-plugin/SKILL.md
+- whatidid/whatidid/SKILL.md
+
+## VS Code Copilot Built-in Skills
+
+- agent-customization/SKILL.md
+- chronicle/SKILL.md
+- create-agent/SKILL.md
+- create-hook/SKILL.md
+- create-instructions/SKILL.md
+- create-prompt/SKILL.md
+- create-skill/SKILL.md
+- get-search-view-results/SKILL.md
+- init/SKILL.md
+- install-vscode-extension/SKILL.md
+- project-setup-info-context7/SKILL.md
+- project-setup-info-local/SKILL.md
+- troubleshoot/SKILL.md
+
+## Repo Instructions
+
+- .github/instructions/code-review.instructions.md
+- .github/instructions/documentation.instructions.md
+- .github/instructions/nextjs-tailwind.instructions.md
+- .github/instructions/performance.instructions.md
+- .github/instructions/playwright-typescript.instructions.md
+- .github/instructions/prompts-strict-template.instructions.md
+- .github/instructions/security.instructions.md
+- .github/instructions/task-implementation.instructions.md
+- .github/instructions/tasksync.instructions.md
+- .github/instructions/testing.instructions.md
+- .github/instructions/typescript.instructions.md
+- .github/instructions/update-docs-on-code-change.instructions.md
+- projects/comicwise/.github/instructions/code-review.instructions.md
+- projects/comicwise/.github/instructions/containerization-docker-best-practices.instructions.md
+- projects/comicwise/.github/instructions/context-engineering.instructions.md
+- projects/comicwise/.github/instructions/copilot-sdk-nodejs.instructions.md
+- projects/comicwise/.github/instructions/database-best-practices.instructions.md
+- projects/comicwise/.github/instructions/design-system.instructions.md
+- projects/comicwise/.github/instructions/documentation.instructions.md
+- projects/comicwise/.github/instructions/github-actions-ci-cd-best-practices.instructions.md
+- projects/comicwise/.github/instructions/nextjs.instructions.md
+- projects/comicwise/.github/instructions/nextjs-2026.instructions.md
+- projects/comicwise/.github/instructions/performance.instructions.md
+- projects/comicwise/.github/instructions/performance-optimization.instructions.md
+- projects/comicwise/.github/instructions/playwright-typescript.instructions.md
+- projects/comicwise/.github/instructions/reactjs.instructions.md
+- projects/comicwise/.github/instructions/security.instructions.md
+- projects/comicwise/.github/instructions/security-and-owasp.instructions.md
+- projects/comicwise/.github/instructions/seed-system.instructions.md
+- projects/comicwise/.github/instructions/sql-sp-generation.instructions.md
+- projects/comicwise/.github/instructions/tailwind-v4-vite.instructions.md
+- projects/comicwise/.github/instructions/testing.instructions.md
+- projects/comicwise/.github/instructions/typescript.instructions.md
+- projects/comicwise/.references/comicwise-master/.github/instructions/snyk_rules.instructions.md
+
+## Repo Agents
+
+- .github/agents/architect.agent.md
+- .github/agents/debugger.agent.md
+- .github/agents/hermes.agent.md
+- .github/agents/qwen-code.agent.md
+- .github/agents/reviewer.agent.md
+- projects/comicwise/.github/agents/4.1-Beast.agent.md
+- projects/comicwise/.github/agents/accessibility.agent.md
+- projects/comicwise/.github/agents/address-comments.agent.md
+- projects/comicwise/.github/agents/adr-generator.agent.md
+- projects/comicwise/.github/agents/aem-frontend-specialist.agent.md
+- projects/comicwise/.github/agents/amplitude-experiment-implementation.agent.md
+- projects/comicwise/.github/agents/api-architect.agent.md
+- projects/comicwise/.github/agents/apify-integration-expert.agent.md
+- projects/comicwise/.github/agents/arch.agent.md
+- projects/comicwise/.github/agents/architect.agent.md
+- projects/comicwise/.github/agents/arch-linux-expert.agent.md
+- projects/comicwise/.github/agents/arm-migration.agent.md
+- projects/comicwise/.github/agents/atlassian-requirements-to-jira.agent.md
+- projects/comicwise/.github/agents/azure-iac-exporter.agent.md
+- projects/comicwise/.github/agents/azure-iac-generator.agent.md
+- projects/comicwise/.github/agents/azure-logic-apps-expert.agent.md
+- projects/comicwise/.github/agents/azure-principal-architect.agent.md
+- projects/comicwise/.github/agents/azure-saas-architect.agent.md
+- projects/comicwise/.github/agents/azure-verified-modules-bicep.agent.md
+- projects/comicwise/.github/agents/azure-verified-modules-terraform.agent.md
+- projects/comicwise/.github/agents/bicep-implement.agent.md
+- projects/comicwise/.github/agents/bicep-plan.agent.md
+- projects/comicwise/.github/agents/blueprint-mode.agent.md
+- projects/comicwise/.github/agents/blueprint-mode-codex.agent.md
+- projects/comicwise/.github/agents/cast-imaging-impact-analysis.agent.md
+- projects/comicwise/.github/agents/cast-imaging-software-discovery.agent.md
+- projects/comicwise/.github/agents/cast-imaging-structural-quality-advisor.agent.md
+- projects/comicwise/.github/agents/centos-linux-expert.agent.md
+- projects/comicwise/.github/agents/clojure-interactive-programming.agent.md
+- projects/comicwise/.github/agents/code-tour.agent.md
+- projects/comicwise/.github/agents/comet-opik.agent.md
+- projects/comicwise/.github/agents/context7.agent.md
+- projects/comicwise/.github/agents/context-architect.agent.md
+- projects/comicwise/.github/agents/critical-thinking.agent.md
+- projects/comicwise/.github/agents/csharp-dotnet-janitor.agent.md
+- projects/comicwise/.github/agents/CSharpExpert.agent.md
+- projects/comicwise/.github/agents/csharp-mcp-expert.agent.md
+- projects/comicwise/.github/agents/custom-agent-foundry.agent.md
+- projects/comicwise/.github/agents/debian-linux-expert.agent.md
+- projects/comicwise/.github/agents/debug.agent.md
+- projects/comicwise/.github/agents/declarative-agents-architect.agent.md
+- projects/comicwise/.github/agents/demonstrate-understanding.agent.md
+- projects/comicwise/.github/agents/devils-advocate.agent.md
+- projects/comicwise/.github/agents/devops-expert.agent.md
+- projects/comicwise/.github/agents/diffblue-cover.agent.md
+- projects/comicwise/.github/agents/dotnet-maui.agent.md
+- projects/comicwise/.github/agents/dotnet-upgrade.agent.md
+- projects/comicwise/.github/agents/droid.agent.md
+- projects/comicwise/.github/agents/drupal-expert.agent.md
+- projects/comicwise/.github/agents/dynatrace-expert.agent.md
+- projects/comicwise/.github/agents/elasticsearch-observability.agent.md
+- projects/comicwise/.github/agents/electron-angular-native.agent.md
+- projects/comicwise/.github/agents/expert-cpp-software-engineer.agent.md
+- projects/comicwise/.github/agents/expert-dotnet-software-engineer.agent.md
+- projects/comicwise/.github/agents/expert-nextjs-developer.agent.md
+- projects/comicwise/.github/agents/expert-react-frontend-engineer.agent.md
+- projects/comicwise/.github/agents/fedora-linux-expert.agent.md
+- projects/comicwise/.github/agents/frontend-expert.agent.md
+- projects/comicwise/.github/agents/gilfoyle.agent.md
+- projects/comicwise/.github/agents/github-actions-expert.agent.md
+- projects/comicwise/.github/agents/go-mcp-expert.agent.md
+- projects/comicwise/.github/agents/gpt-5-beast-mode.agent.md
+- projects/comicwise/.github/agents/hlbpa.agent.md
+- projects/comicwise/.github/agents/implementation-plan.agent.md
+- projects/comicwise/.github/agents/insiders-a11y-tracker.agent.md
+- projects/comicwise/.github/agents/janitor.agent.md
+- projects/comicwise/.github/agents/java-mcp-expert.agent.md
+- projects/comicwise/.github/agents/jfrog-sec.agent.md
+- projects/comicwise/.github/agents/kotlin-mcp-expert.agent.md
+- projects/comicwise/.github/agents/kusto-assistant.agent.md
+- projects/comicwise/.github/agents/laravel-expert-agent.agent.md
+- projects/comicwise/.github/agents/launchdarkly-flag-cleanup.agent.md
+- projects/comicwise/.github/agents/lingodotdev-i18n.agent.md
+- projects/comicwise/.github/agents/mcp-m365-agent-expert.agent.md
+- projects/comicwise/.github/agents/mentor.agent.md
+- projects/comicwise/.github/agents/meta-agentic-project-scaffold.agent.md
+- projects/comicwise/.github/agents/microsoft_learn_contributor.agent.md
+- projects/comicwise/.github/agents/microsoft-agent-framework-dotnet.agent.md
+- projects/comicwise/.github/agents/microsoft-agent-framework-python.agent.md
+- projects/comicwise/.github/agents/microsoft-study-mode.agent.md
+- projects/comicwise/.github/agents/modernization.agent.md
+- projects/comicwise/.github/agents/monday-bug-fixer.agent.md
+- projects/comicwise/.github/agents/mongodb-performance-advisor.agent.md
+- projects/comicwise/.github/agents/ms-sql-dba.agent.md
+- projects/comicwise/.github/agents/neo4j-docker-client-generator.agent.md
+- projects/comicwise/.github/agents/neon-migration-specialist.agent.md
+- projects/comicwise/.github/agents/neon-optimization-analyzer.agent.md
+- projects/comicwise/.github/agents/octopus-deploy-release-notes-mcp.agent.md
+- projects/comicwise/.github/agents/openapi-to-application.agent.md
+- projects/comicwise/.github/agents/pagerduty-incident-responder.agent.md
+- projects/comicwise/.github/agents/php-mcp-expert.agent.md
+- projects/comicwise/.github/agents/pimcore-expert.agent.md
+- projects/comicwise/.github/agents/plan.agent.md
+- projects/comicwise/.github/agents/planner.agent.md
+- projects/comicwise/.github/agents/platform-sre-kubernetes.agent.md
+- projects/comicwise/.github/agents/playwright-tester.agent.md
+- projects/comicwise/.github/agents/polyglot-test-generator.agent.md
+- projects/comicwise/.github/agents/postgresql-dba.agent.md
+- projects/comicwise/.github/agents/power-bi-data-modeling-expert.agent.md
+- projects/comicwise/.github/agents/power-bi-dax-expert.agent.md
+- projects/comicwise/.github/agents/power-bi-performance-expert.agent.md
+- projects/comicwise/.github/agents/power-bi-visualization-expert.agent.md
+- projects/comicwise/.github/agents/power-platform-expert.agent.md
+- projects/comicwise/.github/agents/power-platform-mcp-integration-expert.agent.md
+- projects/comicwise/.github/agents/prd.agent.md
+- projects/comicwise/.github/agents/principal-software-engineer.agent.md
+- projects/comicwise/.github/agents/prompt-builder.agent.md
+- projects/comicwise/.github/agents/prompt-engineer.agent.md
+- projects/comicwise/.github/agents/python-mcp-expert.agent.md
+- projects/comicwise/.github/agents/qa-subagent.agent.md
+- projects/comicwise/.github/agents/refine-issue.agent.md
+- projects/comicwise/.github/agents/repo-architect.agent.md
+- projects/comicwise/.github/agents/Research Plan.agent.md
+- projects/comicwise/.github/agents/research-technical-spike.agent.md
+- projects/comicwise/.github/agents/reviewer.agent.md
+- projects/comicwise/.github/agents/ruby-mcp-expert.agent.md
+- projects/comicwise/.github/agents/rust-gpt-4.1-beast-mode.agent.md
+- projects/comicwise/.github/agents/rust-mcp-expert.agent.md
+- projects/comicwise/.github/agents/salesforce-expert.agent.md
+- projects/comicwise/.github/agents/search-ai-optimization-expert.agent.md
+- projects/comicwise/.github/agents/se-gitops-ci-specialist.agent.md
+- projects/comicwise/.github/agents/semantic-kernel-dotnet.agent.md
+- projects/comicwise/.github/agents/semantic-kernel-python.agent.md
+- projects/comicwise/.github/agents/se-product-manager-advisor.agent.md
+- projects/comicwise/.github/agents/se-responsible-ai-code.agent.md
+- projects/comicwise/.github/agents/se-security-reviewer.agent.md
+- projects/comicwise/.github/agents/se-system-architecture-reviewer.agent.md
+- projects/comicwise/.github/agents/se-technical-writer.agent.md
+- projects/comicwise/.github/agents/se-ux-ui-designer.agent.md
+- projects/comicwise/.github/agents/shopify-expert.agent.md
+- projects/comicwise/.github/agents/simple-app-idea-generator.agent.md
+- projects/comicwise/.github/agents/software-engineer-agent-v1.agent.md
+- projects/comicwise/.github/agents/specification.agent.md
+- projects/comicwise/.github/agents/stackhawk-security-onboarding.agent.md
+- projects/comicwise/.github/agents/swe-subagent.agent.md
+- projects/comicwise/.github/agents/swift-mcp-expert.agent.md
+- projects/comicwise/.github/agents/task-planner.agent.md
+- projects/comicwise/.github/agents/task-researcher.agent.md
+- projects/comicwise/.github/agents/tdd-green.agent.md
+- projects/comicwise/.github/agents/tdd-red.agent.md
+- projects/comicwise/.github/agents/tdd-refactor.agent.md
+- projects/comicwise/.github/agents/tech-debt-remediation-plan.agent.md
+- projects/comicwise/.github/agents/technical-content-evaluator.agent.md
+- projects/comicwise/.github/agents/terraform.agent.md
+- projects/comicwise/.github/agents/terraform-azure-implement.agent.md
+- projects/comicwise/.github/agents/terraform-azure-planning.agent.md
+- projects/comicwise/.github/agents/terraform-iac-reviewer.agent.md
+- projects/comicwise/.github/agents/Thinking-Beast-Mode.agent.md
+- projects/comicwise/.github/agents/typescript-mcp-expert.agent.md
+- projects/comicwise/.github/agents/Ultimate-Transparent-Thinking-Beast-Mode.agent.md
+- projects/comicwise/.github/agents/voidbeast-gpt41enhanced.agent.md
+- projects/comicwise/.github/agents/wg-code-alchemist.agent.md
+- projects/comicwise/.github/agents/wg-code-sentinel.agent.md
+- projects/comicwise/.github/agents/WinFormsExpert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/4.1-Beast.agent.md
+- projects/comicwise/.references/comicr/.github/agents/accessibility.agent.md
+- projects/comicwise/.references/comicr/.github/agents/address-comments.agent.md
+- projects/comicwise/.references/comicr/.github/agents/adr-generator.agent.md
+- projects/comicwise/.references/comicr/.github/agents/aem-frontend-specialist.agent.md
+- projects/comicwise/.references/comicr/.github/agents/amplitude-experiment-implementation.agent.md
+- projects/comicwise/.references/comicr/.github/agents/api-architect.agent.md
+- projects/comicwise/.references/comicr/.github/agents/apify-integration-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/arch.agent.md
+- projects/comicwise/.references/comicr/.github/agents/arch-linux-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/arm-migration.agent.md
+- projects/comicwise/.references/comicr/.github/agents/atlassian-requirements-to-jira.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-iac-exporter.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-iac-generator.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-logic-apps-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-principal-architect.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-saas-architect.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-verified-modules-bicep.agent.md
+- projects/comicwise/.references/comicr/.github/agents/azure-verified-modules-terraform.agent.md
+- projects/comicwise/.references/comicr/.github/agents/bicep-implement.agent.md
+- projects/comicwise/.references/comicr/.github/agents/bicep-plan.agent.md
+- projects/comicwise/.references/comicr/.github/agents/blueprint-mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/blueprint-mode-codex.agent.md
+- projects/comicwise/.references/comicr/.github/agents/cast-imaging-impact-analysis.agent.md
+- projects/comicwise/.references/comicr/.github/agents/cast-imaging-software-discovery.agent.md
+- projects/comicwise/.references/comicr/.github/agents/cast-imaging-structural-quality-advisor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/centos-linux-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/clojure-interactive-programming.agent.md
+- projects/comicwise/.references/comicr/.github/agents/code-tour.agent.md
+- projects/comicwise/.references/comicr/.github/agents/comet-opik.agent.md
+- projects/comicwise/.references/comicr/.github/agents/context7.agent.md
+- projects/comicwise/.references/comicr/.github/agents/critical-thinking.agent.md
+- projects/comicwise/.references/comicr/.github/agents/csharp-dotnet-janitor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/CSharpExpert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/csharp-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/custom-agent-foundry.agent.md
+- projects/comicwise/.references/comicr/.github/agents/debian-linux-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/debug.agent.md
+- projects/comicwise/.references/comicr/.github/agents/declarative-agents-architect.agent.md
+- projects/comicwise/.references/comicr/.github/agents/demonstrate-understanding.agent.md
+- projects/comicwise/.references/comicr/.github/agents/devils-advocate.agent.md
+- projects/comicwise/.references/comicr/.github/agents/devops-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/diffblue-cover.agent.md
+- projects/comicwise/.references/comicr/.github/agents/dotnet-maui.agent.md
+- projects/comicwise/.references/comicr/.github/agents/dotnet-upgrade.agent.md
+- projects/comicwise/.references/comicr/.github/agents/droid.agent.md
+- projects/comicwise/.references/comicr/.github/agents/drupal-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/dynatrace-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/elasticsearch-observability.agent.md
+- projects/comicwise/.references/comicr/.github/agents/electron-angular-native.agent.md
+- projects/comicwise/.references/comicr/.github/agents/expert-cpp-software-engineer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/expert-dotnet-software-engineer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/expert-nextjs-developer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/expert-react-frontend-engineer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/fedora-linux-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/gilfoyle.agent.md
+- projects/comicwise/.references/comicr/.github/agents/github-actions-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/go-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/gpt-5-beast-mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/hlbpa.agent.md
+- projects/comicwise/.references/comicr/.github/agents/implementation-plan.agent.md
+- projects/comicwise/.references/comicr/.github/agents/insiders-a11y-tracker.agent.md
+- projects/comicwise/.references/comicr/.github/agents/janitor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/java-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/jfrog-sec.agent.md
+- projects/comicwise/.references/comicr/.github/agents/kotlin-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/kusto-assistant.agent.md
+- projects/comicwise/.references/comicr/.github/agents/laravel-expert-agent.agent.md
+- projects/comicwise/.references/comicr/.github/agents/launchdarkly-flag-cleanup.agent.md
+- projects/comicwise/.references/comicr/.github/agents/lingodotdev-i18n.agent.md
+- projects/comicwise/.references/comicr/.github/agents/mcp-m365-agent-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/mentor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/meta-agentic-project-scaffold.agent.md
+- projects/comicwise/.references/comicr/.github/agents/microsoft_learn_contributor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/microsoft-agent-framework-dotnet.agent.md
+- projects/comicwise/.references/comicr/.github/agents/microsoft-agent-framework-python.agent.md
+- projects/comicwise/.references/comicr/.github/agents/microsoft-study-mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/modernization.agent.md
+- projects/comicwise/.references/comicr/.github/agents/monday-bug-fixer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/mongodb-performance-advisor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/ms-sql-dba.agent.md
+- projects/comicwise/.references/comicr/.github/agents/neo4j-docker-client-generator.agent.md
+- projects/comicwise/.references/comicr/.github/agents/neon-migration-specialist.agent.md
+- projects/comicwise/.references/comicr/.github/agents/neon-optimization-analyzer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/octopus-deploy-release-notes-mcp.agent.md
+- projects/comicwise/.references/comicr/.github/agents/openapi-to-application.agent.md
+- projects/comicwise/.references/comicr/.github/agents/pagerduty-incident-responder.agent.md
+- projects/comicwise/.references/comicr/.github/agents/php-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/pimcore-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/plan.agent.md
+- projects/comicwise/.references/comicr/.github/agents/planner.agent.md
+- projects/comicwise/.references/comicr/.github/agents/platform-sre-kubernetes.agent.md
+- projects/comicwise/.references/comicr/.github/agents/playwright-tester.agent.md
+- projects/comicwise/.references/comicr/.github/agents/postgresql-dba.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-bi-data-modeling-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-bi-dax-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-bi-performance-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-bi-visualization-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-platform-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/power-platform-mcp-integration-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/prd.agent.md
+- projects/comicwise/.references/comicr/.github/agents/principal-software-engineer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/prompt-builder.agent.md
+- projects/comicwise/.references/comicr/.github/agents/prompt-engineer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/python-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/refine-issue.agent.md
+- projects/comicwise/.references/comicr/.github/agents/repo-architect.agent.md
+- projects/comicwise/.references/comicr/.github/agents/Research Plan.agent.md
+- projects/comicwise/.references/comicr/.github/agents/research-technical-spike.agent.md
+- projects/comicwise/.references/comicr/.github/agents/ruby-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/rust-gpt-4.1-beast-mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/rust-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/salesforce-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/search-ai-optimization-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-gitops-ci-specialist.agent.md
+- projects/comicwise/.references/comicr/.github/agents/semantic-kernel-dotnet.agent.md
+- projects/comicwise/.references/comicr/.github/agents/semantic-kernel-python.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-product-manager-advisor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-responsible-ai-code.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-security-reviewer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-system-architecture-reviewer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-technical-writer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/se-ux-ui-designer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/shopify-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/simple-app-idea-generator.agent.md
+- projects/comicwise/.references/comicr/.github/agents/software-engineer-agent-v1.agent.md
+- projects/comicwise/.references/comicr/.github/agents/specification.agent.md
+- projects/comicwise/.references/comicr/.github/agents/stackhawk-security-onboarding.agent.md
+- projects/comicwise/.references/comicr/.github/agents/swift-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/task-planner.agent.md
+- projects/comicwise/.references/comicr/.github/agents/task-researcher.agent.md
+- projects/comicwise/.references/comicr/.github/agents/tdd-green.agent.md
+- projects/comicwise/.references/comicr/.github/agents/tdd-red.agent.md
+- projects/comicwise/.references/comicr/.github/agents/tdd-refactor.agent.md
+- projects/comicwise/.references/comicr/.github/agents/tech-debt-remediation-plan.agent.md
+- projects/comicwise/.references/comicr/.github/agents/technical-content-evaluator.agent.md
+- projects/comicwise/.references/comicr/.github/agents/terraform.agent.md
+- projects/comicwise/.references/comicr/.github/agents/terraform-azure-implement.agent.md
+- projects/comicwise/.references/comicr/.github/agents/terraform-azure-planning.agent.md
+- projects/comicwise/.references/comicr/.github/agents/terraform-iac-reviewer.agent.md
+- projects/comicwise/.references/comicr/.github/agents/Thinking-Beast-Mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/typescript-mcp-expert.agent.md
+- projects/comicwise/.references/comicr/.github/agents/Ultimate-Transparent-Thinking-Beast-Mode.agent.md
+- projects/comicwise/.references/comicr/.github/agents/voidbeast-gpt41enhanced.agent.md
+- projects/comicwise/.references/comicr/.github/agents/wg-code-alchemist.agent.md
+- projects/comicwise/.references/comicr/.github/agents/wg-code-sentinel.agent.md
+- projects/comicwise/.references/comicr/.github/agents/WinFormsExpert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/4.1-Beast.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/accessibility.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/address-comments.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/adr-generator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/aem-frontend-specialist.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/agent-governance-reviewer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/amplitude-experiment-implementation.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/api-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/apify-integration-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/arch.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/arch-linux-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/arm-migration.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/atlassian-requirements-to-jira.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-iac-exporter.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-iac-generator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-logic-apps-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-principal-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-saas-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-verified-modules-bicep.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/azure-verified-modules-terraform.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/bicep-implement.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/bicep-plan.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/blueprint-mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/blueprint-mode-codex.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/cast-imaging-impact-analysis.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/cast-imaging-software-discovery.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/cast-imaging-structural-quality-advisor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/centos-linux-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/clojure-interactive-programming.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/code-tour.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/comet-opik.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/context7.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/context-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/critical-thinking.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/csharp-dotnet-janitor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/CSharpExpert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/csharp-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/custom-agent-foundry.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/debian-linux-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/debug.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/declarative-agents-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/demonstrate-understanding.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/devils-advocate.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/devops-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/diffblue-cover.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/dotnet-maui.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/dotnet-upgrade.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/droid.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/drupal-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/dynatrace-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/elasticsearch-observability.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/electron-angular-native.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/expert-cpp-software-engineer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/expert-dotnet-software-engineer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/expert-nextjs-developer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/expert-react-frontend-engineer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/fedora-linux-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-browser-tester.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-devops.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-documentation-writer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-implementer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-orchestrator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-planner.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-researcher.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gem-reviewer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gilfoyle.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/github-actions-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/go-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/gpt-5-beast-mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/hlbpa.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/implementation-plan.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/insiders-a11y-tracker.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/janitor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/java-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/jfrog-sec.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/kotlin-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/kusto-assistant.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/laravel-expert-agent.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/launchdarkly-flag-cleanup.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/lingodotdev-i18n.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/mcp-m365-agent-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/mentor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/meta-agentic-project-scaffold.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/microsoft_learn_contributor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/microsoft-agent-framework-dotnet.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/microsoft-agent-framework-python.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/microsoft-study-mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/modernization.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/monday-bug-fixer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/mongodb-performance-advisor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/ms-sql-dba.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/neo4j-docker-client-generator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/neon-migration-specialist.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/neon-optimization-analyzer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/octopus-deploy-release-notes-mcp.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/openapi-to-application.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/pagerduty-incident-responder.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/php-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/pimcore-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/plan.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/planner.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/platform-sre-kubernetes.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/playwright-tester.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-builder.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-fixer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-generator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-implementer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-linter.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-planner.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-researcher.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/polyglot-test-tester.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/postgresql-dba.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-bi-data-modeling-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-bi-dax-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-bi-performance-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-bi-visualization-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-platform-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/power-platform-mcp-integration-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/prd.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/principal-software-engineer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/prompt-builder.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/prompt-engineer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/python-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/qa-subagent.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/reepl-linkedin.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/refine-issue.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/repo-architect.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/Research Plan.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/research-technical-spike.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/ruby-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/rug-orchestrator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/rust-gpt-4.1-beast-mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/rust-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/salesforce-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/search-ai-optimization-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-gitops-ci-specialist.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/semantic-kernel-dotnet.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/semantic-kernel-python.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-product-manager-advisor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-responsible-ai-code.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-security-reviewer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-system-architecture-reviewer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-technical-writer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/se-ux-ui-designer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/shopify-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/simple-app-idea-generator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/software-engineer-agent-v1.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/specification.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/stackhawk-security-onboarding.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/swe-subagent.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/swift-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/task-planner.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/task-researcher.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/tdd-green.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/tdd-red.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/tdd-refactor.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/tech-debt-remediation-plan.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/technical-content-evaluator.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/terraform.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/terraform-azure-implement.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/terraform-azure-planning.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/terraform-iac-reviewer.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/Thinking-Beast-Mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/typescript-mcp-expert.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/Ultimate-Transparent-Thinking-Beast-Mode.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/voidbeast-gpt41enhanced.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/wg-code-alchemist.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/wg-code-sentinel.agent.md
+- projects/comicwise/.references/comicwise/.github/agents/WinFormsExpert.agent.md
+
+## Repo Prompts
+
+- .github/prompts/add-educational-comments.prompt.md
+- .github/prompts/ai-prompt-engineering-safety-review.prompt.md
+- .github/prompts/architecture-blueprint-generator.prompt.md
+- .github/prompts/azure-resource-health-diagnose.prompt.md
+- .github/prompts/boost-prompt.prompt.md
+- .github/prompts/breakdown-epic-arch.prompt.md
+- .github/prompts/breakdown-epic-pm.prompt.md
+- .github/prompts/breakdown-feature-implementation.prompt.md
+- .github/prompts/breakdown-feature-prd.prompt.md
+- .github/prompts/breakdown-plan.prompt.md
+- .github/prompts/breakdown-test.prompt.md
+- .github/prompts/code-exemplars-blueprint-generator.prompt.md
+- .github/prompts/code-review.prompt.md
+- .github/prompts/comment-code-generate-a-tutorial.prompt.md
+- .github/prompts/context-map.prompt.md
+- .github/prompts/conventional-commit.prompt.md
+- .github/prompts/convert-plaintext-to-md.prompt.md
+- .github/prompts/copilot-instructions-blueprint-generator.prompt.md
+- .github/prompts/create-agentsmd.prompt.md
+- .github/prompts/create-architectural-decision-record.prompt.md
+- .github/prompts/create-github-action-workflow-specification.prompt.md
+- .github/prompts/create-github-issue-feature-from-specification.prompt.md
+- .github/prompts/create-github-issues-feature-from-implementation-plan.prompt.md
+- .github/prompts/create-github-issues-for-unmet-specification-requirements.prompt.md
+- .github/prompts/create-github-pull-request-from-specification.prompt.md
+- .github/prompts/create-implementation-plan.prompt.md
+- .github/prompts/create-llms.prompt.md
+- .github/prompts/create-oo-component-documentation.prompt.md
+- .github/prompts/create-readme.prompt.md
+- .github/prompts/create-technical-spike.prompt.md
+- .github/prompts/create-tldr-page.prompt.md
+- .github/prompts/debug-issue.prompt.md
+- .github/prompts/declarative-agents.prompt.md
+- .github/prompts/devops-rollout-plan.prompt.md
+- .github/prompts/documentation.prompt.md
+- .github/prompts/documentation-writer.prompt.md
+- .github/prompts/editorconfig.prompt.md
+- .github/prompts/ef-core.prompt.md
+- .github/prompts/finalize-agent-prompt.prompt.md
+- .github/prompts/first-ask.prompt.md
+- .github/prompts/fix-acpx-agent-stack-audit.prompt.md
+- .github/prompts/folder-structure-blueprint-generator.prompt.md
+- .github/prompts/generate-custom-instructions-from-codebase.prompt.md
+- .github/prompts/generate-docs.prompt.md
+- .github/prompts/generator-orchestrator.prompt.md
+- .github/prompts/gen-specs-as-issues.prompt.md
+- .github/prompts/git-flow-branch-creator.prompt.md
+- .github/prompts/github-copilot-starter.prompt.md
+- .github/prompts/hermes-breakdown-epic-arch.prompt.md
+- .github/prompts/hermes-breakdown-epic-pm.prompt.md
+- .github/prompts/hermes-breakdown-feature-implementation.prompt.md
+- .github/prompts/hermes-breakdown-feature-prd.prompt.md
+- .github/prompts/hermes-breakdown-plan.prompt.md
+- .github/prompts/hermes-breakdown-test.prompt.md
+- .github/prompts/javascript-typescript-jest.prompt.md
+- .github/prompts/mcp-copilot-studio-server-generator.prompt.md
+- .github/prompts/mcp-create-adaptive-cards.prompt.md
+- .github/prompts/mcp-create-declarative-agent.prompt.md
+- .github/prompts/mcp-deploy-manage-agents.prompt.md
+- .github/prompts/memory-merger.prompt.md
+- .github/prompts/mkdocs-translations.prompt.md
+- .github/prompts/model-recommendation.prompt.md
+- .github/prompts/multi-stage-dockerfile.prompt.md
+- .github/prompts/my-issues.prompt.md
+- .github/prompts/my-pull-requests.prompt.md
+- .github/prompts/next-intl-add-language.prompt.md
+- .github/prompts/nextjs-tailwind.prompt.md
+- .github/prompts/openapi-to-application-code.prompt.md
+- .github/prompts/optimize-agentsMd.prompt.md
+- .github/prompts/performance.prompt.md
+- .github/prompts/plan-acpx-agent-stack-audit-copilot.prompt.md
+- .github/prompts/plan-acpx-agent-stack-audit-hermes.prompt.md
+- .github/prompts/plan-acpx-agent-stack-audit-opencode.prompt.md
+- .github/prompts/plan-acpx-agent-stack-audit-qwen.prompt.md
+- .github/prompts/plan-acpx-agent-stack-audit-shared.prompt.md
+- .github/prompts/playwright-automation-fill-in-form.prompt.md
+- .github/prompts/playwright-explore-website.prompt.md
+- .github/prompts/playwright-generate-test.prompt.md
+- .github/prompts/playwright-typescript.prompt.md
+- .github/prompts/postgresql-code-review.prompt.md
+- .github/prompts/postgresql-optimization.prompt.md
+- .github/prompts/project-workflow-analysis-blueprint-generator.prompt.md
+- .github/prompts/prompt-builder.prompt.md
+- .github/prompts/prompts-strict-template.prompt.md
+- .github/prompts/pytest-coverage.prompt.md
+- .github/prompts/python-mcp-server-generator.prompt.md
+- .github/prompts/readme-blueprint-generator.prompt.md
+- .github/prompts/refactor-code.prompt.md
+- .github/prompts/refactor-mardown-files.prompt.md
+- .github/prompts/refactor-method-complexity-reduce.prompt.md
+- .github/prompts/refactor-plan.prompt.md
+- .github/prompts/remember.prompt.md
+- .github/prompts/remember-interactive-programming.prompt.md
+- .github/prompts/repo-story-time.prompt.md
+- .github/prompts/review-and-refactor.prompt.md
+- .github/prompts/run-session-agentsmd-workflow.prompt.md
+- .github/prompts/security.prompt.md
+- .github/prompts/session-agentsmd-full-workflow.prompt.md
+- .github/prompts/setup-component.prompt.md
+- .github/prompts/shuffle-json-data.prompt.md
+- .github/prompts/skills-debug-prompt.prompt.md
+- .github/prompts/sql-code-review.prompt.md
+- .github/prompts/sql-optimization.prompt.md
+- .github/prompts/structured-autonomy-generate.prompt.md
+- .github/prompts/structured-autonomy-implement.prompt.md
+- .github/prompts/structured-autonomy-plan.prompt.md
+- .github/prompts/suggest-awesome-github-copilot-agents.prompt.md
+- .github/prompts/suggest-awesome-github-copilot-instructions.prompt.md
+- .github/prompts/suggest-awesome-github-copilot-prompts.prompt.md
+- .github/prompts/suggest-awesome-github-copilot-skills.prompt.md
+- .github/prompts/swift-mcp-server-generator.prompt.md
+- .github/prompts/task-implementation.prompt.md
+- .github/prompts/tasksync.prompt.md
+- .github/prompts/technology-stack-blueprint-generator.prompt.md
+- .github/prompts/testing.prompt.md
+- .github/prompts/tldr-prompt.prompt.md
+- .github/prompts/typescript.prompt.md
+- .github/prompts/typescript-mcp-server-generator.prompt.md
+- .github/prompts/typespec-api-operations.prompt.md
+- .github/prompts/typespec-create-agent.prompt.md
+- .github/prompts/typespec-create-api-plugin.prompt.md
+- .github/prompts/update-avm-modules-in-bicep.prompt.md
+- .github/prompts/update-docs-on-code-change.prompt.md
+- .github/prompts/update-implementation-plan.prompt.md
+- .github/prompts/update-llms.prompt.md
+- .github/prompts/update-markdown-file-index.prompt.md
+- .github/prompts/update-oo-component-documentation.prompt.md
+- .github/prompts/update-specification.prompt.md
+- .github/prompts/what-context-needed.prompt.md
+- .github/prompts/write-coding-standards-from-file.prompt.md
+- .github/prompts/write-tests.prompt.md
+- projects/comicwise/.github/prompts/agents-generator.prompt.md
+- projects/comicwise/.github/prompts/boost-prompt.prompt.md
+- projects/comicwise/.github/prompts/code-review.prompt.md
+- projects/comicwise/.github/prompts/comicwise-development.prompt.md
+- projects/comicwise/.github/prompts/comicwise-session.prompt.md
+- projects/comicwise/.github/prompts/context-map.prompt.md
+- projects/comicwise/.github/prompts/copilot-instructions-blueprint-generator.prompt.md
+- projects/comicwise/.github/prompts/create-implementation-plan.prompt.md
+- projects/comicwise/.github/prompts/create-readme.prompt.md
+- projects/comicwise/.github/prompts/database.prompt.md
+- projects/comicwise/.github/prompts/debugger.prompt.md
+- projects/comicwise/.github/prompts/debug-issue.prompt.md
+- projects/comicwise/.github/prompts/declarative-agents.prompt.md
+- projects/comicwise/.github/prompts/dev.prompt.md
+- projects/comicwise/.github/prompts/Developement.prompt.md
+- projects/comicwise/.github/prompts/features.prompt.md
+- projects/comicwise/.github/prompts/folder-structure-blueprint-generator.prompt.md
+- projects/comicwise/.github/prompts/generate-custom-instructions-from-codebase.prompt.md
+- projects/comicwise/.github/prompts/generate-docs.prompt.md
+- projects/comicwise/.github/prompts/github-copilot-starter.prompt.md
+- projects/comicwise/.github/prompts/Initial.prompt.md
+- projects/comicwise/.github/prompts/memory-merger.prompt.md
+- projects/comicwise/.github/prompts/migrate-to-next16.prompt.md
+- projects/comicwise/.github/prompts/plan-batchFixAllErrorsWarningsAndDeprecations.prompt.md
+- projects/comicwise/.github/prompts/plan-batchFixAllErrorsWarningsDeprecations.prompt.md
+- projects/comicwise/.github/prompts/plan-comicWiseImplementation.prompt.md
+- projects/comicwise/.github/prompts/plan-debugger.prompt.md
+- projects/comicwise/.github/prompts/plan-dev.prompt.md
+- projects/comicwise/.github/prompts/plan-eslintPluginAuditAndUpdate.prompt.md
+- projects/comicwise/.github/prompts/plan-features-seed.prompt.md
+- projects/comicwise/.github/prompts/plan-fullEslintVscodeAuthModernization.prompt.md
+- projects/comicwise/.github/prompts/plan-optimize.prompt.md
+- projects/comicwise/.github/prompts/plan-phase1ComprehensiveValidation.prompt.md
+- projects/comicwise/.github/prompts/plan-refactor.prompt.md
+- projects/comicwise/.github/prompts/plan-setup.prompt.md
+- projects/comicwise/.github/prompts/plan-updateAiAgentSetupPrompt.prompt.md
+- projects/comicwise/.github/prompts/plan-updateAiAgentSetupPrompt2.prompt.md
+- projects/comicwise/.github/prompts/prompt-builder.prompt.md
+- projects/comicwise/.github/prompts/quality-gate-debugger.prompt.md
+- projects/comicwise/.github/prompts/refactor-code.prompt.md
+- projects/comicwise/.github/prompts/refactor-mardown-files.prompt.md
+- projects/comicwise/.github/prompts/run.prompt.md
+- projects/comicwise/.github/prompts/seed-review-and-create.prompt.md
+- projects/comicwise/.github/prompts/setup.prompt.md
+- projects/comicwise/.github/prompts/setup-component.prompt.md
+- projects/comicwise/.github/prompts/setup-enhanced.prompt.md
+- projects/comicwise/.github/prompts/setup-nextjs-frontend-stack.prompt.md
+- projects/comicwise/.github/prompts/suggest-awesome-github-copilot-agents.prompt.md
+- projects/comicwise/.github/prompts/suggest-awesome-github-copilot-instructions.prompt.md
+- projects/comicwise/.github/prompts/suggest-awesome-github-copilot-prompts.prompt.md
+- projects/comicwise/.github/prompts/suggest-awesome-github-copilot-skills.prompt.md
+- projects/comicwise/.github/prompts/write-tests.prompt.md
+- projects/comicwise/.github/prompts/zod-schema-generation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/add-educational-comments.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/ai-prompt-engineering-safety-review.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/apple-appstore-reviewer.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/architecture-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/arch-linux-triage.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/aspnet-minimal-api-openapi.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/az-cost-optimize.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/azure-resource-health-diagnose.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/boost-prompt.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-epic-arch.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-epic-pm.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-feature-implementation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-feature-prd.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/breakdown-test.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/centos-linux-triage.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/code-exemplars-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/comment-code-generate-a-tutorial.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/containerize-aspnetcore.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/containerize-aspnet-framework.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/conventional-commit.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/convert-plaintext-to-md.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/copilot-instructions-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/cosmosdb-datamodeling.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-agentsmd.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-architectural-decision-record.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-github-action-workflow-specification.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-github-issue-feature-from-specification.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-github-issues-feature-from-implementation-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-github-issues-for-unmet-specification-requirements.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-github-pull-request-from-specification.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-implementation-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-llms.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-oo-component-documentation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-readme.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-specification.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-spring-boot-java-project.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-spring-boot-kotlin-project.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-technical-spike.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/create-tldr-page.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-async.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-docs.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-mstest.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-nunit.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-tunit.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/csharp-xunit.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/database.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dataverse-python-advanced-patterns.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dataverse-python-production-code.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dataverse-python-quickstart.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dataverse-python-usecase-builder.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/debian-linux-triage.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/declarative-agents.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/devops-rollout-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/documentation-writer.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dotnet-best-practices.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dotnet-design-pattern-review.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/dotnet-upgrade.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/editorconfig.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/ef-core.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/features.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/fedora-linux-triage.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/finalize-agent-prompt.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/first-ask.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/fix-chapter-comic-matching.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/folder-structure-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/generate-custom-instructions-from-codebase.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/gen-specs-as-issues.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/git-flow-branch-creator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/github-copilot-starter.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/go-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-add-graalvm-native-image-support.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-docs.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-junit.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-refactoring-extract-method.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-refactoring-remove-parameter.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/javascript-typescript-jest.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/java-springboot.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/kotlin-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/kotlin-springboot.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/master.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/mcp-copilot-studio-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/mcp-create-adaptive-cards.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/mcp-create-declarative-agent.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/mcp-deploy-manage-agents.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/memory-merger.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/mkdocs-translations.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/model-recommendation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/multi-stage-dockerfile.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/my-issues.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/my-pull-requests.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/next-intl-add-language.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/openapi-to-application-code.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/optimization.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/optimize.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/php-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-batchFixAllErrorsWarningsDeprecations.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-comicwiseComplete40TaskSetup.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-comicwiseComprehensivePlan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-comicwiseStagingDeployment.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-completeFeatures.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-fixError.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-summarizeConversationHistorySoFar.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/plan-vscodeJsonCleanup.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/playwright-automation-fill-in-form.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/playwright-explore-website.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/playwright-generate-test.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/postgresql-code-review.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/postgresql-optimization.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-apps-code-app-scaffold.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-bi-dax-optimization.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-bi-model-design-review.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-bi-performance-troubleshooting.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-bi-report-design-consultation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/power-platform-mcp-connector-suite.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/project-workflow-analysis-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/prompt-builder.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/pytest-coverage.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/python-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/readme-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/refactor.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/remember.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/remember-interactive-programming.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/repo-story-time.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/review-and-refactor.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/ruby-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/runtask.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/rust-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/Setup.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/shuffle-json-data.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/sql-code-review.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/sql-optimization.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/structured-autonomy-generate.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/structured-autonomy-implement.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/structured-autonomy-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/suggest-awesome-github-copilot-agents.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/suggest-awesome-github-copilot-chatmodes.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/suggest-awesome-github-copilot-collections.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/suggest-awesome-github-copilot-instructions.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/suggest-awesome-github-copilot-prompts.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/swift-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/technology-stack-blueprint-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/testing.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/tldr-prompt.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/typescript-mcp-server-generator.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/typespec-api-operations.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/typespec-create-agent.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/typespec-create-api-plugin.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-avm-modules-in-bicep.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-implementation-plan.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-llms.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-markdown-file-index.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-oo-component-documentation.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/update-specification.prompt.md
+- projects/comicwise/.references/comicr/.github/prompts/write-coding-standards-from-file.prompt.md
+- Prompts/agents-fix.prompts.md
+- Prompts/bash-scripts-fix.prompts.md
+- Prompts/commands-fix.prompts.md
+- Prompts/dev-init.prompts.md
+- Prompts/general.prompts.md
+- Prompts/repo.prompts.md
+- Prompts/skills-fix.prompts.md
+- Prompts/workspace-consolidate.prompts.md
+
+## Repo Hooks
+
+- .opencode/hooks/hooks.json
+- .opencode/hooks/hooks-cursor.json
+
+## Repo Plugins
+
+- .opencode/plugins/howaboua-opencode-planning-toolkit.yaml
+- .opencode/plugins/list.yaml
+- .opencode/plugins/micode.yaml
+- .opencode/plugins/nick-vi-opencode-type-inject.yaml
+- .opencode/plugins/octto.yaml
+- .opencode/plugins/oh-my-opencode-slim.yaml
+- .opencode/plugins/opencode-copilot-usage-detector.yaml
+- .opencode/plugins/opencode-cost-guard.yaml
+- .opencode/plugins/opencode-gemini-auth.yaml
+- .opencode/plugins/opencode-handoff.yaml
+- .opencode/plugins/opencode-mystatus.yaml
+- .opencode/plugins/opencode-optimal-model-temps.yaml
+- .opencode/plugins/opencode-rate-limit.yaml
+- .opencode/plugins/plugin-template.yaml
+- .opencode/plugins/slkiser-opencode-quota.yaml
+- .opencode/plugins/smart-codebase.yaml
+- .opencode/plugins/spoons-and-mirrors-subtask2.yaml
+- .opencode/plugins/superpowers.yaml
+- .opencode/plugins/tarquinen-opencode-dcp.yaml
+- .opencode/plugins/tarquinen-opencode-smart-title.yaml
+- .opencode/plugins/zenobius-opencode-background.yaml
+
+## MCP Servers and ACPX Targets
+
+- repo:.opencode/opencode.json
+-   - MCP_DOCKER (type=local, enabled=true)
+-   - filesystem (type=local, enabled=true)
+-   - playwright (type=local, enabled=true)
+-   - sequential-thinking (type=local, enabled=true)
+- machine:~/.qwen/mcp-servers.json (missing)
+- machine:~/.acpx/config.json agents (ACPX targets, not MCP servers)
+-   - copilot => copilot --acp --stdio
+-   - hermes => hermes acp
+-   - opencode => opencode acp
+-   - qwen => qwen --acp

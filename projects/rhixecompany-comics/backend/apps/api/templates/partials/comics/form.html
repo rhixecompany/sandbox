@@ -1,0 +1,261 @@
+{% load static i18n l10n example %}
+
+<div id="form-container"
+     class="w-full divide-y divide-neutral-300 overflow-hidden rounded-md border border-neutral-300 bg-neutral-50/40 text-neutral-600 dark:divide-neutral-700 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-neutral-300">
+  <div x-data="{ isExpanded: true }"
+       class="divide-y divide-neutral-300 dark:divide-neutral-700">
+    <button id="ItemOne"
+            type="button"
+            class="flex w-full items-center justify-between gap-2 bg-neutral-50 p-2 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-neutral-900 dark:hover:bg-neutral-900/75 dark:focus-visible:bg-neutral-900/75"
+            aria-controls="accordionItemOne"
+            @click="isExpanded = ! isExpanded"
+            :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold'  : 'text-onSurface dark:text-onSurfaceDark font-medium'"
+            :aria-expanded="isExpanded ? 'true' : 'false'">
+      {% translate "A Comic Form" %}
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke-width="2"
+           stroke="currentColor"
+           class="size-5 shrink-0 transition"
+           aria-hidden="true"
+           :class="isExpanded  ?  'rotate-180'  :  ''">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </button>
+    <div x-cloak
+         x-show="isExpanded"
+         id="accordionItemOne"
+         role="region"
+         aria-labelledby="ItemOne"
+         x-collapse>
+      <form class="p-1"
+            id='comic-hook-form'
+            action='.'
+            method="POST"
+            class='space-y-2 mb-2  mx-auto'
+            hx-swap="outerHTML"
+            hx-target='#form-container'
+            hx-indicator='#spinner'
+            hx-post='.'
+            {% if form.instance.id %} hx-trigger='submit, change delay:500ms' {% else %} hx-trigger='submit' {% endif %}>
+        {% csrf_token %}
+        <div class="grid gap-1 mb-1 grid-cols-2">
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.title.id }}" class="custom_label">{{ form.title.label }}:</label>
+            {{ form.title|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.title.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.title.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.status.id }}" class="custom_label">{{ form.status.label }}:</label>
+            {{ form.status|add_classes:'custom_select_input' }}
+            <div class="mt-1 text-gray-500">{{ form.status.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.status.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.type.id }}" class="custom_label">{{ form.type.label }}:</label>
+            {{ form.type|add_classes:'custom_select_input' }}
+            <div class="mt-1 text-gray-500">{{ form.type.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.type.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.artist.id }}" class="custom_label">{{ form.artist.label }}:</label>
+            {{ form.artist|add_classes:'custom_select_input' }}
+            <div class="mt-1 text-gray-500">{{ form.artist.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.artist.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.author.id }}" class="custom_label">{{ form.author.label }}:</label>
+            {{ form.author|add_classes:'custom_select_input' }}
+            <div class="mt-1 text-gray-500">{{ form.author.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.author.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.rating.id }}" class="custom_label">{{ form.rating.label }}:</label>
+            {{ form.rating|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.rating.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.rating.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.description.id }}" class="custom_label">{{ form.description.label }}:</label>
+            {{ form.description|add_classes:'custom_textarea_input' }}
+            <div class="mt-1 text-gray-500">{{ form.description.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.description.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.updated_at.id }}" class="custom_label">{{ form.updated_at.label }}:</label>
+            {{ form.updated_at|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.updated_at.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.updated_at.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.url.id }}" class="custom_label">{{ form.url.label }}:</label>
+            {{ form.url|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.url.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.url.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.spider.id }}" class="custom_label">{{ form.spider.label }}:</label>
+            {{ form.spider|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.spider.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.spider.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.serialization.id }}" class="custom_label">{{ form.serialization.label }}:</label>
+            {{ form.serialization|add_classes:'custom_char_input' }}
+            <div class="mt-1 text-gray-500">{{ form.serialization.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.serialization.errors }}</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <label for="{{ form.genres.id }}" class="custom_label">{{ form.genres.label }}:</label>
+            {{ form.genres|add_classes:'custom_mulselect_input' }}
+            <div class="mt-1 text-gray-500">{{ form.genres.help_text|safe }}</div>
+            <div class="ml-3 text-xs text-red-400">{{ form.genres.errors }}</div>
+          </div>
+        </div>
+        {% include "partials/htmx/spinner.html" %}
+      </form>
+    </div>
+  </div>
+  {% if form.instance.id %}
+    {% with images=object.get_comic_images_children %}
+      <div x-data="{ isExpanded: false, comicimages : [] }"
+           class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        <button id="ItemTwo"
+                type="button"
+                class="flex w-full items-center justify-between gap-2 bg-neutral-50 p-2 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-neutral-900 dark:hover:bg-neutral-900/75 dark:focus-visible:bg-neutral-900/75"
+                aria-controls="accordionItemTwo"
+                @click="isExpanded = ! isExpanded"
+                :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold'  : 'text-onSurface dark:text-onSurfaceDark font-medium'"
+                :aria-expanded="isExpanded ? 'true' : 'false'">
+          {% translate "Manage Comic Images" %}
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke-width="2"
+               stroke="currentColor"
+               class="size-5 shrink-0 transition"
+               aria-hidden="true"
+               :class="isExpanded  ?  'rotate-180'  :  ''">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+        <div x-cloak
+             x-show="isExpanded"
+             id="accordionItemTwo"
+             role="region"
+             aria-labelledby="ItemTwo"
+             x-collapse>
+          <div class="flow-root mb-2">
+            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+              {% for img in images %}
+                {% include "partials/comics/images-inline.html" with object=img %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="flex flex-row justify-between gap-2 border-t border-neutral-300 bg-neutral-50/60 p-2 dark:border-neutral-700 dark:bg-neutral-950/20  items-center ">
+            <button x-show='comicimages.length >= 1'
+                    hx-get="{% url 'comics:delete_all_comic_image' %}"
+                    hx-swap='none'
+                    hx-include="input[name='mycheck']"
+                    class="cursor-pointer whitespace-nowrap  tracking-wide  transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 dark:text-neutral-300 dark:focus-visible:outline-white inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+              <svg class="w-4 h-4 mr-2"
+                   fill="currentColor"
+                   viewBox="0 0 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd">
+                </path>
+              </svg>
+              Delete All Comic Images
+            </button>
+            {% if new_comic_image_url %}
+              <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                      href="{{ new_comic_image_url }}"
+                      hx-get="{{ new_comic_image_url }}"
+                      hx-target='#comic-create'
+                      hx-indicator='#spinner'
+                      hx-swap='beforeend'>{% translate "Add New Comic Image Form" %}</button>
+            {% endif %}
+          </div>
+          {% if new_comic_image_url %}<div id='comic-create'></div>{% endif %}
+        </div>
+      </div>
+    {% endwith %}
+    {% with chapters=object.get_chapters_children %}
+      <div x-data="{ isExpanded: false }"
+           class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        <button id="controlsAccordionItemThree"
+                type="button"
+                class="flex w-full items-center justify-between gap-2 bg-neutral-50 p-2 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-neutral-900 dark:hover:bg-neutral-900/75 dark:focus-visible:bg-neutral-900/75"
+                aria-controls="accordionItemThree"
+                @click="isExpanded = ! isExpanded"
+                :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold'  : 'text-onSurface dark:text-onSurfaceDark font-medium'"
+                :aria-expanded="isExpanded ? 'true' : 'false'">
+          {% translate "Manage Comic Chapters" %}
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke-width="2"
+               stroke="currentColor"
+               class="size-5 shrink-0 transition"
+               aria-hidden="true"
+               :class="isExpanded  ?  'rotate-180'  :  ''">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+        <div x-cloak
+             x-show="isExpanded"
+             id="accordionItemThree"
+             role="region"
+             aria-labelledby="controlsAccordionItemThree"
+             x-collapse>
+          <div class="bg-[#222222]">
+            <div>
+              <div class="p-4">
+                <input class="w-full rounded-sm border bg-[#343434] px-2.5 py-1 placeholder:text-sm placeholder:text-[#a2a2a2c7] focus:border-none focus:outline-none focus:ring-0"
+                       placeholder="Search Chapter. Example: {{ object.get_chapters_children.last.name }} or {{ object.get_chapters_children.first.name }}"
+                       type="text"
+                       value="" />
+              </div>
+              <div id='comic-chapter-create'
+                   class="scrollbar-thumb-themecolor scrollbar-track-transparent scrollbar-thin mr-3 max-h-[20rem] space-y-2.5 overflow-y-auto pb-4 pl-4 pr-2">
+                {% for chap in chapters %}
+                  {% include "partials/comics/chapters-inline.html" with object=chap %}
+                {% endfor %}
+              </div>
+              <div class="flex flex-row justify-between gap-2 border-t border-neutral-300 bg-neutral-50/60 p-2 dark:border-neutral-700 dark:bg-neutral-950/20  items-center ">
+                {% if new_comic_chapter_url %}
+                  <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                          href="{{ new_comic_chapter_url }}"
+                          hx-get="{{ new_comic_chapter_url }}"
+                          hx-target='#comic-chapter-create'
+                          hx-indicator='#spinner'
+                          hx-swap='beforeend'>{% translate "Add New Comic Chapter Form" %}</button>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endwith %}
+  {% endif %}
+  <!-- Dialog Footer -->
+  <div class="flex justify-between gap-2 border-t border-neutral-300 bg-neutral-50/60 p-4 dark:border-neutral-700 dark:bg-neutral-950/20 flex-row items-center ">
+    <button href='{% url "comics:comic_list" %}'
+            hx-get='{% url "comics:comic_list" %}'
+            hx-swap="outerHTML"
+            hx-target='#form-container'
+            hx-indicator='#spinner'
+            hx-replace-url='true'
+            type="button"
+            class="cursor-pointer whitespace-nowrap  tracking-wide  transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 dark:text-neutral-300 dark:focus-visible:outline-white inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+      Go back
+    </button>
+    <button type="submit"
+            form="comic-hook-form"
+            class="cursor-pointer whitespace-nowrap rounded-md bg-black px-4 py-2 text-center text-sm font-medium tracking-wide text-neutral-100 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 dark:bg-themecolor dark:text-black dark:focus-visible:outline-themecolor">
+      Submit
+    </button>
+  </div>
+</div>

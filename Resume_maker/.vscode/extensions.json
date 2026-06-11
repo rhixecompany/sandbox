@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "oven.bun-vscode",
+        "foxundermoon.shell-format",
+        "usernamehw.errorlens"
+    ]
+}

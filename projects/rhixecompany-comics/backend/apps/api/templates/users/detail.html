@@ -1,0 +1,14 @@
+{% extends "users/base.html" %}
+
+{% comment %} djlint:on {% endcomment %}
+{% load static i18n widget_tweaks format_json partials %}
+
+{% block head_title %}
+  {% trans "User" %}
+{% endblock head_title %}
+{% block content %}
+  <div class="lg:my-0 relative max-[786px]:p-0 max-[882px]:p-4 min[925px]:p-0"
+       hx-get='{{ hx_url }}'
+       hx-trigger='revealed'
+       hx-indicator="#spinner">{% include "partials/htmx/spinner.html" %}</div>
+{% endblock content %}

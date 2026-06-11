@@ -1,0 +1,39 @@
+{% load static i18n %}
+
+<div id="bookmark_container">
+  <div>
+    {% if fav %}
+      <a hx-get="{% url 'comics:delete_bookmark' object.slug %}"
+         hx-target="#bookmark_container"
+         class="w-full">
+        <div class="whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 bg-[#BE3329] text-white w-full flex items-center justify-center rounded-md py-2 hover:cursor-pointer duration-500 hover:bg-[#BE3329] text-[13px]">
+          <img src="{% static 'images/files/bookmark.svg' %}"
+               class="size-[13px] mr-0.5"
+               alt="bookmark button" />
+          Bookmarked
+        </div>
+      </a>
+    {% else %}
+      <a hx-get="{% url 'comics:add_bookmark' object.slug %}"
+         hx-target="#bookmark_container"
+         class="w-full">
+        <div class="ring-offset-background focus-visible:ring-ring flex h-10 w-full items-center justify-center whitespace-nowrap rounded-md bg-themecolor px-4 py-2 text-[13px] text-sm font-medium text-white transition-all duration-500 hover:cursor-pointer hover:border-[0.5px] hover:border-gray-100 hover:bg-[#222222] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-bookmark h-5 w-5">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+          </svg>
+          Bookmark
+        </div>
+      </a>
+    {% endif %}
+  </div>
+  <p class="text-center text-[13px] text-[#A2A2A2]">Followed by {{ object.get_users.count }} people</p>
+</div>

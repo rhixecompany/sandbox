@@ -1,0 +1,95 @@
+.custom_search_input {
+  @apply relative w-[95%] sm:w-[55%] md:w-[55%] lg:w-[40%] text-white px-4 py-1 sm:py-2 rounded-lg border-[1px] bg-[#16151D] border-black outline-none;
+}
+
+.custom_al_search_input {
+  @apply block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+}
+
+.custom_email_input {
+  @apply flex h-10 border border-input text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 w-full p-6 pl-10 bg-secondarybackground text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-white file:border-0 file:bg-transparent file:text-sm file:font-medium;
+}
+
+.custom_username_input {
+  @apply flex h-10 border border-input text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 w-full p-6 pl-10 bg-secondarybackground text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-white;
+}
+
+.custom_password_input {
+  @apply flex h-10 border border-input text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 w-full p-6 pl-10 bg-secondarybackground text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-1 focus:ring-white;
+}
+
+.custom_checkbox_input {
+  @apply shrink-0 border ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground rounded border-gray-300 text-indigo-600 shadow-sm size-4 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+}
+
+.custom_checkbox_inputt {
+  @apply ring-offset-background focus-visible:ring-ring mt-1 h-[13px] w-[13px] shrink-0 rounded-sm border border-[#5d5d5d] bg-[#5d5d5d] hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:h-4 data-[state=checked]:w-4 data-[state=checked]:border-[#333333] data-[state=checked]:bg-[#333333] data-[state=checked]:font-bold data-[state=checked]:text-[#28a745];
+  transform: translateX(-100%);
+  position: absolute;
+  pointer-events: auto;
+  opacity: 1;
+  margin: 0px;
+  width: 13px;
+  height: 13px;
+}
+
+.custom_cktextarea_input {
+  @apply px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800;
+}
+
+.custom_char_input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+}
+
+.custom_select_input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+}
+
+.custom_mulselect_input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+.custom_textarea_input {
+  @apply block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+}
+
+.custom_image_input {
+  @apply block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400;
+}
+
+.custom_label {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+// .pre-wrapper {
+//   position: relative;
+// }
+
+// .pre-wrapper pre {
+//   padding-top: 25px;
+// }
+
+// .pre-wrapper .copy-snippet {
+//   border-radius: 0;
+//   min-width: 55px;
+//   background: none repeat scroll 0 0 transparent;
+//   border: 1px solid #bbb;
+//   color: #26589F;
+//   font-family: 'HELEVETICA', sans-serif;
+//   font-size: 12px;
+//   font-weight: normal;
+//   line-height: 1.42rem;
+//   margin: 0;
+//   padding: 0px 5px;
+//   text-align: center;
+//   text-decoration: none;
+//   text-indent: 0;
+//   position: absolute;
+//   background: #ccc;
+//   top: 30px;
+//   right: 20px;
+// }
+
+// .pre-wrapper .copy-snippet:disabled {
+//   color: #555;
+// }

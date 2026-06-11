@@ -1,0 +1,462 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "DISCOVERY_REPORT": {
+      "type": "object",
+      "title": "Discovery Report",
+      "description": "Report containing discovered GitHub repositories from organization scanning",
+      "required": [
+        "timestamp",
+        "discovery_method",
+        "total_discovered",
+        "valid_repos",
+        "invalid_repos",
+        "organizations",
+        "repositories"
+      ],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when discovery completed"
+        },
+        "discovery_method": {
+          "type": "string",
+          "enum": ["org_scan", "manual", "api_query", "file_import"],
+          "description": "Method used to discover repositories"
+        },
+        "total_discovered": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of repositories found"
+        },
+        "valid_repos": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of valid repositories (accessible and parseable)"
+        },
+        "invalid_repos": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of invalid repositories (inaccessible or parse errors)"
+        },
+        "organizations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of organizations that were scanned"
+        },
+        "repositories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscoveredRepository"
+          },
+          "description": "Array of discovered repository objects"
+        }
+      },
+      "definitions": {
+        "DiscoveredRepository": {
+          "type": "object",
+          "required": [
+            "name",
+            "org",
+            "url",
+            "local_path",
+            "git_head",
+            "commits",
+            "last_commit",
+            "validation",
+            "metadata"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Repository name"
+            },
+            "org": {
+              "type": "string",
+              "description": "Organization or owner name"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "GitHub URL of the repository"
+            },
+            "local_path": {
+              "type": "string",
+              "description": "Local filesystem path where repo is/will be stored"
+            },
+            "git_head": {
+              "type": "string",
+              "description": "Current git HEAD commit hash"
+            },
+            "commits": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of commits in repository"
+            },
+            "last_commit": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of last commit"
+            },
+            "validation": {
+              "$ref": "#/definitions/RepositoryValidation"
+            },
+            "metadata": {
+              "$ref": "#/definitions/DiscoveryMetadata"
+            }
+          }
+        },
+        "RepositoryValidation": {
+          "type": "object",
+          "required": ["valid", "errors", "warnings"],
+          "properties": {
+            "valid": {
+              "type": "boolean",
+              "description": "Whether repository passed validation"
+            },
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Validation error messages"
+            },
+            "warnings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Validation warning messages"
+            }
+          }
+        },
+        "DiscoveryMetadata": {
+          "type": "object",
+          "required": ["discovered_at", "discovery_source"],
+          "properties": {
+            "discovered_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "When this repository was discovered"
+            },
+            "discovery_source": {
+              "type": "string",
+              "description": "Source that led to discovery (org name, file, etc)"
+            }
+          }
+        }
+      }
+    },
+    "CLONE_REPORT": {
+      "type": "object",
+      "title": "Clone Report",
+      "description": "Report containing results of repository cloning operations",
+      "required": ["timestamp", "summary", "details"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when cloning completed"
+        },
+        "summary": {
+          "$ref": "#/definitions/CloneSummary"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CloneDetail"
+          }
+        }
+      },
+      "definitions": {
+        "CloneSummary": {
+          "type": "object",
+          "required": [
+            "total_repos",
+            "successful_clones",
+            "failed_clones",
+            "success_rate_percent"
+          ],
+          "properties": {
+            "total_repos": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of repositories attempted"
+            },
+            "successful_clones": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of successful clones"
+            },
+            "failed_clones": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of failed clones"
+            },
+            "success_rate_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage of successful clones"
+            }
+          }
+        },
+        "CloneDetail": {
+          "type": "object",
+          "required": [
+            "name",
+            "clone_url",
+            "target_path",
+            "success",
+            "attempt",
+            "duration_seconds"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Repository name"
+            },
+            "clone_url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Git URL used for cloning"
+            },
+            "target_path": {
+              "type": "string",
+              "description": "Local target path where repository was cloned"
+            },
+            "success": {
+              "type": "boolean",
+              "description": "Whether clone succeeded"
+            },
+            "error": {
+              "type": "string",
+              "description": "Error message if clone failed (optional)"
+            },
+            "attempt": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Number of attempts made"
+            },
+            "duration_seconds": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Time taken to clone in seconds"
+            }
+          }
+        }
+      }
+    },
+    "TRIAGE_REPORT": {
+      "type": "object",
+      "title": "Triage Report",
+      "description": "Report containing health assessment and vulnerability triage results",
+      "required": ["timestamp", "summary", "repos"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when triage completed"
+        },
+        "summary": {
+          "$ref": "#/definitions/TriageSummary"
+        },
+        "repos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TriageRepo"
+          }
+        }
+      },
+      "definitions": {
+        "TriageSummary": {
+          "type": "object",
+          "required": [
+            "total_repos",
+            "average_health_score",
+            "health_distribution"
+          ],
+          "properties": {
+            "total_repos": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of repositories triaged"
+            },
+            "average_health_score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Average health score across all repos"
+            },
+            "health_distribution": {
+              "$ref": "#/definitions/HealthDistribution"
+            }
+          }
+        },
+        "HealthDistribution": {
+          "type": "object",
+          "required": ["healthy", "caution", "warning", "critical"],
+          "properties": {
+            "healthy": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of repos in healthy category (score >= 80)"
+            },
+            "caution": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of repos in caution category (score 60-79)"
+            },
+            "warning": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of repos in warning category (score 40-59)"
+            },
+            "critical": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of repos in critical category (score < 40)"
+            }
+          }
+        },
+        "TriageRepo": {
+          "type": "object",
+          "required": [
+            "name",
+            "org",
+            "url",
+            "path",
+            "health_score",
+            "health_category",
+            "issue_count",
+            "total_vulnerabilities",
+            "detected_managers",
+            "days_since_last_commit"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Repository name"
+            },
+            "org": {
+              "type": "string",
+              "description": "Organization or owner name"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "GitHub URL of the repository"
+            },
+            "path": {
+              "type": "string",
+              "description": "Local filesystem path to repository"
+            },
+            "health_score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Overall health score (0-100)"
+            },
+            "health_category": {
+              "type": "string",
+              "enum": ["healthy", "caution", "warning", "critical"],
+              "description": "Health category based on score"
+            },
+            "issue_count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of issues detected"
+            },
+            "total_vulnerabilities": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of vulnerabilities found"
+            },
+            "detected_managers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Package managers detected in repository"
+            },
+            "days_since_last_commit": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of days since last commit"
+            }
+          }
+        }
+      }
+    },
+    "BATCH": {
+      "type": "object",
+      "title": "Batch",
+      "description": "Batch grouping structure for organizing repository processing",
+      "required": ["batches"],
+      "properties": {
+        "batches": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BatchGroup"
+          }
+        }
+      },
+      "definitions": {
+        "BatchGroup": {
+          "type": "object",
+          "required": [
+            "id",
+            "complexity",
+            "risk",
+            "findings",
+            "status",
+            "created_at"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique batch identifier"
+            },
+            "complexity": {
+              "type": "string",
+              "enum": ["low", "medium", "high"],
+              "description": "Complexity level of batch"
+            },
+            "risk": {
+              "type": "string",
+              "enum": ["low", "medium", "high"],
+              "description": "Risk level of batch"
+            },
+            "findings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of findings or issues in batch"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "in_progress",
+                "completed",
+                "failed"
+              ],
+              "description": "Current status of batch"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "ISO 8601 timestamp when batch was created"
+            }
+          }
+        }
+      }
+    }
+  },
+  "description": "JSON Schema definitions for all phase script report types",
+  "title": "Phase Report Schemas"
+}

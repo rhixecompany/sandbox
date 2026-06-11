@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block css %}{{ block.super }}{% endblock %}
+{% block title %}
+  {% block head_title %}
+    {% trans 'Sign In' %}
+  {% endblock %}
+{% endblock %}
+{% block main %}
+  <div style="overflow: hidden;
+              max-width: 1220px;
+              margin: 0px auto;
+              position: relative;
+              padding-bottom: 9rem">
+    <div class="lg:mx-3.5 lg:my-0 relative max-[786px]:p-0 max-[882px]:p-4 min[925px]:p-0">
+      <div class="w-[100%]">
+        <div class="flex justify-center h-full md:mt-7">
+          <div class="bg-[#222222] p-8 rounded-lg shadow-md w-full sm:max-w-[500px]">
+            <div class="flex justify-center mb-1">
+              <img alt="Rhixe Scans"
+                   loading="lazy"
+                   width="96"
+                   height="96"
+                   decoding="async"
+                   data-nimg="1"
+                   src="{% static 'images/favicons/logo.webp' %}"
+                   style="color: transparent" />
+            </div>
+            {% block content %}{% endblock %}
+            {% block extra_body %}{% endblock %}
+          </div>
+        </div>
+        <div id="_rht_toaster"
+             style="position: fixed;
+                    z-index: 9999;
+                    inset: 16px;
+                    pointer-events: none"></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

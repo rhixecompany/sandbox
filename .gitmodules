@@ -1,0 +1,42 @@
+[submodule "projects/Banking"]
+	path = projects/Banking
+	url = https://github.com/rhixecompany/banking.git
+[submodule "projects/comicwise"]
+	path = projects/comicwise
+	url = https://github.com/Rhixe-company/comicwise.git
+[submodule "projects/comicwise_push_clean"]
+	path = projects/comicwise_push_clean
+	url = https://github.com/Rhixe-company/comicwise.git
+[submodule "projects/cookiecutter-django-tailwind"]
+	path = projects/cookiecutter-django-tailwind
+	url = https://github.com/Rhixe-company/cookiecutter-django-tailwind.git
+[submodule "projects/Django-Scrapy-Selenium"]
+	path = projects/Django-Scrapy-Selenium
+	url = https://github.com/Rhixe-company/Django-Scrapy-Selenium.git
+[submodule "projects/ecom"]
+	path = projects/ecom
+	url = https://github.com/rhixecompany/ecom.git
+[submodule "projects/profile"]
+	path = projects/profile
+	url = https://github.com/rhixecompany/rhixecompany.git
+[submodule "projects/Python-projects"]
+	path = projects/Python-projects
+	url = https://github.com/Rhixe-company/Python-projects.git
+[submodule "projects/rhixe_scans"]
+	path = projects/rhixe_scans
+	url = https://github.com/rhixecompany/rhixe_scans.git
+[submodule "projects/selenium_webdriver"]
+	path = projects/selenium_webdriver
+	url = https://github.com/rhixecompany/selenium_webdriver.git
+[submodule "projects/university-libary-jsm"]
+	path = projects/university-libary-jsm
+	url = https://github.com/rhixecompany/university-libary-jsm.git
+[submodule "projects/xamehi"]
+	path = projects/xamehi
+	url = https://github.com/Rhixe-company/xamehi.git
+[submodule "projects/xamehi.tv"]
+	path = projects/xamehi.tv
+	url = https://github.com/Rhixe-company/xamehi.tv.git
+[submodule "projects/youtube-downloader"]
+	path = projects/youtube-downloader
+	url = https://github.com/Rhixe-company/youtube-downloader.git

@@ -1,0 +1,82 @@
+/plan if a plan already exists update it  execute hermes skills browse  so it list everything available and only then search,filter for the top 50 best skills that arent already installed or is available and only then execute hermes skills search `skill name` so find,filter skills by keyword for all found skills and only then hermes skills install `skill name` so it   installs all found skills (runs a security scan first)  and only then /skills audit and only then /systematic-debugging debug and fix all issues
+
+/plan if a plan already exists update it  make comprehensive research for install,test,verify  by web_search for installing,testing,configuring this mcp servers in hermes vitest,playwright,django,sequential-thinking,context7,sentry,github official,gitmcp,fetch,scrapegraph,time,memory,youtube transcripts,Desktop Commander,filesystem,node.js sandbox,redis,markitdown,google maps,ast-grep,npm sentinel,sqlite,hacker news,markdownify,postman,cloud run,stripe,apify,chroma,python refactoring assistant,neo4j memory,api gateway, next.js devtools,python interpreter , gemini api docs, hostinger api, google flights,neon,shadcn,uv,linear,mcp-docker and only then  web_extract all found links and all its pages save a markdown file for each page and and index cataloging them in the current directory create a folder called docs with subfolders for the all found links title use proper naming convention read new markdown files and create,update the plan to install mcp servers via  Terminal("echo "y" | hermes mcp add `mcp server name` --command "npx" --args "-y mcp server args") via npx|uvx|docker here are examples "filesystem:
+    args:
+    - C:/Users/Alexa/Desktop/Sandbox
+    - ~/Desktop/SandBox
+    - C:/Users/Alexa
+    - C:/Users/Alexa/AppData/Local
+    - C:/Users/Alexa/AppData/Roaming
+    - ~/
+    command: mcp-server-filesystem
+    enabled: true
+  linear:
+    auth: oauth
+    enabled: true
+    url: https://mcp.linear.app/mcp
+  mcp-docker:
+    args:
+    - mcp
+    - gateway
+    - run
+    - --profile
+    - adminbot
+    command: docker
+    enabled: true
+    env:
+      LOCALAPPDATA: C:\Users\Alexa\AppData\Local
+      ProgramData: C:\ProgramData
+      ProgramFiles: C:\Program Files
+      ProgramFiles(x86): C:\Program Files (x86)
+      USERPROFILE: C:\Users\Alexa
+  playwright:
+    args:
+    - --caps=network,storage,testing,vision,pdf,devtools
+    command: playwright-mcp
+    enabled: true
+  sequential-thinking:
+    command: mcp-server-sequential-thinking
+    enabled: true
+  fetch:
+    command: npx
+    args:
+    - -y mcp-server-fetch-typescript
+    enabled: false
+  memory-mcp:
+    command: npx
+    args:
+    - -y @modelcontextprotocol/server-memory
+    enabled: false
+  sqlite:
+    command: npx
+    args:
+    - -y @modelcontextprotocol/server-sqlite
+    enabled: false
+  time:
+    command: npx
+    args:
+    - -y mcp-server-time
+    enabled: false
+  github:
+    command: npx
+    args:
+    - -y @modelcontextprotocol/server-github
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: ''
+    enabled: false
+  desktop-commander:
+    command: npx
+    args:
+    - -y @wonderwhy-er/desktop-commander
+    enabled: false" and only them implement the plan and only the verify the plan have  been implemented
+
+
+/plan if a plan already exists update it  web_extract ["https://hermes-agent.nousresearch.com/docs/user-guide/features/skills","https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp","https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes","https://hermes-agent.nousresearch.com/docs/user-guide/features/personality","https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files","https://hermes-agent.nousresearch.com/docs/getting-started/quickstart","https://hermes-agent.nousresearch.com/docs/guides/tips","https://hermes-agent.nousresearch.com/docs/user-guide/features/tools","https://hermes-agent.nousresearch.com/docs/getting-started/learning-path","https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks","https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins"] and all its pages save a markdown file and format as markdown with crispy styles for each page and and index cataloging them in the current directory create a folder called docs with subfolders for the ["https://hermes-agent.nousresearch.com/docs/user-guide/features/skills","https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp","https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes","https://hermes-agent.nousresearch.com/docs/user-guide/features/personality","https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files","https://hermes-agent.nousresearch.com/docs/getting-started/quickstart","https://hermes-agent.nousresearch.com/docs/guides/tips","https://hermes-agent.nousresearch.com/docs/user-guide/features/tools","https://hermes-agent.nousresearch.com/docs/getting-started/learning-path","https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks","https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins"] title use proper naming convention read new markdown files and completed implement them verify they have all been implemented
+
+/plan if a plan already exists update it  web_extract ["https://github.com/0xNyk/awesome-hermes-agent","https://hermes-agent.nousresearch.com/docs/user-guide/features/skills","https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp","https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes","https://hermes-agent.nousresearch.com/docs/user-guide/features/personality","https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files","https://hermes-agent.nousresearch.com/docs/getting-started/quickstart","https://hermes-agent.nousresearch.com/docs/guides/tips","https://hermes-agent.nousresearch.com/docs/user-guide/features/tools","https://hermes-agent.nousresearch.com/docs/getting-started/learning-path","https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks","https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins"] and all its pages save a markdown file and format as markdown with crispy styles for each page and and index cataloging them in the current directory create a folder called docs with subfolders for the ["https://github.com/0xNyk/awesome-hermes-agent","https://hermes-agent.nousresearch.com/docs/user-guide/features/skills","https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp","https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes","https://hermes-agent.nousresearch.com/docs/user-guide/features/personality","https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files","https://hermes-agent.nousresearch.com/docs/getting-started/quickstart","https://hermes-agent.nousresearch.com/docs/guides/tips","https://hermes-agent.nousresearch.com/docs/user-guide/features/tools","https://hermes-agent.nousresearch.com/docs/getting-started/learning-path","https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks","https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins"] title use proper naming convention read new markdown files and only then /plan list,read all newly created markdown files and create a plan with steps,phases,tasks,actions that implements all newly created markdown files as a prompt and only then verify the plan will implement as a prompt and only then start implementing the plan
+
+/plan research all markdown files in docs/* and then identify all available profiles and create using command `hermes profile create {profile name} --clone-all` copies everything (config, keys, SOUL.md, memories, skills, sessions) and then install, verify, test, debug and fix any issues in each profile.
+
+/plan research backup.hermes/* for hooks,skills,plugins and installed them all first install, verify, test, debug and fix any issues the plugins and then install, verify, test, debug and fix any issues the hooks and lastly install, verify, test, debug and fix any issues the skills
+
+/plan if a plan already exists update it  list all hooks,tools,skills,plugins and then all mcp servers hooks,tools,skills,plugins and then all plugins hooks,tools,skills now create if not exists else verify and enhance them with your findings  `.hermes.md` → `AGENTS.md` → `CLAUDE.md` → `.cursorrules` for this project and verify they are optimal format as markdown

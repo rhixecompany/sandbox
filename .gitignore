@@ -1,0 +1,22 @@
+node_modules/
+dist/
+build/
+
+# Logs
+Bash/logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+!.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.ruff_cache/
+.logs/
+.temp-analysis/

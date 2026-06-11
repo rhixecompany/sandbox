@@ -1,0 +1,17 @@
+{
+  "project": "profile",
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "sourceFiles": {
+    "AGENTS.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\AGENTS.md",
+    "requirements.txt": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\requirements.txt"
+  },
+  "artifacts": [
+    {"file": "technology-stack.md", "description": "Django blog tech stack", "status": "created"},
+    {"file": "folder-structure.md", "description": "Django project structure", "status": "created"},
+    {"file": "architecture.md", "description": "Blog system architecture", "status": "created"},
+    {"file": "project-workflow.md", "description": "Development workflow", "status": "created"},
+    {"file": "code-exemplars.md", "description": "Django models and admin examples", "status": "created"},
+    {"file": "copilot-instructions.md", "description": "Django conventions", "status": "created"},
+    {"file": "readme.md", "description": "Project overview", "status": "created"}
+  ]
+}

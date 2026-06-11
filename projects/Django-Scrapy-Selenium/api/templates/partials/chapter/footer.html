@@ -1,0 +1,29 @@
+{% load static i18n %}
+
+<!-- footer -->
+<div class="space-y-4">
+  <div class="bg-[#222222] px-5 py-4 flex items-center md:text-start justify-center gap-x-2 w-full">
+    <h2 class="text-[13px] text-[#999999]">
+      {% translate "tags: read manga" %}
+      {{ object.comic.title }}
+      {{ object.name }}, comic
+      {{ object.comic.title }}
+      {{ object.name }}, read{{ object.comic.title }}
+      {{ object.name }}
+      {% translate "online," %}
+      {{ object.comic.title }}<span class="px-1">{{ object.name }}</span>
+      {% translate "chapter," %}
+      {{ object.comic.title }}
+      {{ object.name }}{% translate "chapter," %}
+      {{ object.comic.title }}
+      {{ object.name }}
+      {% translate "high quality," %}
+      {{ object.comic.title }}
+      {{ object.name }}
+      {% translate "manga scan," %}
+      {{ object.comic.updated_at }},
+    </h2>
+  </div>
+  {% include "partials/chapter/related.html" %}
+  {% include "partials/chapter/comments.html" %}
+</div>

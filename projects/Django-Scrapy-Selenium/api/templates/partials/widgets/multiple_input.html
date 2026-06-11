@@ -1,0 +1,10 @@
+{% with id=widget.attrs.id %}
+  {% for group, options, index in widget.optgroups %}
+    {% if group %}<label>{{ group }}</label>{% endif %}
+    {% for option in options %}
+      <div class='flex items-center p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-600'>
+        {% include option.template_name with widget=option %}
+      </div>
+    {% endfor %}
+  {% endfor %}
+{% endwith %}

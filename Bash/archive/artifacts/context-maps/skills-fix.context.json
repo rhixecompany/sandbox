@@ -1,0 +1,19 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 11.5,
+  "has_safety_section": true,
+  "md_size_kb": 3.7,
+  "prompt_name": "skills-fix",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "systematic-debugging",
+    "simplify"
+  ],
+  "status": "needs_enhancement",
+  "tags": ["hermes", "copilot", "skills", "migration", "debugging"],
+  "title": "Skills Fix - Migrate and Debug Hermes Skills",
+  "trigger": "/skills-fix",
+  "txt_size_kb": 1.0
+}

@@ -1,0 +1,198 @@
+{% extends "./base.html" %}
+
+{% load static crispy_forms_tags %}
+
+{% block title %}
+  {{ user.username }}
+{% endblock title %}
+{% block content %}
+  <div class="sm:mt-[-20px]">
+    <div class="text-white">
+      <div class="container mx-auto pt-2 p-4 sm:p-6 mt-3 sm:mt-0">
+        <div class="bg-[#222222] rounded-lg p-4">
+          <h2 class="text-xl font-bold mb-4">Change {{ user.username }} Information</h2>
+          <div>
+            <form class="form-horizontal"
+                  method="post"
+                  action="{% url 'users:update' %}"
+                  enctype="multipart/form-data">
+              {% csrf_token %}
+              {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+              {{ form.non_form_errors }}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                <div class="col-span-1 md:col-span-1">
+                  <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true"
+                         data-slot="icon"
+                         class="absolute size-4 left-3 top-6 transform -translate-y-1/2 mr-10">
+                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd">
+                      </path>
+                    </svg>
+                    <div class="space-y-2">{{ form.username }}</div>
+                  </div>
+                  {% if form.username.help_text %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.username.help_text|safe }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if form.username.error %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.username.errors }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                  <div class="mb-2 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true"
+                         data-slot="icon"
+                         class="absolute size-4 left-3 top-6 transform -translate-y-1/2 mr-10">
+                      <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"></path>
+                      <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"></path>
+                    </svg>
+                    <div class="space-y-2">{{ form.email }}</div>
+                  </div>
+                  {% if form.email.help_text %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.email.help_text|safe }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if form.email.error %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.email.errors }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                <div class="col-span-1 md:col-span-1">
+                  <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true"
+                         data-slot="icon"
+                         class="absolute size-4 left-3 top-6 transform -translate-y-1/2 mr-10">
+                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd">
+                      </path>
+                    </svg>
+                    <div class="space-y-2">{{ form.first_name }}</div>
+                  </div>
+                  {% if form.first_name.help_text %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.first_name.help_text|safe }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if form.first_name.error %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.first_name.errors }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                  <div class="mb-2 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true"
+                         data-slot="icon"
+                         class="absolute size-4 left-3 top-6 transform -translate-y-1/2 mr-10">
+                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd">
+                      </path>
+                    </svg>
+                    <div class="space-y-2">{{ form.last_name }}</div>
+                  </div>
+                  {% if form.last_name.help_text %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.last_name.help_text|safe }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if form.last_name.error %}
+                    <div class="mt-2 ml-2">
+                      <span class="text-[12px]">
+                        <ul class="list-disc list-inside">
+                          <li class="mb-1">{{ form.last_name.errors }}</li>
+                        </ul>
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="grid grid-cols-1 gap-4">
+                <div class="p-2">
+                  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ form.image.label }}</label>
+                  {{ form.image }}
+                </div>
+                {% if form.image.help_text %}
+                  <div class="mt-2 ml-2">
+                    <span class="text-[12px]">
+                      <ul class="list-disc list-inside">
+                        <li class="mb-1">{{ form.image.help_text|safe }}</li>
+                      </ul>
+                    </span>
+                  </div>
+                {% endif %}
+                {% if form.image.error %}
+                  <div class="mt-2 ml-2">
+                    <span class="text-[12px]">
+                      <ul class="list-disc list-inside">
+                        <li class="mb-1">{{ form.image.errors }}</li>
+                      </ul>
+                    </span>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="mt-4">
+                <button type="submit"
+                        class="bg-themecolor text-sm text-white py-2 px-4 rounded-lg w-full sm:w-auto focus:outline-none focus:shadow-outline">
+                  SAVE CHANGES
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div id="_rht_toaster"
+         style="position: fixed;
+                z-index: 9999;
+                inset: 16px;
+                pointer-events: none"></div>
+  </div>
+{% endblock content %}

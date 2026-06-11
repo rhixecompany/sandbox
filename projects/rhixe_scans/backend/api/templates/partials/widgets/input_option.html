@@ -1,0 +1,11 @@
+<div class="flex items-center">
+  {% include "partials/widgets/input.html" %}
+  {% if widget.wrap_label %}
+    <label class='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+           {% if widget.attrs.id %}for="{{ widget.attrs.id }}"{% endif %}>
+    {% endif %}
+    {% if widget.wrap_label %}
+      {{ widget.label }}
+    </label>
+  {% endif %}
+</div>

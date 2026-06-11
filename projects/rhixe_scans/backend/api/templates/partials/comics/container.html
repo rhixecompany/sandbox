@@ -1,0 +1,8 @@
+{% load static i18n %}
+{% load render_table from django_tables2 %}
+
+<div id="container"
+     class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+  {% include 'partials/comics/top_content.html' %}
+  {% render_table table %}
+</div>

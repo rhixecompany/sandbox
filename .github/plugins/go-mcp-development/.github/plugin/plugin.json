@@ -1,0 +1,20 @@
+{
+  "agents": ["./agents"],
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "commands": ["./commands"],
+  "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Go using the official github.com/modelcontextprotocol/go-sdk. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
+  "keywords": [
+    "go",
+    "golang",
+    "mcp",
+    "model-context-protocol",
+    "server-development",
+    "sdk"
+  ],
+  "license": "MIT",
+  "name": "go-mcp-development",
+  "repository": "https://github.com/github/awesome-copilot",
+  "version": "1.0.0"
+}

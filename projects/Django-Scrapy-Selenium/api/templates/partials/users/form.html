@@ -1,0 +1,62 @@
+{% load static i18n example %}
+
+<div id="form-container">
+  <div class="max-w-2xl px-2 py-4 mx-auto lg:py-8">
+    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Update user</h2>
+    <form action='.'
+          method="POST"
+          class='space-y-2 mb-2  mx-auto'
+          enctype="multipart/form-data"
+          hx-swap="outerHTML"
+          hx-target='#form-container'
+          hx-encoding="multipart/form-data"
+          hx-indicator=".prog"
+          hx-post='.'
+          hx-trigger='submit'>
+      {% csrf_token %}
+      {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+      {{ form.non_form_errors }}
+      <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+        <div class="w-full">
+          <label for="{{ form.email.name }}" class="custom_label">{{ form.email.label }}</label>
+          {{ form.email|add_classes:'custom_char_input' }}
+          <div class="mt-2 text-gray-500">{{ form.email.help_text|safe }}</div>
+          <div class="ml-3 text-xs text-red-400">{{ form.email.errors }}</div>
+        </div>
+        <div class="w-full">
+          <label for="{{ form.username.name }}" class="custom_label">{{ form.username.label }}</label>
+          {{ form.username|add_classes:'custom_char_input' }}
+          <div class="mt-2 text-gray-500">{{ form.username.help_text|safe }}</div>
+          <div class="ml-3 text-xs text-red-400">{{ form.username.errors }}</div>
+        </div>
+        <div class="w-full">
+          <label for="{{ form.first_name.name }}" class="custom_label">{{ form.first_name.label }}</label>
+          {{ form.first_name|add_classes:'custom_char_input' }}
+          <div class="mt-2 text-gray-500">{{ form.first_name.help_text|safe }}</div>
+          <div class="ml-3 text-xs text-red-400">{{ form.first_name.errors }}</div>
+        </div>
+        <div class="w-full">
+          <label for="{{ form.last_name.name }}" class="custom_label">{{ form.last_name.label }}</label>
+          {{ form.last_name|add_classes:'custom_char_input' }}
+          <div class="mt-2 text-gray-500">{{ form.last_name.help_text|safe }}</div>
+          <div class="ml-3 text-xs text-red-400">{{ form.last_name.errors }}</div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="{{ form.image.name }}" class="custom_label">{{ form.image.label }}</label>
+          <div class="align-center flex justify-between xl:block 2xl:flex 2xl:space-x-4">
+            {{ form.image|add_classes:'custom_image_input' }}
+            <div class="ml-3 text-xs text-red-400">{{ form.image.errors }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button type="submit"
+                class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+          Update user
+        </button>
+      </div>
+    </form>
+    {% include "partials/htmx/spinner.html" %}
+    {% include "partials/base/message.html" %}
+  </div>
+</div>

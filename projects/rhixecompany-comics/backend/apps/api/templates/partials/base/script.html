@@ -1,0 +1,17 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+
+{% comment %} <script src="{% static 'hyperscript.js' %}"></script> {% endcomment %}
+<script src="{% static 'jquery-3.6.3.min.js' %}"></script>
+<script src="{% static 'sweetalert2.all.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'sweetalert2.min.css' %}" />
+{% comment %}
+<script src="{% static 'theme.js' %}"></script> {% endcomment %}
+{% comment %} <script async defer src="{% static 'buttons.js' %}"></script> {% endcomment %}
+<!-- place project specific Javascript in this file -->
+{% render_bundle 'project' 'js' attrs='defer' %}
+{% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/devibeans.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script> {% endcomment %}

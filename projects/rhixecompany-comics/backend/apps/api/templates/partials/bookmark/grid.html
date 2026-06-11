@@ -1,0 +1,12 @@
+{% load static i18n %}
+
+{% block bookmarkcomics %}
+  <div id='bookmarkapp'>
+    {% if comics %}
+      {% include "partials/bookmark/grid_item.html" %}
+    {% else %}
+      <p>You do not have any comics in your list</p>
+    {% endif %}
+    {% include "partials/bookmark/pagination.html" %}
+  </div>
+{% endblock bookmarkcomics %}

@@ -1,0 +1,9 @@
+{% load static i18n %}
+
+<div class="font-500 relative flex justify-between border-b-[1px] border-[#312f40] bg-[#222222] px-[15px] py-[8px] align-baseline">
+  <h3 class="m-0 text-[15px] font-semibold leading-5 text-white">Latest Updates</h3>
+  <a href="{% url 'series' %}"
+     class="bg-themecolor rounded-[3px] p-1 text-[8.5px] uppercase text-white hover:cursor-pointer">{% translate 'View all' %}</a>
+</div>
+{% include 'partials/index/grid_item.html' with items=objects %}
+{% include 'partials/index/pagination.html' with items=objects %}

@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+
+{% block header %}
+  {{ form.media }}
+{% endblock header %}
+{% block meta %}
+{% endblock meta %}
+{% load static i18n %}
+
+{% block head_title %}
+  {% translate 'View:' %} {{ object.title }}
+{% endblock %}
+{% block content %}
+  <div class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+    <div class="float-left w-[100%] max-[600px]:w-[100%] min-[882px]:w-[70%]">
+      {% include 'partials/comic/container.html' %}
+    </div>
+    <div class="float-right w-[100%] max-[600px]:w-[100%] min-[882px]:w-[30%]">
+      {% include 'partials/index/right_content.html' %}
+    </div>
+  </div>
+{% endblock %}

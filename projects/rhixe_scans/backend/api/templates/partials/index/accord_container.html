@@ -1,0 +1,84 @@
+{% load static i18n %}
+
+<div class="relative flex justify-between align-baseline font-500 bg-[#222222] border-b-[1px] border-[#312f40] px-[15px] py-[8px]">
+  <h3 class="text-[15px] text-white font-semibold leading-5 m-0">Popular</h3>
+</div>
+<div class="bg-[#222222]">
+  <div dir="ltr" data-orientation="horizontal">
+    <div class="px-2.5 pt-[11px]">
+      <div role="tablist"
+           aria-orientation="horizontal"
+           class="items-center p-1 text-muted-foreground grid w-[100%] px-1.5 grid-cols-3 h-8 rounded-[2px] justify-center bg-[#333]"
+           tabindex="0"
+           data-orientation="horizontal"
+           style="outline: none">
+        <button type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="accordian-content-weekly"
+                data-state="active"
+                id="accordian-trigger-weekly"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-sm py-1.5 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm data-[state=active]:hover:text-white hover:text-themecolor text-white text-[12px] data-[state=active]:bg-themecolor data-[state=active]:text-white h-[22px] px-8 font-normal"
+                tabindex="-1"
+                data-orientation="horizontal"
+                data-radix-collection-item="">Weekly</button>
+        <button type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="accordian-content-monthly"
+                data-state="inactive"
+                id="accordian-trigger-monthly"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-sm py-1.5 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm data-[state=active]:hover:text-white hover:text-themecolor text-white text-[12px] data-[state=active]:bg-themecolor data-[state=active]:text-white h-[22px] px-8 font-normal"
+                tabindex="-1"
+                data-orientation="horizontal"
+                data-radix-collection-item="">Monthly</button>
+        <button type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="accordian-content-all"
+                data-state="inactive"
+                id="accordian-trigger-all"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-sm py-1.5 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm data-[state=active]:hover:text-white hover:text-themecolor text-white text-[12px] data-[state=active]:bg-themecolor data-[state=active]:text-white h-[22px] px-8 font-normal"
+                tabindex="-1"
+                data-orientation="horizontal"
+                data-radix-collection-item="">All</button>
+      </div>
+    </div>
+    <div>
+      <div data-state="active"
+           data-orientation="horizontal"
+           role="tabpanel"
+           aria-labelledby="accordian-trigger-weekly"
+           id="accordian-content-weekly"
+           tabindex="0"
+           class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+           style="animation-duration: 0s">
+        {% include 'partials/index/accord_item.html' with objects=weeklycomics %}
+      </div>
+    </div>
+    <div>
+      <div data-state="inactive"
+           data-orientation="horizontal"
+           role="tabpanel"
+           aria-labelledby="accordian-trigger-monthly"
+           hidden=""
+           id="accordian-content-monthly"
+           tabindex="0"
+           class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+        {% include 'partials/index/accord_item.html' with objects=monthlycomics %}
+      </div>
+    </div>
+    <div>
+      <div data-state="inactive"
+           data-orientation="horizontal"
+           role="tabpanel"
+           aria-labelledby="accordian-trigger-all"
+           hidden=""
+           id="accordian-content-all"
+           tabindex="0"
+           class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+        {% include 'partials/index/accord_item.html' with objects=allcomics %}
+      </div>
+    </div>
+  </div>
+</div>

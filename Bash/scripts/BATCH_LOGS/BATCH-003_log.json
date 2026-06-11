@@ -1,0 +1,102 @@
+{
+  "endTime": "2026-05-15T11:55:44.365Z",
+  "findings": [
+    {
+      "description": "Project has excessive dependencies (63 prod, 21 dev)",
+      "risk": "MEDIUM",
+      "complexity": "HIGH",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\rhixe_scans/package.json",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "severity": "MEDIUM",
+      "proposed_fix": "Audit and remove unused dependencies",
+      "repoId": "rhixe_scans",
+      "consolidatedId": "FIND-0015"
+    },
+    {
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "description": "Repository contains large files (>100MB)",
+      "severity": "MEDIUM",
+      "risk": "MEDIUM",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node, C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@react-email\\preview-server\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "complexity": "MEDIUM",
+      "type": "LARGE_FILES",
+      "repoId": "university-libary-jsm",
+      "consolidatedId": "FIND-0016"
+    },
+    {
+      "type": "LARGE_FILES",
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node, C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@react-email\\preview-server\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "description": "Repository contains large files (>100MB)",
+      "risk": "MEDIUM",
+      "severity": "MEDIUM",
+      "complexity": "MEDIUM",
+      "repoId": "university-libary-jsm",
+      "consolidatedId": "FIND-0017"
+    },
+    {
+      "description": "Repository contains large files (>100MB)",
+      "severity": "MEDIUM",
+      "type": "LARGE_FILES",
+      "complexity": "MEDIUM",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node, C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm\\node_modules\\@react-email\\preview-server\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "risk": "MEDIUM",
+      "repoId": "university-libary-jsm",
+      "consolidatedId": "FIND-0018"
+    }
+  ],
+  "id": "BATCH-003",
+  "results": [
+    {
+      "id": "FIND-0015",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "status": "applied",
+      "error": null,
+      "action": "Would audit and remove unused dependencies from C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\rhixe_scans/package.json"
+    },
+    {
+      "id": "FIND-0016",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    },
+    {
+      "id": "FIND-0017",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    },
+    {
+      "id": "FIND-0018",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    }
+  ],
+  "startTime": "2026-05-15T11:55:44.365Z",
+  "status": "success",
+  "verification": {
+    "batchId": "BATCH-003",
+    "timestamp": "2026-05-15T11:55:44.365Z",
+    "checks": {
+      "lint": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      },
+      "test": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      },
+      "build": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      }
+    },
+    "overallStatus": "skipped",
+    "note": "Verification requires actual repo access and build environment"
+  }
+}

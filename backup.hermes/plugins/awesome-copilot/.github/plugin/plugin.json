@@ -1,0 +1,19 @@
+{
+  "agents": ["./agents"],
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "commands": ["./commands"],
+  "description": "Meta prompts that help you discover and generate curated GitHub Copilot agents, instructions, prompts, and skills.",
+  "keywords": [
+    "github-copilot",
+    "discovery",
+    "meta",
+    "prompt-engineering",
+    "agents"
+  ],
+  "license": "MIT",
+  "name": "awesome-copilot",
+  "repository": "https://github.com/github/awesome-copilot",
+  "version": "1.0.0"
+}

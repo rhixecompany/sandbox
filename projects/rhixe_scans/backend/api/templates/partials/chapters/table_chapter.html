@@ -1,0 +1,12 @@
+{% load static i18n %}
+
+<div class="flex items-center p-1 mr-3 space-x-1.5">
+  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+    <div class="text-base font-semibold text-gray-900 dark:text-white">
+      <a href="{{ record.get_absolute_url }}">{{ record.name }}</a>
+    </div>
+    {% if record.title %}
+      <div class="text-sm font-normal text-gray-500 dark:text-gray-400">{{ record.title }}</div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,4 @@
+brainstorming plans-and-specs  dispatching-parallel-agents subagent-driven-development  systematic-debugging  simplify  plan prompt-engineering for
+- Write code faster with Context7 for codebase awareness and Sequential Thinking for structured problem-solving.
+- Automate your development cycle: open issues, write code, and update tickets with GitHub and Atlassian.
+- Run commands and scripts, manage files and control your system directly from your AI client.

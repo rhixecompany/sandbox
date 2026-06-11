@@ -1,0 +1,65 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        {% translate 'Rhixescans' %}
+      {% endblock title %}
+    </title>
+    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
+    <!-- data-tables -->
+    <link rel="stylesheet" href="{% static 'css/simple-table-style.css' %}" />
+    <script src="{% static 'js/simple-table-script.js' %}"></script>
+    <!-- bootstrap5 -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Icon -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'src/style/myStyle.css' %}" />
+    {% block meta %}
+    <meta name="description" content="Read Comics Online!!!" />
+    <meta property="og:title" content="Rhixe Scans" />
+    <meta property="og:description" content="Read Comics Online!!!" />
+    <meta property="og:url" content="{% url 'index' %}" />
+    <meta property="og:site_name" content="Rhixe Scans" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rhixe Scans" />
+    <meta name="twitter:description" content="Read Comics" />
+  {% endblock meta %}
+  {% block header %}
+  {% endblock header %}
+  {% block css %}
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    <!-- This file stores project-specific CSS -->
+    {% render_bundle 'project' 'css' %}
+  {% endblock css %}
+  <!--                          Le javascript
+  ==================================================                          -->
+  {# Placed at the top of the document so pages load faster with defer #}
+  {% block javascript %}
+    <!-- Vendor dependencies bundled as one file -->
+    {% render_bundle 'vendors' 'js' attrs='defer' %}
+    <!-- place project specific Javascript in this file -->
+    {% render_bundle 'project' 'js' attrs='defer' %}
+  {% endblock javascript %}
+  </head>
+  <body>
+    {% block body %}
+
+      {% block main %}
+        {% block content %}
+        {% endblock content %}
+      {% endblock main %}
+
+    {% endblock body %}
+  </body>
+  {% block injs %}
+  {% endblock injs %}
+</html>

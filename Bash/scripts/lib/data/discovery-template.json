@@ -1,0 +1,93 @@
+{
+  "$schema": "./report-schemas.json",
+  "description": "Template for DISCOVERY_REPORT.json output - shows expected structure with placeholder values",
+  "example": {
+    "timestamp": "2026-05-15T10:30:00Z",
+    "discovery_method": "org_scan",
+    "total_discovered": 25,
+    "valid_repos": 22,
+    "invalid_repos": 3,
+    "organizations": ["acme-corp", "acme-legacy"],
+    "repositories": [
+      {
+        "name": "frontend-app",
+        "org": "acme-corp",
+        "url": "https://github.com/acme-corp/frontend-app",
+        "local_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\frontend-app",
+        "git_head": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0",
+        "commits": 1247,
+        "last_commit": "2026-05-14T18:45:30Z",
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": ["Repository has no tags"]
+        },
+        "metadata": {
+          "discovered_at": "2026-05-15T09:15:00Z",
+          "discovery_source": "acme-corp"
+        }
+      },
+      {
+        "name": "backend-api",
+        "org": "acme-corp",
+        "url": "https://github.com/acme-corp/backend-api",
+        "local_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\backend-api",
+        "git_head": "b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1",
+        "commits": 3421,
+        "last_commit": "2026-05-13T22:10:15Z",
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "metadata": {
+          "discovered_at": "2026-05-15T09:15:00Z",
+          "discovery_source": "acme-corp"
+        }
+      },
+      {
+        "name": "deprecated-service",
+        "org": "acme-legacy",
+        "url": "https://github.com/acme-legacy/deprecated-service",
+        "local_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-legacy\\deprecated-service",
+        "git_head": "c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2",
+        "commits": 89,
+        "last_commit": "2024-03-20T14:30:00Z",
+        "validation": {
+          "valid": false,
+          "errors": [
+            "Repository is archived",
+            "No package manager files detected"
+          ],
+          "warnings": ["Last commit over 2 years ago"]
+        },
+        "metadata": {
+          "discovered_at": "2026-05-15T09:20:00Z",
+          "discovery_source": "acme-legacy"
+        }
+      }
+    ]
+  },
+  "field_descriptions": {
+    "timestamp": "ISO 8601 datetime when discovery scan completed",
+    "discovery_method": "How repos were discovered: org_scan, manual, api_query, or file_import",
+    "total_discovered": "Total repos found during discovery",
+    "valid_repos": "Repos that passed validation (accessible, parseable)",
+    "invalid_repos": "Repos that failed validation",
+    "organizations": "List of orgs that were scanned",
+    "repositories": "Array of discovered repo objects with full details",
+    "repository.name": "Repository name (slug)",
+    "repository.org": "Organization or owner name",
+    "repository.url": "Full GitHub HTTPS URL",
+    "repository.local_path": "Local filesystem path for cloned repo",
+    "repository.git_head": "Current HEAD commit SHA",
+    "repository.commits": "Total commit count",
+    "repository.last_commit": "ISO datetime of most recent commit",
+    "repository.validation.valid": "Boolean indicating if repo passed validation",
+    "repository.validation.errors": "Array of error messages (empty if valid)",
+    "repository.validation.warnings": "Array of warning messages",
+    "repository.metadata.discovered_at": "When this repo was discovered",
+    "repository.metadata.discovery_source": "Which org/scan found this repo"
+  },
+  "title": "DISCOVERY_REPORT Template"
+}

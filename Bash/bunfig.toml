@@ -1,0 +1,4 @@
+[run]
+# Automatically run the project with the --bun flag
+# This forces Bun's runtime for all scripts
+bun = false

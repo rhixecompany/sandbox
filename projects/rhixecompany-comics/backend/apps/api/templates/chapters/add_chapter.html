@@ -1,0 +1,13 @@
+{% extends "chapters/base.html" %}
+
+{% comment %} djlint:on {% endcomment %}
+{% load static i18n widget_tweaks %}
+
+{% block head_title %}
+  {% translate 'Create Chapter Form' %}
+{% endblock head_title %}
+{% block content %}
+  <main>
+    {% include "partials/chapters/form.html" %}
+  </main>
+{% endblock content %}

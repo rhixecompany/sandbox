@@ -1,0 +1,37 @@
+.style_scrollToTop {
+  position: fixed;
+  bottom: 125px;
+  right: 20px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  border: 2px 3px 4px 5px;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.style_scrollToTop.style_visible {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.style_scrollToDown {
+  position: fixed;
+  bottom: 125px;
+  left: 20px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  border: 2px 3px 4px 5px;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.style_scrollToDown.style_visible {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}

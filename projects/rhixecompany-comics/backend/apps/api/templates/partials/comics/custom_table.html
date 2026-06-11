@@ -1,0 +1,131 @@
+{% load static i18n l10n django_tables2 %}
+
+{% block table-wrapper %}
+  <div x-data="{ checkAll : false }"
+       class=" w-full overflow-x-auto  rounded-md border border-neutral-300 dark:border-neutral-700">
+    {% block table %}
+      <table {% render_attrs table.attrs %}>
+        {% block table.thead %}
+          {% if table.show_header %}
+            <thead class="border-b border-neutral-300 bg-neutral-50 text-sm text-neutral-900 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+                   {{ table.attrs.thead.as_html }}>
+              <tr>
+                {% for column in table.columns %}
+                  <th scope="col" class="p-1" {{ column.attrs.th.as_html }}>
+                    {% if column.orderable %}
+                      {% if forloop.first %}
+                        <label for="checkAll"
+                               class="flex items-center cursor-pointer text-neutral-600 dark:text-neutral-300 ">
+                          <div class="relative flex items-center">
+                            <input type="checkbox"
+                                   class="before:content[''] peer relative size-4 cursor-pointer appearance-none overflow-hidden rounded border border-neutral-300 bg-white before:absolute before:inset-0 checked:border-black checked:before:bg-black focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-neutral-800 checked:focus:outline-black active:outline-offset-0 dark:border-neutral-700 dark:bg-neutral-900 dark:checked:border-white dark:checked:before:bg-white dark:focus:outline-neutral-300 dark:checked:focus:outline-white"
+                                   x-model="checkAll" />
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 aria-hidden="true"
+                                 stroke="currentColor"
+                                 fill="none"
+                                 stroke-width="4"
+                                 class="pointer-events-none invisible absolute left-1/2 top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 text-neutral-100 peer-checked:visible dark:text-black">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                          </div>
+                        </label>
+                      {% else %}
+                        <button hx-replace-url="true"
+                                hx-target="#container"
+                                hx-indicator='#spinner'
+                                hx-get="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}"
+                                href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">
+                          {{ column.header }}
+                        </button>
+                      {% endif %}
+                    {% else %}
+                      {{ column.header }}
+                    {% endif %}
+                  </th>
+                {% endfor %}
+              </tr>
+            </thead>
+          {% endif %}
+        {% endblock table.thead %}
+        {% block table.tbody %}
+          {% include "partials/htmx/spinner.html" %}
+          <tbody class="divide-y divide-neutral-300 dark:divide-neutral-700"
+                 {{ table.attrs.tbody.as_html }}>
+            {% for row in table.paginated_rows %}
+              {% block table.tbody.row %}
+                <tr {{ row.attrs.as_html }}>
+                  {% for column, cell in row.items %}
+                    {% if forloop.last %}
+                      <td class='flex flex-col gap-1' {{ column.attrs.td.as_html }}>
+                        {% if column.localize == None %}
+                          {{ cell }}
+                        {% else %}
+                          {% if column.localize %}
+                            {{ cell|localize }}
+                          {% else %}
+                            {{ cell|unlocalize }}
+                          {% endif %}
+                        {% endif %}
+                      </td>
+                    {% else %}
+                      <td {{ column.attrs.td.as_html }}>
+                        {% if column.localize == None %}
+                          {{ cell }}
+                        {% else %}
+                          {% if column.localize %}
+                            {{ cell|localize }}
+                          {% else %}
+                            {{ cell|unlocalize }}
+                          {% endif %}
+                        {% endif %}
+                      </td>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+              {% endblock table.tbody.row %}
+            {% empty %}
+              {% if table.empty_text %}
+                {% block table.tbody.empty_text %}
+                  <tr class="border-b dark:border-gray-700">
+                    <td class="p-1 whitespace-nowrap" colspan="{{ table.columns|length }}">{{ table.empty_text }}</td>
+                  </tr>
+                {% endblock table.tbody.empty_text %}
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        {% endblock table.tbody %}
+        {% block table.tfoot %}
+          {% if table.has_footer %}
+            <tfoot {{ table.attrs.tfoot.as_html }}>
+              <tr>
+                {% for column in table.columns %}
+                  <td {{ column.attrs.tf.as_html }}>{{ column.footer }}
+                  </td>
+                {% endfor %}
+              </tr>
+            </tfoot>
+          {% endif %}
+        {% endblock table.tfoot %}
+      </table>
+    {% endblock table %}
+    {% include "partials/comics/pagination.html" %}
+    <div x-show='checkAll'
+         class="flex flex-row justify-between gap-2 border-t border-neutral-300 bg-neutral-50/60 p-2 dark:border-neutral-700 dark:bg-neutral-950/20  items-center ">
+      <button hx-get="{% url 'comics:delete_all_comics' %}"
+              hx-swap='none'
+              hx-include="input[name='id']"
+              class="cursor-pointer whitespace-nowrap  tracking-wide  transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 dark:text-neutral-300 dark:focus-visible:outline-white inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+        <svg class="w-4 h-4 mr-2"
+             fill="currentColor"
+             viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd">
+          </path>
+        </svg>
+        Delete All Comics
+      </button>
+    </div>
+  </div>
+{% endblock table-wrapper %}

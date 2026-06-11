@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/auto-commit.sh",
+        "timeoutSec": 30
+      }
+    ]
+  },
+  "version": 1
+}

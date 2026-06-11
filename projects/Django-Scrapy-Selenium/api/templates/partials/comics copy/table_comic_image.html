@@ -1,0 +1,13 @@
+{% load static i18n partials %}
+
+<div class="flex min-w-0 items-center ">
+  {% with images=record.get_comic_images_children %}
+    {% for img in images|slice:":1" %}
+      <a href="{{ record.get_absolute_url }}">
+        <img class="h-11 w-11 rounded-full flex-shrink-0"
+             src="{{ img.image.url }}"
+             alt="{{ record.title|title }} image" />
+      </a>
+    {% endfor %}
+  {% endwith %}
+</div>

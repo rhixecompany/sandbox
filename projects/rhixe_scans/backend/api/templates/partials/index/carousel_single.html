@@ -1,0 +1,42 @@
+{% load static i18n %}
+
+<div class="hidden overflow-hidden min-[882px]:hidden min-[883px]:block">
+  {% for item in items|slice:'0:1' %}
+    <div class="relative ml-2.5 h-[280px] cursor-pointer">
+      <a href="{{ item.get_absolute_url }}">
+        <img alt="Trending Crown"
+             fetchpriority="high"
+             loading="eager"
+             width="40"
+             height="40"
+             decoding="async"
+             data-nimg="1"
+             style="color: transparent;
+                    top: 10px;
+                    right: 5px;
+                    position: absolute;
+                    background-size: 100px;
+                    z-index: 1"
+             src="{% static 'images/files/crown.webp' %}" />
+        <div class="z-1 myblack absolute left-0 top-0 h-full w-full text-white">
+          <div class="mt-[40%] px-[5%] py-0 text-left uppercase leading-[19px]">
+            <span class="block text-[16px]">Rhixes Scans <b>Trending</b> This Week</span><span class="mt-[5px] block h-[55px] overflow-hidden text-[17px]"><b>{{ item.title }}</b></span>
+          </div>
+        </div>
+        <div class="bg-[auto 100%] bg-[top center] h-full w-full overflow-hidden bg-black opacity-20">
+          {% for img in item.get_images|slice:'0:1' %}
+            {% if img.image %}
+              <div class="h-full w-full bg-cover bg-center"
+                   style="background-image: url({{ img.image.url }});
+                          background-size: cover"></div>
+            {% else %}
+              <div class="h-full w-full bg-cover bg-center"
+                   style="background-image: url({% static 'images/files/01J7TV2G7719CVSTSW9T9M6F31-thumb-small.webp' %});
+                          background-size: cover"></div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>

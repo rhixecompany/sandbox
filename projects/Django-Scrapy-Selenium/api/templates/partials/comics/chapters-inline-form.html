@@ -1,0 +1,68 @@
+{% load static i18n widget_tweaks example %}
+
+<form class="p-1"
+      action='.'
+      method="POST"
+      enctype="multipart/form-data"
+      hx-post='{% if url %}{{ url }}{% else %}.{% endif %}'
+      hx-swap="outerHTML"
+      hx-encoding="multipart/form-data"
+      hx-indicator="#spinner"
+      {% if form.instance.id %} hx-trigger='submit, change delay:500ms' {% else %} hx-trigger='submit' {% endif %}>
+  {% csrf_token %}
+  {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+  {{ form.non_form_errors }}
+  <div class="grid gap-1 mb-1 grid-cols-2">
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.name.id }}" class="custom_label">{{ form.name.label }}:</label>
+      {{ form.name|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.name.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.name.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.title.id }}" class="custom_label">{{ form.title.label }}:</label>
+      {{ form.title|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.title.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.title.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.url.id }}" class="custom_label">{{ form.url.label }}:</label>
+      {{ form.url|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.url.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.url.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.spider.id }}" class="custom_label">{{ form.spider.label }}:</label>
+      {{ form.spider|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.spider.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.spider.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.numpages.id }}" class="custom_label">{{ form.numpages.label }}:</label>
+      {{ form.numpages|add_classes:'custom_char_input' }}
+      <div class="mt-2 text-gray-500">{{ form.numpages.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.numpages.errors }}</div>
+    </div>
+    <div class="col-span-2 sm:col-span-1">
+      <label for="{{ form.updated_at.id }}" class="custom_label">{{ form.updated_at.label }}:</label>
+      {{ form.updated_at|add_classes:'custom_char_input' }}
+      <div class="mt-1 text-gray-500">{{ form.updated_at.help_text|safe }}</div>
+      <div class="ml-3 text-xs text-red-400">{{ form.updated_at.errors }}</div>
+    </div>
+  </div>
+  <div class="flex flex-row justify-between gap-2 border-t border-neutral-300 bg-neutral-50/60 p-4 dark:border-neutral-700 dark:bg-neutral-950/20  items-center ">
+    <button type="submit"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+      {% trans "Submit" %}
+    </button>
+    <button href=' {{ comic_url }}'
+            hx-get=' {{ comic_url }}'
+            hx-swap="outerHTML"
+            hx-target='#form-container'
+            hx-indicator="#spinner"
+            hx-replace-url='true'
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+      {% trans "Cancel" %}
+    </button>
+  </div>
+</form>

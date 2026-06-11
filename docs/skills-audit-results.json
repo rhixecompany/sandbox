@@ -1,0 +1,1712 @@
+[
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 164,
+    "path": "1password\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 99,
+    "path": "apple\\apple-notes\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 107,
+    "path": "apple\\apple-reminders\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 139,
+    "path": "apple\\findmy\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 111,
+    "path": "apple\\imessage\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 213,
+    "path": "apple\\macos-computer-use\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 337,
+    "path": "architecture\\architecture-blueprint-generator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 382,
+    "path": "architecture\\folder-structure-blueprint-generator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 43,
+    "path": "architecture\\hermes-breakdown-epic-arch\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 256,
+    "path": "architecture\\technology-stack-blueprint-generator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 155,
+    "path": "autonomous-ai-agents\\acpx-agent-routing\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 188,
+    "path": "autonomous-ai-agents\\acpx-executor\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 86,
+    "path": "autonomous-ai-agents\\agent-browser\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 573,
+    "path": "autonomous-ai-agents\\agent-governance\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 196,
+    "path": "autonomous-ai-agents\\agentic-eval\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 756,
+    "path": "autonomous-ai-agents\\claude-code\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 146,
+    "path": "autonomous-ai-agents\\codex\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 255,
+    "path": "autonomous-ai-agents\\copilot-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 71,
+    "path": "autonomous-ai-agents\\customize-opencode\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 192,
+    "path": "autonomous-ai-agents\\dispatching-parallel-agents\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 457,
+    "path": "autonomous-ai-agents\\enhance-markdown\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 798,
+    "path": "autonomous-ai-agents\\hermes-agent\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 536,
+    "path": "autonomous-ai-agents\\hermes-skill-library-maintenance\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 298,
+    "path": "autonomous-ai-agents\\kanban-codex-lane\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 382,
+    "path": "autonomous-ai-agents\\opencode\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 226,
+    "path": "autonomous-ai-agents\\qwen-code\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 108,
+    "path": "autonomous-ai-agents\\skill-creator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 98,
+    "path": "autonomous-ai-agents\\skill-judge\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 95,
+    "path": "autonomous-ai-agents\\template-skill\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 63,
+    "path": "autonomous-ai-agents\\template\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "autonomous-ai-agents\\using-superpowers\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 114,
+    "path": "autonomous-ai-agents\\writing-skills\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "creative\\algorithmic-art\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 170,
+    "path": "creative\\architecture-diagram\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 313,
+    "path": "creative\\ascii-art\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 263,
+    "path": "creative\\ascii-video\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 222,
+    "path": "creative\\baoyu-article-illustrator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 262,
+    "path": "creative\\baoyu-comic\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 252,
+    "path": "creative\\baoyu-infographic\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 86,
+    "path": "creative\\brand-guidelines\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 88,
+    "path": "creative\\canvas-design\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 613,
+    "path": "creative\\claude-design\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 637,
+    "path": "creative\\comfyui\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 77,
+    "path": "creative\\content-research-writer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 153,
+    "path": "creative\\creative-ideation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 217,
+    "path": "creative\\design-md\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 661,
+    "path": "creative\\excalidraw-diagram-generator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 221,
+    "path": "creative\\excalidraw\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 94,
+    "path": "creative\\frontend-design\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 623,
+    "path": "creative\\humanizer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 239,
+    "path": "creative\\image-manipulation-image-magick\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 277,
+    "path": "creative\\legacy-circuit-mockups\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 291,
+    "path": "creative\\manim-video\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 82,
+    "path": "creative\\marp-slide\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 81,
+    "path": "creative\\mermaid-diagrams\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 80,
+    "path": "creative\\nano-banana-pro-openrouter\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 578,
+    "path": "creative\\p5js\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 359,
+    "path": "creative\\penpot-uiux-design\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 233,
+    "path": "creative\\pixel-art\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 312,
+    "path": "creative\\plantuml-ascii\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 236,
+    "path": "creative\\popular-web-designs\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 223,
+    "path": "creative\\pretext\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 258,
+    "path": "creative\\sketch\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 327,
+    "path": "creative\\songwriting-and-ai-music\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "creative\\theme-factory\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 364,
+    "path": "creative\\touchdesigner-mcp\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 77,
+    "path": "creative\\web-artifacts-builder\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 76,
+    "path": "creative\\writing-clearly-and-concisely\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 172,
+    "path": "data-science\\jupyter-live-kernel\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\ai-prompt-engineering-safety-review\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\boost-prompt\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\brainstorming\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 98,
+    "path": "development\\chrome-devtools\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\context-map\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\convert-plaintext-to-md\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 770,
+    "path": "development\\copilot-cli-quickstart\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 455,
+    "path": "development\\copilot-sdk\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 55,
+    "path": "development\\copilot-usage-metrics\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 219,
+    "path": "development\\create-agentsmd\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 163,
+    "path": "development\\create-implementation-plan\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 28,
+    "path": "development\\create-readme\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 97,
+    "path": "development\\create-web-form\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 247,
+    "path": "development\\generate-custom-instructions-from-codebase\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 86,
+    "path": "development\\hermes-breakdown-feature-implementation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 71,
+    "path": "development\\lsp-setup\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 148,
+    "path": "development\\make-skill-template\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 234,
+    "path": "development\\microsoft-skill-creator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 87,
+    "path": "development\\microsoft-skill-creator\\microsoft-code-reference\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 121,
+    "path": "development\\microsoft-skill-creator\\microsoft-docs\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 244,
+    "path": "development\\project-consolidation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 100,
+    "path": "development\\prompt-builder\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 99,
+    "path": "development\\prompt-engineering\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 515,
+    "path": "development\\rest-graphql-debug\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\skills\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 113,
+    "path": "development\\suggest-awesome-github-copilot-agents\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 129,
+    "path": "development\\suggest-awesome-github-copilot-instructions\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "development\\update-implementation-plan\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 219,
+    "path": "development\\vscode-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 23,
+    "path": "development\\vscode-ext-commands\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 24,
+    "path": "development\\vscode-ext-localization\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 143,
+    "path": "development\\vscode-extension-playbook\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 394,
+    "path": "development\\vscode-workspace-configurator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 105,
+    "path": "development\\workiq-copilot\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 49,
+    "path": "devops\\appinsights-instrumentation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 85,
+    "path": "devops\\asdf\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 239,
+    "path": "devops\\aspire\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 223,
+    "path": "devops\\azure-deployment-preflight\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 2427,
+    "path": "devops\\azure-devops-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 241,
+    "path": "devops\\azure-resource-visualizer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 20,
+    "path": "devops\\azure-role-selector\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 331,
+    "path": "devops\\azure-static-web-apps\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 78,
+    "path": "devops\\customization-audit\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 80,
+    "path": "devops\\datadog\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 460,
+    "path": "devops\\dependabot\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 282,
+    "path": "devops\\docker-management\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 249,
+    "path": "devops\\entra-agent-user\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 111,
+    "path": "devops\\fabric-lakehouse\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 108,
+    "path": "devops\\git-history-preserving-migration\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 86,
+    "path": "devops\\github-actions-efficiency\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 82,
+    "path": "devops\\glab\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 241,
+    "path": "devops\\hermes-agent-diagnostics-configuration\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 544,
+    "path": "devops\\hermes-complete-setup\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 473,
+    "path": "devops\\hermes-configuration-verification\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 167,
+    "path": "devops\\hermes-hooks-manager\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 331,
+    "path": "devops\\hermes-mcp-server-setup\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 97,
+    "path": "devops\\hermes-operator-policies\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 187,
+    "path": "devops\\hermes-plugins-manager\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 216,
+    "path": "devops\\hermes-profile-documentation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 180,
+    "path": "devops\\hermes-provider-enumeration\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 273,
+    "path": "devops\\hermes-system-maintenance\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 82,
+    "path": "devops\\jira\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 229,
+    "path": "devops\\kanban-orchestrator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 231,
+    "path": "devops\\kanban-worker\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 245,
+    "path": "devops\\log-analysis-and-triage\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 53,
+    "path": "devops\\multi-stage-dockerfile\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 392,
+    "path": "devops\\parallel-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 162,
+    "path": "devops\\powerbi-modeling\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 172,
+    "path": "devops\\profile-maintenance\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 192,
+    "path": "devops\\provider-reliability-diagnostics\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 12,
+    "path": "devops\\rbac-audit-logging\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 243,
+    "path": "devops\\secret-scanning\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 240,
+    "path": "devops\\service-integrations\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 111,
+    "path": "devops\\session-audit-report\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "devops\\snowflake-semanticview\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 49,
+    "path": "devops\\terraform-azurerm-set-diff-analyzer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 39,
+    "path": "devops\\validate-memories\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 113,
+    "path": "devops\\watchers\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 244,
+    "path": "devops\\webhook-subscriptions\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 301,
+    "path": "devops\\windows-maintenance-operations\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "devops\\work-on-ticket\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 198,
+    "path": "devops\\workspace-audit\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 307,
+    "path": "email\\himalaya\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 192,
+    "path": "gaming\\minecraft-modpack-server\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 221,
+    "path": "gaming\\pokemon-player\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 138,
+    "path": "github\\codebase-inspection\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 75,
+    "path": "github\\finishing-a-development-branch\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 2188,
+    "path": "github\\gh-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 125,
+    "path": "github\\git-commit\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 386,
+    "path": "github\\git-gh-commands\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 167,
+    "path": "github\\git-helper\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 337,
+    "path": "github\\git-submodule-workflow\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 279,
+    "path": "github\\github-auth\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 455,
+    "path": "github\\github-code-review\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 371,
+    "path": "github\\github-issues\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 395,
+    "path": "github\\github-pr-workflow\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 544,
+    "path": "github\\github-repo-management\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 215,
+    "path": "github\\gitnexus-explorer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 97,
+    "path": "github\\make-repo-contribution\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 263,
+    "path": "github\\sponsor-finder\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 167,
+    "path": "github\\using-git-worktrees\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 297,
+    "path": "mcp\\fastmcp\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 76,
+    "path": "mcp\\mcp-builder\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 79,
+    "path": "mcp\\mcp-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 279,
+    "path": "mcp\\mcp-security-audit\\SKILL.md"
+  },
+  {
+    "grade": "C",
+    "issues": [
+      "C1"
+    ],
+    "lines": 535,
+    "path": "mcp\\native-mcp\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 96,
+    "path": "media\\gif-search\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 176,
+    "path": "media\\heartmula\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "media\\slack-gif-creator\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 96,
+    "path": "media\\songsee\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 140,
+    "path": "media\\spotify\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 196,
+    "path": "media\\transloadit-media-processing\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 77,
+    "path": "media\\youtube-content\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 500,
+    "path": "mlops\\evaluation\\lm-evaluation-harness\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 596,
+    "path": "mlops\\evaluation\\weights-and-biases\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 94,
+    "path": "mlops\\huggingface-hub\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 254,
+    "path": "mlops\\inference\\llama-cpp\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 347,
+    "path": "mlops\\inference\\obliteratus\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 374,
+    "path": "mlops\\inference\\vllm\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 573,
+    "path": "mlops\\models\\audiocraft\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 511,
+    "path": "mlops\\models\\segment-anything\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 363,
+    "path": "mlops\\pinecone\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 596,
+    "path": "mlops\\research\\dspy\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "note-taking\\obsidian\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 100,
+    "path": "planning\\brainstorming\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 63,
+    "path": "planning\\hermes-breakdown-plan\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 271,
+    "path": "planning\\plans-and-specs\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 400,
+    "path": "planning\\prompt-planning-orchestration\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 40,
+    "path": "product\\hermes-breakdown-epic-pm\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 40,
+    "path": "product\\hermes-breakdown-feature-prd\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 135,
+    "path": "product\\prd\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 258,
+    "path": "productivity\\airtable\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "productivity\\doc-coauthoring\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 51,
+    "path": "productivity\\documentation-writer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 76,
+    "path": "productivity\\docx\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "productivity\\file-organizer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 135,
+    "path": "productivity\\finnish-humanizer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 347,
+    "path": "productivity\\google-workspace\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 71,
+    "path": "productivity\\internal-comms\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 391,
+    "path": "productivity\\linear\\SKILL.md"
+  },
+  {
+    "grade": "C",
+    "issues": [
+      "C1"
+    ],
+    "lines": 199,
+    "path": "productivity\\maps\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 452,
+    "path": "productivity\\markdown-to-html\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 73,
+    "path": "productivity\\meeting-insights-analyzer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 236,
+    "path": "productivity\\meeting-minutes\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 64,
+    "path": "productivity\\nano-pdf\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 414,
+    "path": "productivity\\notion\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 201,
+    "path": "productivity\\ocr-and-documents\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "productivity\\pdf\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 163,
+    "path": "productivity\\pdftk-server\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 266,
+    "path": "productivity\\powerpoint\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "productivity\\pptx\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 74,
+    "path": "productivity\\task-management\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 145,
+    "path": "productivity\\teams-meeting-pipeline\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 109,
+    "path": "productivity\\user-communication-preferences\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 77,
+    "path": "productivity\\xlsx\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 138,
+    "path": "productivity\\yuanbao\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 198,
+    "path": "qa\\adversarial-ux-test\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 145,
+    "path": "qa\\boilerplate-stripper\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 173,
+    "path": "qa\\dogfood\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 42,
+    "path": "qa\\hermes-breakdown-test\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 35,
+    "path": "qa\\playwright-automation-fill-in-form\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 30,
+    "path": "qa\\playwright-generate-e2e-test\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 24,
+    "path": "qa\\playwright-generate-test\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 171,
+    "path": "qa\\polyglot-test-agent\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 233,
+    "path": "qa\\postgresql-code-review\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 315,
+    "path": "qa\\scoutqa-test\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 159,
+    "path": "qa\\test-skill\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 131,
+    "path": "qa\\verification-before-completion\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 371,
+    "path": "qa\\web-design-reviewer\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 79,
+    "path": "qa\\webapp-testing\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 409,
+    "path": "red-teaming\\godmode\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 293,
+    "path": "research\\arxiv\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 150,
+    "path": "research\\blogwatcher\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 518,
+    "path": "research\\llm-wiki\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 82,
+    "path": "research\\polymarket\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 2389,
+    "path": "research\\research-paper-writing\\SKILL.md"
+  },
+  {
+    "grade": "C",
+    "issues": [
+      "C1"
+    ],
+    "lines": 337,
+    "path": "research\\scrapling\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 269,
+    "path": "research\\web-research-pipeline\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 114,
+    "path": "smart-home\\openhue\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 436,
+    "path": "social-media\\xurl\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 111,
+    "path": "software-development\\banking\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 282,
+    "path": "software-development\\bash-scripts-audit-remediation\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 147,
+    "path": "software-development\\caveman-unified\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 93,
+    "path": "software-development\\claude-api\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 80,
+    "path": "software-development\\clonedeps\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 83,
+    "path": "software-development\\code-docs\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 79,
+    "path": "software-development\\codemap\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 113,
+    "path": "software-development\\context7\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 158,
+    "path": "software-development\\debugging-hermes-tui-commands\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 317,
+    "path": "software-development\\executing-plans\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 236,
+    "path": "software-development\\fluentui-blazor\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 118,
+    "path": "software-development\\git-patch-management\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 160,
+    "path": "software-development\\hermes-agent-skill-authoring\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 182,
+    "path": "software-development\\hermes-s6-container-supervision\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 77,
+    "path": "software-development\\httpie\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 340,
+    "path": "software-development\\node-inspect-debugger\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 65,
+    "path": "software-development\\nuget-manager\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 82,
+    "path": "software-development\\plan\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 104,
+    "path": "software-development\\project-docs\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 396,
+    "path": "software-development\\python-debugpy\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 390,
+    "path": "software-development\\quasi-coder\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 75,
+    "path": "software-development\\receiving-code-review\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 646,
+    "path": "software-development\\refactor\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 287,
+    "path": "software-development\\requesting-code-review\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 176,
+    "path": "software-development\\sandbox\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 324,
+    "path": "software-development\\script-orchestration\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 78,
+    "path": "software-development\\shadcn\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 101,
+    "path": "software-development\\simplify\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 221,
+    "path": "software-development\\spike\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 461,
+    "path": "software-development\\subagent-driven-development\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 393,
+    "path": "software-development\\systematic-debugging\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 538,
+    "path": "software-development\\test-driven-development\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 197,
+    "path": "software-development\\winapp-cli\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 114,
+    "path": "software-development\\worktrunk\\SKILL.md"
+  },
+  {
+    "grade": "A",
+    "issues": [],
+    "lines": 358,
+    "path": "software-development\\writing-plans\\SKILL.md"
+  }
+]

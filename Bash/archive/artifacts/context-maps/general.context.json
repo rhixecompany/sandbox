@@ -1,0 +1,26 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 21.2,
+  "has_safety_section": true,
+  "md_size_kb": 3.1,
+  "prompt_name": "general",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "simplify",
+    "subagent-driven-development"
+  ],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "development",
+    "automation",
+    "planning",
+    "prompt-engineering"
+  ],
+  "title": "General Development Workflow",
+  "trigger": "/general",
+  "txt_size_kb": 0.5
+}

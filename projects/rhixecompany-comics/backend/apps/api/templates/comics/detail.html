@@ -1,0 +1,21 @@
+{% extends "comics/base.html" %}
+
+{% load static i18n %}
+
+{% block header %}
+  {{ commentform.media }}
+{% endblock header %}
+{% block head_title %}
+  {% trans "Comic" %}
+{% endblock head_title %}
+{% block content %}
+  <div class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+    <div class="relative z-0 float-left w-[100%] max-[600px]:w-[100%] min-[882px]:w-[68.5%] min-[1030px]:w-[70%]">
+      <div hx-get='{{ hx_url }}'
+           hx-trigger='revealed'
+           hx-indicator="#spinner"
+           class="mt-5 space-y-6 sm:mt-0">{% include "partials/htmx/spinner.html" %}</div>
+    </div>
+    {% include "partials/home/index/accordian.html" %}
+  </div>
+{% endblock content %}

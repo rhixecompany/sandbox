@@ -1,0 +1,157 @@
+{% load static %}
+
+<div id="notification-menu"
+     x-show="notificationopen"
+     x-bind:class="notificationopen ? '' : 'hidden'">
+  <div data-headlessui-portal="">
+    <div class="right-32 z-50 mt-4 h-auto w-[100vw] border-[#222222] bg-black shadow-lg ring-1 ring-black/5 focus:outline-none sm:w-96"
+         tabindex="0"
+         data-floating-ui-focusable=""
+         data-anchor="bottom end"
+         aria-labelledby="notification-menu-button"
+         id="notification-menu-items"
+         role="menu"
+         data-headlessui-state="open"
+         data-open=""
+         style="position: absolute;
+                top: 40px;
+                --button-width: 24px;
+                overflow: auto;
+                max-width: 919px;
+                max-height: min(var(--anchor-max-height, 100vh), 611px)">
+      <div class="scrollbar-thin max-h-[70vh] overflow-y-auto rounded-lg p-4 text-white sm:max-w-md"
+           role="none">
+        <div class="z-50 flex justify-between bg-black py-4" role="none">
+          <h2 class="text-lg font-bold" role="none">Notifications</h2>
+          <h2 class="text-md mb-4 cursor-pointer font-[400] hover:text-themecolor"
+              id="notification-menu-item-:r14:"
+              role="menuitem"
+              tabindex="-1"
+              data-headlessui-state="">Mark all as read</h2>
+        </div>
+        <div class="mb-3 flex cursor-pointer items-center border-b-[1px] border-[#312f40] pb-3 transition-all hover:text-themecolor hover:opacity-60"
+             role="none">
+          <img src="{% static 'images/files/01JMHFP0DBPD906JMCZNAKG1RH-optimized.webp' %}"
+               alt="Solo Max-Level Newbie"
+               class="mr-2 h-28 w-[83px] rounded-md object-fill"
+               role="none" />
+          <a class="flex h-28 flex-grow flex-col" role="none">
+            <div class="flex items-center justify-between" role="none">
+              <h3 class="text-[15px] font-bold" role="none">Solo Max-Level Newbi...</h3>
+              <div class="h-2 w-2 rounded-full bg-red-500" role="none"></div>
+            </div>
+            <p class="mt-0.5 text-sm font-semibold text-gray-400" role="none">Chapter 201</p>
+            <p class="my-1 text-xs text-gray-400" role="none">1 day ago</p>
+            <button class="ring-offset-background focus-visible:ring-ring mt-3 inline-flex h-8 w-20 items-center justify-center whitespace-nowrap rounded-md bg-themecolor px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-themecolor focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                    role="none">Read</button>
+          </a>
+        </div>
+        <div class="sticky bottom-[-18px] z-[2147483648] mt-4 bg-black py-2 text-center"
+             role="none">
+          <a class="cursor-pointer font-bold text-white" href="#" role="none">View All</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div data-radix-popper-content-wrapper=""
+     dir="ltr"
+     id="user-menu"
+     x-show="useropen"
+     x-bind:class="useropen ? '' : 'hidden'">
+  <div data-side="bottom"
+       data-align="end"
+       role="menu"
+       aria-orientation="vertical"
+       data-state="open"
+       data-radix-menu-content=""
+       dir="ltr"
+       id="user"
+       aria-labelledby="user-menu"
+       class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 right-16 z-50 w-[200px] min-w-[8rem] overflow-hidden rounded-md border border-purple-500/20 bg-[#1a1a1a] p-1 text-white shadow-lg shadow-purple-500/10"
+       tabindex="-1"
+       data-orientation="vertical"
+       style="position: absolute;
+              top: 40px;
+              --button-width: 24px;
+              overflow: auto;
+              max-width: 919px;
+              max-height: min(var(--anchor-max-height, 100vh), 611px)">
+    <div class="p-2">
+      <div role="menuitem"
+           class="relative flex cursor-default select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none transition-colors focus:bg-purple-500/20 focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+           tabindex="-1"
+           data-orientation="vertical"
+           data-radix-collection-item="">
+        <a class="inline-flex gap-2.5" href="{% url 'users:redirect' %}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-settings h-4 w-4">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+            </path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          Settings
+        </a>
+      </div>
+      <div role="menuitem"
+           class="relative flex cursor-default select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm text-red-500 outline-none transition-colors focus:bg-red-500/10 focus:text-red-500 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+           tabindex="-1"
+           data-orientation="vertical"
+           data-radix-collection-item="">
+        <a class="inline-flex gap-2.5" href="{% url 'account_logout' %}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-log-out h-4 w-4">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" x2="9" y1="12" y2="12"></line>
+          </svg>
+          Log out
+        </a>
+      </div>
+      {% if request.user.is_superuser %}
+        <div role="menuitem"
+             class="relative flex cursor-default select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none transition-colors focus:bg-purple-500/20 focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50 border-t"
+             tabindex="-1"
+             data-orientation="vertical"
+             data-radix-collection-item="">
+          <button @click="admintoggle" type="button" class="inline-flex gap-2.5">
+            <svg class="lucide h-4 w-4"
+                 fill="currentColor"
+                 viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true">
+              <path clip-rule="evenodd" fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z">
+              </path>
+            </svg>
+            Admin
+          </button>
+        </div>
+        <div x-show="adminopen"
+             x-bind:class="adminopen ? 'flex-col flex' : 'hidden'">
+          <div class="relative flex cursor-default select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none transition-colors focus:bg-purple-500/20 focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+            <a class="inline-flex gap-2.5" href="{% url 'comics:list' %}">Comics</a>
+          </div>
+          <div class="relative flex cursor-default select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none transition-colors focus:bg-purple-500/20 focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+            <a class="inline-flex gap-2.5" href="{% url 'chapters:list' %}">Chapters</a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

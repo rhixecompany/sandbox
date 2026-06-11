@@ -1,0 +1,44 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}"
+      class="__variable_5d1e58 dark"
+      data-headlessui-focus-visible="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block css %}
+      {% include "partials/base/style.html" %}
+    {% endblock css %}
+    <title>
+      {% block title %}
+        {% trans "Rhixe Scans" %}
+      {% endblock title %}
+    </title>
+    {% block javascript %}
+      {% include "partials/base/script.html" %}
+    {% endblock javascript %}
+  </head>
+  {% comment %} <body _="on every htmx:beforeSend in <button:not(.no-disable)/> tell it toggle [disabled='true'] until htmx:afterOnLoad" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class="min-h-screen antialiased bg-secondarybackground __variable_5d1e58 clickup-chrome-ext_installed" style="margin: 0 !important" data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="" cz-shortcut-listen="true"> {% endcomment %}
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+        class="min-h-screen antialiased bg-secondarybackground __variable_5d1e58 clickup-chrome-ext_installed"
+        style="margin: 0 !important"
+        data-new-gr-c-s-check-loaded="14.1215.0"
+        data-gr-ext-installed=""
+        cz-shortcut-listen="true">
+    {% include "partials/base/header.html" %}
+    <div style="overflow: hidden;
+                max-width: 1220px;
+                margin: 0 auto;
+                position: relative;
+                padding-bottom: 9rem">
+      <div class="lg:mx-3.5 lg:my-0 relative max-[786px]:p-0 max-[882px]:p-4 min[925px]:p-0">
+        {% block main %}
+        {% endblock main %}
+      </div>
+    </div>
+    {% include "partials/base/footer.html" %}
+  </body>
+</html>

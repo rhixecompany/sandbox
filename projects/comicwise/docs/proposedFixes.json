@@ -1,0 +1,62 @@
+[
+  {
+    "file": "src/components/ui/carousel.tsx",
+    "line": "216-217",
+    "issue": "Duplicate export of CarouselApi - exported as both value and type",
+    "fix": "Removed CarouselApi from regular exports, kept only type export",
+    "before": "export { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious };\nexport type { CarouselApi };",
+    "after": "export { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious };\nexport type { CarouselApi };",
+    "rationale": "Type-only exports must use 'export type' with isolatedModules enabled. Duplicate identifier caused TS2300 error.",
+    "references": [
+      "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html#type-only-import-exports"
+    ]
+  },
+  {
+    "file": "src/tests/e2e/admin.spec.ts",
+    "line": 46,
+    "issue": "toHaveText() called without argument - Playwright 1.58+ requires argument",
+    "fix": "Changed to toBeVisible() to verify element exists",
+    "before": "await expect(bodyText).toHaveText();",
+    "after": "await expect(bodyText).toBeVisible();",
+    "rationale": "toHaveText() requires an argument in Playwright 1.58+. Using toBeVisible() which is more appropriate for existence check.",
+    "references": [
+      "https://playwright.dev/docs/api/class-locator#locator-have-text"
+    ]
+  },
+  {
+    "file": "src/tests/e2e/auth.spec.ts",
+    "line": "12, 32",
+    "issue": "toHaveText() called without argument - Playwright 1.58+ requires argument",
+    "fix": "Changed to toBeVisible() to verify element exists",
+    "before": "await expect(content).toHaveText();",
+    "after": "await expect(content).toBeVisible();",
+    "rationale": "toHaveText() requires an argument in Playwright 1.58+. Using toBeVisible() which is more appropriate for existence check.",
+    "references": [
+      "https://playwright.dev/docs/api/class-locator#locator-have-text"
+    ]
+  },
+  {
+    "file": "src/tests/e2e/reading.spec.ts",
+    "line": 116,
+    "issue": "toHaveText() called without argument - Playwright 1.58+ requires argument",
+    "fix": "Changed to toBeVisible() to verify element exists",
+    "before": "await expect(bodyText).toHaveText();",
+    "after": "await expect(bodyText).toBeVisible();",
+    "rationale": "toHaveText() requires an argument in Playwright 1.58+. Using toBeVisible() which is more appropriate for existence check.",
+    "references": [
+      "https://playwright.dev/docs/api/class-locator#locator-have-text"
+    ]
+  },
+  {
+    "file": "src/scripts/master-setup.ts",
+    "line": "684-689",
+    "issue": "Unnecessary try/catch wrapper (no-useless-catch ESLint rule)",
+    "fix": "Removed try/catch since it just rethrows the error",
+    "before": "try {\n  const cmd = `tsx ${scriptPath} ${args.join(\" \")}`;\n  execSync(cmd, { stdio: \"inherit\" });\n} catch (error) {\n  throw error;\n}",
+    "after": "const cmd = `tsx ${scriptPath} ${args.join(\" \")}`;\nexecSync(cmd, { stdio: \"inherit\" });",
+    "rationale": "The try/catch added no value since it just rethrew the error. Removing it simplifies the code.",
+    "references": [
+      "https://eslint.org/docs/latest/rules/no-useless-catch"
+    ]
+  }
+]

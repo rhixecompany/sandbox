@@ -1,0 +1,25 @@
+{
+  "merges": [
+    {
+      "outputFile": "comic.json",
+      "description": "All comic entries",
+      "sourceFiles": [
+        "comics.json",
+        "comicsdata1.json",
+        "comicsdata2.json"
+      ],
+      "totalEntries": 627
+    },
+    {
+      "outputFile": "chapter.json",
+      "description": "All chapter entries",
+      "sourceFiles": [
+        "chapters.json",
+        "chaptersdata1.json",
+        "chaptersdata2.json"
+      ],
+      "totalEntries": 5814
+    }
+  ],
+  "timestamp": "2026-02-27T16:56:13.265Z"
+}

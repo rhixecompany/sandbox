@@ -1,0 +1,272 @@
+{% load static %}
+
+<div data-state="open"
+     id="mobile-menu1"
+     class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 hidden bg-black/80"
+     style="pointer-events: auto"
+     data-aria-hidden="true"
+     aria-hidden="true"></div>
+<div role="dialog"
+     id="mobile-menu"
+     aria-describedby="mobile-menu"
+     aria-labelledby="mobile-menu"
+     data-state="closed"
+     class="bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right fixed inset-y-0 right-0 z-50 hidden h-full w-full max-w-xs gap-4 border-l-0 bg-gradient-to-b from-[#1a1a1a] to-purple-900 p-0 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 sm:max-w-sm"
+     tabindex="-1"
+     style="pointer-events: auto">
+  {% if request.user.is_authenticated %}
+    <div class="flex h-full flex-col">
+      <div class="border-b border-white/10 bg-[#7E22CE] p-6">
+        <div class="flex items-center space-x-4">
+          {% for data in avatar %}
+            {% if data.image %}
+              <img src="{{ data.image.url }}"
+                   alt="{{ data.username }}"
+                   class="h-12 w-12 rounded-full border-2 border-white/20" />
+            {% else %}
+              <img src="{% static 'images/files/profile-picture.webp' %}"
+                   alt="{{ data.username }}"
+                   class="h-12 w-12 rounded-full border-2 border-white/20" />
+            {% endif %}
+          {% endfor %}
+          <div class="space-y-1">
+            <h2 class="text-base font-medium text-white">{{ request.user.username }}</h2>
+            <p class="text-sm text-white/70">{{ request.user.email }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 space-y-1 p-4" x-data="dropdown">
+        <a class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+           type="button"
+           href="{% url 'index' %}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-house h-5 w-5">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+            </path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="{% url 'series' %}"
+           class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+           type="button">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-library h-5 w-5">
+            <path d="m16 6 4 14"></path>
+            <path d="M12 6v14"></path>
+            <path d="M8 8v12"></path>
+            <path d="M4 4v16"></path>
+          </svg>
+          <span>Comics</span>
+        </a>
+        <a href="#"
+           class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+           type="button">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-bookmark h-5 w-5">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+          </svg>
+          <span>Bookmarks</span>
+        </a>
+        {% if request.user.is_superuser %}
+          <button @click="admin1toggle"
+                  class="flex w-full items-center space-x-2 rounded-lg border-t border-white/10 px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+                  type="button">
+            <svg class="lucide h-5 w-5"
+                 fill="currentColor"
+                 viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true">
+              <path clip-rule="evenodd" fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z">
+              </path>
+            </svg>
+            <span>Admin</span>
+          </button>
+          <div x-show="admin1open"
+               x-bind:class="admin1open ? 'flex-col flex' : 'hidden'">
+            <a href="{% url 'comics:list' %}"
+               class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+               type="button">
+              <span>Comics</span>
+            </a>
+            <a href="{% url 'chapters:list' %}"
+               class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+               type="button">
+              <span>Chapters</span>
+            </a>
+          </div>
+        {% endif %}
+        {% comment %}
+      <button class="ring-offset-background focus-visible:ring-ring bg-primary hover:bg-primary/90 inline-flex h-10 w-full transform items-center justify-start space-x-2 whitespace-nowrap rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500 px-4 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-purple-700 hover:via-pink-600 hover:to-yellow-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up h-5 w-5 animate-bounce">
+          <path d="m5 12 7-7 7 7"></path>
+          <path d="M12 19V5"></path>
+        </svg>
+        <span>Upgrade Now</span>
+      </button>
+        {% endcomment %}
+      </div>
+      <div class="border-t border-white/10 p-4">
+        <button class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-full items-center justify-start space-x-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                type="button">
+          <a href="{% url 'users:redirect' %}" class="flex flex-row gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="lucide lucide-settings h-5 w-5">
+              <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span>Settings</span>
+          </a>
+        </button>
+        <a href="{% url 'account_logout' %}"
+           class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-full items-center justify-start space-x-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-red-500 transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-log-out h-5 w-5">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" x2="9" y1="12" y2="12"></line>
+          </svg>
+          <span>Log out</span>
+        </a>
+      </div>
+    </div>
+  {% else %}
+    <div class="flex h-full flex-col">
+      <div class="flex-1 space-y-1 p-4">
+        <a class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+           type="button"
+           href="{% url 'index' %}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               class="lucide lucide-house h-5 w-5">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+            </path>
+          </svg>
+          <span>Home</span> </a><a href="{% url 'series' %}"
+   class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+   type="button">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="lucide lucide-library h-5 w-5">
+              <path d="m16 6 4 14"></path>
+              <path d="M12 6v14"></path>
+              <path d="M8 8v12"></path>
+              <path d="M4 4v16"></path>
+            </svg>
+            <span>Comics</span> </a><a href="#"
+   class="flex items-center space-x-2 rounded-lg px-4 py-3 text-white transition-colors duration-200 hover:bg-white/10"
+   type="button">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-bookmark h-5 w-5">
+                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+              </svg>
+              <span>Bookmarks</span>
+            </a>
+          </div>
+          <div class="border-t border-white/10 p-4">
+            <button class="ring-offset-background focus-visible:ring-ring hover:text-accent-foreground inline-flex h-10 w-full items-center justify-start space-x-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                    type="button">
+              <a href="{% url 'account_login' %}" class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-log-in h-5 w-5">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" x2="3" y1="12" y2="12"></line>
+                </svg>
+                <span>Login</span>
+              </a>
+            </button>
+          </div>
+        </div>
+      {% endif %}
+      <button id="mobile-menu-btn-close"
+              type="button"
+              class="ring-offset-background focus:ring-ring absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="lucide lucide-x h-4 w-4">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+        <span class="sr-only">Close</span>
+      </button>
+    </div>

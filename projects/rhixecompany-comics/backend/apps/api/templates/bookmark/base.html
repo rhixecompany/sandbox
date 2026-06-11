@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block title %}
+    {% block head_title %}
+        {% trans "Index" %}
+    {% endblock head_title %}
+{% endblock title %}
+{% block main %}
+    <div class="w-[100%]">
+        <div class="min[925px]:p-0 relative max-[882px]:p-4 max-[786px]:p-0 lg:my-0">
+            <div class="float-left w-[100%] max-[600px]:w-[100%] min-[882px]:w-[70%]">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            {% include "partials/home/index/accordian.html" %}
+        </div>
+    </div>
+{% endblock main %}

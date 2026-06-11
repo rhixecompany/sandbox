@@ -1,0 +1,17 @@
+{
+  "project": "cookiecutter-django-tailwind",
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "sourceFiles": {
+    "AGENTS.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\AGENTS.md",
+    "pyproject.toml": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\pyproject.toml"
+  },
+  "artifacts": [
+    {"file": "technology-stack.md", "description": "Django + Tailwind technology stack", "status": "created"},
+    {"file": "folder-structure.md", "description": "Template directory structure", "status": "created"},
+    {"file": "architecture.md", "description": "Template architecture design", "status": "created"},
+    {"file": "project-workflow.md", "description": "Development workflow", "status": "created"},
+    {"file": "code-exemplars.md", "description": "Django settings and Docker examples", "status": "created"},
+    {"file": "copilot-instructions.md", "description": "AI conventions for Django", "status": "created"},
+    {"file": "readme.md", "description": "Project overview", "status": "created"}
+  ]
+}

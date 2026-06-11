@@ -1,0 +1,81 @@
+{% load static i18n %}
+
+{% if request.user.is_authenticated %}
+  <div class="z-50 mr-1">
+    <div class="text-right">
+      <div class="relative inline-block text-left"
+           hx-get='{% url "bookmarks:load" %}'
+           hx-target="#not"
+           hx-trigger='comic_bookmark    from:body'
+           hx-swap="outerHTML">
+        <div x-data="{ openitems: false }" class="pt-2">
+          <button @click="openitems = !openitems"
+                  class="relative w-full items-center justify-center"
+                  type="button">
+            <div>
+              <svg width="25"
+                   height="26"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke-width="1.5"
+                   stroke="currentColor"
+                   class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+              </svg>
+              {% block comicbookmark %}
+                <span id='not_count'
+                      hx-swap-oob="true"
+                      class="absolute end-0 top-5 -translate-y-1/2 translate-x-1/2 transform rounded-full bg-red-500 px-1.5 py-0.5 text-xs font-medium text-white">{{ items.count }}</span>
+              </div>
+            </button>
+            <div id='not'
+                 x-show="openitems"
+                 x-trap="openitems"
+                 class='xs:right-0 xs:w-96 xs:origin-top-right xs:rounded-md absolute -right-[6.5rem] z-10 h-auto w-[100vw] border border-[#222222] bg-black shadow-lg ring-1 ring-black/5 focus:outline-none'
+                 :class="openitems ? 'flex' : 'hidden'"
+                 style="--button-width: 25px">
+              <div class="mx-auto max-w-sm rounded-lg p-4 text-white">
+                <div class="flex justify-between">
+                  <h2 class="mb-4 text-lg font-bold">{% translate "Notifications" %}</h2>
+                  <h2 @click="openitems = !openitems"
+                      class="text-md mb-4 cursor-pointer font-[400] hover:text-themecolor">
+                    {% translate "Mark all as read" %}
+                  </h2>
+                </div>
+                {% for  item in items %}
+                  <div class="mb-3 flex cursor-pointer items-center border-b-[1px] border-[#312f40] pb-3 transition-all hover:text-themecolor hover:opacity-60">
+                    <img src="{{ item.comic.comicitems.all.first.image.url }}"
+                         alt="{{ item.comic.title }}"
+                         class="mr-2 h-28 w-[83px] rounded-md object-fill" />
+                    <a class="h-28 flex-1" href="{{ item.comic.get_absolute_url }}">
+                      <h3 class="text-[15px] font-bold">{{ item.comic.title }}</h3>
+                      {% with chapters=item.comic.comicchapters.all %}
+                        {% for chapter in chapters|slice:":1" %}
+                          <p class="mt-0.5 text-sm font-semibold text-gray-400">{{ chapter.name }}</p>
+                        {% endfor %}
+                      {% endwith %}
+                      <p class="my-1 text-xs text-gray-400">{{ item.comic.updated_at|timesince }}</p>
+                      <a href="{{ item.comic.get_absolute_url }}"
+                         class="ring-offset-background focus-visible:ring-ring mt-3 inline-flex h-8 w-20 items-center justify-center whitespace-nowrap rounded-md bg-themecolor px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-themecolor focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                        {% translate "Read" %}
+                      </a>
+                    </a>
+                  </div>
+                {% endfor %}
+                <div class="mt-4 text-center">
+                  <a class="cursor-pointer font-bold text-white"
+                     href="{% url 'bookmarks:bookmark_list' %}">{% translate "View All" %}</a>
+                </div>
+              </div>
+            </div>
+          {% endblock comicbookmark %}
+        </div>
+      </div>
+      <div style="position: fixed;
+                  z-index: 9999;
+                  inset: 16px;
+                  pointer-events: none"></div>
+    </div>
+  </div>
+{% endif %}

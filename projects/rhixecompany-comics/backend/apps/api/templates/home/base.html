@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block title %}
+  {% block head_title %}
+    {% trans "Index" %}
+  {% endblock head_title %}
+{% endblock title %}
+{% block main %}
+  <div class="w-[100%]">
+    {% block content %}
+    {% endblock content %}
+  </div>
+{% endblock main %}

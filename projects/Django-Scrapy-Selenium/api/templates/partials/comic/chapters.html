@@ -1,0 +1,53 @@
+{% load static i18n %}
+
+<div class="bg-[#222222]">
+  <div class="border-b-[1px] border-[#312f40] pb-3.5 pl-[30px] pr-6 pt-[18px] font-bold leading-[33.6px] tracking-[0.27px] text-[#f5f5f5]">
+    Chapter
+    <!-- -->{{ object.title }}
+  </div>
+  <div class="grid grid-cols-2 gap-2.5 px-4 py-4">
+    <a href="{{ object.get_chapters_children.last.get_absolute_url }}">
+      <div class="flex cursor-pointer flex-col items-center justify-center rounded-sm bg-themecolor py-4 text-white transition-all duration-300 hover:bg-[#343434]">
+        <h3 class="w-64 truncate text-center max-[600px]:w-48 max-[450px]:w-32">First Chapter</h3>
+        <h3 class="text-xl font-bold">{{ object.get_chapters_children.last.name }}</h3>
+      </div>
+    </a>
+    <a href="{{ object.get_chapters_children.first.get_absolute_url }}">
+      <div class="flex cursor-pointer flex-col items-center justify-center rounded-sm bg-themecolor py-4 text-white transition-all duration-300 hover:bg-[#343434]">
+        {% if object.get_chapters_children.first.title %}
+          <h3 class="w-64 truncate text-center max-[600px]:w-48 max-[450px]:w-32">
+            {{ object.get_chapters_children.first.title }}
+          </h3>
+        {% else %}
+          <h3 class="w-64 truncate text-center max-[600px]:w-48 max-[450px]:w-32">New Chapter</h3>
+        {% endif %}
+        <h3 class="text-xl font-bold">{{ object.get_chapters_children.first.name }}</h3>
+      </div>
+    </a>
+  </div>
+  <div>
+    <div class="px-4 pb-4">
+      <input class="w-full rounded-sm border bg-[#343434] px-2.5 py-1 placeholder:text-sm placeholder:text-[#a2a2a2c7] focus:border-none focus:outline-none focus:ring-0"
+             placeholder="Search Chapter. Example: {{ object.get_chapters_children.last.name }} or {{ object.get_chapters_children.first.name }}"
+             type="text"
+             value="" />
+    </div>
+    <div class="scrollbar-thumb-themecolor scrollbar-track-transparent scrollbar-thin mr-3 max-h-[20rem] space-y-2.5 overflow-y-auto pb-4 pl-4 pr-2">
+      {% with chapters=object.get_chapters_children %}
+        {% for chap in chapters %}
+          <div class="group relative w-full cursor-pointer rounded-md border border-[#A2A2A2]/20 py-2 pl-4 hover:bg-[#343434]">
+            <a href="{{ chap.get_absolute_url }}">
+              <div class="absolute left-0 top-0 block h-full w-[5px] rounded bg-[#8E3FDD]"></div>
+              <h3 class="` ${shouldHighlight(chap.id) ? &#39;&#39; : &#39;text-themecolor&#39;}` flex flex-row text-sm font-medium text-white">
+                {{ chap.name }}
+                {% if chap.title %}<span class="pl-1">{{ chap.title }}</span>{% endif %}
+                <span class="pl-1"></span>
+              </h3>
+              <h3 class="text-xs text-[#A2A2A2]">{{ chap.updated_at|date:"F j, Y" }}</h3>
+            </a>
+          </div>
+        {% endfor %}
+      {% endwith %}
+    </div>
+  </div>
+</div>

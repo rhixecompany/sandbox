@@ -1,0 +1,183 @@
+# volumes:
+#   postgres_data: {}
+#   postgres_data_backups: {}
+#   redis_data: {}
+
+# networks:
+#   app-network:
+#     driver: overlay
+#     attachable: true
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 192.169.0.0/16
+#           ip_range: 192.169.5.0/24
+#           gateway: 192.169.0.1
+#           aux_addresses:
+#             host1: 192.169.0.3
+#             host2: 192.169.0.4
+#             host3: 192.169.0.5
+#             host4: 192.169.0.6
+#             host5: 192.169.0.7
+#             host6: 192.169.0.8
+#             host7: 192.169.0.9
+#             host8: 192.169.0.10
+
+networks:
+  app-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.enable_icc: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.169.0.0/24
+          gateway: 192.169.0.1
+
+services:
+  django: &django
+    restart: always
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: rhixe/api:django
+    container_name: django
+    depends_on:
+      redis:
+        condition: service_started
+      redis-slave:
+        condition: service_started
+      postgres:
+        condition: service_started
+    volumes:
+      # - ./app:/app:z
+      # - ./api/media:/app/api/media:z
+      - ./app:/app:z
+      - ./app/api/media:/app/api/media:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.3
+
+  postgres:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: rhixe/api:postgres
+    container_name: postgres
+    volumes:
+      - ./docker_data/postgres:/var/lib/postgresql/data
+      - ./docker_data/postgres_backups:/backups
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./.envs/.local/.postgres
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.4
+
+  redis:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./compose/production/redis/Dockerfile
+    image: rhixe/api:redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker_data/redis:/data
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.5
+  redis-slave:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./compose/production/redis-slave/Dockerfile
+    image: rhixe/api:redis-slave
+    container_name: redis-slave
+    ports:
+      - "6380:6380"
+    volumes:
+      - ./docker_data/redis:/data
+    depends_on:
+      redis:
+        condition: service_started
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.10
+  celeryworker:
+    restart: always
+    <<: *django
+    image: rhixe/api:celeryworker
+    container_name: celeryworker
+    depends_on:
+      redis:
+        condition: service_started
+      redis-slave:
+        condition: service_started
+      postgres:
+        condition: service_started
+    ports: []
+    command: /start-celeryworker
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.6
+
+  celerybeat:
+    restart: always
+    <<: *django
+    image: rhixe/api:celerybeat
+    container_name: celerybeat
+    depends_on:
+      redis:
+        condition: service_started
+      redis-slave:
+        condition: service_started
+      postgres:
+        condition: service_started
+    ports: []
+    command: /start-celerybeat
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.7
+
+  flower:
+    restart: always
+    <<: *django
+    image: rhixe/api:flower
+    container_name: flower
+    ports:
+      - "5555:5555"
+    command: /start-flower
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.8
+
+  node:
+    build:
+      context: .
+      dockerfile: ./compose/local/node/Dockerfile
+    image: rhixe/api:node
+    container_name: node
+    depends_on:
+      django:
+        condition: service_started
+    volumes:
+      - ./app:/app:z
+      # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
+      - /app/node_modules
+
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    networks:
+      app-network:
+        ipv4_address: 192.169.0.9

@@ -1,0 +1,21 @@
+{% extends "comics/base.html" %}
+
+{% comment %} djlint:on {% endcomment %}
+{% load static i18n %}
+
+{% block head_title %}
+  {% trans "Delete Comic" %}
+{% endblock head_title %}
+{% block content %}
+  <div class="grid grid-cols-1 py-4 px-4">
+    <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <form action='.' method="POST">
+        {% csrf_token %}
+        <h3 class="mb-4 text-xl font-semibold dark:text-white">Are you sure you want to delete {{ object }} ?</h3>
+        <div class="mt-4 flex justify-between gap-2 items-center">
+          <button type="submit" class="inline-flex   btn   btn-primary">{% trans "Yes, delete." %}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

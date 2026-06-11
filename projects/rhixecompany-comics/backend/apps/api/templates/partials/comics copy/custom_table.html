@@ -1,0 +1,210 @@
+{% load django_tables2 %}
+{% load i18n l10n %}
+
+{% block table-wrapper %}
+  <div class="overflow-x-auto">
+    {% block table %}
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+             {% render_attrs table.attrs %}>
+        {% block table.thead %}
+          {% if table.show_header %}
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                   {{ table.attrs.thead.as_html }}>
+              <tr>
+                {% for column in table.columns %}
+                  <th scope="col" class="px-1 py-1" {{ column.attrs.th.as_html }}>
+                    {% if column.orderable %}
+                      <button hx-replace-url="true"
+                              hx-target="#container"
+                              hx-indicator='#spinner'
+                              hx-get="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}"
+                              href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">
+                        {{ column.header }}
+                      </button>
+                    {% else %}
+                      {{ column.header }}
+                    {% endif %}
+                  </th>
+                {% endfor %}
+              </tr>
+            </thead>
+          {% endif %}
+        {% endblock table.thead %}
+        {% block table.tbody %}
+          <tbody {{ table.attrs.tbody.as_html }}>
+            {% for row in table.paginated_rows %}
+              {% block table.tbody.row %}
+                <tr class="border-b dark:border-gray-700" {{ row.attrs.as_html }}>
+                  {% for column, cell in row.items %}
+                    <td class="p-1 whitespace-nowrap" {{ column.attrs.td.as_html }}>
+                      {% if column.localize == None %}
+                        {{ cell }}
+                      {% else %}
+                        {% if column.localize %}
+                          {{ cell|localize }}
+                        {% else %}
+                          {{ cell|unlocalize }}
+                        {% endif %}
+                      {% endif %}
+                    </td>
+                  {% endfor %}
+                </tr>
+              {% endblock table.tbody.row %}
+            {% empty %}
+              {% if table.empty_text %}
+                {% block table.tbody.empty_text %}
+                  <tr class="border-b dark:border-gray-700">
+                    <td class="p-1 whitespace-nowrap" colspan="{{ table.columns|length }}">{{ table.empty_text }}</td>
+                  </tr>
+                {% endblock table.tbody.empty_text %}
+              {% endif %}
+            {% endfor %}
+            {% include "partials/htmx/spinner.html" %}
+          </tbody>
+        {% endblock table.tbody %}
+        {% block table.tfoot %}
+          {% if table.has_footer %}
+            <tfoot {{ table.attrs.tfoot.as_html }}>
+              <tr>
+                {% for column in table.columns %}
+                  <td {{ column.attrs.tf.as_html }}>{{ column.footer }}
+                  </td>
+                {% endfor %}
+              </tr>
+            </tfoot>
+          {% endif %}
+        {% endblock table.tfoot %}
+      </table>
+    {% endblock table %}
+    {% block pagination %}
+      {% if table.page and table.paginator.num_pages > 1 %}
+        <nav class="flex flex-row  justify-between items-start  space-y-3  p-4"
+             aria-label="Table navigation">
+          <div class="flex items-center mb-4 sm:mb-0">
+            {% if table.page.number != 1 %}
+              <button hx-replace-url="true"
+                      hx-target="#container"
+                      hx-indicator='#spinner'
+                      hx-get="{% querystring table.prefixed_page_field=1 %}"
+                      href="{% querystring table.prefixed_page_field=1 %}"
+                      class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                <svg class="w-7 h-7"
+                     fill="currentColor"
+                     viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+            {% endif %}
+            {% if table.page.number != table.paginator.num_pages %}
+              <button hx-replace-url="true"
+                      hx-target="#container"
+                      hx-indicator='#spinner'
+                      hx-get="{% querystring table.prefixed_page_field=table.paginator.num_pages %}"
+                      href="{% querystring table.prefixed_page_field=table.paginator.num_pages %}"
+                      class="inline-flex justify-center p-1 mr-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                <svg class="w-7 h-7"
+                     fill="currentColor"
+                     viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+            {% endif %}
+            <span class="text-sm font-light text-gray-500 dark:text-gray-400">
+              {% translate "Showing" %}
+              <span class="font-semibold text-gray-900 dark:text-white">{{ table.page.number }}</span>
+              {% translate "of" %}
+              <span class="font-semibold text-gray-900 dark:text-white">{{ table.paginator.num_pages }}</span>
+            </span>
+          </div>
+          <ul class="inline-flex items-stretch -space-x-px">
+            {% if table.page.has_previous %}
+              {% block pagination.previous %}
+                <li>
+                  <button hx-replace-url="true"
+                          hx-target="#container"
+                          hx-indicator='#spinner'
+                          hx-get="{% querystring table.prefixed_page_field=table.page.previous_page_number %}"
+                          href="{% querystring table.prefixed_page_field=table.page.previous_page_number %}"
+                          class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <span class="sr-only">{% translate "Previous" %}</span>
+                    <svg class="w-5 h-5"
+                         aria-hidden="true"
+                         fill="currentColor"
+                         viewbox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </li>
+              {% endblock pagination.previous %}
+            {% endif %}
+            {% if table.page.has_previous or table.page.has_next %}
+              {% block pagination.range %}
+                {% for page_number in table.page|table_page_range:table.paginator %}
+                  {% if page_number == '...' %}
+                    <li>
+                      <button class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                        {{ page_number }}
+                      </button>
+                    </li>
+                  {% else %}
+                    {% if page_number == table.page.number %}
+                      <li>
+                        <button hx-replace-url="true"
+                                hx-target="#container"
+                                hx-indicator='#spinner'
+                                hx-get="{% querystring table.prefixed_page_field=page_number %}"
+                                href="{% querystring table.prefixed_page_field=page_number %}"
+                                aria-current="page"
+                                class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">
+                          {{ page_number }}
+                        </button>
+                      </li>
+                    {% else %}
+                      <li>
+                        <button hx-replace-url="true"
+                                hx-target="#container"
+                                hx-indicator='#spinner'
+                                hx-get="{% querystring table.prefixed_page_field=page_number %}"
+                                href="{% querystring table.prefixed_page_field=page_number %}"
+                                class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                          {{ page_number }}
+                        </button>
+                      </li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endblock pagination.range %}
+            {% endif %}
+            {% if table.page.has_next %}
+              {% block pagination.next %}
+                <li>
+                  <button hx-replace-url="true"
+                          hx-target="#container"
+                          hx-indicator='#spinner'
+                          hx-get="{% querystring table.prefixed_page_field=table.page.next_page_number %}"
+                          href="{% querystring table.prefixed_page_field=table.page.next_page_number %}"
+                          class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <span class="sr-only">{% translate "Next" %}</span>
+                    <svg class="w-5 h-5"
+                         aria-hidden="true"
+                         fill="currentColor"
+                         viewbox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </li>
+              {% endblock pagination.next %}
+            {% endif %}
+          </ul>
+        </nav>
+        {% include "partials/htmx/spinner.html" %}
+      {% endif %}
+    {% endblock pagination %}
+  </div>
+{% endblock table-wrapper %}

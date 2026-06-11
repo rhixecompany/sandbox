@@ -1,0 +1,17 @@
+import React from "react";
+import Newsfeed from "./components/Newsfeed";
+import Converter from "./components/Converter";
+
+const App = (props) => {
+  return (
+    <div className="app">
+      <h1>Xamehi Crypto Dashboard</h1>
+      <div className="app-wrapper">
+        <Converter />
+        <Newsfeed />
+      </div>
+    </div>
+  );
+};
+
+export default App;

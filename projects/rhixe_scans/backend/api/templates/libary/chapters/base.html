@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block title %}
+  {% block head_title %}
+  {% endblock head_title %}
+{% endblock title %}
+{% block main %}
+  <div class="max-w-[1220px] pt-2"
+       style="overflow: hidden;
+              margin: 0 auto;
+              padding-bottom: 9rem">
+    <div class="">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
+{% endblock main %}

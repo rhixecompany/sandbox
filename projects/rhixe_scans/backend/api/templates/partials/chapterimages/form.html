@@ -1,0 +1,45 @@
+{% load static i18n %}
+
+<div id="form_container"
+     class="container mx-auto pt-2 p-4 sm:p-6 mt-3 sm:mt-0">
+  <div class="bg-[#222222] rounded-lg p-4">
+    <div class="p-4 text-sm sm:text-base text-pretty">
+      <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for hidden_field in form.hidden_fields %}{{ hidden_field.errors }} {{ hidden_field }}{% endfor %}
+        {{ form.non_form_errors }}
+        <div class="grid grid-cols-6 gap-2">
+          {% for field in form %}
+            <div class="col-span-6 sm:col-span-3">
+              {{ field.label_tag }}
+              {{ field }}
+              {% if field.help_text %}<div class="text-[12px]">{{ field.help_text }}</div>{% endif %}
+              {% if field.errors %}<div class="text-[12px]">{{ field.errors }}</div>{% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="mt-4">
+          <button type="submit"
+                  class="bg-themecolor text-sm text-white py-2 px-4 rounded-lg w-full sm:w-auto focus:outline-none focus:shadow-outline">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% if form.instance.pk %}
+    <div class="mt-4">
+      <a href="{{ object.chapter.get_update_url }}"
+         class="bg-themecolor text-sm text-white py-2 px-4 rounded-lg w-full sm:w-auto focus:outline-none focus:shadow-outline">
+        Go back
+      </a>
+    </div>
+  {% else %}
+    <div class="mt-4">
+      <a href="{{ object.get_update_url }}"
+         class="bg-themecolor text-sm text-white py-2 px-4 rounded-lg w-full sm:w-auto focus:outline-none focus:shadow-outline">
+        Go back
+      </a>
+    </div>
+  {% endif %}
+</div>

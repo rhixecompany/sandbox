@@ -1,0 +1,126 @@
+{
+  "stacks": {
+    "typescript-node": {
+      "detectionFiles": ["package.json", "tsconfig.json"],
+      "diagnostics": [
+        {
+          "name": "npm-list",
+          "command": "npm list --depth=0",
+          "description": "List installed dependencies"
+        },
+        {
+          "name": "npm-outdated",
+          "command": "npm outdated",
+          "description": "Check for outdated packages"
+        },
+        {
+          "name": "npm-audit",
+          "command": "npm audit --json",
+          "description": "Security vulnerability audit",
+          "parseJson": true
+        },
+        {
+          "name": "npm-lint",
+          "command": "npm run lint 2>&1 || true",
+          "description": "Run linter if available"
+        },
+        {
+          "name": "npm-test",
+          "command": "npm run test 2>&1 || true",
+          "description": "Run tests if available"
+        },
+        {
+          "name": "npm-build",
+          "command": "npm run build 2>&1 || true",
+          "description": "Run build if available"
+        }
+      ]
+    },
+    "javascript-node": {
+      "detectionFiles": ["package.json"],
+      "diagnostics": [
+        {
+          "name": "npm-list",
+          "command": "npm list --depth=0",
+          "description": "List installed dependencies"
+        },
+        {
+          "name": "npm-outdated",
+          "command": "npm outdated",
+          "description": "Check for outdated packages"
+        },
+        {
+          "name": "npm-audit",
+          "command": "npm audit --json",
+          "description": "Security vulnerability audit",
+          "parseJson": true
+        },
+        {
+          "name": "npm-lint",
+          "command": "npm run lint 2>&1 || true",
+          "description": "Run linter if available"
+        },
+        {
+          "name": "npm-test",
+          "command": "npm run test 2>&1 || true",
+          "description": "Run tests if available"
+        }
+      ]
+    },
+    "python": {
+      "detectionFiles": [
+        "pyproject.toml",
+        "setup.py",
+        "requirements.txt"
+      ],
+      "diagnostics": [
+        {
+          "name": "pip-list",
+          "command": "pip list",
+          "description": "List installed packages"
+        },
+        {
+          "name": "pip-outdated",
+          "command": "pip list --outdated",
+          "description": "Check for outdated packages"
+        },
+        {
+          "name": "safety-check",
+          "command": "safety check --json 2>&1 || true",
+          "description": "Security vulnerability check",
+          "parseJson": true
+        },
+        {
+          "name": "flake8",
+          "command": "flake8 . 2>&1 || true",
+          "description": "Code style check"
+        },
+        {
+          "name": "pytest",
+          "command": "pytest --tb=short 2>&1 || true",
+          "description": "Run tests if available"
+        }
+      ]
+    },
+    "unknown": {
+      "detectionFiles": [],
+      "diagnostics": [
+        {
+          "name": "file-inventory",
+          "command": "find . -type f -name '*.json' -o -name '*.py' -o -name '*.js' -o -name '*.ts' | head -20",
+          "description": "Quick file inventory"
+        },
+        {
+          "name": "readme-check",
+          "command": "ls -la | grep -i readme || echo 'No README found'",
+          "description": "Check for README"
+        },
+        {
+          "name": "git-status",
+          "command": "git status 2>&1 || echo 'Not a git repo'",
+          "description": "Git repository status"
+        }
+      ]
+    }
+  }
+}

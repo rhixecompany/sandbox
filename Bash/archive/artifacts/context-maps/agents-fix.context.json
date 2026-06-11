@@ -1,0 +1,26 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 12.0,
+  "has_safety_section": true,
+  "md_size_kb": 3.1,
+  "prompt_name": "agents-fix",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "systematic-debugging",
+    "simplify"
+  ],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "agents",
+    "migration",
+    "debugging",
+    "opencode"
+  ],
+  "title": "Agents Fix - Migrate and Debug OpenCode Agents",
+  "trigger": "/agents-fix",
+  "txt_size_kb": 0.9
+}

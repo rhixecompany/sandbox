@@ -1,0 +1,67 @@
+// import { auth } from '@/auth';
+// import { SignOut } from '@/components/sign-out';
+// import db from '@/lib/db';
+// import Image from 'next/image';
+// import Link from 'next/link';
+export default async function Home() {
+  // const session = await auth();
+
+  // const users = await db.user.findMany({
+  //   select: {
+  //     id: true,
+  //     name: true,
+  //     email: true,
+  //     image: true,
+  //   },
+  // });
+
+  return (
+    <div className='flex flex-col items-center justify-center min-h-screen p-4 bg-base-200'>
+      <div>
+        <h2>Index</h2>
+      </div>
+      {/* <div className='card w-full max-w-md shadow-xl bg-base-100 p-6'>
+        {session ? (
+          <>
+            <p className='text-lg font-bold'>
+              You are logged in as {session.user?.name}
+            </p>
+            <SignOut />
+          </>
+        ) : (
+          <>
+            <p className='text-lg font-bold'>You are not logged in</p>
+            <Link href='/sign-in' className='btn btn-primary mt-4'>
+              Sign in
+            </Link>
+          </>
+        )}
+      </div>
+
+      <div className='mt-8 grid grid-cols-1 gap-6 w-full max-w-4xl'>
+        {users.map((user) => (
+          <div
+            key={user.id}
+            className='card card-side bg-base-100 shadow-xl p-4 flex items-center'
+          >
+            <figure>
+              <Image
+                src={
+                  user.image ? user.image : 'https://icons8.com/icons/set/user'
+                }
+                alt='User'
+                width={100}
+                height={100}
+                className='rounded-full'
+              />
+            </figure>
+            <div className='card-body'>
+              <h2 className='card-title'>{user.name}</h2>
+              <p>Email: {user.email}</p>
+            </div>
+          </div>
+        ))}
+      </div> */}
+    </div>
+  );
+}

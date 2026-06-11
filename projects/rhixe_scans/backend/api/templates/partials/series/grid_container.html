@@ -1,0 +1,6 @@
+{% load static i18n %}
+
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3 p-4">
+  {% include 'partials/series/grid_item.html' with items=objects %}
+</div>
+{% include 'partials/series/pagination.html' with items=objects %}

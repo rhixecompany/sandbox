@@ -1,0 +1,49 @@
+{
+  "default": true,
+  "fix": true,
+  "gitignore": true,
+  "globs": [
+    "**/*.md"
+  ],
+  "ignores": [
+    "node_modules",
+    ".next",
+    "build",
+    "coverage",
+    "dist",
+    "out",
+    "tmp"
+  ],
+  "MD013": false,
+  "MD024": {
+    "siblings_only": true
+  },
+  "MD026": true,
+  "MD033": {
+    "allowed_elements": [
+      "br",
+      "details",
+      "summary",
+      "kbd",
+      "sup",
+      "sub",
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td",
+      "code",
+      "pre",
+      "a",
+      "img",
+      "video",
+      "audio",
+      "iframe"
+    ]
+  },
+  "MD034": true,
+  "MD036": true,
+  "MD040": true,
+  "MD041": true
+}

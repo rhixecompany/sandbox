@@ -1,0 +1,53 @@
+{% load static i18n %}
+
+{% csrf_token %}
+<form hx-trigger="end"
+      hx-post="{% url 'bookmarks:sort' %}"
+      hx-target="#bookmarkapp"
+      class=" sortable grid grid-cols-2 gap-3 p-4 sm:grid-cols-2 md:grid-cols-5">
+  {% for comic in comics %}
+    <input type="hidden" name="comic_order" value="{{ comic.comic.pk }}" />
+    <a href="{{ comic.comic.get_absolute_url }}">
+      <div class="group block w-full hover:cursor-pointer hover:text-themecolor sm:block">
+        <div>
+          <div class="relative flex h-[250px] overflow-hidden hover:opacity-60 md:h-[200px]">
+            {% if comic.comic.get_status_display == 'Ongoing' %}<span class="status bg-blue-700">{{ comic.comic.get_status_display }}</span>{% endif %}
+            {% if comic.comic.get_status_display == 'Season End' %}<span class="status bg-red-700">{{ comic.comic.get_status_display }}</span>{% endif %}
+            {% if comic.comic.get_status_display == 'Completed' %}<span class="status bg-green-700">{{ comic.comic.get_status_display }}</span>{% endif %}
+            {% if comic.comic.get_status_display == 'Dropped' %}<span class="status bg-purple-700">{{ comic.comic.get_status_display }}</span>{% endif %}
+            <img width="0"
+                 height="0"
+                 class="rounded-md"
+                 src="{{ comic.comic.comicitems.all.first.image.url }}"
+                 alt="{{ comic.comic.title }}"
+                 style="color: transparent;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center top" />
+            <div class="absolute bottom-[0px] left-[5px] mb-[5px] flex justify-center rounded-[3px] bg-[#a12e24] text-white">
+              <span class="px-[7px] py-[2px] text-[10px] font-bold">{{ comic.comic.type.name }}</span>
+            </div>
+          </div>
+          <div class="block h-auto w-[100%] items-center"
+               style="font-size: 13.3px;
+                      margin: 8px 0px 5px;
+                      font-weight: 500;
+                      line-height: 19px;
+                      text-align: left;
+                      overflow: hidden">
+            <span class="block text-[13.3px] font-bold">{{ comic.comic.title }}</span>
+            {% with chapters=comic.comic.comicchapters.all %}
+              {% for chapter in chapters|slice:":1" %}<span class="text-[13px] text-[#999]">{{ chapter.name }}</span>{% endfor %}
+            {% endwith %}
+            {% include "partials/pages/series/rating.html" with comic=comic.comic %}
+          </div>
+        </div>
+      </div>
+    </a>
+  {% empty %}
+    <div class="ml-3 text-xs text-red-400">
+      <p>No Series Available!!!</p>
+    </div>
+  {% endfor %}
+</form>

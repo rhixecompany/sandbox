@@ -1,0 +1,24 @@
+{% load static i18n %}
+
+<!-- images -->
+<div class="py-8 -mx-5 md:mx-0 flex flex-col items-center justify-center">
+    <div class="w-full relative sm:max-w-60"></div>
+    <div>
+        {% with pages=object.get_chapter_images_children %}
+            {% for page in pages %}
+                <div class="w-full mx-auto center">
+                    <img src="{{ page.image.url }}"
+                         class="object-cover mx-auto"
+                         alt="chapter page {{ forloop.counter }}"
+                         decoding="async"
+                         fetchpriority="high"
+                         loading="eager" />
+                </div>
+            {% empty %}
+                <div class="ms-3 text-sm font-medium">
+                    <span>{% translate "No Images Found" %}</span>
+                </div>
+            {% endfor %}
+        {% endwith %}
+    </div>
+</div>

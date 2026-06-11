@@ -1,0 +1,61 @@
+{
+  "project": "rhixecompany-comics",
+  "generatedAt": "2026-05-29T19:02:34WCAST",
+  "sourceFiles": {
+    "AGENTS.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\AGENTS.md",
+    "README.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\README.md",
+    "RESEARCH_REPORT.md": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\RESEARCH_REPORT.md",
+    "backend/requirements.txt": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\backend\\requirements.txt",
+    "backend/manage.py": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\backend\\manage.py",
+    "backend/config/settings.py": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\backend\\config\\settings.py",
+    "frontend/package.json": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\package.json",
+    "frontend/src/app/layout.tsx": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\src\\app\\layout.tsx",
+    "frontend/src/app/page.tsx": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\src\\app\\page.tsx",
+    "frontend/src/app/globals.css": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\src\\app\\globals.css",
+    "frontend/next.config.ts": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\next.config.ts",
+    "frontend/next-env.d.ts": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\next-env.d.ts",
+    "frontend/tsconfig.json": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\tsconfig.json"
+  },
+  "artifacts": [
+    {
+      "file": "technology-stack.md",
+      "status": "created"
+    },
+    {
+      "file": "folder-structure.md",
+      "status": "created"
+    },
+    {
+      "file": "architecture.md",
+      "status": "created"
+    },
+    {
+      "file": "project-workflow.md",
+      "status": "created"
+    },
+    {
+      "file": "code-exemplars.md",
+      "status": "created"
+    },
+    {
+      "file": "copilot-instructions.md",
+      "status": "created"
+    },
+    {
+      "file": "README.md",
+      "status": "created"
+    },
+    {
+      "file": "cross-linking-report.md",
+      "status": "created"
+    },
+    {
+      "file": "validation-report.md",
+      "status": "created"
+    },
+    {
+      "file": "execution-summary.md",
+      "status": "created"
+    }
+  ]
+}
