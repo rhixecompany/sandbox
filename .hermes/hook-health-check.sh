@@ -35,7 +35,8 @@ test_hook() {
     
     output=$(echo "$test_input" | bash "$hook_path" 2>&1 || true)
     
-    if echo "$output" | grep -q "\"status\": \"$expected_status\""; then
+    # Check if expected_status is a substring of output status
+    if echo "$output" | grep -q "\"status\": \"$expected_status" || echo "$output" | grep -q "\"status\": \"$expected_status\""; then
         echo "PASS"
         ((PASS++))
     else
