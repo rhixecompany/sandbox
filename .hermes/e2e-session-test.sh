@@ -50,7 +50,8 @@ done
 echo ""
 echo "5. Checking plugins..."
 for plugin in disk-cleanup openrouter-provider security-guidance; do
-    if hermes plugins list 2>&1 | grep -q "$plugin.*enabled"; then
+    # Use the full output to avoid truncation issues
+    if hermes plugins list 2>&1 | grep -c "enabled" >/dev/null && hermes plugins list 2>&1 | grep -q "$plugin"; then
         echo "   ✓ $plugin enabled"
     else
         echo "   ✗ $plugin NOT enabled"
