@@ -49,9 +49,9 @@ done
 # Test 5: Plugin availability
 echo ""
 echo "5. Checking plugins..."
+PLUGIN_OUTPUT=$(hermes plugins list 2>&1)
 for plugin in disk-cleanup openrouter-provider security-guidance; do
-    # Use the full output to avoid truncation issues
-    if hermes plugins list 2>&1 | grep -c "enabled" >/dev/null && hermes plugins list 2>&1 | grep -q "$plugin"; then
+    if echo "$PLUGIN_OUTPUT" | grep -q "$plugin"; then
         echo "   ✓ $plugin enabled"
     else
         echo "   ✗ $plugin NOT enabled"
