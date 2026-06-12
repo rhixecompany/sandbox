@@ -16,6 +16,7 @@ Next.js 15 comic streaming frontend with Prisma and Stripe.
 - API routes in `src/app/api/`
 - Prisma schema in `prisma/schema.prisma`
 - Stripe webhooks for subscriptions
+- Package manager: `pnpm`; lockfile: `pnpm-lock.yaml`; runtime: Node 18+
 
 ## Commands
 ```bash

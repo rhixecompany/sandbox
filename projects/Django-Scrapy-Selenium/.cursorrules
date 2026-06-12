@@ -10,3 +10,6 @@ lint = pnpm lint
 test = pnpm test
 format = pnpm format
 type-check = pnpm type-check
+
+[quality]
+pre_commit = pnpm validate

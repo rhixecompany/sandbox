@@ -16,6 +16,7 @@ Next.js 16 fintech banking application with Plaid/Dwolla integration.
 - API routes in `src/app/api/`
 - Database schema in `src/db/schema.ts`
 - Environment variables in `.env.local` (never commit)
+- Package manager: `bun`; lockfile: `bun.lock`; runtime: Node 18+
 
 ## Commands
 ```bash
