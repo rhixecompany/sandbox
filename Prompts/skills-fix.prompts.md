@@ -26,6 +26,10 @@ dependencies:
   - tool:write_file
   - tool:execute_code
 skills:
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
   - using-superpowers — Establish session context and tool availability
   - brainstorming — Explore audit strategies and issue classification
   - plans-and-specs — Create remediation plan with fix specifications
@@ -34,8 +38,7 @@ skills:
   - systematic-debugging — Identify formatting, content, and structural issues
   - simplify — Consolidate redundant skill documentation
   - skill-judge — Evaluate and score skills against quality criteria
-  - skill-creator — Author, scaffold, and validate in-repo skills
----
+  - skill-creator — Author, scaffold, and validate in-repo skills---
 
 ## Goal
 

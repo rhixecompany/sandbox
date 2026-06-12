@@ -1,0 +1,92 @@
+{
+  "accelerate": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/accelerate_deep_audit.log"
+  },
+  "hyperframes": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/hyperframes_deep_audit.log"
+  },
+  "hyperliquid": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/hyperliquid_deep_audit.log"
+  },
+  "minecraft-modpack-server": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/minecraft-modpack-server_deep_audit.log"
+  },
+  "pytorch-fsdp": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/pytorch-fsdp_deep_audit.log"
+  },
+  "qdrant": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/qdrant_deep_audit.log"
+  },
+  "solana": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/solana_deep_audit.log"
+  },
+  "telephony": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/telephony_deep_audit.log"
+  },
+  "whisper": {
+    "exit_code": 0,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "log_path": ".hermes/results/deep/whisper_deep_audit.log"
+  }
+}

@@ -18,22 +18,22 @@ dependencies:
     - tool:terminal
     - tool:search_files
 skills:
-    - prompt:context-map — Map impacted files and dependencies before edits
-    - brainstorming — Explore agent discovery and sync approaches
-    - plans-and-specs — Create structured plans for agent migration and
-      deduplication
-    - dispatching-parallel-agents — Scan agents in parallel across platforms
-    - subagent-driven-development — Delegate per-agent debugging tasks
-    - systematic-debugging — Identify formatting, content, and registration issues
-    - simplify — Remove duplicate agent definitions
-    - acpx-executor — Execute a prompt via any ACPX provider
-    - copilot-cli — Use Copilot CLI for quick validation and verification
----
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
+    - brainstorming
+    - plans-and-specs
+    - dispatching-parallel-agents
+    - subagent-driven-development
+    - systematic-debugging
+    - simplify
+    - acpx-executor
+    - copilot-cli---
 
 ## Goal
 
-Sync agent definitions across Hermes, and Copilot without losing
-schema fidelity or registration details.
+Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
 
 ## Context
 

@@ -1,9 +1,0 @@
-{
-  "last_report_path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\curator\\20260604-120028",
-  "last_run_at": "2026-06-04T12:00:28.234110+00:00",
-  "last_run_duration_seconds": 55.378938,
-  "last_run_summary": "auto: no changes; llm: API call failed after 3 retries: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day",
-  "last_run_summary_shown_at": "2026-06-04T12:00:28.234110+00:00",
-  "paused": false,
-  "run_count": 1
-}

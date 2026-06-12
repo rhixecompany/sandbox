@@ -27,14 +27,17 @@ dependencies:
   - tool:write_file
   - tool:search_files
 skills:
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
   - plans-and-specs — Phase planning and spec tracking
   - systematic-debugging — Diagnose repo state issues
   - git-helper — Branch operations, commit, push
   - github-repo-management — Clone, remote, release management
   - github-pr-workflow — PR lifecycle for migration changes
   - finishing-a-development-branch — Pre-merge checklist
-  - workspace-audit — Multi-repo batch scanning
----
+  - workspace-audit — Multi-repo batch scanning---
 
 ## CRITICAL RULES
 

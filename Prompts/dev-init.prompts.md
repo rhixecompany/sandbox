@@ -20,21 +20,23 @@ dependencies:
     - skill:executing-plans
     - skill:simplify
 skills:
-    - prompt:context-map — Map source, destination, and dependency impact before
-      conversion
-    - convert-plaintext-to-md — Convert plaintext prompts to markdown
-    - boost-prompt — Improve prompt quality and structure
-    - ai-prompt-engineering-safety-review — Review prompts for safety and clarity
-    - update-implementation-plan — Track the plan that drives the prompt refresh
-    - prompt-builder — Scaffold new prompt files
-    - brainstorming — Explore conversion and enhancement approaches
-    - plans-and-specs — Create detailed specs with file references
-    - writing-skills — Craft and optimize prompts and instructions
-    - writing-plans — Structure the plan and its sections
-    - acpx-executor — Execute a prompt via any ACPX provider
-    - executing-plans — Execute written implementation plans in isolated steps
-    - simplify — Keep the output concise and non-redundant
----
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
+    - context-map
+    - convert-plaintext-to-md
+    - boost-prompt
+    - ai-prompt-engineering-safety-review
+    - update-implementation-plan
+    - prompt-builder
+    - brainstorming
+    - plans-and-specs
+    - writing-skills
+    - writing-plans
+    - acpx-executor
+    - executing-plans
+    - simplify---
 
 > Create a detailed prompt-library plan with file references, conversion steps,
 > and verification criteria.
@@ -123,12 +125,16 @@ preserved.
 ### Phase 3: Plan audits and fixes
 
 Specify how to audit `boost-prompt`, `ai-prompt-engineering-safety-review`,
-`update-implementation-plan`, and `prompt-builder`.
+`update-implementation-plan`, and `prompt-builder` with concrete findings.
 
 ### Phase 4: Review and hand off
 
 Produce a compact completion report with execution steps, risk notes, and exit
 criteria.
+
+### Phase 5: Execute Implementation Plan
+
+Run the conversion and enhancement pipeline end-to-end. Idempotent — safe to re-run.
 
 ## Steps
 

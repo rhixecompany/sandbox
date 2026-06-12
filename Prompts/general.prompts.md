@@ -23,18 +23,21 @@ dependencies:
     - tool:web_search
     - tool:delegate_task
 skills:
-    - prompt:context-map — Map impacted files and dependencies before changes (loaded as prompt dependency)
-    - brainstorming — Explore approaches before implementation
-    - plans-and-specs — Create structured plans and specs
-    - dispatching-parallel-agents — Run parallel automation tasks
-    - subagent-driven-development — Delegate independent subtasks
-    - systematic-debugging — Isolate and fix issues methodically
-    - simplify — Remove unnecessary complexity
-    - context7 — Query codebase-aware documentation and examples
-    - plan — Write or update a plan before coding
-    - writing-skills — Improve prompts and instructions
-    - acpx-executor — Dispatch tasks to ACPX providers
----
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
+    - context-map
+    - brainstorming
+    - plans-and-specs
+    - dispatching-parallel-agents
+    - subagent-driven-development
+    - systematic-debugging
+    - simplify
+    - context7
+    - plan
+    - writing-skills
+    - acpx-executor---
 
 > General development workflow with planning, automation, and verification.
 

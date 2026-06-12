@@ -1,32 +1,5 @@
 {
-  "hooks": {
-    "on_session_start": [
-      {
-        "type": "command",
-        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/log-session-start.sh",
-        "cwd": ".",
-        "timeoutSec": 5
-      }
-    ],
-    "on_session_end": [
-      {
-        "type": "command",
-        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/log-session-end.sh",
-        "cwd": ".",
-        "timeoutSec": 5
-      }
-    ],
-    "pre_llm_call": [
-      {
-        "type": "command",
-        "bash": "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/log-prompt.sh",
-        "cwd": ".",
-        "env": {
-          "LOG_LEVEL": "INFO"
-        },
-        "timeoutSec": 5
-      }
-    ]
-  },
-  "version": 1
+  "name": "session-logger",
+  "events": ["on_session_start","on_session_end","pre_llm_call"],
+  "script": "log-session-start.sh"
 }

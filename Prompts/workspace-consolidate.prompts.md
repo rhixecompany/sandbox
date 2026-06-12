@@ -20,6 +20,10 @@ dependencies:
     - tool:terminal
     - tool:search_files
 skills:
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
     - prompt:context-map — Build dependency and file context before
       consolidation edits
     - brainstorming — Explore consolidation strategies
@@ -32,8 +36,7 @@ skills:
     - git-patch-management — Manage Git patch files across multi-project
       workspaces
     - project-consolidation — Five-phase workflow for cleaning up and
-      restructuring a project
----
+      restructuring a project---
 
 ## Goal
 

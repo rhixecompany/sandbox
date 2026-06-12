@@ -1,0 +1,109 @@
+  CRITICAL persistence    SKILL.md:38                    "Add to 
+  CRITICAL supply_chain   references\cli-docs.md:9       "- macOS/Linux: `curl 
+  CRITICAL supply_chain   references\other.md:310        "curl -LsSf 
+  CRITICAL exfiltration   SKILL.md:74                    "curl -s -H 
+  CRITICAL exfiltration   SKILL.md:78                    "curl -s -H 
+  CRITICAL exfiltration   scripts\canvas_api.py:19       "CANVAS_API_TOKEN = 
+  CRITICAL injection      SKILL.md:164                   "reject phrases like 
+  CRITICAL exfiltration   scripts\parrot_openrouter.py:39 "key = 
+  CRITICAL exfiltration   templates\custom_problem_template.py:47 "key = 
+  CRITICAL exfiltration   SKILL.md:255                   "| Permission denied 
+  CRITICAL persistence    SKILL.md:175                   "- configure the 
+  CRITICAL persistence    SKILL.md:296                   "The server-building 
+  CRITICAL exfiltration   templates\api_wrapper.py:13    "API_TOKEN = 
+  CRITICAL exfiltration   SKILL.md:173                   "curl -s 
+  CRITICAL exfiltration   SKILL.md:194                   "curl -s 
+  CRITICAL exfiltration   scripts\nutrition_search.py:20 "API_KEY = 
+  CRITICAL obfuscation    scripts\nutrition_search.py:8  "echo -e 
+  CRITICAL persistence    SKILL.md:201                   "- **The web UI does 
+  CRITICAL supply_chain   SKILL.md:37                    "- The official 
+  CRITICAL persistence    SKILL.md:49                    "- **Claude Code / 
+  CRITICAL persistence    SKILL.md:50                    "`CLAUDE.md`, 
+  CRITICAL persistence    SKILL.md:51                    "`AGENTS.md` family. 
+  CRITICAL exfiltration   scripts\publish.sh:95          "API_KEY=$(cat 
+  CRITICAL privilege_escalation SKILL.md:52                    "│   │   ├── run
+  CRITICAL privilege_escalation SKILL.md:69                    "| 
+  CRITICAL privilege_escalation SKILL.md:84                    "So we use the 
+  CRITICAL privilege_escalation SKILL.md:126                   "2. Drop to 
+  CRITICAL privilege_escalation SKILL.md:153                   "The cont-init 
+  CRITICAL persistence    SKILL.md:392                   "Run `hermes honcho 
+hyperframes@latest failed.""
+  CRITICAL supply_chain   SKILL.md:40                    "curl -fsSL 
+  CRITICAL supply_chain   references\authentication.md:6 "curl -fsSL 
+  CRITICAL supply_chain   references\authentication.md:44 "curl -fsSL 
+  CRITICAL destructive    references\cli-reference.md:78 "infsh completion bash
+  CRITICAL supply_chain   references\cli-reference.md:6  "curl -fsSL 
+  CRITICAL exfiltration   SKILL.md:225                   "curl -u 
+  CRITICAL exfiltration   SKILL.md:232                   "curl -u 
+  CRITICAL exfiltration   SKILL.md:245                   "curl -u 
+  CRITICAL persistence    SKILL.md:309                   "echo 'ssh-rsa 
+  CRITICAL persistence    references\advanced-usage.md:578 "# Update 
+  CRITICAL persistence    references\advanced-usage.md:579 "ssh ubuntu@<IP> 
+  CRITICAL exfiltration   references\troubleshooting.md:12 "curl -u 
+  CRITICAL exfiltration   references\troubleshooting.md:50 "curl -u 
+  CRITICAL exfiltration   references\troubleshooting.md:82 "curl -u 
+  CRITICAL exfiltration   references\troubleshooting.md:479 "curl -u 
+  CRITICAL persistence    references\troubleshooting.md:102 "# Check 
+  CRITICAL persistence    references\troubleshooting.md:103 "cat 
+  CRITICAL exfiltration   references\troubleshooting.md:371 "value = 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:1148 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:1335 "# OpenClaw's 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:419 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:420 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:2949 ""- Review 
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:3116 "print("    1. 
+  CRITICAL exfiltration   scripts\fetch_courtlistener.py:130 
+  CRITICAL exfiltration   scripts\fetch_opencorporates.py:176 
+  CRITICAL exfiltration   scripts\fetch_senate_ld.py:127 
+  CRITICAL supply_chain   references\recovery-techniques.md:89 "curl -s 
+  CRITICAL supply_chain   references\recovery-techniques.md:97 "curl -s 
+  CRITICAL supply_chain   references\recovery-techniques.md:130 "curl -s 
+  CRITICAL traversal      templates\malicious-package-report.md:17 "- 
+  CRITICAL supply_chain   SKILL.md:67                    "curl -fsSL 
+  CRITICAL exfiltration   SKILL.md:268                   "curl -s 
+  CRITICAL persistence    SKILL.md:229                   "Add to 
+  CRITICAL exfiltration   SKILL.md:156                   "terminal('curl -s -o 
+  CRITICAL exfiltration   SKILL.md:366                   "TOKEN    = 
+  CRITICAL supply_chain   SKILL.md:61                    "terminal('curl -s 
+  CRITICAL persistence    SKILL.md:290                   "# In 
+  CRITICAL exfiltration   scripts\stocks_client.py:247   "key = 
+  CRITICAL exfiltration   scripts\stocks_client.py:381   "av_key = 
+  CRITICAL supply_chain   references\llms-full.md:7590   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:7843   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:8062   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:8385   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:8708   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:8929   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:9277   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:9557   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:9625   "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:10012  "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:10312  "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:12256  "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:13658  "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:14275  "curl -fsSL 
+  CRITICAL supply_chain   references\llms-full.md:15729  "curl -LsSf 
+  CRITICAL supply_chain   references\llms-txt.md:188     "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:1263    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:3543    "curl -LsSf 
+  CRITICAL supply_chain   references\llms-txt.md:3754    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:3975    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:4475    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:4594    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:5291    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:5927    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:7141    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:7814    "curl -fsSL 
+  CRITICAL supply_chain   references\llms-txt.md:11481   "curl -fsSL 
+"os.environ["UNSLOTH_WARN_UNINITIALIZED"] = '0'"
+"os.environ["UNSLOTH_WARN_UNINITIALIZED"] = '0'"
+  CRITICAL exfiltration   scripts\watch_github.py:118    "token = 
+  CRITICAL destructive    SKILL.md:69                    "filesystem-write 
+  CRITICAL persistence    SKILL.md:83                    "in 
+  CRITICAL traversal      references\bypass-techniques.md:44 "- Null byte 
+  CRITICAL traversal      references\bypass-techniques.md:46 "- Absolute path: 
+  CRITICAL traversal      references\bypass-techniques.md:50 "- Try ending the 
+  CRITICAL traversal      references\exploitation-techniques.md:36 "Witness: 
+  CRITICAL exfiltration   scripts\recon-scan.sh:46       "echo "Could not parse
+  CRITICAL exfiltration   scripts\recon-scan.sh:81       "echo "Host '$HOST' is
+  CRITICAL exfiltration   scripts\recon-scan.sh:88       "echo " 

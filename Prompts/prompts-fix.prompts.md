@@ -1,7 +1,7 @@
 ---
 title: prompts Sync and Deduplication
 trigger: /prompts-fix
-description: Sync and deduplicate prompt prompts across Hermes, and Copilot with
+description: Sync and deduplicate prompt files across Hermes and Copilot with
     dependency mapping and platform-specific validation.
 tags: [hermes, copilot, prompts, sync]
 dependencies:
@@ -19,22 +19,23 @@ dependencies:
     - tool:terminal
     - tool:search_files
 skills:
-    - prompt:context-map — Map impacted files and dependencies before edits
-    - brainstorming — Explore prompt discovery and sync approaches
-    - plans-and-specs — Create structured plans for prompt migration and
-      deduplication
-    - dispatching-parallel-agents — Scan prompts in parallel across platforms
-    - subagent-driven-development — Delegate per-prompt debugging tasks
-    - systematic-debugging — Identify formatting, content, and registration issues
-    - simplify — Remove duplicate prompt definitions
-    - acpx-executor — Execute a prompt via any ACPX provider
-    - hermes-agent — Configure or extend Hermes Agent when needed
-    - copilot-cli — Use Copilot CLI for quick validation and verification
----
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
+    - brainstorming
+    - plans-and-specs
+    - dispatching-parallel-agents
+    - subagent-driven-development
+    - systematic-debugging
+    - simplify
+    - acpx-executor
+    - hermes-agent
+    - copilot-cli---
 
 ## Goal
 
-Sync prompt prompts across Hermes, and Copilot without losing trigger
+Sync prompt files across Hermes and Copilot without losing trigger
 names or platform-specific behavior.
 
 ## Context

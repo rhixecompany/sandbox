@@ -1,1 +1,0 @@
-brainstorming plans-and-specs  dispatching-parallel-agents subagent-driven-development  systematic-debugging  simplify  for syncing all prompts from  opencode, hermes and copilot

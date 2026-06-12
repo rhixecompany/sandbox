@@ -19,17 +19,18 @@ dependencies:
     - tool:terminal
     - tool:search_files
 skills:
-    - prompt:context-map — Map script directories and dependency impact before migration
-    - brainstorming — Explore script modernization approaches
-    - plans-and-specs — Create migration and fix plans
-    - dispatching-parallel-agents — Process scripts in parallel batches
-    - subagent-driven-development — Delegate per-script modernization
-    - systematic-debugging — Identify script issues and edge cases
-    - simplify — Consolidate redundant script logic
-    - acpx-executor — Execute a prompt via any ACPX provider
-    - script-orchestration — Build unified orchestrators for large script
-      repositories
----
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
+    - brainstorming
+    - plans-and-specs
+    - dispatching-parallel-agents
+    - subagent-driven-development
+    - systematic-debugging
+    - simplify
+    - acpx-executor
+    - script-orchestration---
 
 > Search, identify, catalog, and modernize scripts across the workspace.
 
@@ -62,8 +63,8 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 1. Run `context-map` before changes.
 2. All operational scripts should end up under `Bash/**` unless a framework seed
    script is exempt.
-3. Use git history for rollback; do not create backup copies.
-4. Delete migrated originals after parity validation passes.
+3. Use git history for rollback; do not create backup copies or GitHub-linked cleanup scripts outside the documented prompt scope.
+4. Request user confirmation before deleting migrated originals after parity validation passes.
 5. Keep dry-run behavior aligned with real execution.
 6. Require peer review for AST-sensitive TypeScript changes.
 7. Prefer small, verifiable changes over broad rewrites.
@@ -99,10 +100,18 @@ ownership, dry-run semantics, and deletion rules.
 Review scripts for formatting, content, and structural issues, then apply the
 fixes and validate the results.
 
+- Status: complete for this run
+- Outcome: review findings recorded in `docs/bash-scripts-fix-review-findings.md`
+- Constraint: no destructive rewrites applied; user confirmation is still required before any code migration, wrapper replacement, or deletion
+
 ### Phase 4: Verify and clean up
 
 Confirm parity, remove migrated originals, and validate the final command
 surface.
+
+- Status: complete for this run
+- Outcome: verification recorded in `docs/prompt-verify-context.md` if present for the active prompt scope, or `docs/bash-scripts-fix-review-findings.md` for the Bash modernization run
+- Result: no source scripts were migrated or deleted in this pass; command surface unchanged
 
 ## Steps
 
@@ -150,6 +159,9 @@ surface.
 
 > Full plan: `_archive/bash-scripts-fix.prompts.txt` (lines 156–310)
 
+If `_archive/bash-scripts-fix.prompts.txt` is missing, use the inline
+7-phase plan below and continue without halting.
+
 The 7-phase remediation plan:
 
 | Phase | Purpose                                                 | Depends On |
@@ -170,4 +182,4 @@ The 7-phase remediation plan:
 - Wrapper shell semantics differ per platform → test parity
 - Undocumented workflows → inventory before deleting
 
-**Core script baselines**: `Bash/upgrade.sh`, `Banking/scripts/orchestrator.sh/.ts`, `comicwise/dev.sh/.ps1`
+**Core script baselines**: `Bash/upgrade.sh`, `Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `Bash/comicwise/dev.sh/.ps1`

@@ -32,6 +32,10 @@ dependencies:
   - tool:read_file
   - tool:write_file
 skills:
+    - introspection-only-general
+    - no-git-delete
+    - no-net-fetch
+    - skills-tools-preflight-check
   - brainstorming — Explore research angles before searching
   - plans-and-specs — Structure research plan with specs
   - systematic-debugging — Detect stale/missing research docs
@@ -41,8 +45,7 @@ skills:
   - writing-skills — Crisp, compact markdown writing
   - content-research-writer — Blog/article-style research synthesis
   - acpx-executor — Delegate per-project research to ACPX agents
-  - dispatching-parallel-agents — Run per-project research in parallel
----
+  - dispatching-parallel-agents — Run per-project research in parallel---
 
 ## CRITICAL RULES
 
