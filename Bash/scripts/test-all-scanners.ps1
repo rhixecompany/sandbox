@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# Test script for Invoke-AllScanners orchestrator
 # Tests multi-manager detection and scanning
 

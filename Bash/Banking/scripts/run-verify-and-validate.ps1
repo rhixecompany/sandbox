@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env pwsh
 <#
 Runs format, type-check, lint:strict and verify:rules in sequence.

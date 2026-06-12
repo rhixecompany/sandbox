@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿#!/usr/bin/env pwsh
 # opencode-plugin-repair - PowerShell Orchestrator
 # Pure orchestrator: delegates all logic to TypeScript implementation

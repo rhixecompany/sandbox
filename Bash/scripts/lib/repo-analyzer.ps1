@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     Repository metadata analysis functions

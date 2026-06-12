@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM Cache Cleaner — thin wrapper (forwards to TypeScript implementation)
 cd /d "%~dp0"

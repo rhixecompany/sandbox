@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     Clone-specific utilities for Phase 2

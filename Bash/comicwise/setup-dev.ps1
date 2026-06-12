@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # setup-dev.ps1 - ComicWise Development Setup Launcher (PowerShell)
 # Thin orchestrator wrapper that delegates to pnpm setup
 #

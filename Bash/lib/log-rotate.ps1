@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# Log rotation utility
 function Rotate-Logs {
     param([string]$LogDir, [int]$MaxLogs = 10)

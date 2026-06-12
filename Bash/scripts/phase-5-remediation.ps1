@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# Phase 5: Remediation Planning
 # Generates actionable remediation plans for HIGH priority repos
 

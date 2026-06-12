@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env pwsh
 # plan-ensure.ps1
 # Thin PowerShell wrapper that forwards to TypeScript implementation

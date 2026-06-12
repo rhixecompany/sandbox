@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# ==============================================================================
 # Native PowerShell Package Manager Upgrade Script
 # Version: 3.0.0

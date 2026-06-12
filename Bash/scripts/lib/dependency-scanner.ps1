@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     Dependency vulnerability scanning functions

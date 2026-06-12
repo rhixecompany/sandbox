@@ -2,13 +2,22 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SCRIPTS_DIR="${ROOT}/Bash"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SCRIPTS_DIR="${ROOT}"
+
 FAIL=0
 MISSING_MARKERS=()
+SELF="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
 
-# Find candidate scripts (.sh, .ps1, .bat, .js, .ts) under Bash that likely perform side effects.
-mapfile -t candidates < <(grep -RIl --exclude-dir=logs --exclude-dir=.lintstagedrc.ts --exclude-dir=archive --exclude="*.log" -e "rm -f\|rm -rf\|git push\|npm publish\|bun publish\|docker\|scp\|mv \|cp \|chown \|chmod " "${SCRIPTS_DIR}" || true)
+# Limit candidates to likely executable scripts only to avoid scanning docs/docs/tests/lock files.
+mapfile -t candidates < <(find "${SCRIPTS_DIR}" -type f \( -name '*.sh' -o -name '*.ps1' -o -name '*.bat' -o -name '*.ts' -o -name '*.js' \) \
+  ! -path "${SCRIPTS_DIR}/tests/*" \
+  ! -path "${SCRIPTS_DIR}/docs/*" \
+  ! -path "${SCRIPTS_DIR}/logs/*" \
+  ! -path "${SCRIPTS_DIR}/node_modules/*" \
+  ! -path "${SCRIPTS_DIR}/.git/*" \
+  ! -path "${SCRIPTS_DIR}/archive/*" \
+  2>/dev/null | grep -v "^${SELF}\$" || true)
 
 # For each candidate, check for DRY_RUN_SUPPORT marker and attempt dry-run invocation if supported
 for f in "${candidates[@]}"; do

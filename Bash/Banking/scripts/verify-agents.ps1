@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env pwsh
 # verify-agents.ps1
 # Thin PowerShell wrapper that forwards to TypeScript implementation

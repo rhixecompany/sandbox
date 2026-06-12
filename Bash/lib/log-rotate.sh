@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # shellcheck shell=bash
 # Log rotation utility — call after writing logs

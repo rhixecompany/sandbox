@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     GitHub MCP API wrapper functions

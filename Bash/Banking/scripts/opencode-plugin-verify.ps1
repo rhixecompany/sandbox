@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿#!/usr/bin/env pwsh
 # opencode-plugin-verify - PowerShell Orchestrator
 # Calls TypeScript implementation for plugin verification

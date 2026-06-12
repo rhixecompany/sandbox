@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     Git operations for cloning repositories

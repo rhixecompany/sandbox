@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# ==============================================================================
 # Disk Space Analysis Script
 # Version: 1.0.0

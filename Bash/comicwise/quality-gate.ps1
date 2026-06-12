@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # quality-gate.ps1 - ComicWise Quality Gate Runner (PowerShell)
 # Thin orchestrator wrapper that delegates to pnpm quality:gate:sh
 #

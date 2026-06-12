@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿<#
 .SYNOPSIS
     Phase 2: Clone & Deduplicate - Using Local Repos

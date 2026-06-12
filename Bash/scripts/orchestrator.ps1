@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿#!/usr/bin/env pwsh
 
 <#
@@ -26,7 +27,6 @@ param(
     [switch]$SkipPhase5
 )
 
-# DRY_RUN_SUPPORT=true
 # Support DryRun via env or --dry-run switch
 param(
     [switch]$DryRun

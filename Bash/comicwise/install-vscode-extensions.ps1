@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # install-vscode-extensions.ps1 - ComicWise VSCode Extensions Manager (PowerShell)
 # Installs recommended, removes unwanted, idempotent
 #

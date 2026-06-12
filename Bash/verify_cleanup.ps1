@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# ==============================================================================
 # Cleanup Verification Script
 # Version: 1.0.0

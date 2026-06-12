@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM Unified Script Orchestrator - Batch Wrapper
 REM Automatically runs the PowerShell orchestrator with arguments

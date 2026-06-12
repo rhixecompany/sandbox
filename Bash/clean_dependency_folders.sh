@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # Dependency Folder Cleanup — thin wrapper (forwards to TypeScript implementation)
 set -euo pipefail

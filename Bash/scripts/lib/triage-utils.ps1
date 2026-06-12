@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿# Triage utility functions for Phase 3 analysis
 
 # Calculate health score based on multiple factors

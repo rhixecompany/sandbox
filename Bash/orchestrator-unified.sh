@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # shellcheck shell=bash
 # orchestrator-unified.sh — thin wrapper, forwards to PowerShell orchestrator

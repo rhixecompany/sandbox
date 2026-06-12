@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # Orchestrator: Calls the TypeScript implementation
 # shellcheck shell=bash

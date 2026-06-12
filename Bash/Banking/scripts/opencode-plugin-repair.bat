@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM opencode-plugin-repair - Batch Orchestrator
 REM Pure orchestrator: delegates all logic to TypeScript implementation

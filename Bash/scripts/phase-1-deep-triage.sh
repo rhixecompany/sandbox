@@ -1,7 +1,7 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # shellcheck shell=bash
 
-# DRY_RUN_SUPPORT=true
 # Minimal dry-run handling: set DRY_RUN=true via env or --dry-run flag
 DRY_RUN=${DRY_RUN:-false}
 for arg in "$@"; do

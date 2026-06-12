@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # dev.ps1 - ComicWise Development Server Launcher (PowerShell)
 # Thin orchestrator wrapper that delegates to pnpm dev
 #

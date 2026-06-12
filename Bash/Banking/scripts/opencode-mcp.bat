@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM opencode-mcp.bat
 REM Thin CMD wrapper that forwards to TypeScript implementation

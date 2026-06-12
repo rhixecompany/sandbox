@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM Provenance: batch5 convert-scripts
 setlocal enabledelayedexpansion

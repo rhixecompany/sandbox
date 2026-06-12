@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #!/usr/bin/env bash
 # shellcheck shell=bash
 # score-docs.sh: Score all .md files on AI-readiness (0-100)

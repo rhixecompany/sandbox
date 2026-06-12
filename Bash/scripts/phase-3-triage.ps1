@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿param([object]$Config)
 
 

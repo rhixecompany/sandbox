@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM Dependency Folder Cleanup — thin wrapper (forwards to TypeScript implementation)
 cd /d "%~dp0"

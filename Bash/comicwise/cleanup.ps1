@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # cleanup.ps1 - ComicWise Project Cleanup Wrapper (PowerShell)
 # Thin orchestrator wrapper that delegates to pnpm cleanup:project
 #

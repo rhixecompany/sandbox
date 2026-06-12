@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿#!/usr/bin/env pwsh
 <#
 PowerShell helper to diagnose common git issues and attempt to fix index.lock

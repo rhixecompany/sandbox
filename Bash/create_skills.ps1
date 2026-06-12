@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿$skills = @(
     'agent-browser', 'algorithmic-art', 'asdf', 'banking', 'caveman', 'caveman-commit',
     'caveman-review', 'caveman-compress', 'claude-api', 'clonedeps', 'code-docs', 'codemap',

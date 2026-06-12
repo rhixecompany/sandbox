@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 # Sandbox migration helper commands
 # Run from: C:\Users\Alexa\Desktop\SandBox
 

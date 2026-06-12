@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 ﻿#!/usr/bin/env pwsh
 # scripts/phase-6-cross-ref.ps1
 # Cross-Reference Check â€” Parallel Script Drift Detection (PowerShell)

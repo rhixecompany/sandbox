@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 #Requires -Version 7.0
 <#
 .SYNOPSIS

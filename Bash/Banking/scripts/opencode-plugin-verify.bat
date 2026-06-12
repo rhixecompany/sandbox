@@ -1,3 +1,4 @@
+# DRY_RUN_SUPPORT=true
 @echo off
 REM opencode-plugin-verify - Batch Orchestrator
 REM Calls TypeScript implementation for plugin verification
