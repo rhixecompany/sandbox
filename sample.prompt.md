@@ -12,9 +12,9 @@ This prompt is a reusable template for Codex, Copilot, and Hermes. It defines a 
 
 This template is designed for multi-agent research and implementation workflows. It provides a structured approach that works across Codex (terminal commands), Copilot (workflow tools), and Hermes (CLI commands). The template preserves research targets while allowing agent-specific command syntax substitution.
 
-**Target Agents:** Codex, Copilot, Hermes  
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox`  
-**Documentation Root:** `docs/`  
+**Target Agents:** Codex, Copilot, Hermes
+**Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+**Documentation Root:** `docs/`
 **Execution Model:** Sequential phases with verification gates
 Keep the default research targets below unless the user replaces them.
 When a target depends on native agent syntax, use the active agent's
@@ -22,23 +22,23 @@ equivalent command style and preserve the order of operations.
 
 ## Template Variables
 
-| Variable | Value |
-| --- | --- |
-| `{{workspace_root}}` | `C:\\Users\\Alexa\\Desktop\\SandBox` |
-| `{{docs_root}}` | `docs/` |
-| `{{agent_name}}` | `Codex` / `Copilot` / `Hermes` |
-| `{{native_plan}}` | the active agent's planning or update command |
-| `{{native_search}}` | the active agent's search command |
+| Variable             | Value                                         |
+| -------------------- | --------------------------------------------- |
+| `{{workspace_root}}` | `C:\\Users\\Alexa\\Desktop\\SandBox`          |
+| `{{docs_root}}`      | `docs/`                                       |
+| `{{agent_name}}`     | `Codex` / `Copilot` / `Hermes`                |
+| `{{native_plan}}`    | the active agent's planning or update command |
+| `{{native_search}}`  | the active agent's search command             |
 | `{{native_extract}}` | the active agent's content extraction command |
-| `{{native_files}}` | the active agent's file read/write command |
+| `{{native_files}}`   | the active agent's file read/write command    |
 
 ## Agent Mapping
 
-| Agent | Approach |
-|-------|----------|
-| Codex | Terminal commands + workspace-local file edits |
-| Copilot | Copilot workflow tools available in the current environment |
-| Hermes | Hermes CLI commands exactly as written in the target steps |
+| Agent              | Approach                                                                    |
+| ------------------ | --------------------------------------------------------------------------- |
+| Codex              | Terminal commands + workspace-local file edits                              |
+| Copilot            | Copilot workflow tools available in the current environment                 |
+| Hermes             | Hermes CLI commands exactly as written in the target steps                  |
 | Missing capability | Use the closest safe equivalent and note the substitution before continuing |
 
 ### Command Examples
@@ -51,7 +51,7 @@ hermes profile create code-architect --clone-all
 # Use equivalent Copilot workflow tools
 
 # Hermes
-hermes skills audit
+hermes skills audit && hermes skills update
 hermes mcp install linear
 ```
 
@@ -177,13 +177,13 @@ Research and extract each page into Markdown:
 - [Event Hooks](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks)
 - [Plugins](https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins)
 
-**Generated Output:** [Phase 3 Index](../hermes/index.md) — catalog of all extracted pages
+**Generated Output:** [Phase 3 Index](./docs/hermes/index.md) — catalog of all extracted pages
 
 **Follow Core Workflow steps 3-7** for extraction, organization, planning, implementation, and verification.
 
 ### Phase 4: Profiles and Workspace Markdown
 
-**Reference:** [Phase 4 Profiles Log](../phase4-profiles-log.md) — profile creation and clone verification
+**Reference:** [Phase 4 Profiles Log](./docs/phase4-profiles-log.md) — profile creation and clone verification
 
 **Follow Core Workflow steps 1-7** for profile research, creation, verification, and debugging.
 
@@ -204,42 +204,42 @@ Research and extract each page into Markdown:
 
 ## Subagents
 
-> Research Analyst — Specialized profile for dependency scanning, batch analysis, and synthesis across Phases 1-3.  
-> Code Architect — Specialized profile for fix planning, batched application, and verification.  
+> Research Analyst — Specialized profile for dependency scanning, batch analysis, and synthesis across Phases 1-3.
+> Code Architect — Specialized profile for fix planning, batched application, and verification.
 > Exec Assistant — Orchestration profile for readiness checks and fix execution.
 
 ## Personas
 
-> **Research Analyst** — Systematic, thorough, cites sources, produces structured catalogs.  
-> **Code Architect** — Pragmatic senior engineer, prefers simple systems, pushes back on bad ideas.  
+> **Research Analyst** — Systematic, thorough, cites sources, produces structured catalogs.
+> **Code Architect** — Pragmatic senior engineer, prefers simple systems, pushes back on bad ideas.
 > **Exec Assistant** — Organized, tracks progress, ensures verification gates pass.
 
 ## Output Requirements
 
-| Requirement | Description |
-|-------------|-------------|
-| Preserve research targets | Keep the current research targets unless explicitly changed |
-| Template variables only | Change only template variables, not the workflow |
-| Markdown output | Use Markdown for extracted docs, indexes, and notes |
-| Strict sequence | plan → research → extract → plan update → implement → verify |
-| Report blockers | Clearly report if any native capability is unavailable |
+| Requirement               | Description                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| Preserve research targets | Keep the current research targets unless explicitly changed  |
+| Template variables only   | Change only template variables, not the workflow             |
+| Markdown output           | Use Markdown for extracted docs, indexes, and notes          |
+| Strict sequence           | plan → research → extract → plan update → implement → verify |
+| Report blockers           | Clearly report if any native capability is unavailable       |
 
 ## Verification Gates
 
-| Gate | Description |
-|------|-------------|
-| 1 | Research targets executed in order |
-| 2 | Extracted pages written to Markdown files |
-| 3 | Docs index lists the new files |
-| 4 | Plan updated from research output |
-| 5 | Implementation starts only after plan is current |
-| 6 | Verification runs before completion |
-| 7 | Nearest safe equivalent used for missing native capabilities |
+| Gate | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 1    | Research targets executed in order                           |
+| 2    | Extracted pages written to Markdown files                    |
+| 3    | Docs index lists the new files                               |
+| 4    | Plan updated from research output                            |
+| 5    | Implementation starts only after plan is current             |
+| 6    | Verification runs before completion                          |
+| 7    | Nearest safe equivalent used for missing native capabilities |
 
 ## Actions
 
 - `hermes profile create <name> --clone-all` — Create fully-cloned profiles
-- `hermes skills audit` — Validate skill library health
+- `hermes skills audit && hermes skills update` — Validate skill library health
 - `hermes mcp install <server>` — Install additional MCP servers
 - `web-search` / `web-extract` — Research and content extraction
 - `delegate-task` — Parallel subagent delegation
