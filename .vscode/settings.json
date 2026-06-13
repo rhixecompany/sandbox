@@ -147,7 +147,6 @@
 	"markdown.extension.list.indentationSize": "adaptive",
 	"markdown.extension.orderedList.marker": "ordered",
 	"markdown.extension.print.includeVscodeStylesheets": true,
-	"markdown.extension.toc.githubCompatibility": true,
 	"markdown.extension.toc.levels": "1..6",
 	"markdown.extension.toc.orderedList": true,
 	"markdown.extension.toc.plaintext": false,
@@ -184,18 +183,6 @@
 	"prettier.tabWidth": 2,
 	"prettier.trailingComma": "all",
 	"prettier.vueIndentScriptAndStyle": true,
-	"python-envs.alwaysUseUv": true,
-	"python-envs.autoActivate": true,
-	"python-envs.autoActivateFileInWorkspace": true,
-	"python-envs.venvFolders": [
-		".venv",
-		"env",
-		"venv",
-		".env",
-		"envs",
-		"venvs"
-	],
-	"python-envs.venvPath": "${workspaceFolder}/venv",
 	"python.analysis.aiCodeActions": {
 		"generateDocstring": true,
 		"generateSymbol": true,
@@ -212,11 +199,8 @@
 	"python.analysis.typeEvaluation.strictDictionaryInference": true,
 	"python.analysis.typeEvaluation.strictListInference": true,
 	"python.analysis.typeEvaluation.strictParameterNoneValue": true,
-	"python.analysis.typeEvaluation.strictPrimitiveInference": true,
 	"python.analysis.typeEvaluation.strictSetInference": true,
-	"python.analysis.typeEvaluation.strictStringInference": true,
-	"python.analysis.typeEvaluation.strictTupleInference": true,
-	"python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python",
+	"python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
 	"python.languageServer": "Pylance",
 	"tailwindCSS.classFunctions": [
 		"tw",
@@ -232,7 +216,7 @@
 		"scss": "scss",
 		"typescript": "tsx"
 	},
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
 	"terminal.integrated.profiles.windows": {
 		"Command Prompt": {
 			"icon": "terminal-cmd",

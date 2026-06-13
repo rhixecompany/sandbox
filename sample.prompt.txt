@@ -1,8 +1,6 @@
 ---
 title: Multi-Agent Research and Implementation Template
-description: >
-  Reusable prompt for Codex, Copilot, and Hermes. It preserves the current
-  research targets while factoring out the shared workflow.
+description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
 tags: [codex, copilot, hermes, research, planning, automation]
 mode: agent
 ---
@@ -27,26 +25,20 @@ equivalent command style and preserve the order of operations.
 ## Agent Mapping
 
 - Codex: use terminal commands and workspace-local file edits.
-- Copilot: use the equivalent Copilot workflow tools available in the current
-  environment.
+- Copilot: use the equivalent Copilot workflow tools available in the current environment.
 - Hermes: use Hermes CLI commands exactly as written in the target steps.
-- If a capability is missing, choose the closest safe equivalent and note the
-  substitution before continuing.
+- If a capability is missing, choose the closest safe equivalent and note the substitution before continuing.
 
 ## Shared Rules
 
 1. If a plan already exists, update it before starting anything else.
-2. Research first, then extract, then write docs, then plan, then implement,
-   then verify.
-3. Preserve the current research targets unless the user explicitly changes
-   them.
+2. Research first, then extract, then write docs, then plan, then implement, then verify.
+3. Preserve the current research targets unless the user explicitly changes them.
 4. Keep each stage reversible and easy to resume.
 5. Write extracted findings to Markdown under `docs/` with a clear index.
 6. Do not mark work complete until the relevant verification checks pass.
-7. If a step depends on a native agent command, use the active agent's
-   equivalent instead of forcing one syntax across all agents.
-8. Keep the prompt reusable: replace only the template variables, not the
-   workflow.
+7. If a step depends on a native agent command, use the active agent's equivalent instead of forcing one syntax across all agents.
+8. Keep the prompt reusable: replace only the template variables, not the workflow.
 
 ## Core Workflow
 
@@ -60,18 +52,17 @@ equivalent command style and preserve the order of operations.
 
 ## Default Research Targets
 
-### Target Group 1: Skills Discovery and Audit
+### Phase 1: Skills Discovery and Audit
 
 - Start with `/plan` if a plan already exists; update it.
 - Execute Hermes skills browse to list everything available.
-- Search and filter the top 50 best skills that are not already installed or
-  available.
+- Search and filter the top 50 best skills that are not already installed or available.
 - Execute Hermes skills search with the skill name to find skills by keyword.
 - Install all matching skills after a security scan.
 - Run `/skills audit`.
 - Run `/systematic-debugging` to debug and fix all issues.
 
-### Target Group 2: MCP Server and Tool Research
+### Phase 2: MCP Server and Tool Research
 
 Make comprehensive research for install, test, and verify steps for these MCP
 servers and tools:
@@ -131,7 +122,7 @@ After research:
 - Implement the plan only after the research and extraction work is complete.
 - Verify the implementation only after the plan has been executed.
 
-### Target Group 3: Hermes Docs and Ecosystem
+### Phase 3: Hermes Docs and Ecosystem
 
 Research these sources and extract each page into Markdown:
 
@@ -148,7 +139,7 @@ Research these sources and extract each page into Markdown:
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins
 
-For this target group:
+For this Phase:
 
 - Save a Markdown file for each page.
 - Format each file with clean, readable Markdown.
@@ -159,24 +150,23 @@ For this target group:
 - Implement only after the plan is ready.
 - Verify that the pages were extracted and cataloged.
 
-### Target Group 4: Profiles and Workspace Markdown
+### Phase 4: Profiles and Workspace Markdown
 
 - Research all Markdown files in `docs/*`.
 - Identify all available profiles.
 - Create profiles with `hermes profile create {profile name} --clone-all`.
-- Confirm the clones copy config, keys, `SOUL.md`, memories, skills, and
-  sessions.
+- Confirm the clones copy config, keys, `SOUL.md`, memories, skills, and sessions.
 - Install, verify, test, debug, and fix issues in each profile.
 
-### Target Group 5: Backup Hermes Inventory
+### Phase 5: Docs Inventory
 
-- Inspect `backup.hermes/*` for hooks, skills, and plugins.
+- Inspect `docs/*` for hooks, skills, and plugins.
 - Install the plugins first.
 - Verify, test, debug, and fix issues in the plugins.
 - Then verify, test, debug, and fix issues in the hooks.
 - Then verify, test, debug, and fix issues in the skills.
 
-### Target Group 6: Configuration Hierarchy Audit
+### Phase 6: Configuration Hierarchy Audit
 
 - List all hooks, tools, skills, and plugins.
 - List all MCP servers, hooks, tools, skills, and plugins.

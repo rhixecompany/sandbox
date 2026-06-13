@@ -15,10 +15,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-|---------|-----|--------------|
-| <name> | <github url> | <1-line relevance> |
-| <name> | <url> | <1-line relevance> |
+| Project | URL          | Why Relevant       |
+| ------- | ------------ | ------------------ |
+| <name>  | <github url> | <1-line relevance> |
+| <name>  | <url>        | <1-line relevance> |
 
 ---
 
@@ -33,7 +33,7 @@
 - <finding backed by search result>
 - <finding backed by search result>
 
-### <Technology / Topic>
+### <Technology / Topic> 2
 
 - <finding backed by search result>
 - <finding backed by search result>
@@ -42,10 +42,10 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-|-------|----------|------|
-| <topic> | <url> | Cheatsheet / Guide / Docs / Tutorial |
-| <topic> | <url> | Cheatsheet / Guide / Docs / Tutorial |
+| Topic   | Resource | Type                                 |
+| ------- | -------- | ------------------------------------ |
+| <topic> | <url>    | Cheatsheet / Guide / Docs / Tutorial |
+| <topic> | <url>    | Cheatsheet / Guide / Docs / Tutorial |
 
 ---
 
@@ -61,8 +61,8 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| Pitfall   | Impact   | Avoidance      |
+| --------- | -------- | -------------- |
 | <pitfall> | <impact> | <one-line fix> |
 | <pitfall> | <impact> | <one-line fix> |
 | <pitfall> | <impact> | <one-line fix> |
@@ -102,9 +102,9 @@
 
 ## Resources
 
-| Resource | URL | Description |
-|----------|-----|-------------|
-| Official Docs | <url> | <framework> official documentation |
-| Community | <url> | Forum / Discord / Reddit / GitHub Discussions |
-| Tutorial | <url> | Key tutorial or getting-started guide |
-| Cheatsheet | <url> | Quick reference card |
+| Resource      | URL   | Description                                   |
+| ------------- | ----- | --------------------------------------------- |
+| Official Docs | <url> | <framework> official documentation            |
+| Community     | <url> | Forum / Discord / Reddit / GitHub Discussions |
+| Tutorial      | <url> | Key tutorial or getting-started guide         |
+| Cheatsheet    | <url> | Quick reference card                          |
