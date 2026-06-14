@@ -1,93 +1,107 @@
-# multi-agent-research-template — Context Catalog
+# multi-agent-research-template — Dependency Context Catalog
 
-Generated: 2026-06-13 Source file: C:\Users\Alexa\Desktop\SandBox\sample.prompt.md
+**Generated:** 2026-06-14
+**Source File:** `./sample.prompt.txt`
+**Purpose:** multi-agent-research-template
 
-## Summary
+---
 
-This file is the master reusable prompt template for executing a 6-phase research and implementation workflow across Codex, Copilot, and Hermes agents. It defines template variables, agent mappings, shared rules, core workflow, and detailed research targets for Phases 1-6 covering skills audit, MCP server research, Hermes docs extraction, profile creation, docs inventory, and configuration hierarchy audit.
+## Forward Dependencies (Extracted from Source)
 
-## Forward References (this file → others)
+### Markdown Links (URLs Referenced)
+| Link Text | Target URL | Phase |
+|-----------|------------|-------|
+| `https://github.com/0xNyk/awesome-hermes-agent` | https://github.com/0xNyk/awesome-hermes-agent | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/skills` | https://hermes-agent.nousresearch.com/docs/user-guide/features/skills | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp` | https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes` | https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/personality` | https://hermes-agent.nousresearch.com/docs/user-guide/features/personality | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files` | https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/getting-started/quickstart` | https://hermes-agent.nousresearch.com/docs/getting-started/quickstart | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/guides/tips` | https://hermes-agent.nousresearch.com/docs/guides/tips | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/tools` | https://hermes-agent.nousresearch.com/docs/user-guide/features/tools | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/getting-started/learning-path` | https://hermes-agent.nousresearch.com/docs/getting-started/learning-path | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks` | https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks | Phase 3 |
+| `https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins` | https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins | Phase 3 |
 
-| Type | Reference | Path | Exists? |
-|------|-----------|------|---------|
-| Markdown link | sample.prompt.md (self) | C:\Users\Alexa\Desktop\SandBox\sample.prompt.md | ✅ |
-| Directory reference | `docs/` | C:\Users\Alexa\Desktop\SandBox\docs\ | ✅ |
-| Command trigger | `/plan` | Hermes built-in | ✅ |
-| Command trigger | `/skills browse` | Hermes built-in | ✅ |
-| Command trigger | `/skills search` | Hermes built-in | ✅ |
-| Command trigger | `/skills audit` | Hermes built-in | ✅ |
-| Command trigger | `/systematic-debugging` | Hermes skill | ✅ |
-| Command trigger | `hermes profile create` | Hermes CLI | ✅ |
-| Command trigger | `--clone-all` | Hermes CLI flag | ✅ |
-| URL | https://github.com/0xNyk/awesome-hermes-agent | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/skills | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/personality | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/getting-started/quickstart | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/guides/tips | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/tools | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/getting-started/learning-path | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks | External | ✅ |
-| URL | https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins | External | ✅ |
-| MCP Server | vitest | External | ❓ |
-| MCP Server | playwright | External | ❓ |
-| MCP Server | django | External | ❓ |
-| MCP Server | sequential-thinking | External | ❓ |
-| MCP Server | context7 | External | ❓ |
-| MCP Server | sentry | External | ❓ |
-| MCP Server | github official | External | ❓ |
-| MCP Server | gitmcp | External | ❓ |
-| MCP Server | fetch | External | ❓ |
-| MCP Server | scrapegraph | External | ❓ |
-| MCP Server | time | External | ❓ |
-| MCP Server | memory | External | ❓ |
-| MCP Server | youtube transcripts | External | ❓ |
-| MCP Server | Desktop Commander | External | ❓ |
-| MCP Server | filesystem | External | ✅ (configured) |
-| MCP Server | node.js sandbox | External | ❓ |
-| MCP Server | redis | External | ❓ |
-| MCP Server | markitdown | External | ❓ |
-| MCP Server | google maps | External | ❓ |
-| MCP Server | ast-grep | External | ✅ (configured) |
-| MCP Server | npm sentinel | External | ❓ |
-| MCP Server | sqlite | External | ❓ |
-| MCP Server | hacker news | External | ❓ |
-| MCP Server | markdownify | External | ❓ |
-| MCP Server | postman | External | ❓ |
-| MCP Server | cloud run | External | ❓ |
-| MCP Server | stripe | External | ❓ |
-| MCP Server | apify | External | ❓ |
-| MCP Server | chroma | External | ❓ |
-| MCP Server | python refactoring assistant | External | ❓ |
-| MCP Server | neo4j memory | External | ❓ |
-| MCP Server | api gateway | External | ❓ |
-| MCP Server | next.js devtools | External | ❓ |
-| MCP Server | python interpreter | External | ❓ |
-| MCP Server | gemini api docs | External | ❓ |
-| MCP Server | hostinger api | External | ❓ |
-| MCP Server | google flights | External | ❓ |
-| MCP Server | neon | External | ❓ |
-| MCP Server | shadcn | External | ❓ |
-| MCP Server | uv | External | ❓ |
-| MCP Server | linear | External | ✅ (configured) |
-| MCP Server | mcp-docker | External | ✅ (configured) |
+### @mentions
+| Mention | Context |
+|---------|---------|
+| (none found) | — |
 
-## Reverse References (others → this file)
+### /commands Referenced
+| Command | Location | Context |
+|---------|----------|---------|
+| `/plan` | Phase 1, Step 1; Core Workflow Step 1 | Update existing plan |
+| `hermes profile create {name} --clone-all` | Phase 4, Step 3 | Create profiles |
+| `hermes skills audit` | Phase 6 implications | Skills audit |
+| `hermes mcp install` | Phase 2/6 implications | MCP server installation |
 
-| Type | Source File | Reference | Context snippet |
-|------|-------------|-----------|-----------------|
-| Markdown link | docs/hermes/index.md | `[sample.prompt.md](file:///C:/Users/Alexa/Desktop/SandBox/sample.prompt.md)` | Phase 3 targets |
-| Text reference | docs/phase4-profiles-log.md | `sample.prompt.md` | Verified profile list and target profile names |
-| Text reference | docs/phase3-hermes-docs-extraction-log.md | `sample.prompt.md` | Verified target URL list from Phase 3 |
-| Text reference | docs/phase2-mcp-research-log.md | `sample.prompt.md` | Phase 2 target list inputs |
-| Text reference | docs/phase1-skills-audit-log.md | `sample.prompt.md` | Began execution against sample.prompt.md |
-| Markdown link | docs/sample-prompt-execution-index.md | `[sample.prompt.txt](../sample.prompt.txt)` | Execution index mapping targets to docs |
+### Plan Namespaces Referenced
+| Namespace | Location |
+|-----------|----------|
+| `multi-agent-research-template` | Implicit (file identity) |
+| Phase 1-6 workflow namespaces | Each phase section |
 
-## Plans & Specs (plugin system)
+### Skills Referenced (Frontmatter Tags)
+| Skill/Tag | Location |
+|-----------|----------|
+| `codex` | Frontmatter tags |
+| `copilot` | Frontmatter tags |
+| `hermes` | Frontmatter tags |
+| `research` | Frontmatter tags |
+| `planning` | Frontmatter tags |
+| `automation` | Frontmatter tags |
 
-| Namespace | Type | Status | Linked to source? |
-|-----------|------|--------|-------------------|
-| multi-agent-research-template-debug | plan | Not created | No |
-| sample-prompt-execution | spec | Exists (execution index) | Yes |
+### Template Variables
+| Variable | Value |
+|----------|-------|
+| `{{workspace_root}}` | `C:\Users\Alexa\Desktop\SandBox` |
+| `{{docs_root}}` | `docs/` |
+| `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` |
+| `{{native_plan}}` | Active agent's planning command |
+| `{{native_search}}` | Active agent's search command |
+| `{{native_extract}}` | Active agent's extraction command |
+| `{{native_files}}` | Active agent's file read/write command |
+
+### MCP Servers/Tools Listed for Research (Phase 2)
+vitest, playwright, django, sequential-thinking, context7, sentry, github official, gitmcp, fetch, scrapegraph, time, memory, youtube transcripts, Desktop Commander, filesystem, node.js sandbox, redis, sqlite, hacker news, markdownify, google maps, ast-grep, npm sentinel, postman, cloud run, stripe, apify, chroma, python refactoring assistant, neo4j memory, api gateway, next.js devtools, python interpreter, gemini api docs, hostinger api, google flights, neon, shadcn, uv, linear, mcp-docker
+
+---
+
+## Reverse Dependencies (Files Referencing This File)
+
+| Referencing File | Reference Type | Context |
+|------------------|----------------|---------|
+| `docs/sample-prompt-execution-index.md` | Markdown link + Title | Execution index mapping targets to docs |
+| `docs/multi-agent-research-template-context.md` | Context catalog | Previous enhance-markdown Phase 1 context |
+| `docs/multi-agent-research-template-issues-context.md` | Issues context | Previous enhance-markdown Phase 1 issues |
+| `docs/multi-agent-research-template-fix-issues-context.md` | Fix issues context | Previous enhance-markdown Phase 2 fix context |
+| `docs/multi-agent-research-template-verify-context.md` | Verify context | Previous enhance-markdown Phase 4 verify |
+| `thoughts/plans/multi-agent-research-template-debug.md` | Debug plan | Previous enhance-markdown Phase 2 fix plan |
+
+---
+
+## Related Artifacts (Existing — from prior enhance-markdown run)
+
+| Artifact | Type | Description |
+|----------|------|-------------|
+| `docs/sample-prompt-execution-index.md` | Execution index | Maps prompt targets to workspace docs (12 Phase 3 URLs extracted) |
+| `docs/multi-agent-research-template-context.md` | Phase 1 context | Dependency catalog from prior run |
+| `docs/multi-agent-research-template-issues-context.md` | Phase 1 issues | Audit findings from prior run |
+| `docs/multi-agent-research-template-fix-issues-context.md` | Phase 2 fix context | Fix plan + progress log from prior run |
+| `docs/multi-agent-research-template-verify-context.md` | Phase 4 verify | Verification report from prior run |
+| `thoughts/plans/multi-agent-research-template-debug.md` | Phase 2 plan | Dual-channel fix plan (Batch 1 ready, Batch 2 pending) |
+
+---
+
+## Notes
+
+- This file (`sample.prompt.txt`) is a **cross-system prompt template** for Codex, Copilot, and Hermes
+- Contains a 6-phase workflow with template variables for agent-agnostic execution
+- Phase 2 lists 50+ MCP servers/tools for research
+- Phase 3 lists 12 Hermes documentation URLs for extraction
+- Phase 4-6 cover profiles, docs inventory, and config hierarchy audit
+- Prior enhance-markdown run completed Phases 1-2 (fix plan created), Phase 3-4 not completed
+- File has YAML frontmatter but missing `name` field (has `title`, `description`, `tags`, `mode`)
+- Frontmatter uses `mode: agent` which is non-standard for Hermes prompts

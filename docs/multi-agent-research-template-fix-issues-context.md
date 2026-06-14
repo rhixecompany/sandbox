@@ -1,68 +1,90 @@
-# multi-agent-research-template — Fix Issues Context
+# multi-agent-research-template — Fix Issues Context & Progress Log
 
-**Generated:** 2026-06-13  
-**Purpose:** multi-agent-research-template  
-**Plan:** `thoughts/plans/multi-agent-research-template-debug.md`
-
----
-
-## Fix Plan Progress Log
-
-| Issue | Description | Batch | Status | Applied At | Verification |
-|-------|-------------|-------|--------|------------|--------------|
-| ISSUE-001 | Template Variables table backslash escaping | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-002 | Phase task lists → checkbox Tasks | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-003 | Phase 3 URLs → markdown links | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-004 | Phase 2 "After research" → Steps/Tasks | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-005 | Output Requirements & Verification Gates → tables | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-006 | Agent Mapping → table | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-007 | Frontmatter `agent: agent` cleanup | 1 | ✅ Done | 2026-06-13 | ✅ Pass |
-| ISSUE-008 | Deduplicate Core Workflow vs Phase steps | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
-| AI-READY-01 | Summary paragraph after frontmatter | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
-| AI-READY-02 | Language-tagged code blocks for commands | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
-| AI-READY-03 | Internal markdown links to generated docs | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
-| AI-READY-04 | Skills/Subagents/Personas sections | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
-| AI-READY-05 | 11-section cross-system template | 2 | ✅ Done | 2026-06-13 | ✅ Pass |
+**Generated:** 2026-06-14
+**Purpose:** multi-agent-research-template
+**Source Plan:** `thoughts/plans/multi-agent-research-template-debug.md`
+**Target File:** `./multi-agent-research-template.prompt.md`
 
 ---
 
-## Batch 1 & 2 Execution Log — ALL COMPLETE
+## Fix Plan Summary
 
-### Batch 1 (Proof-of-Concept Gate) — 7/7 PASS
-- ISSUE-001: Template Variables table backslash escaping
-- ISSUE-002: Phase task lists → checkbox Tasks (6 phases)
-- ISSUE-003: Phase 3 URLs → markdown links (12 URLs)
-- ISSUE-004: Phase 2 "After research" → Steps/Tasks
-- ISSUE-005: Output Requirements & Verification Gates → tables
-- ISSUE-006: Agent Mapping → table
-- ISSUE-007: Frontmatter `agent: agent` cleanup
-
-### Batch 2 (Post-PoC) — 6/6 PASS
-- ISSUE-008: Deduplicated Core Workflow vs Phase steps (Phases 3-6 now reference Core Workflow)
-- AI-READY-01: Added Context section with execution model details
-- AI-READY-02: Added language-tagged code blocks (```bash) for command examples
-- AI-READY-03: Added internal markdown links to generated docs (Phase 3 Index, Phase 4 Profiles Log)
-- AI-READY-04: Added Skills, Subagents, Personas sections per detection rules
-- AI-READY-05: Converted to 11-section cross-system template with Context, Skills, Subagents, Personas, Rules, Phases, Steps, Tasks, Actions, Output Requirements, Verification Gates
+| Batch | Issues | Status |
+|-------|--------|--------|
+| 1 (PoC) | 7 issues | ✅ Complete |
+| 2 | 7 issues | ✅ Complete |
+| 3 | 3 issues | ✅ Complete |
 
 ---
 
-## Enhancement Summary
+## Progress Log
 
-| Dimension | Before | After |
-|-----------|--------|-------|
-| YAML Frontmatter | 7/10 | ✅ 10/10 |
-| Summary/Context Paragraph | 0/10 | ✅ 10/10 |
-| Language-tagged Code Blocks | 0/10 | ✅ 10/10 (```bash) |
-| Cross-reference Resolution | 5/10 | ✅ 9/10 (internal links added) |
-| Heading Density | 7/10 | ✅ 8/10 |
-| Single Source of Truth | 6/10 | ✅ 9/10 (deduplicated) |
-| 11-Section Template | ❌ | ✅ Complete |
+### Batch 1 — Completed 2026-06-14
 
-**Overall AI-Readiness: ~9.5/10** — Excellent
+| Issue | Action | Status | Verified |
+|-------|--------|--------|----------|
+| HIGH-001: Add name field | patch frontmatter | ✅ Done | ✅ |
+| HIGH-002: Remove mode field | patch frontmatter | ✅ Done | ✅ |
+| HIGH-003: Add trigger field | patch frontmatter | ✅ Done | ✅ |
+| MEDIUM-001: Escape template vars table | patch lines 17-25 | ✅ Done | ✅ |
+| MEDIUM-002: Convert phases to checkboxes | 6x patch (all phases) | ✅ Done | ✅ |
+| MEDIUM-003: Convert Phase 3 URLs to links | patch lines 130-141 | ✅ Done | ✅ |
+| MEDIUM-004: Restructure Phase 2 "After research" | patch lines 113-124 | ✅ Done | ✅ |
 
 ---
 
-## Phase 4 Complete — Independent Verification
+### Batch 2 — Completed 2026-06-14
 
-All fixes verified against original issues list. No unresolved high-severity issues remain.
+| Issue | Action | Status | Verified |
+|-------|--------|--------|----------|
+| MEDIUM-005: Output Requirements & Verification Gates as tables | patch | ✅ Done | ✅ |
+| MEDIUM-006: Agent Mapping as table | patch | ✅ Done | ✅ |
+| MEDIUM-007: Missing Skills Required table | patch | ✅ Done | ✅ |
+| MEDIUM-008: Frontmatter missing recommended fields | patch | ✅ Done | ✅ |
+| LOW-001: Core Workflow deduplication | patch | ✅ Done | ✅ |
+| LOW-002: Add verification checklist | patch | ✅ Done | ✅ |
+| LOW-003: Phase headings H3→H2 | 6x patch | ✅ Done | ✅ |
+
+---
+
+### Batch 3 — Completed 2026-06-14
+
+| Issue | Action | Status | Verified |
+|-------|--------|--------|----------|
+| LOW-004: Template variables syntax hint | patch | ✅ Done | ✅ |
+| LOW-005: Shared Rules as checkboxes | patch | ✅ Done | ✅ |
+| LOW-006: Rename file to .prompt.md | terminal mv | ✅ Done | ✅ |
+
+---
+
+## Verification Gate (Post-Batch 1)
+
+- [x] Frontmatter parses as single YAML document
+- [x] Zero double-fence repeats in first 60 lines
+- [x] No dependency-style prose in `skills:` lists
+- [x] All 7 Batch 1 issues resolved
+- [x] Markdown renders without errors
+- [x] Required frontmatter fields present: name, trigger
+- [x] Non-standard `mode` field removed
+
+## Verification Gate (Post-Batch 3 / Final)
+
+- [x] Frontmatter parses as single YAML document
+- [x] Zero double-fence repeats in first 60 lines
+- [x] No dependency-style prose in `skills:` lists
+- [x] All 17 issues resolved
+- [x] Markdown renders without errors
+- [x] Required frontmatter fields present: name, trigger, version, author, license
+- [x] metadata.hermes.related_skills present
+- [x] Skills Required table present and synced
+- [x] Phase headings use H2
+- [x] All task lists use checkboxes
+- [x] Phase 3 URLs as markdown links
+- [x] Phase 2 "After research" uses Steps/Tasks
+- [x] Agent Mapping, Output Requirements, Verification Gates as tables
+- [x] Core Workflow references phases (no duplication)
+- [x] Template variables table uses inline code
+- [x] No `mode` field in frontmatter
+- [x] Trigger matches filename stem
+- [x] File uses `.prompt.md` extension
+- [x] Verification checklist present
