@@ -12,7 +12,7 @@ Captured evidence:
 - Output contained 49 `Decision: BLOCKED` lines.
 - Output contained 34 `Decision: ALLOWED` lines.
 - Output contained 19 `Warning:` lines.
-- Output contained 40 `CRITICAL` findings.
+- Output contained 87 `CRITICAL` findings.
 
 High-risk findings surfaced in the audit:
 - `agentmail` — dangerous verdict; persistence issue around
@@ -43,3 +43,6 @@ Other notable issues:
 
 Review note:
 - All evidence needed for review is now contained in this file itself.
+
+Audit refresh note:
+- 2026-06-16T17:51:03.655+01:00 — re-ran `hermes skills audit` and updated counts from the captured output.
