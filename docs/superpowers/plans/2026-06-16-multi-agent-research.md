@@ -54,7 +54,7 @@ Expected: one match on the trigger line; if the trigger is wrong, correct the pr
 - [ ] **Step 5: Commit**
 
 ```bash
-git add docs/multi-agent-research
+git add docs/multi-agent-research .github/prompts/multi-agent-research-template.prompt.md
 git commit -m "docs: initialize multi-agent research execution artifacts"
 ```
 
