@@ -1,23 +1,33 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Bun: Current File",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "bun",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Bun: Run Tests",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "bun",
-            "runtimeArgs": [
-                "test"
-            ],
-            "console": "integratedTerminal"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Resume Maker: CLI",
+      "command": "bun",
+      "args": [
+        "index.ts",
+        "--input",
+        "sample-input.json",
+        "--output",
+        "smoke-resume",
+        "--format",
+        "both",
+        "--verbose"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Resume Maker: Help",
+      "command": "bun",
+      "args": [
+        "index.ts",
+        "--help"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
 }
