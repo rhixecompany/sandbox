@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Next.js: Dev Server",
+      "command": "pnpm dev"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Next.js: Build",
+      "command": "pnpm build"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Next.js: Lint",
+      "command": "pnpm lint"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "TypeScript: Type Check",
+      "command": "pnpm type-check"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Vitest: Run All Tests",
+      "command": "pnpm test"
+    }
+  ]
+}

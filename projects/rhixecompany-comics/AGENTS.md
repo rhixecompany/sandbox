@@ -1,45 +1,40 @@
-# RhixeCompany Comics - Dual-Stack Comic Platform Context
+# RhixeCompany Comics — Dual-Stack Platform
 
-Django + Next.js 16 comic platform with Celery for async tasks.
+Django + Next.js 16 + Celery.
 
-## Architecture
-- **Backend**: Django 4.x + Django REST Framework
-- **Frontend**: Next.js 16 (App Router)
-- **Async**: Celery + Redis
-- **Database**: PostgreSQL
-- **Deployment**: Docker Compose
+## Stack
+- Backend: Django 4.x + DRF
+- Frontend: Next.js 16 App Router + TypeScript strict
+- Async: Celery + Redis
+- Database: PostgreSQL
+- Deploy: Docker Compose
 
 ## Conventions
-- **Backend**: PEP 8, type hints, Django best practices
-- **Frontend**: TypeScript strict, Next.js App Router
-- API at `/api/` (Django) and `/api/` (Next.js API routes)
+- Backend: PEP 8, type hints, Django best practices
+- Frontend: Server Components by default
+- API at `/api/` on both stacks
 - Celery tasks in `tasks.py`
-- Shared types between Django/Next.js
 
 ## Commands
 ```bash
 # Backend
 cd backend
 pip install -r requirements.txt
+python manage.py migrate
 python manage.py runserver
+python manage.py test
 
-# Celery Worker
+# Celery
 celery -A config worker -l info
 
 # Frontend
 cd frontend
 npm install
 npm run dev
-
-# Database
-python manage.py migrate
-
-# Tests
-python manage.py test
 npm test
 ```
 
-## Important Notes
+## Notes
 - Redis required for Celery
-- Shared environment variables
+- Shared env vars across stacks
 - Celery beat for scheduled tasks

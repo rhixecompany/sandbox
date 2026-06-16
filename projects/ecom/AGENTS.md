@@ -1,42 +1,32 @@
-# Ecom - Full-Stack Ecommerce Platform Context
+# Ecom — Django + React Ecommerce
 
-Django REST Framework + React/Redux ecommerce with PayPal.
+Django REST Framework + React/Redux + PayPal.
 
-## Architecture
-- **Backend**: Django REST Framework (Python)
-- **Frontend**: React + Redux
-- **Database**: PostgreSQL
-- **Payments**: PayPal
-- **Deployment**: Docker Compose
-
-## Conventions
-- **Backend**: PEP 8, type hints, Django best practices
-- **Frontend**: Redux Toolkit, functional components
-- API endpoints at `/api/v1/`
-- Tests in `tests/` (backend) and `__tests__/` (frontend)
+## Stack
+- Backend: DRF, Python 3.10+
+- Frontend: React + Redux Toolkit
+- Database: PostgreSQL
+- Payments: PayPal
+- Deploy: Docker Compose
 
 ## Commands
 ```bash
 # Backend
 cd backend
 pip install -r requirements.txt
+python manage.py migrate && python manage.py makemigrations
 python manage.py runserver
+python manage.py test
 
 # Frontend
 cd frontend
 npm install
 npm start
-
-# Database
-python manage.py migrate
-python manage.py makemigrations
-
-# Tests
-python manage.py test
 npm test
 ```
 
-## Important Notes
-- PayPal credentials in `.env` — never commit
-- Separate settings for dev/staging/prod
-- Media files served via Django in dev
+## Notes
+- `.env` — never commit
+- API at `/api/v1/`
+- Tests: `tests/` (backend), `__tests__/` (frontend)
+- Separate settings per env

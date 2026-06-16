@@ -1,41 +1,23 @@
-# University Library JSM - Library Management Context
+# University Library JSM
 
-Next.js 15 library management system with Drizzle, Neon, and Redis.
+Next.js 15 + Drizzle + Neon + Redis.
 
-## Architecture
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Database**: Drizzle ORM + Neon (serverless Postgres)
-- **Cache**: Redis
-- **Auth**: NextAuth.js
-- **Deployment**: Vercel + Neon
-
-## Conventions
-- TypeScript strict mode
-- Server Components by default
-- API routes in `src/app/api/`
-- Drizzle schema in `src/db/schema.ts`
-- Redis for session caching
-- Environment variables in `.env.local`
+## Stack
+- TypeScript strict, App Router
+- PostgreSQL via Drizzle/Neon
+- NextAuth.js; Vercel + Neon
 
 ## Commands
 ```bash
-# Dev server
 npm run dev
-
-# Build
 npm run build
-
-# Database
+npm run lint
 npm run db:generate
 npm run db:push
 npm run db:studio
-
-# Lint
-npm run lint
 ```
 
-## Important Notes
-- Neon connection string in `.env.local` — never commit
-- Redis for rate limiting and caching
-- Drizzle migrations managed via `db:push`
+## Notes
+- Redis for session caching/rate limiting
+- `.env.local` — never commit
+- Migrations via `db:push`

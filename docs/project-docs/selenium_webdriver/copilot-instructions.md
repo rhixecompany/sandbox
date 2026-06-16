@@ -1,22 +1,5 @@
-# Copilot Instructions — selenium_webdriver
-
-## JavaScript Style
-- ES Modules (import/export)
-- camelCase for files and functions
-- Prettier with 2-space indentation
-
-## Selenium Patterns
-- Always use explicit `WebDriverWait`
-- Handle `StaleElementReferenceException` with retry logic
-- Use `By` selectors consistently
-- Clean up with `driver.quit()` in finally blocks
-
-## Security
-- Never commit ChromeDriver binary or browser profiles
-- Respect robots.txt
-- Implement polite scraping delays
-
-## Commands
-- `npm test` - Run main scraper
-- `node src/scrape.js` - Run scraper directly
-- `npm run format` - Format code
+# selenium_webdriver
+**JS**: ES Modules, `camelCase`, Prettier (2-space).
+**Selenium**: explicit `WebDriverWait`; retry on `StaleElementReferenceException`; consistent `By` selectors; `driver.quit()` in `finally`.
+**Security**: no ChromeDriver / profiles in VCS; respect `robots.txt`; polite delays.
+**Commands**: `npm test`, `node src/scrape.js`, `npm run format`.

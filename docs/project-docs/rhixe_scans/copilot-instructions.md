@@ -1,18 +1,6 @@
-# Copilot Instructions — rhixe_scans
-
-## TypeScript/React
-- Strict TypeScript mode
-- PascalCase for components, camelCase for utilities
-- shadcn/ui component conventions
-- React Hook Form + Zod for forms
-
-## Database
-- Prisma schema-driven development
-- Always generate migrations for schema changes
-- Use Prisma adapter for NextAuth
-
-## Security
-- Never commit .env files
-- Use NextAuth v5 for authentication
-- Validate all inputs with Zod
-- Stripe/PayPal keys kept server-side only
+# rhixe_scans
+**TS/React**: strict TS, PascalCase components, `camelCase` utilities, shadcn/ui, React Hook Form + Zod.
+**DB**: Prisma schema-first; always generate migrations; NextAuth v5 adapter.
+**Style**: Tailwind + `cn()`/`class-variance-authority`; TanStack Query; Zustand; `@dnd-kit`, `recharts`.
+**Naming**: PascalCase components, camelCase hooks/utils, kebab-case pages.
+**Security**: no `.env`; Zod at boundaries; Stripe/PayPal keys server-side only; Prisma prevents SQL injection; rate limiting; HTTPS.
