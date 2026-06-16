@@ -16,7 +16,7 @@
 - Create: `docs/multi-agent-research/README.md`
 - Create: `docs/multi-agent-research/index.md`
 - Create: `docs/multi-agent-research/phase-1/summary.md`
-- Modify: `.github/prompts/multi-agent-research-template.prompt.md`
+- Verify: `.github/prompts/multi-agent-research-template.prompt.md` (modify only if the trigger is incorrect)
 - Test: `docs/multi-agent-research/index.md`
 
 - [ ] **Step 1: Create output directories**
@@ -49,12 +49,12 @@ Each phase has its own folder and summary.
 - [ ] **Step 4: Verify prompt trigger**
 
 Run: `rg "/multi-agent-research" .github\prompts\multi-agent-research-template.prompt.md -n`
-Expected: one match on the trigger line.
+Expected: one match on the trigger line; if the trigger is wrong, correct the prompt file before commit.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add docs/multi-agent-research docs/superpowers/plans/2026-06-16-multi-agent-research.md
+git add docs/multi-agent-research
 git commit -m "docs: initialize multi-agent research execution artifacts"
 ```
 
