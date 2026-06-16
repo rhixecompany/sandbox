@@ -269,3 +269,46 @@ Relevant prompt/workflow references:
 - [ ] Prompts and test scripts cataloged above match disk
 - [ ] Top 3 next actions decided from this plan
 - [ ] Any destructive cleanup deferred until explicit user confirmation
+
+## 9. Approval before implementation
+
+Purpose: Require an explicit approval step tied to owners and dates before executing any actions in this plan that modify hooks, skills, plugins, MCP servers, or delete/prune artifacts. This locks destructive or irreversible steps behind human consent.
+
+Scope: Applies to any plan step that performs one or more of:
+- Edits to `~/.hermes/config.yaml` or profile-specific config files
+- Registration/deregistration of hooks via `hermes hooks` commands
+- `skill_manage(action='delete')` or any skill write operations that remove content
+- Installing/uninstalling MCP servers or changing their transport
+- Deleting files or directories in `C:\Users\Alexa\AppData\Local\hermes\` or the workspace root
+- Bulk plugin enable/disable operations
+
+Required fields for approval request (minimum):
+- Requestor: GitHub handle or local username
+- Owner(s): list of humans responsible for execution
+- Scope: concise list of files/skills/hooks/plugins/MCP servers changed
+- Justification: short reason for change
+- Rollback plan: explicit commands or steps to revert (git commands, skill_manage reverse ops, config restore path)
+- Verification steps: commands to run post-change and expected outputs
+- Approval: explicit `+1` from each Owner
+- Approval valid until: ISO date (e.g., 2026-07-16)
+
+Procedure:
+1. Create an approval request file under `.hermes/approvals/<timestamp>_<short-title>.md` containing all Required fields.
+2. Notify Owners (email/Slack/PR) with a link to the approval file.
+3. Wait for explicit `+1` confirmations (collect via comments or signed message in the approval file).
+4. Once all Owners have approved, execute plan steps. The executor must paste the approval filename into the commit message for traceability.
+5. Post-change: run verification steps and append outputs to the approval file.
+6. If anything fails, run the Rollback plan and note the remediation in the approval file.
+
+Risks & notes:
+- Do not rely on mental approvals. File + recorded `+1` is mandatory.
+- Approval files are part of repo history and must not contain secrets.
+- Approval step prevents accidental bulk deletions and maintains auditability.
+
+- [ ] All 11 plan files read and classified
+- [ ] Skills audit state confirmed from artifacts
+- [ ] Hook runtime and config status confirmed
+- [ ] MCP tool inventory matches current configuration
+- [ ] Prompts and test scripts cataloged above match disk
+- [ ] Top 3 next actions decided from this plan
+- [ ] Any destructive cleanup deferred until explicit user confirmation
