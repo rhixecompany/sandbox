@@ -1,0 +1,16 @@
+
+  MCP Servers:
+
+  Name             Transport                      Tools        Status    
+  ──────────────── ────────────────────────────── ──────────── ──────────
+  ast-grep         npx -y @notprolands/ast-g...   all          ✓ enabled
+  code-sandbox     npx -y node-code-sandbox-mcp   all          ✓ enabled
+  fetch            npx -y mcp-server-fetch-t...   all          ✓ enabled
+  filesystem       npx -y @modelcontextproto...   all          ✓ enabled
+  github           npx -y @modelcontextproto...   all          ✓ enabled
+  linear           https://mcp.linear.app/mcp     all          ✓ enabled
+  mcp-docker       docker mcp gateway             all          ✓ enabled
+  memory           npx -y @modelcontextproto...   all          ✓ enabled
+  playwright       npx -y @playwright/mcp@la...   all          ✓ enabled
+  sequential-thinking npx -y @modelcontextproto...   all          ✓ enabled
+
