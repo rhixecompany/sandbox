@@ -1,0 +1,1913 @@
+
+Auditing 102 skill(s)...
+
+Scan: 1password (official/security\1password/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: 3-statement-model — path missing: 3-statement-model
+Warning: adversarial-ux-test — path missing: adversarial-ux-test
+Scan: agentmail (official/email\agentmail/community)  Verdict: DANGEROUS
+  CRITICAL persistence    SKILL.md:38                    "Add to 
+`~/.hermes/config.yaml` (paste your actual key — MCP "
+  MEDIUM   supply_chain   SKILL.md:112                   "- The `mcp` Python 
+package must be installed: `pip install m"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 2 findings).
+--force does not override a dangerous verdict.
+
+Scan: antigravity-cli (official/autonomous-ai-agents\antigravity-cli/community)
+Verdict: DANGEROUS
+  CRITICAL supply_chain   references\cli-docs.md:9       "- macOS/Linux: `curl 
+-fsSL https://antigravity.google/cli/in"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 1 findings).
+--force does not override a dangerous verdict.
+
+Scan: axolotl (official/mlops\training\axolotl/community)  Verdict: DANGEROUS
+  CRITICAL supply_chain   references\other.md:310        "curl -LsSf 
+https://astral.sh/uv/install.sh | sh"
+  MEDIUM   supply_chain   references\other.md:110        "A: Try upgrading 
+deepspeed w: pip install -U deepspeed"
+  MEDIUM   supply_chain   references\other.md:323        "uv pip install 
+packaging setuptools wheel"
+  MEDIUM   supply_chain   references\other.md:325        "uv pip install awscli
+pydantic"
+  MEDIUM   supply_chain   references\other.md:648        "Make sure you’ve 
+installed the correct version of vLLM by in"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 5 findings).
+--force does not override a dangerous verdict.
+
+Scan: baoyu-article-illustrator 
+(official/creative\baoyu-article-illustrator/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: baoyu-comic (official/creative\baoyu-comic/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: bioinformatics (official/research\bioinformatics/community)  Verdict: 
+CAUTION
+  HIGH     privilege_escalation SKILL.md:219                   "sudo apt 
+install samtools bcftools ncbi-blast+ minimap2 bedt"
+  MEDIUM   supply_chain   SKILL.md:213                   "pip install biopython
+pysam cyvcf2 pybedtools pyBigWig sciki"
+  MEDIUM   supply_chain   SKILL.md:34                    "git clone --depth 1 
+https://github.com/GPTomics/bioSkills.gi"
+  MEDIUM   supply_chain   SKILL.md:37                    "git clone --depth 1 
+https://github.com/ClawBio/ClawBio.git /"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 4 findings). 
+Use --force to override.
+
+Scan: blackbox (official/autonomous-ai-agents\blackbox/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:23                    "- Blackbox CLI 
+installed: `npm install -g @blackboxai/cli`"
+  MEDIUM   supply_chain   SKILL.md:27                    "cd cli && npm install
+&& npm install -g ."
+  MEDIUM   supply_chain   SKILL.md:26                    "git clone 
+https://github.com/blackboxaicode/cli.git"
+  MEDIUM   supply_chain   SKILL.md:90                    
+"terminal(command="REVIEW=$(mktemp -d) && git clone https://g"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: blender-mcp (official/creative\blender-mcp/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: canvas (official/productivity\canvas/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   SKILL.md:74                    "curl -s -H 
+"Authorization: Bearer $CANVAS_API_TOKEN" \"
+  CRITICAL exfiltration   SKILL.md:78                    "curl -s -H 
+"Authorization: Bearer $CANVAS_API_TOKEN" \"
+  CRITICAL exfiltration   scripts\canvas_api.py:19       "CANVAS_API_TOKEN = 
+os.environ.get("CANVAS_API_TOKEN", "")"
+  HIGH     exfiltration   scripts\canvas_api.py:19       "CANVAS_API_TOKEN = 
+os.environ.get("CANVAS_API_TOKEN", "")"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 4 findings).
+--force does not override a dangerous verdict.
+
+Scan: chroma (official/mlops\chroma/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:47                    "pip install chromadb"
+  MEDIUM   supply_chain   SKILL.md:50                    "npm install chromadb 
+@chroma-core/default-embed"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: clip (official/mlops\clip/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:45                    "pip install 
+git+https://github.com/openai/CLIP.git"
+  MEDIUM   supply_chain   SKILL.md:46                    "pip install torch 
+torchvision ftfy regex tqdm"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: code-wiki (official/software-development\code-wiki/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:47                    "| 1 | Resolve target 
+— local cwd, given path, or `git clone "
+  MEDIUM   supply_chain   SKILL.md:68                    "git clone --depth 50 
+<url> "$WIKI_TMP/repo""
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: comps-analysis — path missing: comps-analysis
+Scan: concept-diagrams (official/creative\concept-diagrams/community)  Verdict:
+CAUTION
+  HIGH     injection      examples\automated-password-reset-flow.md:55 "<!-- D1
+· Email in system?  diamond: center=(340,200) hw=100"
+  HIGH     injection      examples\automated-password-reset-flow.md:90 "<!-- ──
+Center Yes branch: system generates & sends token ──"
+  HIGH     injection      examples\place-order-uml-sequence.md:79 "<!-- 
+:InventorySystem -->"
+  HIGH     injection      examples\place-order-uml-sequence.md:96 "<!-- 
+InventorySystem: active from reserveItems → updateStock"
+  HIGH     injection      examples\place-order-uml-sequence.md:133 "<!-- ⑤ 
+reserveItems(cartItems)  :OrderController → :Inventor"
+  HIGH     injection      examples\place-order-uml-sequence.md:137 "<!-- ⑥ « 
+itemsReserved »  :InventorySystem → :OrderControlle"
+  HIGH     injection      examples\place-order-uml-sequence.md:165 "<!-- ⑨ 
+updateStockLevels()  :OrderController → :InventorySys"
+  HIGH     injection      examples\place-order-uml-sequence.md:195 "<!-- ⑬ « 
+unavailable »  :InventorySystem → :OrderController "
+  MEDIUM   supply_chain   examples\autonomous-llm-research-agent-flow.md:101 
+"<text class="ts" x="310" y="392" text-anchor="middle" domina"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 9 findings). 
+Use --force to override.
+
+Scan: darwinian-evolver (official/research\darwinian-evolver/community)  
+Verdict: DANGEROUS
+  CRITICAL injection      SKILL.md:164                   "reject phrases like 
+"ignore previous instructions" with HTTP"
+  CRITICAL exfiltration   scripts\parrot_openrouter.py:39 "key = 
+os.environ.get("OPENROUTER_API_KEY")"
+  CRITICAL exfiltration   templates\custom_problem_template.py:47 "key = 
+os.environ.get("OPENROUTER_API_KEY")"
+  HIGH     exfiltration   scripts\parrot_openrouter.py:39 "key = 
+os.environ.get("OPENROUTER_API_KEY")"
+  HIGH     exfiltration   templates\custom_problem_template.py:47 "key = 
+os.environ.get("OPENROUTER_API_KEY")"
+  HIGH     exfiltration   templates\custom_problem_template.py:90 "# TODO: 
+include enough context for the LLM to diagnose the f"
+  MEDIUM   supply_chain   SKILL.md:179                   "8. **No PyPI 
+package.** `pip install darwinian-evolver` will"
+  MEDIUM   supply_chain   SKILL.md:67                    "&& uv run 
+darwinian_evolver --help | head -5"
+  MEDIUM   supply_chain   SKILL.md:76                    "uv run 
+darwinian_evolver parrot \"
+  MEDIUM   supply_chain   SKILL.md:102                   "uv run --with openai 
+python "$SKILL_DIR/scripts/parrot_openr"
+  MEDIUM   supply_chain   SKILL.md:110                   "uv run --with openai 
+python "$SKILL_DIR/scripts/show_snapsho"
+  MEDIUM   supply_chain   SKILL.md:174                   "6. **CLI is hardcoded
+to Anthropic.** `uv run darwinian_evol"
+  MEDIUM   supply_chain   SKILL.md:189                   "cd "$DE_DIR" && uv 
+run darwinian_evolver --help >/dev/null &"
+  MEDIUM   supply_chain   SKILL.md:59                    "[ -d 
+darwinian_evolver ] || git clone --depth 1 https://gith"
+  MEDIUM   supply_chain   templates\custom_problem_template.py:10 
+"OPENROUTER_API_KEY=... uv run --with openai python /path/to/"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 15 
+findings). --force does not override a dangerous verdict.
+
+Warning: dcf-model — path missing: dcf-model
+Scan: torchtitan (official/mlops\torchtitan/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:24                    "pip install 
+torchtitan"
+  MEDIUM   supply_chain   SKILL.md:190                   "USE_CPP=0 pip install
+git+https://github.com/pytorch/ao.git"
+  MEDIUM   supply_chain   SKILL.md:27                    "git clone 
+https://github.com/pytorch/torchtitan"
+  MEDIUM   supply_chain   references\float8.md:13        "USE_CPP=0 pip install
+git+https://github.com/pytorch/ao.git"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: docker-management — path missing: docker-management
+Scan: domain-intel (official/research\domain-intel/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: drug-discovery (official/research\drug-discovery/community)  Verdict: 
+SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: dspy — path missing: dspy
+Scan: duckduckgo-search (official/research\duckduckgo-search/community)  
+Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:47                    "pip install ddgs"
+  MEDIUM   supply_chain   SKILL.md:232                   "- **Package name**: 
+The package is `ddgs` (previously `duckd"
+  MEDIUM   supply_chain   scripts\duckduckgo.sh:18       "echo "Requires: pip 
+install ddgs""
+  MEDIUM   supply_chain   scripts\duckduckgo.sh:24       "echo "Error: ddgs not
+found. Install with: pip install ddgs""
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: evm (official/blockchain\evm/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: excel-author (official/finance\excel-author/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:29                    "pip install 
+"openpyxl>=3.0""
+  MEDIUM   execution      scripts\recalc.py:45           "subprocess.run("
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: faiss (official/mlops\faiss/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:45                    "pip install 
+faiss-cpu"
+  MEDIUM   supply_chain   SKILL.md:48                    "pip install 
+faiss-gpu"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: fastmcp (official/mcp\fastmcp/community)  Verdict: DANGEROUS
+  CRITICAL persistence    SKILL.md:175                   "- configure the 
+server in `~/.hermes/config.yaml` using the "
+  CRITICAL persistence    SKILL.md:296                   "The server-building 
+part may be correct while the Hermes con"
+  CRITICAL exfiltration   templates\api_wrapper.py:13    "API_TOKEN = 
+os.getenv("API_TOKEN")"
+  MEDIUM   network        SKILL.md:155                   "fastmcp list 
+http://127.0.0.1:8000/mcp --json"
+  MEDIUM   network        SKILL.md:156                   "fastmcp call 
+http://127.0.0.1:8000/mcp search_resources quer"
+  MEDIUM   supply_chain   SKILL.md:39                    "pip install fastmcp"
+  MEDIUM   supply_chain   SKILL.md:46                    "pip install httpx"
+  MEDIUM   supply_chain   SKILL.md:271                   "pip install fastmcp"
+  MEDIUM   network        references\fastmcp-cli.md:49   "fastmcp list 
+http://127.0.0.1:8000/mcp --json"
+  MEDIUM   supply_chain   references\fastmcp-cli.md:8    "pip install fastmcp"
+  MEDIUM   supply_chain   references\fastmcp-cli.md:12   "FastMCP documents 
+`pip install fastmcp` and `fastmcp version"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 11 
+findings). --force does not override a dangerous verdict.
+
+Warning: trl-fine-tuning — path missing: trl-fine-tuning
+Scan: fitness-nutrition (official/health\fitness-nutrition/community)  Verdict:
+DANGEROUS
+  CRITICAL exfiltration   SKILL.md:173                   "curl -s 
+"https://api.nal.usda.gov/fdc/v1/foods/search?api_ke"
+  CRITICAL exfiltration   SKILL.md:194                   "curl -s 
+"https://api.nal.usda.gov/fdc/v1/food/${FDC_ID}?api_"
+  CRITICAL exfiltration   scripts\nutrition_search.py:20 "API_KEY = 
+os.environ.get("USDA_API_KEY", "DEMO_KEY")"
+  CRITICAL obfuscation    scripts\nutrition_search.py:8  "echo -e 
+"oats\\nbanana\\nwhey protein" | python3 nutrition_s"
+  HIGH     exfiltration   scripts\nutrition_search.py:20 "API_KEY = 
+os.environ.get("USDA_API_KEY", "DEMO_KEY")"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 5 findings).
+--force does not override a dangerous verdict.
+
+Scan: gitnexus-explorer (official/research\gitnexus-explorer/community)  
+Verdict: DANGEROUS
+  CRITICAL persistence    SKILL.md:201                   "- **The web UI does 
+NOT create `.claude/` or `CLAUDE.md`.** "
+  HIGH     network        SKILL.md:29                    "- **cloudflared** — 
+for tunneling (auto-installed to ~/.loca"
+  HIGH     network        SKILL.md:161                   "# Install cloudflared
+if needed (no sudo)"
+  HIGH     network        SKILL.md:162                   "if ! command -v 
+cloudflared &>/dev/null; then"
+  HIGH     network        SKILL.md:164                   "curl -sL 
+https://github.com/cloudflare/cloudflared/releases/"
+  HIGH     network        SKILL.md:165                   "-o 
+~/.local/bin/cloudflared"
+  HIGH     network        SKILL.md:166                   "chmod +x 
+~/.local/bin/cloudflared"
+  HIGH     network        SKILL.md:171                   "cloudflared tunnel 
+--config /dev/null --url http://localhost"
+  HIGH     network        SKILL.md:183                   "pkill -f cloudflared"
+  HIGH     network        SKILL.md:193                   "- **`--config 
+/dev/null` is required for cloudflared** if th"
+  HIGH     network        SKILL.md:194                   "named tunnel config 
+at `~/.cloudflared/config.yml`. Without "
+  HIGH     privilege_escalation SKILL.md:97                    "no sudo, no 
+nginx."
+  HIGH     privilege_escalation SKILL.md:161                   "# Install 
+cloudflared if needed (no sudo)"
+  MEDIUM   supply_chain   SKILL.md:46                    "cd 
+"$GITNEXUS_DIR/gitnexus-shared" && npm install && npm run"
+  MEDIUM   supply_chain   SKILL.md:45                    "git clone 
+https://github.com/abhigyanpatwari/GitNexus.git "$"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 15 
+findings). --force does not override a dangerous verdict.
+
+Warning: grok — path missing: grok
+Scan: guidance (official/mlops\guidance/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:33                    "pip install guidance"
+  MEDIUM   supply_chain   SKILL.md:36                    "pip install guidance 
+# Hugging Face models"
+  MEDIUM   supply_chain   SKILL.md:37                    "pip install guidance 
+# llama.cpp models"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: here-now (official/productivity\here-now/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   scripts\publish.sh:95          "API_KEY=$(cat 
+"$CREDENTIALS_FILE" | tr -d '[:space:]')"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 1 findings).
+--force does not override a dangerous verdict.
+
+Warning: hermes-s6-container-supervision — path missing: 
+hermes-s6-container-supervision
+Scan: honcho (official/autonomous-ai-agents\honcho/community)  Verdict: 
+DANGEROUS
+  CRITICAL persistence    SKILL.md:392                   "Run `hermes honcho 
+setup`. Ensure `memory.provider: honcho` "
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 1 findings).
+--force does not override a dangerous verdict.
+
+Scan: accelerate (official/mlops\accelerate/community)  Verdict: CAUTION
+  HIGH     exfiltration   references\performance.md:303  
+"os.environ["TOKENIZERS_PARALLELISM"] = "true""
+  MEDIUM   supply_chain   SKILL.md:23                    "pip install 
+accelerate"
+  MEDIUM   supply_chain   SKILL.md:322                   "- **DeepSpeed**: 
+`deepspeed` (pip install deepspeed)"
+  MEDIUM   supply_chain   references\megatron-integration.md:21 "pip install -e
+."
+  MEDIUM   supply_chain   references\megatron-integration.md:26 "pip install -v
+--disable-pip-version-check --no-cache-dir --"
+  MEDIUM   supply_chain   references\megatron-integration.md:19 "git clone 
+https://github.com/NVIDIA/Megatron-LM.git"
+  MEDIUM   supply_chain   references\megatron-integration.md:24 "git clone 
+https://github.com/NVIDIA/apex"
+  MEDIUM   supply_chain   references\performance.md:180  "# pip install 
+flash-attn"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 8 findings). 
+Use --force to override.
+
+Scan: huggingface-tokenizers (official/mlops\huggingface-tokenizers/community) 
+Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:44                    "pip install 
+tokenizers"
+  MEDIUM   supply_chain   SKILL.md:47                    "pip install 
+tokenizers transformers"
+  MEDIUM   supply_chain   references\integration.md:561  "pip install 
+tokenizers"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: hyperframes (official/creative\hyperframes/community)  Verdict: CAUTION
+  HIGH     privilege_escalation references\troubleshooting.md:61 "| Ubuntu / 
+Debian | `sudo apt-get install -y ffmpeg`    |"
+  HIGH     privilege_escalation references\troubleshooting.md:62 "| Fedora / 
+RHEL   | `sudo dnf install -y ffmpeg`        |"
+  HIGH     privilege_escalation references\troubleshooting.md:63 "| Arch       
+| `sudo pacman -S ffmpeg`             |"
+  HIGH     privilege_escalation scripts\setup.sh:48            "Linux*)   echo 
+"   sudo apt-get install -y ffmpeg   # Debian"
+  HIGH     privilege_escalation scripts\setup.sh:49            "echo "   sudo 
+dnf install -y ffmpeg       # Fedora/RHEL";;"
+  HIGH     privilege_escalation scripts\setup.sh:82            "echo "   Try: 
+sudo npm install -g hyperframes@latest""
+  HIGH     privilege_escalation scripts\setup.sh:97            "echo "   Try 
+'npm install -g hyperframes@latest' or 'sudo np"
+  MEDIUM   supply_chain   SKILL.md:63                    "2. Installs the 
+`hyperframes` CLI globally (`npm install -g "
+  MEDIUM   supply_chain   references\cli.md:3            "Everything runs 
+through `npx hyperframes` (or the globally-i"
+  MEDIUM   supply_chain   references\troubleshooting.md:20 "npm install -g 
+hyperframes@latest"
+  MEDIUM   supply_chain   scripts\setup.sh:80            "if ! npm install -g 
+"hyperframes@latest" >/dev/null 2>&1; th"
+  MEDIUM   supply_chain   scripts\setup.sh:81            "red "✗ npm install -g
+hyperframes@latest failed.""
+  MEDIUM   supply_chain   scripts\setup.sh:82            "echo "   Try: sudo 
+npm install -g hyperframes@latest""
+  MEDIUM   supply_chain   scripts\setup.sh:97            "echo "   Try 'npm 
+install -g hyperframes@latest' or 'sudo np"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 14 findings). 
+Use --force to override.
+
+Scan: hyperliquid (official/blockchain\hyperliquid/community)  Verdict: CAUTION
+  HIGH     exfiltration   scripts\hyperliquid_client.py:87 "value = 
+os.environ.get(key, "").strip()"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 1 findings). 
+Use --force to override.
+
+Scan: creative-ideation (official/creative\creative-ideation/community)  
+Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: cli — path missing: cli
+Scan: instructor (official/mlops\instructor/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:33                    "pip install 
+instructor"
+  MEDIUM   supply_chain   SKILL.md:36                    "pip install 
+"instructor"  # Anthropic Claude"
+  MEDIUM   supply_chain   SKILL.md:37                    "pip install 
+"instructor"     # OpenAI"
+  MEDIUM   supply_chain   SKILL.md:38                    "pip install 
+"instructor"        # All providers"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: kanban-video-orchestrator 
+(official/creative\kanban-video-orchestrator/community)  Verdict: SAFE
+  MEDIUM   supply_chain   references\kanban-setup.md:120 "installs). If absent:
+`pip install pyyaml`."
+  MEDIUM   persistence    scripts\bootstrap_pipeline.py:106 
+"f"team[{i}].profile {t['profile']!r} must match ""
+  MEDIUM   persistence    scripts\bootstrap_pipeline.py:111 
+"f"team[{i}].profile {t['profile']!r} is duplicated""
+  MEDIUM   execution      scripts\monitor.py:37          "out = 
+subprocess.run("
+  MEDIUM   execution      scripts\monitor.py:46          "out = 
+subprocess.run("
+  MEDIUM   execution      scripts\monitor.py:70          "out = 
+subprocess.run("
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: lambda-labs (official/mlops\lambda-labs/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   SKILL.md:225                   "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL exfiltration   SKILL.md:232                   "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL exfiltration   SKILL.md:245                   "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL persistence    SKILL.md:309                   "echo 'ssh-rsa 
+AAAA...' >> ~/.ssh/authorized_keys"
+  CRITICAL persistence    references\advanced-usage.md:578 "# Update 
+authorized_keys on running instances"
+  CRITICAL persistence    references\advanced-usage.md:579 "ssh ubuntu@<IP> 
+"echo '$(cat ~/.ssh/lambda_key_new.pub)' >> "
+  CRITICAL exfiltration   references\troubleshooting.md:12 "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL exfiltration   references\troubleshooting.md:50 "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL exfiltration   references\troubleshooting.md:82 "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL exfiltration   references\troubleshooting.md:479 "curl -u 
+$LAMBDA_API_KEY: \"
+  CRITICAL persistence    references\troubleshooting.md:102 "# Check 
+authorized_keys on instance (if you have another way"
+  CRITICAL persistence    references\troubleshooting.md:103 "cat 
+~/.ssh/authorized_keys"
+  HIGH     exfiltration   SKILL.md:68                    "ssh -i 
+~/.ssh/lambda_key ubuntu@<INSTANCE-IP>"
+  HIGH     exfiltration   SKILL.md:299                   "ssh-keygen -t ed25519
+-f ~/.ssh/lambda_key"
+  HIGH     exfiltration   SKILL.md:309                   "echo 'ssh-rsa 
+AAAA...' >> ~/.ssh/authorized_keys"
+  HIGH     exfiltration   SKILL.md:148                   
+"access_token=os.environ["LAMBDA_API_KEY"]"
+  HIGH     exfiltration   references\advanced-usage.md:253 
+"run_remote_job(instance["ip"], "~/.ssh/lambda_key", commands"
+  HIGH     exfiltration   references\advanced-usage.md:575 "ssh-keygen -t 
+ed25519 -f ~/.ssh/lambda_key_new -C "lambda-$("
+  HIGH     exfiltration   references\advanced-usage.md:579 "ssh ubuntu@<IP> 
+"echo '$(cat ~/.ssh/lambda_key_new.pub)' >> "
+  HIGH     exfiltration   references\advanced-usage.md:582 "ssh -i 
+~/.ssh/lambda_key_new ubuntu@<IP>"
+  HIGH     exfiltration   references\advanced-usage.md:16 "rank = 
+int(os.environ["RANK"])"
+  HIGH     exfiltration   references\advanced-usage.md:17 "world_size = 
+int(os.environ["WORLD_SIZE"])"
+  HIGH     exfiltration   references\advanced-usage.md:18 "local_rank = 
+int(os.environ["LOCAL_RANK"])"
+  HIGH     exfiltration   references\advanced-usage.md:208 "manager = 
+LambdaJobManager(os.environ["LAMBDA_API_KEY"])"
+  HIGH     exfiltration   references\advanced-usage.md:474 
+"wandb.login(key=os.environ["WANDB_API_KEY"])"
+  HIGH     exfiltration   references\troubleshooting.md:93 "ssh -v -i 
+~/.ssh/lambda_key ubuntu@<IP>"
+  HIGH     exfiltration   references\troubleshooting.md:96 "chmod 600 
+~/.ssh/lambda_key"
+  HIGH     exfiltration   references\troubleshooting.md:97 "chmod 644 
+~/.ssh/lambda_key.pub"
+  HIGH     exfiltration   references\troubleshooting.md:103 "cat 
+~/.ssh/authorized_keys"
+  HIGH     exfiltration   references\troubleshooting.md:513 "| `Module not 
+found` | Wrong Python env | Activate correct v"
+  HIGH     privilege_escalation references\troubleshooting.md:145 "sudo reboot"
+  HIGH     privilege_escalation references\troubleshooting.md:149 "sudo reboot"
+  HIGH     privilege_escalation references\troubleshooting.md:197 "sudo reboot"
+  HIGH     privilege_escalation references\troubleshooting.md:380 "sudo apt 
+install python3.11 python3.11-venv python3.11-dev"
+  MEDIUM   persistence    SKILL.md:299                   "ssh-keygen -t ed25519
+-f ~/.ssh/lambda_key"
+  MEDIUM   supply_chain   SKILL.md:136                   "pip install 
+lambda-cloud-client"
+  MEDIUM   supply_chain   SKILL.md:476                   "pip install 
+transformers accelerate peft"
+  MEDIUM   supply_chain   SKILL.md:360                   "git clone 
+https://github.com/user/project"
+  MEDIUM   persistence    references\advanced-usage.md:609 "# On instance, 
+store in ~/.bashrc"
+  MEDIUM   persistence    references\advanced-usage.md:610 "echo 'export 
+HF_TOKEN="..."' >> ~/.bashrc"
+  MEDIUM   persistence    references\advanced-usage.md:575 "ssh-keygen -t 
+ed25519 -f ~/.ssh/lambda_key_new -C "lambda-$("
+  MEDIUM   supply_chain   references\advanced-usage.md:389 "pip install torch 
+transformers accelerate"
+  MEDIUM   persistence    references\troubleshooting.md:114 "ssh-keygen -R 
+<IP>"
+  MEDIUM   supply_chain   references\troubleshooting.md:328 "pip install 
+hf_transfer"
+  MEDIUM   supply_chain   references\troubleshooting.md:364 "pip install 
+<package>"
+  MEDIUM   supply_chain   references\troubleshooting.md:367 "pip install torch 
+--index-url https://download.pytorch.org/w"
+  MEDIUM   supply_chain   references\troubleshooting.md:402 "pip install 
+<package>"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 47 
+findings). --force does not override a dangerous verdict.
+
+Warning: lbo-model — path missing: lbo-model
+Scan: llava (official/mlops\llava/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:51                    "pip install -e ."
+  MEDIUM   supply_chain   SKILL.md:47                    "git clone 
+https://github.com/haotian-liu/LLaVA"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: mcporter (official/mcp\mcporter/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:28                    "npm install -g 
+mcporter"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: meme-generation (official/creative\meme-generation/community)  Verdict: 
+SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: memento-flashcards (official/productivity\memento-flashcards/community)  
+Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:211                   "pip install 
+youtube-transcript-api"
+  MEDIUM   supply_chain   SKILL.md:302                   "- **Optional 
+dependency** — `youtube_quiz.py` needs `youtube"
+  MEDIUM   supply_chain   scripts\youtube_quiz.py:4      "Requires: pip install
+youtube-transcript-api"
+  MEDIUM   supply_chain   scripts\youtube_quiz.py:35     ""message": "Run: pip 
+install youtube-transcript-api","
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: merger-model — path missing: merger-model
+Warning: minecraft-modpack-server — path missing: minecraft-modpack-server
+Scan: modal (official/mlops\modal/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   references\troubleshooting.md:371 "value = 
+os.environ.get("KEY")  # Use get() to handle missing"
+  HIGH     exfiltration   SKILL.md:242                   "token = 
+os.environ["HF_TOKEN"]"
+  HIGH     obfuscation    references\advanced-usage.md:478 "result = 
+sandbox.exec("python", "-c", "print('Hello from san"
+  HIGH     exfiltration   references\troubleshooting.md:371 "value = 
+os.environ.get("KEY")  # Use get() to handle missing"
+  MEDIUM   execution      SKILL.md:62                    "return 
+subprocess.run(["nvidia-smi"], capture_output=True, t"
+  MEDIUM   supply_chain   SKILL.md:48                    "pip install modal"
+  MEDIUM   execution      references\advanced-usage.md:60 
+"subprocess.run(["python", "-m", "torch.distributed.launch", "
+  MEDIUM   execution      references\troubleshooting.md:158 "result = 
+subprocess.run(["nvidia-smi"], capture_output=True,"
+  MEDIUM   execution      references\troubleshooting.md:458 
+"print(subprocess.run(["nvidia-smi"], capture_output=True, te"
+  MEDIUM   execution      references\troubleshooting.md:459 
+"print(subprocess.run(["pip", "list"], capture_output=True, t"
+  MEDIUM   supply_chain   references\troubleshooting.md:24 "**Error**: `pip 
+install modal` fails"
+  MEDIUM   supply_chain   references\troubleshooting.md:29 "pip install 
+--upgrade pip"
+  MEDIUM   supply_chain   references\troubleshooting.md:32 "python3.11 -m pip 
+install modal"
+  MEDIUM   supply_chain   references\troubleshooting.md:35 "pip install modal 
+--prefer-binary"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 14 
+findings). --force does not override a dangerous verdict.
+
+Scan: nemo-curator (official/mlops\nemo-curator/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:44                    "uv pip install 
+"nemo-curator""
+  MEDIUM   supply_chain   SKILL.md:47                    "uv pip install 
+"nemo-curator""
+  MEDIUM   supply_chain   SKILL.md:50                    "uv pip install 
+"nemo-curator""
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: neuroskill-bci (official/health\neuroskill-bci/community)  Verdict: SAFE
+  MEDIUM   network        references\api.md:28           "curl -s -X POST 
+http://127.0.0.1:8375/ \"
+  MEDIUM   network        references\api.md:58           "Connect to 
+`ws://127.0.0.1:8375/` to receive real-time event"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: one-three-one-rule (official/communication\one-three-one-rule/community) 
+Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: openclaw-migration (official/migration\openclaw-migration/community)  
+Verdict: DANGEROUS
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:1148 
+"self.record("workspace-agents", "workspace/AGENTS.md", "", ""
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:1335 "# OpenClaw's 
+AGENTS.md, MEMORY.md, etc."
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:419 
+"``~/.hermes/config.yaml`` (the real Hermes home) instead of "
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:420 
+"``~/.Hermes/config.yaml``."
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:2949 ""- Review 
+`~/.hermes/config.yaml` for any adjustments","
+  CRITICAL persistence    scripts\openclaw_to_hermes.py:3116 "print("    1. 
+Review ~/.hermes/config.yaml")"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 6 findings).
+--force does not override a dangerous verdict.
+
+Scan: openhands (official/autonomous-ai-agents\openhands/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:126                   "- **`pip install 
+openhands-ai` is the wrong package.** That'"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: flash-attention (official/mlops\flash-attention/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:36                    "pip install 
+flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   SKILL.md:69                    "pip install --upgrade
+torch"
+  MEDIUM   supply_chain   SKILL.md:157                   "pip install 
+flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   SKILL.md:253                   "pip install 
+flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   SKILL.md:302                   "pip install 
+flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   SKILL.md:308                   "pip install 
+flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   references\transformers-integration.md:28 "pip 
+install transformers>=4.36"
+  MEDIUM   supply_chain   references\transformers-integration.md:29 "pip 
+install flash-attn --no-build-isolation"
+  MEDIUM   supply_chain   references\transformers-integration.md:249 "pip 
+install flash-attn --no-build-isolation"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: osint-investigation (official/research\osint-investigation/community)  
+Verdict: DANGEROUS
+  CRITICAL exfiltration   scripts\fetch_courtlistener.py:130 
+"p.add_argument("--token", default=os.environ.get("COURTLISTE"
+  CRITICAL exfiltration   scripts\fetch_opencorporates.py:176 
+"p.add_argument("--token", default=os.environ.get("OPENCORPOR"
+  CRITICAL exfiltration   scripts\fetch_senate_ld.py:127 
+"p.add_argument("--token", default=os.environ.get("SENATE_LDA"
+  HIGH     exfiltration   scripts\fetch_courtlistener.py:130 
+"p.add_argument("--token", default=os.environ.get("COURTLISTE"
+  HIGH     exfiltration   scripts\fetch_opencorporates.py:176 
+"p.add_argument("--token", default=os.environ.get("OPENCORPOR"
+  HIGH     exfiltration   scripts\fetch_senate_ld.py:127 
+"p.add_argument("--token", default=os.environ.get("SENATE_LDA"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 6 findings).
+--force does not override a dangerous verdict.
+
+Scan: oss-forensics (official/security\oss-forensics/community)  Verdict: 
+DANGEROUS
+  CRITICAL supply_chain   references\recovery-techniques.md:89 "curl -s 
+"https://web.archive.org/cdx/search/cdx?url=github.c"
+  CRITICAL supply_chain   references\recovery-techniques.md:97 "curl -s 
+"https://web.archive.org/cdx/search/cdx?url=github.c"
+  CRITICAL supply_chain   references\recovery-techniques.md:130 "curl -s 
+"https://api.github.com/repos/OWNER/REPO/contents/pa"
+  CRITICAL traversal      templates\malicious-package-report.md:17 "- 
+**Exfiltrated Data Types**: [Environment variables, ~/.ssh"
+  HIGH     exfiltration   templates\malicious-package-report.md:17 "- 
+**Exfiltrated Data Types**: [Environment variables, ~/.ssh"
+  MEDIUM   supply_chain   SKILL.md:123                   "git clone 
+https://github.com/OWNER/REPO.git target_repo && c"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 6 findings).
+--force does not override a dangerous verdict.
+
+Scan: outlines (official/mlops\inference\outlines/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:33                    "pip install outlines"
+  MEDIUM   supply_chain   SKILL.md:36                    "pip install outlines 
+transformers  # Hugging Face models"
+  MEDIUM   supply_chain   SKILL.md:37                    "pip install outlines 
+llama-cpp-python  # llama.cpp"
+  MEDIUM   supply_chain   SKILL.md:38                    "pip install outlines 
+vllm  # vLLM for high-throughput"
+  MEDIUM   supply_chain   references\backends.md:558     "RUN pip install 
+outlines"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: page-agent (official/web-development\page-agent/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:58                    "## Path 2 — npm 
+install into your own web app (production us"
+  MEDIUM   supply_chain   SKILL.md:63                    "npm install 
+page-agent"
+  MEDIUM   supply_chain   SKILL.md:107                   "git clone 
+https://github.com/alibaba/page-agent.git"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: parallel-cli — path missing: parallel-cli
+Warning: peft — path missing: peft
+Scan: pinecone (official/mlops\pinecone/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:45                    "pip install 
+pinecone-client"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: pinggy-tunnel (official/devops\pinggy-tunnel/community)  Verdict: 
+DANGEROUS
+  CRITICAL exfiltration   SKILL.md:268                   "curl -s 
+"$URL/api/tags" -H "Authorization: Bearer $TOKEN" | "
+  HIGH     network        SKILL.md:11                    "related_skills: 
+[cloudflared-quick-tunnel, webhook-subscript"
+  HIGH     network        SKILL.md:25                    "- The host has SSH 
+but no `cloudflared` / `ngrok` binary, an"
+  HIGH     network        SKILL.md:27                    "If the host already 
+has `cloudflared` configured, prefer the"
+  HIGH     network        SKILL.md:174                   "- 
+**`process(action='log')` may miss SSH banner output.** Pi"
+  MEDIUM   network        SKILL.md:78                    "curl -sI 
+http://127.0.0.1:8000/ | head -1"
+  MEDIUM   network        SKILL.md:255                   "# Pre-req: the model 
+server is already running on 127.0.0.1:"
+  MEDIUM   execution      SKILL.md:223                   "Hand `$URL` to the 
+service that needs to call you. Teardown:"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 8 findings).
+--force does not override a dangerous verdict.
+
+Scan: pixel-art (official/creative\pixel-art/community)  Verdict: SAFE
+  MEDIUM   execution      ATTRIBUTION.md:31              "- `ffmpeg` invocation
+switched from `os.system` to `subproce"
+  MEDIUM   supply_chain   SKILL.md:191                   "- Pillow (`pip 
+install Pillow`)"
+  MEDIUM   execution      scripts\pixel_art_video.py:297 "subprocess.run("
+  MEDIUM   execution      scripts\pixel_art_video.py:309 "subprocess.run("
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: pokemon-player — path missing: pokemon-player
+Scan: pptx-author (official/finance\pptx-author/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:30                    "pip install 
+"python-pptx>=0.6""
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: pytorch-fsdp (official/mlops\pytorch-fsdp/community)  Verdict: CAUTION
+  HIGH     exfiltration   SKILL.md:38                    "**Pattern 2:** 
+Distributed communication package - torch.dis"
+  HIGH     exfiltration   references\other.md:1724       "5. Another way to 
+pass local_rank to the subprocesses via en"
+  MEDIUM   structural     references\other.md:0          "333KB"
+  MEDIUM   network        SKILL.md:38                    "**Pattern 2:** 
+Distributed communication package - torch.dis"
+  MEDIUM   network        SKILL.md:44                    "**Pattern 3:** 
+Initialization# The package needs to be initi"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 5 findings). 
+Use --force to override.
+
+Scan: pytorch-lightning (official/mlops\pytorch-lightning/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:23                    "pip install 
+lightning"
+  MEDIUM   supply_chain   references\distributed.md:276  "# pip install 
+transformer-engine"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:11 "pip install 
+ray"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:12 "pip install 
+lightning"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:102 "pip install 
+optuna"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:103 "pip install 
+optuna-integration"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:179 "pip install 
+wandb"
+  MEDIUM   supply_chain   references\hyperparameter-tuning.md:251 "pip install 
+hyperopt"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: qdrant (official/mlops\qdrant/community)  Verdict: CAUTION
+  HIGH     privilege_escalation references\troubleshooting.md:12 "sudo 
+systemctl start docker"
+  MEDIUM   supply_chain   SKILL.md:49                    "pip install 
+qdrant-client"
+  MEDIUM   persistence    references\troubleshooting.md:12 "sudo systemctl 
+start docker"
+  MEDIUM   supply_chain   references\troubleshooting.md:35 "pip install 
+qdrant-client"
+  MEDIUM   supply_chain   references\troubleshooting.md:38 "pip install 
+qdrant-client>=1.12.0"
+  MEDIUM   supply_chain   references\troubleshooting.md:46 "pip install 
+'qdrant-client'"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 6 findings). 
+Use --force to override.
+
+Scan: qmd (official/research\qmd/community)  Verdict: DANGEROUS
+  CRITICAL persistence    SKILL.md:229                   "Add to 
+`~/.hermes/config.yaml`:"
+  HIGH     privilege_escalation SKILL.md:44                    "curl -fsSL 
+https://deb.nodesource.com/setup_22.x | sudo -E b"
+  HIGH     privilege_escalation SKILL.md:45                    "sudo apt-get 
+install -y nodejs"
+  MEDIUM   persistence    SKILL.md:309                   "cat > 
+~/.config/systemd/user/qmd-daemon.service << 'EOF'"
+  MEDIUM   persistence    SKILL.md:274                   "cat > 
+~/Library/LaunchAgents/com.qmd.daemon.plist << 'EOF'"
+  MEDIUM   persistence    SKILL.md:301                   "launchctl load 
+~/Library/LaunchAgents/com.qmd.daemon.plist"
+  MEDIUM   supply_chain   SKILL.md:61                    "npm install -g 
+@tobilu/qmd"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 7 findings).
+--force does not override a dangerous verdict.
+
+Warning: rest-graphql-debug — path missing: rest-graphql-debug
+Warning: scrapling — path missing: scrapling
+Scan: searxng-search (official/research\searxng-search/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:132                   "pip install 
+searxng-data"
+  MEDIUM   supply_chain   SKILL.md:160                   "pip install searxng"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: sherlock (official/security\sherlock/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:29                    "- Sherlock CLI 
+installed: `pipx install sherlock-project` or"
+  MEDIUM   supply_chain   SKILL.md:44                    "- Offer to install: 
+`pipx install sherlock-project` (recomme"
+  MEDIUM   supply_chain   SKILL.md:138                   "pip install 
+sherlock-project"
+  MEDIUM   supply_chain   SKILL.md:143                   "docker pull 
+sherlock/sherlock"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: shop-app (official/productivity\shop-app/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: shopify (official/productivity\shopify/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Warning: simpo — path missing: simpo
+Scan: siyuan (official/productivity\siyuan/community)  Verdict: DANGEROUS
+  CRITICAL persistence    SKILL.md:290                   "# In 
+~/.hermes/config.yaml under mcp_servers:"
+  MEDIUM   network        SKILL.md:21                    "prompt: SiYuan 
+instance URL (default http://127.0.0.1:6806)"
+  MEDIUM   network        SKILL.md:36                    
+"SIYUAN_URL=http://127.0.0.1:6806"
+  MEDIUM   network        SKILL.md:38                    "`SIYUAN_URL` defaults
+to `http://127.0.0.1:6806` if not set."
+  MEDIUM   network        SKILL.md:45                    "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/.."
+  MEDIUM   network        SKILL.md:86                    "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/se"
+  MEDIUM   network        SKILL.md:97                    "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/qu"
+  MEDIUM   network        SKILL.md:110                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/bl"
+  MEDIUM   network        SKILL.md:119                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/bl"
+  MEDIUM   network        SKILL.md:128                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/fi"
+  MEDIUM   network        SKILL.md:137                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/at"
+  MEDIUM   network        SKILL.md:146                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/no"
+  MEDIUM   network        SKILL.md:155                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/fi"
+  MEDIUM   network        SKILL.md:164                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/fi"
+  MEDIUM   network        SKILL.md:177                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/no"
+  MEDIUM   network        SKILL.md:186                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/bl"
+  MEDIUM   network        SKILL.md:201                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/bl"
+  MEDIUM   network        SKILL.md:214                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/fi"
+  MEDIUM   network        SKILL.md:225                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/at"
+  MEDIUM   network        SKILL.md:240                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/bl"
+  MEDIUM   network        SKILL.md:252                   "curl -s -X POST 
+"${SIYUAN_URL:-http://127.0.0.1:6806}/api/ex"
+  MEDIUM   network        SKILL.md:297                   "SIYUAN_URL: 
+"http://127.0.0.1:6806""
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 22 
+findings). --force does not override a dangerous verdict.
+
+Scan: solana (official/blockchain\solana/community)  Verdict: CAUTION
+  HIGH     exfiltration   scripts\solana_client.py:31    "RPC_URL = 
+os.environ.get("
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 1 findings). 
+Use --force to override.
+
+Scan: stable-diffusion (official/mlops\stable-diffusion/community)  Verdict: 
+SAFE
+  MEDIUM   supply_chain   SKILL.md:48                    "pip install diffusers
+transformers accelerate torch"
+  MEDIUM   supply_chain   SKILL.md:49                    "pip install xformers 
+# Optional: memory-efficient attention"
+  MEDIUM   supply_chain   references\troubleshooting.md:12 "pip install 
+--upgrade huggingface_hub"
+  MEDIUM   supply_chain   references\troubleshooting.md:15 "pip install 
+--upgrade diffusers"
+  MEDIUM   supply_chain   references\troubleshooting.md:28 "pip install 
+xformers --index-url https://download.pytorch.or"
+  MEDIUM   supply_chain   references\troubleshooting.md:31 "pip install -v -U 
+git+https://github.com/facebookresearch/xf"
+  MEDIUM   supply_chain   references\troubleshooting.md:45 "pip install torch 
+torchvision --index-url https://download.p"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: stocks (official/finance\stocks/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   scripts\stocks_client.py:247   "key = 
+os.environ.get("ALPHA_VANTAGE_KEY")"
+  CRITICAL exfiltration   scripts\stocks_client.py:381   "av_key = 
+os.environ.get("ALPHA_VANTAGE_KEY")"
+  HIGH     exfiltration   scripts\stocks_client.py:247   "key = 
+os.environ.get("ALPHA_VANTAGE_KEY")"
+  HIGH     exfiltration   scripts\stocks_client.py:381   "av_key = 
+os.environ.get("ALPHA_VANTAGE_KEY")"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 4 findings).
+--force does not override a dangerous verdict.
+
+Scan: subagent-driven-development 
+(official/software-development\subagent-driven-development/community)  Verdict:
+CAUTION
+  HIGH     exfiltration   SKILL.md:271                   "Include TDD 
+instructions in every implementer context."
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 1 findings). 
+Use --force to override.
+
+Scan: telephony (official/productivity\telephony/community)  Verdict: CAUTION
+  HIGH     exfiltration   scripts\telephony.py:136       "value = 
+os.environ.get(env_key, "")"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 1 findings). 
+Use --force to override.
+
+Scan: tensorrt-llm (official/mlops\tensorrt-llm/community)  Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:44                    "docker pull 
+nvidia/tensorrt_llm:latest"
+  MEDIUM   supply_chain   references\optimization.md:208 "pip install 
+tensorrt_llm"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: unsloth (official/mlops\training\unsloth/community)  Verdict: DANGEROUS
+  CRITICAL supply_chain   references\llms-full.md:7590   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:7843   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:8062   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:8385   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:8708   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:8929   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:9277   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:9557   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:9625   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:10012  "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:10312  "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:12256  "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:13658  "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:14275  "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-full.md:15729  "curl -LsSf 
+https://astral.sh/uv/install.sh | sh && source $H"
+  CRITICAL supply_chain   references\llms-txt.md:188     "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:1263    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:3543    "curl -LsSf 
+https://astral.sh/uv/install.sh | sh && source $H"
+  CRITICAL supply_chain   references\llms-txt.md:3754    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:3975    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:4475    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:4594    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:5291    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:5927    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:7141    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:7814    "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  CRITICAL supply_chain   references\llms-txt.md:11481   "curl -fsSL 
+https://ollama.com/install.sh | sh"
+  HIGH     structural     (directory):0                  "1888KB total"
+  HIGH     exfiltration   references\llms-full.md:1141   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-full.md:1155   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  HIGH     exfiltration   references\llms-full.md:1158   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)""
+  HIGH     exfiltration   references\llms-full.md:1161   "ssh -i 
+~/.ssh/container_key -p 2222 unsloth@localhost"
+  HIGH     exfiltration   references\llms-full.md:1175   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  HIGH     exfiltration   references\llms-full.md:1178   "ssh -i 
+~/.ssh/container_key -p 2222 unsloth@localhost"
+  HIGH     exfiltration   references\llms-full.md:1206   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-full.md:4867   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-full.md:4881   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  HIGH     exfiltration   references\llms-full.md:4884   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)""
+  HIGH     exfiltration   references\llms-full.md:4887   "ssh -i 
+~/.ssh/container_key -p 2222 unsloth@localhost"
+  HIGH     exfiltration   references\llms-full.md:4917   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-full.md:4111   
+"os.environ["UNSLOTH_VLLM_STANDBY"] = "1""
+  HIGH     exfiltration   references\llms-full.md:4186   
+"os.environ["UNSLOTH_VLLM_STANDBY"] = "1""
+  HIGH     exfiltration   references\llms-full.md:4471   
+"os.environ["CUDA_VISIBLE_DEVICES"] = "0" # Optional set GPU "
+  HIGH     exfiltration   references\llms-full.md:4632   
+"os.environ["UNSLOTH_WARN_UNINITIALIZED"] = '0'"
+  HIGH     exfiltration   references\llms-full.md:4953   
+"os.environ['UNSLOTH_VLLM_STANDBY'] = '1' # To enable memory "
+  HIGH     exfiltration   references\llms-full.md:6100   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:6154   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:6450   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:6515   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:7679   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:7878   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:8156   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:8421   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:8485   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:8743   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:8967   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:9315   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:9359   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:9593   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:9661   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:9730   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:9824   
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:10120  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:10359  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:11671  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:11718  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:11905  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:12118  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0" # Can sometime"
+  HIGH     exfiltration   references\llms-full.md:12292  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:12438  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:13325  "# 
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:13686  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:14307  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:15300  
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-full.md:15965  
+"os.environ["WANDB_PROJECT"] = "<name>""
+  HIGH     exfiltration   references\llms-full.md:15966  
+"os.environ["WANDB_LOG_MODEL"] = "checkpoint""
+  HIGH     exfiltration   references\llms-full.md:16225  
+"os.environ["UNSLOTH_STABLE_DOWNLOADS"] = "1""
+  HIGH     exfiltration   references\llms-full.md:16236  
+"os.environ["UNSLOTH_COMPILE_DISABLE"] = "1""
+  HIGH     exfiltration   references\llms-full.md:16237  
+"os.environ["UNSLOTH_DISABLE_FAST_GENERATION"] = "1""
+  HIGH     exfiltration   references\llms-full.md:16683  "<table><thead><tr><th
+width="397.4666748046875">Environment "
+  HIGH     privilege_escalation references\llms-full.md:1078   "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     privilege_escalation references\llms-full.md:1186   "| 
+`USER_PASSWORD`    | Password for `unsloth` user (sudo) | "
+  HIGH     privilege_escalation references\llms-full.md:1217   "* Use 
+`USER_PASSWORD` for sudo operations inside container"
+  HIGH     privilege_escalation references\llms-full.md:1241   "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     privilege_escalation references\llms-full.md:1471   "sudo apt update
+&& sudo apt upgrade -y"
+  HIGH     privilege_escalation references\llms-full.md:1477   "sudo apt 
+install python3-pip"
+  HIGH     privilege_escalation references\llms-full.md:4804   "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     privilege_escalation references\llms-full.md:4897   "| 
+`USER_PASSWORD`    | Password for `unsloth` user (sudo) | "
+  HIGH     privilege_escalation references\llms-full.md:4928   "* Use 
+`USER_PASSWORD` for sudo operations inside container"
+  HIGH     privilege_escalation references\llms-full.md:15549  "sudo apt update
+&& sudo apt install -y wget"
+  HIGH     injection      references\llms-full.md:556    "U+200B (zero-width 
+space)"
+  HIGH     injection      references\llms-full.md:1752   "U+200B (zero-width 
+space)"
+  HIGH     exfiltration   references\llms-txt.md:1331    "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)""
+  HIGH     exfiltration   references\llms-txt.md:1352    "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  HIGH     exfiltration   references\llms-txt.md:4127    "ssh -i 
+~/.ssh/container_key -p 2222 unsloth@localhost"
+  HIGH     exfiltration   references\llms-txt.md:4135    "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-txt.md:4708    "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-txt.md:9868    "ssh -i 
+~/.ssh/container_key -p 2222 unsloth@localhost"
+  HIGH     exfiltration   references\llms-txt.md:9876    "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-txt.md:11793   "-e "SSH_KEY=$(cat 
+~/.ssh/container_key.pub)" \"
+  HIGH     exfiltration   references\llms-txt.md:11960   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  HIGH     exfiltration   references\llms-txt.md:12      
+"os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:1882    
+"os.environ["UNSLOTH_VLLM_STANDBY"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:1899    
+"os.environ["UNSLOTH_VLLM_STANDBY"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:3427    
+"os.environ['UNSLOTH_VLLM_STANDBY'] = '1' # To enable memory "
+  HIGH     exfiltration   references\llms-txt.md:3510    "<table><thead><tr><th
+width="397.4666748046875">Environment "
+  HIGH     exfiltration   references\llms-txt.md:3873    
+"os.environ["CUDA_VISIBLE_DEVICES"] = "0" # Optional set GPU "
+  HIGH     exfiltration   references\llms-txt.md:5696    "## 
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:5698    "**URL:** 
+llms-txt#os.environ["hf_hub_enable_hf_transfer"]-=-"
+  HIGH     exfiltration   references\llms-txt.md:5965    
+"os.environ["WANDB_PROJECT"] = "<name>""
+  HIGH     exfiltration   references\llms-txt.md:5966    
+"os.environ["WANDB_LOG_MODEL"] = "checkpoint""
+  HIGH     exfiltration   references\llms-txt.md:7935    
+"os.environ["UNSLOTH_STABLE_DOWNLOADS"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:7940    
+"os.environ["UNSLOTH_COMPILE_DISABLE"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:7941    
+"os.environ["UNSLOTH_DISABLE_FAST_GENERATION"] = "1""
+  HIGH     exfiltration   references\llms-txt.md:10634   
+"os.environ["UNSLOTH_WARN_UNINITIALIZED"] = '0'"
+  HIGH     privilege_escalation references\llms-txt.md:761     "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     privilege_escalation references\llms-txt.md:4146    "* Use 
+`USER_PASSWORD` for sudo operations inside container"
+  HIGH     privilege_escalation references\llms-txt.md:4160    "| 
+`USER_PASSWORD`    | Password for `unsloth` user (sudo) | "
+  HIGH     privilege_escalation references\llms-txt.md:4647    "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     privilege_escalation references\llms-txt.md:8109    "sudo apt update
+&& sudo apt install -y wget"
+  HIGH     privilege_escalation references\llms-txt.md:9887    "* Use 
+`USER_PASSWORD` for sudo operations inside container"
+  HIGH     privilege_escalation references\llms-txt.md:9899    "| 
+`USER_PASSWORD`    | Password for `unsloth` user (sudo) | "
+  HIGH     privilege_escalation references\llms-txt.md:11732   "</strong>sudo 
+apt-get update &#x26;&#x26; sudo apt-get insta"
+  HIGH     injection      references\llms-txt.md:400     "U+200B (zero-width 
+space)"
+  HIGH     injection      references\llms-txt.md:9050    "U+200B (zero-width 
+space)"
+  MEDIUM   structural     references\llms-full.md:0      "1068KB"
+  MEDIUM   structural     references\llms-txt.md:0       "805KB"
+  MEDIUM   persistence    references\llms-full.md:1155   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  MEDIUM   persistence    references\llms-full.md:1175   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  MEDIUM   persistence    references\llms-full.md:4881   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  MEDIUM   network        references\llms-full.md:7743   "base_url = 
+"http://127.0.0.1:8001/v1","
+  MEDIUM   network        references\llms-full.md:8233   "base_url = 
+"http://127.0.0.1:8001/v1","
+  MEDIUM   traversal      references\llms-full.md:14498  "{% content-ref 
+url="../../get-started/fine-tuning-llms-guide"
+  MEDIUM   supply_chain   references\llms-full.md:62     "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:126    "* If you have 
+different versions of torch, transformers etc."
+  MEDIUM   supply_chain   references\llms-full.md:921    "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:934    "pip install --upgrade
+unsloth unsloth_zoo"
+  MEDIUM   supply_chain   references\llms-full.md:939    "<pre 
+class="language-bash"><code class="lang-bash">pip insta"
+  MEDIUM   supply_chain   references\llms-full.md:940    "<strong>pip install 
+--upgrade --force-reinstall --no-cache-d"
+  MEDIUM   supply_chain   references\llms-full.md:961    "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:967    "pip uninstall unsloth
+unsloth_zoo -y && pip install --no-dep"
+  MEDIUM   supply_chain   references\llms-full.md:981    "pip install --upgrade
+--force-reinstall --no-cache-dir --no-"
+  MEDIUM   supply_chain   references\llms-full.md:982    "pip install --upgrade
+--force-reinstall --no-cache-dir --no-"
+  MEDIUM   supply_chain   references\llms-full.md:1000   "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-full.md:1001   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1007   "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-full.md:1008   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1014   "pip install "unsloth 
+@ git+https://gi"
+  MEDIUM   supply_chain   references\llms-full.md:1015   "pip install "unsloth 
+@ git+https://gi"
+  MEDIUM   supply_chain   references\llms-full.md:1016   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1017   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1019   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1020   "pip install "unsloth 
+@ git+https://gi"
+  MEDIUM   supply_chain   references\llms-full.md:1022   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:1023   "pip install "unsloth 
+@ git+https://gi"
+  MEDIUM   supply_chain   references\llms-full.md:1036   "except: raise 
+ImportError('Install torch via `pip install to"
+  MEDIUM   supply_chain   references\llms-full.md:1051   "print(f'pip install 
+--upgrade pip && pip install "unsloth[{x"
+  MEDIUM   supply_chain   references\llms-full.md:1225   "For Windows, `pip 
+install unsloth` now works, however you mu"
+  MEDIUM   supply_chain   references\llms-full.md:1361   "pip install "unsloth 
+@ git+https://github.com/unslo"
+  MEDIUM   supply_chain   references\llms-full.md:1389   "1. Install `torch` 
+and `triton`. Go to <https://pytorch.org>"
+  MEDIUM   supply_chain   references\llms-full.md:1483   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:1546   "pip install --no-deps
+unsloth unsloth-zoo"
+  MEDIUM   supply_chain   references\llms-full.md:1547   "pip install --no-deps
+git+https://github.com/unslothai/unslo"
+  MEDIUM   supply_chain   references\llms-full.md:1548   "pip install "unsloth 
+@ git+https://github.com/unslothai"
+  MEDIUM   supply_chain   references\llms-full.md:1639   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:1841   "We would recommend 
+beginners to utilise our pre-made [notebo"
+  MEDIUM   supply_chain   references\llms-full.md:3444   "* If you're using 
+GRPO with Unsloth locally, please "pip ins"
+  MEDIUM   supply_chain   references\llms-full.md:3546   "pip install unsloth 
+vllm"
+  MEDIUM   supply_chain   references\llms-full.md:3612   "If installing 
+locally, ensure you have the correct [requirem"
+  MEDIUM   supply_chain   references\llms-full.md:4563   "uv pip install -U 
+vllm --pre --extra-index-url https://wheel"
+  MEDIUM   supply_chain   references\llms-full.md:4622   "1. Obtain the latest 
+`unsloth` via `pip install --upgrade un"
+  MEDIUM   supply_chain   references\llms-full.md:5308   "!pip install 
+--upgrade -qqq uv"
+  MEDIUM   supply_chain   references\llms-full.md:5311   "!uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-full.md:6095   "12. You can also 
+download the model via (after installing `p"
+  MEDIUM   supply_chain   references\llms-full.md:6098   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:6149   "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:6152   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:6445   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:6448   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:6510   "3. Or, download the 
+model via (after installing `pip install"
+  MEDIUM   supply_chain   references\llms-full.md:6513   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:6581   "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:6856   "Note that `pip 
+install unsloth` will not work for this setup"
+  MEDIUM   supply_chain   references\llms-full.md:6860   "!pip install 
+--upgrade -qqq uv"
+  MEDIUM   supply_chain   references\llms-full.md:6863   "!uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-full.md:7674   "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-full.md:7677   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:7737   "Then use OpenAI's 
+Python library after `pip install openai` "
+  MEDIUM   supply_chain   references\llms-full.md:7873   "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-full.md:7876   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:7929   "!pip install 
+--upgrade unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:7945   "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:8151   "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-full.md:8154   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:8227   "Then use OpenAI's 
+Python library after `pip install openai` "
+  MEDIUM   supply_chain   references\llms-full.md:8416   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:8419   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:8480   "3. Or, download the 
+model via (after installing `pip install"
+  MEDIUM   supply_chain   references\llms-full.md:8483   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:8738   "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-full.md:8741   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:8962   "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-full.md:8965   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9310   "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9313   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9354   "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9357   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9412   "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:9588   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9591   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9656   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9659   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9725   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9728   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9819   "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:9822   "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:9893   "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:10113  "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:10118  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:10354  "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-full.md:10357  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:11545  "!pip install 
+--upgrade unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:11562  "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:11666  "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:11669  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:11716  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:11898  "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:11903  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:12113  "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-full.md:12116  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:12287  "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-full.md:12290  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:12376  "pip install --upgrade
+--force-reinstall --no-cache-dir unslo"
+  MEDIUM   supply_chain   references\llms-full.md:12431  "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:12436  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:13323  "# pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:13681  "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:13684  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:14302  "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-full.md:14305  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:14607  "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-full.md:14608  "pip install uv"
+  MEDIUM   supply_chain   references\llms-full.md:14609  "uv pip install -U 
+vllm --torch-backend=auto"
+  MEDIUM   supply_chain   references\llms-full.md:14617  "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-full.md:14618  "pip install uv"
+  MEDIUM   supply_chain   references\llms-full.md:14619  "uv pip install -U 
+vllm"
+  MEDIUM   supply_chain   references\llms-full.md:14669  "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-full.md:14670  "pip install uv"
+  MEDIUM   supply_chain   references\llms-full.md:14671  "uv pip install 
+"sglang" --prerelease=allow"
+  MEDIUM   supply_chain   references\llms-full.md:15298  "# !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-full.md:15581  "pip install . && \"
+  MEDIUM   supply_chain   references\llms-full.md:15678  "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:15686  "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:15700  "pip install ninja"
+  MEDIUM   supply_chain   references\llms-full.md:15717  "uv pip install 
+unsloth"
+  MEDIUM   supply_chain   references\llms-full.md:15742  "uv pip install -U 
+vllm --torch-backend=cu128"
+  MEDIUM   supply_chain   references\llms-full.md:15749  "uv pip install 
+unsloth unsloth_zoo bitsandbytes"
+  MEDIUM   supply_chain   references\llms-full.md:15755  "uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-full.md:15768  "pip install ninja"
+  MEDIUM   supply_chain   references\llms-full.md:15778  "uv pip install -U 
+transformers"
+  MEDIUM   supply_chain   references\llms-full.md:15811  "pip install -U vllm 
+--extra-index-url https://download.pytor"
+  MEDIUM   supply_chain   references\llms-full.md:15820  "pip install unsloth 
+unsloth_zoo bitsandbytes"
+  MEDIUM   supply_chain   references\llms-full.md:15833  "pip install ninja"
+  MEDIUM   supply_chain   references\llms-full.md:15845  "pip install -U 
+triton>=3.3.1"
+  MEDIUM   supply_chain   references\llms-full.md:15852  "uv pip install -U 
+transformers"
+  MEDIUM   supply_chain   references\llms-full.md:15887  "pip install -v 
+--no-build-isolation -U git+https://github.co"
+  MEDIUM   supply_chain   references\llms-full.md:15958  "!pip install wandb 
+--upgrade"
+  MEDIUM   supply_chain   references\llms-full.md:16044  "`pip install 
+--upgrade --force-reinstall --no-cache-dir --no"
+  MEDIUM   supply_chain   references\llms-full.md:16270  "`pip install 
+--upgrade --force-reinstall --no-cache-dir --no"
+  MEDIUM   supply_chain   references\llms-full.md:16274  "`pip install 
+--upgrade --force-reinstall --no-cache-dir --no"
+  MEDIUM   supply_chain   references\llms-full.md:16668  "pip install --upgrade
+--no-cache-dir --force-reinstall unslo"
+  MEDIUM   supply_chain   references\llms-full.md:5879   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:6009   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:6430   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:6484   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:6817   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:7096   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:7341   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:7369   "git clone 
+https://github.com/sgl-project/sglang"
+  MEDIUM   supply_chain   references\llms-full.md:7376   "git clone 
+https://github.com/triton-lang/triton"
+  MEDIUM   supply_chain   references\llms-full.md:7633   "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:7859   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:8109   "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:8401   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:8453   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:8724   "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:8949   "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:9303   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:9573   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:9641   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:9702   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:9796   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:10056  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:10076  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:10333  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:11659  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:11863  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:12071  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:12274  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:12424  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:13312  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:13674  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:14295  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:14419  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:14466  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:15288  "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-full.md:15577  "RUN git clone 
+https://github.com/triton-lang/triton.git && \"
+  MEDIUM   supply_chain   references\llms-full.md:15585  "RUN git clone 
+--depth=1 https://github.com/facebookresearch/"
+  MEDIUM   supply_chain   references\llms-full.md:15702  "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-full.md:15770  "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-full.md:15835  "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-full.md:16080  "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   persistence    references\llms-txt.md:1352    "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  MEDIUM   persistence    references\llms-txt.md:11960   "ssh-keygen -t rsa -b 
+4096 -f ~/.ssh/container_key"
+  MEDIUM   traversal      references\llms-txt.md:9373    "{% content-ref 
+url="../../get-started/fine-tuning-llms-guide"
+  MEDIUM   supply_chain   references\llms-txt.md:7       "## !pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-txt.md:151     "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:745     "For Windows, `pip 
+install unsloth` now works, however you mu"
+  MEDIUM   supply_chain   references\llms-txt.md:857     "1. Install `torch` 
+and `triton`. Go to <https://pytorch.org>"
+  MEDIUM   supply_chain   references\llms-txt.md:958     "pip install "unsloth 
+@ git+https://github.com/unslo"
+  MEDIUM   supply_chain   references\llms-txt.md:1047    "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:1244    "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:1593    "uv pip install -U 
+vllm --pre --extra-index-url https://wheel"
+  MEDIUM   supply_chain   references\llms-txt.md:2188    "pip install --no-deps
+unsloth unsloth-zoo"
+  MEDIUM   supply_chain   references\llms-txt.md:2189    "pip install --no-deps
+git+https://github.com/unslothai/unslo"
+  MEDIUM   supply_chain   references\llms-txt.md:2190    "pip install "unsloth 
+@ git+https://github.com/unslothai"
+  MEDIUM   supply_chain   references\llms-txt.md:3106    "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:3353    "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:3454    "<pre 
+class="language-bash"><code class="lang-bash">pip insta"
+  MEDIUM   supply_chain   references\llms-txt.md:3455    "<strong>pip install 
+--upgrade --force-reinstall --no-cache-d"
+  MEDIUM   supply_chain   references\llms-txt.md:3466    "pip install --upgrade
+unsloth unsloth_zoo"
+  MEDIUM   supply_chain   references\llms-txt.md:3536    "pip install ninja"
+  MEDIUM   supply_chain   references\llms-txt.md:3541    "uv pip install 
+unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:3549    "uv pip install -U 
+vllm --torch-backend=cu128"
+  MEDIUM   supply_chain   references\llms-txt.md:3551    "uv pip install 
+unsloth unsloth_zoo bitsandbytes"
+  MEDIUM   supply_chain   references\llms-txt.md:3553    "uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-txt.md:3561    "pip install ninja"
+  MEDIUM   supply_chain   references\llms-txt.md:3566    "uv pip install -U 
+transformers"
+  MEDIUM   supply_chain   references\llms-txt.md:3576    "pip install -U vllm 
+--extra-index-url https://download.pytor"
+  MEDIUM   supply_chain   references\llms-txt.md:3578    "pip install unsloth 
+unsloth_zoo bitsandbytes"
+  MEDIUM   supply_chain   references\llms-txt.md:3584    "pip install ninja"
+  MEDIUM   supply_chain   references\llms-txt.md:3589    "pip install -U 
+triton>=3.3.1"
+  MEDIUM   supply_chain   references\llms-txt.md:3591    "uv pip install -U 
+transformers"
+  MEDIUM   supply_chain   references\llms-txt.md:3609    "pip install -v 
+--no-build-isolation -U git+https://github.co"
+  MEDIUM   supply_chain   references\llms-txt.md:3728    "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-txt.md:3821    "!pip install 
+--upgrade -qqq uv"
+  MEDIUM   supply_chain   references\llms-txt.md:3824    "!uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-txt.md:3955    "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-txt.md:4005    "pip install . && \"
+  MEDIUM   supply_chain   references\llms-txt.md:4280    "`pip install 
+--upgrade --force-reinstall --no-cache-dir --no"
+  MEDIUM   supply_chain   references\llms-txt.md:4455    "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:4586    "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-txt.md:5087    "* If you have 
+different versions of torch, transformers etc."
+  MEDIUM   supply_chain   references\llms-txt.md:5262    "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:5415    "12. You can also 
+download the model via (after installing `p"
+  MEDIUM   supply_chain   references\llms-txt.md:5912    "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-txt.md:6707    "3. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:6897    "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-txt.md:7123    "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:7598    "!pip install 
+--upgrade -qqq uv"
+  MEDIUM   supply_chain   references\llms-txt.md:7601    "!uv pip install -qqq 
+\"
+  MEDIUM   supply_chain   references\llms-txt.md:7801    "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-txt.md:8341    "Note that `pip 
+install unsloth` will not work for this setup"
+  MEDIUM   supply_chain   references\llms-txt.md:9137    "We would recommend 
+beginners to utilise our pre-made [notebo"
+  MEDIUM   supply_chain   references\llms-txt.md:9933    "pip install --upgrade
+--no-cache-dir --force-reinstall unslo"
+  MEDIUM   supply_chain   references\llms-txt.md:9999    "If installing 
+locally, ensure you have the correct [requirem"
+  MEDIUM   supply_chain   references\llms-txt.md:10138   "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:10419   "Download the model 
+via (after installing `pip install huggin"
+  MEDIUM   supply_chain   references\llms-txt.md:10452   "## pip install 
+huggingface_hub hf_transfer"
+  MEDIUM   supply_chain   references\llms-txt.md:10513   "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-txt.md:10514   "pip install uv"
+  MEDIUM   supply_chain   references\llms-txt.md:10515   "uv pip install 
+"sglang" --prerelease=allow"
+  MEDIUM   supply_chain   references\llms-txt.md:10581   "2. Download the model
+via (after installing `pip install hug"
+  MEDIUM   supply_chain   references\llms-txt.md:10751   "1. Obtain the latest 
+`unsloth` via `pip install --upgrade un"
+  MEDIUM   supply_chain   references\llms-txt.md:10994   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:11001   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:11462   "3. **OR** download 
+the model via (after installing `pip inst"
+  MEDIUM   supply_chain   references\llms-txt.md:11606   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:11692   "!pip install wandb 
+--upgrade"
+  MEDIUM   supply_chain   references\llms-txt.md:11886   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:12024   "pip install unsloth"
+  MEDIUM   supply_chain   references\llms-txt.md:12029   "pip uninstall unsloth
+unsloth_zoo -y && pip install --no-dep"
+  MEDIUM   supply_chain   references\llms-txt.md:12034   "pip install --upgrade
+--force-reinstall --no-cache-dir --no-"
+  MEDIUM   supply_chain   references\llms-txt.md:12035   "pip install --upgrade
+--force-reinstall --no-cache-dir --no-"
+  MEDIUM   supply_chain   references\llms-txt.md:12040   "pip install --upgrade
+pip"
+  MEDIUM   supply_chain   references\llms-txt.md:12041   "pip install "unsloth 
+@ git+https://github.co"
+  MEDIUM   supply_chain   references\llms-txt.md:1057    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:1275    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:1718    "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:3538    "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-txt.md:3563    "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-txt.md:3586    "git clone --depth=1 
+https://github.com/facebookresearch/xfor"
+  MEDIUM   supply_chain   references\llms-txt.md:3806    "RUN git clone 
+--depth=1 https://github.com/facebookresearch/"
+  MEDIUM   supply_chain   references\llms-txt.md:3988    "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:4001    "RUN git clone 
+https://github.com/triton-lang/triton.git && \"
+  MEDIUM   supply_chain   references\llms-txt.md:4322    "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:5456    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:5939    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:6984    "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:6996    "git clone 
+https://github.com/ggerganov/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:8927    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:9619    "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:10427   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:10609   "git clone 
+https://github.com/ggml-org/llama.cpp"
+  MEDIUM   supply_chain   references\llms-txt.md:11493   "git clone 
+https://github.com/ggerganov/llama.cpp"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 405 
+findings). --force does not override a dangerous verdict.
+
+Scan: watchers (official/devops\watchers/community)  Verdict: DANGEROUS
+  CRITICAL exfiltration   scripts\watch_github.py:118    "token = 
+os.environ.get("GITHUB_TOKEN") or os.environ.get("GH"
+  HIGH     exfiltration   scripts\watch_github.py:118    "token = 
+os.environ.get("GITHUB_TOKEN") or os.environ.get("GH"
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 2 findings).
+--force does not override a dangerous verdict.
+
+Scan: web-pentest (official/security\web-pentest/community)  Verdict: DANGEROUS
+  CRITICAL destructive    SKILL.md:69                    "filesystem-write 
+SSTI, command injection with `rm`/`shutdown"
+  CRITICAL persistence    SKILL.md:83                    "in 
+`~/.hermes/config.yaml` for the session."
+  CRITICAL traversal      references\bypass-techniques.md:44 "- Null byte 
+(older platforms): `../../../etc/passwd%00.png`"
+  CRITICAL traversal      references\bypass-techniques.md:46 "- Absolute path: 
+`/etc/passwd` (skips traversal entirely)"
+  CRITICAL traversal      references\bypass-techniques.md:50 "- Try ending the 
+path early: `../../etc/passwd%00`"
+  CRITICAL traversal      references\exploitation-techniques.md:36 "Witness: 
+`../../../../etc/passwd` (Linux) or `..\..\..\..\wi"
+  CRITICAL exfiltration   scripts\recon-scan.sh:46       "echo "Could not parse
+host from URL: $TARGET_URL" >&2"
+  CRITICAL exfiltration   scripts\recon-scan.sh:81       "echo "Host '$HOST' is
+NOT in $SCOPE_FILE. Refusing to scan.""
+  CRITICAL exfiltration   scripts\recon-scan.sh:88       "echo " 
+target=$TARGET_URL host=$HOST ts=$TS""
+  HIGH     network        SKILL.md:245                   "webhook.site for 
+sensitive engagements — exfil paths)."
+  HIGH     execution      SKILL.md:144                   "2. **Inventory 
+sinks** — every `execute(`, `os.system(`, `ev"
+  HIGH     obfuscation    references\bypass-techniques.md:64 "- 
+`onerror=eval('alert(1)')` → `onerror=eval(name)` + set"
+  HIGH     traversal      references\bypass-techniques.md:44 "- Null byte 
+(older platforms): `../../../etc/passwd%00.png`"
+  HIGH     traversal      references\exploitation-techniques.md:36 "Witness: 
+`../../../../etc/passwd` (Linux) or `..\..\..\..\wi"
+  HIGH     execution      references\vuln-taxonomy.md:20 "| `CMD-shell` | 
+`os.system("ls " + v)` | DON'T — refactor to"
+  MEDIUM   execution      references\bypass-techniques.md:30 "- Substitution: 
+`$(sleep 5)`, `` `sleep 5` ``"
+  MEDIUM   execution      references\bypass-techniques.md:35 "- Encoding: 
+`bash<<<$(base64 -d <<< c2xlZXAgNQo=)`"
+  MEDIUM   traversal      references\bypass-techniques.md:44 "- Null byte 
+(older platforms): `../../../etc/passwd%00.png`"
+  MEDIUM   traversal      references\bypass-techniques.md:50 "- Try ending the 
+path early: `../../etc/passwd%00`"
+  MEDIUM   network        references\exploitation-techniques.md:165 "- Internal
+recon (operator OK + scope): `http://127.0.0.1:63"
+  MEDIUM   network        references\exploitation-techniques.md:166 
+"`http://127.0.0.1:9200/`, `http://[::1]:80/`"
+  MEDIUM   execution      references\exploitation-techniques.md:199 "- 
+argv-list subprocess invocation (Python `subprocess.run([."
+  MEDIUM   execution      references\exploitation-techniques.md:28 "- Linux: `;
+sleep 5` or `$(sleep 5)` or `` `sleep 5` ``"
+  MEDIUM   execution      references\exploitation-techniques.md:30 "- If output
+is reflected: `; echo HERMESPENTEST-$(id)`"
+  MEDIUM   traversal      references\exploitation-techniques.md:36 "Witness: 
+`../../../../etc/passwd` (Linux) or `..\..\..\..\wi"
+  MEDIUM   execution      references\vuln-taxonomy.md:19 "| `CMD-argument` | 
+`subprocess.run(["ls", v])` | argv list ("
+  MEDIUM   network        scripts\recon-scan.sh:8        "#   recon-scan.sh 
+engagement-20260525-031415 http://127.0.0."
+
+Decision: BLOCKED — Blocked (community source + dangerous verdict, 27 
+findings). --force does not override a dangerous verdict.
+
+Scan: whisper (official/mlops\whisper/community)  Verdict: CAUTION
+  HIGH     privilege_escalation SKILL.md:50                    "# Ubuntu: sudo 
+apt install ffmpeg"
+  MEDIUM   supply_chain   SKILL.md:46                    "pip install -U 
+openai-whisper"
+  MEDIUM   supply_chain   SKILL.md:198                   "# pip install 
+faster-whisper"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 3 findings). 
+Use --force to override.
+
+Scan: bun-nextjs (skills-sh/secondsky/claude-skills/bun-nextjs/community)  
+Verdict: SAFE
+  MEDIUM   supply_chain   SKILL.md:39                    "- **Audit before 
+installing** — Run `socket package score np"
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: bun-shell (skills-sh/secondsky/claude-skills/bun-shell/community)  
+Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: ci-cd-best-practices 
+(skills-sh/mindrally/skills/ci-cd-best-practices/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: ci-cd-pipeline-builder 
+(skills-sh/alirezarezvani/claude-skills/ci-cd-pipeline-builder/community)  
+Verdict: SAFE
+  MEDIUM   supply_chain   references\github-actions-templates.md:38 "- run: 
+python3 -m pip install -U pip"
+  MEDIUM   supply_chain   references\gitlab-ci-templates.md:36 "- python3 -m 
+pip install -U pip"
+  MEDIUM   supply_chain   scripts\pipeline_generator.py:150 ""      - run: 
+python3 -m pip install -U pip","
+  MEDIUM   supply_chain   scripts\pipeline_generator.py:250 ""    - python3 -m 
+pip install -U pip","
+  MEDIUM   supply_chain   scripts\pipeline_generator.py:99 "return "pnpm 
+install --frozen-lockfile""
+
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: django-application 
+(skills-sh/aj-geddes/useful-ai-prompts/django-application/community)  Verdict: 
+SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: django-celery 
+(skills-sh/affaan-m/everything-claude-code/django-celery/community)  Verdict: 
+CAUTION
+  HIGH     exfiltration   SKILL.md:35                    
+"os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.sett"
+  MEDIUM   persistence    SKILL.md:227                   "from celery.schedules
+import crontab"
+  MEDIUM   persistence    SKILL.md:232                   "'schedule': 
+crontab(hour=2, minute=0),   # 2am daily"
+  MEDIUM   persistence    SKILL.md:240                   "'schedule': 
+crontab(day_of_week='monday', hour=8, minute=0),"
+  MEDIUM   persistence    SKILL.md:260                   "'crontab': schedule,"
+  MEDIUM   supply_chain   SKILL.md:25                    "pip install 'celery' 
+django-celery-results django-cel"
+  MEDIUM   supply_chain   SKILL.md:410                   "pip install flower"
+
+Decision: BLOCKED — Blocked (community source + caution verdict, 7 findings). 
+Use --force to override.
+
+Scan: drawio-skill (drawio-skill/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: youtube-full (youtube-full/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+
+Scan: chainlink (chainlink/community)  Verdict: SAFE
+Decision: ALLOWED — Allowed (community source, safe verdict)
+

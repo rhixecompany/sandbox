@@ -60,6 +60,7 @@ Use MCP tools when available over native equivalents.
 - Never commit secrets, tokens, or `.env`
 - Update `SESSION_REPORT.md` on session start/end; rolling 5-session summary
 - Toolchain: `python3=3.14.6`, `python=3.11.14`, `pip→python3.11`
+- Active ecosystem audit plan: `.hermes/plans/2026-06-16_eco-system-audit-plan.md`
 
 ## Hermes Config
 

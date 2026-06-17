@@ -3,7 +3,7 @@
     "tasks": [
         {
             "command": "bun run format",
-            "label": "Bash: Format",
+            "label": "Resume Maker: Format",
             "type": "shell",
             "group": "build",
             "presentation": {
@@ -13,7 +13,7 @@
         },
         {
             "command": "bun run typecheck",
-            "label": "Bash: Type Check",
+            "label": "Resume Maker: Type Check",
             "type": "shell",
             "group": "build",
             "presentation": {
@@ -22,10 +22,10 @@
             }
         },
         {
-            "command": "bun test",
-            "label": "Bash: Test",
+            "command": "bun run lint",
+            "label": "Resume Maker: Lint",
             "type": "shell",
-            "group": "test",
+            "group": "build",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"

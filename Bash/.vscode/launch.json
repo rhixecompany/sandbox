@@ -18,6 +18,28 @@
                 "test"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Bun: Type Check",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "bun",
+            "runtimeArgs": [
+                "run",
+                "typecheck"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Bun: Lint",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "bun",
+            "runtimeArgs": [
+                "run",
+                "lint:strict"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }

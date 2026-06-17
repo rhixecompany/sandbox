@@ -10,9 +10,9 @@
 				"${input:hermes-profile}"
 			],
 			"env": {
-				"LOCALAPPDATA": "C:\\Users\\Alexa\\AppData\\Local",
-				"ProgramData": "C:\\ProgramData",
-				"ProgramFiles": "C:\\Program Files"
+				"LOCALAPPDATA": "${env:LOCALAPPDATA}",
+				"ProgramData": "${env:ProgramData}",
+				"ProgramFiles": "${env:ProgramFiles}"
 			},
 			"type": "stdio"
 		},
@@ -21,7 +21,7 @@
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-filesystem",
-				"C:\\Users\\Alexa\\Desktop\\SandBox"
+				"${workspaceFolder}"
 			],
 			"type": "stdio"
 		},

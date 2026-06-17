@@ -26,6 +26,9 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
 	"better-comments.highlightPlainText": true,
 	"better-comments.multilineComments": true,
 	"better-comments.tags": [
