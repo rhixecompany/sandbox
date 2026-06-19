@@ -36,8 +36,9 @@ skills:
     - writing-plans
     - acpx-executor
     - executing-plans
-    - simplify---
-
+    - simplify
+    ---
+    >
 > Create a detailed prompt-library plan with file references, conversion steps,
 > and verification criteria.
 
@@ -442,33 +443,6 @@ ls .github/prompts/*.prompt.md | wc -l
 # Every file on disk is in registry
 # Every registry entry exists on disk
 ```
-
-### Tasks
-
--map.prompt.md | Dependency mapping | All dev-init phases |
-| convert-plaintext-to-md.prompt.md | TXT→MD conversion | Phase 5.3 |
-| boost-prompt.prompt.md | Quality enhancement | Phase 5.4 |
-| ... | ... | ... |
-
-## Conflict Log
-
-| Conflict | Files | Resolution |
-| -------- | ----- | ---------- |
-| ...      | ...   | ...        |
-
-````
-
-### Step 7.2 — Final Verification
-
-```bash
-# Count total prompts
-ls Prompts/*.prompts.md | wc -l
-ls .github/prompts/*.prompt.md | wc -l
-
-# Verify registry matches disk
-# Every file on disk is in registry
-# Every registry entry exists on disk
-````
 
 ### Tasks
 

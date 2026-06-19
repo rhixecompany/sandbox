@@ -20,14 +20,14 @@
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
 	"better-comments.highlightPlainText": true,
 	"better-comments.multilineComments": true,

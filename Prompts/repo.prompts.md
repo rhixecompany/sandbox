@@ -36,16 +36,7 @@ skills:
     - no-git-delete
     - no-net-fetch
     - skills-tools-preflight-check
-  - brainstorming — Explore research angles before searching
-  - plans-and-specs — Structure research plan with specs
-  - systematic-debugging — Detect stale/missing research docs
-  - simplify — Strip bloat from existing reports
-  - context7 — Query library/framework docs for accuracy
-  - spike — Prototype research report format before batch creation
-  - writing-skills — Crisp, compact markdown writing
-  - content-research-writer — Blog/article-style research synthesis
-  - acpx-executor — Delegate per-project research to ACPX agents
-  - dispatching-parallel-agents — Run per-project research in parallel---
+---
 
 ## CRITICAL RULES
 

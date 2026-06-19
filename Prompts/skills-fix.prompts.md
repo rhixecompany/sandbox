@@ -30,15 +30,7 @@ skills:
     - no-git-delete
     - no-net-fetch
     - skills-tools-preflight-check
-  - using-superpowers — Establish session context and tool availability
-  - brainstorming — Explore audit strategies and issue classification
-  - plans-and-specs — Create remediation plan with fix specifications
-  - dispatching-parallel-agents — Audit skills in parallel batches of 7
-  - subagent-driven-development — Delegate per-skill debugging to subagents
-  - systematic-debugging — Identify formatting, content, and structural issues
-  - simplify — Consolidate redundant skill documentation
-  - skill-judge — Evaluate and score skills against quality criteria
-  - skill-creator — Author, scaffold, and validate in-repo skills---
+---
 
 ## Goal
 

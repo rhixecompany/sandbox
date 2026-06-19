@@ -29,7 +29,8 @@ skills:
     - systematic-debugging
     - simplify
     - acpx-executor
-    - copilot-cli---
+    - copilot-cli
+---
 
 ## Goal
 

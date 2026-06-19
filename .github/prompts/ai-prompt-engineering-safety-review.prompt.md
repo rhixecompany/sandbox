@@ -8,8 +8,8 @@ dependencies:
   - skill:systematic-debugging
   - command:/context-map
 skills:
-  - command:/prompt-engineering — Apply safety and quality patterns (optimizes prompts using research-backed patterns)
-  - skill:systematic-debugging — Systematic issue detection (detects prompt safety and quality issues)
+  - prompt-engineering
+  - systematic-debugging
 ---
 
 # ai-prompt-engineering-safety-review
@@ -64,7 +64,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 
 **Goal:** understand what the prompt asks for and where it may fail.
 
-#### Steps
+#### Phase 1 Steps
 
 | Step | Action | Output |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 | 1.3 | Review safety, bias, and security risks | Risk notes |
 | 1.4 | Review clarity and completeness | Quality notes |
 
-#### Tasks
+#### Phase 1 Tasks
 - Identify the prompt's purpose
 - Find unsafe or ambiguous instructions
 - Capture missing context that affects quality
@@ -83,7 +83,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 
 **Goal:** rewrite the prompt into a safer, clearer version.
 
-#### Steps
+#### Phase 2 Steps
 
 | Step | Action | Output |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 | 2.2 | Add missing constraints or safeguards | Improved prompt |
 | 2.3 | Remove redundant or risky language | Cleaner draft |
 
-#### Tasks
+#### Phase 2 Tasks
 - Make the task easier to execute
 - Reduce ambiguity
 - Keep the rewrite concise
@@ -100,7 +100,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 
 **Goal:** compare the revised prompt against the original for reliability and safety.
 
-#### Steps
+#### Phase 3 Steps
 
 | Step | Action | Output |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 | 3.2 | Compare revised vs original on clarity (better/equal/worse) | Clarity comparison + one-sentence reason |
 | 3.3 | Compare revised vs original on usability (better/equal/worse) | Usability comparison + one-sentence reason |
 
-#### Tasks
+#### Phase 3 Tasks
 - Look for remaining risky instructions
 - Confirm the output shape is obvious
 - Confirm the prompt still matches the user's goal
@@ -119,7 +119,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 
 **Goal:** return a final review that is easy to use.
 
-#### Steps
+#### Phase 4 Steps
 
 | Step | Action | Output |
 | --- | --- | --- |
@@ -127,7 +127,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 | 4.2 | Present the improved prompt | Revised prompt |
 | 4.3 | List the most important changes | Improvement notes |
 
-#### Tasks
+#### Phase 4 Tasks
 - Keep the report direct
 - Make the revised prompt reusable
 - List the top 3-5 fixes, ranked by severity (safety issues first, then clarity, then style)
