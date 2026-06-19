@@ -1,7 +1,20 @@
 {
+	"inputs": [
+		{
+			"default": "default",
+			"description": "Hermes profile for Docker MCP gateway",
+			"id": "hermes-profile",
+			"type": "promptString"
+		},
+		{
+			"description": "GitHub Personal Access Token",
+			"id": "github-token",
+			"password": true,
+			"type": "promptString"
+		}
+	],
 	"servers": {
 		"mcp-docker": {
-			"command": "docker",
 			"args": [
 				"mcp",
 				"gateway",
@@ -9,6 +22,7 @@
 				"--profile",
 				"${input:hermes-profile}"
 			],
+			"command": "docker",
 			"env": {
 				"LOCALAPPDATA": "${env:LOCALAPPDATA}",
 				"ProgramData": "${env:ProgramData}",
@@ -17,38 +31,24 @@
 			"type": "stdio"
 		},
 		"mcp-filesystem": {
-			"command": "npx",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-filesystem",
 				"${workspaceFolder}"
 			],
+			"command": "npx",
 			"type": "stdio"
 		},
 		"mcp-github": {
-			"command": "npx",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-github"
 			],
+			"command": "npx",
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github-token}"
 			},
 			"type": "stdio"
 		}
-	},
-	"inputs": [
-		{
-			"id": "hermes-profile",
-			"type": "promptString",
-			"description": "Hermes profile for Docker MCP gateway",
-			"default": "default"
-		},
-		{
-			"id": "github-token",
-			"type": "promptString",
-			"description": "GitHub Personal Access Token",
-			"password": true
-		}
-	]
+	}
 }

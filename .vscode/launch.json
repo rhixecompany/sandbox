@@ -1,29 +1,29 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "node-terminal",
-      "request": "launch",
-      "name": "Bash: Run format",
-      "command": "bun run format"
-    },
-    {
-      "type": "node-terminal",
-      "request": "launch",
-      "name": "Bash: Typecheck",
-      "command": "bun run typecheck"
-    },
-    {
-      "type": "node-terminal",
-      "request": "launch",
-      "name": "Bash: Lint",
-      "command": "bun run lint:strict"
-    },
-    {
-      "type": "node-terminal",
-      "request": "launch",
-      "name": "Bash: Tests",
-      "command": "bash tests/verify-dryrun.sh"
-    }
-  ]
+	"configurations": [
+		{
+			"command": "bun run format",
+			"name": "Bash: Run format",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
+			"command": "bun run typecheck",
+			"name": "Bash: Typecheck",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
+			"command": "bun run lint:strict",
+			"name": "Bash: Lint",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
+			"command": "bash tests/verify-dryrun.sh",
+			"name": "Bash: Tests",
+			"request": "launch",
+			"type": "node-terminal"
+		}
+	],
+	"version": "0.2.0"
 }

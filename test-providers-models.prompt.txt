@@ -1,0 +1,15 @@
+/using-superpowers /user-communication-preferences /plans-and-specs /goal for Act as a Hermes System Administrator. Execute the following sequence:
+
+1. LIST ALL AUTHORIZED PROVIDERS:
+Fetch and display all available LLM providers natively supported by my current Hermes instance (e.g., Nous Research Portal, OpenRouter, NovitaAI, NVIDIA NIM, Kimi,Copilot,Openai).
+
+2. EXTRACT FREE MODELS:
+Review the model catalog for each provider and extract all zero-cost or "free-tier" models available (e.g., DeepSeek V4-Flash, Ring 2.6, Gemma 4, or Nvidia Nemotron variants). Compile them into a clean Markdown table with their Provider Name, Model Name, and available Context Window.
+
+3. TEST ALL FREE MODELS:
+Create a standardized benchmark test for the extracted list. For each free model, run a sequential test executing these three micro-tasks:
+  - TASK 1 (Reasoning/Logic): Calculate $30 \div 6 = 5$, then deduce the remaining balance if you start with $\$10$ and spend $\$4$.
+  - TASK 2 (Tool Calling): Attempt to use a basic file or terminal tool (like checking the system workspace directory or printing a simple string).
+  - TASK 3 (Knowledge): Briefly describe the built-in learning loop and how to trigger an auto-generated skill in Hermes Agent.
+
+For each test, log the performance, report any rate limit or API errors, and note if the model successfully completed the execution or failed.

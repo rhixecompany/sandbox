@@ -1,86 +1,86 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "command": "bun run format",
-            "label": "Bash: Format",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        },
-        {
-            "command": "bun run typecheck",
-            "label": "Bash: Type Check",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        },
-        {
-            "command": "bun run lint:strict",
-            "label": "Bash: Lint",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        },
-        {
-            "command": "bash tests/verify-dryrun.sh",
-            "label": "Bash: Verify Dry Run",
-            "type": "shell",
-            "group": "test",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        },
-        {
-            "command": "bash test-all.sh",
-            "label": "Bash: Test All",
-            "type": "shell",
-            "group": "test",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        },
-        {
-            "label": "PowerShell: Orchestrator Discover",
-            "type": "shell",
-            "command": "pwsh",
-            "args": [
-                "-NoProfile",
-                "-ExecutionPolicy",
-                "Bypass",
-                "-Command",
-                ".\\orchestrator-unified.ps1 -Mode discover"
-            ],
-            "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}/Bash"
-            }
-        }
-    ]
+	"tasks": [
+		{
+			"command": "bun run format",
+			"group": "build",
+			"label": "Bash: Format",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"presentation": {
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"type": "shell"
+		},
+		{
+			"command": "bun run typecheck",
+			"group": "build",
+			"label": "Bash: Type Check",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"presentation": {
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"type": "shell"
+		},
+		{
+			"command": "bun run lint:strict",
+			"group": "build",
+			"label": "Bash: Lint",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"presentation": {
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"type": "shell"
+		},
+		{
+			"command": "bash tests/verify-dryrun.sh",
+			"group": "test",
+			"label": "Bash: Verify Dry Run",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"presentation": {
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"type": "shell"
+		},
+		{
+			"command": "bash test-all.sh",
+			"group": "test",
+			"label": "Bash: Test All",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"presentation": {
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"type": "shell"
+		},
+		{
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				".\\orchestrator-unified.ps1 -Mode discover"
+			],
+			"command": "pwsh",
+			"isBackground": true,
+			"label": "PowerShell: Orchestrator Discover",
+			"options": {
+				"cwd": "${workspaceFolder}/Bash"
+			},
+			"type": "shell"
+		}
+	],
+	"version": "2.0.0"
 }
