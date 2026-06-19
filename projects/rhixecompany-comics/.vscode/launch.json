@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Django: Runserver",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/manage.py",
+      "args": [
+        "runserver"
+      ],
+      "django": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Django: Test",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/manage.py",
+      "args": [
+        "test",
+        "--keepdb",
+        "--verbosity=2"
+      ],
+      "django": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Next.js: Dev Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "cd frontend && npm run dev"
+    },
+    {
+      "name": "Next.js: Build",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "cd frontend && npm run build"
+    }
+  ]
+}
