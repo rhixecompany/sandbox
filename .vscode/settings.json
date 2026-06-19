@@ -1,238 +1,237 @@
 {
-	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.python"
-	},
-	"[scss]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"better-comments.highlightPlainText": true,
-	"better-comments.multilineComments": true,
-	"better-comments.tags": [
-		{
-			"backgroundColor": "transparent",
-			"bold": false,
-			"color": "#FF2D00",
-			"italic": false,
-			"strikethrough": false,
-			"tag": "!",
-			"underline": false
-		},
-		{
-			"backgroundColor": "transparent",
-			"bold": false,
-			"color": "#3498DB",
-			"italic": false,
-			"strikethrough": false,
-			"tag": "?",
-			"underline": false
-		},
-		{
-			"backgroundColor": "transparent",
-			"bold": false,
-			"color": "#474747",
-			"italic": false,
-			"strikethrough": true,
-			"tag": "//",
-			"underline": false
-		},
-		{
-			"backgroundColor": "transparent",
-			"bold": false,
-			"color": "#FF8C00",
-			"italic": false,
-			"strikethrough": false,
-			"tag": "todo",
-			"underline": false
-		},
-		{
-			"backgroundColor": "transparent",
-			"bold": false,
-			"color": "#98C379",
-			"italic": false,
-			"strikethrough": false,
-			"tag": "*",
-			"underline": false
-		}
-	],
-	"colorInfo.languages": [
-		{
-			"colors": "css",
-			"selector": "css"
-		},
-		{
-			"colors": "css",
-			"selector": "sass"
-		},
-		{
-			"colors": "css",
-			"selector": "scss"
-		},
-		{
-			"colors": "css",
-			"selector": "less"
-		}
-	],
-	"editor.codeActionsOnSave": {
-		"source.addMissingImports": "explicit",
-		"source.fixAll": "explicit",
-		"source.fixAll.eslint": "explicit",
-		"source.organizeImports": "explicit",
-		"source.removeUnusedImports": "explicit",
-		"source.sort.json": "explicit"
-	},
-	"editor.codeLens": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.inlineSuggest.enabled": true,
-	"editor.quickSuggestions": {
-		"strings": true
-	},
-	"editor.suggestSelection": "first",
-	"emmet.includeLanguages": {
-		"postcss": "css"
-	},
-	"errorLens.enabled": true,
-	"files.associations": {
-		"*.css": "tailwindcss",
-		"*.csv": "csv (semicolon)",
-		"*.dat": "csv (pipe)",
-		"*.scss": "tailwindcss",
-		"**/*.{txt,in}": "django-txt",
-		"**/requirements/**/*.{txt,in}": "pip-requirements"
-	},
-	"git.autofetch": true,
-	"git.autorefresh": true,
-	"git.confirmSync": false,
-	"git.enableSmartCommit": true,
-	"githubPullRequests.queries": [
-		{
-			"label": "Waiting For My Review",
-			"query": "is:open review-requested:${user}"
-		},
-		{
-			"label": "Assigned To Me",
-			"query": "is:open assignee:${user}"
-		},
-		{
-			"label": "Created By Me",
-			"query": "is:open author:${user}"
-		},
-		{
-			"label": "Mentioned Me",
-			"query": "is:open mentions:${user}"
-		}
-	],
-	"markdown.extension.completion.respectVscodeSearchExclude": true,
-	"markdown.extension.list.indentationSize": "adaptive",
-	"markdown.extension.orderedList.marker": "ordered",
-	"markdown.extension.print.includeVscodeStylesheets": true,
-	"markdown.extension.toc.levels": "1..6",
-	"markdown.extension.toc.orderedList": true,
-	"markdown.extension.toc.plaintext": false,
-	"markdown.extension.toc.slugifyMode": "github",
-	"markdown.extension.toc.unorderedList.marker": "*",
-	"markdown.extension.toc.updateOnSave": true,
-	"markdownlint.config": {
-		"default": true,
-		"MD013": false,
-		"MD033": false,
-		"MD041": false
-	},
-	"markdownlint.run": "onSave",
-	"npm-intellisense.importDeclarationType": "const",
-	"npm-intellisense.importES6": true,
-	"npm-intellisense.importLinebreak": ";\r\n",
-	"npm-intellisense.importQuotes": "'",
-	"npm-intellisense.packageSubfoldersIntellisense": true,
-	"npm-intellisense.recursivePackageJsonLookup": true,
-	"npm-intellisense.scanDevDependencies": true,
-	"npm-intellisense.showBuildInLibs": true,
-	"powershell.analyzeOpenDocumentsOnly": true,
-	"powershell.codeFolding.enable": true,
-	"powershell.codeFormatting.preset": "Allman",
-	"prettier.arrowParens": "avoid",
-	"prettier.bracketSpacing": true,
-	"prettier.endOfLine": "lf",
-	"prettier.htmlWhitespaceSensitivity": "ignore",
-	"prettier.jsxSingleQuote": true,
-	"prettier.printWidth": 80,
-	"prettier.proseWrap": "always",
-	"prettier.semi": false,
-	"prettier.singleQuote": true,
-	"prettier.tabWidth": 2,
-	"prettier.trailingComma": "all",
-	"prettier.vueIndentScriptAndStyle": true,
-	"python.analysis.aiCodeActions": {
-		"generateDocstring": true,
-		"generateSymbol": true,
-		"implementAbstractClasses": true
-	},
-	"python.analysis.autoImportCompletions": true,
-	"python.analysis.autoSearchPaths": true,
-	"python.analysis.diagnosticSeverityOverrides": {
-		"reportImplicitStringConcatenation": "warning",
-		"reportUnboundVariable": "information"
-	},
-	"python.analysis.typeCheckingMode": "basic",
-	"python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
-	"python.analysis.typeEvaluation.strictDictionaryInference": true,
-	"python.analysis.typeEvaluation.strictListInference": true,
-	"python.analysis.typeEvaluation.strictParameterNoneValue": true,
-	"python.analysis.typeEvaluation.strictSetInference": true,
-	"python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
-	"python.languageServer": "Pylance",
-	"tailwindCSS.classFunctions": [
-		"tw",
-		"clsx",
-		"tw\\.[a-z-]+"
-	],
-	"tailwindCSS.emmetCompletions": true,
-	"tailwindCSS.includeLanguages": {
-		"css": "css",
-		"django-html": "html",
-		"javascript": "jsx",
-		"plaintext": "html",
-		"scss": "scss",
-		"typescript": "tsx"
-	},
-	"terminal.integrated.defaultProfile.windows": "PowerShell",
-	"terminal.integrated.profiles.windows": {
-		"Command Prompt": {
-			"icon": "terminal-cmd",
-			"path": "cmd.exe"
-		},
-		"Git Bash": {
-			"icon": "terminal-bash",
-			"source": "Git Bash"
-		},
-		"PowerShell": {
-			"icon": "terminal-powershell",
-			"source": "PowerShell"
-		}
-	},
-	"workbench.editor.editorActionsLocation": "default"
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  "better-comments.tags": [
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#FF2D00",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "!",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#3498DB",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "?",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#474747",
+      "italic": false,
+      "strikethrough": true,
+      "tag": "//",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#FF8C00",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "todo",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#98C379",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "*",
+      "underline": false
+    }
+  ],
+  "colorInfo.languages": [
+    {
+      "colors": "css",
+      "selector": "css"
+    },
+    {
+      "colors": "css",
+      "selector": "sass"
+    },
+    {
+      "colors": "css",
+      "selector": "scss"
+    },
+    {
+      "colors": "css",
+      "selector": "less"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit",
+    "source.sort.json": "explicit"
+  },
+  "editor.codeLens": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.suggestSelection": "first",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "errorLens.enabled": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.csv": "csv (semicolon)",
+    "*.dat": "csv (pipe)",
+    "*.scss": "tailwindcss",
+    "**/*.{txt,in}": "django-txt",
+    "**/requirements/**/*.{txt,in}": "pip-requirements"
+  },
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    },
+    {
+      "label": "Mentioned Me",
+      "query": "is:open mentions:${user}"
+    }
+  ],
+  "markdown.extension.completion.respectVscodeSearchExclude": true,
+  "markdown.extension.list.indentationSize": "adaptive",
+  "markdown.extension.orderedList.marker": "ordered",
+  "markdown.extension.print.includeVscodeStylesheets": true,
+  "markdown.extension.toc.levels": "1..6",
+  "markdown.extension.toc.orderedList": true,
+  "markdown.extension.toc.plaintext": false,
+  "markdown.extension.toc.slugifyMode": "github",
+  "markdown.extension.toc.unorderedList.marker": "*",
+  "markdown.extension.toc.updateOnSave": true,
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false,
+    "MD041": false
+  },
+  "markdownlint.run": "onSave",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.recursivePackageJsonLookup": true,
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "powershell.analyzeOpenDocumentsOnly": true,
+  "powershell.codeFolding.enable": true,
+  "powershell.codeFormatting.preset": "Allman",
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "lf",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "always",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.vueIndentScriptAndStyle": true,
+  "python.analysis.aiCodeActions": {
+    "generateDocstring": true,
+    "generateSymbol": true,
+    "implementAbstractClasses": true
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportImplicitStringConcatenation": "warning",
+    "reportUnboundVariable": "information"
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
+  "python.analysis.typeEvaluation.strictDictionaryInference": true,
+  "python.analysis.typeEvaluation.strictListInference": true,
+  "python.analysis.typeEvaluation.strictParameterNoneValue": true,
+  "python.analysis.typeEvaluation.strictSetInference": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.languageServer": "Pylance",
+  "tailwindCSS.classFunctions": [
+    "tw",
+    "clsx",
+    "tw\\.[a-z-]+"
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "css": "css",
+    "django-html": "html",
+    "javascript": "jsx",
+    "plaintext": "html",
+    "scss": "scss",
+    "typescript": "tsx"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "icon": "terminal-cmd",
+      "path": "cmd.exe"
+    },
+    "Git Bash": {
+      "icon": "terminal-bash",
+      "source": "Git Bash"
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    }
+  },
+  "workbench.editor.editorActionsLocation": "default"
 }

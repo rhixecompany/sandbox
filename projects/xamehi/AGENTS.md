@@ -1,4 +1,11 @@
 # xamehi — Dual-Backend + React
+## Architecture
+
+- **Blueprint**: [xamehi Architecture](../docs/Project_Architecture/xamehi_architecture.md)
+- **Folders**: [xamehi Folder Structure](../docs/Project_Architecture/xamehi_folders.md)
+- **Tech Stack**: [xamehi Technology Stack](../docs/Project_Architecture/xamehi_techstack.md)
+- **Stack Type**: Django
+
 
 Django + Express + React 18 legacy app.
 

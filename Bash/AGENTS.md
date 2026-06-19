@@ -1,4 +1,11 @@
 # Bash — Automation Toolkit
+## Architecture
+
+- **Blueprint**: [Bash Architecture](../docs/Project_Architecture/Bash_architecture.md)
+- **Folders**: [Bash Folder Structure](../docs/Project_Architecture/Bash_folders.md)
+- **Tech Stack**: [Bash Technology Stack](../docs/Project_Architecture/Bash_techstack.md)
+- **Stack Type**: Bun/TypeScript
+
 
 Bun 1.3.14+ + TypeScript strict + shell scripts.
 

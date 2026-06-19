@@ -1,4 +1,11 @@
 # xamehi.tv — Django + React Streaming
+## Architecture
+
+- **Blueprint**: [xamehi.tv Architecture](../docs/Project_Architecture/xamehi.tv_architecture.md)
+- **Folders**: [xamehi.tv Folder Structure](../docs/Project_Architecture/xamehi.tv_folders.md)
+- **Tech Stack**: [xamehi.tv Technology Stack](../docs/Project_Architecture/xamehi.tv_techstack.md)
+- **Stack Type**: Django
+
 
 Django REST + React 17 (Material-UI, Redux).
 

@@ -1,4 +1,11 @@
 # Ecom — Django + React Ecommerce
+## Architecture
+
+- **Blueprint**: [ecom Architecture](../docs/Project_Architecture/ecom_architecture.md)
+- **Folders**: [ecom Folder Structure](../docs/Project_Architecture/ecom_folders.md)
+- **Tech Stack**: [ecom Technology Stack](../docs/Project_Architecture/ecom_techstack.md)
+- **Stack Type**: Dual-stack (Django + React)
+
 
 Django REST Framework + React/Redux + PayPal.
 

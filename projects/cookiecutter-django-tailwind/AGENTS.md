@@ -1,4 +1,11 @@
 # cookiecutter-django-tailwind
+## Architecture
+
+- **Blueprint**: [cookiecutter-django-tailwind Architecture](../docs/Project_Architecture/cookiecutter_django_tailwind_architecture.md)
+- **Folders**: [cookiecutter-django-tailwind Folder Structure](../docs/Project_Architecture/cookiecutter_django_tailwind_folders.md)
+- **Tech Stack**: [cookiecutter-django-tailwind Technology Stack](../docs/Project_Architecture/cookiecutter_django_tailwind_techstack.md)
+- **Stack Type**: Django
+
 
 Django 5.x + Tailwind generator (template repo).
 

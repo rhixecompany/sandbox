@@ -1,4 +1,11 @@
 # Python-projects — 18 Beginner Scripts
+## Architecture
+
+- **Blueprint**: [Python-projects Architecture](../docs/Project_Architecture/Python_projects_architecture.md)
+- **Folders**: [Python-projects Folder Structure](../docs/Project_Architecture/Python_projects_folders.md)
+- **Tech Stack**: [Python-projects Technology Stack](../docs/Project_Architecture/Python_projects_techstack.md)
+- **Stack Type**: Python
+
 
 Python 3.x scripts (calculator, games, face detection, QR, etc.).
 

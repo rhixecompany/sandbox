@@ -1,4 +1,11 @@
 # youtube-downloader
+## Architecture
+
+- **Blueprint**: [youtube-downloader Architecture](../docs/Project_Architecture/youtube_downloader_architecture.md)
+- **Folders**: [youtube-downloader Folder Structure](../docs/Project_Architecture/youtube_downloader_folders.md)
+- **Tech Stack**: [youtube-downloader Technology Stack](../docs/Project_Architecture/youtube_downloader_techstack.md)
+- **Stack Type**: Unknown
+
 
 Python 3.x CLI downloader (yt-dlp + curl_cffi): single video, playlist, loop mode.
 

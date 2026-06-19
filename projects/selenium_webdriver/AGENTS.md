@@ -1,4 +1,11 @@
 # selenium_webdriver — Chrome Scraper
+## Architecture
+
+- **Blueprint**: [selenium_webdriver Architecture](../docs/Project_Architecture/selenium_webdriver_architecture.md)
+- **Folders**: [selenium_webdriver Folder Structure](../docs/Project_Architecture/selenium_webdriver_folders.md)
+- **Tech Stack**: [selenium_webdriver Technology Stack](../docs/Project_Architecture/selenium_webdriver_techstack.md)
+- **Stack Type**: Node.js
+
 
 Node.js 18+ Selenium scraper for comics/manga (JS modules).
 

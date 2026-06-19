@@ -1,4 +1,11 @@
 # Django-Scrapy-Selenium — Scraping Platform
+## Architecture
+
+- **Blueprint**: [Django-Scrapy-Selenium Architecture](../docs/Project_Architecture/Django_Scrapy_Selenium_architecture.md)
+- **Folders**: [Django-Scrapy-Selenium Folder Structure](../docs/Project_Architecture/Django_Scrapy_Selenium_folders.md)
+- **Tech Stack**: [Django-Scrapy-Selenium Technology Stack](../docs/Project_Architecture/Django_Scrapy_Selenium_techstack.md)
+- **Stack Type**: Django
+
 
 Django + Scrapy + Selenium + Celery + Tailwind dashboard.
 

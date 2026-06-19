@@ -1,4 +1,11 @@
 # RhixeCompany Comics — Dual-Stack Platform
+## Architecture
+
+- **Blueprint**: [rhixecompany-comics Architecture](../docs/Project_Architecture/rhixecompany_comics_architecture.md)
+- **Folders**: [rhixecompany-comics Folder Structure](../docs/Project_Architecture/rhixecompany_comics_folders.md)
+- **Tech Stack**: [rhixecompany-comics Technology Stack](../docs/Project_Architecture/rhixecompany_comics_techstack.md)
+- **Stack Type**: Dual-stack (Django + Next.js)
+
 
 Django + Next.js 16 + Celery.
 

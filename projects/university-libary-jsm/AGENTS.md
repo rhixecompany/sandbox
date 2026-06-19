@@ -1,4 +1,11 @@
 # University Library JSM
+## Architecture
+
+- **Blueprint**: [university-libary-jsm Architecture](../docs/Project_Architecture/university_libary_jsm_architecture.md)
+- **Folders**: [university-libary-jsm Folder Structure](../docs/Project_Architecture/university_libary_jsm_folders.md)
+- **Tech Stack**: [university-libary-jsm Technology Stack](../docs/Project_Architecture/university_libary_jsm_techstack.md)
+- **Stack Type**: Next.js
+
 
 Next.js 15 + Drizzle + Neon + Redis.
 

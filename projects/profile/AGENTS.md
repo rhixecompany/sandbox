@@ -1,4 +1,11 @@
 # Profile — Django Blog/CMS
+## Architecture
+
+- **Blueprint**: [profile Architecture](../docs/Project_Architecture/profile_architecture.md)
+- **Folders**: [profile Folder Structure](../docs/Project_Architecture/profile_folders.md)
+- **Tech Stack**: [profile Technology Stack](../docs/Project_Architecture/profile_techstack.md)
+- **Stack Type**: Unknown
+
 
 Django 4.x + GCS + CKEditor.
 

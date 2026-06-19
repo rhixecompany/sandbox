@@ -1,4 +1,11 @@
 # rhixe_scans — Comic Reader
+## Architecture
+
+- **Blueprint**: [rhixe_scans Architecture](../docs/Project_Architecture/rhixe_scans_architecture.md)
+- **Folders**: [rhixe_scans Folder Structure](../docs/Project_Architecture/rhixe_scans_folders.md)
+- **Tech Stack**: [rhixe_scans Technology Stack](../docs/Project_Architecture/rhixe_scans_techstack.md)
+- **Stack Type**: Next.js
+
 
 Next.js 15 + TypeScript + Prisma 6 + Tailwind + Stripe/PayPal.
 

@@ -1,4 +1,11 @@
 # Banking — Fintech App
+## Architecture
+
+- **Blueprint**: [Banking Architecture](../docs/Project_Architecture/Banking_architecture.md)
+- **Folders**: [Banking Folder Structure](../docs/Project_Architecture/Banking_folders.md)
+- **Tech Stack**: [Banking Technology Stack](../docs/Project_Architecture/Banking_techstack.md)
+- **Stack Type**: Next.js
+
 
 Next.js 16 + Drizzle + Plaid/Dwolla.
 

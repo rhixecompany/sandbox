@@ -1,4 +1,11 @@
 # Comicwise — Comic Streaming
+## Architecture
+
+- **Blueprint**: [comicwise Architecture](../docs/Project_Architecture/comicwise_architecture.md)
+- **Folders**: [comicwise Folder Structure](../docs/Project_Architecture/comicwise_folders.md)
+- **Tech Stack**: [comicwise Technology Stack](../docs/Project_Architecture/comicwise_techstack.md)
+- **Stack Type**: Next.js
+
 
 Next.js 15 + Prisma + Stripe.
 
