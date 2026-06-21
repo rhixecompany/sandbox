@@ -101,6 +101,7 @@
 │ powerbi-modeling          │ devops               │ local  │ local │ enabled │
 │ profile-maintenance       │ devops               │ local  │ local │ enabled │
 │ projects-multi-repo-init… │ devops               │ local  │ local │ enabled │
+│ provider-model-audit      │ devops               │ local  │ local │ enabled │
 │ provider-reliability-dia… │ devops               │ local  │ local │ enabled │
 │ rbac-audit-logging        │ devops               │ local  │ local │ enabled │
 │ secret-scanning           │ devops               │ local  │ local │ enabled │
@@ -198,5 +199,5 @@
 │ worktrunk                 │ software-development │ local  │ local │ enabled │
 │ writing-plans             │ software-development │ local  │ local │ enabled │
 └───────────────────────────┴──────────────────────┴────────┴───────┴─────────┘
-0 hub-installed, 0 builtin, 195 local — 195 enabled, 0 disabled
+0 hub-installed, 0 builtin, 196 local — 196 enabled, 0 disabled
 

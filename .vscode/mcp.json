@@ -14,6 +14,36 @@
 		}
 	],
 	"servers": {
+		"mcp-ast-grep": {
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			],
+			"command": "npx",
+			"type": "stdio"
+		},
+		"mcp-code-sandbox": {
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			],
+			"command": "npx",
+			"type": "stdio"
+		},
+		"mcp-codex": {
+			"args": [
+				"mcp-server"
+			],
+			"command": "codex",
+			"type": "stdio"
+		},
+		"mcp-copilot-mcp": {
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\copilot_mcp_server.py"
+			],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"type": "stdio"
+		},
 		"mcp-docker": {
 			"args": [
 				"mcp",
@@ -28,6 +58,14 @@
 				"ProgramData": "${env:ProgramData}",
 				"ProgramFiles": "${env:ProgramFiles}"
 			},
+			"type": "stdio"
+		},
+		"mcp-fetch": {
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			],
+			"command": "npx",
 			"type": "stdio"
 		},
 		"mcp-filesystem": {
@@ -49,6 +87,45 @@
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github-token}"
 			},
 			"type": "stdio"
+		},
+		"mcp-linear": {
+			"url": "https://mcp.linear.app/mcp",
+			"type": "oauth"
+		},
+		"mcp-memory": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			],
+			"command": "npx",
+			"type": "stdio"
+		},
+		"mcp-mindstudio": {
+			"args": [
+				"mcp"
+			],
+			"command": "mindstudio",
+			"type": "stdio"
+		},
+		"mcp-playwright": {
+			"args": [
+				"-y",
+				"@playwright/mcp@latest"
+			],
+			"command": "npx",
+			"type": "stdio"
+		},
+		"mcp-sequential-thinking": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			],
+			"command": "npx",
+			"type": "stdio"
+		},
+		"mcp-smithery": {
+			"url": "https://mcp.smithery.run/rhixecompany",
+			"type": "oauth"
 		}
 	}
 }

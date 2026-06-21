@@ -17,6 +17,9 @@
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python"
 	},
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
@@ -218,7 +221,7 @@
 		"scss": "scss",
 		"typescript": "tsx"
 	},
-	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.profiles.windows": {
 		"Command Prompt": {
 			"icon": "terminal-cmd",

@@ -1,0 +1,10 @@
+execute `hermes profile --help` for hermes profile command help message and only then
+execute `hermes profile list` to get a list of hermes profiles and only then
+hermes profile describe on all profile in the list using its required context and only then
+hermes profile delete default and only then
+hermes profile rename adminbot to be alexa and set it as the default profile and only then
+execute `hermes profile list` to get a list of hermes profiles and only then
+hermes profile alias on all profile in the list using its required context and only then
+remove Orphan alias: test-clone.bat → profile 'test-clone' no longer exists and only then
+execute `hermes profile list` to get a list of hermes profiles and only then
+hermes profile info on all profile in the list using its required context and only then
