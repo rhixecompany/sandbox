@@ -1,6 +1,6 @@
 # Desktop Commander MCP
 
-**Source:** https://github.com/wonderwhy-er/DesktopCommanderMCP
+**Source:** <https://github.com/wonderwhy-er/DesktopCommanderMCP>
 
 ## Overview
 
@@ -9,6 +9,7 @@
 ## What It Enables
 
 Desktop Commander enables AI assistants (Claude Desktop, Cursor, Windsurf, VS Code, etc.) to:
+
 - Execute terminal commands and manage long-running processes
 - Search, read, write, and edit files with surgical precision
 - Work across your entire OS, not just within an IDE
@@ -18,14 +19,14 @@ Desktop Commander enables AI assistants (Claude Desktop, Cursor, Windsurf, VS Co
 
 ## Features
 
-| Category | Capabilities |
-|----------|--------------|
-| **Terminal** | Start/interact with processes, list sessions, kill processes, SSH support |
-| **Filesystem** | Read/write files (text, Excel, PDF, URLs), list directories, search content |
-| **Text Editing** | Surgical search/replace with fuzzy matching and diff preview |
-| **Configuration** | Runtime config management via MCP tools |
-| **Analytics** | Usage stats, tool call history, feedback submission |
-| **Preview UI** | Rich file previews, Markdown editor, directory browser in Claude Desktop |
+| Category          | Capabilities                                                                |
+| ----------------- | --------------------------------------------------------------------------- |
+| **Terminal**      | Start/interact with processes, list sessions, kill processes, SSH support   |
+| **Filesystem**    | Read/write files (text, Excel, PDF, URLs), list directories, search content |
+| **Text Editing**  | Surgical search/replace with fuzzy matching and diff preview                |
+| **Configuration** | Runtime config management via MCP tools                                     |
+| **Analytics**     | Usage stats, tool call history, feedback submission                         |
+| **Preview UI**    | Rich file previews, Markdown editor, directory browser in Claude Desktop    |
 
 ## Installation Methods
 
@@ -57,16 +58,17 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-  "mcpServers": {
-    "desktop-commander": {
-      "command": "npx",
-      "args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
-    }
-  }
+	"mcpServers": {
+		"desktop-commander": {
+			"command": "npx",
+			"args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
+		}
+	}
 }
 ```
 
 **Config locations:**
+
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 - Linux: `~/.config/Claude/claude_desktop_config.json`
@@ -97,21 +99,21 @@ docker run -d --name desktop-commander `
 
 ## Other MCP Clients
 
-| Client | Config Location | Quick Install |
-|--------|----------------|---------------|
-| **Cursor** | `~/.cursor/mcp.json` or `.cursor/mcp.json` | [One-click](https://cursor.com/en-US/install-mcp?name=desktop-commander&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB3b25kZXJ3aHktZXIvZGVza3RvcC1jb21tYW5kZXJAbGF0ZXN0Il19) |
-| **Windsurf** | `~/.codeium/windsurf/mcp_config.json` | Manual JSON |
-| **VS Code** | `.vscode/mcp.json` or User Settings | Manual JSON |
-| **Cline** | Extension settings → MCP Servers | Manual JSON |
-| **Roo Code** | MCP config file | Manual JSON |
-| **Claude Code** | `claude mcp add desktop-commander -s user -- npx -y @wonderwhy-er/desktop-commander@latest` | CLI |
-| **Trae** | "Add manually" in settings | Manual JSON |
-| **Kiro** | Kiro → MCP Servers → + Add | Manual JSON |
-| **Codex** | `~/.codex/config.toml` (TOML) | CLI or manual |
-| **JetBrains** | Settings → Tools → AI Assistant → MCP | Manual JSON |
-| **Gemini CLI** | `~/.gemini/settings.json` | Manual JSON |
-| **Augment Code** | Cmd/Ctrl+Shift+P → Add MCP server | Manual JSON |
-| **Qwen Code** | `.qwen/settings.json` or `~/.qwen/settings.json` | Manual JSON |
+| Client           | Config Location                                                                             | Quick Install                                                                                                                                                                    |
+| ---------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cursor**       | `~/.cursor/mcp.json` or `.cursor/mcp.json`                                                  | [One-click](https://cursor.com/en-US/install-mcp?name=desktop-commander&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB3b25kZXJ3aHktZXIvZGVza3RvcC1jb21tYW5kZXJAbGF0ZXN0Il19) |
+| **Windsurf**     | `~/.codeium/windsurf/mcp_config.json`                                                       | Manual JSON                                                                                                                                                                      |
+| **VS Code**      | `.vscode/mcp.json` or User Settings                                                         | Manual JSON                                                                                                                                                                      |
+| **Cline**        | Extension settings → MCP Servers                                                            | Manual JSON                                                                                                                                                                      |
+| **Roo Code**     | MCP config file                                                                             | Manual JSON                                                                                                                                                                      |
+| **Claude Code**  | `claude mcp add desktop-commander -s user -- npx -y @wonderwhy-er/desktop-commander@latest` | CLI                                                                                                                                                                              |
+| **Trae**         | "Add manually" in settings                                                                  | Manual JSON                                                                                                                                                                      |
+| **Kiro**         | Kiro → MCP Servers → + Add                                                                  | Manual JSON                                                                                                                                                                      |
+| **Codex**        | `~/.codex/config.toml` (TOML)                                                               | CLI or manual                                                                                                                                                                    |
+| **JetBrains**    | Settings → Tools → AI Assistant → MCP                                                       | Manual JSON                                                                                                                                                                      |
+| **Gemini CLI**   | `~/.gemini/settings.json`                                                                   | Manual JSON                                                                                                                                                                      |
+| **Augment Code** | Cmd/Ctrl+Shift+P → Add MCP server                                                           | Manual JSON                                                                                                                                                                      |
+| **Qwen Code**    | `.qwen/settings.json` or `~/.qwen/settings.json`                                            | Manual JSON                                                                                                                                                                      |
 
 ### Remote MCP (No Desktop App)
 
@@ -121,45 +123,45 @@ docker run -d --name desktop-commander `
 
 ### Configuration
 
-| Tool | Description |
-|------|-------------|
-| `get_config` | Get complete server config (blockedCommands, defaultShell, allowedDirectories, fileReadLineLimit, fileWriteLineLimit, telemetryEnabled) |
-| `set_config_value` | Set specific config value by key |
+| Tool               | Description                                                                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_config`       | Get complete server config (blockedCommands, defaultShell, allowedDirectories, fileReadLineLimit, fileWriteLineLimit, telemetryEnabled) |
+| `set_config_value` | Set specific config value by key                                                                                                        |
 
 ### Terminal
 
-| Tool | Description |
-|------|-------------|
-| `start_process` | Start programs with smart readiness detection |
-| `interact_with_process` | Send commands to running programs |
-| `read_process_output` | Read output from processes |
-| `force_terminate` | Force terminate session |
-| `list_sessions` | List active terminal sessions |
-| `list_processes` | List running processes with details |
+| Tool                    | Description                                   |
+| ----------------------- | --------------------------------------------- |
+| `start_process`         | Start programs with smart readiness detection |
+| `interact_with_process` | Send commands to running programs             |
+| `read_process_output`   | Read output from processes                    |
+| `force_terminate`       | Force terminate session                       |
+| `list_sessions`         | List active terminal sessions                 |
+| `list_processes`        | List running processes with details           |
 
 ### Filesystem
 
-| Tool | Description |
-|------|-------------|
-| `read_file` | Read text files |
-| `write_file` | Write files |
-| `edit_file` | Surgical edit with diff preview |
-| `list_directory` | List directory contents |
-| `search_files` | Search files by pattern |
-| `get_file_info` | File metadata |
+| Tool             | Description                     |
+| ---------------- | ------------------------------- |
+| `read_file`      | Read text files                 |
+| `write_file`     | Write files                     |
+| `edit_file`      | Surgical edit with diff preview |
+| `list_directory` | List directory contents         |
+| `search_files`   | Search files by pattern         |
+| `get_file_info`  | File metadata                   |
 
 ### Text Editing
 
-| Tool | Description |
-|------|-------------|
-| `replace_in_file` | Search and replace with diff preview |
-| `insert_into_file` | Insert content at specific location |
+| Tool               | Description                          |
+| ------------------ | ------------------------------------ |
+| `replace_in_file`  | Search and replace with diff preview |
+| `insert_into_file` | Insert content at specific location  |
 
 ### Analytics
 
-| Tool | Description |
-|------|-------------|
-| `get_usage_stats` | Get usage statistics |
+| Tool              | Description                   |
+| ----------------- | ----------------------------- |
+| `get_usage_stats` | Get usage statistics          |
 | `submit_feedback` | Submit feedback to developers |
 
 ## Hermes Integration
@@ -172,7 +174,19 @@ mcp_servers:
     command: "npx"
     args: ["-y", "@wonderwhy-er/desktop-commander@latest"]
     tools:
-      include: [start_process, interact_with_process, read_process_output, list_sessions, read_file, write_file, edit_file, list_directory, search_files, get_config]
+      include:
+        [
+          start_process,
+          interact_with_process,
+          read_process_output,
+          list_sessions,
+          read_file,
+          write_file,
+          edit_file,
+          list_directory,
+          search_files,
+          get_config,
+        ]
 ```
 
 For Docker mode:
@@ -181,12 +195,22 @@ For Docker mode:
 mcp_servers:
   desktop-commander:
     command: "docker"
-    args: ["run", "-i", "--rm", "-v", "C:\\Users\\Alexa\\Desktop\\SandBox:/work", "mcp/desktop-commander:latest"]
+    args:
+      [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:\\Users\\Alexa\\Desktop\\SandBox:/work",
+        "mcp/desktop-commander:latest",
+      ]
     tools:
-      include: [start_process, read_file, write_file, list_directory, search_files]
+      include:
+        [start_process, read_file, write_file, list_directory, search_files]
 ```
 
 Then run:
+
 ```bash
 hermes mcp test desktop-commander
 /reload-mcp
@@ -194,8 +218,12 @@ hermes mcp test desktop-commander
 
 ## References
 
-- GitHub: https://github.com/wonderwhy-er/DesktopCommanderMCP
-- PulseMCP: https://www.pulsemcp.com/servers/wonderwhy-er-desktop-commander
-- mcpmarket.com: https://mcpmarket.com/tools/skills/desktop-commander-mcp-installer
-- Remote MCP: https://mcp.desktopcommander.app
+- GitHub: <https://github.com/wonderwhy-er/DesktopCommanderMCP>
+- PulseMCP: <https://www.pulsemcp.com/servers/wonderwhy-er-desktop-commander>
+- mcpmarket.com: <https://mcpmarket.com/tools/skills/desktop-commander-mcp-installer>
+- Remote MCP: <https://mcp.desktopcommander.app>
+- Docker: mcp/desktop-commander:latest
+  servers/wonderwhy-er-desktop-commander>
+- mcpmarket.com: <https://mcpmarket.com/tools/skills/desktop-commander-mcp-installer>
+- Remote MCP: <https://mcp.desktopcommander.app>
 - Docker: mcp/desktop-commander:latest

@@ -1,6 +1,6 @@
 # GitMCP (git-mcp)
 
-**Source:** https://github.com/idosal/git-mcp
+**Source:** <https://github.com/idosal/git-mcp>
 
 ## Overview
 
@@ -10,15 +10,15 @@
 
 GitMCP transforms **any GitHub repository or GitHub Pages site** into a documentation hub accessible via the **Model Context Protocol (MCP)**. It enables AI assistants (Cursor, Claude, Windsurf, VSCode, Cline, Highlight AI, Augment Code, Msty) to fetch up-to-date docs and code—eliminating hallucinations when the LLM hasn't seen the project.
 
-**Core value:** AI gets *actual* project documentation/code on demand, not stale training data.
+**Core value:** AI gets _actual_ project documentation/code on demand, not stale training data.
 
 ## Supported URL Formats (Two Flavors)
 
-| Format | Use Case |
-|--------|----------|
-| `https://gitmcp.io/{owner}/{repo}` | Standard GitHub repo |
+| Format                             | Use Case                                                      |
+| ---------------------------------- | ------------------------------------------------------------- |
+| `https://gitmcp.io/{owner}/{repo}` | Standard GitHub repo                                          |
 | `https://{owner}.gitmcp.io/{repo}` | GitHub Pages sites (e.g., `langchain-ai.gitmcp.io/langgraph`) |
-| `https://gitmcp.io/docs` | **Dynamic endpoint** — AI picks any repo on the fly |
+| `https://gitmcp.io/docs`           | **Dynamic endpoint** — AI picks any repo on the fly           |
 
 **Example:** `https://gitmcp.io/microsoft/typescript` or `https://microsoft.gitmcp.io/typescript`
 
@@ -34,11 +34,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-  "mcpServers": {
-    "gitmcp": {
-      "url": "https://gitmcp.io/{owner}/{repo}"
-    }
-  }
+	"mcpServers": {
+		"gitmcp": {
+			"url": "https://gitmcp.io/{owner}/{repo}"
+		}
+	}
 }
 ```
 
@@ -46,11 +46,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-  "mcpServers": {
-    "gitmcp": {
-      "url": "https://gitmcp.io/{owner}/{repo}"
-    }
-  }
+	"mcpServers": {
+		"gitmcp": {
+			"url": "https://gitmcp.io/{owner}/{repo}"
+		}
+	}
 }
 ```
 
@@ -58,11 +58,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-  "mcpServers": {
-    "gitmcp": {
-      "url": "https://gitmcp.io/{owner}/{repo}"
-    }
-  }
+	"mcpServers": {
+		"gitmcp": {
+			"url": "https://gitmcp.io/{owner}/{repo}"
+		}
+	}
 }
 ```
 
@@ -70,12 +70,12 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-  "mcpServers": {
-    "gitmcp": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://gitmcp.io/{owner}/{repo}"]
-    }
-  }
+	"mcpServers": {
+		"gitmcp": {
+			"command": "npx",
+			"args": ["-y", "mcp-remote", "https://gitmcp.io/{owner}/{repo}"]
+		}
+	}
 }
 ```
 
@@ -83,11 +83,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-  "mcpServers": {
-    "gitmcp": {
-      "url": "https://gitmcp.io/{owner}/{repo}"
-    }
-  }
+	"mcpServers": {
+		"gitmcp": {
+			"url": "https://gitmcp.io/{owner}/{repo}"
+		}
+	}
 }
 ```
 
@@ -116,12 +116,12 @@ See [Augment Code docs](https://docs.augmentcode.com/setup-augment/mcp) for MCP 
 
 ## Tools Provided to AI
 
-| Tool | Purpose | When Useful |
-|------|---------|-------------|
-| `fetch_<repo>_documentation` | Gets primary docs (`llms.txt` preferred) | General project questions, getting started |
-| `search_<repo>_documentation` | Searches docs with a query | Specific feature/function questions |
-| `fetch_url_content` | Retrieves linked external content | Docs reference external resources |
-| `search_<repo>_code` | Searches actual code via GitHub Code Search | Implementation details, code examples |
+| Tool                          | Purpose                                     | When Useful                                |
+| ----------------------------- | ------------------------------------------- | ------------------------------------------ |
+| `fetch_<repo>_documentation`  | Gets primary docs (`llms.txt` preferred)    | General project questions, getting started |
+| `search_<repo>_documentation` | Searches docs with a query                  | Specific feature/function questions        |
+| `fetch_url_content`           | Retrieves linked external content           | Docs reference external resources          |
+| `search_<repo>_code`          | Searches actual code via GitHub Code Search | Implementation details, code examples      |
 
 > **Dynamic endpoint (`gitmcp.io/docs`)** uses generic names: `fetch_generic_documentation`, `search_generic_code`, `search_generic_documentation` — requires repo info in the call.
 
@@ -141,6 +141,7 @@ Repo: https://github.com/microsoft/playwright-mcp
 MCP URL: https://gitmcp.io/microsoft/playwright-mcp
 Prompt: "How do I use the Playwright MCP"
 ```
+
 → Windsurf pulls docs via GitMCP → correct implementation
 
 ### Example 2: Cursor + LangGraph (GitHub Pages)
@@ -150,6 +151,7 @@ Site: langchain-ai.github.io/langgraph
 MCP URL: https://langchain-ai.gitmcp.io/langgraph
 Prompt: "Add memory to my LangGraph agent"
 ```
+
 → Cursor fetches GitHub Pages docs → accurate code
 
 ### Example 3: Claude Desktop + Dynamic Endpoint
@@ -158,6 +160,7 @@ Prompt: "Add memory to my LangGraph agent"
 MCP URL: https://gitmcp.io/docs
 Prompt: "I want to learn about the OpenAI Whisper speech recognition model. Explain how it works."
 ```
+
 → Claude picks repo on the fly → answers from live docs
 
 ## Repository Badge
@@ -170,10 +173,10 @@ Add to your `README.md` to show GitMCP access + view count:
 
 **Customization:**
 
-| Param | Default | Example |
-|-------|---------|---------|
-| `color` | `aquamarine` | `?color=green` |
-| `label` | `GitMCP` | `?label=Documentation` |
+| Param   | Default      | Example                |
+| ------- | ------------ | ---------------------- |
+| `color` | `aquamarine` | `?color=green`         |
+| `label` | `GitMCP`     | `?label=Documentation` |
 
 **View count:** Increments per tool call on that repo.
 
@@ -187,20 +190,33 @@ mcp_servers:
     url: "https://gitmcp.io/{owner}/{repo}"
     transport: "streamable-http"
     tools:
-      include: [fetch_documentation, search_documentation, fetch_url_content, search_code]
+      include:
+        [
+          fetch_documentation,
+          search_documentation,
+          fetch_url_content,
+          search_code,
+        ]
 ```
 
 For dynamic endpoint:
+
 ```yaml
 mcp_servers:
   gitmcp-dynamic:
     url: "https://gitmcp.io/docs"
     transport: "streamable-http"
     tools:
-      include: [fetch_generic_documentation, search_generic_code, search_generic_documentation]
+      include:
+        [
+          fetch_generic_documentation,
+          search_generic_code,
+          search_generic_documentation,
+        ]
 ```
 
 Then run:
+
 ```bash
 hermes mcp test gitmcp
 /reload-mcp
@@ -208,7 +224,12 @@ hermes mcp test gitmcp
 
 ## References
 
-- GitHub: https://github.com/idosal/git-mcp
-- GitMCP Service: https://gitmcp.io
-- mcpservers.org: https://mcpservers.org/servers/DanyelKirsch/git-mcp-server
-- Augment Code: https://www.augmentcode.com/mcp/git-mcp
+- GitHub: <https://github.com/idosal/git-mcp>
+- GitMCP Service: <https://gitmcp.io>
+- mcpservers.org: <https://mcpservers.org/servers/DanyelKirsch/git-mcp-server>
+- Augment Code: <https://www.augmentcode.com/mcp/git-mcp>
+
+- GitHub: <https://github.com/idosal/git-mcp>
+- GitMCP Service: <https://gitmcp.io>
+- mcpservers.org: <https://mcpservers.org/servers/DanyelKirsch/git-mcp-server>
+- Augment Code: <https://www.augmentcode.com/mcp/git-mcp>

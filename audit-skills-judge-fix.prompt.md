@@ -3,7 +3,18 @@ trigger: /audit-skills-judge-fix
 description: >-
   Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
   remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
-tags: [hermes, copilot, opencode, skills, audit, judge, remediation, dedupe, consolidation]
+tags:
+  [
+    hermes,
+    copilot,
+    opencode,
+    skills,
+    audit,
+    judge,
+    remediation,
+    dedupe,
+    consolidation,
+  ]
 dependencies:
   - skill:using-superpowers
   - skill:user-communication-preferences
@@ -13,13 +24,13 @@ dependencies:
   - skill:skill-creator
   - skill:writing-skills
 skills:
-  - using-superpowers — Establishes workflow foundation
-  - user-communication-preferences — Loads user prefs for execution style
-  - plans-and-specs — Creates implementation plan from goal
-  - skill-judge — Evaluates skill quality against criteria (v1.1.0)
-  - hermes-skills — Skills discovery, install, management
-  - skill-creator — Author in-repo SKILL.md
-  - writing-skills — Write clear skill prose and structure
+  - using-superpowers
+  - user-communication-preferences
+  - plans-and-specs
+  - skill-judge
+  - hermes-skills
+  - skill-creator
+  - writing-skills
 ---
 
 # Audit Skills Judge Fix
@@ -31,17 +42,18 @@ skills:
 This prompt runs a full skills audit pipeline: inventory all local skills, categorize them into correct folders, deduplicate and consolidate overlapping skills, judge each skill's quality in batches of 10, remediate all issues (reference files, scripts, SKILL.md), delete duplicate skills, and verify the entire plan is complete. Execution is sequential — each phase must finish before the next begins.
 
 **Critical rules:**
+
 - Execute `hermes skills audit` in background without timeout; wait before proceeding
 - Judge in batches of 10; raise ALL scores above 80
 - Deduplicate BEFORE judging — merge or delete duplicate skills first
 - Consolidate overlapping skills into umbrella skills using `skill_manage(action='delete', absorbed_into=...)`
 - Do not stop until plan and specs are fully completed
-- All Python scripts go to `C:/Users/Alexa/AppData/Local/hermes/scripts/`
+- All Python scripts go to `~/AppData/Local/hermes/scripts/`
 
 ## Context
 
-- **Source reference:** `./audit-skills-judge-fix.prompt.txt`
-- **Target scope:** All local skills in `C:\Users\Alexa\AppData\Local\hermes\skills\`
+- **Source reference:** (removed; canonical `.prompt.md` kept)
+- **Target scope:** All local skills in `~/AppData/Local/hermes/skills/`
 - **Phase 1 output:** `docs/local-skills.md`
 - **Phase 2 output:** `docs/categorization-plan.md`
 - **Phase 3 output:** `docs/dedupe-report.md`
@@ -53,15 +65,15 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 ## Skills Required
 
-| Skill | Purpose |
-| --- | --- |
-| `using-superpowers` | Establishes workflow foundation |
-| `user-communication-preferences` | Loads user prefs for execution style |
-| `plans-and-specs` | Creates implementation plan from goal |
-| `skill-judge` | Evaluates skill quality against criteria (v1.1.0) |
-| `hermes-skills` | Skills discovery, install, management |
-| `skill-creator` | Author in-repo SKILL.md |
-| `writing-skills` | Write clear skill prose and structure |
+| Skill                            | Purpose                                           |
+| -------------------------------- | ------------------------------------------------- |
+| `using-superpowers`              | Establishes workflow foundation                   |
+| `user-communication-preferences` | Loads user prefs for execution style              |
+| `plans-and-specs`                | Creates implementation plan from goal             |
+| `skill-judge`                    | Evaluates skill quality against criteria (v1.1.0) |
+| `hermes-skills`                  | Skills discovery, install, management             |
+| `skill-creator`                  | Author in-repo SKILL.md                           |
+| `writing-skills`                 | Write clear skill prose and structure             |
 
 ## Rules
 
@@ -71,7 +83,7 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 4. **Dedupe first** — Identify and remove/merge duplicate skills BEFORE judging
 5. **Consolidate overlaps** — Merge thin/overlapping skills into umbrella skills
 6. **Completeness** — Do not stop until plan and specs are fully completed
-7. **Scripts location** — All Python scripts in `C:/Users/Alexa/AppData/Local/hermes/scripts/`
+7. **Scripts location** — All Python scripts in `~/AppData/Local/hermes/scripts/`
 
 ## Phases
 
@@ -85,12 +97,12 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Run `hermes skills audit && hermes skills check && hermes skills update` | Audit results |
-| 1.2 | Run `hermes skills list --source local > docs/local-skills.md` | Skill inventory file |
-| 1.3 | Read and understand `docs/local-skills.md` | Context for Phase 2 |
-| 1.4 | Run `batch_skill_judge.py` (inventory mode) to build `skill_inventory.json` | Full path mapping |
+| Step | Action                                                                      | Output               |
+| ---- | --------------------------------------------------------------------------- | -------------------- |
+| 1.1  | Run `hermes skills audit && hermes skills check && hermes skills update`    | Audit results        |
+| 1.2  | Run `hermes skills list --source local > docs/local-skills.md`              | Skill inventory file |
+| 1.3  | Read and understand `docs/local-skills.md`                                  | Context for Phase 2  |
+| 1.4  | Run `batch_skill_judge.py` (inventory mode) to build `skill_inventory.json` | Full path mapping    |
 
 **Tasks:**
 
@@ -111,13 +123,13 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Identify uncategorized skills (empty category in listing) | Uncategorized list |
-| 2.2 | Create categorization plan using `plans-and-specs` | `.hermes/plans/skills-categorization-plan.md` |
-| 2.3 | Create missing category directories (e.g., `blockchain/`) | New category dirs |
-| 2.4 | Move skills to correct category folders via `mv` | Reorganized directories |
-| 2.5 | Verify with `hermes skills list --source local` | All skills categorized |
+| Step | Action                                                    | Output                                        |
+| ---- | --------------------------------------------------------- | --------------------------------------------- |
+| 2.1  | Identify uncategorized skills (empty category in listing) | Uncategorized list                            |
+| 2.2  | Create categorization plan using `plans-and-specs`        | `.hermes/plans/skills-categorization-plan.md` |
+| 2.3  | Create missing category directories (e.g., `blockchain/`) | New category dirs                             |
+| 2.4  | Move skills to correct category folders via `mv`          | Reorganized directories                       |
+| 2.5  | Verify with `hermes skills list --source local`           | All skills categorized                        |
 
 **Tasks:**
 
@@ -129,34 +141,34 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Category mapping reference:**
 
-| Skill | Target Category |
-| --- | --- |
-| chainlink | blockchain |
-| distributed-llm-pretraining-torchtitan | mlops |
-| here.now | productivity |
-| hermes-breakdown | autonomous-ai-agents |
-| hermes-hooks | devops |
-| hermes-mcp | mcp |
-| hermes-skills | devops |
-| hermes-system-maintenance | devops |
-| huggingface-accelerate | mlops |
-| ideation | creative-ideation |
-| inference-sh-cli | devops |
-| lambda-labs-gpu-cloud | devops |
-| modal-serverless-gpu | devops |
-| optimizing-attention-flash | mlops |
-| peft (peft-fine-tuning) | mlops |
-| profile-maintenance | devops |
-| qdrant-vector-search | mlops |
-| qwen-code | autonomous-ai-agents |
-| simpo (simpo-training) | mlops |
-| skill-creator | development |
-| skill-judge | qa |
-| stable-diffusion-image-generation | mlops |
-| template | autonomous-ai-agents |
-| using-git-worktrees | development |
-| validate-memories | devops |
-| writing-skills | development |
+| Skill                                  | Target Category      |
+| -------------------------------------- | -------------------- |
+| chainlink                              | blockchain           |
+| distributed-llm-pretraining-torchtitan | mlops                |
+| here.now                               | productivity         |
+| hermes-breakdown                       | autonomous-ai-agents |
+| hermes-hooks                           | devops               |
+| hermes-mcp                             | mcp                  |
+| hermes-skills                          | devops               |
+| hermes-system-maintenance              | devops               |
+| huggingface-accelerate                 | mlops                |
+| ideation                               | creative-ideation    |
+| inference-sh-cli                       | devops               |
+| lambda-labs-gpu-cloud                  | devops               |
+| modal-serverless-gpu                   | devops               |
+| optimizing-attention-flash             | mlops                |
+| peft (peft-fine-tuning)                | mlops                |
+| profile-maintenance                    | devops               |
+| qdrant-vector-search                   | mlops                |
+| qwen-code                              | autonomous-ai-agents |
+| simpo (simpo-training)                 | mlops                |
+| skill-creator                          | development          |
+| skill-judge                            | qa                   |
+| stable-diffusion-image-generation      | mlops                |
+| template                               | autonomous-ai-agents |
+| using-git-worktrees                    | development          |
+| validate-memories                      | devops               |
+| writing-skills                         | development          |
 
 ---
 
@@ -170,15 +182,15 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Run `dedupe_skills.py` to find duplicate SKILL.md files | Duplicate pairs list |
-| 3.2 | For each duplicate pair, compare content (line count, structure) | Comparison report |
-| 3.3 | Determine canonical version (prefer category subdirectory, fuller content) | Canonical selection |
-| 3.4 | Run `consolidate_skills.py` to identify overlapping/overlapping skills | Overlap report |
-| 3.5 | Merge thin skills into umbrella skills using `skill_manage(action='delete', absorbed_into=...)` | Merged skills |
-| 3.6 | Delete true duplicates (identical content, same name) via `rm -rf` | Removed duplicates |
-| 3.7 | Verify with `hermes skills list --source local` | Reduced skill count |
+| Step | Action                                                                                          | Output               |
+| ---- | ----------------------------------------------------------------------------------------------- | -------------------- |
+| 3.1  | Run `dedupe_skills.py` to find duplicate SKILL.md files                                         | Duplicate pairs list |
+| 3.2  | For each duplicate pair, compare content (line count, structure)                                | Comparison report    |
+| 3.3  | Determine canonical version (prefer category subdirectory, fuller content)                      | Canonical selection  |
+| 3.4  | Run `consolidate_skills.py` to identify overlapping/overlapping skills                          | Overlap report       |
+| 3.5  | Merge thin skills into umbrella skills using `skill_manage(action='delete', absorbed_into=...)` | Merged skills        |
+| 3.6  | Delete true duplicates (identical content, same name) via `rm -rf`                              | Removed duplicates   |
+| 3.7  | Verify with `hermes skills list --source local`                                                 | Reduced skill count  |
 
 **Tasks:**
 
@@ -192,29 +204,29 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Known duplicate/overlap patterns (from 2026-06-17 audit):**
 
-| Canonical | Duplicate/Overlap | Action |
-| --- | --- | --- |
-| accelerate | huggingface-accelerate | Merge — same purpose |
-| cli | inference-sh-cli | Merge — inference-sh-cli is the fuller version |
-| dspy | mlops/research/dspy | Delete if path missing |
-| docker-management | devops/docker | Delete if path missing |
-| ideation | creative-ideation | Merge — same purpose |
-| lambda-labs | lambda-labs-gpu-cloud | Merge — same purpose |
-| modal | modal-serverless-gpu | Merge — same purpose |
-| peft | peft-fine-tuning | Merge — same purpose |
-| qdrant | qdrant-vector-search | Merge — same purpose |
-| simpo | simpo-training | Merge — same purpose |
-| stable-diffusion | stable-diffusion-image-generation | Merge — same purpose |
-| trl-fine-tuning | mlops/trl | Delete if path missing |
-| grok | mlops/grok | Delete if path missing |
-| hermes-s6-container-supervision | devops/s6 | Delete if path missing |
-| comps-analysis | devops/comps | Delete if path missing |
-| adversarial-ux-test | qa/adversarial | Delete if path missing |
-| dspy | mlops/dspy | Delete if path missing |
+| Canonical                       | Duplicate/Overlap                 | Action                                         |
+| ------------------------------- | --------------------------------- | ---------------------------------------------- |
+| accelerate                      | huggingface-accelerate            | Merge — same purpose                           |
+| cli                             | inference-sh-cli                  | Merge — inference-sh-cli is the fuller version |
+| dspy                            | mlops/research/dspy               | Delete if path missing                         |
+| docker-management               | devops/docker                     | Delete if path missing                         |
+| ideation                        | creative-ideation                 | Merge — same purpose                           |
+| lambda-labs                     | lambda-labs-gpu-cloud             | Merge — same purpose                           |
+| modal                           | modal-serverless-gpu              | Merge — same purpose                           |
+| peft                            | peft-fine-tuning                  | Merge — same purpose                           |
+| qdrant                          | qdrant-vector-search              | Merge — same purpose                           |
+| simpo                           | simpo-training                    | Merge — same purpose                           |
+| stable-diffusion                | stable-diffusion-image-generation | Merge — same purpose                           |
+| trl-fine-tuning                 | mlops/trl                         | Delete if path missing                         |
+| grok                            | mlops/grok                        | Delete if path missing                         |
+| hermes-s6-container-supervision | devops/s6                         | Delete if path missing                         |
+| comps-analysis                  | devops/comps                      | Delete if path missing                         |
+| adversarial-ux-test             | qa/adversarial                    | Delete if path missing                         |
+| dspy                            | mlops/dspy                        | Delete if path missing                         |
 
 **Python scripts to use:**
 
-1. **`dedupe_skills.py`** — Scans `~/.hermes/skills/` for all SKILL.md files, groups by name, outputs duplicate pairs with line counts and paths
+1. **`dedupe_skills.py`** — Scans `~/AppData/Local/hermes/skills/` for all SKILL.md files, groups by name, outputs duplicate pairs with line counts and paths
 2. **`consolidate_skills.py`** — Identifies overlapping skills by comparing descriptions and tags, suggests merge targets
 3. **`merge_skill.py`** — Merges a thin skill into an umbrella skill (copies references, updates umbrella's "Absorbed Skills" section)
 
@@ -230,13 +242,13 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Run `batch_skill_judge.py` on first batch of 10 skills | Batch 1 results |
-| 4.2 | Repeat for remaining batches | All batches complete |
-| 4.3 | Generate `summary.md` with score distribution | Summary report |
-| 4.4 | Identify skills scoring ≤ 80 | `below_80_list.txt` |
-| 4.5 | Split into `needs_work_list.txt` (60-79) and `rewrite_list.txt` (<60) | Remediation lists |
+| Step | Action                                                                | Output               |
+| ---- | --------------------------------------------------------------------- | -------------------- |
+| 4.1  | Run `batch_skill_judge.py` on first batch of 10 skills                | Batch 1 results      |
+| 4.2  | Repeat for remaining batches                                          | All batches complete |
+| 4.3  | Generate `summary.md` with score distribution                         | Summary report       |
+| 4.4  | Identify skills scoring ≤ 80                                          | `below_80_list.txt`  |
+| 4.5  | Split into `needs_work_list.txt` (60-79) and `rewrite_list.txt` (<60) | Remediation lists    |
 
 **Tasks:**
 
@@ -248,21 +260,21 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Scoring criteria (skill-judge v1.1.0):**
 
-| Dimension | Max | Criteria |
-| --- | --- | --- |
-| Frontmatter | 20 | name, title, description, version, author, license, tags |
-| Structure | 20 | Skills Required table, ≥3 phases, pitfalls, verification checklist, refs |
-| Content | 20 | Resumability, error handling, platform notes, examples, no placeholders |
-| DRY | 20 | No duplicates, <250 lines, cross-ref consistency |
-| References | 20 | All 3 ref types, substantive, cited, no orphans |
+| Dimension   | Max | Criteria                                                                 |
+| ----------- | --- | ------------------------------------------------------------------------ |
+| Frontmatter | 20  | name, title, description, version, author, license, tags                 |
+| Structure   | 20  | Skills Required table, ≥3 phases, pitfalls, verification checklist, refs |
+| Content     | 20  | Resumability, error handling, platform notes, examples, no placeholders  |
+| DRY         | 20  | No duplicates, <250 lines, cross-ref consistency                         |
+| References  | 20  | All 3 ref types, substantive, cited, no orphans                          |
 
 **Score bands:**
 
-| Score | Rating | Action |
-| --- | --- | --- |
-| ≥80 | ✅ AI-ready | Minor fixes only |
-| 60-79 | ⚠️ Needs work | Targeted patches |
-| <60 | 🔴 Rewrite | Full rebuild |
+| Score | Rating            | Action           |
+| ----- | ----------------- | ---------------- |
+| ≥80   | [PASS] AI-ready   | Minor fixes only |
+| 60-79 | [WARN] Needs work | Targeted patches |
+| <60   | [RED] Rewrite     | Full rebuild     |
 
 **Python scripts:**
 
@@ -280,14 +292,14 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 5.1 | Run `batch_remediate.py` on skills scoring 60-79 | Patched skills |
-| 5.2 | Run `batch_rewrite_worst.py` on skills scoring <60 | Rewritten skills |
-| 5.3 | Run `batch_skill_judge.py --verify` on remediated skills | Re-scored results |
-| 5.4 | Identify any still below 80 | Second-pass list |
-| 5.5 | Apply targeted fixes to remaining issues | Final pass |
-| 5.6 | Verify all skills ≥ 80 | `judge_results/final_results.tsv` |
+| Step | Action                                                   | Output                            |
+| ---- | -------------------------------------------------------- | --------------------------------- |
+| 5.1  | Run `batch_remediate.py` on skills scoring 60-79         | Patched skills                    |
+| 5.2  | Run `batch_rewrite_worst.py` on skills scoring <60       | Rewritten skills                  |
+| 5.3  | Run `batch_skill_judge.py --verify` on remediated skills | Re-scored results                 |
+| 5.4  | Identify any still below 80                              | Second-pass list                  |
+| 5.5  | Apply targeted fixes to remaining issues                 | Final pass                        |
+| 5.6  | Verify all skills ≥ 80                                   | `judge_results/final_results.tsv` |
 
 **Tasks:**
 
@@ -317,13 +329,13 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 6.1 | Identify umbrella candidates (skills that absorbed others) | Umbrella list |
-| 6.2 | For each umbrella, verify absorbed skills are listed in SKILL.md | Verification |
-| 6.3 | Move reference files from absorbed skills to umbrella | Consolidated refs |
-| 6.4 | Update umbrella SKILL.md with absorbed skills section | Updated umbrellas |
-| 6.5 | Verify with `read_file` and `skill_view` (on disk, not cache) | Confirmed consolidation |
+| Step | Action                                                           | Output                  |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
+| 6.1  | Identify umbrella candidates (skills that absorbed others)       | Umbrella list           |
+| 6.2  | For each umbrella, verify absorbed skills are listed in SKILL.md | Verification            |
+| 6.3  | Move reference files from absorbed skills to umbrella            | Consolidated refs       |
+| 6.4  | Update umbrella SKILL.md with absorbed skills section            | Updated umbrellas       |
+| 6.5  | Verify with `read_file` and `skill_view` (on disk, not cache)    | Confirmed consolidation |
 
 **Tasks:**
 
@@ -350,16 +362,16 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 **Steps:**
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 7.1 | Run `hermes skills audit` — verify all pass | Audit clean |
-| 7.2 | Run `hermes skills list --source local` — verify count | Final count |
-| 7.3 | Run `batch_skill_judge.py --final` — score all skills | Final scores |
-| 7.4 | Verify all skills ≥ 80 | Quality gate pass |
-| 7.5 | Verify all skills have categories | Categorization complete |
-| 7.6 | Verify no duplicate skills remain | Dedupe complete |
-| 7.7 | Generate `docs/final-verification.md` | Final report |
-| 7.8 | Update `SESSION_REPORT.md` with results | Session report |
+| Step | Action                                                 | Output                  |
+| ---- | ------------------------------------------------------ | ----------------------- |
+| 7.1  | Run `hermes skills audit` — verify all pass            | Audit clean             |
+| 7.2  | Run `hermes skills list --source local` — verify count | Final count             |
+| 7.3  | Run `batch_skill_judge.py --final` — score all skills  | Final scores            |
+| 7.4  | Verify all skills ≥ 80                                 | Quality gate pass       |
+| 7.5  | Verify all skills have categories                      | Categorization complete |
+| 7.6  | Verify no duplicate skills remain                      | Dedupe complete         |
+| 7.7  | Generate `docs/final-verification.md`                  | Final report            |
+| 7.8  | Update `SESSION_REPORT.md` with results                | Session report          |
 
 **Tasks:**
 
@@ -386,20 +398,20 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 ## Python Scripts Reference
 
-All scripts located at `C:/Users/Alexa/AppData/Local/hermes/scripts/`:
+All scripts located at `~/AppData/Local/hermes/scripts/`:
 
-| Script | Purpose | Phase |
-| --- | --- | --- |
-| `batch_skill_judge.py` | Batch score all skills on 5 dimensions (skill-judge v1.1.0) | 4, 7 |
-| `batch_remediate.py` | Patch skills scoring 60-79 (frontmatter, structure) | 5 |
-| `batch_remediate_42_59.py` | Patch skills scoring 42-59 (more aggressive) | 5 |
-| `batch_rewrite_worst.py` | Full rebuild of skills scoring <60 | 5 |
-| `dedupe_skills.py` | Find duplicate SKILL.md files across skill directories | 3 |
-| `consolidate_skills.py` | Identify overlapping skills for merge | 3, 6 |
-| `merge_skill.py` | Merge thin skill into umbrella skill | 3, 6 |
-| `audit_prompts.py` | Audit prompt files for formatting/structural issues | 1 |
-| `skill_inventory.json` | Generated mapping of all SKILL.md paths | 1 |
-| `skill_name_to_path.json` | Generated mapping of skill name → canonical path | 1 |
+| Script                     | Purpose                                                     | Phase |
+| -------------------------- | ----------------------------------------------------------- | ----- |
+| `batch_skill_judge.py`     | Batch score all skills on 5 dimensions (skill-judge v1.1.0) | 4, 7  |
+| `batch_remediate.py`       | Patch skills scoring 60-79 (frontmatter, structure)         | 5     |
+| `batch_remediate_42_59.py` | Patch skills scoring 42-59 (more aggressive)                | 5     |
+| `batch_rewrite_worst.py`   | Full rebuild of skills scoring <60                          | 5     |
+| `dedupe_skills.py`         | Find duplicate SKILL.md files across skill directories      | 3     |
+| `consolidate_skills.py`    | Identify overlapping skills for merge                       | 3, 6  |
+| `merge_skill.py`           | Merge thin skill into umbrella skill                        | 3, 6  |
+| `audit_prompts.py`         | Audit prompt files for formatting/structural issues         | 1     |
+| `skill_inventory.json`     | Generated mapping of all SKILL.md paths                     | 1     |
+| `skill_name_to_path.json`  | Generated mapping of skill name → canonical path            | 1     |
 
 ## Verification Checklist
 

@@ -1,7 +1,7 @@
 # AWS API Gateway / AWS API MCP Server
 
-**Source:** https://github.com/awslabs/mcp  
-**AWS Announcement:** https://aws.amazon.com/about-aws/whats-new/2025/07/aws-api-mcp-server-available/
+**Source:** <https://github.com/awslabs/mcp>
+**AWS Announcement:** <https://aws.amazon.com/about-aws/whats-new/2025/07/aws-api-mcp-server-available/>
 
 ## Overview
 
@@ -21,12 +21,12 @@ A related project covers deploying MCP servers **behind** AWS API Gateway for se
 
 Varies by configured AWS API surface. Examples:
 
-| Tool | Description |
-|------|-------------|
-| `aws_api_call` | Execute an AWS CLI command |
-| `list_resources` | List resources in a service/region |
+| Tool                | Description                           |
+| ------------------- | ------------------------------------- |
+| `aws_api_call`      | Execute an AWS CLI command            |
+| `list_resources`    | List resources in a service/region    |
 | `describe_resource` | Get details about a specific resource |
-| `create_resource` | Create a new AWS resource |
+| `create_resource`   | Create a new AWS resource             |
 
 ## Installation
 
@@ -64,6 +64,7 @@ mcp_servers:
 ## API Gateway Deployment Pattern
 
 Deploy any MCP server behind API Gateway for:
+
 - OAuth / IAM authentication
 - Rate limiting and throttling
 - Centralized logging via CloudWatch

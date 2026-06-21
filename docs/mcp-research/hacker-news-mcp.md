@@ -1,25 +1,25 @@
 # Hacker News MCP Server (mcp-hn)
 
-**Source:** https://github.com/erithwik/mcp-hn
+**Source:** <https://github.com/erithwik/mcp-hn>
 
 ## Repository Overview
 
-| Property | Details |
-|----------|---------|
-| **Repository** | `erithwik/mcp-hn` |
+| Property        | Details                                                                                             |
+| --------------- | --------------------------------------------------------------------------------------------------- |
+| **Repository**  | `erithwik/mcp-hn`                                                                                   |
 | **Description** | A Model Context Protocol (MCP) server that provides tools for fetching information from Hacker News |
-| **Commits** | 15 |
-| **License** | See [LICENSE](https://github.com/erithwik/mcp-hn/blob/main/LICENSE) |
-| **Badges** | [Smithery](https://smithery.ai/server/mcp-hn) • [Glama](https://glama.ai/mcp/servers/e0rco8dfgt) |
+| **Commits**     | 15                                                                                                  |
+| **License**     | See [LICENSE](https://github.com/erithwik/mcp-hn/blob/main/LICENSE)                                 |
+| **Badges**      | [Smithery](https://smithery.ai/server/mcp-hn) • [Glama](https://glama.ai/mcp/servers/e0rco8dfgt)    |
 
 ## Available Tools
 
-| Tool | Purpose |
-|------|---------|
-| `get_stories` | Fetch top/current stories from Hacker News |
+| Tool             | Purpose                                                              |
+| ---------------- | -------------------------------------------------------------------- |
+| `get_stories`    | Fetch top/current stories from Hacker News                           |
 | `get_story_info` | Get detailed information about a specific story (including comments) |
-| `search_stories` | Search Hacker News for stories matching a query |
-| `get_user_info` | Retrieve user profile and activity information |
+| `search_stories` | Search Hacker News for stories matching a query                      |
+| `get_user_info`  | Retrieve user profile and activity information                       |
 
 ## Repository Structure
 
@@ -41,21 +41,28 @@ mcp-hn/
 
 **Configuration file locations:**
 
-| OS | Path |
-|----|------|
-| **macOS** | `~/Library/Application Support/Claude/claude_desktop_config.json` |
-| **Windows** | `%APPDATA%/Claude/claude_desktop_config.json` |
+| OS          | Path                                                              |
+| ----------- | ----------------------------------------------------------------- |
+| **macOS**   | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| **Windows** | `%APPDATA%/Claude/claude_desktop_config.json`                     |
 
 **Production configuration:**
 
 ```json
 {
-  "mcpServers": {
-    "mcp-hn": {
-      "command": "npx",
-      "args": ["-y", "@smithery/cli@latest", "run", "mcp-hn", "--key", "YOUR_SMITHERY_API_KEY"]
-    }
-  }
+	"mcpServers": {
+		"mcp-hn": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@smithery/cli@latest",
+				"run",
+				"mcp-hn",
+				"--key",
+				"YOUR_SMITHERY_API_KEY"
+			]
+		}
+	}
 }
 ```
 
@@ -99,9 +106,10 @@ Output: Uses puppeteer tool to read the article about AI and then uses the `get_
 
 ## Alternative Implementation: paabloLC/mcp-hacker-news
 
-**Source:** https://github.com/paabloLC/mcp-hacker-news
+**Source:** <https://github.com/paabloLC/mcp-hacker-news>
 
 TypeScript implementation with similar features:
+
 - Integrates with the official Hacker News API
 - Built with TypeScript
 - Compatible with Claude and Cursor
@@ -114,7 +122,15 @@ For Hermes Agent (Smithery mode):
 mcp_servers:
   mcp-hn:
     command: "npx"
-    args: ["-y", "@smithery/cli@latest", "run", "mcp-hn", "--key", "${SMITHERY_API_KEY}"]
+    args:
+      [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "mcp-hn",
+        "--key",
+        "${SMITHERY_API_KEY}",
+      ]
     env:
       SMITHERY_API_KEY: "${SMITHERY_API_KEY}"
     tools:
@@ -133,6 +149,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test mcp-hn
 /reload-mcp
@@ -140,11 +157,13 @@ hermes mcp test mcp-hn
 
 ## Key Resources
 
-- **Smithery Page:** https://smithery.ai/server/mcp-hn
-- **Glama Listing:** https://glama.ai/mcp/servers/e0rco8dfgt
-- **Repository:** https://github.com/erithwik/mcp-hn
-- **MCP Specification:** https://modelcontextprotocol.io/
+- **Smithery Page:** <https://smithery.ai/server/mcp-hn>
+- **Glama Listing:** <https://glama.ai/mcp/servers/e0rco8dfgt>
+- **Repository:** <https://github.com/erithwik/mcp-hn>
+- **MCP Specification:** <https://modelcontextprotocol.io/>
 
 ## Summary
+
+**mcp-hn** is a production-ready MCP server that bridges Hacker News data with AI assistants (particularly Claude Desktop). It provides four core tools for story retrieval, story details, search, and user info — enabling natural language queries like "top stories today" or "what's user pg up to?" The server installs cleanly via Smithery with a one-line config update, supports Docker deployment, and can be combined with other MCP servers (e.g., Puppeteer) for richer workflows like "read the article + summarize HN comments."
 
 **mcp-hn** is a production-ready MCP server that bridges Hacker News data with AI assistants (particularly Claude Desktop). It provides four core tools for story retrieval, story details, search, and user info — enabling natural language queries like "top stories today" or "what's user pg up to?" The server installs cleanly via Smithery with a one-line config update, supports Docker deployment, and can be combined with other MCP servers (e.g., Puppeteer) for richer workflows like "read the article + summarize HN comments."

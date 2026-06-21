@@ -1,6 +1,6 @@
 # Fetch MCP Server
 
-**Source:** https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/README.md
+**Source:** <https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/README.md>
 
 ## Overview
 
@@ -14,12 +14,12 @@
 
 Fetches a URL and extracts contents as markdown.
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `url` | string | ✅ | - | URL to fetch |
-| `max_length` | integer | ❌ | 5000 | Maximum characters to return |
-| `start_index` | integer | ❌ | 0 | Start content from this character index |
-| `raw` | boolean | ❌ | false | Get raw content without markdown conversion |
+| Parameter     | Type    | Required | Default | Description                                 |
+| ------------- | ------- | -------- | ------- | ------------------------------------------- |
+| `url`         | string  | ✅       | -       | URL to fetch                                |
+| `max_length`  | integer | ❌       | 5000    | Maximum characters to return                |
+| `start_index` | integer | ❌       | 0       | Start content from this character index     |
+| `raw`         | boolean | ❌       | false   | Get raw content without markdown conversion |
 
 **Key Feature:** The `start_index` parameter enables chunked reading of large webpages.
 
@@ -54,11 +54,11 @@ python -m mcp_server_fetch
 
 ### For Claude.app
 
-| Method | Configuration |
-|--------|---------------|
-| **uvx** | ```json<br>{"mcpServers": {"fetch": {"command": "uvx", "args": ["mcp-server-fetch"]}}}<br>``` |
-| **Docker** | ```json<br>{"mcpServers": {"fetch": {"command": "docker", "args": ["run", "-i", "--rm", "mcp/fetch"]}}}<br>``` |
-| **pip** | ```json<br>{"mcpServers": {"fetch": {"command": "python", "args": ["-m", "mcp_server_fetch"]}}}<br>``` |
+| Method     | Configuration                                                                                              |
+| ---------- | ---------------------------------------------------------------------------------------------------------- |
+| **uvx**    | `json<br>{"mcpServers": {"fetch": {"command": "uvx", "args": ["mcp-server-fetch"]}}}<br>`                  |
+| **Docker** | `json<br>{"mcpServers": {"fetch": {"command": "docker", "args": ["run", "-i", "--rm", "mcp/fetch"]}}}<br>` |
+| **pip**    | `json<br>{"mcpServers": {"fetch": {"command": "python", "args": ["-m", "mcp_server_fetch"]}}}<br>`         |
 
 ### For VS Code
 
@@ -108,9 +108,9 @@ python -m mcp_server_fetch
 
 ### User-Agent Strings
 
-| Request Type | Default User-Agent |
-|--------------|-------------------|
-| Model-initiated (tool) | `ModelContextProtocol/1.0 (Autonomous; +https://github.com/modelcontextprotocol/servers)` |
+| Request Type            | Default User-Agent                                                                            |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| Model-initiated (tool)  | `ModelContextProtocol/1.0 (Autonomous; +https://github.com/modelcontextprotocol/servers)`     |
 | User-initiated (prompt) | `ModelContextProtocol/1.0 (User-Specified; +https://github.com/modelcontextprotocol/servers)` |
 
 **Customize:** Add `--user-agent=YourUserAgent` to args
@@ -165,7 +165,7 @@ npx @modelcontextprotocol/inspector uv run mcp-server-fetch
 ## Contributing
 
 - Contributions welcome: new tools, enhancements, bug fixes, documentation
-- Reference other MCP servers: https://github.com/modelcontextprotocol/servers
+- Reference other MCP servers: <https://github.com/modelcontextprotocol/servers>
 - Pull requests encouraged
 
 ## License
@@ -188,6 +188,7 @@ mcp_servers:
 ```
 
 For Docker mode:
+
 ```yaml
 mcp_servers:
   fetch:
@@ -198,6 +199,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test fetch
 /reload-mcp
@@ -205,6 +207,9 @@ hermes mcp test fetch
 
 ## References
 
-- GitHub: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
-- mcpservers.org: https://mcpservers.org/servers/zcaceres/fetch-mcp
-- PulseMCP: https://www.pulsemcp.com/servers/modelcontextprotocol-fetch
+- GitHub: <https://github.com/modelcontextprotocol/servers/tree/main/src/fetch>
+- mcpservers.org: <https://mcpservers.org/servers/zcaceres/fetch-mcp>
+- PulseMCP: <https://www.pulsemcp.com/servers/modelcontextprotocol-fetch>
+  c/fetch>
+- mcpservers.org: <https://mcpservers.org/servers/zcaceres/fetch-mcp>
+- PulseMCP: <https://www.pulsemcp.com/servers/modelcontextprotocol-fetch>

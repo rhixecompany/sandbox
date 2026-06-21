@@ -1,8 +1,8 @@
 # Gemini API Docs MCP Server
 
-**Source:** https://github.com/google-gemini/gemini-api-mcp-server *(community)*  
-**Official Gemini Docs:** https://ai.google.dev/docs  
-**Python SDK:** https://github.com/google-gemini/generative-ai-python
+**Source:** <<https://github.com/google-gemini/gemini-api-mcp-server_(community)>\_
+**Official Gemini Docs:** <https://ai.google.dev/docs>
+**Python SDK:** <https://github.com/google-gemini/generative-ai-python>
 
 ## Overview
 
@@ -21,13 +21,13 @@ As of 2025, there is no single official Gemini MCP server package from Google, b
 
 ## Tools to Expose as MCP
 
-| Tool | Description |
-|------|-------------|
-| `generate_text` | Generate text using a Gemini model |
+| Tool                  | Description                            |
+| --------------------- | -------------------------------------- |
+| `generate_text`       | Generate text using a Gemini model     |
 | `generate_with_image` | Multimodal generation with image input |
-| `create_embedding` | Generate text embeddings |
-| `execute_code` | Use Gemini's code execution capability |
-| `search_docs` | Search Gemini API documentation |
+| `create_embedding`    | Generate text embeddings               |
+| `execute_code`        | Use Gemini's code execution capability |
+| `search_docs`         | Search Gemini API documentation        |
 
 ## Installation
 
@@ -84,12 +84,12 @@ mcp_servers:
 
 ## Available Models (2025)
 
-| Model | Context | Best For |
-|-------|---------|----------|
-| `gemini-1.5-pro` | 2M tokens | Complex reasoning, long documents |
-| `gemini-1.5-flash` | 1M tokens | Fast responses, multimodal |
-| `gemini-2.0-flash` | 1M tokens | Latest, fastest |
-| `text-embedding-004` | 2K tokens | Semantic search, RAG |
+| Model                | Context   | Best For                          |
+| -------------------- | --------- | --------------------------------- |
+| `gemini-1.5-pro`     | 2M tokens | Complex reasoning, long documents |
+| `gemini-1.5-flash`   | 1M tokens | Fast responses, multimodal        |
+| `gemini-2.0-flash`   | 1M tokens | Latest, fastest                   |
+| `text-embedding-004` | 2K tokens | Semantic search, RAG              |
 
 ## Related Resources
 

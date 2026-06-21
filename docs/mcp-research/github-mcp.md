@@ -1,10 +1,11 @@
 # GitHub MCP Server
 
-**Source:** https://github.com/github/github-mcp-server
+**Source:** <https://github.com/github/github-mcp-server>
 
 ## Overview
 
 **GitHub MCP Server** connects AI tools directly to GitHub's platform, enabling AI agents, assistants, and chatbots to:
+
 - Read repositories and code files
 - Manage issues and PRs
 - Analyze code
@@ -54,19 +55,23 @@
 
 ```json
 {
-  "command": "docker",
-  "args": [
-    "run", "-i", "--rm",
-    "-e", "GITHUB_PERSONAL_ACCESS_TOKEN",
-    "ghcr.io/github/github-mcp-server"
-  ],
-  "env": {
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
-  }
+	"command": "docker",
+	"args": [
+		"run",
+		"-i",
+		"--rm",
+		"-e",
+		"GITHUB_PERSONAL_ACCESS_TOKEN",
+		"ghcr.io/github/github-mcp-server"
+	],
+	"env": {
+		"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+	}
 }
 ```
 
 **Prerequisites:**
+
 ```bash
 docker logout ghcr.io  # If you have old credentials
 ```
@@ -82,27 +87,27 @@ go build -o github-mcp-server ./cmd/github-mcp-server
 
 ### Toolsets (Control Available Capabilities)
 
-| Toolset | Icon | Description |
-|---------|------|-------------|
-| `context` | 👤 | **Strongly recommended**: Current user & GitHub context |
-| `actions` | ⚙️ | GitHub Actions workflows & CI/CD |
-| `code_security` | 🔍 | Code scanning alerts |
-| `copilot` | 🤖 | Copilot tools (remote only) |
-| `dependabot` | 🔒 | Dependabot alerts |
-| `discussions` | 💬 | GitHub Discussions |
-| `gists` | 📝 | Gist management |
-| `git` | 🌿 | Low-level Git operations |
-| `issues` | 🐛 | Issues management |
-| `labels` | 🏷️ | Repository labels |
-| `notifications` | 🔔 | Notifications |
-| `orgs` | 🏢 | Organization tools |
-| `projects` | 📋 | GitHub Projects |
-| `pull_requests` | 🔀 | PR management |
-| `repos` | 📦 | Repository operations |
-| `secret_protection` | 🔐 | Secret scanning |
-| `security_advisories` | 🛡️ | Security advisories |
-| `stargazers` | ⭐ | Star management |
-| `users` | 👥 | User tools |
+| Toolset               | Icon | Description                                             |
+| --------------------- | ---- | ------------------------------------------------------- |
+| `context`             | 👤   | **Strongly recommended**: Current user & GitHub context |
+| `actions`             | ⚙️   | GitHub Actions workflows & CI/CD                        |
+| `code_security`       | 🔍   | Code scanning alerts                                    |
+| `copilot`             | 🤖   | Copilot tools (remote only)                             |
+| `dependabot`          | 🔒   | Dependabot alerts                                       |
+| `discussions`         | 💬   | GitHub Discussions                                      |
+| `gists`               | 📝   | Gist management                                         |
+| `git`                 | 🌿   | Low-level Git operations                                |
+| `issues`              | 🐛   | Issues management                                       |
+| `labels`              | 🏷️   | Repository labels                                       |
+| `notifications`       | 🔔   | Notifications                                           |
+| `orgs`                | 🏢   | Organization tools                                      |
+| `projects`            | 📋   | GitHub Projects                                         |
+| `pull_requests`       | 🔀   | PR management                                           |
+| `repos`               | 📦   | Repository operations                                   |
+| `secret_protection`   | 🔐   | Secret scanning                                         |
+| `security_advisories` | 🛡️   | Security advisories                                     |
+| `stargazers`          | ⭐   | Star management                                         |
+| `users`               | 👥   | User tools                                              |
 
 **Remote-only additional toolsets:** `copilot`, `copilot_spaces`, `github_support_docs_search`
 
@@ -191,13 +196,13 @@ docker run -e GITHUB_INSIDERS=true ghcr.io/github/github-mcp-server
 
 ```json
 {
-  "github-octocorp": {
-    "type": "http",
-    "url": "https://copilot-api.octocorp.ghe.com/mcp",
-    "headers": {
-      "Authorization": "Bearer ${input:github_mcp_pat}"
-    }
-  }
+	"github-octocorp": {
+		"type": "http",
+		"url": "https://copilot-api.octocorp.ghe.com/mcp",
+		"headers": {
+			"Authorization": "Bearer ${input:github_mcp_pat}"
+		}
+	}
 }
 ```
 
@@ -223,15 +228,31 @@ For Hermes Agent (Docker mode):
 mcp_servers:
   github:
     command: "docker"
-    args: ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
+    args:
+      [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server",
+      ]
     env:
       GITHUB_PERSONAL_ACCESS_TOKEN: "${GITHUB_TOKEN}"
       GITHUB_TOOLSETS: "repos,issues,pull_requests,actions,code_security,dependabot"
     tools:
-      include: [get_file_contents, create_issue, create_pull_request, list_issues, search_code]
+      include:
+        [
+          get_file_contents,
+          create_issue,
+          create_pull_request,
+          list_issues,
+          search_code,
+        ]
 ```
 
 For Remote HTTP mode:
+
 ```yaml
 mcp_servers:
   github:
@@ -240,10 +261,18 @@ mcp_servers:
     headers:
       Authorization: "Bearer ${GITHUB_TOKEN}"
     tools:
-      include: [get_file_contents, create_issue, create_pull_request, list_issues, search_code]
+      include:
+        [
+          get_file_contents,
+          create_issue,
+          create_pull_request,
+          list_issues,
+          search_code,
+        ]
 ```
 
 Then run:
+
 ```bash
 hermes mcp test github
 /reload-mcp
@@ -251,8 +280,13 @@ hermes mcp test github
 
 ## References
 
-- GitHub: https://github.com/github/github-mcp-server
+- GitHub: <https://github.com/github/github-mcp-server>
 - Docker Image: ghcr.io/github/github-mcp-server
-- Remote Endpoint: https://api.githubcopilot.com/mcp/
-- Enterprise: https://copilot-api.octocorp.ghe.com/mcp
-- Reddit Guide: https://www.reddit.com/r/mcpserver/comments/1jvsyre/github_mcp_server_overview_and_setup_guide
+- Remote Endpoint: <https://api.githubcopilot.com/mcp/>
+- Enterprise: <https://copilot-api.octocorp.ghe.com/mcp>
+- Reddit Guide: <https://www.reddit.com/r/mcpserver/comments/1jvsyre/github_mcp_server_overview_and_setup_guide>
+
+- Docker Image: ghcr.io/github/github-mcp-server
+- Remote Endpoint: <https://api.githubcopilot.com/mcp/>
+- Enterprise: <https://copilot-api.octocorp.ghe.com/mcp>
+- Reddit Guide: <https://www.reddit.com/r/mcpserver/comments/1jvsyre/github_mcp_server_overview_and_setup_guide>

@@ -1,6 +1,6 @@
 # Django MCP Server
 
-**Source:** https://github.com/gts360/django-mcp-server
+**Source:** <https://github.com/gts360/django-mcp-server>
 
 ## Overview
 
@@ -30,6 +30,7 @@ pip install git+https://github.com/gts360/django-mcp-server.git
 ### 2. Configure Django
 
 **settings.py:**
+
 ```python
 INSTALLED_APPS = [
     # ...
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
 ```
 
 **urls.py:**
+
 ```python
 from django.urls import path, include
 
@@ -46,6 +48,7 @@ urlpatterns = [
     path('mcp/', include('mcp_server.urls')),
 ]
 ```
+
 > Default MCP endpoint: `/mcp`
 
 ### 3. Define MCP Tools
@@ -68,7 +71,7 @@ class MyCustomToolset(MCPToolset):
     def my_tool(self, param: str) -> str:
         """Tool description for the AI"""
         return f"Result: {param}"
-    
+
     def _private_method(self):  # Not published (starts with _)
         pass
 ```
@@ -124,6 +127,7 @@ class MyModelViewSet(viewsets.ModelViewSet):
 ```
 
 **Important Notes:**
+
 - Built-in authentication, filter_backends, permission_classes, and pagination_class are **disabled by default** (MCP auth used instead)
 - `self.paginator` will be `None` - account for this in existing paginated views
 - For older DRF versions without schema generation, provide schema manually
@@ -158,12 +162,12 @@ def my_resource() -> str:
 
 ## Configuration Settings
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `DJANGO_MCP_GLOBAL_SERVER_CONFIG` | `{}` | Config dict passed to `MCPServer` initialization |
-| `DJANGO_MCP_AUTHENTICATION_CLASSES` | `[]` | List of DRF authentication classes for main MCP view |
-| `DJANGO_MCP_GET_SERVER_INSTRUCTIONS_TOOL` | `True` | Offer tool to get global instructions |
-| `DJANGO_MCP_ENDPOINT` | `"mcp"` | URL endpoint (use `"mcp/"` for trailing slash) |
+| Setting                                   | Default | Description                                          |
+| ----------------------------------------- | ------- | ---------------------------------------------------- |
+| `DJANGO_MCP_GLOBAL_SERVER_CONFIG`         | `{}`    | Config dict passed to `MCPServer` initialization     |
+| `DJANGO_MCP_AUTHENTICATION_CLASSES`       | `[]`    | List of DRF authentication classes for main MCP view |
+| `DJANGO_MCP_GET_SERVER_INSTRUCTIONS_TOOL` | `True`  | Offer tool to get global instructions                |
+| `DJANGO_MCP_ENDPOINT`                     | `"mcp"` | URL endpoint (use `"mcp/"` for trailing slash)       |
 
 ### Example settings.py
 
@@ -196,7 +200,7 @@ For Hermes Agent (STDIO mode for local Django dev):
 mcp_servers:
   django-dev:
     command: "python"
-    args: ["manage.py", "mcp_stdio"]  # Requires custom management command
+    args: ["manage.py", "mcp_stdio"] # Requires custom management command
     # OR for HTTP mode (run Django server separately):
     # url: "http://localhost:8000/mcp"
     # transport: "streamable-http"
@@ -205,6 +209,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test django-dev
 /reload-mcp
@@ -212,6 +217,12 @@ hermes mcp test django-dev
 
 ## References
 
-- GitHub: https://github.com/gts360/django-mcp-server
-- PyPI: https://pypi.org/project/django-mcp-server
-- django-ai-boost: https://github.com/vintasoftware/django-ai-boost
+- GitHub: <https://github.com/gts360/django-mcp-server>
+- PyPI: <https://pypi.org/project/django-mcp-server>
+- django-ai-boost: <https://github.com/vintasoftware/django-ai-boost>
+
+## References
+
+- GitHub: <https://github.com/gts360/django-mcp-server>
+- PyPI: <https://pypi.org/project/django-mcp-server>
+- django-ai-boost: <https://github.com/vintasoftware/django-ai-boost>
