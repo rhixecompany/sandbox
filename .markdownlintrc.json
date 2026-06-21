@@ -1,49 +1,42 @@
 {
-  "default": true,
-  "fix": true,
-  "gitignore": true,
-  "globs": [
-    "**/*.md"
-  ],
-  "ignores": [
-    "node_modules",
-    ".next",
-    "build",
-    "coverage",
-    "dist",
-    "out",
-    "tmp"
-  ],
-  "MD013": false,
-  "MD024": {
-    "siblings_only": true
-  },
-  "MD026": true,
-  "MD033": {
-    "allowed_elements": [
-      "br",
-      "details",
-      "summary",
-      "kbd",
-      "sup",
-      "sub",
-      "table",
-      "thead",
-      "tbody",
-      "tr",
-      "th",
-      "td",
-      "code",
-      "pre",
-      "a",
-      "img",
-      "video",
-      "audio",
-      "iframe"
-    ]
-  },
-  "MD034": true,
-  "MD036": true,
-  "MD040": true,
-  "MD041": true
+	"config": {
+		"default": true,
+		"MD007": {
+			"indent": 2
+		},
+		"MD013": false,
+		"MD022": true,
+		"MD024": {
+			"siblings_only": true
+		},
+		"MD033": {
+			"allowed_elements": [
+				"br",
+				"details",
+				"kbd",
+				"summary",
+				"sub",
+				"sup"
+			]
+		},
+		"MD034": true,
+		"MD041": true,
+		"MD058": false,
+		"MD060": false
+	},
+	"fix": true,
+	"gitignore": true,
+	"globs": [
+		"**/*.md"
+	],
+	"ignores": [
+		"node_modules",
+		".next",
+		".git",
+		"build",
+		"coverage",
+		"dist",
+		"out",
+		"tmp"
+	]
 }

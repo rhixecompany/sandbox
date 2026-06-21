@@ -1,5 +1,9 @@
 {
+  "events": [
+    "on_session_start",
+    "on_session_end",
+    "pre_llm_call"
+  ],
   "name": "session-logger",
-  "events": ["on_session_start","on_session_end","pre_llm_call"],
-  "script": "log-session-start.sh"
+  "script": "hook.sh"
 }

@@ -41,13 +41,16 @@ Context files follow the DRY hierarchy:
 
 ### Quick Rule Summary
 
-| #   | Rule                   | Brief                                                 |
-| --- | ---------------------- | ----------------------------------------------------- |
-| 1   | **Session Start**      | Search/read/explain SESSION_REPORT.md before any work |
-| 2   | **MCP Tools**          | Use MCP over native equivalents                       |
-| 3   | **Profile Selection**  | Route by task type                                    |
-| 4   | **Scripts (PY/JS/TS)** | NEVER inline; create permanent files; use patch tool  |
-| 5   | **Strict Sequential**  | "only then" = hard constraint                         |
+| #   | Rule                   | Brief                                                                                                                      |
+| --- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Session Start**      | Search/read/explain SESSION_REPORT.md before any work                                                                      |
+| 2   | **MCP Tools**          | Use MCP over native equivalents                                                                                            |
+| 3   | **Profile Selection**  | Route by task type                                                                                                         |
+| 4   | **Scripts (PY/JS/TS)** | NEVER inline; create permanent files; use patch tool                                                                       |
+| 5   | **Strict Sequential**  | "only then" = hard constraint                                                                                              |
+| 6   | **Session Startup**    | Load 5 skills: using-superpowers, user-communication-preferences, session-audit-report, hermes-profiles, validate-memories |
+| 7   | **MCP First**          | Use MCP server tools before native tool equivalents                                                                        |
+| 8   | **Profile Per Task**   | `hermes profile use <name>` before task execution                                                                          |
 
 ## Notes
 
@@ -59,29 +62,59 @@ Context files follow the DRY hierarchy:
 ## Hermes Config (Current)
 
 - **Active Profile:** `default` — **OWL persona** (pragmatic senior engineer)
-- **Current Runtime:** deepseek-v4-flash-free (opencode fallback chain)
-- **Primary Config:** gpt-5.4-mini (openai-codex)
-- **Config:** `~/AppData/Local/hermes/config.yaml`
+- **Current Runtime:** qwen/qwen3-coder:free (OpenRouter) — _active primary_
+- **Primary Config:** qwen/qwen3-coder:free (OpenRouter)
+- **Config:** `~/AppData/Local/hermes/config.yaml` (root = default profile)
 - **Hooks (3, shared):** `session-logger`, `session-auto-commit`, `governance-audit`
 - **Plugins (15 enabled):** `basic`, `copilot-provider`, `custom-provider`,
   `disk-cleanup`, `huggingface-provider`, `langfuse`, `nous`, `nous-provider`,
   `ollama-cloud-provider`, `openai-codex`, `openai-codex-provider`,
   `opencode-zen-provider`, `openrouter-provider`, `security-guidance`, `web-tavily`
 - **Skills:** 373 available post-dedup (73 bundled + 216 community + 84 local)
-- **MCP Servers (11):** ast-grep, cli, code-sandbox, fetch, filesystem, github,
-  linear, mcp-docker, memory, playwright, sequential-thinking
+- **MCP Servers (13 Configured):**
+  - `ast-grep` — Code pattern searching (AST-based) via npx @notprolands/ast-grep-mcp
+  - `code-sandbox` — Node.js code execution via npx node-code-sandbox-mcp
+  - `codex` — Codex CLI integration via codex mcp-server
+  - `copilot-mcp` — GitHub Copilot MCP via Python script
+  - `fetch` — Web content fetching via npx mcp-server-fetch-typescript
+  - `filesystem` — Project file access (sandboxed to C:/Users/Alexa) via npx @modelcontextprotocol/server-filesystem
+  - `github` — GitHub API operations via npx @modelcontextprotocol/server-github
+  - `linear` — Linear project management via OAuth (<https://mcp.linear.app/mcp>)
+  - `mcp-docker` — Docker container management via docker mcp gateway (adminbot profile)
+  - `memory` — Persistent memory backend via npx @modelcontextprotocol/server-memory
+  - `mindstudio` — MindStudio integration via mindstudio mcp
+  - `playwright` — Browser automation via npx @playwright/mcp@latest
+  - `sequential-thinking` — Structured reasoning via npx @modelcontextprotocol/server-sequential-thinking
+  - `smithery` — Smithery registry via OAuth (<https://mcp.smithery.run/rhixecompany>)
 
 ## Profile Inventory
 
-| Profile           | Model                 | Provider     | Purpose                                 |
-| ----------------- | --------------------- | ------------ | --------------------------------------- |
-| **default** ⬤     | gpt-5.4-mini          | openai-codex | General purpose — **currently active**  |
-| adminbot          | nemotron-3-ultra-free | opencode-zen | System admin, operations                |
-| code-architect    | nemotron-3-ultra-free | opencode-zen | Code changes, debugging, refactoring    |
-| creative-director | nemotron-3-ultra-free | opencode-zen | Design, content, creative tasks         |
-| exec-assistant    | nemotron-3-ultra-free | opencode-zen | Administrative, planning, coordination  |
-| patient-tutor     | nemotron-3-ultra-free | opencode-zen | Explanations, tutorials, learning       |
-| research-analyst  | nemotron-3-ultra-free | opencode-zen | Deep research, synthesis, documentation |
+| Profile                        | Model                  | Provider   | Purpose                                 |
+| ------------------------------ | ---------------------- | ---------- | --------------------------------------- |
+| **default** ⬤                  | qwen/qwen3-coder:free  | OpenRouter | General purpose — **currently active**  |
+| alexa                          | deepseek-v4-flash-free | OpenRouter | System admin, operations                |
+| code-architect                 | deepseek-v4-flash-free | OpenRouter | Code changes, debugging, refactoring    |
+| creative-director              | deepseek-v4-flash-free | OpenRouter | Design, content, creative tasks         |
+| exec-assistant                 | deepseek-v4-flash-free | OpenRouter | Administrative, planning, coordination  |
+| patient-tutor                  | deepseek-v4-flash-free | OpenRouter | Explanations, tutorials, learning       |
+| research-analyst               | deepseek-v4-flash-free | OpenRouter | Deep research, synthesis, documentation |
+| arch                           | —                      | —          | (unconfigured)                          |
+| architect                      | —                      | —          | (unconfigured)                          |
+| debugger                       | —                      | —          | (unconfigured)                          |
+| devops-expert                  | —                      | —          | (unconfigured)                          |
+| github-actions-expert          | —                      | —          | (unconfigured)                          |
+| hermes                         | —                      | —          | (unconfigured)                          |
+| implementation-plan            | —                      | —          | (unconfigured)                          |
+| mentor                         | —                      | —          | (unconfigured)                          |
+| planner                        | —                      | —          | (unconfigured)                          |
+| power-bi-data-modeling-expert  | —                      | —          | (unconfigured)                          |
+| prd                            | —                      | —          | (unconfigured)                          |
+| prompt-engineer                | —                      | —          | (unconfigured)                          |
+| qa-subagent                    | —                      | —          | (unconfigured)                          |
+| reviewer                       | —                      | —          | (unconfigured)                          |
+| specification                  | —                      | —          | (unconfigured)                          |
+| tanstack-start-shadcn-tailwind | —                      | —          | (unconfigured)                          |
+| terraform                      | —                      | —          | (unconfigured)                          |
 
 ## Toolsets (18 Enabled)
 
@@ -91,12 +124,14 @@ Context files follow the DRY hierarchy:
 
 ## Provider Chain
 
-| Provider     | Role                                                    | Status              |
-| ------------ | ------------------------------------------------------- | ------------------- |
-| openai-codex | Active primary (gpt-5.4-mini)                           | ✓ Configured        |
-| opencode-zen | Fallback (nemotron-3-ultra-free, nemotron-3-super-free) | ✓ In fallback chain |
-| openrouter   | Available via plugin                                    | ✓ Enabled           |
-| nous         | Available via plugin                                    | ✓ Enabled           |
+| Provider     | Role                                   | Status       |
+| ------------ | -------------------------------------- | ------------ |
+| openrouter   | Active primary (qwen/qwen3-coder:free) | ✓ Configured |
+| openai-codex | Available via plugin                   | ✓ Enabled    |
+| opencode-zen | Fallback (nemotron-3-ultra-free)       | ✓ In chain   |
+| nous         | Available via plugin                   | ✓ Enabled    |
+| huggingface  | Available via plugin                   | ✓ Enabled    |
+| ollama-cloud | Available via plugin                   | ✓ Enabled    |
 
 ## Environment Corrections (2026-06-21)
 

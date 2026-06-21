@@ -1,20 +1,22 @@
 ---
 trigger: /sync-hermes-copilot-codex
+name: sync-hermes-copilot-codex
+title: Sync Hermes Copilot Codex
+version: 1.1.0
 description: >-
   Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
   create personalities and profiles from instruction/agent definitions.
 tags:
-  [
-    hermes,
-    copilot,
-    opencode,
-    sync,
-    skills,
-    plugins,
-    hooks,
-    personalities,
-    profiles,
-  ]
+  - hermes
+  - copilot
+  - opencode
+  - sync
+  - skills
+  - plugins
+  - hooks
+  - personalities
+  - profiles
+  # Copilot-format deps (Hermes uses skills:)
 dependencies:
   - skill:using-superpowers
   - skill:user-communication-preferences
@@ -23,6 +25,12 @@ skills:
   - using-superpowers
   - user-communication-preferences
   - plans-and-specs
+metadata:
+  hermes:
+    related_skills:
+      - using-superpowers
+      - user-communication-preferences
+      - plans-and-specs
 ---
 
 # Sync Hermes Copilot Codex
@@ -42,8 +50,8 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 
 ## Context
 
-- **Source reference:** `./sync-hermes-copilot-codex.prompt.txt`
-- **Target scope:** Hermes (`~/AppData/Local/hermes/`), Copilot (`.github/`), Codex (`.opencode/` or `~/.codex/`)
+- **Source:** `sync-hermes-copilot-codex.prompt.md` (canonical; legacy `.txt` consolidated)
+- **Target scope:** Hermes (`~/AppData/Local/hermes/`), Copilot (`~/.copilot/`), Codex (`~/.codex/`)
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 
 ## Skills Required
@@ -96,11 +104,11 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 
 **Steps:**
 
-| Step | Action                                                        | Output       |
-| ---- | ------------------------------------------------------------- | ------------ |
-| 2.1  | Identify Hermes root folder (`~/AppData/Local/hermes/`)       | Hermes path  |
-| 2.2  | Identify Copilot root folder (`.github/` or VS Code settings) | Copilot path |
-| 2.3  | Identify Codex root folder (`~/.codex/` or `.opencode/`)      | Codex path   |
+| Step | Action                                                  | Output       |
+| ---- | ------------------------------------------------------- | ------------ |
+| 2.1  | Identify Hermes root folder (`~/AppData/Local/hermes/`) | Hermes path  |
+| 2.2  | Identify Copilot root folder (`~/.copilot/`)            | Copilot path |
+| 2.3  | Identify Codex root folder (`~/.codex/`)                | Codex path   |
 
 ---
 
@@ -150,3 +158,15 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 2. Identify Hermes, Copilot, and Codex root folders
 3. Sync skills, plugins, and hooks bidirectionally across all three agents
 4. Verify plan, implement, verify completion
+
+## Verification Checklist
+
+- [ ] All instructions scanned and personalities created
+- [ ] All agents scanned and profiles created
+- [ ] Hermes root identified
+- [ ] Copilot root identified
+- [ ] Codex root identified
+- [ ] Skills synced bidirectionally
+- [ ] Plugins synced bidirectionally
+- [ ] Hooks synced bidirectionally
+- [ ] Plan and specs verified complete

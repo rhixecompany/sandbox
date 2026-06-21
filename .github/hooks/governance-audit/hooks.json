@@ -1,5 +1,5 @@
 {
   "name": "governance-audit",
   "events": ["on_session_start","on_session_end","pre_llm_call"],
-  "script": "audit-session-start.sh"
+  "script": "hook.sh"
 }

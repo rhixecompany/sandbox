@@ -1,7 +1,7 @@
 # sync-hermes-copilot-codex — Audit Issues Context
 
-> Generated: 2026-06-20T01:30:00Z | Source: `sync-hermes-copilot-codex.prompt.md` + `sync-hermes-copilot-codex.prompt.txt`
-> Audit batch: 2 files (1 .prompt.md, 1 .prompt.txt)
+> Generated: 2026-06-21T10:00:00Z | Source: `sync-hermes-copilot-codex.prompt.md`
+> Audit: Fresh re-run (Phase 1)
 
 ---
 
@@ -9,10 +9,12 @@
 
 | Severity | Count | Category |
 |----------|-------|----------|
-| Medium | 1 | Prose in `skills:` frontmatter list (YAML should be clean identifiers) |
-| Medium | 1 | .prompt.txt lacks frontmatter (not parseable as structured prompt) |
-| Low | 1 | Double frontmatter fence false positive (table separators counted) |
-| Low | 4 | Table pipe-balance false positives (2-column Skills Required table) |
+| Medium | 1 | Dead reference to removed `.prompt.txt` file |
+| Low | 3 | Missing recommended frontmatter fields |
+| Low | 1 | Missing `metadata.hermes` section |
+| Low | 1 | No verification checklist |
+| Info | 1 | Inconsistent YAML style (`tags:` flow sequence vs block lists) |
+| Info | 1 | Redundant `dependencies:` section alongside `skills:` |
 
 ---
 
@@ -20,80 +22,106 @@
 
 ### sync-hermes-copilot-codex.prompt.md
 
-#### MEDIUM: Prose in skills: Frontmatter List
-- **Location:** Frontmatter `skills:` array (lines 11-15)
+---
+
+#### MEDIUM: Stale Reference to Removed .prompt.txt
+
+- **Location:** Line 45
+- **Current:**
+  ```
+  - **Source reference:** `./sync-hermes-copilot-codex.prompt.txt`
+  ```
+- **Problem:** `sync-hermes-copilot-codex.prompt.txt` was removed in the previous enhancement run (canonical `.prompt.md` was kept). The reference is now a dead link.
+- **Fix:** Update to reference only the canonical `.prompt.md` file, or add a note that legacy `.txt` was consolidated.
+
+---
+
+#### LOW: Missing Recommended Frontmatter Fields
+
+- **Location:** Frontmatter (lines 1-26)
+- **Current fields:** `trigger`, `description`, `tags`, `dependencies`, `skills`
+- **Missing fields of value:**
+  - `name` — Identifier for cross-system resolution (e.g., `sync-hermes-copilot-codex`)
+  - `title` — Human-readable display name
+  - `version` — Version tracking (e.g., `1.0.0`)
+  - `author` — Ownership attribution
+  - `license` — Usage terms
+- **Fix:** Add relevant fields. Minimum suggested: `name`, `title`, `version` for a prompt file.
+
+---
+
+#### LOW: Missing metadata.hermes Section
+
+- **Location:** Frontmatter, after `skills:`
+- **Current:** No `metadata` block at all
+- **Problem:** Without `metadata.hermes.related_skills`, Hermes has no structured way to map this prompt's skill dependencies.
+- **Fix:** Add:
+  ```yaml
+  metadata:
+    hermes:
+      related_skills:
+        - using-superpowers
+        - user-communication-preferences
+        - plans-and-specs
+  ```
+
+---
+
+#### LOW: No Verification Checklist
+
+- **Location:** End of file (after `## Actions Summary`)
+- **Problem:** The prompt instructs execution but has no self-checking mechanism. Per Hermes normalization best practices, a verification checklist makes the prompt self-validating.
+- **Fix:** Add a `## Verification Checklist` section with checkboxes for post-execution verification.
+
+---
+
+#### INFO: Inconsistent YAML Style (tags: Flow Sequence)
+
+- **Location:** Frontmatter `tags:` field (lines 8-17)
 - **Current:**
   ```yaml
-  skills:
-    - using-superpowers — Establishes workflow foundation
-    - user-communication-preferences — Loads user prefs for execution style
-    - plans-and-specs — Creates implementation plan from goal
+  tags:
+    [
+      hermes,
+      copilot,
+      ...
+    ]
   ```
-- **Expected:** Clean skill identifiers only (descriptions belong in `dependencies:` or docs)
-- **Fix:** Change to:
+- **Problem:** Valid YAML (flow sequence) but inconsistent with the block-style lists used for `skills:` and `dependencies:`. Not a functional issue, but style inconsistency.
+- **Fix:** Convert to block-style list:
   ```yaml
-  skills:
-    - using-superpowers
-    - user-communication-preferences
-    - plans-and-specs
+  tags:
+    - hermes
+    - copilot
+    ...
   ```
 
-#### LOW: Double Frontmatter Fence False Positive
-- **Location:** First 60 lines
-- **Count:** 4 `---` fences (expected: 2)
-- **Root Cause:** Audit script counts all `---` substrings including table separator rows (`--- | ---`)
-- **Actual:** Exactly 2 frontmatter fences (lines 1, 15) — correct
-- **Action:** No file fix needed; audit pattern refinement needed
+---
 
-#### LOW: Table Pipe-Balance False Positives (4 instances)
-- **Location:** Skills Required table (rows 1-5)
-- **Issue:** Regex flagged 2-column rows (skill + description)
-- **Reality:** These are valid 2-column tables (Skill | Purpose)
-- **Action:** No fix needed for these; audit pattern needs refinement
+#### INFO: Redundant dependencies: Section
+
+- **Location:** Frontmatter `dependencies:` (lines 18-21)
+- **Current:**
+  ```yaml
+  dependencies:
+    - skill:using-superpowers
+    - skill:user-communication-preferences
+    - skill:plans-and-specs
+  ```
+- **Context:** The `skills:` list (lines 22-25) already references the same three skills with clean identifiers. The `dependencies:` section with `skill:` prefix is a Copilot convention that duplicates the Hermes-style `skills:` list.
+- **Fix:** Either:
+  - A. Remove `dependencies:` (if Hermes-only target)
+  - B. Keep both if cross-system compatibility is needed (add a clarifying comment)
 
 ---
 
-### sync-hermes-copilot-codex.prompt.txt
+## False Positives / Warnings Resolved
 
-#### MEDIUM: Missing Frontmatter
-- **Issue:** No YAML frontmatter - not parseable as structured Hermes prompt
-- **Current format:** Inline skill triggers on line 1
-- **Expected:** Full frontmatter with `trigger`, `description`, `tags`, `dependencies`, `skills`
-- **Fix:** Convert to .prompt.md format (or add frontmatter if keeping .txt)
-
-#### LOW: Trigger Regex False Positives
-- **Detection:** Found triggers `['using', 'user', 'plans', 'goal', 'agents', 'instructions']`
-- **Reality:** Partial matches from `/using-superpowers`, `/user-communication-preferences`, `/plans-and-specs`, `/goal`, and words in the goal text
-- **Action:** No fix needed - detection pattern limitation
-
----
-
-## Audit Patterns Applied
-
-| Pattern | Reference |
-|---------|-----------|
-| Double frontmatter fence detection | `references/audit-detection-edge-cases.md` |
-| Skills prose in YAML | `references/prompt-file-debugging-patterns.md` (Bug #2) |
-| Pipe-balance false positives | `references/audit-detection-edge-cases.md` |
-| Heading hierarchy validation | `references/heading-hierarchy-validation.md` |
-| Cross-file symmetry | `references/doc-symmetry-validation.md` |
-
----
-
-## Fix Priority Order
-
-1. **Clean skills: frontmatter list** (Medium - violates schema convention)
-2. **Add frontmatter to .prompt.txt or convert** (Medium - prompt normalization)
-3. **Audit script refinements** (Low - false positives only)
-
----
-
-## Verification Gates (Post-Fix)
-
-- [ ] `yaml.safe_load` on frontmatter parses as single document
-- [ ] Zero double-fence repeats in first 60 lines (actual frontmatter only)
-- [ ] No dependency-style prose in `skills:` lists
-- [ ] File uses `.prompt.md` extension
-- [ ] Trigger matches filename stem convention
-- [ ] Skills Required table matches frontmatter `skills:` exactly
-- [ ] .prompt.txt either converted or has frontmatter
+| Check | Lines | Result |
+|-------|-------|--------|
+| Table pipe balance | 50-63 | ✅ All tables balanced (3 pipes = 2 columns, correct) |
+| Double frontmatter fences | 1-60 | ✅ 2 fences (correct) |
+| Code fence balance | — | ✅ 0 fences (none needed) |
+| Heading hierarchy | — | ✅ 1 H1, 6 H2, 4 H3 — no jumps |
+| Trigger vs filename | 2 | ✅ Match: `/sync-hermes-copilot-codex` |
+| `.prompt.txt` file exists? | — | ✅ File correctly removed (not needed) |

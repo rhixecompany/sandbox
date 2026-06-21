@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
-# Replace with commit policy. Stub only.
+
+# Legacy entry point - delegates to hook.sh
+exec "$(dirname "$0")/hook.sh" "$@"

@@ -14,11 +14,11 @@
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
@@ -160,10 +160,36 @@
 	"markdown.extension.toc.updateOnSave": true,
 	"markdownlint.config": {
 		"default": true,
+		"MD007": {
+			"indent": 2
+		},
 		"MD013": false,
-		"MD033": false,
-		"MD041": false
+		"MD022": true,
+		"MD024": {
+			"siblings_only": true
+		},
+		"MD033": {
+			"allowed_elements": [
+				"br",
+				"details",
+				"kbd",
+				"summary",
+				"sub",
+				"sup"
+			]
+		},
+		"MD034": true,
+		"MD041": true,
+		"MD058": false,
+		"MD060": false
 	},
+	"markdownlint.ignore": [
+		"**/dist/**",
+		"**/out/**",
+		"**/tmp/**",
+		"**/node_modules/**",
+		"**/.git/**"
+	],
 	"markdownlint.run": "onSave",
 	"npm-intellisense.importDeclarationType": "const",
 	"npm-intellisense.importES6": true,

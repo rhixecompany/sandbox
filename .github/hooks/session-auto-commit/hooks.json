@@ -1,5 +1,7 @@
 {
+  "events": [
+    "on_session_end"
+  ],
   "name": "session-auto-commit",
-  "events": ["on_session_end"],
-  "script": "auto-commit.sh"
+  "script": "hook.sh"
 }

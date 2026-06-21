@@ -1,6 +1,7 @@
 # Hermes Skill Library Triage
 
 ## Summary
+
 - Total skills: 645
 - Categories: 395
 - Archived/absorbed: 40
@@ -8,6 +9,7 @@
 - Duplicate names: 250
 
 ## Category Counts
+
 - devops: 39
 - creative: 36
 - software-development: 36
@@ -405,6 +407,7 @@
 - yuanbao: 1
 
 ## Duplicate Skill Names
+
 - adversarial-ux-test: adversarial-ux-test/SKILL.md, qa/adversarial-ux-test/SKILL.md
 - agent-browser: agent-browser/SKILL.md, autonomous-ai-agents/agent-browser/SKILL.md
 - agent-governance: agent-governance/SKILL.md, autonomous-ai-agents/agent-governance/SKILL.md
@@ -657,7 +660,9 @@
 - yuanbao: productivity/yuanbao/SKILL.md, yuanbao/SKILL.md
 
 ## Targeted Consolidation Candidates
+
 ### agent delegation
+
 - acpx-agent-routing — autonomous-ai-agents/acpx-agent-routing/SKILL.md | lines=19 body=3 | archived
 - acpx-executor — autonomous-ai-agents/acpx-executor/SKILL.md | lines=19 body=3 | archived
 - blackbox — blackbox/SKILL.md | lines=145 body=131 | active
@@ -676,6 +681,7 @@
 - workiq-copilot — workiq-copilot/SKILL.md | lines=105 body=99 | active
 
 ### github
+
 - gh-cli — gh-cli/SKILL.md | lines=13 body=3 | archived
 - gh-cli — github/gh-cli/SKILL.md | lines=2188 body=2182 | active
 - git-commit — git-commit/SKILL.md | lines=13 body=3 | archived
@@ -689,6 +695,7 @@
 - github-workflow — github/github-workflow/SKILL.md | lines=398 body=384 | active
 
 ### hermes self-management
+
 - hermes-agent — autonomous-ai-agents/hermes-agent/SKILL.md | lines=13 body=3 | archived
 - hermes-agent — hermes-agent/SKILL.md | lines=798 body=781 | active
 - hermes-agent-diagnostics-configuration — hermes-agent-diagnostics-configuration/SKILL.md | lines=13 body=3 | archived
@@ -709,6 +716,7 @@
 - hermes-setup — devops/hermes-setup/SKILL.md | lines=383 body=369 | active
 
 ### planning / breakdown
+
 - create-implementation-plan — create-implementation-plan/SKILL.md | lines=163 body=157 | active
 - create-implementation-plan — development/create-implementation-plan/SKILL.md | lines=163 body=157 | active
 - executing-plans — executing-plans/SKILL.md | lines=71 body=65 | active
@@ -736,6 +744,14 @@
 - writing-plans — writing-plans/SKILL.md | lines=153 body=147 | active
 
 ### stubs / empty
+
+- development/plan/SKILL.md | lines=82 body=66 | active
+- plans-and-specs — planning/plans-and-specs/SKILL.md | lines=271 body=256 | active
+- plans-and-specs — plans-and-specs/SKILL.md | lines=271 body=256 | active
+- update-implementation-plan — development/update-implementation-plan/SKILL.md | lines=39 body=32 | active
+- update-implementation-plan — update-implementation-plan/SKILL.md | lines=39 body=32 | active
+- writing-plans — software-development/writing-plans/SKILL.md | lines=358 body=342 | active
+- writing-plans — writing-plans/SKILL.md | lines=153 body=147 | active
 - boost-prompt — boost-prompt/SKILL.md | lines=39 body=32 | active
 - boost-prompt — development/boost-prompt/SKILL.md | lines=12 body=3 | active
 - dispatching-parallel-agents — dispatching-parallel-agents/SKILL.md | lines=12 body=3 | archived
