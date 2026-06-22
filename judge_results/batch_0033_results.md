@@ -1,83 +1,16 @@
 # Batch 0033 Results
 
-## Skill 225: oss-forensics
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/oss-forensics/SKILL.md`
-- **Lines**: 423
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 20/20
-- **Total**: **60/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| receiving-code-review | software-development\receiving-code-review\SKILL.md | 113 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| refactor | software-development\refactor\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| requesting-code-review | software-development\requesting-code-review\SKILL.md | 298 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
+| sandbox | software-development\sandbox\SKILL.md | 237 | 20 | 16 | 12 | 15 | 5 | 68 | WARN |
+| script-orchestration | software-development\script-orchestration\SKILL.md | 322 | 20 | 20 | 16 | 15 | 18 | 89 | PASS |
+| shadcn | software-development\shadcn\SKILL.md | 144 | 20 | 20 | 8 | 20 | 13 | 81 | PASS |
+| spike | software-development\spike\SKILL.md | 239 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| subagent-driven-development | software-development\subagent-driven-development\SKILL.md | 378 | 18 | 12 | 16 | 12 | 18 | 76 | WARN |
+| systematic-debugging | software-development\systematic-debugging\SKILL.md | 414 | 20 | 20 | 16 | 17 | 18 | 91 | PASS |
+| test-driven-development | software-development\test-driven-development\SKILL.md | 555 | 18 | 16 | 16 | 12 | 18 | 80 | PASS |
 
-## Skill 226: outlines
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/outlines/SKILL.md`
-- **Lines**: 656
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 227: page-agent
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/page-agent/SKILL.md`
-- **Lines**: 190
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **65/100** ⚠️
-
-## Skill 228: peft
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/peft/SKILL.md`
-- **Lines**: 435
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 229: pinecone
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/pinecone/SKILL.md`
-- **Lines**: 362
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 6/20
-- **Total**: **56/100** 🔴
-
-## Skill 230: pinggy-tunnel
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/pinggy-tunnel/SKILL.md`
-- **Lines**: 309
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **66/100** ⚠️
-
-## Skill 231: pixel-art
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/pixel-art/SKILL.md`
-- **Lines**: 218
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 18/20
-- **Total**: **60/100** ⚠️
-
-### Batch 0033 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| oss-forensics |  |  |
-| outlines |  |  |
-| page-agent |  |  |
-| peft |  |  |
-| pinecone |  |  |
-| pinggy-tunnel |  |  |
-| pixel-art |  |  |
-
+**Batch summary: 10 skills judged**

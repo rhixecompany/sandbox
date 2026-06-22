@@ -1,83 +1,16 @@
 # Batch 0001 Results
 
-## Skill 1: 1password
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/1password/SKILL.md`
-- **Lines**: 163
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| 1password | 1password\SKILL.md | 188 | 18 | 12 | 12 | 15 | 18 | 75 | WARN |
+| 3-statement-model | 3-statement-model\SKILL.md | 466 | 18 | 12 | 16 | 12 | 18 | 76 | WARN |
+| huggingface-accelerate | accelerate\SKILL.md | 370 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| agentmail | agentmail\SKILL.md | 144 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| antigravity-cli | antigravity-cli\SKILL.md | 258 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| architecture-blueprint-generator | architecture\architecture-blueprint-generator\SKILL.md | 99 | 20 | 20 | 12 | 20 | 18 | 90 | PASS |
+| folder-structure-blueprint-generator | architecture\folder-structure-blueprint-generator\SKILL.md | 85 | 20 | 20 | 8 | 20 | 18 | 86 | PASS |
+| technology-stack-blueprint-generator | architecture\technology-stack-blueprint-generator\SKILL.md | 95 | 20 | 20 | 16 | 20 | 18 | 94 | PASS |
+| agent-browser | autonomous-ai-agents\agent-browser\SKILL.md | 125 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| agent-governance | autonomous-ai-agents\agent-governance\SKILL.md | 596 | 20 | 12 | 8 | 17 | 5 | 62 | WARN |
 
-## Skill 2: 3-statement-model
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/3-statement-model/SKILL.md`
-- **Lines**: 433
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 18/20
-- **Total**: **60/100** ⚠️
-
-## Skill 3: accelerate
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/accelerate/SKILL.md`
-- **Lines**: 336
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 4: agentmail
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/agentmail/SKILL.md`
-- **Lines**: 126
-- **D1 (Frontmatter)**: 11/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **59/100** 🔴
-
-## Skill 5: antigravity-cli
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/antigravity-cli/SKILL.md`
-- **Lines**: 177
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **81/100** ✅
-
-## Skill 6: architecture-blueprint-generator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/architecture/architecture-blueprint-generator/SKILL.md`
-- **Lines**: 100
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **65/100** ⚠️
-
-## Skill 7: folder-structure-blueprint-generator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/architecture/folder-structure-blueprint-generator/SKILL.md`
-- **Lines**: 86
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 4/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **61/100** ⚠️
-
-### Batch 0001 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| 1password |  |  |
-| 3-statement-model |  |  |
-| accelerate |  |  |
-| agentmail |  |  |
-| antigravity-cli |  |  |
-| architecture-blueprint-generator |  |  |
-| folder-structure-blueprint-generator |  |  |
-
+**Batch summary: 10 skills judged**

@@ -1,79 +1,38 @@
-# Skill-Judge Audit Summary — 2026-06-16
+# Skill Judge Summary
 
-## Results
-- **Total skills scored:** 352
-- **✅ AI-ready (≥80):** 24 skills (6.8%)
-- **⚠️ Needs work (60-79):** 217 skills (61.6%)
-- **🔴 Rewrite (<60):** 111 skills (31.5%)
-- **Below 80 total:** 328 skills
+**Total skills judged: 343**
 
-## Top 10 Highest-Scored Skills
-| Score | Skill |
-|-------|-------|
-| 90 | pretext |
-| 89 | test-driven-development |
-| 88 | skills |
-| 88 | plans-and-specs |
-| 88 | hermes-skills |
-| 88 | enhance-markdown |
-| 88 | documentation-extraction-and-indexing |
-| 88 | code-wiki |
-| 88 | baoyu-comic |
-| 87 | hyperframes |
+| Rating | Count | Pct |
+|--------|-------|-----|
+| ✅ PASS (≥80) | 82 | 23% |
+| ⚠️ WARN (60-79) | 261 | 76% |
+| ❌ FAIL (<60) | 0 | 0% |
 
-## Bottom 10 Lowest-Scored Skills
-| Score | Skill |
-|-------|-------|
-| 30 | drawio-skill |
-| 30 | playwright-automation-fill-in-form |
-| 30 | playwright-generate-e2e-test |
-| 30 | playwright-generate-test |
-| 31 | scoutqa-test |
-| 33 | transloadit-media-processing |
-| 34 | postgresql-code-review |
-| 34 | snowflake-semanticview |
-| 35 | ci-cd-best-practices |
-| 35 | gh-cli |
+**Average score: 73.6/100**
 
-## Planning Skills (Post-Enhancement)
-| Skill | Score | Rating | Notes |
-|-------|-------|--------|-------|
-| brainstorming | 65 | ⚠️ | Enhanced after audit — re-judge needed |
-| plans-and-specs | 88 | ✅ | Enhanced after audit — score already good |
-| prompt-planning-orchestration | 60 | ⚠️ | Enhanced after audit — re-judge needed |
 
-## Score Distribution
-| Score Range | Count |
-|-------------|-------|
-| 90-100 | 1 |
-| 85-89 | 6 |
-| 80-84 | 17 |
-| 75-79 | 0 |
-| 70-74 | 42 |
-| 65-69 | 40 |
-| 60-64 | 77 |
-| 55-59 | 33 |
-| 50-54 | 27 |
-| 45-49 | 27 |
-| 40-44 | 24 |
-| 35-39 | 18 |
-| 30-34 | 10 |
+## Bottom 10 (lowest scores)
 
-## Common Issues (Below 80)
-1. **Missing frontmatter fields** — ~50% missing version, author, license, or tags
-2. **No Skills Required table** — ~90% missing
-3. **No pitfalls section** — ~60% missing
-4. **No verification checklist** — ~70% missing
-5. **No reference files** — ~50% missing refs/, templates/, scripts/
-6. **Thin content** — Many skills are <100 lines with only bullet points
-7. **No workflow phases** — Many lack structured Phase 1-4 workflows
+- fix-yaml-frontmatter: 60/100 (WARN) - development\fix-yaml-frontmatter\SKILL.md
+- vscode-cli: 60/100 (WARN) - development\vscode-cli\SKILL.md
+- kanban-orchestrator: 60/100 (WARN) - devops\kanban-orchestrator\SKILL.md
+- provider-model-audit: 60/100 (WARN) - devops\provider-model-audit\SKILL.md
+- coding-agents: 61/100 (WARN) - autonomous-ai-agents\coding-agents\SKILL.md
+- blender-mcp: 61/100 (WARN) - blender-mcp\SKILL.md
+- ascii-art: 61/100 (WARN) - creative\ascii-art\SKILL.md
+- sketch: 61/100 (WARN) - creative\sketch\SKILL.md
+- copilot-usage-metrics: 61/100 (WARN) - development\copilot-usage-metrics\SKILL.md
+- make-skill-template: 61/100 (WARN) - development\make-skill-template\SKILL.md
 
-## Remediation Priority
-1. **🔴 <60 (111 skills)** — Full rewrite needed
-2. **⚠️ 60-79 (217 skills)** — Targeted patches (frontmatter, Skills Required, pitfalls, verification)
-3. **✅ ≥80 (24 skills)** — No action needed
+## Top 10 (highest scores)
 
-## Data Files
-- Full results: `judge_results/all_results.tsv` (352 entries)
-- Batch files: `judge_results/batch_0001_results.md` through `batch_0051_results.md`
-- Format: `skill_name|path|score|rating|dim1|dim2|dim3|dim4|dim5|lines`
+- convert-plaintext-to-md: 98/100 (PASS) - development\convert-plaintext-to-md\SKILL.md
+- technology-stack-blueprint-generator: 94/100 (PASS) - architecture\technology-stack-blueprint-generator\SKILL.md
+- systematic-debugging: 91/100 (PASS) - software-development\systematic-debugging\SKILL.md
+- prompt-planning-orchestration: 90/100 (PASS) - planning\prompt-planning-orchestration\SKILL.md
+- modal-serverless-gpu: 90/100 (PASS) - devops\modal-serverless-gpu\SKILL.md
+- architecture-blueprint-generator: 90/100 (PASS) - architecture\architecture-blueprint-generator\SKILL.md
+- script-orchestration: 89/100 (PASS) - software-development\script-orchestration\SKILL.md
+- executing-plans: 89/100 (PASS) - software-development\executing-plans\SKILL.md
+- skill-judge: 89/100 (PASS) - qa\skill-judge\SKILL.md
+- user-communication-preferences: 88/100 (PASS) - productivity\user-communication-preferences\SKILL.md

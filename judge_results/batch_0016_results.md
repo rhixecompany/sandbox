@@ -1,83 +1,16 @@
 # Batch 0016 Results
 
-## Skill 106: asdf
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/asdf/SKILL.md`
-- **Lines**: 122
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **78/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| terraform-azurerm-set-diff-analyzer | devops\terraform-azurerm-set-diff-analyzer\SKILL.md | 82 | 20 | 20 | 8 | 20 | 18 | 86 | PASS |
+| validate-memories | devops\validate-memories\SKILL.md | 142 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| watchers | devops\watchers\SKILL.md | 132 | 18 | 12 | 12 | 15 | 18 | 75 | WARN |
+| webhook-subscriptions | devops\webhook-subscriptions\SKILL.md | 253 | 20 | 12 | 12 | 12 | 5 | 61 | WARN |
+| windows-maintenance-operations | devops\windows-maintenance-operations\SKILL.md | 292 | 18 | 16 | 12 | 12 | 13 | 71 | WARN |
+| work-on-ticket | devops\work-on-ticket\SKILL.md | 92 | 18 | 16 | 8 | 20 | 5 | 67 | WARN |
+| workspace-audit | devops\workspace-audit\SKILL.md | 211 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| django-application | django-application\SKILL.md | 103 | 18 | 12 | 8 | 15 | 20 | 73 | WARN |
+| django-celery | django-celery\SKILL.md | 480 | 18 | 12 | 12 | 12 | 13 | 67 | WARN |
+| domain-intel | domain-intel\SKILL.md | 123 | 18 | 12 | 12 | 15 | 18 | 75 | WARN |
 
-## Skill 107: aspire
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/aspire/SKILL.md`
-- **Lines**: 238
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **62/100** ⚠️
-
-## Skill 108: azure-deployment-preflight
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/azure-deployment-preflight/SKILL.md`
-- **Lines**: 222
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **66/100** ⚠️
-
-## Skill 109: azure-devops-cli
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/azure-devops-cli/SKILL.md`
-- **Lines**: 127
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **72/100** ⚠️
-
-## Skill 110: azure-resource-visualizer
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/azure-resource-visualizer/SKILL.md`
-- **Lines**: 240
-- **D1 (Frontmatter)**: 11/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 4/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **59/100** 🔴
-
-## Skill 111: azure-role-selector
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/azure-role-selector/SKILL.md`
-- **Lines**: 124
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **64/100** ⚠️
-
-## Skill 112: azure-static-web-apps
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/azure-static-web-apps/SKILL.md`
-- **Lines**: 330
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **47/100** 🔴
-
-### Batch 0016 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| asdf |  |  |
-| aspire |  |  |
-| azure-deployment-preflight |  |  |
-| azure-devops-cli |  |  |
-| azure-resource-visualizer |  |  |
-| azure-role-selector |  |  |
-| azure-static-web-apps |  |  |
-
+**Batch summary: 10 skills judged**

@@ -1,83 +1,16 @@
 # Batch 0027 Results
 
-## Skill 183: huggingface-tokenizers
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/huggingface-tokenizers/SKILL.md`
-- **Lines**: 520
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| xlsx | productivity\xlsx\SKILL.md | 106 | 20 | 20 | 4 | 18 | 13 | 75 | WARN |
+| yuanbao | productivity\yuanbao\SKILL.md | 156 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| pytorch-fsdp | pytorch-fsdp\SKILL.md | 159 | 18 | 12 | 16 | 15 | 18 | 79 | WARN |
+| pytorch-lightning | pytorch-lightning\SKILL.md | 384 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| adversarial-ux-test | qa\adversarial-ux-test\SKILL.md | 219 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| boilerplate-stripper | qa\boilerplate-stripper\SKILL.md | 154 | 20 | 16 | 8 | 15 | 18 | 77 | WARN |
+| dogfood | qa\dogfood\SKILL.md | 183 | 20 | 16 | 8 | 20 | 18 | 82 | PASS |
+| playwright-automation-fill-in-form | qa\playwright-automation-fill-in-form\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| playwright-generate-e2e-test | qa\playwright-generate-e2e-test\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| playwright-generate-test | qa\playwright-generate-test\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
 
-## Skill 184: hyperframes
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hyperframes/SKILL.md`
-- **Lines**: 191
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 18/20
-- **Total**: **87/100** ✅
-
-## Skill 185: hyperliquid
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hyperliquid/SKILL.md`
-- **Lines**: 211
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **70/100** ⚠️
-
-## Skill 186: inference-sh-cli
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/inference-sh-cli/SKILL.md`
-- **Lines**: 156
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 187: instructor
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/instructor/SKILL.md`
-- **Lines**: 744
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 188: kanban-video-orchestrator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/kanban-video-orchestrator/SKILL.md`
-- **Lines**: 207
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 18/20
-- **Total**: **70/100** ⚠️
-
-## Skill 189: lambda-labs
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/lambda-labs/SKILL.md`
-- **Lines**: 549
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 20/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-### Batch 0027 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| huggingface-tokenizers |  |  |
-| hyperframes |  |  |
-| hyperliquid |  |  |
-| inference-sh-cli |  |  |
-| instructor |  |  |
-| kanban-video-orchestrator |  |  |
-| lambda-labs |  |  |
-
+**Batch summary: 10 skills judged**

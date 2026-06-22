@@ -1,83 +1,16 @@
 # Batch 0030 Results
 
-## Skill 204: meme-generation
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/meme-generation/SKILL.md`
-- **Lines**: 130
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **66/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| scrapling | research\scrapling\SKILL.md | 348 | 20 | 12 | 8 | 17 | 5 | 62 | WARN |
+| web-research-pipeline | research\web-research-pipeline\SKILL.md | 280 | 20 | 12 | 16 | 12 | 5 | 65 | WARN |
+| searxng-search | searxng-search\SKILL.md | 236 | 18 | 12 | 12 | 15 | 13 | 70 | WARN |
+| sherlock | sherlock\SKILL.md | 206 | 20 | 12 | 12 | 20 | 5 | 69 | WARN |
+| shop-app | shop-app\SKILL.md | 356 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
+| shopify | shopify\SKILL.md | 375 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
+| siyuan | siyuan\SKILL.md | 303 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
+| openhue | smart-home\openhue\SKILL.md | 129 | 20 | 12 | 12 | 20 | 5 | 69 | WARN |
+| xurl | social-media\xurl\SKILL.md | 450 | 20 | 12 | 16 | 17 | 5 | 70 | WARN |
+| banking | software-development\banking\SKILL.md | 124 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
 
-## Skill 205: memento-flashcards
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/memento-flashcards/SKILL.md`
-- **Lines**: 324
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 20/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 1/20
-- **Total**: **67/100** ⚠️
-
-## Skill 206: lm-evaluation-harness
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mlops/evaluation/lm-evaluation-harness/SKILL.md`
-- **Lines**: 499
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 207: weights-and-biases
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mlops/evaluation/weights-and-biases/SKILL.md`
-- **Lines**: 595
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 208: huggingface-hub
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mlops/huggingface-hub/SKILL.md`
-- **Lines**: 93
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **56/100** 🔴
-
-## Skill 209: llama-cpp
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mlops/inference/llama-cpp/SKILL.md`
-- **Lines**: 253
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 210: obliteratus
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mlops/inference/obliteratus/SKILL.md`
-- **Lines**: 346
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 18/20
-- **Total**: **70/100** ⚠️
-
-### Batch 0030 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| meme-generation |  |  |
-| memento-flashcards |  |  |
-| lm-evaluation-harness |  |  |
-| weights-and-biases |  |  |
-| huggingface-hub |  |  |
-| llama-cpp |  |  |
-| obliteratus |  |  |
-
+**Batch summary: 10 skills judged**

@@ -1,83 +1,16 @@
 # Batch 0020 Results
 
-## Skill 134: rbac-audit-logging
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/rbac-audit-logging/SKILL.md`
-- **Lines**: 151
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **64/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| instructor | instructor\SKILL.md | 779 | 18 | 12 | 16 | 12 | 18 | 76 | WARN |
+| kanban-video-orchestrator | kanban-video-orchestrator\SKILL.md | 273 | 18 | 12 | 12 | 12 | 20 | 74 | WARN |
+| lambda-labs-gpu-cloud | lambda-labs\SKILL.md | 574 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| llava | llava\SKILL.md | 343 | 18 | 12 | 12 | 12 | 13 | 67 | WARN |
+| hermes-mcp | mcp\hermes-mcp\SKILL.md | 305 | 20 | 20 | 8 | 17 | 18 | 83 | PASS |
+| mcp-builder | mcp\mcp-builder\SKILL.md | 103 | 20 | 20 | 12 | 18 | 13 | 83 | PASS |
+| mcp-cli | mcp\mcp-cli\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| mcp-security-audit | mcp\mcp-security-audit\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| native-mcp | mcp\native-mcp\SKILL.md | 552 | 20 | 16 | 12 | 17 | 18 | 83 | PASS |
+| mcporter | mcporter\SKILL.md | 142 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
 
-## Skill 135: secret-scanning
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/secret-scanning/SKILL.md`
-- **Lines**: 242
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **62/100** ⚠️
-
-## Skill 136: service-integrations
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/service-integrations/SKILL.md`
-- **Lines**: 239
-- **D1 (Frontmatter)**: 14/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **72/100** ⚠️
-
-## Skill 137: session-audit-report
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/session-audit-report/SKILL.md`
-- **Lines**: 132
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **60/100** ⚠️
-
-## Skill 138: snowflake-semanticview
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/snowflake-semanticview/SKILL.md`
-- **Lines**: 82
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 0/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **34/100** 🔴
-
-## Skill 139: terraform-azurerm-set-diff-analyzer
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/terraform-azurerm-set-diff-analyzer/SKILL.md`
-- **Lines**: 83
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 8/20
-- **Total**: **76/100** ⚠️
-
-## Skill 140: watchers
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/watchers/SKILL.md`
-- **Lines**: 112
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **54/100** 🔴
-
-### Batch 0020 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| rbac-audit-logging |  |  |
-| secret-scanning |  |  |
-| service-integrations |  |  |
-| session-audit-report |  |  |
-| snowflake-semanticview |  |  |
-| terraform-azurerm-set-diff-analyzer |  |  |
-| watchers |  |  |
-
+**Batch summary: 10 skills judged**

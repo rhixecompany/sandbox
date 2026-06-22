@@ -1,83 +1,16 @@
 # Batch 0009 Results
 
-## Skill 57: mermaid-diagrams
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/mermaid-diagrams/SKILL.md`
-- **Lines**: 101
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **74/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| copilot-cli-quickstart | development\copilot-cli-quickstart\SKILL.md | 803 | 20 | 12 | 16 | 17 | 5 | 70 | WARN |
+| copilot-sdk | development\copilot-sdk\SKILL.md | 481 | 20 | 12 | 12 | 15 | 5 | 64 | WARN |
+| copilot-usage-metrics | development\copilot-usage-metrics\SKILL.md | 74 | 20 | 12 | 4 | 20 | 5 | 61 | WARN |
+| create-agentsmd | development\create-agentsmd\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| create-implementation-plan | development\create-implementation-plan\SKILL.md | 115 | 20 | 16 | 16 | 20 | 5 | 77 | WARN |
+| create-readme | development\create-readme\SKILL.md | 198 | 20 | 16 | 8 | 15 | 5 | 64 | WARN |
+| create-web-form | development\create-web-form\SKILL.md | 67 | 20 | 16 | 8 | 20 | 13 | 77 | WARN |
+| fix-yaml-frontmatter | development\fix-yaml-frontmatter\SKILL.md | 85 | 20 | 8 | 12 | 15 | 5 | 60 | WARN |
+| generate-custom-instructions-from-codebase | development\generate-custom-instructions-from-codebase\SKILL.md | 272 | 20 | 16 | 8 | 15 | 5 | 64 | WARN |
+| lsp-setup | development\lsp-setup\SKILL.md | 86 | 20 | 12 | 12 | 18 | 18 | 80 | PASS |
 
-## Skill 58: nano-banana-pro-openrouter
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/nano-banana-pro-openrouter/SKILL.md`
-- **Lines**: 107
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **65/100** ⚠️
-
-## Skill 59: p5js
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/p5js/SKILL.md`
-- **Lines**: 577
-- **D1 (Frontmatter)**: 14/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 20/20
-- **Total**: **83/100** ✅
-
-## Skill 60: penpot-uiux-design
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/penpot-uiux-design/SKILL.md`
-- **Lines**: 358
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 61: pixel-art
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/pixel-art/SKILL.md`
-- **Lines**: 246
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 18/20
-- **Total**: **60/100** ⚠️
-
-## Skill 62: plantuml-ascii
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/plantuml-ascii/SKILL.md`
-- **Lines**: 339
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **69/100** ⚠️
-
-## Skill 63: popular-web-designs
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/popular-web-designs/SKILL.md`
-- **Lines**: 235
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **61/100** ⚠️
-
-### Batch 0009 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| mermaid-diagrams |  |  |
-| nano-banana-pro-openrouter |  |  |
-| p5js |  |  |
-| penpot-uiux-design |  |  |
-| pixel-art |  |  |
-| plantuml-ascii |  |  |
-| popular-web-designs |  |  |
-
+**Batch summary: 10 skills judged**

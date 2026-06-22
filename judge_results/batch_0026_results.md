@@ -1,83 +1,16 @@
 # Batch 0026 Results
 
-## Skill 176: hermes-breakdown
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-breakdown/SKILL.md`
-- **Lines**: 120
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 4/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 18/20
-- **Total**: **60/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| nano-pdf | productivity\nano-pdf\SKILL.md | 81 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| notion | productivity\notion\SKILL.md | 429 | 20 | 20 | 12 | 17 | 13 | 82 | PASS |
+| ocr-and-documents | productivity\ocr-and-documents\SKILL.md | 210 | 20 | 16 | 8 | 20 | 18 | 82 | PASS |
+| pdf | productivity\pdf\SKILL.md | 103 | 20 | 20 | 4 | 20 | 13 | 77 | WARN |
+| pdftk-server | productivity\pdftk-server\SKILL.md | 178 | 20 | 12 | 16 | 20 | 18 | 86 | PASS |
+| powerpoint | productivity\powerpoint\SKILL.md | 289 | 20 | 20 | 8 | 17 | 18 | 83 | PASS |
+| pptx | productivity\pptx\SKILL.md | 84 | 20 | 20 | 12 | 20 | 13 | 85 | PASS |
+| task-management | productivity\task-management\SKILL.md | 103 | 20 | 20 | 4 | 18 | 13 | 75 | WARN |
+| teams-meeting-pipeline | productivity\teams-meeting-pipeline\SKILL.md | 158 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| user-communication-preferences | productivity\user-communication-preferences\SKILL.md | 145 | 20 | 16 | 16 | 18 | 18 | 88 | PASS |
 
-## Skill 177: hermes-hooks
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-hooks/SKILL.md`
-- **Lines**: 332
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 178: hermes-mcp
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-mcp/SKILL.md`
-- **Lines**: 306
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 179: hermes-skills
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-skills/SKILL.md`
-- **Lines**: 208
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **88/100** ✅
-
-## Skill 180: hermes-system-maintenance
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-system-maintenance/SKILL.md`
-- **Lines**: 272
-- **D1 (Frontmatter)**: 14/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 18/20
-- **Total**: **73/100** ⚠️
-
-## Skill 181: honcho
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/honcho/SKILL.md`
-- **Lines**: 431
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **58/100** 🔴
-
-## Skill 182: huggingface-accelerate
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/huggingface-accelerate/SKILL.md`
-- **Lines**: 232
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **85/100** ✅
-
-### Batch 0026 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| hermes-breakdown |  |  |
-| hermes-hooks |  |  |
-| hermes-mcp |  |  |
-| hermes-skills |  |  |
-| hermes-system-maintenance |  |  |
-| honcho |  |  |
-| huggingface-accelerate |  |  |
-
+**Batch summary: 10 skills judged**

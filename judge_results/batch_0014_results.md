@@ -1,83 +1,16 @@
 # Batch 0014 Results
 
-## Skill 92: prompt-builder
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/prompt-builder/SKILL.md`
-- **Lines**: 117
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **64/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| hermes-system-maintenance | devops\hermes-system-maintenance\SKILL.md | 274 | 18 | 16 | 12 | 12 | 18 | 76 | WARN |
+| inference-sh-cli | devops\inference-sh-cli\SKILL.md | 168 | 20 | 16 | 8 | 20 | 18 | 82 | PASS |
+| jira | devops\jira\SKILL.md | 87 | 18 | 20 | 4 | 20 | 13 | 75 | WARN |
+| kanban-orchestrator | devops\kanban-orchestrator\SKILL.md | 229 | 20 | 12 | 8 | 15 | 5 | 60 | WARN |
+| kanban-worker | devops\kanban-worker\SKILL.md | 237 | 20 | 12 | 16 | 15 | 5 | 68 | WARN |
+| lambda-labs-gpu-cloud | devops\lambda-labs-gpu-cloud\SKILL.md | 251 | 18 | 16 | 12 | 17 | 18 | 81 | PASS |
+| log-analysis-and-triage | devops\log-analysis-and-triage\SKILL.md | 256 | 15 | 16 | 16 | 12 | 18 | 77 | WARN |
+| modal-serverless-gpu | devops\modal-serverless-gpu\SKILL.md | 223 | 20 | 16 | 16 | 20 | 18 | 90 | PASS |
+| multi-stage-dockerfile | devops\multi-stage-dockerfile\SKILL.md | 157 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| parallel-cli | devops\parallel-cli\SKILL.md | 407 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
 
-## Skill 93: prompt-engineering
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/prompt-engineering/SKILL.md`
-- **Lines**: 98
-- **D1 (Frontmatter)**: 9/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **41/100** 🔴
-
-## Skill 94: rest-graphql-debug
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/rest-graphql-debug/SKILL.md`
-- **Lines**: 514
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 0/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **42/100** 🔴
-
-## Skill 95: skills
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/skills/SKILL.md`
-- **Lines**: 128
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **88/100** ✅
-
-## Skill 96: suggest-awesome-github-copilot-agents
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/suggest-awesome-github-copilot-agents/SKILL.md`
-- **Lines**: 112
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 0/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **50/100** 🔴
-
-## Skill 97: suggest-awesome-github-copilot-instructions
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/suggest-awesome-github-copilot-instructions/SKILL.md`
-- **Lines**: 128
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 0/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **50/100** 🔴
-
-## Skill 98: update-implementation-plan
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/update-implementation-plan/SKILL.md`
-- **Lines**: 129
-- **D1 (Frontmatter)**: 9/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 0/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **45/100** 🔴
-
-### Batch 0014 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| prompt-builder |  |  |
-| prompt-engineering |  |  |
-| rest-graphql-debug |  |  |
-| skills |  |  |
-| suggest-awesome-github-copilot-agents |  |  |
-| suggest-awesome-github-copilot-instructions |  |  |
-| update-implementation-plan |  |  |
-
+**Batch summary: 10 skills judged**

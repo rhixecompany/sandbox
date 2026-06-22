@@ -1,83 +1,16 @@
 # Batch 0015 Results
 
-## Skill 99: vscode-cli
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/vscode-cli/SKILL.md`
-- **Lines**: 218
-- **D1 (Frontmatter)**: 18/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **58/100** 🔴
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| powerbi-modeling | devops\powerbi-modeling\SKILL.md | 191 | 20 | 16 | 8 | 18 | 18 | 80 | PASS |
+| profile-maintenance | devops\profile-maintenance\SKILL.md | 220 | 20 | 20 | 12 | 18 | 18 | 88 | PASS |
+| projects-multi-repo-init-normalize | devops\projects-multi-repo-init-normalize\SKILL.md | 102 | 20 | 20 | 8 | 20 | 13 | 81 | PASS |
+| provider-model-audit | devops\provider-model-audit\SKILL.md | 155 | 20 | 12 | 8 | 15 | 5 | 60 | WARN |
+| provider-reliability-diagnostics | devops\provider-reliability-diagnostics\SKILL.md | 210 | 17 | 16 | 16 | 15 | 18 | 82 | PASS |
+| rbac-audit-logging | devops\rbac-audit-logging\SKILL.md | 160 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| secret-scanning | devops\secret-scanning\SKILL.md | 271 | 20 | 16 | 8 | 17 | 18 | 79 | WARN |
+| service-integrations | devops\service-integrations\SKILL.md | 249 | 20 | 16 | 12 | 15 | 13 | 76 | WARN |
+| session-audit-report | devops\session-audit-report\SKILL.md | 151 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| snowflake-semanticview | devops\snowflake-semanticview\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
 
-## Skill 100: vscode-ext-commands
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/vscode-ext-commands/SKILL.md`
-- **Lines**: 167
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **64/100** ⚠️
-
-## Skill 101: vscode-extension-playbook
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/vscode-extension-playbook/SKILL.md`
-- **Lines**: 142
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 4/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 102: vscode-ext-localization
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/vscode-ext-localization/SKILL.md`
-- **Lines**: 169
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **72/100** ⚠️
-
-## Skill 103: vscode-workspace-configurator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/vscode-workspace-configurator/SKILL.md`
-- **Lines**: 469
-- **D1 (Frontmatter)**: 18/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 18/20
-- **Total**: **85/100** ✅
-
-## Skill 104: workiq-copilot
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/development/workiq-copilot/SKILL.md`
-- **Lines**: 104
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **42/100** 🔴
-
-## Skill 105: appinsights-instrumentation
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/appinsights-instrumentation/SKILL.md`
-- **Lines**: 91
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 8/20
-- **Total**: **72/100** ⚠️
-
-### Batch 0015 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| vscode-cli |  |  |
-| vscode-ext-commands |  |  |
-| vscode-extension-playbook |  |  |
-| vscode-ext-localization |  |  |
-| vscode-workspace-configurator |  |  |
-| workiq-copilot |  |  |
-| appinsights-instrumentation |  |  |
-
+**Batch summary: 10 skills judged**

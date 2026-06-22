@@ -1,83 +1,16 @@
 # Batch 0025 Results
 
-## Skill 169: sponsor-finder
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/github/sponsor-finder/SKILL.md`
-- **Lines**: 262
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **43/100** 🔴
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| file-organizer | productivity\file-organizer\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| finnish-humanizer | productivity\finnish-humanizer\SKILL.md | 150 | 20 | 12 | 8 | 18 | 18 | 76 | WARN |
+| google-workspace | productivity\google-workspace\SKILL.md | 358 | 20 | 16 | 12 | 17 | 18 | 83 | PASS |
+| here.now | productivity\here.now\SKILL.md | 243 | 20 | 16 | 12 | 20 | 18 | 86 | PASS |
+| internal-comms | productivity\internal-comms\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| linear | productivity\linear\SKILL.md | 406 | 20 | 16 | 8 | 17 | 18 | 79 | WARN |
+| maps | productivity\maps\SKILL.md | 206 | 20 | 16 | 8 | 20 | 18 | 82 | PASS |
+| markdown-to-html | productivity\markdown-to-html\SKILL.md | 467 | 20 | 12 | 8 | 15 | 18 | 73 | WARN |
+| meeting-insights-analyzer | productivity\meeting-insights-analyzer\SKILL.md | 102 | 20 | 20 | 8 | 18 | 13 | 79 | WARN |
+| meeting-minutes | productivity\meeting-minutes\SKILL.md | 264 | 20 | 16 | 12 | 17 | 5 | 70 | WARN |
 
-## Skill 170: github-repo-management
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/github-repo-management/SKILL.md`
-- **Lines**: 543
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 6/20
-- **Total**: **70/100** ⚠️
-
-## Skill 171: gitnexus-explorer
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/gitnexus-explorer/SKILL.md`
-- **Lines**: 214
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **62/100** ⚠️
-
-## Skill 172: guidance
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/guidance/SKILL.md`
-- **Lines**: 576
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 173: here.now
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/here.now/SKILL.md`
-- **Lines**: 246
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 8/20
-- **Total**: **60/100** ⚠️
-
-## Skill 174: here-now
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/here-now/SKILL.md`
-- **Lines**: 217
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **54/100** 🔴
-
-## Skill 175: hermes-agent
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/hermes-agent/SKILL.md`
-- **Lines**: 131
-- **D1 (Frontmatter)**: 18/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **59/100** 🔴
-
-### Batch 0025 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| sponsor-finder |  |  |
-| github-repo-management |  |  |
-| gitnexus-explorer |  |  |
-| guidance |  |  |
-| here.now |  |  |
-| here-now |  |  |
-| hermes-agent |  |  |
-
+**Batch summary: 10 skills judged**

@@ -1,83 +1,16 @@
 # Batch 0023 Results
 
-## Skill 155: faiss
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/faiss/SKILL.md`
-- **Lines**: 225
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **63/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| obsidian | note-taking\obsidian\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| one-three-one-rule | one-three-one-rule\SKILL.md | 117 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| openclaw-migration | openclaw-migration\SKILL.md | 327 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| openhands | openhands\SKILL.md | 164 | 20 | 12 | 16 | 20 | 5 | 73 | WARN |
+| osint-investigation | osint-investigation\SKILL.md | 313 | 18 | 12 | 12 | 12 | 20 | 74 | WARN |
+| oss-forensics | oss-forensics\SKILL.md | 450 | 18 | 16 | 12 | 12 | 20 | 78 | WARN |
+| outlines | outlines\SKILL.md | 675 | 20 | 16 | 8 | 17 | 18 | 79 | WARN |
+| page-agent | page-agent\SKILL.md | 210 | 20 | 12 | 8 | 20 | 5 | 65 | WARN |
+| pinecone | pinecone\SKILL.md | 394 | 18 | 12 | 12 | 12 | 13 | 67 | WARN |
+| pinggy-tunnel | pinggy-tunnel\SKILL.md | 324 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
 
-## Skill 156: fastmcp
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/fastmcp/SKILL.md`
-- **Lines**: 300
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 20/20
-- **Total**: **60/100** ⚠️
-
-## Skill 157: fitness-nutrition
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/fitness-nutrition/SKILL.md`
-- **Lines**: 255
-- **D1 (Frontmatter)**: 14/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 18/20
-- **Total**: **81/100** ✅
-
-## Skill 158: flash-attention
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/flash-attention/SKILL.md`
-- **Lines**: 367
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **70/100** ⚠️
-
-## Skill 159: minecraft-modpack-server
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/gaming/minecraft-modpack-server/SKILL.md`
-- **Lines**: 191
-- **D1 (Frontmatter)**: 11/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **59/100** 🔴
-
-## Skill 160: pokemon-player
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/gaming/pokemon-player/SKILL.md`
-- **Lines**: 220
-- **D1 (Frontmatter)**: 11/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **59/100** 🔴
-
-## Skill 161: codebase-inspection
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/github/codebase-inspection/SKILL.md`
-- **Lines**: 137
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **64/100** ⚠️
-
-### Batch 0023 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| faiss |  |  |
-| fastmcp |  |  |
-| fitness-nutrition |  |  |
-| flash-attention |  |  |
-| minecraft-modpack-server |  |  |
-| pokemon-player |  |  |
-| codebase-inspection |  |  |
-
+**Batch summary: 10 skills judged**

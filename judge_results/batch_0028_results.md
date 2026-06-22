@@ -1,83 +1,16 @@
 # Batch 0028 Results
 
-## Skill 190: lambda-labs-gpu-cloud
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/lambda-labs-gpu-cloud/SKILL.md`
-- **Lines**: 249
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **85/100** ✅
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| polyglot-test-agent | qa\polyglot-test-agent\SKILL.md | 198 | 20 | 12 | 12 | 18 | 5 | 67 | WARN |
+| postgresql-code-review | qa\postgresql-code-review\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| scoutqa-test | qa\scoutqa-test\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| skill-judge | qa\skill-judge\SKILL.md | 242 | 20 | 20 | 16 | 15 | 18 | 89 | PASS |
+| test-skill | qa\test-skill\SKILL.md | 172 | 20 | 20 | 8 | 20 | 13 | 81 | PASS |
+| verification-before-completion | qa\verification-before-completion\SKILL.md | 151 | 20 | 20 | 4 | 18 | 18 | 80 | PASS |
+| web-design-reviewer | qa\web-design-reviewer\SKILL.md | 390 | 20 | 12 | 12 | 17 | 18 | 79 | WARN |
+| webapp-testing | qa\webapp-testing\SKILL.md | 138 | 20 | 20 | 12 | 20 | 13 | 85 | PASS |
+| qdrant-vector-search | qdrant\SKILL.md | 527 | 18 | 12 | 12 | 12 | 18 | 72 | WARN |
+| qmd | qmd\SKILL.md | 463 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
 
-## Skill 191: llava
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/llava/SKILL.md`
-- **Lines**: 308
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 8/20
-- **Total**: **58/100** 🔴
-
-## Skill 192: mcp-builder
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mcp/mcp-builder/SKILL.md`
-- **Lines**: 75
-- **D1 (Frontmatter)**: 9/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **46/100** 🔴
-
-## Skill 193: mcp-cli
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mcp/mcp-cli/SKILL.md`
-- **Lines**: 78
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 4/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **38/100** 🔴
-
-## Skill 194: mcp-security-audit
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mcp/mcp-security-audit/SKILL.md`
-- **Lines**: 278
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 0/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **35/100** 🔴
-
-## Skill 195: native-mcp
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mcp/native-mcp/SKILL.md`
-- **Lines**: 534
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 196: mcporter
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/mcporter/SKILL.md`
-- **Lines**: 123
-- **D1 (Frontmatter)**: 17/20
-- **D2 (Structure)**: 0/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **49/100** 🔴
-
-### Batch 0028 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| lambda-labs-gpu-cloud |  |  |
-| llava |  |  |
-| mcp-builder |  |  |
-| mcp-cli |  |  |
-| mcp-security-audit |  |  |
-| native-mcp |  |  |
-| mcporter |  |  |
-
+**Batch summary: 10 skills judged**

@@ -1,83 +1,16 @@
 # Batch 0018 Results
 
-## Skill 120: github-actions-efficiency
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/github-actions-efficiency/SKILL.md`
-- **Lines**: 85
-- **D1 (Frontmatter)**: 6/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **62/100** ⚠️
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| minecraft-modpack-server | gaming\minecraft-modpack-server\SKILL.md | 211 | 20 | 12 | 8 | 18 | 5 | 63 | WARN |
+| pokemon-player | gaming\pokemon-player\SKILL.md | 241 | 20 | 12 | 8 | 18 | 5 | 63 | WARN |
+| codebase-inspection | github\codebase-inspection\SKILL.md | 148 | 20 | 16 | 8 | 20 | 5 | 69 | WARN |
+| finishing-a-development-branch | github\finishing-a-development-branch\SKILL.md | 102 | 20 | 16 | 4 | 18 | 5 | 63 | WARN |
+| gh-cli | github\gh-cli\SKILL.md | 87 | 20 | 16 | 12 | 20 | 5 | 73 | WARN |
+| git-commit | github\git-commit\SKILL.md | 150 | 20 | 16 | 8 | 18 | 13 | 75 | WARN |
+| git-helper | github\git-helper\SKILL.md | 181 | 20 | 20 | 8 | 18 | 18 | 84 | PASS |
+| git-submodule-workflow | github\git-submodule-workflow\SKILL.md | 293 | 20 | 20 | 8 | 17 | 18 | 83 | PASS |
+| github | github\github\SKILL.md | 441 | 20 | 16 | 12 | 17 | 15 | 80 | PASS |
+| github-workflow | github\github-workflow\SKILL.md | 413 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
 
-## Skill 121: glab
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/glab/SKILL.md`
-- **Lines**: 118
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **74/100** ⚠️
-
-## Skill 122: hermes-config-troubleshooting
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/hermes-config-troubleshooting/SKILL.md`
-- **Lines**: 83
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **60/100** ⚠️
-
-## Skill 123: hermes-profiles
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/hermes-profiles/SKILL.md`
-- **Lines**: 471
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 20/20
-- **Total**: **60/100** ⚠️
-
-## Skill 124: hermes-setup
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/hermes-setup/SKILL.md`
-- **Lines**: 382
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 1/20
-- **Total**: **60/100** ⚠️
-
-## Skill 125: jira
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/jira/SKILL.md`
-- **Lines**: 94
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 8/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 6/20
-- **Total**: **70/100** ⚠️
-
-## Skill 126: kanban-orchestrator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/devops/kanban-orchestrator/SKILL.md`
-- **Lines**: 228
-- **D1 (Frontmatter)**: 14/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 0/20
-- **Total**: **58/100** 🔴
-
-### Batch 0018 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| github-actions-efficiency |  |  |
-| glab |  |  |
-| hermes-config-troubleshooting |  |  |
-| hermes-profiles |  |  |
-| hermes-setup |  |  |
-| jira |  |  |
-| kanban-orchestrator |  |  |
-
+**Batch summary: 10 skills judged**

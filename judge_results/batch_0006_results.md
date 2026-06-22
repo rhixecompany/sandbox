@@ -1,83 +1,16 @@
 # Batch 0006 Results
 
-## Skill 36: algorithmic-art
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/algorithmic-art/SKILL.md`
-- **Lines**: 105
-- **D1 (Frontmatter)**: 9/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 4/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **54/100** 🔴
+| Name | Path | Lines | D1 | D2 | D3 | D4 | D5 | Total | Rating |
+|------|------|-------|----|----|----|----|----|-------|--------|
+| excalidraw | creative\excalidraw\SKILL.md | 235 | 18 | 12 | 12 | 15 | 18 | 75 | WARN |
+| excalidraw-diagram-generator | creative\excalidraw-diagram-generator\SKILL.md | 676 | 20 | 12 | 12 | 15 | 20 | 79 | WARN |
+| frontend-design | creative\frontend-design\SKILL.md | 113 | 20 | 16 | 4 | 18 | 5 | 63 | WARN |
+| html-artifact | creative\html-artifact\SKILL.md | 213 | 18 | 12 | 12 | 15 | 20 | 77 | WARN |
+| humanizer | creative\humanizer\SKILL.md | 628 | 20 | 16 | 8 | 12 | 18 | 74 | WARN |
+| image-manipulation-image-magick | creative\image-manipulation-image-magick\SKILL.md | 262 | 20 | 12 | 12 | 17 | 5 | 66 | WARN |
+| legacy-circuit-mockups | creative\legacy-circuit-mockups\SKILL.md | 313 | 20 | 16 | 8 | 17 | 18 | 79 | WARN |
+| manim-video | creative\manim-video\SKILL.md | 303 | 20 | 12 | 12 | 12 | 18 | 74 | WARN |
+| marp-slide | creative\marp-slide\SKILL.md | 88 | 20 | 20 | 4 | 20 | 13 | 77 | WARN |
+| mermaid-diagrams | creative\mermaid-diagrams\SKILL.md | 108 | 20 | 20 | 4 | 20 | 13 | 77 | WARN |
 
-## Skill 37: architecture-diagram
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/architecture-diagram/SKILL.md`
-- **Lines**: 169
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 8/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 1/20
-- **Total**: **65/100** ⚠️
-
-## Skill 38: ascii-art
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/ascii-art/SKILL.md`
-- **Lines**: 312
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 12/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 0/20
-- **Total**: **60/100** ⚠️
-
-## Skill 39: ascii-video
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/ascii-video/SKILL.md`
-- **Lines**: 262
-- **D1 (Frontmatter)**: 9/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **74/100** ⚠️
-
-## Skill 40: baoyu-article-illustrator
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/baoyu-article-illustrator/SKILL.md`
-- **Lines**: 232
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **60/100** ⚠️
-
-## Skill 41: baoyu-comic
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/baoyu-comic/SKILL.md`
-- **Lines**: 185
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 16/20
-- **D3 (Content)**: 16/20
-- **D4 (DRY)**: 20/20
-- **D5 (References)**: 16/20
-- **Total**: **88/100** ✅
-
-## Skill 42: baoyu-infographic
-- **Path**: `/c/Users/Alexa/AppData/Local/hermes/skills/creative/baoyu-infographic/SKILL.md`
-- **Lines**: 251
-- **D1 (Frontmatter)**: 20/20
-- **D2 (Structure)**: 20/20
-- **D3 (Content)**: 12/20
-- **D4 (DRY)**: 17/20
-- **D5 (References)**: 16/20
-- **Total**: **85/100** ✅
-
-### Batch 0006 Summary
-| Skill | Score | Grade |
-|-------|-------|-------|
-| algorithmic-art |  |  |
-| architecture-diagram |  |  |
-| ascii-art |  |  |
-| ascii-video |  |  |
-| baoyu-article-illustrator |  |  |
-| baoyu-comic |  |  |
-| baoyu-infographic |  |  |
-
+**Batch summary: 10 skills judged**

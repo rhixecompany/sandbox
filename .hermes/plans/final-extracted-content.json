@@ -1,0 +1,69 @@
+{
+  "consolidation_timestamp": "2026-06-22",
+  "total_files_before": 616,
+  "total_files_after": 158,
+  "files_deleted": 459,
+  "space_saved_mb": 1.1,
+  "extracted_content_files": {
+    "project_architecture": {
+      "path": ".hermes/plans/extracted-content/project-architecture-extracted.md",
+      "size_bytes": 20533,
+      "projects_count": 17,
+      "triples_per_project": 3,
+      "projects": [
+        "Banking", "Bash", "comicwise", "cookiecutter_django_tailwind",
+        "Django_Scrapy_Selenium", "docs", "ecom", "Python_projects",
+        "profile", "Resume_maker", "rhixe_scans", "rhixecompany_comics",
+        "selenium_webdriver", "university_libary_jsm", "xamehi",
+        "xamehi.tv", "youtube_downloader"
+      ]
+    },
+    "mcp_research": {
+      "path": ".hermes/plans/extracted-content/mcp-research-extracted.md",
+      "size_bytes": 42555,
+      "servers_count": 34,
+      "categories": ["AWS/GCP", "code analysis", "databases", "dev tools",
+        "file system", "maps/geo", "media", "memory", "monitoring",
+        "networking", "payment", "search/scrape", "security", "testing", "time"]
+    },
+    "research_tutorials": {
+      "path": ".hermes/plans/extracted-content/research-extracted.md",
+      "size_bytes": 28513,
+      "tutorials_count": 9,
+      "categories": ["binance", "busha", "crypto-wallets", "face-mask",
+        "flutterwave", "hermes-agents", "paypal", "paystack", "python-asyncio"]
+    },
+    "hermes_docs": {
+      "subdir": "hermes/",
+      "files_count": 13,
+      "size_kb": 101
+    },
+    "multi_agent_research": {
+      "subdir": "multi-agent-research/",
+      "files_count": 12,
+      "size_kb": 35,
+      "key_content": "Phase 1 only (phases 2-6 are placeholders)"
+    },
+    "user_guides": {
+      "subdirs": ["user-guide/", "guides/", "getting-started/"],
+      "files_count": 11,
+      "size_kb": 96
+    },
+    "plans_and_specs": {
+      "subdirs": ["plans/", "plan/", "specs/", "phases/"],
+      "files_count": 7,
+      "size_kb": 44
+    },
+    "misc": {
+      "subdirs": ["mcp-servers/", "awesome-hermes-agent/", "superpowers/", "ways-of-work/"],
+      "files_count": 4,
+      "size_kb": 36
+    }
+  },
+  "surviving_auto_generated": {
+    "skills-audit/index.md": {
+      "size_bytes": 18526,
+      "purpose": "Aggregate audit summary — kept as single reference"
+    }
+  }
+}
