@@ -74,3 +74,15 @@ Your goal is to help me write effective unit tests with XUnit, covering both sta
 - Use collection fixtures to group tests with shared dependencies
 - Consider output helpers (`ITestOutputHelper`) for test diagnostics
 - Skip tests conditionally with `Skip = "reason"` in fact/theory attributes
+
+
+## Template References
+
+Templates in `templates/csharp-xunit/`:
+- `assertions.md`
+- `data-driven_tests.md`
+- `mocking_and_isolation.md`
+- `project_setup.md`
+- `standard_tests.md`
+- `test_organization.md`
+- `test_structure.md`

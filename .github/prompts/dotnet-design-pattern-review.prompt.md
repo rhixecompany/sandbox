@@ -40,3 +40,11 @@ Review the C#/.NET code in ${selection} for design pattern implementation and su
 - **AI/ML Integration**: Semantic Kernel patterns, structured output handling, model configuration
 
 Provide specific, actionable recommendations for improvements aligned with the project's architecture and .NET best practices.
+
+
+## Template References
+
+Templates in `templates/dotnet-design-pattern-review/`:
+- `improvement_focus_areas.md`
+- `required_design_patterns.md`
+- `review_checklist.md`

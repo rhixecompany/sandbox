@@ -144,26 +144,10 @@ Before starting to create **any** new files, create a new git branch using the t
 
 ## Translation Rules
 
-- Use accurate, clear, and technically appropriate translations.
-- Always use computer industry-standard terminology.  
-  Example: prefer "Stack Tecnológica" over "Pila Tecnológica".
+> - Use accurate, clear, and technically appropriate translations.
+> - Always use computer industry-standard terminology.
 
-**Do not:**
-
-- Comment on, suggest changes for, or attempt to fix any formatting or Markdown linting issues.  
-  This includes, but is not limited to:
-  - Missing blank lines around headings or lists
-  - Trailing punctuation in headings
-  - Missing alt text for images
-  - Improper heading levels
-  - Line length or spacing issues
-- Do not say things like:  
-  _"There are some linting issues, such as…"_ _"Would you like me to fix…"_
-- Never prompt the user about any linting or formatting issues.
-- Do not wait for confirmation before continuing.
-- Do not wrap the translated content or file in Markdown code blocks.
-
----
+> **Full content:** `templates/mkdocs-translations/translation_rules.md`
 
 ## Translating Includes (`docs/docs/includes/en`)
 
@@ -171,3 +155,11 @@ Before starting to create **any** new files, create a new git branch using the t
 - Translate each file using the same rules as above.
 - Maintain the same file and folder structure in the translated output.
 - Save each translated file in the appropriate target language folder.
+
+
+## Template References
+
+Templates in `templates/mkdocs-translations/`:
+- `folder_structure_and_outp.md`
+- `phases.md`
+- `translation_rules.md`

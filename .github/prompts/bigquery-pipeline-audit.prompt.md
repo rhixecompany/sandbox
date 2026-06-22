@@ -112,3 +112,11 @@ If `run_id` is missing, propose a one-line fix: `run_id = run_id or datetime.utc
 ## Final
 
 **1. PASS / FAIL** with specific reasons per section (A to F). **2. Patch list** ordered by risk, referencing exact functions to change. **3. If FAIL: Top 3 cost risks** with a rough worst-case estimate (e.g., "loop over 90 dates x 3 retries = 270 BQ jobs").
+
+
+## Template References
+
+Templates in `templates/bigquery-pipeline-audit/`:
+- `a_cost_exposure_what_will.md`
+- `c_backfill_and_loop_desig.md`
+- `e_safe_writes_and_idempot.md`

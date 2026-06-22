@@ -1,7 +1,9 @@
 ---
 name: "tasksync"
 description: "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 
 ## Phases
 
-### Phase 1: Initialization and Intake
+> ### Phase 1: Initialization and Intake
+> ### Phase 2: Focused Task Execution
 
-| Field | Details |
-| --- | --- |
-| Goal | Start TaskSync state machine and obtain first actionable task. |
-| Inputs | Session start state and terminal task intake command. |
-| Outputs | Active task assignment or waiting-input state. |
-| Validation | Initialization phrase and intake command flow are executed correctly. |
-
-### Phase 2: Focused Task Execution
-
-| Field | Details |
-| --- | --- |
-| Goal | Complete current task fully without non-urgent context switching. |
-| Inputs | Current active task, task-specific context, override signals. |
-| Outputs | Completed task artifacts and concise progress updates. |
-| Validation | Task is completed or explicitly switched only via urgent override. |
-
-### Phase 3: Completion and Continuation Loop
-
-| Field | Details |
-| --- | --- |
-| Goal | Request and process next task until explicit termination command. |
-| Inputs | Completion state, terminal intake responses, failure conditions. |
-| Outputs | Next task activation or waiting-input fallback state. |
-| Validation | Approved completion phrase used and intake protocol followed exactly. |
+> **Full content:** `templates/tasksync/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 2. Execute current task fully.
 3. Request next task on completion.
 4. Continue until explicit user termination.
+
+
+## Template References
+
+Templates in `templates/tasksync/`:
+- `phases.md`

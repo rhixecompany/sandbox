@@ -46,54 +46,10 @@ myserver/
 
 ## build.gradle.kts Template
 
-```kotlin
-plugins {
-    kotlin("jvm") version "2.1.0"
-    kotlin("plugin.serialization") version "2.1.0"
-    application
-}
+> kotlin("jvm") version "2.1.0"
+> kotlin("plugin.serialization") version "2.1.0"
 
-group = "com.example"
-version = "1.0.0"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation("io.modelcontextprotocol:kotlin-sdk:0.7.2")
-
-    // Ktor for transports
-    implementation("io.ktor:ktor-server-netty:3.0.0")
-    implementation("io.ktor:ktor-client-cio:3.0.0")
-
-    // Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
-
-    // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
-
-    // Logging
-    implementation("io.github.oshai:kotlin-logging-jvm:7.0.0")
-    implementation("ch.qos.logback:logback-classic:1.5.12")
-
-    // Testing
-    testImplementation(kotlin("test"))
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
-}
-
-application {
-    mainClass.set("com.example.myserver.MainKt")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(17)
-}
-```
+> **Full content:** `templates/kotlin-mcp-server-generator/buildgradlekts_template.md`
 
 ## settings.gradle.kts Template
 
@@ -128,41 +84,10 @@ fun main() = runBlocking {
 
 ## Server.kt Template
 
-```kotlin
-package com.example.myserver
+> package com.example.myserver
+> import io.modelcontextprotocol.kotlin.sdk.server.Server
 
-import io.modelcontextprotocol.kotlin.sdk.server.Server
-import io.modelcontextprotocol.kotlin.sdk.server.ServerOptions
-import io.modelcontextprotocol.kotlin.sdk.Implementation
-import io.modelcontextprotocol.kotlin.sdk.ServerCapabilities
-import com.example.myserver.tools.registerTools
-
-fun createServer(config: Config): Server {
-    val server = Server(
-        serverInfo = Implementation(
-            name = config.name,
-            version = config.version
-        ),
-        options = ServerOptions(
-            capabilities = ServerCapabilities(
-                tools = ServerCapabilities.Tools(),
-                resources = ServerCapabilities.Resources(
-                    subscribe = true,
-                    listChanged = true
-                ),
-                prompts = ServerCapabilities.Prompts(listChanged = true)
-            )
-        )
-    ) {
-        config.description
-    }
-
-    // Register all tools
-    server.registerTools()
-
-    return server
-}
-```
+> **Full content:** `templates/kotlin-mcp-server-generator/serverkt_template.md`
 
 ## Config.kt Template
 
@@ -189,60 +114,10 @@ fun loadConfig(): Config {
 
 ## Tool1.kt Template
 
-```kotlin
-package com.example.myserver.tools
+> package com.example.myserver.tools
+> import io.modelcontextprotocol.kotlin.sdk.server.Server
 
-import io.modelcontextprotocol.kotlin.sdk.server.Server
-import io.modelcontextprotocol.kotlin.sdk.CallToolRequest
-import io.modelcontextprotocol.kotlin.sdk.CallToolResult
-import io.modelcontextprotocol.kotlin.sdk.TextContent
-import kotlinx.serialization.json.buildJsonObject
-import kotlinx.serialization.json.put
-import kotlinx.serialization.json.putJsonObject
-import kotlinx.serialization.json.putJsonArray
-
-fun Server.registerTool1() {
-    addTool(
-        name = "tool1",
-        description = "Description of what tool1 does",
-        inputSchema = buildJsonObject {
-            put("type", "object")
-            putJsonObject("properties") {
-                putJsonObject("param1") {
-                    put("type", "string")
-                    put("description", "First parameter")
-                }
-                putJsonObject("param2") {
-                    put("type", "integer")
-                    put("description", "Optional second parameter")
-                }
-            }
-            putJsonArray("required") {
-                add("param1")
-            }
-        }
-    ) { request: CallToolRequest ->
-        // Extract and validate parameters
-        val param1 = request.params.arguments["param1"] as? String
-            ?: throw IllegalArgumentException("param1 is required")
-        val param2 = (request.params.arguments["param2"] as? Number)?.toInt() ?: 0
-
-        // Perform tool logic
-        val result = performTool1Logic(param1, param2)
-
-        CallToolResult(
-            content = listOf(
-                TextContent(text = result)
-            )
-        )
-    }
-}
-
-private fun performTool1Logic(param1: String, param2: Int): String {
-    // Implement tool logic here
-    return "Processed: $param1 with value $param2"
-}
-```
+> **Full content:** `templates/kotlin-mcp-server-generator/tool1kt_template.md`
 
 ## tools/ToolRegistry.kt Template
 
@@ -260,41 +135,10 @@ fun Server.registerTools() {
 
 ## ServerTest.kt Template
 
-```kotlin
-package com.example.myserver
+> package com.example.myserver
+> import kotlinx.coroutines.test.runTest
 
-import kotlinx.coroutines.test.runTest
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertFalse
-
-class ServerTest {
-
-    @Test
-    fun `test server creation`() = runTest {
-        val config = Config(
-            name = "test-server",
-            version = "1.0.0",
-            description = "Test server"
-        )
-
-        val server = createServer(config)
-
-        assertEquals("test-server", server.serverInfo.name)
-        assertEquals("1.0.0", server.serverInfo.version)
-    }
-
-    @Test
-    fun `test tool1 execution`() = runTest {
-        val config = Config()
-        val server = createServer(config)
-
-        // Test tool execution
-        // Note: You'll need to implement proper testing utilities
-        // for calling tools in the server
-    }
-}
-```
+> **Full content:** `templates/kotlin-mcp-server-generator/servertestkt_template.md`
 
 ## README.md Template
 
@@ -438,3 +282,12 @@ kotlin {
     }
 }
 ```
+
+
+## Template References
+
+Detailed templates in `templates/kotlin-mcp-server-generator/`:
+- `buildgradlekts_template.md`
+- `serverkt_template.md`
+- `servertestkt_template.md`
+- `tool1kt_template.md`

@@ -79,42 +79,10 @@ This prompt provides comprehensive database knowledge for implementing features,
 
 ## Common Patterns
 
-### Get Comic with All Details
+> ### Get Comic with All Details
+> const comic = await db.query.comic.findFirst({
 
-```typescript
-const comic = await db.query.comic.findFirst({
-  where: eq(comic.slug, "comic-title"),
-  with: {
-    author: true,
-    artist: true,
-    type: true,
-    genres: { with: { genre: true } },
-    chapters: { orderBy: [c => desc(c.chapterNumber)] }
-  }
-});
-```
-
-### Get User's Bookmarks
-
-```typescript
-const bookmarks = await db.query.bookmark.findMany({
-  where: eq(bookmark.userId, userId),
-  with: { comic: true, lastReadChapter: true },
-  orderBy: b => desc(b.updatedAt)
-});
-```
-
-### Get Reading Progress
-
-```typescript
-const progress = await db.query.readingProgress.findFirst({
-  where: and(
-    eq(readingProgress.userId, userId),
-    eq(readingProgress.comicId, comicId)
-  ),
-  with: { chapter: true }
-});
-```
+> **Full content:** `templates/database/common_patterns.md`
 
 ## Critical Rules
 
@@ -138,3 +106,9 @@ For deep dives into specific topics, reference the context map:
 ---
 
 **Last Updated:** March 1, 2026 | **Database:** PostgreSQL | **ORM:** Drizzle
+
+
+## Template References
+
+Templates in `templates/database/`:
+- `common_patterns.md`

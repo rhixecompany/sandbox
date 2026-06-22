@@ -191,41 +191,10 @@ _Last updated: [Date] by [Name]_
 
 ## Categories for Technical Spikes
 
-### API Integration
+> - Third-party API capabilities and limitations
+> - Integration patterns and authentication
 
-- Third-party API capabilities and limitations
-- Integration patterns and authentication
-- Rate limits and performance characteristics
-
-### Architecture & Design
-
-- System architecture decisions
-- Design pattern applicability
-- Component interaction models
-
-### Performance & Scalability
-
-- Performance requirements and constraints
-- Scalability bottlenecks and solutions
-- Resource utilization patterns
-
-### Platform & Infrastructure
-
-- Platform capabilities and limitations
-- Infrastructure requirements
-- Deployment and hosting considerations
-
-### Security & Compliance
-
-- Security requirements and implementations
-- Compliance constraints
-- Authentication and authorization approaches
-
-### User Experience
-
-- User interaction patterns
-- Accessibility requirements
-- Interface design decisions
+> **Full content:** `templates/create-technical-spike/categories_for_technical_spike.md`
 
 ## File Naming Conventions
 
@@ -293,3 +262,9 @@ Use descriptive, kebab-case names that indicate the category and specific unknow
 - **vscodeAPI:** Test VS Code extension capabilities and limitations
 
 Focus on time-boxed research that resolves critical technical decisions and unblocks development progress.
+
+
+## Template References
+
+Detailed templates in `templates/create-technical-spike/`:
+- `categories_for_technical_spike.md`

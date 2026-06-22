@@ -1,7 +1,9 @@
 ---
 name: "security"
 description: "Comprehensive security prompt aligned to repository secure development requirements."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for any change that handles external input, authentication, auth
 
 ## Phases
 
-### Phase 1: Threat Surface Identification
+> ### Phase 1: Threat Surface Identification
+> ### Phase 2: Security Control Implementation
 
-| Field | Details |
-| --- | --- |
-| Goal | Identify trust boundaries, sensitive assets, and attack surfaces. |
-| Inputs | Changed files, input paths, auth flows, config and dependency updates. |
-| Outputs | Risk map with prioritized security concerns. |
-| Validation | All external input and sensitive data flows are explicitly traced. |
-
-### Phase 2: Security Control Implementation
-
-| Field | Details |
-| --- | --- |
-| Goal | Implement or verify controls for validation, authorization, and secret safety. |
-| Inputs | Risk map, code paths, policy requirements. |
-| Outputs | Hardened implementation and explicit security notes. |
-| Validation | Controls are enforced at boundaries and failure handling is deterministic. |
-
-### Phase 3: Verification and Hardening Review
-
-| Field | Details |
-| --- | --- |
-| Goal | Confirm no obvious vulnerabilities remain in changed scope. |
-| Inputs | Updated code, tests, logs, and dependency metadata. |
-| Outputs | Security verification summary and residual-risk callouts. |
-| Validation | High-risk issues are fixed or explicitly flagged with mitigation path. |
+> **Full content:** `templates/security/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for any change that handles external input, authentication, auth
 2. Harden validation and authorization.
 3. Verify secrets and dependency safety.
 4. Deliver a risk-focused security outcome.
+
+
+## Template References
+
+Templates in `templates/security/`:
+- `phases.md`

@@ -64,3 +64,10 @@ Follow the workflow below to ensure accurate and focused implementation.
 - Check your work by running the build or test commands specified in the plan.
 - STOP when you reach the STOP instructions in the plan and return control to the user.
 </workflow>
+
+
+## Template References
+
+Templates in `templates/structured-autonomy-implement/`:
+- `legacy_prompt_details.md`
+- `phases.md`

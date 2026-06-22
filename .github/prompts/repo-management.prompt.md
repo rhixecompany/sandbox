@@ -18,19 +18,10 @@ dependencies:
   - skill:systematic-debugging
   - skill:git-helper
   - skill:github-repo-management
-  - skill:github-pr-workflow
   - skill:finishing-a-development-branch
   - skill:multi-stage-dockerfile
   - skill:workspace-audit
-  - tool:terminal
-  - tool:read_file
-  - tool:write_file
-  - tool:search_files
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
 ---
 
 ## CRITICAL RULES
@@ -381,6 +372,11 @@ jobs:
 
 | Prompt | Location | Purpose |
 |--------|----------|---------|
-| `/repo` | `Prompts/repo.prompts.md` | Research pipeline — run this first |
-| `/bash-scripts-fix` | `Prompts/bash-scripts-fix.prompts.md` | Bash script modernization |
-| `/workspace-consolidate` | `Prompts/workspace-consolidate.prompts.md` | Workspace-level consolidation |
+| `/repo` | `.github/prompts/repo.prompt.md` | Research pipeline — run this first |
+| `/bash-scripts-fix` | `.github/prompts/bash-scripts-fix.prompt.md` | Bash script modernization |
+| `/workspace-consolidate` | `.github/prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
+
+## Template References
+
+Templates in `templates/repo-management.prompts/`:
+- `README.md` — Section inventory

@@ -69,21 +69,13 @@ Before answering my question, tell me what files you need to see.
 ```markdown
 ## Files I Need
 
-### Must See (required for accurate answer)
+> ### Must See (required for accurate answer)
+> - `path/to/file.ts` — [why needed]
 
-- `path/to/file.ts` — [why needed]
+> **Full content:** `templates/what-context-needed/files_i_need.md`
 
-### Should See (helpful for complete answer)
+## Template References
 
-- `path/to/file.ts` — [why helpful]
-
-### Already Have
-
-- `path/to/file.ts` — [from earlier in conversation]
-
-### Uncertainties
-
-- [What I'm not sure about without seeing the code]
-```
-
-After I provide these files, I'll ask my question again.
+Templates in `templates/what-context-needed/`:
+- `files_i_need.md`
+- `phases.md`

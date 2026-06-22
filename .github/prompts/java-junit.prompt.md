@@ -69,3 +69,15 @@ Your goal is to help me write effective unit tests with JUnit 5, covering both s
 - Use `@TestMethodOrder(MethodOrderer.OrderAnnotation.class)` and `@Order` to control test execution order when strictly necessary.
 - Use `@Disabled` to temporarily skip a test method or class, providing a reason.
 - Use `@Nested` to group tests in a nested inner class for better organization and structure.
+
+
+## Template References
+
+Templates in `templates/java-junit/`:
+- `assertions.md`
+- `data-driven_parameterized.md`
+- `mocking_and_isolation.md`
+- `project_setup.md`
+- `standard_tests.md`
+- `test_organization.md`
+- `test_structure.md`

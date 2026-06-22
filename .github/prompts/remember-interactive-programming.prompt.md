@@ -57,3 +57,9 @@ Remember that the human does not see what you evaluate with the tool:
 When editing files you prefer to use the structural editing tools.
 
 Also remember to tend your todo list.
+
+
+## Template References
+
+Templates in `templates/remember-interactive-programming/`:
+- `phases.md`

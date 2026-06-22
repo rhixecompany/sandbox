@@ -1,7 +1,9 @@
 ---
 name: "nextjs-tailwind"
 description: "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 
 ## Phases
 
-### Phase 1: Architecture and Type Planning
+> ### Phase 1: Architecture and Type Planning
+> ### Phase 2: Implementation and Styling
 
-| Field | Details |
-| --- | --- |
-| Goal | Define route, component, and type architecture before coding. |
-| Inputs | Feature requirements, route map, data dependencies, existing components. |
-| Outputs | Component hierarchy, server/client split, and type contracts. |
-| Validation | Boundaries are explicit and avoid unnecessary client-side execution. |
-
-### Phase 2: Implementation and Styling
-
-| Field | Details |
-| --- | --- |
-| Goal | Build robust Next.js behavior and Tailwind UI with safe defaults. |
-| Inputs | Planned architecture, schemas, data handlers, design requirements. |
-| Outputs | Implemented pages/components with responsive styling and error handling. |
-| Validation | UI is responsive, semantics are preserved, and runtime paths are safe. |
-
-### Phase 3: Performance and Security Validation
-
-| Field | Details |
-| --- | --- |
-| Goal | Validate optimization, caching, and secure API/data flow behavior. |
-| Inputs | Bundle characteristics, image/font usage, API route logic, auth checks. |
-| Outputs | Verified implementation with performance and security notes. |
-| Validation | No obvious anti-patterns in bundle usage, caching, or input handling. |
+> **Full content:** `templates/nextjs-tailwind/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 2. Implement with strict typing and validation.
 3. Style with semantic Tailwind patterns.
 4. Validate performance and security before handoff.
+
+
+## Template References
+
+Templates in `templates/nextjs-tailwind/`:
+- `phases.md`

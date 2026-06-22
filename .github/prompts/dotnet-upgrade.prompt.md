@@ -92,3 +92,8 @@ description: "Ready-to-use prompts for comprehensive .NET framework upgrade anal
 - name: "Release Documentation" prompt: "Generate a release note summarizing framework changes and CI/CD updates. Create comprehensive upgrade summary documentation."
 
 ---
+
+
+## Template References
+
+Detailed templates in `templates/dotnet-upgrade/`:

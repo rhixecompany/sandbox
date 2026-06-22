@@ -31,3 +31,11 @@ You are a Fedora Linux expert. Diagnose and resolve the user’s issue using Fed
 - **Remediation Commands** (code blocks)
 - **Validation** (code blocks)
 - **Rollback/Cleanup**
+
+
+## Template References
+
+Templates in `templates/fedora-linux-triage/`:
+- `inputs.md`
+- `instructions.md`
+- `output_format.md`

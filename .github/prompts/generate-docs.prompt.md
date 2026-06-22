@@ -73,3 +73,9 @@ Use when you need to next.js expert for the current workspace or task.
 Your goal is to generate Markdown documentation for the specified code, component, or API. Ask for the file path and documentation scope if not provided.
 
 - Follow project documentation standards
+
+
+## Template References
+
+Templates in `templates/generate-docs/`:
+- `phases.md`

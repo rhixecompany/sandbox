@@ -57,143 +57,24 @@ Create a complete TypeSpec API plugin for Microsoft 365 Copilot that integrates 
 
 ## Requirements
 
-Generate TypeSpec files with:
+> Generate TypeSpec files with:
+> ### main.tsp - Agent Definition
 
-### main.tsp - Agent Definition
-
-```typescript
-import "@typespec/http";
-import "@typespec/openapi3";
-import "@microsoft/typespec-m365-copilot";
-import "./actions.tsp";
-
-using TypeSpec.Http;
-using TypeSpec.M365.Copilot.Agents;
-using TypeSpec.M365.Copilot.Actions;
-
-@agent({
-  name: "[Agent Name]",
-  description: "[Description]"
-})
-@instructions("""
-  [Instructions for using the API operations]
-""")
-namespace [AgentName] {
-  // Reference operations from actions.tsp
-  op operation1 is [APINamespace].operationName;
-}
-```
-
-### actions.tsp - API Operations
-
-```typescript
-import "@typespec/http";
-import "@microsoft/typespec-m365-copilot";
-
-using TypeSpec.Http;
-using TypeSpec.M365.Copilot.Actions;
-
-@service
-@actions(#{
-    nameForHuman: "[API Display Name]",
-    descriptionForModel: "[Model description]",
-    descriptionForHuman: "[User description]"
-})
-@server("[API_BASE_URL]", "[API Name]")
-@useAuth([AuthType]) // Optional
-namespace [APINamespace] {
-
-  @route("[/path]")
-  @get
-  @action
-  op operationName(
-    @path param1: string,
-    @query param2?: string
-  ): ResponseModel;
-
-  model ResponseModel {
-    // Response structure
-  }
-}
-```
+> **Full content:** `templates/typespec-create-api-plugin/requirements.md`
 
 ## Authentication Options
 
-Choose based on API requirements:
+> Choose based on API requirements:
+> 1. **No Authentication** (Public APIs)
 
-1. **No Authentication** (Public APIs)
-
-   ```typescript
-   // No @useAuth decorator needed
-   ```
-
-2. **API Key**
-
-   ```typescript
-   @useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-API-Key">)
-   ```
-
-3. **OAuth2**
-
-   ```typescript
-   @useAuth(OAuth2Auth<[{
-     type: OAuth2FlowType.authorizationCode;
-     authorizationUrl: "https://oauth.example.com/authorize";
-     tokenUrl: "https://oauth.example.com/token";
-     refreshUrl: "https://oauth.example.com/token";
-     scopes: ["read", "write"];
-   }]>)
-   ```
-
-4. **Registered Auth Reference**
-
-   ```typescript
-   @useAuth(Auth)
-
-   @authReferenceId("registration-id-here")
-   model Auth is ApiKeyAuth<ApiKeyLocation.header, "X-API-Key">
-   ```
+> **Full content:** `templates/typespec-create-api-plugin/authentication_options.md`
 
 ## Function Capabilities
 
-### Confirmation Dialog
+> ### Confirmation Dialog
+> type: "AdaptiveCard",
 
-```typescript
-@capabilities(#{
-  confirmation: #{
-    type: "AdaptiveCard",
-    title: "Confirm Action",
-    body: """
-    Are you sure you want to perform this action?
-      * **Parameter**: {{ function.parameters.paramName }}
-    """
-  }
-})
-```
-
-### Adaptive Card Response
-
-```typescript
-@card(#{
-  dataPath: "$.items",
-  title: "$.title",
-  url: "$.link",
-  file: "cards/card.json"
-})
-```
-
-### Reasoning & Response Instructions
-
-```typescript
-@reasoning("""
-  Consider user's context when calling this operation.
-  Prioritize recent items over older ones.
-""")
-@responding("""
-  Present results in a clear table format with columns: ID, Title, Status.
-  Include a summary count at the end.
-""")
-```
+> **Full content:** `templates/typespec-create-api-plugin/function_capabilities.md`
 
 ## Best Practices
 
@@ -221,3 +102,13 @@ Then generate:
 - Complete `main.tsp` with agent definition
 - Complete `actions.tsp` with API operations and models
 - Optional `cards/card.json` if Adaptive Cards are needed
+
+
+## Template References
+
+Templates in `templates/typespec-create-api-plugin/`:
+- `authentication_options.md`
+- `function_capabilities.md`
+- `phases.md`
+- `requirements.md`
+- `workflow.md`

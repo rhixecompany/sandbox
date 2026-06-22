@@ -77,3 +77,15 @@ Your goal is to help me write effective unit tests with NUnit, covering both sta
 - Use `[Description]` to provide additional test information
 - Consider `[Explicit]` for tests that shouldn't run automatically
 - Use `[Ignore("Reason")]` to temporarily skip tests
+
+
+## Template References
+
+Templates in `templates/csharp-nunit/`:
+- `assertions.md`
+- `data-driven_tests.md`
+- `mocking_and_isolation.md`
+- `project_setup.md`
+- `standard_tests.md`
+- `test_organization.md`
+- `test_structure.md`

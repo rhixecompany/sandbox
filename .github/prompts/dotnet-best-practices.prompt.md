@@ -83,3 +83,19 @@ Your task is to ensure .NET/C# code in ${selection} meets the best practices spe
 - Use meaningful names that reflect domain concepts
 - Keep methods focused and cohesive
 - Implement proper disposal patterns for resources
+
+
+## Template References
+
+Templates in `templates/dotnet-best-practices/`:
+- `asyncawait_patterns.md`
+- `code_quality.md`
+- `configuration__settings.md`
+- `dependency_injection__ser.md`
+- `design_patterns__architec.md`
+- `documentation__structure.md`
+- `error_handling__logging.md`
+- `performance__security.md`
+- `resource_management__loca.md`
+- `semantic_kernel__ai_integ.md`
+- `testing_standards.md`

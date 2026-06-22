@@ -40,3 +40,12 @@ Your goal is to help me create well-structured ASP.NET Minimal API endpoints wit
 - Set proper content types for requests and responses
 - Use document transformers to add elements like servers, tags, and security schemes
 - Use schema transformers to apply customizations to OpenAPI schemas
+
+
+## Template References
+
+Templates in `templates/aspnet-minimal-api-openapi/`:
+- `api_organization.md`
+- `openapi_documentation.md`
+- `request_and_response_type.md`
+- `type_handling.md`

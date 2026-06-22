@@ -76,3 +76,16 @@ Your goal is to help me write high-quality, idiomatic Spring Boot applications u
 
 - **`suspend` functions:** For non-blocking asynchronous code, use `suspend` functions in your controllers and services. Spring Boot has excellent support for coroutines.
 - **Structured Concurrency:** Use `coroutineScope` or `supervisorScope` to manage the lifecycle of coroutines.
+
+
+## Template References
+
+Templates in `templates/kotlin-springboot/`:
+- `configuration.md`
+- `data_layer_repositories.md`
+- `dependency_injection__com.md`
+- `logging.md`
+- `project_setup__structure.md`
+- `service_layer.md`
+- `testing.md`
+- `web_layer_controllers.md`

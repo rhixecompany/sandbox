@@ -77,130 +77,24 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 
 ## Analysis and Planning Phase
 
-Before updating the `llms.txt` file, you must complete a thorough analysis:
+> Before updating the `llms.txt` file, you must complete a thorough analysis:
+> ### Step 1: Review Current File and Specification
 
-### Step 1: Review Current File and Specification
-
-- Read the existing `llms.txt` file to understand current structure
-- Review the official specification at https://llmstxt.org/ to ensure continued compliance
-- Identify areas that may need updates based on repository changes
-
-### Step 2: Repository Structure Analysis
-
-- Examine the current repository structure using appropriate tools
-- Compare current structure with what's documented in existing `llms.txt`
-- Identify new directories, files, or documentation that should be included
-- Note any removed or relocated files that need to be updated
-
-### Step 3: Content Discovery and Change Detection
-
-- Identify new README files and their locations
-- Find new documentation files (`.md` files in `/docs/`, `/spec/`, etc.)
-- Locate new specification files and their purposes
-- Discover new configuration files and their relevance
-- Find new example files and code samples
-- Identify any changes to existing documentation structure
-
-### Step 4: Create Update Plan
-
-Based on your analysis, create a structured plan that includes:
-
-- Changes needed to maintain accuracy
-- New files to be added to the llms.txt
-- Outdated references to be removed or updated
-- Organizational improvements to maintain clarity
+> **Full content:** `templates/update-llms/analysis_and_planning_phase.md`
 
 ## Implementation Requirements
 
-### Format Compliance
+> ### Format Compliance
+> The updated `llms.txt` file must maintain this exact structure per the specifica
 
-The updated `llms.txt` file must maintain this exact structure per the specification:
-
-1. **H1 Header**: Single line with repository/project name (required)
-2. **Blockquote Summary**: Brief description in blockquote format (optional but recommended)
-3. **Additional Details**: Zero or more markdown sections without headings for context
-4. **File List Sections**: Zero or more H2 sections containing markdown lists of links
-
-### Content Requirements
-
-#### Required Elements
-
-- **Project Name**: Clear, descriptive title as H1
-- **Summary**: Concise blockquote explaining the repository's purpose
-- **Key Files**: Essential files organized by category (H2 sections)
-
-#### File Link Format
-
-Each file link must follow: `[descriptive-name](relative-url): optional description`
-
-#### Section Organization
-
-Organize files into logical H2 sections such as:
-
-- **Documentation**: Core documentation files
-- **Specifications**: Technical specifications and requirements
-- **Examples**: Sample code and usage examples
-- **Configuration**: Setup and configuration files
-- **Optional**: Secondary files (special meaning - can be skipped for shorter context)
-
-### Content Guidelines
-
-#### Language and Style
-
-- Use concise, clear, unambiguous language
-- Avoid jargon without explanation
-- Write for both human and LLM readers
-- Be specific and informative in descriptions
-
-#### File Selection Criteria
-
-Include files that:
-
-- Explain the repository's purpose and scope
-- Provide essential technical documentation
-- Show usage examples and patterns
-- Define interfaces and specifications
-- Contain configuration and setup instructions
-
-Exclude files that:
-
-- Are purely implementation details
-- Contain redundant information
-- Are build artifacts or generated content
-- Are not relevant to understanding the project
+> **Full content:** `templates/update-llms/implementation_requirements.md`
 
 ## Execution Steps
 
-### Step 1: Current State Analysis
+> ### Step 1: Current State Analysis
+> 1. Read the existing `llms.txt` file thoroughly
 
-1. Read the existing `llms.txt` file thoroughly
-2. Examine the current repository structure completely
-3. Compare existing file references with actual repository content
-4. Identify outdated, missing, or incorrect references
-5. Note any structural issues with the current file
-
-### Step 2: Content Planning
-
-1. Determine if the primary purpose statement needs updates
-2. Review and update the summary blockquote if needed
-3. Plan additions for new files and directories
-4. Plan removals for outdated or moved content
-5. Reorganize sections if needed for better clarity
-
-### Step 3: File Updates
-
-1. Update the existing `llms.txt` file in the repository root
-2. Maintain compliance with the exact format specification
-3. Add new file references with appropriate descriptions
-4. Remove or update outdated references
-5. Ensure all links are valid relative paths
-
-### Step 4: Validation
-
-1. Verify continued compliance with https://llmstxt.org/ specification
-2. Check that all links are valid and accessible
-3. Ensure the file still serves as an effective LLM navigation tool
-4. Confirm the file remains both human and machine readable
+> **Full content:** `templates/update-llms/execution_steps.md`
 
 ## Quality Assurance
 
@@ -230,42 +124,10 @@ Exclude files that:
 
 ## Update Strategy
 
-### Addition Process
+> When adding new content:
+> 1. Identify the appropriate section for new files
 
-When adding new content:
-
-1. Identify the appropriate section for new files
-2. Create clear, descriptive names for links
-3. Write concise but informative descriptions
-4. Maintain alphabetical or logical ordering within sections
-5. Consider if new sections are needed for new content types
-
-### Removal Process
-
-When removing outdated content:
-
-1. Verify files are actually removed or relocated
-2. Check if relocated files should be updated rather than removed
-3. Remove entire sections if they become empty
-4. Update cross-references if needed
-
-### Reorganization Process
-
-When restructuring content:
-
-1. Maintain logical flow from general to specific
-2. Keep essential documentation in primary sections
-3. Move secondary content to "Optional" section if appropriate
-4. Ensure new organization improves LLM navigation
-
-Example structure for `llms.txt`:
-
-```txt
-# [Repository Name]
-
-> [Concise description of the repository's purpose and scope]
-
-[Optional additional context paragraphs without headings]
+> **Full content:** `templates/update-llms/update_strategy.md`
 
 ## Documentation
 
@@ -306,3 +168,12 @@ The updated `llms.txt` file should:
 6. Maintain logical organization for easy LLM consumption
 7. Use clear, unambiguous language throughout
 8. Continue to serve both human and machine readers effectively
+
+
+## Template References
+
+Detailed templates in `templates/update-llms/`:
+- `analysis_and_planning_phase.md`
+- `execution_steps.md`
+- `implementation_requirements.md`
+- `update_strategy.md`

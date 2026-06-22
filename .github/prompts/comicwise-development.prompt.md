@@ -92,125 +92,17 @@ HTTP Response
 
 ## Project Structure
 
-```
-src/
-├── app/                     # Next.js App Router pages
-│   ├── (auth)/             # Public auth pages (/sign-in, /sign-up)
-│   ├── (root)/             # Main app pages
-│   ├── admin/              # Admin-only routes (middleware-protected)
-│   └── api/                # API routes (auth/, health-checks)
-│
-├── dal/                    # Data Access Layer (Drizzle queries)
-│   ├── base-dal.ts         # Abstract BaseDal<T> base class
-│   ├── comic-dal.ts        # Comic queries with .with() eager loading
-│   ├── chapter-dal.ts      # Chapter queries
-│   ├── bookmark-dal.ts     # Bookmark queries
-│   └── ...                 # One DAL per entity
-│
-├── actions/                # Server Actions (mutations)
-│   ├── types.ts            # ActionResult<T> discriminated union
-│   ├── comic.actions.ts    # Comic mutations
-│   ├── bookmark.actions.ts # Bookmark mutations
-│   └── ...                 # One file per domain
-│
-├── schemas/                # Zod validation schemas
-│   ├── comic.schema.ts     # Comic validation (create, update, filter)
-│   ├── bookmark.schema.ts  # Bookmark validation
-│   └── ...                 # One schema per domain
-│
-├── components/             # React components (120+)
-│   ├── ui/                 # shadcn/Radix primitives
-│   ├── comics/             # Comic-specific components
-│   ├── bookmarks/          # Bookmark components
-│   ├── reading/            # Reader components
-│   ├── analytics/          # Analytics dashboard
-│   └── layout/             # Layout components (Sidebar, Header)
-│
-├── database/
-│   ├── db.ts               # Drizzle singleton (postgres-js driver)
-│   └── schema.ts           # 27 table definitions, 4 enums, relations
-│
-├── hooks/                  # Custom React hooks
-│   ├── use-now.tsx         # SSR-safe useCurrentYear()
-│   ├── use-debounce.ts     # Debounced values
-│   ├── use-mobile.ts       # Mobile detection
-│   └── ...
-│
-├── stores/                 # Zustand client state
-│   ├── use-bookmark-store.ts
-│   ├── use-reader-store.ts
-│   └── ...
-│
-├── lib/
-│   ├── env.ts              # Zod-validated getEnv() singleton
-│   ├── utils.ts            # cn() tailwind class merger
-│   ├── query-client.ts     # React Query config
-│   └── ...
-│
-├── scripts/                # CLI scripts
-│   └── seed/               # Seeding system with dependency orchestration
-│
-├── tests/                  # Test setup
-│   └── setup-env.ts        # Vitest jsdom mocks + setup
-│
-├── auth.ts                 # NextAuth init
-├── auth-config.ts          # Session strategy, callbacks
-├── auth-providers.ts       # OAuth/Credentials/OIDC providers
-├── auth-adapter.ts         # Drizzle adapter
-└── proxy.ts                # Middleware for route protection
+> ├── app/                     # Next.js App Router pages
+> │   ├── (auth)/             # Public auth pages (/sign-in, /sign-up)
 
-docs/                       # Documentation
-├── dev.content.md          # 26 sections with patterns & examples
-├── DEVELOPMENT.md          # Developer guide
-├── database-context-map.md # Entity relationships
-└── MASTER_PHASE_PLAN_4-6.md # Phase planning
-
-.github/
-├── copilot-instructions.md # Complete 2500+ line guide
-├── instructions/           # Auto-loaded by file pattern:
-│   ├── design-system.instructions.md
-│   ├── security-and-owasp.instructions.md
-│   ├── performance-optimization.instructions.md
-│   ├── testing.instructions.md
-│   ├── typescript.instructions.md
-│   ├── nextjs.instructions.md
-│   └── ...                 # 15+ instruction files
-└── prompts/
-    ├── comicwise-session.prompt.md       # Quick reference
-    └── comicwise-development.prompt.md   # This file
-```
+> **Full content:** `templates/comicwise-development/project_structure.md`
 
 ## Coding Rules (Enforced)
 
-### Type Safety & Code Quality
+> ### Type Safety & Code Quality
+> 1. **No `any` types** — ESLint: `no-explicit-any: "error"`
 
-1. **No `any` types** — ESLint: `no-explicit-any: "error"`
-2. **No manual memoization** — React Compiler is ON (`useMemo`/`useCallback`/`memo()` forbidden)
-3. **No raw `process.env`** — Use `getEnv()` from `src/lib/env.ts`
-4. **No N+1 queries** — Always use `.with()` for eager loading in DAL
-5. **No API routes for mutations** — Use Server Actions (`"use server"`)
-6. **No `export const dynamic = "force-dynamic"`** — Use `<Suspense>` instead
-
-### Next.js & React
-
-7. **Async params (v16 breaking change)** — `params` and `searchParams` are `Promise`, must `await`
-8. **Server Components by default** — Only mark with `"use client"` if hooks/browser APIs needed
-9. **No browser APIs in Server Components** — Never `localStorage`, `window`, `Date.now()`
-
-### Database & Mutations
-
-10. **ActionResult<T> pattern** — Server Actions never throw; return `{ ok, data } | { ok, error }`
-11. **Auth first** — First line in every Server Action: `const session = await auth()`
-12. **Zod validate** — All external input → Zod schema → DB
-13. **Cascade deletes preferred** — FK: `{ onDelete: "cascade" }`. Exceptions: `comic.authorId/artistId/typeId`, `bookmark.lastReadChapterId`, `auditLog.userId` (`set null`)
-14. **$inferSelect for types** — Use `typeof table.$inferSelect`, not manual types
-15. **Return null not undefined** — DAL methods return `null` when not found
-
-### UI & Styling
-
-16. **Tailwind v4 syntax** — `bg-linear-to-br` (not `bg-gradient-to-br`), `aspect-2/3`, `h-4!`
-17. **Dark mode via semantic tokens** — `bg-card`, `text-foreground`, `border-muted-foreground` (not hardcoded colors)
-18. **shadcn/ui components** — Use established components; add to registry via shadcn-cli if missing
+> **Full content:** `templates/comicwise-development/coding_rules_enforced.md`
 
 ## Path Aliases (tsconfig.json)
 
@@ -233,110 +125,10 @@ tests      → ./src/tests/*
 
 ## Common Patterns
 
-### DAL Query Pattern (with Eager Loading)
+> ### DAL Query Pattern (with Eager Loading)
+> import { BaseDal } from "./base-dal";
 
-```typescript
-import { BaseDal } from "./base-dal";
-type ComicType = typeof comic.$inferSelect;
-
-export class ComicDal extends BaseDal<ComicType> {
-  async list() {
-    return db.query.comic.findMany({
-      with: {
-        author: true,
-        genres: { with: { genre: true } },
-        chapters: { orderBy: [c => desc(c.chapterNumber)] }
-      }
-    });
-  }
-}
-export const comicDal = new ComicDal();
-```
-
-### Server Action Pattern (auth → validate → mutate → revalidate)
-
-```typescript
-"use server";
-import { auth } from "@/auth";
-import type { ActionResult } from "./types";
-
-export async function createComicAction(
-  input: unknown
-): Promise<ActionResult<Comic>> {
-  // 1. AUTH FIRST
-  const session = await auth();
-  if (!session?.user?.id)
-    return { ok: false, error: "Not authenticated" };
-
-  // 2. VALIDATE
-  const parsed = CreateComicSchema.safeParse(input);
-  if (!parsed.success)
-    return { ok: false, error: parsed.error.errors[0]?.message };
-
-  try {
-    // 3. MUTATE
-    const comic = await comicDal.create(parsed.data);
-
-    // 4. REVALIDATE
-    revalidatePath("/comics");
-    revalidateTag("comics");
-
-    // 5. RETURN ActionResult
-    return { ok: true, data: comic };
-  } catch (error) {
-    return { ok: false, error: "Failed to create comic" };
-  }
-}
-```
-
-### Component Pattern (with JSDoc + Dark Mode)
-
-```typescript
-/**
- * Comic Card Component
- * Displays a comic in grid/list view with optional status/type overlay
- */
-interface ComicCardProps {
-  /** Comic object with all required fields */
-  comic: Comic;
-  /** Display variant */
-  variant?: "grid" | "list";
-}
-
-export function ComicCard({ comic, variant = "grid" }: ComicCardProps) {
-  return (
-    <article className="rounded-lg border p-4 dark:border-muted-foreground">
-      <h2 className="text-lg font-semibold dark:text-foreground">{comic.title}</h2>
-      <p className="text-sm text-muted-foreground dark:text-muted-foreground">
-        {comic.synopsis}
-      </p>
-    </article>
-  );
-}
-```
-
-### Zod Schema Composition
-
-```typescript
-// Base schema
-const BaseComicSchema = z.object({
-  title: z.string().min(1).max(255),
-  slug: z.string().regex(/^[a-z0-9-]+$/),
-  synopsis: z.string().min(10).max(5000)
-});
-
-// Extend for create
-export const CreateComicSchema = BaseComicSchema.extend({
-  authorId: z.string().uuid(),
-  genreIds: z.array(z.string().uuid()).min(1)
-});
-
-// Extend for update (all optional)
-export const UpdateComicSchema = BaseComicSchema.partial();
-
-// Infer type automatically
-export type Comic = z.infer<typeof CreateComicSchema>;
-```
+> **Full content:** `templates/comicwise-development/common_patterns.md`
 
 ## Database Schema Facts
 
@@ -351,55 +143,10 @@ export type Comic = z.infer<typeof CreateComicSchema>;
 
 ## Testing Patterns
 
-### Unit Tests (Vitest)
+> ### Unit Tests (Vitest)
+> import { describe, it, expect, beforeEach } from "vitest";
 
-```typescript
-import { describe, it, expect, beforeEach } from "vitest";
-import { comicDal } from "@/dal/comic-dal";
-
-describe("ComicDal", () => {
-  beforeEach(() => {
-    // Setup mocks from src/tests/setup-env.ts
-  });
-
-  it("should list comics with eager loading", async () => {
-    const comics = await comicDal.list();
-    expect(comics).toHaveLength(5);
-    expect(comics[0].author).toBeDefined(); // Eager loaded
-  });
-});
-```
-
-### E2E Tests (Playwright)
-
-```typescript
-import { test, expect } from "@playwright/test";
-
-test.describe("Comic Reader", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:3000/comics/test-comic");
-  });
-
-  test("should load chapter and display reader controls", async ({
-    page
-  }) => {
-    await test.step("Load page", async () => {
-      await expect(
-        page.getByRole("heading", { name: "Chapter 1" })
-      ).toBeVisible();
-    });
-
-    await test.step("Change reading mode", async () => {
-      await page
-        .getByRole("button", { name: /reading mode/i })
-        .click();
-      await expect(
-        page.locator("[data-reading-mode]")
-      ).toHaveAttribute("data-reading-mode", "scroll");
-    });
-  });
-});
-```
+> **Full content:** `templates/comicwise-development/testing_patterns.md`
 
 ## Quality Gate (Must Pass Before Commits)
 
@@ -487,3 +234,12 @@ All validated via `src/lib/env.ts` at startup using Zod.
 ---
 
 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
+
+
+## Template References
+
+Detailed templates in `templates/comicwise-development/`:
+- `coding_rules_enforced.md`
+- `common_patterns.md`
+- `project_structure.md`
+- `testing_patterns.md`

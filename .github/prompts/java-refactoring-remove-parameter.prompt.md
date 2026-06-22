@@ -88,3 +88,10 @@ Perform intermediate steps internally:
 ## Code to be Refactored:
 
 Now, assess all methods with unused parameters and refactor them using **Remove Parameter**
+
+
+## Template References
+
+Templates in `templates/java-refactoring-remove-parameter/`:
+- `code_after_refactoring_1.md`
+- `code_before_refactoring_1.md`

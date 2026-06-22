@@ -7,25 +7,10 @@ Copilot CLI and ACPX.
 
 ## Context
 
-- Primary executor: Copilot CLI.
-- Shell: PowerShell-first commands, runnable from bash.
-- Objective: produce one verified support matrix.
+> - Primary executor: Copilot CLI.
+> - Shell: PowerShell-first commands, runnable from bash.
 
-### Machine-Local File Checklist
-
-- [ ] `C:/Users/Alexa/AppData/Local/hermes/config.yaml`
-- [ ] `C:/Users/Alexa/AppData/Local/hermes/.env`
-- [ ] `C:/Users/Alexa/.acpx/config.json`
-
-### Repo Control Points
-
-- `c:/Users/Alexa/Desktop/SandBox/.opencode/hooks/hooks.json`
-- `c:/Users/Alexa/Desktop/SandBox/.opencode/rules/acpx-integration.md`
-- `c:/Users/Alexa/Desktop/SandBox/.opencode/skills/autonomous-ai-agents/acpx-agent-routing/SKILL.md`
-- `c:/Users/Alexa/Desktop/SandBox/.github/agents/hermes.agent.md`
-- `c:/Users/Alexa/Desktop/SandBox/.github/agents/qwen-code.agent.md`
-- `c:/Users/Alexa/Desktop/SandBox/AGENTS.md`
-- `c:/Users/Alexa/Desktop/SandBox/docs/agents-cross-reference.md`
+> **Full content:** `templates/plan-acpx-agent-stack-audit-copilot/context.md`
 
 ## Skills Required
 
@@ -53,66 +38,10 @@ Copilot CLI and ACPX.
 
 ## Phases
 
-### Phase 1: Runtime and Liveness
+> ### Phase 1: Runtime and Liveness
+> Set-Location 'C:/Users/Alexa/Desktop/SandBox'
 
-| Field | Details |
-| --- | --- |
-| Goal | Prove tool versions, auth state, and liveness. |
-| Inputs | CLI tools and machine-local config. |
-| Outputs | Version/liveness evidence. |
-| Validation | All commands return output or explicit errors. |
-
-**Commands**
-
-```powershell
-Set-Location 'C:/Users/Alexa/Desktop/SandBox'
-copilot --version
-copilot -p 'Reply with exactly: COPILOT_ALIVE' --allow-all -s
-opencode --version
-opencode auth list
-acpx opencode exec 'Reply with exactly: OPENCODE_ALIVE'
-qwen --version
-acpx qwen exec 'Reply with exactly: QWEN_ALIVE'
-hermes --version
-acpx --version
-```
-
-### Phase 2: Routing and Drift Scan
-
-| Field | Details |
-| --- | --- |
-| Goal | Resolve provider naming and route contradictions. |
-| Inputs | Repo docs and scan output. |
-| Outputs | Final routing decisions. |
-| Validation | Contradictions have explicit decisions. |
-
-**Commands**
-
-```powershell
-Set-Location 'C:/Users/Alexa/Desktop/SandBox'
-rg -n 'opencode-acp|copilot-acp|qwen-code|qwen-acp|hermes-acp|hermes acp' .
-rg -n 'not a valid Hermes ACP provider|acp://opencode|acp://copilot|acp://qwen' .opencode docs AGENTS.md
-rg -n 'acpx-agent-routing' .opencode docs Prompts
-rg -n '"plugin"|hooks|opencode-handoff|rate-limit|quota|cost-guard' .opencode
-```
-
-### Phase 3: Repo Validation
-
-| Field | Details |
-| --- | --- |
-| Goal | Run repository format, type, and lint gates. |
-| Inputs | `Bash/` toolchain scripts. |
-| Outputs | Validation pass/fail evidence. |
-| Validation | Commands complete with exit status captured. |
-
-**Commands**
-
-```powershell
-Set-Location 'C:/Users/Alexa/Desktop/SandBox/Bash'
-bun run format
-bun run typecheck
-bun run lint:strict
-```
+> **Full content:** `templates/plan-acpx-agent-stack-audit-copilot/phases.md`
 
 ## Steps
 
@@ -144,3 +73,10 @@ bun run lint:strict
 3. `Changes Made`.
 4. `Open Risks`.
 5. `Validation Run`.
+
+
+## Template References
+
+Templates in `templates/plan-acpx-agent-stack-audit-copilot/`:
+- `context.md`
+- `phases.md`

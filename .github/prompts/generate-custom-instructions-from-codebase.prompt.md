@@ -80,48 +80,10 @@ ${VALIDATION_REQUIRED="true|false"}
 
 ## Generated Prompt
 
-```
-"Analyze code evolution between two project states to generate precise migration instructions for GitHub Copilot. These instructions will guide Copilot to automatically apply the same transformation patterns during future modifications. Follow this methodology:
+> "Analyze code evolution between two project states to generate precise migration
+> ### Phase 1: Comparative State Analysis
 
-### Phase 1: Comparative State Analysis
-
-#### Structural Changes Detection
-- Compare folder structure between ${SOURCE_REFERENCE} and ${TARGET_REFERENCE}
-- Identify moved, renamed, or deleted files
-- Analyze changes in configuration files
-- Document new dependencies and removed ones
-
-#### Code Transformation Analysis
-${MIGRATION_TYPE == "Framework Version" ?
-  "- Identify API changes between framework versions
-   - Analyze new features being used
-   - Document obsolete methods/properties
-   - Note syntax or convention changes" : ""}
-
-${MIGRATION_TYPE == "Architecture Refactoring" ?
-  "- Analyze architectural pattern changes
-   - Identify new abstractions introduced
-   - Document responsibility reorganization
-   - Note changes in data flows" : ""}
-
-${MIGRATION_TYPE == "Technology Migration" ?
-  "- Analyze replacement of one technology with another
-   - Identify functional equivalences
-   - Document API and syntax changes
-   - Note new dependencies and configurations" : ""}
-
-#### Transformation Pattern Extraction
-- Identify repetitive transformations applied
-- Analyze conversion rules from old to new format
-- Document exceptions and special cases
-- Create before/after correspondence matrix
-
-### Phase 2: Migration Instructions Generation
-
-Create a `.github/copilot-migration-instructions.md` file with this structure:
-
-\`\`\`markdown
-# GitHub Copilot Migration Instructions
+> **Full content:** `templates/generate-custom-instructions-from-codebase/generated_prompt.md`
 
 ## Migration Context
 - **Type**: ${MIGRATION_TYPE}
@@ -132,42 +94,10 @@ Create a `.github/copilot-migration-instructions.md` file with this structure:
 
 ## Automatic Transformation Rules
 
-### 1. Mandatory Transformations
-${AUTOMATION_LEVEL != "Conservative" ?
-  "[AUTOMATIC_TRANSFORMATION_RULES]
-   - **Old Pattern**: [OLD_CODE]
-   - **New Pattern**: [NEW_CODE]
-   - **Trigger**: When to detect this pattern
-   - **Action**: Transformation to apply automatically" : ""}
+> ### 1. Mandatory Transformations
+> ${AUTOMATION_LEVEL != "Conservative" ?
 
-### 2. Transformations with Validation
-${VALIDATION_REQUIRED == "true" ?
-  "[TRANSFORMATIONS_WITH_VALIDATION]
-   - **Detected Pattern**: [DESCRIPTION]
-   - **Suggested Transformation**: [NEW_APPROACH]
-   - **Required Validation**: [VALIDATION_CRITERIA]
-   - **Alternatives**: [ALTERNATIVE_OPTIONS]" : ""}
-
-### 3. API Correspondences
-${CHANGE_FOCUS == "API Changes" || MIGRATION_TYPE == "Framework Version" ?
-  "[API_CORRESPONDENCE_TABLE]
-   | Old API   | New API   | Notes     | Example        |
-   | --------- | --------- | --------- | -------------- |
-   | [OLD_API] | [NEW_API] | [CHANGES] | [CODE_EXAMPLE] | " : ""} |
-
-### 4. New Patterns to Adopt
-[DETECTED_EMERGING_PATTERNS]
-- **Pattern**: [PATTERN_NAME]
-- **Usage**: [WHEN_TO_USE]
-- **Implementation**: [HOW_TO_IMPLEMENT]
-- **Benefits**: [ADVANTAGES]
-
-### 5. Obsolete Patterns to Avoid
-[DETECTED_OBSOLETE_PATTERNS]
-- **Obsolete Pattern**: [OLD_PATTERN]
-- **Why Avoid**: [REASONS]
-- **Alternative**: [NEW_PATTERN]
-- **Migration**: [CONVERSION_STEPS]
+> **Full content:** `templates/generate-custom-instructions-from-codebase/automatic_transformation_rules.md`
 
 ## File Type Specific Instructions
 
@@ -197,64 +127,10 @@ Situations requiring human intervention:
 
 ## Migration Monitoring
 
-### Tracking Metrics
-- Percentage of code automatically migrated
-- Number of manual validations required
-- Error rate of automatic transformations
-- Average migration time per file
+> - Percentage of code automatically migrated
+> - Number of manual validations required
 
-### Error Reporting
-How to report incorrect transformations to Copilot:
-- Feedback patterns to improve rules
-- Exceptions to document
-- Adjustments to make to instructions
-
-\`\`\`
-
-### Phase 3: Contextual Examples Generation
-
-${GENERATE_EXAMPLES == "true" ?
-  "#### Transformation Examples
-   For each identified pattern, generate:
-
-   \`\`\`
-   // BEFORE (${SOURCE_REFERENCE})
-   [OLD_CODE_EXAMPLE]
-
-   // AFTER (${TARGET_REFERENCE})
-   [NEW_CODE_EXAMPLE]
-
-   // COPILOT INSTRUCTIONS
-   When you see this pattern [TRIGGER], transform it to [NEW_PATTERN] following these steps: [STEPS]
-   \`\`\`" : ""}
-
-### Phase 4: Validation and Optimization
-
-#### Instructions Testing
-- Apply instructions on test code
-- Verify transformation consistency
-- Adjust rules based on results
-- Document exceptions and edge cases
-
-#### Iterative Optimization
-${AUTOMATION_LEVEL == "Aggressive" ?
-  "- Refine rules to maximize automation
-   - Reduce false positives in detection
-   - Improve transformation accuracy
-   - Document lessons learned" : ""}
-
-### Final Result
-
-Migration instructions that enable GitHub Copilot to:
-1. **Automatically apply** the same transformations during future modifications
-2. **Maintain consistency** with newly adopted conventions
-3. **Avoid obsolete patterns** by automatically proposing alternatives
-4. **Accelerate future migrations** by capitalizing on acquired experience
-5. **Reduce errors** by automating repetitive transformations
-
-These instructions transform Copilot into an intelligent migration assistant, capable of reproducing your technology evolution decisions consistently and reliably.
-"
-```
+> **Full content:** `templates/generate-custom-instructions-from-codebase/migration_monitoring.md`
 
 ## Typical Use Cases
 
@@ -291,3 +167,11 @@ Instead of generic advice, generates instructions tailored to your specific code
 ### ⚡ **Automated Consistency**
 
 Ensures that new code additions automatically follow the new conventions, preventing architectural regression and maintaining code evolution coherence.
+
+
+## Template References
+
+Detailed templates in `templates/generate-custom-instructions-from-codebase/`:
+- `automatic_transformation_rules.md`
+- `generated_prompt.md`
+- `migration_monitoring.md`

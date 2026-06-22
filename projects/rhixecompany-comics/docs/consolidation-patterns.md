@@ -1,51 +1,64 @@
 # Consolidation Patterns
 
-Inherited patterns, decisions, and discarded ideas from:
-- projects/comicwise
-- projects/Django-Scrapy-Selenium
-- projects/selenium_webdriver
+> Extracted from comicwise, Django-Scrapy-Selenium, and selenium_webdriver  
+> Target: rhixecompany-comics (Django + Next.js 16 dual-stack)
+
+## Table of Contents
+
+1. [comicwise — Frontend Patterns](#1-comicwise--frontend-patterns)
+2. [Django-Scrapy-Selenium — Scraping Patterns](#2-django-scrapy-selenium--scraping-patterns)
+3. [selenium_webdriver — Automation Patterns](#3-selenium_webdriver--automation-patterns)
+4. [Discarded Patterns](#4-discarded-patterns)
 
 ---
 
-## Inherited Patterns
+## 1. comicwise — Frontend Patterns
 
-### Frontend (from comicwise)
-- Next.js 16 App Router + React Server Components for public-facing reader pages
-- shadcn/ui as owned code in frontend/src/components/ui/
-- Drizzle-style data access layer modules under frontend/src/dal/
-- NextAuth v5 with database sessions
-- React Query + revalidation tags for server state synchronization
-- Zod-validated Server Actions for mutations
-- Vitest + Playwright test gates
+**Stack:** Next.js 15, Prisma 7, NextAuth v5, Stripe, Tailwind 4, shadcn/ui, Zustand, React Query 5, Zod 4
 
-### Backend + Scraping (from Django-Scrapy-Selenium)
-- Django 5 + DRF for admin, auth, and content APIs
-- Celery + Redis for async task processing
-- Scrapy 2.14 async-first crawler pattern inside Celery workers
-- Docker Compose orchestration with health checks
-- Explicit wait + stale-element retry utilities
+| Pattern | Inherit? | Notes |
+|---------|----------|-------|
+| RSC chapter pages | ✅ | Render metadata server-side; only interactions need hydration |
+| Server Actions in `actions/` dir | ✅ | Use `'use server'` module-level + Zod validation |
+| Prisma DAL boundaries | ✅ | Keep access behind `dal/*` modules; precise `select`/`include` |
+| Zustand for UI state only | ✅ | Server state → React Query; UI state → Zustand |
+| TanStack Query for API data | ✅ | Cache management, auto-refetch |
+| Zod as boundary contract | ✅ | Validate before Server Actions and before DB writes |
+| Stripe webhooks for subscriptions | ✅ | Use Next.js API routes for webhook endpoints |
+| `next/image` with CDN | ✅ | Signed URLs for chapter images |
 
-### Automation Utilities (from selenium_webdriver)
-- selenium-webdriver 4.x with Selenium Manager driver handling
-- Centralized WebDriverWait helpers
-- Retry decorators wrapped in managed driver lifecycle with driver.quit()
+## 2. Django-Scrapy-Selenium — Scraping Patterns
 
----
+**Stack:** Django 4.x, DRF, Scrapy, Selenium, Celery + Redis, PostgreSQL
 
-## Decisions
+| Pattern | Inherit? | Notes |
+|---------|----------|-------|
+| Celery + Scrapy integration | ✅ | `shared_task` decorator; `AsyncCrawlerProcess` for spiders |
+| Django-Celery config | ✅ | `celery.py` with namespace config |
+| Dead-letter scraping logs | ✅ | Store raw HTML + parse failures for reprocessing |
+| DRF permissioned endpoints | ✅ | Scraping control restricted to admin users |
+| Scrapy concurrent requests (16-50) | ✅ | Tune via `CONCURRENT_REQUESTS` per domain |
+| Sanitize scraped HTML before storage | ✅ | Prevent stored XSS |
 
-- Keep Django as the source of truth for content IDs, permissions, and background jobs
-- Keep Next.js as the reader experience, SEO pages, and caching layer
-- Wire stacks through DRF + django-cors-headers + shared JWT (SimpleJWT)
-- Use drf-spectacular OpenAPI output + openapi-typescript for typed API contracts
-- Use Celery beat for scheduled crawls; prefer scrapy-playwright for JS targets and keep Selenium for login/MFA flows
-- Serve all media through CDN/object storage; never through Django/Gunicorn
+## 3. selenium_webdriver — Automation Patterns
 
----
+**Stack:** Node.js 18+, selenium-webdriver 4.x, ChromeDriver
 
-## Discarded
+| Pattern | Inherit? | Notes |
+|---------|----------|-------|
+| Selenium Manager for drivers | ✅ | Zero-config driver management |
+| Explicit waits (no `sleep()`) | ✅ | `driver.wait(until.elementLocated(...))` |
+| Centralized retry utils | ✅ | `safeClick`, `safeGetText` with stale element retry |
+| Session reuse for batch scrapes | ✅ | Single browser session; avoid 3-5s startup each time |
+| Headless optimizations | ✅ | `--disable-dev-shm-usage`, `--disable-extensions` |
+| Respect `robots.txt` + polite delays | ✅ | 2s+ delays between requests |
 
-- Separate Webpack-based frontend build in favor of Next.js standalone output
-- Duplicate Express-style API layer from legacy xamehi in the consolidated reader service
-- Client-side payment state as source of truth; all payment transitions handled server-side via webhooks
-- Implicit Selenium waits and sleep-based scraping flows; replaced with explicit waits and async Scrapy
+## 4. Discarded Patterns
+
+| Pattern | Source | Reason Discarded |
+|---------|--------|------------------|
+| pnpm package manager | comicwise | rhixecompany-comics uses npm; Bun migration planned separately |
+| Prisma ORM | comicwise | rhixecompany-comics uses Drizzle ORM instead |
+| Selenium for new scrapers | selenium_webdriver | Playwright is modern alternative; Selenium legacy-only from 2026 |
+| Twisted callback chains | Django-Scrapy-Selenium | Async-first (`AsyncCrawlerProcess`) replaces traditional Twisted |
+| `time.sleep()` in wait logic | selenium_webdriver | Replaced with explicit `WebDriverWait` conditions |

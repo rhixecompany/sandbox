@@ -41,51 +41,17 @@ public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerRepoId) {
 
 ## Code Before Refactoring 2:
 
-```java
-public DefaultExpander add(RelationshipType type, Direction direction) {
-     Direction existingDirection = directions.get(type.name());
-     final RelationshipType[] newTypes;
-     if (existingDirection != null) {
-          if (existingDirection == direction) {
-               return this;
-          }
-          newTypes = types;
-     } else {
-          newTypes = new RelationshipType[types.length + 1];
-          System.arraycopy(types, 0, newTypes, 0, types.length);
-          newTypes[types.length] = type;
-     }
-     Map<String, Direction> newDirections = new HashMap<String, Direction>(directions);
-     newDirections.put(type.name(), direction);
-     return new DefaultExpander(newTypes, newDirections);
-}
-```
+> public DefaultExpander add(RelationshipType type, Direction direction) {
+> Direction existingDirection = directions.get(type.name());
+
+> **Full content:** `templates/java-refactoring-extract-method/code_before_refactoring_2.md`
 
 ## Code After Refactoring 2:
 
-```java
-public DefaultExpander add(RelationshipType type, Direction direction) {
-     Direction existingDirection = directions.get(type.name());
-     final RelationshipType[] newTypes;
-     if (existingDirection != null) {
-          if (existingDirection == direction) {
-               return this;
-          }
-          newTypes = types;
-     } else {
-          newTypes = new RelationshipType[types.length + 1];
-          System.arraycopy(types, 0, newTypes, 0, types.length);
-          newTypes[types.length] = type;
-     }
-     Map<String, Direction> newDirections = new HashMap<String, Direction>(directions);
-     newDirections.put(type.name(), direction);
-     return (DefaultExpander) newExpander(newTypes, newDirections);
-}
-protected RelationshipExpander newExpander(RelationshipType[] types,
-          Map<String, Direction> directions) {
-     return new DefaultExpander(types, directions);
-}
-```
+> public DefaultExpander add(RelationshipType type, Direction direction) {
+> Direction existingDirection = directions.get(type.name());
+
+> **Full content:** `templates/java-refactoring-extract-method/code_after_refactoring_2.md`
 
 ## Task
 
@@ -108,3 +74,11 @@ Perform intermediate steps internally:
 ## Code to be Refactored:
 
 Now, assess all methods with high complexity and refactor them using **Extract Method**
+
+
+## Template References
+
+Templates in `templates/java-refactoring-extract-method/`:
+- `code_after_refactoring_2.md`
+- `code_before_refactoring_2.md`
+- `task.md`

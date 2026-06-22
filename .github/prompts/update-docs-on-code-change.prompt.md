@@ -1,7 +1,9 @@
 ---
 name: "update-docs-on-code-change"
 description: "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 
 ## Phases
 
-### Phase 1: Trigger and Scope Detection
+> ### Phase 1: Trigger and Scope Detection
+> ### Phase 2: Documentation Synchronization
 
-| Field | Details |
-| --- | --- |
-| Goal | Determine whether documentation updates are required and which files are affected. |
-| Inputs | Code diff, changed APIs, config updates, dependency updates, CLI changes. |
-| Outputs | Doc-impact checklist with required file updates. |
-| Validation | Every triggering code change has a corresponding documentation decision. |
-
-### Phase 2: Documentation Synchronization
-
-| Field | Details |
-| --- | --- |
-| Goal | Apply accurate updates to required documentation files and sections. |
-| Inputs | Impact checklist, current docs, code behavior, version context. |
-| Outputs | Updated README/docs/examples/changelog/migration content. |
-| Validation | Documentation text, examples, and signatures match current code state. |
-
-### Phase 3: Verification and Release Readiness
-
-| Field | Details |
-| --- | --- |
-| Goal | Ensure documentation quality, consistency, and release readiness. |
-| Inputs | Updated documentation set and validation outcomes. |
-| Outputs | Final documentation status report and remaining debt notes. |
-| Validation | No major stale sections, broken links, or missing critical docs remain. |
+> **Full content:** `templates/update-docs-on-code-change/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 2. Synchronize all affected docs in the same change.
 3. Validate examples and references.
 4. Deliver release-ready documentation alignment.
+
+
+## Template References
+
+Templates in `templates/update-docs-on-code-change/`:
+- `phases.md`

@@ -30,3 +30,11 @@ Diagnose and resolve a reported issue with the smallest safe fix and clear valid
 - Proposed or applied fix
 - Verification checklist with commands executed
 - Residual risks or follow-up recommendations
+
+
+## Template References
+
+Templates in `templates/debug-issue/`:
+- `inputs.md`
+- `output.md`
+- `steps.md`

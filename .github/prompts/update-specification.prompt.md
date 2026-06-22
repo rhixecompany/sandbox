@@ -75,33 +75,10 @@ The specification file must define the requirements, constraints, and interfaces
 
 ## Best Practices for AI-Ready Specifications
 
-- Use precise, explicit, and unambiguous language.
-- Clearly distinguish between requirements, constraints, and recommendations.
-- Use structured formatting (headings, lists, tables) for easy parsing.
-- Avoid idioms, metaphors, or context-dependent references.
-- Define all acronyms and domain-specific terms.
-- Include examples and edge cases where applicable.
-- Ensure the document is self-contained and does not rely on external context.
+> - Use precise, explicit, and unambiguous language.
+> - Clearly distinguish between requirements, constraints, and recommendations.
 
-The specification should be saved in the [/spec/](/spec/) directory and named according to the following convention: `[a-z0-9-]+.md`, where the name should be descriptive of the specification's content and starting with the highlevel purpose, which is one of [schema, tool, data, infrastructure, process, architecture, or design].
-
-The specification file must be formatted in well formed Markdown.
-
-Specification files must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
-
-````md
----
-title: [Concise Title Describing the Specification's Focus]
-version: [Optional: e.g., 1.0, Date]
-date_created: [YYYY-MM-DD]
-last_updated: [Optional: YYYY-MM-DD]
-owner: [Optional: Team/Individual responsible for this spec]
-tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `process`, `design`, `app` etc]
----
-
-# Introduction
-
-[A short concise introduction to the specification and the goal it is intended to achieve.]
+> **Full content:** `templates/update-specification/best_practices_for_ai-rea.md`
 
 ## 1. Purpose & Scope
 
@@ -151,33 +128,10 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 ## 8. Dependencies & External Integrations
 
-[Define the external systems, services, and architectural dependencies required for this specification. Focus on **what** is needed rather than **how** it's implemented. Avoid specific package or library versions unless they represent architectural constraints.]
+> [Define the external systems, services, and architectural dependencies required 
+> - **EXT-001**: [External system name] - [Purpose and integration type]
 
-### External Systems
-
-- **EXT-001**: [External system name] - [Purpose and integration type]
-
-### Third-Party Services
-
-- **SVC-001**: [Service name] - [Required capabilities and SLA requirements]
-
-### Infrastructure Dependencies
-
-- **INF-001**: [Infrastructure component] - [Requirements and constraints]
-
-### Data Dependencies
-
-- **DAT-001**: [External data source] - [Format, frequency, and access requirements]
-
-### Technology Platform Dependencies
-
-- **PLT-001**: [Platform/runtime requirement] - [Version constraints and rationale]
-
-### Compliance Dependencies
-
-- **COM-001**: [Regulatory or compliance requirement] - [Impact on implementation]
-
-**Note**: This section should focus on architectural and business dependencies, not specific package implementations. For example, specify "OAuth 2.0 authentication library" rather than "Microsoft.AspNetCore.Authentication.JwtBearer v6.0.1".
+> **Full content:** `templates/update-specification/8_dependencies__external_.md`
 
 ## 9. Examples & Edge Cases
 
@@ -197,3 +151,24 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 ```
 
 ```
+
+
+## Template References
+
+Detailed templates in `templates/update-specification/`:
+
+
+## Template References
+
+Templates in `templates/update-specification/`:
+- `11_related_specifications.md`
+- `3_requirements_constraint.md`
+- `5_acceptance_criteria.md`
+- `6_test_automation_strateg.md`
+- `8_dependencies__external_.md`
+- `9_examples__edge_cases.md`
+- `best_practices_for_ai-rea.md`
+- `inputs.md`
+- `legacy_prompt_details.md`
+- `phases.md`
+- `rules.md`

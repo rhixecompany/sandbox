@@ -60,3 +60,9 @@ Use when you need to work on the current workspace or task.
 Search the current repo (using #githubRepo for the repo info) and list any issues you find (using #list_issues) that are assigned to me.
 
 Suggest issues that I might want to focus on based on their age, the amount of comments, and their status (open/closed).
+
+
+## Template References
+
+Templates in `templates/my-issues/`:
+- `phases.md`

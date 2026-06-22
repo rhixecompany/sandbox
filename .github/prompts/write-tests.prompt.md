@@ -75,3 +75,9 @@ Your goal is to generate Vitest or Playwright tests for the specified component 
 - Co-locate tests with code
 - Use mocks for external dependencies
 - Follow project testing standards
+
+
+## Template References
+
+Templates in `templates/write-tests/`:
+- `phases.md`

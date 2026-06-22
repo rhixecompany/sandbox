@@ -1,7 +1,9 @@
 ---
 name: "task-implementation"
 description: "Comprehensive prompt for implementing tracked task plans with progressive change logging."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 
 ## Phases
 
-### Phase 1: Plan Intake and Context Preparation
+> ### Phase 1: Plan Intake and Context Preparation
+> ### Phase 2: Ordered Task Implementation
 
-| Field | Details |
-| --- | --- |
-| Goal | Fully understand plan scope, details, and tracking expectations before edits. |
-| Inputs | Plan files, details files, changes files, referenced source files. |
-| Outputs | Sequenced execution roadmap and dependency confirmation. |
-| Validation | No task starts without verified plan-details context and file references. |
-
-### Phase 2: Ordered Task Implementation
-
-| Field | Details |
-| --- | --- |
-| Goal | Implement each task fully with working, validated behavior. |
-| Inputs | Task-specific details, existing code patterns, dependencies. |
-| Outputs | Completed task implementation and updated checklist status. |
-| Validation | Task requirements are met and validated before moving forward. |
-
-### Phase 3: Progressive Tracking and Release Readiness
-
-| Field | Details |
-| --- | --- |
-| Goal | Keep changes file synchronized and release-ready throughout execution. |
-| Inputs | Implemented task deltas, divergence/blocker events, validation outcomes. |
-| Outputs | Accurate Added/Modified/Removed tracking and final release summary. |
-| Validation | Changes log reflects true state and includes required blockers/divergence notes. |
+> **Full content:** `templates/task-implementation/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 2. Implement tasks in strict order.
 3. Validate after each task.
 4. Maintain accurate progressive change tracking.
+
+
+## Template References
+
+Templates in `templates/task-implementation/`:
+- `phases.md`

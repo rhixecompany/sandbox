@@ -130,24 +130,10 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## Status
 
-The status of the implementation plan must be clearly defined in the front matter and must reflect the current state of the plan. The status can be one of the following (status_color in brackets): `Completed` (bright green badge), `In progress` (yellow badge), `Planned` (blue badge), `Deprecated` (red badge), or `On Hold` (orange badge). It should also be displayed as a badge in the introduction section.
+> The status of the implementation plan must be clearly defined in the front matte
+> goal: [Concise Title Describing the Package Implementation Plan's Goal]
 
-```md
----
-goal: [Concise Title Describing the Package Implementation Plan's Goal]
-version: [Optional: e.g., 1.0, Date]
-date_created: [YYYY-MM-DD]
-last_updated: [Optional: YYYY-MM-DD]
-owner: [Optional: Team/Individual responsible for this spec]
-status: 'Completed'|'In progress'|'Planned'|'Deprecated'|'On Hold'
-tags: [Optional: List of relevant tags or categories, e.g., `feature`, `upgrade`, `chore`, `architecture`, `migration`, `bug` etc]
----
-
-# Introduction
-
-![Status: <status>](https://img.shields.io/badge/status-<status>-<status_color>)
-
-[A short concise introduction to the plan and the goal it is intended to achieve.]
+> **Full content:** `templates/create-implementation-plan/status.md`
 
 ## 1. Requirements & Constraints
 
@@ -162,25 +148,10 @@ tags: [Optional: List of relevant tags or categories, e.g., `feature`, `upgrade`
 
 ## 2. Implementation Steps
 
-### Implementation Phase 1
+> ### Implementation Phase 1
+> - GOAL-001: [Describe the goal of this phase, e.g., "Implement feature X", "Refa
 
-- GOAL-001: [Describe the goal of this phase, e.g., "Implement feature X", "Refactor module Y", etc.]
-
-| Task     | Description           | Completed | Date       |
-| -------- | --------------------- | --------- | ---------- |
-| TASK-001 | Description of task 1 | ✅        | 2025-04-25 |
-| TASK-002 | Description of task 2 |           |            |
-| TASK-003 | Description of task 3 |           |            |
-
-### Implementation Phase 2
-
-- GOAL-002: [Describe the goal of this phase, e.g., "Implement feature X", "Refactor module Y", etc.]
-
-| Task     | Description           | Completed | Date |
-| -------- | --------------------- | --------- | ---- |
-| TASK-004 | Description of task 4 |           |      |
-| TASK-005 | Description of task 5 |           |      |
-| TASK-006 | Description of task 6 |           |      |
+> **Full content:** `templates/create-implementation-plan/2_implementation_steps.md`
 
 ## 3. Alternatives
 
@@ -221,3 +192,30 @@ tags: [Optional: List of relevant tags or categories, e.g., `feature`, `upgrade`
 
 [Link to related spec 1] [Link to relevant external documentation]
 ````
+
+
+## Template References
+
+Detailed templates in `templates/create-implementation-plan/`:
+
+
+## Template References
+
+Templates in `templates/create-implementation-plan/`:
+- `1_requirements__constrain.md`
+- `2_implementation_steps.md`
+- `3_alternatives.md`
+- `4_dependencies.md`
+- `5_files.md`
+- `6_testing.md`
+- `7_risks__assumptions.md`
+- `8_related_specifications_.md`
+- `ai-optimized_implementati.md`
+- `core_requirements.md`
+- `inputs.md`
+- `output_file_specification.md`
+- `phase_architecture.md`
+- `phases.md`
+- `rules.md`
+- `status.md`
+- `template_validation_rules.md`

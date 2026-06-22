@@ -18,24 +18,11 @@ dependencies:
   - skill:brainstorming
   - skill:plans-and-specs
   - skill:systematic-debugging
-  - skill:simplify
   - skill:context7
   - skill:spike
   - skill:writing-skills
   - skill:content-research-writer
-  - skill:acpx-executor
-  - skill:dispatching-parallel-agents
-  - tool:web_search
-  - tool:web_extract
-  - tool:terminal
-  - tool:search_files
-  - tool:read_file
-  - tool:write_file
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
 ---
 
 ## CRITICAL RULES
@@ -410,13 +397,10 @@ List project name + shared technology. Must be symmetric.>
 | `brainstorming` | 1 | Explore research angles per project |
 | `plans-and-specs` | 0 | Structure research plan |
 | `systematic-debugging` | 0, 5 | Detect stale/missing reports |
-| `simplify` | 3 | Strip bloat from reports |
 | `context7` | 2 | Library API docs and patterns |
 | `spike` | 0 | Prototype report format before batch |
 | `writing-skills` | 3 | Crisp, compact markdown writing |
 | `content-research-writer` | 3 | Research synthesis |
-| `acpx-executor` | 2 | Delegate per-project research |
-| `dispatching-parallel-agents` | 2 | Run 3–4 projects concurrently |
 
 ---
 
@@ -441,7 +425,7 @@ List project name + shared technology. Must be symmetric.>
 ## Secondary Goals
 
 > Execute ONLY after Phase 5 verification passes for all 14 reports.
-> Full specifications live in `Prompts/repo-management.prompts.md`.
+> Full specifications live in `.github/prompts/repo-management.prompt.md`.
 
 | # | Goal | Priority |
 |---|------|----------|
@@ -458,6 +442,11 @@ List project name + shared technology. Must be symmetric.>
 
 | Prompt | Location | Purpose |
 |--------|----------|---------|
-| `/bash-scripts-fix` | `Prompts/bash-scripts-fix.prompts.md` | Script modernization for all 14 projects |
-| `/workspace-consolidate` | `Prompts/workspace-consolidate.prompts.md` | Workspace-level consolidation |
-| `/repo-management` | `Prompts/repo-management.prompts.md` | Branch norm, Bun migration, CI, consolidation |
+| `/bash-scripts-fix` | `.github/prompts/bash-scripts-fix.prompt.md` | Script modernization for all 14 projects |
+| `/workspace-consolidate` | `.github/prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
+| `/repo-management` | `.github/prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |
+
+## Template References
+
+Templates in `templates/repo.prompts/`:
+- `README.md` — Section inventory

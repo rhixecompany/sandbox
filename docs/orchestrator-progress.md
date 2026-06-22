@@ -37,4 +37,31 @@
 
 ## Phase 2: Agents System Prompt Context Fix — ✅ COMPLETE
 ## Phase 3: Sync Hermes Copilot Codex — ✅ COMPLETE
-## Phase 4: Test Providers & Models — ⚠️ PARTIAL (4.1-4.2 done, 4.3-4.6 pending)
+## Phase 4: Test Providers & Models — ✅ COMPLETE
+
+### Phase 4.3 — Free Model Extraction ✅
+- 27 free OpenRouter models confirmed via live API ($0 pricing)
+- Auth status captured for all 6 providers
+- Compiled free models table: `docs/test-providers-models-free-models.md`
+- Key constraint: OpenRouter API key in Hermes secure store, not subprocess env
+
+### Phase 4.4 — Provider-by-Provider Benchmarking ✅
+- qwen3-coder:free — Task 1 (Reasoning) ✅ PASS, Task 2 (Tool Calling) ✅ PASS
+- deepseek-v4-flash-free (active session) — All 3 tasks ✅ PASS
+- nemotron-3-ultra-550b-a55b:free — Timed out via hermes chat proxy (agent overhead)
+- Full benchmark constrained by: API keys not in subprocess, hermes chat -q agent overhead (60-120s/call)
+- Results saved: `docs/test-providers-models-benchmark.md`
+
+### Phase 4.5 — Cross-Provider Comparison & Report ✅
+- Provider overview with auth/reliability/recommendation ratings
+- Benchmark ranking by task type
+- Optimal fallback chain documented
+- Report: `docs/test-providers-models-comparison-report.md`
+
+### Phase 4.6 — Script Creation & Automation ✅
+- Updated `test_models.py` at `~/AppData/Local/hermes/scripts/`
+- Added `--list-providers` flag for auth status across all 6 providers
+- Added `--hermes` flag to route through hermes chat -q proxy
+- Added multi-provider provider definitions
+- Preserved existing `--list-free`, `--benchmark`, `--provider`, `--model` flags
+- Script verified: `--list-providers` works, `--list-free` gracefully handles missing key

@@ -56,131 +56,17 @@ Expert PostgreSQL code review for ${selection} (or entire project if no selectio
 
 ## 🎯 PostgreSQL-Specific Review Areas
 
-### JSONB Best Practices
+> ### JSONB Best Practices
+> -- ❌ BAD: Inefficient JSONB usage
 
-```sql
--- ❌ BAD: Inefficient JSONB usage
-SELECT * FROM orders WHERE data->>'status' = 'shipped';  -- No index support
-
--- ✅ GOOD: Indexable JSONB queries
-CREATE INDEX idx_orders_status ON orders USING gin((data->'status'));
-SELECT * FROM orders WHERE data @> '{"status": "shipped"}';
-
--- ❌ BAD: Deep nesting without consideration
-UPDATE orders SET data = data || '{"shipping":{"tracking":{"number":"123"}}}';
-
--- ✅ GOOD: Structured JSONB with validation
-ALTER TABLE orders ADD CONSTRAINT valid_status
-CHECK (data->>'status' IN ('pending', 'shipped', 'delivered'));
-```
-
-### Array Operations Review
-
-```sql
--- ❌ BAD: Inefficient array operations
-SELECT * FROM products WHERE 'electronics' = ANY(categories);  -- No index
-
--- ✅ GOOD: GIN indexed array queries
-CREATE INDEX idx_products_categories ON products USING gin(categories);
-SELECT * FROM products WHERE categories @> ARRAY['electronics'];
-
--- ❌ BAD: Array concatenation in loops
--- This would be inefficient in a function/procedure
-
--- ✅ GOOD: Bulk array operations
-UPDATE products SET categories = categories || ARRAY['new_category']
-WHERE id IN (SELECT id FROM products WHERE condition);
-```
-
-### PostgreSQL Schema Design Review
-
-```sql
--- ❌ BAD: Not using PostgreSQL features
-CREATE TABLE users (
-    id INTEGER,
-    email VARCHAR(255),
-    created_at TIMESTAMP
-);
-
--- ✅ GOOD: PostgreSQL-optimized schema
-CREATE TABLE users (
-    id BIGSERIAL PRIMARY KEY,
-    email CITEXT UNIQUE NOT NULL,  -- Case-insensitive email
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    metadata JSONB DEFAULT '{}',
-    CONSTRAINT valid_email CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
-);
-
--- Add JSONB GIN index for metadata queries
-CREATE INDEX idx_users_metadata ON users USING gin(metadata);
-```
-
-### Custom Types and Domains
-
-```sql
--- ❌ BAD: Using generic types for specific data
-CREATE TABLE transactions (
-    amount DECIMAL(10,2),
-    currency VARCHAR(3),
-    status VARCHAR(20)
-);
-
--- ✅ GOOD: PostgreSQL custom types
-CREATE TYPE currency_code AS ENUM ('USD', 'EUR', 'GBP', 'JPY');
-CREATE TYPE transaction_status AS ENUM ('pending', 'completed', 'failed', 'cancelled');
-CREATE DOMAIN positive_amount AS DECIMAL(10,2) CHECK (VALUE > 0);
-
-CREATE TABLE transactions (
-    amount positive_amount NOT NULL,
-    currency currency_code NOT NULL,
-    status transaction_status DEFAULT 'pending'
-);
-```
+> **Full content:** `templates/postgresql-code-review/postgresql-specific_review_are.md`
 
 ## 🔍 PostgreSQL-Specific Anti-Patterns
 
-### Performance Anti-Patterns
+> ### Performance Anti-Patterns
+> - **Avoiding PostgreSQL-specific indexes**: Not using GIN/GiST for appropriate d
 
-- **Avoiding PostgreSQL-specific indexes**: Not using GIN/GiST for appropriate data types
-- **Misusing JSONB**: Treating JSONB like a simple string field
-- **Ignoring array operators**: Using inefficient array operations
-- **Poor partition key selection**: Not leveraging PostgreSQL partitioning effectively
-
-### Schema Design Issues
-
-- **Not using ENUM types**: Using VARCHAR for limited value sets
-- **Ignoring constraints**: Missing CHECK constraints for data validation
-- **Wrong data types**: Using VARCHAR instead of TEXT or CITEXT
-- **Missing JSONB structure**: Unstructured JSONB without validation
-
-### Function and Trigger Issues
-
-```sql
--- ❌ BAD: Inefficient trigger function
-CREATE OR REPLACE FUNCTION update_modified_time()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = NOW();  -- Should use TIMESTAMPTZ
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- ✅ GOOD: Optimized trigger function
-CREATE OR REPLACE FUNCTION update_modified_time()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = CURRENT_TIMESTAMP;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- Set trigger to fire only when needed
-CREATE TRIGGER update_modified_time_trigger
-    BEFORE UPDATE ON table_name
-    FOR EACH ROW
-    WHEN (OLD.* IS DISTINCT FROM NEW.*)
-    EXECUTE FUNCTION update_modified_time();
-```
+> **Full content:** `templates/postgresql-code-review/postgresql-specific_anti-patte.md`
 
 ## 📊 PostgreSQL Extension Usage Review
 
@@ -229,36 +115,10 @@ GRANT USAGE ON SEQUENCE specific_table_id_seq TO app_user;
 
 ## 🎯 PostgreSQL Code Quality Checklist
 
-### Schema Design
+> - [ ] Using appropriate PostgreSQL data types (CITEXT, JSONB, arrays)
+> - [ ] Leveraging ENUM types for constrained values
 
-- [ ] Using appropriate PostgreSQL data types (CITEXT, JSONB, arrays)
-- [ ] Leveraging ENUM types for constrained values
-- [ ] Implementing proper CHECK constraints
-- [ ] Using TIMESTAMPTZ instead of TIMESTAMP
-- [ ] Defining custom domains for reusable constraints
-
-### Performance Considerations
-
-- [ ] Appropriate index types (GIN for JSONB/arrays, GiST for ranges)
-- [ ] JSONB queries using containment operators (@>, ?)
-- [ ] Array operations using PostgreSQL-specific operators
-- [ ] Proper use of window functions and CTEs
-- [ ] Efficient use of PostgreSQL-specific functions
-
-### PostgreSQL Features Utilization
-
-- [ ] Using extensions where appropriate
-- [ ] Implementing stored procedures in PL/pgSQL when beneficial
-- [ ] Leveraging PostgreSQL's advanced SQL features
-- [ ] Using PostgreSQL-specific optimization techniques
-- [ ] Implementing proper error handling in functions
-
-### Security and Compliance
-
-- [ ] Row Level Security (RLS) implementation where needed
-- [ ] Proper role and privilege management
-- [ ] Using PostgreSQL's built-in encryption functions
-- [ ] Implementing audit trails with PostgreSQL features
+> **Full content:** `templates/postgresql-code-review/postgresql_code_quality_checkl.md`
 
 ## 📝 PostgreSQL-Specific Review Guidelines
 
@@ -271,3 +131,11 @@ GRANT USAGE ON SEQUENCE specific_table_id_seq TO app_user;
 7. **Security Implementation**: Review PostgreSQL-specific security features
 
 Focus on PostgreSQL's unique capabilities and ensure the code leverages what makes PostgreSQL special rather than treating it as a generic SQL database.
+
+
+## Template References
+
+Detailed templates in `templates/postgresql-code-review/`:
+- `postgresql-specific_anti-patte.md`
+- `postgresql-specific_review_are.md`
+- `postgresql_code_quality_checkl.md`

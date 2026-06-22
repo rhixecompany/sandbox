@@ -82,48 +82,10 @@ cd ${input:projectName:demo-java}
 
 ## Add SpringDoc, Redis, JPA and MongoDB configurations
 
-- Insert SpringDoc configurations into `application.properties` file
+> - Insert SpringDoc configurations into `application.properties` file
+> # SpringDoc configurations
 
-```properties
-# SpringDoc configurations
-springdoc.swagger-ui.doc-expansion=none
-springdoc.swagger-ui.operations-sorter=alpha
-springdoc.swagger-ui.tags-sorter=alpha
-```
-
-- Insert Redis configurations into `application.properties` file
-
-```properties
-# Redis configurations
-spring.data.redis.host=localhost
-spring.data.redis.port=6379
-spring.data.redis.password=rootroot
-```
-
-- Insert JPA configurations into `application.properties` file
-
-```properties
-# JPA configurations
-spring.datasource.driver-class-name=org.postgresql.Driver
-spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
-spring.datasource.username=postgres
-spring.datasource.password=rootroot
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-```
-
-- Insert MongoDB configurations into `application.properties` file
-
-```properties
-# MongoDB configurations
-spring.data.mongodb.host=localhost
-spring.data.mongodb.port=27017
-spring.data.mongodb.authentication-database=admin
-spring.data.mongodb.username=root
-spring.data.mongodb.password=rootroot
-spring.data.mongodb.database=test
-```
+> **Full content:** `templates/create-spring-boot-java-project/add_springdoc_redis_jpa_a.md`
 
 ## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services
 
@@ -159,3 +121,12 @@ spring.data.mongodb.database=test
 - (Optional) `docker-compose up -d` to start the services, `./mvnw spring-boot:run` to run the Spring Boot project, `docker-compose rm -sf` to stop the services.
 
 ## Let's do this step by step
+
+
+## Template References
+
+Templates in `templates/create-spring-boot-java-project/`:
+- `add_additional_dependenci.md`
+- `add_docker-composeyaml_wi.md`
+- `add_springdoc_redis_jpa_a.md`
+- `download_spring_boot_proj.md`

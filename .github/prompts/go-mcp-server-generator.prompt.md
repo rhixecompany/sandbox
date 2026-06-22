@@ -51,118 +51,17 @@ require (
 
 ## main.go Template
 
-```go
-package main
+> "github.com/modelcontextprotocol/go-sdk/mcp"
+> "github.com/yourusername/{{PROJECT_NAME}}/config"
 
-import (
-    "context"
-    "log"
-    "os"
-    "os/signal"
-    "syscall"
-
-    "github.com/modelcontextprotocol/go-sdk/mcp"
-    "github.com/yourusername/{{PROJECT_NAME}}/config"
-    "github.com/yourusername/{{PROJECT_NAME}}/tools"
-)
-
-func main() {
-    cfg := config.Load()
-
-    ctx, cancel := context.WithCancel(context.Background())
-    defer cancel()
-
-    // Handle graceful shutdown
-    sigCh := make(chan os.Signal, 1)
-    signal.Notify(sigCh, os.Interrupt, syscall.SIGTERM)
-    go func() {
-        <-sigCh
-        log.Println("Shutting down...")
-        cancel()
-    }()
-
-    // Create server
-    server := mcp.NewServer(
-        &mcp.Implementation{
-            Name:    cfg.ServerName,
-            Version: cfg.Version,
-        },
-        &mcp.Options{
-            Capabilities: &mcp.ServerCapabilities{
-                Tools:     &mcp.ToolsCapability{},
-                Resources: &mcp.ResourcesCapability{},
-                Prompts:   &mcp.PromptsCapability{},
-            },
-        },
-    )
-
-    // Register tools
-    tools.RegisterTools(server)
-
-    // Run server
-    transport := &mcp.StdioTransport{}
-    if err := server.Run(ctx, transport); err != nil {
-        log.Fatalf("Server error: %v", err)
-    }
-}
-```
+> **Full content:** `templates/go-mcp-server-generator/maingo_template.md`
 
 ## tools/tool1.go Template
 
-```go
-package tools
+> "github.com/modelcontextprotocol/go-sdk/mcp"
+> type Tool1Input struct {
 
-import (
-    "context"
-    "fmt"
-
-    "github.com/modelcontextprotocol/go-sdk/mcp"
-)
-
-type Tool1Input struct {
-    Param1 string `json:"param1" jsonschema:"required,description=First parameter"`
-    Param2 int    `json:"param2,omitempty" jsonschema:"description=Optional second parameter"`
-}
-
-type Tool1Output struct {
-    Result string `json:"result" jsonschema:"description=The result of the operation"`
-    Status string `json:"status" jsonschema:"description=Operation status"`
-}
-
-func Tool1Handler(ctx context.Context, req *mcp.CallToolRequest, input Tool1Input) (
-    *mcp.CallToolResult,
-    Tool1Output,
-    error,
-) {
-    // Validate input
-    if input.Param1 == "" {
-        return nil, Tool1Output{}, fmt.Errorf("param1 is required")
-    }
-
-    // Check context
-    if ctx.Err() != nil {
-        return nil, Tool1Output{}, ctx.Err()
-    }
-
-    // Perform operation
-    result := fmt.Sprintf("Processed: %s", input.Param1)
-
-    return nil, Tool1Output{
-        Result: result,
-        Status: "success",
-    }, nil
-}
-
-func RegisterTool1(server *mcp.Server) {
-    mcp.AddTool(server,
-        &mcp.Tool{
-            Name:        "tool1",
-            Description: "Description of what tool1 does",
-        },
-        Tool1Handler,
-    )
-}
-```
+> **Full content:** `templates/go-mcp-server-generator/toolstool1go_template.md`
 
 ## tools/registry.go Template
 
@@ -209,37 +108,10 @@ func getEnv(key, defaultValue string) string {
 
 ## main_test.go Template
 
-```go
-package main
+> "github.com/yourusername/{{PROJECT_NAME}}/tools"
+> func TestTool1Handler(t *testing.T) {
 
-import (
-    "context"
-    "testing"
-
-    "github.com/yourusername/{{PROJECT_NAME}}/tools"
-)
-
-func TestTool1Handler(t *testing.T) {
-    ctx := context.Background()
-    input := tools.Tool1Input{
-        Param1: "test",
-        Param2: 42,
-    }
-
-    result, output, err := tools.Tool1Handler(ctx, nil, input)
-    if err != nil {
-        t.Fatalf("Tool1Handler failed: %v", err)
-    }
-
-    if output.Status != "success" {
-        t.Errorf("Expected status 'success', got '%s'", output.Status)
-    }
-
-    if result != nil {
-        t.Error("Expected result to be nil")
-    }
-}
-```
+> **Full content:** `templates/go-mcp-server-generator/main_testgo_template.md`
 
 ## README.md Template
 
@@ -326,3 +198,11 @@ When generating a Go MCP server:
 - Keep main.go minimal, logic in packages
 - Write tests for tool handlers
 - Document all exported functions
+
+
+## Template References
+
+Detailed templates in `templates/go-mcp-server-generator/`:
+- `main_testgo_template.md`
+- `maingo_template.md`
+- `toolstool1go_template.md`

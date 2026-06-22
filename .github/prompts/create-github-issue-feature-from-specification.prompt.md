@@ -80,3 +80,9 @@ Create GitHub Issue for the specification at `${file}`.
 - Title: Feature name from specification
 - Description: Problem statement, proposed solution, and context
 - Labels: feature, enhancement (as appropriate)
+
+
+## Template References
+
+Templates in `templates/create-github-issue-feature-from-specification/`:
+- `phases.md`

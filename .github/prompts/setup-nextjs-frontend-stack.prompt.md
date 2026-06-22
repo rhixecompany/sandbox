@@ -213,3 +213,8 @@ src/
 ---
 
 If anything is ambiguous (naming, folder preference, or the desired implementation style for DAL), ask a focused question before scaffolding files.
+
+
+## Template References
+
+Detailed templates in `templates/setup-nextjs-frontend-stack/`:

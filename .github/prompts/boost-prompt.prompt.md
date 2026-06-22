@@ -63,72 +63,17 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 
 ## Tools Required
 
-| Tool | Purpose |
-| --- | --- |
-| `joyride_request_human_input` | Interactive user input via VS Code Joyride extension |
-| `vscode.env.clipboard.writeText` | Copy text to system clipboard via Joyride (ClojureScript API) |
+> **Requirement**: VS Code Joyride extension installed and active
+> - Install from VS Code Extensions marketplace: search "Joyride"
 
-### Joyride Setup
-
-**Requirement**: VS Code Joyride extension installed and active
-
-**Installation**:
-- Install from VS Code Extensions marketplace: search "Joyride"
-- Verify in command palette: `Joyride: Open Prompt Library`
-
-**API Reference**:
-- `joyride_request_human_input` - Prompts user for multi-line input via VS Code dialog
-- `vscode.env.clipboard.writeText(text)` - Copies text to system clipboard (requires active Joyride context)
-
-**Fallback**: If Joyride is unavailable, manually copy the final prompt from Phase 3 output to your clipboard
+> **Full content:** `templates/boost-prompt/tools_required.md`
 
 ## Phases
 
-### Phase 1: Interrogate
+> ### Phase 1: Interrogate
+> **Goal:** Understand the task scope, objectives, deliverables, and constraints.
 
-**Goal:** Understand the task scope, objectives, deliverables, and constraints.
-
-**Steps:**
-1. Read the user's draft prompt
-2. Ask specific questions using `joyride_request_human_input` to clarify scope, deliverables, and constraints
-3. Explore the project workspace using available tools to understand context
-4. Run `/context-map` on the target area before producing the refined prompt
-
-### Phase 2: Refine
-
-**Goal:** Produce an improved, well-structured prompt.
-
-**Steps:**
-1. Organize the prompt into clear sections or steps
-2. Apply markdown formatting for readability
-3. Ensure the prompt is easy to understand and follow
-4. Define expected deliverables and success criteria
-
-### Phase 3: Deliver
-
-**Goal:** Deliver the prompt to the user and system clipboard.
-
-**Steps:**
-1. Copy the prompt to the system clipboard using Joyride:
-
-   ```clojure
-   (require '["vscode" :as vscode])
-   (vscode/env.clipboard.writeText "your-markdown-text-here")
-   ```
-
-2. Announce to the user that the prompt is on the clipboard
-3. Type the prompt in chat
-
-**Note**: If Joyride is unavailable (see "Tools Required" -> Fallback), manually select and copy the prompt text from your chat output.
-
-### Phase 4: Iterate
-
-**Goal:** Confirm satisfaction and handle revisions.
-
-**Steps:**
-1. Ask the user if they want any changes or additions
-2. Repeat Phase 2-4 after any revisions
-3. Stop once the user confirms satisfaction
+> **Full content:** `templates/boost-prompt/phases.md`
 
 ## Actions Summary
 
@@ -138,3 +83,10 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 4. Copy to clipboard via Joyride
 5. Present in chat
 6. Ask for feedback and iterate if needed
+
+
+## Template References
+
+Templates in `templates/boost-prompt/`:
+- `phases.md`
+- `tools_required.md`

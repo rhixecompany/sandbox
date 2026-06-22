@@ -87,55 +87,17 @@ This workflow guides you through a systematic approach to identify missing featu
 
 ## 3. Prioritization Phase
 
-- Apply a score to each identified gap:
+> - Apply a score to each identified gap:
+> **Scoring Matrix (1-5 scale):**
 
-**Scoring Matrix (1-5 scale):**
-
-- User Impact: How many users benefit?
-- Strategic Alignment: Fits core mission?
-- Implementation Feasibility: Technical complexity?
-- Resource Requirements: Development effort needed?
-- Risk Level: Potential negative impacts?
-
-**Priority = (User Impact × Strategic Alignment) / (Implementation Effort × Risk Level)**
-
-**Output Creation:**
-
-- Present the top 3 highest-priority missing features based on the scoring
-- For each, provide:
-  - Feature name
-  - Current status
-  - Impact if not implemented
-  - Dependencies on other features
+> **Full content:** `templates/gen-specs-as-issues/3_prioritization_phase.md`
 
 ## 4. Specification Development Phase
 
-- For each prioritized feature, develop a detailed but practical specification:
-  - Begin with the philosophical approach: simplicity over complexity
-  - Focus on MVP functionality first
-  - Consider the developer experience
-  - Keep the specification implementation-friendly
+> - For each prioritized feature, develop a detailed but practical specification:
+> - Begin with the philosophical approach: simplicity over complexity
 
-**For Each Feature Specification:**
-
-1. **Overview & Scope**
-   - What problem does it solve?
-   - What's included and what's explicitly excluded?
-
-2. **Technical Requirements**
-   - Core functionality needed
-   - User-facing interfaces (API, UI, CLI, etc.)
-   - Integration points with existing code
-
-3. **Implementation Plan**
-   - Key modules/files to create or modify
-   - Simple code examples showing the approach
-   - Clear data structures and interfaces
-
-4. **Acceptance Criteria**
-   - How will we know when it's done?
-   - What specific functionality must work?
-   - What tests should pass?
+> **Full content:** `templates/gen-specs-as-issues/4_specification_developme.md`
 
 ## 5. GitHub Issue Creation Phase
 
@@ -185,26 +147,10 @@ This workflow guides you through a systematic approach to identify missing featu
 
 ## 5.5 Work Distribution Optimization
 
-- **Independence Analysis**
-  - Review each specification to identify truly independent components
-  - Refactor specifications to maximize independent work streams
-  - Create clear boundaries between interdependent components
+> - **Independence Analysis**
+> - Review each specification to identify truly independent components
 
-- **Dependency Mapping**
-  - For features with unavoidable dependencies, establish clear issue hierarchies
-  - Create parent issues for the overall feature with sub-issues for components
-  - Explicitly document "blocked by" and "blocks" relationships
-
-- **Workload Balancing**
-  - Break down large specifications into smaller, manageable sub-issues
-  - Ensure each sub-issue represents 1-3 days of development work
-  - Include sub-issue specific acceptance criteria
-
-**Implementation Guidelines:**
-
-- Use GitHub issue linking syntax to create explicit relationships
-- Add labels to indicate dependency status (e.g., "blocked", "prerequisite")
-- Include estimated complexity/effort for each issue to aid sprint planning
+> **Full content:** `templates/gen-specs-as-issues/55_work_distribution_opti.md`
 
 ## 6. Final Review Phase
 
@@ -222,3 +168,23 @@ Remember throughout this process:
 - Consider the open-source community and contribution model
 
 This workflow embodiment of our approach should help maintain consistency in how features are specified and prioritized, ensuring that software projects evolve in a thoughtful, user-centered way.
+
+
+## Template References
+
+Detailed templates in `templates/gen-specs-as-issues/`:
+
+
+## Template References
+
+Templates in `templates/gen-specs-as-issues/`:
+- `1_project_understanding_p.md`
+- `2_gap_analysis_phase.md`
+- `3_prioritization_phase.md`
+- `4_specification_developme.md`
+- `55_work_distribution_opti.md`
+- `5_github_issue_creation_p.md`
+- `6_final_review_phase.md`
+- `inputs.md`
+- `phases.md`
+- `rules.md`

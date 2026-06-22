@@ -62,34 +62,10 @@ Deploy, manage, and govern MCP-based declarative agents in Microsoft 365 using t
 
 ## Agent Types
 
-### Published by Organization
-- Built with predefined instructions and actions
-- Follow structured logic for predictable tasks
-- Require admin approval and publishing process
-- Support compliance and governance requirements
+> ### Published by Organization
+> - Built with predefined instructions and actions
 
-### Shared by Creator
-- Created in Microsoft 365 Copilot Studio or Agent Builder
-- Shared directly with specific users
-- Enhanced functionality with search, actions, connectors, APIs
-- Visible to admins in agent registry
-
-### Microsoft Agents
-- Developed and maintained by Microsoft
-- Integrated with Microsoft 365 services
-- Pre-approved and ready to use
-
-### External Partner Agents
-- Created by verified external developers/vendors
-- Subject to admin approval and control
-- Configurable availability and permissions
-
-### Frontier Agents
-- Experimental or advanced capabilities
-- May require limited rollout or additional oversight
-- Examples:
-  - **App Builder agent**: Managed via M365 Copilot or Power Platform admin center
-  - **Workflows agent**: Flow automation managed via Power Platform admin center
+> **Full content:** `templates/mcp-deploy-manage-agents/agent_types.md`
 
 ## Admin Roles and Permissions
 
@@ -134,61 +110,10 @@ Options for distribution:
 
 ## Deployment Workflows
 
-### Publish to Organization
+> ### Publish to Organization
+> **For Agent Developers:**
 
-**For Agent Developers:**
-1. Build agent with Microsoft 365 Agents Toolkit
-2. Test thoroughly in development
-3. Submit agent for approval
-4. Wait for admin review
-
-**For Admins:**
-1. Review submitted agent in admin center
-2. Validate compliance and security
-3. Approve for organizational use
-4. Configure deployment settings
-5. Publish to selected users or organization-wide
-
-### Deploy via Agent Store
-
-**Developer Steps:**
-1. Complete agent development and testing
-2. Package agent for submission
-3. Submit to Partner Center
-4. Await validation process
-5. Receive approval notification
-6. Agent appears in Copilot store
-
-**Admin Steps:**
-1. Discover agents in Copilot store
-2. Review agent details and permissions
-3. Assign to organization or user groups
-4. Monitor usage and feedback
-
-### Deploy Organizational Agent
-
-**Admin Deployment Options:**
-```
-Organization-wide:
-- All employees with Copilot license
-- Automatically available in Copilot
-
-Group-based:
-- Specific departments or teams
-- Security group assignments
-- Role-based access control
-```
-
-**Configuration Steps:**
-1. Navigate to Agents page in admin center
-2. Select agent to deploy
-3. Choose deployment scope:
-   - All users
-   - Specific security groups
-   - Individual users
-4. Set availability status
-5. Configure permissions if applicable
-6. Deploy and monitor
+> **Full content:** `templates/mcp-deploy-manage-agents/deployment_workflows.md`
 
 ## User Experience
 
@@ -383,3 +308,10 @@ Then provide:
 - Monitoring and reporting plan
 
 ````
+
+
+## Template References
+
+Detailed templates in `templates/mcp-deploy-manage-agents/`:
+- `agent_types.md`
+- `deployment_workflows.md`

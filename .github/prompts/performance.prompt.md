@@ -1,7 +1,9 @@
 ---
 name: "performance"
 description: "Comprehensive performance prompt focused on measurable improvements and safe optimizations."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt when performance issues are suspected or when implementing featu
 
 ## Phases
 
-### Phase 1: Baseline and Bottleneck Discovery
+> ### Phase 1: Baseline and Bottleneck Discovery
+> ### Phase 2: Targeted Optimization
 
-| Field | Details |
-| --- | --- |
-| Goal | Identify current performance characteristics and dominant bottlenecks. |
-| Inputs | Metrics, traces, logs, query stats, bundle data, user reports. |
-| Outputs | Ranked bottleneck list with measurable baseline. |
-| Validation | Bottlenecks are supported by observable data rather than assumptions. |
-
-### Phase 2: Targeted Optimization
-
-| Field | Details |
-| --- | --- |
-| Goal | Apply minimal, high-impact optimizations to top bottlenecks. |
-| Inputs | Bottleneck ranking, architecture constraints, risk limits. |
-| Outputs | Focused optimization changes and expected impact notes. |
-| Validation | Changes directly address measured bottlenecks and preserve behavior. |
-
-### Phase 3: Re-measurement and Regression Check
-
-| Field | Details |
-| --- | --- |
-| Goal | Confirm improvements and ensure no behavioral regressions. |
-| Inputs | Updated metrics and test results. |
-| Outputs | Before/after comparison with residual risk callouts. |
-| Validation | Performance delta is demonstrable and functional behavior remains correct. |
+> **Full content:** `templates/performance/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt when performance issues are suspected or when implementing featu
 2. Optimize the biggest bottlenecks only.
 3. Re-measure and validate correctness.
 4. Report measurable outcomes.
+
+
+## Template References
+
+Templates in `templates/performance/`:
+- `phases.md`

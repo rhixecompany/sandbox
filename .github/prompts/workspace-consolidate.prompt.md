@@ -78,8 +78,8 @@ both human readers and AI consumption.
 
 ## Sources
 
-- `Prompts/repo.prompts.md` — 5-phase repo migration workflow
-- `Prompts/bash-scripts-fix.prompts.md` — Script modernization workflow
+- `.github/prompts/repo.prompt.md` — 5-phase repo migration workflow
+- `.github/prompts/bash-scripts-fix.prompt.md` — Script modernization workflow
 - `docs/bash-migration-final-report.md` — Status: 54 scripts migrated, 100%
   passing
 

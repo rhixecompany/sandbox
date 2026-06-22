@@ -141,3 +141,10 @@ Look for existing sections with these patterns:
 - Sort files alphabetically by default
 - Handle special characters in filenames
 - Validate all generated markdown syntax
+
+
+## Template References
+
+Templates in `templates/update-markdown-file-index/`:
+- `files_in_folder.md`
+- `phases.md`

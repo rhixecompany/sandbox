@@ -93,40 +93,10 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 
 ## URL Resolver
 
-### Ambiguous Queries
+> ### Ambiguous Queries
+> When no specific URL or file is provided, but instead raw data relevant to worki
 
-When no specific URL or file is provided, but instead raw data relevant to working with Copilot, resolve to:
-
-1. **Identify topic category**:
-   - Workspace files → Search ${workspaceFolder} for .prompt.md, .agent.md, .instructions.md, .collections.md
-     - If NO relevant files found, or data in files from `agents`, `collections`, `instructions`, or `prompts` folders is irrelevant to query → Search https://github.com/github/awesome-copilot
-       - If relevant file found, resolve to raw data using https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}} (e.g., https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md)
-   - MCP servers → https://modelcontextprotocol.io/ or https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-   - Inline chat (Ctrl+I) → https://code.visualstudio.com/docs/copilot/inline-chat
-   - Chat tools/agents → https://code.visualstudio.com/docs/copilot/chat/
-   - General Copilot → https://code.visualstudio.com/docs/copilot/ or https://docs.github.com/en/copilot/
-
-2. **Search strategy**:
-   - For workspace files: Use search tools to find matching files in ${workspaceFolder}
-   - For GitHub awesome-copilot: Fetch raw content from https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/
-   - For documentation: Use fetch tool with the most relevant URL from above
-
-3. **Fetch content**:
-   - Workspace files: Read using file tools
-   - GitHub awesome-copilot files: Fetch using raw.githubusercontent.com URLs
-   - Documentation URLs: Fetch using fetch tool
-
-4. **Evaluate and respond**:
-   - Use the fetched content as the reference for completing the request
-   - Adapt response verbosity based on chat context
-
-### Unambiguous Queries
-
-If the user **DOES** provide a specific URL or file, skip searching and fetch/read that directly.
-
-### Optional
-
-- **Help output** - Raw data matching `-h`, `--help`, `/?`, `--tldr`, `--man`, etc.
+> **Full content:** `templates/tldr-prompt/url_resolver.md`
 
 ## Usage
 
@@ -151,91 +121,10 @@ If the user **DOES** provide a specific URL or file, skip searching and fetch/re
 
 ## Error Handling
 
-### Missing Required Parameters
+> ### Missing Required Parameters
+> **Agent Response when NO Required Data**
 
-**User**
-
-```bash
-/tldr-prompt
-```
-
-**Agent Response when NO Required Data**
-
-```text
-Error: Missing required input.
-
-You MUST provide one of the following:
-1. A Copilot file: /tldr-prompt #file:{{name.prompt.md | name.agent.md | name.instructions.md | name.collections.md}}
-2. A URL: /tldr-prompt #fetch {{https://example.com/docs}}
-3. A search query: /tldr-prompt "{{topic}}" (e.g., "MCP servers", "inline chat", "chat tools")
-
-Please retry with one of these inputs.
-```
-
-### AMBIGUOUS QUERIES
-
-#### Workspace Search
-
-> [!NOTE] First attempt to resolve using workspace files. If found, generate output. If no relevant files found, resolve using GitHub awesome-copilot as specified in **URL Resolver** section.
-
-**User**
-
-```bash
-/tldr-prompt "Prompt files relevant to Java"
-```
-
-**Agent Response when Relevant Workspace Files Found**
-
-```text
-I'll search ${workspaceFolder} for Copilot customization files (.prompt.md, .agent.md, .instructions.md, .collections.md) relevant to Java.
-From the search results, I'll produce a tldr output for each file found.
-```
-
-**Agent Response when NO Relevant Workspace Files Found**
-
-```text
-I'll check https://github.com/github/awesome-copilot
-Found:
-- https://github.com/github/awesome-copilot/blob/main/prompts/java-docs.prompt.md
-- https://github.com/github/awesome-copilot/blob/main/prompts/java-junit.prompt.md
-
-Now let me fetch the raw content:
-- https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-docs.prompt.md
-- https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md
-
-I'll create a tldr summary for each prompt file.
-```
-
-### UNAMBIGUOUS QUERIES
-
-#### File Query
-
-**User**
-
-```bash
-/tldr-prompt #file:typescript-mcp-server-generator.prompt.md
-```
-
-**Agent**
-
-```text
-I'll read the file typescript-mcp-server-generator.prompt.md and create a tldr summary.
-```
-
-#### Documentation Query
-
-**User**
-
-```bash
-/tldr-prompt "How do MCP servers work?" #fetch https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-```
-
-**Agent**
-
-```text
-I'll fetch the MCP server documentation from https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-and create a tldr summary of how MCP servers work.
-```
+> **Full content:** `templates/tldr-prompt/error_handling.md`
 
 ## Workflow
 
@@ -308,3 +197,10 @@ Your output is complete when:
 - ✓ Content accurately reflects the source file's/documentation's purpose and usage
 - ✓ Response verbosity is appropriate for chat context (inline chat vs chat view)
 - ✓ MCP server content includes setup and tool usage examples when applicable
+
+
+## Template References
+
+Detailed templates in `templates/tldr-prompt/`:
+- `error_handling.md`
+- `url_resolver.md`

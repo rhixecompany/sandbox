@@ -60,178 +60,24 @@ tools:
 
 ## Phase 2: User Profile Features
 
-### Task 2.1: Profile View Page ✅
+> ### Task 2.1: Profile View Page ✅
+> **File:** `src/app/(root)/profile/page.tsx`
 
-**File:** `src/app/(root)/profile/page.tsx`
-
-**Features:**
-
-- [x] Display current user information
-- [x] User avatar with fallback
-- [x] Account statistics (comics read, bookmarks)
-- [x] Recent activity feed
-- [x] Quick action buttons
-
-**Components:**
-
-- `ProfileView` - Main profile display
-- `ProfileStats` - Statistics cards
-- `RecentActivity` - Activity list
-
----
-
-### Task 2.2: Profile Edit Page ✅
-
-**File:** `src/app/(root)/profile/edit/page.tsx`
-
-**Features:**
-
-- [x] Edit form with Zod validation
-- [x] Avatar upload support
-- [x] Success/error feedback
-- [x] Redirect on success
-
-**Schema:** `ProfileUpdateSchema` in `src/schemas/profile.schema.ts` **Action:** `updateProfileAction` in `src/actions/profile.actions.ts`
-
----
-
-### Task 2.3: Change Password Page ✅
-
-**File:** `src/app/(root)/profile/change-password/page.tsx`
-
-**Features:**
-
-- [x] Current/new password validation
-- [x] Password strength indicator
-- [x] Security feedback
-
-**Schema:** `ChangePasswordSchema` in `src/schemas/profile.schema.ts` **Action:** `changePasswordAction` in `src/actions/profile.actions.ts`
-
----
-
-### Task 2.4: Settings Page ✅
-
-**File:** `src/app/(root)/profile/settings/page.tsx`
-
-**Features:**
-
-- [x] Notification preferences
-- [x] Privacy settings
-- [x] Account settings (theme, language)
-- [x] Danger zone (delete account)
-
----
+> **Full content:** `templates/features/phase_2_user_profile_features.md`
 
 ## Phase 3: Comic Features
 
-### Task 3.1: Comics Listing Page ✅
+> ### Task 3.1: Comics Listing Page ✅
+> **File:** `src/app/(root)/comics/page.tsx` (373 lines)
 
-**File:** `src/app/(root)/comics/page.tsx` (373 lines)
-
-**Features:**
-
-- [x] Responsive grid layout (2/3/4 cols)
-- [x] Comic cards with lazy-loaded images
-- [x] Filter sidebar (genre, type, status)
-- [x] Sort options (latest, popular, rating)
-- [x] Search functionality
-- [x] Pagination (20 per page)
-- [x] Loading skeletons
-
-**Components:**
-
-- `ComicCard` - Reusable card component
-- `ComicFilters` - Filter sidebar
-- `ComicSearch` - Search input
-- `ComicPagination` - Page navigation
-
----
-
-### Task 3.2: Comic Details Page ✅
-
-**File:** `src/app/(root)/comics/[slug]/page.tsx` (303 lines)
-
-**Features:**
-
-- [x] Comic header with cover image
-- [x] Title, author, artist info
-- [x] Rating display with count
-- [x] Status and genre badges
-- [x] Description section
-- [x] Statistics (chapters, views)
-- [x] Bookmark toggle button
-- [x] Chapter list with links
-- [x] Related comics section
-
-**Components:**
-
-- `ComicHeader` - Header section
-- `ComicDescription` - Synopsis
-- `ComicStats` - Statistics display
-- `BookmarkActions` - Bookmark buttons
-- `ChapterList` - Chapter listing
-- `RelatedComics` - Recommendations
-
----
-
-### Task 3.3: Bookmark Components ✅
-
-**Files:**
-
-- `src/components/comics/AddToBookmarkButton.tsx`
-- `src/components/comics/RemoveFromBookmarkButton.tsx`
-- `src/components/comics/BookmarkStatus.tsx`
-- `src/components/bookmarks/BookmarkActions.tsx`
-
-**Features:**
-
-- [x] Optimistic UI updates
-- [x] Status dropdown (Reading, Plan to Read, etc.)
-- [x] Toast notifications
-- [x] Loading states
-
-**Actions:** `src/actions/bookmark.actions.ts`
-
-- `addToBookmarksAction`
-- `removeFromBookmarksAction`
-- `updateBookmarkStatusAction`
-
----
+> **Full content:** `templates/features/phase_3_comic_features.md`
 
 ## Phase 4: Chapter Reader
 
-### Task 4.1: Chapter Reader Page ✅
+> ### Task 4.1: Chapter Reader Page ✅
+> **File:** `src/app/(root)/comics/[slug]/[chapterNumber]/page.tsx`
 
-**File:** `src/app/(root)/comics/[slug]/[chapterNumber]/page.tsx`
-
-**Features:**
-
-- [x] Vertical scroll mode (default)
-- [x] Horizontal page mode option
-- [x] Fit to width/height options
-- [x] Zoom controls
-- [x] Full-screen mode
-- [x] Previous/next navigation
-- [x] Chapter dropdown
-- [x] Reading progress tracking
-- [x] Keyboard navigation (arrows, space, esc)
-- [x] Touch gestures (swipe)
-
-**Settings:**
-
-- Background color (white/dark/sepia)
-- Image quality (low/medium/high)
-- Zoom level slider
-
-**Components:**
-
-- `ChapterReader` - Main reader
-- `ImageViewer` - Image display
-- `ChapterNavigation` - Nav controls
-- `ReadingSettings` - Settings panel
-- `ReadingProgress` - Progress indicator
-
----
+> **Full content:** `templates/features/phase_4_chapter_reader.md`
 
 ## Phase 5: Bookmarks Management
 
@@ -272,90 +118,17 @@ tools:
 
 ## Root Pages
 
-### Task: Home Page Enhancement
+> ### Task: Home Page Enhancement
+> **File:** `src/app/(root)/page.tsx`
 
-**File:** `src/app/(root)/page.tsx`
-
-**Sections:**
-
-- [x] Hero section with CTA
-- [x] Featured comics carousel
-- [x] New releases section
-- [x] Popular this week
-- [x] Genre shortcuts
-
-**Components:**
-
-- `HeroSection` - Main banner
-- `FeaturedComics` - Carousel
-- `NewReleases` - Recent comics
-- `TrendingComics` - Popular section
-
----
-
-### Task: Browse Page
-
-**File:** `src/app/(root)/browse/page.tsx`
-
-**Features:**
-
-- [x] Genre grid (clickable cards)
-- [x] Author list (searchable)
-- [x] Type list
-- [x] Status filters
-
----
-
-### Task: Genre Pages
-
-**File:** `src/app/(root)/genres/[slug]/page.tsx`
-
-**Features:**
-
-- [x] Genre header with description
-- [x] Comics listing with filters
-- [x] Related genres links
-
----
+> **Full content:** `templates/features/root_pages.md`
 
 ## Server Actions Reference
 
-### Profile Actions (`src/actions/profile.actions.ts`)
+> ### Profile Actions (`src/actions/profile.actions.ts`)
+> ### Bookmark Actions (`src/actions/bookmark.actions.ts`)
 
-| Action                 | Schema                 | Status |
-| ---------------------- | ---------------------- | ------ |
-| `updateProfileAction`  | `ProfileUpdateSchema`  | ✅     |
-| `changePasswordAction` | `ChangePasswordSchema` | ✅     |
-| `updateSettingsAction` | `SettingsSchema`       | ✅     |
-| `deleteAccountAction`  | N/A                    | ✅     |
-
-### Bookmark Actions (`src/actions/bookmark.actions.ts`)
-
-| Action                       | Schema                 | Status |
-| ---------------------------- | ---------------------- | ------ |
-| `addToBookmarksAction`       | `CreateBookmarkSchema` | ✅     |
-| `removeFromBookmarksAction`  | N/A                    | ✅     |
-| `updateBookmarkStatusAction` | `UpdateBookmarkSchema` | ✅     |
-| `getUserBookmarksAction`     | N/A                    | ✅     |
-
-### Comic Actions (`src/actions/comic.actions.ts`)
-
-| Action                   | Schema              | Status |
-| ------------------------ | ------------------- | ------ |
-| `getComicBySlugAction`   | N/A                 | ✅     |
-| `getComicsListAction`    | `ComicFilterSchema` | ✅     |
-| `getRelatedComicsAction` | N/A                 | ✅     |
-
-### Chapter Actions (`src/actions/chapter.actions.ts`)
-
-| Action                      | Schema                  | Status |
-| --------------------------- | ----------------------- | ------ |
-| `getChapterAction`          | N/A                     | ✅     |
-| `getChapterListAction`      | N/A                     | ✅     |
-| `markChapterAsReadAction`   | N/A                     | ✅     |
-| `saveReadingProgressAction` | `ReadingProgressSchema` | ✅     |
-
----
+> **Full content:** `templates/features/server_actions_reference.md`
 
 ## Zod Schemas Reference
 
@@ -428,3 +201,13 @@ pnpm test:e2e tests/e2e/user-flows.spec.ts
 ---
 
 **Document Version:** 1.0.0 | **Last Updated:** 2026-02-01
+
+
+## Template References
+
+Detailed templates in `templates/features/`:
+- `phase_2_user_profile_features.md`
+- `phase_3_comic_features.md`
+- `phase_4_chapter_reader.md`
+- `root_pages.md`
+- `server_actions_reference.md`

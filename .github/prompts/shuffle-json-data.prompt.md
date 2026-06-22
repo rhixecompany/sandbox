@@ -97,26 +97,10 @@ When the default behavior is active, acceptable JSON resembles the following pat
 
 ## Unacceptable JSON (Default State)
 
-If the default behavior is active, reject files that contain nested objects or inconsistent property names. For example:
+> If the default behavior is active, reject files that contain nested objects or i
+> "VALID_PROPERTY_NAME-a": {
 
-```json
-[
-  {
-    "VALID_PROPERTY_NAME-a": {
-      "VALID_PROPERTY_NAME-a": "value",
-      "VALID_PROPERTY_NAME-b": "value"
-    },
-    "VALID_PROPERTY_NAME-b": "value"
-  },
-  {
-    "VALID_PROPERTY_NAME-a": "value",
-    "VALID_PROPERTY_NAME-b": "value",
-    "VALID_PROPERTY_NAME-c": "value"
-  }
-]
-```
-
-If variable overrides clearly explain how to handle nesting or differing properties, follow those instructions; otherwise do not attempt to shuffle the data.
+> **Full content:** `templates/shuffle-json-data/acceptable_json.md`
 
 ## Workflow
 
@@ -168,3 +152,12 @@ When provided, the following variables override the default state. Interpret clo
 - ignoreProperties
 - requiredProperties
 - nesting
+
+
+## Template References
+
+Templates in `templates/shuffle-json-data/`:
+- `acceptable_json.md`
+- `examples.md`
+- `phases.md`
+- `unacceptable_json_default.md`

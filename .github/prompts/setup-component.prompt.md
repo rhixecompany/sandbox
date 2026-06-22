@@ -75,3 +75,9 @@ Your goal is to generate a new React or Next.js component based on the projectâ€
 - Use shadcn/ui and Tailwind CSS for styling
 - Use TypeScript and co-locate tests
 - Follow project folder structure and naming conventions
+
+
+## Template References
+
+Templates in `templates/setup-component/`:
+- `phases.md`

@@ -1,7 +1,9 @@
 ---
 name: "typescript"
 description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 
 ## Phases
 
-### Phase 1: Type and Boundary Design
+> ### Phase 1: Type and Boundary Design
+> ### Phase 2: Implementation with Strict Safety
 
-| Field | Details |
-| --- | --- |
-| Goal | Define robust type contracts and execution boundaries before coding. |
-| Inputs | Feature requirements, existing interfaces, architecture constraints. |
-| Outputs | Typed API contracts, component boundaries, error model plan. |
-| Validation | Type contracts cover all expected inputs/outputs and failure paths. |
-
-### Phase 2: Implementation with Strict Safety
-
-| Field | Details |
-| --- | --- |
-| Goal | Implement type-safe behavior and consistent runtime validation. |
-| Inputs | Type plan, validation schemas, DAL abstractions, config wrappers. |
-| Outputs | Updated .ts/.tsx code with strict safety guarantees. |
-| Validation | No unsafe type escapes in critical paths and validation is enforced. |
-
-### Phase 3: Quality and Maintainability Review
-
-| Field | Details |
-| --- | --- |
-| Goal | Ensure readability, maintainability, and architecture alignment. |
-| Inputs | Updated code, diagnostics, and project quality rules. |
-| Outputs | Final code with notes on trade-offs and technical debt. |
-| Validation | Complex types are documented and architecture rules are respected. |
+> **Full content:** `templates/typescript/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 2. Implement safe runtime-validated logic.
 3. Align with Next.js and DAL conventions.
 4. Deliver maintainable strongly-typed code.
+
+
+## Template References
+
+Templates in `templates/typescript/`:
+- `phases.md`

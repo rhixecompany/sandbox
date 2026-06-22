@@ -77,130 +77,24 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 
 ## Analysis and Planning Phase
 
-Before creating the `llms.txt` file, you must complete a thorough analysis:
+> Before creating the `llms.txt` file, you must complete a thorough analysis:
+> ### Step 1: Review llms.txt Specification
 
-### Step 1: Review llms.txt Specification
-
-- Review the official specification at https://llmstxt.org/ to ensure full compliance
-- Understand the required format structure and guidelines
-- Note the specific markdown structure requirements
-
-### Step 2: Repository Structure Analysis
-
-- Examine the complete repository structure using appropriate tools
-- Identify the primary purpose and scope of the repository
-- Catalog all important directories and their purposes
-- List key files that would be valuable for LLM understanding
-
-### Step 3: Content Discovery
-
-- Identify README files and their locations
-- Find documentation files (`.md` files in `/docs/`, `/spec/`, etc.)
-- Locate specification files and their purposes
-- Discover configuration files and their relevance
-- Find example files and code samples
-- Identify any existing documentation structure
-
-### Step 4: Create Implementation Plan
-
-Based on your analysis, create a structured plan that includes:
-
-- Repository purpose and scope summary
-- Priority-ordered list of essential files for LLM understanding
-- Secondary files that provide additional context
-- Organizational structure for the llms.txt file
+> **Full content:** `templates/create-llms/analysis_and_planning_phase.md`
 
 ## Implementation Requirements
 
-### Format Compliance
+> ### Format Compliance
+> The `llms.txt` file must follow this exact structure per the specification:
 
-The `llms.txt` file must follow this exact structure per the specification:
-
-1. **H1 Header**: Single line with repository/project name (required)
-2. **Blockquote Summary**: Brief description in blockquote format (optional but recommended)
-3. **Additional Details**: Zero or more markdown sections without headings for context
-4. **File List Sections**: Zero or more H2 sections containing markdown lists of links
-
-### Content Requirements
-
-#### Required Elements
-
-- **Project Name**: Clear, descriptive title as H1
-- **Summary**: Concise blockquote explaining the repository's purpose
-- **Key Files**: Essential files organized by category (H2 sections)
-
-#### File Link Format
-
-Each file link must follow: `[descriptive-name](relative-url): optional description`
-
-#### Section Organization
-
-Organize files into logical H2 sections such as:
-
-- **Documentation**: Core documentation files
-- **Specifications**: Technical specifications and requirements
-- **Examples**: Sample code and usage examples
-- **Configuration**: Setup and configuration files
-- **Optional**: Secondary files (special meaning - can be skipped for shorter context)
-
-### Content Guidelines
-
-#### Language and Style
-
-- Use concise, clear, unambiguous language
-- Avoid jargon without explanation
-- Write for both human and LLM readers
-- Be specific and informative in descriptions
-
-#### File Selection Criteria
-
-Include files that:
-
-- Explain the repository's purpose and scope
-- Provide essential technical documentation
-- Show usage examples and patterns
-- Define interfaces and specifications
-- Contain configuration and setup instructions
-
-Exclude files that:
-
-- Are purely implementation details
-- Contain redundant information
-- Are build artifacts or generated content
-- Are not relevant to understanding the project
+> **Full content:** `templates/create-llms/implementation_requirements.md`
 
 ## Execution Steps
 
-### Step 1: Repository Analysis
+> ### Step 1: Repository Analysis
+> 1. Examine the repository structure completely
 
-1. Examine the repository structure completely
-2. Read the main README.md to understand the project
-3. Identify all documentation directories and files
-4. Catalog specification files and their purposes
-5. Find example files and configuration files
-
-### Step 2: Content Planning
-
-1. Determine the primary purpose statement
-2. Write a concise summary for the blockquote
-3. Group identified files into logical categories
-4. Prioritize files by importance for LLM understanding
-5. Create descriptions for each file link
-
-### Step 3: File Creation
-
-1. Create the `llms.txt` file in the repository root
-2. Follow the exact format specification
-3. Include all required sections
-4. Use proper markdown formatting
-5. Ensure all links are valid relative paths
-
-### Step 4: Validation
-
-1. Verify compliance with https://llmstxt.org/ specification
-2. Check that all links are valid and accessible
-3. Ensure the file serves as an effective LLM navigation tool
-4. Confirm the file is both human and machine readable
+> **Full content:** `templates/create-llms/execution_steps.md`
 
 ## Quality Assurance
 
@@ -276,3 +170,11 @@ The created `llms.txt` file should:
 6. Include all critical files for project understanding
 7. Use clear, unambiguous language throughout
 8. Organize content logically for easy consumption
+
+
+## Template References
+
+Detailed templates in `templates/create-llms/`:
+- `analysis_and_planning_phase.md`
+- `execution_steps.md`
+- `implementation_requirements.md`

@@ -75,56 +75,10 @@ Follow the <workflow> below to generate and save implementation files for each s
 
 ## Step 2: Generate Implementation File
 
-Output the plan as a COMPLETE markdown document using the <plan_template>, ready to be saved as a `.md` file.
+> Output the plan as a COMPLETE markdown document using the <plan_template>, ready
+> The plan MUST include:
 
-The plan MUST include:
-
-- Complete, copy-paste ready code blocks with ZERO modifications needed
-- Exact file paths appropriate to the project structure
-- Markdown checkboxes for EVERY action item
-- Specific, observable, testable verification points
-- NO ambiguity - every instruction is concrete
-- NO "decide for yourself" moments - all decisions made based on research
-- Technology stack and dependencies explicitly stated
-- Build/test commands specific to the project type
-
-</workflow>
-
-<research_task> For the entire project described in the master plan, research and gather:
-
-1. **Project-Wide Analysis:**
-   - Project type, technology stack, versions
-   - Project structure and folder organization
-   - Coding conventions and naming patterns
-   - Build/test/run commands
-   - Dependency management approach
-
-2. **Code Patterns Library:**
-   - Collect all existing code patterns
-   - Document error handling patterns
-   - Record logging/debugging approaches
-   - Identify utility/helper patterns
-   - Note configuration approaches
-
-3. **Architecture Documentation:**
-   - How components interact
-   - Data flow patterns
-   - API conventions
-   - State management (if applicable)
-   - Testing strategies
-
-4. **Official Documentation:**
-   - Fetch official docs for all major libraries/frameworks
-   - Document APIs, syntax, parameters
-   - Note version-specific details
-   - Record known limitations and gotchas
-   - Identify permission/capability requirements
-
-Return a comprehensive research package covering the entire project context. </research_task>
-
-<plan_template>
-
-# {FEATURE_NAME}
+> **Full content:** `templates/structured-autonomy-generate/step_2_generate_implement.md`
 
 ## Goal
 
@@ -132,51 +86,14 @@ Return a comprehensive research package covering the entire project context. </r
 
 ## Prerequisites
 
-Make sure that the use is currently on the `{feature-name}` branch before beginning implementation. If not, move them to the correct branch. If the branch does not exist, create it from main.
+> Make sure that the use is currently on the `{feature-name}` branch before beginn
+> ### Step-by-Step Instructions
 
-### Step-by-Step Instructions
+> **Full content:** `templates/structured-autonomy-generate/prerequisites.md`
 
-#### Step 1: {Action}
+## Template References
 
-- [ ] {Specific instruction 1}
-- [ ] Copy and paste code below into `{file}`:
-
-```{language}
-{COMPLETE, TESTED CODE - NO PLACEHOLDERS - NO "TODO" COMMENTS}
-```
-
-- [ ] {Specific instruction 2}
-- [ ] Copy and paste code below into `{file}`:
-
-```{language}
-{COMPLETE, TESTED CODE - NO PLACEHOLDERS - NO "TODO" COMMENTS}
-```
-
-##### Step 1 Verification Checklist
-
-- [ ] No build errors
-- [ ] Specific instructions for UI verification (if applicable)
-
-#### Step 1 STOP & COMMIT
-
-**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
-
-#### Step 2: {Action}
-
-- [ ] {Specific Instruction 1}
-- [ ] Copy and paste code below into `{file}`:
-
-```{language}
-{COMPLETE, TESTED CODE - NO PLACEHOLDERS - NO "TODO" COMMENTS}
-```
-
-##### Step 2 Verification Checklist
-
-- [ ] No build errors
-- [ ] Specific instructions for UI verification (if applicable)
-
-#### Step 2 STOP & COMMIT
-
-**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change. </plan_template>
-
-```
+Templates in `templates/structured-autonomy-generate/`:
+- `phases.md`
+- `prerequisites.md`
+- `step_2_generate_implement.md`

@@ -1,7 +1,9 @@
 ---
 name: "prompts-strict-template"
 description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 
 ## Phases
 
-### Phase 1: Structural Intake
+> ### Phase 1: Structural Intake
+> ### Phase 2: Template Normalization
 
-| Field | Details |
-| --- | --- |
-| Goal | Identify structural deviations from required prompt template rules. |
-| Inputs | Target .prompt.md content and strict template requirements. |
-| Outputs | Gap report listing missing or malformed sections. |
-| Validation | Gap report fully maps all non-compliant structures. |
-
-### Phase 2: Template Normalization
-
-| Field | Details |
-| --- | --- |
-| Goal | Apply compliant structure while preserving existing prompt intent. |
-| Inputs | Gap report, source prompt content, section-order rules. |
-| Outputs | Normalized prompt with valid sections, phases, and numbering. |
-| Validation | Required structure is complete and content intent remains intact. |
-
-### Phase 3: Compliance Verification
-
-| Field | Details |
-| --- | --- |
-| Goal | Confirm final file satisfies all structural validation checks. |
-| Inputs | Normalized prompt and validation checklist. |
-| Outputs | Compliance confirmation with any residual warnings. |
-| Validation | All required checks pass with no missing sections or invalid numbering. |
+> **Full content:** `templates/prompts-strict-template/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 2. Normalize to strict template.
 3. Validate numbering and phase tables.
 4. Deliver compliance-preserving updates.
+
+
+## Template References
+
+Templates in `templates/prompts-strict-template/`:
+- `phases.md`

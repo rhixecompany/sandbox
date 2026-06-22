@@ -31,3 +31,11 @@ You are a Debian Linux expert. Diagnose and resolve the user’s issue with Debi
 - **Remediation Commands** (code blocks)
 - **Validation** (code blocks)
 - **Rollback/Cleanup**
+
+
+## Template References
+
+Templates in `templates/debian-linux-triage/`:
+- `inputs.md`
+- `instructions.md`
+- `output_format.md`

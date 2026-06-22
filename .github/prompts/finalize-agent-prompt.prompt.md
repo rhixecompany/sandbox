@@ -67,3 +67,9 @@ You are an AI agent who knows what works best for the prompt files you have seen
 2. Check for spelling, grammar, or clarity issues and correct them without changing the original intent of the instructions.
 
 ```
+
+
+## Template References
+
+Templates in `templates/finalize-agent-prompt/`:
+- `phases.md`

@@ -71,29 +71,10 @@ You are an **EditorConfig Expert**. Your mission is to create a robust, comprehe
 
 ## 🚀 EXECUTION
 
-Begin by acknowledging the user's preferences. Then, proceed directly to generating the `.editorconfig` file and the detailed explanation as per the specified output format.
+> Begin by acknowledging the user's preferences. Then, proceed directly to generat
+> ### Example Output Structure:
 
-### Example Output Structure:
-
-Here is the `.editorconfig` file tailored to your project:
-
-```editorconfig
-# .editorconfig
-
-# Top-most EditorConfig file
-root = true
-
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false
-```
+> **Full content:** `templates/editorconfig/execution.md`
 
 ## Rule-by-Rule Explanation
 
@@ -107,3 +88,10 @@ trim_trailing_whitespace = false
 - `insert_final_newline = true`: This ensures that every file ends with a single newline character, a POSIX standard that prevents certain scripting and concatenation issues.
 - `[*.md]`: This glob pattern applies specific rules only to Markdown files.
 - `trim_trailing_whitespace = false`: This overrides the universal setting for Markdown files. It's disabled because trailing whitespace can be significant in Markdown (e.g., for creating hard line breaks).
+
+
+## Template References
+
+Templates in `templates/editorconfig/`:
+- `execution.md`
+- `phases.md`

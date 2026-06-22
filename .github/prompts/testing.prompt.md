@@ -1,7 +1,9 @@
 ---
 name: "testing"
 description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
----## Goal
+---
+
+## Goal
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
 
@@ -43,32 +45,10 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 
 ## Phases
 
-### Phase 1: Coverage Planning
+> ### Phase 1: Coverage Planning
+> ### Phase 2: Test Authoring
 
-| Field | Details |
-| --- | --- |
-| Goal | Determine test scope and identify critical behavior to verify. |
-| Inputs | Feature changes, risk areas, existing tests, acceptance criteria. |
-| Outputs | Test plan covering unit and E2E scope as needed. |
-| Validation | Critical flows and regressions have explicit test intent. |
-
-### Phase 2: Test Authoring
-
-| Field | Details |
-| --- | --- |
-| Goal | Implement tests that are clear, deterministic, and behavior-focused. |
-| Inputs | Test plan, fixtures, mocks, runtime constraints. |
-| Outputs | New or updated tests in correct locations. |
-| Validation | Tests avoid flaky timing assumptions and external coupling. |
-
-### Phase 3: Execution and Gap Closure
-
-| Field | Details |
-| --- | --- |
-| Goal | Execute tests, fix failures, and close meaningful coverage gaps. |
-| Inputs | Test output, failure traces, CI requirements. |
-| Outputs | Passing tests and explicit note of any deferred gaps. |
-| Validation | Critical-path tests pass and remaining risks are documented. |
+> **Full content:** `templates/testing/phases.md`
 
 ## Steps
 
@@ -100,3 +80,9 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 2. Write deterministic tests.
 3. Execute and stabilize.
 4. Deliver clear test confidence and gap reporting.
+
+
+## Template References
+
+Templates in `templates/testing/`:
+- `phases.md`

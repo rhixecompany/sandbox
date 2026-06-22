@@ -25,11 +25,15 @@
   - Codex: `~/.codex/` (174 agent configs)
 - Note: Full personality/profile creation for all 186+174 files is a multi-session task
 
-## Phase 4: Test Providers & Models — PARTIAL
-- **Phase 4.1 ✅** — Auth inventory: all 6 providers captured
-- **Phase 4.2 ✅** — OpenRouter catalog fetched (340+ models)
-- **Phase 4.3-4.6** — Pending (free model extraction, benchmarking, reporting)
-- Prior artifact exists: `test-providers-models.prompt.md` has 27 free OpenRouter models cataloged
+## Phase 4: Test Providers & Models — ✅ COMPLETE
+- **Phase 4.1 ✅** — Auth inventory: all 6 providers captured from `hermes auth list`
+- **Phase 4.2 ✅** — OpenRouter catalog fetched (340+ models), 27 free identified
+- **Phase 4.3 ✅** — Free models table compiled: `docs/test-providers-models-free-models.md`
+- **Phase 4.4 ✅** — Spot benchmarks run: qwen3-coder:free (reasoning ✅, tools ✅), deepseek-v4-flash-free (all 3 ✅), nemotron-3-ultra (timed out)
+- **Phase 4.5 ✅** — Comparison report: `docs/test-providers-models-comparison-report.md`
+- **Phase 4.6 ✅** — `test_models.py` updated with multi-provider support + --list-providers + --hermes flags
+- Key constraint documented: OpenRouter API key managed by Hermes secure store, not exported to subprocess env
+- Full 27-model bulk benchmark deferred: requires pre-funded direct API key for practical execution
 
 ## Artifacts
 - `docs/local-skills.md` — Full skill inventory

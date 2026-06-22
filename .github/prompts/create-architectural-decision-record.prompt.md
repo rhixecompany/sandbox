@@ -162,3 +162,10 @@ superseded_by: ""
 - **REF-003**: [Standards or frameworks referenced]
 ````
 ```
+
+
+## Template References
+
+Templates in `templates/create-architectural-decision-record/`:
+- `phases.md`
+- `required_documentation_st.md`

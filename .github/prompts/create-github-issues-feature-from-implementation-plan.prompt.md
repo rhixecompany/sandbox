@@ -80,3 +80,9 @@ Create GitHub Issues for the implementation plan at `${file}`.
 - Title: Phase name from implementation plan
 - Description: Phase details, requirements, and context
 - Labels: Appropriate for issue type (feature/chore)
+
+
+## Template References
+
+Templates in `templates/create-github-issues-feature-from-implementation-plan/`:
+- `phases.md`

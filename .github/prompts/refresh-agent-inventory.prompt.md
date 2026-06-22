@@ -3,7 +3,9 @@ mode: ask
 description:
   'Refresh workspace customization inventory and patch stale AGENTS or copilot
   instruction references'
----## Goal
+---
+
+## Goal
 Use when ## Description to accomplish the associated tasks and objectives.
 
 
@@ -96,3 +98,9 @@ copilot instruction references.
 - Compare against canonical report and precedence rules.
 - Apply or propose minimal customization-file fixes.
 - Deliver a concise remediation report with evidence.
+
+
+## Template References
+
+Templates in `templates/refresh-agent-inventory/`:
+- `phases.md`

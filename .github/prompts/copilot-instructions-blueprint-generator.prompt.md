@@ -122,45 +122,10 @@ When context files don't provide specific guidance:
 
 ## Code Quality Standards
 
-${CODE_QUALITY_FOCUS.includes("Maintainability") || CODE_QUALITY_FOCUS == "All" ? `### Maintainability
+> ${CODE_QUALITY_FOCUS.includes("Maintainability") || CODE_QUALITY_FOCUS == "All" 
+> - Write self-documenting code with clear naming
 
-- Write self-documenting code with clear naming
-- Follow the naming and organization conventions evident in the codebase
-- Follow established patterns for consistency
-- Keep functions focused on single responsibilities
-- Limit function complexity and length to match existing patterns` : ""}
-
-${CODE_QUALITY_FOCUS.includes("Performance") || CODE_QUALITY_FOCUS == "All" ? `### Performance
-
-- Follow existing patterns for memory and resource management
-- Match existing patterns for handling computationally expensive operations
-- Follow established patterns for asynchronous operations
-- Apply caching consistently with existing patterns
-- Optimize according to patterns evident in the codebase` : ""}
-
-${CODE_QUALITY_FOCUS.includes("Security") || CODE_QUALITY_FOCUS == "All" ? `### Security
-
-- Follow existing patterns for input validation
-- Apply the same sanitization techniques used in the codebase
-- Use parameterized queries matching existing patterns
-- Follow established authentication and authorization patterns
-- Handle sensitive data according to existing patterns` : ""}
-
-${CODE_QUALITY_FOCUS.includes("Accessibility") || CODE_QUALITY_FOCUS == "All" ? `### Accessibility
-
-- Follow existing accessibility patterns in the codebase
-- Match ARIA attribute usage with existing components
-- Maintain keyboard navigation support consistent with existing code
-- Follow established patterns for color and contrast
-- Apply text alternative patterns consistent with the codebase` : ""}
-
-${CODE_QUALITY_FOCUS.includes("Testability") || CODE_QUALITY_FOCUS == "All" ? `### Testability
-
-- Follow established patterns for testable code
-- Match dependency injection approaches used in the codebase
-- Apply the same patterns for managing dependencies
-- Follow established mocking and test double patterns
-- Match the testing style used in existing tests` : ""}
+> **Full content:** `templates/copilot-instructions-blueprint-generator/code_quality_standards.md`
 
 ## Documentation Requirements
 
@@ -186,89 +151,17 @@ ${DOCUMENTATION_LEVEL == "Comprehensive" ? `- Follow the most detailed documenta
 
 ## Testing Approach
 
-${TESTING_REQUIREMENTS.includes("Unit") || TESTING_REQUIREMENTS == "All" ? `### Unit Testing
+> ${TESTING_REQUIREMENTS.includes("Unit") || TESTING_REQUIREMENTS == "All" ? `### 
+> - Match the exact structure and style of existing unit tests
 
-- Match the exact structure and style of existing unit tests
-- Follow the same naming conventions for test classes and methods
-- Use the same assertion patterns found in existing tests
-- Apply the same mocking approach used in the codebase
-- Follow existing patterns for test isolation` : ""}
-
-${TESTING_REQUIREMENTS.includes("Integration") || TESTING_REQUIREMENTS == "All" ? `### Integration Testing
-
-- Follow the same integration test patterns found in the codebase
-- Match existing patterns for test data setup and teardown
-- Use the same approach for testing component interactions
-- Follow existing patterns for verifying system behavior` : ""}
-
-${TESTING_REQUIREMENTS.includes("E2E") || TESTING_REQUIREMENTS == "All" ? `### End-to-End Testing
-
-- Match the existing E2E test structure and patterns
-- Follow established patterns for UI testing
-- Apply the same approach for verifying user journeys` : ""}
-
-${TESTING_REQUIREMENTS.includes("TDD") || TESTING_REQUIREMENTS == "All" ? `### Test-Driven Development
-
-- Follow TDD patterns evident in the codebase
-- Match the progression of test cases seen in existing code
-- Apply the same refactoring patterns after tests pass` : ""}
-
-${TESTING_REQUIREMENTS.includes("BDD") || TESTING_REQUIREMENTS == "All" ? `### Behavior-Driven Development
-
-- Match the existing Given-When-Then structure in tests
-- Follow the same patterns for behavior descriptions
-- Apply the same level of business focus in test cases` : ""}
+> **Full content:** `templates/copilot-instructions-blueprint-generator/testing_approach.md`
 
 ## Technology-Specific Guidelines
 
-${PROJECT_TYPE == ".NET" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### .NET Guidelines
+> ${PROJECT_TYPE == ".NET" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Mu
+> - Detect and strictly adhere to the specific .NET version in use
 
-- Detect and strictly adhere to the specific .NET version in use
-- Use only C# language features compatible with the detected version
-- Follow LINQ usage patterns exactly as they appear in the codebase
-- Match async/await usage patterns from existing code
-- Apply the same dependency injection approach used in the codebase
-- Use the same collection types and patterns found in existing code` : ""}
-
-${PROJECT_TYPE == "Java" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### Java Guidelines
-
-- Detect and adhere to the specific Java version in use
-- Follow the exact same design patterns found in the codebase
-- Match exception handling patterns from existing code
-- Use the same collection types and approaches found in the codebase
-- Apply the dependency injection patterns evident in existing code` : ""}
-
-${PROJECT_TYPE == "JavaScript" || PROJECT_TYPE == "TypeScript" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### JavaScript/TypeScript Guidelines
-
-- Detect and adhere to the specific ECMAScript/TypeScript version in use
-- Follow the same module import/export patterns found in the codebase
-- Match TypeScript type definitions with existing patterns
-- Use the same async patterns (promises, async/await) as existing code
-- Follow error handling patterns from similar files` : ""}
-
-${PROJECT_TYPE == "React" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### React Guidelines
-
-- Detect and adhere to the specific React version in use
-- Match component structure patterns from existing components
-- Follow the same hooks and lifecycle patterns found in the codebase
-- Apply the same state management approach used in existing components
-- Match prop typing and validation patterns from existing code` : ""}
-
-${PROJECT_TYPE == "Angular" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### Angular Guidelines
-
-- Detect and adhere to the specific Angular version in use
-- Follow the same component and module patterns found in the codebase
-- Match decorator usage exactly as seen in existing code
-- Apply the same RxJS patterns found in the codebase
-- Follow existing patterns for component communication` : ""}
-
-${PROJECT_TYPE == "Python" || PROJECT_TYPE == "Auto-detect" || PROJECT_TYPE == "Multiple" ? `### Python Guidelines
-
-- Detect and adhere to the specific Python version in use
-- Follow the same import organization found in existing modules
-- Match type hinting approaches if used in the codebase
-- Apply the same error handling patterns found in existing code
-- Follow the same module organization patterns` : ""}
+> **Full content:** `templates/copilot-instructions-blueprint-generator/technology-specific_guidelines.md`
 
 ## Version Control Guidelines
 
@@ -298,51 +191,20 @@ ${VERSIONING == "Custom" ? `- Match the exact versioning pattern observed in the
 
 ## Project-Specific Guidance
 
-- Scan the codebase thoroughly before generating any code
-- Respect existing architectural boundaries without exception
-- Match the style and patterns of surrounding code
-- When in doubt, prioritize consistency with existing code over external best practices
-```
+> - Scan the codebase thoroughly before generating any code
+> - Respect existing architectural boundaries without exception
 
-### 2. Codebase Analysis Instructions
-
-To create the copilot-instructions.md file, first analyze the codebase to:
-
-1. **Identify Exact Technology Versions**:
-   - ${PROJECT_TYPE == "Auto-detect" ? "Detect all programming languages, frameworks, and libraries by scanning file extensions and configuration files" : `Focus on ${PROJECT_TYPE} technologies`}
-   - Extract precise version information from project files, package.json, .csproj, etc.
-   - Document version constraints and compatibility requirements
-
-2. **Understand Architecture**:
-   - Analyze folder structure and module organization
-   - Identify clear layer boundaries and component relationships
-   - Document communication patterns between components
-
-3. **Document Code Patterns**:
-   - Catalog naming conventions for different code elements
-   - Note documentation styles and completeness
-   - Document error handling patterns
-   - Map testing approaches and coverage
-
-4. **Note Quality Standards**:
-   - Identify performance optimization techniques actually used
-   - Document security practices implemented in the code
-   - Note accessibility features present (if applicable)
-   - Document code quality patterns evident in the codebase
-
-### 3. Implementation Notes
-
-The final copilot-instructions.md should:
-
-- Be placed in the .github/copilot directory
-- Reference only patterns and standards that exist in the codebase
-- Include explicit version compatibility requirements
-- Avoid prescribing any practices not evident in the code
-- Provide concrete examples from the codebase
-- Be comprehensive yet concise enough for Copilot to effectively use
-
-Important: Only include guidance based on patterns actually observed in the codebase. Explicitly instruct Copilot to prioritize consistency with existing code over external best practices or newer language features. "
+> **Full content:** `templates/copilot-instructions-blueprint-generator/project-specific_guidance.md`
 
 ## Expected Output
 
 A comprehensive copilot-instructions.md file that will guide GitHub Copilot to produce code that is perfectly compatible with your existing technology versions and follows your established patterns and architecture.
+
+
+## Template References
+
+Detailed templates in `templates/copilot-instructions-blueprint-generator/`:
+- `code_quality_standards.md`
+- `project-specific_guidance.md`
+- `technology-specific_guidelines.md`
+- `testing_approach.md`
