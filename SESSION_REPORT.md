@@ -2,6 +2,8 @@
 
 Rolling 41-session summary (most recent first).
 
+2026-06-22T02:55:17+01:00 unknown | test123 | default | test
+2026-06-22T02:55:06+01:00 unknown | 20260622_022736_d8a8ef | default | unknown
 2026-06-21T16:41:18+01:00 session_end | 20260621_153250_bd9ebe | default | unknown
 2026-06-21T16:41:17+01:00 prompt | 20260621_153250_bd9ebe | default | unknown
 2026-06-21T16:41:15+01:00 session_start | 20260621_153250_bd9ebe | default | gpt-5.4-mini
