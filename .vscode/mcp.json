@@ -89,8 +89,8 @@
 			"type": "stdio"
 		},
 		"mcp-linear": {
-			"url": "https://mcp.linear.app/mcp",
-			"type": "oauth"
+			"type": "sse",
+			"url": "https://mcp.linear.app/mcp"
 		},
 		"mcp-memory": {
 			"args": [
@@ -124,8 +124,8 @@
 			"type": "stdio"
 		},
 		"mcp-smithery": {
-			"url": "https://mcp.smithery.run/rhixecompany",
-			"type": "oauth"
+			"type": "sse",
+			"url": "https://mcp.smithery.run/rhixecompany"
 		}
 	}
 }
