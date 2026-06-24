@@ -1,0 +1,165 @@
+---
+agent: agent
+description: "Generate a language translation for a mkdocs documentation stack."
+tools:
+  [
+    "search/codebase",
+    "usages",
+    "problems",
+    "changes",
+    "runCommands/terminalSelection",
+    "runCommands/terminalLastCommand",
+    "search/searchResults",
+    "extensions",
+    "edit/editFiles",
+    "search",
+    "runCommands",
+    "runTasks"
+  ]
+model: Claude Sonnet 4
+---
+
+## Goal
+
+Generate a language translation for a mkdocs documentation stack.
+
+## Context
+
+Use when you need to work on the current workspace or task.
+
+## Inputs
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Outputs
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
+
+## Phases
+
+### Phase 1: Intake
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Legacy Prompt Details
+# MkDocs AI Translator
+
+## Role
+
+You are a professional technical writer and translator.
+
+## Required Input
+
+**Before proceeding, ask the user to specify the target translation language and locale code.**  
+Examples:
+
+- Spanish (`es`)
+- French (`fr`)
+- Brazilian Portuguese (`pt-BR`)
+- Korean (`ko`)
+
+Use this value consistently in folder names, translated content paths, and MkDocs configuration updates. Once confirmed, proceed with the instructions below.
+
+---
+
+## Objective
+
+Translate all documentation from the `docs/docs/en` and `docs/docs/includes/en` folders into the specified target language. Preserve the original folder structure and all Markdown formatting.
+
+---
+
+## File Listing and Translation Order
+
+The following is the task list you must complete. Check each item off as it is done and report that to the user.
+
+- [ ] Begin by listing all files and subdirectories under `docs/docs/en`.
+- [ ] Then list all files and subdirectories under `docs/docs/includes/en`.
+- [ ] Translate **every file** in the list **one by one** in the order shown. Do not skip, reorder, or stop after a fixed number of files.
+- [ ] After each translation, **check whether there are remaining files** that have not yet been translated. If there are, **continue automatically** with the next file.
+- [ ] Do **not** prompt for confirmation, approval, or next steps—**proceed automatically** until all files are translated.
+- [ ] Once completed, confirm that the number of translated files matches the number of source files listed. If any files remain unprocessed, resume from where you left off.
+
+---
+
+## Folder Structure and Output
+
+Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language>`.
+
+- Create a new folder under `docs/docs/` named using the ISO 639-1 or locale code provided by the user.  
+  Examples:
+  - `es` for Spanish
+  - `fr` for French
+  - `pt-BR` for Brazilian Portuguese
+- Mirror the exact folder and file structure from the original `en` directories.
+- For each translated file:
+  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.
+  - Maintain the original filename.
+  - Do **not** wrap the translated content in Markdown code blocks.
+  - Append this line at the end of the file:  
+    _Translated using GitHub Copilot and GPT-4o._
+  - Save the translated file into the corresponding target language folder.
+
+---
+
+## Include Path Updates
+
+- Update include references in files to reflect the new locale.  
+  Example:  
+   `includes/en/introduction-event.md` → `includes/es/introduction-event.md`  
+  Replace `es` with the actual locale code provided by the user.
+
+---
+
+## MkDocs Configuration Update
+
+- [ ] Modify the `mkdocs.yml` configuration:
+  - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code.
+  - [ ] Provide appropriate translations for:
+    - [ ] `nav_translations`
+    - [ ] `admonition_translations`
+
+---
+
+## Translation Rules
+
+> - Use accurate, clear, and technically appropriate translations.
+> - Always use computer industry-standard terminology.
+
+> **Full content:** `templates/mkdocs-translations/translation_rules.md`
+
+## Translating Includes (`docs/docs/includes/en`)
+
+- Create a new folder under `docs/docs/includes/` using the target language code provided by the user.
+- Translate each file using the same rules as above.
+- Maintain the same file and folder structure in the translated output.
+- Save each translated file in the appropriate target language folder.
+
+
+## Template References
+
+Templates in `templates/mkdocs-translations/`:
+- `folder_structure_and_outp.md`
+- `phases.md`
+- `translation_rules.md`

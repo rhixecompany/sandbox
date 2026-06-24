@@ -1,0 +1,3 @@
+list triage all markdown documentation files in `pwd && ls pwd`, `ls docs/**`, consolidate documentation delete duplicates markdown documentation
+list triage all markdown prompt files in `pwd && ls pwd`, `ls .github/prompts/**`, migrate prompts in `pwd` to `.github/prompts` consolidate prompt delete duplicates,
+list triage the new `.github/prompts/**` create all needed skills,scripts update all prompts with the needed skills

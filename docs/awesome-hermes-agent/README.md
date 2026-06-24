@@ -11,12 +11,12 @@
 
 Hermes Agent is a **self-improving AI agent** built by [Nous Research](https://nousresearch.com) with a **built-in learning loop**:
 
-| Capability | Description |
-|------------|-------------|
-| **Skill Creation** | Creates skills from experience, improves them during use |
-| **Autonomous Curator** | v0.12.0+ maintains own skill library — grades, consolidates, prunes on a **7-day cycle** |
-| **Long-term Memory** | Searches past conversations, builds deepening user model across sessions |
-| **Flexible Deployment** | Runs on $5 VPS, GPU clusters, or serverless (7 terminal backends: Vercel Sandbox, Daytona, Modal, etc.) |
+| Capability                  | Description                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Skill Creation**          | Creates skills from experience, improves them during use                                                    |
+| **Autonomous Curator**      | v0.12.0+ maintains own skill library — grades, consolidates, prunes on a **7-day cycle**                    |
+| **Long-term Memory**        | Searches past conversations, builds deepening user model across sessions                                    |
+| **Flexible Deployment**     | Runs on $5 VPS, GPU clusters, or serverless (7 terminal backends: Vercel Sandbox, Daytona, Modal, etc.)     |
 | **18+ Messaging Platforms** | Telegram, Discord, Slack, WhatsApp, Signal, Feishu/Lark, WeCom, QQBot, Yuanbao + Microsoft Teams via plugin |
 
 ---
@@ -33,10 +33,10 @@ Hermes Agent is a **self-improving AI agent** built by [Nous Research](https://n
 
 ## 🏷️ Maturity Tags
 
-| Tag | Meaning |
-|-----|---------|
-| **production** | Stable, documented, actively maintained — safe to build on |
-| **beta** | Works but evolving — expect rough edges |
+| Tag              | Meaning                                                            |
+| ---------------- | ------------------------------------------------------------------ |
+| **production**   | Stable, documented, actively maintained — safe to build on         |
+| **beta**         | Works but evolving — expect rough edges                            |
 | **experimental** | Proof of concept / early-stage — learn from it, don't depend on it |
 
 ---
@@ -46,6 +46,7 @@ Hermes Agent is a **self-improving AI agent** built by [Nous Research](https://n
 ### 1. Official Resources
 
 Core repositories maintained by Nous Research:
+
 - `hermes` — Main agent
 - `curator` — Autonomous skill library manager
 
@@ -53,26 +54,29 @@ Core repositories maintained by Nous Research:
 
 #### Community Skills
 
-| Skill | Description |
-|-------|-------------|
-| `execute_code` | Code execution capability |
-| `oh-my-claudecode` | Claude Code integration |
+| Skill               | Description                 |
+| ------------------- | --------------------------- |
+| `execute_code`      | Code execution capability   |
+| `oh-my-claudecode`  | Claude Code integration     |
 | `ralplan` / `ralph` | Planning & reasoning skills |
-| `triage` | Task prioritization |
-| `autopilot` | Autonomous operation mode |
+| `triage`            | Task prioritization         |
+| `autopilot`         | Autonomous operation mode   |
 
 #### agentskills.io Ecosystem
 
 Open-standard skills compatible across Hermes and other agent platforms:
+
 ```bash
 # Installation pattern
 python3 tools/install.py install --host hermes
 ```
+
 - `youtube-content` — YouTube content processing
 
 #### Plugins
 
 Extend core functionality:
+
 - Session storage: `~/.hermes/sessions/*.json`
 - Hooks: `pre_tool_call`
 - Testing: `cargo test`
@@ -81,33 +85,34 @@ Extend core functionality:
 
 #### Skill Registries & Discovery
 
-*(Listed but specific registries not detailed in source)*
+_(Listed but specific registries not detailed in source)_
 
 ---
 
 ### 3. Tools & Utilities
 
-| Tool | Purpose |
-|------|---------|
-| `hermes-migrate` / `hermes claw migrate` | Migration utilities |
+| Tool                                                                                  | Purpose                          |
+| ------------------------------------------------------------------------------------- | -------------------------------- |
+| `hermes-migrate` / `hermes claw migrate`                                              | Migration utilities              |
 | `mnemo_remember` / `mnemo_recall` / `mnemo_learn` / `mnemo_predict` / `mnemo_profile` | Mnemosyne memory system commands |
-| `on_session_start` | Session initialization hook |
-| `hermes memory setup` | Memory configuration |
-| `hermes mnemosyne stats` | Memory statistics |
-| `~/.hermes/skills` | Skills directory |
-| `skillclaw doctor hermes` / `skillclaw restore hermes` | Skill health & recovery |
-| `GET /v1/score?url=` / `GET /v1/search?q=` | API endpoints |
-| `agenttrace-session-audit` | Session auditing |
+| `on_session_start`                                                                    | Session initialization hook      |
+| `hermes memory setup`                                                                 | Memory configuration             |
+| `hermes mnemosyne stats`                                                              | Memory statistics                |
+| `~/.hermes/skills`                                                                    | Skills directory                 |
+| `skillclaw doctor hermes` / `skillclaw restore hermes`                                | Skill health & recovery          |
+| `GET /v1/score?url=` / `GET /v1/search?q=`                                            | API endpoints                    |
+| `agenttrace-session-audit`                                                            | Session auditing                 |
 
 #### Deployment
 
-*(Category exists but specific tools not detailed in source)*
+_(Category exists but specific tools not detailed in source)_
 
 ---
 
 ### 4. Integrations & Bridges
 
 Connect Hermes to external platforms:
+
 - **Cognitive primitives:** `think()`, `conflicts()`, `recall()`, `why_retrieved`
 - **Memory plugins:** `plugins/memory/`
 - **MCP Servers:** `mcp_servers` — Model Context Protocol integration
@@ -177,5 +182,5 @@ Opinionated bundles for teams wanting to get more from Hermes quickly without as
 
 ---
 
-**Source:** [GitHub Repository](https://github.com/0xNyk/awesome-hermes-agent)  
+**Source:** [GitHub Repository](https://github.com/0xNyk/awesome-hermes-agent)
 **Extracted:** 2026-06-08
