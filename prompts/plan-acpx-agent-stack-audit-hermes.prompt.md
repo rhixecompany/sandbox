@@ -1,3 +1,19 @@
+---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "acpx-stack-audit-hermes"
+title: "ACP Agent Stack Audit — Hermes"
+description: "Hermes agent stack audit: inventory Hermes agents, plugins, and MCP tool exposure."
+trigger: /acpx-stack-audit-hermes
+tags: []
+  - hermes
+  - acp
+  - audit
+  - agents
+  - hermes
+---
+
 ## Goal
 Use when ## Description to accomplish the associated tasks and objectives.
 ## Description

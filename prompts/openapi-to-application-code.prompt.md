@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Generate Application from OpenAPI Spec
+name: openapi-to-application-code
 agent: "agent"
 description: "Generate a complete, production-ready application from an OpenAPI specification"
 model: "GPT-4.1"
@@ -48,11 +53,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Generate Application from OpenAPI Spec
-
-Your goal is to generate a complete, working application from an OpenAPI specification using the active framework's conventions and best practices.
 
 ## Input Requirements
 

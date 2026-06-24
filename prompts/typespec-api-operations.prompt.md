@@ -1,9 +1,19 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Add TypeSpec API Operations
+name: typespec-api-operations
 mode: "agent"
 tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards"
 model: "gpt-4.1"
-tags: [typespec, m365-copilot, api-plugin, rest-operations, crud]
+tags: []
+  - typespec
+  - m365-copilot
+  - api-plugin
+  - rest-operations
+  - crud
 ---
 
 ## Goal
@@ -49,11 +59,6 @@ Use when you need to typespec api operations for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Add TypeSpec API Operations
-
-Add RESTful operations to an existing TypeSpec API plugin for Microsoft 365 Copilot.
 
 ## Adding GET Operations
 

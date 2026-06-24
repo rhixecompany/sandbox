@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Test Planning & Quality Assurance Prompt
+name: breakdown-test
 agent: "agent"
 description: "Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````text
-# Test Planning & Quality Assurance Prompt
 
 ## Goal
 

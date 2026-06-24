@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create TLDR Page
+name: create-tldr-page
 agent: "agent"
 description: "Create a tldr page from documentation URLs and command examples, requiring both URL and command name."
 tools: ["edit/createFile", "web/fetch"]
@@ -47,9 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create TLDR Page
 
 ## Overview
 

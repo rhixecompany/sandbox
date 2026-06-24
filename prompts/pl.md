@@ -1,3 +1,13 @@
+---
+name: pl
+title: "Pl"
+description: "Pl"
+version: 1.0.0
+author: "Hermes Agent"
+license: MIT
+tags: []
+---
+
 # Batch Fix All Errors, Warnings, and Deprecations
 
 ## Project Context & Constraints

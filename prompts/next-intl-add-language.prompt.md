@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Next Intl Add Language
+name: next-intl-add-language
 agent: "agent"
 tools:
   [
@@ -55,23 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-This is a guide to add a new language to a Next.js project using next-intl for internationalization,
-
-- For i18n, the application uses next-intl.
-- All translations are in the directory `./messages`.
-- The UI component is `src/components/language-toggle.tsx`.
-- Routing and middleware configuration are handled in:
-  - `src/i18n/routing.ts`
-  - `src/middleware.ts`
-
-When adding a new language:
-
-- Translate all the content of `en.json` to the new language. The goal is to have all the JSON entries in the new language for a complete translation.
-- Add the path in `routing.ts` and `middleware.ts`.
-- Add the language to `language-toggle.tsx`.
-
 
 ## Template References
 

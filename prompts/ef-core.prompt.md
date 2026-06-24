@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Entity Framework Core Best Practices
+name: ef-core
 agent: "agent"
 tools:
   [
@@ -54,11 +59,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Entity Framework Core Best Practices
-
-Your goal is to help me follow best practices when working with Entity Framework Core.
 
 ## Data Context Design
 

@@ -1,6 +1,14 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "documentation"
+title: "Documentation"
 description: "Comprehensive documentation prompt aligned to repository documentation standards."
+trigger: /documentation
+tags: []
+  - hermes
+  - documentation
 ---
 
 ## Goal

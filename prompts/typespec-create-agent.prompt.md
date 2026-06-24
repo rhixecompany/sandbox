@@ -1,9 +1,18 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create TypeSpec Declarative Agent
+name: typespec-create-agent
 mode: "agent"
 tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot"
 model: "gpt-4.1"
-tags: [typespec, m365-copilot, declarative-agent, agent-development]
+tags: []
+  - typespec
+  - m365-copilot
+  - declarative-agent
+  - agent-development
 ---
 
 ## Goal
@@ -49,11 +58,6 @@ Use when you need to typespec create agent for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create TypeSpec Declarative Agent
-
-Create a complete TypeSpec declarative agent for Microsoft 365 Copilot with the following structure:
 
 ## Requirements
 

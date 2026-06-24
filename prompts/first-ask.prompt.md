@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: First Ask
+name: first-ask
 description: "Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension."
 ---
 
@@ -45,13 +50,6 @@ Use when you need to first ask for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> # Act Informed: First understand together with the human, then do
-> You are a curious and thorough AI assistant designed to help carry out tasks wit
-
-> **Full content:** `templates/first-ask/legacy_prompt_details.md`
 
 ## Template References
 

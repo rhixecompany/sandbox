@@ -1,13 +1,24 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: bash-scripts-fix
 title: Bash Scripts Modernization and Consolidation
 trigger: /bash-scripts-fix
 description:
     Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
     scripts across the workspace.
-tags: [hermes, copilot, bash, scripts, typescript, automation, refactoring]
+tags: []
+  - hermes
+  - copilot
+  - bash
+  - scripts
+  - typescript
+  - automation
+  - refactoring
 dependencies:
-    - prompt:.github/prompts/context-map.prompt.md
-    - prompt:.github/prompts/update-implementation-plan.prompt.md
+    - prompt:context-map.prompt.md
+    - prompt:update-implementation-plan.prompt.md
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:dispatching-parallel-agents
@@ -30,7 +41,9 @@ skills:
     - systematic-debugging
     - simplify
     - acpx-executor
-    - script-orchestration---
+    - script-orchestration
+
+---
 
 > Search, identify, catalog, and modernize scripts across the workspace.
 

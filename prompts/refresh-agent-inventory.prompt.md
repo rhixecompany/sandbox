@@ -1,8 +1,19 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "refresh-agent-inventory"
+title: "Refresh Agent Inventory"
+description: >
+  Refresh workspace customization inventory and patch stale AGENTS or copilot
+  instruction references.
+trigger: /refresh-agent-inventory
+tags: []
+  - hermes
+  - agents
+  - inventory
+  - audit
 mode: ask
-description:
-  'Refresh workspace customization inventory and patch stale AGENTS or copilot
-  instruction references'
 ---
 
 ## Goal

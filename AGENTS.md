@@ -61,9 +61,9 @@ Context files follow the DRY hierarchy:
 
 ## Hermes Config (Current)
 
-- **Active Profile:** `default` — **OWL persona** (pragmatic senior engineer)
-- **Current Runtime:** qwen/qwen3-coder:free (OpenRouter) — _active primary_
-- **Primary Config:** qwen/qwen3-coder:free (OpenRouter)
+- **Active Profile:** `alexa` — **OWL persona** (pragmatic senior engineer)
+- **Current Runtime:** deepseek-v4-flash-free (opencode-zen) — _active primary_
+- **Primary Config:** deepseek-v4-flash-free (opencode-zen)
 - **Config:** `~/AppData/Local/hermes/config.yaml` (root = default profile)
 - **Hooks (3, shared):** `session-logger`, `session-auto-commit`, `governance-audit`
 - **Plugins (15 enabled):** `basic`, `copilot-provider`, `custom-provider`,
@@ -89,15 +89,15 @@ Context files follow the DRY hierarchy:
 
 ## Profile Inventory
 
-| Profile                        | Model                  | Provider   | Purpose                                 |
-| ------------------------------ | ---------------------- | ---------- | --------------------------------------- |
-| **default** ⬤                  | qwen/qwen3-coder:free  | OpenRouter | General purpose — **currently active**  |
-| alexa                          | deepseek-v4-flash-free | OpenRouter | System admin, operations                |
-| code-architect                 | deepseek-v4-flash-free | OpenRouter | Code changes, debugging, refactoring    |
-| creative-director              | deepseek-v4-flash-free | OpenRouter | Design, content, creative tasks         |
-| exec-assistant                 | deepseek-v4-flash-free | OpenRouter | Administrative, planning, coordination  |
-| patient-tutor                  | deepseek-v4-flash-free | OpenRouter | Explanations, tutorials, learning       |
-| research-analyst               | deepseek-v4-flash-free | OpenRouter | Deep research, synthesis, documentation |
+| Profile                        | Model                  | Provider     | Purpose                                 |
+| ------------------------------ | ---------------------- | ------------ | --------------------------------------- |
+| **alexa** ⬤                    | deepseek-v4-flash-free | opencode-zen | System admin, operations — **currently active** |
+| default                        | deepseek-v4-flash-free | opencode-zen | General purpose                         |
+| code-architect                 | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring    |
+| creative-director              | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks         |
+| exec-assistant                 | deepseek-v4-flash-free | opencode-zen | Administrative, planning, coordination  |
+| patient-tutor                  | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials, learning       |
+| research-analyst               | deepseek-v4-flash-free | opencode-zen | Deep research, synthesis, documentation |
 | arch                           | —                      | —          | (unconfigured)                          |
 | architect                      | —                      | —          | (unconfigured)                          |
 | debugger                       | —                      | —          | (unconfigured)                          |
@@ -126,12 +126,9 @@ Context files follow the DRY hierarchy:
 
 | Provider     | Role                                   | Status       |
 | ------------ | -------------------------------------- | ------------ |
-| openrouter   | Active primary (qwen/qwen3-coder:free) | ✓ Configured |
-| openai-codex | Available via plugin                   | ✓ Enabled    |
-| opencode-zen | Fallback (nemotron-3-ultra-free)       | ✓ In chain   |
-| nous         | Available via plugin                   | ✓ Enabled    |
-| huggingface  | Available via plugin                   | ✓ Enabled    |
-| ollama-cloud | Available via plugin                   | ✓ Enabled    |
+| opencode-zen | Active primary (deepseek-v4-flash-free) | ✓ Active     |
+| nous         | Fallback (stepfun/step-3.7-flash:free) | ✓ In chain   |
+| openrouter   | Fallback (qwen/qwen3-coder:free)       | ✓ In chain   |
 
 ## Environment Corrections (2026-06-21)
 

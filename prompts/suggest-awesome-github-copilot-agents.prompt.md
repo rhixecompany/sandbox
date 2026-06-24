@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Suggest Awesome GitHub Copilot Custom Agents
+name: suggest-awesome-github-copilot-agents
 agent: "agent"
 description: "Find GitHub Copilot custom agent files that add coverage the repo lacks and flag local duplicates or outdated copies."
 tools:
@@ -59,11 +64,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Suggest Awesome GitHub Copilot Custom Agents
-
-Analyze current repository context and suggest relevant Custom Agents files from the [GitHub awesome-copilot repository](https://github.com/github/awesome-copilot/blob/main/docs/README.agents.md) that are not already available in this repository. Custom Agent files are located in the [agents](https://github.com/github/awesome-copilot/tree/main/agents) folder of the awesome-copilot repository.
 
 ## Process
 

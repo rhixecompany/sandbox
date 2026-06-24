@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Database Schema Guide for ComicWise
+name: database
 agent: "agent"
 description: "Database schema knowledge base for ComicWise - use for any database-related tasks"
 tools:

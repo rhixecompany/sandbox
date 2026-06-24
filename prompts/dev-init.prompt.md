@@ -1,17 +1,27 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: dev-init
 title: Dev Init - Prompt Conversion and Enhancement Planning
 trigger: /dev-init
 description:
     Create a comprehensive plan for converting plaintext prompts to markdown,
     enhancing prompt quality, and updating related implementation plans.
-tags: [hermes, copilot, planning, prompts, conversion, enhancement]
+tags: []
+  - hermes
+  - copilot
+  - planning
+  - prompts
+  - conversion
+  - enhancement
 dependencies:
-    - prompt:.github/prompts/context-map.prompt.md
-    - prompt:.github/prompts/convert-plaintext-to-md.prompt.md
-    - prompt:.github/prompts/boost-prompt.prompt.md
-    - prompt:.github/prompts/ai-prompt-engineering-safety-review.prompt.md
-    - prompt:.github/prompts/update-implementation-plan.prompt.md
-    - prompt:.github/prompts/prompt-builder.prompt.md
+    - prompt:context-map.prompt.md
+    - prompt:convert-plaintext-to-md.prompt.md
+    - prompt:boost-prompt.prompt.md
+    - prompt:ai-prompt-engineering-safety-review.prompt.md
+    - prompt:update-implementation-plan.prompt.md
+    - prompt:prompt-builder.prompt.md
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:writing-skills
@@ -37,9 +47,12 @@ skills:
     - acpx-executor
     - executing-plans
     - simplify
-    ---
+
+---
+
+---
     >
-> Create a detailed prompt-library plan with file references, conversion steps,
+> Create a detailed prompt-library plan
 > and verification criteria.
 
 ## Goal

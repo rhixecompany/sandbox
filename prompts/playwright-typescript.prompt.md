@@ -1,6 +1,15 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "playwright-typescript"
+title: "Playwright Typescript"
 description: "Comprehensive Playwright TypeScript prompt aligned to repository testing standards."
+trigger: /playwright-typescript
+tags: []
+  - hermes
+  - typescript
+  - playwright
 ---
 
 ## Goal

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create Implementation Plan
+name: create-implementation-plan
 agent: "Plan"
 description: "Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure."
 tools:
@@ -68,9 +73,6 @@ Use when you need to update or create a plan for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create Implementation Plan
 
 ## Primary Directive
 

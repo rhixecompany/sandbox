@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Update Oo Component Documentation
+name: update-oo-component-documentation
 agent: "agent"
 description: "Update existing object-oriented component documentation following industry best practices and architectural documentation standards."
 tools:
@@ -65,13 +70,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> # Update Standard OO Component Documentation
-> Update the existing documentation file at: `${file}` by analyzing the correspond
-
-> **Full content:** `templates/update-oo-component-documentation/legacy_prompt_details.md`
 
 ## 1. Component Overview
 

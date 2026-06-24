@@ -1,8 +1,18 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: context-map
+name: context-map
 trigger: /context-map
 description: >-
   Build a dependency and reference map before making changes so implementation starts from the right files.
-tags: [hermes, copilot, analysis, dependencies, planning]
+tags: []
+  - hermes
+  - copilot
+  - analysis
+  - dependencies
+  - planning
 dependencies:
   - skill:codemap
 skills:

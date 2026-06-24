@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Migrate To Next16
+name: migrate-to-next16
 agent: "Next.js Expert"
 model: GPT-4.1 (copilot)
 tools:

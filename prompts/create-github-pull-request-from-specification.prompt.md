@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create GitHub Pull Request from Specification
+name: create-github-pull-request-from-specification
 agent: "agent"
 description: "Create GitHub Pull Request for feature request from specification file using pull_request_template.md template."
 tools:
@@ -55,11 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create GitHub Pull Request from Specification
-
-Create GitHub Pull Request for the specification at `${workspaceFolder}/.github/pull_request_template.md` .
 
 ## Process
 

@@ -1,11 +1,16 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Test Providers & Models
 trigger: /test-providers-models
+name: test-providers-models
 description: >-
   Inventory all authorized LLM providers from hermes auth list, discover their
   free-tier models, run standardized benchmarks (reasoning, tool calling,
   knowledge), and produce a cross-provider comparison report. Covers 6
   providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter.
-tags:
+tags: []
   - hermes
   - providers
   - models
@@ -19,7 +24,7 @@ tags:
   - openai
   - openrouter
 dependencies:
-  - provider:hermes-auth
+  - skill:provider:hermes-auth
   - skill:using-superpowers
   - skill:plans-and-specs
   - skill:user-communication-preferences

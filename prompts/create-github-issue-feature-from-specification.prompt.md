@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create GitHub Issue from Specification
+name: create-github-issue-feature-from-specification
 agent: "agent"
 description: "Create GitHub Issue for feature request from specification file using feature_request.yml template."
 tools:
@@ -55,11 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create GitHub Issue from Specification
-
-Create GitHub Issue for the specification at `${file}`.
 
 ## Process
 

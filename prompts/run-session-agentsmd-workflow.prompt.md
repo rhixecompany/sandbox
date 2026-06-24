@@ -1,6 +1,17 @@
 ---
-description: "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting"
-agent: "agent"
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "run-session-agentsmd-workflow"
+title: "Run Agents.md Workflow"
+description: "Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting."
+trigger: /run-session-agentsmd-workflow
+tags: []
+  - hermes
+  - agents
+  - workflow
+  - session
+agent: agent
 ---
 
 ## Goal

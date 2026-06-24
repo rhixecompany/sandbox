@@ -1,12 +1,23 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: ai-prompt-engineering-safety-review
+name: ai-prompt-engineering-safety-review
 trigger: /ai-prompt-engineering-safety-review
 description: >-
   Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
-tags: [hermes, copilot, safety, security, bias, optimization]
+tags: []
+  - hermes
+  - copilot
+  - safety
+  - security
+  - bias
+  - optimization
 dependencies:
-  - command:/prompt-engineering
+  - skill:/prompt-engineering
   - skill:systematic-debugging
-  - command:/context-map
+  - skill:/context-map
 skills:
   - prompt-engineering
   - systematic-debugging

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: GitHub Issue Planning & Project Automation Prompt
+name: breakdown-plan
 agent: "agent"
 description: "Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````text
-# GitHub Issue Planning & Project Automation Prompt
 
 ## Goal
 

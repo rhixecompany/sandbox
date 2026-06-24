@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Add Educational Comments
+name: add-educational-comments
 agent: "agent"
 description: "Add educational comments to the file specified, or prompt asking for file to comment if one is not provided."
 tools: ["edit/editFiles", "web/fetch", "todos"]
@@ -47,11 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Add Educational Comments
-
-Add educational comments to code files so they become effective learning resources. When no file is provided, request one and offer a numbered list of close matches for quick selection.
 
 ## Role
 

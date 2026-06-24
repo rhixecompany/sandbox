@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: ASP.NET .NET Framework Containerization Prompt
+name: containerize-aspnet-framework
 agent: "agent"
 tools: ["search/codebase", "edit/editFiles", "terminalCommand"]
 description: "Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project."

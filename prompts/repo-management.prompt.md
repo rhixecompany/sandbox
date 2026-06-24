@@ -1,4 +1,8 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: repo-management
 title: Repo Management Pipeline
 trigger: /repo-management
 description: >
@@ -11,9 +15,18 @@ system: |
   across multiple git repositories. Every destructive operation (branch delete,
   file removal, dependency removal) requires explicit verification before and after.
   You never start a later phase before the previous phase's acceptance criteria pass.
-tags: [hermes, repos, git, branches, migration, bun, ci, consolidation, maintenance]
+tags: []
+  - hermes
+  - repos
+  - git
+  - branches
+  - migration
+  - bun
+  - ci
+  - consolidation
+  - maintenance
 dependencies:
-  - prompt:.github/prompts/context-map.prompt.md
+  - skill:prompt:context-map.prompt.md
   - skill:plans-and-specs
   - skill:systematic-debugging
   - skill:git-helper

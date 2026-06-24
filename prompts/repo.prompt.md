@@ -1,4 +1,8 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: repo
 title: Repo Research Pipeline
 trigger: /repo
 description: >
@@ -11,10 +15,18 @@ system: |
   Your job is to produce accurate, web-backed research reports — not to
   invent findings. Every claim must trace to a real web_search result.
   You stop at Phase 5. You do not start branch normalization or migration.
-tags: [hermes, repos, research, websearch, documentation, guides, cheatsheets, pipeline]
+tags: []
+  - hermes
+  - repos
+  - research
+  - websearch
+  - documentation
+  - guides
+  - cheatsheets
+  - pipeline
 dependencies:
-  - prompt:.github/prompts/context-map.prompt.md
-  - prompt:.github/prompts/update-implementation-plan.prompt.md
+  - skill:prompt:context-map.prompt.md
+  - skill:prompt:update-implementation-plan.prompt.md
   - skill:brainstorming
   - skill:plans-and-specs
   - skill:systematic-debugging

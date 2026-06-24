@@ -1,13 +1,18 @@
 ---
-name: "playwright-generate-test.prompt"
-title: "Playwright Test Generation"
+license: MIT
+version: 1.0.0
+title: Playwright Generate Test
+name: "playwright-generate-test"
 description: "Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes."
+trigger: /playwright-generate-test
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
-compatibility: ["hermes", "copilot", "opencode"]
-tags: ["playwright-generate-test", "banking", "prompt"]
-mcp_generator: null
-skill_stub: true
+compatibility:
+  - hermes
+  - copilot
+  - opencode
+mcp_generator: None
+skill_stub: True
 ---
 
 ## Goal
@@ -54,8 +59,6 @@ Use when you need to playwright test generation for the current workspace or tas
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
-```text
 ## Description
 
 Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.

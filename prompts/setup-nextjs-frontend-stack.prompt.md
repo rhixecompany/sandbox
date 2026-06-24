@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Setup Next.js Frontend Stack for an Entity
+name: setup-nextjs-frontend-stack
 description: "Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions, and Zod schemas for a given entity using TypeScript + Tailwind + Zod."
 agent: "edit"
 ---

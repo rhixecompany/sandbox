@@ -1,9 +1,21 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Agents System Prompt Context Fix
+name: agents-system-prompt-context-fix
 trigger: /agents-system-prompt-context-fix
 description: >-
   Create/update agent context files across project and subprojects, then audit
   and enhance VS Code workspace configuration.
-tags: [hermes, copilot, opencode, agents, context, vscode, architecture]
+tags: []
+  - hermes
+  - copilot
+  - opencode
+  - agents
+  - context
+  - vscode
+  - architecture
 dependencies:
   - skill:using-superpowers
   - skill:user-communication-preferences

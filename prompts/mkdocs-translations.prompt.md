@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: MkDocs AI Translator
+name: mkdocs-translations
 agent: agent
 description: "Generate a language translation for a mkdocs documentation stack."
 tools:
@@ -62,9 +67,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# MkDocs AI Translator
 
 ## Role
 

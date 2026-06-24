@@ -1,3 +1,13 @@
+---
+name: debugger-prompt
+title: "Debugger Prompt"
+description: "Debugger Prompt"
+version: 1.0.0
+author: "Hermes Agent"
+license: MIT
+tags: []
+---
+
 ## Debugger Prompt for AI Agents
 
 Purpose

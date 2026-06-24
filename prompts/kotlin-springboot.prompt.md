@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Spring Boot with Kotlin Best Practices
+name: kotlin-springboot
 agent: "agent"
 tools:
   [

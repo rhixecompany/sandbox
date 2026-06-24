@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: What Context Do You Need?
+name: what-context-needed
 agent: "agent"
 tools: ["codebase"]
 description: "Ask Copilot what files it needs to see before answering a question"
@@ -47,11 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# What Context Do You Need?
-
-Before answering my question, tell me what files you need to see.
 
 ## My Question
 

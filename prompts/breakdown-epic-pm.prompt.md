@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Epic Product Requirements Document (PRD) Prompt
+name: breakdown-epic-pm
 agent: "agent"
 description: "Prompt for creating an Epic Product Requirements Document (PRD) for a new epic. This PRD will be used as input for generating a technical architecture specification."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-```text
-# Epic Product Requirements Document (PRD) Prompt
 
 ## Goal
 

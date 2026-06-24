@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Feature PRD Prompt
+name: breakdown-feature-prd
 agent: "agent"
 description: "Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-```text
-# Feature PRD Prompt
 
 ## Goal
 

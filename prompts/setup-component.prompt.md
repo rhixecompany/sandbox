@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Setup Component
+name: setup-component
 agent: "Next.js Expert"
 model: "Auto"
 tools:
@@ -68,14 +73,6 @@ Use when you need to next.js expert for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Your goal is to generate a new React or Next.js component based on the project’s UI and coding standards. Ask for the component name, props, and usage context if not provided.
-
-- Use shadcn/ui and Tailwind CSS for styling
-- Use TypeScript and co-locate tests
-- Follow project folder structure and naming conventions
-
 
 ## Template References
 

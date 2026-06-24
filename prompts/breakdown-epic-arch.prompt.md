@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Epic Architecture Specification Prompt
+name: breakdown-epic-arch
 agent: "agent"
 description: "Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-```text
-# Epic Architecture Specification Prompt
 
 ## Goal
 

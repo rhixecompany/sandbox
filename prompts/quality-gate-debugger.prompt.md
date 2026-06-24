@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Quality Gate Debugger — Triage & Batch Fix
+name: quality-gate-debugger
 agent: "Debug Mode Instructions"
 model: GPT-4.1 (copilot)
 tools:

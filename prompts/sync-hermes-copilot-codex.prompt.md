@@ -1,4 +1,6 @@
 ---
+license: MIT
+author: Hermes Agent
 trigger: /sync-hermes-copilot-codex
 name: sync-hermes-copilot-codex
 title: Sync Hermes Copilot Codex
@@ -6,7 +8,7 @@ version: 1.1.0
 description: >-
   Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
   create personalities and profiles from instruction/agent definitions.
-tags:
+tags: []
   - hermes
   - copilot
   - opencode

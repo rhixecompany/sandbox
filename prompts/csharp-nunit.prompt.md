@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: NUnit Best Practices
+name: csharp-nunit
 agent: "agent"
 tools:
   [

@@ -1,6 +1,18 @@
 ---
-description: "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output"
-agent: "agent"
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "session-agentsmd-full-workflow"
+title: "Session Agents.md Full Workflow"
+description: "Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and report."
+trigger: /session-agentsmd-full-workflow
+tags: []
+  - hermes
+  - agents
+  - workflow
+  - session
+  - context
+agent: agent
 ---
 
 ## Goal

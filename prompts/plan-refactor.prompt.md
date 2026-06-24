@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: ComicWise Setup & Code Quality Refactoring Implementation Plan
+name: plan-refactor
 description: "This prompt outlines the steps for setting up the ComicWise development environment and implementing code quality refactoring."
 agent: "Next.js Expert"
 model: "Claude Haiku 4.5 (copilot)"

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Review And Refactor
+name: review-and-refactor
 agent: "agent"
 description: "Review and refactor code in your project according to defined instructions"
 ---
@@ -47,7 +52,6 @@ Use when you need to work on the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
 ## Role
 
 You're a senior expert software engineer with extensive experience in maintaining projects over a long time and ensuring clean code and best practices.

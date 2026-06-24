@@ -1,6 +1,16 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "tasksync"
-description: "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake."
+title: "Task Sync"
+description: "Comprehensive prompt for synchronizing tasks, implementations, and updates across projects."
+trigger: /tasksync
+tags: []
+  - hermes
+  - tasks
+  - sync
+  - project-management
 ---
 
 ## Goal

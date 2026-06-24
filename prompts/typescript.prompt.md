@@ -1,6 +1,17 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "typescript"
+title: "TypeScript & Next.js"
 description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
+trigger: /typescript
+tags: []
+  - hermes
+  - typescript
+  - nextjs
+  - code-quality
+  - linting
 ---
 
 ## Goal

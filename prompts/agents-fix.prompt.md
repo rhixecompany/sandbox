@@ -1,12 +1,20 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: agents-fix
 title: Agents Sync and Deduplication
 trigger: /agents-fix
 description: Sync and deduplicate agent definitions across Hermes, and Copilot
     with dependency mapping and schema validation.
-tags: [hermes, copilot, agents, sync]
+tags: []
+  - hermes
+  - copilot
+  - agents
+  - sync
 dependencies:
-    - prompt:.github/prompts/context-map.prompt.md
-    - prompt:.github/prompts/update-implementation-plan.prompt.md
+    - prompt:context-map.prompt.md
+    - prompt:update-implementation-plan.prompt.md
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:dispatching-parallel-agents

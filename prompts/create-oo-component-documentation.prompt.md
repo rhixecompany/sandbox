@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Generate Standard OO Component Documentation
+name: create-oo-component-documentation
 agent: "agent"
 description: "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards."
 tools:
@@ -65,13 +70,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Generate Standard OO Component Documentation
-
-Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
-
-Analyze the component by examining code in the provided path. If folder, analyze all source files. If single file, treat as main component and analyze related files in same directory.
 
 ## Documentation Standards
 

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Power Platform MCP Connector Generator
+name: mcp-copilot-studio-server-generator
 description: Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support
 agent: agent
 ---
@@ -46,11 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Power Platform MCP Connector Generator
-
-Generate a complete Power Platform custom connector with Model Context Protocol (MCP) integration for Microsoft Copilot Studio. This prompt creates all necessary files following Power Platform connector standards with MCP streamable HTTP support.
 
 ## Instructions
 

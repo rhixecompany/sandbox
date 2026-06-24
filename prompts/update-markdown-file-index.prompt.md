@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Update Markdown File Index
+name: update-markdown-file-index
 agent: "agent"
 description: "Update a markdown file section with an index/table of files from a specified folder."
 tools:
@@ -68,11 +73,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Update Markdown File Index
-
-Update markdown file `${file}` with an index/table of files from folder `${input:folder}`.
 
 ## Process
 

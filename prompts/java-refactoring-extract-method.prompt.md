@@ -1,7 +1,16 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "Refactoring Java Methods with Extract Method"
-agent: "agent"
+title: "Refactoring Java Methods With Extract Method"
 description: "Refactoring using Extract Methods in Java Language"
+trigger: /Refactoring Java Methods with Extract Method
+tags: []
+  - hermes
+  - java
+  - refactoring
+agent: "agent"
 ---
 
 # Refactoring Java Methods with Extract Method

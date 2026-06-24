@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: MSTest Best Practices (MSTest 3.x/4.x)
+name: csharp-mstest
 agent: "agent"
 tools:
   [

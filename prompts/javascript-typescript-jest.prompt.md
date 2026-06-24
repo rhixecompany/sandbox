@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Javascript Typescript Jest
+name: javascript-typescript-jest
 description: "Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns."
 agent: "agent"
 ---
@@ -46,13 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> - Name test files with `.test.ts` or `.test.js` suffix
-> - Place test files next to the code they test or in a dedicated `__tests__` dire
-
-> **Full content:** `templates/javascript-typescript-jest/legacy_prompt_details.md`
 
 ## Common Jest Matchers
 

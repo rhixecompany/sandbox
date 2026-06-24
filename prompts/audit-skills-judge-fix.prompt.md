@@ -1,9 +1,14 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Audit Skills Judge Fix
+name: audit-skills-judge-fix
 trigger: /audit-skills-judge-fix
 description: >-
   Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
   remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
-tags:
+tags: []
   [
     hermes,
     copilot,

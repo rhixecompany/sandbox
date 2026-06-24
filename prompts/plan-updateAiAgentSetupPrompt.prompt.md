@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Plan Updateaiagentsetupprompt
+name: plan-updateaiagentsetupprompt
 description: "Plan to update AI agent setup prompt for the Comicbook project."
 agent: "Next.js Expert"
 model: "Claude Opus 4.6 (copilot)"

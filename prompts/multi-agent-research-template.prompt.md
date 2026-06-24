@@ -2,7 +2,13 @@
 name: multi-agent-research-template
 title: Multi-Agent Research and Implementation Template
 description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
-tags: [codex, copilot, hermes, research, planning, automation]
+tags: []
+  - codex
+  - copilot
+  - hermes
+  - research
+  - planning
+  - automation
 trigger: /multi-agent-research
 version: "1.0.0"
 author: "Hermes Agent"

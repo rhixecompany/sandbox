@@ -6,26 +6,26 @@ Generated: 2026-06-21 (Updated)
 
 | Field               | Value                                                       |
 | ------------------- | ----------------------------------------------------------- |
-| **Active Profile**  | `default`                                                   |
+| **Active Profile**  | `alexa`                                                     |
 | **Persona**         | **OWL** — pragmatic senior engineer                         |
-| **Primary Model**   | gpt-5.4-mini (openai-codex)                                 |
-| **Current Runtime** | deepseek-v4-flash-free (opencode) — *fallback chain active* |
+| **Primary Model**   | deepseek-v4-flash-free (opencode-zen)                       |
+| **Current Runtime** | deepseek-v4-flash-free (opencode-zen) — *active primary*    |
 | **Owner**           | Alexa                                                       |
 | **OS**              | Windows 11                                                  |
 | **Shell**           | VS Code Git Bash (bash via git-bash/MSYS)                   |
 | **Editor**          | VS Code                                                     |
 
-## Profile Inventory (7 Profiles)
+## Profile Inventory (7 Configured + 17 Unconfigured)
 
 | Profile           | Model                 | Provider     | Purpose                                |
 | ----------------- | --------------------- | ------------ | -------------------------------------- |
-| **default** ⬤     | gpt-5.4-mini          | openai-codex | General purpose — **currently active** |
-| code-architect    | nemotron-3-ultra-free | opencode-zen | Code changes, debugging, refactoring   |
-| research-analyst  | nemotron-3-ultra-free | opencode-zen | Deep research, synthesis               |
-| creative-director | nemotron-3-ultra-free | opencode-zen | Design, content, creative tasks        |
-| exec-assistant    | nemotron-3-ultra-free | opencode-zen | Admin, planning, coordination          |
-| patient-tutor     | nemotron-3-ultra-free | opencode-zen | Explanations, tutorials                |
-| adminbot          | nemotron-3-ultra-free | opencode-zen | System admin, operations               |
+| **alexa** ⬤      | deepseek-v4-flash-free | opencode-zen | System admin, operations — **active**  |
+| default           | deepseek-v4-flash-free | opencode-zen | General purpose                        |
+| code-architect    | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring   |
+| research-analyst  | deepseek-v4-flash-free | opencode-zen | Deep research, synthesis               |
+| creative-director | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks        |
+| exec-assistant    | deepseek-v4-flash-free | opencode-zen | Admin, planning, coordination          |
+| patient-tutor     | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials                |
 
 ## MCP Servers (11 Configured)
 
@@ -90,12 +90,11 @@ All hooks verified: JSON configs + shell scripts present and properly structured
 
 ## Provider Chain
 
-| Priority     | Provider     | Model(s)                                     | Status       |
-| ------------ | ------------ | -------------------------------------------- | ------------ |
-| 1 (primary)  | openai-codex | gpt-5.4-mini                                 | ✓ Configured |
-| 2 (fallback) | opencode-zen | nemotron-3-ultra-free, nemotron-3-super-free | ✓ In chain   |
-| 3            | openrouter   | (via plugin)                                 | ✓ Enabled    |
-| 4            | nous         | (via plugin)                                 | ✓ Enabled    |
+| Priority     | Provider     | Model(s)                               | Status       |
+| ------------ | ------------ | -------------------------------------- | ------------ |
+| 1 (primary)  | opencode-zen | deepseek-v4-flash-free                 | ✓ Active     |
+| 2            | nous         | stepfun/step-3.7-flash:free            | ✓ In chain   |
+| 3            | openrouter   | qwen/qwen3-coder:free                  | ✓ Fallback   |
 
 ## Workspace Paths
 
@@ -129,9 +128,10 @@ All hooks verified: JSON configs + shell scripts present and properly structured
 | Gate                       | Status                                            |
 | -------------------------- | ------------------------------------------------- |
 | Skills audit passed        | `hermes skills audit && hermes skills update` — ✓ |
-| Config hierarchy valid     | `.hermes.md` → `AGENTS.md` — ✓                    |
-| MCP servers reachable      | 11 servers configured — ✓                         |
-| Profile SOUL.md customized | ❌ Default profile SOUL.md missing                 |
+| Config hierarchy valid     | `.hermes.md` → `AGENTS.md` → `PROJECT_RULES.md` — ✓ |
+| Context files synced       | All 3 context files updated for model/provider     |
+| MCP servers reachable      | 14 servers configured — ✓                         |
+| Profile SOUL.md customized | ❌ Default profile SOUL.md missing (non-blocking)  |
 
 ## Environment Corrections (Applied 2026-06-21)
 

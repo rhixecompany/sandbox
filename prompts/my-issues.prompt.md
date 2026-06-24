@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: My Issues
+name: my-issues
 agent: "agent"
 tools:
   [
@@ -55,12 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Search the current repo (using #githubRepo for the repo info) and list any issues you find (using #list_issues) that are assigned to me.
-
-Suggest issues that I might want to focus on based on their age, the amount of comments, and their status (open/closed).
-
 
 ## Template References
 

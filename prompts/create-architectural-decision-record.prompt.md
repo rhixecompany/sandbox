@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create Architectural Decision Record
+name: create-architectural-decision-record
 agent: "agent"
 description: "Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation."
 tools:
@@ -65,12 +70,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````text
-# Create Architectural Decision Record
-
-Create an ADR document for `${input:DecisionTitle}` using structured formatting optimized for AI consumption and human readability.
 
 ## Inputs
 

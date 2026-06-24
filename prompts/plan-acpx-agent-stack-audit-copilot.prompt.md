@@ -1,3 +1,19 @@
+---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "acpx-stack-audit-copilot"
+title: "ACP Agent Stack Audit — GitHub Copilot"
+description: "Copilot agent stack audit: inventory GitHub Copilot custom agents, instructions, and prompt files."
+trigger: /acpx-stack-audit-copilot
+tags: []
+  - hermes
+  - acp
+  - audit
+  - agents
+  - copilot
+---
+
 ## Goal
 Use when ## Description to accomplish the associated tasks and objectives.
 ## Description

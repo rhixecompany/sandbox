@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create Adaptive Cards for MCP Plugins
+name: mcp-create-adaptive-cards
 description: "mcp-create-adaptive-cards.prompt"
 ---
 
@@ -45,20 +50,6 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````prompt
----
-mode: 'agent'
-tools: ['changes', 'search/codebase', 'edit/editFiles', 'problems']
-description: 'Add Adaptive Card response templates to MCP-based API plugins for visual data presentation in Microsoft 365 Copilot'
-model: 'gpt-4.1'
-tags: [mcp, adaptive-cards, m365-copilot, api-plugin, response-templates]
----
-
-# Create Adaptive Cards for MCP Plugins
-
-Add Adaptive Card response templates to MCP-based API plugins to enhance how data is presented visually in Microsoft 365 Copilot.
 
 ## Adaptive Card Types
 

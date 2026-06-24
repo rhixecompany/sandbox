@@ -1,13 +1,23 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: workspace-consolidate
 title: Workspace Consolidation — Scripts, Patches, Docs
 description:
     Consolidate scripts, patches, and documentation across the workspace with bash
     migration and audit workflows.
 trigger: /workspace-consolidate
-tags: [hermes, consolidation, patching, documentation, bash-migration, audit]
+tags: []
+  - hermes
+  - consolidation
+  - patching
+  - documentation
+  - bash-migration
+  - audit
 dependencies:
-    - prompt:.github/prompts/context-map.prompt.md
-    - prompt:.github/prompts/update-implementation-plan.prompt.md
+    - prompt:context-map
+    - prompt:update-implementation-plan
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:dispatching-parallel-agents
@@ -36,7 +46,9 @@ skills:
     - git-patch-management — Manage Git patch files across multi-project
       workspaces
     - project-consolidation — Five-phase workflow for cleaning up and
-      restructuring a project---
+      restructuring a project
+
+---
 
 ## Goal
 

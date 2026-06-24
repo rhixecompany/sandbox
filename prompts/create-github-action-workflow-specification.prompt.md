@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create GitHub Actions Workflow Specification
+name: create-github-action-workflow-specification
 agent: "agent"
 description: "Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance."
 tools:
@@ -75,13 +80,6 @@ Use when you need to work on the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
-# Create GitHub Actions Workflow Specification
-
-Create a comprehensive specification for the GitHub Actions workflow: `${input:WorkflowFile}`.
-
-This specification serves as a specification for the workflow's behavior, requirements, and constraints. It must be implementation-agnostic, focusing on **what** the workflow accomplishes rather than **how** it's implemented.
-
 ## AI-Optimized Requirements
 
 - **Token Efficiency**: Use concise language without sacrificing clarity
@@ -101,7 +99,7 @@ version: 1.0
 date_created: [YYYY-MM-DD]
 last_updated: [YYYY-MM-DD]
 owner: DevOps Team
-tags:
+tags: []
   [process, cicd, github-actions, automation, [domain-specific-tags]]
 ---
 

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Generate TypeScript MCP Server
+name: typescript-mcp-server-generator
 agent: "agent"
 description: "Generate a complete MCP server project in TypeScript with tools, resources, and proper configuration"
 ---
@@ -46,11 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Generate TypeScript MCP Server
-
-Create a complete Model Context Protocol (MCP) server in TypeScript with the following specifications:
 
 ## Requirements
 

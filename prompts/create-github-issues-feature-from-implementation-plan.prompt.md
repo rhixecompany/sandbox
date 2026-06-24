@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create GitHub Issue from Implementation Plan
+name: create-github-issues-feature-from-implementation-plan
 agent: "agent"
 description: "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates."
 tools:
@@ -55,11 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create GitHub Issue from Implementation Plan
-
-Create GitHub Issues for the implementation plan at `${file}`.
 
 ## Process
 

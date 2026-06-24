@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Deploy and Manage MCP-Based Agents
+name: mcp-deploy-manage-agents
 description: "mcp-deploy-manage-agents.prompt"
 ---
 
@@ -45,20 +50,6 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````prompt
----
-mode: 'agent'
-tools: ['changes', 'search/codebase', 'edit/editFiles', 'problems']
-description: 'Deploy and manage MCP-based declarative agents in Microsoft 365 admin center with governance, assignments, and organizational distribution'
-model: 'gpt-4.1'
-tags: [mcp, m365-copilot, deployment, admin, agent-management, governance]
----
-
-# Deploy and Manage MCP-Based Agents
-
-Deploy, manage, and govern MCP-based declarative agents in Microsoft 365 using the admin center for organizational distribution and control.
 
 ## Agent Types
 

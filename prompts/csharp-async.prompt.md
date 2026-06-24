@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: C# Async Programming Best Practices
+name: csharp-async
 agent: "agent"
 tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Get best practices for C# async programming"

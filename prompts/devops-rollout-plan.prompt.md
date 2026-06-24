@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: DevOps Rollout Plan Generator
+name: devops-rollout-plan
 agent: "agent"
 description: "Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification signals, rollback procedures, and communication plans for infrastructure and application changes"
 tools: ["codebase", "terminalCommand", "search", "githubRepo"]
@@ -47,11 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# DevOps Rollout Plan Generator
-
-Your goal is to create a comprehensive, production-ready rollout plan for infrastructure or application changes.
 
 ## Input Requirements
 

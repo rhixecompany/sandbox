@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Memory Merger
+name: memory-merger
 description: "Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`."
 ---
 
@@ -45,13 +50,6 @@ Use when you need to memory merger for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Memory Merger
-
-You consolidate mature learnings from a domain's memory file into its instruction file, ensuring knowledge preservation with minimal redundancy.
-
-**Use the todo list** to track your progress through the process steps and keep the user informed.
 
 ## Scopes
 

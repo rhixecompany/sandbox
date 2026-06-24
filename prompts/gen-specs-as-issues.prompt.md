@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Product Manager Assistant: Feature Identification and Specification
+name: gen-specs-as-issues
 description: "This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation."
 agent: "agent"
 ---
@@ -46,11 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Product Manager Assistant: Feature Identification and Specification
-
-This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.
 
 ## 1. Project Understanding Phase
 

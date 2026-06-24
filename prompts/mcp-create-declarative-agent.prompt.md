@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create MCP-based Declarative Agent for Microsoft 365 Copilot
+name: mcp-create-declarative-agent
 description: "mcp-create-declarative-agent.prompt"
 ---
 
@@ -45,20 +50,6 @@ Use when you need to create mcp based declarative agent for microsoft 365 copilo
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````prompt
----
-mode: 'agent'
-tools: ['changes', 'search/codebase', 'edit/editFiles', 'problems']
-description: 'Create a declarative agent for Microsoft 365 Copilot by integrating an MCP server with authentication, tool selection, and configuration'
-model: 'gpt-4.1'
-tags: [mcp, m365-copilot, declarative-agent, model-context-protocol, api-plugin]
----
-
-# Create MCP-based Declarative Agent for Microsoft 365 Copilot
-
-Create a complete declarative agent for Microsoft 365 Copilot that integrates with a Model Context Protocol (MCP) server to access external systems and data.
 
 ## Requirements
 

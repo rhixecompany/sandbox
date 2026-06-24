@@ -1,0 +1,299 @@
+{
+	"data": [
+		{
+			"created": 1782335251,
+			"id": "claude-fable-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-opus-4-8",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-opus-4-7",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-opus-4-6",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-opus-4-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-opus-4-1",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-sonnet-4-6",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-sonnet-4-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-sonnet-4",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "claude-haiku-4-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gemini-3.5-flash",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gemini-3.1-pro",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gemini-3-flash",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.5-pro",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.4",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.4-pro",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.4-mini",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.4-nano",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.3-codex-spark",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.3-codex",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.2",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.2-codex",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.1",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.1-codex-max",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.1-codex",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5.1-codex-mini",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5-codex",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "gpt-5-nano",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "grok-build-0.1",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "deepseek-v4-pro",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "deepseek-v4-flash",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "glm-5.2",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "glm-5.1",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "glm-5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "minimax-m2.7",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "minimax-m2.5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "kimi-k2.6",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "kimi-k2.5",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "qwen3.6-plus",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "qwen3.5-plus",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "big-pickle",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "deepseek-v4-flash-free",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "mimo-v2.5-free",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "qwen3.6-plus-free",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "minimax-m3-free",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "nemotron-3-ultra-free",
+			"object": "model",
+			"owned_by": "opencode"
+		},
+		{
+			"created": 1782335251,
+			"id": "north-mini-code-free",
+			"object": "model",
+			"owned_by": "opencode"
+		}
+	],
+	"object": "list"
+}

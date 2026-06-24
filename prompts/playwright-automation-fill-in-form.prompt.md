@@ -1,13 +1,18 @@
 ---
-name: "playwright-automation-fill-in-form.prompt"
-title: "Playwright Form Fill Automation"
+license: MIT
+version: 1.0.0
+title: Playwright Automation Fill In Form
+name: "playwright-automation-fill-in-form"
 description: "Fill a form with Playwright MCP, stop before submission, and ask for a human review."
+trigger: /playwright-automation-fill-in-form
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
-compatibility: ["hermes", "copilot", "opencode"]
-tags: ["playwright-automation-fill-in-form", "banking", "prompt"]
-mcp_generator: null
-skill_stub: true
+compatibility:
+  - hermes
+  - copilot
+  - opencode
+mcp_generator: None
+skill_stub: True
 ---
 
 ## Goal
@@ -54,8 +59,6 @@ Use when you need to playwright form fill automation for the current workspace o
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
-```text
 ## Description
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.

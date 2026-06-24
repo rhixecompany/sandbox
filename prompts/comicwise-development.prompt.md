@@ -1,8 +1,17 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: comicwise-development
 title: "ComicWise Development Workflow"
 description: "Reusable prompt for ComicWise development sessions"
 applyTo: "**/*"
-tags: ["nextjs", "typescript", "drizzle", "react19", "development"]
+tags: []
+  - nextjs
+  - typescript
+  - drizzle
+  - react19
+  - development
 ---
 
 # ComicWise Development Prompt

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Git Flow Branch Creator
+name: git-flow-branch-creator
 description: "Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate branches following the nvie Git Flow branching model."
 tools: ["runCommands/runInTerminal", "runCommands/getTerminalOutput"]
 agent: "agent"
@@ -47,13 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> <title>Git Flow Branch Creator</title>
-> <description>This prompt analyzes your current git changes using git status and 
-
-> **Full content:** `templates/git-flow-branch-creator/legacy_prompt_details.md`
 
 ## Template References
 

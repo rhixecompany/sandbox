@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create Specification
+name: create-specification
 agent: "agent"
 description: "Create a new specification file for the solution, optimized for Generative AI consumption."
 tools:

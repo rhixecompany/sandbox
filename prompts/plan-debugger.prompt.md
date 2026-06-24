@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Plan Debugger
+name: plan-debugger
 agent: Next.js Expert
 model: Claude Haiku 4.5 (copilot)
 description: Batch Fix All Errors, Warnings, and Deprecations.

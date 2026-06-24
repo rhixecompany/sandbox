@@ -1,8 +1,14 @@
 ---
-name: generator-orchestrator
-trigger: /generator-orchestrator
-description: Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation.
-agent: agent
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "generator-orchestrator"
+title: "Generator Orchestrator"
+description: "Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation."
+tags:
+  - hermes
+  - codegen
+agent: "agent"
 ---
 
 ## Description
@@ -10,10 +16,6 @@ agent: agent
 ### Goal
 
 Create one orchestrator prompt that coordinates only the 11 root generator prompts in `.github/prompts` with dependency-aware ordering, conditional MCP/server branching, deterministic execution modes, and strict validation gates.
-
-### Legacy Prompt Details
-
-This prompt preserves the generator-style intent used across root blueprint prompts while adding orchestrator-level dependency management and consistency checks.
 
 ## Context
 

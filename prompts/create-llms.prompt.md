@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create LLMs.txt File from Repository Structure
+name: create-llms
 agent: "agent"
 description: "Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/"
 tools:
@@ -65,11 +70,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create LLMs.txt File from Repository Structure
-
-Create a new `llms.txt` file from scratch in the root of the repository following the official llms.txt specification at https://llmstxt.org/. This file provides high-level guidance to large language models (LLMs) on where to find relevant content for understanding the repository's purpose and specifications.
 
 ## Primary Directive
 

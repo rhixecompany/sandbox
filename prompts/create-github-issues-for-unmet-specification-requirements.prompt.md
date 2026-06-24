@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create GitHub Issues for Unmet Specification Requirements
+name: create-github-issues-for-unmet-specification-requirements
 agent: "agent"
 description: "Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml template."
 tools:
@@ -55,11 +60,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create GitHub Issues for Unmet Specification Requirements
-
-Create GitHub Issues for unimplemented requirements in the specification at `${file}`.
 
 ## Process
 

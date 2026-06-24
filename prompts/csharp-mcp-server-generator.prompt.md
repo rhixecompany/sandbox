@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Generate C# MCP Server
+name: csharp-mcp-server-generator
 agent: "agent"
 description: "Generate a complete MCP server project in C# with tools, prompts, and proper configuration"
 ---

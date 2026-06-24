@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Suggest Awesome GitHub Copilot Skills
+name: suggest-awesome-github-copilot-skills
 agent: "agent"
 description: "Find GitHub Copilot skills that add coverage the repo lacks and flag local duplicates or outdated copies."
 tools:
@@ -61,11 +66,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Suggest Awesome GitHub Copilot Skills
-
-Analyze current repository context and suggest relevant Agent Skills from the [GitHub awesome-copilot repository](https://github.com/github/awesome-copilot/blob/main/docs/README.skills.md) that are not already available in this repository. Agent Skills are self-contained folders located in the [skills](https://github.com/github/awesome-copilot/tree/main/skills) folder of the awesome-copilot repository, each containing a `SKILL.md` file with instructions and optional bundled assets.
 
 ## Process
 

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Refactor Mardown Files
+name: refactor-mardown-files
 agent: "Next.js Expert"
 model: "Auto"
 tools:
@@ -69,7 +74,6 @@ Use when you need to next.js expert for the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
 ## 1. Task Specification
 
 Analyze, refactor, and update the `AGENTS.md`,`.cursorrules` and `.github/copilot-instructions.md` files in the Banking repository. Ensure all instructions are clear, actionable, and aligned with current project conventions, Diátaxis documentation principles, and markdown best practices. Remove outdated or redundant content, and structure the documentation for maximum utility by both humans and AI agents.

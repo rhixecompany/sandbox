@@ -1,7 +1,18 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "java-docs"
+title: "Java Documentation (Javadoc)"
+description: "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation."
+trigger: /java-docs
+tags: []
+  - hermes
+  - java
+  - documentation
+  - javadoc
 agent: "agent"
 tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
-description: "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation."
 ---
 
 # Java Documentation (Javadoc) Best Practices

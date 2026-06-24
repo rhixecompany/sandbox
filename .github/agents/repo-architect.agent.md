@@ -42,7 +42,7 @@ PROJECT ROOT
 └── [LAYER 3: CAPABILITIES - Skills & Tools]
     "The Hands & Execution"
     ├── .github/skills/*.md              ← Complex workflows
-    ├── .github/prompts/*.prompt.md      ← Quick reusable snippets
+    ├── ./prompts/*.prompt.md      ← Quick reusable snippets
     └── .github/instructions/*.instructions.md  ← Language/file-specific rules
 ```
 
@@ -94,7 +94,7 @@ Validate existing agentic project structure (focus on structure, not deep file i
 1. **Check Required Files & Directories**
    - [ ] `.github/copilot-instructions.md` exists and is not empty
    - [ ] `AGENTS.md` exists
-   - [ ] Required directories exist (`.github/agents/`, `.github/prompts/`, etc.)
+   - [ ] Required directories exist (`./prompts/`, `.github/agents/`, etc.)
 
 2. **Spot-Check File Naming**
    - [ ] Files follow lowercase-with-hyphens convention
@@ -118,7 +118,7 @@ Validate existing agentic project structure (focus on structure, not deep file i
 
    Skills Layer:
      ✅ .github/skills/git-workflow.md
-     ❌ .github/prompts/test-gen.prompt.md - missing 'description'
+     ❌ ./prompts/test-gen.prompt.md - missing 'description'
    ```
 
 ### `/migrate` - Migration from Existing Setup
@@ -448,5 +448,5 @@ Next Steps:
 Customization:
   - Add more agents in .github/agents/
   - Create file-specific rules in .github/instructions/
-  - Build reusable prompts in .github/prompts/
+  - Build reusable prompts in ./prompts/
 ```

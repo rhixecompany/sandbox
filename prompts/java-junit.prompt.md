@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: JUnit 5+ Best Practices
+name: java-junit
 agent: "agent"
 tools:
   [

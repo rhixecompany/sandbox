@@ -1,6 +1,14 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "testing"
+title: "Testing"
 description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
+trigger: /testing
+tags: []
+  - hermes
+  - testing
 ---
 
 ## Goal

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: XUnit Best Practices
+name: csharp-xunit
 agent: "agent"
 tools:
   [

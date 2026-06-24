@@ -1,6 +1,16 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "task-implementation"
-description: "Comprehensive prompt for implementing tracked task plans with progressive change logging."
+title: "Task Implementation"
+description: "Comprehensive prompt for implementing tasks with clear phases, goals, and verification."
+trigger: /task-implementation
+tags: []
+  - hermes
+  - tasks
+  - implementation
+  - workflow
 ---
 
 ## Goal

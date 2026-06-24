@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Suggest Awesome GitHub Copilot Instructions
+name: suggest-awesome-github-copilot-instructions
 agent: "agent"
 description: "Find GitHub Copilot instruction files that add coverage the repo lacks and flag local duplicates or outdated copies."
 tools:
@@ -61,11 +66,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Suggest Awesome GitHub Copilot Instructions
-
-Analyze current repository context and suggest relevant copilot-instruction files from the [GitHub awesome-copilot repository](https://github.com/github/awesome-copilot/blob/main/docs/README.instructions.md) that are not already available in this repository.
 
 ## Process
 

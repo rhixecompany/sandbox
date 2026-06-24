@@ -1,6 +1,17 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "prompts-strict-template"
+title: "Prompts Strict Template"
 description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
+trigger: /prompts-strict-template
+tags: []
+  - hermes
+  - prompts
+  - template
+  - enforce
+  - format
 ---
 
 ## Goal

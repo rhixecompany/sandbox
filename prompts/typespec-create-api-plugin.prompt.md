@@ -1,9 +1,18 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create TypeSpec API Plugin
+name: typespec-create-api-plugin
 mode: "agent"
 tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot"
 model: "gpt-4.1"
-tags: [typespec, m365-copilot, api-plugin, rest-api]
+tags: []
+  - typespec
+  - m365-copilot
+  - api-plugin
+  - rest-api
 ---
 
 ## Goal
@@ -49,11 +58,6 @@ Use when you need to typespec create api plugin for the current workspace or tas
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create TypeSpec API Plugin
-
-Create a complete TypeSpec API plugin for Microsoft 365 Copilot that integrates with external REST APIs.
 
 ## Requirements
 

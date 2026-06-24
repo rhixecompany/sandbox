@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: My Pull Requests
+name: my-pull-requests
 agent: "agent"
 tools:
   [
@@ -60,18 +65,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Search the current repo (using #githubRepo for the repo info) and list any pull requests you find (using #list_pull_requests) that are assigned to me.
-
-Describe the purpose and details of each pull request.
-
-If a PR is waiting for someone to review, highlight that in the response.
-
-If there were any check failures on the PR, describe them and suggest possible fixes.
-
-If there was no review done by Copilot, offer to request one using #request_copilot_review.
-
 
 ## Template References
 

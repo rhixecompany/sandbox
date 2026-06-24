@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Debug Issue
+name: debug-issue
 agent: "agent"
 model: "Auto (copilot)"
 tools: ["codebase", "search", "runCommands", "problems"]

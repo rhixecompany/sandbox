@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: TLDR Prompt
+name: tldr-prompt
 agent: "agent"
 description: "Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries."
 tools: ["web/fetch", "search/readFile", "search", "search/textSearch"]
@@ -48,9 +53,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# TLDR Prompt
 
 ## Overview
 

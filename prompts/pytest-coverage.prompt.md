@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Pytest Coverage
+name: pytest-coverage
 agent: agent
 description: "Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%."
 ---
@@ -46,13 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> The goal is for the tests to cover all lines of code.
-> Generate a coverage report with:
-
-> **Full content:** `templates/pytest-coverage/legacy_prompt_details.md`
 
 ## Template References
 

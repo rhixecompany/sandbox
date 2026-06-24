@@ -1,17 +1,23 @@
 ---
-name: refactor-method-complexity-reduce
-description: Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
-argument-hint: methodName=..., complexityThreshold=15
-agent: agent
-model: Auto (copilot)
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "refactor-method-complexity-reduce"
+title: "Refactor Method Complexity Reduce"
+description: "Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods."
+trigger: /refactor-method-complexity-reduce
+tags: []
+  - hermes
+  - refactoring
+argument-hint: "methodName=..., complexityThreshold=15"
+agent: "agent"
+model: "Auto (copilot)"
 tools:
-  [
-    "search/changes",
-    "search/codebase",
-    "edit/editFiles",
-    "read/problems",
-    "execute/runTests"
-  ]
+  - search/changes
+  - search/codebase
+  - edit/editFiles
+  - read/problems
+  - execute/runTests
 ---
 
 ## Goal
@@ -57,9 +63,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Refactor Method to Reduce Cognitive Complexity
 
 ## Objective
 

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Hermes Breakdown Epic Arch
+name: hermes-breakdown-epic-arch
 agent: "agent"
 description: "Hermes-equivalent: create a high-level Epic Architecture Specification from an Epic PRD."
 ---

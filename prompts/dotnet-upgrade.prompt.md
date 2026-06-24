@@ -1,6 +1,13 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: ".NET Upgrade Analysis Prompts"
+title: ".Net Upgrade Analysis Prompts"
 description: "Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution"
+trigger: /.NET Upgrade Analysis Prompts
+tags: []
+  - hermes
 ---
 
 # Project Discovery & Assessment

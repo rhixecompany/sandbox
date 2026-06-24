@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Refactor Plan
+name: refactor-plan
 agent: "agent"
 tools: ["codebase", "terminalCommand"]
 description: "Plan a multi-file refactor with proper sequencing and rollback steps"
@@ -47,11 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Refactor Plan
-
-Create a detailed plan for this refactoring task.
 
 ## Refactor Goal
 

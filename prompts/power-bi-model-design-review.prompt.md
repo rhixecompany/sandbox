@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Power BI Data Model Design Review
+name: power-bi-model-design-review
 agent: "agent"
 description: "Comprehensive Power BI data model design review prompt for evaluating model architecture, relationships, and optimization opportunities."
 model: "gpt-4.1"

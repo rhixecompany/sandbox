@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Optimize Agentsmd
+name: optimize-agentsmd
 description: "optimize-agentsMd.prompt"
 ---
 

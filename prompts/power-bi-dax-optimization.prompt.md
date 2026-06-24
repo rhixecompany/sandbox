@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Power BI DAX Formula Optimizer
+name: power-bi-dax-optimization
 agent: "agent"
 description: "Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations."
 model: "gpt-4.1"

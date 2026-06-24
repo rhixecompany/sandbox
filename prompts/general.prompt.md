@@ -1,13 +1,22 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: general
 title: General Development Workflow
 trigger: /general
 description:
     General development workflow for analysis, planning, implementation, and
     verification with context mapping and AI-assisted execution.
-tags: [hermes, copilot, opencode, development, automation]
+tags: []
+  - hermes
+  - copilot
+  - opencode
+  - development
+  - automation
 dependencies:
-    - prompt:.github/prompts/context-map.prompt.md
-    - prompt:.github/prompts/update-implementation-plan.prompt.md
+    - prompt:context-map.prompt.md
+    - prompt:update-implementation-plan.prompt.md
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:dispatching-parallel-agents
@@ -37,7 +46,9 @@ skills:
     - context7
     - plan
     - writing-skills
-    - acpx-executor---
+    - acpx-executor
+
+---
 
 > General development workflow with planning, automation, and verification.
 

@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Introduction
+name: plan-features-seed
 description: "Implement Full-Featured Dynamic Database Seeding System with TypeScript & Next.js Best Practices"
 agent: "Next.js Expert"
 model: "Claude Haiku 4.5 (copilot)"

@@ -1,14 +1,24 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: boost-prompt
+name: boost-prompt
 trigger: /boost-prompt
 description: >-
   Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
-tags: [hermes, copilot, writing-skills, refinement, joyride]
+tags: []
+  - hermes
+  - copilot
+  - writing-skills
+  - refinement
+  - joyride
 dependencies:
   - skill:writing-skills
   - skill:writing-plans
-  - tool:joyride
-  - command:/context-map
-  - command:/prompt-engineering
+  - skill:joyride
+  - skill:/context-map
+  - skill:/prompt-engineering
 skills:
   - writing-skills — Crafting and optimizing prompts and instructions
   - writing-plans — Structured prompt authoring

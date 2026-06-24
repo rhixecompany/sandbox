@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Multi Stage Dockerfile
+name: multi-stage-dockerfile
 agent: "agent"
 tools: ["search/codebase"]
 description: "Create optimized multi-stage Dockerfiles for any language or framework"
@@ -47,9 +52,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Your goal is to help me create efficient multi-stage Dockerfiles that follow best practices, resulting in smaller, more secure container images.
 
 ## Multi-Stage Structure
 

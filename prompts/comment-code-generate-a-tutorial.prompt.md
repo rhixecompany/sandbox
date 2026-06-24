@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Comment Code Generate A Tutorial
+name: comment-code-generate-a-tutorial
 description: "Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial."
 agent: "agent"
 ---
@@ -46,13 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> Transform this Python script into a polished, beginner-friendly project by refac
-> 1. **Refactor the code**
-
-> **Full content:** `templates/comment-code-generate-a-tutorial/legacy_prompt_details.md`
 
 ## Template References
 

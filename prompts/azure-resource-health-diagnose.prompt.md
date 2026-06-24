@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Azure Resource Health & Issue Diagnosis
+name: azure-resource-health-diagnose
 agent: "agent"
 description: "Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems."
 ---
@@ -46,11 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Azure Resource Health & Issue Diagnosis
-
-This workflow analyzes a specific Azure resource to assess its health status, diagnose potential issues using logs and telemetry data, and develop a comprehensive remediation plan for any problems discovered.
 
 ## Prerequisites
 

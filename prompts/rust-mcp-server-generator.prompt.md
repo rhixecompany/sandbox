@@ -1,7 +1,17 @@
 ---
-name: rust-mcp-server-generator
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "rust-mcp-server-generator"
+title: "Rust Mcp Server Generator"
 description: "Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK"
-agent: agent
+trigger: /rust-mcp-server-generator
+tags: []
+  - hermes
+  - mcp
+  - codegen
+  - rust
+agent: "agent"
 ---
 
 # Rust MCP Server Generator

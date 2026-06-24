@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Write Tests
+name: write-tests
 agent: "Next.js Expert"
 model: "Auto"
 tools:
@@ -68,14 +73,6 @@ Use when you need to next.js expert for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Your goal is to generate Vitest or Playwright tests for the specified component or module. Ask for the file path and test type if not provided.
-
-- Co-locate tests with code
-- Use mocks for external dependencies
-- Follow project testing standards
-
 
 ## Template References
 

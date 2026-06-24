@@ -1,18 +1,23 @@
 ---
-agent: "agent"
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "Apple App Store Reviewer"
-tools:
-  [
-    "vscode",
-    "execute",
-    "read",
-    "search",
-    "web",
-    "upstash/context7/*",
-    "agent",
-    "todo"
-  ]
+title: "Apple App Store Reviewer"
 description: "Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons."
+trigger: /Apple App Store Reviewer
+tags: []
+  - hermes
+agent: "agent"
+tools:
+  - vscode
+  - execute
+  - read
+  - search
+  - web
+  - upstash/context7/*
+  - agent
+  - todo
 ---
 
 # Apple App Store Review Specialist

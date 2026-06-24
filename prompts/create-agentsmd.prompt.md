@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create high‑quality AGENTS.md file
+name: create-agentsmd
 description: "Prompt for generating an AGENTS.md file for a repository"
 agent: "agent"
 ---
@@ -46,14 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-~~~text
-# Create high‑quality AGENTS.md file
-
-You are a code agent. Your task is to create a complete, accurate AGENTS.md at the root of this repository that follows the public guidance at https://agents.md/.
-
-AGENTS.md is an open format designed to provide coding agents with the context and instructions they need to work effectively on a project.
 
 ## What is AGENTS.md?
 

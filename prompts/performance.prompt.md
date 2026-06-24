@@ -1,6 +1,13 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "performance"
+title: "Performance"
 description: "Comprehensive performance prompt focused on measurable improvements and safe optimizations."
+trigger: /performance
+tags: []
+  - hermes
 ---
 
 ## Goal

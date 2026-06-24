@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Create Technical Spike Document
+name: create-technical-spike
 agent: "agent"
 description: "Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation."
 tools:
@@ -66,11 +71,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Create Technical Spike Document
-
-Create time-boxed technical spike documents for researching critical questions that must be answered before development can proceed. Each spike focuses on a specific technical decision with clear deliverables and timelines.
 
 ## Document Structure
 

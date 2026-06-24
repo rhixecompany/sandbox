@@ -1,4 +1,8 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: skills-fix
 title: Skills Audit and Remediation
 trigger: /skills-fix
 description: >
@@ -7,11 +11,17 @@ description: >
   batch-audits all SKILL.md files in groups of 7 → generates per-skill reports
   and a master index → creates a remediation plan and execution prompt →
   applies fixes in priority order (F → C → B → A-).
-tags: [hermes, skills, debugging, audit, dedup, remediation]
+tags: []
+  - hermes
+  - skills
+  - debugging
+  - audit
+  - dedup
+  - remediation
 dependencies:
-  - prompt:.github/prompts/context-map.prompt.md
-  - prompt:.github/prompts/update-implementation-plan.prompt.md
-  - prompt:.github/prompts/skills-debug-prompt.prompt.md
+  - skill:prompt:context-map.prompt.md
+  - skill:prompt:update-implementation-plan.prompt.md
+  - skill:prompt:skills-debug-prompt.prompt.md
   - skill:using-superpowers
   - skill:brainstorming
   - skill:plans-and-specs
@@ -21,10 +31,10 @@ dependencies:
   - skill:simplify
   - skill:skill-judge
   - skill:skill-creator
-  - tool:terminal
-  - tool:patch
-  - tool:write_file
-  - tool:execute_code
+  - skill:terminal
+  - skill:patch
+  - skill:write_file
+  - skill:execute_code
 skills:
     - introspection-only-general
     - no-git-delete

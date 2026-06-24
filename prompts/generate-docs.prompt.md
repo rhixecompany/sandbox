@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Generate Docs
+name: generate-docs
 agent: "agent"
 model: "Auto"
 tools:
@@ -68,12 +73,6 @@ Use when you need to next.js expert for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-Your goal is to generate Markdown documentation for the specified code, component, or API. Ask for the file path and documentation scope if not provided.
-
-- Follow project documentation standards
-
 
 ## Template References
 

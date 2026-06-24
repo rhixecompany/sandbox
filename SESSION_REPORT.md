@@ -1,8 +1,19 @@
 # SESSION_REPORT.md
 
-> Generated: 206/2026-06-24T00:00:00Z | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-06-24T23:49:14+01:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
-## Last Session Summary
+## Current Session Summary
+
+| Field      | Value                                                  |
+| ---------- | ------------------------------------------------------ |
+| Session ID | *(auto-generated)*                                     |
+| When       | June 24, 2026 at 11:49 PM                              |
+| Active Profile | alexa (◆)                                          |
+| Model      | deepseek-v4-flash-free (opencode-zen)                  |
+| Source     | tui                                                    |
+| Fallback chain | opencode-zen → nous → openrouter                  |
+
+## Prior Session
 
 | Field      | Value                                                  |
 | ---------- | ------------------------------------------------------ |
@@ -10,70 +21,61 @@
 | Title      | GitHub Prompt File Inquiry and Test Script Guidance #7 |
 | When       | June 22, 2026 at 01:55 PM                              |
 | Model      | openai/gpt-oss-120b:free                               |
-| Source     | tui                                                    |
 
-## Tools Used
+## Tasks for This Session
 
-| Tool           | Calls | Purpose                                                                                                                                      |
-| -------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| read_file      | 12    | Read context files, prompts, skills                                                                                                          |
-| write_file     | 8     | Create shared templates, update prompts                                                                                                      |
-| search_files   | 15    | Find files, patterns in prompts repo                                                                                                         |
-| skill_view     | 6     | Load skills (using-superpowers, user-communication-preferences, session-audit-report, hermes-profiles, validate-memories, prompt-management) |
-| terminal       | 3     | Profile switching, session report                                                                                                            |
-| session_search | 4     | Browse and read prior session                                                                                                                |
+| # | Task | Description |
+|---|------|-------------|
+| 1 | **Session Start Capture** | Capture current session state, update report |
+| 2 | **Context Files Enhance & Validate** | Fix stale model/provider in .hermes.md, AGENTS.md, HERMES_PROFILE_REPORT.md |
+| 3 | **Profiles Use, Enhance & Validate** | Profile routing, validate/enhance USER.md files |
 
-## Skills Loaded
+## Stale Data Detected
 
-| Skill                          | Trigger                              |
-| ------------------------------ | ------------------------------------ |
-| using-superpowers              | Mandatory startup (user invoked)     |
-| user-communication-preferences | Mandatory 5-skill startup            |
-| session-audit-report           | Mandatory 5-skill startup            |
-| hermes-profiles                | Mandatory 5-skill startup            |
-| validate-memories              | Mandatory 5-skill startup            |
-| prompt-management              | Previous task (create templates, CI) |
+1. **`.hermes.md`**: Says default=qwen/qwen3-coder:free (OpenRouter) primary → actually deepseek-v4-flash-free (opencode-zen)
+2. **`AGENTS.md`**: Says active profile=default, model=qwen/qwen3-coder → actually alexa, deepseek-v4-flash-free
+3. **`HERMES_PROFILE_REPORT.md`**: Says active=default, model=gpt-5.4-mini → actually alexa, deepseek-v4-flash-free. Missing `alexa` profile from table.
+4. **`USER.md` to root**: No `~/AppData/Local/hermes/USER.md` at root level (exists in `memories/USER.md` instead)
 
-## Key Insights & Corrections
+## Open Items from Prior Session
 
-1. **Mandatory 5-skill startup is now enforced** — SOUL.md Core Rule #6, USER.md, MASTER_RULES.md all require loading `/using-superpowers`, `/user-communication-preferences`, `/session-audit-report`, `/hermes-profiles`, `/validate-memories` before any task
-2. **Profile-per-task routing is mandatory** — Must run `hermes profile use <name>` matching task type before execution
-3. **MCP-first tool precedence** — Check MCP servers before native tools (filesystem, github, ast-grep, memory, playwright, sequential-thinking, cli, code-sandbox, fetch, mcp-docker)
-4. **SESSION_REPORT.md was a stub** — Previous session report only contained headers; overwritten with real rolling summary
-5. **Prompt-management skill complete** — Created all templates, references, scripts, and CI workflow for comprehensive prompt framework
-
-## Open Items
-
-| Item                                                                      | Status                                                                                                                                                    |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Create remaining shared files in `.github/prompts/templates/_shared/`     | In progress (personality.md, goals.md created; phases.md, steps.md, rules.md, triggers.md, tasks.md, actions.md, skills.md, tools.md, scripts.md pending) |
-| Remove "Load 5 skills before any response..." line from all context files | Pending                                                                                                                                                   |
-| Validate HERMES context files across workspace                            | In progress (this session)                                                                                                                                |
-| Validate/profile Hermes profiles                                          | In progress (this session)                                                                                                                                |
-
-## Errors Resolved
-
-| Error                                    | Fix                                                                                                         |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Skills not found via wrong category      | Used correct category (devops vs productivity) for session-audit-report, hermes-profiles, validate-memories |
-| Search regex errors for shared/ patterns | Escaped regex properly in subsequent searches                                                               |
+| Item | Status |
+| ---- | ------ |
+| Create remaining shared files in `.github/prompts/templates/_shared/` | Pending |
+| Validate HERMES context files across workspace | **In progress (this session)** |
+| Validate/profile Hermes profiles | **In progress (this session)** |
 
 ## Session Changelog
 
-| File                                                                                                                 | Action                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\SKILL.md`                                 | Updated with Security, Testing, Versioning, Metrics, Collaboration, Library Integration, Custom Templates sections |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\prompt_template.md`             | Created main prompt skeleton                                                                                       |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\plans_and_specs_template.md`    | Created Plans-and-Specs skeleton                                                                                   |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\script_template.md`             | Created script skeleton                                                                                            |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\persona_template.md`            | Created persona skeleton                                                                                           |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\profile_template.md`            | Created profile skeleton                                                                                           |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\references\prompt_workflow.md`            | Created workflow diagrams                                                                                          |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\references\prompt_library_integration.md` | Created library integration guide                                                                                  |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\validate_prompt_frontmatter.py`   | Created CI validation script                                                                                       |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\dry_run_prompts.py`               | Created dry-run script                                                                                             |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\generate_prompt_changelog.py`     | Created changelog script                                                                                           |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\sync_prompt_library.py`           | Created library sync script                                                                                        |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\.github\workflows\prompt-validation.yml`  | Created CI workflow                                                                                                |
-| `.github/prompts/templates/_shared/personality.md`                                                                   | Created placeholder                                                                                                |
-| `.github/prompts/templates/_shared/goals.md`                                                                         | Created placeholder                                                                                                |
+| File | Action |
+| ---- | ------ |
+| `SESSION_REPORT.md` | Updated with current session state |
+| `.hermes.md` | Fixed stale profile table, runtime context, provider chain |
+| `AGENTS.md` | Fixed stale profile inventory, provider chain, runtime |
+| `HERMES_PROFILE_REPORT.md` | Fixed session identity, profile inventory, provider chain |
+| `profiles/alexa/memories/USER.md` | Fixed label (adminbot→alexa), model, provider |
+| `profiles/code-architect/memories/USER.md` | Fixed stale model/provider |
+| `profiles/creative-director/memories/USER.md` | Fixed stale model/provider |
+| `profiles/exec-assistant/memories/USER.md` | Fixed stale model/provider |
+| `profiles/patient-tutor/memories/USER.md` | Fixed stale model/provider |
+| `profiles/research-analyst/memories/USER.md` | Fixed stale model/provider |
+| `docs/prompts-verify-context.md` | Created — full batch audit verification report |
+| `prompts/` | Audited 249 prompt files across 2 batches + aggregate scan |
+| `prompts/` (all .prompt.md) | Added name:, title:, version: 1.0.0, author: "Hermes Agent", license: MIT |
+| `prompts/` (96 files) | Stripped `## Legacy Prompt Details` redundant sections |
+| `prompts/` (106 files) | Fixed tags: Python-list `[...]` → proper YAML array |
+| `prompts/` (44 files) | Standardized dep prefixes: command:/tool: → skill: |
+| `prompts/` (4 files) | Added missing YAML frontmatter (debugger-prompt.md, pl.md, txt files skipped) |
+| `prompts/Developement.prompt.md` | Renamed → `development.prompt.md` (typo fix) |
+| `prompts/plan-batchFixAllErrorsWarningsAndDeprecations.prompt.md` | Renamed → `plan-batch-fix-all-scan.prompt.md` |
+| `prompts/plan-batchFixAllErrorsWarningsDeprecations.prompt.md` | Renamed → `plan-batch-fix-errors-warnings.prompt.md` |
+| `docs/prompts-verify-context.md` | Updated with post-fix verification results |
+| `~/AppData/Local/hermes/USER.md` | Created — root USER.md was missing |
+| `~/AppData/Local/hermes/profiles/*/memories/USER.md` (17 stub profiles) | Enhanced with model/provider info (deepseek-v4-flash-free/opencode-zen) |
+| `~/AppData/Local/hermes/config.yaml` | Merged alexa profile model block into root (model:, provider, fallback_providers) |
+| `~/AppData/Local/hermes/profiles/alexa/config.yaml` | Replaced with merged root config (was legacy format) |
+| `~/AppData/Local/hermes/profiles/code-architect/config.yaml` (5 profiles) | Replaced with root config (was already v30 format) |
+| `~/AppData/Local/hermes/skills/` | Synced mcp-coding-agent-setup from alexa → root |
+| `~/AppData/Local/hermes/profiles/*/skills/` | Synced reference + mcp-coding-agent-setup to all profiles |
+| `~/AppData/Local/hermes/hooks/` | Synced docs-cleanup-verify.sh + lib.sh to alexa profile hooks |
+| `~/AppData/Local/hermes/.env` | Verified identical root → all profiles (no change needed) |

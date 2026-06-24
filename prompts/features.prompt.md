@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: ComicWise - Feature Implementation Guide
+name: features
 agent: agent
 
 description: Complete feature implementation tasks for profiles, comics, chapters, bookmarks

@@ -1,13 +1,18 @@
 ---
-name: "playwright-explore-website.prompt"
-title: "Playwright Website Exploration"
+license: MIT
+version: 1.0.0
+title: Playwright Explore Website
+name: "playwright-explore-website"
 description: "Explore a website with Playwright MCP, document core flows, and propose tests from the findings."
+trigger: /playwright-explore-website
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
-compatibility: ["hermes", "copilot", "opencode"]
-tags: ["playwright-explore-website", "banking", "prompt"]
-mcp_generator: null
-skill_stub: true
+compatibility:
+  - hermes
+  - copilot
+  - opencode
+mcp_generator: None
+skill_stub: True
 ---
 
 ## Goal
@@ -54,8 +59,6 @@ Use when you need to playwright website exploration for the current workspace or
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Legacy Prompt Details
-```text
 ## Description
 
 Explore a website with Playwright MCP, document core flows, and propose tests from the findings.

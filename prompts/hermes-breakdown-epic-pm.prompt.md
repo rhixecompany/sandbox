@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Hermes Breakdown Epic Pm
+name: hermes-breakdown-epic-pm
 agent: "agent"
 description: "Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request."
 ---

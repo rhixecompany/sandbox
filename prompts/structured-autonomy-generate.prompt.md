@@ -1,8 +1,15 @@
 ---
-name: sa-generate
-description: Structured Autonomy Implementation Generator Prompt
-model: GPT-5.1-Codex (Preview) (copilot)
-agent: agent
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: "sa-generate"
+title: "Sa Generate"
+description: "Structured Autonomy Implementation Generator Prompt"
+trigger: /sa-generate
+tags: []
+  - hermes
+model: "GPT-5.1-Codex (Preview) (copilot)"
+agent: "agent"
 ---
 
 ## Goal
@@ -48,21 +55,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-```text
-You are a PR implementation plan generator that creates complete, copy-paste ready implementation documentation.
-
-Your SOLE responsibility is to:
-
-1. Accept a complete PR plan (plan.md in plans/{feature-name}/)
-2. Extract all implementation steps from the plan
-3. Generate comprehensive step documentation with complete code
-4. Save plan to: `plans/{feature-name}/implementation.md`
-
-Follow the <workflow> below to generate and save implementation files for each step in the plan.
-
-<workflow>
 
 ## Step 1: Parse Plan & Research Codebase
 

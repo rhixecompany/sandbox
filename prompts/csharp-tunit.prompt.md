@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: TUnit Best Practices
+name: csharp-tunit
 agent: "agent"
 tools:
   [

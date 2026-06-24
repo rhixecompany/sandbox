@@ -1,14 +1,19 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: prompt-builder
+name: prompt-builder
 trigger: /prompt-builder
 description: >-
   Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
-tags:
+tags: []
   [hermes, copilot, opencode, writing-skills, scaffolding, template]
 dependencies:
   - skill:writing-plans
   - skill:writing-skills
-  - command:/context-map
-  - command:/prompt-engineering
+  - skill:/context-map
+  - skill:/prompt-engineering
 skills:
   - writing-plans — Structured prompt authoring
   - writing-skills — Crafting and optimizing prompts and instructions

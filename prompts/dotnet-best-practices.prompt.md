@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: .NET/C# Best Practices
+name: dotnet-best-practices
 agent: "agent"
 description: "Ensure .NET/C# code meets best practices for the solution/project."
 ---

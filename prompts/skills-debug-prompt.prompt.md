@@ -1,11 +1,19 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+name: skills-debug-prompt
 title: Skills Debug and Remediation Execution
 trigger: /skills-debug
 description: >
   Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
   Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade
   (unclosed fences, duplicate headings), then verify.
-tags: [hermes, skills, remediation, fix]
+tags: []
+  - hermes
+  - skills
+  - remediation
+  - fix
 ---
 
 ## Goal

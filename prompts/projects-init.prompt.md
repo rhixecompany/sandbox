@@ -1,4 +1,6 @@
 ---
+license: MIT
+author: Hermes Agent
 trigger: /projects-init
 name: projects-init
 title: "Projects Init"
@@ -7,7 +9,7 @@ description: >-
   prompt files to .github/prompts/, then create skills/scripts and update prompts.
   Eliminates duplicates and consolidates documentation.
 version: 1.0.0
-tags:
+tags: []
   [
     hermes,
     projects,

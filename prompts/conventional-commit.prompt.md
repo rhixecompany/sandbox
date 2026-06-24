@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Conventional Commit
+name: conventional-commit
 description: "Prompt and workflow for generating conventional commit messages using a structured XML format. Guides users to create standardized, descriptive commit messages in line with the Conventional Commits specification, including instructions, examples, and validation."
 tools: ["execute/runInTerminal", "execute/getTerminalOutput"]
 ---
@@ -46,13 +51,6 @@ Use when you need to conventional commit for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-
-> <description>This file contains a prompt template for generating conventional co
-> **Follow these steps:**
-
-> **Full content:** `templates/conventional-commit/legacy_prompt_details.md`
 
 ## Template References
 

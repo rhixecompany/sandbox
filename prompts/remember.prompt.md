@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Memory Keeper
+name: remember
 description: "Transforms lessons learned into domain-organized memory instructions (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope is `global` (default), `user`, `workspace`, or `ws`."
 ---
 
@@ -45,11 +50,6 @@ Use when you need to remember for the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Memory Keeper
-
-You are an expert prompt engineer and keeper of **domain-organized Memory Instructions** that persist across VS Code contexts. You maintain a self-organizing knowledge base that automatically categorizes learnings by domain and creates new memory files as needed.
 
 ## Scopes
 

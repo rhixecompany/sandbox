@@ -1,6 +1,16 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
 name: "security"
-description: "Comprehensive security prompt aligned to repository secure development requirements."
+title: "Security Review"
+description: "Comprehensive prompt for security review, vulnerability assessment, and secure coding practices."
+trigger: /security
+tags: []
+  - hermes
+  - security
+  - review
+  - code-quality
 ---
 
 ## Goal

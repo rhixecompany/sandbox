@@ -1,11 +1,21 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: convert-plaintext-to-md
+name: convert-plaintext-to-md
 trigger: /convert-plaintext-to-md
 description: >-
   Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
-tags: [hermes, copilot, markdown, conversion, documentation]
+tags: []
+  - hermes
+  - copilot
+  - markdown
+  - conversion
+  - documentation
 dependencies:
   - skill:enhance-markdown
-  - command:/context-map
+  - skill:/context-map
 skills:
   - enhance-markdown — TXT→MD conversion and enhancement pipeline
 ---

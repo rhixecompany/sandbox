@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Update Specification
+name: update-specification
 agent: "agent"
 description: "Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code."
 tools:
@@ -65,13 +70,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-# Update Specification
-
-Your goal is to update the existing specification file `${file}` based on new requirements or updates to any existing code.
-
-The specification file must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
 
 ## Best Practices for AI-Ready Specifications
 

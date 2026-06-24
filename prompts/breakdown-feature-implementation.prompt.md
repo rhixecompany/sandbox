@@ -1,4 +1,9 @@
 ---
+license: MIT
+author: Hermes Agent
+version: 1.0.0
+title: Feature Implementation Plan Prompt
+name: breakdown-feature-implementation
 agent: "agent"
 description: "Prompt for creating detailed feature implementation plans, following Epoch monorepo structure."
 ---
@@ -46,10 +51,6 @@ Use when you need to work on the current workspace or task.
 ### Phase 4: Hand off
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Legacy Prompt Details
-````text
-# Feature Implementation Plan Prompt
 
 ## Goal
 
