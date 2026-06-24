@@ -1,67 +1,79 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-06-24T00:00+01:00 | cwd: `~/Desktop/SandBox`
+> Generated: 206/2026-06-24T00:00:00Z | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
-## Current Session (20260624_000000_XXXXXX)
-| Field | Value |
-|-------|-------|
-| Session ID | 20260624_000000_XXXXXX |
-| Profile | default |
-| Model | qwen/qwen3-coder:free (OpenRouter) |
-| Source | cli |
-| Type | Session startup - mandatory 5-skill verification |
+## Last Session Summary
 
-### Tools Used
-| Tool | Calls | Purpose |
-|------|-------|---------|
-| skill_view | 5 | Load mandatory 5 startup skills |
-| session_search | 2 | Prior session lookup |
-| read_file | 4 | Read SESSION_REPORT.md, USER.md, SOUL.md, MEMORY.md |
-| terminal | 1 | hermes profile list |
+| Field      | Value                                                  |
+| ---------- | ------------------------------------------------------ |
+| Session ID | 20260622_135543_69b82f                                 |
+| Title      | GitHub Prompt File Inquiry and Test Script Guidance #7 |
+| When       | June 22, 2026 at 01:55 PM                              |
+| Model      | openai/gpt-oss-120b:free                               |
+| Source     | tui                                                    |
 
-### Skills Loaded
-| Skill | Trigger |
-|-------|---------|
-| using-superpowers | Session startup (invoked by user) |
-| user-communication-preferences | Session startup |
-| session-audit-report | Session startup |
-| hermes-profiles | Session startup |
-| validate-memories | Session startup |
+## Tools Used
 
-### Key Insights & Corrections
-1. **All 5 mandatory startup skills verified loaded** — `/using-superpowers`, `/user-communication-preferences`, `/session-audit-report`, `/hermes-profiles`, `/validate-memories`
-2. **Active model confirmed**: qwen/qwen3-coder:free (OpenRouter) per USER.md
-3. **Profile list shows 24 profiles** with 7 configured (default, alexa, code-architect, creative-director, exec-assistant, patient-tutor, research-analyst)
-4. **Memory validation passed** — MEMORY.md (635 chars) and USER.md (2457 chars) within limits
-5. **SOUL.md current** with environment corrections (Windows 11, VS Code, Git Bash)
+| Tool           | Calls | Purpose                                                                                                                                      |
+| -------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| read_file      | 12    | Read context files, prompts, skills                                                                                                          |
+| write_file     | 8     | Create shared templates, update prompts                                                                                                      |
+| search_files   | 15    | Find files, patterns in prompts repo                                                                                                         |
+| skill_view     | 6     | Load skills (using-superpowers, user-communication-preferences, session-audit-report, hermes-profiles, validate-memories, prompt-management) |
+| terminal       | 3     | Profile switching, session report                                                                                                            |
+| session_search | 4     | Browse and read prior session                                                                                                                |
 
-### Open Items
-| Item | Status |
-|------|--------|
-| Profile routing for current task | Pending (system ops → adminbot/alexa) |
-| Context file cross-validation | Pending |
+## Skills Loaded
 
-### Errors Resolved
-| Error | Fix |
-|-------|-----|
-| N/A | — |
+| Skill                          | Trigger                              |
+| ------------------------------ | ------------------------------------ |
+| using-superpowers              | Mandatory startup (user invoked)     |
+| user-communication-preferences | Mandatory 5-skill startup            |
+| session-audit-report           | Mandatory 5-skill startup            |
+| hermes-profiles                | Mandatory 5-skill startup            |
+| validate-memories              | Mandatory 5-skill startup            |
+| prompt-management              | Previous task (create templates, CI) |
 
-### Session Changelog
-| File | Action |
-|------|--------|
-| `./SESSION_REPORT.md` | Updated with current session startup |
+## Key Insights & Corrections
 
----
+1. **Mandatory 5-skill startup is now enforced** — SOUL.md Core Rule #6, USER.md, MASTER_RULES.md all require loading `/using-superpowers`, `/user-communication-preferences`, `/session-audit-report`, `/hermes-profiles`, `/validate-memories` before any task
+2. **Profile-per-task routing is mandatory** — Must run `hermes profile use <name>` matching task type before execution
+3. **MCP-first tool precedence** — Check MCP servers before native tools (filesystem, github, ast-grep, memory, playwright, sequential-thinking, cli, code-sandbox, fetch, mcp-docker)
+4. **SESSION_REPORT.md was a stub** — Previous session report only contained headers; overwritten with real rolling summary
+5. **Prompt-management skill complete** — Created all templates, references, scripts, and CI workflow for comprehensive prompt framework
 
-## Prior Session (20260622_135543_69b82f)
-| Field | Value |
-|-------|-------|
-| Session ID | 20260622_135543_69b82f |
-| Title | GitHub Prompt File Inquiry and Test Script Guidance #7 |
-| When | June 22, 2026 at 13:56 |
-| Model | (from tui) |
-| Source | tui |
+## Open Items
 
-### Key Work
-- Context file updates and validation
-- Session startup protocol execution
+| Item                                                                      | Status                                                                                                                                                    |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Create remaining shared files in `.github/prompts/templates/_shared/`     | In progress (personality.md, goals.md created; phases.md, steps.md, rules.md, triggers.md, tasks.md, actions.md, skills.md, tools.md, scripts.md pending) |
+| Remove "Load 5 skills before any response..." line from all context files | Pending                                                                                                                                                   |
+| Validate HERMES context files across workspace                            | In progress (this session)                                                                                                                                |
+| Validate/profile Hermes profiles                                          | In progress (this session)                                                                                                                                |
+
+## Errors Resolved
+
+| Error                                    | Fix                                                                                                         |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Skills not found via wrong category      | Used correct category (devops vs productivity) for session-audit-report, hermes-profiles, validate-memories |
+| Search regex errors for shared/ patterns | Escaped regex properly in subsequent searches                                                               |
+
+## Session Changelog
+
+| File                                                                                                                 | Action                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\SKILL.md`                                 | Updated with Security, Testing, Versioning, Metrics, Collaboration, Library Integration, Custom Templates sections |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\prompt_template.md`             | Created main prompt skeleton                                                                                       |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\plans_and_specs_template.md`    | Created Plans-and-Specs skeleton                                                                                   |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\script_template.md`             | Created script skeleton                                                                                            |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\persona_template.md`            | Created persona skeleton                                                                                           |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\templates\profile_template.md`            | Created profile skeleton                                                                                           |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\references\prompt_workflow.md`            | Created workflow diagrams                                                                                          |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\references\prompt_library_integration.md` | Created library integration guide                                                                                  |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\validate_prompt_frontmatter.py`   | Created CI validation script                                                                                       |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\dry_run_prompts.py`               | Created dry-run script                                                                                             |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\generate_prompt_changelog.py`     | Created changelog script                                                                                           |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\scripts\sync_prompt_library.py`           | Created library sync script                                                                                        |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\.github\workflows\prompt-validation.yml`  | Created CI workflow                                                                                                |
+| `.github/prompts/templates/_shared/personality.md`                                                                   | Created placeholder                                                                                                |
+| `.github/prompts/templates/_shared/goals.md`                                                                         | Created placeholder                                                                                                |
