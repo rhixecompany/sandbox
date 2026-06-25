@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -153,7 +152,6 @@ AWS_QUERYSTRING_AUTH = False
 
 #AWS_S3_FILE_OVERWRITE = False
 #AWS_DEFAULT_ACL = None
-=======
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -308,4 +306,3 @@ AWS_QUERYSTRING_AUTH = False
 
 #AWS_S3_FILE_OVERWRITE = False
 #AWS_DEFAULT_ACL = None
->>>>>>> 4ae124d (chore: initial local project setup for profile)

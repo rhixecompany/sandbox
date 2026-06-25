@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 web: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 rhixecompany.wsgi:application
-=======
 web: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 rhixecompany.wsgi:application
->>>>>>> 4ae124d (chore: initial local project setup for profile)

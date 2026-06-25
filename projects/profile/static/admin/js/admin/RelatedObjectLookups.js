@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global SelectBox, interpolate*/
 // Handles related-objects functionality: lookup link for raw_id_fields
 // and Add Another links.
@@ -180,7 +179,6 @@
     });
 
 })(django.jQuery);
-=======
 /*global SelectBox, interpolate*/
 // Handles related-objects functionality: lookup link for raw_id_fields
 // and Add Another links.
@@ -362,4 +360,3 @@
     });
 
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function($) {
     'use strict';
     var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');
@@ -9,7 +8,6 @@
         );
     });
 })(django.jQuery);
-=======
 (function($) {
     'use strict';
     var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');
@@ -20,4 +18,3 @@
         );
     });
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

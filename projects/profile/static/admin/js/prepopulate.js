@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global URLify*/
 (function($) {
     'use strict';
@@ -41,7 +40,6 @@
         });
     };
 })(django.jQuery);
-=======
 /*global URLify*/
 (function($) {
     'use strict';
@@ -84,4 +82,3 @@
         });
     };
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

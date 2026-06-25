@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -10,7 +9,6 @@ legend:"Mens du er i en dialog, trykk TAB for å navigere til neste dialogelemen
 {name:"Gå til neste fokusområde",legend:"Trykk ${accessNextSpace} for å komme til nærmeste fokusområde etter skrivemarkøren som ikke kan nås på vanlig måte, for eksempel to tilstøtende HR-elementer. Gjenta tastekombinasjonen for å komme til fokusområder lenger unna i dokumentet."},{name:"Hjelp for tilgjengelighet",legend:"Trykk ${a11yHelp}"},{name:"Lim inn som ren tekst",legend:"Trykk ${pastetext}",legendEdge:"Trykk ${pastetext}, etterfulgt av ${past}"}]}],tab:"Tabulator",pause:"Pause",capslock:"Caps Lock",
 escape:"Escape",pageUp:"Page Up",pageDown:"Page Down",leftArrow:"Venstre piltast",upArrow:"Opp-piltast",rightArrow:"Høyre piltast",downArrow:"Ned-piltast",insert:"Insert",leftWindowKey:"Venstre Windows-tast",rightWindowKey:"Høyre Windows-tast",selectKey:"Velg nøkkel",numpad0:"Numerisk tastatur 0",numpad1:"Numerisk tastatur 1",numpad2:"Numerisk tastatur 2",numpad3:"Numerisk tastatur 3",numpad4:"Numerisk tastatur 4",numpad5:"Numerisk tastatur 5",numpad6:"Numerisk tastatur 6",numpad7:"Numerisk tastatur 7",
 numpad8:"Numerisk tastatur 8",numpad9:"Numerisk tastatur 9",multiply:"Multipliser",add:"Legg til",subtract:"Trekk fra",decimalPoint:"Desimaltegn",divide:"Divider",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Num Lock",scrollLock:"Scroll Lock",semiColon:"Semikolon",equalSign:"Likhetstegn",comma:"Komma",dash:"Bindestrek",period:"Punktum",forwardSlash:"Forover skråstrek",graveAccent:"Grav aksent",openBracket:"Åpne parentes",backSlash:"Bakover skråstrek",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -22,5 +20,4 @@ legend:"Mens du er i en dialog, trykk TAB for å navigere til neste dialogelemen
 {name:"Gå til neste fokusområde",legend:"Trykk ${accessNextSpace} for å komme til nærmeste fokusområde etter skrivemarkøren som ikke kan nås på vanlig måte, for eksempel to tilstøtende HR-elementer. Gjenta tastekombinasjonen for å komme til fokusområder lenger unna i dokumentet."},{name:"Hjelp for tilgjengelighet",legend:"Trykk ${a11yHelp}"},{name:"Lim inn som ren tekst",legend:"Trykk ${pastetext}",legendEdge:"Trykk ${pastetext}, etterfulgt av ${past}"}]}],tab:"Tabulator",pause:"Pause",capslock:"Caps Lock",
 escape:"Escape",pageUp:"Page Up",pageDown:"Page Down",leftArrow:"Venstre piltast",upArrow:"Opp-piltast",rightArrow:"Høyre piltast",downArrow:"Ned-piltast",insert:"Insert",leftWindowKey:"Venstre Windows-tast",rightWindowKey:"Høyre Windows-tast",selectKey:"Velg nøkkel",numpad0:"Numerisk tastatur 0",numpad1:"Numerisk tastatur 1",numpad2:"Numerisk tastatur 2",numpad3:"Numerisk tastatur 3",numpad4:"Numerisk tastatur 4",numpad5:"Numerisk tastatur 5",numpad6:"Numerisk tastatur 6",numpad7:"Numerisk tastatur 7",
 numpad8:"Numerisk tastatur 8",numpad9:"Numerisk tastatur 9",multiply:"Multipliser",add:"Legg til",subtract:"Trekk fra",decimalPoint:"Desimaltegn",divide:"Divider",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Num Lock",scrollLock:"Scroll Lock",semiColon:"Semikolon",equalSign:"Likhetstegn",comma:"Komma",dash:"Bindestrek",period:"Punktum",forwardSlash:"Forover skråstrek",graveAccent:"Grav aksent",openBracket:"Åpne parentes",backSlash:"Bakover skråstrek",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 closeBracket:"Lukk parentes",singleQuote:"Enkelt sitattegn"});

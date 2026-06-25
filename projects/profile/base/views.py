@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -206,7 +205,6 @@ def updateProfile(request):
 
 
 	context = {'form':form}
-=======
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -414,5 +412,4 @@ def updateProfile(request):
 
 
 	context = {'form':form}
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 	return render(request, 'base/profile_form.html', context)

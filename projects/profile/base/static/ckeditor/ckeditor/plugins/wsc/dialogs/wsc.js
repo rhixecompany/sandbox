@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.html or http://ckeditor.com/license
@@ -89,7 +88,6 @@ var b=g.cookie.get("osp").split("");e.IgnoreAllCapsWords=b[0];e.IgnoreWordsNumbe
 10)?c.IgnoreDomainNames.setValue("checked",!1):c.IgnoreDomainNames.setValue("",!1);e.IgnoreAllCapsWords=c.IgnoreAllCapsWords.getValue()?1:0;e.IgnoreWordsNumbers=c.IgnoreWordsNumbers.getValue()?1:0;e.IgnoreMixedCaseWords=c.IgnoreMixedCaseWords.getValue()?1:0;e.IgnoreDomainNames=c.IgnoreDomainNames.getValue()?1:0;c.IgnoreAllCapsWords.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreAllCapsWords;c.IgnoreWordsNumbers.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreWordsWithNumbers;
 c.IgnoreMixedCaseWords.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreMixedCaseWords;c.IgnoreDomainNames.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreDomainNames},onHide:function(){g.postMessage.unbindHandler(k);if(z)try{z.focus()}catch(a){}}}});CKEDITOR.dialog.on("resize",function(b){b=b.data;var d=b.dialog,c=CKEDITOR.document.getById(a.iframeNumber+"_"+d._.currentTabId);"checkspell"==d._.name&&(a.bnr?c&&c.setSize("height",b.height-310):c&&c.setSize("height",b.height-
 220),d._.fromResizeEvent&&!d._.resized&&(d._.resized=!0),d._.fromResizeEvent=!0)});CKEDITOR.on("dialogDefinition",function(b){if("checkspell"===b.data.name){var d=b.data.definition;a.onLoadOverlay=new C({opacity:"1",background:"#fff",target:d.dialog.parts.tabs.getParent().$});a.onLoadOverlay.setEnable();d.dialog.on("cancel",function(b){d.dialog.getParentEditor().config.wsc_onClose.call(this.document.getWindow().getFrame());a.div_overlay.setDisable();a.onLoadOverlay.setDisable();return!1},this,null,
-=======
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.html or http://ckeditor.com/license
@@ -180,5 +178,4 @@ var b=g.cookie.get("osp").split("");e.IgnoreAllCapsWords=b[0];e.IgnoreWordsNumbe
 10)?c.IgnoreDomainNames.setValue("checked",!1):c.IgnoreDomainNames.setValue("",!1);e.IgnoreAllCapsWords=c.IgnoreAllCapsWords.getValue()?1:0;e.IgnoreWordsNumbers=c.IgnoreWordsNumbers.getValue()?1:0;e.IgnoreMixedCaseWords=c.IgnoreMixedCaseWords.getValue()?1:0;e.IgnoreDomainNames=c.IgnoreDomainNames.getValue()?1:0;c.IgnoreAllCapsWords.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreAllCapsWords;c.IgnoreWordsNumbers.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreWordsWithNumbers;
 c.IgnoreMixedCaseWords.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreMixedCaseWords;c.IgnoreDomainNames.getElement().$.lastChild.innerHTML=a.LocalizationComing.IgnoreDomainNames},onHide:function(){g.postMessage.unbindHandler(k);if(z)try{z.focus()}catch(a){}}}});CKEDITOR.dialog.on("resize",function(b){b=b.data;var d=b.dialog,c=CKEDITOR.document.getById(a.iframeNumber+"_"+d._.currentTabId);"checkspell"==d._.name&&(a.bnr?c&&c.setSize("height",b.height-310):c&&c.setSize("height",b.height-
 220),d._.fromResizeEvent&&!d._.resized&&(d._.resized=!0),d._.fromResizeEvent=!0)});CKEDITOR.on("dialogDefinition",function(b){if("checkspell"===b.data.name){var d=b.data.definition;a.onLoadOverlay=new C({opacity:"1",background:"#fff",target:d.dialog.parts.tabs.getParent().$});a.onLoadOverlay.setEnable();d.dialog.on("cancel",function(b){d.dialog.getParentEditor().config.wsc_onClose.call(this.document.getWindow().getFrame());a.div_overlay.setDisable();a.onLoadOverlay.setDisable();return!1},this,null,
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 -1)}})})();

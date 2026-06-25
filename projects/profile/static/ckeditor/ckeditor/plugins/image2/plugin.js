@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
@@ -28,7 +27,6 @@ e)}else b.replace(d)}var f=a.document,g=a.config.image2_alignClasses,d=a.config.
 ("center"==e?f.setStyle("display","inline-block"):f.removeStyle("display"))},hasCaption:function(b,c,g){b.changed.hasCaption&&(c=b.element.is({img:1,a:1})?b.element:b.element.findOne("a,img"),b.deflate(),g?(g=CKEDITOR.dom.element.createFromHtml(K.output({captionedClass:d,captionPlaceholder:a.lang.image2.captionPlaceholder}),f),e(g,b.element),c.replace(g.findOne("img")),b.element=g):(c.replace(b.element),b.element=c))},link:function(b,c,d){if(b.changed.link){var e=b.element.is("img")?b.element:b.element.findOne("img"),
 g=b.element.is("a")?b.element:b.element.findOne("a"),h=b.element.is("a")&&!d||b.element.is("img")&&d,i;h&&b.deflate();d?(c||(i=f.createElement("a",{attributes:{href:b.newData.link.url}}),i.replace(e),e.move(i)),d=CKEDITOR.plugins.link.getLinkAttributes(a,d),CKEDITOR.tools.isEmpty(d.set)||(i||g).setAttributes(d.set),d.removed.length&&(i||g).removeAttributes(d.removed)):(d=g.findOne("img"),d.replace(g),i=d);h&&(b.element=i)}}};return function(a){var b,c;a.changed={};for(c=0;c<h.length;c++)b=h[c],a.changed[b]=
 a.oldData?a.oldData[b]!==a.newData[b]:!1;for(c=0;c<h.length;c++)b=h[c],i[b](a,a.oldData?a.oldData[b]:null,a.newData[b]);a.inflate()}},checkHasNaturalRatio:function(a){var b=a.$,a=this.getNatural(a);return Math.round(b.clientWidth/a.width*a.height)==b.clientHeight||Math.round(b.clientHeight/a.height*a.width)==b.clientWidth},getNatural:function(a){if(a.$.naturalWidth)a={width:a.$.naturalWidth,height:a.$.naturalHeight};else{var b=new Image;b.src=a.getAttribute("src");a={width:b.width,height:b.height}}return a}}})();
-=======
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
@@ -58,5 +56,4 @@ e)}else b.replace(d)}var f=a.document,g=a.config.image2_alignClasses,d=a.config.
 ("center"==e?f.setStyle("display","inline-block"):f.removeStyle("display"))},hasCaption:function(b,c,g){b.changed.hasCaption&&(c=b.element.is({img:1,a:1})?b.element:b.element.findOne("a,img"),b.deflate(),g?(g=CKEDITOR.dom.element.createFromHtml(K.output({captionedClass:d,captionPlaceholder:a.lang.image2.captionPlaceholder}),f),e(g,b.element),c.replace(g.findOne("img")),b.element=g):(c.replace(b.element),b.element=c))},link:function(b,c,d){if(b.changed.link){var e=b.element.is("img")?b.element:b.element.findOne("img"),
 g=b.element.is("a")?b.element:b.element.findOne("a"),h=b.element.is("a")&&!d||b.element.is("img")&&d,i;h&&b.deflate();d?(c||(i=f.createElement("a",{attributes:{href:b.newData.link.url}}),i.replace(e),e.move(i)),d=CKEDITOR.plugins.link.getLinkAttributes(a,d),CKEDITOR.tools.isEmpty(d.set)||(i||g).setAttributes(d.set),d.removed.length&&(i||g).removeAttributes(d.removed)):(d=g.findOne("img"),d.replace(g),i=d);h&&(b.element=i)}}};return function(a){var b,c;a.changed={};for(c=0;c<h.length;c++)b=h[c],a.changed[b]=
 a.oldData?a.oldData[b]!==a.newData[b]:!1;for(c=0;c<h.length;c++)b=h[c],i[b](a,a.oldData?a.oldData[b]:null,a.newData[b]);a.inflate()}},checkHasNaturalRatio:function(a){var b=a.$,a=this.getNatural(a);return Math.round(b.clientWidth/a.width*a.height)==b.clientHeight||Math.round(b.clientHeight/a.height*a.width)==b.clientWidth},getNatural:function(a){if(a.$.naturalWidth)a={width:a.$.naturalWidth,height:a.$.naturalHeight};else{var b=new Image;b.src=a.getAttribute("src");a={width:b.width,height:b.height}}return a}}})();
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 CKEDITOR.config.image2_captionedClass="image";

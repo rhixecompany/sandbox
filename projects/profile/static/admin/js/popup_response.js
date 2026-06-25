@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global opener */
 (function() {
     'use strict';
@@ -15,7 +14,6 @@
         break;
     }
 })();
-=======
 /*global opener */
 (function() {
     'use strict';
@@ -32,4 +30,3 @@
         break;
     }
 })();
->>>>>>> 4ae124d (chore: initial local project setup for profile)

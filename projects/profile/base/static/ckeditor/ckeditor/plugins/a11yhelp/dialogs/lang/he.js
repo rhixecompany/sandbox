@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -9,7 +8,6 @@ CKEDITOR.plugins.setLang("a11yhelp","he",{title:"הוראות נגישות",cont
 legend:"לחץ ${link}"},{name:" כיווץ סרגל הכלים",legend:"לחץ ${toolbarCollapse}"},{name:"גישה למיקום המיקוד הקודם",legend:"לחץ ${accessPreviousSpace} כדי לגשת למיקום המיקוד הלא-נגיש הקרוב לפני הסמן, למשל בין שני אלמנטים סמוכים מסוג HR. חזור על צירוף מקשים זה כדי להגיע למקומות מיקוד רחוקים יותר."},{name:"גישה למיקום המיקוד הבא",legend:"לחץ ${accessNextSpace} כדי לגשת למיקום המיקוד הלא-נגיש הקרוב אחרי הסמן, למשל בין שני אלמנטים סמוכים מסוג HR. חזור על צירוף מקשים זה כדי להגיע למקומות מיקוד רחוקים יותר."},
 {name:" הוראות נגישות",legend:"לחץ ${a11yHelp}"},{name:" Paste as plain text",legend:"Press ${pastetext}",legendEdge:"Press ${pastetext}, followed by ${paste}"}]}],tab:"Tab",pause:"Pause",capslock:"Caps Lock",escape:"Escape",pageUp:"Page Up",pageDown:"Page Down",leftArrow:"חץ שמאלה",upArrow:"חץ למעלה",rightArrow:"חץ ימינה",downArrow:"חץ למטה",insert:"הכנס",leftWindowKey:"Left Windows key",rightWindowKey:"Right Windows key",selectKey:"בחר מקש",numpad0:"Numpad 0",numpad1:"Numpad 1",numpad2:"Numpad 2",
 numpad3:"Numpad 3",numpad4:"Numpad 4",numpad5:"Numpad 5",numpad6:"Numpad 6",numpad7:"Numpad 7",numpad8:"Numpad 8",numpad9:"Numpad 9",multiply:"Multiply",add:"הוסף",subtract:"Subtract",decimalPoint:"Decimal Point",divide:"Divide",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Num Lock",scrollLock:"Scroll Lock",semiColon:"Semicolon",equalSign:"Equal Sign",comma:"Comma",dash:"Dash",period:"Period",forwardSlash:"סלאש",graveAccent:"Grave Accent",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -20,5 +18,4 @@ CKEDITOR.plugins.setLang("a11yhelp","he",{title:"הוראות נגישות",cont
 legend:"לחץ ${link}"},{name:" כיווץ סרגל הכלים",legend:"לחץ ${toolbarCollapse}"},{name:"גישה למיקום המיקוד הקודם",legend:"לחץ ${accessPreviousSpace} כדי לגשת למיקום המיקוד הלא-נגיש הקרוב לפני הסמן, למשל בין שני אלמנטים סמוכים מסוג HR. חזור על צירוף מקשים זה כדי להגיע למקומות מיקוד רחוקים יותר."},{name:"גישה למיקום המיקוד הבא",legend:"לחץ ${accessNextSpace} כדי לגשת למיקום המיקוד הלא-נגיש הקרוב אחרי הסמן, למשל בין שני אלמנטים סמוכים מסוג HR. חזור על צירוף מקשים זה כדי להגיע למקומות מיקוד רחוקים יותר."},
 {name:" הוראות נגישות",legend:"לחץ ${a11yHelp}"},{name:" Paste as plain text",legend:"Press ${pastetext}",legendEdge:"Press ${pastetext}, followed by ${paste}"}]}],tab:"Tab",pause:"Pause",capslock:"Caps Lock",escape:"Escape",pageUp:"Page Up",pageDown:"Page Down",leftArrow:"חץ שמאלה",upArrow:"חץ למעלה",rightArrow:"חץ ימינה",downArrow:"חץ למטה",insert:"הכנס",leftWindowKey:"Left Windows key",rightWindowKey:"Right Windows key",selectKey:"בחר מקש",numpad0:"Numpad 0",numpad1:"Numpad 1",numpad2:"Numpad 2",
 numpad3:"Numpad 3",numpad4:"Numpad 4",numpad5:"Numpad 5",numpad6:"Numpad 6",numpad7:"Numpad 7",numpad8:"Numpad 8",numpad9:"Numpad 9",multiply:"Multiply",add:"הוסף",subtract:"Subtract",decimalPoint:"Decimal Point",divide:"Divide",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Num Lock",scrollLock:"Scroll Lock",semiColon:"Semicolon",equalSign:"Equal Sign",comma:"Comma",dash:"Dash",period:"Period",forwardSlash:"סלאש",graveAccent:"Grave Accent",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 openBracket:"Open Bracket",backSlash:"סלאש הפוך",closeBracket:"Close Bracket",singleQuote:"ציטוט יחיד"});

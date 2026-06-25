@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global django:true, jQuery:false*/
 /* Puts the included jQuery into our own namespace using noConflict and passing
  * it 'true'. This ensures that the included jQuery doesn't pollute the global
@@ -7,7 +6,6 @@
  */
 var django = django || {};
 django.jQuery = jQuery.noConflict(true);
-=======
 /*global django:true, jQuery:false*/
 /* Puts the included jQuery into our own namespace using noConflict and passing
  * it 'true'. This ensures that the included jQuery doesn't pollute the global
@@ -16,4 +14,3 @@ django.jQuery = jQuery.noConflict(true);
  */
 var django = django || {};
 django.jQuery = jQuery.noConflict(true);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

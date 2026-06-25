@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global SelectBox, gettext, interpolate, quickElement, SelectFilter*/
 /*
 SelectFilter2 - Turns a multiple-select box into a filter interface.
@@ -245,7 +244,6 @@ Requires jQuery, core.js, and SelectBox.js.
     });
 
 })(django.jQuery);
-=======
 /*global SelectBox, gettext, interpolate, quickElement, SelectFilter*/
 /*
 SelectFilter2 - Turns a multiple-select box into a filter interface.
@@ -492,4 +490,3 @@ Requires jQuery, core.js, and SelectBox.js.
     });
 
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

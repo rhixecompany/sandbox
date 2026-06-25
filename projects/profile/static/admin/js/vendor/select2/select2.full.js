@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*!
  * Select2 4.0.7
  * https://select2.github.io
@@ -6596,7 +6595,6 @@ S2.define('jquery.select2',[
   // Return the Select2 instance for anyone who is importing it.
   return select2;
 }));
-=======
 /*!
  * Select2 4.0.7
  * https://select2.github.io
@@ -13194,4 +13192,3 @@ S2.define('jquery.select2',[
   // Return the Select2 instance for anyone who is importing it.
   return select2;
 }));
->>>>>>> 4ae124d (chore: initial local project setup for profile)

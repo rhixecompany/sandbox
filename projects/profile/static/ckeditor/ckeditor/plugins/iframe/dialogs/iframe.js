@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -9,7 +8,6 @@ onOk:function(){var b;b=this.fakeImage?this.iframeNode:new CKEDITOR.dom.element(
 setup:d,commit:e}]},{type:"hbox",children:[{id:"width",type:"text",requiredContent:"iframe[width]",style:"width:100%",labelLayout:"vertical",label:a.width,validate:CKEDITOR.dialog.validate.htmlLength(a.invalidHtmlLength.replace("%1",a.width)),setup:d,commit:e},{id:"height",type:"text",requiredContent:"iframe[height]",style:"width:100%",labelLayout:"vertical",label:a.height,validate:CKEDITOR.dialog.validate.htmlLength(a.invalidHtmlLength.replace("%1",a.height)),setup:d,commit:e},{id:"align",type:"select",
 requiredContent:"iframe[align]","default":"",items:[[a.notSet,""],[a.left,"left"],[a.right,"right"],[a.alignTop,"top"],[a.alignMiddle,"middle"],[a.alignBottom,"bottom"]],style:"width:100%",labelLayout:"vertical",label:a.align,setup:function(b,a){d.apply(this,arguments);if(a){var c=a.getAttribute("align");this.setValue(c&&c.toLowerCase()||"")}},commit:function(a,c,d){e.apply(this,arguments);this.getValue()&&(d.align=this.getValue())}}]},{type:"hbox",widths:["50%","50%"],children:[{id:"scrolling",type:"checkbox",
 requiredContent:"iframe[scrolling]",label:g.scrolling,setup:d,commit:e},{id:"frameborder",type:"checkbox",requiredContent:"iframe[frameborder]",label:g.border,setup:d,commit:e}]},{type:"hbox",widths:["50%","50%"],children:[{id:"name",type:"text",requiredContent:"iframe[name]",label:a.name,setup:d,commit:e},{id:"title",type:"text",requiredContent:"iframe[title]",label:a.advisoryTitle,setup:d,commit:e}]},{id:"longdesc",type:"text",requiredContent:"iframe[longdesc]",label:a.longDescr,setup:d,commit:e}]},
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -20,5 +18,4 @@ onOk:function(){var b;b=this.fakeImage?this.iframeNode:new CKEDITOR.dom.element(
 setup:d,commit:e}]},{type:"hbox",children:[{id:"width",type:"text",requiredContent:"iframe[width]",style:"width:100%",labelLayout:"vertical",label:a.width,validate:CKEDITOR.dialog.validate.htmlLength(a.invalidHtmlLength.replace("%1",a.width)),setup:d,commit:e},{id:"height",type:"text",requiredContent:"iframe[height]",style:"width:100%",labelLayout:"vertical",label:a.height,validate:CKEDITOR.dialog.validate.htmlLength(a.invalidHtmlLength.replace("%1",a.height)),setup:d,commit:e},{id:"align",type:"select",
 requiredContent:"iframe[align]","default":"",items:[[a.notSet,""],[a.left,"left"],[a.right,"right"],[a.alignTop,"top"],[a.alignMiddle,"middle"],[a.alignBottom,"bottom"]],style:"width:100%",labelLayout:"vertical",label:a.align,setup:function(b,a){d.apply(this,arguments);if(a){var c=a.getAttribute("align");this.setValue(c&&c.toLowerCase()||"")}},commit:function(a,c,d){e.apply(this,arguments);this.getValue()&&(d.align=this.getValue())}}]},{type:"hbox",widths:["50%","50%"],children:[{id:"scrolling",type:"checkbox",
 requiredContent:"iframe[scrolling]",label:g.scrolling,setup:d,commit:e},{id:"frameborder",type:"checkbox",requiredContent:"iframe[frameborder]",label:g.border,setup:d,commit:e}]},{type:"hbox",widths:["50%","50%"],children:[{id:"name",type:"text",requiredContent:"iframe[name]",label:a.name,setup:d,commit:e},{id:"title",type:"text",requiredContent:"iframe[title]",label:a.advisoryTitle,setup:d,commit:e}]},{id:"longdesc",type:"text",requiredContent:"iframe[longdesc]",label:a.longDescr,setup:d,commit:e}]},
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 f&&f.createAdvancedTab(c,{id:1,classes:1,styles:1},"iframe")]}})})();

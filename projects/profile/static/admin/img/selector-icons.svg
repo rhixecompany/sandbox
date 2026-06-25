@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <svg width="16" height="192" viewBox="0 0 1792 21504" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <g id="up">
@@ -33,7 +32,6 @@
   <use xlink:href="#chooseall" x="0" y="17920" fill="#666666" />
   <use xlink:href="#chooseall" x="0" y="19712" fill="#447e9b" />
 </svg>
-=======
 <svg width="16" height="192" viewBox="0 0 1792 21504" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <g id="up">
@@ -68,4 +66,3 @@
   <use xlink:href="#chooseall" x="0" y="17920" fill="#666666" />
   <use xlink:href="#chooseall" x="0" y="19712" fill="#447e9b" />
 </svg>
->>>>>>> 4ae124d (chore: initial local project setup for profile)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global DateTimeShortcuts, SelectFilter*/
 /**
  * Django admin inlines
@@ -297,7 +296,6 @@
         });
     });
 })(django.jQuery);
-=======
 /*global DateTimeShortcuts, SelectFilter*/
 /**
  * Django admin inlines
@@ -596,4 +594,3 @@
         });
     });
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

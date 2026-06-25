@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 
 from django.contrib.auth.models import User
@@ -20,7 +19,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(createsuperuser)
     ]
-=======
 import os
 
 from django.contrib.auth.models import User
@@ -42,4 +40,3 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(createsuperuser)
     ]
->>>>>>> 4ae124d (chore: initial local project setup for profile)

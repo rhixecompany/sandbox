@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/**
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/license
@@ -190,7 +189,6 @@ var CKBUILDER_CONFIG = {
 		'zh' : 1,
 		'zh-cn' : 1
 	}
-=======
 ﻿/**
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/license
@@ -382,5 +380,4 @@ var CKBUILDER_CONFIG = {
 		'zh' : 1,
 		'zh-cn' : 1
 	}
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 };

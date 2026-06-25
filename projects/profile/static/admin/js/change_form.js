@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global showAddAnotherPopup, showRelatedObjectLookupPopup showRelatedObjectPopup updateRelatedObjectLinks*/
 
 (function($) {
@@ -19,7 +18,6 @@
         }
     });
 })(django.jQuery);
-=======
 /*global showAddAnotherPopup, showRelatedObjectLookupPopup showRelatedObjectPopup updateRelatedObjectLinks*/
 
 (function($) {
@@ -40,4 +38,3 @@
         }
     });
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

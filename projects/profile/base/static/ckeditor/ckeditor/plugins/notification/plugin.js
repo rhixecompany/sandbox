@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
@@ -17,7 +16,6 @@ c.addClass("cke_notifications_area");c.setAttribute("id","cke_notifications_area
 b.removeListener("scroll",this._uiBuffer.input);b.removeListener("resize",this._uiBuffer.input);a.removeListener("change",this._changeBuffer.input);a.removeListener("floatingSpaceLayout",this._layout);a.removeListener("blur",this._layout)},_layout:function(){function b(){a.setStyle("left",i(l+d.width-f-h))}var a=this.element,c=this.editor,d=c.ui.contentsElement.getClientRect(),e=c.ui.contentsElement.getDocumentPosition(),c=c.ui.space("top"),g=c.getClientRect(),k=a.getClientRect(),j,f=this._notificationWidth,
 h=this._notificationMargin;j=CKEDITOR.document.getWindow();var m=j.getScrollPosition(),n=j.getViewPaneSize(),o=CKEDITOR.document.getBody(),p=o.getDocumentPosition(),i=CKEDITOR.tools.cssLength;if(!f||!h)j=this.element.getChild(0),f=this._notificationWidth=j.getClientRect().width,h=this._notificationMargin=parseInt(j.getComputedStyle("margin-left"),10)+parseInt(j.getComputedStyle("margin-right"),10);c.isVisible()&&g.bottom>d.top&&g.bottom<d.bottom-k.height?a.setStyles({position:"fixed",top:i(g.bottom)}):
 0<d.top?a.setStyles({position:"absolute",top:i(e.y)}):e.y+d.height-k.height>m.y?a.setStyles({position:"fixed",top:0}):a.setStyles({position:"absolute",top:i(e.y+d.height-k.height)});var l="fixed"==a.getStyle("position")?d.left:"static"!=o.getComputedStyle("position")?e.x-p.x:e.x;d.width<f+h?e.x+f+h>m.x+n.width?b():a.setStyle("left",i(l)):e.x+f+h>m.x+n.width?a.setStyle("left",i(l)):e.x+d.width/2+f/2+h>m.x+n.width?a.setStyle("left",i(l-e.x+m.x+n.width-f-h)):0>d.left+d.width-f-h?b():0>d.left+d.width/
-=======
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
@@ -36,5 +34,4 @@ c.addClass("cke_notifications_area");c.setAttribute("id","cke_notifications_area
 b.removeListener("scroll",this._uiBuffer.input);b.removeListener("resize",this._uiBuffer.input);a.removeListener("change",this._changeBuffer.input);a.removeListener("floatingSpaceLayout",this._layout);a.removeListener("blur",this._layout)},_layout:function(){function b(){a.setStyle("left",i(l+d.width-f-h))}var a=this.element,c=this.editor,d=c.ui.contentsElement.getClientRect(),e=c.ui.contentsElement.getDocumentPosition(),c=c.ui.space("top"),g=c.getClientRect(),k=a.getClientRect(),j,f=this._notificationWidth,
 h=this._notificationMargin;j=CKEDITOR.document.getWindow();var m=j.getScrollPosition(),n=j.getViewPaneSize(),o=CKEDITOR.document.getBody(),p=o.getDocumentPosition(),i=CKEDITOR.tools.cssLength;if(!f||!h)j=this.element.getChild(0),f=this._notificationWidth=j.getClientRect().width,h=this._notificationMargin=parseInt(j.getComputedStyle("margin-left"),10)+parseInt(j.getComputedStyle("margin-right"),10);c.isVisible()&&g.bottom>d.top&&g.bottom<d.bottom-k.height?a.setStyles({position:"fixed",top:i(g.bottom)}):
 0<d.top?a.setStyles({position:"absolute",top:i(e.y)}):e.y+d.height-k.height>m.y?a.setStyles({position:"fixed",top:0}):a.setStyles({position:"absolute",top:i(e.y+d.height-k.height)});var l="fixed"==a.getStyle("position")?d.left:"static"!=o.getComputedStyle("position")?e.x-p.x:e.x;d.width<f+h?e.x+f+h>m.x+n.width?b():a.setStyle("left",i(l)):e.x+f+h>m.x+n.width?a.setStyle("left",i(l)):e.x+d.width/2+f/2+h>m.x+n.width?a.setStyle("left",i(l-e.x+m.x+n.width-f-h)):0>d.left+d.width-f-h?b():0>d.left+d.width/
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 2-f/2?a.setStyle("left",i(l-e.x+m.x)):a.setStyle("left",i(l+d.width/2-f/2-h/2))}};CKEDITOR.plugins.notification=Notification;

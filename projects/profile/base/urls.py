@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.urls import path
 from . import views
 
@@ -23,7 +22,6 @@ urlpatterns = [
 
 	path('account/', views.userAccount, name="account"),
 	path('update_profile/', views.updateProfile, name="update_profile"),
-=======
 from django.urls import path
 from . import views
 
@@ -48,5 +46,4 @@ urlpatterns = [
 
 	path('account/', views.userAccount, name="account"),
 	path('update_profile/', views.updateProfile, name="update_profile"),
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 ]

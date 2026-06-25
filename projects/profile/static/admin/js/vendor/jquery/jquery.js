@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*!
  * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
@@ -10871,7 +10870,6 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
-=======
 /*!
  * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
@@ -21744,4 +21742,3 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
->>>>>>> 4ae124d (chore: initial local project setup for profile)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function($) {
     'use strict';
     var SelectBox = {
@@ -143,7 +142,6 @@
     };
     window.SelectBox = SelectBox;
 })(django.jQuery);
-=======
 (function($) {
     'use strict';
     var SelectBox = {
@@ -288,4 +286,3 @@
     };
     window.SelectBox = SelectBox;
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

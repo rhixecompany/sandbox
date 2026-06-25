@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import io
 import os
 from urllib.parse import urlparse
@@ -43,7 +42,6 @@ STATICFILES_DIRS = []
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 GS_DEFAULT_ACL = "publicRead"
-=======
 import io
 import os
 from urllib.parse import urlparse
@@ -88,4 +86,3 @@ STATICFILES_DIRS = []
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 GS_DEFAULT_ACL = "publicRead"
->>>>>>> 4ae124d (chore: initial local project setup for profile)

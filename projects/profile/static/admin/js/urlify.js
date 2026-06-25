@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global XRegExp*/
 (function() {
     'use strict';
@@ -194,7 +193,6 @@
     }
     window.URLify = URLify;
 })();
-=======
 /*global XRegExp*/
 (function() {
     'use strict';
@@ -390,4 +388,3 @@
     }
     window.URLify = URLify;
 })();
->>>>>>> 4ae124d (chore: initial local project setup for profile)

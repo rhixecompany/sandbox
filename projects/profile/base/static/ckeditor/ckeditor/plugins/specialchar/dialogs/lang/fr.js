@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -10,7 +9,6 @@ Ntilde:"N caron majuscule",Ograve:"O accent grave majuscule",Oacute:"O accent ai
 aacute:"A accent aigu minuscule",acirc:"A accent circonflexe minuscule",atilde:"A tilde minuscule",auml:"A tréma minuscule",aring:"A rond minuscule",aelig:"Ligature Æ minuscule",ccedil:"C cédille minuscule",egrave:"E accent grave minuscule",eacute:"E accent aigu minuscule",ecirc:"E accent circonflexe minuscule",euml:"E tréma minuscule",igrave:"I accent grave minuscule",iacute:"I accent aigu minuscule",icirc:"I accent circonflexe minuscule",iuml:"i minuscule tréma",eth:"Lettre minuscule islandaise ED",
 ntilde:"N caron minuscule",ograve:"O minuscule accent grave",oacute:"O accent aigu minuscule",ocirc:"O accent circonflexe minuscule",otilde:"O tilde minuscule",ouml:"O tréma minuscule",divide:"Symbole de division",oslash:"O barré minuscule",ugrave:"U accent grave minuscule",uacute:"U accent aigu minuscule",ucirc:"U accent circonflexe minuscule",uuml:"U tréma minuscule",yacute:"Y accent aigu minuscule",thorn:"Lettre islandaise thorn minuscule",yuml:"Y tréma minuscule",OElig:"Ligature Œ majuscule",
 oelig:"Ligature Œ minuscule",372:"W accent circonflexe majuscule",374:"Y accent circonflexe majuscule",373:"W accent circonflexe minuscule",375:"Y accent circonflexe minuscule",sbquo:"Guillemet simple fermant inférieur",8219:"Guillemet-virgule supérieur culbuté",bdquo:"Guillemet-virgule double inférieur",hellip:"Points de suspension",trade:"Symbole de marque commerciale",9658:"Flèche noire pointant vers la droite",bull:"Gros point médian",rarr:"Flèche vers la droite",rArr:"Double flèche vers la droite",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -22,5 +20,4 @@ Ntilde:"N caron majuscule",Ograve:"O accent grave majuscule",Oacute:"O accent ai
 aacute:"A accent aigu minuscule",acirc:"A accent circonflexe minuscule",atilde:"A tilde minuscule",auml:"A tréma minuscule",aring:"A rond minuscule",aelig:"Ligature Æ minuscule",ccedil:"C cédille minuscule",egrave:"E accent grave minuscule",eacute:"E accent aigu minuscule",ecirc:"E accent circonflexe minuscule",euml:"E tréma minuscule",igrave:"I accent grave minuscule",iacute:"I accent aigu minuscule",icirc:"I accent circonflexe minuscule",iuml:"i minuscule tréma",eth:"Lettre minuscule islandaise ED",
 ntilde:"N caron minuscule",ograve:"O minuscule accent grave",oacute:"O accent aigu minuscule",ocirc:"O accent circonflexe minuscule",otilde:"O tilde minuscule",ouml:"O tréma minuscule",divide:"Symbole de division",oslash:"O barré minuscule",ugrave:"U accent grave minuscule",uacute:"U accent aigu minuscule",ucirc:"U accent circonflexe minuscule",uuml:"U tréma minuscule",yacute:"Y accent aigu minuscule",thorn:"Lettre islandaise thorn minuscule",yuml:"Y tréma minuscule",OElig:"Ligature Œ majuscule",
 oelig:"Ligature Œ minuscule",372:"W accent circonflexe majuscule",374:"Y accent circonflexe majuscule",373:"W accent circonflexe minuscule",375:"Y accent circonflexe minuscule",sbquo:"Guillemet simple fermant inférieur",8219:"Guillemet-virgule supérieur culbuté",bdquo:"Guillemet-virgule double inférieur",hellip:"Points de suspension",trade:"Symbole de marque commerciale",9658:"Flèche noire pointant vers la droite",bull:"Gros point médian",rarr:"Flèche vers la droite",rArr:"Double flèche vers la droite",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 hArr:"Double flèche vers la gauche",diams:"Losange noir",asymp:"Environ égal"});
