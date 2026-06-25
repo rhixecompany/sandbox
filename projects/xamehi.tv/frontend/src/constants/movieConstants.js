@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const MOVIE_LIST_REQUEST = "MOVIE_LIST_REQUEST";
 export const MOVIE_LIST_SUCCESS = "MOVIE_LIST_SUCCESS";
 export const MOVIE_LIST_FAIL = "MOVIE_LIST_FAIL";
@@ -29,7 +28,6 @@ export const MOVIE_CREATE_REVIEW_RESET = "MOVIE_CREATE_REVIEW_RESET";
 export const MOVIE_TOP_REQUEST = "MOVIE_TOP_REQUEST";
 export const MOVIE_TOP_SUCCESS = "MOVIE_TOP_SUCCESS";
 export const MOVIE_TOP_FAIL = "MOVIE_TOP_FAIL";
-=======
 export const MOVIE_LIST_REQUEST = "MOVIE_LIST_REQUEST";
 export const MOVIE_LIST_SUCCESS = "MOVIE_LIST_SUCCESS";
 export const MOVIE_LIST_FAIL = "MOVIE_LIST_FAIL";
@@ -60,4 +58,3 @@ export const MOVIE_CREATE_REVIEW_RESET = "MOVIE_CREATE_REVIEW_RESET";
 export const MOVIE_TOP_REQUEST = "MOVIE_TOP_REQUEST";
 export const MOVIE_TOP_SUCCESS = "MOVIE_TOP_SUCCESS";
 export const MOVIE_TOP_FAIL = "MOVIE_TOP_FAIL";
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

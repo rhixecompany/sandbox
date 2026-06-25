@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AGENTS.md
 
 > **Refreshed by AGENTS workflow 2026-06-01**
@@ -103,7 +102,6 @@ Deploy to Google Cloud Run, App Engine, or any VPS with Gunicorn + Nginx.
 - **Static files 404**: Run `python manage.py collectstatic`, check `STATIC_URL` and `STATIC_ROOT`
 - **Migration conflicts**: `python manage.py makemigrations --merge`
 - **Admin panel issues**: Ensure `django.contrib.admin` is in INSTALLED_APPS
-=======
 # Profile - Django Blog/CMS Context
 
 Django blog/profile CMS with Google Cloud Storage and CKEditor.
@@ -144,4 +142,3 @@ python manage.py test
 - GCS credentials in `.env` — never commit
 - CKEditor config in `ckeditor/` directory
 - Media uploads go to GCS bucket
->>>>>>> 4ae124d (chore: initial local project setup for profile)

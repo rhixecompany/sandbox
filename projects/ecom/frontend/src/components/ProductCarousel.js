@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -39,7 +38,6 @@ function ProductCarousel() {
 }
 
 export default ProductCarousel
-=======
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -80,4 +78,3 @@ function ProductCarousel() {
 }
 
 export default ProductCarousel
->>>>>>> d330f24 (chore: initial local project setup for ecom)

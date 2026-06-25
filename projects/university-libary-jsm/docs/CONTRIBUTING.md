@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to BookWise
 
 ## Getting Started
@@ -42,7 +41,6 @@ git push origin feature/your-feature
 - Use GitHub Issues for bug reports
 - Include reproduction steps
 - Provide environment details
-=======
 # Contributing to BookWise
 
 ## Getting Started
@@ -86,5 +84,4 @@ git push origin feature/your-feature
 - Use GitHub Issues for bug reports
 - Include reproduction steps
 - Provide environment details
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 - Attach relevant screenshots

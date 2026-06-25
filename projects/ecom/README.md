@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # RhixeCompany Ecommerce Website With Django + React
 
 Live Demo can be viewed at https://www.rhixe.company/
@@ -32,7 +31,6 @@ Live Demo can be viewed at https://www.rhixe.company/
 # Install react modules
 * 1 - cd frontend
 * 2 - npm install
-=======
 # RhixeCompany Ecommerce Website With Django + React
 
 Live Demo can be viewed at https://www.rhixe.company/
@@ -66,4 +64,3 @@ Live Demo can be viewed at https://www.rhixe.company/
 # Install react modules
 * 1 - cd frontend
 * 2 - npm install
->>>>>>> d330f24 (chore: initial local project setup for ecom)

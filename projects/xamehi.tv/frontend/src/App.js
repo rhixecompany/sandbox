@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import { HashRouter as Router, Route } from "react-router-dom";
@@ -48,7 +47,6 @@ export class App extends Component {
 }
 
 export default App;
-=======
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import { HashRouter as Router, Route } from "react-router-dom";
@@ -98,4 +96,3 @@ export class App extends Component {
 }
 
 export default App;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

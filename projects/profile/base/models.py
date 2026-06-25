@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from datetime import timezone
 from django.db import models
 from django.contrib.auth.models import User
@@ -77,7 +76,6 @@ class PostComment(models.Model):
 	def created_dynamic(self):
 		now = timezone.now()
 		return now
-=======
 from datetime import timezone
 from django.db import models
 from django.contrib.auth.models import User
@@ -156,5 +154,3 @@ class PostComment(models.Model):
 	def created_dynamic(self):
 		now = timezone.now()
 		return now
->>>>>>> 4ae124d (chore: initial local project setup for profile)
-	

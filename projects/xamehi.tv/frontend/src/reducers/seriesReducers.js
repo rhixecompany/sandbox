@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   SERIES_LIST_REQUEST,
   SERIES_LIST_SUCCESS,
@@ -154,7 +153,6 @@ export const seriesTopRatedReducer = (state = { series: [] }, action) => {
       return state;
   }
 };
-=======
 import {
   SERIES_LIST_REQUEST,
   SERIES_LIST_SUCCESS,
@@ -310,4 +308,3 @@ export const seriesTopRatedReducer = (state = { series: [] }, action) => {
       return state;
   }
 };
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

@@ -1,5 +1,4 @@
 Linters
-=======
 
 .. index:: linters
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* DASHBOARD */
 
 .dashboard .module table th {
@@ -26,7 +25,6 @@ ul.actionlist li {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
 }
-=======
 /* DASHBOARD */
 
 .dashboard .module table th {
@@ -54,4 +52,3 @@ ul.actionlist li {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

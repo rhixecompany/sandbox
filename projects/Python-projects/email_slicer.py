@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def main():
     print(" Welcome to the email slicer ")
     print("")
@@ -15,7 +14,6 @@ def main():
     
 while True:
     main()
-=======
 def main():
     print(" Welcome to the email slicer ")
     print("")
@@ -32,4 +30,3 @@ def main():
     
 while True:
     main()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 [*]
 charset = utf-8
 insert_final_newline = true
 end_of_line = lf
 indent_style = space
 indent_size = 2
-=======
 [*]
 charset = utf-8
 insert_final_newline = true
 end_of_line = lf
 indent_style = space
 indent_size = 2
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 max_line_length = 80

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Spinner } from 'react-bootstrap'
 
@@ -20,7 +19,6 @@ function Loader() {
 }
 
 export default Loader
-=======
 import React from 'react'
 import { Spinner } from 'react-bootstrap'
 
@@ -42,4 +40,3 @@ function Loader() {
 }
 
 export default Loader
->>>>>>> d330f24 (chore: initial local project setup for ecom)

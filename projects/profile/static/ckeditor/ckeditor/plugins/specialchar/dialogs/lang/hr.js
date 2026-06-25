@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -11,7 +10,6 @@ Ucirc:"Veliko latinično slovo U sa circumflex",Uuml:"Veliko latinično slovo U 
 ccedil:"Malo latinično slovo e sa cedilla",egrave:"Malo latinično slovo e sa akcentom",eacute:"Malo latinično slovo e sa akcentom",ecirc:"Malo latinično slovo e sa circumflex",euml:"Malo latinično slovo e sa diaresis",igrave:"Malo latinično slovo i sa akcentom",iacute:"Malo latinično slovo i sa akcentom",icirc:"Malo latinično slovo i sa circumflex",iuml:"Malo latinično slovo i sa diaresis",eth:"Malo latinično slovo eth",ntilde:"Malo latinično slovo n sa tildom",ograve:"Malo latinično slovo o sa akcentom",
 oacute:"Malo latinično slovo o sa akcentom",ocirc:"Malo latinično slovo o sa circumflex",otilde:"Malo latinično slovo o sa tildom",ouml:"Malo latinično slovo o sa diaresis",divide:"Znak dijeljenja",oslash:"Malo latinično slovo o sa crtom",ugrave:"Malo latinično slovo s akcentom",uacute:"Malo latinično slovo u sa akcentom",ucirc:"Malo latinično slovo sa circumflex",uuml:"Malo latinično slovo u sa diaresis",yacute:"Malo latinično slovo y s akcentom",thorn:"Malo latinično slovo Trn",yuml:"Malo latinično slovo y sa diaresis",
 OElig:"Veliko latinično slovo OE",oelig:"Malo latinično slovoe OE",372:"Veliko latinično slovo W sa circumflex",374:"Veliko latinično slovo Y sa circumflex",373:"Malo latinično slovo w sa circumflex",375:"Malo latinično slovo y sa circumflex",sbquo:"Jednostruki donji navodnik",8219:"Jednostruki gornji navodnik",bdquo:"Dvostruki donji navodnik",hellip:"Tri točkice",trade:"TM znak",9658:"Crni desni pokazivač",bull:"Bullet",rarr:"Desna strelica",rArr:"Desna dvostruka strelica",hArr:"Dvostruka strelica",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -24,5 +22,4 @@ Ucirc:"Veliko latinično slovo U sa circumflex",Uuml:"Veliko latinično slovo U 
 ccedil:"Malo latinično slovo e sa cedilla",egrave:"Malo latinično slovo e sa akcentom",eacute:"Malo latinično slovo e sa akcentom",ecirc:"Malo latinično slovo e sa circumflex",euml:"Malo latinično slovo e sa diaresis",igrave:"Malo latinično slovo i sa akcentom",iacute:"Malo latinično slovo i sa akcentom",icirc:"Malo latinično slovo i sa circumflex",iuml:"Malo latinično slovo i sa diaresis",eth:"Malo latinično slovo eth",ntilde:"Malo latinično slovo n sa tildom",ograve:"Malo latinično slovo o sa akcentom",
 oacute:"Malo latinično slovo o sa akcentom",ocirc:"Malo latinično slovo o sa circumflex",otilde:"Malo latinično slovo o sa tildom",ouml:"Malo latinično slovo o sa diaresis",divide:"Znak dijeljenja",oslash:"Malo latinično slovo o sa crtom",ugrave:"Malo latinično slovo s akcentom",uacute:"Malo latinično slovo u sa akcentom",ucirc:"Malo latinično slovo sa circumflex",uuml:"Malo latinično slovo u sa diaresis",yacute:"Malo latinično slovo y s akcentom",thorn:"Malo latinično slovo Trn",yuml:"Malo latinično slovo y sa diaresis",
 OElig:"Veliko latinično slovo OE",oelig:"Malo latinično slovoe OE",372:"Veliko latinično slovo W sa circumflex",374:"Veliko latinično slovo Y sa circumflex",373:"Malo latinično slovo w sa circumflex",375:"Malo latinično slovo y sa circumflex",sbquo:"Jednostruki donji navodnik",8219:"Jednostruki gornji navodnik",bdquo:"Dvostruki donji navodnik",hellip:"Tri točkice",trade:"TM znak",9658:"Crni desni pokazivač",bull:"Bullet",rarr:"Desna strelica",rArr:"Desna dvostruka strelica",hArr:"Dvostruka strelica",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 diams:"Crni dijamant",asymp:"Približno"});

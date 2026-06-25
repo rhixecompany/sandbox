@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
@@ -49,7 +48,6 @@ const eslintConfig = [
 ]
 
 export default eslintConfig
-=======
 import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
@@ -100,4 +98,3 @@ const eslintConfig = [
 ]
 
 export default eslintConfig
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)

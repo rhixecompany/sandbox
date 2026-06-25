@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 from datetime import timedelta
 from pathlib import Path
@@ -174,7 +173,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 if os.getcwd() == "/app":
     DEBUG = False
-=======
 import os
 from datetime import timedelta
 from pathlib import Path
@@ -350,4 +348,3 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 if os.getcwd() == "/app":
     DEBUG = False
->>>>>>> d330f24 (chore: initial local project setup for ecom)

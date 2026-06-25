@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import random
 
 exit = False
@@ -65,7 +64,6 @@ while exit == False:  # noqa: E712
 
     elif user_input != " rock" or user_input != "paper" or user_input != "scissors":
         print("Invalid Input")
-=======
 import random
 
 exit = False
@@ -132,4 +130,3 @@ while exit == False:  # noqa: E712
 
     elif user_input != " rock" or user_input != "paper" or user_input != "scissors":
         print("Invalid Input")
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

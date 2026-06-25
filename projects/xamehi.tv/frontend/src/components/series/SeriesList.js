@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import {
   List,
@@ -26,7 +25,6 @@ function SeriesList(props) {
 }
 
 export default SeriesList;
-=======
 import React from "react";
 import {
   List,
@@ -54,4 +52,3 @@ function SeriesList(props) {
 }
 
 export default SeriesList;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

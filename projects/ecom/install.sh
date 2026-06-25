@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #/bin/bash
 
 if [ -f ./ecom.socket ]
@@ -13,7 +12,6 @@ else
     echo "Ecom utility is not present"
 fi
 
-=======
 #/bin/bash
 
 if [ -f ./ecom.socket ]
@@ -28,5 +26,4 @@ else
     echo "Ecom utility is not present"
 fi
 
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 sudo systemctl status ecom

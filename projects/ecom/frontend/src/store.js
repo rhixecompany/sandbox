@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "@redux-devtools/extension";
@@ -88,7 +87,6 @@ const store = createStore(
 );
 
 export default store;
-=======
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "@redux-devtools/extension";
@@ -178,4 +176,3 @@ const store = createStore(
 );
 
 export default store;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

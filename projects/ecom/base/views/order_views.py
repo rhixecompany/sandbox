@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, permission_classes
@@ -123,7 +122,6 @@ def updateOrderToDelivered(request, pk):
     order.save()
 
     return Response('Order was delivered')
-=======
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, permission_classes
@@ -248,4 +246,3 @@ def updateOrderToDelivered(request, pk):
     order.save()
 
     return Response('Order was delivered')
->>>>>>> d330f24 (chore: initial local project setup for ecom)

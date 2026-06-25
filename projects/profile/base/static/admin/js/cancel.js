@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function($) {
     'use strict';
     $(function() {
@@ -12,7 +11,6 @@
         });
     });
 })(django.jQuery);
-=======
 (function($) {
     'use strict';
     $(function() {
@@ -26,4 +24,3 @@
         });
     });
 })(django.jQuery);
->>>>>>> 4ae124d (chore: initial local project setup for profile)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <svg width="14" height="84" viewBox="0 0 1792 10752" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <g id="sort">
@@ -18,7 +17,6 @@
   <use xlink:href="#descending" x="0" y="7168" fill="#999999" />
   <use xlink:href="#descending" x="0" y="8960" fill="#447e9b" />
 </svg>
-=======
 <svg width="14" height="84" viewBox="0 0 1792 10752" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <g id="sort">
@@ -38,4 +36,3 @@
   <use xlink:href="#descending" x="0" y="7168" fill="#999999" />
   <use xlink:href="#descending" x="0" y="8960" fill="#447e9b" />
 </svg>
->>>>>>> 4ae124d (chore: initial local project setup for profile)

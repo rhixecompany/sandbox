@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-=======
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

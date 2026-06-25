@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.contrib import admin
 from .models import *
 # Register your models here.
@@ -39,7 +38,6 @@ class SeriesAdmin(admin.ModelAdmin):
 admin.site.register(Movies, MoviesAdmin)
 
 admin.site.register(Series, SeriesAdmin)
-=======
 from django.contrib import admin
 from .models import *
 # Register your models here.
@@ -80,4 +78,3 @@ class SeriesAdmin(admin.ModelAdmin):
 admin.site.register(Movies, MoviesAdmin)
 
 admin.site.register(Series, SeriesAdmin)
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

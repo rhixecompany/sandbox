@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "short_name": "React App",
   "name": "Create React App Sample",
@@ -24,7 +23,6 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
-=======
 {
   "short_name": "React App",
   "name": "Create React App Sample",
@@ -50,4 +48,3 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

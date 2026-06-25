@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   MOVIE_LIST_REQUEST,
   MOVIE_LIST_SUCCESS,
@@ -154,7 +153,6 @@ export const movieTopRatedReducer = (state = { movies: [] }, action) => {
       return state;
   }
 };
-=======
 import {
   MOVIE_LIST_REQUEST,
   MOVIE_LIST_SUCCESS,
@@ -310,4 +308,3 @@ export const movieTopRatedReducer = (state = { movies: [] }, action) => {
       return state;
   }
 };
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

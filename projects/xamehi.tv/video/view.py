@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -209,7 +208,6 @@ def updateProfile(request):
 
     context = {'form': form}
     return render(request, 'video/profile_form.html', context)
-=======
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -420,4 +418,3 @@ def updateProfile(request):
 
     context = {'form': form}
     return render(request, 'video/profile_form.html', context)
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

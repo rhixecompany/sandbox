@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AGENTS.md
 
 > **Refreshed by AGENTS workflow 2026-06-01**
@@ -95,7 +94,6 @@ Deployment options: Heroku (Procfile included), DigitalOcean, or any Linux VPS w
 - **PayPal not loading**: Ensure PayPal client ID is in environment variables
 - **Static files broken**: Run `python manage.py collectstatic` and verify `STATIC_ROOT`
 - **CORS errors**: Check `CORS_ALLOWED_ORIGINS` in Django settings
-=======
 # Ecom - Full-Stack Ecommerce Platform Context
 
 Django REST Framework + React/Redux ecommerce with PayPal.
@@ -138,4 +136,3 @@ npm test
 - PayPal credentials in `.env` — never commit
 - Separate settings for dev/staging/prod
 - Media files served via Django in dev
->>>>>>> d330f24 (chore: initial local project setup for ecom)

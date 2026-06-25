@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Core javascript helper functions
 
 // basic browser identification & version
@@ -172,7 +171,6 @@ function findPosY(obj) {
     };
 
 })();
-=======
 // Core javascript helper functions
 
 // basic browser identification & version
@@ -346,4 +344,3 @@ function findPosY(obj) {
     };
 
 })();
->>>>>>> 4ae124d (chore: initial local project setup for profile)

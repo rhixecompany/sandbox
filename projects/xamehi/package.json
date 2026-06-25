@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "name": "xamehi",
   "version": "0.1.0",
@@ -42,7 +41,6 @@
     ]
   }
 }
-=======
 {
   "name": "xamehi",
   "version": "0.1.0",
@@ -86,4 +84,3 @@
     ]
   }
 }
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

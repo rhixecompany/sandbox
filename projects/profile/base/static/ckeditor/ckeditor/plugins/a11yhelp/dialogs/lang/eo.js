@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -11,7 +10,6 @@ CKEDITOR.plugins.setLang("a11yhelp","eo",{title:"Uzindikoj pri atingeblo",conten
 {name:"Komando por atingi la sekvan fokusan spacon",legend:"Press ${accessNextSpace} por atingi la plej proksiman neatingeblan fokusan spacon post la kursoro, ekzemple : du kuntuŝiĝajn HR elementojn. Ripetu la klavkombinajôn por atingi malproksimajn fokusajn spacojn"},{name:"Helpilo pri atingeblo",legend:"Premu ${a11yHelp}"},{name:"Algluu kiel platan tekston",legend:"Presu ${pastetext}",legendEdge:"Presu ${pastetext}, sekvatan de ${paste}"}]}],tab:"Tabo",pause:"Paŭzo",capslock:"Majuskla baskulo",
 escape:"Eskapa klavo",pageUp:"Antaŭa Paĝo",pageDown:"Sekva Paĝo",leftArrow:"Sago Maldekstren",upArrow:"Sago Supren",rightArrow:"Sago Dekstren",downArrow:"Sago Suben",insert:"Enmeti",leftWindowKey:"Maldekstra Windows-klavo",rightWindowKey:"Dekstra Windows-klavo",selectKey:"Selektklavo",numpad0:"Nombra Klavaro 0",numpad1:"Nombra Klavaro 1",numpad2:"Nombra Klavaro 2",numpad3:"Nombra Klavaro 3",numpad4:"Nombra Klavaro 4",numpad5:"Nombra Klavaro 5",numpad6:"Nombra Klavaro 6",numpad7:"Nombra Klavaro 7",
 numpad8:"Nombra Klavaro 8",numpad9:"Nombra Klavaro 9",multiply:"Obligi",add:"Almeti",subtract:"Subtrahi",decimalPoint:"Dekuma Punkto",divide:"Dividi",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Nombra Baskulo",scrollLock:"Ruluma Baskulo",semiColon:"Punktokomo",equalSign:"Egalsigno",comma:"Komo",dash:"Haltostreko",period:"Punkto",forwardSlash:"Oblikvo",graveAccent:"Malakuto",openBracket:"Malferma Krampo",backSlash:"Retroklino",closeBracket:"Ferma Krampo",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -24,5 +22,4 @@ CKEDITOR.plugins.setLang("a11yhelp","eo",{title:"Uzindikoj pri atingeblo",conten
 {name:"Komando por atingi la sekvan fokusan spacon",legend:"Press ${accessNextSpace} por atingi la plej proksiman neatingeblan fokusan spacon post la kursoro, ekzemple : du kuntuŝiĝajn HR elementojn. Ripetu la klavkombinajôn por atingi malproksimajn fokusajn spacojn"},{name:"Helpilo pri atingeblo",legend:"Premu ${a11yHelp}"},{name:"Algluu kiel platan tekston",legend:"Presu ${pastetext}",legendEdge:"Presu ${pastetext}, sekvatan de ${paste}"}]}],tab:"Tabo",pause:"Paŭzo",capslock:"Majuskla baskulo",
 escape:"Eskapa klavo",pageUp:"Antaŭa Paĝo",pageDown:"Sekva Paĝo",leftArrow:"Sago Maldekstren",upArrow:"Sago Supren",rightArrow:"Sago Dekstren",downArrow:"Sago Suben",insert:"Enmeti",leftWindowKey:"Maldekstra Windows-klavo",rightWindowKey:"Dekstra Windows-klavo",selectKey:"Selektklavo",numpad0:"Nombra Klavaro 0",numpad1:"Nombra Klavaro 1",numpad2:"Nombra Klavaro 2",numpad3:"Nombra Klavaro 3",numpad4:"Nombra Klavaro 4",numpad5:"Nombra Klavaro 5",numpad6:"Nombra Klavaro 6",numpad7:"Nombra Klavaro 7",
 numpad8:"Nombra Klavaro 8",numpad9:"Nombra Klavaro 9",multiply:"Obligi",add:"Almeti",subtract:"Subtrahi",decimalPoint:"Dekuma Punkto",divide:"Dividi",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Nombra Baskulo",scrollLock:"Ruluma Baskulo",semiColon:"Punktokomo",equalSign:"Egalsigno",comma:"Komo",dash:"Haltostreko",period:"Punkto",forwardSlash:"Oblikvo",graveAccent:"Malakuto",openBracket:"Malferma Krampo",backSlash:"Retroklino",closeBracket:"Ferma Krampo",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 singleQuote:"Citilo"});

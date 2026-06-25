@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* global CKEDITOR */
 ;(function() {
   var el = document.getElementById('ckeditor-init-script');
@@ -66,7 +65,6 @@
   }
 
 }());
-=======
 /* global CKEDITOR */
 ;(function() {
   var el = document.getElementById('ckeditor-init-script');
@@ -134,4 +132,3 @@
   }
 
 }());
->>>>>>> 4ae124d (chore: initial local project setup for profile)

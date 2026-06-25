@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to RhixeCompany Ecom
 
 ## Introduction
@@ -132,7 +131,6 @@ Contributors will be recognized in:
 - Help others learn and grow
 - Focus on what is best for the project
 
-=======
 # Contributing to RhixeCompany Ecom
 
 ## Introduction
@@ -266,5 +264,4 @@ Contributors will be recognized in:
 - Help others learn and grow
 - Focus on what is best for the project
 
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 Thank you for contributing to RhixeCompany Ecom!

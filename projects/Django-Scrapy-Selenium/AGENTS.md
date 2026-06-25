@@ -16,8 +16,6 @@ A full-stack web scraping platform combining Django backend with modern JavaScri
 
 > Note: This project's scraping capabilities were later consolidated into `projects/rhixecompany-comics`.
 
-<<<<<<< HEAD
-=======
 ## Hermes and Copilot
 
 - Use the nearest `AGENTS.md` for files under `projects/Django-Scrapy-Selenium/`;
@@ -29,7 +27,6 @@ A full-stack web scraping platform combining Django backend with modern JavaScri
 - Keep this file, the local Copilot instructions, and the project README in
   sync when scraping, task, or frontend workflows change.
 
->>>>>>> 50eadb6 (chore: initial local project setup for Django-Scrapy-Selenium)
 ## Setup Commands
 
 ```bash

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 from django.http import HttpResponse
 import pymongo
@@ -30,7 +29,6 @@ mascot_details = collection.find({})
 
 for r in mascot_details:
     print(r['name'])
-=======
 from django.shortcuts import render
 from django.http import HttpResponse
 import pymongo
@@ -62,4 +60,3 @@ mascot_details = collection.find({})
 
 for r in mascot_details:
     print(r['name'])
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

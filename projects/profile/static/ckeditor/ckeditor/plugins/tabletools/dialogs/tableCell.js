@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -16,7 +15,6 @@ label:d.chooseColor,onLoad:function(){this.getElement().getParent().setStyle("ve
 id:"borderColorChoose","class":"colorChooser",label:d.chooseColor,style:(y?"margin-right":"margin-left")+": 10px",onLoad:function(){this.getElement().getParent().setStyle("vertical-align","bottom")},onClick:function(){v(this,"borderColor")}});return a}()}],m=0,x=-1,g=[r()],q=CKEDITOR.tools.array.filter(q,function(a){var b=a.requiredContent;delete a.requiredContent;(b=h.filter.check(b))&&!a.isSpacer&&m++;return b});5<m&&(g=g.concat([k(),r()]));CKEDITOR.tools.array.forEach(q,function(a){a.isSpacer||
 x++;5<m&&x>=m/2?g[2].children.push(a):g[0].children.push(a)});CKEDITOR.tools.array.forEach(g,function(a){a.isSpacer||(a=a.children,a[a.length-1].isSpacer&&a.pop())});return{title:d.title,minWidth:1===g.length?205:410,minHeight:50,contents:[{id:"info",label:d.title,accessKey:"I",elements:[{type:"hbox",widths:1===g.length?["100%"]:["40%","5%","40%"],children:g}]}],getModel:function(a){return CKEDITOR.plugins.tabletools.getSelectedCells(a.getSelection())},onShow:function(){var a=this.getModel(this.getParentEditor());
 this.setupContent(a)},onOk:function(){for(var a=this._.editor.getSelection(),b=a.createBookmarks(),c=this.getParentEditor(),d=this.getModel(c),e=0;e<d.length;e++)this.commitContent(d[e]);c.forceNextSelectionCheck();a.selectBookmarks(b);c.selectionChange()},onLoad:function(){var a={};this.foreach(function(b){b.setup&&b.commit&&(b.setup=CKEDITOR.tools.override(b.setup,function(c){return function(){c.apply(this,arguments);a[b.id]=b.getValue()}}),b.commit=CKEDITOR.tools.override(b.commit,function(c){return function(){a[b.id]!==
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -34,5 +32,4 @@ label:d.chooseColor,onLoad:function(){this.getElement().getParent().setStyle("ve
 id:"borderColorChoose","class":"colorChooser",label:d.chooseColor,style:(y?"margin-right":"margin-left")+": 10px",onLoad:function(){this.getElement().getParent().setStyle("vertical-align","bottom")},onClick:function(){v(this,"borderColor")}});return a}()}],m=0,x=-1,g=[r()],q=CKEDITOR.tools.array.filter(q,function(a){var b=a.requiredContent;delete a.requiredContent;(b=h.filter.check(b))&&!a.isSpacer&&m++;return b});5<m&&(g=g.concat([k(),r()]));CKEDITOR.tools.array.forEach(q,function(a){a.isSpacer||
 x++;5<m&&x>=m/2?g[2].children.push(a):g[0].children.push(a)});CKEDITOR.tools.array.forEach(g,function(a){a.isSpacer||(a=a.children,a[a.length-1].isSpacer&&a.pop())});return{title:d.title,minWidth:1===g.length?205:410,minHeight:50,contents:[{id:"info",label:d.title,accessKey:"I",elements:[{type:"hbox",widths:1===g.length?["100%"]:["40%","5%","40%"],children:g}]}],getModel:function(a){return CKEDITOR.plugins.tabletools.getSelectedCells(a.getSelection())},onShow:function(){var a=this.getModel(this.getParentEditor());
 this.setupContent(a)},onOk:function(){for(var a=this._.editor.getSelection(),b=a.createBookmarks(),c=this.getParentEditor(),d=this.getModel(c),e=0;e<d.length;e++)this.commitContent(d[e]);c.forceNextSelectionCheck();a.selectBookmarks(b);c.selectionChange()},onLoad:function(){var a={};this.foreach(function(b){b.setup&&b.commit&&(b.setup=CKEDITOR.tools.override(b.setup,function(c){return function(){c.apply(this,arguments);a[b.id]=b.getValue()}}),b.commit=CKEDITOR.tools.override(b.commit,function(c){return function(){a[b.id]!==
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 b.getValue()&&c.apply(this,arguments)}}))})}}});

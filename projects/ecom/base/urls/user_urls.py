@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.urls import path
 from base.views import user_views as views
 
@@ -19,7 +18,6 @@ urlpatterns = [
 
     path('delete/<str:pk>/', views.deleteUser, name='user-delete'),
 ]
-=======
 from django.urls import path
 from base.views import user_views as views
 
@@ -40,4 +38,3 @@ urlpatterns = [
 
     path('delete/<str:pk>/', views.deleteUser, name='user-delete'),
 ]
->>>>>>> d330f24 (chore: initial local project setup for ecom)

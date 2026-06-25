@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # utils.js - Utility Functions Documentation
 
 ## Overview
@@ -169,7 +168,6 @@ All functions handle `StaleElementReferenceError` by retrying. Other errors are 
 **Error Messages:**
 - `"Failed to click element after X retries."`
 - `"Failed to get textElement after X retries."`
-=======
 # utils.js - Utility Functions Documentation
 
 ## Overview
@@ -340,5 +338,4 @@ All functions handle `StaleElementReferenceError` by retrying. Other errors are 
 **Error Messages:**
 - `"Failed to click element after X retries."`
 - `"Failed to get textElement after X retries."`
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)
 - etc.

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,7 +15,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -34,4 +32,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

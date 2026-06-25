@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python Projects
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
@@ -113,7 +112,6 @@ Python-projects/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-=======
 # Python Projects
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
@@ -228,4 +226,3 @@ Python-projects/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

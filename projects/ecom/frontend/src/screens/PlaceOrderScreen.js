@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -175,7 +174,6 @@ function PlaceOrderScreen({ history }) {
 }
 
 export default PlaceOrderScreen;
-=======
 import React, { useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -352,4 +350,3 @@ function PlaceOrderScreen({ history }) {
 }
 
 export default PlaceOrderScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

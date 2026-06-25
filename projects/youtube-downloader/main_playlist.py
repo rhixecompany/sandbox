@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from __future__ import unicode_literals
 
 import logging
@@ -42,7 +41,6 @@ if __name__ == "__main__":
 
     url = "https://youtube.com/playlist?list=PLGk7ftfMz7jbF-vCLxaE0-zrW_gj6V9YG&si=kTFeecP7eKiSaCl0"
     main(url)
-=======
 from __future__ import unicode_literals
 
 import logging
@@ -86,4 +84,3 @@ if __name__ == "__main__":
 
     url = "https://youtube.com/playlist?list=PLGk7ftfMz7jbF-vCLxaE0-zrW_gj6V9YG&si=kTFeecP7eKiSaCl0"
     main(url)
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import random
 
 def roll_dice():
@@ -59,7 +58,6 @@ def roll_dice():
         
         roll = input("Roll again? (Yes/no): ")
 roll_dice()
-=======
 import random
 
 def roll_dice():
@@ -120,4 +118,3 @@ def roll_dice():
         
         roll = input("Roll again? (Yes/no): ")
 roll_dice()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

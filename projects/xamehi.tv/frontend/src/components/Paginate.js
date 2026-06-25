@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -29,7 +28,6 @@ function Paginate({ pages, page, keyword = "", isAdmin = false }) {
 }
 
 export default Paginate;
-=======
 import React from "react";
 import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -60,4 +58,3 @@ function Paginate({ pages, page, keyword = "", isAdmin = false }) {
 }
 
 export default Paginate;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

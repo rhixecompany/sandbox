@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { By, Browser, until, Builder } from "selenium-webdriver";
 
 import Chrome from "selenium-webdriver/chrome.js";
@@ -121,7 +120,6 @@ async function automateProcess(url) {
 }
 let url = "https://asuracomic.net/series?page=1";
 automateProcess(url);
-=======
 import { By, Browser, until, Builder } from "selenium-webdriver";
 
 import Chrome from "selenium-webdriver/chrome.js";
@@ -244,4 +242,3 @@ async function automateProcess(url) {
 }
 let url = "https://asuracomic.net/series?page=1";
 automateProcess(url);
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

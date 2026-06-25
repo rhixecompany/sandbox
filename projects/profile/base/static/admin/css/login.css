@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* LOGIN FORM */
 
 body.login {
@@ -78,7 +77,6 @@ body.login {
 .login .password-reset-link {
     text-align: center;
 }
-=======
 /* LOGIN FORM */
 
 body.login {
@@ -158,4 +156,3 @@ body.login {
 .login .password-reset-link {
     text-align: center;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

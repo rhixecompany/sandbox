@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from __future__ import unicode_literals
 
 import yt_dlp
@@ -47,7 +46,6 @@ def main(video_url, save_path=save_path):
 if __name__ == "__main__":
     main(url, save_path)
     print("Downloaded Successful!")
-=======
 from __future__ import unicode_literals
 
 import yt_dlp
@@ -96,4 +94,3 @@ def main(video_url, save_path=save_path):
 if __name__ == "__main__":
     main(url, save_path)
     print("Downloaded Successful!")
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

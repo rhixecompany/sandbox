@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Architecture
 
 ## Overview
@@ -230,7 +229,6 @@ Mutations use Server Actions in `lib/actions/`:
 - Vercel recommended for Next.js deployment
 - Neon serverless scales to zero
 - Upstash Redis for rate limiting
-=======
 # Architecture
 
 ## Overview
@@ -462,5 +460,4 @@ Mutations use Server Actions in `lib/actions/`:
 - Vercel recommended for Next.js deployment
 - Neon serverless scales to zero
 - Upstash Redis for rate limiting
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 - Environment variables via Vercel project settings

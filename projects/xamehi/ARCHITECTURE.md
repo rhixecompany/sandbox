@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Architecture — xamehi
 
 ## Overview
@@ -84,7 +83,6 @@ npm start         # react-scripts start
 - Frontend: Static hosting (Netlify, Vercel, S3)
 - Backend: Node.js hosting (Heroku, Railway, Render)
 - Environment variables for API URLs and configuration
-=======
 # Architecture — xamehi
 
 ## Overview
@@ -170,4 +168,3 @@ npm start         # react-scripts start
 - Frontend: Static hosting (Netlify, Vercel, S3)
 - Backend: Node.js hosting (Heroku, Railway, Render)
 - Environment variables for API URLs and configuration
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

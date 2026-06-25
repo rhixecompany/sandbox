@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -78,7 +77,6 @@ class SeriesSerializer(serializers.ModelSerializer):
         model = Series
         fields = ['_id', 'name', 'actors', 'category', 'description',
                   'image', 'createdAt', 'rating', 'likes',  'episodes']
-=======
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -158,4 +156,3 @@ class SeriesSerializer(serializers.ModelSerializer):
         model = Series
         fields = ['_id', 'name', 'actors', 'category', 'description',
                   'image', 'createdAt', 'rating', 'likes',  'episodes']
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

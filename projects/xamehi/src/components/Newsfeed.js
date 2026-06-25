@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 
@@ -41,7 +40,6 @@ const Newsfeed = () => {
 };
 
 export default Newsfeed;
-=======
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 
@@ -84,4 +82,3 @@ const Newsfeed = () => {
 };
 
 export default Newsfeed;
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

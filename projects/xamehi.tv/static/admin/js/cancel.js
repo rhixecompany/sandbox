@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 {
     // Call function fn when the DOM is loaded and ready. If it is already
@@ -28,7 +27,6 @@
         });
     });
 }
-=======
 'use strict';
 {
     // Call function fn when the DOM is loaded and ready. If it is already
@@ -58,4 +56,3 @@
         });
     });
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

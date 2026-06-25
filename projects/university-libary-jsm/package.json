@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "name": "bookwise",
   "version": "0.1.0",
@@ -100,7 +99,6 @@
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"
   }
-=======
 {
   "name": "bookwise",
   "version": "0.1.0",
@@ -202,5 +200,4 @@
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"
   }
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 }

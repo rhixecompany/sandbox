@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 [Unit]
 Description=gunicorn socket
 [Socket]
 ListenStream=/run/gunicorn.sock
 [Install]
-=======
 [Unit]
 Description=gunicorn socket
 [Socket]
 ListenStream=/run/gunicorn.sock
 [Install]
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)
 WantedBy=sockets.target

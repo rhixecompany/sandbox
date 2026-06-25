@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Architecture
 
 ## Overview
@@ -217,7 +216,6 @@ The application uses Redux for centralized state management:
 2. **Add to Cart**: React (Redux) → Local state update
 3. **Place Order**: React → API → Django → Database → Order confirmation
 4. **Payment**: React → PayPal SDK → PayPal API → Confirmation → Django update
-=======
 # Architecture
 
 ## Overview
@@ -436,5 +434,4 @@ The application uses Redux for centralized state management:
 2. **Add to Cart**: React (Redux) → Local state update
 3. **Place Order**: React → API → Django → Database → Order confirmation
 4. **Payment**: React → PayPal SDK → PayPal API → Confirmation → Django update
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 5. **Admin Actions**: React → JWT Auth → Django → Database CRUD operations

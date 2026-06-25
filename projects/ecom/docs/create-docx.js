@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { Document, Packer, Paragraph, TextRun, HeadingLevel } = require("docx");
 const fs = require("fs");
 const path = require("path");
@@ -86,7 +85,6 @@ async function createDocx() {
   console.log("Created: docs/RhixeCompany_Ecom_Documentation.docx");
 }
 
-=======
 const { Document, Packer, Paragraph, TextRun, HeadingLevel } = require("docx");
 const fs = require("fs");
 const path = require("path");
@@ -174,5 +172,4 @@ async function createDocx() {
   console.log("Created: docs/RhixeCompany_Ecom_Documentation.docx");
 }
 
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 createDocx().catch(console.error);

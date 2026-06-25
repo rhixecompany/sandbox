@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Core javascript helper functions
 'use strict';
 
@@ -169,7 +168,6 @@ function findPosY(obj) {
         return new Date(Date.UTC(year, month, day));
     };
 }
-=======
 // Core javascript helper functions
 'use strict';
 
@@ -340,4 +338,3 @@ function findPosY(obj) {
         return new Date(Date.UTC(year, month, day));
     };
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

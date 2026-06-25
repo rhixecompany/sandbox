@@ -15,8 +15,6 @@ Xamehi TV — a movie/television streaming website built with Django REST backen
 - **Auth**: JWT with django-rest-framework-simplejwt, django-allauth
 - **Deployment**: Gunicorn, WhiteNoise, Procfile
 
-<<<<<<< HEAD
-=======
 ## Hermes and Copilot
 
 - Use the nearest `AGENTS.md` for files under `projects/xamehi.tv/`; this file
@@ -28,7 +26,6 @@ Xamehi TV — a movie/television streaming website built with Django REST backen
 - Keep this file, the local Copilot instructions, and backend/frontend docs in
   sync when auth, media, or deployment workflows change.
 
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)
 ## Setup Commands
 
 ```bash

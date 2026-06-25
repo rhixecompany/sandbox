@@ -12,8 +12,6 @@ A collection of 18 beginner-friendly Python scripts for learning and automation.
 - **Linting**: ruff, mypy (type checking)
 - **Template**: GitHub issue/PR templates included
 
-<<<<<<< HEAD
-=======
 ## Hermes and Copilot
 
 - Use the nearest `AGENTS.md` for files under `projects/Python-projects/`; this
@@ -25,7 +23,6 @@ A collection of 18 beginner-friendly Python scripts for learning and automation.
 - Keep this file, the local Copilot instructions, and the README aligned when
   adding or changing scripts.
 
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)
 ## Setup Commands
 
 ```bash

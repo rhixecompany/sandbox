@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 const Exchange = ({ exchangedData }) => {
@@ -14,7 +13,6 @@ const Exchange = ({ exchangedData }) => {
 };
 
 export default Exchange;
-=======
 import React from "react";
 
 const Exchange = ({ exchangedData }) => {
@@ -30,4 +28,3 @@ const Exchange = ({ exchangedData }) => {
 };
 
 export default Exchange;
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

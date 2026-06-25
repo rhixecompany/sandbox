@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const reportWebVitals = onPerfEntry => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -12,7 +11,6 @@ const reportWebVitals = onPerfEntry => {
 };
 
 export default reportWebVitals;
-=======
 const reportWebVitals = onPerfEntry => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -26,4 +24,3 @@ const reportWebVitals = onPerfEntry => {
 };
 
 export default reportWebVitals;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

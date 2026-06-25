@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Bold-webfont.woff');
@@ -19,7 +18,6 @@
     font-weight: 300;
     font-style: normal;
 }
-=======
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Bold-webfont.woff');
@@ -40,4 +38,3 @@
     font-weight: 300;
     font-style: normal;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

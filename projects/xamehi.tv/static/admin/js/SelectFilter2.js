@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global SelectBox, gettext, interpolate, quickElement, SelectFilter*/
 /*
 SelectFilter2 - Turns a multiple-select box into a filter interface.
@@ -235,7 +234,6 @@ Requires core.js and SelectBox.js.
         });
     });
 }
-=======
 /*global SelectBox, gettext, interpolate, quickElement, SelectFilter*/
 /*
 SelectFilter2 - Turns a multiple-select box into a filter interface.
@@ -472,4 +470,3 @@ Requires core.js and SelectBox.js.
         });
     });
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

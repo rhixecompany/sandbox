@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -169,7 +168,6 @@ function MoviesEditScreen({ match, history }) {
 }
 
 export default MoviesEditScreen;
-=======
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -340,4 +338,3 @@ function MoviesEditScreen({ match, history }) {
 }
 
 export default MoviesEditScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Code Audit Report - rhixecompany/ecom
 
 **Date:** 2026-05-15  
@@ -99,7 +98,6 @@ This audit identified **6 issues** in the codebase, with **3 critical bugs fixed
 - `ecom/settings.py` - Django configuration
 
 ---
-=======
 # Code Audit Report - rhixecompany/ecom
 
 **Date:** 2026-05-15  
@@ -200,5 +198,4 @@ This audit identified **6 issues** in the codebase, with **3 critical bugs fixed
 - `ecom/settings.py` - Django configuration
 
 ---
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 *Audit completed on branch `audit/docs-20260515`*

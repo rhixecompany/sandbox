@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # RhixeCompany E-Commerce Platform
 
 A full-featured e-commerce website built with Django (backend) and React (frontend).
@@ -74,7 +73,6 @@ Visit [https://www.rhixe.company/](https://www.rhixe.company/) to see the live a
 
 ## License
 
-=======
 # RhixeCompany E-Commerce Platform
 
 A full-featured e-commerce website built with Django (backend) and React (frontend).
@@ -150,5 +148,4 @@ Visit [https://www.rhixe.company/](https://www.rhixe.company/) to see the live a
 
 ## License
 
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 Proprietary - All rights reserved

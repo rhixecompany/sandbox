@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Developer Guide
 
 ## Prerequisites
@@ -311,7 +310,6 @@ git push heroku main
 - [Django Documentation](https://docs.djangoproject.com/)
 - [Django REST Framework](https://www.django-rest-framework.org/)
 - [React Documentation](https://reactjs.org/)
-=======
 # Developer Guide
 
 ## Prerequisites
@@ -624,5 +622,4 @@ git push heroku main
 - [Django Documentation](https://docs.djangoproject.com/)
 - [Django REST Framework](https://www.django-rest-framework.org/)
 - [React Documentation](https://reactjs.org/)
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 - [Redux Documentation](https://redux.js.org/)

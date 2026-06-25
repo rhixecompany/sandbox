@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, permission_classes
@@ -151,7 +150,6 @@ def createProductReview(request, pk):
         product.save()
 
         return Response('Review Added')
-=======
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, permission_classes
@@ -304,4 +302,3 @@ def createProductReview(request, pk):
         product.save()
 
         return Response('Review Added')
->>>>>>> d330f24 (chore: initial local project setup for ecom)

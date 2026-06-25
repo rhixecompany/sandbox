@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # User Guide
 
 ## Getting Started
@@ -77,7 +76,6 @@
 ### Book Not Available
 - Join waitlist if available
 - Check back later for returns
-=======
 # User Guide
 
 ## Getting Started
@@ -156,5 +154,4 @@
 ### Book Not Available
 - Join waitlist if available
 - Check back later for returns
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 - Contact admin for assistance

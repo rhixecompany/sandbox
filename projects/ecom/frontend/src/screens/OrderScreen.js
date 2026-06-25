@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -243,7 +242,6 @@ function OrderScreen({ match, history }) {
 }
 
 export default OrderScreen;
-=======
 import React, { useState, useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -488,4 +486,3 @@ function OrderScreen({ match, history }) {
 }
 
 export default OrderScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CREATE TYPE "public"."borrow_status" AS ENUM('BORROWED', 'RETURNED');--> statement-breakpoint
 CREATE TYPE "public"."role" AS ENUM('USER', 'ADMIN');--> statement-breakpoint
 CREATE TYPE "public"."status" AS ENUM('PENDING', 'APPROVED', 'REJECTED');--> statement-breakpoint
@@ -48,7 +47,6 @@ CREATE TABLE "users" (
 );
 --> statement-breakpoint
 ALTER TABLE "borrow_records" ADD CONSTRAINT "borrow_records_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
-=======
 CREATE TYPE "public"."borrow_status" AS ENUM('BORROWED', 'RETURNED');--> statement-breakpoint
 CREATE TYPE "public"."role" AS ENUM('USER', 'ADMIN');--> statement-breakpoint
 CREATE TYPE "public"."status" AS ENUM('PENDING', 'APPROVED', 'REJECTED');--> statement-breakpoint
@@ -98,5 +96,4 @@ CREATE TABLE "users" (
 );
 --> statement-breakpoint
 ALTER TABLE "borrow_records" ADD CONSTRAINT "borrow_records_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 ALTER TABLE "borrow_records" ADD CONSTRAINT "borrow_records_book_id_books_id_fk" FOREIGN KEY ("book_id") REFERENCES "public"."books"("id") ON DELETE no action ON UPDATE no action;

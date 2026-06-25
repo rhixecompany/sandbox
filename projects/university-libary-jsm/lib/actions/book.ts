@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use server'
 
 import { db } from '@/database/drizzle'
@@ -62,7 +61,6 @@ export const borrowBook = async (params: BorrowBookParams) => {
     }
   }
 }
-=======
 'use server'
 
 import { db } from '@/database/drizzle'
@@ -126,4 +124,3 @@ export const borrowBook = async (params: BorrowBookParams) => {
     }
   }
 }
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)

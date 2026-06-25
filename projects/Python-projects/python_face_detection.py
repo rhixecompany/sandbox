@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import cv2
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -16,7 +15,6 @@ cv2.imshow('img' , img)
 cv2.waitKey()
 
 cv2.imwrite("face_detected.jpg")
-=======
 import cv2
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -34,4 +32,3 @@ cv2.imshow('img' , img)
 cv2.waitKey()
 
 cv2.imwrite("face_detected.jpg")
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

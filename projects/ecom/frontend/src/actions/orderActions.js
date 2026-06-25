@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from "axios";
 import {
   ORDER_CREATE_REQUEST,
@@ -241,7 +240,6 @@ export const listOrders = () => async (dispatch, getState) => {
     });
   }
 };
-=======
 import axios from "axios";
 import {
   ORDER_CREATE_REQUEST,
@@ -484,4 +482,3 @@ export const listOrders = () => async (dispatch, getState) => {
     });
   }
 };
->>>>>>> d330f24 (chore: initial local project setup for ecom)

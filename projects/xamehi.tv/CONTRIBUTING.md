@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to Xamehi.tv
 
 Thank you for your interest in contributing to Xamehi.tv! This guide covers how to contribute to our Django + React movie streaming platform.
@@ -94,7 +93,6 @@ python manage.py runserver
 ## Questions?
 
 Open an issue for discussion before starting large contributions.
-=======
 # Contributing to Xamehi.tv
 
 Thank you for your interest in contributing to Xamehi.tv! This guide covers how to contribute to our Django + React movie streaming platform.
@@ -190,4 +188,3 @@ python manage.py runserver
 ## Questions?
 
 Open an issue for discussion before starting large contributions.
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

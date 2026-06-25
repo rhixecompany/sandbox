@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 
 function Rating({ value, text, color }) {
@@ -70,7 +69,6 @@ function Rating({ value, text, color }) {
 }
 
 export default Rating
-=======
 import React from 'react'
 
 function Rating({ value, text, color }) {
@@ -142,4 +140,3 @@ function Rating({ value, text, color }) {
 }
 
 export default Rating
->>>>>>> d330f24 (chore: initial local project setup for ecom)

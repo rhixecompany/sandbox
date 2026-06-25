@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -52,7 +51,6 @@ function PaymentScreen({ history }) {
 }
 
 export default PaymentScreen;
-=======
 import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -106,4 +104,3 @@ function PaymentScreen({ history }) {
 }
 
 export default PaymentScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

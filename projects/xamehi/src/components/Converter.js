@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { React, useState } from "react";
 import Exchange from "./Exchange";
 import axios from "axios";
@@ -111,7 +110,6 @@ const Converter = () => {
 };
 
 export default Converter;
-=======
 import { React, useState } from "react";
 import Exchange from "./Exchange";
 import axios from "axios";
@@ -224,4 +222,3 @@ const Converter = () => {
 };
 
 export default Converter;
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

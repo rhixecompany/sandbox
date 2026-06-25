@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
@@ -115,7 +114,6 @@ def deleteUser(request, pk):
     userForDeletion = User.objects.get(id=pk)
     userForDeletion.delete()
     return Response('User was deleted')
-=======
 from django.shortcuts import render
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
@@ -232,4 +230,3 @@ def deleteUser(request, pk):
     userForDeletion = User.objects.get(id=pk)
     userForDeletion.delete()
     return Response('User was deleted')
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

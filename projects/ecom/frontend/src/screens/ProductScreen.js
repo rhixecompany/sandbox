@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -240,7 +239,6 @@ function ProductScreen({ match, history }) {
 }
 
 export default ProductScreen;
-=======
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -482,4 +480,3 @@ function ProductScreen({ match, history }) {
 }
 
 export default ProductScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

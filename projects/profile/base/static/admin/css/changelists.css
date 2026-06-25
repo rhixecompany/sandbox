@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* CHANGELISTS */
 
 #changelist {
@@ -344,7 +343,6 @@
 #changelist .actions .button:focus, #changelist .actions .button:hover {
     border-color: #999;
 }
-=======
 /* CHANGELISTS */
 
 #changelist {
@@ -690,4 +688,3 @@
 #changelist .actions .button:focus, #changelist .actions .button:hover {
     border-color: #999;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 from datetime import timedelta
 from pathlib import Path
@@ -192,7 +191,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 if os.getcwd() == '/app':
     DEBUG = True
-=======
 import os
 from datetime import timedelta
 from pathlib import Path
@@ -386,4 +384,3 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 if os.getcwd() == '/app':
     DEBUG = True
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

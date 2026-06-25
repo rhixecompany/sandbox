@@ -1,6 +1,5 @@
 # AGENTS.md
 
-<<<<<<< HEAD
 ## Project Overview
 
 This file guides coding agents working in cookiecutter-django-tailwind/.
@@ -67,7 +66,6 @@ pytest
 - Reinstall dependencies and retry verification commands.
 - Use README.md as the authoritative reference when command behavior differs.
 
-=======
 > **Refreshed by AGENTS workflow 2026-06-01**
 
 ## Project Overview
@@ -190,4 +188,3 @@ Deployment targets: Docker-based (DigitalOcean, Railway, Fly.io) or PaaS (Heroku
 - **Docker issues**: `docker compose build --no-cache` then restart
 - **Static files not loading**: Run `python manage.py collectstatic` and check `STATIC_ROOT` and `STATIC_URL`
 - **Form rendering issues**: Ensure `crispy_forms` with `tailwind` or `bootstrap5` pack is configured
->>>>>>> 95c5d18 (chore: initial local project setup for cookiecutter-django-tailwind)

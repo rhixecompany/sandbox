@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Xamehi
 
 A full-stack web application combining React frontend with Django backend.
@@ -61,7 +60,6 @@ python manage.py runserver
 - [Developer Guide](DEVELOPER_GUIDE.md)
 - [Contributing](CONTRIBUTING.md)
 - [User Guide](USER_GUIDE.md)
-=======
 # Xamehi
 
 A full-stack web application combining React frontend with Django backend.
@@ -124,4 +122,3 @@ python manage.py runserver
 - [Developer Guide](DEVELOPER_GUIDE.md)
 - [Contributing](CONTRIBUTING.md)
 - [User Guide](USER_GUIDE.md)
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

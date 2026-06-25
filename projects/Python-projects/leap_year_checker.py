@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def is_leap_year(year):
     if year % 4 == 0:
         if year % 100 == 0:
@@ -12,7 +11,6 @@ def is_leap_year(year):
         print('Not Leap Year')
 
 is_leap_year(2051)
-=======
 def is_leap_year(year):
     if year % 4 == 0:
         if year % 100 == 0:
@@ -26,4 +24,3 @@ def is_leap_year(year):
         print('Not Leap Year')
 
 is_leap_year(2051)
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

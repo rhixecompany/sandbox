@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 {
     const inputTags = ['BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
@@ -15,7 +14,6 @@
         }
     }
 }
-=======
 'use strict';
 {
     const inputTags = ['BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
@@ -32,4 +30,3 @@
         }
     }
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

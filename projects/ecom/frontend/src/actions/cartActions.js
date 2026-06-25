@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from 'axios'
 import {
     CART_ADD_ITEM,
@@ -54,7 +53,6 @@ export const savePaymentMethod = (data) => (dispatch) => {
     })
 
     localStorage.setItem('paymentMethod', JSON.stringify(data))
-=======
 import axios from 'axios'
 import {
     CART_ADD_ITEM,
@@ -110,5 +108,4 @@ export const savePaymentMethod = (data) => (dispatch) => {
     })
 
     localStorage.setItem('paymentMethod', JSON.stringify(data))
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 }

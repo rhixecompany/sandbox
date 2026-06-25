@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from __future__ import unicode_literals
 
 import logging
@@ -40,7 +39,6 @@ if __name__ == "__main__":
     # input_url = input("Enter your URL: ")
     url = "https://youtu.be/Zq5fmkH0T78?si=2PhOrKyGWqTUJrVo"
     main(url)
-=======
 from __future__ import unicode_literals
 
 import logging
@@ -82,4 +80,3 @@ if __name__ == "__main__":
     # input_url = input("Enter your URL: ")
     url = "https://youtu.be/Zq5fmkH0T78?si=2PhOrKyGWqTUJrVo"
     main(url)
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

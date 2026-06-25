@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global XRegExp*/
 'use strict';
 {
@@ -169,7 +168,6 @@
     }
     window.URLify = URLify;
 }
-=======
 /*global XRegExp*/
 'use strict';
 {
@@ -340,4 +338,3 @@
     }
     window.URLify = URLify;
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

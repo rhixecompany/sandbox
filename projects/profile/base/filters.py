@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import django_filters
 from django_filters import CharFilter
 
@@ -13,7 +12,6 @@ class PostFilter(django_filters.FilterSet):
 		)
 	class Meta:
 		model = Post
-=======
 import django_filters
 from django_filters import CharFilter
 
@@ -28,5 +26,4 @@ class PostFilter(django_filters.FilterSet):
 		)
 	class Meta:
 		model = Post
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 		fields = ['headline', 'tags']

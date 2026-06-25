@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -47,7 +46,6 @@ class ProfileForm(ModelForm):
         model = Profile
         fields = '__all__'
         exclude = ['user']
-=======
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -96,4 +94,3 @@ class ProfileForm(ModelForm):
         model = Profile
         fields = '__all__'
         exclude = ['user']
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

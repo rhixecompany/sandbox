@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global Calendar, findPosX, findPosY, get_format, gettext, gettext_noop, interpolate, ngettext, quickElement*/
 // Inserts shortcut buttons after all of the following:
 //     <input type="text" class="vDateField">
@@ -414,7 +413,6 @@
     window.addEventListener('load', DateTimeShortcuts.init);
     window.DateTimeShortcuts = DateTimeShortcuts;
 }
-=======
 /*global Calendar, findPosX, findPosY, get_format, gettext, gettext_noop, interpolate, ngettext, quickElement*/
 // Inserts shortcut buttons after all of the following:
 //     <input type="text" class="vDateField">
@@ -830,4 +828,3 @@
     window.addEventListener('load', DateTimeShortcuts.init);
     window.DateTimeShortcuts = DateTimeShortcuts;
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

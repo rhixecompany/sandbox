@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Code Documentation Index
 
 This directory contains detailed code documentation for the selenium_webdriver project.
@@ -37,7 +36,6 @@ node src/scrape.js
 - All functions are async and return Promises
 - Retry logic handles StaleElementReferenceError
 - Use By.xpath() for complex selectors
-=======
 # Code Documentation Index
 
 This directory contains detailed code documentation for the selenium_webdriver project.
@@ -76,5 +74,4 @@ node src/scrape.js
 - All functions are async and return Promises
 - Retry logic handles StaleElementReferenceError
 - Use By.xpath() for complex selectors
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)
 - Use until.elementLocated() for explicit waits

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AGENTS.md
 
 > **Refreshed by AGENTS workflow 2026-06-01**
@@ -399,7 +398,6 @@ Before finalizing documentation:
 - [CODE_STYLE.md](CODE_STYLE.md) - Coding standards
 - [README.md](README.md) - Project overview
 - [.opencode/instructions/](.opencode/instructions/) - Agent commands
-=======
 # Banking - Next.js Fintech App Context
 
 Next.js 16 fintech banking application with Plaid/Dwolla integration.
@@ -440,4 +438,3 @@ npm run lint
 - Plaid keys in `.env.local` — never commit
 - Dwolla sandbox for development
 - Webhook handling for Plaid/Dwolla events
->>>>>>> b4e0b047 (chore: initial local project setup for Banking)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -14,7 +13,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-=======
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -30,4 +28,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
->>>>>>> d330f24 (chore: initial local project setup for ecom)

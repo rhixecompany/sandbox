@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -81,7 +80,6 @@ function ShippingScreen({ history }) {
 }
 
 export default ShippingScreen;
-=======
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -164,4 +162,3 @@ function ShippingScreen({ history }) {
 }
 
 export default ShippingScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

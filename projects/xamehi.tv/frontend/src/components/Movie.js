@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Card, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -34,7 +33,6 @@ const Movie = ({ movie }) => {
 };
 
 export default Movie;
-=======
 import React from "react";
 import { Card, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -70,4 +68,3 @@ const Movie = ({ movie }) => {
 };
 
 export default Movie;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

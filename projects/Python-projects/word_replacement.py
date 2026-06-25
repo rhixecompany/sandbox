@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def replace_word():
     str = "hi guys, i am tomi, and hi hi hi hi"
     word_to_replace = input("Enter the word to replace: ")
@@ -6,7 +5,6 @@ def replace_word():
     print(str.replace(word_to_replace, word_replacement))
     
 replace_word()
-=======
 def replace_word():
     str = "hi guys, i am tomi, and hi hi hi hi"
     word_to_replace = input("Enter the word to replace: ")
@@ -14,4 +12,3 @@ def replace_word():
     print(str.replace(word_to_replace, word_replacement))
     
 replace_word()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

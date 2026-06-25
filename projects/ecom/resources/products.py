@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 products = [
     {
         '_id': '1',
@@ -79,7 +78,6 @@ products = [
         'numReviews': 12,
     },
 ]
-=======
 products = [
     {
         '_id': '1',
@@ -160,4 +158,3 @@ products = [
         'numReviews': 12,
     },
 ]
->>>>>>> d330f24 (chore: initial local project setup for ecom)

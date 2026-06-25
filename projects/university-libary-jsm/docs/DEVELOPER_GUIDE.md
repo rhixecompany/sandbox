@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Developer Guide
 
 ## Prerequisites
@@ -170,7 +169,6 @@ npm run lint
 ### Email Not Sending
 - Verify SMTP configuration
 - Check app email settings
-=======
 # Developer Guide
 
 ## Prerequisites
@@ -342,5 +340,4 @@ npm run lint
 ### Email Not Sending
 - Verify SMTP configuration
 - Check app email settings
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 - Use Mailtrap for development

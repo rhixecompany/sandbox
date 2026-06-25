@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Selenium WebDriver Web Scraper
 
 A Node.js-based Selenium WebDriver project for scraping comic/manga data from Asura Scans website.
@@ -115,7 +114,6 @@ The scraper generates:
 
 ## License
 
-=======
 # Selenium WebDriver Web Scraper
 
 A Node.js-based Selenium WebDriver project for scraping comic/manga data from Asura Scans website.
@@ -232,5 +230,4 @@ The scraper generates:
 
 ## License
 
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)
 ISC

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
@@ -51,7 +50,6 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
 }
 
 export default CheckoutSteps
-=======
 import React from 'react'
 import { Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
@@ -104,4 +102,3 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
 }
 
 export default CheckoutSteps
->>>>>>> d330f24 (chore: initial local project setup for ecom)

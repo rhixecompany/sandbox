@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -33,7 +32,6 @@ const Series = ({ post }) => {
 };
 
 export default Series;
-=======
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -68,4 +66,3 @@ const Series = ({ post }) => {
 };
 
 export default Series;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

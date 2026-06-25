@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global gettext, interpolate, ngettext*/
 'use strict';
 {
@@ -200,7 +199,6 @@
         }
     });
 }
-=======
 /*global gettext, interpolate, ngettext*/
 'use strict';
 {
@@ -402,4 +400,3 @@
         }
     });
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

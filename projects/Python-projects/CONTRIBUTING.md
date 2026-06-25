@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to Python Projects Collection
 
 Thank you for your interest in contributing to this project!
@@ -23,7 +22,6 @@ Thank you for your interest in contributing to this project!
 
 ## Questions?
 
-=======
 # Contributing to Python Projects Collection
 
 Thank you for your interest in contributing to this project!
@@ -48,5 +46,4 @@ Thank you for your interest in contributing to this project!
 
 ## Questions?
 
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)
 Open an issue for discussion before starting large contributions.

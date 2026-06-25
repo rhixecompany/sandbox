@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to Xamehi
 
 Thank you for your interest in contributing to Xamehi! This guide covers how to contribute to our React + Express.js web application.
@@ -94,7 +93,6 @@ npm start
 ## Questions?
 
 Open an issue for discussion before starting large contributions.
-=======
 # Contributing to Xamehi
 
 Thank you for your interest in contributing to Xamehi! This guide covers how to contribute to our React + Express.js web application.
@@ -190,4 +188,3 @@ npm start
 ## Questions?
 
 Open an issue for discussion before starting large contributions.
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

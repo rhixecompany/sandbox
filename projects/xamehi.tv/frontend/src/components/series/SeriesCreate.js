@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import {
   Create,
@@ -22,7 +21,6 @@ const SeriesCreate = (props) => {
 };
 
 export default SeriesCreate;
-=======
 import React from "react";
 import {
   Create,
@@ -46,4 +44,3 @@ const SeriesCreate = (props) => {
 };
 
 export default SeriesCreate;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

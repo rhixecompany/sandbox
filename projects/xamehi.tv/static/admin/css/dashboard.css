@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* DASHBOARD */
 
 .dashboard .module table th {
@@ -25,7 +24,6 @@ ul.actionlist li {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-=======
 /* DASHBOARD */
 
 .dashboard .module table th {
@@ -52,4 +50,3 @@ ul.actionlist li {
     overflow: hidden;
     text-overflow: ellipsis;
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

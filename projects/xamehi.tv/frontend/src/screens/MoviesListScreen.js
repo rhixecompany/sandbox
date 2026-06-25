@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -145,7 +144,6 @@ function MoviesListScreen({ history, match }) {
 }
 
 export default MoviesListScreen;
-=======
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -292,4 +290,3 @@ function MoviesListScreen({ history, match }) {
 }
 
 export default MoviesListScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

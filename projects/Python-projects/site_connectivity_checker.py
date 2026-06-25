@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import urllib.request as urllib
 
 
@@ -13,7 +12,6 @@ print("This is a site connectivity checker program")
 input_url = input("Input the url of the site you want to check: ")
 
 main(input_url)
-=======
 import urllib.request as urllib
 
 
@@ -28,4 +26,3 @@ print("This is a site connectivity checker program")
 input_url = input("Input the url of the site you want to check: ")
 
 main(input_url)
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

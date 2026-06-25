@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 console.log('Its working')
 
 let theme = localStorage.getItem('theme')
@@ -38,7 +37,6 @@ function setTheme(mode){
 	}
 
 	localStorage.setItem('theme', mode)
-=======
 console.log('Its working')
 
 let theme = localStorage.getItem('theme')
@@ -78,5 +76,4 @@ function setTheme(mode){
 	}
 
 	localStorage.setItem('theme', mode)
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
@@ -168,7 +167,6 @@ export const productTopRatedReducer = (state = { products: [] }, action) => {
     }
 }
 
-=======
 import {
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
@@ -337,5 +335,3 @@ export const productTopRatedReducer = (state = { products: [] }, action) => {
             return state
     }
 }
-
->>>>>>> d330f24 (chore: initial local project setup for ecom)

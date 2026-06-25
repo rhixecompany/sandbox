@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 {
     const toggleNavSidebar = document.getElementById('toggle-nav-sidebar');
@@ -38,7 +37,6 @@
         });
     }
 }
-=======
 'use strict';
 {
     const toggleNavSidebar = document.getElementById('toggle-nav-sidebar');
@@ -78,4 +76,3 @@
         });
     }
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

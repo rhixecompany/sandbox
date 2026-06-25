@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { By, Browser, until, Builder } from "selenium-webdriver";
 import { getBinaryPaths } from "selenium-webdriver/common/driverFinder.js";
 import Chrome from "selenium-webdriver/chrome.js";
@@ -154,7 +153,6 @@ async function Download(url) {
 }
 const url = "https://asuracomic.net/series?page=1";
 Download(url);
-=======
 import { By, Browser, until, Builder } from "selenium-webdriver";
 import { getBinaryPaths } from "selenium-webdriver/common/driverFinder.js";
 import Chrome from "selenium-webdriver/chrome.js";
@@ -310,4 +308,3 @@ async function Download(url) {
 }
 const url = "https://asuracomic.net/series?page=1";
 Download(url);
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

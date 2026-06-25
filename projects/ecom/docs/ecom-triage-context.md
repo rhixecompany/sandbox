@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ecom Triage Context
 
 **Date:** 2026-05-20
@@ -32,7 +31,6 @@ docx package). This session added the missing CODE_OF_CONDUCT.md.
 - Add `.github/workflows/` CI workflow (lint + test + build)
 - Verify `docs/node_modules/` is gitignored (currently present in docs/ — likely from docx generation)
 - Add `docs/node_modules/` to `.gitignore` if not already present
-=======
 # ecom Triage Context
 
 **Date:** 2026-05-20
@@ -66,4 +64,3 @@ docx package). This session added the missing CODE_OF_CONDUCT.md.
 - Add `.github/workflows/` CI workflow (lint + test + build)
 - Verify `docs/node_modules/` is gitignored (currently present in docs/ — likely from docx generation)
 - Add `docs/node_modules/` to `.gitignore` if not already present
->>>>>>> d330f24 (chore: initial local project setup for ecom)

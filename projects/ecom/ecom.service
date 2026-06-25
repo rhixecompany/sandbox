@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [Unit]
 Description=rhixecompany daemon
 Requires=ecom.socket
@@ -16,7 +15,6 @@ ExecStart=/var/www/rhixe.company/env/bin/gunicorn \
 
 [Install]
 WantedBy=multi-user.target
-=======
 [Unit]
 Description=rhixecompany daemon
 Requires=ecom.socket
@@ -34,4 +32,3 @@ ExecStart=/var/www/rhixe.company/env/bin/gunicorn \
 
 [Install]
 WantedBy=multi-user.target
->>>>>>> d330f24 (chore: initial local project setup for ecom)

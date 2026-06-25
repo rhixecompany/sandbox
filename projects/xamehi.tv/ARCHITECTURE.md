@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Architecture — xamehi.tv
 
 ## Overview
@@ -122,7 +121,6 @@ python manage.py runserver
 - PostgreSQL for production database
 - Static files served via WhiteNoise
 - Environment variables for secrets (DATABASE_URL, etc.)
-=======
 # Architecture — xamehi.tv
 
 ## Overview
@@ -246,4 +244,3 @@ python manage.py runserver
 - PostgreSQL for production database
 - Static files served via WhiteNoise
 - Environment variables for secrets (DATABASE_URL, etc.)
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

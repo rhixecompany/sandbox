@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from "axios";
 import {
   SERIES_LIST_REQUEST,
@@ -236,7 +235,6 @@ export const createSeriesReview =
       });
     }
   };
-=======
 import axios from "axios";
 import {
   SERIES_LIST_REQUEST,
@@ -474,4 +472,3 @@ export const createSeriesReview =
       });
     }
   };
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

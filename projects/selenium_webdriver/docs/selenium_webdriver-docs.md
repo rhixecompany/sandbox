@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Selenium WebDriver Project Documentation
 
 **Project:** selenium_webdriver  
@@ -355,7 +354,6 @@ ISC
 
 ## Contributing
 
-=======
 # Selenium WebDriver Project Documentation
 
 **Project:** selenium_webdriver  
@@ -712,5 +710,4 @@ ISC
 
 ## Contributing
 
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)
 For issues or feature requests, please contact the repository maintainer.

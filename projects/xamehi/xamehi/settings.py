@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Django settings for xamehi project.
 
@@ -122,7 +121,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-=======
 """
 Django settings for xamehi project.
 
@@ -246,4 +244,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.urls import path
 from . import views
 
@@ -17,7 +16,6 @@ urlpatterns = [
     path('update_movie/<slug:slug>/', views.updateMovie, name="update_movie"),
     path('delete_movie/<slug:slug>/', views.deleteMovie, name="delete_movie"),
 ]
-=======
 from django.urls import path
 from . import views
 
@@ -36,4 +34,3 @@ urlpatterns = [
     path('update_movie/<slug:slug>/', views.updateMovie, name="update_movie"),
     path('delete_movie/<slug:slug>/', views.deleteMovie, name="delete_movie"),
 ]
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

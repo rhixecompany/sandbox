@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col, Button } from "react-bootstrap";
@@ -56,7 +55,6 @@ const SeriesScreen = ({ history }) => {
 };
 
 export default SeriesScreen;
-=======
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col, Button } from "react-bootstrap";
@@ -114,4 +112,3 @@ const SeriesScreen = ({ history }) => {
 };
 
 export default SeriesScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

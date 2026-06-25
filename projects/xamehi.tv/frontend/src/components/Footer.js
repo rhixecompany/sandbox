@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -15,7 +14,6 @@ const Footer = () => {
 };
 
 export default Footer;
-=======
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -32,4 +30,3 @@ const Footer = () => {
 };
 
 export default Footer;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from "axios";
 import {
   PRODUCT_LIST_REQUEST,
@@ -236,7 +235,6 @@ export const createProductReview =
       });
     }
   };
-=======
 import axios from "axios";
 import {
   PRODUCT_LIST_REQUEST,
@@ -474,4 +472,3 @@ export const createProductReview =
       });
     }
   };
->>>>>>> d330f24 (chore: initial local project setup for ecom)

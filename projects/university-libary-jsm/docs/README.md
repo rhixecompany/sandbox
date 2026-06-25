@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BookWise - University Library Management System
 
 A full-featured university library management system built with Next.js 15, Drizzle ORM, and NextAuth v5.
@@ -71,7 +70,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## License
 
-=======
 # BookWise - University Library Management System
 
 A full-featured university library management system built with Next.js 15, Drizzle ORM, and NextAuth v5.
@@ -144,5 +142,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## License
 
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 MIT License

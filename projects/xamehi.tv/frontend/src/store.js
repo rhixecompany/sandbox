@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -76,7 +75,6 @@ const store = createStore(
 );
 
 export default store;
-=======
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -154,4 +152,3 @@ const store = createStore(
 );
 
 export default store;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

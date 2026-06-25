@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import qrcode
 def generate_qrcode(text):
     qr = qrcode.QRCode(
@@ -15,7 +14,6 @@ def generate_qrcode(text):
     
 url = input("Enter your url: ")
 generate_qrcode(url)
-=======
 import qrcode
 def generate_qrcode(text):
     qr = qrcode.QRCode(
@@ -32,4 +30,3 @@ def generate_qrcode(text):
     
 url = input("Enter your url: ")
 generate_qrcode(url)
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

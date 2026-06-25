@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -87,7 +86,6 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return str(self.address)
-=======
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -176,4 +174,3 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return str(self.address)
->>>>>>> d330f24 (chore: initial local project setup for ecom)

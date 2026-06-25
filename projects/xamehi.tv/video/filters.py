@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import django_filters
 from django_filters import CharFilter
 
@@ -27,7 +26,6 @@ class SeriesFilter(django_filters.FilterSet):
     class Meta:
         model = Series
         fields = ['name', 'tags']
-=======
 import django_filters
 from django_filters import CharFilter
 
@@ -56,4 +54,3 @@ class SeriesFilter(django_filters.FilterSet):
     class Meta:
         model = Series
         fields = ['name', 'tags']
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

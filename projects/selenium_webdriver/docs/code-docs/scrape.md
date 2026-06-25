@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # scrape.js - Main Scraper Documentation
 
 ## Overview
@@ -117,7 +116,6 @@ Contains array of chapter objects with page images.
 - Uses try-catch blocks for element location errors
 - Implements retry logic in utility functions
 - Logs errors to console
-=======
 # scrape.js - Main Scraper Documentation
 
 ## Overview
@@ -236,5 +234,4 @@ Contains array of chapter objects with page images.
 - Uses try-catch blocks for element location errors
 - Implements retry logic in utility functions
 - Logs errors to console
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)
 - Ensures cleanup in finally block

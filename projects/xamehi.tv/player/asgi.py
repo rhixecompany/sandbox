@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 ASGI config for player project.
 
@@ -15,7 +14,6 @@ from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'player.settings')
 
 application = get_asgi_application()
-=======
 """
 ASGI config for player project.
 
@@ -32,4 +30,3 @@ from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'player.settings')
 
 application = get_asgi_application()
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

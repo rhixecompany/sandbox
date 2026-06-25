@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -15,7 +14,6 @@ function Footer() {
 }
 
 export default Footer;
-=======
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -32,4 +30,3 @@ function Footer() {
 }
 
 export default Footer;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -502,7 +501,6 @@
       height: 0;
     }
   }
-=======
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -1006,5 +1004,4 @@
       height: 0;
     }
   }
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -11,7 +10,6 @@ CKEDITOR.plugins.setLang("a11yhelp","ca",{title:"Instruccions d'Accessibilitat",
 legend:"Premi ${accessNextSpace} per accedir a l'enfocament d'espai més proper inabastable després del símbol d'intercalació, per exemple: dos elements HR adjacents. Repetiu la combinació de tecles per arribar a enfocaments d'espais distants."},{name:"Ajuda d'accessibilitat",legend:"Premi ${a11yHelp}"},{name:" Paste as plain text",legend:"Press ${pastetext}",legendEdge:"Press ${pastetext}, followed by ${paste}"}]}],tab:"Tabulació",pause:"Pausa",capslock:"Bloqueig de majúscules",escape:"Escape",pageUp:"Pàgina Amunt",
 pageDown:"Pàgina Avall",leftArrow:"Fletxa Esquerra",upArrow:"Fletxa Amunt",rightArrow:"Fletxa Dreta",downArrow:"Fletxa Avall",insert:"Inserir",leftWindowKey:"Tecla Windows Esquerra",rightWindowKey:"Tecla Windows Dreta",selectKey:"Tecla Seleccionar",numpad0:"Teclat Numèric 0",numpad1:"Teclat Numèric 1",numpad2:"Teclat Numèric 2",numpad3:"Teclat Numèric 3",numpad4:"Teclat Numèric 4",numpad5:"Teclat Numèric 5",numpad6:"Teclat Numèric 6",numpad7:"Teclat Numèric 7",numpad8:"Teclat Numèric 8",numpad9:"Teclat Numèric 9",
 multiply:"Multiplicació",add:"Suma",subtract:"Resta",decimalPoint:"Punt Decimal",divide:"Divisió",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Bloqueig Teclat Numèric",scrollLock:"Bloqueig de Desplaçament",semiColon:"Punt i Coma",equalSign:"Símbol Igual",comma:"Coma",dash:"Guió",period:"Punt",forwardSlash:"Barra Diagonal",graveAccent:"Accent Obert",openBracket:"Claudàtor Obert",backSlash:"Barra Invertida",closeBracket:"Claudàtor Tancat",
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -24,5 +22,4 @@ CKEDITOR.plugins.setLang("a11yhelp","ca",{title:"Instruccions d'Accessibilitat",
 legend:"Premi ${accessNextSpace} per accedir a l'enfocament d'espai més proper inabastable després del símbol d'intercalació, per exemple: dos elements HR adjacents. Repetiu la combinació de tecles per arribar a enfocaments d'espais distants."},{name:"Ajuda d'accessibilitat",legend:"Premi ${a11yHelp}"},{name:" Paste as plain text",legend:"Press ${pastetext}",legendEdge:"Press ${pastetext}, followed by ${paste}"}]}],tab:"Tabulació",pause:"Pausa",capslock:"Bloqueig de majúscules",escape:"Escape",pageUp:"Pàgina Amunt",
 pageDown:"Pàgina Avall",leftArrow:"Fletxa Esquerra",upArrow:"Fletxa Amunt",rightArrow:"Fletxa Dreta",downArrow:"Fletxa Avall",insert:"Inserir",leftWindowKey:"Tecla Windows Esquerra",rightWindowKey:"Tecla Windows Dreta",selectKey:"Tecla Seleccionar",numpad0:"Teclat Numèric 0",numpad1:"Teclat Numèric 1",numpad2:"Teclat Numèric 2",numpad3:"Teclat Numèric 3",numpad4:"Teclat Numèric 4",numpad5:"Teclat Numèric 5",numpad6:"Teclat Numèric 6",numpad7:"Teclat Numèric 7",numpad8:"Teclat Numèric 8",numpad9:"Teclat Numèric 9",
 multiply:"Multiplicació",add:"Suma",subtract:"Resta",decimalPoint:"Punt Decimal",divide:"Divisió",f1:"F1",f2:"F2",f3:"F3",f4:"F4",f5:"F5",f6:"F6",f7:"F7",f8:"F8",f9:"F9",f10:"F10",f11:"F11",f12:"F12",numLock:"Bloqueig Teclat Numèric",scrollLock:"Bloqueig de Desplaçament",semiColon:"Punt i Coma",equalSign:"Símbol Igual",comma:"Coma",dash:"Guió",period:"Punt",forwardSlash:"Barra Diagonal",graveAccent:"Accent Obert",openBracket:"Claudàtor Obert",backSlash:"Barra Invertida",closeBracket:"Claudàtor Tancat",
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 singleQuote:"Cometa Simple"});

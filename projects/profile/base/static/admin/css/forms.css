@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('widgets.css');
 
 /* FORM ROWS */
@@ -531,7 +530,6 @@ form .related-widget-wrapper ul {
 .clearable-file-input input {
     margin-top: 0;
 }
-=======
 @import url('widgets.css');
 
 /* FORM ROWS */
@@ -1064,4 +1062,3 @@ form .related-widget-wrapper ul {
 .clearable-file-input input {
     margin-top: 0;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

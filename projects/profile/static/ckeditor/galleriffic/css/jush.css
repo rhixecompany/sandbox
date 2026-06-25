@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .jush { color: black; }
 .jush-htm_com, .jush-com, .jush-one, .jush-php_com, .jush-php_one, .jush-js_one { color: gray; }
 .jush-php { color: #000033; background-color: #FFF0F0; }
@@ -28,7 +27,6 @@
 .jush-php_sqlite .jush-php_apo a, .jush-php_sqlite .jush-php_quo a,
 .jush-php_pgsql .jush-php_apo a, .jush-php_pgsql .jush-php_quo a
 { color: inherit; color: expression(parentNode.currentStyle.color); }
-=======
 .jush { color: black; }
 .jush-htm_com, .jush-com, .jush-one, .jush-php_com, .jush-php_one, .jush-js_one { color: gray; }
 .jush-php { color: #000033; background-color: #FFF0F0; }
@@ -58,4 +56,3 @@
 .jush-php_sqlite .jush-php_apo a, .jush-php_sqlite .jush-php_quo a,
 .jush-php_pgsql .jush-php_apo a, .jush-php_pgsql .jush-php_quo a
 { color: inherit; color: expression(parentNode.currentStyle.color); }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

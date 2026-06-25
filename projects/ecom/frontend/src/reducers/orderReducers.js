@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
     ORDER_CREATE_REQUEST,
     ORDER_CREATE_SUCCESS,
@@ -196,7 +195,6 @@ export const orderListReducer = (state = { orders: [] }, action) => {
         default:
             return state
     }
-=======
 import {
     ORDER_CREATE_REQUEST,
     ORDER_CREATE_SUCCESS,
@@ -394,5 +392,4 @@ export const orderListReducer = (state = { orders: [] }, action) => {
         default:
             return state
     }
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 }

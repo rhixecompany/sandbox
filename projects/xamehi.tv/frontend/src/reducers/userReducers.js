@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
@@ -173,7 +172,6 @@ export const userUpdateReducer = (state = { user: {} }, action) => {
         default:
             return state
     }
-=======
 import {
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
@@ -348,5 +346,4 @@ export const userUpdateReducer = (state = { user: {} }, action) => {
         default:
             return state
     }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)
 }

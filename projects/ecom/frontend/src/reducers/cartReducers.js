@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
     CART_ADD_ITEM,
     CART_REMOVE_ITEM,
@@ -58,7 +57,6 @@ export const cartReducer = (state = { cartItems: [], shippingAddress: {} }, acti
         default:
             return state
     }
-=======
 import {
     CART_ADD_ITEM,
     CART_REMOVE_ITEM,
@@ -118,5 +116,4 @@ export const cartReducer = (state = { cartItems: [], shippingAddress: {} }, acti
         default:
             return state
     }
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 }

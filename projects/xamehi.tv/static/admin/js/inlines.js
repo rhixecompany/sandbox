@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global DateTimeShortcuts, SelectFilter*/
 /**
  * Django admin inlines
@@ -347,7 +346,6 @@
         });
     });
 }
-=======
 /*global DateTimeShortcuts, SelectFilter*/
 /**
  * Django admin inlines
@@ -696,4 +694,3 @@
         });
     });
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

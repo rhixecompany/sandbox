@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 
 import { Form, Button, Row, Col, Table } from "react-bootstrap";
@@ -168,7 +167,6 @@ function ProfileScreen({ history }) {
 }
 
 export default ProfileScreen;
-=======
 import React, { useState, useEffect } from "react";
 
 import { Form, Button, Row, Col, Table } from "react-bootstrap";
@@ -338,4 +336,3 @@ function ProfileScreen({ history }) {
 }
 
 export default ProfileScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

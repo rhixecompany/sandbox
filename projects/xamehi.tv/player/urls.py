@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
@@ -16,7 +15,6 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-=======
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
@@ -34,4 +32,3 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

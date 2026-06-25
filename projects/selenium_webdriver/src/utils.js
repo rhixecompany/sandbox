@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { By, until } from "selenium-webdriver";
 
 import assert from "node:assert";
@@ -209,7 +208,6 @@ export async function textElements(driver, locator, maxRetries = 3) {
   }
   throw new Error(`Failed to get textElements after ${maxRetries} retries.`);
 }
-=======
 import { By, until } from "selenium-webdriver";
 
 import assert from "node:assert";
@@ -420,4 +418,3 @@ export async function textElements(driver, locator, maxRetries = 3) {
   }
   throw new Error(`Failed to get textElements after ${maxRetries} retries.`);
 }
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use server'
 
 import { eq } from 'drizzle-orm'
@@ -89,7 +88,6 @@ export const signUp = async (params: AuthCredentials) => {
 export const signOutUser = async () => {
   return await signOut()
 }
-=======
 'use server'
 
 import { eq } from 'drizzle-orm'
@@ -180,4 +178,3 @@ export const signUp = async (params: AuthCredentials) => {
 export const signOutUser = async () => {
   return await signOut()
 }
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)

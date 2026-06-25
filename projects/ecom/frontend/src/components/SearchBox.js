@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
@@ -37,7 +36,6 @@ function SearchBox() {
 }
 
 export default SearchBox
-=======
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
@@ -76,4 +74,3 @@ function SearchBox() {
 }
 
 export default SearchBox
->>>>>>> d330f24 (chore: initial local project setup for ecom)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def add(a, b):
     answer = a + b
     print(str(a) + " + " + str( b) + " = " + str(answer) + "\n")
@@ -43,7 +42,6 @@ while True:
     elif choice == "e" or choice == "E":
         print("program ended")
         quit()
-=======
 def add(a, b):
     answer = a + b
     print(str(a) + " + " + str( b) + " = " + str(answer) + "\n")
@@ -88,4 +86,3 @@ while True:
     elif choice == "e" or choice == "E":
         print("program ended")
         quit()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

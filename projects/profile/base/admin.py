@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.contrib import admin
 
 # Register your models here.
@@ -14,7 +13,6 @@ admin.site.register(Profile)
 admin.site.register(Post)
 admin.site.register(Tag)
 admin.site.register(PostComment)
-=======
 from django.contrib import admin
 
 # Register your models here.
@@ -30,4 +28,3 @@ admin.site.register(Profile)
 admin.site.register(Post)
 admin.site.register(Tag)
 admin.site.register(PostComment)
->>>>>>> 4ae124d (chore: initial local project setup for profile)

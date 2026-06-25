@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import Rating from './Rating'
@@ -34,7 +33,6 @@ function Product({ product }) {
 }
 
 export default Product
-=======
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import Rating from './Rating'
@@ -70,4 +68,3 @@ function Product({ product }) {
 }
 
 export default Product
->>>>>>> d330f24 (chore: initial local project setup for ecom)

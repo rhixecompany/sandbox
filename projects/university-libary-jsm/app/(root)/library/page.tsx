@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Page = async () => {
   return (
     <>
@@ -13,7 +12,6 @@ const Page = async () => {
   )
 }
 export default Page
-=======
 const Page = async () => {
   return (
     <>
@@ -28,4 +26,3 @@ const Page = async () => {
   )
 }
 export default Page
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)

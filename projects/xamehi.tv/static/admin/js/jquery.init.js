@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global jQuery:false*/
 'use strict';
 /* Puts the included jQuery into our own namespace using noConflict and passing
@@ -7,7 +6,6 @@
  * window.jQuery).
  */
 window.django = {jQuery: jQuery.noConflict(true)};
-=======
 /*global jQuery:false*/
 'use strict';
 /* Puts the included jQuery into our own namespace using noConflict and passing
@@ -16,4 +14,3 @@ window.django = {jQuery: jQuery.noConflict(true)};
  * window.jQuery).
  */
 window.django = {jQuery: jQuery.noConflict(true)};
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

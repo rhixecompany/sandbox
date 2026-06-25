@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import {
   Edit,
@@ -22,7 +21,6 @@ const SeriesEdit = (props) => {
 };
 
 export default SeriesEdit;
-=======
 import React from "react";
 import {
   Edit,
@@ -46,4 +44,3 @@ const SeriesEdit = (props) => {
 };
 
 export default SeriesEdit;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

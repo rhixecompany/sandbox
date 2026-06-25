@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*!
  * jQuery JavaScript Library v1.3.2
  * http://jquery.com/
@@ -4375,7 +4374,6 @@ jQuery.each([ "Height", "Width" ], function(i, name){
 
 });
 })();
-=======
 /*!
  * jQuery JavaScript Library v1.3.2
  * http://jquery.com/
@@ -8752,4 +8750,3 @@ jQuery.each([ "Height", "Width" ], function(i, name){
 
 });
 })();
->>>>>>> 4ae124d (chore: initial local project setup for profile)

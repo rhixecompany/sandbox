@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
@@ -64,7 +63,6 @@ const Header = () => {
 };
 
 export default Header;
-=======
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
@@ -130,4 +128,3 @@ const Header = () => {
 };
 
 export default Header;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

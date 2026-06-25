@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from credentials import mobile_number
 import requests
 import schedule
@@ -18,7 +17,6 @@ schedule.every(10).seconds.do(send_message)
 while True:
     schedule.run_pending()
     time.sleep(1)
-=======
 from credentials import mobile_number
 import requests
 import schedule
@@ -38,4 +36,3 @@ schedule.every(10).seconds.do(send_message)
 while True:
     schedule.run_pending()
     time.sleep(1)
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

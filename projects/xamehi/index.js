@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const PORT = 8000;
 
 const express = require("express");
@@ -68,7 +67,6 @@ app.get("/news", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`server listening on PORT {PORT}`));
-=======
 const PORT = 8000;
 
 const express = require("express");
@@ -138,4 +136,3 @@ app.get("/news", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`server listening on PORT {PORT}`));
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

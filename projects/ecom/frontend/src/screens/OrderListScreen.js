@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
@@ -86,7 +85,6 @@ function OrderListScreen({ history }) {
 }
 
 export default OrderListScreen;
-=======
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
@@ -174,4 +172,3 @@ function OrderListScreen({ history }) {
 }
 
 export default OrderListScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from "axios";
 import {
   USER_LOGIN_REQUEST,
@@ -300,7 +299,6 @@ export const updateUser = (user) => async (dispatch, getState) => {
     });
   }
 };
-=======
 import axios from "axios";
 import {
   USER_LOGIN_REQUEST,
@@ -602,4 +600,3 @@ export const updateUser = (user) => async (dispatch, getState) => {
     });
   }
 };
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

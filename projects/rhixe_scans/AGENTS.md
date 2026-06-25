@@ -18,8 +18,6 @@ Rhixescans — a full-featured web application for reading comics online. Built 
 - **UI**: @dnd-kit for drag-and-drop, @tanstack/react-table for data tables, recharts for charts, sonner for toasts
 - **Testing**: Jest with ts-jest
 
-<<<<<<< HEAD
-=======
 ## Hermes and Copilot
 
 - Use the nearest `AGENTS.md` for files under `projects/rhixe_scans/`; this file
@@ -31,7 +29,6 @@ Rhixescans — a full-featured web application for reading comics online. Built 
 - Keep this file, the local Copilot instructions, and the Prisma/Next.js docs
   aligned when auth, payments, or data flows change.
 
->>>>>>> 71568c2 (chore: initial local project setup for rhixe_scans)
 ## Setup Commands
 
 ```bash

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global gettext*/
 (function() {
     'use strict';
@@ -54,7 +53,6 @@
         }
     });
 })();
-=======
 /*global gettext*/
 (function() {
     'use strict';
@@ -110,4 +108,3 @@
         }
     });
 })();
->>>>>>> 4ae124d (chore: initial local project setup for profile)

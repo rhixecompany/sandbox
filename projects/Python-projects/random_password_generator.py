@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import string
 import random
 
@@ -29,7 +28,6 @@ elif option == "No":
 else:
     print("Invalid input, please input Yes or No")
     quit()
-=======
 import string
 import random
 
@@ -60,4 +58,3 @@ elif option == "No":
 else:
     print("Invalid input, please input Yes or No")
     quit()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

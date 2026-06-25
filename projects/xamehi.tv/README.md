@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Movies Website With Django + React
 
 Live Demo can be viewed at https://www.xamehi.tv/
@@ -32,7 +31,6 @@ Live Demo can be viewed at https://www.xamehi.tv/
 # Deploy the Application
 
 - 1 - python3 manage.py runserver
-=======
 # Movies Website With Django + React
 
 Live Demo can be viewed at https://www.xamehi.tv/
@@ -66,4 +64,3 @@ Live Demo can be viewed at https://www.xamehi.tv/
 # Deploy the Application
 
 - 1 - python3 manage.py runserver
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

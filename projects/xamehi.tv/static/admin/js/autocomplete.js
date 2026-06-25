@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 {
     const $ = django.jQuery;
@@ -40,7 +39,6 @@
         };
     })(this));
 }
-=======
 'use strict';
 {
     const $ = django.jQuery;
@@ -82,4 +80,3 @@
         };
     })(this));
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

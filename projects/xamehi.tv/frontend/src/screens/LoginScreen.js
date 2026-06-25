@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
@@ -74,7 +73,6 @@ function LoginScreen({ location, history }) {
 }
 
 export default LoginScreen;
-=======
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
@@ -150,4 +148,3 @@ function LoginScreen({ location, history }) {
 }
 
 export default LoginScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

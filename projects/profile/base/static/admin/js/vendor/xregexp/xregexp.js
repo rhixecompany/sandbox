@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /***** xregexp.js *****/
 
 /*!
@@ -2307,7 +2305,6 @@ XRegExp = XRegExp || (function (undef) {
 
 }(XRegExp));
 
-=======
 
 /***** xregexp.js *****/
 
@@ -4615,5 +4612,3 @@ XRegExp = XRegExp || (function (undef) {
     });
 
 }(XRegExp));
-
->>>>>>> 4ae124d (chore: initial local project setup for profile)

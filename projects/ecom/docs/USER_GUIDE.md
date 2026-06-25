@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # User Guide
 
 ## Getting Started
@@ -158,7 +157,6 @@ For additional help:
 - Save your shipping address in your profile for faster checkout
 - Check product reviews before purchasing
 - Use search to quickly find products
-=======
 # User Guide
 
 ## Getting Started
@@ -318,5 +316,4 @@ For additional help:
 - Save your shipping address in your profile for faster checkout
 - Check product reviews before purchasing
 - Use search to quickly find products
->>>>>>> d330f24 (chore: initial local project setup for ecom)
 - Add frequently purchased items to cart ahead of time

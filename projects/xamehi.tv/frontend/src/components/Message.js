@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Alert } from 'react-bootstrap'
 
@@ -11,7 +10,6 @@ function Message({ variant, children }) {
 }
 
 export default Message
-=======
 import React from 'react'
 import { Alert } from 'react-bootstrap'
 
@@ -24,4 +22,3 @@ function Message({ variant, children }) {
 }
 
 export default Message
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

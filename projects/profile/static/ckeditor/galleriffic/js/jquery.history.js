@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * jQuery history plugin
  * 
@@ -192,7 +191,6 @@
 
     $.extend(self, implementations[self.type]);
     $.history = self;
-=======
 /*
  * jQuery history plugin
  * 
@@ -386,5 +384,4 @@
 
     $.extend(self, implementations[self.type]);
     $.history = self;
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 })(jQuery);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
@@ -40,7 +39,6 @@ const MovieForm = () => {
 };
 
 export default MovieForm;
-=======
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
@@ -82,4 +80,3 @@ const MovieForm = () => {
 };
 
 export default MovieForm;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

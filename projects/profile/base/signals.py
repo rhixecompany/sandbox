@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.db.models.signals import post_save, pre_save
 from django.contrib.auth.models import User
 from .models import *
@@ -30,7 +29,6 @@ def update_username(sender, instance, **kwargs):
 	instance.username = instance.email
 	print("Username updated!", instance.username)
 
-=======
 from django.db.models.signals import post_save, pre_save
 from django.contrib.auth.models import User
 from .models import *
@@ -62,5 +60,4 @@ def update_username(sender, instance, **kwargs):
 	instance.username = instance.email
 	print("Username updated!", instance.username)
 
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 pre_save.connect(update_username, sender=User)

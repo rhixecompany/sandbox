@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global opener */
 'use strict';
 {
@@ -15,7 +14,6 @@
         break;
     }
 }
-=======
 /*global opener */
 'use strict';
 {
@@ -32,4 +30,3 @@
         break;
     }
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

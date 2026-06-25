@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -15,7 +14,6 @@ function FormContainer({ children }) {
 }
 
 export default FormContainer
-=======
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -32,4 +30,3 @@ function FormContainer({ children }) {
 }
 
 export default FormContainer
->>>>>>> d330f24 (chore: initial local project setup for ecom)

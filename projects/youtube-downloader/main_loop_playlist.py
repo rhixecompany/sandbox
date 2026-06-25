@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from __future__ import unicode_literals
 
 import logging
@@ -47,7 +46,6 @@ if __name__ == "__main__":
         main(url)
     logger.info(f"Done Downloading {urls}")
     # yt-dlp -Uv -N 5 --progress -f bestvideo+bestaudio/best --download-archive archives/archive-97ac0bc8.txt --write-subs --convert-subs srt --merge-output-format=mkv -i --add-metadata --write-annotations --write-info-json --write-thumbnail --write-description -o %(uploader)s-97ac0bc8/%(upload_date)s__%(id)s.%(ext)s --yes-playlist https://www.youtube.com/c/NBNNNewsLaz/videos
-=======
 from __future__ import unicode_literals
 
 import logging
@@ -96,4 +94,3 @@ if __name__ == "__main__":
         main(url)
     logger.info(f"Done Downloading {urls}")
     # yt-dlp -Uv -N 5 --progress -f bestvideo+bestaudio/best --download-archive archives/archive-97ac0bc8.txt --write-subs --convert-subs srt --merge-output-format=mkv -i --add-metadata --write-annotations --write-info-json --write-thumbnail --write-description -o %(uploader)s-97ac0bc8/%(upload_date)s__%(id)s.%(ext)s --yes-playlist https://www.youtube.com/c/NBNNNewsLaz/videos
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

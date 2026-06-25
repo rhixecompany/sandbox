@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 quiz = {
     "question1": {
         "question": "What is the capital of France?",
@@ -48,7 +47,6 @@ for key, value in quiz.items():
 
 print("You got " + str(score) + " out of 7 questions correctly")
 print("Your percentage is " + str(int(score/7 * 100)) + "%")
-=======
 quiz = {
     "question1": {
         "question": "What is the capital of France?",
@@ -98,4 +96,3 @@ for key, value in quiz.items():
 
 print("You got " + str(score) + " out of 7 questions correctly")
 print("Your percentage is " + str(int(score/7 * 100)) + "%")
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

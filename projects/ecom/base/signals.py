@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.db.models.signals import pre_save
 from django.contrib.auth.models import User
 
@@ -10,7 +9,6 @@ def updateUser(sender, instance, **kwargs):
 
 
 pre_save.connect(updateUser, sender=User)
-=======
 from django.db.models.signals import pre_save
 from django.contrib.auth.models import User
 
@@ -22,4 +20,3 @@ def updateUser(sender, instance, **kwargs):
 
 
 pre_save.connect(updateUser, sender=User)
->>>>>>> d330f24 (chore: initial local project setup for ecom)

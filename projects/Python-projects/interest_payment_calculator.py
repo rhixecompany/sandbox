@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def main():
     print(" This is a monthly payment loan calculator ")
     print("")
@@ -14,7 +13,6 @@ def main():
     print(" The monthly payment for this loan is: %.2f " % monthly_payment)
 
 main()
-=======
 def main():
     print(" This is a monthly payment loan calculator ")
     print("")
@@ -30,4 +28,3 @@ def main():
     print(" The monthly payment for this loan is: %.2f " % monthly_payment)
 
 main()
->>>>>>> 0433dab (chore: initial local project setup for Python-projects)

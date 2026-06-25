@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -103,7 +102,6 @@ function UserEditScreen({ match, history }) {
 }
 
 export default UserEditScreen;
-=======
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -208,4 +206,3 @@ function UserEditScreen({ match, history }) {
 }
 
 export default UserEditScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

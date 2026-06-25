@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
@@ -46,7 +45,6 @@ function HomeScreen({ history }) {
 }
 
 export default HomeScreen;
-=======
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
@@ -94,4 +92,3 @@ function HomeScreen({ history }) {
 }
 
 export default HomeScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

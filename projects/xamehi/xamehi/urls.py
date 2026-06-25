@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """xamehi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,7 +19,6 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-=======
 """xamehi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -42,4 +40,3 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -144,7 +143,6 @@ function ProductListScreen({ history, match }) {
 }
 
 export default ProductListScreen;
-=======
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -290,4 +288,3 @@ function ProductListScreen({ history, match }) {
 }
 
 export default ProductListScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

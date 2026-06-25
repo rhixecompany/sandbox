@@ -15,8 +15,6 @@ A Python-based YouTube video downloader with playlist support and continuous loo
 - **Dev Tools**: djlint (HTML template linting), Faker (test data), pre-commit hooks
 - **Docs**: Sphinx documentation (docutils, alabaster theme)
 
-<<<<<<< HEAD
-=======
 ## Hermes and Copilot
 
 - Use the nearest `AGENTS.md` for files under `projects/youtube-downloader/`;
@@ -28,7 +26,6 @@ A Python-based YouTube video downloader with playlist support and continuous loo
 - Keep this file, the local Copilot instructions, and the downloader scripts in
   sync when URL validation, loop mode, or quality options change.
 
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)
 ## Setup Commands
 
 ```bash

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -203,7 +202,6 @@ function ProductEditScreen({ match, history }) {
 }
 
 export default ProductEditScreen;
-=======
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -408,4 +406,3 @@ function ProductEditScreen({ match, history }) {
 }
 
 export default ProductEditScreen;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

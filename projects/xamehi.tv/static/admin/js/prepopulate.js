@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global URLify*/
 'use strict';
 {
@@ -42,7 +41,6 @@
         });
     };
 }
-=======
 /*global URLify*/
 'use strict';
 {
@@ -86,4 +84,3 @@
         });
     };
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

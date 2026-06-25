@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
@@ -109,7 +108,6 @@ def uploadImage(request):
     series.save()
 
     return Response('Image was uploaded')
-=======
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
@@ -220,4 +218,3 @@ def uploadImage(request):
     series.save()
 
     return Response('Image was uploaded')
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

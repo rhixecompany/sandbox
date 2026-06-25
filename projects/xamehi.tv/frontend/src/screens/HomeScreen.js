@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -17,7 +16,6 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -36,4 +34,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

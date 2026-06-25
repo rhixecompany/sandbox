@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 WSGI config for xamehi project.
 
@@ -15,7 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'xamehi.settings')
 
 application = get_wsgi_application()
-=======
 """
 WSGI config for xamehi project.
 
@@ -32,4 +30,3 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'xamehi.settings')
 
 application = get_wsgi_application()
->>>>>>> ef7c89f (chore: initial local project setup for xamehi)

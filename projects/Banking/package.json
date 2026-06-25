@@ -297,9 +297,6 @@
     "msgpackr-extract",
     "msw",
     "sharp",
-<<<<<<< HEAD
     "unrs-resolver"
-=======
->>>>>>> b4e0b047 (chore: initial local project setup for Banking)
   ]
 }

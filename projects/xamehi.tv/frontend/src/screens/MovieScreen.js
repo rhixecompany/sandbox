@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -55,7 +54,6 @@ const MovieScreen = ({ match }) => {
 };
 
 export default MovieScreen;
-=======
 import React, { useEffect } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -112,4 +110,3 @@ const MovieScreen = ({ match }) => {
 };
 
 export default MovieScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

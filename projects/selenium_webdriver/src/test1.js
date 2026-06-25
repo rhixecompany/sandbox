@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { By, Browser, Builder } from "selenium-webdriver";
 import assert from "node:assert";
 
@@ -30,7 +29,6 @@ async function firstTest() {
   }
 }
 firstTest();
-=======
 import { By, Browser, Builder } from "selenium-webdriver";
 import assert from "node:assert";
 
@@ -62,4 +60,3 @@ async function firstTest() {
   }
 }
 firstTest();
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

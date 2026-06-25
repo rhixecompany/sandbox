@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global SelectBox, interpolate*/
 // Handles related-objects functionality: lookup link for raw_id_fields
 // and Add Another links.
@@ -154,7 +153,6 @@
         });
     });
 }
-=======
 /*global SelectBox, interpolate*/
 // Handles related-objects functionality: lookup link for raw_id_fields
 // and Add Another links.
@@ -310,4 +308,3 @@
         });
     });
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

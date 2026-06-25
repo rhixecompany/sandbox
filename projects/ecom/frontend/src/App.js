@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Container } from "react-bootstrap";
 import { HashRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -51,7 +50,6 @@ function App() {
 }
 
 export default App;
-=======
 import { Container } from "react-bootstrap";
 import { HashRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -104,4 +102,3 @@ function App() {
 }
 
 export default App;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

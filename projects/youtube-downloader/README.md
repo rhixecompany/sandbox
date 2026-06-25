@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # YouTube Downloader
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
@@ -170,7 +169,6 @@ This project is licensed under the MIT License - see [LICENSE](./LICENSE) file f
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
-=======
 # YouTube Downloader
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
@@ -342,4 +340,3 @@ This project is licensed under the MIT License - see [LICENSE](./LICENSE) file f
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.urls import path
 from video.views import series_views as views
 
@@ -11,7 +10,6 @@ urlpatterns = [
     path('update/<str:pk>/', views.updateSeries, name="series-update"),
     path('delete/<str:pk>/', views.deleteSeries, name="series-delete"),
 ]
-=======
 from django.urls import path
 from video.views import series_views as views
 
@@ -24,4 +22,3 @@ urlpatterns = [
     path('update/<str:pk>/', views.updateSeries, name="series-update"),
     path('delete/<str:pk>/', views.deleteSeries, name="series-delete"),
 ]
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

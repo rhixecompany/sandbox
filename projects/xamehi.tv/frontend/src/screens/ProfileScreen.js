@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -117,7 +116,6 @@ function ProfileScreen({ history }) {
 }
 
 export default ProfileScreen;
-=======
 import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -236,4 +234,3 @@ function ProfileScreen({ history }) {
 }
 
 export default ProfileScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

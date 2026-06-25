@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const products = [
   {
     '_id': '1',
@@ -82,7 +81,6 @@ const products = [
 
 
 export default products
-=======
 const products = [
   {
     '_id': '1',
@@ -166,4 +164,3 @@ const products = [
 
 
 export default products
->>>>>>> d330f24 (chore: initial local project setup for ecom)

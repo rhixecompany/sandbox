@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* SELECTOR (FILTER INTERFACE) */
 
 .selector {
@@ -563,7 +562,6 @@ select + .related-widget-wrapper-link,
 .related-widget-wrapper-link + .related-widget-wrapper-link {
     margin-left: 7px;
 }
-=======
 /* SELECTOR (FILTER INTERFACE) */
 
 .selector {
@@ -1128,4 +1126,3 @@ select + .related-widget-wrapper-link,
 .related-widget-wrapper-link + .related-widget-wrapper-link {
     margin-left: 7px;
 }
->>>>>>> 4ae124d (chore: initial local project setup for profile)

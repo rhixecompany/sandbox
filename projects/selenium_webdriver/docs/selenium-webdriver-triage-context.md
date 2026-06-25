@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # selenium_webdriver Triage Context
 
 **Date:** 2026-05-20
@@ -35,7 +34,6 @@ this audit the repo had no documentation whatsoever — only raw source and a
 - Add `.github/workflows/` CI workflow (lint + test)
 - Consider consolidating `scrape.js` and `scrape2.js` — likely duplicates
 - Add `node_modules/` to `.gitignore` if not already present
-=======
 # selenium_webdriver Triage Context
 
 **Date:** 2026-05-20
@@ -72,4 +70,3 @@ this audit the repo had no documentation whatsoever — only raw source and a
 - Add `.github/workflows/` CI workflow (lint + test)
 - Consider consolidating `scrape.js` and `scrape2.js` — likely duplicates
 - Add `node_modules/` to `.gitignore` if not already present
->>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

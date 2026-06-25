@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -130,7 +129,6 @@ const SeriesListScreen = ({ history, match }) => {
 };
 
 export default SeriesListScreen;
-=======
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
@@ -262,4 +260,3 @@ const SeriesListScreen = ({ history, match }) => {
 };
 
 export default SeriesListScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

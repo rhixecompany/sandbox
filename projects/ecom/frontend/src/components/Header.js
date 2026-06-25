@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
@@ -76,7 +75,6 @@ function Header() {
 }
 
 export default Header;
-=======
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
@@ -154,4 +152,3 @@ function Header() {
 }
 
 export default Header;
->>>>>>> d330f24 (chore: initial local project setup for ecom)

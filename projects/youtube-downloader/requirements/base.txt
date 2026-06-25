@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 -i https://pypi.org/simple
 alabaster
 anyio
@@ -48,7 +47,6 @@ uvicorn
 virtualenv
 watchfiles
 websockets
-=======
 -i https://pypi.org/simple
 alabaster
 anyio
@@ -98,4 +96,3 @@ uvicorn
 virtualenv
 watchfiles
 websockets
->>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

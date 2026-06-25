@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CKEditor 4
 ==========
 
@@ -38,7 +37,6 @@ To test your installation, just call the following page at your website:
 For example:
 
 	http://www.example.com/ckeditor/samples/index.html
-=======
 CKEditor 4
 ==========
 
@@ -78,4 +76,3 @@ To test your installation, just call the following page at your website:
 For example:
 
 	http://www.example.com/ckeditor/samples/index.html
->>>>>>> 4ae124d (chore: initial local project setup for profile)

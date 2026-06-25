@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -33,7 +32,6 @@ class ProfileForm(ModelForm):
 	class Meta:
 		model = Profile
 		fields = '__all__'
-=======
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -68,5 +66,4 @@ class ProfileForm(ModelForm):
 	class Meta:
 		model = Profile
 		fields = '__all__'
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 		exclude = ['user']

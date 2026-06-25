@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -20,7 +19,6 @@ controlStyle:"width:3em",label:a.lang.table.cellSpace,"default":a.filter.check("
 1:0,validate:CKEDITOR.dialog.validate.number(a.lang.table.invalidCellPadding),setup:function(a){this.setValue(a.getAttribute("cellPadding")||"")},commit:function(a,e){this.getValue()?e.setAttribute("cellPadding",this.getValue()):e.removeAttribute("cellPadding")}}]}]},{type:"html",align:"right",html:""},{type:"vbox",padding:0,children:[{type:"text",id:"txtCaption",requiredContent:"caption",label:a.lang.table.caption,setup:function(a){this.enable();a=a.getElementsByTag("caption");if(0<a.count()){a=
 a.getItem(0);var e=a.getFirst(CKEDITOR.dom.walker.nodeType(CKEDITOR.NODE_ELEMENT));e&&!e.equals(a.getBogus())?(this.disable(),this.setValue(a.getText())):(a=CKEDITOR.tools.trim(a.getText()),this.setValue(a))}},commit:function(d,e){if(this.isEnabled()){var b=this.getValue(),c=e.getElementsByTag("caption");if(b)0<c.count()?(c=c.getItem(0),c.setHtml("")):(c=new CKEDITOR.dom.element("caption",a.document),e.append(c,!0)),c.append(new CKEDITOR.dom.text(b,a.document));else if(0<c.count())for(b=c.count()-
 1;0<=b;b--)c.getItem(b).remove()}}},{type:"text",id:"txtSummary",bidi:!0,requiredContent:"table[summary]",label:a.lang.table.summary,setup:function(a){this.setValue(a.getAttribute("summary")||"")},commit:function(a,e){this.getValue()?e.setAttribute("summary",this.getValue()):e.removeAttribute("summary")}}]}]},q&&q.createAdvancedTab(a,null,"table")]}}var v=CKEDITOR.tools.cssLength,n=function(a){var f=this.id;a.info||(a.info={});a.info[f]=this.getValue()};CKEDITOR.dialog.add("table",function(a){return r(a,
-=======
 ﻿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
@@ -42,5 +40,4 @@ controlStyle:"width:3em",label:a.lang.table.cellSpace,"default":a.filter.check("
 1:0,validate:CKEDITOR.dialog.validate.number(a.lang.table.invalidCellPadding),setup:function(a){this.setValue(a.getAttribute("cellPadding")||"")},commit:function(a,e){this.getValue()?e.setAttribute("cellPadding",this.getValue()):e.removeAttribute("cellPadding")}}]}]},{type:"html",align:"right",html:""},{type:"vbox",padding:0,children:[{type:"text",id:"txtCaption",requiredContent:"caption",label:a.lang.table.caption,setup:function(a){this.enable();a=a.getElementsByTag("caption");if(0<a.count()){a=
 a.getItem(0);var e=a.getFirst(CKEDITOR.dom.walker.nodeType(CKEDITOR.NODE_ELEMENT));e&&!e.equals(a.getBogus())?(this.disable(),this.setValue(a.getText())):(a=CKEDITOR.tools.trim(a.getText()),this.setValue(a))}},commit:function(d,e){if(this.isEnabled()){var b=this.getValue(),c=e.getElementsByTag("caption");if(b)0<c.count()?(c=c.getItem(0),c.setHtml("")):(c=new CKEDITOR.dom.element("caption",a.document),e.append(c,!0)),c.append(new CKEDITOR.dom.text(b,a.document));else if(0<c.count())for(b=c.count()-
 1;0<=b;b--)c.getItem(b).remove()}}},{type:"text",id:"txtSummary",bidi:!0,requiredContent:"table[summary]",label:a.lang.table.summary,setup:function(a){this.setValue(a.getAttribute("summary")||"")},commit:function(a,e){this.getValue()?e.setAttribute("summary",this.getValue()):e.removeAttribute("summary")}}]}]},q&&q.createAdvancedTab(a,null,"table")]}}var v=CKEDITOR.tools.cssLength,n=function(a){var f=this.id;a.info||(a.info={});a.info[f]=this.getValue()};CKEDITOR.dialog.add("table",function(a){return r(a,
->>>>>>> 4ae124d (chore: initial local project setup for profile)
 "table")});CKEDITOR.dialog.add("tableProperties",function(a){return r(a,"tableProperties")})})();

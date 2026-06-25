@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*global gettext, pgettext, get_format, quickElement, removeChildren*/
 /*
 calendar.js - Calendar functions by Adrian Holovaty
@@ -220,7 +219,6 @@ depends on core.js for utility functions like removeChildren or quickElement
     window.Calendar = Calendar;
     window.CalendarNamespace = CalendarNamespace;
 }
-=======
 /*global gettext, pgettext, get_format, quickElement, removeChildren*/
 /*
 calendar.js - Calendar functions by Adrian Holovaty
@@ -442,4 +440,3 @@ depends on core.js for utility functions like removeChildren or quickElement
     window.Calendar = Calendar;
     window.CalendarNamespace = CalendarNamespace;
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

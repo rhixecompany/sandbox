@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -50,7 +49,6 @@ const SerieScreen = ({ match }) => {
 };
 
 export default SerieScreen;
-=======
 import React, { useEffect } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -102,4 +100,3 @@ const SerieScreen = ({ match }) => {
 };
 
 export default SerieScreen;
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

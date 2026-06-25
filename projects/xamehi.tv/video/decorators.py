@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.http import HttpResponse
 from django.shortcuts import redirect
 
@@ -10,7 +9,6 @@ def admin_only(view_func):
 		else:
 			return HttpResponse('You are not authorized to view this page')
 			
-=======
 from django.http import HttpResponse
 from django.shortcuts import redirect
 
@@ -22,5 +20,4 @@ def admin_only(view_func):
 		else:
 			return HttpResponse('You are not authorized to view this page')
 			
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)
 	return wrapper_function

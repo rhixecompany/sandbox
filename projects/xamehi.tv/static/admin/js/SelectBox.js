@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 {
     const SelectBox = {
@@ -111,7 +110,6 @@
     };
     window.SelectBox = SelectBox;
 }
-=======
 'use strict';
 {
     const SelectBox = {
@@ -224,4 +222,3 @@
     };
     window.SelectBox = SelectBox;
 }
->>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

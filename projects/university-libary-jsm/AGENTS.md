@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AGENTS.md
 
 > **Refreshed by AGENTS workflow 2026-06-01**
@@ -120,7 +119,6 @@ Deploy on Vercel (recommended for Next.js) with Neon PostgreSQL and Upstash Redi
 - **ImageKit not loading**: Verify `IMAGEKIT_PUBLIC_KEY`, `IMAGEKIT_PRIVATE_KEY`, `IMAGEKIT_URL_ENDPOINT`
 - **Upstash Workflow errors**: Check QStash token and Upstash Redis URL
 - **prettier/eslint conflicts**: Config uses eslint-config-prettier to avoid conflicts
-=======
 # University Library JSM - Library Management Context
 
 Next.js 15 library management system with Drizzle, Neon, and Redis.
@@ -162,4 +160,3 @@ npm run lint
 - Neon connection string in `.env.local` — never commit
 - Redis for rate limiting and caching
 - Drizzle migrations managed via `db:push`
->>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
