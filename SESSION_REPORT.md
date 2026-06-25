@@ -2,6 +2,13 @@
 
 Rolling 41-session summary (most recent first).
 
+2026-06-25T04:05:29+01:00 unknown | 20260625_040508_ea0df4 | default | unknown
+2026-06-25T04:05:11+01:00 unknown | 20260625_040450_8be412 | default | unknown
+2026-06-25T04:03:53+01:00 unknown | 20260625_040324_f3fc4f | default | unknown
+2026-06-25T04:03:51+01:00 unknown | 20260625_040319_f3cc3b | default | unknown
+2026-06-25T04:02:15+01:00 unknown | 20260625_040154_6b13aa | default | unknown
+2026-06-25T04:01:42+01:00 unknown | 20260625_040119_7eac9f | default | unknown
+2026-06-25T04:01:36+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
 2026-06-25T04:00:48+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
 2026-06-25T03:59:02+01:00 unknown | 20260625_035833_a11ed6 | default | unknown
 2026-06-25T03:58:54+01:00 unknown | 20260625_035833_a11ed6 | default | unknown
@@ -36,6 +43,3 @@ Rolling 41-session summary (most recent first).
 2026-06-21T16:35:30+01:00 session_end | 20260621_153250_bd9ebe | default | gpt-5.4-mini
 2026-06-21T16:34:43+01:00 prompt | 20260621_153250_bd9ebe | default | gpt-5.4-mini
 2026-06-21T16:34:01+01:00 session_start | 20260621_153250_bd9ebe | default | gpt-5.4-mini
-2026-06-21T16:29:05+01:00 session_end | 20260621_153250_bd9ebe | default | gpt-5.4-mini
-2026-06-21T16:27:27+01:00 prompt | 20260621_153250_bd9ebe | default | gpt-5.4-mini
-2026-06-21T16:26:44+01:00 session_start | 20260621_153250_bd9ebe | default | gpt-5.4-mini
