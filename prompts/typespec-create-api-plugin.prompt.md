@@ -1,13 +1,12 @@
 ---
+toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create TypeSpec API Plugin
 name: typespec-create-api-plugin
 mode: "agent"
-tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot"
-model: "gpt-4.1"
 tags: []
   - typespec
   - m365-copilot

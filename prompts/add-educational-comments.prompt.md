@@ -1,12 +1,11 @@
 ---
+toolsets: ["edit/editFiles", "web/fetch", "todos"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Add Educational Comments
 name: add-educational-comments
-agent: "agent"
 description: "Add educational comments to the file specified, or prompt asking for file to comment if one is not provided."
-tools: ["edit/editFiles", "web/fetch", "todos"]
 ---
 
 ## Goal

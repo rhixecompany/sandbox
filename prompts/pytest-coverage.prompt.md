@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Pytest Coverage
 name: pytest-coverage
-agent: agent
 description: "Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%."
 ---
 

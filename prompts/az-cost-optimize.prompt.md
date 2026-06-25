@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Azure Cost Optimize
 name: az-cost-optimize
-agent: "agent"
 description: "Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations."
 ---
 

@@ -2,6 +2,9 @@
 ┌───────────────────────────┬──────────────────────┬────────┬───────┬─────────┐
 │ Name                      │ Category             │ Source │ Trust │ Status  │
 ├───────────────────────────┼──────────────────────┼────────┼───────┼─────────┤
+│ huggingface-accelerate    │                      │ local  │ local │ enabled │
+│ inference-sh-cli          │                      │ local  │ local │ enabled │
+│ mcp-coding-agent-setup    │                      │ local  │ local │ enabled │
 │ architecture-blueprint-g… │ architecture         │ local  │ local │ enabled │
 │ folder-structure-bluepri… │ architecture         │ local  │ local │ enabled │
 │ technology-stack-bluepri… │ architecture         │ local  │ local │ enabled │
@@ -13,7 +16,6 @@
 │ enhance-markdown          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ hermes-breakdown          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ hermes-skill-library-mai… │ autonomous-ai-agents │ local  │ local │ enabled │
-│ multi-agent-sync          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ qwen-code                 │ autonomous-ai-agents │ local  │ local │ enabled │
 │ template                  │ autonomous-ai-agents │ local  │ local │ enabled │
 │ using-superpowers         │ autonomous-ai-agents │ local  │ local │ enabled │
@@ -92,8 +94,9 @@
 │ hermes-setup              │ devops               │ local  │ local │ enabled │
 │ hermes-skills             │ devops               │ local  │ local │ enabled │
 │ hermes-system-maintenance │ devops               │ local  │ local │ enabled │
-│ inference-sh-cli          │ devops               │ local  │ local │ enabled │
 │ jira                      │ devops               │ local  │ local │ enabled │
+│ kanban-orchestrator       │ devops               │ local  │ local │ enabled │
+│ kanban-worker             │ devops               │ local  │ local │ enabled │
 │ lambda-labs-gpu-cloud     │ devops               │ local  │ local │ enabled │
 │ log-analysis-and-triage   │ devops               │ local  │ local │ enabled │
 │ modal-serverless-gpu      │ devops               │ local  │ local │ enabled │
@@ -131,7 +134,6 @@
 │ spotify                   │ media                │ local  │ local │ enabled │
 │ transloadit-media-proces… │ media                │ local  │ local │ enabled │
 │ distributed-llm-pretrain… │ mlops                │ local  │ local │ enabled │
-│ huggingface-accelerate    │ mlops                │ local  │ local │ enabled │
 │ obliteratus               │ mlops                │ local  │ local │ enabled │
 │ optimizing-attention-fla… │ mlops                │ local  │ local │ enabled │
 │ peft-fine-tuning          │ mlops                │ local  │ local │ enabled │
@@ -203,5 +205,5 @@
 │ worktrunk                 │ software-development │ local  │ local │ enabled │
 │ writing-plans             │ software-development │ local  │ local │ enabled │
 └───────────────────────────┴──────────────────────┴────────┴───────┴─────────┘
-0 hub-installed, 0 builtin, 200 local — 200 enabled, 0 disabled
+0 hub-installed, 0 builtin, 202 local — 202 enabled, 0 disabled
 

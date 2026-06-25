@@ -5,7 +5,6 @@ version: 1.0.0
 title: Comment Code Generate A Tutorial
 name: comment-code-generate-a-tutorial
 description: "Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial."
-agent: "agent"
 ---
 
 ## Goal

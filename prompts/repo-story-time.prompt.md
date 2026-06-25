@@ -1,25 +1,23 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - githubRepo
+  - runCommands
+  - runTasks
+  - search
+  - search/searchResults
+  - runCommands/terminalLastCommand
+  - runCommands/terminalSelection
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Repository Analysis: [Repo Name]
 name: repo-story-time
-agent: "agent"
 description: "Generate a comprehensive repository summary and narrative story from commit history"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "githubRepo",
-    "runCommands",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection"
-  ]
 ---
+
 
 ## Goal
 

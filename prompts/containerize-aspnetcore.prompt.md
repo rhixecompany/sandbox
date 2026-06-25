@@ -1,11 +1,10 @@
 ---
+toolsets: ["search/codebase", "edit/editFiles", "terminalCommand"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: ASP.NET Core Docker Containerization Prompt
 name: containerize-aspnetcore
-agent: "agent"
-tools: ["search/codebase", "edit/editFiles", "terminalCommand"]
 description: "Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile files customized for the project."
 ---
 

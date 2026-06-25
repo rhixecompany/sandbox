@@ -1,20 +1,18 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - problems
+  - runCommands
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Entity Framework Core Best Practices
 name: ef-core
-agent: "agent"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "problems",
-    "runCommands"
-  ]
 description: "Get best practices for Entity Framework Core"
 ---
+
 
 ## Goal
 

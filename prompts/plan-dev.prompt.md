@@ -1,26 +1,23 @@
 ---
+toolsets:
+  - vscode
+  - execute
+  - read
+  - agent
+  - edit
+  - search
+  - file_management
+  - terminal
+  - runSubagent
+  - manage_todo_list
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: ComicWise Development Master Plan (v6.0)
 name: plan-dev
-agent: "Next.js Expert"
 description: "Comprehensive ComicWise development plan with database architecture, feature implementation, quality gates, and systematic task execution"
-model: "Claude Haiku 4.5"
-tools:
-  [
-    "vscode",
-    "execute",
-    "read",
-    "agent",
-    "edit",
-    "search",
-    "file_management",
-    "terminal",
-    "runSubagent",
-    "manage_todo_list"
-  ]
 ---
+
 
 # ComicWise Development Master Plan (v6.0)
 

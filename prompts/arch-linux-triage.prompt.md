@@ -1,13 +1,11 @@
 ---
+toolsets: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Arch Linux Triage
 name: arch-linux-triage
-agent: "agent"
 description: "Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices."
-model: "gpt-4.1"
-tools: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
 ---
 
 # Arch Linux Triage

@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Create Spring Boot Java project prompt
 name: create-spring-boot-java-project
-agent: "agent"
 description: "Create Spring Boot Java Project Skeleton"
 ---
 

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
 */
+=======
+﻿/*
+ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+>>>>>>> 4ae124d (chore: initial local project setup for profile)
 CKEDITOR.plugins.setLang("uicolor","ca",{title:"UI Color Picker",preview:"Vista prèvia",config:"Enganxa aquest text dins el fitxer config.js",predefined:"Conjunts de colors predefinits"});

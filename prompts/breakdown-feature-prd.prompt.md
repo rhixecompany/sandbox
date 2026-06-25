@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Feature PRD Prompt
 name: breakdown-feature-prd
-agent: "agent"
 description: "Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic."
 ---
 

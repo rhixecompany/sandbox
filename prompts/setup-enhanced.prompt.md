@@ -5,8 +5,6 @@ version: 1.0.0
 title: ComicWise — AI Agent Setup & Implementation Guide
 name: setup-enhanced
 description: "Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices"
-agent: "Next.js Expert"
-model: "Claude Haiku 4.5 (copilot)"
 ---
 
 # ComicWise — AI Agent Setup & Implementation Guide

@@ -1,12 +1,10 @@
 ---
+toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: React Development Guidelines
 name: github-copilot-starter
-agent: "agent"
-model: "Auto (copilot)"
-tools:
   - edit
   - githubRepo
   - changes

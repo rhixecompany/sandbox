@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "semi": true,
   "singleQuote": false,
@@ -9,3 +10,16 @@
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
+=======
+{
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+>>>>>>> 23f95c5 (chore: initial local project setup for selenium_webdriver)

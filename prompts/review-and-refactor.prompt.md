@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Review And Refactor
 name: review-and-refactor
-agent: "agent"
 description: "Review and refactor code in your project according to defined instructions"
 ---
 

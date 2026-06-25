@@ -9,18 +9,16 @@ description: >-
   prompt files to .github/prompts/, then create skills/scripts and update prompts.
   Eliminates duplicates and consolidates documentation.
 version: 1.0.0
-tags: []
-  [
-    hermes,
-    projects,
-    init,
-    docs,
-    prompts,
-    skills,
-    migrate,
-    consolidate,
-    deduplicate,
-  ]
+tags:
+  - hermes
+  - projects
+  - init
+  - docs
+  - prompts
+  - skills
+  - migrate
+  - consolidate
+  - deduplicate
 dependencies:
   - skill:enhance-markdown
   - skill:hermes-skills

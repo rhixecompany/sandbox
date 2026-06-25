@@ -1,22 +1,48 @@
-# Skills Audit — Phase 7 Final Verification
+# Final Verification Report
+
+> Generated: 2026-06-25 | Pipeline: audit-skills-judge-fix
 
 ## Summary
-- **Total skills judged:** 342 (post-dedup)
-- **Before pipeline:** avg 64.6 | 12 PASS, 217 WARN, 111 FAIL
-- **After pipeline:** avg 73.1 | 82 PASS, 246 WARN, 14 FAIL
-- **Improvement:** +8.5 avg, -97 FAIL, +70 PASS
 
-## Actions Completed
-1. ✅ Ran `hermes skills audit` — 102 community skills scanned
-2. ✅ Saved inventory to `docs/local-skills.md` — 342 local skills
-3. ✅ Categorized 65 flat skills (added `metadata.hermes.category` to frontmatter)
-4. ✅ Deleted 9 duplicate skill directories (kept category subdir versions)
-5. ✅ Judged all 342 skills in batches of 10 (35 batches)
-6. ✅ Remediated 199 skills below 80 (bulk patch: frontmatter, Skills Required, Pitfalls, Verification Checklist)
-7. ✅ Fixed 10 YAML frontmatter parse errors (quoted description strings)
-8. ✅ Updated `batch_skill_judge.py` depth filter (2→3) and `batch_remediate.py` path resolution
-9. ✅ Generated final verification report
+| Metric | Phase 1 (Initial) | Current | Delta |
+|--------|-------------------|---------|-------|
+| Total SKILL.md files | 369 | 360 | -9 |
+| Skills mapped | 351 | 351 | 0 |
+| ✅ PASS (≥80) | 84 | 89 | +5 |
+| ⚠️ WARN (60-79) | 247 | 259 | +12 |
+| ❌ FAIL (<60) | 19 | 2 | -17 |
+| Average score | 71.6 | 73.6 | +2.0 |
+| Uncategorized (by path) | 76 | 76 | 0 |
+| Duplicate skill paths | 9 | 0 | -9 |
 
-## Remaining
-- **14 FAIL skills** need content rewrites (examples, code blocks, error handling) — requires per-skill effort
-- **246 WARN skills** need deeper content work to reach 80+ — requires per-skill or batch content generation
+## Phase Completion
+
+| Phase | Status | Output |
+|-------|--------|--------|
+| 1. Audit & Inventory | ✅ | `docs/local-skills.md`, path mapping built |
+| 2. Categorize | ✅ | 41 flat skills received frontmatter category metadata |
+| 3. Deduplicate | ✅ | 9 flat duplicates removed → `docs/dedupe-report.md` |
+| 4. Judge | ✅ | 350 skills scored → `judge_results/all_results.tsv` |
+| 5. Remediate | ✅ | 76 skills patched, 14 FAIL skills fixed → avg +2.0 |
+| 6. Consolidate | ✅ | Report generated → `docs/consolidation-report.md` |
+| 7. Verify | ✅ | This report |
+
+## Remaining Issues
+
+| Issue | Count | Notes |
+|-------|-------|-------|
+| ❌ FAIL skills (bundled) | 2 | `petdex` (54), `computer-use` (55) — builtin, can't edit |
+| ⚠️ WARN skills (60-79) | 259 | All below 80 — need more aggressive remediation |
+| 📁 Uncategorized by path | 76 | Flat skills not in category subdirectories |
+| 📄 Thin skills (<100L) | 9 | Merge candidates: create-web-form, coding-agents, etc. |
+| 🔄 Updateable skills | 67 | From `hermes skills check` |
+
+## Files Changed
+
+| Phase | Files |
+|-------|-------|
+| 2. Categorize | 41 SKILL.md files — added `metadata.hermes.category` |
+| 3. Deduplicate | 9 flat skill directories removed |
+| 5. Remediate | 76 SKILL.md files patched (frontmatter, structure, refs) |
+| 5. Remediate | 4 reference files added (bun-nextjs, bun-shell, ci-cd-best-practices, django-celery) |
+| 5. Remediate | 1 reference file added (mcp-coding-agent-setup) |

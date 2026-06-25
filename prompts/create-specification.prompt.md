@@ -1,31 +1,29 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - extensions
+  - web/fetch
+  - githubRepo
+  - openSimpleBrowser
+  - problems
+  - runTasks
+  - search
+  - search/searchResults
+  - runCommands/terminalLastCommand
+  - runCommands/terminalSelection
+  - testFailure
+  - usages
+  - vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Specification
 name: create-specification
-agent: "agent"
 description: "Create a new specification file for the solution, optimized for Generative AI consumption."
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "extensions",
-    "web/fetch",
-    "githubRepo",
-    "openSimpleBrowser",
-    "problems",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection",
-    "testFailure",
-    "usages",
-    "vscodeAPI"
-  ]
 ---
+
 
 # Create Specification
 

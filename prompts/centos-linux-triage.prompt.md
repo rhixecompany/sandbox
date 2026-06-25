@@ -1,13 +1,11 @@
 ---
+toolsets: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: CentOS Linux Triage
 name: centos-linux-triage
-agent: "agent"
 description: "Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld."
-model: "gpt-4.1"
-tools: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
 ---
 
 # CentOS Linux Triage

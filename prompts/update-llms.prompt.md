@@ -1,31 +1,29 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - extensions
+  - web/fetch
+  - githubRepo
+  - openSimpleBrowser
+  - problems
+  - runTasks
+  - search
+  - search/searchResults
+  - runCommands/terminalLastCommand
+  - runCommands/terminalSelection
+  - testFailure
+  - usages
+  - vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update LLMs.txt File
 name: update-llms
-agent: "agent"
 description: "Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "extensions",
-    "web/fetch",
-    "githubRepo",
-    "openSimpleBrowser",
-    "problems",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection",
-    "testFailure",
-    "usages",
-    "vscodeAPI"
-  ]
 ---
+
 
 ## Goal
 

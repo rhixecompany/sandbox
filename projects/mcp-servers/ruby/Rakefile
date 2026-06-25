@@ -1,0 +1,22 @@
+# frozen_string_literal: true
+
+require 'rake/testtask'
+require 'rubocop/rake_task' if Gem.loaded_specs.key?('rubocop')
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.test_files = FileList['test/**/*_test.rb']
+end
+
+desc 'Run RuboCop style checks'
+task :lint do
+  if Gem.loaded_specs.key?('rubocop')
+    RuboCop::RakeTask.new
+    Rake::Task[:rubocop].invoke
+  else
+    puts 'RuboCop not available — skipping lint'
+  end
+end
+
+task default: :test

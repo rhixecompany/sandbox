@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def main():
     print("This program converts US dollars to Pounds Sterling")
     print()
@@ -11,3 +12,18 @@ def main():
 convert_to_pounds = lambda dollars: dollars * 0.82  # noqa: E731
 
 main()
+=======
+def main():
+    print("This program converts US dollars to Pounds Sterling")
+    print()
+
+    dollars = eval(input("Enter amount in dollars: "))
+
+    pounds = convert_to_pounds(dollars)
+
+    print("That is" , pounds, "pounds. ")
+
+convert_to_pounds = lambda dollars: dollars * 0.82  # noqa: E731
+
+main()
+>>>>>>> 0433dab (chore: initial local project setup for Python-projects)

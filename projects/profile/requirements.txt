@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Django
 django-ckeditor
 django-crispy-forms
@@ -18,3 +19,25 @@ urllib3
 whitenoise
 django-storages[google]
 django-environ
+=======
+Django
+django-ckeditor
+django-crispy-forms
+django-filter
+django-js-asset
+django-storages
+docutils
+gunicorn
+jmespath
+Pillow
+psycopg2-binary
+python-dateutil
+pytz
+s3transfer
+six
+sqlparse
+urllib3
+whitenoise
+django-storages[google]
+django-environ
+>>>>>>> 4ae124d (chore: initial local project setup for profile)

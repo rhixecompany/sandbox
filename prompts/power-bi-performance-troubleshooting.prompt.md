@@ -1,13 +1,11 @@
 ---
+toolsets: ["microsoft.docs.mcp"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power BI Performance Troubleshooting Guide
 name: power-bi-performance-troubleshooting
-agent: "agent"
 description: "Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries."
-model: "gpt-4.1"
-tools: ["microsoft.docs.mcp"]
 ---
 
 # Power BI Performance Troubleshooting Guide

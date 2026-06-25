@@ -1,21 +1,19 @@
 ---
+toolsets:
+  - search/codebase
+  - search
+  - github
+  - create_issue
+  - search_issues
+  - update_issue
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create GitHub Issue from Implementation Plan
 name: create-github-issues-feature-from-implementation-plan
-agent: "agent"
 description: "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates."
-tools:
-  [
-    "search/codebase",
-    "search",
-    "github",
-    "create_issue",
-    "search_issues",
-    "update_issue"
-  ]
 ---
+
 
 ## Goal
 

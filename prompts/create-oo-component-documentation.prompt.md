@@ -1,31 +1,29 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - extensions
+  - web/fetch
+  - githubRepo
+  - openSimpleBrowser
+  - problems
+  - runTasks
+  - search
+  - search/searchResults
+  - runCommands/terminalLastCommand
+  - runCommands/terminalSelection
+  - testFailure
+  - usages
+  - vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Generate Standard OO Component Documentation
 name: create-oo-component-documentation
-agent: "agent"
 description: "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards."
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "extensions",
-    "web/fetch",
-    "githubRepo",
-    "openSimpleBrowser",
-    "problems",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection",
-    "testFailure",
-    "usages",
-    "vscodeAPI"
-  ]
 ---
+
 
 ## Goal
 

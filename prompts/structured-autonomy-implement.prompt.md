@@ -8,8 +8,6 @@ description: "Structured Autonomy Implementation Prompt"
 trigger: /sa-implement
 tags: []
   - hermes
-model: "GPT-5 mini (copilot)"
-agent: "agent"
 ---
 
 ## Goal

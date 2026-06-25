@@ -1,21 +1,19 @@
 ---
+toolsets:
+  - githubRepo
+  - github
+  - get_issue
+  - get_issue_comments
+  - get_me
+  - list_issues
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: My Issues
 name: my-issues
-agent: "agent"
-tools:
-  [
-    "githubRepo",
-    "github",
-    "get_issue",
-    "get_issue_comments",
-    "get_me",
-    "list_issues"
-  ]
 description: "List my issues in the current repository"
 ---
+
 
 ## Goal
 

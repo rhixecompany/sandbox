@@ -1,27 +1,25 @@
 ---
+toolsets:
+  - edit
+  - search
+  - runCommands
+  - runTasks
+  - think
+  - changes
+  - testFailure
+  - openSimpleBrowser
+  - web/fetch
+  - githubRepo
+  - todos
+  - search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Suggest Awesome GitHub Copilot Prompts
 name: suggest-awesome-github-copilot-prompts
-agent: "agent"
 description: "Find GitHub Copilot prompt files that add coverage the repo lacks and flag local duplicates or outdated copies."
-tools:
-  [
-    "edit",
-    "search",
-    "runCommands",
-    "runTasks",
-    "think",
-    "changes",
-    "testFailure",
-    "openSimpleBrowser",
-    "web/fetch",
-    "githubRepo",
-    "todos",
-    "search"
-  ]
 ---
+
 
 ## Goal
 

@@ -7,16 +7,13 @@ name: prompt-builder
 trigger: /prompt-builder
 description: >-
   Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
-tags: []
-  [hermes, copilot, opencode, writing-skills, scaffolding, template]
-dependencies:
-  - skill:writing-plans
-  - skill:writing-skills
-  - skill:/context-map
-  - skill:/prompt-engineering
-skills:
-  - writing-plans — Structured prompt authoring
-  - writing-skills — Crafting and optimizing prompts and instructions
+tags:
+  - hermes
+  - copilot
+  - opencode
+  - writing-skills
+  - scaffolding
+  - template
 ---
 
 # prompt-builder

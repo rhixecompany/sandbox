@@ -1,18 +1,19 @@
 # Comicwise — Comic Streaming
+
 ## Architecture
+- **Type:** Next.js comic streaming platform
+- **Pattern:** App Router with Prisma ORM, Stripe subscriptions
+- **Reference:** [Workflow Analysis](docs/Project_Architecture/Workflow_Analysis.md), [Exemplars](docs/Project_Architecture/exemplars.md)
 
-- **Blueprint**: [comicwise Architecture](../docs/Project_Architecture/comicwise_architecture.md)
-- **Folders**: [comicwise Folder Structure](../docs/Project_Architecture/comicwise_folders.md)
-- **Tech Stack**: [comicwise Technology Stack](../docs/Project_Architecture/comicwise_techstack.md)
-- **Stack Type**: Next.js
-
-
-Next.js 15 + Prisma + Stripe.
+Next.js 15 + Prisma + Stripe. Digital comic storefront with subscription management, user auth, and image-optimized content delivery.
 
 ## Stack
-- TypeScript strict, App Router
-- PostgreSQL via Prisma
-- NextAuth.js, Vercel deploy
+- **Frontend:** Next.js 15, TypeScript (strict), App Router
+- **Database:** PostgreSQL via Prisma
+- **Auth:** NextAuth.js
+- **Payments:** Stripe (subscriptions)
+- **Deploy:** Vercel
+- **Package Manager:** pnpm (`pnpm-lock.yaml`)
 
 ## Commands
 ```bash
@@ -24,9 +25,14 @@ npx prisma db push
 npx prisma studio
 ```
 
-## Notes
-- `pnpm`, lockfile `pnpm-lock.yaml`, Node 18+
+## Conventions
 - API routes in `src/app/api/`
-- Stripe webhooks for subscriptions
-- Use Next.js Image optimization
+- Use Next.js Image optimization for comic assets
+- Stripe webhooks for subscription lifecycle events
 - `.env.local` — never commit; Stripe keys required
+- Node 18+ required
+
+## Notes
+- Uses `pnpm` as package manager
+- Prisma for schema management and migrations
+- Subscription model via Stripe recurring payments

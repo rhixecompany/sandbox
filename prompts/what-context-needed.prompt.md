@@ -1,11 +1,10 @@
 ---
+toolsets: ["codebase"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: What Context Do You Need?
 name: what-context-needed
-agent: "agent"
-tools: ["codebase"]
 description: "Ask Copilot what files it needs to see before answering a question"
 ---
 

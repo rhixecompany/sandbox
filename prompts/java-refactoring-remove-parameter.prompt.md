@@ -10,7 +10,6 @@ tags: []
   - hermes
   - java
   - refactoring
-agent: "agent"
 ---
 
 # Refactoring Java Methods with Remove Parameter

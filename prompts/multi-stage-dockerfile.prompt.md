@@ -1,11 +1,10 @@
 ---
+toolsets: ["search/codebase"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Multi Stage Dockerfile
 name: multi-stage-dockerfile
-agent: "agent"
-tools: ["search/codebase"]
 description: "Create optimized multi-stage Dockerfiles for any language or framework"
 ---
 

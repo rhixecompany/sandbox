@@ -1,13 +1,12 @@
 ---
+toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create TypeSpec Declarative Agent
 name: typespec-create-agent
 mode: "agent"
-tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot"
-model: "gpt-4.1"
 tags: []
   - typespec
   - m365-copilot

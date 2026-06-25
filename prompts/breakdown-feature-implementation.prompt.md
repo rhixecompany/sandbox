@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Feature Implementation Plan Prompt
 name: breakdown-feature-implementation
-agent: "agent"
 description: "Prompt for creating detailed feature implementation plans, following Epoch monorepo structure."
 ---
 

@@ -1,0 +1,23 @@
+{
+  "name": "typescript-mcp-server",
+  "version": "1.0.0",
+  "description": "A TypeScript MCP server with greeting and calculation tools",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "keywords": ["mcp", "model-context-protocol", "typescript"],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.14.1",
+    "tsx": "^4.19.4"
+  }
+}

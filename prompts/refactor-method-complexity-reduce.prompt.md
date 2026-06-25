@@ -1,4 +1,5 @@
 ---
+toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,9 +11,6 @@ tags: []
   - hermes
   - refactoring
 argument-hint: "methodName=..., complexityThreshold=15"
-agent: "agent"
-model: "Auto (copilot)"
-tools:
   - search/changes
   - search/codebase
   - edit/editFiles

@@ -1,13 +1,12 @@
 ---
+toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Add TypeSpec API Operations
 name: typespec-api-operations
 mode: "agent"
-tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 description: "Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards"
-model: "gpt-4.1"
 tags: []
   - typespec
   - m365-copilot

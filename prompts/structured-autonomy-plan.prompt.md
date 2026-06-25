@@ -8,8 +8,6 @@ description: "Structured Autonomy Planning Prompt"
 trigger: /sa-plan
 tags: []
   - hermes
-model: "Claude Sonnet 4.5 (copilot)"
-agent: "agent"
 ---
 
 ## Goal

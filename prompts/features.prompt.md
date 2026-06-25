@@ -1,50 +1,48 @@
 ---
+toolsets:
+  - vscode
+  - execute
+  - read
+  - agent
+  - edit
+  - search
+  - web
+  - context7/*
+  - modelcontextprotocol-servers-sequentialthinking/*
+  - next-devtools/*
+  - nextjs-docs-mcp/*
+  - sentry/*
+  - shadcn/*
+  - github/*
+  - github/*
+  - io.github.chromedevtools/chrome-devtools-mcp/*
+  - io.github.upstash/context7/*
+  - playwright/*
+  - vscode.mermaid-chat-features/renderMermaidDiagram
+  - github.vscode-pull-request-github/issue_fetch
+  - github.vscode-pull-request-github/suggest-fix
+  - github.vscode-pull-request-github/searchSyntax
+  - github.vscode-pull-request-github/doSearch
+  - github.vscode-pull-request-github/renderIssues
+  - github.vscode-pull-request-github/activePullRequest
+  - github.vscode-pull-request-github/openPullRequest
+  - ms-azuretools.vscode-containers/containerToolsConfig
+  - prisma.prisma/prisma-migrate-status
+  - prisma.prisma/prisma-migrate-dev
+  - prisma.prisma/prisma-migrate-reset
+  - prisma.prisma/prisma-studio
+  - prisma.prisma/prisma-platform-login
+  - prisma.prisma/prisma-postgres-create-database
+  - todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: ComicWise - Feature Implementation Guide
 name: features
-agent: agent
 
 description: Complete feature implementation tasks for profiles, comics, chapters, bookmarks
-tools:
-  [
-    vscode,
-    execute,
-    read,
-    agent,
-    edit,
-    search,
-    web,
-    "context7/*",
-    "modelcontextprotocol-servers-sequentialthinking/*",
-    "next-devtools/*",
-    "nextjs-docs-mcp/*",
-    "sentry/*",
-    "shadcn/*",
-    "github/*",
-    "github/*",
-    "io.github.chromedevtools/chrome-devtools-mcp/*",
-    "io.github.upstash/context7/*",
-    "playwright/*",
-    vscode.mermaid-chat-features/renderMermaidDiagram,
-    github.vscode-pull-request-github/issue_fetch,
-    github.vscode-pull-request-github/suggest-fix,
-    github.vscode-pull-request-github/searchSyntax,
-    github.vscode-pull-request-github/doSearch,
-    github.vscode-pull-request-github/renderIssues,
-    github.vscode-pull-request-github/activePullRequest,
-    github.vscode-pull-request-github/openPullRequest,
-    ms-azuretools.vscode-containers/containerToolsConfig,
-    prisma.prisma/prisma-migrate-status,
-    prisma.prisma/prisma-migrate-dev,
-    prisma.prisma/prisma-migrate-reset,
-    prisma.prisma/prisma-studio,
-    prisma.prisma/prisma-platform-login,
-    prisma.prisma/prisma-postgres-create-database,
-    todo
-  ]
 ---
+
 
 # ComicWise - Feature Implementation Guide
 

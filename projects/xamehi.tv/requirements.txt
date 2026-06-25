@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Django
 django-cors-headers
 django-filter
@@ -11,4 +12,19 @@ whitenoise
 django-allauth
 dj-database-url 
 psycopg2-binary
+=======
+Django
+django-cors-headers
+django-filter
+django-js-asset
+django-storages
+djangorestframework
+djangorestframework-simplejwt
+gunicorn
+virtualenv
+whitenoise
+django-allauth
+dj-database-url 
+psycopg2-binary
+>>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)
 pillow

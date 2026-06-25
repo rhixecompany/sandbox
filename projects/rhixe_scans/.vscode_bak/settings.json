@@ -1,0 +1,71 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "files.associations": {
+    "../templates/*.html": "html",
+    "../templates/**/*.html": "html",
+    "../templates/**/*.{txt,in}": "django-txt",
+    "../requirements/**/*.{txt,in}": "pip-requirements",
+    "*.css": "css",
+    "*.scss": "scss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "django-html": "html",
+    "plaintext": "html",
+    "css": "css",
+    "scss": "scss",
+    "javascript": "jsx",
+    "typescript": "tsx"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  // "terminal.integrated.shell.windows": "C:/'Program Files'/PowerShell/7-preview/pwsh.exe ",
+  // "powershell.developer.featureFlags": ["PSReadLine"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "../myvenv/Scripts/python.exe",
+  "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "linting.enabled": true,
+    "linting.mypyEnabled": true,
+    "linting.mypyPath": "../myvenv/Scripts/mypy.exe"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // "[dotenv]": {
+  //   "editor.formatOnSave": false,
+  //   "editor.defaultFormatter": "foxundermoon.shell-format"
+  // }
+  // "[dotenv]": {
+  //   "editor.defaultFormatter": ""
+  // }
+}

@@ -1,13 +1,11 @@
 ---
+toolsets: ["codebase", "edit/editFiles", "search/codebase"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Generate Application from OpenAPI Spec
 name: openapi-to-application-code
-agent: "agent"
 description: "Generate a complete, production-ready application from an OpenAPI specification"
-model: "GPT-4.1"
-tools: ["codebase", "edit/editFiles", "search/codebase"]
 ---
 
 ## Goal

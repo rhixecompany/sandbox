@@ -1,26 +1,18 @@
 # RhixeCompany Comics — Dual-Stack Platform
+
 ## Architecture
+- **Type:** Dual-stack web platform (Django backend + Next.js frontend)
+- **Pattern:** Two independent stacks sharing a PostgreSQL database, with Celery for async tasks
+- **Reference:** [Workflow Analysis](docs/Project_Architecture/Workflow_Analysis.md), [Exemplars](docs/Project_Architecture/exemplars.md)
 
-- **Blueprint**: [rhixecompany-comics Architecture](../docs/Project_Architecture/rhixecompany_comics_architecture.md)
-- **Folders**: [rhixecompany-comics Folder Structure](../docs/Project_Architecture/rhixecompany_comics_folders.md)
-- **Tech Stack**: [rhixecompany-comics Technology Stack](../docs/Project_Architecture/rhixecompany_comics_techstack.md)
-- **Stack Type**: Dual-stack (Django + Next.js)
-
-
-Django + Next.js 16 + Celery.
+Django 4.x + DRF (backend API) + Next.js 16 App Router (frontend) + Celery + Redis. Scraping and comics management platform with separate frontend and backend services.
 
 ## Stack
-- Backend: Django 4.x + DRF
-- Frontend: Next.js 16 App Router + TypeScript strict
-- Async: Celery + Redis
-- Database: PostgreSQL
-- Deploy: Docker Compose
-
-## Conventions
-- Backend: PEP 8, type hints, Django best practices
-- Frontend: Server Components by default
-- API at `/api/` on both stacks
-- Celery tasks in `tasks.py`
+- **Backend:** Django 4.x + Django REST Framework, Python 3.10+
+- **Frontend:** Next.js 16 App Router, TypeScript (strict)
+- **Async:** Celery + Redis
+- **Database:** PostgreSQL (shared)
+- **Infra:** Docker Compose
 
 ## Commands
 ```bash
@@ -41,7 +33,16 @@ npm run dev
 npm test
 ```
 
+## Conventions
+- Backend: PEP 8, type hints, Django best practices
+- Frontend: Server Components by default; Client Components only when needed
+- API at `/api/` on both stacks
+- Celery tasks in `tasks.py` per Django app
+- Shared env vars across stacks via Docker Compose
+- Redis required for Celery broker and result backend
+
 ## Notes
-- Redis required for Celery
-- Shared env vars across stacks
-- Celery beat for scheduled tasks
+- Scraping functionality consolidated from `projects/Django-Scrapy-Selenium`
+- Celery beat for scheduled scraping tasks
+- `.env` — never commit; shared across both stacks
+- Two separate dev servers: Django (`:8000`), Next.js (`:3000`)

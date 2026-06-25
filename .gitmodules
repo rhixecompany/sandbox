@@ -4,9 +4,6 @@
 [submodule "projects/comicwise"]
 	path = projects/comicwise
 	url = https://github.com/Rhixe-company/comicwise.git
-[submodule "projects/comicwise_push_clean"]
-	path = projects/comicwise_push_clean
-	url = https://github.com/Rhixe-company/comicwise.git
 [submodule "projects/cookiecutter-django-tailwind"]
 	path = projects/cookiecutter-django-tailwind
 	url = https://github.com/Rhixe-company/cookiecutter-django-tailwind.git

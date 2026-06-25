@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "docs",
   "version": "1.0.0",
@@ -14,3 +15,21 @@
     "docx": "^9.6.1"
   }
 }
+=======
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "A full-featured e-commerce website built with Django (backend) and React (frontend).",
+  "main": "create-docx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "docx": "^9.6.1"
+  }
+}
+>>>>>>> d330f24 (chore: initial local project setup for ecom)

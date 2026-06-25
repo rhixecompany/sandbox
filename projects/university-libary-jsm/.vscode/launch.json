@@ -1,29 +1,36 @@
+<<<<<<< HEAD
 {
     "version": "0.2.0",
     "configurations": [
         {
             "command": "npm run dev",
-            "name": "Next.js: Dev Server",
+            "name": "Run npm dev",
             "request": "launch",
             "type": "node-terminal"
         },
         {
             "command": "npm run build",
-            "name": "Next.js: Build",
+            "name": "Run npm build",
             "request": "launch",
             "type": "node-terminal"
         },
-        {
-            "command": "npm run lint",
-            "name": "Next.js: Lint",
-            "request": "launch",
-            "type": "node-terminal"
-        },
-        {
-            "command": "npx tsc --noEmit",
-            "name": "TypeScript: Type Check",
-            "request": "launch",
-            "type": "node-terminal"
-        }
     ]
+=======
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm run dev",
+            "name": "Run npm dev",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run build",
+            "name": "Run npm build",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+    ]
+>>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 }

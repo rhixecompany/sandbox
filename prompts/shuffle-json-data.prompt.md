@@ -1,12 +1,11 @@
 ---
+toolsets: ["edit/editFiles", "runInTerminal", "pylanceRunCodeSnippet"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Shuffle JSON Data
 name: shuffle-json-data
-agent: "agent"
 description: "Shuffle repetitive JSON objects safely by validating schema consistency before randomising entries."
-tools: ["edit/editFiles", "runInTerminal", "pylanceRunCodeSnippet"]
 ---
 
 ## Goal

@@ -1,36 +1,33 @@
 ---
+toolsets:
+  - vscode
+  - execute
+  - read
+  - agent
+  - edit
+  - search
+  - web
+  - github/*
+  - io.github.upstash/context7/*
+  - io.github.vercel/next-devtools-mcp/*
+  - browser
+  - vscode.mermaid-chat-features/renderMermaidDiagram
+  - github.vscode-pull-request-github/issue_fetch
+  - github.vscode-pull-request-github/labels_fetch
+  - github.vscode-pull-request-github/notification_fetch
+  - github.vscode-pull-request-github/doSearch
+  - github.vscode-pull-request-github/activePullRequest
+  - github.vscode-pull-request-github/pullRequestStatusChecks
+  - github.vscode-pull-request-github/openPullRequest
+  - todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Quality Gate Debugger — Triage & Batch Fix
 name: quality-gate-debugger
-agent: "Debug Mode Instructions"
-model: GPT-4.1 (copilot)
-tools:
-  [
-    vscode,
-    execute,
-    read,
-    agent,
-    edit,
-    search,
-    web,
-    "github/*",
-    "io.github.upstash/context7/*",
-    "io.github.vercel/next-devtools-mcp/*",
-    browser,
-    vscode.mermaid-chat-features/renderMermaidDiagram,
-    github.vscode-pull-request-github/issue_fetch,
-    github.vscode-pull-request-github/labels_fetch,
-    github.vscode-pull-request-github/notification_fetch,
-    github.vscode-pull-request-github/doSearch,
-    github.vscode-pull-request-github/activePullRequest,
-    github.vscode-pull-request-github/pullRequestStatusChecks,
-    github.vscode-pull-request-github/openPullRequest,
-    todo
-  ]
 description: "Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues"
 ---
+
 
 # Quality Gate Debugger — Triage & Batch Fix
 

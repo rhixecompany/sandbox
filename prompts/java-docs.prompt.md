@@ -1,4 +1,5 @@
 ---
+toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,8 +12,6 @@ tags: []
   - java
   - documentation
   - javadoc
-agent: "agent"
-tools: ["changes", "search/codebase", "edit/editFiles", "problems"]
 ---
 
 # Java Documentation (Javadoc) Best Practices

@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Hermes Breakdown Feature Prd
 name: hermes-breakdown-feature-prd
-agent: "agent"
 description: "Hermes-equivalent: create a Feature PRD from a feature idea or parent epic."
 ---
 

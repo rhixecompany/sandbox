@@ -1,0 +1,16 @@
+[project]
+name = "python-mcp-server"
+version = "0.1.0"
+description = "A Python MCP server with greeting and file search tools"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.28.0",
+]
+
+[project.scripts]
+python-mcp-server = "main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

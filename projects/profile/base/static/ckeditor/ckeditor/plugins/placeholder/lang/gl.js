@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 ﻿/*
  Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or http://ckeditor.com/license
 */
+=======
+﻿/*
+ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+>>>>>>> 4ae124d (chore: initial local project setup for profile)
 CKEDITOR.plugins.setLang("placeholder","gl",{title:"Propiedades do marcador de posición",toolbar:"Crear un marcador de posición",name:"Nome do marcador de posición",invalidName:"O marcador de posición non pode estar baleiro e non pode conter ningún dos caracteres seguintes: [, ], <, >",pathName:"marcador de posición"});

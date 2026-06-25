@@ -1,21 +1,19 @@
 ---
+toolsets:
+  - search/codebase
+  - search
+  - github
+  - create_pull_request
+  - update_pull_request
+  - get_pull_request_diff
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create GitHub Pull Request from Specification
 name: create-github-pull-request-from-specification
-agent: "agent"
 description: "Create GitHub Pull Request for feature request from specification file using pull_request_template.md template."
-tools:
-  [
-    "search/codebase",
-    "search",
-    "github",
-    "create_pull_request",
-    "update_pull_request",
-    "get_pull_request_diff"
-  ]
 ---
+
 
 ## Goal
 

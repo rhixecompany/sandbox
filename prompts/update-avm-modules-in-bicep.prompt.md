@@ -1,26 +1,24 @@
 ---
+toolsets:
+  - search/codebase
+  - think
+  - changes
+  - web/fetch
+  - search/searchResults
+  - todos
+  - edit/editFiles
+  - search
+  - runCommands
+  - bicepschema
+  - azure_get_schema_for_Bicep
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update Azure Verified Modules in Bicep Files
 name: update-avm-modules-in-bicep
-agent: "agent"
 description: "Update Azure Verified Modules (AVM) to latest versions in Bicep files."
-tools:
-  [
-    "search/codebase",
-    "think",
-    "changes",
-    "web/fetch",
-    "search/searchResults",
-    "todos",
-    "edit/editFiles",
-    "search",
-    "runCommands",
-    "bicepschema",
-    "azure_get_schema_for_Bicep"
-  ]
 ---
+
 
 ## Goal
 

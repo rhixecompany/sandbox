@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "semi": false,
     "singleQuote": true,
@@ -20,4 +21,28 @@
         "className"
     ],
     "tailwindStylesheet": "./app/global.css"
+=======
+{
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "auto",
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ],
+    "tailwindFunctions": [
+        "tw",
+        "clsx",
+        "cva",
+        "cn"
+    ],
+    "tailwindAttributes": [
+        "className"
+    ],
+    "tailwindStylesheet": "./app/global.css"
+>>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 }

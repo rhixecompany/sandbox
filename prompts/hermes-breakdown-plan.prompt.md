@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Hermes Breakdown Plan
 name: hermes-breakdown-plan
-agent: "agent"
 description: "Hermes-equivalent: generate a GitHub project plan from PRD, technical breakdown, implementation plan, and test strategy artifacts."
 ---
 

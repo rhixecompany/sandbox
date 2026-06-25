@@ -1,13 +1,11 @@
 ---
+toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: GraalVM Native Image Agent
 name: java-add-graalvm-native-image-support
-agent: agent
 description: "GraalVM Native Image expert that adds native image support to Java applications, builds the project, analyzes build errors, applies fixes, and iterates until successful compilation using Oracle best practices."
-model: "Claude Sonnet 4.5"
-tools:
   - read_file
   - replace_string_in_file
   - run_in_terminal

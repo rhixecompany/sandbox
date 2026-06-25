@@ -5,7 +5,6 @@ version: 1.0.0
 title: Create high‑quality AGENTS.md file
 name: create-agentsmd
 description: "Prompt for generating an AGENTS.md file for a repository"
-agent: "agent"
 ---
 
 ## Goal

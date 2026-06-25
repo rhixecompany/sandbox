@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Azure Resource Health & Issue Diagnosis
 name: azure-resource-health-diagnose
-agent: "agent"
 description: "Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems."
 ---
 

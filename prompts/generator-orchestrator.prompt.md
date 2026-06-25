@@ -8,7 +8,6 @@ description: "Dependency-aware orchestrator prompt for root blueprint and MCP ge
 tags:
   - hermes
   - codegen
-agent: "agent"
 ---
 
 ## Description

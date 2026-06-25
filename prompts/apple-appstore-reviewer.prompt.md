@@ -1,4 +1,5 @@
 ---
+toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -8,8 +9,6 @@ description: "Serves as a reviewer of the codebase with instructions on looking 
 trigger: /Apple App Store Reviewer
 tags: []
   - hermes
-agent: "agent"
-tools:
   - vscode
   - execute
   - read

@@ -1,0 +1,21 @@
+{
+    "name": "php-mcp-server/server",
+    "description": "A PHP MCP server providing greeting and file info tools via stdio transport.",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "loganmarchione/mcp-php-sdk": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "McpServer\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php server.php"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

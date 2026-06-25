@@ -1,20 +1,18 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - problems
+  - search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: TUnit Best Practices
 name: csharp-tunit
-agent: "agent"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "problems",
-    "search"
-  ]
 description: "Get best practices for TUnit unit testing, including data-driven tests"
 ---
+
 
 # TUnit Best Practices
 

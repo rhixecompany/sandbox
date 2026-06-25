@@ -1,21 +1,18 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - problems
+  - search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power Apps Code Apps Project Scaffolding
 name: power-apps-code-app-scaffold
 description: "Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration"
-agent: "agent"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "problems",
-    "search"
-  ]
-model: GPT-4.1
 ---
+
 
 # Power Apps Code Apps Project Scaffolding
 

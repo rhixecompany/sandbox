@@ -4,7 +4,6 @@ author: Hermes Agent
 version: 1.0.0
 title: Create Readme
 name: create-readme
-agent: "agent"
 description: "Create a README.md file for the project"
 ---
 

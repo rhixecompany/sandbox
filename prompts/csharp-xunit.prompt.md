@@ -1,20 +1,18 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - problems
+  - search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: XUnit Best Practices
 name: csharp-xunit
-agent: "agent"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "problems",
-    "search"
-  ]
 description: "Get best practices for XUnit unit testing, including data-driven tests"
 ---
+
 
 # XUnit Best Practices
 

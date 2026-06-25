@@ -1,13 +1,11 @@
 ---
+toolsets: ["web/fetch", "search/readFile", "search", "search/textSearch"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: TLDR Prompt
 name: tldr-prompt
-agent: "agent"
 description: "Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries."
-tools: ["web/fetch", "search/readFile", "search", "search/textSearch"]
-model: "claude-sonnet-4"
 ---
 
 ## Goal

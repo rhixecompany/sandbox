@@ -1,8 +1,8 @@
 # Consolidation Report
-**Total skills analyzed:** 352
-**Potential overlaps:** 3487
-**Thin skills (<100 lines, no phases):** 11
-**Skills missing structure:** 52
+**Total skills analyzed:** 360
+**Potential overlaps:** 3567
+**Thin skills (<100 lines, no phases):** 9
+**Skills missing structure:** 46
 
 ## Potential Overlaps (Merge Candidates)
 | Skill A | Skill B | Keyword | Reason |
@@ -10,21 +10,29 @@
 | 1password (187L) | skills (142L) | install | Both relate to 'install'; one may be thin |
 | 1password (187L) | vscode-extension-playbook (130L) | install | Both relate to 'install'; one may be thin |
 | 1password (187L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| 1password (187L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | qwen-code (235L) | skills (142L) | install | Both relate to 'install'; one may be thin |
 | qwen-code (235L) | vscode-extension-playbook (130L) | install | Both relate to 'install'; one may be thin |
 | qwen-code (235L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | comfyui (623L) | skills (142L) | install | Both relate to 'install'; one may be thin |
 | comfyui (623L) | vscode-extension-playbook (130L) | install | Both relate to 'install'; one may be thin |
 | comfyui (623L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | skills (142L) | vscode-extension-playbook (130L) | install | Both relate to 'install'; one may be thin |
 | skills (142L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
 | skills (142L) | hermes-skills (210L) | install | Both relate to 'install'; one may be thin |
 | skills (142L) | pinggy-tunnel (323L) | install | Both relate to 'install'; one may be thin |
+| skills (142L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | vscode-extension-playbook (130L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
 | vscode-extension-playbook (130L) | hermes-skills (210L) | install | Both relate to 'install'; one may be thin |
 | vscode-extension-playbook (130L) | pinggy-tunnel (323L) | install | Both relate to 'install'; one may be thin |
+| vscode-extension-playbook (130L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | asdf (110L) | hermes-skills (210L) | install | Both relate to 'install'; one may be thin |
 | asdf (110L) | pinggy-tunnel (323L) | install | Both relate to 'install'; one may be thin |
+| asdf (110L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| hermes-skills (210L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| pinggy-tunnel (323L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
 | 3-statement-model (465L) | nano-banana-pro-openrouter (98L) | model | Both relate to 'model'; one may be thin |
 | 3-statement-model (465L) | projects-multi-repo-init-normalize (101L) | model | Both relate to 'model'; one may be thin |
 | 3-statement-model (465L) | django-application (102L) | model | Both relate to 'model'; one may be thin |
@@ -49,29 +57,19 @@
 | nano-banana-pro-openrouter (98L) | stable-diffusion-image-generation (197L) | model | Both relate to 'model'; one may be thin |
 | nano-banana-pro-openrouter (98L) | openhands (163L) | model | Both relate to 'model'; one may be thin |
 | nano-banana-pro-openrouter (98L) | stable-diffusion (551L) | model | Both relate to 'model'; one may be thin |
-| nano-banana-pro-openrouter (98L) | whisper (353L) | model | Both relate to 'model'; one may be thin |
-| dcf-model (1302L) | projects-multi-repo-init-normalize (101L) | model | Both relate to 'model'; one may be thin |
-| dcf-model (1302L) | django-application (102L) | model | Both relate to 'model'; one may be thin |
-| dcf-model (1302L) | huggingface-hub (118L) | model | Both relate to 'model'; one may be thin |
-| modal-serverless-gpu (222L) | projects-multi-repo-init-normalize (101L) | model | Both relate to 'model'; one may be thin |
-| modal-serverless-gpu (222L) | django-application (102L) | model | Both relate to 'model'; one may be thin |
-| modal-serverless-gpu (222L) | huggingface-hub (118L) | model | Both relate to 'model'; one may be thin |
-| powerbi-modeling (190L) | projects-multi-repo-init-normalize (101L) | model | Both relate to 'model'; one may be thin |
 
 ## Thin Skills (Potential Merge Targets)
 | Skill | Lines | Refs | Has Phases | Has Checklist |
 |-------|-------|------|------------|----------------|
-| project-architecture-index | 58 | 0 | ❌ | ✅ |
-| api-tutorial-catalog | 62 | 0 | ❌ | ✅ |
 | create-web-form | 67 | 24 | ❌ | ✅ |
 | coding-agents | 73 | 0 | ❌ | ✅ |
 | copilot-usage-metrics | 74 | 0 | ❌ | ✅ |
 | nano-pdf | 80 | 0 | ❌ | ✅ |
 | lsp-setup | 85 | 1 | ❌ | ✅ |
-| mcp-server-catalog | 88 | 0 | ❌ | ✅ |
 | youtube-content | 89 | 2 | ❌ | ✅ |
+| fix-yaml-frontmatter | 97 | 0 | ❌ | ✅ |
 | nano-banana-pro-openrouter | 98 | 1 | ❌ | ✅ |
-| chainlink | 99 | 0 | ❌ | ✅ |
+| chainlink | 99 | 1 | ❌ | ✅ |
 
 ## Recommended Consolidation Actions
 1. **Merge thin skills** into fuller versions with similar purpose

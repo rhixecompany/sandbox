@@ -1,12 +1,11 @@
 ---
+toolsets: ["edit/editFiles"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Finalize Agent Prompt
 name: finalize-agent-prompt
-agent: "agent"
 description: "Finalize prompt file using the role of an AI agent to polish the prompt for the end user."
-tools: ["edit/editFiles"]
 ---
 
 ## Goal

@@ -11,7 +11,6 @@ tags: []
   - mcp
   - codegen
   - rust
-agent: "agent"
 ---
 
 # Rust MCP Server Generator

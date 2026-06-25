@@ -1,12 +1,11 @@
 ---
+toolsets: ["codebase", "terminalCommand", "search", "githubRepo"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: DevOps Rollout Plan Generator
 name: devops-rollout-plan
-agent: "agent"
 description: "Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification signals, rollback procedures, and communication plans for infrastructure and application changes"
-tools: ["codebase", "terminalCommand", "search", "githubRepo"]
 ---
 
 ## Goal

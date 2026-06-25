@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": "7",
   "dialect": "postgresql",
@@ -10,4 +11,18 @@
       "breakpoints": true
     }
   ]
+=======
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1752784306392,
+      "tag": "0000_supreme_vampiro",
+      "breakpoints": true
+    }
+  ]
+>>>>>>> 770ece9 (chore: initial local project setup for university-libary-jsm)
 }

@@ -1,0 +1,47 @@
+# Compiled Java class files
+*.class
+
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Maven wrapper (keep the .mvn directory, but ignore generated jars)
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+*.classpath
+*.project
+.factorypath
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log
+log/
+logs/
+
+# Env files
+.env
+.env.local
+
+# JAR files (except the built ones)
+*.jar
+!target/*.jar

@@ -1,16 +1,14 @@
 ---
+toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: AI Model Recommendation for Copilot Chat Modes and Prompts
 name: model-recommendation
 description: "Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency"
-agent: "agent"
-tools:
   - "search/codebase"
   - "fetch"
   - "context7/*"
-model: Auto (copilot)
 ---
 
 ## Goal

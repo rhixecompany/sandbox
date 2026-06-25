@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -r ./base.txt
 
 mypy
@@ -13,3 +14,20 @@ factory-boy
 black
 #yt-dlp
 yt-dlp[curl-cffi]
+=======
+-r ./base.txt
+
+mypy
+pytest
+pytest-sugar
+sphinx
+sphinx-autobuild
+ruff
+coverage
+djlint
+pre-commit
+factory-boy
+black
+#yt-dlp
+yt-dlp[curl-cffi]
+>>>>>>> 09f48cd (chore: initial local project setup for youtube-downloader)

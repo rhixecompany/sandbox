@@ -5,8 +5,6 @@ version: 1.0.0
 title: ComicWise — AI Agent Setup & Onboarding
 name: setup
 description: "Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code patterns, and conventions"
-agent: "Next.js Expert"
-model: "Claude Haiku 4.5 (copilot)"
 ---
 
 # ComicWise — AI Agent Setup & Onboarding

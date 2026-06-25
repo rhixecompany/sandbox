@@ -8,7 +8,6 @@ description: "Generates a comprehensive and best-practice-oriented .editorconfig
 trigger: /editorconfig
 tags: []
   - hermes
-agent: "agent"
 ---
 
 ## Goal

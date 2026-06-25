@@ -1,20 +1,18 @@
 ---
+toolsets:
+  - changes
+  - search/codebase
+  - edit/editFiles
+  - problems
+  - search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: MSTest Best Practices (MSTest 3.x/4.x)
 name: csharp-mstest
-agent: "agent"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "problems",
-    "search"
-  ]
 description: "Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests"
 ---
+
 
 # MSTest Best Practices (MSTest 3.x/4.x)
 

@@ -8,18 +8,16 @@ trigger: /audit-skills-judge-fix
 description: >-
   Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
   remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
-tags: []
-  [
-    hermes,
-    copilot,
-    opencode,
-    skills,
-    audit,
-    judge,
-    remediation,
-    dedupe,
-    consolidation,
-  ]
+tags:
+  - hermes
+  - copilot
+  - opencode
+  - skills
+  - audit
+  - judge
+  - remediation
+  - dedupe
+  - consolidation
 dependencies:
   - skill:using-superpowers
   - skill:user-communication-preferences

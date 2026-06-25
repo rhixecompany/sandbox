@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import django_filters
 from django_filters import CharFilter
 
@@ -26,3 +27,33 @@ class SeriesFilter(django_filters.FilterSet):
     class Meta:
         model = Series
         fields = ['name', 'tags']
+=======
+import django_filters
+from django_filters import CharFilter
+
+from django import forms
+
+from .models import *
+
+
+class MoviesFilter(django_filters.FilterSet):
+    name = CharFilter(field_name='name', lookup_expr="icontains", label='Name')
+    tags = django_filters.ModelMultipleChoiceFilter(queryset=Tag.objects.all(),
+                                                    widget=forms.CheckboxSelectMultiple
+                                                    )
+
+    class Meta:
+        model = Movies
+        fields = ['name', 'tags']
+
+
+class SeriesFilter(django_filters.FilterSet):
+    name = CharFilter(field_name='name', lookup_expr="icontains", label='Name')
+    tags = django_filters.ModelMultipleChoiceFilter(queryset=Tag.objects.all(),
+                                                    widget=forms.CheckboxSelectMultiple
+                                                    )
+
+    class Meta:
+        model = Series
+        fields = ['name', 'tags']
+>>>>>>> 6031d8f (chore: initial local project setup for xamehi.tv)

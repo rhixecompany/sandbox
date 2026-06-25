@@ -1,0 +1,27 @@
+{
+  "name": "copilot-studio-mcp-server",
+  "version": "1.0.0",
+  "description": "Copilot Studio MCP Server — Power Platform MCP connector with streamable HTTP transport",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "uuid": "^10.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/uuid": "^10.0.0",
+    "@types/node": "^20.14.0",
+    "@types/node-fetch": "^2.6.11",
+    "typescript": "^5.5.0",
+    "ts-node": "^10.9.2"
+  }
+}

@@ -11,7 +11,6 @@ tags: []
   - agents
   - workflow
   - session
-agent: agent
 ---
 
 ## Goal

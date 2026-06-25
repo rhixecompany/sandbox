@@ -8,8 +8,6 @@ description: "Structured Autonomy Implementation Generator Prompt"
 trigger: /sa-generate
 tags: []
   - hermes
-model: "GPT-5.1-Codex (Preview) (copilot)"
-agent: "agent"
 ---
 
 ## Goal

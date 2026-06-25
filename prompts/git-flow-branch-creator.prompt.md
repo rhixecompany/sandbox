@@ -1,12 +1,11 @@
 ---
+toolsets: ["runCommands/runInTerminal", "runCommands/getTerminalOutput"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Git Flow Branch Creator
 name: git-flow-branch-creator
 description: "Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate branches following the nvie Git Flow branching model."
-tools: ["runCommands/runInTerminal", "runCommands/getTerminalOutput"]
-agent: "agent"
 ---
 
 ## Goal
