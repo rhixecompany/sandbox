@@ -1,0 +1,9 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Documentation repository — no build necessary"
+      - run: find . -name '*.md' -exec grep -l 'TODO' {} \; && echo "Has TODOs" || echo "No TODOs"

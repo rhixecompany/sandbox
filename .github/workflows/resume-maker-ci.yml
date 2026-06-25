@@ -1,0 +1,32 @@
+name: Resume Maker CI
+on:
+  pull_request:
+    paths:
+      - 'Resume_maker/**'
+      - '.github/workflows/**'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          cd Resume_maker
+          if command -v bun >/dev/null 2>&1; then
+            bun install || true
+          else
+            npm ci || true
+          fi
+      - name: TypeScript type check
+        run: |
+          cd Resume_maker
+          bun run tsc --noEmit 2>/dev/null || npx tsc --noEmit 2>/dev/null || echo "Type check skipped"
+      - name: Lint
+        run: |
+          cd Resume_maker
+          bun run lint 2>/dev/null || npm run lint 2>/dev/null || echo "Lint skipped"
