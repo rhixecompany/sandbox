@@ -1,67 +1,45 @@
-# SESSION_REPORT.md
+# SESSION_REPORT
 
-> Updated: 2026-06-28T19:57 | Profile: default | Model: deepseek-v4-flash-free (opencode-zen)
+Rolling 41-session summary (most recent first).
 
-## Last Session Summary
-
-| Field | Value |
-|-------|-------|
-| Session ID | `20260628_202804_4fd07d` |
-| Title | Prompt Management Lifecycle Pipeline |
-| When | 2026-06-28 20:28 (160 messages) |
-| Model | deepseek-v4-flash-free |
-| Source | tui |
-
-## Work Completed (Previous Session)
-
-- **`/execute-all-prompts` orchestrator finished** — All 252 prompts inventoried, fixed, deduplicated
-- **250 `.prompt.md`** files scanned, structurally valid
-- **2 legacy `.prompt.txt`** deleted (consolidated)
-- **4 shared templates** in `prompts/templates/_shared/`
-- **DRY applied** — 5 prompts updated to template references
-- **380 skills validated** (7 version-fixed, 11 new)
-- **Phase 4 (Test Providers & Models)** — timed out via subagent, artifacts existed
-
-## Open Items
-
-| Item | Status |
-|------|--------|
-| `docs/test-providers-models-report.md` | Exists |
-| `docs/orchestrator-verification.md` | Exists (all 4 phases complete) |
-
-## Memory Health
-
-| File | Size | Limit | Status |
-|------|------|-------|--------|
-| `~/AppData/Local/hermes/USER.md` | 1150 B | 1375 B | ✅ OK |
-| `~/AppData/Local/hermes/memories/USER.md` | 1321 B | 1375 B | ⚠️ BLOAT (bigger than root) |
-| `~/AppData/Local/hermes/memories/MEMORY.md` | 627 B | 2200 B | ✅ OK |
-| `~/AppData/Local/hermes/SOUL.md` | 5173 B | — | ✅ OK |
-
-## Issues Discovered
-
-| Severity | Item |
-|----------|------|
-| ⚠️ LOW | Compact pointer `memories/USER.md` (1321 B) > root `USER.md` (1150 B) — bloat indicator. Pointer absorbed more content than root after root was trimmed. |
-
-## Session Changelog
-
-No files modified in the current session yet — startup in progress.
-
----
-
-## Rolling Session History (Most Recent First)
-
-| When | Session ID | Profile | Title |
-|------|-----------|---------|-------|
-| 2026-06-28 19:57 | (current) | default | Session Start Capture |
-| 2026-06-28 20:28 | 20260628_202804_4fd07d | default | Prompt Management Lifecycle Pipeline |
-| 2026-06-28 20:25 | 20260628_202522_ee82c4 | default | Prompt Management Lifecycle Pipeline |
-| 2026-06-28 20:20 | 20260628_202054_27e938 | default | USER.md Memory Overage Brainstorming #3 |
-| 2026-06-28 19:57 | 20260628_195704_c5375b | default | Prompt Verification and Fixing #5 |
-| 2026-06-28 20:02 | 20260628_200212_37b564 | default | (math QA) |
-| 2026-06-28 20:00 | 20260628_200014_2d2d87 | default | (math QA) |
-| 2026-06-28 19:59 | 20260628_195846_211493 | default | — |
-| 2026-06-28 18:20 | 20260628_182003_d53c28 | default | — |
-| 2026-06-28 18:16 | 20260628_181516_cf1ce9 | default | — |
-| 2026-06-25 04:06 | 20260625_040555_158c7a | default | — |
+2026-06-28T22:00:54+01:00 unknown | 20260628_215519_4579d9 | default | unknown
+2026-06-28T20:03:04+01:00 unknown | 20260628_200212_37b564 | default | unknown
+2026-06-28T20:02:49+01:00 unknown | 20260628_200212_37b564 | default | unknown
+2026-06-28T20:01:52+01:00 unknown | 20260628_200014_2d2d87 | default | unknown
+2026-06-28T20:00:59+01:00 unknown | 20260628_200014_2d2d87 | default | unknown
+2026-06-28T19:59:55+01:00 unknown | 20260628_195846_211493 | default | unknown
+2026-06-28T19:59:37+01:00 unknown | 20260628_195846_211493 | default | unknown
+2026-06-28T18:20:54+01:00 unknown | 20260628_182003_d53c28 | default | unknown
+2026-06-28T18:20:44+01:00 unknown | 20260628_182003_d53c28 | default | unknown
+2026-06-28T18:16:38+01:00 unknown | 20260628_181516_cf1ce9 | default | unknown
+2026-06-28T18:16:15+01:00 unknown | 20260628_181516_cf1ce9 | default | unknown
+2026-06-28T18:16:06+01:00 unknown | 20260628_181424_5e2c5e | default | unknown
+2026-06-28T18:16:02+01:00 unknown | 20260628_181412_ab4ba4 | default | unknown
+2026-06-28T18:15:37+01:00 unknown | 20260628_181424_5e2c5e | default | unknown
+2026-06-28T18:15:36+01:00 unknown | 20260628_181412_ab4ba4 | default | unknown
+2026-06-25T04:06:23+01:00 unknown | 20260625_040555_158c7a | default | unknown
+2026-06-25T04:06:16+01:00 unknown | 20260625_040555_158c7a | default | unknown
+2026-06-25T04:05:39+01:00 unknown | 20260625_040508_ea0df4 | default | unknown
+2026-06-25T04:05:29+01:00 unknown | 20260625_040508_ea0df4 | default | unknown
+2026-06-25T04:05:11+01:00 unknown | 20260625_040450_8be412 | default | unknown
+2026-06-25T04:03:53+01:00 unknown | 20260625_040324_f3fc4f | default | unknown
+2026-06-25T04:03:51+01:00 unknown | 20260625_040319_f3cc3b | default | unknown
+2026-06-25T04:02:15+01:00 unknown | 20260625_040154_6b13aa | default | unknown
+2026-06-25T04:01:42+01:00 unknown | 20260625_040119_7eac9f | default | unknown
+2026-06-25T04:01:36+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
+2026-06-25T04:00:48+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
+2026-06-25T03:59:02+01:00 unknown | 20260625_035833_a11ed6 | default | unknown
+2026-06-25T03:58:54+01:00 unknown | 20260625_035833_a11ed6 | default | unknown
+2026-06-25T03:58:11+01:00 unknown | 20260625_035745_b407bc | default | unknown
+2026-06-25T03:58:03+01:00 unknown | 20260625_035745_b407bc | default | unknown
+2026-06-25T03:57:29+01:00 unknown | 20260625_035709_4a12d8 | default | unknown
+2026-06-25T03:57:00+01:00 unknown | 20260625_035639_40a8c7 | default | unknown
+2026-06-25T03:56:33+01:00 unknown | 20260625_035610_90e155 | default | unknown
+2026-06-25T03:56:25+01:00 unknown | 20260625_035547_5ab4cd | default | unknown
+2026-06-25T03:56:13+01:00 unknown | 20260625_035547_5ab4cd | default | unknown
+2026-06-25T03:56:04+01:00 unknown | 20260625_035532_6bb3dd | default | unknown
+2026-06-25T03:55:52+01:00 unknown | 20260625_035532_6bb3dd | default | unknown
+2026-06-25T03:54:49+01:00 unknown | 20260625_035416_327421 | default | unknown
+2026-06-25T03:54:39+01:00 unknown | 20260625_035416_327421 | default | unknown
+2026-06-22T05:27:39+01:00 unknown | 20260622_045226_0dd914 | default | unknown
+2026-06-22T05:27:37+01:00 unknown | 20260622_045226_0dd914 | default | unknown
