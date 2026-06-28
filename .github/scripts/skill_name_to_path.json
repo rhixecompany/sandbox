@@ -1,0 +1,1406 @@
+{
+  "1password": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\1password\\SKILL.md"
+  },
+  "3-statement-model": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\3-statement-model\\SKILL.md"
+  },
+  "huggingface-accelerate": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\huggingface-accelerate\\SKILL.md"
+  },
+  "agentmail": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\agentmail\\SKILL.md"
+  },
+  "antigravity-cli": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\antigravity-cli\\SKILL.md"
+  },
+  "axolotl": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\axolotl\\SKILL.md"
+  },
+  "baoyu-article-illustrator": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\baoyu-article-illustrator\\SKILL.md"
+  },
+  "baoyu-comic": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\baoyu-comic\\SKILL.md"
+  },
+  "bioinformatics": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bioinformatics\\SKILL.md"
+  },
+  "blackbox": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\blackbox\\SKILL.md"
+  },
+  "blender-mcp": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\blender-mcp\\SKILL.md"
+  },
+  "bun-nextjs": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bun-nextjs\\SKILL.md"
+  },
+  "bun-shell": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bun-shell\\SKILL.md"
+  },
+  "canvas": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\canvas\\SKILL.md"
+  },
+  "Chainlink": {
+    "category": "blockchain",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\blockchain\\chainlink\\SKILL.md"
+  },
+  "chroma": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\chroma\\SKILL.md"
+  },
+  "ci-cd-best-practices": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\ci-cd-best-practices\\SKILL.md"
+  },
+  "ci-cd-pipeline-builder": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\ci-cd-pipeline-builder\\SKILL.md"
+  },
+  "claude-code": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\claude-code\\SKILL.md"
+  },
+  "inference-sh-cli": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\inference-sh-cli\\SKILL.md"
+  },
+  "clip": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\clip\\SKILL.md"
+  },
+  "code-wiki": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\code-wiki\\SKILL.md"
+  },
+  "computer-use": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\computer-use\\SKILL.md"
+  },
+  "concept-diagrams": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\concept-diagrams\\SKILL.md"
+  },
+  "creative-ideation": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\creative-ideation\\SKILL.md"
+  },
+  "darwinian-evolver": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\darwinian-evolver\\SKILL.md"
+  },
+  "dcf-model": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\dcf-model\\SKILL.md"
+  },
+  "django-application": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\django-application\\SKILL.md"
+  },
+  "django-celery": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\django-celery\\SKILL.md"
+  },
+  "domain-intel": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\domain-intel\\SKILL.md"
+  },
+  "drawio-skill": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\drawio-skill\\SKILL.md"
+  },
+  "drug-discovery": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\drug-discovery\\SKILL.md"
+  },
+  "duckduckgo-search": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\duckduckgo-search\\SKILL.md"
+  },
+  "evm": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\evm\\SKILL.md"
+  },
+  "excel-author": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\excel-author\\SKILL.md"
+  },
+  "faiss": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\faiss\\SKILL.md"
+  },
+  "fastmcp": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\fastmcp\\SKILL.md"
+  },
+  "fitness-nutrition": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\fitness-nutrition\\SKILL.md"
+  },
+  "optimizing-attention-flash": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\optimizing-attention-flash\\SKILL.md"
+  },
+  "github-repo-management": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github-repo-management\\SKILL.md"
+  },
+  "gitnexus-explorer": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\gitnexus-explorer\\SKILL.md"
+  },
+  "guidance": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\guidance\\SKILL.md"
+  },
+  "here.now": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\here.now\\SKILL.md"
+  },
+  "hermes-agent": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hermes-agent\\SKILL.md"
+  },
+  "honcho": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\honcho\\SKILL.md"
+  },
+  "huggingface-tokenizers": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\huggingface-tokenizers\\SKILL.md"
+  },
+  "hyperframes": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hyperframes\\SKILL.md"
+  },
+  "hyperliquid": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hyperliquid\\SKILL.md"
+  },
+  "instructor": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\instructor\\SKILL.md"
+  },
+  "kanban-video-orchestrator": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\kanban-video-orchestrator\\SKILL.md"
+  },
+  "lambda-labs-gpu-cloud": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\lambda-labs-gpu-cloud\\SKILL.md"
+  },
+  "llava": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\llava\\SKILL.md"
+  },
+  "mcp-coding-agent-setup": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp-coding-agent-setup\\SKILL.md"
+  },
+  "mcporter": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcporter\\SKILL.md"
+  },
+  "meme-generation": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\meme-generation\\SKILL.md"
+  },
+  "memento-flashcards": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\memento-flashcards\\SKILL.md"
+  },
+  "modal-serverless-gpu": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\modal-serverless-gpu\\SKILL.md"
+  },
+  "nemo-curator": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\nemo-curator\\SKILL.md"
+  },
+  "neuroskill-bci": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\neuroskill-bci\\SKILL.md"
+  },
+  "one-three-one-rule": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\one-three-one-rule\\SKILL.md"
+  },
+  "openclaw-migration": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\openclaw-migration\\SKILL.md"
+  },
+  "openhands": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\openhands\\SKILL.md"
+  },
+  "osint-investigation": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\osint-investigation\\SKILL.md"
+  },
+  "oss-forensics": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\oss-forensics\\SKILL.md"
+  },
+  "outlines": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\outlines\\SKILL.md"
+  },
+  "page-agent": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\page-agent\\SKILL.md"
+  },
+  "peft-fine-tuning": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\peft\\SKILL.md"
+  },
+  "pinecone": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\pinecone\\SKILL.md"
+  },
+  "pinggy-tunnel": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\pinggy-tunnel\\SKILL.md"
+  },
+  "pixel-art": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\pixel-art\\SKILL.md"
+  },
+  "pptx-author": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\pptx-author\\SKILL.md"
+  },
+  "pytorch-fsdp": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\pytorch-fsdp\\SKILL.md"
+  },
+  "pytorch-lightning": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\pytorch-lightning\\SKILL.md"
+  },
+  "qdrant-vector-search": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\qdrant-vector-search\\SKILL.md"
+  },
+  "qmd": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qmd\\SKILL.md"
+  },
+  "searxng-search": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\searxng-search\\SKILL.md"
+  },
+  "sherlock": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\sherlock\\SKILL.md"
+  },
+  "shop-app": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\shop-app\\SKILL.md"
+  },
+  "shopify": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\shopify\\SKILL.md"
+  },
+  "simpo-training": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\simpo\\SKILL.md"
+  },
+  "siyuan": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\siyuan\\SKILL.md"
+  },
+  "solana": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\solana\\SKILL.md"
+  },
+  "stable-diffusion-image-generation": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\stable-diffusion-image-generation\\SKILL.md"
+  },
+  "stocks": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\stocks\\SKILL.md"
+  },
+  "subagent-driven-development": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\subagent-driven-development\\SKILL.md"
+  },
+  "telephony": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\telephony\\SKILL.md"
+  },
+  "tensorrt-llm": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\tensorrt-llm\\SKILL.md"
+  },
+  "distributed-llm-pretraining-torchtitan": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\distributed-llm-pretraining-torchtitan\\SKILL.md"
+  },
+  "unsloth": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\unsloth\\SKILL.md"
+  },
+  "watchers": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\watchers\\SKILL.md"
+  },
+  "web-pentest": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\web-pentest\\SKILL.md"
+  },
+  "whisper": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\whisper\\SKILL.md"
+  },
+  "youtube-full": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\youtube-full\\SKILL.md"
+  },
+  "banking": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\banking\\SKILL.md"
+  },
+  "bash-scripts-audit-remediation": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\bash-scripts-audit-remediation\\SKILL.md"
+  },
+  "caveman-unified": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\caveman-unified\\SKILL.md"
+  },
+  "claude-api": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\claude-api\\SKILL.md"
+  },
+  "clonedeps": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\clonedeps\\SKILL.md"
+  },
+  "code-docs": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\code-docs\\SKILL.md"
+  },
+  "codemap": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\codemap\\SKILL.md"
+  },
+  "context7": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\context7\\SKILL.md"
+  },
+  "debugging-hermes-tui-commands": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\debugging-hermes-tui-commands\\SKILL.md"
+  },
+  "executing-plans": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\executing-plans\\SKILL.md"
+  },
+  "fluentui-blazor": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\fluentui-blazor\\SKILL.md"
+  },
+  "hermes-agent-skill-authoring": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\hermes-agent-skill-authoring\\SKILL.md"
+  },
+  "hermes-s6-container-supervision": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\hermes-s6-container-supervision\\SKILL.md"
+  },
+  "httpie": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\httpie\\SKILL.md"
+  },
+  "mindstudio-wrapper": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\mindstudio-wrapper\\SKILL.md"
+  },
+  "node-inspect-debugger": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\node-inspect-debugger\\SKILL.md"
+  },
+  "nuget-manager": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\nuget-manager\\SKILL.md"
+  },
+  "plan": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\plan\\SKILL.md"
+  },
+  "project-docs": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\project-docs\\SKILL.md"
+  },
+  "python-debugpy": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\python-debugpy\\SKILL.md"
+  },
+  "quasi-coder": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\quasi-coder\\SKILL.md"
+  },
+  "receiving-code-review": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\receiving-code-review\\SKILL.md"
+  },
+  "refactor": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\refactor\\SKILL.md"
+  },
+  "requesting-code-review": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\requesting-code-review\\SKILL.md"
+  },
+  "sandbox": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\sandbox\\SKILL.md"
+  },
+  "script-orchestration": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\script-orchestration\\SKILL.md"
+  },
+  "shadcn": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\shadcn\\SKILL.md"
+  },
+  "spike": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\spike\\SKILL.md"
+  },
+  "systematic-debugging": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\systematic-debugging\\SKILL.md"
+  },
+  "test-driven-development": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\test-driven-development\\SKILL.md"
+  },
+  "winapp-cli": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\winapp-cli\\SKILL.md"
+  },
+  "worktrunk": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\worktrunk\\SKILL.md"
+  },
+  "writing-plans": {
+    "category": "software-development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\software-development\\writing-plans\\SKILL.md"
+  },
+  "xurl": {
+    "category": "social-media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\social-media\\xurl\\SKILL.md"
+  },
+  "openhue": {
+    "category": "smart-home",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\smart-home\\openhue\\SKILL.md"
+  },
+  "arxiv": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\arxiv\\SKILL.md"
+  },
+  "blogwatcher": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\blogwatcher\\SKILL.md"
+  },
+  "llm-wiki": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\llm-wiki\\SKILL.md"
+  },
+  "polymarket": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\polymarket\\SKILL.md"
+  },
+  "repo-research-pipeline": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\repo-research-pipeline\\SKILL.md"
+  },
+  "research-paper-writing": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\research-paper-writing\\SKILL.md"
+  },
+  "scrapling": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\scrapling\\SKILL.md"
+  },
+  "web-research-pipeline": {
+    "category": "research",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\research\\web-research-pipeline\\SKILL.md"
+  },
+  "api-tutorial-catalog": {
+    "category": "reference",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\reference\\api-tutorial-catalog\\SKILL.md"
+  },
+  "mcp-server-catalog": {
+    "category": "reference",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\reference\\mcp-server-catalog\\SKILL.md"
+  },
+  "project-architecture-index": {
+    "category": "reference",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\reference\\project-architecture-index\\SKILL.md"
+  },
+  "godmode": {
+    "category": "red-teaming",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\red-teaming\\godmode\\SKILL.md"
+  },
+  "adversarial-ux-test": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\adversarial-ux-test\\SKILL.md"
+  },
+  "audit-skills-judge-fix": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\audit-skills-judge-fix\\SKILL.md"
+  },
+  "boilerplate-stripper": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\boilerplate-stripper\\SKILL.md"
+  },
+  "dogfood": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\dogfood\\SKILL.md"
+  },
+  "playwright-automation-fill-in-form": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\playwright-automation-fill-in-form\\SKILL.md"
+  },
+  "playwright-generate-e2e-test": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\playwright-generate-e2e-test\\SKILL.md"
+  },
+  "playwright-generate-test": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\playwright-generate-test\\SKILL.md"
+  },
+  "polyglot-test-agent": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\polyglot-test-agent\\SKILL.md"
+  },
+  "postgresql-code-review": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\postgresql-code-review\\SKILL.md"
+  },
+  "scoutqa-test": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\scoutqa-test\\SKILL.md"
+  },
+  "skill-judge": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\skill-judge\\SKILL.md"
+  },
+  "test-skill": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\test-skill\\SKILL.md"
+  },
+  "verification-before-completion": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\verification-before-completion\\SKILL.md"
+  },
+  "web-design-reviewer": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\web-design-reviewer\\SKILL.md"
+  },
+  "webapp-testing": {
+    "category": "qa",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\qa\\webapp-testing\\SKILL.md"
+  },
+  "airtable": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\airtable\\SKILL.md"
+  },
+  "doc-coauthoring": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\doc-coauthoring\\SKILL.md"
+  },
+  "documentation-extraction-and-indexing": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\documentation-extraction-and-indexing\\SKILL.md"
+  },
+  "documentation-writer": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\documentation-writer\\SKILL.md"
+  },
+  "docx": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\docx\\SKILL.md"
+  },
+  "file-organizer": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\file-organizer\\SKILL.md"
+  },
+  "finnish-humanizer": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\finnish-humanizer\\SKILL.md"
+  },
+  "google-workspace": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\google-workspace\\SKILL.md"
+  },
+  "internal-comms": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\internal-comms\\SKILL.md"
+  },
+  "linear": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\linear\\SKILL.md"
+  },
+  "maps": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\maps\\SKILL.md"
+  },
+  "markdown-to-html": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\markdown-to-html\\SKILL.md"
+  },
+  "meeting-insights-analyzer": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\meeting-insights-analyzer\\SKILL.md"
+  },
+  "meeting-minutes": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\meeting-minutes\\SKILL.md"
+  },
+  "nano-pdf": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\nano-pdf\\SKILL.md"
+  },
+  "notion": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\notion\\SKILL.md"
+  },
+  "ocr-and-documents": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\ocr-and-documents\\SKILL.md"
+  },
+  "pdf": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\pdf\\SKILL.md"
+  },
+  "pdftk-server": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\pdftk-server\\SKILL.md"
+  },
+  "petdex": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\petdex\\SKILL.md"
+  },
+  "powerpoint": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\powerpoint\\SKILL.md"
+  },
+  "pptx": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\pptx\\SKILL.md"
+  },
+  "prompt-management": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+  },
+  "task-management": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\task-management\\SKILL.md"
+  },
+  "teams-meeting-pipeline": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\teams-meeting-pipeline\\SKILL.md"
+  },
+  "user-communication-preferences": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\user-communication-preferences\\SKILL.md"
+  },
+  "xlsx": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\xlsx\\SKILL.md"
+  },
+  "yuanbao": {
+    "category": "productivity",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\productivity\\yuanbao\\SKILL.md"
+  },
+  "prd": {
+    "category": "product",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\product\\prd\\SKILL.md"
+  },
+  "brainstorming": {
+    "category": "planning",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\planning\\brainstorming\\SKILL.md"
+  },
+  "plans-and-specs": {
+    "category": "planning",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\planning\\plans-and-specs\\SKILL.md"
+  },
+  "prompt-planning-orchestration": {
+    "category": "planning",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\planning\\prompt-planning-orchestration\\SKILL.md"
+  },
+  "obsidian": {
+    "category": "note-taking",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\note-taking\\obsidian\\SKILL.md"
+  },
+  "huggingface-hub": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\huggingface-hub\\SKILL.md"
+  },
+  "dspy": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\research\\dspy\\SKILL.md"
+  },
+  "audiocraft-audio-generation": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\models\\audiocraft\\SKILL.md"
+  },
+  "segment-anything-model": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\models\\segment-anything\\SKILL.md"
+  },
+  "llama-cpp": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\inference\\llama-cpp\\SKILL.md"
+  },
+  "obliteratus": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\inference\\obliteratus\\SKILL.md"
+  },
+  "serving-llms-vllm": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\inference\\vllm\\SKILL.md"
+  },
+  "evaluating-llms-harness": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\evaluation\\lm-evaluation-harness\\SKILL.md"
+  },
+  "weights-and-biases": {
+    "category": "mlops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mlops\\evaluation\\weights-and-biases\\SKILL.md"
+  },
+  "gif-search": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\gif-search\\SKILL.md"
+  },
+  "heartmula": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\heartmula\\SKILL.md"
+  },
+  "slack-gif-creator": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\slack-gif-creator\\SKILL.md"
+  },
+  "songsee": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\songsee\\SKILL.md"
+  },
+  "spotify": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\spotify\\SKILL.md"
+  },
+  "transloadit-media-processing": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\transloadit-media-processing\\SKILL.md"
+  },
+  "youtube-content": {
+    "category": "media",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\media\\youtube-content\\SKILL.md"
+  },
+  "hermes-mcp": {
+    "category": "mcp",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp\\hermes-mcp\\SKILL.md"
+  },
+  "mcp-builder": {
+    "category": "mcp",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp\\mcp-builder\\SKILL.md"
+  },
+  "mcp-cli": {
+    "category": "mcp",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp\\mcp-cli\\SKILL.md"
+  },
+  "mcp-security-audit": {
+    "category": "mcp",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp\\mcp-security-audit\\SKILL.md"
+  },
+  "native-mcp": {
+    "category": "mcp",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp\\native-mcp\\SKILL.md"
+  },
+  "codebase-inspection": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\codebase-inspection\\SKILL.md"
+  },
+  "finishing-a-development-branch": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\finishing-a-development-branch\\SKILL.md"
+  },
+  "gh-cli": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\gh-cli\\SKILL.md"
+  },
+  "git-commit": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\git-commit\\SKILL.md"
+  },
+  "git-helper": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\git-helper\\SKILL.md"
+  },
+  "git-submodule-workflow": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\git-submodule-workflow\\SKILL.md"
+  },
+  "github": {
+    "category": "",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\github\\SKILL.md"
+  },
+  "github-workflow": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\github-workflow\\SKILL.md"
+  },
+  "sponsor-finder": {
+    "category": "github",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\sponsor-finder\\SKILL.md"
+  },
+  "minecraft-modpack-server": {
+    "category": "gaming",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\gaming\\minecraft-modpack-server\\SKILL.md"
+  },
+  "pokemon-player": {
+    "category": "gaming",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\gaming\\pokemon-player\\SKILL.md"
+  },
+  "himalaya": {
+    "category": "email",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\email\\himalaya\\SKILL.md"
+  },
+  "appinsights-instrumentation": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\appinsights-instrumentation\\SKILL.md"
+  },
+  "asdf": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\asdf\\SKILL.md"
+  },
+  "aspire": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\aspire\\SKILL.md"
+  },
+  "azure-deployment-preflight": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\azure-deployment-preflight\\SKILL.md"
+  },
+  "azure-devops-cli": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\azure-devops-cli\\SKILL.md"
+  },
+  "azure-resource-visualizer": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\azure-resource-visualizer\\SKILL.md"
+  },
+  "azure-role-selector": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\azure-role-selector\\SKILL.md"
+  },
+  "azure-static-web-apps": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\azure-static-web-apps\\SKILL.md"
+  },
+  "customization-audit": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\customization-audit\\SKILL.md"
+  },
+  "datadog": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\datadog\\SKILL.md"
+  },
+  "dependabot": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\dependabot\\SKILL.md"
+  },
+  "docker-management": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\docker-management\\SKILL.md"
+  },
+  "entra-agent-user": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\entra-agent-user\\SKILL.md"
+  },
+  "fabric-lakehouse": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\fabric-lakehouse\\SKILL.md"
+  },
+  "git-history-preserving-migration": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\git-history-preserving-migration\\SKILL.md"
+  },
+  "github-actions-efficiency": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\github-actions-efficiency\\SKILL.md"
+  },
+  "glab": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\glab\\SKILL.md"
+  },
+  "hermes-config-merge": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-config-merge\\SKILL.md"
+  },
+  "hermes-config-troubleshooting": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-config-troubleshooting\\SKILL.md"
+  },
+  "hermes-hooks": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-hooks\\SKILL.md"
+  },
+  "hermes-profiles": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+  },
+  "hermes-setup": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-setup\\SKILL.md"
+  },
+  "hermes-skills": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-skills\\SKILL.md"
+  },
+  "hermes-system-maintenance": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\hermes-system-maintenance\\SKILL.md"
+  },
+  "jira": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\jira\\SKILL.md"
+  },
+  "kanban-orchestrator": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\kanban-orchestrator\\SKILL.md"
+  },
+  "kanban-worker": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\kanban-worker\\SKILL.md"
+  },
+  "log-analysis-and-triage": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\log-analysis-and-triage\\SKILL.md"
+  },
+  "multi-stage-dockerfile": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\multi-stage-dockerfile\\SKILL.md"
+  },
+  "parallel-cli": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\parallel-cli\\SKILL.md"
+  },
+  "powerbi-modeling": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\powerbi-modeling\\SKILL.md"
+  },
+  "profile-maintenance": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+  },
+  "projects-multi-repo-init-normalize": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\projects-multi-repo-init-normalize\\SKILL.md"
+  },
+  "prompt-batch-fixer": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\prompt-batch-fixer\\SKILL.md"
+  },
+  "provider-model-audit": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\provider-model-audit\\SKILL.md"
+  },
+  "provider-reliability-diagnostics": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\provider-reliability-diagnostics\\SKILL.md"
+  },
+  "rbac-audit-logging": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\rbac-audit-logging\\SKILL.md"
+  },
+  "secret-scanning": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\secret-scanning\\SKILL.md"
+  },
+  "service-integrations": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\service-integrations\\SKILL.md"
+  },
+  "session-audit-report": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\session-audit-report\\SKILL.md"
+  },
+  "snowflake-semanticview": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\snowflake-semanticview\\SKILL.md"
+  },
+  "terraform-azurerm-set-diff-analyzer": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\terraform-azurerm-set-diff-analyzer\\SKILL.md"
+  },
+  "validate-memories": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\validate-memories\\SKILL.md"
+  },
+  "webhook-subscriptions": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\webhook-subscriptions\\SKILL.md"
+  },
+  "windows-maintenance-operations": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\windows-maintenance-operations\\SKILL.md"
+  },
+  "work-on-ticket": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\work-on-ticket\\SKILL.md"
+  },
+  "workspace-audit": {
+    "category": "devops",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\devops\\workspace-audit\\SKILL.md"
+  },
+  "ai-prompt-engineering-safety-review": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\ai-prompt-engineering-safety-review\\SKILL.md"
+  },
+  "chrome-devtools": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\chrome-devtools\\SKILL.md"
+  },
+  "context-map": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\context-map\\SKILL.md"
+  },
+  "convert-plaintext-to-md": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\convert-plaintext-to-md\\SKILL.md"
+  },
+  "copilot-cli-quickstart": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\copilot-cli-quickstart\\SKILL.md"
+  },
+  "copilot-sdk": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\copilot-sdk\\SKILL.md"
+  },
+  "copilot-usage-metrics": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\copilot-usage-metrics\\SKILL.md"
+  },
+  "create-agentsmd": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\create-agentsmd\\SKILL.md"
+  },
+  "create-implementation-plan": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\create-implementation-plan\\SKILL.md"
+  },
+  "create-readme": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\create-readme\\SKILL.md"
+  },
+  "create-web-form": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\create-web-form\\SKILL.md"
+  },
+  "fix-yaml-frontmatter": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\fix-yaml-frontmatter\\SKILL.md"
+  },
+  "generate-custom-instructions-from-codebase": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\generate-custom-instructions-from-codebase\\SKILL.md"
+  },
+  "lsp-setup": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\lsp-setup\\SKILL.md"
+  },
+  "make-skill-template": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\make-skill-template\\SKILL.md"
+  },
+  "microsoft-skill-creator": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\microsoft-skill-creator\\SKILL.md"
+  },
+  "prompt-builder": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\prompt-builder\\SKILL.md"
+  },
+  "prompt-engineering": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\prompt-engineering\\SKILL.md"
+  },
+  "rest-graphql-debug": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\rest-graphql-debug\\SKILL.md"
+  },
+  "skill-creator": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\skill-creator\\SKILL.md"
+  },
+  "skills": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\skills\\SKILL.md"
+  },
+  "suggest-awesome-github-copilot-agents": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\suggest-awesome-github-copilot-agents\\SKILL.md"
+  },
+  "suggest-awesome-github-copilot-instructions": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\suggest-awesome-github-copilot-instructions\\SKILL.md"
+  },
+  "update-implementation-plan": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\update-implementation-plan\\SKILL.md"
+  },
+  "using-git-worktrees": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\using-git-worktrees\\SKILL.md"
+  },
+  "vscode-cli": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\vscode-cli\\SKILL.md"
+  },
+  "vscode-ext-commands": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\vscode-ext-commands\\SKILL.md"
+  },
+  "vscode-ext-localization": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\vscode-ext-localization\\SKILL.md"
+  },
+  "vscode-extension-playbook": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\vscode-extension-playbook\\SKILL.md"
+  },
+  "vscode-workspace-configurator": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\vscode-workspace-configurator\\SKILL.md"
+  },
+  "workiq-copilot": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\workiq-copilot\\SKILL.md"
+  },
+  "writing-skills": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\writing-skills\\SKILL.md"
+  },
+  "microsoft-code-reference": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\microsoft-skill-creator\\microsoft-code-reference\\SKILL.md"
+  },
+  "microsoft-docs": {
+    "category": "development",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\microsoft-skill-creator\\microsoft-docs\\SKILL.md"
+  },
+  "jupyter-live-kernel": {
+    "category": "data-science",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\data-science\\jupyter-live-kernel\\SKILL.md"
+  },
+  "algorithmic-art": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\algorithmic-art\\SKILL.md"
+  },
+  "architecture-diagram": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\architecture-diagram\\SKILL.md"
+  },
+  "ascii-art": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\ascii-art\\SKILL.md"
+  },
+  "ascii-video": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\ascii-video\\SKILL.md"
+  },
+  "baoyu-infographic": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\baoyu-infographic\\SKILL.md"
+  },
+  "brand-guidelines": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\brand-guidelines\\SKILL.md"
+  },
+  "canvas-design": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\canvas-design\\SKILL.md"
+  },
+  "claude-design": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\claude-design\\SKILL.md"
+  },
+  "comfyui": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\comfyui\\SKILL.md"
+  },
+  "content-research-writer": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\content-research-writer\\SKILL.md"
+  },
+  "design-md": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\design-md\\SKILL.md"
+  },
+  "excalidraw": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\excalidraw\\SKILL.md"
+  },
+  "excalidraw-diagram-generator": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\excalidraw-diagram-generator\\SKILL.md"
+  },
+  "frontend-design": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\frontend-design\\SKILL.md"
+  },
+  "html-artifact": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\html-artifact\\SKILL.md"
+  },
+  "humanizer": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\humanizer\\SKILL.md"
+  },
+  "image-manipulation-image-magick": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\image-manipulation-image-magick\\SKILL.md"
+  },
+  "legacy-circuit-mockups": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\legacy-circuit-mockups\\SKILL.md"
+  },
+  "manim-video": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\manim-video\\SKILL.md"
+  },
+  "marp-slide": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\marp-slide\\SKILL.md"
+  },
+  "mermaid-diagrams": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\mermaid-diagrams\\SKILL.md"
+  },
+  "nano-banana-pro-openrouter": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\nano-banana-pro-openrouter\\SKILL.md"
+  },
+  "p5js": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\p5js\\SKILL.md"
+  },
+  "penpot-uiux-design": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\penpot-uiux-design\\SKILL.md"
+  },
+  "plantuml-ascii": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\plantuml-ascii\\SKILL.md"
+  },
+  "popular-web-designs": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\popular-web-designs\\SKILL.md"
+  },
+  "pretext": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\pretext\\SKILL.md"
+  },
+  "sketch": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\sketch\\SKILL.md"
+  },
+  "songwriting-and-ai-music": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\songwriting-and-ai-music\\SKILL.md"
+  },
+  "theme-factory": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\theme-factory\\SKILL.md"
+  },
+  "touchdesigner-mcp": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\touchdesigner-mcp\\SKILL.md"
+  },
+  "web-artifacts-builder": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\web-artifacts-builder\\SKILL.md"
+  },
+  "writing-clearly-and-concisely": {
+    "category": "creative",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative\\writing-clearly-and-concisely\\SKILL.md"
+  },
+  "agent-browser": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\agent-browser\\SKILL.md"
+  },
+  "agent-governance": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\agent-governance\\SKILL.md"
+  },
+  "agentic-eval": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\agentic-eval\\SKILL.md"
+  },
+  "coding-agents": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\coding-agents\\SKILL.md"
+  },
+  "customize-opencode": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\customize-opencode\\SKILL.md"
+  },
+  "enhance-markdown": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\enhance-markdown\\SKILL.md"
+  },
+  "hermes-breakdown": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\hermes-breakdown\\SKILL.md"
+  },
+  "hermes-skill-library-maintenance": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\hermes-skill-library-maintenance\\SKILL.md"
+  },
+  "multi-agent-sync": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\multi-agent-sync\\SKILL.md"
+  },
+  "qwen-code": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\qwen-code\\SKILL.md"
+  },
+  "template": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\template\\SKILL.md"
+  },
+  "using-superpowers": {
+    "category": "autonomous-ai-agents",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+  },
+  "architecture-blueprint-generator": {
+    "category": "architecture",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\architecture\\architecture-blueprint-generator\\SKILL.md"
+  },
+  "folder-structure-blueprint-generator": {
+    "category": "architecture",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\architecture\\folder-structure-blueprint-generator\\SKILL.md"
+  },
+  "technology-stack-blueprint-generator": {
+    "category": "architecture",
+    "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\architecture\\technology-stack-blueprint-generator\\SKILL.md"
+  }
+}

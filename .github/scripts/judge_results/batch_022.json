@@ -1,0 +1,429 @@
+[
+  {
+    "name": "openhue",
+    "category": "smart-home",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/smart-home/openhue/SKILL.md",
+    "total_score": 58,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 121 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "optimizing-attention-flash",
+    "category": "mlops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mlops/optimizing-attention-flash/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 6,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "osint-investigation",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/osint-investigation/SKILL.md",
+    "total_score": 53,
+    "dimensions": {
+      "frontmatter": {
+        "score": 17,
+        "issues": [
+          "Missing license"
+        ]
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting"
+        ]
+      },
+      "maintenance": {
+        "score": 12,
+        "issues": [
+          "Missing changelog/update history",
+          "Missing license field"
+        ]
+      }
+    }
+  },
+  {
+    "name": "oss-forensics",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/oss-forensics/SKILL.md",
+    "total_score": 45,
+    "dimensions": {
+      "frontmatter": {
+        "score": 9,
+        "issues": [
+          "Missing version",
+          "Missing author",
+          "Missing license",
+          "Missing tags (array)"
+        ]
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing trigger/when-to-use section",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "Missing metadata section"
+        ]
+      },
+      "maintenance": {
+        "score": 4,
+        "issues": [
+          "Missing semantic version",
+          "Missing changelog/update history",
+          "Missing author field",
+          "Missing license field"
+        ]
+      }
+    }
+  },
+  {
+    "name": "outlines",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/outlines/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 10,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "p5js",
+    "category": "creative",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/creative/p5js/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 14,
+        "issues": [
+          "Missing author",
+          "Missing license"
+        ]
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 8,
+        "issues": [
+          "Missing changelog/update history",
+          "Missing author field",
+          "Missing license field"
+        ]
+      }
+    }
+  },
+  {
+    "name": "page-agent",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/page-agent/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "parallel-cli",
+    "category": "devops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/devops/parallel-cli/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "pdf",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/pdf/SKILL.md",
+    "total_score": 56,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 4,
+        "issues": [
+          "Skill only 87 lines (too thin)",
+          "Missing dependencies list",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "pdftk-server",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/pdftk-server/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 14,
+        "issues": [
+          "Skill only 178 lines (recommend >=200)",
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

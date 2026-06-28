@@ -1,0 +1,408 @@
+[
+  {
+    "name": "neuroskill-bci",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/neuroskill-bci/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "node-inspect-debugger",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/node-inspect-debugger/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "notion",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/notion/SKILL.md",
+    "total_score": 74,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 10,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "nuget-manager",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/nuget-manager/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 84 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "obliteratus",
+    "category": "mlops/inference",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mlops/inference/obliteratus/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "obsidian",
+    "category": "note-taking",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/note-taking/obsidian/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 84 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "ocr-and-documents",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/ocr-and-documents/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 10,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "one-three-one-rule",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/one-three-one-rule/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 108 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "openclaw-migration",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/openclaw-migration/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 2,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing trigger/when-to-use section",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "openhands",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/openhands/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 160 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

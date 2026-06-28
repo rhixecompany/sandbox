@@ -1,0 +1,416 @@
+[
+  {
+    "name": "mcp-cli",
+    "category": "mcp",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mcp/mcp-cli/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 84 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "mcp-security-audit",
+    "category": "mcp",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mcp/mcp-security-audit/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 84 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "mcporter",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mcporter/SKILL.md",
+    "total_score": 54,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 6,
+        "issues": [
+          "Skill only 132 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "meeting-insights-analyzer",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/meeting-insights-analyzer/SKILL.md",
+    "total_score": 52,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 0,
+        "issues": [
+          "Skill only 86 lines (too thin)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "meeting-minutes",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/meeting-minutes/SKILL.md",
+    "total_score": 60,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "meme-generation",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/meme-generation/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 6,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 16,
+        "issues": [
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 132 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "memento-flashcards",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/memento-flashcards/SKILL.md",
+    "total_score": 70,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 6,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "mermaid-diagrams",
+    "category": "creative",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/creative/mermaid-diagrams/SKILL.md",
+    "total_score": 70,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 20,
+        "issues": []
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 100 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "microsoft-code-reference",
+    "category": "development/microsoft-skill-creator",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/microsoft-skill-creator/microsoft-code-reference/SKILL.md",
+    "total_score": 54,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 6,
+        "issues": [
+          "Skill only 101 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "microsoft-docs",
+    "category": "development/microsoft-skill-creator",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/microsoft-skill-creator/microsoft-docs/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 84 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

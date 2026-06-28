@@ -1,0 +1,413 @@
+[
+  {
+    "name": "microsoft-skill-creator",
+    "category": "development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/microsoft-skill-creator/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 10,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Missing dependencies list",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "mindstudio-wrapper",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/mindstudio-wrapper/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 14,
+        "issues": [
+          "Only 2 code blocks (need >=3)",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "minecraft-modpack-server",
+    "category": "gaming",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/gaming/minecraft-modpack-server/SKILL.md",
+    "total_score": 56,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 4,
+        "issues": [
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "modal",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/modal/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 2,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 2 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 20,
+        "issues": []
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "modal-serverless-gpu",
+    "category": "devops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/devops/modal-serverless-gpu/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "No phased workflow",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 2 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "multi-stage-dockerfile",
+    "category": "devops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/devops/multi-stage-dockerfile/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 10,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 6,
+        "issues": [
+          "Skill only 149 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "nano-banana-pro-openrouter",
+    "category": "creative",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/creative/nano-banana-pro-openrouter/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "No phased workflow",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 99 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "nano-pdf",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/nano-pdf/SKILL.md",
+    "total_score": 60,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 73 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "native-mcp",
+    "category": "mcp",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mcp/native-mcp/SKILL.md",
+    "total_score": 78,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "Missing Skills Required table",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 16,
+        "issues": [
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "nemo-curator",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/nemo-curator/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 2,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 20,
+        "issues": []
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,413 @@
+[
+  {
+    "name": "teams-meeting-pipeline",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/teams-meeting-pipeline/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 149 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "technology-stack-blueprint-generator",
+    "category": "architecture",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/architecture/technology-stack-blueprint-generator/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 18,
+        "issues": [
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 95 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "telephony",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/telephony/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Verification checklist has <3 items",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing trigger/when-to-use section",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "template",
+    "category": "autonomous-ai-agents",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/autonomous-ai-agents/template/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "Missing Pitfalls section",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 6,
+        "issues": [
+          "Skill only 186 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "tensorrt-llm",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/tensorrt-llm/SKILL.md",
+    "total_score": 60,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 2 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 14,
+        "issues": [
+          "Skill only 193 lines (recommend >=200)",
+          "Missing error handling / troubleshooting"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "terraform-azurerm-set-diff-analyzer",
+    "category": "devops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/devops/terraform-azurerm-set-diff-analyzer/SKILL.md",
+    "total_score": 70,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 20,
+        "issues": []
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 2 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Skill only 82 lines (too thin)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "test-driven-development",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/test-driven-development/SKILL.md",
+    "total_score": 74,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "Missing Skills Required table",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "test-skill",
+    "category": "qa",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/qa/test-skill/SKILL.md",
+    "total_score": 62,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 155 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "theme-factory",
+    "category": "creative",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/creative/theme-factory/SKILL.md",
+    "total_score": 52,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 4,
+        "issues": [
+          "Skill only 86 lines (too thin)",
+          "Missing dependencies list",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "torchtitan",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/torchtitan/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 20,
+        "issues": []
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

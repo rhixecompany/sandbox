@@ -1,0 +1,409 @@
+[
+  {
+    "name": "1password",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/1password/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 2,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 14,
+        "issues": [
+          "Skill only 165 lines (recommend >=200)",
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "3-statement-model",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/3-statement-model/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "Missing trigger/when-to-use section",
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "accelerate",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/accelerate/SKILL.md",
+    "total_score": 68,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 20,
+        "issues": []
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "adversarial-ux-test",
+    "category": "qa",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/qa/adversarial-ux-test/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "agent-browser",
+    "category": "autonomous-ai-agents",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/autonomous-ai-agents/agent-browser/SKILL.md",
+    "total_score": 66,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 115 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "agent-governance",
+    "category": "autonomous-ai-agents",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/autonomous-ai-agents/agent-governance/SKILL.md",
+    "total_score": 60,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 8,
+        "issues": [
+          "Missing dependencies list",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "agentic-eval",
+    "category": "autonomous-ai-agents",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/autonomous-ai-agents/agentic-eval/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "agentmail",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/agentmail/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 14,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 6,
+        "issues": [
+          "Skill only 139 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "ai-prompt-engineering-safety-review",
+    "category": "development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/ai-prompt-engineering-safety-review/SKILL.md",
+    "total_score": 74,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 16,
+        "issues": [
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 115 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "airtable",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/airtable/SKILL.md",
+    "total_score": 72,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 12,
+        "issues": [
+          "Missing Skills Required table",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

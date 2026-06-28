@@ -1,0 +1,419 @@
+[
+  {
+    "name": "sponsor-finder",
+    "category": "github",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/github/sponsor-finder/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "spotify",
+    "category": "media",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/media/spotify/SKILL.md",
+    "total_score": 58,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 8,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 10,
+        "issues": [
+          "Skill only 147 lines (recommend >=200)",
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "stable-diffusion",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/stable-diffusion/SKILL.md",
+    "total_score": 64,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 2,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "Missing Verification Checklist",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 20,
+        "issues": []
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "stable-diffusion-image-generation",
+    "category": "mlops",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/mlops/stable-diffusion-image-generation/SKILL.md",
+    "total_score": 74,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "No phased workflow",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 18,
+        "issues": [
+          "Skill only 198 lines (recommend >=200)"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "stocks",
+    "category": "",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/stocks/SKILL.md",
+    "total_score": 58,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 6,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Verification Checklist",
+          "Only 1 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Skill only 97 lines (too thin)",
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "subagent-driven-development",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/subagent-driven-development/SKILL.md",
+    "total_score": 78,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 20,
+        "issues": []
+      },
+      "clarity": {
+        "score": 6,
+        "issues": [
+          "Only 1 code blocks (need >=3)",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 16,
+        "issues": [
+          "Missing dependencies list"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "suggest-awesome-github-copilot-agents",
+    "category": "development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/suggest-awesome-github-copilot-agents/SKILL.md",
+    "total_score": 54,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 2,
+        "issues": [
+          "Skill only 128 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "suggest-awesome-github-copilot-instructions",
+    "category": "development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/development/suggest-awesome-github-copilot-instructions/SKILL.md",
+    "total_score": 54,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 4,
+        "issues": [
+          "Missing Skills Required table",
+          "No phased workflow",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "No code blocks with commands",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 2,
+        "issues": [
+          "Skill only 144 lines (recommend >=200)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "systematic-debugging",
+    "category": "software-development",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/software-development/systematic-debugging/SKILL.md",
+    "total_score": 74,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 14,
+        "issues": [
+          "Missing Skills Required table",
+          "Only 2 substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 12,
+        "issues": [
+          "Missing Input/Output section",
+          "Missing examples section"
+        ]
+      },
+      "quality": {
+        "score": 12,
+        "issues": [
+          "Missing dependencies list",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  },
+  {
+    "name": "task-management",
+    "category": "productivity",
+    "path": "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/task-management/SKILL.md",
+    "total_score": 48,
+    "dimensions": {
+      "frontmatter": {
+        "score": 20,
+        "issues": []
+      },
+      "structure": {
+        "score": 8,
+        "issues": [
+          "Missing Skills Required table",
+          "Missing Pitfalls section",
+          "No substantive reference files"
+        ]
+      },
+      "clarity": {
+        "score": 4,
+        "issues": [
+          "No code blocks with commands",
+          "Missing Input/Output section",
+          "Missing examples section",
+          "No numbered steps"
+        ]
+      },
+      "quality": {
+        "score": 0,
+        "issues": [
+          "Skill only 87 lines (too thin)",
+          "Missing dependencies list",
+          "Missing error handling / troubleshooting",
+          "Missing metadata section",
+          "No platform awareness"
+        ]
+      },
+      "maintenance": {
+        "score": 16,
+        "issues": [
+          "Missing changelog/update history"
+        ]
+      }
+    }
+  }
+]

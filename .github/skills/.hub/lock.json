@@ -1,0 +1,1896 @@
+{
+  "version": 1,
+  "installed": {
+    "1password": {
+      "source": "official",
+      "identifier": "official/security\\1password",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:bb4f9c9ac5f985e3",
+      "install_path": "1password",
+      "files": [
+        "SKILL.md",
+        "references\\cli-examples.md",
+        "references\\get-started.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:41.931725+00:00",
+      "updated_at": "2026-06-24T23:34:41.931725+00:00"
+    },
+    "3-statement-model": {
+      "source": "official",
+      "identifier": "official/finance\\3-statement-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:678149f0d87680f6",
+      "install_path": "3-statement-model",
+      "files": [
+        "SKILL.md",
+        "references\\formatting.md",
+        "references\\formulas.md",
+        "references\\sec-filings.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:42.690301+00:00",
+      "updated_at": "2026-06-24T23:34:42.690301+00:00"
+    },
+    "adversarial-ux-test": {
+      "source": "official",
+      "identifier": "official/dogfood\\adversarial-ux-test",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e1787380485e4cdb",
+      "install_path": "adversarial-ux-test",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:16:37.644671+00:00",
+      "updated_at": "2026-06-09T00:16:37.644671+00:00"
+    },
+    "agentmail": {
+      "source": "official",
+      "identifier": "official/email\\agentmail",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:98f1ec2d8201e472",
+      "install_path": "agentmail",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:16:39.205396+00:00",
+      "updated_at": "2026-06-09T00:16:39.205396+00:00"
+    },
+    "antigravity-cli": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\antigravity-cli",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b53b3e65872fa1fd",
+      "install_path": "antigravity-cli",
+      "files": [
+        "SKILL.md",
+        "references\\cli-docs.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:43.445645+00:00",
+      "updated_at": "2026-06-24T23:34:43.445645+00:00"
+    },
+    "axolotl": {
+      "source": "github",
+      "identifier": "official/mlops\\training\\axolotl",
+      "trust_level": "community",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:214b99bf079532f6",
+      "install_path": "axolotl",
+      "files": [
+        "SKILL.md",
+        "references\\api.md",
+        "references\\dataset-formats.md",
+        "references\\index.md",
+        "references\\other.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T20:37:57.776780+00:00",
+      "updated_at": "2026-06-13T20:37:57.776780+00:00"
+    },
+    "baoyu-article-illustrator": {
+      "source": "official",
+      "identifier": "official/creative\\baoyu-article-illustrator",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:1a4464073f93ee8b",
+      "install_path": "baoyu-article-illustrator",
+      "files": [
+        "PORT_NOTES.md",
+        "SKILL.md",
+        "prompts\\system.md",
+        "references\\prompt-construction.md",
+        "references\\style-presets.md",
+        "references\\styles.md",
+        "references\\usage.md",
+        "references\\workflow.md",
+        "references\\palettes\\macaron.md",
+        "references\\palettes\\mono-ink.md",
+        "references\\palettes\\neon.md",
+        "references\\palettes\\warm.md",
+        "references\\styles\\blueprint.md",
+        "references\\styles\\chalkboard.md",
+        "references\\styles\\editorial.md",
+        "references\\styles\\elegant.md",
+        "references\\styles\\fantasy-animation.md",
+        "references\\styles\\flat-doodle.md",
+        "references\\styles\\flat.md",
+        "references\\styles\\ink-notes.md",
+        "references\\styles\\intuition-machine.md",
+        "references\\styles\\minimal.md",
+        "references\\styles\\nature.md",
+        "references\\styles\\notion.md",
+        "references\\styles\\pixel-art.md",
+        "references\\styles\\playful.md",
+        "references\\styles\\retro.md",
+        "references\\styles\\scientific.md",
+        "references\\styles\\screen-print.md",
+        "references\\styles\\sketch-notes.md",
+        "references\\styles\\sketch.md",
+        "references\\styles\\vector-illustration.md",
+        "references\\styles\\vintage.md",
+        "references\\styles\\warm.md",
+        "references\\styles\\watercolor.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:44.511028+00:00",
+      "updated_at": "2026-06-24T23:34:44.511028+00:00"
+    },
+    "baoyu-comic": {
+      "source": "official",
+      "identifier": "official/creative\\baoyu-comic",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:2c5f77a1f93a5b14",
+      "install_path": "baoyu-comic",
+      "files": [
+        "PORT_NOTES.md",
+        "SKILL.md",
+        "references\\analysis-framework.md",
+        "references\\auto-selection.md",
+        "references\\base-prompt.md",
+        "references\\character-template.md",
+        "references\\ohmsha-guide.md",
+        "references\\partial-workflows.md",
+        "references\\storyboard-template.md",
+        "references\\workflow.md",
+        "references\\art-styles\\chalk.md",
+        "references\\art-styles\\ink-brush.md",
+        "references\\art-styles\\ligne-claire.md",
+        "references\\art-styles\\manga.md",
+        "references\\art-styles\\minimalist.md",
+        "references\\art-styles\\realistic.md",
+        "references\\layouts\\cinematic.md",
+        "references\\layouts\\dense.md",
+        "references\\layouts\\four-panel.md",
+        "references\\layouts\\mixed.md",
+        "references\\layouts\\splash.md",
+        "references\\layouts\\standard.md",
+        "references\\layouts\\webtoon.md",
+        "references\\presets\\concept-story.md",
+        "references\\presets\\four-panel.md",
+        "references\\presets\\ohmsha.md",
+        "references\\presets\\shoujo.md",
+        "references\\presets\\wuxia.md",
+        "references\\tones\\action.md",
+        "references\\tones\\dramatic.md",
+        "references\\tones\\energetic.md",
+        "references\\tones\\neutral.md",
+        "references\\tones\\romantic.md",
+        "references\\tones\\vintage.md",
+        "references\\tones\\warm.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:45.610236+00:00",
+      "updated_at": "2026-06-24T23:34:45.610236+00:00"
+    },
+    "bioinformatics": {
+      "source": "official",
+      "identifier": "official/research\\bioinformatics",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:a8c6045133b473cb",
+      "install_path": "bioinformatics",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:16:50.443572+00:00",
+      "updated_at": "2026-06-09T00:16:50.443572+00:00"
+    },
+    "blackbox": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\blackbox",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:0521570777866c6a",
+      "install_path": "blackbox",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:16:51.945912+00:00",
+      "updated_at": "2026-06-09T00:16:51.945912+00:00"
+    },
+    "blender-mcp": {
+      "source": "official",
+      "identifier": "official/creative\\blender-mcp",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e568bc061765717b",
+      "install_path": "blender-mcp",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:16:53.447852+00:00",
+      "updated_at": "2026-06-09T00:16:53.447852+00:00"
+    },
+    "canvas": {
+      "source": "official",
+      "identifier": "official/productivity\\canvas",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:a87177ea8cd25580",
+      "install_path": "canvas",
+      "files": [
+        "SKILL.md",
+        "scripts\\canvas_api.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:46.097825+00:00",
+      "updated_at": "2026-06-24T23:34:46.097825+00:00"
+    },
+    "chroma": {
+      "source": "official",
+      "identifier": "official/mlops\\chroma",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:35ad395e6b13abae",
+      "install_path": "chroma",
+      "files": [
+        "SKILL.md",
+        "references\\integration.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:46.618376+00:00",
+      "updated_at": "2026-06-24T23:34:46.618376+00:00"
+    },
+    "clip": {
+      "source": "official",
+      "identifier": "official/mlops\\clip",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:3f6c1b58906d826e",
+      "install_path": "clip",
+      "files": [
+        "SKILL.md",
+        "references\\applications.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:47.135533+00:00",
+      "updated_at": "2026-06-24T23:34:47.135533+00:00"
+    },
+    "code-wiki": {
+      "source": "official",
+      "identifier": "official/software-development\\code-wiki",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:d890ae3bef0fd0a2",
+      "install_path": "code-wiki",
+      "files": [
+        "SKILL.md",
+        "templates\\architecture.md",
+        "templates\\getting-started.md",
+        "templates\\module.md",
+        "templates\\README.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:47.669512+00:00",
+      "updated_at": "2026-06-24T23:34:47.669512+00:00"
+    },
+    "comps-analysis": {
+      "source": "official",
+      "identifier": "official/finance\\comps-analysis",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:97f5d4bdfb744a0a",
+      "install_path": "comps-analysis",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:17:01.040906+00:00",
+      "updated_at": "2026-06-09T00:17:01.040906+00:00"
+    },
+    "concept-diagrams": {
+      "source": "official",
+      "identifier": "official/creative\\concept-diagrams",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:643d81c5d10d8c0a",
+      "install_path": "concept-diagrams",
+      "files": [
+        "SKILL.md",
+        "examples\\apartment-floor-plan-conversion.md",
+        "examples\\automated-password-reset-flow.md",
+        "examples\\autonomous-llm-research-agent-flow.md",
+        "examples\\banana-journey-tree-to-smoothie.md",
+        "examples\\commercial-aircraft-structure.md",
+        "examples\\cpu-ooo-microarchitecture.md",
+        "examples\\electricity-grid-flow.md",
+        "examples\\feature-film-production-pipeline.md",
+        "examples\\hospital-emergency-department-flow.md",
+        "examples\\ml-benchmark-grouped-bar-chart.md",
+        "examples\\place-order-uml-sequence.md",
+        "examples\\smart-city-infrastructure.md",
+        "examples\\smartphone-layer-anatomy.md",
+        "examples\\sn2-reaction-mechanism.md",
+        "examples\\wind-turbine-structure.md",
+        "references\\dashboard-patterns.md",
+        "references\\infrastructure-patterns.md",
+        "references\\physical-shape-cookbook.md",
+        "templates\\template.html"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:48.891230+00:00",
+      "updated_at": "2026-06-24T23:34:48.891230+00:00"
+    },
+    "darwinian-evolver": {
+      "source": "official",
+      "identifier": "official/research\\darwinian-evolver",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:54582b24e4385867",
+      "install_path": "darwinian-evolver",
+      "files": [
+        "SKILL.md",
+        "scripts\\parrot_openrouter.py",
+        "scripts\\show_snapshot.py",
+        "templates\\custom_problem_template.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:49.483531+00:00",
+      "updated_at": "2026-06-24T23:34:49.483531+00:00"
+    },
+    "dcf-model": {
+      "source": "official",
+      "identifier": "official/finance\\dcf-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:7c0a14b486b97e0a",
+      "install_path": "dcf-model",
+      "files": [
+        "requirements.txt",
+        "SKILL.md",
+        "TROUBLESHOOTING.md",
+        "scripts\\validate_dcf.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:50.236605+00:00",
+      "updated_at": "2026-06-24T23:34:50.236605+00:00"
+    },
+    "torchtitan": {
+      "source": "official",
+      "identifier": "official/mlops\\torchtitan",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:eb8032883af5ed09",
+      "install_path": "torchtitan",
+      "files": [
+        "SKILL.md",
+        "references\\checkpoint.md",
+        "references\\custom-models.md",
+        "references\\float8.md",
+        "references\\fsdp.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:50.826214+00:00",
+      "updated_at": "2026-06-24T23:34:50.826214+00:00"
+    },
+    "docker-management": {
+      "source": "official",
+      "identifier": "official/devops\\docker-management",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:88e5362b7a61b4b0",
+      "install_path": "docker-management",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:17:10.495403+00:00",
+      "updated_at": "2026-06-09T00:17:10.495403+00:00"
+    },
+    "domain-intel": {
+      "source": "official",
+      "identifier": "official/research\\domain-intel",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:2f7681fbe9b2b052",
+      "install_path": "domain-intel",
+      "files": [
+        "SKILL.md",
+        "scripts\\domain_intel.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:51.349630+00:00",
+      "updated_at": "2026-06-24T23:34:51.349630+00:00"
+    },
+    "drug-discovery": {
+      "source": "official",
+      "identifier": "official/research\\drug-discovery",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:40c445351a35d304",
+      "install_path": "drug-discovery",
+      "files": [
+        "SKILL.md",
+        "references\\ADMET_REFERENCE.md",
+        "scripts\\chembl_target.py",
+        "scripts\\ro5_screen.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:51.905475+00:00",
+      "updated_at": "2026-06-24T23:34:51.905475+00:00"
+    },
+    "dspy": {
+      "source": "github",
+      "identifier": "official/mlops\\research\\dspy",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:badb18bfaa619569",
+      "install_path": "dspy",
+      "files": [
+        "SKILL.md",
+        "references\\examples.md",
+        "references\\modules.md",
+        "references\\optimizers.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T20:38:24.312646+00:00",
+      "updated_at": "2026-06-13T20:38:24.312646+00:00"
+    },
+    "duckduckgo-search": {
+      "source": "official",
+      "identifier": "official/research\\duckduckgo-search",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:9932efac48c3b822",
+      "install_path": "duckduckgo-search",
+      "files": [
+        "SKILL.md",
+        "scripts\\duckduckgo.sh"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:52.397742+00:00",
+      "updated_at": "2026-06-24T23:34:52.397742+00:00"
+    },
+    "evm": {
+      "source": "official",
+      "identifier": "official/blockchain\\evm",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:8dbfdd89d5813d6e",
+      "install_path": "evm",
+      "files": [
+        "SKILL.md",
+        "scripts\\evm_client.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:53.113616+00:00",
+      "updated_at": "2026-06-24T23:34:53.113616+00:00"
+    },
+    "excel-author": {
+      "source": "official",
+      "identifier": "official/finance\\excel-author",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:511fa30d8be2fa0d",
+      "install_path": "excel-author",
+      "files": [
+        "SKILL.md",
+        "scripts\\recalc.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:53.634613+00:00",
+      "updated_at": "2026-06-24T23:34:53.634613+00:00"
+    },
+    "faiss": {
+      "source": "official",
+      "identifier": "official/mlops\\faiss",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:9449d80aa61bbd4e",
+      "install_path": "faiss",
+      "files": [
+        "SKILL.md",
+        "references\\index_types.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:54.157809+00:00",
+      "updated_at": "2026-06-24T23:34:54.157809+00:00"
+    },
+    "fastmcp": {
+      "source": "official",
+      "identifier": "official/mcp\\fastmcp",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:28fe103c7a98d358",
+      "install_path": "fastmcp",
+      "files": [
+        "SKILL.md",
+        "references\\fastmcp-cli.md",
+        "scripts\\scaffold_fastmcp.py",
+        "templates\\api_wrapper.py",
+        "templates\\database_server.py",
+        "templates\\file_processor.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:54.726954+00:00",
+      "updated_at": "2026-06-24T23:34:54.726954+00:00"
+    },
+    "trl-fine-tuning": {
+      "source": "github",
+      "identifier": "official/mlops\\training\\trl-fine-tuning",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:83eab52d593c655c",
+      "install_path": "trl-fine-tuning",
+      "files": [
+        "SKILL.md",
+        "references\\dpo-variants.md",
+        "references\\grpo-training.md",
+        "references\\online-rl.md",
+        "references\\reward-modeling.md",
+        "references\\sft-training.md",
+        "templates\\basic_grpo_training.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T20:38:31.986448+00:00",
+      "updated_at": "2026-06-13T20:38:31.986448+00:00"
+    },
+    "fitness-nutrition": {
+      "source": "official",
+      "identifier": "official/health\\fitness-nutrition",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:f5943e7d129f36cb",
+      "install_path": "fitness-nutrition",
+      "files": [
+        "SKILL.md",
+        "references\\FORMULAS.md",
+        "scripts\\body_calc.py",
+        "scripts\\nutrition_search.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:55.297065+00:00",
+      "updated_at": "2026-06-24T23:34:55.297065+00:00"
+    },
+    "gitnexus-explorer": {
+      "source": "official",
+      "identifier": "official/research\\gitnexus-explorer",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b61eac81ff50a3ca",
+      "install_path": "gitnexus-explorer",
+      "files": [
+        "SKILL.md",
+        "scripts\\proxy.mjs"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:55.771639+00:00",
+      "updated_at": "2026-06-24T23:34:55.771639+00:00"
+    },
+    "grok": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\grok",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:bf3b06d06fd2cd4b",
+      "install_path": "grok",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T00:58:44.620368+00:00",
+      "updated_at": "2026-06-25T00:58:44.620368+00:00"
+    },
+    "guidance": {
+      "source": "official",
+      "identifier": "official/mlops\\guidance",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:15644bd6cdddb585",
+      "install_path": "guidance",
+      "files": [
+        "SKILL.md",
+        "references\\backends.md",
+        "references\\constraints.md",
+        "references\\examples.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:56.593090+00:00",
+      "updated_at": "2026-06-24T23:34:56.593090+00:00"
+    },
+    "here-now": {
+      "source": "official",
+      "identifier": "official/productivity\\here-now",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b82d0c7986402c7b",
+      "install_path": "here-now",
+      "files": [
+        "SKILL.md",
+        "scripts\\drive.sh",
+        "scripts\\publish.sh"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:57.243329+00:00",
+      "updated_at": "2026-06-24T23:34:57.243329+00:00"
+    },
+    "hermes-s6-container-supervision": {
+      "source": "official",
+      "identifier": "official/devops\\hermes-s6-container-supervision",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:84b7893611738a1e",
+      "install_path": "hermes-s6-container-supervision",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:17:35.680952+00:00",
+      "updated_at": "2026-06-09T00:17:35.680952+00:00"
+    },
+    "honcho": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\honcho",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:735cebce4c8124fa",
+      "install_path": "honcho",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:17:37.276628+00:00",
+      "updated_at": "2026-06-09T00:17:37.276628+00:00"
+    },
+    "accelerate": {
+      "source": "official",
+      "identifier": "official/mlops\\accelerate",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:ce5e6db3c18ff1ff",
+      "install_path": "accelerate",
+      "files": [
+        "SKILL.md",
+        "references\\custom-plugins.md",
+        "references\\megatron-integration.md",
+        "references\\performance.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:57.942963+00:00",
+      "updated_at": "2026-06-24T23:34:57.942963+00:00"
+    },
+    "huggingface-tokenizers": {
+      "source": "official",
+      "identifier": "official/mlops\\huggingface-tokenizers",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:47d6a4a8d24d6098",
+      "install_path": "huggingface-tokenizers",
+      "files": [
+        "SKILL.md",
+        "references\\algorithms.md",
+        "references\\integration.md",
+        "references\\pipeline.md",
+        "references\\training.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:58.832147+00:00",
+      "updated_at": "2026-06-24T23:34:58.832147+00:00"
+    },
+    "hyperframes": {
+      "source": "official",
+      "identifier": "official/creative\\hyperframes",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:33725b39c61bf158",
+      "install_path": "hyperframes",
+      "files": [
+        "SKILL.md",
+        "references\\cli.md",
+        "references\\composition.md",
+        "references\\features.md",
+        "references\\gsap.md",
+        "references\\troubleshooting.md",
+        "references\\website-to-video.md",
+        "scripts\\setup.sh"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:34:59.572501+00:00",
+      "updated_at": "2026-06-24T23:34:59.572501+00:00"
+    },
+    "hyperliquid": {
+      "source": "official",
+      "identifier": "official/blockchain\\hyperliquid",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:584b7dd200d43a5c",
+      "install_path": "hyperliquid",
+      "files": [
+        "SKILL.md",
+        "scripts\\hyperliquid_client.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:00.273598+00:00",
+      "updated_at": "2026-06-24T23:35:00.273598+00:00"
+    },
+    "creative-ideation": {
+      "source": "official",
+      "identifier": "official/creative\\creative-ideation",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:b1001a4215a03ea6",
+      "install_path": "creative-ideation",
+      "files": [
+        "SKILL.md",
+        "references\\anti-slop.md",
+        "references\\exercises.md",
+        "references\\full-prompt-library.md",
+        "references\\heuristics.md",
+        "references\\method-catalog.md",
+        "references\\methods\\affinity-diagrams.md",
+        "references\\methods\\analogy-and-blending.md",
+        "references\\methods\\biomimicry.md",
+        "references\\methods\\chance-and-remix.md",
+        "references\\methods\\compression-progress.md",
+        "references\\methods\\creative-discipline.md",
+        "references\\methods\\defamiliarization.md",
+        "references\\methods\\derive-and-mapping.md",
+        "references\\methods\\first-principles.md",
+        "references\\methods\\jobs-to-be-done.md",
+        "references\\methods\\lateral-provocations.md",
+        "references\\methods\\leverage-points.md",
+        "references\\methods\\oblique-strategies.md",
+        "references\\methods\\oulipo.md",
+        "references\\methods\\pataphysics.md",
+        "references\\methods\\pattern-languages.md",
+        "references\\methods\\polya.md",
+        "references\\methods\\premortem-and-inversion.md",
+        "references\\methods\\scamper.md",
+        "references\\methods\\story-skeletons.md",
+        "references\\methods\\triz-principles.md",
+        "references\\methods\\volume-generation.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:01.270076+00:00",
+      "updated_at": "2026-06-24T23:35:01.270076+00:00"
+    },
+    "cli": {
+      "source": "official",
+      "identifier": "official/devops\\cli",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:68966dea84a455d7",
+      "install_path": "cli",
+      "files": [
+        "SKILL.md",
+        "references\\app-discovery.md",
+        "references\\authentication.md",
+        "references\\cli-reference.md",
+        "references\\running-apps.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:01.845546+00:00",
+      "updated_at": "2026-06-24T23:35:01.845546+00:00"
+    },
+    "instructor": {
+      "source": "official",
+      "identifier": "official/mlops\\instructor",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:b395352c306ac4f8",
+      "install_path": "instructor",
+      "files": [
+        "SKILL.md",
+        "references\\examples.md",
+        "references\\providers.md",
+        "references\\validation.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:02.522900+00:00",
+      "updated_at": "2026-06-24T23:35:02.522900+00:00"
+    },
+    "kanban-video-orchestrator": {
+      "source": "official",
+      "identifier": "official/creative\\kanban-video-orchestrator",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:16ff4c73aa041059",
+      "install_path": "kanban-video-orchestrator",
+      "files": [
+        "SKILL.md",
+        "assets\\brief.md.tmpl",
+        "assets\\setup.sh.tmpl",
+        "assets\\soul.md.tmpl",
+        "references\\examples.md",
+        "references\\intake.md",
+        "references\\kanban-setup.md",
+        "references\\monitoring.md",
+        "references\\role-archetypes.md",
+        "references\\tool-matrix.md",
+        "scripts\\bootstrap_pipeline.py",
+        "scripts\\monitor.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:03.429340+00:00",
+      "updated_at": "2026-06-24T23:35:03.429340+00:00"
+    },
+    "lambda-labs": {
+      "source": "official",
+      "identifier": "official/mlops\\lambda-labs",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:70f27b05ca5001a0",
+      "install_path": "lambda-labs",
+      "files": [
+        "SKILL.md",
+        "references\\advanced-usage.md",
+        "references\\troubleshooting.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:04.122778+00:00",
+      "updated_at": "2026-06-24T23:35:04.122778+00:00"
+    },
+    "lbo-model": {
+      "source": "official",
+      "identifier": "official/finance\\lbo-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:143658574d9aa352",
+      "install_path": "lbo-model",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:17:59.974650+00:00",
+      "updated_at": "2026-06-09T00:17:59.974650+00:00"
+    },
+    "llava": {
+      "source": "official",
+      "identifier": "official/mlops\\llava",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:84a59bfd75e2d934",
+      "install_path": "llava",
+      "files": [
+        "SKILL.md",
+        "references\\training.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:04.660682+00:00",
+      "updated_at": "2026-06-24T23:35:04.660682+00:00"
+    },
+    "mcporter": {
+      "source": "official",
+      "identifier": "official/mcp\\mcporter",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6b5af67fcb18485b",
+      "install_path": "mcporter",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:03.078817+00:00",
+      "updated_at": "2026-06-09T00:18:03.078817+00:00"
+    },
+    "meme-generation": {
+      "source": "official",
+      "identifier": "official/creative\\meme-generation",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:235bf2f67493e966",
+      "install_path": "meme-generation",
+      "files": [
+        "EXAMPLES.md",
+        "SKILL.md",
+        "scripts\\generate_meme.py",
+        "scripts\\templates.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:05.247181+00:00",
+      "updated_at": "2026-06-24T23:35:05.247181+00:00"
+    },
+    "memento-flashcards": {
+      "source": "official",
+      "identifier": "official/productivity\\memento-flashcards",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:61d37c45ec145f26",
+      "install_path": "memento-flashcards",
+      "files": [
+        "SKILL.md",
+        "scripts\\memento_cards.py",
+        "scripts\\youtube_quiz.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:05.838445+00:00",
+      "updated_at": "2026-06-24T23:35:05.838445+00:00"
+    },
+    "merger-model": {
+      "source": "official",
+      "identifier": "official/finance\\merger-model",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6db284460a922ec9",
+      "install_path": "merger-model",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:07.853763+00:00",
+      "updated_at": "2026-06-09T00:18:07.854749+00:00"
+    },
+    "minecraft-modpack-server": {
+      "source": "official",
+      "identifier": "official/gaming\\minecraft-modpack-server",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:a89fd6dd5e4acb55",
+      "install_path": "minecraft-modpack-server",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:09.348999+00:00",
+      "updated_at": "2026-06-09T00:18:09.348999+00:00"
+    },
+    "modal": {
+      "source": "official",
+      "identifier": "official/mlops\\modal",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:93c2c2ff7c428728",
+      "install_path": "modal",
+      "files": [
+        "SKILL.md",
+        "references\\advanced-usage.md",
+        "references\\troubleshooting.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:06.472444+00:00",
+      "updated_at": "2026-06-24T23:35:06.472444+00:00"
+    },
+    "nemo-curator": {
+      "source": "official",
+      "identifier": "official/mlops\\nemo-curator",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:c124ca072bed354d",
+      "install_path": "nemo-curator",
+      "files": [
+        "SKILL.md",
+        "references\\deduplication.md",
+        "references\\filtering.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:07.009496+00:00",
+      "updated_at": "2026-06-24T23:35:07.009496+00:00"
+    },
+    "neuroskill-bci": {
+      "source": "official",
+      "identifier": "official/health\\neuroskill-bci",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:287ee19318c76256",
+      "install_path": "neuroskill-bci",
+      "files": [
+        "SKILL.md",
+        "references\\api.md",
+        "references\\metrics.md",
+        "references\\protocols.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:07.709897+00:00",
+      "updated_at": "2026-06-24T23:35:07.709897+00:00"
+    },
+    "one-three-one-rule": {
+      "source": "official",
+      "identifier": "official/communication\\one-three-one-rule",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6077f2f7179e4fd9",
+      "install_path": "one-three-one-rule",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:16.228206+00:00",
+      "updated_at": "2026-06-09T00:18:16.228206+00:00"
+    },
+    "openclaw-migration": {
+      "source": "official",
+      "identifier": "official/migration\\openclaw-migration",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:eced71ecaa677ab9",
+      "install_path": "openclaw-migration",
+      "files": [
+        "SKILL.md",
+        "scripts\\openclaw_to_hermes.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:08.700297+00:00",
+      "updated_at": "2026-06-24T23:35:08.700297+00:00"
+    },
+    "openhands": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents\\openhands",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:389ad95db33f3d63",
+      "install_path": "openhands",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:19.958165+00:00",
+      "updated_at": "2026-06-09T00:18:19.958165+00:00"
+    },
+    "flash-attention": {
+      "source": "official",
+      "identifier": "official/mlops\\flash-attention",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:b876b37eaf4c1762",
+      "install_path": "flash-attention",
+      "files": [
+        "SKILL.md",
+        "references\\benchmarks.md",
+        "references\\transformers-integration.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:09.286358+00:00",
+      "updated_at": "2026-06-24T23:35:09.286358+00:00"
+    },
+    "osint-investigation": {
+      "source": "official",
+      "identifier": "official/research\\osint-investigation",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:cf62f3a2d1315ca8",
+      "install_path": "osint-investigation",
+      "files": [
+        "SKILL.md",
+        "references\\sources\\courtlistener.md",
+        "references\\sources\\gdelt.md",
+        "references\\sources\\icij-offshore.md",
+        "references\\sources\\nyc-acris.md",
+        "references\\sources\\ofac-sdn.md",
+        "references\\sources\\opencorporates.md",
+        "references\\sources\\sec-edgar.md",
+        "references\\sources\\senate-ld.md",
+        "references\\sources\\usaspending.md",
+        "references\\sources\\wayback.md",
+        "references\\sources\\wikipedia.md",
+        "scripts\\build_findings.py",
+        "scripts\\entity_resolution.py",
+        "scripts\\fetch_courtlistener.py",
+        "scripts\\fetch_gdelt.py",
+        "scripts\\fetch_icij_offshore.py",
+        "scripts\\fetch_nyc_acris.py",
+        "scripts\\fetch_ofac_sdn.py",
+        "scripts\\fetch_opencorporates.py",
+        "scripts\\fetch_sec_edgar.py",
+        "scripts\\fetch_senate_ld.py",
+        "scripts\\fetch_usaspending.py",
+        "scripts\\fetch_wayback.py",
+        "scripts\\fetch_wikipedia.py",
+        "scripts\\timing_analysis.py",
+        "scripts\\_http.py",
+        "scripts\\_normalize.py",
+        "templates\\source-template.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:10.527531+00:00",
+      "updated_at": "2026-06-24T23:35:10.527531+00:00"
+    },
+    "oss-forensics": {
+      "source": "official",
+      "identifier": "official/security\\oss-forensics",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:fb04c43eef714115",
+      "install_path": "oss-forensics",
+      "files": [
+        "SKILL.md",
+        "references\\evidence-types.md",
+        "references\\github-archive-guide.md",
+        "references\\investigation-templates.md",
+        "references\\recovery-techniques.md",
+        "scripts\\evidence-store.py",
+        "templates\\forensic-report.md",
+        "templates\\malicious-package-report.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:11.254541+00:00",
+      "updated_at": "2026-06-24T23:35:11.254541+00:00"
+    },
+    "outlines": {
+      "source": "github",
+      "identifier": "official/mlops\\inference\\outlines",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:0a54af52f8b857c6",
+      "install_path": "outlines",
+      "files": [
+        "SKILL.md",
+        "references\\backends.md",
+        "references\\examples.md",
+        "references\\json_generation.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T20:39:12.564631+00:00",
+      "updated_at": "2026-06-13T20:39:12.564631+00:00"
+    },
+    "page-agent": {
+      "source": "official",
+      "identifier": "official/web-development\\page-agent",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:1e9063af9638e64a",
+      "install_path": "page-agent",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:30.175112+00:00",
+      "updated_at": "2026-06-09T00:18:30.175112+00:00"
+    },
+    "parallel-cli": {
+      "source": "official",
+      "identifier": "official/research\\parallel-cli",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:31db27819f7929c1",
+      "install_path": "parallel-cli",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:31.697767+00:00",
+      "updated_at": "2026-06-09T00:18:31.697767+00:00"
+    },
+    "peft": {
+      "source": "official",
+      "identifier": "official/mlops\\peft",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:1180472d3e8f8a24",
+      "install_path": "peft",
+      "files": [
+        "SKILL.md",
+        "references\\advanced-usage.md",
+        "references\\troubleshooting.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:11.938747+00:00",
+      "updated_at": "2026-06-24T23:35:11.938747+00:00"
+    },
+    "pinecone": {
+      "source": "official",
+      "identifier": "official/mlops\\pinecone",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:b11245cafd2176a8",
+      "install_path": "pinecone",
+      "files": [
+        "SKILL.md",
+        "references\\deployment.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:12.457977+00:00",
+      "updated_at": "2026-06-24T23:35:12.457977+00:00"
+    },
+    "pinggy-tunnel": {
+      "source": "official",
+      "identifier": "official/devops\\pinggy-tunnel",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:d8854448eb7c3dc4",
+      "install_path": "pinggy-tunnel",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:37.297513+00:00",
+      "updated_at": "2026-06-09T00:18:37.297513+00:00"
+    },
+    "pixel-art": {
+      "source": "official",
+      "identifier": "official/creative\\pixel-art",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6467c054c437e67d",
+      "install_path": "pixel-art",
+      "files": [
+        "ATTRIBUTION.md",
+        "SKILL.md",
+        "references\\palettes.md",
+        "scripts\\palettes.py",
+        "scripts\\pixel_art.py",
+        "scripts\\pixel_art_video.py",
+        "scripts\\__init__.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:13.087832+00:00",
+      "updated_at": "2026-06-24T23:35:13.087832+00:00"
+    },
+    "pokemon-player": {
+      "source": "official",
+      "identifier": "official/gaming\\pokemon-player",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:71a49f95128b0448",
+      "install_path": "pokemon-player",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:40.548172+00:00",
+      "updated_at": "2026-06-09T00:18:40.548172+00:00"
+    },
+    "pptx-author": {
+      "source": "official",
+      "identifier": "official/finance\\pptx-author",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:1a192e5721deab01",
+      "install_path": "pptx-author",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:41.999669+00:00",
+      "updated_at": "2026-06-09T00:18:41.999669+00:00"
+    },
+    "pytorch-fsdp": {
+      "source": "official",
+      "identifier": "official/mlops\\pytorch-fsdp",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:8a9a527d9e896f16",
+      "install_path": "pytorch-fsdp",
+      "files": [
+        "SKILL.md",
+        "references\\index.md",
+        "references\\other.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:14.989233+00:00",
+      "updated_at": "2026-06-24T23:35:14.989233+00:00"
+    },
+    "pytorch-lightning": {
+      "source": "official",
+      "identifier": "official/mlops\\pytorch-lightning",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:7e348ed1f078d618",
+      "install_path": "pytorch-lightning",
+      "files": [
+        "SKILL.md",
+        "references\\callbacks.md",
+        "references\\distributed.md",
+        "references\\hyperparameter-tuning.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:15.718278+00:00",
+      "updated_at": "2026-06-24T23:35:15.718278+00:00"
+    },
+    "qdrant": {
+      "source": "official",
+      "identifier": "official/mlops\\qdrant",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:c41e228ad9287b0d",
+      "install_path": "qdrant",
+      "files": [
+        "SKILL.md",
+        "references\\advanced-usage.md",
+        "references\\troubleshooting.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:16.383723+00:00",
+      "updated_at": "2026-06-24T23:35:16.399559+00:00"
+    },
+    "qmd": {
+      "source": "official",
+      "identifier": "official/research\\qmd",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b42b3c418f554a62",
+      "install_path": "qmd",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:50.613295+00:00",
+      "updated_at": "2026-06-09T00:18:50.613295+00:00"
+    },
+    "rest-graphql-debug": {
+      "source": "official",
+      "identifier": "official/software-development\\rest-graphql-debug",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:b1318cc56bd674f9",
+      "install_path": "rest-graphql-debug",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-11T17:55:55.778428+00:00",
+      "updated_at": "2026-06-11T17:55:55.778428+00:00"
+    },
+    "scrapling": {
+      "source": "official",
+      "identifier": "official/research\\scrapling",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:37583629a790f915",
+      "install_path": "scrapling",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:53.827444+00:00",
+      "updated_at": "2026-06-09T00:18:53.827444+00:00"
+    },
+    "searxng-search": {
+      "source": "official",
+      "identifier": "official/research\\searxng-search",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:cc649a1c4ebd8c74",
+      "install_path": "searxng-search",
+      "files": [
+        "SKILL.md",
+        "scripts\\searxng.sh"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:16.895147+00:00",
+      "updated_at": "2026-06-24T23:35:16.895147+00:00"
+    },
+    "sherlock": {
+      "source": "official",
+      "identifier": "official/security\\sherlock",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:62a5dc6bf75d237e",
+      "install_path": "sherlock",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:56.828773+00:00",
+      "updated_at": "2026-06-09T00:18:56.828773+00:00"
+    },
+    "shop-app": {
+      "source": "official",
+      "identifier": "official/productivity\\shop-app",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:3aebde2e16cf9d82",
+      "install_path": "shop-app",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-09T00:18:58.471687+00:00",
+      "updated_at": "2026-06-09T00:18:58.471687+00:00"
+    },
+    "shopify": {
+      "source": "official",
+      "identifier": "official/productivity\\shopify",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:e1f24c102d239c29",
+      "install_path": "shopify",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-11T17:55:57.609478+00:00",
+      "updated_at": "2026-06-11T17:55:57.609478+00:00"
+    },
+    "simpo": {
+      "source": "official",
+      "identifier": "official/mlops\\simpo",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:442288b99690f7e2",
+      "install_path": "simpo",
+      "files": [
+        "SKILL.md",
+        "references\\datasets.md",
+        "references\\hyperparameters.md",
+        "references\\loss-functions.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:17.540658+00:00",
+      "updated_at": "2026-06-24T23:35:17.540658+00:00"
+    },
+    "siyuan": {
+      "source": "official",
+      "identifier": "official/productivity\\siyuan",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:87aa41cc4356bb7a",
+      "install_path": "siyuan",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-11T17:55:59.720558+00:00",
+      "updated_at": "2026-06-11T17:55:59.720558+00:00"
+    },
+    "solana": {
+      "source": "official",
+      "identifier": "official/blockchain\\solana",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:d25be41700391687",
+      "install_path": "solana",
+      "files": [
+        "SKILL.md",
+        "scripts\\solana_client.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:18.125337+00:00",
+      "updated_at": "2026-06-24T23:35:18.125337+00:00"
+    },
+    "stable-diffusion": {
+      "source": "official",
+      "identifier": "official/mlops\\stable-diffusion",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:d025670ab21f4708",
+      "install_path": "stable-diffusion",
+      "files": [
+        "SKILL.md",
+        "references\\advanced-usage.md",
+        "references\\troubleshooting.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:18.810575+00:00",
+      "updated_at": "2026-06-24T23:35:18.810575+00:00"
+    },
+    "stocks": {
+      "source": "official",
+      "identifier": "official/finance\\stocks",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:a4fd535aee606278",
+      "install_path": "stocks",
+      "files": [
+        "SKILL.md",
+        "scripts\\stocks_client.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:19.404746+00:00",
+      "updated_at": "2026-06-24T23:35:19.404746+00:00"
+    },
+    "subagent-driven-development": {
+      "source": "official",
+      "identifier": "official/software-development\\subagent-driven-development",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:8b771934af081b14",
+      "install_path": "subagent-driven-development",
+      "files": [
+        "SKILL.md",
+        "references\\context-budget-discipline.md",
+        "references\\gates-taxonomy.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:19.934786+00:00",
+      "updated_at": "2026-06-24T23:35:19.934786+00:00"
+    },
+    "telephony": {
+      "source": "official",
+      "identifier": "official/productivity\\telephony",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:56ef28493cd8e97d",
+      "install_path": "telephony",
+      "files": [
+        "SKILL.md",
+        "scripts\\telephony.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:20.640652+00:00",
+      "updated_at": "2026-06-24T23:35:20.640652+00:00"
+    },
+    "tensorrt-llm": {
+      "source": "official",
+      "identifier": "official/mlops\\tensorrt-llm",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:c0996d87f00bef05",
+      "install_path": "tensorrt-llm",
+      "files": [
+        "SKILL.md",
+        "references\\multi-gpu.md",
+        "references\\optimization.md",
+        "references\\serving.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:21.256104+00:00",
+      "updated_at": "2026-06-24T23:35:21.256104+00:00"
+    },
+    "unsloth": {
+      "source": "github",
+      "identifier": "official/mlops\\training\\unsloth",
+      "trust_level": "community",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:1c14feea41296c39",
+      "install_path": "unsloth",
+      "files": [
+        "SKILL.md",
+        "references\\index.md",
+        "references\\llms-full.md",
+        "references\\llms-txt.md",
+        "references\\llms.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T20:39:47.960585+00:00",
+      "updated_at": "2026-06-13T20:39:47.960585+00:00"
+    },
+    "watchers": {
+      "source": "official",
+      "identifier": "official/devops\\watchers",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:518e2408fb848189",
+      "install_path": "watchers",
+      "files": [
+        "SKILL.md",
+        "scripts\\watch_github.py",
+        "scripts\\watch_http_json.py",
+        "scripts\\watch_rss.py",
+        "scripts\\_watermark.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:21.825999+00:00",
+      "updated_at": "2026-06-24T23:35:21.825999+00:00"
+    },
+    "web-pentest": {
+      "source": "official",
+      "identifier": "official/security\\web-pentest",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:7a2389f7b0e79c92",
+      "install_path": "web-pentest",
+      "files": [
+        "SKILL.md",
+        "references\\bypass-techniques.md",
+        "references\\exploitation-techniques.md",
+        "references\\scope-enforcement.md",
+        "references\\vuln-taxonomy.md",
+        "scripts\\recon-scan.sh",
+        "templates\\authorization.md",
+        "templates\\exploitation-queue.json",
+        "templates\\pentest-report.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:22.481158+00:00",
+      "updated_at": "2026-06-24T23:35:22.481158+00:00"
+    },
+    "whisper": {
+      "source": "official",
+      "identifier": "official/mlops\\whisper",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:9f96b95bc29b98f1",
+      "install_path": "whisper",
+      "files": [
+        "SKILL.md",
+        "references\\languages.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:23.008083+00:00",
+      "updated_at": "2026-06-24T23:35:23.008083+00:00"
+    },
+    "bun-nextjs": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/secondsky/claude-skills/bun-nextjs",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:c874b4f127a94806",
+      "install_path": "bun-nextjs",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:27.136236+00:00",
+      "updated_at": "2026-06-24T23:35:27.136236+00:00"
+    },
+    "bun-shell": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/secondsky/claude-skills/bun-shell",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:11fc32bfbf25ff35",
+      "install_path": "bun-shell",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "detail_url": "https://skills.sh/secondsky/claude-skills/bun-shell",
+        "repo_url": "https://github.com/secondsky/claude-skills"
+      },
+      "installed_at": "2026-06-24T23:35:41.652454+00:00",
+      "updated_at": "2026-06-24T23:35:41.652454+00:00"
+    },
+    "ci-cd-best-practices": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/mindrally/skills/ci-cd-best-practices",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:f81b346e7b796c2c",
+      "install_path": "ci-cd-best-practices",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:45.353610+00:00",
+      "updated_at": "2026-06-24T23:35:45.353610+00:00"
+    },
+    "ci-cd-pipeline-builder": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/alirezarezvani/claude-skills/ci-cd-pipeline-builder",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:7faeaa60caded9a6",
+      "install_path": "ci-cd-pipeline-builder",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "references/deployment-gates.md",
+        "references/github-actions-templates.md",
+        "references/gitlab-ci-templates.md",
+        "references/pipeline-design-notes.md",
+        "scripts/pipeline_generator.py",
+        "scripts/stack_detector.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:35:54.994113+00:00",
+      "updated_at": "2026-06-24T23:35:54.994113+00:00"
+    },
+    "django-application": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/aj-geddes/useful-ai-prompts/django-application",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:5a417fa6a08c671e",
+      "install_path": "django-application",
+      "files": [
+        "SKILL.md",
+        "references/admin-interface-customization.md",
+        "references/authentication-and-permissions.md",
+        "references/database-queries-and-optimization.md",
+        "references/django-project-setup.md",
+        "references/model-design-with-orm.md",
+        "references/url-routing.md",
+        "references/views-with-class-based-and-function-based-approaches.md",
+        "scripts/validate-schema.sh",
+        "templates/migration-template.sql"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:36:05.697852+00:00",
+      "updated_at": "2026-06-24T23:36:05.697852+00:00"
+    },
+    "django-celery": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/affaan-m/everything-claude-code/django-celery",
+      "trust_level": "community",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:67641411128943bd",
+      "install_path": "django-celery",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:36:10.761964+00:00",
+      "updated_at": "2026-06-24T23:36:10.761964+00:00"
+    },
+    "drawio-skill": {
+      "source": "github",
+      "identifier": "drawio-skill",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6bca2b5adae5edc0",
+      "install_path": "drawio-skill",
+      "files": [
+        "agents/openai.yaml",
+        "README.md",
+        "skill-card.md",
+        "SKILL.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T17:31:20.944573+00:00",
+      "updated_at": "2026-06-13T17:31:20.944573+00:00"
+    },
+    "youtube-full": {
+      "source": "github",
+      "identifier": "youtube-full",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:1becce6b3c9445aa",
+      "install_path": "youtube-full",
+      "files": [
+        "references/auth-setup.md",
+        "skill-card.md",
+        "SKILL.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-13T17:31:58.636053+00:00",
+      "updated_at": "2026-06-13T17:31:58.636053+00:00"
+    },
+    "chainlink": {
+      "source": "clawhub",
+      "identifier": "chainlink",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6f19de8fdf0de414",
+      "install_path": "chainlink",
+      "files": [
+        "skill-card.md",
+        "SKILL.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-24T23:36:17.703688+00:00",
+      "updated_at": "2026-06-24T23:36:17.703688+00:00"
+    },
+    "mpp-agent": {
+      "source": "official",
+      "identifier": "official/payments\\mpp-agent",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:5ca98a3caa0050d3",
+      "install_path": "mpp-agent",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T00:54:42.909935+00:00",
+      "updated_at": "2026-06-25T00:54:42.909935+00:00"
+    },
+    "stripe-projects": {
+      "source": "official",
+      "identifier": "official/payments\\stripe-projects",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:4b902fbb877ec03f",
+      "install_path": "stripe-projects",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T00:54:47.835821+00:00",
+      "updated_at": "2026-06-25T00:54:47.835821+00:00"
+    },
+    "firecrawl-agent": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:46b4ef5c7971fed9",
+      "install_path": "firecrawl-agent",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T00:54:56.358769+00:00",
+      "updated_at": "2026-06-25T00:54:56.358769+00:00"
+    },
+    "cloudflare-temporary-deploy": {
+      "source": "official",
+      "identifier": "official/web-development\\cloudflare-temporary-deploy",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:3215a951a4bc12c2",
+      "install_path": "cloudflare-temporary-deploy",
+      "files": [
+        "SKILL.md",
+        "scripts\\parse_deploy_output.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T00:57:54.281531+00:00",
+      "updated_at": "2026-06-25T00:57:54.281531+00:00"
+    },
+    "firecrawl-scrape": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl-scrape",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6e6a34b18afa367e",
+      "install_path": "firecrawl-scrape",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T01:00:44.016305+00:00",
+      "updated_at": "2026-06-25T01:00:44.016305+00:00"
+    },
+    "firecrawl-search": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl-search",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:44ff49ea0737307b",
+      "install_path": "firecrawl-search",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T01:00:54.419226+00:00",
+      "updated_at": "2026-06-25T01:00:54.419226+00:00"
+    },
+    "firecrawl-crawl": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl-crawl",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6ee8581a108a256c",
+      "install_path": "firecrawl-crawl",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T01:01:05.162337+00:00",
+      "updated_at": "2026-06-25T01:01:05.162337+00:00"
+    },
+    "firecrawl-map": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl-map",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:5713f054608d3f3b",
+      "install_path": "firecrawl-map",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T01:01:15.874234+00:00",
+      "updated_at": "2026-06-25T01:01:15.874234+00:00"
+    },
+    "firecrawl-download": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/firecrawl/cli/firecrawl-download",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:aece30f8b5aceadd",
+      "install_path": "firecrawl-download",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-25T01:01:32.153646+00:00",
+      "updated_at": "2026-06-25T01:01:32.153646+00:00"
+    }
+  }
+}
