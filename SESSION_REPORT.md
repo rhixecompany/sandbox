@@ -2,6 +2,8 @@
 
 Rolling 41-session summary (most recent first).
 
+2026-06-28T23:27:26+01:00 unknown | 20260628_232704_08facd | default | unknown
+2026-06-28T23:13:28+01:00 unknown | 20260628_231210_ec38f9 | default | unknown
 2026-06-28T23:12:11+01:00 unknown | 20260628_231210_ec38f9 | default | unknown
 2026-06-28T23:08:56+01:00 unknown | 20260628_230225_0414cc | default | unknown
 2026-06-28T23:00:23+01:00 unknown | 20260628_225831_3ce16f | default | unknown
@@ -41,5 +43,3 @@ Rolling 41-session summary (most recent first).
 2026-06-25T04:02:15+01:00 unknown | 20260625_040154_6b13aa | default | unknown
 2026-06-25T04:01:42+01:00 unknown | 20260625_040119_7eac9f | default | unknown
 2026-06-25T04:01:36+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
-2026-06-25T04:00:48+01:00 unknown | 20260625_040027_b49cd3 | default | unknown
-2026-06-25T03:59:02+01:00 unknown | 20260625_035833_a11ed6 | default | unknown
