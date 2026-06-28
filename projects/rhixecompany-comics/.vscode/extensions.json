@@ -5,7 +5,7 @@
         "ms-python.debugpy",
         "ms-python.vscode-python-envs",
         "batisteo.vscode-django",
-        "monosans.djlint",
+        "amannn.vscode-djlint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
         "dbaeumer.vscode-eslint",

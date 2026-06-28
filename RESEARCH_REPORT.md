@@ -15,10 +15,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| django-cookiecutter | https://github.com/cookiecutter/cookiecutter-django | Reference — the most starred Django project template; this project is a Tailwind-specific fork |
-| django-tailwind-cli | https://pypi.org/project/django-tailwind-cli | Standalone Tailwind CSS CLI integration for Django (2026 update) |
+| Project             | URL                                                   | Why Relevant                                                                                   |
+| ------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| django-cookiecutter | <https://github.com/cookiecutter/cookiecutter-django> | Reference — the most starred Django project template; this project is a Tailwind-specific fork |
+| django-tailwind-cli | <https://pypi.org/project/django-tailwind-cli>        | Standalone Tailwind CSS CLI integration for Django (2026 update)                               |
 
 ---
 
@@ -46,11 +46,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| Django 5.x settings layering | https://docs.djangoproject.com/en/5.2/topics/settings/ | Docs |
-| django-tailwind CLI | https://django-tailwind.readthedocs.io/en/latest/installation.html | Guide |
-| Django deploy checklist | https://docs.djangoproject.com/en/6.0/howto/deployment/checklist | Checklist |
+| Topic                        | Resource                                                             | Type      |
+| ---------------------------- | -------------------------------------------------------------------- | --------- |
+| Django 5.x settings layering | <https://docs.djangoproject.com/en/5.2/topics/settings/>             | Docs      |
+| django-tailwind CLI          | <https://django-tailwind.readthedocs.io/en/latest/installation.html> | Guide     |
+| Django deploy checklist      | <https://docs.djangoproject.com/en/6.0/howto/deployment/checklist>   | Checklist |
 
 ---
 
@@ -66,12 +66,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| Single settings.py | Security leaks, env confusion | Use 3-tier settings (base/local/production) |
-| django-tailwind npm version drift | Broken Tailwind builds | Use `django-tailwind-cli` standalone binary |
-| Missing `check --deploy` | Production config regressions | Run `check --deploy` in CI/deploy pipeline |
-| No CSP headers | XSS vulnerabilities | Add django-csp with REPORT_ONLY first |
+| Pitfall                           | Impact                        | Avoidance                                   |
+| --------------------------------- | ----------------------------- | ------------------------------------------- |
+| Single settings.py                | Security leaks, env confusion | Use 3-tier settings (base/local/production) |
+| django-tailwind npm version drift | Broken Tailwind builds        | Use `django-tailwind-cli` standalone binary |
+| Missing `check --deploy`          | Production config regressions | Run `check --deploy` in CI/deploy pipeline  |
+| No CSP headers                    | XSS vulnerabilities           | Add django-csp with REPORT_ONLY first       |
 
 ---
 
@@ -102,12 +102,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| Official Docs | https://docs.djangoproject.com/en/5.2/ | Django 5.x official documentation |
-| django-tailwind | https://django-tailwind.readthedocs.io/ | Tailwind CSS integration for Django |
-| Cookiecutter Django | https://github.com/cookiecutter/cookiecutter-django | Reference Django project template |
-| Community | https://www.reddit.com/r/django/ | Django community discussions |
+| Resource            | URL                                                   | Description                         |
+| ------------------- | ----------------------------------------------------- | ----------------------------------- |
+| Official Docs       | <https://docs.djangoproject.com/en/5.2/>              | Django 5.x official documentation   |
+| django-tailwind     | <https://django-tailwind.readthedocs.io/>             | Tailwind CSS integration for Django |
+| Cookiecutter Django | <https://github.com/cookiecutter/cookiecutter-django> | Reference Django project template   |
+| Community           | <https://www.reddit.com/r/django/>                    | Django community discussions        |
 
 ---
 
@@ -121,10 +121,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| codingforentrepreneurs/Web-Scraping-with-Django-Celery | https://github.com/codingforentrepreneurs/Web-Scraping-with-Django-Celery | Reference — Django + Celery scraping scheduler |
-| scrapingbee/selenium-python | https://www.scrapingbee.com/blog/selenium-python | Modern Selenium scraping guide (2026) |
+| Project                                                | URL                                                                         | Why Relevant                                   |
+| ------------------------------------------------------ | --------------------------------------------------------------------------- | ---------------------------------------------- |
+| codingforentrepreneurs/Web-Scraping-with-Django-Celery | <https://github.com/codingforentrepreneurs/Web-Scraping-with-Django-Celery> | Reference — Django + Celery scraping scheduler |
+| scrapingbee/selenium-python                            | <https://www.scrapingbee.com/blog/selenium-python>                          | Modern Selenium scraping guide (2026)          |
 
 ---
 
@@ -152,11 +152,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| Celery + Django | https://oneuptime.com/blog/post/2026-01-26-django-celery-background-tasks/ | Guide |
-| Selenium scraping | https://www.scrapingbee.com/blog/selenium-python | Tutorial |
-| Anti-detection tools | https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools | Guide |
+| Topic                | Resource                                                                     | Type     |
+| -------------------- | ---------------------------------------------------------------------------- | -------- |
+| Celery + Django      | <https://oneuptime.com/blog/post/2026-01-26-django-celery-background-tasks/> | Guide    |
+| Selenium scraping    | <https://www.scrapingbee.com/blog/selenium-python>                           | Tutorial |
+| Anti-detection tools | <https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools>                  | Guide    |
 
 ---
 
@@ -171,12 +171,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| Missing User-Agent rotation | IP blocking | Use Scrapy's `RotatingUserAgentMiddleware` |
-| No rate limiting | Site overload / ban | Configure `DOWNLOAD_DELAY` + `CONCURRENT_REQUESTS` |
-| Selenium `webdriver` flag detected | Anti-bot CAPTCHA | Use `undetected-chromedriver` |
-| Celery broker not running | Tasks silently lost | Always verify Redis/RabbitMQ is up |
+| Pitfall                            | Impact              | Avoidance                                          |
+| ---------------------------------- | ------------------- | -------------------------------------------------- |
+| Missing User-Agent rotation        | IP blocking         | Use Scrapy's `RotatingUserAgentMiddleware`         |
+| No rate limiting                   | Site overload / ban | Configure `DOWNLOAD_DELAY` + `CONCURRENT_REQUESTS` |
+| Selenium `webdriver` flag detected | Anti-bot CAPTCHA    | Use `undetected-chromedriver`                      |
+| Celery broker not running          | Tasks silently lost | Always verify Redis/RabbitMQ is up                 |
 
 ---
 
@@ -207,12 +207,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| Scrapy Docs | https://docs.scrapy.org/ | Scrapy framework documentation |
-| Selenium Docs | https://www.selenium.dev/documentation/ | Browser automation docs |
-| Celery Docs | https://docs.celeryq.dev/ | Celery task queue docs |
-| Anti-bot tools | https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools | 2026 anti-detection comparison |
+| Resource       | URL                                                         | Description                    |
+| -------------- | ----------------------------------------------------------- | ------------------------------ |
+| Scrapy Docs    | <https://docs.scrapy.org/>                                  | Scrapy framework documentation |
+| Selenium Docs  | <https://www.selenium.dev/documentation/>                   | Browser automation docs        |
+| Celery Docs    | <https://docs.celeryq.dev/>                                 | Celery task queue docs         |
+| Anti-bot tools | <https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools> | 2026 anti-detection comparison |
 
 ---
 
@@ -226,10 +226,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| django-react-ecommerce | https://github.com/aishwaryaw/E-commerce-website-using-React-and-Django | Reference — similar Django + React ecommerce pattern |
-| JustDjango PayPal guide | https://justdjango.com/blog/django-react-paypal-payments | PayPal webhook + Django integration tutorial |
+| Project                 | URL                                                                       | Why Relevant                                         |
+| ----------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------- |
+| django-react-ecommerce  | <https://github.com/aishwaryaw/E-commerce-website-using-React-and-Django> | Reference — similar Django + React ecommerce pattern |
+| JustDjango PayPal guide | <https://justdjango.com/blog/django-react-paypal-payments>                | PayPal webhook + Django integration tutorial         |
 
 ---
 
@@ -256,11 +256,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| DRF API versioning | https://oneuptime.com/blog/post/2026-02-02-django-api-versioning/ | Guide |
-| PayPal + Django | https://justdjango.com/blog/django-react-paypal-payments | Tutorial |
-| RTK Query | https://redux-toolkit.js.org/rtk-query/overview | Docs |
+| Topic              | Resource                                                            | Type     |
+| ------------------ | ------------------------------------------------------------------- | -------- |
+| DRF API versioning | <https://oneuptime.com/blog/post/2026-02-02-django-api-versioning/> | Guide    |
+| PayPal + Django    | <https://justdjango.com/blog/django-react-paypal-payments>          | Tutorial |
+| RTK Query          | <https://redux-toolkit.js.org/rtk-query/overview>                   | Docs     |
 
 ---
 
@@ -275,12 +275,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| No API versioning | Breaking changes affect existing clients | Use `/api/v1/` URL prefix from day one |
-| PayPal webhook unverified | Fraudulent order processing | Verify webhook signature via PayPal SDK |
-| CORS misconfiguration | Frontend can't reach API | Add django-cors-headers; configure CORS_ORIGIN_WHITELIST |
-| No pagination on list endpoints | Slow API responses | Add DRF pagination (PageNumberPagination recommended) |
+| Pitfall                         | Impact                                   | Avoidance                                                |
+| ------------------------------- | ---------------------------------------- | -------------------------------------------------------- |
+| No API versioning               | Breaking changes affect existing clients | Use `/api/v1/` URL prefix from day one                   |
+| PayPal webhook unverified       | Fraudulent order processing              | Verify webhook signature via PayPal SDK                  |
+| CORS misconfiguration           | Frontend can't reach API                 | Add django-cors-headers; configure CORS_ORIGIN_WHITELIST |
+| No pagination on list endpoints | Slow API responses                       | Add DRF pagination (PageNumberPagination recommended)    |
 
 ---
 
@@ -312,12 +312,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| DRF Docs | https://www.django-rest-framework.org/ | Django REST Framework official docs |
-| Redux Toolkit | https://redux-toolkit.js.org/ | Redux Toolkit official docs |
-| PayPal API | https://developer.paypal.com/docs/api/orders/v2/ | PayPal Orders API v2 |
-| Docker Compose | https://docs.docker.com/compose/ | Docker Compose documentation |
+| Resource       | URL                                                | Description                         |
+| -------------- | -------------------------------------------------- | ----------------------------------- |
+| DRF Docs       | <https://www.django-rest-framework.org/>           | Django REST Framework official docs |
+| Redux Toolkit  | <https://redux-toolkit.js.org/>                    | Redux Toolkit official docs         |
+| PayPal API     | <https://developer.paypal.com/docs/api/orders/v2/> | PayPal Orders API v2                |
+| Docker Compose | <https://docs.docker.com/compose/>                 | Docker Compose documentation        |
 
 ---
 
@@ -331,10 +331,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| django-cms | https://www.django-cms.org/ | Enterprise Django CMS with CKEditor 5 support (2026) |
-| Wagtail CMS | https://wagtail.org/ | The most popular Django CMS alternative |
+| Project     | URL                           | Why Relevant                                         |
+| ----------- | ----------------------------- | ---------------------------------------------------- |
+| django-cms  | <https://www.django-cms.org/> | Enterprise Django CMS with CKEditor 5 support (2026) |
+| Wagtail CMS | <https://wagtail.org/>        | The most popular Django CMS alternative              |
 
 ---
 
@@ -361,12 +361,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| GCS best practices | https://cloud.google.com/storage/docs/best-practices | Guide |
-| Django + Cloud Run | https://oneuptime.com/blog/post/2026-02-17-how-to-build-a-django-application-with-cloud-sql-and-deploy-to-cloud-run/ | Guide |
-| Django-ckeditor-5 | https://github.com/solaris17/django-ckeditor-5 | GitHub |
-
+| Topic              | Resource                                                                                                               | Type   |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------ |
+| GCS best practices | <https://cloud.google.com/storage/docs/best-practices>                                                                 | Guide  |
+| Django + Cloud Run | <https://oneuptime.com/blog/post/2026-02-17-how-to-build-a-django-application-with-cloud-sql-and-deploy-to-cloud-run/> | Guide  |
+| Django-ckeditor-5  | <https://github.com/solaris17/django-ckeditor-5>                                                                       | GitHub |
 
 ## Best Practices
 
@@ -379,12 +378,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| No GCS credentials in `.env` | `collectstatic` fails with auth errors | Use GOOGLE_APPLICATION_CREDENTIALS JSON path |
-| CKEditor 5 upload not configured | Broken image upload UX | Implement custom upload endpoint for CKEditor |
-| Cloud Run DB connection exhaustion | 500 errors under load | Set MAX_CONNECTIONS and use connection pooling |
-| Missing ALLOWED_HOSTS | 400 Bad Request errors | Configure ALLOWED_HOSTS for GCP domains |
+| Pitfall                            | Impact                                 | Avoidance                                      |
+| ---------------------------------- | -------------------------------------- | ---------------------------------------------- |
+| No GCS credentials in `.env`       | `collectstatic` fails with auth errors | Use GOOGLE_APPLICATION_CREDENTIALS JSON path   |
+| CKEditor 5 upload not configured   | Broken image upload UX                 | Implement custom upload endpoint for CKEditor  |
+| Cloud Run DB connection exhaustion | 500 errors under load                  | Set MAX_CONNECTIONS and use connection pooling |
+| Missing ALLOWED_HOSTS              | 400 Bad Request errors                 | Configure ALLOWED_HOSTS for GCP domains        |
 
 ---
 
@@ -416,12 +415,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| Django Docs | https://docs.djangoproject.com/en/4.2/ | Django 4.x documentation |
-| Google Cloud Storage | https://cloud.google.com/storage/docs | GCS best practices |
-| django-ckeditor-5 | https://github.com/solaris17/django-ckeditor-5 | CKEditor 5 Django integration |
-| django-storages | https://django-storages.readthedocs.io/ | Django storage backends |
+| Resource             | URL                                              | Description                   |
+| -------------------- | ------------------------------------------------ | ----------------------------- |
+| Django Docs          | <https://docs.djangoproject.com/en/4.2/>         | Django 4.x documentation      |
+| Google Cloud Storage | <https://cloud.google.com/storage/docs>          | GCS best practices            |
+| django-ckeditor-5    | <https://github.com/solaris17/django-ckeditor-5> | CKEditor 5 Django integration |
+| django-storages      | <https://django-storages.readthedocs.io/>        | Django storage backends       |
 
 ---
 
@@ -435,10 +434,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| Django + Next.js cookiecutter | https://www.reddit.com/r/django/comments/1cbbmru/django_and_nextjs_cookiecutter_monorepo | Community patterns for Django + Next.js monorepos |
-| Next.js + PostgreSQL + Redis Docker | https://oneuptime.com/blog/post/2026-02-08-how-to-set-up-a-nextjs-postgresql-redis-stack-with-docker-compose/ | Reference Docker Compose setup |
+| Project                             | URL                                                                                                             | Why Relevant                                      |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Django + Next.js cookiecutter       | <https://www.reddit.com/r/django/comments/1cbbmru/django_and_nextjs_cookiecutter_monorepo>                      | Community patterns for Django + Next.js monorepos |
+| Next.js + PostgreSQL + Redis Docker | <https://oneuptime.com/blog/post/2026-02-08-how-to-set-up-a-nextjs-postgresql-redis-stack-with-docker-compose/> | Reference Docker Compose setup                    |
 
 ---
 
@@ -466,11 +465,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| Next.js 16 App Router | https://nextjs.org/docs/app | Official Docs |
-| Celery + Django | https://docs.celeryq.dev/en/stable/django/ | Integration Guide |
-| Docker Compose multi-service | https://oneuptime.com/blog/post/2026-02-08-how-to-set-up-a-nextjs-postgresql-redis-stack-with-docker-compose/ | Tutorial |
+| Topic                        | Resource                                                                                                        | Type              |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Next.js 16 App Router        | <https://nextjs.org/docs/app>                                                                                   | Official Docs     |
+| Celery + Django              | <https://docs.celeryq.dev/en/stable/django/>                                                                    | Integration Guide |
+| Docker Compose multi-service | <https://oneuptime.com/blog/post/2026-02-08-how-to-set-up-a-nextjs-postgresql-redis-stack-with-docker-compose/> | Tutorial          |
 
 ---
 
@@ -485,12 +484,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| API field drift | Runtime type mismatches | Generate TypeScript types from OpenAPI spec |
-| Client Component misuse | Bloated JS bundles | Default to Server Component; migrate only interactive parts |
-| Celery beat not synced | Missed or duplicate scraping jobs | Use django-celery-beat scheduler with DB backend |
-| CORS on `/api/` Django routes | Next.js can't fetch | Configure django-cors-headers for Next.js frontend domain |
+| Pitfall                       | Impact                            | Avoidance                                                   |
+| ----------------------------- | --------------------------------- | ----------------------------------------------------------- |
+| API field drift               | Runtime type mismatches           | Generate TypeScript types from OpenAPI spec                 |
+| Client Component misuse       | Bloated JS bundles                | Default to Server Component; migrate only interactive parts |
+| Celery beat not synced        | Missed or duplicate scraping jobs | Use django-celery-beat scheduler with DB backend            |
+| CORS on `/api/` Django routes | Next.js can't fetch               | Configure django-cors-headers for Next.js frontend domain   |
 
 ---
 
@@ -523,12 +522,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| Next.js 16 Docs | https://nextjs.org/docs | Next.js App Router documentation |
-| Django Docs | https://docs.djangoproject.com/en/5.2/ | Django 5.x documentation |
-| Celery Docs | https://docs.celeryq.dev/ | Celery task queue documentation |
-| Docker Compose | https://docs.docker.com/compose/ | Multi-service orchestration |
+| Resource        | URL                                      | Description                      |
+| --------------- | ---------------------------------------- | -------------------------------- |
+| Next.js 16 Docs | <https://nextjs.org/docs>                | Next.js App Router documentation |
+| Django Docs     | <https://docs.djangoproject.com/en/5.2/> | Django 5.x documentation         |
+| Celery Docs     | <https://docs.celeryq.dev/>              | Celery task queue documentation  |
+| Docker Compose  | <https://docs.docker.com/compose/>       | Multi-service orchestration      |
 
 ---
 
@@ -542,10 +541,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| Django + React guide | https://fdcservers.net/blog/how-to-build-a-simple-app-with-django-and-react | Django + React CORS setup patterns |
-| CRA migration to Vite | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | CRA deprecation and migration path |
+| Project               | URL                                                                                                    | Why Relevant                       |
+| --------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| Django + React guide  | <https://fdcservers.net/blog/how-to-build-a-simple-app-with-django-and-react>                          | Django + React CORS setup patterns |
+| CRA migration to Vite | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | CRA deprecation and migration path |
 
 ---
 
@@ -572,11 +571,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| CRA → Vite migration | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | Guide |
-| Django CORS | https://pypi.org/project/django-cors-headers/ | Package |
-| PostgreSQL pooling | https://www.pgbouncer.org/ | Guide |
+| Topic                | Resource                                                                                               | Type    |
+| -------------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+| CRA → Vite migration | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | Guide   |
+| Django CORS          | <https://pypi.org/project/django-cors-headers/>                                                        | Package |
+| PostgreSQL pooling   | <https://www.pgbouncer.org/>                                                                           | Guide   |
 
 ---
 
@@ -591,12 +590,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| CRA deprecation | No security patches, slow builds | Migrate to Vite as soon as possible |
-| Dual backend drift | API inconsistency | Consolidate API surface into DRF |
-| DB connection exhaustion | Application outages | Implement pgbouncer with connection limits |
-| Port confusion (3 services) | Dev environment errors | Document port mapping: Express :5000, Django :8000, React :3000 |
+| Pitfall                     | Impact                           | Avoidance                                                       |
+| --------------------------- | -------------------------------- | --------------------------------------------------------------- |
+| CRA deprecation             | No security patches, slow builds | Migrate to Vite as soon as possible                             |
+| Dual backend drift          | API inconsistency                | Consolidate API surface into DRF                                |
+| DB connection exhaustion    | Application outages              | Implement pgbouncer with connection limits                      |
+| Port confusion (3 services) | Dev environment errors           | Document port mapping: Express :5000, Django :8000, React :3000 |
 
 ---
 
@@ -628,12 +627,12 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| Vite migration | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | CRA → Vite guide |
-| Django REST Framework | https://www.django-rest-framework.org/ | DRF official docs |
-| Express.js | https://expressjs.com/ | Express web framework |
-| pgbouncer | https://www.pgbouncer.org/ | PostgreSQL connection pooler |
+| Resource              | URL                                                                                                    | Description                  |
+| --------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- |
+| Vite migration        | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | CRA → Vite guide             |
+| Django REST Framework | <https://www.django-rest-framework.org/>                                                               | DRF official docs            |
+| Express.js            | <https://expressjs.com/>                                                                               | Express web framework        |
+| pgbouncer             | <https://www.pgbouncer.org/>                                                                           | PostgreSQL connection pooler |
 
 ---
 
@@ -647,10 +646,10 @@
 
 ## Similar Projects
 
-| Project | URL | Why Relevant |
-| ------- | --- | ------------ |
-| DRF + SimpleJWT auth | https://www.django-rest-framework.org/api-guide/authentication/ | DRF JWT authentication docs |
-| MUI v4 → v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Material-UI v4 to v5 migration guide |
+| Project               | URL                                                               | Why Relevant                         |
+| --------------------- | ----------------------------------------------------------------- | ------------------------------------ |
+| DRF + SimpleJWT auth  | <https://www.django-rest-framework.org/api-guide/authentication/> | DRF JWT authentication docs          |
+| MUI v4 → v5 migration | <https://mui.com/material-ui/migration/migration-v4/>             | Material-UI v4 to v5 migration guide |
 
 ---
 
@@ -679,11 +678,11 @@
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-| ----- | -------- | ---- |
-| MUI v4→v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Migration Guide |
-| React 18 upgrade | https://react.dev/blog/2022/03/08/react-18-upgrade-guide | Guide |
-| DRF SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | Docs |
+| Topic               | Resource                                                   | Type            |
+| ------------------- | ---------------------------------------------------------- | --------------- |
+| MUI v4→v5 migration | <https://mui.com/material-ui/migration/migration-v4/>      | Migration Guide |
+| React 18 upgrade    | <https://react.dev/blog/2022/03/08/react-18-upgrade-guide> | Guide           |
+| DRF SimpleJWT       | <https://django-rest-framework-simplejwt.readthedocs.io/>  | Docs            |
 
 ---
 
@@ -698,12 +697,12 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-| ------- | ------ | --------- |
-| MUI v4 JSS → Emotion breakage | Styling completely broken after upgrade | Use codemods; run `npx @mui/codemod v5.0.0/preset-safe` |
-| React 17 createRoot missing | App doesn't render | Update to `createRoot()` API for React 18 |
-| SimpleJWT + allauth URL conflicts | Auth routes clash | Carefully namespace allauth URLs under `/accounts/` |
-| CORS + proxy confusion | Frontend can't reach backend | Document CORS + proxy setup; test with production config early |
+| Pitfall                           | Impact                                  | Avoidance                                                      |
+| --------------------------------- | --------------------------------------- | -------------------------------------------------------------- |
+| MUI v4 JSS → Emotion breakage     | Styling completely broken after upgrade | Use codemods; run `npx @mui/codemod v5.0.0/preset-safe`        |
+| React 17 createRoot missing       | App doesn't render                      | Update to `createRoot()` API for React 18                      |
+| SimpleJWT + allauth URL conflicts | Auth routes clash                       | Carefully namespace allauth URLs under `/accounts/`            |
+| CORS + proxy confusion            | Frontend can't reach backend            | Document CORS + proxy setup; test with production config early |
 
 ---
 
@@ -736,10 +735,10 @@
 
 ## Resources
 
-| Resource | URL | Description |
-| -------- | --- | ----------- |
-| React 18 Docs | https://react.dev/ | React official documentation |
-| Material-UI v5 | https://mui.com/ | MUI v5 documentation |
-| SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | DRF JWT auth docs |
-| django-allauth | https://docs.allauth.org/ | Social auth integration |
-| PayPal Developer | https://developer.paypal.com/ | PayPal API documentation |
+| Resource         | URL                                                       | Description                  |
+| ---------------- | --------------------------------------------------------- | ---------------------------- |
+| React 18 Docs    | <https://react.dev/>                                      | React official documentation |
+| Material-UI v5   | <https://mui.com/>                                        | MUI v5 documentation         |
+| SimpleJWT        | <https://django-rest-framework-simplejwt.readthedocs.io/> | DRF JWT auth docs            |
+| django-allauth   | <https://docs.allauth.org/>                               | Social auth integration      |
+| PayPal Developer | <https://developer.paypal.com/>                           | PayPal API documentation     |

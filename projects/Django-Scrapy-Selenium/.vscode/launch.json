@@ -2,20 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Node.js: Current File",
-      "type": "node",
+      "name": "Django: Runserver",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": ["runserver"],
+      "django": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Django: Test",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": ["test", "--keepdb", "--verbosity=2"],
+      "django": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal"
     },
     {
-      "name": "npm start",
+      "name": "Node.js: Current File",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "start"
-      ],
+      "program": "${file}",
       "console": "integratedTerminal"
     }
   ]

@@ -1,86 +1,25 @@
 {
-	"tasks": [
-		{
-			"command": "bun run format",
-			"group": "build",
-			"label": "Bash: Format",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"presentation": {
-				"panel": "shared",
-				"reveal": "always"
-			},
-			"type": "shell"
-		},
-		{
-			"command": "bun run typecheck",
-			"group": "build",
-			"label": "Bash: Type Check",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"presentation": {
-				"panel": "shared",
-				"reveal": "always"
-			},
-			"type": "shell"
-		},
-		{
-			"command": "bun run lint:strict",
-			"group": "build",
-			"label": "Bash: Lint",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"presentation": {
-				"panel": "shared",
-				"reveal": "always"
-			},
-			"type": "shell"
-		},
-		{
-			"command": "bash tests/verify-dryrun.sh",
-			"group": "test",
-			"label": "Bash: Verify Dry Run",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"presentation": {
-				"panel": "shared",
-				"reveal": "always"
-			},
-			"type": "shell"
-		},
-		{
-			"command": "bash test-all.sh",
-			"group": "test",
-			"label": "Bash: Test All",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"presentation": {
-				"panel": "shared",
-				"reveal": "always"
-			},
-			"type": "shell"
-		},
-		{
-			"args": [
-				"-NoProfile",
-				"-ExecutionPolicy",
-				"Bypass",
-				"-Command",
-				".\\orchestrator-unified.ps1 -Mode discover"
-			],
-			"command": "pwsh",
-			"isBackground": true,
-			"label": "PowerShell: Orchestrator Discover",
-			"options": {
-				"cwd": "${workspaceFolder}/Bash"
-			},
-			"type": "shell"
-		}
-	],
-	"version": "2.0.0"
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "command": "python3 -m pytest",
+      "label": "Python: Test All",
+      "type": "shell",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "ruff check .",
+      "label": "Python: Lint",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
 }

@@ -6,9 +6,8 @@
 		},
 		"MD013": false,
 		"MD022": true,
-		"MD024": {
-			"siblings_only": true
-		},
+		"MD024": false,
+		"MD031": true,
 		"MD033": {
 			"allowed_elements": [
 				"br",
@@ -16,10 +15,34 @@
 				"kbd",
 				"summary",
 				"sub",
-				"sup"
+				"sup",
+				"table",
+				"tbody",
+				"td",
+				"tfoot",
+				"th",
+				"thead",
+				"tr",
+				"u",
+				"var",
+				"wbr",
+				"del",
+				"ins",
+				"mark",
+				"abbr",
+				"b",
+				"bdi",
+				"bdo",
+				"cite",
+				"code",
+				"dfn",
+				"em",
+				"i",
+				"q"
 			]
 		},
 		"MD034": true,
+		"MD040": true,
 		"MD041": true,
 		"MD058": false,
 		"MD060": false
@@ -37,6 +60,13 @@
 		"coverage",
 		"dist",
 		"out",
-		"tmp"
+		"tmp",
+		"**/build/**",
+		"**/coverage/**",
+		"**/dist/**",
+		"**/out/**",
+		"**/tmp/**",
+		"**/node_modules/**",
+		"**/.git/**"
 	]
 }

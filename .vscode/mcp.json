@@ -1,131 +1,19 @@
 {
-	"inputs": [
-		{
-			"default": "default",
-			"description": "Hermes profile for Docker MCP gateway",
-			"id": "hermes-profile",
-			"type": "promptString"
-		},
-		{
-			"description": "GitHub Personal Access Token",
-			"id": "github-token",
-			"password": true,
-			"type": "promptString"
-		}
-	],
-	"servers": {
-		"mcp-ast-grep": {
-			"args": [
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-code-sandbox": {
-			"args": [
-				"-y",
-				"node-code-sandbox-mcp"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-codex": {
-			"args": [
-				"mcp-server"
-			],
-			"command": "codex",
-			"type": "stdio"
-		},
-		"mcp-copilot-mcp": {
-			"args": [
-				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\copilot_mcp_server.py"
-			],
-			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"type": "stdio"
-		},
-		"mcp-docker": {
-			"args": [
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"${input:hermes-profile}"
-			],
-			"command": "docker",
-			"env": {
-				"LOCALAPPDATA": "${env:LOCALAPPDATA}",
-				"ProgramData": "${env:ProgramData}",
-				"ProgramFiles": "${env:ProgramFiles}"
-			},
-			"type": "stdio"
-		},
-		"mcp-fetch": {
-			"args": [
-				"-y",
-				"mcp-server-fetch-typescript"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-filesystem": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-filesystem",
-				"${workspaceFolder}"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-github": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-github"
-			],
-			"command": "npx",
-			"env": {
-				"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github-token}"
-			},
-			"type": "stdio"
-		},
-		"mcp-linear": {
-			"type": "sse",
-			"url": "https://mcp.linear.app/mcp"
-		},
-		"mcp-memory": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-mindstudio": {
-			"args": [
-				"mcp"
-			],
-			"command": "mindstudio",
-			"type": "stdio"
-		},
-		"mcp-playwright": {
-			"args": [
-				"-y",
-				"@playwright/mcp@latest"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-sequential-thinking": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			],
-			"command": "npx",
-			"type": "stdio"
-		},
-		"mcp-smithery": {
-			"type": "sse",
-			"url": "https://mcp.smithery.run/rhixecompany"
-		}
-	}
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "workspaceFolder",
+      "description": "Workspace root path"
+    }
+  ],
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    }
+  }
 }

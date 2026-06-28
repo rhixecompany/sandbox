@@ -1,6 +1,6 @@
 # HERMES PROFILE REPORT
 
-Generated: 2026-06-21 (Updated)
+Generated: 2026-06-28 (Updated — full profile sync)
 
 ## Current Session Identity
 
@@ -15,7 +15,7 @@ Generated: 2026-06-21 (Updated)
 | **Shell**           | VS Code Git Bash (bash via git-bash/MSYS)                   |
 | **Editor**          | VS Code                                                     |
 
-## Profile Inventory (7 Configured + 17 Unconfigured)
+## Profile Inventory (7 Active + 17 Unconfigured)
 
 | Profile           | Model                 | Provider     | Purpose                                |
 | ----------------- | --------------------- | ------------ | -------------------------------------- |
@@ -27,29 +27,34 @@ Generated: 2026-06-21 (Updated)
 | exec-assistant    | deepseek-v4-flash-free | opencode-zen | Admin, planning, coordination          |
 | patient-tutor     | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials                |
 
-## MCP Servers (11 Configured)
+**17 additional profiles** exist on filesystem (arch, architect, debugger, devops-expert, github-actions-expert, hermes, implementation-plan, mentor, planner, power-bi-data-modeling-expert, prd, prompt-engineer, qa-subagent, reviewer, specification, tanstack-start-shadcn-tailwind, terraform) — not in active routing table.
 
-| #   | Server              | Purpose                          |
-| --- | ------------------- | -------------------------------- |
-| 1   | ast-grep            | AST-based code pattern searching |
-| 2   | cli                 | Built-in CLI tools               |
-| 3   | code-sandbox        | Node.js code execution           |
-| 4   | fetch               | Web content fetching             |
-| 5   | filesystem          | Project file access (sandboxed)  |
-| 6   | github              | GitHub API operations            |
-| 7   | linear              | Linear project management        |
-| 8   | mcp-docker          | Docker container management      |
-| 9   | memory              | Persistent memory backend        |
-| 10  | playwright          | Browser automation               |
-| 11  | sequential-thinking | Structured reasoning             |
+## MCP Servers (14 Configured)
 
-## Available Toolsets (Enabled)
+| #   | Server              | Transport | Purpose                          |
+| --- | ------------------- | --------- | -------------------------------- |
+| 1   | ast-grep            | stdio     | AST-based code pattern searching |
+| 2   | code-sandbox        | stdio     | Node.js code execution           |
+| 3   | codex               | stdio     | Codex CLI integration            |
+| 4   | copilot-mcp         | stdio     | GitHub Copilot MCP server        |
+| 5   | fetch               | stdio     | Web content fetching             |
+| 6   | filesystem          | stdio     | Project file access (sandboxed)  |
+| 7   | github              | stdio     | GitHub API operations            |
+| 8   | linear              | HTTP      | Linear project management        |
+| 9   | mcp-docker          | stdio     | Docker container management      |
+| 10  | memory              | stdio     | Persistent memory backend        |
+| 11  | mindstudio          | stdio     | MindStudio integration           |
+| 12  | playwright          | stdio     | Browser automation               |
+| 13  | sequential-thinking | stdio     | Structured reasoning             |
+| 14  | smithery            | HTTP      | Smithery registry                |
+
+## Available Toolsets (18 Enabled)
 
 `web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`,
 `moa`, `tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
 `clarify`, `delegation`, `cronjob`, `search`
 
-## Plugins (15 Enabled)
+## Plugins (15 Enabled, 49 Disabled)
 
 | Plugin                | Category            | Status |
 | --------------------- | ------------------- | ------ |
@@ -69,7 +74,7 @@ Generated: 2026-06-21 (Updated)
 | security-guidance     | Security            | ✓      |
 | web-tavily            | Web search          | ✓      |
 
-**Notable Disabled (50+):** anthropic-provider, bedrock-provider, deepseek-provider, gemini-provider, qwen-oauth-provider, nvidia-provider, xai-provider, and 43 others
+**Notable Disabled (50+):** anthropic-provider, bedrock-provider, deepseek-provider, gemini-provider, qwen-oauth-provider, nvidia-provider, xai-provider, and 42 others
 
 ## Hooks (3 Active — Shared at `~/AppData/Local/hermes/hooks/`)
 
@@ -114,14 +119,16 @@ All hooks verified: JSON configs + shell scripts present and properly structured
 - PEP 668 = yes (use venv or uv)
 - uv = installed
 
-## 🔴 Audit Issues Found
+## Audit Issues
 
-| #   | Severity | File                       | Issue                                                                                                                                    |
-| --- | -------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | **HIGH** | `profiles/default/SOUL.md` | **MISSING** — root SOUL.md at `~/AppData/Local/hermes/SOUL.md` serves as fallback, but default profile has no dedicated SOUL.md          |
-| 2   | **HIGH** | `USER.md`                  | Broken paths: `~/Alexa/AppData/Local/hermes` should be `~/AppData/Local/hermes`; `~/Alexa/Desktop/SandBox` should be `~/Desktop/SandBox` |
-| 3   | **MED**  | `USER.md:41`               | Copy-paste artifact: truncated sentence "ad the file and update it using"                                                                |
-| 4   | **LOW**  | `.hermes.md:61`            | "code-architect: 368 local skill directories" — minor mismatch with total 373                                                            |
+| #   | Severity | File                       | Issue                                                                                                                                      | Status     |
+| --- | -------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| 1   | **MED**  | `profiles/*/memories/SOUL.md` | Profile-specific SOUL.md was missing for 17 profiles — now created for all 17 unconfigured profiles. All 24 profiles have SOUL.md ✓ | RESOLVED   |
+| 2   | **MED**  | `HERMES_PROFILE_REPORT.md` | MCP server list was missing 4 entries (codex, copilot-mcp, mindstudio, smithery) — now updated to 14                                       | RESOLVED   |
+| 3   | **HIGH** | `USER.md`                  | Broken paths `~/Alexa/...` — RESOLVED (current USER.md has correct paths)                                                                  | RESOLVED   |
+| 4   | **MED**  | `USER.md:41`               | Copy-paste artifact — RESOLVED (no artifact in current file)                                                                               | RESOLVED   |
+| 5   | **LOW**  | `.hermes.md`                 | Stale reference "368 local skill directories" — no longer in file. Skills: root=118, alexa=119, code-architect=118 | RESOLVED   |
+| 6   | **MED**  | Git repos                  | 846 files had merge conflict markers from rebase — RESOLVED (all cleaned, committed, pushed on 2026-06-25)                                   | RESOLVED   |
 
 ## Verification Gate Status
 
@@ -129,9 +136,9 @@ All hooks verified: JSON configs + shell scripts present and properly structured
 | -------------------------- | ------------------------------------------------- |
 | Skills audit passed        | `hermes skills audit && hermes skills update` — ✓ |
 | Config hierarchy valid     | `.hermes.md` → `AGENTS.md` → `PROJECT_RULES.md` — ✓ |
-| Context files synced       | All 3 context files updated for model/provider     |
+| Context files synced       | All context files updated for model/provider       |
 | MCP servers reachable      | 14 servers configured — ✓                         |
-| Profile SOUL.md customized | ❌ Default profile SOUL.md missing (non-blocking)  |
+| Profile SOUL.md customized | ✅ All 24 profiles have SOUL.md (7 configured + 17 unconfigured) |
 
 ## Environment Corrections (Applied 2026-06-21)
 

@@ -1,45 +1,19 @@
 {
-	"recommendations": [
-		"aaron-bond.better-comments",
-		"bierner.color-info",
-		"bierner.markdown-preview-github-styles",
-		"bradlc.vscode-tailwindcss",
-		"christian-kohler.npm-intellisense",
-		"csstools.postcss",
-		"davidanson.vscode-markdownlint",
-		"donjayamanne.githistory",
-		"dsznajder.es7-react-js-snippets",
-		"editorconfig.editorconfig",
-		"esbenp.prettier-vscode",
-		"formulahendry.auto-rename-tag",
-		"github.vscode-github-actions",
-		"github.vscode-pull-request-github",
-		"humao.rest-client",
-		"kisstkondoros.vscode-gutter-preview",
-		"mechatroner.rainbow-csv",
-		"mhutchie.git-graph",
-		"ms-playwright.playwright",
-		"ms-python.debugpy",
-		"ms-python.python",
-		"ms-python.vscode-pylance",
-		"ms-python.vscode-python-envs",
-		"ms-vscode.powershell",
-		"mtxr.sqltools",
-		"naumovs.color-highlight",
-		"oven.bun-vscode",
-		"pflannery.vscode-versionlens",
-		"pkief.material-icon-theme",
-		"pulkitgangwar.nextjs-snippets",
-		"quicktype.quicktype",
-		"usernamehw.errorlens",
-		"vitest.explorer",
-		"yoavbls.pretty-ts-errors",
-		"yzhang.markdown-all-in-one",
-		"zainchen.json"
-	],
-	"unwantedRecommendations": [
-		"ms-vscode.vscode-typescript-tslint-plugin",
-		"hookyqr.beautify",
-		"dbaeumer.vscode-eslint"
-	]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "batisteo.vscode-django",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "oven.bun-vscode",
+    "foxundermoon.shell-format",
+    "usernamehw.errorlens",
+    "charliermarsh.ruff",
+    "davidanson.vscode-markdownlint"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "hookyqr.beautify"
+  ]
 }

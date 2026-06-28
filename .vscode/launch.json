@@ -1,29 +1,37 @@
 {
-	"configurations": [
-		{
-			"command": "bun run format",
-			"name": "Bash: Run format",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"command": "bun run typecheck",
-			"name": "Bash: Typecheck",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"command": "bun run lint:strict",
-			"name": "Bash: Lint",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"command": "bash tests/verify-dryrun.sh",
-			"name": "Bash: Tests",
-			"request": "launch",
-			"type": "node-terminal"
-		}
-	],
-	"version": "0.2.0"
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Bun: Current File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bun",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Bun: Run All Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": [
+        "test"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Node.js: Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
 }

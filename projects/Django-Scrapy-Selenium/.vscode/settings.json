@@ -1,10 +1,28 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "ms-python.python",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python-envs.alwaysUseUv": true,
+  "python-envs.autoActivate": true,
+  "python-envs.venvFolders": [".venv", "env", "venv", ".env", "envs", "venvs"],
+  "files.associations": {
+    "**/*.{txt,in}": "django-txt",
+    "**/requirements/**/*.{txt,in}": "pip-requirements"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

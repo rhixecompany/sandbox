@@ -3,15 +3,53 @@
   "tasks": [
     {
       "command": "python manage.py runserver",
-      "label": "Runserver",
+      "label": "Django: Runserver",
       "type": "shell",
-      "group": "build"
+      "group": {
+        "kind": "build"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "python manage.py test --keepdb --verbosity=2",
+      "label": "Django: Test",
+      "type": "shell",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "python manage.py makemigrations",
+      "label": "Django: Make Migrations",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
     },
     {
       "command": "python manage.py collectstatic --noinput && python manage.py migrate",
       "label": "Build: collectstatic+migrate",
       "type": "shell",
       "group": "build"
+    },
+    {
+      "command": "npm run dev",
+      "label": "Frontend: Dev",
+      "type": "shell",
+      "group": {
+        "kind": "build"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
     }
   ]
 }

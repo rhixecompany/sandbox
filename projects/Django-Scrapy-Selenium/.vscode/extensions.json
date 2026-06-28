@@ -1,5 +1,13 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode"
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "batisteo.vscode-django",
+    "amannn.vscode-djlint",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ],
+  "unwantedRecommendations": [
+    "hookyqr.beautify"
   ]
 }

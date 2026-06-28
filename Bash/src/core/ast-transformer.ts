@@ -339,7 +339,7 @@ export function addMissingJSDocs(source: SourceFile): void {
     if (docs.length === 0) {
       const name = fn.getName() || "anonymous";
       fn.insertJsDoc(0, {
-        description: `Function: ${name}\nTODO: Add description`,
+        description: `${name} — TODO: add description`,
       });
     }
   });

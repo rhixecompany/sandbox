@@ -71,7 +71,7 @@ Context files follow the DRY hierarchy:
   `ollama-cloud-provider`, `openai-codex`, `openai-codex-provider`,
   `opencode-zen-provider`, `openrouter-provider`, `security-guidance`, `web-tavily`
 - **Skills:** 373 available post-dedup (73 bundled + 216 community + 84 local)
-- **MCP Servers (13 Configured):**
+- **MCP Servers (14 Configured):**
   - `ast-grep` — Code pattern searching (AST-based) via npx @notprolands/ast-grep-mcp
   - `code-sandbox` — Node.js code execution via npx node-code-sandbox-mcp
   - `codex` — Codex CLI integration via codex mcp-server
@@ -89,32 +89,32 @@ Context files follow the DRY hierarchy:
 
 ## Profile Inventory
 
-| Profile                        | Model                  | Provider     | Purpose                                 |
-| ------------------------------ | ---------------------- | ------------ | --------------------------------------- |
+| Profile                        | Model                  | Provider     | Purpose                                         |
+| ------------------------------ | ---------------------- | ------------ | ----------------------------------------------- |
 | **alexa** ⬤                    | deepseek-v4-flash-free | opencode-zen | System admin, operations — **currently active** |
-| default                        | deepseek-v4-flash-free | opencode-zen | General purpose                         |
-| code-architect                 | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring    |
-| creative-director              | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks         |
-| exec-assistant                 | deepseek-v4-flash-free | opencode-zen | Administrative, planning, coordination  |
-| patient-tutor                  | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials, learning       |
-| research-analyst               | deepseek-v4-flash-free | opencode-zen | Deep research, synthesis, documentation |
-| arch                           | —                      | —          | (unconfigured)                          |
-| architect                      | —                      | —          | (unconfigured)                          |
-| debugger                       | —                      | —          | (unconfigured)                          |
-| devops-expert                  | —                      | —          | (unconfigured)                          |
-| github-actions-expert          | —                      | —          | (unconfigured)                          |
-| hermes                         | —                      | —          | (unconfigured)                          |
-| implementation-plan            | —                      | —          | (unconfigured)                          |
-| mentor                         | —                      | —          | (unconfigured)                          |
-| planner                        | —                      | —          | (unconfigured)                          |
-| power-bi-data-modeling-expert  | —                      | —          | (unconfigured)                          |
-| prd                            | —                      | —          | (unconfigured)                          |
-| prompt-engineer                | —                      | —          | (unconfigured)                          |
-| qa-subagent                    | —                      | —          | (unconfigured)                          |
-| reviewer                       | —                      | —          | (unconfigured)                          |
-| specification                  | —                      | —          | (unconfigured)                          |
-| tanstack-start-shadcn-tailwind | —                      | —          | (unconfigured)                          |
-| terraform                      | —                      | —          | (unconfigured)                          |
+| default                        | deepseek-v4-flash-free | opencode-zen | General purpose                                 |
+| code-architect                 | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring            |
+| creative-director              | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks                 |
+| exec-assistant                 | deepseek-v4-flash-free | opencode-zen | Administrative, planning, coordination          |
+| patient-tutor                  | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials, learning               |
+| research-analyst               | deepseek-v4-flash-free | opencode-zen | Deep research, synthesis, documentation         |
+| arch                           | —                      | —            | (unconfigured)                                  |
+| architect                      | —                      | —            | (unconfigured)                                  |
+| debugger                       | —                      | —            | (unconfigured)                                  |
+| devops-expert                  | —                      | —            | (unconfigured)                                  |
+| github-actions-expert          | —                      | —            | (unconfigured)                                  |
+| hermes                         | —                      | —            | (unconfigured)                                  |
+| implementation-plan            | —                      | —            | (unconfigured)                                  |
+| mentor                         | —                      | —            | (unconfigured)                                  |
+| planner                        | —                      | —            | (unconfigured)                                  |
+| power-bi-data-modeling-expert  | —                      | —            | (unconfigured)                                  |
+| prd                            | —                      | —            | (unconfigured)                                  |
+| prompt-engineer                | —                      | —            | (unconfigured)                                  |
+| qa-subagent                    | —                      | —            | (unconfigured)                                  |
+| reviewer                       | —                      | —            | (unconfigured)                                  |
+| specification                  | —                      | —            | (unconfigured)                                  |
+| tanstack-start-shadcn-tailwind | —                      | —            | (unconfigured)                                  |
+| terraform                      | —                      | —            | (unconfigured)                                  |
 
 ## Toolsets (18 Enabled)
 
@@ -124,11 +124,11 @@ Context files follow the DRY hierarchy:
 
 ## Provider Chain
 
-| Provider     | Role                                   | Status       |
-| ------------ | -------------------------------------- | ------------ |
-| opencode-zen | Active primary (deepseek-v4-flash-free) | ✓ Active     |
-| nous         | Fallback (stepfun/step-3.7-flash:free) | ✓ In chain   |
-| openrouter   | Fallback (qwen/qwen3-coder:free)       | ✓ In chain   |
+| Provider     | Role                                    | Status     |
+| ------------ | --------------------------------------- | ---------- |
+| opencode-zen | Active primary (deepseek-v4-flash-free) | ✓ Active   |
+| nous         | Fallback (stepfun/step-3.7-flash:free)  | ✓ In chain |
+| openrouter   | Fallback (qwen/qwen3-coder:free)        | ✓ In chain |
 
 ## Environment Corrections (2026-06-21)
 
