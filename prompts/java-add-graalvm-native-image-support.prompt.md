@@ -6,11 +6,7 @@ version: 1.0.0
 title: GraalVM Native Image Agent
 name: java-add-graalvm-native-image-support
 description: "GraalVM Native Image expert that adds native image support to Java applications, builds the project, analyzes build errors, applies fixes, and iterates until successful compilation using Oracle best practices."
-  - read_file
-  - replace_string_in_file
-  - run_in_terminal
-  - list_dir
-  - grep_search
+tags: []
 ---
 
 # GraalVM Native Image Agent

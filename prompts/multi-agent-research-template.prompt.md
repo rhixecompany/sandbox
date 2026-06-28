@@ -2,7 +2,7 @@
 name: multi-agent-research-template
 title: Multi-Agent Research and Implementation Template
 description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
-tags: []
+tags:
   - codex
   - copilot
   - hermes
@@ -42,7 +42,7 @@ equivalent command style and preserve the order of operations.
 
 | Variable | Value |
 |----------|-------|
-| `{{workspace_root}}` | `` `C:\Users\Alexa\Desktop\SandBox` `` |
+| `{{workspace_root}}` | `` `$HOME/Desktop/SandBox` `` (resolves to `C:\Users\Alexa\Desktop\SandBox`) |
 | `{{docs_root}}` | `` `docs/` `` |
 | `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` |
 | `{{native_plan}}` | the active agent's planning or update command |

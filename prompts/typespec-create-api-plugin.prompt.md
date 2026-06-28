@@ -7,7 +7,7 @@ title: Create TypeSpec API Plugin
 name: typespec-create-api-plugin
 mode: "agent"
 description: "Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot"
-tags: []
+tags:
   - typespec
   - m365-copilot
   - api-plugin

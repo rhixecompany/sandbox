@@ -5,6 +5,7 @@ version: 1.0.0
 title: Agents Generator
 name: agents-generator
 description: "Technology-agnostic blueprint generator for creating comprehensive AGENTS.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions."
+tags: []
 ---
 
 Analyze this codebase to generate or update `AGENTS.md` for guiding AI coding agents.

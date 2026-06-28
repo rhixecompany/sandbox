@@ -6,7 +6,7 @@ name: "Refactoring Java Methods with Extract Method"
 title: "Refactoring Java Methods With Extract Method"
 description: "Refactoring using Extract Methods in Java Language"
 trigger: /Refactoring Java Methods with Extract Method
-tags: []
+tags:
   - hermes
   - java
   - refactoring

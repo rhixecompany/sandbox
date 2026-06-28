@@ -5,6 +5,7 @@ version: 1.0.0
 title: Create Adaptive Cards for MCP Plugins
 name: mcp-create-adaptive-cards
 description: "mcp-create-adaptive-cards.prompt"
+tags: []
 ---
 
 ## Goal

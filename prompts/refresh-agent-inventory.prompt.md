@@ -8,7 +8,7 @@ description: >
   Refresh workspace customization inventory and patch stale AGENTS or copilot
   instruction references.
 trigger: /refresh-agent-inventory
-tags: []
+tags:
   - hermes
   - agents
   - inventory

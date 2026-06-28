@@ -6,6 +6,7 @@ version: 1.0.0
 title: Arch Linux Triage
 name: arch-linux-triage
 description: "Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices."
+tags: []
 ---
 
 # Arch Linux Triage

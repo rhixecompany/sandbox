@@ -6,7 +6,7 @@ name: "execute-plan-comprehensive-validation"
 title: "ComicWise: Comprehensive Validation & Enhancement Roadmap"
 description: "Execute ComicWise: Comprehensive Validation & Enhancement Roadmap"
 trigger: /execute-plan-comprehensive-validation
-tags: []
+tags:
   - hermes
   - plan
   - execute

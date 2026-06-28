@@ -6,7 +6,7 @@ name: "execute-plan-optimization"
 title: "Banking Project Implementation Plan"
 description: "Execute Banking Project Implementation Plan"
 trigger: /execute-plan-optimization
-tags: []
+tags:
   - hermes
   - plan
   - execute

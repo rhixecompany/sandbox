@@ -6,6 +6,7 @@ version: 1.0.0
 title: Power BI Data Model Design Review
 name: power-bi-model-design-review
 description: "Comprehensive Power BI data model design review prompt for evaluating model architecture, relationships, and optimization opportunities."
+tags: []
 ---
 
 # Power BI Data Model Design Review

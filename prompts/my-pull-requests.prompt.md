@@ -17,6 +17,7 @@ version: 1.0.0
 title: My Pull Requests
 name: my-pull-requests
 description: "List my pull requests in the current repository"
+tags: []
 ---
 
 

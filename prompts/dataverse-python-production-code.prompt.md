@@ -6,7 +6,7 @@ name: "Dataverse Python - Production Code Generator"
 title: "Dataverse Python   Production Code Generator"
 description: "Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices"
 trigger: /Dataverse Python - Production Code Generator
-tags: []
+tags:
   - hermes
   - codegen
   - python

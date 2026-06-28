@@ -12,6 +12,7 @@ version: 1.0.0
 title: Create GitHub Pull Request from Specification
 name: create-github-pull-request-from-specification
 description: "Create GitHub Pull Request for feature request from specification file using pull_request_template.md template."
+tags: []
 ---
 
 

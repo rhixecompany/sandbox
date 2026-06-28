@@ -25,6 +25,7 @@ version: 1.0.0
 title: Update Markdown File Index
 name: update-markdown-file-index
 description: "Update a markdown file section with an index/table of files from a specified folder."
+tags: []
 ---
 
 

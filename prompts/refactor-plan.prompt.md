@@ -6,6 +6,7 @@ version: 1.0.0
 title: Refactor Plan
 name: refactor-plan
 description: "Plan a multi-file refactor with proper sequencing and rollback steps"
+tags: []
 ---
 
 ## Goal

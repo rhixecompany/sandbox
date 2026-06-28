@@ -6,7 +6,7 @@ name: "sa-generate"
 title: "Sa Generate"
 description: "Structured Autonomy Implementation Generator Prompt"
 trigger: /sa-generate
-tags: []
+tags:
   - hermes
 ---
 

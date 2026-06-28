@@ -22,6 +22,7 @@ version: 1.0.0
 title: Create Architectural Decision Record
 name: create-architectural-decision-record
 description: "Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation."
+tags: []
 ---
 
 

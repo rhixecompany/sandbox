@@ -6,7 +6,7 @@ name: "execute-dev-init-comprehensive-plan"
 title: "Dev Init Comprehensive Plan"
 description: "Execute the Dev Init Comprehensive Plan plan."
 trigger: /execute-dev-init-comprehensive-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

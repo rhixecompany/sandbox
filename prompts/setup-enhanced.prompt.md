@@ -5,6 +5,7 @@ version: 1.0.0
 title: ComicWise — AI Agent Setup & Implementation Guide
 name: setup-enhanced
 description: "Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices"
+tags: []
 ---
 
 # ComicWise — AI Agent Setup & Implementation Guide

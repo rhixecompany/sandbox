@@ -7,7 +7,7 @@ name: "java-docs"
 title: "Java Documentation (Javadoc)"
 description: "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation."
 trigger: /java-docs
-tags: []
+tags:
   - hermes
   - java
   - documentation

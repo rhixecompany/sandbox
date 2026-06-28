@@ -5,6 +5,7 @@ version: 1.0.0
 title: Create MCP-based Declarative Agent for Microsoft 365 Copilot
 name: mcp-create-declarative-agent
 description: "mcp-create-declarative-agent.prompt"
+tags: []
 ---
 
 ## Goal

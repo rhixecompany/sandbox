@@ -6,7 +6,7 @@ name: "Dataverse Python Quickstart Generator"
 title: "Dataverse Python Quickstart Generator"
 description: "Generate Python SDK setup + CRUD + bulk + paging snippets using official patterns."
 trigger: /Dataverse Python Quickstart Generator
-tags: []
+tags:
   - hermes
   - codegen
   - python

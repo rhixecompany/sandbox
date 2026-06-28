@@ -9,7 +9,7 @@ description: >
   Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
   Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade
   (unclosed fences, duplicate headings), then verify.
-tags: []
+tags:
   - hermes
   - skills
   - remediation
@@ -23,7 +23,7 @@ Target: F=0, C≤5 after completion.
 
 ## Context
 
-- **Skills root:** `C:\Users\Alexa\AppData\Local\hermes\skills\`
+- **Skills root:** `$HOME/AppData/Local/hermes/skills/` (resolves to `C:\Users\Alexa\AppData\Local\hermes\skills\`)
 - **Audit results:** `docs/skills-audit-results.json`
 - **Remediation plan:** `docs/plan/skills-debug-plan.md`
 - **Master index:** `docs/skills-debug-context.md`

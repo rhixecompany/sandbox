@@ -10,6 +10,7 @@ version: 1.0.0
 title: Seed System Review & Enhancement
 name: seed-review-and-create
 description: "Review seed system files, create new seeders, fix issues, and implement improvements"
+tags: []
 ---
 
 # Seed System Review & Enhancement

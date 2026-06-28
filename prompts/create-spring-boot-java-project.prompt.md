@@ -5,6 +5,7 @@ version: 1.0.0
 title: Create Spring Boot Java project prompt
 name: create-spring-boot-java-project
 description: "Create Spring Boot Java Project Skeleton"
+tags: []
 ---
 
 # Create Spring Boot Java project prompt

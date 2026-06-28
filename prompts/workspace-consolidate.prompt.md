@@ -8,7 +8,7 @@ description:
     Consolidate scripts, patches, and documentation across the workspace with bash
     migration and audit workflows.
 trigger: /workspace-consolidate
-tags: []
+tags:
   - hermes
   - consolidation
   - patching
@@ -99,18 +99,8 @@ both human readers and AI consumption.
 
 ## Skills Required
 
-| Skill                         | Purpose                                                         |
-| ----------------------------- | --------------------------------------------------------------- |
-| `context-map`                 | Build dependency and file context before consolidation edits    |
-| `brainstorming`               | Explore consolidation strategies                                |
-| `plans-and-specs`             | Create migration plan with specs                                |
-| `dispatching-parallel-agents` | Process work in parallel batches                                |
-| `subagent-driven-development` | Delegate per-task execution                                     |
-| `systematic-debugging`        | Detect script issues and edge cases                             |
-| `simplify`                    | Consolidate workspace structure                                 |
-| `acpx-executor`               | Execute a prompt via any ACPX provider                          |
-| `git-patch-management`        | Manage Git patch files across multi-project workspaces          |
-| `project-consolidation`       | Five-phase workflow for cleaning up and restructuring a project |
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#workspace-consolidate)
 
 ---
 
@@ -273,7 +263,7 @@ For each patch that passed debug:
 7. **Patch content integrity check** — verify structural integrity beyond
    `--check`:
     - No binary blob >1MB (flag for git bloat reduction)
-    - No absolute Windows paths (`C:\Users\...`, `D:\...`)
+    - No absolute Windows paths (`C:\Users\...`, `D:\...`) — use `$HOME` or relative paths
     - All author emails have valid format (`user@domain.tld`)
     - No duplicate commits across patches (detect via commit hash)
     - No trailing whitespace on diff context lines

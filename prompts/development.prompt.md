@@ -6,6 +6,7 @@ version: 1.0.0
 title: Developement
 name: developement
 description: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide
+tags: []
 ---
 
 ## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.

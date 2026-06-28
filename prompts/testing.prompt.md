@@ -6,7 +6,7 @@ name: "testing"
 title: "Testing"
 description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
 trigger: /testing
-tags: []
+tags:
   - hermes
   - testing
 ---

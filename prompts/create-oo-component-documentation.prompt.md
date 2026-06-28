@@ -22,6 +22,7 @@ version: 1.0.0
 title: Generate Standard OO Component Documentation
 name: create-oo-component-documentation
 description: "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards."
+tags: []
 ---
 
 

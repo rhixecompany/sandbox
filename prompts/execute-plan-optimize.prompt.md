@@ -6,7 +6,7 @@ name: "execute-plan-optimize"
 title: "Comprehensive Modernization Plan: ESLint, VSCode & Auth"
 description: "Execute Comprehensive Modernization Plan: ESLint, VSCode & Auth"
 trigger: /execute-plan-optimize
-tags: []
+tags:
   - hermes
   - plan
   - execute

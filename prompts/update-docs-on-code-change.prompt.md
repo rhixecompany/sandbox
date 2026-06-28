@@ -6,7 +6,7 @@ name: "update-docs-on-code-change"
 title: "Update Docs on Code Change"
 description: "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows."
 trigger: /update-docs-on-code-change
-tags: []
+tags:
   - hermes
   - documentation
   - sync

@@ -40,6 +40,7 @@ version: 1.0.0
 title: Database Schema Guide for ComicWise
 name: database
 description: "Database schema knowledge base for ComicWise - use for any database-related tasks"
+tags: []
 ---
 
 

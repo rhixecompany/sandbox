@@ -5,6 +5,7 @@ version: 1.0.0
 title: Generate TypeScript MCP Server
 name: typescript-mcp-server-generator
 description: "Generate a complete MCP server project in TypeScript with tools, resources, and proper configuration"
+tags: []
 ---
 
 ## Goal

@@ -7,10 +7,11 @@ name: "refactor-method-complexity-reduce"
 title: "Refactor Method Complexity Reduce"
 description: "Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods."
 trigger: /refactor-method-complexity-reduce
-tags: []
+argument-hint: "methodName=..., complexityThreshold=15"
+tags:
   - hermes
   - refactoring
-argument-hint: "methodName=..., complexityThreshold=15"
+toolsets:
   - search/changes
   - search/codebase
   - edit/editFiles

@@ -6,7 +6,7 @@ name: "execute-plan-setup"
 title: "Plan Setup - ESLint/VSCode/Auth Setup Session"
 description: "Execute Plan Setup - ESLint/VSCode/Auth Setup Session"
 trigger: /execute-plan-setup
-tags: []
+tags:
   - hermes
   - plan
   - execute

@@ -6,6 +6,7 @@ version: 1.0.0
 title: C# Documentation Best Practices
 name: csharp-docs
 description: "Ensure that C# types are documented with XML comments and follow best practices for documentation."
+tags: []
 ---
 
 # C# Documentation Best Practices

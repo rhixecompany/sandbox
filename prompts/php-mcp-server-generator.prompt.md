@@ -5,6 +5,7 @@ version: 1.0.0
 title: PHP MCP Server Generator
 name: php-mcp-server-generator
 description: "Generate a complete PHP Model Context Protocol server project with tools, resources, prompts, and tests using the official PHP SDK"
+tags: []
 ---
 
 # PHP MCP Server Generator

@@ -23,6 +23,7 @@ version: 1.0.0
 title: Create Technical Spike Document
 name: create-technical-spike
 description: "Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation."
+tags: []
 ---
 
 

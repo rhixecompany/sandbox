@@ -5,6 +5,7 @@ version: 1.0.0
 title: Feature PRD Prompt
 name: breakdown-feature-prd
 description: "Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic."
+tags: []
 ---
 
 ## Goal

@@ -10,7 +10,7 @@ description: >-
   free-tier models, run standardized benchmarks (reasoning, tool calling,
   knowledge), and produce a cross-provider comparison report. Covers 6
   providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter.
-tags: []
+tags:
   - hermes
   - providers
   - models
@@ -24,7 +24,7 @@ tags: []
   - openai
   - openrouter
 dependencies:
-  - skill:provider:hermes-auth
+  - skill:test-providers-models
   - skill:using-superpowers
   - skill:plans-and-specs
   - skill:user-communication-preferences

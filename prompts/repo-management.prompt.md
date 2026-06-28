@@ -15,7 +15,7 @@ system: |
   across multiple git repositories. Every destructive operation (branch delete,
   file removal, dependency removal) requires explicit verification before and after.
   You never start a later phase before the previous phase's acceptance criteria pass.
-tags: []
+tags:
   - hermes
   - repos
   - git
@@ -26,7 +26,7 @@ tags: []
   - consolidation
   - maintenance
 dependencies:
-  - skill:prompt:context-map.prompt.md
+  - prompt:context-map
   - skill:plans-and-specs
   - skill:systematic-debugging
   - skill:git-helper
@@ -70,7 +70,7 @@ research is complete. Leave every repo with:
 
 ## Context
 
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+**Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
 **Prerequisite:** All 14 `RESEARCH_REPORT.md` verified on disk before starting.
 

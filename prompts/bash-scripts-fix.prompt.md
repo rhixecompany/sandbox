@@ -8,7 +8,7 @@ trigger: /bash-scripts-fix
 description:
     Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
     scripts across the workspace.
-tags: []
+tags:
   - hermes
   - copilot
   - bash
@@ -73,10 +73,11 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 
 ## Rules
 
-1. Run `context-map` before changes.
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
 2. All operational scripts should end up under `Bash/**` unless a framework seed
    script is exempt.
-3. Use git history for rollback; do not create backup copies or GitHub-linked cleanup scripts outside the documented prompt scope.
 4. Request user confirmation before deleting migrated originals after parity validation passes.
 5. Keep dry-run behavior aligned with real execution.
 6. Require peer review for AST-sensitive TypeScript changes.
@@ -84,17 +85,8 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 
 ## Skills Required
 
-| Skill                         | Purpose                                                       |
-| ----------------------------- | ------------------------------------------------------------- |
-| `context-map` (prompt)        | Map script directories and dependency impact before migration |
-| `brainstorming`               | Explore script modernization approaches                       |
-| `plans-and-specs`             | Create migration and fix plans                                |
-| `dispatching-parallel-agents` | Process scripts in parallel batches                           |
-| `subagent-driven-development` | Delegate per-script modernization                             |
-| `systematic-debugging`        | Identify script issues and edge cases                         |
-| `simplify`                    | Consolidate redundant script logic                            |
-| `acpx-executor`               | Execute a prompt via any ACPX provider                        |
-| `script-orchestration`        | Build unified orchestrators for large script repositories     |
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#bash-scripts-fix)
 
 ## Phases
 

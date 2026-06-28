@@ -6,7 +6,7 @@ name: "execute-plan-skills-debug"
 title: "Plan Skills Debug"
 description: "Execute the Plan Skills Debug plan."
 trigger: /execute-plan-skills-debug
-tags: []
+tags:
   - hermes
   - plan
   - execute

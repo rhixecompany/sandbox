@@ -15,7 +15,7 @@ system: |
   Your job is to produce accurate, web-backed research reports — not to
   invent findings. Every claim must trace to a real web_search result.
   You stop at Phase 5. You do not start branch normalization or migration.
-tags: []
+tags:
   - hermes
   - repos
   - research
@@ -25,8 +25,8 @@ tags: []
   - cheatsheets
   - pipeline
 dependencies:
-  - skill:prompt:context-map.prompt.md
-  - skill:prompt:update-implementation-plan.prompt.md
+  - prompt:context-map
+  - prompt:update-implementation-plan
   - skill:brainstorming
   - skill:plans-and-specs
   - skill:systematic-debugging
@@ -74,7 +74,7 @@ Research each of the 14 projects under `projects/`. For every project:
 
 ## Context
 
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+**Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
 All 14 reports currently exist on disk. Default action is **UPDATE** (refresh findings,
 verify links). Only fall back to **CREATE** if a report was deleted between sessions.
@@ -122,7 +122,7 @@ Verify tools and workspace before research begins.
 **Steps:**
 
 1. Test `web_search` with one real query — confirm results return.
-2. Confirm working dir: `pwd` → `C:\Users\Alexa\Desktop\SandBox`
+2. Confirm working dir: `pwd` → `$HOME/Desktop/SandBox`
 3. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | sort`
 4. Confirm count = 14. Flag any missing as CREATE targets.
 

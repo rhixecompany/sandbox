@@ -6,7 +6,7 @@ name: "execute-plan-comicWiseImplementation"
 title: "ComicWise Implementation Plan"
 description: "Execute ComicWise Implementation Plan"
 trigger: /execute-plan-comicWiseImplementation
-tags: []
+tags:
   - hermes
   - plan
   - execute

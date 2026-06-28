@@ -6,7 +6,7 @@ name: "acpx-stack-audit-hermes"
 title: "ACP Agent Stack Audit — Hermes"
 description: "Hermes agent stack audit: inventory Hermes agents, plugins, and MCP tool exposure."
 trigger: /acpx-stack-audit-hermes
-tags: []
+tags:
   - hermes
   - acp
   - audit

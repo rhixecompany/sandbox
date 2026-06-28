@@ -24,6 +24,7 @@ version: 1.0.0
 title: Refactor Mardown Files
 name: refactor-mardown-files
 description: "Refactor and update Banking documentation files (`AGENTS.md` and `.github/copilot-instructions.md`) to maximize clarity, actionability, and AI agent productivity, following project conventions and Diátaxis principles."
+tags: []
 ---
 
 

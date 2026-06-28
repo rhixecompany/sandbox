@@ -6,6 +6,7 @@ version: 1.0.0
 title: Finalize Agent Prompt
 name: finalize-agent-prompt
 description: "Finalize prompt file using the role of an AI agent to polish the prompt for the end user."
+tags: []
 ---
 
 ## Goal

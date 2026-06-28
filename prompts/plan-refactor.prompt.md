@@ -5,6 +5,7 @@ version: 1.0.0
 title: ComicWise Setup & Code Quality Refactoring Implementation Plan
 name: plan-refactor
 description: "This prompt outlines the steps for setting up the ComicWise development environment and implementing code quality refactoring."
+tags: []
 ---
 
 # ComicWise Setup & Code Quality Refactoring Implementation Plan

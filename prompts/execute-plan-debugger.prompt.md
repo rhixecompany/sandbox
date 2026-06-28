@@ -6,7 +6,7 @@ name: "execute-plan-debugger"
 title: "Copilot Instructions Generator"
 description: "Execute Copilot Instructions Generator"
 trigger: /execute-plan-debugger
-tags: []
+tags:
   - hermes
   - plan
   - execute

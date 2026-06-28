@@ -18,6 +18,7 @@ version: 1.0.0
 title: Suggest Awesome GitHub Copilot Skills
 name: suggest-awesome-github-copilot-skills
 description: "Find GitHub Copilot skills that add coverage the repo lacks and flag local duplicates or outdated copies."
+tags: []
 ---
 
 

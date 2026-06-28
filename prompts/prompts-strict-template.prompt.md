@@ -6,7 +6,7 @@ name: "prompts-strict-template"
 title: "Prompts Strict Template"
 description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
 trigger: /prompts-strict-template
-tags: []
+tags:
   - hermes
   - prompts
   - template

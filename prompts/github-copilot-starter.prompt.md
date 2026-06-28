@@ -13,6 +13,7 @@ name: github-copilot-starter
   - runCommands
   - web/fetch
 description: "Set up complete GitHub Copilot configuration for a new project based on technology stack"
+tags: []
 ---
 
 ## Goal

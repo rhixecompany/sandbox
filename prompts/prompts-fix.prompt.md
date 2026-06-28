@@ -5,9 +5,8 @@ version: 1.0.0
 name: prompts-fix
 title: prompts Sync and Deduplication
 trigger: /prompts-fix
-description: Sync and deduplicate prompt files across Hermes and Copilot with
-    dependency mapping and platform-specific validation.
-tags: []
+description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific validation.
+tags:
   - hermes
   - copilot
   - prompts
@@ -15,6 +14,7 @@ tags: []
 dependencies:
     - prompt:context-map.prompt.md
     - prompt:update-implementation-plan.prompt.md
+    - prompt:skills-fix.prompt.md
     - skill:brainstorming
     - skill:plans-and-specs
     - skill:dispatching-parallel-agents
@@ -23,36 +23,16 @@ dependencies:
     - skill:simplify
     - skill:acpx-executor
     - skill:hermes-agent
-    - skill:copilot-cli
-    - tool:terminal
-    - tool:search_files
-skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
-    - brainstorming
-    - plans-and-specs
-    - dispatching-parallel-agents
-    - subagent-driven-development
-    - systematic-debugging
-    - simplify
-    - acpx-executor
-    - hermes-agent
-    - copilot-cli
-
+    - skill:copilot-cli-quickstart
 ---
 
 ## Goal
 
-Sync prompt files across Hermes and Copilot without losing trigger
-names or platform-specific behavior.
+Sync prompt files across Hermes and Copilot without losing trigger names or platform-specific behavior.
 
 ## Context
 
-Use this prompt when prompt definitions, prompt-style prompts, or platform
-registrations drift across the three ecosystems. The workflow is discovery
-first, then mapping, then sync, then verification.
+Use this prompt when prompt definitions, prompt-style prompts, or platform registrations drift across the three ecosystems. The workflow is discovery first, then mapping, then sync, then verification.
 
 ## Inputs
 
@@ -69,40 +49,26 @@ first, then mapping, then sync, then verification.
 
 ## Rules
 
-1. Run `context-map` before edits.
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
 2. Detect the file format before modifying anything.
-3. Keep one platform focused at a time.
 4. Preserve trigger names unless the user explicitly requests a rename.
-5. Verify after each sync pass.
-6. Use git history for rollback; do not create backup copies.
-7. Prefer explicit platform mappings over guesswork.
 
 ## Skills Required
 
-| Skill                         | Purpose                                                        |
-| ----------------------------- | -------------------------------------------------------------- |
-| `context-map` (prompt)        | Map impacted files and dependencies before edits               |
-| `brainstorming`               | Explore prompt discovery and sync approaches                   |
-| `plans-and-specs`             | Create structured plans for prompt migration and deduplication |
-| `dispatching-parallel-agents` | Scan prompts in parallel across platforms                      |
-| `subagent-driven-development` | Delegate per-prompt debugging tasks                            |
-| `systematic-debugging`        | Identify formatting, content, and registration issues          |
-| `simplify`                    | Remove duplicate prompt definitions                            |
-| `acpx-executor`               | Execute a prompt via any ACPX provider                         |
-| `hermes-agent`                | Configure or extend Hermes Agent when needed                   |
-| `copilot-cli`                 | Use Copilot CLI for quick validation and verification          |
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#prompts-fix)
 
 ## Phases
 
 ### Phase 1: Discovery
 
-Discover prompt files across Hermes, and Copilot. Record trigger,
-description, and registration state.
+Discover prompt files across Hermes, and Copilot. Record trigger, description, and registration state.
 
 ### Phase 2: Cross-reference mapping
 
-Build a mapping table that links equivalent prompts across platforms and
-highlights gaps.
+Build a mapping table that links equivalent prompts across platforms and highlights gaps.
 
 ### Phase 3: Sync and deduplicate
 
@@ -110,8 +76,7 @@ Apply the minimal set of changes needed to align the prompt definitions.
 
 ### Phase 4: Verification
 
-Verify that each platform still matches its expected schema and that no prompts
-were lost.
+Verify that each platform still matches its expected schema and that no prompts were lost.
 
 ## Steps
 
@@ -136,8 +101,7 @@ were lost.
 
 ## Actions
 
-- `search_files(pattern="*.prompt.md", target="files")` — Locate prompt and
-  prompt files
+- `search_files(pattern="*.prompt.md", target="files")` — Locate prompt and prompt files
 - `read_file(path)` — Read prompt definitions for comparison
 - `patch(path, old_string, new_string)` — Apply targeted fixes
 - `write_file(path, content)` — Create new prompt files where needed

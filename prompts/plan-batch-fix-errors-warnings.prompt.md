@@ -6,6 +6,7 @@ version: 1.0.0
 title: Plan Batchfixallerrorswarningsdeprecations
 name: plan-batchfixallerrorswarningsdeprecations
 description: Batch Fix All Errors, Warnings, and Deprecations.
+tags: []
 ---
 
 ## Plan: Batch Fix All Errors, Warnings, and Deprecations

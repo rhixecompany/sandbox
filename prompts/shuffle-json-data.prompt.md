@@ -6,6 +6,7 @@ version: 1.0.0
 title: Shuffle JSON Data
 name: shuffle-json-data
 description: "Shuffle repetitive JSON objects safely by validating schema consistency before randomising entries."
+tags: []
 ---
 
 ## Goal

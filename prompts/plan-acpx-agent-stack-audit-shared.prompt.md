@@ -6,7 +6,7 @@ name: "acpx-stack-audit-shared"
 title: "ACP Agent Stack Audit — Shared"
 description: "Shared audit plan for the ACP agent stack: introspect agents, tools, and capabilities across providers."
 trigger: /acpx-stack-audit-shared
-tags: []
+tags:
   - hermes
   - acp
   - audit

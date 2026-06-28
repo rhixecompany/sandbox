@@ -6,6 +6,7 @@ version: 1.0.0
 title: Generate Application from OpenAPI Spec
 name: openapi-to-application-code
 description: "Generate a complete, production-ready application from an OpenAPI specification"
+tags: []
 ---
 
 ## Goal

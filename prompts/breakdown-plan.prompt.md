@@ -5,6 +5,7 @@ version: 1.0.0
 title: GitHub Issue Planning & Project Automation Prompt
 name: breakdown-plan
 description: "Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking."
+tags: []
 ---
 
 ## Goal

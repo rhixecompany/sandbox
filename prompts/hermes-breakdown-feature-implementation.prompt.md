@@ -5,6 +5,7 @@ version: 1.0.0
 title: Hermes Breakdown Feature Implementation
 name: hermes-breakdown-feature-implementation
 description: "Hermes-equivalent: produce a Feature Implementation Plan from a Feature PRD."
+tags: []
 ---
 
 ## Goal

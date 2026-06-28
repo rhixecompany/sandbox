@@ -5,6 +5,7 @@ version: 1.0.0
 title: Power Platform MCP Connector Generator
 name: mcp-copilot-studio-server-generator
 description: Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support
+tags: []
 ---
 
 ## Goal

@@ -2,24 +2,35 @@
 ┌───────────────────────────┬──────────────────────┬────────┬───────┬─────────┐
 │ Name                      │ Category             │ Source │ Trust │ Status  │
 ├───────────────────────────┼──────────────────────┼────────┼───────┼─────────┤
+│ acpx-executor             │                      │ local  │ local │ enabled │
+│ boost-prompt              │                      │ local  │ local │ enabled │
+│ dispatching-parallel-age… │                      │ local  │ local │ enabled │
+│ git-patch-management      │                      │ local  │ local │ enabled │
 │ huggingface-accelerate    │                      │ local  │ local │ enabled │
 │ inference-sh-cli          │                      │ local  │ local │ enabled │
+│ introspection-only-gener… │                      │ local  │ local │ enabled │
+│ joyride                   │                      │ local  │ local │ enabled │
 │ mcp-coding-agent-setup    │                      │ local  │ local │ enabled │
+│ no-git-delete             │                      │ local  │ local │ enabled │
+│ no-net-fetch              │                      │ local  │ local │ enabled │
+│ project-consolidation     │                      │ local  │ local │ enabled │
+│ simplify                  │                      │ local  │ local │ enabled │
+│ skills-tools-preflight-c… │                      │ local  │ local │ enabled │
+│ test-providers-models     │                      │ local  │ local │ enabled │
 │ architecture-blueprint-g… │ architecture         │ local  │ local │ enabled │
 │ folder-structure-bluepri… │ architecture         │ local  │ local │ enabled │
 │ technology-stack-bluepri… │ architecture         │ local  │ local │ enabled │
 │ agent-browser             │ autonomous-ai-agents │ local  │ local │ enabled │
 │ agent-governance          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ agentic-eval              │ autonomous-ai-agents │ local  │ local │ enabled │
-│ coding-agents             │ autonomous-ai-agents │ local  │ local │ enabled │
 │ customize-opencode        │ autonomous-ai-agents │ local  │ local │ enabled │
 │ enhance-markdown          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ hermes-breakdown          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ hermes-skill-library-mai… │ autonomous-ai-agents │ local  │ local │ enabled │
+│ multi-agent-sync          │ autonomous-ai-agents │ local  │ local │ enabled │
 │ qwen-code                 │ autonomous-ai-agents │ local  │ local │ enabled │
 │ template                  │ autonomous-ai-agents │ local  │ local │ enabled │
 │ using-superpowers         │ autonomous-ai-agents │ local  │ local │ enabled │
-│ Chainlink                 │ blockchain           │ local  │ local │ enabled │
 │ algorithmic-art           │ creative             │ local  │ local │ enabled │
 │ architecture-diagram      │ creative             │ local  │ local │ enabled │
 │ brand-guidelines          │ creative             │ local  │ local │ enabled │
@@ -28,12 +39,10 @@
 │ excalidraw-diagram-gener… │ creative             │ local  │ local │ enabled │
 │ frontend-design           │ creative             │ local  │ local │ enabled │
 │ html-artifact             │ creative             │ local  │ local │ enabled │
-│ ideation                  │ creative             │ local  │ local │ enabled │
 │ image-manipulation-image… │ creative             │ local  │ local │ enabled │
 │ legacy-circuit-mockups    │ creative             │ local  │ local │ enabled │
 │ marp-slide                │ creative             │ local  │ local │ enabled │
 │ mermaid-diagrams          │ creative             │ local  │ local │ enabled │
-│ nano-banana-pro-openrout… │ creative             │ local  │ local │ enabled │
 │ penpot-uiux-design        │ creative             │ local  │ local │ enabled │
 │ plantuml-ascii            │ creative             │ local  │ local │ enabled │
 │ sketch                    │ creative             │ local  │ local │ enabled │
@@ -46,13 +55,10 @@
 │ convert-plaintext-to-md   │ development          │ local  │ local │ enabled │
 │ copilot-cli-quickstart    │ development          │ local  │ local │ enabled │
 │ copilot-sdk               │ development          │ local  │ local │ enabled │
-│ copilot-usage-metrics     │ development          │ local  │ local │ enabled │
 │ create-agentsmd           │ development          │ local  │ local │ enabled │
 │ create-implementation-pl… │ development          │ local  │ local │ enabled │
 │ create-readme             │ development          │ local  │ local │ enabled │
-│ create-web-form           │ development          │ local  │ local │ enabled │
 │ generate-custom-instruct… │ development          │ local  │ local │ enabled │
-│ lsp-setup                 │ development          │ local  │ local │ enabled │
 │ make-skill-template       │ development          │ local  │ local │ enabled │
 │ microsoft-code-reference  │ development          │ local  │ local │ enabled │
 │ microsoft-docs            │ development          │ local  │ local │ enabled │
@@ -87,7 +93,9 @@
 │ fabric-lakehouse          │ devops               │ local  │ local │ enabled │
 │ git-history-preserving-m… │ devops               │ local  │ local │ enabled │
 │ github-actions-efficiency │ devops               │ local  │ local │ enabled │
+│ github-copilot-cli        │ devops               │ local  │ local │ enabled │
 │ glab                      │ devops               │ local  │ local │ enabled │
+│ hermes-config-merge       │ devops               │ local  │ local │ enabled │
 │ hermes-config-troublesho… │ devops               │ local  │ local │ enabled │
 │ hermes-hooks              │ devops               │ local  │ local │ enabled │
 │ hermes-profiles           │ devops               │ local  │ local │ enabled │
@@ -101,9 +109,11 @@
 │ log-analysis-and-triage   │ devops               │ local  │ local │ enabled │
 │ modal-serverless-gpu      │ devops               │ local  │ local │ enabled │
 │ multi-stage-dockerfile    │ devops               │ local  │ local │ enabled │
+│ pnpm-package-manager      │ devops               │ local  │ local │ enabled │
 │ powerbi-modeling          │ devops               │ local  │ local │ enabled │
 │ profile-maintenance       │ devops               │ local  │ local │ enabled │
 │ projects-multi-repo-init… │ devops               │ local  │ local │ enabled │
+│ prompt-batch-fixer        │ devops               │ local  │ local │ enabled │
 │ provider-model-audit      │ devops               │ local  │ local │ enabled │
 │ provider-reliability-dia… │ devops               │ local  │ local │ enabled │
 │ rbac-audit-logging        │ devops               │ local  │ local │ enabled │
@@ -112,9 +122,12 @@
 │ session-audit-report      │ devops               │ local  │ local │ enabled │
 │ snowflake-semanticview    │ devops               │ local  │ local │ enabled │
 │ terraform-azurerm-set-di… │ devops               │ local  │ local │ enabled │
+│ tmux-terminal-multiplexer │ devops               │ local  │ local │ enabled │
+│ uv-package-manager        │ devops               │ local  │ local │ enabled │
 │ validate-memories         │ devops               │ local  │ local │ enabled │
 │ webhook-subscriptions     │ devops               │ local  │ local │ enabled │
 │ windows-maintenance-oper… │ devops               │ local  │ local │ enabled │
+│ windows-package-manageme… │ devops               │ local  │ local │ enabled │
 │ work-on-ticket            │ devops               │ local  │ local │ enabled │
 │ workspace-audit           │ devops               │ local  │ local │ enabled │
 │ finishing-a-development-… │ github               │ local  │ local │ enabled │
@@ -159,9 +172,11 @@
 │ pdf                       │ productivity         │ local  │ local │ enabled │
 │ pdftk-server              │ productivity         │ local  │ local │ enabled │
 │ pptx                      │ productivity         │ local  │ local │ enabled │
+│ prompt-management         │ productivity         │ local  │ local │ enabled │
 │ task-management           │ productivity         │ local  │ local │ enabled │
 │ user-communication-prefe… │ productivity         │ local  │ local │ enabled │
 │ xlsx                      │ productivity         │ local  │ local │ enabled │
+│ audit-skills-judge-fix    │ qa                   │ local  │ local │ enabled │
 │ boilerplate-stripper      │ qa                   │ local  │ local │ enabled │
 │ playwright-automation-fi… │ qa                   │ local  │ local │ enabled │
 │ playwright-generate-e2e-… │ qa                   │ local  │ local │ enabled │
@@ -178,6 +193,7 @@
 │ api-tutorial-catalog      │ reference            │ local  │ local │ enabled │
 │ mcp-server-catalog        │ reference            │ local  │ local │ enabled │
 │ project-architecture-ind… │ reference            │ local  │ local │ enabled │
+│ parallel-cli-web-research │ research             │ local  │ local │ enabled │
 │ repo-research-pipeline    │ research             │ local  │ local │ enabled │
 │ web-research-pipeline     │ research             │ local  │ local │ enabled │
 │ banking                   │ software-development │ local  │ local │ enabled │
@@ -205,5 +221,5 @@
 │ worktrunk                 │ software-development │ local  │ local │ enabled │
 │ writing-plans             │ software-development │ local  │ local │ enabled │
 └───────────────────────────┴──────────────────────┴────────┴───────┴─────────┘
-0 hub-installed, 0 builtin, 202 local — 202 enabled, 0 disabled
+0 hub-installed, 0 builtin, 218 local — 218 enabled, 0 disabled
 

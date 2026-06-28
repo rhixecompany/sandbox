@@ -3,11 +3,13 @@ license: MIT
 author: Hermes Agent
 name: initial
 title: ComicWise Project Setup - Complete Guide
+description: "Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow."
 version: 2.0.0
 updated: 2025-12-29
 platforms: Windows, Linux, macOS
 packageManager: pnpm
 framework: Next.js 16
+tags: []
 ---
 
 ---

@@ -6,7 +6,7 @@ name: "nextjs-tailwind"
 title: "Nextjs Tailwind"
 description: "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards."
 trigger: /nextjs-tailwind
-tags: []
+tags:
   - hermes
 ---
 

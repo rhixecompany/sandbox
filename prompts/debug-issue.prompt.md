@@ -6,6 +6,7 @@ version: 1.0.0
 title: Debug Issue
 name: debug-issue
 description: "Debug an issue with reproducible analysis, root-cause isolation, and verification steps"
+tags: []
 ---
 
 <!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/prompts/debug-issue.prompt.md -->

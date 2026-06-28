@@ -8,7 +8,7 @@ trigger: /dev-init
 description:
     Create a comprehensive plan for converting plaintext prompts to markdown,
     enhancing prompt quality, and updating related implementation plans.
-tags: []
+tags:
   - hermes
   - copilot
   - planning

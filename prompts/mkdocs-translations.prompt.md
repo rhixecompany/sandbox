@@ -18,6 +18,7 @@ version: 1.0.0
 title: MkDocs AI Translator
 name: mkdocs-translations
 description: "Generate a language translation for a mkdocs documentation stack."
+tags: []
 ---
 
 

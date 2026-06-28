@@ -7,7 +7,7 @@ name: "Apple App Store Reviewer"
 title: "Apple App Store Reviewer"
 description: "Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons."
 trigger: /Apple App Store Reviewer
-tags: []
+tags:
   - hermes
   - vscode
   - execute

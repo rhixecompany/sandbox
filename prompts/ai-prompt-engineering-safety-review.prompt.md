@@ -7,7 +7,7 @@ name: ai-prompt-engineering-safety-review
 trigger: /ai-prompt-engineering-safety-review
 description: >-
   Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
-tags: []
+tags:
   - hermes
   - copilot
   - safety

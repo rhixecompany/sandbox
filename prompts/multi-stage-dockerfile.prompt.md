@@ -6,6 +6,7 @@ version: 1.0.0
 title: Multi Stage Dockerfile
 name: multi-stage-dockerfile
 description: "Create optimized multi-stage Dockerfiles for any language or framework"
+tags: []
 ---
 
 ## Goal

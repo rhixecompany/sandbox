@@ -6,7 +6,7 @@ name: "execute-bash-scripts-plan"
 title: "Bash Scripts Plan"
 description: "Execute the Bash Scripts Plan plan."
 trigger: /execute-bash-scripts-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

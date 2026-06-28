@@ -6,6 +6,7 @@ version: 1.0.0
 title: ASP.NET Core Docker Containerization Prompt
 name: containerize-aspnetcore
 description: "Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile files customized for the project."
+tags: []
 ---
 
 # ASP.NET Core Docker Containerization Prompt

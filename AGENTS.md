@@ -61,7 +61,7 @@ Context files follow the DRY hierarchy:
 
 ## Hermes Config (Current)
 
-- **Active Profile:** `alexa` — **OWL persona** (pragmatic senior engineer)
+- **Active Profile:** `default` — **OWL persona** (pragmatic senior engineer)
 - **Current Runtime:** deepseek-v4-flash-free (opencode-zen) — _active primary_
 - **Primary Config:** deepseek-v4-flash-free (opencode-zen)
 - **Config:** `~/AppData/Local/hermes/config.yaml` (root = default profile)
@@ -91,8 +91,8 @@ Context files follow the DRY hierarchy:
 
 | Profile                        | Model                  | Provider     | Purpose                                         |
 | ------------------------------ | ---------------------- | ------------ | ----------------------------------------------- |
-| **alexa** ⬤                    | deepseek-v4-flash-free | opencode-zen | System admin, operations — **currently active** |
-| default                        | deepseek-v4-flash-free | opencode-zen | General purpose                                 |
+| **default** ⬤                    | deepseek-v4-flash-free | opencode-zen | General purpose  — **currently active** |
+| alexa                             | deepseek-v4-flash-free | opencode-zen | System admin, operations                 |
 | code-architect                 | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring            |
 | creative-director              | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks                 |
 | exec-assistant                 | deepseek-v4-flash-free | opencode-zen | Administrative, planning, coordination          |
@@ -116,11 +116,11 @@ Context files follow the DRY hierarchy:
 | tanstack-start-shadcn-tailwind | —                      | —            | (unconfigured)                                  |
 | terraform                      | —                      | —            | (unconfigured)                                  |
 
-## Toolsets (18 Enabled)
+## Toolsets (16 Enabled)
 
 `web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`,
-`moa`, `tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
-`clarify`, `delegation`, `cronjob`, `search`
+`tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
+`clarify`, `delegation`, `cronjob`
 
 ## Provider Chain
 

@@ -13,9 +13,10 @@ toolsets:
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: Repository Analysis: [Repo Name]
+title: "Repository Analysis: [Repo Name]"
 name: repo-story-time
 description: "Generate a comprehensive repository summary and narrative story from commit history"
+tags: []
 ---
 
 

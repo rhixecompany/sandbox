@@ -6,7 +6,7 @@ name: "sa-plan"
 title: "Sa Plan"
 description: "Structured Autonomy Planning Prompt"
 trigger: /sa-plan
-tags: []
+tags:
   - hermes
 ---
 

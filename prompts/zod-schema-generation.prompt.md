@@ -6,7 +6,7 @@ name: "zod-schema-generation"
 title: "Zod Schema Generation"
 description: "Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples with full type safety."
 trigger: /zod-schema-generation
-tags: []
+tags:
   - hermes
   - zod
   - schema

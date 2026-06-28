@@ -6,6 +6,7 @@ version: 1.0.0
 title: Power BI Performance Troubleshooting Guide
 name: power-bi-performance-troubleshooting
 description: "Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries."
+tags: []
 ---
 
 # Power BI Performance Troubleshooting Guide

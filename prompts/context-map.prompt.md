@@ -7,7 +7,7 @@ name: context-map
 trigger: /context-map
 description: >-
   Build a dependency and reference map before making changes so implementation starts from the right files.
-tags: []
+tags:
   - hermes
   - copilot
   - analysis

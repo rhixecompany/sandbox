@@ -10,7 +10,7 @@ description: >
   audit-skills-judge-fix, agents-system-prompt-context-fix,
   sync-hermes-copilot-codex, and test-providers-models.
   Each prompt runs to completion before the next begins.
-tags: []
+tags:
   - orchestrator
   - pipeline
   - sequential
@@ -57,7 +57,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 
 ## Context
 
-- **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
+- **Workspace root:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox` on this host)
 - **Prompt files:** 4 files in workspace root
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 - **Progress artifact:** `docs/orchestrator-progress.md`

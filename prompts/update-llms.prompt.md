@@ -22,6 +22,7 @@ version: 1.0.0
 title: Update LLMs.txt File
 name: update-llms
 description: "Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/"
+tags: []
 ---
 
 

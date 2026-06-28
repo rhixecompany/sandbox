@@ -12,6 +12,7 @@ version: 1.0.0
 title: Create GitHub Issues for Unmet Specification Requirements
 name: create-github-issues-for-unmet-specification-requirements
 description: "Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml template."
+tags: []
 ---
 
 

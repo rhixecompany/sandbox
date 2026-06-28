@@ -6,7 +6,7 @@ name: "execute-bash-scripts-refactor-testing-workflow-implementation-plan"
 title: "Bash Scripts Refactor Testing Workflow Implementation Plan"
 description: "Execute the Bash Scripts Refactor Testing Workflow Implementation Plan plan."
 trigger: /execute-bash-scripts-refactor-testing-workflow-implementation-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

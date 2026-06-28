@@ -17,6 +17,7 @@ version: 1.0.0
 title: Update Azure Verified Modules in Bicep Files
 name: update-avm-modules-in-bicep
 description: "Update Azure Verified Modules (AVM) to latest versions in Bicep files."
+tags: []
 ---
 
 

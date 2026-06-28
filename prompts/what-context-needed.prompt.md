@@ -6,6 +6,7 @@ version: 1.0.0
 title: What Context Do You Need?
 name: what-context-needed
 description: "Ask Copilot what files it needs to see before answering a question"
+tags: []
 ---
 
 ## Goal

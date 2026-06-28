@@ -6,6 +6,7 @@ version: 1.0.0
 title: CentOS Linux Triage
 name: centos-linux-triage
 description: "Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld."
+tags: []
 ---
 
 # CentOS Linux Triage

@@ -6,7 +6,7 @@ name: "playwright-typescript"
 title: "Playwright Typescript"
 description: "Comprehensive Playwright TypeScript prompt aligned to repository testing standards."
 trigger: /playwright-typescript
-tags: []
+tags:
   - hermes
   - typescript
   - playwright

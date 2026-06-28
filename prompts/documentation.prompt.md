@@ -6,7 +6,7 @@ name: "documentation"
 title: "Documentation"
 description: "Comprehensive documentation prompt aligned to repository documentation standards."
 trigger: /documentation
-tags: []
+tags:
   - hermes
   - documentation
 ---

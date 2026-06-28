@@ -22,6 +22,7 @@ version: 1.0.0
 title: Update Oo Component Documentation
 name: update-oo-component-documentation
 description: "Update existing object-oriented component documentation following industry best practices and architectural documentation standards."
+tags: []
 ---
 
 

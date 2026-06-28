@@ -12,6 +12,7 @@ version: 1.0.0
 title: My Issues
 name: my-issues
 description: "List my issues in the current repository"
+tags: []
 ---
 
 

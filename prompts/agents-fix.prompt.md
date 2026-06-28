@@ -7,7 +7,7 @@ title: Agents Sync and Deduplication
 trigger: /agents-fix
 description: Sync and deduplicate agent definitions across Hermes, and Copilot
     with dependency mapping and schema validation.
-tags: []
+tags:
   - hermes
   - copilot
   - agents
@@ -22,7 +22,7 @@ dependencies:
     - skill:systematic-debugging
     - skill:simplify
     - skill:acpx-executor
-    - skill:copilot-cli
+    - skill:copilot-cli-quickstart
     - tool:terminal
     - tool:search_files
 skills:
@@ -37,7 +37,7 @@ skills:
     - systematic-debugging
     - simplify
     - acpx-executor
-    - copilot-cli
+    - copilot-cli-quickstart
 ---
 
 ## Goal
@@ -65,28 +65,17 @@ first, then mapping, then sync, then verification.
 
 ## Rules
 
-1. Run `context-map` before edits.
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
 2. Detect the file format before modifying anything.
-3. Keep one platform focused at a time.
 4. Preserve registrations unless the user explicitly requests a rename or
    removal.
-5. Verify after each sync pass.
-6. Use git history for rollback; do not create backup copies.
-7. Prefer explicit platform mappings over guesswork.
 
 ## Skills Required
 
-| Skill                         | Purpose                                                       |
-| ----------------------------- | ------------------------------------------------------------- |
-| `context-map` (prompt)        | Map impacted files and dependencies before edits              |
-| `brainstorming`               | Explore agent discovery and sync approaches                   |
-| `plans-and-specs`             | Create structured plans for agent migration and deduplication |
-| `dispatching-parallel-agents` | Scan agents in parallel across platforms                      |
-| `subagent-driven-development` | Delegate per-agent debugging tasks                            |
-| `systematic-debugging`        | Identify formatting, content, and registration issues         |
-| `simplify`                    | Remove duplicate agent definitions                            |
-| `acpx-executor`               | Execute a prompt via any ACPX provider                        |
-| `copilot-cli`                 | Use Copilot CLI for quick validation and verification         |
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#agents-fix)
 
 ## Phases
 

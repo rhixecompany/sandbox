@@ -5,6 +5,7 @@ version: 1.0.0
 title: Task1
 name: dev
 description: "The purpose of the prompt is to get my codebase optimized and refactored"
+tags: []
 ---
 
 ## Phase 1

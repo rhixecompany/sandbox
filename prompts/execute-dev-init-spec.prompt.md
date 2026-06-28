@@ -6,7 +6,7 @@ name: "execute-dev-init-spec"
 title: "Dev Init Spec"
 description: "Execute the Dev Init Spec plan."
 trigger: /execute-dev-init-spec
-tags: []
+tags:
   - hermes
   - plan
   - execute

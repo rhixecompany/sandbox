@@ -12,6 +12,7 @@ version: 1.0.0
 title: Create GitHub Issue from Implementation Plan
 name: create-github-issues-feature-from-implementation-plan
 description: "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates."
+tags: []
 ---
 
 

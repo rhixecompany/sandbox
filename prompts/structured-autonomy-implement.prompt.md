@@ -6,7 +6,7 @@ name: "sa-implement"
 title: "Sa Implement"
 description: "Structured Autonomy Implementation Prompt"
 trigger: /sa-implement
-tags: []
+tags:
   - hermes
 ---
 

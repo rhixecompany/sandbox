@@ -5,6 +5,7 @@ version: 1.0.0
 title: Deploy and Manage MCP-Based Agents
 name: mcp-deploy-manage-agents
 description: "mcp-deploy-manage-agents.prompt"
+tags: []
 ---
 
 ## Goal

@@ -6,7 +6,7 @@ name: "execute-plan2-final-integration-review"
 title: "Plan2 Final Integration Review"
 description: "Execute the Plan2 Final Integration Review plan."
 trigger: /execute-plan2-final-integration-review
-tags: []
+tags:
   - hermes
   - plan
   - execute

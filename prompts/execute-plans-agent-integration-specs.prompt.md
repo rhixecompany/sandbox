@@ -6,7 +6,7 @@ name: "execute-plans-agent-integration-specs"
 title: "Plans Agent Integration Specs"
 description: "Execute the Plans Agent Integration Specs plan."
 trigger: /execute-plans-agent-integration-specs
-tags: []
+tags:
   - hermes
   - plan
   - execute

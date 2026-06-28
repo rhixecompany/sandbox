@@ -7,7 +7,7 @@ name: convert-plaintext-to-md
 trigger: /convert-plaintext-to-md
 description: >-
   Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
-tags: []
+tags:
   - hermes
   - copilot
   - markdown

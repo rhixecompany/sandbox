@@ -40,6 +40,7 @@ version: 1.0.0
 title: Introduction
 name: plan-features-seed
 description: "Implement Full-Featured Dynamic Database Seeding System with TypeScript & Next.js Best Practices"
+tags: []
 ---
 
 

@@ -24,6 +24,7 @@ version: 1.0.0
 title: Setup Component
 name: setup-component
 description: "Generate a new React/Next.js component."
+tags: []
 ---
 
 

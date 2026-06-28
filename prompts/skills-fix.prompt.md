@@ -11,7 +11,7 @@ description: >
   batch-audits all SKILL.md files in groups of 7 → generates per-skill reports
   and a master index → creates a remediation plan and execution prompt →
   applies fixes in priority order (F → C → B → A-).
-tags: []
+tags:
   - hermes
   - skills
   - debugging
@@ -19,9 +19,9 @@ tags: []
   - dedup
   - remediation
 dependencies:
-  - skill:prompt:context-map.prompt.md
-  - skill:prompt:update-implementation-plan.prompt.md
-  - skill:prompt:skills-debug-prompt.prompt.md
+  - prompt:context-map
+  - prompt:update-implementation-plan
+  - prompt:skills-debug-prompt
   - skill:using-superpowers
   - skill:brainstorming
   - skill:plans-and-specs
@@ -51,7 +51,7 @@ reports, plans fixes, and applies them in priority order.
 
 ## Context
 
-- **Skills root:** `C:\Users\Alexa\AppData\Local\hermes\profiles\adminbot\skills\`
+- **Skills root:** `$HOME/AppData/Local/hermes/skills/` (resolves to `C:\Users\Alexa\AppData\Local\hermes\skills\`)
 - **Audit output:** `docs/skills-debug-context.md` (master index)
 - **Per-skill reports:** `docs/<category>/<skill>/skills-debug-context.md`
 - **Remediation plan:** `docs/plan/skills-debug-plan.md`

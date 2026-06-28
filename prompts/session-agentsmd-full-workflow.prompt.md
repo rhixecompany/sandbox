@@ -6,7 +6,7 @@ name: "session-agentsmd-full-workflow"
 title: "Session Agents.md Full Workflow"
 description: "Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and report."
 trigger: /session-agentsmd-full-workflow
-tags: []
+tags:
   - hermes
   - agents
   - workflow

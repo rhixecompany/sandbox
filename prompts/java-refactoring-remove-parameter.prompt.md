@@ -6,7 +6,7 @@ name: "Refactoring Java Methods with Remove Parameter"
 title: "Refactoring Java Methods With Remove Parameter"
 description: "Refactoring using Remove Parameter in Java Language"
 trigger: /Refactoring Java Methods with Remove Parameter
-tags: []
+tags:
   - hermes
   - java
   - refactoring

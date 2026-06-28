@@ -6,7 +6,7 @@ name: "execute-plan-eslintPluginAuditAndUpdate"
 title: "ESLint Plugin Audit & Update"
 description: "Execute ESLint Plugin Audit & Update"
 trigger: /execute-plan-eslintPluginAuditAndUpdate
-tags: []
+tags:
   - hermes
   - plan
   - execute

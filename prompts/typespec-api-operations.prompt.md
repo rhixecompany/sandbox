@@ -7,7 +7,7 @@ title: Add TypeSpec API Operations
 name: typespec-api-operations
 mode: "agent"
 description: "Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards"
-tags: []
+tags:
   - typespec
   - m365-copilot
   - api-plugin

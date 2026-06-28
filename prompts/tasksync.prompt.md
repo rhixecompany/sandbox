@@ -6,7 +6,7 @@ name: "tasksync"
 title: "Task Sync"
 description: "Comprehensive prompt for synchronizing tasks, implementations, and updates across projects."
 trigger: /tasksync
-tags: []
+tags:
   - hermes
   - tasks
   - sync

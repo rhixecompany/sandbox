@@ -6,6 +6,7 @@ version: 1.0.0
 title: Create TLDR Page
 name: create-tldr-page
 description: "Create a tldr page from documentation URLs and command examples, requiring both URL and command name."
+tags: []
 ---
 
 ## Goal

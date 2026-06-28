@@ -6,7 +6,7 @@ name: "execute-rhixecompany-comics-plan"
 title: "Rhixecompany Comics Plan"
 description: "Execute the Rhixecompany Comics Plan plan."
 trigger: /execute-rhixecompany-comics-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

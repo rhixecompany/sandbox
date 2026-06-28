@@ -6,7 +6,7 @@ name: "task-implementation"
 title: "Task Implementation"
 description: "Comprehensive prompt for implementing tasks with clear phases, goals, and verification."
 trigger: /task-implementation
-tags: []
+tags:
   - hermes
   - tasks
   - implementation

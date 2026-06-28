@@ -6,7 +6,7 @@ name: "execute-dev-init-implementation-plan"
 title: "Dev Init Implementation Plan"
 description: "Execute the Dev Init Implementation Plan plan."
 trigger: /execute-dev-init-implementation-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

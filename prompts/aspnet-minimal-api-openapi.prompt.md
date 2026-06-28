@@ -6,6 +6,7 @@ version: 1.0.0
 title: ASP.NET Minimal API with OpenAPI
 name: aspnet-minimal-api-openapi
 description: "Create ASP.NET Minimal API endpoints with proper OpenAPI documentation"
+tags: []
 ---
 
 # ASP.NET Minimal API with OpenAPI

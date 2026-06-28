@@ -26,6 +26,7 @@ version: 1.0.0
 title: Migrate To Next16
 name: migrate-to-next16
 description: "Automate Next.js 16 migration tasks"
+tags: []
 ---
 
 

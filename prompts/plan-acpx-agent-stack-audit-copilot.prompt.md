@@ -6,7 +6,7 @@ name: "acpx-stack-audit-copilot"
 title: "ACP Agent Stack Audit — GitHub Copilot"
 description: "Copilot agent stack audit: inventory GitHub Copilot custom agents, instructions, and prompt files."
 trigger: /acpx-stack-audit-copilot
-tags: []
+tags:
   - hermes
   - acp
   - audit

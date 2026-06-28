@@ -6,7 +6,7 @@ name: "execute-ecom-django-upgrade-plan"
 title: "Ecom Django Upgrade Plan"
 description: "Execute the Ecom Django Upgrade Plan plan."
 trigger: /execute-ecom-django-upgrade-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

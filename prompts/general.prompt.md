@@ -8,7 +8,7 @@ trigger: /general
 description:
     General development workflow for analysis, planning, implementation, and
     verification with context mapping and AI-assisted execution.
-tags: []
+tags:
   - hermes
   - copilot
   - opencode
@@ -79,29 +79,19 @@ execution, and validation.
 
 ## Rules
 
-1. Run `context-map` before implementation.
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
 2. Use Context7 or equivalent docs before changing code.
 3. Plan before coding when the scope is multi-step.
 4. Keep changes small and verifiable.
 5. Use direct CLI execution for implementation and verification.
-6. Prefer git rollback over backup files.
 7. Keep the workflow deterministic and easy to resume.
 
 ## Skills Required
 
-| Skill                         | Purpose                                                                           |
-| ----------------------------- | --------------------------------------------------------------------------------- |
-| `context-map` (prompt)        | Map impacted files and dependencies before changes (loaded via prompt dependency) |
-| `brainstorming`               | Explore approaches before implementation                                          |
-| `plans-and-specs`             | Create structured plans and specs                                                 |
-| `dispatching-parallel-agents` | Run parallel automation tasks                                                     |
-| `subagent-driven-development` | Delegate independent subtasks                                                     |
-| `systematic-debugging`        | Isolate and fix issues methodically                                               |
-| `simplify`                    | Remove unnecessary complexity                                                     |
-| `context7`                    | Query codebase-aware documentation and examples                                   |
-| `plan`                        | Write or update a plan before coding                                              |
-| `writing-skills`              | Improve prompts and instructions                                                  |
-| `acpx-executor`               | Dispatch tasks to ACPX providers                                                  |
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#general)
 
 ## Phases
 

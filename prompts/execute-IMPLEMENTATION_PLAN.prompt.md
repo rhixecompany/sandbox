@@ -6,7 +6,7 @@ name: "execute-IMPLEMENTATION_PLAN"
 title: "Implementation_Plan"
 description: "Execute the Implementation_Plan plan."
 trigger: /execute-IMPLEMENTATION_PLAN
-tags: []
+tags:
   - hermes
   - plan
   - execute

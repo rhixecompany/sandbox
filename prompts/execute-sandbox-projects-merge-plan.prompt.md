@@ -6,7 +6,7 @@ name: "execute-sandbox-projects-merge-plan"
 title: "Sandbox Projects Merge Plan"
 description: "Execute the Sandbox Projects Merge Plan plan."
 trigger: /execute-sandbox-projects-merge-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

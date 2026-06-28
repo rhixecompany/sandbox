@@ -6,7 +6,7 @@ name: "execute-bash-fix-implementation-plan"
 title: "Bash Fix Implementation Plan"
 description: "Execute the Bash Fix Implementation Plan plan."
 trigger: /execute-bash-fix-implementation-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

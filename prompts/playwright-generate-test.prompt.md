@@ -13,6 +13,7 @@ compatibility:
   - opencode
 mcp_generator: None
 skill_stub: True
+tags: []
 ---
 
 ## Goal

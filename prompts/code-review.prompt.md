@@ -6,7 +6,7 @@ name: "code-review"
 title: "Code Review"
 description: "Comprehensive code review prompt for correctness, security, and testing risk."
 trigger: /code-review
-tags: []
+tags:
   - hermes
 ---
 

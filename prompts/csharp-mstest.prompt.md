@@ -11,6 +11,7 @@ version: 1.0.0
 title: MSTest Best Practices (MSTest 3.x/4.x)
 name: csharp-mstest
 description: "Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests"
+tags: []
 ---
 
 

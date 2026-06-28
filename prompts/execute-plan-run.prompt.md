@@ -6,7 +6,7 @@ name: "execute-plan-run"
 title: "Master Implementation Plan: ComicWise Codebase Overhaul"
 description: "Execute Master Implementation Plan: ComicWise Codebase Overhaul"
 trigger: /execute-plan-run
-tags: []
+tags:
   - hermes
   - plan
   - execute

@@ -5,6 +5,7 @@ version: 1.0.0
 title: Create Readme
 name: create-readme
 description: "Create a README.md file for the project"
+tags: []
 ---
 
 ## Goal

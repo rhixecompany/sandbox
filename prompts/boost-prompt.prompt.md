@@ -7,7 +7,7 @@ name: boost-prompt
 trigger: /boost-prompt
 description: >-
   Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
-tags: []
+tags:
   - hermes
   - copilot
   - writing-skills

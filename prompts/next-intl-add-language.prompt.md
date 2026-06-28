@@ -12,6 +12,7 @@ version: 1.0.0
 title: Next Intl Add Language
 name: next-intl-add-language
 description: "Add new language to a Next.js + next-intl application"
+tags: []
 ---
 
 

@@ -6,7 +6,7 @@ name: "execute-prompt-conversion-enhancement-plan"
 title: "Prompt Conversion Enhancement Plan"
 description: "Execute the Prompt Conversion Enhancement Plan plan."
 trigger: /execute-prompt-conversion-enhancement-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

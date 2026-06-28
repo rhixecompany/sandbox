@@ -6,7 +6,7 @@ name: comicwise-development
 title: "ComicWise Development Workflow"
 description: "Reusable prompt for ComicWise development sessions"
 applyTo: "**/*"
-tags: []
+tags:
   - nextjs
   - typescript
   - drizzle

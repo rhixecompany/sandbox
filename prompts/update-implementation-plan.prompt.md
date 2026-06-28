@@ -7,7 +7,7 @@ name: update-implementation-plan
 trigger: /update-implementation-plan
 description: >-
   Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
-tags: []
+tags:
   - hermes
   - copilot
   - planning
@@ -48,7 +48,7 @@ Template variables used in this prompt follow this convention:
 
 | Variable | Scope | Example |
 | --- | --- | --- |
-| `<workspace_root>` | Absolute path to project root | `C:\Users\Alexa\Desktop\Sandbox` |
+| `<workspace_root>` | Absolute path to project root | `$HOME/Desktop/SandBox` (e.g. `C:\Users\Alexa\Desktop\Sandbox`) |
 | `<purpose>` | Slug derived from task/feature name | `feature-auth-refactor` |
 | `<component>` | Target component or module | `database` |
 | `<version>` | Plan version (typically `v1`, `v2`) | `v1` |
@@ -57,7 +57,7 @@ Template variables used in this prompt follow this convention:
 When combined in the output path template, these variables produce a concrete file path:
 ```
 <workspace_root>/plan/<purpose>-<component>-<version>.md
-C:\Users\Alexa\Desktop\Sandbox\plan\feature-auth-refactor-database-v1.md
+`$HOME/Desktop/Sandbox/plan/feature-auth-refactor-database-v1.md`
 ```
 
 ## Outputs

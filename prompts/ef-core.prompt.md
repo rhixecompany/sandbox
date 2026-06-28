@@ -11,6 +11,7 @@ version: 1.0.0
 title: Entity Framework Core Best Practices
 name: ef-core
 description: "Get best practices for Entity Framework Core"
+tags: []
 ---
 
 

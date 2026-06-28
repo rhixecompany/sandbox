@@ -6,7 +6,7 @@ name: "execute-multi-agent-research"
 title: "2026 06 16_Multi Agent Research"
 description: "Execute the 2026 06 16_Multi Agent Research plan."
 trigger: /execute-multi-agent-research
-tags: []
+tags:
   - hermes
   - plan
   - execute

@@ -6,7 +6,7 @@ name: "security"
 title: "Security Review"
 description: "Comprehensive prompt for security review, vulnerability assessment, and secure coding practices."
 trigger: /security
-tags: []
+tags:
   - hermes
   - security
   - review

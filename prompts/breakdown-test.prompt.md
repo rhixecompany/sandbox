@@ -5,6 +5,7 @@ version: 1.0.0
 title: Test Planning & Quality Assurance Prompt
 name: breakdown-test
 description: "Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects."
+tags: []
 ---
 
 ## Goal

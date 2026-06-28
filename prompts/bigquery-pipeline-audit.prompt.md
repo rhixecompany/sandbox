@@ -3,9 +3,10 @@ toolsets: ["search/codebase", "edit/editFiles", "search"]
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: BigQuery Pipeline Audit: Cost, Safety and Production Readiness
+title: "BigQuery Pipeline Audit: Cost, Safety and Production Readiness"
 name: bigquery-pipeline-audit
 description: "Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations."
+tags: []
 ---
 
 # BigQuery Pipeline Audit: Cost, Safety and Production Readiness

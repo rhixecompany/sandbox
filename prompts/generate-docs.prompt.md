@@ -24,6 +24,7 @@ version: 1.0.0
 title: Generate Docs
 name: generate-docs
 description: "Generate documentation for code or APIs."
+tags: []
 ---
 
 

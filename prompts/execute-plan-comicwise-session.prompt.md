@@ -6,7 +6,7 @@ name: "execute-plan-comicwise-session"
 title: "ComicWise Session Prompt"
 description: "Execute ComicWise Session Prompt"
 trigger: /execute-plan-comicwise-session
-tags: []
+tags:
   - hermes
   - plan
   - execute

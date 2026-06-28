@@ -16,6 +16,7 @@ version: 1.0.0
 title: Suggest Awesome GitHub Copilot Custom Agents
 name: suggest-awesome-github-copilot-agents
 description: "Find GitHub Copilot custom agent files that add coverage the repo lacks and flag local duplicates or outdated copies."
+tags: []
 ---
 
 

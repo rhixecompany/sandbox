@@ -6,7 +6,7 @@ name: "execute-per-repo-implementation-plans"
 title: "Per Repo Implementation Plans"
 description: "Execute the Per Repo Implementation Plans plan."
 trigger: /execute-per-repo-implementation-plans
-tags: []
+tags:
   - hermes
   - plan
   - execute

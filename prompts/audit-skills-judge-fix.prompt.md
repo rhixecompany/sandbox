@@ -143,7 +143,7 @@ All scripts located at `~/AppData/Local/hermes/scripts/`:
 - **Protected skills:** Do NOT edit bundled/hub-installed skills; pinned skills can be patched but not deleted
 - **skill_manage delete:** Delete archives rather than removes; `absorbed_into` must reference existing skill by bare name
 - **Pagination awareness:** Always `read_file(path)` without offset/limit before constructing patch `old_string`
-- **Windows paths:** Use absolute `C:\Users\...` paths in Python scripts; normalize MSYS paths
+**Path handling (MSYS/Windows):** Use `os.environ["HOME"]` or `os.environ["USERPROFILE"]` to derive paths in Python scripts (portable across MSYS and Windows native). Avoid hardcoded `C:\\Users\\...` or `C:/Users/...` — derive from environment variables instead.
 
 ## Template References
 

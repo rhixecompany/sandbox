@@ -6,7 +6,7 @@ name: "execute-docs-implementation-plan"
 title: "Docs Implementation Plan"
 description: "Execute the Docs Implementation Plan plan."
 trigger: /execute-docs-implementation-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

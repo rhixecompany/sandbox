@@ -6,7 +6,7 @@ name: "execute-hermes-configuration-spec"
 title: "Hermes Configuration Spec"
 description: "Execute the Hermes Configuration Spec plan."
 trigger: /execute-hermes-configuration-spec
-tags: []
+tags:
   - hermes
   - plan
   - execute

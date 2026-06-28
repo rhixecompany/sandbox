@@ -6,7 +6,7 @@ name: "execute-orchestrator-plan"
 title: "Orchestrator Plan"
 description: "Execute the Orchestrator Plan plan."
 trigger: /execute-orchestrator-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

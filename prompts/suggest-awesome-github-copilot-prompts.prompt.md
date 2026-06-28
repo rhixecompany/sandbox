@@ -18,6 +18,7 @@ version: 1.0.0
 title: Suggest Awesome GitHub Copilot Prompts
 name: suggest-awesome-github-copilot-prompts
 description: "Find GitHub Copilot prompt files that add coverage the repo lacks and flag local duplicates or outdated copies."
+tags: []
 ---
 
 

@@ -6,7 +6,7 @@ Generated: 2026-06-28 (Updated — full profile sync)
 
 | Field               | Value                                                       |
 | ------------------- | ----------------------------------------------------------- |
-| **Active Profile**  | `alexa`                                                     |
+| **Active Profile**  | `default`                                                    |
 | **Persona**         | **OWL** — pragmatic senior engineer                         |
 | **Primary Model**   | deepseek-v4-flash-free (opencode-zen)                       |
 | **Current Runtime** | deepseek-v4-flash-free (opencode-zen) — *active primary*    |
@@ -48,11 +48,11 @@ Generated: 2026-06-28 (Updated — full profile sync)
 | 13  | sequential-thinking | stdio     | Structured reasoning             |
 | 14  | smithery            | HTTP      | Smithery registry                |
 
-## Available Toolsets (18 Enabled)
+## Available Toolsets (16 Enabled)
 
 `web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`,
-`moa`, `tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
-`clarify`, `delegation`, `cronjob`, `search`
+`tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
+`clarify`, `delegation`, `cronjob`
 
 ## Plugins (15 Enabled, 49 Disabled)
 

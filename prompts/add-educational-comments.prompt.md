@@ -6,6 +6,7 @@ version: 1.0.0
 title: Add Educational Comments
 name: add-educational-comments
 description: "Add educational comments to the file specified, or prompt asking for file to comment if one is not provided."
+tags: []
 ---
 
 ## Goal

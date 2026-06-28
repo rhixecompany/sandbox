@@ -5,6 +5,7 @@ version: 1.0.0
 title: Hermes Breakdown Test
 name: hermes-breakdown-test
 description: "Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts."
+tags: []
 ---
 
 ## Goal

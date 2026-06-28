@@ -11,6 +11,7 @@ version: 1.0.0
 title: Spring Boot Best Practices
 name: java-springboot
 description: "Get best practices for developing applications with Spring Boot."
+tags: []
 ---
 
 

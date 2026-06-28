@@ -5,6 +5,7 @@ version: 1.0.0
 title: Hermes Breakdown Epic Arch
 name: hermes-breakdown-epic-arch
 description: "Hermes-equivalent: create a high-level Epic Architecture Specification from an Epic PRD."
+tags: []
 ---
 
 ## Goal

@@ -26,22 +26,23 @@
 | 7   | **Python:** python3=3.13.14, python=3.11.15, pip→python3.11, PEP 668=yes (use venv/uv), uv=installed                                                                                             |
 | 8   | **Bun:** 1.3.14+ (primary JS/TS runtime)                                                                                                                                                         |
 | 9   | **`.github/skills/` does NOT exist** — Community skills are reference-only                                                                                                                       |
-| 10  | **Hermes root:** `~/AppData/Local/hermes/` (not `~/.hermes/`)                                                                                                                                    |
-| 11  | **Default profile:** `default` at `~/AppData/Local/hermes` (root config.yaml), NOT `~/AppData/Local/hermes/profiles/default/`                                                                    |
-| 12  | **Active profile:** `alexa` — Persona: OWL (pragmatic senior engineer)                                                                                                                         |
-| 13  | **MCP servers:** 14 configured, all verified reachable                                                                                                                                           |
-| 14  | **Hooks:** 3 active (session-logger, session-auto-commit, governance-audit)                                                                                                                      |
-| 15  | **Plugins:** 15 enabled, 50+ disabled                                                                                                                                                            |
-| 16  | **Skills:** 373 total (73 bundled + 216 community + 84 local)                                                                                                                                    |
-| 17  | **Toolsets:** 18 enabled (web, browser, terminal, file, code_execution, vision, image_gen, moa, tts, skills, todo, memory, context_engine, session_search, clarify, delegation, cronjob, search) |
-| 18  | **Provider chain:** opencode-zen (primary, deepseek-v4-flash-free) → nous (stepfun/step-3.7-flash:free) → openrouter (qwen/qwen3-coder:free)                              |
+| 10  | **MSYS path handling** — Derive paths from env vars (`$HOME`/`$USERPROFILE`), never hardcode `C:\Users\...` or `C:/Users/...`. In Python: `os.environ.get("HOME")` + `os.path.join()` or `pathlib.Path`. In shell: `$HOME/...`. Verify path resolution before filesystem ops. |
+| 11  | **Hermes root:** `~/AppData/Local/hermes/` (not `~/.hermes/`)
+| 12  | **Default profile:** `default` at `~/AppData/Local/hermes` (root config.yaml), NOT `~/AppData/Local/hermes/profiles/default/`                                                                    |
+| 13  | **Active profile:** `default` — Persona: OWL (pragmatic senior engineer)
+| 14  | **MCP servers:** 14 configured, all verified reachable                                                                                                                                           |
+| 15  | **Hooks:** 3 active (session-logger, session-auto-commit, governance-audit)                                                                                                                      |
+| 16  | **Plugins:** 15 enabled, 50+ disabled                                                                                                                                                            |
+| 17  | **Skills:** 373 total (73 bundled + 216 community + 84 local)                                                                                                                                    |
+| 18  | **Toolsets:** 16 enabled (web, browser, terminal, file, code_execution, vision, image_gen, tts, skills, todo, memory, context_engine, session_search, clarify, delegation, cronjob) |
+| 19  | **Provider chain:** opencode-zen (primary, deepseek-v4-flash-free) → nous (stepfun/step-3.7-flash:free) → openrouter (qwen/qwen3-coder:free)                              |
 
 ## Level 3: Profile Routing (Verified from config.yaml)
 
 | Profile           | Model                  | Provider   | Purpose                                 |
 | ----------------- | ---------------------- | ---------- | --------------------------------------- |
-| alexa ⬤           | deepseek-v4-flash-free | opencode-zen | System admin, operations — **currently active** |
-| default            | deepseek-v4-flash-free | opencode-zen | General purpose                                 |
+| default ⬤          | deepseek-v4-flash-free | opencode-zen | General purpose  — **currently active** |
+| alexa               | deepseek-v4-flash-free | opencode-zen | System admin, operations                 |
 | code-architect     | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring            |
 | creative-director  | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks                 |
 | exec-assistant     | deepseek-v4-flash-free | opencode-zen | Administrative, planning, coordination          |

@@ -6,7 +6,7 @@ name: "run-session-agentsmd-workflow"
 title: "Run Agents.md Workflow"
 description: "Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting."
 trigger: /run-session-agentsmd-workflow
-tags: []
+tags:
   - hermes
   - agents
   - workflow

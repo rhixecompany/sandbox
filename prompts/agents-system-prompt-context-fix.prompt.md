@@ -8,7 +8,7 @@ trigger: /agents-system-prompt-context-fix
 description: >-
   Create/update agent context files across project and subprojects, then audit
   and enhance VS Code workspace configuration.
-tags: []
+tags:
   - hermes
   - copilot
   - opencode
@@ -50,7 +50,7 @@ This prompt generates comprehensive agent context files (architecture blueprints
 ## Context
 
 - **Source reference:** `./agents-system-prompt-context-fix.prompt.txt`
-- **Target scope:** Project root `C:\Users\Alexa\Desktop\SandBox` and all subprojects
+**Target scope:** Project root `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`) and all subprojects
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 
 ## Phases

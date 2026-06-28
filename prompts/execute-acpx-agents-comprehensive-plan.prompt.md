@@ -6,7 +6,7 @@ name: "execute-acpx-agents-comprehensive-plan"
 title: "Acpx Agents Comprehensive Plan"
 description: "Execute the Acpx Agents Comprehensive Plan plan."
 trigger: /execute-acpx-agents-comprehensive-plan
-tags: []
+tags:
   - hermes
   - plan
   - execute

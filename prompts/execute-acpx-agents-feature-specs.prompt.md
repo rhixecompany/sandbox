@@ -6,7 +6,7 @@ name: "execute-acpx-agents-feature-specs"
 title: "Acpx Agents Feature Specs"
 description: "Execute the Acpx Agents Feature Specs plan."
 trigger: /execute-acpx-agents-feature-specs
-tags: []
+tags:
   - hermes
   - plan
   - execute

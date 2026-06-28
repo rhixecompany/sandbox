@@ -6,7 +6,7 @@ name: "typescript"
 title: "TypeScript & Next.js"
 description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
 trigger: /typescript
-tags: []
+tags:
   - hermes
   - typescript
   - nextjs

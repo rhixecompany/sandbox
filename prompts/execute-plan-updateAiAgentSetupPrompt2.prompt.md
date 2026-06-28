@@ -6,7 +6,7 @@ name: "execute-plan-updateAiAgentSetupPrompt2"
 title: "Update AI Agent Setup Prompt for ComicWise"
 description: "Execute Update AI Agent Setup Prompt for ComicWise"
 trigger: /execute-plan-updateAiAgentSetupPrompt2
-tags: []
+tags:
   - hermes
   - plan
   - execute

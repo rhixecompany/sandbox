@@ -6,7 +6,7 @@ name: "performance"
 title: "Performance"
 description: "Comprehensive performance prompt focused on measurable improvements and safe optimizations."
 trigger: /performance
-tags: []
+tags:
   - hermes
 ---
 

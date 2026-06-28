@@ -6,6 +6,7 @@ version: 1.0.0
 title: Debian Linux Triage
 name: debian-linux-triage
 description: "Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware guidance."
+tags: []
 ---
 
 # Debian Linux Triage
