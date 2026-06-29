@@ -1,45 +1,74 @@
-# SESSION_REPORT
+# SESSION_REPORT.md
 
-Rolling 41-session summary (most recent first).
+> Generated: 2026-06-29T03:27:00 | cwd: `~/Desktop/SandBox`
+> Scope: Last session audit + startup verification
 
-2026-06-28T23:31:04+01:00 unknown | 20260628_232956_ee8e8c | default | unknown
-2026-06-28T23:30:11+01:00 unknown | 20260628_232956_ee8e8c | default | unknown
-2026-06-28T23:29:45+01:00 unknown | 20260628_232854_dc1517 | default | unknown
-2026-06-28T23:29:13+01:00 unknown | 20260628_232854_dc1517 | default | unknown
-2026-06-28T23:28:29+01:00 unknown | 20260628_232752_413ac3 | default | unknown
-2026-06-28T23:28:10+01:00 unknown | 20260628_232752_413ac3 | default | unknown
-2026-06-28T23:27:46+01:00 unknown | 20260628_232704_08facd | default | unknown
-2026-06-28T23:27:26+01:00 unknown | 20260628_232704_08facd | default | unknown
-2026-06-28T23:13:28+01:00 unknown | 20260628_231210_ec38f9 | default | unknown
-2026-06-28T23:12:11+01:00 unknown | 20260628_231210_ec38f9 | default | unknown
-2026-06-28T23:08:56+01:00 unknown | 20260628_230225_0414cc | default | unknown
-2026-06-28T23:00:23+01:00 unknown | 20260628_225831_3ce16f | default | unknown
-2026-06-28T22:58:33+01:00 unknown | 20260628_225831_3ce16f | default | unknown
-2026-06-28T22:54:12+01:00 unknown | 20260628_225300_a547ee | default | unknown
-2026-06-28T22:53:01+01:00 unknown | 20260628_225300_a547ee | default | unknown
-2026-06-28T22:51:22+01:00 unknown | 20260628_224712_829d46 | default | unknown
-2026-06-28T22:49:17+01:00 unknown | 20260628_224712_829d46 | default | unknown
-2026-06-28T22:47:13+01:00 unknown | 20260628_224712_829d46 | default | unknown
-2026-06-28T22:39:05+01:00 unknown | 20260628_223653_9b3ebb | default | unknown
-2026-06-28T22:37:33+01:00 unknown | 20260628_223653_9b3ebb | default | unknown
-2026-06-28T22:35:58+01:00 unknown | 20260628_223335_71bb7a | default | unknown
-2026-06-28T22:35:40+01:00 unknown | 20260628_223335_71bb7a | default | unknown
-2026-06-28T22:26:05+01:00 unknown | 20260628_215519_4579d9 | default | unknown
-2026-06-28T22:00:54+01:00 unknown | 20260628_215519_4579d9 | default | unknown
-2026-06-28T20:03:04+01:00 unknown | 20260628_200212_37b564 | default | unknown
-2026-06-28T20:02:49+01:00 unknown | 20260628_200212_37b564 | default | unknown
-2026-06-28T20:01:52+01:00 unknown | 20260628_200014_2d2d87 | default | unknown
-2026-06-28T20:00:59+01:00 unknown | 20260628_200014_2d2d87 | default | unknown
-2026-06-28T19:59:55+01:00 unknown | 20260628_195846_211493 | default | unknown
-2026-06-28T19:59:37+01:00 unknown | 20260628_195846_211493 | default | unknown
-2026-06-28T18:20:54+01:00 unknown | 20260628_182003_d53c28 | default | unknown
-2026-06-28T18:20:44+01:00 unknown | 20260628_182003_d53c28 | default | unknown
-2026-06-28T18:16:38+01:00 unknown | 20260628_181516_cf1ce9 | default | unknown
-2026-06-28T18:16:15+01:00 unknown | 20260628_181516_cf1ce9 | default | unknown
-2026-06-28T18:16:06+01:00 unknown | 20260628_181424_5e2c5e | default | unknown
-2026-06-28T18:16:02+01:00 unknown | 20260628_181412_ab4ba4 | default | unknown
-2026-06-28T18:15:37+01:00 unknown | 20260628_181424_5e2c5e | default | unknown
-2026-06-28T18:15:36+01:00 unknown | 20260628_181412_ab4ba4 | default | unknown
-2026-06-25T04:06:23+01:00 unknown | 20260625_040555_158c7a | default | unknown
-2026-06-25T04:06:16+01:00 unknown | 20260625_040555_158c7a | default | unknown
-2026-06-25T04:05:39+01:00 unknown | 20260625_040508_ea0df4 | default | unknown
+## Last Session Summary
+
+| Field | Value |
+|-------|-------|
+| Session ID | `20260629_031844_f78997` |
+| Title | Update hermes context files for subagent-driven development |
+| When | 2026-06-29 03:19 AM |
+| Model | deepseek-v4-flash-free (opencode-zen) |
+| Source | TUI |
+| Completed | Yes — updates applied and verified |
+
+### Session Work
+- Enhanced `subagent-driven-development/SKILL.md` with strict-sequential gates between phases and review steps.
+- Aligned `using-superpowers/SKILL.md` workflow note to point at `subagent-driven-development` as the canonical `and only then` implementation.
+- Updated `SOUL.md` Core Rule #5 and `MASTER_RULES.md` Rule #5 to cite the canonical sequence: `implementer → spec reviewer (and only then) → quality reviewer (and only then) → mark complete → next task`.
+- Verified changes via file reads; did not modify generated docs copies under `hermes-agent/website`.
+
+## Session Audit
+
+All 6 prior phases already in target state. Agent confirmed:
+- `.hermes.md` valid
+- `AGENTS.md`, `HERMES_PROFILE_REPORT.md`, `PROJECT_RULES.md` — keep as-is
+- `.github/scripts/` fully migrated to Hermes (41 files reflected)
+- No stale duplicate references
+
+## Memory Validation
+
+| File | Size | Status |
+|------|------|--------|
+| `USER.md` (root) | 1267B | ✅ |
+| `SOUL.md` | 5311B | ✅ |
+| `memories/MEMORY.md` | 2128B | ✅ under 2200 |
+| `memories/USER.md` | 522B | ✅ |
+| `alexa/memories/USER.md` | 593B | ✅ |
+| `code-architect/memories/USER.md` | 611B | ✅ |
+| `creative-director/memories/USER.md` | 642B | ✅ |
+| `exec-assistant/memories/USER.md` | 645B | ✅ |
+| `patient-tutor/memories/USER.md` | 637B | ✅ |
+| `research-analyst/memories/USER.md` | 633B | ✅ |
+
+All 6 profile USER.md files pass 150-byte floor.
+MEMORY.md under 2200-byte limit ✅
+
+## Drift Flags
+
+| Location | Issue | Severity |
+|----------|-------|----------|
+| `memories/MEMORY.md` | OpenRouter models entry: API has 340+, tracked fact consistent | Info |
+
+## Verified Profiles
+
+| Profile | Model | Status |
+|---------|-------|--------|
+| default | deepseek-v4-flash-free | ✅ |
+| alexa | deepseek-v4-flash-free | ✅ |
+| code-architect | deepseek-v4-flash-free | ✅ |
+| creative-director | deepseek-v4-flash-free | ✅ |
+| exec-assistant | deepseek-v4-flash-free | ✅ |
+| patient-tutor | deepseek-v4-flash-free | ✅ |
+| research-analyst | deepseek-v4-flash-free | ✅ |
+
+All gateways stopped (clean shutdown).
+
+## Open Items
+
+| Item | Status |
+|------|--------|
+| Remove "dummy" line from MEMORY.md | Pending Approval (memory.write_approval) |
+| Re-validate OpenRouter model count (live) | Deferred |

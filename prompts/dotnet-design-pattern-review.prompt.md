@@ -5,7 +5,17 @@ version: 1.0.0
 title: .NET/C# Design Pattern Review
 name: dotnet-design-pattern-review
 description: "Review the C#/.NET code for design pattern implementation and suggest improvements."
-tags: []
+tags:
+  - architecture
+  - audit
+  - csharp
+  - dotnet
+  - frontend
+  - prompts
+  - typescript
+  - architecture
+  - csharp
+  - dotnet
 ---
 
 # .NET/C# Design Pattern Review

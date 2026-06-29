@@ -5,17 +5,43 @@ version: 1.0.0
 title: ComicWise — AI Agent Setup & Implementation Guide
 name: setup-enhanced
 description: "Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices"
-tags: []
----
-
-# ComicWise — AI Agent Setup & Implementation Guide
-
-**ComicWise** is a production-grade manga/comic reader built with **Next.js 16.1.6** (App Router), **React 19** Server Components, **Drizzle ORM** + PostgreSQL (Neon), **NextAuth v5** (database sessions), **Zustand 5** + **React Query 5**, **shadcn/Radix UI**, **Tailwind CSS 4**, **Vitest** + **Playwright**, and a database seeding system with CLI + REST API.
-
-This guide covers **HOW** to implement features — workflow, phases, DRY practices, and personas. It does not duplicate content from the reference files below.
-
-> **📖 Cross-References:** Rules & conventions → `.github/copilot-instructions.md` | Complete patterns & code → `docs/dev.content.md` | Entity details → `docs/database-context-map.md`
-
+tags:
+  - agents
+  - api
+  - backend
+  - data
+  - database
+  - frontend
+  - ml
+  - nextjs
+  - playwright
+  - prompts
+  - react
+  - setup
+  - specification
+  - sql
+  - testing
+  - typescript
+  - workflow
+  - agents
+  - api
+  - authentication
+  - configuration
+  - css
+  - database
+  - drizzle
+  - frontend
+  - nextjs
+  - orchestration
+  - planning
+  - playwright
+  - react
+  - security
+  - setup
+  - specification
+  - sql
+  - typescript
+  - workflow
 ---
 
 ## 1. 🚀 Quick Start

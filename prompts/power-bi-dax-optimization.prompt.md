@@ -6,7 +6,20 @@ version: 1.0.0
 title: Power BI DAX Formula Optimizer
 name: power-bi-dax-optimization
 description: "Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations."
-tags: []
+tags:
+  - ml
+  - performance
+  - prompts
+  - specification
+  - database
+  - documentation
+  - drizzle
+  - markdown
+  - optimization
+  - performance
+  - planning
+  - powerbi
+  - specification
 ---
 
 # Power BI DAX Formula Optimizer

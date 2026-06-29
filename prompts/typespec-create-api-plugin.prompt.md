@@ -8,6 +8,13 @@ name: typespec-create-api-plugin
 mode: "agent"
 description: "Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot"
 tags:
+  - ai-assistant
+  - api
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
   - typespec
   - m365-copilot
   - api-plugin
@@ -34,6 +41,8 @@ Use when you need to typespec create api plugin for the current workspace or tas
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

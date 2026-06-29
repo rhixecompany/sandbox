@@ -7,6 +7,10 @@ title: "Full ESLint VSCode Auth Modernization"
 description: "Execute Full ESLint VSCode Auth Modernization"
 trigger: /execute-plan-full-eslint-vscode-auth-modernization
 tags:
+  - ai-assistant
+  - execution
+  - linting
+  - prompts
   - hermes
   - plan
   - execute

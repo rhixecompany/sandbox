@@ -6,7 +6,17 @@ version: 1.0.0
 title: AI Model Recommendation for Copilot Chat Modes and Prompts
 name: model-recommendation
 description: "Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency"
-tags: []
+tags:
+  - ai-assistant
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - documentation
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +39,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

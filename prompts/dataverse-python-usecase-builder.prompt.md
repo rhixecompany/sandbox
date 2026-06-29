@@ -7,6 +7,16 @@ title: "Dataverse Python   Use Case Solution Builder"
 description: "Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations"
 trigger: /Dataverse Python - Use Case Solution Builder
 tags:
+  - architecture
+  - data
+  - frontend
+  - generator
+  - ml
+  - performance
+  - prompts
+  - python
+  - specification
+  - typescript
   - hermes
   - python
   - dataverse

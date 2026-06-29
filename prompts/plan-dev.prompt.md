@@ -16,18 +16,32 @@ version: 1.0.0
 title: ComicWise Development Master Plan (v6.0)
 name: plan-dev
 description: "Comprehensive ComicWise development plan with database architecture, feature implementation, quality gates, and systematic task execution"
-tags: []
----
-
-
-# ComicWise Development Master Plan (v6.0)
-
-**Purpose:** Unified development guide consolidating database architecture, implementation workflows, quality gates, and complete task execution strategy.
-
-**Last Updated:** March 1, 2026  
-**Framework:** Next.js 16 + React Server Components + Drizzle ORM + TypeScript  
-**Total Estimated Duration:** 25-37 hours | **By Phase:** See Breakdown Below
-
+tags:
+  - architecture
+  - backend
+  - data
+  - database
+  - frontend
+  - nextjs
+  - planning
+  - prompts
+  - react
+  - specification
+  - sql
+  - typescript
+  - workflow
+  - architecture
+  - database
+  - drizzle
+  - linux
+  - nextjs
+  - orchestration
+  - planning
+  - react
+  - specification
+  - sql
+  - typescript
+  - workflow
 ---
 
 ## Table of Contents

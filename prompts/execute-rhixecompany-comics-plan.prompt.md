@@ -7,6 +7,11 @@ title: "Rhixecompany Comics Plan"
 description: "Execute the Rhixecompany Comics Plan plan."
 trigger: /execute-rhixecompany-comics-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

@@ -3,6 +3,15 @@ name: multi-agent-research-template
 title: Multi-Agent Research and Implementation Template
 description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
 tags:
+  - agents
+  - ai-assistant
+  - frontend
+  - ml
+  - planning
+  - prompts
+  - skills
+  - typescript
+  - workflow
   - codex
   - copilot
   - hermes
@@ -19,6 +28,9 @@ metadata:
 ---
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#multi-agent-research-template)
 
 | Skill | Purpose |
 |-------|---------|

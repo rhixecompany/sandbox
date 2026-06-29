@@ -11,9 +11,18 @@ version: 1.0.0
 title: TUnit Best Practices
 name: csharp-tunit
 description: "Get best practices for TUnit unit testing, including data-driven tests"
-tags: []
+tags:
+  - csharp
+  - data
+  - dotnet
+  - frontend
+  - prompts
+  - testing
+  - typescript
+  - csharp
+  - dotnet
+  - testing
 ---
-
 
 # TUnit Best Practices
 

@@ -13,7 +13,18 @@ compatibility:
   - opencode
 mcp_generator: None
 skill_stub: True
-tags: []
+tags:
+  - mcp
+  - ml
+  - playwright
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - documentation
+  - planning
+  - playwright
+  - specification
 ---
 
 ## Goal
@@ -36,6 +47,8 @@ Use when you need to playwright website exploration for the current workspace or
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -71,6 +84,9 @@ Explore a website with Playwright MCP, document core flows, and propose tests fr
 - Record locators and observed outcomes while exploring.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#playwright-explore-website)
 
 - `webapp-testing` — navigate and exercise the live site with browser automation
 - `verification-before-completion` — confirm the exploration evidence before summarizing

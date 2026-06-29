@@ -7,6 +7,12 @@ title: "Update AI Agent Setup Prompt for ComicWise"
 description: "Execute Update AI Agent Setup Prompt for ComicWise"
 trigger: /execute-plan-updateAiAgentSetupPrompt2
 tags:
+  - agents
+  - ai-assistant
+  - execution
+  - ml
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

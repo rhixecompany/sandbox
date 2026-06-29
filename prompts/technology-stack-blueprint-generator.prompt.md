@@ -5,7 +5,32 @@ version: 1.0.0
 title: Comprehensive Technology Stack Blueprint Generator
 name: technology-stack-blueprint-generator
 description: "Comprehensive technology stack blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks, programming languages, and implementation patterns across multiple platforms (.NET, Java, JavaScript, React, Python). Generates configurable blueprints with version information, licensing details, usage patterns, coding conventions, and visual diagrams. Provides implementation-ready templates and maintains architectural consistency for guided development."
-tags: []
+tags:
+  - architecture
+  - configuration
+  - csharp
+  - documentation
+  - dotnet
+  - frontend
+  - generator
+  - java
+  - javascript
+  - ml
+  - prompts
+  - python
+  - react
+  - typescript
+  - architecture
+  - csharp
+  - database
+  - documentation
+  - dotnet
+  - drizzle
+  - java
+  - javascript
+  - linux
+  - python
+  - react
 ---
 
 ## Goal
@@ -28,6 +53,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

@@ -16,6 +16,8 @@ system: |
   invent findings. Every claim must trace to a real web_search result.
   You stop at Phase 5. You do not start branch normalization or migration.
 tags:
+  - ml
+  - prompts
   - hermes
   - repos
   - research
@@ -35,25 +37,6 @@ dependencies:
   - skill:writing-skills
   - skill:content-research-writer
 skills:
----
-
-## CRITICAL RULES
-
-> These rules override all other instructions. Violating them produces invalid output.
-
-1. **NO FABRICATION** — Every best practice, pitfall, or resource must trace to a real
-   `web_search` result. If search returns nothing useful, write "No new findings" — never
-   invent content.
-2. **VERIFY BEFORE CLAIMING** — Never report a file count without running
-   `find | wc -l`. Never embed a URL without `web_extract` confirming it loads.
-3. **SCOPE GUARD** — This prompt covers Phases 0–5 (research + reporting) only.
-   Branch normalization, Bun migration, consolidation, and CI setup are secondary goals
-   listed in `## Secondary Goals`. Do NOT start them until all 14 reports are verified.
-4. **CONSISTENT FORMAT** — All 14 reports must follow the exact template in
-   `## Report Template`. Same section headers, same table formats, same ordering.
-5. **SIZE GATE** — Reports must be 1KB–5KB. Trim anything over 5KB. Expand anything
-   under 1KB. Every section must be actionable for this specific project.
-
 ---
 
 ## Goal
@@ -403,6 +386,9 @@ List project name + shared technology. Must be symmetric.>
 ---
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#repo)
 
 | Skill | Phase | Purpose |
 |-------|-------|---------|

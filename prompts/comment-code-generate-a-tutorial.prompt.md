@@ -5,7 +5,23 @@ version: 1.0.0
 title: Comment Code Generate A Tutorial
 name: comment-code-generate-a-tutorial
 description: "Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial."
-tags: []
+tags:
+  - generator
+  - markdown
+  - ml
+  - prompts
+  - python
+  - refactoring
+  - specification
+  - typescript
+  - database
+  - documentation
+  - drizzle
+  - markdown
+  - planning
+  - python
+  - refactoring
+  - specification
 ---
 
 ## Goal
@@ -28,6 +44,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

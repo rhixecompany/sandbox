@@ -6,7 +6,23 @@ version: 1.0.0
 title: Debug Issue
 name: debug-issue
 description: "Debug an issue with reproducible analysis, root-cause isolation, and verification steps"
-tags: []
+tags:
+  - ai-assistant
+  - debugging
+  - fix
+  - git
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - ci-cd
+  - debugging
+  - documentation
+  - github
+  - markdown
+  - planning
+  - specification
 ---
 
 <!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/prompts/debug-issue.prompt.md -->

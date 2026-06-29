@@ -5,7 +5,31 @@ version: 1.0.0
 title: Azure Cost Optimize
 name: az-cost-optimize
 description: "Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations."
-tags: []
+tags:
+  - azure
+  - backend
+  - configuration
+  - frontend
+  - generator
+  - git
+  - mcp
+  - performance
+  - prompts
+  - typescript
+  - workflow
+  - agile
+  - authentication
+  - azure
+  - ci-cd
+  - github
+  - mcp
+  - optimization
+  - orchestration
+  - performance
+  - planning
+  - security
+  - testing
+  - workflow
 ---
 
 # Azure Cost Optimize

@@ -7,6 +7,11 @@ title: "Comprehensive Modernization Plan: ESLint, VSCode & Auth"
 description: "Execute Comprehensive Modernization Plan: ESLint, VSCode & Auth"
 trigger: /execute-plan-optimize
 tags:
+  - ai-assistant
+  - execution
+  - linting
+  - performance
+  - prompts
   - hermes
   - plan
   - execute

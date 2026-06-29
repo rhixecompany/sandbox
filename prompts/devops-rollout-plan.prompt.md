@@ -6,7 +6,18 @@ version: 1.0.0
 title: DevOps Rollout Plan Generator
 name: devops-rollout-plan
 description: "Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification signals, rollback procedures, and communication plans for infrastructure and application changes"
-tags: []
+tags:
+  - deployment
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - deployment
+  - devops
+  - documentation
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +40,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

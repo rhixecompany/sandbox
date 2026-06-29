@@ -7,6 +7,14 @@ title: "Session Agents.md Full Workflow"
 description: "Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and report."
 trigger: /session-agentsmd-full-workflow
 tags:
+  - agents
+  - architecture
+  - generator
+  - git
+  - prompts
+  - specification
+  - typescript
+  - workflow
   - hermes
   - agents
   - workflow
@@ -47,6 +55,9 @@ Supported target styles:
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#session-agentsmd-full-workflow)
+
 - Repository discovery and workspace navigation.
 - Markdown authoring for AGENTS.md quality guidance.
 - Git operations in nested repositories.
@@ -67,6 +78,8 @@ Use subagents only when needed for speed or isolation.
 - Style: concise, explicit, execution-first.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the nearest AGENTS.md and repository instructions when present.
 - Prefer evidence from local files over assumptions.

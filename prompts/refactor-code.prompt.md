@@ -24,9 +24,31 @@ version: 1.0.0
 title: Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle Patterns)
 name: refactor-code
 description: "Refactor code for maintainability and standards."
-tags: []
+tags:
+  - linting
+  - markdown
+  - migration
+  - ml
+  - nextjs
+  - prompts
+  - refactoring
+  - specification
+  - typescript
+  - authentication
+  - code-quality
+  - database
+  - documentation
+  - drizzle
+  - linting
+  - markdown
+  - migration
+  - nextjs
+  - planning
+  - refactoring
+  - security
+  - specification
+  - typescript
 ---
-
 
 ## Goal
 
@@ -48,6 +70,8 @@ Use when you need to next.js expert for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

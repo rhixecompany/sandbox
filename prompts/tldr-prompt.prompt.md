@@ -6,7 +6,26 @@ version: 1.0.0
 title: TLDR Prompt
 name: tldr-prompt
 description: "Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries."
-tags: []
+tags:
+  - agents
+  - ai-assistant
+  - backend
+  - documentation
+  - git
+  - mcp
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - agents
+  - ai-assistant
+  - ci-cd
+  - documentation
+  - github
+  - markdown
+  - mcp
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +48,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

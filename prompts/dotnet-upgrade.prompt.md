@@ -7,6 +7,12 @@ title: ".Net Upgrade Analysis Prompts"
 description: "Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution"
 trigger: /.NET Upgrade Analysis Prompts
 tags:
+  - audit
+  - csharp
+  - dotnet
+  - migration
+  - prompts
+  - typescript
   - hermes
 ---
 

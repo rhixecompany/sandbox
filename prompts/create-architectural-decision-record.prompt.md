@@ -22,9 +22,23 @@ version: 1.0.0
 title: Create Architectural Decision Record
 name: create-architectural-decision-record
 description: "Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation."
-tags: []
+tags:
+  - architecture
+  - documentation
+  - generator
+  - ml
+  - performance
+  - prompts
+  - specification
+  - typescript
+  - architecture
+  - documentation
+  - generator
+  - linux
+  - performance
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -46,6 +60,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -102,7 +118,6 @@ title: "ADR-NNNN: [Decision Title]"
 status: "Proposed"
 date: "YYYY-MM-DD"
 authors: "[Stakeholder Names/Roles]"
-tags: ["architecture", "decision"]
 supersedes: ""
 superseded_by: ""
 ---

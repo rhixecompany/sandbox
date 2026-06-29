@@ -5,7 +5,23 @@ version: 1.0.0
 title: Optimize Agentsmd
 name: optimize-agentsmd
 description: "optimize-agentsMd.prompt"
-tags: []
+tags:
+  - agents
+  - ml
+  - performance
+  - prompts
+  - specification
+  - typescript
+  - workflow
+  - agents
+  - documentation
+  - markdown
+  - optimization
+  - orchestration
+  - performance
+  - planning
+  - specification
+  - workflow
 ---
 
 ## Goal
@@ -28,6 +44,8 @@ Use when you need to optimize agentsmd for the current workspace or task.
 - A concise verification note summarizing what was changed, assumptions made, and any missing sources.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the chat response structured, deterministic, and easy to act on; if the artifact is large, provide a concise summary plus the file update.

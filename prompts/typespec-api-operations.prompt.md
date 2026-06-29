@@ -8,6 +8,11 @@ name: typespec-api-operations
 mode: "agent"
 description: "Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards"
 tags:
+  - api
+  - ml
+  - prompts
+  - specification
+  - typescript
   - typespec
   - m365-copilot
   - api-plugin
@@ -35,6 +40,8 @@ Use when you need to typespec api operations for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

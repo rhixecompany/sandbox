@@ -5,7 +5,19 @@ version: 1.0.0
 title: Create high‑quality AGENTS.md file
 name: create-agentsmd
 description: "Prompt for generating an AGENTS.md file for a repository"
-tags: []
+tags:
+  - agents
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - agents
+  - documentation
+  - generator
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +40,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

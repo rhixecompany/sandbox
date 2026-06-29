@@ -9,6 +9,12 @@ description:
     migration and audit workflows.
 trigger: /workspace-consolidate
 tags:
+  - documentation
+  - frontend
+  - ml
+  - prompts
+  - skills
+  - typescript
   - hermes
   - consolidation
   - patching
@@ -47,53 +53,6 @@ skills:
       workspaces
     - project-consolidation — Five-phase workflow for cleaning up and
       restructuring a project
-
----
-
-## Goal
-
-Consolidate the SandBox workspace by verifying script locations, applying
-patches, organizing documentation, and ensuring every artifact is optimal for
-both human readers and AI consumption.
-
-## Table of Contents
-
-1. [Goal](#goal)
-2. [Table of Contents](#table-of-contents)
-3. [Sources](#sources)
-4. [Skills Required](#skills-required)
-5. [Phases](#phases)
-   1. [Phase 1: Verify Canonical Script Layout (LIGHT)](#phase-1-verify-canonical-script-layout-light)
-   2. [Target Structure](#target-structure)
-   3. [Steps](#steps)
-   4. [Phase 2: Debug All Patches](#phase-2-debug-all-patches)
-   5. [Patch Inventory](#patch-inventory)
-   6. [Debug Workflow](#debug-workflow)
-   7. [Phase 3: Enhance All Patches](#phase-3-enhance-all-patches)
-   8. [Phase 4: Create Missing Patches](#phase-4-create-missing-patches)
-   9. [Gap Analysis](#gap-analysis)
-   10. [Patch Creation](#patch-creation)
-   11. [Patch Patch Generation](#patch-patch-generation)
-   12. [Phase 5: Document Organization \& Optimization](#phase-5-document-organization--optimization)
-   13. [All Reports Under docs/](#all-reports-under-docs)
-   14. [Doc Optimization for Humans AND AI](#doc-optimization-for-humans-and-ai)
-       1. [Required Frontmatter (YAML)](#required-frontmatter-yaml)
-       2. [Content Standards](#content-standards)
-       3. [Optimization Checklist per Document](#optimization-checklist-per-document)
-       4. [Files to Optimize](#files-to-optimize)
-   15. [AI-Readiness Scoring Script](#ai-readiness-scoring-script)
-   16. [Doc Symmetry Validator](#doc-symmetry-validator)
-   17. [Phase 6: Final Verification](#phase-6-final-verification)
-6. [Steps](#steps-1)
-7. [Tasks](#tasks)
-8. [Actions](#actions)
-
-## Sources
-
-- `.github/prompts/repo.prompt.md` — 5-phase repo migration workflow
-- `.github/prompts/bash-scripts-fix.prompt.md` — Script modernization workflow
-- `docs/bash-migration-final-report.md` — Status: 54 scripts migrated, 100%
-  passing
 
 ---
 

@@ -5,7 +5,18 @@ version: 1.0.0
 title: "Product Manager Assistant: Feature Identification and Specification"
 name: gen-specs-as-issues
 description: "This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation."
-tags: []
+tags:
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
+  - documentation
+  - orchestration
+  - planning
+  - specification
+  - workflow
 ---
 
 ## Goal
@@ -28,6 +39,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

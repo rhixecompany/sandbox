@@ -5,7 +5,20 @@ version: 1.0.0
 title: Hermes Breakdown Feature Prd
 name: hermes-breakdown-feature-prd
 description: "Hermes-equivalent: create a Feature PRD from a feature idea or parent epic."
-tags: []
+tags:
+  - ai-assistant
+  - frontend
+  - ml
+  - planning
+  - prompts
+  - specification
+  - typescript
+  - agile
+  - ai-assistant
+  - documentation
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +41,8 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/prd.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Include the feature name and the epic reference.
 2. Describe the problem, solution, and intended impact.

@@ -5,6 +5,7 @@
         "source.organizeImports": "explicit"
     },
     "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": true,

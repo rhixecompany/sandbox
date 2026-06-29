@@ -7,6 +7,11 @@ title: "Refactoring Java Methods With Remove Parameter"
 description: "Refactoring using Remove Parameter in Java Language"
 trigger: /Refactoring Java Methods with Remove Parameter
 tags:
+  - backend
+  - java
+  - prompts
+  - refactoring
+  - typescript
   - hermes
   - java
   - refactoring

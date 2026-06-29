@@ -5,7 +5,24 @@ version: 1.0.0
 title: Copilot Instructions Blueprint Generator
 name: copilot-instructions-blueprint-generator
 description: "Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions."
-tags: []
+tags:
+  - ai-assistant
+  - architecture
+  - frontend
+  - generator
+  - git
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - architecture
+  - ci-cd
+  - documentation
+  - github
+  - linux
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +45,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

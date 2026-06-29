@@ -9,6 +9,14 @@ description: >-
   Create/update agent context files across project and subprojects, then audit
   and enhance VS Code workspace configuration.
 tags:
+  - agents
+  - architecture
+  - audit
+  - configuration
+  - fix
+  - generator
+  - prompts
+  - typescript
   - hermes
   - copilot
   - opencode
@@ -86,6 +94,8 @@ This prompt generates comprehensive agent context files (architecture blueprints
 > **Full phase details:** `templates/agents-system-prompt-context-fix/phases.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Recursive scope** — Apply to project root and all subprojects containing `.vscode/` or `AGENTS.md`
 2. **Sequential execution** — Context files first, then VS Code audit

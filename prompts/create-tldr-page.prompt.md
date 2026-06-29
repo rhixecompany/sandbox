@@ -6,7 +6,19 @@ version: 1.0.0
 title: Create TLDR Page
 name: create-tldr-page
 description: "Create a tldr page from documentation URLs and command examples, requiring both URL and command name."
-tags: []
+tags:
+  - documentation
+  - frontend
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - generator
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +41,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

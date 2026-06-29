@@ -7,6 +7,12 @@ title: "Run Agents.md Workflow"
 description: "Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting."
 trigger: /run-session-agentsmd-workflow
 tags:
+  - agents
+  - git
+  - prompts
+  - specification
+  - typescript
+  - workflow
   - hermes
   - agents
   - workflow
@@ -41,6 +47,9 @@ Argument contract:
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#run-session-agentsmd-workflow)
+
 - Workspace discovery and path resolution.
 - AGENTS.md authoring from local evidence.
 - Nested git repository handling.
@@ -61,6 +70,8 @@ Subagents are optional and should only be used when they improve speed or reliab
 - Style: deterministic, explicit, and minimal-risk.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Execute all phases unless genuinely blocked.
 - Resolve targets only from the provided argument and existing workspace paths.

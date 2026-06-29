@@ -6,7 +6,17 @@ version: 1.0.0
 title: Power BI Report Visualization Designer
 name: power-bi-report-design-consultation
 description: "Power BI report visualization design prompt for creating effective, user-friendly, and accessible reports with optimal chart selection and layout design."
-tags: []
+tags:
+  - architecture
+  - data
+  - frontend
+  - prompts
+  - specification
+  - typescript
+  - architecture
+  - planning
+  - powerbi
+  - specification
 ---
 
 # Power BI Report Visualization Designer

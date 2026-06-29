@@ -22,9 +22,17 @@ version: 1.0.0
 title: Update LLMs.txt File
 name: update-llms
 description: "Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/"
-tags: []
+tags:
+  - documentation
+  - maintenance
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -46,6 +54,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

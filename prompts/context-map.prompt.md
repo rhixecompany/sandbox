@@ -8,6 +8,12 @@ trigger: /context-map
 description: >-
   Build a dependency and reference map before making changes so implementation starts from the right files.
 tags:
+  - audit
+  - frontend
+  - prompts
+  - specification
+  - testing
+  - typescript
   - hermes
   - copilot
   - analysis
@@ -48,6 +54,8 @@ Build a dependency and reference map before making changes so implementation sta
 - Follow with a bulleted risk assessment of 3-5 items max
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 1
 2. Search for the files directly related to the task
@@ -59,6 +67,9 @@ Build a dependency and reference map before making changes so implementation sta
 8. Stop after mapping; do not implement yet
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#context-map)
 
 | Skill | Purpose |
 | --- | --- |

@@ -6,15 +6,25 @@ version: 1.0.0
 title: "BigQuery Pipeline Audit: Cost, Safety and Production Readiness"
 name: bigquery-pipeline-audit
 description: "Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations."
-tags: []
----
-
-# BigQuery Pipeline Audit: Cost, Safety and Production Readiness
-
-You are a senior data engineer reviewing a Python + BigQuery pipeline script. Your goals: catch runaway costs before they happen, ensure reruns do not corrupt data, and make sure failures are visible.
-
-Analyze the codebase and respond in the structure below (A to F + Final). Reference exact function names and line locations. Suggest minimal fixes, not rewrites.
-
+tags:
+  - audit
+  - data
+  - database
+  - fix
+  - ml
+  - prompts
+  - python
+  - security
+  - sql
+  - typescript
+  - ci-cd
+  - database
+  - github
+  - orchestration
+  - python
+  - security
+  - sql
+  - workflow
 ---
 
 ## A) COST EXPOSURE: What will actually get billed?

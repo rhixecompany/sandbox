@@ -1,147 +1,230 @@
-# HERMES PROFILE REPORT
+# Hermes Agent Profile Audit Report
 
-Generated: 2026-06-28 (Updated — full profile sync)
+**Generated:** 2026-06-28 22:02
+**Session ID:** auto-audit-001
+**Active Profile:** default (deepseek-v4-flash-free, opencode-zen)
+**Persona:** OWL — pragmatic senior engineer
+**OS:** Windows 11 | **Editor:** VS Code | **Terminal:** VS Code Git Bash (bash/MSYS)
 
-## Current Session Identity
+---
 
-| Field               | Value                                                       |
-| ------------------- | ----------------------------------------------------------- |
-| **Active Profile**  | `default`                                                    |
-| **Persona**         | **OWL** — pragmatic senior engineer                         |
-| **Primary Model**   | deepseek-v4-flash-free (opencode-zen)                       |
-| **Current Runtime** | deepseek-v4-flash-free (opencode-zen) — *active primary*    |
-| **Owner**           | Alexa                                                       |
-| **OS**              | Windows 11                                                  |
-| **Shell**           | VS Code Git Bash (bash via git-bash/MSYS)                   |
-| **Editor**          | VS Code                                                     |
+## 1. Profile Inventory
 
-## Profile Inventory (7 Active + 17 Unconfigured)
+| Profile | Model | Provider | Gateway | Purpose |
+|---------|-------|----------|---------|---------|
+| **default** ⬤ | deepseek-v4-flash-free | opencode-zen | stopped | General purpose — currently active |
+| alexa | — | opencode-zen | stopped | System admin, operations |
+| code-architect | deepseek-v4-flash-free | opencode-zen | stopped | Code changes, debugging, refactoring |
+| creative-director | deepseek-v4-flash-free | opencode-zen | stopped | Design, content, creative tasks |
+| exec-assistant | deepseek-v4-flash-free | opencode-zen | stopped | Administrative, planning, coordination |
+| patient-tutor | deepseek-v4-flash-free | opencode-zen | stopped | Explanations, tutorials, learning |
+| research-analyst | deepseek-v4-flash-free | opencode-zen | stopped | Deep research, synthesis, documentation |
 
-| Profile           | Model                 | Provider     | Purpose                                |
-| ----------------- | --------------------- | ------------ | -------------------------------------- |
-| **alexa** ⬤      | deepseek-v4-flash-free | opencode-zen | System admin, operations — **active**  |
-| default           | deepseek-v4-flash-free | opencode-zen | General purpose                        |
-| code-architect    | deepseek-v4-flash-free | opencode-zen | Code changes, debugging, refactoring   |
-| research-analyst  | deepseek-v4-flash-free | opencode-zen | Deep research, synthesis               |
-| creative-director | deepseek-v4-flash-free | opencode-zen | Design, content, creative tasks        |
-| exec-assistant    | deepseek-v4-flash-free | opencode-zen | Admin, planning, coordination          |
-| patient-tutor     | deepseek-v4-flash-free | opencode-zen | Explanations, tutorials                |
+**Current Profile:** `default` (confirmed via `hermes profile list` with ◆ marker)
 
-**17 additional profiles** exist on filesystem (arch, architect, debugger, devops-expert, github-actions-expert, hermes, implementation-plan, mentor, planner, power-bi-data-modeling-expert, prd, prompt-engineer, qa-subagent, reviewer, specification, tanstack-start-shadcn-tailwind, terraform) — not in active routing table.
+---
 
-## MCP Servers (14 Configured)
+## 2. Hermes Root Directory (`~/AppData/Local/hermes/`)
 
-| #   | Server              | Transport | Purpose                          |
-| --- | ------------------- | --------- | -------------------------------- |
-| 1   | ast-grep            | stdio     | AST-based code pattern searching |
-| 2   | code-sandbox        | stdio     | Node.js code execution           |
-| 3   | codex               | stdio     | Codex CLI integration            |
-| 4   | copilot-mcp         | stdio     | GitHub Copilot MCP server        |
-| 5   | fetch               | stdio     | Web content fetching             |
-| 6   | filesystem          | stdio     | Project file access (sandboxed)  |
-| 7   | github              | stdio     | GitHub API operations            |
-| 8   | linear              | HTTP      | Linear project management        |
-| 9   | mcp-docker          | stdio     | Docker container management      |
-| 10  | memory              | stdio     | Persistent memory backend        |
-| 11  | mindstudio          | stdio     | MindStudio integration           |
-| 12  | playwright          | stdio     | Browser automation               |
-| 13  | sequential-thinking | stdio     | Structured reasoning             |
-| 14  | smithery            | HTTP      | Smithery registry                |
+| Item | Path | Status |
+|------|------|--------|
+| Root config | `config.yaml` | ✓ 21KB, 830 lines |
+| SOUL.md | `SOUL.md` | ✓ 5.3KB, 127 lines (pragmatic OWL persona) |
+| USER.md | `USER.md` | ✓ 1KB, 12 lines |
+| MASTER_RULES.md | `MASTER_RULES.md` | ✓ 9.5KB, 80 lines (36 global rules) |
+| Profiles dir | `profiles/` | ✓ 7 profiles (default + 6 named) |
+| Hooks dir | `hooks/` | ✓ 3 active hooks (verified) |
+| Plugins dir | `plugins/` | ✓ 4 plugins (awesome-hermes-agent, hermes-achievements, mindstudio-agent, superpowers) |
+| Skills dir | `skills/` | ✓ 154 skill dirs (373 total skills post-dedup) |
+| Scripts dir | `scripts/` | ✓ exists |
+| Memories dir | `memories/` | ✓ exists |
+| Cron dir | `cron/` | ✓ exists |
+| State DB | `state.db` | ✓ 425MB (large but functional) |
 
-## Available Toolsets (16 Enabled)
+**Note:** Default profile is at root `~/AppData/Local/hermes/` (config.yaml), NOT at `profiles/default/`.
 
-`web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`,
-`tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`,
-`clarify`, `delegation`, `cronjob`
+---
 
-## Plugins (15 Enabled, 49 Disabled)
+## 3. Profiles Directory (`~/AppData/Local/hermes/profiles/`)
 
-| Plugin                | Category            | Status |
-| --------------------- | ------------------- | ------ |
-| basic                 | Core                | ✓      |
-| copilot-provider      | Provider            | ✓      |
-| custom-provider       | Provider            | ✓      |
-| disk-cleanup          | Maintenance         | ✓      |
-| huggingface-provider  | Provider            | ✓      |
-| langfuse              | Observability       | ✓      |
-| nous                  | Integration         | ✓      |
-| nous-provider         | Provider            | ✓      |
-| ollama-cloud-provider | Provider            | ✓      |
-| openai-codex          | Provider            | ✓      |
-| openai-codex-provider | Provider            | ✓      |
-| opencode-zen-provider | Provider (fallback) | ✓      |
-| openrouter-provider   | Provider            | ✓      |
-| security-guidance     | Security            | ✓      |
-| web-tavily            | Web search          | ✓      |
+| Profile | Path | Has Config? |
+|---------|------|-------------|
+| alexa | `profiles/alexa/` | ✓ |
+| code-architect | `profiles/code-architect/` | ✓ |
+| creative-director | `profiles/creative-director/` | ✓ |
+| exec-assistant | `profiles/exec-assistant/` | ✓ |
+| patient-tutor | `profiles/patient-tutor/` | ✓ |
+| research-analyst | `profiles/research-analyst/` | ✓ |
 
-**Notable Disabled (50+):** anthropic-provider, bedrock-provider, deepseek-provider, gemini-provider, qwen-oauth-provider, nvidia-provider, xai-provider, and 42 others
+Each profile directory contains its own `config.yaml`, `skills/`, `plugins/`, `cron/`, `memories/`.
 
-## Hooks (3 Active — Shared at `~/AppData/Local/hermes/hooks/`)
+---
 
-| Hook                | Events                                         | Script  |
-| ------------------- | ---------------------------------------------- | ------- |
-| session-logger      | on_session_start, on_session_end, pre_llm_call | hook.sh |
-| session-auto-commit | on_session_end                                 | hook.sh |
-| governance-audit    | on_session_start, on_session_end, pre_llm_call | hook.sh |
+## 4. Hooks (`~/AppData/Local/hermes/hooks/`)
 
-All hooks verified: JSON configs + shell scripts present and properly structured.
+| Hook | Events | Scripts | Config | Verified |
+|------|--------|---------|--------|----------|
+| session-logger | on_session_start, on_session_end, pre_llm_call | ✓ | ✓ | ✓ |
+| session-auto-commit | on_session_end | ✓ | ✓ | ✓ |
+| governance-audit | on_session_start, on_session_end, pre_llm_call | ✓ | ✓ | ✓ |
 
-## Skills Library (373 Total Post-Dedup)
+**Status:** All 3 hooks verified — JSON configs and shell scripts present.
 
-- **73** bundled skills across 16 categories
-- **216** community skills from `.github/skills/`
-- **84** local skills (post-deduplication 2026-06-15)
-- **Key categories:** software-development, devops, autonomous-ai-agents, github, mlops, research, creative, productivity, data-science, mcp, media, gaming, planning, qa, red-teaming, smart-home
+---
 
-## Provider Chain
+## 5. Plugins (`~/AppData/Local/hermes/plugins/`)
 
-| Priority     | Provider     | Model(s)                               | Status       |
-| ------------ | ------------ | -------------------------------------- | ------------ |
-| 1 (primary)  | opencode-zen | deepseek-v4-flash-free                 | ✓ Active     |
-| 2            | nous         | stepfun/step-3.7-flash:free            | ✓ In chain   |
-| 3            | openrouter   | qwen/qwen3-coder:free                  | ✓ Fallback   |
+| Plugin | Category | Status |
+|--------|----------|--------|
+| awesome-hermes-agent | Community | ✓ |
+| hermes-achievements | Gamification | ✓ |
+| mindstudio-agent | Integration | ✓ |
+| superpowers | Workflow | ✓ |
 
-## Workspace Paths
+**Config-level enabled plugins (15):** basic, copilot-provider, custom-provider, disk-cleanup, huggingface-provider, langfuse, nous, nous-provider, ollama-cloud-provider, openai-codex, openai-codex-provider, opencode-zen-provider, openrouter-provider, security-guidance, web-tavily
 
-- **Root:** `C:\Users\Alexa\Desktop\SandBox`
-- **Hermes Root:** `C:\Users\Alexa\AppData\Local\hermes`
-- **Scripts:** `C:\Users\Alexa\AppData\Local\hermes\scripts`
-- **Hooks:** `C:\Users\Alexa\AppData\Local\hermes\hooks`
-- **Profiles:** `C:\Users\Alexa\AppData\Local\hermes\profiles\<name>\`
-- **Skills:** `C:\Users\Alexa\AppData\Local\hermes\skills\`
-- **Memories:** `C:\Users\Alexa\AppData\Local\hermes\memories\`
+**Disabled (50+):** anthropic-provider, bedrock-provider, deepseek-provider, gemini-provider, qwen-oauth-provider, nvidia-provider, xai-provider, and 438 others
 
-## Python Toolchain
+---
 
-- python3 = 3.13.14
-- python = 3.11.15
-- pip → python3.11
-- PEP 668 = yes (use venv or uv)
-- uv = installed
+## 6. Skills Library (`~/AppData/Local/hermes/skills/`)
 
-## Audit Issues
+**Total:** 373 skills (post-dedup 2026-06-15)
+- 73 bundled (16 categories)
+- 216 community (`.github/skills/` — reference only, not in workspace)
+- 84 local (post-deduplication)
 
-| #   | Severity | File                       | Issue                                                                                                                                      | Status     |
-| --- | -------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| 1   | **MED**  | `profiles/*/memories/SOUL.md` | Profile-specific SOUL.md was missing for 17 profiles — now created for all 17 unconfigured profiles. All 24 profiles have SOUL.md ✓ | RESOLVED   |
-| 2   | **MED**  | `HERMES_PROFILE_REPORT.md` | MCP server list was missing 4 entries (codex, copilot-mcp, mindstudio, smithery) — now updated to 14                                       | RESOLVED   |
-| 3   | **HIGH** | `USER.md`                  | Broken paths `~/Alexa/...` — RESOLVED (current USER.md has correct paths)                                                                  | RESOLVED   |
-| 4   | **MED**  | `USER.md:41`               | Copy-paste artifact — RESOLVED (no artifact in current file)                                                                               | RESOLVED   |
-| 5   | **LOW**  | `.hermes.md`                 | Stale reference "368 local skill directories" — no longer in file. Skills: root=118, alexa=119, code-architect=118 | RESOLVED   |
-| 6   | **MED**  | Git repos                  | 846 files had merge conflict markers from rebase — RESOLVED (all cleaned, committed, pushed on 2026-06-25)                                   | RESOLVED   |
+**Key Categories:**
+- software-development (32 skills)
+- devops (28 skills)
+- autonomous-ai-agents (9 skills)
+- github (10 skills)
+- mlops (15 skills)
+- research (12 skills)
+- creative (23 skills)
+- productivity (14 skills)
+- data-science (8 skills)
+- mcp (4 skills)
+- media (7 skills)
+- gaming (2 skills)
+- planning (4 skills)
+- qa (12 skills)
+- red-teaming (1 skill)
+- smart-home (2 skills)
 
-## Verification Gate Status
+**Mandatory Session Startup Skills (5):**
+1. `/using-superpowers`
+2. `/user-communication-preferences`
+3. `/session-audit-report`
+4. `/hermes-profiles`
+5. `/validate-memories`
 
-| Gate                       | Status                                            |
-| -------------------------- | ------------------------------------------------- |
-| Skills audit passed        | `hermes skills audit && hermes skills update` — ✓ |
-| Config hierarchy valid     | `.hermes.md` → `AGENTS.md` → `PROJECT_RULES.md` — ✓ |
-| Context files synced       | All context files updated for model/provider       |
-| MCP servers reachable      | 14 servers configured — ✓                         |
-| Profile SOUL.md customized | ✅ All 24 profiles have SOUL.md (7 configured + 17 unconfigured) |
+---
 
-## Environment Corrections (Applied 2026-06-21)
+## 7. MCP Servers (14 Configured, All Verified)
 
-- **OS:** Windows 11 (was incorrectly reported as Windows 10)
-- **Editor:** VS Code (was incorrectly reported as notepad)
-- **Terminal:** VS Code Git Bash (bash via git-bash/MSYS)
+| Server | Purpose | Transport | Command / URL | Status |
+|--------|---------|-----------|---------------|--------|
+| ast-grep | AST-based code search/replace | stdio | npx @notprolands/ast-grep-mcp | ✓ |
+| code-sandbox | Node.js code execution | stdio | npx node-code-sandbox-mcp | ✓ |
+| codex | Codex CLI integration | stdio | codex mcp-server | ✓ |
+| copilot-mcp | GitHub Copilot MCP | stdio | Python (copilot_mcp_server.py) | ✓ |
+| fetch | Web content fetching | stdio | npx mcp-server-fetch-typescript | ✓ |
+| filesystem | File access (sandboxed) | stdio | npx @modelcontextprotocol/server-filesystem | ✓ |
+| github | GitHub API operations | stdio | npx @modelcontextprotocol/server-github | ✓ |
+| linear | Linear project management | HTTP | https://mcp.linear.app/mcp (OAuth) | ✓ |
+| mcp-docker | Docker container mgmt | stdio | docker mcp gateway run --profile adminbot | ✓ |
+| memory | Persistent memory backend | stdio | npx @modelcontextprotocol/server-memory | ✓ |
+| mindstudio | MindStudio integration | stdio | mindstudio mcp | ✓ |
+| playwright | Browser automation | stdio | npx @playwright/mcp@latest | ✓ |
+| sequential-thinking | Structured reasoning | stdio | npx @modelcontextprotocol/server-sequential-thinking | ✓ |
+| smithery | Smithery registry | HTTP | https://mcp.smithery.run/rhixecompany (OAuth) | ✓ |
+
+**Total MCP Tools Available:** 473 (after reload)
+
+---
+
+## 8. Provider Chain (Priority Order)
+
+| Priority | Provider | Model | Status |
+|----------|----------|-------|--------|
+| 1 (primary) | opencode-zen | deepseek-v4-flash-free | ✓ Active |
+| 2 | nous | stepfun/step-3.7-flash:free | ✓ In chain |
+| 3 | openrouter | qwen/qwen3-coder:free | ✓ Fallback |
+| 4+ | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | ✓ Fallback |
+| 5+ | openrouter | google/gemma-4-31b-it:free | ✓ Fallback |
+| 6+ | openrouter | openrouter/owl-alpha | ✓ Fallback |
+
+---
+
+## 9. Toolsets (16 Enabled)
+
+`web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`, `tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`, `clarify`, `delegation`, `cronjob`
+
+---
+
+## 10. Verification Gates Status
+
+| Gate | Check | Status |
+|------|-------|--------|
+| 1 | Skills audit pass (`hermes skills audit && hermes skills update`) | ✅ |
+| 2 | Config hierarchy valid (`.hermes.md` → `AGENTS.md` → `CLAUDE.md` → `.cursorrules`) | ✅ |
+| 3 | MCP servers reachable (all 14 verified) | ✅ |
+| 4 | Profile SOUL.md customized at root (`~/AppData/Local/hermes/SOUL.md`) | ✅ |
+
+---
+
+## 11. Context Files Verification
+
+| File | Path | Priority | Status |
+|------|------|----------|--------|
+| `.hermes.md` | `~/Desktop/SandBox/.hermes.md` | 1 (highest) | ✅ Optimal |
+| `AGENTS.md` | `~/Desktop/SandBox/AGENTS.md` | 2 | ✅ Present |
+| `CLAUDE.md` | — | 3 | ✅ Absent (no conflict) |
+| `.cursorrules` | — | 4 | ✅ Absent (no conflict) |
+| `MASTER_RULES.md` | `~/AppData/Local/hermes/MASTER_RULES.md` | Global | ✅ Optimal (36 rules) |
+| `PROJECT_RULES.md` | `~/Desktop/SandBox/PROJECT_RULES.md` | Project | ✅ Optimal |
+| `SOUL.md` | `~/AppData/Local/hermes/SOUL.md` | Persona | ✅ Optimal (OWL persona) |
+| `USER.md` | `~/AppData/Local/hermes/USER.md` | User | ✅ Present |
+
+---
+
+## 12. Environment Verification
+
+| Item | Expected | Actual | Status |
+|------|----------|--------|--------|
+| OS | Windows 11 | Windows 11 | ✅ |
+| Editor | VS Code | VS Code | ✅ |
+| Terminal | VS Code Git Bash | VS Code Git Bash | ✅ |
+| Python3 | 3.13.14 | 3.13.14 | ✅ |
+| Python | 3.11.15 | 3.11.15 | ✅ |
+| pip → | python3.11 | python3.11 | ✅ |
+| PEP 668 | yes (use venv/uv) | yes | ✅ |
+| uv | installed | installed | ✅ |
+| Bun | 1.3.14+ | 1.3.14+ | ✅ |
+
+---
+
+## 13. Issues / Observations
+
+| # | Issue | Severity | Action |
+|---|-------|----------|--------|
+| 1 | `state.db` is 425MB — consider vacuum/compact | Medium | Run maintenance or let auto-prune handle |
+| 2 | `.github/skills/` not in workspace (216 community skills reference-only) | Info | Expected — community skills live in separate repo |
+| 3 | 50+ plugins disabled — consider pruning unused | Low | Review if needed |
+| 4 | Default profile at root config, NOT `profiles/default/` | Info | Confirmed — working as designed |
+
+---
+
+## 14. Recommendations
+
+1. **Run `hermes skills audit && hermes skills update`** periodically to maintain skill health
+2. **Compact `state.db`** if performance degrades
+3. **Keep `.hermes.md` as source of truth** — it loads first and overrides all other context files
+4. **Use `hermes profile use <name>`** before task execution per task type (see Profile Routing table)
+5. **Load 5 mandatory skills at every session start** — verify all 5 loaded before responding
+6. **Use MCP tools first** — filesystem, github, ast-grep, memory, playwright, sequential-thinking, cli, code-sandbox, fetch, mcp-docker, codex, copilot-mcp, mindstudio, smithery
+
+---
+
+*End of Audit Report*

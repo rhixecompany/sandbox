@@ -5,7 +5,18 @@ version: 1.0.0
 title: Azure Resource Health & Issue Diagnosis
 name: azure-resource-health-diagnose
 description: "Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems."
-tags: []
+tags:
+  - azure
+  - fix
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - azure
+  - debugging
+  - documentation
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +39,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

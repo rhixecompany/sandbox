@@ -7,6 +7,14 @@ title: "Ecom Django Upgrade Plan"
 description: "Execute the Ecom Django Upgrade Plan plan."
 trigger: /execute-ecom-django-upgrade-plan
 tags:
+  - ai-assistant
+  - django
+  - execution
+  - frontend
+  - go
+  - migration
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

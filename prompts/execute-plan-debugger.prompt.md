@@ -7,6 +7,11 @@ title: "Copilot Instructions Generator"
 description: "Execute Copilot Instructions Generator"
 trigger: /execute-plan-debugger
 tags:
+  - ai-assistant
+  - debugging
+  - execution
+  - generator
+  - prompts
   - hermes
   - plan
   - execute

@@ -25,9 +25,22 @@ version: 1.0.0
 title: Create Implementation Plan
 name: create-implementation-plan
 description: "Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure."
-tags: []
+tags:
+  - architecture
+  - generator
+  - ml
+  - prompts
+  - refactoring
+  - specification
+  - typescript
+  - architecture
+  - documentation
+  - generator
+  - linux
+  - planning
+  - refactoring
+  - specification
 ---
-
 
 ## Goal
 
@@ -49,6 +62,8 @@ Use when you need to update or create a plan for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

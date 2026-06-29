@@ -5,7 +5,27 @@ version: 1.0.0
 title: Power Platform MCP Connector Generator
 name: mcp-copilot-studio-server-generator
 description: Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support
-tags: []
+tags:
+  - ai-assistant
+  - backend
+  - generator
+  - mcp
+  - ml
+  - performance
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - database
+  - documentation
+  - drizzle
+  - mcp
+  - microsoft
+  - performance
+  - planning
+  - power-platform
+  - specification
+  - typespec
 ---
 
 ## Goal
@@ -28,6 +48,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

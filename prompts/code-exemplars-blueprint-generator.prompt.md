@@ -5,7 +5,32 @@ version: 1.0.0
 title: Code Exemplars Blueprint Generator
 name: code-exemplars-blueprint-generator
 description: "Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams."
-tags: []
+tags:
+  - architecture
+  - configuration
+  - csharp
+  - documentation
+  - dotnet
+  - generator
+  - java
+  - javascript
+  - ml
+  - prompts
+  - python
+  - react
+  - typescript
+  - architecture
+  - csharp
+  - database
+  - documentation
+  - dotnet
+  - drizzle
+  - java
+  - javascript
+  - nextjs
+  - python
+  - react
+  - typescript
 ---
 
 ## Goal
@@ -28,6 +53,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

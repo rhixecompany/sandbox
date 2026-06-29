@@ -5,7 +5,21 @@ version: 1.0.0
 title: Javascript Typescript Jest
 name: javascript-typescript-jest
 description: "Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns."
-tags: []
+tags:
+  - javascript
+  - ml
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - documentation
+  - java
+  - javascript
+  - nextjs
+  - planning
+  - specification
+  - testing
+  - typescript
 ---
 
 ## Goal
@@ -28,6 +42,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

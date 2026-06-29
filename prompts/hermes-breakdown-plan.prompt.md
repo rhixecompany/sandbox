@@ -5,7 +5,24 @@ version: 1.0.0
 title: Hermes Breakdown Plan
 name: hermes-breakdown-plan
 description: "Hermes-equivalent: generate a GitHub project plan from PRD, technical breakdown, implementation plan, and test strategy artifacts."
-tags: []
+tags:
+  - ai-assistant
+  - frontend
+  - generator
+  - git
+  - planning
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - agile
+  - ai-assistant
+  - ci-cd
+  - documentation
+  - github
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -33,6 +50,8 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 - A minimal GitHub Actions snippet for issue creation
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Use the provided artifacts as the only source of scope.
 2. Keep outputs concise and directly usable.

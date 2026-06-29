@@ -13,7 +13,20 @@ compatibility:
   - opencode
 mcp_generator: None
 skill_stub: True
-tags: []
+tags:
+  - audit
+  - mcp
+  - ml
+  - playwright
+  - prompts
+  - specification
+  - typescript
+  - database
+  - documentation
+  - drizzle
+  - planning
+  - playwright
+  - specification
 ---
 
 ## Goal
@@ -36,6 +49,8 @@ Use when you need to playwright form fill automation for the current workspace o
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -71,6 +86,9 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 - Never submit the form without explicit user approval.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#playwright-automation-fill-in-form)
 
 - `webapp-testing` — use browser automation to interact with the live form
 - `systematic-debugging` — resolve selector and filling issues methodically

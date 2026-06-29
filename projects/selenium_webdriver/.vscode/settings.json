@@ -5,6 +5,7 @@
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

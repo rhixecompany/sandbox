@@ -5,7 +5,17 @@ version: 1.0.0
 title: Create Spring Boot Java project prompt
 name: create-spring-boot-java-project
 description: "Create Spring Boot Java Project Skeleton"
-tags: []
+tags:
+  - docker
+  - generator
+  - java
+  - prompts
+  - spring
+  - docker
+  - documentation
+  - generator
+  - java
+  - markdown
 ---
 
 # Create Spring Boot Java project prompt

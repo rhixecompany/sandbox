@@ -5,7 +5,19 @@ version: 1.0.0
 title: Epic Architecture Specification Prompt
 name: breakdown-epic-arch
 description: "Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document."
-tags: []
+tags:
+  - architecture
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - agile
+  - architecture
+  - documentation
+  - linux
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +40,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

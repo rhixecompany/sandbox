@@ -10,6 +10,14 @@ description: >
   Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade
   (unclosed fences, duplicate headings), then verify.
 tags:
+  - ai-assistant
+  - audit
+  - data
+  - debugging
+  - fix
+  - prompts
+  - skills
+  - typescript
   - hermes
   - skills
   - remediation

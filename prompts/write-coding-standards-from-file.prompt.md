@@ -12,9 +12,15 @@ version: 1.0.0
 title: Write Coding Standards From File
 name: write-coding-standards-from-file
 description: "Write a coding standards document for a project using the coding styles from the file(s) and/or folder(s) passed as arguments in the prompt."
-tags: []
+tags:
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -36,6 +42,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

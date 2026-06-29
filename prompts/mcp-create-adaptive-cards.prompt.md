@@ -5,7 +5,20 @@ version: 1.0.0
 title: Create Adaptive Cards for MCP Plugins
 name: mcp-create-adaptive-cards
 description: "mcp-create-adaptive-cards.prompt"
-tags: []
+tags:
+  - generator
+  - mcp
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
+  - adaptive-cards
+  - documentation
+  - orchestration
+  - planning
+  - specification
+  - workflow
 ---
 
 ## Goal
@@ -28,6 +41,8 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

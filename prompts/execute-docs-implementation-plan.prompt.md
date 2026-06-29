@@ -7,6 +7,11 @@ title: "Docs Implementation Plan"
 description: "Execute the Docs Implementation Plan plan."
 trigger: /execute-docs-implementation-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

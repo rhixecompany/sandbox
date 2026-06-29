@@ -5,7 +5,24 @@ version: 1.0.0
 title: Hermes Breakdown Test
 name: hermes-breakdown-test
 description: "Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts."
-tags: []
+tags:
+  - ai-assistant
+  - debugging
+  - frontend
+  - generator
+  - ml
+  - planning
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - ai-assistant
+  - debugging
+  - documentation
+  - markdown
+  - planning
+  - specification
+  - testing
 ---
 
 ## Goal
@@ -32,6 +49,8 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 - `/docs/ways-of-work/plan/{epic}/{feature}/qa-plan.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Include test scope and quality-risk mapping.
 2. Use ISTQB-style technique selection where helpful.

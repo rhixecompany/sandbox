@@ -12,9 +12,21 @@ version: 1.0.0
 title: Create GitHub Pull Request from Specification
 name: create-github-pull-request-from-specification
 description: "Create GitHub Pull Request for feature request from specification file using pull_request_template.md template."
-tags: []
+tags:
+  - generator
+  - git
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ci-cd
+  - documentation
+  - generator
+  - github
+  - markdown
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -36,6 +48,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

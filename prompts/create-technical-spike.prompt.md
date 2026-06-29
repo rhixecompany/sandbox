@@ -23,60 +23,19 @@ version: 1.0.0
 title: Create Technical Spike Document
 name: create-technical-spike
 description: "Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation."
-tags: []
+tags:
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - generator
+  - linux
+  - planning
+  - specification
 ---
 
-
-## Goal
-
-Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
-
-## Context
-
-Use when you need to work on the current workspace or task.
-
-## Inputs
-
-- The current workspace, repo, or document state.
-- The specific request, diff, spec, or files provided by the user.
-- Any prompt variables, paths, or constraints named in the original instructions.
-
-## Outputs
-
-- A complete result that matches the prompt's purpose.
-- A concise verification note when the task benefits from one.
-
-## Rules
-
-- Follow the prompt literally and prefer evidence from the current workspace.
-- Keep the response structured, deterministic, and easy to act on.
-- Avoid changing unrelated files or adding unnecessary scope.
-- If something is unclear, state the assumption instead of guessing.
-
-## Phases
-
-### Phase 1: Intake
-- Read the request and identify the exact scope.
-- Locate the relevant files, diffs, or references.
-
-### Phase 2: Execute
-- Perform the requested work with the smallest safe change set.
-- Keep the steps explicit and reproducible.
-
-### Phase 3: Verify
-- Check the result against the goal, rules, and inputs.
-- Confirm the output is usable and complete.
-
-### Phase 4: Hand off
-- Return the final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
-## Document Structure
-
-Create individual files in `${input:FolderPath|docs/spikes}` directory. Name each file using the pattern: `[category]-[short-description]-spike.md` (e.g., `api-copilot-integration-spike.md`, `performance-realtime-audio-spike.md`).
-
-```md
----
 title: "${input:SpikeTitle}"
 category: "${input:Category|Technical}"
 status: "🔴 Not Started"
@@ -85,7 +44,6 @@ timebox: "${input:Timebox|1 week}"
 created: [YYYY-MM-DD]
 updated: [YYYY-MM-DD]
 owner: "${input:Owner}"
-tags: ["technical-spike", "${input:Category|technical}", "research"]
 ---
 
 # ${input:SpikeTitle}

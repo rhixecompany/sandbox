@@ -11,9 +11,17 @@ version: 1.0.0
 title: XUnit Best Practices
 name: csharp-xunit
 description: "Get best practices for XUnit unit testing, including data-driven tests"
-tags: []
+tags:
+  - csharp
+  - data
+  - dotnet
+  - prompts
+  - testing
+  - typescript
+  - csharp
+  - dotnet
+  - testing
 ---
-
 
 # XUnit Best Practices
 

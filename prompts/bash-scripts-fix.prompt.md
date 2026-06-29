@@ -9,6 +9,12 @@ description:
     Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
     scripts across the workspace.
 tags:
+  - audit
+  - fix
+  - migration
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - copilot
   - bash

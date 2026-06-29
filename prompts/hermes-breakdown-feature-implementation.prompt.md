@@ -5,7 +5,28 @@ version: 1.0.0
 title: Hermes Breakdown Feature Implementation
 name: hermes-breakdown-feature-implementation
 description: "Hermes-equivalent: produce a Feature Implementation Plan from a Feature PRD."
-tags: []
+tags:
+  - ai-assistant
+  - api
+  - architecture
+  - data
+  - deployment
+  - frontend
+  - ml
+  - prompts
+  - security
+  - specification
+  - typescript
+  - agile
+  - ai-assistant
+  - api
+  - architecture
+  - documentation
+  - linux
+  - markdown
+  - planning
+  - security
+  - specification
 ---
 
 ## Goal
@@ -29,6 +50,8 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Keep the plan tied to the PRD requirements.
 2. Include architecture, schema, API, frontend, deployment, security, and performance.

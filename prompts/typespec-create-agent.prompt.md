@@ -8,6 +8,13 @@ name: typespec-create-agent
 mode: "agent"
 description: "Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot"
 tags:
+  - agents
+  - ai-assistant
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
   - typespec
   - m365-copilot
   - declarative-agent
@@ -34,6 +41,8 @@ Use when you need to typespec create agent for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

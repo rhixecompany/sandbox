@@ -5,7 +5,24 @@ version: 1.0.0
 title: Migration and Code Evolution Instructions Generator
 name: generate-custom-instructions-from-codebase
 description: "Migration and code evolution instructions generator for GitHub Copilot. Analyzes differences between two project versions (branches, commits, or releases) to create precise instructions allowing Copilot to maintain consistency during technology migrations, major refactoring, or framework version upgrades."
-tags: []
+tags:
+  - ai-assistant
+  - generator
+  - git
+  - migration
+  - ml
+  - prompts
+  - refactoring
+  - specification
+  - typescript
+  - ai-assistant
+  - ci-cd
+  - documentation
+  - github
+  - migration
+  - planning
+  - refactoring
+  - specification
 ---
 
 ## Goal
@@ -28,6 +45,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

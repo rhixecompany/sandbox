@@ -7,6 +7,11 @@ title: "Dev Init Implementation Plan"
 description: "Execute the Dev Init Implementation Plan plan."
 trigger: /execute-dev-init-implementation-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

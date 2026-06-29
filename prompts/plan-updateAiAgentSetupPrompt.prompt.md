@@ -40,9 +40,23 @@ version: 1.0.0
 title: Plan Updateaiagentsetupprompt
 name: plan-updateaiagentsetupprompt
 description: "Plan to update AI agent setup prompt for the Comicbook project."
-tags: []
+tags:
+  - agents
+  - documentation
+  - git
+  - ml
+  - planning
+  - prompts
+  - typescript
+  - agents
+  - ci-cd
+  - configuration
+  - documentation
+  - github
+  - markdown
+  - planning
+  - setup
 ---
-
 
 ## Plan: Update AI Agent Setup Prompt for Comicbook Project
 

@@ -7,7 +7,24 @@ title: PostgreSQL Code Review Assistant
 name: postgresql-code-review
 description: "PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS)."
 tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
-tags: []
+tags:
+  - architecture
+  - audit
+  - database
+  - prompts
+  - security
+  - specification
+  - sql
+  - typescript
+  - architecture
+  - code-review
+  - database
+  - documentation
+  - performance
+  - planning
+  - security
+  - specification
+  - sql
 ---
 
 ## Goal
@@ -30,6 +47,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

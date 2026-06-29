@@ -5,29 +5,26 @@ version: 1.0.0
 title: ComicWise Setup & Code Quality Refactoring Implementation Plan
 name: plan-refactor
 description: "This prompt outlines the steps for setting up the ComicWise development environment and implementing code quality refactoring."
-tags: []
----
-
-# ComicWise Setup & Code Quality Refactoring Implementation Plan
-
-![Status: In progress](https://img.shields.io/badge/status-In%20progress-yellow)
-
-## Introduction
-
-This implementation plan establishes a systematic approach to setting up the ComicWise development environment and refactoring code to meet quality standards. The plan encompasses environment validation, type safety, lint error resolution, and comprehensive testing validation.
-
-ComicWise is a Next.js 16 + React 19 manga/comic reader application with production-ready database seeding infrastructure. The project is in Phase 2, transitioning from infrastructure setup to core feature development and test coverage.
-
-**Tech Stack:**
-
-- Frontend: Next.js 16.1.6, React 19, TypeScript, Tailwind CSS v4, shadcn/Radix UI
-- Backend: Next.js App Router, Server Components, Server Actions
-- Database: PostgreSQL (Neon), Drizzle ORM + 30+ tables
-- Auth: NextAuth.js v5 (database sessions, role-based access)
-- State: Zustand + React Query
-- Testing: Vitest (unit) + Playwright (E2E)
-- Seeding: Production CLI + REST API with ~5,000 comics/50,000 chapters
-
+tags:
+  - linting
+  - nextjs
+  - planning
+  - prompts
+  - react
+  - refactoring
+  - security
+  - testing
+  - code-quality
+  - configuration
+  - linting
+  - nextjs
+  - planning
+  - react
+  - refactoring
+  - security
+  - setup
+  - testing
+  - typescript
 ---
 
 ## 1. Requirements & Constraints

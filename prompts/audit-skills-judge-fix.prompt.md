@@ -9,6 +9,12 @@ description: >-
   Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
   remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
 tags:
+  - audit
+  - fix
+  - prompts
+  - skills
+  - typescript
+  - workflow
   - hermes
   - copilot
   - opencode
@@ -68,6 +74,9 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#audit-skills-judge-fix)
+
 | Skill                            | Purpose                                           |
 | -------------------------------- | ------------------------------------------------- |
 | `using-superpowers`              | Establishes workflow foundation                   |
@@ -79,6 +88,8 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 | `writing-skills`                 | Write clear skill prose and structure             |
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Sequential execution** — Each phase must complete before the next begins ("only then" constraint)
 2. **Batch size** — Judge skills in batches of 10

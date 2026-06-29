@@ -5,7 +5,31 @@ version: 1.0.0
 title: Project Workflow Documentation Generator
 name: project-workflow-analysis-blueprint-generator
 description: "Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures."
-tags: []
+tags:
+  - architecture
+  - csharp
+  - data
+  - documentation
+  - dotnet
+  - generator
+  - java
+  - ml
+  - prompts
+  - react
+  - spring
+  - testing
+  - typescript
+  - workflow
+  - architecture
+  - csharp
+  - documentation
+  - dotnet
+  - java
+  - linux
+  - orchestration
+  - react
+  - testing
+  - workflow
 
 ---
 
@@ -29,6 +53,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

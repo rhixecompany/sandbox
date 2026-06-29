@@ -26,9 +26,20 @@ version: 1.0.0
 title: Quality Gate Debugger — Triage & Batch Fix
 name: quality-gate-debugger
 description: "Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues"
-tags: []
+tags:
+  - audit
+  - debugging
+  - fix
+  - frontend
+  - generator
+  - linting
+  - prompts
+  - testing
+  - typescript
+  - code-quality
+  - debugging
+  - linting
 ---
-
 
 # Quality Gate Debugger — Triage & Batch Fix
 

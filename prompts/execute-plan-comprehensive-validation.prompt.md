@@ -7,6 +7,10 @@ title: "ComicWise: Comprehensive Validation & Enhancement Roadmap"
 description: "Execute ComicWise: Comprehensive Validation & Enhancement Roadmap"
 trigger: /execute-plan-comprehensive-validation
 tags:
+  - ai-assistant
+  - execution
+  - planning
+  - prompts
   - hermes
   - plan
   - execute

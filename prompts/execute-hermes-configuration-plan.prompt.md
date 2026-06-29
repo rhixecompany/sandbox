@@ -7,6 +7,12 @@ title: "Hermes Configuration Plan"
 description: "Execute the Hermes Configuration Plan plan."
 trigger: /execute-hermes-configuration-plan
 tags:
+  - ai-assistant
+  - configuration
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

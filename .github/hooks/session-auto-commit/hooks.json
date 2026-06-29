@@ -1,7 +1,0 @@
-{
-  "events": [
-    "on_session_end"
-  ],
-  "name": "session-auto-commit",
-  "script": "hook.sh"
-}

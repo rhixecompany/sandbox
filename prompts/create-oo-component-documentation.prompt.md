@@ -22,9 +22,21 @@ version: 1.0.0
 title: Generate Standard OO Component Documentation
 name: create-oo-component-documentation
 description: "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards."
-tags: []
+tags:
+  - architecture
+  - documentation
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - architecture
+  - documentation
+  - generator
+  - linux
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -46,6 +58,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -124,7 +138,6 @@ version: [Optional: e.g., 1.0, Date]
 date_created: [YYYY-MM-DD]
 last_updated: [Optional: YYYY-MM-DD]
 owner: [Optional: Team/Individual responsible for this component]
-tags: [Optional: List of relevant tags or categories, e.g., `component`,`service`,`tool`,`infrastructure`,`documentation`,`architecture` etc]
 ---
 
 # [Component Name] Documentation

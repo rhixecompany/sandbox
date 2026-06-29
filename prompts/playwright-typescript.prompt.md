@@ -7,6 +7,11 @@ title: "Playwright Typescript"
 description: "Comprehensive Playwright TypeScript prompt aligned to repository testing standards."
 trigger: /playwright-typescript
 tags:
+  - playwright
+  - prompts
+  - skills
+  - testing
+  - typescript
   - hermes
   - typescript
   - playwright
@@ -25,6 +30,9 @@ Author and refine Playwright TypeScript tests that are resilient, readable, and 
 Use this prompt when creating or updating Playwright tests in the tests directory for user flows, regression scenarios, and end-to-end behavior validation.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#playwright-typescript)
 
 - Playwright test design and isolation
 - Accessibility-first locator strategy
@@ -45,6 +53,8 @@ Use this prompt when creating or updating Playwright tests in the tests director
 - Stability Checker: Eliminates fixed waits and unstable timing assumptions.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Use @playwright/test with clear test.describe and test.step grouping.
 - Prefer getByRole, getByLabel, and user-visible locators.

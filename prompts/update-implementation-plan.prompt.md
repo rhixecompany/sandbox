@@ -8,6 +8,14 @@ trigger: /update-implementation-plan
 description: >-
   Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
 tags:
+  - architecture
+  - frontend
+  - maintenance
+  - migration
+  - prompts
+  - refactoring
+  - specification
+  - typescript
   - hermes
   - copilot
   - planning
@@ -15,7 +23,7 @@ tags:
 dependencies:
   - skill:writing-plans
   - skill:plans-and-specs
-  - skill:/context-map
+  - skill:context-map
 skills:
   - writing-plans — Author structured implementation plans
   - plans-and-specs — Plan and spec management
@@ -66,6 +74,8 @@ When combined in the output path template, these variables produce a concrete fi
 - A concise verification note when the task benefits from one
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 > 1. Use only evidence from the current workspace and the user request
 > 2. Change only the implementation plan sections directly affected by new require
@@ -73,6 +83,9 @@ When combined in the output path template, these variables produce a concrete fi
 > **Full content:** `templates/update-implementation-plan/rules.md`
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#update-implementation-plan)
 
 The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.
 

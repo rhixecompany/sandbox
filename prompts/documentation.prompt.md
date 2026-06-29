@@ -7,6 +7,15 @@ title: "Documentation"
 description: "Comprehensive documentation prompt aligned to repository documentation standards."
 trigger: /documentation
 tags:
+  - api
+  - architecture
+  - documentation
+  - frontend
+  - markdown
+  - ml
+  - prompts
+  - skills
+  - typescript
   - hermes
   - documentation
 ---
@@ -24,6 +33,9 @@ Create and maintain documentation that is accurate, complete, and updated in the
 Use this prompt when writing or updating markdown docs, TSDoc comments, API docs, README sections, architecture notes, or doc examples.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#documentation)
 
 - Technical writing for developers and maintainers
 - API and architecture documentation design
@@ -44,6 +56,8 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 - Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Update documentation in the same PR or change as code modifications.
 - Use TSDoc for non-trivial types, functions, hooks, and component props.

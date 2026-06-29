@@ -6,7 +6,18 @@ version: 1.0.0
 title: Fedora Linux Triage
 name: fedora-linux-triage
 description: "Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance."
-tags: []
+tags:
+  - debugging
+  - fix
+  - frontend
+  - linux
+  - ml
+  - prompts
+  - typescript
+  - debugging
+  - documentation
+  - linux
+  - markdown
 ---
 
 # Fedora Linux Triage

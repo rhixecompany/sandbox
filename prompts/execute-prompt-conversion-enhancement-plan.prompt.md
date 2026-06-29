@@ -7,6 +7,11 @@ title: "Prompt Conversion Enhancement Plan"
 description: "Execute the Prompt Conversion Enhancement Plan plan."
 trigger: /execute-prompt-conversion-enhancement-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

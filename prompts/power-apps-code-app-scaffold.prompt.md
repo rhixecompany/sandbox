@@ -11,9 +11,18 @@ version: 1.0.0
 title: Power Apps Code Apps Project Scaffolding
 name: power-apps-code-app-scaffold
 description: "Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration"
-tags: []
+tags:
+  - audit
+  - configuration
+  - frontend
+  - prompts
+  - specification
+  - database
+  - drizzle
+  - planning
+  - power-platform
+  - specification
 ---
-
 
 # Power Apps Code Apps Project Scaffolding
 

@@ -20,8 +20,14 @@
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[django-html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -34,5 +40,6 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }

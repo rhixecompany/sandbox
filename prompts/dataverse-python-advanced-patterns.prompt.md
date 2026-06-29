@@ -7,6 +7,13 @@ title: "Dataverse Python Advanced Patterns"
 description: "Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization techniques."
 trigger: /Dataverse Python Advanced Patterns
 tags:
+  - data
+  - database
+  - generator
+  - prompts
+  - python
+  - specification
+  - sql
   - hermes
   - python
   - dataverse

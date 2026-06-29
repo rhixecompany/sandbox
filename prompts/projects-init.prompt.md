@@ -10,6 +10,14 @@ description: >-
   Eliminates duplicates and consolidates documentation.
 version: 1.0.0
 tags:
+  - debugging
+  - documentation
+  - git
+  - markdown
+  - migration
+  - prompts
+  - skills
+  - typescript
   - hermes
   - projects
   - init
@@ -29,7 +37,6 @@ skills:
   - skill-creator
 metadata:
   hermes:
-    tags: [projects, init, docs, prompts, migrate, consolidate]
     related_skills: [enhance-markdown, hermes-skills, skill-creator]
 ---
 
@@ -58,6 +65,9 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#projects-init)
+
 | Skill              | Purpose                                                 |
 | ------------------ | ------------------------------------------------------- |
 | `enhance-markdown` | Audit, enhance, convert, and consolidate markdown files |
@@ -65,6 +75,8 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 | `skill-creator`    | Scaffold new skills with validated frontmatter          |
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Strict sequential execution** — Phase 1 → Phase 2 → Phase 3. Each phase must complete (including verification) before the next starts.
 2. **Verify before delete** — Always confirm the canonical copy exists at the target path before removing a source file.

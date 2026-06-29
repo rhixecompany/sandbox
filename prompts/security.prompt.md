@@ -7,6 +7,16 @@ title: "Security Review"
 description: "Comprehensive prompt for security review, vulnerability assessment, and secure coding practices."
 trigger: /security
 tags:
+  - api
+  - architecture
+  - audit
+  - data
+  - documentation
+  - frontend
+  - prompts
+  - security
+  - skills
+  - typescript
   - hermes
   - security
   - review
@@ -27,6 +37,9 @@ Use this prompt for any change that handles external input, authentication, auth
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#security)
+
 - Threat modeling and trust-boundary analysis
 - Input validation and secure coding patterns
 - Secret management and least-privilege architecture
@@ -46,6 +59,8 @@ Use this prompt for any change that handles external input, authentication, auth
 - Secret Auditor: Blocks secret leakage and over-privileged access patterns.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Never commit secrets or sensitive values in code, docs, or examples.
 - Validate and sanitize all external inputs.

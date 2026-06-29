@@ -8,6 +8,12 @@ trigger: /convert-plaintext-to-md
 description: >-
   Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
 tags:
+  - conversion
+  - documentation
+  - markdown
+  - ml
+  - prompts
+  - typescript
   - hermes
   - copilot
   - markdown
@@ -15,7 +21,7 @@ tags:
   - documentation
 dependencies:
   - skill:enhance-markdown
-  - skill:/context-map
+  - skill:context-map
 skills:
   - enhance-markdown — TXT→MD conversion and enhancement pipeline
 ---
@@ -45,6 +51,8 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 - A verification note listing: (1) total sections converted, (2) any inferred formatting decisions made without explicit instructions, and (3) any content skipped due to `--stop`. Omit if the source file is a single flat section with no ambiguous structure.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Run `/context-map` before conversion to map source, destination, and dependency impact.
 - Preserve all technical content accurately - do not modify data unless instructions clearly specify
@@ -59,6 +67,9 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 - When both `guide` and `instructions` are provided, `instructions` takes precedence over the guide template for any directly conflicting formatting decisions
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#convert-plaintext-to-md)
 
 | Skill | Purpose |
 | --- | --- |

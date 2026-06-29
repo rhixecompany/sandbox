@@ -18,9 +18,20 @@ version: 1.0.0
 title: Suggest Awesome GitHub Copilot Instructions
 name: suggest-awesome-github-copilot-instructions
 description: "Find GitHub Copilot instruction files that add coverage the repo lacks and flag local duplicates or outdated copies."
-tags: []
+tags:
+  - ai-assistant
+  - git
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - ci-cd
+  - documentation
+  - github
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -42,6 +53,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

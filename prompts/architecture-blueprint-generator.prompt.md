@@ -5,7 +5,17 @@ version: 1.0.0
 title: Comprehensive Project Architecture Blueprint Generator
 name: architecture-blueprint-generator
 description: "Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development."
-tags: []
+tags:
+  - architecture
+  - documentation
+  - frontend
+  - generator
+  - ml
+  - prompts
+  - typescript
+  - architecture
+  - documentation
+  - linux
 ---
 
 ## Goal
@@ -28,6 +38,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

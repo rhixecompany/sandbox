@@ -7,6 +7,17 @@ title: "ACP Agent Stack Audit — Shared"
 description: "Shared audit plan for the ACP agent stack: introspect agents, tools, and capabilities across providers."
 trigger: /acpx-stack-audit-shared
 tags:
+  - agents
+  - ai-assistant
+  - audit
+  - frontend
+  - ml
+  - planning
+  - prompts
+  - security
+  - skills
+  - specification
+  - typescript
   - hermes
   - acp
   - audit
@@ -30,6 +41,9 @@ reconciliation for Hermes, Copilot CLI and ACPX.
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#plan-acpx-agent-stack-audit-shared)
+
 - CLI execution.
 - Output triage.
 - Routing contradiction analysis.
@@ -46,6 +60,8 @@ reconciliation for Hermes, Copilot CLI and ACPX.
 - Compatibility auditor.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Prefer runtime evidence over docs.
 - Label each route: `working`, `broken`, `unverified`.

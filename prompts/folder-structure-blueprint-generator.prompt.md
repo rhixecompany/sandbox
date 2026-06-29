@@ -5,7 +5,26 @@ version: 1.0.0
 title: Project Folder Structure Blueprint Generator
 name: folder-structure-blueprint-generator
 description: "Comprehensive technology-agnostic prompt for analyzing and documenting project folder structures. Auto-detects project types (.NET, Java, React, Angular, Python, Node.js, Flutter), generates detailed blueprints with visualization options, naming conventions, file placement patterns, and extension templates for maintaining consistent code organization across diverse technology stacks."
-tags: []
+tags:
+  - architecture
+  - csharp
+  - dotnet
+  - generator
+  - java
+  - javascript
+  - ml
+  - prompts
+  - python
+  - react
+  - typescript
+  - architecture
+  - csharp
+  - documentation
+  - dotnet
+  - java
+  - javascript
+  - python
+  - react
 ---
 
 ## Goal
@@ -28,6 +47,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

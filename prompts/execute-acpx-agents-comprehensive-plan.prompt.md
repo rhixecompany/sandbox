@@ -7,6 +7,12 @@ title: "Acpx Agents Comprehensive Plan"
 description: "Execute the Acpx Agents Comprehensive Plan plan."
 trigger: /execute-acpx-agents-comprehensive-plan
 tags:
+  - agents
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

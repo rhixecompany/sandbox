@@ -17,9 +17,15 @@ version: 1.0.0
 title: My Pull Requests
 name: my-pull-requests
 description: "List my pull requests in the current repository"
-tags: []
+tags:
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -41,6 +47,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

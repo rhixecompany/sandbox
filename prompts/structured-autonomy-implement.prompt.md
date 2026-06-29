@@ -7,6 +7,10 @@ title: "Sa Implement"
 description: "Structured Autonomy Implementation Prompt"
 trigger: /sa-implement
 tags:
+  - ml
+  - prompts
+  - specification
+  - typescript
   - hermes
 ---
 
@@ -30,6 +34,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

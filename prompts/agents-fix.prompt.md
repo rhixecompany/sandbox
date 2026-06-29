@@ -8,6 +8,14 @@ trigger: /agents-fix
 description: Sync and deduplicate agent definitions across Hermes, and Copilot
     with dependency mapping and schema validation.
 tags:
+  - agents
+  - ai-assistant
+  - configuration
+  - fix
+  - ml
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - copilot
   - agents

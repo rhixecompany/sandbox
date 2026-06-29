@@ -22,9 +22,19 @@ version: 1.0.0
 title: Update Specification
 name: update-specification
 description: "Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code."
-tags: []
+tags:
+  - frontend
+  - maintenance
+  - ml
+  - performance
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - performance
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -46,6 +56,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

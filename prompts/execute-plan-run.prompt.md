@@ -7,6 +7,9 @@ title: "Master Implementation Plan: ComicWise Codebase Overhaul"
 description: "Execute Master Implementation Plan: ComicWise Codebase Overhaul"
 trigger: /execute-plan-run
 tags:
+  - ai-assistant
+  - execution
+  - prompts
   - hermes
   - plan
   - execute

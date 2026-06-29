@@ -11,6 +11,14 @@ description: >-
   knowledge), and produce a cross-provider comparison report. Covers 6
   providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter.
 tags:
+  - ai-assistant
+  - architecture
+  - data
+  - performance
+  - prompts
+  - testing
+  - typescript
+  - workflow
   - hermes
   - providers
   - models
@@ -116,6 +124,9 @@ status, rate limits, and recommendations.
 **IMPORTANT:** The OpenRouter API key is managed by Hermes' secure credential store and is NOT available as an environment variable in subprocesses (curl, Python). API calls must go through the Hermes provider chain (`hermes chat -q --provider openrouter`). The key IS accessible to the Hermes agent itself — direct API benchmarking via subprocess is BLOCKED by this security boundary.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#test-providers-models)
 
 | Skill                              | Purpose                                         | Needed? |
 | ---------------------------------- | ----------------------------------------------- | ------- |

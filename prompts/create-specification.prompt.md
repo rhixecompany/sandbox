@@ -22,9 +22,21 @@ version: 1.0.0
 title: Create Specification
 name: create-specification
 description: "Create a new specification file for the solution, optimized for Generative AI consumption."
-tags: []
+tags:
+  - documentation
+  - frontend
+  - generator
+  - ml
+  - performance
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - generator
+  - performance
+  - planning
+  - specification
 ---
-
 
 # Create Specification
 

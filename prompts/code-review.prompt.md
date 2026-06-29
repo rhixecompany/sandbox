@@ -7,6 +7,14 @@ title: "Code Review"
 description: "Comprehensive code review prompt for correctness, security, and testing risk."
 trigger: /code-review
 tags:
+  - audit
+  - data
+  - frontend
+  - prompts
+  - security
+  - skills
+  - testing
+  - typescript
   - hermes
 ---
 
@@ -23,6 +31,9 @@ Perform high-signal code reviews that prioritize correctness, security, and high
 Use this prompt when reviewing diffs, pull requests, or selected files and when the user asks for a review. Focus on actionable findings with evidence.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#code-review)
 
 - Risk-based review and severity ranking
 - Security threat spotting and input-validation analysis
@@ -43,6 +54,8 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 - Test Checker: Ensures new and changed behavior is covered by deterministic tests.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Lead with findings ordered by severity.
 - Include concrete evidence with file paths and line references when possible.

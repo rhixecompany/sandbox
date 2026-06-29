@@ -5,7 +5,18 @@ version: 1.0.0
 title: Create Spring Boot Kotlin project prompt
 name: create-spring-boot-kotlin-project
 description: "Create Spring Boot Kotlin Project Skeleton"
-tags: []
+tags:
+  - docker
+  - generator
+  - java
+  - prompts
+  - spring
+  - docker
+  - documentation
+  - generator
+  - java
+  - kotlin
+  - markdown
 ---
 
 # Create Spring Boot Kotlin project prompt

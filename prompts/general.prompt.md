@@ -9,6 +9,10 @@ description:
     General development workflow for analysis, planning, implementation, and
     verification with context mapping and AI-assisted execution.
 tags:
+  - planning
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - copilot
   - opencode

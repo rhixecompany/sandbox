@@ -6,6 +6,15 @@ name: "generator-orchestrator"
 title: "Generator Orchestrator"
 description: "Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation."
 tags:
+  - architecture
+  - backend
+  - documentation
+  - generator
+  - git
+  - mcp
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - codegen
 ---
@@ -27,6 +36,9 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 - Output location: `.github/prompts` and generated docs or code paths requested by the run.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#generator-orchestrator)
 
 - Dependency graph design for staged orchestration.
 - Prompt-composition and deterministic branching.
@@ -58,6 +70,8 @@ Use this prompt when you need one runbook to generate aligned architecture, work
   - explicit about degraded modes and failures
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 > Accept these unified inputs:
 > - `mode`: `full | quick | custom`

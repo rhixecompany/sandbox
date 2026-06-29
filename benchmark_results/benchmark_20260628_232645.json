@@ -1,0 +1,270 @@
+{
+  "timestamp": "20260628_232645",
+  "total_runs": 24,
+  "results": [
+    {
+      "provider": "opencode-zen",
+      "model": "deepseek-v4-flash-free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.25,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "deepseek-v4-flash-free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.15,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "deepseek-v4-flash-free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.13,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "qwen3.6-plus-free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.13,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "qwen3.6-plus-free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.11,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "qwen3.6-plus-free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.57,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "north-mini-code-free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.58,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "north-mini-code-free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.14,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "north-mini-code-free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.25,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "nemotron-3-ultra-free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.13,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "nemotron-3-ultra-free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.13,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "nemotron-3-ultra-free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.14,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "qwen/qwen3-coder:free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.19,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "qwen/qwen3-coder:free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.16,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "qwen/qwen3-coder:free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.14,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.34,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.34,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.21,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.14,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.15,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.22,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemma-4-31b-it:free",
+      "task": "code_generation",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.16,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemma-4-31b-it:free",
+      "task": "reasoning",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.15,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemma-4-31b-it:free",
+      "task": "summarization",
+      "success": false,
+      "output_size": 0,
+      "output_preview": "",
+      "elapsed_sec": 1.21,
+      "exit_code": 2,
+      "stderr": "usage: hermes chat [-h] [-q QUERY] [--image IMAGE] [-m MODEL] [-t TOOLSETS]\n                   [-s SKILLS] [--provider PROVIDER] [-v] [-Q]\n                   [--resume SESSION_ID] [--continue [SESSION"
+    }
+  ]
+}

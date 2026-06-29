@@ -7,7 +7,25 @@ title: SQL Code Review
 name: sql-code-review
 description: "Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage."
 tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
-tags: []
+tags:
+  - audit
+  - backend
+  - data
+  - database
+  - ml
+  - prompts
+  - security
+  - sql
+  - typescript
+  - code-quality
+  - code-review
+  - database
+  - documentation
+  - drizzle
+  - linting
+  - performance
+  - security
+  - sql
 ---
 
 ## Goal
@@ -30,6 +48,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

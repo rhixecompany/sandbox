@@ -12,6 +12,15 @@ description: >
   and a master index → creates a remediation plan and execution prompt →
   applies fixes in priority order (F → C → B → A-).
 tags:
+  - ai-assistant
+  - audit
+  - data
+  - debugging
+  - fix
+  - generator
+  - prompts
+  - skills
+  - typescript
   - hermes
   - skills
   - debugging
@@ -31,10 +40,10 @@ dependencies:
   - skill:simplify
   - skill:skill-judge
   - skill:skill-creator
-  - skill:terminal
-  - skill:patch
-  - skill:write_file
-  - skill:execute_code
+  - tool:terminal
+  - tool:patch
+  - tool:write_file
+  - tool:execute_code
 skills:
     - introspection-only-general
     - no-git-delete
@@ -75,6 +84,8 @@ reports, plans fixes, and applies them in priority order.
 - Patched SKILL.md files for all F/C-grade skills
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Read `docs/skills-debug-context.md` first if it exists — resume rather than re-run.
 2. Run `hermes skills list` before any other step to get the live inventory.

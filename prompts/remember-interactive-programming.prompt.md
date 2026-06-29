@@ -7,6 +7,12 @@ title: "Interactive Programming Nudge"
 description: "A micro-prompt that reminds the agent that it is an interactive programmer. Works great in Clojure when Copilot has access to the REPL (probably via Backseat Driver). Will work with any system that has a live REPL that the agent can use. Adapt the prompt with any specific reminders in your workflow and/or workspace."
 trigger: /Interactive Programming Nudge
 tags:
+  - agents
+  - ai-assistant
+  - prompts
+  - specification
+  - typescript
+  - workflow
   - hermes
 ---
 
@@ -30,6 +36,8 @@ Use when you need to remember interactive programming for the current workspace 
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

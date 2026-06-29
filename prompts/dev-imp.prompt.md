@@ -6,6 +6,15 @@ version: 1.0.0
 author: OWL
 license: MIT
 tags:
+  - audit
+  - debugging
+  - fix
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
   - hermes
   - development
   - implementation

@@ -7,6 +7,11 @@ title: "Refactoring Java Methods With Extract Method"
 description: "Refactoring using Extract Methods in Java Language"
 trigger: /Refactoring Java Methods with Extract Method
 tags:
+  - frontend
+  - java
+  - prompts
+  - refactoring
+  - typescript
   - hermes
   - java
   - refactoring

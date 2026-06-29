@@ -7,6 +7,11 @@ title: "Sandbox Projects Merge Plan"
 description: "Execute the Sandbox Projects Merge Plan plan."
 trigger: /execute-sandbox-projects-merge-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

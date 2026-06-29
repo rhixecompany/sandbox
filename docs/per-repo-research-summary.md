@@ -1,2 +1,0 @@
-# Per-Repo Research Summary
-

@@ -24,9 +24,22 @@ version: 1.0.0
 title: Generate Docs
 name: generate-docs
 description: "Generate documentation for code or APIs."
-tags: []
+tags:
+  - api
+  - documentation
+  - generator
+  - ml
+  - nextjs
+  - prompts
+  - specification
+  - typescript
+  - api
+  - documentation
+  - nextjs
+  - planning
+  - specification
+  - typescript
 ---
-
 
 ## Goal
 
@@ -48,6 +61,8 @@ Use when you need to next.js expert for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

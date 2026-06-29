@@ -11,9 +11,17 @@ version: 1.0.0
 title: NUnit Best Practices
 name: csharp-nunit
 description: "Get best practices for NUnit unit testing, including data-driven tests"
-tags: []
+tags:
+  - csharp
+  - data
+  - dotnet
+  - prompts
+  - testing
+  - typescript
+  - csharp
+  - dotnet
+  - testing
 ---
-
 
 # NUnit Best Practices
 

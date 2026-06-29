@@ -5,7 +5,21 @@ version: 1.0.0
 title: Deploy and Manage MCP-Based Agents
 name: mcp-deploy-manage-agents
 description: "mcp-deploy-manage-agents.prompt"
-tags: []
+tags:
+  - agents
+  - deployment
+  - mcp
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
+  - agents
+  - documentation
+  - orchestration
+  - planning
+  - specification
+  - workflow
 ---
 
 ## Goal
@@ -28,6 +42,8 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

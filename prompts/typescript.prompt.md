@@ -7,6 +7,15 @@ title: "TypeScript & Next.js"
 description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
 trigger: /typescript
 tags:
+  - architecture
+  - backend
+  - configuration
+  - frontend
+  - ml
+  - nextjs
+  - prompts
+  - skills
+  - typescript
   - hermes
   - typescript
   - nextjs
@@ -28,6 +37,9 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#typescript)
+
 - Advanced TypeScript typing and API design
 - Next.js server/client boundary management
 - Runtime validation and error modeling
@@ -47,6 +59,8 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 - Validation Reviewer: Requires consistent runtime validation and error handling.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Use strict TypeScript patterns and avoid unsafe typing shortcuts.
 - Prefer server components and add use client only when justified.

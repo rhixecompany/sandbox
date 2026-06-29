@@ -5,7 +5,28 @@ version: 1.0.0
 title: README Generator Prompt
 name: readme-blueprint-generator
 description: "Intelligent README.md generation prompt that analyzes project documentation structure and creates comprehensive repository documentation. Scans .github/copilot directory files and copilot-instructions.md to extract project information, technology stack, architecture, development workflow, coding standards, and testing approaches while generating well-structured markdown documentation with proper formatting, cross-references, and developer-focused content."
-tags: []
+tags:
+  - ai-assistant
+  - architecture
+  - documentation
+  - generator
+  - git
+  - markdown
+  - prompts
+  - testing
+  - workflow
+  - ai-assistant
+  - architecture
+  - ci-cd
+  - database
+  - documentation
+  - drizzle
+  - github
+  - linux
+  - markdown
+  - orchestration
+  - testing
+  - workflow
 
 ---
 
@@ -29,6 +50,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

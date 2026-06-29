@@ -7,6 +7,15 @@ title: "Rust Mcp Server Generator"
 description: "Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK"
 trigger: /rust-mcp-server-generator
 tags:
+  - backend
+  - data
+  - frontend
+  - generator
+  - mcp
+  - prompts
+  - rust
+  - testing
+  - typescript
   - hermes
   - mcp
   - codegen

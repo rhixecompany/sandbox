@@ -24,9 +24,24 @@ version: 1.0.0
 title: Setup Component
 name: setup-component
 description: "Generate a new React/Next.js component."
-tags: []
+tags:
+  - generator
+  - ml
+  - nextjs
+  - prompts
+  - react
+  - setup
+  - specification
+  - typescript
+  - configuration
+  - documentation
+  - nextjs
+  - planning
+  - react
+  - setup
+  - specification
+  - typescript
 ---
-
 
 ## Goal
 
@@ -48,6 +63,8 @@ Use when you need to next.js expert for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

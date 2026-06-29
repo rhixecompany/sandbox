@@ -7,6 +7,12 @@ title: "2026 06 16_Multi Agent Research"
 description: "Execute the 2026 06 16_Multi Agent Research plan."
 trigger: /execute-multi-agent-research
 tags:
+  - agents
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

@@ -5,7 +5,15 @@ version: 1.0.0
 title: Memory Merger
 name: memory-merger
 description: "Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`."
-tags: []
+tags:
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - memory-management
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +36,8 @@ Use when you need to memory merger for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

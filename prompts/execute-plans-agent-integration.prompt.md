@@ -7,6 +7,12 @@ title: "Plans Agent Integration"
 description: "Execute the Plans Agent Integration plan."
 trigger: /execute-plans-agent-integration
 tags:
+  - agents
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

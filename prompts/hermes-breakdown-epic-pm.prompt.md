@@ -5,7 +5,21 @@ version: 1.0.0
 title: Hermes Breakdown Epic Pm
 name: hermes-breakdown-epic-pm
 description: "Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request."
-tags: []
+tags:
+  - ai-assistant
+  - frontend
+  - ml
+  - planning
+  - prompts
+  - specification
+  - typescript
+  - agile
+  - ai-assistant
+  - authentication
+  - documentation
+  - planning
+  - security
+  - specification
 ---
 
 ## Goal
@@ -29,6 +43,8 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 - `/docs/ways-of-work/plan/{epic-name}/epic.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Include problem, solution, and impact.
 2. Define user personas and high-level journeys.

@@ -5,7 +5,22 @@ version: 1.0.0
 title: .NET/C# Best Practices
 name: dotnet-best-practices
 description: "Ensure .NET/C# code meets best practices for the solution/project."
-tags: []
+tags:
+  - architecture
+  - csharp
+  - documentation
+  - dotnet
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - architecture
+  - csharp
+  - documentation
+  - dotnet
+  - linux
+  - planning
+  - specification
 ---
 
 # .NET/C# Best Practices

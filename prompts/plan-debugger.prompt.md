@@ -40,9 +40,16 @@ version: 1.0.0
 title: Plan Debugger
 name: plan-debugger
 description: Batch Fix All Errors, Warnings, and Deprecations.
-tags: []
+tags:
+  - debugging
+  - fix
+  - planning
+  - prompts
+  - debugging
+  - documentation
+  - markdown
+  - planning
 ---
-
 
 ## Plan: Batch Fix All Errors, Warnings, and Deprecations
 

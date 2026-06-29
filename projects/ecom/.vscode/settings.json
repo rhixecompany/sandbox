@@ -27,7 +27,7 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -40,5 +40,6 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }

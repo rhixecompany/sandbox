@@ -7,6 +7,9 @@ title: "ComicWise Implementation Plan"
 description: "Execute ComicWise Implementation Plan"
 trigger: /execute-plan-comicWiseImplementation
 tags:
+  - ai-assistant
+  - execution
+  - prompts
   - hermes
   - plan
   - execute

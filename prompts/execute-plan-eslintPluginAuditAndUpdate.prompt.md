@@ -7,6 +7,11 @@ title: "ESLint Plugin Audit & Update"
 description: "Execute ESLint Plugin Audit & Update"
 trigger: /execute-plan-eslintPluginAuditAndUpdate
 tags:
+  - ai-assistant
+  - audit
+  - execution
+  - linting
+  - prompts
   - hermes
   - plan
   - execute

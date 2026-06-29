@@ -11,9 +11,18 @@ version: 1.0.0
 title: JUnit 5+ Best Practices
 name: java-junit
 description: "Get best practices for JUnit 5 unit testing, including data-driven tests"
-tags: []
+tags:
+  - api
+  - data
+  - frontend
+  - java
+  - prompts
+  - testing
+  - typescript
+  - api
+  - java
+  - testing
 ---
-
 
 # JUnit 5+ Best Practices
 

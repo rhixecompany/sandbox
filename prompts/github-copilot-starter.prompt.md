@@ -13,7 +13,24 @@ name: github-copilot-starter
   - runCommands
   - web/fetch
 description: "Set up complete GitHub Copilot configuration for a new project based on technology stack"
-tags: []
+tags:
+  - ai-assistant
+  - configuration
+  - frontend
+  - git
+  - ml
+  - prompts
+  - react
+  - specification
+  - typescript
+  - ai-assistant
+  - ci-cd
+  - documentation
+  - github
+  - linux
+  - planning
+  - react
+  - specification
 ---
 
 ## Goal
@@ -36,6 +53,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

@@ -7,6 +7,13 @@ title: "ComicWise Development Workflow"
 description: "Reusable prompt for ComicWise development sessions"
 applyTo: "**/*"
 tags:
+  - architecture
+  - audit
+  - nextjs
+  - prompts
+  - testing
+  - typescript
+  - workflow
   - nextjs
   - typescript
   - drizzle

@@ -7,6 +7,14 @@ title: "Bash Scripts Refactor Testing Workflow Implementation Plan"
 description: "Execute the Bash Scripts Refactor Testing Workflow Implementation Plan plan."
 trigger: /execute-bash-scripts-refactor-testing-workflow-implementation-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - refactoring
+  - testing
+  - typescript
+  - workflow
   - hermes
   - plan
   - execute

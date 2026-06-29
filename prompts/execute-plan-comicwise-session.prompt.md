@@ -7,6 +7,9 @@ title: "ComicWise Session Prompt"
 description: "Execute ComicWise Session Prompt"
 trigger: /execute-plan-comicwise-session
 tags:
+  - ai-assistant
+  - execution
+  - prompts
   - hermes
   - plan
   - execute

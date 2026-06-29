@@ -6,7 +6,20 @@ version: 1.0.0
 title: C# Async Programming Best Practices
 name: csharp-async
 description: "Get best practices for C# async programming"
-tags: []
+tags:
+  - csharp
+  - data
+  - dotnet
+  - fix
+  - performance
+  - prompts
+  - typescript
+  - csharp
+  - database
+  - dotnet
+  - drizzle
+  - performance
+  - synchronization
 ---
 
 # C# Async Programming Best Practices

@@ -6,7 +6,17 @@ version: 1.0.0
 title: Generate Application from OpenAPI Spec
 name: openapi-to-application-code
 description: "Generate a complete, production-ready application from an OpenAPI specification"
-tags: []
+tags:
+  - api
+  - generator
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - api
+  - documentation
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +39,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

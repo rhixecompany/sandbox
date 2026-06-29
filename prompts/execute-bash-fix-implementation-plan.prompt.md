@@ -7,6 +7,12 @@ title: "Bash Fix Implementation Plan"
 description: "Execute the Bash Fix Implementation Plan plan."
 trigger: /execute-bash-fix-implementation-plan
 tags:
+  - ai-assistant
+  - execution
+  - fix
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

@@ -7,6 +7,10 @@ title: "Plan Setup - ESLint/VSCode/Auth Setup Session"
 description: "Execute Plan Setup - ESLint/VSCode/Auth Setup Session"
 trigger: /execute-plan-setup
 tags:
+  - ai-assistant
+  - execution
+  - linting
+  - prompts
   - hermes
   - plan
   - execute

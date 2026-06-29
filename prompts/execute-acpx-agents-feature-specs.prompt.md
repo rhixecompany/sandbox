@@ -7,6 +7,13 @@ title: "Acpx Agents Feature Specs"
 description: "Execute the Acpx Agents Feature Specs plan."
 trigger: /execute-acpx-agents-feature-specs
 tags:
+  - agents
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - specification
+  - typescript
   - hermes
   - plan
   - execute

@@ -22,9 +22,20 @@ version: 1.0.0
 title: Update Oo Component Documentation
 name: update-oo-component-documentation
 description: "Update existing object-oriented component documentation following industry best practices and architectural documentation standards."
-tags: []
+tags:
+  - architecture
+  - documentation
+  - maintenance
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - architecture
+  - documentation
+  - linux
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -46,6 +57,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

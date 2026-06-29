@@ -7,7 +7,20 @@ title: PostgreSQL Development Assistant
 name: postgresql-optimization
 description: "PostgreSQL-specific development assistant focusing on unique PostgreSQL features, advanced data types, and PostgreSQL-exclusive capabilities. Covers JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and PostgreSQL extensions ecosystem."
 tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
-tags: []
+tags:
+  - data
+  - database
+  - prompts
+  - specification
+  - sql
+  - typescript
+  - database
+  - documentation
+  - linux
+  - performance
+  - planning
+  - specification
+  - sql
 ---
 
 ## Goal
@@ -30,6 +43,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

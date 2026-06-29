@@ -9,16 +9,35 @@ updated: 2025-12-29
 platforms: Windows, Linux, macOS
 packageManager: pnpm
 framework: Next.js 16
-tags: []
+tags:
+  - configuration
+  - database
+  - docker
+  - frontend
+  - ml
+  - nextjs
+  - prompts
+  - specification
+  - sql
+  - typescript
+  - workflow
+  - configuration
+  - database
+  - devops
+  - docker
+  - documentation
+  - drizzle
+  - markdown
+  - nextjs
+  - orchestration
+  - planning
+  - setup
+  - specification
+  - sql
+  - typescript
+  - workflow
 ---
 
----
-
-# 🚀 ComicWise - Complete Project Setup & Scaffolding Guide
-
-> **Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.**
-
----
 Read And understand @/**/*.ts, @/**/*.tsx, @/**/*.mjs, @/**/*.json , @/**/*.mts, @/**/*.json @/**/*.md, @/**/*.txt,   @/**/*.yml,   @/**/*.ps1, @/**/*.sh, @/**/*/Dockerfile, @/src, @scripts and the overall structure of the project.
 After fully understanding the project the package manager is pnpm  and the system is windows, Request all permissions needed to complete all tasks.
 Confirm if I have the necessary permissions to complete all tasks.

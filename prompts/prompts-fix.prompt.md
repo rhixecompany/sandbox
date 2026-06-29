@@ -7,6 +7,13 @@ title: prompts Sync and Deduplication
 trigger: /prompts-fix
 description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific validation.
 tags:
+  - ai-assistant
+  - fix
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
   - hermes
   - copilot
   - prompts

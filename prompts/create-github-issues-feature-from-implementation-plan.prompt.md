@@ -12,9 +12,20 @@ version: 1.0.0
 title: Create GitHub Issue from Implementation Plan
 name: create-github-issues-feature-from-implementation-plan
 description: "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates."
-tags: []
+tags:
+  - generator
+  - git
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ci-cd
+  - documentation
+  - generator
+  - github
+  - planning
+  - specification
 ---
-
 
 ## Goal
 
@@ -36,6 +47,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

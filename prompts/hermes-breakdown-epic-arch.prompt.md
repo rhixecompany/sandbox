@@ -5,7 +5,23 @@ version: 1.0.0
 title: Hermes Breakdown Epic Arch
 name: hermes-breakdown-epic-arch
 description: "Hermes-equivalent: create a high-level Epic Architecture Specification from an Epic PRD."
-tags: []
+tags:
+  - ai-assistant
+  - architecture
+  - data
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - agile
+  - ai-assistant
+  - architecture
+  - documentation
+  - linux
+  - markdown
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -29,6 +45,8 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 - `/docs/ways-of-work/plan/{epic-name}/arch.md`
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Include an architecture overview.
 2. Show User, Application, Service, Data, and Infrastructure layers.

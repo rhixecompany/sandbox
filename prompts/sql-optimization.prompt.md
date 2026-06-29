@@ -7,7 +7,23 @@ title: SQL Performance Optimization Assistant
 name: sql-optimization
 description: "Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance."
 tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
-tags: []
+tags:
+  - backend
+  - data
+  - database
+  - frontend
+  - performance
+  - prompts
+  - specification
+  - sql
+  - typescript
+  - database
+  - documentation
+  - drizzle
+  - performance
+  - planning
+  - specification
+  - sql
 ---
 
 ## Goal
@@ -30,6 +46,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

@@ -7,6 +7,11 @@ title: "Implementation_Plan"
 description: "Execute the Implementation_Plan plan."
 trigger: /execute-IMPLEMENTATION_PLAN
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

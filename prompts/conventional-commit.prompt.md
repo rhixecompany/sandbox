@@ -6,7 +6,20 @@ version: 1.0.0
 title: Conventional Commit
 name: conventional-commit
 description: "Prompt and workflow for generating conventional commit messages using a structured XML format. Guides users to create standardized, descriptive commit messages in line with the Conventional Commits specification, including instructions, examples, and validation."
-tags: []
+tags:
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - workflow
+  - database
+  - documentation
+  - drizzle
+  - orchestration
+  - planning
+  - specification
+  - workflow
 ---
 
 ## Goal
@@ -29,6 +42,8 @@ Use when you need to conventional commit for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

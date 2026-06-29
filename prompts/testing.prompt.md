@@ -7,6 +7,13 @@ title: "Testing"
 description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
 trigger: /testing
 tags:
+  - audit
+  - frontend
+  - planning
+  - prompts
+  - skills
+  - testing
+  - typescript
   - hermes
   - testing
 ---
@@ -24,6 +31,9 @@ Create, update, and validate tests that provide deterministic coverage for publi
 Use this prompt for tests under tests/ and for planning or reviewing validation strategy for changed behavior.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#testing)
 
 - Unit and integration test design
 - E2E flow verification with environment constraints
@@ -44,6 +54,8 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 - Test Reliability Reviewer: Eliminates nondeterminism and fragile assumptions.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Prefer fast deterministic unit tests with mocked external dependencies.
 - Cover critical paths and public behavior changes.

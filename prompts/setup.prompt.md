@@ -5,13 +5,42 @@ version: 1.0.0
 title: ComicWise — AI Agent Setup & Onboarding
 name: setup
 description: "Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code patterns, and conventions"
-tags: []
----
-
-# ComicWise — AI Agent Setup & Onboarding
-
-**ComicWise** is a production-grade manga/comic reader built with Next.js 16.1.6 (App Router), React 19.2.4 Server Components, Drizzle ORM 0.45.1 + PostgreSQL (Neon), NextAuth v5 (database sessions), Zustand 5 + React Query 5, shadcn/Radix UI, Tailwind CSS 4, Vitest + Playwright, and a complete database seeding system with CLI + REST API.
-
+tags:
+  - agents
+  - api
+  - architecture
+  - backend
+  - data
+  - database
+  - frontend
+  - ml
+  - nextjs
+  - playwright
+  - prompts
+  - react
+  - sql
+  - testing
+  - typescript
+  - workflow
+  - agents
+  - api
+  - architecture
+  - authentication
+  - configuration
+  - css
+  - database
+  - drizzle
+  - frontend
+  - linux
+  - nextjs
+  - orchestration
+  - playwright
+  - react
+  - security
+  - setup
+  - sql
+  - typescript
+  - workflow
 ---
 
 ## 1. Project Architecture

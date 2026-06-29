@@ -5,7 +5,17 @@ description: "Plan Batchfixallerrorswarningsanddeprecations"
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: []
+tags:
+  - fix
+  - frontend
+  - linting
+  - planning
+  - prompts
+  - typescript
+  - code-quality
+  - documentation
+  - linting
+  - planning
 ---
 
 **Prompt: Batch Fix All Errors, Warnings, and Deprecations**

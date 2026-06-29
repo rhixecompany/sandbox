@@ -9,6 +9,15 @@ description:
     Create a comprehensive plan for converting plaintext prompts to markdown,
     enhancing prompt quality, and updating related implementation plans.
 tags:
+  - audit
+  - git
+  - markdown
+  - ml
+  - planning
+  - prompts
+  - security
+  - typescript
+  - workflow
   - hermes
   - copilot
   - planning
@@ -50,8 +59,7 @@ skills:
 
 ---
 
----
-    >
+>
 > Create a detailed prompt-library plan
 > and verification criteria.
 
@@ -97,6 +105,8 @@ Reference artifacts:
 - An implementation guide with verification steps
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Run `context-map` before any conversion or planning work.
 2. Keep the pipeline idempotent and safe to re-run.
@@ -107,6 +117,9 @@ Reference artifacts:
 7. Prefer file-backed evidence over inference.
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#dev-init)
 
 | Skill                                 | Purpose                                                          |
 | ------------------------------------- | ---------------------------------------------------------------- |

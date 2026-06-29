@@ -7,6 +7,11 @@ title: "Dev Init Comprehensive Plan"
 description: "Execute the Dev Init Comprehensive Plan plan."
 trigger: /execute-dev-init-comprehensive-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

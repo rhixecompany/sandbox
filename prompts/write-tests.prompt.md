@@ -24,9 +24,21 @@ version: 1.0.0
 title: Write Tests
 name: write-tests
 description: "Generate unit or E2E tests for a component or module."
-tags: []
+tags:
+  - generator
+  - ml
+  - nextjs
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - documentation
+  - nextjs
+  - planning
+  - specification
+  - testing
+  - typescript
 ---
-
 
 ## Goal
 
@@ -48,6 +60,8 @@ Use when you need to next.js expert for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

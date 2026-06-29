@@ -7,6 +7,13 @@ title: "Hermes Configuration Spec"
 description: "Execute the Hermes Configuration Spec plan."
 trigger: /execute-hermes-configuration-spec
 tags:
+  - ai-assistant
+  - configuration
+  - execution
+  - frontend
+  - prompts
+  - specification
+  - typescript
   - hermes
   - plan
   - execute

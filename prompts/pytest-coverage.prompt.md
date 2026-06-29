@@ -5,7 +5,16 @@ version: 1.0.0
 title: Pytest Coverage
 name: pytest-coverage
 description: "Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%."
-tags: []
+tags:
+  - ml
+  - prompts
+  - specification
+  - testing
+  - typescript
+  - documentation
+  - planning
+  - specification
+  - testing
 ---
 
 ## Goal
@@ -28,6 +37,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

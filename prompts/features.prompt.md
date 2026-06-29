@@ -41,138 +41,24 @@ title: ComicWise - Feature Implementation Guide
 name: features
 
 description: Complete feature implementation tasks for profiles, comics, chapters, bookmarks
-tags: []
----
-
-
-# ComicWise - Feature Implementation Guide
-
----
-
-## Implementation Principles
-
-1. **Use Existing Patterns** - Reference admin panel patterns
-2. **Type Safety** - No `any` types, strict TypeScript
-3. **Zod Validation** - Validate all user input
-4. **Server Actions** - Use for all mutations
-5. **Error Handling** - Comprehensive user feedback
-6. **Component Reusability** - Create reusable components
-7. **Performance** - Optimize images, queries, bundles
-8. **Accessibility** - WCAG compliant UI
-
----
-
-## Phase 2: User Profile Features
-
-> ### Task 2.1: Profile View Page ✅
-> **File:** `src/app/(root)/profile/page.tsx`
-
-> **Full content:** `templates/features/phase_2_user_profile_features.md`
-
-## Phase 3: Comic Features
-
-> ### Task 3.1: Comics Listing Page ✅
-> **File:** `src/app/(root)/comics/page.tsx` (373 lines)
-
-> **Full content:** `templates/features/phase_3_comic_features.md`
-
-## Phase 4: Chapter Reader
-
-> ### Task 4.1: Chapter Reader Page ✅
-> **File:** `src/app/(root)/comics/[slug]/[chapterNumber]/page.tsx`
-
-> **Full content:** `templates/features/phase_4_chapter_reader.md`
-
-## Phase 5: Bookmarks Management
-
-### Task 5.1: Bookmarks Listing Page ✅
-
-**File:** `src/app/(root)/bookmarks/page.tsx`
-
-**Features:**
-
-- [x] Grid/list view toggle
-- [x] Bookmark cards with progress
-- [x] Filter by status
-- [x] Sort by date/title/progress
-- [x] Search bookmarks
-- [x] Empty state handling
-
-**Components:**
-
-- `BookmarkCard` - Card component
-- `BookmarkFilters` - Filter controls
-- `BookmarkSearch` - Search input
-- `BookmarkViewToggle` - View switcher
-
----
-
-## UI/UX Decision Matrix
-
-| Feature | Decision | Rationale |
-| --- | --- | --- |
-| Comic Detail Description | Truncated (250 chars) | Prevent layout issues, faster loading |
-| Chapter Reader Default | Vertical scroll | Most popular mobile experience |
-| Bookmark Status | Dropdown | Fits limited space, clear options |
-| Image Loading | Lazy + Skeleton | Performance + user feedback |
-| Search | Debounced (300ms) | Reduce API calls |
-| Pagination | Server-side | Better for large datasets |
-
----
-
-## Root Pages
-
-> ### Task: Home Page Enhancement
-> **File:** `src/app/(root)/page.tsx`
-
-> **Full content:** `templates/features/root_pages.md`
-
-## Server Actions Reference
-
-> ### Profile Actions (`src/actions/profile.actions.ts`)
-> ### Bookmark Actions (`src/actions/bookmark.actions.ts`)
-
-> **Full content:** `templates/features/server_actions_reference.md`
-
-## Zod Schemas Reference
-
-**Location:** `src/schemas/`
-
-| Schema                  | File                         | Status |
-| ----------------------- | ---------------------------- | ------ |
-| `ProfileUpdateSchema`   | `profile.schema.ts`          | ✅     |
-| `ChangePasswordSchema`  | `profile.schema.ts`          | ✅     |
-| `CreateBookmarkSchema`  | `bookmark.schema.ts`         | ✅     |
-| `UpdateBookmarkSchema`  | `bookmark.schema.ts`         | ✅     |
-| `ComicFilterSchema`     | `comic.schema.ts`            | ✅     |
-| `ChapterSchema`         | `chapter.schema.ts`          | ✅     |
-| `ReadingProgressSchema` | `reading-progress.schema.ts` | ✅     |
-
----
-
-## Component Checklist
-
-### Core UI Components
-
-- [x] `ComicCard` - Comic display card
-- [x] `ChapterList` - Chapter listing
-- [x] `BookmarkCard` - Bookmark display
-- [x] `ProfileView` - Profile display
-- [x] `ImageViewer` - Image gallery
-
-### Action Components
-
-- [x] `BookmarkActions` - Add/remove/status
-- [x] `ChapterNavigation` - Reader navigation
-- [x] `ReadingSettings` - Reader settings
-
-### Loading States
-
-- [x] `ComicCardSkeleton`
-- [x] `ChapterListSkeleton`
-- [x] `ProfileSkeleton`
-- [x] `BookmarkCardSkeleton`
-
+tags:
+  - backend
+  - frontend
+  - performance
+  - prompts
+  - security
+  - specification
+  - typescript
+  - ci-cd
+  - database
+  - drizzle
+  - github
+  - nextjs
+  - performance
+  - planning
+  - security
+  - specification
+  - typescript
 ---
 
 ## Validation Commands

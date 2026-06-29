@@ -7,6 +7,13 @@ title: Prompt Management
 trigger: /prompt-management
 description: List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline clean or continue remediation.
 tags:
+  - debugging
+  - fix
+  - markdown
+  - ml
+  - prompts
+  - skills
+  - typescript
   - hermes
   - prompts
   - cleanup
@@ -28,7 +35,6 @@ dependencies:
   - prompt:context-map.prompt.md
   - prompt:update-implementation-plan.prompt.md
   - prompt:agents-fix.prompt.md
-  - prompt:agents-fix.prompt.md
 skills:
   - brainstorming
   - plans-and-specs
@@ -49,7 +55,7 @@ Manage the whole `prompts/` prompt lifecycle end to end: catalog, dedupe, consol
 
  
 
-## COpy-write frontmatter template strict validator
+## Copy-write frontmatter template strict validator
 
 Run the strict validator on all prompt front matter. Compare each `frontmatter` block against the strict template. Collect failures: missing fields, wrong types, invalid license values, required `name/title/version/description/tags`. Report a per-file validation result.
 

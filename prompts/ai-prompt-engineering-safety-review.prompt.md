@@ -8,6 +8,12 @@ trigger: /ai-prompt-engineering-safety-review
 description: >-
   Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
 tags:
+  - audit
+  - frontend
+  - ml
+  - prompts
+  - security
+  - typescript
   - hermes
   - copilot
   - safety
@@ -15,9 +21,9 @@ tags:
   - bias
   - optimization
 dependencies:
-  - skill:/prompt-engineering
+  - skill:prompt-engineering
   - skill:systematic-debugging
-  - skill:/context-map
+  - skill:context-map
 skills:
   - prompt-engineering
   - systematic-debugging
@@ -52,6 +58,8 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 - A short checklist of safety and quality improvements
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Check harmful content, misinformation, and illegal activity risk first
 2. Check bias, privacy, and prompt-injection risk
@@ -62,6 +70,9 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 7. Keep the improved prompt shorter and clearer when possible, but never at the expense of required intent or constraints
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#ai-prompt-engineering-safety-review)
 
 | Skill | Purpose |
 | --- | --- |

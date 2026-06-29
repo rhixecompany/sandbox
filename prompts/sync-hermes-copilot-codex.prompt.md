@@ -9,6 +9,13 @@ description: >-
   Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
   create personalities and profiles from instruction/agent definitions.
 tags:
+  - agents
+  - ai-assistant
+  - git
+  - ml
+  - prompts
+  - skills
+  - typescript
   - hermes
   - copilot
   - opencode
@@ -58,6 +65,9 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#sync-hermes-copilot-codex)
+
 | Skill                            | Purpose                               |
 | -------------------------------- | ------------------------------------- |
 | `using-superpowers`              | Establishes workflow foundation       |
@@ -65,6 +75,8 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 | `plans-and-specs`                | Creates implementation plan from goal |
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Sequential execution** — Phases must complete in order ("only then" constraint)
 2. **Bidirectional sync** — Skills, plugins, and hooks flow in both directions

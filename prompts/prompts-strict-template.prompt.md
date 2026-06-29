@@ -7,6 +7,14 @@ title: "Prompts Strict Template"
 description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
 trigger: /prompts-strict-template
 tags:
+  - audit
+  - fix
+  - frontend
+  - markdown
+  - ml
+  - prompts
+  - skills
+  - typescript
   - hermes
   - prompts
   - template
@@ -28,6 +36,9 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#prompts-strict-template)
+
 - Markdown structure and lint-aware formatting
 - Template compliance verification
 - Controlled normalization without intent loss
@@ -47,6 +58,8 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 - Intent Preserver: Keeps original prompt purpose and guidance intact.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Ensure all required top-level sections exist and are non-empty.
 - Keep required section order exact.

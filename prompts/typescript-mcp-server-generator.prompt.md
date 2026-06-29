@@ -5,7 +5,21 @@ version: 1.0.0
 title: Generate TypeScript MCP Server
 name: typescript-mcp-server-generator
 description: "Generate a complete MCP server project in TypeScript with tools, resources, and proper configuration"
-tags: []
+tags:
+  - backend
+  - configuration
+  - generator
+  - mcp
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - mcp
+  - nextjs
+  - planning
+  - specification
+  - typescript
 ---
 
 ## Goal
@@ -28,6 +42,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

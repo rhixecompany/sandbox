@@ -7,6 +7,11 @@ title: "Bash Scripts Implementation Plan"
 description: "Execute the Bash Scripts Implementation Plan plan."
 trigger: /execute-bash-scripts-implementation-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
   - hermes
   - plan
   - execute

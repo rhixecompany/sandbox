@@ -3,10 +3,28 @@ toolsets: [vscode, execute, read, agent, edit, search, web, 'github/*', 'github/
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: Developement
-name: developement
+title: Development
+name: development
 description: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide
-tags: []
+tags:
+  - database
+  - frontend
+  - javascript
+  - ml
+  - nextjs
+  - prompts
+  - specification
+  - sql
+  - database
+  - documentation
+  - drizzle
+  - javascript
+  - markdown
+  - nextjs
+  - planning
+  - specification
+  - sql
+  - typescript
 ---
 
 ## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.

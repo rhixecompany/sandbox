@@ -7,6 +7,16 @@ title: "ACP Agent Stack Audit — Hermes"
 description: "Hermes agent stack audit: inventory Hermes agents, plugins, and MCP tool exposure."
 trigger: /acpx-stack-audit-hermes
 tags:
+  - agents
+  - ai-assistant
+  - audit
+  - frontend
+  - mcp
+  - ml
+  - planning
+  - prompts
+  - skills
+  - typescript
   - hermes
   - acp
   - audit
@@ -30,6 +40,9 @@ Copilot CLI and ACPX.
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#plan-acpx-agent-stack-audit-hermes)
+
 - CLI execution.
 - Output triage.
 - Routing contradiction analysis.
@@ -46,6 +59,8 @@ Copilot CLI and ACPX.
 - Compatibility auditor.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Prefer runtime evidence over docs.
 - Label each route: `working`, `broken`, `unverified`.

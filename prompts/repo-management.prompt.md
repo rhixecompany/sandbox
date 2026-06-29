@@ -16,6 +16,8 @@ system: |
   file removal, dependency removal) requires explicit verification before and after.
   You never start a later phase before the previous phase's acceptance criteria pass.
 tags:
+  - frontend
+  - prompts
   - hermes
   - repos
   - git
@@ -35,23 +37,6 @@ dependencies:
   - skill:multi-stage-dockerfile
   - skill:workspace-audit
 skills:
----
-
-## CRITICAL RULES
-
-> These rules are non-negotiable. Any phase that skips them produces invalid output.
-
-1. **PREREQUISITE GATE** — Do NOT start this prompt until `/repo` (Phases 0–5)
-   has completed and all 14 `RESEARCH_REPORT.md` files are verified on disk.
-2. **PHASE ORDERING** — Execute phases strictly in order (P3 → P2 → P1 → P4 → P5 → P6).
-   Clean individual repos before consolidating. Never merge dirty sources.
-3. **VERIFY BEFORE DELETE** — Any branch delete, file removal, or dependency removal
-   requires a before-state snapshot and a post-delete verification.
-4. **NO FORCE PUSH to production** — All production branch updates go through PRs.
-5. **DRY RUN FIRST** — For batch operations (branch deletes, bun migration), run with
-   `--dry-run` or equivalent and review output before executing for real.
-6. **ROLLBACK PLAN** — Every phase must have a stated rollback path before execution begins.
-
 ---
 
 ## Goal

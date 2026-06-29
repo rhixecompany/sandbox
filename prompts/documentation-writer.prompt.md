@@ -6,7 +6,18 @@ version: 1.0.0
 title: Diátaxis Documentation Expert
 name: documentation-writer
 description: "Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework."
-tags: []
+tags:
+  - documentation
+  - frontend
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - authentication
+  - documentation
+  - planning
+  - security
+  - specification
 ---
 
 ## Goal
@@ -29,6 +40,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

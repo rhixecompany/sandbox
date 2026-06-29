@@ -7,6 +7,10 @@ title: "Task Sync"
 description: "Comprehensive prompt for synchronizing tasks, implementations, and updates across projects."
 trigger: /tasksync
 tags:
+  - frontend
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - tasks
   - sync
@@ -27,6 +31,9 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#tasksync)
+
 - Deterministic task-state management
 - Terminal-first interaction and fallback handling
 - Interrupt handling for urgent override and explicit termination
@@ -46,6 +53,8 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 - Intake Handler: Uses approved terminal command flow and fallback behavior.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Never terminate session unless explicit termination command is received.
 - Do not request new tasks while an active task is incomplete.

@@ -5,7 +5,19 @@ version: 1.0.0
 title: Swift MCP Server Generator
 name: swift-mcp-server-generator
 description: "Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package."
-tags: []
+tags:
+  - backend
+  - generator
+  - mcp
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - documentation
+  - mcp
+  - planning
+  - specification
+  - swift
 ---
 
 ## Goal
@@ -28,6 +40,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

@@ -8,6 +8,13 @@ trigger: /prompt-builder
 description: >-
   Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
 tags:
+  - agents
+  - ai-assistant
+  - frontend
+  - git
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - copilot
   - opencode
@@ -45,6 +52,8 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 - A confirmation of the generated file path
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Discovery first** — Gather all requirements through the 9-area questionnaire before generating
 2. **Pattern-driven** — Follow patterns from the 4 reference prompts listed in the Reference Patterns section
@@ -75,6 +84,9 @@ Phase execution by mode:
 - `agent` — run all 3 phases in full, and restrict tool selection in Phase 2 to agent-appropriate tools
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#prompt-builder)
 
 | Skill | Purpose |
 | --- | --- |

@@ -5,7 +5,17 @@ version: 1.0.0
 title: Memory Keeper
 name: remember
 description: "Transforms lessons learned into domain-organized memory instructions (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope is `global` (default), `user`, `workspace`, or `ws`."
-tags: []
+tags:
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - database
+  - documentation
+  - drizzle
+  - memory-management
+  - planning
+  - specification
 ---
 
 ## Goal
@@ -28,6 +38,8 @@ Use when you need to remember for the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

@@ -11,6 +11,11 @@ description: >
   sync-hermes-copilot-codex, and test-providers-models.
   Each prompt runs to completion before the next begins.
 tags:
+  - execution
+  - ml
+  - prompts
+  - typescript
+  - workflow
   - orchestrator
   - pipeline
   - sequential
@@ -65,6 +70,9 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 
 ## Skills Required
 
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#execute-all-prompts)
+
 | Skill | Purpose |
 |-------|---------|
 | `using-superpowers` | Workflow foundation, session startup |
@@ -74,6 +82,8 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 | `verification-before-completion` | Verify each phase before claiming done |
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **Strict sequential execution** — Prompts execute in order; each must complete before the next begins
 2. **Phase integrity** — All phases within a prompt must complete; do not skip

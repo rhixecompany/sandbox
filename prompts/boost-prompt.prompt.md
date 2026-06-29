@@ -8,6 +8,12 @@ trigger: /boost-prompt
 description: >-
   Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
 tags:
+  - frontend
+  - markdown
+  - ml
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - copilot
   - writing-skills
@@ -17,8 +23,8 @@ dependencies:
   - skill:writing-skills
   - skill:writing-plans
   - skill:joyride
-  - skill:/context-map
-  - skill:/prompt-engineering
+  - skill:context-map
+  - skill:prompt-engineering
 skills:
   - writing-skills — Crafting and optimizing prompts and instructions
   - writing-plans — Structured prompt authoring
@@ -54,6 +60,8 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 - Verification that the user is satisfied with the result
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. **No code** - DO NOT write any code; this workflow is for prompt refinement only
 2. **Interrogate first** - Ask specific questions to understand scope, objectives, deliverables, and constraints before refining
@@ -64,6 +72,9 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 7. **Iterate** - After delivering, ask the user if they want changes or additions
 
 ## Skills Required
+
+> See full table with per-domain purposes:
+> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#boost-prompt)
 
 | Skill | Purpose |
 | --- | --- |

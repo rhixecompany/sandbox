@@ -9,6 +9,11 @@ description: "Refactor given method `${input:methodName}` to reduce its cognitiv
 trigger: /refactor-method-complexity-reduce
 argument-hint: "methodName=..., complexityThreshold=15"
 tags:
+  - ml
+  - prompts
+  - refactoring
+  - specification
+  - typescript
   - hermes
   - refactoring
 toolsets:
@@ -39,6 +44,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.

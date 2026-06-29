@@ -7,6 +7,12 @@ title: "Orchestrator Plan"
 description: "Execute the Orchestrator Plan plan."
 trigger: /execute-orchestrator-plan
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - typescript
+  - workflow
   - hermes
   - plan
   - execute

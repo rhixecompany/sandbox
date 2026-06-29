@@ -7,6 +7,13 @@ title: "Plan Skills Debug"
 description: "Execute the Plan Skills Debug plan."
 trigger: /execute-plan-skills-debug
 tags:
+  - ai-assistant
+  - debugging
+  - execution
+  - frontend
+  - prompts
+  - skills
+  - typescript
   - hermes
   - plan
   - execute

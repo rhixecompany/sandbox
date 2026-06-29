@@ -7,6 +7,12 @@ title: "Dev Init Spec"
 description: "Execute the Dev Init Spec plan."
 trigger: /execute-dev-init-spec
 tags:
+  - ai-assistant
+  - execution
+  - frontend
+  - prompts
+  - specification
+  - typescript
   - hermes
   - plan
   - execute

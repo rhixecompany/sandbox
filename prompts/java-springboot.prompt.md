@@ -11,9 +11,18 @@ version: 1.0.0
 title: Spring Boot Best Practices
 name: java-springboot
 description: "Get best practices for developing applications with Spring Boot."
-tags: []
+tags:
+  - data
+  - frontend
+  - java
+  - ml
+  - prompts
+  - specification
+  - spring
+  - java
+  - planning
+  - specification
 ---
-
 
 # Spring Boot Best Practices
 
