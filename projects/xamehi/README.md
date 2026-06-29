@@ -1,124 +1,155 @@
-# Xamehi
+# xamehi — Dual-Backend + React Application
 
-A full-stack web application combining React frontend with Django backend.
+> **Stack:** Django + Express + React 18 | **Type:** Triple-Service Web Application | **Status:** Legacy / Active
 
-## Tech Stack
+A legacy dual-backend application combining Django REST Framework (Python) and Express.js (Node.js), with a React 18 frontend via Create React App. Three services running concurrently on different ports.
 
-- **Frontend**: React 18, Create React App
-- **Backend**: Django (Python), Express.js (Node.js)
-- **HTTP Client**: Axios
-- **Dev Server**: Nodemon
+---
+
+## Technology Stack
+
+### Backend 1: Django + DRF
+
+| Category | Technology |
+|---|---|
+| **Web Framework** | Django (latest) |
+| **API Framework** | Django REST Framework (DRF) |
+| **Language** | Python ^3.10+ |
+| **Database** | PostgreSQL |
+| **Serving** | Gunicorn |
+
+### Backend 2: Express.js
+
+| Category | Technology |
+|---|---|
+| **Framework** | Express ^4.18.1 |
+| **Language** | JavaScript (CommonJS) |
+| **Middleware** | CORS |
+| **Dev Tool** | Nodemon ^2.0.19 |
+
+### Frontend: React 18 (CRA)
+
+| Category | Technology |
+|---|---|
+| **UI Framework** | React ^18.2.0 |
+| **HTTP Client** | Axios ^0.27.2 |
+| **Build Tool** | Create React App (react-scripts 5.0.1) |
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────┐
+│                  xamehi Platform                     │
+├──────────────────────┬──────────────────────────────┤
+│  Backend 1 (Django)  │  Backend 2 (Express)         │
+│  Port: 8000          │  Port: 5000                  │
+│  Django REST         │  Express.js                  │
+│  PostgreSQL          │  CORS middleware             │
+│  Gunicorn            │  Nodemon (dev)               │
+├──────────────────────┴──────────────────────────────┤
+│  Frontend (React 18)                                │
+│  Port: 3000                                         │
+│  Create React App                                   │
+│  Axios HTTP client                                  │
+├─────────────────────────────────────────────────────┤
+│  Production                                          │
+│  ├── gunicorn xamehi.wsgi:application               │
+│  ├── NODE_ENV=production node index.js              │
+│  └── CORS; production HTTPS                          │
+└─────────────────────────────────────────────────────┘
+```
 
 ## Project Structure
 
 ```
 xamehi/
-├── src/           # React frontend source
-├── public/        # Static assets
-├── xamehi/        # Django application
-├── index.js       # Express server entry point
-├── manage.py      # Django management script
-└── package.json   # Node.js dependencies
+├── backend/                   # Django backend
+│   ├── manage.py
+│   ├── requirements.txt
+│   └── xamehi/               # Django project package
+├── frontend/                  # React 18 frontend
+│   ├── package.json
+│   ├── public/
+│   └── src/
+├── server/                    # Express backend
+│   ├── index.js
+│   └── ... (Express routes)
+├── package.json               # Root package (manages Express + React)
+└── docs/Project_Architecture/
 ```
 
 ## Getting Started
 
-### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- pip
+```bash
+# Install all dependencies
+npm install                    # Frontend + Express
+pip install -r requirements.txt  # Django
 
-### Installation
+# Start all services (development)
+npm start                      # React frontend (port 3000)
+npm run server                 # Express backend (port 5000, nodemon)
+python manage.py runserver     # Django backend (port 8000)
+
+# Database setup
+python manage.py migrate
+python manage.py createsuperuser
+
+# Run tests
+npm test                       # React tests
+python manage.py test          # Django tests
+```
+
+## Production Build
 
 ```bash
-# Install Node dependencies
-npm install
+# Build frontend
+npm run build
 
-# Install Python dependencies
-pip install -r requirements.txt  # if present
+# Collect Django static files
+python manage.py collectstatic
 
-# Copy environment variables
-cp .env.example .env
+# Start production services
+gunicorn xamehi.wsgi:application --bind 0.0.0.0:8000
+NODE_ENV=production node index.js
 ```
 
-### Development
+## Key Features
 
-```bash
-# Start React frontend
-npm start
+- **Dual Backend** — Django REST API + Express.js microservice
+- **React 18 Frontend** — Modern UI via Create React App
+- **PostgreSQL Database** — Persistent data storage
+- **Three-Service Architecture** — Independent services on different ports
 
-# Start Express backend
-node index.js
+## Service Ports
 
-# Django commands
-python manage.py runserver
-```
+| Service | Port | Description |
+|---|---|---|
+| **React Frontend** | 3000 | Development server (CRA) |
+| **Express Backend** | 5000 | Node.js API (nodemon) |
+| **Django Backend** | 8000 | Python REST API |
 
-## Documentation
+## Coding Standards
 
-- [Architecture](ARCHITECTURE.md)
-- [Developer Guide](DEVELOPER_GUIDE.md)
-- [Contributing](CONTRIBUTING.md)
-- [User Guide](USER_GUIDE.md)
-# Xamehi
+### Python/Django
+- PEP 8, Django conventions
+- DRF patterns for API development
 
-A full-stack web application combining React frontend with Django backend.
+### React
+- ESLint react-app configuration
+- ES6 modules, Axios for HTTP
 
-## Tech Stack
+### Express
+- CommonJS modules
+- Middleware-based routing
+- CORS configured for development
 
-- **Frontend**: React 18, Create React App
-- **Backend**: Django (Python), Express.js (Node.js)
-- **HTTP Client**: Axios
-- **Dev Server**: Nodemon
+## Security
 
-## Project Structure
+- `.env` never committed; Django `SECRET_KEY` in environment
+- Restrict CORS in production
+- Validate all inputs
+- HTTPS required in production
 
-```
-xamehi/
-├── src/           # React frontend source
-├── public/        # Static assets
-├── xamehi/        # Django application
-├── index.js       # Express server entry point
-├── manage.py      # Django management script
-└── package.json   # Node.js dependencies
-```
+## License
 
-## Getting Started
-
-### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- pip
-
-### Installation
-
-```bash
-# Install Node dependencies
-npm install
-
-# Install Python dependencies
-pip install -r requirements.txt  # if present
-
-# Copy environment variables
-cp .env.example .env
-```
-
-### Development
-
-```bash
-# Start React frontend
-npm start
-
-# Start Express backend
-node index.js
-
-# Django commands
-python manage.py runserver
-```
-
-## Documentation
-
-- [Architecture](ARCHITECTURE.md)
-- [Developer Guide](DEVELOPER_GUIDE.md)
-- [Contributing](CONTRIBUTING.md)
-- [User Guide](USER_GUIDE.md)
+Not specified.

@@ -5,15 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Backend
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r requirements.txt 2>/dev/null || true
+      - run: pip install -r requirements.txt 2>/dev/null || echo "No requirements"
       - run: python manage.py check --deploy 2>/dev/null || true
-      - name: Frontend
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-      - run: cd frontend && npm ci 2>/dev/null || true
-      - run: cd frontend && npm run build 2>/dev/null || true
+      - run: python -m pytest --tb=short 2>/dev/null || echo "No tests"

@@ -1,52 +1,14 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
-  "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true,
-  "python.defaultInterpreterPath": "${workspaceFolder}/backend/venv/Scripts/python.exe",
-  "python-envs.alwaysUseUv": true,
-  "python-envs.autoActivate": true,
-  "python-envs.venvFolders": [
-    ".venv",
-    "env",
-    "venv",
-    ".env",
-    "envs",
-    "venvs"
-  ],
-  "files.associations": {
-    "*.css": "tailwindcss",
-    "**/*.{txt,in}": "django-txt",
-    "**/requirements/**/*.{txt,in}": "pip-requirements"
-  },
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.includeLanguages": {
-    "css": "css",
-    "scss": "scss",
-    "javascript": "jsx",
-    "typescript": "tsx"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSave": true
-  },
-  "[django-html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -54,14 +16,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
   }
 }

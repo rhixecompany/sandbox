@@ -1,81 +1,110 @@
-# RESEARCH_REPORT.md
+# RESEARCH_REPORT — xamehi.tv
 
-## Project: xamehi.tv
+> **Type:** Project research report | **Updated:** 2026-06-25
 
-**Type:** Movie & TV series streaming platform
-**Tech Stack:** Django 4.x, DRF, SimpleJWT, React 17, Redux (Thunk), Material-UI 4, React Bootstrap, react-admin 4, PostgreSQL, video-react, PayPal, django-allauth, Gunicorn
-**Status:** Active (deployed at xamehi.tv)
+---
+
+**Type:** Django REST + React streaming platform
+**Tech Stack:** Django DRF, React 17, MUI 4, Redux, SimpleJWT, django-allauth, PostgreSQL, PayPal
+**Status:** Active
+
+---
 
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
-| Streaming Platform (DRF+React) | https://github.com/p-schlickmann/streaming-platform | Same DRF + React architecture |
+| ------- | --- | ------------ |
+| DRF + SimpleJWT auth | https://www.django-rest-framework.org/api-guide/authentication/ | DRF JWT authentication docs |
+| MUI v4 → v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Material-UI v4 to v5 migration guide |
+
+---
 
 ## Key Findings
 
-### DRF + React Streaming (2026)
-- DRF ViewSets + ModelSerializers remain the standard approach for REST APIs in Django media platforms
-- React 17 is a mature, stable choice for long-lived SPAs — no breaking upgrade pressure yet
-- The dual-database pattern (PostgreSQL + MongoDB) supports structured data + analytics separately
+### DRF + SimpleJWT Auth
 
-### Material-UI 4 + react-admin
-- react-admin 4 provides out-of-the-box CRUD UIs with `ra-data-simple-rest` for DRF backends
-- Material-UI 4 is LTS and stable, but MUI 5 offers improved theming and performance
+- djangorestframework-simplejwt is the most popular JWT auth package for DRF; supports access + refresh token pattern and token blacklist (django-rest-framework.org, 2026)
+- django-allauth provides social auth (Google, GitHub) alongside SimpleJWT; requires careful URL namespace configuration to avoid conflicts
+- WorkOS (2026) is emerging as an enterprise auth alternative, offering SSO, SCIM, and directory sync out of the box (workos.com, 2026)
+
+### React 17 + Material-UI 4 Upgrade Path
+
+- Material-UI v4 uses JSS for styling; v5 replaces it with Emotion — this is the biggest breaking change in the migration (mui.com)
+- Codemods automate 80% of the MUI v4→v5 migration: `npx @mui/codemod v5.0.0/preset-safe` (mui.com)
+- React 17 → React 18 migration: no major breaking changes to existing APIs; upgraded `ReactDOM.createRoot()` and automatic batching are key differences (jahed.dev, 2026)
+- Redux Toolkit with RTK Query is recommended over classic Redux + redux-thunk for new development (medium.com/@mernstackdevbykevin, 2026)
+
+### Production Serving
+
+- Gunicorn + WhiteNoise is the standard Django production serving stack for small-to-medium applications (reddit.com/r/django)
+- WhiteNoise automatically generates versioned static files with MD5 hashes and appropriate Cache-Control headers (reddit.com/r/django)
+- For larger deployments, replace WhiteNoise with nginx/CDN for static/media serving
+
+---
 
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
-| DRF Docs | https://www.django-rest-framework.org | Official Docs |
-| React 17 | https://17.reactjs.org | Docs |
-| Material-UI 4 | https://v4.mui.com | UI Framework |
+| ----- | -------- | ---- |
+| MUI v4→v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Migration Guide |
+| React 18 upgrade | https://react.dev/blog/2022/03/08/react-18-upgrade-guide | Guide |
+| DRF SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | Docs |
+
+---
 
 ## Best Practices
 
-1. **JWT authentication** — SimpleJWT + Blacklist model for token revocation
-2. **Redux Thunk pattern** — REQUEST/SUCCESS/FAIL action triad for async state handling
-3. **Separate admin + API auth** — Django admin for internal users, JWT for API consumers
-4. **Proxy in CRA** — `"proxy": "http://127.0.0.1:8000"` simplifies development CORS
-5. **react-admin CRUD** — Consistent patterns for user/movie/series management
+1. **Upgrade React 17→18** — Automatic batching, Concurrent Features, and Suspense improvements; mostly backward compatible
+2. **Migrate MUI v4→v5** — Emotion over JSS, improved theming, better TypeScript support; use codemods for efficiency
+3. **Redux Toolkit migration** — Replace redux-thunk with RTK Query for API data fetching and cache management
+4. **JWT security** — Short-lived access tokens (5–15 min), long-lived refresh tokens with rotation; store in memory not localStorage
+
+---
 
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
-| React 17 without concurrent features | No streaming SSR or Suspense | Plan upgrade to React 18/19 for new features |
-| video-react on direct file URLs | No adaptive bitrate streaming | Consider HLS.js for long-form content |
-| hybrid Django session + JWT auth | Confusion between auth systems | Document which auth is used where |
-| Material-UI 4 deprecated | No new features/security patches | Plan migration to MUI 5 or 6 |
+| ------- | ------ | --------- |
+| MUI v4 JSS → Emotion breakage | Styling completely broken after upgrade | Use codemods; run `npx @mui/codemod v5.0.0/preset-safe` |
+| React 17 createRoot missing | App doesn't render | Update to `createRoot()` API for React 18 |
+| SimpleJWT + allauth URL conflicts | Auth routes clash | Carefully namespace allauth URLs under `/accounts/` |
+| CORS + proxy confusion | Frontend can't reach backend | Document CORS + proxy setup; test with production config early |
+
+---
 
 ## Performance
 
-1. **DRF pagination** reduces payload size for movie/series listings
-2. **Redux memoization** via `connect()` prevents unnecessary re-renders
-3. **CRA build optimizes** JS bundle via Webpack tree-shaking and code splitting
-4. **PostgreSQL indexing** on search fields improves query performance
-5. **Gunicorn worker scaling** for concurrent user requests
+1. **React 18 automatic batching** — Fewer re-renders in promises and timeouts, improving UI responsiveness
+2. **RTK Query caching** — Replaces manual redux-thunk fetching; built-in cache invalidation and deduplication
+3. **MUI v5 Emotion** — Smaller runtime vs JSS; `styled()` API enables cleaner component composition
+4. **Gunicorn + WhiteNoise** — Sufficient for moderate traffic; CDN recommended for video assets
+
+---
 
 ## Security
 
-1. **JWT tokens** with short expiry and refresh rotation
-2. **Django CSRF & XSS protections** enabled by default
-3. **PayPal client ID** server-side only — never in client bundle
-4. **restrict CORS_ALLOWED_ORIGINS** to frontend domain in production
-5. **Never commit SECRET_KEY** or database credentials
+1. **SimpleJWT token blacklist** — Enable blacklist app to revoke compromised refresh tokens server-side
+2. **PayPal webhook verification** — Validate PayPal webhook signatures to prevent fraudulent payment callbacks
+3. **django-allauth social auth** — Configure callback URL whitelist; restrict allowed social providers
+4. **CORS restriction** — django-cors-headers with `CORS_ALLOWED_ORIGINS` limited to frontend domain
+
+---
 
 ## Related Projects (in workspace)
 
-- **xamehi** — Django DRF + React 18, shares DRF/React integration patterns
-- **ecom** — Django DRF + React 18 + PayPal, shares payment integration model
-- **rhixecompany-comics** — Django + Next.js 16, shares Django backend architecture
-- **profile** — Django blog CMS with GCS, shares Django deployment patterns
+- **ecom** — Shares DRF + PayPal + React stack; ecom uses React 18/Redux Toolkit (more modern)
+- **xamehi** — Shares Django + React pattern; xamehi has dual backends (Django + Express)
+- **rhixecompany-comics** — Dual-stack platform; xamehi.tv is simpler (single Django backend)
+- **profile** — Django monolith; both use Django but xamehi.tv adds React frontend
+
+---
 
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
-| Django REST Framework | https://www.django-rest-framework.org | REST API framework |
-| SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io | JWT auth plugin |
-| Material-UI 4 | https://v4.mui.com | UI component library |
-| react-admin | https://marmelab.com/react-admin | Admin panel framework |
+| -------- | --- | ----------- |
+| React 18 Docs | https://react.dev/ | React official documentation |
+| Material-UI v5 | https://mui.com/ | MUI v5 documentation |
+| SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | DRF JWT auth docs |
+| django-allauth | https://docs.allauth.org/ | Social auth integration |
+| PayPal Developer | https://developer.paypal.com/ | PayPal API documentation |

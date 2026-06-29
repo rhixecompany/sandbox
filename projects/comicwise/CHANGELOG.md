@@ -3,6 +3,7 @@
 ## [0.1.0] — 2026-05-27
 
 ### Added
+
 - Next.js 16.1.6 App Router with Turbopack
 - React 19 Server Components with React Compiler
 - TypeScript 5.9 strict mode
@@ -44,6 +45,7 @@
 - Comprehensive project scripts (23 scripts)
 
 ### Security
+
 - bcrypt password hashing
 - Zod validation on all inputs
 - CSRF protection via Server Actions

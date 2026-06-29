@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- **Node.js** 18+ 
+- **Node.js** 18+
 - **pnpm** 9+ (or npm/yarn)
 - **PostgreSQL** 14+ (or [Neon.tech](https://neon.tech) account)
 
@@ -70,16 +70,16 @@ This runs: format:check → type-check → lint:strict → imports:check → hea
 
 ## Database Commands
 
-| Command | Purpose |
-|---------|---------|
-| `pnpm db:push` | Push schema to database |
-| `pnpm db:generate` | Generate SQL migration |
-| `pnpm db:migrate` | Run pending migrations |
-| `pnpm db:studio` | Open Drizzle Studio GUI |
-| `pnpm db:drop` | Drop database |
-| `pnpm db:reset` | Drop → Generate → Push |
-| `pnpm db:pull` | Introspect existing DB |
-| `pnpm db:check` | Check schema consistency |
+| Command            | Purpose                  |
+| ------------------ | ------------------------ |
+| `pnpm db:push`     | Push schema to database  |
+| `pnpm db:generate` | Generate SQL migration   |
+| `pnpm db:migrate`  | Run pending migrations   |
+| `pnpm db:studio`   | Open Drizzle Studio GUI  |
+| `pnpm db:drop`     | Drop database            |
+| `pnpm db:reset`    | Drop → Generate → Push   |
+| `pnpm db:pull`     | Introspect existing DB   |
+| `pnpm db:check`    | Check schema consistency |
 
 ## Seeding
 
@@ -114,11 +114,11 @@ pnpm build            # Production build (~35s)
 
 ## Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| `pnpm install` fails | Ensure pnpm ≥ 9: `npm i -g pnpm@latest` |
-| Database connection | Verify `DATABASE_URL` in `.env.local` |
-| `db:push` errors | Check PostgreSQL is running |
-| Build fails | `pnpm clean && pnpm build` |
-| ESLint warnings | `pnpm lint:fix` for auto-fix |
-| Playwright test fails | `pnpm exec playwright install` |
+| Problem               | Solution                                |
+| --------------------- | --------------------------------------- |
+| `pnpm install` fails  | Ensure pnpm ≥ 9: `npm i -g pnpm@latest` |
+| Database connection   | Verify `DATABASE_URL` in `.env.local`   |
+| `db:push` errors      | Check PostgreSQL is running             |
+| Build fails           | `pnpm clean && pnpm build`              |
+| ESLint warnings       | `pnpm lint:fix` for auto-fix            |
+| Playwright test fails | `pnpm exec playwright install`          |

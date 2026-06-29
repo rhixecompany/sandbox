@@ -28,7 +28,7 @@ pnpm build         # Production build (~35s)
 ### Critical Rules
 
 | Rule | Enforcement | Alternative |
-|------|-------------|-------------|
+| --- | --- | --- |
 | **No `any` types** | ESLint `no-explicit-any: error` | Use `unknown` with type guards |
 | **No manual memoization** | React Compiler enabled | Never use `useMemo`, `useCallback`, `memo` |
 | **No raw `process.env`** | ESLint + appConfig.ts | Use `getEnv()` from `appConfig.ts` |
@@ -42,13 +42,13 @@ pnpm build         # Production build (~35s)
 
 ### Naming Conventions
 
-| Type | Convention | Example |
-|------|-----------|---------|
-| Components | PascalCase | `ComicCard.tsx` |
-| DAL files | kebab-case | `comic-dal.ts` |
-| Actions | kebab-case | `comic.actions.ts` |
-| Database tables | snake_case | `comic_genres` |
-| Types/Interfaces | PascalCase | `ComicType` |
+| Type             | Convention | Example            |
+| ---------------- | ---------- | ------------------ |
+| Components       | PascalCase | `ComicCard.tsx`    |
+| DAL files        | kebab-case | `comic-dal.ts`     |
+| Actions          | kebab-case | `comic.actions.ts` |
+| Database tables  | snake_case | `comic_genres`     |
+| Types/Interfaces | PascalCase | `ComicType`        |
 
 ### DAL Pattern
 
@@ -63,8 +63,8 @@ export class ComicDAL {
       where: eq(comics.id, id),
       with: {
         chapters: { orderBy: [desc(chapters.number)] },
-        genres: true,
-      },
+        genres: true
+      }
     }); // Returns Comic | null
   }
 }
@@ -79,14 +79,19 @@ export const comicDal = new ComicDAL();
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 
-const Schema = z.object({ /* ... */ });
+const Schema = z.object({
+  /* ... */
+});
 
-export async function action(input: unknown): Promise<ActionResult<Data>> {
+export async function action(
+  input: unknown
+): Promise<ActionResult<Data>> {
   const session = await auth();
   if (!session?.user) return { ok: false, error: "Unauthorized" };
 
   const parsed = Schema.safeParse(input);
-  if (!parsed.success) return { ok: false, error: parsed.error.message };
+  if (!parsed.success)
+    return { ok: false, error: parsed.error.message };
 
   try {
     const data = await db.insert(/* ... */).returning();
@@ -109,16 +114,16 @@ export async function action(input: unknown): Promise<ActionResult<Data>> {
 
 ## Scripts
 
-| Command | Purpose |
-|---------|---------|
-| `pnpm scaffold:component` | Scaffold new component |
-| `pnpm scaffold:action` | Scaffold new server action |
-| `pnpm scaffold:hook` | Scaffold new hook |
-| `pnpm format` | Format all code |
-| `pnpm triage` | Quality gate analysis |
-| `pnpm health:all` | Full project health check |
-| `pnpm optimize:performance` | Performance analysis |
-| `pnpm docs:generate` | Generate documentation |
+| Command                     | Purpose                    |
+| --------------------------- | -------------------------- |
+| `pnpm scaffold:component`   | Scaffold new component     |
+| `pnpm scaffold:action`      | Scaffold new server action |
+| `pnpm scaffold:hook`        | Scaffold new hook          |
+| `pnpm format`               | Format all code            |
+| `pnpm triage`               | Quality gate analysis      |
+| `pnpm health:all`           | Full project health check  |
+| `pnpm optimize:performance` | Performance analysis       |
+| `pnpm docs:generate`        | Generate documentation     |
 
 ## State Management
 

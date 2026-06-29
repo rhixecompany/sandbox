@@ -1,11 +1,13 @@
 # Technology Stack — comicwise
 
 ## Overview
+
 Next.js-based comic streaming frontend with TypeScript, Tailwind CSS, Prisma ORM, and NextAuth v5.
 
 ## Frontend
+
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| --- | --- | --- |
 | Next.js | 16.1.6 | React framework (App Router, Turbopack) |
 | React | 19.2.4 | UI library |
 | TypeScript | 5.9.3 | Type safety |
@@ -19,29 +21,32 @@ Next.js-based comic streaming frontend with TypeScript, Tailwind CSS, Prisma ORM
 | Recharts | 3.8.0 | Charts |
 
 ## Backend & Database
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| NextAuth v5 | 5.0.0-beta.30 | Authentication |
-| Drizzle ORM | 0.45.1 | Database ORM |
-| PostgreSQL | — | Database |
-| Upstash Redis | 1.37.0 | Rate limiting/caching |
-| BullMQ | 5.71.0 | Job queues |
+
+| Technology    | Version       | Purpose               |
+| ------------- | ------------- | --------------------- |
+| NextAuth v5   | 5.0.0-beta.30 | Authentication        |
+| Drizzle ORM   | 0.45.1        | Database ORM          |
+| PostgreSQL    | —             | Database              |
+| Upstash Redis | 1.37.0        | Rate limiting/caching |
+| BullMQ        | 5.71.0        | Job queues            |
 
 ## Integrations
-| Integration | Purpose |
-|-------------|---------|
-| ImageKit | Image optimization |
-| Cloudinary | Image storage |
-| Stripe | Payment processing |
-| Resend | Email delivery |
-| Sentry | Error tracking |
+
+| Integration | Purpose            |
+| ----------- | ------------------ |
+| ImageKit    | Image optimization |
+| Cloudinary  | Image storage      |
+| Stripe      | Payment processing |
+| Resend      | Email delivery     |
+| Sentry      | Error tracking     |
 
 ## Dev & Quality
-| Tool | Version | Purpose |
-|------|---------|---------|
-| pnpm | — | Package manager |
-| ESLint | 9.0.0 | Linting |
-| Prettier | 3.8.1 | Formatting |
-| Vitest | 4.1.0 | Testing |
-| Playwright | 1.58.2 | E2E testing |
-| Husky | 9.1.7 | Git hooks |
+
+| Tool       | Version | Purpose         |
+| ---------- | ------- | --------------- |
+| pnpm       | —       | Package manager |
+| ESLint     | 9.0.0   | Linting         |
+| Prettier   | 3.8.1   | Formatting      |
+| Vitest     | 4.1.0   | Testing         |
+| Playwright | 1.58.2  | E2E testing     |
+| Husky      | 9.1.7   | Git hooks       |

@@ -9,7 +9,7 @@ A full-stack comic/manga streaming platform built with Next.js 16, featuring mul
 ## Technology Stack
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Framework** | Next.js 16.1.6 (App Router) |
 | **Language** | TypeScript ^5.9.3 (strict) |
 | **UI** | React 19, Radix UI, shadcn/ui, Tailwind CSS 4, Framer Motion |
@@ -142,10 +142,10 @@ pnpm run optimize:*    # Performance optimization
 
 ## Deployment
 
-| Platform | Notes |
-|---|---|
-| **Vercel** | Primary deployment target |
-| **Docker** | Docker support available |
+| Platform    | Notes                     |
+| ----------- | ------------------------- |
+| **Vercel**  | Primary deployment target |
+| **Docker**  | Docker support available  |
 | **Upstash** | Serverless Redis + QStash |
 
 ## License

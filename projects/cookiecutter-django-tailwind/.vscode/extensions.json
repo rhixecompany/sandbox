@@ -3,11 +3,6 @@
     "ms-python.python",
     "ms-python.vscode-pylance",
     "batisteo.vscode-django",
-    "amannn.vscode-djlint",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss"
-  ],
-  "unwantedRecommendations": [
-    "hookyqr.beautify"
+    "amannn.vscode-djlint"
   ]
 }

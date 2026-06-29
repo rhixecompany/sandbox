@@ -7,7 +7,7 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 ## pgEnums
 
 | Enum | Values | Usage |
-|------|--------|-------|
+| --- | --- | --- |
 | `userRole` | `USER, ADMIN, MODERATOR` | Role-based access |
 | `comicStatus` | `ONGOING, COMPLETED, HIATUS, CANCELLED` | Comic publication status |
 | `resourceEnum` | `COMIC, CHAPTER, USER, COMMENT` | Notification resource types |
@@ -18,7 +18,7 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 ### `users`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| --- | --- | --- | --- |
 | `id` | `uuid` | `PK DEFAULT gen_random_uuid()` | Unique ID |
 | `email` | `varchar(255)` | `UNIQUE NOT NULL` | Email |
 | `username` | `varchar(100)` | `UNIQUE NOT NULL` | Display name |
@@ -26,13 +26,13 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 | `role` | `userRole` | `DEFAULT 'USER'` | Access level |
 | `avatarUrl` | `text` | `NULLABLE` | Profile image |
 | `deletedAt` | `timestamptz` | `NULLABLE` | Soft-delete |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
-| `updatedAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `updatedAt` | `timestamptz` | `DEFAULT NOW()` |  |
 
 ### `comics`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| --- | --- | --- | --- |
 | `id` | `uuid` | `PK` | Unique ID |
 | `title` | `varchar(255)` | `NOT NULL` | Comic title |
 | `slug` | `varchar(255)` | `UNIQUE NOT NULL` | URL-friendly |
@@ -43,25 +43,25 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 | `artistId` | `uuid` | `FK → artists.id` | Artist |
 | `totalChapters` | `integer` | `DEFAULT 0` | Chapter count |
 | `averageRating` | `decimal(3,2)` | `DEFAULT 0` | Aggregated rating |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
-| `updatedAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `updatedAt` | `timestamptz` | `DEFAULT NOW()` |  |
 
 ### `chapters`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| --- | --- | --- | --- |
 | `id` | `uuid` | `PK` | Unique ID |
 | `comicId` | `uuid` | `FK → comics.id CASCADE` | Parent comic |
 | `number` | `decimal(10,2)` | `NOT NULL` | Chapter number |
 | `title` | `varchar(255)` | `NULLABLE` | Chapter title |
 | `imageCount` | `integer` | `DEFAULT 0` | Number of pages |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
 
 ### `chapter_images`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | `uuid` | `PK` | |
+| --- | --- | --- | --- |
+| `id` | `uuid` | `PK` |  |
 | `chapterId` | `uuid` | `FK → chapters.id CASCADE` | Parent chapter |
 | `pageNumber` | `integer` | `NOT NULL` | Page order |
 | `imageUrl` | `text` | `NOT NULL` | Image URL |
@@ -70,62 +70,62 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 
 ### `genres`
 
-| Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | `uuid` | `PK` | |
-| `name` | `varchar(100)` | `UNIQUE NOT NULL` | Genre name |
+| Column | Type           | Constraints       | Description  |
+| ------ | -------------- | ----------------- | ------------ |
+| `id`   | `uuid`         | `PK`              |              |
+| `name` | `varchar(100)` | `UNIQUE NOT NULL` | Genre name   |
 | `slug` | `varchar(100)` | `UNIQUE NOT NULL` | URL-friendly |
 
 ### `comic_genres` (Junction)
 
-| Column | Type | Constraints |
-|--------|------|-------------|
-| `comicId` | `uuid` | `FK → comics.id CASCADE` |
-| `genreId` | `uuid` | `FK → genres.id CASCADE` |
-| `PK` | `(comicId, genreId)` | |
+| Column    | Type                 | Constraints              |
+| --------- | -------------------- | ------------------------ |
+| `comicId` | `uuid`               | `FK → comics.id CASCADE` |
+| `genreId` | `uuid`               | `FK → genres.id CASCADE` |
+| `PK`      | `(comicId, genreId)` |                          |
 
 ### `bookmarks`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | `uuid` | `PK` | |
-| `userId` | `uuid` | `FK → users.id CASCADE` | |
-| `comicId` | `uuid` | `FK → comics.id CASCADE` | |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
-| `UNIQUE` | `(userId, comicId)` | | Prevents duplicates |
+| --- | --- | --- | --- |
+| `id` | `uuid` | `PK` |  |
+| `userId` | `uuid` | `FK → users.id CASCADE` |  |
+| `comicId` | `uuid` | `FK → comics.id CASCADE` |  |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `UNIQUE` | `(userId, comicId)` |  | Prevents duplicates |
 
 ### `reading_history`
 
-| Column | Type | Constraints |
-|--------|------|-------------|
-| `id` | `uuid` | `PK` |
-| `userId` | `uuid` | `FK → users.id CASCADE` |
-| `chapterId` | `uuid` | `FK → chapters.id CASCADE` |
-| `lastPage` | `integer` | `DEFAULT 1` |
-| `completed` | `boolean` | `DEFAULT false` |
-| `readAt` | `timestamptz` | `DEFAULT NOW()` |
+| Column      | Type          | Constraints                |
+| ----------- | ------------- | -------------------------- |
+| `id`        | `uuid`        | `PK`                       |
+| `userId`    | `uuid`        | `FK → users.id CASCADE`    |
+| `chapterId` | `uuid`        | `FK → chapters.id CASCADE` |
+| `lastPage`  | `integer`     | `DEFAULT 1`                |
+| `completed` | `boolean`     | `DEFAULT false`            |
+| `readAt`    | `timestamptz` | `DEFAULT NOW()`            |
 
 ### `ratings`
 
-| Column | Type | Constraints |
-|--------|------|-------------|
-| `id` | `uuid` | `PK` |
-| `userId` | `uuid` | `FK → users.id CASCADE` |
-| `comicId` | `uuid` | `FK → comics.id CASCADE` |
-| `score` | `integer` | `CHECK (1-5)` |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |
-| `UNIQUE` | `(userId, comicId)` | One rating per user per comic |
+| Column      | Type                | Constraints                   |
+| ----------- | ------------------- | ----------------------------- |
+| `id`        | `uuid`              | `PK`                          |
+| `userId`    | `uuid`              | `FK → users.id CASCADE`       |
+| `comicId`   | `uuid`              | `FK → comics.id CASCADE`      |
+| `score`     | `integer`           | `CHECK (1-5)`                 |
+| `createdAt` | `timestamptz`       | `DEFAULT NOW()`               |
+| `UNIQUE`    | `(userId, comicId)` | One rating per user per comic |
 
 ### `comments`
 
-| Column | Type | Constraints |
-|--------|------|-------------|
-| `id` | `uuid` | `PK` |
-| `userId` | `uuid` | `FK → users.id CASCADE` |
-| `chapterId` | `uuid` | `FK → chapters.id CASCADE` |
-| `content` | `text` | `NOT NULL` |
-| `deletedAt` | `timestamptz` | `NULLABLE` (soft-delete) |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |
+| Column      | Type          | Constraints                |
+| ----------- | ------------- | -------------------------- |
+| `id`        | `uuid`        | `PK`                       |
+| `userId`    | `uuid`        | `FK → users.id CASCADE`    |
+| `chapterId` | `uuid`        | `FK → chapters.id CASCADE` |
+| `content`   | `text`        | `NOT NULL`                 |
+| `deletedAt` | `timestamptz` | `NULLABLE` (soft-delete)   |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()`            |
 
 ### Additional Tables
 
@@ -147,7 +147,7 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 ## Key Indexes
 
 | Table | Index | Columns | Purpose |
-|-------|-------|---------|---------|
+| --- | --- | --- | --- |
 | `comics` | `idx_comics_slug` | `slug` | URL lookups |
 | `comics` | `idx_comics_status` | `status` | Status filtering |
 | `comics` | `idx_comics_rating` | `average_rating` | Sort by rating |

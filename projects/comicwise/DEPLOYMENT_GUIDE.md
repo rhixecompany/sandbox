@@ -15,6 +15,7 @@ vercel --prod
 ```
 
 Configure environment variables in Vercel Dashboard:
+
 - `DATABASE_URL` — Neon PostgreSQL connection string
 - `AUTH_SECRET` — NextAuth secret
 - `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` — GitHub OAuth

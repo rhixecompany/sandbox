@@ -15,7 +15,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### Auth Tables
 
 | Table | Key Fields | Purpose |
-|-------|-----------|---------|
+| --- | --- | --- |
 | `user` | id (UUID), email (unique), password (hash), role (enum), status (boolean), settings (JSONB), deletedAt (soft delete) | User accounts with role-based access |
 | `account` | userId (FK), provider, providerAccountId | OAuth provider accounts (NextAuth) |
 | `session` | sessionToken (PK), userId (FK), expires | Session management |
@@ -28,7 +28,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### Comic Content Tables
 
 | Table | Key Fields | Purpose |
-|-------|-----------|---------|
+| --- | --- | --- |
 | `type` | id, name (unique), description | Comic type classification (manga, manhwa, etc.) |
 | `author` | id, name (unique), bio, image, searchVector | Author profiles with full-text search |
 | `artist` | id, name (unique), bio, image, searchVector | Artist profiles with full-text search |
@@ -44,7 +44,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### User Interaction Tables
 
 | Table | Key Fields | Purpose |
-|-------|-----------|---------|
+| --- | --- | --- |
 | `bookmark` | userId, comicId (composite PK), lastReadChapterId, status, notes | User bookmarks with reading status |
 | `comment` | id, content, userId (FK), chapterId (FK), parentId (self-ref FK), deletedAt | Nested comments with soft-delete |
 | `readingProgress` | id, userId, comicId, chapterId, pageNumber, scrollPosition, progressPercent, completedAt | Granular per-chapter reading position |
@@ -55,7 +55,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### RBAC Tables
 
 | Table | Key Fields | Purpose |
-|-------|-----------|---------|
+| --- | --- | --- |
 | `role` | id, name (unique), description, isSystem | Role definitions |
 | `permission` | id, name (unique), resource (enum), action (enum) | Granular permissions with unique(resource, action) |
 | `rolePermission` | roleId, permissionId (composite PK) | Role-permission mappings |
@@ -66,7 +66,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### Analytics & Social Tables
 
 | Table | Key Fields | Purpose |
-|-------|-----------|---------|
+| --- | --- | --- |
 | `auditLog` | id (UUID), userId, action, resource, resourceId, details, oldValues, newValues, ipAddress, userAgent | Comprehensive audit trail |
 | `userPreference` | id, userId (unique), theme, defaultLayout, pageNavigationStyle, fontSize, notification toggles, privacy flags | User preferences |
 | `readingHistory` | id, userId, comicId, chapterId, startedAt, completedAt, timeSpentSeconds, progress | Reading analytics time-series |
@@ -78,6 +78,7 @@ The schema defines 30+ PostgreSQL tables via Drizzle ORM, organized into these d
 ### Relations
 
 All tables have explicit `relations()` definitions enabling Drizzle ORM's `with()` eager loading. Key relationship chains:
+
 - `comic -> author, artist, type, chapters, images, genres, bookmarks, ratings, readingProgress, searchIndex`
 - `user -> accounts, sessions, bookmarks, comments, ratings, notifications, roles, followers/following`
 
@@ -91,7 +92,9 @@ Server actions are Next.js Server Actions using `"use server"` pattern. Each act
 
 ```typescript
 // Pattern: validate input with Zod -> call DAL -> return result
-export async function actionName(input: InputType): Promise<ActionResult> {
+export async function actionName(
+  input: InputType
+): Promise<ActionResult> {
   const validated = schema.parse(input); // or safeParse
   // authorize (RBAC check)
   // call DAL
@@ -100,12 +103,7 @@ export async function actionName(input: InputType): Promise<ActionResult> {
 }
 ```
 
-**Auth:** `auth.actions.ts`, `credentials.actions.ts`, `password-reset.actions.ts`
-**Content:** `comic.actions.ts`, `chapter.actions.ts`, `author.actions.ts`, `artist.actions.ts`, `genre.actions.ts`
-**User Interaction:** `bookmark.actions.ts`, `comment-rating.actions.ts`, `follow.actions.ts`, `reading.actions.ts`, `reading-progress.actions.ts`, `profile.actions.ts`, `notification.actions.ts`
-**Search:** `search.actions.ts`, `search-filters.actions.ts`, `browse.actions.ts`
-**Admin:** `admin/` subdirectory with `comic.actions.ts`, `chapter.actions.ts`, `author.actions.ts`, `artist.actions.ts`, `genre.actions.ts`, `type.actions.ts`, `user.actions.ts`, `role.actions.ts`, `permission.actions.ts`, `audit-log.actions.ts`
-**System:** `share.actions.ts`, `user-preferences.actions.ts`, `goals.actions.ts`, `rbac.actions.ts`, `admin.actions.ts`
+**Auth:** `auth.actions.ts`, `credentials.actions.ts`, `password-reset.actions.ts` **Content:** `comic.actions.ts`, `chapter.actions.ts`, `author.actions.ts`, `artist.actions.ts`, `genre.actions.ts` **User Interaction:** `bookmark.actions.ts`, `comment-rating.actions.ts`, `follow.actions.ts`, `reading.actions.ts`, `reading-progress.actions.ts`, `profile.actions.ts`, `notification.actions.ts` **Search:** `search.actions.ts`, `search-filters.actions.ts`, `browse.actions.ts` **Admin:** `admin/` subdirectory with `comic.actions.ts`, `chapter.actions.ts`, `author.actions.ts`, `artist.actions.ts`, `genre.actions.ts`, `type.actions.ts`, `user.actions.ts`, `role.actions.ts`, `permission.actions.ts`, `audit-log.actions.ts` **System:** `share.actions.ts`, `user-preferences.actions.ts`, `goals.actions.ts`, `rbac.actions.ts`, `admin.actions.ts`
 
 ---
 
@@ -136,10 +134,12 @@ Key DAL files: `base-dal.ts` (shared utilities), `comic-dal.ts`, `chapter-dal.ts
 Three route groups under Next.js App Router:
 
 ### `(auth)` — Authentication
+
 - `sign-in/page.tsx` — Sign-in with credentials/OAuth
 - `sign-up/page.tsx` — Registration
 
 ### `(root)` — Main Application
+
 - `/` — Home page with continue-reading, recommended, feed
 - `comics/page.tsx` — Browse all comics
 - `comics/[slug]/page.tsx` — Comic detail page
@@ -163,6 +163,7 @@ Three route groups under Next.js App Router:
 - `reading-progress/page.tsx` — Reading progress tracking
 
 ### `admin/` — Admin Panel
+
 - `page.tsx` — Admin dashboard
 - `comics/page.tsx` — Comic management
 - `chapters/page.tsx` — Chapter management
@@ -176,6 +177,7 @@ Three route groups under Next.js App Router:
 - `audit-logs/page.tsx` — Audit log viewer
 
 ### `api/` — API Routes
+
 - `api/auth/[...nextauth]/route.ts` — NextAuth v5 handler
 - `api/seed/route.ts` — Database seeding
 
@@ -186,9 +188,11 @@ Three route groups under Next.js App Router:
 **File:** `src/components/`
 
 ### UI Primitives (src/components/ui/)
+
 60+ shadcn/ui components: button, card, dialog, dropdown-menu, form, input, select, table, tabs, sidebar, sheet, popover, accordion, alert-dialog, avatar, badge, breadcrumb, calendar, carousel, chart, checkbox, command, context-menu, data-table, drawer, hover-card, menubar, navigation-menu, pagination, radio-group, resizable, scroll-area, separator, skeleton, slider, sonner (toast), switch, textarea, toggle, tooltip, multi-select, input-otp, password-input, number-input, combobox, field
 
 ### Feature Components
+
 - **auth/:** sign-in-form, sign-up-form, sign-in-wrapper, sign-up-wrapper
 - **comics/:** comic-card, comic-detail-wrapper, comic-filters, comic-list-skeleton, comic-pagination-controls, comics-wrapper, bookmark-button, share-button, empty-state
 - **reading/:** chapter-reader, chapter-reader-wrapper, image-viewer, reader-controls, reader-settings, reader-view, progress-bar, continue-reading-card, continue-reading-section
@@ -208,6 +212,7 @@ Three route groups under Next.js App Router:
 **File:** `src/schemas/`
 
 Zod schemas for runtime validation:
+
 - `auth.schema.ts` — Login/register/password reset validation
 - `comic.schema.ts` — Comic creation/update validation
 - `chapter.schema.ts` — Chapter creation/update validation
@@ -223,8 +228,9 @@ Zod schemas for runtime validation:
 ## 7. Hooks & Utilities
 
 ### Custom Hooks (src/hooks/)
+
 | Hook | Signature | Purpose |
-|------|-----------|---------|
+| --- | --- | --- |
 | `use-debounce.ts` | `useDebounce<T>(value: T, delay: number): T` | Debounces a value by specified ms for search-as-you-type |
 | `use-keyboard-navigation.tsx` | `useKeyboardNavigation(keyMap: KeyMap): void` | Maps arrow keys, Enter, Escape for reader keyboard shortcuts |
 | `use-mobile.ts` | `useMobile(): boolean` | Detects mobile viewport (<768px) for responsive UI switching |
@@ -233,8 +239,9 @@ Zod schemas for runtime validation:
 | `use-performance-monitoring.tsx` | `usePerformanceMonitoring(componentName: string): void` | Tracks render times and interaction metrics for analytics |
 
 ### Library Utilities (src/lib/)
+
 | File | Key Export | Purpose |
-|------|-----------|---------|
+| --- | --- | --- |
 | `utils.ts` | `cn(...inputs)` | Tailwind class merging with clsx + tailwind-merge |
 | `accessibility.ts` | `skipToContent`, `announceToScreenReader` | ARIA helpers for keyboard nav and live regions |
 | `image-optimization.ts` | `getOptimizedImageUrl`, `generateSrcSet` | Generates responsive image URLs with quality/size params |
@@ -243,8 +250,9 @@ Zod schemas for runtime validation:
 | `query-client.ts` | `queryClient`, `trpcClient` | React Query and tRPC client configuration with SSR hydration |
 
 ### Zustand Stores (src/stores/)
+
 | Store | Key State | Persisted |
-|-------|-----------|-----------|
+| --- | --- | --- |
 | `use-bookmark-store.ts` | `bookmarks[]`, `addBookmark`, `removeBookmark` | Yes |
 | `use-reader-store.ts` | `layout`, `direction`, `zoom`, `currentPage` | Yes |
 | `use-reading-progress-store.ts` | `progressByChapter`, `syncProgress` | Yes |
@@ -256,14 +264,17 @@ Zod schemas for runtime validation:
 ## 8. TypeScript Types & Interfaces
 
 ### Entity Types
+
 All entity types are derived from Drizzle ORM's `$inferSelect`:
+
 ```typescript
-type ComicType = typeof comic.$inferSelect;        // Full comic row type
-type ChapterType = typeof chapter.$inferSelect;     // Full chapter row type
-type UserType = typeof user.$inferSelect;            // Full user row type
+type ComicType = typeof comic.$inferSelect; // Full comic row type
+type ChapterType = typeof chapter.$inferSelect; // Full chapter row type
+type UserType = typeof user.$inferSelect; // Full user row type
 ```
 
 ### Action Result Pattern
+
 ```typescript
 type ActionResult<T> =
   | { data: T; ok: true }
@@ -271,7 +282,9 @@ type ActionResult<T> =
 ```
 
 ### Server Action Input Types
+
 Located in `src/schemas/`, each entity has Zod-inferred input types:
+
 ```typescript
 type CreateComicInput = z.infer<typeof createComicSchema>;
 type UpdateComicInput = z.infer<typeof updateComicSchema>;
@@ -279,7 +292,8 @@ type ComicFilter = z.infer<typeof comicFilterSchema>;
 ```
 
 ### Key Type Patterns
+
 - **Null vs Undefined:** DAL methods return `null` (not `undefined`) when records are not found — enforced by convention
-- **Composite PK types:** Bookmark, Follow, UserRole use compound key types for upsert operations  
+- **Composite PK types:** Bookmark, Follow, UserRole use compound key types for upsert operations
 - **Enum types:** All enum values (user_role, comic_status, resource_type, action_type) have matching TypeScript `const` enums in `schema.ts`
 - **Relation types:** Drizzle generates relation types via `relations()` — no hand-written join types needed

@@ -5,84 +5,34 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "actions": [
-        "./src/actions/*"
-      ],
-      "appConfig": [
-        "./appConfig.ts"
-      ],
-      "assets": [
-        "./src/assets/*"
-      ],
-      "auth": [
-        "./src/auth.ts"
-      ],
-      "components": [
-        "./src/components/*"
-      ],
-      "dal": [
-        "./src/dal/*"
-      ],
-      "data": [
-        "./src/data/*"
-      ],
-      "database": [
-        "./src/database/*"
-      ],
-      "db": [
-        "./src/database/db.ts"
-      ],
-      "hooks": [
-        "./src/hooks/*"
-      ],
-      "lib": [
-        "./src/lib/*"
-      ],
-      "schema": [
-        "./src/database/schema.ts"
-      ],
-      "schemas": [
-        "./src/schemas/*"
-      ],
-      "scripts": [
-        "./src/scripts/*"
-      ],
-      "src": [
-        "./src/*"
-      ],
-      "storages": [
-        "./src/storages/*"
-      ],
-      "stores": [
-        "./src/stores/*"
-      ],
-      "styles": [
-        "./src/styles/*"
-      ],
-      "tests": [
-        "./src/tests/*"
-      ],
-      "types": [
-        "./src/types/*"
-      ],
-      "ui": [
-        "./src/components/ui/*"
-      ],
-      "utils": [
-        "./src/lib/utils.ts"
-      ]
+      "@/*": ["./src/*"],
+      "actions": ["./src/actions/*"],
+      "appConfig": ["./appConfig.ts"],
+      "assets": ["./src/assets/*"],
+      "auth": ["./src/auth.ts"],
+      "components": ["./src/components/*"],
+      "dal": ["./src/dal/*"],
+      "data": ["./src/data/*"],
+      "database": ["./src/database/*"],
+      "db": ["./src/database/db.ts"],
+      "hooks": ["./src/hooks/*"],
+      "lib": ["./src/lib/*"],
+      "schema": ["./src/database/schema.ts"],
+      "schemas": ["./src/schemas/*"],
+      "scripts": ["./src/scripts/*"],
+      "src": ["./src/*"],
+      "storages": ["./src/storages/*"],
+      "stores": ["./src/stores/*"],
+      "styles": ["./src/styles/*"],
+      "tests": ["./src/tests/*"],
+      "types": ["./src/types/*"],
+      "ui": ["./src/components/ui/*"],
+      "utils": ["./src/lib/utils.ts"]
     },
     "plugins": [
       {
@@ -94,10 +44,7 @@
     "strict": true,
     "target": "ES2022",
     "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ]
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "exclude": [
     "node_modules",

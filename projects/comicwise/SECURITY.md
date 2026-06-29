@@ -7,12 +7,14 @@ ComicWise implements defense-in-depth with multiple security layers.
 ## 1. Authentication & Authorization
 
 ### NextAuth.js v5
+
 - **Providers**: Credentials (bcrypt), GitHub OAuth, Keycloak OIDC
 - **Session**: Database sessions, 30-day expiry
 - **Password Storage**: bcryptjs hashing (cost factor 12)
 - **Rate Limiting**: Upstash Redis — 5 attempts per 15 minutes on login
 
 ### Route Protection
+
 ```typescript
 // proxy.ts middleware
 - Protected routes: /profile, /bookmarks, /ratings, /admin
@@ -31,7 +33,7 @@ ComicWise implements defense-in-depth with multiple security layers.
 const SignUpSchema = z.object({
   email: z.string().trim().email(),
   username: z.string().trim().min(3).max(100),
-  password: z.string().trim().min(8).max(128),
+  password: z.string().trim().min(8).max(128)
 });
 ```
 

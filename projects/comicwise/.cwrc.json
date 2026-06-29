@@ -29,7 +29,12 @@
       "pnpm lint",
       "pnpm test:unit:run"
     ],
-    "deploy-prep": ["pnpm clean", "cw db migrate", "cw health", "pnpm build"],
+    "deploy-prep": [
+      "pnpm clean",
+      "cw db migrate",
+      "cw health",
+      "pnpm build"
+    ],
     "dev-setup": [
       "pnpm install",
       "cw db migrate",

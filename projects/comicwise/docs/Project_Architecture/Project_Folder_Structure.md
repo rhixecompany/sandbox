@@ -133,7 +133,7 @@ comicwise/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Route groups** | `(group-name)` | `(auth)`, `(root)` |
 | **React components** | kebab-case | `reading-progress/`, `doughnut-chart/` |
 | **App routes** | plural-nouns | `comics/`, `authors/`, `genres/`, `chapters/` |
@@ -156,16 +156,16 @@ comicwise/
 
 ## Project Type Indicators
 
-| Indicator | Value |
-|---|---|
-| Has `next.config.ts` | ✅ Next.js |
-| App Router `src/app/` | ✅ Next.js App Router |
+| Indicator                   | Value                   |
+| --------------------------- | ----------------------- |
+| Has `next.config.ts`        | ✅ Next.js              |
+| App Router `src/app/`       | ✅ Next.js App Router   |
 | Has `playwright.config.mts` | ✅ Playwright E2E tests |
-| Has `drizzle.config.ts` | ✅ Drizzle ORM |
-| Has `docker-compose.yml` | ✅ Docker Compose |
-| Has `Dockerfile` | ✅ Docker build |
-| Has `pnpm-workspace.yaml` | ✅ PNPM workspace |
-| Has quality gate scripts | ✅ CI/CD quality gates |
+| Has `drizzle.config.ts`     | ✅ Drizzle ORM          |
+| Has `docker-compose.yml`    | ✅ Docker Compose       |
+| Has `Dockerfile`            | ✅ Docker build         |
+| Has `pnpm-workspace.yaml`   | ✅ PNPM workspace       |
+| Has quality gate scripts    | ✅ CI/CD quality gates  |
 
 ---
 

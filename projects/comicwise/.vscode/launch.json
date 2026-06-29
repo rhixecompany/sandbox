@@ -1,5 +1,4 @@
 {
-  "version": "0.2.0",
   "configurations": [
     {
       "type": "node-terminal",
@@ -31,5 +30,6 @@
       "name": "Vitest: Run All Tests",
       "command": "pnpm test"
     }
-  ]
+  ],
+  "version": "0.2.0"
 }

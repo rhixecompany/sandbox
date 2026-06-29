@@ -1,15 +1,27 @@
-# Selenium WebDriver — Architecture Overview
+# Architecture — selenium_webdriver
 
 ## Overview
-Browser test automation project using Selenium WebDriver with JavaScript/Node.js.
+A Node.js-based Selenium WebDriver project for automating Chrome browser to scrape comic/manga data from websites.
 
-## Key Components
-- **src/** — Test source files
-- **docs/** — Documentation
+## Architecture
 
-## Technology
-- Runtime: Node.js
-- Framework: Selenium WebDriver
-- Language: JavaScript
+### Scraper Pipeline
+```
+Script Start → Launch ChromeDriver → Navigate to URL → Wait for elements → Extract data → JSON output → Cleanup (driver.quit())
+```
 
-Last updated: 2026-06-28
+### Key Patterns
+1. **Explicit Waits**: Uses `WebDriverWait` instead of implicit waits or `sleep()`
+2. **Stale Element Handling**: Built-in retry logic for `StaleElementReferenceException`
+3. **Consistent Selectors**: Uses `By` selectors throughout
+4. **Cleanup**: Always calls `driver.quit()` in `finally` blocks
+
+### Data Flow
+```
+Target Website → Chrome Browser (automated) → DOM Parsing → JSON Data Files
+```
+
+## Design Decisions
+- No build step: run directly with Node.js
+- ES Modules for modern JavaScript
+- JSON output for portability

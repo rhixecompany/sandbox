@@ -1,21 +1,29 @@
-# Ecom — Architecture Overview
+# Architecture — ecom
 
 ## Overview
-E-commerce platform built with Django, featuring a REST API backend and frontend interface.
+A full-stack ecommerce platform with Django REST backend serving a React SPA frontend.
 
-## Key Components
-- **ecom/** — Django application package (models, views, URLs, templates)
-- **base/** — Base configuration and shared utilities
-- **frontend/** — Frontend assets (HTML, CSS, JavaScript)
-- **env/** — Virtual environment
+## Architecture
 
-## Technology
-- Backend: Python 3 / Django
-- Database: SQLite (development)
-- Additional: appdirs, asgiref, boto3, botocore
+### Backend (Django REST)
+- **API Layer**: DRF ViewSets and Serializers
+- **Auth**: SimpleJWT token-based authentication
+- **Models**: Product, Order, User, Review, OrderItem
+- **Endpoints**: RESTful CRUD for products, orders, users
 
-## Deployment
-- Procfile-based deployment
-- systemd service + socket activation
+### Frontend (React + Redux)
+- **State**: Redux store with Thunk middleware for async actions
+- **Components**: React Bootstrap UI components
+- **Routing**: React Router v5 for page navigation
+- **API Calls**: Axios with JWT token in headers
 
-Last updated: 2026-06-28
+### Payment Flow
+```
+User → Frontend (Cart) → PayPal Button → PayPal API → Backend Webhook → Order Created
+```
+
+## Key Design Decisions
+1. Separated frontend/backend (not monolithic)
+2. Redux for global state management
+3. JWT authentication for stateless API access
+4. PayPal client-side integration with server verification

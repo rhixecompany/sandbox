@@ -1,10 +1,10 @@
 {
-  "name": "awesome-copilot",
   "metadata": {
     "description": "Community-driven collection of GitHub Copilot plugins, agents, prompts, and skills",
     "version": "1.0.0",
     "pluginRoot": "./plugins"
   },
+  "name": "awesome-copilot",
   "owner": {
     "name": "GitHub",
     "email": "copilot@github.com"

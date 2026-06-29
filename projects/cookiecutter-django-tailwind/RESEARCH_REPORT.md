@@ -1,76 +1,109 @@
-# Research Report: cookiecutter-django-tailwind
+# RESEARCH_REPORT — cookiecutter-django-tailwind
 
-## Project Overview
-
-**cookiecutter-django-tailwind** is a Cookiecutter template that scaffolds production-ready Django projects with integrated Tailwind CSS, Docker, CI/CD, and modern Python web best practices. It is a fork/variant of the upstream [`cookiecutter-django`](https://github.com/cookiecutter/cookiecutter-django) (13,400+ GitHub stars) enhanced with Tailwind CSS support via [`django-tailwind`](https://github.com/timonweb/django-tailwind).
-
-**Type**: Cookiecutter project template (not a library or framework) — after generation it produces a standalone Django project.
-
-**Current State**: Targets Django 5.x / Python 3.12+; tailwind-css integration via `django-tailwind` package; optimized for Docker Compose-based local and production environments.
-
-## Similar Projects
-
-| Project | Stars | Differentiator |
-|---------|-------|----------------|
-| [cookiecutter/cookiecutter-django](https://github.com/cookiecutter/cookiecutter-django) | 13.4K+ | Upstream — vanilla (Bootstrap v5) without Tailwind |
-| [Alurith/django-cookiecutter](https://github.com/Alurith/django-cookiecutter) | ~200 | Postgres + htmx + Tailwindcss, Docker-focused |
-| [imAsparky/django-cookiecutter](https://codeberg.org/imAsparky/django-cookiecutter) | ~50 | Django 5.0+, moved to Codeberg, CI/CD with GitHub Actions |
-| [dantium/django-docker-tailwind](https://github.com/dantium/django-docker-tailwind) | ~100 | Wagtail CMS + Tailwind + Docker, based on cookiecutter |
-
-## Key Findings
-
-1. **Tailwind Integration Path**: Uses `django-tailwind` (by timonweb) which creates a `theme` Django app managing npm-based or standalone-binary Tailwind builds. Hot-reload via `django-browser-reload` middleware in development.
-
-2. **Settings Architecture**: Three-tier settings split — `base.py` → `local.py` → `production.py` — following the pattern popularized by *Two Scoops of Django*. All secrets managed via `django-environ`.
-
-3. **Docker Strategy**: Two Docker Compose files — `compose/local.yml` for development (with live-reload) and `compose/production.yml` for deployment (Gunicorn + Nginx/Traefik + PostgreSQL).
-
-4. **Frontend Flexibility**: Template offers Alpine.js and htmx as opt-in frontend enhancements alongside Tailwind, minimizing custom JavaScript.
-
-5. **CI/CD Pipeline**: GitHub Actions workflow runs lint (ruff, mypy, pre-commit), test (pytest with coverage), and security checks (pip-audit) on every push.
-
-## Best Practices Inferred
-
-| Area | Practice |
-|------|----------|
-| **Configuration** | 12-Factor app — environment variables via `django-environ`, settings split by environment |
-| **Testing** | pytest with pytest-cov, `--cov-fail-under`, factory_boy for fixtures |
-| **Code Quality** | pre-commit hooks (ruff, mypy, black, isort, djlint), commitizen for conventional commits |
-| **Security** | `python manage.py check --deploy` before deploy, HTTPS enforced, CSP via django-csp (optional), Sentry for error tracking |
-| **Docker** | Separate dev/prod compose files, multi-stage builds, health checks |
-| **Auth** | django-allauth with custom user model, social auth optional |
-| **Static Files** | WhiteNoise for production, ManifestStaticFilesStorage for cache-busting |
-
-## Common Pitfalls
-
-- **Tailwind not building** — Node.js must be available; `NPM_BIN_PATH` may need explicit config on Windows
-- **Docker + Tailwind watch** — The Tailwind watcher process inside Docker requires careful volume mapping; use `honcho` (Procfile) to coordinate Django and Tailwind processes
-- **Cache-busting** — `ManifestStaticFilesStorage` can break `/css/source.css` paths if not excluded; django-tailwind-cli handles this with `TAILWIND_CSS_PATH`
-- **Migration conflicts** — Use `python manage.py makemigrations --merge` to resolve auto-generated migration overlaps
-
-## Performance Considerations
-
-- WhiteNoise with compression and far-future Cache-Control headers for static assets
-- PostgreSQL connection pooling (optional PgBouncer in production)
-- Gunicorn with `(2 × CPU cores) + 1` workers as baseline
-- Celery for background task offloading (optional, opt-in at generation time)
-- django-silk or django-debug-toolbar in development only
-
-## Security Checklist
-
-1. **DEBUG=False** in production; **SECRET_KEY** via env var, never committed
-2. **HTTPS enforced** via `SECURE_SSL_REDIRECT` + `SECURE_HSTS_SECONDS`
-3. **ALLOWED_HOSTS** restricted per environment
-4. **Run `manage.py check --deploy`** before deployment
-5. **Django defaults** (CSRF, XSS, clickjacking) enabled; Sentry for monitoring
-
-## Related Projects & Resources
-
-- **[django-tailwind](https://github.com/timonweb/django-tailwind)** — Tailwind + Django integration used by this template
-- **[cookiecutter-django docs](https://cookiecutter-django.readthedocs.io/)** — Upstream template documentation
-- **[SaaS Pegasus](https://www.saaspegasus.com/)** — Paid alternative with Stripe, teams, multi-tenancy
-- **[django-cookiecutter (imAsparky)](https://codeberg.org/imAsparky/django-cookiecutter)** — Alternative Django 5.0+ template
+> **Type:** Project research report | **Updated:** 2026-06-25
 
 ---
 
-*Research compiled June 2026. Sources: GitHub, ReadTheDocs, community discussions.*
+**Type:** Django project template / Cookiecutter generator
+**Tech Stack:** Django 5.x, django-tailwind, PostgreSQL, Docker, Celery, pytest, pre-commit, Black, ruff, mypy, djlint
+**Status:** Active
+
+---
+
+## Similar Projects
+
+| Project | URL | Why Relevant |
+| ------- | --- | ------------ |
+| django-cookiecutter | https://github.com/cookiecutter/cookiecutter-django | Reference — the most starred Django project template; this project is a Tailwind-specific fork |
+| django-tailwind-cli | https://pypi.org/project/django-tailwind-cli | Standalone Tailwind CSS CLI integration for Django (2026 update) |
+
+---
+
+## Key Findings
+
+### Django 5.x Project Structure
+
+- Layered settings pattern (`base.py` → `local.py` → `production.py`) is the industry standard for 2026; never use a single `settings.py` in production (dev.to, 2026)
+- Twelve-Factor App methodology is the guiding principle — config from environment, strict separation of build/release/run (dev.to)
+- Cookiecutter-Django remains the top-referenced project template structure; this project extends it with Tailwind-specific frontend tooling (Reddit r/django)
+
+### django-tailwind Integration
+
+- `django-tailwind-cli` (May 2026) now provides standalone Tailwind CSS binary integration, eliminating npm as a build dependency (PyPI)
+- django-tailwind v2.0 recommends `python manage.py tailwind start` for development and `honcho` for running Django + Tailwind servers concurrently (django-tailwind.readthedocs.io)
+- Tailwind utility-first CSS approach pairs naturally with Django templates — minimal custom CSS, HTML class composition (project README)
+
+### Production Security Hardening
+
+- `python manage.py check --deploy` must run before every production deployment — audits HTTPS enforcement, cookie flags, secret key strength (softaims.com, 2026)
+- Content Security Policy (CSP) via `django-csp` with REPORT_ONLY mode first is the recommended XSS prevention approach (softaims.com)
+- Django 6.0 deployment checklist mandates HSTS, secure cookie flags, DEBUG=False, and proper ALLOWED_HOSTS (docs.djangoproject.com)
+
+---
+
+## Cheatsheets & Quick Reference
+
+| Topic | Resource | Type |
+| ----- | -------- | ---- |
+| Django 5.x settings layering | https://docs.djangoproject.com/en/5.2/topics/settings/ | Docs |
+| django-tailwind CLI | https://django-tailwind.readthedocs.io/en/latest/installation.html | Guide |
+| Django deploy checklist | https://docs.djangoproject.com/en/6.0/howto/deployment/checklist | Checklist |
+
+---
+
+## Best Practices
+
+1. **Settings layering** — Split settings into base/local/production with django-environ for secrets; never commit `.env`
+2. **pre-commit hooks** — Enforce Black, ruff, mypy, djlint before every commit to catch issues early
+3. **Docker Compose** — Use `docker compose -f production.yml` for reproducible production deployments
+4. **Sentry monitoring** — Integrate Sentry SDK for error tracking in production from day one
+5. **Type hints** — Require type hints in all new Django code for mypy validation in CI
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Impact | Avoidance |
+| ------- | ------ | --------- |
+| Single settings.py | Security leaks, env confusion | Use 3-tier settings (base/local/production) |
+| django-tailwind npm version drift | Broken Tailwind builds | Use `django-tailwind-cli` standalone binary |
+| Missing `check --deploy` | Production config regressions | Run `check --deploy` in CI/deploy pipeline |
+| No CSP headers | XSS vulnerabilities | Add django-csp with REPORT_ONLY first |
+
+---
+
+## Performance
+
+1. **django-tailwind standalone CLI** — Eliminates node_modules overhead; faster build times than npm-based setup
+2. **WhiteNoise with cache headers** — Serve static files efficiently with far-future Cache-Control headers
+3. **PostgreSQL connection pooling** — Use pgbouncer or Django's CONN_MAX_AGE for persistent connections
+4. **Gunicorn workers** — Set workers to 2–4 × CPU cores for optimal throughput
+
+---
+
+## Security
+
+1. **CSRF + XSS** — Django's built-in CSRF and XSS escaping are strong by default; enforce CSP via django-csp
+2. **Secret management** — django-environ with `.env` never committed; SECRET_KEY rotated regularly
+3. **Production checklist** — `manage.py check --deploy` catches 90% of common misconfigurations
+4. **HSTS** — Force HTTPS with Strict-Transport-Security header in production
+
+---
+
+## Related Projects (in workspace)
+
+- **ecom** — Also uses DRF + layered Django settings pattern
+- **profile** — Django monolith with similar settings layering; media storage on GCS
+
+---
+
+## Resources
+
+| Resource | URL | Description |
+| -------- | --- | ----------- |
+| Official Docs | https://docs.djangoproject.com/en/5.2/ | Django 5.x official documentation |
+| django-tailwind | https://django-tailwind.readthedocs.io/ | Tailwind CSS integration for Django |
+| Cookiecutter Django | https://github.com/cookiecutter/cookiecutter-django | Reference Django project template |
+| Community | https://www.reddit.com/r/django/ | Django community discussions |
+
+---

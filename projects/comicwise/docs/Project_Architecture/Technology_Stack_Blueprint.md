@@ -21,26 +21,26 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 
 ### Languages & Runtimes
 
-| Technology | Version | Usage |
-|---|---|---|
-| TypeScript | ^5.9.3 | Primary language (strict mode) |
-| React | 19.2.4 | UI framework |
-| Next.js | 16.1.6 | Full-stack framework (App Router) |
-| Node.js | >=18 | JavaScript runtime |
-| pnpm | 9.12.3 | Package manager |
+| Technology | Version | Usage                             |
+| ---------- | ------- | --------------------------------- |
+| TypeScript | ^5.9.3  | Primary language (strict mode)    |
+| React      | 19.2.4  | UI framework                      |
+| Next.js    | 16.1.6  | Full-stack framework (App Router) |
+| Node.js    | >=18    | JavaScript runtime                |
+| pnpm       | 9.12.3  | Package manager                   |
 
 ### Package Manager
 
 | Tool | Version |
-|---|---|
-| pnpm | 9.12.3 |
+| ---- | ------- |
+| pnpm | 9.12.3  |
 
 ### Core Dependencies
 
 | Category | Dependencies |
-|---|---|
+| --- | --- |
 | **UI Framework** | next, react, react-dom |
-| **UI Components** | @radix-ui/* (15+ packages), @base-ui/react, framer-motion ^12.36.0, embla-carousel-react, cmdk, vaul, sonner |
+| **UI Components** | @radix-ui/\* (15+ packages), @base-ui/react, framer-motion ^12.36.0, embla-carousel-react, cmdk, vaul, sonner |
 | **Styling** | tailwindcss ^4, @tailwindcss/postcss, tailwind-merge, tw-animate-css, class-variance-authority, clsx |
 | **Icons** | lucide-react ^0.577.0, @tabler/icons-react |
 | **State Management** | zustand ^5.0.11 |
@@ -61,10 +61,10 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 ### Dev Dependencies
 
 | Category | Dependencies |
-|---|---|
+| --- | --- |
 | **Testing** | @playwright/test ^1.58.2, vitest ^4.1.0, @testing-library/react, happy-dom, jsdom |
-| **Linting** | eslint ^9.0.0, eslint-config-next 16.1.6, typescript-eslint ^8.57.0, eslint-plugin-* (15+ plugins) |
-| **Formatting** | prettier ^3.8.1, prettier-plugin-* (4 plugins) |
+| **Linting** | eslint ^9.0.0, eslint-config-next 16.1.6, typescript-eslint ^8.57.0, eslint-plugin-\* (15+ plugins) |
+| **Formatting** | prettier ^3.8.1, prettier-plugin-\* (4 plugins) |
 | **Database Tools** | drizzle-kit ^0.31.9 |
 | **Utilities** | husky ^9.1.7, lint-staged ^16.3.3, tsx ^4.21.0, rimraf, cspell, npm-check-updates |
 | **React Compiler** | babel-plugin-react-compiler 1.0.0 |
@@ -73,8 +73,8 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 
 ## Licensing
 
-| Component | License |
-|---|---|
+| Component | License                        |
+| --------- | ------------------------------ |
 | comicwise | Private (no license specified) |
 
 ---
@@ -100,7 +100,7 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 ## External Integrations
 
 | Service | Package | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | Stripe | stripe | Payment processing |
 | ImageKit | imagekit, @imagekit/next | Image optimization & delivery |
 | Cloudinary | cloudinary | Media storage |
@@ -114,7 +114,7 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 ## Key Scripts
 
 | Script | Description |
-|---|---|
+| --- | --- |
 | `dev` | Development server |
 | `build` | Production build |
 | `lint` / `lint:strict` | ESLint with zero-warnings |
@@ -170,8 +170,8 @@ A full-stack comic/manga streaming platform built with Next.js, featuring multi-
 
 ## Deployment
 
-| Platform | Notes |
-|---|---|
-| Vercel | Primary deployment target |
-| Docker | Docker support available |
-| Upstash | Serverless Redis + QStash |
+| Platform | Notes                     |
+| -------- | ------------------------- |
+| Vercel   | Primary deployment target |
+| Docker   | Docker support available  |
+| Upstash  | Serverless Redis + QStash |

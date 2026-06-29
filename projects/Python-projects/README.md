@@ -1,228 +1,93 @@
-# Python Projects
+# Python-projects — 18 Beginner Scripts
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+> **Stack:** Python 3.x | **Type:** Script Collection (Educational/Utility) | **Status:** Active
 
-A collection of beginner-friendly Python scripts for learning and automation.
+A collection of 18 standalone Python scripts covering various domains: calculators, games, face detection, QR code generation, web scraping, utilities, and more. Designed as learning/utility scripts.
 
-## Features
+---
 
-This repository contains 18 Python scripts covering a variety of use cases:
+## Technology Stack
 
-| Script | Description |
-| --- | --- |
-| `automate_morning_text.py` | Automated morning text message sender |
-| `basic_calculator.py` | Simple calculator with basic operations |
-| `binary_search_algorithm.py` | Binary search implementation |
-| `currency_converter.py` | Currency conversion tool |
-| `dice_rolling_simulator.py` | Virtual dice roller |
-| `email_sender.py` | Automated email sending script |
-| `email_slicer.py` | Extract username and domain from email |
-| `graph_plotter.py` | Data visualization and graph plotting |
-| `image_resizer.py` | Image resizing utility |
-| `interest_payment_calculator.py` | Financial interest calculator |
-| `leap_year_checker.py` | Determines if a year is a leap year |
-| `python_face_detection.py` | Face detection using OpenCV |
-| `qr_code_generator.py` | QR code generation |
-| `quiz_program.py` | Interactive quiz application |
-| `random_password_generator.py` | Secure password generator |
-| `rock_paper_scissors.py` | Classic game implementation |
-| `site_connectivity_checker.py` | Website connectivity tester |
-| `word_dictionary.py` | Word definition lookup |
-| `word_replacement.py` | Text find and replace utility |
+| Category | Technology |
+|---|---|
+| **Language** | Python ^3.x |
+| **Linting** | ruff |
+| **Type Checking** | mypy |
 
-## Quick Start
+### Dependencies
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/Python-projects.git
-cd Python-projects
-```
-
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run any script:
-
-```bash
-python script_name.py
-```
-
-For example:
-
-```bash
-python basic_calculator.py
-python qr_code_generator.py
-python rock_paper_scissors.py
-```
-
-## Requirements
-
-- **Python 3.x** required (Python 2 is not supported)
-
-All third-party dependencies are listed in `requirements.txt`. Key libraries include:
-
-- **requests** — HTTP requests for web-based scripts
-- **opencv-python** — Computer vision for face detection
-- **matplotlib** — Data visualization and graph plotting
-- **pillow** — Image processing for the image resizer
-- **qrcode** — QR code generation
-- **PyDictionary** — Word definitions and lookup
-- **beautifulsoup4** — HTML parsing
-- **schedule** — Task scheduling for automation scripts
-- **goslate** — Translation services
-
-Install all dependencies at once with:
-
-```bash
-pip install -r requirements.txt
-```
+| Library | Purpose |
+|---|---|
+| **requests** | HTTP requests |
+| **opencv-python** | Face detection, image processing |
+| **matplotlib** | Data visualization |
+| **pillow** | Image manipulation |
+| **qrcode** | QR code generation |
+| **beautifulsoup4** | Web scraping |
+| **PyDictionary** | Dictionary API |
+| **schedule** | Task scheduling |
 
 ## Project Structure
 
 ```
 Python-projects/
-├── automate_morning_text.py
-├── basic_calculator.py
-├── binary_search_algorithm.py
-├── currency_converter.py
-├── dice_rolling_simulator.py
-├── email_sender.py
-├── email_slicer.py
-├── graph_plotter.py
-├── image_resizer.py
-├── interest_payment_calculator.py
-├── leap_year_checker.py
-├── python_face_detection.py
-├── qr_code_generator.py
-├── quiz_program.py
-├── random_password_generator.py
-├── rock_paper_scissors.py
-├── site_connectivity_checker.py
-├── word_dictionary.py
-├── word_replacement.py
+├── basic_calculator.py      # Calculator
+├── qr_code_generator.py     # QR code generator
+├── ... (18 scripts total)
 ├── requirements.txt
-└── README.md
+└── docs/Project_Architecture/
 ```
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-# Python Projects
-
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-A collection of beginner-friendly Python scripts for learning and automation.
-
-## Features
-
-This repository contains 18 Python scripts covering a variety of use cases:
-
-| Script | Description |
-| --- | --- |
-| `automate_morning_text.py` | Automated morning text message sender |
-| `basic_calculator.py` | Simple calculator with basic operations |
-| `binary_search_algorithm.py` | Binary search implementation |
-| `currency_converter.py` | Currency conversion tool |
-| `dice_rolling_simulator.py` | Virtual dice roller |
-| `email_sender.py` | Automated email sending script |
-| `email_slicer.py` | Extract username and domain from email |
-| `graph_plotter.py` | Data visualization and graph plotting |
-| `image_resizer.py` | Image resizing utility |
-| `interest_payment_calculator.py` | Financial interest calculator |
-| `leap_year_checker.py` | Determines if a year is a leap year |
-| `python_face_detection.py` | Face detection using OpenCV |
-| `qr_code_generator.py` | QR code generation |
-| `quiz_program.py` | Interactive quiz application |
-| `random_password_generator.py` | Secure password generator |
-| `rock_paper_scissors.py` | Classic game implementation |
-| `site_connectivity_checker.py` | Website connectivity tester |
-| `word_dictionary.py` | Word definition lookup |
-| `word_replacement.py` | Text find and replace utility |
-
-## Quick Start
-
-1. Clone the repository:
+## Getting Started
 
 ```bash
-git clone https://github.com/your-username/Python-projects.git
-cd Python-projects
-```
-
-2. Install dependencies:
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-3. Run any script:
-
-```bash
-python script_name.py
-```
-
-For example:
-
-```bash
+# Run any script directly
 python basic_calculator.py
 python qr_code_generator.py
-python rock_paper_scissors.py
+
+# Lint and type check
+ruff check .
+mypy *.py
 ```
 
-## Requirements
+## Key Features
 
-- **Python 3.x** required (Python 2 is not supported)
+- **Calculator** — Basic arithmetic operations
+- **QR Code Generator** — Generate QR codes from text/URLs
+- **Face Detection** — OpenCV-based face detection
+- **Web Scraping** — BeautifulSoup-based scraping utilities
+- **Data Visualization** — Matplotlib-based charts and plots
+- **Image Processing** — Pillow-based image manipulation
+- **Dictionary Tool** — PyDictionary powered lookups
+- **Task Scheduling** — Schedule library for automation
 
-All third-party dependencies are listed in `requirements.txt`. Key libraries include:
+## Coding Standards
 
-- **requests** — HTTP requests for web-based scripts
-- **opencv-python** — Computer vision for face detection
-- **matplotlib** — Data visualization and graph plotting
-- **pillow** — Image processing for the image resizer
-- **qrcode** — QR code generation
-- **PyDictionary** — Word definitions and lookup
-- **beautifulsoup4** — HTML parsing
-- **schedule** — Task scheduling for automation scripts
-- **goslate** — Translation services
+- **PEP 8**: Python style guide
+- **snake_case**: Variable/function naming
+- **Standalone scripts**: Each script is independently executable
+- **Type annotations**: Optional type hints via mypy
+- **Module docstring**: Each script includes documentation
+- **Import order**: Standard library → third-party
+- **Entry point**: `if __name__ == "__main__":` guard
 
-Install all dependencies at once with:
+## Quality
 
-```bash
-pip install -r requirements.txt
-```
+| Tool | Usage |
+|---|---|
+| **ruff** | Code linting (all rules) |
+| **mypy** | Optional type checking |
+| **Manual testing** | No formal test suite (standalone scripts) |
 
-## Project Structure
+## Security
 
-```
-Python-projects/
-├── automate_morning_text.py
-├── basic_calculator.py
-├── binary_search_algorithm.py
-├── currency_converter.py
-├── dice_rolling_simulator.py
-├── email_sender.py
-├── email_slicer.py
-├── graph_plotter.py
-├── image_resizer.py
-├── interest_payment_calculator.py
-├── leap_year_checker.py
-├── python_face_detection.py
-├── qr_code_generator.py
-├── quiz_program.py
-├── random_password_generator.py
-├── rock_paper_scissors.py
-├── site_connectivity_checker.py
-├── word_dictionary.py
-├── word_replacement.py
-├── requirements.txt
-└── README.md
-```
+- No embedded secrets in scripts
+- Validate HTTP responses in web scraping scripts
+- Prefer local image processing where possible
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Not specified.

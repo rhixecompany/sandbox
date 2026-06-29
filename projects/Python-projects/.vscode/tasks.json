@@ -2,34 +2,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "command": "python -m pytest",
-      "label": "Test",
+      "command": "python manage.py runserver",
+      "label": "Runserver",
       "type": "shell",
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "command": "ruff check .",
-      "label": "Lint",
-      "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "command": "mypy .",
-      "label": "Type Check",
-      "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
+      "group": "build"
     }
   ]
 }

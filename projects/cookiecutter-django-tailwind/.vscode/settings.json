@@ -11,14 +11,7 @@
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
-  "python-envs.venvFolders": [
-    ".venv",
-    "env",
-    "venv",
-    ".env",
-    "envs",
-    "venvs"
-  ],
+  "python-envs.venvFolders": [".venv", "env", "venv", ".env", "envs", "venvs"],
   "files.associations": {
     "**/*.{txt,in}": "django-txt",
     "**/requirements/**/*.{txt,in}": "pip-requirements"
@@ -34,7 +27,7 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -47,6 +40,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
+  }
 }

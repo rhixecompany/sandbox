@@ -74,6 +74,7 @@ pnpm test:ui       # Playwright E2E tests
 ```
 
 New features should include:
+
 - Unit tests for DAL methods
 - Server Action tests
 - Component tests where applicable

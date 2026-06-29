@@ -195,28 +195,33 @@ bun run db:push
 ## Security Architecture
 
 ### Authentication & Authorization
+
 - **NextAuth v5** with GitHub, Google OAuth, and Credentials providers
 - **RBAC** with granular permissions (12 resource types × 5 action types)
 - **System roles** (User, Moderator, Admin) with immutable base permissions
 - **Audit logging** — every state-changing action logs user, resource, old/new values, IP, user agent
 
 ### Input Validation
+
 - **Zod schemas** in `src/schemas/` validate all external input at runtime
 - **Server Actions** always call `.parse()` or `.safeParse()` before processing
 - **Env validation** via `src/lib/env.ts` with Zod schema at startup
 
 ### Data Protection
+
 - **SQL injection prevention** — All queries use Drizzle ORM parameterized queries (no raw SQL)
 - **Soft deletes** — User accounts and comments use `deletedAt` timestamp, preserving referential integrity
 - **Cascade deletes** — Child records cleaned up when parent is removed (except historical references)
 - **Password hashing** — bcryptjs with salt rounds for credential auth
 
 ### Rate Limiting & Abuse Prevention
+
 - **Upstash Ratelimit** configured in package.json for optional Redis-based rate limiting
 - **CSRF protection** — All mutations use Next.js Server Actions which include built-in CSRF tokens
 - **Middleware guards** — Protected routes redirect unauthenticated users; auth routes redirect authenticated users
 
 ### Environment Security
+
 - **No raw `process.env`** — All environment access goes through `appConfig.ts` (ESLint enforced)
 - **Zod-validated env schema** — Missing/invalid variables fail at startup, not silently at runtime
 - **Credential rotation** — `.env.local` uses placeholder values; production secrets managed via host secrets
@@ -224,12 +229,14 @@ bun run db:push
 ## Performance Optimization
 
 ### Database Performance
+
 - **Eager loading** — All DAL queries use Drizzle `.with()` to prevent N+1 queries
 - **Indexed columns** — Foreign keys, search fields, and sort columns are indexed (30+ indexes across all tables)
 - **Full-text search** — Dedicated `searchIndex` table with PostgreSQL tsvector for efficient text search
 - **Pagination** — All list queries support `limit`/`offset` pagination with total count
 
 ### Frontend Performance
+
 - **React Compiler** enabled — No manual `useMemo`/`useCallback`/`memo` needed (ESLint enforced)
 - **Server Components by default** — Minimal JavaScript sent to client
 - **Suspense streaming** — Dynamic content sections stream in independently
@@ -238,6 +245,7 @@ bun run db:push
 - **Turbopack builds** — ~35s production builds with 0 TypeScript errors
 
 ### Caching Strategy
+
 - **React Query** — Client-side cache with stale-while-revalidate for non-auth data
 - **Server-side revalidation** — `revalidatePath()` and `revalidateTag()` after mutations
 - **Static assets** — CDN-hosted images with automatic cache busting on upload
@@ -256,10 +264,12 @@ bun run test:ui
 ```
 
 ### Test Coverage
+
 - **Unit Tests:** Auth operations, DAL CRUD methods, Zod schema validation, server action logic
 - **E2E Tests:** Sign-in/sign-up flow, comic browsing and search, chapter reading, admin CRUD, comments, follow system, RBAC enforcement, visual snapshots
 
 ### Quality Gates
+
 ```bash
 # Full validation pipeline (required before every PR)
 pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build

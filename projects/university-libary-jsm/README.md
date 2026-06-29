@@ -1,72 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# University Library JSM — Library Management System
+
+> **Stack:** Next.js 15 + Drizzle ORM + Neon | **Type:** Full-Stack Library Management | **Status:** Active
+
+A university library management system built with Next.js 15, using Drizzle ORM with Neon (serverless PostgreSQL), Upstash Redis for caching/rate limiting, and NextAuth for authentication.
+
+---
+
+## Technology Stack
+
+| Category | Technology |
+|---|---|
+| **Framework** | Next.js 15.4.2 (App Router) |
+| **Language** | TypeScript ^5 (strict) |
+| **UI** | React 19.1.0, Radix UI, shadcn/ui, Tailwind CSS 4.x |
+| **Data Display** | TanStack React Table, Recharts |
+| **Database** | PostgreSQL (Neon serverless) via Drizzle ORM 0.44.x |
+| **Authentication** | NextAuth v5 (beta) with Drizzle adapter |
+| **Caching / Rate Limiting** | Upstash Redis |
+| **Media** | ImageKit |
+| **Email** | Nodemailer, React Email |
+| **Async Workflows** | Upstash QStash |
+
+## Architecture
+
+```
+┌──────────────────────────────────────────────────────────┐
+│         university-libary-jsm (Next.js 15)               │
+├──────────────────────────────────────────────────────────┤
+│  App Router Pages                                        │
+│  ├── /                    Library dashboard               │
+│  ├── /books               Book catalog                    │
+│  ├── /members             Member management               │
+│  ├── /loans               Loan tracking                   │
+│  └── /auth                Authentication                  │
+├──────────────────────────────────────────────────────────┤
+│  Database Layer                                           │
+│  ├── Drizzle ORM → Neon (Serverless PostgreSQL)          │
+│  └── Redis (Upstash) for caching                         │
+├──────────────────────────────────────────────────────────┤
+│  External Services                                        │
+│  ├── NextAuth v5 (authentication)                        │
+│  ├── ImageKit (media/images)                             │
+│  ├── Upstash (Redis cache + QStash)                      │
+│  └── Resend/Nodemailer (email)                           │
+└──────────────────────────────────────────────────────────┘
+```
+
+## Project Structure
+
+```
+university-libary-jsm/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── books/           # Book catalog
+│   │   ├── members/         # Member management
+│   │   ├── loans/           # Loan tracking
+│   │   ├── auth/            # Authentication
+│   │   └── api/             # API routes
+│   ├── components/          # React components
+│   ├── database/            # Drizzle schema & queries
+│   │   ├── schema.ts        # Database schema
+│   │   └── seed.ts          # Database seeding
+│   ├── lib/                 # Utility functions
+│   └── styles/              # Global styles
+├── public/                  # Static assets
+└── docs/Project_Architecture/
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Prerequisites: Node.js 18+, Neon PostgreSQL database
+
+# Install dependencies
+npm install
+
+# Set up environment
+cp .env.example .env.local
+# Configure database URL, NextAuth secrets, Upstash Redis, etc.
+
+# Database setup
+npm run db:generate
+npm run db:push         # or npm run db:migrate
+npm run db:studio       # Optional: Drizzle Studio
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Run linting and formatting
+npm run lint
+npm run format
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Book Catalog** — Browse, search, and manage book inventory
+- **Member Management** — Track library members and their activity
+- **Loan Tracking** — Manage book checkouts, returns, and due dates
+- **Authentication** — NextAuth v5 with Drizzle adapter
+- **Dashboard** — Library analytics and overview
+- **Server Actions** — Dot-notation naming convention (`book.create.ts`)
+- **Caching** — Upstash Redis for session caching and rate limiting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## Development Workflow
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev              # Dev server with Turbopack
+npm run build            # Production build
+npm run lint             # ESLint
+npm run format           # Prettier
+npm run format:check     # Prettier check
+npm run db:generate      # Generate Drizzle migrations
+npm run db:push          # Push schema to database
+npm run db:migrate       # Apply migrations
+npm run db:studio        # Open Drizzle Studio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Coding Standards
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **TypeScript strict**: Full type safety
+- **App Router**: Next.js App Router patterns
+- **Tailwind CSS 4**: Utility-first styling
+- **Zod 4**: Schema validation for forms and APIs
+- **shadcn/ui**: Radix-based component library
+- **Server Actions**: Dot notation naming (e.g., `book.create.ts`)
+- **`cn()` utility**: Tailwind class merging
+- **Database**: Drizzle ORM with parameterized queries
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Security
 
-## Learn More
+- No `.env` files committed to VCS
+- NextAuth v5 `auth()` for protected routes
+- Zod validation on all inputs
+- Upstash Ratelimit for rate limiting
+- ImageKit signed uploads for media security
 
-To learn more about Next.js, take a look at the following resources:
+## External Integrations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Service | Purpose |
+|---|---|
+| **Neon** | Serverless PostgreSQL database |
+| **Upstash Redis** | Caching and rate limiting |
+| **Upstash QStash** | Async workflows |
+| **ImageKit** | Media optimization and delivery |
+| **Resend / Nodemailer** | Email delivery |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private

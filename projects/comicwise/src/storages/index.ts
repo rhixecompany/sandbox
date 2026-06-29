@@ -6,18 +6,18 @@
 export {
   clearUrlCache,
   clearUrlToPathCache,
-  type DownloadOptions,
-  type EntityMeta,
   extractExtension,
   extractOriginalName,
   getCachedPathForUrl,
   getUrlCacheStats,
   getUrlToPathCacheStats,
   imageDownloader,
-  type ImageDownloadResult,
   isUrlCached,
   markUrlAsDownloaded,
   sanitizeSlug,
+  type DownloadOptions,
+  type EntityMeta,
+  type ImageDownloadResult,
 } from "./image-downloader";
 
 export { createImageStrategy, type ImageResult } from "./image-strategy";

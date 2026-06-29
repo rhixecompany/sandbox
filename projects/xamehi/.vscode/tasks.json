@@ -2,78 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "command": "cd backend && python manage.py runserver",
-      "label": "Django: Runserver",
+      "command": "npm run dev",
+      "label": "Dev",
       "type": "shell",
-      "group": {
-        "kind": "build"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
+      "group": "build"
     },
     {
-      "command": "cd frontend && npm run dev",
-      "label": "Frontend: Dev",
+      "command": "npm run build",
+      "label": "Build",
       "type": "shell",
-      "group": {
-        "kind": "build"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "command": "cd backend && python manage.py test --keepdb --verbosity=2",
-      "label": "Django: Test",
-      "type": "shell",
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "command": "cd backend && python manage.py makemigrations",
-      "label": "Django: Make Migrations",
-      "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "command": "cd backend && python manage.py migrate",
-      "label": "Django: Migrate",
-      "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "command": "cd frontend && npm run build",
-      "label": "Frontend: Build",
-      "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "command": "cd frontend && npm test",
-      "label": "Frontend: Test",
-      "type": "shell",
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
+      "group": "build"
     }
   ]
 }

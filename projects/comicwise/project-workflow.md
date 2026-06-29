@@ -30,9 +30,11 @@
 ```
 
 ## Adding a Feature
+
 1. Create DB schema/migration → 2. Create Server Action → 3. Create component → 4. Add route page
 
 ## Git Workflow
+
 - Feature branches from `main`
 - PR requires lint + type-check + tests passing
 - Husky pre-commit hooks run lint-staged

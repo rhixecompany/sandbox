@@ -7,7 +7,7 @@ export { ChapterDal, chapterDal } from "./chapter-dal";
 export { ChapterImageDal, chapterImageDal } from "./chapter-image-dal";
 export { ComicDal, comicDal } from "./comic-dal";
 export { ComicImageDal, comicImageDal } from "./comic-image-dal";
-export { CommentDal, commentDal, RatingDal, ratingDal } from "./comment-rating-dal";
+export { CommentDal, RatingDal, commentDal, ratingDal } from "./comment-rating-dal";
 export { GenreDal, genreDal } from "./genre-dal";
 export { NotificationDal, notificationDal } from "./notification-dal";
 export { ReadingProgressDal, readingProgressDal } from "./reading-progress-dal";

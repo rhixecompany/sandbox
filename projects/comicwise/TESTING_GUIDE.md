@@ -3,7 +3,7 @@
 ## Test Framework
 
 | Layer | Tool | Scope |
-|-------|------|-------|
+| --- | --- | --- |
 | Unit Tests | Vitest 4.1 | DAL, actions, utils, schemas |
 | Component Tests | Vitest + Testing Library | React component rendering |
 | E2E Tests | Playwright 1.58 | Full user flows |
@@ -39,12 +39,14 @@ tests/
 ## What to Test
 
 ### DAL Methods
+
 - CRUD operations for each of the 27 tables
 - Relation eager loading via `.with()`
 - Edge cases: not found returns `null`, empty results
 - Filter, sort, pagination parameters
 
 ### Server Actions
+
 - Zod validation rejection (every schema)
 - Authorization checks (unauthenticated users)
 - Successful operation paths
@@ -52,17 +54,20 @@ tests/
 - ActionResult return type correctness
 
 ### Zod Schemas
+
 - Valid input cases
 - Invalid input rejection
 - Edge cases (empty strings, special characters, Unicode)
 
 ### Components
+
 - Render with data
 - Render empty/loading states
 - Interactive elements (forms, buttons, modals)
 - Responsive behavior
 
 ### E2E Flows
+
 - User registration and login (credentials + OAuth)
 - Comic browsing with filters
 - Chapter reading with progress tracking

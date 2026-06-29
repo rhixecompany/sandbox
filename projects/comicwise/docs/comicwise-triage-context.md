@@ -1,8 +1,6 @@
 # Comicwise — Triage Context
 
-**Date:** 2026-05-20
-**Priority:** CRITICAL
-**Status:** Triage complete — fixes applied and committed
+**Date:** 2026-05-20 **Priority:** CRITICAL **Status:** Triage complete — fixes applied and committed
 
 ---
 
@@ -15,7 +13,7 @@ All stale quality-gate report failures (March 2026) were investigated. No regres
 ## Stale Reports (Do Not Trust)
 
 | File | Date | Status |
-|---|---|---|
+| --- | --- | --- |
 | `quality-gate.json` | 2026-03-23 | STALE — reflects old repo path `C:\Users\Alexa\Desktop\SandBox\comicwise` |
 | `lint-strict.txt` | 2026-03-23 | STALE — errors already fixed in current code |
 | `test-report.txt` | 2026-03-23 | STALE — E2E failures from dead external URLs |
@@ -33,7 +31,7 @@ The `pnpm triage` run on 2026-03-23 shows **ALL CLEAN**: TypeScript 0 errors, ES
 The stale `lint-strict.txt` reported three errors. All are resolved in current code:
 
 | File | Old Error | Current State |
-|---|---|---|
+| --- | --- | --- |
 | `src/tests/e2e/fixtures/admin.fixture.ts` | `use` not allowed | Uses `withAdmin` — resolved |
 | `src/tests/e2e/fixtures/auth.fixture.ts` | `use` not allowed | Uses `withAuth` — resolved |
 | `src/components/layout/nav-user.tsx` | `isPending` unused | Uses `[, startTransition]` — resolved |
@@ -83,7 +81,7 @@ f5d5b1c  chore: remove IDE configs, fix gitignore and playwright testDir
 ## Remaining Blockers
 
 | Issue | Blocker | Resolution |
-|---|---|---|
+| --- | --- | --- |
 | Cannot re-run quality gates | `node_modules/` absent — run `pnpm install --frozen-lockfile` | Needs local env |
 | Cannot verify build errors | `build-report.txt` does not exist at current path | Run `pnpm build` locally |
 | Cannot close GitHub issues | No git remote configured | Add remote or close via GitHub UI |

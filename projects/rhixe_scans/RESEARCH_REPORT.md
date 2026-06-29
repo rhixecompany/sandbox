@@ -1,84 +1,123 @@
-# Research Report: rhixe_scans
+# RESEARCH_REPORT.md
 
-> **Date:** 2026-06-29  
-> **Scope:** Architecture, tech stack & web-backed patterns  
-> **Methodology:** Local project inspection + web research (Next.js 15, Prisma 6, dual-payment, NextAuth v5, UploadThing)
+## Project: rhixe_scans
 
----
-
-## 1. Project Overview
-
-**rhixe_scans** (pkg: `rhixescans`) is a full-featured web app for reading comics online, built with **Next.js 15 (App Router, Turbopack)**, **React 19**, **TypeScript** strict mode. Uses **PostgreSQL** via **Prisma ORM 6**, **NextAuth v5**, and **Stripe + PayPal** dual payment integration.
+**Type:** Comic / scan reader platform
+**Tech Stack:** Next.js 15, React 19, TypeScript strict, Prisma 6, PostgreSQL, Tailwind 3, shadcn/ui, Radix, NextAuth v5, Zustand, TanStack Query, Stripe, PayPal, UploadThing, Resend, WebSocket
+**Status:** Active
 
 ---
 
-## 2. Web-Backed Findings
+## Similar Projects
 
-### 2.1 Next.js 15 + React 19 (Comic Reader Patterns)
-- App Router with RSC by default; `"use client"` only for interactive components.
-- **Turbopack** for dev (Rust-based, ~10x faster bundling).
-- **Source:** App Router file-system routing (`page.tsx`, `layout.tsx`) is the recommended architecture for all new Next.js 15 projects (patterns.dev/react/nextjs). RSCs reduce client JS ~33% on content-heavy pages.
-
-### 2.2 Zustand + TanStack Query (State Management)
-- **Zustand** for light UI state; **TanStack Query** for server-state caching & pagination.
-- **Source:** This dual-pattern (local + server state separation) is the dominant 2026 full-stack architecture. TanStack Query v5 provides stale-while-revalidate caching and infinite queries for chapter pagination.
-
-### 2.3 Prisma 6 + PostgreSQL
-- Schema at `src/db/schema.prisma`. Migrations via `prisma migrate dev`.
-- **Source:** Prisma 6 delivers better JOIN strategy config, multi-file schema splitting, and type-safe raw SQL (prisma.io/blog/prisma-6). Singleton PrismaClient pattern critical in Next.js to avoid pool exhaustion during hot-reload.
-
-### 2.4 NextAuth v5 + Prisma Adapter
-- `@auth/prisma-adapter` (v2.9.1), JWT session strategy.
-- **Source:** NextAuth v5 beta 25 is the standard for Next.js 15. Best practices: extend `DefaultSession` types, use `auth()` in server components, protect API routes via middleware (dev.to/whoffagents/nextauthjs-v5-prisma-postgresql).
-
-### 2.5 Stripe + PayPal Dual Payment
-- **Stripe:** `@stripe/react-stripe-js` v3.7 — Payment Element (40+ methods).
-- **PayPal:** `@paypal/react-paypal-js` v8.8 — standard button SDK.
-- **Source:** Dual integration maximizes conversion. Stripe covers broadest method range; PayPal leverages high buyer trust (pkgpulse.com/guides/stripe-react-vs-paypal-js-sdk-2026).
-
-### 2.6 UploadThing (File Storage)
-- `@uploadthing/react` v7.3 for comic page/avatar uploads.
-- **Source:** Purpose-built for Next.js App Router. Pattern: `FileRouter` in `app/api/uploadthing/core.ts` with auth middleware and route-level size limits (docs.uploadthing.com/getting-started/appdir).
-
-### 2.7 Supporting Stack
-- **Email:** Resend v4.6 + React Email templates; dev preview on port 3001.
-- **UI:** Tailwind CSS 3, Radix UI (19+ primitives), Embla Carousel (reader nav), dnd-kit (admin drag-drop), Recharts (analytics), TanStack Table (data tables).
-- **Testing:** Jest v30 + ts-jest.
-- **Realtime:** WebSocket (ws) for live sessions.
+| Project | URL | Why Relevant |
+|---------|-----|--------------|
+| comicwise | `projects/comicwise` | Shared Next.js + Tailwind + Stripe reader flows |
+| rhixecompany-comics | `projects/rhixecompany-comics` | Comic reader sibling adding scraping import |
+| university-libary-jsm | `projects/university-libary-jsm` | Next.js + Prisma + PostgreSQL catalog patterns |
+| Banking | `projects/Banking` | NextAuth v5 + Prisma + PostgreSQL auth |
 
 ---
 
-## 3. Architecture Summary
+## Key Findings
 
-| Layer | Pattern | Notes |
-|-------|---------|-------|
-| Routing | App Router | Parallel routes, loading/error boundaries |
-| Data | RSC + TanStack Query | Server initial, client mutations |
-| Auth | NextAuth v5 middleware | Protects `/admin/*` & API routes |
-| Payments | Server API + client Elements | Stripe/PayPal webhook handlers |
-| Uploads | UploadThing FileRouter | Auth middleware + client dropzone |
-| Realtime | WebSocket (ws) | Potential live sync |
+### Prisma 6/7 (2026)
+- Prisma 6.0.1 migration bug: `can-connect-to-database` fails on SQLite (GitHub #25835)
+- Prisma 7 rewrote engine in TypeScript — migration recommended for edge
+- Singleton Prisma Client prevents connection exhaustion during hot-reload
+
+### NextAuth v5 (2026)
+- Universal `auth()` replaces getServerSession/getSession/getToken
+- 80+ providers: GitHub, Keycloak, Google, Discord, Credentials
+- JWT strategy stateless (no DB per request) — ideal for multi-provider
+
+### UploadThing
+- Type-safe File Routes; presigned URLs + CDN delivery
+- $10/month for 100GB; 2GB free tier
+- URLs short-lived — re-sign on rotation; never permanent
+
+### Stripe + PayPal
+- Stripe: Server Actions for Checkout; Embedded for no-redirect
+- Verify Stripe `constructEvent()`, PayPal transmission header
+- Lock payment method at order-creation server-side
+
+### Zustand + TanStack Query
+- TanStack Query ~13KB for server state; Zustand ~1.1KB for client
+- Never store API responses in Zustand — causes sync issues
 
 ---
 
-## 4. Recommendations
+## Cheatsheets & Quick Reference
 
-1. **Prisma multi-file schema** — split `schema.prisma` as models grow (Prisma 6 feature).
-2. **Database sessions** — switch from JWT if session invalidation becomes needed.
-3. **`next/image` remote patterns** — optimize UploadThing images via WebP/AVIF.
-4. **`useInfiniteQuery`** — for virtualized chapter list scrolling.
-5. **Stripe Idempotency-Key** — safe webhook retry handling.
-6. **Upstash Ratelimit** — configure for public API routes.
+| Topic | Resource | Type |
+|-------|----------|------|
+| Next.js 15 | https://nextjs.org/docs | Docs |
+| Prisma 6/7 | https://www.prisma.io/docs | Docs |
+| NextAuth v5 | https://authjs.dev/getting-started | Docs |
+| UploadThing | https://docs.uploadthing.com | Docs |
+| Stripe Node.js | https://docs.stripe.com/api | Docs |
+| Zustand | https://github.com/pmndrs/zustand | Guide |
+| TanStack Query | https://tanstack.com/query/latest | Docs |
 
 ---
 
-## 5. References
+## Best Practices
 
-| Source | URL |
-|--------|-----|
-| Next.js 15 Architecture | patterns.dev/react/nextjs |
-| Prisma 6 Release | prisma.io/blog/prisma-6 |
-| NextAuth v5 + Prisma Guide | dev.to/whoffagents/nextauthjs-v5-prisma-postgresql |
-| UploadThing App Router | docs.uploadthing.com/getting-started/appdir |
-| Stripe vs PayPal SDK 2026 | pkgpulse.com/guides/stripe-react-vs-paypal-js-sdk-2026 |
-| Prisma + Next.js Production | digitalapplied.com/blog/prisma-orm-production-guide-nextjs |
+1. **Prisma transaction scope** — Webhook intake inside `$transaction` for consistent state
+2. **Signed reader access** — Signed URLs for paywalled chapters; re-sign UploadThing on rotation
+3. **Validate route handler headers** — Stripe/PayPal event types before processing
+4. **Payment method lock** — Lock at order-creation server-side to prevent switching
+5. **Webhook idempotency** — Check event ID uniqueness; DB unique constraints
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Impact | Avoidance |
+|---------|--------|-----------|
+| UploadThing URLs as permanent | Broken images after key rotation | Re-sign URLs; short-lived tokens |
+| Client-chosen payment method | Fraud, inventory mismatches | Lock method server-side at order creation |
+| Prisma 6 migration bug | Failed migrations in CI | Use Prisma 7 or check #25835 |
+| Missing webhook verification | Processing forged events | Verify Stripe `constructEvent()` + PayPal headers |
+
+---
+
+## Performance
+
+1. **Preload next chapter** — Response hints reduce perceived load time
+2. **Cache cover metadata** — Aggressively; chapter content changes per release
+3. **Reduce bundle** — Split `@dnd-kit` into reader-only routes via dynamic imports
+4. **Prisma Accelerate** for serverless connection pooling
+5. **Server Components for catalog** — Render server-side; cache with `revalidateTag`
+
+---
+
+## Security
+
+1. **Rotate `NEXTAUTH_SECRET`** regularly; never in browser bundle
+2. **Rate-limit chapter generation and download** endpoints to reduce scraping
+3. **Validate upload content types** server-side — reject non-image before Prisma insert
+4. **Verify all webhook signatures** — Stripe `constructEvent()`, PayPal headers
+5. **Signed URLs for paywalled chapters** — never serve without auth check
+
+---
+
+## Related Projects (in workspace)
+
+- **comicwise** — shared Stripe + NextAuth + Tailwind reader flow
+- **rhixecompany-comics** — shared comic reader and payment concerns
+- **university-libary-jsm** — Prisma + PostgreSQL catalog patterns
+- **Banking** — NextAuth v5 + Prisma auth + payment patterns
+
+---
+
+## Resources
+
+| Resource | URL | Description |
+|----------|-----|-------------|
+| Next.js | https://nextjs.org/docs | Framework docs |
+| Prisma | https://www.prisma.io/docs | ORM docs |
+| Auth.js v5 | https://authjs.dev/getting-started | Auth docs |
+| UploadThing | https://docs.uploadthing.com | File upload |
+| Stripe Webhooks | https://docs.stripe.com/webhooks | Webhook guide |
+| Zustand | https://docs.pmnd.rs/zustand | Client state |

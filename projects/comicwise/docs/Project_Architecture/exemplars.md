@@ -36,17 +36,39 @@ interface SeedApiResponse {
 const seedRequestSchema = z.object({
   entities: z
     .union([
-      z.enum(["types", "authors", "artists", "genres", "comics", "chapters", "users", "all"]),
-      z.array(z.enum(["types", "authors", "artists", "genres", "comics", "chapters", "users", "all"])),
+      z.enum([
+        "types",
+        "authors",
+        "artists",
+        "genres",
+        "comics",
+        "chapters",
+        "users",
+        "all"
+      ]),
+      z.array(
+        z.enum([
+          "types",
+          "authors",
+          "artists",
+          "genres",
+          "comics",
+          "chapters",
+          "users",
+          "all"
+        ])
+      )
     ])
     .optional(),
-  options: z.object({
-    batchSize: z.number().positive().optional(),
-    concurrency: z.number().positive().optional(),
-    verbose: z.boolean().optional(),
-    dryRun: z.boolean().optional(),
-    forceOverwrite: z.boolean().optional(),
-  }).optional(),
+  options: z
+    .object({
+      batchSize: z.number().positive().optional(),
+      concurrency: z.number().positive().optional(),
+      verbose: z.boolean().optional(),
+      dryRun: z.boolean().optional(),
+      forceOverwrite: z.boolean().optional()
+    })
+    .optional()
 });
 ```
 
@@ -75,11 +97,11 @@ NextAuth configuration with adapter pattern.
 **Category:** Auth
 
 ```typescript
-import NextAuth from 'next-auth';
-import authConfig from './auth.config';
+import NextAuth from "next-auth";
+import authConfig from "./auth.config";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  ...authConfig,
+  ...authConfig
 });
 ```
 

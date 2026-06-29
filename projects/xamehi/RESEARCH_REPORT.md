@@ -1,82 +1,108 @@
-# RESEARCH_REPORT.md
+# RESEARCH_REPORT — xamehi
 
-## Project: xamehi
+> **Type:** Project research report | **Updated:** 2026-06-25
 
-**Type:** Full-stack cryptocurrency dashboard (three-service architecture)
-**Tech Stack:** React 18 (CRA), Express.js (Node.js), Django 4.0 (Python DRF), PostgreSQL (via Django ORM), RapidAPI (Alpha Vantage + Crypto News)
-**Status:** Stale (active Express only; Django scaffolded but not wired)
+---
+
+**Type:** Legacy dual-backend app (Django + Express) + React frontend
+**Tech Stack:** Django+DRF, Express, React 18/CRA, PostgreSQL
+**Status:** Active (legacy — consolidation opportunity)
+
+---
 
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
-| CoinGecko API | https://www.coingecko.com/en/api | Cryptocurrency data API alternative |
-| Cryptocurrency Dashboard (GitHub) | https://github.com/topics/cryptocurrency-dashboard | Open-source crypto dashboard examples |
+| ------- | --- | ------------ |
+| Django + React guide | https://fdcservers.net/blog/how-to-build-a-simple-app-with-django-and-react | Django + React CORS setup patterns |
+| CRA migration to Vite | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | CRA deprecation and migration path |
+
+---
 
 ## Key Findings
 
-### Dual-Backend Architecture (2026)
-- Express.js acts as API gateway proxy to external RapidAPI services — standard pattern for key abstraction
-- Django is scaffolded but not wired into request lifecycle — common starting point for gradual migration
-- React 18 CRA patterns remain widely used for SPAs despite Next.js dominance, especially for API-proxy architectures
+### Dual-Backend Architecture
 
-### Express.js API Proxy Pattern
-- Thin proxy pattern keeps API keys server-side, never exposed to client bundle
-- Hardcoded port 8000 in index.js conflicts with Django's default port — AGENTS.md flags this
-- Missing error responses: `.catch()` only logs to console, no user-facing error state
+- Running Django (DRF) and Express as separate backends requires careful CORS configuration — django-cors-headers for Django, `cors` middleware for Express (forum.djangoproject.com, 2026)
+- Dual backends increase production complexity: three separate build/deploy steps (React build, Django collectstatic, Express deploy)
+- PostgreSQL connection pooling must be coordinated between both backends to avoid connection exhaustion
+
+### React 18 CRA Migration
+
+- Create React App is no longer recommended by the React team — slow builds, no ES module support (dev.to, 2026)
+- Migration to Vite is the recommended path: faster HMR, ES-native dev server, simpler config (oneuptime.com, 2026)
+- CRA's react-scripts 4.x/5.x has been abandoned; security patches stopped in 2023
+
+### PostgreSQL Dual-Backend Connection Pooling
+
+- Both Django and Express share the same PostgreSQL database — implement pgbouncer for connection pooling
+- Django uses `CONN_MAX_AGE` for persistent connections; Express uses `pg-pool` for connection pooling
+
+---
 
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
-| Express.js Routing | https://expressjs.com/en/guide/routing.html | Official Docs |
-| Django 4.0 | https://docs.djangoproject.com/en/4.0/ | Framework Docs |
-| React 18 | https://react.dev/blog/2022/03/29/react-v18 | Release Notes |
-| RapidAPI | https://docs.rapidapi.com/docs | API Marketplace Docs |
+| ----- | -------- | ---- |
+| CRA → Vite migration | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | Guide |
+| Django CORS | https://pypi.org/project/django-cors-headers/ | Package |
+| PostgreSQL pooling | https://www.pgbouncer.org/ | Guide |
+
+---
 
 ## Best Practices
 
-1. **Environment variables for API keys** — `REACT_APP_RAPID_API_KEY` keeps keys server-side
-2. **Axios for HTTP** — Standard choice for React ↔ Express communication
-3. **Functional components with hooks** — Modern React patterns (useState, useEffect)
-4. **Dual-backend separation** — Clear separation of concerns (Express = API proxy, Django = future data layer)
-5. **Health check endpoint** — Express `/` route enables basic uptime monitoring
+1. **Consolidate backends** — Consider merging Express API routes into Django DRF for simpler deployment
+2. **Migrate CRA to Vite** — Faster builds, modern ESM support, active maintenance
+3. **pgbouncer for shared DB** — Prevent connection pool exhaustion from dual backends
+4. **Unified CORS config** — Single CORS policy shared across Django and Express for consistent security
+
+---
 
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
-| Port conflict (Express+Django both on 8000) | Can't run both locally | Move Express to 5000, Django stays on 8000 |
-| No error UI on network failures | Silent failures confuse users | Add error state + user-facing message |
-| Hardcoded SECRET_KEY in Django settings | Security vulnerability | Move to environment variable |
-| Console.log instrumentation in production | Bloated logs, info leakage | Strip or gate behind DEBUG env var |
+| ------- | ------ | --------- |
+| CRA deprecation | No security patches, slow builds | Migrate to Vite as soon as possible |
+| Dual backend drift | API inconsistency | Consolidate API surface into DRF |
+| DB connection exhaustion | Application outages | Implement pgbouncer with connection limits |
+| Port confusion (3 services) | Dev environment errors | Document port mapping: Express :5000, Django :8000, React :3000 |
+
+---
 
 ## Performance
 
-1. **CRA development server** proxies API calls with hot-reload for fast iteration
-2. **Express thin proxy** adds minimal latency (~5ms) vs direct client→API calls
-3. **React functional components** with hooks avoid class component overhead
-4. **No image/assets optimization** — CRA default Webpack config handles basic minification
+1. **Vite migration** — 10x faster HMR vs CRA's webpack-based dev server
+2. **Consolidate API** — Eliminate Express backend to reduce infrastructure overhead if it's low-traffic
+3. **PostgreSQL connection pooling** — pgbouncer with transaction pooling for high concurrency
+4. **Django caching** — Add Redis caching layer for frequently accessed API endpoints
+
+---
 
 ## Security
 
-1. **Extract Django SECRET_KEY** to environment variable — currently hardcoded in settings.py
-2. **Restrict CORS** in Express production — currently wildcard `cors()` with no origin restrictions
-3. **Add error responses to failed API calls** — `.catch()` currently logs only, client gets no feedback
-4. **Rate limit RapidAPI calls** to avoid quota exhaustion and unexpected billing
-5. **Remove console.log** instrumentation before production deployment
+1. **CORS hardening** — Three services mean three CORS attack surfaces; restrict each to minimal allowed origins
+2. **Express dependency audit** — Ensure Express + middleware dependencies are up to date (legacy risk)
+3. **JWT shared secret** — If both backends validate JWTs, rotate shared secret regularly
+4. **HTTPS required** — Three endpoints (React, Django, Express) all need TLS in production
+
+---
 
 ## Related Projects (in workspace)
 
-- **xamehi.tv** — Django DRF + React 17, shares DRF patterns and deployment model
-- **ecom** — Django DRF + React 18 + PayPal, similar dual-stack (DRF backend + React frontend)
-- **rhixecompany-comics** — Django + Next.js 16, parallels the dual-backend architecture
+- **xamehi.tv** — Same Django + React pattern; xamehi adds Express backend
+- **ecom** — Simpler architecture (single Django backend + React); xamehi is more complex with dual backends
+- **rhixecompany-comics** — Another dual-service architecture (Django + Next.js)
+
+---
 
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
-| Express.js Docs | https://expressjs.com | Node.js web framework |
-| Django 4.0 Docs | https://docs.djangoproject.com/en/4.0/ | Python web framework |
-| React 18 Docs | https://react.dev | UI library |
-| RapidAPI | https://docs.rapidapi.com | API marketplace |
+| -------- | --- | ----------- |
+| Vite migration | https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f | CRA → Vite guide |
+| Django REST Framework | https://www.django-rest-framework.org/ | DRF official docs |
+| Express.js | https://expressjs.com/ | Express web framework |
+| pgbouncer | https://www.pgbouncer.org/ | PostgreSQL connection pooler |
+
+---

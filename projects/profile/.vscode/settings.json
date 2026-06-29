@@ -5,21 +5,13 @@
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
-  "python-envs.venvFolders": [
-    ".venv",
-    "env",
-    "venv",
-    ".env",
-    "envs",
-    "venvs"
-  ],
+  "python-envs.venvFolders": [".venv", "env", "venv", ".env", "envs", "venvs"],
   "files.associations": {
     "**/*.{txt,in}": "django-txt",
     "**/requirements/**/*.{txt,in}": "pip-requirements"

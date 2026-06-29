@@ -1,94 +1,182 @@
-# Rhixe Scans
+# Django-Scrapy-Selenium — Web Scraping Platform
 
-Read Free Comics Online!
+> **Stack:** Django 4.x + Scrapy + Selenium + Celery | **Type:** Web Scraping Platform | **Status:** Active
 
-[![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy (spiders), Selenium (dynamic content), and Celery (async task processing). Features a Tailwind-styled dashboard for managing scraping operations.
 
-License: MIT
+---
 
-## Settings
+## Technology Stack
 
-Moved to [settings](https://cookiecutter-django.readthedocs.io/en/latest/1-getting-started/settings.html).
+### Backend
 
-## Basic Commands
+| Category | Technology |
+|---|---|
+| **Web Framework** | Django 4.x |
+| **API Framework** | Django REST Framework (DRF) |
+| **Language** | Python 3.10+ / 3.12 |
+| **Scraping** | Scrapy, Selenium, BeautifulSoup4 |
+| **Async Tasks** | Celery + Redis/RabbitMQ |
+| **Database** | PostgreSQL (prod), SQLite (dev) |
+| **Serving** | Gunicorn |
 
-### Setting Up Your Users
+### Frontend
 
-- To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+| Category | Technology |
+|---|---|
+| **Build Tool** | Webpack 5 (dev/prod config) |
+| **CSS Framework** | Tailwind CSS 3, daisyui, flowbite |
+| **JavaScript** | Alpine.js, htmx, hyperscript, jQuery |
+| **UI Components** | SweetAlert2, SortableJS, highlight.js |
+| **Icons** | Font Awesome |
+| **Language** | TypeScript ^5.4.5 |
 
-- To create a **superuser account**, use this command:
+## Architecture
 
-      $ python manage.py createsuperuser
+The platform follows an **ETL Pipeline Pattern** with dual scraping engines:
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-### Type checks
-
-Running type checks with mypy:
-
-    $ mypy api
-
-### Test coverage
-
-To run the tests, check your test coverage, and generate an HTML coverage report:
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
-
-#### Running tests with pytest
-
-    $ pytest
-
-### Live reloading and Sass CSS compilation
-
-Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally.html#using-webpack-or-gulp).
-
-### Celery
-
-This app comes with Celery.
-
-To run a celery worker:
-
-```bash
-cd api
-celery -A config.celery_app worker -l info
+```
+User Request → Django Views/REST API
+                    ↓
+              URL Router
+                    ↓
+        ┌───────────┴───────────┐
+        ↓                       ↓
+    Scrapy Spider          Selenium Driver
+        ↓                       ↓
+    BeautifulSoup          DOM Parsing
+        ↓                       ↓
+        └───────────┬───────────┘
+                    ↓
+            Django ORM Models
+                    ↓
+            PostgreSQL Database
+                    ↓
+          ┌─────────┴─────────┐
+          ↓                   ↓
+    Tailwind Dashboard    REST API (DRF)
 ```
 
-Please note: For Celery's import magic to work, it is important _where_ the celery commands are run. If you are in the same folder with _manage.py_, you should be right.
+## Project Structure
 
-To run [periodic tasks](https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html), you'll need to start the celery beat scheduler service. You can start it as a standalone process:
-
-```bash
-cd api
-celery -A config.celery_app beat
+```
+Django-Scrapy-Selenium/
+├── config/                    # Django project configuration
+│   └── settings/
+├── api/                       # Django REST API apps
+│   ├── apps/
+│   ├── home/
+│   └── contrib/
+├── crawler/                   # Scrapy spider definitions
+│   └── spiders/
+├── src/                       # Frontend source (Node.js)
+│   ├── scrape.js              # Selenium scraper entry
+│   └── sass/
+├── templates/                 # Django templates (Tailwind)
+├── static/                    # Static assets
+├── webpack/                   # Webpack configurations
+│   ├── dev.config.js
+│   └── prod.config.js
+├── compose/                   # Docker Compose variants
+├── requirements/
+└── docs/Project_Architecture/
 ```
 
-or you can embed the beat service inside a worker with the `-B` option (not recommended for production use):
+## Getting Started
 
 ```bash
-cd api
-celery -A config.celery_app worker -B -l info
+# Prerequisites: Python 3.10+, Node.js, Redis/RabbitMQ
+
+# Backend setup
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+# Frontend setup
+npm install
+npm run dev            # Webpack dev server
+
+# Start Celery worker
+celery -A config worker -l info
+
+# Run a Scrapy spider
+scrapy crawl spider_name
+
+# Run Selenium scraper
+node src/scrape.js
+
+# Run tests
+pytest
+npm test
 ```
 
-## Deployment
+## Key Features
 
-The following details how to deploy this application.
+- **Dual Scraping Engines** — Scrapy for static content, Selenium for JavaScript-heavy sites
+- **Async Task Processing** — Celery workers handle long-running scraping tasks
+- **Tailwind Dashboard** — Modern UI for managing scraping operations
+- **REST API** — DRF-powered API for scraped data access
+- **Docker Support** — Multi-environment Docker Compose
+- **Quality Tooling** — pytest, ruff, mypy, Black, djlint
 
-### Heroku
+## Development Workflow
 
-See detailed [cookiecutter-django Heroku documentation](https://cookiecutter-django.readthedocs.io/en/latest/3-deployment/deployment-on-heroku.html).
+```bash
+# Backend
+python manage.py runserver
+python manage.py test
 
-### Docker
+# Frontend
+npm run dev           # Development build with watcher
+npm run build         # Production build
 
-See detailed [cookiecutter-django Docker documentation](https://cookiecutter-django.readthedocs.io/en/latest/3-deployment/deployment-with-docker.html).
+# Scraping
+celery -A config worker -l info
+scrapy crawl spider_name
+node src/scrape.js
+```
 
-### Custom Tailwind Compilation
+## Coding Standards
 
-The generated CSS is set up with automatic Tailwind recompilation with variables of your choice.
-Tailwind v5 is installed using npm and customised by tweaking your variables in `api/src/sass/project.scss`.
+### Python
+- **PEP 8**: Python style guide
+- **Black formatting**: 119 character line limit
+- **ruff + mypy**: Strict linting and type checking
+- **Django best practices**: Standard Django/DRF conventions
 
-You can find a list of available variables [in the tailwind source](https://github.com/twbs/tailwind/blob/v5.1.3/scss/_variables.scss), or get explanations on them in the [Tailwind docs](https://gettailwind.com/docs/5.1/customize/sass/).
+### Frontend
+- **ES6+**: Modern JavaScript
+- **Prettier**: Code formatting
+- **Webpack**: Module bundling
 
-Tailwind's javascript as well as its dependencies are concatenated into a single file: `api/src/project.ts`.
+## Production
+
+```bash
+# Collect static files
+python manage.py collectstatic
+
+# Start Gunicorn
+gunicorn config.wsgi:application --bind 0.0.0.0:8000
+
+# Start Docker services
+docker compose up -d
+
+# Build frontend
+npm run build
+```
+
+## Security
+
+- No secrets in VCS (`.env` never committed)
+- Respect `robots.txt`
+- Rate limit scrapers
+- Sanitize scraped data before storage/display
+- User-agent rotation
+
+## Notes
+
+Scraping functionality later consolidated into `projects/rhixecompany-comics`.
+
+## License
+
+Not specified.

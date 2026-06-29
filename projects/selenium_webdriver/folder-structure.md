@@ -1,9 +1,14 @@
-# selenium_webdriver — Folder Structure
-
-## Directory Tree
+# Folder Structure — selenium_webdriver
 
 ```
-find: ‘selenium_webdriver’: No such file or directory
+selenium_webdriver/
+├── src/
+│   ├── scrape.js               # Main scraping script
+│   ├── scrape2.js              # Secondary scraper
+│   ├── test.js                 # Test utility
+│   ├── test1.js                # Additional test
+│   └── utils.js                # Shared utilities
+├── output/                     # Generated JSON output
+├── package.json                # Dependencies
+└── AGENTS.md                   # Agent reference guide
 ```
-
-Last updated: 2026-06-28
