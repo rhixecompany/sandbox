@@ -1,88 +1,93 @@
 {
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[django-html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.python",
-		"editor.formatOnSave": true
-	},
-	"[scss]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"source.organizeImports": "explicit"
-	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.inlineSuggest.enabled": true,
-	"files.associations": {
-		"*.css": "tailwindcss",
-		"**/*.{txt,in}": "django-txt",
-		"**/requirements/**/*.{txt,in}": "pip-requirements"
-	},
-	"python-envs.alwaysUseUv": true,
-	"python-envs.autoActivate": true,
-	"python-envs.venvFolders": [
-		".venv",
-		"env",
-		"venv",
-		".env",
-		"envs",
-		"venvs"
-	],
-	"python.analysis.autoImportCompletions": true,
-	"python.analysis.typeCheckingMode": "basic",
-	"python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
-	"python.languageServer": "Pylance",
-	"tailwindCSS.emmetCompletions": true,
-	"tailwindCSS.includeLanguages": {
-		"css": "css",
-		"javascript": "jsx",
-		"scss": "scss",
-		"typescript": "tsx"
-	},
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
-	"terminal.integrated.profiles.windows": {
-		"Command Prompt": {
-			"icon": "terminal-cmd",
-			"path": "cmd.exe"
-		},
-		"Git Bash": {
-			"icon": "terminal-bash",
-			"source": "Git Bash"
-		},
-		"PowerShell": {
-			"icon": "terminal-powershell",
-			"source": "PowerShell"
-		}
-	},
-	"workbench.editor.editorActionsLocation": "default"
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "**/*.{txt,in}": "django-txt",
+    "**/requirements/**/*.{txt,in}": "pip-requirements"
+  },
+  "python-envs.alwaysUseUv": true,
+  "python-envs.autoActivate": true,
+  "python-envs.venvFolders": [
+    ".venv",
+    "env",
+    "venv",
+    ".env",
+    "envs",
+    "venvs"
+  ],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.languageServer": "Pylance",
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "css": "css",
+    "javascript": "jsx",
+    "scss": "scss",
+    "typescript": "tsx"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "icon": "terminal-cmd",
+      "path": "cmd.exe"
+    },
+    "Git Bash": {
+      "icon": "terminal-bash",
+      "source": "Git Bash"
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    }
+  },
+  "workbench.editor.editorActionsLocation": "default"
 }
