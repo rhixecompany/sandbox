@@ -7,6 +7,8 @@ description: >
   and writing actionable RESEARCH_REPORT.md files. Delegates to the
   repo-research-pipeline skill and web-research-pipeline skill.
 version: 2.0.0
+author: Hermes Agent
+license: MIT
 tags: [hermes, research, repo, github, mcp]
 dependencies:
   - skill:repo-research-pipeline
@@ -20,6 +22,14 @@ skills:
   - mcp-github — GitHub repo/code/issue search
   - mcp-fetch — Documentation extraction
   - domain-intel — Passive domain recon
+metadata:
+  hermes:
+    related_skills:
+      - repo-research-pipeline
+      - web-research-pipeline
+      - mcp-github
+      - mcp-fetch
+      - domain-intel
 ---
 
 ## Goal

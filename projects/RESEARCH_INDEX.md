@@ -1,48 +1,36 @@
-# RESEARCH_INDEX.md
+# RESEARCH_INDEX
 
-> Generated: 2026-06-25 | Pipeline: repo-research-pipeline
-> Total: 14 reports | All reports updated via web research
+_Generated: 2026-06-30T15:09_
 
-| # | Project | Tech Stack | Size | Updated | Status |
-|---|---------|-----------|------|---------|--------|
-| 1 | Banking | Next.js 16, Drizzle ORM, Plaid/Dwolla | 4.9K | 2026-06-25 | ✅ Updated |
-| 2 | comicwise | Next.js 15, Prisma, Stripe | 4.9K | 2026-06-25 | ✅ Updated |
-| 3 | cookiecutter-django-tailwind | Django 5.x, django-tailwind | 5.2K | 2026-06-25 | ✅ Updated |
-| 4 | Django-Scrapy-Selenium | Django 4.x, Scrapy, Selenium, Celery | 4.8K | 2026-06-25 | ✅ Updated |
-| 5 | ecom | DRF, React/Redux Toolkit, PayPal | 4.7K | 2026-06-25 | ✅ Updated |
-| 6 | profile | Django 4.x, GCS, CKEditor 5 | 4.6K | 2026-06-25 | ✅ Updated |
-| 7 | Python-projects | Python 3.x scripts (18 total) | 4.5K | 2026-06-25 | ✅ Updated |
-| 8 | rhixe_scans | Next.js 15, Prisma 6, Stripe/PayPal | 4.9K | 2026-06-25 | ✅ Updated |
-| 9 | rhixecompany-comics | Django 5.x, Next.js 16, Celery | 5.1K | 2026-06-25 | ✅ Updated |
-| 10 | selenium_webdriver | Node.js 18+, Selenium 4.x | 5.0K | 2026-06-25 | ✅ Updated |
-| 11 | university-libary-jsm | Next.js 15, Drizzle, Neon, Redis | 5.0K | 2026-06-25 | ✅ Updated |
-| 12 | xamehi | Django+DRF, Express, React 18 | 4.7K | 2026-06-25 | ✅ Updated |
-| 13 | xamehi.tv | Django DRF, React 17, MUI 4 | 5.3K | 2026-06-25 | ✅ Updated |
-| 14 | youtube-downloader | Python 3.x, yt-dlp, curl_cffi | 4.8K | 2026-06-25 | ✅ Updated |
+| Project | Status | Size | Sections | Related Projects |
+|---------|--------|------|----------|------------------|
+| Banking | Active | 4KB | 120 | comicwise, rhixe_scans, rhixecompany-comics, university-libary-jsm |
+| Django-Scrapy-Selenium | Active (legacy — scraping consolidated to rhixecompany-comics) | 4KB | 116 | profile, rhixecompany-comics, selenium_webdriver |
+| Python-projects | Active | 4KB | 115 | Django-Scrapy-Selenium, selenium_webdriver, youtube-downloader |
+| comicwise | Consolidation target (patterns extracted → rhixecompany-comics) | 4KB | 114 | Banking, rhixe_scans, rhixecompany-comics, university-libary-jsm |
+| cookiecutter-django-tailwind | Active | 3KB | 102 | ecom, profile |
+| ecom | Active | 4KB | 106 | cookiecutter-django-tailwind, xamehi, xamehi.tv |
+| profile | Active | 4KB | 112 | cookiecutter-django-tailwind, ecom, rhixecompany-comics |
+| rhixe_scans | Active | 4KB | 116 | Banking, comicwise, rhixecompany-comics, university-libary-jsm |
+| rhixecompany-comics | Active | 4KB | 119 | Django-Scrapy-Selenium, cookiecutter-django-tailwind, xamehi, xamehi.tv |
+| selenium_webdriver | Consolidation target (patterns extracted → rhixecompany-comics) | 4KB | 116 | Django-Scrapy-Selenium, Python-projects, rhixecompany-comics |
+| university-libary-jsm | Active | 4KB | 117 | Banking, comicwise, rhixe_scans, rhixecompany-comics |
+| xamehi | Active (legacy — consolidation opportunity) | 4KB | 112 | ecom, rhixecompany-comics, xamehi.tv |
+| xamehi.tv | Active | 3KB | 106 | ecom, profile, rhixecompany-comics, xamehi |
+| youtube-downloader | Active | 4KB | 117 | Python-projects, selenium_webdriver |
 
-## Size Compliance
+## Cross-Reference Symmetry
 
-| Gate | Result |
-|------|--------|
-| Reports ≥ 1KB | ✅ 14/14 pass |
-| Reports ≤ 5.5KB | ✅ 14/14 pass (soft limit 5KB, one at 5.3KB) |
-| All reports have 10 sections | ✅ Verified |
-
-## Cross-Reference Map
-
-| Project | References From |
-|---------|----------------|
-| Banking | comicwise (Next.js), university-libary-jsm (Drizzle) |
-| comicwise | Banking (Next.js), rhixe_scans (Prisma/Stripe) |
-| cookiecutter-django-tailwind | Django-Scrapy-Selenium (Django), ecom (DRF), profile (Django), rhixecompany-comics (Django), xamehi (Django), xamehi.tv (Django) |
-| Django-Scrapy-Selenium | rhixecompany-comics (scraping consolidation target) |
-| ecom | cookiecutter-django-tailwind (Django), xamehi (DRF/React), xamehi.tv (DRF/PayPal) |
-| profile | cookiecutter-django-tailwind (Django), ecom (Docker), rhixecompany-comics (Django) |
-| Python-projects | _(standalone scripts)_ |
-| rhixe_scans | comicwise (Next.js/Prisma/Stripe) |
-| rhixecompany-comics | Django-Scrapy-Selenium (scraping), xamehi (dual-stack), xamehi.tv (DRF), cookiecutter-django-tailwind (Django), profile (Django) |
-| selenium_webdriver | _(standalone tool)_ |
-| university-libary-jsm | Banking (Drizzle/Next.js) |
-| xamehi | ecom (DRF/React), xamehi.tv (Django/React), rhixecompany-comics (dual-stack) |
-| xamehi.tv | ecom (DRF/PayPal), xamehi (Django/React), rhixecompany-comics (dual-stack), profile (Django) |
-| youtube-downloader | Python-projects (Python tooling) |
+Missing symmetric refs:
+- `Banking` → `rhixecompany-comics` missing
+- `Django-Scrapy-Selenium` → `profile` missing
+- `Python-projects` → `Django-Scrapy-Selenium` missing
+- `comicwise` → `rhixecompany-comics` missing
+- `profile` → `ecom` missing
+- `profile` → `rhixecompany-comics` missing
+- `rhixe_scans` → `rhixecompany-comics` missing
+- `rhixecompany-comics` → `cookiecutter-django-tailwind` missing
+- `selenium_webdriver` → `rhixecompany-comics` missing
+- `university-libary-jsm` → `rhixecompany-comics` missing
+- `xamehi.tv` → `profile` missing
+- `youtube-downloader` → `selenium_webdriver` missing

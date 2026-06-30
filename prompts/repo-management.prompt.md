@@ -7,6 +7,8 @@ description: >
   normalization, ignore file audit, dependency audit, and CI setup. Runs
   AFTER the repo-research-pipeline phase completes.
 version: 1.0.0
+author: Hermes Agent
+license: MIT
 tags: [hermes, repos, git, maintenance, ci]
 dependencies:
   - skill:git-helper
@@ -22,6 +24,15 @@ skills:
   - github-repo-management — Remote repo operations (default branch, settings)
   - finishing-a-development-branch — Clean branch lifecycle
   - workspace-audit — Multi-repo workspace scanning
+metadata:
+  hermes:
+    related_skills:
+      - git-helper
+      - repo-research-pipeline
+      - web-research-pipeline
+      - github-repo-management
+      - finishing-a-development-branch
+      - workspace-audit
 ---
 
 ## Goal

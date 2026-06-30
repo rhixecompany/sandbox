@@ -6,15 +6,15 @@ name: repo
 title: Repo Research Pipeline
 trigger: /repo
 description: >
-  Research all 14 projects: web-search for similar projects, guides,
-  cheatsheets; create or update RESEARCH_REPORT.md per project in crisp
-  markdown. One report per project root. Update projects/RESEARCH_INDEX.md.
+  Research all 14 projects via delegated sub-prompts: web search for similar
+  projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project
+  in crisp markdown. Delegates web research to web-research-pipeline.prompt.md
+  and post-research ops to repo-management.prompt.md.
 mode: agent
 system: |
-  You are a research agent executing a structured web research pipeline.
-  Your job is to produce accurate, web-backed research reports — not to
-  invent findings. Every claim must trace to a real web_search result.
-  You stop at Phase 5. You do not start branch normalization or migration.
+  You are a research orchestrator. Delegate web research to web-research-pipeline
+  sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization
+  or migration — those live in repo-management.prompt.md.
 tags:
   - ml
   - prompts
@@ -36,7 +36,32 @@ dependencies:
   - skill:spike
   - skill:writing-skills
   - skill:content-research-writer
+  - prompt:repo-management
+  - prompt:repo-story-time
+  - prompt:web-research-pipeline
+  - prompt:repo-research-pipeline
 skills:
+  - brainstorming
+  - plans-and-specs
+  - systematic-debugging
+  - context7
+  - spike
+  - writing-skills
+  - content-research-writer
+metadata:
+  hermes:
+    related_skills:
+      - brainstorming
+      - plans-and-specs
+      - systematic-debugging
+      - context7
+      - spike
+      - writing-skills
+      - content-research-writer
+      - repo-management
+      - repo-story-time
+      - web-research-pipeline
+      - repo-research-pipeline
 ---
 
 ## Goal
@@ -87,12 +112,14 @@ verify links). Only fall back to **CREATE** if a report was deleted between sess
 
 - Use `context7` for library-specific API docs and patterns.
   Use `web_search` for broader research (similar projects, guides). Do not swap them.
+- **Sub-prompt delegation:** Phase 1 delegates to `web-research-pipeline.prompt.md`.
+  Do NOT re-implement web research inline — run the sub-prompt and use its output.
 - Use `dispatching-parallel-agents` to process 3–4 projects concurrently.
   Each subagent receives: project name, tech stack, query list, target report path.
 - Every report's `## Related Projects` section must cross-reference other workspace
   projects sharing its tech stack. Use each project's `AGENTS.md` for tech overlap.
 - Symmetric cross-references: if A references B, B must reference A.
-- Do not advance to secondary goals until Phase 5 verification passes for all 14 reports.
+- Do not advance to secondary goals until Phase 4 verification passes for all 14 reports.
 
 ---
 
@@ -126,123 +153,64 @@ terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")
 
 ---
 
-### Phase 1: Per-Project Discovery
+### Phase 1: Web Research (delegated)
 
-Gather local context before web research. Read README/AGENTS.md per project to extract
-tech stack and generate targeted queries.
+> Full workflow lives in `prompts/web-research-pipeline.prompt.md`.
+> Orchestrator at `prompts/repo-research-pipeline.prompt.md`.
 
-**Steps per project:**
+Delegate per-project web research. For each of the 14 projects:
 
-1. Read `projects/<name>/README.md` or `package.json` description.
-2. Read `projects/<name>/AGENTS.md` — extract framework, database, auth, payments, key tools.
-3. Generate 3–5 queries:
-   - `"<framework> best practices 2026"`
-   - `"<framework> similar open source projects github"`
-   - `"<framework> performance optimization cheatsheet"`
-   - `"<framework> common pitfalls security hardening"`
-   - `"<project-type> architecture guide patterns 2026"`
+1. Read `projects/<name>/README.md` and `AGENTS.md` to extract tech stack.
+2. Run `web-research-pipeline.prompt.md` trigger with project name + stack params.
+3. Let the sub-prompt handle: query generation, web_search, web_extract, and top-N URL synthesis.
 
-**Output:** `docs/per-project-research-queries.md` — per-project query matrix.
+**Parallel execution:** Dispatch 3–4 projects concurrently via `dispatching-parallel-agents`.
+Each subagent receives: project name, tech stack, query list, target report path.
 
 **Tasks:**
 
-- [ ] README or package.json read for all 14 projects
-- [ ] AGENTS.md read for all 14 projects
-- [ ] Query list (3–5 queries) generated per project
-- [ ] `docs/per-project-research-queries.md` written
+- [ ] 1.1–1.14 README + AGENTS.md read for all 14 projects
+- [ ] `docs/per-project-research-queries.md` written per project
+- [ ] All 14 delegated web-research runs completed
 
 **Actions:**
 
 ```
 read_file("projects/<name>/README.md")
 read_file("projects/<name>/AGENTS.md")
-write_file("docs/per-project-research-queries.md", content=<query matrix>)
+# Delegate to sub-prompt:
+delegate_task(goal="Run web-research-pipeline prompt for project <name> with stack <tech>", toolsets=["web","file"])
+dispatching-parallel-agents(projects=[...], prompt="web-research-pipeline")
 ```
 
 ---
 
-### Phase 2: Web Research
+### Phase 2: Report Writing
 
-Execute web searches per project. Extract useful content from top results.
-
-**Steps per project:**
-
-1. Run 3–5 queries from Phase 1 query list.
-2. `web_extract` top 3 relevant URLs (official docs, guides — not Wikipedia or bare GitHub READMEs).
-3. Synthesize: what is actionable and specific to this project's stack.
-4. Note version gaps: latest stable vs. what the project currently uses.
-
-**Parallel execution:** Dispatch 3–4 projects concurrently via `dispatching-parallel-agents`.
-Each subagent writes its own `RESEARCH_REPORT.md` directly.
-
-**Per-project tasks:**
-
-- [ ] 2.1 Banking — Next.js 16 + Drizzle + Plaid/Dwolla
-- [ ] 2.2 comicwise — Next.js 15 + Prisma + Tailwind + shadcn
-- [ ] 2.3 cookiecutter-django-tailwind — Django 5 + Tailwind template
-- [ ] 2.4 Django-Scrapy-Selenium — Django 4 + Scrapy + Selenium
-- [ ] 2.5 ecom — DRF + React 18 + PayPal
-- [ ] 2.6 profile — Django 3 + CKEditor + GCS
-- [ ] 2.7 Python-projects — Python scripts collection
-- [ ] 2.8 rhixe_scans — Next.js 15 + Prisma + Stripe/PayPal
-- [ ] 2.9 rhixecompany-comics — Django 5 + Next.js 16 + Celery + Scrapy
-- [ ] 2.10 selenium_webdriver — Node.js + selenium-webdriver
-- [ ] 2.11 university-libary-jsm — Next.js 15 + Drizzle + Neon + Upstash
-- [ ] 2.12 xamehi — Django DRF + Express + React 18
-- [ ] 2.13 xamehi.tv — DRF + React 17 + MUI
-- [ ] 2.14 youtube-downloader — yt-dlp + curl_cffi
-
-**Actions:**
-
-```
-web_search("<framework> best practices 2026", limit=5)
-web_search("<framework> similar open source projects github", limit=5)
-web_search("<framework> common pitfalls security hardening", limit=5)
-web_extract([top 3–5 relevant URLs from search results])
-delegate_task(goal="research <project> and write RESEARCH_REPORT.md", toolsets=["web","file"])
-```
-
----
-
-### Phase 3: Report Writing
-
-Write or update `RESEARCH_REPORT.md` per project using the template in `## Report Template`.
+Write or update `RESEARCH_REPORT.md` per project using the template in `## Report Template`. Research data comes from Phase 1's delegated runs.
 
 **Steps per project:**
 
 1. If report exists: read current content, merge new findings, remove stale links.
-2. If report missing: create from template using Phase 2 research.
+2. If report missing: create from template using Phase 1 research output.
 3. Verify 2–3 key links with `web_extract` before embedding.
 4. Enforce size gate: 1KB–5KB. Cut encyclopedic content.
 
-**Per-project tasks:**
+**Tasks:**
 
-- [ ] 3.1 `projects/Banking/RESEARCH_REPORT.md`
-- [ ] 3.2 `projects/comicwise/RESEARCH_REPORT.md`
-- [ ] 3.3 `projects/cookiecutter-django-tailwind/RESEARCH_REPORT.md`
-- [ ] 3.4 `projects/Django-Scrapy-Selenium/RESEARCH_REPORT.md`
-- [ ] 3.5 `projects/ecom/RESEARCH_REPORT.md`
-- [ ] 3.6 `projects/profile/RESEARCH_REPORT.md`
-- [ ] 3.7 `projects/Python-projects/RESEARCH_REPORT.md`
-- [ ] 3.8 `projects/rhixe_scans/RESEARCH_REPORT.md`
-- [ ] 3.9 `projects/rhixecompany-comics/RESEARCH_REPORT.md`
-- [ ] 3.10 `projects/selenium_webdriver/RESEARCH_REPORT.md`
-- [ ] 3.11 `projects/university-libary-jsm/RESEARCH_REPORT.md`
-- [ ] 3.12 `projects/xamehi/RESEARCH_REPORT.md`
-- [ ] 3.13 `projects/xamehi.tv/RESEARCH_REPORT.md`
-- [ ] 3.14 `projects/youtube-downloader/RESEARCH_REPORT.md`
+- [ ] 2.1–2.14 All 14 RESEARCH_REPORT.md files written/updated
 
 **Actions:**
 
 ```
-read_file("projects/<name>/RESEARCH_REPORT.md")        # if exists — for UPDATE
+read_file("projects/<name>/RESEARCH_REPORT.md")         # if exists — for UPDATE
 write_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)
-web_extract([url1, url2, url3])                         # verify key links
+web_extract([url1, url2, url3])                          # verify key links
 ```
 
 ---
 
-### Phase 4: Index & Cross-Reference
+### Phase 3: Index & Cross-Reference
 
 Update the master index. Verify cross-references are symmetric.
 
@@ -250,8 +218,7 @@ Update the master index. Verify cross-references are symmetric.
 
 1. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md'`
 2. Rewrite `projects/RESEARCH_INDEX.md` — 14 rows, file size, last-updated date.
-3. For each report, verify `## Related Projects` lists all workspace projects sharing
-   its tech stack. Add missing references.
+3. For each report, verify `## Related Projects` lists all workspace projects sharing its tech stack. Add missing references.
 4. Confirm symmetry: if A references B, read B and confirm B references A.
 
 **Tasks:**
@@ -263,13 +230,13 @@ Update the master index. Verify cross-references are symmetric.
 **Actions:**
 
 ```
-terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \\;")
+terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \;")
 write_file("projects/RESEARCH_INDEX.md", content=<updated index>)
 ```
 
 ---
 
-### Phase 5: Verification
+### Phase 4: Verification
 
 All gates must pass before this prompt is considered complete.
 
@@ -378,10 +345,11 @@ List project name + shared technology. Must be symmetric.>
 | Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop |
 | No report under 1KB | `wc -c` ≥ 1024 | per-report loop |
 | No report over 5KB | `wc -c` ≤ 5120 | per-report loop |
-| 28 URL spot-checks pass | `web_extract` non-404 | Phase 5 step 3 |
+| 28 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 |
 | RESEARCH_INDEX.md current | 14 rows, size + date correct | read + verify |
 | No fabricated findings | every fact traces to `web_search` | manual review |
 | Scope respected | no branch/migration work started | agent self-check |
+| Sub-prompts accessible | `prompts/*.prompt.md` resolves | file check |
 
 ---
 
@@ -394,11 +362,15 @@ List project name + shared technology. Must be symmetric.>
 |-------|-------|---------|
 | `brainstorming` | 1 | Explore research angles per project |
 | `plans-and-specs` | 0 | Structure research plan |
-| `systematic-debugging` | 0, 5 | Detect stale/missing reports |
-| `context7` | 2 | Library API docs and patterns |
+| `systematic-debugging` | 0, 4 | Detect stale/missing reports |
+| `context7` | 1 | Library API docs and patterns |
 | `spike` | 0 | Prototype report format before batch |
-| `writing-skills` | 3 | Crisp, compact markdown writing |
-| `content-research-writer` | 3 | Research synthesis |
+| `writing-skills` | 2 | Crisp, compact markdown writing |
+| `content-research-writer` | 2 | Research synthesis |
+| `repo-management` | — | Post-research: branch norm, CI, consolidation |
+| `repo-story-time` | — | Git history analysis and repo narrative |
+| `web-research-pipeline` | 1 | Delegated web search + extraction |
+| `repo-research-pipeline` | 1 | Multi-project research orchestrator |
 
 ---
 
@@ -417,13 +389,15 @@ List project name + shared technology. Must be symmetric.>
 - `skill_view(name="writing-skills")` — Load crisp writing skill
 - `delegate_task(goal, toolsets=["web","file"])` — Delegate per-project research
 - `dispatching-parallel-agents` — Research 3–4 projects concurrently
+- `delegate_task` with `web-research-pipeline` prompt — Per-project web research
+- `skill_view(name="web-research-pipeline")` — Load sub-prompt orchestrator
 
 ---
 
 ## Secondary Goals
 
 > Execute ONLY after Phase 5 verification passes for all 14 reports.
-> Full specifications live in `.github/prompts/repo-management.prompt.md`.
+> Full specifications live in `prompts/repo-management.prompt.md`.
 
 | # | Goal | Priority |
 |---|------|----------|
@@ -440,11 +414,14 @@ List project name + shared technology. Must be symmetric.>
 
 | Prompt | Location | Purpose |
 |--------|----------|---------|
-| `/bash-scripts-fix` | `.github/prompts/bash-scripts-fix.prompt.md` | Script modernization for all 14 projects |
-| `/workspace-consolidate` | `.github/prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
-| `/repo-management` | `.github/prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |
+| `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 14 projects |
+| `/workspace-consolidate` | `prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
+| `/repo-management` | `prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |
+| `/repo-story-time` | `prompts/repo-story-time.prompt.md` | Git history analysis and repo narrative |
+| `/web-research-pipeline` | `prompts/web-research-pipeline.prompt.md` | Web search + extraction per project |
+| `/repo-research-pipeline` | `prompts/repo-research-pipeline.prompt.md` | Multi-project research orchestrator |
 
 ## Template References
 
-Templates in `templates/repo.prompts/`:
+Templates in `.hermes/archived-prompt-templates/repo.prompts/`:
 - `README.md` — Section inventory

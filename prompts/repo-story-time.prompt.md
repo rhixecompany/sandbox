@@ -6,6 +6,8 @@ description: >
   Generate a comprehensive repository summary and narrative story from
   commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
 version: 1.0.0
+author: Hermes Agent
+license: MIT
 tags: [hermes, repos, documentation, analysis]
 dependencies:
   - skill:code-wiki
@@ -13,6 +15,11 @@ dependencies:
 skills:
   - code-wiki — Generate wiki docs + diagrams for any codebase
   - writing-clearly-and-concisely — Edit documentation for clarity
+metadata:
+  hermes:
+    related_skills:
+      - code-wiki
+      - writing-clearly-and-concisely
 ---
 
 ## Goal

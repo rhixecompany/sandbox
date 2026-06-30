@@ -7,6 +7,8 @@ description: >
   formatted markdown files — one per source. Delegates to the
   web-research-pipeline skill for implementation.
 version: 2.0.0
+author: Hermes Agent
+license: MIT
 tags: [hermes, research, web, scraping, mcp]
 dependencies:
   - skill:web-research-pipeline
@@ -18,6 +20,13 @@ skills:
   - mcp-fetch — Primary URL content extraction (MCP-first)
   - firecrawl-scrape — JS-rendered page fallback
   - domain-intel — Optional passive domain recon
+metadata:
+  hermes:
+    related_skills:
+      - web-research-pipeline
+      - mcp-fetch
+      - firecrawl-scrape
+      - domain-intel
 ---
 
 ## Goal
