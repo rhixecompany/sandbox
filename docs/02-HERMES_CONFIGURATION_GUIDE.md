@@ -61,7 +61,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 - Installs Node.js 20 (for messaging platforms)
 - Sets up virtual environment
 - Creates the `hermes` command
-- Creates config directory: `~/.hermes/`
+- Creates config directory: `~/AppData/Local/hermes/`
 
 ### Step 2: Reload Shell
 
@@ -108,7 +108,7 @@ Hermes requires an LLM API key. Choose one provider:
 ### Location
 
 ```
-~/.hermes/.env
+~/AppData/Local/hermes/.env
 ```
 
 ### Copy Template
@@ -120,7 +120,7 @@ hermes setup
 Or manually:
 
 ```bash
-cp ~/.hermes/.env.example ~/.hermes/.env
+cp ~/AppData/Local/hermes/.env.example ~/AppData/Local/hermes/.env
 ```
 
 ### Essential Variables
@@ -194,7 +194,7 @@ hermes config show
 ### Location
 
 ```
-~/.hermes/config.yaml
+~/AppData/Local/hermes/config.yaml
 ```
 
 ### Structure
@@ -280,14 +280,14 @@ agent_settings:
 # Memory & Persistence
 memory:
     enabled: true
-    storage_path: "~/.hermes/memory/"
+    storage_path: "~/AppData/Local/hermes/memory/"
     auto_save: true
 
 # Logging
 logging:
     level: "INFO"
     format: "json"
-    file: "~/.hermes/hermes.log"
+    file: "~/AppData/Local/hermes/hermes.log"
 ```
 
 ### Key Sections Explained
@@ -830,7 +830,7 @@ hermes config set terminal.backend ssh
 hermes config set logging.level DEBUG
 
 # View logs
-tail -f ~/.hermes/hermes.log
+tail -f ~/AppData/Local/hermes/hermes.log
 ```
 
 ---

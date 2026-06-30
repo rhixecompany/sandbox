@@ -147,7 +147,7 @@ mcp_servers:
     command: "npx"
     args: ["-y", "@modelcontextprotocol/server-memory"]
     env:
-      MEMORY_FILE_PATH: "~/.hermes/memory.jsonl"
+      MEMORY_FILE_PATH: "~/AppData/Local/hermes/memory.jsonl"
     tools:
       include: [create_entities, create_relations, add_observations, read_graph, search_nodes, open_nodes]
 ```

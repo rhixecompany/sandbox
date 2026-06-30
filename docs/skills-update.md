@@ -371,7 +371,7 @@ Quarantined to .hub\quarantine\fastmcp
 Running security scan...
 Scan: fastmcp (official/builtin)  Verdict: DANGEROUS
   CRITICAL persistence    SKILL.md:175                   "- configure the 
-server in `~/.hermes/config.yaml` using the "
+server in `~/AppData/Local/hermes/config.yaml` using the "
   CRITICAL persistence    SKILL.md:296                   "The server-building 
 part may be correct while the Hermes con"
   CRITICAL exfiltration   templates\api_wrapper.py:13    "API_TOKEN = 
@@ -931,13 +931,13 @@ Scan: openclaw-migration (official/builtin)  Verdict: DANGEROUS
   CRITICAL persistence    scripts\openclaw_to_hermes.py:1335 "# OpenClaw's 
 AGENTS.md, MEMORY.md, etc."
   CRITICAL persistence    scripts\openclaw_to_hermes.py:419 
-"``~/.hermes/config.yaml`` (the real Hermes home) instead of "
+"``~/AppData/Local/hermes/config.yaml`` (the real Hermes home) instead of "
   CRITICAL persistence    scripts\openclaw_to_hermes.py:420 
 "``~/.Hermes/config.yaml``."
   CRITICAL persistence    scripts\openclaw_to_hermes.py:2949 ""- Review 
-`~/.hermes/config.yaml` for any adjustments","
+`~/AppData/Local/hermes/config.yaml` for any adjustments","
   CRITICAL persistence    scripts\openclaw_to_hermes.py:3116 "print("    1. 
-Review ~/.hermes/config.yaml")"
+Review ~/AppData/Local/hermes/config.yaml")"
 
 Decision: ALLOWED — Allowed (builtin source, dangerous verdict)
 Installed: openclaw-migration
@@ -1338,7 +1338,7 @@ Scan: web-pentest (official/builtin)  Verdict: DANGEROUS
   CRITICAL destructive    SKILL.md:69                    "filesystem-write 
 SSTI, command injection with `rm`/`shutdown"
   CRITICAL persistence    SKILL.md:83                    "in 
-`~/.hermes/config.yaml` for the session."
+`~/AppData/Local/hermes/config.yaml` for the session."
   CRITICAL traversal      references\bypass-techniques.md:44 "- Null byte 
 (older platforms): `../../../etc/passwd%00.png`"
   CRITICAL traversal      references\bypass-techniques.md:46 "- Absolute path: 
@@ -1810,13 +1810,13 @@ Scan: godmode (official/builtin)  Verdict: DANGEROUS
   CRITICAL exfiltration   SKILL.md:288                   
 "api_key=os.getenv("OPENROUTER_API_KEY"),"
   CRITICAL persistence    SKILL.md:84                    "1. **Reads 
-`~/.hermes/config.yaml`** to detect the current m"
+`~/AppData/Local/hermes/config.yaml`** to detect the current m"
   CRITICAL persistence    SKILL.md:134                   "Edit 
-`~/.hermes/config.yaml`:"
+`~/AppData/Local/hermes/config.yaml`:"
   CRITICAL persistence    SKILL.md:172                   "Then set in 
-`~/.hermes/config.yaml`:"
+`~/AppData/Local/hermes/config.yaml`:"
   CRITICAL persistence    references\jailbreak-templates.md:96 "Pick a template
-above and set it in `~/.hermes/config.yaml`:"
+above and set it in `~/AppData/Local/hermes/config.yaml`:"
   CRITICAL exfiltration   scripts\auto_jailbreak.py:342  "return 
 os.getenv("OPENROUTER_API_KEY", "")"
   CRITICAL exfiltration   scripts\auto_jailbreak.py:344  "return 

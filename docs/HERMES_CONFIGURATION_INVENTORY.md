@@ -61,7 +61,7 @@ fallback_providers:
 
 ### API Keys Configuration
 
-**Loaded from:** `~/.hermes/.env`
+**Loaded from:** `~/AppData/Local/hermes/.env`
 
 **Status:**
 - ✓ OPENROUTER_API_KEY: sk-o...0554 (configured)
@@ -388,7 +388,7 @@ compression:
 
 ### API Key Management
 
-**Storage:** `~/.hermes/.env` (user-only readable)
+**Storage:** `~/AppData/Local/hermes/.env` (user-only readable)
 
 **Sensitive Variables:**
 - OPENROUTER_API_KEY ✓

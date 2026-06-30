@@ -114,7 +114,7 @@ Type a message. If you get a coherent response → **done**.
 | Symptom | Likely Cause | Fix |
 |---------|--------------|-----|
 | "No model configured" | `hermes model` not run | Run `hermes model` and pick one |
-| "Authentication failed" | Bad API key / expired OAuth | Re-run `hermes model`; check `~/.hermes/.env` |
+| "Authentication failed" | Bad API key / expired OAuth | Re-run `hermes model`; check `~/AppData/Local/hermes/.env` |
 | "Connection refused" | Network / proxy / DNS | Check internet; try different provider |
 | "Model not found" | Wrong model name for provider | Use `hermes model` picker (validates names) |
 
@@ -153,8 +153,8 @@ hermes cron create "daily summary" "0 9 * * *" "Summarize yesterday's commits"
 | Re-run setup | `hermes setup` |
 | Change provider | `hermes model` |
 | View config | `hermes config show` |
-| Check logs | `tail -f ~/.hermes/logs/hermes/*.log` |
-| Reset everything | `rm -rf ~/.hermes && hermes setup` |
+| Check logs | `tail -f ~/AppData/Local/hermes/logs/hermes/*.log` |
+| Reset everything | `rm -rf ~/AppData/Local/hermes && hermes setup` |
 
 ---
 

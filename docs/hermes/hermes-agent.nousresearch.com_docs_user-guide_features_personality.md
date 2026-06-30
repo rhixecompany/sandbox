@@ -12,12 +12,12 @@ Key purpose: SOUL.md is the _primary identity_ of a Hermes instance — the dura
   - `SOUL.md`
   - `HERMES_HOME`
   - `/personality`
-  - `~/.hermes/SOUL.md`
+  - `~/AppData/Local/hermes/SOUL.md`
   - `$HERMES_HOME/SOUL.md`
   - `skip_context_files`
   - `AGENTS.md`
   - `agent.personalities`
-  - `~/.hermes/config.yaml`
+  - `~/AppData/Local/hermes/config.yaml`
 
 - Fallback identity (used if SOUL.md is empty/unreadable or `skip_context_files` is set):
   - "You are Hermes Agent, an intelligent AI assistant created by Nous Research..."
@@ -52,7 +52,7 @@ Key purpose: SOUL.md is the _primary identity_ of a Hermes instance — the dura
 - Config YAML example for custom personalities:
 
   ```
-  ~/.hermes/config.yaml
+  ~/AppData/Local/hermes/config.yaml
   agent.personalities
   agent:
    personalities:
@@ -82,12 +82,12 @@ Key purpose: SOUL.md is the _primary identity_ of a Hermes instance — the dura
 
 - Location & default seeding
   - Hermes seeds a default `SOUL.md` automatically at:
-    - `~/.hermes/SOUL.md` (default)
+    - `~/AppData/Local/hermes/SOUL.md` (default)
     - If you run Hermes with a custom home directory: `$HERMES_HOME/SOUL.md`
   - This makes SOUL.md a true _per-user / per-instance_ personality (not per-project).
 
 - Where to edit
-  - Most users: edit `~/.hermes/SOUL.md`
+  - Most users: edit `~/AppData/Local/hermes/SOUL.md`
   - Custom home: edit `$HERMES_HOME/SOUL.md`
 
 - Purpose & content guidance
@@ -138,7 +138,7 @@ Key purpose: SOUL.md is the _primary identity_ of a Hermes instance — the dura
     - hype — MAXIMUM ENERGY AND ENTHUSIASM!!!
 
 - Custom named personalities in config
-  - Define under `agent.personalities` in `~/.hermes/config.yaml`.
+  - Define under `agent.personalities` in `~/AppData/Local/hermes/config.yaml`.
   - Switch
 
 [... summary truncated for context management ...]

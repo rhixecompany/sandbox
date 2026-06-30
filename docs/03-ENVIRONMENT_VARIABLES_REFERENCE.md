@@ -12,7 +12,7 @@
 All environment variables are stored in:
 
 ```
-~/.hermes/.env
+~/AppData/Local/hermes/.env
 ```
 
 Or set via CLI:
@@ -456,7 +456,7 @@ HERMES_LOG_LEVEL=INFO
 HERMES_LOG_FORMAT=json
 
 # Log file path
-HERMES_LOG_FILE=~/.hermes/hermes.log
+HERMES_LOG_FILE=~/AppData/Local/hermes/hermes.log
 
 # Enable request/response logging
 HERMES_DEBUG_HTTP=false
@@ -574,7 +574,7 @@ hermes config set OPENROUTER_API_KEY sk-or-...
 
 ```bash
 # Edit file
-nano ~/.hermes/.env
+nano ~/AppData/Local/hermes/.env
 
 # Add variables
 OPENROUTER_API_KEY=sk-or-...
@@ -621,7 +621,7 @@ hermes mcp list
 ## Security Best Practices
 
 ✅ **DO:**
-- Store API keys in `~/.hermes/.env`
+- Store API keys in `~/AppData/Local/hermes/.env`
 - Use SSH backend for remote execution (protects API keys)
 - Rotate API keys regularly
 - Use strong, unique keys per provider

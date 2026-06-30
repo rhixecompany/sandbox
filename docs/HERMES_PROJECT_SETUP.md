@@ -53,7 +53,7 @@ To override global settings for this project, create:
 
 ```yaml
 # Project-specific Hermes configuration
-# Overrides ~/.hermes/config.yaml settings
+# Overrides ~/AppData/Local/hermes/config.yaml settings
 
 # Model override (optional)
 # default_model: "claude-3-5-sonnet"
@@ -255,11 +255,11 @@ hermes chat -q "Generate documentation" -s documentation
 
 Hermes maintains persistent memory across sessions:
 
-**Global Memory**: `~/.hermes/memories/`
+**Global Memory**: `~/AppData/Local/hermes/memories/`
 - MEMORY.md — Agent's knowledge about environment & preferences
 - USER.md — User profile information
 
-**Session-Specific**: `~/.hermes/sessions/`
+**Session-Specific**: `~/AppData/Local/hermes/sessions/`
 - All past conversations preserved
 - Searchable with `session_search` tool
 - Auto-learning from interactions
@@ -283,10 +283,10 @@ Memory is updated automatically, but you can edit directly:
 
 ```bash
 # View memory
-cat ~/.hermes/memories/MEMORY.md
+cat ~/AppData/Local/hermes/memories/MEMORY.md
 
 # Edit memory (add notes about project)
-# Edit ~/.hermes/memories/MEMORY.md
+# Edit ~/AppData/Local/hermes/memories/MEMORY.md
 ```
 
 ---
@@ -327,7 +327,7 @@ hermes cron add \
 
 ### Global Configuration
 
-**Location**: `~/.hermes/config.yaml`  
+**Location**: `~/AppData/Local/hermes/config.yaml`  
 **Edits**: Use `hermes config set` or `hermes config edit`
 
 Key sections:
@@ -347,7 +347,7 @@ Override any global settings for project scope.
 
 ### Environment Variables
 
-**Location**: `~/.hermes/.env`  
+**Location**: `~/AppData/Local/hermes/.env`  
 **Contains**: API keys (NOT in git)
 
 Required:
@@ -408,8 +408,8 @@ hermes config set agent.max_turns 120
 **Solution**: Check memory configuration
 
 ```bash
-ls ~/.hermes/memories/               # Check files exist
-cat ~/.hermes/memories/MEMORY.md     # Verify content
+ls ~/AppData/Local/hermes/memories/               # Check files exist
+cat ~/AppData/Local/hermes/memories/MEMORY.md     # Verify content
 ```
 
 Enable memory:
@@ -586,7 +586,7 @@ mcp_servers:
 
 To write custom skills:
 
-1. Create `SKILL.md` in `~/.hermes/skills/` or `./skills/`
+1. Create `SKILL.md` in `~/AppData/Local/hermes/skills/` or `./skills/`
 2. Define name, description, triggers
 3. Add implementation steps
 4. Use with `/skill-name` in chat

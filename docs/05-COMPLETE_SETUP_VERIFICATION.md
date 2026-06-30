@@ -108,7 +108,7 @@ hermes config show | grep -A 20 "API Keys"
 ### View Full Configuration
 
 ```bash
-cat ~/.hermes/config.yaml
+cat ~/AppData/Local/hermes/config.yaml
 ```
 
 ### Essential Configuration Settings
@@ -270,7 +270,7 @@ hermes config set GOOGLE_API_KEY AIzaSy...
 
 ```bash
 # Open .env editor
-nano ~/.hermes/.env
+nano ~/AppData/Local/hermes/.env
 
 # Add keys:
 OPENAI_API_KEY=sk-pro...
@@ -499,7 +499,7 @@ hermes chat "Show logs from the first container"
 ### Docker Configuration
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/AppData/Local/hermes/config.yaml
 mcp_servers:
   docker:
     type: "stdio"
@@ -532,8 +532,8 @@ hermes --version | grep -q "v0.14.0" && echo "  PASS: Hermes v0.14.0 ✓" || ech
 
 # 2. Configuration Check
 echo "✓ Step 2: Checking configuration paths..."
-[ -f ~/.hermes/config.yaml ] && echo "  PASS: config.yaml exists ✓" || echo "  FAIL: config.yaml missing ✗"
-[ -f ~/.hermes/.env ] && echo "  PASS: .env exists ✓" || echo "  FAIL: .env missing ✗"
+[ -f ~/AppData/Local/hermes/config.yaml ] && echo "  PASS: config.yaml exists ✓" || echo "  FAIL: config.yaml missing ✗"
+[ -f ~/AppData/Local/hermes/.env ] && echo "  PASS: .env exists ✓" || echo "  FAIL: .env missing ✗"
 
 # 3. MCP Server Check
 echo "✓ Step 3: Checking MCP servers..."
@@ -663,15 +663,15 @@ hermes chat "Analyze this Python script for issues" (with file upload)
 - [ ] Terminal backend configured (local/docker/ssh)
 - [ ] Docker installed and accessible (if using Docker)
 - [ ] .hermes.md created for project context
-- [ ] Global ~/.hermes/config.yaml validated
-- [ ] Environment variables secured in ~/.hermes/.env
+- [ ] Global ~/AppData/Local/hermes/config.yaml validated
+- [ ] Environment variables secured in ~/AppData/Local/hermes/.env
 
 ### Configuration Backup
 
 ```bash
 # Backup current configuration
-cp ~/.hermes/config.yaml ~/.hermes/config.yaml.backup.$(date +%Y%m%d)
-cp ~/.hermes/.env ~/.hermes/.env.backup.$(date +%Y%m%d)
+cp ~/AppData/Local/hermes/config.yaml ~/AppData/Local/hermes/config.yaml.backup.$(date +%Y%m%d)
+cp ~/AppData/Local/hermes/.env ~/AppData/Local/hermes/.env.backup.$(date +%Y%m%d)
 ```
 
 ### Performance Optimization
@@ -699,10 +699,10 @@ hermes config set logging.file /var/log/hermes/hermes.log
 
 ```bash
 # View real-time logs
-tail -f ~/.hermes/hermes.log
+tail -f ~/AppData/Local/hermes/hermes.log
 
 # Check error logs
-grep ERROR ~/.hermes/hermes.log
+grep ERROR ~/AppData/Local/hermes/hermes.log
 
 # Monitor MCP status
 watch -n 5 'hermes mcp list'

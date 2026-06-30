@@ -28,9 +28,9 @@
 ```
 Version:           v0.14.0 (2026.5.16)
 Python:            3.11.14 (virtual environment)
-Path:              ~/.hermes/ (C:\Users\Alexa\AppData\Local\hermes)
-Config:            ~/.hermes/config.yaml ✓
-Secrets:           ~/.hermes/.env ✓
+Path:              ~/AppData/Local/hermes/ (C:\Users\Alexa\AppData\Local\hermes)
+Config:            ~/AppData/Local/hermes/config.yaml ✓
+Secrets:           ~/AppData/Local/hermes/.env ✓
 State DB:          113 sessions recorded ✓
 Persona:           SOUL.md configured ✓
 Memory:            MEMORY.md + USER.md active ✓
@@ -41,7 +41,7 @@ Memory:            MEMORY.md + USER.md active ✓
 ```
 Active Advisories:   0
 Retired Models:      0 (xAI model retirement checked)
-Credentials:         Properly stored in ~/.hermes/.env
+Credentials:         Properly stored in ~/AppData/Local/hermes/.env
 API Keys:            OpenRouter, Tavily, Google Gemini, xAI, OpenCode configured
 File Permissions:    600 (owner only) ✓
 HTTPS:              Enabled for all remote servers ✓
@@ -78,7 +78,7 @@ Terminal:           ✓ bash backend configured
 ### ✅ Directory Structure
 
 ```
-~/.hermes/
+~/AppData/Local/hermes/
   ├─ config.yaml      ✓ 12,835 bytes
   ├─ .env             ✓ Secrets
   ├─ SOUL.md          ✓ Persona
@@ -317,7 +317,7 @@ Updated sections:
 
 ### ✅ Global Configuration
 
-**File**: ~/.hermes/config.yaml
+**File**: ~/AppData/Local/hermes/config.yaml
 
 Verified sections:
 - [x] Model configuration (big-pickle, opencode-zen)
@@ -338,7 +338,7 @@ Verified sections:
 ### ✅ Credential Management
 
 ```
-API Keys Location:    ~/.hermes/.env ✓
+API Keys Location:    ~/AppData/Local/hermes/.env ✓
 File Permissions:     600 (owner only) ✓
 Git Ignore:           .env in .gitignore ✓
 No Hardcoded Keys:    ✓ Verified
@@ -411,9 +411,9 @@ Session Database:        state.db (113 sessions)
 Memory Files:            MEMORY.md (1,424 chars)
                          USER.md (668 chars)
 Persona:                 SOUL.md (configured)
-Log Files:               ~/.hermes/logs/ (rotating)
-Cron Jobs:               ~/.hermes/cron/ (schedulable)
-Skills:                  ~/.hermes/skills/ (custom)
+Log Files:               ~/AppData/Local/hermes/logs/ (rotating)
+Cron Jobs:               ~/AppData/Local/hermes/cron/ (schedulable)
+Skills:                  ~/AppData/Local/hermes/skills/ (custom)
 ```
 
 ### ✅ Session Features
@@ -451,7 +451,7 @@ Skills:                  ~/.hermes/skills/ (custom)
 
 ### Phase 3: Global Configuration ✅
 
-- [x] Verify ~/.hermes/config.yaml
+- [x] Verify ~/AppData/Local/hermes/config.yaml
 - [x] Check model configuration
 - [x] Verify MCP server setup in config
 - [x] Confirm terminal settings

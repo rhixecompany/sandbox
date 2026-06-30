@@ -85,8 +85,8 @@ One subscription covers 300+ models + Tool Gateway (web search, image generation
 > **Minimum context: 64K tokens** — Models with smaller windows are rejected at startup. For local models: `--ctx-size 65536` (llama.cpp) or `-c 65536` (Ollama).
 
 ### Settings Storage
-- **Secrets/tokens** → `~/.hermes/.env`
-- **Non-secret config** → `~/.hermes/config.yaml`
+- **Secrets/tokens** → `~/AppData/Local/hermes/.env`
+- **Non-secret config** → `~/AppData/Local/hermes/config.yaml`
 
 Set values via CLI (auto-routes to correct file):
 ```bash
@@ -127,7 +127,7 @@ Help me set up a clean GitHub PR workflow for this codebase.
 | **Add MCP** | `hermes mcp` (interactive picker) |
 | **Enable messaging** | `hermes gateway` → pick platform → follow OAuth |
 | **Schedule cron** | `hermes cron create "daily summary" "0 9 * * *"` |
-| **Customize personality** | Edit `~/.hermes/SOUL.md` |
+| **Customize personality** | Edit `~/AppData/Local/hermes/SOUL.md` |
 | **Add project context** | Create `AGENTS.md` in project root |
 
 ---
@@ -150,9 +150,9 @@ Help me set up a clean GitHub PR workflow for this codebase.
 # Reset config only
 hermes config reset
 
-# Full uninstall (removes ~/.hermes/)
+# Full uninstall (removes ~/AppData/Local/hermes/)
 # Linux/macOS:
-rm -rf ~/.hermes && sed -i '/hermes/d' ~/.bashrc ~/.zshrc 2>/dev/null; source ~/.bashrc
+rm -rf ~/AppData/Local/hermes && sed -i '/hermes/d' ~/.bashrc ~/.zshrc 2>/dev/null; source ~/.bashrc
 # Windows:
-Remove-Item -Recurse -Force ~/.hermes; $env:Path = $env:Path.Replace("$HOME\.hermes\bin;", "")
+Remove-Item -Recurse -Force ~/AppData/Local/hermes; $env:Path = $env:Path.Replace("$HOME\.hermes\bin;", "")
 ```

@@ -305,8 +305,8 @@ SECURITY
   [✓] Private URLs: disabled by default
 
 GLOBAL CONFIGURATION
-  [✓] Config file: ~/.hermes/config.yaml
-  [✓] Secrets file: ~/.hermes/.env
+  [✓] Config file: ~/AppData/Local/hermes/config.yaml
+  [✓] Secrets file: ~/AppData/Local/hermes/.env
   [✓] Installation: %LOCALAPPDATA%\hermes\
   [✓] Status: production ready
 

@@ -6,7 +6,7 @@
 
 > **SOUL.md is the primary identity** — it's the first thing in the system prompt and defines who the agent is.
 
-- **Location**: `~/.hermes/SOUL.md` (default) or `$HERMES_HOME/SOUL.md` (custom home)
+- **Location**: `~/AppData/Local/hermes/SOUL.md` (default) or `$HERMES_HOME/SOUL.md` (custom home)
 - **Behavior**: Loaded **only** from `HERMES_HOME` — not from the current working directory
 - **Purpose**: Durable, per-instance personality that persists across projects
 - **Fallback**: Built-in default ("You are Hermes Agent, an intelligent AI assistant created by Nous Research...") if file is empty/unreadable or `skip_context_files` is set
@@ -19,7 +19,7 @@
 |---------|----------|
 | Personality changing unexpectedly between projects | Load only from `HERMES_HOME` |
 | Unpredictable behavior | Personality belongs to the Hermes instance |
-| User confusion | Single canonical location: `~/.hermes/SOUL.md` |
+| User confusion | Single canonical location: `~/AppData/Local/hermes/SOUL.md` |
 
 ---
 
@@ -128,7 +128,7 @@ You optimize for truth, clarity, and usefulness over politeness theater.
 
 ## Custom Personalities via Config
 
-**File**: `~/.hermes/config.yaml`
+**File**: `~/AppData/Local/hermes/config.yaml`
 
 ```yaml
 agent:
@@ -145,7 +145,7 @@ agent:
 ## Recommended Workflow
 
 ```
-1. Edit ~/.hermes/SOUL.md          → Your durable default identity
+1. Edit ~/AppData/Local/hermes/SOUL.md          → Your durable default identity
 2. Use AGENTS.md per project       → Task-specific instructions
 3. Use /personality for sessions   → Temporary mode shifts (teacher, concise, etc.)
 ```
@@ -172,7 +172,7 @@ agent:
 | Domain | Controlled By |
 |--------|---------------|
 | Agent voice/tone | SOUL.md, `/personality` |
-| CLI theme/colors | `~/.hermes/config.yaml` → `theme` |
+| CLI theme/colors | `~/AppData/Local/hermes/config.yaml` → `theme` |
 | Prompt format | `config.yaml` → `prompt` |
 
 ---
@@ -189,7 +189,7 @@ agent:
 
 | Task | Command |
 |------|---------|
-| Edit global personality | `nvim ~/.hermes/SOUL.md` (or your editor) |
+| Edit global personality | `nvim ~/AppData/Local/hermes/SOUL.md` (or your editor) |
 | List built-in personalities | `/personality` |
 | Switch personality (session) | `/personality <name>` |
 | Add custom personality | Edit `config.yaml` → `agent.personalities` |

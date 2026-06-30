@@ -11,7 +11,7 @@ Decision: ALLOWED — Allowed (community source, safe verdict)
 Warning: adversarial-ux-test — path missing: adversarial-ux-test
 Scan: agentmail (official/email\agentmail/community)  Verdict: DANGEROUS
   CRITICAL persistence    SKILL.md:44                    "Add to 
-`~/.hermes/config.yaml` (paste your actual key — MCP "
+`~/AppData/Local/hermes/config.yaml` (paste your actual key — MCP "
   MEDIUM   supply_chain   SKILL.md:118                   "- The `mcp` Python 
 package must be installed: `pip install m"
 
@@ -235,7 +235,7 @@ Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: fastmcp (official/mcp\fastmcp/community)  Verdict: DANGEROUS
   CRITICAL persistence    SKILL.md:175                   "- configure the 
-server in `~/.hermes/config.yaml` using the "
+server in `~/AppData/Local/hermes/config.yaml` using the "
   CRITICAL persistence    SKILL.md:296                   "The server-building 
 part may be correct while the Hermes con"
   CRITICAL exfiltration   templates\api_wrapper.py:13    "API_TOKEN = 
@@ -663,13 +663,13 @@ Verdict: DANGEROUS
   CRITICAL persistence    scripts\openclaw_to_hermes.py:1335 "# OpenClaw's 
 AGENTS.md, MEMORY.md, etc."
   CRITICAL persistence    scripts\openclaw_to_hermes.py:419 
-"``~/.hermes/config.yaml`` (the real Hermes home) instead of "
+"``~/AppData/Local/hermes/config.yaml`` (the real Hermes home) instead of "
   CRITICAL persistence    scripts\openclaw_to_hermes.py:420 
 "``~/.Hermes/config.yaml``."
   CRITICAL persistence    scripts\openclaw_to_hermes.py:2949 ""- Review 
-`~/.hermes/config.yaml` for any adjustments","
+`~/AppData/Local/hermes/config.yaml` for any adjustments","
   CRITICAL persistence    scripts\openclaw_to_hermes.py:3116 "print("    1. 
-Review ~/.hermes/config.yaml")"
+Review ~/AppData/Local/hermes/config.yaml")"
 
 Decision: BLOCKED — Blocked (community source + dangerous verdict, 6 findings).
 --force does not override a dangerous verdict.
@@ -877,7 +877,7 @@ Use --force to override.
 
 Scan: qmd (official/research\qmd/community)  Verdict: DANGEROUS
   CRITICAL persistence    SKILL.md:234                   "Add to 
-`~/.hermes/config.yaml`:"
+`~/AppData/Local/hermes/config.yaml`:"
   HIGH     privilege_escalation SKILL.md:49                    "curl -fsSL 
 https://deb.nodesource.com/setup_22.x | sudo -E b"
   HIGH     privilege_escalation SKILL.md:50                    "sudo apt-get 
@@ -934,7 +934,7 @@ Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: siyuan (official/productivity\siyuan/community)  Verdict: DANGEROUS
   CRITICAL persistence    SKILL.md:283                   "# In 
-~/.hermes/config.yaml under mcp_servers:"
+~/AppData/Local/hermes/config.yaml under mcp_servers:"
   MEDIUM   network        SKILL.md:29                    
 "SIYUAN_URL=http://127.0.0.1:6806"
   MEDIUM   network        SKILL.md:31                    "`SIYUAN_URL` defaults
@@ -1842,7 +1842,7 @@ Scan: web-pentest (official/security\web-pentest/community)  Verdict: DANGEROUS
   CRITICAL destructive    SKILL.md:69                    "filesystem-write 
 SSTI, command injection with `rm`/`shutdown"
   CRITICAL persistence    SKILL.md:83                    "in 
-`~/.hermes/config.yaml` for the session."
+`~/AppData/Local/hermes/config.yaml` for the session."
   CRITICAL traversal      references\bypass-techniques.md:44 "- Null byte 
 (older platforms): `../../../etc/passwd%00.png`"
   CRITICAL traversal      references\bypass-techniques.md:46 "- Absolute path: 

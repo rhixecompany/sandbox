@@ -219,7 +219,7 @@ hermes skills install https://example.com/SKILL.md --name my-skill
 
 ### Skill Locations
 
-- Per-user: `~/.hermes/skills/`
+- Per-user: `~/AppData/Local/hermes/skills/`
 - Per-project: `./skills/`
 
 ---
@@ -290,7 +290,7 @@ hermes mcp list
 hermes mcp add codex --preset codex
 
 # Add custom server
-# Edit ~/.hermes/config.yaml and add to mcp_servers section
+# Edit ~/AppData/Local/hermes/config.yaml and add to mcp_servers section
 ```
 
 ### Built-in Presets
@@ -362,8 +362,8 @@ mcp_servers:
 
 ### Config Location
 
-- **Primary**: `~/.hermes/config.yaml`
-- **Secrets**: `~/.hermes/.env`
+- **Primary**: `~/AppData/Local/hermes/config.yaml`
+- **Secrets**: `~/AppData/Local/hermes/.env`
 - **Override**: Set `HERMES_CONFIG_PATH` environment variable
 
 ### Essential Config Keys
@@ -389,7 +389,7 @@ bundled_skills:
 # Memory
 memory:
   provider: "local"
-  path: "~/.hermes/memory.md"
+  path: "~/AppData/Local/hermes/memory.md"
 
 # Gateway
 gateway:
@@ -400,7 +400,7 @@ gateway:
 
 ### Environment Variables
 
-Store secrets in `~/.hermes/.env`:
+Store secrets in `~/AppData/Local/hermes/.env`:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-...
@@ -441,7 +441,7 @@ source ~/.bashrc
 # Or open new terminal
 ```
 
-Also verify `~/.hermes/bin` is in PATH:
+Also verify `~/AppData/Local/hermes/bin` is in PATH:
 ```bash
 echo $PATH | grep hermes
 ```

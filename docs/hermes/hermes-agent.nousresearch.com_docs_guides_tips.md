@@ -87,7 +87,7 @@ off → new → all → verbose
 - Subdirectory `AGENTS.md` → discovered lazily during tool calls (via `subdirectory_hints.py`), injected into tool results only
 
 ### SOUL.md — Customize Personality
-**Location:** `~/.hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
+**Location:** `~/AppData/Local/hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
 
 ```markdown
 # Soul

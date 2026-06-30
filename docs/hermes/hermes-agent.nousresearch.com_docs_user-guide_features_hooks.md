@@ -6,11 +6,11 @@ Hermes has three hook systems that run custom code at key lifecycle points:
 
 | System | Registered via | Runs in | Use case |
 | --- | --- | --- | --- |
-| **Gateway hooks** | `HOOK.yaml` + `handler.py` in `~/.hermes/hooks/` | Gateway only | Logging, alerts, webhooks |
+| **Gateway hooks** | `HOOK.yaml` + `handler.py` in `~/AppData/Local/hermes/hooks/` | Gateway only | Logging, alerts, webhooks |
 | **Plugin hooks** | `ctx.register_hook()` in a [plugin](/docs/user-guide/features/plugins) | CLI + Gateway | Tool interception, metrics, guardrails |
-| **Shell hooks** | `hooks:` block in `~/.hermes/config.yaml` pointing at shell scripts | CLI + Gateway | Drop-in scripts for blocking, auto-formatting, context injection |
+| **Shell hooks** | `hooks:` block in `~/AppData/Local/hermes/config.yaml` pointing at shell scripts | CLI + Gateway | Drop-in scripts for blocking, auto-formatting, context injection |
 
-`HOOK.yaml`, `handler.py`, `~/.hermes/hooks/`, `ctx.register_hook()`, `hooks:`, `~/.hermes/config.yaml`
+`HOOK.yaml`, `handler.py`, `~/AppData/Local/hermes/hooks/`, `ctx.register_hook()`, `hooks:`, `~/AppData/Local/hermes/config.yaml`
 
 All three systems are non-blocking — errors in any hook are caught and logged, never crashing the agent.
 
@@ -20,10 +20,10 @@ Gateway hooks fire automatically during gateway operation (Telegram, Discord, Sl
 
 ### Creating a Hook
 
-Each hook is a directory under `~/.hermes/hooks/` containing two files:
+Each hook is a directory under `~/AppData/Local/hermes/hooks/` containing two files:
 
 ```
-~/.hermes/hooks/
+~/AppData/Local/hermes/hooks/
  └── my-hook/
   ├── HOOK.yaml # Declares which events to listen for
   └── handler.py # Python handler function
@@ -88,7 +88,7 @@ Handlers registered for `command:*` fire for any `command:` event (`command:mode
 Send yourself a message when the agent takes more than 10 steps:
 
 ```yaml
-# ~/.hermes/hooks/long-task-alert/HOOK.yaml
+# ~/AppData/Local/hermes/hooks/long-task-alert/HOOK.yaml
 name: long-task-alert
 description: Alert when agent is taking many steps
 events:
@@ -96,7 +96,7 @@ events:
 ```
 
 ```python
-# ~/.hermes/hooks/long-task-alert/handler.py
+# ~/AppData/Local/hermes/hooks/long-task-alert/handler.py
 import os
 import httpx
 
@@ -135,7 +135,7 @@ Plugin hooks run in both CLI and Gateway. Use `ctx.register_hook()` inside a plu
 
 ## Shell Hooks
 
-Shell hooks are configured in `~/.hermes/config.yaml` and run as subprocesses with JSON stdin/stdout.
+Shell hooks are configured in `~/AppData/Local/hermes/config.yaml` and run as subprocesses with JSON stdin/stdout.
 
 ```yaml
 hooks:
@@ -144,7 +144,7 @@ hooks:
       - "pre_tool_call"
     command: "python"
     args:
-      - "~/.hermes/hooks/my-shell-hook/handler.py"
+      - "~/AppData/Local/hermes/hooks/my-shell-hook/handler.py"
     timeout: 5
 ```
 

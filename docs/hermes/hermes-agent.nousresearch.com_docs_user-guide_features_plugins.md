@@ -4,11 +4,11 @@
 
 ## Quick Overview
 
-Hermes uses a **plugin system** for adding custom tools, hooks, and integrations without modifying core code. Plugins are directories dropped into `~/.hermes/plugins/` with a `plugin.yaml` manifest and Python code.
+Hermes uses a **plugin system** for adding custom tools, hooks, and integrations without modifying core code. Plugins are directories dropped into `~/AppData/Local/hermes/plugins/` with a `plugin.yaml` manifest and Python code.
 
 ### Plugin Structure
 ```
-~/.hermes/plugins/my-plugin/
+~/AppData/Local/hermes/plugins/my-plugin/
 ├── plugin.yaml          # manifest
 ├── __init__.py          # register() — wires schemas to handlers
 ├── schemas.py           # tool schemas (what the LLM sees)
@@ -74,7 +74,7 @@ def register(ctx):
     ctx.register_hook("post_tool_call", on_tool_call)
 ```
 
-**Usage:** Drop both files into `~/.hermes/plugins/hello-world/`, restart Hermes → model can immediately call `hello_world`.
+**Usage:** Drop both files into `~/AppData/Local/hermes/plugins/hello-world/`, restart Hermes → model can immediately call `hello_world`.
 
 ---
 
@@ -111,7 +111,7 @@ All `ctx.*` APIs are available inside a plugin's `register(ctx)` function.
 | Source | Path | Use Case |
 |--------|------|----------|
 | **Bundled** | `<repo>/plugins/` | Ships with Hermes |
-| **User** | `~/.hermes/plugins/` | Personal plugins |
+| **User** | `~/AppData/Local/hermes/plugins/` | Personal plugins |
 | **Project** | `.hermes/plugins/` | Project-specific (requires `HERMES_ENABLE_PROJECT_PLUGINS=true`) |
 | **pip** | `hermes_agent.plugins` entry_points | Distributed packages |
 | **Nix** | `services.hermes-agent.extraPlugins` / `extraPythonPackages` | NixOS declarative installs |
@@ -157,7 +157,7 @@ def register(ctx):
     base_url = ctx.config.get("my-plugin.base_url", "https://api.example.com")
 ```
 
-Config in `~/.hermes/config.yaml`:
+Config in `~/AppData/Local/hermes/config.yaml`:
 ```yaml
 my-plugin:
   api_key: "secret"

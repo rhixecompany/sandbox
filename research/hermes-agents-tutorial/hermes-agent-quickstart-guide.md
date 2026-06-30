@@ -51,8 +51,8 @@ hermes setup --portal  # recommended: Nous Portal (OAuth)
 
 | File | Contents |
 |------|----------|
-| ~/.hermes/.env | Secrets and tokens |
-| ~/.hermes/config.yaml | Non-secret settings |
+| ~/AppData/Local/hermes/.env | Secrets and tokens |
+| ~/AppData/Local/hermes/config.yaml | Non-secret settings |
 
 ## First Chat
 

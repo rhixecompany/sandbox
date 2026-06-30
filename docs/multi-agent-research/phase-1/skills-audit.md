@@ -16,7 +16,7 @@ Captured evidence:
 
 High-risk findings surfaced in the audit:
 - `agentmail` — dangerous verdict; persistence issue around
-  `~/.hermes/config.yaml`.
+  `~/AppData/Local/hermes/config.yaml`.
 - `antigravity-cli` — dangerous verdict; supply-chain download risk.
 - `axolotl` — dangerous verdict; supply-chain risk from install/bootstrap
   steps.

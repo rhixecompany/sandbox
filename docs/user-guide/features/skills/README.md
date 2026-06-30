@@ -4,7 +4,7 @@
 
 **Skills** are on-demand knowledge documents the agent loads when needed, following a **progressive disclosure** pattern to minimize token usage. They're compatible with the [agentskills.io](https://agentskills.io/specification) open standard.
 
-**Primary directory (source of truth):** `~/.hermes/skills/`
+**Primary directory (source of truth):** `~/AppData/Local/hermes/skills/`
 - Bundled skills copied here on fresh install
 - Hub-installed and agent-created skills also stored here
 - Agent can modify or delete any skill
@@ -168,7 +168,7 @@ hermes skill install <name>
 
 1. User runs `/skill install` or `hermes skill install <name>`
 2. Skill downloaded from `agentskills.io` registry
-3. Saved to `~/.hermes/skills/<name>/SKILL.md` + references/
+3. Saved to `~/AppData/Local/hermes/skills/<name>/SKILL.md` + references/
 4. Immediately available as `/skillname`
 
 ### Version Pinning
@@ -209,7 +209,7 @@ hermes skills view <name>
 hermes skill create my-skill
 ```
 
-This scaffolds `~/.hermes/skills/my-skill/` with:
+This scaffolds `~/AppData/Local/hermes/skills/my-skill/` with:
 - `SKILL.md` (with frontmatter template)
 - `references/` directory
 
@@ -245,7 +245,7 @@ create → edit → use → update → (consolidate) → delete
 - Grades skills by usage, success rate, freshness
 - Consolidates near-duplicates
 - Prunes stale/unused skills
-- Logs decisions to `~/.hermes/logs/curator/`
+- Logs decisions to `~/AppData/Local/hermes/logs/curator/`
 
 ---
 

@@ -11,14 +11,14 @@ Key purpose: MCP lets Hermes Agent connect to external tool servers so Hermes ca
 Quick start — install and enable MCP support:
 
 ```
-cd ~/.hermes/hermes-agent
+cd ~/AppData/Local/hermes/hermes-agent
 uv pip install -e ".[mcp]"
 ```
 
 Example config (stdio MCP):
 
 ```
-~/.hermes/config.yaml
+~/AppData/Local/hermes/config.yaml
 mcp_servers:
   filesystem:
     command: "npx"
@@ -72,7 +72,7 @@ hermes update
 
 Runtime environment substitution:
 
-- `${VAR}` in manifest fields (`transport.command`, `transport.args`, `transport.url`, `headers`) resolved at server-connect time using environment variables (including `~/.hermes/.env`).
+- `${VAR}` in manifest fields (`transport.command`, `transport.args`, `transport.url`, `headers`) resolved at server-connect time using environment variables (including `~/AppData/Local/hermes/.env`).
 - `${INSTALL_DIR}` is substituted at install-time (path where catalog repo was cloned).
 
 Reconfigure later:
@@ -114,7 +114,7 @@ mcp_servers:
     auth: oauth
 ```
 
-Token cache: `~/.hermes/mcp-tokens/<server>.json` (0o600 perms)
+Token cache: `~/AppData/Local/hermes/mcp-tokens/<server>.json` (0o600 perms)
 
 Google Drive / Atlassian pitfall — supply pre-registered client:
 

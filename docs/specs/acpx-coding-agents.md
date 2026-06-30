@@ -93,7 +93,7 @@ acpx --approve-all qwen exec "one-shot: summarize repo"
 
 ### F3: Hermes Configuration
 
-**File:** `~/.hermes/config.yaml` (at `%LOCALAPPDATA%\hermes\config.yaml`)
+**File:** `~/AppData/Local/hermes/config.yaml` (at `%LOCALAPPDATA%\hermes\config.yaml`)
 
 **Requirements:**
 
@@ -168,7 +168,7 @@ all three platforms.
 | --------- | -------------------------------------------------- | ----------------------------------------------- |
 | Qwen Code | OpenRouter API Key                                 | `OPENROUTER_API_KEY` in `~/.qwen/settings.json` |
 | OpenCode  | GitHub Copilot token (auto) + OpenRouter           | `~/.config/opencode/.env.local`                 |
-| Hermes    | OpenRouter (qwen-code provider) + Copilot fallback | `~/.hermes/.env`                                |
+| Hermes    | OpenRouter (qwen-code provider) + Copilot fallback | `~/AppData/Local/hermes/.env`                                |
 | ACPX      | None (orchestrator only)                           | Inherits from agent env                         |
 
 ---

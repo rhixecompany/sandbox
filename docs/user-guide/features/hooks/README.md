@@ -24,8 +24,8 @@ Hooks allow you to run custom logic at specific points in the Hermes Agent lifec
 
 | Artifact | Path |
 |----------|------|
-| Hook scripts | `~/.hermes/hooks/<name>/` |
-| Hook logs | `~/.hermes/logs/hermes/` |
+| Hook scripts | `~/AppData/Local/hermes/hooks/<name>/` |
+| Hook logs | `~/AppData/Local/hermes/logs/hermes/` |
 | Hook config | `config.yaml` → `hooks: {}` |
 
 ---
@@ -47,17 +47,17 @@ hooks:
   session-logger:
     enabled: true
     events: [on_session_start, on_session_end, pre_llm_call]
-    script: "~/.hermes/hooks/session-logger/hook.sh"
+    script: "~/AppData/Local/hermes/hooks/session-logger/hook.sh"
   
   session-auto-commit:
     enabled: true
     events: [on_session_end]
-    script: "~/.hermes/hooks/session-auto-commit/hook.sh"
+    script: "~/AppData/Local/hermes/hooks/session-auto-commit/hook.sh"
   
   governance-audit:
     enabled: true
     events: [on_session_start, on_session_end, pre_llm_call]
-    script: "~/.hermes/hooks/governance-audit/hook.sh"
+    script: "~/AppData/Local/hermes/hooks/governance-audit/hook.sh"
 ```
 
 ---
@@ -105,7 +105,7 @@ hooks:
 
 ### 1. Create Hook Directory
 ```bash
-mkdir -p ~/.hermes/hooks/my-hook
+mkdir -p ~/AppData/Local/hermes/hooks/my-hook
 ```
 
 ### 2. Write Hook Script (`hook.sh`)
@@ -144,7 +144,7 @@ esac
 
 ### 3. Make Executable
 ```bash
-chmod +x ~/.hermes/hooks/my-hook/hook.sh
+chmod +x ~/AppData/Local/hermes/hooks/my-hook/hook.sh
 ```
 
 ### 4. Register in `config.yaml`
@@ -153,7 +153,7 @@ hooks:
   my-hook:
     enabled: true
     events: [on_session_start, pre_llm_call]
-    script: "~/.hermes/hooks/my-hook/hook.sh"
+    script: "~/AppData/Local/hermes/hooks/my-hook/hook.sh"
 ```
 
 ---
@@ -163,13 +163,13 @@ hooks:
 ### Testing Locally
 ```bash
 # Simulate event
-echo '{"event":"on_session_start","session_id":"test","timestamp":"2026-01-15T10:30:00Z","reason":"new_session"}' | ~/.hermes/hooks/my-hook/hook.sh
+echo '{"event":"on_session_start","session_id":"test","timestamp":"2026-01-15T10:30:00Z","reason":"new_session"}' | ~/AppData/Local/hermes/hooks/my-hook/hook.sh
 ```
 
 ### Logging
 ```bash
 # Append to hook-specific log
-log_file=~/.hermes/logs/hermes/my-hook.log
+log_file=~/AppData/Local/hermes/logs/hermes/my-hook.log
 echo "$(date -Iseconds) $event" >> "$log_file"
 ```
 
@@ -206,10 +206,10 @@ Send session summaries to Slack, Discord, email.
 | Issue | Solution |
 |-------|----------|
 | Hook not firing | Check `config.yaml` events list; verify script path |
-| Script fails silently | Check `~/.hermes/logs/hermes/` for stderr |
+| Script fails silently | Check `~/AppData/Local/hermes/logs/hermes/` for stderr |
 | JSON parse error | Ensure script outputs valid JSON; use `jq -c` |
 | Skip flag not working | Verify env var name matches `SKIP_<HOOK_NAME>` pattern |
-| Permission denied | `chmod +x ~/.hermes/hooks/<name>/hook.sh` |
+| Permission denied | `chmod +x ~/AppData/Local/hermes/hooks/<name>/hook.sh` |
 
 ---
 

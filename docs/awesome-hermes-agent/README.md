@@ -77,7 +77,7 @@ python3 tools/install.py install --host hermes
 
 Extend core functionality:
 
-- Session storage: `~/.hermes/sessions/*.json`
+- Session storage: `~/AppData/Local/hermes/sessions/*.json`
 - Hooks: `pre_tool_call`
 - Testing: `cargo test`
 - Git integration: `git log --stat`
@@ -98,7 +98,7 @@ _(Listed but specific registries not detailed in source)_
 | `on_session_start`                                                                    | Session initialization hook      |
 | `hermes memory setup`                                                                 | Memory configuration             |
 | `hermes mnemosyne stats`                                                              | Memory statistics                |
-| `~/.hermes/skills`                                                                    | Skills directory                 |
+| `~/AppData/Local/hermes/skills`                                                                    | Skills directory                 |
 | `skillclaw doctor hermes` / `skillclaw restore hermes`                                | Skill health & recovery          |
 | `GET /v1/score?url=` / `GET /v1/search?q=`                                            | API endpoints                    |
 | `agenttrace-session-audit`                                                            | Session auditing                 |

@@ -14,10 +14,10 @@ MCP lets Hermes Agent connect to **external tool servers** (GitHub, databases, f
 
 ```bash
 # Install MCP dependencies
-cd ~/.hermes/hermes-agent
+cd ~/AppData/Local/hermes/hermes-agent
 uv pip install -e ".[mcp]"
 
-# Configure a filesystem server in ~/.hermes/config.yaml
+# Configure a filesystem server in ~/AppData/Local/hermes/config.yaml
 mcp_servers:
   filesystem:
     command: "npx"
@@ -89,7 +89,7 @@ Manifests at: [`optional-mcps/<name>/manifest.yaml`](https://github.com/NousRese
 
 ### Runtime `${ENV_VAR}` Substitution
 
-Inside `transport.command`, `transport.args`, `transport.url`, and `headers`, `${VAR}` placeholders resolve at server-connect time from environment variables (including `~/.hermes/.env`).
+Inside `transport.command`, `transport.args`, `transport.url`, and `headers`, `${VAR}` placeholders resolve at server-connect time from environment variables (including `~/AppData/Local/hermes/.env`).
 
 ```yaml
 # Example
@@ -152,7 +152,7 @@ mcp_servers:
     auth: oauth
 ```
 
-**Flow:** On first connect, Hermes prints authorize URL, opens browser, waits for callback on local loopback port. Tokens cached at `~/.hermes/mcp-tokens/<server>.json` (0o600 perms).
+**Flow:** On first connect, Hermes prints authorize URL, opens browser, waits for callback on local loopback port. Tokens cached at `~/AppData/Local/hermes/mcp-tokens/<server>.json` (0o600 perms).
 
 #### Remote / Headless Hosts
 
@@ -264,7 +264,7 @@ mcp_servers:
 | Issue | Solution |
 |-------|----------|
 | Server not connecting | Check `command`/`url`; verify server runs standalone first |
-| OAuth fails | Ensure loopback port available; check `~/.hermes/mcp-tokens/` perms |
+| OAuth fails | Ensure loopback port available; check `~/AppData/Local/hermes/mcp-tokens/` perms |
 | Tools missing | Run `hermes mcp configure <name>`; check `tools.include` |
 | Version mismatch | `hermes update` then `hermes mcp install <name>` |
 

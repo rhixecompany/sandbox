@@ -26,7 +26,7 @@ uv pip install -e ".[all]"
 
 **Add MCP to existing install:**
 ```bash
-cd ~/.hermes/hermes-agent
+cd ~/AppData/Local/hermes/hermes-agent
 uv pip install -e ".[mcp]"
 ```
 
@@ -209,7 +209,7 @@ mcp_servers:
 |--------|---------|
 | Reload MCP config | `/reload-mcp` |
 | Test specific server | `hermes mcp test <name>` |
-| View server logs | Check `~/.hermes/logs/mcp/` |
+| View server logs | Check `~/AppData/Local/hermes/logs/mcp/` |
 | Probe available tools | `hermes mcp configure <name>` (shows checklist) |
 
 ---

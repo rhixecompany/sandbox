@@ -12,7 +12,7 @@ Plugins extend Hermes Agent's core functionality beyond built-in features. They 
 
 ## Plugin Architecture
 
-- **Location:** `~/.hermes/plugins/` (user) + bundled in Hermes install
+- **Location:** `~/AppData/Local/hermes/plugins/` (user) + bundled in Hermes install
 - **Config:** `config.yaml` → `plugins.enabled[]` / `plugins.disabled[]`
 - **Format:** Each plugin is a directory with `plugin.yaml` manifest + code
 - **Discovery:** Scanned at startup; enabled plugins loaded automatically
@@ -64,8 +64,8 @@ plugins:
 
 ### Manual Installation
 ```bash
-# 1. Clone or download plugin to ~/.hermes/plugins/
-git clone https://github.com/example/hermes-plugin-xyz ~/.hermes/plugins/xyz
+# 1. Clone or download plugin to ~/AppData/Local/hermes/plugins/
+git clone https://github.com/example/hermes-plugin-xyz ~/AppData/Local/hermes/plugins/xyz
 
 # 2. Enable in config.yaml
 plugins:
@@ -78,7 +78,7 @@ plugins:
 ### Development Installation
 ```bash
 # For local development
-ln -s /path/to/your/plugin ~/.hermes/plugins/my-plugin
+ln -s /path/to/your/plugin ~/AppData/Local/hermes/plugins/my-plugin
 ```
 
 ---
@@ -212,7 +212,7 @@ Provides automated security review capabilities:
 ## Disk Cleanup Plugin
 
 Automated maintenance:
-- Cleans old logs (`~/.hermes/logs/`)
+- Cleans old logs (`~/AppData/Local/hermes/logs/`)
 - Removes temp files
 - Prunes old session data
 - Configurable retention policies

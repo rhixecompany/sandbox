@@ -257,7 +257,7 @@ scopes_supported:
 #### ✅ GOOD: Environment Variables
 
 ```yaml
-# ~/.hermes/config.yaml (tracked in git)
+# ~/AppData/Local/hermes/config.yaml (tracked in git)
 mcp_servers:
   github:
     env:
@@ -265,7 +265,7 @@ mcp_servers:
 ```
 
 ```bash
-# ~/.hermes/.env (NOT tracked)
+# ~/AppData/Local/hermes/.env (NOT tracked)
 GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
 ```
 
@@ -283,9 +283,9 @@ mcp_servers:
 
 ```bash
 # Secure config files
-chmod 600 ~/.hermes/config.yaml     # Owner read/write only
-chmod 600 ~/.hermes/.env             # Owner read/write only
-chmod 700 ~/.hermes                 # Owner access only
+chmod 600 ~/AppData/Local/hermes/config.yaml     # Owner read/write only
+chmod 600 ~/AppData/Local/hermes/.env             # Owner read/write only
+chmod 700 ~/AppData/Local/hermes                 # Owner access only
 ```
 
 ### OAuth Configuration
@@ -315,7 +315,7 @@ mcp_servers:
 ### Checklist
 
 **Pre-Deployment**:
-- [ ] All secrets in `~/.hermes/.env` (not in config.yaml)
+- [ ] All secrets in `~/AppData/Local/hermes/.env` (not in config.yaml)
 - [ ] File permissions set to `600` (config/env)
 - [ ] TLS certificates valid (HTTPS only)
 - [ ] MCP servers scoped to minimum tools

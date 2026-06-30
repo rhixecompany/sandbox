@@ -96,7 +96,7 @@ This is a Next.js 14 web application with a Python FastAPI backend.
 
 ## SOUL.md - Global Personality Configuration
 
-**Location:** `~/.hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
+**Location:** `~/AppData/Local/hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
 
 Controls agent's personality, tone, and communication style. See [Personality](/docs/user-guide/features/personality) page for full details.
 

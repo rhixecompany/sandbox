@@ -204,7 +204,7 @@ Expected output:
 
 ### Global Configuration
 
-**Location:** `~/.hermes/config.yaml`
+**Location:** `~/AppData/Local/hermes/config.yaml`
 
 ```yaml
 mcp_servers:
@@ -254,7 +254,7 @@ hermes config set terminal.docker.image nikolaik/python-nodejs:python3.11-nodejs
 When using SSH remote execution:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/AppData/Local/hermes/config.yaml
 terminal:
   backend: "ssh"
   ssh:
@@ -477,7 +477,7 @@ hermes chat "Start all services defined in docker-compose.yml"
 ### Multi-Host Docker
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/AppData/Local/hermes/config.yaml
 mcp_servers:
   docker-local:
     type: "stdio"
@@ -571,7 +571,7 @@ hermes mcp restart
 hermes mcp list
 
 # View logs
-tail -f ~/.hermes/hermes.log | grep docker
+tail -f ~/AppData/Local/hermes/hermes.log | grep docker
 ```
 
 ### Issue: "Out of disk space"
@@ -628,7 +628,7 @@ hermes chat "Run container with --security-opt=no-new-privileges and --read-only
 ### Caching
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/AppData/Local/hermes/config.yaml
 mcp_servers:
   docker:
     env:

@@ -85,7 +85,7 @@ Check skills before writing long procedural prompts.
 
 ### SOUL.md — Personality
 
-- **Location:** `~/.hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
+- **Location:** `~/AppData/Local/hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
 - **Auto-seeded** with starter personality
 - **Use for:** Durable personality (tone, verbosity, approach)
 - **Example:**
@@ -200,7 +200,7 @@ Always consider error handling and edge cases.
 | Tool not firing | Check `hermes tools` — is toolset enabled? |
 | Config not applying | `hermes config show` — verify YAML syntax |
 | MCP tools missing | `/reload-mcp` then "list MCP tools" |
-| Session not resuming | `hermes -c` requires same profile; check `~/.hermes/sessions/` |
+| Session not resuming | `hermes -c` requires same profile; check `~/AppData/Local/hermes/sessions/` |
 
 ---
 

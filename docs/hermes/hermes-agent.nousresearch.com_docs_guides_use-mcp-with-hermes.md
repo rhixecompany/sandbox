@@ -13,7 +13,7 @@ A concise, scannable guide to using MCP (Model Context Protocol) with Hermes Age
 Installation (when extras not installed):
 
 ```
-cd ~/.hermes/hermes-agentuv pip install -e ".[mcp]"
+cd ~/AppData/Local/hermes/hermes-agentuv pip install -e ".[mcp]"
 ```
 
 Example: add a single safe filesystem server
@@ -126,7 +126,7 @@ Do NOT use MCP when:
    - If installed without extras, add MCP:
 
      ```
-     cd ~/.hermes/hermes-agentuv pip install -e ".[mcp]"
+     cd ~/AppData/Local/hermes/hermes-agentuv pip install -e ".[mcp]"
      ```
 
    - For npm servers ensure Node.js and `npx` are available; for Python servers `uvx` is recommended.

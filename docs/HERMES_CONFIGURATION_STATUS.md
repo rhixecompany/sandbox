@@ -325,7 +325,7 @@ Cache Status: Healthy
 
 ### Credentials Management
 
-✅ All secrets in `~/.hermes/.env`  
+✅ All secrets in `~/AppData/Local/hermes/.env`  
 ✅ No hardcoded keys in config  
 ✅ API keys properly obfuscated in logs  
 ✅ File permissions: 600 (owner only)  

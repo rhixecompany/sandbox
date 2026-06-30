@@ -68,7 +68,7 @@ MCP is an open standard for AI applications to connect to external data sources 
 
 ### Core Configuration Files
 
-**Global Configuration** (`~/.hermes/config.yaml`)
+**Global Configuration** (`~/AppData/Local/hermes/config.yaml`)
 ```yaml
 model:
   default: gpt-5.4-mini
@@ -103,7 +103,7 @@ mcp:
       command: npx @modelcontextprotocol/server-github
 ```
 
-**Environment File** (`~/.hermes/.env` or project `.env`)
+**Environment File** (`~/AppData/Local/hermes/.env` or project `.env`)
 ```bash
 # LLM Provider Keys
 OPENROUTER_API_KEY=sk-...
@@ -263,7 +263,7 @@ hermes config set model.base_url https://opencode.ai/zen/v1/chat/completions
 
 ```bash
 # Create/update .env file
-cat > ~/.hermes/.env << 'EOF'
+cat > ~/AppData/Local/hermes/.env << 'EOF'
 # Primary LLM
 OPENROUTER_API_KEY=sk-or-v1-...
 # or
@@ -424,7 +424,7 @@ hermes mcp status
 **Phase 1: Backup Current Configuration**
 ```bash
 # Create backup
-cp -r ~/.hermes/config.yaml ~/.hermes/config.yaml.backup.$(date +%s)
+cp -r ~/AppData/Local/hermes/config.yaml ~/AppData/Local/hermes/config.yaml.backup.$(date +%s)
 cp -r hermes.yaml hermes.yaml.backup.$(date +%s)
 ```
 
@@ -458,7 +458,7 @@ bun add @modelcontextprotocol/server-git
 **Phase 4: Update Configuration**
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/AppData/Local/hermes/config.yaml
 mcp:
   servers:
     - name: filesystem
@@ -633,7 +633,7 @@ hermes --version
 
 # Check config file exists
 echo "✓ Config file location:"
-ls -la ~/.hermes/config.yaml
+ls -la ~/AppData/Local/hermes/config.yaml
 
 # Validate configuration
 echo "✓ Configuration validation:"
@@ -649,7 +649,7 @@ hermes tools list | head -20
 
 # Check profiles
 echo "✓ Available profiles:"
-ls -la ~/.hermes/profiles/
+ls -la ~/AppData/Local/hermes/profiles/
 ```
 
 #### 2. Project Configuration Verification
@@ -805,7 +805,7 @@ hermes execute --tool "mcp/list_tools" --server docker
 **Solution:**
 ```bash
 # Verify API keys in .env
-cat ~/.hermes/.env | grep API_KEY
+cat ~/AppData/Local/hermes/.env | grep API_KEY
 
 # Check environment variable loading
 hermes config get model.provider
@@ -815,7 +815,7 @@ hermes config get model.base_url
 hermes test-llm
 
 # Update keys if needed
-echo "OPENROUTER_API_KEY=sk-..." >> ~/.hermes/.env
+echo "OPENROUTER_API_KEY=sk-..." >> ~/AppData/Local/hermes/.env
 hermes config reload
 ```
 
@@ -885,7 +885,7 @@ hermes chat "test" --log-file /tmp/hermes-debug.log 2>&1
 hermes config audit
 
 # Validate YAML syntax
-hermes config validate --file ~/.hermes/config.yaml
+hermes config validate --file ~/AppData/Local/hermes/config.yaml
 
 # Test LLM connection
 hermes test-llm --verbose

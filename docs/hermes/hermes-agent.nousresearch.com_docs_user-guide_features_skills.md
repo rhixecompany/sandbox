@@ -2,7 +2,7 @@
 
 # Skills System — Hermes Agent (summary)
 
-Key purpose: Skills are on-demand knowledge documents the agent loads progressively to minimize tokens. They live primarily under `~/.hermes/skills/`, support external directories, bundles, hub installs, agent-managed creation, and security scanning.
+Key purpose: Skills are on-demand knowledge documents the agent loads progressively to minimize tokens. They live primarily under `~/AppData/Local/hermes/skills/`, support external directories, bundles, hub installs, agent-managed creation, and security scanning.
 
 ---
 
@@ -69,7 +69,7 @@ Here is your rendered chart:
 Bundle YAML schema example:
 
 ```
-~/.hermes/skill-bundles/<slug>.yaml
+~/AppData/Local/hermes/skill-bundles/<slug>.yaml
 name: backend-dev
 description: Backend feature work — review, test, PR workflow.
 skills:
@@ -120,8 +120,8 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --no-sk
 
 ### Where skills live
 
-- Primary source: `~/.hermes/skills/` (read-write). Bundled skills copied on install. Agent/hub-installed/created skills go here.
-- External directories supported: configure `skills.external_dirs` in `~/.hermes/config.yaml`:
+- Primary source: `~/AppData/Local/hermes/skills/` (read-write). Bundled skills copied on install. Agent/hub-installed/created skills go here.
+- External directories supported: configure `skills.external_dirs` in `~/AppData/Local/hermes/config.yaml`:
 
   ```
   skills:
@@ -215,7 +215,7 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --no-sk
 - Directory recommended structure:
 
   ```
-  ~/.hermes/skills/
+  ~/AppData/Local/hermes/skills/
   ├── category/
   │   ├── skill-name/
   │   │   ├── SKILL.md

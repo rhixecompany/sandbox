@@ -14,7 +14,7 @@ from datetime import datetime
 
 DOCS_DIR = os.path.expanduser("~/Desktop/SandBox/docs")
 RESEARCH_DIR = os.path.expanduser("~/Desktop/SandBox/research")
-OUTPUT_DIR = os.path.expanduser("~/.hermes/plans/inventory")
+OUTPUT_DIR = os.path.expanduser("~/AppData/Local/hermes/plans/inventory")
 
 def count_files(base_dir, glob_pattern="*.md"):
     """Count files by extension in a directory tree."""

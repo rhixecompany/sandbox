@@ -69,7 +69,7 @@ markdown body. **Location:** Project-specific (`SandBox/.github/agents/`)
 | research-analyst  | big-pickle   | research-analyst  | Found  | Research and analysis           |
 
 **Format:** YAML config entries + profile directories under
-`~/.hermes/profiles/`. **Location:** `~/AppData/Local/hermes/config.yaml` +
+`~/AppData/Local/hermes/profiles/`. **Location:** `~/AppData/Local/hermes/config.yaml` +
 `~/AppData/Local/hermes/profiles/`
 
 ### OpenCode — `~/.config/opencode/agents/` (19+ agents)

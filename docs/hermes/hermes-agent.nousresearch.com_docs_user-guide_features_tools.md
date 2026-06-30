@@ -77,7 +77,7 @@ The terminal tool executes commands in different environments:
 | `modal` | Cloud execution | Serverless, scale |
 | `daytona` | Cloud sandbox workspace | Persistent remote dev environments |
 
-### Configuration (`~/.hermes/config.yaml`)
+### Configuration (`~/AppData/Local/hermes/config.yaml`)
 
 ```yaml
 terminal:
@@ -122,7 +122,7 @@ terminal:
 ```
 
 ```bash
-# Set credentials in ~/.hermes/.env
+# Set credentials in ~/AppData/Local/hermes/.env
 TERMINAL_SSH_HOST=my-server.example.com
 TERMINAL_SSH_USER=myuser
 TERMINAL_SSH_KEY=~/.ssh/id_rsa
@@ -134,7 +134,7 @@ TERMINAL_SSH_KEY=~/.ssh/id_rsa
 
 ## Tool Configuration
 
-Tools can be configured per-toolset or globally. Use `hermes tools` for interactive configuration, or edit `~/.hermes/config.yaml` directly.
+Tools can be configured per-toolset or globally. Use `hermes tools` for interactive configuration, or edit `~/AppData/Local/hermes/config.yaml` directly.
 
 Example tool config:
 ```yaml

@@ -150,11 +150,11 @@ for skill in {8-patched-skills}; do
 done
 
 # 3. No broken cross-refs
-grep -r "skill_view()" ~/.hermes/skills/*/SKILL.md | grep -v "name=" | wc -l
+grep -r "skill_view()" ~/AppData/Local/hermes/skills/*/SKILL.md | grep -v "name=" | wc -l
 # Expected: 0
 
 # 4. SandBox context present
-grep -i "sandbox\|bash/" ~/.hermes/skills/*/SKILL.md | wc -l
+grep -i "sandbox\|bash/" ~/AppData/Local/hermes/skills/*/SKILL.md | wc -l
 # Expected: increased from pre-patch
 ```
 
