@@ -9,7 +9,12 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "name", "description", "category"],
+        "required": [
+          "id",
+          "name",
+          "description",
+          "category"
+        ],
         "additionalProperties": false,
         "properties": {
           "id": {
@@ -120,13 +125,22 @@
           "configuration": {
             "type": "object",
             "description": "Configuration snippet for the tool",
-            "required": ["type", "content"],
+            "required": [
+              "type",
+              "content"
+            ],
             "additionalProperties": false,
             "properties": {
               "type": {
                 "type": "string",
                 "description": "Type of configuration (for syntax highlighting)",
-                "enum": ["json", "yaml", "bash", "toml", "ini"]
+                "enum": [
+                  "json",
+                  "yaml",
+                  "bash",
+                  "toml",
+                  "ini"
+                ]
               },
               "content": {
                 "type": "string",
@@ -150,7 +164,9 @@
       }
     }
   },
-  "required": ["tools"],
+  "required": [
+    "tools"
+  ],
   "title": "Tools Catalog",
   "type": "object"
 }

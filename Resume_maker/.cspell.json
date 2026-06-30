@@ -1,6 +1,14 @@
 {
-  "ignorePaths": ["node_modules/**", "*.pdf", "bun.lock", "*.lock", "*.csv"],
-  "ignoreRegExpList": ["/\\[[\\w]+\\]\\([\\w:\\/.-]+\\)/g"],
+  "ignorePaths": [
+    "node_modules/**",
+    "*.pdf",
+    "bun.lock",
+    "*.lock",
+    "*.csv"
+  ],
+  "ignoreRegExpList": [
+    "/\\[[\\w]+\\]\\([\\w:\\/.-]+\\)/g"
+  ],
   "language": "en",
   "version": "0.2",
   "words": [

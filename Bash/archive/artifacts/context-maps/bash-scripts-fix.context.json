@@ -1,6 +1,6 @@
 {
   "dependencies": [],
-  "expansion_ratio": 1.0,
+  "expansion_ratio": 1,
   "has_safety_section": true,
   "md_size_kb": 7.2,
   "prompt_name": "bash-scripts-fix",

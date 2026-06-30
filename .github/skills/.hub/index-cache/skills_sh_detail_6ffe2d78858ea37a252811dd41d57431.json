@@ -1,1 +1,16 @@
-{"repo": "agents365-ai/365-skills", "install_skill": "drawio-skill", "page_title": "drawio-skill", "body_title": "Draw.io Diagrams", "body_summary": "Generate .drawio XML files and export to PNG/SVG/PDF/JPG locally using the native draw.io desktop app CLI.", "weekly_installs": null, "install_command": "npx skills add https://github.com/agents365-ai/365-skills --skill drawio-skill", "repo_url": "https://github.com/agents365-ai/365-skills", "detail_url": "https://skills.sh/agents365-ai/365-skills/drawio-skill", "security_audits": {"agent-trust-hub": "Pass", "socket": "Pass", "snyk": "Pass"}}
+{
+  "repo": "agents365-ai/365-skills",
+  "install_skill": "drawio-skill",
+  "page_title": "drawio-skill",
+  "body_title": "Draw.io Diagrams",
+  "body_summary": "Generate .drawio XML files and export to PNG/SVG/PDF/JPG locally using the native draw.io desktop app CLI.",
+  "weekly_installs": null,
+  "install_command": "npx skills add https://github.com/agents365-ai/365-skills --skill drawio-skill",
+  "repo_url": "https://github.com/agents365-ai/365-skills",
+  "detail_url": "https://skills.sh/agents365-ai/365-skills/drawio-skill",
+  "security_audits": {
+    "agent-trust-hub": "Pass",
+    "socket": "Pass",
+    "snyk": "Pass"
+  }
+}

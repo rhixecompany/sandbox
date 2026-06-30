@@ -28,7 +28,10 @@
       },
       "streaming": {
         "supported": true,
-        "modes": ["text", "sse"]
+        "modes": [
+          "text",
+          "sse"
+        ]
       }
     }
   },
@@ -125,9 +128,18 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "status": { "type": "string", "example": "ok" },
-                    "service": { "type": "string", "example": "copilot-studio-mcp" },
-                    "protocol": { "type": "string", "example": "mcp" }
+                    "status": {
+                      "type": "string",
+                      "example": "ok"
+                    },
+                    "service": {
+                      "type": "string",
+                      "example": "copilot-studio-mcp"
+                    },
+                    "protocol": {
+                      "type": "string",
+                      "example": "mcp"
+                    }
                   }
                 }
               }
@@ -141,18 +153,30 @@
     "schemas": {
       "JsonRpcRequest": {
         "type": "object",
-        "required": ["jsonrpc", "method", "id"],
+        "required": [
+          "jsonrpc",
+          "method",
+          "id"
+        ],
         "properties": {
           "jsonrpc": {
             "type": "string",
-            "enum": ["2.0"],
+            "enum": [
+              "2.0"
+            ],
             "description": "JSON-RPC protocol version"
           },
           "id": {
             "oneOf": [
-              { "type": "string" },
-              { "type": "integer" },
-              { "type": "null" }
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
             ],
             "description": "Request identifier. Null for notifications."
           },
@@ -173,13 +197,21 @@
         "properties": {
           "jsonrpc": {
             "type": "string",
-            "enum": ["2.0"]
+            "enum": [
+              "2.0"
+            ]
           },
           "id": {
             "oneOf": [
-              { "type": "string" },
-              { "type": "integer" },
-              { "type": "null" }
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
             ]
           },
           "result": {
@@ -189,9 +221,15 @@
           "error": {
             "type": "object",
             "properties": {
-              "code": { "type": "integer" },
-              "message": { "type": "string" },
-              "data": { "type": "object" }
+              "code": {
+                "type": "integer"
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
             },
             "description": "JSON-RPC error object"
           }
@@ -199,7 +237,11 @@
       },
       "ToolDefinition": {
         "type": "object",
-        "required": ["name", "description", "inputSchema"],
+        "required": [
+          "name",
+          "description",
+          "inputSchema"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -217,7 +259,10 @@
       },
       "ToolCallRequest": {
         "type": "object",
-        "required": ["name", "arguments"],
+        "required": [
+          "name",
+          "arguments"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -253,12 +298,19 @@
             },
             "status": {
               "type": "string",
-              "enum": ["active", "inactive", "lead", "any"],
+              "enum": [
+                "active",
+                "inactive",
+                "lead",
+                "any"
+              ],
               "description": "Filter by customer status",
               "default": "any"
             }
           },
-          "required": ["query"]
+          "required": [
+            "query"
+          ]
         }
       },
       {
@@ -277,7 +329,9 @@
               "default": true
             }
           },
-          "required": ["customer_id"]
+          "required": [
+            "customer_id"
+          ]
         }
       }
     ]

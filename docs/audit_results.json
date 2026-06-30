@@ -1,0 +1,6969 @@
+{
+  "summary": {
+    "total_files": 217,
+    "total_issues": 333,
+    "high": 9,
+    "medium": 96,
+    "low": 228
+  },
+  "files": {
+    "Prompts\\add-educational-comments.prompt.md": {
+      "lines": 190,
+      "size": 7431,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [150])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\agents-fix.prompt.md": {
+      "lines": 117,
+      "size": 3303,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "metadata"
+      ],
+      "headings": 12,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\agents-generator.prompt.md": {
+      "lines": 91,
+      "size": 3411,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\agents-system-prompt-context-fix.prompt.md": {
+      "lines": 121,
+      "size": 4506,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 43: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\ai-prompt-engineering-safety-review.prompt.md": {
+      "lines": 120,
+      "size": 4052,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 30: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\apple-appstore-reviewer.prompt.md": {
+      "lines": 173,
+      "size": 4798,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Double frontmatter fences (3 --- markers in first 60 lines)"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'What You Should Do First When Run'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 1,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\arch-linux-triage.prompt.md": {
+      "lines": 84,
+      "size": 1984,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\architecture-blueprint-generator.prompt.md": {
+      "lines": 113,
+      "size": 4307,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\aspnet-minimal-api-openapi.prompt.md": {
+      "lines": 97,
+      "size": 2969,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\audit-skills-judge-fix.prompt.md": {
+      "lines": 171,
+      "size": 8246,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 12,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 43: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\az-cost-optimize.prompt.md": {
+      "lines": 162,
+      "size": 4977,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\azure-resource-health-diagnose.prompt.md": {
+      "lines": 205,
+      "size": 6071,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\bash-scripts-fix.prompt.md": {
+      "lines": 215,
+      "size": 7575,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\bigquery-pipeline-audit.prompt.md": {
+      "lines": 165,
+      "size": 5856,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\boost-prompt.prompt.md": {
+      "lines": 132,
+      "size": 4276,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 12,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 31: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\breakdown-epic-arch.prompt.md": {
+      "lines": 132,
+      "size": 3703,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\breakdown-epic-pm.prompt.md": {
+      "lines": 122,
+      "size": 3708,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\breakdown-feature-implementation.prompt.md": {
+      "lines": 113,
+      "size": 3371,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\breakdown-feature-prd.prompt.md": {
+      "lines": 120,
+      "size": 3599,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\breakdown-plan.prompt.md": {
+      "lines": 384,
+      "size": 10813,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 67,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Definition of Done'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Labels'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Estimate'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Acceptance Criteria'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Dependencies'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Definition of Done'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Labels'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Estimate'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Acceptance Criteria'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Definition of Done'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Labels'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Feature'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Estimate'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 15,
+      "high": 0,
+      "medium": 14,
+      "low": 1
+    },
+    "Prompts\\breakdown-test.prompt.md": {
+      "lines": 331,
+      "size": 9945,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 50,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'ISTQB Framework Application'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Labels'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Estimate'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Labels'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Estimate'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 7,
+      "high": 0,
+      "medium": 6,
+      "low": 1
+    },
+    "Prompts\\centos-linux-triage.prompt.md": {
+      "lines": 82,
+      "size": 1992,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\code-exemplars-blueprint-generator.prompt.md": {
+      "lines": 132,
+      "size": 4562,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\code-review.prompt.md": {
+      "lines": 128,
+      "size": 4033,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\comicwise-development.prompt.md": {
+      "lines": 289,
+      "size": 9946,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "applyTo",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 27,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\comment-code-generate-a-tutorial.prompt.md": {
+      "lines": 105,
+      "size": 2895,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\containerize-aspnet-framework.prompt.md": {
+      "lines": 167,
+      "size": 5916,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\containerize-aspnetcore.prompt.md": {
+      "lines": 193,
+      "size": 6629,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 20,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [142])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\context-map.prompt.md": {
+      "lines": 115,
+      "size": 3330,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 26: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\conventional-commit.prompt.md": {
+      "lines": 103,
+      "size": 3014,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\convert-plaintext-to-md.prompt.md": {
+      "lines": 146,
+      "size": 6333,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 27: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\copilot-instructions-blueprint-generator.prompt.md": {
+      "lines": 259,
+      "size": 10458,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 29,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 2 lines (first: [170, 199])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\cosmosdb-datamodeling.prompt.md": {
+      "lines": 265,
+      "size": 11501,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Access Pattern Mapping'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\create-agentsmd.prompt.md": {
+      "lines": 263,
+      "size": 8407,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 35,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Testing instructions'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\create-architectural-decision-record.prompt.md": {
+      "lines": 212,
+      "size": 5869,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 29,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Inputs'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Context'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 2,
+      "low": 1
+    },
+    "Prompts\\create-github-action-workflow-specification.prompt.md": {
+      "lines": 330,
+      "size": 8644,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 42,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 1,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\create-github-issue-feature-from-specification.prompt.md": {
+      "lines": 128,
+      "size": 3501,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-github-issues-feature-from-implementation-plan.prompt.md": {
+      "lines": 128,
+      "size": 3573,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-github-issues-for-unmet-specification-requirements.prompt.md": {
+      "lines": 136,
+      "size": 3922,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-github-pull-request-from-specification.prompt.md": {
+      "lines": 126,
+      "size": 4201,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-implementation-plan.prompt.md": {
+      "lines": 265,
+      "size": 8598,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\create-llms.prompt.md": {
+      "lines": 217,
+      "size": 6289,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 29,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-oo-component-documentation.prompt.md": {
+      "lines": 255,
+      "size": 8280,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 31,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-readme.prompt.md": {
+      "lines": 117,
+      "size": 3657,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-specification.prompt.md": {
+      "lines": 155,
+      "size": 4754,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [126])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\create-spring-boot-java-project.prompt.md": {
+      "lines": 175,
+      "size": 4870,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-spring-boot-kotlin-project.prompt.md": {
+      "lines": 121,
+      "size": 3262,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [108])"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Unzip the downloaded file'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 1,
+      "low": 2
+    },
+    "Prompts\\create-technical-spike.prompt.md": {
+      "lines": 255,
+      "size": 6768,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 28,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\create-tldr-page.prompt.md": {
+      "lines": 181,
+      "size": 5898,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-async.prompt.md": {
+      "lines": 106,
+      "size": 3024,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-docs.prompt.md": {
+      "lines": 119,
+      "size": 5196,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-mcp-server-generator.prompt.md": {
+      "lines": 94,
+      "size": 2561,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-mstest.prompt.md": {
+      "lines": 159,
+      "size": 4105,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-nunit.prompt.md": {
+      "lines": 131,
+      "size": 4011,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-tunit.prompt.md": {
+      "lines": 155,
+      "size": 6216,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\csharp-xunit.prompt.md": {
+      "lines": 128,
+      "size": 3872,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\database.prompt.md": {
+      "lines": 98,
+      "size": 2292,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 3,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 1,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dataverse-python-advanced-patterns.prompt.md": {
+      "lines": 59,
+      "size": 2082,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dataverse-python-production-code.prompt.md": {
+      "lines": 116,
+      "size": 3149,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dataverse-python-quickstart.prompt.md": {
+      "lines": 56,
+      "size": 1561,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dataverse-python-usecase-builder.prompt.md": {
+      "lines": 172,
+      "size": 4672,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\debian-linux-triage.prompt.md": {
+      "lines": 84,
+      "size": 2027,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\debug-issue.prompt.md": {
+      "lines": 88,
+      "size": 1948,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\debugger-prompt.md": {
+      "lines": 123,
+      "size": 6316,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\declarative-agents.prompt.md": {
+      "lines": 152,
+      "size": 5342,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dev-imp.prompt.md": {
+      "lines": 261,
+      "size": 8723,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "toolsets",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 34,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dev-init.prompt.md": {
+      "lines": 518,
+      "size": 17674,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 58,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 362: Heading level skip (h1 -> h3): '### Step 6.2 \u2014 Cross-Reference Validation'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 372: Heading level skip (h1 -> h3): '### Step 6.3 \u2014 Conflict Detection'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 382: Heading level skip (h1 -> h3): '### Step 6.4 \u2014 Quality Scoring'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 488: Heading level skip (h1 -> h3): '### Tasks'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Phase 5: Execute Implementation Plan'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Tasks'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Tasks'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Tasks'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 10,
+      "high": 1,
+      "medium": 8,
+      "low": 1
+    },
+    "Prompts\\dev.prompt.md": {
+      "lines": 77,
+      "size": 2643,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 6,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\development.prompt.md": {
+      "lines": 102,
+      "size": 4694,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [88])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\devops-rollout-plan.prompt.md": {
+      "lines": 137,
+      "size": 3886,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\documentation-writer.prompt.md": {
+      "lines": 137,
+      "size": 5135,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\documentation.prompt.md": {
+      "lines": 129,
+      "size": 4118,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dotnet-best-practices.prompt.md": {
+      "lines": 149,
+      "size": 4646,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dotnet-design-pattern-review.prompt.md": {
+      "lines": 93,
+      "size": 4367,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\dotnet-upgrade.prompt.md": {
+      "lines": 138,
+      "size": 7836,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\editorconfig.prompt.md": {
+      "lines": 136,
+      "size": 6202,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\ef-core.prompt.md": {
+      "lines": 171,
+      "size": 4980,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 21,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\execute-acpx-agents-feature-specs.prompt.md": {
+      "lines": 57,
+      "size": 1318,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\execute-all-prompts.prompt.md": {
+      "lines": 138,
+      "size": 5384,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 38: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\execute-dev-init-spec.prompt.md": {
+      "lines": 56,
+      "size": 1198,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\execute-hermes-configuration-spec.prompt.md": {
+      "lines": 57,
+      "size": 1325,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\execute-multi-agent-research.prompt.md": {
+      "lines": 56,
+      "size": 1298,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\features.prompt.md": {
+      "lines": 131,
+      "size": 3010,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 1,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\fedora-linux-triage.prompt.md": {
+      "lines": 84,
+      "size": 1986,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\finalize-agent-prompt.prompt.md": {
+      "lines": 115,
+      "size": 3280,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\first-ask.prompt.md": {
+      "lines": 100,
+      "size": 2649,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\folder-structure-blueprint-generator.prompt.md": {
+      "lines": 122,
+      "size": 3875,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\gen-specs-as-issues.prompt.md": {
+      "lines": 231,
+      "size": 6757,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 30,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\general.prompt.md": {
+      "lines": 166,
+      "size": 4647,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 1,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\generate-custom-instructions-from-codebase.prompt.md": {
+      "lines": 226,
+      "size": 7475,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\generate-docs.prompt.md": {
+      "lines": 121,
+      "size": 2995,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\generator-orchestrator.prompt.md": {
+      "lines": 179,
+      "size": 6829,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\git-flow-branch-creator.prompt.md": {
+      "lines": 97,
+      "size": 2711,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\github-copilot-starter.prompt.md": {
+      "lines": 279,
+      "size": 9026,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 28,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\go-mcp-server-generator.prompt.md": {
+      "lines": 256,
+      "size": 5785,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-epic-arch.prompt.md": {
+      "lines": 97,
+      "size": 2351,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-epic-pm.prompt.md": {
+      "lines": 95,
+      "size": 2301,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-feature-implementation.prompt.md": {
+      "lines": 102,
+      "size": 2651,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-feature-prd.prompt.md": {
+      "lines": 93,
+      "size": 2304,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-plan.prompt.md": {
+      "lines": 103,
+      "size": 2961,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\hermes-breakdown-test.prompt.md": {
+      "lines": 101,
+      "size": 2587,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\Initial.prompt.md": {
+      "lines": 94,
+      "size": 5574,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "name",
+        "title",
+        "description",
+        "version",
+        "updated",
+        "platforms",
+        "packageManager",
+        "framework",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-add-graalvm-native-image-support.prompt.md": {
+      "lines": 107,
+      "size": 4075,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-docs.prompt.md": {
+      "lines": 65,
+      "size": 2316,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 3,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-junit.prompt.md": {
+      "lines": 124,
+      "size": 4146,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-mcp-server-generator.prompt.md": {
+      "lines": 269,
+      "size": 6154,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 31,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Maven'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Gradle'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Maven'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Gradle'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 5,
+      "high": 0,
+      "medium": 4,
+      "low": 1
+    },
+    "Prompts\\java-refactoring-extract-method.prompt.md": {
+      "lines": 123,
+      "size": 3493,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-refactoring-remove-parameter.prompt.md": {
+      "lines": 136,
+      "size": 4100,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\java-springboot.prompt.md": {
+      "lines": 128,
+      "size": 5385,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\javascript-typescript-jest.prompt.md": {
+      "lines": 115,
+      "size": 3392,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\kotlin-mcp-server-generator.prompt.md": {
+      "lines": 337,
+      "size": 8133,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\kotlin-springboot.prompt.md": {
+      "lines": 128,
+      "size": 5608,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\mcp-copilot-studio-server-generator.prompt.md": {
+      "lines": 166,
+      "size": 4554,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\mcp-create-adaptive-cards.prompt.md": {
+      "lines": 215,
+      "size": 6069,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 29,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\mcp-create-declarative-agent.prompt.md": {
+      "lines": 260,
+      "size": 7087,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 37,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\mcp-deploy-manage-agents.prompt.md": {
+      "lines": 353,
+      "size": 10005,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 53,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Best Practices'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\memory-merger.prompt.md": {
+      "lines": 168,
+      "size": 5029,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 20,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\migrate-to-next16.prompt.md": {
+      "lines": 87,
+      "size": 1950,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 2,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\mkdocs-translations.prompt.md": {
+      "lines": 203,
+      "size": 6391,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 22,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 6 lines (first: [109, 144, 154])"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "Prompts\\model-recommendation.prompt.md": {
+      "lines": 374,
+      "size": 12396,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 53,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Inputs'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\multi-agent-research-template.prompt.md": {
+      "lines": 229,
+      "size": 10104,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "name",
+        "title",
+        "description",
+        "tags",
+        "trigger",
+        "version",
+        "author",
+        "license",
+        "metadata"
+      ],
+      "headings": 19,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\multi-stage-dockerfile.prompt.md": {
+      "lines": 142,
+      "size": 4640,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\my-issues.prompt.md": {
+      "lines": 102,
+      "size": 2408,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\my-pull-requests.prompt.md": {
+      "lines": 107,
+      "size": 2634,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\next-intl-add-language.prompt.md": {
+      "lines": 106,
+      "size": 2599,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\nextjs-tailwind.prompt.md": {
+      "lines": 130,
+      "size": 4257,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\openapi-to-application-code.prompt.md": {
+      "lines": 179,
+      "size": 6008,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 19,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\optimize-agentsMd.prompt.md": {
+      "lines": 115,
+      "size": 3318,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\performance.prompt.md": {
+      "lines": 128,
+      "size": 3907,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\php-mcp-server-generator.prompt.md": {
+      "lines": 220,
+      "size": 4710,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\pl.md": {
+      "lines": 173,
+      "size": 6525,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Double frontmatter fences (3 --- markers in first 60 lines)"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 1,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\plan-audit.prompt.md": {
+      "lines": 143,
+      "size": 4990,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 37: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\plan-batch-fix.prompt.md": {
+      "lines": 146,
+      "size": 4543,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 34: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 111: Heading level skip (h1 -> h3): '### Phase 2: Batch fixes'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 2,
+      "low": 1
+    },
+    "Prompts\\plan-execute.prompt.md": {
+      "lines": 129,
+      "size": 4367,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 11,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 32: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\plan-generate.prompt.md": {
+      "lines": 142,
+      "size": 4430,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 36: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Verification Checklist'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 4,
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "Prompts\\playwright-automation-fill-in-form.prompt.md": {
+      "lines": 181,
+      "size": 4760,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "version",
+        "title",
+        "name",
+        "description",
+        "trigger",
+        "author",
+        "created",
+        "compatibility",
+        "mcp_generator",
+        "skill_stub",
+        "tags",
+        "metadata"
+      ],
+      "headings": 25,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Context'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Rules'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Phases'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 4,
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "Prompts\\playwright-explore-website.prompt.md": {
+      "lines": 183,
+      "size": 4926,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "version",
+        "title",
+        "name",
+        "description",
+        "trigger",
+        "author",
+        "created",
+        "compatibility",
+        "mcp_generator",
+        "skill_stub",
+        "tags",
+        "metadata"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Context'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Rules'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Phases'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 4,
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "Prompts\\playwright-generate-test.prompt.md": {
+      "lines": 185,
+      "size": 4997,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "version",
+        "title",
+        "name",
+        "description",
+        "trigger",
+        "author",
+        "created",
+        "compatibility",
+        "mcp_generator",
+        "skill_stub",
+        "tags",
+        "metadata"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Context'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Rules'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Phases'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 4,
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "Prompts\\playwright-typescript.prompt.md": {
+      "lines": 126,
+      "size": 4036,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\postgresql-code-review.prompt.md": {
+      "lines": 188,
+      "size": 5948,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tested_with",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 22,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\postgresql-optimization.prompt.md": {
+      "lines": 209,
+      "size": 6054,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tested_with",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-apps-code-app-scaffold.prompt.md": {
+      "lines": 93,
+      "size": 2890,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-bi-dax-optimization.prompt.md": {
+      "lines": 116,
+      "size": 3164,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-bi-model-design-review.prompt.md": {
+      "lines": 98,
+      "size": 2729,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-bi-performance-troubleshooting.prompt.md": {
+      "lines": 108,
+      "size": 3121,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-bi-report-design-consultation.prompt.md": {
+      "lines": 88,
+      "size": 2643,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\power-platform-mcp-connector-suite.prompt.md": {
+      "lines": 199,
+      "size": 5941,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\project-workflow-analysis-blueprint-generator.prompt.md": {
+      "lines": 148,
+      "size": 4770,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\projects-init.prompt.md": {
+      "lines": 135,
+      "size": 5222,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 38: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 2,
+      "low": 1
+    },
+    "Prompts\\prompt-builder.prompt.md": {
+      "lines": 158,
+      "size": 7218,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\prompt-management.prompt.md": {
+      "lines": 390,
+      "size": 10322,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 39,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\prompts-fix.prompt.md": {
+      "lines": 135,
+      "size": 4135,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "metadata"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\prompts-strict-template.prompt.md": {
+      "lines": 131,
+      "size": 4086,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\pytest-coverage.prompt.md": {
+      "lines": 98,
+      "size": 2508,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\python-mcp-server-generator.prompt.md": {
+      "lines": 175,
+      "size": 5221,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 20,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\quality-gate-debugger.prompt.md": {
+      "lines": 238,
+      "size": 8951,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\readme-blueprint-generator.prompt.md": {
+      "lines": 181,
+      "size": 5423,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\refactor-code.prompt.md": {
+      "lines": 151,
+      "size": 3715,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\refactor-mardown-files.prompt.md": {
+      "lines": 190,
+      "size": 7227,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 20,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\refactor-method-complexity-reduce.prompt.md": {
+      "lines": 79,
+      "size": 2251,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "argument-hint",
+        "metadata"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\refactor-plan.prompt.md": {
+      "lines": 121,
+      "size": 3073,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\refresh-agent-inventory.prompt.md": {
+      "lines": 147,
+      "size": 4911,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "mode",
+        "metadata"
+      ],
+      "headings": 16,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\remember-interactive-programming.prompt.md": {
+      "lines": 94,
+      "size": 3033,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\remember.prompt.md": {
+      "lines": 191,
+      "size": 6501,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 25,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\repo-management.prompt.md": {
+      "lines": 94,
+      "size": 3138,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 27: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\repo-research-pipeline.prompt.md": {
+      "lines": 70,
+      "size": 2606,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 25: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\repo-story-time.prompt.md": {
+      "lines": 73,
+      "size": 2537,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 18: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\repo.prompt.md": {
+      "lines": 431,
+      "size": 15966,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 51: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 188: Heading level skip (h1 -> h3): '### Phase 2: Report Writing'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: '<Technology/Topic>'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 5,
+      "high": 1,
+      "medium": 3,
+      "low": 1
+    },
+    "Prompts\\review-and-refactor.prompt.md": {
+      "lines": 110,
+      "size": 3142,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\ruby-mcp-server-generator.prompt.md": {
+      "lines": 338,
+      "size": 7783,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 31,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'frozen_string_literal: true'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'frozen_string_literal: true'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 2,
+      "low": 1
+    },
+    "Prompts\\run-session-agentsmd-workflow.prompt.md": {
+      "lines": 170,
+      "size": 5857,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\rust-mcp-server-generator.prompt.md": {
+      "lines": 201,
+      "size": 4430,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\security.prompt.md": {
+      "lines": 132,
+      "size": 4022,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\seed-review-and-create.prompt.md": {
+      "lines": 110,
+      "size": 3571,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 9,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\session-agentsmd-full-workflow.prompt.md": {
+      "lines": 181,
+      "size": 6601,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\setup-component.prompt.md": {
+      "lines": 123,
+      "size": 3033,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\setup-enhanced.prompt.md": {
+      "lines": 207,
+      "size": 6053,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\setup-nextjs-frontend-stack.prompt.md": {
+      "lines": 268,
+      "size": 12741,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 4,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\setup.prompt.md": {
+      "lines": 390,
+      "size": 15658,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 32,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\shuffle-json-data.prompt.md": {
+      "lines": 203,
+      "size": 6622,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\skills-debug-prompt.prompt.md": {
+      "lines": 83,
+      "size": 2087,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "metadata"
+      ],
+      "headings": 7,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\skills-fix.prompt.md": {
+      "lines": 280,
+      "size": 11369,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 21,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 52: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Line 210: Heading level skip (h1 -> h3): '### Phase 6: Verify'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 2,
+      "low": 1
+    },
+    "Prompts\\sql-code-review.prompt.md": {
+      "lines": 192,
+      "size": 5562,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tested_with",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 25,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\sql-optimization.prompt.md": {
+      "lines": 208,
+      "size": 6372,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tested_with",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\structured-autonomy-generate.prompt.md": {
+      "lines": 122,
+      "size": 3414,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\structured-autonomy-implement.prompt.md": {
+      "lines": 93,
+      "size": 2384,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\structured-autonomy-plan.prompt.md": {
+      "lines": 138,
+      "size": 3952,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 19,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Goal'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\suggest-awesome-github-copilot-agents.prompt.md": {
+      "lines": 212,
+      "size": 7736,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 22,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\suggest-awesome-github-copilot-instructions.prompt.md": {
+      "lines": 233,
+      "size": 8393,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\suggest-awesome-github-copilot-prompts.prompt.md": {
+      "lines": 212,
+      "size": 7326,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 22,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [109])"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 1,
+      "low": 2
+    },
+    "Prompts\\suggest-awesome-github-copilot-skills.prompt.md": {
+      "lines": 241,
+      "size": 8647,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\swift-mcp-server-generator.prompt.md": {
+      "lines": 373,
+      "size": 9186,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 42,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\sync-hermes-copilot-codex.prompt.md": {
+      "lines": 118,
+      "size": 4062,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 10,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 36: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\task-implementation.prompt.md": {
+      "lines": 127,
+      "size": 4126,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\tasksync.prompt.md": {
+      "lines": 126,
+      "size": 4056,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\technology-stack-blueprint-generator.prompt.md": {
+      "lines": 128,
+      "size": 4716,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 15,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\test-providers-models.prompt.md": {
+      "lines": 265,
+      "size": 12903,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 25,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 45: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\testing.prompt.md": {
+      "lines": 127,
+      "size": 3786,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\tldr-prompt.prompt.md": {
+      "lines": 256,
+      "size": 10973,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 30,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\typescript-mcp-server-generator.prompt.md": {
+      "lines": 159,
+      "size": 4879,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 19,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\typescript.prompt.md": {
+      "lines": 132,
+      "size": 4099,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\typespec-api-operations.prompt.md": {
+      "lines": 199,
+      "size": 5326,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "mode",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\typespec-create-agent.prompt.md": {
+      "lines": 139,
+      "size": 3884,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "mode",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\typespec-create-api-plugin.prompt.md": {
+      "lines": 154,
+      "size": 4424,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "mode",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 18,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-avm-modules-in-bicep.prompt.md": {
+      "lines": 164,
+      "size": 4700,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 20,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-docs-on-code-change.prompt.md": {
+      "lines": 134,
+      "size": 4392,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "metadata"
+      ],
+      "headings": 14,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-implementation-plan.prompt.md": {
+      "lines": 137,
+      "size": 5144,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "trigger",
+        "description",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 12,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 30: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\update-llms.prompt.md": {
+      "lines": 216,
+      "size": 6370,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 28,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-markdown-file-index.prompt.md": {
+      "lines": 188,
+      "size": 5493,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 23,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-oo-component-documentation.prompt.md": {
+      "lines": 205,
+      "size": 6176,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 24,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\update-specification.prompt.md": {
+      "lines": 211,
+      "size": 6209,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 26,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [164])"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Template References'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 1,
+      "low": 2
+    },
+    "Prompts\\web-research-pipeline.prompt.md": {
+      "lines": 65,
+      "size": 2331,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "trigger",
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 5,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 23: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\what-context-needed.prompt.md": {
+      "lines": 120,
+      "size": 2983,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 17,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\workspace-consolidate.prompt.md": {
+      "lines": 481,
+      "size": 20862,
+      "has_frontmatter": true,
+      "fm_valid": false,
+      "fm_fields": [],
+      "headings": 27,
+      "issues": [
+        {
+          "severity": "HIGH",
+          "type": "frontmatter",
+          "detail": "Unclosed frontmatter fence (no closing --- in first 60 lines)"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "structure",
+          "detail": "Duplicate heading: 'Steps'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 1,
+      "medium": 1,
+      "low": 1
+    },
+    "Prompts\\write-coding-standards-from-file.prompt.md": {
+      "lines": 271,
+      "size": 8901,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 19,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "formatting",
+          "detail": "Trailing whitespace on 1 lines (first: [111])"
+        },
+        {
+          "severity": "LOW",
+          "type": "content",
+          "detail": "TODO/FIXME markers on 2 lines"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 3,
+      "high": 0,
+      "medium": 0,
+      "low": 3
+    },
+    "Prompts\\write-tests.prompt.md": {
+      "lines": 120,
+      "size": 2996,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "toolsets",
+        "license",
+        "author",
+        "version",
+        "title",
+        "name",
+        "description",
+        "tags",
+        "metadata",
+        "trigger"
+      ],
+      "headings": 13,
+      "issues": [
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "Prompts\\zod-schema-generation.prompt.md": {
+      "lines": 66,
+      "size": 1624,
+      "has_frontmatter": true,
+      "fm_valid": true,
+      "fm_fields": [
+        "license",
+        "author",
+        "version",
+        "name",
+        "title",
+        "description",
+        "trigger",
+        "tags",
+        "dependencies",
+        "skills",
+        "metadata"
+      ],
+      "headings": 8,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "type": "skills-prose",
+          "detail": "Line 26: skills: section has dependency-style prose instead of list: 'metadata:'"
+        },
+        {
+          "severity": "LOW",
+          "type": "naming",
+          "detail": "File in Prompts/ doesn't use .prompts.md extension"
+        }
+      ],
+      "issue_count": 2,
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    }
+  }
+}

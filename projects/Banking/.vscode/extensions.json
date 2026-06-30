@@ -1,17 +1,17 @@
 {
-    "recommendations": [
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint",
-        "bradlc.vscode-tailwindcss",
-        "ms-vscode.vscode-typescript-next",
-        "usernamehw.errorlens",
-        "formulahendry.auto-rename-tag",
-        "christian-kohler.npm-intellisense",
-        "drizzle.drizzle",
-        "oven.bun-vscode"
-    ],
-    "unwantedRecommendations": [
-        "ms-vscode.vscode-typescript-tslint-plugin",
-        "hookyqr.beautify"
-    ]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "usernamehw.errorlens",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.npm-intellisense",
+    "drizzle.drizzle",
+    "oven.bun-vscode"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "hookyqr.beautify"
+  ]
 }

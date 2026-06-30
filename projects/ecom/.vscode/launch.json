@@ -6,7 +6,9 @@
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
-      "args": ["runserver"],
+      "args": [
+        "runserver"
+      ],
       "django": true,
       "justMyCode": true
     },
@@ -15,7 +17,11 @@
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
-      "args": ["test", "--keepdb", "--verbosity=2"],
+      "args": [
+        "test",
+        "--keepdb",
+        "--verbosity=2"
+      ],
       "django": true,
       "justMyCode": true
     },

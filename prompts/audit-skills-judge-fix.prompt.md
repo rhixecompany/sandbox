@@ -45,17 +45,7 @@ metadata:
     related_skills: []
     tags:
     - audit-skills-judge-fix.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - audit-skills-judge-fix.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - audit-skills-judge-fix.prompt
 
 # Audit Skills Judge Fix
 

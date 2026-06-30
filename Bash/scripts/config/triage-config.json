@@ -7,7 +7,7 @@
   },
   "health_scoring": {
     "issue_weight": 0.5,
-    "vulnerability_weight": 2.0,
+    "vulnerability_weight": 2,
     "stale_commit_threshold_days": 30
   },
   "output": {

@@ -9,7 +9,11 @@
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts"
   },
-  "keywords": ["mcp", "model-context-protocol", "typescript"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "typescript"
+  ],
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",

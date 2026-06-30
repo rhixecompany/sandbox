@@ -1,10 +1,13 @@
 {
   "dependencies": [],
-  "expansion_ratio": 96.0,
+  "expansion_ratio": 96,
   "has_safety_section": true,
   "md_size_kb": 3.5,
   "prompt_name": "dev-init",
-  "skills_required": ["brainstorming", "plans-and-specs"],
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs"
+  ],
   "status": "needs_enhancement",
   "tags": [
     "hermes",

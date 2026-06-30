@@ -1,35 +1,35 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "command": "bun run format",
-            "label": "Bash: Format",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        },
-        {
-            "command": "bun run typecheck",
-            "label": "Bash: Type Check",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        },
-        {
-            "command": "bun test",
-            "label": "Bash: Test",
-            "type": "shell",
-            "group": "test",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "command": "bun run format",
+      "label": "Bash: Format",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "bun run typecheck",
+      "label": "Bash: Type Check",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "bun test",
+      "label": "Bash: Test",
+      "type": "shell",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
 }

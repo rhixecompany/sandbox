@@ -23,7 +23,10 @@
         "health_category": "healthy",
         "issue_count": 2,
         "total_vulnerabilities": 0,
-        "detected_managers": ["npm", "yarn"],
+        "detected_managers": [
+          "npm",
+          "yarn"
+        ],
         "days_since_last_commit": 1
       },
       {
@@ -35,7 +38,10 @@
         "health_category": "healthy",
         "issue_count": 5,
         "total_vulnerabilities": 3,
-        "detected_managers": ["pip", "poetry"],
+        "detected_managers": [
+          "pip",
+          "poetry"
+        ],
         "days_since_last_commit": 2
       },
       {
@@ -47,7 +53,10 @@
         "health_category": "warning",
         "issue_count": 28,
         "total_vulnerabilities": 15,
-        "detected_managers": ["npm", "maven"],
+        "detected_managers": [
+          "npm",
+          "maven"
+        ],
         "days_since_last_commit": 180
       },
       {
@@ -59,7 +68,9 @@
         "health_category": "critical",
         "issue_count": 42,
         "total_vulnerabilities": 31,
-        "detected_managers": ["pip"],
+        "detected_managers": [
+          "pip"
+        ],
         "days_since_last_commit": 730
       }
     ]

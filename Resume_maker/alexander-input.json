@@ -29,7 +29,11 @@
       "degree": "Bachelor of Science in Computer Science",
       "institution": "University of Technology",
       "graduationYear": "2024",
-      "relevantCoursework": ["Data Structures", "Algorithms", "Web Development"]
+      "relevantCoursework": [
+        "Data Structures",
+        "Algorithms",
+        "Web Development"
+      ]
     }
   ],
   "skills": [

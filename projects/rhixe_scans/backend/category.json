@@ -1,6 +1,14 @@
 [
-  { "name": "Manhwa" },
-  { "name": "Manhua" },
-  { "name": "Manga" },
-  { "name": "Mangatoon" }
+  {
+    "name": "Manhwa"
+  },
+  {
+    "name": "Manhua"
+  },
+  {
+    "name": "Manga"
+  },
+  {
+    "name": "Mangatoon"
+  }
 ]

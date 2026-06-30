@@ -1,7 +1,10 @@
 {
   "stacks": {
     "typescript-node": {
-      "detectionFiles": ["package.json", "tsconfig.json"],
+      "detectionFiles": [
+        "package.json",
+        "tsconfig.json"
+      ],
       "diagnostics": [
         {
           "name": "npm-list",
@@ -37,7 +40,9 @@
       ]
     },
     "javascript-node": {
-      "detectionFiles": ["package.json"],
+      "detectionFiles": [
+        "package.json"
+      ],
       "diagnostics": [
         {
           "name": "npm-list",

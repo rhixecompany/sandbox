@@ -94,11 +94,16 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 ## Phases
 
 > ### Phase 1: Audit Skills Judge Fix
-> **Prompt file:** `audit-skills-judge-fix.prompt.md`
-
-> **Full content:** `templates/execute-all-prompts/phases.md`
-
-## Actions Summary
+> **Prompt file:** `prompts/audit-skills-judge-fix.prompt.md`
+>
+> ### Phase 2: Agents System Prompt Context Fix
+> **Prompt file:** `prompts/agents-system-prompt-context-fix.prompt.md`
+>
+> ### Phase 3: Sync Hermes Copilot Codex
+> **Prompt file:** `prompts/sync-hermes-copilot-codex.prompt.md`
+>
+> ### Phase 4: Test Providers & Models
+> **Prompt file:** `prompts/test-providers-models.prompt.md`
 
 1. Run skills audit → categorize → dedupe → judge → remediate → consolidate → verify
 2. Generate agent context files → audit VS Code configs → verify

@@ -1,1 +1,127 @@
-[{"name": "drawio-AI-maker", "description": "将自然语言或文档（docx/pdf/txt）转换为 draw.io 可编辑 XML 图表（.drawio 文件）。当用户说\"画个流程图\"、\"生成图表\"、\"画架构图/时序图/网络拓扑图\"、\"帮我画xxx流程\"、\"生成draw.io\"等时自动触发。使用流程：接收描述→生成JSON→用户确认→调用gen.py生成.dr...", "source": "clawhub", "identifier": "drawio-ai-maker", "trust_level": "community", "repo": null, "path": null, "tags": ["ai", "architecture", "diagram", "drawio", "flowchart", "generator", "network", "sequence"], "extra": {}}, {"name": "drawio-flowchart", "description": "Generate clean, well-structured draw.io (.drawio) XML flowcharts with proper swimlane containers, text hierarchy, color coding, and orthogonal arrows for wor...", "source": "clawhub", "identifier": "drawio-flowchart", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "Drawio Generator.Bak", "description": "Generate draw.io diagrams from Mermaid, XML, or CSV code. Use this skill when the user requests any visual diagram including flowcharts, UML diagrams, ERD, a...", "source": "clawhub", "identifier": "drawio-generator-bak", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "Drawio Skill", "description": "Use when the user requests diagrams, flowcharts, architecture diagrams, ER diagrams, UML / sequence / class diagrams, network topology, ML/DL model figures (...", "source": "clawhub", "identifier": "drawio-pro-skill", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "Drawio Studio", "description": "Use when creating editable technical diagrams with draw.io / diagrams.net sources, including architecture diagrams, ERD, UML, sequence diagrams, flowcharts,...", "source": "clawhub", "identifier": "fec-drawio-studio", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "Prompt to Drawio", "description": "Generate and edit draw.io artifacts from natural-language prompts without a frontend. Use when the user asks for prompt-to-diagram workflows that need `.draw...", "source": "clawhub", "identifier": "prompt-to-drawio", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "今日投资实时 Draw.io 架构图技能", "description": "基于 next-ai-draw-io MCP 实时生成、编辑、核对和导出 draw.io 图。Use when: 用户要画架构图、系统交互图、部署图、流程图、网络拓扑图，要求强制使用 next-ai-drawio MCP 实时预览，并在每次绘图前先检查该服务有效、优先复用当前已打开图的有效预览，再基于需求/参考风...", "source": "clawhub", "identifier": "investoday-drawio-skill", "trust_level": "community", "repo": null, "path": null, "tags": ["architecture", "drawio", "investoday", "mcp", "realtime-preview"], "extra": {}}, {"name": "Draw.io Diagram Generator And Exporter", "description": "**Use this skill** when the user wants to create any diagram: flowchart, architecture, UML (sequence/class), ER, mindmap, network topology, or any visual dia...", "source": "clawhub", "identifier": "bruce-drawio", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "Cloud Architecture Diagrams", "description": "Build editable cloud architecture diagrams (Azure/Microsoft, AWS, GCP, Microsoft Fabric) using official vendor icons, output as both .excalidraw and .drawio...", "source": "clawhub", "identifier": "cloud-architecture-diagrams", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}, {"name": "diagram-generator", "description": "Generate and edit diagrams with the mcp-diagram-generator MCP server. Use this skill for new diagrams, existing .drawio/.mmd/.excalidraw edits, network topol...", "source": "clawhub", "identifier": "diagram-generator", "trust_level": "community", "repo": null, "path": null, "tags": [], "extra": {}}]
+[
+  {
+    "name": "drawio-AI-maker",
+    "description": "将自然语言或文档（docx/pdf/txt）转换为 draw.io 可编辑 XML 图表（.drawio 文件）。当用户说\"画个流程图\"、\"生成图表\"、\"画架构图/时序图/网络拓扑图\"、\"帮我画xxx流程\"、\"生成draw.io\"等时自动触发。使用流程：接收描述→生成JSON→用户确认→调用gen.py生成.dr...",
+    "source": "clawhub",
+    "identifier": "drawio-ai-maker",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [
+      "ai",
+      "architecture",
+      "diagram",
+      "drawio",
+      "flowchart",
+      "generator",
+      "network",
+      "sequence"
+    ],
+    "extra": {}
+  },
+  {
+    "name": "drawio-flowchart",
+    "description": "Generate clean, well-structured draw.io (.drawio) XML flowcharts with proper swimlane containers, text hierarchy, color coding, and orthogonal arrows for wor...",
+    "source": "clawhub",
+    "identifier": "drawio-flowchart",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "Drawio Generator.Bak",
+    "description": "Generate draw.io diagrams from Mermaid, XML, or CSV code. Use this skill when the user requests any visual diagram including flowcharts, UML diagrams, ERD, a...",
+    "source": "clawhub",
+    "identifier": "drawio-generator-bak",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "Drawio Skill",
+    "description": "Use when the user requests diagrams, flowcharts, architecture diagrams, ER diagrams, UML / sequence / class diagrams, network topology, ML/DL model figures (...",
+    "source": "clawhub",
+    "identifier": "drawio-pro-skill",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "Drawio Studio",
+    "description": "Use when creating editable technical diagrams with draw.io / diagrams.net sources, including architecture diagrams, ERD, UML, sequence diagrams, flowcharts,...",
+    "source": "clawhub",
+    "identifier": "fec-drawio-studio",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "Prompt to Drawio",
+    "description": "Generate and edit draw.io artifacts from natural-language prompts without a frontend. Use when the user asks for prompt-to-diagram workflows that need `.draw...",
+    "source": "clawhub",
+    "identifier": "prompt-to-drawio",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "今日投资实时 Draw.io 架构图技能",
+    "description": "基于 next-ai-draw-io MCP 实时生成、编辑、核对和导出 draw.io 图。Use when: 用户要画架构图、系统交互图、部署图、流程图、网络拓扑图，要求强制使用 next-ai-drawio MCP 实时预览，并在每次绘图前先检查该服务有效、优先复用当前已打开图的有效预览，再基于需求/参考风...",
+    "source": "clawhub",
+    "identifier": "investoday-drawio-skill",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [
+      "architecture",
+      "drawio",
+      "investoday",
+      "mcp",
+      "realtime-preview"
+    ],
+    "extra": {}
+  },
+  {
+    "name": "Draw.io Diagram Generator And Exporter",
+    "description": "**Use this skill** when the user wants to create any diagram: flowchart, architecture, UML (sequence/class), ER, mindmap, network topology, or any visual dia...",
+    "source": "clawhub",
+    "identifier": "bruce-drawio",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "Cloud Architecture Diagrams",
+    "description": "Build editable cloud architecture diagrams (Azure/Microsoft, AWS, GCP, Microsoft Fabric) using official vendor icons, output as both .excalidraw and .drawio...",
+    "source": "clawhub",
+    "identifier": "cloud-architecture-diagrams",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  },
+  {
+    "name": "diagram-generator",
+    "description": "Generate and edit diagrams with the mcp-diagram-generator MCP server. Use this skill for new diagrams, existing .drawio/.mmd/.excalidraw edits, network topol...",
+    "source": "clawhub",
+    "identifier": "diagram-generator",
+    "trust_level": "community",
+    "repo": null,
+    "path": null,
+    "tags": [],
+    "extra": {}
+  }
+]

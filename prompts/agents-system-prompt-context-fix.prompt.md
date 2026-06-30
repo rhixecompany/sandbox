@@ -45,17 +45,7 @@ metadata:
     related_skills: []
     tags:
     - agents-system-prompt-context-fix.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - agents-system-prompt-context-fix.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - agents-system-prompt-context-fix.prompt
 
 # Agents System Prompt Context Fix
 

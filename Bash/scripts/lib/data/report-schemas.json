@@ -22,7 +22,12 @@
         },
         "discovery_method": {
           "type": "string",
-          "enum": ["org_scan", "manual", "api_query", "file_import"],
+          "enum": [
+            "org_scan",
+            "manual",
+            "api_query",
+            "file_import"
+          ],
           "description": "Method used to discover repositories"
         },
         "total_discovered": {
@@ -111,7 +116,11 @@
         },
         "RepositoryValidation": {
           "type": "object",
-          "required": ["valid", "errors", "warnings"],
+          "required": [
+            "valid",
+            "errors",
+            "warnings"
+          ],
           "properties": {
             "valid": {
               "type": "boolean",
@@ -135,7 +144,10 @@
         },
         "DiscoveryMetadata": {
           "type": "object",
-          "required": ["discovered_at", "discovery_source"],
+          "required": [
+            "discovered_at",
+            "discovery_source"
+          ],
           "properties": {
             "discovered_at": {
               "type": "string",
@@ -154,7 +166,11 @@
       "type": "object",
       "title": "Clone Report",
       "description": "Report containing results of repository cloning operations",
-      "required": ["timestamp", "summary", "details"],
+      "required": [
+        "timestamp",
+        "summary",
+        "details"
+      ],
       "properties": {
         "timestamp": {
           "type": "string",
@@ -254,7 +270,11 @@
       "type": "object",
       "title": "Triage Report",
       "description": "Report containing health assessment and vulnerability triage results",
-      "required": ["timestamp", "summary", "repos"],
+      "required": [
+        "timestamp",
+        "summary",
+        "repos"
+      ],
       "properties": {
         "timestamp": {
           "type": "string",
@@ -298,7 +318,12 @@
         },
         "HealthDistribution": {
           "type": "object",
-          "required": ["healthy", "caution", "warning", "critical"],
+          "required": [
+            "healthy",
+            "caution",
+            "warning",
+            "critical"
+          ],
           "properties": {
             "healthy": {
               "type": "integer",
@@ -362,7 +387,12 @@
             },
             "health_category": {
               "type": "string",
-              "enum": ["healthy", "caution", "warning", "critical"],
+              "enum": [
+                "healthy",
+                "caution",
+                "warning",
+                "critical"
+              ],
               "description": "Health category based on score"
             },
             "issue_count": {
@@ -395,7 +425,9 @@
       "type": "object",
       "title": "Batch",
       "description": "Batch grouping structure for organizing repository processing",
-      "required": ["batches"],
+      "required": [
+        "batches"
+      ],
       "properties": {
         "batches": {
           "type": "array",
@@ -422,12 +454,20 @@
             },
             "complexity": {
               "type": "string",
-              "enum": ["low", "medium", "high"],
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
               "description": "Complexity level of batch"
             },
             "risk": {
               "type": "string",
-              "enum": ["low", "medium", "high"],
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
               "description": "Risk level of batch"
             },
             "findings": {

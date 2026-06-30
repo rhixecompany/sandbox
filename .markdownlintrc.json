@@ -1,72 +1,72 @@
 {
-	"config": {
-		"default": true,
-		"MD007": {
-			"indent": 2
-		},
-		"MD013": false,
-		"MD022": true,
-		"MD024": false,
-		"MD031": true,
-		"MD033": {
-			"allowed_elements": [
-				"br",
-				"details",
-				"kbd",
-				"summary",
-				"sub",
-				"sup",
-				"table",
-				"tbody",
-				"td",
-				"tfoot",
-				"th",
-				"thead",
-				"tr",
-				"u",
-				"var",
-				"wbr",
-				"del",
-				"ins",
-				"mark",
-				"abbr",
-				"b",
-				"bdi",
-				"bdo",
-				"cite",
-				"code",
-				"dfn",
-				"em",
-				"i",
-				"q"
-			]
-		},
-		"MD034": true,
-		"MD040": true,
-		"MD041": true,
-		"MD058": false,
-		"MD060": false
-	},
-	"fix": true,
-	"gitignore": true,
-	"globs": [
-		"**/*.md"
-	],
-	"ignores": [
-		"node_modules",
-		".next",
-		".git",
-		"build",
-		"coverage",
-		"dist",
-		"out",
-		"tmp",
-		"**/build/**",
-		"**/coverage/**",
-		"**/dist/**",
-		"**/out/**",
-		"**/tmp/**",
-		"**/node_modules/**",
-		"**/.git/**"
-	]
+  "config": {
+    "default": true,
+    "MD007": {
+      "indent": 2
+    },
+    "MD013": false,
+    "MD022": true,
+    "MD024": false,
+    "MD031": true,
+    "MD033": {
+      "allowed_elements": [
+        "br",
+        "details",
+        "kbd",
+        "summary",
+        "sub",
+        "sup",
+        "table",
+        "tbody",
+        "td",
+        "tfoot",
+        "th",
+        "thead",
+        "tr",
+        "u",
+        "var",
+        "wbr",
+        "del",
+        "ins",
+        "mark",
+        "abbr",
+        "b",
+        "bdi",
+        "bdo",
+        "cite",
+        "code",
+        "dfn",
+        "em",
+        "i",
+        "q"
+      ]
+    },
+    "MD034": true,
+    "MD040": true,
+    "MD041": true,
+    "MD058": false,
+    "MD060": false
+  },
+  "fix": true,
+  "gitignore": true,
+  "globs": [
+    "**/*.md"
+  ],
+  "ignores": [
+    "node_modules",
+    ".next",
+    ".git",
+    "build",
+    "coverage",
+    "dist",
+    "out",
+    "tmp",
+    "**/build/**",
+    "**/coverage/**",
+    "**/dist/**",
+    "**/out/**",
+    "**/tmp/**",
+    "**/node_modules/**",
+    "**/.git/**"
+  ]
 }

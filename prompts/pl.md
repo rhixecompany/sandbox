@@ -24,10 +24,6 @@ metadata:
   hermes:
     related_skills: []
     tags:
-    - plmetadata:
-  hermes:
-    related_skills: []
-    tags:
     - pl
 
 # Batch Fix All Errors, Warnings, and Deprecations

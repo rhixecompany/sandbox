@@ -3,8 +3,8 @@ license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Test Providers & Models
-trigger: test-providers-models
 name: test-providers-models
+trigger: test-providers-models
 description: >-
   Inventory all authorized LLM providers from hermes auth list, discover their
   free-tier models, run standardized benchmarks (reasoning, tool calling,
@@ -47,17 +47,7 @@ metadata:
     related_skills: []
     tags:
     - test-providers-models.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - test-providers-models.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - test-providers-models.prompt
 
 ## Goal
 Inventory and benchmark the free‑tier LLM models across all authorized providers in Hermes, producing a comparative report that includes performance, rate limits, and recommendations.

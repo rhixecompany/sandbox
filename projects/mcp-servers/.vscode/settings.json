@@ -6,12 +6,28 @@
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
-  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[python]": { "editor.defaultFormatter": "ms-python.python" },
-  "[go]": { "editor.defaultFormatter": "golang.go" },
-  "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
-  "[java]": { "editor.defaultFormatter": "redhat.java" },
-  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" }
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

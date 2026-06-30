@@ -12,8 +12,14 @@
     "simplify"
   ],
   "status": "needs_enhancement",
-  "tags": ["hermes", "copilot", "skills", "migration", "debugging"],
+  "tags": [
+    "hermes",
+    "copilot",
+    "skills",
+    "migration",
+    "debugging"
+  ],
   "title": "Skills Fix - Migrate and Debug Hermes Skills",
   "trigger": "/skills-fix",
-  "txt_size_kb": 1.0
+  "txt_size_kb": 1
 }

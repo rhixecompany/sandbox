@@ -1,35 +1,35 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "command": "bun run format",
-            "label": "Resume Maker: Format",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        },
-        {
-            "command": "bun run typecheck",
-            "label": "Resume Maker: Type Check",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        },
-        {
-            "command": "bun run lint",
-            "label": "Resume Maker: Lint",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "command": "bun run format",
+      "label": "Resume Maker: Format",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "bun run typecheck",
+      "label": "Resume Maker: Type Check",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "command": "bun run lint",
+      "label": "Resume Maker: Lint",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
 }

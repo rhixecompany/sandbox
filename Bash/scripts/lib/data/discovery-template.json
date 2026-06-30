@@ -7,7 +7,10 @@
     "total_discovered": 25,
     "valid_repos": 22,
     "invalid_repos": 3,
-    "organizations": ["acme-corp", "acme-legacy"],
+    "organizations": [
+      "acme-corp",
+      "acme-legacy"
+    ],
     "repositories": [
       {
         "name": "frontend-app",
@@ -20,7 +23,9 @@
         "validation": {
           "valid": true,
           "errors": [],
-          "warnings": ["Repository has no tags"]
+          "warnings": [
+            "Repository has no tags"
+          ]
         },
         "metadata": {
           "discovered_at": "2026-05-15T09:15:00Z",
@@ -59,7 +64,9 @@
             "Repository is archived",
             "No package manager files detected"
           ],
-          "warnings": ["Last commit over 2 years ago"]
+          "warnings": [
+            "Last commit over 2 years ago"
+          ]
         },
         "metadata": {
           "discovered_at": "2026-05-15T09:20:00Z",
