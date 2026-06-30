@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: Audit Skills Judge Fix
 name: audit-skills-judge-fix
-trigger: /audit-skills-judge-fix
+trigger: audit-skills-judge-fix
 description: >-
   Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
   remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
@@ -40,7 +40,22 @@ skills:
   - hermes-skills
   - skill-creator
   - writing-skills
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - audit-skills-judge-fix.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - audit-skills-judge-fix.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - audit-skills-judge-fix.prompt
 
 # Audit Skills Judge Fix
 
@@ -160,3 +175,7 @@ All scripts located at `~/AppData/Local/hermes/scripts/`:
 
 Detailed section templates in `templates/audit-skills-judge-fix/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -36,7 +36,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-markdown-file-index.prompt
+
+trigger: update-markdown-file-index
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-markdown-file-index.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-markdown-file-index.prompt
 
 ## Goal
 
@@ -158,3 +175,7 @@ Look for existing sections with these patterns:
 Templates in `templates/update-markdown-file-index/`:
 - `files_in_folder.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

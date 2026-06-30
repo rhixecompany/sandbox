@@ -42,7 +42,8 @@
     "yoavbls.pretty-ts-errors",
     "yzhang.markdown-all-in-one",
     "pulkitgangwar.nextjs-snippets",
-    "zainchen.json"
+    "zainchen.json",
+    "mcgratp.bun-debug"
   ],
   "unwantedRecommendations": [
     "ms-vscode.vscode-typescript-tslint-plugin",

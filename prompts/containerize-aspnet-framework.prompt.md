@@ -22,7 +22,24 @@ tags:
   - dotnet
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnet-framework.prompt
+
+trigger: containerize-aspnet-framework
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnet-framework.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnet-framework.prompt
 
 # ASP.NET .NET Framework Containerization Prompt
 
@@ -137,3 +154,7 @@ Detailed templates in `templates/containerize-aspnet-framework/`:
 - `execution_process.md`
 - `notes_on_stage_naming.md`
 - `reference_materials.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

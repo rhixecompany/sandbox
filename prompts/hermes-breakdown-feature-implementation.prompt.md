@@ -27,7 +27,24 @@ tags:
   - planning
   - security
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-implementation.prompt
+
+trigger: hermes-breakdown-feature-implementation
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-implementation.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-implementation.prompt
 
 ## Goal
 
@@ -79,3 +96,7 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 
 Templates in `templates/hermes-breakdown-feature-implementation/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

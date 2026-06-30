@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: Execute All Prompts Orchestrator
 name: execute-all-prompts
-trigger: /execute-all-prompts
+trigger: execute-all-prompts
 description: >
   Orchestrates sequential execution of all 4 workspace prompt files:
   audit-skills-judge-fix, agents-system-prompt-context-fix,
@@ -127,3 +127,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 
 Detailed templates in `templates/execute-all-prompts/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

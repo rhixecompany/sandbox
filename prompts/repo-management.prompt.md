@@ -1,5 +1,5 @@
 ---
-trigger: /repo-management
+trigger: repo-management
 name: repo-management
 title: "Repo Management Pipeline"
 description: >
@@ -81,3 +81,7 @@ Create `.github/workflows/ci.yml` per repo type (JS/TS uses `oven-sh/setup-bun`,
 2. **Verify after each pass** — After every phase, verify the result before moving on.
 3. **Idempotent** — Safe to re-run without side effects.
 4. **Rollback** — Every destructive operation records pre-state.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

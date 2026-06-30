@@ -18,7 +18,24 @@ tags:
   - spring
   - java
   - kotlin
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-springboot.prompt
+
+trigger: kotlin-springboot
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-springboot.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-springboot.prompt
 
 # Spring Boot with Kotlin Best Practices
 
@@ -98,3 +115,7 @@ Templates in `templates/kotlin-springboot/`:
 - `service_layer.md`
 - `testing.md`
 - `web_layer_controllers.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

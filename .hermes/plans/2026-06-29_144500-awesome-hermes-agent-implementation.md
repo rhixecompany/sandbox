@@ -1,3 +1,8 @@
+---
+status: completed
+status: completed
+status: completed
+---
 # Plan: Implement Awesome Hermes Agent Docs Catalog
 
 **Date:** 2026-06-29

@@ -17,7 +17,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-readme.prompt
+
+trigger: create-readme
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-readme.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-readme.prompt
 
 ## Goal
 
@@ -87,3 +104,7 @@ You're a senior expert software engineer with extensive experience in open sourc
 
 Templates in `templates/create-readme/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

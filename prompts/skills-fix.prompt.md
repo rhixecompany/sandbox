@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: skills-fix
 title: Skills Audit and Remediation
-trigger: /skills-fix
+trigger: skills-fix
 description: >
   Audit, debug, deduplicate, and enhance Hermes skills in the adminbot profile.
   Runs hermes skills list → reorganizes misplaced skills → deduplicates →
@@ -49,7 +49,22 @@ skills:
     - no-git-delete
     - no-net-fetch
     - skills-tools-preflight-check
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - skills-fix.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - skills-fix.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - skills-fix.prompt
 
 ## Goal
 
@@ -259,3 +274,7 @@ delegate_task(tasks=[
     # up to 3 concurrent batches
 ])
 ```
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

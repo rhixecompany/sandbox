@@ -15,7 +15,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - git-flow-branch-creator.prompt
+
+trigger: git-flow-branch-creator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - git-flow-branch-creator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - git-flow-branch-creator.prompt
 
 ## Goal
 
@@ -67,3 +84,7 @@ Use when you need to work on the current workspace or task.
 
 Detailed templates in `templates/git-flow-branch-creator/`:
 - `legacy_prompt_details.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

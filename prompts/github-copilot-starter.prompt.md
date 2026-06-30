@@ -31,7 +31,24 @@ tags:
   - planning
   - react
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - github-copilot-starter.prompt
+
+trigger: github-copilot-starter
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - github-copilot-starter.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - github-copilot-starter.prompt
 
 ## Goal
 
@@ -249,3 +266,7 @@ Detailed templates in `templates/github-copilot-starter/`:
 - `configuration_files_to_create.md`
 - `react_guidelines.md`
 - `workflow_template_structure.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

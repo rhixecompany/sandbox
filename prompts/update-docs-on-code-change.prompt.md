@@ -5,7 +5,7 @@ version: 1.0.0
 name: "update-docs-on-code-change"
 title: "Update Docs on Code Change"
 description: "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows."
-trigger: /update-docs-on-code-change
+trigger: update-docs-on-code-change
 tags:
   - api
   - configuration
@@ -23,7 +23,22 @@ tags:
   - code-change
   - readme
   - api-docs
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-docs-on-code-change.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-docs-on-code-change.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-docs-on-code-change.prompt
 
 ## Goal
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
@@ -113,3 +128,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 
 Templates in `templates/update-docs-on-code-change/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

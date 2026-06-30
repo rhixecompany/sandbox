@@ -59,7 +59,24 @@ tags:
   - security
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - features.prompt
+
+trigger: features
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - features.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - features.prompt
 
 ## Validation Commands
 
@@ -101,3 +118,7 @@ Detailed templates in `templates/features/`:
 - `phase_4_chapter_reader.md`
 - `root_pages.md`
 - `server_actions_reference.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

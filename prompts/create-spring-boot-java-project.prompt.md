@@ -16,7 +16,24 @@ tags:
   - generator
   - java
   - markdown
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-java-project.prompt
+
+trigger: create-spring-boot-java-project
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-java-project.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-java-project.prompt
 
 # Create Spring Boot Java project prompt
 
@@ -145,3 +162,7 @@ Templates in `templates/create-spring-boot-java-project/`:
 - `add_docker-composeyaml_wi.md`
 - `add_springdoc_redis_jpa_a.md`
 - `download_spring_boot_proj.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -40,7 +40,24 @@ tags:
   - planning
   - refactoring
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-implementation-plan.prompt
+
+trigger: create-implementation-plan
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-implementation-plan.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-implementation-plan.prompt
 
 ## Goal
 
@@ -235,3 +252,7 @@ Templates in `templates/create-implementation-plan/`:
 - `rules.md`
 - `status.md`
 - `template_validation_rules.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

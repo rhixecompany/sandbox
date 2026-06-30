@@ -1,5 +1,5 @@
 ---
-trigger: /repo-research-pipeline
+trigger: repo-research-pipeline
 name: repo-research-pipeline
 title: "Repo Research Pipeline (MCP-Enhanced)"
 description: >
@@ -57,3 +57,7 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 4. **SYMMETRIC CROSS-REFS** — If project A references B, B must reference A.
 5. **MCP-FIRST** — mcp-github → mcp-fetch → mcp-smithery before built-in tools.
 6. **MULTI-BACKEND** — If mcp-fetch fails, try firecrawl_scrape before giving up.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

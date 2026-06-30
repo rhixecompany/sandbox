@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: general
 title: General Development Workflow
-trigger: /general
+trigger: general
 description:
     General development workflow for analysis, planning, implementation, and
     verification with context mapping and AI-assisted execution.
@@ -52,7 +52,22 @@ skills:
     - writing-skills
     - acpx-executor
 
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - general.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - general.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - general.prompt
 
 > General development workflow with planning, automation, and verification.
 
@@ -145,3 +160,7 @@ Test changes, validate outputs, and confirm the task is complete.
 3. Execute the change with direct tooling.
 4. Verify the result against the original goal.
 5. Return the final outcome with the evidence needed to trust it.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

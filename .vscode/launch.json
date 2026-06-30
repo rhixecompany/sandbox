@@ -7,7 +7,8 @@
       "request": "launch",
       "runtimeExecutable": "bun",
       "program": "${file}",
-      "console": "integratedTerminal"
+      "preLaunchTask": "Bun: Build",
+      "postDebugTask": "Bun: Test"
     },
     {
       "name": "Bun: Run All Tests",
@@ -17,21 +18,34 @@
       "runtimeArgs": [
         "test"
       ],
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "preLaunchTask": "Bun: Build",
+      "postDebugTask": "Bun: Test"
+    },
+    {
+      "name": "Bun: Run All Tests (No Cache)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bun",
+      "args": [
+        "test",
+        "--no-cache"
+      ],
+      "console": "integratedTerminal",
+      "preLaunchTask": "Bun: Build",
+      "postDebugTask": "Bun: Test"
     },
     {
       "name": "Python: Current File",
       "type": "debugpy",
       "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal"
+      "program": "${file}"
     },
     {
       "name": "Node.js: Current File",
       "type": "node",
       "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal"
+      "program": "${file}"
     }
   ]
 }

@@ -5,7 +5,7 @@ version: 1.0.0
 name: "rust-mcp-server-generator"
 title: "Rust Mcp Server Generator"
 description: "Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK"
-trigger: /rust-mcp-server-generator
+trigger: rust-mcp-server-generator
 tags:
   - backend
   - data
@@ -20,7 +20,22 @@ tags:
   - mcp
   - codegen
   - rust
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - rust-mcp-server-generator.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - rust-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - rust-mcp-server-generator.prompt
 
 # Rust MCP Server Generator
 
@@ -173,3 +188,7 @@ Detailed templates in `templates/rust-mcp-server-generator/`:
 - `development.md`
 - `example_tool_patterns.md`
 - `file_templates.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -5,7 +5,7 @@ version: 1.0.0
 name: "run-session-agentsmd-workflow"
 title: "Run Agents.md Workflow"
 description: "Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting."
-trigger: /run-session-agentsmd-workflow
+trigger: run-session-agentsmd-workflow
 tags:
   - agents
   - git
@@ -17,7 +17,22 @@ tags:
   - agents
   - workflow
   - session
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - run-session-agentsmd-workflow.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - run-session-agentsmd-workflow.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - run-session-agentsmd-workflow.prompt
 
 ## Goal
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
@@ -149,3 +164,7 @@ Subagents are optional and should only be used when they improve speed or reliab
 
 Detailed templates in `templates/run-session-agentsmd-workflow/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

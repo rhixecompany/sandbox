@@ -5,7 +5,7 @@ version: 1.0.0
 name: "documentation"
 title: "Documentation"
 description: "Comprehensive documentation prompt aligned to repository documentation standards."
-trigger: /documentation
+trigger: documentation
 tags:
   - api
   - architecture
@@ -18,7 +18,22 @@ tags:
   - typescript
   - hermes
   - documentation
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation.prompt
 
 ## Goal
 Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
@@ -108,3 +123,7 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 
 Templates in `templates/documentation/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

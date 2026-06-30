@@ -46,7 +46,24 @@ tags:
   - refactoring
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - refactor-mardown-files.prompt
+
+trigger: refactor-mardown-files
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - refactor-mardown-files.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - refactor-mardown-files.prompt
 
 ## Goal
 
@@ -160,3 +177,7 @@ Analyze, refactor, and update the `AGENTS.md`,`.cursorrules` and `.github/copilo
 
 Detailed templates in `templates/refactor-mardown-files/`:
 - `3_detailed_instructions__stand.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

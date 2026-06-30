@@ -26,7 +26,24 @@ tags:
   - performance
   - security
   - sql
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - sql-code-review.prompt
+
+trigger: sql-code-review
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - sql-code-review.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - sql-code-review.prompt
 
 ## Goal
 
@@ -162,3 +179,7 @@ Detailed templates in `templates/sql-code-review/`:
 - `priority_category_brief_descri.md`
 - `security_analysis.md`
 - `sql_review_checklist.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

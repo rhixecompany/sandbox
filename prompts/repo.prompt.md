@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: repo
 title: Repo Research Pipeline
-trigger: /repo
+trigger: repo
 description: >
   Research all 14 projects via delegated sub-prompts: web search for similar
   projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project
@@ -425,3 +425,7 @@ List project name + shared technology. Must be symmetric.>
 
 Templates in `.hermes/archived-prompt-templates/repo.prompts/`:
 - `README.md` — Section inventory
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -15,7 +15,24 @@ tags:
   - typescript
   - mcp
   - ruby
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ruby-mcp-server-generator.prompt
+
+trigger: ruby-mcp-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ruby-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ruby-mcp-server-generator.prompt
 
 # Ruby MCP Server Generator
 
@@ -308,3 +325,7 @@ Detailed templates in `templates/ruby-mcp-server-generator/`:
 - `testtoolscalculate_tool_testrb.md`
 - `testtoolsgreet_tool_testrb_tem.md`
 - `usage.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -25,7 +25,24 @@ tags:
   - github
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issues-feature-from-implementation-plan.prompt
+
+trigger: create-github-issues-feature-from-implementation-plan
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issues-feature-from-implementation-plan.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issues-feature-from-implementation-plan.prompt
 
 ## Goal
 
@@ -98,3 +115,7 @@ Use when you need to work on the current workspace or task.
 
 Templates in `templates/create-github-issues-feature-from-implementation-plan/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

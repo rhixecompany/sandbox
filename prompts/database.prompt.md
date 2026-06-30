@@ -59,7 +59,24 @@ tags:
   - planning
   - specification
   - sql
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - database.prompt
+
+trigger: database
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - database.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - database.prompt
 
 **Last Updated:** March 1, 2026 | **Database:** PostgreSQL | **ORM:** Drizzle
 
@@ -68,3 +85,7 @@ tags:
 
 Templates in `templates/database/`:
 - `common_patterns.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

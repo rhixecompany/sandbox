@@ -22,7 +22,24 @@ tags:
   - api
   - java
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-junit.prompt
+
+trigger: java-junit
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-junit.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-junit.prompt
 
 # JUnit 5+ Best Practices
 
@@ -94,3 +111,7 @@ Templates in `templates/java-junit/`:
 - `standard_tests.md`
 - `test_organization.md`
 - `test_structure.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

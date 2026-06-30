@@ -20,7 +20,24 @@ tags:
   - planning
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript-mcp-server-generator.prompt
+
+trigger: typescript-mcp-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript-mcp-server-generator.prompt
 
 ## Goal
 
@@ -129,3 +146,7 @@ Generate a complete, production-ready MCP server with comprehensive documentatio
 Templates in `templates/typescript-mcp-server-generator/`:
 - `implementation_details.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

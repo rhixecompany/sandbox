@@ -1,0 +1,9 @@
+# .git-blame-ignore-revs
+#
+# This file is used by `git blame` to ignore revisions when attributing lines.
+# See git-blame(1) for details.
+#
+# Format: one commit SHA per line.
+#
+# <commit-sha>
+# <commit-sha>

@@ -21,7 +21,24 @@ tags:
   - planning
   - specification
   - sql
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-optimization.prompt
+
+trigger: postgresql-optimization
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-optimization.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-optimization.prompt
 
 ## Goal
 
@@ -179,3 +196,7 @@ Detailed templates in `templates/postgresql-optimization/`:
 - `postgresql_advanced_data_types.md`
 - `postgresql_extensions__tools.md`
 - `postgresql_performance_tuning.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

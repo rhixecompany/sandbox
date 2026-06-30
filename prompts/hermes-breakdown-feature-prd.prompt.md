@@ -19,7 +19,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-prd.prompt
+
+trigger: hermes-breakdown-feature-prd
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-prd.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-feature-prd.prompt
 
 ## Goal
 
@@ -70,3 +87,7 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 
 Templates in `templates/hermes-breakdown-feature-prd/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

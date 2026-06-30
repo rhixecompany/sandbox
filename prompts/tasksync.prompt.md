@@ -5,7 +5,7 @@ version: 1.0.0
 name: "tasksync"
 title: "Task Sync"
 description: "Comprehensive prompt for synchronizing tasks, implementations, and updates across projects."
-trigger: /tasksync
+trigger: tasksync
 tags:
   - frontend
   - prompts
@@ -15,7 +15,22 @@ tags:
   - tasks
   - sync
   - project-management
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tasksync.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tasksync.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tasksync.prompt
 
 ## Goal
 Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
@@ -105,3 +120,7 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 
 Templates in `templates/tasksync/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

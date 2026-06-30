@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: context-map
 name: context-map
-trigger: /context-map
+trigger: context-map
 description: >-
   Build a dependency and reference map before making changes so implementation starts from the right files.
 tags:
@@ -23,7 +23,22 @@ dependencies:
   - skill:codemap
 skills:
   - codemap — Codebase discovery and dependency mapping
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - context-map.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - context-map.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - context-map.prompt
 
 # context-map
 
@@ -94,3 +109,7 @@ Build a dependency and reference map before making changes so implementation sta
 
 Templates in `templates/context-map/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -18,7 +18,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - devops-rollout-plan.prompt
+
+trigger: devops-rollout-plan
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - devops-rollout-plan.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - devops-rollout-plan.prompt
 
 ## Goal
 
@@ -107,3 +124,7 @@ Templates in `templates/devops-rollout-plan/`:
 - `input_requirements.md`
 - `output_format.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -34,7 +34,24 @@ tags:
   - linux
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-technical-spike.prompt
+
+trigger: create-technical-spike
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-technical-spike.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-technical-spike.prompt
 
 title: "${input:SpikeTitle}"
 category: "${input:Category|Technical}"
@@ -225,3 +242,7 @@ Focus on time-boxed research that resolves critical technical decisions and unbl
 
 Detailed templates in `templates/create-technical-spike/`:
 - `categories_for_technical_spike.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

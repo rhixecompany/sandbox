@@ -25,7 +25,24 @@ tags:
   - security
   - sql
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bigquery-pipeline-audit.prompt
+
+trigger: bigquery-pipeline-audit
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bigquery-pipeline-audit.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bigquery-pipeline-audit.prompt
 
 ## A) COST EXPOSURE: What will actually get billed?
 
@@ -135,3 +152,7 @@ Templates in `templates/bigquery-pipeline-audit/`:
 - `a_cost_exposure_what_will.md`
 - `c_backfill_and_loop_desig.md`
 - `e_safe_writes_and_idempot.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -5,7 +5,7 @@ version: 1.0.0
 name: "typescript"
 title: "TypeScript & Next.js"
 description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
-trigger: /typescript
+trigger: typescript
 tags:
   - architecture
   - backend
@@ -21,7 +21,22 @@ tags:
   - nextjs
   - code-quality
   - linting
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - typescript.prompt
 
 ## Goal
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
@@ -111,3 +126,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 
 Templates in `templates/typescript/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

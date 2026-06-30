@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: ai-prompt-engineering-safety-review
 name: ai-prompt-engineering-safety-review
-trigger: /ai-prompt-engineering-safety-review
+trigger: ai-prompt-engineering-safety-review
 description: >-
   Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
 tags:
@@ -27,7 +27,22 @@ dependencies:
 skills:
   - prompt-engineering
   - systematic-debugging
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ai-prompt-engineering-safety-review.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ai-prompt-engineering-safety-review.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - ai-prompt-engineering-safety-review.prompt
 
 # ai-prompt-engineering-safety-review
 
@@ -99,3 +114,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 
 Detailed templates in `templates/ai-prompt-engineering-safety-review/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

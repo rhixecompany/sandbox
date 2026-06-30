@@ -17,7 +17,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - azure-resource-health-diagnose.prompt
+
+trigger: azure-resource-health-diagnose
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - azure-resource-health-diagnose.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - azure-resource-health-diagnose.prompt
 
 ## Goal
 
@@ -175,3 +192,7 @@ Use when you need to work on the current workspace or task.
 
 Detailed templates in `templates/azure-resource-health-diagnose/`:
 - `workflow_steps.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

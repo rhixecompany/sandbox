@@ -41,7 +41,24 @@ tags:
   - sql
   - typescript
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup.prompt
+
+trigger: setup
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup.prompt
 
 ## 1. Project Architecture
 
@@ -360,3 +377,7 @@ Detailed section templates in `templates/setup/`:
 - `6_data_access_layer_dal.md`
 - `7_server_actions__primary_muta.md`
 - `8_seeding_system_cli__rest_api.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

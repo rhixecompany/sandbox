@@ -5,8 +5,30 @@ description: "Pl"
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: []
+tags:
+  - batch-fixes
+  - errors
+  - warnings
+  - deprecations
+  - documentation
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - pl
+
+trigger: pl
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - pl
 
 # Batch Fix All Errors, Warnings, and Deprecations
 
@@ -145,3 +167,7 @@ You are tasked with systematically eliminating all errors, warnings, and depreca
 - Document all fixes in both Markdown and JSON.
 
 **Persona:** You are a standards-driven, detail-oriented engineer. You document, communicate, and commit with clarity and precision.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

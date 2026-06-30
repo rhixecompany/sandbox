@@ -20,7 +20,24 @@ tags:
   - drizzle
   - performance
   - synchronization
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-async.prompt
+
+trigger: csharp-async
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-async.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-async.prompt
 
 # C# Async Programming Best Practices
 
@@ -76,3 +93,7 @@ Templates in `templates/csharp-async/`:
 - `implementation_patterns.md`
 - `performance.md`
 - `return_types.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: Agents System Prompt Context Fix
 name: agents-system-prompt-context-fix
-trigger: /agents-system-prompt-context-fix
+trigger: agents-system-prompt-context-fix
 description: >-
   Create/update agent context files across project and subprojects, then audit
   and enhance VS Code workspace configuration.
@@ -40,7 +40,22 @@ skills:
   - folder-structure-blueprint-generator — Documents folder structure
   - technology-stack-blueprint-generator — Documents tech stack
   - vscode-workspace-configurator — Audits and enhances VS Code config
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-system-prompt-context-fix.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-system-prompt-context-fix.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-system-prompt-context-fix.prompt
 
 # Agents System Prompt Context Fix
 
@@ -111,3 +126,6 @@ This prompt generates comprehensive agent context files (architecture blueprints
 
 Detailed section content extracted to template files in `templates/agents-system-prompt-context-fix/`:
 - `phases.md` — Full Phase breakdown with steps
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

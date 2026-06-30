@@ -25,7 +25,24 @@ tags:
   - security
   - specification
   - sql
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-code-review.prompt
+
+trigger: postgresql-code-review
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-code-review.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - postgresql-code-review.prompt
 
 ## Goal
 
@@ -158,3 +175,7 @@ Detailed templates in `templates/postgresql-code-review/`:
 - `postgresql-specific_anti-patte.md`
 - `postgresql-specific_review_are.md`
 - `postgresql_code_quality_checkl.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

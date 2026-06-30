@@ -21,7 +21,24 @@ tags:
   - csharp
   - dotnet
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-xunit.prompt
+
+trigger: csharp-xunit
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-xunit.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-xunit.prompt
 
 # XUnit Best Practices
 
@@ -98,3 +115,7 @@ Templates in `templates/csharp-xunit/`:
 - `standard_tests.md`
 - `test_organization.md`
 - `test_structure.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

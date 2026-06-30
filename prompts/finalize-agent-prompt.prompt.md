@@ -16,7 +16,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - finalize-agent-prompt.prompt
+
+trigger: finalize-agent-prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - finalize-agent-prompt.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - finalize-agent-prompt.prompt
 
 ## Goal
 
@@ -85,3 +102,7 @@ You are an AI agent who knows what works best for the prompt files you have seen
 
 Templates in `templates/finalize-agent-prompt/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

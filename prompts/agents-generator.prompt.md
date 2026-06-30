@@ -33,7 +33,24 @@ tags:
   - planning
   - specification
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-generator.prompt
+
+trigger: agents-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - agents-generator.prompt
 
 Analyze this codebase to generate or update `AGENTS.md` for guiding AI coding agents.
 
@@ -61,3 +78,7 @@ Guidelines (read more at https://aka.ms/vscode-instructions-docs):
 - always follow the coding standards and best practices outlined in the project's documentation.
 
 Update `AGENTS.md` for the user, then ask for feedback on any unclear or incomplete sections to iterate.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

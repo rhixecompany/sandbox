@@ -5,7 +5,7 @@ version: 1.0.0
 name: "testing"
 title: "Testing"
 description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
-trigger: /testing
+trigger: testing
 tags:
   - audit
   - frontend
@@ -16,7 +16,22 @@ tags:
   - typescript
   - hermes
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - testing.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - testing.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - testing.prompt
 
 ## Goal
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
@@ -106,3 +121,7 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 
 Templates in `templates/testing/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -52,7 +52,24 @@ tags:
   - planning
   - specification
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-action-workflow-specification.prompt
+
+trigger: create-github-action-workflow-specification
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-action-workflow-specification.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-action-workflow-specification.prompt
 
 ## Workflow Overview
 
@@ -300,3 +317,7 @@ Templates in `templates/create-github-action-workflow-specification/`:
 - `specification_template.md`
 - `token_optimization_strate.md`
 - `validation_criteria.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

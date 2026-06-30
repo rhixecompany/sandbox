@@ -5,7 +5,7 @@ version: 1.0.0
 name: "execute-hermes-configuration-spec"
 title: "Hermes Configuration Spec"
 description: "Execute the Hermes Configuration Spec plan."
-trigger: /execute-hermes-configuration-spec
+trigger: execute-hermes-configuration-spec
 tags:
   - ai-assistant
   - configuration
@@ -17,7 +17,22 @@ tags:
   - hermes
   - plan
   - execute
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - execute-hermes-configuration-spec.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - execute-hermes-configuration-spec.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - execute-hermes-configuration-spec.prompt
 
 ## Goal
 Execute the plan at `.hermes/plans/hermes-configuration-spec.md`.
@@ -29,3 +44,7 @@ This prompt loads and executes the consolidated plan document.
 1. Load the plan from `.hermes/plans/hermes-configuration-spec.md`
 2. Follow the plan's phases and requirements
 3. Report progress and completion
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

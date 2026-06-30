@@ -22,7 +22,24 @@ tags:
   - specification
   - typespec
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - declarative-agents.prompt
+
+trigger: declarative-agents
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - declarative-agents.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - declarative-agents.prompt
 
 ## Goal
 
@@ -122,3 +139,7 @@ I'll perform:
 
 Detailed templates in `templates/declarative-agents/`:
 - `core_features_across_all_workf.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

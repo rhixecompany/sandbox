@@ -17,7 +17,24 @@ tags:
   - java
   - kotlin
   - markdown
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-kotlin-project.prompt
+
+trigger: create-spring-boot-kotlin-project
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-kotlin-project.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-spring-boot-kotlin-project.prompt
 
 # Create Spring Boot Kotlin project prompt
 
@@ -91,3 +108,7 @@ unzip starter.zip -d ./${input:projectName:demo-kotlin}
 Templates in `templates/create-spring-boot-kotlin-project/`:
 - `add_additional_dependenci.md`
 - `download_spring_boot_proj.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

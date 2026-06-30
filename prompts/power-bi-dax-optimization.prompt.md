@@ -20,7 +20,24 @@ tags:
   - planning
   - powerbi
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-dax-optimization.prompt
+
+trigger: power-bi-dax-optimization
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-dax-optimization.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-dax-optimization.prompt
 
 # Power BI DAX Formula Optimizer
 
@@ -86,3 +103,7 @@ Templates in `templates/power-bi-dax-optimization/`:
 - `example_output_format.md`
 - `optimization_process.md`
 - `request_instructions.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

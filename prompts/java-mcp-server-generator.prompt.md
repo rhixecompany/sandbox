@@ -21,7 +21,24 @@ tags:
   - markdown
   - mcp
   - react
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-mcp-server-generator.prompt
+
+trigger: java-mcp-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-mcp-server-generator.prompt
 
 # Java MCP Server Generator
 
@@ -239,3 +256,7 @@ Detailed section templates in `templates/java-mcp-server-generator/`:
 - `resourcehandlersjava_template.md`
 - `tooldefinitionsjava_template.md`
 - `toolhandlersjava_template.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -20,7 +20,24 @@ tags:
   - planning
   - security
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-pm.prompt
+
+trigger: hermes-breakdown-epic-pm
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-pm.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-pm.prompt
 
 ## Goal
 
@@ -72,3 +89,7 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 
 Templates in `templates/hermes-breakdown-epic-pm/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

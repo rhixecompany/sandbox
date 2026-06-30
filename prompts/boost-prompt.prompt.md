@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: boost-prompt
 name: boost-prompt
-trigger: /boost-prompt
+trigger: boost-prompt
 description: >-
   Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
 tags:
@@ -28,7 +28,22 @@ dependencies:
 skills:
   - writing-skills — Crafting and optimizing prompts and instructions
   - writing-plans — Structured prompt authoring
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - boost-prompt.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - boost-prompt.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - boost-prompt.prompt
 
 # boost-prompt
 
@@ -111,3 +126,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 Templates in `templates/boost-prompt/`:
 - `phases.md`
 - `tools_required.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

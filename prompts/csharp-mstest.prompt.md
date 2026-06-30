@@ -23,7 +23,24 @@ tags:
   - csharp
   - dotnet
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-mstest.prompt
+
+trigger: csharp-mstest
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-mstest.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-mstest.prompt
 
 # MSTest Best Practices (MSTest 3.x/4.x)
 
@@ -129,3 +146,7 @@ Detailed templates in `templates/csharp-mstest/`:
 - `modern_assertion_apis.md`
 - `test_lifecycle.md`
 - `testcontext.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

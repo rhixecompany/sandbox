@@ -23,7 +23,24 @@ tags:
   - planning
   - specification
   - sql
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - cosmosdb-datamodeling.prompt
+
+trigger: cosmosdb-datamodeling
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - cosmosdb-datamodeling.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - cosmosdb-datamodeling.prompt
 
 # Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
 
@@ -235,3 +252,7 @@ Detailed section templates in `templates/cosmosdb-datamodeling/`:
 - `enhanced_aggregate_analysis.md`
 - `important_azure_cosmos_db_nosq.md`
 - `validation_checklist.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

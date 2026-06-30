@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: update-implementation-plan
 name: update-implementation-plan
-trigger: /update-implementation-plan
+trigger: update-implementation-plan
 description: >-
   Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
 tags:
@@ -27,7 +27,22 @@ dependencies:
 skills:
   - writing-plans — Author structured implementation plans
   - plans-and-specs — Plan and spec management
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-implementation-plan.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-implementation-plan.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-implementation-plan.prompt
 
 # update-implementation-plan
 
@@ -116,3 +131,7 @@ The skills listed below in the "Skills Required" section mirror the YAML front-m
 Detailed templates in `templates/update-implementation-plan/`:
 - `phases.md`
 - `rules.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

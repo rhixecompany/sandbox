@@ -26,7 +26,24 @@ tags:
   - power-platform
   - specification
   - typespec
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-copilot-studio-server-generator.prompt
+
+trigger: mcp-copilot-studio-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-copilot-studio-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-copilot-studio-server-generator.prompt
 
 ## Goal
 
@@ -136,3 +153,7 @@ Templates in `templates/mcp-copilot-studio-server-generator/`:
 - `expected_output.md`
 - `instructions.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

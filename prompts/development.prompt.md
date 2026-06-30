@@ -25,7 +25,24 @@ tags:
   - specification
   - sql
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - development.prompt
+
+trigger: development
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - development.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - development.prompt
 
 ## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.
 
@@ -72,3 +89,7 @@ Detailed templates in `templates/Developement/`:
 - `comprehensive_setup_guide_for_.md`
 - `tasks.md`
 - `tasks_.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

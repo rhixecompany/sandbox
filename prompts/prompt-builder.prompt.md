@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: prompt-builder
 name: prompt-builder
-trigger: /prompt-builder
+trigger: prompt-builder
 description: >-
   Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
 tags:
@@ -21,7 +21,22 @@ tags:
   - writing-skills
   - scaffolding
   - template
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-builder.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-builder.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-builder.prompt
 
 # prompt-builder
 
@@ -137,3 +152,7 @@ Generated prompts follow patterns from existing high-quality prompts:
 
 Detailed templates in `templates/prompt-builder/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

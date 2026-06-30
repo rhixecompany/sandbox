@@ -5,7 +5,7 @@ version: 1.0.0
 name: "security"
 title: "Security Review"
 description: "Comprehensive prompt for security review, vulnerability assessment, and secure coding practices."
-trigger: /security
+trigger: security
 tags:
   - api
   - architecture
@@ -21,7 +21,22 @@ tags:
   - security
   - review
   - code-quality
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - security.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - security.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - security.prompt
 
 ## Goal
 Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
@@ -111,3 +126,7 @@ Use this prompt for any change that handles external input, authentication, auth
 
 Templates in `templates/security/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

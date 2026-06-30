@@ -4,7 +4,7 @@ version: 1.0.0
 title: Playwright Automation Fill In Form
 name: "playwright-automation-fill-in-form"
 description: "Fill a form with Playwright MCP, stop before submission, and ask for a human review."
-trigger: /playwright-automation-fill-in-form
+trigger: playwright-automation-fill-in-form
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
 compatibility:
@@ -27,7 +27,22 @@ tags:
   - planning
   - playwright
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-automation-fill-in-form.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-automation-fill-in-form.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-automation-fill-in-form.prompt
 
 ## Goal
 
@@ -160,3 +175,7 @@ A reviewer who verifies the form is ready but not submitted.
 
 Templates in `templates/playwright-automation-fill-in-form/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

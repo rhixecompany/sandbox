@@ -47,7 +47,24 @@ tags:
   - react
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - migrate-to-next16.prompt
+
+trigger: migrate-to-next16
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - migrate-to-next16.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - migrate-to-next16.prompt
 
 Your goal is to automate migration to Next.js 16, including codemod, breaking changes, and validation.
 
@@ -57,3 +74,7 @@ Requirements:
 - Update config and API usage
 - Validate build, lint, and tests
 - Document migration steps and issues
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

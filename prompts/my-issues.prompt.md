@@ -20,7 +20,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - my-issues.prompt
+
+trigger: my-issues
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - my-issues.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - my-issues.prompt
 
 ## Goal
 
@@ -72,3 +89,7 @@ Use when you need to work on the current workspace or task.
 
 Templates in `templates/my-issues/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

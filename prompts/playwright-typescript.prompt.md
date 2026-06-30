@@ -5,7 +5,7 @@ version: 1.0.0
 name: "playwright-typescript"
 title: "Playwright Typescript"
 description: "Comprehensive Playwright TypeScript prompt aligned to repository testing standards."
-trigger: /playwright-typescript
+trigger: playwright-typescript
 tags:
   - playwright
   - prompts
@@ -15,7 +15,22 @@ tags:
   - hermes
   - typescript
   - playwright
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-typescript.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-typescript.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-typescript.prompt
 
 ## Goal
 Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
@@ -105,3 +120,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 
 Templates in `templates/playwright-typescript/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

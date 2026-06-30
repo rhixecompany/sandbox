@@ -20,7 +20,24 @@ tags:
   - planning
   - specification
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-deploy-manage-agents.prompt
+
+trigger: mcp-deploy-manage-agents
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-deploy-manage-agents.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-deploy-manage-agents.prompt
 
 ## Goal
 
@@ -323,3 +340,7 @@ Then provide:
 Detailed templates in `templates/mcp-deploy-manage-agents/`:
 - `agent_types.md`
 - `deployment_workflows.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

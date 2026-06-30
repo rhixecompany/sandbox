@@ -5,7 +5,7 @@ version: 1.0.0
 name: "prompts-strict-template"
 title: "Prompts Strict Template"
 description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
-trigger: /prompts-strict-template
+trigger: prompts-strict-template
 tags:
   - audit
   - fix
@@ -20,7 +20,22 @@ tags:
   - template
   - enforce
   - format
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-strict-template.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-strict-template.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-strict-template.prompt
 
 ## Goal
 Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
@@ -110,3 +125,7 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 
 Templates in `templates/prompts-strict-template/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

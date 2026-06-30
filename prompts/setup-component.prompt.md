@@ -41,7 +41,24 @@ tags:
   - setup
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-component.prompt
+
+trigger: setup-component
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-component.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-component.prompt
 
 ## Goal
 
@@ -93,3 +110,7 @@ Use when you need to next.js expert for the current workspace or task.
 
 Templates in `templates/setup-component/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -23,7 +23,24 @@ tags:
   - nextjs
   - setup
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-nextjs-frontend-stack.prompt
+
+trigger: setup-nextjs-frontend-stack
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-nextjs-frontend-stack.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - setup-nextjs-frontend-stack.prompt
 
 # Setup Next.js Frontend Stack for an Entity
 
@@ -238,3 +255,7 @@ If anything is ambiguous (naming, folder preference, or the desired implementati
 ## Template References
 
 Detailed templates in `templates/setup-nextjs-frontend-stack/`:
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

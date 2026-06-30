@@ -16,7 +16,24 @@ tags:
   - typescript
   - debugging
   - linux
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - centos-linux-triage.prompt
+
+trigger: centos-linux-triage
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - centos-linux-triage.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - centos-linux-triage.prompt
 
 # CentOS Linux Triage
 
@@ -52,3 +69,7 @@ Templates in `templates/centos-linux-triage/`:
 - `inputs.md`
 - `instructions.md`
 - `output_format.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

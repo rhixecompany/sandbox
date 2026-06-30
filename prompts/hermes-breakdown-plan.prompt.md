@@ -23,7 +23,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-plan.prompt
+
+trigger: hermes-breakdown-plan
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-plan.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-plan.prompt
 
 ## Goal
 
@@ -80,3 +97,7 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 
 Templates in `templates/hermes-breakdown-plan/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

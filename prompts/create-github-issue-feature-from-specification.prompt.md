@@ -25,7 +25,24 @@ tags:
   - github
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issue-feature-from-specification.prompt
+
+trigger: create-github-issue-feature-from-specification
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issue-feature-from-specification.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - create-github-issue-feature-from-specification.prompt
 
 ## Goal
 
@@ -98,3 +115,7 @@ Use when you need to work on the current workspace or task.
 
 Templates in `templates/create-github-issue-feature-from-specification/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

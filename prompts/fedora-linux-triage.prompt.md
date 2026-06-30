@@ -18,7 +18,24 @@ tags:
   - documentation
   - linux
   - markdown
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - fedora-linux-triage.prompt
+
+trigger: fedora-linux-triage
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - fedora-linux-triage.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - fedora-linux-triage.prompt
 
 # Fedora Linux Triage
 
@@ -54,3 +71,7 @@ Templates in `templates/fedora-linux-triage/`:
 - `inputs.md`
 - `instructions.md`
 - `output_format.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

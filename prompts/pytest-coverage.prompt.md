@@ -15,7 +15,24 @@ tags:
   - planning
   - specification
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - pytest-coverage.prompt
+
+trigger: pytest-coverage
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - pytest-coverage.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - pytest-coverage.prompt
 
 ## Goal
 
@@ -68,3 +85,7 @@ Use when you need to work on the current workspace or task.
 Templates in `templates/pytest-coverage/`:
 - `legacy_prompt_details.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

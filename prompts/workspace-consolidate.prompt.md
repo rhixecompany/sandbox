@@ -7,7 +7,7 @@ title: Workspace Consolidation — Scripts, Patches, Docs
 description:
     Consolidate scripts, patches, and documentation across the workspace with bash
     migration and audit workflows.
-trigger: /workspace-consolidate
+trigger: workspace-consolidate
 tags:
   - documentation
   - frontend
@@ -54,7 +54,22 @@ skills:
     - project-consolidation — Five-phase workflow for cleaning up and
       restructuring a project
 
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - workspace-consolidate.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - workspace-consolidate.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - workspace-consolidate.prompt
 
 ## Skills Required
 
@@ -460,3 +475,7 @@ Projects with full 11 docs:     N/N
 - `terminal("grep -q '^---$' <file>")` — Check frontmatter presence
 - `skill_view(name="git-patch-management")` — Load patch management skill
 - `skill_view(name="project-consolidation")` — Load consolidation skill
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

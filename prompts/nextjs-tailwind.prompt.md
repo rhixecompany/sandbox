@@ -5,7 +5,7 @@ version: 1.0.0
 name: "nextjs-tailwind"
 title: "Nextjs Tailwind"
 description: "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards."
-trigger: /nextjs-tailwind
+trigger: nextjs-tailwind
 tags:
   - architecture
   - audit
@@ -19,7 +19,22 @@ tags:
   - security
   - typescript
   - hermes
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - nextjs-tailwind.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - nextjs-tailwind.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - nextjs-tailwind.prompt
 
 ## Goal
 Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
@@ -109,3 +124,7 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 
 Templates in `templates/nextjs-tailwind/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

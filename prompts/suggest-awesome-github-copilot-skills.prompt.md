@@ -32,7 +32,24 @@ tags:
   - github
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - suggest-awesome-github-copilot-skills.prompt
+
+trigger: suggest-awesome-github-copilot-skills
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - suggest-awesome-github-copilot-skills.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - suggest-awesome-github-copilot-skills.prompt
 
 ## Goal
 
@@ -211,3 +228,7 @@ Templates in `templates/suggest-awesome-github-copilot-skills/`:
 - `skill_structure_requireme.md`
 - `update_handling.md`
 - `version_comparison_proces.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

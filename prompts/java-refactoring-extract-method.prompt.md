@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Refactoring Java Methods with Extract Method"
 title: "Refactoring Java Methods With Extract Method"
 description: "Refactoring using Extract Methods in Java Language"
-trigger: /Refactoring Java Methods with Extract Method
+trigger: refactoring-java-methods-with-extract-method
 tags:
   - frontend
   - java
@@ -15,7 +15,22 @@ tags:
   - hermes
   - java
   - refactoring
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-extract-method.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-extract-method.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-extract-method.prompt
 
 # Refactoring Java Methods with Extract Method
 
@@ -95,3 +110,7 @@ Templates in `templates/java-refactoring-extract-method/`:
 - `code_after_refactoring_2.md`
 - `code_before_refactoring_2.md`
 - `task.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

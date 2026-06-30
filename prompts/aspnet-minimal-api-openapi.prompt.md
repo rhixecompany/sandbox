@@ -20,7 +20,24 @@ tags:
   - dotnet
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - aspnet-minimal-api-openapi.prompt
+
+trigger: aspnet-minimal-api-openapi
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - aspnet-minimal-api-openapi.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - aspnet-minimal-api-openapi.prompt
 
 # ASP.NET Minimal API with OpenAPI
 
@@ -67,3 +84,7 @@ Templates in `templates/aspnet-minimal-api-openapi/`:
 - `openapi_documentation.md`
 - `request_and_response_type.md`
 - `type_handling.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

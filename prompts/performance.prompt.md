@@ -5,7 +5,7 @@ version: 1.0.0
 name: "performance"
 title: "Performance"
 description: "Comprehensive performance prompt focused on measurable improvements and safe optimizations."
-trigger: /performance
+trigger: performance
 tags:
   - data
   - database
@@ -17,7 +17,22 @@ tags:
   - sql
   - typescript
   - hermes
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - performance.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - performance.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - performance.prompt
 
 ## Goal
 Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
@@ -107,3 +122,7 @@ Use this prompt when performance issues are suspected or when implementing featu
 
 Templates in `templates/performance/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -24,7 +24,24 @@ tags:
   - refactoring
   - security
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - dev.prompt
+
+trigger: dev
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - dev.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - dev.prompt
 
 ## Phase 1
 
@@ -47,3 +64,7 @@ tags:
 
 Templates in `templates/dev/`:
 - `phase_1.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

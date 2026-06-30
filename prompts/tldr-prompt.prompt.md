@@ -26,7 +26,24 @@ tags:
   - mcp
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tldr-prompt.prompt
+
+trigger: tldr-prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tldr-prompt.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - tldr-prompt.prompt
 
 ## Goal
 
@@ -226,3 +243,7 @@ Your output is complete when:
 Detailed templates in `templates/tldr-prompt/`:
 - `error_handling.md`
 - `url_resolver.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

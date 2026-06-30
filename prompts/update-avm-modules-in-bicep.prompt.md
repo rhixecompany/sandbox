@@ -29,7 +29,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-avm-modules-in-bicep.prompt
+
+trigger: update-avm-modules-in-bicep
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-avm-modules-in-bicep.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - update-avm-modules-in-bicep.prompt
 
 ## Goal
 
@@ -134,3 +151,7 @@ Describe updates made, any manual reviews needed or issues encountered.
 
 Templates in `templates/update-avm-modules-in-bicep/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -18,7 +18,24 @@ tags:
   - planning
   - security
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation-writer.prompt
+
+trigger: documentation-writer
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation-writer.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - documentation-writer.prompt
 
 ## Goal
 
@@ -107,3 +124,7 @@ You will follow this process for every documentation request:
 
 Templates in `templates/documentation-writer/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

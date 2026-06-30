@@ -20,7 +20,24 @@ tags:
   - planning
   - specification
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - conventional-commit.prompt
+
+trigger: conventional-commit
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - conventional-commit.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - conventional-commit.prompt
 
 ## Goal
 
@@ -73,3 +90,7 @@ Use when you need to conventional commit for the current workspace or task.
 Templates in `templates/conventional-commit/`:
 - `legacy_prompt_details.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

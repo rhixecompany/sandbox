@@ -29,7 +29,24 @@ tags:
   - planning
   - security
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnetcore.prompt
+
+trigger: containerize-aspnetcore
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnetcore.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - containerize-aspnetcore.prompt
 
 # ASP.NET Core Docker Containerization Prompt
 
@@ -163,3 +180,7 @@ Detailed templates in `templates/containerize-aspnetcore/`:
 - `example_dockerfile.md`
 - `execution_process.md`
 - `linux_distribution_variations.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

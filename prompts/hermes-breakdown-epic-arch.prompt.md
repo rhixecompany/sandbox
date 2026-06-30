@@ -22,7 +22,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-arch.prompt
+
+trigger: hermes-breakdown-epic-arch
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-arch.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - hermes-breakdown-epic-arch.prompt
 
 ## Goal
 
@@ -74,3 +91,7 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 
 Templates in `templates/hermes-breakdown-epic-arch/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

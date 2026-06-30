@@ -1,4 +1,8 @@
 ---
+status: in_progress
+status: in_progress
+status: in_progress
+---
 title: "Copilot Instructions Generator - Codebase analysis spec"
 category: "SPEC"
 source: "prompts/debugger.prompt.md"

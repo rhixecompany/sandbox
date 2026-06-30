@@ -4,7 +4,7 @@ version: 1.0.0
 title: Playwright Generate Test
 name: "playwright-generate-test"
 description: "Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes."
-trigger: /playwright-generate-test
+trigger: playwright-generate-test
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
 compatibility:
@@ -26,7 +26,22 @@ tags:
   - playwright
   - specification
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-generate-test.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-generate-test.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-generate-test.prompt
 
 ## Goal
 
@@ -164,3 +179,7 @@ A test runner who fixes issues until the test passes.
 
 Templates in `templates/playwright-generate-test/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -19,7 +19,24 @@ tags:
   - planning
   - specification
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-create-adaptive-cards.prompt
+
+trigger: mcp-create-adaptive-cards
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-create-adaptive-cards.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - mcp-create-adaptive-cards.prompt
 
 ## Goal
 
@@ -185,3 +202,7 @@ Detailed templates in `templates/mcp-create-adaptive-cards/`:
 - `card_elements.md`
 - `common_patterns.md`
 - `complete_example.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

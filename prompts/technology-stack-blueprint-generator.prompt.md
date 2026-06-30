@@ -31,7 +31,24 @@ tags:
   - linux
   - python
   - react
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - technology-stack-blueprint-generator.prompt
+
+trigger: technology-stack-blueprint-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - technology-stack-blueprint-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - technology-stack-blueprint-generator.prompt
 
 ## Goal
 
@@ -98,3 +115,7 @@ ${OUTPUT_FORMAT="Markdown|JSON|YAML|HTML"} <!-- Select output format --> ${CATEG
 
 Detailed templates in `templates/technology-stack-blueprint-generator/`:
 - `generated_prompt.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

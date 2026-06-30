@@ -1,3 +1,8 @@
+---
+status: completed
+status: completed
+status: completed
+---
 # Plan: VS Code Extension Settings Audit & Update
 
 **Date:** 2026-06-29

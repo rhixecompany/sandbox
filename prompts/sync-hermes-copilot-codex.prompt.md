@@ -1,7 +1,7 @@
 ---
 license: MIT
 author: Hermes Agent
-trigger: /sync-hermes-copilot-codex
+trigger: sync-hermes-copilot-codex
 name: sync-hermes-copilot-codex
 title: Sync Hermes Copilot Codex
 version: 1.1.0
@@ -113,3 +113,7 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 
 Detailed templates in `templates/sync-hermes-copilot-codex/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

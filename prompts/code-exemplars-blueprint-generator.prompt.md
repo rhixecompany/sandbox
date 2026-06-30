@@ -31,7 +31,24 @@ tags:
   - python
   - react
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-exemplars-blueprint-generator.prompt
+
+trigger: code-exemplars-blueprint-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-exemplars-blueprint-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-exemplars-blueprint-generator.prompt
 
 ## Goal
 
@@ -102,3 +119,7 @@ Upon running this prompt, GitHub Copilot will scan your codebase and generate an
 
 Detailed templates in `templates/code-exemplars-blueprint-generator/`:
 - `generated_prompt.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

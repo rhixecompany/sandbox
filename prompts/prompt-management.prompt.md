@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: prompt-management
 title: Prompt Management
-trigger: /prompt-management
+trigger: prompt-management
 description: List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline clean or continue remediation.
 tags:
   - debugging
@@ -47,7 +47,22 @@ skills:
   - creating-skills
   - writing-skills
   - verification-before-completion
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-management.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-management.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompt-management.prompt
 
 ## Goal
 
@@ -362,3 +377,7 @@ Do not rename prompts, skill names, triggers, or dependency keys unless the user
 The final state must be verifiable by reading the prompt files, the registry, and the validation report.
 
 ---
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

@@ -1,5 +1,5 @@
 ---
-trigger: /plan-audit
+trigger: plan-audit
 name: plan-audit
 title: "Audit Agent Stack"
 description: >
@@ -34,7 +34,22 @@ skills:
   - brainstorming
   - simplify
   - subagent-driven-development
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-audit.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-audit.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-audit.prompt
 
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
@@ -115,3 +130,7 @@ Issues table:
 - [ ] All broken references flagged
 - [ ] Report written with actionable findings
 - [ ] Inventory saved to `docs/agent-stack-audit-report.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

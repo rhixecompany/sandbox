@@ -5,7 +5,7 @@ version: 1.0.0
 name: "code-review"
 title: "Code Review"
 description: "Comprehensive code review prompt for correctness, security, and testing risk."
-trigger: /code-review
+trigger: code-review
 tags:
   - audit
   - data
@@ -16,7 +16,22 @@ tags:
   - testing
   - typescript
   - hermes
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-review.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-review.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - code-review.prompt
 
 ## Goal
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
@@ -107,3 +122,7 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 
 Templates in `templates/code-review/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

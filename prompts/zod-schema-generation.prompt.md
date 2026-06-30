@@ -5,7 +5,7 @@ version: 1.0.0
 name: "zod-schema-generation"
 title: "Zod Schema Generation"
 description: "Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples with full type safety."
-trigger: /zod-schema-generation
+trigger: zod-schema-generation
 tags:
   - data
   - database
@@ -23,7 +23,22 @@ dependencies:
   - skill:prompt-engineering
 skills:
   - prompt-engineering
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - zod-schema-generation.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - zod-schema-generation.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - zod-schema-generation.prompt
 
 ## Goal
 Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples.
@@ -38,3 +53,7 @@ Analyze the source type/schema/JSON structure.
 Generate corresponding Zod schemas with refinements.
 ### Phase 3: Verification
 Validate the generated schemas compile and provide correct type inference.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

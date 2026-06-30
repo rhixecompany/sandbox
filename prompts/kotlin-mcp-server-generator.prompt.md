@@ -17,7 +17,24 @@ tags:
   - mcp
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-mcp-server-generator.prompt
+
+trigger: kotlin-mcp-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - kotlin-mcp-server-generator.prompt
 
 # Kotlin MCP Server Project Generator
 
@@ -307,3 +324,7 @@ Detailed templates in `templates/kotlin-mcp-server-generator/`:
 - `serverkt_template.md`
 - `servertestkt_template.md`
 - `tool1kt_template.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

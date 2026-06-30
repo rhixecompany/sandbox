@@ -21,7 +21,24 @@ tags:
   - planning
   - powerbi
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-performance-troubleshooting.prompt
+
+trigger: power-bi-performance-troubleshooting
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-performance-troubleshooting.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-performance-troubleshooting.prompt
 
 # Power BI Performance Troubleshooting Guide
 
@@ -78,3 +95,7 @@ Detailed templates in `templates/power-bi-performance-troubleshooting/`:
 - `solution_framework.md`
 - `troubleshooting_methodology.md`
 - `troubleshooting_workflows.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

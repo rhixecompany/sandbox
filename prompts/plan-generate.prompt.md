@@ -1,5 +1,5 @@
 ---
-trigger: /plan-generate
+trigger: plan-generate
 name: plan-generate
 title: "Generate Implementation Plan"
 description: >
@@ -33,7 +33,22 @@ skills:
   - brainstorming
   - systematic-debugging
   - verification-before-completion
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-generate.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-generate.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - plan-generate.prompt
 
 > **Shared template references:**
 > - [Frontmatter patterns](../prompts/templates/_shared/frontmatter.md)
@@ -114,3 +129,7 @@ Concise statement of what this plan achieves.
 - [ ] Phase ordering is logical (no circular dependencies)
 - [ ] DRY: no duplicated content that belongs in `_shared/`
 - [ ] If `.prompt.md` output: frontmatter has `name`, `title`, `version`, `description`, `tags`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

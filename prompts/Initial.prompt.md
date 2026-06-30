@@ -36,7 +36,24 @@ tags:
   - sql
   - typescript
   - workflow
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - initial.prompt
+
+trigger: initial
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - initial.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - initial.prompt
 
 Read And understand @/**/*.ts, @/**/*.tsx, @/**/*.mjs, @/**/*.json , @/**/*.mts, @/**/*.json @/**/*.md, @/**/*.txt,   @/**/*.yml,   @/**/*.ps1, @/**/*.sh, @/**/*/Dockerfile, @/src, @scripts and the overall structure of the project.
 After fully understanding the project the package manager is pnpm  and the system is windows, Request all permissions needed to complete all tasks.
@@ -64,3 +81,7 @@ After completing all the tasks above, perform the following additional tasks to 
 8 - Create, Optimize and Validate a comprehensive @.github/prompts/Setup.prompt.md if exists update the file  with all the content,tasks, todos, recommendations from @.md, @.txt, @.ts, @.tsx, @.mjs, @.json , @.mts, @.json @.yml   @.ps1 @.sh @Dockerfile files  as Github copilot cli Prompts for a complete setup of this project and scaffolding all necessary files, components, pages and codes   setup handler for long running functions.
 9 - Create, Optimize and Validate a comprehensive README.md for the project that includes setup instructions, usage guidelines, contribution instructions, and any other relevant information.
 10 - Fix all linting errors
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

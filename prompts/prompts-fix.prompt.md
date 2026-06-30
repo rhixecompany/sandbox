@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: prompts-fix
 title: prompts Sync and Deduplication
-trigger: /prompts-fix
+trigger: prompts-fix
 description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific validation.
 tags:
   - ai-assistant
@@ -31,7 +31,22 @@ dependencies:
     - skill:acpx-executor
     - skill:hermes-agent
     - skill:copilot-cli-quickstart
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-fix.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-fix.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - prompts-fix.prompt
 
 ## Goal
 
@@ -114,3 +129,7 @@ Verify that each platform still matches its expected schema and that no prompts 
 - `write_file(path, content)` — Create new prompt files where needed
 - `delegate_task(goal, toolsets)` — Parallel discovery across platforms
 - `skill_view(name="acpx-executor")` — Dispatch tasks to ACPX providers
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

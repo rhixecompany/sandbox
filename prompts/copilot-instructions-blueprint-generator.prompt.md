@@ -23,7 +23,24 @@ tags:
   - markdown
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - copilot-instructions-blueprint-generator.prompt
+
+trigger: copilot-instructions-blueprint-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - copilot-instructions-blueprint-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - copilot-instructions-blueprint-generator.prompt
 
 ## Goal
 
@@ -229,3 +246,7 @@ Detailed templates in `templates/copilot-instructions-blueprint-generator/`:
 - `project-specific_guidance.md`
 - `technology-specific_guidelines.md`
 - `testing_approach.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

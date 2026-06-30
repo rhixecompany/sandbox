@@ -4,7 +4,7 @@ version: 1.0.0
 title: Playwright Explore Website
 name: "playwright-explore-website"
 description: "Explore a website with Playwright MCP, document core flows, and propose tests from the findings."
-trigger: /playwright-explore-website
+trigger: playwright-explore-website
 author: "Alexa"
 created: "2026-05-25T10:50:21.952313Z"
 compatibility:
@@ -25,7 +25,22 @@ tags:
   - planning
   - playwright
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-explore-website.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-explore-website.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - playwright-explore-website.prompt
 
 ## Goal
 
@@ -162,3 +177,7 @@ A test-minded reviewer who turns exploration notes into concrete test cases.
 
 Templates in `templates/playwright-explore-website/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

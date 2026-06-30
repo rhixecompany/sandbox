@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Refactoring Java Methods with Remove Parameter"
 title: "Refactoring Java Methods With Remove Parameter"
 description: "Refactoring using Remove Parameter in Java Language"
-trigger: /Refactoring Java Methods with Remove Parameter
+trigger: refactoring-java-methods-with-remove-parameter
 tags:
   - backend
   - java
@@ -15,7 +15,22 @@ tags:
   - hermes
   - java
   - refactoring
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-remove-parameter.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-remove-parameter.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-refactoring-remove-parameter.prompt
 
 # Refactoring Java Methods with Remove Parameter
 
@@ -108,3 +123,7 @@ Now, assess all methods with unused parameters and refactor them using **Remove 
 Templates in `templates/java-refactoring-remove-parameter/`:
 - `code_after_refactoring_1.md`
 - `code_before_refactoring_1.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

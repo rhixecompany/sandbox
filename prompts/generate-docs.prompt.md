@@ -39,7 +39,24 @@ tags:
   - planning
   - specification
   - typescript
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - generate-docs.prompt
+
+trigger: generate-docs
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - generate-docs.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - generate-docs.prompt
 
 ## Goal
 
@@ -91,3 +108,7 @@ Use when you need to next.js expert for the current workspace or task.
 
 Templates in `templates/generate-docs/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

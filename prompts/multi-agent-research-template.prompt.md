@@ -18,7 +18,7 @@ tags:
   - research
   - planning
   - automation
-trigger: /multi-agent-research
+trigger: multi-agent-research
 version: "1.0.0"
 author: "Hermes Agent"
 license: "MIT"
@@ -216,3 +216,7 @@ For this Phase:
 
 Detailed templates in `templates/multi-agent-research-template/`:
 - `phase_2_mcp_server_and_tool_re.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

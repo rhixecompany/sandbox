@@ -19,7 +19,24 @@ tags:
   - performance
   - powerbi
   - testing
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-model-design-review.prompt
+
+trigger: power-bi-model-design-review
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-model-design-review.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-bi-model-design-review.prompt
 
 # Power BI Data Model Design Review
 
@@ -68,3 +85,7 @@ Detailed templates in `templates/power-bi-model-design-review/`:
 - `review_framework.md`
 - `review_output_structure.md`
 - `specialized_review_types.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

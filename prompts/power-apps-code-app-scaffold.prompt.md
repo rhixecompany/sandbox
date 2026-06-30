@@ -22,7 +22,24 @@ tags:
   - planning
   - power-platform
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-apps-code-app-scaffold.prompt
+
+trigger: power-apps-code-app-scaffold
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-apps-code-app-scaffold.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - power-apps-code-app-scaffold.prompt
 
 # Power Apps Code Apps Project Scaffolding
 
@@ -63,3 +80,7 @@ Ensure the generated project follows Microsoft's official Power Apps Code Apps d
 Detailed templates in `templates/power-apps-code-app-scaffold/`:
 - `implementation_guidelines.md`
 - `task.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

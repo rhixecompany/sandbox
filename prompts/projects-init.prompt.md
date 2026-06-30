@@ -1,7 +1,7 @@
 ---
 license: MIT
 author: Hermes Agent
-trigger: /projects-init
+trigger: projects-init
 name: projects-init
 title: "Projects Init"
 description: >-
@@ -129,3 +129,7 @@ Templates in `templates/projects-init/`:
 - `phase_3_create_skills__up.md`
 - `rules.md`
 - `skills_required.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

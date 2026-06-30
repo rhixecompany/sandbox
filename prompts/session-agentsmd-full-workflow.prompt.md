@@ -5,7 +5,7 @@ version: 1.0.0
 name: "session-agentsmd-full-workflow"
 title: "Session Agents.md Full Workflow"
 description: "Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and report."
-trigger: /session-agentsmd-full-workflow
+trigger: session-agentsmd-full-workflow
 tags:
   - agents
   - architecture
@@ -20,7 +20,22 @@ tags:
   - workflow
   - session
   - context
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - session-agentsmd-full-workflow.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - session-agentsmd-full-workflow.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - session-agentsmd-full-workflow.prompt
 
 ## Goal
 Use when "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output" to accomplish the associated tasks and objectives.
@@ -160,3 +175,7 @@ Use subagents only when needed for speed or isolation.
 
 Detailed templates in `templates/session-agentsmd-full-workflow/`:
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

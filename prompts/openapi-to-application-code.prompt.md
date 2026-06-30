@@ -17,7 +17,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - openapi-to-application-code.prompt
+
+trigger: openapi-to-application-code
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - openapi-to-application-code.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - openapi-to-application-code.prompt
 
 ## Goal
 
@@ -149,3 +166,7 @@ After generation:
 
 Detailed templates in `templates/openapi-to-application-code/`:
 - `generation_process.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

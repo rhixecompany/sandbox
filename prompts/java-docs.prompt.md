@@ -6,7 +6,7 @@ version: 1.0.0
 name: "java-docs"
 title: "Java Documentation (Javadoc)"
 description: "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation."
-trigger: /java-docs
+trigger: java-docs
 tags:
   - documentation
   - java
@@ -17,7 +17,22 @@ tags:
   - java
   - documentation
   - javadoc
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-docs.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-docs.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - java-docs.prompt
 
 # Java Documentation (Javadoc) Best Practices
 
@@ -37,3 +52,7 @@ tags:
 - Use `@version` to specify the version of the member.
 - Use `@author` to specify the author of the code.
 - Use `@deprecated` to mark a member as deprecated and provide an alternative.
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

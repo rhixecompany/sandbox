@@ -21,7 +21,24 @@ tags:
   - mcp
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - go-mcp-server-generator.prompt
+
+trigger: go-mcp-server-generator
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - go-mcp-server-generator.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - go-mcp-server-generator.prompt
 
 # Go MCP Server Project Generator
 
@@ -226,3 +243,7 @@ Detailed templates in `templates/go-mcp-server-generator/`:
 - `main_testgo_template.md`
 - `maingo_template.md`
 - `toolstool1go_template.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

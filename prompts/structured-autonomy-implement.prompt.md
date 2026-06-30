@@ -5,14 +5,29 @@ version: 1.0.0
 name: "sa-implement"
 title: "Sa Implement"
 description: "Structured Autonomy Implementation Prompt"
-trigger: /sa-implement
+trigger: sa-implement
 tags:
   - ml
   - prompts
   - specification
   - typescript
   - hermes
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - structured-autonomy-implement.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - structured-autonomy-implement.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - structured-autonomy-implement.prompt
 
 ## Goal
 
@@ -65,3 +80,7 @@ Use when you need to work on the current workspace or task.
 Templates in `templates/structured-autonomy-implement/`:
 - `legacy_prompt_details.md`
 - `phases.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

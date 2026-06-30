@@ -24,7 +24,24 @@ tags:
   - drizzle
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-docs.prompt
+
+trigger: csharp-docs
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-docs.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - csharp-docs.prompt
 
 # C# Documentation Best Practices
 
@@ -89,3 +106,7 @@ tags:
 
 Templates in `templates/csharp-docs/`:
 - `methods.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

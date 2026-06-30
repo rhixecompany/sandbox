@@ -15,7 +15,24 @@ tags:
   - documentation
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - shuffle-json-data.prompt
+
+trigger: shuffle-json-data
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - shuffle-json-data.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - shuffle-json-data.prompt
 
 ## Goal
 
@@ -173,3 +190,7 @@ Templates in `templates/shuffle-json-data/`:
 - `examples.md`
 - `phases.md`
 - `unacceptable_json_default.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

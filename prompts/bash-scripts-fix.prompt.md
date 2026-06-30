@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: bash-scripts-fix
 title: Bash Scripts Modernization and Consolidation
-trigger: /bash-scripts-fix
+trigger: bash-scripts-fix
 description:
     Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
     scripts across the workspace.
@@ -49,7 +49,22 @@ skills:
     - acpx-executor
     - script-orchestration
 
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bash-scripts-fix.prompt
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bash-scripts-fix.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - bash-scripts-fix.prompt
 
 > Search, identify, catalog, and modernize scripts across the workspace.
 
@@ -194,3 +209,7 @@ The 7-phase remediation plan:
 - Undocumented workflows → inventory before deleting
 
 **Core script baselines**: `Bash/upgrade.sh`, `Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `Bash/comicwise/dev.sh/.ps1`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.

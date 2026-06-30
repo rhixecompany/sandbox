@@ -22,7 +22,24 @@ tags:
   - linux
   - planning
   - specification
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - seed-review-and-create.prompt
+
+trigger: seed-review-and-create
+
 ---
+metadata:
+  hermes:
+    related_skills: []
+    tags:
+    - seed-review-and-create.promptmetadata:
+  hermes:
+    related_skills: []
+    tags:
+    - seed-review-and-create.prompt
 
 # Seed System Review & Enhancement
 
@@ -80,3 +97,7 @@ pnpm lint:strict   # Must be 0 Lint errors
 
 Templates in `templates/seed-review-and-create/`:
 - `tasks.md`
+
+## Hooks
+
+- Wire this prompt into a `only then` execution chain when appropriate.
