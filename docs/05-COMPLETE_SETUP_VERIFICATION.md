@@ -1,9 +1,9 @@
 # Hermes Complete Setup & Verification Guide
 
-**Document Type:** Step-by-Step Setup & Verification  
-**Version:** 1.0  
-**Date:** May 25, 2026  
-**Environment:** Windows 11 / macOS / Linux (WSL2)  
+**Document Type:** Step-by-Step Setup & Verification
+**Version:** 1.0
+**Date:** May 25, 2026
+**Environment:** Windows 11 / macOS / Linux (WSL2)
 **Hermes Version:** v0.14.0 (2026.5.16)
 
 ---
@@ -21,8 +21,8 @@
 ✓ Production Configuration Active
 ```
 
-**Location:** C:\Users\Alexa\AppData\Local\hermes\  
-**Config:** C:\Users\Alexa\AppData\Local\hermes\config.yaml  
+**Location:** C:\Users\Alexa\AppData\Local\hermes\
+**Config:** C:\Users\Alexa\AppData\Local\hermes\config.yaml
 **Secrets:** C:\Users\Alexa\AppData\Local\hermes\.env
 
 ---
@@ -387,8 +387,8 @@ Timeout:      300s
 hermes config set terminal.backend local
 ```
 
-**Use:** Development, simple commands  
-**Pros:** No overhead, immediate execution  
+**Use:** Development, simple commands
+**Pros:** No overhead, immediate execution
 **Cons:** No isolation
 
 #### 2. Docker
@@ -398,8 +398,8 @@ hermes config set terminal.backend docker
 hermes config set terminal.docker.image nikolaik/python-nodejs:python3.11-nodejs20
 ```
 
-**Use:** Isolation, containerized workflows  
-**Pros:** Sandboxed environment, reproducible  
+**Use:** Isolation, containerized workflows
+**Pros:** Sandboxed environment, reproducible
 **Cons:** Docker must be running
 
 #### 3. SSH (Remote)
@@ -411,8 +411,8 @@ hermes config set terminal.ssh.user agent
 hermes config set terminal.ssh.key ~/.ssh/id_rsa
 ```
 
-**Use:** Production, security  
-**Pros:** Remote execution, protected API keys  
+**Use:** Production, security
+**Pros:** Remote execution, protected API keys
 **Cons:** Network dependency
 
 ### Test Terminal Backend
@@ -612,7 +612,7 @@ VERIFICATION COMPLETE ✓
 hermes chat "Create a file called 'test.txt' with content 'Hello from Hermes'"
 ```
 
-**Behind the scenes:** Uses `file` toolset to create file  
+**Behind the scenes:** Uses `file` toolset to create file
 **Result:** File created in current directory
 
 ### Example 2: Terminal Commands
@@ -621,7 +621,7 @@ hermes chat "Create a file called 'test.txt' with content 'Hello from Hermes'"
 hermes chat "Run 'npm list' and show the output"
 ```
 
-**Behind the scenes:** Uses `terminal` toolset to execute  
+**Behind the scenes:** Uses `terminal` toolset to execute
 **Result:** npm package list displayed
 
 ### Example 3: Docker Operations
@@ -630,7 +630,7 @@ hermes chat "Run 'npm list' and show the output"
 hermes chat "List all Docker containers and their status"
 ```
 
-**Behind the scenes:** Uses `docker` MCP tool  
+**Behind the scenes:** Uses `docker` MCP tool
 **Result:** Containers listed with status
 
 ### Example 4: Web Research
@@ -639,7 +639,7 @@ hermes chat "List all Docker containers and their status"
 hermes chat "Search for latest AI news and summarize"
 ```
 
-**Behind the scenes:** Uses `web` toolset for search  
+**Behind the scenes:** Uses `web` toolset for search
 **Result:** News summary provided
 
 ### Example 5: Code Analysis
@@ -648,7 +648,7 @@ hermes chat "Search for latest AI news and summarize"
 hermes chat "Analyze this Python script for issues" (with file upload)
 ```
 
-**Behind the scenes:** Uses `vision` toolset for code analysis  
+**Behind the scenes:** Uses `vision` toolset for code analysis
 **Result:** Issue analysis and suggestions
 
 ---
@@ -739,23 +739,24 @@ watch -n 5 'hermes mcp list'
 
 ### Documentation Files
 
-- `01-MCP_BEST_PRACTICES_GUIDE.md` — MCP theory and patterns
-- `02-HERMES_CONFIGURATION_GUIDE.md` — Setup and configuration
-- `03-ENVIRONMENT_VARIABLES_REFERENCE.md` — All available variables
-- `04-DOCKER_MCP_SETUP_GUIDE.md` — Docker integration
-- `05-COMPLETE_SETUP_VERIFICATION.md` — This file
-
+- `docs/01-MCP_BEST_PRACTICES_GUIDE.md` — MCP theory and patterns
+- `docs/02-HERMES_CONFIGURATION_GUIDE.md` — Setup and configuration
+- `docs/03-ENVIRONMENT_VARIABLES_REFERENCE.md` — All available variables
+- `docs/04-DOCKER_MCP_SETUP_GUIDE.md` — Docker integration
+- `docs/05-COMPLETE_SETUP_VERIFICATION.md` — This file
+- `docs/07-MCP_SECURITY_BEST_PRACTICES.md`
+- `docs/06-HERMES_AGENT_OFFICIAL_REFERENCE_2026.md`
 ---
 
-**System Status:** ✅ PRODUCTION READY  
-**Last Verified:** May 25, 2026  
-**Version:** Hermes v0.14.0 (2026.5.16)  
-**Configuration:** Global + Project  
-**MCP Servers:** 7/8 Enabled  
+**System Status:** ✅ PRODUCTION READY
+**Last Verified:** May 25, 2026
+**Version:** Hermes v0.14.0 (2026.5.16)
+**Configuration:** Global + Project
+**MCP Servers:** 7/8 Enabled
 **Total Tools:** 250+
 
 ---
 
-**Document Version:** 1.0  
-**Author:** Alexa  
+**Document Version:** 1.0
+**Author:** Alexa
 **Last Updated:** May 25, 2026

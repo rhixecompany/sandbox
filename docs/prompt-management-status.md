@@ -1,0 +1,40 @@
+# Prompt Management Status
+
+- Total prompts: 215
+- Valid count: 214
+- Invalid count: 1
+- Duplicates: none
+- Invalid files:
+  - prompts\refactor-method-complexity-reduce.prompt.md (missing fields: ['tags'])
+- Missing refs: 29
+- Next remediation batch:
+  - prompts\refactor-method-complexity-reduce.prompt.md
+  - prompts\prompt-management.prompt.md
+  - prompts\execute-all-prompts.prompt.md
+  - prompts\agents-fix.prompt.md
+  - prompts\agents-system-prompt-context-fix.prompt.md
+  - prompts\ai-prompt-engineering-safety-review.prompt.md
+  - prompts\audit-skills-judge-fix.prompt.md
+  - prompts\bash-scripts-fix.prompt.md
+  - prompts\boost-prompt.prompt.md
+  - prompts\context-map.prompt.md
+  - prompts\convert-plaintext-to-md.prompt.md
+  - prompts\dev-init.prompt.md
+  - prompts\general.prompt.md
+  - prompts\plan-audit.prompt.md
+  - prompts\plan-batch-fix.prompt.md
+  - prompts\plan-execute.prompt.md
+  - prompts\plan-generate.prompt.md
+  - prompts\projects-init.prompt.md
+  - prompts\prompts-fix.prompt.md
+  - prompts\repo-management.prompt.md
+  - prompts\repo-research-pipeline.prompt.md
+  - prompts\repo-story-time.prompt.md
+  - prompts\repo.prompt.md
+  - prompts\skills-fix.prompt.md
+  - prompts\sync-hermes-copilot-codex.prompt.md
+  - prompts\test-providers-models.prompt.md
+  - prompts\update-implementation-plan.prompt.md
+  - prompts\web-research-pipeline.prompt.md
+  - prompts\workspace-consolidate.prompt.md
+  - prompts\zod-schema-generation.prompt.md
