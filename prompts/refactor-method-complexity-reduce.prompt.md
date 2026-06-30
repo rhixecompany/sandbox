@@ -14,6 +14,13 @@ metadata:
     - refactor-method-complexity-reduce.prompt
 
 ---
+
+
+## Actions
+
+- Follow the prompt workflow as specified.
+- Produce the requested deliverable(s) in the exact structure requested.
+- Validate output against acceptance criteria before finishing.
 tags:
   - refactoring
   - complexity

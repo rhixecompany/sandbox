@@ -27,6 +27,13 @@ metadata:
     related_skills: [codex, copilot, hermes, research, planning, automation]
 ---
 
+
+## Actions
+
+- Follow the prompt workflow as specified.
+- Produce the requested deliverable(s) in the exact structure requested.
+- Validate output against acceptance criteria before finishing.
+
 ## Skills Required
 
 > See full table with per-domain purposes:

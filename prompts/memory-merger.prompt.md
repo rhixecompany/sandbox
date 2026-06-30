@@ -23,6 +23,13 @@ metadata:
 trigger: memory-merger
 
 ---
+
+
+## Actions
+
+- Follow the prompt workflow as specified.
+- Produce the requested deliverable(s) in the exact structure requested.
+- Validate output against acceptance criteria before finishing.
 metadata:
   hermes:
     related_skills: []
