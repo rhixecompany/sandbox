@@ -1,15 +1,15 @@
 # Batch 25 Results
-> Skills 241-250 of 429
+> Skills 241-250 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
-| heartmula | 70 | WARN | 18 | 12 | 20 | 15 | 5 | 190 |
-| slack-gif-creator | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
-| songsee | 67 | WARN | 18 | 12 | 12 | 20 | 5 | 111 |
-| spotify | 66 | WARN | 18 | 12 | 16 | 15 | 5 | 155 |
-| transloadit-media-processing | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
-| meme-generation | 64 | WARN | 15 | 12 | 12 | 15 | 10 | 131 |
-| memento-flashcards | 66 | WARN | 15 | 12 | 16 | 13 | 10 | 325 |
-| openclaw-migration | 71 | WARN | 20 | 12 | 16 | 13 | 10 | 312 |
-| accelerate | 72 | WARN | 20 | 12 | 12 | 18 | 10 | 346 |
-| chroma | 69 | WARN | 20 | 12 | 16 | 11 | 10 | 421 |
+| mcp-fetch | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 97 |
+| mcp-filesystem | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 121 |
+| mcp-github | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 127 |
+| mcp-memory | 72 | WARN | 20 | 16 | 16 | 15 | 5 | 136 |
+| mcp-mindstudio | 72 | WARN | 20 | 16 | 16 | 15 | 5 | 146 |
+| mcp-playwright | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 144 |
+| mcp-security-audit | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
+| mcp-sequential-thinking | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 150 |
+| mcp-smithery | 76 | WARN | 20 | 16 | 20 | 15 | 5 | 185 |
+| mcporter | 65 | WARN | 15 | 8 | 12 | 20 | 10 | 132 |

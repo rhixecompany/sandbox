@@ -10,21 +10,28 @@ tags:
   - errors
   - warnings
   - deprecations
-  - documentation
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - pl
+  ---
+  name: pl
+  title: "Pl"
+  description: "Pl"
+  version: 1.0.0
+  author: "Hermes Agent"
+  license: MIT
+  tags:
+    - batch-fixes
+    - errors
+    - warnings
+    - deprecations
+    - documentation
+  metadata:
+    hermes:
+      related_skills: []
+      tags:
+      - pl
 
-trigger: pl
+  trigger: pl
 
----
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - pl
+  # Batch Fix All Errors, Warnings, and Deprecations
 
 # Batch Fix All Errors, Warnings, and Deprecations
 

@@ -62,7 +62,6 @@ trigger: create-github-action-workflow-specification
 
 ---
 
-
 ## Actions
 
 - Follow the prompt workflow as specified.
@@ -290,11 +289,9 @@ When analyzing the workflow file:
 Focus on creating a specification that serves as both documentation and a template for workflow updates.
 ```
 
-
 ## Template References
 
 Detailed templates in `templates/create-github-action-workflow-specification/`:
-
 
 ## Template References
 
@@ -328,3 +325,4 @@ Templates in `templates/create-github-action-workflow-specification/`:
 ## Hooks
 
 - Wire this prompt into a `only then` execution chain when appropriate.
+

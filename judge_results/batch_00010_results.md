@@ -1,8 +1,10 @@
 # Batch 10 Results
-> Skills 91-100 of 429
+> Skills 91-100 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
+| dcf-model | 60 | WARN | 15 | 4 | 16 | 15 | 10 | 1272 |
+| debugger-tooling | 63 | WARN | 20 | 2 | 16 | 15 | 10 | 224 |
 | ai-prompt-engineering-safety-review | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 124 |
 | chrome-devtools | 66 | WARN | 18 | 12 | 16 | 15 | 5 | 121 |
 | context-map | 83 | PASS | 18 | 20 | 20 | 15 | 10 | 124 |
@@ -11,5 +13,3 @@
 | copilot-sdk | 67 | WARN | 18 | 12 | 16 | 16 | 5 | 481 |
 | create-agentsmd | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
 | create-implementation-plan | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 115 |
-| create-readme | 82 | PASS | 18 | 20 | 16 | 18 | 10 | 198 |
-| generate-custom-instructions-from-codebase | 68 | WARN | 18 | 16 | 16 | 13 | 5 | 272 |

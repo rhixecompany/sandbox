@@ -62,6 +62,7 @@ metadata:
       - repo-story-time
       - web-research-pipeline
       - repo-research-pipeline
+
 ---
 
 ## Goal
@@ -429,3 +430,4 @@ Templates in `.hermes/archived-prompt-templates/repo.prompts/`:
 ## Hooks
 
 - Wire this prompt into a `only then` execution chain when appropriate.
+

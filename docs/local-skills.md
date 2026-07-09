@@ -1,228 +1,75 @@
-                               Installed Skills                                
-┌───────────────────────────┬──────────────────────┬────────┬───────┬─────────┐
-│ Name                      │ Category             │ Source │ Trust │ Status  │
-├───────────────────────────┼──────────────────────┼────────┼───────┼─────────┤
-│ Chainlink                 │                      │ local  │ local │ enabled │
-│ acpx-executor             │                      │ local  │ local │ enabled │
-│ boost-prompt              │                      │ local  │ local │ enabled │
-│ dispatching-parallel-age… │                      │ local  │ local │ enabled │
-│ git-patch-management      │                      │ local  │ local │ enabled │
-│ introspection-only-gener… │                      │ local  │ local │ enabled │
-│ joyride                   │                      │ local  │ local │ enabled │
-│ mcp-coding-agent-setup    │                      │ local  │ local │ enabled │
-│ no-git-delete             │                      │ local  │ local │ enabled │
-│ no-net-fetch              │                      │ local  │ local │ enabled │
-│ project-consolidation     │                      │ local  │ local │ enabled │
-│ simplify                  │                      │ local  │ local │ enabled │
-│ skills-tools-preflight-c… │                      │ local  │ local │ enabled │
-│ smithery-ai-cli           │                      │ local  │ local │ enabled │
-│ test-providers-models     │                      │ local  │ local │ enabled │
-│ distributed-llm-pretrain… │ .restore-backups     │ local  │ local │ enabled │
-│ here.now                  │ .restore-backups     │ local  │ local │ enabled │
-│ huggingface-accelerate    │ .restore-backups     │ local  │ local │ enabled │
-│ inference-sh-cli          │ .restore-backups     │ local  │ local │ enabled │
-│ lambda-labs-gpu-cloud     │ .restore-backups     │ local  │ local │ enabled │
-│ modal-serverless-gpu      │ .restore-backups     │ local  │ local │ enabled │
-│ optimizing-attention-fla… │ .restore-backups     │ local  │ local │ enabled │
-│ peft-fine-tuning          │ .restore-backups     │ local  │ local │ enabled │
-│ qdrant-vector-search      │ .restore-backups     │ local  │ local │ enabled │
-│ simpo-training            │ .restore-backups     │ local  │ local │ enabled │
-│ stable-diffusion-image-g… │ .restore-backups     │ local  │ local │ enabled │
-│ architecture-blueprint-g… │ architecture         │ local  │ local │ enabled │
-│ folder-structure-bluepri… │ architecture         │ local  │ local │ enabled │
-│ technology-stack-bluepri… │ architecture         │ local  │ local │ enabled │
-│ agent-browser             │ autonomous-ai-agents │ local  │ local │ enabled │
-│ agent-governance          │ autonomous-ai-agents │ local  │ local │ enabled │
-│ agentic-eval              │ autonomous-ai-agents │ local  │ local │ enabled │
-│ customize-opencode        │ autonomous-ai-agents │ local  │ local │ enabled │
-│ enhance-markdown          │ autonomous-ai-agents │ local  │ local │ enabled │
-│ hermes-breakdown          │ autonomous-ai-agents │ local  │ local │ enabled │
-│ hermes-skill-library-mai… │ autonomous-ai-agents │ local  │ local │ enabled │
-│ multi-agent-sync          │ autonomous-ai-agents │ local  │ local │ enabled │
-│ qwen-code                 │ autonomous-ai-agents │ local  │ local │ enabled │
-│ template                  │ autonomous-ai-agents │ local  │ local │ enabled │
-│ using-superpowers         │ autonomous-ai-agents │ local  │ local │ enabled │
-│ algorithmic-art           │ creative             │ local  │ local │ enabled │
-│ architecture-diagram      │ creative             │ local  │ local │ enabled │
-│ brand-guidelines          │ creative             │ local  │ local │ enabled │
-│ canvas-design             │ creative             │ local  │ local │ enabled │
-│ content-research-writer   │ creative             │ local  │ local │ enabled │
-│ excalidraw-diagram-gener… │ creative             │ local  │ local │ enabled │
-│ frontend-design           │ creative             │ local  │ local │ enabled │
-│ html-artifact             │ creative             │ local  │ local │ enabled │
-│ image-manipulation-image… │ creative             │ local  │ local │ enabled │
-│ legacy-circuit-mockups    │ creative             │ local  │ local │ enabled │
-│ marp-slide                │ creative             │ local  │ local │ enabled │
-│ mermaid-diagrams          │ creative             │ local  │ local │ enabled │
-│ penpot-uiux-design        │ creative             │ local  │ local │ enabled │
-│ plantuml-ascii            │ creative             │ local  │ local │ enabled │
-│ sketch                    │ creative             │ local  │ local │ enabled │
-│ theme-factory             │ creative             │ local  │ local │ enabled │
-│ web-artifacts-builder     │ creative             │ local  │ local │ enabled │
-│ writing-clearly-and-conc… │ creative             │ local  │ local │ enabled │
-│ ai-prompt-engineering-sa… │ development          │ local  │ local │ enabled │
-│ chrome-devtools           │ development          │ local  │ local │ enabled │
-│ context-map               │ development          │ local  │ local │ enabled │
-│ convert-plaintext-to-md   │ development          │ local  │ local │ enabled │
-│ copilot-cli-quickstart    │ development          │ local  │ local │ enabled │
-│ copilot-sdk               │ development          │ local  │ local │ enabled │
-│ create-agentsmd           │ development          │ local  │ local │ enabled │
-│ create-implementation-pl… │ development          │ local  │ local │ enabled │
-│ create-readme             │ development          │ local  │ local │ enabled │
-│ generate-custom-instruct… │ development          │ local  │ local │ enabled │
-│ make-skill-template       │ development          │ local  │ local │ enabled │
-│ microsoft-code-reference  │ development          │ local  │ local │ enabled │
-│ microsoft-docs            │ development          │ local  │ local │ enabled │
-│ microsoft-skill-creator   │ development          │ local  │ local │ enabled │
-│ prompt-builder            │ development          │ local  │ local │ enabled │
-│ prompt-engineering        │ development          │ local  │ local │ enabled │
-│ skill-creator             │ development          │ local  │ local │ enabled │
-│ skills                    │ development          │ local  │ local │ enabled │
-│ suggest-awesome-github-c… │ development          │ local  │ local │ enabled │
-│ suggest-awesome-github-c… │ development          │ local  │ local │ enabled │
-│ update-implementation-pl… │ development          │ local  │ local │ enabled │
-│ using-git-worktrees       │ development          │ local  │ local │ enabled │
-│ vscode-cli                │ development          │ local  │ local │ enabled │
-│ vscode-ext-commands       │ development          │ local  │ local │ enabled │
-│ vscode-ext-localization   │ development          │ local  │ local │ enabled │
-│ vscode-extension-playbook │ development          │ local  │ local │ enabled │
-│ vscode-workspace-configu… │ development          │ local  │ local │ enabled │
-│ workiq-copilot            │ development          │ local  │ local │ enabled │
-│ writing-skills            │ development          │ local  │ local │ enabled │
-│ appinsights-instrumentat… │ devops               │ local  │ local │ enabled │
-│ asdf                      │ devops               │ local  │ local │ enabled │
-│ aspire                    │ devops               │ local  │ local │ enabled │
-│ azure-deployment-preflig… │ devops               │ local  │ local │ enabled │
-│ azure-devops-cli          │ devops               │ local  │ local │ enabled │
-│ azure-resource-visualizer │ devops               │ local  │ local │ enabled │
-│ azure-role-selector       │ devops               │ local  │ local │ enabled │
-│ azure-static-web-apps     │ devops               │ local  │ local │ enabled │
-│ customization-audit       │ devops               │ local  │ local │ enabled │
-│ datadog                   │ devops               │ local  │ local │ enabled │
-│ dependabot                │ devops               │ local  │ local │ enabled │
-│ entra-agent-user          │ devops               │ local  │ local │ enabled │
-│ fabric-lakehouse          │ devops               │ local  │ local │ enabled │
-│ git-history-preserving-m… │ devops               │ local  │ local │ enabled │
-│ github-actions-efficiency │ devops               │ local  │ local │ enabled │
-│ github-copilot-cli        │ devops               │ local  │ local │ enabled │
-│ glab                      │ devops               │ local  │ local │ enabled │
-│ hermes-config-merge       │ devops               │ local  │ local │ enabled │
-│ hermes-config-troublesho… │ devops               │ local  │ local │ enabled │
-│ hermes-hooks              │ devops               │ local  │ local │ enabled │
-│ hermes-profiles           │ devops               │ local  │ local │ enabled │
-│ hermes-setup              │ devops               │ local  │ local │ enabled │
-│ hermes-skills             │ devops               │ local  │ local │ enabled │
-│ hermes-system-maintenance │ devops               │ local  │ local │ enabled │
-│ jira                      │ devops               │ local  │ local │ enabled │
-│ kanban-orchestrator       │ devops               │ local  │ local │ enabled │
-│ kanban-worker             │ devops               │ local  │ local │ enabled │
-│ log-analysis-and-triage   │ devops               │ local  │ local │ enabled │
-│ multi-stage-dockerfile    │ devops               │ local  │ local │ enabled │
-│ pnpm-package-manager      │ devops               │ local  │ local │ enabled │
-│ powerbi-modeling          │ devops               │ local  │ local │ enabled │
-│ profile-maintenance       │ devops               │ local  │ local │ enabled │
-│ projects-multi-repo-init… │ devops               │ local  │ local │ enabled │
-│ prompt-batch-fixer        │ devops               │ local  │ local │ enabled │
-│ provider-model-audit      │ devops               │ local  │ local │ enabled │
-│ provider-reliability-dia… │ devops               │ local  │ local │ enabled │
-│ rbac-audit-logging        │ devops               │ local  │ local │ enabled │
-│ secret-scanning           │ devops               │ local  │ local │ enabled │
-│ service-integrations      │ devops               │ local  │ local │ enabled │
-│ session-audit-report      │ devops               │ local  │ local │ enabled │
-│ session-history-audit     │ devops               │ local  │ local │ enabled │
-│ snowflake-semanticview    │ devops               │ local  │ local │ enabled │
-│ terraform-azurerm-set-di… │ devops               │ local  │ local │ enabled │
-│ tmux-terminal-multiplexer │ devops               │ local  │ local │ enabled │
-│ uv-package-manager        │ devops               │ local  │ local │ enabled │
-│ validate-memories         │ devops               │ local  │ local │ enabled │
-│ webhook-subscriptions     │ devops               │ local  │ local │ enabled │
-│ windows-maintenance-oper… │ devops               │ local  │ local │ enabled │
-│ windows-package-manageme… │ devops               │ local  │ local │ enabled │
-│ work-on-ticket            │ devops               │ local  │ local │ enabled │
-│ workspace-audit           │ devops               │ local  │ local │ enabled │
-│ finishing-a-development-… │ github               │ local  │ local │ enabled │
-│ gh-cli                    │ github               │ local  │ local │ enabled │
-│ git-commit                │ github               │ local  │ local │ enabled │
-│ git-helper                │ github               │ local  │ local │ enabled │
-│ git-submodule-workflow    │ github               │ local  │ local │ enabled │
-│ github                    │ github               │ local  │ local │ enabled │
-│ github-workflow           │ github               │ local  │ local │ enabled │
-│ sponsor-finder            │ github               │ local  │ local │ enabled │
-│ hermes-mcp                │ mcp                  │ local  │ local │ enabled │
-│ mcp-builder               │ mcp                  │ local  │ local │ enabled │
-│ mcp-cli                   │ mcp                  │ local  │ local │ enabled │
-│ mcp-security-audit        │ mcp                  │ local  │ local │ enabled │
-│ native-mcp                │ mcp                  │ local  │ local │ enabled │
-│ slack-gif-creator         │ media                │ local  │ local │ enabled │
-│ spotify                   │ media                │ local  │ local │ enabled │
-│ transloadit-media-proces… │ media                │ local  │ local │ enabled │
-│ fine-tuning-with-trl      │ mlops                │ local  │ local │ enabled │
-│ sparse-autoencoder-train… │ mlops                │ local  │ local │ enabled │
-│ brainstorming             │ planning             │ local  │ local │ enabled │
-│ plans-and-specs           │ planning             │ local  │ local │ enabled │
-│ prompt-planning-orchestr… │ planning             │ local  │ local │ enabled │
-│ prd                       │ product              │ local  │ local │ enabled │
-│ doc-coauthoring           │ productivity         │ local  │ local │ enabled │
-│ documentation-extraction… │ productivity         │ local  │ local │ enabled │
-│ documentation-writer      │ productivity         │ local  │ local │ enabled │
-│ docx                      │ productivity         │ local  │ local │ enabled │
-│ file-organizer            │ productivity         │ local  │ local │ enabled │
-│ finnish-humanizer         │ productivity         │ local  │ local │ enabled │
-│ internal-comms            │ productivity         │ local  │ local │ enabled │
-│ linear                    │ productivity         │ local  │ local │ enabled │
-│ markdown-to-html          │ productivity         │ local  │ local │ enabled │
-│ meeting-insights-analyzer │ productivity         │ local  │ local │ enabled │
-│ meeting-minutes           │ productivity         │ local  │ local │ enabled │
-│ pdf                       │ productivity         │ local  │ local │ enabled │
-│ pdftk-server              │ productivity         │ local  │ local │ enabled │
-│ pptx                      │ productivity         │ local  │ local │ enabled │
-│ prompt-management         │ productivity         │ local  │ local │ enabled │
-│ task-management           │ productivity         │ local  │ local │ enabled │
-│ user-communication-prefe… │ productivity         │ local  │ local │ enabled │
-│ xlsx                      │ productivity         │ local  │ local │ enabled │
-│ audit-skills-judge-fix    │ qa                   │ local  │ local │ enabled │
-│ boilerplate-stripper      │ qa                   │ local  │ local │ enabled │
-│ playwright-automation-fi… │ qa                   │ local  │ local │ enabled │
-│ playwright-generate-e2e-… │ qa                   │ local  │ local │ enabled │
-│ playwright-generate-test  │ qa                   │ local  │ local │ enabled │
-│ polyglot-test-agent       │ qa                   │ local  │ local │ enabled │
-│ postgresql-code-review    │ qa                   │ local  │ local │ enabled │
-│ scoutqa-test              │ qa                   │ local  │ local │ enabled │
-│ skill-judge               │ qa                   │ local  │ local │ enabled │
-│ test-skill                │ qa                   │ local  │ local │ enabled │
-│ verification-before-comp… │ qa                   │ local  │ local │ enabled │
-│ web-design-reviewer       │ qa                   │ local  │ local │ enabled │
-│ webapp-testing            │ qa                   │ local  │ local │ enabled │
-│ api-tutorial-catalog      │ reference            │ local  │ local │ enabled │
-│ mcp-server-catalog        │ reference            │ local  │ local │ enabled │
-│ project-architecture-ind… │ reference            │ local  │ local │ enabled │
-│ parallel-cli-web-research │ research             │ local  │ local │ enabled │
-│ repo-research-pipeline    │ research             │ local  │ local │ enabled │
-│ web-research-pipeline     │ research             │ local  │ local │ enabled │
-│ banking                   │ software-development │ local  │ local │ enabled │
-│ bash-scripts-audit-remed… │ software-development │ local  │ local │ enabled │
-│ caveman-unified           │ software-development │ local  │ local │ enabled │
-│ claude-api                │ software-development │ local  │ local │ enabled │
-│ clonedeps                 │ software-development │ local  │ local │ enabled │
-│ code-docs                 │ software-development │ local  │ local │ enabled │
-│ codemap                   │ software-development │ local  │ local │ enabled │
-│ context7                  │ software-development │ local  │ local │ enabled │
-│ debugging-hermes-tui-com… │ software-development │ local  │ local │ enabled │
-│ executing-plans           │ software-development │ local  │ local │ enabled │
-│ fluentui-blazor           │ software-development │ local  │ local │ enabled │
-│ httpie                    │ software-development │ local  │ local │ enabled │
-│ mindstudio-wrapper        │ software-development │ local  │ local │ enabled │
-│ nuget-manager             │ software-development │ local  │ local │ enabled │
-│ project-docs              │ software-development │ local  │ local │ enabled │
-│ quasi-coder               │ software-development │ local  │ local │ enabled │
-│ receiving-code-review     │ software-development │ local  │ local │ enabled │
-│ refactor                  │ software-development │ local  │ local │ enabled │
-│ sandbox                   │ software-development │ local  │ local │ enabled │
-│ script-orchestration      │ software-development │ local  │ local │ enabled │
-│ shadcn                    │ software-development │ local  │ local │ enabled │
-│ winapp-cli                │ software-development │ local  │ local │ enabled │
-│ worktrunk                 │ software-development │ local  │ local │ enabled │
-│ writing-plans             │ software-development │ local  │ local │ enabled │
-└───────────────────────────┴──────────────────────┴────────┴───────┴─────────┘
-0 hub-installed, 0 builtin, 221 local — 221 enabled, 0 disabled
+# Local Skills Audit Report
 
+Generated: July 1, 2026
+
+## Overview
+
+- **Total SKILL.md files**: 570
+- **Category directories**: 130
+- **Total skills mapped (with frontmatter)**: 398
+
+## Audit Results
+
+| Metric | Count |
+|--------|-------|
+| Frontmatter present | 569/570 |
+| Has "When to Use" section | 461/570 |
+| Has "Workflow" section | 241/570 |
+| Has "Verification Checklist" | 356/570 |
+| Has "Best Practices" | 70/570 |
+| H1 inside code blocks | 330 |
+
+## Missing Sections Analysis
+
+### Missing "When to Use" (109 skills)
+Skills without this section should be reviewed for completeness. Key categories affected:
+- `.restore-backups/` (24 archived skills)
+- `devops/` (5 skills)
+- `productivity/` (5 skills)
+- `mcp/` (10 skills)
+- Various uncategorized skills
+
+### Missing "Workflow" (329 skills)
+The majority of skills lack a defined workflow section. This is expected for utility/reference skills but should be investigated for core process skills.
+
+### Missing "Verification Checklist" (214 skills)
+Skills without verification steps need attention, especially process-oriented skills.
+
+### Missing "Best Practices" (500 skills)
+Most skills lack a best practices section - a significant gap.
+
+## Category Distribution (from path mapping)
+
+| Category | Count |
+|----------|-------|
+| devops | 51 |
+| uncategorized | 36 |
+| creative | 32 |
+| software-development | 30 |
+| development | 29 |
+| productivity | 28 |
+| mcp | 17 |
+| qa | 15 |
+| autonomous-ai-agents | 12 |
+| mlops | 10 |
+| research | 8 |
+| github | 7 |
+| media | 6 |
+| reference | 4 |
+| .archive | 4 |
+| planning | 3 |
+| finance | 3 |
+| architecture | 3 |
+| social-media | 1 |
+| smart-home | 1 |
+| product | 1 |
+| payments | 1 |
+| note-taking | 1 |
+| email | 1 |
+| data-science | 1 |
+| .restore-backups | 93 |
+
+## Notes
+- `.restore-backups/` and `.archive/` directories contain old/backup skills that may be excluded from active inventory
+- 36 skills are uncategorized (top-level under skills/)
+- Frontmatter presence is excellent (569/570 = 99.8%)

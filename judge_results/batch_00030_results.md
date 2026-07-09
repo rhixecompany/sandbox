@@ -1,15 +1,15 @@
 # Batch 30 Results
-> Skills 291-300 of 429
+> Skills 291-300 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
-| plans-and-specs | 83 | PASS | 18 | 20 | 20 | 15 | 10 | 145 |
-| prompt-planning-orchestration | 81 | PASS | 20 | 20 | 16 | 15 | 10 | 153 |
-| prd | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
-| airtable | 72 | WARN | 18 | 16 | 20 | 13 | 5 | 267 |
-| canvas | 60 | WARN | 15 | 4 | 16 | 15 | 10 | 99 |
-| doc-coauthoring | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
-| documentation-extraction-and-indexing | 77 | WARN | 20 | 16 | 16 | 15 | 10 | 121 |
-| documentation-writer | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
-| docx | 81 | PASS | 20 | 20 | 16 | 15 | 10 | 84 |
-| file-organizer | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
+| no-git-delete | 62 | WARN | 20 | 10 | 12 | 15 | 5 | 54 |
+| no-net-fetch | 72 | WARN | 20 | 20 | 12 | 15 | 5 | 84 |
+| obsidian | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
+| openclaw-migration | 58 | FAIL | 15 | 4 | 16 | 13 | 10 | 300 |
+| osint-investigation | 65 | WARN | 12 | 4 | 16 | 13 | 20 | 278 |
+| oss-forensics | 66 | WARN | 6 | 8 | 16 | 16 | 20 | 424 |
+| mpp-agent | 63 | WARN | 15 | 12 | 16 | 15 | 5 | 125 |
+| stripe-link-cli | 68 | WARN | 15 | 12 | 16 | 20 | 5 | 185 |
+| stripe-projects | 68 | WARN | 15 | 12 | 16 | 20 | 5 | 121 |
+| peft | 57 | FAIL | 15 | 4 | 12 | 16 | 10 | 436 |

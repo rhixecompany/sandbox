@@ -173,28 +173,17 @@
       "low": 1
     },
     "Prompts\\apple-appstore-reviewer.prompt.md": {
-      "lines": 173,
-      "size": 4798,
+      "lines": 151,
+      "size": 4095,
       "has_frontmatter": true,
-      "fm_valid": true,
-      "fm_fields": [
-        "toolsets",
-        "license",
-        "author",
-        "version",
-        "name",
-        "title",
-        "description",
-        "trigger",
-        "tags",
-        "metadata"
-      ],
+      "fm_valid": false,
+      "fm_fields": [],
       "headings": 15,
       "issues": [
         {
           "severity": "HIGH",
           "type": "frontmatter",
-          "detail": "Double frontmatter fences (3 --- markers in first 60 lines)"
+          "detail": "Frontmatter YAML parse error: while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    toolsets: []\n    ^\nexpected <block end>, but found '-'\n  in \"<unicode string>\", line 33, column 1:\n    - Follow the prompt workflow as  ... \n    ^"
         },
         {
           "severity": "MEDIUM",
@@ -1243,8 +1232,8 @@
       "low": 1
     },
     "Prompts\\create-github-action-workflow-specification.prompt.md": {
-      "lines": 330,
-      "size": 8644,
+      "lines": 328,
+      "size": 8312,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -1888,8 +1877,8 @@
       "low": 1
     },
     "Prompts\\database.prompt.md": {
-      "lines": 98,
-      "size": 2292,
+      "lines": 97,
+      "size": 2193,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -2177,7 +2166,7 @@
     },
     "Prompts\\dev-init.prompt.md": {
       "lines": 518,
-      "size": 17674,
+      "size": 17156,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -2191,22 +2180,22 @@
         {
           "severity": "MEDIUM",
           "type": "structure",
-          "detail": "Line 362: Heading level skip (h1 -> h3): '### Step 6.2 \u2014 Cross-Reference Validation'"
+          "detail": "Line 361: Heading level skip (h1 -> h3): '### Step 6.2 \u2014 Cross-Reference Validation'"
         },
         {
           "severity": "MEDIUM",
           "type": "structure",
-          "detail": "Line 372: Heading level skip (h1 -> h3): '### Step 6.3 \u2014 Conflict Detection'"
+          "detail": "Line 371: Heading level skip (h1 -> h3): '### Step 6.3 \u2014 Conflict Detection'"
         },
         {
           "severity": "MEDIUM",
           "type": "structure",
-          "detail": "Line 382: Heading level skip (h1 -> h3): '### Step 6.4 \u2014 Quality Scoring'"
+          "detail": "Line 381: Heading level skip (h1 -> h3): '### Step 6.4 \u2014 Quality Scoring'"
         },
         {
           "severity": "MEDIUM",
           "type": "structure",
-          "detail": "Line 488: Heading level skip (h1 -> h3): '### Tasks'"
+          "detail": "Line 487: Heading level skip (h1 -> h3): '### Tasks'"
         },
         {
           "severity": "MEDIUM",
@@ -2691,8 +2680,8 @@
       "low": 1
     },
     "Prompts\\features.prompt.md": {
-      "lines": 131,
-      "size": 3010,
+      "lines": 130,
+      "size": 2878,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -2872,8 +2861,8 @@
       "low": 1
     },
     "Prompts\\general.prompt.md": {
-      "lines": 166,
-      "size": 4647,
+      "lines": 167,
+      "size": 4482,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -4140,27 +4129,17 @@
       "low": 1
     },
     "Prompts\\pl.md": {
-      "lines": 173,
-      "size": 6525,
+      "lines": 162,
+      "size": 6224,
       "has_frontmatter": true,
-      "fm_valid": true,
-      "fm_fields": [
-        "name",
-        "title",
-        "description",
-        "version",
-        "author",
-        "license",
-        "tags",
-        "metadata",
-        "trigger"
-      ],
+      "fm_valid": false,
+      "fm_fields": [],
       "headings": 7,
       "issues": [
         {
           "severity": "HIGH",
           "type": "frontmatter",
-          "detail": "Double frontmatter fences (3 --- markers in first 60 lines)"
+          "detail": "Frontmatter YAML parse error: while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name: pl\n    ^\nexpected <block end>, but found '-'\n  in \"<unicode string>\", line 25, column 1:\n    - **Scope:** Only errors, warnin ... \n    ^"
         },
         {
           "severity": "LOW",
@@ -5368,8 +5347,8 @@
       "low": 1
     },
     "Prompts\\repo.prompt.md": {
-      "lines": 431,
-      "size": 15966,
+      "lines": 433,
+      "size": 15537,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],
@@ -5388,7 +5367,7 @@
         {
           "severity": "MEDIUM",
           "type": "structure",
-          "detail": "Line 188: Heading level skip (h1 -> h3): '### Phase 2: Report Writing'"
+          "detail": "Line 189: Heading level skip (h1 -> h3): '### Phase 2: Report Writing'"
         },
         {
           "severity": "MEDIUM",
@@ -6831,8 +6810,8 @@
       "low": 1
     },
     "Prompts\\workspace-consolidate.prompt.md": {
-      "lines": 481,
-      "size": 20862,
+      "lines": 482,
+      "size": 20382,
       "has_frontmatter": true,
       "fm_valid": false,
       "fm_fields": [],

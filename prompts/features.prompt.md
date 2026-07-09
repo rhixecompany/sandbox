@@ -69,7 +69,6 @@ trigger: features
 
 ---
 
-
 ## Actions
 
 - Follow the prompt workflow as specified.
@@ -116,7 +115,6 @@ pnpm test:e2e tests/e2e/user-flows.spec.ts
 
 **Document Version:** 1.0.0 | **Last Updated:** 2026-02-01
 
-
 ## Template References
 
 Detailed templates in `templates/features/`:
@@ -129,3 +127,4 @@ Detailed templates in `templates/features/`:
 ## Hooks
 
 - Wire this prompt into a `only then` execution chain when appropriate.
+

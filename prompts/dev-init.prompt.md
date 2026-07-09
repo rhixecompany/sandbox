@@ -122,7 +122,6 @@ Reference artifacts:
 ## Rules
 > Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
 
-
 1. Run `context-map` before any conversion or planning work.
 2. Keep the pipeline idempotent and safe to re-run.
 3. Preserve the original task intent while improving clarity and structure.
@@ -516,3 +515,4 @@ Verification:       docs/dev-init-verification-report.md
 ## Hooks
 
 - Wire this prompt into a `only then` execution chain when appropriate.
+

@@ -69,7 +69,6 @@ trigger: database
 
 ---
 
-
 ## Actions
 
 - Follow the prompt workflow as specified.
@@ -87,7 +86,6 @@ metadata:
 
 **Last Updated:** March 1, 2026 | **Database:** PostgreSQL | **ORM:** Drizzle
 
-
 ## Template References
 
 Templates in `templates/database/`:
@@ -96,3 +94,4 @@ Templates in `templates/database/`:
 ## Hooks
 
 - Wire this prompt into a `only then` execution chain when appropriate.
+

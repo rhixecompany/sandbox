@@ -1,26 +1,26 @@
 # Skill Judge Summary
-> Generated: 2026-06-29 10:59
+> Generated: 2026-07-01 00:12
 
-**Total skills judged:** 429
+**Total skills judged:** 442
 
 | Rating | Count | Pct |
 |--------|-------|-----|
-| ✅ PASS (≥80) | 64 | 14% |
-| ⚠️ WARN (60-79) | 365 | 85% |
-| ❌ FAIL (<60) | 0 | 0% |
+| ✅ PASS (≥80) | 60 | 13% |
+| ⚠️ WARN (60-79) | 339 | 76% |
+| ❌ FAIL (<60) | 43 | 9% |
 
-**Average score:** 71.9/100
+**Average score:** 69.8/100
 
 ## Bottom 5
-- 1password: 60/100 (WARN)
-- canvas: 60/100 (WARN)
-- dcf-model: 60/100 (WARN)
-- watchers: 60/100 (WARN)
-- dcf-model: 60/100 (WARN)
+- discover-mcp-capabilities: 34/100 (FAIL)
+- firecrawl-agent: 41/100 (FAIL)
+- firecrawl-crawl: 41/100 (FAIL)
+- firecrawl-download: 41/100 (FAIL)
+- firecrawl-map: 41/100 (FAIL)
 
 ## Top 5
 - web-pentest: 85/100 (PASS)
 - codemap: 85/100 (PASS)
 - convert-plaintext-to-md: 86/100 (PASS)
 - brainstorming: 86/100 (PASS)
-- prompt-management: 88/100 (PASS)
+- validate-memories: 88/100 (PASS)

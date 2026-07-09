@@ -1,14 +1,15 @@
 # Batch 43 Results
-> Skills 421-429 of 429
+> Skills 421-430 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
-| tensorrt-llm | 81 | PASS | 15 | 20 | 16 | 20 | 10 | 242 |
-| test-providers-models | 73 | WARN | 20 | 12 | 16 | 15 | 10 | 154 |
-| torchtitan | 63 | WARN | 15 | 4 | 16 | 18 | 10 | 363 |
-| watchers | 60 | WARN | 15 | 4 | 16 | 15 | 10 | 113 |
-| cloudflare-temporary-deploy | 72 | WARN | 15 | 12 | 20 | 15 | 10 | 128 |
-| page-agent | 63 | WARN | 15 | 8 | 20 | 15 | 5 | 191 |
-| web-pentest | 79 | WARN | 6 | 20 | 20 | 13 | 20 | 386 |
-| whisper | 78 | WARN | 15 | 20 | 20 | 13 | 10 | 372 |
-| youtube-full | 74 | WARN | 20 | 8 | 16 | 20 | 10 | 226 |
+| shadcn | 80 | PASS | 20 | 20 | 20 | 15 | 5 | 144 |
+| spike | 71 | WARN | 18 | 16 | 12 | 20 | 5 | 239 |
+| subagent-driven-development | 62 | WARN | 15 | 4 | 20 | 13 | 10 | 353 |
+| systematic-debugging | 77 | WARN | 20 | 16 | 20 | 11 | 10 | 414 |
+| test-driven-development | 75 | WARN | 18 | 16 | 20 | 11 | 10 | 555 |
+| winapp-cli | 71 | WARN | 18 | 12 | 16 | 20 | 5 | 223 |
+| worktrunk | 77 | WARN | 18 | 20 | 16 | 13 | 10 | 236 |
+| writing-plans | 77 | WARN | 18 | 16 | 20 | 13 | 10 | 218 |
+| solana | 72 | WARN | 15 | 12 | 20 | 15 | 10 | 210 |
+| stable-diffusion | 57 | FAIL | 15 | 4 | 12 | 16 | 10 | 524 |

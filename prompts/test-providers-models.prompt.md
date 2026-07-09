@@ -1,15 +1,15 @@
 ---
 license: MIT
 author: Hermes Agent
-version: 1.0.0
+version: 1.2.0
 title: Test Providers & Models
 name: test-providers-models
 trigger: test-providers-models
 description: >-
-  Inventory all authorized LLM providers from hermes auth list, discover their
-  free-tier models, run standardized benchmarks (reasoning, tool calling,
-  knowledge), and produce a cross-provider comparison report. Covers 6
-  providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter.
+  Inventory all authorized LLM providers, discover free-tier models from local
+  *_models.json catalogs, run standardized benchmarks, and produce a
+  cross-provider comparison report. Uses Hermes chat background execution for
+  model selection.
 tags:
   - ai-assistant
   - architecture
@@ -31,6 +31,7 @@ tags:
   - ollama
   - openai
   - openrouter
+  - models-json
 dependencies:
   - skill:test-providers-models
   - skill:using-superpowers
@@ -50,216 +51,172 @@ metadata:
 ---
 
 ## Goal
-Inventory and benchmark the free‑tier LLM models across all authorized providers in Hermes, producing a comparative report that includes performance, rate limits, and recommendations.
+Inventory all authorized LLM providers from `hermes auth list` + `hermes config show`, determine authorization errors with courteous retry guidance, use web-search and mcp-fetch on provider model URLs, extract and save markdown docs from model URLs when needed, update/create/delete `*_models.json` and existing artifacts as appropriate, run best-2 free-model validation with background Hermes chat execution, and update Hermes config/model + fallback.
 
 ## Personas
 | Persona | When to Use |
 |---------|-------------|
 | OWL (System Admin) | Overall orchestration, profile selection |
-| Research Analyst | Data analysis, cross‑provider comparison |
-| Code Architect | Benchmark execution, script development |
-| DevOps Engineer (adminbot) | Rate‑limit analysis, fallback planning |
-
-## Personality & Tone
-- Concise, action‑first
-- Technical, direct
-- No unnecessary prose
+| Research Analyst | Model discovery, catalog analysis |
+| Code Architect | Benchmark execution, background Hermes chat workflows |
+| DevOps Engineer (adminbot) | Config updates and fallback chain |
 
 ## Profile Selection
 | Task | Recommended Profile |
 |------|----------------------|
 | Provider inventory & auth check | `default` |
 | Model catalog discovery | `research-analyst` |
-| Free model extraction & script creation | `code-architect` |
+| Free model extraction | `code-architect` |
 | Benchmark execution | `code-architect` |
-| Report compilation & analysis | `research-analyst` |
-| Rate‑limit & fallback analysis | `adminbot` |
+| Report compilation | `research-analyst` |
+| Config update | `adminbot` |
 
 ## When to Use
 - To audit LLM provider credentials and usage limits.
-- To evaluate free‑tier model capabilities before committing to paid plans.
-- When planning multi‑provider AI deployments.
+- To evaluate free-tier model capabilities before committing to paid plans.
+- To use an offline-model-catalog workflow from existing `*_models.json`.
 
-## When Not to Use
-- If all required providers are already benchmarked and up‑to‑date.
-- When only paid‑tier models are needed for production workloads.
+## When NOT to Use
+- If all required providers are already benchmarked and up-to-date.
+- When only paid-tier models are needed.
 
 # Test Providers & Models
 
 > Comprehensive provider inventory and model benchmark for Hermes Agent.
-> Covers all 6 authorized providers from `hermes auth list` with 3‑tier
-> (Needed / Recommended / Optional) phase categorization.
+> Uses local catalog files and Hermes chat background execution for verification.
 
 ## Description
 
-This prompt performs a full-cycle provider audit and model benchmark. It starts
-by inventorying all authorized providers from `hermes auth list`, then
-discovers available models per provider, extracts free/zero-cost options, and
-runs a standardized 3‑task benchmark (reasoning, tool calling, knowledge).
-Results are compiled into a cross‑provider comparison report with pass/fail
-status, rate limits, and recommendations.
+This prompt performs a full-cycle provider audit and model benchmark using the Hermes CLI, local `*_models.json`, and captured artifacts:
+1. Inventory providers via Hermes CLI.
+2. Discover free models from local `*_models.json`.
+3. Validate the best 2 free models per provider using Hermes chat background execution:
+   `hermes chat --toolsets "skills,web,terminal,file" -q "wgat is you knowledge_cutoff date, how large is your context_length, do you have reasoning " --provider <provider> --model <model>`
+4. Compile the final selection and update config/fallbacks.
 
-**Critical rules:**
-
-- Test EVERY provider from `hermes auth list` — do not skip any
-- Log credential status (valid / rate‑limited / missing) per provider
-- Report rate limits, API errors, and auth failures per model
-- Categorize each phase as Needed ✓, Recommended ☆, or Optional ◇
+## Key Rule
+Use only verified free models or recommended fallbacks documented in this repository. Skill-authoritative sources should override unverifiable free conversions.
 
 ## Context
-
-- **Providers (from auth list):** copilot, huggingface, nous, ollama-cloud,
-  openai-api, openrouter
-- **Model catalog:** `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json`
+- **Providers/artifacts:** see `C:\Users\Alexa\Desktop\SandBox\docs\provider-benchmark-report.md`
+- **Local catalogs:** prefer workspace `*_models.json` files as model evidence of truth
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
-- **Scripts dir:** `~/AppData/Local/hermes/scripts/`
-- **Prior artifacts:** `docs/test‑providers‑models‑*` (archived from prior run)
-
-## Provider Inventory (from `hermes auth list`) — Actual (2026-06-21)
-
-| #   | Provider     | Auth Method                       | Credential Status     | Notes                                                             |
-| --- | ------------ | --------------------------------- | --------------------- | ----------------------------------------------------------------- |
-| 1   | copilot      | gh auth token, GITHUB_TOKEN       | ⚠️ Rate‑limited (429) | Both creds in cooldown (~22m remaining)                           |
-| 2   | huggingface  | HF_TOKEN (env)                    | ✓ Active              | —                                                                 |
-| 3   | nous         | device_code OAuth                 | ✓ Active              | —                                                                 |
-| 4   | ollama-cloud | OLLAMA_API_KEY (env)              | ✓ Active              | —                                                                 |
-| 5   | openai‑api   | manual key + OPENAI_API_KEY (env) | ✓ Keys present        | Not exported to subprocess env                                    |
-| 6   | openrouter   | OPENROUTER_API_KEY (env)          | ✓ Active              | Stored in Hermes credential store, NOT exported to subprocess env |
-
-**IMPORTANT:** The OpenRouter API key is managed by Hermes' secure credential store and is NOT available as an environment variable in subprocesses (curl, Python). API calls must go through the Hermes provider chain (`hermes chat -q --provider openrouter`). The key IS accessible to the Hermes agent itself — direct API benchmarking via subprocess is BLOCKED by this security boundary.
 
 ## Skills Required
-
-> See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#test-providers-models)
-
-| Skill                              | Purpose                                         | Needed? |
-| ---------------------------------- | ----------------------------------------------- | ------- |
-| `using-superpowers`                | Workflow foundation, tool use conventions       | ✓ Needed |
-| `plans-and-specs`                  | Phase planning, progress tracking               | ✓ Needed |
-| `user-communication-preferences`   | Execution style and preferences                 | ✓ Needed |
-| `verification-before-completion`   | Cross‑reference all phases before claiming done | ✓ Needed |
-| `gh-cli`                           | GitHub Copilot provider interaction             | ☆ Recommended |
-| `provider-reliability-diagnostics` | Diagnose provider auth/rate‑limit issues        | ◇ Optional |
-
-## Tools Required
-
-| Tool                    | Type | Purpose                        | Needed? |
-| ----------------------- | ---- | ------------------------------ | ------- |
-| `hermes auth list`      | CLI  | Inventory authorized providers | ✓ Needed |
-| `hermes config show`    | CLI  | Check provider config chain    | ✓ Needed |
-| `terminal`              | MCP  | Run scripts, CLI commands      | ✓ Needed |
-| `fetch` / `web_extract` | MCP  | Fetch model catalogs           | ✓ Needed |
-| `execute_code` (Python) | MCP  | Run benchmark harness          | ☆ Recommended |
-| `memory`                | MCP  | Save provider findings         | ☆ Recommended |
-| `skills`                | MCP  | Load provider‑specific skills  | ◇ Optional |
+| Skill | Purpose | Needed? |
+|-------|---------|---------|
+| `using-superpowers` | Workflow foundation | ✓ Needed |
+| `plans-and-specs` | Phase planning, execution tracking | ✓ Needed |
+| `user-communication-preferences` | Execution style | ✓ Needed |
+| `verification-before-completion` | Final verification gate | ✓ Needed |
+| `provider-reliability-diagnostics` | Auth/rate limit troubleshooting | ◇ Optional |
 
 ## Phase Map
+| Phase | Title | Tier | Profile | Time |
+|-------|-------|------|---------|-------|
+| 0 | Provider Inventory | ✓ Needed | `default` | 5 min |
+| 1 | Local Catalog Discovery | ✓ Needed | `research-analyst` | 10 min |
+| 2 | Best-2 Free Selection | ✓ Needed | `code-architect` | 20 min |
+| 3 | Config Update & Verification | ✓ Needed | `adminbot` | 10 min |
 
-| Phase | Title                                | Tier          | Profile            | Est. Time |
-| ----- | ------------------------------------ | ------------- | ------------------ | --------- |
-| 0     | Auth & Provider Inventory            | ✓ Needed      | `default`          | 5 min     |
-| 1     | Model Catalog Discovery              | ✓ Needed      | `research-analyst` | 15 min    |
-| 2     | Free Model Extraction                | ✓ Needed      | `code-architect`   | 10 min    |
-| 3     | Provider‑by‑Provider Benchmarking    | ☆ Recommended | `code-architect`   | 30 min    |
-| 4     | Cross‑Provider Comparison & Report   | ☆ Recommended | `research-analyst` | 15 min    |
-| 5     | Rate Limit & Fallback Chain Analysis | ◇ Optional    | `adminbot`         | 20 min    |
-| 6     | Script Creation & Automation         | ☆ Recommended | `code-architect`   | 20 min    |
+## Phase 0: Provider Inventory (Needed)
+**Profile:** `default`
+**Goal:** Run Hermes CLI inventory and capture current credentials/config without changing anything.
 
----
+Deliverables:
+- Auth status per provider
+- Active model/provider
+- Any noted rate limit or auth issues
 
-## Phase 0: Auth & Provider Inventory (Needed ✓)
+## Phase 1: Local Catalog Discovery (Needed)
+**Profile:** `research-analyst`
+**Goal:** Use the latest local `*_models.json` artifact to extract valid free candidates.
 
-> **Profile:** `default` | **Persona:** OWL (System Admin)
-> **Goal:** Run `hermes auth list` to inventory all authorized LLM providers,
+Selectors:
+- Provider = file basename minus `_models.json` and normalized to kebab-case
+- Free record = `pricing.prompt == 0` and `pricing.completion == 0`
+- Include `:free`-tagged ids if present and supported
 
-> **Full content:** `templates/test‑providers‑models/phase_0_auth__provider_invento.md`
+Deliverables:
+- `docs/model-summary.json`
+- `docs/best-free-models.md`
 
-## Phase 1: Model Catalog Discovery (Needed ✓)
+## Phase 2: Best-2 Free Selection (Needed)
+**Profile:** `code-architect`
+**Goal:** Validate the top 2 free models per provider by running background Hermes chat task execution for each candidate.
 
-> **Profile:** `research-analyst` | **Persona:** Research Analyst
-> **Goal:** For each provider, discover available models through their
+Use Hermes chat background execution:
+```bash
+hermes chat --toolsets "skills,web,terminal,file" -q "wgat is you knowledge_cutoff date, how large is your context_length, do you have reasoning " --provider <provider> --model <model>
+```
 
-> **Full content:** `templates/test‑providers‑models/phase_1_model_catalog_discover.md`
+Validation checks:
+- knowledge_cutoff_date extracted or represented consistently
+- context_length reported or represented consistently
+- reasoning flag true/false or unknown
+- finish state captured if available
 
-## Phase 2: Free Model Extraction (Needed ✓)
+If validation fails:
+- replace failing candidate with the next free candidate from the same local catalog
+- rerun background Hermes chat task execution
 
-> **Profile:** `code-architect` | **Persona:** Tech Lead
-> **Goal:** Filter and extract zero‑cost / free‑tier models from each provider's
+Deliverables:
+- `docs/benchmark-results.json`
+- `docs/free-model-selection.md`
 
-> **Full content:** `templates/test‑providers‑models/phase_2_free_model_extraction_.md`
+## Phase 3: Config Update & Verification (Needed)
+**Profile:** `adminbot`
+**Goal:** Set/changed global model + fallback chain only if current config differs from the recommendation. Else document: unchanged.
 
-## Phase 3: Provider‑by‑Provider Benchmarking (Recommended ☆)
+```bash
+hermes config set model.default <model>
+hermes config set model.provider <provider>
+hermes config set fallback_providers '[...]'
+```
 
-> **Profile:** `code-architect` | **Persona:** QA Engineer
-> **Goal:** Run a standardized 3‑task benchmark on each free model across all
+Verification:
+- `hermes config check`
+- inspect ` ~/AppData/Local/hermes/config.yaml`
+- fix malformed JSON-string-list artifacts if present
 
-> **Full content:** `templates/test‑providers‑models/phase_3_provider‑by‑provider_b.md`
+Deliverables:
+- Updated config state summary
+- Verified fallback list format
+- Final report in `docs/free-model-selection.md`
 
-## Phase 4: Cross‑Provider Comparison & Report (Recommended ☆)
+## Known Free Models by Provider (2026-06-28)
+Source: benchmark references, local catalog parsing, Hermes artifact reports.
 
-> **Profile:** `research-analyst` | **Persona:** Data Analyst
-> **Goal:** Compile benchmark results into a cross‑provider comparison report
+### opencode-zen
+- `deepseek-v4-flash-free`
+- `mimo-v2.5-free`
+- `nemotron-3-ultra-free`
 
-> **Full content:** `templates/test‑providers‑models/phase_4_cross‑provider_compari.md`
-
-## Phase 5: Rate Limit & Fallback Chain Analysis (Optional ◇)
-
-> **Profile:** `adminbot` | **Persona:** DevOps Engineer
-> **Goal:** Analyze provider rate limits, cooldown periods, and optimal fallback
-
-> **Full content:** `templates/test‑providers‑models/phase_5_rate_limit__fallback_c.md`
-
-## Phase 6: Script Creation & Automation (Recommended ☆)
-
-> **Profile:** `code-architect` | **Persona:** Developer
-> **Goal:** Create or update the `test_models.py` test harness to support all
-
-> **Full content:** `templates/test‑providers‑models/phase_6_script_creation__autom.md`
+### OpenRouter (26 free models)
+Key candidates:
+- `qwen/qwen3-coder:free`
+- `nvidia/nemotron-3-ultra-550b-a55b:free`
+- `google/gemma-4-31b-it:free`
+- `openrouter/owl-alpha`
+- `meta-llama/llama-3.3-70b-instruct:free`
+- `poolside/laguna-m.1:free`
 
 ## Actions Summary
-
-| #   | Action                                          | Phase | Tier        |
-| --- | ----------------------------------------------- | ----- | ----------- |
-| 1   | Inventory all providers via `hermes auth list`  | 0     | Needed      |
-| 2   | Discover model catalogs per provider            | 1     | Needed      |
-| 3   | Extract free models across all providers        | 2     | Needed      |
-| 4   | Create multi‑provider test harness script       | 6     | Recommended |
-| 5   | Benchmark each free model on 3 standard tasks   | 3     | Recommended |
-| 6   | Compile cross‑provider comparison report        | 4     | Recommended |
-| 7   | Analyze rate limits and optimize fallback chain | 5     | Optional    |
-
-## Related Prompts
-
-| Prompt                                       | Relation                                               |
-| -------------------------------------------- | ------------------------------------------------------ |
-| `audit-skills-judge-fix.prompt.md`           | Same skill family (using‑superpowers, plans‑and‑specs) |
-| `sync-hermes-copilot-codex.prompt.md`        | Provider sync workflow                                 |
-| `agents-system-prompt-context-fix.prompt.md` | Hermes context debugging                               |
+1. Inventory providers via Hermes CLI
+2. Parse `*_models.json` for free candidates
+3. Run background Hermes chat task execution to validate top 2 free models per provider
+4. Update config/fallbacks
+5. Compile final report
 
 ## Verification Checklist (Final)
-
-- [ ] **Phase 0:** All 6 providers captured from `hermes auth list`
-- [ ] **Phase 1:** Model catalogs queried per provider
-- [ ] **Phase 2:** Free models extracted and tabulated
-- [ ] **Phase 3:** Benchmark run on all accessible free models
-- [ ] **Phase 4:** Cross‑provider comparison report generated
-- [ ] **Phase 5:** Fallback chain documented (Optional)
-- [ ] **Phase 6:** Test harness script supports all 6 providers
-- [ ] Rate limits and errors documented per provider
-- [ ] Recommendations included for best provider per task type
+- [ ] Phase 0: All providers captured without changing credentials
+- [ ] Phase 1: Local catalog free candidates parsed and summarized
+- [ ] Phase 2: Best 2 free models per provider validated using Hermes chat background execution
+- [ ] Phase 3: Config verified with `hermes config check`
+- [ ] Final report includes best 2 free models per provider with source rationale
 
 ## Template References
-
-Detailed section templates in `templates/test‑providers‑models/`:
-- `phase_0_auth__provider_invento.md`
-- `phase_1_model_catalog_discover.md`
-- `phase_2_free_model_extraction_.md`
-- `phase_3_provider‑by‑provider_b.md`
-- `phase_4_cross‑provider_compari.md`
-- `phase_5_rate_limit__fallback_c.md`
-- `phase_6_script_creation__autom.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
+- `templates/test-providers-models/phase_0_auth__provider_invento.md`
+- `templates/test-providers-models/phase_1_model_catalog_discover.md`
+- `templates/test-providers-models/phase_2_best2_free_selection.md`
+- `templates/test-providers-models/phase_3_config_update.md`

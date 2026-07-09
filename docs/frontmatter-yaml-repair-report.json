@@ -1,0 +1,15 @@
+{
+  "patched": [],
+  "skipped": [
+    "Prompts/apple-appstore-reviewer.prompt.md",
+    "Prompts/create-github-action-workflow-specification.prompt.md",
+    "Prompts/database.prompt.md",
+    "Prompts/dev-init.prompt.md",
+    "Prompts/features.prompt.md",
+    "Prompts/general.prompt.md",
+    "Prompts/pl.md",
+    "Prompts/repo.prompt.md",
+    "Prompts/workspace-consolidate.prompt.md"
+  ],
+  "errors": []
+}

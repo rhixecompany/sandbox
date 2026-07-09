@@ -1,15 +1,15 @@
 # Batch 42 Results
-> Skills 411-420 of 429
+> Skills 411-420 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
-| systematic-debugging | 77 | WARN | 20 | 16 | 20 | 11 | 10 | 414 |
-| test-driven-development | 75 | WARN | 18 | 16 | 20 | 11 | 10 | 555 |
-| winapp-cli | 71 | WARN | 18 | 12 | 16 | 20 | 5 | 223 |
-| worktrunk | 77 | WARN | 18 | 20 | 16 | 13 | 10 | 236 |
-| writing-plans | 77 | WARN | 18 | 16 | 20 | 13 | 10 | 376 |
-| solana | 72 | WARN | 15 | 12 | 20 | 15 | 10 | 209 |
-| stable-diffusion | 73 | WARN | 15 | 16 | 16 | 16 | 10 | 561 |
-| stocks | 72 | WARN | 15 | 12 | 20 | 15 | 10 | 96 |
-| subagent-driven-development | 62 | WARN | 15 | 4 | 20 | 13 | 10 | 353 |
-| telephony | 68 | WARN | 15 | 12 | 20 | 11 | 10 | 419 |
+| nuget-manager | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
+| plan | 70 | WARN | 18 | 16 | 16 | 15 | 5 | 103 |
+| project-docs | 75 | WARN | 20 | 12 | 8 | 20 | 15 | 117 |
+| quasi-coder | 62 | WARN | 18 | 12 | 16 | 11 | 5 | 415 |
+| receiving-code-review | 83 | PASS | 18 | 20 | 20 | 15 | 10 | 113 |
+| refactor | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 87 |
+| requesting-code-review | 68 | WARN | 18 | 12 | 20 | 13 | 5 | 298 |
+| rest-graphql-debug | 60 | WARN | 15 | 8 | 16 | 11 | 10 | 523 |
+| sandbox | 73 | WARN | 18 | 20 | 20 | 10 | 5 | 237 |
+| script-orchestration | 79 | WARN | 20 | 16 | 20 | 13 | 10 | 322 |

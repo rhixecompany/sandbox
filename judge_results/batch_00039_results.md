@@ -1,15 +1,15 @@
 # Batch 39 Results
-> Skills 381-390 of 429
+> Skills 381-390 of 442
 
 | Skill | Score | Rating | FM | Struct | Content | DRY | Refs | Lines |
 |-------|-------|--------|----|--------|---------|-----|------|-------|
-| banking | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 124 |
-| bash-scripts-audit-remediation | 79 | WARN | 20 | 16 | 20 | 13 | 10 | 286 |
-| caveman-unified | 69 | WARN | 18 | 20 | 16 | 10 | 5 | 208 |
-| claude-api | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 102 |
-| clonedeps | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 181 |
-| code-docs | 81 | PASS | 20 | 20 | 16 | 15 | 10 | 207 |
-| code-wiki | 67 | WARN | 15 | 12 | 16 | 14 | 10 | 446 |
-| codemap | 85 | PASS | 20 | 20 | 20 | 15 | 10 | 186 |
-| context7 | 74 | WARN | 18 | 20 | 16 | 15 | 5 | 143 |
-| debugging-hermes-tui-commands | 70 | WARN | 18 | 12 | 20 | 15 | 5 | 170 |
+| searxng-search | 65 | WARN | 15 | 8 | 12 | 20 | 10 | 213 |
+| web-research-pipeline | 70 | WARN | 18 | 16 | 20 | 11 | 5 | 408 |
+| searxng-search | 65 | WARN | 15 | 8 | 12 | 20 | 10 | 214 |
+| 1password | 60 | WARN | 15 | 4 | 16 | 15 | 10 | 164 |
+| godmode | 67 | WARN | 15 | 4 | 12 | 16 | 20 | 404 |
+| oss-forensics | 66 | WARN | 6 | 8 | 16 | 16 | 20 | 424 |
+| sherlock | 64 | WARN | 15 | 12 | 12 | 20 | 5 | 193 |
+| web-pentest | 85 | PASS | 20 | 16 | 16 | 13 | 20 | 350 |
+| shop-app | 68 | WARN | 18 | 12 | 20 | 13 | 5 | 356 |
+| simplify | 74 | WARN | 20 | 12 | 12 | 20 | 10 | 66 |
