@@ -88,7 +88,7 @@ Reference artifacts:
 - `docs/dev-init-spec.md`
 - `docs/prompts-cross-reference-registry.md`
 - `docs/prompt-conversion-enhancement-plan.md`
-- `Bash/archive/artifacts/context-maps/dev-init.context.json`
+- `projects/Bash/archive/artifacts/context-maps/dev-init.context.json`
 
 ## Inputs
 
@@ -241,7 +241,7 @@ ELSE → run Phase 1–4 first, then return here
 ```bash
 read_file("docs/dev-init-comprehensive-plan.md")
 read_file("docs/dev-init-spec.md")
-read_file("Bash/archive/artifacts/context-maps/dev-init.context.json")
+read_file("projects/Bash/archive/artifacts/context-maps/dev-init.context.json")
 ```
 
 ### Step 5.2 — Run `context-map`

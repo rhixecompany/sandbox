@@ -66,7 +66,7 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 
 ## Inputs
 
-- Target directories under `Bash/**` and selected project script roots
+- Target directories under `projects/Bash/**` and selected project script roots
 - Workspace context and current command mappings
 - Optional constraints, compatibility notes, and known script issues
 
@@ -193,4 +193,4 @@ The 7-phase remediation plan:
 - Wrapper shell semantics differ per platform → test parity
 - Undocumented workflows → inventory before deleting
 
-**Core script baselines**: `Bash/upgrade.sh`, `Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `Bash/comicwise/dev.sh/.ps1`
+**Core script baselines**: `projects/Bash/upgrade.sh`, `projects/Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `projects/Bash/comicwise/dev.sh/.ps1`

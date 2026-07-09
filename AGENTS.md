@@ -4,7 +4,8 @@ Automation scripts, prompt assets, and 15+ subprojects.
 
 ## Structure
 
-- `Bash/` — primary toolkit (Bun, TypeScript, shell)
+- `projects/Bash/` — primary toolkit (Bun, TypeScript, shell)
+- `projects/Resume_maker/` — job docs generator (Bun, TypeScript)
 - `projects/` — per-project workspaces
 - `docs/` — extracted Hermes docs, architecture, audit reports
 - `.github/` — Copilot config, prompts, hooks (reference only)
@@ -21,7 +22,7 @@ Automation scripts, prompt assets, and 15+ subprojects.
 ## Toolkit Validation
 
 ```bash
-cd Bash && bun run format && bun run typecheck && bun run lint:strict
+cd projects/Bash && bun run format && bun run typecheck && bun run lint:strict
 ```
 
 ## Subprojects

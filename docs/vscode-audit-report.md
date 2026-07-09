@@ -21,4 +21,4 @@ STACK_MISMATCHES:
   - projects\Python-projects/.vscode/settings.json - ESLint code action without extension
   - projects\xamehi.tv/.vscode/settings.json - ESLint code action without extension
   - projects\youtube-downloader/.vscode/settings.json - ESLint code action without extension
-  - Resume_maker/.vscode/settings.json - ESLint code action without extension
+  - projects/Resume_maker/.vscode/settings.json - ESLint code action without extension

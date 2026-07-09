@@ -190,7 +190,7 @@ Multi-project sandbox for Agentic/OpenCode workflows. Current task: Complete Her
 
 ### File Organization
 - `docs/` — Documentation (auto-generated & maintained)
-- `Bash/` — Bash script subproject
+- `projects/Bash/` — Bash script subproject
 - `.hermes.md` — Project configuration (this file)
 - `AGENTS.md` — Agent guidelines
 

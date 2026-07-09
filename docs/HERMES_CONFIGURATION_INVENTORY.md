@@ -212,14 +212,14 @@ terminal:
 
 ### Subprojects
 
-**Bash/**
+**projects/Bash/**
 - Active subproject with runnable scripts
 - README.md, AGENTS.md with conventions
 - Format/lint/typecheck via bun
 
 **Other Folders:**
 - rhixecompany/ (independent)
-- Resume_maker/ (independent)
+- projects/Resume_maker/ (independent)
 - Use as needed; follows workflow phases from root docs
 
 ---

@@ -67,8 +67,8 @@ skills:
 
 ### Phase 1: Verify Canonical Script Layout (LIGHT)
 
-All 54 operational scripts must live under `Bash/` in organized subdirectories.
-No duplicates outside `Bash/`.
+All 54 operational scripts must live under `projects/Bash/` in organized subdirectories.
+No duplicates outside `projects/Bash/`.
 
 ### Target Structure
 
@@ -116,7 +116,7 @@ Bash/
 
 ### Steps
 
-1. **Scan** for any remaining operational scripts outside `Bash/` (exclude
+1. **Scan** for any remaining operational scripts outside `projects/Bash/` (exclude
    framework seeds, `.husky/`, `.devcontainer/`, `.claude/`)
 2. **Move** misplaced project docs into `Bash/docs/`:
     - `Bash/AGENTS.md` → `Bash/docs/AGENTS.md` (update internal references)
@@ -138,7 +138,7 @@ Active:
   rhixe-company.patch            (3 commits, 1.7K lines, corporate site)
   python-projects.patch          (6 commits, 3.3K lines, Python scripts)
   youtube-downloader.patch       (23 commits, 5K lines, yt-dlp app)
-  Bash/edits/run-audit.sh.patch  (local patch for run-audit.sh)
+  projects/Bash/edits/run-audit.sh.patch  (local patch for run-audit.sh)
 
 Obsolete (patches/obsolete/):
   django-scrapy-selenium.patch   (10 commits, 633K lines, cookiecutter template — LIKELY DEAD)
@@ -286,7 +286,7 @@ patches/
 ### All Reports Under docs/
 
 All workspace-level reports go under `docs/`. All project-level docs go under
-`docs/project-docs/<name>/`. All Bash-specific docs go under `Bash/docs/`.
+`docs/project-docs/<name>/`. All Bash-specific docs go under `projects/Bash/docs/`.
 
 ### Doc Optimization for Humans AND AI
 
@@ -316,7 +316,7 @@ updated: YYYY-MM-DD
 | Section headings (H2/H3)              | Scannability, TOC generation    | No walls of text                                       |
 | Code blocks with language tags        | Syntax highlighting, AI context | Every code block has ` ```lang`                        |
 | Table of Contents for docs >300 lines | Navigation                      | Use `<!-- TOC -->` comment                             |
-| Cross-references with paths           | Discoverability                 | `See [Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)` |
+| Cross-references with paths           | Discoverability                 | `See [projects/Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)` |
 | Machine-parseable metadata            | AI ingestion                    | YAML frontmatter present                               |
 | One concept per file                  | Modularity, git diff clarity    | No megadocs                                            |
 | Active voice                          | Readability                     | "The script cleans caches" not "Caches are cleaned"    |
@@ -344,7 +344,7 @@ docs/                                         # Workspace-level reports
 ├── bash-fix-implementation-plan.md           → verify frontmatter, add tags
 ├── project-docs/<project>/*.md              → verify each has frontmatter
 
-Bash/docs/                                    # Bash project-specific docs
+projects/Bash/docs/                                    # Bash project-specific docs
 ├── AGENTS.md                                 → add frontmatter, optimize
 ├── ARCHITECTURE.md                           → add frontmatter, optimize
 ├── CODE_STYLE.md                             → add frontmatter, optimize
@@ -357,7 +357,7 @@ Bash/docs/                                    # Bash project-specific docs
 
 ### AI-Readiness Scoring Script
 
-Create `Bash/scripts/score-docs.sh` that scores every `.md` file on
+Create `projects/Bash/scripts/score-docs.sh` that scores every `.md` file on
 AI-readiness:
 
 | Criterion                             | Points             | Detection Method                                  |
@@ -399,7 +399,7 @@ For each project under `docs/project-docs/<name>/`:
 
 ### Phase 6: Final Verification
 
-- [ ] All 54 scripts verified under `Bash/`
+- [ ] All 54 scripts verified under `projects/Bash/`
 - [ ] Patch dependency graph saved to `docs/patch-dependency-graph.md`
 - [ ] AI-readiness report saved to `docs/ai-readiness-report.md`
 - [ ] Doc symmetry report saved to `docs/doc-symmetry-report.md`
@@ -433,7 +433,7 @@ Projects with full 11 docs:     N/N
 
 ## Steps
 
-1. **Phase 1**: Verify canonical script layout — scan for scripts outside `Bash/`, move misplaced docs, verify counts
+1. **Phase 1**: Verify canonical script layout — scan for scripts outside `projects/Bash/`, move misplaced docs, verify counts
 2. **Phase 2**: Debug all patches — `git apply --check` each, diagnose failures, reclassify obsolete
 3. **Phase 3**: Enhance all patches — enrich commit messages, add metadata, normalize line endings, build dependency graph
 4. **Phase 4**: Create missing patches — gap analysis, create docs/config/consistency/bugfix patches
@@ -442,7 +442,7 @@ Projects with full 11 docs:     N/N
 
 ## Tasks
 
-- [ ] Phase 1: Verify canonical script layout (54 scripts under Bash/)
+- [ ] Phase 1: Verify canonical script layout (54 scripts under projects/Bash/)
 - [ ] Phase 2: Debug all patches (active + obsolete)
 - [ ] Phase 3: Enhance all active patches + build dependency graph
 - [ ] Phase 4: Create missing patches (docs, config, consistency)

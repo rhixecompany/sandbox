@@ -53,7 +53,7 @@ rg -n '"plugin"|hooks|opencode-handoff|rate-limit|quota|cost-guard' .opencode
 | Field | Details |
 | --- | --- |
 | Goal | Run repository format, type, and lint gates. |
-| Inputs | `Bash/` toolchain scripts. |
+| Inputs | `projects/Bash/` toolchain scripts. |
 | Outputs | Validation pass/fail evidence. |
 | Validation | Commands complete with exit status captured. |
 

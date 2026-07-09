@@ -25,7 +25,7 @@ The SandBox root serves as the monorepo workspace root. It contains no applicati
 
 **Steps:**
 1. Agent reads root `AGENTS.md` for workspace conventions, toolchain, and profile inventory
-2. Agent discovers subprojects under `Bash/`, `Resume_maker/`, and `projects/*/`
+2. Agent discovers subprojects under `projects/Bash/`, `projects/Resume_maker/`, and `projects/*/`
 3. For each subproject, agent reads its `AGENTS.md` for architecture, tech stack, and commands
 4. Agent reads `PROJECT_RULES.md` for global rules and constraints
 5. Agent identifies project type and selects appropriate Hermes profile

@@ -28,12 +28,12 @@ SandBox/
 ├── AGENTS.md              # Workspace context & conventions
 ├── .hermes/               # Hermes AI config, plans, profiles
 ├── .github/               # Copilot config, hooks, prompts
-├── Bash/                  # Primary automation toolkit
+├── projects/Bash/                  # Primary automation toolkit
 │   ├── scripts/           # PowerShell orchestration scripts
 │   ├── Banking/           # Banking sub-project scripts
 │   ├── tests/             # Shell test suite
 │   └── docs/              # Documentation
-├── Resume_maker/          # Job docs generator
+├── projects/Resume_maker/          # Job docs generator
 ├── projects/              # 15+ sub-projects workspace
 │   ├── Banking/           # Next.js fintech app
 │   ├── comicwise/         # Next.js comic streaming
@@ -61,7 +61,7 @@ SandBox/
 The root is a multi-project workspace managed via Git submodules. Each sub-project lives under `projects/` with its own `AGENTS.md` context file and independent technology stack.
 
 ### 2. Toolkit Orchestration
-`Bash/` contains PowerShell scripts that orchestrate tooling across the workspace — discovery, cloning, triage, cross-referencing, and verification phases.
+`projects/Bash/` contains PowerShell scripts that orchestrate tooling across the workspace — discovery, cloning, triage, cross-referencing, and verification phases.
 
 ### 3. DRY Context Hierarchy
 Context flows via: `SOUL.md` → `USER.md` → `AGENTS.md` → `.hermes.md`, with global rules in `PROJECT_RULES.md` and `MASTER_RULES.md`.
@@ -70,7 +70,7 @@ Context flows via: `SOUL.md` → `USER.md` → `AGENTS.md` → `.hermes.md`, wit
 
 ```
 User Request → Hermes Agent → Tool Execution
-    ├── Bash/ (automation scripts)
+    ├── projects/Bash/ (automation scripts)
     ├── projects/ (project-specific tasks)
     └── docs/ (documentation output)
 ```
@@ -92,7 +92,7 @@ User Request → Hermes Agent → Tool Execution
 ## Extensibility Points
 
 - New projects added under `projects/` with `AGENTS.md`
-- New orchestration scripts in `Bash/scripts/`
+- New orchestration scripts in `projects/Bash/scripts/`
 - New Hermes profiles in `.hermes/profiles/`
 - New CI workflows in `.github/workflows/`
 

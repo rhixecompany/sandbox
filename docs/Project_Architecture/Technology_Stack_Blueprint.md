@@ -66,10 +66,9 @@ The SandBox root serves as the workspace orchestrator for 15+ subprojects. It pr
 ```
 SandBox/
 ├── AGENTS.md          # Workspace context & conventions
-├── Bash/              # Primary automation toolkit
-├── Resume_maker/      # Job docs generator
 ├── projects/          # All subprojects (15+)
 │   ├── Banking/       # Next.js fintech app
+│   ├── Bash/          # Primary automation toolkit
 │   ├── comicwise/     # Next.js comic streaming
 │   ├── cookiecutter-django-tailwind/
 │   ├── Django-Scrapy-Selenium/
@@ -77,6 +76,7 @@ SandBox/
 │   ├── ecom/          # Ecommerce platform
 │   ├── profile/       # Django blog/CMS
 │   ├── Python-projects/
+│   ├── Resume_maker/  # Job docs generator
 │   ├── rhixe_scans/   # Comic reader
 │   ├── rhixecompany-comics/
 │   ├── selenium_webdriver/
@@ -117,9 +117,9 @@ SandBox/
 ┌────────────────────────────────────────────────────────────┐
 │                    SandBox Root (Orchestrator)              │
 ├──────────┬──────────┬──────────┬──────────┬────────────────┤
-│  Bash/   │Resume_   │ projects/│  docs/   │  .hermes/      │
-│ (Bun/TS) │ maker/   │ (15 dirs)│ (reports)│  (plans)       │
-│          │ (Bun/TS) │          │          │                │
+│projects/ │  docs/   │  .hermes/│          │                │
+│  Bash/   │ (reports)│  (plans) │          │                │
+│Resumemkr │          │          │          │                │
 ├──────────┴──────────┴──────────┴──────────┴────────────────┤
 │  Tooling: eslint, prettier, husky, markdownlint, cspell    │
 │  Runtime: Bun 1.3.14, Python 3.11/3.13, Node.js >=18      │
@@ -135,7 +135,7 @@ SandBox/
 - TypeScript projects use Bun runtime exclusively
 - Python projects use pip with optional uv acceleration
 - Cross-project references via `projects/*/AGENTS.md`
-- Validation toolkit: `cd Bash && bun run format && bun run typecheck && bun run lint:strict`
+- Validation toolkit: `cd projects/Bash && bun run format && bun run typecheck && bun run lint:strict`
 
 ---
 

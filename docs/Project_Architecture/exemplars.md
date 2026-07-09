@@ -61,4 +61,4 @@ Key elements:
 - Plugin and skill configuration
 ```
 
-> **Note:** For actual application source code exemplars, see the individual project directories under `projects/`, `Bash/`, and `Resume_maker/`.
+> **Note:** For actual application source code exemplars, see the individual project directories under `projects/`, `projects/Bash/`, and `projects/Resume_maker/`.
