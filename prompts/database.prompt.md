@@ -59,39 +59,12 @@ tags:
   - planning
   - specification
   - sql
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - database.prompt
-
-trigger: database
-
 ---
 
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - database.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - database.prompt
-
 **Last Updated:** March 1, 2026 | **Database:** PostgreSQL | **ORM:** Drizzle
+
 
 ## Template References
 
 Templates in `templates/database/`:
 - `common_patterns.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
-

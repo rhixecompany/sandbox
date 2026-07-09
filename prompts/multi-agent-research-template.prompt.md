@@ -18,7 +18,7 @@ tags:
   - research
   - planning
   - automation
-trigger: multi-agent-research
+trigger: /multi-agent-research
 version: "1.0.0"
 author: "Hermes Agent"
 license: "MIT"
@@ -26,13 +26,6 @@ metadata:
   hermes:
     related_skills: [codex, copilot, hermes, research, planning, automation]
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
 
 ## Skills Required
 
@@ -223,7 +216,3 @@ For this Phase:
 
 Detailed templates in `templates/multi-agent-research-template/`:
 - `phase_2_mcp_server_and_tool_re.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

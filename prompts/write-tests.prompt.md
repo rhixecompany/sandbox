@@ -38,31 +38,7 @@ tags:
   - specification
   - testing
   - typescript
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - write-tests.prompt
-
-trigger: write-tests
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - write-tests.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - write-tests.prompt
 
 ## Goal
 
@@ -114,7 +90,3 @@ Use when you need to next.js expert for the current workspace or task.
 
 Templates in `templates/write-tests/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Dataverse Python Advanced Patterns"
 title: "Dataverse Python Advanced Patterns"
 description: "Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization techniques."
-trigger: dataverse-python-advanced-patterns
+trigger: /Dataverse Python Advanced Patterns
 tags:
   - data
   - database
@@ -17,29 +17,7 @@ tags:
   - hermes
   - python
   - dataverse
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-advanced-patterns.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-advanced-patterns.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-advanced-patterns.prompt
 
 You are a Dataverse SDK for Python expert. Generate production-ready Python code that demonstrates:
 
@@ -53,7 +31,3 @@ You are a Dataverse SDK for Python expert. Generate production-ready Python code
 8. **Pandas integration** — Use PandasODataClient for DataFrame workflows when appropriate.
 
 Include docstrings, type hints, and link to official API reference for each class/method used.
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

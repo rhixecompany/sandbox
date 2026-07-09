@@ -1,0 +1,67 @@
+{
+  "$schema": "./report-schemas.json",
+  "description": "Template for CLONE_REPORT.json output - shows expected structure with placeholder values",
+  "example": {
+    "timestamp": "2026-05-15T11:45:00Z",
+    "summary": {
+      "total_repos": 22,
+      "successful_clones": 20,
+      "failed_clones": 2,
+      "success_rate_percent": 90.9
+    },
+    "details": [
+      {
+        "name": "frontend-app",
+        "clone_url": "https://github.com/acme-corp/frontend-app.git",
+        "target_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\frontend-app",
+        "success": true,
+        "error": null,
+        "attempt": 1,
+        "duration_seconds": 45.2
+      },
+      {
+        "name": "backend-api",
+        "clone_url": "https://github.com/acme-corp/backend-api.git",
+        "target_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\backend-api",
+        "success": true,
+        "error": null,
+        "attempt": 1,
+        "duration_seconds": 128.7
+      },
+      {
+        "name": "mobile-app",
+        "clone_url": "https://github.com/acme-corp/mobile-app.git",
+        "target_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\mobile-app",
+        "success": false,
+        "error": "Authentication failed: token expired",
+        "attempt": 3,
+        "duration_seconds": 12.4
+      },
+      {
+        "name": "data-pipeline",
+        "clone_url": "https://github.com/acme-corp/data-pipeline.git",
+        "target_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\repos\\acme-corp\\data-pipeline",
+        "success": true,
+        "error": null,
+        "attempt": 1,
+        "duration_seconds": 67.3
+      }
+    ]
+  },
+  "field_descriptions": {
+    "timestamp": "ISO 8601 datetime when all cloning operations completed",
+    "summary.total_repos": "Total number of repositories attempted to clone",
+    "summary.successful_clones": "Count of successful clone operations",
+    "summary.failed_clones": "Count of failed clone operations",
+    "summary.success_rate_percent": "Percentage of successful clones (successful/total * 100)",
+    "details": "Array of individual clone operation results",
+    "detail.name": "Repository name",
+    "detail.clone_url": "Git URL used for clone operation",
+    "detail.target_path": "Local filesystem path where repo was/will be stored",
+    "detail.success": "Boolean indicating if clone succeeded",
+    "detail.error": "Error message if clone failed, null if successful",
+    "detail.attempt": "Number of attempts made (1 = first try, 2+ = retries)",
+    "detail.duration_seconds": "Time taken for clone operation in seconds"
+  },
+  "title": "CLONE_REPORT Template"
+}

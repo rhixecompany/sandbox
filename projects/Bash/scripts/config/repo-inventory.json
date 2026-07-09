@@ -1,0 +1,157 @@
+{
+  "repos": [
+    {
+      "id": "comicwise",
+      "name": "comicwise",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\comicwise",
+      "priority": "CRITICAL",
+      "stack": "typescript-node",
+      "description": "Comic management system",
+      "expectedIssues": 148
+    },
+    {
+      "id": "banking",
+      "name": "Banking",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking",
+      "priority": "HIGH",
+      "stack": "typescript-node",
+      "description": "Fintech banking application",
+      "expectedIssues": 5
+    },
+    {
+      "id": "rhixe_scans",
+      "name": "rhixe_scans",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\rhixe_scans",
+      "priority": "HIGH",
+      "stack": "typescript-node",
+      "description": "Document scanning service",
+      "expectedIssues": 8
+    },
+    {
+      "id": "university-libary-jsm",
+      "name": "university-libary-jsm",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\university-libary-jsm",
+      "priority": "HIGH",
+      "stack": "typescript-node",
+      "description": "University library management system",
+      "expectedIssues": 12
+    },
+    {
+      "id": "cookiecutter-django-tailwind",
+      "name": "cookiecutter-django-tailwind",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\cookiecutter-django-tailwind",
+      "priority": "MEDIUM",
+      "stack": "python",
+      "description": "Django cookiecutter template with Tailwind CSS",
+      "expectedIssues": 8
+    },
+    {
+      "id": "Django-Scrapy-Selenium",
+      "name": "Django-Scrapy-Selenium",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\Django-Scrapy-Selenium",
+      "priority": "MEDIUM",
+      "stack": "python",
+      "description": "Web scraping framework integration",
+      "expectedIssues": 6
+    },
+    {
+      "id": "Python-projects",
+      "name": "Python-projects",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\Python-projects",
+      "priority": "MEDIUM",
+      "stack": "python",
+      "description": "Collection of Python utilities",
+      "expectedIssues": 5
+    },
+    {
+      "id": "youtube-downloader",
+      "name": "youtube-downloader",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\youtube-downloader",
+      "priority": "MEDIUM",
+      "stack": "python",
+      "description": "YouTube video downloader utility",
+      "expectedIssues": 4
+    },
+    {
+      "id": "ecom",
+      "name": "ecom",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\ecom",
+      "priority": "MEDIUM",
+      "stack": "typescript-node",
+      "description": "E-commerce platform",
+      "expectedIssues": 7
+    },
+    {
+      "id": "profile",
+      "name": "profile",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\profile",
+      "priority": "MEDIUM",
+      "stack": "typescript-node",
+      "description": "User profile service",
+      "expectedIssues": 6
+    },
+    {
+      "id": "selenium_webdriver",
+      "name": "selenium_webdriver",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\selenium_webdriver",
+      "priority": "MEDIUM",
+      "stack": "python",
+      "description": "Selenium WebDriver utilities",
+      "expectedIssues": 5
+    },
+    {
+      "id": "xamehitv",
+      "name": "xamehitv",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\xamehitv",
+      "priority": "MEDIUM",
+      "stack": "typescript-node",
+      "description": "Video streaming platform",
+      "expectedIssues": 6
+    },
+    {
+      "id": "rhixe.company",
+      "name": "rhixe.company",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\rhixe.company",
+      "priority": "LOW",
+      "stack": "unknown",
+      "description": "Company website",
+      "expectedIssues": 2
+    },
+    {
+      "id": "xamehi",
+      "name": "xamehi",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\xamehi",
+      "priority": "LOW",
+      "stack": "unknown",
+      "description": "Media platform",
+      "expectedIssues": 2
+    },
+    {
+      "id": "xamehi.tv",
+      "name": "xamehi.tv",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\Rhixe-company\\xamehi.tv",
+      "priority": "LOW",
+      "stack": "unknown",
+      "description": "Video streaming service",
+      "expectedIssues": 2
+    },
+    {
+      "id": "my-opencode-config",
+      "name": "my-opencode-config",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\my-opencode-config",
+      "priority": "LOW",
+      "stack": "unknown",
+      "description": "OpenCode configuration",
+      "expectedIssues": 1
+    },
+    {
+      "id": "rhixecompany",
+      "name": "rhixecompany",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\rhixecompany",
+      "priority": "LOW",
+      "stack": "unknown",
+      "description": "Core company repository",
+      "expectedIssues": 1
+    }
+  ]
+}

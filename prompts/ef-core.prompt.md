@@ -21,31 +21,7 @@ tags:
   - dotnet
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - ef-core.prompt
-
-trigger: ef-core
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - ef-core.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - ef-core.prompt
 
 ## Goal
 
@@ -165,7 +141,3 @@ When reviewing my EF Core code, identify issues and suggest improvements that fo
 
 Templates in `templates/ef-core/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

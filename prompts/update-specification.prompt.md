@@ -34,31 +34,7 @@ tags:
   - performance
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-specification.prompt
-
-trigger: update-specification
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-specification.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-specification.prompt
 
 ## Goal
 
@@ -205,7 +181,3 @@ Templates in `templates/update-specification/`:
 - `legacy_prompt_details.md`
 - `phases.md`
 - `rules.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

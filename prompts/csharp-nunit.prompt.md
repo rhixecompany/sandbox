@@ -21,31 +21,7 @@ tags:
   - csharp
   - dotnet
   - testing
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - csharp-nunit.prompt
-
-trigger: csharp-nunit
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - csharp-nunit.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - csharp-nunit.prompt
 
 # NUnit Best Practices
 
@@ -125,7 +101,3 @@ Templates in `templates/csharp-nunit/`:
 - `standard_tests.md`
 - `test_organization.md`
 - `test_structure.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

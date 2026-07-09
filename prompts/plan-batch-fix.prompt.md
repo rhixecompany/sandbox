@@ -1,5 +1,5 @@
 ---
-trigger: plan-batch-fix
+trigger: /plan-batch-fix
 name: plan-batch-fix
 title: "Batch Fix Errors, Warnings & Deprecations"
 description: >
@@ -31,29 +31,7 @@ skills:
   - simplify
   - verification-before-completion
   - brainstorming
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-batch-fix.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-batch-fix.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-batch-fix.prompt
 
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
@@ -140,7 +118,3 @@ Write report to `docs/batch-fix-report.md`:
 - [ ] Git commits created per batch
 - [ ] Report written with before/after counts
 - [ ] No regressions introduced (tests pass if applicable)
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

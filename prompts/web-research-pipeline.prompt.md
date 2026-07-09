@@ -1,5 +1,5 @@
 ---
-trigger: web-research-pipeline
+trigger: /web-research-pipeline
 name: web-research-pipeline
 title: "Web Research Pipeline (MCP-Enhanced)"
 description: >
@@ -29,13 +29,6 @@ metadata:
       - domain-intel
 ---
 
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-
 ## Goal
 
 Web search → extract full content → save as formatted markdown. MCP-first approach:
@@ -59,7 +52,3 @@ Load the `web-research-pipeline` skill (this is a delegation prompt):
 3. **Never fabricate** — Every finding must trace to a real search or extraction.
 4. **Preserve content** — Extract as-is; never summarize or truncate.
 5. **Verify before saving** — Confirm extracted content is non-empty (>100 chars).
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

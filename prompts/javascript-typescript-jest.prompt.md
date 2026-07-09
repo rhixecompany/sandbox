@@ -20,31 +20,7 @@ tags:
   - specification
   - testing
   - typescript
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - javascript-typescript-jest.prompt
-
-trigger: javascript-typescript-jest
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - javascript-typescript-jest.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - javascript-typescript-jest.prompt
 
 ## Goal
 
@@ -109,7 +85,3 @@ Use when you need to work on the current workspace or task.
 Templates in `templates/javascript-typescript-jest/`:
 - `legacy_prompt_details.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -19,31 +19,7 @@ tags:
   - m365-copilot
   - api-plugin
   - rest-api
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-api-plugin.prompt
-
-trigger: typespec-create-api-plugin
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-api-plugin.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-api-plugin.prompt
 
 ## Goal
 
@@ -148,7 +124,3 @@ Templates in `templates/typespec-create-api-plugin/`:
 - `phases.md`
 - `requirements.md`
 - `workflow.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

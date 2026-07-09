@@ -24,31 +24,7 @@ tags:
   - planning
   - specification
   - sql
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - sql-optimization.prompt
-
-trigger: sql-optimization
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - sql-optimization.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - sql-optimization.prompt
 
 ## Goal
 
@@ -202,7 +178,3 @@ Detailed templates in `templates/sql-optimization/`:
 - `performance_tuning_techniques.md`
 - `query_anti-patterns.md`
 - `universal_optimization_checkli.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

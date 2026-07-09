@@ -36,31 +36,7 @@ tags:
   - linux
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-oo-component-documentation.prompt
-
-trigger: create-oo-component-documentation
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-oo-component-documentation.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-oo-component-documentation.prompt
 
 ## Goal
 
@@ -249,7 +225,3 @@ await component.ProcessAsync(data);
 
 Detailed templates in `templates/create-oo-component-documentation/`:
 - `2_architecture_section.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

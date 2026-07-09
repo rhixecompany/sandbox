@@ -36,31 +36,7 @@ tags:
   - markdown
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-markdown-file-index.prompt
-
-trigger: update-markdown-file-index
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-markdown-file-index.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-markdown-file-index.prompt
 
 ## Goal
 
@@ -182,7 +158,3 @@ Look for existing sections with these patterns:
 Templates in `templates/update-markdown-file-index/`:
 - `files_in_folder.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

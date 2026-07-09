@@ -22,31 +22,7 @@ tags:
   - python
   - refactoring
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comment-code-generate-a-tutorial.prompt
-
-trigger: comment-code-generate-a-tutorial
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comment-code-generate-a-tutorial.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comment-code-generate-a-tutorial.prompt
 
 ## Goal
 
@@ -99,7 +75,3 @@ Use when you need to work on the current workspace or task.
 Templates in `templates/comment-code-generate-a-tutorial/`:
 - `legacy_prompt_details.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

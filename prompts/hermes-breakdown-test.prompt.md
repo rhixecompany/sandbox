@@ -23,24 +23,7 @@ tags:
   - planning
   - specification
   - testing
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - hermes-breakdown-test.prompt
-
-trigger: hermes-breakdown-test
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - hermes-breakdown-test.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - hermes-breakdown-test.prompt
 
 ## Goal
 
@@ -95,7 +78,3 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 
 Templates in `templates/hermes-breakdown-test/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

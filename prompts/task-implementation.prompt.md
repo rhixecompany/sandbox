@@ -5,7 +5,7 @@ version: 1.0.0
 name: "task-implementation"
 title: "Task Implementation"
 description: "Comprehensive prompt for implementing tasks with clear phases, goals, and verification."
-trigger: task-implementation
+trigger: /task-implementation
 tags:
   - ai-assistant
   - ml
@@ -16,22 +16,7 @@ tags:
   - tasks
   - implementation
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - task-implementation.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - task-implementation.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - task-implementation.prompt
 
 ## Goal
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
@@ -121,7 +106,3 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 
 Templates in `templates/task-implementation/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

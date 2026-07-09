@@ -22,31 +22,7 @@ tags:
   - microsoft
   - power-platform
   - typespec
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-platform-mcp-connector-suite.prompt
-
-trigger: power-platform-mcp-connector-suite
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-platform-mcp-connector-suite.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-platform-mcp-connector-suite.prompt
 
 # Power Platform MCP Connector Suite
 
@@ -193,7 +169,3 @@ Target APIs: CRM REST API
 
 Detailed templates in `templates/power-platform-mcp-connector-suite/`:
 - `validation_checklist.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

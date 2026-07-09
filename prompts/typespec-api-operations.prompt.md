@@ -18,31 +18,7 @@ tags:
   - api-plugin
   - rest-operations
   - crud
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-api-operations.prompt
-
-trigger: typespec-api-operations
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-api-operations.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-api-operations.prompt
 
 ## Goal
 
@@ -193,7 +169,3 @@ Detailed templates in `templates/typespec-api-operations/`:
 - `advanced_features.md`
 - `best_practices.md`
 - `complete_crud_example.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

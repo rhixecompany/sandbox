@@ -1,5 +1,5 @@
 ---
-trigger: repo-story-time
+trigger: /repo-story-time
 name: repo-story-time
 title: "Repository Analysis: Story from Git History"
 description: >
@@ -21,13 +21,6 @@ metadata:
       - code-wiki
       - writing-clearly-and-concisely
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
 
 ## Goal
 
@@ -67,7 +60,3 @@ Create both markdown files at the repo root using `write_file`:
 2. **Evidence-Based** — Support observations with actual git data (never fabricate).
 3. **Write files, don't print content** — Use `write_file` to create the actual files.
 4. **Balance narrative with technical accuracy** — Make it readable for non-technical audiences.
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

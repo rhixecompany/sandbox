@@ -29,31 +29,7 @@ tags:
   - documentation
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-avm-modules-in-bicep.prompt
-
-trigger: update-avm-modules-in-bicep
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-avm-modules-in-bicep.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-avm-modules-in-bicep.prompt
 
 ## Goal
 
@@ -158,7 +134,3 @@ Describe updates made, any manual reviews needed or issues encountered.
 
 Templates in `templates/update-avm-modules-in-bicep/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -38,31 +38,7 @@ tags:
   - performance
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-architectural-decision-record.prompt
-
-trigger: create-architectural-decision-record
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-architectural-decision-record.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-architectural-decision-record.prompt
 
 ## Goal
 
@@ -206,7 +182,3 @@ superseded_by: ""
 Templates in `templates/create-architectural-decision-record/`:
 - `phases.md`
 - `required_documentation_st.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

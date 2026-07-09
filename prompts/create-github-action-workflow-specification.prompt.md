@@ -52,30 +52,7 @@ tags:
   - planning
   - specification
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-action-workflow-specification.prompt
-
-trigger: create-github-action-workflow-specification
-
 ---
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-action-workflow-specification.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-action-workflow-specification.prompt
 
 ## Workflow Overview
 
@@ -289,9 +266,11 @@ When analyzing the workflow file:
 Focus on creating a specification that serves as both documentation and a template for workflow updates.
 ```
 
+
 ## Template References
 
 Detailed templates in `templates/create-github-action-workflow-specification/`:
+
 
 ## Template References
 
@@ -321,8 +300,3 @@ Templates in `templates/create-github-action-workflow-specification/`:
 - `specification_template.md`
 - `token_optimization_strate.md`
 - `validation_criteria.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
-

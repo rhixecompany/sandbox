@@ -5,7 +5,7 @@ version: 1.0.0
 name: ".NET Upgrade Analysis Prompts"
 title: ".Net Upgrade Analysis Prompts"
 description: "Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution"
-trigger: .net-upgrade-analysis-prompts
+trigger: /.NET Upgrade Analysis Prompts
 tags:
   - audit
   - csharp
@@ -14,29 +14,7 @@ tags:
   - prompts
   - typescript
   - hermes
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-upgrade.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-upgrade.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-upgrade.prompt
 
 # Project Discovery & Assessment
 
@@ -132,7 +110,3 @@ metadata:
 ## Template References
 
 Detailed templates in `templates/dotnet-upgrade/`:
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

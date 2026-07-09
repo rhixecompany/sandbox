@@ -1,0 +1,16 @@
+{
+  "clone": {
+    "base_directory": "repos",
+    "timeout_seconds": 300,
+    "max_retries": 3,
+    "batch_size": 5,
+    "parallel_jobs": 2,
+    "output_directory": "REPO_AUDIT",
+    "report_filename": "CLONE_REPORT.json"
+  },
+  "validation": {
+    "check_git_config": true,
+    "verify_remote": true,
+    "min_commit_count": 0
+  }
+}

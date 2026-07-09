@@ -19,31 +19,7 @@ tags:
   - planning
   - specification
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-adaptive-cards.prompt
-
-trigger: mcp-create-adaptive-cards
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-adaptive-cards.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-adaptive-cards.prompt
 
 ## Goal
 
@@ -209,7 +185,3 @@ Detailed templates in `templates/mcp-create-adaptive-cards/`:
 - `card_elements.md`
 - `common_patterns.md`
 - `complete_example.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Dataverse Python - Use Case Solution Builder"
 title: "Dataverse Python   Use Case Solution Builder"
 description: "Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations"
-trigger: dataverse-python---use-case-solution-builder
+trigger: /Dataverse Python - Use Case Solution Builder
 tags:
   - architecture
   - data
@@ -20,29 +20,7 @@ tags:
   - hermes
   - python
   - dataverse
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-usecase-builder.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-usecase-builder.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-usecase-builder.prompt
 
 # System Instructions
 
@@ -166,7 +144,3 @@ Detailed templates in `templates/dataverse-python-usecase-builder/`:
 - `phase_3_pattern_selection.md`
 - `phase_4_complete_implementatio.md`
 - `phase_5_optimization_recommend.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

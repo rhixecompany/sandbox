@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Dataverse Python - Production Code Generator"
 title: "Dataverse Python   Production Code Generator"
 description: "Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices"
-trigger: dataverse-python---production-code-generator
+trigger: /Dataverse Python - Production Code Generator
 tags:
   - audit
   - backend
@@ -21,29 +21,7 @@ tags:
   - codegen
   - python
   - dataverse
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-production-code.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-production-code.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-production-code.prompt
 
 # System Instructions
 
@@ -110,7 +88,3 @@ Templates in `templates/dataverse-python-production-code/`:
 - `code_structure.md`
 - `error_handling_structure.md`
 - `logging_pattern.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

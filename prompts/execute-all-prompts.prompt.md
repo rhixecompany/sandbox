@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: Execute All Prompts Orchestrator
 name: execute-all-prompts
-trigger: execute-all-prompts
+trigger: /execute-all-prompts
 description: >
   Orchestrates sequential execution of all 4 workspace prompt files:
   audit-skills-judge-fix, agents-system-prompt-context-fix,
@@ -94,16 +94,11 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 ## Phases
 
 > ### Phase 1: Audit Skills Judge Fix
-> **Prompt file:** `prompts/audit-skills-judge-fix.prompt.md`
->
-> ### Phase 2: Agents System Prompt Context Fix
-> **Prompt file:** `prompts/agents-system-prompt-context-fix.prompt.md`
->
-> ### Phase 3: Sync Hermes Copilot Codex
-> **Prompt file:** `prompts/sync-hermes-copilot-codex.prompt.md`
->
-> ### Phase 4: Test Providers & Models
-> **Prompt file:** `prompts/test-providers-models.prompt.md`
+> **Prompt file:** `audit-skills-judge-fix.prompt.md`
+
+> **Full content:** `templates/execute-all-prompts/phases.md`
+
+## Actions Summary
 
 1. Run skills audit → categorize → dedupe → judge → remediate → consolidate → verify
 2. Generate agent context files → audit VS Code configs → verify
@@ -132,7 +127,3 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 
 Detailed templates in `templates/execute-all-prompts/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

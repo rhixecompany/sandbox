@@ -5,7 +5,7 @@ version: 1.0.0
 name: "editorconfig"
 title: "EditorConfig Expert"
 description: "Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences."
-trigger: editorconfig
+trigger: /editorconfig
 tags:
   - configuration
   - generator
@@ -14,29 +14,7 @@ tags:
   - specification
   - typescript
   - hermes
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - editorconfig.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - editorconfig.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - editorconfig.prompt
 
 ## Goal
 
@@ -130,7 +108,3 @@ You are an **EditorConfig Expert**. Your mission is to create a robust, comprehe
 Templates in `templates/editorconfig/`:
 - `execution.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

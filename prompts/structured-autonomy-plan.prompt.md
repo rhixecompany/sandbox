@@ -5,7 +5,7 @@ version: 1.0.0
 name: "sa-plan"
 title: "Sa Plan"
 description: "Structured Autonomy Planning Prompt"
-trigger: sa-plan
+trigger: /sa-plan
 tags:
   - ml
   - planning
@@ -13,29 +13,7 @@ tags:
   - specification
   - typescript
   - hermes
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-plan.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-plan.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-plan.prompt
 
 ## Goal
 
@@ -132,7 +110,3 @@ Templates in `templates/structured-autonomy-plan/`:
 - `implementation_steps.md`
 - `phases.md`
 - `step_3_plan_generation.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

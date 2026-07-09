@@ -22,31 +22,7 @@ tags:
   - planning
   - specification
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - optimize-agentsmd.prompt
-
-trigger: optimize-agentsmd
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - optimize-agentsmd.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - optimize-agentsmd.prompt
 
 ## Goal
 
@@ -109,7 +85,3 @@ The outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, 
 
 Detailed templates in `templates/optimize-agentsMd/`:
 - `plan_comprehensive_agentsmd_fo.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

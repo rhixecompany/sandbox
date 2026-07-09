@@ -18,31 +18,7 @@ tags:
   - linux
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-pm.prompt
-
-trigger: breakdown-epic-pm
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-pm.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-pm.prompt
 
 ## Goal
 
@@ -116,7 +92,3 @@ Review the user's request for a new epic and generate a thorough PRD. If you don
 Templates in `templates/breakdown-epic-pm/`:
 - `output_format.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

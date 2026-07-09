@@ -5,7 +5,7 @@ version: 1.0.0
 name: "sa-generate"
 title: "Sa Generate"
 description: "Structured Autonomy Implementation Generator Prompt"
-trigger: sa-generate
+trigger: /sa-generate
 tags:
   - generator
   - ml
@@ -13,29 +13,7 @@ tags:
   - specification
   - typescript
   - hermes
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-generate.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-generate.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - structured-autonomy-generate.prompt
 
 ## Goal
 
@@ -116,7 +94,3 @@ Templates in `templates/structured-autonomy-generate/`:
 - `phases.md`
 - `prerequisites.md`
 - `step_2_generate_implement.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -24,31 +24,7 @@ tags:
   - specification
   - typespec
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-declarative-agent.prompt
-
-trigger: mcp-create-declarative-agent
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-declarative-agent.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - mcp-create-declarative-agent.prompt
 
 ## Goal
 
@@ -254,7 +230,3 @@ Then generate:
 Detailed templates in `templates/mcp-create-declarative-agent/`:
 - `mcp_server_integration.md`
 - `requirements.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

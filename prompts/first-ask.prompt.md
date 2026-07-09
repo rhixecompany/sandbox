@@ -17,31 +17,7 @@ tags:
   - planning
   - specification
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - first-ask.prompt
-
-trigger: first-ask
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - first-ask.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - first-ask.prompt
 
 ## Goal
 
@@ -94,7 +70,3 @@ Use when you need to first ask for the current workspace or task.
 Templates in `templates/first-ask/`:
 - `legacy_prompt_details.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

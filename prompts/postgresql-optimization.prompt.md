@@ -21,31 +21,7 @@ tags:
   - planning
   - specification
   - sql
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - postgresql-optimization.prompt
-
-trigger: postgresql-optimization
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - postgresql-optimization.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - postgresql-optimization.prompt
 
 ## Goal
 
@@ -203,7 +179,3 @@ Detailed templates in `templates/postgresql-optimization/`:
 - `postgresql_advanced_data_types.md`
 - `postgresql_extensions__tools.md`
 - `postgresql_performance_tuning.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

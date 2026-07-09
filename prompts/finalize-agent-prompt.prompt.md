@@ -16,31 +16,7 @@ tags:
   - documentation
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - finalize-agent-prompt.prompt
-
-trigger: finalize-agent-prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - finalize-agent-prompt.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - finalize-agent-prompt.prompt
 
 ## Goal
 
@@ -109,7 +85,3 @@ You are an AI agent who knows what works best for the prompt files you have seen
 
 Templates in `templates/finalize-agent-prompt/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

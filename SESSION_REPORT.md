@@ -1,5 +1,4 @@
 # SESSION_REPORT
-
 Rolling 41-session summary (most recent first).
 
 2026-07-01T02:54:49+01:00 | | unknown | | | 20260701_025341_10b8bd
@@ -43,3 +42,10 @@ Rolling 41-session summary (most recent first).
 2026-06-30T22:11:58+01:00 | | unknown | | | 20260630_221156_29f76f
 2026-06-30T22:10:30+01:00 | | unknown | | | 20260630_214937_a4f6b0
 2026-06-30T22:08:02+01:00 | | unknown | | | 20260630_214937_a4f6b0
+
+2026-07-09T14:16-07:00 | debug-fix-push | | deepseek-v4-flash-free (opencode-zen) | | 20260709_debug_fix
+- Debugged 170+ prompt files with YAML metadata corruption (`promptmetadata` duplication/inline flattening)
+- Root cause: batch bulk-edit committed across multiple "updates" commits corrupted metadata blocks
+- Fix: restored from clean commit d8f0fa41, verified 0 `promptmetadata` artifacts remain
+- Verifed: git checkout HEAD restored Bash/ and Resume_maker/ staged deletions
+- Blockers: none

@@ -59,30 +59,7 @@ tags:
   - security
   - specification
   - typescript
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - features.prompt
-
-trigger: features
-
 ---
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - features.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - features.prompt
 
 ## Validation Commands
 
@@ -115,6 +92,7 @@ pnpm test:e2e tests/e2e/user-flows.spec.ts
 
 **Document Version:** 1.0.0 | **Last Updated:** 2026-02-01
 
+
 ## Template References
 
 Detailed templates in `templates/features/`:
@@ -123,8 +101,3 @@ Detailed templates in `templates/features/`:
 - `phase_4_chapter_reader.md`
 - `root_pages.md`
 - `server_actions_reference.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
-

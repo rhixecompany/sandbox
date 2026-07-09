@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 title: convert-plaintext-to-md
 name: convert-plaintext-to-md
-trigger: convert-plaintext-to-md
+trigger: /convert-plaintext-to-md
 description: >-
   Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
 tags:
@@ -24,29 +24,7 @@ dependencies:
   - skill:context-map
 skills:
   - enhance-markdown — TXT→MD conversion and enhancement pipeline
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - convert-plaintext-to-md.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - convert-plaintext-to-md.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - convert-plaintext-to-md.prompt
 
 # convert-plaintext-to-md
 
@@ -140,7 +118,3 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 
 Detailed templates in `templates/convert-plaintext-to-md/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

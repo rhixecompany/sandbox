@@ -30,31 +30,7 @@ tags:
   - security
   - testing
   - workflow
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - az-cost-optimize.prompt
-
-trigger: az-cost-optimize
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - az-cost-optimize.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - az-cost-optimize.prompt
 
 # Azure Cost Optimize
 
@@ -156,7 +132,3 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 Detailed templates in `templates/az-cost-optimize/`:
 - `cost_optimization_brief_title.md`
 - `workflow_steps.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -23,31 +23,7 @@ tags:
   - markdown
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debug-issue.prompt
-
-trigger: debug-issue
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debug-issue.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debug-issue.prompt
 
 <!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/prompts/debug-issue.prompt.md -->
 
@@ -82,7 +58,3 @@ Templates in `templates/debug-issue/`:
 - `inputs.md`
 - `output.md`
 - `steps.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

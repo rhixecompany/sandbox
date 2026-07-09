@@ -1,0 +1,80 @@
+[
+  {
+    "Repo": "Banking",
+    "Branch": "chore/agentsmd-20260529",
+    "CommitSHA": "a48c58efa670dbbdf9ddc60adc505ffb09bdffd8",
+    "Status": "fail:push-error"
+  },
+  {
+    "Repo": "comicwise",
+    "Branch": "chore/agentsmd-20260529",
+    "CommitSHA": "645810b4d11bef9211670607164a6c8955e58e98",
+    "Status": "fail:push-error"
+  },
+  {
+    "Repo": "cookiecutter-django-tailwind",
+    "Branch": "chore/agentsmd-20260529",
+    "CommitSHA": "d05c09eb561cd3f0870f691a9c2e544e40f3c6ee",
+    "Status": "fail:push-error"
+  },
+  {
+    "Repo": "Django-Scrapy-Selenium",
+    "Branch": "chore/agentsmd-20260529",
+    "CommitSHA": "cd7965a1a6f6761cb8be79001037169ac8ad238a",
+    "Status": "fail:push-error"
+  },
+  {
+    "Repo": "ecom",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "profile",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "Python-projects",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "rhixe_scans",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "selenium_webdriver",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "university-libary-jsm",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "xamehi",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "xamehi.tv",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  },
+  {
+    "Repo": "youtube-downloader",
+    "Branch": "-",
+    "CommitSHA": "-",
+    "Status": "skip:no-agents-commit"
+  }
+]

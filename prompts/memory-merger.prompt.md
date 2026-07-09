@@ -14,31 +14,7 @@ tags:
   - memory-management
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - memory-merger.prompt
-
-trigger: memory-merger
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - memory-merger.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - memory-merger.prompt
 
 ## Goal
 
@@ -162,7 +138,3 @@ Templates in `templates/memory-merger/`:
 - `phases.md`
 - `process.md`
 - `proposed_memories_for_mer.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

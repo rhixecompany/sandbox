@@ -1,0 +1,45 @@
+{
+  "name": "resume_maker",
+  "version": "1.0.0",
+  "description": "Generate job-hunting documents (resume, cover letter, LinkedIn guide, interview prep) from structured data to Markdown + PDF formats",
+  "keywords": [
+    "resume",
+    "cv",
+    "markdown",
+    "pdf",
+    "job-hunting",
+    "cover-letter",
+    "linkedin"
+  ],
+  "license": "MIT",
+  "author": "Alexander Iseghohi",
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "build": "bun index.ts",
+    "help": "bun index.ts --help",
+    "lint": "eslint index.ts *.json --ext .ts,.json && prettier --check \"*.ts\" \"*.json\" \"*.md\" \"!node_modules/**\"",
+    "lint:fix": "eslint index.ts *.json --ext .ts,.json --fix && prettier --write \"*.ts\" \"*.json\" \"*.md\" \"!node_modules/**\"",
+    "lint:md": "markdownlint-cli2 --config .markdownlint.json \"*.md\" \"!node_modules/**\"",
+    "lint:spell": "cspell \"*.ts\" \"*.md\" \"*.json\"",
+    "start": "bun index.ts",
+    "typecheck": "bun tsc --noEmit"
+  },
+  "dependencies": {
+    "markdown-pdf": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
+    "cspell": "^10.0.0",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.8.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

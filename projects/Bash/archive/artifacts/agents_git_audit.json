@@ -1,0 +1,101 @@
+[
+  {
+    "Project": "Banking",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "7a769bae fix(ci): replace npm references with bun across all workflows",
+    "AgentsStaged": "Yes",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "comicwise",
+    "Repo": "Yes",
+    "Branch": "main",
+    "Head": "8f8d618 docs: add CODE_DOCS, PROJECT_DOCS, audit-report, and DOCX package",
+    "AgentsStaged": "Yes",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "cookiecutter-django-tailwind",
+    "Repo": "Yes",
+    "Branch": "main",
+    "Head": "d05c09e docs: add or update AGENTS.md for agent guidance",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "Django-Scrapy-Selenium",
+    "Repo": "Yes",
+    "Branch": "main",
+    "Head": "59b94e7 Updates",
+    "AgentsStaged": "Yes",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "ecom",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "1f3d86e docs: add DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "profile",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "aeea48f chore: apply rhixe-company cleanup patch ΓÇö deduplicate static vendor files, remove pycache",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "Python-projects",
+    "Repo": "Yes",
+    "Branch": "main",
+    "Head": "09af107 docs: add CODE_DOCS, PROJECT_DOCS, audit-report, and DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "rhixe_scans",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "16dff88 docs: add DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "selenium_webdriver",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "2779594 docs: add DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "university-libary-jsm",
+    "Repo": "Yes",
+    "Branch": "audit/docs-20260515",
+    "Head": "2efd6f6 docs: add DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  },
+  {
+    "Project": "xamehi",
+    "Repo": "Yes",
+    "Branch": "main",
+    "Head": "1188c43 docs: add CODE_DOCS, PROJECT_DOCS, audit-report, and DOCX package",
+    "AgentsStaged": "No",
+    "AgentsUnstaged": "No",
+    "HasNewCommit": "Yes"
+  }
+]

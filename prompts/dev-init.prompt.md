@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: dev-init
 title: Dev Init - Prompt Conversion and Enhancement Planning
-trigger: dev-init
+trigger: /dev-init
 description:
     Create a comprehensive plan for converting plaintext prompts to markdown,
     enhancing prompt quality, and updating related implementation plans.
@@ -57,22 +57,7 @@ skills:
     - executing-plans
     - simplify
 
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-init.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-init.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-init.prompt
 
 >
 > Create a detailed prompt-library plan
@@ -121,6 +106,7 @@ Reference artifacts:
 
 ## Rules
 > Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+
 
 1. Run `context-map` before any conversion or planning work.
 2. Keep the pipeline idempotent and safe to re-run.
@@ -511,8 +497,3 @@ Registry:           docs/prompts-cross-reference-registry.md
 Verification:       docs/dev-init-verification-report.md
 ========================================
 ```
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
-

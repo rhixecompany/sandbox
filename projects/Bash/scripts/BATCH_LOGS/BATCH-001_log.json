@@ -1,0 +1,156 @@
+{
+  "endTime": "2026-05-15T11:55:44.362Z",
+  "findings": [
+    {
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "description": "Repository contains large files (>100MB)",
+      "severity": "MEDIUM",
+      "risk": "MEDIUM",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "complexity": "MEDIUM",
+      "type": "LARGE_FILES",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0001"
+    },
+    {
+      "proposed_fix": "Audit and remove unused dependencies",
+      "description": "Project has excessive dependencies (79 prod, 105 dev)",
+      "severity": "MEDIUM",
+      "risk": "MEDIUM",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json",
+      "complexity": "HIGH",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0002"
+    },
+    {
+      "type": "LARGE_FILES",
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "description": "Repository contains large files (>100MB)",
+      "risk": "MEDIUM",
+      "severity": "MEDIUM",
+      "complexity": "MEDIUM",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0003"
+    },
+    {
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "proposed_fix": "Audit and remove unused dependencies",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json",
+      "description": "Project has excessive dependencies (79 prod, 105 dev)",
+      "risk": "MEDIUM",
+      "severity": "MEDIUM",
+      "complexity": "HIGH",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0004"
+    },
+    {
+      "description": "Repository contains large files (>100MB)",
+      "severity": "MEDIUM",
+      "type": "LARGE_FILES",
+      "complexity": "MEDIUM",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking\\node_modules\\@next\\swc-win32-x64-msvc\\next-swc.win32-x64-msvc.node",
+      "proposed_fix": "Move large files to external storage or use Git LFS",
+      "risk": "MEDIUM",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0005"
+    },
+    {
+      "description": "Project has excessive dependencies (79 prod, 105 dev)",
+      "severity": "MEDIUM",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "complexity": "HIGH",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json",
+      "proposed_fix": "Audit and remove unused dependencies",
+      "risk": "MEDIUM",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0006"
+    },
+    {
+      "description": "Project has excessive dependencies (79 prod, 105 dev)",
+      "risk": "MEDIUM",
+      "complexity": "HIGH",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "severity": "MEDIUM",
+      "proposed_fix": "Audit and remove unused dependencies",
+      "repoId": "banking",
+      "consolidatedId": "FIND-0007"
+    }
+  ],
+  "id": "BATCH-001",
+  "results": [
+    {
+      "id": "FIND-0001",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    },
+    {
+      "id": "FIND-0002",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "status": "applied",
+      "error": null,
+      "action": "Would audit and remove unused dependencies from C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json"
+    },
+    {
+      "id": "FIND-0003",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    },
+    {
+      "id": "FIND-0004",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "status": "applied",
+      "error": null,
+      "action": "Would audit and remove unused dependencies from C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json"
+    },
+    {
+      "id": "FIND-0005",
+      "type": "LARGE_FILES",
+      "status": "applied",
+      "error": null,
+      "action": "Would add large files to .gitignore or configure Git LFS"
+    },
+    {
+      "id": "FIND-0006",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "status": "applied",
+      "error": null,
+      "action": "Would audit and remove unused dependencies from C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json"
+    },
+    {
+      "id": "FIND-0007",
+      "type": "EXCESSIVE_DEPENDENCIES",
+      "status": "applied",
+      "error": null,
+      "action": "Would audit and remove unused dependencies from C:\\Users\\Alexa\\Desktop\\SandBox\\rhixecompany\\Banking/package.json"
+    }
+  ],
+  "startTime": "2026-05-15T11:55:44.361Z",
+  "status": "success",
+  "verification": {
+    "batchId": "BATCH-001",
+    "timestamp": "2026-05-15T11:55:44.363Z",
+    "checks": {
+      "lint": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      },
+      "test": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      },
+      "build": {
+        "status": "skipped",
+        "reason": "No repo context available"
+      }
+    },
+    "overallStatus": "skipped",
+    "note": "Verification requires actual repo access and build environment"
+  }
+}

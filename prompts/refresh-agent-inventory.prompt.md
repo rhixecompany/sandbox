@@ -7,7 +7,7 @@ title: "Refresh Agent Inventory"
 description: >
   Refresh workspace customization inventory and patch stale AGENTS or copilot
   instruction references.
-trigger: refresh-agent-inventory
+trigger: /refresh-agent-inventory
 tags:
   - agents
   - ai-assistant
@@ -20,22 +20,7 @@ tags:
   - inventory
   - audit
 mode: ask
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refresh-agent-inventory.prompt
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refresh-agent-inventory.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refresh-agent-inventory.prompt
 
 ## Goal
 Use when ## Description to accomplish the associated tasks and objectives.
@@ -141,7 +126,3 @@ copilot instruction references.
 
 Templates in `templates/refresh-agent-inventory/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

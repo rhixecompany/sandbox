@@ -18,31 +18,7 @@ tags:
   - planning
   - specification
   - swift
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - swift-mcp-server-generator.prompt
-
-trigger: swift-mcp-server-generator
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - swift-mcp-server-generator.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - swift-mcp-server-generator.prompt
 
 ## Goal
 
@@ -367,7 +343,3 @@ Detailed templates in `templates/swift-mcp-server-generator/`:
 - `servertestsswift_template.md`
 - `tooldefinitionsswift_template.md`
 - `toolhandlersswift_template.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

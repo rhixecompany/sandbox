@@ -17,24 +17,7 @@ tags:
   - workflow
   - hermes
   - codegen
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - generator-orchestrator.prompt
-
-trigger: generator-orchestrator
-
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - generator-orchestrator.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - generator-orchestrator.prompt
 
 ## Description
 
@@ -173,7 +156,3 @@ Detailed templates in `templates/generator-orchestrator/`:
 - `phases.md`
 - `rules.md`
 - `steps.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

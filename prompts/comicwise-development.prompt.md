@@ -19,31 +19,7 @@ tags:
   - drizzle
   - react19
   - development
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comicwise-development.prompt
-
-trigger: comicwise-development
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comicwise-development.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - comicwise-development.prompt
 
 # ComicWise Development Prompt
 
@@ -283,7 +259,3 @@ Detailed templates in `templates/comicwise-development/`:
 - `common_patterns.md`
 - `project_structure.md`
 - `testing_patterns.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

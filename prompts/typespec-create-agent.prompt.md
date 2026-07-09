@@ -19,31 +19,7 @@ tags:
   - m365-copilot
   - declarative-agent
   - agent-development
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-agent.prompt
-
-trigger: typespec-create-agent
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-agent.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - typespec-create-agent.prompt
 
 ## Goal
 
@@ -133,7 +109,3 @@ Templates in `templates/typespec-create-agent/`:
 - `phases.md`
 - `requirements.md`
 - `template_structure.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

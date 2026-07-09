@@ -1,5 +1,5 @@
 ---
-trigger: plan-execute
+trigger: /plan-execute
 name: plan-execute
 title: "Execute Implementation Plan"
 description: >
@@ -29,29 +29,7 @@ skills:
   - subagent-driven-development
   - verification-before-completion
   - writing-plans
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-execute.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-execute.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - plan-execute.prompt
 
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
@@ -123,7 +101,3 @@ Summarise:
 - [ ] No dangling processes or background jobs
 - [ ] All expected outputs exist and are valid
 - [ ] Progress doc written with complete trail
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

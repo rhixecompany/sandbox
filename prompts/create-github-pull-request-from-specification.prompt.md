@@ -26,31 +26,7 @@ tags:
   - markdown
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-pull-request-from-specification.prompt
-
-trigger: create-github-pull-request-from-specification
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-pull-request-from-specification.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-github-pull-request-from-specification.prompt
 
 ## Goal
 
@@ -120,7 +96,3 @@ Use when you need to work on the current workspace or task.
 
 Templates in `templates/create-github-pull-request-from-specification/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

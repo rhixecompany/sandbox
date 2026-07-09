@@ -5,7 +5,7 @@ version: 1.0.0
 name: "Dataverse Python Quickstart Generator"
 title: "Dataverse Python Quickstart Generator"
 description: "Generate Python SDK setup + CRUD + bulk + paging snippets using official patterns."
-trigger: dataverse-python-quickstart-generator
+trigger: /Dataverse Python Quickstart Generator
 tags:
   - audit
   - data
@@ -18,29 +18,7 @@ tags:
   - codegen
   - python
   - dataverse
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-quickstart.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-quickstart.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dataverse-python-quickstart.prompt
 
 You are assisting with Microsoft Dataverse SDK for Python (preview). Generate concise Python snippets that:
 
@@ -50,7 +28,3 @@ You are assisting with Microsoft Dataverse SDK for Python (preview). Generate co
 - Show bulk create and bulk update (broadcast + 1:1)
 - Show retrieve-multiple with paging (top, page_size)
 - Optionally demonstrate file upload to a File column Keep code aligned with official examples and avoid unannounced preview features.
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

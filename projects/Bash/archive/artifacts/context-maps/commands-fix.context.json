@@ -1,0 +1,26 @@
+{
+  "dependencies": [],
+  "expansion_ratio": 12.3,
+  "has_safety_section": true,
+  "md_size_kb": 3.4,
+  "prompt_name": "commands-fix",
+  "skills_required": [
+    "brainstorming",
+    "plans-and-specs",
+    "dispatching-parallel-agents",
+    "systematic-debugging",
+    "simplify"
+  ],
+  "status": "needs_enhancement",
+  "tags": [
+    "hermes",
+    "copilot",
+    "commands",
+    "migration",
+    "debugging",
+    "opencode"
+  ],
+  "title": "Commands Fix - Migrate and Debug OpenCode Commands",
+  "trigger": "/commands-fix",
+  "txt_size_kb": 0.9
+}

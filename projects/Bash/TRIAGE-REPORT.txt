@@ -1,0 +1,467 @@
+========================================================================================================================
+SANDBOX/BASH SCRIPTS — COMPLETE TRIAGE REPORT
+========================================================================================================================
+
+TOTAL SCRIPTS: 177
+
+BREAKDOWN BY TYPE:
+  • .bat       8 scripts
+  • .ps1      70 scripts
+  • .sh       77 scripts
+  • .ts       22 scripts
+
+  • Total Size: 0.46 MB
+  • Total Lines: 14,839
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+SCRIPTS BY DIRECTORY:
+
+
+📁 Banking/ (34 scripts, 89.4KB, 2,860L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✗  Banking/install-agents.sh                                                 597L    18.1KB
+      └─ <3>WSL (2331 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install.sh                                                        221L     8.1KB
+      └─ <3>WSL (2334 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/00-config.sh                                           70L     2.0KB
+      └─ <3>WSL (2337 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/01-utils.sh                                            44L     1.4KB
+      └─ <3>WSL (2340 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/02-paths.sh                                            77L     1.9KB
+      └─ <3>WSL (2343 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/03-deps.sh                                             61L     1.9KB
+      └─ <3>WSL (2346 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/04-registry.sh                                         99L     3.5KB
+      └─ <3>WSL (2349 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/05-selection.sh                                       127L     3.9KB
+      └─ <3>WSL (2352 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/06-modes.sh                                           371L    12.1KB
+      └─ <3>WSL (2355 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/07-preview.sh                                         157L     5.6KB
+      └─ <3>WSL (2358 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/install/lib/08-install.sh                                         297L    10.4KB
+      └─ <3>WSL (2361 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/aggressive-capture.ps1                                    122L     4.5KB
+  ✗  Banking/scripts/branch-compare.sh                                          95L     2.5KB
+      └─ <3>WSL (2364 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Banking/scripts/delete-gone-branches.sh                                    81L     1.5KB
+      └─ <3>WSL (2367 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/diagnose-and-fix-git.ps1                                   66L     2.1KB
+  ✗  Banking/scripts/diagnose-and-fix-git.sh                                    53L     1.3KB
+      └─ <3>WSL (2370 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/opencode-mcp.bat                                           13L     0.4KB
+  ✓  Banking/scripts/opencode-mcp.ps1                                           10L     0.3KB
+  ✗  Banking/scripts/opencode-mcp.sh                                            12L     0.3KB
+      └─ <3>WSL (2373 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/opencode-plugin-repair.bat                                 17L     0.5KB
+  ✓  Banking/scripts/opencode-plugin-repair.ps1                                 27L     0.7KB
+  ✗  Banking/scripts/opencode-plugin-repair.sh                                  10L     0.3KB
+      └─ <3>WSL (2376 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/opencode-plugin-verify.bat                                 22L     0.7KB
+  ✓  Banking/scripts/opencode-plugin-verify.ps1                                 31L     0.8KB
+  ✗  Banking/scripts/opencode-plugin-verify.sh                                  13L     0.3KB
+      └─ <3>WSL (2379 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/orchestrator.bat                                           11L     0.3KB
+  ✓  Banking/scripts/orchestrator.ps1                                           23L     0.5KB
+  ✗  Banking/scripts/orchestrator.sh                                            13L     0.3KB
+      └─ <3>WSL (2382 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/plan-ensure.bat                                            21L     0.4KB
+  ✓  Banking/scripts/plan-ensure.ps1                                            23L     0.5KB
+  ✗  Banking/scripts/plan-ensure.sh                                             12L     0.2KB
+      └─ <3>WSL (2385 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Banking/scripts/run-verify-and-validate.ps1                                28L     1.0KB
+  ✓  Banking/scripts/verify-agents.ps1                                          23L     0.5KB
+  ✗  Banking/scripts/verify-agents.sh                                           13L     0.3KB
+      └─ <3>WSL (2388 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 Bash/ (7 scripts, 18.6KB, 739L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✗  Bash/finalize-migration.sh                                                 42L     1.2KB
+      └─ <3>WSL (2391 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Bash/mark-dead-code.sh                                                     57L     1.5KB
+      └─ <3>WSL (2394 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  Bash/migrate-script.sh                                                    111L     3.0KB
+      └─ <3>WSL (2397 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  Bash/src/core/ast-transformer.ts                                          180L     4.5KB
+  ✓  Bash/src/core/behavior-test.ts                                            113L     2.9KB
+  ✓  Bash/src/core/dry-run.ts                                                  123L     2.8KB
+  ✓  Bash/src/core/script-runner.ts                                            113L     2.8KB
+
+📁 archive/ (51 scripts, 34.4KB, 608L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  archive/skills-commit-batches/skills-commit-batch-1.ps1                    20L     0.8KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-1.sh                     23L     0.9KB
+      └─ <3>WSL (2400 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-10.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-10.sh                    13L     0.7KB
+      └─ <3>WSL (2403 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-11.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-11.sh                    13L     0.7KB
+      └─ <3>WSL (2406 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-12.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-12.sh                    13L     0.6KB
+      └─ <3>WSL (2409 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-13.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-13.sh                    13L     0.6KB
+      └─ <3>WSL (2412 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-14.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-14.sh                    13L     0.6KB
+      └─ <3>WSL (2415 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-15.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-15.sh                    13L     0.7KB
+      └─ <3>WSL (2418 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-16.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-16.sh                    13L     0.7KB
+      └─ <3>WSL (2421 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-17.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-17.sh                    13L     0.7KB
+      └─ <3>WSL (2424 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-18.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-18.sh                    13L     0.7KB
+      └─ <3>WSL (2427 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-19.ps1                   10L     0.8KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-19.sh                    13L     0.8KB
+      └─ <3>WSL (2430 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-2.ps1                    10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-2.sh                     13L     0.6KB
+      └─ <3>WSL (2433 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-20.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-20.sh                    13L     0.7KB
+      └─ <3>WSL (2436 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-21.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-21.sh                    13L     0.6KB
+      └─ <3>WSL (2439 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-22.ps1                   10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-22.sh                    13L     0.7KB
+      └─ <3>WSL (2442 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-23.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-23.sh                    13L     0.6KB
+      └─ <3>WSL (2445 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-24.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-24.sh                    13L     0.6KB
+      └─ <3>WSL (2448 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-25.ps1                   10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-25.sh                    13L     0.6KB
+      └─ <3>WSL (2451 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  archive/skills-commit-batches/skills-commit-batch-26.sh                    13L     0.7KB
+      └─ <3>WSL (2454 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-3.ps1                    10L     0.6KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-3.sh                     13L     0.6KB
+      └─ <3>WSL (2457 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-4.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-4.sh                     13L     0.7KB
+      └─ <3>WSL (2460 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-5.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-5.sh                     13L     0.7KB
+      └─ <3>WSL (2463 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-6.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-6.sh                     13L     0.8KB
+      └─ <3>WSL (2466 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-7.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-7.sh                     13L     0.7KB
+      └─ <3>WSL (2469 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-8.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-8.sh                     13L     0.7KB
+      └─ <3>WSL (2472 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  archive/skills-commit-batches/skills-commit-batch-9.ps1                    10L     0.7KB
+  ✗  archive/skills-commit-batches/skills-commit-batch-9.sh                     13L     0.7KB
+      └─ <3>WSL (2475 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 comicwise/ (10 scripts, 20.8KB, 731L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  comicwise/cleanup.ps1                                                      47L     1.5KB
+  ✗  comicwise/cleanup.sh                                                       43L     1.3KB
+      └─ <3>WSL (2484 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  comicwise/dev.ps1                                                          29L     0.7KB
+  ✗  comicwise/dev.sh                                                           34L     0.8KB
+      └─ <3>WSL (2487 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  comicwise/install-vscode-extensions.ps1                                   180L     4.9KB
+  ✗  comicwise/install-vscode-extensions.sh                                    205L     5.1KB
+      └─ <3>WSL (2490 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  comicwise/quality-gate.ps1                                                 62L     2.3KB
+  ✗  comicwise/quality-gate.sh                                                  48L     1.7KB
+      └─ <3>WSL (2493 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  comicwise/setup-dev.ps1                                                    42L     1.4KB
+  ✗  comicwise/setup-dev.sh                                                     41L     1.2KB
+      └─ <3>WSL (2496 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 ecom/ (1 scripts, 0.4KB, 19L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✗  ecom/install.sh                                                            19L     0.4KB
+      └─ <3>WSL (2499 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 lib/ (2 scripts, 0.8KB, 20L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  lib/log-rotate.ps1                                                          8L     0.3KB
+  ✗  lib/log-rotate.sh                                                          12L     0.5KB
+      └─ <3>WSL (2508 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 rhixe_scans/ (7 scripts, 4.4KB, 141L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✗  rhixe_scans/docker-clean.sh                                                17L     0.3KB
+      └─ <3>WSL (2511 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/git-setup.sh                                                   42L     1.0KB
+      └─ <3>WSL (2514 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/install_chrome.sh                                              15L     0.5KB
+      └─ <3>WSL (2517 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/install_firefox.sh                                             20L     1.0KB
+      └─ <3>WSL (2520 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/prod-dev.sh                                                    15L     0.3KB
+      └─ <3>WSL (2523 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/prod.sh                                                        13L     0.3KB
+      └─ <3>WSL (2526 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  rhixe_scans/setup.sh                                                       19L     0.9KB
+      └─ <3>WSL (2529 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+📁 root/ (22 scripts, 61.6KB, 1,662L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  .lintstagedrc.ts                                                            9L     0.3KB
+  ✓  .prettierrc.ts                                                             83L     2.1KB
+  ✓  cache-clean.bat                                                             5L     0.1KB
+  ✓  cache-clean.ps1                                                             4L     0.2KB
+  ✗  cache-clean.sh                                                              5L     0.2KB
+      └─ <3>WSL (2478 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  clean-dependency-folders.bat                                                5L     0.2KB
+  ✓  clean-dependency-folders.ps1                                                4L     0.2KB
+  ✗  clean_dependency_folders.sh                                                 5L     0.2KB
+      └─ <3>WSL (2481 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  create_skills.ps1                                                          68L     2.0KB
+  ✓  disk-analysis.ps1                                                         464L    15.0KB
+  ✗  execute-real.sh                                                           207L    12.5KB
+      └─ <3>WSL (2502 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  git-commit-batches.ps1                                                      4L     0.2KB
+  ✗  git-commit-batches.sh                                                      14L     0.4KB
+      └─ <3>WSL (2505 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  root/analyze-scripts.sh                                                   255L     8.5KB
+      └─ <3>WSL (2532 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  root/sandbox-runtime-commands.ps1                                          28L     0.9KB
+  ✗  test-all.sh                                                               111L     5.1KB
+      └─ <3>WSL (2553 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  types.d.ts                                                                  9L     0.3KB
+  ✓  upgrade-native.ps1                                                        298L    10.5KB
+  ✓  upgrade.bat                                                                 5L     0.2KB
+  ✓  upgrade.ps1                                                                 4L     0.2KB
+  ✗  upgrade.sh                                                                  5L     0.2KB
+      └─ <3>WSL (2559 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  verify_cleanup.ps1                                                         70L     2.3KB
+
+📁 scripts/ (27 scripts, 157.7KB, 5,080L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  scripts/lib/clone-utils.ps1                                               136L     4.0KB
+  ✓  scripts/lib/dependency-scanner.ps1                                        269L     7.7KB
+  ✓  scripts/lib/git-operations.ps1                                            194L     5.4KB
+  ✓  scripts/lib/github-mcp.ps1                                                115L     2.9KB
+  ✓  scripts/lib/package-manager-scanners.ps1                                  404L    11.1KB
+  ✓  scripts/lib/package-managers.ps1                                          396L    10.3KB
+  ✓  scripts/lib/repo-analyzer.ps1                                             149L     3.5KB
+  ✓  scripts/lib/triage-utils.ps1                                              152L     4.2KB
+  ✓  scripts/lib/validation.ps1                                                 70L     1.6KB
+  ✓  scripts/orchestrator.ps1                                                  243L     7.4KB
+  ✓  scripts/phase-1-deep-triage.ps1                                           198L     7.4KB
+  ✗  scripts/phase-1-deep-triage.sh                                             84L     2.6KB
+      └─ <3>WSL (2535 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  scripts/phase-1-discovery.ps1                                             259L     7.4KB
+  ✓  scripts/phase-2-clone-local.ps1                                           163L     4.9KB
+  ✓  scripts/phase-2-clone.ps1                                                 142L     4.4KB
+  ✓  scripts/phase-2-light-inventory.ps1                                       130L     4.3KB
+  ✗  scripts/phase-2-light-inventory.sh                                         69L     2.2KB
+      └─ <3>WSL (2538 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  scripts/phase-3-triage.ps1                                                159L     5.6KB
+  ✓  scripts/phase-4-debug.ps1                                                 325L    11.9KB
+  ✓  scripts/phase-5-remediation.ps1                                           159L     7.1KB
+  ✗  scripts/phase-5-verify-install.sh                                         295L     8.4KB
+      └─ <3>WSL (2541 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  scripts/phase-6-cross-ref.ps1                                             190L     7.9KB
+  ✗  scripts/phase-6-cross-ref.sh                                              133L     4.9KB
+      └─ <3>WSL (2544 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  scripts/run-audit.sh                                                      111L     3.3KB
+      └─ <3>WSL (2547 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗  scripts/score-docs.sh                                                     156L     5.4KB
+      └─ <3>WSL (2550 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✓  scripts/test-all-scanners.ps1                                             121L     4.0KB
+  ✓  scripts/test-single-repo.ps1                                              258L     8.1KB
+
+📁 src/ (15 scripts, 76.0KB, 2,914L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✓  src/cache-clean.ts                                                        562L    15.6KB
+  ✓  src/clean-dep.ts                                                          300L     8.1KB
+  ✓  src/core/ast-transformer.ts                                               343L     9.2KB
+  ✓  src/core/behavior-test.ts                                                 358L     8.9KB
+  ✓  src/core/dry-run.ts                                                       372L     9.2KB
+  ✓  src/core/script-runner.ts                                                 375L     8.7KB
+  ✓  src/git-commit-batches.ts                                                 167L     4.5KB
+  ✓  src/lib/cli.ts                                                             42L     1.0KB
+  ✓  src/lib/colors.ts                                                          22L     0.7KB
+  ✓  src/lib/errors.ts                                                          39L     0.8KB
+  ✓  src/lib/logging.ts                                                         68L     1.6KB
+  ✓  src/migration/__tests__/ts-module-template.test.ts                         14L     0.5KB
+  ✓  src/migration/templates/ts-module-template.ts                              28L     0.9KB
+  ✓  src/migration/ts-morph-helper.ts                                           39L     1.2KB
+  ✓  src/upgrade.ts                                                            185L     5.2KB
+
+📁 tests/ (1 scripts, 2.0KB, 65L)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ✗  tests/verify-dryrun.sh                                                     65L     2.0KB
+      └─ <3>WSL (2556 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+ISSUES FOUND:
+
+  ✗ Banking/install-agents.sh
+    └─ Syntax Error: <3>WSL (2331 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install.sh
+    └─ Syntax Error: <3>WSL (2334 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/00-config.sh
+    └─ Syntax Error: <3>WSL (2337 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/01-utils.sh
+    └─ Syntax Error: <3>WSL (2340 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/02-paths.sh
+    └─ Syntax Error: <3>WSL (2343 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/03-deps.sh
+    └─ Syntax Error: <3>WSL (2346 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/04-registry.sh
+    └─ Syntax Error: <3>WSL (2349 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/05-selection.sh
+    └─ Syntax Error: <3>WSL (2352 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/06-modes.sh
+    └─ Syntax Error: <3>WSL (2355 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/07-preview.sh
+    └─ Syntax Error: <3>WSL (2358 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/install/lib/08-install.sh
+    └─ Syntax Error: <3>WSL (2361 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/branch-compare.sh
+    └─ Syntax Error: <3>WSL (2364 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/delete-gone-branches.sh
+    └─ Syntax Error: <3>WSL (2367 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/diagnose-and-fix-git.sh
+    └─ Syntax Error: <3>WSL (2370 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/opencode-mcp.sh
+    └─ Syntax Error: <3>WSL (2373 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/opencode-plugin-repair.sh
+    └─ Syntax Error: <3>WSL (2376 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/opencode-plugin-verify.sh
+    └─ Syntax Error: <3>WSL (2379 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/orchestrator.sh
+    └─ Syntax Error: <3>WSL (2382 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/plan-ensure.sh
+    └─ Syntax Error: <3>WSL (2385 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Banking/scripts/verify-agents.sh
+    └─ Syntax Error: <3>WSL (2388 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Bash/finalize-migration.sh
+    └─ Syntax Error: <3>WSL (2391 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Bash/mark-dead-code.sh
+    └─ Syntax Error: <3>WSL (2394 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ Bash/migrate-script.sh
+    └─ Syntax Error: <3>WSL (2397 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-1.sh
+    └─ Syntax Error: <3>WSL (2400 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-10.sh
+    └─ Syntax Error: <3>WSL (2403 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-11.sh
+    └─ Syntax Error: <3>WSL (2406 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-12.sh
+    └─ Syntax Error: <3>WSL (2409 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-13.sh
+    └─ Syntax Error: <3>WSL (2412 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-14.sh
+    └─ Syntax Error: <3>WSL (2415 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-15.sh
+    └─ Syntax Error: <3>WSL (2418 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-16.sh
+    └─ Syntax Error: <3>WSL (2421 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-17.sh
+    └─ Syntax Error: <3>WSL (2424 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-18.sh
+    └─ Syntax Error: <3>WSL (2427 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-19.sh
+    └─ Syntax Error: <3>WSL (2430 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-2.sh
+    └─ Syntax Error: <3>WSL (2433 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-20.sh
+    └─ Syntax Error: <3>WSL (2436 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-21.sh
+    └─ Syntax Error: <3>WSL (2439 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-22.sh
+    └─ Syntax Error: <3>WSL (2442 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-23.sh
+    └─ Syntax Error: <3>WSL (2445 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-24.sh
+    └─ Syntax Error: <3>WSL (2448 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-25.sh
+    └─ Syntax Error: <3>WSL (2451 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-26.sh
+    └─ Syntax Error: <3>WSL (2454 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-3.sh
+    └─ Syntax Error: <3>WSL (2457 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-4.sh
+    └─ Syntax Error: <3>WSL (2460 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-5.sh
+    └─ Syntax Error: <3>WSL (2463 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-6.sh
+    └─ Syntax Error: <3>WSL (2466 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-7.sh
+    └─ Syntax Error: <3>WSL (2469 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-8.sh
+    └─ Syntax Error: <3>WSL (2472 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ archive/skills-commit-batches/skills-commit-batch-9.sh
+    └─ Syntax Error: <3>WSL (2475 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ cache-clean.sh
+    └─ Syntax Error: <3>WSL (2478 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ clean_dependency_folders.sh
+    └─ Syntax Error: <3>WSL (2481 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ comicwise/cleanup.sh
+    └─ Syntax Error: <3>WSL (2484 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ comicwise/dev.sh
+    └─ Syntax Error: <3>WSL (2487 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ comicwise/install-vscode-extensions.sh
+    └─ Syntax Error: <3>WSL (2490 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ comicwise/quality-gate.sh
+    └─ Syntax Error: <3>WSL (2493 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ comicwise/setup-dev.sh
+    └─ Syntax Error: <3>WSL (2496 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ ecom/install.sh
+    └─ Syntax Error: <3>WSL (2499 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ execute-real.sh
+    └─ Syntax Error: <3>WSL (2502 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ git-commit-batches.sh
+    └─ Syntax Error: <3>WSL (2505 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ lib/log-rotate.sh
+    └─ Syntax Error: <3>WSL (2508 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/docker-clean.sh
+    └─ Syntax Error: <3>WSL (2511 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/git-setup.sh
+    └─ Syntax Error: <3>WSL (2514 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/install_chrome.sh
+    └─ Syntax Error: <3>WSL (2517 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/install_firefox.sh
+    └─ Syntax Error: <3>WSL (2520 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/prod-dev.sh
+    └─ Syntax Error: <3>WSL (2523 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/prod.sh
+    └─ Syntax Error: <3>WSL (2526 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ rhixe_scans/setup.sh
+    └─ Syntax Error: <3>WSL (2529 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ root/analyze-scripts.sh
+    └─ Syntax Error: <3>WSL (2532 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/phase-1-deep-triage.sh
+    └─ Syntax Error: <3>WSL (2535 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/phase-2-light-inventory.sh
+    └─ Syntax Error: <3>WSL (2538 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/phase-5-verify-install.sh
+    └─ Syntax Error: <3>WSL (2541 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/phase-6-cross-ref.sh
+    └─ Syntax Error: <3>WSL (2544 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/run-audit.sh
+    └─ Syntax Error: <3>WSL (2547 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ scripts/score-docs.sh
+    └─ Syntax Error: <3>WSL (2550 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ test-all.sh
+    └─ Syntax Error: <3>WSL (2553 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ tests/verify-dryrun.sh
+    └─ Syntax Error: <3>WSL (2556 - Relay) ERROR: CreateProcessCommon:818: execvp
+  ✗ upgrade.sh
+    └─ Syntax Error: <3>WSL (2559 - Relay) ERROR: CreateProcessCommon:818: execvp
+
+========================================================================================================================

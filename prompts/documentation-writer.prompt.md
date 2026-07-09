@@ -18,31 +18,7 @@ tags:
   - planning
   - security
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - documentation-writer.prompt
-
-trigger: documentation-writer
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - documentation-writer.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - documentation-writer.prompt
 
 ## Goal
 
@@ -131,7 +107,3 @@ You will follow this process for every documentation request:
 
 Templates in `templates/documentation-writer/`:
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

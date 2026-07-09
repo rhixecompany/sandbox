@@ -18,31 +18,7 @@ tags:
   - linux
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-arch.prompt
-
-trigger: breakdown-epic-arch
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-arch.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-epic-arch.prompt
 
 ## Goal
 
@@ -126,7 +102,3 @@ Act as a Senior Software Architect. Your task is to take an Epic PRD and create 
 Templates in `templates/breakdown-epic-arch/`:
 - `output_format.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

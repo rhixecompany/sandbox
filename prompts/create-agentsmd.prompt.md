@@ -18,31 +18,7 @@ tags:
   - markdown
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-agentsmd.prompt
-
-trigger: create-agentsmd
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-agentsmd.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-agentsmd.prompt
 
 ## Goal
 
@@ -257,7 +233,3 @@ When creating the AGENTS.md file, prioritize clarity, completeness, and actionab
 
 Detailed templates in `templates/create-agentsmd/`:
 - `file_structure_and_content_gui.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

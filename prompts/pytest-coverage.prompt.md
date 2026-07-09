@@ -15,31 +15,7 @@ tags:
   - planning
   - specification
   - testing
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - pytest-coverage.prompt
-
-trigger: pytest-coverage
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - pytest-coverage.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - pytest-coverage.prompt
 
 ## Goal
 
@@ -92,7 +68,3 @@ Use when you need to work on the current workspace or task.
 Templates in `templates/pytest-coverage/`:
 - `legacy_prompt_details.md`
 - `phases.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

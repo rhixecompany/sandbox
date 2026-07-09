@@ -1,0 +1,27 @@
+{
+  "github": {
+    "orgs": [
+      {
+        "name": "rhixecompany",
+        "expected_repos": 8
+      },
+      {
+        "name": "Rhixe-company",
+        "expected_repos": 8
+      }
+    ],
+    "mcp_server_url": "http://localhost:3000",
+    "api_timeout_seconds": 30,
+    "repo_accessibility_timeout_seconds": 10
+  },
+  "output": {
+    "report_file": "REPO_AUDIT/DISCOVERY_REPORT.json",
+    "pretty_print": true
+  },
+  "validation": {
+    "require_description": false,
+    "require_language": false,
+    "check_accessibility": true,
+    "fetch_issue_counts": true
+  }
+}

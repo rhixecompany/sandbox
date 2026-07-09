@@ -24,31 +24,7 @@ tags:
   - refactoring
   - security
   - typescript
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev.prompt
-
-trigger: dev
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev.prompt
 
 ## Phase 1
 
@@ -71,7 +47,3 @@ metadata:
 
 Templates in `templates/dev/`:
 - `phase_1.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

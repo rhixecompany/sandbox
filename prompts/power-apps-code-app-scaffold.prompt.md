@@ -22,31 +22,7 @@ tags:
   - planning
   - power-platform
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-apps-code-app-scaffold.prompt
-
-trigger: power-apps-code-app-scaffold
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-apps-code-app-scaffold.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-apps-code-app-scaffold.prompt
 
 # Power Apps Code Apps Project Scaffolding
 
@@ -87,7 +63,3 @@ Ensure the generated project follows Microsoft's official Power Apps Code Apps d
 Detailed templates in `templates/power-apps-code-app-scaffold/`:
 - `implementation_guidelines.md`
 - `task.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

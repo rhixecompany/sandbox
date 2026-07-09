@@ -25,31 +25,7 @@ tags:
   - javascript
   - python
   - react
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - folder-structure-blueprint-generator.prompt
-
-trigger: folder-structure-blueprint-generator
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - folder-structure-blueprint-generator.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - folder-structure-blueprint-generator.prompt
 
 ## Goal
 
@@ -116,7 +92,3 @@ Use when you need to work on the current workspace or task.
 Detailed templates in `templates/folder-structure-blueprint-generator/`:
 - `configuration_variables.md`
 - `generated_prompt.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

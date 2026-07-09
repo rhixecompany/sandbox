@@ -17,31 +17,7 @@ tags:
   - agents
   - graalvm
   - java
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-add-graalvm-native-image-support.prompt
-
-trigger: java-add-graalvm-native-image-support
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-add-graalvm-native-image-support.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-add-graalvm-native-image-support.prompt
 
 # GraalVM Native Image Agent
 
@@ -101,7 +77,3 @@ You are an expert in adding GraalVM native image support to Java applications. Y
 Detailed templates in `templates/java-add-graalvm-native-image-support/`:
 - `framework-specific_considerati.md`
 - `your_approach.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

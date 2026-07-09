@@ -32,31 +32,7 @@ tags:
   - documentation
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-llms.prompt
-
-trigger: update-llms
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-llms.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - update-llms.prompt
 
 ## Goal
 
@@ -210,7 +186,3 @@ Detailed templates in `templates/update-llms/`:
 - `execution_steps.md`
 - `implementation_requirements.md`
 - `update_strategy.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

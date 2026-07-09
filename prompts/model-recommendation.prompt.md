@@ -17,31 +17,7 @@ tags:
   - documentation
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - model-recommendation.prompt
-
-trigger: model-recommendation
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - model-recommendation.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - model-recommendation.prompt
 
 ## Goal
 
@@ -368,7 +344,3 @@ Detailed section templates in `templates/model-recommendation/`:
 - `model_recommendation.md`
 - `quality_assurance.md`
 - `workflow.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

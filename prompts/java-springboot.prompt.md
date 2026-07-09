@@ -22,31 +22,7 @@ tags:
   - java
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-springboot.prompt
-
-trigger: java-springboot
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-springboot.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - java-springboot.prompt
 
 # Spring Boot Best Practices
 
@@ -122,7 +98,3 @@ Templates in `templates/java-springboot/`:
 - `service_layer.md`
 - `testing.md`
 - `web_layer_controllers.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

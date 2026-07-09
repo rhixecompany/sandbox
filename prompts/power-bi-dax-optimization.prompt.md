@@ -20,31 +20,7 @@ tags:
   - planning
   - powerbi
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-dax-optimization.prompt
-
-trigger: power-bi-dax-optimization
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-dax-optimization.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-dax-optimization.prompt
 
 # Power BI DAX Formula Optimizer
 
@@ -110,7 +86,3 @@ Templates in `templates/power-bi-dax-optimization/`:
 - `example_output_format.md`
 - `optimization_process.md`
 - `request_instructions.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

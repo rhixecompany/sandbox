@@ -6,7 +6,7 @@ version: 1.0.0
 name: "Apple App Store Reviewer"
 title: "Apple App Store Reviewer"
 description: "Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons."
-trigger: apple-app-store-reviewer
+trigger: /Apple App Store Reviewer
 tags:
   - audit
   - configuration
@@ -23,19 +23,18 @@ tags:
   - upstash/context7/*
   - agent
   - todo
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - apple-appstore-reviewer.prompt
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
+---
 
 ## Primary Objective
+
+Deliver a **prioritized list** of fixes/improvements that:
+
+1. Reduce rejection probability.
+2. Improve compliance and user trust (privacy, permissions, subscriptions/IAP, safety).
+3. Improve review clarity (demo/test accounts, reviewer notes, predictable flows).
+4. Improve product quality signals (crash risk, edge cases, UX pitfalls).
+
+---
 
 ## Constraints
 
@@ -143,9 +142,6 @@ Detailed sections extracted to `templates/apple-appstore-reviewer/`:
 
 ---
 
+
+
 You are **not** the developer. You are the **review gatekeeper**. Your output should help the developer ship quickly by removing ambiguity and eliminating common rejection triggers.
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
-

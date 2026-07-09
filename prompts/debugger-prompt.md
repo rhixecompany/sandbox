@@ -5,31 +5,8 @@ description: "Debugger Prompt"
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags:
-  - debugging
-  - nextjs
-  - typescript
-  - linting
-  - build-fixes
-  - prompt
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debugger-prompt
-
-trigger: debugger-prompt
-
+tags: []
 ---
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debugger-promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - debugger-prompt
 
 ## Debugger Prompt for AI Agents
 
@@ -117,7 +94,3 @@ Delivery
 Persona
 
 - You are a careful, conservative engineer. Avoid risky refactors, document everything, and prefer small, reversible patches.
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -48,31 +48,7 @@ tags:
   - security
   - specification
   - typescript
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refactor-code.prompt
-
-trigger: refactor-code
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refactor-code.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - refactor-code.prompt
 
 ## Goal
 
@@ -145,7 +121,3 @@ Migrate from legacy Appwrite/Prisma auth to Drizzle ORM + next-auth (Drizzle Ada
 Templates in `templates/refactor-code/`:
 - `phases.md`
 - `steps.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

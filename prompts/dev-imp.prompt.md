@@ -26,31 +26,7 @@ toolsets:
   - terminal
   - file
   - web
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-imp.prompt
-
-trigger: dev-imp
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-imp.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dev-imp.prompt
 
 # Development Implementation Manager
 
@@ -255,7 +231,3 @@ Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
 - [ ] Fixes re-verified (no regressions)
 - [ ] `dev-imp-report.md` written at PWD
 - [ ] Report is crispy format (tables, emoji, scannable)
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

@@ -4,7 +4,7 @@ author: Hermes Agent
 version: 1.0.0
 name: skills-debug-prompt
 title: Skills Debug and Remediation Execution
-trigger: skills-debug
+trigger: /skills-debug
 description: >
   Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
   Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade
@@ -22,29 +22,7 @@ tags:
   - skills
   - remediation
   - fix
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - skills-debug-prompt.prompt
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - skills-debug-prompt.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - skills-debug-prompt.prompt
 
 ## Goal
 
@@ -77,7 +55,3 @@ Target: F=0, C≤5 after completion.
 
 Templates in `templates/skills-debug-prompt/`:
 - `execution_steps.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

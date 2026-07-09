@@ -1,0 +1,81 @@
+{
+  "$schema": "./report-schemas.json",
+  "batch_assignment_guidelines": {
+    "complexity_low": "Simple repos, few dependencies, well-maintained",
+    "complexity_medium": "Moderate dependencies, some complexity, standard maintenance",
+    "complexity_high": "Complex repos, many dependencies, legacy code",
+    "risk_low": "Few or no vulnerabilities, healthy codebase",
+    "risk_medium": "Moderate vulnerabilities, some issues",
+    "risk_high": "Critical vulnerabilities, abandoned, or known exploits",
+    "status_pending": "Waiting to be processed",
+    "status_in_progress": "Currently being analyzed",
+    "status_completed": "Analysis finished successfully",
+    "status_failed": "Analysis failed (check logs)"
+  },
+  "description": "Template for BATCHES.json output - shows batch grouping structure with metadata",
+  "example": {
+    "batches": [
+      {
+        "id": "batch-001",
+        "complexity": "low",
+        "risk": "low",
+        "findings": [
+          "No vulnerabilities detected",
+          "All dependencies up to date",
+          "Clean git history"
+        ],
+        "status": "completed",
+        "created_at": "2026-05-15T10:00:00Z"
+      },
+      {
+        "id": "batch-002",
+        "complexity": "medium",
+        "risk": "low",
+        "findings": [
+          "3 medium-severity vulnerabilities found",
+          "2 outdated dependencies detected",
+          "Minor code quality issues"
+        ],
+        "status": "completed",
+        "created_at": "2026-05-15T10:30:00Z"
+      },
+      {
+        "id": "batch-003",
+        "complexity": "high",
+        "risk": "medium",
+        "findings": [
+          "15 vulnerabilities detected (5 high severity)",
+          "Multiple outdated dependencies with known exploits",
+          "28 code quality issues",
+          "Stale repository (180 days since last commit)"
+        ],
+        "status": "in_progress",
+        "created_at": "2026-05-15T11:00:00Z"
+      },
+      {
+        "id": "batch-004",
+        "complexity": "high",
+        "risk": "high",
+        "findings": [
+          "31 vulnerabilities detected (12 high severity)",
+          "Critical dependencies with known CVEs",
+          "42 code quality issues",
+          "Abandoned repository (730 days since last commit)",
+          "No recent maintenance"
+        ],
+        "status": "pending",
+        "created_at": "2026-05-15T11:30:00Z"
+      }
+    ]
+  },
+  "field_descriptions": {
+    "batches": "Array of batch group objects",
+    "batch.id": "Unique batch identifier (e.g., batch-001, batch-002)",
+    "batch.complexity": "Complexity level: low, medium, or high",
+    "batch.risk": "Risk level: low, medium, or high",
+    "batch.findings": "Array of findings/issues discovered in this batch",
+    "batch.status": "Current status: pending, in_progress, completed, or failed",
+    "batch.created_at": "ISO 8601 datetime when batch was created"
+  },
+  "title": "BATCHES Template"
+}

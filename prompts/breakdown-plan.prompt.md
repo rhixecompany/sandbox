@@ -21,31 +21,7 @@ tags:
   - linux
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-plan.prompt
-
-trigger: breakdown-plan
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-plan.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - breakdown-plan.prompt
 
 ## Goal
 
@@ -378,7 +354,3 @@ Detailed templates in `templates/breakdown-plan/`:
 - `estimate.md`
 - `output_format.md`
 - `sprint_n_goal.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

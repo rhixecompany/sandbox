@@ -16,31 +16,7 @@ tags:
   - architecture
   - csharp
   - dotnet
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-design-pattern-review.prompt
-
-trigger: dotnet-design-pattern-review
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-design-pattern-review.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-design-pattern-review.prompt
 
 # .NET/C# Design Pattern Review
 
@@ -87,7 +63,3 @@ Templates in `templates/dotnet-design-pattern-review/`:
 - `improvement_focus_areas.md`
 - `required_design_patterns.md`
 - `review_checklist.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

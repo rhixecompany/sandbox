@@ -21,31 +21,7 @@ tags:
   - linux
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-best-practices.prompt
-
-trigger: dotnet-best-practices
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-best-practices.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - dotnet-best-practices.prompt
 
 # .NET/C# Best Practices
 
@@ -143,7 +119,3 @@ Templates in `templates/dotnet-best-practices/`:
 - `resource_management__loca.md`
 - `semantic_kernel__ai_integ.md`
 - `testing_standards.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

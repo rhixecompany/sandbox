@@ -17,31 +17,7 @@ tags:
   - planning
   - powerbi
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-report-design-consultation.prompt
-
-trigger: power-bi-report-design-consultation
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-report-design-consultation.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - power-bi-report-design-consultation.prompt
 
 # Power BI Report Visualization Designer
 
@@ -82,7 +58,3 @@ Detailed templates in `templates/power-bi-report-design-consultation/`:
 - `design_review_and_validation.md`
 - `visualization_design_process.md`
 - `visualization_recommendations_.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.

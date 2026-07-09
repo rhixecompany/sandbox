@@ -19,31 +19,7 @@ tags:
   - markdown
   - planning
   - specification
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-tldr-page.prompt
-
-trigger: create-tldr-page
-
 ---
-
-
-## Actions
-
-- Follow the prompt workflow as specified.
-- Produce the requested deliverable(s) in the exact structure requested.
-- Validate output against acceptance criteria before finishing.
-metadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-tldr-page.promptmetadata:
-  hermes:
-    related_skills: []
-    tags:
-    - create-tldr-page.prompt
 
 ## Goal
 
@@ -175,7 +151,3 @@ Detailed templates in `templates/create-tldr-page/`:
 - `examples.md`
 - `output_formatting_rules.md`
 - `usage.md`
-
-## Hooks
-
-- Wire this prompt into a `only then` execution chain when appropriate.
