@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "execute-acpx-agents-feature-specs"
-title: "Acpx Agents Feature Specs"
-description: "Execute the Acpx Agents Feature Specs plan."
+name: execute-acpx-agents-feature-specs
+title: Acpx Agents Feature Specs
+description: Execute the Acpx Agents Feature Specs plan.
 trigger: /execute-acpx-agents-feature-specs
 tags:
   - agents
@@ -14,11 +16,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
-  - plan
-  - execute
----
 
+
+---
 ## Goal
 Execute the plan at `.hermes/plans/acpx-agents-feature-specs.md`.
 

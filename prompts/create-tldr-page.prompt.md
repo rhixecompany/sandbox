@@ -1,11 +1,16 @@
 ---
-toolsets: ["edit/createFile", "web/fetch"]
+
+
+toolsets:
+- edit/createFile
+- web/fetch
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create TLDR Page
 name: create-tldr-page
-description: "Create a tldr page from documentation URLs and command examples, requiring both URL and command name."
+description: Create a tldr page from documentation URLs and command examples, requiring
+  both URL and command name.
 tags:
   - documentation
   - frontend
@@ -14,13 +19,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - generator
-  - markdown
-  - planning
-  - specification
----
+trigger: /create-tldr-page
 
+
+---
 ## Goal
 
 Create a tldr page from documentation URLs and command examples, requiring both URL and command name.

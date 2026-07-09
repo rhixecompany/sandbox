@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Task1
 name: dev
-description: "The purpose of the prompt is to get my codebase optimized and refactored"
+description: The purpose of the prompt is to get my codebase optimized and refactored
 tags:
   - configuration
   - debugging
@@ -14,18 +16,10 @@ tags:
   - refactoring
   - testing
   - typescript
-  - authentication
-  - ci-cd
-  - debugging
-  - github
-  - nextjs
-  - performance
-  - playwright
-  - refactoring
-  - security
-  - typescript
----
+trigger: /dev
 
+
+---
 ## Phase 1
 
 # Task1

@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "typescript"
-title: "TypeScript & Next.js"
-description: "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards."
+name: typescript
+title: TypeScript & Next.js
+description: Comprehensive TypeScript and Next.js code quality prompt aligned to repository
+  standards.
 trigger: /typescript
 tags:
   - architecture
@@ -16,13 +19,9 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - typescript
-  - nextjs
-  - code-quality
-  - linting
----
 
+
+---
 ## Goal
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 

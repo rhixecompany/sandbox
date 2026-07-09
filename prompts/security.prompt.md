@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "security"
-title: "Security Review"
-description: "Comprehensive prompt for security review, vulnerability assessment, and secure coding practices."
+name: security
+title: Security Review
+description: Comprehensive prompt for security review, vulnerability assessment, and
+  secure coding practices.
 trigger: /security
 tags:
   - api
@@ -17,12 +20,9 @@ tags:
   - security
   - skills
   - typescript
-  - hermes
-  - security
-  - review
-  - code-quality
----
 
+
+---
 ## Goal
 Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 

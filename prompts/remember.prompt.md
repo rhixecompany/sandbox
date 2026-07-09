@@ -1,23 +1,23 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Memory Keeper
 name: remember
-description: "Transforms lessons learned into domain-organized memory instructions (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope is `global` (default), `user`, `workspace`, or `ws`."
+description: 'Transforms lessons learned into domain-organized memory instructions
+  (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope
+  is `global` (default), `user`, `workspace`, or `ws`.'
 tags:
   - ml
   - prompts
   - specification
   - typescript
-  - database
-  - documentation
-  - drizzle
-  - memory-management
-  - planning
-  - specification
----
+trigger: /remember
 
+
+---
 ## Goal
 
 Transforms lessons learned into domain-organized memory instructions (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope is `global` (default), `user`, `workspace`, or `ws`.

@@ -1,41 +1,46 @@
 ---
+
+
 trigger: /plan-audit
 name: plan-audit
-title: "Audit Agent Stack"
-description: >
-  Audit the full agent stack across Hermes, GitHub Copilot, and shared
-  infrastructure. Inventory agents, plugins, MCP tools, custom agents,
-  instructions, and prompt files. Report gaps, duplicates, and
-  registration issues.
+title: Audit Agent Stack
+description: 'Audit the full agent stack across Hermes, GitHub Copilot, and shared
+  infrastructure. Inventory agents, plugins, MCP tools, custom agents, instructions,
+  and prompt files. Report gaps, duplicates, and registration issues.
+
+  '
 version: 1.0.0
-author: "Hermes Agent (consolidated)"
+author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - audit
   - agents
-  - automation
-  - hermes
+  - ai-assistant
+  - audit
+  - configuration
+  - git
+  - planning
   - prompts
-  - stack
-  - dry
+  - skills
+  - typescript
 dependencies:
-  - skill:context-map
-  - skill:systematic-debugging
-  - skill:verification-before-completion
-  - skill:brainstorming
-  - skill:simplify
-  - skill:subagent-driven-development
-  - tool:terminal
-  - tool:search_files
+- skill:context-map
+- skill:systematic-debugging
+- skill:verification-before-completion
+- skill:brainstorming
+- skill:simplify
+- skill:subagent-driven-development
+- tool:terminal
+- tool:search_files
 skills:
-  - context-map
-  - systematic-debugging
-  - verification-before-completion
-  - brainstorming
-  - simplify
-  - subagent-driven-development
----
+- context-map
+- systematic-debugging
+- verification-before-completion
+- brainstorming
+- simplify
+- subagent-driven-development
 
+
+---
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
 > - [Skills table](../prompts/templates/_shared/skills-table-core.md)

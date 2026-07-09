@@ -1,36 +1,36 @@
 ---
+
+
 trigger: /plan-execute
 name: plan-execute
-title: "Execute Implementation Plan"
-description: >
-  Load and execute any implementation plan step-by-step. Reads the plan
-  from a `.prompt.md` or `.md` file, runs each phase sequentially with
-  verification gates. Replaces all ad-hoc execute-plan-* prompts with a
-  single generic executor.
+title: Execute Implementation Plan
+description: 'Load and execute any implementation plan step-by-step. Reads the plan
+  from a `.prompt.md` or `.md` file, runs each phase sequentially with verification
+  gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.
+
+  '
 version: 1.0.0
-author: "Hermes Agent (consolidated)"
+author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - execution
-  - automation
-  - hermes
+  - planning
   - prompts
-  - plan
-  - dry
+  - typescript
 dependencies:
-  - skill:plans-and-specs
-  - skill:subagent-driven-development
-  - skill:verification-before-completion
-  - skill:writing-plans
-  - tool:terminal
-  - tool:search_files
+- skill:plans-and-specs
+- skill:subagent-driven-development
+- skill:verification-before-completion
+- skill:writing-plans
+- tool:terminal
+- tool:search_files
 skills:
-  - plans-and-specs
-  - subagent-driven-development
-  - verification-before-completion
-  - writing-plans
----
+- plans-and-specs
+- subagent-driven-development
+- verification-before-completion
+- writing-plans
 
+
+---
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
 > - [Section skeleton](../prompts/templates/_shared/section-skeleton.md)

@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "editorconfig"
-title: "EditorConfig Expert"
-description: "Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences."
+name: editorconfig
+title: EditorConfig Expert
+description: Generates a comprehensive and best-practice-oriented .editorconfig file
+  based on project analysis and user preferences.
 trigger: /editorconfig
 tags:
   - configuration
@@ -13,9 +16,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
----
 
+
+---
 ## Goal
 
 Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.

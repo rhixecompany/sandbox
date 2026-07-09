@@ -1,51 +1,71 @@
-# SESSION_REPORT
-Rolling 41-session summary (most recent first).
+# SESSION_REPORT.md
 
-2026-07-01T02:54:49+01:00 | | unknown | | | 20260701_025341_10b8bd
-2026-07-01T02:54:21+01:00 | | unknown | | | 20260701_025341_10b8bd
-2026-07-01T02:54:21+01:00 | | unknown | | | 20260701_025342_0e16bd
-2026-07-01T02:39:48+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:39:21+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:36:59+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:36:13+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:33:03+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:33:02+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:31:59+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:30:34+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:28:17+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:26:52+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:25:11+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:22:22+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:19:06+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:17:49+01:00 | | unknown | | | 20260701_021414_550e0e
-2026-07-01T02:12:15+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:12:11+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:12:07+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:12:05+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:11:05+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:11:01+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:10:55+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T02:10:54+01:00 | | unknown | | | 20260701_014935_80aa00
-2026-07-01T01:40:58+01:00 | | unknown | | | 20260701_010812_5f819d
-2026-07-01T01:40:25+01:00 | | prompt | | | 20260701_010812_5f819d
-2026-07-01T01:40:19+01:00 | | session_end | | | 20260701_010812_5f819d
-2026-07-01T01:40:16+01:00 | | session_start | | | 20260701_010812_5f819d
-2026-07-01T01:40:12+01:00 | | unknown | | | 20260701_010812_5f819d
-2026-07-01T01:40:12+01:00 | | unknown | | | 20260701_010812_5f819d
-2026-07-01T01:38:44+01:00 | | prompt | | | 20260701_010812_5f819d
-2026-07-01T01:38:40+01:00 | | session_end | | | 20260701_010812_5f819d
-2026-07-01T01:38:36+01:00 | | session_start | | | 20260701_010812_5f819d
-2026-06-30T22:59:40+01:00 | | unknown | | | 20260630_225658_18a2d0
-2026-06-30T22:57:23+01:00 | | unknown | | | 20260630_225658_18a2d0
-2026-06-30T22:12:54+01:00 | | unknown | | | 20260630_214937_a4f6b0
-2026-06-30T22:12:14+01:00 | | unknown | | | 20260630_214937_a4f6b0
-2026-06-30T22:11:58+01:00 | | unknown | | | 20260630_221156_29f76f
-2026-06-30T22:10:30+01:00 | | unknown | | | 20260630_214937_a4f6b0
-2026-06-30T22:08:02+01:00 | | unknown | | | 20260630_214937_a4f6b0
+> Generated: 2026-07-09T21:15+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
-2026-07-09T14:16-07:00 | debug-fix-push | | deepseek-v4-flash-free (opencode-zen) | | 20260709_debug_fix
-- Debugged 170+ prompt files with YAML metadata corruption (`promptmetadata` duplication/inline flattening)
-- Root cause: batch bulk-edit committed across multiple "updates" commits corrupted metadata blocks
-- Fix: restored from clean commit d8f0fa41, verified 0 `promptmetadata` artifacts remain
-- Verifed: git checkout HEAD restored Bash/ and Resume_maker/ staged deletions
-- Blockers: none
+## Last Session Summary
+| Field | Value |
+|-------|-------|
+| Session ID | 20260709_202205_ae135c |
+| Title | (unnamed — user query: "hi whoami what model are you using") |
+| When | July 09, 2026 at 08:22 PM |
+| Model | stepfun/step-3.7-flash:free (nous) |
+| Source | tui |
+
+## Prior Session Summary (audited)
+| Field | Value |
+|-------|-------|
+| Session ID | 20260709_194540_9b4df6 |
+| Title | System Initialization and Skill Activation |
+| When | July 09, 2026 at 07:45 PM |
+| Model | gemini-3-flash-preview (gemini) — model changed mid-session |
+| Source | tui |
+
+## Tools Used (most recent full session)
+| Tool | Calls | Purpose |
+|------|-------|---------|
+| terminal | 9 | Config diff, profile sync, `.env` copy, status checks |
+| read_file | 3 | Profile file inspection, config reading |
+| write_file | 1 | Config updates |
+| skill_view | 5 | 5 mandatory startup skills loaded |
+| session_search | 1 | Session discovery |
+
+## Skills Loaded
+| Skill | Trigger |
+|-------|---------|
+| using-superpowers | Startup |
+| user-communication-preferences | Startup |
+| session-audit-report | Startup |
+| hermes-profiles | Startup |
+| validate-memories | Startup |
+
+## Key Insights & Corrections
+1. **Profile config drift:** All 6 non-default profiles were still on Gemini provider. Root config had transitioned to opencode-zen. Configs were synced during the session.
+2. **Prompt housekeeping complete:** 215 main prompt files pass YAML validation, no orphan tag lines, no duplicates, no conflict markers. Templates (27 files) excluded by design — no frontmatter needed.
+3. **Memory validation:** 22/22 files pass across all 7 profiles. All within size limits.
+4. **Skills catalog:** 652 SKILL.md files found across all skill directories.
+5. **Session 20260709_202205_ae135c** was a very brief (10-message) session asking "hi whoami what model" — resolved as Alexa running stepfun/step-3.7-flash:free via nous.
+6. **SESSION_REPORT.md script** (`session_audit.py`) picks stale session data (July 1) — manual report is more accurate.
+7. **Profile configs now show opencode-zen provider** in all 6 role profiles ✓.
+
+## Open Items
+| Item | Status |
+|------|--------|
+| Profile configs synced but use different models (gemini-3.1-flash-lite instead of root's gemini-3.5-flash) | By design — role profiles get lighter models |
+| `code-architect` profile sync timed out at 180s in prior session | May need retry in smaller increments |
+| DRY rule consolidation (MASTER_RULES.md) | Not yet started |
+
+## Errors Resolved
+| Error | Fix |
+|-------|-----|
+| Orphan `- item` lines after YAML `tags:` blocks in 215 prompt files | Fixed via `fix_orphan_tag_items()` — all clean |
+| `validate_prompt_frontmatter.py` failed on template subdirectories | Templates excluded by design |
+| Profile sync timed out (code-architect) | Pending retry |
+
+## Session Changelog
+| File | Action |
+|------|--------|
+| `C:\Users\Alexa\Desktop\SandBox\SESSION_REPORT.md` | Updated with full session audit data |
+| `C:\Users\Alexa\AppData\Local\hermes\profiles\alexa\config.yaml` | Synced from root |
+| `C:\Users\Alexa\AppData\Local\hermes\profiles\code-architect\config.yaml` | Synced from root |
+| All 6 profile `.env` files | Copied from root |
+| All 6 profile skills/hooks/plugins | Synced from root (alexa complete, code-architect partial) |

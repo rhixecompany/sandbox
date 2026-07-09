@@ -1,40 +1,50 @@
 ---
+
+
 trigger: /repo-management
 name: repo-management
-title: "Repo Management Pipeline"
-description: >
-  Execute repo management operations across all project repos: branch
-  normalization, ignore file audit, dependency audit, and CI setup. Runs
-  AFTER the repo-research-pipeline phase completes.
+title: Repo Management Pipeline
+description: 'Execute repo management operations across all project repos: branch
+  normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
+  repo-research-pipeline phase completes.
+
+  '
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags: [hermes, repos, git, maintenance, ci]
+tags:
+  - audit
+  - frontend
+  - git
+  - prompts
+  - skills
+  - workflow
 dependencies:
-  - skill:git-helper
-  - skill:repo-research-pipeline
-  - skill:web-research-pipeline
-  - skill:github-repo-management
-  - skill:finishing-a-development-branch
-  - skill:workspace-audit
+- skill:git-helper
+- skill:repo-research-pipeline
+- skill:web-research-pipeline
+- skill:github-repo-management
+- skill:finishing-a-development-branch
+- skill:workspace-audit
 skills:
-  - git-helper — Branch normalization and git workflow
-  - repo-research-pipeline — Prerequisite research before management
-  - web-research-pipeline — Web research for CI patterns and config
-  - github-repo-management — Remote repo operations (default branch, settings)
-  - finishing-a-development-branch — Clean branch lifecycle
-  - workspace-audit — Multi-repo workspace scanning
+- git-helper
+- repo-research-pipeline
+- web-research-pipeline
+- github-repo-management
+- finishing-a-development-branch
+- workspace-audit
 metadata:
   hermes:
     related_skills:
-      - git-helper
-      - repo-research-pipeline
-      - web-research-pipeline
-      - github-repo-management
-      - finishing-a-development-branch
-      - workspace-audit
----
+    - git-helper
+    - repo-research-pipeline
+    - web-research-pipeline
+    - github-repo-management
+    - finishing-a-development-branch
+    - workspace-audit
 
+
+---
 ## Goal
 
 Leave every repo with:

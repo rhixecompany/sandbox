@@ -1,11 +1,18 @@
 ---
-toolsets: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
+
+
+toolsets:
+- search
+- runCommands
+- terminalCommand
+- edit/editFiles
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Fedora Linux Triage
 name: fedora-linux-triage
-description: "Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance."
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware
+  guidance.
 tags:
   - debugging
   - fix
@@ -14,12 +21,10 @@ tags:
   - ml
   - prompts
   - typescript
-  - debugging
-  - documentation
-  - linux
-  - markdown
----
+trigger: /fedora-linux-triage
 
+
+---
 # Fedora Linux Triage
 
 You are a Fedora Linux expert. Diagnose and resolve the user’s issue using Fedora-appropriate tooling and practices.

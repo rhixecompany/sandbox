@@ -1,16 +1,19 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: skills-fix
 title: Skills Audit and Remediation
 trigger: /skills-fix
-description: >
-  Audit, debug, deduplicate, and enhance Hermes skills in the adminbot profile.
-  Runs hermes skills list → reorganizes misplaced skills → deduplicates →
-  batch-audits all SKILL.md files in groups of 7 → generates per-skill reports
-  and a master index → creates a remediation plan and execution prompt →
-  applies fixes in priority order (F → C → B → A-).
+description: 'Audit, debug, deduplicate, and enhance Hermes skills in the adminbot
+  profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates →
+  batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and
+  a master index → creates a remediation plan and execution prompt → applies fixes
+  in priority order (F → C → B → A-).
+
+  '
 tags:
   - ai-assistant
   - audit
@@ -21,36 +24,31 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - skills
-  - debugging
-  - audit
-  - dedup
-  - remediation
 dependencies:
-  - prompt:context-map
-  - prompt:update-implementation-plan
-  - prompt:skills-debug-prompt
-  - skill:using-superpowers
-  - skill:brainstorming
-  - skill:plans-and-specs
-  - skill:dispatching-parallel-agents
-  - skill:subagent-driven-development
-  - skill:systematic-debugging
-  - skill:simplify
-  - skill:skill-judge
-  - skill:skill-creator
-  - tool:terminal
-  - tool:patch
-  - tool:write_file
-  - tool:execute_code
+- prompt:context-map
+- prompt:update-implementation-plan
+- prompt:skills-debug-prompt
+- skill:using-superpowers
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:skill-judge
+- skill:skill-creator
+- tool:terminal
+- tool:patch
+- tool:write_file
+- tool:execute_code
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
----
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
 
+
+---
 ## Goal
 
 Full lifecycle audit and remediation of the Hermes adminbot skill library.

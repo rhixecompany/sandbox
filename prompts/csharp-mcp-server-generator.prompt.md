@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Generate C# MCP Server
 name: csharp-mcp-server-generator
-description: "Generate a complete MCP server project in C# with tools, prompts, and proper configuration"
+description: Generate a complete MCP server project in C# with tools, prompts, and
+  proper configuration
 tags:
   - backend
   - configuration
@@ -16,13 +19,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - csharp
-  - dotnet
-  - mcp
-  - planning
-  - specification
----
+trigger: /csharp-mcp-server-generator
 
+
+---
 # Generate C# MCP Server
 
 Create a complete Model Context Protocol (MCP) server in C# with the following specifications:

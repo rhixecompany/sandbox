@@ -1,14 +1,17 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: skills-debug-prompt
 title: Skills Debug and Remediation Execution
-trigger: /skills-debug
-description: >
-  Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
-  Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade
-  (unclosed fences, duplicate headings), then verify.
+trigger: /skills-debug-prompt
+description: 'Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
+  Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade (unclosed
+  fences, duplicate headings), then verify.
+
+  '
 tags:
   - ai-assistant
   - audit
@@ -18,12 +21,9 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - skills
-  - remediation
-  - fix
----
 
+
+---
 ## Goal
 
 Apply fixes to all F-grade and C-grade skills identified in the audit.

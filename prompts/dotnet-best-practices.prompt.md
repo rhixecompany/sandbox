@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: .NET/C# Best Practices
 name: dotnet-best-practices
-description: "Ensure .NET/C# code meets best practices for the solution/project."
+description: Ensure .NET/C# code meets best practices for the solution/project.
 tags:
   - architecture
   - csharp
@@ -14,15 +16,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - csharp
-  - documentation
-  - dotnet
-  - linux
-  - planning
-  - specification
----
+trigger: /dotnet-best-practices
 
+
+---
 # .NET/C# Best Practices
 
 Your task is to ensure .NET/C# code in ${selection} meets the best practices specific to this solution/project. This includes:

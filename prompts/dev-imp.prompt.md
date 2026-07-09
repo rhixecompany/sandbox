@@ -1,7 +1,10 @@
 ---
+
+
 name: dev-imp
 title: Development Implementation Manager
-description: "Meta-prompt that discovers generator prompts, implements them, verifies, code-reviews, debugs, reports."
+description: Meta-prompt that discovers generator prompts, implements them, verifies,
+  code-reviews, debugs, reports.
 version: 1.0.0
 author: OWL
 license: MIT
@@ -15,19 +18,14 @@ tags:
   - specification
   - typescript
   - workflow
-  - hermes
-  - development
-  - implementation
-  - generator
-  - code-review
-  - debug
-  - report
 toolsets:
-  - terminal
-  - file
-  - web
----
+- terminal
+- file
+- web
+trigger: /dev-imp
 
+
+---
 # Development Implementation Manager
 
 ## Plans‑and‑Specs

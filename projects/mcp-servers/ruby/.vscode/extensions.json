@@ -1,4 +1,6 @@
 {
-  "recommendations": [],
+  "recommendations": [
+    "esbenp.prettier-vscode"
+  ],
   "unwantedRecommendations": []
 }

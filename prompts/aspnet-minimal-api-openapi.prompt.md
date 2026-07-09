@@ -1,11 +1,17 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: ASP.NET Minimal API with OpenAPI
 name: aspnet-minimal-api-openapi
-description: "Create ASP.NET Minimal API endpoints with proper OpenAPI documentation"
+description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation
 tags:
   - api
   - csharp
@@ -14,14 +20,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - csharp
-  - documentation
-  - dotnet
-  - planning
-  - specification
----
+trigger: /aspnet-minimal-api-openapi
 
+
+---
 # ASP.NET Minimal API with OpenAPI
 
 Your goal is to help me create well-structured ASP.NET Minimal API endpoints with correct types and comprehensive OpenAPI/Swagger documentation.

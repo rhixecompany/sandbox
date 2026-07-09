@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "execute-hermes-configuration-spec"
-title: "Hermes Configuration Spec"
-description: "Execute the Hermes Configuration Spec plan."
+name: execute-hermes-configuration-spec
+title: Hermes Configuration Spec
+description: Execute the Hermes Configuration Spec plan.
 trigger: /execute-hermes-configuration-spec
 tags:
   - ai-assistant
@@ -14,11 +16,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
-  - plan
-  - execute
----
 
+
+---
 ## Goal
 Execute the plan at `.hermes/plans/hermes-configuration-spec.md`.
 

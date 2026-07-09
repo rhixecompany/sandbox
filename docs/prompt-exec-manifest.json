@@ -1,0 +1,1722 @@
+[
+  {
+    "file": "add-educational-comments.prompt.md",
+    "name": "add-educational-comments",
+    "title": "Add Educational Comments",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 163
+  },
+  {
+    "file": "agents-fix.prompt.md",
+    "name": "agents-fix",
+    "title": "Agents Sync and Deduplication",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 138
+  },
+  {
+    "file": "agents-generator.prompt.md",
+    "name": "agents-generator",
+    "title": "Agents Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 64
+  },
+  {
+    "file": "agents-system-prompt-context-fix.prompt.md",
+    "name": "agents-system-prompt-context-fix",
+    "title": "Agents System Prompt Context Fix",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 113
+  },
+  {
+    "file": "ai-prompt-engineering-safety-review.prompt.md",
+    "name": "ai-prompt-engineering-safety-review",
+    "title": "ai-prompt-engineering-safety-review",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 102
+  },
+  {
+    "file": "apple-appstore-reviewer.prompt.md",
+    "name": "Apple App Store Reviewer",
+    "title": "Apple App Store Reviewer",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 148
+  },
+  {
+    "file": "arch-linux-triage.prompt.md",
+    "name": "arch-linux-triage",
+    "title": "Arch Linux Triage",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 57
+  },
+  {
+    "file": "architecture-blueprint-generator.prompt.md",
+    "name": "architecture-blueprint-generator",
+    "title": "Comprehensive Project Architecture Blueprint Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 86
+  },
+  {
+    "file": "aspnet-minimal-api-openapi.prompt.md",
+    "name": "aspnet-minimal-api-openapi",
+    "title": "ASP.NET Minimal API with OpenAPI",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 70
+  },
+  {
+    "file": "audit-skills-judge-fix.prompt.md",
+    "name": "audit-skills-judge-fix",
+    "title": "Audit Skills Judge Fix",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 163
+  },
+  {
+    "file": "az-cost-optimize.prompt.md",
+    "name": "az-cost-optimize",
+    "title": "Azure Cost Optimize",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 135
+  },
+  {
+    "file": "azure-resource-health-diagnose.prompt.md",
+    "name": "azure-resource-health-diagnose",
+    "title": "Azure Resource Health & Issue Diagnosis",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 178
+  },
+  {
+    "file": "bash-scripts-fix.prompt.md",
+    "name": "bash-scripts-fix",
+    "title": "Bash Scripts Modernization and Consolidation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 197
+  },
+  {
+    "file": "bigquery-pipeline-audit.prompt.md",
+    "name": "bigquery-pipeline-audit",
+    "title": "BigQuery Pipeline Audit: Cost, Safety and Production Readiness",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 138
+  },
+  {
+    "file": "boost-prompt.prompt.md",
+    "name": "boost-prompt",
+    "title": "boost-prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 114
+  },
+  {
+    "file": "breakdown-epic-arch.prompt.md",
+    "name": "breakdown-epic-arch",
+    "title": "Epic Architecture Specification Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 105
+  },
+  {
+    "file": "breakdown-epic-pm.prompt.md",
+    "name": "breakdown-epic-pm",
+    "title": "Epic Product Requirements Document (PRD) Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 95
+  },
+  {
+    "file": "breakdown-feature-implementation.prompt.md",
+    "name": "breakdown-feature-implementation",
+    "title": "Feature Implementation Plan Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 86
+  },
+  {
+    "file": "breakdown-feature-prd.prompt.md",
+    "name": "breakdown-feature-prd",
+    "title": "Feature PRD Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 93
+  },
+  {
+    "file": "breakdown-plan.prompt.md",
+    "name": "breakdown-plan",
+    "title": "GitHub Issue Planning & Project Automation Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 357
+  },
+  {
+    "file": "breakdown-test.prompt.md",
+    "name": "breakdown-test",
+    "title": "Test Planning & Quality Assurance Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 304
+  },
+  {
+    "file": "centos-linux-triage.prompt.md",
+    "name": "centos-linux-triage",
+    "title": "CentOS Linux Triage",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 55
+  },
+  {
+    "file": "code-exemplars-blueprint-generator.prompt.md",
+    "name": "code-exemplars-blueprint-generator",
+    "title": "Code Exemplars Blueprint Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 105
+  },
+  {
+    "file": "code-review.prompt.md",
+    "name": "code-review",
+    "title": "Code Review",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 110
+  },
+  {
+    "file": "comicwise-development.prompt.md",
+    "name": "comicwise-development",
+    "title": "ComicWise Development Workflow",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 262
+  },
+  {
+    "file": "comment-code-generate-a-tutorial.prompt.md",
+    "name": "comment-code-generate-a-tutorial",
+    "title": "Comment Code Generate A Tutorial",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 78
+  },
+  {
+    "file": "containerize-aspnet-framework.prompt.md",
+    "name": "containerize-aspnet-framework",
+    "title": "ASP.NET .NET Framework Containerization Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 140
+  },
+  {
+    "file": "containerize-aspnetcore.prompt.md",
+    "name": "containerize-aspnetcore",
+    "title": "ASP.NET Core Docker Containerization Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 166
+  },
+  {
+    "file": "context-map.prompt.md",
+    "name": "context-map",
+    "title": "context-map",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 97
+  },
+  {
+    "file": "conventional-commit.prompt.md",
+    "name": "conventional-commit",
+    "title": "Conventional Commit",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 76
+  },
+  {
+    "file": "convert-plaintext-to-md.prompt.md",
+    "name": "convert-plaintext-to-md",
+    "title": "convert-plaintext-to-md",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 121
+  },
+  {
+    "file": "copilot-instructions-blueprint-generator.prompt.md",
+    "name": "copilot-instructions-blueprint-generator",
+    "title": "Copilot Instructions Blueprint Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 232
+  },
+  {
+    "file": "cosmosdb-datamodeling.prompt.md",
+    "name": "cosmosdb-datamodeling",
+    "title": "Azure Cosmos DB NoSQL Data Modeling Expert System Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 238
+  },
+  {
+    "file": "create-agentsmd.prompt.md",
+    "name": "create-agentsmd",
+    "title": "Create high\u2011quality AGENTS.md file",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 236
+  },
+  {
+    "file": "create-architectural-decision-record.prompt.md",
+    "name": "create-architectural-decision-record",
+    "title": "Create Architectural Decision Record",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 185
+  },
+  {
+    "file": "create-github-action-workflow-specification.prompt.md",
+    "name": "create-github-action-workflow-specification",
+    "title": "Create GitHub Actions Workflow Specification",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 303
+  },
+  {
+    "file": "create-github-issue-feature-from-specification.prompt.md",
+    "name": "create-github-issue-feature-from-specification",
+    "title": "Create GitHub Issue from Specification",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 101
+  },
+  {
+    "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+    "name": "create-github-issues-feature-from-implementation-plan",
+    "title": "Create GitHub Issue from Implementation Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 101
+  },
+  {
+    "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+    "name": "create-github-issues-for-unmet-specification-requirements",
+    "title": "Create GitHub Issues for Unmet Specification Requirements",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 109
+  },
+  {
+    "file": "create-github-pull-request-from-specification.prompt.md",
+    "name": "create-github-pull-request-from-specification",
+    "title": "Create GitHub Pull Request from Specification",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 99
+  },
+  {
+    "file": "create-implementation-plan.prompt.md",
+    "name": "create-implementation-plan",
+    "title": "Create Implementation Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 238
+  },
+  {
+    "file": "create-llms.prompt.md",
+    "name": "create-llms",
+    "title": "Create LLMs.txt File from Repository Structure",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 190
+  },
+  {
+    "file": "create-oo-component-documentation.prompt.md",
+    "name": "create-oo-component-documentation",
+    "title": "Generate Standard OO Component Documentation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 228
+  },
+  {
+    "file": "create-readme.prompt.md",
+    "name": "create-readme",
+    "title": "Create Readme",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 90
+  },
+  {
+    "file": "create-specification.prompt.md",
+    "name": "create-specification",
+    "title": "Create Specification",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 128
+  },
+  {
+    "file": "create-spring-boot-java-project.prompt.md",
+    "name": "create-spring-boot-java-project",
+    "title": "Create Spring Boot Java project prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 148
+  },
+  {
+    "file": "create-spring-boot-kotlin-project.prompt.md",
+    "name": "create-spring-boot-kotlin-project",
+    "title": "Create Spring Boot Kotlin project prompt",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 94
+  },
+  {
+    "file": "create-technical-spike.prompt.md",
+    "name": "create-technical-spike",
+    "title": "Create Technical Spike Document",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 228
+  },
+  {
+    "file": "create-tldr-page.prompt.md",
+    "name": "create-tldr-page",
+    "title": "Create TLDR Page",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 154
+  },
+  {
+    "file": "csharp-async.prompt.md",
+    "name": "csharp-async",
+    "title": "C# Async Programming Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 79
+  },
+  {
+    "file": "csharp-docs.prompt.md",
+    "name": "csharp-docs",
+    "title": "C# Documentation Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 92
+  },
+  {
+    "file": "csharp-mcp-server-generator.prompt.md",
+    "name": "csharp-mcp-server-generator",
+    "title": "Generate C# MCP Server",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 67
+  },
+  {
+    "file": "csharp-mstest.prompt.md",
+    "name": "csharp-mstest",
+    "title": "MSTest Best Practices (MSTest 3.x/4.x)",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 132
+  },
+  {
+    "file": "csharp-nunit.prompt.md",
+    "name": "csharp-nunit",
+    "title": "NUnit Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 104
+  },
+  {
+    "file": "csharp-tunit.prompt.md",
+    "name": "csharp-tunit",
+    "title": "TUnit Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 128
+  },
+  {
+    "file": "csharp-xunit.prompt.md",
+    "name": "csharp-xunit",
+    "title": "XUnit Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 101
+  },
+  {
+    "file": "database.prompt.md",
+    "name": "database",
+    "title": "Database Schema Guide for ComicWise",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 71
+  },
+  {
+    "file": "dataverse-python-advanced-patterns.prompt.md",
+    "name": "Dataverse Python Advanced Patterns",
+    "title": "Dataverse Python Advanced Patterns",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 34
+  },
+  {
+    "file": "dataverse-python-production-code.prompt.md",
+    "name": "Dataverse Python - Production Code Generator",
+    "title": "Dataverse Python   Production Code Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 91
+  },
+  {
+    "file": "dataverse-python-quickstart.prompt.md",
+    "name": "Dataverse Python Quickstart Generator",
+    "title": "Dataverse Python Quickstart Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 31
+  },
+  {
+    "file": "dataverse-python-usecase-builder.prompt.md",
+    "name": "Dataverse Python - Use Case Solution Builder",
+    "title": "Dataverse Python   Use Case Solution Builder",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 147
+  },
+  {
+    "file": "debian-linux-triage.prompt.md",
+    "name": "debian-linux-triage",
+    "title": "Debian Linux Triage",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 57
+  },
+  {
+    "file": "debug-issue.prompt.md",
+    "name": "debug-issue",
+    "title": "Debug Issue",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 61
+  },
+  {
+    "file": "declarative-agents.prompt.md",
+    "name": "declarative-agents",
+    "title": "Microsoft 365 Declarative Agents Development Kit",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 125
+  },
+  {
+    "file": "dev-imp.prompt.md",
+    "name": "dev-imp",
+    "title": "Development Implementation Manager",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 234
+  },
+  {
+    "file": "dev-init.prompt.md",
+    "name": "dev-init",
+    "title": "Dev Init - Prompt Conversion and Enhancement Planning",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 500
+  },
+  {
+    "file": "dev.prompt.md",
+    "name": "dev",
+    "title": "Task1",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 50
+  },
+  {
+    "file": "development.prompt.md",
+    "name": "development",
+    "title": "Development",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 75
+  },
+  {
+    "file": "devops-rollout-plan.prompt.md",
+    "name": "devops-rollout-plan",
+    "title": "DevOps Rollout Plan Generator",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 110
+  },
+  {
+    "file": "documentation-writer.prompt.md",
+    "name": "documentation-writer",
+    "title": "Di\u00e1taxis Documentation Expert",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 110
+  },
+  {
+    "file": "documentation.prompt.md",
+    "name": "documentation",
+    "title": "Documentation",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 111
+  },
+  {
+    "file": "dotnet-best-practices.prompt.md",
+    "name": "dotnet-best-practices",
+    "title": ".NET/C# Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 122
+  },
+  {
+    "file": "dotnet-design-pattern-review.prompt.md",
+    "name": "dotnet-design-pattern-review",
+    "title": ".NET/C# Design Pattern Review",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 66
+  },
+  {
+    "file": "dotnet-upgrade.prompt.md",
+    "name": ".NET Upgrade Analysis Prompts",
+    "title": ".Net Upgrade Analysis Prompts",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 113
+  },
+  {
+    "file": "editorconfig.prompt.md",
+    "name": "editorconfig",
+    "title": "EditorConfig Expert",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 111
+  },
+  {
+    "file": "ef-core.prompt.md",
+    "name": "ef-core",
+    "title": "Entity Framework Core Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 144
+  },
+  {
+    "file": "execute-acpx-agents-feature-specs.prompt.md",
+    "name": "execute-acpx-agents-feature-specs",
+    "title": "Acpx Agents Feature Specs",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 32
+  },
+  {
+    "file": "execute-all-prompts.prompt.md",
+    "name": "execute-all-prompts",
+    "title": "Execute All Prompts Orchestrator",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 130
+  },
+  {
+    "file": "execute-dev-init-spec.prompt.md",
+    "name": "execute-dev-init-spec",
+    "title": "Dev Init Spec",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 31
+  },
+  {
+    "file": "execute-hermes-configuration-spec.prompt.md",
+    "name": "execute-hermes-configuration-spec",
+    "title": "Hermes Configuration Spec",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 32
+  },
+  {
+    "file": "execute-multi-agent-research.prompt.md",
+    "name": "execute-multi-agent-research",
+    "title": "2026 06 16_Multi Agent Research",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 31
+  },
+  {
+    "file": "features.prompt.md",
+    "name": "features",
+    "title": "ComicWise - Feature Implementation Guide",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 104
+  },
+  {
+    "file": "fedora-linux-triage.prompt.md",
+    "name": "fedora-linux-triage",
+    "title": "Fedora Linux Triage",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 57
+  },
+  {
+    "file": "finalize-agent-prompt.prompt.md",
+    "name": "finalize-agent-prompt",
+    "title": "Finalize Agent Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 88
+  },
+  {
+    "file": "first-ask.prompt.md",
+    "name": "first-ask",
+    "title": "First Ask",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 73
+  },
+  {
+    "file": "folder-structure-blueprint-generator.prompt.md",
+    "name": "folder-structure-blueprint-generator",
+    "title": "Project Folder Structure Blueprint Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 95
+  },
+  {
+    "file": "gen-specs-as-issues.prompt.md",
+    "name": "gen-specs-as-issues",
+    "title": "Product Manager Assistant: Feature Identification and Specification",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 204
+  },
+  {
+    "file": "general.prompt.md",
+    "name": "general",
+    "title": "General Development Workflow",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 148
+  },
+  {
+    "file": "generate-custom-instructions-from-codebase.prompt.md",
+    "name": "generate-custom-instructions-from-codebase",
+    "title": "Migration and Code Evolution Instructions Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 199
+  },
+  {
+    "file": "generate-docs.prompt.md",
+    "name": "generate-docs",
+    "title": "Generate Docs",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 94
+  },
+  {
+    "file": "generator-orchestrator.prompt.md",
+    "name": "generator-orchestrator",
+    "title": "Generator Orchestrator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 159
+  },
+  {
+    "file": "git-flow-branch-creator.prompt.md",
+    "name": "git-flow-branch-creator",
+    "title": "Git Flow Branch Creator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 70
+  },
+  {
+    "file": "github-copilot-starter.prompt.md",
+    "name": "github-copilot-starter - edit - githubRepo - changes - problems - search - runCommands - web/fetch",
+    "title": "React Development Guidelines",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 252
+  },
+  {
+    "file": "go-mcp-server-generator.prompt.md",
+    "name": "go-mcp-server-generator",
+    "title": "Go MCP Server Project Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 229
+  },
+  {
+    "file": "hermes-breakdown-epic-arch.prompt.md",
+    "name": "hermes-breakdown-epic-arch",
+    "title": "Hermes Breakdown Epic Arch",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 77
+  },
+  {
+    "file": "hermes-breakdown-epic-pm.prompt.md",
+    "name": "hermes-breakdown-epic-pm",
+    "title": "Hermes Breakdown Epic Pm",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 75
+  },
+  {
+    "file": "hermes-breakdown-feature-implementation.prompt.md",
+    "name": "hermes-breakdown-feature-implementation",
+    "title": "Hermes Breakdown Feature Implementation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 82
+  },
+  {
+    "file": "hermes-breakdown-feature-prd.prompt.md",
+    "name": "hermes-breakdown-feature-prd",
+    "title": "Hermes Breakdown Feature Prd",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 73
+  },
+  {
+    "file": "hermes-breakdown-plan.prompt.md",
+    "name": "hermes-breakdown-plan",
+    "title": "Hermes Breakdown Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 83
+  },
+  {
+    "file": "hermes-breakdown-test.prompt.md",
+    "name": "hermes-breakdown-test",
+    "title": "Hermes Breakdown Test",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 81
+  },
+  {
+    "file": "Initial.prompt.md",
+    "name": "initial",
+    "title": "ComicWise Project Setup - Complete Guide",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 67
+  },
+  {
+    "file": "java-add-graalvm-native-image-support.prompt.md",
+    "name": "java-add-graalvm-native-image-support",
+    "title": "GraalVM Native Image Agent",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 80
+  },
+  {
+    "file": "java-docs.prompt.md",
+    "name": "java-docs",
+    "title": "Java Documentation (Javadoc)",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 40
+  },
+  {
+    "file": "java-junit.prompt.md",
+    "name": "java-junit",
+    "title": "JUnit 5+ Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 97
+  },
+  {
+    "file": "java-mcp-server-generator.prompt.md",
+    "name": "java-mcp-server-generator",
+    "title": "Java MCP Server Generator",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 242
+  },
+  {
+    "file": "java-refactoring-extract-method.prompt.md",
+    "name": "Refactoring Java Methods with Extract Method",
+    "title": "Refactoring Java Methods With Extract Method",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 98
+  },
+  {
+    "file": "java-refactoring-remove-parameter.prompt.md",
+    "name": "Refactoring Java Methods with Remove Parameter",
+    "title": "Refactoring Java Methods With Remove Parameter",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 111
+  },
+  {
+    "file": "java-springboot.prompt.md",
+    "name": "java-springboot",
+    "title": "Spring Boot Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 101
+  },
+  {
+    "file": "javascript-typescript-jest.prompt.md",
+    "name": "javascript-typescript-jest",
+    "title": "Javascript Typescript Jest",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 88
+  },
+  {
+    "file": "kotlin-mcp-server-generator.prompt.md",
+    "name": "kotlin-mcp-server-generator",
+    "title": "Kotlin MCP Server Project Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 310
+  },
+  {
+    "file": "kotlin-springboot.prompt.md",
+    "name": "kotlin-springboot",
+    "title": "Spring Boot with Kotlin Best Practices",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 101
+  },
+  {
+    "file": "mcp-copilot-studio-server-generator.prompt.md",
+    "name": "mcp-copilot-studio-server-generator",
+    "title": "Power Platform MCP Connector Generator",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 139
+  },
+  {
+    "file": "mcp-create-adaptive-cards.prompt.md",
+    "name": "mcp-create-adaptive-cards",
+    "title": "Create Adaptive Cards for MCP Plugins",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 188
+  },
+  {
+    "file": "mcp-create-declarative-agent.prompt.md",
+    "name": "mcp-create-declarative-agent",
+    "title": "Create MCP-based Declarative Agent for Microsoft 365 Copilot",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 233
+  },
+  {
+    "file": "mcp-deploy-manage-agents.prompt.md",
+    "name": "mcp-deploy-manage-agents",
+    "title": "Deploy and Manage MCP-Based Agents",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 326
+  },
+  {
+    "file": "memory-merger.prompt.md",
+    "name": "memory-merger",
+    "title": "Memory Merger",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 141
+  },
+  {
+    "file": "migrate-to-next16.prompt.md",
+    "name": "migrate-to-next16",
+    "title": "Migrate To Next16",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 60
+  },
+  {
+    "file": "mkdocs-translations.prompt.md",
+    "name": "mkdocs-translations",
+    "title": "MkDocs AI Translator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 176
+  },
+  {
+    "file": "model-recommendation.prompt.md",
+    "name": "model-recommendation",
+    "title": "AI Model Recommendation for Copilot Chat Modes and Prompts",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 347
+  },
+  {
+    "file": "multi-agent-research-template.prompt.md",
+    "name": "multi-agent-research-template",
+    "title": "Multi-Agent Research and Implementation Template",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 219
+  },
+  {
+    "file": "multi-stage-dockerfile.prompt.md",
+    "name": "multi-stage-dockerfile",
+    "title": "Multi Stage Dockerfile",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 115
+  },
+  {
+    "file": "my-issues.prompt.md",
+    "name": "my-issues",
+    "title": "My Issues",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 75
+  },
+  {
+    "file": "my-pull-requests.prompt.md",
+    "name": "my-pull-requests",
+    "title": "My Pull Requests",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 80
+  },
+  {
+    "file": "next-intl-add-language.prompt.md",
+    "name": "next-intl-add-language",
+    "title": "Next Intl Add Language",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 79
+  },
+  {
+    "file": "nextjs-tailwind.prompt.md",
+    "name": "nextjs-tailwind",
+    "title": "Nextjs Tailwind",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 112
+  },
+  {
+    "file": "openapi-to-application-code.prompt.md",
+    "name": "openapi-to-application-code",
+    "title": "Generate Application from OpenAPI Spec",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 152
+  },
+  {
+    "file": "optimize-agentsMd.prompt.md",
+    "name": "optimize-agentsmd",
+    "title": "Optimize Agentsmd",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 88
+  },
+  {
+    "file": "performance.prompt.md",
+    "name": "performance",
+    "title": "Performance",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 110
+  },
+  {
+    "file": "php-mcp-server-generator.prompt.md",
+    "name": "php-mcp-server-generator",
+    "title": "PHP MCP Server Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 193
+  },
+  {
+    "file": "plan-audit.prompt.md",
+    "name": "plan-audit",
+    "title": "Audit Agent Stack",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 118
+  },
+  {
+    "file": "plan-batch-fix.prompt.md",
+    "name": "plan-batch-fix",
+    "title": "Batch Fix Errors, Warnings & Deprecations",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 121
+  },
+  {
+    "file": "plan-execute.prompt.md",
+    "name": "plan-execute",
+    "title": "Execute Implementation Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 104
+  },
+  {
+    "file": "plan-generate.prompt.md",
+    "name": "plan-generate",
+    "title": "Generate Implementation Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 117
+  },
+  {
+    "file": "playwright-automation-fill-in-form.prompt.md",
+    "name": "playwright-automation-fill-in-form",
+    "title": "Playwright Automation Fill In Form",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 163
+  },
+  {
+    "file": "playwright-explore-website.prompt.md",
+    "name": "playwright-explore-website",
+    "title": "Playwright Explore Website",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 165
+  },
+  {
+    "file": "playwright-generate-test.prompt.md",
+    "name": "playwright-generate-test",
+    "title": "Playwright Generate Test",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 167
+  },
+  {
+    "file": "playwright-typescript.prompt.md",
+    "name": "playwright-typescript",
+    "title": "Playwright Typescript",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 108
+  },
+  {
+    "file": "postgresql-code-review.prompt.md",
+    "name": "postgresql-code-review",
+    "title": "PostgreSQL Code Review Assistant",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 161
+  },
+  {
+    "file": "postgresql-optimization.prompt.md",
+    "name": "postgresql-optimization",
+    "title": "PostgreSQL Development Assistant",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 182
+  },
+  {
+    "file": "power-apps-code-app-scaffold.prompt.md",
+    "name": "power-apps-code-app-scaffold",
+    "title": "Power Apps Code Apps Project Scaffolding",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 66
+  },
+  {
+    "file": "power-bi-dax-optimization.prompt.md",
+    "name": "power-bi-dax-optimization",
+    "title": "Power BI DAX Formula Optimizer",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 89
+  },
+  {
+    "file": "power-bi-model-design-review.prompt.md",
+    "name": "power-bi-model-design-review",
+    "title": "Power BI Data Model Design Review",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 71
+  },
+  {
+    "file": "power-bi-performance-troubleshooting.prompt.md",
+    "name": "power-bi-performance-troubleshooting",
+    "title": "Power BI Performance Troubleshooting Guide",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 81
+  },
+  {
+    "file": "power-bi-report-design-consultation.prompt.md",
+    "name": "power-bi-report-design-consultation",
+    "title": "Power BI Report Visualization Designer",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 61
+  },
+  {
+    "file": "power-platform-mcp-connector-suite.prompt.md",
+    "name": "power-platform-mcp-connector-suite",
+    "title": "Power Platform MCP Connector Suite",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 172
+  },
+  {
+    "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+    "name": "project-workflow-analysis-blueprint-generator",
+    "title": "Project Workflow Documentation Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 121
+  },
+  {
+    "file": "projects-init.prompt.md",
+    "name": "projects-init",
+    "title": "Projects Init",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 132
+  },
+  {
+    "file": "prompt-builder.prompt.md",
+    "name": "prompt-builder",
+    "title": "prompt-builder",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 140
+  },
+  {
+    "file": "prompt-management.prompt.md",
+    "name": "prompt-management",
+    "title": "Prompt Management",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 365
+  },
+  {
+    "file": "prompts-fix.prompt.md",
+    "name": "prompts-fix",
+    "title": "prompts Sync and Deduplication",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 117
+  },
+  {
+    "file": "prompts-strict-template.prompt.md",
+    "name": "prompts-strict-template",
+    "title": "Prompts Strict Template",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 113
+  },
+  {
+    "file": "pytest-coverage.prompt.md",
+    "name": "pytest-coverage",
+    "title": "Pytest Coverage",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 71
+  },
+  {
+    "file": "python-mcp-server-generator.prompt.md",
+    "name": "python-mcp-server-generator",
+    "title": "Generate Python MCP Server",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 148
+  },
+  {
+    "file": "quality-gate-debugger.prompt.md",
+    "name": "quality-gate-debugger",
+    "title": "Quality Gate Debugger \u2014 Triage & Batch Fix",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 211
+  },
+  {
+    "file": "readme-blueprint-generator.prompt.md",
+    "name": "readme-blueprint-generator",
+    "title": "README Generator Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 154
+  },
+  {
+    "file": "refactor-code.prompt.md",
+    "name": "refactor-code",
+    "title": "Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle Patterns)",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 124
+  },
+  {
+    "file": "refactor-mardown-files.prompt.md",
+    "name": "refactor-mardown-files",
+    "title": "Refactor Mardown Files",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 163
+  },
+  {
+    "file": "refactor-method-complexity-reduce.prompt.md",
+    "name": "refactor-method-complexity-reduce",
+    "title": "Refactor Method Complexity Reduce",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 139
+  },
+  {
+    "file": "refactor-plan.prompt.md",
+    "name": "refactor-plan",
+    "title": "Refactor Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 94
+  },
+  {
+    "file": "refresh-agent-inventory.prompt.md",
+    "name": "refresh-agent-inventory",
+    "title": "Refresh Agent Inventory",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 129
+  },
+  {
+    "file": "remember-interactive-programming.prompt.md",
+    "name": "Interactive Programming Nudge",
+    "title": "Interactive Programming Nudge",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 69
+  },
+  {
+    "file": "remember.prompt.md",
+    "name": "remember",
+    "title": "Memory Keeper",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 164
+  },
+  {
+    "file": "repo-management.prompt.md",
+    "name": "repo-management",
+    "title": "Repo Management Pipeline",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 84
+  },
+  {
+    "file": "repo-research-pipeline.prompt.md",
+    "name": "repo-research-pipeline",
+    "title": "Repo Research Pipeline (MCP-Enhanced)",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 60
+  },
+  {
+    "file": "repo-story-time.prompt.md",
+    "name": "repo-story-time",
+    "title": "Repository Analysis: Story from Git History",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 63
+  },
+  {
+    "file": "repo.prompt.md",
+    "name": "repo",
+    "title": "Repo Research Pipeline",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 428
+  },
+  {
+    "file": "review-and-refactor.prompt.md",
+    "name": "review-and-refactor",
+    "title": "Review And Refactor",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 83
+  },
+  {
+    "file": "ruby-mcp-server-generator.prompt.md",
+    "name": "ruby-mcp-server-generator",
+    "title": "Ruby MCP Server Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 311
+  },
+  {
+    "file": "run-session-agentsmd-workflow.prompt.md",
+    "name": "run-session-agentsmd-workflow",
+    "title": "Run Agents.md Workflow",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 152
+  },
+  {
+    "file": "rust-mcp-server-generator.prompt.md",
+    "name": "rust-mcp-server-generator",
+    "title": "Rust Mcp Server Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 176
+  },
+  {
+    "file": "security.prompt.md",
+    "name": "security",
+    "title": "Security Review",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 114
+  },
+  {
+    "file": "seed-review-and-create.prompt.md",
+    "name": "seed-review-and-create",
+    "title": "Seed System Review & Enhancement",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 83
+  },
+  {
+    "file": "session-agentsmd-full-workflow.prompt.md",
+    "name": "session-agentsmd-full-workflow",
+    "title": "Session Agents.md Full Workflow",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 163
+  },
+  {
+    "file": "setup-component.prompt.md",
+    "name": "setup-component",
+    "title": "Setup Component",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 96
+  },
+  {
+    "file": "setup-enhanced.prompt.md",
+    "name": "setup-enhanced",
+    "title": "ComicWise \u2014 AI Agent Setup & Implementation Guide",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 180
+  },
+  {
+    "file": "setup-nextjs-frontend-stack.prompt.md",
+    "name": "setup-nextjs-frontend-stack",
+    "title": "Setup Next.js Frontend Stack for an Entity",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 241
+  },
+  {
+    "file": "setup.prompt.md",
+    "name": "setup",
+    "title": "ComicWise \u2014 AI Agent Setup & Onboarding",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 363
+  },
+  {
+    "file": "shuffle-json-data.prompt.md",
+    "name": "shuffle-json-data",
+    "title": "Shuffle JSON Data",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 176
+  },
+  {
+    "file": "skills-debug-prompt.prompt.md",
+    "name": "skills-debug-prompt",
+    "title": "Skills Debug and Remediation Execution",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 58
+  },
+  {
+    "file": "skills-fix.prompt.md",
+    "name": "skills-fix",
+    "title": "Skills Audit and Remediation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 262
+  },
+  {
+    "file": "sql-code-review.prompt.md",
+    "name": "sql-code-review",
+    "title": "SQL Code Review",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 165
+  },
+  {
+    "file": "sql-optimization.prompt.md",
+    "name": "sql-optimization",
+    "title": "SQL Performance Optimization Assistant",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 181
+  },
+  {
+    "file": "structured-autonomy-generate.prompt.md",
+    "name": "sa-generate",
+    "title": "Sa Generate",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 97
+  },
+  {
+    "file": "structured-autonomy-implement.prompt.md",
+    "name": "sa-implement",
+    "title": "Sa Implement",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 68
+  },
+  {
+    "file": "structured-autonomy-plan.prompt.md",
+    "name": "sa-plan",
+    "title": "Sa Plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 113
+  },
+  {
+    "file": "suggest-awesome-github-copilot-agents.prompt.md",
+    "name": "suggest-awesome-github-copilot-agents",
+    "title": "Suggest Awesome GitHub Copilot Custom Agents",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 185
+  },
+  {
+    "file": "suggest-awesome-github-copilot-instructions.prompt.md",
+    "name": "suggest-awesome-github-copilot-instructions",
+    "title": "Suggest Awesome GitHub Copilot Instructions",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 206
+  },
+  {
+    "file": "suggest-awesome-github-copilot-prompts.prompt.md",
+    "name": "suggest-awesome-github-copilot-prompts",
+    "title": "Suggest Awesome GitHub Copilot Prompts",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 185
+  },
+  {
+    "file": "suggest-awesome-github-copilot-skills.prompt.md",
+    "name": "suggest-awesome-github-copilot-skills",
+    "title": "Suggest Awesome GitHub Copilot Skills",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 214
+  },
+  {
+    "file": "swift-mcp-server-generator.prompt.md",
+    "name": "swift-mcp-server-generator",
+    "title": "Swift MCP Server Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 346
+  },
+  {
+    "file": "sync-hermes-copilot-codex.prompt.md",
+    "name": "sync-hermes-copilot-codex",
+    "title": "Sync Hermes Copilot Codex",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 116
+  },
+  {
+    "file": "task-implementation.prompt.md",
+    "name": "task-implementation",
+    "title": "Task Implementation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 109
+  },
+  {
+    "file": "tasksync.prompt.md",
+    "name": "tasksync",
+    "title": "Task Sync",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 108
+  },
+  {
+    "file": "technology-stack-blueprint-generator.prompt.md",
+    "name": "technology-stack-blueprint-generator",
+    "title": "Comprehensive Technology Stack Blueprint Generator",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 101
+  },
+  {
+    "file": "test-providers-models.prompt.md",
+    "name": "test-providers-models",
+    "title": "Test Providers & Models",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 257
+  },
+  {
+    "file": "testing.prompt.md",
+    "name": "testing",
+    "title": "Testing",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 109
+  },
+  {
+    "file": "tldr-prompt.prompt.md",
+    "name": "tldr-prompt",
+    "title": "TLDR Prompt",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 229
+  },
+  {
+    "file": "typescript-mcp-server-generator.prompt.md",
+    "name": "typescript-mcp-server-generator",
+    "title": "Generate TypeScript MCP Server",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 132
+  },
+  {
+    "file": "typescript.prompt.md",
+    "name": "typescript",
+    "title": "TypeScript & Next.js",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 114
+  },
+  {
+    "file": "typespec-api-operations.prompt.md",
+    "name": "typespec-api-operations",
+    "title": "Add TypeSpec API Operations",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 172
+  },
+  {
+    "file": "typespec-create-agent.prompt.md",
+    "name": "typespec-create-agent",
+    "title": "Create TypeSpec Declarative Agent",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 112
+  },
+  {
+    "file": "typespec-create-api-plugin.prompt.md",
+    "name": "typespec-create-api-plugin",
+    "title": "Create TypeSpec API Plugin",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 127
+  },
+  {
+    "file": "update-avm-modules-in-bicep.prompt.md",
+    "name": "update-avm-modules-in-bicep",
+    "title": "Update Azure Verified Modules in Bicep Files",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 137
+  },
+  {
+    "file": "update-docs-on-code-change.prompt.md",
+    "name": "update-docs-on-code-change",
+    "title": "Update Docs on Code Change",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 116
+  },
+  {
+    "file": "update-implementation-plan.prompt.md",
+    "name": "update-implementation-plan",
+    "title": "update-implementation-plan",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 119
+  },
+  {
+    "file": "update-llms.prompt.md",
+    "name": "update-llms",
+    "title": "Update LLMs.txt File",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 189
+  },
+  {
+    "file": "update-markdown-file-index.prompt.md",
+    "name": "update-markdown-file-index",
+    "title": "Update Markdown File Index",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 161
+  },
+  {
+    "file": "update-oo-component-documentation.prompt.md",
+    "name": "update-oo-component-documentation",
+    "title": "Update Oo Component Documentation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 178
+  },
+  {
+    "file": "update-specification.prompt.md",
+    "name": "update-specification",
+    "title": "Update Specification",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 184
+  },
+  {
+    "file": "web-research-pipeline.prompt.md",
+    "name": "web-research-pipeline",
+    "title": "Web Research Pipeline (MCP-Enhanced)",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 55
+  },
+  {
+    "file": "what-context-needed.prompt.md",
+    "name": "what-context-needed",
+    "title": "What Context Do You Need?",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 93
+  },
+  {
+    "file": "workspace-consolidate.prompt.md",
+    "name": "workspace-consolidate",
+    "title": "Workspace Consolidation \u2014 Scripts, Patches, Docs",
+    "has_profile": false,
+    "unsafe_side_effect": true,
+    "lines": 463
+  },
+  {
+    "file": "write-coding-standards-from-file.prompt.md",
+    "name": "write-coding-standards-from-file",
+    "title": "Write Coding Standards From File",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 244
+  },
+  {
+    "file": "write-tests.prompt.md",
+    "name": "write-tests",
+    "title": "Write Tests",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 93
+  },
+  {
+    "file": "zod-schema-generation.prompt.md",
+    "name": "zod-schema-generation",
+    "title": "Zod Schema Generation",
+    "has_profile": false,
+    "unsafe_side_effect": false,
+    "lines": 41
+  }
+]

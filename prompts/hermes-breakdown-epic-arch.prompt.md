@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Hermes Breakdown Epic Arch
 name: hermes-breakdown-epic-arch
-description: "Hermes-equivalent: create a high-level Epic Architecture Specification from an Epic PRD."
+description: 'Hermes-equivalent: create a high-level Epic Architecture Specification
+  from an Epic PRD.'
 tags:
   - ai-assistant
   - architecture
@@ -14,16 +17,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - agile
-  - ai-assistant
-  - architecture
-  - documentation
-  - linux
-  - markdown
-  - planning
-  - specification
----
+trigger: /hermes-breakdown-epic-arch
 
+
+---
 ## Goal
 
 Turn an Epic PRD into a high-level architecture specification with layers, enablers, and technology guidance.

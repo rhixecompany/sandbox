@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "documentation"
-title: "Documentation"
-description: "Comprehensive documentation prompt aligned to repository documentation standards."
+name: documentation
+title: Documentation
+description: Comprehensive documentation prompt aligned to repository documentation
+  standards.
 trigger: /documentation
 tags:
   - api
@@ -16,10 +19,9 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - documentation
----
 
+
+---
 ## Goal
 Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 

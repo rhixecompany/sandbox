@@ -1,10 +1,16 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Code Exemplars Blueprint Generator
 name: code-exemplars-blueprint-generator
-description: "Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams."
+description: Technology-agnostic prompt generator that creates customizable AI prompts
+  for scanning codebases and identifying high-quality code exemplars. Supports multiple
+  programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python)
+  with configurable analysis depth, categorization methods, and documentation formats
+  to establish coding standards and maintain consistency across development teams.
 tags:
   - architecture
   - configuration
@@ -19,20 +25,10 @@ tags:
   - python
   - react
   - typescript
-  - architecture
-  - csharp
-  - database
-  - documentation
-  - dotnet
-  - drizzle
-  - java
-  - javascript
-  - nextjs
-  - python
-  - react
-  - typescript
----
+trigger: /code-exemplars-blueprint-generator
 
+
+---
 ## Goal
 
 Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams.

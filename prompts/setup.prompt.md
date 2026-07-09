@@ -1,48 +1,25 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: ComicWise — AI Agent Setup & Onboarding
 name: setup
-description: "Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code patterns, and conventions"
+description: Comprehensive AI agent onboarding prompt for ComicWise — architecture,
+  workflows, real code patterns, and conventions
 tags:
   - agents
-  - api
   - architecture
   - backend
-  - data
-  - database
-  - frontend
   - ml
   - nextjs
-  - playwright
   - prompts
-  - react
-  - sql
-  - testing
   - typescript
-  - workflow
-  - agents
-  - api
-  - architecture
-  - authentication
-  - configuration
-  - css
-  - database
-  - drizzle
-  - frontend
-  - linux
-  - nextjs
-  - orchestration
-  - playwright
-  - react
-  - security
-  - setup
-  - sql
-  - typescript
-  - workflow
----
+trigger: /setup
 
+
+---
 ## 1. Project Architecture
 
 > ├── app/                    # Next.js App Router pages

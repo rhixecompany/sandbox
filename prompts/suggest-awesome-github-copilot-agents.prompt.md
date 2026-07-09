@@ -1,21 +1,24 @@
 ---
+
+
 toolsets:
-  - edit
-  - search
-  - runCommands
-  - runTasks
-  - changes
-  - testFailure
-  - openSimpleBrowser
-  - fetch
-  - githubRepo
-  - todos
+- edit
+- search
+- runCommands
+- runTasks
+- changes
+- testFailure
+- openSimpleBrowser
+- fetch
+- githubRepo
+- todos
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Suggest Awesome GitHub Copilot Custom Agents
 name: suggest-awesome-github-copilot-agents
-description: "Find GitHub Copilot custom agent files that add coverage the repo lacks and flag local duplicates or outdated copies."
+description: Find GitHub Copilot custom agent files that add coverage the repo lacks
+  and flag local duplicates or outdated copies.
 tags:
   - agents
   - ai-assistant
@@ -24,15 +27,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - agents
-  - ai-assistant
-  - ci-cd
-  - documentation
-  - github
-  - planning
-  - specification
----
+trigger: /suggest-awesome-github-copilot-agents
 
+
+---
 ## Goal
 
 Suggest GitHub Copilot custom agent files that add coverage the repo lacks, and flag local duplicates or outdated copies.

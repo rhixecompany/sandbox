@@ -1,23 +1,25 @@
 ---
+
+
 toolsets:
-  - search/codebase
-  - usages
-  - problems
-  - changes
-  - runCommands/terminalSelection
-  - runCommands/terminalLastCommand
-  - search/searchResults
-  - extensions
-  - edit/editFiles
-  - search
-  - runCommands
-  - runTasks
+- search/codebase
+- usages
+- problems
+- changes
+- runCommands/terminalSelection
+- runCommands/terminalLastCommand
+- search/searchResults
+- extensions
+- edit/editFiles
+- search
+- runCommands
+- runTasks
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: MkDocs AI Translator
 name: mkdocs-translations
-description: "Generate a language translation for a mkdocs documentation stack."
+description: Generate a language translation for a mkdocs documentation stack.
 tags:
   - documentation
   - generator
@@ -25,11 +27,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - planning
-  - specification
----
+trigger: /mkdocs-translations
 
+
+---
 ## Goal
 
 Generate a language translation for a mkdocs documentation stack.

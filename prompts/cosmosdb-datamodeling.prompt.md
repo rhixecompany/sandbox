@@ -1,10 +1,15 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
 name: cosmosdb-datamodeling
-description: 'Step-by-step guide for capturing key application requirements for NoSQL use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices and common patterns, artifacts_produced: "cosmosdb_requirements.md" file and "cosmosdb_data_model.md" file'
+description: 'Step-by-step guide for capturing key application requirements for NoSQL
+  use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices
+  and common patterns, artifacts_produced: "cosmosdb_requirements.md" file and "cosmosdb_data_model.md"
+  file'
 tags:
   - architecture
   - azure
@@ -15,16 +20,10 @@ tags:
   - prompts
   - sql
   - typescript
-  - architecture
-  - azure
-  - database
-  - documentation
-  - markdown
-  - planning
-  - specification
-  - sql
----
+trigger: /cosmosdb-datamodeling
 
+
+---
 # Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
 
 - version: 1.0

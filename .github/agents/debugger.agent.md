@@ -1,4 +1,5 @@
 ---
+name: "Debugger"
 description: "Interactive debugging assistant"
 tools: ["runCommands", "search", "githubRepo"]
 model: "Auto (copilot)"

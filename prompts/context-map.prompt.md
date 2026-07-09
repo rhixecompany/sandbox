@@ -1,12 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: context-map
 name: context-map
 trigger: /context-map
-description: >-
-  Build a dependency and reference map before making changes so implementation starts from the right files.
+description: Build a dependency and reference map before making changes so implementation
+  starts from the right files.
 tags:
   - audit
   - frontend
@@ -14,17 +16,13 @@ tags:
   - specification
   - testing
   - typescript
-  - hermes
-  - copilot
-  - analysis
-  - dependencies
-  - planning
 dependencies:
-  - skill:codemap
+- skill:codemap
 skills:
-  - codemap — Codebase discovery and dependency mapping
----
+- codemap
 
+
+---
 # context-map
 
 > Build a dependency-aware context map before implementation begins.

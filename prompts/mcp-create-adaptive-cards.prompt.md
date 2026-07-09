@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Adaptive Cards for MCP Plugins
 name: mcp-create-adaptive-cards
-description: "mcp-create-adaptive-cards.prompt"
+description: mcp-create-adaptive-cards.prompt
 tags:
   - generator
   - mcp
@@ -13,14 +15,10 @@ tags:
   - specification
   - typescript
   - workflow
-  - adaptive-cards
-  - documentation
-  - orchestration
-  - planning
-  - specification
-  - workflow
----
+trigger: /mcp-create-adaptive-cards
 
+
+---
 ## Goal
 
 Use this prompt to handle the create adaptive cards for mcp plugins workflow.

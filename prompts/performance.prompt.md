@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "performance"
-title: "Performance"
-description: "Comprehensive performance prompt focused on measurable improvements and safe optimizations."
+name: performance
+title: Performance
+description: Comprehensive performance prompt focused on measurable improvements and
+  safe optimizations.
 trigger: /performance
 tags:
   - data
@@ -16,9 +19,9 @@ tags:
   - specification
   - sql
   - typescript
-  - hermes
----
 
+
+---
 ## Goal
 Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 

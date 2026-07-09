@@ -1,11 +1,18 @@
 ---
-toolsets: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
+
+
+toolsets:
+- search
+- runCommands
+- terminalCommand
+- edit/editFiles
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Debian Linux Triage
 name: debian-linux-triage
-description: "Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware guidance."
+description: Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware
+  guidance.
 tags:
   - debugging
   - fix
@@ -14,12 +21,10 @@ tags:
   - ml
   - prompts
   - typescript
-  - debugging
-  - documentation
-  - linux
-  - markdown
----
+trigger: /debian-linux-triage
 
+
+---
 # Debian Linux Triage
 
 You are a Debian Linux expert. Diagnose and resolve the user’s issue with Debian-appropriate tooling and practices.

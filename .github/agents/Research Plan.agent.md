@@ -1,4 +1,5 @@
 ---
+name: "Research Plan"
 description: "A Custom Agent To Research A Prompt Before Implementing"
 tools: []
 ---

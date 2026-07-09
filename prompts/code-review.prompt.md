@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "code-review"
-title: "Code Review"
-description: "Comprehensive code review prompt for correctness, security, and testing risk."
+name: code-review
+title: Code Review
+description: Comprehensive code review prompt for correctness, security, and testing
+  risk.
 trigger: /code-review
 tags:
   - audit
@@ -15,9 +18,9 @@ tags:
   - skills
   - testing
   - typescript
-  - hermes
----
 
+
+---
 ## Goal
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
 

@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "task-implementation"
-title: "Task Implementation"
-description: "Comprehensive prompt for implementing tasks with clear phases, goals, and verification."
+name: task-implementation
+title: Task Implementation
+description: Comprehensive prompt for implementing tasks with clear phases, goals,
+  and verification.
 trigger: /task-implementation
 tags:
   - ai-assistant
@@ -12,12 +15,9 @@ tags:
   - prompts
   - specification
   - workflow
-  - hermes
-  - tasks
-  - implementation
-  - workflow
----
 
+
+---
 ## Goal
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
 

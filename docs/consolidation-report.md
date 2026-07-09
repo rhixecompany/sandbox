@@ -1,89 +1,100 @@
 # Consolidation Report
+**Total skills analyzed:** 526
+**Potential overlaps:** 13101
+**Thin skills (<100 lines, no phases):** 30
+**Skills missing structure:** 166
 
-Generated: July 1, 2026
+## Potential Overlaps (Merge Candidates)
+| Skill A | Skill B | Keyword | Reason |
+|---------|---------|---------|--------|
+| 1password (163L) | audit-227 (89L) | install | Both relate to 'install'; one may be thin |
+| 1password (163L) | audit-227-js (83L) | install | Both relate to 'install'; one may be thin |
+| 1password (163L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| 1password (163L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| 1password (163L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | audit-227 (89L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | audit-227-js (83L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| qwen-code (235L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | audit-227 (89L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | audit-227-js (83L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| comfyui (623L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | audit-227-js (83L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | copilot-cli-quickstart (159L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | vscode-cli (206L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | hermes-skills (215L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | pinggy-tunnel (309L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| audit-227 (89L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | copilot-cli-quickstart (159L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | vscode-cli (206L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | hermes-skills (215L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | pinggy-tunnel (309L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| audit-227-js (83L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| copilot-cli-quickstart (159L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| copilot-cli-quickstart (159L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| copilot-cli-quickstart (159L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| vscode-cli (206L) | asdf (110L) | install | Both relate to 'install'; one may be thin |
+| vscode-cli (206L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| vscode-cli (206L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| asdf (110L) | hermes-skills (215L) | install | Both relate to 'install'; one may be thin |
+| asdf (110L) | pinggy-tunnel (309L) | install | Both relate to 'install'; one may be thin |
+| asdf (110L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| asdf (110L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| hermes-skills (215L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| hermes-skills (215L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| pinggy-tunnel (309L) | uv-package-manager (78L) | install | Both relate to 'install'; one may be thin |
+| pinggy-tunnel (309L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| uv-package-manager (78L) | petdex (100L) | install | Both relate to 'install'; one may be thin |
+| 1password (163L) | mcp-memory (135L) | read | Both relate to 'read'; one may be thin |
+| 1password (163L) | pdf (103L) | read | Both relate to 'read'; one may be thin |
+| 1password (163L) | xlsx (105L) | read | Both relate to 'read'; one may be thin |
+| evm (211L) | mcp-memory (135L) | read | Both relate to 'read'; one may be thin |
+| evm (211L) | pdf (103L) | read | Both relate to 'read'; one may be thin |
 
-## Overview
+## Thin Skills (Potential Merge Targets)
+| Skill | Lines | Refs | Has Phases | Has Checklist |
+|-------|-------|------|------------|----------------|
+| boost-prompt | 49 | 0 | ❌ | ✅ |
+| firecrawl-map | 50 | 0 | ❌ | ❌ |
+| joyride | 50 | 0 | ❌ | ✅ |
+| skills-tools-preflight-check | 50 | 0 | ❌ | ❌ |
+| acpx-executor | 51 | 0 | ❌ | ✅ |
+| dispatching-parallel-agents | 53 | 0 | ❌ | ✅ |
+| no-git-delete | 53 | 0 | ❌ | ✅ |
+| tmux-terminal-multiplexer | 54 | 0 | ❌ | ✅ |
+| git-patch-management | 55 | 0 | ❌ | ✅ |
+| parallel-cli-web-research | 56 | 0 | ❌ | ✅ |
+| firecrawl-agent | 57 | 0 | ❌ | ❌ |
+| firecrawl-crawl | 58 | 0 | ❌ | ❌ |
+| pnpm-package-manager | 59 | 0 | ❌ | ✅ |
+| simplify | 65 | 2 | ❌ | ✅ |
+| note-taking-apps | 67 | 2 | ❌ | ❌ |
+| firecrawl-download | 69 | 0 | ❌ | ❌ |
+| firecrawl-scrape | 69 | 0 | ❌ | ❌ |
+| chainlink | 75 | 0 | ❌ | ❌ |
+| research-toolkit | 77 | 3 | ❌ | ❌ |
+| uv-package-manager | 78 | 0 | ❌ | ❌ |
+| sequential-orchestration | 79 | 0 | ❌ | ✅ |
+| github-copilot-cli | 81 | 0 | ❌ | ✅ |
+| django-application | 84 | 9 | ❌ | ❌ |
+| unsloth | 84 | 4 | ❌ | ❌ |
+| ml-models | 89 | 3 | ❌ | ❌ |
+| ci-cd-pipeline-builder | 92 | 6 | ❌ | ❌ |
+| stocks | 95 | 1 | ❌ | ❌ |
+| stocks | 95 | 1 | ❌ | ❌ |
+| canvas | 98 | 1 | ❌ | ❌ |
+| canvas | 99 | 1 | ❌ | ❌ |
 
-- **Total skills analyzed**: 455
-- **Potential overlaps**: 6537 (keyword-based)
-- **Thin skills (<100 lines, no phases)**: 25
-- **Skills missing structure**: 157
-
-## Remediation Impact
-
-After running Phase 1.5 remediation on 50 FAIL skills:
-- Thin skills reduced from 27 → 25
-- Missing structure reduced from 182 → 157
-- 25 skills received frontmatter/section patches
-
-## Duplicate Resolution (from dedupe report)
-
-61 skills exist in both flat (top-level) and categorized subdirectories. Recommended action:
-- **Keep**: Category subdirectory version (e.g., `devops/1password/SKILL.md`)
-- **Delete**: Flat version (e.g., `skills/1password/SKILL.md`)
-- Use `rm -rf skills/<flat-skill-name>` for safe removal
-
-## Candidate Umbrella Merges
-
-### 1. Firecrawl Umbrella
-**Merge into**: `firecrawl-scrape` or create new `firecrawl` umbrella
-
-| Thin Skill | Lines | Absorb Into |
-|------------|-------|-------------|
-| firecrawl-agent | 73 | firecrawl-scrape |
-| firecrawl-crawl | 74 | firecrawl-scrape |
-| firecrawl-download | 85 | firecrawl-scrape |
-| firecrawl-map | 66 | firecrawl-scrape |
-| firecrawl-scrape | 85 | (umbrella) |
-| firecrawl-search | (not thin) | firecrawl-scrape |
-
-### 2. Package Manager Umbrella
-| Thin Skill | Lines | Absorb Into |
-|------------|-------|-------------|
-| uv-package-manager | 78 | skills or hermes-setup |
-| pnpm-package-manager | 59 | skills or hermes-setup |
-
-### 3. DevOps / CLI Tools Umbrella
-| Thin Skill | Lines | Absorb Into |
-|------------|-------|-------------|
-| boost-prompt | 49 | prompt-batch-fixer |
-| no-git-delete | 53 | git-helper |
-| git-patch-management | 55 | git-helper |
-| github-copilot-cli | 81 | gh-cli |
-| skills-tools-preflight-check | 50 | hermes-skills |
-
-### 4. General Thin Skills
-| Thin Skill | Lines | Suggested Umbrella |
-|------------|-------|-------------------|
-| joyride | 50 | autonomous-ai-agents |
-| acpx-executor | 51 | devops |
-| dispatching-parallel-agents | 53 | autonomous-ai-agents |
-| tmux-terminal-multiplexer | 54 | devops |
-| parallel-cli-web-research | 56 | research |
-| simplify | 65 | productivity |
-| sequential-orchestration | 68 | autonomous-ai-agents |
-| unsloth | 84 | mlops |
-| stocks | 95 | finance |
-| canvas | 98 | productivity |
-
-## Structure Issues
-
-### Skills Missing Required Sections
-
-| Missing Section | Count |
-|----------------|-------|
-| Missing "When to Use" | 109 |
-| Missing Workflow | 329 |
-| Missing Verification Checklist | 214 |
-| Missing Best Practices | 500 |
-
-After remediation, 157 skills still lack key structural elements.
-
-## Recommended Actions
-
-1. **Duplicate cleanup**: Remove 61 flat copies where categorized versions exist
-2. **Execute umbrella merges**: Use `merge_skill.py` for top candidates
-3. **Firecrawl consolidation**: Merge 6 thin firecrawl skills into 1 umbrella
-4. **Package manager consolidation**: Merge uv/pnpm into devops umbrella
-5. **Git tool consolidation**: Merge git-patch-management, no-git-delete into git-helper
-6. **Re-judge** after consolidation to verify score improvements
+## Recommended Consolidation Actions
+1. **Merge thin skills** into fuller versions with similar purpose
+2. **Use `skill_manage(action='delete', absorbed_into='<umbrella>')`** for archiving
+3. **Copy reference files** from absorbed skills to umbrella's `references/` directory
+4. **Update umbrella SKILL.md** with 'Recently Absorbed Skills' section
+5. **Verify** with `read_file()` not `skill_view()` (stale cache)

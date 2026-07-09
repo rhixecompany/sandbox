@@ -1,50 +1,49 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Execute All Prompts Orchestrator
 name: execute-all-prompts
 trigger: /execute-all-prompts
-description: >
-  Orchestrates sequential execution of all 4 workspace prompt files:
-  audit-skills-judge-fix, agents-system-prompt-context-fix,
-  sync-hermes-copilot-codex, and test-providers-models.
+description: 'Orchestrates sequential execution of all 4 workspace prompt files: audit-skills-judge-fix,
+  agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models.
   Each prompt runs to completion before the next begins.
+
+  '
 tags:
+  - audit
   - execution
+  - fix
   - ml
   - prompts
+  - skills
   - typescript
   - workflow
-  - orchestrator
-  - pipeline
-  - sequential
-  - audit
-  - sync
-  - benchmark
-  - context
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:plans-and-specs
-  - skill:executing-plans
-  - skill:verification-before-completion
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:plans-and-specs
+- skill:executing-plans
+- skill:verification-before-completion
 skills:
-  - using-superpowers
-  - user-communication-preferences
-  - plans-and-specs
-  - executing-plans
-  - verification-before-completion
+- using-superpowers
+- user-communication-preferences
+- plans-and-specs
+- executing-plans
+- verification-before-completion
 metadata:
   hermes:
     related_skills:
-      - using-superpowers
-      - user-communication-preferences
-      - plans-and-specs
-      - executing-plans
-      - verification-before-completion
----
+    - using-superpowers
+    - user-communication-preferences
+    - plans-and-specs
+    - executing-plans
+    - verification-before-completion
 
+
+---
 # Execute All Prompts Orchestrator
 
 > Sequentially executes all 4 workspace prompt files. Each prompt must complete fully before the next begins ("only then" constraint).

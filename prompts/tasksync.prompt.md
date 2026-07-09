@@ -1,22 +1,21 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "tasksync"
-title: "Task Sync"
-description: "Comprehensive prompt for synchronizing tasks, implementations, and updates across projects."
+name: tasksync
+title: Task Sync
+description: Comprehensive prompt for synchronizing tasks, implementations, and updates
+  across projects.
 trigger: /tasksync
 tags:
   - frontend
   - prompts
-  - typescript
   - workflow
-  - hermes
-  - tasks
-  - sync
-  - project-management
----
 
+
+---
 ## Goal
 Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
 

@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "testing"
-title: "Testing"
-description: "Comprehensive testing prompt aligned to repository unit and E2E guidance."
+name: testing
+title: Testing
+description: Comprehensive testing prompt aligned to repository unit and E2E guidance.
 trigger: /testing
 tags:
   - audit
@@ -14,10 +16,9 @@ tags:
   - skills
   - testing
   - typescript
-  - hermes
-  - testing
----
 
+
+---
 ## Goal
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 

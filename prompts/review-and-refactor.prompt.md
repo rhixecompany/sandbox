@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Review And Refactor
 name: review-and-refactor
-description: "Review and refactor code in your project according to defined instructions"
+description: Review and refactor code in your project according to defined instructions
 tags:
   - audit
   - ml
@@ -12,12 +14,10 @@ tags:
   - refactoring
   - specification
   - typescript
-  - documentation
-  - planning
-  - refactoring
-  - specification
----
+trigger: /review-and-refactor
 
+
+---
 ## Goal
 
 Review and refactor code in your project according to defined instructions.

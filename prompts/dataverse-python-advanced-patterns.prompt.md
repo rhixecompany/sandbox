@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "Dataverse Python Advanced Patterns"
-title: "Dataverse Python Advanced Patterns"
-description: "Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization techniques."
+name: Dataverse Python Advanced Patterns
+title: Dataverse Python Advanced Patterns
+description: Generate production code for Dataverse SDK using advanced patterns, error
+  handling, and optimization techniques.
 trigger: /Dataverse Python Advanced Patterns
 tags:
   - data
@@ -14,11 +17,9 @@ tags:
   - python
   - specification
   - sql
-  - hermes
-  - python
-  - dataverse
----
 
+
+---
 You are a Dataverse SDK for Python expert. Generate production-ready Python code that demonstrates:
 
 1. **Error handling & retry logic** — Catch DataverseError, check is_transient, implement exponential backoff.

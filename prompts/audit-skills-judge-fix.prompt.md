@@ -1,13 +1,15 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Audit Skills Judge Fix
 name: audit-skills-judge-fix
 trigger: /audit-skills-judge-fix
-description: >-
-  Run full skills audit, categorize, dedupe, consolidate, judge in batches of 10,
-  remediate all reference files/scripts/SKILL.md, delete duplicates, and verify completion.
+description: Run full skills audit, categorize, dedupe, consolidate, judge in batches
+  of 10, remediate all reference files/scripts/SKILL.md, delete duplicates, and verify
+  completion.
 tags:
   - audit
   - fix
@@ -15,33 +17,25 @@ tags:
   - skills
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - opencode
-  - skills
-  - audit
-  - judge
-  - remediation
-  - dedupe
-  - consolidation
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:plans-and-specs
-  - skill:skill-judge
-  - skill:hermes-skills
-  - skill:skill-creator
-  - skill:writing-skills
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:plans-and-specs
+- skill:skill-judge
+- skill:hermes-skills
+- skill:skill-creator
+- skill:writing-skills
 skills:
-  - using-superpowers
-  - user-communication-preferences
-  - plans-and-specs
-  - skill-judge
-  - hermes-skills
-  - skill-creator
-  - writing-skills
----
+- using-superpowers
+- user-communication-preferences
+- plans-and-specs
+- skill-judge
+- hermes-skills
+- skill-creator
+- writing-skills
 
+
+---
 # Audit Skills Judge Fix
 
 > Orchestrates a comprehensive skills audit, categorization, deduplication, consolidation, judging, and remediation workflow.

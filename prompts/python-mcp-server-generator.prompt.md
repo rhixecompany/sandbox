@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Generate Python MCP Server
 name: python-mcp-server-generator
-description: "Generate a complete MCP server project in Python with tools, resources, and proper configuration"
+description: Generate a complete MCP server project in Python with tools, resources,
+  and proper configuration
 tags:
   - backend
   - configuration
@@ -15,13 +18,10 @@ tags:
   - python
   - specification
   - typescript
-  - documentation
-  - mcp
-  - planning
-  - python
-  - specification
----
+trigger: /python-mcp-server-generator
 
+
+---
 ## Goal
 
 Generate a complete MCP server project in Python with tools, resources, and proper configuration.

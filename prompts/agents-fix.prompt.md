@@ -1,12 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: agents-fix
 title: Agents Sync and Deduplication
 trigger: /agents-fix
-description: Sync and deduplicate agent definitions across Hermes, and Copilot
-    with dependency mapping and schema validation.
+description: Sync and deduplicate agent definitions across Hermes, and Copilot with
+  dependency mapping and schema validation.
 tags:
   - agents
   - ai-assistant
@@ -16,38 +18,35 @@ tags:
   - prompts
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - agents
-  - sync
 dependencies:
-    - prompt:context-map.prompt.md
-    - prompt:update-implementation-plan.prompt.md
-    - skill:brainstorming
-    - skill:plans-and-specs
-    - skill:dispatching-parallel-agents
-    - skill:subagent-driven-development
-    - skill:systematic-debugging
-    - skill:simplify
-    - skill:acpx-executor
-    - skill:copilot-cli-quickstart
-    - tool:terminal
-    - tool:search_files
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:copilot-cli-quickstart
+- tool:terminal
+- tool:search_files
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
-    - brainstorming
-    - plans-and-specs
-    - dispatching-parallel-agents
-    - subagent-driven-development
-    - systematic-debugging
-    - simplify
-    - acpx-executor
-    - copilot-cli-quickstart
----
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- acpx-executor
+- copilot-cli-quickstart
 
+
+---
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.

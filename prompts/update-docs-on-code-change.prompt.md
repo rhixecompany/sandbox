@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "update-docs-on-code-change"
-title: "Update Docs on Code Change"
-description: "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows."
+name: update-docs-on-code-change
+title: Update Docs on Code Change
+description: Comprehensive prompt for synchronizing documentation whenever code changes
+  modify behavior, APIs, or workflows.
 trigger: /update-docs-on-code-change
 tags:
   - api
@@ -17,14 +20,9 @@ tags:
   - skills
   - typescript
   - workflow
-  - hermes
-  - documentation
-  - sync
-  - code-change
-  - readme
-  - api-docs
----
 
+
+---
 ## Goal
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 

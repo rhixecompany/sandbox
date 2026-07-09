@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power Platform MCP Connector Suite
 name: power-platform-mcp-connector-suite
-description: Generate complete Power Platform custom connector with MCP integration for Copilot Studio - includes schema generation, troubleshooting, and validation
+description: Generate complete Power Platform custom connector with MCP integration
+  for Copilot Studio - includes schema generation, troubleshooting, and validation
 tags:
   - agents
   - ai-assistant
@@ -14,16 +17,10 @@ tags:
   - mcp
   - prompts
   - typescript
-  - agents
-  - ai-assistant
-  - database
-  - drizzle
-  - mcp
-  - microsoft
-  - power-platform
-  - typespec
----
+trigger: /power-platform-mcp-connector-suite
 
+
+---
 # Power Platform MCP Connector Suite
 
 Generate comprehensive Power Platform custom connector implementations with Model Context Protocol integration for Microsoft Copilot Studio.

@@ -1,30 +1,33 @@
 ---
+
+
 toolsets:
-  - vscode/vscodeAPI
-  - vscode/extensions
-  - execute/testFailure
-  - execute/runTask
-  - execute/createAndRunTask
-  - read/problems
-  - read/readFile
-  - read/terminalSelection
-  - read/terminalLastCommand
-  - read/getTaskOutput
-  - agent
-  - edit/editFiles
-  - search
-  - web
-  - github/*
-  - browser
-  - vscode.mermaid-chat-features/renderMermaidDiagram
-  - ms-azuretools.vscode-containers/containerToolsConfig
-  - todo
+- vscode/vscodeAPI
+- vscode/extensions
+- execute/testFailure
+- execute/runTask
+- execute/createAndRunTask
+- read/problems
+- read/readFile
+- read/terminalSelection
+- read/terminalLastCommand
+- read/getTaskOutput
+- agent
+- edit/editFiles
+- search
+- web
+- github/*
+- browser
+- vscode.mermaid-chat-features/renderMermaidDiagram
+- ms-azuretools.vscode-containers/containerToolsConfig
+- todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Implementation Plan
 name: create-implementation-plan
-description: "Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure."
+description: Create a new implementation plan file for new features, refactoring existing
+  code or upgrading packages, design, architecture or infrastructure.
 tags:
   - architecture
   - generator
@@ -33,15 +36,10 @@ tags:
   - refactoring
   - specification
   - typescript
-  - architecture
-  - documentation
-  - generator
-  - linux
-  - planning
-  - refactoring
-  - specification
----
+trigger: /create-implementation-plan
 
+
+---
 ## Goal
 
 Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.

@@ -1,59 +1,52 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - findTestFiles
-  - githubRepo
-  - new
-  - openSimpleBrowser
-  - problems
-  - runCommands
-  - runInTerminal2
-  - runNotebooks
-  - runTasks
-  - runTests
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
-  - microsoft.docs.mcp
-  - github
-  - Microsoft Docs
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- findTestFiles
+- githubRepo
+- new
+- openSimpleBrowser
+- problems
+- runCommands
+- runInTerminal2
+- runNotebooks
+- runTasks
+- runTests
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
+- microsoft.docs.mcp
+- github
+- Microsoft Docs
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create GitHub Actions Workflow Specification
 name: create-github-action-workflow-specification
-description: "Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance."
+description: Create a formal specification for an existing GitHub Actions CI/CD workflow,
+  optimized for AI consumption and workflow maintenance.
 tags:
   - ci-cd
   - generator
   - git
   - ml
-  - performance
   - prompts
   - specification
   - typescript
   - workflow
-  - ci-cd
-  - database
-  - documentation
-  - drizzle
-  - generator
-  - github
-  - orchestration
-  - performance
-  - planning
-  - specification
-  - workflow
----
+trigger: /create-github-action-workflow-specification
 
+
+---
 ## Workflow Overview
 
 **Purpose**: [One sentence describing workflow's primary goal] **Trigger Events**: [List trigger conditions] **Target Environments**: [Environment scope]

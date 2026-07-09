@@ -1,27 +1,28 @@
 ---
+
+
 toolsets:
-  - githubRepo
-  - github
-  - get_issue
-  - get_issue_comments
-  - get_me
-  - list_issues
+- githubRepo
+- github
+- get_issue
+- get_issue_comments
+- get_me
+- list_issues
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: My Issues
 name: my-issues
-description: "List my issues in the current repository"
+description: List my issues in the current repository
 tags:
   - ml
   - prompts
   - specification
   - typescript
-  - documentation
-  - planning
-  - specification
----
+trigger: /my-issues
 
+
+---
 ## Goal
 
 List my issues in the current repository.

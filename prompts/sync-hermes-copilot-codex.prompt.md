@@ -1,12 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 trigger: /sync-hermes-copilot-codex
 name: sync-hermes-copilot-codex
 title: Sync Hermes Copilot Codex
 version: 1.1.0
-description: >-
-  Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
+description: Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
   create personalities and profiles from instruction/agent definitions.
 tags:
   - agents
@@ -16,32 +17,23 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - copilot
-  - opencode
-  - sync
-  - skills
-  - plugins
-  - hooks
-  - personalities
-  - profiles
-  # Copilot-format deps (Hermes uses skills:)
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:plans-and-specs
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:plans-and-specs
 skills:
-  - using-superpowers
-  - user-communication-preferences
-  - plans-and-specs
+- using-superpowers
+- user-communication-preferences
+- plans-and-specs
 metadata:
   hermes:
     related_skills:
-      - using-superpowers
-      - user-communication-preferences
-      - plans-and-specs
----
+    - using-superpowers
+    - user-communication-preferences
+    - plans-and-specs
 
+
+---
 # Sync Hermes Copilot Codex
 
 > Synchronizes skills, plugins, and hooks across three AI agents (Hermes, Copilot, Codex) and creates corresponding personalities/profiles from their instruction/agent definitions.

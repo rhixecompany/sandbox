@@ -1,29 +1,28 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - problems
-  - search
+- changes
+- search/codebase
+- edit/editFiles
+- problems
+- search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power Apps Code Apps Project Scaffolding
 name: power-apps-code-app-scaffold
-description: "Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration"
+description: Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK
+  integration, and connector configuration
 tags:
   - audit
-  - configuration
   - frontend
   - prompts
   - specification
-  - database
-  - drizzle
-  - planning
-  - power-platform
-  - specification
----
+trigger: /power-apps-code-app-scaffold
 
+
+---
 # Power Apps Code Apps Project Scaffolding
 
 You are an expert Power Platform developer who specializes in creating Power Apps Code Apps. Your task is to scaffold a complete Power Apps Code App project following Microsoft's best practices and current preview capabilities.

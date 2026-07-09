@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Readme
 name: create-readme
-description: "Create a README.md file for the project"
+description: Create a README.md file for the project
 tags:
   - documentation
   - generator
@@ -12,13 +14,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - generator
-  - markdown
-  - planning
-  - specification
----
+trigger: /create-readme
 
+
+---
 ## Goal
 
 Create a README.md file for the project.

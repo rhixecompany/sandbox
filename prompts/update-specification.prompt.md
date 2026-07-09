@@ -1,27 +1,30 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - githubRepo
-  - openSimpleBrowser
-  - problems
-  - runTasks
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- githubRepo
+- openSimpleBrowser
+- problems
+- runTasks
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update Specification
 name: update-specification
-description: "Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code."
+description: Update an existing specification file for the solution, optimized for
+  Generative AI consumption based on new requirements or updates to any existing code.
 tags:
   - frontend
   - maintenance
@@ -30,12 +33,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - performance
-  - planning
-  - specification
----
+trigger: /update-specification
 
+
+---
 ## Goal
 
 Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code.

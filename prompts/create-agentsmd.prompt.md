@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create high‑quality AGENTS.md file
 name: create-agentsmd
-description: "Prompt for generating an AGENTS.md file for a repository"
+description: Prompt for generating an AGENTS.md file for a repository
 tags:
   - agents
   - generator
@@ -12,14 +14,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - agents
-  - documentation
-  - generator
-  - markdown
-  - planning
-  - specification
----
+trigger: /create-agentsmd
 
+
+---
 ## Goal
 
 Prompt for generating an AGENTS.md file for a repository.

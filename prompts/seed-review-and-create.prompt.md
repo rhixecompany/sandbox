@@ -1,15 +1,18 @@
 ---
+
+
 toolsets:
-  - codebase
-  - editFiles
-  - terminalLastCommand
-  - runInTerminal
+- codebase
+- editFiles
+- terminalLastCommand
+- runInTerminal
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Seed System Review & Enhancement
 name: seed-review-and-create
-description: "Review seed system files, create new seeders, fix issues, and implement improvements"
+description: Review seed system files, create new seeders, fix issues, and implement
+  improvements
 tags:
   - audit
   - documentation
@@ -17,13 +20,10 @@ tags:
   - ml
   - prompts
   - specification
-  - typescript
-  - documentation
-  - linux
-  - planning
-  - specification
----
+trigger: /seed-review-and-create
 
+
+---
 # Seed System Review & Enhancement
 
 As **Reviewer persona**, research the codebase for additional context and dependencies, research the seeding system and identify how images are being managed and linked to their respective entities. Update seeding system images management to ensure proper linking, set a default callback image for all failed entities to the default image or the placeholder image or the image url, update documentation, and seeders accordingly.

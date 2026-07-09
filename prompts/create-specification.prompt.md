@@ -1,27 +1,30 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - githubRepo
-  - openSimpleBrowser
-  - problems
-  - runTasks
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- githubRepo
+- openSimpleBrowser
+- problems
+- runTasks
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Specification
 name: create-specification
-description: "Create a new specification file for the solution, optimized for Generative AI consumption."
+description: Create a new specification file for the solution, optimized for Generative
+  AI consumption.
 tags:
   - documentation
   - frontend
@@ -31,13 +34,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - generator
-  - performance
-  - planning
-  - specification
----
+trigger: /create-specification
 
+
+---
 # Create Specification
 
 Your goal is to create a new specification file for `${input:SpecPurpose}`.

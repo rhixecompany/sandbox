@@ -1,10 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: First Ask
 name: first-ask
-description: "Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension."
+description: 'Interactive, input-tool powered, task refinement workflow: interrogates
+  scope, deliverables, constraints before carrying out the task; Requires the Joyride
+  extension.'
 tags:
   - frontend
   - ml
@@ -12,13 +16,10 @@ tags:
   - specification
   - typescript
   - workflow
-  - documentation
-  - orchestration
-  - planning
-  - specification
-  - workflow
----
+trigger: /first-ask
 
+
+---
 ## Goal
 
 Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension.

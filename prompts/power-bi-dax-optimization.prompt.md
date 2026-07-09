@@ -1,27 +1,24 @@
 ---
-toolsets: ["microsoft.docs.mcp"]
+
+
+toolsets:
+- microsoft.docs.mcp
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power BI DAX Formula Optimizer
 name: power-bi-dax-optimization
-description: "Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations."
+description: Comprehensive Power BI DAX formula optimization prompt for improving
+  performance, readability, and maintainability of DAX calculations.
 tags:
   - ml
   - performance
   - prompts
   - specification
-  - database
-  - documentation
-  - drizzle
-  - markdown
-  - optimization
-  - performance
-  - planning
-  - powerbi
-  - specification
----
+trigger: /power-bi-dax-optimization
 
+
+---
 # Power BI DAX Formula Optimizer
 
 You are a Power BI DAX expert specializing in formula optimization. Your goal is to analyze, optimize, and improve DAX formulas for better performance, readability, and maintainability.

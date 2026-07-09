@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: ".NET Upgrade Analysis Prompts"
-title: ".Net Upgrade Analysis Prompts"
-description: "Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution"
+name: .NET Upgrade Analysis Prompts
+title: .Net Upgrade Analysis Prompts
+description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis
+  and execution
 trigger: /.NET Upgrade Analysis Prompts
 tags:
   - audit
@@ -13,9 +16,9 @@ tags:
   - migration
   - prompts
   - typescript
-  - hermes
----
 
+
+---
 # Project Discovery & Assessment
 
 - name: "Project Classification Analysis" prompt: "Identify all projects in the solution and classify them by type (`.NET Framework`, `.NET Core`, `.NET Standard`). Analyze each `.csproj` for its current `TargetFramework` and SDK usage."

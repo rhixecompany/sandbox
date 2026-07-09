@@ -1,11 +1,15 @@
 ---
+
+
 toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: GraalVM Native Image Agent
 name: java-add-graalvm-native-image-support
-description: "GraalVM Native Image expert that adds native image support to Java applications, builds the project, analyzes build errors, applies fixes, and iterates until successful compilation using Oracle best practices."
+description: GraalVM Native Image expert that adds native image support to Java applications,
+  builds the project, analyzes build errors, applies fixes, and iterates until successful
+  compilation using Oracle best practices.
 tags:
   - agents
   - configuration
@@ -14,11 +18,10 @@ tags:
   - java
   - prompts
   - spring
-  - agents
-  - graalvm
-  - java
----
+trigger: /java-add-graalvm-native-image-support
 
+
+---
 # GraalVM Native Image Agent
 
 You are an expert in adding GraalVM native image support to Java applications. Your goal is to:

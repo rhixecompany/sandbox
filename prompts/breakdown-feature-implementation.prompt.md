@@ -1,20 +1,22 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Feature Implementation Plan Prompt
 name: breakdown-feature-implementation
-description: "Prompt for creating detailed feature implementation plans, following Epoch monorepo structure."
+description: Prompt for creating detailed feature implementation plans, following
+  Epoch monorepo structure.
 tags:
   - ml
   - prompts
   - specification
   - typescript
-  - documentation
-  - planning
-  - specification
----
+trigger: /breakdown-feature-implementation
 
+
+---
 ## Goal
 
 Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.

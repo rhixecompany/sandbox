@@ -1,30 +1,33 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - findTestFiles
-  - githubRepo
-  - openSimpleBrowser
-  - problems
-  - runCommands
-  - runTasks
-  - runTests
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- findTestFiles
+- githubRepo
+- openSimpleBrowser
+- problems
+- runCommands
+- runTasks
+- runTests
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update Markdown File Index
 name: update-markdown-file-index
-description: "Update a markdown file section with an index/table of files from a specified folder."
+description: Update a markdown file section with an index/table of files from a specified
+  folder.
 tags:
   - maintenance
   - markdown
@@ -32,12 +35,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - markdown
-  - planning
-  - specification
----
+trigger: /update-markdown-file-index
 
+
+---
 ## Goal
 
 Update a markdown file section with an index/table of files from a specified folder.

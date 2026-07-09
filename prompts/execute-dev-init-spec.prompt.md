@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "execute-dev-init-spec"
-title: "Dev Init Spec"
-description: "Execute the Dev Init Spec plan."
+name: execute-dev-init-spec
+title: Dev Init Spec
+description: Execute the Dev Init Spec plan.
 trigger: /execute-dev-init-spec
 tags:
   - ai-assistant
@@ -13,11 +15,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
-  - plan
-  - execute
----
 
+
+---
 ## Goal
 Execute the plan at `.hermes/plans/dev-init-spec.md`.
 

@@ -1,13 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 trigger: /projects-init
 name: projects-init
-title: "Projects Init"
-description: >-
-  Three-phase workspace initialization: triage MD documentation files, migrate
-  prompt files to .github/prompts/, then create skills/scripts and update prompts.
-  Eliminates duplicates and consolidates documentation.
+title: Projects Init
+description: 'Three-phase workspace initialization: triage MD documentation files,
+  migrate prompt files to .github/prompts/, then create skills/scripts and update
+  prompts. Eliminates duplicates and consolidates documentation.'
 version: 1.0.0
 tags:
   - debugging
@@ -18,28 +19,23 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - projects
-  - init
-  - docs
-  - prompts
-  - skills
-  - migrate
-  - consolidate
-  - deduplicate
 dependencies:
-  - skill:enhance-markdown
-  - skill:hermes-skills
-  - skill:skill-creator
+- skill:enhance-markdown
+- skill:hermes-skills
+- skill:skill-creator
 skills:
-  - enhance-markdown
-  - hermes-skills
-  - skill-creator
+- enhance-markdown
+- hermes-skills
+- skill-creator
 metadata:
   hermes:
-    related_skills: [enhance-markdown, hermes-skills, skill-creator]
----
+    related_skills:
+    - enhance-markdown
+    - hermes-skills
+    - skill-creator
 
+
+---
 # Projects Init
 
 > Initialize a workspace: triage docs, migrate prompts, create skills. Three sequential phases — each must finish before the next begins.

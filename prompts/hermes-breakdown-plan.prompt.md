@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Hermes Breakdown Plan
 name: hermes-breakdown-plan
-description: "Hermes-equivalent: generate a GitHub project plan from PRD, technical breakdown, implementation plan, and test strategy artifacts."
+description: 'Hermes-equivalent: generate a GitHub project plan from PRD, technical
+  breakdown, implementation plan, and test strategy artifacts.'
 tags:
   - ai-assistant
   - frontend
@@ -15,16 +18,10 @@ tags:
   - specification
   - testing
   - typescript
-  - agile
-  - ai-assistant
-  - ci-cd
-  - documentation
-  - github
-  - markdown
-  - planning
-  - specification
----
+trigger: /hermes-breakdown-plan
 
+
+---
 ## Goal
 
 Generate a project plan that turns feature and epic inputs into an execution-ready planning package.

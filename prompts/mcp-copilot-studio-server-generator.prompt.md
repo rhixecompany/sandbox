@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Power Platform MCP Connector Generator
 name: mcp-copilot-studio-server-generator
-description: Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support
+description: Generate a complete MCP server implementation optimized for Copilot Studio
+  integration with proper schema constraints and streamable HTTP support
 tags:
   - ai-assistant
   - backend
@@ -15,19 +18,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - database
-  - documentation
-  - drizzle
-  - mcp
-  - microsoft
-  - performance
-  - planning
-  - power-platform
-  - specification
-  - typespec
----
+trigger: /mcp-copilot-studio-server-generator
 
+
+---
 ## Goal
 
 Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support.

@@ -1,38 +1,40 @@
 ---
+
+
 trigger: /plan-batch-fix
 name: plan-batch-fix
-title: "Batch Fix Errors, Warnings & Deprecations"
-description: >
-  Scan a codebase for errors, warnings, and deprecations, then fix them
-  systematically in batches. Supports lint issues, TypeScript errors,
-  deprecated API usage, and code quality problems.
+title: Batch Fix Errors, Warnings & Deprecations
+description: 'Scan a codebase for errors, warnings, and deprecations, then fix them
+  systematically in batches. Supports lint issues, TypeScript errors, deprecated API
+  usage, and code quality problems.
+
+  '
 version: 1.0.0
-author: "Hermes Agent (consolidated)"
+author: Hermes Agent (consolidated)
 license: MIT
 tags:
   - fix
-  - linting
-  - automation
-  - hermes
+  - planning
   - prompts
-  - code-quality
-  - dry
+  - skills
+  - typescript
 dependencies:
-  - skill:systematic-debugging
-  - skill:subagent-driven-development
-  - skill:simplify
-  - skill:verification-before-completion
-  - skill:brainstorming
-  - tool:terminal
-  - tool:search_files
+- skill:systematic-debugging
+- skill:subagent-driven-development
+- skill:simplify
+- skill:verification-before-completion
+- skill:brainstorming
+- tool:terminal
+- tool:search_files
 skills:
-  - systematic-debugging
-  - subagent-driven-development
-  - simplify
-  - verification-before-completion
-  - brainstorming
----
+- systematic-debugging
+- subagent-driven-development
+- simplify
+- verification-before-completion
+- brainstorming
 
+
+---
 > **Shared template references:**
 > - [Core rules](../prompts/templates/_shared/rules-core.md)
 > - [Skills table](../prompts/templates/_shared/skills-table-core.md)

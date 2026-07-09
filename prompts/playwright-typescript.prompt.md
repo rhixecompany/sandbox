@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "playwright-typescript"
-title: "Playwright Typescript"
-description: "Comprehensive Playwright TypeScript prompt aligned to repository testing standards."
+name: playwright-typescript
+title: Playwright Typescript
+description: Comprehensive Playwright TypeScript prompt aligned to repository testing
+  standards.
 trigger: /playwright-typescript
 tags:
   - playwright
@@ -12,11 +15,9 @@ tags:
   - skills
   - testing
   - typescript
-  - hermes
-  - typescript
-  - playwright
----
 
+
+---
 ## Goal
 Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
 

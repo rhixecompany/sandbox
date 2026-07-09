@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: "Product Manager Assistant: Feature Identification and Specification"
+title: 'Product Manager Assistant: Feature Identification and Specification'
 name: gen-specs-as-issues
-description: "This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation."
+description: This workflow guides you through a systematic approach to identify missing
+  features, prioritize them, and create detailed specifications for implementation.
 tags:
   - frontend
   - ml
@@ -12,13 +15,10 @@ tags:
   - specification
   - typescript
   - workflow
-  - documentation
-  - orchestration
-  - planning
-  - specification
-  - workflow
----
+trigger: /gen-specs-as-issues
 
+
+---
 ## Goal
 
 This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.

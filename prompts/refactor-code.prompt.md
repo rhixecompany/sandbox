@@ -1,29 +1,32 @@
 ---
+
+
 toolsets:
-  - vscode
-  - execute
-  - read
-  - agent
-  - edit
-  - search
-  - web
-  - github/*
-  - browser
-  - vscode.mermaid-chat-features/renderMermaidDiagram
-  - github.vscode-pull-request-github/issue_fetch
-  - github.vscode-pull-request-github/labels_fetch
-  - github.vscode-pull-request-github/notification_fetch
-  - github.vscode-pull-request-github/doSearch
-  - github.vscode-pull-request-github/activePullRequest
-  - github.vscode-pull-request-github/pullRequestStatusChecks
-  - github.vscode-pull-request-github/openPullRequest
-  - todo
+- vscode
+- execute
+- read
+- agent
+- edit
+- search
+- web
+- github/*
+- browser
+- vscode.mermaid-chat-features/renderMermaidDiagram
+- github.vscode-pull-request-github/issue_fetch
+- github.vscode-pull-request-github/labels_fetch
+- github.vscode-pull-request-github/notification_fetch
+- github.vscode-pull-request-github/doSearch
+- github.vscode-pull-request-github/activePullRequest
+- github.vscode-pull-request-github/pullRequestStatusChecks
+- github.vscode-pull-request-github/openPullRequest
+- todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle Patterns)
+title: Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle
+  Patterns)
 name: refactor-code
-description: "Refactor code for maintainability and standards."
+description: Refactor code for maintainability and standards.
 tags:
   - linting
   - markdown
@@ -34,22 +37,10 @@ tags:
   - refactoring
   - specification
   - typescript
-  - authentication
-  - code-quality
-  - database
-  - documentation
-  - drizzle
-  - linting
-  - markdown
-  - migration
-  - nextjs
-  - planning
-  - refactoring
-  - security
-  - specification
-  - typescript
----
+trigger: /refactor-code
 
+
+---
 ## Goal
 
 Refactor code for maintainability and standards.

@@ -1,11 +1,18 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: C# Documentation Best Practices
 name: csharp-docs
-description: "Ensure that C# types are documented with XML comments and follow best practices for documentation."
+description: Ensure that C# types are documented with XML comments and follow best
+  practices for documentation.
 tags:
   - api
   - csharp
@@ -16,16 +23,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - csharp
-  - database
-  - documentation
-  - dotnet
-  - drizzle
-  - planning
-  - specification
----
+trigger: /csharp-docs
 
+
+---
 # C# Documentation Best Practices
 
 - Public members should be documented with XML comments.

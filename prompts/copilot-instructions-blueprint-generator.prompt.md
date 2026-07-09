@@ -1,10 +1,15 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Copilot Instructions Blueprint Generator
 name: copilot-instructions-blueprint-generator
-description: "Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions."
+description: Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md
+  files that guide GitHub Copilot to produce code consistent with project standards,
+  architecture patterns, and exact technology versions by analyzing existing codebase
+  patterns and avoiding assumptions.
 tags:
   - ai-assistant
   - architecture
@@ -14,17 +19,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - architecture
-  - ci-cd
-  - documentation
-  - github
-  - linux
-  - markdown
-  - planning
-  - specification
----
+trigger: /copilot-instructions-blueprint-generator
 
+
+---
 ## Goal
 
 Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.

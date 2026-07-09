@@ -1,12 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: prompt-builder
 name: prompt-builder
 trigger: /prompt-builder
-description: >-
-  Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
+description: Guide users through creating high-quality .prompt.md files with proper
+  structure, tools, and best practices.
 tags:
   - agents
   - ai-assistant
@@ -15,14 +17,9 @@ tags:
   - prompts
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - opencode
-  - writing-skills
-  - scaffolding
-  - template
----
 
+
+---
 # prompt-builder
 
 > Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.

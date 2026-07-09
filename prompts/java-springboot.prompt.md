@@ -1,16 +1,18 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - problems
-  - search
+- changes
+- search/codebase
+- edit/editFiles
+- problems
+- search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Spring Boot Best Practices
 name: java-springboot
-description: "Get best practices for developing applications with Spring Boot."
+description: Get best practices for developing applications with Spring Boot.
 tags:
   - data
   - frontend
@@ -19,11 +21,10 @@ tags:
   - prompts
   - specification
   - spring
-  - java
-  - planning
-  - specification
----
+trigger: /java-springboot
 
+
+---
 # Spring Boot Best Practices
 
 Your goal is to help me write high-quality Spring Boot applications by following established best practices.

@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Swift MCP Server Generator
 name: swift-mcp-server-generator
-description: "Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package."
+description: Generate a complete Model Context Protocol server project in Swift using
+  the official MCP Swift SDK package.
 tags:
   - backend
   - generator
@@ -13,13 +16,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - mcp
-  - planning
-  - specification
-  - swift
----
+trigger: /swift-mcp-server-generator
 
+
+---
 ## Goal
 
 Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.

@@ -1,11 +1,18 @@
 ---
-toolsets: ["edit/editFiles", "search", "web/fetch"]
+
+
+toolsets:
+- edit/editFiles
+- search
+- web/fetch
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Diátaxis Documentation Expert
 name: documentation-writer
-description: "Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework."
+description: Diátaxis Documentation Expert. An expert technical writer specializing
+  in creating high-quality software documentation, guided by the principles and structure
+  of the Diátaxis technical documentation authoring framework.
 tags:
   - documentation
   - frontend
@@ -13,13 +20,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - authentication
-  - documentation
-  - planning
-  - security
-  - specification
----
+trigger: /documentation-writer
 
+
+---
 ## Goal
 
 Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.

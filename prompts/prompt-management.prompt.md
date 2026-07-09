@@ -1,54 +1,54 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: prompt-management
 title: Prompt Management
 trigger: /prompt-management
-description: List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline clean or continue remediation.
+description: List, triage, catalog, consolidate, dedupe, template, validate, and verify
+  all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context
+  into shared markdown, update prompts to use shared templates, create missing skills/scripts
+  if they do not exist, and then declare the pipeline clean or continue remediation.
 tags:
   - debugging
-  - fix
   - markdown
   - ml
   - prompts
   - skills
   - typescript
-  - hermes
-  - prompts
-  - cleanup
-  - template
-  - validation
 dependencies:
-  - skill:brainstorming
-  - skill:plans-and-specs
-  - skill:writing-plans
-  - skill:simplify
-  - skill:systematic-debugging
-  - skill:dispatching-parallel-agents
-  - skill:subagent-driven-development
-  - skill:test-driven-development
-  - skill:skill-creator
-  - skill:writing-skills
-  - skill:test-skill
-  - skill:verification-before-completion
-  - prompt:context-map.prompt.md
-  - prompt:update-implementation-plan.prompt.md
-  - prompt:agents-fix.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:writing-plans
+- skill:simplify
+- skill:systematic-debugging
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:test-driven-development
+- skill:skill-creator
+- skill:writing-skills
+- skill:test-skill
+- skill:verification-before-completion
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- prompt:agents-fix.prompt.md
 skills:
-  - brainstorming
-  - plans-and-specs
-  - writing-plans
-  - simplify
-  - systematic-debugging
-  - dispatching-parallel-agents
-  - subagent-driven-development
-  - test-driven-development
-  - creating-skills
-  - writing-skills
-  - verification-before-completion
----
+- brainstorming
+- plans-and-specs
+- writing-plans
+- simplify
+- systematic-debugging
+- dispatching-parallel-agents
+- subagent-driven-development
+- test-driven-development
+- skill-creator
+- writing-skills
+- verification-before-completion
 
+
+---
 ## Goal
 
 Manage the whole `prompts/` prompt lifecycle end to end: catalog, dedupe, consolidate reusable context into crisp shared markdown templates, update every affected prompt to use those templates, ensure all prompt references resolve, create any missing skills or scripts referenced by prompts, and validate the prompt inventory is clean.

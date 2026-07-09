@@ -1,7 +1,6 @@
 ---
-description: >
-  'Hermes AI orchestration agent for multi-step workflows, delegation, platform
-  integrations, hooks, plugins, and memory-intensive tasks via ACPX'
+name: "Hermes"
+description: "Hermes AI orchestration agent for multi-step workflows, delegation, platform integrations, hooks, plugins, and memory-intensive tasks via ACPX"
 tools: ["terminal", "search", "filesystem", "web/fetch", "browser", "image_gen"]
 model: "openrouter/owl-alpha (adminbot profile)"
 ---

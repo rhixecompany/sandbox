@@ -1,11 +1,18 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "java-docs"
-title: "Java Documentation (Javadoc)"
-description: "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation."
+name: java-docs
+title: Java Documentation (Javadoc)
+description: Ensure that Java types are documented with Javadoc comments and follow
+  best practices for documentation.
 trigger: /java-docs
 tags:
   - documentation
@@ -13,12 +20,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
-  - java
-  - documentation
-  - javadoc
----
 
+
+---
 # Java Documentation (Javadoc) Best Practices
 
 - Public and protected members should be documented with Javadoc comments.

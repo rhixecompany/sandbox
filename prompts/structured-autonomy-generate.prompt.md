@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "sa-generate"
-title: "Sa Generate"
-description: "Structured Autonomy Implementation Generator Prompt"
+name: sa-generate
+title: Sa Generate
+description: Structured Autonomy Implementation Generator Prompt
 trigger: /sa-generate
 tags:
   - generator
@@ -12,9 +14,9 @@ tags:
   - prompts
   - specification
   - typescript
-  - hermes
----
 
+
+---
 ## Goal
 
 Structured Autonomy Implementation Generator Prompt.

@@ -1,11 +1,18 @@
 ---
-toolsets: ["search", "runCommands", "terminalCommand", "edit/editFiles"]
+
+
+toolsets:
+- search
+- runCommands
+- terminalCommand
+- edit/editFiles
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: CentOS Linux Triage
 name: centos-linux-triage
-description: "Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld."
+description: Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware
+  practices, and firewalld.
 tags:
   - debugging
   - fix
@@ -14,10 +21,10 @@ tags:
   - ml
   - prompts
   - typescript
-  - debugging
-  - linux
----
+trigger: /centos-linux-triage
 
+
+---
 # CentOS Linux Triage
 
 You are a CentOS Linux expert. Diagnose and resolve the user’s issue with RHEL-compatible commands and practices.

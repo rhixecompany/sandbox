@@ -1,10 +1,17 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Project Workflow Documentation Generator
 name: project-workflow-analysis-blueprint-generator
-description: "Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures."
+description: Comprehensive technology-agnostic prompt generator for documenting end-to-end
+  application workflows. Automatically detects project architecture patterns, technology
+  stacks, and data flow patterns to generate detailed implementation blueprints covering
+  entry points, service layers, data access, error handling, and testing approaches
+  across multiple technologies including .NET, Java/Spring, React, and microservices
+  architectures.
 tags:
   - architecture
   - csharp
@@ -20,19 +27,10 @@ tags:
   - testing
   - typescript
   - workflow
-  - architecture
-  - csharp
-  - documentation
-  - dotnet
-  - java
-  - linux
-  - orchestration
-  - react
-  - testing
-  - workflow
+trigger: /project-workflow-analysis-blueprint-generator
+
 
 ---
-
 ## Goal
 
 Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures.

@@ -1,32 +1,33 @@
 ---
+
+
 toolsets:
-  - githubRepo
-  - github
-  - get_me
-  - get_pull_request
-  - get_pull_request_comments
-  - get_pull_request_diff
-  - get_pull_request_files
-  - get_pull_request_reviews
-  - get_pull_request_status
-  - list_pull_requests
-  - request_copilot_review
+- githubRepo
+- github
+- get_me
+- get_pull_request
+- get_pull_request_comments
+- get_pull_request_diff
+- get_pull_request_files
+- get_pull_request_reviews
+- get_pull_request_status
+- list_pull_requests
+- request_copilot_review
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: My Pull Requests
 name: my-pull-requests
-description: "List my pull requests in the current repository"
+description: List my pull requests in the current repository
 tags:
   - ml
   - prompts
   - specification
   - typescript
-  - documentation
-  - planning
-  - specification
----
+trigger: /my-pull-requests
 
+
+---
 ## Goal
 
 List my pull requests in the current repository.

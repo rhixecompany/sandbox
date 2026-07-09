@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "generator-orchestrator"
-title: "Generator Orchestrator"
-description: "Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation."
+name: generator-orchestrator
+title: Generator Orchestrator
+description: Dependency-aware orchestrator prompt for root blueprint and MCP generator
+  prompts with strict stage gates and consistency validation.
 tags:
   - architecture
   - backend
@@ -15,10 +18,10 @@ tags:
   - prompts
   - typescript
   - workflow
-  - hermes
-  - codegen
----
+trigger: /generator-orchestrator
 
+
+---
 ## Description
 
 ### Goal

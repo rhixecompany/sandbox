@@ -1,12 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: workspace-consolidate
 title: Workspace Consolidation — Scripts, Patches, Docs
-description:
-    Consolidate scripts, patches, and documentation across the workspace with bash
-    migration and audit workflows.
+description: Consolidate scripts, patches, and documentation across the workspace
+  with bash migration and audit workflows.
 trigger: /workspace-consolidate
 tags:
   - documentation
@@ -15,47 +16,38 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - consolidation
-  - patching
-  - documentation
-  - bash-migration
-  - audit
 dependencies:
-    - prompt:context-map
-    - prompt:update-implementation-plan
-    - skill:brainstorming
-    - skill:plans-and-specs
-    - skill:dispatching-parallel-agents
-    - skill:subagent-driven-development
-    - skill:systematic-debugging
-    - skill:simplify
-    - skill:acpx-executor
-    - skill:git-patch-management
-    - skill:project-consolidation
-    - tool:terminal
-    - tool:search_files
+- prompt:context-map
+- prompt:update-implementation-plan
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:git-patch-management
+- skill:project-consolidation
+- tool:terminal
+- tool:search_files
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
-    - prompt:context-map — Build dependency and file context before
-      consolidation edits
-    - brainstorming — Explore consolidation strategies
-    - plans-and-specs — Create migration plan with specs
-    - dispatching-parallel-agents — Process work in parallel batches
-    - subagent-driven-development — Delegate per-task execution
-    - systematic-debugging — Detect script issues and edge cases
-    - simplify — Consolidate workspace structure
-    - acpx-executor — Execute a prompt via any ACPX provider
-    - git-patch-management — Manage Git patch files across multi-project
-      workspaces
-    - project-consolidation — Five-phase workflow for cleaning up and
-      restructuring a project
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- acpx-executor
+- git-patch-management
+- project-consolidation
+
 
 ---
-
 ## Skills Required
 
 > See full table with per-domain purposes:

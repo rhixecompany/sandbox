@@ -1,15 +1,16 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Test Providers & Models
 trigger: /test-providers-models
 name: test-providers-models
-description: >-
-  Inventory all authorized LLM providers from hermes auth list, discover their
-  free-tier models, run standardized benchmarks (reasoning, tool calling,
-  knowledge), and produce a cross-provider comparison report. Covers 6
-  providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter.
+description: 'Inventory all authorized LLM providers from hermes auth list, discover
+  their free-tier models, run standardized benchmarks (reasoning, tool calling, knowledge),
+  and produce a cross-provider comparison report. Covers 6 providers: copilot, huggingface,
+  nous, ollama-cloud, openai-api, openrouter.'
 tags:
   - ai-assistant
   - architecture
@@ -19,31 +20,20 @@ tags:
   - testing
   - typescript
   - workflow
-  - hermes
-  - providers
-  - models
-  - benchmark
-  - free-tier
-  - auth-inventory
-  - copilot
-  - huggingface
-  - nous
-  - ollama
-  - openai
-  - openrouter
 dependencies:
-  - skill:test-providers-models
-  - skill:using-superpowers
-  - skill:plans-and-specs
-  - skill:user-communication-preferences
-  - skill:verification-before-completion
+- skill:test-providers-models
+- skill:using-superpowers
+- skill:plans-and-specs
+- skill:user-communication-preferences
+- skill:verification-before-completion
 skills:
-  - using-superpowers
-  - plans-and-specs
-  - user-communication-preferences
-  - verification-before-completion
----
+- using-superpowers
+- plans-and-specs
+- user-communication-preferences
+- verification-before-completion
 
+
+---
 ## Goal
 Inventory and benchmark the free‑tier LLM models across all authorized providers in Hermes, producing a comparative report that includes performance, rate limits, and recommendations.
 

@@ -1,69 +1,72 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: repo
 title: Repo Research Pipeline
 trigger: /repo
-description: >
-  Research all 14 projects via delegated sub-prompts: web search for similar
-  projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project
-  in crisp markdown. Delegates web research to web-research-pipeline.prompt.md
-  and post-research ops to repo-management.prompt.md.
+description: 'Research all 14 projects via delegated sub-prompts: web search for similar
+  projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in
+  crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
+  ops to repo-management.prompt.md.
+
+  '
 mode: agent
-system: |
-  You are a research orchestrator. Delegate web research to web-research-pipeline
+system: 'You are a research orchestrator. Delegate web research to web-research-pipeline
+
   sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization
+
   or migration — those live in repo-management.prompt.md.
+
+  '
 tags:
-  - ml
+  - architecture
+  - frontend
+  - performance
   - prompts
-  - hermes
-  - repos
-  - research
-  - websearch
-  - documentation
-  - guides
-  - cheatsheets
-  - pipeline
+  - security
+  - typescript
 dependencies:
-  - prompt:context-map
-  - prompt:update-implementation-plan
-  - skill:brainstorming
-  - skill:plans-and-specs
-  - skill:systematic-debugging
-  - skill:context7
-  - skill:spike
-  - skill:writing-skills
-  - skill:content-research-writer
-  - prompt:repo-management
-  - prompt:repo-story-time
-  - prompt:web-research-pipeline
-  - prompt:repo-research-pipeline
+- prompt:context-map
+- prompt:update-implementation-plan
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:systematic-debugging
+- skill:context7
+- skill:spike
+- skill:writing-skills
+- skill:content-research-writer
+- prompt:repo-management
+- prompt:repo-story-time
+- prompt:web-research-pipeline
+- prompt:repo-research-pipeline
 skills:
-  - brainstorming
-  - plans-and-specs
-  - systematic-debugging
-  - context7
-  - spike
-  - writing-skills
-  - content-research-writer
+- brainstorming
+- plans-and-specs
+- systematic-debugging
+- context7
+- spike
+- writing-skills
+- content-research-writer
 metadata:
   hermes:
     related_skills:
-      - brainstorming
-      - plans-and-specs
-      - systematic-debugging
-      - context7
-      - spike
-      - writing-skills
-      - content-research-writer
-      - repo-management
-      - repo-story-time
-      - web-research-pipeline
-      - repo-research-pipeline
----
+    - brainstorming
+    - plans-and-specs
+    - systematic-debugging
+    - context7
+    - spike
+    - writing-skills
+    - content-research-writer
+    - repo-management
+    - repo-story-time
+    - web-research-pipeline
+    - repo-research-pipeline
 
+
+---
 ## Goal
 
 Research each of the 14 projects under `projects/`. For every project:

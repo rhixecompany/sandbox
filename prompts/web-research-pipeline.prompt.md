@@ -1,34 +1,45 @@
 ---
+
+
 trigger: /web-research-pipeline
 name: web-research-pipeline
-title: "Web Research Pipeline (MCP-Enhanced)"
-description: >
-  Search the web, extract full content from discovered pages, and save crisply
-  formatted markdown files — one per source. Delegates to the
-  web-research-pipeline skill for implementation.
+title: Web Research Pipeline (MCP-Enhanced)
+description: 'Search the web, extract full content from discovered pages, and save
+  crisply formatted markdown files — one per source. Delegates to the web-research-pipeline
+  skill for implementation.
+
+  '
 version: 2.0.0
 author: Hermes Agent
 license: MIT
-tags: [hermes, research, web, scraping, mcp]
+tags:
+  - backend
+  - markdown
+  - mcp
+  - playwright
+  - prompts
+  - skills
+  - workflow
 dependencies:
-  - skill:web-research-pipeline
-  - skill:mcp-fetch
-  - skill:firecrawl-scrape
-  - skill:domain-intel
+- skill:web-research-pipeline
+- skill:mcp-fetch
+- skill:firecrawl-scrape
+- skill:domain-intel
 skills:
-  - web-research-pipeline — Core implementation (search → extract → save)
-  - mcp-fetch — Primary URL content extraction (MCP-first)
-  - firecrawl-scrape — JS-rendered page fallback
-  - domain-intel — Optional passive domain recon
+- web-research-pipeline
+- mcp-fetch
+- firecrawl-scrape
+- domain-intel
 metadata:
   hermes:
     related_skills:
-      - web-research-pipeline
-      - mcp-fetch
-      - firecrawl-scrape
-      - domain-intel
----
+    - web-research-pipeline
+    - mcp-fetch
+    - firecrawl-scrape
+    - domain-intel
 
+
+---
 ## Goal
 
 Web search → extract full content → save as formatted markdown. MCP-first approach:

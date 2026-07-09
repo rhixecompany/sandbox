@@ -1,10 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Kotlin MCP Server Project Generator
 name: kotlin-mcp-server-generator
-description: "Generate a complete Kotlin MCP server project with proper structure, dependencies, and implementation using the official io.modelcontextprotocol:kotlin-sdk library."
+description: Generate a complete Kotlin MCP server project with proper structure,
+  dependencies, and implementation using the official io.modelcontextprotocol:kotlin-sdk
+  library.
 tags:
   - backend
   - configuration
@@ -13,12 +17,10 @@ tags:
   - mcp
   - prompts
   - typescript
-  - kotlin
-  - mcp
-  - planning
-  - specification
----
+trigger: /kotlin-mcp-server-generator
 
+
+---
 # Kotlin MCP Server Project Generator
 
 Generate a complete, production-ready Model Context Protocol (MCP) server project in Kotlin.

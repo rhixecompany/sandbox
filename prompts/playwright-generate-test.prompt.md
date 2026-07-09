@@ -1,18 +1,18 @@
 ---
+
+
 license: MIT
 version: 1.0.0
 title: Playwright Generate Test
-name: "playwright-generate-test"
-description: "Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes."
+name: playwright-generate-test
+description: Generate a Playwright test from a scenario, validate it against the app,
+  and iterate until it passes.
 trigger: /playwright-generate-test
-author: "Alexa"
-created: "2026-05-25T10:50:21.952313Z"
+author: Alexa
+created: '2026-05-25T10:50:21.952313Z'
 compatibility:
-  - hermes
-  - copilot
-  - opencode
 mcp_generator: None
-skill_stub: True
+skill_stub: true
 tags:
   - generator
   - ml
@@ -21,13 +21,9 @@ tags:
   - specification
   - testing
   - typescript
-  - documentation
-  - planning
-  - playwright
-  - specification
-  - testing
----
 
+
+---
 ## Goal
 
 Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.

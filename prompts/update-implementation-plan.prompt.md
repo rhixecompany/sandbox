@@ -1,12 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: update-implementation-plan
 name: update-implementation-plan
 trigger: /update-implementation-plan
-description: >-
-  Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
+description: Create or update an implementation plan with new or updated requirements
+  for features, refactoring, package upgrades, design, or infrastructure.
 tags:
   - architecture
   - frontend
@@ -16,19 +18,16 @@ tags:
   - refactoring
   - specification
   - typescript
-  - hermes
-  - copilot
-  - planning
-  - implementation
 dependencies:
-  - skill:writing-plans
-  - skill:plans-and-specs
-  - skill:context-map
+- skill:writing-plans
+- skill:plans-and-specs
+- skill:context-map
 skills:
-  - writing-plans — Author structured implementation plans
-  - plans-and-specs — Plan and spec management
----
+- writing-plans
+- plans-and-specs
 
+
+---
 # update-implementation-plan
 
 > Create or update an implementation plan file with new or updated requirements for features, refactoring, package upgrades, design, architecture, or infrastructure.

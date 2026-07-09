@@ -1,30 +1,29 @@
 ---
+
+
 toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "Apple App Store Reviewer"
-title: "Apple App Store Reviewer"
-description: "Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons."
+name: Apple App Store Reviewer
+title: Apple App Store Reviewer
+description: Serves as a reviewer of the codebase with instructions on looking for
+  Apple App Store optimizations or rejection reasons.
 trigger: /Apple App Store Reviewer
 tags:
   - audit
-  - configuration
-  - data
+  - fix
+  - frontend
+  - ml
   - prompts
+  - rust
+  - security
   - specification
+  - testing
   - typescript
-  - hermes
-  - vscode
-  - execute
-  - read
-  - search
-  - web
-  - upstash/context7/*
-  - agent
-  - todo
----
 
+
+---
 ## Primary Objective
 
 Deliver a **prioritized list** of fixes/improvements that:

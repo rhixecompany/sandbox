@@ -1,13 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: bash-scripts-fix
 title: Bash Scripts Modernization and Consolidation
 trigger: /bash-scripts-fix
-description:
-    Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
-    scripts across the workspace.
+description: Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
+  scripts across the workspace.
 tags:
   - audit
   - fix
@@ -15,42 +16,35 @@ tags:
   - prompts
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - bash
-  - scripts
-  - typescript
-  - automation
-  - refactoring
 dependencies:
-    - prompt:context-map.prompt.md
-    - prompt:update-implementation-plan.prompt.md
-    - skill:brainstorming
-    - skill:plans-and-specs
-    - skill:dispatching-parallel-agents
-    - skill:subagent-driven-development
-    - skill:systematic-debugging
-    - skill:simplify
-    - skill:acpx-executor
-    - skill:script-orchestration
-    - tool:terminal
-    - tool:search_files
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:script-orchestration
+- tool:terminal
+- tool:search_files
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
-    - brainstorming
-    - plans-and-specs
-    - dispatching-parallel-agents
-    - subagent-driven-development
-    - systematic-debugging
-    - simplify
-    - acpx-executor
-    - script-orchestration
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- acpx-executor
+- script-orchestration
+
 
 ---
-
 > Search, identify, catalog, and modernize scripts across the workspace.
 
 ## Goal

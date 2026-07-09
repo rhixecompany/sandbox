@@ -1,4 +1,5 @@
 ---
+name: "Frontend Expert"
 description: Advanced React/Tailwind UI review, accessibility, and performance agent
 model: GPT-4.1 (copilot)
 tools:

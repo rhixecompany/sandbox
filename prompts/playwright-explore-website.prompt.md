@@ -1,18 +1,18 @@
 ---
+
+
 license: MIT
 version: 1.0.0
 title: Playwright Explore Website
-name: "playwright-explore-website"
-description: "Explore a website with Playwright MCP, document core flows, and propose tests from the findings."
+name: playwright-explore-website
+description: Explore a website with Playwright MCP, document core flows, and propose
+  tests from the findings.
 trigger: /playwright-explore-website
-author: "Alexa"
-created: "2026-05-25T10:50:21.952313Z"
+author: Alexa
+created: '2026-05-25T10:50:21.952313Z'
 compatibility:
-  - hermes
-  - copilot
-  - opencode
 mcp_generator: None
-skill_stub: True
+skill_stub: true
 tags:
   - mcp
   - ml
@@ -21,12 +21,9 @@ tags:
   - specification
   - testing
   - typescript
-  - documentation
-  - planning
-  - playwright
-  - specification
----
 
+
+---
 ## Goal
 
 Explore a website with Playwright MCP, document core flows, and propose tests from the findings.

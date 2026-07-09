@@ -1,23 +1,24 @@
 ---
-toolsets: ["codebase"]
+
+
+toolsets:
+- codebase
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: What Context Do You Need?
 name: what-context-needed
-description: "Ask Copilot what files it needs to see before answering a question"
+description: Ask Copilot what files it needs to see before answering a question
 tags:
   - ai-assistant
   - ml
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - documentation
-  - planning
-  - specification
----
+trigger: /what-context-needed
 
+
+---
 ## Goal
 
 Ask Copilot what files it needs to see before answering a question.

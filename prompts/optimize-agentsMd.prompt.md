@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Optimize Agentsmd
 name: optimize-agentsmd
-description: "optimize-agentsMd.prompt"
+description: optimize-agentsMd.prompt
 tags:
   - agents
   - ml
@@ -13,17 +15,10 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - documentation
-  - markdown
-  - optimization
-  - orchestration
-  - performance
-  - planning
-  - specification
-  - workflow
----
+trigger: /optimize-agentsmd
 
+
+---
 ## Goal
 
 Use this prompt to handle the optimize agentsmd workflow.

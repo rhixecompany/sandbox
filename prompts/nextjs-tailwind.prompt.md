@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "nextjs-tailwind"
-title: "Nextjs Tailwind"
-description: "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards."
+name: nextjs-tailwind
+title: Nextjs Tailwind
+description: Comprehensive Next.js and Tailwind implementation prompt aligned to project
+  standards.
 trigger: /nextjs-tailwind
 tags:
   - architecture
@@ -18,9 +21,9 @@ tags:
   - prompts
   - security
   - typescript
-  - hermes
----
 
+
+---
 ## Goal
 Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
 

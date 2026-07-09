@@ -1,27 +1,30 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - githubRepo
-  - openSimpleBrowser
-  - problems
-  - runTasks
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- githubRepo
+- openSimpleBrowser
+- problems
+- runTasks
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update LLMs.txt File
 name: update-llms
-description: "Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/"
+description: Update the llms.txt file in the root folder to reflect changes in documentation
+  or specifications following the llms.txt specification at https://llmstxt.org/
 tags:
   - documentation
   - maintenance
@@ -29,11 +32,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - planning
-  - specification
----
+trigger: /update-llms
 
+
+---
 ## Goal
 
 Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/.

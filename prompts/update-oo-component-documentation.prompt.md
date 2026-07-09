@@ -1,27 +1,30 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - extensions
-  - web/fetch
-  - githubRepo
-  - openSimpleBrowser
-  - problems
-  - runTasks
-  - search
-  - search/searchResults
-  - runCommands/terminalLastCommand
-  - runCommands/terminalSelection
-  - testFailure
-  - usages
-  - vscodeAPI
+- changes
+- search/codebase
+- edit/editFiles
+- extensions
+- web/fetch
+- githubRepo
+- openSimpleBrowser
+- problems
+- runTasks
+- search
+- search/searchResults
+- runCommands/terminalLastCommand
+- runCommands/terminalSelection
+- testFailure
+- usages
+- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Update Oo Component Documentation
 name: update-oo-component-documentation
-description: "Update existing object-oriented component documentation following industry best practices and architectural documentation standards."
+description: Update existing object-oriented component documentation following industry
+  best practices and architectural documentation standards.
 tags:
   - architecture
   - documentation
@@ -30,13 +33,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - documentation
-  - linux
-  - planning
-  - specification
----
+trigger: /update-oo-component-documentation
 
+
+---
 ## Goal
 
 Update existing object-oriented component documentation following industry best practices and architectural documentation standards.

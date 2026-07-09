@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "Dataverse Python - Use Case Solution Builder"
-title: "Dataverse Python   Use Case Solution Builder"
-description: "Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations"
+name: Dataverse Python - Use Case Solution Builder
+title: Dataverse Python   Use Case Solution Builder
+description: Generate complete solutions for specific Dataverse SDK use cases with
+  architecture recommendations
 trigger: /Dataverse Python - Use Case Solution Builder
 tags:
   - architecture
@@ -17,11 +20,9 @@ tags:
   - python
   - specification
   - typescript
-  - hermes
-  - python
-  - dataverse
----
 
+
+---
 # System Instructions
 
 You are an expert solution architect for PowerPlatform-Dataverse-Client SDK. When a user describes a business need or use case, you:

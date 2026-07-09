@@ -1,23 +1,25 @@
 ---
-toolsets: ["codebase", "terminalCommand"]
+
+
+toolsets:
+- codebase
+- terminalCommand
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Refactor Plan
 name: refactor-plan
-description: "Plan a multi-file refactor with proper sequencing and rollback steps"
+description: Plan a multi-file refactor with proper sequencing and rollback steps
 tags:
   - ml
   - prompts
   - refactoring
   - specification
   - typescript
-  - documentation
-  - planning
-  - refactoring
-  - specification
----
+trigger: /refactor-plan
 
+
+---
 ## Goal
 
 Plan a multi-file refactor with proper sequencing and rollback steps.

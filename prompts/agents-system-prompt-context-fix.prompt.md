@@ -1,13 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Agents System Prompt Context Fix
 name: agents-system-prompt-context-fix
 trigger: /agents-system-prompt-context-fix
-description: >-
-  Create/update agent context files across project and subprojects, then audit
-  and enhance VS Code workspace configuration.
+description: Create/update agent context files across project and subprojects, then
+  audit and enhance VS Code workspace configuration.
 tags:
   - agents
   - architecture
@@ -17,31 +18,25 @@ tags:
   - generator
   - prompts
   - typescript
-  - hermes
-  - copilot
-  - opencode
-  - agents
-  - context
-  - vscode
-  - architecture
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:plans-and-specs
-  - skill:architecture-blueprint-generator
-  - skill:folder-structure-blueprint-generator
-  - skill:technology-stack-blueprint-generator
-  - skill:vscode-workspace-configurator
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:plans-and-specs
+- skill:architecture-blueprint-generator
+- skill:folder-structure-blueprint-generator
+- skill:technology-stack-blueprint-generator
+- skill:vscode-workspace-configurator
 skills:
-  - using-superpowers — Establishes workflow foundation
-  - user-communication-preferences — Loads user prefs for execution style
-  - plans-and-specs — Creates implementation plan from goal
-  - architecture-blueprint-generator — Generates architecture context
-  - folder-structure-blueprint-generator — Documents folder structure
-  - technology-stack-blueprint-generator — Documents tech stack
-  - vscode-workspace-configurator — Audits and enhances VS Code config
----
+- using-superpowers
+- user-communication-preferences
+- plans-and-specs
+- architecture-blueprint-generator
+- folder-structure-blueprint-generator
+- technology-stack-blueprint-generator
+- vscode-workspace-configurator
 
+
+---
 # Agents System Prompt Context Fix
 
 > Creates and updates agent context files across the project and subprojects, then audits and enhances VS Code workspace configuration.

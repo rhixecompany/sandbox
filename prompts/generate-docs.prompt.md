@@ -1,29 +1,31 @@
 ---
+
+
 toolsets:
-  - vscode
-  - execute
-  - read
-  - agent
-  - edit
-  - search
-  - web
-  - github/*
-  - browser
-  - vscode.mermaid-chat-features/renderMermaidDiagram
-  - github.vscode-pull-request-github/issue_fetch
-  - github.vscode-pull-request-github/labels_fetch
-  - github.vscode-pull-request-github/notification_fetch
-  - github.vscode-pull-request-github/doSearch
-  - github.vscode-pull-request-github/activePullRequest
-  - github.vscode-pull-request-github/pullRequestStatusChecks
-  - github.vscode-pull-request-github/openPullRequest
-  - todo
+- vscode
+- execute
+- read
+- agent
+- edit
+- search
+- web
+- github/*
+- browser
+- vscode.mermaid-chat-features/renderMermaidDiagram
+- github.vscode-pull-request-github/issue_fetch
+- github.vscode-pull-request-github/labels_fetch
+- github.vscode-pull-request-github/notification_fetch
+- github.vscode-pull-request-github/doSearch
+- github.vscode-pull-request-github/activePullRequest
+- github.vscode-pull-request-github/pullRequestStatusChecks
+- github.vscode-pull-request-github/openPullRequest
+- todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Generate Docs
 name: generate-docs
-description: "Generate documentation for code or APIs."
+description: Generate documentation for code or APIs.
 tags:
   - api
   - documentation
@@ -33,14 +35,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - documentation
-  - nextjs
-  - planning
-  - specification
-  - typescript
----
+trigger: /generate-docs
 
+
+---
 ## Goal
 
 Generate documentation for code or APIs.

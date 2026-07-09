@@ -1,32 +1,32 @@
 ---
-toolsets: ["search/codebase", "edit/editFiles", "search"]
+
+
+toolsets:
+- search/codebase
+- edit/editFiles
+- search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-title: "BigQuery Pipeline Audit: Cost, Safety and Production Readiness"
+title: 'BigQuery Pipeline Audit: Cost, Safety and Production Readiness'
 name: bigquery-pipeline-audit
-description: "Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations."
+description: Audits Python + BigQuery pipelines for cost safety, idempotency, and
+  production readiness. Returns a structured report with exact patch locations.
 tags:
+  - api
   - audit
-  - data
+  - configuration
   - database
-  - fix
   - ml
   - prompts
   - python
   - security
   - sql
   - typescript
-  - ci-cd
-  - database
-  - github
-  - orchestration
-  - python
-  - security
-  - sql
-  - workflow
----
+trigger: /bigquery-pipeline-audit
 
+
+---
 ## A) COST EXPOSURE: What will actually get billed?
 
 Locate every BigQuery job trigger (`client.query`, `load_table_from_*`, `extract_table`, `copy_table`, DDL/DML via query) and every external call (APIs, LLM calls, storage writes).

@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "run-session-agentsmd-workflow"
-title: "Run Agents.md Workflow"
-description: "Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting."
+name: run-session-agentsmd-workflow
+title: Run Agents.md Workflow
+description: 'Execute the AGENTS.md session workflow: introspection, tool discovery,
+  profile matching, and reporting.'
 trigger: /run-session-agentsmd-workflow
 tags:
   - agents
@@ -13,12 +16,9 @@ tags:
   - specification
   - typescript
   - workflow
-  - hermes
-  - agents
-  - workflow
-  - session
----
 
+
+---
 ## Goal
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
 

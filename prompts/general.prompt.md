@@ -1,59 +1,55 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: general
 title: General Development Workflow
 trigger: /general
-description:
-    General development workflow for analysis, planning, implementation, and
-    verification with context mapping and AI-assisted execution.
+description: General development workflow for analysis, planning, implementation,
+  and verification with context mapping and AI-assisted execution.
 tags:
   - planning
   - prompts
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - opencode
-  - development
-  - automation
 dependencies:
-    - prompt:context-map.prompt.md
-    - prompt:update-implementation-plan.prompt.md
-    - skill:brainstorming
-    - skill:plans-and-specs
-    - skill:dispatching-parallel-agents
-    - skill:subagent-driven-development
-    - skill:systematic-debugging
-    - skill:simplify
-    - skill:context7
-    - skill:plan
-    - skill:writing-skills
-    - skill:acpx-executor
-    - tool:terminal
-    - tool:search_files
-    - tool:web_search
-    - tool:delegate_task
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:context7
+- skill:plan
+- skill:writing-skills
+- skill:acpx-executor
+- tool:terminal
+- tool:search_files
+- tool:web_search
+- tool:delegate_task
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
-    - context-map
-    - brainstorming
-    - plans-and-specs
-    - dispatching-parallel-agents
-    - subagent-driven-development
-    - systematic-debugging
-    - simplify
-    - context7
-    - plan
-    - writing-skills
-    - acpx-executor
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- context7
+- plan
+- writing-skills
+- acpx-executor
+
 
 ---
-
 > General development workflow with planning, automation, and verification.
 
 ## Goal

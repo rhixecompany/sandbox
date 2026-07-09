@@ -1,23 +1,26 @@
 ---
+
+
 toolsets:
-  - edit
-  - search
-  - runCommands
-  - runTasks
-  - think
-  - changes
-  - testFailure
-  - openSimpleBrowser
-  - web/fetch
-  - githubRepo
-  - todos
-  - search
+- edit
+- search
+- runCommands
+- runTasks
+- think
+- changes
+- testFailure
+- openSimpleBrowser
+- web/fetch
+- githubRepo
+- todos
+- search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Suggest Awesome GitHub Copilot Instructions
 name: suggest-awesome-github-copilot-instructions
-description: "Find GitHub Copilot instruction files that add coverage the repo lacks and flag local duplicates or outdated copies."
+description: Find GitHub Copilot instruction files that add coverage the repo lacks
+  and flag local duplicates or outdated copies.
 tags:
   - ai-assistant
   - git
@@ -25,14 +28,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - ci-cd
-  - documentation
-  - github
-  - planning
-  - specification
----
+trigger: /suggest-awesome-github-copilot-instructions
 
+
+---
 ## Goal
 
 Suggest GitHub Copilot instruction files that add coverage the repo lacks, and flag local duplicates or outdated copies.

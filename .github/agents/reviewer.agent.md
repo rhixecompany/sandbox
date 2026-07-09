@@ -1,4 +1,5 @@
 ---
+name: "Reviewer"
 description: "Code review assistant focusing on high-risk logic"
 tools: ["search", "githubRepo", "changes"]
 model: "Auto (copilot)"

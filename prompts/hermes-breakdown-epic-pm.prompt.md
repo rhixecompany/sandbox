@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Hermes Breakdown Epic Pm
 name: hermes-breakdown-epic-pm
-description: "Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request."
+description: 'Hermes-equivalent: author a complete Epic PRD from a high-level epic
+  idea or request.'
 tags:
   - ai-assistant
   - frontend
@@ -13,15 +16,10 @@ tags:
   - prompts
   - specification
   - typescript
-  - agile
-  - ai-assistant
-  - authentication
-  - documentation
-  - planning
-  - security
-  - specification
----
+trigger: /hermes-breakdown-epic-pm
 
+
+---
 ## Goal
 
 Produce a complete Epic PRD that is ready for downstream feature planning.

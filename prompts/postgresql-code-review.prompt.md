@@ -1,12 +1,21 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: PostgreSQL Code Review Assistant
 name: postgresql-code-review
-description: "PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS)."
-tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
+description: PostgreSQL-specific code review assistant focusing on PostgreSQL best
+  practices, anti-patterns, and unique quality standards. Covers JSONB operations,
+  array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive
+  security features like Row Level Security (RLS).
+tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
   - architecture
   - audit
@@ -16,17 +25,10 @@ tags:
   - specification
   - sql
   - typescript
-  - architecture
-  - code-review
-  - database
-  - documentation
-  - performance
-  - planning
-  - security
-  - specification
-  - sql
----
+trigger: /postgresql-code-review
 
+
+---
 ## Goal
 
 PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).

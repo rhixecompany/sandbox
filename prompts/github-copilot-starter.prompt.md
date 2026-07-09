@@ -1,18 +1,15 @@
 ---
+
+
 toolsets: []
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: React Development Guidelines
-name: github-copilot-starter
-  - edit
-  - githubRepo
-  - changes
-  - problems
-  - search
-  - runCommands
+name: github-copilot-starter - edit - githubRepo - changes - problems - search - runCommands
   - web/fetch
-description: "Set up complete GitHub Copilot configuration for a new project based on technology stack"
+description: Set up complete GitHub Copilot configuration for a new project based
+  on technology stack
 tags:
   - ai-assistant
   - configuration
@@ -23,16 +20,11 @@ tags:
   - react
   - specification
   - typescript
-  - ai-assistant
-  - ci-cd
-  - documentation
-  - github
-  - linux
-  - planning
-  - react
-  - specification
----
+trigger: /github-copilot-starter - edit - githubRepo - changes - problems - search
+  - runCommands - web/fetch
 
+
+---
 ## Goal
 
 Set up complete GitHub Copilot configuration for a new project based on technology stack.

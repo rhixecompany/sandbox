@@ -1,23 +1,22 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Create Spring Boot Java project prompt
 name: create-spring-boot-java-project
-description: "Create Spring Boot Java Project Skeleton"
+description: Create Spring Boot Java Project Skeleton
 tags:
   - docker
   - generator
   - java
   - prompts
   - spring
-  - docker
-  - documentation
-  - generator
-  - java
-  - markdown
----
+trigger: /create-spring-boot-java-project
 
+
+---
 # Create Spring Boot Java project prompt
 
 - Please make sure you have the following software installed on your system:

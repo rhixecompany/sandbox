@@ -1,10 +1,12 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "execute-multi-agent-research"
-title: "2026 06 16_Multi Agent Research"
-description: "Execute the 2026 06 16_Multi Agent Research plan."
+name: execute-multi-agent-research
+title: 2026 06 16_Multi Agent Research
+description: Execute the 2026 06 16_Multi Agent Research plan.
 trigger: /execute-multi-agent-research
 tags:
   - agents
@@ -13,11 +15,9 @@ tags:
   - frontend
   - prompts
   - typescript
-  - hermes
-  - plan
-  - execute
----
 
+
+---
 ## Goal
 Execute the plan at `.hermes/plans/2026-06-16_multi-agent-research.md`.
 

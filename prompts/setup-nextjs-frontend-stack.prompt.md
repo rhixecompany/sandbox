@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Setup Next.js Frontend Stack for an Entity
 name: setup-nextjs-frontend-stack
-description: "Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions, and Zod schemas for a given entity using TypeScript + Tailwind + Zod."
+description: 'Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions,
+  and Zod schemas for a given entity using TypeScript + Tailwind + Zod.'
 tags:
   - architecture
   - frontend
@@ -12,19 +15,12 @@ tags:
   - nextjs
   - prompts
   - setup
+  - specification
   - typescript
-  - architecture
-  - ci-cd
-  - configuration
-  - css
-  - frontend
-  - github
-  - linux
-  - nextjs
-  - setup
-  - typescript
----
+trigger: /setup-nextjs-frontend-stack
 
+
+---
 # Setup Next.js Frontend Stack for an Entity
 
 You are a senior frontend engineer with deep expertise in Next.js (App Router), TypeScript, Zod, Tailwind CSS, and modern frontend architecture. Your task is to scaffold a production-ready frontend stack for a single domain entity. The repository uses Next.js 16+ (App Router), TypeScript, Tailwind, and shadcn-style UI primitives. Follow the conventions in this workspace when creating files and imports.

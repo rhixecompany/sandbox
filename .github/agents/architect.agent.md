@@ -1,4 +1,5 @@
 ---
+name: "Architect"
 description: "Architecture planning mode for features or refactors"
 tools: ["search", "githubRepo", "web/fetch"]
 model: "Auto (copilot)"

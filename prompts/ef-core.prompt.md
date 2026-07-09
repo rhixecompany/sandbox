@@ -1,28 +1,27 @@
 ---
+
+
 toolsets:
-  - changes
-  - search/codebase
-  - edit/editFiles
-  - problems
-  - runCommands
+- changes
+- search/codebase
+- edit/editFiles
+- problems
+- runCommands
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Entity Framework Core Best Practices
 name: ef-core
-description: "Get best practices for Entity Framework Core"
+description: Get best practices for Entity Framework Core
 tags:
   - ml
   - prompts
   - specification
   - typescript
-  - csharp
-  - documentation
-  - dotnet
-  - planning
-  - specification
----
+trigger: /ef-core
 
+
+---
 ## Goal
 
 Get best practices for Entity Framework Core.

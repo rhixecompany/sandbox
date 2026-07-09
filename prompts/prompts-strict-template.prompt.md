@@ -1,10 +1,13 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "prompts-strict-template"
-title: "Prompts Strict Template"
-description: "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules."
+name: prompts-strict-template
+title: Prompts Strict Template
+description: Comprehensive prompt for enforcing strict .prompt.md template structure
+  and formatting rules.
 trigger: /prompts-strict-template
 tags:
   - audit
@@ -15,13 +18,9 @@ tags:
   - prompts
   - skills
   - typescript
-  - hermes
-  - prompts
-  - template
-  - enforce
-  - format
----
 
+
+---
 ## Goal
 Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
 

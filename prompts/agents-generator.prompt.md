@@ -1,40 +1,32 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Agents Generator
 name: agents-generator
-description: "Technology-agnostic blueprint generator for creating comprehensive AGENTS.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions."
+description: Technology-agnostic blueprint generator for creating comprehensive AGENTS.md
+  files that guide GitHub Copilot to produce code consistent with project standards,
+  architecture patterns, and exact technology versions by analyzing existing codebase
+  patterns and avoiding assumptions.
 tags:
   - agents
-  - ai-assistant
   - architecture
   - data
   - debugging
   - frontend
   - generator
-  - git
   - ml
   - prompts
   - specification
   - testing
   - typescript
   - workflow
-  - agents
-  - ai-assistant
-  - architecture
-  - ci-cd
-  - debugging
-  - documentation
-  - github
-  - linux
-  - markdown
-  - orchestration
-  - planning
-  - specification
-  - workflow
----
+trigger: /agents-generator
 
+
+---
 Analyze this codebase to generate or update `AGENTS.md` for guiding AI coding agents.
 
 Focus on discovering the essential knowledge that would help an AI agents be immediately productive in this codebase. Consider aspects like:

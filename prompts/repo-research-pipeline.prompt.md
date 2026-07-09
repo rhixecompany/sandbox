@@ -1,37 +1,49 @@
 ---
+
+
 trigger: /repo-research-pipeline
 name: repo-research-pipeline
-title: "Repo Research Pipeline (MCP-Enhanced)"
-description: >
-  Structured workflow for executing web research across multiple projects
-  and writing actionable RESEARCH_REPORT.md files. Delegates to the
-  repo-research-pipeline skill and web-research-pipeline skill.
+title: Repo Research Pipeline (MCP-Enhanced)
+description: 'Structured workflow for executing web research across multiple projects
+  and writing actionable RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline
+  skill and web-research-pipeline skill.
+
+  '
 version: 2.0.0
 author: Hermes Agent
 license: MIT
-tags: [hermes, research, repo, github, mcp]
+tags:
+  - frontend
+  - generator
+  - git
+  - mcp
+  - prompts
+  - skills
+  - typescript
+  - workflow
 dependencies:
-  - skill:repo-research-pipeline
-  - skill:web-research-pipeline
-  - skill:mcp-github
-  - skill:mcp-fetch
-  - skill:domain-intel
+- skill:repo-research-pipeline
+- skill:web-research-pipeline
+- skill:mcp-github
+- skill:mcp-fetch
+- skill:domain-intel
 skills:
-  - repo-research-pipeline — Core multi-project research workflow
-  - web-research-pipeline — Per-project web search and extraction
-  - mcp-github — GitHub repo/code/issue search
-  - mcp-fetch — Documentation extraction
-  - domain-intel — Passive domain recon
+- repo-research-pipeline
+- web-research-pipeline
+- mcp-github
+- mcp-fetch
+- domain-intel
 metadata:
   hermes:
     related_skills:
-      - repo-research-pipeline
-      - web-research-pipeline
-      - mcp-github
-      - mcp-fetch
-      - domain-intel
----
+    - repo-research-pipeline
+    - web-research-pipeline
+    - mcp-github
+    - mcp-fetch
+    - domain-intel
 
+
+---
 ## Goal
 
 Run research across all project repos and produce RESEARCH_REPORT.md files

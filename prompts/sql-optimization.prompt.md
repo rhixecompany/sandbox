@@ -1,12 +1,21 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: SQL Performance Optimization Assistant
 name: sql-optimization
-description: "Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance."
-tested_with: "GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025"
+description: Universal SQL performance optimization assistant for comprehensive query
+  tuning, indexing strategies, and database performance analysis across all SQL databases
+  (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination
+  optimization, batch operations, and performance monitoring guidance.
+tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
   - backend
   - data
@@ -17,15 +26,10 @@ tags:
   - specification
   - sql
   - typescript
-  - database
-  - documentation
-  - drizzle
-  - performance
-  - planning
-  - specification
-  - sql
----
+trigger: /sql-optimization
 
+
+---
 ## Goal
 
 Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance.

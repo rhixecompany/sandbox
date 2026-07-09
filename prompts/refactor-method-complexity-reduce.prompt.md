@@ -1,29 +1,30 @@
 ---
-toolsets: []
+
+
+toolsets:
+- search/changes
+- search/codebase
+- edit/editFiles
+- read/problems
+- execute/runTests
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: "refactor-method-complexity-reduce"
-title: "Refactor Method Complexity Reduce"
-description: "Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods."
+name: refactor-method-complexity-reduce
+title: Refactor Method Complexity Reduce
+description: Refactor given method `${input:methodName}` to reduce its cognitive complexity
+  to `${input:complexityThreshold}` or below, by extracting helper methods.
 trigger: /refactor-method-complexity-reduce
-argument-hint: "methodName=..., complexityThreshold=15"
+argument-hint: methodName=..., complexityThreshold=15
 tags:
   - ml
   - prompts
   - refactoring
   - specification
   - typescript
-  - hermes
-  - refactoring
-toolsets:
-  - search/changes
-  - search/codebase
-  - edit/editFiles
-  - read/problems
-  - execute/runTests
----
 
+
+---
 ## Goal
 
 Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.

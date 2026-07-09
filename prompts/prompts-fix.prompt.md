@@ -1,11 +1,14 @@
 ---
+
+
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 name: prompts-fix
 title: prompts Sync and Deduplication
 trigger: /prompts-fix
-description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific validation.
+description: Sync and deduplicate prompt files across Hermes and Copilot with dependency
+  mapping and platform-specific validation.
 tags:
   - ai-assistant
   - fix
@@ -14,25 +17,22 @@ tags:
   - specification
   - typescript
   - workflow
-  - hermes
-  - copilot
-  - prompts
-  - sync
 dependencies:
-    - prompt:context-map.prompt.md
-    - prompt:update-implementation-plan.prompt.md
-    - prompt:skills-fix.prompt.md
-    - skill:brainstorming
-    - skill:plans-and-specs
-    - skill:dispatching-parallel-agents
-    - skill:subagent-driven-development
-    - skill:systematic-debugging
-    - skill:simplify
-    - skill:acpx-executor
-    - skill:hermes-agent
-    - skill:copilot-cli-quickstart
----
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- prompt:skills-fix.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:hermes-agent
+- skill:copilot-cli-quickstart
 
+
+---
 ## Goal
 
 Sync prompt files across Hermes and Copilot without losing trigger names or platform-specific behavior.

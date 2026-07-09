@@ -1,27 +1,39 @@
 ---
+
+
 trigger: /repo-story-time
 name: repo-story-time
-title: "Repository Analysis: Story from Git History"
-description: >
-  Generate a comprehensive repository summary and narrative story from
+title: 'Repository Analysis: Story from Git History'
+description: 'Generate a comprehensive repository summary and narrative story from
   commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
+
+  '
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags: [hermes, repos, documentation, analysis]
+tags:
+  - architecture
+  - generator
+  - git
+  - go
+  - ml
+  - prompts
+  - typescript
+  - workflow
 dependencies:
-  - skill:code-wiki
-  - skill:writing-clearly-and-concisely
+- skill:code-wiki
+- skill:writing-clearly-and-concisely
 skills:
-  - code-wiki — Generate wiki docs + diagrams for any codebase
-  - writing-clearly-and-concisely — Edit documentation for clarity
+- code-wiki
+- writing-clearly-and-concisely
 metadata:
   hermes:
     related_skills:
-      - code-wiki
-      - writing-clearly-and-concisely
----
+    - code-wiki
+    - writing-clearly-and-concisely
 
+
+---
 ## Goal
 
 Transform any repository's git history into two deliverables:

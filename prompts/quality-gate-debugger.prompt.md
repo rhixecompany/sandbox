@@ -1,31 +1,34 @@
 ---
+
+
 toolsets:
-  - vscode
-  - execute
-  - read
-  - agent
-  - edit
-  - search
-  - web
-  - github/*
-  - io.github.upstash/context7/*
-  - io.github.vercel/next-devtools-mcp/*
-  - browser
-  - vscode.mermaid-chat-features/renderMermaidDiagram
-  - github.vscode-pull-request-github/issue_fetch
-  - github.vscode-pull-request-github/labels_fetch
-  - github.vscode-pull-request-github/notification_fetch
-  - github.vscode-pull-request-github/doSearch
-  - github.vscode-pull-request-github/activePullRequest
-  - github.vscode-pull-request-github/pullRequestStatusChecks
-  - github.vscode-pull-request-github/openPullRequest
-  - todo
+- vscode
+- execute
+- read
+- agent
+- edit
+- search
+- web
+- github/*
+- io.github.upstash/context7/*
+- io.github.vercel/next-devtools-mcp/*
+- browser
+- vscode.mermaid-chat-features/renderMermaidDiagram
+- github.vscode-pull-request-github/issue_fetch
+- github.vscode-pull-request-github/labels_fetch
+- github.vscode-pull-request-github/notification_fetch
+- github.vscode-pull-request-github/doSearch
+- github.vscode-pull-request-github/activePullRequest
+- github.vscode-pull-request-github/pullRequestStatusChecks
+- github.vscode-pull-request-github/openPullRequest
+- todo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Quality Gate Debugger — Triage & Batch Fix
 name: quality-gate-debugger
-description: "Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues"
+description: Triage quality-gate report files (type-check, lint, test, build) and
+  batch-fix all issues
 tags:
   - audit
   - debugging
@@ -36,11 +39,10 @@ tags:
   - prompts
   - testing
   - typescript
-  - code-quality
-  - debugging
-  - linting
----
+trigger: /quality-gate-debugger
 
+
+---
 # Quality Gate Debugger — Triage & Batch Fix
 
 You are the **Debugger Persona**: a meticulous, systematic senior engineer whose sole mission is to run the quality gate, review report files, triage every warning/error/issue by severity, then implement batch-fixes until all gates pass with zero issues.

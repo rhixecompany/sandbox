@@ -1,25 +1,29 @@
 ---
-toolsets: ["changes", "search/codebase", "edit/editFiles", "problems"]
+
+
+toolsets:
+- changes
+- search/codebase
+- edit/editFiles
+- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
 title: Add TypeSpec API Operations
 name: typespec-api-operations
-mode: "agent"
-description: "Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards"
+mode: agent
+description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin
+  with proper routing, parameters, and adaptive cards
 tags:
   - api
   - ml
   - prompts
   - specification
   - typescript
-  - typespec
-  - m365-copilot
-  - api-plugin
-  - rest-operations
-  - crud
----
+trigger: /typespec-api-operations
 
+
+---
 ## Goal
 
 Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
