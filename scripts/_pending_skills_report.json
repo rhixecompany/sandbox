@@ -1,0 +1,44 @@
+{
+  "applied": [
+    [
+      "create_new",
+      "new_skill",
+      "create",
+      "created C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\new_skill"
+    ],
+    [
+      "patch_patchok",
+      "existing_skill",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\SKILL.md"
+    ],
+    [
+      "write_file_wf",
+      "existing_skill",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\references\\x.md"
+    ]
+  ],
+  "failed": [
+    [
+      "patch_patchbad",
+      "existing_skill",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\SKILL.md"
+    ]
+  ],
+  "skipped": [
+    [
+      "create_exist",
+      "existing_skill",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill"
+    ],
+    [
+      "delete_del",
+      "ghost",
+      "delete",
+      "delete target missing: ghost"
+    ]
+  ]
+}
