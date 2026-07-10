@@ -37,7 +37,7 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#documentation)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#documentation)
 
 - Technical writing for developers and maintainers
 - API and architecture documentation design
@@ -58,7 +58,7 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 - Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Update documentation in the same PR or change as code modifications.

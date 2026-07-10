@@ -75,7 +75,7 @@ Run the strict validator on all prompt front matter. Compare each `frontmatter` 
  - `tags` is a non-empty list.
  - No prompt references a missing skill/script.
  - No duplicate prompt by content or function remains.
- - The shared templates at `prompts/templates/_shared/...` are linked from prompts and loadable.
+ - The shared templates at `templates/_shared/...` are linked from prompts and loadable.
 
 
 ## Phases
@@ -89,8 +89,8 @@ Produce the current prompt inventory without changing files. The inventory is a 
 Collect every prompt artifact under `prompts/`:
 
 - `prompts/*.prompt.md`
-- duplicate directories under `prompts/templates/<prompt-name>/`
-- index `prompts/templates/_index.md` if present
+- duplicate directories under `templates/<prompt-name>/`
+- index `templates/_index.md` if present
 
 ### 1.2 Parse metadata
 
@@ -182,15 +182,15 @@ Scan prompts for repeated blocks across multiple files, especially:
 
 ### 3.2 Create shared templates
 
-Create or update template files under `prompts/templates/_shared/`:
+Create or update template files under `templates/_shared/`:
 
-- `prompts/templates/_shared/frontmatter.md`
-- `prompts/templates/_shared/skills-table-core.md`
-- `prompts/templates/_shared/rules-core.md`
-- `prompts/templates/_shared/deps-core.md`
-- `prompts/templates/_shared/section-skeleton.md`
-- `prompts/templates/_shared/phases.md`
-- `prompts/templates/_shared/verification-checklist.md`
+- `templates/_shared/frontmatter.md`
+- `templates/_shared/skills-table-core.md`
+- `templates/_shared/rules-core.md`
+- `templates/_shared/deps-core.md`
+- `templates/_shared/section-skeleton.md`
+- `templates/_shared/phases.md`
+- `templates/_shared/verification-checklist.md`
 - additional domain-specific shared files as needed
 
 Each shared file must:
@@ -220,7 +220,7 @@ or
 
 ### 3.4 Register templates
 
-Update `prompts/templates/_index.md` to include at minimum:
+Update `templates/_index.md` to include at minimum:
 
 - template path
 - one-line description
@@ -237,7 +237,7 @@ Make every prompt use the shared templates without breaking intent.
 
 For each prompt:
 
-- replace duplicated frontmatter/body blocks with references to `prompts/templates/_shared/...`
+- replace duplicated frontmatter/body blocks with references to `templates/_shared/...`
 - keep domain-specific content local
 - preserve triggers, names, directories, and filenames
 
@@ -246,7 +246,7 @@ For each prompt:
 Prompt format:
 
 - File: `prompts/<name>.prompt.md`
-- Frontmatter uses keys from `prompts/templates/_shared/frontmatter.md`
+- Frontmatter uses keys from `templates/_shared/frontmatter.md`
 - Outputs include:
   - docs or shared templates
   - scripts under `~/AppData/Local/hermes/scripts/`
@@ -353,7 +353,7 @@ By the end, produce:
 - `docs/prompt-inventory.md`
 - `docs/prompt-validation-report.md`
 - updated `prompts/*.prompt.md` files using templates
-- updated `prompts/templates/_shared/**`
+- updated `templates/_shared/**`
 - any newly created skills/scripts under `~/AppData/Local/hermes/`
 - explicit status summary in the assistant response
 

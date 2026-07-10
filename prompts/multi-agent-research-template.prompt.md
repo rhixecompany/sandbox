@@ -34,7 +34,7 @@ metadata:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#multi-agent-research-template)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#multi-agent-research-template)
 
 | Skill | Purpose |
 |-------|---------|

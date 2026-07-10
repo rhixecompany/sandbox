@@ -42,9 +42,9 @@ skills:
 
 ---
 > **Shared template references:**
-> - [Core rules](../prompts/templates/_shared/rules-core.md)
-> - [Skills table](../prompts/templates/_shared/skills-table-core.md)
-> - [Verification checklist](../prompts/templates/_shared/verification-checklist.md)
+> - [Core rules](templates/_shared/rules-core.md)
+> - [Skills table](templates/_shared/skills-table-core.md)
+> - [Verification checklist](templates/_shared/verification-checklist.md)
 
 ## Goal
 
@@ -63,7 +63,7 @@ Perform a comprehensive audit of all agents across configured platforms (Hermes,
 
 ## Core Rules
 
-See [`prompts/templates/_shared/rules-core.md`](../prompts/templates/_shared/rules-core.md).
+See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).
 
 Additional audit-specific rules:
 

@@ -33,7 +33,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#playwright-typescript)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-typescript)
 
 - Playwright test design and isolation
 - Accessibility-first locator strategy
@@ -54,7 +54,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 - Stability Checker: Eliminates fixed waits and unstable timing assumptions.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Use @playwright/test with clear test.describe and test.step grouping.

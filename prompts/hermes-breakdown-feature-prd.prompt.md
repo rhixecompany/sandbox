@@ -40,7 +40,7 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/prd.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Include the feature name and the epic reference.

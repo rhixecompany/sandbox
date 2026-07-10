@@ -56,7 +56,7 @@ Use this prompt when prompt definitions, prompt-style prompts, or platform regis
 
 ## Rules
 
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
 2. Detect the file format before modifying anything.
@@ -65,7 +65,7 @@ Use this prompt when prompt definitions, prompt-style prompts, or platform regis
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#prompts-fix)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#prompts-fix)
 
 ## Phases
 

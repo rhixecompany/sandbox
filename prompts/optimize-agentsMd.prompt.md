@@ -39,7 +39,7 @@ Use when you need to optimize agentsmd for the current workspace or task.
 - A concise verification note summarizing what was changed, assumptions made, and any missing sources.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the prompt literally and prefer evidence from the current workspace.

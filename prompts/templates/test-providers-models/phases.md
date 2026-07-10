@@ -29,3 +29,15 @@
 ## Phase 6: Script Creation & Automation
 - Create/update benchmark scripts in `~/AppData/Local/hermes/scripts/`.
 - Gate: scripts committed/preserved and runnable.
+
+## Current Status (2026-07-09)
+
+| Phase | Title | Status | Notes |
+|-------|-------|--------|-------|
+| 0 | Auth & Provider Inventory | ✅ Complete | 9 providers from `hermes auth list` |
+| 1 | Model Catalog Discovery | ✅ Complete | OpenRouter 27, Nous 21, others via auth |
+| 2 | Free Model Extraction | ✅ Complete | 17+ free models cataloged with tier |
+| 3 | Provider-by-Provider Benchmarking | ✅ Complete | 5/5 accessible models, 15/15 tasks |
+| 4 | Cross-Provider Comparison & Report | ✅ Complete | Full comparison with scores |
+| 5 | Rate Limit & Fallback Chain Analysis | ✅ Complete | Validated chain with fallback behavior |
+| 6 | Script Creation & Automation | ✅ Complete | `benchmark_providers.py` + results |

@@ -52,8 +52,8 @@ This prompt generates comprehensive agent context files (architecture blueprints
 
 ## Context
 
-- **Source reference:** `./agents-system-prompt-context-fix.prompt.txt`
-**Target scope:** Project root `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`) and all subprojects
+- **Source reference:** (removed; canonical `.prompt.md` kept)
+- **Target scope:** Project root `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`) and all subprojects
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 
 ## Phases
@@ -89,7 +89,7 @@ This prompt generates comprehensive agent context files (architecture blueprints
 > **Full phase details:** `templates/agents-system-prompt-context-fix/phases.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [Core rules](templates/_shared/rules-core.md)
 
 
 1. **Recursive scope** — Apply to project root and all subprojects containing `.vscode/` or `AGENTS.md`

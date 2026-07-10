@@ -26,7 +26,7 @@ trigger: /generator-orchestrator
 
 ### Goal
 
-Create one orchestrator prompt that coordinates only the 11 root generator prompts in `.github/prompts` with dependency-aware ordering, conditional MCP/server branching, deterministic execution modes, and strict validation gates.
+Create one orchestrator prompt that coordinates only the 11 root generator prompts in `prompts` with dependency-aware ordering, conditional MCP/server branching, deterministic execution modes, and strict validation gates.
 
 ## Context
 
@@ -36,12 +36,12 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 
 - Included prompts: root-level generator prompts only (11 files).
 - Excluded prompts: subproject prompts, including comicwise-specific generator prompts.
-- Output location: `.github/prompts` and generated docs or code paths requested by the run.
+- Output location: `prompts` and generated docs or code paths requested by the run.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#generator-orchestrator)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#generator-orchestrator)
 
 - Dependency graph design for staged orchestration.
 - Prompt-composition and deterministic branching.
@@ -73,7 +73,7 @@ Use this prompt when you need one runbook to generate aligned architecture, work
   - explicit about degraded modes and failures
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 > Accept these unified inputs:

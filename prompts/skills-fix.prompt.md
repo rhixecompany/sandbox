@@ -62,7 +62,7 @@ reports, plans fixes, and applies them in priority order.
 - **Audit output:** `docs/skills-debug-context.md` (master index)
 - **Per-skill reports:** `docs/<category>/<skill>/skills-debug-context.md`
 - **Remediation plan:** `docs/plan/skills-debug-plan.md`
-- **Execution prompt:** `.github/prompts/skills-debug-prompt.prompt.md`
+- **Execution prompt:** `prompts/skills-debug-prompt.prompt.md`
 - **Batch size:** exactly 7 skills per turn
 - **Grade scale:** A (clean) → A- (minor) → B (1 major / 3+ minor) → C (2+ major) → F (critical)
 
@@ -78,11 +78,11 @@ reports, plans fixes, and applies them in priority order.
 - Per-skill audit reports at `docs/<category>/<skill>/skills-debug-context.md`
 - Master index at `docs/skills-debug-context.md`
 - Remediation plan at `docs/plan/skills-debug-plan.md`
-- Execution prompt at `.github/prompts/skills-debug-prompt.prompt.md`
+- Execution prompt at `prompts/skills-debug-prompt.prompt.md`
 - Patched SKILL.md files for all F/C-grade skills
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Read `docs/skills-debug-context.md` first if it exists — resume rather than re-run.
@@ -165,7 +165,7 @@ implement equivalent logic in `execute_code`. For each skill in batches of 7:
 ### Phase 4: Generate Plan and Execution Prompt
 
 1. Write `docs/plan/skills-debug-plan.md` — phased fix plan from audit findings
-2. Write `.github/prompts/skills-debug-prompt.prompt.md` — prompt to execute the plan
+2. Write `prompts/skills-debug-prompt.prompt.md` — prompt to execute the plan
 
 ### Phase 5: Execute Fixes (Priority Order)
 
@@ -206,7 +206,7 @@ S2 heading gaps, C1 stale comments).
 4. Reorganize misplaced root-level skills; remove duplicates
 5. Run audit script in batches of 7 → write per-skill reports + master index
 6. Write `docs/plan/skills-debug-plan.md` from audit findings
-7. Write `.github/prompts/skills-debug-prompt.prompt.md`
+7. Write `prompts/skills-debug-prompt.prompt.md`
 8. Fix F-grade skills (critical issues)
 9. Fix C-grade skills (major issues)
 10. Fix B-grade skills in batches of 7
@@ -223,7 +223,7 @@ S2 heading gaps, C1 stale comments).
 - [ ] Write per-skill reports to `docs/<category>/<skill>/skills-debug-context.md`
 - [ ] Write master index to `docs/skills-debug-context.md`
 - [ ] Write remediation plan to `docs/plan/skills-debug-plan.md`
-- [ ] Write execution prompt to `.github/prompts/skills-debug-prompt.prompt.md`
+- [ ] Write execution prompt to `prompts/skills-debug-prompt.prompt.md`
 - [ ] Fix all F-grade skills (critical issues)
 - [ ] Fix all C-grade skills (major issues)
 - [ ] Fix B-grade skills in batches of 7

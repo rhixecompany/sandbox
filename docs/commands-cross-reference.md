@@ -16,21 +16,21 @@ Commands are defined as prompt files with `trigger:` fields — they act as slas
 
 ## Platform Inventory
 
-### Copilot — `.github/prompts/` (8 commands)
+### Copilot — `prompts/` (8 commands)
 
 | Trigger | File | Purpose |
 |---------|------|---------|
-| `/ai-prompt-engineering-safety-review` | `.github/prompts/ai-prompt-engineering-safety-review.prompt.md` | Security/safety review for AI prompts |
-| `/boost-prompt` | `.github/prompts/boost-prompt.prompt.md` | Optimize prompts for AI response quality |
-| `/context-map` | `.github/prompts/context-map.prompt.md` | Create/maintain project context map |
-| `/convert-plaintext-to-md` | `.github/prompts/convert-plaintext-to-md.prompt.md` | Convert plaintext → markdown documentation |
-| `/generator-orchestrator` | `.github/prompts/generator-orchestrator.prompt.md` | Orchestrate blueprint generators |
-| `/prompt-builder` | `.github/prompts/prompt-builder.prompt.md` | Build prompts from templates |
-| `/skills-debug-prompt` | `.github/prompts/skills-debug-prompt.prompt.md` | Execute skills debug fix plan |
-| `/update-implementation-plan` | `.github/prompts/update-implementation-plan.prompt.md` | Update plan with current progress |
+| `/ai-prompt-engineering-safety-review` | `prompts/ai-prompt-engineering-safety-review.prompt.md` | Security/safety review for AI prompts |
+| `/boost-prompt` | `prompts/boost-prompt.prompt.md` | Optimize prompts for AI response quality |
+| `/context-map` | `prompts/context-map.prompt.md` | Create/maintain project context map |
+| `/convert-plaintext-to-md` | `prompts/convert-plaintext-to-md.prompt.md` | Convert plaintext → markdown documentation |
+| `/generator-orchestrator` | `prompts/generator-orchestrator.prompt.md` | Orchestrate blueprint generators |
+| `/prompt-builder` | `prompts/prompt-builder.prompt.md` | Build prompts from templates |
+| `/skills-debug-prompt` | `prompts/skills-debug-prompt.prompt.md` | Execute skills debug fix plan |
+| `/update-implementation-plan` | `prompts/update-implementation-plan.prompt.md` | Update plan with current progress |
 
 **Format:** `.prompt.md` with YAML frontmatter (trigger, description, tags, dependencies, skills).
-**Location:** Project-specific (`SandBox/.github/prompts/`)
+**Location:** Project-specific (`SandBox/prompts/`)
 
 ### Hermes / Prompt Library — `Prompts/` (8 commands)
 
@@ -72,7 +72,7 @@ Commands are defined as prompt files with `trigger:` fields — they act as slas
 
 ### Overlap Between Platforms
 
-| Function | Copilot (.github/prompts/) | Hermes (Prompts/) | OpenCode |
+| Function | Copilot (prompts/) | Hermes (Prompts/) | OpenCode |
 |----------|---------------------------|-------------------|----------|
 | Plaintext→MD conversion | `/convert-plaintext-to-md` | — | — |
 | Skills debugging | `/skills-debug-prompt` | `/skills-fix` | — |
@@ -125,7 +125,7 @@ Commands are defined as prompt files with `trigger:` fields — they act as slas
 
 ```
 # Copilot prompt commands (triggers via /command)
-.github/prompts/*.prompt.md
+prompts/*.prompt.md
 
 # Hermes/prompt library commands (triggers via /command)
 Prompts/*.prompts.md

@@ -14,7 +14,7 @@
 | Trigger matches filename | ✅ `/repo` |
 | `skills:` field populated | ✅ |
 | Phase order correct | ✅ 0→1→2→3→4 |
-| No stale `.github/prompts/` paths | ✅ |
+| No stale `prompts/` paths | ✅ |
 | No stale `templates/` paths | ✅ |
 | No merged YAML closing | ✅ (grep confirmed zero) |
 | Description mentions delegation | ✅ |

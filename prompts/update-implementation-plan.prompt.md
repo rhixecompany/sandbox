@@ -73,7 +73,7 @@ When combined in the output path template, these variables produce a concrete fi
 - A concise verification note when the task benefits from one
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 > 1. Use only evidence from the current workspace and the user request
@@ -84,7 +84,7 @@ When combined in the output path template, these variables produce a concrete fi
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#update-implementation-plan)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#update-implementation-plan)
 
 The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.
 

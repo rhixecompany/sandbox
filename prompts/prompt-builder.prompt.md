@@ -49,7 +49,7 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 - A confirmation of the generated file path
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **Discovery first** — Gather all requirements through the 9-area questionnaire before generating
@@ -83,7 +83,7 @@ Phase execution by mode:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#prompt-builder)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#prompt-builder)
 
 | Skill | Purpose |
 | --- | --- |
@@ -115,10 +115,10 @@ Based on analysis of existing prompts, ensure the generated prompt includes:
 ## Reference Patterns
 
 Generated prompts follow patterns from existing high-quality prompts:
-- [`playwright-generate-test.prompt.md`](.github/prompts/playwright-generate-test.prompt.md) — Code generation scaffold
-- [`create-github-action-workflow-specification.prompt.md`](.github/prompts/create-github-action-workflow-specification.prompt.md) — Structured specification
-- [`architecture-blueprint-generator.prompt.md`](.github/prompts/architecture-blueprint-generator.prompt.md) — Comprehensive blueprint
-- [`create-implementation-plan.prompt.md`](.github/prompts/create-implementation-plan.prompt.md) — Implementation plan
+- [`playwright-generate-test.prompt.md`](prompts/playwright-generate-test.prompt.md) — Code generation scaffold
+- [`create-github-action-workflow-specification.prompt.md`](prompts/create-github-action-workflow-specification.prompt.md) — Structured specification
+- [`architecture-blueprint-generator.prompt.md`](prompts/architecture-blueprint-generator.prompt.md) — Comprehensive blueprint
+- [`create-implementation-plan.prompt.md`](prompts/create-implementation-plan.prompt.md) — Implementation plan
 
 ## Actions Summary
 

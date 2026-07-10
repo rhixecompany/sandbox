@@ -79,7 +79,7 @@ execution, and validation.
 
 ## Rules
 
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
 2. Use Context7 or equivalent docs before changing code.
@@ -91,7 +91,7 @@ execution, and validation.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#general)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#general)
 
 ## Phases
 
@@ -117,7 +117,7 @@ Test changes, validate outputs, and confirm the task is complete.
 
 ## Steps
 
-1. Load `context-map` prompt (`.github/prompts/context-map.prompt.md`) and inspect the affected files.
+1. Load `context-map` prompt (`prompts/context-map.prompt.md`) and inspect the affected files.
 2. Use Context7 docs or equivalent references for the relevant APIs or patterns.
 3. Create a compact plan with clear checkpoints.
 4. Implement the change with direct CLI/file operations.

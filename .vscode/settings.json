@@ -11,11 +11,18 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
@@ -37,8 +44,28 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[markdown]": {
+  "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[plaintext]": {
+    "editor.wordWrap": "on"
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
+  "[bat]": {
     "editor.wordWrap": "on"
   },
   "editor.codeActionsOnSave": {
@@ -50,9 +77,15 @@
   "editor.inlineSuggest.enabled": true,
   "files.associations": {
     "*.css": "tailwindcss",
+    "*.scss": "tailwindcss",
     "**/*.{txt,in}": "django-txt",
-    "**/requirements/**/*.{txt,in}": "pip-requirements"
+    "**/requirements/**/*.{txt,in}": "pip-requirements",
+    "*.csv": "csv (semicolon)",
+    "*.dat": "csv (pipe)"
   },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
   "python-envs.venvFolders": [
@@ -70,7 +103,9 @@
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "css": "css",
+    "django-html": "html",
     "javascript": "jsx",
+    "plaintext": "html",
     "scss": "scss",
     "typescript": "tsx"
   },
@@ -88,6 +123,5 @@
       "icon": "terminal-powershell",
       "source": "PowerShell"
     }
-  },
-  "workbench.editor.editorActionsLocation": "default"
+  }
 }

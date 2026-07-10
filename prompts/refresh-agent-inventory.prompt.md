@@ -44,7 +44,7 @@ copilot instruction references.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#refresh-agent-inventory)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#refresh-agent-inventory)
 
 - customization-audit
 - context-map
@@ -60,7 +60,7 @@ copilot instruction references.
 - Auditor persona: prioritize verifiable findings with file evidence.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow nearest-file precedence for AGENTS and instructions.

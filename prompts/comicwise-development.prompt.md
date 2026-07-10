@@ -198,7 +198,7 @@ All validated via `src/lib/env.ts` at startup using Zod.
 | File | Purpose | Scope |
 | --- | --- | --- |
 | `.github/copilot-instructions.md` | Complete guide (2500+ lines) | Global |
-| `.github/prompts/comicwise-session.prompt.md` | Quick reference (400 lines) | Session shortcuts |
+| `prompts/comicwise-session.prompt.md` | Quick reference (400 lines) | Session shortcuts |
 | `.github/instructions/*.md` | Auto-loaded by file pattern (15+ files) | Specific file types |
 | `docs/dev.content.md` | 26 sections with patterns & examples | Development reference |
 | `docs/MASTER_PHASE_PLAN_4-6.md` | Phase planning & task tracking | Project roadmap |

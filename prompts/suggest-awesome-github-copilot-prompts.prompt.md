@@ -52,7 +52,7 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the prompt literally and prefer evidence from the current workspace.
@@ -81,7 +81,7 @@ Use when you need to work on the current workspace or task.
 ## Process
 
 > 1. **Fetch Available Prompts**: Extract prompt list and descriptions from [aweso
-> 2. **Scan Local Prompts**: Discover existing prompt files in `.github/prompts/` 
+> 2. **Scan Local Prompts**: Discover existing prompt files in `prompts/` 
 
 > **Full content:** `templates/suggest-awesome-github-copilot-prompts/process.md`
 
@@ -113,7 +113,7 @@ Display analysis results in structured table comparing awesome-copilot prompts w
 
 ## Local Prompts Discovery Process
 
-1. List all `*.prompt.md` files in `.github/prompts/` directory
+1. List all `*.prompt.md` files in `prompts/` directory
 2. For each discovered file, read front matter to extract `description`
 3. Build comprehensive inventory of existing prompts
 4. Use this inventory to avoid suggesting duplicates
@@ -134,7 +134,7 @@ Display analysis results in structured table comparing awesome-copilot prompts w
 ## Requirements
 
 - Use `githubRepo` tool to get content from awesome-copilot repository prompts folder
-- Scan local file system for existing prompts in `.github/prompts/` directory
+- Scan local file system for existing prompts in `prompts/` directory
 - Read YAML front matter from local prompt files to extract descriptions
 - Compare local prompts with remote versions to detect outdated prompts
 - Compare against existing prompts in this repository to avoid duplicates
@@ -159,7 +159,7 @@ When outdated prompts are identified:
 2. Document specific differences in the "Suggestion Rationale" column
 3. Provide recommendation to update with key changes noted
 4. When user requests update, replace entire local file with remote version
-5. Preserve file location in `.github/prompts/` directory
+5. Preserve file location in `prompts/` directory
 
 
 ## Template References

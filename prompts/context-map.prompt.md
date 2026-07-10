@@ -52,7 +52,7 @@ Build a dependency and reference map before making changes so implementation sta
 - Follow with a bulleted risk assessment of 3-5 items max
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 1
@@ -67,7 +67,7 @@ Build a dependency and reference map before making changes so implementation sta
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#context-map)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#context-map)
 
 | Skill | Purpose |
 | --- | --- |

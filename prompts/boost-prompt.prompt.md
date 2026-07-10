@@ -58,7 +58,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 - Verification that the user is satisfied with the result
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **No code** - DO NOT write any code; this workflow is for prompt refinement only
@@ -72,7 +72,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#boost-prompt)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#boost-prompt)
 
 | Skill | Purpose |
 | --- | --- |

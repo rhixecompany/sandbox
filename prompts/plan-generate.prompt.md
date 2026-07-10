@@ -40,10 +40,10 @@ skills:
 
 ---
 > **Shared template references:**
-> - [Frontmatter patterns](../prompts/templates/_shared/frontmatter.md)
-> - [Core rules](../prompts/templates/_shared/rules-core.md)
-> - [Section skeleton](../prompts/templates/_shared/section-skeleton.md)
-> - [Verification checklist](../prompts/templates/_shared/verification-checklist.md)
+> - [Frontmatter patterns](templates/_shared/frontmatter.md)
+> - [Core rules](templates/_shared/rules-core.md)
+> - [Section skeleton](templates/_shared/section-skeleton.md)
+> - [Verification checklist](templates/_shared/verification-checklist.md)
 
 ## Goal
 
@@ -51,7 +51,7 @@ Generate a complete, phased implementation plan from a high-level goal or specif
 
 ## Core Rules
 
-See [`prompts/templates/_shared/rules-core.md`](../prompts/templates/_shared/rules-core.md).
+See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).
 
 Additional plan-specific rules:
 

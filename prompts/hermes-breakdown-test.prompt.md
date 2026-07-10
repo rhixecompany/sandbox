@@ -47,7 +47,7 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 - `/docs/ways-of-work/plan/{epic}/{feature}/qa-plan.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Include test scope and quality-risk mapping.

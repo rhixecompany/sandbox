@@ -44,7 +44,7 @@ Use when you need to playwright test generation for the current workspace or tas
 - A concise verification note when the task benefits from one.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the prompt literally and prefer evidence from the current workspace.
@@ -83,7 +83,7 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#playwright-generate-test)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-generate-test)
 
 - `webapp-testing` — use browser automation to validate the scenario in the live app
 - `test-driven-development` — translate observed behavior into a reliable test

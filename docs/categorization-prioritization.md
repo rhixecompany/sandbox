@@ -24,7 +24,7 @@
 
 | Repo | State | Detail |
 |------|-------|--------|
-| banking | ❌ 60 staged deletions | `.github/agents/`, `.github/instructions/`, `.github/prompts/` — intentional cleanup |
+| banking | ❌ 60 staged deletions | `.github/agents/`, `.github/instructions/`, `prompts/` — intentional cleanup |
 | cookiecutter-django-tailwind | ⚠️ 1 modified | `AGENTS.md` unstaged |
 | selenium_webdriver | ⚠️ 1 untracked | `AGENTS.md` not yet added |
 | xamehi | ⚠️ 1 untracked | `AGENTS.md` not yet added |

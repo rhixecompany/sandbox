@@ -40,7 +40,7 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 - A concise verification note when the task benefits from one.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the prompt literally and prefer evidence from the current workspace.

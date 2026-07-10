@@ -41,7 +41,7 @@ Use when you need to remember interactive programming for the current workspace 
 - A concise verification note when the task benefits from one.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the prompt literally and prefer evidence from the current workspace.

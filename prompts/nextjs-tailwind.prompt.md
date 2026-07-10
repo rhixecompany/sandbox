@@ -39,7 +39,7 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#nextjs-tailwind)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#nextjs-tailwind)
 
 - Next.js App Router architecture and React Server Components
 - Tailwind CSS responsive and semantic styling
@@ -60,7 +60,7 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 - Security Reviewer: Applies strict validation and safe handling of external inputs.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Prefer Server Components and mark client components only when necessary.

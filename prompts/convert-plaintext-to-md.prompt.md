@@ -49,7 +49,7 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 - A verification note listing: (1) total sections converted, (2) any inferred formatting decisions made without explicit instructions, and (3) any content skipped due to `--stop`. Omit if the source file is a single flat section with no ambiguous structure.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Run `/context-map` before conversion to map source, destination, and dependency impact.
@@ -67,7 +67,7 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#convert-plaintext-to-md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#convert-plaintext-to-md)
 
 | Skill | Purpose |
 | --- | --- |

@@ -78,7 +78,7 @@ Use this prompt for any change that handles external input, authentication, auth
 or data persistence.
 
 ## Skills Required
-> See per-domain purposes: [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#general)
+> See per-domain purposes: [`prompts/templates/_shared/skills-table-core.md`](../prompts/templates/_shared/skills-table-core.md#general)
 - Threat modeling and trust-boundary analysis
 - Input validation and secure coding patterns
 - Secret management and least-privilege architecture
@@ -96,7 +96,7 @@ or data persistence.
 - Secret Auditor: Blocks secret leakage and over-privileged access patterns.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../prompts/templates/_shared/rules-core.md)
 - Never commit secrets or sensitive values in code, docs, or examples.
 - Validate and sanitize all external inputs.
 - Enforce least privilege in service and credential usage.

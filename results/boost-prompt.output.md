@@ -104,7 +104,7 @@ A single markdown block:
 
 ## Rules
 
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`prompts/templates/_shared/rules-core.md`](../prompts/templates/_shared/rules-core.md)
 
 1. List only; never open, modify, or run files.
 2. Tie every listed file to a specific part of the question.

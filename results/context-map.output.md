@@ -10,7 +10,7 @@
 
 | File | Role | Notes |
 |------|------|-------|
-| `.github/scripts/audit_prompts.py` | **modify** | The primary audit script. Scans `Prompts/` and `.github/prompts/` for frontmatter, formatting, structural, and content issues. Writes JSON results to `docs/audit_results.json`. |
+| `.github/scripts/audit_prompts.py` | **modify** | The primary audit script. Scans `Prompts/` and `prompts/` for frontmatter, formatting, structural, and content issues. Writes JSON results to `docs/audit_results.json`. |
 | `Prompts/templates/_shared/rules-core.md` | **dependency** | Referenced as a shared rule template by prompt files — not directly imported, but its conventions shape the frontmatter fields the audit checks. |
 | `docs/audit_results.json` | **dependency (output)** | Output artifact consumed by downstream phases (e.g., `batch_remediate.py`). Changing the output schema breaks the pipeline. |
 | `docs/01-MCP_BEST_PRACTICES_GUIDE.md` | **dependency** | Doc convention being audited; the script's extension checks (`*.prompt.md`) are informed by the naming conventions described here. |
@@ -28,7 +28,7 @@
 1. **⚠️ No tests exist for `audit_prompts.py`.** The script has no unit or integration tests. Any change risks silent regressions in the audit's output format (which is consumed by `batch_remediate.py`).
 2. **🔴 Hardcoded paths.** `SANDBOX = Path("C:/Users/Alexa/Desktop/SandBox")` prevents the script from running on other machines or in CI. Compare with `skills-audit.py` which uses `USERPROFILE`.
 3. **🟡 Tight coupling to output schema.** `docs/audit_results.json` is consumed by `batch_remediate.py`. Changing field names, nesting, or severity levels in the audit breaks the remediator without any compilation-time check.
-4. **🟡 `.github/prompts/` is empty.** The script scans this directory but it contains zero files — the loop still runs but is a no-op. Risk of dead code if this directory is never populated.
+4. **🟡 `prompts/` is empty.** The script scans this directory but it contains zero files — the loop still runs but is a no-op. Risk of dead code if this directory is never populated.
 5. **🟢 Template directory not scanned.** `Prompts/templates/` contains `.md` files with frontmatter that are not audited — structural blind spot for template quality.
 
 ---

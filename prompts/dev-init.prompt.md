@@ -69,12 +69,12 @@ plan current.
 Use this prompt when a prompt-library refresh needs planning before
 implementation. The primary workflow is:
 
-1. `.github/prompts/context-map`
-2. `.github/prompts/convert-plaintext-to-md`
-3. `.github/prompts/boost-prompt`
-4. `.github/prompts/ai-prompt-engineering-safety-review`
-5. `.github/prompts/update-implementation-plan`
-6. `.github/prompts/prompt-builder`
+1. `prompts/context-map`
+2. `prompts/convert-plaintext-to-md`
+3. `prompts/boost-prompt`
+4. `prompts/ai-prompt-engineering-safety-review`
+5. `prompts/update-implementation-plan`
+6. `prompts/prompt-builder`
 7. `Prompts/*.md`
 
 Reference artifacts:
@@ -89,7 +89,7 @@ Reference artifacts:
 
 - Source inventory for `Prompts/*.txt`
 - Existing `Prompts/*.md` files
-- Related `.github/prompts/*.prompt.md` workflows
+- Related `prompts/*.prompt.md` workflows
 - Workspace context and implementation constraints
 
 ## Outputs
@@ -100,7 +100,7 @@ Reference artifacts:
 - An implementation guide with verification steps
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Run `context-map` before any conversion or planning work.
@@ -114,7 +114,7 @@ Reference artifacts:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#dev-init)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#dev-init)
 
 | Skill                                 | Purpose                                                          |
 | ------------------------------------- | ---------------------------------------------------------------- |
@@ -164,7 +164,7 @@ Run the conversion and enhancement pipeline end-to-end. Idempotent — safe to r
 2. Verify the conversion and audit templates exist.
 3. Map the prompt-library dependencies.
 4. Plan `Prompts/*.txt` → `Prompts/*.md` conversion.
-5. Plan audits for the related `.github/prompts/*.prompt.md` files.
+5. Plan audits for the related `prompts/*.prompt.md` files.
 6. Confirm the target prompts reference `context-map` where relevant.
 7. Produce the final plan and handoff notes.
 
@@ -187,7 +187,7 @@ Run the conversion and enhancement pipeline end-to-end. Idempotent — safe to r
 
 ## Actions
 
-- `read_file(".github/prompts/context-map.prompt.md")` — Load the dependency map
+- `read_file("prompts/context-map.prompt.md")` — Load the dependency map
   before planning
 - `skill_view(name="brainstorming")` — Expand workflow options and tradeoffs
 - `skill_view(name="plans-and-specs")` — Produce the detailed plan artifact
@@ -241,9 +241,9 @@ read_file("projects/Bash/archive/artifacts/context-maps/dev-init.context.json")
 
 ### Step 5.2 — Run `context-map`
 
-1. Load `.github/prompts/context-map.prompt.md`
+1. Load `prompts/context-map.prompt.md`
 2. Map all `Prompts/*.txt` → `Prompts/*.md` pairs
-3. Map all `.github/prompts/*.prompt.md` dependencies
+3. Map all `prompts/*.prompt.md` dependencies
 4. Write `docs/prompts-cross-reference-registry.md`
 
 ### Step 5.3 — Run `convert-plaintext-to-md`
@@ -265,7 +265,7 @@ For each `Prompts/*.txt` file:
 
 For each `Prompts/*.md` file:
 
-1. Load `.github/prompts/boost-prompt.prompt.md`
+1. Load `prompts/boost-prompt.prompt.md`
 2. Apply quality enhancements:
     - Strengthen rule language (imperative, specific)
     - Add missing frontmatter (title, description, tags, trigger)
@@ -276,9 +276,9 @@ For each `Prompts/*.md` file:
 
 ### Step 5.5 — Run `ai-prompt-engineering-safety-review`
 
-For each `Prompts/*.md` and `.github/prompts/*.prompt.md`:
+For each `Prompts/*.md` and `prompts/*.prompt.md`:
 
-1. Load `.github/prompts/ai-prompt-engineering-safety-review.prompt.md`
+1. Load `prompts/ai-prompt-engineering-safety-review.prompt.md`
 2. Check for:
     - Credential handling safety
     - Backup/rollback instructions present
@@ -291,13 +291,13 @@ For each `Prompts/*.md` and `.github/prompts/*.prompt.md`:
 
 For any missing prompts:
 
-1. Load `.github/prompts/prompt-builder.prompt.md`
+1. Load `prompts/prompt-builder.prompt.md`
 2. Scaffold new `.prompt.md` files from template
 3. Populate with content from plan artifacts
 
 ### Step 5.7 — Run `update-implementation-plan`
 
-1. Load `.github/prompts/update-implementation-plan.prompt.md`
+1. Load `prompts/update-implementation-plan.prompt.md`
 2. Update `docs/dev-init-comprehensive-plan.md` with:
     - Actual files processed
     - Issues found and resolved
@@ -437,7 +437,7 @@ Write `docs/prompts-cross-reference-registry.md`:
 | dev-init.prompts.md   | /dev-init   | ✅     | 90    | context-map, convert-plaintext-to-md |
 | ...                   | ...         | ...    | ...   | ...                                  |
 
-## .github/prompts/\*.prompt.md (Workflow Prompts)
+## prompts/\*.prompt.md (Workflow Prompts)
 
 | File                              | Purpose             | Used By             |
 | --------------------------------- | ------------------- | ------------------- |
@@ -458,7 +458,7 @@ Write `docs/prompts-cross-reference-registry.md`:
 ```bash
 # Count total prompts
 ls Prompts/*.prompts.md | wc -l
-ls .github/prompts/*.prompt.md | wc -l
+ls prompts/*.prompt.md | wc -l
 
 # Verify registry matches disk
 # Every file on disk is in registry

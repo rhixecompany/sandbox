@@ -55,7 +55,7 @@ Supported target styles:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#session-agentsmd-full-workflow)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#session-agentsmd-full-workflow)
 
 - Repository discovery and workspace navigation.
 - Markdown authoring for AGENTS.md quality guidance.
@@ -77,7 +77,7 @@ Use subagents only when needed for speed or isolation.
 - Style: concise, explicit, execution-first.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Follow the nearest AGENTS.md and repository instructions when present.

@@ -38,7 +38,7 @@ Use this prompt when the user wants the workflow executed, not just designed.
 
 This prompt executes the implementation pattern defined in:
 
-- .github/prompts/session-agentsmd-full-workflow.prompt.md
+- prompts/session-agentsmd-full-workflow.prompt.md
 
 Argument contract:
 
@@ -48,7 +48,7 @@ Argument contract:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#run-session-agentsmd-workflow)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#run-session-agentsmd-workflow)
 
 - Workspace discovery and path resolution.
 - AGENTS.md authoring from local evidence.
@@ -70,7 +70,7 @@ Subagents are optional and should only be used when they improve speed or reliab
 - Style: deterministic, explicit, and minimal-risk.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Execute all phases unless genuinely blocked.

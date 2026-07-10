@@ -5026,7 +5026,7 @@
       "slug": "projects-init",
       "name": "projects-init",
       "title": "Projects Init",
-      "description": "Three-phase workspace initialization: triage MD documentation files, migrate prompt files to .github/prompts/, then create skills/scripts and update prompts. Eliminates duplicates and consolidates documentation.",
+      "description": "Three-phase workspace initialization: triage MD documentation files, migrate prompt files to prompts/, then create skills/scripts and update prompts. Eliminates duplicates and consolidates documentation.",
       "tags": [],
       "body_chars": 4163
     },

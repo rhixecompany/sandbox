@@ -73,7 +73,7 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 
 ## Rules
 
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
 2. All operational scripts should end up under `Bash/**` unless a framework seed
@@ -86,7 +86,7 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#bash-scripts-fix)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#bash-scripts-fix)
 
 ## Phases
 

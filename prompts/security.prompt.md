@@ -38,7 +38,7 @@ Use this prompt for any change that handles external input, authentication, auth
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#security)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#security)
 
 - Threat modeling and trust-boundary analysis
 - Input validation and secure coding patterns
@@ -59,7 +59,7 @@ Use this prompt for any change that handles external input, authentication, auth
 - Secret Auditor: Blocks secret leakage and over-privileged access patterns.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Never commit secrets or sensitive values in code, docs, or examples.

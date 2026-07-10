@@ -45,7 +45,7 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Keep the plan tied to the PRD requirements.

@@ -1,38 +1,29 @@
 ---
-
-
-license: MIT
-author: Hermes Agent
-version: 1.0.0
-title: Test Providers & Models
-trigger: /test-providers-models
 name: test-providers-models
-description: 'Inventory all authorized LLM providers from hermes auth list, discover
-  their free-tier models, run standardized benchmarks (reasoning, tool calling, knowledge),
-  and produce a cross-provider comparison report. Covers 6 providers: copilot, huggingface,
-  nous, ollama-cloud, openai-api, openrouter.'
+title: Test Providers & Models
+description: "Inventory all authorized LLM providers from hermes auth list, discover their free-tier models, run standardized benchmarks (reasoning, tool calling, knowledge), and produce a cross-provider comparison report. Covers 6 providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter."
+version: 1.0.1
+author: Hermes Agent
+license: MIT
+trigger: /test-providers-models
 tags:
-  - ai-assistant
-  - architecture
-  - data
-  - performance
-  - prompts
-  - testing
-  - typescript
-  - workflow
+  - providers
+  - models
+  - benchmark
+  - hermes
+  - free-tier
 dependencies:
-- skill:test-providers-models
-- skill:using-superpowers
-- skill:plans-and-specs
-- skill:user-communication-preferences
-- skill:verification-before-completion
+  - skill:test-providers-models
+  - skill:using-superpowers
+  - skill:plans-and-specs
+  - skill:user-communication-preferences
+  - skill:verification-before-completion
 skills:
-- using-superpowers
-- plans-and-specs
-- user-communication-preferences
-- verification-before-completion
-
-
+  - test-providers-models
+  - using-superpowers
+  - plans-and-specs
+  - user-communication-preferences
+  - verification-before-completion
 ---
 ## Goal
 Inventory and benchmark the free‑tier LLM models across all authorized providers in Hermes, producing a comparative report that includes performance, rate limits, and recommendations.
@@ -41,7 +32,7 @@ Inventory and benchmark the free‑tier LLM models across all authorized provide
 | Persona | When to Use |
 |---------|-------------|
 | OWL (System Admin) | Overall orchestration, profile selection |
-| Research Analyst | Data analysis, cross‑provider comparison |
+| Research Analyst | Data analysis, cross-provider comparison |
 | Code Architect | Benchmark execution, script development |
 | DevOps Engineer (adminbot) | Rate‑limit analysis, fallback planning |
 
@@ -81,7 +72,7 @@ This prompt performs a full-cycle provider audit and model benchmark. It starts
 by inventorying all authorized providers from `hermes auth list`, then
 discovers available models per provider, extracts free/zero-cost options, and
 runs a standardized 3‑task benchmark (reasoning, tool calling, knowledge).
-Results are compiled into a cross‑provider comparison report with pass/fail
+Results are compiled into a cross-provider comparison report with pass/fail
 status, rate limits, and recommendations.
 
 **Critical rules:**
@@ -98,7 +89,7 @@ status, rate limits, and recommendations.
 - **Model catalog:** `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json`
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 - **Scripts dir:** `~/AppData/Local/hermes/scripts/`
-- **Prior artifacts:** `docs/test‑providers‑models‑*` (archived from prior run)
+- **Prior artifacts:** `docs/test-providers-models‑*` (archived from prior run)
 
 ## Provider Inventory (from `hermes auth list`) — Actual (2026-06-21)
 
@@ -116,7 +107,7 @@ status, rate limits, and recommendations.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#test-providers-models)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#test-providers-models)
 
 | Skill                              | Purpose                                         | Needed? |
 | ---------------------------------- | ----------------------------------------------- | ------- |
@@ -158,49 +149,49 @@ status, rate limits, and recommendations.
 > **Profile:** `default` | **Persona:** OWL (System Admin)
 > **Goal:** Run `hermes auth list` to inventory all authorized LLM providers,
 
-> **Full content:** `templates/test‑providers‑models/phase_0_auth__provider_invento.md`
+> **Full content:** `templates/test-providers-models/phase_0_auth__provider_invento.md`
 
 ## Phase 1: Model Catalog Discovery (Needed ✓)
 
 > **Profile:** `research-analyst` | **Persona:** Research Analyst
 > **Goal:** For each provider, discover available models through their
 
-> **Full content:** `templates/test‑providers‑models/phase_1_model_catalog_discover.md`
+> **Full content:** `templates/test-providers-models/phase_1_model_catalog_discover.md`
 
 ## Phase 2: Free Model Extraction (Needed ✓)
 
 > **Profile:** `code-architect` | **Persona:** Tech Lead
 > **Goal:** Filter and extract zero‑cost / free‑tier models from each provider's
 
-> **Full content:** `templates/test‑providers‑models/phase_2_free_model_extraction_.md`
+> **Full content:** `templates/test-providers-models/phase_2_free_model_extraction_.md`
 
 ## Phase 3: Provider‑by‑Provider Benchmarking (Recommended ☆)
 
 > **Profile:** `code-architect` | **Persona:** QA Engineer
 > **Goal:** Run a standardized 3‑task benchmark on each free model across all
 
-> **Full content:** `templates/test‑providers‑models/phase_3_provider‑by‑provider_b.md`
+> **Full content:** `templates/test-providers-models/phase_3_provider-by-provider_b.md`
 
 ## Phase 4: Cross‑Provider Comparison & Report (Recommended ☆)
 
 > **Profile:** `research-analyst` | **Persona:** Data Analyst
-> **Goal:** Compile benchmark results into a cross‑provider comparison report
+> **Goal:** Compile benchmark results into a cross-provider comparison report
 
-> **Full content:** `templates/test‑providers‑models/phase_4_cross‑provider_compari.md`
+> **Full content:** `templates/test-providers-models/phase_4_cross-provider_compari.md`
 
 ## Phase 5: Rate Limit & Fallback Chain Analysis (Optional ◇)
 
 > **Profile:** `adminbot` | **Persona:** DevOps Engineer
 > **Goal:** Analyze provider rate limits, cooldown periods, and optimal fallback
 
-> **Full content:** `templates/test‑providers‑models/phase_5_rate_limit__fallback_c.md`
+> **Full content:** `templates/test-providers-models/phase_5_rate_limit_fallback_c.md`
 
 ## Phase 6: Script Creation & Automation (Recommended ☆)
 
 > **Profile:** `code-architect` | **Persona:** Developer
 > **Goal:** Create or update the `test_models.py` test harness to support all
 
-> **Full content:** `templates/test‑providers‑models/phase_6_script_creation__autom.md`
+> **Full content:** `templates/test-providers-models/phase_6_script_creation__autom.md`
 
 ## Actions Summary
 
@@ -211,7 +202,7 @@ status, rate limits, and recommendations.
 | 3   | Extract free models across all providers        | 2     | Needed      |
 | 4   | Create multi‑provider test harness script       | 6     | Recommended |
 | 5   | Benchmark each free model on 3 standard tasks   | 3     | Recommended |
-| 6   | Compile cross‑provider comparison report        | 4     | Recommended |
+| 6   | Compile cross-provider comparison report        | 4     | Recommended |
 | 7   | Analyze rate limits and optimize fallback chain | 5     | Optional    |
 
 ## Related Prompts
@@ -236,11 +227,11 @@ status, rate limits, and recommendations.
 
 ## Template References
 
-Detailed section templates in `templates/test‑providers‑models/`:
+Detailed section templates in `templates/test-providers-models/`:
 - `phase_0_auth__provider_invento.md`
 - `phase_1_model_catalog_discover.md`
 - `phase_2_free_model_extraction_.md`
-- `phase_3_provider‑by‑provider_b.md`
-- `phase_4_cross‑provider_compari.md`
-- `phase_5_rate_limit__fallback_c.md`
+- `phase_3_provider-by-provider_b.md`
+- `phase_4_cross-provider_compari.md`
+- `phase_5_rate_limit_fallback_c.md`
 - `phase_6_script_creation__autom.md`

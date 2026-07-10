@@ -51,7 +51,7 @@ skills:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#workspace-consolidate)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#workspace-consolidate)
 
 ---
 

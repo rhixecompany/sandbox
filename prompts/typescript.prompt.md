@@ -37,7 +37,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#typescript)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#typescript)
 
 - Advanced TypeScript typing and API design
 - Next.js server/client boundary management
@@ -58,7 +58,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 - Validation Reviewer: Requires consistent runtime validation and error handling.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Use strict TypeScript patterns and avoid unsafe typing shortcuts.

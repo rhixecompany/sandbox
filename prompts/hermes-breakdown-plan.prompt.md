@@ -47,7 +47,7 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 - A minimal GitHub Actions snippet for issue creation
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Use the provided artifacts as the only source of scope.

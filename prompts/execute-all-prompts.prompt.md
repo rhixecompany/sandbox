@@ -70,7 +70,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#execute-all-prompts)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#execute-all-prompts)
 
 | Skill | Purpose |
 |-------|---------|
@@ -81,7 +81,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 | `verification-before-completion` | Verify each phase before claiming done |
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **Strict sequential execution** — Prompts execute in order; each must complete before the next begins

@@ -7,7 +7,7 @@ trigger: /projects-init
 name: projects-init
 title: Projects Init
 description: 'Three-phase workspace initialization: triage MD documentation files,
-  migrate prompt files to .github/prompts/, then create skills/scripts and update
+  migrate prompt files to prompts/, then create skills/scripts and update
   prompts. Eliminates duplicates and consolidates documentation.'
 version: 1.0.0
 tags:
@@ -42,7 +42,7 @@ metadata:
 
 ## Description
 
-This prompt initialises a new or stale workspace by running a three-phase cleanup and consolidation pipeline. Phase 1 discovers and deduplicates all markdown documentation files. Phase 2 discovers prompt files, migrates them to `.github/prompts/`, and consolidates. Phase 3 indexes the new prompt directory, creates any needed skills and helper scripts, and updates all prompts to reference the skills they need.
+This prompt initialises a new or stale workspace by running a three-phase cleanup and consolidation pipeline. Phase 1 discovers and deduplicates all markdown documentation files. Phase 2 discovers prompt files, migrates them to `prompts/`, and consolidates. Phase 3 indexes the new prompt directory, creates any needed skills and helper scripts, and updates all prompts to reference the skills they need.
 
 **Critical rules (must appear within the first 15% of execution):**
 
@@ -53,16 +53,16 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 ## Context
 
 - **Source reference:** `projects-init.prompt.txt` (raw specification)
-- **Target scope:** `pwd` (workspace root), `docs/`, `.github/prompts/`
+- **Target scope:** `pwd` (workspace root), `docs/`, `prompts/`
 - **Phase 1 outputs:** Consolidated markdown documentation inventory + deleted duplicates
-- **Phase 2 outputs:** Prompt files migrated to `.github/prompts/` + deleted originals
+- **Phase 2 outputs:** Prompt files migrated to `prompts/` + deleted originals
 - **Phase 3 outputs:** New skills/scripts in `~/AppData/Local/hermes/skills/` + updated prompt frontmatter
 - **Execution environment:** Windows 11, bash (git-bash/MSYS), Hermes CLI
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#projects-init)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#projects-init)
 
 | Skill              | Purpose                                                 |
 | ------------------ | ------------------------------------------------------- |
@@ -71,7 +71,7 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 | `skill-creator`    | Scaffold new skills with validated frontmatter          |
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **Strict sequential execution** — Phase 1 → Phase 2 → Phase 3. Each phase must complete (including verification) before the next starts.
@@ -90,23 +90,23 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 
 ## Phase 2: Migrate Prompts
 
-> **Goal:** Discover all markdown prompt files, migrate them to `.github/prompts/`
-> **Inputs:** `pwd`, `.github/prompts/` (if exists)
+> **Goal:** Discover all markdown prompt files, migrate them to `prompts/`
+> **Inputs:** `pwd`, `prompts/` (if exists)
 
 > **Full content:** `templates/projects-init/phase_2_migrate_prompts.md`
 
 ## Phase 3: Create Skills & Update
 
-> **Goal:** Scan `.github/prompts/`, identify needed skills and scripts, create th
-> **Inputs:** `.github/prompts/**`
+> **Goal:** Scan `prompts/`, identify needed skills and scripts, create th
+> **Inputs:** `prompts/**`
 
 > **Full content:** `templates/projects-init/phase_3_create_skills__up.md`
 
 ## Actions Summary
 
 1. List and triage all markdown documentation files in `pwd` and `docs/**`; consolidate and delete duplicates
-2. List and triage all markdown prompt files in `pwd` and `.github/prompts/`; migrate prompts to `.github/prompts/`; consolidate; delete originals
-3. List and triage the migrated `.github/prompts/` collection; create all needed skills and scripts; update all prompts with accurate skill references
+2. List and triage all markdown prompt files in `pwd` and `prompts/`; migrate prompts to `prompts/`; consolidate; delete originals
+3. List and triage the migrated `prompts/` collection; create all needed skills and scripts; update all prompts with accurate skill references
 
 
 ## Template References

@@ -88,7 +88,7 @@ When blocked or uncertain
 
 Delivery
 
-- Produce the updated `.github/prompts/debugger-prompt.md` (this file) and commit it.
+- Produce the updated `prompts/debugger-prompt.md` (this file) and commit it.
 - After completing a batch of fixes, run `pnpm format ; pnpm type-check ; pnpm lint:fix` and include the complete, final output in the PR description or patch notes.
 
 Persona

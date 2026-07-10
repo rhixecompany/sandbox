@@ -41,7 +41,7 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 - `/docs/ways-of-work/plan/{epic-name}/epic.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Include problem, solution, and impact.

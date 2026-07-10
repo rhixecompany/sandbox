@@ -55,7 +55,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 - A short checklist of safety and quality improvements
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Check harmful content, misinformation, and illegal activity risk first
@@ -69,7 +69,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#ai-prompt-engineering-safety-review)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#ai-prompt-engineering-safety-review)
 
 | Skill | Purpose |
 | --- | --- |

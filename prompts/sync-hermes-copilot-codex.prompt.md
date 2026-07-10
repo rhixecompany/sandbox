@@ -58,7 +58,7 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#sync-hermes-copilot-codex)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#sync-hermes-copilot-codex)
 
 | Skill                            | Purpose                               |
 | -------------------------------- | ------------------------------------- |
@@ -67,7 +67,7 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 | `plans-and-specs`                | Creates implementation plan from goal |
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **Sequential execution** — Phases must complete in order ("only then" constraint)

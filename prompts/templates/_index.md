@@ -1,9 +1,9 @@
 # Prompt Templates Index
 
 > Generated: 2026-06-22  
-> Location: `.github/prompts/templates/`
+> Location: `prompts/templates/`
 
-This directory contains extracted template files for each prompt in `.github/prompts/`. Each subdirectory follows the prompt name (stem of `.prompt.md`).
+This directory contains extracted template files for each prompt in `prompts/`. Each subdirectory follows the prompt name (stem of `.prompt.md`).
 
 ## Structure
 

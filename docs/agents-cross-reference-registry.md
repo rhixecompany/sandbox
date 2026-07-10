@@ -9,21 +9,21 @@ created: 2026-06-01
 # Agent Cross-Reference Registry
 
 Generated: 2026-06-01
-Scope: Prompts/ ↔ Hermes skills ↔ .github/prompts/
+Scope: Prompts/ ↔ Hermes skills ↔ prompts/
 
 ## Platform Inventory Summary
 
 | Platform | Agent Type | Location | Count |
 |----------|-----------|----------|-------|
-| **OpenCode** (via Copilot prompts) | `.prompt.md` workflow files | `.github/prompts/*.prompt.md` | 100+ |
+| **OpenCode** (via Copilot prompts) | `.prompt.md` workflow files | `prompts/*.prompt.md` | 100+ |
 | **Hermes** | Skill definitions | `~/AppData/Local/hermes/skills/**/SKILL.md` | 177 |
 | **Copilot** | Prompt orchestration files | `Prompts/*.md` | 8 |
 
 ## Three-Way Cross-Reference Table
 
-### Prompts/ → .github/prompts/ Dependencies
+### Prompts/ → prompts/ Dependencies
 
-| Prompts File | Trigger | .github/prompts/ Dependencies |
+| Prompts File | Trigger | prompts/ Dependencies |
 |-------------|---------|------------------------------|
 | `general.prompts.md` | `/general` | `context-map` |
 | `commands-fix.prompts.md` | `/commands-fix` | `context-map` |
@@ -47,9 +47,9 @@ Scope: Prompts/ ↔ Hermes skills ↔ .github/prompts/
 | `skills-fix.prompts.md` | brainstorming, plans-and-specs, dispatching-parallel-agents, subagent-driven-development, systematic-debugging, simplify |
 | `workspace-consolidate.prompts.md` | brainstorming, plans-and-specs, dispatching-parallel-agents, subagent-driven-development, systematic-debugging, simplify |
 
-### .github/prompts/ → Hermes Skills Dependencies
+### prompts/ → Hermes Skills Dependencies
 
-| .github/prompts File | Hermes Skills Referenced |
+| prompts File | Hermes Skills Referenced |
 |---------------------|------------------------|
 | `boost-prompt.prompt.md` | prompt-engineering, writing-plans |
 | `context-map.prompt.md` | codemap |
@@ -99,8 +99,8 @@ Scope: Prompts/ ↔ Hermes skills ↔ .github/prompts/
 ## Risk Assessment
 
 1. **No OpenCode `agents/` directory found** — OpenCode is used via VS Code extension (opencode-zen). Agent definitions may live in extension storage, not on-disk. Cannot sync what isn't discoverable.
-2. **No `opencode.json`/`opencode.jsonc`** — The OpenCode platform config could not be located on disk. All OpenCode references in Prompts/ files point to `.github/prompts/` as the shared agent source.
-3. **100+ Copilot prompts lack explicit triggers** — Only 7 `.github/prompts/` files have `trigger:` in frontmatter. The rest rely on filename-as-command convention. No sync issue — this is by design.
+2. **No `opencode.json`/`opencode.jsonc`** — The OpenCode platform config could not be located on disk. All OpenCode references in Prompts/ files point to `prompts/` as the shared agent source.
+3. **100+ Copilot prompts lack explicit triggers** — Only 7 `prompts/` files have `trigger:` in frontmatter. The rest rely on filename-as-command convention. No sync issue — this is by design.
 4. **humanizer split** — Two separate `humanizer` skills exist (root + creative). If unintentional, the root-level one could absorb into `creative/humanizer` and be deleted.
 
 ## Actions Required
@@ -113,9 +113,9 @@ Scope: Prompts/ ↔ Hermes skills ↔ .github/prompts/
 
 | Check | Status |
 |-------|--------|
-| OpenCode agent discovery | ⚠️ No `agents/` directory — using `.github/prompts/` as equivalent |
+| OpenCode agent discovery | ⚠️ No `agents/` directory — using `prompts/` as equivalent |
 | Hermes skill discovery | ✅ 177 skills catalogued across 25 categories |
-| Copilot prompt discovery | ✅ 100+ prompts in `.github/prompts/` |
+| Copilot prompt discovery | ✅ 100+ prompts in `prompts/` |
 | Cross-reference mapping | ✅ Table complete |
 | Deduplication scan | ✅ No redundant triggers found |
 | Schema validation | ✅ Naming conventions consistent per platform |

@@ -37,7 +37,7 @@ Use this prompt when performance issues are suspected or when implementing featu
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#performance)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#performance)
 
 - Performance profiling and bottleneck analysis
 - Query and caching strategy optimization
@@ -58,7 +58,7 @@ Use this prompt when performance issues are suspected or when implementing featu
 - Frontend Optimizer: Minimizes JS shipped to clients and avoids unnecessary hydration.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Measure before optimizing and report baseline and delta when possible.

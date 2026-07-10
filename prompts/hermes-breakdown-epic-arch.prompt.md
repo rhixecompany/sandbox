@@ -42,7 +42,7 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 - `/docs/ways-of-work/plan/{epic-name}/arch.md`
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. Include an architecture overview.

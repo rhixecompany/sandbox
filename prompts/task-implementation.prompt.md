@@ -33,7 +33,7 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#task-implementation)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#task-implementation)
 
 - Plan-driven implementation and dependency sequencing
 - Change tracking and release-note discipline
@@ -54,7 +54,7 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 - Change Recorder: Maintains release-ready traceability for every change.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Read full plan and corresponding changes file before implementing.

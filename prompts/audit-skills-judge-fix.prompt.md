@@ -69,7 +69,7 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#audit-skills-judge-fix)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#audit-skills-judge-fix)
 
 | Skill                            | Purpose                                           |
 | -------------------------------- | ------------------------------------------------- |
@@ -82,7 +82,7 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 | `writing-skills`                 | Write clear skill prose and structure             |
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 1. **Sequential execution** — Each phase must complete before the next begins ("only then" constraint)

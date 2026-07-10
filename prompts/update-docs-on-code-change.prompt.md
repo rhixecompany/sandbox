@@ -38,7 +38,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`prompts/templates/_shared/skills-table-core.md`](../templates/_shared/skills-table-core.md#update-docs-on-code-change)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#update-docs-on-code-change)
 
 - Change-impact analysis across code and documentation
 - Documentation synchronization and migration guide authoring
@@ -59,7 +59,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 - Verification Reviewer: Ensures no stale references or broken examples remain.
 
 ## Rules
-> Core rules: [`prompts/templates/_shared/rules-core.md`](../templates/_shared/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 
 - Update docs in the same change as code whenever behavior or interfaces change.
