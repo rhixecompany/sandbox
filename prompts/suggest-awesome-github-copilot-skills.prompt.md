@@ -13,7 +13,6 @@ toolsets:
 - web/fetch
 - githubRepo
 - todos
-- search
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -194,12 +193,10 @@ When outdated skills are identified:
 
 ## Template References
 
-Detailed templates in `templates/suggest-awesome-github-copilot-skills/`:
+Detailed templates in `templates/suggest-awesome-github-copilot-skills/`
+(following the DRY convention documented in `templates/_index.md`):
 
-## Template References
-
-Templates in `templates/suggest-awesome-github-copilot-skills/`:
-
+- `README.md` — section inventory + usage notes
 - `context_analysis_criteria.md`
 - `front_matter_structure.md`
 - `icons_reference.md`
@@ -210,6 +207,9 @@ Templates in `templates/suggest-awesome-github-copilot-skills/`:
 - `process.md`
 - `requirements.md`
 - `rules.md`
-- `skill_structure_requireme.md`
+- `skill_structure_requirements.md`
 - `update_handling.md`
-- `version_comparison_proces.md`
+- `version_comparison_process.md`
+
+> Note: filenames `skill_structure_requirements.md` and `version_comparison_process.md`
+> were corrected from the original manifest typos.
