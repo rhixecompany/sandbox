@@ -1,9 +1,7 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
-version: 1.0.0
+version: 2.0.0
 name: repo
 title: Repo Research Pipeline
 trigger: /repo
@@ -12,15 +10,13 @@ description: 'Research all 14 projects via delegated sub-prompts: web search for
   crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
   ops to repo-management.prompt.md.
 
-  '
+'
 mode: agent
 system: 'You are a research orchestrator. Delegate web research to web-research-pipeline
-
   sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization
-
   or migration — those live in repo-management.prompt.md.
 
-  '
+'
 tags:
   - architecture
   - frontend
@@ -38,6 +34,9 @@ dependencies:
 - skill:spike
 - skill:writing-skills
 - skill:content-research-writer
+- skill:github-repo-management
+- skill:code-wiki
+- skill:writing-clearly-and-concisely
 - prompt:repo-management
 - prompt:repo-story-time
 - prompt:web-research-pipeline
@@ -50,6 +49,13 @@ skills:
 - spike
 - writing-skills
 - content-research-writer
+- github-repo-management
+- code-wiki
+- writing-clearly-and-concisely
+- repo-management
+- repo-story-time
+- web-research-pipeline
+- repo-research-pipeline
 metadata:
   hermes:
     related_skills:
@@ -60,13 +66,16 @@ metadata:
     - spike
     - writing-skills
     - content-research-writer
+    - github-repo-management
+    - code-wiki
+    - writing-clearly-and-concisely
     - repo-management
     - repo-story-time
     - web-research-pipeline
     - repo-research-pipeline
 
-
 ---
+
 ## Goal
 
 Research each of the 14 projects under `projects/`. For every project:
@@ -336,6 +345,7 @@ List project name + shared technology. Must be symmetric.>
 | Official Docs | <url> | <framework> documentation    |
 | Community     | <url> | Forum / Discord / Reddit     |
 | Tutorial      | <url> | Key tutorial or guide        |
+
 ```
 
 ---
@@ -374,6 +384,9 @@ List project name + shared technology. Must be symmetric.>
 | `repo-story-time` | — | Git history analysis and repo narrative |
 | `web-research-pipeline` | 1 | Delegated web search + extraction |
 | `repo-research-pipeline` | 1 | Multi-project research orchestrator |
+| `github-repo-management` | — | GitHub repo operations for post-research |
+| `code-wiki` | — | Repo analysis for repo-story-time |
+| `writing-clearly-and-concisely` | — | Clean writing for repo-story-time |
 
 ---
 
@@ -423,6 +436,8 @@ List project name + shared technology. Must be symmetric.>
 | `/repo-story-time` | `prompts/repo-story-time.prompt.md` | Git history analysis and repo narrative |
 | `/web-research-pipeline` | `prompts/web-research-pipeline.prompt.md` | Web search + extraction per project |
 | `/repo-research-pipeline` | `prompts/repo-research-pipeline.prompt.md` | Multi-project research orchestrator |
+
+---
 
 ## Template References
 

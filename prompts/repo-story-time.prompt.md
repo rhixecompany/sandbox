@@ -1,16 +1,14 @@
 ---
-
-
-trigger: /repo-story-time
+license: MIT
+author: Hermes Agent
+version: 2.0.0
 name: repo-story-time
+trigger: /repo-story-time
 title: 'Repository Analysis: Story from Git History'
 description: 'Generate a comprehensive repository summary and narrative story from
   commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
 
-  '
-version: 1.0.0
-author: Hermes Agent
-license: MIT
+'
 tags:
   - architecture
   - generator

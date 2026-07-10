@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /repo-management
 name: repo-management
 title: Repo Management Pipeline
@@ -8,8 +6,8 @@ description: 'Execute repo management operations across all project repos: branc
   normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
   repo-research-pipeline phase completes.
 
-  '
-version: 1.0.0
+'
+version: 2.0.0
 author: Hermes Agent
 license: MIT
 tags:

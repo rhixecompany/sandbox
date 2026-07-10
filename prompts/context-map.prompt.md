@@ -1,14 +1,11 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
-version: 1.0.0
+version: 2.0.0
 title: context-map
 name: context-map
 trigger: /context-map
-description: Build a dependency and reference map before making changes so implementation
-  starts from the right files.
+description: Build a dependency and reference map before making changes so implementation starts from the right files.
 tags:
   - audit
   - frontend
@@ -20,9 +17,14 @@ dependencies:
 - skill:codemap
 skills:
 - codemap
+metadata:
+  hermes:
+    related_skills:
+    - codemap
 
 
 ---
+
 # context-map
 
 > Build a dependency-aware context map before implementation begins.
@@ -52,6 +54,7 @@ Build a dependency and reference map before making changes so implementation sta
 - Follow with a bulleted risk assessment of 3-5 items max
 
 ## Rules
+
 >
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
@@ -78,7 +81,7 @@ Build a dependency and reference map before making changes so implementation sta
 > ### Phase 1: Discover the scope
 >
 > **Goal:** find the files and relationships that matter.
-
+>
 > **Full content:** `templates/context-map/phases.md`
 
 ## Actions Summary
