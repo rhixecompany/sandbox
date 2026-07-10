@@ -48,7 +48,7 @@ Your job is to help integrate Actors into codebases based on what the user needs
 
 ## Prerequisites
 
-- **Apify Token:** Before starting, check if `APIFY_TOKEN` is set in the environment. If not provided, direct to create one at https://console.apify.com/account#/integrations
+- **Apify Token:** Before starting, check if `APIFY_TOKEN` is set in the environment. If not provided, direct to create one at <https://console.apify.com/account#/integrations>
 - **Apify Client Library:** Install when implementing (see language-specific guides below)
 
 ## Recommended Workflow

@@ -20,6 +20,7 @@
 ---
 
 **Report generated:** $(date '+%Y-%m-%d %H:%M:%S') **Quality Gate Version:** 2.1 (fail-fast enabled)
+
 ```
 
 ### Instructions

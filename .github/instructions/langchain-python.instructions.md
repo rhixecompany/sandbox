@@ -117,7 +117,7 @@ for doc in results:
 ```
 
 - For production, prefer persistent vectorstores (Chroma, Pinecone, Qdrant, Weaviate) and configure authentication, scaling, and backup as per provider docs.
-- Reference: https://python.langchain.com/docs/integrations/vectorstores/
+- Reference: <https://python.langchain.com/docs/integrations/vectorstores/>
 
 ## Prompt engineering & governance
 

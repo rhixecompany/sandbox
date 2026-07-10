@@ -169,4 +169,4 @@ Copy the block under `### Refined Prompt` into `prompts/what-context-needed.prom
 interactive VS Code session, run Joyride to push the markdown to the clipboard.
 
 ---
-_End of report · 2026-07-09 · boost-prompt executed as labeled dry-run_
+*End of report · 2026-07-09 · boost-prompt executed as labeled dry-run*

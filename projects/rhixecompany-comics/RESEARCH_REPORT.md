@@ -12,27 +12,30 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| Django + Next.js template | https://github.com/nynvr/django-nextjs-postgresql-template | Django 5.1 + DRF 3.15 + Next.js 15 + Docker |
-| Unfold Turbo | https://github.com/unfoldadmin/turbo | Django & Next.js boilerplate |
-| Django-Next.js Auth | https://github.com/PikoCanFly/JWT-HTTPCookies-Django-DRF-NEXT.JS | JWT + HttpOnly cookies; DRF + Next.js |
+| Django + Next.js template | <https://github.com/nynvr/django-nextjs-postgresql-template> | Django 5.1 + DRF 3.15 + Next.js 15 + Docker |
+| Unfold Turbo | <https://github.com/unfoldadmin/turbo> | Django & Next.js boilerplate |
+| Django-Next.js Auth | <https://github.com/PikoCanFly/JWT-HTTPCookies-Django-DRF-NEXT.JS> | JWT + HttpOnly cookies; DRF + Next.js |
 
 ---
 
 ## Key Findings
 
 ### Django + Next.js Dual-Stack (2026)
+
 - Biggest risk: API field drift — maintain OpenAPI spec; generate TS types
 - Predicted 2026 default stack for AI-ready enterprise platforms
 - Django at `/api/`, Next.js at frontend domain; CORS via `django-cors-headers` v4.9+
 - Case studies: healthcare SaaS (40% faster onboarding), fintech, AI startups
 
 ### Next.js 16 + React 19
+
 - Server Components by default; Client Components only for interactive UI
 - Turbopack ~400% faster dev vs webpack
 - enable `output: 'standalone'` for Docker deployment
 - Server Actions simplify form handling without extra endpoints
 
 ### Celery + Redis Production (2026)
+
 - **Critical settings**: `task_acks_late=True`, `task_reject_on_worker_lost=True`, `worker_prefetch_multiplier=1`
 - Visibility timeout must exceed longest task; keep ETA shorter than timeout
 - `celery-once` with Redis lock prevents duplicate scraping from retries
@@ -40,6 +43,7 @@
 - Retry with `max_retries` + exponential backoff
 
 ### CORS + Auth
+
 - `django-cors-headers` v4.9+ drops Python 3.9 in newer versions
 - JWT with HttpOnly cookies + refresh tokens (more secure than localStorage)
 - SimpleJWT with token blacklist on logout
@@ -51,10 +55,10 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Next.js 16 | https://nextjs.org/docs | Docs |
-| Celery + Django | https://docs.celeryq.dev/en/stable/django/ | Integration Guide |
-| Celery best practices | https://denibertovic.com/posts/celery-best-practices | Production Guide |
-| Django CORS Headers | https://generalistprogrammer.com/tutorials/django-cors-headers-python-package-guide | Config |
+| Next.js 16 | <https://nextjs.org/docs> | Docs |
+| Celery + Django | <https://docs.celeryq.dev/en/stable/django/> | Integration Guide |
+| Celery best practices | <https://denibertovic.com/posts/celery-best-practices> | Production Guide |
+| Django CORS Headers | <https://generalistprogrammer.com/tutorials/django-cors-headers-python-package-guide> | Config |
 
 ---
 
@@ -117,8 +121,8 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Next.js 16 Docs | https://nextjs.org/docs | App Router docs |
-| Django Docs | https://docs.djangoproject.com/en/5.2/ | Django 5.x docs |
-| Celery Docs | https://docs.celeryq.dev/ | Task queue docs |
-| Django CORS Headers | https://github.com/adamchainz/django-cors-headers | CORS middleware |
-| Docker Compose | https://docs.docker.com/compose/ | Multi-service orchestration |
+| Next.js 16 Docs | <https://nextjs.org/docs> | App Router docs |
+| Django Docs | <https://docs.djangoproject.com/en/5.2/> | Django 5.x docs |
+| Celery Docs | <https://docs.celeryq.dev/> | Task queue docs |
+| Django CORS Headers | <https://github.com/adamchainz/django-cors-headers> | CORS middleware |
+| Docker Compose | <https://docs.docker.com/compose/> | Multi-service orchestration |

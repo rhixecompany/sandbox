@@ -35,6 +35,7 @@
 ### rhixecompany-comics
 
 **Source components:**
+
 - **comicwise** → frontend (Next.js App Router, Prisma, Tailwind, shadcn/ui)
 - **Django-Scrapy-Selenium** → backend scaffold (Django REST, Celery, Scrapy)
 - **selenium_webdriver** → scraper pipeline (Node.js, Selenium WebDriver)
@@ -54,6 +55,7 @@
 | Architecture doc | ✅ Exists | `docs/rhixecompany-comics-architecture.md` |
 
 **Remaining work:**
+
 - Verify backend apps have actual content (not just empty dirs)
 - Verify frontend src/ is populated (not just scaffold)
 - Wire up scraper scripts from selenium_webdriver

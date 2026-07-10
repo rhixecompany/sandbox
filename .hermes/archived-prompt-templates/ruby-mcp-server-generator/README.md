@@ -5,6 +5,7 @@ Lines: 678
 Templates: 8
 
 ## Templates
+
 - `libmy_mcp_serverpromptscode_re.md`
 - `libmy_mcp_serverresourcesexamp.md`
 - `libmy_mcp_serverserverrb_templ.md`

@@ -5,13 +5,16 @@
 ## Migration Monitoring
 
 ### Tracking Metrics
+
 - Percentage of code automatically migrated
 - Number of manual validations required
 - Error rate of automatic transformations
 - Average migration time per file
 
 ### Error Reporting
+
 How to report incorrect transformations to Copilot:
+
 - Feedback patterns to improve rules
 - Exceptions to document
 - Adjustments to make to instructions
@@ -38,21 +41,25 @@ ${GENERATE_EXAMPLES == "true" ?
 ### Phase 4: Validation and Optimization
 
 #### Instructions Testing
+
 - Apply instructions on test code
 - Verify transformation consistency
 - Adjust rules based on results
 - Document exceptions and edge cases
 
 #### Iterative Optimization
+
 ${AUTOMATION_LEVEL == "Aggressive" ?
   "- Refine rules to maximize automation
-   - Reduce false positives in detection
-   - Improve transformation accuracy
-   - Document lessons learned" : ""}
+
+- Reduce false positives in detection
+- Improve transformation accuracy
+- Document lessons learned" : ""}
 
 ### Final Result
 
 Migration instructions that enable GitHub Copilot to:
+
 1. **Automatically apply** the same transformations during future modifications
 2. **Maintain consistency** with newly adopted conventions
 3. **Avoid obsolete patterns** by automatically proposing alternatives
@@ -61,4 +68,5 @@ Migration instructions that enable GitHub Copilot to:
 
 These instructions transform Copilot into an intelligent migration assistant, capable of reproducing your technology evolution decisions consistently and reliably.
 "
+
 ```

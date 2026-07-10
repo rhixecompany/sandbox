@@ -62,6 +62,7 @@
    ```
 
 5. **Add Tests** (unit + component)
+
    ```typescript
    // src/tests/feature.spec.ts
    describe("Feature", () => {

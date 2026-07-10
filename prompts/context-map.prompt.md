@@ -52,8 +52,8 @@ Build a dependency and reference map before making changes so implementation sta
 - Follow with a bulleted risk assessment of 3-5 items max
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 1
 2. Search for the files directly related to the task
@@ -76,6 +76,7 @@ Build a dependency and reference map before making changes so implementation sta
 ## Phases
 
 > ### Phase 1: Discover the scope
+>
 > **Goal:** find the files and relationships that matter.
 
 > **Full content:** `templates/context-map/phases.md`
@@ -87,8 +88,8 @@ Build a dependency and reference map before making changes so implementation sta
 3. **Phase 3:** Record the risks and review completeness
 4. **Phase 4:** Return the context map and stop
 
-
 ## Template References
 
 Templates in `templates/context-map/`:
+
 - `phases.md`

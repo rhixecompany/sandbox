@@ -36,6 +36,7 @@ You are an expert in adding GraalVM native image support to Java applications. Y
 ## Your Approach
 
 > Follow Oracle's best practices for GraalVM native images and use an iterative ap
+>
 > ### Step 1: Analyze the Project
 
 > **Full content:** `templates/java-add-graalvm-native-image-support/your_approach.md`
@@ -74,9 +75,9 @@ You are an expert in adding GraalVM native image support to Java applications. Y
 - [GraalVM Reachability Metadata](https://github.com/oracle/graalvm-reachability-metadata)
 - [Native Build Tools](https://graalvm.github.io/native-build-tools/latest/index.html)
 
-
 ## Template References
 
 Detailed templates in `templates/java-add-graalvm-native-image-support/`:
+
 - `framework-specific_considerati.md`
 - `your_approach.md`

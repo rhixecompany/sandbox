@@ -1,9 +1,11 @@
 # Technology Stack — rhixe_scans
 
 ## Overview
+
 Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/PayPal payments.
 
 ## Frontend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | Next.js | 15.3.3 | React framework (App Router, Turbopack) |
@@ -17,6 +19,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 | Embla Carousel | 8.6.0 | Image carousels |
 
 ## Backend & Database
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | Prisma ORM | 6.10.0 | Database ORM |
@@ -26,6 +29,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 | PayPal | 8.8.3 | Payment processing |
 
 ## Integrations
+
 | Integration | Purpose |
 |-------------|---------|
 | UploadThing | File uploads |
@@ -34,6 +38,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 | Supabase | Auth/SSR (optional) |
 
 ## Dev & Quality
+
 | Tool | Version | Purpose |
 |------|---------|---------|
 | Jest | 30.0.0 | Testing |

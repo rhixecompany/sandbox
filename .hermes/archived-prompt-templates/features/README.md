@@ -5,6 +5,7 @@ Lines: 441
 Templates: 5
 
 ## Templates
+
 - `phase_2_user_profile_features.md`
 - `phase_3_comic_features.md`
 - `phase_4_chapter_reader.md`

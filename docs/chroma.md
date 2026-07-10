@@ -15,6 +15,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ## Key Features
 
 ### Flexible Client Types
+
 - **Persistent client** — uses a local data directory
 - **Cloud client** — connects to `api.trychroma.com` via SSL
 - **HTTP client** — connects to a self-hosted Chroma instance
@@ -37,6 +38,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 | `chroma_delete_documents` | Delete documents from a collection |
 
 ### Supported Embedding Functions
+
 - `default`
 - `cohere`
 - `openai`
@@ -51,6 +53,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ## Usage with Claude Desktop
 
 ### Persistent Client (Local)
+
 ```json
 // claude_desktop_config.json
 {
@@ -64,6 +67,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ```
 
 ### Cloud Client
+
 ```json
 // claude_desktop_config.json
 {
@@ -77,6 +81,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ```
 
 ### HTTP Client (Self-Hosted)
+
 ```json
 // claude_desktop_config.json
 {
@@ -90,6 +95,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ```
 
 ### Custom Environment File Path
+
 ```json
 "args": ["chroma-mcp", "--dotenv-path", "/custom/path/.env"]
 ```
@@ -99,6 +105,7 @@ A **Model Context Protocol (MCP) server** implementation that provides **Chroma 
 ## Environment Variable Configuration
 
 The server loads variables from:
+
 1. A `.env` file at the path specified by `--dotenv-path` (defaults to `.chroma_env` in the working directory)
 2. System environment variables
 
@@ -107,11 +114,13 @@ The server loads variables from:
 ### Embedding Function API Keys
 
 Follow the naming convention:
+
 ```
 CHROMA_<PROVIDER>_API_KEY="<key>"
 ```
 
 **Example:**
+
 ```
 CHROMA_COHERE_API_KEY="your-cohere-key"
 CHROMA_OPENAI_API_KEY="your-openai-key"

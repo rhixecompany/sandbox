@@ -5,6 +5,7 @@ Lines: 2719
 Templates: 12
 
 ## Templates
+
 - `phase_10_admin_pages_20_new_fi.md`
 - `phase_11_testing_6_new_files.md`
 - `phase_3_typescript__auth_fixes.md`

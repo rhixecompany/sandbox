@@ -27,20 +27,24 @@ FAIL (<60):   0
 ## Pipeline Results
 
 ### Phase 1 — Audit, Check & Update
+
 - `hermes skills audit` → `docs/skills-audit.md` (111 skills audited, 2025 lines)
 - `hermes skills check` → `docs/skills-check.md` (74 updates available)
 - `hermes skills update` → **74 skills updated** from official sources (retried with 600s timeout)
 
 ### Phase 1.5 — Debug & Fix
+
 - `hermes skills repair-official --restore --yes all` restored **97** official skills
 - 13 missing-path skills reinstalled
 - 36 DANGEROUS/CAUTION blocked skills — security-hardened, left as-is
 
 ### Phase 2 — Listing
+
 - `hermes skills list-modified > docs/skills-modified.md` — 53 modified
 - `hermes skills list --source local > docs/local-skills.md` — 429 local
 
 ### Phase 3 — Judging
+
 - `batch_skill_judge.py` — 429 skills scored on 5 dimensions (20pts each = 100)
 - Full results: `judge_results/all_results.tsv`
 - Summary: `judge_results/summary.md`

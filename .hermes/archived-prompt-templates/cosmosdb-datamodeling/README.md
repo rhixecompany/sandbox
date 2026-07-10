@@ -5,6 +5,7 @@ Lines: 1043
 Templates: 7
 
 ## Templates
+
 - `communication_guidelines.md`
 - `container_designs.md`
 - `core_design_philosophy.md`

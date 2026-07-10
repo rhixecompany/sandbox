@@ -42,7 +42,7 @@ Resume_maker/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Directories** | kebab-case | `application_materials/`, `updated_readmes/` |
 | **Source files** | kebab-case.ts | `index.ts` |
 | **Config** | dotted-prefix | `.cspell.json`, `.prettierrc.json`, `.markdownlint.json` |
@@ -65,7 +65,7 @@ Resume_maker/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Has `package.json` | ✅ Node.js / Bun project |
 | Has `bun.lock` | ✅ Uses Bun package manager |
 | Has `tsconfig.json` | ✅ TypeScript |

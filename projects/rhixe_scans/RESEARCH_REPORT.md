@@ -22,21 +22,25 @@
 ## Key Findings
 
 ### Next.js 15 App Router + WebSocket
+
 - Server Components by default; `use client` for interactivity
 - WebSockets do NOT work on Vercel serverless — require custom Node server or Fly.io
 - Alternative: Server-Sent Events (SSE) or Socket.io for serverless-compatible real-time
 
 ### Prisma 6 Singleton Pattern
+
 - Create `lib/prisma.ts` with global singleton to prevent hot-reload connection leaks
 - `prisma.config.ts` (new in 6.x) for configuration; migration from 5.x updates setup
 - Prisma Accelerate for serverless connection pooling in production
 
 ### Stripe + PayPal Integration
+
 - Stripe webhooks in App Router: must use `request.text()` (not `request.json()`) for signature verification
 - PayPal: `@paypal/react-paypal-js` frontend + server-side order capture validation
 - Always idempotent webhook handlers; use database transactions
 
 ### UploadThing + Media
+
 - Type-safe File Routes; presigned URLs + CDN delivery
 - Re-sign URLs on key rotation; never permanent URLs for paywalled content
 
@@ -46,12 +50,12 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Next.js 15 | https://nextjs.org/docs | Docs |
-| Prisma 6/7 | https://www.prisma.io/docs | Docs |
-| NextAuth v5 | https://authjs.dev/getting-started | Docs |
-| UploadThing | https://docs.uploadthing.com | Docs |
-| Stripe Webhooks | https://docs.stripe.com/webhooks | Guide |
-| TanStack Query | https://tanstack.com/query/latest | Docs |
+| Next.js 15 | <https://nextjs.org/docs> | Docs |
+| Prisma 6/7 | <https://www.prisma.io/docs> | Docs |
+| NextAuth v5 | <https://authjs.dev/getting-started> | Docs |
+| UploadThing | <https://docs.uploadthing.com> | Docs |
+| Stripe Webhooks | <https://docs.stripe.com/webhooks> | Guide |
+| TanStack Query | <https://tanstack.com/query/latest> | Docs |
 
 ---
 
@@ -110,7 +114,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Next.js | https://nextjs.org/docs | Framework docs |
-| Prisma | https://www.prisma.io/docs | ORM docs |
-| Auth.js v5 | https://authjs.dev/getting-started | Auth docs |
-| Stripe Webhooks | https://docs.stripe.com/webhooks | Webhook guide |
+| Next.js | <https://nextjs.org/docs> | Framework docs |
+| Prisma | <https://www.prisma.io/docs> | ORM docs |
+| Auth.js v5 | <https://authjs.dev/getting-started> | Auth docs |
+| Stripe Webhooks | <https://docs.stripe.com/webhooks> | Webhook guide |

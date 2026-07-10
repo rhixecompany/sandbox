@@ -82,21 +82,25 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### TypeScript
+
 - Use strict mode TypeScript as configured
 - Follow established type patterns from existing codebase
 - Use path aliases as defined in `tsconfig.json`
 
 ### Next.js 15 (App Router)
+
 - Use App Router conventions (page.tsx, layout.tsx)
 - Server Components by default; Client Components only when needed
 - API routes under `src/app/api/`
 
 ### Database (Prisma)
+
 - Manage schema via `prisma/schema.prisma`
 - Use Prisma Client for all database operations
 - Follow existing migration patterns (`prisma migrate`)
 
 ### Payments (Stripe)
+
 - Use Stripe webhooks for subscription lifecycle events
 - Follow existing patterns for checkout session creation
 - Store Stripe customer IDs and subscription status

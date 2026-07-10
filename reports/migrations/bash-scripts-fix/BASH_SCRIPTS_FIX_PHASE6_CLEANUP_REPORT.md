@@ -9,6 +9,7 @@
 ## Executive Summary
 
 Phase 6 finalizes the migration project by:
+
 1. **Cleanup:** Removing stale references, temporary files, and documentation
 2. **Verification:** Confirming all migrations complete and working
 3. **Documentation:** Finalizing guides and reference materials
@@ -22,6 +23,7 @@ Phase 6 finalizes the migration project by:
 ### Section A: Code & Reference Cleanup (6 items)
 
 - [ ] **1. Search and remove stale references**
+
   ```bash
   # Find any remaining references to old locations
   grep -r "projects/Banking\|projects/comicwise\|projects/rhixe_scans\|projects/ecom" \
@@ -33,24 +35,28 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **2. Verify package.json has all script references**
+
   ```bash
   jq '.scripts | keys' Bash/package.json | grep -E "bank|comic|scan|ecom"
   # Should show: All 54 scripts mapped to Bash/migrations locations
   ```
 
 - [ ] **3. Verify .github/workflows use new paths**
+
   ```bash
   grep -c "Bash/migrations" .github/workflows/*.yml
   # Should show: All orchestrator calls use new paths
   ```
 
 - [ ] **4. Remove temporary migration logs/artifacts**
+
   ```bash
   # Clean up any temporary files from Phase 4
   find . -name "*migration*.tmp" -o -name "*phase4*.bak" -delete
   ```
 
 - [ ] **5. Archive old script locations (Git confirmation)**
+
   ```bash
   # Verify originals are deleted
   git log --oneline | grep -i "delete.*scripts" | head -1
@@ -59,6 +65,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **6. Verify environment variable consistency**
+
   ```bash
   # All migrated scripts should use consistent env vars
   grep -r "\${SCRIPT_ROOT}" Bash/migrations/ | wc -l
@@ -69,6 +76,7 @@ Phase 6 finalizes the migration project by:
 ### Section B: Documentation Updates (5 items)
 
 - [ ] **7. Update project README**
+
   ```bash
   # Add section: "Migrated Scripts Location"
   # Add: All 54 scripts now in Bash/migrations/
@@ -89,6 +97,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **8. Create Migration Guide document**
+
   ```bash
   cat > docs/bash-scripts-migration-guide.md << 'EOF'
   # Bash Scripts Migration Guide
@@ -137,9 +146,11 @@ Phase 6 finalizes the migration project by:
   - PROJECT_RHIXE_SCANS_DIR: projects/rhixe_scans location
   
   EOF
+
   ```
 
 - [ ] **9. Update developer documentation in Bash/docs/**
+
   ```bash
   # Add migration section to Bash/docs/CONTRIBUTING.md
   # Add: "Scripts moved to Bash/migrations/ as of Phase 6"
@@ -148,6 +159,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **10. Verify all README files updated**
+
   ```bash
   # Check Banking, comicwise, rhixe_scans, ecom for old script references
   grep -r "orchestrator.sh\|install.sh" projects/ --include="README.md" || echo "✓ No stale refs"
@@ -157,6 +169,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **11. Update .github/CONTRIBUTING or similar**
+
   ```bash
   # Add: "Scripts are located in Bash/migrations/"
   # Add: Migration guide reference
@@ -166,6 +179,7 @@ Phase 6 finalizes the migration project by:
 ### Section C: Git & Release Management (4 items)
 
 - [ ] **12. Review git history**
+
   ```bash
   # Check all 7 migration commits
   git log --oneline | grep "migrate\|batch" | head -7
@@ -175,6 +189,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **13. Consolidate migration commits (optional)**
+
   ```bash
   # If desired, squash all 7 migration commits into one:
   # (Only if not already organized)
@@ -183,6 +198,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **14. Create release tag**
+
   ```bash
   git tag -a v1.0-scripts-migrated \
     -m "All 54 scripts migrated to Bash/migrations/
@@ -200,6 +216,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **15. Verify no uncommitted changes**
+
   ```bash
   git status
   # Should show: "nothing to commit, working tree clean"
@@ -208,6 +225,7 @@ Phase 6 finalizes the migration project by:
 ### Section D: Final Verification (3 items)
 
 - [ ] **16. Run final integration test**
+
   ```bash
   cd Bash
   bun run test:all
@@ -220,6 +238,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **17. Verify no broken references in CI**
+
   ```bash
   # Check .github/workflows for any broken references
   cat .github/workflows/*.yml | grep -E "run:|path" | grep -v "Bash/migrations" || true
@@ -228,6 +247,7 @@ Phase 6 finalizes the migration project by:
   ```
 
 - [ ] **18. Archive migration artifacts**
+
   ```bash
   mkdir -p docs/archive/bash-scripts-migration-phase-reports
   
@@ -350,6 +370,7 @@ Modernization project (bash-scripts-fix).
 ### New Structure
 
 ```
+
 Bash/migrations/
 ├── banking-orchestrators/          (6 scripts)
 ├── banking-install-framework/      (11 scripts)
@@ -358,6 +379,7 @@ Bash/migrations/
 ├── comicwise-development/          (10 scripts)
 ├── rhixe_scans-utilities/          (7 scripts)
 └── root-ecom-misc/                 (3 scripts)
+
 ```
 
 ### Environment Variables
@@ -423,6 +445,7 @@ These tasks can be deferred to future phases:
 ## Success Criteria
 
 ✅ Phase 6 is complete when:
+
 1. All 18 cleanup items verified
 2. Completion certificate generated
 3. Release tag created

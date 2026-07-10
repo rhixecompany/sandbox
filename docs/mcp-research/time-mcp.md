@@ -1,6 +1,6 @@
 # Time MCP Server
 
-**Source:** https://github.com/modelcontextprotocol/servers/tree/main/src/time
+**Source:** <https://github.com/modelcontextprotocol/servers/tree/main/src/time>
 
 ## Overview
 
@@ -57,12 +57,14 @@ Add to `settings.json`.
 #### VS Code
 
 **Quick Install Buttons:**
+
 - [Install with UV](https://insiders.vscode.dev/redirect/mcp/install?name=time&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-server-time%22%5D%7D)
 - [Install with UV (Insiders)](https://insiders.vscode.dev/redirect/mcp/install?name=time&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-server-time%22%5D%7D&quality=insiders)
 - [Install with Docker](https://insiders.vscode.dev/redirect/mcp/install?name=time&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22mcp%2Ftime%22%5D%7D)
 - [Install with Docker (Insiders)](https://insiders.vscode.dev/redirect/mcp/install?name=time&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22mcp%2Ftime%22%5D%7D&quality=insiders)
 
 **Manual Installation:**
+
 1. Press `Ctrl + Shift + P` → `Preferences: Open User Settings (JSON)`
 2. Add configuration to User Settings or `.vscode/mcp.json` (workspace-level)
 
@@ -97,6 +99,7 @@ By default, the server auto-detects system timezone. Override with `--local-time
 ### Convert Time
 
 **Request:** `convert_time` with:
+
 - `source_timezone: "UTC"`
 - `time: "14:30"`
 - `target_timezone: "America/New_York"`
@@ -139,6 +142,7 @@ src/time/
 ## Contributing
 
 Contributions welcome! Areas for contribution:
+
 - New time-related tools
 - Enhanced existing functionality
 - Documentation improvements
@@ -165,6 +169,7 @@ mcp_servers:
 ```
 
 For Docker mode:
+
 ```yaml
 mcp_servers:
   time:
@@ -175,6 +180,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test time
 /reload-mcp
@@ -182,7 +188,7 @@ hermes mcp test time
 
 ## References
 
-- GitHub: https://github.com/modelcontextprotocol/servers/tree/main/src/time
-- mcp-get.com: https://mcp-get.com/packages/mcp-server-time
-- mcpservers.org: https://mcpservers.org/servers/Taki-Ta/mcp-server-time
-- LobeHub: https://lobehub.com/mcp/foxlauren-mcp-time-server
+- GitHub: <https://github.com/modelcontextprotocol/servers/tree/main/src/time>
+- mcp-get.com: <https://mcp-get.com/packages/mcp-server-time>
+- mcpservers.org: <https://mcpservers.org/servers/Taki-Ta/mcp-server-time>
+- LobeHub: <https://lobehub.com/mcp/foxlauren-mcp-time-server>

@@ -41,8 +41,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -52,18 +52,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -128,7 +132,7 @@ You are an expert educator and technical writer. You can explain programming top
 ## Configuration Reference
 
 > - **Numeric Scale**: `1-3`
-> - **Numeric Sequence**: `ordered` (higher numbers represent higher knowledge or 
+> - **Numeric Sequence**: `ordered` (higher numbers represent higher knowledge or
 
 > **Full content:** `templates/add-educational-comments/configuration_reference.md`
 
@@ -160,8 +164,8 @@ Interpret `Line Numer = no` as `Line Number Referencing = no` and adjust behavio
 - Provide clarifying suggestions only when they aid learning.
 - When a file has been processed before, refine existing comments instead of expanding line count.
 
-
 ## Template References
 
 Detailed templates in `templates/add-educational-comments/`:
+
 - `configuration_reference.md`

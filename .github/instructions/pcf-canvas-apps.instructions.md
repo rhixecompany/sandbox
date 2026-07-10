@@ -34,7 +34,7 @@ When you open a canvas app that contains code components in Power Apps Studio, a
 
 To add code components to an app, you need to enable the Power Apps component framework feature in each environment where you want to use them. By default, the Power Apps component feature is enabled for model-driven apps.
 
-### Steps to Enable for Canvas Apps:
+### Steps to Enable for Canvas Apps
 
 1. Sign in to [Power Apps](https://powerapps.microsoft.com/)
 2. Select **Settings** ![Settings](https://learn.microsoft.com/en-us/power-apps/developer/component-framework/media/settings.png), and then select **Admin Center**

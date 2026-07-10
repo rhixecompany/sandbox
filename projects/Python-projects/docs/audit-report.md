@@ -36,6 +36,7 @@ def send_email(smtp_server="smtp.gmail.com", port=587,
 **Impact:** Email account compromise, spam origin, password reuse exposure.
 
 **Remediation:**
+
 1. Remove default credential values from function signatures
 2. Read credentials from environment variables or interactive input
 3. Add `.env` support for credential configuration
@@ -47,11 +48,13 @@ def send_email(smtp_server="smtp.gmail.com", port=587,
 **Status:** ❌ Unresolved  
 
 The web scraper accepts user-provided URLs and CSS selectors without validation:
+
 - **URL Injection:** `file:///etc/passwd` URLs could read local files
 - **SSRF:** Internal network hosts could be targeted
 - **Selector Injection:** Malicious selectors could cause unexpected behavior
 
 **Remediation:**
+
 1. Validate URLs against an allowlist of schemes (http, https only)
 2. Block private IP ranges for URL targets
 3. Sanitize CSS selectors to prevent injection
@@ -63,11 +66,13 @@ The web scraper accepts user-provided URLs and CSS selectors without validation:
 **Status:** ❌ Unresolved  
 
 The web scraper can be used to make rapid, uncontrolled requests to target websites, potentially causing:
+
 - Denial of service against target servers
 - IP-based rate limiting of the user's network
 - Legal liability for unauthorized scraping
 
 **Remediation:**
+
 1. Add mandatory delays between requests (min 1 second)
 2. Respect `robots.txt` directives
 3. Set a user-agent header identifying the scraper
@@ -85,6 +90,7 @@ The web scraper can be used to make rapid, uncontrolled requests to target websi
 If the currency converter uses an external API (e.g., exchangerate-api.com), it must not have hardcoded API keys. API keys in source code lead to unauthorized usage and potential billing charges.
 
 **Remediation:**
+
 1. Remove any hardcoded API keys
 2. Use environment variables: `API_KEY = os.getenv('EXCHANGE_RATE_API_KEY')`
 3. Add `.env.example` with placeholder keys
@@ -96,6 +102,7 @@ If the currency converter uses an external API (e.g., exchangerate-api.com), it 
 **Status:** ❌ Unresolved  
 
 The system info collector gathers detailed system information including:
+
 - Network interfaces and IP addresses
 - Running process lists
 - Boot time and uptime
@@ -104,6 +111,7 @@ The system info collector gathers detailed system information including:
 If output is shared or logged, this leaks sensitive system configuration.
 
 **Remediation:**
+
 1. Add a `--redact-sensitive` flag to remove private information
 2. Warn users about information exposure in script output
 3. Never automatically transmit collected data
@@ -115,11 +123,13 @@ If output is shared or logged, this leaks sensitive system configuration.
 **Status:** ❌ Unresolved  
 
 The batch file renamer accepts user-provided directory paths and regex patterns without validation, allowing:
+
 - Path traversal via `../` sequences
 - Operations outside intended directory scope
 - Potential overwrite of system files
 
 **Remediation:**
+
 1. Validate directory paths against allowed base paths
 2. Resolve and check all paths (use `os.path.abspath`)
 3. Prevent operations outside target directory
@@ -169,21 +179,24 @@ Network scripts should verify SSL/TLS certificates by default. Using `verify=Fal
 ## Recommendations
 
 ### Immediate (24 hours)
+
 1. Remove any hardcoded email credentials from `email_sender.py`
 2. Add URL validation to `web_scraper.py`
 3. Replace any hardcoded API keys with environment variables
 
 ### Short-term (1 week)
-4. Add rate limiting and delay configuration to web_scraper.py
-5. Add file path validation to batch_file_renamer.py
-6. Implement CSV injection prevention in csv_json_converter.py
-7. Review all scripts for `random` vs `secrets` module usage
+
+1. Add rate limiting and delay configuration to web_scraper.py
+2. Add file path validation to batch_file_renamer.py
+3. Implement CSV injection prevention in csv_json_converter.py
+4. Review all scripts for `random` vs `secrets` module usage
 
 ### Long-term (1 month)
-8. Add comprehensive input validation to all scripts accepting user input
-9. Implement logging with sensitive data redaction
-10. Create centralized configuration module for API keys and credentials
-11. Add automated security scanning (bandit, safety) to CI
+
+1. Add comprehensive input validation to all scripts accepting user input
+2. Implement logging with sensitive data redaction
+3. Create centralized configuration module for API keys and credentials
+4. Add automated security scanning (bandit, safety) to CI
 
 ---
 

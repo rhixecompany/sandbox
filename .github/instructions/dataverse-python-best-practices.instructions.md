@@ -614,6 +614,7 @@ client.flush_cache()
    ```
 
 5. **Apply filters on server**: Let Dataverse filter before returning
+
    ```python
    client.get("account", filter="creditlimit gt 50000")
    ```
@@ -643,6 +644,7 @@ client.flush_cache()
    ```
 
 4. **Don't create new clients repeatedly**: Reuse singleton
+
    ```python
    # Inefficient
    for i in range(100):

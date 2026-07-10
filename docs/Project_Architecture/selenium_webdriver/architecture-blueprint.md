@@ -103,6 +103,7 @@ async function safeClick(driver, locator) {
 ## 4. Data Output
 
 Scraped data is output as JSON files containing:
+
 - Comic/manga listings
 - Chapter details
 - Metadata extracted from target sites

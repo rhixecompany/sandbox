@@ -72,6 +72,7 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python
+
 - PEP 8 conventions with ruff linting
 - Type hints encouraged (mypy configured)
 - Standalone, single-file scripts

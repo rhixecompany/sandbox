@@ -2,15 +2,15 @@
 
 > Extracted from `az-cost-optimize.prompt.md`.
 
-   ## 💰 Cost Optimization: [Brief Title]
+## 💰 Cost Optimization: [Brief Title]
 
    **Monthly Savings**: $X | **Risk Level**: [Low/Medium/High] | **Implementation Effort**: X days
 
-   ### 📋 Description
+### 📋 Description
 
    [Clear explanation of the optimization and why it's needed]
 
-   ### 🔧 Implementation
+### 🔧 Implementation
 
    **IaC Files Detected**: [Yes/No - based on file_search results]
 
@@ -24,6 +24,7 @@
    # ⚠️ No IaC files found. If they exist elsewhere, modify those instead.
    az appservice plan update --name [plan] --sku B2
    ```
+
    ````
 
    ### 📊 Evidence

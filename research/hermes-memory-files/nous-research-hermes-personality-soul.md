@@ -1,6 +1,6 @@
 # Personality & SOUL.md - Hermes Agent Documentation
 
-> **Source:** https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/features/personality.md
+> **Source:** <https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/features/personality.md>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** mcp_fetch_get_raw_text
 ---
@@ -66,6 +66,7 @@ $HERMES_HOME/SOUL.md
 ## What should go in SOUL.md?
 
 Use it for durable voice and personality guidance, such as:
+
 - tone
 - communication style
 - level of directness
@@ -74,6 +75,7 @@ Use it for durable voice and personality guidance, such as:
 - how Hermes should handle uncertainty, disagreement, or ambiguity
 
 Use it less for:
+
 - one-off project instructions
 - file paths
 - repo conventions
@@ -84,6 +86,7 @@ Those belong in `AGENTS.md`, not `SOUL.md`.
 ## Good SOUL.md content
 
 A good SOUL file is:
+
 - stable across contexts
 - broad enough to apply in many conversations
 - specific enough to materially shape the voice
@@ -121,6 +124,7 @@ You optimize for truth, clarity, and usefulness over politeness theater.
 `SOUL.md` content goes directly into slot #1 of the system prompt — the agent identity position. No wrapper language is added around it.
 
 The content goes through:
+
 - prompt-injection scanning
 - truncation if it is too large
 
@@ -137,7 +141,9 @@ That means you should still keep it focused on persona/voice rather than trying 
 This is the most important distinction.
 
 ### SOUL.md
+
 Use for:
+
 - identity
 - tone
 - style
@@ -145,7 +151,9 @@ Use for:
 - personality-level behavior
 
 ### AGENTS.md
+
 Use for:
+
 - project architecture
 - coding conventions
 - tool preferences
@@ -153,6 +161,7 @@ Use for:
 - commands, ports, paths, deployment notes
 
 A useful rule:
+
 - if it should follow you everywhere, it belongs in `SOUL.md`
 - if it belongs to a project, it belongs in `AGENTS.md`
 
@@ -163,10 +172,12 @@ A useful rule:
 `/personality` is a session-level overlay that changes or supplements the current system prompt.
 
 So:
+
 - `SOUL.md` = baseline voice
 - `/personality` = temporary mode switch
 
 Examples:
+
 - keep a pragmatic default SOUL, then use `/personality teacher` for a tutoring conversation
 - keep a concise SOUL, then use `/personality creative` for brainstorming
 
@@ -236,6 +247,7 @@ A strong default setup is:
 3. Use `/personality` only when you want a temporary mode shift
 
 That gives you:
+
 - a stable voice
 - project-specific behavior where it belongs
 - temporary control when needed
@@ -243,6 +255,7 @@ That gives you:
 ## How personality interacts with the full prompt
 
 At a high level, the prompt stack includes:
+
 1. **SOUL.md** (agent identity — or built-in fallback if SOUL.md is unavailable)
 2. tool-aware behavior guidance
 3. memory/user context

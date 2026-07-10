@@ -191,6 +191,7 @@ Most scripts read from stdin. `basic_calculator.py` (lines 14–44) uses an infi
 | Tests | `pytest` | **0 tests present** despite pin |
 
 **Verification performed for this blueprint:**
+
 - ✅ Read 6 representative source files (calculator, qr, rps, email_sender + README/AGENTS/requirements).
 - ✅ Confirmed 18 `.py` files / 474 LOC via `wc -l`.
 - ⚠️ Did **not** execute scripts (educational I/O; `opencv`/SMTP not available in analysis env) — no runtime trace, only static evidence.

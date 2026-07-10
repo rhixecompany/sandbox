@@ -5,6 +5,7 @@ Lines: 509
 Templates: 7
 
 ## Templates
+
 - `adding_delete_operations.md`
 - `adding_get_operations.md`
 - `adding_patch_operations.md`

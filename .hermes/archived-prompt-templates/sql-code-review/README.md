@@ -5,6 +5,7 @@ Lines: 389
 Templates: 7
 
 ## Templates
+
 - `code_quality__maintainability.md`
 - `common_anti-patterns.md`
 - `database-specific_best_practic.md`

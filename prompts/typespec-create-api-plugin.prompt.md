@@ -46,8 +46,8 @@ Use when you need to typespec create api plugin for the current workspace or tas
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -57,24 +57,29 @@ Use when you need to typespec create api plugin for the current workspace or tas
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Requirements
 
 > Generate TypeSpec files with:
+>
 > ### main.tsp - Agent Definition
 
 > **Full content:** `templates/typespec-create-api-plugin/requirements.md`
@@ -82,6 +87,7 @@ Use when you need to typespec create api plugin for the current workspace or tas
 ## Authentication Options
 
 > Choose based on API requirements:
+>
 > 1. **No Authentication** (Public APIs)
 
 > **Full content:** `templates/typespec-create-api-plugin/authentication_options.md`
@@ -89,6 +95,7 @@ Use when you need to typespec create api plugin for the current workspace or tas
 ## Function Capabilities
 
 > ### Confirmation Dialog
+>
 > type: "AdaptiveCard",
 
 > **Full content:** `templates/typespec-create-api-plugin/function_capabilities.md`
@@ -120,10 +127,10 @@ Then generate:
 - Complete `actions.tsp` with API operations and models
 - Optional `cards/card.json` if Adaptive Cards are needed
 
-
 ## Template References
 
 Templates in `templates/typespec-create-api-plugin/`:
+
 - `authentication_options.md`
 - `function_capabilities.md`
 - `phases.md`

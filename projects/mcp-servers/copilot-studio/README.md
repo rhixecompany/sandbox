@@ -56,7 +56,7 @@ npm run build
 npm start
 ```
 
-The server starts on **http://localhost:3121** by default.  
+The server starts on **<http://localhost:3121>** by default.  
 Override with `PORT` and `HOST` environment variables:
 
 ```bash
@@ -238,7 +238,7 @@ import { definition as createOrderDef, handler as createOrderHandler } from './t
 registerTool(createOrderDef, createOrderHandler);
 ```
 
-4. Rebuild and restart.
+1. Rebuild and restart.
 
 ---
 

@@ -1,4 +1,12 @@
-# Shared Templates — Frontmatter Patterns
+---
+name: shared-frontmatter
+title: Shared Template — Frontmatter
+description: Standard YAML frontmatter block for prompt files
+version: 1.0.0
+tags: [template, shared, frontmatter]
+---
+
+# Shared Template — Frontmatter
 
 Reusable YAML frontmatter blocks for `.prompt.md` files.
 

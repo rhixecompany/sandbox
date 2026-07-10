@@ -100,6 +100,7 @@ The project follows a classic **decoupled architecture**:
 ## 4. Data Flow
 
 ### Movie Discovery Flow
+
 ```
 User → React Component → Redux Action → API Call (Axios/Redux Thunk) → DRF ViewSet
                                                                          ↓
@@ -111,6 +112,7 @@ User → React Component → Redux Action → API Call (Axios/Redux Thunk) → D
 ```
 
 ### Authentication Flow
+
 ```
 Login → DRF SimpleJWT → JWT Token → Stored in localStorage → Attached to API requests
 ```
@@ -120,11 +122,13 @@ Login → DRF SimpleJWT → JWT Token → Stored in localStorage → Attached to
 ## 5. Implementation Patterns
 
 ### Redux Pattern
+
 ```
 constants/ (action types) → actions/ (action creators) → reducers/ (state changes)
 ```
 
 ### DRF ViewSet Pattern
+
 ```python
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
@@ -134,6 +138,7 @@ class MovieViewSet(viewsets.ModelViewSet):
 ```
 
 ### React Component Pattern
+
 ```jsx
 function MovieList() {
   const dispatch = useDispatch();

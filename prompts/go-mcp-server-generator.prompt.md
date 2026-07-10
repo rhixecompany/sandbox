@@ -217,10 +217,10 @@ When generating a Go MCP server:
 - Write tests for tool handlers
 - Document all exported functions
 
-
 ## Template References
 
 Detailed templates in `templates/go-mcp-server-generator/`:
+
 - `main_testgo_template.md`
 - `maingo_template.md`
 - `toolstool1go_template.md`

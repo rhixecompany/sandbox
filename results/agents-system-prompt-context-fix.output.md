@@ -36,6 +36,7 @@ Root `AGENTS.md` and all 29 subproject `AGENTS.md` files already exist (verified
 **Post-fix verification:** all 119 JSON re-validated → still valid. Git: `0b445843` on branch `development`.
 
 ### Enhancements (non-destructive, already consistent)
+
 - Root `settings.json` formatter→extension mapping is complete (prettier, html/json/css language-features, python, shell-format all recommended).
 - `launch.json`/`tasks.json` cross-refs verified for all root-configured subprojects except the csharp bug (now fixed).
 
@@ -49,11 +50,13 @@ Root `AGENTS.md` and all 29 subproject `AGENTS.md` files already exist (verified
 ---
 
 ## Skipped / Not Applicable
+
 - `templates/agents-system-prompt-context-fix/phases.md` and `_shared/rules-core.md` — referenced but missing; used inline body instead.
 - `*.txt` source ref `./agents-system-prompt-context-fix.prompt.txt` — not present (only the `.md` exists).
 - External services — not required; task is fully local.
 
 ## Summary
+
 - **Action:** Audited 119 VS Code JSON files, fixed 2 functional bugs + 11 consistency gaps, generated 3 agent-context docs.
 - **Artifacts:** `docs/agents-context/{architecture,folder-structure,tech-stack}.md`, this report at `results/agents-system-prompt-context-fix.output.md`.
 - **Skipped refs:** missing `templates/` and `_shared` includes (inline body used); `agents-system-prompt-context-fix.prompt.txt` absent.

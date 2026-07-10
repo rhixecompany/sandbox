@@ -5,6 +5,7 @@
 **Date:** 2026-07-09
 
 > ⚠️ Skipped references:
+>
 > - `templates/csharp-mcp-server-generator/implementation_details.md` — referenced by the prompt (line 44, 65) but **does not exist** in the workspace. Inline body is authoritative; implementation details were synthesized from the prompt's explicit requirements.
 
 ---
@@ -199,6 +200,7 @@ public sealed record FileSearchResult(bool Success, string[] Matches, string? Er
 A Model Context Protocol (MCP) server written in C# (.NET 8) exposing file-operation tools over the stdio transport.
 
 ## Requirements
+
 - .NET 8 SDK
 - Network access to NuGet (for `ModelContextProtocol` prerelease)
 
@@ -228,6 +230,7 @@ The server speaks the MCP stdio protocol on its standard streams. **All diagnost
 Then call the `ReadFile` / `SearchFiles` tools from any MCP-compatible client.
 
 ## Troubleshooting
+
 - **Client receives garbage / no handshake** → verify nothing writes to stdout except the MCP SDK. Check custom `Console.Write` usage.
 - **Tool not discovered** → ensure the tool class carries `[McpServerToolType]` and is registered via `.WithToolsFromAssembly()`.
 - **Package restore fails** → confirm the `ModelContextProtocol` prerelease feed is reachable; run `dotnet nuget locals all --clear`.

@@ -55,7 +55,6 @@
   ~ xurl
 
 See changes:   hermes skills diff <name>
-Resume updates: hermes skills reset <name>          (keep your copy, 
+Resume updates: hermes skills reset <name>          (keep your copy,
 re-baseline)
 Revert to stock: hermes skills reset <name> --restore
-

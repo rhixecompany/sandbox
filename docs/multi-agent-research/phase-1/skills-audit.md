@@ -7,6 +7,7 @@ CLI validation:
 `hermes skills --help` confirms that `audit` is a supported subcommand.
 
 Captured evidence:
+
 - Audit completed successfully with exit code 0.
 - Audited 102 skills.
 - Output contained 49 `Decision: BLOCKED` lines.
@@ -15,6 +16,7 @@ Captured evidence:
 - Output contained 87 `CRITICAL` findings.
 
 High-risk findings surfaced in the audit:
+
 - `agentmail` — dangerous verdict; persistence issue around
   `~/AppData/Local/hermes/config.yaml`.
 - `antigravity-cli` — dangerous verdict; supply-chain download risk.
@@ -34,6 +36,7 @@ High-risk findings surfaced in the audit:
 - `whisper` — caution verdict; privilege-escalation and install warnings.
 
 Other notable issues:
+
 - Multiple path-missing warnings were reported for skills such as
   `3-statement-model`, `adversarial-ux-test`, `dcf-model`,
   `docker-management`, `dspy`, `trl-fine-tuning`, `grok`, and
@@ -42,7 +45,9 @@ Other notable issues:
   network, or privilege-escalation risks.
 
 Review note:
+
 - All evidence needed for review is now contained in this file itself.
 
 Audit refresh note:
+
 - 2026-06-16T17:51:03.655+01:00 — re-ran `hermes skills audit` and updated counts from the captured output.

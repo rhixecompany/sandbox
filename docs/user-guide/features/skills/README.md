@@ -5,6 +5,7 @@
 **Skills** are on-demand knowledge documents the agent loads when needed, following a **progressive disclosure** pattern to minimize token usage. They're compatible with the [agentskills.io](https://agentskills.io/specification) open standard.
 
 **Primary directory (source of truth):** `~/AppData/Local/hermes/skills/`
+
 - Bundled skills copied here on fresh install
 - Hub-installed and agent-created skills also stored here
 - Agent can modify or delete any skill
@@ -49,6 +50,7 @@ Every installed skill is automatically available as a **slash command**:
 **Example:** The bundled `plan` skill — running `/plan [request]` loads instructions telling Hermes to inspect context, write a markdown implementation plan (not execute), and save under `.hermes/plans/` relative to workspace.
 
 **Natural conversation:**
+
 ```bash
 hermes chat --toolsets skills -q "What skills do you have?"
 hermes chat --toolsets skills -q "Show me the axolotl skill"
@@ -127,6 +129,7 @@ When set, skill is **automatically hidden** from system prompt, `skills_list()`,
 ### Automatic Media Detection
 
 When a response includes a **bare absolute path** to a media file (e.g., `/home/user/screenshots/diagram.png`), the gateway:
+
 1. Auto-detects it
 2. Strips it from visible text
 3. Delivers natively to chat (Telegram photo, Discord attachment, etc.)
@@ -194,6 +197,7 @@ Agent tracks installed version vs. registry. `/skill update` shows available upd
 ```
 
 **CLI commands:**
+
 ```bash
 hermes skills list
 hermes skills view <name>
@@ -210,6 +214,7 @@ hermes skill create my-skill
 ```
 
 This scaffolds `~/AppData/Local/hermes/skills/my-skill/` with:
+
 - `SKILL.md` (with frontmatter template)
 - `references/` directory
 

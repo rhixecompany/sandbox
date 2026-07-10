@@ -23,8 +23,8 @@ mode: ask
 
 ---
 ## Goal
-Use when ## Description to accomplish the associated tasks and objectives.
 
+Use when ## Description to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -60,8 +60,8 @@ copilot instruction references.
 - Auditor persona: prioritize verifiable findings with file evidence.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow nearest-file precedence for AGENTS and instructions.
 - Link to existing documents instead of embedding long copied content.
@@ -121,8 +121,8 @@ copilot instruction references.
 - Apply or propose minimal customization-file fixes.
 - Deliver a concise remediation report with evidence.
 
-
 ## Template References
 
 Templates in `templates/refresh-agent-inventory/`:
+
 - `phases.md`

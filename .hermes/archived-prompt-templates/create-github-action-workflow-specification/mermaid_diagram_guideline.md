@@ -5,11 +5,13 @@
 ## Mermaid Diagram Guidelines
 
 ### Flow Types
+
 - **Sequential**: `A --> B --> C`
 - **Parallel**: `A --> B & A --> C; B --> D & C --> D`
 - **Conditional**: `A --> B{Decision}; B -->|Yes| C; B -->|No| D`
 
 ### Styling
+
 ```mermaid
 style TriggerNode fill:#e1f5fe
 style SuccessNode fill:#e8f5e8

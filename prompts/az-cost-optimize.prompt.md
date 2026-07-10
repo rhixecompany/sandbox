@@ -38,6 +38,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 ## Workflow Steps
 
 > ### Step 1: Get Azure Best Practices
+>
 > **Action**: Retrieve cost optimization best practices before analysis **Tools**:
 
 > **Full content:** `templates/az-cost-optimize/workflow_steps.md`
@@ -49,14 +50,14 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 
 > **Full content:** `templates/az-cost-optimize/cost_optimization_brief_title.md`
 
-   ## 📊 Executive Summary
+## 📊 Executive Summary
 
-   - **Resources Analyzed**: X
-   - **Optimization Opportunities**: Y
-   - **Total Monthly Savings Potential**: $X
-   - **High Priority Items**: N
+- **Resources Analyzed**: X
+- **Optimization Opportunities**: Y
+- **Total Monthly Savings Potential**: $X
+- **High Priority Items**: N
 
-   ## 🏗️ Current Architecture Overview
+## 🏗️ Current Architecture Overview
 
    ```mermaid
    graph TB
@@ -64,6 +65,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
            [Generated architecture diagram showing current resources and costs]
        end
    ```
+
    ````
 
    ## 📋 Implementation Tracking

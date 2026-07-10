@@ -74,40 +74,48 @@ The epic converts these from "documentation-only known issues" into fixed, verif
 ### Theme A — Path & Toolchain Reference Fixes
 
 **A1. Fix `copilot-instructions.md` toolkit path (13 refs)**
+
 - *As a* contributor, *I want* `copilot-instructions.md` to point at `projects/Bash/` (not `Bash/`), *so that* I can find the real toolkit.
 - Acceptance: 0 occurrences of `Bash/src`, `Bash/docs`, `Bash/tests`, `Bash/package.json`; all map to `projects/Bash/...`.
 
 **A2. Correct CI workflow path filter**
+
 - *As a* CI engineer, *I want* `bash-scripts-ci.yml` to watch `projects/Bash/**`, *so that* toolkit changes actually trigger the pipeline.
 - Acceptance: workflow YAML path filter matches `projects/Bash/**`; a test commit to `projects/Bash/` triggers the job.
 
 **A3. Replace "always use pnpm" boilerplate with bun**
+
 - *As an* agent, *I want* prompts to say bun (per `packageManager: bun@1.3.14`), *so that* I don't run wrong package-manager commands.
 - Acceptance: no prompt file asserts pnpm as the workspace standard; bun referenced where package manager is named.
 
 ### Theme B — Dead Link Remediation
 
 **B1. Resolve `SOUL.md` reference**
+
 - *As an* agent reading root `AGENTS.md`, *I want* no pointer to a missing `SOUL.md`, *so that* I don't waste a lookup.
 - Acceptance: root `AGENTS.md` no longer references a nonexistent `SOUL.md`; principles are consolidated in `AGENTS.md`.
 
 **B2. Resolve `PROJECT_RULES.md` reference in README**
+
 - *As a* human reader, *I want* `README.md` to point at real rules, *so that* links work.
 - Acceptance: `README.md` references `AGENTS.md` / `.github/instructions/` instead of `PROJECT_RULES.md`.
 
 ### Theme C — Live Inventory Accuracy
 
 **C1. Make inventory counts live, not hardcoded**
+
 - *As a* workspace owner, *I want* counts sourced from `reports/inventory/` refresh summary, *so that* they don't drift.
 - Acceptance: `copilot-instructions.md` cites the latest `refresh-agent-inventory-summary-*.md` date and instructs readers to treat `reports/inventory/` as live source; no hardcoded stale snapshot.
 
 **C2. Refresh inventory post-fix**
+
 - *As a* contributor, *I want* the inventory regenerated after edits, *so that* counts are current.
 - Acceptance: latest `refresh-agent-inventory-summary-*.md` updated; cross-reference docs in `docs/` reconciled.
 
 ### Theme D — Regression Guard
 
 **D1. Add a stale-reference link/consistency check to CI**
+
 - *As a* workspace owner, *I want* CI to fail on dead internal links or the `Bash/` vs `projects/Bash/` mismatch, *so that* these don't return.
 - Acceptance: a workflow step (extend `validate-readme.yml` or `bash-scripts-ci.yml`) detects missing referenced files and the path mismatch; fails the build on violation.
 

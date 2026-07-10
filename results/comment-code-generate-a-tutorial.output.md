@@ -159,6 +159,7 @@ lcs_all    -> ['BCAB', 'BCBA', 'BDAB']
 | `lcs_all` | `list[list]` (all) | O(m·n) + output | exponential worst-case |
 
 **Key takeaways**
+
 1. DP trades a 2-D table for an efficient O(m·n) solution.
 2. You only need the previous row if you don't need the answer itself → save memory.
 3. Keep the full table + backtrack to recover *which* characters form the LCS.

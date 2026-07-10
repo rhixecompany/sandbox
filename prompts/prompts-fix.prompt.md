@@ -59,8 +59,8 @@ Use this prompt when prompt definitions, prompt-style prompts, or platform regis
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
-2. Detect the file format before modifying anything.
-4. Preserve trigger names unless the user explicitly requests a rename.
+1. Detect the file format before modifying anything.
+2. Preserve trigger names unless the user explicitly requests a rename.
 
 ## Skills Required
 

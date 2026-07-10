@@ -5,6 +5,7 @@ Lines: 165
 Templates: 4
 
 ## Templates
+
 - `example_usage.md`
 - `expected_output.md`
 - `instructions.md`

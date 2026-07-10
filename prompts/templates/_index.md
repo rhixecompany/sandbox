@@ -1,3 +1,11 @@
+---
+name: templates-index
+title: Prompt Templates Index
+description: Index of all prompt templates under prompts/templates/
+version: 1.0.0
+tags: [templates, index, prompts]
+---
+
 # Prompt Templates Index
 
 > Generated: 2026-06-22  

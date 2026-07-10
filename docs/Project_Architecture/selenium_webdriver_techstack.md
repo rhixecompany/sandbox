@@ -1,6 +1,7 @@
 # selenium_webdriver Technology Stack
 
 ## Core Technologies
+
 | Technology | Version/Notes |
 |------------|---------------|
 | Unknown | Detected from project files |

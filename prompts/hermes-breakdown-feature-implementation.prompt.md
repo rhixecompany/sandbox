@@ -45,8 +45,8 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Keep the plan tied to the PRD requirements.
 2. Include architecture, schema, API, frontend, deployment, security, and performance.
@@ -58,6 +58,7 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 ## Phases
 
 > ### Phase 1: Analyze the PRD
+>
 > **Goal:** extract the technical work implied by the feature.
 
 > **Full content:** `templates/hermes-breakdown-feature-implementation/phases.md`
@@ -69,8 +70,8 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 3. Add architecture, schema, API, UI, and delivery notes.
 4. Review the draft for completeness and clarity.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-feature-implementation/`:
+
 - `phases.md`

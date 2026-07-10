@@ -40,4 +40,3 @@ gunicorn player.wsgi:application --bind 0.0.0.0:8000
 - Use Django serializers and JWT auth for API entry points.
 - Prefer environment variables for secrets and third-party keys.
 - Keep static/media handling compatible with WhiteNoise and deployment settings.
-

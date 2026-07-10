@@ -36,8 +36,10 @@
 ## Setup Options
 
 ### Prerequisites
+
 - Node.js 22+
 - `pnpm` via Corepack:
+
   ```bash
   corepack enable
   ```
@@ -54,18 +56,21 @@ neonctl@latest init
 
 **Easiest setup** — no local installation or API key required.
 
-#### One-click install buttons:
+#### One-click install buttons
+
 - [Install in Cursor](https://cursor.com/en-US/install-mcp?name=Neon&config=eyJ1cmwiOiJodHRwczovL21jcC5uZW9uLnRlY2gvbWNwIn0%3D)
 - [Add to Kiro](https://kiro.dev/launch/mcp/add?name=Neon&config=%7B%22url%22%3A%20%22https%3A//mcp.neon.tech/mcp%22%7D)
 
-#### Manual configuration:
+#### Manual configuration
 
 **Global setup (all agents):**
+
 ```bash
 neonctl@latest init -g
 ```
 
 **MCP config file (`mcp.json` or `mcp_config.json`):**
+
 ```json
 {
   "Neon": {
@@ -75,6 +80,7 @@ neonctl@latest init -g
 ```
 
 **Kiro config (`~/.kiro/settings/mcp.json` or `.kiro/settings/mcp.json`):**
+
 ```json
 {
   "Neon": {
@@ -108,6 +114,7 @@ neonctl@latest init -g
 ## Access Control & Scopes
 
 ### OAuth Scopes
+
 - `read`: Read-only access
 - `write`: Write access
 - `*`: Full access (read + write)
@@ -132,6 +139,7 @@ neonctl@latest init -g
 ### Read-Only Mode
 
 Disables write operations. Available read-only tools include:
+
 - `list_projects`, `list_shared_projects`, `describe_project`
 - `list_organizations`, `describe_branch`, `list_branch_computes`
 - `compare_database_schema`, `run_sql` (read-only queries only)
@@ -152,10 +160,13 @@ Disables write operations. Available read-only tools include:
 ## Supported Tools
 
 ### Tool Scope Categories
+
 Each tool has a `scope` category for filtering and consent:
+
 - `projects`, `branches`, `schema`, `querying`, `neon_auth`, `data_api`, `docs`, `null`
 
 ### Project Management
+
 - `list_projects` (supports `limit`)
 - `list_shared_projects`
 - `describe_project`

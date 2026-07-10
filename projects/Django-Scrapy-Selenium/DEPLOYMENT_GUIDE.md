@@ -10,6 +10,7 @@ docker-compose -f docker-compose.production.yml up -d
 ```
 
 Docker Compose services:
+
 - **Django** with Gunicorn
 - **PostgreSQL**
 - **Redis**

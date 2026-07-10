@@ -85,8 +85,8 @@ trigger: /csharp-docs
 - The description of the exception describes the condition under which it's thrown.
   - Omit "Thrown if ..." or "If ..." at the beginning of the sentence. Just state the condition directly, for example "An error occurred when accessing a Message Queuing API."
 
-
 ## Template References
 
 Templates in `templates/csharp-docs/`:
+
 - `methods.md`

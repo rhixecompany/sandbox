@@ -38,9 +38,11 @@ cd go && go run .
 
 > [!TIP]
 > The fastest way to exercise any server locally is the MCP Inspector:
+>
 > ```bash
 > npx @modelcontextprotocol/inspector node typescript/dist/index.js
 > ```
+>
 > Swap in the entry point for whichever language server you are testing.
 
 ## Repository layout

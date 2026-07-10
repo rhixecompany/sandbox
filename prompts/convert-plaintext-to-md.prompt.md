@@ -49,8 +49,8 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 - A verification note listing: (1) total sections converted, (2) any inferred formatting decisions made without explicit instructions, and (3) any content skipped due to `--stop`. Omit if the source file is a single flat section with no ambiguous structure.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Run `/context-map` before conversion to map source, destination, and dependency impact.
 - Preserve all technical content accurately - do not modify data unless instructions clearly specify
@@ -78,6 +78,7 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 ## Phases
 
 > **Goal:** Read the request and identify the exact scope.
+>
 > 1. Read the request and identify the exact scope
 
 > **Full content:** `templates/convert-plaintext-to-md/phases.md`
@@ -111,8 +112,8 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 - [Markdown Guide Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 - [Azure DevOps Markdown Guidance](https://learn.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops)
 
-
 ## Template References
 
 Detailed templates in `templates/convert-plaintext-to-md/`:
+
 - `phases.md`

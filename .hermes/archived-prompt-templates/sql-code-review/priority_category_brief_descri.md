@@ -11,6 +11,7 @@
 **Recommendation**: [Specific fix with code example]
 
 **Before**:
+
 ```sql
 -- Problematic SQL
 ````
@@ -38,4 +39,5 @@
 
 Focus on providing actionable, database-agnostic recommendations while highlighting platform-specific optimizations and best practices.
 ```
+
 ```

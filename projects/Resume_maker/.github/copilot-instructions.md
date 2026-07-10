@@ -39,4 +39,3 @@ bun run lint:spell
 - Prefer Bun commands over npm/pnpm/yarn.
 - Treat generated output and source JSON as sensitive personal data.
 - Keep changes scoped to the CLI behavior being updated.
-

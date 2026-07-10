@@ -5,5 +5,6 @@ Lines: 141
 Templates: 2
 
 ## Templates
+
 - `phases.md`
 - `tools_required.md`

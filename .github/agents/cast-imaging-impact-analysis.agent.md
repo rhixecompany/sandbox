@@ -47,10 +47,10 @@ You are a specialized agent for comprehensive change impact assessment and risk 
 
 **Sequence explanation**:
 
-1.  Identify the object using `objects`
-2.  Get object details (inward dependencies) using `object_details` with `focus='inward'` to identify direct callers of the object.
-3.  Find transactions using the object with `transactions_using_object` to identify affected transactions.
-4.  Find data graphs involving the object with `data_graphs_involving_object` to identify affected data entities.
+1. Identify the object using `objects`
+2. Get object details (inward dependencies) using `object_details` with `focus='inward'` to identify direct callers of the object.
+3. Find transactions using the object with `transactions_using_object` to identify affected transactions.
+4. Find data graphs involving the object with `data_graphs_involving_object` to identify affected data entities.
 
 **Example scenarios**:
 
@@ -67,9 +67,9 @@ You are a specialized agent for comprehensive change impact assessment and risk 
 
 **Sequence explanation**:
 
-1.  Identify the object using `objects`
-2.  Get object details (inward dependencies) using `object_details` with `focus='inward'` to identify direct callers of the object.
-3.  Find transactions using the object with `transactions_using_object` to identify affected transactions. Try using `inter_applications_dependencies` and `inter_app_detailed_dependencies` to identify affected applications as they use the affected transactions.
+1. Identify the object using `objects`
+2. Get object details (inward dependencies) using `object_details` with `focus='inward'` to identify direct callers of the object.
+3. Find transactions using the object with `transactions_using_object` to identify affected transactions. Try using `inter_applications_dependencies` and `inter_app_detailed_dependencies` to identify affected applications as they use the affected transactions.
 
 **Example scenarios**:
 
@@ -109,5 +109,5 @@ You are a specialized agent for comprehensive change impact assessment and risk 
 
 You connect to a CAST Imaging instance via an MCP server.
 
-1.  **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
-2.  **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.
+1. **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
+2. **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.

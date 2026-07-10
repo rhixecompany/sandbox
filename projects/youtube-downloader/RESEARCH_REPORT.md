@@ -20,6 +20,7 @@
 ## Key Findings
 
 ### yt-dlp + curl_cffi Best Practices (2026)
+
 - **yt-dlp is gold standard** — 100K+ stars, 1,800+ sites, daily updates
 - **Install `yt-dlp[curl-cffi]`** — `--impersonate chrome` bypasses bot protection
 - **`--download-archive archive.txt`** — skip already-downloaded content; essential for cron jobs
@@ -27,21 +28,25 @@
 - **Cookie support** — `--cookies-from-browser firefox` for gated content; `--cookies cookies.txt` for headless
 
 ### YouTube Scraping & Legal Landscape (2026)
+
 - 2026 DMCA ruling: third-party downloads as copyright circumvention — personal use only
 - `--extractor-args "youtube:player_client=web,web_safari"` when YouTube player changes break extraction
 - Rate limiting: `--limit-rate 5M --sleep-interval 5 --max-sleep-interval 15` to avoid 429 blocks
 
 ### Python CLI Design (2026)
+
 - **PEP 723** inline script metadata — `# /// script` block embeds dependencies for standalone scripts
 - **Typer** — type-hint-driven; best for multi-command tools in 2026
 - **Click** — mature decorator-based; shell autocomplete via `click-completion`
 
 ### Python Tooling 2026
+
 - **uv** — replaces pip + venv + poetry; 10-100x faster, Rust-based, lock files
 - **Ruff** — replaces black + flake8 + isort; 800+ rules, runs in ms
 - **mypy strict mode** — production baseline
 
 ### FFmpeg Post-Processing
+
 - FFmpeg required for stream merging, audio extraction, thumbnails
 - yt-dlp does NOT bundle ffmpeg — must install separately
 - `--merge-output-format mp4` triggers automatic ffmpeg merging
@@ -52,11 +57,11 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| yt-dlp 2026 | https://dev.to/pickuma/yt-dlp-the-cli-video-downloader-developers-actually-use-in-2026-57jk | Guide |
-| yt-dlp repo | https://github.com/yt-dlp/yt-dlp#readme | CLI docs |
-| curl_cffi | https://github.com/yifeikong/curl_cffi | TLS fingerprint library |
-| Python tooling | https://softaims.com/blog/modern-python-tooling-uv-ruff-mypy-2026 | Guide |
-| FFmpeg Python | https://github.com/kkroening/ffmpeg-python | Python FFmpeg wrapper |
+| yt-dlp 2026 | <https://dev.to/pickuma/yt-dlp-the-cli-video-downloader-developers-actually-use-in-2026-57jk> | Guide |
+| yt-dlp repo | <https://github.com/yt-dlp/yt-dlp#readme> | CLI docs |
+| curl_cffi | <https://github.com/yifeikong/curl_cffi> | TLS fingerprint library |
+| Python tooling | <https://softaims.com/blog/modern-python-tooling-uv-ruff-mypy-2026> | Guide |
+| FFmpeg Python | <https://github.com/kkroening/ffmpeg-python> | Python FFmpeg wrapper |
 
 ---
 
@@ -111,7 +116,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| yt-dlp docs | https://github.com/yt-dlp/yt-dlp#readme | CLI documentation |
-| curl_cffi | https://github.com/yifeikong/curl_cffi | TLS fingerprint library |
-| FFmpeg Python | https://github.com/kkroening/ffmpeg-python | Python FFmpeg wrapper |
-| YouTube scraping | https://dev.to/pickuma/yt-dlp-the-cli-video-downloader-developers-actually-use-in-2026-57jk | Method decision matrix |
+| yt-dlp docs | <https://github.com/yt-dlp/yt-dlp#readme> | CLI documentation |
+| curl_cffi | <https://github.com/yifeikong/curl_cffi> | TLS fingerprint library |
+| FFmpeg Python | <https://github.com/kkroening/ffmpeg-python> | Python FFmpeg wrapper |
+| YouTube scraping | <https://dev.to/pickuma/yt-dlp-the-cli-video-downloader-developers-actually-use-in-2026-57jk> | Method decision matrix |

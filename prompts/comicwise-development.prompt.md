@@ -115,6 +115,7 @@ HTTP Response
 ## Coding Rules (Enforced)
 
 > ### Type Safety & Code Quality
+>
 > 1. **No `any` types** — ESLint: `no-explicit-any: "error"`
 
 > **Full content:** `templates/comicwise-development/coding_rules_enforced.md`
@@ -141,6 +142,7 @@ tests      → ./src/tests/*
 ## Common Patterns
 
 > ### DAL Query Pattern (with Eager Loading)
+>
 > import { BaseDal } from "./base-dal";
 
 > **Full content:** `templates/comicwise-development/common_patterns.md`
@@ -159,6 +161,7 @@ tests      → ./src/tests/*
 ## Testing Patterns
 
 > ### Unit Tests (Vitest)
+>
 > import { describe, it, expect, beforeEach } from "vitest";
 
 > **Full content:** `templates/comicwise-development/testing_patterns.md`
@@ -250,10 +253,10 @@ All validated via `src/lib/env.ts` at startup using Zod.
 
 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
 
-
 ## Template References
 
 Detailed templates in `templates/comicwise-development/`:
+
 - `coding_rules_enforced.md`
 - `common_patterns.md`
 - `project_structure.md`

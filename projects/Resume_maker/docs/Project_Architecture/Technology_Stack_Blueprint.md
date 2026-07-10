@@ -22,7 +22,7 @@ CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn gu
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | TypeScript | ^5 (peer) | Primary language |
 | Bun | latest | Runtime & package manager |
 | Node.js | — | Fallback |
@@ -42,7 +42,7 @@ CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn gu
 ### Development Dependencies
 
 | Dependency | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | @types/bun | latest | Bun type definitions |
 | @typescript-eslint/eslint-plugin | ^8.59.2 | TypeScript lint rules |
 | @typescript-eslint/parser | ^8.59.2 | TypeScript parser |
@@ -58,7 +58,7 @@ CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn gu
 ## Licensing
 
 | Component | License |
-|---|---|
+| --- | --- |
 | Resume_maker | MIT |
 | Author | Alexander Iseghohi |
 
@@ -67,7 +67,7 @@ CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn gu
 ## Scripts
 
 | Script | Description |
-|---|---|
+| --- | --- |
 | `build` / `start` | Run the generator with default input |
 | `help` | Display CLI help |
 | `lint` | ESLint + Prettier check |

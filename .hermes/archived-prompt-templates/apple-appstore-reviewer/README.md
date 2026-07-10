@@ -5,6 +5,7 @@ Lines: 325
 Templates: 6
 
 ## Templates
+
 - `common_rejection_hotspots__use.md`
 - `common_rejection_hotspots_use_.md`
 - `inputs_you_should_look_for.md`

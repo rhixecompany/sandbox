@@ -1,6 +1,6 @@
 # GitMCP
 
-**Source:** https://github.com/idosal/git-mcp
+**Source:** <https://github.com/idosal/git-mcp>
 
 ## 🧠 What is GitMCP?
 
@@ -8,7 +8,8 @@
 
 > "Stop vibe-hallucinating and start vibe-coding!"
 
-### Key Benefits:
+### Key Benefits
+
 - Prevents AI from fabricating APIs, functions, or usage patterns.
 - Provides real-time access to project docs and source code.
 - Works with **any public GitHub repo**—no setup required on the repo side.
@@ -43,15 +44,17 @@ Replace `{owner}` with GitHub username/org and `{repo}` with repository name.
 ## 🚀 Getting Started
 
 ### Step 1: Choose Your Endpoint
+
 Use one of the URL formats above based on your target repo or dynamic needs.
 
 💡 **Tip**: Use the [GitMCP landing page converter](https://gitmcp.io) to auto-format GitHub URLs into MCP endpoints.
 
 ### Step 2: Connect Your AI Assistant
 
-#### Configuration Examples:
+#### Configuration Examples
 
 **Cursor** (`~/.cursor/mcp.json`)
+
 ```json
 {
   "mcpServers": {
@@ -63,6 +66,7 @@ Use one of the URL formats above based on your target repo or dynamic needs.
 ```
 
 **Windsurf** (`~/.codeium/windsurf/mcp_config.json`)
+
 ```json
 {
   "mcpServers": {
@@ -74,6 +78,7 @@ Use one of the URL formats above based on your target repo or dynamic needs.
 ```
 
 **VSCode** (`.vscode/mcp.json`)
+
 ```json
 {
   "mcpServers": {
@@ -92,10 +97,12 @@ Settings path:
 `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
 
 **Highlight AI**
+
 - Plugin name: `gitmcp`
 - SSE URL: `https://gitmcp.io/{owner}/{repo}`
 
 **Augment Code**
+
 - Name: `git-mcp Docs`
 - Use command or config as per [Augment docs](https://docs.augmentcode.com/setup-augment/mcp)
 
@@ -112,7 +119,8 @@ GitMCP acts as a bridge between your AI assistant and GitHub repos using the **M
 3. Content is returned in structured format for the AI to use as context.
 4. AI generates accurate, grounded responses—**no hallucinations**.
 
-### Supported Documentation (Priority Order):
+### Supported Documentation (Priority Order)
+
 1. `llms.txt` (ideal for machines)
 2. `README.md`
 3. Other HTML/Markdown pages (for GitHub Pages)
@@ -131,6 +139,7 @@ When connected, AI assistants gain access to these tools:
 | `search_<repo-name>_code` | Searches actual source code via GitHub code search |
 
 > 🔁 **Dynamic endpoint note**: When using `gitmcp.io/docs`, tools are named:
+>
 > - `fetch_generic_documentation`
 > - `search_generic_documentation`
 > - `search_generic_code`
@@ -141,18 +150,21 @@ When connected, AI assistants gain access to these tools:
 ## 💡 Usage Examples
 
 ### Example 1: Windsurf + Playwright MCP
+
 - **Repo**: `https://github.com/microsoft/playwright-mcp`
 - **MCP URL**: `https://gitmcp.io/microsoft/playwright-mcp`
 - **Prompt**: *"How do I use the Playwright MCP?"*
 - ✅ Windsurf pulls real docs to answer accurately.
 
 ### Example 2: Cursor + LangGraph (GitHub Pages)
+
 - **Site**: `langchain-ai.github.io/langgraph`
 - **MCP URL**: `https://langchain-ai.gitmcp.io/langgraph`
 - **Prompt**: *"Add memory to my LangGraph agent"*
 - ✅ Cursor uses actual implementation details from the docs.
 
 ### Example 3: Dynamic Access with Claude
+
 - **Endpoint**: `https://gitmcp.io/docs`
 - **Prompt**: *"Explain how OpenAI Whisper works."*
 - ✅ Claude discovers and pulls Whisper repo docs

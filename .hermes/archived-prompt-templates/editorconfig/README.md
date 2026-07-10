@@ -5,5 +5,6 @@ Lines: 110
 Templates: 2
 
 ## Templates
+
 - `execution.md`
 - `phases.md`

@@ -28,6 +28,7 @@
 ## ISTQB Framework Application
 
 **Test Design Techniques Used:**
+
 - [x] Equivalence Partitioning (equal-length, unequal-length, empty, single-element)
 - [x] Boundary Value Analysis (empty sequence, length-1, identical vs fully-disjoint)
 - [x] Decision Table Testing (match / no-match / tie in `lcs_all` backtrack branch)
@@ -35,6 +36,7 @@
 - [x] Experience-Based Testing (exponential blow-up of `lcs_all`, generic-type edge cases)
 
 **Test Types Coverage:**
+
 - [x] Functional Testing
 - [ ] Non-Functional Testing (only a performance baseline captured; full NFR suite not scaffolded — dry-run)
 - [x] Structural Testing (every branch in DP + backtrack exercised by the cases above)
@@ -60,6 +62,7 @@
 ## Test Cases to Implement (GitHub Issue backlog)
 
 ### Issue 1 — `lcs_length` functional + boundary (Functional, Black-box)
+
 - [ ] Happy path: standard reference pairs
 - [ ] Empty input on either side
 - [ ] Identical inputs (LCS == full length)
@@ -68,32 +71,38 @@
 - [ ] Swapped arg order returns identical length (space-swap correctness)
 
 ### Issue 2 — `lcs` reconstruction correctness (Functional + Structural)
+
 - [ ] One LCS matches a known reference
 - [ ] Order preserved left-to-right
 - [ ] Generic element types: `list[int]`, `tuple[str]`, `str`
 - [ ] Backtrack branch coverage: paths that require "move up" vs "move left"
 
 ### Issue 3 — `lcs_all` enumeration & dedup (Functional, Decision-Table)
+
 - [ ] Multiple distinct LCSes enumerated (e.g. `"ABC"` vs `"BAC"` style ties)
 - [ ] Exponential case deduped to count == expected (`"aaa"` vs `"aaa"` → 1)
 - [ ] Deterministic sorted output
 - [ ] Empty / disjoint → `[[]]` (confirm expected shape)
 
 ### Issue 4 — Non-Functional / Risk (Performance + Reliability) — *partially dry-run*
+
 - [ ] Response-time threshold agreed for max supported (n,m); current 5k×5k ≈ 5.7 s logged
 - [ ] `lcs_all` input-size guardrail / documented caller responsibility
 - [ ] Memory ceiling check for O(mn) table at agreed max input
 
 ## Acceptance Criteria
+
 - [x] All functional test cases pass (verified live)
 - [ ] Branch coverage >80% on `lcs.py`
 - [ ] Performance threshold for agreed max input validated
 - [ ] `lcs_all` risk mitigation documented
 
 ## Labels
+
 `test-strategy`, `istqb`, `iso25010`, `quality-gates`, `python`, `lcs`
 
 ## Estimate
+
 Strategic planning: 2 SP · Test implementation: 5 SP · QA validation: 3 SP
 
 ---

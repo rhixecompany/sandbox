@@ -6,6 +6,7 @@
 - Errors: 0
 
 ## Patched Skills
+
 | Skill | Added |
 |-------|-------|
 | ascii-video | Skills Required |
@@ -191,6 +192,7 @@
 | whisper | Pitfalls, Skills Required, Verification Checklist, title |
 
 ## Skipped
+
 - github-workflow: already-complete
 - legacy-circuit-mockups: already-complete
 - caveman-unified: already-complete

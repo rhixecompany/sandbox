@@ -685,7 +685,7 @@ public class EntityName {
 }
 ```
 
-#### Key Changes:
+#### Key Changes
 
 - Replace `@Table` with `@Container(containerName = "...")`
 - Change `@PartitionKey` to Cosmos partition key strategy
@@ -748,7 +748,7 @@ public interface EntityCosmosRepository extends ReactiveCosmosRepository<EntityN
 - Convert CQL queries to Cosmos SQL syntax
 - Implement repository interfaces as shown above
 
-#### Key Points:
+#### Key Points
 
 - **CRITICAL**: Use `ReactiveCosmosRepository<Entity, String>` for reactive programming (NOT CosmosRepository)
 - Use `CosmosRepository<Entity, String>` for non-reactive applications
@@ -978,9 +978,9 @@ class EntityReactiveServicesTest {
    az account show
 ````
 
-2. **For Azure-hosted applications**: Ensure Managed Identity is enabled and has proper RBAC permissions
+1. **For Azure-hosted applications**: Ensure Managed Identity is enabled and has proper RBAC permissions
 
-3. **Check credential chain order**: DefaultAzureCredential tries in this order:
+2. **Check credential chain order**: DefaultAzureCredential tries in this order:
    - Environment variables → Workload Identity → Managed Identity → Azure CLI → PowerShell → Developer CLI
 
 #### Issue 8: Database not found errors
@@ -1160,19 +1160,19 @@ Based on real conversion experience, you'll likely encounter these errors in thi
 
 ### **Phase 2: Bean Creation Errors**
 
-5. **"No qualifying bean of type ReactiveCosmosRepository"** → Add @EnableReactiveCosmosRepositories
-6. **Service layer type mismatches** → Change Iterable to Flux, Optional to Mono (if using service layer)
+1. **"No qualifying bean of type ReactiveCosmosRepository"** → Add @EnableReactiveCosmosRepositories
+2. **Service layer type mismatches** → Change Iterable to Flux, Optional to Mono (if using service layer)
 
 ### **Phase 3: Runtime Version Conflicts** (Most Complex)
 
-7. **NoClassDefFoundError: reactor.core.publisher.Sinks** → Add reactor-core 3.4.32 override
-8. **NoSuchMethodError: Epoll.isTcpFastOpenClientSideAvailable** → Add netty-bom 4.1.101.Final override
-9. **NoSuchMethodError: SSLContext.setCurvesList** → Add netty-tcnative-boringssl-static 2.0.62.Final override
+1. **NoClassDefFoundError: reactor.core.publisher.Sinks** → Add reactor-core 3.4.32 override
+2. **NoSuchMethodError: Epoll.isTcpFastOpenClientSideAvailable** → Add netty-bom 4.1.101.Final override
+3. **NoSuchMethodError: SSLContext.setCurvesList** → Add netty-tcnative-boringssl-static 2.0.62.Final override
 
 ### **Phase 4: Authentication & Connection**
 
-10. **ManagedIdentityCredential authentication unavailable** → Run `az login --use-device-code`
-11. **Application starts successfully** → Connected to Cosmos DB!
+1. **ManagedIdentityCredential authentication unavailable** → Run `az login --use-device-code`
+2. **Application starts successfully** → Connected to Cosmos DB!
 
 **Critical**: Address these in order. Don't skip ahead - each phase must be resolved before the next appears.
 

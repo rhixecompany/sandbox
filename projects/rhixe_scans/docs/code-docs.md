@@ -31,6 +31,7 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 ```
 
 **Description:** Prisma client singleton with extended computed fields.
+
 - Uses global singleton pattern to prevent multiple connections in development
 - Extends Prisma with computed `rating` field that converts numeric rating to string
 - Automatically persists client in development mode
@@ -68,6 +69,7 @@ if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = db;
 ```
 
 **Description:** Alternative Prisma client instance with singleton pattern.
+
 - Identical functionality to prisma.ts, provides alternative import
 - Ensures single database connection across hot reloads in development
 
@@ -78,6 +80,7 @@ if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = db;
 Utility functions for the application.
 
 **Functions:**
+
 - `cn(...inputs: ClassValue[]): string` - Merges Tailwind CSS classes
 - `convertToPlainObject<T>(value: T): T` - Converts Prisma objects to plain JS objects
 - `formatNumberWithDecimal(num: number): string` - Formats numbers with 2 decimal places
@@ -96,12 +99,14 @@ Utility functions for the application.
 Zod validation schemas for forms and API requests.
 
 **Authentication Schemas:**
+
 - `signInFormSchema` - Email and password validation (password min 6 chars)
 - `signUpFormSchema` - Name, email, password with confirm password matching
 - `updateProfileSchema` - Name and email updates
 - `updateUserSchema` - Extends profile with id and role
 
 **Data Schemas:**
+
 - `insertComicImageSchema` / `updateComicImageSchema` - Comic image validation
 - `insertChapterImageSchema` / `updateChapterImageSchema` - Chapter image validation
 - `insertGenreSchema` / `updateGenreSchema` - Genre validation
@@ -147,6 +152,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 ```
 
 **Description:** NextAuth configuration entry point.
+
 - Exports handlers, auth, signIn, signOut from NextAuth with custom config
 
 ---
@@ -156,6 +162,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 NextAuth configuration with GitHub and Credentials providers.
 
 **Configuration:**
+
 - `adapter`: PrismaAdapter for database session storage
 - `providers`: GitHub OAuth + Credentials (email/password)
 - `session.strategy`: JWT with 1-day max age
@@ -163,6 +170,7 @@ NextAuth configuration with GitHub and Credentials providers.
 - `pages.newUser`: `/sign-up`
 
 **Credentials Authorize:**
+
 - Validates credentials using Zod schema
 - Queries user by email and password
 - Throws error if user not found
@@ -194,6 +202,7 @@ export const config = {
 ```
 
 **Description:** Route protection middleware.
+
 - Protects `/admin/*` routes requiring authentication
 - Redirects unauthenticated users to `/sign-in`
 - Uses JWT token validation via next-auth/jwt
@@ -207,6 +216,7 @@ export const config = {
 Next.js configuration with image domains and build settings.
 
 **Image Domains:**
+
 - `localhost:8000` - Local media server
 - `gg.asuracomic.net` - External comic images
 - `utfs.io` - Uploadthing CDN
@@ -215,6 +225,7 @@ Next.js configuration with image domains and build settings.
 - `icons8.com` - Icon assets
 
 **Build Settings:**
+
 - ESLint enabled during builds
 - TypeScript strict mode enabled
 
@@ -231,6 +242,7 @@ Next.js configuration with image domains and build settings.
 ### UI Components
 
 The project uses Radix UI primitives wrapped with shadcn/ui:
+
 - Button, Input, Select, Dialog, Dropdown, etc.
 - All located in `src/components/ui/`
 

@@ -1,6 +1,6 @@
 # SOUL.md, MEMORY.md and state.db - Hermes Agent memory architecture
 
-> **Source:** https://lumadock.com/tutorials/hermes-memory-architecture-explained
+> **Source:** <https://lumadock.com/tutorials/hermes-memory-architecture-explained>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** web_extract
 ---

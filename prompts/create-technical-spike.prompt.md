@@ -144,6 +144,7 @@ owner: "${input:Owner}"
 ---
 
 _Last updated: [Date] by [Name]_
+
 ```
 
 ## Categories for Technical Spikes

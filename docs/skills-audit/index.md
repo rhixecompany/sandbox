@@ -226,23 +226,23 @@
 
 ## Skills by Priority (Lowest Scores First)
 
-- **agent-browser** (54/62): 
-- **algorithmic-art** (54/62): 
-- **asdf** (54/62): 
-- **customize-opencode** (54/62): 
-- **template** (54/62): 
-- **using-superpowers** (54/62): 
-- **brand-guidelines** (54/62): 
-- **canvas-design** (54/62): 
-- **ascii-video** (54/62): 
-- **content-research-writer** (54/62): 
-- **frontend-design** (54/62): 
-- **marp-slide** (54/62): 
-- **mermaid-diagrams** (54/62): 
-- **theme-factory** (54/62): 
-- **web-artifacts-builder** (54/62): 
-- **writing-clearly-and-concisely** (54/62): 
-- **datadog** (54/62): 
-- **git-history-preserving-migration** (54/62): 
-- **glab** (54/62): 
-- **jira** (54/62): 
+- **agent-browser** (54/62):
+- **algorithmic-art** (54/62):
+- **asdf** (54/62):
+- **customize-opencode** (54/62):
+- **template** (54/62):
+- **using-superpowers** (54/62):
+- **brand-guidelines** (54/62):
+- **canvas-design** (54/62):
+- **ascii-video** (54/62):
+- **content-research-writer** (54/62):
+- **frontend-design** (54/62):
+- **marp-slide** (54/62):
+- **mermaid-diagrams** (54/62):
+- **theme-factory** (54/62):
+- **web-artifacts-builder** (54/62):
+- **writing-clearly-and-concisely** (54/62):
+- **datadog** (54/62):
+- **git-history-preserving-migration** (54/62):
+- **glab** (54/62):
+- **jira** (54/62):

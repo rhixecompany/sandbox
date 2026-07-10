@@ -48,8 +48,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -59,18 +59,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -107,15 +111,16 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 - **Text data/query** - Raw text about Copilot features, MCP servers, or usage questions will be considered **Ambiguous Queries**
   - If the user provides raw text without a **specific file** or **URL**, identify the topic:
     - Prompts, agents, instructions, collections → Search workspace first
-      - If no relevant files found, check https://github.com/github/awesome-copilot and resolve to https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}} (e.g., https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md)
-    - MCP servers → Prioritize https://modelcontextprotocol.io/ and https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-    - Inline chat (Ctrl+I) → https://code.visualstudio.com/docs/copilot/inline-chat
-    - Chat view/general → https://code.visualstudio.com/docs/copilot/ and https://docs.github.com/en/copilot/
+      - If no relevant files found, check <https://github.com/github/awesome-copilot> and resolve to <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}}> (e.g., <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md>)
+    - MCP servers → Prioritize <https://modelcontextprotocol.io/> and <https://code.visualstudio.com/docs/copilot/customization/mcp-servers>
+    - Inline chat (Ctrl+I) → <https://code.visualstudio.com/docs/copilot/inline-chat>
+    - Chat view/general → <https://code.visualstudio.com/docs/copilot/> and <https://docs.github.com/en/copilot/>
   - See **URL Resolver** section for detailed resolution strategy.
 
 ## URL Resolver
 
 > ### Ambiguous Queries
+>
 > When no specific URL or file is provided, but instead raw data relevant to worki
 
 > **Full content:** `templates/tldr-prompt/url_resolver.md`
@@ -144,6 +149,7 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 ## Error Handling
 
 > ### Missing Required Parameters
+>
 > **Agent Response when NO Required Data**
 
 > **Full content:** `templates/tldr-prompt/error_handling.md`
@@ -220,9 +226,9 @@ Your output is complete when:
 - ✓ Response verbosity is appropriate for chat context (inline chat vs chat view)
 - ✓ MCP server content includes setup and tool usage examples when applicable
 
-
 ## Template References
 
 Detailed templates in `templates/tldr-prompt/`:
+
 - `error_handling.md`
 - `url_resolver.md`

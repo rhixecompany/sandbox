@@ -82,8 +82,8 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 | `writing-skills`                 | Write clear skill prose and structure             |
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **Sequential execution** — Each phase must complete before the next begins ("only then" constraint)
 2. **Batch size** — Judge skills in batches of 10
@@ -96,6 +96,7 @@ This prompt runs a full skills audit pipeline: inventory all local skills, categ
 ## Phases
 
 > ### Phase 1: Skills Audit & Inventory
+>
 > **Goal:** Produce a complete inventory of all local skills.
 
 > **Full content:** `templates/audit-skills-judge-fix/phases.md`
@@ -153,4 +154,5 @@ All scripts located at `~/AppData/Local/hermes/scripts/`:
 ## Template References
 
 Detailed section templates in `templates/audit-skills-judge-fix/`:
+
 - `phases.md`

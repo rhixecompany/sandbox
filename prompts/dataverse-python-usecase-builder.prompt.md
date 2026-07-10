@@ -73,6 +73,7 @@ tables = {
 ## Phase 3: Pattern Selection
 
 > Choose appropriate patterns based on use case:
+>
 > ### Pattern 1: Transactional (CRUD Operations)
 
 > **Full content:** `templates/dataverse-python-usecase-builder/phase_3_pattern_selection.md`
@@ -80,6 +81,7 @@ tables = {
 ## Phase 4: Complete Implementation Template
 
 > # 1. SETUP & CONFIGURATION
+>
 > from enum import IntEnum
 
 > **Full content:** `templates/dataverse-python-usecase-builder/phase_4_complete_implementatio.md`
@@ -87,6 +89,7 @@ tables = {
 ## Phase 5: Optimization Recommendations
 
 > ### For High-Volume Operations
+>
 > # Use batch operations
 
 > **Full content:** `templates/dataverse-python-usecase-builder/phase_5_optimization_recommend.md`
@@ -141,6 +144,7 @@ tables = {
 ## Template References
 
 Detailed templates in `templates/dataverse-python-usecase-builder/`:
+
 - `category_6_compliance__audit.md`
 - `phase_3_pattern_selection.md`
 - `phase_4_complete_implementatio.md`

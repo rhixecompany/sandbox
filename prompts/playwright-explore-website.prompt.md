@@ -44,8 +44,8 @@ Use when you need to playwright website exploration for the current workspace or
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -55,18 +55,22 @@ Use when you need to playwright website exploration for the current workspace or
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -100,12 +104,15 @@ Explore a website with Playwright MCP, document core flows, and propose tests fr
 ## Personas
 
 ### @explorer
+
 A careful site explorer who finds the main flows without over-driving the app.
 
 ### @scribe
+
 A recorder who writes down locators, outcomes, and noteworthy UI behavior.
 
 ### @tester
+
 A test-minded reviewer who turns exploration notes into concrete test cases.
 
 ## Rules
@@ -120,6 +127,7 @@ A test-minded reviewer who turns exploration notes into concrete test cases.
 ## Phases
 
 > ### Phase 1: Start and orient
+>
 > **Goal:** load the site and identify the main areas worth exploring.
 
 > **Full content:** `templates/playwright-explore-website/phases.md`

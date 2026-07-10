@@ -69,11 +69,13 @@ Your goal is to help me write high-quality, idiomatic Spring Boot applications u
 ## Logging
 
 - **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object.
+
   ```kotlin
   companion object {
       private val logger = LoggerFactory.getLogger(MyClass::class.java)
   }
   ```
+
 - **Parameterized Logging:** Use parameterized messages (`logger.info("Processing user {}...", userId)`) for performance and clarity.
 
 ## Testing
@@ -88,10 +90,10 @@ Your goal is to help me write high-quality, idiomatic Spring Boot applications u
 - **`suspend` functions:** For non-blocking asynchronous code, use `suspend` functions in your controllers and services. Spring Boot has excellent support for coroutines.
 - **Structured Concurrency:** Use `coroutineScope` or `supervisorScope` to manage the lifecycle of coroutines.
 
-
 ## Template References
 
 Templates in `templates/kotlin-springboot/`:
+
 - `configuration.md`
 - `data_layer_repositories.md`
 - `dependency_injection__com.md`

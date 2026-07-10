@@ -11,6 +11,7 @@ applyTo: "\*_/_.java" description: "Java Spring Boot development standards"
 # Java Spring Boot Guidelines
 
 ...
+
 ```
 
 **Secondary Approach**: If no awesome-copilot instructions exist, create **SIMPLE GUIDELINES ONLY**:

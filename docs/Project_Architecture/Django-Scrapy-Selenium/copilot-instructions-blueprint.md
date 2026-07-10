@@ -80,21 +80,25 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django
+
 - Follow Django conventions for models, views, URLs, and templates
 - Use Django REST Framework ViewSets + Serializers for API endpoints
 - Django ORM for database queries (avoid raw SQL)
 
 ### Scrapy
+
 - Follow Scrapy spider conventions (items, pipelines, middlewares, settings)
 - Define items in `items.py`, pipelines in `pipelines.py`
 - Respect `robots.txt` and implement polite crawling delays
 
 ### Selenium
+
 - Use explicit WebDriverWait patterns (not implicit waits or sleep)
 - Handle StaleElementReferenceException with retry logic
 - Clean up with `driver.quit()` in finally blocks
 
 ### Celery
+
 - Define tasks in `tasks.py` per Django app
 - Use Redis/RabbitMQ as message broker
 - Handle task failures with retries

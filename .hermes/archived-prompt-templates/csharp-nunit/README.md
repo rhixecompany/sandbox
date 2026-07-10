@@ -5,6 +5,7 @@ Lines: 80
 Templates: 7
 
 ## Templates
+
 - `assertions.md`
 - `data-driven_tests.md`
 - `mocking_and_isolation.md`

@@ -22,20 +22,24 @@
 ## Key Findings
 
 ### Drizzle ORM + Neon
+
 - Drizzle ~7KB bundle vs Prisma 7's ~1.6MB; SQL-like `select().from().where()`
 - No `generate` step — schema is plain TypeScript with full autocomplete
 - `@neondatabase/serverless` with `fetchConnectionCache = true` for connection reuse
 
 ### Drizzle Migrations (2026)
+
 - `push` for dev (auto-ALTER); `generate` + `migrate` for production (versioned SQL)
 - Team workflow: generate SQL, commit to git, apply via migrate in CI/CD
 
 ### Redis (2026)
+
 - Upstash Redis: HTTP REST API, zero cold starts, global replication
 - Sliding window rate limiting: 100 req/min per IP for catalog reads
 - Cache summaries 60s with `SET NX/EX` — reduces Drizzle SELECTs ~80%
 
 ### NextAuth.js + Neon (2026)
+
 - Official `@auth/neon-adapter`; Pool inside request handler (never global)
 - Strategies: JWT (stateless) or database (persistent) via Neon adapter
 - Rotate `NEXTAUTH_SECRET` every 90 days; Vercel encrypted env
@@ -46,12 +50,12 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Next.js 15 | https://nextjs.org/docs | Docs |
-| Drizzle ORM | https://orm.drizzle.dev | Docs |
-| Neon | https://neon.com/docs | Docs |
-| Upstash Redis | https://docs.upstash.com/redis | Docs |
-| Auth.js Neon | https://authjs.dev/getting-started/adapters/neon | Docs |
-| Drizzle Migrations | https://orm.drizzle.team/docs/migrations | Guide |
+| Next.js 15 | <https://nextjs.org/docs> | Docs |
+| Drizzle ORM | <https://orm.drizzle.dev> | Docs |
+| Neon | <https://neon.com/docs> | Docs |
+| Upstash Redis | <https://docs.upstash.com/redis> | Docs |
+| Auth.js Neon | <https://authjs.dev/getting-started/adapters/neon> | Docs |
+| Drizzle Migrations | <https://orm.drizzle.team/docs/migrations> | Guide |
 
 ---
 
@@ -109,9 +113,9 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Next.js 15 | https://nextjs.org/docs | Framework docs |
-| Drizzle ORM | https://orm.drizzle.dev | TypeScript ORM |
-| Neon | https://neon.com/docs | Serverless Postgres |
-| Upstash Redis | https://docs.upstash.com/redis | Serverless Redis |
-| Auth.js Neon | https://authjs.dev/getting-started/adapters/neon | Neon auth adapter |
-| Drizzle Migrations | https://orm.drizzle.team/docs/migrations | Migration guide |
+| Next.js 15 | <https://nextjs.org/docs> | Framework docs |
+| Drizzle ORM | <https://orm.drizzle.dev> | TypeScript ORM |
+| Neon | <https://neon.com/docs> | Serverless Postgres |
+| Upstash Redis | <https://docs.upstash.com/redis> | Serverless Redis |
+| Auth.js Neon | <https://authjs.dev/getting-started/adapters/neon> | Neon auth adapter |
+| Drizzle Migrations | <https://orm.drizzle.team/docs/migrations> | Migration guide |

@@ -1,6 +1,6 @@
 # Postman MCP Server (Local)
 
-**Source:** https://learning.postman.com/docs/reference/postman-api/postman-mcp-server/postman-mcp-local-server
+**Source:** <https://learning.postman.com/docs/reference/postman-api/postman-mcp-server/postman-mcp-local-server>
 
 ## Overview
 
@@ -16,6 +16,7 @@ The **local Postman MCP server** runs on **STDIO transport** and is hosted local
 ## Use Cases
 
 Consider the local server when you:
+
 - Want to power **local API testing**
 - Have **specific security and network requirements**
 - Prefer to **build from source code** (repo available)
@@ -52,6 +53,7 @@ claude mcp add postman --env POSTMAN_API_KEY=*** npx @postman/postman-mcp-server
 **One-click install:** [Install in Cursor](https://cursor.com/en/install-mcp?name=postman-api-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyJAcG9zdG1hbi9wb3N0bWFuLW1jcC1zZXJ2ZXIiLCItLWZ1bGwiXSwiZW52Ijp7IlBPU1RNQU5fQVBJX0tFWSI6IllPVVJfQVBJX0tFWSJ9fQ%3D%3D)
 
 **Manual** (`.vscode/mcp.json`):
+
 ```json
 {
   "servers": {
@@ -78,6 +80,7 @@ claude mcp add postman --env POSTMAN_API_KEY=*** npx @postman/postman-mcp-server
   ]
 }
 ```
+
 > Default: **Full** mode. Remove `--full` for Minimal; replace with `--code` for Code mode.
 
 ### Visual Studio Code
@@ -85,6 +88,7 @@ claude mcp add postman --env POSTMAN_API_KEY=*** npx @postman/postman-mcp-server
 **One-click install:** [Install in VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=postman-api-mcp&inputs=%5B%7B%22id%22%3A%22postman-api-key%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22Enter%20your%20Postman%20API%20key%22%7D%5D&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22%40postman%2Fpostman-mcp-server%22%2C%22--full%22%5D%2C%22env%22%3A%7B%22POSTMAN_API_KEY%22%3A%22%24%7Binput%3Apostman-api-key%7D%22%7D%7D)
 
 **Manual** (`mcp.json`):
+
 ```json
 {
   "servers": {
@@ -140,6 +144,7 @@ codex mcp add postman --env POSTMAN_API_KEY=*** npx @postman/postman-mcp-server 
 ### Windsurf
 
 **GUI Install:**
+
 1. Click **Open MCP Marketplace**
 2. Search "Postman"
 3. Click **Install**
@@ -150,6 +155,7 @@ codex mcp add postman --env POSTMAN_API_KEY=*** npx @postman/postman-mcp-server 
 > **Windows users:** Use `--quiet` flag to avoid startup timeout from stderr buffer deadlock.
 
 **Manual** (`.codeium/windsurf/mcp_config.json`):
+
 ```json
 {
   "mcpServers": {
@@ -182,6 +188,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test postman
 /reload-mcp
@@ -189,7 +196,7 @@ hermes mcp test postman
 
 ## References
 
-- Postman Docs: https://learning.postman.com/docs/reference/postman-api/postman-mcp-server/postman-mcp-local-server
-- GitHub: https://github.com/postmanlabs/postman-mcp-server
-- mcpservers.org: https://mcpservers.org/servers/postmanlabs/postman-api-mcp
-- Releases: https://github.com/postmanlabs/postman-mcp-server/releases
+- Postman Docs: <https://learning.postman.com/docs/reference/postman-api/postman-mcp-server/postman-mcp-local-server>
+- GitHub: <https://github.com/postmanlabs/postman-mcp-server>
+- mcpservers.org: <https://mcpservers.org/servers/postmanlabs/postman-api-mcp>
+- Releases: <https://github.com/postmanlabs/postman-mcp-server/releases>

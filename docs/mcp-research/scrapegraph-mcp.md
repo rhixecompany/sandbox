@@ -1,6 +1,6 @@
 # ScrapeGraph MCP Server
 
-**Source:** https://github.com/ScrapeGraphAI/scrapegraph-mcp
+**Source:** <https://github.com/ScrapeGraphAI/scrapegraph-mcp>
 
 ## Overview
 
@@ -94,6 +94,7 @@ smithery install @ScrapeGraphAI/scrapegraph-mcp
 ### 4. Cursor Integration
 
 Add to `~/.cursor/mcp.json`:
+
 ```json
 {
   "mcpServers": {
@@ -210,6 +211,7 @@ mcp_servers:
 ```
 
 For Remote HTTP mode:
+
 ```yaml
 mcp_servers:
   scrapegraph:
@@ -222,6 +224,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test scrapegraph
 /reload-mcp
@@ -229,8 +232,8 @@ hermes mcp test scrapegraph
 
 ## References
 
-- GitHub: https://github.com/ScrapeGraphAI/scrapegraph-mcp
-- Dashboard: https://dashboard.scrapegraphai.com
-- Remote MCP: https://mcp.scrapegraphai.com/mcp
-- Smithery: https://docs.scrapegraphai.com/services/mcp-server/smithery
-- mcp.so: https://mcp.so/server/scrapegraph-mcp/ScrapeGraphAI
+- GitHub: <https://github.com/ScrapeGraphAI/scrapegraph-mcp>
+- Dashboard: <https://dashboard.scrapegraphai.com>
+- Remote MCP: <https://mcp.scrapegraphai.com/mcp>
+- Smithery: <https://docs.scrapegraphai.com/services/mcp-server/smithery>
+- mcp.so: <https://mcp.so/server/scrapegraph-mcp/ScrapeGraphAI>

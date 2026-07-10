@@ -3,6 +3,7 @@
 ## Root: projects/Banking
 
 ### Key Directories
+
 - src/ — source code
 - public/ — static assets
 - .vscode/ — VS Code configuration

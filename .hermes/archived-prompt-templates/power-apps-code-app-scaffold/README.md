@@ -5,5 +5,6 @@ Lines: 186
 Templates: 2
 
 ## Templates
+
 - `implementation_guidelines.md`
 - `task.md`

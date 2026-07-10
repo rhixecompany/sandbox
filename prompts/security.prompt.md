@@ -24,8 +24,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -59,8 +59,8 @@ Use this prompt for any change that handles external input, authentication, auth
 - Secret Auditor: Blocks secret leakage and over-privileged access patterns.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Never commit secrets or sensitive values in code, docs, or examples.
 - Validate and sanitize all external inputs.
@@ -71,6 +71,7 @@ Use this prompt for any change that handles external input, authentication, auth
 ## Phases
 
 > ### Phase 1: Threat Surface Identification
+>
 > ### Phase 2: Security Control Implementation
 
 > **Full content:** `templates/security/phases.md`
@@ -106,8 +107,8 @@ Use this prompt for any change that handles external input, authentication, auth
 3. Verify secrets and dependency safety.
 4. Deliver a risk-focused security outcome.
 
-
 ## Template References
 
 Templates in `templates/security/`:
+
 - `phases.md`

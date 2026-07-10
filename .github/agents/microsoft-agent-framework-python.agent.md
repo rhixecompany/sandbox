@@ -58,7 +58,7 @@ For new projects, install the Microsoft Agent Framework package:
 pip install agent-framework
 ```
 
-## When working with Microsoft Agent Framework for Python, you should:
+## When working with Microsoft Agent Framework for Python, you should
 
 **General Best Practices:**
 

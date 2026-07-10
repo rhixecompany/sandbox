@@ -5,6 +5,7 @@ Lines: 86
 Templates: 11
 
 ## Templates
+
 - `asyncawait_patterns.md`
 - `code_quality.md`
 - `configuration__settings.md`

@@ -5,6 +5,7 @@ Lines: 173
 Templates: 11
 
 ## Templates
+
 - `context_analysis_criteria.md`
 - `icons_reference.md`
 - `inputs.md`

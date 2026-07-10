@@ -1,3 +1,11 @@
+---
+name: shared-section-skeleton
+title: Shared Template — Section Skeleton
+description: Standard section skeleton for prompt files
+version: 1.0.0
+tags: [template, shared, skeleton]
+---
+
 # Standard Prompt Section Skeleton
 
 Use this skeleton when creating a new fix/sync prompt. Each section is

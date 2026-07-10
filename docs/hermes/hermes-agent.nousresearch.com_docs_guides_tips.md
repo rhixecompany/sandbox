@@ -1,4 +1,4 @@
-# Source: https://hermes-agent.nousresearch.com/docs/guides/tips
+# Source: <https://hermes-agent.nousresearch.com/docs/guides/tips>
 
 # Hermes Agent: Tips & Best Practices — Comprehensive Summary
 
@@ -16,29 +16,35 @@ hermes setup --portal
 ## 🎯 Getting the Best Results
 
 ### Be Specific About What You Want
+>
 > **Vague prompts produce vague results.** Instead of "fix the code," say:
 > > "fix the TypeError in `api/handlers.py` on line 47 — the `process_request()` function receives `None` from `parse_body()`."
 
 **Key files/functions mentioned:** `api/handlers.py`, `process_request()`, `parse_body()`
 
 ### Provide Context Up Front
+
 - Front-load: file paths, error messages, expected behavior
 - Paste error tracebacks directly — agent parses them
 - One well-crafted message beats three rounds of clarification
 
 ### Use Context Files for Recurring Instructions
+
 Create `AGENTS.md` in project root for repeated instructions:
+
 - "use tabs not spaces"
 - "we use pytest"
 - "the API is at `/api/v2`"
 - **Auto-loaded every session** — zero effort after setup
 
 ### Let the Agent Use Its Tools
+
 - Say "find and fix the failing test" not "open `tests/test_foo.py`, look at line 42..."
 - Agent has: file search, terminal access, code execution
 - Let it explore and iterate
 
 ### Use Skills for Complex Workflows
+
 ```bash
 /skills          # Browse available skills
 /axolotl         # Invoke skill directly
@@ -61,9 +67,11 @@ Create `AGENTS.md` in project root for repeated instructions:
 | **Slash autocomplete** | `/` + `Tab` | Shows built-in commands + installed skills |
 
 ### Verbose Modes (`/verbose` cycles through)
+
 ```
 off → new → all → verbose
 ```
+
 - **"all"** — great for watching agent actions
 - **"off"** — cleanest for simple Q&A
 
@@ -72,6 +80,7 @@ off → new → all → verbose
 ## 📁 Context Files
 
 ### AGENTS.md — Your Project's Brain
+
 **Location:** Project root (auto-loaded at session start)
 
 ```markdown
@@ -83,10 +92,12 @@ off → new → all → verbose
 ```
 
 **Discovery behavior:**
+
 - Top-level `AGENTS.md` → loaded at session start
 - Subdirectory `AGENTS.md` → discovered lazily during tool calls (via `subdirectory_hints.py`), injected into tool results only
 
 ### SOUL.md — Customize Personality
+
 **Location:** `~/AppData/Local/hermes/SOUL.md` or `$HERMES_HOME/SOUL.md`
 
 ```markdown
@@ -102,10 +113,12 @@ Always consider error handling and edge cases.
 | `AGENTS.md` | Project-specific instructions | Per-project |
 
 ### .cursorrules Compatibility
+
 - Reads `.cursorrules` and `.cursor/rules/*.mdc` automatically
 - No need to duplicate conventions
 
 ### Token Budget Warning
+>
 > **Keep context files focused and concise. Every character counts against your token budget since they're injected into every single message.**
 
 ---
@@ -120,17 +133,20 @@ Always consider error handling and edge cases.
 | **Think** | "What" | "How" |
 
 ### When to Create Skills
+>
 > **If a task takes 5+ steps and you'll do it again** → ask agent to create a skill:
 > > "save what you just did as a skill called `deploy-staging`"
 > > Next time: just type `/deploy-staging`
 
 ### Managing Memory Capacity
+
 - **MEMORY.md** ~2,200 chars
 - **USER.md** ~1,375 chars
 - Auto-consolidates when full
 - Help by saying: "clean up your memory" or "replace the old Python 3.9 note — we're on 3.12 now"
 
 ### Let the Agent Remember
+
 - "remember this for next time" → saves key takeaways
 - "save to memory that our CI uses GitHub Actions with the `deploy.yml` workflow"
 - **Note:** Memory is a frozen snapshot — changes don't appear in system prompt until next session
@@ -140,11 +156,13 @@ Always consider error handling and edge cases.
 ## ⚡ Performance & Cost
 
 ### Don't Break the Prompt Cache
+
 - Most LLM providers cache system prompt prefix
 - **Keep system prompt stable** (same context files, same memory) → cache hits = significantly cheaper
 - Avoid changing model or system prompt mid-session
 
 ### Use `/compress` Before Hitting Limits
+
 ```bash
 /compress    # Summarizes conversation, preserves key context
 ```

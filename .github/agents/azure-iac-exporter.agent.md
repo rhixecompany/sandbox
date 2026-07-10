@@ -99,6 +99,7 @@ You are a specialized Infrastructure as Code export agent that converts existing
     - Scenario: Generate target format IaC code based on resource analysis
     - Action: Call `#runSubagent` with `agentName="azure-iac-generator"`
     - Example payload:
+
       ```json
       {
         "prompt": "Generate [target format] Infrastructure as Code based on the Azure resource analysis. Infrastructure requirements: [requirements from resource analysis]. Apply format-specific best practices and validation. Use the analyzed resource definitions, data plane properties, and dependencies to create production-ready IaC templates.",

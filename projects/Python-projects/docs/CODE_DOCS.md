@@ -13,6 +13,7 @@ A collection of 18 standalone Python utility scripts for various automation and 
 ### Network & Connectivity
 
 #### site_connectivity_checker.py
+
 ```python
 # Purpose: Check website connectivity by sending HTTP requests
 def check_site(url: str, timeout: int = 10) -> dict:
@@ -26,16 +27,19 @@ def check_site(url: str, timeout: int = 10) -> dict:
         dict with keys: url, status_code, response_time, reachable
     """
 ```
+
 - Input: URL (optional protocol; http:// prepended if missing)
 - Output: JSON-like dict with connectivity status
 - Error handling: TimeoutException, ConnectionError, general exceptions
 - Dependencies: `requests`
 
 #### server_status_checker.py
+
 ```python
 def check_server(host: str, port: int) -> dict:
     """Check if a TCP port is open on a remote host."""
 ```
+
 - TCP port scanning for server availability
 - Uses `socket` module for low-level connectivity checks
 - Batch host/port scanning support
@@ -43,6 +47,7 @@ def check_server(host: str, port: int) -> dict:
 ### Image Processing
 
 #### qr_code_generator.py
+
 ```python
 import qrcode
 from qrcode.image.pil import PilImage
@@ -61,11 +66,13 @@ def generate_qr(data: str, filename: str = "qrcode.png",
         Path to the generated QR code image file.
     """
 ```
+
 - Customizable colors and sizes
 - Error correction level configuration
 - Dependencies: `qrcode`, `Pillow`
 
 #### image_resizer.py
+
 ```python
 from PIL import Image
 
@@ -82,16 +89,19 @@ def resize_image(input_path: str, output_path: str,
         maintain_aspect: Whether to preserve aspect ratio (default: True).
     """
 ```
+
 - Supports JPEG, PNG, GIF, WebP formats
 - Aspect ratio preservation mode
 - Batch processing support
 - Dependencies: `Pillow`
 
 #### image_to_pdf_converter.py
+
 ```python
 def convert_images_to_pdf(image_paths: list[str], output_path: str) -> str:
     """Convert one or more images to a single PDF document."""
 ```
+
 - Multiple images merged into a single PDF
 - Page ordering and orientation control
 - Dependencies: `Pillow`
@@ -99,6 +109,7 @@ def convert_images_to_pdf(image_paths: list[str], output_path: str) -> str:
 ### Data Processing
 
 #### currency_converter.py
+
 ```python
 # Uses float arithmetic for currency conversion calculations
 def convert_currency(amount: float, from_currency: str,
@@ -115,12 +126,14 @@ def convert_currency(amount: float, from_currency: str,
         Converted amount rounded to 2 decimal places.
     """
 ```
+
 - Manual exchange rate calculation
 - Supports common currency codes
 - Interactive mode with user input
 - Dependencies: `requests` (for live rates)
 
 #### csv_json_converter.py
+
 ```python
 import csv, json
 
@@ -135,11 +148,13 @@ def csv_to_json(csv_path: str, json_path: str,
         encoding: File encoding.
     """
 ```
+
 - Bidirectional CSV ↔ JSON conversion
 - Custom delimiter support
 - Encoding handling
 
 #### json_formatter.py
+
 ```python
 import json
 
@@ -147,6 +162,7 @@ def format_json(input_path: str, output_path: str | None = None,
                 indent: int = 2) -> str:
     """Pretty-print a JSON file with configurable indentation."""
 ```
+
 - Pretty-printing with configurable indentation
 - File or stdout output
 - Error reporting for malformed JSON
@@ -154,6 +170,7 @@ def format_json(input_path: str, output_path: str | None = None,
 ### Text & File Processing
 
 #### file_organizer.py
+
 ```python
 import os, shutil
 from pathlib import Path
@@ -169,11 +186,13 @@ def organize_by_extension(directory: str, dry_run: bool = False) -> dict:
         dict with counts of files organized by extension category.
     """
 ```
+
 - Sorts files into extension-based folders (Documents, Images, Audio, Video, Archives, Code)
 - Dry-run mode for preview
 - Logging of all file operations
 
 #### duplicate_finder.py
+
 ```python
 import hashlib
 
@@ -188,12 +207,14 @@ def find_duplicates(directory: str, recursive: bool = True) -> list[list[str]]:
         List of groups of duplicate file paths.
     """
 ```
+
 - MD5 hash-based duplicate detection
 - Optional SHA-256 for higher reliability
 - Size pre-filtering for performance
 - JSON report export
 
 #### text_analyzer.py
+
 ```python
 from collections import Counter
 import re
@@ -206,17 +227,20 @@ def analyze_text(text: str) -> dict:
         avg_word_length, most_common_words, unique_words
     """
 ```
+
 - Word, character, sentence, and paragraph counts
 - Lexical diversity (unique/ total word ratio)
 - Most common words with frequency
 - Readability score estimation
 
 #### markdown_to_html_converter.py
+
 ```python
 def md_to_html(md_path: str, html_path: str,
                css_path: str | None = None) -> None:
     """Convert a Markdown file to HTML."""
 ```
+
 - Basic Markdown syntax support (headings, lists, code blocks, links, images, tables)
 - Optional CSS styling
 - Code syntax highlighting (if pygments available)
@@ -224,6 +248,7 @@ def md_to_html(md_path: str, html_path: str,
 ### Automation
 
 #### web_scraper.py
+
 ```python
 from bs4 import BeautifulSoup
 
@@ -240,12 +265,14 @@ def scrape_page(url: str, selector: str,
         List of extracted content strings.
     """
 ```
+
 - CSS selector-based extraction
 - Attribute or text content extraction
 - Pagination support (next page URL pattern)
 - Dependencies: `requests`, `beautifulsoup4`
 
 #### email_sender.py
+
 ```python
 import smtplib
 from email.message import EmailMessage
@@ -260,12 +287,14 @@ def send_email(smtp_server: str, port: int,
         True if sent successfully, False otherwise.
     """
 ```
+
 - SMTP over SSL/TLS
 - Plain text and HTML email support
 - CC/BCC recipients
 - File attachment support
 
 #### password_generator.py
+
 ```python
 import secrets, string
 
@@ -287,6 +316,7 @@ def generate_password(length: int = 16,
         A cryptographically secure random password string.
     """
 ```
+
 - Uses `secrets` module (not `random`) for cryptographic security
 - Configurable character sets
 - Entropy estimation display
@@ -295,6 +325,7 @@ def generate_password(length: int = 16,
 ### System & Monitoring
 
 #### disk_usage_analyzer.py
+
 ```python
 import os
 
@@ -306,12 +337,14 @@ def analyze_disk_usage(path: str, top_n: int = 20) -> list[dict]:
         Sorted by size descending.
     """
 ```
+
 - Recursive directory size calculation
 - Human-readable size formatting (KB, MB, GB, TB)
 - Top N largest files/folders
 - Export to CSV report
 
 #### system_info_collector.py
+
 ```python
 import platform, psutil
 
@@ -323,6 +356,7 @@ def collect_system_info() -> dict:
         memory_available, disk_usage, network_interfaces, boot_time
     """
 ```
+
 - Cross-platform system information (Windows, macOS, Linux)
 - CPU, memory, disk, network metrics
 - Running processes listing
@@ -330,6 +364,7 @@ def collect_system_info() -> dict:
 - Dependencies: `psutil`
 
 #### batch_file_renamer.py
+
 ```python
 import os, re
 
@@ -348,6 +383,7 @@ def rename_files(directory: str, pattern: str,
         List of (original_name, new_name) tuples.
     """
 ```
+
 - Regex-based pattern matching and replacement
 - Numbering sequence insertion (`file_001.jpg`)
 - Date-based naming (`2026-05-21_file.txt`)
@@ -358,6 +394,7 @@ def rename_files(directory: str, pattern: str,
 ### Media
 
 #### youtube_downloader_standalone.py
+
 ```python
 import yt_dlp
 
@@ -376,6 +413,7 @@ def download_video(url: str, output_path: str = "downloads",
         dict with filename, filesize, duration, format.
     """
 ```
+
 - yt-dlp integration for multi-platform support (YouTube, Vimeo, etc.)
 - Quality selection (best, 1080p, 720p, 480p)
 - Audio-only extraction (MP3, M4A)
@@ -389,6 +427,7 @@ def download_video(url: str, output_path: str = "downloads",
 ## Shared Utilities Pattern
 
 Most scripts follow this pattern:
+
 ```python
 #!/usr/bin/env python3
 """Module docstring describing the script's purpose."""
@@ -415,6 +454,7 @@ if __name__ == "__main__":
 ### Testing Pattern
 
 Scripts include a `if __name__ == "__main__"` block with:
+
 - Direct execution mode with CLI arguments
 - Example usage in docstring
 - No formal test framework — manual testing via CLI

@@ -5,5 +5,6 @@ Lines: 367
 Templates: 2
 
 ## Templates
+
 - `mcp_server_integration.md`
 - `requirements.md`

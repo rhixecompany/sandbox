@@ -1,4 +1,4 @@
-# Tasks:
+# Tasks
 
 Extracted from `Developement.prompt.md`.
 

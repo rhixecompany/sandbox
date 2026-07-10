@@ -3,6 +3,7 @@
 > Extracted from `next-intl-add-language.prompt.md`.
 
 ## Legacy Prompt Details
+
 This is a guide to add a new language to a Next.js project using next-intl for internationalization,
 
 - For i18n, the application uses next-intl.

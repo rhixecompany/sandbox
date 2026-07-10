@@ -35,6 +35,7 @@ docker compose build --no-cache  # Rebuild
 ## CI Pipeline
 
 The `.github/workflows/test.yml` runs on push to `development`/`production`:
+
 - `backend-lint` — ruff check + format
 - `backend-test` — Django test suite (Postgres service)
 - `frontend-lint` — ESLint + TypeScript typecheck

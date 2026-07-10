@@ -91,10 +91,10 @@ Your goal is to help me write effective unit tests with NUnit, covering both sta
 - Consider `[Explicit]` for tests that shouldn't run automatically
 - Use `[Ignore("Reason")]` to temporarily skip tests
 
-
 ## Template References
 
 Templates in `templates/csharp-nunit/`:
+
 - `assertions.md`
 - `data-driven_tests.md`
 - `mocking_and_isolation.md`

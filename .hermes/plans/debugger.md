@@ -1,7 +1,5 @@
 ---
-status: in_progress
-status: in_progress
-status: in_progress
+status: completed
 ---
 title: "Copilot Instructions Generator - Codebase analysis spec"
 category: "SPEC"
@@ -20,7 +18,7 @@ Focus on discovering the essential knowledge that would help an AI agents be imm
 
 Source existing AI conventions from `**/{.github/copilot-instructions.md,AGENT.md,AGENTS.md,CLAUDE.md,.cursorrules,.windsurfrules,.clinerules,.cursor/rules/**,.windsurf/rules/**,.clinerules/**,README.md}` (do one glob search).
 
-Guidelines (read more at https://aka.ms/vscode-instructions-docs):
+Guidelines (read more at <https://aka.ms/vscode-instructions-docs>):
 
 - If `.github/copilot-instructions.md` exists, merge intelligently - preserve valuable content while updating outdated sections
 - Write concise, actionable instructions (~20-50 lines) using markdown structure
@@ -42,7 +40,7 @@ Focus on discovering the essential knowledge that would help an AI agents be imm
 
 Source existing AI conventions from `**/{.github/copilot-instructions.md,AGENT.md,AGENTS.md,CLAUDE.md,.cursorrules,.windsurfrules,.clinerules,.cursor/rules/**,.windsurf/rules/**,.clinerules/**,README.md}`.
 
-Guidelines (read more at https://aka.ms/vscode-instructions-docs):
+Guidelines (read more at <https://aka.ms/vscode-instructions-docs>):
 
 - @workspace /explain to identify patterns, conventions, and workflows that are critical for AI agents,
 - Write concise, actionable instructions,prompts,actions,steps (~200-500 lines) using markdown structure
@@ -63,6 +61,7 @@ Search the web for docs on all eslint plugins that are installed and read and un
 ## Plan: Full ESLint, VSCode, Auth Modernization
 
 > This plan covers plugin verification/installation, ESLint config generation, VSC
+>
 > 1. **ESLint Plugin Check & Install**
 
 > **Full content:** `templates/debugger/plan_full_eslint_vscode_auth_m.md`
@@ -70,6 +69,7 @@ Search the web for docs on all eslint plugins that are installed and read and un
 ## Plan: Full ESLint, VSCode, Auth Modernization (Optimized & Merged)
 
 > This plan merges all best practices, code samples, and config patterns from your
+>
 > ### 1. ESLint Plugin Verification & Config Generation
 
 > **Full content:** `templates/debugger/plan_full_eslint_vscode_auth_m.md`
@@ -77,6 +77,7 @@ Search the web for docs on all eslint plugins that are installed and read and un
 ## Comprehensive Modernization Plan: ESLint, VSCode, & Advanced Auth (Type-Safe, Best Practices, Full Samples)
 
 > This plan is tailored for your repo, using .env.local for secrets, and reflectin
+>
 > ### 1. ESLint Plugin Verification & Config Generation
 
 > **Full content:** `templates/debugger/comprehensive_modernization_pl.md`
@@ -308,6 +309,7 @@ src/
 ## 14. Conventions for AI Agents
 
 > - **Never** bypass the 3-layer pattern. All mutations/queries must:
+>
 > 1. Validate input with Zod schema (`src/schemas/`)
 
 > **Full content:** `templates/debugger/14_conventions_for_ai_agents.md`
@@ -425,6 +427,7 @@ src/
 ## Code Examples
 
 > ### Server Component with Data Fetching
+>
 > // app/posts/page.tsx
 
 > **Full content:** `templates/debugger/code_examples.md`
@@ -445,6 +448,7 @@ src/
 ## Quick Reference
 
 > ### Key Tables at a Glance
+>
 > ### Common Query Patterns
 
 > **Full content:** `templates/debugger/quick_reference.md`
@@ -452,6 +456,7 @@ src/
 ## Database Architecture Overview
 
 > ### Entity Relationship Diagram
+>
 > ┌─────────────────────────────────────────────────────────────────┐
 
 > **Full content:** `templates/debugger/database_architecture_overview.md`
@@ -459,6 +464,7 @@ src/
 ## Complete Entity Reference
 
 > ### Entity Groups & Organization
+>
 > **Group 1: Authentication & Authorization (10 tables)**
 
 > **Full content:** `templates/debugger/complete_entity_reference.md`
@@ -466,6 +472,7 @@ src/
 ## Critical Relationships & Cascades
 
 > ### Relationship 1: Comics → Chapters → Images
+>
 > comic ──┬──→ chapter ──→ chapterImage
 
 > **Full content:** `templates/debugger/critical_relationships__cascad.md`
@@ -473,6 +480,7 @@ src/
 ## Query Patterns & N+1 Solutions
 
 > ### Problem 1: Comics with Authors (N+1)
+>
 > // ❌ N+1 PROBLEM: 101 queries for 100 comics
 
 > **Full content:** `templates/debugger/query_patterns__n1_solutions.md`
@@ -480,6 +488,7 @@ src/
 ## Implementation Architect Guide
 
 > ### Your Core Mission
+>
 > Transform feature requirements into production-grade implementations by:
 
 > **Full content:** `templates/debugger/implementation_architect_guide.md`
@@ -487,6 +496,7 @@ src/
 ## Feature Implementation Phases
 
 > Feature development is divided into logical phases, each building on previous wo
+>
 > - **Phase 1:** Core infrastructure (database, DAL, validation)
 
 > **Full content:** `templates/debugger/feature_implementation_phases.md`
@@ -494,6 +504,7 @@ src/
 ## Quality Gates & Validation
 
 > ### Pre-Implementation Checklist
+>
 > - [ ] Feature requirements are clear and documented
 
 > **Full content:** `templates/debugger/quality_gates__validation.md`

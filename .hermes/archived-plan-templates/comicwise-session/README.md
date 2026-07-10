@@ -5,4 +5,5 @@ Lines: 204
 Templates: 1
 
 ## Templates
+
 - `key_patterns.md`

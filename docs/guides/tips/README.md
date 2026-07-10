@@ -43,6 +43,7 @@ Create `AGENTS.md` in project root for repeated rules:
 ### Let the Agent Use Its Tools
 
 > Don't hand-hold: "find and fix the failing test" > "open `tests/test_foo.py`, look at line 42..."
+
 - Agent has: file search, terminal access, code execution
 - Let it explore and iterate
 
@@ -89,6 +90,7 @@ Check skills before writing long procedural prompts.
 - **Auto-seeded** with starter personality
 - **Use for:** Durable personality (tone, verbosity, approach)
 - **Example:**
+
 ```markdown
 # Soul
 You are a senior backend engineer. Be terse and direct.
@@ -121,6 +123,7 @@ Always consider error handling and edge cases.
 ### When to Create Skills
 
 > **If a task takes 5+ steps and you'll repeat it** → ask agent: "save what you just did as a skill called `deploy-staging`"
+
 - Next time: just type `/deploy-staging`
 
 ### Managing Memory Capacity

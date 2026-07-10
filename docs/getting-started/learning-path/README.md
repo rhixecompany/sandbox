@@ -5,6 +5,7 @@
 ```bash
 hermes setup --portal
 ```
+
 > **First-time users almost always want `hermes setup --portal`** — one OAuth covers a model plus the four Tool Gateway tools (search/image/TTS/browser). See [Nous Portal](/docs/integrations/nous-portal).
 
 ---

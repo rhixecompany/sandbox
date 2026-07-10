@@ -39,6 +39,7 @@ Create a complete Model Context Protocol (MCP) server in C# with the following s
 ## Implementation Details
 
 > ### Basic Project Setup
+>
 > - Use .NET 8.0 or later
 
 > **Full content:** `templates/csharp-mcp-server-generator/implementation_details.md`
@@ -59,8 +60,8 @@ Create a complete Model Context Protocol (MCP) server in C# with the following s
 
 Generate a complete, production-ready MCP server with comprehensive documentation and error handling.
 
-
 ## Template References
 
 Templates in `templates/csharp-mcp-server-generator/`:
+
 - `implementation_details.md`

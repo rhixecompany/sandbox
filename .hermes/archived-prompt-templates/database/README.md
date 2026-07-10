@@ -5,4 +5,5 @@ Lines: 141
 Templates: 1
 
 ## Templates
+
 - `common_patterns.md`

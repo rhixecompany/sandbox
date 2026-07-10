@@ -9,7 +9,7 @@ Before updating the `llms.txt` file, you must complete a thorough analysis:
 ### Step 1: Review Current File and Specification
 
 - Read the existing `llms.txt` file to understand current structure
-- Review the official specification at https://llmstxt.org/ to ensure continued compliance
+- Review the official specification at <https://llmstxt.org/> to ensure continued compliance
 - Identify areas that may need updates based on repository changes
 
 ### Step 2: Repository Structure Analysis

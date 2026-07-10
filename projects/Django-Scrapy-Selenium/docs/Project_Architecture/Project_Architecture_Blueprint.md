@@ -54,6 +54,7 @@ Django-Scrapy-Selenium/
 ## Architectural Patterns
 
 ### ETL Pipeline Pattern
+
 The scraping platform follows an Extract-Transform-Load pipeline:
 
 1. **Extract**: Scrapy spiders + Selenium automation collect data from web sources
@@ -61,11 +62,13 @@ The scraping platform follows an Extract-Transform-Load pipeline:
 3. **Load**: Data persisted to PostgreSQL via Django ORM
 
 ### Dual Scraping Strategy
+
 - **Scrapy**: For static/simple HTML scraping with built-in crawling
 - **Selenium**: For JavaScript-rendered pages requiring browser interaction
 - Celery orchestrates async scraping tasks
 
 ### Task Queue Pattern
+
 - Celery workers handle long-running scraping tasks
 - Redis/RabbitMQ as message broker
 - Results stored in Django database

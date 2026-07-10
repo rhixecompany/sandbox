@@ -49,6 +49,7 @@ Dead:        openai-codex                            → 29d cooldown
 - Re-check after primary model completes
 
 ## Status
+
 - ✅ Complete: Rate limit profiles captured
 - ✅ Complete: Fallback chain validated with real benchmark data
 - ✅ Complete: Fallback behavior documented (ollama-cloud, xai-oauth both fall back to deepseek)

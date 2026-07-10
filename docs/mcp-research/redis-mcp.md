@@ -1,6 +1,6 @@
 # Redis MCP Server (Official)
 
-**Source:** https://github.com/redis/mcp-redis
+**Source:** <https://github.com/redis/mcp-redis>
 
 ## Overview
 
@@ -67,6 +67,7 @@ docker pull mcp/redis
 ```
 
 **Claude Desktop Docker config:**
+
 ```json
 {
   "mcpServers": {
@@ -189,6 +190,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test redis
 /reload-mcp
@@ -196,8 +198,8 @@ hermes mcp test redis
 
 ## References
 
-- GitHub: https://github.com/redis/mcp-redis
-- PyPI: https://pypi.org/project/redis-mcp-server/
+- GitHub: <https://github.com/redis/mcp-redis>
+- PyPI: <https://pypi.org/project/redis-mcp-server/>
 - Docker: mcp/redis
-- Redis Docs: https://redis.io/docs/latest/integrate/redis-mcp/client-conf
-- claudedirectory.org: https://www.claudedirectory.org/mcp-servers/redis
+- Redis Docs: <https://redis.io/docs/latest/integrate/redis-mcp/client-conf>
+- claudedirectory.org: <https://www.claudedirectory.org/mcp-servers/redis>

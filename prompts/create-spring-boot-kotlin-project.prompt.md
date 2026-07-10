@@ -79,7 +79,7 @@ unzip starter.zip -d ./${input:projectName:demo-kotlin}
 
 ## Add additional dependencies
 
-> - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency 
+> - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency
 > implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.8.6")
 
 > **Full content:** `templates/create-spring-boot-kotlin-project/add_additional_dependenci.md`
@@ -87,5 +87,6 @@ unzip starter.zip -d ./${input:projectName:demo-kotlin}
 ## Template References
 
 Templates in `templates/create-spring-boot-kotlin-project/`:
+
 - `add_additional_dependenci.md`
 - `download_spring_boot_proj.md`

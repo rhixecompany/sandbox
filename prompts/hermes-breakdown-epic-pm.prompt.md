@@ -41,8 +41,8 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 - `/docs/ways-of-work/plan/{epic-name}/epic.md`
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Include problem, solution, and impact.
 2. Define user personas and high-level journeys.
@@ -54,6 +54,7 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 ## Phases
 
 > ### Phase 1: Understand the epic
+>
 > **Goal:** capture the idea, audience, and business objective.
 
 > **Full content:** `templates/hermes-breakdown-epic-pm/phases.md`
@@ -65,8 +66,8 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 3. Add journeys, requirements, metrics, and scope limits.
 4. Verify completeness and file path.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-epic-pm/`:
+
 - `phases.md`

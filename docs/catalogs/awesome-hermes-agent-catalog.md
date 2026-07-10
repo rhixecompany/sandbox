@@ -41,7 +41,9 @@
 ## Per-File Content Breakdown
 
 ### 1. `.actions.json`
+
 Four parsed actions mapping README resources to actions:
+
 - **readme-getting-started** — points to official docs quickstart URL
 - **readme-get-skills** — lists 2 community skill repos (wondelai/skills, litprog-skill)
 - **contributing-open-issue** — directs to GitHub Issues for resource recommendations
@@ -50,17 +52,22 @@ Four parsed actions mapping README resources to actions:
 All status: `read_only`, no local implementation possible.
 
 ### 2. `.discovery.json`
+
 Minimal. `{ discovered_at, pages: [3 filenames], repo: "0xNyk/awesome-hermes-agent" }`. Used internally by the discoverer tool.
 
 ### 3. `index.md`
+
 Serves as the table of contents. Lists every extracted section/policy page with:
+
 - Section heading and description
 - File path reference
 - External resource count per section
 - Priority ranking (high/medium/informational)
 
 ### 4. `pages/README.md` — The Core Document
+
 **Sections:**
+
 - **Core Overview** — Hermes Agent self-improving loop, 7 backends, 18 platforms, cron/MCP/profiles/OpenClaw migration
 - **Getting Started (3-Step Path)** — Install docs → skills → GUI
 - **Maturity Tags** — production / beta / experimental definitions
@@ -68,7 +75,9 @@ Serves as the table of contents. Lists every extracted section/policy page with:
 - **Community Skills** — 5 community projects (2 beta, 2 experimental, 1 unnamed)
 
 ### 5. `pages/CONTRIBUTING.md`
+
 **Policy content:**
+
 - Open-issue-only contribution model (no PRs)
 - 7 quality standards for resource inclusion
 - Maturity label update process
@@ -76,21 +85,27 @@ Serves as the table of contents. Lists every extracted section/policy page with:
 - Link to Code of Conduct
 
 ### 6. `pages/CODE_OF_CONDUCT.md`
+
 Standard Contributor Covenant v2.0. No Hermes-specific content.
 
 ### 7. `pages/sections/core-overview.md`
+
 Pure extract of README's "Core Overview" section. Self-contained overview of Hermes capabilities.
 
 ### 8. `pages/sections/getting-started-(3-step-path).md`
+
 Extract of the "Getting Started (3-Step Path)" section + maturity tags table.
 
 ### 9. `pages/sections/official-resources-(nous-research-maintained).md`
+
 Extract of the "Official Resources" section. Lists all 9 Nous-maintained repos.
 
 ### 10. `pages/sections/preamble.md`
+
 Extract of README's preamble (title + ecosystem status).
 
 ### 11. `pages/sections/skills-&-plugins.md`
+
 Extract of the "Skills & Plugins" section. Lists 5 community skills with maturity labels.
 
 ---
@@ -101,33 +116,33 @@ Extract of the "Skills & Plugins" section. Lists 5 community skills with maturit
 
 | Resource | URL | Type | Maturity |
 |----------|-----|------|----------|
-| Hermes Agent Core | https://github.com/NousResearch/hermes-agent | Repo | production |
-| Official Documentation | https://hermes-agent.nousresearch.com/docs/ | Docs | production |
-| Release Notes | https://github.com/NousResearch/hermes-agent/releases | Changelog | production |
-| autonovel | https://github.com/NousResearch/autonovel | Repo | production |
-| hermes-paperclip-adapter | https://github.com/NousResearch/hermes-paperclip-adapter | Repo | beta |
-| hermes-agent-self-evolution | https://github.com/NousResearch/hermes-agent-self-evolution | Repo | experimental |
-| tinker-atropos | https://github.com/NousResearch/tinker-atropos | Repo | experimental |
-| Skills Hub | https://agentskills.io | Web | production |
-| Nous Research Discord | https://discord.gg/NousResearch | Community | production |
+| Hermes Agent Core | <https://github.com/NousResearch/hermes-agent> | Repo | production |
+| Official Documentation | <https://hermes-agent.nousresearch.com/docs/> | Docs | production |
+| Release Notes | <https://github.com/NousResearch/hermes-agent/releases> | Changelog | production |
+| autonovel | <https://github.com/NousResearch/autonovel> | Repo | production |
+| hermes-paperclip-adapter | <https://github.com/NousResearch/hermes-paperclip-adapter> | Repo | beta |
+| hermes-agent-self-evolution | <https://github.com/NousResearch/hermes-agent-self-evolution> | Repo | experimental |
+| tinker-atropos | <https://github.com/NousResearch/tinker-atropos> | Repo | experimental |
+| Skills Hub | <https://agentskills.io> | Web | production |
+| Nous Research Discord | <https://discord.gg/NousResearch> | Community | production |
 
 ### Community Skills & Plugins
 
 | Resource | Author | URL | Maturity |
 |----------|--------|-----|----------|
-| wondelai/skills | wondelai | https://github.com/wondelai/skills | active (380+ stars) |
-| litprog-skill | tlehman | https://github.com/tlehman/litprog-skill | beta (75+ stars) |
-| hermes-plugins | 42-evey | https://github.com/42-evey/hermes-plugins | beta |
-| hermes-skill-factory | Romanescu11 | https://github.com/Romanescu11/hermes-skill-factory | beta |
-| Wizards-of-the-Ghosts | Hmbown | https://github.com/Hmbown/Wizards-of-the-Ghosts | experimental |
-| super-hermes | Cranot | https://github.com/Cranot/super-hermes | experimental |
+| wondelai/skills | wondelai | <https://github.com/wondelai/skills> | active (380+ stars) |
+| litprog-skill | tlehman | <https://github.com/tlehman/litprog-skill> | beta (75+ stars) |
+| hermes-plugins | 42-evey | <https://github.com/42-evey/hermes-plugins> | beta |
+| hermes-skill-factory | Romanescu11 | <https://github.com/Romanescu11/hermes-skill-factory> | beta |
+| Wizards-of-the-Ghosts | Hmbown | <https://github.com/Hmbown/Wizards-of-the-Ghosts> | experimental |
+| super-hermes | Cranot | <https://github.com/Cranot/super-hermes> | experimental |
 
 ### GUIs & Dashboards
 
 | Resource | Author | URL | Stars |
 |----------|--------|-----|-------|
-| hermes-workspace | outsourc-e | https://github.com/outsourc-e/hermes-workspace | 500+ |
-| mission-control | builderz-labs | https://github.com/builderz-labs/mission-control | 3.7k+ |
+| hermes-workspace | outsourc-e | <https://github.com/outsourc-e/hermes-workspace> | 500+ |
+| mission-control | builderz-labs | <https://github.com/builderz-labs/mission-control> | 3.7k+ |
 
 ---
 

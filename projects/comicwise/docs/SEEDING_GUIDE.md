@@ -465,9 +465,10 @@ Uploads images to ImageKit CDN.
 
 **Setup:**
 
-1. Create ImageKit account at https://imagekit.io
+1. Create ImageKit account at <https://imagekit.io>
 2. Get API credentials from dashboard
 3. Set environment variables:
+
    ```env
    IMAGEKIT_PUBLIC_KEY="your_public_key"
    IMAGEKIT_PRIVATE_KEY="your_private_key"

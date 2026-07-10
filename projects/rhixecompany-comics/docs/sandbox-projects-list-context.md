@@ -6,18 +6,21 @@
 ## Source Projects
 
 ### comicwise (projects/comicwise)
+
 - **Stack**: Next.js 15+, TypeScript, Tailwind CSS, shadcn/ui, Prisma ORM, PostgreSQL
 - **Features**: Comic streaming UI, NextAuth v5 auth, Stripe/PayPal payments, UploadThing file uploads, Resend email
 - **Inherited by**: frontend/ (design patterns, asset pipeline)
 - **Not migrated**: Prisma schema → Django models, NextAuth → DRF JWT, Stripe webhooks
 
 ### Django-Scrapy-Selenium (projects/Django-Scrapy-Selenium)
+
 - **Stack**: Django 4.x, DRF, Scrapy, Selenium, Celery, Redis, Webpack+Tailwind
 - **Features**: Scrapy spider management, Selenium browser automation, Celery task queue, Tailwind dashboard
 - **Inherited by**: backend/ (Django config, DRF patterns, Celery, scraping architecture)
 - **Not migrated**: Webpack config (replaced by Next.js), legacy templates, specific Scrapy spiders
 
 ### selenium_webdriver (projects/selenium_webdriver)
+
 - **Stack**: Node.js 18+, selenium-webdriver 4.x, ChromeDriver, ES Modules
 - **Features**: Comic data scraping, stale-element retry logic, JSON output generation
 - **Inherited by**: backend/apps/scraping/ (Selenium logic merged into Django management commands)

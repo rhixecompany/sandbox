@@ -74,12 +74,14 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python
+
 - PEP 8 conventions
 - snake_case for functions and files
 - Each main script has a clear, documented purpose
 - Simple CLI interface
 
 ### yt-dlp
+
 - Use for YouTube video/playlist downloads
 - Support multiple quality options (720p, 1080p, etc.)
 - Handle network failures with retry logic

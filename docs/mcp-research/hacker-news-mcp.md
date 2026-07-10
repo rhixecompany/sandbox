@@ -50,19 +50,19 @@ mcp-hn/
 
 ```json
 {
-	"mcpServers": {
-		"mcp-hn": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@smithery/cli@latest",
-				"run",
-				"mcp-hn",
-				"--key",
-				"YOUR_SMITHERY_API_KEY"
-			]
-		}
-	}
+ "mcpServers": {
+  "mcp-hn": {
+   "command": "npx",
+   "args": [
+    "-y",
+    "@smithery/cli@latest",
+    "run",
+    "mcp-hn",
+    "--key",
+    "YOUR_SMITHERY_API_KEY"
+   ]
+  }
+ }
 }
 ```
 

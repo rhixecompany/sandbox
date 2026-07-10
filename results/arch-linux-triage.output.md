@@ -24,6 +24,7 @@ playbook centers on the three tools the prompt mandates: `systemctl`, `journalct
 plus the rolling-release discipline (full upgrades only, reboot after kernel/`linux` updates).
 
 Two invariants drive every step:
+
 1. **Never do a partial upgrade** — always `pacman -Syu`, never `pacman -Sy <pkg>`.
 2. **Reboot after any `linux`/kernel or `systemd`/mesa update** before declaring "fixed".
 
@@ -139,7 +140,7 @@ Provide the three inputs and re-run:
 | Input | Example |
 |-------|---------|
 | `ProblemSummary` | "WiFi drops after `pacman -Syu`; `NetworkManager` fails to start." |
-| `ArchSnapshot` | `Linux 6.9.1-arch1; last full upgrade 2026-07-08; `linux` + `systemd` updated." |
+| `ArchSnapshot` | `Linux 6.9.1-arch1; last full upgrade 2026-07-08;`linux` + `systemd` updated." |
 | `Constraints` | "No reboot allowed during business hours; laptop on battery." |
 
 With those, steps 2–7 become targeted (e.g. `systemctl status NetworkManager`,

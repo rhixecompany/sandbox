@@ -1,6 +1,6 @@
 # MCP (Model Context Protocol) — Hermes Agent
 
-> **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp
+> **Source:** <https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp>
 
 ---
 
@@ -75,6 +75,7 @@ Select tools for 'linear' (SPACE toggle, ENTER confirm)
 ### Trust Model
 
 > **Installing a catalog entry runs whatever the manifest specifies** — `git clone`, bootstrap commands (`pip install`, `npm install`), and the MCP server's own code. Manifests are gated by PR review, **but you should still read the manifest before installing**, especially:
+>
 > - `source:` field's repository
 > - `install.bootstrap:` commands
 > - `transport.command:` invocation
@@ -105,6 +106,7 @@ transport:
 ```bash
 hermes mcp configure linear
 ```
+
 Reopens checklist with current selection pre-checked.
 
 ### Updating Catalog Manifest
@@ -112,6 +114,7 @@ Reopens checklist with current selection pre-checked.
 ```bash
 hermes mcp install <name>  # Refresh after Hermes update if manifest version changed
 ```
+
 To add an MCP to catalog: open PR against [`optional-mcps/`](https://github.com/NousResearch/hermes-agent/tree/main/optional-mcps)
 
 ---
@@ -222,6 +225,7 @@ Tell me which MCP-backed tools are available right now.
 ## Common Patterns
 
 ### Pattern 1: Local Project Assistant
+
 ```yaml
 mcp_servers:
   fs:
@@ -233,6 +237,7 @@ mcp_servers:
 ```
 
 ### Pattern 2: GitHub Triage Assistant
+
 ```yaml
 mcp_servers:
   github:
@@ -247,6 +252,7 @@ mcp_servers:
 ```
 
 ### Pattern 3: Internal API Assistant
+
 ```yaml
 mcp_servers:
   internal_api:

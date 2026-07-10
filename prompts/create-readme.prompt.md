@@ -38,8 +38,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -49,18 +49,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -72,17 +76,17 @@ You're a senior expert software engineer with extensive experience in open sourc
 
 1. Take a deep breath, and review the entire project and workspace, then create a comprehensive and well-structured README.md file for the project.
 2. Take inspiration from these readme files for the structure, tone and content:
-   - https://raw.githubusercontent.com/Azure-Samples/serverless-chat-langchainjs/refs/heads/main/README.md
-   - https://raw.githubusercontent.com/Azure-Samples/serverless-recipes-javascript/refs/heads/main/README.md
-   - https://raw.githubusercontent.com/sinedied/run-on-output/refs/heads/main/README.md
-   - https://raw.githubusercontent.com/sinedied/smoke/refs/heads/main/README.md
+   - <https://raw.githubusercontent.com/Azure-Samples/serverless-chat-langchainjs/refs/heads/main/README.md>
+   - <https://raw.githubusercontent.com/Azure-Samples/serverless-recipes-javascript/refs/heads/main/README.md>
+   - <https://raw.githubusercontent.com/sinedied/run-on-output/refs/heads/main/README.md>
+   - <https://raw.githubusercontent.com/sinedied/smoke/refs/heads/main/README.md>
 3. Do not overuse emojis, and keep the readme concise and to the point.
 4. Do not include sections like "LICENSE", "CONTRIBUTING", "CHANGELOG", etc. There are dedicated files for those sections.
-5. Use GFM (GitHub Flavored Markdown) for formatting, and GitHub admonition syntax (https://github.com/orgs/community/discussions/16925) where appropriate.
+5. Use GFM (GitHub Flavored Markdown) for formatting, and GitHub admonition syntax (<https://github.com/orgs/community/discussions/16925>) where appropriate.
 6. If you find a logo or icon for the project, use it in the readme's header.
-
 
 ## Template References
 
 Templates in `templates/create-readme/`:
+
 - `phases.md`

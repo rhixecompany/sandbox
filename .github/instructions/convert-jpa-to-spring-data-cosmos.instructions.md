@@ -34,13 +34,16 @@ This generalized guide applies to any JPA to Spring Data Cosmos DB conversion pr
 ### Step 2 — Properties and Configuration
 
 - Create `src/main/resources/application-cosmos.properties`:
+
   ```properties
   azure.cosmos.uri=${COSMOS_URI:https://localhost:8081}
   azure.cosmos.database=${COSMOS_DATABASE:petclinic}
   azure.cosmos.populate-query-metrics=false
   azure.cosmos.enable-multiple-write-locations=false
   ```
+
 - Update `src/main/resources/application.properties`:
+
   ```properties
   spring.profiles.active=cosmos
   ```
@@ -515,7 +518,7 @@ private void populateRelationships(Entity entity) {
   - Service layer not populating transient relationship properties
   - Controllers not using service layer for relationship loading
 
-#### **Template compatibility fixes**:
+#### **Template compatibility fixes**
 
 - **If templates access relationship properties** (e.g., `entity.relatedObjects`):
   - Ensure transient properties exist on entities with proper getters/setters
@@ -525,7 +528,7 @@ private void populateRelationships(Entity entity) {
   - `Property or field 'xxx' cannot be found` → Add missing transient property
   - `EL1008E` errors → Service layer not populating relationships
 
-#### **Service layer verification**:
+#### **Service layer verification**
 
 - **Ensure all controllers use service layer** instead of direct repository access
 - **Verify service methods populate relationships** before returning entities
@@ -565,7 +568,7 @@ When encountering template errors:
 
 ### Step 10 — **Systematic Error Resolution Process**
 
-#### When compilation fails:
+#### When compilation fails
 
 1. **Run `mvn compile` first** - fix main source issues before tests
 2. **Run `mvn test-compile`** - systematically fix each test compilation error
@@ -577,7 +580,7 @@ When encountering template errors:
 
 ### Step 10 — **Systematic Error Resolution Process**
 
-#### When compilation fails:
+#### When compilation fails
 
 1. **Run `mvn compile` first** - fix main source issues before tests
 2. **Run `mvn test-compile`** - systematically fix each test compilation error
@@ -587,7 +590,7 @@ When encountering template errors:
    - `cannot find symbol: method Y()` → Update to new repository method names
    - Method signature conflicts → Rename conflicting methods
 
-#### When runtime fails:
+#### When runtime fails
 
 1. **Check application logs** for specific error messages
 2. **Look for template/SpEL errors**:
@@ -596,7 +599,7 @@ When encountering template errors:
 3. **Verify service layer usage** in controllers
 4. **Test navigation through all application pages**
 
-#### Common error patterns and solutions:
+#### Common error patterns and solutions
 
 - **`method findByLastNameStartingWith cannot be applied`** → Remove `Pageable` parameter
 - **`cannot find symbol: method findPetTypes()`** → Change to `findAllOrderByName()`
@@ -721,7 +724,7 @@ If runtime fails after successful compilation:
 
 ### **Authentication Troubleshooting Guide** (CRITICAL)
 
-#### **Common Authentication Serialization Errors**:
+#### **Common Authentication Serialization Errors**
 
 1. **`Cannot pass null or empty values to constructor`**:
    - **Root Cause**: `@JsonIgnore` preventing required field serialization to Cosmos DB
@@ -757,7 +760,7 @@ If runtime fails after successful compilation:
    - **Solution**: Update repository `findOneByLogin` method to work with Cosmos DB
    - **Verification**: Test repository methods independently
 
-#### **Authentication Debugging Checklist**:
+#### **Authentication Debugging Checklist**
 
 - [ ] User entity fully serializable (no `@JsonIgnore` on persisted fields)
 - [ ] Password field accessible and not null
@@ -829,6 +832,7 @@ default List<Entity> customFindMethod() {
    ```
 
 3. **Add JVM argument** (if BigDecimal must be kept):
+
    ```
    --add-opens java.base/java.math=ALL-UNNAMED
    ```
@@ -933,7 +937,8 @@ public Set<RelatedEntity> getRelatedEntities() {
 
 ````
 
-3. **Health Check Configuration**:
+1. **Health Check Configuration**:
+
    ```yaml
    # Remove database dependencies from health checks:
    management:

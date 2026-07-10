@@ -19,8 +19,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -54,8 +54,8 @@ Use this prompt when creating or updating Playwright tests in the tests director
 - Stability Checker: Eliminates fixed waits and unstable timing assumptions.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Use @playwright/test with clear test.describe and test.step grouping.
 - Prefer getByRole, getByLabel, and user-visible locators.
@@ -66,6 +66,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 ## Phases
 
 > ### Phase 1: Scenario and Test Design
+>
 > ### Phase 2: Test Implementation
 
 > **Full content:** `templates/playwright-typescript/phases.md`
@@ -101,8 +102,8 @@ Use this prompt when creating or updating Playwright tests in the tests director
 3. Run and stabilize.
 4. Deliver passing tests with clear intent.
 
-
 ## Template References
 
 Templates in `templates/playwright-typescript/`:
+
 - `phases.md`

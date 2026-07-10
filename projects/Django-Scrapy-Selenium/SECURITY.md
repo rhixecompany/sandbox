@@ -20,6 +20,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 ```
 
 ### Authentication
+
 - django-allauth for user registration and login
 - Password hashing via Django's PBKDF2
 - Session timeout: configurable

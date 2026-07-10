@@ -1741,6 +1741,7 @@ dotnet workload update
    ```
 
 3. **Recipient parameter confusion:**
+
    ```csharp
    // The recipient parameter is the object that registered (this)
    WeakReferenceMessenger.Default.Register<MyMessage>(this, (recipient, message) =>
@@ -1918,6 +1919,7 @@ warning CS0618: 'ListView' is obsolete: 'With the deprecation of ListView, this 
    - Consider FlexLayout for complex layouts
 
 3. **Images not being cached:**
+
    ```xaml
    <Image Source="{Binding ImageUrl}"
           Aspect="AspectFill"
@@ -1981,10 +1983,10 @@ finally { IsLoading = false; }
 
 ## Additional Resources
 
-- **Official Docs:** https://learn.microsoft.com/dotnet/maui/
-- **Migration Guide:** https://learn.microsoft.com/dotnet/maui/migration/
-- **GitHub Issues:** https://github.com/dotnet/maui/issues
-- **CommunityToolkit.Mvvm:** https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/
+- **Official Docs:** <https://learn.microsoft.com/dotnet/maui/>
+- **Migration Guide:** <https://learn.microsoft.com/dotnet/maui/migration/>
+- **GitHub Issues:** <https://github.com/dotnet/maui/issues>
+- **CommunityToolkit.Mvvm:** <https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/>
 
 ---
 

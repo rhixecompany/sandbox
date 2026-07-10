@@ -78,6 +78,7 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django
+
 - Follow Django standard conventions for models, views, and URLs
 - Class-based views preferred over function-based where possible
 - Customize admin with ModelAdmin classes
@@ -85,6 +86,7 @@ When context files don't provide specific guidance:
 - CKEditor allows HTML — sanitize user input carefully
 
 ### Storage
+
 - Google Cloud Storage configured via django-storages for media files
 - WhiteNoise for static file serving in production
 

@@ -301,10 +301,10 @@ kotlin {
 }
 ```
 
-
 ## Template References
 
 Detailed templates in `templates/kotlin-mcp-server-generator/`:
+
 - `buildgradlekts_template.md`
 - `serverkt_template.md`
 - `servertestkt_template.md`

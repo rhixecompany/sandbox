@@ -44,16 +44,16 @@ Microsoft 365 Copilot declarative agents are powerful custom AI assistants that 
 
 ### Communication & Collaboration
 
-5. **TeamsAndOutlook**: Teams chat, meetings, email integration
-6. **CopilotForMicrosoft365**: Advanced Copilot features and workflows
+1. **TeamsAndOutlook**: Teams chat, meetings, email integration
+2. **CopilotForMicrosoft365**: Advanced Copilot features and workflows
 
 ### Business Applications
 
-7. **PowerPlatform**: Power Apps, Power Automate, Power BI integration
-8. **BusinessDataProcessing**: Advanced data analysis and processing
-9. **WordAndExcel**: Document creation, editing, analysis
-10. **EnterpriseApplications**: Third-party business system integration
-11. **CustomConnectors**: Custom API and service integrations
+1. **PowerPlatform**: Power Apps, Power Automate, Power BI integration
+2. **BusinessDataProcessing**: Advanced data analysis and processing
+3. **WordAndExcel**: Document creation, editing, analysis
+4. **EnterpriseApplications**: Third-party business system integration
+5. **CustomConnectors**: Custom API and service integrations
 
 ## Microsoft 365 Agents Toolkit Integration
 

@@ -64,6 +64,7 @@ All 6 real-world operations executed successfully without errors.
    ```
 
 2. Clean caches (14 types):
+
    ```bash
    bash cache-clean.sh --all
    ```

@@ -31,6 +31,7 @@ mongodb+srv://bot:Rhixe&company%401@rhixecompany.ejlsb.mongodb.net/test
 ```
 
 This exposes:
+
 - **Database username:** `bot`
 - **Database password:** `Rhixe&company%401` (URL-encoded, actual password: `Rhixe&company@1`)
 - **Cluster endpoint:** `rhixecompany.ejlsb.mongodb.net`
@@ -39,6 +40,7 @@ This exposes:
 **Impact:** Full read/write access to the MongoDB database. An attacker can exfiltrate all data, modify records, or deploy ransomware.
 
 **Remediation:**
+
 1. Revoke the `bot` user's credentials immediately via MongoDB Atlas
 2. Remove the hardcoded string from all source files
 3. Store connection string in environment variable (`MONGODB_URI`)
@@ -57,6 +59,7 @@ This exposes:
 **Location:** `crawler/settings.py` or Django `settings.py`
 
 Django's `SECRET_KEY` is hardcoded in settings files. This key is used for:
+
 - Cryptographic signing of sessions
 - CSRF token generation
 - Password reset tokens
@@ -64,6 +67,7 @@ Django's `SECRET_KEY` is hardcoded in settings files. This key is used for:
 **Impact:** An attacker with the secret key can forge session cookies, CSRF tokens, and password reset links, leading to account takeover.
 
 **Remediation:**
+
 1. Move `SECRET_KEY` to environment variable: `SECRET_KEY=os.getenv('DJANGO_SECRET_KEY')`
 2. Rotate the key in production
 3. Ensure all deployed instances use unique secret keys
@@ -75,11 +79,13 @@ Django's `SECRET_KEY` is hardcoded in settings files. This key is used for:
 **Status:** ⚠️ Needs Investigation  
 
 `DEBUG = True` is set in settings files. In production:
+
 - Stack traces are displayed to users on errors
 - Sensitive database configuration may be leaked
 - SQL queries may be exposed via debug toolbar
 
 **Remediation:**
+
 1. Set `DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'`
 2. Ensure production environment has `DJANGO_DEBUG=False`
 
@@ -90,6 +96,7 @@ Django's `SECRET_KEY` is hardcoded in settings files. This key is used for:
 **Status:** ❌ Unresolved  
 
 The rotating proxy list in Scrapy settings contains hardcoded proxy addresses. These proxies:
+
 - Represent infrastructure that could be targeted
 - May have authentication credentials embedded
 - Could be rate-limited or banned if exposed
@@ -107,6 +114,7 @@ The rotating proxy list in Scrapy settings contains hardcoded proxy addresses. T
 **Status:** ❌ Unresolved  
 
 Scrapy spider execution endpoints lack authentication. Unauthorized users could:
+
 - Trigger resource-intensive crawls
 - Exhaust API rate limits for external sources
 - Abuse the crawling infrastructure
@@ -120,6 +128,7 @@ Scrapy spider execution endpoints lack authentication. Unauthorized users could:
 **Status:** ⚠️ Known Pattern  
 
 The `NewSeleniumMiddleware` shares a single `webdriver.Chrome()` instance across all requests, which can lead to:
+
 - Cross-request state contamination (cookies, sessions)
 - Memory leaks over extended crawl sessions
 - No isolation between crawl jobs
@@ -133,6 +142,7 @@ The `NewSeleniumMiddleware` shares a single `webdriver.Chrome()` instance across
 **Status:** ❌ Unresolved  
 
 Spider arguments (start URLs, proxy lists, custom settings) are accepted without validation, enabling:
+
 - Arbitrary URL injection
 - Command injection through Scrapy settings
 - SSRF attacks against internal services
@@ -150,6 +160,7 @@ Spider arguments (start URLs, proxy lists, custom settings) are accepted without
 **Status:** ❌ Unresolved  
 
 The Django REST API lacks rate limiting, making it vulnerable to:
+
 - Brute-force attacks on auth endpoints
 - Data scraping via paginated listing endpoints
 - Resource exhaustion from rapid-fire requests
@@ -163,6 +174,7 @@ The Django REST API lacks rate limiting, making it vulnerable to:
 **Status:** ⚠️ Needs Investigation  
 
 Django admin static files are present in the repository (`static/admin/`). In production, these should be:
+
 - Served via a CDN or web server (nginx), not Django
 - Collected via `collectstatic` and served from a single location
 
@@ -190,21 +202,24 @@ PostgreSQL connections via Django ORM lack connection pool limits. Long-running 
 ## Recommendations
 
 ### Immediate (24 hours)
+
 1. Remove hardcoded MongoDB credentials from all source files
 2. Rotate the MongoDB Atlas password
 3. Move `SECRET_KEY`, `DEBUG`, and `ALLOWED_HOSTS` to environment variables
 4. Check git history for committed secrets
 
 ### Short-term (1 week)
-5. Implement authentication on crawl trigger endpoints
-6. Add rate limiting to REST API
-7. Replace shared Selenium WebDriver with per-request instances
+
+1. Implement authentication on crawl trigger endpoints
+2. Add rate limiting to REST API
+3. Replace shared Selenium WebDriver with per-request instances
 
 ### Long-term (1 month)
-8. Implement secrets management (Vault, Doppler, or .env with direnv)
-9. Add automated security scanning to CI/CD pipeline
-10. Set up database connection pooling and monitoring
-11. Create separate read-only database users for API access
+
+1. Implement secrets management (Vault, Doppler, or .env with direnv)
+2. Add automated security scanning to CI/CD pipeline
+3. Set up database connection pooling and monitoring
+4. Create separate read-only database users for API access
 
 ---
 

@@ -64,18 +64,21 @@ xamehi.tv/
 ## Architectural Patterns
 
 ### Django + React SPA Pattern
+
 - Django REST API serves as backend
 - React SPA consumes API with Material-UI components
 - CORS configured via `django-cors-headers`
 - JWT authentication via SimpleJWT
 
 ### Proxy Development Pattern
+
 - Frontend dev server at `localhost:3000`
 - Backend API at `127.0.0.1:8000`
 - Frontend proxies API requests to backend during development
 - CORS headers configured for production
 
 ### Video Streaming
+
 - video-react for player component
 - REST API for video metadata and streaming URLs
 - PayPal integration for premium content

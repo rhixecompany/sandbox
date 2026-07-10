@@ -34,6 +34,7 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 ## Task
 
 > Create a complete Power Apps Code App project structure with the following compo
+>
 > ### 1. Project Initialization
 
 > **Full content:** `templates/power-apps-code-app-scaffold/task.md`
@@ -41,6 +42,7 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 ## Implementation Guidelines
 
 > ### Prerequisites to Mention
+>
 > - Visual Studio Code with Power Platform Tools extension
 
 > **Full content:** `templates/power-apps-code-app-scaffold/implementation_guidelines.md`
@@ -54,11 +56,11 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 5. TypeScript configuration optimized for Power Apps Code Apps
 6. Best practices implementation examples
 
-Ensure the generated project follows Microsoft's official Power Apps Code Apps documentation and samples from https://github.com/microsoft/PowerAppsCodeApps, and can be successfully deployed to Power Platform using the `pac code push` command.
-
+Ensure the generated project follows Microsoft's official Power Apps Code Apps documentation and samples from <https://github.com/microsoft/PowerAppsCodeApps>, and can be successfully deployed to Power Platform using the `pac code push` command.
 
 ## Template References
 
 Detailed templates in `templates/power-apps-code-app-scaffold/`:
+
 - `implementation_guidelines.md`
 - `task.md`

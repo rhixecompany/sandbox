@@ -65,15 +65,19 @@ Replace the placeholder values with the actual API keys or authentication tokens
 | **Redis** | `hermes mcp add @redis/redis-mcp` | Use `REDIS_URL` if you need authentication.
 
 > **How to run the install**:
+>
 > ```bash
 > hermes mcp add <server>
 > ````
+>
 > The CLI will prompt you for any missing auth values.  
 
 After installing, verify a few picks by running:
+>
 > ```bash
 > hermes mcp inspect <server>
 > ```
+>
 > to list the exposed tools and test them with `hermes run "<tool> <args>"`.
 
 ---

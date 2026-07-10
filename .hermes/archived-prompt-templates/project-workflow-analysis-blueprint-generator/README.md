@@ -5,4 +5,5 @@ Lines: 371
 Templates: 1
 
 ## Templates
+
 - `generated_prompt.md`

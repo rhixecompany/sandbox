@@ -47,7 +47,7 @@ Successfully debugged, consolidated, and enhanced 15 scripts across 3 languages 
 
 ### Phase 3: Consolidation ✓
 
-- [x] Standardized all 15 wrappers (_.sh, _.ps1, \*.bat)
+- [x] Standardized all 15 wrappers (_.sh,_.ps1, \*.bat)
 - [x] Centralized logic in src/ (5 TypeScript files)
 - [x] Verified DRY principle (no duplication)
 - [x] Confirmed error handling

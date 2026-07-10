@@ -312,6 +312,7 @@ tail -f logs/$(ls -t logs/*.log | head -1 | xargs basename)
    ```
 
 3. **Update script versions** (if needed)
+
    ```bash
    git status
    git pull origin main
@@ -536,6 +537,7 @@ When reporting a problem:
    ```
 
 3. **Include system info**:
+
    ```bash
    uname -a
    bun --version

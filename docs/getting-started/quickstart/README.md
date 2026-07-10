@@ -30,27 +30,33 @@
 ## 1️⃣ Install Hermes Agent
 
 ### Option A — pip (simplest)
+
 ```bash
 pip install hermes-agent
 hermes postinstall     # optional: installs Node.js, browser, ripgrep, ffmpeg + runs setup
 ```
+
 > PyPI releases track tagged versions (major/minor), not every commit on `main`. For bleeding-edge, use Option B.
 
 ### Option B — git installer (tracks main branch)
+
 ```bash
 # Linux / macOS / WSL2 / Android (Termux)
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
 ### Platform Notes
+
 - **Desktop downloads:** [GitHub Releases](https://github.com/NousResearch/hermes-agent/releases/latest)
 - **Android/Termux:** See dedicated [Termux guide](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
 - **Windows:** Install [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) first, then run the command above inside WSL2
 
 ### Post-Install
+
 ```bash
 source ~/.bashrc   # or source ~/.zshrc
 ```
+
 For detailed options, prerequisites, and troubleshooting → [Installation guide](https://hermes-agent.nousresearch.com/docs/getting-started/installation)
 
 ---
@@ -62,9 +68,11 @@ hermes model    # Interactive provider selection
 ```
 
 ### Easiest Path: Nous Portal
+
 ```bash
 hermes setup --portal
 ```
+
 > One subscription covers 300+ models plus the [Tool Gateway](https://hermes-agent.nousresearch.com/docs/user-guide/features/tool-gateway) (web search, image generation, TTS, cloud browser). Logs you in, sets Nous as provider, and turns on Tool Gateway in one command.
 
 ### Provider Catalog
@@ -107,6 +115,7 @@ hermes setup --portal
 ```bash
 hermes chat
 ```
+
 Type a message. If you get a coherent response → **done**.
 
 ### If It Fails
@@ -123,23 +132,28 @@ Type a message. If you get a coherent response → **done**.
 ## 4️⃣ Next Steps (Optional)
 
 ### Connect a Messenger (Bot/Always-On)
+
 ```bash
 hermes gateway setup
 ```
+
 Interactive wizard for Telegram, Discord, Slack, WhatsApp, Signal, Feishu, WeCom, QQBot, Yuanbao, Teams.
 
 ### Add Skills
+
 ```bash
 /skills              # Browse installed
 /skill install       # Install from hub
 ```
 
 ### Enable Memory
+
 ```bash
 hermes memory setup
 ```
 
 ### Schedule Tasks (Cron)
+
 ```bash
 hermes cron create "daily summary" "0 9 * * *" "Summarize yesterday's commits"
 ```

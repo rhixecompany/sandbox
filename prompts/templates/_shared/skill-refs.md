@@ -1,3 +1,11 @@
+---
+name: shared-skill-refs
+title: Shared Template — Skill References
+description: Standard skill references table for prompt files
+version: 1.0.0
+tags: [template, shared, skills, references]
+---
+
 # Shared Template — Skill References
 
 Common Hermes skills referenced across prompts.

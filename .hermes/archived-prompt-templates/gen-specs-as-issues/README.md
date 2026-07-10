@@ -5,6 +5,7 @@ Lines: 230
 Templates: 10
 
 ## Templates
+
 - `1_project_understanding_p.md`
 - `2_gap_analysis_phase.md`
 - `3_prioritization_phase.md`

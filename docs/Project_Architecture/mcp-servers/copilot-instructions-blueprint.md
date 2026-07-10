@@ -78,11 +78,13 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### MCP Protocol
+
 - Implement MCP specification for each language ecosystem
 - Follow established patterns for server, transport, tool, and resource definitions
 - Maintain consistency in protocol handling across languages
 
 ### Language Patterns
+
 - Each language directory is self-contained with its own build config, source, and tests
 - Follow language-specific best practices and idioms
 - Use the language's standard package manager and build tools

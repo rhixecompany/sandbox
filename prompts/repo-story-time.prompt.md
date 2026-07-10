@@ -37,6 +37,7 @@ metadata:
 ## Goal
 
 Transform any repository's git history into two deliverables:
+
 1. **REPOSITORY_SUMMARY.md** — Technical architecture and purpose overview
 2. **THE_STORY_OF_THIS_REPO.md** — Narrative story from commit history analysis
 

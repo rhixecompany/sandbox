@@ -6,7 +6,7 @@
 
 Begin by acknowledging the user's preferences. Then, proceed directly to generating the `.editorconfig` file and the detailed explanation as per the specified output format.
 
-### Example Output Structure:
+### Example Output Structure
 
 Here is the `.editorconfig` file tailored to your project:
 

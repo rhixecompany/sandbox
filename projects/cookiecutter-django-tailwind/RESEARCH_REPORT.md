@@ -12,24 +12,27 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| django-cookiecutter | https://github.com/cookiecutter/cookiecutter-django | Most-starred Django project template |
-| django-tailwind-cli | https://pypi.org/project/django-tailwind-cli | Standalone Tailwind CSS CLI (2026) |
+| django-cookiecutter | <https://github.com/cookiecutter/cookiecutter-django> | Most-starred Django project template |
+| django-tailwind-cli | <https://pypi.org/project/django-tailwind-cli> | Standalone Tailwind CSS CLI (2026) |
 
 ---
 
 ## Key Findings
 
 ### Django 5.x Project Structure
+
 - Layered settings pattern (`base.py` → `local.py` → `production.py`) is the industry standard; never use single `settings.py` in production
 - Twelve-Factor App: config from environment, strict separation of build/release/run
 - Cookiecutter-Django remains top-referenced template structure
 
 ### django-tailwind Integration
+
 - `django-tailwind-cli` (May 2026) provides standalone Tailwind binary — eliminates npm as build dependency
 - django-tailwind v2.0 recommends `honcho` for running Django + Tailwind concurrently
 - Tailwind utility-first CSS pairs naturally with Django templates
 
 ### Production Security Hardening
+
 - `python manage.py check --deploy` must run before every production deployment
 - CSP via `django-csp` with REPORT_ONLY mode first is recommended XSS prevention
 - Django 6.0 checklist: HSTS, secure cookies, DEBUG=False, proper ALLOWED_HOSTS
@@ -40,9 +43,9 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Django 5.x settings | https://docs.djangoproject.com/en/5.2/topics/settings/ | Docs |
-| django-tailwind CLI | https://django-tailwind.readthedocs.io/en/latest/installation.html | Guide |
-| Django deploy checklist | https://docs.djangoproject.com/en/6.0/howto/deployment/checklist | Checklist |
+| Django 5.x settings | <https://docs.djangoproject.com/en/5.2/topics/settings/> | Docs |
+| django-tailwind CLI | <https://django-tailwind.readthedocs.io/en/latest/installation.html> | Guide |
+| Django deploy checklist | <https://docs.djangoproject.com/en/6.0/howto/deployment/checklist> | Checklist |
 
 ---
 
@@ -97,7 +100,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Official Docs | https://docs.djangoproject.com/en/5.2/ | Django 5.x documentation |
-| django-tailwind | https://django-tailwind.readthedocs.io/ | Tailwind CSS integration |
-| Cookiecutter Django | https://github.com/cookiecutter/cookiecutter-django | Reference template |
-| Community | https://www.reddit.com/r/django/ | Django community discussions |
+| Official Docs | <https://docs.djangoproject.com/en/5.2/> | Django 5.x documentation |
+| django-tailwind | <https://django-tailwind.readthedocs.io/> | Tailwind CSS integration |
+| Cookiecutter Django | <https://github.com/cookiecutter/cookiecutter-django> | Reference template |
+| Community | <https://www.reddit.com/r/django/> | Django community discussions |

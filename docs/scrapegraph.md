@@ -1,6 +1,6 @@
 # ScrapeGraph MCP Server
 
-**Source:** https://github.com/scrapegraphai/scrapegraph-mcp
+**Source:** <https://github.com/scrapegraphai/scrapegraph-mcp>
 
 > Note: The original URL `https://github.com/scrapegraphaiiscrapegraph-mcp` returned a 404. The correct repository is `https://github.com/scrapegraphai/scrapegraph-mcp`.
 
@@ -66,12 +66,15 @@
 ## Quick Start
 
 ### 1. Get API Key
+
 Sign up at the [ScrapeGraph Dashboard](https://dashboard.scrapegraphai.com).
 
 ### 2. Install via Smithery (Recommended)
+
 Use Smithery for automated installation of the ScrapeGraph API Integration Server.
 
 ### 3. Start Using
+
 Ask Claude or Cursor — the server is immediately available to your AI assistant.
 
 ---
@@ -81,16 +84,19 @@ Ask Claude or Cursor — the server is immediately available to your AI assistan
 ### Claude Desktop Configuration
 
 **macOS:**
+
 ```
 ~/Library/Application Support/Claude/claude_desktop_config.json
 ```
 
 **Windows:**
+
 ```
 %APPDATA%\Claude\claude_desktop_config.json
 ```
 
 ### Cursor Integration
+
 Add the ScrapeGraphAI MCP server in Cursor's settings (top right of the Cursor page).
 
 ---
@@ -100,12 +106,15 @@ Add the ScrapeGraphAI MCP server in Cursor's settings (top right of the Cursor p
 No local installation required. Connect to the hosted MCP server.
 
 ### Claude Desktop (Remote)
+
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS).
 
 ### Cursor (Remote)
+
 Add to `~/.cursor/mcp.json`. Cursor supports native HTTP MCP connections.
 
 ### Benefits of Remote Server
+
 - No local setup or maintenance
 - Always up-to-date
 - Scalable infrastructure
@@ -115,26 +124,32 @@ Add to `~/.cursor/mcp.json`. Cursor supports native HTTP MCP connections.
 ## Local Usage
 
 ### Prerequisites
+
 - Python 3.13+
 - ScrapeGraph API key
 
 ### Installation
+
 Install from source using `pyproject.toml`.
 
 ### Running the Server
+
 The server communicates via **stdio** (standard MCP transport).
 
 ### Testing with MCP Inspector
+
 Provides a web interface to test all available tools interactively.
 
 ### Claude Desktop (Local)
 
 **macOS/Linux:**
+
 ```
 ~/Library/Application Support/Claude/claude_desktop_config.json
 ```
 
 **Windows:**
+
 ```
 %APPDATA%\Claude\claude_desktop_config.json
 ```
@@ -142,7 +157,9 @@ Provides a web interface to test all available tools interactively.
 > **Note:** Ensure Python is in your PATH (`python --version`).
 
 ### Cursor (Local)
+
 In Cursor's MCP settings, add a new server with:
+
 - Command: `python`
 - Args: `["-m", "scrapegraph_mcp.server"]`
 - Env: `{"SGAI_API_KEY": "your-api-key-here"}`
@@ -154,11 +171,13 @@ In Cursor's MCP settings, add a new server with:
 Integrate with [Google Agent Development Kit](https://github.com/google/adk) to create AI agents with web scraping capabilities.
 
 ### Configuration Options
+
 - **Timeout settings:** Configurable
 - **Tool filtering:** Use `tool_filter`
 - **API key:** `export SGAI_API_KEY=your-key` or via `env` dict: `'SGAI_API_KEY': 'your-key-here'`
 
 ### Usage
+
 Agents use natural language to interact with web scraping tools.
 
 ---

@@ -1,6 +1,6 @@
 # Google Maps Comprehensive MCP Server
 
-**Source:** https://github.com/vicpeacock/google-maps-comprehensive-mcp
+**Source:** <https://github.com/vicpeacock/google-maps-comprehensive-mcp>
 
 ## Overview
 
@@ -165,7 +165,8 @@ google-maps-comprehensive-mcp/
 ## Alternative: cablate/mcp-google-map
 
 Another comprehensive implementation with 18 tools:
-- GitHub: https://github.com/cablate/mcp-google-map
+
+- GitHub: <https://github.com/cablate/mcp-google-map>
 - Includes: `maps_batch_geocode`, `maps_explore_area`, `maps_weather`, `maps_air_quality`, `maps_static_map`, `maps_search_along_route`, `maps_plan_route`, `maps_compare_places`, `maps_local_rank_tracker`, and more
 - See `skills/google-maps/` for agent skill definition
 
@@ -198,6 +199,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test google-maps
 /reload-mcp
@@ -205,8 +207,8 @@ hermes mcp test google-maps
 
 ## References
 
-- GitHub: https://github.com/vicpeacock/google-maps-comprehensive-mcp
+- GitHub: <https://github.com/vicpeacock/google-maps-comprehensive-mcp>
 - Docker Hub: mcp/google-maps-comprehensive
-- Google Maps Platform: https://developers.google.com/maps
-- PulseMCP: https://www.pulsemcp.com/servers/modelcontextprotocol-google-maps
-- Alternative (18 tools): https://github.com/cablate/mcp-google-map
+- Google Maps Platform: <https://developers.google.com/maps>
+- PulseMCP: <https://www.pulsemcp.com/servers/modelcontextprotocol-google-maps>
+- Alternative (18 tools): <https://github.com/cablate/mcp-google-map>

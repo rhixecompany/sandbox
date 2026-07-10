@@ -20,11 +20,13 @@ A dual-stack comic platform with Django providing the REST API and admin backend
 **Description:** Automated comic scraping from external sources using Scrapy/Selenium, processed via Celery async tasks.
 
 **Entry Points:**
+
 - `backend/apps/scraping/tasks.py` — Celery task definitions
 - `backend/apps/scraping/management/commands/scrape_comics.py` — Django management command
 - `celery -A config worker -l info` — Celery worker
 
 **Steps:**
+
 1. Celery Beat triggers scheduled scraping task (cron-based)
 2. Celery worker picks up the scraping task
 3. Scraper fetches comic data from external sources
@@ -35,6 +37,7 @@ A dual-stack comic platform with Django providing the REST API and admin backend
 8. Users see new comics/chapters on the frontend
 
 **Sequence Diagram:**
+
 ```
 Celery Beat            Celery Worker            Django ORM/API          Next.js Frontend       External Source
     |                       |                        |                       |                      |
@@ -65,12 +68,14 @@ Celery Beat            Celery Worker            Django ORM/API          Next.js 
 ```
 
 **Error Handling:**
+
 - Scraper failure → Celery retries with exponential backoff
 - Source unavailable → skip, log warning, retry next cycle
 - Data validation failure → quarantine malformed data, notify admin
 - Network errors → retry with delay, respect `robots.txt`
 
 **Test Patterns:**
+
 - `python manage.py test` — Django unit tests
 - Celery task testing with `CELERY_TASK_ALWAYS_EAGER = True`
 - Management command testing via `call_command`
@@ -82,11 +87,13 @@ Celery Beat            Celery Worker            Django ORM/API          Next.js 
 **Description:** Next.js frontend consumes Django REST API for comic/chapter/user data.
 
 **Entry Points:**
+
 - **Frontend:** Next.js 16 App Router + TypeScript strict
 - **Backend:** DRF serializers and views (`comics/views.py`, `serializers.py`)
 - **Auth:** JWT-based or session-based auth
 
 **Steps:**
+
 1. Next.js server component or client fetches data from `/api/` endpoints
 2. DRF serializes queryset data to JSON
 3. Next.js renders data using Server Components by default
@@ -95,6 +102,7 @@ Celery Beat            Celery Worker            Django ORM/API          Next.js 
 6. Celery tasks can be triggered from API views for long-running operations
 
 **Error Handling:**
+
 - API timeout → retry with backoff on frontend
 - 401/403 → redirect to login
 - 404 → show "not found" page

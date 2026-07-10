@@ -52,10 +52,10 @@ You are an Arch Linux expert. Diagnose and resolve the user’s issue using Arch
 - **Validation** (code blocks)
 - **Rollback/Cleanup**
 
-
 ## Template References
 
 Templates in `templates/arch-linux-triage/`:
+
 - `inputs.md`
 - `instructions.md`
 - `output_format.md`

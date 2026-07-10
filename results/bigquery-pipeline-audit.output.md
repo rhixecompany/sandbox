@@ -83,6 +83,7 @@ if __name__ == "__main__":                                    # L23
 - No `dry_run`/`execute` split, no `--env=prod --confirm` gate, prod not
   excluded from default.
 - **Proposed minimal patch:**
+
   ```python
   import argparse
   p = argparse.ArgumentParser()
@@ -93,6 +94,7 @@ if __name__ == "__main__":                                    # L23
   if a.env == "prod" and not (a.mode == "execute" and a.confirm):
       raise SystemExit("prod execute requires --mode=execute --confirm")
   ```
+
   In `dry_run`, use `QueryJobConfig(dry_run=True, use_query_cache=False)` to
   estimate bytes with **zero billed execution and zero external calls**.
 
@@ -105,6 +107,7 @@ if __name__ == "__main__":                                    # L23
 - Backdated reads pull from `raw.events` "latest" (L11) with no
   `FOR SYSTEM_TIME AS OF` / dated-snapshot — time-inconsistent.
 - **Concrete rewrite (single set-based query):**
+
   ```sql
   INSERT INTO `proj.mart.daily`
   SELECT event_date, entity_id, COUNT(*) AS n
@@ -113,6 +116,7 @@ if __name__ == "__main__":                                    # L23
     AND event_date IN UNNEST(GENERATE_DATE_ARRAY(@start, @end))
   GROUP BY event_date, entity_id;
   ```
+
   One job replaces 270. Add `MAX_CHUNKS`/14-day default guard for very large ranges.
 
 ## D) QUERY SAFETY AND SCAN SIZE — **FAIL**
@@ -134,6 +138,7 @@ if __name__ == "__main__":                                    # L23
 - **Recommended approach:** `MERGE` on deterministic key
   `entity_id + event_date` (add `model_version` if scoring output). Store
   `run_id` as a **metadata column only** — never in the merge/uniqueness key.
+
   ```sql
   MERGE `proj.mart.daily` T
   USING staging_run T2
@@ -172,6 +177,7 @@ if __name__ == "__main__":                                    # L23
 **no pipeline**, so this is a dry-run demonstration only).
 
 **2. Patch list (ordered by risk)**
+
 1. Collapse per-date loop → single set-based query (§C) — kills the 270-job blowup.
 2. Set `maximum_bytes_billed` on every `client.query` (§A).
 3. Add `--mode`/`--env`/`--confirm` gating with `dry_run` default (§B).
@@ -180,6 +186,7 @@ if __name__ == "__main__":                                    # L23
 6. Add `run_id`, per-job metrics, and end-of-run summary (§F).
 
 **3. Top 3 cost risks (worst-case)**
+
 1. **270 BQ jobs** = 90 dates × 3 retries (loop + retry).
 2. **Unbounded scan per job** — `SELECT *` + `DATE()`-broken pruning → full-table
    scan of `raw.events` on every one of the 270 jobs.

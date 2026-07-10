@@ -82,8 +82,8 @@ reports, plans fixes, and applies them in priority order.
 - Patched SKILL.md files for all F/C-grade skills
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Read `docs/skills-debug-context.md` first if it exists — resume rather than re-run.
 2. Run `hermes skills list` before any other step to get the live inventory.

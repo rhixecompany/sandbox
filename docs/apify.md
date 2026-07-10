@@ -5,6 +5,7 @@
 The **Apify MCP Server** ([mcp.apify.com](https://mcp.apify.com)) enables AI agents to extract data from social media, search engines, maps, e-commerce sites, and any website using thousands of ready-made scrapers, crawlers, and automation tools from [Apify Store](https://apify.com/store).
 
 **Key Features:**
+
 - Supports OAuth for easy connection from Claude.ai, VS Code, Cursor, and other MCP clients
 - Compatible with any client adhering to the Model Context Protocol
 - Hosted server at `https://mcp.apify.com` (recommended) or local stdio via `npx @apify/actors-mcp-server`
@@ -14,19 +15,23 @@ The **Apify MCP Server** ([mcp.apify.com](https://mcp.apify.com)) enables AI age
 
 ## Quickstart
 
-### Two Connection Methods:
+### Two Connection Methods
 
 **1. HTTPS Endpoint (Recommended)**
+
 ```
 https://mcp.apify.com
 ```
+
 - Connect via OAuth or include `Authorization: Bearer <APIFY_TOKEN>` header
 - Supports latest features like output schema inference
 
 **2. Standard Input/Output (stdio)**
+
 ```bash
 npx @apify/actors-mcp-server
 ```
+
 - Requires `APIFY_TOKEN` environment variable
 - Ideal for local integrations and command-line tools
 
@@ -42,18 +47,21 @@ npx @apify/actors-mcp-server
 
 Pay for Actor runs without an Apify API token using **x402** or **Skyfire**.
 
-### Payment Flow (4 steps):
+### Payment Flow (4 steps)
+
 1. Search for Actors (`search-actors`)
 2. Fetch Actor details (`fetch-actor-details`)
 3. Create payment token (`mcpc create-pay-token`)
 4. Execute Actor run
 
 ### x402 Protocol
+
 - Machine-to-machine payments using USDC on Base blockchain
 - Bypasses need for Apify API token
 - Requires wallet setup
 
 ### Skyfire
+
 - Managed payment infrastructure for AI agents
 - Uses PAY tokens
 - Add `payment=skyfire` to server URL
@@ -98,31 +106,39 @@ Pay for Actor runs without an Apify API token using **x402** or **Skyfire**.
 ## Tools Configuration
 
 ### Default Configuration
+
 When no `tools` parameter is specified:
+
 - `actors` category
 - `docs` category
 - `apify/rag-web-browser` Actor
 
 ### Hosted Server Configuration
+
 ```
 https://mcp.apify.com?tools=actors,docs,apify/rag-web-browser
 ```
 
 Minimal (single Actor only):
+
 ```
 https://mcp.apify.com?tools=apify/my-actor
 ```
 
 ### CLI Configuration
+
 ```bash
 npx @apify/actors-mcp-server --tools actors,docs,apify/rag-web-browser
 ```
 
 ### UI Mode
+
 Enable interactive MCP App widgets:
+
 ```
 https://mcp.apify.com?ui=true
 ```
 
 ### ⚠️ Production Recommendation
+
 **Always explicitly specify the `tools` parameter** for stable interfaces across updates.

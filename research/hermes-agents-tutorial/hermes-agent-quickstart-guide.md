@@ -1,6 +1,6 @@
 # Hermes Agent Quickstart Guide
 
-> **Source:** https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
+> **Source:** <https://hermes-agent.nousresearch.com/docs/getting-started/quickstart>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -8,17 +8,20 @@
 ## Installation
 
 ### Option A: pip (stable)
+
 ```bash
 pip install hermes-agent
 hermes postinstall
 ```
 
 ### Option B: git (bleeding edge)
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
 Platform notes:
+
 - Windows: Install WSL2 first
 - Android/Termux: See dedicated guide
 

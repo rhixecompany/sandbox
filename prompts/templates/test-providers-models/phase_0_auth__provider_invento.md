@@ -4,6 +4,7 @@ Generated: 2026-07-09
 Source: `hermes auth list` (live)
 
 ## Summary
+
 - Providers inventoried: 8
 - Credential status documented per provider.
 
@@ -22,10 +23,12 @@ Source: `hermes auth list` (live)
 | 9 | xai-oauth | device_code OAuth | ✅ Active | — |
 
 ## Critical Notes
+
 - **OpenRouter key security boundary**: The API key is managed by Hermes' secure credential store and is NOT available as an environment variable in subprocesses (curl, Python). API calls must go through the Hermes provider chain (`hermes chat -q --provider openrouter`).
 - **OpenAI API key**: Present but not exported to subprocess environment — same security boundary applies.
 
 ## Status
+
 - ✅ Complete: All 8 providers captured from `hermes auth list`
 - ✅ Credential status documented per provider
 - ⚠️ Action needed: Re-auth copilot, openai-codex, openrouter when cooldowns expire

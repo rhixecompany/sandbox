@@ -1,6 +1,6 @@
 # Official Binance Spot API Documentation
 
-> **Source:** https://github.com/binance/binance-spot-api-docs
+> **Source:** <https://github.com/binance/binance-spot-api-docs>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -23,10 +23,10 @@
 
 | Environment | URL |
 |-------------|-----|
-| Production REST | https://api.binance.com |
+| Production REST | <https://api.binance.com> |
 | Production WS | wss://stream.binance.com:9443 |
-| Testnet REST | https://testnet.binance.vision |
-| Data API | https://data-api.binance.vision |
+| Testnet REST | <https://testnet.binance.vision> |
+| Data API | <https://data-api.binance.vision> |
 
 ## Authentication
 
@@ -52,6 +52,7 @@
 ## Error Codes
 
 Common errors:
+
 - -1021: Timestamp outside recvWindow
 - -2010: Insufficient balance
 - -1100: Illegal characters in parameter

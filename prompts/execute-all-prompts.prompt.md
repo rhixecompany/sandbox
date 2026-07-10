@@ -53,6 +53,7 @@ metadata:
 This orchestrator runs 4 prompt files in order, each as a self-contained workflow. Execution is strictly sequential — Phase N+1 begins only after Phase N is fully verified complete.
 
 **Critical rules:**
+
 - Execute prompts in the exact order listed below
 - Each prompt must be fully verified before moving to the next
 - Do not skip phases within any prompt
@@ -81,8 +82,8 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 | `verification-before-completion` | Verify each phase before claiming done |
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **Strict sequential execution** — Prompts execute in order; each must complete before the next begins
 2. **Phase integrity** — All phases within a prompt must complete; do not skip
@@ -93,6 +94,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 ## Phases
 
 > ### Phase 1: Audit Skills Judge Fix
+>
 > **Prompt file:** `audit-skills-judge-fix.prompt.md`
 
 > **Full content:** `templates/execute-all-prompts/phases.md`
@@ -121,8 +123,8 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 - **Credential constraints:** API keys (especially OPENROUTER_API_KEY) are in Hermes' secure store, not env vars; route through `hermes chat -q --provider`
 - **Sequential constraint:** The "only then" rule is absolute — never start a prompt before the previous one is verified complete
 
-
 ## Template References
 
 Detailed templates in `templates/execute-all-prompts/`:
+
 - `phases.md`

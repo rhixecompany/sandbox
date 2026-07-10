@@ -1,10 +1,9 @@
 ---
-status: in_progress
 status: completed
-status: completed
+superseded_by: 2026-07-10_prompts-templates-consolidation-master-plan.md
 ---
-# Prompt Management Orchestration — Comprehensive Plan
 
+# Prompt Management Orchestration — Comprehensive Plan
 > **Workflow:** Prompt Management (prompt-management skill) applied to `execute-all-prompts.prompt.md` and all 4 sub-prompts it orchestrates.
 > **Version:** 1.0.0 | **Author:** OWL (Alexa)
 
@@ -250,6 +249,7 @@ $HOME/AppData/Local/hermes/
 | 1.4.4 | Summary statistics | `judge_results/summary.md` |
 
 **Dimensions scored (skill-judge v1.1.0):**
+
 - Completeness (0-20)
 - Clarity (0-20)
 - Correctness (0-20)
@@ -276,6 +276,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 1.7: Verify
 
 **Checklist:**
+
 - [ ] Skills inventory saved ✅
 - [ ] All categorized (0 uncategorized) ✅
 - [ ] Duplicates removed (0 same-name collisions) ✅
@@ -347,6 +348,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 3.4: Verify
 
 **Zero drift check:**
+
 - ✅ Same number of plugins (4/4)
 - ✅ Same number of hooks (3/3)  
 - ✅ Skills may differ (different agent scopes)
@@ -564,6 +566,7 @@ git revert <commit-hash>  # safe revert (not destructive)
 ### 9.3 Emergency Stop
 
 If any phase produces unexpected destructive behavior:
+
 1. Stop all operations immediately
 2. Run `git status` to see what changed
 3. Run `git checkout -- .` to discard all working tree changes
@@ -597,6 +600,7 @@ If any phase produces unexpected destructive behavior:
 ### 10.3 Final Acceptance
 
 The pipeline is accepted as COMPLETE when:
+
 1. All 4 phases are verified with artifacts
 2. `docs/orchestrator-verification.md` shows all ✅
 3. No blocking errors remain

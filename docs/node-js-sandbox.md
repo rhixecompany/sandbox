@@ -1,6 +1,6 @@
 # Node.js Sandbox MCP Server
 
-**Source:** https://github.com/alfonsograziano/node-code-sandbox-mcp
+**Source:** <https://github.com/alfonsograziano/node-code-sandbox-mcp>
 
 > **Repository**: [alfonsograziano/node-code-sandbox-mcp](https://github.com/alfonsograziano/node-code-sandbox-mcp)
 > **Purpose**: A Node.js–based Model Context Protocol (MCP) server that executes arbitrary JavaScript in ephemeral Docker containers with on-the-fly npm dependency installation.
@@ -32,7 +32,9 @@
 ### 1. Connect to an MCP Client (e.g., Claude Desktop)
 
 #### Option A: Using `npx`
+
 Add to `claude_desktop_config.json`:
+
 ```json
 {
   "mcpServers": {
@@ -45,6 +47,7 @@ Add to `claude_desktop_config.json`:
 ```
 
 #### Option B: Using Docker
+
 ```bash
 docker run -d \
   --name node-sandbox \
@@ -75,34 +78,41 @@ docker run -d \
 ## 🛠️ API Tools
 
 ### `run_js_ephemeral`
+
 Run a one-off JS script in a **brand-new disposable container**.
 
 **Inputs**:
+
 - `image` (default: `node:lts-slim`)
 - `code`: JavaScript code to execute
 - `dependencies`: Array of `{ name, version }` (optional)
 
 **Behavior**:
+
 - Creates `index.js` and `package.json`
 - Installs dependencies
 - Executes script
 - Returns stdout and any generated files (e.g., `.txt`, `.json`, images)
 
 **Example Call**:
+
 ```js
 // Save a file during execution
 const fs = require('fs');
 fs.writeFileSync('hello.txt', 'Hello from sandbox!');
 console.log('File saved.');
 ```
+
 ✅ Returns: Console output + `hello.txt` as a resource
 
 ---
 
 ### `sandbox_initialize`
+
 Start a persistent sandbox container.
 
 **Inputs**:
+
 - `image` (default: `node:lts-slim`)
 - `port` (optional)
 
@@ -111,24 +121,29 @@ Start a persistent sandbox container.
 ---
 
 ### `sandbox_exec`
+
 Run shell commands inside a running sandbox.
 
 **Inputs**:
+
 - `container_id` (from `sandbox_initialize`)
 - `commands`: Shell command(s) to execute
 
 ---
 
 ### `run_js`
+
 Install npm packages and run JS in an existing sandbox.
 
 **Inputs**:
+
 - `container_id`
 - `code`
 - `dependencies` (optional)
 - `listenOnPort` (optional, for background services)
 
 **Behavior**:
+
 - Runs `npm install --omit=dev --ignore-scripts --no-audit --loglevel=error`
 - Executes `node index.js`
 - Returns stdout or background execution notice
@@ -136,6 +151,7 @@ Install npm packages and run JS in an existing sandbox.
 ---
 
 ### `sandbox_stop`
+
 Terminate and remove a sandbox container.
 
 **Input**: `container_id`
@@ -143,9 +159,11 @@ Terminate and remove a sandbox container.
 ---
 
 ### `search_npm_packages`
+
 Search npm registry for packages.
 
 **Inputs**:
+
 - `searchTerm`
 - Optional qualifiers: `author`, `maintainer`, `scope`, `keywords`, `not`, `is`, `boostExact`
 
@@ -168,11 +186,14 @@ Search npm registry for packages.
 ## 🖥️ VS Code Integration
 
 ### Quick Install (Buttons)
+
 - [Install js-sandbox-mcp (NPX)](https://vscode.dev/redirect?url=vscode://alfonsograziano.node-code-sandbox-mcp/install?npx)
 - [Install js-sandbox-mcp (Docker)](https://vscode.dev/redirect?url=vscode://alfonsograziano.node-code-sandbox-mcp/install?docker)
 
 ### Manual Setup
+
 Add to `.vscode/mcp.json` or `settings.json`:
+
 ```json
 {
   "mcp": {
@@ -191,6 +212,7 @@ Add to `.vscode/mcp.json` or `settings.json`:
 ## 🌐 Explore Use Cases
 
 Visit [jsdevai.com/#use-cases](https://jsdevai.com/#use-cases) for:
+
 - Creative prompt ideas
 - Real-world examples
 - Advanced experiments (e.g., chart generation, data processing, API mocking)
@@ -200,6 +222,7 @@ Visit [jsdevai.com/#use-cases](https://jsdevai.com/#use-cases) for:
 ## 📦 Build & Development
 
 To compile and bundle:
+
 ```bash
 npm run build
 ```

@@ -40,4 +40,3 @@ npm run build
 - Follow Scrapy item/pipeline/middleware patterns.
 - Use explicit Selenium waits and retry stale elements.
 - Respect `robots.txt` and rate limits when scraping.
-

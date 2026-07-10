@@ -55,8 +55,8 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 - A short checklist of safety and quality improvements
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Check harmful content, misinformation, and illegal activity risk first
 2. Check bias, privacy, and prompt-injection risk
@@ -80,6 +80,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 ## Phases
 
 > ### Phase 1: Analyze the prompt
+>
 > **Goal:** understand what the prompt asks for and where it may fail.
 
 > **Full content:** `templates/ai-prompt-engineering-safety-review/phases.md`
@@ -91,8 +92,8 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 3. Validate the revised prompt
 4. Return the improved prompt and key notes
 
-
 ## Template References
 
 Detailed templates in `templates/ai-prompt-engineering-safety-review/`:
+
 - `phases.md`

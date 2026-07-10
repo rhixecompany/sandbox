@@ -5,6 +5,7 @@ Lines: 43
 Templates: 4
 
 ## Templates
+
 - `api_organization.md`
 - `openapi_documentation.md`
 - `request_and_response_type.md`

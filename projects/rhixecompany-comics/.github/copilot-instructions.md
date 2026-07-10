@@ -42,4 +42,3 @@ cd frontend && npm run build
 - Use Django ORM, migrations, and DRF conventions on the backend.
 - Keep TypeScript and App Router code aligned with the inherited ComicWise patterns.
 - Respect robots.txt and scraping rate limits.
-

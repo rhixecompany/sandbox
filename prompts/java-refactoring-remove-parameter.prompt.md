@@ -25,7 +25,7 @@ You are an expert in refactoring Java methods.
 
 Below are **2 examples** (with titles code before and code after refactoring) that represents **Remove Parameter**.
 
-## Code Before Refactoring 1:
+## Code Before Refactoring 1
 
 ```java
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)
@@ -45,7 +45,7 @@ public Backend selectBackendForGroupCommit(long tableId, ConnectContext context,
 }
 ```
 
-## Code After Refactoring 1:
+## Code After Refactoring 1
 
 ```java
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)
@@ -65,7 +65,7 @@ public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)
 }
 ```
 
-## Code Before Refactoring 2:
+## Code Before Refactoring 2
 
 ```java
 NodeImpl( long id, long firstRel, long firstProp )
@@ -74,7 +74,7 @@ NodeImpl( long id, long firstRel, long firstProp )
 }
 ```
 
-## Code After Refactoring 2:
+## Code After Refactoring 2
 
 ```java
 NodeImpl( long id)
@@ -98,13 +98,13 @@ Perform intermediate steps internally:
 - Do not remove any functionality from the original method.
 - Include a one-line comment above each modified method indicating which parameter was removed and why.
 
-## Code to be Refactored:
+## Code to be Refactored
 
 Now, assess all methods with unused parameters and refactor them using **Remove Parameter**
-
 
 ## Template References
 
 Templates in `templates/java-refactoring-remove-parameter/`:
+
 - `code_after_refactoring_1.md`
 - `code_before_refactoring_1.md`

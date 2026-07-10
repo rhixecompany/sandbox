@@ -5,6 +5,7 @@ Lines: 361
 Templates: 25
 
 ## Templates
+
 - `ai-optimized_requirements.md`
 - `analysis_instructions.md`
 - `change_management.md`

@@ -5,4 +5,5 @@ Lines: 263
 Templates: 1
 
 ## Templates
+
 - `phase_2_mcp_server_and_tool_re.md`

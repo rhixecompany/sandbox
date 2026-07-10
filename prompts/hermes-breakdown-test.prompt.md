@@ -47,8 +47,8 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 - `/docs/ways-of-work/plan/{epic}/{feature}/qa-plan.md`
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Include test scope and quality-risk mapping.
 2. Use ISTQB-style technique selection where helpful.
@@ -60,6 +60,7 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 ## Phases
 
 > ### Phase 1: Read the feature artifacts
+>
 > **Goal:** understand the feature and the likely QA surface.
 
 > **Full content:** `templates/hermes-breakdown-test/phases.md`
@@ -71,8 +72,8 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 3. Add risk mapping and coverage guidance.
 4. Verify completeness and path correctness.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-test/`:
+
 - `phases.md`

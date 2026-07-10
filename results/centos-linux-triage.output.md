@@ -24,6 +24,7 @@ playbook centers on the tooling the prompt mandates: `systemctl`, `journalctl`, 
 the two CentOS-specific concerns the prompt calls out — **SELinux** and **firewalld**.
 
 Three invariants drive every step:
+
 1. **Confirm the release first** — CentOS Stream (rolling, dnf-only), CentOS Linux 8 (EOL, needs
    `vault`/`mirror` repos or migration to Stream/Rocky/Alma), and CentOS Linux 7 (`yum`, EOL June 2024)
    have different package managers and support status.

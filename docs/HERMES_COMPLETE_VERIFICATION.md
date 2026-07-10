@@ -309,6 +309,7 @@ Status:              ✅ Fully Operational
 **File**: C:\Users\Alexa\Desktop\SandBox\.hermes.md
 
 Updated sections:
+
 - [x] Overview — Added production-ready status
 - [x] Key Directories — Added 7 new documentation files
 - [x] Documentation Suite — Table with links
@@ -320,6 +321,7 @@ Updated sections:
 **File**: ~/AppData/Local/hermes/config.yaml
 
 Verified sections:
+
 - [x] Model configuration (big-pickle, opencode-zen)
 - [x] MCP servers (7/8 enabled, lines 484-514)
 - [x] Terminal backend (bash, local)
@@ -595,10 +597,10 @@ hermes logs                      # View logs
 
 ### Documentation Links
 
-- **Official**: https://hermes-agent.nousresearch.com/docs
-- **GitHub**: https://github.com/NousResearch/hermes-agent
-- **MCP Spec**: https://modelcontextprotocol.io/
-- **Nous Research**: https://nousresearch.com/
+- **Official**: <https://hermes-agent.nousresearch.com/docs>
+- **GitHub**: <https://github.com/NousResearch/hermes-agent>
+- **MCP Spec**: <https://modelcontextprotocol.io/>
+- **Nous Research**: <https://nousresearch.com/>
 
 ### Local Documentation
 
@@ -623,6 +625,7 @@ All systems are verified, operational, and ready for productive use:
 ✅ **Ready for Use** — 250+ tools available, all toolsets tested  
 
 The SandBox environment now has a fully operational, production-ready Hermes Agent with:
+
 - Complete documentation suite
 - All 7 MCP servers functional
 - 250+ tools available

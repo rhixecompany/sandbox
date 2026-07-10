@@ -16,6 +16,7 @@ npm install --save-dev drizzle-kit tsx @types/pg
 - Define `users` and `user_profiles` tables using Drizzle’s `pgTable`, `varchar`, `timestamp`, and FK patterns
 - Initialize Drizzle connection using `drizzle-orm/node-postgres` and `process.env.DATABASE_URL`
 - Example:
+
   ```ts
   import "dotenv/config";
   import { drizzle } from "drizzle-orm/node-postgres";

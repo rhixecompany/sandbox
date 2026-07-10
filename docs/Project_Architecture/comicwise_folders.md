@@ -3,6 +3,7 @@
 ## Root: projects/comicwise
 
 ### Key Directories
+
 - src/ — source code
 - public/ — static assets
 - .vscode/ — VS Code configuration

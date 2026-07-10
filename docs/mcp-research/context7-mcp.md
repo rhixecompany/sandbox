@@ -1,6 +1,6 @@
 # Context7 MCP Server (c7-mcp-server)
 
-**Source:** https://github.com/quiint/c7-mcp-server
+**Source:** <https://github.com/quiint/c7-mcp-server>
 
 ## Overview
 
@@ -53,6 +53,7 @@ npm link           # or: bun link
 The server runs via stdio—**clients launch it**, users don't run it directly.
 
 **1. Ensure global install or link:**
+
 ```bash
 npm install -g c7-mcp-server
 # or
@@ -60,6 +61,7 @@ npm link
 ```
 
 **2. Edit client config** (`claude_desktop_config.json`):
+
 - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
@@ -93,6 +95,7 @@ Opens browser UI with **Tools**, **Resources**, and **Notifications** tabs.
 Query documentation context for a specific project.
 
 **Parameters:**
+
 ```typescript
 {
   projectname: string;    // e.g., "nextjs"
@@ -107,6 +110,7 @@ Query documentation context for a specific project.
 Search for projects by term.
 
 **Parameters:**
+
 ```typescript
 {
   term: string;           // search term (title/name)
@@ -118,6 +122,7 @@ Search for projects by term.
 Get metadata for a specific project.
 
 **Parameters:**
+
 ```typescript
 {
   projectname: string;
@@ -165,6 +170,7 @@ c7-mcp-server/
 Upstash also provides an official Context7 MCP server:
 
 **Installation:**
+
 ```bash
 # Via npm
 npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
@@ -174,6 +180,7 @@ npm install -g @upstash/context7-mcp
 ```
 
 **Configuration:**
+
 ```json
 {
   "mcpServers": {
@@ -186,19 +193,22 @@ npm install -g @upstash/context7-mcp
 ```
 
 **Or with HTTP transport:**
+
 ```bash
 claude mcp add --scope user --header "CONTEXT7_API_KEY: YOUR_API_KEY" --transport http context7 https://mcp.context7.com/mcp
 ```
 
-**Get API Key:** https://context7.com/dashboard (free tier available)
+**Get API Key:** <https://context7.com/dashboard> (free tier available)
 
 **Tools Provided:**
+
 - `resolve-library-id` — Resolves library name to Context7-compatible ID
 - `query-docs` — Retrieves version-specific documentation
 
 **References:**
-- Augment Code: https://www.augmentcode.com/mcp/context7
-- Open VSX: https://open-vsx.org/extension/Upstash/context7-mcp
+
+- Augment Code: <https://www.augmentcode.com/mcp/context7>
+- Open VSX: <https://open-vsx.org/extension/Upstash/context7-mcp>
 
 ## Hermes Integration
 
@@ -213,6 +223,7 @@ mcp_servers:
 ```
 
 For official Upstash version (with API key):
+
 ```yaml
 mcp_servers:
   context7:
@@ -225,6 +236,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test context7
 /reload-mcp
@@ -232,7 +244,7 @@ hermes mcp test context7
 
 ## References
 
-- GitHub (Unofficial): https://github.com/quiint/c7-mcp-server
-- Official Upstash: https://www.augmentcode.com/mcp/context7
-- mcpservers.org (Unofficial): https://mcpservers.org/servers/arben-adm/mcp-sequential-thinking
-- Context7 Dashboard: https://context7.com/dashboard
+- GitHub (Unofficial): <https://github.com/quiint/c7-mcp-server>
+- Official Upstash: <https://www.augmentcode.com/mcp/context7>
+- mcpservers.org (Unofficial): <https://mcpservers.org/servers/arben-adm/mcp-sequential-thinking>
+- Context7 Dashboard: <https://context7.com/dashboard>

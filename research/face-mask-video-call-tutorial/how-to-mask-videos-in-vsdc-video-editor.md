@@ -1,6 +1,6 @@
 # How to Mask Videos in VSDC Video Editor
 
-> **Source:** https://www.videosoftdev.com/how-to-apply-a-video-mask-tool
+> **Source:** <https://www.videosoftdev.com/how-to-apply-a-video-mask-tool>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---

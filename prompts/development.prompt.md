@@ -72,7 +72,7 @@ trigger: /development
 
 
 ---
-## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.
+## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features
 
 > Personality: Expert Software Engineer, DevOps Specialist, Technical Writer
 > Project: ComicWise - Web Comic Platform
@@ -89,6 +89,7 @@ trigger: /development
 ## **Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features.**
 
 Read And understand the following files before proceeding with the tasks and also to get context on how the project is structured and works:
+
 - `**/*.ts` ,
 - `**/*.tsx`,
 - `**/*.mjs`,
@@ -97,16 +98,17 @@ Read And understand the following files before proceeding with the tasks and als
 - `**/*.json`,
 - `**/*.md`,
 - `**/*.txt`,
--  `**/*.yml`,
--   `**/*.ps1`,
+- `**/*.yml`,
+- `**/*.ps1`,
 - `**/*.sh`,
 - `**/*/Dockerfile`,
 - `src/**`,
 - `scripts/**`
 Complete all Tasks
-## Tasks:
 
-> 1 - Setup the project by installing all dependencies using pnpm, setting up the 
+## Tasks
+
+> 1 - Setup the project by installing all dependencies using pnpm, setting up the
 > 2 - Create, Optimize and Validate if exists copy file to end with .backup and Cr
 
 > **Full content:** `templates/Developement/tasks.md`
@@ -114,6 +116,7 @@ Complete all Tasks
 ## Template References
 
 Detailed templates in `templates/Developement/`:
+
 - `comprehensive_setup_guide_for_.md`
 - `tasks.md`
 - `tasks_.md`

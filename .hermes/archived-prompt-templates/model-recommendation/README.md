@@ -5,6 +5,7 @@ Lines: 693
 Templates: 6
 
 ## Templates
+
 - `context7_query_templates.md`
 - `current_model_assessment.md`
 - `knowledge_base.md`

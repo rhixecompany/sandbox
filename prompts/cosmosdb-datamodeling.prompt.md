@@ -199,6 +199,7 @@ For each pair of related containers, ask:
 ## Communication Guidelines
 
 > 🔴 CRITICAL BEHAVIORS:
+>
 > - NEVER fabricate RPS numbers - always work with user to estimate
 
 > **Full content:** `templates/cosmosdb-datamodeling/communication_guidelines.md`
@@ -206,6 +207,7 @@ For each pair of related containers, ask:
 ## Important Azure Cosmos DB NoSQL Context
 
 > ### Understanding Aggregate-Oriented Design
+>
 > In aggregate-oriented design, Azure Cosmos DB NoSQL offers multiple levels of ag
 
 > **Full content:** `templates/cosmosdb-datamodeling/important_azure_cosmos_db_nosq.md`
@@ -213,6 +215,7 @@ For each pair of related containers, ask:
 ## Core Design Philosophy
 
 > The core design philosophy is the default mode of thinking when getting started.
+>
 > ### Strategic Co-Location
 
 > **Full content:** `templates/cosmosdb-datamodeling/core_design_philosophy.md`
@@ -220,6 +223,7 @@ For each pair of related containers, ask:
 ## Design Patterns
 
 > This section includes common optimizations. None of these optimizations should b
+>
 > ### Massive Scale Data Binning Pattern
 
 > **Full content:** `templates/cosmosdb-datamodeling/design_patterns.md`
@@ -227,6 +231,7 @@ For each pair of related containers, ask:
 ## Template References
 
 Detailed section templates in `templates/cosmosdb-datamodeling/`:
+
 - `communication_guidelines.md`
 - `container_designs.md`
 - `core_design_philosophy.md`

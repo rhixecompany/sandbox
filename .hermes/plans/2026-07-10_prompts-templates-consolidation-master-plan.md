@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Prompts/Templates Consolidation Master Plan
 
 > **Scope:** canonicalize the prompt library under `prompts/`, migrate the root `templates/` tree into `prompts/templates/`, deduplicate/normalize conflicting template files, and validate prompt references, skills, scripts, and toolset declarations.
@@ -160,14 +164,14 @@ Make `prompts/` the single source of truth for prompt assets.
 ## Deliverables
 
 1. Prompts/Templates Consolidation Master Plan
-	1. Goal
-	2. Non-Goals
-	3. Phase 0: Baseline Snapshot
-	4. Phase 1: Canonicalize `prompts/templates/`
-	5. Phase 2: Migrate References
-	6. Phase 3: Retire Root `templates/`
-	7. Phase 4: Enhance Prompt Files
-	8. Phase 5: Validate Prompts, Skills, Scripts, and Toolsets
-	9. Phase 6: Final Verification
-	10. Risks \& Mitigations
-	11. Deliverables
+1. Goal
+1. Non-Goals
+1. Phase 0: Baseline Snapshot
+1. Phase 1: Canonicalize `prompts/templates/`
+1. Phase 2: Migrate References
+1. Phase 3: Retire Root `templates/`
+1. Phase 4: Enhance Prompt Files
+1. Phase 5: Validate Prompts, Skills, Scripts, and Toolsets
+1. Phase 6: Final Verification
+1. Risks \& Mitigations
+1. Deliverables

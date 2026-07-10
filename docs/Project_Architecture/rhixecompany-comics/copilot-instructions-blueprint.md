@@ -78,17 +78,20 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django (Backend)
+
 - Django 4.x with Django REST Framework conventions
 - ViewSets + Serializers for API endpoints
 - Celery tasks in `tasks.py` per Django app
 - PEP 8, type hints
 
 ### Next.js 16 (Frontend)
+
 - App Router conventions
 - Server Components by default
 - API routes under `src/app/api/`
 
 ### Async Processing
+
 - Celery + Redis for task queue
 - Tasks defined in `tasks.py` per Django app
 - Celery beat for scheduled scraping tasks

@@ -5,4 +5,5 @@ Lines: 301
 Templates: 1
 
 ## Templates
+
 - `generated_prompt.md`

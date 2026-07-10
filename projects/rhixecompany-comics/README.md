@@ -128,6 +128,7 @@ docker compose up -d
 ## Coding Standards
 
 ### Backend
+
 - **PEP 8**: Python style guide
 - **Type hints**: Modern Python typing
 - **Django best practices**: Standard patterns
@@ -135,6 +136,7 @@ docker compose up -d
 - **Ownership boundaries**: `core` (health/shared), `comics` (catalog/chapters), `users` (auth/profile), `scraping` (Scrapy/Selenium), `api` (routing)
 
 ### Frontend
+
 - **Server Components by default**: Next.js App Router pattern
 - **TypeScript strict**: Full type safety
 - **API**: `/api/` endpoints on both stacks

@@ -43,16 +43,16 @@ uvx --from git+https://github.com/ast-grep/ast-grep-mcp.git ast-grep-mcp
 
 ```json
 {
-	"mcpServers": {
-		"ast-grep": {
-			"command": "uvx",
-			"args": [
-				"--from",
-				"git+https://github.com/ast-grep/ast-grep-mcp.git",
-				"ast-grep-mcp"
-			]
-		}
-	}
+ "mcpServers": {
+  "ast-grep": {
+   "command": "uvx",
+   "args": [
+    "--from",
+    "git+https://github.com/ast-grep/ast-grep-mcp.git",
+    "ast-grep-mcp"
+   ]
+  }
+ }
 }
 ```
 
@@ -62,16 +62,16 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-	"mcpServers": {
-		"ast-grep": {
-			"command": "uvx",
-			"args": [
-				"--from",
-				"git+https://github.com/ast-grep/ast-grep-mcp.git",
-				"ast-grep-mcp"
-			]
-		}
-	}
+ "mcpServers": {
+  "ast-grep": {
+   "command": "uvx",
+   "args": [
+    "--from",
+    "git+https://github.com/ast-grep/ast-grep-mcp.git",
+    "ast-grep-mcp"
+   ]
+  }
+ }
 }
 ```
 

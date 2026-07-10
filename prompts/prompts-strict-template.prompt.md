@@ -22,8 +22,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -57,8 +57,8 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 - Intent Preserver: Keeps original prompt purpose and guidance intact.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Ensure all required top-level sections exist and are non-empty.
 - Keep required section order exact.
@@ -69,6 +69,7 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 ## Phases
 
 > ### Phase 1: Structural Intake
+>
 > ### Phase 2: Template Normalization
 
 > **Full content:** `templates/prompts-strict-template/phases.md`
@@ -104,8 +105,8 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 3. Validate numbering and phase tables.
 4. Deliver compliance-preserving updates.
 
-
 ## Template References
 
 Templates in `templates/prompts-strict-template/`:
+
 - `phases.md`

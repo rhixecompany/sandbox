@@ -3,6 +3,7 @@
 > Extracted from `git-flow-branch-creator.prompt.md`.
 
 ## Legacy Prompt Details
+
 ### Instructions
 
 ```xml

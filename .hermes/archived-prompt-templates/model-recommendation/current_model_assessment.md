@@ -9,6 +9,7 @@ Specified model: `[Current Model]` (Multiplier: [X]x)
 Recommendation: [Keep current model | Consider switching to [Recommended Model]]
 
 Rationale: [Explanation]
+
 ```
 
 **Tool Alignment Check**:

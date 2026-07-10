@@ -25,6 +25,7 @@
 **Pattern:** Layered Architecture with Task Queue  
 
 The project integrates three distinct subsystems:
+
 1. **Django Application Layer**: Web UI, REST API, admin interface
 2. **Scraping Layer**: Scrapy spiders + Selenium browser automation
 3. **Async Processing Layer**: Celery workers for background tasks
@@ -90,6 +91,7 @@ The project integrates three distinct subsystems:
 ## 4. Data Flow
 
 ### Scraping Flow
+
 ```
 User Request → Celery Worker → Scrapy Spider → External Website
                                                    ↓
@@ -101,6 +103,7 @@ User Request → Celery Worker → Scrapy Spider → External Website
 ```
 
 ### API Flow
+
 ```
 Client → DRF ViewSet → Serializer → Django ORM → Database
 ```
@@ -110,6 +113,7 @@ Client → DRF ViewSet → Serializer → Django ORM → Database
 ## 5. Implementation Patterns
 
 ### Scrapy Spider Pattern
+
 ```python
 class ComicSpider(scrapy.Spider):
     name = 'comic_spider'
@@ -121,6 +125,7 @@ class ComicSpider(scrapy.Spider):
 ```
 
 ### Celery Task Pattern
+
 ```python
 @app.task
 def run_scraping_task(spider_name):

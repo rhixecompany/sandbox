@@ -51,13 +51,17 @@ To identify dependencies:
 - Use the following approaches:
   - **Visual Studio** → `Dependencies` in Solution Explorer.
   - **dotnet CLI** → run:
+
     ```bash
     dotnet list <ProjectName>.csproj reference
     ```
+
   - **Dependency Graph Generator**:
+
     ```bash
     dotnet msbuild <SolutionName>.sln /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.json
     ```
+
     Inspect `graph.json` to see the dependency order.
 
 ---
@@ -85,10 +89,13 @@ For each project:
    - `TargetFramework` → Change to the desired version (e.g., `net10.0`).
    - `PackageReference` → Verify if each NuGet package supports the new framework.
      - Run:
+
        ```bash
        dotnet list package --outdated
        ```
+
        Update packages:
+
        ```bash
        dotnet add package <PackageName> --version <LatestVersion>
        ```
@@ -130,13 +137,17 @@ csharp Copy code // Old (Blob storage SDK v11) CloudBlobClient client = storageA
 2. Update NuGet packages to versions compatible with the target framework.
 3. After upgrading and restoring the latest DLLs, review code for any required changes.
 4. Rebuild the project:
+
    ```bash
    dotnet build <ProjectName>.csproj
    ```
+
 5. Run unit tests if any:
+
    ```bash
    dotnet test
    ```
+
 6. Fix build or runtime issues before proceeding.
 
 ---
@@ -256,9 +267,11 @@ For organizations with multiple repositories:
 
 1. Store this `instructions.md` in a central upgrade template repo.
 2. Provide SWE Agent / Cursor with:
+
    ```
    Upgrade all repositories to latest supported .NET versions following instructions.md
    ```
+
 3. Agent should:
    - Detect project type per repo.
    - Apply the appropriate upgrade path.
@@ -276,7 +289,7 @@ For organizations with multiple repositories:
   ### ✅ Example Agent Prompt
 
   > Upgrade this repository to the latest supported .NET version following the steps in `dotnet-upgrade-instructions.md`.  
-  >  Detect project type (.NET Core, Standard, or Framework) and apply the correct migration path.  
-  >  Ensure all tests pass and CI/CD workflows are updated.
+  > Detect project type (.NET Core, Standard, or Framework) and apply the correct migration path.  
+  > Ensure all tests pass and CI/CD workflows are updated.
 
 ---

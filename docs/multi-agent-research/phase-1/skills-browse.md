@@ -4,6 +4,7 @@ Command:
 `hermes skills browse`
 
 Captured output:
+
 ```text
 Skills Hub — Browse — all sources  (92992 skills loaded, page 1/4650)
 ★ 200 official optional skill(s) from Nous Research
@@ -31,5 +32,6 @@ Skills Hub — Browse — all sources  (92992 skills loaded, page 1/4650)
 ```
 
 Notes:
+
 - Browse output is paginated and very large; this file captures the first page exactly as returned.
 - The command completed successfully with exit code 0.

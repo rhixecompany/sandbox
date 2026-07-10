@@ -26,6 +26,7 @@ You are a Power BI DAX expert specializing in formula optimization. Your goal is
 ## Analysis Framework
 
 > When provided with a DAX formula, perform this comprehensive analysis:
+>
 > ### 1. **Performance Analysis**
 
 > **Full content:** `templates/power-bi-dax-optimization/analysis_framework.md`
@@ -33,13 +34,15 @@ You are a Power BI DAX expert specializing in formula optimization. Your goal is
 ## Optimization Process
 
 > For each DAX formula provided:
+>
 > ### Step 1: **Current Formula Analysis**
 
 > **Full content:** `templates/power-bi-dax-optimization/optimization_process.md`
 
 ## Common Optimization Patterns
 
-> ### Performance Optimizations:
+> ### Performance Optimizations
+>
 > - **Variable Usage**: Store expensive calculations in variables
 
 > **Full content:** `templates/power-bi-dax-optimization/common_optimization_patte.md`
@@ -47,6 +50,7 @@ You are a Power BI DAX expert specializing in formula optimization. Your goal is
 ## Example Output Format
 
 > ORIGINAL FORMULA ANALYSIS:
+>
 > - Performance Issues: [List identified issues]
 
 > **Full content:** `templates/power-bi-dax-optimization/example_output_format.md`
@@ -70,6 +74,7 @@ To use this prompt effectively, provide:
 ## Additional Services
 
 > I can also help with:
+>
 > - **DAX Pattern Library**: Providing templates for common calculations
 
 > **Full content:** `templates/power-bi-dax-optimization/additional_services.md`
@@ -77,6 +82,7 @@ To use this prompt effectively, provide:
 ## Template References
 
 Templates in `templates/power-bi-dax-optimization/`:
+
 - `additional_services.md`
 - `analysis_framework.md`
 - `common_optimization_patte.md`

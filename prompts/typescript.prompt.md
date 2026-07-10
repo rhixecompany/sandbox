@@ -23,8 +23,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -58,8 +58,8 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 - Validation Reviewer: Requires consistent runtime validation and error handling.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Use strict TypeScript patterns and avoid unsafe typing shortcuts.
 - Prefer server components and add use client only when justified.
@@ -70,6 +70,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 ## Phases
 
 > ### Phase 1: Type and Boundary Design
+>
 > ### Phase 2: Implementation with Strict Safety
 
 > **Full content:** `templates/typescript/phases.md`
@@ -105,8 +106,8 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 3. Align with Next.js and DAL conventions.
 4. Deliver maintainable strongly-typed code.
 
-
 ## Template References
 
 Templates in `templates/typescript/`:
+
 - `phases.md`

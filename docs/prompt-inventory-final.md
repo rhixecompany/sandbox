@@ -11,7 +11,6 @@
 
 ## Issue Counts
 
-
 ## Prompt Inventory
 
 | File | Name | Title | Version | Tags | Trigger | Issues |

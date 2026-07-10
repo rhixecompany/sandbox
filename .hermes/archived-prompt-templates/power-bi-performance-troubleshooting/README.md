@@ -5,6 +5,7 @@ Lines: 418
 Templates: 6
 
 ## Templates
+
 - `communication_and_documentatio.md`
 - `diagnostic_tools_and_technique.md`
 - `performance_monitoring_setup.md`

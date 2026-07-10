@@ -20,6 +20,7 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 **Deliverable:** `docs/bash-scripts-list-context.md` (7.0 KB)
 
 **Results:**
+
 - Found: 369 total scripts (208 .sh, 144 .ps1, 17 .bat)
 - Identified: 54 conflicting scripts across 5 projects/root
 - Classified: 315+ scripts to keep in place (infrastructure, archives, seeds)
@@ -31,16 +32,19 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 
 **Time:** ~30 minutes  
 **Deliverables:**
+
 - `docs/bash-scripts-plan.md` (14.2 KB) — Migration strategy, batching, execution procedures
 - `docs/bash-scripts-issues-context.md` (5.8 KB) — Issues audit, standards checklist
 
 **Results:**
+
 - Planned: 7 batches (54 scripts, dependency-aware)
 - Designed: Per-batch execution template (copy → fix paths → verify parity → update refs → delete)
 - Documented: Safety protocols (hard-coded path fixes, cross-platform parity)
 - Specified: Commit strategy, reference updates (package.json, .github/workflows)
 
 **Batch Breakdown:**
+
 1. Banking Orchestrators (6 scripts)
 2. Banking Install Framework (11 scripts)
 3. Banking MCP & Plugin (9 scripts)
@@ -54,16 +58,19 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 ### Phases 3-6: Execution Readiness ✅ READY
 
 **Deliverables:**
+
 - `BASH_SCRIPTS_FIX_PHASES_3_6_READINESS.md` (16.2 KB) — Complete execution guide for all remaining phases
 - `BASH_SCRIPTS_FIX_INDEX.txt` (10.7 KB) — Project index, deliverables, status
 
 **Phase 3 (Code Review & Audit) — READY**
+
 - Audit workflow: Check 54 scripts for issues
 - Issue categories: CRITICAL (blockers), HIGH (must fix), MEDIUM, LOW
 - Output template: bash-scripts-audit-results.md
 - Estimated time: ~45 minutes
 
 **Phase 4 (Migration Execution) — READY**
+
 - Batch template: For each of 7 batches: copy → fix paths → verify parity → update refs → commit → delete
 - Parity verification: Original vs migrated output must match (CRITICAL safety gate)
 - Path update: Hard-coded C:\Users\Alexa paths → $HOME environment variable
@@ -71,6 +78,7 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 - Estimated time: ~60 minutes
 
 **Phase 5 (Test & Debug) — READY**
+
 - Execution workflow: Run all 54 migrated scripts, capture output
 - Test matrix: Help text, dry-run, error handling, exit codes
 - Issue resolution: Diagnosis → fix table for common failures
@@ -78,6 +86,7 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 - Estimated time: ~30 minutes
 
 **Phase 6 (Final Cleanup) — READY**
+
 - Cleanup checklist: 18-point verification (all migrated, originals deleted, no stale refs, git clean)
 - Verification: Find broken references, verify git status, create final tag
 - Output template: BASH_SCRIPTS_MIGRATION_COMPLETION_CERT.md
@@ -115,6 +124,7 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 ## Safety & Quality Gates
 
 **Pre-Migration (Phase 3):**
+
 - Syntax validation (bash -n, powershell parse)
 - Hard-coded path detection and documentation
 - Placeholder comment identification
@@ -122,18 +132,21 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 - Cross-platform variant consistency check
 
 **During Migration (Phase 4):**
+
 - ✅ Parity verification required for each batch (CRITICAL)
 - ✅ Path updates: All hard-coded paths → environment variables
 - ✅ Reference updates: package.json, .github/workflows, docs
 - ✅ Originals deleted only after parity verified
 
 **Post-Migration (Phase 5):**
+
 - ✅ Full execution test of all 54 migrated scripts
 - ✅ Dry-run output consistency check
 - ✅ Exit code propagation verification
 - ✅ Regression detection
 
 **Finalization (Phase 6):**
+
 - ✅ All 54 scripts in Bash/**
 - ✅ All originals deleted
 - ✅ Zero stale references
@@ -146,10 +159,12 @@ Migrate 54 conflicting scripts from scattered locations (projects/Banking/, proj
 ## How to Continue
 
 ### Immediate (No Action Required)
+
 - ✅ Phase 1-2 complete: All planning and analysis done
 - ✅ Phase 3-6 ready: Complete execution workflows documented
 
 ### When 54 Conflicting Scripts Become Available
+
 Execute sequentially:
 
 1. **Phase 3 (Code Review):** Read and execute audit workflow

@@ -3,6 +3,7 @@
 > Extracted from `pytest-coverage.prompt.md`.
 
 ## Legacy Prompt Details
+
 The goal is for the tests to cover all lines of code.
 
 Generate a coverage report with:

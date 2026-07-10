@@ -234,5 +234,5 @@ If migrating from Tailwind v3:
 
 ## Reference
 
-- Official Documentation: https://tailwindcss.com/docs/installation/using-vite
-- Tailwind CSS v4 Upgrade Guide: https://tailwindcss.com/docs/upgrade-guide
+- Official Documentation: <https://tailwindcss.com/docs/installation/using-vite>
+- Tailwind CSS v4 Upgrade Guide: <https://tailwindcss.com/docs/upgrade-guide>

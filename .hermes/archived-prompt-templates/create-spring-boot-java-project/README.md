@@ -5,6 +5,7 @@ Lines: 162
 Templates: 4
 
 ## Templates
+
 - `add_additional_dependenci.md`
 - `add_docker-composeyaml_wi.md`
 - `add_springdoc_redis_jpa_a.md`

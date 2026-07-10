@@ -429,6 +429,7 @@ All scripts must:
    ```
 
 4. **Graceful Degradation**
+
    ```
    - If winget missing, skip and try choco
    - If docker missing, skip docker cleanup
@@ -465,6 +466,7 @@ All scripts must:
    ```
 
 4. **Log Content**
+
    ```
    [2026-05-27 21:30:00] Starting cache-clean --all
    [2026-05-27 21:30:01] Checking npm cache...
@@ -526,6 +528,7 @@ Scripts with long operations must:
    ```
 
 2. **Signal Handling**
+
    ```
    - Trap SIGINT (Ctrl+C)
    - Trap SIGTERM

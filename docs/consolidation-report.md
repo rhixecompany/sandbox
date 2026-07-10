@@ -1,10 +1,12 @@
 # Consolidation Report
+
 **Total skills analyzed:** 526
 **Potential overlaps:** 13101
 **Thin skills (<100 lines, no phases):** 30
 **Skills missing structure:** 166
 
 ## Potential Overlaps (Merge Candidates)
+
 | Skill A | Skill B | Keyword | Reason |
 |---------|---------|---------|--------|
 | 1password (163L) | audit-227 (89L) | install | Both relate to 'install'; one may be thin |
@@ -59,6 +61,7 @@
 | evm (211L) | pdf (103L) | read | Both relate to 'read'; one may be thin |
 
 ## Thin Skills (Potential Merge Targets)
+
 | Skill | Lines | Refs | Has Phases | Has Checklist |
 |-------|-------|------|------------|----------------|
 | boost-prompt | 49 | 0 | ❌ | ✅ |
@@ -93,6 +96,7 @@
 | canvas | 99 | 1 | ❌ | ❌ |
 
 ## Recommended Consolidation Actions
+
 1. **Merge thin skills** into fuller versions with similar purpose
 2. **Use `skill_manage(action='delete', absorbed_into='<umbrella>')`** for archiving
 3. **Copy reference files** from absorbed skills to umbrella's `references/` directory

@@ -1,6 +1,6 @@
 # Vitest MCP Server
 
-**Source:** https://github.com/djankies/vitest-mcp
+**Source:** <https://github.com/djankies/vitest-mcp>
 
 ## Repository Overview
 
@@ -49,11 +49,13 @@
 ### 1. Claude Code
 
 #### Method 1: CLI Wizard (Interactive)
+
 ```bash
 claude mcp add vitest npx -y @djankies/vitest-mcp
 ```
 
 #### Method 2: Direct Configuration File (`.mcp.json`)
+
 ```json
 {
   "mcpServers": {
@@ -66,6 +68,7 @@ claude mcp add vitest npx -y @djankies/vitest-mcp
 ```
 
 **Configuration Scopes:**
+
 - **Project** (`.mcp.json` in project root) - Shared with team
 - **User** (`~/.claude/mcp.json`) - Personal across projects
 - **Local** (`.mcp.json` with `"scope": "local"`) - Machine-specific
@@ -73,6 +76,7 @@ claude mcp add vitest npx -y @djankies/vitest-mcp
 ### 2. Claude Desktop
 
 **Config Location:**
+
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
@@ -219,6 +223,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test vitest
 /reload-mcp
@@ -226,6 +231,6 @@ hermes mcp test vitest
 
 ## References
 
-- GitHub: https://github.com/djankies/vitest-mcp
-- npm: https://www.npmjs.com/package/@djankies/vitest-mcp
-- Vitest Issue: https://github.com/vitest-dev/vitest/issues/8411
+- GitHub: <https://github.com/djankies/vitest-mcp>
+- npm: <https://www.npmjs.com/package/@djankies/vitest-mcp>
+- Vitest Issue: <https://github.com/vitest-dev/vitest/issues/8411>

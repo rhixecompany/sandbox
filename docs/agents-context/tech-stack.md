@@ -1,6 +1,7 @@
 # SandBox — Technology Stack
 
 ## Root
+
 | Layer | Tech |
 | --- | --- |
 | Runtime | Bun 1.3.14+, Node, Python 3.11.15 / 3.13.14 |
@@ -10,6 +11,7 @@
 | Editor | VS Code (multi-root), Pylance, Bun debugger |
 
 ## Subproject Stacks
+
 - **Bash / Resume_maker / web**: Bun + TypeScript + Prettier + ESLint
 - **mcp-servers**: per-language (TS/Python/Go/Rust/Java/Kotlin/PHP/Ruby/Swift/C#) with dotnet/Cargo/go toolchains
 - **Python-projects**: Python + ruff + mypy

@@ -45,8 +45,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -56,18 +56,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -84,6 +88,7 @@ Ask the user for the following information if not provided:
 ## Configuration Files to Create
 
 > Based on the provided stack, create the following files in the appropriate direc
+>
 > ### 1. `.github/copilot-instructions.md`
 
 > **Full content:** `templates/github-copilot-starter/configuration_files_to_create.md`
@@ -94,8 +99,8 @@ For each file, follow these principles:
 
 **MANDATORY FIRST STEP**: Always use the fetch tool to research existing patterns before creating any content:
 
-1. **Fetch from awesome-copilot collections**: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md
-2. **Fetch specific instruction files**: https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/[relevant-file].instructions.md
+1. **Fetch from awesome-copilot collections**: <https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md>
+2. **Fetch specific instruction files**: <https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/[relevant-file].instructions.md>
 3. **Check for existing patterns** that match the technology stack
 
 **Primary Approach**: Reference and adapt existing instructions from awesome-copilot repository:
@@ -140,6 +145,7 @@ applyTo: "**/\*.jsx,**/\*.tsx" description: "React development best practices"
 Ensure all files follow these conventions:
 
 ```
+
 project-root/
 ├── .github/
 │   ├── copilot-instructions.md
@@ -163,6 +169,7 @@ project-root/
 │   │   └── debugger.agent.md
 │   └── workflows/
 │       └── copilot-setup-steps.yml
+
 ```
 
 ## YAML Frontmatter Template

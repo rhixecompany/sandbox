@@ -71,8 +71,8 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 | `skill-creator`    | Scaffold new skills with validated frontmatter          |
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **Strict sequential execution** — Phase 1 → Phase 2 → Phase 3. Each phase must complete (including verification) before the next starts.
 2. **Verify before delete** — Always confirm the canonical copy exists at the target path before removing a source file.
@@ -108,15 +108,14 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 2. List and triage all markdown prompt files in `pwd` and `prompts/`; migrate prompts to `prompts/`; consolidate; delete originals
 3. List and triage the migrated `prompts/` collection; create all needed skills and scripts; update all prompts with accurate skill references
 
-
 ## Template References
 
 Detailed templates in `templates/projects-init/`:
 
-
 ## Template References
 
 Templates in `templates/projects-init/`:
+
 - `actions_summary.md`
 - `context.md`
 - `description.md`

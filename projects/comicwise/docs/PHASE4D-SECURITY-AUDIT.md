@@ -523,28 +523,28 @@ const safe = sanitizeForLogging("Password is MyPass123!");
 
 ### Medium Priority
 
-4. **Enhanced CSP Policy** — Apply to next.config.ts
+1. **Enhanced CSP Policy** — Apply to next.config.ts
    - Replace current basic policy with CSP_DIRECTIVES
    - Monitor violations via report-uri
    - Regular audits for policy violations
 
-5. **Security Audit Trail** — Log all sensitive operations
+2. **Security Audit Trail** — Log all sensitive operations
    - User login/logout
    - Admin actions (user edits, permission changes)
    - Failed auth attempts
    - Permission escalation attempts
 
-6. **Dependency Scanning** — Automate CVE checks
+3. **Dependency Scanning** — Automate CVE checks
    - `pnpm audit` in CI/CD
    - Automated PR creation for updates
    - Security advisories monitoring
 
 ### Low Priority
 
-7. **Code Signing** — Sign releases with GPG
-8. **Webhook Validation** — HMAC-SHA256 signing
-9. **SAML Support** — Enterprise auth
-10. **2FA/TOTP** — Multi-factor authentication
+1. **Code Signing** — Sign releases with GPG
+2. **Webhook Validation** — HMAC-SHA256 signing
+3. **SAML Support** — Enterprise auth
+4. **2FA/TOTP** — Multi-factor authentication
 
 ---
 
@@ -591,9 +591,9 @@ docker run -t owasp/zap2docker-stable zap-baseline.py \
 
 ### Frameworks Referenced
 
-- OWASP: https://owasp.org/Top10/
-- NIST: https://www.nist.gov/cyberframework
-- GDPR: https://gdpr-info.eu/
+- OWASP: <https://owasp.org/Top10/>
+- NIST: <https://www.nist.gov/cyberframework>
+- GDPR: <https://gdpr-info.eu/>
 
 ---
 

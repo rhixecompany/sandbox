@@ -10,14 +10,17 @@
 ## Phase 1 — Analysis Report
 
 ### 1. Harmful content / misinformation / illegal-activity risk
+
 - **None.** The prompt is defensive in nature (secure coding, secret handling, least privilege). No instruction encourages harm, illegal activity, or misinformation.
 
 ### 2. Bias / privacy / prompt-injection risk
+
 - **Broken template references (quality/injection-adjacent).** The prompt links `templates/security/phases.md` (twice) but that file does **not exist** in this workspace (only `_shared/*` and `test-providers-models/*` phase files exist). A missing referenced sub-file means the model silently drops Phase 1/Phase 2 detail — a fragile dependency, not an injection, but it degrades reliability.
 - **Privacy.** Prompt instructs "Never commit secrets" and includes a Secret Auditor persona — handled safely. No PII leakage vectors.
 - **Bias.** None detected.
 
 ### 3. Clarity / specificity / constraints / output format
+
 - **Vague Goal (HIGH).** `## Goal` reads: *"Use when 'Comprehensive security prompt aligned to repository secure development requirements.' to accomplish the associated tasks and objectives."* — circular and non-actionable. It tells the model *when* to fire but not *what to produce*.
 - **Duplicate tags (LOW).** `security` and `hermes`/`prompts` appear twice in the frontmatter.
 - **Orphaned phases (MEDIUM).** `## Phases` lists "Phase 1: Threat Surface Identification" and "Phase 2: Security Control Implementation" as empty headings pointing to the missing `phases.md`; the real procedure lives in `## Steps`/`## Tasks`/`## Subtasks`. Redundant/confusing structure.
@@ -25,12 +28,15 @@
 - **Dangling reference anchors.** Links to `skills-table-core.md#security` but that doc has no `### security` section (sections are agents-fix, prompts-fix, bash-scripts-fix, general, workspace-consolidate, skills-fix).
 
 ### 4. Refusal check
+
 - Not applicable — the prompt is benign and improvable.
 
 ### 5. Intent preservation
+
 - Intent retained: security review with threat modeling, input validation, least-privilege, secret hygiene, and a risk report.
 
 ### 6. Safeguard policy
+
 - Per Rule 6, no generic safety disclaimers added — only fixes for the risks/defects actually identified above.
 
 ---
@@ -140,6 +146,7 @@ Return a report with:
 ---
 
 ## Phase 3 — Validation of Revised Prompt
+
 - Goal now states *what to produce* (severity-ranked risk list + remediations), not a circular "use when…".
 - All frontmatter tags unique; `version` bumped to record the change.
 - No reference to a non-existent `templates/security/phases.md`; Phase 1/2 folded into `## Steps` so no content is lost.
@@ -150,6 +157,7 @@ Return a report with:
 ---
 
 ## Phase 4 — Safety & Quality Checklist
+
 - [x] No harmful, illegal, or misinformation instruction present.
 - [x] No bias or PII-leak vector; secrets handled safely.
 - [x] Broken/missing file references removed (was: `templates/security/phases.md`, `#security` anchor).
@@ -162,6 +170,7 @@ Return a report with:
 ---
 
 ## Notes / Skipped References
+
 - `templates/ai-prompt-engineering-safety-review/phases.md` — referenced by the reviewer prompt but **absent**; executed using the prompt's inline Rules & Phases instead.
 - `templates/security/phases.md` — referenced by the *subject* prompt but **absent**; flagged as a defect and removed in the rewrite.
 - No external network calls were required; this is a file-backed review (rules-core Rule 8).

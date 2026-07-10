@@ -4,6 +4,7 @@
 > Count: 506.
 
 ## Overview
+
 | Metric | Value |
 |---|---|
 | Sessions | 506 |
@@ -16,6 +17,7 @@
 | Last Seen | 2026-06-30 23:24:01 UTC |
 
 ## Source Breakdown
+
 | Source | Count |
 |---|---|
 | tui | 200 |
@@ -25,6 +27,7 @@
 | telegram | 1 |
 
 ## Model Distribution
+
 | Model | Count |
 |---|---|
 | deepseek-v4-flash-free | 231 |
@@ -50,6 +53,7 @@
 | Qwen/Qwen3.5-72B-Instruct | 1 |
 
 ## Daily Activity
+
 | Date | Sessions |
 |---|---|
 | 2026-06-08 | 19 |
@@ -71,6 +75,7 @@
 | 2026-06-30 | 23 |
 
 ## Top 20 Largest Sessions
+
 | Session ID | Title | Source | Model | Messages | Tools |
 |---|---|---|---|---|---|
 | 20260622_025824_62afc3 | Everything I Know About You | tui | deepseek-v4-flash-free | 680 | 348 |
@@ -95,6 +100,7 @@
 | 20260628_194241_7c7fc4 | Prompt Verification and Fixing #4 | cli | deepseek-v4-flash-free | 255 | 124 |
 
 ## All Sessions
+
 | # | Session ID | Title | Source | Model | Started | Messages | Tools |
 |---|---|---|---|---|---|---|---|
 | 1 | 20260608_202754_db0a22 | Hermes Agent Documentation Plan | cli | openrouter/owl-alpha | 2026-06-08 20:28:44 UTC | 194 | 105 |

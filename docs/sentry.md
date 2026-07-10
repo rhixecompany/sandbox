@@ -1,6 +1,6 @@
 # Sentry MCP Server
 
-**Source:** https://github.com/getsentry/sentry-mcp
+**Source:** <https://github.com/getsentry/sentry-mcp>
 
 ## Overview
 
@@ -8,19 +8,22 @@
 
 > "Our tool selection and priorities are focused on developer workflows and debugging use cases, rather than providing a general-purpose MCP server for all Sentry functionality."
 
-**Production URL:** https://mcp.sentry.dev
+**Production URL:** <https://mcp.sentry.dev>
 
 ---
 
 ## Transport Modes
 
 ### Remote MCP (Primary)
+
 - Cloudflare-based remote MCP service
 - Production deployment at `https://mcp.sentry.dev`
 
 ### Stdio Transport (Self-hosted)
+
 - For connecting to self-hosted Sentry installations
 - **Required OAuth Scopes:**
+
   ```
   org:read
   project:read
@@ -31,6 +34,7 @@
   ```
 
 **Self-hosted connection flags:**
+
 ```bash
 --host=sentry.example.com    # hostname only
 --insecure-http              # for plain HTTP deployments
@@ -58,6 +62,7 @@ Install as a Claude Code plugin for automatic subagent delegation:
 ## Local Development Setup
 
 ### 1. Environment & Skills Setup
+
 ```bash
 # Installs shared skills from getsentry/skills into:
 # .agents/skills/ (symlinked to .claude/skills and .cursor/skills)
@@ -65,19 +70,23 @@ npx @sentry/dotagents install
 ```
 
 ### 2. Create OAuth App in Sentry
+
 Navigate to: Settings → API → Applications
 
 **Required URLs:**
+
 - Redirect URI: `http://localhost:5173/oauth/callback`
 
 ### 3. Configure Credentials
 
 **Root `.env` file:**
+
 ```env
 OPENAI_API_KEY=your_key
 ```
 
 **`packages/mcp-cloudflare/.env`:**
+
 ```env
 SENTRY_CLIENT_ID=your_development_sentry_client_id
 SENTRY_CLIENT_SECRET=your_development_sentry_client_secret
@@ -85,9 +94,11 @@ COOKIE_SECRET=my-super-secret-cookie
 ```
 
 ### 4. Start Development Server
+
 Server available at: `http://localhost:5173`
 
 ### 5. Verify with MCP Inspector
+
 - Enter `http://localhost:5173/mcp` into Inspector
 - Follow authentication prompts
 - Use "List Tools" to verify
@@ -98,15 +109,17 @@ Server available at: `http://localhost:5173`
 
 ## Testing
 
-### Three Test Suites:
+### Three Test Suites
 
 **1. Unit Tests**
+
 ```bash
 pnpm test
 ```
 
 **2. Evaluations**
 Requires `.env` configuration with:
+
 - `SENTRY_AUTH_TOKEN`
 - `SENTRY_ORG`
 - `SENTRY_PROJECT`
@@ -118,6 +131,7 @@ pnpm test:eval
 ```
 
 **3. Manual Testing (Preferred for MCP changes)**
+
 ```bash
 pnpm test:manual
 ```
@@ -125,6 +139,7 @@ pnpm test:manual
 > **Note:** CLI defaults to `http://localhost:5173`. Override with `--mcp-host` or `MCP_URL` environment variable.
 
 **Testing Playbooks:**
+
 - `docs/testing-stdio.md`
 - `docs/testing-remote.md`
 

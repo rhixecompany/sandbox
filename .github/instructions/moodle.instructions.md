@@ -16,7 +16,7 @@ It includes:
 
 # Code Standards
 
-- Follow the official Moodle Coding guidelines: https://moodledev.io/general/development/policies/codingstyle
+- Follow the official Moodle Coding guidelines: <https://moodledev.io/general/development/policies/codingstyle>
 - PHP must be compatible with the core version (e.g., PHP 7.4 / 8.0 / 8.1).
 - Do not use modern syntax that is not supported by core if it breaks compatibility.
 - Class naming must use Moodle namespaces.

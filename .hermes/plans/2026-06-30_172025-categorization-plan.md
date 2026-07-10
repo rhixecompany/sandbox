@@ -1,8 +1,7 @@
 ---
 status: completed
-status: completed
-status: completed
 ---
+
 # Categorization Plan
 > Phase 1.2 deliverable
 
@@ -82,48 +81,49 @@ status: completed
 **Total categories:** 68
 **Total skills:** 308
 **Flat/self-categorized:** 45
-  - acpx-executor
-  - agentmail
-  - bioinformatics
-  - blackbox
-  - blender-mcp
-  - boost-prompt
-  - bun-nextjs
-  - bun-shell
-  - chainlink
-  - ci-cd-best-practices
-  - claude-code
-  - computer-use
-  - dispatching-parallel-agents
-  - django-celery
-  - docker-management
-  - firecrawl-agent
-  - firecrawl-crawl
-  - firecrawl-download
-  - firecrawl-map
-  - firecrawl-scrape
-  - firecrawl-search
-  - git-patch-management
-  - grok
-  - hermes-agent
-  - honcho
-  - introspection-only-general
-  - joyride
-  - mcporter
-  - mpp-agent
-  - no-git-delete
-  - no-net-fetch
-  - one-three-one-rule
-  - openhands
-  - page-agent
-  - pinggy-tunnel
-  - pptx-author
-  - project-consolidation
-  - qmd
-  - sherlock
-  - shop-app
-  - shopify
-  - simplify
-  - siyuan
-  - skills-tools-preflight-check
-  - stripe-projects
+
+- acpx-executor
+- agentmail
+- bioinformatics
+- blackbox
+- blender-mcp
+- boost-prompt
+- bun-nextjs
+- bun-shell
+- chainlink
+- ci-cd-best-practices
+- claude-code
+- computer-use
+- dispatching-parallel-agents
+- django-celery
+- docker-management
+- firecrawl-agent
+- firecrawl-crawl
+- firecrawl-download
+- firecrawl-map
+- firecrawl-scrape
+- firecrawl-search
+- git-patch-management
+- grok
+- hermes-agent
+- honcho
+- introspection-only-general
+- joyride
+- mcporter
+- mpp-agent
+- no-git-delete
+- no-net-fetch
+- one-three-one-rule
+- openhands
+- page-agent
+- pinggy-tunnel
+- pptx-author
+- project-consolidation
+- qmd
+- sherlock
+- shop-app
+- shopify
+- simplify
+- siyuan
+- skills-tools-preflight-check
+- stripe-projects

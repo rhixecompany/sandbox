@@ -12,6 +12,7 @@
 ### Phase 1: Research & Documentation ✓
 
 **Actions Completed:**
+
 - [x] Web search for Hermes best practices (5 results)
 - [x] Web search for MCP fundamentals (5 results)
 - [x] Web search for Docker MCP servers (5 results)
@@ -22,6 +23,7 @@
   - Hermes Environment Configuration Template
 
 **Documentation Created:**
+
 - [x] `HERMES_MCP_CONFIGURATION_GUIDE.md` (21.3 KB)
   - Complete configuration reference with 10 sections
   - MCP fundamentals and architecture
@@ -40,6 +42,7 @@
 ### Phase 2: Inspection & Verification ✓
 
 **Docker MCP Inspection:**
+
 - [x] Executed `hermes mcp list` → 8 servers discovered
 - [x] Verified docker-mcp-server operational
 - [x] Confirmed ~40 Docker tools available:
@@ -51,6 +54,7 @@
   - Database operations (5 tools)
 
 **MCP Servers Status:**
+
 ```
 Server                    Transport   Status      Tools
 ─────────────────────────────────────────────────────────
@@ -75,7 +79,7 @@ Total: 7 enabled, 1 disabled (Windows incompatibility)
 ✓ **Installation:** v0.14.0 (2026.5.16)
 ✓ **Python:** 3.11.14 with OpenAI SDK 2.24.0
 ✓ **Model:** big-pickle (OpenCode Zen provider)
-✓ **Base URL:** https://opencode.ai/zen/v1/chat/completions
+✓ **Base URL:** <https://opencode.ai/zen/v1/chat/completions>
 ✓ **Terminal Backend:** local (bash via PortableGit)
 ✓ **Working Directory:** C:/Users/Alexa/Desktop/Sandbox
 ✓ **Terminal Timeout:** 300 seconds
@@ -88,6 +92,7 @@ Total: 7 enabled, 1 disabled (Windows incompatibility)
 ✗ Exa, Parallel, Firecrawl: optional (not needed)
 
 **Built-in Toolsets (26 available):**
+
 ```
 ✓ web              web_search, web_extract
 ✓ browser          playwright automation
@@ -160,6 +165,7 @@ mcp_servers:
 ```
 
 **All MCP Servers Status:** ✓ Operational
+
 - No additional migration needed
 - All use system-installed commands or remote HTTP endpoints
 - Package manager (bun) ready for future package installations
@@ -171,49 +177,57 @@ mcp_servers:
 **Full Configuration Review:**
 
 ✓ **Model Configuration**
-  - Primary: big-pickle (OpenCode Zen)
-  - Fallback 1: Llama 70B (OpenRouter)
-  - Fallback 2: Gemini Flash (Google)
-  - Max turns: 90
+
+- Primary: big-pickle (OpenCode Zen)
+- Fallback 1: Llama 70B (OpenRouter)
+- Fallback 2: Gemini Flash (Google)
+- Max turns: 90
 
 ✓ **Terminal Configuration**
-  - Backend: local (bash)
-  - CWD: C:/Users/Alexa/Desktop/Sandbox
-  - Timeout: 300s
-  - Docker ready (image: nikolaik/python-nodejs)
+
+- Backend: local (bash)
+- CWD: C:/Users/Alexa/Desktop/Sandbox
+- Timeout: 300s
+- Docker ready (image: nikolaik/python-nodejs)
 
 ✓ **Web Search Configuration**
-  - Backend: Tavily
-  - API Key: configured
-  - Status: operational
+
+- Backend: Tavily
+- API Key: configured
+- Status: operational
 
 ✓ **Browser Automation**
-  - Engine: Playwright
-  - Inactivity timeout: 120s
-  - Command timeout: 30s
-  - Status: operational
+
+- Engine: Playwright
+- Inactivity timeout: 120s
+- Command timeout: 30s
+- Status: operational
 
 ✓ **File Operations**
-  - Root: C:/Users/Alexa
-  - MCP Server: filesystem
-  - Status: operational
+
+- Root: C:/Users/Alexa
+- MCP Server: filesystem
+- Status: operational
 
 ✓ **MCP Servers**
-  - Total: 8 (7 enabled, 1 disabled)
-  - Transport: 6 stdio, 2 HTTP
-  - Status: ✓ All operational
+
+- Total: 8 (7 enabled, 1 disabled)
+- Transport: 6 stdio, 2 HTTP
+- Status: ✓ All operational
 
 ✓ **Agent Settings**
-  - Max turns: 90
-  - Gateway timeout: 3000ms
-  - Reasoning: medium
-  - Tool enforcement: auto
+
+- Max turns: 90
+- Gateway timeout: 3000ms
+- Reasoning: medium
+- Tool enforcement: auto
 
 ✓ **Security**
-  - Secrets redaction: enabled
-  - Code scanning (tirith): enabled
-  - Private URLs: disabled
-  - API key storage: .env (user-only readable)
+
+- Secrets redaction: enabled
+- Code scanning (tirith): enabled
+- Private URLs: disabled
+- API key storage: .env (user-only readable)
 
 ---
 
@@ -222,16 +236,18 @@ mcp_servers:
 **Project:** Sandbox
 
 ✓ **Hermes Integration**
-  - Using global configuration (no project-specific override needed)
-  - All global MCP servers available in project
-  - Terminal working directory: project root
-  - Status: ready to use
+
+- Using global configuration (no project-specific override needed)
+- All global MCP servers available in project
+- Terminal working directory: project root
+- Status: ready to use
 
 ✓ **Subproject: Bash**
-  - Has own README.md and AGENTS.md
-  - Runnable scripts with format/lint/typecheck
-  - Uses bun package manager
-  - Integrated with root workflow
+
+- Has own README.md and AGENTS.md
+- Runnable scripts with format/lint/typecheck
+- Uses bun package manager
+- Integrated with root workflow
 
 ---
 
@@ -329,32 +345,39 @@ DOCUMENTATION
 ### Complete Tool Catalog
 
 **filesystem (MCP) - 5 tools:**
+
 - read_file, write_file, list_directory
 - search_files, create_directory
 
 **sequential-thinking (MCP) - 1 tool:**
+
 - analyze_complex_problem (multi-step reasoning)
 
 **next-devtools (MCP) - 6 tools:**
+
 - get_routes, get_errors, get_build_status
 - clear_cache, inspect_component, preview_page
 
 **playwright (MCP) - 12+ tools:**
+
 - navigate, click, type, screenshot
 - evaluate_javascript, handle_dialog
 - fill_form, select_option, drag_drop, etc.
 
 **context7 (HTTP) - dynamic:**
+
 - query_documentation
 - resolve_library_id
 - search_examples (400+ tools depending on library)
 
 **gh_grep (HTTP) - 3 tools:**
+
 - search_github_code
 - search_github_repos
 - search_github_users
 
 **docker (MCP) - 40+ tools:**
+
 - Container: list, create, start, stop, restart, logs, stats, exec
 - Image: list, pull, push, build, remove, inspect
 - Volume: list, create, remove, inspect
@@ -371,6 +394,7 @@ DOCUMENTATION
 **Location:** C:\Users\Alexa\Desktop\Sandbox\docs\
 
 **Sections:**
+
 1. Overview (Hermes + MCP definition)
 2. Hermes Agent Architecture (installation, files)
 3. MCP Fundamentals (protocol layers, lifecycle)
@@ -383,6 +407,7 @@ DOCUMENTATION
 10. Best Practices (security, performance, maintenance)
 
 **Features:**
+
 - Complete setup procedures
 - Code examples and YAML templates
 - Verification scripts
@@ -394,6 +419,7 @@ DOCUMENTATION
 **Location:** C:\Users\Alexa\Desktop\Sandbox\docs\
 
 **Sections:**
+
 1. Executive Summary (current state)
 2. Global Configuration Details (model, API keys, terminal)
 3. MCP Server Configuration (7 servers documented)
@@ -407,6 +433,7 @@ DOCUMENTATION
 11. Next Steps & Recommendations
 
 **Features:**
+
 - Current configuration snapshot
 - Detailed tool inventory
 - Performance metrics
@@ -545,6 +572,7 @@ MAINTENANCE CHECKLIST
 ### System Status: ✓ PRODUCTION READY
 
 **Overall Configuration:**
+
 - Model: big-pickle (OpenCode Zen) ✓
 - LLM Provider: OpenCode Zen (zero-cost tier) ✓
 - Fallback Providers: Llama 70B, Gemini Flash ✓
@@ -591,6 +619,7 @@ Hermes Agent is **fully configured and operational** on your Windows development
 6. ✓ **Verification Complete:** All systems operational
 
 **Next Steps:**
+
 - Use the documentation for reference and troubleshooting
 - Run `hermes tools list` to see all 250+ available tools
 - Use `hermes mcp list` to verify server status
@@ -606,6 +635,7 @@ Hermes Agent is **fully configured and operational** on your Windows development
 ---
 
 **Questions or Issues?** Refer to:
+
 - HERMES_MCP_CONFIGURATION_GUIDE.md (full setup guide)
 - HERMES_CONFIGURATION_INVENTORY.md (current state)
-- Official docs: https://hermes-agent.nousresearch.com/docs
+- Official docs: <https://hermes-agent.nousresearch.com/docs>

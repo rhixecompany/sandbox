@@ -58,12 +58,15 @@ SandBox/
 ## Architectural Patterns
 
 ### 1. Workspace Pattern
+
 The root is a multi-project workspace managed via Git submodules. Each sub-project lives under `projects/` with its own `AGENTS.md` context file and independent technology stack.
 
 ### 2. Toolkit Orchestration
+
 `projects/Bash/` contains PowerShell scripts that orchestrate tooling across the workspace — discovery, cloning, triage, cross-referencing, and verification phases.
 
 ### 3. DRY Context Hierarchy
+
 Context flows via: `SOUL.md` → `USER.md` → `AGENTS.md` → `.hermes.md`, with global rules in `PROJECT_RULES.md` and `MASTER_RULES.md`.
 
 ## Data Flow

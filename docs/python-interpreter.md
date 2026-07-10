@@ -2,7 +2,7 @@
 
 **Package:** `mcp-python-interpreter`
 **Version:** 1.2.3 (Latest release: Oct 12, 2025)
-**Author:** YZFly (ethereal_ai@hotmail.com)
+**Author:** YZFly (<ethereal_ai@hotmail.com>)
 **License:** MIT
 **Requires:** Python >= 3.10
 **Homepage:** [github.com/yzfly/mcp-python-interpreter](https://github.com/yzfly/mcp-python-interpreter)
@@ -49,6 +49,7 @@ uv install mcp-python-interpreter
 ### Prerequisites
 
 - Install [`uv`](https://astral.sh/uv):
+
   ```bash
   # macOS/Linux
   curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -110,6 +111,7 @@ Add to `claude_desktop_config.json` (macOS/Linux):
 ## Available Tools
 
 ### Environment & Package Management
+
 | Tool | Description |
 |------|-------------|
 | `list_python_environments` | List all available Python environments (system + conda) |
@@ -117,12 +119,14 @@ Add to `claude_desktop_config.json` (macOS/Linux):
 | `install_package` | Install a package in a specific environment |
 
 ### Code Execution
+
 | Tool | Description |
 |------|-------------|
 | `run_python_code` | Execute Python code in a specific environment |
 | `run_python_file` | Execute a Python file in a specific environment |
 
 ### File Operations
+
 | Tool | Description |
 |------|-------------|
 | `read_file` | Read any file type (text/binary), with size and safety limits |

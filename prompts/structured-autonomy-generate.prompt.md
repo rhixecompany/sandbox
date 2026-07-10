@@ -37,8 +37,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -48,18 +48,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -86,6 +90,7 @@ Use when you need to work on the current workspace or task.
 ## Prerequisites
 
 > Make sure that the use is currently on the `{feature-name}` branch before beginn
+>
 > ### Step-by-Step Instructions
 
 > **Full content:** `templates/structured-autonomy-generate/prerequisites.md`
@@ -93,6 +98,7 @@ Use when you need to work on the current workspace or task.
 ## Template References
 
 Templates in `templates/structured-autonomy-generate/`:
+
 - `phases.md`
 - `prerequisites.md`
 - `step_2_generate_implement.md`

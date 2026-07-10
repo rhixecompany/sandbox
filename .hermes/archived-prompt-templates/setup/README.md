@@ -5,6 +5,7 @@ Lines: 1372
 Templates: 15
 
 ## Templates
+
 - `11_react_query_keys_srclibquer.md`
 - `14_unique_project_conventions.md`
 - `15_vscode_configuration.md`

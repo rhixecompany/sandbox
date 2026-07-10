@@ -90,6 +90,7 @@ Start → Parse URL → Create yt-dlp options → Download → Handle result →
 ## 5. Implementation Patterns
 
 ### Basic Download Pattern
+
 ```python
 import yt_dlp
 
@@ -103,6 +104,7 @@ def download_video(url):
 ```
 
 ### Loop Pattern
+
 ```python
 while True:
     url = input("Enter URL (or 'quit'): ")

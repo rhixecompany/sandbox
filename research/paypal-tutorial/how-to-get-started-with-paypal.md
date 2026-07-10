@@ -1,6 +1,6 @@
 # How to Get Started with PayPal
 
-> **Source:** https://www.paypal.com/c2/webapps/mpp/how-to-guides/how-to-use-paypal
+> **Source:** <https://www.paypal.com/c2/webapps/mpp/how-to-guides/how-to-use-paypal>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---

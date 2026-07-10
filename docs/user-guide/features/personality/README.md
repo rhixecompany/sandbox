@@ -26,6 +26,7 @@
 ## What Belongs in SOUL.md ✅ vs AGENTS.md ❌
 
 ### ✅ SOUL.md — Durable Voice & Personality
+
 - Communication style and tone
 - Core values and principles
 - Technical posture/philosophy
@@ -33,6 +34,7 @@
 - How to handle uncertainty
 
 ### ❌ AGENTS.md — Task/Context-Specific Instructions
+
 - Project-specific workflows
 - Tool usage patterns
 - Repository conventions

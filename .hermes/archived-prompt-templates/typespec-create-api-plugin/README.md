@@ -5,6 +5,7 @@ Lines: 224
 Templates: 5
 
 ## Templates
+
 - `authentication_options.md`
 - `function_capabilities.md`
 - `phases.md`

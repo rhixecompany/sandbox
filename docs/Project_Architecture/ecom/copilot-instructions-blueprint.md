@@ -80,12 +80,14 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django
+
 - Use Django REST Framework ViewSets + Serializers for API
 - JWT authentication via djangorestframework-simplejwt
 - Models with proper `__str__`, `Meta`, and `get_absolute_url`
 - Django admin customization with ModelAdmin classes
 
 ### React/Redux
+
 - Redux pattern: constants → actions → reducers → components
 - React functional components with hooks
 - Axios for HTTP requests to Django backend

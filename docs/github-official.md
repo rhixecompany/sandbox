@@ -1,6 +1,6 @@
 # GitHub MCP Server (Official)
 
-**Source:** https://github.com/github/github-mcp-server
+**Source:** <https://github.com/github/github-mcp-server>
 
 ## Overview
 
@@ -21,11 +21,13 @@ Hosted by GitHub — the easiest way to get started. No local setup required.
 - **Fallback**: Use the local version if your MCP host doesn't support remote servers
 
 #### Quick Install (VS Code)
+
 One-click install buttons available for VS Code and VS Code Insiders.
 
 #### Manual Configuration
 
 **Using OAuth:**
+
 ```json
 {
   "servers": {
@@ -38,6 +40,7 @@ One-click install buttons available for VS Code and VS Code Insiders.
 ```
 
 **Using a GitHub Personal Access Token (PAT):**
+
 ```json
 {
   "servers": {
@@ -65,6 +68,7 @@ One-click install buttons available for VS Code and VS Code Insiders.
 Access experimental tools and new features early:
 
 **Via URL Path:**
+
 ```json
 {
   "servers": {
@@ -77,6 +81,7 @@ Access experimental tools and new features early:
 ```
 
 **Via Header:**
+
 ```json
 {
   "servers": {
@@ -114,13 +119,16 @@ Access experimental tools and new features early:
 Runs locally via Docker or built from source.
 
 #### Prerequisites
+
 - Docker installed
 - GitHub Personal Access Token (PAT)
 
 #### Quick Install (Docker in VS Code)
+
 One-click install buttons available for VS Code and VS Code Insiders using Docker.
 
 #### Docker Command
+
 ```bash
 docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server
 ```
@@ -179,11 +187,13 @@ Control which GitHub API capabilities are available to your AI tools using **too
 ### Specifying Toolsets
 
 **Command Line:**
+
 ```bash
 github-mcp-server stdio --toolsets repos,issues,pull_requests
 ```
 
 **Environment Variable:**
+
 ```bash
 GITHUB_TOOLSETS=repos,issues,pull_requests
 ```
@@ -193,16 +203,19 @@ GITHUB_TOOLSETS=repos,issues,pull_requests
 ### Specifying Individual Tools
 
 **Command Line:**
+
 ```bash
 github-mcp-server stdio --tools get_file_contents,get_me
 ```
 
 **Environment Variable:**
+
 ```bash
 GITHUB_TOOLS=get_file_contents,get_me
 ```
 
 **Combining Toolsets and Tools (additive):**
+
 ```bash
 GITHUB_TOOLSETS=repos,issues GITHUB_TOOLS=get_gist
 ```

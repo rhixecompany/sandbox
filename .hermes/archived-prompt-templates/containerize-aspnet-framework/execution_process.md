@@ -11,7 +11,7 @@
    - The .NET Framework version detected from the project
    - The Windows Server SKU specified in containerization settings (Core or Full)
    - The Windows Server version specified in containerization settings (2016, 2019, or 2022)
-   - Windows Server Core tags can be found at: https://github.com/microsoft/dotnet-framework-docker/blob/main/README.aspnet.md#full-tag-listing
+   - Windows Server Core tags can be found at: <https://github.com/microsoft/dotnet-framework-docker/blob/main/README.aspnet.md#full-tag-listing>
 5. Ensure that required NuGet packages are installed. **DO NOT** install these if they are missing. If they are not installed, the user must install them manually. If they are not installed, pause executing this prompt and ask the user to install them using the Visual Studio NuGet Package Manager or Visual Studio package manager console. The following packages are required:
    - `Microsoft.Configuration.ConfigurationBuilders.Environment`
 6. Modify the `web.config` file to add configuration builders section and settings to read app settings and connection strings from environment variables:
@@ -19,6 +19,7 @@
    - Add configBuilders section in the root
    - Configure EnvironmentConfigBuilder for both appSettings and connectionStrings
    - Example pattern:
+
      ```xml
      <configSections>
        <section name="configBuilders" type="System.Configuration.ConfigurationBuildersSection, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" restartOnExternalChanges="false" requirePermission="false" />
@@ -35,6 +36,7 @@
        <!-- existing connection strings -->
      </connectionStrings>
      ```
+
 7. Create a `LogMonitorConfig.json` file in the folder where the Dockerfile will be created by copying the reference `LogMonitorConfig.json` file at the end of this prompt. The file's contents **MUST NOT** not be modified and should match the reference content exactly unless instructions in containerization settings specify otherwise.
    - In particular, make sure the level of issues to be logged is not changed as using `Information` level for EventLog sources will cause unnecessary noise.
 8. Create a Dockerfile in the root of the project directory to containerize the application
@@ -49,7 +51,7 @@
        - The final stage MUST use a `mcr.microsoft.com/dotnet/framework/aspnet` base image unless a custom base image is specified in the settings file
        - Copy the `LogMonitorConfig.json` file to a directory in the container (e.g., C:\LogMonitor)
        - Download LogMonitor.exe from the Microsoft repository to the same directory
-         - The correct LogMonitor.exe URL is: https://github.com/microsoft/windows-container-tools/releases/download/v2.1.1/LogMonitor.exe
+         - The correct LogMonitor.exe URL is: <https://github.com/microsoft/windows-container-tools/releases/download/v2.1.1/LogMonitor.exe>
        - Set the working directory to C:\inetpub\wwwroot
        - Copy the published output from the build stage (in C:\publish) to the final image
        - Set the container's entry point to run LogMonitor.exe with ServiceMonitor.exe to monitor the IIS service
@@ -88,6 +90,6 @@
 
 - Add HEALTHCHECK instruction to Dockerfile if health check endpoint is provided
 
-11. Add the dockerfile to the project by adding the following item to the project file: `<None Include="Dockerfile" />`
-12. Mark tasks as completed: [ ] → [✓]
-13. Continue until all tasks are complete and Docker build succeeds
+1. Add the dockerfile to the project by adding the following item to the project file: `<None Include="Dockerfile" />`
+2. Mark tasks as completed: [ ] → [✓]
+3. Continue until all tasks are complete and Docker build succeeds

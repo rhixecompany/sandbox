@@ -124,7 +124,7 @@ Skills can include additional files that Copilot accesses on-demand:
     └── config.template   # Config template the AI agent fills in
 ```
 
-> **LICENSE.txt**: When creating a skill, download the Apache 2.0 license text from https://www.apache.org/licenses/LICENSE-2.0.txt and save as `LICENSE.txt`. Update the copyright year and owner in the appendix section.
+> **LICENSE.txt**: When creating a skill, download the Apache 2.0 license text from <https://www.apache.org/licenses/LICENSE-2.0.txt> and save as `LICENSE.txt`. Update the copyright year and owner in the appendix section.
 
 ### Assets vs Templates: Key Distinction
 

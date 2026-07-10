@@ -79,6 +79,7 @@ Workspace inventory snapshot (from `.github/copilot-instructions.md`): Instructi
 ## Context Files (priority order)
 
 Prioritize, in order, if present:
+
 1. `projects/Bash/copilot-instructions.md` (and any subproject-local `copilot-instructions.md`).
 2. `projects/Bash/AGENTS.md`.
 3. `.github/instructions/*.instructions.md` matched by `applyTo` glob (e.g. `a11y.instructions.md` applies to `**`).
@@ -90,6 +91,7 @@ Prioritize, in order, if present:
 ## Codebase Scanning Instructions
 
 When context files don't give specific guidance:
+
 1. Identify files similar to the one being created/edited.
 2. Analyze patterns for: **naming conventions, code organization, error handling, logging, documentation style, testing patterns**.
 3. Follow the most consistent pattern found.
@@ -99,6 +101,7 @@ When context files don't give specific guidance:
 ### Observed canonical patterns (evidence-based exemplars)
 
 **TypeScript dry-run / destructive-op pattern** (`projects/Bash/src/core/dry-run.ts`):
+
 - File header block: `#!/usr/bin/env bun` + JSDoc (`Version:`, `Features:`).
 - Exported interfaces for options/operations (e.g. `DryRunOptions`, `FileOperation`, `ExecResult`).
 - A class (e.g. `DryRunExecutor`) holding state privately; constructor takes an options object.
@@ -106,6 +109,7 @@ When context files don't give specific guidance:
 - Section dividers as `// ─── Section ───` comments.
 
 **Shell wrapper parity** (`projects/Bash/*.sh` / `*.ps1` / `*.bat`):
+
 - Each logical script ships as **three wrappers** (`.sh`, `.ps1`, `.bat`) with identical behavior.
 - Bash: `set -uo pipefail`, color via `RED`/`GREEN`/`NC`, `trap cleanup EXIT`.
 - PowerShell: `param()` block, PascalCase vars, try/catch, `$LASTEXITCODE` checks.
@@ -158,15 +162,18 @@ When context files don't give specific guidance:
 ## Conventions
 
 ### Naming
+
 - Bash scripts: `lowercase-with-hyphens.sh`; vars `UPPER_SNAKE_CASE`; functions `lower_snake_case()`.
 - PowerShell scripts: `PascalCase.ps1`; vars `$PascalCase`; functions `Verb-Noun`.
 - TypeScript: follow existing file names in `src/`; interfaces in `PascalCase`; exported classes in `PascalCase`.
 
 ### Python toolchain
+
 - Use `python3 -m pip` explicitly (do not rely on `pip` → resolves to 3.11 while `python3` is 3.14).
 - Per root instructions: avoid inline one-off Python; create scripts under `C:/Users/Alexa/AppData/Local/hermes/scripts/` and run from there. (Re-evaluate against current `PROJECT_RULES.md` before acting.)
 
 ### AI asset reuse
+
 - Reuse existing prompts, skills, agents, hooks, plugins **before** adding new ones.
 - Check root `.github` assets → subproject-local assets → inventory report for conflicts.
 - Hermes hooks live in `~/AppData/Local/hermes/hooks/`; plugins in `~/AppData/Local/hermes/plugins/`.

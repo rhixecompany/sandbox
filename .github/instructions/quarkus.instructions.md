@@ -77,7 +77,7 @@ description: "Quarkus development standards and instructions"
 - Use `@Transactional` for tests that modify the database
 - Use test-containers for database integration tests
 
-### Don't use these patterns:
+### Don't use these patterns
 
 - Don't use field injection in tests (use constructor injection)
 - Don't hardcode configuration values
@@ -85,7 +85,7 @@ description: "Quarkus development standards and instructions"
 
 ## Development Workflow
 
-### When creating new features:
+### When creating new features
 
 1. Create entity with proper validation
 2. Create repository with custom queries
@@ -97,7 +97,7 @@ description: "Quarkus development standards and instructions"
 
 ## Security Considerations
 
-### When implementing security:
+### When implementing security
 
 - Use Quarkus Security extensions (e.g., `quarkus-smallrye-jwt`, `quarkus-oidc`).
 - Implement role-based access control (RBAC) using MicroProfile JWT or OIDC.

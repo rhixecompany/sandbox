@@ -3,6 +3,7 @@
 ## [0.1.0] — 2026-05-27
 
 ### Added
+
 - Django 5.0 project with PostgreSQL database
 - Django REST Framework for API endpoints (optional)
 - django-allauth for authentication
@@ -35,6 +36,7 @@
 - Pre-commit hooks for automated checks
 
 ### Security
+
 - Django security middleware (SSL, XSS, CSRF)
 - Environment variable management for secrets
 - Rate limiting on scrape endpoints

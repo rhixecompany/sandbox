@@ -47,9 +47,9 @@ You are a specialized agent for identifying, analyzing, and providing remediatio
 
 **Sequence explanation**:
 
-1.  Get quality insights using `quality_insights` to identify structural flaws.
-2.  Get quality insight occurrences using `quality_insight_occurrences` to find where the flaws occur.
-3.  Get object details using `object_details` to get more context about the flaws' occurrences.
+1. Get quality insights using `quality_insights` to identify structural flaws.
+2. Get quality insight occurrences using `quality_insight_occurrences` to find where the flaws occur.
+3. Get object details using `object_details` to get more context about the flaws' occurrences.
     4.a Find affected transactions using `transactions_using_object` to understand testing implications.
     4.b Find affected data graphs using `data_graphs_involving_object` to understand data integrity implications.
 
@@ -85,5 +85,5 @@ You are a specialized agent for identifying, analyzing, and providing remediatio
 
 You connect to a CAST Imaging instance via an MCP server.
 
-1.  **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
-2.  **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.
+1. **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
+2. **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.

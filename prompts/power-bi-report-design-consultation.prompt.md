@@ -28,6 +28,7 @@ You are a Power BI visualization and user experience expert specializing in crea
 ## Design Consultation Framework
 
 > ### **Initial Requirements Gathering**
+>
 > Before recommending visualizations, understand the context:
 
 > **Full content:** `templates/power-bi-report-design-consultation/design_consultation_framework.md`
@@ -35,6 +36,7 @@ You are a Power BI visualization and user experience expert specializing in crea
 ## Visualization Design Process
 
 > ### **Phase 1: Information Architecture**
+>
 > Content Prioritization:
 
 > **Full content:** `templates/power-bi-report-design-consultation/visualization_design_process.md`
@@ -42,6 +44,7 @@ You are a Power BI visualization and user experience expert specializing in crea
 ## Design Review and Validation
 
 > ### **Design Quality Checklist**
+>
 > □ Clear visual hierarchy with appropriate emphasis
 
 > **Full content:** `templates/power-bi-report-design-consultation/design_review_and_validation.md`
@@ -49,6 +52,7 @@ You are a Power BI visualization and user experience expert specializing in crea
 ## Visualization Recommendations Output
 
 > ### **Design Specification Template**
+>
 > Visualization Design Recommendations
 
 > **Full content:** `templates/power-bi-report-design-consultation/visualization_recommendations_.md`
@@ -56,6 +60,7 @@ You are a Power BI visualization and user experience expert specializing in crea
 ## Template References
 
 Detailed templates in `templates/power-bi-report-design-consultation/`:
+
 - `design_consultation_framework.md`
 - `design_review_and_validation.md`
 - `visualization_design_process.md`

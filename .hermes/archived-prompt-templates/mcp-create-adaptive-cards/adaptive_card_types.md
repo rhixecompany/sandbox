@@ -5,6 +5,7 @@
 ## Adaptive Card Types
 
 ### Static Response Templates
+
 Use when API always returns items of the same type and format doesn't change often.
 
 Define in `response_semantics.static_template` in ai-plugin.json:
@@ -53,9 +54,11 @@ Define in `response_semantics.static_template` in ai-plugin.json:
 ```
 
 ### Dynamic Response Templates
+
 Use when API returns multiple types and each item needs a different template.
 
 **ai-plugin.json configuration:**
+
 ```json
 {
   "name": "GetTransactions",
@@ -72,6 +75,7 @@ Use when API returns multiple types and each item needs a different template.
 ```
 
 **API Response with Embedded Templates:**
+
 ```json
 {
   "transactions": [
@@ -162,6 +166,7 @@ Use when API returns multiple types and each item needs a different template.
 ```
 
 ### Combined Static and Dynamic Templates
+
 Use static template as default when item doesn't have template_selector or when value doesn't resolve.
 
 ```json

@@ -42,6 +42,7 @@ skills:
 
 ---
 > **Shared template references:**
+>
 > - [Core rules](templates/_shared/rules-core.md)
 > - [Skills table](templates/_shared/skills-table-core.md)
 > - [Verification checklist](templates/_shared/verification-checklist.md)
@@ -107,12 +108,14 @@ Write to `docs/agent-stack-audit-report.md`:
 | Shared   | N      | N      | N       | N         | N      |
 
 Issues table:
+
 - **Duplicates** — Same agent registered in multiple places
 - **Broken refs** — Dependencies pointing to missing assets
 - **Orphans** — Files referenced by nothing
 - **Registration gaps** — Agents not properly wired
 
 ## Verification Checklist
+
 - [ ] Hermes skills/plugins/MCP inventoried
 - [ ] Copilot agents/instructions inventoried
 - [ ] Cross-reference table built

@@ -1,8 +1,8 @@
-# Code Before Refactoring 2:
+# Code Before Refactoring 2
 
 > Extracted from `java-refactoring-extract-method.prompt.md`.
 
-## Code Before Refactoring 2:
+## Code Before Refactoring 2
 
 ```java
 public DefaultExpander add(RelationshipType type, Direction direction) {

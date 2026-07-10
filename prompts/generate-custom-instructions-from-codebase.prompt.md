@@ -44,8 +44,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -55,18 +55,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -101,11 +105,13 @@ ${VALIDATION_REQUIRED="true|false"}
 ## Generated Prompt
 
 > "Analyze code evolution between two project states to generate precise migration
+>
 > ### Phase 1: Comparative State Analysis
 
 > **Full content:** `templates/generate-custom-instructions-from-codebase/generated_prompt.md`
 
 ## Migration Context
+
 - **Type**: ${MIGRATION_TYPE}
 - **From**: ${SOURCE_REFERENCE}
 - **To**: ${TARGET_REFERENCE}
@@ -115,6 +121,7 @@ ${VALIDATION_REQUIRED="true|false"}
 ## Automatic Transformation Rules
 
 > ### 1. Mandatory Transformations
+>
 > ${AUTOMATION_LEVEL != "Conservative" ?
 
 > **Full content:** `templates/generate-custom-instructions-from-codebase/automatic_transformation_rules.md`
@@ -125,22 +132,27 @@ ${GENERATE_EXAMPLES == "true" ?
   "### Configuration Files
    [CONFIG_TRANSFORMATION_EXAMPLES]
 
-   ### Main Source Files
+### Main Source Files
+
    [SOURCE_TRANSFORMATION_EXAMPLES]
 
-   ### Test Files
+### Test Files
+
    [TEST_TRANSFORMATION_EXAMPLES]" : ""}
 
 ## Validation and Security
 
 ### Automatic Control Points
+
 - Verifications to perform after each transformation
 - Tests to run to validate changes
 - Performance metrics to monitor
 - Compatibility checks to perform
 
 ### Manual Escalation
+
 Situations requiring human intervention:
+
 - [COMPLEX_CASES_LIST]
 - [ARCHITECTURAL_DECISIONS]
 - [BUSINESS_IMPACTS]
@@ -188,10 +200,10 @@ Instead of generic advice, generates instructions tailored to your specific code
 
 Ensures that new code additions automatically follow the new conventions, preventing architectural regression and maintaining code evolution coherence.
 
-
 ## Template References
 
 Detailed templates in `templates/generate-custom-instructions-from-codebase/`:
+
 - `automatic_transformation_rules.md`
 - `generated_prompt.md`
 - `migration_monitoring.md`

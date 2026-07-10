@@ -26,6 +26,7 @@
 Docker MCP (Model Context Protocol) Server provides AI agents with safe, controlled access to Docker operations through a standardized interface.
 
 **Features:**
+
 - 40+ Docker management tools
 - Container lifecycle management
 - Image building and pulling
@@ -35,6 +36,7 @@ Docker MCP (Model Context Protocol) Server provides AI agents with safe, control
 - Real-time logging and stats
 
 **Benefits:**
+
 - Agents can orchestrate containers
 - Safe, permission-scoped access
 - No need for direct Docker socket exposure
@@ -141,12 +143,14 @@ bun --version
 ### Install Docker (if not present)
 
 **macOS:**
+
 ```bash
 brew install docker
 # Or: Download Docker Desktop
 ```
 
 **Linux (Ubuntu/Debian):**
+
 ```bash
 sudo apt update
 sudo apt install docker.io
@@ -154,6 +158,7 @@ sudo usermod -aG docker $USER
 ```
 
 **Windows (WSL2):**
+
 ```powershell
 # Enable WSL2
 wsl --install
@@ -193,6 +198,7 @@ hermes mcp list | grep docker
 ```
 
 Expected output:
+
 ```
 ✓ docker              stdio   - Docker management (40+ tools)
 ✓ docker-adminbot     stdio   - Docker admin features
@@ -353,6 +359,7 @@ hermes chat "List all Docker containers and show their status"
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_container_list",
@@ -361,6 +368,7 @@ hermes chat "List all Docker containers and show their status"
 ```
 
 **Returns:**
+
 ```
 ✓ web-app (RUNNING)
 ✓ database-prod (RUNNING)
@@ -375,6 +383,7 @@ hermes chat "Start the 'database-prod' container"
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_container_start",
@@ -389,6 +398,7 @@ hermes chat "Show the last 50 lines of logs from the 'web-app' container"
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_container_logs",
@@ -407,6 +417,7 @@ hermes chat "Run 'npm list' inside the web-app container"
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_container_exec",
@@ -424,6 +435,7 @@ hermes chat "Build a Docker image from the Dockerfile in current directory, tag 
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_image_build",
@@ -442,6 +454,7 @@ hermes chat "Create a backup of the PostgreSQL database in the 'postgres-prod' c
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_db_backup",
@@ -460,6 +473,7 @@ hermes chat "Start all services defined in docker-compose.yml"
 ```
 
 **Behind the scenes:**
+
 ```json
 {
   "tool": "docker_compose_up",
@@ -493,6 +507,7 @@ mcp_servers:
 ```
 
 **Usage:**
+
 ```bash
 hermes chat "List containers on prod: docker list prod-prod-docker"
 ```
@@ -524,6 +539,7 @@ hermes chat "Pull image from private registry"
 ### Issue: "docker: command not found"
 
 **Solution:**
+
 ```bash
 # Install Docker
 brew install docker          # macOS
@@ -536,6 +552,7 @@ hermes config set terminal.docker.binary /usr/local/bin/docker
 ### Issue: "Permission denied while trying to connect to Docker daemon"
 
 **Solution:**
+
 ```bash
 # Add user to docker group (Linux)
 sudo usermod -aG docker $USER
@@ -548,6 +565,7 @@ sudo hermes chat "List containers"
 ### Issue: "Cannot connect to Docker daemon"
 
 **Solution:**
+
 ```bash
 # Check if Docker is running
 docker ps
@@ -563,6 +581,7 @@ ls -la /var/run/docker.sock
 ### Issue: "MCP server not responding"
 
 **Solution:**
+
 ```bash
 # Restart MCP
 hermes mcp restart
@@ -577,6 +596,7 @@ tail -f ~/AppData/Local/hermes/hermes.log | grep docker
 ### Issue: "Out of disk space"
 
 **Solution:**
+
 ```bash
 # Clean up unused resources
 hermes chat "Clean up Docker: remove unused images, containers, and volumes"

@@ -55,8 +55,8 @@ trigger: /database
 ---
 **Last Updated:** March 1, 2026 | **Database:** PostgreSQL | **ORM:** Drizzle
 
-
 ## Template References
 
 Templates in `templates/database/`:
+
 - `common_patterns.md`

@@ -5,6 +5,7 @@ Lines: 780
 Templates: 10
 
 ## Templates
+
 - `gradle_buildgradlekts_template.md`
 - `maven_pomxml_template.md`
 - `mcpserverapplicationjava_templ.md`

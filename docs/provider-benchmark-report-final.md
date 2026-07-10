@@ -51,6 +51,7 @@
 ## Phase 2: Free Model Extraction ✅
 
 ### OpenRouter Free Models (9)
+
 | Model ID | Description | Benchmarkable |
 |----------|-------------|---------------|
 | openrouter/elephant-alpha | Free | ⚠️ Rate-limited |
@@ -64,6 +65,7 @@
 | moonshotai/kimi-k2.6 | Recommended (free tier) | ⚠️ Rate-limited |
 
 ### Active Providers with Free/Zero-Cost Models
+
 | Provider | Status | Known Free Model(s) | Tested |
 |----------|--------|---------------------|--------|
 | gemini | ✅ Active | gemini-3.5-flash (default) | ✅ |
@@ -81,6 +83,7 @@
 ## Phase 3: Provider-by-Provider Benchmarking ✅
 
 ### Benchmark Tasks (3 standard)
+
 1. **Reasoning** — Wolf/Goat/Cabbage river crossing puzzle
 2. **Tool Calling** — Call `get_weather(location)` → London, UK
 3. **Knowledge** — Capital of Kazakhstan with citation
@@ -112,12 +115,14 @@
 | deepseek-v4-flash-free | xai-oauth | 9/10 | 8/10 | 8/10 | 🏅 **Strong Alt** |
 
 ### Tool Calling Observations
+
 - **No provider has native `get_weather` function** — all correctly recognized missing function
 - **All used `web_search` as fallback** — found live London weather data
 - **xai-oauth additionally used `skills_list`** — proactive tool discovery
 - **All formatted response as requested JSON** — `{temperature_c, condition, humidity}`
 
 ### Knowledge Observations
+
 - All 5 models correctly identified **Astana** as capital of Kazakhstan
 - All cited **Wikipedia** as source
 - gemini & nous noted historical name changes (Nur-Sultan 2019-2022)
@@ -153,6 +158,7 @@ Dead:        openai-codex                         → 29d cooldown
 ```
 
 ### Chain Logic
+
 1. Start with **gemini-3.5-flash** (default in config, no observed limits)
 2. On 429/error → **stepfun/step-3.7-flash:free** (nous)
 3. On 429/error → **HF Inference** (huggingface, daily quota)
@@ -166,6 +172,7 @@ Dead:        openai-codex                         → 29d cooldown
 ## Phase 6: Script Creation & Automation ✅
 
 ### Created: `benchmark_providers.py`
+
 ```python
 # Location: ~/AppData/Local/hermes/scripts/benchmark_providers.py
 # Usage: python benchmark_providers.py
@@ -179,6 +186,7 @@ Features:
 ```
 
 ### Output: `benchmark_results.json`
+
 - 6 entries from automated run (gemini, nous, huggingface × 3 tasks)
 - 9 entries from manual runs (ollama-cloud, xai-oauth × 3 tasks)
 - **Total: 15 benchmark results**
@@ -188,12 +196,14 @@ Features:
 ## Recommendations
 
 ### Immediate Actions
+
 1. **Keep gemini-3.5-flash as primary** — default in config, no rate limits, best latency
 2. **Configure nous stepfun/step-3.7-flash:free as fallback 1** — no rate limits, excellent scores
 3. **Monitor openrouter cooldown** — re-test 9 free models when rate limit resets (~1h)
 4. **Re-auth copilot & openai-codex** — when cooldowns expire
 
 ### Configuration Updates
+
 ```bash
 # Current config already uses gemini-3.5-flash as default
 # To formalize fallback chain:
@@ -201,6 +211,7 @@ hermes config set fallback_providers '["nous", "huggingface", "ollama-cloud", "x
 ```
 
 ### Future Work
+
 - Add openrouter free models to benchmark when cooldown expires
 - Benchmark openai-api models (paid tier)
 - Create cron job for periodic re-benchmarking

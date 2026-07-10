@@ -1,7 +1,7 @@
 # How to Automatically Obscure Your Face During Video Chat
 
 > **Source:**
-> https://askubuntu.com/questions/11017/how-do-i-automatically-obscure-my-face-when-using-video-chat
+> <https://askubuntu.com/questions/11017/how-do-i-automatically-obscure-my-face-when-using-video-chat>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -16,7 +16,7 @@ time of writing.
 
 ### 1. WebcamStudio (Limited)
 
-- Software: http://www.ws4gl.org/
+- Software: <http://www.ws4gl.org/>
 - Basic face detection + image overlay capability
 - Setup: Install → add to video group → select webcam → enable face detection
   tab

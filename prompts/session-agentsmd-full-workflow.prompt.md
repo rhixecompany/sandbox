@@ -22,8 +22,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output" to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output" to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -77,8 +77,8 @@ Use subagents only when needed for speed or isolation.
 - Style: concise, explicit, execution-first.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the nearest AGENTS.md and repository instructions when present.
 - Prefer evidence from local files over assumptions.
@@ -101,6 +101,7 @@ Use subagents only when needed for speed or isolation.
 ## Phases
 
 > ### Phase 2: Generate AGENTS
+>
 > ### Phase 3: Git Commit and Push
 
 > **Full content:** `templates/session-agentsmd-full-workflow/phases.md`
@@ -154,8 +155,8 @@ Use subagents only when needed for speed or isolation.
 - Verify remote commit SHAs.
 - Return compact repo-branch-SHA table with exceptions.
 
-
 ## Template References
 
 Detailed templates in `templates/session-agentsmd-full-workflow/`:
+
 - `phases.md`

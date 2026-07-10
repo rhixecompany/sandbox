@@ -82,6 +82,7 @@
 | whatidid | 1 |
 
 Reference categories requested include:
+
 - context-engineering
 - database-data-management
 - frontend-web-dev
@@ -1151,13 +1152,13 @@ Reference categories requested include:
 ## MCP Servers and ACPX Targets
 
 - repo:.opencode/opencode.json
--   - MCP_DOCKER (type=local, enabled=true)
--   - filesystem (type=local, enabled=true)
--   - playwright (type=local, enabled=true)
--   - sequential-thinking (type=local, enabled=true)
+- - MCP_DOCKER (type=local, enabled=true)
+- - filesystem (type=local, enabled=true)
+- - playwright (type=local, enabled=true)
+- - sequential-thinking (type=local, enabled=true)
 - machine:~/.qwen/mcp-servers.json (missing)
 - machine:~/.acpx/config.json agents (ACPX targets, not MCP servers)
--   - copilot => copilot --acp --stdio
--   - hermes => hermes acp
--   - opencode => opencode acp
--   - qwen => qwen --acp
+- - copilot => copilot --acp --stdio
+- - hermes => hermes acp
+- - opencode => opencode acp
+- - qwen => qwen --acp

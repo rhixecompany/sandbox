@@ -210,16 +210,16 @@ While Server Actions have built-in CSRF protection, the `api/seed/route.ts` rout
 
 ### Short-term (1 week)
 
-4. Implement rate limiting on auth routes
-5. Add audit log rotation policy (archive at 90 days)
-6. Audit all server actions for complete Zod validation
+1. Implement rate limiting on auth routes
+2. Add audit log rotation policy (archive at 90 days)
+3. Audit all server actions for complete Zod validation
 
 ### Long-term (1 month)
 
-7. Implement secrets management with HashiCorp Vault or Doppler
-8. Add automated secret scanning in CI/CD pipeline
-9. Enable branch protection with required PR reviews
-10. Conduct penetration testing of auth flows
+1. Implement secrets management with HashiCorp Vault or Doppler
+2. Add automated secret scanning in CI/CD pipeline
+3. Enable branch protection with required PR reviews
+4. Conduct penetration testing of auth flows
 
 ---
 

@@ -32,6 +32,7 @@ skills:
 
 ---
 > **Shared template references:**
+>
 > - [Core rules](templates/_shared/rules-core.md)
 > - [Section skeleton](templates/_shared/section-skeleton.md)
 > - [Verification checklist](templates/_shared/verification-checklist.md)
@@ -65,12 +66,14 @@ Additional execution-specific rules:
 ## Workflow
 
 ### Phase 1: Load plan
+
 1. Read the plan file (`read_file`).
 2. Parse phases, gates, dependencies, and outputs.
 3. Verify all referenced skills/prompts/tools exist.
 4. Write session start marker to `.hermes/plans/docs/<plan-name>-progress.md`.
 
 ### Phase 2: Execute phases
+
 For each phase in order:
 
 1. **Pre-check** — Confirm verification gate from previous phase is met.
@@ -80,12 +83,15 @@ For each phase in order:
 5. **Log** — Update progress doc with phase result.
 
 ### Phase 3: Final verification
+
 1. Run the plan's full verification checklist.
 2. Confirm all outputs exist and match expected format.
 3. Write session summary to progress doc.
 
 ### Phase 4: Report
+
 Summarise:
+
 - Phases completed / total
 - Any skipped phases and why
 - All verification gates passed
@@ -93,6 +99,7 @@ Summarise:
 - Git commit SHAs for each phase
 
 ## Verification Checklist
+
 - [ ] Plan loaded and parsed successfully
 - [ ] All phase dependencies resolved
 - [ ] Each phase executed in strict order

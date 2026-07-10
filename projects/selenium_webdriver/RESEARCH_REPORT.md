@@ -12,33 +12,37 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| Selenium Scraping Examples | https://github.com/HasData/selenium-scraping | driver setup, waits, proxies, Grid |
-| Puppeteer Extra Stealth | https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth | stealth evasion alternative |
-| Headless Browsers List | https://github.com/dhamaniasad/HeadlessBrowsers | comparison of all headless browsers |
-| Selenium Node.js guide | https://scrape.do/blog/selenium-nodejs | Node.js Selenium scraping |
+| Selenium Scraping Examples | <https://github.com/HasData/selenium-scraping> | driver setup, waits, proxies, Grid |
+| Puppeteer Extra Stealth | <https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth> | stealth evasion alternative |
+| Headless Browsers List | <https://github.com/dhamaniasad/HeadlessBrowsers> | comparison of all headless browsers |
+| Selenium Node.js guide | <https://scrape.do/blog/selenium-nodejs> | Node.js Selenium scraping |
 
 ---
 
 ## Key Findings
 
 ### Selenium 4 Detection (2026)
+
 - Detection vectors: `navigator.webdriver`, UA inconsistencies, behavior
 - `navigator.webdriver = true` detectable — override via CDP: `Page.addScriptToEvaluateOnNewDocument`
 - Headless mode increasingly detected; use `headless: "new"` for better stealth
 - Playwright is harder to detect and 2-3x faster; evaluate migration for new scrapers
 
 ### Node.js Selenium Setup
+
 - `selenium-webdriver` NPM package; ChromeDriver must match Chrome version exactly
 - `webdriver-manager` for automatic driver management (avoid version mismatch)
 - ES modules: `"type": "module"` in package.json; explicit `.js` extensions required
 - Selenium 4 W3C standard: relative locators, new window/tab APIs, CDP integration
 
 ### Anti-Detection Techniques
+
 - Custom user-agent, disable `navigator.webdriver` override
 - Real viewport sizes; random mouse movements
 - Proxy rotation: BrightData, IPRoyal, Oxylabs for large-scale scraping
 
 ### WebDriverWait Best Practices
+
 - Explicit waits only: `driver.wait(until.elementLocated(By.css('.foo')), 10000)`
 - Never use `sleep()` — use expected conditions
 - Store `By` locators (not WebElements); re-find just-in-time to avoid StaleElementReference
@@ -50,10 +54,10 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Selenium JS docs | https://www.selenium.dev/documentation | Official docs |
-| Selenium waits | https://www.selenium.dev/documentation/webdriver/waits | Official guide |
-| Selenium Node.js guide | https://scrape.do/blog/selenium-nodejs | Tutorial |
-| Headless browsers | https://github.com/dhamaniasad/HeadlessBrowsers | Comparison |
+| Selenium JS docs | <https://www.selenium.dev/documentation> | Official docs |
+| Selenium waits | <https://www.selenium.dev/documentation/webdriver/waits> | Official guide |
+| Selenium Node.js guide | <https://scrape.do/blog/selenium-nodejs> | Tutorial |
+| Headless browsers | <https://github.com/dhamaniasad/HeadlessBrowsers> | Comparison |
 
 ---
 
@@ -110,7 +114,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Selenium docs | https://www.selenium.dev/documentation | Browser automation docs |
-| Selenium waits | https://www.selenium.dev/documentation/webdriver/waits | Wait patterns |
-| Node.js best practices | https://github.com/goldbergyoni/nodebestpractices | Node.js best practices |
-| Puppeteer Stealth | https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth | stealth evasion |
+| Selenium docs | <https://www.selenium.dev/documentation> | Browser automation docs |
+| Selenium waits | <https://www.selenium.dev/documentation/webdriver/waits> | Wait patterns |
+| Node.js best practices | <https://github.com/goldbergyoni/nodebestpractices> | Node.js best practices |
+| Puppeteer Stealth | <https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth> | stealth evasion |

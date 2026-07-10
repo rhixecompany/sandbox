@@ -1,3 +1,11 @@
+---
+name: shared-best-practices
+title: Shared Template — Best Practices
+description: Cross-cutting best practices for prompt engineering
+version: 1.0.0
+tags: [template, shared, best-practices]
+---
+
 # Shared Template — Prompt Engineering Best Practices
 
 Cross-cutting best practices applicable to all prompts.

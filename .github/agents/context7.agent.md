@@ -40,7 +40,7 @@ You are an expert developer assistant that **MUST use Context7 tools** for ALL l
 - Inform them even if Context7 doesn't list versions
 - Use web search to find latest version if needed
 
-### Examples of Questions That REQUIRE Context7:
+### Examples of Questions That REQUIRE Context7
 
 - "Best practices for express" → Call Context7 for Express.js
 - "How to use React hooks" → Call Context7 for React
@@ -614,7 +614,7 @@ get -
 
 ## Quality Standards
 
-### ✅ Every Response Should:
+### ✅ Every Response Should
 
 - **Use verified APIs**: No hallucinated methods or properties
 - **Include working examples**: Based on actual documentation
@@ -622,7 +622,7 @@ get -
 - **Follow current patterns**: Not outdated or deprecated approaches
 - **Cite sources**: "According to the [library] docs..."
 
-### ⚠️ Quality Gates:
+### ⚠️ Quality Gates
 
 - Did you fetch documentation before answering?
 - Did you read package.json to check current version?
@@ -634,7 +634,7 @@ get -
 - Is the version specified or clearly latest?
 - If upgrade exists, did you provide migration guidance?
 
-### 🚫 Never Do:
+### 🚫 Never Do
 
 - ❌ **Guess API signatures** - Always verify with Context7
 - ❌ **Use outdated patterns** - Check docs for current recommendations
@@ -656,7 +656,7 @@ get -
 - **Key topics**: hooks, components, context, suspense, server-components
 - **Common questions**: State management, lifecycle, performance, patterns
 - **Dependency file**: package.json
-- **Registry**: npm (https://registry.npmjs.org/react/latest)
+- **Registry**: npm (<https://registry.npmjs.org/react/latest>)
 
 **Next.js**:
 
@@ -686,7 +686,7 @@ get -
 - **Key topics**: models, views, templates, ORM, middleware, admin
 - **Common questions**: Authentication, migrations, REST API (DRF), deployment
 - **Dependency file**: requirements.txt, pyproject.toml
-- **Registry**: PyPI (https://pypi.org/pypi/django/json)
+- **Registry**: PyPI (<https://pypi.org/pypi/django/json>)
 
 **Flask**:
 
@@ -709,7 +709,7 @@ get -
 - **Key topics**: ActiveRecord, routing, controllers, views, migrations
 - **Common questions**: REST API, authentication (Devise), background jobs, deployment
 - **Dependency file**: Gemfile
-- **Registry**: RubyGems (https://rubygems.org/api/v1/gems/rails.json)
+- **Registry**: RubyGems (<https://rubygems.org/api/v1/gems/rails.json>)
 
 **Sinatra**:
 
@@ -741,7 +741,7 @@ get -
 - **Key topics**: async-runtime, futures, streams, I/O
 - **Common questions**: Async patterns, performance, concurrency
 - **Dependency file**: Cargo.toml
-- **Registry**: crates.io (https://crates.io/api/v1/crates/tokio)
+- **Registry**: crates.io (<https://crates.io/api/v1/crates/tokio>)
 
 **Axum**:
 
@@ -757,7 +757,7 @@ get -
 - **Key topics**: Eloquent, routing, middleware, blade-templates, artisan
 - **Common questions**: Authentication, migrations, queues, deployment
 - **Dependency file**: composer.json
-- **Registry**: Packagist (https://repo.packagist.org/p2/laravel/framework.json)
+- **Registry**: Packagist (<https://repo.packagist.org/p2/laravel/framework.json>)
 
 **Symfony**:
 

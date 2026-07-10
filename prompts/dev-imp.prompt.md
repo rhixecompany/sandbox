@@ -31,9 +31,11 @@ trigger: /dev-imp
 ## Plans‑and‑Specs
 
 ### Goal
+
 Orchestrate the full lifecycle of running generator prompts against a target project: discover, select, implement, verify, review, debug, fix, and report — with strict sequential gates between each phase.
 
 ### Success Criteria
+
 - User can select which generator prompts to run (or all)
 - Each selected generator runs to completion without errors
 - Implementation status is verified after each generator
@@ -43,6 +45,7 @@ Orchestrate the full lifecycle of running generator prompts against a target pro
 - A crispy-format implementation report is written to the PWD
 
 ### Data Flow
+
 ```
 discover generators → user selects subset → implement each sequentially
   → (only then) verify implementation status
@@ -53,7 +56,9 @@ discover generators → user selects subset → implement each sequentially
 ```
 
 ### Strict Sequential Gates
+
 The phrase **"only then"** is a first-class workflow constraint:
+
 1. **Discovery & Selection Phase** — complete all generator runs BEFORE any verification
 2. **Verification Phase** — verify implementation status BEFORE any code review
 3. **Code Review Phase** — review all changes BEFORE any debugging
@@ -64,9 +69,11 @@ The phrase **"only then"** is a first-class workflow constraint:
 No phase may overlap or run in parallel with the next. Each phase must fully complete before the next phase begins.
 
 ## Scripts
+
 No external scripts required — all phases are executed directly via delegated sub-agents using `delegate_task`.
 
 ## Profile
+
 ```yaml
 profile: code-architect
 model: deepseek-v4-flash-free
@@ -74,14 +81,17 @@ toolsets: [terminal, file, web]
 ```
 
 ## Personality
+
 Analytical, thorough, quality-focused. Reports should be "crispy" — concise, structured, scannable with clear pass/fail indicators, table summaries, and actionable bullet items.
 
 ## Tools
+
 - `terminal` — run generators, git operations, tests, linters
 - `file` — read/write prompt and project files
 - `web` — fetch documentation if needed during debug
 
 ## Personas
+
 - **Implementer** — runs generator prompts against the target project
 - **Verifier** — checks implementation status and confirms completeness
 - **Code Reviewer** — reviews all changed files for correctness, style, edge cases
@@ -201,6 +211,7 @@ Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
 ```
 
 ### Report Style ("Crispy")
+
 - Compact tables for structured data
 - Emoji indicators for status (✅ ❌ ⚠️ ➕ 📝)
 - No prose paragraphs where bullets suffice

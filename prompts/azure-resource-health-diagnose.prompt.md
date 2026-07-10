@@ -39,8 +39,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -50,18 +50,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -75,45 +79,47 @@ Use when you need to work on the current workspace or task.
 ## Workflow Steps
 
 > ### Step 1: Get Azure Best Practices
+>
 > **Action**: Retrieve diagnostic and troubleshooting best practices **Tools**: Az
 
 > **Full content:** `templates/azure-resource-health-diagnose/workflow_steps.md`
 
-   ## 🔍 Executive Summary
+## 🔍 Executive Summary
 
    [Brief overview of health status and key findings]
 
-   ## 📊 Health Metrics
+## 📊 Health Metrics
 
-   - **Availability**: X% over last 24h
-   - **Performance**: [Average response time/throughput]
-   - **Error Rate**: X% over last 24h
-   - **Resource Utilization**: [CPU/Memory/Storage percentages]
+- **Availability**: X% over last 24h
+- **Performance**: [Average response time/throughput]
+- **Error Rate**: X% over last 24h
+- **Resource Utilization**: [CPU/Memory/Storage percentages]
 
-   ## 🚨 Issues Identified
+## 🚨 Issues Identified
 
-   ### Critical Issues
+### Critical Issues
 
-   - **[Issue 1]**: [Description]
-     - **Root Cause**: [Analysis]
-     - **Impact**: [Business impact]
-     - **Immediate Action**: [Required steps]
+- **[Issue 1]**: [Description]
+  - **Root Cause**: [Analysis]
+  - **Impact**: [Business impact]
+  - **Immediate Action**: [Required steps]
 
-   ### High Priority Issues
+### High Priority Issues
 
-   - **[Issue 2]**: [Description]
-     - **Root Cause**: [Analysis]
-     - **Impact**: [Performance/reliability impact]
-     - **Recommended Fix**: [Solution steps]
+- **[Issue 2]**: [Description]
+  - **Root Cause**: [Analysis]
+  - **Impact**: [Performance/reliability impact]
+  - **Recommended Fix**: [Solution steps]
 
-   ## 🛠️ Remediation Plan
+## 🛠️ Remediation Plan
 
-   ### Phase 1: Immediate Actions (0-2 hours)
+### Phase 1: Immediate Actions (0-2 hours)
 
    ```bash
    # Critical fixes to restore service
    [Azure CLI commands with explanations]
    ```
+
    ````
 
    ### Phase 2: Short-term Fixes (2-24 hours)

@@ -30,6 +30,7 @@
 1. **Copy-Paste Strategy:** Copying existing code is faster than reading docs when you need an exact pattern match — just adapt entity names and imports
 2. **Two-Document Reading:** Read `.github/copilot-instructions.md` (WHY) alongside `src/` code (HOW)
 3. **Grep for Patterns:**
+
    ```bash
    grep -r "ActionResult" src/actions/        # Find all actions
    grep -r "extends BaseDal" src/dal/         # Find all DAL classes

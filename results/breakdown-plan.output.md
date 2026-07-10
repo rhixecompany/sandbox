@@ -14,6 +14,7 @@
 The prompt's canonical input paths (`/docs/ways-of-work/plan/{epic}/{feature}/...`) do **not exist** in this workspace. Per the prompt's Core Rule *"Follow the prompt literally and prefer evidence from the current workspace"*, I targeted the only active, self-contained feature project in the workspace: **`youtube-downloader`**. It is a production CLI tool with real, inspectable code, so the plan is grounded in actual defects and gaps rather than a synthetic PRD.
 
 ### Key evidence gathered
+
 | File | Finding |
 |---|---|
 | `main_noplaylist.py` | Hardcoded `url` literal on line 40; `noplaylist: True`; MKV merge; writes subs+thumbnail. No `argparse`/CLI arg. |
@@ -26,6 +27,7 @@ The prompt's canonical input paths (`/docs/ways-of-work/plan/{epic}/{feature}/..
 | `AGENTS.md` | Confirms no web UI/API; CLI only; `.env`/URLs never commit. |
 
 ### Root causes driving this plan
+
 1. **Trio of near-duplicate scripts** — `yt_opts` config is copy-pasted 3×; any format/quality change must be made in 3 places (DRY violation, defect risk).
 2. **Hardcoded URLs** — every entrypoint has a literal URL baked in; no CLI argument parsing; not reusable/parametrized.
 3. **Missing runtime deps in `base.txt`** — reproducible installs broken; only `local.txt` carries `yt-dlp`.
@@ -43,11 +45,13 @@ The prompt's canonical input paths (`/docs/ways-of-work/plan/{epic}/{feature}/..
 Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI with a shared config layer, a real automated test suite, correct dependency locking, and CI quality gates — without changing the user-facing download behavior (single / playlist / loop).
 
 **Business Value**
+
 - **Primary Goal:** Make the tool installable, testable, and maintainable by any contributor.
 - **Success Metrics:** 100% of download modes reachable via CLI args; ≥80% line coverage on the shared core; reproducible `pip install -r requirements/base.txt` includes yt-dlp; green CI on every PR.
 - **User Impact:** Users can pass any URL/playlist without editing source; contributors change format logic in one place.
 
 **Epic Acceptance Criteria**
+
 - [ ] Single source of `yt_opts` config (no duplication across modes)
 - [ ] All three modes invocable via CLI flags (no hardcoded URLs)
 - [ ] `requirements/base.txt` installs yt-dlp + curl_cffi
@@ -56,6 +60,7 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 - [ ] `.env.example` present and documented
 
 **Definition of Done**
+
 - [ ] All feature stories completed
 - [ ] End-to-end download test passed (mocked network)
 - [ ] `ruff check .` and `mypy` clean
@@ -69,11 +74,13 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 ---
 
 ### Feature: `FEAT-CORE` — Unified Parametrized Download Core
+
 **Feature Description:** Extract shared download logic + `yt_opts` into one module with CLI argument parsing supporting `--url`, `--mode {single,playlist,loop}`, `--format`, `--output`.
 **User Stories:** `STORY-1`, `STORY-2`
 **Technical Enablers:** `ENAB-1`, `ENAB-2`
 **Dependencies:** Blocks `FEAT-TEST`. Blocked by: none.
 **Acceptance Criteria:**
+
 - [ ] `python -m ytd.core --url <URL> --mode single` works
 - [ ] `playlist` and `loop` modes reachable via same entrypoint
 - [ ] Config change in one place affects all modes
@@ -84,8 +91,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `M` (8 pts)
 
 #### User Story: `STORY-1` — Parametrized URL Input
+
 **Story Statement:** As a *CLI user*, I want to *pass the video/playlist URL as a command-line argument* so that *I don't have to edit source code to download different content*.
 **Acceptance Criteria:**
+
 - [ ] `--url` required argument accepted
 - [ ] Hardcoded URL literals removed from all 3 scripts
 - [ ] Invalid/empty URL produces a clear error (no `input()` prompt)
@@ -98,8 +107,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `3`
 
 #### User Story: `STORY-2` — Mode Selection (single / playlist / loop)
+
 **Story Statement:** As a *CLI user*, I want to *select download mode via `--mode`* so that *one tool serves all three use cases*.
 **Acceptance Criteria:**
+
 - [ ] `--mode single` sets `noplaylist: True`
 - [ ] `--mode playlist`/`loop` sets `noplaylist: False` and iterates URL list
 - [ ] Default mode = `single`
@@ -112,8 +123,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `5`
 
 #### Technical Enabler: `ENAB-1` — Shared Config & Download Module
+
 **Enabler Description:** Extract the duplicated `yt_opts` dict + `YoutubeDL` call into `ytd/core.py` returning a configured downloader; consumed by all modes.
 **Technical Requirements:**
+
 - [ ] Single `build_opts(mode, url, fmt, out)` factory
 - [ ] MKV merge + subs + thumbnail preserved from current behavior
 **Implementation Tasks:** T5 (extract module), T6 (backward-compat shim for old scripts → deprecated)
@@ -125,8 +138,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `8`
 
 #### Technical Enabler: `ENAB-2` — Dependency Lock Correctness
+
 **Enabler Description:** Add `yt-dlp[curl-cffi]` (and `curl_cffi`) to `requirements/base.txt` so reproducible installs carry the runtime engine; reconcile with `local.txt`.
 **Technical Requirements:**
+
 - [ ] `base.txt` installs yt-dlp + curl_cffi
 - [ ] `local.txt` continues to extend base with dev tools
 **Implementation Tasks:** T7 (edit base.txt), T8 (verify `pip install -r requirements/base.txt` pulls yt-dlp)
@@ -140,11 +155,13 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 ---
 
 ### Feature: `FEAT-TEST` — Automated Test Suite & Quality Gates
+
 **Feature Description:** Replace manual `test.py` with a pytest suite (mocked yt-dlp) + lint/type-check CI workflow.
 **User Stories:** `STORY-3`
 **Technical Enablers:** `ENAB-3`
 **Dependencies:** Blocks: none. Blocked by: `FEAT-CORE` (needs shared module to test).
 **Acceptance Criteria:**
+
 - [ ] `pytest` runs non-interactively with ≥80% coverage on `ytd/core.py`
 - [ ] `test.py` removed or converted
 **Definition of Done:** suite green · coverage gate · ruff+mypy in CI · README updated
@@ -153,8 +170,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `M` (5 pts)
 
 #### User Story: `STORY-3` — Non-interactive Test Suite
+
 **Story Statement:** As a *maintainer*, I want *an automated pytest suite* so that *regressions in download config are caught without manual runs*.
 **Acceptance Criteria:**
+
 - [ ] `test.py` `save_path="Django REST Framework"` bug fixed/removed
 - [ ] Mock `YoutubeDL.download` to assert opts passed correctly
 - [ ] No `input()` calls in test code
@@ -167,8 +186,10 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 **Estimate:** `5`
 
 #### Technical Enabler: `ENAB-3` — CI Pipeline (ruff + mypy + pytest)
+
 **Enabler Description:** Add GitHub Actions workflow running lint, type-check, and tests on push/PR.
 **Technical Requirements:**
+
 - [ ] `ruff check .` step
 - [ ] `mypy` step (optional strict)
 - [ ] `pytest --cov` step with upload
@@ -183,6 +204,7 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 ---
 
 ### Test Work Items (Quality Assurance)
+
 | ID | Title | Validates | Estimate |
 |---|---|---|---|
 | `TEST-1` | URL arg parsing unit test | `STORY-1` | 1 |
@@ -191,6 +213,7 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 | `TEST-4` | CI coverage gate (≥80%) | `STORY-3` | 1 |
 
 ### Task Index
+
 | ID | Task | Parent | Estimate |
 |---|---|---|---|
 | T1 | argparse `--url`/`--mode` wiring | STORY-1 | 2 |
@@ -228,12 +251,14 @@ Consolidate the three copy-pasted yt-dlp scripts into a single, parametrized CLI
 ---
 
 ## Skipped References (template paths not present in workspace)
+
 - `templates/breakdown-plan/estimate.md` — not found; estimate section inlined above.
 - `templates/breakdown-plan/output_format.md` — not found; prompt body's template used directly.
 - `templates/breakdown-plan/sprint_n_goal.md` — not found; sprint goal inlined below.
 - `/docs/ways-of-work/plan/{epic}/{feature}/*.md` — canonical PRD/technical-breakdown inputs absent; replaced with direct code inspection.
 
 ### Sprint 1 Goal
+
 **Primary Objective:** De-risk the foundation — deliver `ENAB-1` (shared core) + `ENAB-2` (dep lock) so all downstream stories are unblocked.
 **Stories/Enablers in Sprint:** `ENAB-1`, `ENAB-2`, `STORY-1` (start).
 **Exit criteria:** `from ytd.core import build_opts` works; `pip install -r requirements/base.txt` pulls yt-dlp; no hardcoded URLs remain in committed code.

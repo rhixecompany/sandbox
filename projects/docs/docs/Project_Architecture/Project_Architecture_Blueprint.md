@@ -31,7 +31,9 @@ docs/
 ## Architectural Patterns
 
 ### Documentation-Only Pattern
+
 This project contains no executable code. It serves as a reference documentation repository for:
+
 - Dependency audit findings
 - Research appendixes
 - Supporting documentation for the workspace

@@ -87,10 +87,12 @@ hermes model                  # Change LLM model
 ## 🔑 Configuration Files
 
 **Global:**
+
 - Config: `%LOCALAPPDATA%\hermes\config.yaml`
 - Secrets: `%LOCALAPPDATA%\hermes\.env`
 
 **Project:**
+
 - Create `hermes.yaml` in project root (optional)
 - Create `.env` in project root (optional)
 
@@ -114,16 +116,19 @@ hermes model                  # Change LLM model
 ## 🚀 Next Steps
 
 1. **Use Hermes:**
+
    ```bash
    hermes chat "Your question here"
    ```
 
 2. **Check Tools:**
+
    ```bash
    hermes tools list | grep docker
    ```
 
 3. **Use Docker Tools:**
+
    ```bash
    hermes execute --tool "docker/container/list" --args '{}'
    ```
@@ -137,9 +142,9 @@ hermes model                  # Change LLM model
 
 ## 🔗 Useful Links
 
-- Hermes Docs: https://hermes-agent.nousresearch.com/docs
-- MCP Spec: https://modelcontextprotocol.io/
-- GitHub MCP: https://github.com/modelcontextprotocol/servers
+- Hermes Docs: <https://hermes-agent.nousresearch.com/docs>
+- MCP Spec: <https://modelcontextprotocol.io/>
+- GitHub MCP: <https://github.com/modelcontextprotocol/servers>
 
 ---
 

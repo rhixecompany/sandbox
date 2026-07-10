@@ -1,3 +1,11 @@
+---
+name: research-report-template
+title: Research Report Template
+description: Standard template for research report documents
+version: 1.0.0
+tags: [template, research, report]
+---
+
 # RESEARCH_REPORT.md
 
 <!-- Template version: 1.0.0 — maintained by repo-research-pipeline skill -->

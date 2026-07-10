@@ -3,6 +3,7 @@
 > Extracted from `update-oo-component-documentation.prompt.md`.
 
 ## Legacy Prompt Details
+
 # Update Standard OO Component Documentation
 
 Update the existing documentation file at: `${file}` by analyzing the corresponding component code.

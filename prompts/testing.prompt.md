@@ -20,8 +20,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -55,8 +55,8 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 - Test Reliability Reviewer: Eliminates nondeterminism and fragile assumptions.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Prefer fast deterministic unit tests with mocked external dependencies.
 - Cover critical paths and public behavior changes.
@@ -67,6 +67,7 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 ## Phases
 
 > ### Phase 1: Coverage Planning
+>
 > ### Phase 2: Test Authoring
 
 > **Full content:** `templates/testing/phases.md`
@@ -102,8 +103,8 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 3. Execute and stabilize.
 4. Deliver clear test confidence and gap reporting.
 
-
 ## Template References
 
 Templates in `templates/testing/`:
+
 - `phases.md`

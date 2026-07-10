@@ -1,6 +1,6 @@
 # Python Asyncio Part 1 – Basic Concepts and Patterns
 
-> **Source:** https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html
+> **Source:** <https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html>
 > **Retrieved:** 2026-05-31T12:17:10
 
 ---
@@ -32,6 +32,7 @@ This post introduces the **core concepts behind Python's asyncio library**, focu
 - **Coroutine model**: Functions can **yield control** back to the caller and **resume from where they left off** on next call.
 
 Python supports coroutines via:
+
 - **Generators** (historical support)
 - **Asyncio coroutines** (modern, natural syntax for non-blocking code)
 
@@ -42,6 +43,7 @@ Python supports coroutines via:
 ### Stacks and Frames (Refresher)
 
 Traditional execution uses a **stack-based model**:
+
 - Each function call adds a **frame** to the stack.
 - Frames store local variables and return pointers.
 - On return, the frame is popped, and execution resumes at the return address.
@@ -86,6 +88,7 @@ This model is ideal for **I/O-bound workloads** (e.g., web APIs, network service
 ## What’s Next?
 
 This post intentionally **avoids code examples** to focus on concepts. The next part in the series — **[Python Asyncio Part 2 – Awaitables, Tasks, and Futures](asyncio-part-2)** — will cover:
+
 - Practical syntax (`async`/`await`)
 - Creating and managing Tasks
 - Working with Futures and Awaitables

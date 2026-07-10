@@ -17,11 +17,11 @@
 - `pnpm validate` (stop immediately if any errors or warnings occur)
 - `pnpm build` (only run if validate passes with zero errors/warnings)
 
-2. Collect all errors, warnings, and deprecations from the output. If any errors or warnings are found at any step, stop and address them before continuing.
+1. Collect all errors, warnings, and deprecations from the output. If any errors or warnings are found at any step, stop and address them before continuing.
 
 #### Phase 2: Root Cause Analysis & Documentation
 
-3. For each error/warning:
+1. For each error/warning:
    - Read the full file(s) involved.
    - Analyze the root cause (import path, missing file, type error, deprecated API, etc.).
    - Search official docs for any third-party package errors/deprecations.
@@ -37,7 +37,7 @@
 
 #### Phase 3: Batch Fixes
 
-4. Apply fixes in batch, granularly or systematically as needed:
+1. Apply fixes in batch, granularly or systematically as needed:
    - Read docs/proposedFixes.MD for context on proposed fixes.
    - Ensure all fixes adhere to coding standards and best practices.
    - Correct import paths and aliases.
@@ -48,20 +48,20 @@
 
 #### Phase 4: Auto-format & Standards Enforcement
 
-5. Run `pnpm lint:fix` to auto-format the codebase and fix any remaining style issues.
+1. Run `pnpm lint:fix` to auto-format the codebase and fix any remaining style issues.
 
 #### Phase 5: Verification & Iteration
 
-6. Rerun all scripts in order:
+1. Rerun all scripts in order:
    - `pnpm type-check` (stop if errors/warnings)
    - `pnpm lint:fix` (only if type-check passes)
    - `pnpm build` (only if previous steps pass)
 
-7. If any errors/warnings remain, repeat Phases 2–5 until all scripts pass cleanly.
+2. If any errors/warnings remain, repeat Phases 2–5 until all scripts pass cleanly.
 
 #### Phase 6: Documentation & Reporting
 
-8. For each significant fix:
+1. For each significant fix:
    - Document before-and-after code snippets.
    - Explain why the change was necessary.
    - Reference relevant docs or resources.
@@ -70,8 +70,8 @@
 
 #### Phase 7: Commit & Final Verification
 
-9. Commit all fixes in a single batch with a clear, comprehensive summary.
-10. Cross-verify that all scripts complete successfully with zero errors and zero warnings.
+1. Commit all fixes in a single batch with a clear, comprehensive summary.
+2. Cross-verify that all scripts complete successfully with zero errors and zero warnings.
 
 ---
 

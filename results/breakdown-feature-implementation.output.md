@@ -8,9 +8,11 @@
 ## 1. Intake
 
 ### 1.1 Scope
+
 Decompose the **Multi-Document Generation** feature for the `projects/Resume_maker` CLI into a concrete, actionable implementation plan. The feature must extend the existing pipeline — currently it only emits a **resume** — to also emit a **cover letter**, a **LinkedIn guide**, and an **interview-prep Q&A** from a single structured JSON input, each to Markdown (+ optional PDF), and report all output paths.
 
 ### 1.2 Evidence (file-backed, from current workspace)
+
 - `projects/Resume_maker/README.md:5,27-36,82` — declares "Multi-Document Generation — Resume, cover letter, LinkedIn guide, interview prep" and shows a pipeline diagram naming all four generators.
 - `projects/Resume_maker/docs/Project_Architecture/Workflow_Analysis.md:84-108` (Workflow 2) — describes cover letter / LinkedIn guide / interview prep generation steps.
 - `projects/Resume_maker/index.ts` — **only** `generateResumeMarkdown` and its section formatters exist (`formatContactSection`, `formatSummarySection`, `formatExperienceSection`, `formatProjectsSection`, `formatEducationSection`, `formatSkillsSection`). A content search for `generateCoverLetter|generateLinkedIn|generateInterview|formatCoverLetter` returns **0 matches**.
@@ -19,11 +21,13 @@ Decompose the **Multi-Document Generation** feature for the `projects/Resume_mak
 **Conclusion:** The feature is *documented and partially evidenced in outputs* but *not implemented in code*. This plan closes that gap.
 
 ### 1.3 Skipped / unavailable references
+
 - `templates/breakdown-feature-implementation/output_format.md` — **NOT FOUND** in workspace (referenced by the prompt at lines 73 and 85). Plan falls back to the Epoch-monorepo breakdown structure described inline in the prompt (front-end + back-end folder/file structure).
 - `prompts/templates/_shared/rules-core.md` — found and applied (see §1.5).
 - No explicit Feature PRD markdown was supplied by the user; the PRD above is reconstructed from workspace docs/README (stated assumption, not guessed).
 
 ### 1.4 Conventions (from `projects/Resume_maker/AGENTS.md`, `copilot-instructions.md`)
+
 - Bun-first, TypeScript strict, no framework deps.
 - CLI flags: `--input/-i`, `--output/-o`, `--format/-f` (markdown | pdf | both).
 - Per-document generation isolated; one failure must not block others (per Workflow Analysis error-handling).
@@ -31,11 +35,13 @@ Decompose the **Multi-Document Generation** feature for the `projects/Resume_mak
 - Add Vitest unit tests; update README + AGENTS.md when CLI behavior changes.
 
 ### 1.5 Core rules applied (`templates/_shared/rules-core.md`)
+
 Map before touch · no backup files (use git) · verify after each pass · explicit mappings · preserve intent · idempotent · file-backed evidence.
 
 ---
 
 ## 2. Goal
+
 Deliver an implementation plan for three new generators — Cover Letter, LinkedIn Guide, Interview Prep — wired into the existing `index.ts` pipeline, sharing the current validation/normalization/format/output layers, and emitting all documents per the documented multi-document workflow.
 
 ---
@@ -102,6 +108,7 @@ Resume_maker/                         # monorepo root
 ## 4. Task Breakdown
 
 ### Epic A — Types & Validation (`packages/core/types.ts`, `validation.ts`)
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | A1 | Extend `ResumeData` for new docs | Add optional `coverLetter?: { recipient?, company?, role? }`, `linkedIn?: { headline?, targetRoles?[] }`, `interview?: { focusAreas?[] }`. Preserve all existing fields. | `bun run typecheck` passes |
@@ -109,6 +116,7 @@ Resume_maker/                         # monorepo root
 | A3 | Add per-doc validators | `validateCoverLetter(data)`, `validateLinkedInGuide(data)`, `validateInterviewPrep(data)` returning `ValidationResult` with *warnings* (not errors) when optional fields missing. | Unit tests per validator |
 
 ### Epic B — Cover Letter Generator (`format/coverLetter.ts`, `generate/coverLetter.ts`)
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | B1 | `formatCoverLetterSection` | Compose: date, recipient/company header (optional), greeting, 2–3 body paragraphs derived from `summary` + top 2 `experience` highlights mapped to the target role, closing. Use existing `normalizeText` helper for safety. | Snapshot test of markdown |
@@ -116,6 +124,7 @@ Resume_maker/                         # monorepo root
 | B3 | Graceful degradation | If `coverLetter.role` missing, fall back to `data.title`; if no experience, use `summary`. | Test fallback paths |
 
 ### Epic C — LinkedIn Guide Generator (`format/linkedinGuide.ts`, `generate/linkedinGuide.ts`)
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | C1 | `formatLinkedInGuideSection` | Sections: optimized headline (from `title`/`linkedIn.headline`), "About" rewritten from `summary`, skills as endorsed-list from `skills`, 3 "Featured" bullets from `projects` (reuse `CURATED_PROJECTS` descriptions), experience summarized as "Open to" bullets. | Snapshot test |
@@ -123,6 +132,7 @@ Resume_maker/                         # monorepo root
 | C3 | Reuse curated descriptions | Import `CURATED_PROJECTS` from `curated.ts` so project bullets match resume output. | Test shared source |
 
 ### Epic D — Interview Prep Generator (`format/interviewPrep.ts`, `generate/interviewPrep.ts`)
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | D1 | `formatInterviewPrepSection` | Q&A pairs: 1 "Tell me about yourself" from `summary`; 1 behavioral per top `experience` highlight; 1–2 technical per `project` (`CURATED_PROJECTS.highlights`); 1 "Why this role" from `linkedIn.targetRoles`. | Snapshot test |
@@ -130,6 +140,7 @@ Resume_maker/                         # monorepo root
 | D3 | Deterministic ordering | Sort Q&A by a stable key (experience order, then projects) so snapshots are reproducible. | Test stability |
 
 ### Epic E — CLI Orchestration (`packages/cli`)
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | E1 | Add `--documents` flag | Values: `resume,cover,linkedin,interview` (default `resume`). Comma-separated; `--documents all` selects all four. Backwards compatible: no flag = resume only. | `bun cli/src/index.ts --help` shows flag |
@@ -138,6 +149,7 @@ Resume_maker/                         # monorepo root
 | E4 | Output + report | Write each doc to `output/` with `{name}-resume.md`, `{name}-cover.md`, `{name}-linkedin.md`, `{name}-interview.md` (or custom `--output` base); print all paths via `report.ts`. | E2E: all files present |
 
 ### Epic F — Tests, Docs, Verification
+
 | # | Task | Detail | Verify |
 |---|------|--------|--------|
 | F1 | Vitest unit + snapshot tests | Cover B2/C2/D2 generators + A3 validators; snapshot fixtures under `packages/core/tests/__snapshots__`. | `bun test` green |
@@ -150,6 +162,7 @@ Resume_maker/                         # monorepo root
 ## 5. Pseudocode (technical situations only)
 
 **Per-document isolation (E2) — pseudocode, not final code:**
+
 ```
 for doc in selectedDocuments:
     try:
@@ -164,6 +177,7 @@ for doc in selectedDocuments:
 ```
 
 **Generator shape (B2/C2/D2) — uniform contract:**
+
 ```
 generateXMarkdown(data) =
     result = validateX(data)          // warnings-only
@@ -175,11 +189,13 @@ generateXMarkdown(data) =
 ---
 
 ## 6. Risks & Mitigations
+
 - **Scope creep (monorepo split):** If split is rejected, fall back to in-place functions in `index.ts` (same Epics A–E, no `packages/` move). Mitigation: Epic E1/E2 already CLI-local.
 - **Snapshot fragility:** Deterministic ordering (D3) + fixed date handling in B1 (use input `generatedDate` or omit live date) keeps snapshots stable.
 - **Missing optional data:** All three generators must degrade gracefully (B3/C3/D3) since real inputs may omit doc-specific fields.
 
 ## 7. Verification Checklist
+
 - [ ] `validateResumeData` unchanged for resume-only inputs (A2)
 - [ ] 3 new generators produce markdown + pass snapshots (B2/C2/D2)
 - [ ] `--documents all -f both` emits 4 files, PDF failure non-fatal (E3/E4)
@@ -188,4 +204,5 @@ generateXMarkdown(data) =
 - [ ] `bun test` + smoke green (F1/F2/F4)
 
 ## 8. Hand-off
+
 Implementation plan complete and evidence-backed. Next step for an executor: start at Epic A (types/validation), then B→D generators, then E (CLI), then F (tests/docs). No code was written in this artifact per prompt rules (pseudocode only for technical situations).

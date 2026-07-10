@@ -37,7 +37,7 @@ trigger: /create-llms
 ---
 ## Goal
 
-Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/.
+Create an llms.txt file from scratch based on repository structure following the llms.txt specification at <https://llmstxt.org/>.
 
 ## Context
 
@@ -55,8 +55,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -66,18 +66,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -88,6 +92,7 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 ## Analysis and Planning Phase
 
 > Before creating the `llms.txt` file, you must complete a thorough analysis:
+>
 > ### Step 1: Review llms.txt Specification
 
 > **Full content:** `templates/create-llms/analysis_and_planning_phase.md`
@@ -95,6 +100,7 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 ## Implementation Requirements
 
 > ### Format Compliance
+>
 > The `llms.txt` file must follow this exact structure per the specification:
 
 > **Full content:** `templates/create-llms/implementation_requirements.md`
@@ -102,6 +108,7 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 ## Execution Steps
 
 > ### Step 1: Repository Analysis
+>
 > 1. Examine the repository structure completely
 
 > **Full content:** `templates/create-llms/execution_steps.md`
@@ -127,7 +134,7 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 
 ### Specification Compliance
 
-- ✅ Follows https://llmstxt.org/ format exactly
+- ✅ Follows <https://llmstxt.org/> format exactly
 - ✅ Uses required markdown structure
 - ✅ Implements optional sections appropriately
 - ✅ File located at repository root (`/llms.txt`)
@@ -181,10 +188,10 @@ The created `llms.txt` file should:
 7. Use clear, unambiguous language throughout
 8. Organize content logically for easy consumption
 
-
 ## Template References
 
 Detailed templates in `templates/create-llms/`:
+
 - `analysis_and_planning_phase.md`
 - `execution_steps.md`
 - `implementation_requirements.md`

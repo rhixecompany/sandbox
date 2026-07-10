@@ -12,25 +12,28 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| DRF + SimpleJWT auth | https://www.django-rest-framework.org/api-guide/authentication/ | DRF JWT authentication |
-| MUI v4 → v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Material-UI v4 to v5 migration |
+| DRF + SimpleJWT auth | <https://www.django-rest-framework.org/api-guide/authentication/> | DRF JWT authentication |
+| MUI v4 → v5 migration | <https://mui.com/material-ui/migration/migration-v4/> | Material-UI v4 to v5 migration |
 
 ---
 
 ## Key Findings
 
 ### DRF + SimpleJWT Auth
+
 - djangorestframework-simplejwt: access + refresh token pattern with token blacklist
 - django-allauth adds social auth; requires careful URL namespace config to avoid SimpleJWT conflicts
 - WorkOS emerging as enterprise SSO/SCIM alternative (2026)
 
 ### React 17 + Material-UI 4 Upgrade Path
+
 - MUI v4 uses JSS; v5 replaces with Emotion — biggest breaking change (mui.com)
 - Codemods automate 80% of migration: `npx @mui/codemod v5.0.0/preset-safe`
 - React 17 → 18: auto-batching and `createRoot()` are key diffs; mostly backward compatible
 - Redux Toolkit + RTK Query recommended over redux-thunk
 
 ### Production Serving
+
 - Gunicorn + WhiteNoise standard for small-to-medium Django apps
 - WhiteNoise auto-generates versioned static files with MD5 hashes
 - For larger deployments, replace with nginx/CDN
@@ -41,9 +44,9 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| MUI v4→v5 migration | https://mui.com/material-ui/migration/migration-v4/ | Migration Guide |
-| React 18 upgrade | https://react.dev/blog/2022/03/08/react-18-upgrade-guide | Guide |
-| DRF SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | Docs |
+| MUI v4→v5 migration | <https://mui.com/material-ui/migration/migration-v4/> | Migration Guide |
+| React 18 upgrade | <https://react.dev/blog/2022/03/08/react-18-upgrade-guide> | Guide |
+| DRF SimpleJWT | <https://django-rest-framework-simplejwt.readthedocs.io/> | Docs |
 
 ---
 
@@ -100,8 +103,8 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| React 18 Docs | https://react.dev/ | React official documentation |
-| MUI v5 | https://mui.com/ | Material-UI v5 documentation |
-| SimpleJWT | https://django-rest-framework-simplejwt.readthedocs.io/ | DRF JWT auth docs |
-| django-allauth | https://docs.allauth.org/ | Social auth integration |
-| PayPal Developer | https://developer.paypal.com/ | PayPal API documentation |
+| React 18 Docs | <https://react.dev/> | React official documentation |
+| MUI v5 | <https://mui.com/> | Material-UI v5 documentation |
+| SimpleJWT | <https://django-rest-framework-simplejwt.readthedocs.io/> | DRF JWT auth docs |
+| django-allauth | <https://docs.allauth.org/> | Social auth integration |
+| PayPal Developer | <https://developer.paypal.com/> | PayPal API documentation |

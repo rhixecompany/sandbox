@@ -1,9 +1,11 @@
 # Technology Stack — Django-Scrapy-Selenium
 
 ## Overview
+
 Full-stack web scraping platform with Django backend, Scrapy spider management, Selenium automation, and Celery task queue.
 
 ## Backend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | Python | 3.10+ | Runtime |
@@ -13,6 +15,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 | Redis/RabbitMQ | — | Message broker |
 
 ## Scraping Stack
+
 | Technology | Purpose |
 |------------|---------|
 | Scrapy | Web scraping framework |
@@ -20,6 +23,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 | BeautifulSoup4 | HTML parsing |
 
 ## Frontend
+
 | Technology | Purpose |
 |------------|---------|
 | Webpack | Module bundler |
@@ -29,6 +33,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 | jQuery | Legacy JS support |
 
 ## Database & Infrastructure
+
 | Technology | Purpose |
 |------------|---------|
 | PostgreSQL | Production database |
@@ -37,6 +42,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 | Docker Compose | Containerization |
 
 ## Quality
+
 | Tool | Purpose |
 |------|---------|
 | pytest | Python testing |

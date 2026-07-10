@@ -62,6 +62,7 @@ Template variables used in this prompt follow this convention:
 
 **Composite Example:**
 When combined in the output path template, these variables produce a concrete file path:
+
 ```
 <workspace_root>/plan/<purpose>-<component>-<version>.md
 `$HOME/Desktop/Sandbox/plan/feature-auth-refactor-database-v1.md`
@@ -73,8 +74,8 @@ When combined in the output path template, these variables produce a concrete fi
 - A concise verification note when the task benefits from one
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 > 1. Use only evidence from the current workspace and the user request
 > 2. Change only the implementation plan sections directly affected by new require
@@ -97,6 +98,7 @@ The skills listed below in the "Skills Required" section mirror the YAML front-m
 ## Phases
 
 > **Goal:** Read the current workspace state and determine whether to create or up
+>
 > 1. Read the request and identify the exact scope
 
 > **Full content:** `templates/update-implementation-plan/phases.md`
@@ -109,9 +111,9 @@ The skills listed below in the "Skills Required" section mirror the YAML front-m
 4. Apply the correct status badge
 5. Verify all sections are present and accurate
 
-
 ## Template References
 
 Detailed templates in `templates/update-implementation-plan/`:
+
 - `phases.md`
 - `rules.md`

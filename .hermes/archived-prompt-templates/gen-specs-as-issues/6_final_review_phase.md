@@ -18,4 +18,3 @@ Remember throughout this process:
 - Consider the open-source community and contribution model
 
 This workflow embodiment of our approach should help maintain consistency in how features are specified and prioritized, ensuring that software projects evolve in a thoughtful, user-centered way.
-

@@ -1,8 +1,9 @@
 # YouTube Transcript MCP Server
 
-**Source:** https://github.com/kyong0612/youtube-mcp
+**Source:** <https://github.com/kyong0612/youtube-mcp>
 
 ## Overview
+
 A high-performance **Model Context Protocol (MCP) server** for fetching YouTube video transcripts, implemented in **Go**. Enables AI assistants like Claude Desktop and Cursor to retrieve and process YouTube video content.
 
 ---
@@ -20,29 +21,36 @@ A high-performance **Model Context Protocol (MCP) server** for fetching YouTube 
 ## 🎯 MCP Client Setup
 
 ### Quick Install (Recommended)
+
 Use the automatic installation script (details in repo).
 
 ### Install via Go
+
 ```bash
 go install
 ```
+
 > **Note**: Ensure `$GOPATH/bin` is in your PATH or use the full binary path in client config.
 
 ### Manual Setup
 
 #### Claude Desktop
+
 Add to `claude_desktop_config.json`:
 > ⚠️ **Important**: Claude Desktop requires the **stdio version** (`youtube-mcp-stdio`), not the HTTP server.
 
 Build the stdio server:
+
 ```bash
 # Build youtube-mcp-stdio binary
 ```
 
 #### Claude Code
+
 Automatically detects MCP servers; use same config as Claude Desktop.
 
 #### Cursor
+
 Configure via settings (`Cmd+,` / `Ctrl+,`). See [docs/mcp-client-setup.md](https://github.com/kyong0612/youtube-mcp/blob/main/docs/mcp-client-setup.md) for details.
 
 ---
@@ -50,11 +58,13 @@ Configure via settings (`Cmd+,` / `Ctrl+,`). See [docs/mcp-client-setup.md](http
 ## 🛠️ Installation
 
 ### Using Go
+
 ```bash
 go build
 ```
 
 ### Using Docker
+
 ```bash
 docker build -t youtube-mcp .
 ```
@@ -78,9 +88,11 @@ Copy `.env.example` to `.env` and configure:
 ## 🔧 Usage
 
 ### With MCP Clients (Claude Desktop, Cursor, etc.)
+
 Server starts automatically via client config. Use tools directly in conversations.
 
 ### As HTTP Server (Development/Testing)
+
 ```bash
 # Run HTTP server
 # Then test with curl or similar
@@ -91,14 +103,17 @@ Server starts automatically via client config. Use tools directly in conversatio
 ## 🧪 Development
 
 ### Running Tests
+
 ```bash
 make test
 ```
 
 ### Code Quality
+
 Linting and formatting via configured tools (`.golangci.yml`, `.revive.toml`).
 
 ### Hot Reload
+
 Uses `.air.toml` for live-reload during development.
 
 ---
@@ -133,6 +148,7 @@ Uses `.air.toml` for live-reload during development.
 ## 🔒 Security
 
 Enable authentication:
+
 ```env
 SECURITY_ENABLE_AUTH=true
 ```
@@ -142,6 +158,7 @@ SECURITY_ENABLE_AUTH=true
 ## 🤝 Contributing
 
 Standard GitHub workflow:
+
 ```bash
 git checkout -b feature/amazing-feature
 git commit -m 'Add amazing feature'

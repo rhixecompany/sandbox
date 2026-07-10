@@ -12,7 +12,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Runtime | Bun 1.3.14+ |
 | Language | TypeScript |
 | Entry Point | `index.ts` |
@@ -62,6 +62,7 @@ Resume_maker/
 ## Architectural Patterns
 
 ### Pipeline Processing Pattern
+
 The generator follows a sequential pipeline:
 
 1. **Input**: Read structured JSON data (personal info, experience, education)
@@ -70,7 +71,9 @@ The generator follows a sequential pipeline:
 4. **Export**: Produce PDF via markdown-pdf conversion
 
 ### Single-Entry Architecture
+
 `index.ts` is the single entry point that handles:
+
 - Command-line argument parsing (`--input`, `--output`, `--format`)
 - Data loading from JSON input files
 - Document generation pipeline

@@ -82,11 +82,11 @@ execution, and validation.
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
-2. Use Context7 or equivalent docs before changing code.
-3. Plan before coding when the scope is multi-step.
-4. Keep changes small and verifiable.
-5. Use direct CLI execution for implementation and verification.
-7. Keep the workflow deterministic and easy to resume.
+1. Use Context7 or equivalent docs before changing code.
+2. Plan before coding when the scope is multi-step.
+3. Keep changes small and verifiable.
+4. Use direct CLI execution for implementation and verification.
+5. Keep the workflow deterministic and easy to resume.
 
 ## Skills Required
 

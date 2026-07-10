@@ -4,7 +4,7 @@
 
 Xamehi TV is a Django-based video streaming platform that provides a catalog of movies and TV series with user authentication, reviews, and admin content management. The platform uses PostgreSQL for primary data storage with MongoDB integration for analytics, and a React frontend for the user interface.
 
-**Repository:** https://github.com/Rhixe-company/xamehi.tv  
+**Repository:** <https://github.com/Rhixe-company/xamehi.tv>  
 **Stack:** Django 4.x | Django REST Framework | React 18 | Redux | PostgreSQL | MongoDB (djongo/pymongo) | Bootstrap 5 | Gunicorn  
 **Status:** Active Development
 

@@ -5,6 +5,7 @@ Lines: 171
 Templates: 4
 
 ## Templates
+
 - `acceptable_json.md`
 - `examples.md`
 - `phases.md`

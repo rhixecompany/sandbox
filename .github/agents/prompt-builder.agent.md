@@ -348,7 +348,7 @@ MANDATORY VALIDATION PROCESS - You WILL follow this exact sequence:
 6. MANDATORY: Repeat steps 3-5 until validation success criteria are met (max 3 cycles)
 7. Prompt Builder provides final summary of improvements made, research integrated, and validation results
 
-#### Validation Success Criteria (any one met ends cycle):
+#### Validation Success Criteria (any one met ends cycle)
 
 - Zero critical issues identified by Prompt Tester
 - Consistent execution across multiple test scenarios

@@ -20,11 +20,13 @@ A comprehensive web scraping platform combining Django for data management, Scra
 **Description:** Automated scraping pipeline triggered on schedule or via admin, processing pages through Scrapy/Selenium, storing results in Django models.
 
 **Entry Points:**
+
 - `scrapy crawl spider_name` (direct)
 - `celery -A config worker -l info` (async)
 - Django admin panel (manual trigger)
 
 **Steps:**
+
 1. Celery Beat triggers scheduled scraping task
 2. Celery worker picks up the task
 3. Task determines spider type based on target URL/content type
@@ -37,6 +39,7 @@ A comprehensive web scraping platform combining Django for data management, Scra
 10. Logs are written for monitoring and debugging
 
 **Sequence Diagram:**
+
 ```
 Celery Beat            Celery Worker           Scrapy/Selenium          Django ORM           Admin/API
     |                       |                       |                       |                    |
@@ -68,6 +71,7 @@ Celery Beat            Celery Worker           Scrapy/Selenium          Django O
 ```
 
 **Error Handling:**
+
 - `robots.txt` compliance check → respect crawl delays
 - Rate limiting → configurable delays and user-agent rotation
 - `StaleElementReferenceException` → Selenium retry pattern
@@ -75,6 +79,7 @@ Celery Beat            Celery Worker           Scrapy/Selenium          Django O
 - Sanitize scraped data before storing/display (XSS prevention)
 
 **Test Patterns:**
+
 - `pytest` for Django models/views
 - Manual spider testing via `scrapy crawl spider_name`
 - Selenium test scripts in `src/scrape.js`
@@ -86,9 +91,11 @@ Celery Beat            Celery Worker           Scrapy/Selenium          Django O
 **Description:** One-off scraping of JavaScript-rendered pages using standalone Node.js Selenium script.
 
 **Entry Points:**
+
 - `node src/scrape.js`
 
 **Steps:**
+
 1. User runs `node src/scrape.js`
 2. Script initializes Selenium WebDriver with ChromeDriver
 3. Navigates to target URL
@@ -99,6 +106,7 @@ Celery Beat            Celery Worker           Scrapy/Selenium          Django O
 8. Calls `driver.quit()` in `finally` block
 
 **Error Handling:**
+
 - `driver.quit()` guaranteed via `finally` block
 - Retry on `StaleElementReferenceException`
 - `robots.txt` checked + polite delays applied

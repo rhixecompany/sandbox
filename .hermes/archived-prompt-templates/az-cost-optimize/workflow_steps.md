@@ -87,7 +87,7 @@
 
 4. **VALIDATE CURRENT COSTS**:
    - Using the SKU/tier configurations discovered in Step 2
-   - Look up current Azure pricing at https://azure.microsoft.com/pricing/ or use `az billing` commands
+   - Look up current Azure pricing at <https://azure.microsoft.com/pricing/> or use `az billing` commands
    - Document: Resource → Current SKU → Estimated monthly cost
    - Calculate realistic current monthly total before proceeding to recommendations
 

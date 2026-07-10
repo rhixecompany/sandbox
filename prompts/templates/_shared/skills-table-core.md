@@ -1,3 +1,11 @@
+---
+name: shared-skills-table-core
+title: Shared Template — Skills Table Core
+description: Standard skills table for prompt files
+version: 1.0.0
+tags: [template, shared, skills]
+---
+
 # Core Skills Table
 
 This skills table is shared across all fix/sync prompts. Each prompt

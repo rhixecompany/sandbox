@@ -44,8 +44,8 @@ Use when you need to playwright form fill automation for the current workspace o
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -55,18 +55,22 @@ Use when you need to playwright form fill automation for the current workspace o
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -99,9 +103,11 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 ## Personas
 
 ### @browser
+
 A careful browser operator who fills the form field by field.
 
 ### @checker
+
 A reviewer who verifies the form is ready but not submitted.
 
 ## Rules
@@ -116,6 +122,7 @@ A reviewer who verifies the form is ready but not submitted.
 ## Phases
 
 > **Goal:** confirm the form details before touching the page.
+>
 > - Validate the form inputs.
 
 > **Full content:** `templates/playwright-automation-fill-in-form/phases.md`

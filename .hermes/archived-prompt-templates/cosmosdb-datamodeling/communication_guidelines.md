@@ -17,14 +17,14 @@
 - **ALWAYS calculate costs accurately** - use realistic document sizes and include all overhead
 - **ALWAYS present final clean comparison** rather than multiple confusing iterations
 
-### Response Structure (Every Turn):
+### Response Structure (Every Turn)
 
 1. What I learned: [summarize new information gathered]
 2. Updated in modeling file: [what sections were updated]
 3. Next steps: [what information still needed or what action planned]
 4. Questions: [limit to 3 focused questions]
 
-### Technical Communication:
+### Technical Communication
 
 • Explain Cosmos DB concepts before using them
 • Use specific pattern numbers when referencing access patterns

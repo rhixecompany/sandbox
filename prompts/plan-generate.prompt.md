@@ -40,6 +40,7 @@ skills:
 
 ---
 > **Shared template references:**
+>
 > - [Frontmatter patterns](templates/_shared/frontmatter.md)
 > - [Core rules](templates/_shared/rules-core.md)
 > - [Section skeleton](templates/_shared/section-skeleton.md)
@@ -64,6 +65,7 @@ Additional plan-specific rules:
 ## Workflow
 
 ### Phase 1: Context gathering
+
 1. Read the user's goal/specification.
 2. Run `context-map` (prompt) to identify impacted files, dependencies, and scope.
 3. Use `brainstorming` to explore approach options.
@@ -100,17 +102,20 @@ Concise statement of what this plan achieves.
 ```
 
 ### Phase 3: Write
+
 1. Create the plan file at `prompts/<name>.prompt.md` or `.hermes/plans/<name>.md`.
 2. Use `writing-plans` skill for structured plan writing.
 3. Apply `simplify` to remove redundancy.
 
 ### Phase 4: Verify
+
 1. Run the verification checklist below.
 2. Confirm all referenced skills/prompts/tools exist.
 3. If the plan targets `prompts/*.prompt.md`, validate frontmatter.
 4. Run the plan through `dry_run_prompts.py` for smoke-testing.
 
 ## Verification Checklist
+
 - [ ] Goal is clearly stated and scoped
 - [ ] All phases have explicit verification gates
 - [ ] Every `skill:`, `prompt:`, `tool:` reference resolves to an existing asset

@@ -47,8 +47,8 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 - A minimal GitHub Actions snippet for issue creation
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Use the provided artifacts as the only source of scope.
 2. Keep outputs concise and directly usable.
@@ -60,6 +60,7 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 ## Phases
 
 > ### Phase 1: Parse the source artifacts
+>
 > **Goal:** identify the epic, feature, and supporting planning inputs.
 
 > **Full content:** `templates/hermes-breakdown-plan/phases.md`
@@ -72,8 +73,8 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 4. Add the minimal automation snippet.
 5. Verify the outputs and backup state.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-plan/`:
+
 - `phases.md`

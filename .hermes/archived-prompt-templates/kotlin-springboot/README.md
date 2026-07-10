@@ -5,6 +5,7 @@ Lines: 79
 Templates: 8
 
 ## Templates
+
 - `configuration.md`
 - `data_layer_repositories.md`
 - `dependency_injection__com.md`

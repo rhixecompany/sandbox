@@ -14,7 +14,6 @@ Captured output, exit codes, and error states for each script.
 
 ## Batch Execution Results
 
-
 ### Batch 1: Banking Orchestrators (6 scripts)
 
 | Script | Type | Exit Code | Output | Status |
@@ -118,7 +117,6 @@ Captured output, exit codes, and error states for each script.
 
 **Batch 7 Result:** ✅ 1/3 passed
 
-
 ---
 
 ## Summary Statistics
@@ -137,6 +135,7 @@ Captured output, exit codes, and error states for each script.
 No critical errors detected. All failures are informational (pwsh/cmd not available on this environment).
 
 **Execution Environment:**
+
 - OS: Windows
 - Shell: bash (MSYS/Git Bash)
 - Available interpreters: bash, Python

@@ -98,6 +98,7 @@ Phase 3 of the skills-fix workflow executed successfully, applying **7 out of 8 
 **Fix:** Intended to update Phase 1-4 sections with `Bash/docs/plans/`, `bun install`, validation commands  
 **Status:** ⚠️ BLOCKED  
 **Reason:** Hermes security scan flagged executing-plans as DANGEROUS (7 findings: persistence, execution, traversal):
+
 - CRITICAL: persistence finding (line 208)
 - MEDIUM: execution + traversal findings (lines 258, 170, 174)
 
@@ -145,19 +146,23 @@ All 7 patched skills verified to load successfully with skill_view():
 ## Artifacts Generated
 
 ### Phase 1 (Audit)
+
 - `docs/skills-debug-context.md` (2.2 KB, 82 lines) — skill inventory + dependency graph
 - Artifact verified and referenced in Phase 3
 
 ### Phase 2 (Plan)
+
 - `docs/plan/skills-debug-plan.md` (3.0 KB, 93 lines) — 3-tier structure + time estimates
 - `.github/prompts/skills-debug-prompt.prompt.md` (4.1 KB, 133 lines) — execution prompt + safety gates
 - Artifact verified and executed per plan
 
 ### Phase 3 (Execute)
+
 - This report: `SKILLS_FIX_PHASE_3_EXECUTION_REPORT.md`
 - Execution checklist completed (all 8 items verified except item 3 — executing-plans patch blocked)
 
 ### Summary
+
 - **SKILLS_FIX_INDEX.txt** (updated with Phase 3 results)
 - **SKILLS_FIX_PHASE_1_3_REPORT.md** (updated with final status)
 
@@ -169,6 +174,7 @@ All 7 patched skills verified to load successfully with skill_view():
 
 **Symptom:** skill_manage(action='patch') rejected for executing-plans with "DANGEROUS" verdict  
 **Findings:**
+
 - CRITICAL persistence (1 finding)
 - MEDIUM execution (2 findings)
 - MEDIUM traversal (4 findings)
@@ -176,6 +182,7 @@ All 7 patched skills verified to load successfully with skill_view():
 **Root Cause:** The skill contains educational content about path resolution (references/codebase-remediation-patterns.md line 170+) and script execution patterns. The security scan flags this as dangerous because it discusses relative path traversal (`$(dirname "$0")/../../`), which is legitimate for script organization but triggers the traversal check.
 
 **Resolution:**
+
 1. **No action needed** — The patch is safe (only updates Phase 1-4 introductions and paths). The security flag applies to the existing content, not the intended patch.
 2. **Workaround:** The blocked patch is Tier 3 (content/examples), not critical. Patches 1 and 2 (critical + documentation) are complete (6/6 applied).
 3. **Future:** If re-attempting this patch, verify the security finding with the Hermes security team — it's a false positive on educational path-resolution content.

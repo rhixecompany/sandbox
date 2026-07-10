@@ -50,12 +50,14 @@ graph TD
 ## Requirements Matrix
 
 ### Functional Requirements
+
 - FR-1: Lint must pass before tests run.
 - FR-2: Tests run across Node 18/20/22 matrix.
 - FR-3: Build artifact uploaded and reusable by deploy jobs.
 - FR-4: Staging deploys automatically on `main` push; production requires manual approval.
 
 ### Security Requirements
+
 - SR-1: All third-party actions pinned to a full SHA.
 - SR-2: Least-privilege `permissions:` declared per job.
 - SR-3: Cloud auth via OIDC, no long-lived keys.
@@ -103,11 +105,13 @@ deploy_url: string     # Description: URL of staged deployment
 ## Execution Constraints
 
 ### Runtime Constraints
+
 - **Timeout**: 30 min per job (`jobs.<id>.timeout-minutes: 30`).
 - **Concurrency**: `group: ci-${{ github.ref }}`, `cancel-in-progress: true`.
 - **Resource Limits**: Standard GitHub-hosted runner (2 vCPU / 7 GB).
 
 ### Environmental Constraints
+
 - **Runner Requirements**: `ubuntu-latest`.
 - **Network Access**: npm registry, container registry, cloud API (OIDC).
 - **Permissions**: `contents: read`; `id-token: write` (OIDC); `packages: write`.
@@ -133,6 +137,7 @@ deploy_url: string     # Description: URL of staged deployment
 ## Monitoring & Observability
 
 ### Key Metrics
+
 - **Success Rate**: target >= 98%.
 - **Execution Time**: target <= 8 min (test+lint+build).
 - **Resource Usage**: runner CPU/mem via GitHub Metrics.
@@ -162,11 +167,13 @@ deploy_url: string     # Description: URL of staged deployment
 ## Compliance & Governance
 
 ### Audit Requirements
+
 - **Execution Logs**: retained 90 days via GitHub.
 - **Approval Gates**: production deploy requires `environment: production` reviewer.
 - **Change Control**: spec edited first, then YAML (see Change Management).
 
 ### Security Controls
+
 - **Access Control**: repo-admin manages secrets; devs open PRs.
 - **Secret Management**: rotated quarterly; OIDC preferred.
 - **Vulnerability Scanning**: `npm audit` + Trivy on each build.
@@ -184,17 +191,20 @@ deploy_url: string     # Description: URL of staged deployment
 ## Validation Criteria
 
 ### Workflow Validation
+
 - **VLD-001**: YAML parses (`actionlint` clean).
 - **VLD-002**: All actions pinned to SHA.
 - **VLD-003**: Every job declares explicit `permissions:`.
 
 ### Performance Benchmarks
+
 - **PERF-001**: cold-install + test <= 6 min.
 - **PERF-002**: artifact upload <= 30 s.
 
 ## Change Management
 
 ### Update Process
+
 1. **Specification Update**: Modify this document first.
 2. **Review & Approval**: PR review by 1 maintainer.
 3. **Implementation**: Apply changes to `.github/workflows/ci.yml`.
@@ -208,12 +218,14 @@ deploy_url: string     # Description: URL of staged deployment
 | 1.0     | 2026-07-09 | Initial dry-run spec       | Hermes Agent  |
 
 ## Related Specifications
+
 - Infrastructure spec: `docs/infra.md`
 - Deployment spec: `docs/deploy.md`
 
 ---
 
 ### Dry-Run Execution Notes
+
 - **Action**: Generated specification artifact (no GitHub Actions file written).
 - **Output path**: `results/create-github-action-workflow-specification.output.md`
 - **Skipped refs**: external write to `.github/workflows/` (dry-run); no live repo mutation.

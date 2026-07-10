@@ -12,6 +12,7 @@ This guide covers setup, development workflow, and contribution process for Xame
 ## Project Overview
 
 Xamehi is a full-stack web application combining:
+
 - **Frontend**: React 18 (Create React App)
 - **Backend**: Express.js REST API
 - **External APIs**: Alpha Vantage (currency), Crypto News Live
@@ -44,12 +45,14 @@ REACT_APP_RAPID_API_KEY=your_rapidapi_key_here
 You need to run two servers simultaneously:
 
 **Terminal 1 — Backend API:**
+
 ```bash
 npm run server
 # Starts nodemon on port 8000
 ```
 
 **Terminal 2 — React Frontend:**
+
 ```bash
 npm start
 # Starts React dev server (default port 3000)

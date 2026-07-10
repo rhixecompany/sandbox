@@ -76,6 +76,7 @@ bundled_skills:
 ### Use Global Configuration
 
 By default, Hermes uses the global configuration:
+
 - LLM provider: opencode-zen (big-pickle model)
 - MCP servers: 7 servers configured
 - Skills: 660+ available
@@ -256,10 +257,12 @@ hermes chat -q "Generate documentation" -s documentation
 Hermes maintains persistent memory across sessions:
 
 **Global Memory**: `~/AppData/Local/hermes/memories/`
+
 - MEMORY.md — Agent's knowledge about environment & preferences
 - USER.md — User profile information
 
 **Session-Specific**: `~/AppData/Local/hermes/sessions/`
+
 - All past conversations preserved
 - Searchable with `session_search` tool
 - Auto-learning from interactions
@@ -331,6 +334,7 @@ hermes cron add \
 **Edits**: Use `hermes config set` or `hermes config edit`
 
 Key sections:
+
 - `model` — LLM provider/model
 - `mcp_servers` — External tool servers
 - `terminal` — Shell execution settings
@@ -351,6 +355,7 @@ Override any global settings for project scope.
 **Contains**: API keys (NOT in git)
 
 Required:
+
 - LLM API keys (OPENROUTER_API_KEY, etc.)
 - Service credentials (GitHub, Docker, etc.)
 
@@ -579,8 +584,8 @@ mcp_servers:
     enabled: true
 ```
 
-3. Restart Hermes
-4. Tools available as `mcp_my_custom_*`
+1. Restart Hermes
+2. Tools available as `mcp_my_custom_*`
 
 ### Custom Skills
 
@@ -620,9 +625,9 @@ hermes doctor                  # Diagnostics
 
 ### Documentation
 
-- Official: https://hermes-agent.nousresearch.com/docs
-- GitHub: https://github.com/NousResearch/hermes-agent
-- Community: https://reddit.com/r/hermesagent
+- Official: <https://hermes-agent.nousresearch.com/docs>
+- GitHub: <https://github.com/NousResearch/hermes-agent>
+- Community: <https://reddit.com/r/hermesagent>
 
 ### Debugging
 

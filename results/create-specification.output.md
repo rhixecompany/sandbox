@@ -7,6 +7,7 @@
 
 > **SKIPPED REFERENCES** (referenced by the prompt but NOT present in this workspace —
 > content authored inline from observed artifacts instead):
+>
 > - `templates/create-specification/best_practices_for_ai-rea.md` — template missing
 > - `templates/create-specification/8_dependencies__external_.md` — template missing
 > These are noted as `DRY-REF` inline below where their content would have been injected.
@@ -26,6 +27,7 @@ artifacts to a runtime, and UI rendering.
 structured inventory of capabilities.
 
 **Assumptions.**
+
 - Source artifacts live under `.github/agents/*.agent.md`, `.github/instructions/*.instructions.md`,
   and `prompts/*.prompt.md` (verified counts: 174 / 186 / 215).
 - The repository is a git working tree; git history is available but not required for registry generation.
@@ -44,6 +46,7 @@ structured inventory of capabilities.
 ## 3. Requirements, Constraints & Guidelines
 
 ### Functional Requirements
+
 - **REQ-001**: The system SHALL discover all `*.agent.md` files under `.github/agents/` and record each as a `Copilot` concept.
 - **REQ-002**: The system SHALL discover all `*.instructions.md` files under `.github/instructions/` and attribute them to the `Copilot` ecosystem.
 - **REQ-003**: The system SHALL discover all `*.prompt.md` files under `prompts/` and record each as a `Hermes` concept.
@@ -53,26 +56,31 @@ structured inventory of capabilities.
 - **REQ-007**: `counts` SHALL report `copilot_agents`, `copilot_instructions`, `hermes_prompts`, `codex_twins`.
 
 ### Security Requirements
+
 - **SEC-001**: The system SHALL perform read-only access to source artifacts; it MUST NOT modify, delete, or rename source files.
 - **SEC-002**: Generated artifacts SHALL be written only under `results/` and `docs/`; no writes outside the repo working tree.
 - **SEC-003**: Paths recorded in the registry SHALL be repository-relative (no absolute or `..` traversal).
 
 ### Constraints
+
 - **CON-001**: Registry generation MUST be deterministic — identical inputs SHALL yield byte-identical JSON (`generated` timestamp excepted, which MUST be isolated for diff purposes).
 - **CON-002**: Registry size MUST stay machine-parseable; the schema MUST NOT nest unbounded recursion.
 - **CON-003**: A missing ecosystem source directory SHALL be treated as zero entries, not an error.
 
 ### Guidelines
+
 - **GUD-001**: Prefer stable, slug-like `concept` values derived from the source filename (strip extension and prefix).
 - **GUD-002**: Keep the registry as the single source of truth; derived reports SHOULD reference registry paths rather than re-deriving counts.
 
 ### Patterns
+
 - **PAT-001**: Discover → Normalize → Cross-reference → Validate → Emit. No step may run before its dependency completes.
 - **PAT-002**: Separate a `counts` summary block from the `registry` detail block to allow cheap health checks without parsing all rows.
 
 ## 4. Interfaces & Data Contracts
 
 ### 4.1 Registry Schema (canonical)
+
 ```json
 {
   "generated": "2026-07-09T18:56:00Z",
@@ -97,6 +105,7 @@ structured inventory of capabilities.
 ```
 
 ### 4.2 Codex Twin Linking (interface contract)
+
 | Field | Type | Rule |
 |-------|------|------|
 | `concept` | string | Unique per row |
@@ -106,6 +115,7 @@ structured inventory of capabilities.
 | `hermes_prompt` | string | Repo-relative path or `""` |
 
 ### 4.3 Invocation Interface
+
 - **Input:** repository root path (default: CWD).
 - **Output:** `results/consolidated-agent-registry.json`, `docs/consolidation-report.md`.
 - **Exit codes:** `0` success; `2` invalid schema after emit (validation failure); `3` I/O permission error.
@@ -139,6 +149,7 @@ checks fast. Read-only constraints (SEC-001) prevent the indexer from becoming a
 ## 8. Dependencies & External Integrations
 
 > **DRY-REF** (`8_dependencies__external_.md` missing — authored inline.)
+
 - **EXT-001**: Local filesystem (POSIX/git-bash) — discovery source; read-only integration.
 - **EXT-002**: `python3` (3.11+) runtime + `json`, `pathlib`, `re` (stdlib) — no third-party network deps.
 - **EXT-003**: GitHub Actions (CI) — consumes the registry diff gate; integration type: pipeline step.
@@ -177,4 +188,5 @@ def to_concept(path: str) -> str:
 - `docs/consolidation-report.md` — current overlap/merge-candidate analysis.
 - `docs/agents-cross-reference.md` — human-facing cross-reference of agents.
 - `results/consolidated-agent-registry.json` — live registry artifact this spec governs.
+
 ```

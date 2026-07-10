@@ -5,6 +5,7 @@
 **Severity**: LOW
 
 ## Summary
+
 Django + DRF + gunicorn video streaming platform. Private repository.
 
 ## Findings
@@ -18,10 +19,12 @@ Django + DRF + gunicorn video streaming platform. Private repository.
 | F-005 | INFO | settings.py not at root (in subdirectory) | Noted |
 
 ## Actions Taken
+
 - Removed duplicate whitenoise from requirements.txt
 - Added .env.example with all required environment variables
 - Created audit report
 
 ## Deferred
+
 - CI/CD setup (owner action required)
 - .gitignore /build section (low risk, deferred)

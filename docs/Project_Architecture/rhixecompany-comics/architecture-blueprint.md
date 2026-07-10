@@ -89,11 +89,13 @@ The project combines two independent stacks sharing a PostgreSQL database:
 ## 4. Data Flow
 
 ### Reading Flow
+
 ```
 Browser → Next.js Frontend → Django API → Domain Apps → PostgreSQL
 ```
 
 ### Scraping Flow
+
 ```
 Celery Beat → Celery Worker → Scrapy Spider → External Sources
                                                    ↓

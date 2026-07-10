@@ -25,6 +25,7 @@ Create a complete MCP server implementation that:
    - **Prompts**: Predefined templates for specific tasks (❌ Not yet supported in Copilot Studio)
 
 4. **Implementation Structure:**
+
    ```
    /apiDefinition.swagger.json  (Power Platform connector schema)
    /apiProperties.json         (Connector metadata and configuration)

@@ -14,7 +14,7 @@ Instructions for creating effective and maintainable custom agent files that pro
 - File naming convention: lowercase with hyphens (e.g., `test-specialist.agent.md`)
 - Location: `.github/agents/` directory (repository-level) or `agents/` directory (organization/enterprise-level)
 - Purpose: Define specialized agents with tailored expertise, tools, and instructions for specific tasks
-- Official documentation: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents
+- Official documentation: <https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents>
 
 ## Required Frontmatter
 
@@ -349,7 +349,7 @@ The recommended approach is **prompt-based orchestration**:
 tools: ["read", "edit", "search", "agent"]
 ```
 
-2. For each step, invoke a sub-agent by providing:
+1. For each step, invoke a sub-agent by providing:
 
 - **Agent name** (the identifier users select/invoke)
 - **Agent spec path** (the `.agent.md` file to read and follow)
@@ -629,7 +629,7 @@ Example of a simple orchestrator that validates code through multiple specialize
 - `repositoryName`, `prNumber`
 - `basePath` (e.g., `projects/${repositoryName}/pr-${prNumber}`)
 
-2. Invoke specialized agents sequentially (each agent reads its own `.agent.md` spec):
+1. Invoke specialized agents sequentially (each agent reads its own `.agent.md` spec):
 
 ```text
 Step 1: Security Review
@@ -689,7 +689,7 @@ This example shows a more complete orchestration with **pre-flight checks**, **c
 - Mark as **SUCCESS** or **FAILED**.
 - If the step is **Required** and failed: stop the pipeline and write a failure summary.
 
-5. End with a final summary section (overall status, artifacts, next actions).
+1. End with a final summary section (overall status, artifacts, next actions).
 
 **Sub-agent invocation prompt (example):**
 

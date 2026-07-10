@@ -5,6 +5,7 @@ Lines: 155
 Templates: 4
 
 ## Templates
+
 - `example.md`
 - `phases.md`
 - `process.md`

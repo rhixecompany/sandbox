@@ -88,18 +88,21 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### TypeScript
+
 - Use strict mode TypeScript as configured in `tsconfig.json`
 - Follow established type patterns from existing codebase
 - Use `@/` path aliases for imports
 - Define types in `src/types/` directory
 
 ### Next.js 16 (App Router)
+
 - Use App Router conventions (page.tsx, layout.tsx, loading.tsx, error.tsx)
 - Server Components by default; Client Components only when needed
 - Server Actions for all mutations with "use server" directive
 - API routes under `src/app/api/`
 
 ### Database (Drizzle ORM + PostgreSQL)
+
 - Define schemas in `src/database/schema.ts`
 - Use DAL pattern (constructor-based classes in `src/dal/`)
 - Promote all database operations through DAL layer

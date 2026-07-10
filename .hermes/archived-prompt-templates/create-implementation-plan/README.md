@@ -5,6 +5,7 @@ Lines: 229
 Templates: 17
 
 ## Templates
+
 - `1_requirements__constrain.md`
 - `2_implementation_steps.md`
 - `3_alternatives.md`

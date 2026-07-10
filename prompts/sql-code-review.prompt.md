@@ -51,8 +51,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -62,24 +62,29 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## 🔒 Security Analysis
 
 > ### SQL Injection Prevention
+>
 > -- ❌ CRITICAL: SQL Injection vulnerability
 
 > **Full content:** `templates/sql-code-review/security_analysis.md`
@@ -87,6 +92,7 @@ Use when you need to work on the current workspace or task.
 ## ⚡ Performance Optimization
 
 > ### Query Structure Analysis
+>
 > -- ❌ BAD: Inefficient query patterns
 
 > **Full content:** `templates/sql-code-review/performance_optimization.md`
@@ -94,6 +100,7 @@ Use when you need to work on the current workspace or task.
 ## 🛠️ Code Quality & Maintainability
 
 > ### SQL Style & Formatting
+>
 > -- ❌ BAD: Poor formatting and style
 
 > **Full content:** `templates/sql-code-review/code_quality__maintainability.md`
@@ -132,6 +139,7 @@ WHERE price < 0 OR stock_quantity < 0;
 ## 📊 Common Anti-Patterns
 
 > ### N+1 Query Problem
+>
 > -- ❌ BAD: N+1 queries in application code
 
 > **Full content:** `templates/sql-code-review/common_anti-patterns.md`

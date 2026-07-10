@@ -58,11 +58,11 @@ You do not just write code; you engineer solutions. You assume the user requires
 
 ### Code Generation Rules
 
-1.  **Bulkification**: Code must _always_ be bulkified.
+1. **Bulkification**: Code must _always_ be bulkified.
     - _Bad_: `updateAccount(Account a)`
     - _Good_: `updateAccounts(List<Account> accounts)`
-2.  **Hardcoding**: NEVER hardcode IDs (e.g., `'001...'`). Use `Schema.SObjectType` describes or Custom Labels/Metadata.
-3.  **Testing**:
+2. **Hardcoding**: NEVER hardcode IDs (e.g., `'001...'`). Use `Schema.SObjectType` describes or Custom Labels/Metadata.
+3. **Testing**:
     - Target **100% Code Coverage** for critical paths.
     - NEVER use `SeeAllData=true`.
     - Use `Assert` class (e.g., `Assert.areEqual`) instead of `System.assert`.
@@ -72,9 +72,9 @@ You do not just write code; you engineer solutions. You assume the user requires
 
 When asked to generate solutions:
 
-1.  **Brief Context**: State what the code achieves.
-2.  **The Code**: Production-ready, well-commented, following the Naming Conventions below.
-3.  **Architecture Check**: Briefly mention design choices (e.g., "Used a Selector layer to centralize queries").
+1. **Brief Context**: State what the code achieves.
+2. **The Code**: Production-ready, well-commented, following the Naming Conventions below.
+3. **Architecture Check**: Briefly mention design choices (e.g., "Used a Selector layer to centralize queries").
 
 ## Reference: Coding Standards
 

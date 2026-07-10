@@ -94,6 +94,7 @@ The prompt body said "always use pnpm". **Do not.** The repository declares
 `pnpm` exists on PATH only incidentally (via nvm4w) and is NOT used by any script.
 
 Global toolchain (verified):
+
 - **Bun** 1.3.14+ (runtime + package manager + test runner)
 - **TypeScript** `latest` (strict, `noEmit` at root; `tsc --noEmit` in toolkit)
 - **ESLint** 10 flat config (`eslint.config.mts`) — zero-warning gate
@@ -226,6 +227,7 @@ generator tooling keys off it.
 ### 5.5 Inventory discipline (DO THIS)
 
 Before creating/renaming agents, instructions, prompts, skills, hooks, or plugins:
+
 1. Read `reports/inventory/refresh-agent-inventory-summary-*.md` (latest date) for the
    current counts and conflicts.
 2. Check `.github/scripts/` — audit/remediation tooling lives there
@@ -241,6 +243,7 @@ Before creating/renaming agents, instructions, prompts, skills, hooks, or plugin
 This is the TypeScript/Bun engine. Treat it as a real application, not a script folder.
 
 **Architecture** (from `projects/Bash/AGENTS.md` + `architecture.md`):
+
 - **Phase-Based Orchestration**, 6 phases: Discovery → Clone → Triage → Debug →
   Remediation → Cross-Reference.
 - **Entry points**: TypeScript in `src/` (run via `bunx tsx`), PowerShell orchestrator
@@ -281,6 +284,7 @@ delegate to `src/`. Logs to `logs/`. CI gate: `.github/workflows/bash-scripts-ci
 ## 7. Subprojects — `projects/*`
 
 Each subproject is autonomous. Examples and their stacks:
+
 - `projects/Resume_maker/` — Bun/TS resume → PDF generator.
 - `projects/Banking/`, `projects/comicwise/`, `projects/ecom/` — live under the Bash
   toolkit's `scripts/` (e.g. `Banking/install-agents.sh`, `comicwise/quality-gate.ps1`).
@@ -298,6 +302,7 @@ Rule: **Use the subproject's local instructions, not Bash conventions.** Do not 
 ## 8. CI / GitHub Workflows
 
 17 workflows in `.github/workflows/`. The ones you'll touch most:
+
 - `bash-scripts-ci.yml` — toolkit verify (shfmt, shellcheck, verify-dryrun, vitest).
   Path trigger `Bash/**` (mismatch — see §13).
 - `validate-agentic-workflows-pr.yml`, `validate-readme.yml`, `check-plugin-structure.yml`,
@@ -347,6 +352,7 @@ When adding a workflow, follow the existing flat style and keep path filters tig
 ## 12. Common Task Recipes
 
 **Add a custom Copilot agent**
+
 1. `cp` an existing similar `.github/agents/*.agent.md` as a template.
 2. Set frontmatter (`description` single-quoted, `name`, `tools`, `model`, `target`,
    `infer`). Write behavior below the `---`.
@@ -355,14 +361,17 @@ When adding a workflow, follow the existing flat style and keep path filters tig
 5. Update `docs/agents-cross-reference*.md` if it adds commands.
 
 **Lint/format one changed file only**
+
 ```bash
 cd projects/Bash
 bunx prettier --config .prettierrc.ts --write <file>
 bunx eslint --config eslint.config.mts <file.ts> --max-warnings=0 --format=compact
 ```
+
 (See §3 — do NOT run the full `bun run lint:strict` for a one-file change.)
 
 **Run the toolkit on the asset library**
+
 ```bash
 cd projects/Bash
 powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode cross-ref
@@ -404,6 +413,7 @@ deliberately; do not silently propagate them.
 ## 14. Feedback
 
 Sections most likely to need iteration (flag to the user):
+
 - §13 stale-reference list — confirm whether to auto-fix `copilot-instructions.md` and
   the CI path filter, or leave as documentation only.
 - §5.5 inventory tooling — exact script to run post-edit may vary; verify against

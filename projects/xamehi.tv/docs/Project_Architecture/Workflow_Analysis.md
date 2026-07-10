@@ -20,11 +20,13 @@ A media streaming dashboard application with Django REST backend and React front
 **Description:** User browses movies and series, views details, and streams video content.
 
 **Entry Points:**
+
 - **Backend API:** `video/views/movies_views.py`, `series_views.py`
 - **Frontend:** React components with Material-UI, Redux state management
 - **Models:** `video/models.py` — Movie, Series models
 
 **Steps:**
+
 1. User lands on React frontend (Material-UI themed dashboard)
 2. Frontend dispatches Redux action to fetch movies/series list
 3. Redux saga/thunk calls Django REST API (`/api/movies/`, `/api/series/`)
@@ -38,6 +40,7 @@ A media streaming dashboard application with Django REST backend and React front
 11. JWT authentication validates user requests via `SimpleJWT`
 
 **Sequence Diagram:**
+
 ```
 React SPA               Django REST API             PostgreSQL              External APIs
     |                        |                          |                       |
@@ -70,6 +73,7 @@ React SPA               Django REST API             PostgreSQL              Exte
 ```
 
 **Error Handling:**
+
 - Movie not found → 404, show "not found" in React
 - Video stream unavailable → show error message, suggest alternative
 - JWT expired → refresh token flow or redirect to login
@@ -77,6 +81,7 @@ React SPA               Django REST API             PostgreSQL              Exte
 - API errors → Redux error state with user-friendly messages
 
 **Test Patterns:**
+
 - Backend: `python manage.py test` — `video/tests.py`
 - Frontend: `cd frontend && npm test`
 - CORS + proxy troubleshooting in development
@@ -88,11 +93,13 @@ React SPA               Django REST API             PostgreSQL              Exte
 **Description:** User registration, login, profile management via django-allauth and SimpleJWT.
 
 **Entry Points:**
+
 - `video/views/user_views.py` — user registration and auth views
 - `video/urls/user_urls.py` — auth endpoint routing
 - `video/decorators.py` — custom decorators for access control
 
 **Steps:**
+
 1. User navigates to sign-up page
 2. Frontend collects email, username, password
 3. POST to `/api/auth/register/` via DRF endpoint
@@ -104,6 +111,7 @@ React SPA               Django REST API             PostgreSQL              Exte
 9. django-allauth handles social auth and email verification
 
 **Error Handling:**
+
 - Duplicate email → validation error from backend
 - Weak password → django-allauth password validators
 - Token expired → auto-refresh via interceptor

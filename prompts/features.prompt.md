@@ -85,10 +85,10 @@ pnpm test:e2e tests/e2e/user-flows.spec.ts
 
 **Document Version:** 1.0.0 | **Last Updated:** 2026-02-01
 
-
 ## Template References
 
 Detailed templates in `templates/features/`:
+
 - `phase_2_user_profile_features.md`
 - `phase_3_comic_features.md`
 - `phase_4_chapter_reader.md`

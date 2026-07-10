@@ -66,6 +66,7 @@ graph TD
     style A fill:#e1f5fe
     style E fill:#e8f5e8
 ```
+
 ````
 
 ## Jobs & Dependencies
@@ -257,6 +258,7 @@ When analyzing the workflow file:
 5. **Cross-Reference**: Link instead of repeat information
 
 Focus on creating a specification that serves as both documentation and a template for workflow updates.
+
 ```
 
 

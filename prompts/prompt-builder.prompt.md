@@ -33,6 +33,7 @@ Guide users through creating high-quality `.prompt.md` files by systematically g
 Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask` and `agent` modes, the workflow asks exactly one focused question for each of the 9 topic areas (9 questions total) across identity, persona, task, context, instructions, output, tools, configuration, and validation. In `edit` mode, use the existing draft as the primary source and ask only targeted gap questions where needed.
 
 **Critical rules (must appear within the first 15% of execution):**
+
 - Never overwrite existing `.prompt.md` files without user confirmation
 - Always follow patterns from the 4 reference prompts listed in the Reference Patterns section of this prompt
 - Generate prompts optimized for AI consumption (token-efficient, structured)
@@ -49,8 +50,8 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 - A confirmation of the generated file path
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **Discovery first** — Gather all requirements through the 9-area questionnaire before generating
 2. **Pattern-driven** — Follow patterns from the 4 reference prompts listed in the Reference Patterns section
@@ -76,6 +77,7 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 | `agent` | Create a prompt for a specific agent or workflow | You're building a new command/agent interaction |
 
 Phase execution by mode:
+
 - `ask` — run all 3 phases in full
 - `edit` — run Phase 1 as targeted gap discovery based on the existing draft, then run Phases 2 and 3
 - `agent` — run all 3 phases in full, and restrict tool selection in Phase 2 to agent-appropriate tools
@@ -95,6 +97,7 @@ Phase execution by mode:
 ## Phases
 
 > ### Phase 1: Discovery
+>
 > **Goal:** Gather all requirements through systematic questioning.
 
 > **Full content:** `templates/prompt-builder/phases.md`
@@ -115,6 +118,7 @@ Based on analysis of existing prompts, ensure the generated prompt includes:
 ## Reference Patterns
 
 Generated prompts follow patterns from existing high-quality prompts:
+
 - [`playwright-generate-test.prompt.md`](prompts/playwright-generate-test.prompt.md) — Code generation scaffold
 - [`create-github-action-workflow-specification.prompt.md`](prompts/create-github-action-workflow-specification.prompt.md) — Structured specification
 - [`architecture-blueprint-generator.prompt.md`](prompts/architecture-blueprint-generator.prompt.md) — Comprehensive blueprint
@@ -129,8 +133,8 @@ Generated prompts follow patterns from existing high-quality prompts:
 5. Verify against repository patterns and best practices
 6. Return the final `.prompt.md` file path
 
-
 ## Template References
 
 Detailed templates in `templates/prompt-builder/`:
+
 - `phases.md`

@@ -41,6 +41,7 @@ Iteratively refine a user's task prompt into a high-quality, detailed prompt thr
 Use when you need to improve a draft prompt before submitting it to an AI system. Requires the Joyride VS Code extension for clipboard operations. This prompt does NOT write code - it only refines prompts.
 
 **Critical rules (must appear within the first 15% of execution):**
+
 - DO NOT WRITE ANY CODE - this is a prompt refinement workflow only
 - Always ask clarifying questions before finalizing the prompt
 - Copy the final markdown to clipboard using Joyride after each revision
@@ -58,8 +59,8 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 - Verification that the user is satisfied with the result
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **No code** - DO NOT write any code; this workflow is for prompt refinement only
 2. **Interrogate first** - Ask specific questions to understand scope, objectives, deliverables, and constraints before refining
@@ -83,6 +84,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 ## Tools Required
 
 > **Requirement**: VS Code Joyride extension installed and active
+>
 > - Install from VS Code Extensions marketplace: search "Joyride"
 
 > **Full content:** `templates/boost-prompt/tools_required.md`
@@ -90,6 +92,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 ## Phases
 
 > ### Phase 1: Interrogate
+>
 > **Goal:** Understand the task scope, objectives, deliverables, and constraints.
 
 > **Full content:** `templates/boost-prompt/phases.md`
@@ -103,9 +106,9 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 5. Present in chat
 6. Ask for feedback and iterate if needed
 
-
 ## Template References
 
 Templates in `templates/boost-prompt/`:
+
 - `phases.md`
 - `tools_required.md`

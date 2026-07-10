@@ -4,7 +4,7 @@
 
 Xamehi is a manga and comic reading platform with a Django REST backend and React frontend. Users can browse a catalog of comics, read chapters in a dedicated reader interface, bookmark series, rate and comment on content. The backend serves content via a RESTful API, while the frontend provides a responsive reading experience.
 
-**Repository:** https://github.com/Rhixe-company/xamehi  
+**Repository:** <https://github.com/Rhixe-company/xamehi>  
 **Stack:** Django 4.x | Django REST Framework | React 18 | Redux | PostgreSQL | Bootstrap 5  
 **Status:** Initial Scaffold — Active Development
 

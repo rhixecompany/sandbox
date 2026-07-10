@@ -151,7 +151,7 @@ This rule enforces the principles of Object Calisthenics to ensure clean, mainta
    }
 ```
 
-5. **One Dot per Line**:
+1. **One Dot per Line**:
    - Avoid violating Law of Demeter by only having a single dot per line.
 
    ```csharp
@@ -178,7 +178,7 @@ This rule enforces the principles of Object Calisthenics to ensure clean, mainta
    }
    ```
 
-6. **Don't abbreviate**:
+2. **Don't abbreviate**:
    - Use meaningful names for classes, methods, and variables.
    - Avoid abbreviations that can lead to confusion.
 
@@ -193,7 +193,7 @@ This rule enforces the principles of Object Calisthenics to ensure clean, mainta
    }
    ```
 
-7. **Keep entities small (Class, method, namespace or package)**:
+3. **Keep entities small (Class, method, namespace or package)**:
    - Limit the size of classes and methods to improve code readability and maintainability.
    - Each class should have a single responsibility and be as small as possible.
 
@@ -223,7 +223,7 @@ This rule enforces the principles of Object Calisthenics to ensure clean, mainta
    }
    ```
 
-8. **No Classes with More Than Two Instance Variables**:
+4. **No Classes with More Than Two Instance Variables**:
    - Encourage classes to have a single responsibility by limiting the number of instance variables.
    - Limit the number of instance variables to two to maintain simplicity.
    - Do not count ILogger or any other logger as instance variable.
@@ -259,7 +259,7 @@ This rule enforces the principles of Object Calisthenics to ensure clean, mainta
    }
    ```
 
-9. **No Getters/Setters in Domain Classes**:
+5. **No Getters/Setters in Domain Classes**:
    - Avoid exposing setters for properties in domain classes.
    - Use private constructors and static factory methods for object creation.
    - **Note**: This rule applies primarily to domain classes, not DTOs or data transfer objects.

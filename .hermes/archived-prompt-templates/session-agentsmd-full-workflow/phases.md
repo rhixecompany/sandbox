@@ -5,6 +5,7 @@
 ## Phases
 
 ### Phase 1: Intake
+
 | Field | Details |
 | --- | --- |
 | Goal | Determine scope, targets, and repository boundaries before edits. |
@@ -13,6 +14,7 @@
 | Validation | All requested targets are discovered and mapped to actual directories. |
 
 ### Phase 2: Generate AGENTS
+
 | Field | Details |
 | --- | --- |
 | Goal | Create or update AGENTS.md content per target project with accurate project-specific commands and guidance. |
@@ -21,6 +23,7 @@
 | Validation | File exists, is readable markdown, and reflects actual local command/tooling context. |
 
 ### Phase 3: Git Commit and Push
+
 | Field | Details |
 | --- | --- |
 | Goal | Commit AGENTS.md changes per project repo and push to remote branches safely. |
@@ -29,6 +32,7 @@
 | Validation | Commit exists and remote branch contains expected commit SHA. |
 
 ### Phase 4: Reconcile and Report
+
 | Field | Details |
 | --- | --- |
 | Goal | Ensure branch naming consistency and produce final audit-ready table. |

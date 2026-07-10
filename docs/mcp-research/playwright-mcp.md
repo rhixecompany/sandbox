@@ -1,6 +1,6 @@
 # Playwright MCP Server
 
-**Source:** https://github.com/microsoft/playwright-mcp
+**Source:** <https://github.com/microsoft/playwright-mcp>
 
 ## Overview
 
@@ -139,6 +139,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test playwright
 /reload-mcp
@@ -155,7 +156,7 @@ docker run -i --rm \
 
 ## References
 
-- GitHub: https://github.com/microsoft/playwright-mcp
-- Playwright MCP Configuration: https://playwright.dev/mcp/configuration/options
-- mcpservers.org: https://mcpservers.org/servers/Automata-Labs-team/MCP-Server-Playwright
-- Playwright CLI (alternative): https://github.com/microsoft/playwright-cli
+- GitHub: <https://github.com/microsoft/playwright-mcp>
+- Playwright MCP Configuration: <https://playwright.dev/mcp/configuration/options>
+- mcpservers.org: <https://mcpservers.org/servers/Automata-Labs-team/MCP-Server-Playwright>
+- Playwright CLI (alternative): <https://github.com/microsoft/playwright-cli>

@@ -5,6 +5,7 @@
 ## Adaptive Card Template Language
 
 ### Conditional Rendering
+
 ```json
 {
   "type": "TextBlock",
@@ -13,6 +14,7 @@
 ```
 
 ### Number Formatting
+
 ```json
 {
   "type": "TextBlock",
@@ -21,6 +23,7 @@
 ```
 
 ### Data Binding
+
 ```json
 {
   "type": "Container",
@@ -30,6 +33,7 @@
 ```
 
 ### Conditional Display
+
 ```json
 {
   "type": "Image",

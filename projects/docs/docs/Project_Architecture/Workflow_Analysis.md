@@ -20,11 +20,13 @@ This project is a **documentation-only repository** — it contains no executabl
 **Description:** Reading and cross-referencing documentation from this project.
 
 **Entry Points:**
+
 - `README.md` — project overview
 - `DEPENDENCY_AUDIT.md` — dependency audit findings
 - `RESEARCH_APPENDIX.md` — supplementary research
 
 **Steps:**
+
 1. User/agent navigates to the docs project
 2. Reads `README.md` for context and structure
 3. Reads `docs/Project_Architecture/` for architecture blueprints
@@ -32,9 +34,11 @@ This project is a **documentation-only repository** — it contains no executabl
 5. References `RESEARCH_APPENDIX.md` for supplemental information
 
 **Error Handling:**
+
 - N/A — static documentation, no runtime errors
 
 **Test Patterns:**
+
 - Markdown linting (inherited from root workspace)
 - VS Code shared workspace configuration
 
@@ -45,16 +49,19 @@ This project is a **documentation-only repository** — it contains no executabl
 **Description:** Shared VS Code settings, launch configurations, and task definitions.
 
 **Entry Points:**
+
 - `.vscode/settings.json`
 - `.vscode/launch.json`
 - `.vscode/extensions.json`
 - `.vscode/tasks.json`
 
 **Steps:**
+
 1. User opens workspace, VS Code loads shared settings
 2. Recommended extensions are suggested for installation
 3. Build tasks are available via `.vscode/tasks.json`
 4. Debug configurations are pre-configured in `.vscode/launch.json`
 
 **Error Handling:**
+
 - N/A — configuration files only, validated on load by VS Code

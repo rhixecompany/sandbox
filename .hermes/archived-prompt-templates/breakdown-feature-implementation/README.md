@@ -5,4 +5,5 @@ Lines: 165
 Templates: 1
 
 ## Templates
+
 - `output_format.md`

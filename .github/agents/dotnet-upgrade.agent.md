@@ -170,16 +170,20 @@ dotnet msbuild <ProjectName>.csproj /t:GenerateRestoreGraphFile /p:RestoreGraphO
 1. **Create branch:** `upgrade/<project>-to-<targetVersion>`
 2. **Edit `<TargetFramework>`** in `.csproj` to the suggested version (e.g., `net9.0`)
 3. **Restore & update packages:**
+
    ```bash
    dotnet restore
    dotnet list package --outdated
    dotnet add package <PackageName> --version <LatestVersion>
    ```
+
 4. **Build & test:**
+
    ```bash
    dotnet build <ProjectName>.csproj
    dotnet test <ProjectName>.Tests.csproj
    ```
+
 5. **Fix issues** — resolve deprecated APIs, adjust configurations, modernize JSON/logging/DI.
 6. **Commit & push** PR with test evidence and checklist.
 

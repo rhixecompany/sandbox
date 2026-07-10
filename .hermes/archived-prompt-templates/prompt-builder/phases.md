@@ -9,6 +9,7 @@
 **Goal:** Gather all requirements through systematic questioning.
 
 Preflight requirement:
+
 - Run `/context-map` first to identify relevant prompt files, references, and dependencies.
 
 **Steps:**
@@ -32,6 +33,7 @@ These 9 topic areas guide the discovery process. The actual interactive question
 **Goal:** Produce the complete `.prompt.md` file using gathered requirements.
 
 **Steps:**
+
 1. Compile all answers into a prompt structure
 2. Select appropriate frontmatter (description, agent mode, tools, model) and write the generated file to `.github/prompts/<filename>.prompt.md` unless the user specifies a different path during discovery (Topic 1)
 3. Write persona section with specific role and expertise
@@ -46,6 +48,7 @@ These 9 topic areas guide the discovery process. The actual interactive question
 **Goal:** Confirm the generated prompt follows repository patterns and is production-ready.
 
 **Steps:**
+
 1. Verify all required sections are present (frontmatter, persona, task, instructions, input, output, quality)
 2. Check against high-quality pattern references (blueprints, specifications, guides)
 3. Confirm the prompt is token-efficient and well-structured

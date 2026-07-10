@@ -1,6 +1,6 @@
 # Sequential Thinking MCP Server
 
-**Source:** https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+**Source:** <https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking>
 
 ## Overview
 
@@ -62,6 +62,7 @@ Add to `claude_desktop_config.json`:
 **Windows:** Use `cmd /c npx` instead of `npx`
 
 **Docker:**
+
 ```json
 {
   "mcpServers": {
@@ -87,6 +88,7 @@ Add to `claude_desktop_config.json`:
 #### Manual Configuration
 
 **Method 1: User Configuration (Recommended)**
+
 1. Open Command Palette: `Ctrl + Shift + P`
 2. Run: `MCP: Open User Configuration`
 3. Add to `mcp.json`:
@@ -103,6 +105,7 @@ Add to `claude_desktop_config.json`:
 ```
 
 **Windows NPX:**
+
 ```json
 {
   "command": "cmd",
@@ -111,6 +114,7 @@ Add to `claude_desktop_config.json`:
 ```
 
 **Docker:**
+
 ```json
 {
   "command": "docker",
@@ -158,6 +162,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test sequential-thinking
 /reload-mcp
@@ -165,7 +170,7 @@ hermes mcp test sequential-thinking
 
 ## Alternative Implementation
 
-There's also an alternative Python-based implementation at: https://github.com/arben-adm/mcp-sequential-thinking
+There's also an alternative Python-based implementation at: <https://github.com/arben-adm/mcp-sequential-thinking>
 
 ```bash
 # Using uv
@@ -174,6 +179,6 @@ claude mcp add sequential-thinking -- uv run --directory /path/to/mcp-sequential
 
 ## References
 
-- GitHub (Official): https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
-- mcpservers.org: https://mcpservers.org/servers/modelcontextprotocol/sequentialthinking
-- Alternative: https://github.com/arben-adm/mcp-sequential-thinking
+- GitHub (Official): <https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking>
+- mcpservers.org: <https://mcpservers.org/servers/modelcontextprotocol/sequentialthinking>
+- Alternative: <https://github.com/arben-adm/mcp-sequential-thinking>

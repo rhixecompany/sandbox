@@ -83,16 +83,19 @@
 ### Plan Structure
 
 **Tier 1: Critical Fixes** (3 items, 19 minutes)
+
 - systematic-debugging: Update metadata references
 - dispatching-parallel-agents: Add SandBox context
 - enhance-markdown: Clarify Phase 3 logic
 
 **Tier 2: Documentation** (3 items, 21 minutes)
+
 - plans-and-specs: Add workflow examples
 - hermes-skill-library-maintenance: Add dependency tracking
 - writing-plans: Add validation checklist
 
 **Tier 3: Content Updates** (2 items, 9 minutes)
+
 - subagent-driven-development: Refresh examples
 - executing-plans: Update paths/workflows
 
@@ -165,32 +168,36 @@ grep -i "sandbox\|bash/" ~/AppData/Local/hermes/skills/*/SKILL.md | wc -l
 ### Phase 1 Outputs
 
 ✓ **docs/skills-debug-context.md** — Audit report
-  - 162+ skill catalog
-  - Issue categorization (12-15 items)
-  - Dependency graph
-  - Tier-based recommendations
+
+- 162+ skill catalog
+- Issue categorization (12-15 items)
+- Dependency graph
+- Tier-based recommendations
 
 ### Phase 2 Outputs
 
 ✓ **docs/plan/skills-debug-plan.md** — Implementation plan
-  - 8-skill patch list
-  - Tier-based execution order
-  - Time estimates (45-55 min total)
-  - Verification checklist
-  - Rollback procedures
+
+- 8-skill patch list
+- Tier-based execution order
+- Time estimates (45-55 min total)
+- Verification checklist
+- Rollback procedures
 
 ### Phase 3 Outputs
 
 ✓ **.github/prompts/skills-debug-prompt.prompt.md** — Execution prompt
-  - Safety checkpoints
-  - Fix specifications (8 patches)
-  - Verification strategy
-  - Success criteria
+
+- Safety checkpoints
+- Fix specifications (8 patches)
+- Verification strategy
+- Success criteria
 
 ✓ **docs/SKILLS_FIX_EXECUTION_SUMMARY.md** — Complete summary
-  - 3-phase overview
-  - Timeline and risk assessment
-  - Next steps and approval status
+
+- 3-phase overview
+- Timeline and risk assessment
+- Next steps and approval status
 
 ---
 

@@ -1,6 +1,7 @@
 # Hermes Hooks Summary
 
 ## Discovery
+
 Source: `~/AppData/Local/hermes/hooks`
 
 | Path | Type | Size | Notes |
@@ -27,9 +28,11 @@ Source: `~/AppData/Local/hermes/hooks`
 | `hooks/session-auto-commit/auto-commit.sh` | helper | 118 | legacy delegator |
 
 ## Triage
+
 - Active hookset under `~/AppData/Local/hermes/hooks` contains 3 hook families and one docs verification hook.
 - Live registration confirmed: session-logger, session-auto-commit, governance-audit.
 
 ## Findings
+
 - Key risk: repeated filesystem/homepath assumptions and one live registration that does not match the intended lifecycle.
 - Full issue log is in this document and was also appended to `docs/repo-rerun-history.md` for cross-referencing.

@@ -1,8 +1,8 @@
-# Code After Refactoring 1:
+# Code After Refactoring 1
 
 > Extracted from `java-refactoring-remove-parameter.prompt.md`.
 
-## Code After Refactoring 1:
+## Code After Refactoring 1
 
 ```java
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)

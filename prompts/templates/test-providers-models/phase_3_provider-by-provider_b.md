@@ -4,6 +4,7 @@ Generated: 2026-07-09
 Target: 5 accessible free models + rate-limited candidates (when available)
 
 ## Benchmark Tasks (3 standard tasks per model)
+
 1. **Reasoning** — Multi-step logic problem (river crossing puzzle)
 2. **Tool Calling** — Execute a function with structured args (get_weather)
 3. **Knowledge** — Factual QA with citation requirement
@@ -22,15 +23,18 @@ Target: 5 accessible free models + rate-limited candidates (when available)
 | copilot | GitHub Copilot | ⚠️ Rate-limited | — | — | — | ~22m cooldown |
 
 ## Test Harness
-- Script: `scripts/benchmark_providers.py` 
+
+- Script: `scripts/benchmark_providers.py`
 - Uses `hermes chat -q "..." --provider <p> --model <m>` pattern
 - Outputs JSON results for Phase 4 comparison
 
 ## Rate Limit Strategy
+
 - ✅ Run accessible models first (gemini, nous, huggingface, ollama-cloud, xai-oauth)
 - ⚠️ Queue rate-limited models with backoff (monitor `hermes auth list` for cooldown)
 - 📝 Document auth failures and rate limits per provider/model
 
 ## Status
+
 - ✅ 5/5 accessible models complete (15 tasks)
 - ⚠️ 3 rate-limited models need cooldown monitoring

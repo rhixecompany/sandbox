@@ -52,9 +52,11 @@ hermes tools
 ```
 
 ### Common Toolsets
+
 `web`, `search`, `terminal`, `file`, `browser`, `vision`, `image_gen`, `moa`, `skills`, `tts`, `todo`, `memory`, `session_search`, `cronjob`, `code_execution`, `delegation`, `clarify`, `homeassistant`, `messaging`, `spotify`, `discord`, `discord_admin`, `debugging`, `safe`
 
 ### Platform Presets
+
 - `hermes-cli` — CLI default
 - `hermes-telegram` — Telegram bot
 - `mcp-<server>` — Dynamic MCP toolsets
@@ -165,21 +167,25 @@ hermes tools --platform cli | grep mcp-
 ## Common Patterns
 
 ### Minimal CLI (web + terminal only)
+
 ```bash
 hermes chat --toolsets "web,terminal"
 ```
 
 ### Full Coding Agent
+
 ```bash
 hermes chat --toolsets "web,terminal,file,browser,skills,code_execution,delegation,memory"
 ```
 
 ### Bot with Messaging
+
 ```bash
 hermes chat --toolsets "web,terminal,file,skills,messaging" --platform telegram
 ```
 
 ### Research Only
+
 ```bash
 hermes chat --toolsets "web,search,skills,memory,session_search"
 ```

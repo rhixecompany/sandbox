@@ -26,9 +26,11 @@ This runs: format check → type check → lint strict → import check → heal
 1. **Branch from `main`**: `git checkout -b feature/my-feature`
 2. **Make changes** following project conventions
 3. **Run all quality gates**:
+
    ```bash
    pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build
    ```
+
 4. **Write tests** for new features
 5. **Update documentation** for user-facing changes
 6. **Open a PR** against `main`

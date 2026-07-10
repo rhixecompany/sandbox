@@ -3,6 +3,7 @@
 > Extracted from `javascript-typescript-jest.prompt.md`.
 
 ## Legacy Prompt Details
+
 ### Test Structure
 
 - Name test files with `.test.ts` or `.test.js` suffix

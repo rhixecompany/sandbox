@@ -1,3 +1,11 @@
+---
+name: shared-deps-core
+title: Shared Template — Dependencies Core
+description: Standard core dependencies table for prompt files
+version: 1.0.0
+tags: [template, shared, dependencies]
+---
+
 # Core Dependencies (Shared Across Fix Prompts)
 
 These dependencies appear in most fix/sync prompts. Each prompt adds

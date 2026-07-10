@@ -17,6 +17,7 @@
 | 1.3 | Identify related tests and patterns | Reference list |
 
 #### Tasks
+
 - Start from the target area
 - Follow imports and exports
 - Include tests that may change
@@ -34,6 +35,7 @@
 | 2.3 | Add reference patterns and risks | Context map |
 
 #### Tasks
+
 - Keep the table output concise
 - Make the map easy to scan
 - Highlight anything that may block the change
@@ -51,6 +53,7 @@
 | 3.3 | Prepare the final map | Review-ready map |
 
 #### Tasks
+
 - Remove unnecessary detail
 - Keep the map current and specific
 - Make sure the affected tests are visible
@@ -68,6 +71,7 @@
 | 4.3 | State the main risks | Risk assessment |
 
 #### Tasks
+
 - Keep the handoff short
 - Make the next step obvious
 - Do not implement the change here

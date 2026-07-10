@@ -94,6 +94,7 @@ User Action → React Component → Axios → Express/Django → Database
 ## 5. Development Workflow
 
 Three concurrent dev servers:
+
 - **Terminal 1**: `node index.js` (Express on port 5000)
 - **Terminal 2**: `python manage.py runserver` (Django on port 8000)
 - **Terminal 3**: `npm start` (React on port 3000)

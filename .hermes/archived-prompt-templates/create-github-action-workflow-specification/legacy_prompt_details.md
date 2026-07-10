@@ -3,6 +3,7 @@
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
 ## Legacy Prompt Details
+
 # Create GitHub Actions Workflow Specification
 
 Create a comprehensive specification for the GitHub Actions workflow: `${input:WorkflowFile}`.

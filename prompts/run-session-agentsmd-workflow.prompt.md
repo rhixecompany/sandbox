@@ -20,8 +20,8 @@ tags:
 
 ---
 ## Goal
-Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
 
+Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -70,8 +70,8 @@ Subagents are optional and should only be used when they improve speed or reliab
 - Style: deterministic, explicit, and minimal-risk.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Execute all phases unless genuinely blocked.
 - Resolve targets only from the provided argument and existing workspace paths.
@@ -93,6 +93,7 @@ Subagents are optional and should only be used when they improve speed or reliab
 ## Phases
 
 > ### Phase 1: Resolve Scope
+>
 > ### Phase 2: Generate AGENTS
 
 > **Full content:** `templates/run-session-agentsmd-workflow/phases.md`
@@ -144,8 +145,8 @@ Subagents are optional and should only be used when they improve speed or reliab
 - Reconcile branch naming for PR readiness.
 - Return compact repo-branch-SHA-status report.
 
-
 ## Template References
 
 Detailed templates in `templates/run-session-agentsmd-workflow/`:
+
 - `phases.md`

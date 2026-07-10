@@ -5,4 +5,5 @@ Lines: 238
 Templates: 1
 
 ## Templates
+
 - `legacy_prompt_details.md`

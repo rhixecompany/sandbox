@@ -19,11 +19,13 @@ The SandBox root serves as the monorepo workspace root. It contains no applicati
 **Description:** Onboarding a new developer or AI agent into the SandBox workspace involves discovering all subprojects, reading their AGENTS.md files, and loading project-level conventions.
 
 **Entry Points:**
+
 - `AGENTS.md` (root) — workspace conventions and subproject registry
 - `PROJECT_RULES.md` — project-specific rules for the monorepo
 - `SESSION_REPORT.md` — rolling session log
 
 **Steps:**
+
 1. Agent reads root `AGENTS.md` for workspace conventions, toolchain, and profile inventory
 2. Agent discovers subprojects under `projects/Bash/`, `projects/Resume_maker/`, and `projects/*/`
 3. For each subproject, agent reads its `AGENTS.md` for architecture, tech stack, and commands
@@ -31,6 +33,7 @@ The SandBox root serves as the monorepo workspace root. It contains no applicati
 5. Agent identifies project type and selects appropriate Hermes profile
 
 **Sequence Diagram:**
+
 ```
 Agent                Root AGENTS.md      Subproject AGENTS.md      PROJECT_RULES.md
   |                       |                     |                       |
@@ -52,10 +55,12 @@ Agent                Root AGENTS.md      Subproject AGENTS.md      PROJECT_RULES
 ```
 
 **Error Handling:**
+
 - Missing `AGENTS.md` in a subproject → fall back to reading `README.md` and source files
 - Missing `PROJECT_RULES.md` → use `MASTER_RULES.md` as fallback
 
 **Test Patterns:**
+
 - Validate that all subproject AGENTS.md files exist
 - Verify AGENTS.md format consistency across projects
 
@@ -66,10 +71,12 @@ Agent                Root AGENTS.md      Subproject AGENTS.md      PROJECT_RULES
 **Description:** Running the continuous integration pipeline for the SandBox workspace.
 
 **Entry Points:**
+
 - `.github/workflows/` — GitHub Actions workflow definitions
 - `orchestrator-unified.ps1` — PowerShell orchestrator
 
 **Steps:**
+
 1. Push to `main` or `develop` triggers GitHub Actions
 2. CI workflow checks out code
 3. Runs `bash tests/verify-dryrun.sh` for Bash toolkit
@@ -77,9 +84,11 @@ Agent                Root AGENTS.md      Subproject AGENTS.md      PROJECT_RULES
 5. Reports results to GitHub
 
 **Error Handling:**
+
 - CI failure → notification via GitHub commit status
 - All destructive operations support `--dry-run` for safe preview
 
 **Test Patterns:**
+
 - `tests/verify-dryrun.sh` — validates dry-run flag behavior
 - `test-all.sh` — runs full test suite across shell/PowerShell wrappers

@@ -1,6 +1,6 @@
 # Paystack Developer Documentation
 
-> **Source:** https://paystack.com/docs
+> **Source:** <https://paystack.com/docs>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -29,6 +29,7 @@ curl https://api.paystack.co/transferrecipient -H "Authorization: Bearer YOUR_SE
 ## API Authentication
 
 All Paystack API calls use secret keys:
+
 ```
 Authorization: Bearer YOUR_SECRET_KEY
 ```

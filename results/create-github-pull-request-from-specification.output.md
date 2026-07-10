@@ -35,6 +35,7 @@ The prompt prescribes this sequence (all skipped):
 ## Phase 3 — Verification
 
 **Inputs required but missing:**
+
 - Specification file path or content (the `input` the prompt is meant to act on)
 - `${input:targetBranch}` — no target branch provided
 - `.github/pull_request_template.md` — template not present in workspace
@@ -44,6 +45,7 @@ The prompt prescribes this sequence (all skipped):
 ## Phase 4 — Hand-off
 
 ### What would happen with real inputs
+
 1. A spec file (e.g., a `.spec.md` or specification prompt output) would be read.
 2. The PR template at `.github/pull_request_template.md` would supply structured fields (title, description, changes, testing notes).
 3. `get_pull_request` would check for existing PRs on the current branch (`development`).
@@ -53,6 +55,7 @@ The prompt prescribes this sequence (all skipped):
 7. The creator would be assigned via `update_issue`.
 
 **To unblock real execution, provide:**
+
 - A specification `.md` file (or the spec content inline)
 - The target branch name (e.g. `main`, `production`)
 - Optionally, create `.github/pull_request_template.md` with the desired PR format

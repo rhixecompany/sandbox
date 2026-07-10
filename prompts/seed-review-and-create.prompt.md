@@ -55,6 +55,7 @@ BaseSeeder<T>.seed() → loadData() → validateData() → processBatches() → 
 ## Tasks
 
 > ### 1. Review Existing Seeders
+>
 > Review all files in `src/scripts/seed/seeders/` for:
 
 > **Full content:** `templates/seed-review-and-create/tasks.md`
@@ -75,8 +76,8 @@ pnpm lint:strict   # Must be 0 Lint errors
 - **Schema location**: `src/database/schema.ts` (27 tables, 4 enums)
 - **Zod schemas**: `src/schemas/seed/*.seed.ts`
 
-
 ## Template References
 
 Templates in `templates/seed-review-and-create/`:
+
 - `tasks.md`

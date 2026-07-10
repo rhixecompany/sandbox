@@ -39,4 +39,3 @@ python manage.py collectstatic
 - Use Django ORM and DRF patterns on the Python side.
 - Use CommonJS in Express files and ES modules in React code where the repo already does.
 - Keep CORS and secret handling environment-driven.
-

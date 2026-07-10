@@ -7,12 +7,14 @@
 ### Publish to Organization
 
 **For Agent Developers:**
+
 1. Build agent with Microsoft 365 Agents Toolkit
 2. Test thoroughly in development
 3. Submit agent for approval
 4. Wait for admin review
 
 **For Admins:**
+
 1. Review submitted agent in admin center
 2. Validate compliance and security
 3. Approve for organizational use
@@ -22,6 +24,7 @@
 ### Deploy via Agent Store
 
 **Developer Steps:**
+
 1. Complete agent development and testing
 2. Package agent for submission
 3. Submit to Partner Center
@@ -30,6 +33,7 @@
 6. Agent appears in Copilot store
 
 **Admin Steps:**
+
 1. Discover agents in Copilot store
 2. Review agent details and permissions
 3. Assign to organization or user groups
@@ -38,6 +42,7 @@
 ### Deploy Organizational Agent
 
 **Admin Deployment Options:**
+
 ```
 Organization-wide:
 - All employees with Copilot license
@@ -50,6 +55,7 @@ Group-based:
 ```
 
 **Configuration Steps:**
+
 1. Navigate to Agents page in admin center
 2. Select agent to deploy
 3. Choose deployment scope:

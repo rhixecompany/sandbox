@@ -4,7 +4,7 @@
 
 ComicWise is a full-featured comic book reading platform that allows users to discover, read, and engage with comic content. The platform supports multiple comic types (manga, manhwa, comics), provides a rich reading experience with customizable settings, and includes social features for community engagement.
 
-**Repository:** https://github.com/Rhixe-company/comicwise  
+**Repository:** <https://github.com/Rhixe-company/comicwise>  
 **Stack:** Next.js 14+ (App Router) | TypeScript | PostgreSQL | Drizzle ORM | NextAuth v5 | tRPC | Tailwind CSS  
 **Status:** Active Development
 

@@ -73,10 +73,11 @@ Use this prompt when you need one runbook to generate aligned architecture, work
   - explicit about degraded modes and failures
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
-
 > Accept these unified inputs:
+>
 > - `mode`: `full | quick | custom`
 
 > **Full content:** `templates/generator-orchestrator/rules.md`
@@ -84,6 +85,7 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 ## Phases
 
 > ### Phase 1: Discovery
+>
 > ### Phase 2: Contract Design
 
 > **Full content:** `templates/generator-orchestrator/phases.md`
@@ -152,10 +154,10 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 4. Safety check: fallback and failure handling are explicit.
 5. Handoff check: manifest and consistency results are present and actionable.
 
-
 ## Template References
 
 Detailed templates in `templates/generator-orchestrator/`:
+
 - `phases.md`
 - `rules.md`
 - `steps.md`

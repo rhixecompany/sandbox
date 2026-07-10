@@ -24,6 +24,7 @@ This plan merges all best practices, code samples, and config patterns from your
 - Backup originals to backup.
 - Generate new, clean, DRY, and Next.js-optimized versions:
   - **Settings Example:**
+
     ```json
     {
       "editor.formatOnSave": true,
@@ -42,7 +43,9 @@ This plan merges all best practices, code samples, and config patterns from your
       }
     }
     ```
+
   - **Extensions Example:**
+
     ```json
     {
       "recommendations": [
@@ -74,6 +77,7 @@ This plan merges all best practices, code samples, and config patterns from your
   - [@auth/core@latest](https://authjs.dev/reference/core)
 - Generate/update all auth files for modular, DRY, and secure integration:
   - auth.ts
+
     ```typescript
     import { Auth } from "@auth/core";
     import { authConfig } from "./auth-config";
@@ -81,7 +85,9 @@ This plan merges all best practices, code samples, and config patterns from your
       return Auth(request, authConfig);
     }
     ```
+
   - auth-config.ts
+
     ```typescript
     import { adapter } from "./auth-adapter";
     import { providers } from "./auth-providers";
@@ -112,7 +118,9 @@ This plan merges all best practices, code samples, and config patterns from your
       }
     };
     ```
+
   - auth-providers.ts
+
     ```typescript
     import GitHub from "@auth/core/providers/github";
     import Credentials from "@auth/core/providers/credentials";
@@ -137,7 +145,9 @@ This plan merges all best practices, code samples, and config patterns from your
       })
     ];
     ```
+
   - auth-adapter.ts
+
     ```typescript
     import { db } from "@/database/db";
     import {
@@ -154,7 +164,9 @@ This plan merges all best practices, code samples, and config patterns from your
       verificationTokensTable: verificationToken
     });
     ```
+
   - auth-actions.ts
+
     ```typescript
     export const signIn = async (provider: string, options?: any) => {
       /* ... */
@@ -166,14 +178,18 @@ This plan merges all best practices, code samples, and config patterns from your
       /* ... */
     };
     ```
+
   - proxy.ts
+
     ```typescript
     export const proxyUrl = process.env.AUTH_PROXY_URL || "";
     export default function proxy() {
       return Response.json({ status: "ok" });
     }
     ```
+
   - route.ts
+
     ```typescript
     import handler from "@/auth";
     export { handler as GET, handler as POST };
@@ -186,10 +202,12 @@ This plan merges all best practices, code samples, and config patterns from your
 **Actions:**
 
 - Run:
+
   ```sh
   pnpm lint
   pnpm build
   ```
+
 - Manually check VSCode settings and extensions.
 - Test auth endpoints and integration.
 

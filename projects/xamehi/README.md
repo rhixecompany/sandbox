@@ -131,14 +131,17 @@ NODE_ENV=production node index.js
 ## Coding Standards
 
 ### Python/Django
+
 - PEP 8, Django conventions
 - DRF patterns for API development
 
 ### React
+
 - ESLint react-app configuration
 - ES6 modules, Axios for HTTP
 
 ### Express
+
 - CommonJS modules
 - Middleware-based routing
 - CORS configured for development

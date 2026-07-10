@@ -39,8 +39,8 @@ Use when you need to optimize agentsmd for the current workspace or task.
 - A concise verification note summarizing what was changed, assumptions made, and any missing sources.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the chat response structured, deterministic, and easy to act on; if the artifact is large, provide a concise summary plus the file update.
@@ -52,22 +52,27 @@ Use when you need to optimize agentsmd for the current workspace or task.
 The outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, Phase 2 Execute = Phases 2-3, Phase 3 Verify = Phase 4, Phase 4 Hand off = final presentation.
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Produce the AGENTS.md rewrite/update described in the source prompt details; do not constrain scope when full coverage updates are required.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Source Prompt Details
+
 ```text
 ## Plan: Comprehensive AGENTS.md for Agentic Coding in Banking Repo
 

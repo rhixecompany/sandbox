@@ -5,6 +5,7 @@ Lines: 797
 Templates: 7
 
 ## Templates
+
 - `complete_implementation_phases.md`
 - `critical_path__blockers.md`
 - `database_architecture_referenc.md`

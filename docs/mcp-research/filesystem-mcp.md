@@ -91,20 +91,20 @@ Access Control: list_allowed_directories
 
 ```json
 {
-	"mcpServers": {
-		"filesystem": {
-			"command": "docker",
-			"args": [
-				"run",
-				"-i",
-				"--rm",
-				"--mount",
-				"type=bind,src=/host/path,dst=/projects,ro",
-				"mcp/filesystem",
-				"/projects"
-			]
-		}
-	}
+ "mcpServers": {
+  "filesystem": {
+   "command": "docker",
+   "args": [
+    "run",
+    "-i",
+    "--rm",
+    "--mount",
+    "type=bind,src=/host/path,dst=/projects,ro",
+    "mcp/filesystem",
+    "/projects"
+   ]
+  }
+ }
 }
 ```
 
@@ -114,12 +114,12 @@ Access Control: list_allowed_directories
 
 ```json
 {
-	"mcpServers": {
-		"filesystem": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-filesystem", "/allowed/path"]
-		}
-	}
+ "mcpServers": {
+  "filesystem": {
+   "command": "npx",
+   "args": ["-y", "@modelcontextprotocol/server-filesystem", "/allowed/path"]
+  }
+ }
 }
 ```
 

@@ -1,3 +1,11 @@
+---
+name: shared-verification-checklist
+title: Shared Template — Verification Checklist
+description: Standard verification checklist section for prompt files
+version: 1.0.0
+tags: [template, shared, verification]
+---
+
 # Shared Template — Verification Checklist
 
 Use this standard verification checklist pattern in prompts.

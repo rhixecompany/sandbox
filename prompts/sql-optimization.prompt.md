@@ -50,8 +50,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -61,24 +61,29 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## 🎯 Core Optimization Areas
 
 > ### Query Performance Analysis
+>
 > -- ❌ BAD: Inefficient query patterns
 
 > **Full content:** `templates/sql-optimization/core_optimization_areas.md`
@@ -86,6 +91,7 @@ Use when you need to work on the current workspace or task.
 ## 📊 Performance Tuning Techniques
 
 > ### JOIN Optimization
+>
 > -- ❌ BAD: Inefficient JOIN order and conditions
 
 > **Full content:** `templates/sql-optimization/performance_tuning_techniques.md`
@@ -93,6 +99,7 @@ Use when you need to work on the current workspace or task.
 ## 🔍 Query Anti-Patterns
 
 > ### SELECT Performance Issues
+>
 > -- ❌ BAD: SELECT * anti-pattern
 
 > **Full content:** `templates/sql-optimization/query_anti-patterns.md`
@@ -173,10 +180,10 @@ ORDER BY avg_elapsed_time DESC;
 
 Focus on measurable performance improvements and always test optimizations with realistic data volumes and query patterns.
 
-
 ## Template References
 
 Detailed templates in `templates/sql-optimization/`:
+
 - `core_optimization_areas.md`
 - `database-agnostic_optimization.md`
 - `performance_tuning_techniques.md`

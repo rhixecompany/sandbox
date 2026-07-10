@@ -76,12 +76,12 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
-2. All operational scripts should end up under `Bash/**` unless a framework seed
+1. All operational scripts should end up under `Bash/**` unless a framework seed
    script is exempt.
-4. Request user confirmation before deleting migrated originals after parity validation passes.
-5. Keep dry-run behavior aligned with real execution.
-6. Require peer review for AST-sensitive TypeScript changes.
-7. Prefer small, verifiable changes over broad rewrites.
+2. Request user confirmation before deleting migrated originals after parity validation passes.
+3. Keep dry-run behavior aligned with real execution.
+4. Require peer review for AST-sensitive TypeScript changes.
+5. Prefer small, verifiable changes over broad rewrites.
 
 ## Skills Required
 

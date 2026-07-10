@@ -58,12 +58,12 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-	"mcpServers": {
-		"desktop-commander": {
-			"command": "npx",
-			"args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
-		}
-	}
+ "mcpServers": {
+  "desktop-commander": {
+   "command": "npx",
+   "args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
+  }
+ }
 }
 ```
 

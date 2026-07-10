@@ -46,6 +46,7 @@ skills:
 This prompt generates comprehensive agent context files (architecture blueprints, folder structures, technology stacks) for the project and all subprojects, then performs a full audit and enhancement of VS Code workspace configuration. It ensures every subproject has proper `AGENTS.md` files and that all VS Code JSON configs are triaged, debugged, and verified.
 
 **Critical rules:**
+
 - Apply to this project AND all subprojects
 - Do not stop until plan and specs are fully completed
 - All VS Code JSON files must be triaged, audited, debugged, enhanced, and verified
@@ -89,8 +90,8 @@ This prompt generates comprehensive agent context files (architecture blueprints
 > **Full phase details:** `templates/agents-system-prompt-context-fix/phases.md`
 
 ## Rules
+>
 > Core rules: [Core rules](templates/_shared/rules-core.md)
-
 
 1. **Recursive scope** — Apply to project root and all subprojects containing `.vscode/` or `AGENTS.md`
 2. **Sequential execution** — Context files first, then VS Code audit
@@ -105,4 +106,5 @@ This prompt generates comprehensive agent context files (architecture blueprints
 ## Template References
 
 Detailed section content extracted to template files in `templates/agents-system-prompt-context-fix/`:
+
 - `phases.md` — Full Phase breakdown with steps

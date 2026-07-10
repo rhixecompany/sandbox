@@ -1,4 +1,4 @@
-# Source: https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins
+# Source: <https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins>
 
 # Hermes Agent Plugins — Comprehensive Summary
 
@@ -7,6 +7,7 @@
 Hermes uses a **plugin system** for adding custom tools, hooks, and integrations without modifying core code. Plugins are directories dropped into `~/AppData/Local/hermes/plugins/` with a `plugin.yaml` manifest and Python code.
 
 ### Plugin Structure
+
 ```
 ~/AppData/Local/hermes/plugins/my-plugin/
 ├── plugin.yaml          # manifest
@@ -16,6 +17,7 @@ Hermes uses a **plugin system** for adding custom tools, hooks, and integrations
 ```
 
 **Project-local plugins** under `./.hermes/plugins/` are **disabled by default**. Enable with:
+
 ```bash
 HERMES_ENABLE_PROJECT_PLUGINS=true
 ```
@@ -25,6 +27,7 @@ HERMES_ENABLE_PROJECT_PLUGINS=true
 ## Minimal Working Example
 
 ### `plugin.yaml`
+
 ```yaml
 name: hello-world
 version: "1.0"
@@ -32,6 +35,7 @@ description: A minimal example plugin
 ```
 
 ### `__init__.py`
+
 ```python
 """Minimal Hermes plugin — registers a tool and a hook."""
 
@@ -150,6 +154,7 @@ python: ">=3.10"
 ## Common Patterns
 
 ### Tool with Config
+
 ```python
 def register(ctx):
     # Access config via ctx.config
@@ -158,6 +163,7 @@ def register(ctx):
 ```
 
 Config in `~/AppData/Local/hermes/config.yaml`:
+
 ```yaml
 my-plugin:
   api_key: "secret"
@@ -165,6 +171,7 @@ my-plugin:
 ```
 
 ### Skill Bundle
+
 ```python
 def register(ctx):
     ctx.register_skill(
@@ -176,6 +183,7 @@ def register(ctx):
 Accessed as: `skill_view("my-plugin:my-skill")`
 
 ### CLI Command
+
 ```python
 def register(ctx):
     def setup(parser):

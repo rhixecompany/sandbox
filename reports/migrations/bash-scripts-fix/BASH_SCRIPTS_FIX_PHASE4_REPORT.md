@@ -11,6 +11,7 @@
 Phase 4 executes the 7-batch migration strategy defined in Phase 2.
 
 **Target Architecture:**
+
 - All 54 conflicting scripts migrated to `Bash/migrations/` directory
 - Hard-coded paths converted to environment variables
 - All references updated in package.json, .github/workflows/
@@ -128,6 +129,7 @@ ls -la Bash/migrations/banking-orchestrators/
 ### Migration Steps
 
 Similar pattern to Batch 1:
+
 1. Create target: `Bash/migrations/banking-install-framework/`
 2. Copy and replace paths
 3. Verify parity (--help, --dry-run, error handling)
@@ -192,6 +194,7 @@ Similar pattern to Batch 1:
 ### Environment Variables to Define
 
 **In Bash/package.json:**
+
 ```json
 {
   "scripts": {
@@ -202,6 +205,7 @@ Similar pattern to Batch 1:
 ```
 
 **In shell scripts:**
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -214,6 +218,7 @@ cd "$PROJECT_BANKING_DIR" || exit 1
 ```
 
 **In .github/workflows:**
+
 ```yaml
 env:
   SCRIPT_ROOT: ${{ github.workspace }}/Bash
@@ -231,11 +236,13 @@ steps:
 ## Hard-Coded Path Conversion Examples
 
 **Before:**
+
 ```bash
 cd C:\Users\Alexa\Desktop\SandBox\projects\Banking
 ```
 
 **After:**
+
 ```bash
 cd "${PROJECT_BANKING_DIR:-$(pwd)/../projects/Banking}" || exit 1
 ```
@@ -293,6 +300,7 @@ After each batch migration:
 - [ ] `.github/workflows/*.yml` - Add env section
 - [ ] `Bash/docs/*.md` - Update documentation links
 - [ ] Search entire repo for remaining references:
+
   ```bash
   grep -r "projects/Banking" . --exclude-dir=.git --exclude-dir=node_modules \
          --include="*.json" --include="*.yaml" --include="*.yml" --include="*.md"
@@ -303,6 +311,7 @@ After each batch migration:
 ## Git Commit Strategy
 
 **Per-batch commit:**
+
 ```bash
 git checkout -b feat/bash-scripts-migrate
 git add -A
@@ -316,6 +325,7 @@ git commit -m "feat: migrate Banking orchestrators to Bash/migrations (batch 1/7
 ```
 
 **Final consolidation:**
+
 ```bash
 git checkout main
 git merge feat/bash-scripts-migrate --ff-only
@@ -344,6 +354,7 @@ git checkout HEAD~1 projects/Banking/orchestrator.sh
 ## Phase 4 Completion Criteria
 
 ✅ Phase 4 is complete when:
+
 1. All 54 scripts migrated to Bash/migrations/
 2. All hard-coded paths converted to env vars
 3. Parity verified for all 54 scripts

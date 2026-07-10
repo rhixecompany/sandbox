@@ -5,5 +5,6 @@ Lines: 393
 Templates: 2
 
 ## Templates
+
 - `agent_types.md`
 - `deployment_workflows.md`

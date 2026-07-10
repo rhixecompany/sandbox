@@ -5,6 +5,7 @@ Lines: 587
 Templates: 5
 
 ## Templates
+
 - `adaptive_card_template_languag.md`
 - `adaptive_card_types.md`
 - `card_elements.md`

@@ -25,15 +25,18 @@
 ### Scraping Management
 
 #### `POST /scrape/run/`
+
 - **Purpose:** Trigger a scraping job
 - **Body:** `{ "url": "...", "type": "comic|chapter|update" }`
 - **Response:** htmx partial with job ID and status
 
 #### `GET /scrape/status/<job_id>/`
+
 - **Purpose:** Poll status of a scraping job
 - **Response:** htmx partial with progress/status
 
 #### `POST /scrape/schedule/`
+
 - **Purpose:** Schedule recurring scraping
 - **Body:** `{ "spider": "comic_spider", "interval": "daily" }`
 
@@ -92,9 +95,11 @@ cleanup_old_data.delay()             # Retention cleanup
 ## Response Formats
 
 ### htmx (HTML Fragments)
+
 Standard HTML partials returned for htmx requests, swapped into the DOM.
 
 ### JSON (AJAX/axios)
+
 ```json
 {
   "status": "success",

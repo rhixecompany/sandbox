@@ -1,6 +1,6 @@
 # Knowledge Graph Memory MCP Server
 
-**Source:** https://github.com/modelcontextprotocol/servers/tree/main/src/memory
+**Source:** <https://github.com/modelcontextprotocol/servers/tree/main/src/memory>
 
 ## Overview
 
@@ -11,6 +11,7 @@ A **basic implementation of persistent memory using a local knowledge graph** th
 ### Entities
 
 Primary nodes in the knowledge graph. Each entity has:
+
 - **name** (string) — unique identifier
 - **entityType** (string) — classification/category
 - **observations** (string[]) — discrete facts about the entity
@@ -22,6 +23,7 @@ Directed connections between entities, always stored in **active voice** describ
 ### Observations
 
 Discrete pieces of information about an entity that are:
+
 - Atomic/fact-based
 - Stored as strings
 - Attached to specific entities
@@ -104,6 +106,7 @@ Add to `claude_desktop_config.json`:
 #### Manual Configuration
 
 **Method 1: User Configuration (Recommended)**
+
 1. Open Command Palette: `Ctrl + Shift + P`
 2. Run: `MCP: Open User Configuration`
 3. Add server config to `mcp.json`
@@ -177,6 +180,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test memory
 /reload-mcp
@@ -184,26 +188,27 @@ hermes mcp test memory
 
 ## Alternative: Local Memory MCP (npm package)
 
-There's also a standalone npm package: `local-memory-mcp` (https://lobehub.com/mcp/danieleugenewilliams-local-memory-mcp)
+There's also a standalone npm package: `local-memory-mcp` (<https://lobehub.com/mcp/danieleugenewilliams-local-memory-mcp>)
 
 ```bash
 npx local-memory-mcp --db-path ~/.opencode-memory.db
 ```
 
 Or for a specific session:
+
 ```bash
 npx local-memory-mcp --db-path ./.memory/opencode.db --session-id opencode-session
 ```
 
 ## Remote Memory MCP Generator
 
-For shared memory across clients: https://memory.mcpgenerator.com
+For shared memory across clients: <https://memory.mcpgenerator.com>
 
 Works with Cursor, Claude, Copilot, and other MCP clients over HTTP/SSE.
 
 ## References
 
-- GitHub: https://github.com/modelcontextprotocol/servers/tree/main/src/memory
-- mcpservers.org: https://mcpservers.org/servers/modelcontextprotocol/memory
-- Remote Memory Generator: https://memory.mcpgenerator.com
-- LobeHub (local-memory-mcp): https://lobehub.com/mcp/danieleugenewilliams-local-memory-mcp
+- GitHub: <https://github.com/modelcontextprotocol/servers/tree/main/src/memory>
+- mcpservers.org: <https://mcpservers.org/servers/modelcontextprotocol/memory>
+- Remote Memory Generator: <https://memory.mcpgenerator.com>
+- LobeHub (local-memory-mcp): <https://lobehub.com/mcp/danieleugenewilliams-local-memory-mcp>

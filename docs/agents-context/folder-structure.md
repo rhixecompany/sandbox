@@ -19,6 +19,7 @@ SandBox/
 ```
 
 Subprojects with .vscode: 29
+
 - `projects\Banking`
 - `projects\Bash`
 - `projects\Django-Scrapy-Selenium`

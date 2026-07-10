@@ -6,6 +6,7 @@
 
 - [filename.ext](path/to/filename.ext) - Description
 - [filename2.ext](path/to/filename2.ext) - Description
+
 ```
 
 ### Option 2: Detailed Table

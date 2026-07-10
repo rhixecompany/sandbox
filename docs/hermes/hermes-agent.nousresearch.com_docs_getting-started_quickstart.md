@@ -1,4 +1,4 @@
-# Source: https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
+# Source: <https://hermes-agent.nousresearch.com/docs/getting-started/quickstart>
 
 # Hermes Agent Quickstart - Comprehensive Summary
 
@@ -13,6 +13,7 @@ Hermes Agent is a terminal-based AI agent from Nous Research that supports 30+ L
 ## 1. Installation
 
 ### Recommended: Hermes Desktop Installer (macOS/Windows)
+
 Download from [hermes-agent.nousresearch.com/desktop](https://hermes-agent.nousresearch.com/desktop)
 
 ### CLI-Only Install
@@ -31,14 +32,17 @@ Download from [hermes-agent.nousresearch.com/desktop](https://hermes-agent.nousr
 ## 2. Choose a Provider (Most Critical Step)
 
 Run interactive setup:
+
 ```bash
 hermes model
 ```
 
 ### Easiest Path: Nous Portal
+
 ```bash
 hermes setup --portal
 ```
+
 One subscription covers 300+ models + Tool Gateway (web search, image generation, TTS, cloud browser).
 
 ### Provider Catalog
@@ -82,13 +86,16 @@ One subscription covers 300+ models + Tool Gateway (web search, image generation
 | **Custom Endpoint** | Base URL + API key | VLLM, SGLang, Ollama, any OpenAI-compatible |
 
 ### Critical Requirement
+>
 > **Minimum context: 64K tokens** — Models with smaller windows are rejected at startup. For local models: `--ctx-size 65536` (llama.cpp) or `-c 65536` (Ollama).
 
 ### Settings Storage
+
 - **Secrets/tokens** → `~/AppData/Local/hermes/.env`
 - **Non-secret config** → `~/AppData/Local/hermes/config.yaml`
 
 Set values via CLI (auto-routes to correct file):
+
 ```bash
 hermes config set model anthropic/claude-opus-4.6
 hermes config set terminal.backend docker
@@ -105,6 +112,7 @@ hermes --tui    # Modern TUI (recommended)
 ```
 
 **Test prompts:**
+
 ```
 Summarize this repo in 5 bullets and tell me what the main entrypoint is.
 Check my current directory and tell me what looks like the main project file.
@@ -112,6 +120,7 @@ Help me set up a clean GitHub PR workflow for this codebase.
 ```
 
 **Success indicators:**
+
 - Banner shows chosen model/provider
 - Hermes replies without error
 - Can use tools if needed (terminal, file read, web search)

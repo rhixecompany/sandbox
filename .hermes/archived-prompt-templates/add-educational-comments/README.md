@@ -5,4 +5,5 @@ Lines: 181
 Templates: 1
 
 ## Templates
+
 - `configuration_reference.md`

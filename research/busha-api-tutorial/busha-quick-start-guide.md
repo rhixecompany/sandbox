@@ -1,6 +1,6 @@
 # Busha Quick Start Guide
 
-> **Source:** https://docs.busha.io/guides/getting-started/quick-start
+> **Source:** <https://docs.busha.io/guides/getting-started/quick-start>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -12,11 +12,12 @@ This guide walks through setting up a Busha Business Account, completing verific
 ## Step 1: Create Business Account
 
 Option A: From existing personal account → Avatar dropdown → "Open a business account"
-Option B: New registration at https://dash.busha.io/business/signup
+Option B: New registration at <https://dash.busha.io/business/signup>
 
 ## Step 2: Complete KYB Verification
 
 Required for live API access:
+
 - Business registration documents
 - Ownership structure
 - Company information

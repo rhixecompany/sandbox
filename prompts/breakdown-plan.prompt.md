@@ -42,8 +42,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -53,18 +53,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -110,6 +114,7 @@ Before using this prompt, ensure you have the complete testing workflow artifact
 ## Output Format
 
 > Create two primary deliverables:
+>
 > 1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project
 
 > **Full content:** `templates/breakdown-plan/output_format.md`
@@ -153,6 +158,7 @@ Before using this prompt, ensure you have the complete testing workflow artifact
 ## Estimate
 
 {Epic-level t-shirt size: XS, S, M, L, XL, XXL}
+
 ```
 
 ### Feature Issue Template
@@ -346,10 +352,10 @@ This comprehensive GitHub project management approach ensures complete traceabil
 
 ````
 
-
 ## Template References
 
 Detailed templates in `templates/breakdown-plan/`:
+
 - `estimate.md`
 - `output_format.md`
 - `sprint_n_goal.md`

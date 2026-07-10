@@ -51,6 +51,7 @@ trigger: /setup
 ## 5. Authentication System
 
 > ### Architecture (4 modular files)
+>
 > src/auth.ts             → NextAuth({ ...authConfig })  → exports { handlers, aut
 
 > **Full content:** `templates/setup/5_authentication_system.md`
@@ -58,6 +59,7 @@ trigger: /setup
 ## 6. Data Access Layer (DAL)
 
 > ### Base Class (`src/dal/base-dal.ts`)
+>
 > export interface DalOptions {
 
 > **Full content:** `templates/setup/6_data_access_layer_dal.md`
@@ -65,6 +67,7 @@ trigger: /setup
 ## 7. Server Actions — Primary Mutation Pattern
 
 > ### ActionResult Type (`src/actions/types.ts`)
+>
 > export type ActionResult<T> =
 
 > **Full content:** `templates/setup/7_server_actions__primary_muta.md`
@@ -72,6 +75,7 @@ trigger: /setup
 ## 8. Seeding System (CLI + REST API)
 
 > ### Seeder Template (`BaseSeed<T>`)
+>
 > All seeders extend `BaseSeed<T>` and override 4 methods:
 
 > **Full content:** `templates/setup/8_seeding_system_cli__rest_api.md`
@@ -175,6 +179,7 @@ export const config = {
 ## 14. Unique Project Conventions
 
 > ### React Compiler is ON
+>
 > **Do NOT** manually add `useMemo`, `useCallback`, or `memo()`. The React Compile
 
 > **Full content:** `templates/setup/14_unique_project_conventions.md`
@@ -182,6 +187,7 @@ export const config = {
 ## 15. VSCode Configuration
 
 > ### Settings (`.vscode/settings.json`)
+>
 > "editor.defaultFormatter": "esbenp.prettier-vscode",
 
 > **Full content:** `templates/setup/15_vscode_configuration.md`
@@ -189,6 +195,7 @@ export const config = {
 ## 16. Common Tasks — Step-by-Step
 
 > ### Feature Discovery Checklist
+>
 > Before implementing any feature, answer these questions:
 
 > **Full content:** `templates/setup/16_common_tasks__step-by-step.md`
@@ -196,6 +203,7 @@ export const config = {
 ## 17. Testing
 
 > ### Unit Tests (Vitest)
+>
 > pnpm test                        # Run all
 
 > **Full content:** `templates/setup/17_testing.md`
@@ -315,6 +323,7 @@ Key conventions from these files are merged into this setup prompt (§14, §17, 
 ## 24. Quality Gate Debugger
 
 > When debugging and fixing errors/warnings/deprecations, follow this workflow:
+>
 > ### Phase 1: Run Validation Scripts
 
 > **Full content:** `templates/setup/24_quality_gate_debugger.md`
@@ -322,6 +331,7 @@ Key conventions from these files are merged into this setup prompt (§14, §17, 
 ## Template References
 
 Detailed section templates in `templates/setup/`:
+
 - `1_project_architecture.md`
 - `11_react_query_keys_srclibquer.md`
 - `14_unique_project_conventions.md`

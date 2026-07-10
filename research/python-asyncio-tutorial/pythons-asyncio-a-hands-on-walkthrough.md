@@ -1,6 +1,6 @@
 # Python's asyncio: A Hands-On Walkthrough
 
-> **Source:** https://realpython.com/async-io-python
+> **Source:** <https://realpython.com/async-io-python>
 > **Retrieved:** 2026-05-31T12:17:10
 
 ---
@@ -16,11 +16,13 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 ## Key Concepts
 
 ### Concurrency vs. Parallelism
+
 - **Async I/O is concurrency, not parallelism.** It gives a *feeling* of concurrency using a single thread.
 - **Threading** and **multiprocessing** are alternative concurrency models in Python (`threading`, `multiprocessing`, `concurrent.futures`).
 - Async I/O is more closely aligned with threading than multiprocessing but is distinct from both.
 
 ### The Chess Analogy (Miguel Grinberg)
+>
 > **Synchronous**: Judit Polgár plays one game at a time. 24 games × 30 min = **12 hours**.
 >
 > **Asynchronous**: Judit moves from table to table, making one move at each. 24 games × 2 min per round × 30 rounds = **1 hour**.
@@ -28,6 +30,7 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 > There's only one Judit. Playing asynchronously cuts time from 12 hours to 1 hour.
 
 ### Core Building Blocks
+
 - **Awaitable objects** — most often coroutines
 - **Event loop** — schedules and executes coroutines asynchronously
 - **Coroutines** — functions defined with `async def` that can suspend and resume execution
@@ -37,6 +40,7 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 ## `async` and `await` Keywords
 
 ### Definitions
+
 | Construct | Purpose |
 |---|---|
 | `async def` | Defines a coroutine function |
@@ -45,12 +49,14 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 | `async with` | Asynchronous version of `with` for async context managers |
 
 ### Rules
+
 - `await` can **only** be used inside `async def` functions (raises `SyntaxError` otherwise).
 - `await f()` requires `f()` to be an **awaitable** (a coroutine or an object with `.__await__()`).
 - `async def` may use `await`, `return`, or `yield` (all optional).
 - `yield from` inside `async def` raises `SyntaxError`.
 
 ### Minimal Example
+
 ```python
 async def g():
     result = await f()  # Pause g() until f() returns; let something else run
@@ -62,6 +68,7 @@ async def g():
 ## First Example: Synchronous vs. Asynchronous
 
 ### Synchronous Version (`countsync.py`)
+
 ```python
 import time
 
@@ -81,9 +88,11 @@ if __name__ == "__main__":
     elapsed = time.perf_counter() - start
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
 ```
+
 **Output:** ~6.03 seconds
 
 ### Asynchronous Version (`countasync.py`)
+
 ```python
 import asyncio
 
@@ -103,6 +112,7 @@ if __name__ == "__main__":
     elapsed = time.perf_counter() - start
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
 ```
+
 **Output:** ~2.00 seconds
 
 > **Key insight:** `time.sleep()` is a **blocking** call; `asyncio.sleep()` is **non-blocking** and yields control to the event loop.
@@ -120,7 +130,9 @@ if __name__ == "__main__":
   - Third-party: [uvloop](https://github.com/MagicStack/uvloop) (faster alternative)
 
 ### Important Detail
+
 Calling a coroutine directly returns a coroutine object — it does **not** execute it:
+
 ```python
 >>> routine = main()
 >>> routine
@@ -135,9 +147,11 @@ World!
 ## The `asyncio` REPL (Python 3.8+)
 
 ```bash
-$ python -m asyncio
+python -m asyncio
 ```
+
 Allows using `await` directly at the top level without `asyncio.run()`:
+
 ```python
 >>> await main()
 Hello...

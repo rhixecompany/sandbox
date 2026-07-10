@@ -1,12 +1,12 @@
 # Sentry MCP Server
 
-**Source:** https://github.com/getsentry/sentry-mcp
+**Source:** <https://github.com/getsentry/sentry-mcp>
 
 ## Overview
 
 **Sentry's MCP (Model Context Protocol) server** designed for **human-in-the-loop coding agents** (Cursor, Claude Code, etc.). It acts as middleware to the upstream Sentry API, optimized for developer workflows and debugging—not a general-purpose Sentry MCP.
 
-- **Production endpoint**: https://mcp.sentry.dev
+- **Production endpoint**: <https://mcp.sentry.dev>
 - **Based on**: Cloudflare's remote MCP work
 - **License**: MIT
 - **1,055 commits** — active development
@@ -74,6 +74,7 @@ npx @sentry/dotagents install
 
 - **Settings → API → Applications**
 - **Redirect URIs**:
+
   ```
   http://localhost:5173
   http://localhost:5173/oauth/callback
@@ -101,7 +102,7 @@ make dev
 
 ### Verify with MCP Inspector
 
-1. Open Inspector: https://modelcontextprotocol.io/docs/tools/inspector
+1. Open Inspector: <https://modelcontextprotocol.io/docs/tools/inspector>
 2. Enter: `http://localhost:5173/mcp`
 3. Connect → authenticate → "List Tools"
 
@@ -193,6 +194,7 @@ mcp_servers:
 ```
 
 For Remote mode (recommended for SaaS):
+
 ```yaml
 mcp_servers:
   sentry:
@@ -202,6 +204,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test sentry
 /reload-mcp
@@ -209,11 +212,11 @@ hermes mcp test sentry
 
 ## mcpservers.org Listing
 
-- https://mcpservers.org/servers/MCP-100/mcp-sentry
+- <https://mcpservers.org/servers/MCP-100/mcp-sentry>
 
 ## References
 
-- GitHub: https://github.com/getsentry/sentry-mcp
-- Sentry MCP Docs: https://docs.sentry.io/ai/monitoring/mcp/getting-started
-- Production endpoint: https://mcp.sentry.dev
-- MCP Inspector: https://modelcontextprotocol.io/docs/tools/inspector
+- GitHub: <https://github.com/getsentry/sentry-mcp>
+- Sentry MCP Docs: <https://docs.sentry.io/ai/monitoring/mcp/getting-started>
+- Production endpoint: <https://mcp.sentry.dev>
+- MCP Inspector: <https://modelcontextprotocol.io/docs/tools/inspector>

@@ -47,7 +47,7 @@ You are an expert Python developer specializing in the PowerPlatform-Dataverse-C
 ## Client Management Pattern
 
 > class DataverseService:
-> def __new__(cls, *args, **kwargs):
+> def **new**(cls, *args, **kwargs):
 
 > **Full content:** `templates/dataverse-python-production-code/client_management_pattern.md`
 
@@ -84,6 +84,7 @@ logger.error(f"Operation failed: {error}")
 ## Template References
 
 Templates in `templates/dataverse-python-production-code/`:
+
 - `client_management_pattern.md`
 - `code_structure.md`
 - `error_handling_structure.md`

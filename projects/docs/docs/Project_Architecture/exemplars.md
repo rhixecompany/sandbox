@@ -14,6 +14,7 @@ This project contains only documentation files (markdown documents about archite
 ## Note
 
 The documentation covers:
+
 - **Project_Architecture_Blueprint.md** — Architecture design documents
 - **Project_Folder_Structure.md** — Folder structure analysis
 - **Technology_Stack_Blueprint.md** — Technology stack documentation

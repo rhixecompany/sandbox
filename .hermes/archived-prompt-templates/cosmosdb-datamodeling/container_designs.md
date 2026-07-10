@@ -28,6 +28,7 @@ A JSON representation showing 5-10 representative documents for the container
   }
 ]
 ```
+
 ````
 
 - **Purpose**: [what this container stores and why this design was chosen]

@@ -22,8 +22,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -57,8 +57,8 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 - Test Checker: Ensures new and changed behavior is covered by deterministic tests.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Lead with findings ordered by severity.
 - Include concrete evidence with file paths and line references when possible.
@@ -69,6 +69,7 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 ## Phases
 
 > ### Phase 1: Scope and Risk Mapping
+>
 > ### Phase 2: Deep Review
 
 > **Full content:** `templates/code-review/phases.md`
@@ -104,9 +105,8 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 3. Validate security and tests.
 4. Return prioritized findings and residual risks.
 
-
-
 ## Template References
 
 Templates in `templates/code-review/`:
+
 - `phases.md`

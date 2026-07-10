@@ -5,5 +5,6 @@ Lines: 148
 Templates: 2
 
 ## Templates
+
 - `context.md`
 - `phases.md`

@@ -17,7 +17,7 @@ In aggregate-oriented design, Azure Cosmos DB NoSQL offers multiple levels of ag
    • Flexibility to access individual documents
    • No size constraints per document (each document limited to 2MB)
 
-2. Single Document Aggregates
+1. Single Document Aggregates
 
   Multiple entities combined into a single Cosmos DB document. This provides:
 

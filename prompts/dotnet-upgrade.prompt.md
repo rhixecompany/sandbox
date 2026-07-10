@@ -109,7 +109,6 @@ tags:
 
 ---
 
-
 ## Template References
 
 Detailed templates in `templates/dotnet-upgrade/`:

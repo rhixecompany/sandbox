@@ -5,7 +5,7 @@ description: "Pl"
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: []
+tags: [errors, warnings, deprecations, batch-fix, linting, build]
 ---
 
 # Batch Fix All Errors, Warnings, and Deprecations

@@ -39,7 +39,7 @@ Focus on discovering the essential knowledge that would help an AI agents be imm
 
 Source existing AI conventions from `**/{.github/copilot-instructions.md,AGENT.md,AGENTS.md,CLAUDE.md,.cursorrules,.windsurfrules,.clinerules,.cursor/rules/**,.windsurf/rules/**,.clinerules/**,README.md}` (do one glob search).
 
-Guidelines (read more at https://aka.ms/vscode-instructions-docs):
+Guidelines (read more at <https://aka.ms/vscode-instructions-docs>):
 
 - If `AGENTS.md` exists, merge intelligently - preserve valuable content while updating outdated sections
 - Write concise, actionable instructions (~500-1000 lines) using markdown structure

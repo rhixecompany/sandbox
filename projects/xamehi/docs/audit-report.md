@@ -5,6 +5,7 @@
 **Severity**: LOW
 
 ## Summary
+
 React 18 + Django + Express.js full-stack application. Private repository.
 
 ## Findings
@@ -18,9 +19,11 @@ React 18 + Django + Express.js full-stack application. Private repository.
 | F-005 | INFO | Mixed Django + Node.js stack — ensure consistent dev docs | Noted |
 
 ## Actions Taken
+
 - Replaced empty README.md with full project documentation
 - Added .env.example with all required environment variables
 - Created audit report
 
 ## Deferred
+
 - Dependency updates (npm audit fix — owner action, risk of breaking changes)

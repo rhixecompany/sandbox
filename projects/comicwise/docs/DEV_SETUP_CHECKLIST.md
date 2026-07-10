@@ -139,7 +139,7 @@ pnpm test
 pnpm dev
 ```
 
-- [ ] Next.js dev server started on http://localhost:3000
+- [ ] Next.js dev server started on <http://localhost:3000>
 - [ ] No build errors in terminal
 - [ ] Page loads without errors in browser
 
@@ -154,7 +154,7 @@ curl http://localhost:3000/api/health
 
 ## Phase 5: Authentication Testing (10 min)
 
-Visit http://localhost:3000/auth/signin
+Visit <http://localhost:3000/auth/signin>
 
 - [ ] Sign-in page loads
 - [ ] Form accepts email input
@@ -205,7 +205,7 @@ pnpm seed
 
 ## Troubleshooting
 
-### If `pnpm db:push` fails:
+### If `pnpm db:push` fails
 
 ```bash
 # Check migration status
@@ -216,7 +216,7 @@ pnpm db:reset
 pnpm db:push
 ```
 
-### If TypeScript errors occur:
+### If TypeScript errors occur
 
 ```bash
 # Ensure all files saved
@@ -228,7 +228,7 @@ rm -rf .next
 pnpm build
 ```
 
-### If dev server won't start:
+### If dev server won't start
 
 ```bash
 # Check port 3000 not in use
@@ -244,7 +244,7 @@ pnpm dev -- -p 3001
 - [ ] `pnpm type-check` returns 0 errors
 - [ ] `pnpm lint:fix` applies no changes
 - [ ] `pnpm dev` starts without errors
-- [ ] http://localhost:3000 loads in browser
+- [ ] <http://localhost:3000> loads in browser
 - [ ] Database has all 30+ tables
 - [ ] Auth flow works end-to-end
 

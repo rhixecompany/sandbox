@@ -16,12 +16,14 @@ Source: Phase 3 benchmark results (5/5 accessible models complete)
 ## Scoring Criteria
 
 ### Reasoning (0-10)
+
 - 10: Solves multi-step logic correctly with clear explanation
 - 7-9: Correct answer, minor gaps in reasoning
 - 4-6: Partial credit, significant gaps
 - 0-3: Incorrect or no meaningful reasoning
 
 **Results:**
+
 - **gemini-3.5-flash**: Solved river crossing correctly, clear step-by-step explanation, identified constraints properly
 - **stepfun/step-3.7-flash:free**: Solved river crossing correctly, clear reasoning, acknowledged constraints
 - **HF Inference**: Solved river crossing correctly, slightly more verbose but correct
@@ -29,12 +31,14 @@ Source: Phase 3 benchmark results (5/5 accessible models complete)
 - **xai-oauth (deepseek-v4-flash-free)**: Solved river crossing correctly, clear reasoning with emoji diagram, identified the "lightbulb moment"
 
 ### Tool Calling (0-10)
+
 - 10: Correct function name, valid args, handles result
 - 7-9: Minor arg issues, self-corrects
 - 4-6: Wrong function or malformed args
 - 0-3: No tool use or complete failure
 
 **Results:**
+
 - **gemini-3.5-flash**: Recognized no get_weather function, used web_search instead, found London weather, reported in requested format
 - **stepfun/step-3.7-flash:free**: Recognized no get_weather function, used web_search, found London weather, reported result
 - **HF Inference**: Recognized no get_weather function, used web_search, found London weather, reported result
@@ -42,12 +46,14 @@ Source: Phase 3 benchmark results (5/5 accessible models complete)
 - **xai-oauth (deepseek-v4-flash-free)**: Recognized no get_weather function, used web_search + skills_list, found London weather via WeatherAPI, formatted as requested JSON
 
 ### Knowledge (0-10)
+
 - 10: Accurate answer with citation
 - 7-9: Accurate, missing citation
 - 4-6: Partially correct
 - 0-3: Incorrect or hallucinated
 
 **Results:**
+
 - **gemini-3.5-flash**: Correctly identified Astana (formerly Nur-Sultan), cited Wikipedia
 - **stepfun/step-3.7-flash:free**: Correctly identified Astana, cited Wikipedia
 - **HF Inference**: Correctly identified Astana, cited Wikipedia
@@ -76,6 +82,7 @@ Dead:        openai-codex                         → 29d cooldown
 5. **Log all fallbacks** — For analysis and chain optimization
 
 ## Status
+
 - ✅ Complete: 5/5 accessible models benchmarked (15 tasks)
 - ⚠️ 3 rate-limited models need cooldown monitoring
 - 📝 Full report ready for review

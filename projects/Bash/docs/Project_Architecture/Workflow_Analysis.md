@@ -20,10 +20,12 @@ A comprehensive automation toolkit with multi-phase pipeline (Discovery → Clon
 **Description:** End-to-end execution of the 6-phase pipeline to inventory, clone, triage, debug, remediate, and cross-reference repositories.
 
 **Entry Points:**
+
 - `orchestrator-unified.ps1 -Mode discover` (PowerShell)
 - Multi-wrapper: `.sh`, `.ps1`, `.bat` parity
 
 **Steps:**
+
 1. **Phase 1 — Discovery**: Inventory repositories and dependencies via `phase-1-discovery.ps1`
 2. **Phase 2 — Clone**: Clone repositories locally via `phase-2-clone.ps1`
 3. **Phase 3 — Triage**: Analyze and categorize issues via `phase-3-triage.ps1` using `triage-utils.ps1`
@@ -32,6 +34,7 @@ A comprehensive automation toolkit with multi-phase pipeline (Discovery → Clon
 6. **Phase 6 — Cross-Reference**: Cross-reference across repos via `phase-6-cross-ref.ps1`
 
 **Sequence Diagram:**
+
 ```
 User                Orchestrator        Phase Scripts          Lib Modules        Output/Logs
   |                     |                    |                      |                  |
@@ -59,11 +62,13 @@ User                Orchestrator        Phase Scripts          Lib Modules      
 ```
 
 **Error Handling:**
+
 - All destructive operations support `--dry-run` for safe preview
 - Logs to `logs/` directory with timestamps
 - Missing wrappers → fallback to existing wrapper type
 
 **Test Patterns:**
+
 - `tests/verify-dryrun.sh` — validates dry-run behavior
 - `test-all.sh` — full test suite
 - Vitest for TypeScript unit tests
@@ -75,9 +80,11 @@ User                Orchestrator        Phase Scripts          Lib Modules      
 **Description:** Cleaning cache files across the workspace with dry-run support.
 
 **Entry Points:**
+
 - `bun run cache-clean` (TypeScript via `src/cache-clean.ts`)
 
 **Steps:**
+
 1. User invokes `bun run cache-clean` with optional `--dry-run` flag
 2. Script scans workspace for cache files/directories
 3. If `--dry-run`: lists all cache files found without deleting
@@ -85,10 +92,12 @@ User                Orchestrator        Phase Scripts          Lib Modules      
 5. Reports summary of cleaned items and space reclaimed
 
 **Error Handling:**
+
 - Missing directories → log warning, continue
 - Permission denied → log error, skip file
 - All operations support `--dry-run` for preview
 
 **Test Patterns:**
+
 - `verify-dryrun.sh` — validates `--dry-run` flag
 - Vitest for script logic

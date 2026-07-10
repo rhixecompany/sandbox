@@ -1,8 +1,8 @@
 # uv MCP Server
 
-**Source:** https://github.com/astral-sh/uv  
+**Source:** <https://github.com/astral-sh/uv>  
 **Package:** `uv` (Astral)  
-**Docs:** https://docs.astral.sh/uv/
+**Docs:** <https://docs.astral.sh/uv/>
 
 ## Overview
 
@@ -98,6 +98,7 @@ uv python pin 3.12
 ## Performance
 
 uv is **10-100x faster** than pip for most operations due to:
+
 - Rust implementation with async I/O
 - Aggressive caching of wheel files and metadata
 - Parallel downloads and installs

@@ -86,6 +86,7 @@ public class Application {
    ```
 
 3. **Jackson Modules**: Ensure Jackson modules are on the classpath:
+
    ```xml
    <dependency>
        <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -139,6 +140,7 @@ public class Application {
    ```
 
 5. **Container Image Build**: Use Quarkus container-image extensions:
+
    ```properties
    quarkus.native.container-build=true
    quarkus.native.builder-image=mandrel
@@ -208,6 +210,7 @@ public class Application {
    ```
 
 5. **HTTP Client Configuration**: For Micronaut HTTP clients, ensure netty is properly configured:
+
    ```yaml
    micronaut:
      http:

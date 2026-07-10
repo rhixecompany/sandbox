@@ -465,6 +465,7 @@ hermes cron remove <name>       # Delete job
 **Hermes Agent is fully operational and ready for production use.**
 
 All critical systems are functioning:
+
 - 7/8 MCP servers enabled
 - 250+ tools available
 - All diagnostics passing

@@ -15,9 +15,11 @@ This plan is tailored for your repo, using .env.local for secrets, and reflectin
 - Ensure these plugins are installed:
   - `eslint-config-next`, `eslint-config-prettier`, `eslint-plugin-better-tailwindcss`, `eslint-plugin-playwright`, `eslint-plugin-vitest`, `eslint-plugin-drizzle`, `eslint-plugin-zod`
 - Install if missing:
+
   ```sh
   pnpm add -D eslint-config-next eslint-config-prettier eslint-plugin-better-tailwindcss eslint-plugin-playwright eslint-plugin-vitest eslint-plugin-drizzle eslint-plugin-zod
   ```
+
 - Generate `eslint.config.mts` using Next.js core web vitals, TypeScript, and all selected plugins:
 
 **Code Sample: `eslint.config.mts`**
@@ -306,6 +308,7 @@ export default eslintConfig;
   ```
 
 - **route.ts**
+
   ```typescript
   import { handlers } from "@/auth";
   export { handlers as GET, handlers as POST };

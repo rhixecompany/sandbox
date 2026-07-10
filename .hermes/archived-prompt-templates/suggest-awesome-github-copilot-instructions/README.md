@@ -5,6 +5,7 @@ Lines: 192
 Templates: 13
 
 ## Templates
+
 - `context_analysis_criteria.md`
 - `file_structure_requiremen.md`
 - `front_matter_structure.md`

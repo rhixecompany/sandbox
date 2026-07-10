@@ -40,8 +40,8 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 - `/docs/ways-of-work/plan/{epic-name}/{feature-name}/prd.md`
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Include the feature name and the epic reference.
 2. Describe the problem, solution, and intended impact.
@@ -53,6 +53,7 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 ## Phases
 
 > ### Phase 1: Understand the feature
+>
 > **Goal:** capture the feature idea and the parent epic context.
 
 > **Full content:** `templates/hermes-breakdown-feature-prd/phases.md`
@@ -64,8 +65,8 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 3. Add stories, requirements, and acceptance criteria.
 4. Verify completeness and file path.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-feature-prd/`:
+
 - `phases.md`

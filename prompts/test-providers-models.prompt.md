@@ -26,9 +26,11 @@ skills:
   - verification-before-completion
 ---
 ## Goal
+
 Inventory and benchmark the free‑tier LLM models across all authorized providers in Hermes, producing a comparative report that includes performance, rate limits, and recommendations.
 
 ## Personas
+
 | Persona | When to Use |
 |---------|-------------|
 | OWL (System Admin) | Overall orchestration, profile selection |
@@ -37,11 +39,13 @@ Inventory and benchmark the free‑tier LLM models across all authorized provide
 | DevOps Engineer (adminbot) | Rate‑limit analysis, fallback planning |
 
 ## Personality & Tone
+
 - Concise, action‑first
 - Technical, direct
 - No unnecessary prose
 
 ## Profile Selection
+
 | Task | Recommended Profile |
 |------|----------------------|
 | Provider inventory & auth check | `default` |
@@ -52,11 +56,13 @@ Inventory and benchmark the free‑tier LLM models across all authorized provide
 | Rate‑limit & fallback analysis | `adminbot` |
 
 ## When to Use
+
 - To audit LLM provider credentials and usage limits.
 - To evaluate free‑tier model capabilities before committing to paid plans.
 - When planning multi‑provider AI deployments.
 
 ## When Not to Use
+
 - If all required providers are already benchmarked and up‑to‑date.
 - When only paid‑tier models are needed for production workloads.
 
@@ -228,6 +234,7 @@ status, rate limits, and recommendations.
 ## Template References
 
 Detailed section templates in `templates/test-providers-models/`:
+
 - `phase_0_auth__provider_invento.md`
 - `phase_1_model_catalog_discover.md`
 - `phase_2_free_model_extraction_.md`

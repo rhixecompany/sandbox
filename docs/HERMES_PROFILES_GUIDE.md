@@ -9,9 +9,11 @@ Five specialized Hermes Agent profiles for different workflows and tasks.
 ## Profiles
 
 ### 1. code-architect
+
 **Use for:** Heavy refactoring, system design, debugging, test coverage
 
 **Persona:** Senior Staff Software Engineer
+
 - Optimizes for system stability, test coverage, elegant architecture
 - Prioritizes truth and technical correctness
 - Tests are the spec
@@ -22,9 +24,11 @@ Five specialized Hermes Agent profiles for different workflows and tasks.
 ---
 
 ### 2. research-analyst
+
 **Use for:** Document processing, URL summarization, deep-dive content creation
 
 **Persona:** Objective Research Analyst
+
 - Synthesizes data, uncovers patterns
 - Must cite sources
 - Skeptical of unproven claims
@@ -36,9 +40,11 @@ Five specialized Hermes Agent profiles for different workflows and tasks.
 ---
 
 ### 3. exec-assistant
+
 **Use for:** Main orchestrator - scheduling, task coordination, workflow management
 
 **Persona:** Proactive Chief of Staff
+
 - Hyper-organized, eliminates inefficiencies
 - Anticipates next steps
 - Enforces policies and rules
@@ -49,9 +55,11 @@ Five specialized Hermes Agent profiles for different workflows and tasks.
 ---
 
 ### 4. patient-tutor
+
 **Use for:** Learning new skills, frameworks, codebase onboarding
 
 **Persona:** Patient Socratic Mentor
+
 - Guides to answers without giving them away
 - Meets user at their experience level
 - Gives hints and asks questions
@@ -63,9 +71,11 @@ Five specialized Hermes Agent profiles for different workflows and tasks.
 ---
 
 ### 5. creative-director
+
 **Use for:** Marketing, strategic thinking, campaigns, narrative crafting
 
 **Persona:** Award-winning Creative Director & Brand Strategist
+
 - Witty, confident, bold, slightly provocative
 - Uses wordplay, light sarcasm, metaphors
 - Focuses on "why" behind projects
@@ -94,6 +104,7 @@ Each profile needs initial setup:
 ## Profile Locations
 
 All profiles stored at:
+
 ```
 C:\Users\Alexa\AppData\Local\hermes\profiles\
 ├── code-architect/
@@ -104,6 +115,7 @@ C:\Users\Alexa\AppData\Local\hermes\profiles\
 ```
 
 Each contains:
+
 - `SOUL.md` - Personality definition
 - `config.yaml` - Configuration
 - `.env` - API keys (after setup)
@@ -113,30 +125,35 @@ Each contains:
 ## Usage Examples
 
 ### Code Architect
+
 ```bash
 code-architect chat "Review this authentication system for security issues"
 code-architect chat "Refactor this monolithic function into testable units"
 ```
 
 ### Research Analyst
+
 ```bash
 research-analyst chat "Summarize these 5 research papers on LLM architectures"
 research-analyst chat "Extract key findings from this documentation"
 ```
 
 ### Executive Assistant
+
 ```bash
 exec-assistant chat "Schedule team standup and draft agenda"
 exec-assistant chat "Coordinate these 3 parallel tasks across profiles"
 ```
 
 ### Patient Tutor
+
 ```bash
 patient-tutor chat "Help me understand React hooks"
 patient-tutor chat "Guide me through this codebase architecture"
 ```
 
 ### Creative Director
+
 ```bash
 creative-director chat "Brainstorm campaign ideas for developer tools launch"
 creative-director chat "Critique this product landing page copy"
@@ -158,6 +175,7 @@ code-architect chat "your prompt"
 ## Memory Isolation
 
 Each profile has separate memories:
+
 - Personal notes in `profiles/<name>/memories/memory.md`
 - User profile in `profiles/<name>/memories/user.md`
 - Memories DO NOT cross profiles unless explicitly shared
@@ -184,12 +202,14 @@ Each profile has separate memories:
 ## Customization
 
 Edit SOUL.md for any profile:
+
 ```bash
 # Open in default editor
 code $HOME/AppData/Local/hermes/profiles/code-architect/SOUL.md
 ```
 
 Update profile description:
+
 ```bash
 hermes profile describe code-architect "New description here"
 ```
@@ -197,12 +217,14 @@ hermes profile describe code-architect "New description here"
 ## Verification
 
 Check profile status:
+
 ```bash
 hermes profile list
 hermes profile info code-architect
 ```
 
 Test profile personality:
+
 ```bash
 code-architect chat "Hello, introduce yourself"
 ```

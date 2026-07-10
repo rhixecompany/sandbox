@@ -82,6 +82,7 @@ The project follows a classic **decoupled frontend/backend** architecture:
 ## 4. Data Flow
 
 ### Shopping Flow
+
 ```
 User → React Component → Redux Action → API Call (Axios) → DRF ViewSet
                                                                ↓
@@ -91,6 +92,7 @@ User → React Component → Redux Action → API Call (Axios) → DRF ViewSet
 ```
 
 ### Payment Flow
+
 ```
 User → PayPal Button → PayPal SDK → Backend Webhook → Order Update → Database
 ```
@@ -100,11 +102,13 @@ User → PayPal Button → PayPal SDK → Backend Webhook → Order Update → D
 ## 5. Implementation Patterns
 
 ### Redux Pattern
+
 ```
 constants/ → action creators → reducers → store → components
 ```
 
 ### DRF ViewSet Pattern
+
 ```python
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()

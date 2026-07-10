@@ -6,7 +6,7 @@
 
 > Directory: `src/stores/` — must be created. All stores use `devtools(persist(...))`.
 
-### Pattern for all stores:
+### Pattern for all stores
 
 ```ts
 import { create } from "zustand";

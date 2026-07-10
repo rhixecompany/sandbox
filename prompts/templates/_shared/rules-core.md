@@ -1,3 +1,11 @@
+---
+name: shared-rules-core
+title: Shared Template — Core Rules
+description: Standard core rules section for prompt files
+version: 1.0.0
+tags: [template, shared, rules]
+---
+
 # Core Rules (Shared Across Fix Prompts)
 
 These rules apply to most fix/sync workflow prompts. Each prompt may add

@@ -17,8 +17,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -52,8 +52,8 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 - Intake Handler: Uses approved terminal command flow and fallback behavior.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Never terminate session unless explicit termination command is received.
 - Do not request new tasks while an active task is incomplete.
@@ -64,6 +64,7 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 ## Phases
 
 > ### Phase 1: Initialization and Intake
+>
 > ### Phase 2: Focused Task Execution
 
 > **Full content:** `templates/tasksync/phases.md`
@@ -99,8 +100,8 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 3. Request next task on completion.
 4. Continue until explicit user termination.
 
-
 ## Template References
 
 Templates in `templates/tasksync/`:
+
 - `phases.md`

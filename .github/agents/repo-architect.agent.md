@@ -345,7 +345,7 @@ When bootstrapping, offer presets based on detected stack:
 - Clippy guidelines
 - Memory safety patterns
 
-### .NET/C#
+### .NET/C #
 
 - dotnet conventions
 - xUnit testing patterns

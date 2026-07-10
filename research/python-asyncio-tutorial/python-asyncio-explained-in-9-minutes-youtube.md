@@ -1,6 +1,6 @@
 # Python AsyncIO Explained in 9 Minutes - YouTube
 
-> **Source:** https://www.youtube.com/watch?v=q_yk3oV14hE
+> **Source:** <https://www.youtube.com/watch?v=q_yk3oV14hE>
 > **Retrieved:** 2026-05-31T12:17:10
 
 ---
@@ -15,6 +15,7 @@
 ## 🔑 Key Concepts
 
 ### Concurrency in Python: 3 Approaches
+
 - **Multiprocessing**: Best for **CPU-bound tasks** (e.g., heavy computations). Uses multiple processes to bypass the Global Interpreter Lock (GIL).
 - **Multi-threading**: Limited by the GIL in Python; useful when you don’t want manual control over thread switching or when async isn’t supported.
 - **Asynchronous Programming (AsyncIO)**: Ideal for **I/O-bound tasks** with idle time (e.g., network requests). Runs on a **single thread** using an **event loop** to switch between coroutines.
@@ -26,6 +27,7 @@
 ## 🧩 Core AsyncIO Mechanics
 
 ### 1. **Coroutines (`async def`)**
+
 - Defined with `async def`, they can be **paused and resumed**.
 - Use `await` to yield control back to the event loop during downtime.
 
@@ -37,15 +39,19 @@ async def io_task(name, delay, iterations):
 ```
 
 ### 2. **Running Async Code**
+
 - Always start with `asyncio.run(main())` — this creates and manages the event loop.
 - **Important**: Call `main()` with parentheses inside `asyncio.run()`:
+
   ```python
   asyncio.run(main())
   ```
 
 ### 3. **Concurrent Execution with `asyncio.gather()`**
+
 - Runs multiple coroutines **concurrently**.
 - Example:
+
   ```python
   await asyncio.gather(
       io_task("A", 1, 5),
@@ -53,15 +59,19 @@ async def io_task(name, delay, iterations):
       io_task("C", 0.5, 8)
   )
   ```
+
 - **Result**: All tasks run interleaved (~4.5 seconds total), not sequentially (~11 seconds).
 
 ### 4. **Sequential vs Concurrent**
+
 - **Sequential** (slow):
+
   ```python
   await io_task("A", 1, 5)
   await io_task("B", 2, 3)
   await io_task("C", 0.5, 8)
   ```
+
 - **Concurrent** (fast): Use `gather()` or `create_task()`.
 
 ---
@@ -69,6 +79,7 @@ async def io_task(name, delay, iterations):
 ## ⚙️ Advanced Patterns
 
 ### ✅ Creating Background Tasks
+
 - Use `asyncio.create_task()` to run a coroutine in the background.
 - Await it later when needed.
 
@@ -80,6 +91,7 @@ print("Final statement")
 ```
 
 ### ✅ Waiting with Conditions: `asyncio.wait()`
+
 - Allows fine-grained control over task completion.
 - Specify return condition (e.g., `FIRST_COMPLETED`).
 
@@ -93,6 +105,7 @@ await asyncio.gather(*pending)  # Wait for remaining
 ```
 
 ### ✅ Timeouts with `asyncio.wait_for()`
+
 - Prevent indefinite waiting.
 
 ```python
@@ -119,6 +132,7 @@ except asyncio.TimeoutError:
 ---
 
 ## 📚 Further Learning
+
 - Watch NeuralNine’s videos on **multi-threading** and **multiprocessing** for full concurrency coverage.
 - Explore advanced topics: manual event loop control, task groups, shielding.
 

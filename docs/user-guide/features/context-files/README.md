@@ -45,6 +45,7 @@ my-project/
 ```
 
 **Key behaviors:**
+
 - Each subdirectory checked **at most once per session**
 - Discovery walks up parent directories (reading `backend/src/main.py` discovers `backend/AGENTS.md`)
 - Subdirectory context files undergo same **security scan** as startup files
@@ -101,6 +102,7 @@ This is a Next.js 14 web application with a Python FastAPI backend.
 Controls agent's personality, tone, and communication style. See [Personality](/docs/user-guide/features/personality) page for full details.
 
 **Key details:**
+
 - Loaded from `HERMES_HOME` only (not project directories)
 - Always loaded independently as agent identity (slot #1)
 - Inserted directly into prompt without extra wrapper text
@@ -110,6 +112,7 @@ Controls agent's personality, tone, and communication style. See [Personality](/
 ## .cursorrules Compatibility
 
 Hermes loads Cursor IDE's `.cursorrules` and `.cursor/rules/*.mdc` if:
+
 1. They exist in project root
 2. No higher-priority context file found (`.hermes.md`, `AGENTS.md`, `CLAUDE.md`)
 
@@ -159,6 +162,7 @@ The following project context files have been loaded and should be followed:
 ## Security
 
 All context files undergo a **security scan** before being added to the system prompt. The scan checks for:
+
 - Prompt injection patterns
 - Malicious instructions
 - Attempts to override system behavior

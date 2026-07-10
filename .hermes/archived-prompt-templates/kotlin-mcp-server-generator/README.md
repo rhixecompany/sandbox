@@ -5,6 +5,7 @@ Lines: 450
 Templates: 4
 
 ## Templates
+
 - `buildgradlekts_template.md`
 - `serverkt_template.md`
 - `servertestkt_template.md`

@@ -342,6 +342,7 @@ urlpatterns = [
 ```
 
 Additional routing files in `video/urls/`:
+
 - `movies_urls.py` — REST API movie endpoints
 - `series_urls.py` — REST API series endpoints
 - `user_urls.py` — REST API auth/user endpoints
@@ -367,6 +368,7 @@ class SeriesFilter(django_filters.FilterSet):
 ```
 
 **Forms:** `video/forms.py`
+
 - `MoviesForm` — Movie create/edit form with file upload
 - `SeriesForm` — Series create/edit form
 - `CustomUserCreationForm` — Registration with email

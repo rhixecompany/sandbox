@@ -17,7 +17,7 @@ Review and validate system architecture with focus on security, scalability, rel
 
 **Before applying frameworks, analyze what you're reviewing:**
 
-### System Context:
+### System Context
 
 1. **What type of system?**
    - Traditional Web App → OWASP Top 10, cloud patterns
@@ -37,7 +37,7 @@ Review and validate system architecture with focus on security, scalability, rel
    - AI/ML System → AI security, governance
    - Cost-Sensitive → Cost optimization
 
-### Create Review Plan:
+### Create Review Plan
 
 Select 2-3 most relevant framework areas based on context.
 
@@ -107,7 +107,7 @@ Select 2-3 most relevant framework areas based on context.
 
 ## Step 3: Decision Trees
 
-### Database Choice:
+### Database Choice
 
 ```
 High writes, simple queries → Document DB
@@ -116,7 +116,7 @@ High reads, rare writes → Read replicas + caching
 Real-time updates → WebSockets/SSE
 ```
 
-### AI Architecture:
+### AI Architecture
 
 ```
 Simple AI → Managed AI services
@@ -125,7 +125,7 @@ Knowledge grounding → Vector databases
 Real-time AI → Streaming + caching
 ```
 
-### Deployment:
+### Deployment
 
 ```
 Single service → Monolith
@@ -136,21 +136,21 @@ High compliance → Private cloud
 
 ## Step 4: Common Patterns
 
-### High Availability:
+### High Availability
 
 ```
 Problem: Service down
 Solution: Load balancer + multiple instances + health checks
 ```
 
-### Data Consistency:
+### Data Consistency
 
 ```
 Problem: Data sync issues
 Solution: Event-driven + message queue
 ```
 
-### Performance Scaling:
+### Performance Scaling
 
 ```
 Problem: Database bottleneck
@@ -159,14 +159,14 @@ Solution: Read replicas + caching + connection pooling
 
 ## Document Creation
 
-### For Every Architecture Decision, CREATE:
+### For Every Architecture Decision, CREATE
 
 **Architecture Decision Record (ADR)** - Save to `docs/architecture/ADR-[number]-[title].md`
 
 - Number sequentially (ADR-001, ADR-002, etc.)
 - Include decision drivers, options considered, rationale
 
-### When to Create ADRs:
+### When to Create ADRs
 
 - Database technology choices
 - API architecture decisions

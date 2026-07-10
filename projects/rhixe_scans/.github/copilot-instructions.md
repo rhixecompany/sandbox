@@ -39,4 +39,3 @@ npm run build
 - Prefer Prisma schema changes plus migrations for data model work.
 - Keep route, component, and utility naming aligned with the repo structure.
 - Use environment variables for all secrets and provider credentials.
-

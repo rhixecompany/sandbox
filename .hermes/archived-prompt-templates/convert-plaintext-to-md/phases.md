@@ -9,6 +9,7 @@
 **Goal:** Read the request and identify the exact scope.
 
 **Steps:**
+
 1. Read the request and identify the exact scope
 2. Locate the relevant files, diffs, or references
 3. Run `/context-map` for the target source file and markdown output path
@@ -19,6 +20,7 @@
 **Goal:** Perform the conversion with the smallest safe change set.
 
 **Steps:**
+
 1. Determine source text and initialize output target:
    - If `{{file}}.md` exists, use its current content as source text
    - Otherwise, read source from `#file:{{file}}` and create `{{file}}.md` from that plaintext as the initial target
@@ -31,6 +33,7 @@
 **Goal:** Check the result against the goal, rules, and inputs.
 
 **Steps:**
+
 1. Verify headers are correctly structured
 2. Verify code blocks have language annotations where applicable
 3. Verify lists and tables are properly formatted
@@ -41,5 +44,6 @@
 **Goal:** Return the final artifact or findings clearly.
 
 **Steps:**
+
 1. Return the final markdown file path
 2. Stop once the requested result is delivered

@@ -39,8 +39,8 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -50,24 +50,29 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Adaptive Card Types
 
 > ### Static Response Templates
+>
 > Use when API always returns items of the same type and format doesn't change oft
 
 > **Full content:** `templates/mcp-create-adaptive-cards/adaptive_card_types.md`
@@ -75,7 +80,9 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 ## Response Semantics Properties
 
 ### data_path
+
 JSONPath query indicating where data resides in API response:
+
 ```json
 "data_path": "$"           // Root of response
 "data_path": "$.results"   // In results property
@@ -83,7 +90,9 @@ JSONPath query indicating where data resides in API response:
 ```
 
 ### properties
+
 Map response fields for Copilot citations:
+
 ```json
 "properties": {
   "title": "$.name",            // Citation title
@@ -93,7 +102,9 @@ Map response fields for Copilot citations:
 ```
 
 ### template_selector
+
 Property on each item indicating which template to use:
+
 ```json
 "template_selector": "$.displayTemplate"
 ```
@@ -101,6 +112,7 @@ Property on each item indicating which template to use:
 ## Adaptive Card Template Language
 
 > ### Conditional Rendering
+>
 > "text": "${if(field, field, 'N/A')}"  // Show field or 'N/A'
 
 > **Full content:** `templates/mcp-create-adaptive-cards/adaptive_card_template_languag.md`
@@ -115,24 +127,29 @@ Property on each item indicating which template to use:
 ## Responsive Design Best Practices
 
 ### Single-Column Layouts
+
 - Use single columns for narrow viewports
 - Avoid multi-column layouts when possible
 - Ensure cards work at minimum viewport width
 
 ### Flexible Widths
+
 - Don't assign fixed widths to elements
 - Use "auto" or "stretch" for width properties
 - Allow elements to resize with viewport
 - Fixed widths OK for icons/avatars only
 
 ### Text and Images
+
 - Avoid placing text and images in same row
 - Exception: Small icons or avatars
 - Use "wrap": true for text content
 - Test at various viewport widths
 
 ### Test Across Hubs
+
 Validate cards in:
+
 - Teams (desktop and mobile)
 - Word
 - PowerPoint
@@ -148,6 +165,7 @@ Validate cards in:
 ## Workflow
 
 Ask the user:
+
 1. What type of data does the API return?
 2. Are all items the same type (static) or different types (dynamic)?
 3. What fields should appear in the card?
@@ -155,6 +173,7 @@ Ask the user:
 5. Are there multiple states or categories requiring different templates?
 
 Then generate:
+
 - Appropriate response_semantics configuration
 - Static template, dynamic templates, or both
 - Proper data binding with conditional rendering
@@ -178,6 +197,7 @@ Then generate:
 ## Template References
 
 Detailed templates in `templates/mcp-create-adaptive-cards/`:
+
 - `adaptive_card_template_languag.md`
 - `adaptive_card_types.md`
 - `card_elements.md`

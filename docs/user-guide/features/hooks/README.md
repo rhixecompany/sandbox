@@ -1,6 +1,6 @@
 # Hermes Agent Hooks — Comprehensive Summary
 
-> **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks
+> **Source:** <https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks>
 
 ---
 
@@ -65,6 +65,7 @@ hooks:
 ## Event Payloads
 
 ### on_session_start
+
 ```json
 {
   "event": "on_session_start",
@@ -75,6 +76,7 @@ hooks:
 ```
 
 ### on_session_end
+
 ```json
 {
   "event": "on_session_end",
@@ -87,6 +89,7 @@ hooks:
 ```
 
 ### pre_llm_call
+
 ```json
 {
   "event": "pre_llm_call",
@@ -104,11 +107,13 @@ hooks:
 ## Creating Custom Hooks
 
 ### 1. Create Hook Directory
+
 ```bash
 mkdir -p ~/AppData/Local/hermes/hooks/my-hook
 ```
 
 ### 2. Write Hook Script (`hook.sh`)
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -143,11 +148,13 @@ esac
 ```
 
 ### 3. Make Executable
+
 ```bash
 chmod +x ~/AppData/Local/hermes/hooks/my-hook/hook.sh
 ```
 
 ### 4. Register in `config.yaml`
+
 ```yaml
 hooks:
   my-hook:
@@ -161,12 +168,14 @@ hooks:
 ## Hook Development Tips
 
 ### Testing Locally
+
 ```bash
 # Simulate event
 echo '{"event":"on_session_start","session_id":"test","timestamp":"2026-01-15T10:30:00Z","reason":"new_session"}' | ~/AppData/Local/hermes/hooks/my-hook/hook.sh
 ```
 
 ### Logging
+
 ```bash
 # Append to hook-specific log
 log_file=~/AppData/Local/hermes/logs/hermes/my-hook.log
@@ -174,6 +183,7 @@ echo "$(date -Iseconds) $event" >> "$log_file"
 ```
 
 ### Error Handling
+
 ```bash
 # Return error status (agent will log but continue)
 echo '{"status": "error", "message": "hook failed: ..."}' >&2
@@ -185,18 +195,23 @@ exit 1
 ## Common Hook Patterns
 
 ### 1. Audit Trail
+
 Log all prompts and responses for compliance.
 
 ### 2. Auto-Formatting
+
 Run formatters on file changes at session end.
 
 ### 3. Cost Tracking
+
 Accumulate token usage per session/project.
 
 ### 4. Security Scanning
+
 Inspect prompts for secrets, PII, injection attempts.
 
 ### 5. Notification Bridge
+
 Send session summaries to Slack, Discord, email.
 
 ---

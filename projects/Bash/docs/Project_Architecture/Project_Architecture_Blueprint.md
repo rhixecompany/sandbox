@@ -69,6 +69,7 @@ Bash/
 ## Architectural Patterns
 
 ### Phase-Based Orchestration Pattern
+
 The toolkit follows a multi-phase pipeline:
 
 1. **Phase 1 — Discovery**: Inventory repositories and dependencies
@@ -79,14 +80,18 @@ The toolkit follows a multi-phase pipeline:
 6. **Phase 6 — Cross-Reference**: Cross-reference across repos
 
 ### Modular Library Pattern
+
 PowerShell scripts in `scripts/lib/` provide reusable modules:
+
 - `dependency-scanner.ps1` — Scans for dependency issues
 - `repo-analyzer.ps1` — Analyzes repository structure
 - `git-operations.ps1` — Handles git operations
 - `package-managers.ps1` — Multi-package-manager support
 
 ### Multi-Platform Wrapper Pattern
+
 Each tool has wrapper parity across platforms:
+
 - `.ps1` — PowerShell (Windows)
 - `.sh` — Shell (Linux/Mac)
 - `.bat` — Batch (Windows fallback)
@@ -129,6 +134,7 @@ User Invocation → npm/bun run → TypeScript Script
 ## Implementation Patterns
 
 ### Dry-Run Pattern
+
 ```typescript
 // All operations support --dry-run
 if (args.dryRun) {
@@ -138,6 +144,7 @@ if (args.dryRun) {
 ```
 
 ### Logging Pattern
+
 ```bash
 # All scripts log to logs/ with timestamps
 LOG_FILE="logs/$(date +%Y%m%d-%H%M%S)-${SCRIPT_NAME}.log"

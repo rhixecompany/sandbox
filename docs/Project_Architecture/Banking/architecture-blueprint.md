@@ -29,6 +29,7 @@
 
 **Pattern:** Layered Architecture with Server Actions  
 The project follows a modern Next.js App Router pattern with clearly separated layers:
+
 - **Presentation Layer**: React Server Components + Client Components
 - **Application Layer**: Next.js Server Actions (all mutations)
 - **Data Access Layer**: DAL classes with constructor pattern

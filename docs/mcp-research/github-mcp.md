@@ -55,18 +55,18 @@
 
 ```json
 {
-	"command": "docker",
-	"args": [
-		"run",
-		"-i",
-		"--rm",
-		"-e",
-		"GITHUB_PERSONAL_ACCESS_TOKEN",
-		"ghcr.io/github/github-mcp-server"
-	],
-	"env": {
-		"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
-	}
+ "command": "docker",
+ "args": [
+  "run",
+  "-i",
+  "--rm",
+  "-e",
+  "GITHUB_PERSONAL_ACCESS_TOKEN",
+  "ghcr.io/github/github-mcp-server"
+ ],
+ "env": {
+  "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+ }
 }
 ```
 
@@ -196,13 +196,13 @@ docker run -e GITHUB_INSIDERS=true ghcr.io/github/github-mcp-server
 
 ```json
 {
-	"github-octocorp": {
-		"type": "http",
-		"url": "https://copilot-api.octocorp.ghe.com/mcp",
-		"headers": {
-			"Authorization": "Bearer ${input:github_mcp_pat}"
-		}
-	}
+ "github-octocorp": {
+  "type": "http",
+  "url": "https://copilot-api.octocorp.ghe.com/mcp",
+  "headers": {
+   "Authorization": "Bearer ${input:github_mcp_pat}"
+  }
+ }
 }
 ```
 

@@ -3,6 +3,7 @@
 > Extracted from `readme-blueprint-generator.prompt.md`.
 
 ## Legacy Prompt Details
+
 # README Generator Prompt
 
 Generate a comprehensive README.md for this repository by analyzing the documentation files in the .github/copilot directory and the copilot-instructions.md file. Follow these steps:

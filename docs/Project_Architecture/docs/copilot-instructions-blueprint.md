@@ -61,6 +61,7 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Markdown
+
 - Use GitHub-Flavored Markdown (GFM)
 - Follow existing heading hierarchy patterns
 - Use fenced code blocks with language identifiers

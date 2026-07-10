@@ -23,8 +23,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -58,8 +58,8 @@ Use this prompt when performance issues are suspected or when implementing featu
 - Frontend Optimizer: Minimizes JS shipped to clients and avoids unnecessary hydration.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Measure before optimizing and report baseline and delta when possible.
 - Prioritize highest-impact bottlenecks first.
@@ -70,6 +70,7 @@ Use this prompt when performance issues are suspected or when implementing featu
 ## Phases
 
 > ### Phase 1: Baseline and Bottleneck Discovery
+>
 > ### Phase 2: Targeted Optimization
 
 > **Full content:** `templates/performance/phases.md`
@@ -105,8 +106,8 @@ Use this prompt when performance issues are suspected or when implementing featu
 3. Re-measure and validate correctness.
 4. Report measurable outcomes.
 
-
 ## Template References
 
 Templates in `templates/performance/`:
+
 - `phases.md`

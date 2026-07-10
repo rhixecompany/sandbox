@@ -656,8 +656,8 @@ pnpm build:analyze  # Includes Lighthouse data
 
 ## References
 
-- **Tailwind CSS v4**: https://tailwindcss.com/docs
-- **shadcn/ui**: https://ui.shadcn.com
-- **Radix UI**: https://www.radix-ui.com
-- **WCAG 2.1 AA**: https://www.w3.org/WAI/WCAG21/quickref/
-- **Accessible Components**: https://www.a11y-101.com/
+- **Tailwind CSS v4**: <https://tailwindcss.com/docs>
+- **shadcn/ui**: <https://ui.shadcn.com>
+- **Radix UI**: <https://www.radix-ui.com>
+- **WCAG 2.1 AA**: <https://www.w3.org/WAI/WCAG21/quickref/>
+- **Accessible Components**: <https://www.a11y-101.com/>

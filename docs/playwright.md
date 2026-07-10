@@ -35,20 +35,25 @@
 ### Supported Clients & Setup Methods
 
 #### **VS Code**
+
 - **Button Install**: [VS Code](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall) | [VS Code Insiders](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall)
 - **Manual**: Add via settings.json or use VS Code CLI
 
 #### **Cursor**
+
 - **Button Install**: [Install in Cursor](https://cursor.com/en/install-mcp?name=Playwright&config=eyJjb...)
 - **Manual**: `Cursor Settings` → `MCP` → `Add new MCP Server` → Use `command` type with `npx @playwright/mcp@latest`
 
 #### **Claude Code**
+
 ```bash
 # Use Claude Code CLI to add the server
 ```
 
 #### **Cline**
+
 Add to `cline_mcp_settings.json`:
+
 ```json
 {
   "name": "playwright",
@@ -58,7 +63,9 @@ Add to `cline_mcp_settings.json`:
 ```
 
 #### **Codex CLI**
+
 Add to `~/.codex/config.toml`:
+
 ```toml
 [mcp_servers.playwright]
 command = "npx"
@@ -66,7 +73,9 @@ args = ["@playwright/mcp@latest"]
 ```
 
 #### **Copilot CLI**
+
 Add to `~/.copilot/mcp-config.json`:
+
 ```json
 {
   "name": "playwright",
@@ -76,36 +85,46 @@ Add to `~/.copilot/mcp-config.json`:
 ```
 
 #### **Factory CLI**
+
 - Use `/mcp` within Factory droid for interactive UI
 
 #### **Gemini CLI**
+
 Follow the [MCP install guide](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md#configure-the-mcp-server-in-settingsjson)
 
 #### **Goose**
+
 - **Button Install**: [Install in Goose](https://block.github.io/goose/extension?cmd=npx&arg=%40playwright%2Fmcp%40latest&id=playwright&name=Playwright)
 - **Manual**: `Advanced settings` → `Extensions` → `Add custom extension` → Type: `STDIO`, Command: `npx @playwright/mcp`
 
 #### **Junie CLI**
+
 - Use `/mcp` then `Ctrl+A`
 - Or add to `.junie/mcp/mcp.json`
 
 #### **Kiro**
+
 - **Button Install**: [Add to Kiro](https://kiro.dev/launch/mcp/add?name=playwright&config=%7B%22command%22...)
 - **Manual**: Add to `.kiro/settings/mcp.json`
 
 #### **LM Studio**
+
 - **Button Install**: [Add MCP Server](https://lmstudio.ai/install-mcp?name=playwright&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyJAcGxheXdyaWdodC9tY3BAbGF0ZXN0Il19)
 - **Manual**: `Program` → `Install` → `Edit mcp.json`
 
 #### **OpenCode**
+
 Add to `~/.config/opencode/opencode.json`
 
 #### **Qodo Gen**
+
 - Open chat panel → `Connect more tools` → `+ Add new MCP` → Paste standard config
 
 #### **Warp**
+
 - `Settings` → `AI` → `Manage MCP Servers` → `+ Add`
 - Or use `/add-mcp` slash command
 
 #### **Windsurf**
+
 Follow [Windsurf MCP documentation](https://docs.windsurf.com/windsurf/cascade/mcp)

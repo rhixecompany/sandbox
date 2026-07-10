@@ -1,6 +1,6 @@
 # YouTube Transcript MCP Server
 
-**Source:** https://github.com/kyong0612/youtube-mcp
+**Source:** <https://github.com/kyong0612/youtube-mcp>
 
 ## Overview
 
@@ -33,6 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/kyong0612/youtube-mcp/main/scripts/
 ```
 
 **The installer will:**
+
 - Download the appropriate binary for your platform
 - Install to `/usr/local/bin` (or `~/.local/bin` if no sudo)
 - Create example configuration files
@@ -68,6 +69,7 @@ Add to your `claude_desktop_config.json`:
 > **Important:** Claude Desktop requires the **stdio version** (`youtube-mcp-stdio`), not the HTTP server.
 
 **Build the stdio server:**
+
 ```bash
 make build-stdio
 ```
@@ -248,6 +250,7 @@ mcp_servers:
 ```
 
 For Docker STDIO mode:
+
 ```yaml
 mcp_servers:
   youtube-transcript:
@@ -260,6 +263,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test youtube-transcript
 /reload-mcp
@@ -267,8 +271,8 @@ hermes mcp test youtube-transcript
 
 ## References
 
-- GitHub: https://github.com/kyong0612/youtube-mcp
+- GitHub: <https://github.com/kyong0612/youtube-mcp>
 - Docker: ghcr.io/kyong0612/youtube-mcp:latest
-- mcpservers.org: https://mcpservers.org/servers/kyong0612/youtube-mcp
-- mcpserverfinder.com: https://www.mcpserverfinder.com/servers/jkawamoto/mcp-youtube-transcript
-- LobeHub: https://lobehub.com/mcp/sinco-lab-mcp-youtube-transcript
+- mcpservers.org: <https://mcpservers.org/servers/kyong0612/youtube-mcp>
+- mcpserverfinder.com: <https://www.mcpserverfinder.com/servers/jkawamoto/mcp-youtube-transcript>
+- LobeHub: <https://lobehub.com/mcp/sinco-lab-mcp-youtube-transcript>

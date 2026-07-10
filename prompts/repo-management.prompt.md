@@ -48,6 +48,7 @@ metadata:
 ## Goal
 
 Leave every repo with:
+
 - Clean branch structure: `development` + `production` only
 - Complete `.gitignore` with standard patterns
 - Dependency files audited and pruned

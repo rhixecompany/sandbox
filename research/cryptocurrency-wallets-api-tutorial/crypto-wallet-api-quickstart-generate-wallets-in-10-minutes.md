@@ -1,6 +1,6 @@
 # Crypto Wallet API Quickstart: Generate Wallets in 10 Minutes
 
-> **Source:** https://www.cobo.com/post/crypto-wallet-api-quickstart
+> **Source:** <https://www.cobo.com/post/crypto-wallet-api-quickstart>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -20,11 +20,13 @@ A crypto wallet API enables programmatic wallet creation, address generation, an
 ## SDK Installation
 
 Python:
+
 ```bash
 pip install cobo-waas2
 ```
 
 JavaScript:
+
 ```bash
 npm install @cobo/cobo-waas2 --save
 ```
@@ -32,6 +34,7 @@ npm install @cobo/cobo-waas2 --save
 ## Authentication
 
 Python:
+
 ```python
 import cobo_waas2
 configuration = cobo_waas2.Configuration(
@@ -41,6 +44,7 @@ configuration = cobo_waas2.Configuration(
 ```
 
 JavaScript:
+
 ```javascript
 const CoboWaas2 = require('@cobo/cobo-waas2');
 apiClient.setPrivateKey("<your-api-secret>");
@@ -50,6 +54,7 @@ apiClient.setEnv(CoboWaas2.Env.DEV);
 ## Create Wallet
 
 Python:
+
 ```python
 from cobo_waas2 import CreateCustodialWalletParams, WalletType, WalletSubtype
 

@@ -1,6 +1,6 @@
 # Busha Business API: A Primer
 
-> **Source:** https://busha.io/blog/busha-business-api-a-primer
+> **Source:** <https://busha.io/blog/busha-business-api-a-primer>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -19,14 +19,17 @@ The Busha Business API provides programmatic access to stablecoins and digital a
 ## Request-Quote-Execute Pattern
 
 ### Phase 1: Request and Quote
+
 - Request a quote (e.g., buy 1 BTC with NGN)
 - Busha returns a guaranteed rate valid for several minutes
 
 ### Phase 2: Acceptance and Execution
+
 - User accepts the quote
 - Busha validates and reserves assets
 
 ### Phase 3: Settlement and Confirmation
+
 - Assets allocated to user wallet
 - Blockchain transaction recorded
 - Webhook notification sent

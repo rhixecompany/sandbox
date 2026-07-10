@@ -109,6 +109,7 @@ A comprehensive web crawling and content management platform built with Django 5
 ## Deployment Considerations
 
 ### Production Stack
+
 - **Web Server**: Gunicorn with Django ASGI/WSGI
 - **Reverse Proxy**: Traefik with automatic Let's Encrypt SSL
 - **Database**: PostgreSQL 12-16 (configurable version)
@@ -117,6 +118,7 @@ A comprehensive web crawling and content management platform built with Django 5
 - **Storage**: Amazon S3, Google Cloud Storage, Azure, or Whitenoise
 
 ### Docker Services
+
 - **Django**: Web application container
 - **PostgreSQL**: Database container
 - **Celery**: Background task worker
@@ -124,6 +126,7 @@ A comprehensive web crawling and content management platform built with Django 5
 - **Mailpit**: Local email testing (development)
 
 ### Environment Variables
+
 - `DATABASE_URL` - PostgreSQL connection string
 - `DJANGO_SECRET_KEY` - Django secret key
 - `CELERY_BROKER_URL` - Celery message broker URL
@@ -131,6 +134,7 @@ A comprehensive web crawling and content management platform built with Django 5
 - `AWS_*` / `GOOGLE_*` / `AZURE_*` - Cloud storage credentials
 
 ### Important Notes
+
 - `geckodriver.exe` should be downloaded at runtime, not committed
 - `api.sqlite3`, `chapters.json`, `comics.json` should be in `.gitignore`
 - Celery requires running from the `api/` directory for proper imports

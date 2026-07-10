@@ -84,7 +84,7 @@ spending hours on admin work.
 
 Create detailed journey maps that show **what users think, feel, and do** at each step. These maps inform UI flows in Figma.
 
-### Journey Map Structure:
+### Journey Map Structure
 
 ```markdown
 # User Journey: [Task Name]
@@ -251,7 +251,7 @@ When designing a form:
 
 Save all research artifacts for design team reference:
 
-### Create These Files:
+### Create These Files
 
 1. **`docs/ux/[feature-name]-jtbd.md`**
    - Jobs-to-be-Done analysis
@@ -268,7 +268,7 @@ Save all research artifacts for design team reference:
    - Design principles
    - Accessibility requirements
 
-### Handoff to Design:
+### Handoff to Design
 
 ```markdown
 ## For Figma Design Team

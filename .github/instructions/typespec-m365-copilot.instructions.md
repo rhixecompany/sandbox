@@ -383,7 +383,7 @@ namespace ProjectAPI {
 ### Testing Strategy
 
 1. **Provision**: Deploy to development environment
-2. **Test**: Use Microsoft 365 Copilot at https://m365.cloud.microsoft/chat
+2. **Test**: Use Microsoft 365 Copilot at <https://m365.cloud.microsoft/chat>
 3. **Debug**: Enable Copilot developer mode for orchestrator insights
 4. **Iterate**: Refine based on actual behavior
 5. **Validate**: Test all conversation starters and capabilities

@@ -1,6 +1,6 @@
 # Hermes Agent: Build Your Own Learning AI Worker
 
-> **Source:** https://academy.networkchuck.com/course/hermes
+> **Source:** <https://academy.networkchuck.com/course/hermes>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -16,6 +16,7 @@ Access: NetworkChuck Academy subscription
 > "Hermes is not just another chatbot. Because of its memory-driven architecture, it self-improves over time."
 
 Capabilities:
+
 - Use tools and external systems
 - Remember context across sessions
 - Create reusable skills

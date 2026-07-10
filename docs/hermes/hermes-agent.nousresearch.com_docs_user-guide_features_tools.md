@@ -1,4 +1,4 @@
-# Source: https://hermes-agent.nousresearch.com/docs/user-guide/features/tools
+# Source: <https://hermes-agent.nousresearch.com/docs/user-guide/features/tools>
 
 # Tools & Toolsets | Hermes Agent
 
@@ -25,6 +25,7 @@ Tools extend the agent's capabilities and are organized into **toolsets** that c
 | **Integrations** | `ha_*`, MCP server tools | Home Assistant, MCP, and other integrations |
 
 ### Tool Gateway (Nous Portal Subscribers)
+
 Paid [Nous Portal](https://portal.nousresearch.com) subscribers can use web search, image generation, TTS, and browser automation through the **Tool Gateway** — no separate API keys needed.
 
 ```bash
@@ -53,9 +54,11 @@ hermes tools
 ```
 
 ### Common Toolsets
+
 `web`, `search`, `terminal`, `file`, `browser`, `vision`, `image_gen`, `moa`, `skills`, `tts`, `todo`, `memory`, `session_search`, `cronjob`, `code_execution`, `delegation`, `clarify`, `homeassistant`, `messaging`, `spotify`, `discord`, `discord_admin`, `debugging`, `safe`
 
 ### Platform Presets
+
 - `hermes-cli` — CLI default
 - `hermes-telegram` — Telegram bot
 - `mcp-<server>` — Dynamic MCP toolsets
@@ -137,6 +140,7 @@ TERMINAL_SSH_KEY=~/.ssh/id_rsa
 Tools can be configured per-toolset or globally. Use `hermes tools` for interactive configuration, or edit `~/AppData/Local/hermes/config.yaml` directly.
 
 Example tool config:
+
 ```yaml
 tools:
   web_search:

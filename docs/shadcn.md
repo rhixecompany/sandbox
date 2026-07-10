@@ -68,6 +68,7 @@
 ### React UI Library Options
 
 shadcn/ui v4 supports two primitive libraries:
+
 - **Radix UI** (default)
 - **Base UI**
 
@@ -76,11 +77,13 @@ shadcn/ui v4 supports two primitive libraries:
 ## 💻 Claude Code Integration
 
 ### Quick Add (CLI)
+
 ```bash
 claude mcp add shadcn-ui -- npx @jpisnice/shadcn-ui-mcp-server
 ```
 
 ### SSE Transport (Production)
+
 ```bash
 claude mcp add shadcn-ui-sse --transport sse --url http://localhost:3000/sse
 ```
@@ -92,17 +95,20 @@ claude mcp add shadcn-ui-sse --transport sse --url http://localhost:3000/sse
 ## 🔨 Building from Source
 
 ### Build Steps
+
 ```bash
 npm install
 npm run build
 ```
 
 ### Run Locally
+
 ```bash
 npm start
 ```
 
 ### Building MCPB Package
+
 The `.mcpb` file is a ZIP archive containing the server, dependencies, and `manifest.json` following the [MCPB specification](https://github.com/modelcontextprotocol/mcpb).
 
 ---

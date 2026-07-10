@@ -41,6 +41,7 @@ The server listens on **stdin/stdout** (stdio transport), which is the standard 
 ## Tools
 
 ### greet
+
 Greets a user by name with a friendly message.
 
 | Parameter | Type   | Required | Description                  |
@@ -49,6 +50,7 @@ Greets a user by name with a friendly message.
 | `Title`   | string | No       | Optional honorific (Mr./Ms.) |
 
 ### calculate
+
 Performs basic arithmetic operations.
 
 | Parameter   | Type   | Required | Description                                    |

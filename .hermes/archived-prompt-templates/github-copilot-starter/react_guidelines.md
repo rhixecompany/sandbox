@@ -3,6 +3,7 @@
 > Extracted from `github-copilot-starter.prompt.md`.
 
 ## React Guidelines
+
 - Use functional components with hooks
 - Follow the React hooks rules (no conditional hooks)
 - Use React.FC type for components with children

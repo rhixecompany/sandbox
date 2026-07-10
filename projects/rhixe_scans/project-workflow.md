@@ -29,4 +29,5 @@ npm start
 ```
 
 ## Adding a Feature
+
 1. Update Prisma schema → 2. Generate migration → 3. Create server action → 4. Build component

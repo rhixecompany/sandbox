@@ -5,5 +5,6 @@ Lines: 144
 Templates: 2
 
 ## Templates
+
 - `files_in_folder.md`
 - `phases.md`

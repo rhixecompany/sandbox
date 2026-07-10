@@ -162,6 +162,7 @@ Type-checking requires significant memory because:
 - Run linting in CI/CD pipelines instead of locally
 - Use separate linting steps for different directories if needed
 - Consider running type-check and lint separately:
+
   ```bash
   pnpm type-check      # TypeScript validation
   pnpm lint            # ESLint (without type-checking)
@@ -191,9 +192,11 @@ Type-checked linting adds ~5-15 seconds to:
 **Solution:**
 
 1. Increase Node.js memory limit:
+
    ```bash
    NODE_OPTIONS=--max-old-space-size=4096 pnpm lint
    ```
+
 2. Run on machine with more RAM
 3. Run in CI/CD environment instead of locally
 
@@ -360,10 +363,10 @@ If performance becomes a bottleneck, configure type-checking for specific direct
 
 ## References
 
-- **TypeScript ESLint Docs:** https://typescript-eslint.io
-- **Shared Configs:** https://typescript-eslint.io/docs/linting/configs
-- **require-await Rule:** https://typescript-eslint.io/docs/rules/require-await
-- **ESLint v9 Flat Config:** https://eslint.org/docs/latest/use/configure/configuration-files
+- **TypeScript ESLint Docs:** <https://typescript-eslint.io>
+- **Shared Configs:** <https://typescript-eslint.io/docs/linting/configs>
+- **require-await Rule:** <https://typescript-eslint.io/docs/rules/require-await>
+- **ESLint v9 Flat Config:** <https://eslint.org/docs/latest/use/configure/configuration-files>
 - **ComicWise Architecture:** `docs/architecture.md`
 - **Quality Gates:** `AGENTS.md`
 

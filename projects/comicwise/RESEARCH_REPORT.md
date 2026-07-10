@@ -22,20 +22,24 @@
 ## Key Findings
 
 ### Next.js 16 Comic Reader (2026)
+
 - Partial Prerendering (PPR) statically pre-renders shell; streams dynamic content
 - Turbopack default bundler; Server Actions stable for mutations
 - Image optimization for comic assets via `next/image`
 
 ### Drizzle + Prisma Migration
+
 - Drizzle ~7KB bundle vs Prisma ~1.6MB — main driver for migration
 - Prisma Optimize debugs N+1; `@@index` on FKs
 - Migration path: run both ORMs during transition to avoid breaking reads
 
 ### Stripe Subscriptions
+
 - Server Actions for Checkout Sessions; Embedded Checkout for no-redirect
 - Verify webhooks via `constructEvent()`; idempotency key per subscription event
 
 ### BullMQ + Upstash
+
 - BullMQ for async jobs (email, image processing); QStash for serverless cron
 - Upstash Redis as broker; global replication, zero cold starts
 
@@ -45,12 +49,12 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Next.js 16 | https://nextjs.org/docs/app | Docs |
-| Drizzle ORM | https://orm.drizzle.dev | Docs |
-| Stripe Node.js | https://docs.stripe.com/api | Docs |
-| BullMQ | https://docs.bullmq.io/ | Docs |
-| Upstash | https://docs.upstash.com/ | Docs |
-| TanStack Query | https://tanstack.com/query/latest | Docs |
+| Next.js 16 | <https://nextjs.org/docs/app> | Docs |
+| Drizzle ORM | <https://orm.drizzle.dev> | Docs |
+| Stripe Node.js | <https://docs.stripe.com/api> | Docs |
+| BullMQ | <https://docs.bullmq.io/> | Docs |
+| Upstash | <https://docs.upstash.com/> | Docs |
+| TanStack Query | <https://tanstack.com/query/latest> | Docs |
 
 ---
 
@@ -107,8 +111,8 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Next.js 16 | https://nextjs.org/docs | Framework docs |
-| Drizzle ORM | https://orm.drizzle.dev | TypeScript ORM |
-| Stripe Webhooks | https://docs.stripe.com/billing/subscriptions/webhooks | Webhook guide |
-| TanStack Query | https://tanstack.com/query/latest/docs | Server state mgmt |
-| Zustand | https://docs.pmnd.rs/zustand | Client state mgmt |
+| Next.js 16 | <https://nextjs.org/docs> | Framework docs |
+| Drizzle ORM | <https://orm.drizzle.dev> | TypeScript ORM |
+| Stripe Webhooks | <https://docs.stripe.com/billing/subscriptions/webhooks> | Webhook guide |
+| TanStack Query | <https://tanstack.com/query/latest/docs> | Server state mgmt |
+| Zustand | <https://docs.pmnd.rs/zustand> | Client state mgmt |

@@ -8,7 +8,7 @@ Before creating the `llms.txt` file, you must complete a thorough analysis:
 
 ### Step 1: Review llms.txt Specification
 
-- Review the official specification at https://llmstxt.org/ to ensure full compliance
+- Review the official specification at <https://llmstxt.org/> to ensure full compliance
 - Understand the required format structure and guidelines
 - Note the specific markdown structure requirements
 

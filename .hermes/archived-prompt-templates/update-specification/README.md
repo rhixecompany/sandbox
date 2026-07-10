@@ -5,6 +5,7 @@ Lines: 205
 Templates: 11
 
 ## Templates
+
 - `11_related_specifications.md`
 - `3_requirements_constraint.md`
 - `5_acceptance_criteria.md`

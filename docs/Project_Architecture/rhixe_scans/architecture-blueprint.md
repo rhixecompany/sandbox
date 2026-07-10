@@ -82,6 +82,7 @@ The project combines a modern Next.js frontend with a Python backend, supporting
 ## 4. Data Flow
 
 ### Scan Processing Flow
+
 ```
 User Upload → UploadThing → Next.js Server Action → Prisma → PostgreSQL
                                                             ↓
@@ -91,6 +92,7 @@ User Upload → UploadThing → Next.js Server Action → Prisma → PostgreSQL
 ```
 
 ### Payment Flow
+
 ```
 User Checkout → Stripe/PayPal → Webhook → Next.js API → Prisma → Database
 ```
@@ -100,6 +102,7 @@ User Checkout → Stripe/PayPal → Webhook → Next.js API → Prisma → Datab
 ## 5. Implementation Patterns
 
 ### Prisma Schema Pattern
+
 ```prisma
 model Scan {
   id        String   @id @default(cuid())
@@ -111,6 +114,7 @@ model Scan {
 ```
 
 ### Server Action Pattern
+
 ```typescript
 "use server";
 import { prisma } from "@/lib/prisma";

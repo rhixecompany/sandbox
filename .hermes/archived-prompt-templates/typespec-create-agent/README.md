@@ -5,6 +5,7 @@ Lines: 141
 Templates: 3
 
 ## Templates
+
 - `phases.md`
 - `requirements.md`
 - `template_structure.md`

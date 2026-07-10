@@ -1,8 +1,14 @@
+---
+status: completed
+superseded_by: 2026-07-10_prompts-templates-consolidation-master-plan.md
+---
+
 # /enhance-markdown full pass — Prompt Markdown Optimization
 
 Goal: fully optimize all `.prompt.md` files under `./prompts` using an enhance-markdown workflow, with strict verification and cancellation if any prompt fails validation/results review.
 
 ## Execution Rules
+
 - Sequential pass over each prompt; do not batch write in one bulk sweep.
 - Preserve exact YAML frontmatter, heading text, and required section names.
 - Enforce:
@@ -18,9 +24,11 @@ Goal: fully optimize all `.prompt.md` files under `./prompts` using an enhance-m
 - If a prompt cannot be improved cleanly, stop, report the exact path and reason, and await direction.
 
 ## Completion Criteria
+
 - All `.prompt.md` files in `./prompts` are processed.
 - `docs/enhance-markdown-results.md` exists with per-prompt status (改进/无变更/阻塞).
 - No verified markdown errors remain.
 
 ## Output Artifacts
+
 - `docs/enhance-markdown-results.md`

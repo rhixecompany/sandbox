@@ -5,5 +5,6 @@ Lines: 67
 Templates: 2
 
 ## Templates
+
 - `legacy_prompt_details.md`
 - `phases.md`

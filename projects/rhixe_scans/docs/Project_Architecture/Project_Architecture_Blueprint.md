@@ -60,18 +60,21 @@ rhixe_scans/
 ## Architectural Patterns
 
 ### App Router with Server Components
+
 - Server Components by default for performance
 - Client Components for interactive reading experience
 - Streaming for comic page loading
 - Server Actions for mutations
 
 ### Comic Reader Architecture
+
 - Chapter-based content organization
 - Image optimization for comic pages
 - Progress tracking and bookmarks
 - Reading history and recommendations
 
 ### Payment Integration
+
 - Stripe subscriptions with tiered access
 - PayPal as alternative payment method
 - Webhooks for payment lifecycle management

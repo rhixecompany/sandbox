@@ -5,7 +5,7 @@ description: "Debugger Prompt"
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: []
+tags: [debugging, errors, warnings, nextjs, typescript, linting]
 ---
 
 ## Debugger Prompt for AI Agents

@@ -23,6 +23,7 @@ python manage.py runserver
 2. **Set up environment** (see SETUP_GUIDE.md)
 3. **Make changes** following project conventions
 4. **Run quality checks**:
+
    ```bash
    ruff check .
    black --check .
@@ -30,12 +31,14 @@ python manage.py runserver
    pytest
    npm run lint
    ```
+
 5. **Test your changes** — add tests for new spiders/scrapers
 6. **Submit a PR** with clear description
 
 ## Code Standards
 
 ### Python
+
 - **Style**: Black (line length 88), Ruff linting
 - **Typing**: Type hints for all functions
 - **Django**: Follow Django best practices
@@ -43,11 +46,13 @@ python manage.py runserver
 - **Tests**: pytest with factory_boy
 
 ### JavaScript
+
 - **Formatting**: Prettier with tailwindcss plugin
 - **Linting**: ESLint with TypeScript config
 - **Framework**: Alpine.js patterns (no heavy frameworks)
 
 ### Scrapy Spiders
+
 - Name spiders descriptively
 - Use `allowed_domains` to prevent unwanted crawling
 - Respect `robots.txt` in production

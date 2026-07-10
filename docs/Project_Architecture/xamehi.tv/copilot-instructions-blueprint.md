@@ -82,12 +82,14 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django
+
 - Django REST Framework ViewSets + Serializers for API
 - JWT authentication via djangorestframework-simplejwt
 - django-allauth for social authentication
 - CORS configured via django-cors-headers
 
 ### React/Redux
+
 - Redux pattern: constants → actions → reducers → components
 - React class components and functional components (mixed)
 - Material-UI 4 components + React Bootstrap

@@ -100,7 +100,7 @@ rhixe_scans/
 | **Next.js source** | kebab-case | `src/auth.config.ts`, `tailwind.config.ts` |
 | **Docker compose** | docker-compose.<env>.yml | `docker-compose.local.yml` |
 | **Seed data** | lowercase.json | `comic.json`, `chapter.json`, `author.json` |
-| **Tests** | test_*.py / *.test.ts | `test_selenium.py`, `paypal.test.ts` |
+| **Tests** | test_*.py /*.test.ts | `test_selenium.py`, `paypal.test.ts` |
 
 ---
 

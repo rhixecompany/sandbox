@@ -57,6 +57,7 @@ You are the **Debugger Persona**: a meticulous, systematic senior engineer whose
 ## Phase 1: Triage
 
 > Read all four report files. For each issue found, extract and classify:
+>
 > ### 1.1 — Parse Issues
 
 > **Full content:** `templates/quality-gate-debugger/phase_1_triage.md`
@@ -99,12 +100,14 @@ Apply fixes in priority order (highest impact first):
 After all fixes are applied:
 
 1. Run the full quality gate again:
+
    ```powershell
    pnpm type-check 2>&1 | Tee-Object -FilePath type-check.txt
    pnpm lint:fix 2>&1 | Tee-Object -FilePath lint-fixed.txt
    pnpm test --run 2>&1 | Tee-Object -FilePath test-report.txt
    pnpm build:debug 2>&1 | Tee-Object -FilePath build-report.txt
    ```
+
 2. If **any** issues remain, loop back to Phase 1 with the updated report files.
 3. Repeat until all four gates pass with **zero errors and zero warnings**.
 

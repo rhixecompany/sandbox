@@ -23,8 +23,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -58,8 +58,8 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 - Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Update documentation in the same PR or change as code modifications.
 - Use TSDoc for non-trivial types, functions, hooks, and component props.
@@ -70,6 +70,7 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 ## Phases
 
 > ### Phase 1: Documentation Impact Analysis
+>
 > ### Phase 2: Authoring and Synchronization
 
 > **Full content:** `templates/documentation/phases.md`
@@ -105,8 +106,8 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 3. Validate correctness and link integrity.
 4. Deliver a maintainable, synchronized documentation set.
 
-
 ## Template References
 
 Templates in `templates/documentation/`:
+
 - `phases.md`

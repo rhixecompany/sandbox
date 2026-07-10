@@ -1,6 +1,6 @@
 # NPM Sentinel MCP Server
 
-**Source:** https://github.com/Nekzus/npm-sentinel-mcp
+**Source:** <https://github.com/Nekzus/npm-sentinel-mcp>
 
 ## Project Overview
 
@@ -72,6 +72,7 @@ npx -y @nekzus/mcp-server@latest
 Add to `claude_desktop_config.json`:
 
 **Locations:**
+
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
@@ -178,6 +179,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test npm-sentinel
 /reload-mcp
@@ -185,9 +187,9 @@ hermes mcp test npm-sentinel
 
 ## References
 
-- GitHub: https://github.com/Nekzus/npm-sentinel-mcp
-- npm: https://www.npmjs.com/package/@nekzus/mcp-server
+- GitHub: <https://github.com/Nekzus/npm-sentinel-mcp>
+- npm: <https://www.npmjs.com/package/@nekzus/mcp-server>
 - Docker Hub: mcp/npm-sentinel
-- mcpservers.org: https://mcpservers.org/servers/Nekzus/npm-sentinel-mcp
-- Smithery.ai: https://smithery.ai
-- mcp.aibase.com: https://mcp.aibase.com/server/1916343683613696002
+- mcpservers.org: <https://mcpservers.org/servers/Nekzus/npm-sentinel-mcp>
+- Smithery.ai: <https://smithery.ai>
+- mcp.aibase.com: <https://mcp.aibase.com/server/1916343683613696002>

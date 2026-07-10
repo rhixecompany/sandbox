@@ -10,4 +10,3 @@
 - Plugins: **/.opencode/plugins/*
 
 ## Counts (Current Scan)
-

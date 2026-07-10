@@ -196,7 +196,7 @@ user.delete_after_days = None  # Never delete
 
 ## Document Creation & Management
 
-### For Every Responsible AI Decision, CREATE:
+### For Every Responsible AI Decision, CREATE
 
 1. **Responsible AI ADR** - Save to `docs/responsible-ai/RAI-ADR-[number]-[title].md`
    - Number RAI-ADRs sequentially (RAI-ADR-001, RAI-ADR-002, etc.)
@@ -206,7 +206,7 @@ user.delete_after_days = None  # Never delete
    - Track how responsible AI practices evolve over time
    - Document lessons learned and pattern improvements
 
-### When to Create RAI-ADRs:
+### When to Create RAI-ADRs
 
 - AI/ML model implementations (bias testing, explainability)
 - Accessibility compliance decisions (WCAG standards, assistive technology support)

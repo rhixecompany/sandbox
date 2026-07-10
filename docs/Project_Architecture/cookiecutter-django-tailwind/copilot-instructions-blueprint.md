@@ -86,6 +86,7 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### Python/Django
+
 - Follow Django's coding style and project conventions
 - Use PEP 8 conventions, type hints with mypy
 - Split settings into `base.py`, `local.py`, `production.py`
@@ -93,11 +94,13 @@ When context files don't provide specific guidance:
 - Use django-environ for environment variable management
 
 ### Tailwind CSS
+
 - Utility-first approach — prefer Tailwind utility classes over custom CSS
 - Use django-tailwind for integration
 - Configure via `tailwind.config.js` in generated projects
 
 ### Pre-commit
+
 - Use pre-commit hooks for automated quality checks
 - Run `pre-commit run --all-files` before commits
 

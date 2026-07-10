@@ -1,6 +1,6 @@
 # Asyncio in Python - Full Tutorial - YouTube
 
-> **Source:** https://www.youtube.com/watch?v=Qb9s3UiMSTA
+> **Source:** <https://www.youtube.com/watch?v=Qb9s3UiMSTA>
 > **Retrieved:** 2026-05-31T12:17:10
 
 ---
@@ -8,6 +8,7 @@
 # Asyncio in Python - Full Tutorial | Tech With Tim
 
 ## Overview
+
 This comprehensive tutorial covers Python's `asyncio` library for asynchronous programming, focusing on efficiency in handling I/O-bound tasks like network requests and file operations. The video targets Python 3.11+ and emphasizes practical understanding of core concurrency concepts.
 
 ---
@@ -15,6 +16,7 @@ This comprehensive tutorial covers Python's `asyncio` library for asynchronous p
 ## Key Concepts
 
 ### 1. **Event Loop**
+
 - Central hub that manages and distributes asynchronous tasks.
 - Tasks circle the loop; each gets a turn to execute or pause if waiting (e.g., for I/O).
 - When a task `await`s, it yields control back to the loop, allowing other tasks to run.
@@ -25,11 +27,13 @@ This comprehensive tutorial covers Python's `asyncio` library for asynchronous p
 ---
 
 ### 2. **Coroutines**
+
 - Defined using `async def`.
 - Calling an async function returns a **coroutine object**, which must be **awaited** to execute.
 - Use `asyncio.run(coroutine())` to start the event loop and run the top-level coroutine.
 
-#### Example:
+#### Example
+
 ```python
 import asyncio
 
@@ -42,18 +46,21 @@ asyncio.run(main())
 > ⚠️ **Important**: A coroutine does **not** start executing until it is awaited or wrapped in a task.
 
 #### `await` Keyword
+
 - Can only be used inside async functions.
 - Pauses execution until the awaited coroutine completes.
 
 ---
 
 ### 3. **Tasks**
+
 - Schedule coroutines to run **concurrently**.
 - Created via `asyncio.create_task(coroutine())`.
 - Allow overlapping of I/O waits — while one task sleeps/awaits, another can proceed.
 - Enable true concurrency for I/O-bound operations without multi-threading.
 
-#### Example:
+#### Example
+
 ```python
 async def fetch_data(id, delay):
     print(f"Fetching data {id}")
@@ -74,6 +81,7 @@ asyncio.run(main())
 > ✅ **Performance Benefit**: Tasks run concurrently → total time ≈ max(delay), not sum(delays).
 
 #### `asyncio.gather()`
+
 - Simplifies running multiple coroutines concurrently.
 - Returns results in order.
 - **Limitation**: Poor error handling — does **not** cancel other tasks if one fails.
@@ -87,6 +95,7 @@ results = await asyncio.gather(
 ```
 
 #### `asyncio.TaskGroup` (Preferred)
+
 - Introduced in Python 3.11.
 - Provides **automatic error handling**: if one task fails, others are cancelled.
 - Uses async context manager syntax.
@@ -105,11 +114,13 @@ async def main():
 ---
 
 ### 4. **Futures**
+
 - Low-level construct representing a **promise of a future result**.
 - Rarely used directly in application code; more common in library internals.
 - A `Future` is awaited until its result is set by another coroutine/task.
 
-#### Example:
+#### Example
+
 ```python
 async def set_future_result(future):
     await asyncio.sleep(2)
@@ -130,6 +141,7 @@ async def main():
 ### 5. **Synchronization Primitives**
 
 #### **Lock**
+
 - Ensures only **one coroutine** accesses a critical section at a time.
 - Prevents race conditions on shared resources (e.g., files, databases).
 
@@ -146,6 +158,7 @@ async def modify_resource():
 > 🛑 **Use Case**: When two coroutines writing to the same file could corrupt data.
 
 #### **Semaphore**
+
 - Limits access to a resource to **N concurrent coroutines**.
 - Useful for throttling (e.g., limiting API requests).
 
@@ -161,6 +174,7 @@ async def access_resource():
 > 📉 **Use Case**: Prevent overwhelming a server with 10,000 simultaneous requests.
 
 #### **Event**
+
 - Simple boolean flag for synchronization.
 - One coroutine waits (`event.wait()`); another sets it (`event.set()`).
 

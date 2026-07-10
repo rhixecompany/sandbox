@@ -30,6 +30,7 @@ Confirm if I have the necessary permissions to complete all tasks.
 Complete all  tasks the bests way.
 Tasks:
 1 - Create, Optimize and Validate all comprehensive configurations listed below if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of the following files:
+
 - @.vscode/mcp.json
 - @.vscode/extensions.json
 - @.vscode/launch.json
@@ -37,7 +38,6 @@ Tasks:
 - @.vscode/settings.json
 2 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of  @.env.local and @appConfig.ts file to ensure all environment variables are properly set and configured for development and production environments update all usage of this file across the project.
 3 - Create, Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of @src/database/seed/**/*.ts to be dynamic allowing the creation of data from  @users.json @chapters*.json @comics*.json, create and use all needed helpers at @src/database/seed/**/*.ts  to ensure the inserted data is being created or updated if it exists and  ensure all images are not being redownloaded by checking if they are already saved and  downloaded with @src/services/imageService.ts and saved at @public/uploads use best practices if not saved  download the images  use do not repeat yourself practices and  zod validation with all fields  from  @users.json @chapters*.json @comics*.json  update all usages across the project reference @src/database/seed/seeders/universalSeeder.ts as example.
-
 
 After completing all the tasks above, perform the following additional tasks to further enhance the project:
 1 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of  all scripts at @/scripts to ensure they are efficient, well-documented, and follow best practices for maintainability and scalability update all usages across the project.

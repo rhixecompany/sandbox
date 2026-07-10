@@ -115,4 +115,5 @@ var bad = new CalculateTool { A = 5, B = 0, Operation = "divide" };
 ---
 
 ### Verification Note
+
 Artifact generated from real source: `projects/mcp-servers/csharp/Tools/CalculateTool.cs` (48 lines), corroborated by `Program.cs`, `GreetTool.cs`, and `CSharpMcpServer.csproj`. All facts (attributes, operations, exceptions, versions) are traced to source. Skipped template reference `templates/create-oo-component-documentation/2_architecture_section.md` — path does not exist in workspace (ERR), so inline content was authored per the prompt's embedded section spec.

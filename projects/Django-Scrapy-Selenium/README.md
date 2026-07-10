@@ -139,12 +139,14 @@ node src/scrape.js
 ## Coding Standards
 
 ### Python
+
 - **PEP 8**: Python style guide
 - **Black formatting**: 119 character line limit
 - **ruff + mypy**: Strict linting and type checking
 - **Django best practices**: Standard Django/DRF conventions
 
 ### Frontend
+
 - **ES6+**: Modern JavaScript
 - **Prettier**: Code formatting
 - **Webpack**: Module bundling

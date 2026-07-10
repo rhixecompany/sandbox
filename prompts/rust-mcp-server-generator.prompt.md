@@ -73,6 +73,7 @@ Generate this structure:
 ```bash
 cargo build --release
 ```
+
 ````
 
 ## Usage

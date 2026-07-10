@@ -80,14 +80,17 @@ my_project/
 ## 4. Implementation Patterns
 
 ### Generated App Structure
+
 Each generated Django app follows a standard pattern: `models.py`, `views.py`, `urls.py`, `admin.py`, `tests/`.
 
 ### Frontend Pipeline
+
 1. `python manage.py tailwind start` (dev) compiles Tailwind CSS
 2. `python manage.py tailwind build` (production) minifies output
 3. Static files served via WhiteNoise or CDN
 
 ### Testing Pattern
+
 Generated projects use pytest with django-test-migrations for database migration testing.
 
 ---

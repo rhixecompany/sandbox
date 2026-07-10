@@ -109,6 +109,7 @@ Do not pause for confirmation between steps. Continue methodically until the app
 ## Reference Materials
 
 > ### Example Dockerfile
+>
 > An example Dockerfile for an ASP.NET (.NET Framework) application using a Window
 
 > **Full content:** `templates/containerize-aspnet-framework/reference_materials.md`
@@ -134,6 +135,7 @@ When adapting this example Dockerfile:
 ## Template References
 
 Detailed templates in `templates/containerize-aspnet-framework/`:
+
 - `containerization_settings.md`
 - `execution_process.md`
 - `notes_on_stage_naming.md`

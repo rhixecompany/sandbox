@@ -64,9 +64,9 @@
 - **Communication:** JSON-RPC 2.0 (stateful)
 - **Capability negotiation:** Client/server exchange capabilities
 - **Transport Options:**
-    - Standard Input/Output (stdio) — local servers
-    - HTTP with Server-Sent Events (SSE) — remote servers
-    - Custom transports (adhering to Transport interface)
+  - Standard Input/Output (stdio) — local servers
+  - HTTP with Server-Sent Events (SSE) — remote servers
+  - Custom transports (adhering to Transport interface)
 
 ---
 
@@ -417,11 +417,11 @@ http://localhost:6379/   (Redis)
 **Mitigation:**
 
 - Block internal IP ranges:
-    - `http://`, `https://` not allowed for internal
-    - `localhost`, `127.0.0.1`, `::1`
-    - `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`
-    - `169.254.0.0/16` (link-local)
-    - `fc00::/7` (IPv6 private)
+  - `http://`, `https://` not allowed for internal
+  - `localhost`, `127.0.0.1`, `::1`
+  - `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`
+  - `169.254.0.0/16` (link-local)
+  - `fc00::/7` (IPv6 private)
 
 ---
 
@@ -677,4 +677,3 @@ results
 **Document Version:** 1.0  
 **Last Updated:** May 25, 2026  
 **Author:** Alexa (Research compilation)
-

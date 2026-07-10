@@ -38,7 +38,7 @@ applyTo: "**/*.csproj, **/*.cs"
 
 - This project is limited to C# 7.3 features only. Please avoid using:
 
-### C# 8.0+ Features (NOT SUPPORTED):
+### C# 8.0+ Features (NOT SUPPORTED)
 
 - Using declarations (`using var stream = ...`)
 - Await using statements (`await using var resource = ...`)
@@ -50,7 +50,7 @@ applyTo: "**/*.csproj, **/*.cs"
 - Static local functions
 - Nullable reference types (`string?`, `#nullable enable`)
 
-### C# 9.0+ Features (NOT SUPPORTED):
+### C# 9.0+ Features (NOT SUPPORTED)
 
 - Records (`public record Person(string Name)`)
 - Init-only properties (`{ get; init; }`)
@@ -58,14 +58,14 @@ applyTo: "**/*.csproj, **/*.cs"
 - Pattern matching enhancements
 - Target-typed new expressions (`List<string> list = new()`)
 
-### C# 10+ Features (NOT SUPPORTED):
+### C# 10+ Features (NOT SUPPORTED)
 
 - Global using statements
 - File-scoped namespaces
 - Record structs
 - Required members
 
-### Use Instead (C# 7.3 Compatible):
+### Use Instead (C# 7.3 Compatible)
 
 - Traditional using statements with braces
 - Switch statements instead of switch expressions
@@ -84,9 +84,11 @@ applyTo: "**/*.csproj, **/*.cs"
 ### Async/Await Patterns
 
 - **ConfigureAwait(false)**: Always use `ConfigureAwait(false)` in library code to avoid deadlocks:
+
   ```csharp
   var result = await SomeAsyncMethod().ConfigureAwait(false);
   ```
+
 - **Avoid sync-over-async**: Don't use `.Result` or `.Wait()` or `.GetAwaiter().GetResult()`. These sync-over-async patterns can lead to deadlocks and poor performance. Always use `await` for asynchronous calls.
 
 ### DateTime Handling
@@ -99,6 +101,7 @@ applyTo: "**/*.csproj, **/*.cs"
 
 - **StringBuilder for concatenation**: Use `StringBuilder` for multiple string concatenations
 - **StringComparison**: Always specify `StringComparison` for string operations:
+
   ```csharp
   string.Equals(other, StringComparison.OrdinalIgnoreCase)
   ```

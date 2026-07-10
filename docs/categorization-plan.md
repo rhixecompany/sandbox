@@ -13,6 +13,7 @@ Generated: July 1, 2026
 ## Categorization Actions
 
 ### Skills Patched with Category (41)
+
 The following flat skills had category metadata added to their frontmatter:
 
 | Skill | Category |
@@ -60,15 +61,19 @@ The following flat skills had category metadata added to their frontmatter:
 | whisper | mlops |
 
 ### Skills Already Categorized (24)
+
 These skills had category already set in frontmatter and were skipped.
 
 ### Skills Without Category Mapping (31)
+
 These flat skills need manual categorization:
 
 acpx-executor, boost-prompt, chainlink, cli, debugger-tooling, dispatching-parallel-agents, firecrawl-agent, firecrawl-crawl, firecrawl-download, firecrawl-map, firecrawl-scrape, firecrawl-search, flash-attention, git-patch-management, introspection-only-general, joyride, lambda-labs, mcp-coding-agent-setup, modal, no-git-delete, no-net-fetch, peft, project-consolidation, qdrant, simplify, simpo, skills-tools-preflight-check, smithery-ai-cli, stable-diffusion, subagent-driven-development, test-providers-models
 
 ### Category Directory Structure
+
 Skills are organized under 130 category directories including:
+
 - devops (51 skills)
 - creative (32)
 - software-development (30)
@@ -87,6 +92,7 @@ Skills are organized under 130 category directories including:
 - architecture (3)
 
 ## Recommendations
+
 1. Add category mappings for the 31 unmapped skills
 2. Move flat skills into appropriate category directories
 3. Standardize category names across the inventory

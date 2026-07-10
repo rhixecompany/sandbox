@@ -5,14 +5,14 @@ applyTo: "**/*.ts, **/*.html,**/*.scss, **/*.css"
 
 # Angular Development Instructions
 
-Instructions for generating high-quality Angular applications with TypeScript, using Angular Signals for state management, adhering to Angular best practices as outlined at https://angular.dev.
+Instructions for generating high-quality Angular applications with TypeScript, using Angular Signals for state management, adhering to Angular best practices as outlined at <https://angular.dev>.
 
 ## Project Context
 
 - Latest Angular version (use standalone components by default)
 - TypeScript for type safety
 - Angular CLI for project setup and scaffolding
-- Follow Angular Style Guide (https://angular.dev/style-guide)
+- Follow Angular Style Guide (<https://angular.dev/style-guide>)
 - Use Angular Material or other modern UI libraries for consistent styling (if specified)
 
 ## Development Standards
@@ -107,7 +107,7 @@ Instructions for generating high-quality Angular applications with TypeScript, u
 
 ## Additional Guidelines
 
-- Follow the Angular Style Guide for file naming conventions (see https://angular.dev/style-guide), e.g., use `feature.ts` for components and `feature-service.ts` for services. For legacy codebases, maintain consistency with existing pattern.
+- Follow the Angular Style Guide for file naming conventions (see <https://angular.dev/style-guide>), e.g., use `feature.ts` for components and `feature-service.ts` for services. For legacy codebases, maintain consistency with existing pattern.
 - Use Angular CLI commands for generating boilerplate code
 - Document components and services with clear JSDoc comments
 - Ensure accessibility compliance (WCAG 2.1) where applicable

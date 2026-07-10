@@ -206,9 +206,11 @@ For dynamic proxy errors, create `src/main/resources/META-INF/native-image/proxy
 - After each fix, rebuild the native image
 - Analyze new errors and apply appropriate fixes
 - Use the GraalVM tracing agent to automatically generate configuration:
+
   ```sh
   java -agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image -jar target/app.jar
   ```
+
 - Continue until the build succeeds without errors
 
 ### Step 6: Verify the Native Image

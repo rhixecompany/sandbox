@@ -9,18 +9,21 @@
 For each F3/F3b skill, read the file and fix the `## Goal` section:
 
 **F3 pattern** — `## Goal\nUse when Use when <desc>`:
+
 ```
 Replace: "## Goal\nUse when Use when "
 With:    "## Goal\n"
 ```
 
 **F3b pattern** — `## Goal\nUse when "<desc>" to accomplish...`:
+
 ```
 Replace: '## Goal\nUse when "'
 With:    "## Goal\n"
 ```
 
 Skills to fix:
+
 - autonomous-ai-agents: acpx-executor, copilot-cli, customize-opencode, dispatching-parallel-agents, hermes-agent, opencode, qwen-code, skill-creator, skill-judge, writing-skills
 - github: git-gh-commands, git-helper, github-auth, github-pr-workflow, github-repo-management, using-git-worktrees
 - planning: plans-and-specs
@@ -30,11 +33,13 @@ Skills to fix:
 ### Step 2: Fix F1 Missing Frontmatter (1 skill)
 
 For `devops/rbac-audit-logging/SKILL.md`:
+
 - Add `---\nname: rbac-audit-logging\ndescription: <extract from content>\n---\n` at the top
 
 ### Step 3: Fix C2 Unclosed Code Fences (5 skills)
 
 For each C2 skill, append a closing ` ``` ` at the end of the file:
+
 - autonomous-ai-agents/enhance-markdown
 - autonomous-ai-agents/opencode
 - devops/git-history-preserving-migration
@@ -44,12 +49,14 @@ For each C2 skill, append a closing ` ``` ` at the end of the file:
 ### Step 4: Fix R1 Duplicate Headings (10 skills)
 
 For each R1 skill, merge duplicate sections:
+
 - Keep the first occurrence, remove subsequent duplicates
 - Merge content if the duplicates have different content
 
 ### Step 5: Re-run Audit
 
 Run the audit script from Phase 3 and verify:
+
 - F-grade = 0
 - C-grade ≤ 5 (only C1 pip warnings should remain)
 

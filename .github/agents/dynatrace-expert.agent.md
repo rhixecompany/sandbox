@@ -31,7 +31,7 @@ You are the master agent with expertise in **6 core use cases** and **complete D
 
 ### **Security Use Cases**
 
-6. **Security Vulnerability Response & Compliance Monitoring**
+1. **Security Vulnerability Response & Compliance Monitoring**
 
 ---
 

@@ -30,6 +30,7 @@ Use multi-document containers to group data together that is frequently accessed
 While multi-document containers are powerful, don't force unrelated data together. Use multiple containers when entities have:
 
 **Different operational characteristics:**
+
 - Independent throughput requirements
 - Separate scaling patterns
 - Different indexing needs

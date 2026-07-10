@@ -1,6 +1,6 @@
 # MarkItDown MCP Server
 
-**Source:** https://github.com/trsdn/markitdown-mcp
+**Source:** <https://github.com/trsdn/markitdown-mcp>
 
 ## Overview
 
@@ -123,6 +123,7 @@ Add to your `claude_desktop_config.json`:
 Convert a single file to Markdown.
 
 **Parameters:**
+
 - `file_path` (string, required): Path to the file to convert
 - `output_path` (string, optional): Output file path (defaults to same name with .md extension)
 
@@ -137,6 +138,7 @@ Get a complete list of supported file formats with categories.
 Convert all supported files in a directory.
 
 **Parameters:**
+
 - `input_dir` (string, required): Input directory path
 - `output_dir` (string, optional): Output directory (defaults to `input_dir + "_markdown"`)
 - `recursive` (boolean, optional): Process subdirectories (default: `true`)
@@ -180,6 +182,7 @@ docker run -it --rm -v /home/user/data:/workdir markitdown-mcp:latest
 ```
 
 **Claude Desktop Docker config:**
+
 ```json
 {
   "mcpServers": {
@@ -192,6 +195,7 @@ docker run -it --rm -v /home/user/data:/workdir markitdown-mcp:latest
 ```
 
 With volume mount:
+
 ```json
 {
   "mcpServers": {
@@ -239,6 +243,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test markitdown
 /reload-mcp
@@ -246,8 +251,8 @@ hermes mcp test markitdown
 
 ## References
 
-- GitHub: https://github.com/trsdn/markitdown-mcp
-- LobeHub (IT): https://lobehub.com/it/mcp/trsdn-markitdown-mcp
-- mdskills.ai: https://www.mdskills.ai/skills/markitdown
-- PulseMCP: https://www.pulsemcp.com/servers/markitdown
-- Microsoft MarkItDown: https://github.com/microsoft/markitdown (139k stars)
+- GitHub: <https://github.com/trsdn/markitdown-mcp>
+- LobeHub (IT): <https://lobehub.com/it/mcp/trsdn-markitdown-mcp>
+- mdskills.ai: <https://www.mdskills.ai/skills/markitdown>
+- PulseMCP: <https://www.pulsemcp.com/servers/markitdown>
+- Microsoft MarkItDown: <https://github.com/microsoft/markitdown> (139k stars)

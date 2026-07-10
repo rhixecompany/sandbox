@@ -87,22 +87,26 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### TypeScript
+
 - Strict mode TypeScript as configured
 - ESLint with Next.js config
 - Use TypeScript path aliases as defined in `tsconfig.json`
 
 ### Next.js 15 (App Router)
+
 - Use App Router conventions (page.tsx, layout.tsx, loading.tsx, error.tsx)
 - Server Components by default; Client Components only when needed
 - Turbopack for development
 - Image optimization via Next.js Image
 
 ### Database (Prisma)
+
 - Schema managed via `prisma/schema.prisma`
 - Use Prisma Client for all database operations
 - Migrations via Prisma Migrate
 
 ### Auth (NextAuth v5)
+
 - NextAuth v5 for session management
 - Prisma adapter for database-backed sessions
 - Use `auth()` helper for protected routes

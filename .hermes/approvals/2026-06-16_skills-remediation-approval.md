@@ -14,6 +14,7 @@ Perform targeted patches on **51 skills** rated "needs work" (scores 40–69) an
 ### Files to Modify
 
 **51 skills to patch** (per `remediation-plan-v2.md` and `remaining-remediation-plan.md`):
+
 - Batch B (8): customize-opencode, mermaid-diagrams, template-skill, claude-api, copilot-cli, plan, projects-multi-repo-init-normalize, stable-diffusion-image-generation
 - Batch C (13): banking, copilot-cli-quickstart, hermes-skill-library-maintenance, qdrant-vector-search, hermes-breakdown, simpo-training, agent-browser, using-superpowers, peft-fine-tuning, writing-clearly-and-concisely, algorithmic-art, brand-guidelines, canvas-design
 - Batch D (15): copilot-usage-metrics, qwen-code, agent-governance, create-web-form, fine-tuning-with-trl, plantuml-ascii, legacy-circuit-mockups, nano-banana-pro-openrouter, prompt-builder, session-audit-report, writing-skills, validate-memories, agentic-eval
@@ -27,6 +28,7 @@ template, ai-prompt-engineering-safety-review, context-map, convert-plaintext-to
 ## Justification
 
 The skills audit pipeline (28 batches, 191 skills judged) identified 51 skills below the AI-ready threshold (≥70). These skills lack standard frontmatter fields, Skills Required tables, Pitfalls sections, and Verification Checklists. Patching them will:
+
 - Improve consistency across the skill library
 - Enable reliable automated discovery and routing
 - Reduce session startup overhead (skills load correctly on first try)

@@ -11,11 +11,11 @@ Best practices recommended by the Dart and Flutter teams. These instructions wer
 
 Over the past several years, we've written a ton of Dart code and learned a lot about what works well and what doesn't. We're sharing this with you so you can write consistent, robust, fast code too. There are two overarching themes:
 
-1.  **Be consistent.** When it comes to things like formatting, and casing, arguments about which is better are subjective and impossible to resolve. What we do know is that being _consistent_ is objectively helpful.
+1. **Be consistent.** When it comes to things like formatting, and casing, arguments about which is better are subjective and impossible to resolve. What we do know is that being _consistent_ is objectively helpful.
 
     If two pieces of code look different it should be because they _are_ different in some meaningful way. When a bit of code stands out and catches your eye, it should do so for a useful reason.
 
-2.  **Be brief.** Dart was designed to be familiar, so it inherits many of the same statements and expressions as C, Java, JavaScript and other languages. But we created Dart because there is a lot of room to improve on what those languages offer. We added a bunch of features, from string interpolation to initializing formals, to help you express your intent more simply and easily.
+2. **Be brief.** Dart was designed to be familiar, so it inherits many of the same statements and expressions as C, Java, JavaScript and other languages. But we created Dart because there is a lot of room to improve on what those languages offer. We added a bunch of features, from string interpolation to initializing formals, to help you express your intent more simply and easily.
 
     If there are multiple ways to say something, you should generally pick the most concise one. This is not to say you should `code golf` yourself into cramming a whole program into a single line. The goal is code that is _economical_, not _dense_.
 
@@ -298,13 +298,13 @@ The best practices on this page have a priority, which reflects how strongly the
 
 You should separate your app into a UI layer and a data layer. Within those layers, you should further separate logic into classes by responsibility.
 
-#### Use clearly defined data and UI layers.
+#### Use clearly defined data and UI layers
 
 **Strongly recommend**
 
 Separation of concerns is the most important architectural principle. The data layer exposes application data to the rest of the app, and contains most of the business logic in your application. The UI layer displays application data and listens for user events from users. The UI layer contains separate classes for UI logic and widgets.
 
-#### Use the repository pattern in the data layer.
+#### Use the repository pattern in the data layer
 
 **Strongly recommend**
 
@@ -316,7 +316,7 @@ The repository pattern is a software design pattern that isolates the data acces
 
 Separation of concerns is the most important architectural principle. This particular separation makes your code much less error prone because your widgets remain "dumb".
 
-#### Use `ChangeNotifiers` and `Listenables` to handle widget updates.
+#### Use `ChangeNotifiers` and `Listenables` to handle widget updates
 
 **Conditional**
 
@@ -324,7 +324,7 @@ Separation of concerns is the most important architectural principle. This parti
 
 The `ChangeNotifier` API is part of the Flutter SDK, and is a convenient way to have your widgets observe changes in your ViewModels.
 
-#### Do not put logic in widgets.
+#### Do not put logic in widgets
 
 **Strongly recommend**
 
@@ -335,7 +335,7 @@ Logic should be encapsulated in methods on the ViewModel. The only logic a view 
 - Layout logic based on device information, like screen size or orientation.
 - Simple routing logic
 
-#### Use a domain layer.
+#### Use a domain layer
 
 **Conditional**
 
@@ -347,31 +347,31 @@ A domain layer is only needed if your application has exceeding complex logic th
 
 Handling data with care makes your code easier to understand, less error prone, and prevents malformed or unexpected data from being created.
 
-#### Use unidirectional data flow.
+#### Use unidirectional data flow
 
 **Strongly recommend**
 
 Data updates should only flow from the data layer to the UI layer. Interactions in the UI layer are sent to the data layer where they're processed.
 
-#### Use `Commands` to handle events from user interaction.
+#### Use `Commands` to handle events from user interaction
 
 **Recommend**
 
 Commands prevent rendering errors in your app, and standardize how the UI layer sends events to the data layer.
 
-#### Use immutable data models.
+#### Use immutable data models
 
 **Strongly recommend**
 
 Immutable data is crucial in ensuring that any necessary changes occur only in the proper place, usually the data or domain layer. Because immutable objects can't be modified after creation, you must create a new instance to reflect changes. This process prevents accidental updates in the UI layer and supports a clear, unidirectional data flow.
 
-#### Use freezed or built_value to generate immutable data models.
+#### Use freezed or built_value to generate immutable data models
 
 **Recommend**
 
 You can use packages to help generate useful functionality in your data models, `freezed` or `built_value`. These can generate common model methods like JSON ser/des, deep equality checking and copy methods. These code generation packages can add significant build time to your applications if you have a lot of models.
 
-#### Create separate API models and domain models.
+#### Create separate API models and domain models
 
 **Conditional**
 
@@ -383,19 +383,19 @@ Using separate models adds verbosity, but prevents complexity in ViewModels and 
 
 Well organized code benefits both the health of the app itself, and the team working on the code.
 
-#### Use dependency injection.
+#### Use dependency injection
 
 **Strongly recommend**
 
 Dependency injection prevents your app from having globally accessible objects, which makes your code less error prone. We recommend you use the `provider` package to handle dependency injection.
 
-#### Use `go_router` for navigation.
+#### Use `go_router` for navigation
 
 **Recommend**
 
 Go_router is the preferred way to write 90% of Flutter applications. There are some specific use-cases that go_router doesn't solve, in which case you can use the `Flutter Navigator API` directly or try other packages found on `pub.dev`.
 
-#### Use standardized naming conventions for classes, files and directories.
+#### Use standardized naming conventions for classes, files and directories
 
 **Recommend**
 
@@ -418,7 +418,7 @@ Repository classes are the sources of truth for all data in your app, and facili
 
 Good testing practices makes your app flexible. It also makes it straightforward and low risk to add new logic and new UI.
 
-#### Test architectural components separately, and together.
+#### Test architectural components separately, and together
 
 **Strongly recommend**
 

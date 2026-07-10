@@ -1,6 +1,6 @@
 # Hermes Agent Plugins — Comprehensive Summary
 
-> **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins
+> **Source:** <https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins>
 
 ---
 
@@ -58,11 +58,13 @@ plugins:
 ## Installing Plugins
 
 ### From Catalog (Future)
+
 ```bash
 # Planned: hermes plugin install <name>
 ```
 
 ### Manual Installation
+
 ```bash
 # 1. Clone or download plugin to ~/AppData/Local/hermes/plugins/
 git clone https://github.com/example/hermes-plugin-xyz ~/AppData/Local/hermes/plugins/xyz
@@ -76,6 +78,7 @@ plugins:
 ```
 
 ### Development Installation
+
 ```bash
 # For local development
 ln -s /path/to/your/plugin ~/AppData/Local/hermes/plugins/my-plugin
@@ -123,6 +126,7 @@ memory:
 ## Writing a Plugin
 
 ### Python Plugin Template
+
 ```
 my-plugin/
 ├── plugin.yaml
@@ -131,6 +135,7 @@ my-plugin/
 ```
 
 **main.py:**
+
 ```python
 from hermes.plugins import PluginBase, Tool
 
@@ -156,6 +161,7 @@ class MyPlugin(PluginBase):
 ```
 
 ### JavaScript/TypeScript Plugin
+
 Plugin system supports JS/TS via Node.js entry points.
 
 ---
@@ -163,6 +169,7 @@ Plugin system supports JS/TS via Node.js entry points.
 ## Memory Provider Plugins
 
 ### Honcho (Cross-Session Memory)
+
 ```yaml
 plugins:
   enabled:
@@ -170,6 +177,7 @@ plugins:
 ```
 
 **Config:**
+
 ```yaml
 memory:
   provider: honcho
@@ -183,6 +191,7 @@ memory:
 ## Model Provider Plugins
 
 ### OpenRouter
+
 ```yaml
 plugins:
   enabled:
@@ -190,6 +199,7 @@ plugins:
 ```
 
 **Config:**
+
 ```yaml
 model:
   provider: openrouter
@@ -203,6 +213,7 @@ model:
 ## Security Guidance Plugin
 
 Provides automated security review capabilities:
+
 - Secret detection in prompts/files
 - Dependency vulnerability scanning
 - Code pattern analysis
@@ -212,6 +223,7 @@ Provides automated security review capabilities:
 ## Disk Cleanup Plugin
 
 Automated maintenance:
+
 - Cleans old logs (`~/AppData/Local/hermes/logs/`)
 - Removes temp files
 - Prunes old session data

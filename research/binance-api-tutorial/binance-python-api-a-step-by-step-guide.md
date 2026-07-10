@@ -1,6 +1,6 @@
 # Binance Python API – A Step-by-Step Guide
 
-> **Source:** https://algotrading101.com/learn/binance-python-api-guide
+> **Source:** <https://algotrading101.com/learn/binance-python-api-guide>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -27,7 +27,8 @@ The **Binance API** enables programmatic interaction with Binance via Python to 
 ## Testnet
 
 Use Binance Spot Testnet for risk-free testing:
-- URL: https://testnet.binance.vision/
+
+- URL: <https://testnet.binance.vision/>
 - Generate HMAC keys (separate from live)
 - Testnet API: `https://testnet.binance.vision/api`
 

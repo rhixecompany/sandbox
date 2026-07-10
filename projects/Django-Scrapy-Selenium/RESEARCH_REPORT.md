@@ -12,19 +12,21 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| codingforentrepreneurs/Web-Scraping-with-Django-Celery | https://github.com/codingforentrepreneurs/Web-Scraping-with-Django-Celery | Django + Celery scraping scheduler |
-| scrapingbee/selenium-python | https://www.scrapingbee.com/blog/selenium-python | 2026 modern Selenium guide |
+| codingforentrepreneurs/Web-Scraping-with-Django-Celery | <https://github.com/codingforentrepreneurs/Web-Scraping-with-Django-Celery> | Django + Celery scraping scheduler |
+| scrapingbee/selenium-python | <https://www.scrapingbee.com/blog/selenium-python> | 2026 modern Selenium guide |
 
 ---
 
 ## Key Findings
 
 ### Scrapy + Playwright 2026
+
 - Playwright is the dominant default: auto-wait, native CDP, and broader browser support than Selenium
 - Scrapy + HTTPX remains strongest for high-volume static-page crawling
 - Current project mix is reasonable: Selenium for legacy flows, add Playwright for JS-heavy targets
 
 ### Django + Celery Scraping Integration (2026)
+
 - Scrapy spiders best called from Celery tasks, not coupled to Django views
 - Django ORM usable inside Scrapy pipelines for direct persistence
 - `django-celery-beat` for DB-backed periodic tasks (2026 best practice)
@@ -33,12 +35,14 @@
 - Worker concurrency: `--concurrency=CPU*2+1`
 
 ### Selenium Anti-Detection (2026)
+
 - `navigator.webdriver` is primary detection vector — override via CDP
 - Headless detection increasing; use `headless: "new"` or headed mode
 - undetected-chromedriver (Python) / puppeteer-extra-plugin-stealth (Node)
 - Camoufox (Firefox stealth) and playwright-stealth are top 2026 tools
 
 ### Celery Reliability (2026)
+
 - Redis is fastest broker; RabbitMQ offers stronger durability
 - **Critical settings**: `task_acks_late=True`, `task_reject_on_worker_lost=True`, `worker_prefetch_multiplier=1`
 - `celery-once` with Redis lock prevents duplicate execution from retries
@@ -49,10 +53,10 @@
 
 | Topic | Resource | Type |
 |-------|----------|------|
-| Celery + Django | https://docs.celeryq.dev/en/stable/django/ | Integration Guide |
-| Scraping tools 2026 | https://dev.to/agenthustler/top-web-scraping-tools-and-frameworks-in-2026-scrapy-selenium-playwright-beautifulsoup-and-more-3fai | Comparison |
-| Selenium waits | https://www.selenium.dev/documentation/webdriver/waits | Official guide |
-| Anti-detection tools | https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools | 2026 comparison |
+| Celery + Django | <https://docs.celeryq.dev/en/stable/django/> | Integration Guide |
+| Scraping tools 2026 | <https://dev.to/agenthustler/top-web-scraping-tools-and-frameworks-in-2026-scrapy-selenium-playwright-beautifulsoup-and-more-3fai> | Comparison |
+| Selenium waits | <https://www.selenium.dev/documentation/webdriver/waits> | Official guide |
+| Anti-detection tools | <https://scrapfly.io/blog/posts/best-anti-bot-bypass-tools> | 2026 comparison |
 
 ---
 
@@ -110,7 +114,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Scrapy Docs | https://docs.scrapy.org/ | Scrapy framework docs |
-| Selenium Docs | https://www.selenium.dev/documentation/ | Browser automation docs |
-| Celery Docs | https://docs.celeryq.dev/ | Task queue docs |
-| Playwright | https://playwright.dev/ | Modern browser automation |
+| Scrapy Docs | <https://docs.scrapy.org/> | Scrapy framework docs |
+| Selenium Docs | <https://www.selenium.dev/documentation/> | Browser automation docs |
+| Celery Docs | <https://docs.celeryq.dev/> | Task queue docs |
+| Playwright | <https://playwright.dev/> | Modern browser automation |

@@ -5,5 +5,6 @@ Lines: 115
 Templates: 2
 
 ## Templates
+
 - `output_format.md`
 - `phases.md`

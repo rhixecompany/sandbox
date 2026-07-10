@@ -42,8 +42,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -53,24 +53,29 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Instructions
 
 > Create a complete MCP server implementation that:
+>
 > 1. **Uses Copilot Studio MCP Pattern:**
 
 > **Full content:** `templates/mcp-copilot-studio-server-generator/instructions.md`
@@ -87,6 +92,7 @@ Use when you need to work on the current workspace or task.
 ## Expected Output
 
 > 1. **apiDefinition.swagger.json** with:
+>
 > - Proper `x-ms-agentic-protocol: mcp-streamable-1.0`
 
 > **Full content:** `templates/mcp-copilot-studio-server-generator/expected_output.md`
@@ -122,10 +128,10 @@ Host Environment: Azure Function
 Target APIs: CRM System REST API
 ```
 
-
 ## Template References
 
 Templates in `templates/mcp-copilot-studio-server-generator/`:
+
 - `example_usage.md`
 - `expected_output.md`
 - `instructions.md`

@@ -5,6 +5,7 @@
 ## Estimate
 
 {Story points or effort estimate}
+
 ```
 
 ### 4. Priority and Value Matrix

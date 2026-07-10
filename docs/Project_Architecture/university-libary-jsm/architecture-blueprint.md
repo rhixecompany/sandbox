@@ -110,6 +110,7 @@ Browser → Server Action → Zod Validation → Drizzle ORM → Neon PostgreSQL
 ## 5. Implementation Patterns
 
 ### Server Action with Rate Limiting
+
 ```typescript
 "use server";
 import { ratelimit } from "@/lib/ratelimit";
@@ -126,6 +127,7 @@ export async function createBook(input: unknown) {
 ```
 
 ### Database Access Layer
+
 ```typescript
 import { db } from "@/database/db";
 import { books } from "@/database/schema";

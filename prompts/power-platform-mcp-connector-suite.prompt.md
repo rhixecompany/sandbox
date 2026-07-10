@@ -139,6 +139,7 @@ Implement OAuth 2.0 authentication enhanced with MCP security best practices and
 ## Validation Checklist
 
 > ### Technical Compliance
+>
 > - [ ] `x-ms-agentic-protocol: mcp-streamable-1.0` in MCP endpoint
 
 > **Full content:** `templates/power-platform-mcp-connector-suite/validation_checklist.md`
@@ -161,8 +162,8 @@ Host Environment: Azure Function
 Target APIs: CRM REST API
 ```
 
-
 ## Template References
 
 Detailed templates in `templates/power-platform-mcp-connector-suite/`:
+
 - `validation_checklist.md`

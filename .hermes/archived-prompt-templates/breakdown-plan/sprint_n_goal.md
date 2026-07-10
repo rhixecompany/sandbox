@@ -12,6 +12,7 @@
 - #{issue} - {Story title} ({points} pts)
 
 **Total Commitment**: {points} story points **Success Criteria**: {Measurable outcomes}
+
 ```
 
 ### 8. GitHub Project Board Configuration

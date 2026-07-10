@@ -40,8 +40,8 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -51,24 +51,29 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Agent Types
 
 > ### Published by Organization
+>
 > - Built with predefined instructions and actions
 
 > **Full content:** `templates/mcp-deploy-manage-agents/agent_types.md`
@@ -76,10 +81,12 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 ## Admin Roles and Permissions
 
 ### Required Roles
+
 - **AI Admin**: Full agent management capabilities
 - **Global Reader**: View-only access (no editing)
 
 ### Best Practices
+
 - Use roles with fewest permissions
 - Limit Global Administrator to emergency scenarios
 - Follow principle of least privilege
@@ -87,6 +94,7 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 ## Agent Management in Microsoft 365 Admin Center
 
 ### Access Agent Management
+
 1. Go to [Microsoft 365 admin center](https://admin.microsoft.com/)
 2. Navigate to **Agents** page
 3. View available, deployed, or blocked agents
@@ -94,22 +102,26 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 ### Available Actions
 
 **View Agents**
+
 - Filter by availability (available, deployed, blocked)
 - Search for specific agents
 - View agent details (name, creator, date, host products, status)
 
 **Deploy Agents**
 Options for distribution:
+
 1. **Agent Store**: Submit to Partner Center for validation and public availability
 2. **Organization Deployment**: IT admin deploys to all or selected employees
 
 **Manage Agent Lifecycle**
+
 - **Publish**: Make agent available to organization
 - **Deploy**: Assign to specific users or groups
 - **Block**: Prevent agent from being used
 - **Remove**: Delete agent from organization
 
 **Configure Access**
+
 - Set availability for specific user groups
 - Manage permissions per agent
 - Control which agents appear in Copilot
@@ -117,6 +129,7 @@ Options for distribution:
 ## Deployment Workflows
 
 > ### Publish to Organization
+>
 > **For Agent Developers:**
 
 > **Full content:** `templates/mcp-deploy-manage-agents/deployment_workflows.md`
@@ -124,19 +137,24 @@ Options for distribution:
 ## User Experience
 
 ### Agent Discovery
+
 Users find agents in:
+
 - Microsoft 365 Copilot hub
 - Agent picker in Copilot interface
 - Organization's agent catalog
 
 ### Agent Access Control
+
 Users can:
+
 - Toggle agents on/off during interactions
 - Add/remove agents from their experience
 - Right-click agents to manage preferences
 - Only access admin-allowed agents
 
 ### Agent Usage
+
 - Agents appear in Copilot sidebar
 - Users select agent for context
 - Queries routed through selected agent
@@ -145,19 +163,23 @@ Users can:
 ## Governance and Compliance
 
 ### Security Considerations
+
 - **Data access**: Review what data agent can access
 - **API permissions**: Validate required scopes
 - **Authentication**: Ensure secure OAuth flows
 - **External connections**: Assess risk of external integrations
 
 ### Compliance Requirements
+
 - **Data residency**: Verify data stays within boundaries
 - **Privacy policies**: Review agent privacy statement
 - **Terms of use**: Validate acceptable use policies
 - **Audit logs**: Monitor agent usage and activity
 
 ### Monitoring and Reporting
+
 Track:
+
 - Agent adoption rates
 - User feedback and satisfaction
 - Error rates and performance
@@ -166,13 +188,16 @@ Track:
 ## MCP-Specific Management
 
 ### MCP Agent Characteristics
+
 - Connect to external systems via Model Context Protocol
 - Use tools exposed by MCP servers
 - Require OAuth 2.0 or SSO authentication
 - Support same governance as REST API agents
 
 ### MCP Agent Validation
+
 Verify:
+
 - MCP server URL is accessible
 - Authentication configuration is secure
 - Tools imported are appropriate
@@ -180,7 +205,9 @@ Verify:
 - Server follows security best practices
 
 ### MCP Agent Deployment
+
 Same process as REST API agents:
+
 1. Review in admin center
 2. Validate MCP server compliance
 3. Test authentication flow
@@ -190,21 +217,27 @@ Same process as REST API agents:
 ## Agent Settings and Configuration
 
 ### Organizational Settings
+
 Configure at tenant level:
+
 - Enable/disable agent creation
 - Set default permissions
 - Configure approval workflows
 - Define compliance policies
 
 ### Per-Agent Settings
+
 Configure for individual agents:
+
 - Availability (on/off)
 - User assignment (all/groups/individuals)
 - Permission scopes
 - Usage limits or quotas
 
 ### Environment Routing
+
 For Power Platform-based agents:
+
 - Configure default environment
 - Enable environment routing for Copilot Studio
 - Manage flows via Power Platform admin center
@@ -212,7 +245,9 @@ For Power Platform-based agents:
 ## Shared Agent Management
 
 ### View Shared Agents
+
 Admins can see:
+
 - List of all shared agents
 - Creator information
 - Creation date
@@ -220,14 +255,18 @@ Admins can see:
 - Availability status
 
 ### Manage Shared Agents
+
 Admin actions:
+
 - Search for specific shared agents
 - View agent capabilities
 - Block unsafe or non-compliant agents
 - Monitor agent lifecycle
 
 ### User Access to Shared Agents
+
 Users access through:
+
 - Microsoft 365 Copilot on various surfaces
 - Agent-specific tasks and assistance
 - Creator-defined capabilities
@@ -235,6 +274,7 @@ Users access through:
 ## Best Practices
 
 ### Before Deployment
+
 - **Pilot test** with small user group
 - **Gather feedback** from early adopters
 - **Validate security** and compliance
@@ -242,6 +282,7 @@ Users access through:
 - **Train users** on agent usage
 
 ### During Deployment
+
 - **Phased rollout** to manage adoption
 - **Monitor performance** and errors
 - **Collect feedback** continuously
@@ -249,6 +290,7 @@ Users access through:
 - **Communicate** availability to users
 
 ### Post-Deployment
+
 - **Track metrics**: Adoption, satisfaction, errors
 - **Iterate**: Improve based on feedback
 - **Update**: Keep agent current with new features
@@ -256,6 +298,7 @@ Users access through:
 - **Review**: Regular security and compliance audits
 
 ### Communication
+
 - Announce new agents to users
 - Provide documentation and examples
 - Share best practices and use cases
@@ -265,6 +308,7 @@ Users access through:
 ## Troubleshooting
 
 ### Agent Not Appearing
+
 - Check deployment status in admin center
 - Verify user is in assigned group
 - Confirm agent is not blocked
@@ -272,18 +316,21 @@ Users access through:
 - Refresh Copilot interface
 
 ### Authentication Failures
+
 - Verify OAuth credentials are valid
 - Check user has necessary permissions
 - Confirm MCP server is accessible
 - Test authentication flow independently
 
 ### Performance Issues
+
 - Monitor MCP server response times
 - Check network connectivity
 - Review error logs in admin center
 - Validate agent isn't rate-limited
 
 ### Compliance Violations
+
 - Block agent immediately if unsafe
 - Review audit logs for violations
 - Investigate data access patterns
@@ -300,6 +347,7 @@ Users access through:
 ## Workflow
 
 Ask the user:
+
 1. Is this agent ready for deployment or still in development?
 2. Who should have access (all users, specific groups, individuals)?
 3. Are there compliance or security requirements to address?
@@ -307,6 +355,7 @@ Ask the user:
 5. What monitoring and reporting is needed?
 
 Then provide:
+
 - Step-by-step deployment guide
 - Admin center configuration steps
 - User assignment recommendations

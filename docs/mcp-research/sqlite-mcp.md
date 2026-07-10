@@ -1,6 +1,6 @@
 # SQLite MCP Server (Go Implementation)
 
-**Source:** https://github.com/liliang-cn/mcp-sqlite-server
+**Source:** <https://github.com/liliang-cn/mcp-sqlite-server>
 
 ## Overview
 
@@ -72,6 +72,7 @@ go install github.com/liliang-cn/mcp-sqlite-server@latest
 ```
 
 > **Note:** Ensure `$HOME/go/bin` (or `$GOPATH/bin`) is in your PATH:
+>
 > ```bash
 > export PATH="$HOME/go/bin:$PATH"
 > # Add to ~/.zshrc or ~/.bashrc for persistence
@@ -101,6 +102,7 @@ mcp-sqlite-server /path/to/db/directory
 ```
 
 **Note:** The server will exit with an error if:
+
 - No database path/directory is provided
 - The specified path doesn't exist or isn't accessible
 
@@ -109,6 +111,7 @@ mcp-sqlite-server /path/to/db/directory
 Add to your Claude Desktop MCP configuration:
 
 **Config locations:**
+
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
@@ -150,13 +153,14 @@ mcp-sqlite-server/
 
 ### 1. @berthojoris/mcp-sqlite-server (TypeScript/Node.js)
 
-**npm:** https://www.npmjs.com/package/@berthojoris/mcp-sqlite-server
+**npm:** <https://www.npmjs.com/package/@berthojoris/mcp-sqlite-server>
 
 ```bash
 npx @berthojoris/mcp-sqlite-server sqlite:///path/to/database.sqlite list,read,create,update,delete
 ```
 
 **Configuration:**
+
 ```json
 {
   "mcpServers": {
@@ -169,6 +173,7 @@ npx @berthojoris/mcp-sqlite-server sqlite:///path/to/database.sqlite list,read,c
 ```
 
 **Permission levels:**
+
 - `list` - List tables and schemas
 - `read` - Read data
 - `create` - INSERT
@@ -180,11 +185,11 @@ npx @berthojoris/mcp-sqlite-server sqlite:///path/to/database.sqlite list,read,c
 
 ### 2. mcp-sqlite (Augment Code)
 
-https://www.augmentcode.com/mcp/mcp-sqlite - Another Node.js implementation with 8 tools
+<https://www.augmentcode.com/mcp/mcp-sqlite> - Another Node.js implementation with 8 tools
 
 ### 3. VS Code Extension
 
-**Marketplace:** https://marketplace.visualstudio.com/items?itemName=Mrbeandev.mcp-sqlite-tool
+**Marketplace:** <https://marketplace.visualstudio.com/items?itemName=Mrbeandev.mcp-sqlite-tool>
 
 Python-based with VS Code integration for managing SQLite via MCP.
 
@@ -213,6 +218,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test sqlite
 /reload-mcp
@@ -220,7 +226,7 @@ hermes mcp test sqlite
 
 ## References
 
-- GitHub (Go): https://github.com/liliang-cn/mcp-sqlite-server
-- npm (TypeScript): https://www.npmjs.com/package/@berthojoris/mcp-sqlite-server
-- Augment Code: https://www.augmentcode.com/mcp/mcp-sqlite
-- VS Code Extension: https://marketplace.visualstudio.com/items?itemName=Mrbeandev.mcp-sqlite-tool
+- GitHub (Go): <https://github.com/liliang-cn/mcp-sqlite-server>
+- npm (TypeScript): <https://www.npmjs.com/package/@berthojoris/mcp-sqlite-server>
+- Augment Code: <https://www.augmentcode.com/mcp/mcp-sqlite>
+- VS Code Extension: <https://marketplace.visualstudio.com/items?itemName=Mrbeandev.mcp-sqlite-tool>

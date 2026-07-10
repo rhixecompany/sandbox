@@ -5,6 +5,7 @@
 ## Complete Example
 
 **ai-plugin.json:**
+
 ```json
 {
   "functions": [

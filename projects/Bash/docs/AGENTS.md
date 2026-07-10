@@ -6,6 +6,7 @@ tags: [agents, routing, mindmodel, bash, ai-development]
 ---
 
 ## Scope
+
 Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/copilot-instructions.md` for toolkit-wide rules. Root Hermes assets: `../../../.github/agents/hermes.agent.md`, `../../../.github/prompts/`.
 
 # Agent Configurations
@@ -13,6 +14,7 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 ## Registry
 
 ### Core Analysis
+
 | Agent | Purpose | Triggers |
 |---|---|---|
 | `mm-stack-detector` | Identify stack | stack |
@@ -24,6 +26,7 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 | `mm-anti-pattern-detector` | Find issues | bugs, inconsistencies |
 
 ### Utility
+
 | Agent | Purpose |
 |---|---|
 | `mm-constraint-writer` | Assemble mindmodel |
@@ -31,12 +34,14 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 ## Routing
 
 ### By Task
+
 - Code review/bugs → `mm-anti-pattern-detector`
 - Dependencies → `mm-dependency-mapper`
 - Architecture → `mm-pattern-discoverer`
 - Docs/comments → `mm-convention-extractor`
 
 ### By File
+
 | Type | Primary | Secondary |
 |---|---|---|
 | `.sh`, `.ps1`, `.bat` | `mm-stack-detector` | `mm-convention-extractor` |
@@ -46,6 +51,7 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 ## Workflows
 
 ### Phase 1 — Analysis
+
 Run all 7 analysis agents concurrently:
 
 ```javascript
@@ -63,6 +69,7 @@ spawn_agent({
 ```
 
 ### Phase 2 — Assembly
+
 ```javascript
 spawn_agent({
   agents: [
@@ -72,6 +79,7 @@ spawn_agent({
 ```
 
 ## Prompt Template
+
 ```
 Analyze {files} for {purpose}.
 Focus areas:
@@ -81,7 +89,9 @@ Output: { "findings": [...], "summary": "..." }
 ```
 
 ## Mindmodel
+
 `.mindmodel/` stores Markdown constraint files by category:
+
 ```
 manifest.md
 stack/dependencies.md
@@ -96,6 +106,7 @@ mindmodel_lookup({ query: "create upgrade function" });
 ```
 
 ## Flags
+
 | Flag | Default |
 |---|---|
 | `parallel_execution` | `true` |
@@ -106,6 +117,7 @@ mindmodel_lookup({ query: "create upgrade function" });
 | `incremental_update` | `true` |
 
 ## Anti-Patterns
+
 - Running agents sequentially when parallel is possible
 - Skipping Phase 1 before Phase 2
 - Ignoring agent errors

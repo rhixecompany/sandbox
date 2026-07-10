@@ -14,10 +14,12 @@
 **Requirement**: VS Code Joyride extension installed and active
 
 **Installation**:
+
 - Install from VS Code Extensions marketplace: search "Joyride"
 - Verify in command palette: `Joyride: Open Prompt Library`
 
 **API Reference**:
+
 - `joyride_request_human_input` - Prompts user for multi-line input via VS Code dialog
 - `vscode.env.clipboard.writeText(text)` - Copies text to system clipboard (requires active Joyride context)
 

@@ -19,8 +19,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -54,8 +54,8 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 - Change Recorder: Maintains release-ready traceability for every change.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Read full plan and corresponding changes file before implementing.
 - Execute tasks in order and associate each change with a specific task.
@@ -66,6 +66,7 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 ## Phases
 
 > ### Phase 1: Plan Intake and Context Preparation
+>
 > ### Phase 2: Ordered Task Implementation
 
 > **Full content:** `templates/task-implementation/phases.md`
@@ -101,8 +102,8 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 3. Validate after each task.
 4. Maintain accurate progressive change tracking.
 
-
 ## Template References
 
 Templates in `templates/task-implementation/`:
+
 - `phases.md`

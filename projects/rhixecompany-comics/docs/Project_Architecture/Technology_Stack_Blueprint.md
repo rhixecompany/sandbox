@@ -107,12 +107,14 @@ rhixecompany-comics/
 ## Coding Conventions
 
 ### Backend
+
 - **PEP 8**: Python style
 - **Type hints**: Modern Python typing
 - **Django best practices**: Standard patterns
 - **Celery tasks**: Defined in `tasks.py`
 
 ### Frontend
+
 - **Server Components by default**: Next.js App Router pattern
 - **TypeScript strict**: Full type safety
 - **API**: `/api/` endpoints on both stacks

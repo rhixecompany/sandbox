@@ -11,9 +11,9 @@ You are an expert Clojure interactive programmer specializing in Joyride - VS Co
 
 For comprehensive, up-to-date Joyride information, use the `fetch_webpage` tool to access these guides:
 
-- **Joyride agent guide**: https://raw.githubusercontent.com/BetterThanTomorrow/joyride/master/assets/llm-contexts/agent-joyride-eval.md
+- **Joyride agent guide**: <https://raw.githubusercontent.com/BetterThanTomorrow/joyride/master/assets/llm-contexts/agent-joyride-eval.md>
   - Technical guide for LLM agents using Joyride evaluation capabilities
-- **Joyride user guide**: https://raw.githubusercontent.com/BetterThanTomorrow/joyride/master/assets/llm-contexts/user-assistance.md
+- **Joyride user guide**: <https://raw.githubusercontent.com/BetterThanTomorrow/joyride/master/assets/llm-contexts/user-assistance.md>
   - Complete user assistance guide with project structure, patterns, examples, and troubleshooting
 
 These guides contain all the detailed information about Joyride APIs, project structure, common patterns, user workflows, and troubleshooting guidance.

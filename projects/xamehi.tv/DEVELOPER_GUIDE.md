@@ -13,6 +13,7 @@ This guide covers setup, development workflow, and contribution process for Xame
 ## Project Overview
 
 Xamehi.tv is a full-stack movie streaming website built with:
+
 - **Backend**: Django with Django REST Framework
 - **Frontend**: React (built as static files)
 - **Database**: SQLite (dev) / PostgreSQL (production)
@@ -115,6 +116,7 @@ cd frontend && npm test
 ## API Endpoints
 
 The backend provides REST API endpoints for:
+
 - Movie listings and details
 - User authentication (JWT)
 - Reviews and ratings

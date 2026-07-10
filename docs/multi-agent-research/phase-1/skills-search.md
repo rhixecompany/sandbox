@@ -4,6 +4,7 @@ Command:
 `hermes skills search "research"`
 
 Captured output:
+
 ```text
 Searching for: research
 Skills Hub — 10 result(s)
@@ -21,5 +22,6 @@ Skills Hub — 10 result(s)
 ```
 
 Notes:
+
 - Search completed successfully with exit code 0.
 - The returned results were mostly official research-oriented skills plus community research skills.

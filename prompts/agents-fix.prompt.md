@@ -75,8 +75,8 @@ first, then mapping, then sync, then verification.
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
-2. Detect the file format before modifying anything.
-4. Preserve registrations unless the user explicitly requests a rename or
+1. Detect the file format before modifying anything.
+2. Preserve registrations unless the user explicitly requests a rename or
    removal.
 
 ## Skills Required

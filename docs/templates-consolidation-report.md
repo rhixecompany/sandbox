@@ -5,18 +5,20 @@
 
 ## Summary
 
-All 6 phases complete. Root `templates/` tree migrated into `prompts/templates/`, 
+All 6 phases complete. Root `templates/` tree migrated into `prompts/templates/`,
 filename conflicts normalized, broken references fixed, prompt frontmatter cleaned.
 
 ## Phase-by-Phase Results
 
 ### Phase 0 — Baseline Snapshot ✅
+
 - Root `templates/` contained 26 files (12 shared + 11 per-prompt + 3 index/scaffold)
 - `prompts/templates/` contained 25 files (partially overlapping)
 - `test-providers-models.prompt.md` had broken `../templates/` references and malformed YAML frontmatter
 - `../templates/` pattern found in 0 files (previously fixed)
 
 ### Phase 1 — Canonicalize `prompts/templates/` ✅
+
 | Action | Files |
 |--------|-------|
 | **Deleted** (Unicode-hyphen variants) | `phase_3_provider‑by‑provider_b.md`, `phase_4_cross‑provider_compari.md` |
@@ -25,18 +27,21 @@ filename conflicts normalized, broken references fixed, prompt frontmatter clean
 | **Deleted** (unreferenced orphans) | `phase_2_best2_free_selection.md`, `phase_3_config_update.md` — these were not referenced by any prompt |
 
 ### Phase 2 — Migrate References ✅
+
 - **`../templates/` references**: 0 occurrences (checked all `.md` files)
 - `test-providers-models.prompt.md`: All template paths updated to `templates/test-providers-models/phase_N_…` (resolves correctly from `prompts/`)
 - Template file references verified: all 8 files (`phase_0` through `phase_6` + `phases.md`) exist at expected paths
 - Unicode hyphens in path references normalized to ASCII
 
 ### Phase 3 — Retire Root `templates/` ✅
+
 - Root `templates/` directory: **confirmed absent** (`ls` returns "No such file or directory")
 - 26 files deleted from root: all contents migrated to `prompts/templates/` equivalents
 - No data loss: every root template file has a counterpart in `prompts/templates/`
 - Two unreferenced files (`phase_2_best2_free_selection.md`, `phase_3_config_update.md`) removed as intentional cleanup
 
 ### Phase 4 — Enhance Prompt Files ✅
+
 - `prompts/test-providers-models.prompt.md`:
   - Fixed malformed YAML frontmatter (empty leading lines, premature closing fence)
   - Removed duplicate `skills:` block (redundant with `dependencies:` — both kept for validator compatibility)
@@ -45,6 +50,7 @@ filename conflicts normalized, broken references fixed, prompt frontmatter clean
   - Frontmatter now validates as clean YAML
 
 ### Phase 5 — Validate ✅
+
 - Validator script ran successfully (exit code 0)
 - `test-providers-models.prompt.md`:
   - Frontmatter field errors: **resolved** (name, title, description now present)
@@ -54,6 +60,7 @@ filename conflicts normalized, broken references fixed, prompt frontmatter clean
 - Pre-existing gaps (538 unresolved template references across 215 prompts) are outside plan scope — these were never created template directories, not a regression
 
 ### Phase 6 — Final Verification ✅
+
 - No root `templates/` tree remains
 - No `../templates/` references in any file
 - No Unicode-hyphen or double-underscore filename conflicts in `prompts/templates/`
@@ -63,6 +70,7 @@ filename conflicts normalized, broken references fixed, prompt frontmatter clean
 ## Files Changed
 
 ### Deleted (from root `templates/`)
+
 ```
 templates/_shared/*.md          (12 files — migrated to prompts/templates/_shared/)
 templates/test-providers-models/*.md  (11 files — 9 migrated, 2 unreferenced removed)
@@ -74,6 +82,7 @@ templates/_index.md
 ```
 
 ### Deleted (from `prompts/templates/`)
+
 ```
 prompts/templates/test-providers-models/phase_2_best2_free_selection.md     (unreferenced)
 prompts/templates/test-providers-models/phase_3_config_update.md            (unreferenced)
@@ -83,6 +92,7 @@ prompts/templates/test-providers-models/phase_5_rate_limit__fallback_c.md   (dou
 ```
 
 ### Created (in `prompts/templates/`)
+
 ```
 prompts/templates/test-providers-models/phase_3_provider-by-provider_b.md   (ASCII replacement)
 prompts/templates/test-providers-models/phase_4_cross-provider_compari.md   (ASCII replacement)
@@ -90,6 +100,7 @@ prompts/templates/test-providers-models/phase_5_rate_limit_fallback_c.md    (ASC
 ```
 
 ### Modified
+
 ```
 prompts/test-providers-models.prompt.md     — Frontmatter cleanup, path fixes, Unicode normalization
 prompts/templates/test-providers-models/phase_0_auth__provider_invento.md   — CRLF normalization
@@ -137,6 +148,7 @@ prompts/templates/
 ```
 
 ## Pre-Existing Gaps (Not Addressed)
+
 - 538 template references across 215 prompts point to per-prompt template directories that were never created — these are aspirational inline references, not a migration regression
 - The repo-scoped validator cannot resolve skills installed in Hermes home (~/AppData/Local/hermes/skills/)
 - `docs/provider-benchmark-report-final.md` contains historical file paths referencing old root `templates/` (untracked artifact, informational only)

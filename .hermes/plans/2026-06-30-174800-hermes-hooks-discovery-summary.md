@@ -1,13 +1,21 @@
+---
+status: completed
+superseded_by: 2026-06-30-hermes-hooks-master-plan.md
+---
+
 # Hermes Hooks Discovery and Summary Plan
 
 ## Goal
+
 Survey `~/AppData/Local/hermes/hooks`, triage/catalog/identify each hook, read their content, and create a Markdown summary at `docs/hermes-hooks-summary.md`.
 
 ## Scope
+
 - Source of truth: `~/AppData/Local/hermes/hooks`
 - Excluded from this plan: global cleanup of all SandBox plans, full project inventory beyond hooks
 
 ## Phases
+
 1. **Discover hook artifacts** — list files under `~/AppData/Local/hermes/hooks` with paths, sizes, and suffixes/types.
 2. **Catalog and triage** — classify each hook by type/purpose and note conflicts/issues.
 3. **Read hook content** — read each hook script/config to identify commands, references, ports, and assumptions.
@@ -16,8 +24,8 @@ Survey `~/AppData/Local/hermes/hooks`, triage/catalog/identify each hook, read t
 
 Done when: summary file is written and every discovered hook has a catalog entry.
 
-
 ## Verified Live State
+
 - `hermes hooks list` was run and confirmed 4 configured shell hooks:
   - `on_session_end`: session-auto-commit (approved)
   - `on_session_end`: session-logger (approved)

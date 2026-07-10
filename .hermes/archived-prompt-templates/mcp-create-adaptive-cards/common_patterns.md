@@ -5,6 +5,7 @@
 ## Common Patterns
 
 ### List with Images
+
 ```json
 {
   "type": "Container",
@@ -44,6 +45,7 @@
 ```
 
 ### Status Indicators
+
 ```json
 {
   "type": "TextBlock",
@@ -53,6 +55,7 @@
 ```
 
 ### Currency Formatting
+
 ```json
 {
   "type": "TextBlock",

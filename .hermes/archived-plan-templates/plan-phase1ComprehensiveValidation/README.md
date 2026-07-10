@@ -5,6 +5,7 @@ Lines: 458
 Templates: 5
 
 ## Templates
+
 - `notes__considerations.md`
 - `phase_1_fix_immediate_validati.md`
 - `phase_2_eslint_configuration_a.md`

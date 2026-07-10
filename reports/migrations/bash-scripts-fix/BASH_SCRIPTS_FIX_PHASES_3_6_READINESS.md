@@ -11,6 +11,7 @@
 Comprehensive audit, plan, and execution roadmap for migrating 54 conflicting scripts from projects/ and root to centralized Bash/** location.
 
 **Timeline:**
+
 - ✅ Phase 1 (Catalog): COMPLETE — 369 scripts inventoried
 - ✅ Phase 2 (Planning): COMPLETE — 7 batches defined, strategy documented
 - → Phase 3 (Code Review): READY — Will execute when scripts are available
@@ -51,6 +52,7 @@ Step 5: Create fix specifications
 ### Issues to Audit (Checklist)
 
 #### Bash Scripts (.sh)
+
 - [ ] Shebang is `#!/usr/bin/env bash`
 - [ ] `set -euo pipefail` present (or documented exception)
 - [ ] `# shellcheck shell=bash` directive after shebang
@@ -63,6 +65,7 @@ Step 5: Create fix specifications
 - [ ] Exit codes propagated correctly
 
 #### PowerShell Scripts (.ps1)
+
 - [ ] Shebang is `#!/usr/bin/env pwsh`
 - [ ] `Set-StrictMode -Version Latest` present
 - [ ] No `PSIsContainer` (deprecated in PS 7.4+, use `-Directory`)
@@ -73,12 +76,14 @@ Step 5: Create fix specifications
 - [ ] Exit codes propagated to caller
 
 #### Batch Scripts (.bat)
+
 - [ ] Labels properly ordered (all before `:main`)
 - [ ] No ANSI artifacts (`[0A]`, `[0B]`, etc.)
 - [ ] Prefer thin delegator to `.ps1` where applicable
 - [ ] Exit codes propagated
 
 #### Cross-Platform Variants
+
 - [ ] .sh, .ps1, .bat variants have identical behavior
 - [ ] Dry-run output matches across all variants
 - [ ] Help text consistent across platforms
@@ -89,6 +94,7 @@ Step 5: Create fix specifications
 **File:** `docs/bash-scripts-audit-results.md`
 
 **Contents:**
+
 - Summary table of all 54 scripts with issue counts
 - Critical issues (blockers)
 - High-priority issues (must fix before Phase 4)
@@ -222,6 +228,7 @@ git commit -m "feat: migrate ${BATCH} scripts to Bash/
 **Deliverable:** `BASH_SCRIPTS_MIGRATION_PHASE4_REPORT.md`
 
 **Contents:**
+
 - Per-batch migration results
 - Parity test results
 - Path update statistics

@@ -100,8 +100,8 @@ Reference artifacts:
 - An implementation guide with verification steps
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Run `context-map` before any conversion or planning work.
 2. Keep the pipeline idempotent and safe to re-run.

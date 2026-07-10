@@ -5,4 +5,5 @@ Lines: 240
 Templates: 1
 
 ## Templates
+
 - `methodology.md`

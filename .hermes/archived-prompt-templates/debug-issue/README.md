@@ -5,6 +5,7 @@ Lines: 33
 Templates: 3
 
 ## Templates
+
 - `inputs.md`
 - `output.md`
 - `steps.md`

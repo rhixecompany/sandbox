@@ -141,6 +141,7 @@ Key `bun run` script names (from `Bash/package.json`):
 ## Session start
 
 At the start of every session:
+
 1. Search for and read `SESSION_REPORT.md` in the workspace root before proceeding.
 2. Prefer MCP server tools when available (`filesystem`, `github`, `ast-grep`, `memory`, `playwright`, `fetch`, `code-sandbox`, `mcp-docker`, `sequential-thinking`, `cli`).
 3. Switch to the correct Hermes profile for the task.

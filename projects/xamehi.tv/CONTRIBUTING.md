@@ -54,6 +54,7 @@ python manage.py runserver
 ## Development Workflow
 
 1. **Create a feature branch** from `main`:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -61,16 +62,19 @@ python manage.py runserver
 2. **Make your changes** following existing Django and React patterns
 
 3. **Test your changes**:
+
    ```bash
    python manage.py test
    ```
 
 4. **Commit with a clear message**:
+
    ```bash
    git commit -m "feat: add your feature description"
    ```
 
 5. **Push and open a Pull Request**:
+
    ```bash
    git push origin feature/your-feature-name
    ```

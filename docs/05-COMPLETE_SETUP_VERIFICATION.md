@@ -51,6 +51,7 @@ hermes --version
 ```
 
 **Expected Output:**
+
 ```
 Hermes Agent v0.14.0 (2026.5.16)
 Project: C:\Users\Alexa\AppData\Local\hermes\hermes-agent
@@ -68,6 +69,7 @@ hermes config show | grep -E "Config:|Secrets:|Install:"
 ```
 
 **Expected Output:**
+
 ```
 Config:  C:\Users\Alexa\AppData\Local\hermes\config.yaml
 Secrets: C:\Users\Alexa\AppData\Local\hermes\.env
@@ -83,6 +85,7 @@ hermes config show | grep -A 20 "API Keys"
 ```
 
 **Expected Output (partial):**
+
 ```
 ◆ API Keys
   OpenRouter     sk-o...0554
@@ -243,6 +246,7 @@ hermes config show | grep -E "OpenRouter|OpenAI|Anthropic|Google|Tavily"
 ```
 
 **Current Configuration:**
+
 ```
 ✓ OpenRouter: sk-o...0554 (configured)
 ✓ Tavily: tvly...V8Eu (configured)
@@ -467,6 +471,7 @@ hermes tools list | grep docker | head -20
 ```
 
 **Expected Output:**
+
 ```
 docker_container_list
 docker_container_start
@@ -573,6 +578,7 @@ bash ~/verify-hermes.sh
 ```
 
 **Expected Output:**
+
 ```
 ✓ Step 1: Hermes v0.14.0
   PASS: Hermes v0.14.0 ✓
@@ -746,6 +752,7 @@ watch -n 5 'hermes mcp list'
 - `docs/05-COMPLETE_SETUP_VERIFICATION.md` — This file
 - `docs/07-MCP_SECURITY_BEST_PRACTICES.md`
 - `docs/06-HERMES_AGENT_OFFICIAL_REFERENCE_2026.md`
+
 ---
 
 **System Status:** ✅ PRODUCTION READY

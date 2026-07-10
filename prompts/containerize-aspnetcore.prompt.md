@@ -111,7 +111,8 @@ Do not pause for confirmation between steps. Continue methodically until the app
 
 ## Example Dockerfile
 
-> An example Dockerfile for an ASP.NET Core (.NET) application using a Linux base 
+> An example Dockerfile for an ASP.NET Core (.NET) application using a Linux base
+>
 > # ============================================================
 
 > **Full content:** `templates/containerize-aspnetcore/example_dockerfile.md`
@@ -151,10 +152,10 @@ When adapting this example Dockerfile:
 - Keep base images updated
 - Use multi-stage builds to exclude build dependencies from the final image
 
-
 ## Template References
 
 Detailed templates in `templates/containerize-aspnetcore/`:
+
 - `containerization_settings.md`
 - `example_dockerfile.md`
 - `execution_process.md`

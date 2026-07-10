@@ -68,6 +68,11 @@
   "[bat]": {
     "editor.wordWrap": "on"
   },
+  "cSpell.enabled": true,
+  "cSpell.language": "en",
+  "cSpell.showStatus": true,
+  "debugpy.debugJustMyCode": true,
+  "dotenv.enableAutocloaking": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
@@ -123,5 +128,21 @@
       "icon": "terminal-powershell",
       "source": "PowerShell"
     }
+  },
+  "xml.format.enabled": true,
+  "xml.format.preserveAttributeLineBreaks": false,
+  "xml.format.splitAttributes": true,
+  "yaml.format.enable": true,
+  "yaml.format.singleQuote": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml"
+  },
+  "evenBetterToml.formatter.alignEntries": false,
+  "evenBetterToml.formatter.arrayAutoExpand": true,
+  "evenBetterToml.formatter.arrayTrailingComma": false,
+  "evenBetterToml.formatter.compactArrays": true,
+  "evenBetterToml.formatter.reorderKeys": false,
+  "gopls": {
+    "ui.semanticTokens": true
   }
 }

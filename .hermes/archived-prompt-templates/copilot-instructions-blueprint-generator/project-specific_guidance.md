@@ -8,6 +8,7 @@
 - Respect existing architectural boundaries without exception
 - Match the style and patterns of surrounding code
 - When in doubt, prioritize consistency with existing code over external best practices
+
 ```
 
 ### 2. Codebase Analysis Instructions

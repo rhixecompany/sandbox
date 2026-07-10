@@ -5,10 +5,12 @@
 ## Proposed Memories for Merger
 
 ### Memory: [Headline]
+
 **Content:** [Key points]
 **Location:** [Where it fits in instructions]
 
 [More memories]...
+
 ```
 
 Say: "Please review these memories. Approve all with 'go' or specify which to skip."

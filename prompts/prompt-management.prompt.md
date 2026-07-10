@@ -53,8 +53,6 @@ skills:
 
 Manage the whole `prompts/` prompt lifecycle end to end: catalog, dedupe, consolidate reusable context into crisp shared markdown templates, update every affected prompt to use those templates, ensure all prompt references resolve, create any missing skills or scripts referenced by prompts, and validate the prompt inventory is clean.
 
- 
-
 ## Copy-write frontmatter template strict validator
 
 Run the strict validator on all prompt front matter. Compare each `frontmatter` block against the strict template. Collect failures: missing fields, wrong types, invalid license values, required `name/title/version/description/tags`. Report a per-file validation result.
@@ -70,13 +68,13 @@ Run the strict validator on all prompt front matter. Compare each `frontmatter` 
 - Do not delete files solely for structural similarity; remove only exact or near-identical duplicates after confirming no exact refs remain.
 
 ## Verification checklist
- - Every `.prompt.md` includes required frontmatter fields: `name`, `title`, `description`, `version`, `tags`.
- - `version` is semver-like and not blank.
- - `tags` is a non-empty list.
- - No prompt references a missing skill/script.
- - No duplicate prompt by content or function remains.
- - The shared templates at `templates/_shared/...` are linked from prompts and loadable.
 
+- Every `.prompt.md` includes required frontmatter fields: `name`, `title`, `description`, `version`, `tags`.
+- `version` is semver-like and not blank.
+- `tags` is a non-empty list.
+- No prompt references a missing skill/script.
+- No duplicate prompt by content or function remains.
+- The shared templates at `templates/_shared/...` are linked from prompts and loadable.
 
 ## Phases
 
@@ -341,8 +339,6 @@ Stop and block completion only if:
 Otherwise continue to Phase 7.
 
 ---
-
-
 
 ## Deliver
 

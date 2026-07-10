@@ -1,10 +1,11 @@
 # Google Flights MCP Server
 
 **Community Implementations:**
-- https://github.com/punitarani/fli *(most popular — Python CLI + MCP)*
-- https://github.com/HaroldLeo/google-flights-mcp *(9 tools, SerpAPI/fast-flights)*
-- https://github.com/pulsemcp/mcp-servers/tree/main/experimental/google-flights *(TypeScript)*
-- https://github.com/tistaharahap/google-flights-mcp *(FastMCP + Docker)*
+
+- <https://github.com/punitarani/fli> *(most popular — Python CLI + MCP)*
+- <https://github.com/HaroldLeo/google-flights-mcp> *(9 tools, SerpAPI/fast-flights)*
+- <https://github.com/pulsemcp/mcp-servers/tree/main/experimental/google-flights> *(TypeScript)*
+- <https://github.com/tistaharahap/google-flights-mcp> *(FastMCP + Docker)*
 
 ## Overview
 
@@ -40,6 +41,7 @@ fli search --from JFK --to LAX --date 2025-09-01
 ```
 
 **MCP Tools exposed:**
+
 - `search_flights` — Search one-way flights
 - `search_round_trip` — Search round-trip flights
 - `get_cheapest_dates` — Find cheapest travel window

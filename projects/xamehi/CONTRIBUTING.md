@@ -48,6 +48,7 @@ npm start
 ## Development Workflow
 
 1. **Create a feature branch** from `main`:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -55,21 +56,25 @@ npm start
 2. **Make your changes** following existing code patterns
 
 3. **Test your changes**:
+
    ```bash
    npm test
    ```
 
 4. **Build for production** (verify no build errors):
+
    ```bash
    npm run build
    ```
 
 5. **Commit with a clear message**:
+
    ```bash
    git commit -m "feat: add your feature description"
    ```
 
 6. **Push and open a Pull Request**:
+
    ```bash
    git push origin feature/your-feature-name
    ```

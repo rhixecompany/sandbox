@@ -36,6 +36,7 @@ skills:
 
 ---
 > **Shared template references:**
+>
 > - [Core rules](templates/_shared/rules-core.md)
 > - [Skills table](templates/_shared/skills-table-core.md)
 > - [Verification checklist](templates/_shared/verification-checklist.md)
@@ -84,6 +85,7 @@ grep -rn "error\|warning\|deprecated" src/ --include="*.ts" --include="*.tsx" > 
 ```
 
 Categorise issues:
+
 - **High:** Compile/type errors (must fix)
 - **Medium:** Warnings and lint violations (should fix)
 - **Low:** Deprecation notices (fix when encountered)
@@ -100,12 +102,14 @@ For each batch (default: 7 files per batch):
 ### Phase 3: Full re-scan
 
 After all batches complete, run the full scan again.
+
 - If zero errors remain → done.
 - If errors remain but are pre-existing or out of scope → document in report.
 
 ### Phase 4: Report
 
 Write report to `docs/batch-fix-report.md`:
+
 - Total issues found: errors / warnings / deprecations
 - Issues fixed: errors / warnings / deprecations
 - Issues remaining: errors / warnings / deprecations
@@ -113,6 +117,7 @@ Write report to `docs/batch-fix-report.md`:
 - Git commits
 
 ## Verification Checklist
+
 - [ ] Full scan completed and results saved
 - [ ] Errors fixed and verified per batch
 - [ ] Warnings fixed and verified per batch

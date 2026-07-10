@@ -5,6 +5,7 @@ Lines: 51
 Templates: 5
 
 ## Templates
+
 - `common_pitfalls.md`
 - `exception_handling.md`
 - `implementation_patterns.md`

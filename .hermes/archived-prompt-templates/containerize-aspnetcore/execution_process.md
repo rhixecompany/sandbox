@@ -12,9 +12,9 @@
    - The Linux distribution specified in containerization settings (Alpine, Ubuntu, Chiseled, or Azure Linux (Mariner))
    - If the user does not request specific base images in the containerization settings, then the base images MUST be valid mcr.microsoft.com/dotnet images with a tag as shown in the example Dockerfile, below, or in documentation
    - Official Microsoft .NET images for build and runtime stages:
-     - SDK image tags (for build stage): https://github.com/dotnet/dotnet-docker/blob/main/README.sdk.md
-     - ASP.NET Core runtime image tags: https://github.com/dotnet/dotnet-docker/blob/main/README.aspnet.md
-     - .NET runtime image tags: https://github.com/dotnet/dotnet-docker/blob/main/README.runtime.md
+     - SDK image tags (for build stage): <https://github.com/dotnet/dotnet-docker/blob/main/README.sdk.md>
+     - ASP.NET Core runtime image tags: <https://github.com/dotnet/dotnet-docker/blob/main/README.aspnet.md>
+     - .NET runtime image tags: <https://github.com/dotnet/dotnet-docker/blob/main/README.runtime.md>
 5. Create a Dockerfile in the root of the project directory to containerize the application
    - The Dockerfile should use multiple stages:
      - Build stage: Use a .NET SDK image to build the application

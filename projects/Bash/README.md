@@ -32,6 +32,7 @@ The toolkit follows a **Phase-Based Orchestration Pattern** with a multi-phase p
 ### Multi-Platform Wrapper Pattern
 
 Every tool has wrapper parity across platforms:
+
 - `.ps1` — PowerShell (Windows)
 - `.sh` — Shell (Linux/Mac)
 - `.bat` — Batch (Windows fallback)

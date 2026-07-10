@@ -21,6 +21,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 ### Project Structure
 
 - Use well-organized folder structure with clear separation of concerns:
+
   ```
   src/
   ├── components/          # Reusable UI components
@@ -33,6 +34,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ├── PowerProvider.tsx  # Power Platform context wrapper
   └── main.tsx          # Application entry point
   ```
+
 - Keep generated files (`generated/services/`, `generated/models/`) separate from custom code
 - Use consistent naming conventions (kebab-case for files, PascalCase for components)
 
@@ -40,6 +42,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 
 - Set `verbatimModuleSyntax: false` in tsconfig.json for Power Apps SDK compatibility
 - Enable strict mode for type safety with recommended tsconfig.json:
+
   ```json
   {
     "compilerOptions": {
@@ -66,6 +69,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
     }
   }
   ```
+
 - Use proper typing for Power Platform connector responses
 - Configure path alias with `"@": path.resolve(__dirname, "./src")` for cleaner imports
 - Define interfaces for app-specific data structures
@@ -215,6 +219,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 #### Advanced Dataverse Relationships
 
 - **Many-to-many relationships**: Implement junction tables and relationship services
+
   ```typescript
   // Example: User-to-Role many-to-many relationship
   const userRoles = await UserRoleService.getall();
@@ -222,7 +227,9 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
     ur => ur.userId === currentUser.id
   );
   ```
+
 - **Polymorphic lookups**: Handle customer fields that can reference multiple entity types
+
   ```typescript
   // Handle polymorphic customer lookup (Account or Contact)
   const customerType = record.customerType; // 'account' or 'contact'
@@ -232,6 +239,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
       ? await AccountService.get(customerId)
       : await ContactService.get(customerId);
   ```
+
 - **Complex relationship queries**: Use $expand and $filter for efficient data retrieval
 - **Relationship validation**: Implement business rules for relationship constraints
 
@@ -246,6 +254,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 #### Offline-First Architecture with Sync Patterns
 
 - **Service Worker implementation**: Enable offline functionality
+
   ```typescript
   // Example: Service worker registration
   if ("serviceWorker" in navigator) {
@@ -261,6 +270,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
     });
   }
   ```
+
 - **Local data storage**: Use IndexedDB for offline data persistence
 
   ```typescript
@@ -337,6 +347,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 #### Multi-Environment Deployment Pipelines
 
 - **Environment-specific configurations**: Manage dev/test/staging/prod environments
+
   ```json
   // Example: environment-specific config files
   // config/development.json
@@ -351,7 +362,9 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
     }
   }
   ```
+
 - **Automated deployment pipelines**: Use Azure DevOps or GitHub Actions
+
   ```yaml
   # Example Azure DevOps pipeline step
   - task: PowerPlatformToolInstaller@2
@@ -363,6 +376,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
       tenantId: "$(TenantId)"
   - task: PowerPlatformPublishCustomizations@2
   ```
+
 - **Environment promotion**: Automated promotion from dev → test → staging → prod
 - **Rollback strategies**: Implement automated rollback on deployment failures
 - **Configuration management**: Use Azure Key Vault for environment-specific secrets

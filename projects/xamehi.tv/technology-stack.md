@@ -1,9 +1,11 @@
 # Technology Stack — xamehi.tv
 
 ## Overview
+
 Movie/television streaming website with Django REST backend and React 17 frontend.
 
 ## Backend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | Python | 3.x | Runtime |
@@ -14,6 +16,7 @@ Movie/television streaming website with Django REST backend and React 17 fronten
 | django-cors-headers | — | CORS management |
 
 ## Frontend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | React | 17.0.1 | UI library |
@@ -27,6 +30,7 @@ Movie/television streaming website with Django REST backend and React 17 fronten
 | PayPal | 2.6.2 | Payment processing |
 
 ## Database & Deployment
+
 | Technology | Purpose |
 |------------|---------|
 | SQLite | Development database |

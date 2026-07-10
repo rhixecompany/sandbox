@@ -54,6 +54,7 @@
 | 7 | `[F7/F2] Project-level Qwen settings — missing SandBox/.qwen/settings.json` | Project-scoped Qwen Code settings file not present. Needs `auto_edit` mode, workspace MCP servers, and model override. | `feature`, `enhancement`, `spec:acpx-coding-agents` |
 
 **Skipped / Not issued:**
+
 - **F6** (OpenCode integration) — no existing OpenCode config file found; creating an issue without a user-provided base is speculative.
 - **F8 qwen-code.agent.md** — Copilot agent file; better tracked as a Copilot agent PR than standalone issue.
 - **F9** — already met.

@@ -36,8 +36,8 @@ trigger: /dev
 
 - for each page in the list of pages in src/apps that need authentication create a corresponding playwright test, test must be basic with valid page navigation and displaying information ensure all vitest and playwright test run successfully if a test fails debug by executing the individual failing test
 
-
 ## Template References
 
 Templates in `templates/dev/`:
+
 - `phase_1.md`

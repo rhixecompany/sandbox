@@ -88,10 +88,10 @@ Your goal is to help me write effective unit tests with XUnit, covering both sta
 - Consider output helpers (`ITestOutputHelper`) for test diagnostics
 - Skip tests conditionally with `Skip = "reason"` in fact/theory attributes
 
-
 ## Template References
 
 Templates in `templates/csharp-xunit/`:
+
 - `assertions.md`
 - `data-driven_tests.md`
 - `mocking_and_isolation.md`

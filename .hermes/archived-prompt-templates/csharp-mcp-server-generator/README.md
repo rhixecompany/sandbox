@@ -5,4 +5,5 @@ Lines: 66
 Templates: 1
 
 ## Templates
+
 - `implementation_details.md`

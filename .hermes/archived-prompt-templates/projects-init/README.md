@@ -5,6 +5,7 @@ Lines: 168
 Templates: 8
 
 ## Templates
+
 - `actions_summary.md`
 - `context.md`
 - `description.md`

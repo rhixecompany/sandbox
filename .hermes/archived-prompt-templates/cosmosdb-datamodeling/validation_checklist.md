@@ -14,6 +14,7 @@
 - [ ] Hot partition risks evaluated ✅
 - [ ] Consolidation framework applied; candidates reviewed
 - [ ] Design considerations captured (subject to final validation) ✅
+
 ```
 
 ### Multi-Document vs Separate Containers Decision Framework

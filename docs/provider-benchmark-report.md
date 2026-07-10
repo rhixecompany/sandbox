@@ -38,6 +38,7 @@
 ## Benchmark Results
 
 ### Code Generation Task
+
 Both primary models successfully produced tested, production-quality code:
 
 | Model | File Created | Functions | Tests | Quality |
@@ -46,6 +47,7 @@ Both primary models successfully produced tested, production-quality code:
 | qwen/qwen3-coder:free | `lcs.py` (scripts/) | 2 (longest_common_subsequence, lcs_length) | ✅ Self-corrected test bug | Str-only, O(n) space opt |
 
 ### Summary
+
 - **deepseek-v4-flash-free** → Production capability: wrote 97-line module, auto-tested, auto-type-checked. Writes to workspace root.
 - **qwen/qwen3-coder:free** → Production capability: wrote 45-line module, found and fixed own test logic error. Writes to scripts dir.
 - Both models demonstrate full autonomous coding (write → test → verify loop).

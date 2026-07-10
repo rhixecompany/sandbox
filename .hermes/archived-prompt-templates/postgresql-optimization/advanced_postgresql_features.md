@@ -5,6 +5,7 @@
 ## 🚀 Advanced PostgreSQL Features
 
 ### Window Functions
+
 ```sql
 -- Running totals and rankings
 SELECT

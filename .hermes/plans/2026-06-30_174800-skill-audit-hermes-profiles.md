@@ -1,6 +1,5 @@
 ---
 status: completed
-status: completed
 extends: minimal
 ---
 # Skill Audit Output

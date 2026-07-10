@@ -57,6 +57,7 @@ Commands are defined as prompt files with `trigger:` fields — they act as slas
 | 18 plugins | `~/.config/opencode/opencode.json` → `plugin` array | Plugin-provided commands |
 
 **Instruction files loaded on session start:**
+
 - building.md, code-review.md, commit-messages.md, context7.md, custom-instructions.md
 - debugging.md, documentation.md, github-automation.md, github-session-limits.md, memory-bank.md
 - nextjs-tailwind.md, performance.md, planning.md, playwright-typescript.md, process-workflows.md

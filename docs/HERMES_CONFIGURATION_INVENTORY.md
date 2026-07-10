@@ -11,16 +11,19 @@
 ### Current Configuration State
 
 **Global Hermes (v0.14.0):**
+
 - Model: `big-pickle` (OpenCode Zen provider)
-- Base URL: https://opencode.ai/zen/v1/chat/completions
+- Base URL: <https://opencode.ai/zen/v1/chat/completions>
 - Terminal Backend: local
 - Status: ✓ Operational
 
 **MCP Servers Configured:** 8 servers
+
 - Enabled: 7 (filesystem, sequential-thinking, next-devtools, playwright, context7, gh_grep, docker)
 - Disabled: 1 (docker-gateway)
 
 **Toolsets Available:** 26 built-in + 8 MCP servers
+
 - Web, Browser, Terminal, File Ops, Vision, Image Gen, X Search, TTS
 - Plus: Docker, GitHub, Context7, Playwright, Next.js DevTools
 
@@ -33,6 +36,7 @@
 **Location:** `C:\Users\Alexa\AppData\Local\hermes\`
 
 **Components:**
+
 - Code: `hermes-agent/` (Nous Research v0.14.0)
 - Data: config.yaml, .env, profiles/, skills/, sessions/
 - Binary: symlink to `~/.local/bin/hermes`
@@ -55,6 +59,7 @@ fallback_providers:
 ```
 
 **Provider Status:**
+
 - Primary: OpenCode Zen (free tier, zero cost)
 - Fallback 1: OpenRouter Llama 70B (free)
 - Fallback 2: Google Gemini Flash
@@ -64,6 +69,7 @@ fallback_providers:
 **Loaded from:** `~/AppData/Local/hermes/.env`
 
 **Status:**
+
 - ✓ OPENROUTER_API_KEY: sk-o...0554 (configured)
 - ✓ GOOGLE_API_KEY: (configured, via fallback)
 - ✓ TAVILY_API_KEY: tvly...V8Eu (web search)
@@ -87,6 +93,7 @@ terminal:
 ### Tool Configuration
 
 **Built-in Toolsets (26 tools):**
+
 ```
 ✓ web              — Web Search & Scraping (Tavily)
 ✓ browser          — Browser Automation (Playwright)
@@ -121,6 +128,7 @@ terminal:
 ### Active MCP Servers
 
 #### 1. filesystem
+
 - **Transport:** stdio
 - **Command:** mcp-server-filesystem
 - **Args:** C:/Users/Alexa
@@ -128,18 +136,21 @@ terminal:
 - **Tools:** All file operations (read, write, search, create, delete)
 
 #### 2. sequential-thinking
+
 - **Transport:** stdio
 - **Command:** mcp-server-sequential-thinking
 - **Status:** ✓ enabled
 - **Tools:** Multi-step reasoning, chain of thought
 
 #### 3. next-devtools
+
 - **Transport:** stdio
 - **Command:** next-devtools-mcp
 - **Status:** ✓ enabled
 - **Tools:** Next.js development (routes, build, errors, cache)
 
 #### 4. playwright
+
 - **Transport:** stdio
 - **Command:** playwright-mcp
 - **Args:** --caps=network,storage,testing,vision,pdf,devtools
@@ -147,24 +158,28 @@ terminal:
 - **Tools:** Browser automation, page interaction, screenshots
 
 #### 5. context7
+
 - **Transport:** HTTP
-- **URL:** https://mcp.context7.com/mcp
+- **URL:** <https://mcp.context7.com/mcp>
 - **Status:** ✓ enabled
 - **Tools:** Documentation lookup, library queries
 
 #### 6. gh_grep
+
 - **Transport:** HTTP
-- **URL:** https://mcp.grep.app
+- **URL:** <https://mcp.grep.app>
 - **Status:** ✓ enabled
 - **Tools:** GitHub code search across repositories
 
 #### 7. docker
+
 - **Transport:** stdio
 - **Command:** docker-mcp-server
 - **Status:** ✓ enabled
 - **Tools:** ~40 Docker operations (containers, images, volumes, networks, compose, db)
 
 **Docker Tools Available:**
+
 - Container: list, create, start, stop, restart, logs, stats, exec, remove
 - Image: list, pull, push, build, remove, inspect
 - Volume: list, create, remove, inspect
@@ -173,6 +188,7 @@ terminal:
 - Database: query, backup, restore, status
 
 #### 8. docker-gateway (disabled)
+
 - **Transport:** stdio wrapper (bash script)
 - **Command:** bash C:/Users/Alexa/AppData/Local/hermes/gateway-wrapper.sh
 - **Status:** ✗ disabled (Windows deprecation)
@@ -200,12 +216,14 @@ terminal:
 **Location:** C:\Users\Alexa\Desktop\Sandbox
 
 **Project Files:**
+
 - README.md (overview)
 - AGENTS.md (agent guidelines)
 - CODE_STYLE.md (quality standards)
 - docs/ (documentation)
 
 **Hermes Integration:**
+
 - No project-specific hermes.yaml (uses global config)
 - Terminal working directory: C:/Users/Alexa/Desktop/Sandbox
 - All global MCP servers available
@@ -213,11 +231,13 @@ terminal:
 ### Subprojects
 
 **projects/Bash/**
+
 - Active subproject with runnable scripts
 - README.md, AGENTS.md with conventions
 - Format/lint/typecheck via bun
 
 **Other Folders:**
+
 - rhixecompany/ (independent)
 - projects/Resume_maker/ (independent)
 - Use as needed; follows workflow phases from root docs
@@ -248,11 +268,13 @@ terminal:
 ### Tool Discovery
 
 **Total Tools Available:** 250+
+
 - Built-in CLI tools: 26 toolsets
 - MCP-provided tools: 200+ via 7 active servers
 - docker-mcp-server: ~40 specialized tools
 
 **Test Command:**
+
 ```bash
 hermes tools list
 # Expected: 26 built-in + 8 MCP servers listed
@@ -271,6 +293,7 @@ hermes tools list
 **Available Tools (40+):**
 
 **Container Management (8):**
+
 - docker/container/list
 - docker/container/create
 - docker/container/start
@@ -281,6 +304,7 @@ hermes tools list
 - docker/container/exec
 
 **Image Management (5):**
+
 - docker/image/list
 - docker/image/pull
 - docker/image/push
@@ -289,24 +313,28 @@ hermes tools list
 - docker/image/inspect
 
 **Volume Management (4):**
+
 - docker/volume/list
 - docker/volume/create
 - docker/volume/remove
 - docker/volume/inspect
 
 **Network Management (4):**
+
 - docker/network/list
 - docker/network/create
 - docker/network/remove
 - docker/network/inspect
 
 **Compose & Orchestration (4):**
+
 - docker/compose/up
 - docker/compose/down
 - docker/compose/status
 - docker/compose/logs
 
 **Database Operations (5):**
+
 - docker/db/query
 - docker/db/backup
 - docker/db/restore
@@ -327,6 +355,7 @@ mcp_servers:
 ### Docker Gateway Alternative
 
 **Not Recommended on Windows Native:**
+
 - Originally designed for Linux/macOS
 - adminbot profile requires Docker daemon in specific state
 - Workaround shell scripts deprecated
@@ -391,12 +420,14 @@ compression:
 **Storage:** `~/AppData/Local/hermes/.env` (user-only readable)
 
 **Sensitive Variables:**
+
 - OPENROUTER_API_KEY ✓
 - GOOGLE_API_KEY ✓
 - TAVILY_API_KEY ✓
 - Others available but not set
 
 **Best Practice:**
+
 - Never commit .env files
 - Use .gitignore for secrets
 - Rotate keys periodically
@@ -422,6 +453,7 @@ security:
 **Configured:** bun (for @modelcontextprotocol packages)
 
 **MCP Server Package Support:**
+
 ```bash
 bun install @modelcontextprotocol/server-filesystem
 bun install @modelcontextprotocol/server-git
@@ -431,6 +463,7 @@ bun install @modelcontextprotocol/server-github
 ### Migrated MCP Servers
 
 **All 7 Active Servers:** Pre-configured and operational
+
 - No additional migration needed
 - All use system-installed commands
 - Docker MCP: native docker-mcp-server
@@ -443,12 +476,14 @@ bun install @modelcontextprotocol/server-github
 ### Issue: MCP Server Not Loading
 
 **Check:**
+
 ```bash
 hermes mcp list
 hermes mcp status docker
 ```
 
 **Fix:**
+
 ```bash
 # Reload MCP servers
 hermes config edit  # Add/fix mcp_servers section
@@ -457,12 +492,14 @@ hermes config edit  # Add/fix mcp_servers section
 ### Issue: Docker Tools Not Found
 
 **Check:**
+
 ```bash
 docker --version
 hermes execute --tool "docker/container/list" --args '{}'
 ```
 
 **Fix:**
+
 ```bash
 # Ensure docker command available
 which docker  # Should return path
@@ -473,6 +510,7 @@ which docker  # Should return path
 **Check:** Terminal timeout, tool output limits
 
 **Fix:**
+
 ```bash
 # Increase timeout
 hermes config set terminal.timeout 600
@@ -517,6 +555,7 @@ hermes config set terminal.timeout 600
 ### Monitoring & Maintenance
 
 1. **Regular Health Checks:**
+
    ```bash
    hermes mcp list          # Verify servers
    hermes tools list        # Verify tool availability
@@ -524,6 +563,7 @@ hermes config set terminal.timeout 600
    ```
 
 2. **Update Hermes:**
+
    ```bash
    hermes update
    ```
@@ -537,15 +577,18 @@ hermes config set terminal.timeout 600
 ## References
 
 **Documentation:**
+
 - HERMES_MCP_CONFIGURATION_GUIDE.md (full setup guide)
-- Hermes Agent Docs: https://hermes-agent.nousresearch.com/docs
-- MCP Specification: https://modelcontextprotocol.io/
+- Hermes Agent Docs: <https://hermes-agent.nousresearch.com/docs>
+- MCP Specification: <https://modelcontextprotocol.io/>
 
 **Configuration Files:**
+
 - Global: C:\Users\Alexa\AppData\Local\hermes\config.yaml
 - Secrets: C:\Users\Alexa\AppData\Local\hermes\.env
 
 **Commands:**
+
 - `hermes setup` — Interactive setup wizard
 - `hermes config edit` — Edit configuration file
 - `hermes config show` — Display current configuration

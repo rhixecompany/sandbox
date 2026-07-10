@@ -58,4 +58,5 @@ graph TD
         MainComponent --> InternalService
         MainComponent --> ExternalAPI
 ```
+
 ````

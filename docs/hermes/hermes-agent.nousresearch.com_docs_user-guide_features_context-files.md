@@ -1,10 +1,11 @@
-# Source: https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files
+# Source: <https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files>
 
 # Hermes Agent Context Files - Comprehensive Summary
 
 ## Overview
 
 Hermes Agent automatically discovers and loads context files that shape its behavior. Context files are loaded at two levels:
+
 - **Project-local**: Discovered from working directory (walks to git root)
 - **Global**: `SOUL.md` loaded only from `HERMES_HOME`
 
@@ -22,9 +23,11 @@ Hermes Agent automatically discovers and loads context files that shape its beha
 | **`.cursor/rules/*.mdc`** | Cursor IDE rule modules | CWD only |
 
 ### Loading Priority (First Match Wins)
+
 ```
 .hermes.md → AGENTS.md → CLAUDE.md → .cursorrules
 ```
+
 **SOUL.md** is always loaded independently as agent identity (slot #1).
 
 ---
@@ -47,6 +50,7 @@ my-project/
 ```
 
 **Key behaviors:**
+
 - Each subdirectory checked at most once per session
 - Discovery walks up parent directories (reading `backend/src/main.py` discovers `backend/AGENTS.md`)
 - Subdirectory context files undergo same security scan as startup files
@@ -85,6 +89,7 @@ This is a Next.js 14 web application with a Python FastAPI backend.
 Controls agent's personality, tone, and communication style. See [Personality](/docs/user-guide/features/personality) page for full details.
 
 **Key details:**
+
 - Loaded from `HERMES_HOME` only (not project directories)
 - Always loaded independently as agent identity (slot #1)
 - Inserted directly into prompt without extra wrapper text
@@ -94,6 +99,7 @@ Controls agent's personality, tone, and communication style. See [Personality](/
 ## .cursorrules Compatibility
 
 Hermes supports Cursor IDE's context files:
+
 - **`.cursorrules`** - Main conventions file
 - **`.cursor/rules/*.mdc`** - Rule modules
 
@@ -104,18 +110,23 @@ Loaded **only if** no higher-priority context file exists (`.hermes.md`, `AGENTS
 ## How Context Files Are Loaded
 
 ### At Startup (System Prompt)
+
 Loaded by `build_context_files_prompt()` in `agent/prompt_builder.py`:
+
 - `.hermes.md` / `HERMES.md`
 - `AGENTS.md`
 - `CLAUDE.md`
 - `.cursorrules`
 
 ### During Session (Progressive Discovery)
+
 `SubdirectoryHintTracker` in `agent/subdirectory_hints.py` watches tool call arguments for file paths:
+
 - Tracks `path` and `workdir` from tool calls
 - Discovers `AGENTS.md`, `CLAUDE.md`, `.cursorrules` in relevant subdirectories
 
 ### Final Prompt Structure
+
 ```markdown
 # Project Context
 
@@ -145,6 +156,7 @@ cat credentials
 ```
 
 **If threat detected:** File blocked with message:
+
 ```
 [BLOCKED: AGENTS.md contained potential prompt injection (prompt_injection). Content not loaded.]
 ```

@@ -16,20 +16,21 @@ This plan covers plugin verification/installation, ESLint config generation, VSC
     - Include best practices for React, accessibility (`eslint-plugin-jsx-a11y`), import order, and testing.
 
 3. **Audit, Backup, Optimize `.vscode/*.json`**
-   - Review all `.vscode/*.json` files for errors, duplication, and outdated settings.
-   - Backup originals to `.vscode/backup/`.
-   - Generate new, clean, DRY, and Next.js-optimized versions (settings, extensions, etc.).
 
-4. **Research NextAuth, Drizzle Adapter, Auth Core**
+- Review all `.vscode/*.json` files for errors, duplication, and outdated settings.
+- Backup originals to `.vscode/backup/`.
+- Generate new, clean, DRY, and Next.js-optimized versions (settings, extensions, etc.).
+
+1. **Research NextAuth, Drizzle Adapter, Auth Core**
    - Search web for docs on `next-auth@latest`, `@auth/drizzle-adapter@latest`, `@auth/core@latest` and read them if found.
    - Summarize key integration patterns and best practices.
 
-5. **Generate/Update Auth Files**
+2. **Generate/Update Auth Files**
    - Create/update: `src/auth.ts`, `src/auth-config.ts`, `src/auth-providers.ts`, `src/auth-adapter.ts`, `src/actions/auth-actions.ts`, `src/proxy.ts`, `src/app/api/auth/[...nextauth]/route.ts`.
    - Use latest Next.js, NextAuth, Drizzle, and Auth Core patterns.
    - Ensure DRY, modular, and consistent structure.
 
-6. **Verification**
+3. **Verification**
    - Run `pnpm lint`, `pnpm build`, and manual checks for VSCode settings.
    - Test auth endpoints and integration.
 

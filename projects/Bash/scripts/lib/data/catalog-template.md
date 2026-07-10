@@ -30,7 +30,7 @@ Template for CATALOG.md output - shows expected structure with markdown formatti
 | Field | Value |
 | --- | --- |
 | **Organization** | acme-corp |
-| **URL** | https://github.com/acme-corp/frontend-app |
+| **URL** | <https://github.com/acme-corp/frontend-app> |
 | **Local Path** | `C:\Users\Alexa\Desktop\SandBox\repos\acme-corp\frontend-app` |
 | **Health Score** | 92/100 |
 | **Category** | healthy |
@@ -48,7 +48,7 @@ Template for CATALOG.md output - shows expected structure with markdown formatti
 | Field | Value |
 | --- | --- |
 | **Organization** | acme-corp |
-| **URL** | https://github.com/acme-corp/backend-api |
+| **URL** | <https://github.com/acme-corp/backend-api> |
 | **Local Path** | `C:\Users\Alexa\Desktop\SandBox\repos\acme-corp\backend-api` |
 | **Health Score** | 85/100 |
 | **Category** | healthy |
@@ -66,7 +66,7 @@ Template for CATALOG.md output - shows expected structure with markdown formatti
 | Field | Value |
 | --- | --- |
 | **Organization** | acme-legacy |
-| **URL** | https://github.com/acme-legacy/legacy-monolith |
+| **URL** | <https://github.com/acme-legacy/legacy-monolith> |
 | **Local Path** | `C:\Users\Alexa\Desktop\SandBox\repos\acme-legacy\legacy-monolith` |
 | **Health Score** | 45/100 |
 | **Category** | warning |
@@ -84,7 +84,7 @@ Template for CATALOG.md output - shows expected structure with markdown formatti
 | Field | Value |
 | --- | --- |
 | **Organization** | acme-legacy |
-| **URL** | https://github.com/acme-legacy/abandoned-tool |
+| **URL** | <https://github.com/acme-legacy/abandoned-tool> |
 | **Local Path** | `C:\Users\Alexa\Desktop\SandBox\repos\acme-legacy\abandoned-tool` |
 | **Health Score** | 25/100 |
 | **Category** | critical |

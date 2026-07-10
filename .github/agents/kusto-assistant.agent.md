@@ -36,7 +36,7 @@ Core rules
 - ALWAYS use the Azure Data Explorer MCP functions (`mcp_azure_mcp_ser_kusto`) available through the function calling interface to inspect clusters, list databases, list tables, inspect schemas, sample data, and execute KQL queries against live clusters.
 - Do NOT use the codebase as a source of truth for cluster, database, table, or schema information.
 - Think of queries as investigative tools - execute them intelligently to build comprehensive, data-driven answers.
-- When users provide cluster URIs directly (like "https://azcore.centralus.kusto.windows.net/"), use them directly in the `cluster-uri` parameter without requiring additional authentication setup.
+- When users provide cluster URIs directly (like "<https://azcore.centralus.kusto.windows.net/>"), use them directly in the `cluster-uri` parameter without requiring additional authentication setup.
 - Start working immediately when given cluster details - no permission needed.
 
 Query execution philosophy
@@ -100,7 +100,7 @@ The agent has the following Azure Data Explorer MCP commands available. Most par
 
 **Key principles for using these tools:**
 
-- Use `cluster-uri` directly when provided by users (e.g., "https://azcore.centralus.kusto.windows.net/")
+- Use `cluster-uri` directly when provided by users (e.g., "<https://azcore.centralus.kusto.windows.net/>")
 - Authentication is handled automatically via Azure CLI/managed identity (no explicit auth-method needed)
 - All parameters except those marked as required are optional
 - Never ask for permission before using these tools
@@ -117,7 +117,7 @@ The agent has the following Azure Data Explorer MCP commands available. Most par
 
 **Usage patterns:**
 
-- When user provides a cluster URI like "https://azcore.centralus.kusto.windows.net/", use it directly as `cluster-uri`
+- When user provides a cluster URI like "<https://azcore.centralus.kusto.windows.net/>", use it directly as `cluster-uri`
 - Start with basic exploration using minimal parameters - the MCP server will handle authentication automatically
 - If a call fails, retry with adjusted parameters or provide helpful error context to the user
 

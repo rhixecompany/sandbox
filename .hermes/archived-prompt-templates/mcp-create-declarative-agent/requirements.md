@@ -7,6 +7,7 @@
 Generate the following project structure using Microsoft 365 Agents Toolkit:
 
 ### Project Setup
+
 1. **Scaffold declarative agent** via Agents Toolkit
 2. **Add MCP action** pointing to MCP server
 3. **Select tools** to import from MCP server
@@ -16,6 +17,7 @@ Generate the following project structure using Microsoft 365 Agents Toolkit:
 ### Key Files Generated
 
 **appPackage/manifest.json** - Teams app manifest with plugin reference:
+
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
@@ -48,6 +50,7 @@ Generate the following project structure using Microsoft 365 Agents Toolkit:
 ```
 
 **appPackage/declarativeAgent.json** - Agent definition:
+
 ```json
 {
   "$schema": "https://aka.ms/json-schemas/copilot/declarative-agent/v1.0/schema.json",
@@ -73,6 +76,7 @@ Generate the following project structure using Microsoft 365 Agents Toolkit:
 ```
 
 **appPackage/ai-plugin.json** - MCP plugin manifest:
+
 ```json
 {
   "schema_version": "v2.1",
@@ -120,6 +124,7 @@ Generate the following project structure using Microsoft 365 Agents Toolkit:
 ```
 
 **/.vscode/mcp.json** - MCP server configuration:
+
 ```json
 {
   "serverUrl": "https://api.service.com/mcp/",

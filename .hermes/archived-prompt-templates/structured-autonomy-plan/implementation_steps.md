@@ -15,6 +15,7 @@
 ### Step 3: {Step Name}
 
 ...
+
 ```
 
 </output_template>

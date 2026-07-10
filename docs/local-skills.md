@@ -1,75 +1,76 @@
-# Local Skills Audit Report
+# Local Skills Inventory
 
-Generated: July 1, 2026
+> Generated: 2026-07-10 | Source: `hermes skills audit` + `hermes skills list`
 
-## Overview
+## Summary
 
-- **Total SKILL.md files**: 570
-- **Category directories**: 130
-- **Total skills mapped (with frontmatter)**: 398
-
-## Audit Results
-
-| Metric | Count |
+| Metric | Value |
 |--------|-------|
-| Frontmatter present | 569/570 |
-| Has "When to Use" section | 461/570 |
-| Has "Workflow" section | 241/570 |
-| Has "Verification Checklist" | 356/570 |
-| Has "Best Practices" | 70/570 |
-| H1 inside code blocks | 330 |
+| Total SKILL.md files on disk | 652 |
+| Skill categories | 120 |
+| Skills in `hermes skills list` | 461 |
+| Skills scanned by audit | 117 |
+| SAFE verdict | 45 |
+| CAUTION verdict | 9 |
+| DANGEROUS verdict | 13+ |
+| Warnings (path missing) | ~28 |
 
-## Missing Sections Analysis
+## Category Breakdown (by `hermes skills list`)
 
-### Missing "When to Use" (109 skills)
-Skills without this section should be reviewed for completeness. Key categories affected:
-- `.restore-backups/` (24 archived skills)
-- `devops/` (5 skills)
-- `productivity/` (5 skills)
-- `mcp/` (10 skills)
-- Various uncategorized skills
+| Category | Count | Notes |
+|----------|-------|-------|
+| (uncategorized) | ~36 | Local/builtin skills at root |
+| .restore-backups | ~61 | Archived/official community skills |
+| architecture | 3 | Blueprint generators |
+| autonomous-ai-agents | 12 | Agent orchestration skills |
+| creative | 27 | Design, art, UI skills |
+| data-science | 1 | Jupyter |
+| development | ~110 | Dev tooling, scripts, audits |
+| mlops | ~20 | ML training/inference |
+| planning | 2 | Planning specs |
+| productivity | 15+ | Tools, integrations |
+| qa | 5+ | Testing, verification |
+| research | 8+ | Search, scraping, OSINT |
+| security | 4+ | Pentest, forensics, jailbreak |
+| devops | 25+ | Docker, infra, CI/CD |
+| finance | 7 | Excel, models |
+| software-development | 35+ | Coding tools |
+| mcp | 10+ | MCP servers |
+| blockchain | 3 | EVM, Solana, Hyperliquid |
+| gaming | 2 | Minecraft, Pokemon |
+| health | 2 | Fitness, neuroskill |
+| media | 5+ | GIF, song, spotify |
+| note-taking | 1 | Obsidian/Siyuan |
+| social-media | 1 | X/Twitter |
+| email | 2 | AgentMail, Himalaya |
+| smart-home | 1 | OpenHue |
+| web-development | 2 | Cloudflare, page-agent |
 
-### Missing "Workflow" (329 skills)
-The majority of skills lack a defined workflow section. This is expected for utility/reference skills but should be investigated for core process skills.
+## Skills by Source
 
-### Missing "Verification Checklist" (214 skills)
-Skills without verification steps need attention, especially process-oriented skills.
+| Source | Count |
+|--------|-------|
+| local | ~332 |
+| official | ~72 |
+| builtin | ~43 |
+| community (skills.sh) | ~16 |
+| community (github) | ~5 |
 
-### Missing "Best Practices" (500 skills)
-Most skills lack a best practices section - a significant gap.
+## Skills with Audit Warnings (path missing)
 
-## Category Distribution (from path mapping)
+agentmail, axolotl, baoyu-article-illustrator, bioinformatics, blackbox, blender-mcp,
+creative-ideation, cli, fitness-nutrition, flash-attention, grok, honcho,
+microsoft-code-reference, microsoft-docs, mpp-agent, openhands, outlines, page-agent,
+pinggy-tunnel, pixel-art, pptx-author, qmd, sherlock, shopify, siyuan,
+stripe-projects, subagent-driven-development, unsloth, adversarial-ux-test,
+cloudflare-temporary-deploy
 
-| Category | Count |
-|----------|-------|
-| devops | 51 |
-| uncategorized | 36 |
-| creative | 32 |
-| software-development | 30 |
-| development | 29 |
-| productivity | 28 |
-| mcp | 17 |
-| qa | 15 |
-| autonomous-ai-agents | 12 |
-| mlops | 10 |
-| research | 8 |
-| github | 7 |
-| media | 6 |
-| reference | 4 |
-| .archive | 4 |
-| planning | 3 |
-| finance | 3 |
-| architecture | 3 |
-| social-media | 1 |
-| smart-home | 1 |
-| product | 1 |
-| payments | 1 |
-| note-taking | 1 |
-| email | 1 |
-| data-science | 1 |
-| .restore-backups | 93 |
+## Skills BLOCKED by Audit (highest severity)
 
-## Notes
-- `.restore-backups/` and `.archive/` directories contain old/backup skills that may be excluded from active inventory
-- 36 skills are uncategorized (top-level under skills/)
-- Frontmatter presence is excellent (569/570 = 99.8%)
+- DANGEROUS (CRITICAL): godmode, lambda-labs, oss-forensics, web-pentest,
+  rest-graphql-debug, clone-code, fastmcp, docker-management, gitnexus-explorer,
+  hermes-s6-container-supervision, parallel-cli, openclaw-migration, shop, stocks,
+  watchers, antigravity-cli, darwinian-evolver, here-now
+- CAUTION (HIGH): canvas, accelerate, concept-diagrams, hyperframes, hyperliquid,
+  pytorch-fsdp, qdrant, solana, telephony, whisper, minecraft-modpack-server,
+  django-celery

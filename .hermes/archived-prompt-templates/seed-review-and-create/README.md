@@ -5,4 +5,5 @@ Lines: 88
 Templates: 1
 
 ## Templates
+
 - `tasks.md`

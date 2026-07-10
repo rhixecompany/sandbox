@@ -67,8 +67,8 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 | `plans-and-specs`                | Creates implementation plan from goal |
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. **Sequential execution** — Phases must complete in order ("only then" constraint)
 2. **Bidirectional sync** — Skills, plugins, and hooks flow in both directions
@@ -77,6 +77,7 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 ## Phases
 
 > ### Phase 1: Inventory Instructions & Agents
+>
 > **Goal:** List and triage all instructions and agents, creating personalities an
 
 > **Full content:** `templates/sync-hermes-copilot-codex/phases.md`
@@ -100,8 +101,8 @@ This prompt performs a bidirectional sync of skills, plugins, and hooks across H
 - [ ] Hooks synced bidirectionally
 - [ ] Plan and specs verified complete
 
-
 ## Template References
 
 Detailed templates in `templates/sync-hermes-copilot-codex/`:
+
 - `phases.md`

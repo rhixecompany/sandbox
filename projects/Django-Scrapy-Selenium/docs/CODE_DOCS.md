@@ -15,6 +15,7 @@ A web crawling and scraping platform combining Django REST API, Scrapy spiders w
 ### Core Models
 
 #### Comic
+
 ```python
 class Comic(models.Model):
     STATUS_CHOICES = [
@@ -113,6 +114,7 @@ class AsuracomicSpider(scrapy.Spider):
 - Error handling: Wraps parsing in try/except, logs failures with source URL context.
 
 **Design Patterns:**
+
 - Progressive data collection from listing → detail page
 - Selenium middleware for JavaScript-rendered content
 - Proxy rotation for anti-bot circumvention
@@ -158,12 +160,14 @@ class NewSeleniumMiddleware:
 ```
 
 **Key Implementation Details:**
+
 - Single WebDriver instance shared across all requests
 - Headless mode with production-appropriate window size
 - Returns fully rendered HTML as a Scrapy `HtmlResponse`
 - No explicit waits — relies on page load completion
 
 **Design Considerations:**
+
 - Shared `webdriver.Chrome()` instance means thread safety must be considered
 - No explicit `WebDriverWait` — may fail on slow-loading pages
 - Memory leak potential if crawler runs indefinitely without driver restart
@@ -198,6 +202,7 @@ class CrawlerAppsDbPipeline:
 ```
 
 **Processing Methods:**
+
 - Comic insertion with `get_or_create` by slug or name
 - Chapter insertion with unique constraint `(comic_id, chapter_number)`
 - Support for bulk operations when pipelining multiple items
@@ -257,6 +262,7 @@ crawler/
 ```
 
 **Scrapy Settings:**
+
 - `ROBOTSTXT_OBEY = True`
 - `CONCURRENT_REQUESTS = 1` (serial crawling)
 - `DOWNLOAD_DELAY = 3.0` (rate limiting)

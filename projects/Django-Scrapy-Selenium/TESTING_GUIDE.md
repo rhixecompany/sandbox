@@ -54,29 +54,34 @@ api/
 ## What to Test
 
 ### Scrapy Spiders
+
 - Spider parses HTML correctly
 - Items contain expected fields
 - Pagination/navigation logic works
 - Edge cases: empty pages, missing elements, redirects
 
 ### Pipelines
+
 - Items saved correctly to database
 - Duplicate handling (update vs create)
 - Data transformation (cleanup, normalization)
 
 ### Selenium Scraper
+
 - Initialization and teardown
 - JavaScript-rendered content extraction
 - Wait conditions for dynamic elements
 - Error handling for timeouts
 
 ### Django Views
+
 - Page loads with correct status code
 - htmx endpoints return partial HTML
 - Authentication checks for protected views
 - Form validation
 
 ### Celery Tasks
+
 - Tasks execute without error
 - Task retry on failure
 - Task result persistence

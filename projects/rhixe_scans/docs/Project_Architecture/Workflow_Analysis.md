@@ -20,11 +20,13 @@ A sophisticated comic reading platform with user authentication, comic/chapter m
 **Description:** User browses available comics, starts reading a chapter, and has reading progress automatically tracked.
 
 **Entry Points:**
+
 - **Pages:** Comic listing, detail, reader pages (Next.js App Router)
 - **Actions:** `src/lib/actions/comic.actions.ts`, `chapter.actions.ts`, `bookmark.actions.ts`
 - **Data:** `src/lib/data/comic.ts`, `chapter.ts`, `comicimage.ts`, `chapterimage.ts`
 
 **Steps:**
+
 1. User visits home page → fetches featured/popular comics
 2. User browses by genre/category/author/artist via `genre.ts`, `category.ts`, `author.ts`, `artist.ts`
 3. User clicks a comic → detail page loads comic metadata, chapters, images
@@ -35,6 +37,7 @@ A sophisticated comic reading platform with user authentication, comic/chapter m
 8. User preferences stored via Zustand + sync to server
 
 **Sequence Diagram:**
+
 ```
 User/Client             Next.js App              Prisma/DB              UploadThing          Stripe/PayPal
     |                       |                        |                       |                    |
@@ -65,6 +68,7 @@ User/Client             Next.js App              Prisma/DB              UploadTh
 ```
 
 **Error Handling:**
+
 - Comic not found → 404 page with similar comics
 - Chapter image missing → fallback placeholder image
 - Auth check → NextAuth v5 middleware on protected routes
@@ -72,6 +76,7 @@ User/Client             Next.js App              Prisma/DB              UploadTh
 - Prisma errors → typed error handling in data layer
 
 **Test Patterns:**
+
 - `paypal.test.ts` — PayPal integration tests
 - `executeAction.ts` — server action wrapper for consistent error handling
 
@@ -82,11 +87,13 @@ User/Client             Next.js App              Prisma/DB              UploadTh
 **Description:** User subscribes to premium tier for ad-free reading, early access, and exclusive content.
 
 **Entry Points:**
+
 - **Payments:** Stripe + PayPal integration
 - **Auth:** NextAuth v5
 - **Email:** Resend for transactional emails
 
 **Steps:**
+
 1. User views subscription plans on pricing page
 2. User selects plan (monthly/yearly)
 3. User chooses payment method (Stripe/PayPal)
@@ -98,6 +105,7 @@ User/Client             Next.js App              Prisma/DB              UploadTh
 9. Frontend updates UI to reflect premium status
 
 **Error Handling:**
+
 - Payment failure → provider handles retries, frontend shows status
 - Webhook delivery failure → provider retry mechanism
 - Sub expired → cron job or webhook event → downgrade role

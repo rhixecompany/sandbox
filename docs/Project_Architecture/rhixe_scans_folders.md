@@ -3,6 +3,7 @@
 ## Root: projects/rhixe_scans
 
 ### Key Directories
+
 - backend/ — Django/Python backend
 - frontend/ — Next.js frontend
 - .vscode/ — VS Code configuration

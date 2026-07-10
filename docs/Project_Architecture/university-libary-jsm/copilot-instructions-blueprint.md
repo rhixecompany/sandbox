@@ -88,23 +88,27 @@ When context files don't provide specific guidance:
 ## Technology-Specific Guidelines
 
 ### TypeScript
+
 - Strict mode as configured
 - ESLint 9 with Next.js config + Prettier + plugins for drizzle, zod, jsx-a11y
 - Use TypeScript path aliases
 
 ### Next.js 15 (App Router)
+
 - App Router conventions (page.tsx, layout.tsx, loading.tsx, error.tsx)
 - Server Components by default; Client Components only when needed
 - Server Actions for all mutations with Zod validation
 - Turbopack for development
 
 ### Database (Drizzle ORM + Neon)
+
 - Schema in `database/schema.ts`
 - Use Drizzle Kit for migrations (`db:push`, `db:generate`, `db:migrate`)
 - Zod schema validation for type safety
 - Neon serverless PostgreSQL via `@neondatabase/serverless`
 
 ### Auth (NextAuth v5)
+
 - NextAuth v5 for session management
 - Use `auth()` helper for protected routes
 - Rate limiting via Upstash Ratelimit

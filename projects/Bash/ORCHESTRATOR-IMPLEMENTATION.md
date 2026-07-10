@@ -275,7 +275,7 @@ Final Report:
 
 ## Configuration Points
 
-### Edit orchestrator-unified.ps1 to customize:
+### Edit orchestrator-unified.ps1 to customize
 
 ```powershell
 # Retry attempts

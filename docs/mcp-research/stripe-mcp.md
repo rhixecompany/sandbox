@@ -1,8 +1,8 @@
 # Stripe MCP Server
 
-**Source:** https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol  
+**Source:** <https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol>  
 **Package:** `@stripe/mcp`  
-**Official Docs:** https://docs.stripe.com/mcp
+**Official Docs:** <https://docs.stripe.com/mcp>
 
 ## Overview
 
@@ -86,6 +86,7 @@ mcp_servers:
 ## Remote Server (OAuth)
 
 Connect directly via hosted endpoint:
+
 - URL: `https://mcp.stripe.com`
 - Auth: OAuth (granular authorization)
 - Compatible with Cursor, Claude Desktop, Codex CLI

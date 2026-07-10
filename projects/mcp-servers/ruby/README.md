@@ -28,6 +28,7 @@ bin/mcp-server
 Greet a person by name with an optional title.
 
 **Parameters:**
+
 - `name` (string, required) — The name of the person to greet
 - `title` (string, optional) — Optional title (e.g. Mr., Ms., Dr.)
 
@@ -36,6 +37,7 @@ Greet a person by name with an optional title.
 Perform basic arithmetic operations.
 
 **Parameters:**
+
 - `operation` (string, required) — One of `add`, `subtract`, `multiply`, `divide`
 - `a` (number, required) — First operand
 - `b` (number, required) — Second operand

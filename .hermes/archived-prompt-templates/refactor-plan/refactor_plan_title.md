@@ -50,6 +50,7 @@ If something fails:
 ### Risks
 
 - [Potential issue and mitigation]
+
 ```
 
 Shall I proceed with Phase 1?

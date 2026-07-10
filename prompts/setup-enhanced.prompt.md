@@ -53,6 +53,7 @@ All four commands must pass before merging any code.
 ## 3. 📚 Reference Resolution Hierarchy
 
 > When implementing features, consult these sources in priority order:
+>
 > ### Tier 1 — Latest Standards (Primary)
 
 > **Full content:** `templates/setup-enhanced/3__reference_resolution_hierar.md`
@@ -60,6 +61,7 @@ All four commands must pass before merging any code.
 ## 4. 🔧 DRY Implementation Practices
 
 > Every piece of logic should exist in exactly one place. When implementing featur
+>
 > ### Strategy 1: DAL Classes — Parameterized Query Methods
 
 > **Full content:** `templates/setup-enhanced/4__dry_implementation_practice.md`
@@ -67,6 +69,7 @@ All four commands must pass before merging any code.
 ## 5. 📋 Implementation Workflow (10 Steps)
 
 > Follow these steps for every new feature. Each step references the relevant docu
+>
 > ### Step 1: Search & Document
 
 > **Full content:** `templates/setup-enhanced/5__implementation_workflow_10_.md`
@@ -74,6 +77,7 @@ All four commands must pass before merging any code.
 ## 6. 🏗️ Feature Implementation Phases
 
 > ### Phase 1: Foundation
+>
 > Infrastructure setup — database schema, base DAL, core validation, auth flow.
 
 > **Full content:** `templates/setup-enhanced/6__feature_implementation_phas.md`
@@ -81,6 +85,7 @@ All four commands must pass before merging any code.
 ## 7. 🔗 Content Integration Rules (DRY Enforcement)
 
 > ### When Adding Documentation
+>
 > - ✅ Link to relevant sections in existing docs rather than duplicating content
 
 > **Full content:** `templates/setup-enhanced/7__content_integration_rules_d.md`
@@ -112,6 +117,7 @@ All four commands must pass before merging any code.
 ## 9. 🎭 AI Personas for Copilot CLI
 
 > Use these personas when running tasks in Copilot CLI to get specialized behavior
+>
 > ### Architect Persona
 
 > **Full content:** `templates/setup-enhanced/9__ai_personas_for_copilot_cli.md`
@@ -119,6 +125,7 @@ All four commands must pass before merging any code.
 ## 10. 🔄 Anti-Rate-Limiting Strategy
 
 > When using this prompt with Copilot CLI, follow these practices to avoid token e
+>
 > ### Chunked Execution
 
 > **Full content:** `templates/setup-enhanced/10__anti-rate-limiting_strateg.md`
@@ -126,6 +133,7 @@ All four commands must pass before merging any code.
 ## 11. 📋 Phase Execution Checklists
 
 > ### Phase 1: Foundation
+>
 > - [ ] `pnpm install` — dependencies installed
 
 > **Full content:** `templates/setup-enhanced/11__phase_execution_checklists.md`
@@ -150,6 +158,7 @@ All four commands must pass before merging any code.
 ## Template References
 
 Detailed section templates in `templates/setup-enhanced/`:
+
 - `10__anti-rate-limiting_strateg.md`
 - `11__phase_execution_checklists.md`
 - `3__reference_resolution_hierar.md`

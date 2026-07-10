@@ -146,6 +146,7 @@ main:
    ```
 
 4. **Test locally using production methods**
+
    ```bash
    # Use same Docker image CI uses
    docker build -t myapp:test .

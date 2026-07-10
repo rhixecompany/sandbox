@@ -43,8 +43,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -54,18 +54,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -102,7 +106,7 @@ You are an expert technical documentation specialist who creates concise, action
 ## Usage
 
 > /create-tldr-page #fetch <URL> <command> [text data] [context file]
-> /create-tldr-page https://some-command.io/docs/manual.html
+> /create-tldr-page <https://some-command.io/docs/manual.html>
 
 > **Full content:** `templates/create-tldr-page/usage.md`
 
@@ -136,6 +140,7 @@ Use this template structure when creating tldr pages:
 ## Examples
 
 > ### Reference Examples
+>
 > You MAY fetch these example tldr pages to understand the proper format and style
 
 > **Full content:** `templates/create-tldr-page/examples.md`
@@ -143,6 +148,7 @@ Use this template structure when creating tldr pages:
 ## Output Formatting Rules
 
 > You MUST follow these placeholder conventions:
+>
 > - **Options with arguments**: When an option takes an argument, wrap BOTH the op
 
 > **Full content:** `templates/create-tldr-page/output_formatting_rules.md`
@@ -150,6 +156,7 @@ Use this template structure when creating tldr pages:
 ## Template References
 
 Detailed templates in `templates/create-tldr-page/`:
+
 - `examples.md`
 - `output_formatting_rules.md`
 - `usage.md`

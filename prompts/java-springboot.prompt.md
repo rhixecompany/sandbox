@@ -86,10 +86,10 @@ Your goal is to help me write high-quality Spring Boot applications by following
 - **Password Encoding:** Always encode passwords using a strong hashing algorithm like BCrypt.
 - **Input Sanitization:** Prevent SQL injection by using Spring Data JPA or parameterized queries. Prevent Cross-Site Scripting (XSS) by properly encoding output.
 
-
 ## Template References
 
 Templates in `templates/java-springboot/`:
+
 - `configuration.md`
 - `data_layer_repositories.md`
 - `dependency_injection__com.md`

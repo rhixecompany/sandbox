@@ -246,14 +246,14 @@ All gates must pass before this prompt is considered complete.
 **Steps:**
 
 1. Count: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l` → must be 14.
-2. Sections: each report must have 9+ `## ` sections.
+2. Sections: each report must have 9+ `##` sections.
 3. URLs: spot-check 2 URLs per report (28 total) via `web_extract` — confirm non-404.
 4. Size: every report between 1KB and 5KB.
 
 **Tasks:**
 
 - [ ] Count = 14
-- [ ] Every report has ≥ 9 `## ` sections
+- [ ] Every report has ≥ 9 `##` sections
 - [ ] 28 URL spot-checks pass
 - [ ] All reports 1KB–5KB
 
@@ -427,4 +427,5 @@ List project name + shared technology. Must be symmetric.>
 ## Template References
 
 Templates in `.hermes/archived-prompt-templates/repo.prompts/`:
+
 - `README.md` — Section inventory

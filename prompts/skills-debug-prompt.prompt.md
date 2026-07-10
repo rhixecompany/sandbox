@@ -39,6 +39,7 @@ Target: F=0, C≤5 after completion.
 ## Execution Steps
 
 > ### Step 1: Fix F3/F3b Boilerplate (29 skills)
+>
 > For each F3/F3b skill, read the file and fix the `## Goal` section:
 
 > **Full content:** `templates/skills-debug-prompt/execution_steps.md`
@@ -50,8 +51,8 @@ Target: F=0, C≤5 after completion.
 - `write_file(path, content)` — Full rewrite if needed
 - `execute_code(code)` — Re-run audit verification
 
-
 ## Template References
 
 Templates in `templates/skills-debug-prompt/`:
+
 - `execution_steps.md`

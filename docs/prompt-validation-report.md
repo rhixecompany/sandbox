@@ -9,9 +9,11 @@
 ## Failures by category
 
 ### frontmatter
+
 - None
 
 ### dependencies
+
 - `prompts\add-educational-comments.prompt.md`
   - Missing inline ref: Line Number Referencing = yes
   - Missing inline ref: Note <number>
@@ -25,20 +27,21 @@
   - Missing inline ref: templates/add-educational-comments/configuration_reference.md
   - Missing inline ref: text
 [user]
+
 > /add-educational-comments
 [agent]
 > Please provide a file or files to add educational comments to. Preferably as chat variable or attached context.
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Custom Configuration
 
+- Missing inline ref:
 
-  - Missing inline ref: 
+Interpret
 
-Interpret 
-  - Missing inline ref:  as 
-  - Missing inline ref:  and adjust behavior accordingly while maintaining all rules above.
+- Missing inline ref:  as
+- Missing inline ref:  and adjust behavior accordingly while maintaining all rules above.
 
 ## Final Checklist
 
@@ -48,10 +51,10 @@ Interpret
 - Provide clarifying suggestions only when they aid learning.
 - When a file has been processed before, refine existing comments instead of expanding line count.
 
-
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\agents-fix.prompt.md`
   - Missing skill: brainstorming
   - Missing skill: plans-and-specs
@@ -232,33 +235,37 @@ Detailed templates in
   - Missing inline ref: azmcp-*
   - Missing inline ref: templates/az-cost-optimize/workflow_steps.md
   - Missing inline ref: templates/az-cost-optimize/cost_optimization_brief_title.md
-  - Missing inline ref: 
-   
-  - Missing inline ref: 
+  - Missing inline ref:
 
-   
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+
+  - Missing inline ref:
+-
 - `prompts\azure-resource-health-diagnose.prompt.md`
   - Missing inline ref: azmcp-*
   - Missing inline ref: templates/azure-resource-health-diagnose/workflow_steps.md
   - Missing inline ref: bash
-   # Critical fixes to restore service
-   [Azure CLI commands with explanations]
-   
-  - Missing inline ref: 
-   
-  - Missing inline ref: bash
-   # Performance and reliability improvements
-   [Azure CLI commands with explanations]
-   
-  - Missing inline ref: bash
-   # Architectural and preventive measures
-   [Azure CLI commands and configuration changes]
-   
-  - Missing inline ref: 
 
-   
+  # Critical fixes to restore service
+
+   [Azure CLI commands with explanations]
+
+  - Missing inline ref:
+
+  - Missing inline ref: bash
+
+  # Performance and reliability improvements
+
+   [Azure CLI commands with explanations]
+
+  - Missing inline ref: bash
+
+  # Architectural and preventive measures
+
+   [Azure CLI commands and configuration changes]
+
+  - Missing inline ref:
+
 - `prompts\bash-scripts-fix.prompt.md`
   - Missing skill: brainstorming
   - Missing skill: plans-and-specs
@@ -364,42 +371,42 @@ Detailed templates in
   - Missing inline ref: tools_required.md
 - `prompts\breakdown-epic-arch.prompt.md`
   - Missing inline ref: templates/breakdown-epic-arch/output_format.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\breakdown-epic-pm.prompt.md`
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\breakdown-feature-implementation.prompt.md`
   - Missing inline ref: templates/breakdown-feature-implementation/output_format.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\breakdown-feature-prd.prompt.md`
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\breakdown-plan.prompt.md`
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}.md
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md
@@ -407,87 +414,81 @@ Templates in
   - Missing inline ref: plan-test
   - Missing inline ref: plan-epic-arch
   - Missing inline ref: plan-feature-prd
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:
 
 ### Feature Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ## Epic
 
-#{epic-issue-number}
+# {epic-issue-number}
 
 ## Estimate
 
 {Story points or t-shirt size}
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### User Story Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ### Technical Enabler Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
-
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\breakdown-test.prompt.md`
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}.md
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/{feature-name}/project-plan.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## GitHub Issue Templates for Testing
 
 ### Test Strategy Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ### Playwright Test Implementation Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ### Quality Assurance Issue Template
 
-
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
-
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\centos-linux-triage.prompt.md`
   - Missing inline ref: systemctl
   - Missing inline ref: journalctl
@@ -507,47 +508,48 @@ Detailed templates in
   - Missing inline ref: templates/code-review/
   - Missing inline ref: phases.md
 - `prompts\comicwise-development.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Essential Commands
 
 | Command           | Purpose                         | Must Pass   |
 | ----------------- | ------------------------------- | ----------- |
-| 
-  - Missing inline ref:         | Start dev server (Turbopack)    | —           |
-| 
-  - Missing inline ref:  | TypeScript validation           | ✅ 0 errors |
-| 
-  - Missing inline ref:    | ESLint + Prettier auto-fix      | ✅ All pass |
-| 
-  - Missing inline ref:        | Vitest unit tests (jsdom)       | ✅ 241/241  |
-| 
-  - Missing inline ref:       | Production build (Webpack)      | ✅ Success  |
-| 
-  - Missing inline ref:    | All quality gates at once       | ✅ All pass |
-| 
-  - Missing inline ref:     | Apply schema changes (dev only) | —           |
-| 
-  - Missing inline ref:   | Drizzle visual browser          | —           |
-| 
-  - Missing inline ref:    | Populate database               | —           |
+|
+
+- Missing inline ref:         | Start dev server (Turbopack)    | —           |
+|
+- Missing inline ref:  | TypeScript validation           | ✅ 0 errors |
+|
+- Missing inline ref:    | ESLint + Prettier auto-fix      | ✅ All pass |
+|
+- Missing inline ref:        | Vitest unit tests (jsdom)       | ✅ 241/241  |
+|
+- Missing inline ref:       | Production build (Webpack)      | ✅ Success  |
+|
+- Missing inline ref:    | All quality gates at once       | ✅ All pass |
+|
+- Missing inline ref:     | Apply schema changes (dev only) | —           |
+|
+- Missing inline ref:   | Drizzle visual browser          | —           |
+|
+- Missing inline ref:    | Populate database               | —           |
 
 ## Data Flow Architecture
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Coding Rules (Enforced)
 
 > ### Type Safety & Code Quality
-> 1. **No 
-  - Missing inline ref: 
+>
+> 1. **No
+>
+- Missing inline ref:
 
 ## Path Aliases (tsconfig.json)
 
-
-  - Missing inline ref: typescript
-@/*        → ./src/*
+- Missing inline ref: typescript
+@/*→ ./src/*
 ui         → ./src/components/ui/*
 database   → ./src/database/*
 schemas    → ./src/schemas/*
@@ -562,117 +564,132 @@ assets     → ./src/assets/*
 styles     → ./src/styles/*
 tests      → ./src/tests/*
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Database Schema Facts
 
 - **
-  - Missing inline ref: ** = 
-  - Missing inline ref:  — aggregate with 
-  - Missing inline ref: . The 
-  - Missing inline ref:  column = 
+  - Missing inline ref: ** =
+  - Missing inline ref:  — aggregate with
+  - Missing inline ref: . The
+  - Missing inline ref:  column =
   - Missing inline ref:  (1–5 stars)
 - **
-  - Missing inline ref: ** = 
+  - Missing inline ref: ** =
   - Missing inline ref:  (UUID string), not integer
 - **
-  - Missing inline ref: ** = composite PK on 
-  - Missing inline ref:  → use 
+  - Missing inline ref: ** = composite PK on
+  - Missing inline ref:  → use
   - Missing inline ref:  for upserts
 - **
-  - Missing inline ref: ** = 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  and 
-  - Missing inline ref:  tables have 
-  - Missing inline ref: , 
-  - Missing inline ref:  (no cascade); 
+  - Missing inline ref: ** =
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  and
+  - Missing inline ref:  tables have
+  - Missing inline ref: ,
+  - Missing inline ref:  (no cascade);
   - Missing inline ref:  (
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Quality Gate (Must Pass Before Commits)
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Environment Variables
 
-**Required** (in 
-  - Missing inline ref: 
+**Required** (in
 
-**Optional** (see 
-  - Missing inline ref: , 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+
+**Optional** (see
+
+- Missing inline ref: ,
+- Missing inline ref:
+-
   - Missing inline ref: , etc.
-- 
+-
   - Missing inline ref:  (override default)
 
-All validated via 
-  - Missing inline ref:  at startup using Zod.
+All validated via
+
+- Missing inline ref:  at startup using Zod.
 
 ## Reference Documentation
 
 | File | Purpose | Scope |
 | --- | --- | --- |
-| 
-  - Missing inline ref:  | Complete guide (2500+ lines) | Global |
-| 
-  - Missing inline ref:  | Quick reference (400 lines) | Session shortcuts |
-| 
-  - Missing inline ref:  | Auto-loaded by file pattern (15+ files) | Specific file types |
-| 
-  - Missing inline ref:  | 26 sections with patterns & examples | Development reference |
-| 
-  - Missing inline ref:  | Phase planning & task tracking | Project roadmap |
-| 
-  - Missing inline ref:  | This project's quick setup guide | Quick start |
+|
+
+- Missing inline ref:  | Complete guide (2500+ lines) | Global |
+|
+- Missing inline ref:  | Quick reference (400 lines) | Session shortcuts |
+|
+- Missing inline ref:  | Auto-loaded by file pattern (15+ files) | Specific file types |
+|
+- Missing inline ref:  | 26 sections with patterns & examples | Development reference |
+|
+- Missing inline ref:  | Phase planning & task tracking | Project roadmap |
+|
+- Missing inline ref:  | This project's quick setup guide | Quick start |
 
 ## Common Troubleshooting
 
 | Issue | Solution |
 | --- | --- |
-| Type errors (TS2307) | Check import path aliases in 
-  - Missing inline ref:  |
-| N+1 query errors | Add 
-  - Missing inline ref:  to DAL queries |
-| Action throws instead of returns | Wrap in try-catch, return 
-  - Missing inline ref:  |
+| Type errors (TS2307) | Check import path aliases in
+
+- Missing inline ref:  |
+| N+1 query errors | Add
+- Missing inline ref:  to DAL queries |
+| Action throws instead of returns | Wrap in try-catch, return
+- Missing inline ref:  |
 | Styling not applying | Check Tailwind v4 syntax (
-  - Missing inline ref:  not 
-  - Missing inline ref: ) |
-| DB connection fails | Verify 
-  - Missing inline ref:  and run 
-  - Missing inline ref:  to test |
-| Tests fail in CI but pass locally | Check mocks in 
-  - Missing inline ref:  |
-| Hydration mismatch | Use 
-  - Missing inline ref:  hook not 
-  - Missing inline ref:  in server code |
+- Missing inline ref:  not
+- Missing inline ref: ) |
+| DB connection fails | Verify
+- Missing inline ref:  and run
+- Missing inline ref:  to test |
+| Tests fail in CI but pass locally | Check mocks in
+- Missing inline ref:  |
+| Hydration mismatch | Use
+- Missing inline ref:  hook not
+- Missing inline ref:  in server code |
 
 ## When Stuck
 
-1. **Architecture questions** — Check 
-  - Missing inline ref:  (2500+ lines) or ask about system design
-2. **Component issues** — Reference 
-  - Missing inline ref: 
-3. **Database/ORM** — Review DAL examples (eager loading with 
-  - Missing inline ref: )
-4. **Type errors** — Use 
-  - Missing inline ref:  not 
-  - Missing inline ref: , import types with 
-  - Missing inline ref: 
-5. **Tests failing** — Check mocks in 
-  - Missing inline ref: 
-6. **Performance** — Reference 
-  - Missing inline ref:  or 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+1. **Architecture questions** — Check
+
+- Missing inline ref:  (2500+ lines) or ask about system design
+
+1. **Component issues** — Reference
+
+- Missing inline ref:
+
+1. **Database/ORM** — Review DAL examples (eager loading with
+
+- Missing inline ref: )
+
+1. **Type errors** — Use
+
+- Missing inline ref:  not
+- Missing inline ref: , import types with
+- Missing inline ref:
+
+1. **Tests failing** — Check mocks in
+
+- Missing inline ref:
+
+1. **Performance** — Reference
+
+- Missing inline ref:  or
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\comment-code-generate-a-tutorial.prompt.md`
   - Missing inline ref: templates/comment-code-generate-a-tutorial/
   - Missing inline ref: legacy_prompt_details.md
@@ -681,78 +698,85 @@ All validated via
   - Missing inline ref: templates/containerize-aspnet-framework/containerization_settings.md
   - Missing inline ref: progress.md
   - Missing inline ref: templates/containerize-aspnet-framework/execution_process.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 If the build fails, review the error messages and make necessary adjustments to the Dockerfile or project configuration. Report success/failure.
 
 ## Progress Tracking
 
-Maintain a 
-  - Missing inline ref: , 
-  - Missing inline ref: , etc. with your actual file names
-2. Adjust the Windows Server and .NET Framework versions as needed
-3. Modify the dependency installation steps based on your requirements and remove any unnecessary ones
-4. Add or remove stages as needed for your specific workflow
+Maintain a
+
+- Missing inline ref: ,
+- Missing inline ref: , etc. with your actual file names
+
+1. Adjust the Windows Server and .NET Framework versions as needed
+2. Modify the dependency installation steps based on your requirements and remove any unnecessary ones
+3. Add or remove stages as needed for your specific workflow
 
 ## Notes on Stage Naming
 
-> - The 
-  - Missing inline ref:  syntax gives each stage a name
-> - Use 
-  - Missing inline ref: 
+> - The
+>
+- Missing inline ref:  syntax gives each stage a name
+>
+> - Use
+>
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\containerize-aspnetcore.prompt.md`
   - Missing inline ref: templates/containerize-aspnetcore/containerization_settings.md
   - Missing inline ref: progress.md
   - Missing inline ref: templates/containerize-aspnetcore/execution_process.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 If the build fails, review the error messages and make necessary adjustments to the Dockerfile or project configuration. Report success/failure.
 
 ## Progress Tracking
 
-Maintain a 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+Maintain a
+
+- Missing inline ref: ,
+- Missing inline ref:
 
 ## Notes on Stage Naming
 
-- The 
+- The
   - Missing inline ref:  syntax gives each stage a name
-- Use 
+- Use
   - Missing inline ref:  to copy files from a previous stage
 - You can have multiple intermediate stages that aren't used in the final image
-- The 
+- The
   - Missing inline ref:  stage is the one that becomes the final container image
 
 ## Security Best Practices
 
 - Always run as a non-root user in production
-- Use specific image tags instead of 
-  - Missing inline ref: 
+- Use specific image tags instead of
+  - Missing inline ref:
 - Minimize the number of installed packages
 - Keep base images updated
 - Use multi-stage builds to exclude build dependencies from the final image
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\context-map.prompt.md`
   - Missing skill: codemap
   - Missing reference: codemap
@@ -809,14 +833,15 @@ Detailed templates in
   - Missing inline ref: templates/convert-plaintext-to-md/
   - Missing inline ref: phases.md
 - `prompts\copilot-instructions-blueprint-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Documentation Requirements
 
-${DOCUMENTATION_LEVEL == "Minimal" ? 
-  - Missing inline ref: templates/copilot-instructions-blueprint-generator/testing_approach.md
-  - Missing inline ref: templates/copilot-instructions-blueprint-generator/technology-specific_guidelines.md
-  - Missing inline ref: - Follow Semantic Versioning patterns as applied in the codebase
+${DOCUMENTATION_LEVEL == "Minimal" ?
+
+- Missing inline ref: templates/copilot-instructions-blueprint-generator/testing_approach.md
+- Missing inline ref: templates/copilot-instructions-blueprint-generator/technology-specific_guidelines.md
+- Missing inline ref: - Follow Semantic Versioning patterns as applied in the codebase
 
 - Match existing patterns for documenting breaking changes
 - Follow the same approach for deprecation notices
@@ -839,29 +864,29 @@ ${DOCUMENTATION_LEVEL == "Minimal" ?
   - Missing inline ref: cosmosdb_data_model.md
   - Missing inline ref:  for accuracy ✅
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed section templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed section templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-agentsmd.prompt.md`
   - Missing inline ref: AGENTS.md
   - Missing inline ref: templates/create-agentsmd/file_structure_and_content_gui.md
-  - Missing inline ref: , 
-  - Missing inline ref: 
+  - Missing inline ref: ,
+  - Missing inline ref:
 - [Review requirements]
 
 ## Additional Notes
@@ -871,114 +896,113 @@ Detailed section templates in
 - [Performance considerations]
 
   - Missing inline ref: markdown
+
 # Sample AGENTS.md file
 
 ## Dev environment tips
 
-- Use 
-  - Missing inline ref:  to jump to a package instead of scanning with 
+- Use
+  - Missing inline ref:  to jump to a package instead of scanning with
   - Missing inline ref: .
-- Run 
+- Run
   - Missing inline ref:  to add the package to your workspace so Vite, ESLint, and TypeScript can see it.
-- Use 
+- Use
   - Missing inline ref:  to spin up a new React + Vite package with TypeScript checks ready.
 - Check the name field inside each package's package.json to confirm the right name—skip the top-level one.
 
 ## Testing instructions
 
 - Find the CI plan in the .github/workflows folder.
-- Run 
+- Run
   - Missing inline ref:  to run every check defined for that package.
-- From the package root you can just call 
+- From the package root you can just call
   - Missing inline ref: .
 - Fix any test or type errors until the whole suite is green.
-- After moving files or changing imports, run 
-  - Missing inline ref:  and 
+- After moving files or changing imports, run
+  - Missing inline ref:  and
   - Missing inline ref:  before committing.
 
 - `prompts\create-architectural-decision-record.prompt.md`
   - Missing inline ref: /docs/adr/
   - Missing inline ref: adr-NNNN-[title-slug].md
   - Missing inline ref: adr-0001-database-selection.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-- `prompts\create-github-action-workflow-specification.prompt.md`
-  - Missing inline ref: 
+Templates in
 
-  - Missing inline ref: 
+- Missing inline ref:
+-
+- `prompts\create-github-action-workflow-specification.prompt.md`
+  - Missing inline ref:
+
+  - Missing inline ref:
 
 ## Input/Output Contracts
 
 ### Inputs
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Outputs
 
-
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-github-issue-feature-from-specification.prompt.md`
   - Missing inline ref: search_issues
   - Missing inline ref: create_issue
@@ -1014,44 +1038,44 @@ Detailed templates in
   - Missing inline ref: feature-auth-module-1.md
   - Missing inline ref: templates/create-implementation-plan/status.md
   - Missing inline ref: templates/create-implementation-plan/2_implementation_steps.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-llms.prompt.md`
   - Missing inline ref: llms.txt
   - Missing inline ref: llms.txt
@@ -1060,15 +1084,16 @@ Detailed templates in
   - Missing inline ref: templates/create-llms/implementation_requirements.md
   - Missing inline ref: templates/create-llms/execution_steps.md
   - Missing inline ref: /llms.txt
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Success Criteria
 
-The created 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+The created
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-oo-component-documentation.prompt.md`
   - Missing inline ref: /docs/components/
   - Missing inline ref: [component-name]-documentation.md
@@ -1077,26 +1102,24 @@ The created
 var component = new ComponentName();
 component.DoSomething();
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Advanced Usage
 
-
-  - Missing inline ref: csharp
+- Missing inline ref: csharp
 // Advanced configuration patterns
 var options = new ComponentOptions();
 var component = ComponentFactory.Create(options);
 await component.ProcessAsync(data);
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\create-readme.prompt.md`
   - Missing inline ref: templates/create-readme/
   - Missing inline ref: phases.md
@@ -1105,8 +1128,8 @@ Detailed templates in
   - Missing inline ref: templates/create-specification/8_dependencies__external_.md
   - Missing inline ref: code
     // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
-    
-  - Missing inline ref: 
+
+  - Missing inline ref:
 
 ## 10. Validation Criteria
 
@@ -1116,14 +1139,14 @@ Detailed templates in
 
 [Link to related spec 1] [Link to relevant external documentation]
 
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\create-spring-boot-java-project.prompt.md`
   - Missing inline ref: artifactId
   - Missing inline ref: packageName
@@ -1131,46 +1154,41 @@ Templates in
   - Missing inline ref: shell
 java -version
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Download Spring Boot project template
 
 - Run following command in terminal to download a Spring Boot project template
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Unzip the downloaded file
 
 - Run following command in terminal to unzip the downloaded file
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Remove the downloaded zip file
 
 - Run following command in terminal to delete the downloaded zip file
 
-
   - Missing inline ref: shell
 rm -f starter.zip
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Change directory to the project root
 
 - Run following command in terminal to change directory to the project root
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Add additional dependencies
 
-- Insert 
-  - Missing inline ref:  and 
-  - Missing inline ref:  dependency into 
+- Insert
+  - Missing inline ref:  and
+  - Missing inline ref:  dependency into
   - Missing inline ref:  file
-
 
   - Missing inline ref: xml
 <dependency>
@@ -1178,6 +1196,7 @@ rm -f starter.zip
   <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
   <version>2.8.6</version>
 </dependency>
+
 <dependency>
   <groupId>com.tngtech.archunit</groupId>
   <artifactId>archunit-junit5</artifactId>
@@ -1185,82 +1204,84 @@ rm -f starter.zip
   <scope>test</scope>
 </dependency>
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Add SpringDoc, Redis, JPA and MongoDB configurations
 
-> - Insert SpringDoc configurations into 
-  - Missing inline ref: 
+> - Insert SpringDoc configurations into
+>
+- Missing inline ref:
 
-## Add 
-  - Missing inline ref:  with Redis, PostgreSQL and MongoDB services
+## Add
 
-- Create 
-  - Missing inline ref: , 
-  - Missing inline ref:  and 
+- Missing inline ref:  with Redis, PostgreSQL and MongoDB services
+
+- Create
+  - Missing inline ref: ,
+  - Missing inline ref:  and
   - Missing inline ref: .
   - redis service should have
-    - password 
-  - Missing inline ref: 
+    - password
+  - Missing inline ref:
     - mapping port 6379 to 6379
-    - mounting volume 
-  - Missing inline ref:  to 
-  - Missing inline ref: 
+    - mounting volume
+  - Missing inline ref:  to
+  - Missing inline ref:
   - postgresql service should have
-    - password 
-  - Missing inline ref: 
+    - password
+  - Missing inline ref:
     - mapping port 5432 to 5432
-    - mounting volume 
-  - Missing inline ref:  to 
-  - Missing inline ref: 
+    - mounting volume
+  - Missing inline ref:  to
+  - Missing inline ref:
   - mongo service should have
-    - initdb root username 
-  - Missing inline ref: 
-    - initdb root password 
-  - Missing inline ref: 
+    - initdb root username
+  - Missing inline ref:
+    - initdb root password
+  - Missing inline ref:
     - mapping port 27017 to 27017
-    - mounting volume 
-  - Missing inline ref:  to 
-  - Missing inline ref: 
+    - mounting volume
+  - Missing inline ref:  to
+  - Missing inline ref:
 
-## Add 
-  - Missing inline ref:  file
+## Add
 
-- Insert 
-  - Missing inline ref: , 
-  - Missing inline ref:  and 
-  - Missing inline ref:  directories in 
+- Missing inline ref:  file
+
+- Insert
+  - Missing inline ref: ,
+  - Missing inline ref:  and
+  - Missing inline ref:  directories in
   - Missing inline ref:  file
 
 ## Run Maven test command
 
 - Run maven clean test command to check if the project is working
 
-
   - Missing inline ref: shell
 ./mvnw clean test
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Run Maven run command (Optional)
 
-- (Optional) 
-  - Missing inline ref:  to start the services, 
-  - Missing inline ref:  to run the Spring Boot project, 
+- (Optional)
+  - Missing inline ref:  to start the services,
+  - Missing inline ref:  to run the Spring Boot project,
   - Missing inline ref:  to stop the services.
 
 ## Let's do this step by step
 
-
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-spring-boot-kotlin-project.prompt.md`
   - Missing inline ref: artifactId
   - Missing inline ref: packageName
@@ -1268,63 +1289,61 @@ Templates in
   - Missing inline ref: shell
 java -version
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Download Spring Boot project template
 
 - Run following command in terminal to download a Spring Boot project template
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Unzip the downloaded file
 
 - Run following command in terminal to unzip the downloaded file
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Remove the downloaded zip file
 
 - Run following command in terminal to delete the downloaded zip file
 
-
   - Missing inline ref: shell
 rm -f starter.zip
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Unzip the downloaded file
 
 - Run following command in terminal to unzip the downloaded file
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Add additional dependencies
 
-> - Insert 
-  - Missing inline ref:  and 
-  - Missing inline ref: 
+> - Insert
+>
+- Missing inline ref:  and
+- Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\create-technical-spike.prompt.md`
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\create-tldr-page.prompt.md`
   - Missing inline ref: tldr
   - Missing inline ref: git
@@ -1342,20 +1361,23 @@ Templates in
   - Missing inline ref: --tldr
   - Missing inline ref: templates/create-tldr-page/usage.md
   - Missing inline ref: markdown
+
 # command
 
-> Short, snappy description. Some subcommands such as 
-  - Missing inline ref: 
+> Short, snappy description. Some subcommands such as
 
-  - Missing inline ref: 
+- Missing inline ref:
+
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\csharp-async.prompt.md`
   - Missing inline ref: GetDataAsync()
   - Missing inline ref: GetData()
@@ -1441,33 +1463,36 @@ public sealed class CalculatorTests
     }
 }
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Test Lifecycle
 
-> - **Prefer constructors over 
-  - Missing inline ref: ** - enables 
-  - Missing inline ref:  fields an
-> - Use 
-  - Missing inline ref: , 
-  - Missing inline ref: , and 
-  - Missing inline ref: templates/csharp-mstest/modern_assertion_apis.md
-  - Missing inline ref: templates/csharp-mstest/data-driven_tests.md
-  - Missing inline ref: TestContext
-  - Missing inline ref: templates/csharp-mstest/testcontext.md
-  - Missing inline ref: templates/csharp-mstest/advanced_features.md
-  - Missing inline ref: templates/csharp-mstest/common_mistakes_to_avoid.md
-  - Missing inline ref: [TestCategory("Category")]
-  - Missing inline ref: [TestProperty("Name", "Value")]
-  - Missing inline ref: [TestProperty("Bug", "12345")]
-  - Missing inline ref: [Priority(1)]
-  - Missing inline ref: templates/csharp-mstest/
-  - Missing inline ref: advanced_features.md
-  - Missing inline ref: common_mistakes_to_avoid.md
-  - Missing inline ref: data-driven_tests.md
-  - Missing inline ref: modern_assertion_apis.md
-  - Missing inline ref: test_lifecycle.md
-  - Missing inline ref: testcontext.md
+> - **Prefer constructors over
+>
+- Missing inline ref: ** - enables
+- Missing inline ref:  fields an
+>
+> - Use
+>
+- Missing inline ref: ,
+- Missing inline ref: , and
+- Missing inline ref: templates/csharp-mstest/modern_assertion_apis.md
+- Missing inline ref: templates/csharp-mstest/data-driven_tests.md
+- Missing inline ref: TestContext
+- Missing inline ref: templates/csharp-mstest/testcontext.md
+- Missing inline ref: templates/csharp-mstest/advanced_features.md
+- Missing inline ref: templates/csharp-mstest/common_mistakes_to_avoid.md
+- Missing inline ref: [TestCategory("Category")]
+- Missing inline ref: [TestProperty("Name", "Value")]
+- Missing inline ref: [TestProperty("Bug", "12345")]
+- Missing inline ref: [Priority(1)]
+- Missing inline ref: templates/csharp-mstest/
+- Missing inline ref: advanced_features.md
+- Missing inline ref: common_mistakes_to_avoid.md
+- Missing inline ref: data-driven_tests.md
+- Missing inline ref: modern_assertion_apis.md
+- Missing inline ref: test_lifecycle.md
+- Missing inline ref: testcontext.md
 - `prompts\csharp-nunit.prompt.md`
   - Missing inline ref: [ProjectName].Tests
   - Missing inline ref: CalculatorTests
@@ -1629,41 +1654,43 @@ public sealed class CalculatorTests
 - `prompts\dataverse-python-production-code.prompt.md`
   - Missing inline ref: templates/dataverse-python-production-code/error_handling_structure.md
   - Missing inline ref: templates/dataverse-python-production-code/client_management_pattern.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## OData Optimization
 
-- Always include 
+- Always include
   - Missing inline ref:  parameter to limit columns
-- Use 
+- Use
   - Missing inline ref:  on server (lowercase logical names)
-- Use 
-  - Missing inline ref: , 
+- Use
+  - Missing inline ref: ,
   - Missing inline ref:  for pagination
-- Use 
-  - Missing inline ref: 
+- Use
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\dataverse-python-usecase-builder.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\debian-linux-triage.prompt.md`
   - Missing inline ref: systemctl
   - Missing inline ref: journalctl
@@ -1679,13 +1706,14 @@ Detailed templates in
   - Missing inline ref: output.md
   - Missing inline ref: steps.md
 - `prompts\declarative-agents.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\dev-imp.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 discover generators → user selects subset → implement each sequentially
   → (only then) verify implementation status
   → (only then) code-review all changed files
@@ -1697,23 +1725,26 @@ discover generators → user selects subset → implement each sequentially
 
 ## Profile
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Personality
+
 Analytical, thorough, quality-focused. Reports should be "crispy" — concise, structured, scannable with clear pass/fail indicators, table summaries, and actionable bullet items.
 
 ## Tools
-- 
+
+-
   - Missing inline ref:  — run generators, git operations, tests, linters
-- 
+-
   - Missing inline ref:  — read/write prompt and project files
-- 
-  - Missing inline ref:  and optionally 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+-
+  - Missing inline ref:  and optionally
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:
 
 ### Report Style ("Crispy")
+
 - Compact tables for structured data
 - Emoji indicators for status (✅ ❌ ⚠️ ➕ 📝)
 - No prose paragraphs where bullets suffice
@@ -1730,8 +1761,9 @@ Analytical, thorough, quality-focused. Reports should be "crispy" — concise, s
 | Target project doesn't exist yet | Scaffold minimal project structure before running generators |
 | Code review finds 0 issues | Skip Phase 5 (no fixes needed), go directly to Phase 6 |
 | Build/tests fail post-fix | Loop back to Phase 5 until passing or escalate to user |
-| PWD has no git repo | Use 
-  - Missing inline ref:  before first generator run to enable change tracking |
+| PWD has no git repo | Use
+
+- Missing inline ref:  before first generator run to enable change tracking |
 
 ## Verification Checklist
 
@@ -1741,7 +1773,7 @@ Analytical, thorough, quality-focused. Reports should be "crispy" — concise, s
 - [ ] Code review performed on all changed files
 - [ ] All critical/important issues fixed
 - [ ] Fixes re-verified (no regressions)
-- [ ] 
+- [ ]
 - `prompts\dev-init.prompt.md`
   - Missing skill: brainstorming
   - Missing skill: plans-and-specs
@@ -1825,92 +1857,113 @@ Analytical, thorough, quality-focused. Reports should be "crispy" — concise, s
 /enhance-markdown <file> [slug]       # audit + enhance mode
 /enhance-markdown --txt-to-md [file]  # TXT→MD conversion mode (batch or single)
 
-  - Missing inline ref: 
+  - Missing inline ref:
 IF docs/prompt-conversion-enhancement-plan.md EXISTS → read it, skip to Step 5.3
 ELSE IF docs/dev-init-comprehensive-plan.md EXISTS → plan exists, skip to Step 5.2
 ELSE → run Phase 1–4 first, then return here
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Step 5.1 — Load Plan Artifacts
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 read_file("docs/dev-init-comprehensive-plan.md")
 read_file("docs/dev-init-spec.md")
 read_file("projects/Bash/archive/artifacts/context-maps/dev-init.context.json")
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-### Step 5.2 — Run 
-  - Missing inline ref: 
+### Step 5.2 — Run
 
-1. Load 
-  - Missing inline ref: 
-2. Map all 
-  - Missing inline ref:  → 
-  - Missing inline ref:  pairs
-3. Map all 
-  - Missing inline ref:  dependencies
-4. Write 
-  - Missing inline ref: 
+- Missing inline ref:
 
-### Step 5.3 — Run 
-  - Missing inline ref: 
+1. Load
 
-For each 
-  - Missing inline ref: 
-4. Write to 
-  - Missing inline ref:  (overwrite if exists)
+- Missing inline ref:
 
-### Step 5.4 — Run 
-  - Missing inline ref: 
+1. Map all
 
-For each 
-  - Missing inline ref: 
+- Missing inline ref:  →
+- Missing inline ref:  pairs
 
-For each 
-  - Missing inline ref:  and 
-  - Missing inline ref: 
-2. Scaffold new 
-  - Missing inline ref:  files from template
-3. Populate with content from plan artifacts
+1. Map all
 
-### Step 5.7 — Run 
-  - Missing inline ref: 
+- Missing inline ref:  dependencies
 
-1. Load 
-  - Missing inline ref: 
-2. Update 
-  - Missing inline ref:  → 
-  - Missing inline ref:  (Step 5.3)
-- [ ] Boost all 
-  - Missing inline ref: 
+1. Write
+
+- Missing inline ref:
+
+### Step 5.3 — Run
+
+- Missing inline ref:
+
+For each
+
+- Missing inline ref:
+
+1. Write to
+
+- Missing inline ref:  (overwrite if exists)
+
+### Step 5.4 — Run
+
+- Missing inline ref:
+
+For each
+
+- Missing inline ref:
+
+For each
+
+- Missing inline ref:  and
+- Missing inline ref:
+
+1. Scaffold new
+
+- Missing inline ref:  files from template
+
+1. Populate with content from plan artifacts
+
+### Step 5.7 — Run
+
+- Missing inline ref:
+
+1. Load
+
+- Missing inline ref:
+
+1. Update
+
+- Missing inline ref:  →
+- Missing inline ref:  (Step 5.3)
+- [ ] Boost all
+  - Missing inline ref:
 
 ### Step 6.2 — Cross-Reference Validation
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Step 6.3 — Conflict Detection
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Step 6.4 — Quality Scoring
 
-Score each 
-  - Missing inline ref: 
+Score each
+
+- Missing inline ref:
 
 ### Tasks
 
-- [ ] Structural audit all 
+- [ ] Structural audit all
   - Missing inline ref:  files
 - [ ] Validate all cross-references resolve
 - [ ] Detect duplicate triggers/titles
 - [ ] Score each file against quality criteria
-- [ ] Write verification report to 
+- [ ] Write verification report to
   - Missing inline ref: markdown
+
 # Prompts Cross-Reference Registry
 
 ## Prompts/\*.md (Conversion Targets)
@@ -1936,27 +1989,30 @@ Score each
 | -------- | ----- | ---------- |
 | ...      | ...   | ...        |
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Step 7.2 — Final Verification
 
+- Missing inline ref: bash
 
-  - Missing inline ref: bash
 # Count total prompts
+
 ls Prompts/*.prompts.md | wc -l
 ls prompts/*.prompt.md | wc -l
 
 # Verify registry matches disk
+
 # Every file on disk is in registry
+
 # Every registry entry exists on disk
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Tasks
 
 - [ ] Build cross-reference registry
 - [ ] Verify registry matches disk state
-- [ ] Commit all changes with 
+- [ ] Commit all changes with
 - `prompts\dev.prompt.md`
   - Missing inline ref: templates/dev/
   - Missing inline ref: phase_1.md
@@ -2112,14 +2168,14 @@ ls prompts/*.prompt.md | wc -l
   - Missing inline ref: .hermes/plans/2026-06-16_multi-agent-research.md
   - Missing inline ref: .hermes/plans/2026-06-16_multi-agent-research.md
 - `prompts\features.prompt.md`
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\fedora-linux-triage.prompt.md`
   - Missing inline ref: systemctl
   - Missing inline ref: journalctl
@@ -2130,12 +2186,12 @@ ls prompts/*.prompt.md | wc -l
   - Missing inline ref: instructions.md
   - Missing inline ref: output_format.md
 - `prompts\finalize-agent-prompt.prompt.md`
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\first-ask.prompt.md`
   - Missing inline ref: templates/first-ask/
   - Missing inline ref: legacy_prompt_details.md
@@ -2191,7 +2247,7 @@ Templates in
   - Missing inline ref: context-map
   - Missing inline ref: prompts/context-map.prompt.md
 - `prompts\generate-custom-instructions-from-codebase.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 ${MIGRATION_TYPE="Framework Version|Architecture Refactoring|Technology Migration|Dependencies Update|Pattern Changes"}
 <!-- Type of migration or evolution -->
 
@@ -2216,10 +2272,10 @@ ${GENERATE_EXAMPLES="true|false"}
 ${VALIDATION_REQUIRED="true|false"}
 <!-- Require validation before application -->
 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\generate-docs.prompt.md`
   - Missing inline ref: templates/generate-docs/
   - Missing inline ref: phases.md
@@ -2243,10 +2299,9 @@ ${VALIDATION_REQUIRED="true|false"}
 - `prompts\github-copilot-starter.prompt.md`
   - Missing inline ref: .github/copilot-instructions.md
   - Missing inline ref: templates/github-copilot-starter/configuration_files_to_create.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
-
-  - Missing inline ref: 
+  - Missing inline ref:
 project-root/
 ├── .github/
 │   ├── copilot-instructions.md
@@ -2271,7 +2326,7 @@ project-root/
 │   └── workflows/
 │       └── copilot-setup-steps.yml
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Execution Steps
 
@@ -2282,19 +2337,21 @@ project-root/
 5. **Generate reusable prompts for common development tasks**
 6. **Set up specialized chat modes for different development scenarios**
 7. **Create the GitHub Actions workflow for Coding Agent** (
-  - Missing inline ref: 
+
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\go-mcp-server-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 myserver/
 ├── go.mod
 ├── go.sum
@@ -2309,12 +2366,11 @@ myserver/
 ├── README.md
 └── main_test.go
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## go.mod Template
 
-
-  - Missing inline ref: go
+- Missing inline ref: go
 module github.com/yourusername/{{PROJECT_NAME}}
 
 go 1.23
@@ -2323,12 +2379,11 @@ require (
     github.com/modelcontextprotocol/go-sdk v1.0.0
 )
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## tools/registry.go Template
 
-
-  - Missing inline ref: go
+- Missing inline ref: go
 package tools
 
 import "github.com/modelcontextprotocol/go-sdk/mcp"
@@ -2339,17 +2394,16 @@ func RegisterTools(server *mcp.Server) {
     // Register additional tools here
 }
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## config/config.go Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## README.md Template
 
+- Missing inline ref: markdown
 
-  - Missing inline ref: markdown
 # {{PROJECT_NAME}}
 
 A Model Context Protocol (MCP) server built with Go.
@@ -2361,16 +2415,17 @@ A Model Context Protocol (MCP) server built with Go.
 ## Installation
 
 \
-  - Missing inline ref: 
+
+- Missing inline ref:
 
 ## License
 
 MIT
 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\hermes-breakdown-epic-arch.prompt.md`
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/epic.md
   - Missing inline ref: /docs/ways-of-work/plan/{epic-name}/arch.md
@@ -2496,73 +2551,67 @@ MIT
   - Missing inline ref: templates/java-mcp-server-generator/mcpserverapplicationjava_templ.md
   - Missing inline ref: templates/java-mcp-server-generator/tooldefinitionsjava_template.md
   - Missing inline ref: templates/java-mcp-server-generator/toolhandlersjava_template.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## README.md Template
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 mvn clean package
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Gradle
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 ./gradlew build
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Run
 
 ### Maven
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 java -jar target/my-mcp-server-1.0.0.jar
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Gradle
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 ./gradlew run
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Testing
 
 ### Maven
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 mvn test
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Gradle
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 ./gradlew test
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Integration with Claude Desktop
 
-Add to 
-  - Missing inline ref: 
+Add to
+
+- Missing inline ref:
 
 ## License
 
 MIT
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Generation Instructions
 
@@ -2577,29 +2626,30 @@ MIT
 9. **Document public APIs** with Javadoc
 10. **Provide both sync and async** examples
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Template References
 
-Detailed section templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed section templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\java-refactoring-extract-method.prompt.md`
   - Missing inline ref: java
 public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerId) {
@@ -2622,10 +2672,10 @@ public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerRepoId) {
     return bpartnerIdIfNotNull(BPartnerId.ofRepoIdOrNull(bpartnerRepoId));
 }
 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\java-refactoring-remove-parameter.prompt.md`
   - Missing inline ref: java
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)
@@ -2673,8 +2723,8 @@ NodeImpl( long id)
      this( id, false );
 }
 
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+-
 - `prompts\java-springboot.prompt.md`
   - Missing inline ref: pom.xml
   - Missing inline ref: build.gradle
@@ -2740,7 +2790,7 @@ NodeImpl( long id)
   - Missing inline ref: legacy_prompt_details.md
   - Missing inline ref: phases.md
 - `prompts\kotlin-mcp-server-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 myserver/
 ├── build.gradle.kts
 ├── settings.gradle.kts
@@ -2762,20 +2812,18 @@ myserver/
 │               └── ServerTest.kt
 └── README.md
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## settings.gradle.kts Template
 
-
-  - Missing inline ref: kotlin
+- Missing inline ref: kotlin
 rootProject.name = "{{PROJECT_NAME}}"
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Main.kt Template
 
-
-  - Missing inline ref: kotlin
+- Missing inline ref: kotlin
 package com.example.myserver
 
 import io.modelcontextprotocol.kotlin.sdk.server.StdioServerTransport
@@ -2797,17 +2845,15 @@ fun main() = runBlocking {
     server.connect(transport)
 }
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Config.kt Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## tools/ToolRegistry.kt Template
 
-
-  - Missing inline ref: kotlin
+- Missing inline ref: kotlin
 package com.example.myserver.tools
 
 import io.modelcontextprotocol.kotlin.sdk.server.Server
@@ -2818,55 +2864,55 @@ fun Server.registerTools() {
     // Register additional tools here
 }
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## README.md Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Multiplatform
 
-This project uses Kotlin Multiplatform and can target JVM, Wasm, and iOS. See 
-  - Missing inline ref:  for platform configuration.
+This project uses Kotlin Multiplatform and can target JVM, Wasm, and iOS. See
+
+- Missing inline ref:  for platform configuration.
 
 ## License
 
 MIT
 
-  - Missing inline ref: kotlin
+- Missing inline ref: kotlin
 val transport = StdioServerTransport()
 server.connect(transport)
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### SSE Transport (Ktor)
 
-
-  - Missing inline ref: kotlin
+- Missing inline ref: kotlin
 embeddedServer(Netty, port = 8080) {
     mcp {
         Server(/*...*/) { "Description" }
     }
 }.start(wait = true)
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Multiplatform Configuration
 
-For multiplatform projects, add to 
-  - Missing inline ref: 
+For multiplatform projects, add to
 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\kotlin-springboot.prompt.md`
   - Missing inline ref: pom.xml
   - Missing inline ref: build.gradle
@@ -2906,104 +2952,108 @@ Detailed templates in
   - Missing inline ref: ?
   - Missing inline ref: JpaRepository
   - Missing inline ref: CrudRepository
-  - Missing inline ref:  or 
-  - Missing inline ref:  or 
+  - Missing inline ref:  or
+  - Missing inline ref:  or
   - Missing inline ref:  to manage the lifecycle of coroutines.
-
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\mcp-copilot-studio-server-generator.prompt.md`
   - Missing inline ref: templates/mcp-copilot-studio-server-generator/instructions.md
   - Missing inline ref: templates/mcp-copilot-studio-server-generator/expected_output.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\mcp-create-adaptive-cards.prompt.md`
   - Missing inline ref: templates/mcp-create-adaptive-cards/adaptive_card_types.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\mcp-create-declarative-agent.prompt.md`
   - Missing inline ref: templates/mcp-create-declarative-agent/requirements.md
   - Missing inline ref: templates/mcp-create-declarative-agent/mcp_server_integration.md
   - Missing inline ref: response_semantics
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Add Adaptive Cards (Optional)
-See the 
-  - Missing inline ref:  prompt for adding visual card templates.
+
+See the
+
+- Missing inline ref:  prompt for adding visual card templates.
 
 ## Environment Configuration
 
-Create 
-  - Missing inline ref:  or 
-  - Missing inline ref: env
+Create
+
+- Missing inline ref:  or
+- Missing inline ref: env
 OAUTH_REFERENCE_ID=your-oauth-reference-id
 CLIENT_ID=your-client-id
 CLIENT_SECRET=your-client-secret
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Jira MCP Server
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Custom Service
 
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
 - `prompts\mcp-deploy-manage-agents.prompt.md`
   - Missing inline ref: templates/mcp-deploy-manage-agents/agent_types.md
   - Missing inline ref: templates/mcp-deploy-manage-agents/deployment_workflows.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
 - `prompts\memory-merger.prompt.md`
   - Missing inline ref: /memory-merger >domain [scope]
   - Missing inline ref: global
@@ -3019,44 +3069,43 @@ Detailed templates in
   - Missing inline ref: <workspace-root>/.github/instructions/
   - Missing inline ref: <global-prompts>
   - Missing inline ref: <workspace-instructions>
-  - Missing inline ref: 
+  - Missing inline ref:
 /memory-merger >domain-name [scope]
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
-- 
-  - Missing inline ref:  - Required. The domain to merge (e.g., 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+-
+  - Missing inline ref:  - Required. The domain to merge (e.g.,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref: )
-- 
-  - Missing inline ref: , 
-  - Missing inline ref:  (both mean global), 
-  - Missing inline ref: , or 
-  - Missing inline ref: . Defaults to 
+-
+  - Missing inline ref: ,
+  - Missing inline ref:  (both mean global),
+  - Missing inline ref: , or
+  - Missing inline ref: . Defaults to
   - Missing inline ref:  - merges global prompt engineering memories
-- 
+-
   - Missing inline ref:  - merges workspace clojure memories
-- 
-  - Missing inline ref:  → 
-  - Missing inline ref:  → 
-  - Missing inline ref: 
+-
+  - Missing inline ref:  →
+  - Missing inline ref:  →
+  - Missing inline ref:
 
 ## Example
 
-
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\mkdocs-translations.prompt.md`
   - Missing inline ref: es
   - Missing inline ref: fr
@@ -3093,42 +3142,43 @@ Templates in
   - Missing inline ref: .agent.md
   - Missing inline ref: .prompt.md
   - Missing inline ref: templates/model-recommendation/workflow.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed section templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed section templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\multi-agent-research-template.prompt.md`
   - Missing inline ref: {{workspace_root}}
-  - Missing inline ref:  (resolves to 
+  - Missing inline ref:  (resolves to
   - Missing inline ref: ) |
-| 
-  - Missing inline ref:  | 
+|
   - Missing inline ref:  |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  \| 
-  - Missing inline ref:  \| 
   - Missing inline ref:  |
-| 
+|
+  - Missing inline ref:  |
+  - Missing inline ref:  \|
+  - Missing inline ref:  \|
+  - Missing inline ref:  |
+|
   - Missing inline ref:  | the active agent's planning or update command |
-| 
+|
   - Missing inline ref:  | the active agent's search command |
-| 
+|
   - Missing inline ref:  | the active agent's content extraction command |
-| 
+|
   - Missing inline ref:  | the active agent's file read/write command |
 
 ## Agent Mapping
@@ -3148,55 +3198,55 @@ Detailed section templates in
 - [ ] Research first, then extract, then write docs, then plan, then implement, then verify.
 - [ ] Preserve the current research targets unless the user explicitly changes them.
 - [ ] Keep each stage reversible and easy to resume.
-- [ ] Write extracted findings to Markdown under 
+- [ ] Write extracted findings to Markdown under
   - Missing inline ref:  if a plan already exists; update it.
 - [ ] Execute Hermes skills browse to list everything available.
 - [ ] Search and filter the top 50 best skills that are not already installed or available.
 - [ ] Execute Hermes skills search with the skill name to find skills by keyword.
 - [ ] Install all matching skills after a security scan.
-- [ ] Run 
+- [ ] Run
   - Missing inline ref: .
-- [ ] Run 
+- [ ] Run
   - Missing inline ref: .
 - [ ] Identify all available profiles.
-- [ ] Create profiles with 
+- [ ] Create profiles with
   - Missing inline ref: .
-- [ ] Confirm the clones copy config, keys, 
-  - Missing inline ref:  -> 
-  - Missing inline ref:  -> 
-  - Missing inline ref:  -> 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+- [ ] Confirm the clones copy config, keys,
+  - Missing inline ref:  ->
+  - Missing inline ref:  ->
+  - Missing inline ref:  ->
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref: )
 - [ ] Frontmatter has recommended fields (
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref: )
-- [ ] 
+- [ ]
   - Missing inline ref:  table is present and populated
 - [ ] Phase headings use H2 (
   - Missing inline ref: ) not H3
-- [ ] All phase task lists use 
+- [ ] All phase task lists use
   - Missing inline ref:  checkbox format
 - [ ] Phase 3 URLs are markdown links with descriptive titles
 - [ ] Phase 2 "After research" uses Steps/Tasks structure
 - [ ] Agent Mapping, Output Requirements, Verification Gates are markdown tables
 - [ ] Core Workflow references phases (no duplicate detail)
 - [ ] Template variables table uses inline code for paths
-- [ ] No 
+- [ ] No
   - Missing inline ref:  field in frontmatter
 - [ ] Trigger matches filename stem convention
-- [ ] File uses 
-  - Missing inline ref:  extension ✅ (renamed from 
+- [ ] File uses
+  - Missing inline ref:  extension ✅ (renamed from
   - Missing inline ref: )
-
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\multi-stage-dockerfile.prompt.md`
   - Missing inline ref: AS
   - Missing inline ref: python
@@ -3222,17 +3272,18 @@ Detailed templates in
 - `prompts\openapi-to-application-code.prompt.md`
   - Missing inline ref: templates/openapi-to-application-code/generation_process.md
 - `prompts\optimize-agentsMd.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\performance.prompt.md`
   - Missing inline ref: templates/performance/phases.md
   - Missing inline ref: templates/performance/
   - Missing inline ref: phases.md
 - `prompts\php-mcp-server-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 {project-name}/
 ├── composer.json
 ├── .gitignore
@@ -3250,7 +3301,7 @@ Detailed templates in
 └── tests/
     └── ToolsTest.php
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Requirements
 
@@ -3259,84 +3310,81 @@ Detailed templates in
 
 ## Installation
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 composer install
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Usage
 
 ### Start Server (Stdio)
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 php server.php
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Configure in Claude Desktop
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Testing
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 vendor/bin/phpunit
 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ## Resource Patterns
 
 ### Static Resource
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Dynamic Resource
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Running the Server
 
+- Missing inline ref: bash
 
-  - Missing inline ref: bash
 # Install dependencies
+
 composer install
 
 # Run tests
+
 vendor/bin/phpunit
 
 # Start server
+
 php server.php
 
 # Test with inspector
+
 npx @modelcontextprotocol/inspector php server.php
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Claude Desktop Configuration
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 Now generate the complete project based on user requirements!
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\plan-audit.prompt.md`
   - Missing skill: context-map
   - Missing skill: systematic-debugging
@@ -3383,8 +3431,10 @@ Detailed templates in
   - Missing inline ref: pylint
   - Missing inline ref: cargo check
   - Missing inline ref:  approach.
-3. Re-run the scan on the fixed files to confirm fix.
-4. 
+
+1. Re-run the scan on the fixed files to confirm fix.
+2.
+
 - `prompts\plan-execute.prompt.md`
   - Missing skill: plans-and-specs
   - Missing skill: subagent-driven-development
@@ -3420,27 +3470,34 @@ Detailed templates in
   - Missing inline ref: context-map
   - Missing inline ref: brainstorming
   - Missing inline ref: systematic-debugging
-  - Missing inline ref:  or 
+  - Missing inline ref:  or
   - Missing inline ref: .
-2. Use 
-  - Missing inline ref:  skill for structured plan writing.
-3. Apply 
-  - Missing inline ref: , validate frontmatter.
-4. Run the plan through 
-  - Missing inline ref:  for smoke-testing.
+
+1. Use
+
+- Missing inline ref:  skill for structured plan writing.
+
+1. Apply
+
+- Missing inline ref: , validate frontmatter.
+
+1. Run the plan through
+
+- Missing inline ref:  for smoke-testing.
 
 ## Verification Checklist
+
 - [ ] Goal is clearly stated and scoped
 - [ ] All phases have explicit verification gates
-- [ ] Every 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
-- [ ] If 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+- [ ] Every
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:
+- [ ] If
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
 - `prompts\playwright-automation-fill-in-form.prompt.md`
   - Missing inline ref: webapp-testing
   - Missing inline ref: systematic-debugging
@@ -3448,12 +3505,12 @@ Detailed templates in
   - Missing inline ref: @browser
   - Missing inline ref: @checker
   - Missing inline ref: templates/playwright-automation-fill-in-form/phases.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\playwright-explore-website.prompt.md`
   - Missing inline ref: webapp-testing
   - Missing inline ref: verification-before-completion
@@ -3462,12 +3519,12 @@ Templates in
   - Missing inline ref: @scribe
   - Missing inline ref: @tester
   - Missing inline ref: templates/playwright-explore-website/phases.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\playwright-generate-test.prompt.md`
   - Missing inline ref: webapp-testing
   - Missing inline ref: test-driven-development
@@ -3477,12 +3534,12 @@ Templates in
   - Missing inline ref: @author
   - Missing inline ref: @runner
   - Missing inline ref: templates/playwright-generate-test/phases.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\playwright-typescript.prompt.md`
   - Missing inline ref: templates/playwright-typescript/phases.md
   - Missing inline ref: templates/playwright-typescript/
@@ -3506,22 +3563,20 @@ SELECT crypt('password', gen_salt('bf'));
 -- Fuzzy text matching
 SELECT word_similarity('postgres', 'postgre');
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## 🛡️ PostgreSQL Security Review
 
 ### Row Level Security (RLS)
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Privilege Management
 
-
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\postgresql-optimization.prompt.md`
   - Missing inline ref: templates/postgresql-optimization/postgresql-specific_features.md
   - Missing inline ref: templates/postgresql-optimization/postgresql_performance_tuning.md
@@ -3539,33 +3594,33 @@ SELECT schemaname, tablename, indexname, idx_scan, idx_tup_read, idx_tup_fetch
 FROM pg_stat_user_indexes
 WHERE idx_scan = 0;
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## 🎯 Optimization Output Format
 
 ### Query Analysis Results
 
-
-  - Missing inline ref: sql
+- Missing inline ref: sql
 CREATE INDEX idx_table_column ON table(column);
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\power-apps-code-app-scaffold.prompt.md`
   - Missing inline ref: templates/power-apps-code-app-scaffold/task.md
   - Missing inline ref: templates/power-apps-code-app-scaffold/implementation_guidelines.md
@@ -3634,14 +3689,14 @@ Detailed templates in
   - Missing inline ref: POST /mcp
   - Missing inline ref: iconBrandColor
   - Missing inline ref: templates/power-platform-mcp-connector-suite/validation_checklist.md
-  - Missing inline ref: 
-
+  - Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\project-workflow-analysis-blueprint-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 ${PROJECT_TYPE="Auto-detect|.NET|Java|Spring|Node.js|Python|React|Angular|Microservices|Other"}
 <!-- Primary technology stack -->
 
@@ -3666,11 +3721,12 @@ ${INCLUDE_SEQUENCE_DIAGRAM=true|false}
 ${INCLUDE_TEST_PATTERNS=true|false}
 <!-- Include testing approach -->
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\projects-init.prompt.md`
   - Missing skill: enhance-markdown
   - Missing skill: hermes-skills
@@ -3812,30 +3868,32 @@ Detailed templates in
   - Missing inline ref: docs/prompt-inventory.md
   - Missing inline ref: deleted
   - Missing inline ref: references_updated
-  - Missing inline ref: 
-| 
+  - Missing inline ref:
+|
   - Missing inline ref:  | <one-line purpose> |
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 or
 
+- Missing inline ref:
 
-  - Missing inline ref: 
 ### <prompt-name>
+
 | Skill | Purpose |
 ...
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### 3.4 Register templates
 
-Update 
-  - Missing inline ref: 
-- Frontmatter uses keys from 
-  - Missing inline ref: 
-  - skills under 
-  - Missing inline ref: 
+Update
+
+- Missing inline ref:
+- Frontmatter uses keys from
+  - Missing inline ref:
+  - skills under
+  - Missing inline ref:
 
 ### 4.3 Keep templates drivable
 
@@ -3843,31 +3901,32 @@ Each prompt must remain directly executable as a standalone prompt file.
 
 ### 4.4 Apply atomic changes
 
-Use 
-  - Missing inline ref:  for in-place updates. Use 
-  - Missing inline ref:  from prompt 
-  - Missing inline ref:  and 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref:  or 
+Use
+
+- Missing inline ref:  for in-place updates. Use
+- Missing inline ref:  from prompt
+- Missing inline ref:  and
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:  or
   - Missing inline ref:  is non-empty
-- 
+-
   - Missing inline ref:  is semver-like
-- all 
+- all
   - Missing inline ref:  dependencies exist
-- all 
+- all
   - Missing inline ref:  dependencies are valid Hermes tools
-- all 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- updated 
+- all
+  - Missing inline ref:
+-
+  - Missing inline ref:
+- updated
   - Missing inline ref:  files using templates
-- updated 
-  - Missing inline ref: 
-- any newly created skills/scripts under 
+- updated
+  - Missing inline ref:
+- any newly created skills/scripts under
 - `prompts\prompts-fix.prompt.md`
   - Missing skill: brainstorming
   - Missing skill: plans-and-specs
@@ -3916,7 +3975,7 @@ Use
   - Missing inline ref: database/
   - Missing inline ref: any
   - Missing inline ref: unknown
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Constraints
 
@@ -3924,22 +3983,22 @@ Use
 - **Never introduce new errors** — verify after each batch of fixes.
 - **Stay in scope** — only fix issues surfaced by the report files.
 - **Document rationale** — for non-obvious fixes, add a brief inline comment.
-- **PowerShell-safe** — use 
-  - Missing inline ref:  instead of 
+- **PowerShell-safe** — use
+  - Missing inline ref:  instead of
   - Missing inline ref: , use Zod, auth-first, DAL patterns).
 
 ## Next action
 
 Run the quality-gate script to generate fresh report files. After that the triage step will parse the report files and produce the triage table.
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\readme-blueprint-generator.prompt.md`
   - Missing inline ref: templates/readme-blueprint-generator/
   - Missing inline ref: legacy_prompt_details.md
@@ -3964,31 +4023,31 @@ Detailed templates in
   - Missing inline ref: .github/instructions/documentation.instructions.md
   - Missing inline ref: AGENTS.md
   - Missing inline ref: .cursorrules
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## 4. Output Requirements
 
-- Produce fully rewritten versions of 
+- Produce fully rewritten versions of
   - Missing inline ref: ,
-  - Missing inline ref:  and 
+  - Missing inline ref:  and
   - Missing inline ref: ,
-  - Missing inline ref:  and 
+  - Missing inline ref:  and
   - Missing inline ref: .
 
 ## 5. Tool & Capability Requirements
 
-- File system access to read/write 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+- File system access to read/write
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref: , and reference files.
-- Markdown linting and formatting tools (e.g., 
+- Markdown linting and formatting tools (e.g.,
   - Missing inline ref: ).
 - Codebase search tools to resolve file paths, section headings, and code samples.
 - Date and metadata insertion for “Last Updated” sections.
-- Diátaxis and documentation skills, referencing 
-  - Missing inline ref: , 
+- Diátaxis and documentation skills, referencing
+  - Missing inline ref: ,
   - Missing inline ref:  for validation.
-- Load and apply 
+- Load and apply
   - Missing inline ref:  and other relevant instructions.
 - Output must be valid markdown, ready for direct commit.
 
@@ -3998,28 +4057,29 @@ Detailed templates in
 - All references must be accurate and up-to-date.
 - Output must pass markdown linting and render correctly.
 - All required sections must be present and fully populated.
-- Run 
+- Run
   - Missing inline ref:  to ensure no regressions.
 - Adhere to Banking documentation standards and Diátaxis principles.
 - Include “Last Updated” and, if needed, “Migration Notes” sections.
 - Output must be peer-reviewed and approved before commit.
 
-
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\refactor-method-complexity-reduce.prompt.md`
   - Missing inline ref: templates/refactor-method-complexity-reduce/instructions.md
   - Missing inline ref: templates/refactor-method-complexity-reduce/
   - Missing inline ref: instructions.md
 - `prompts\refactor-plan.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\refresh-agent-inventory.prompt.md`
   - Missing inline ref: templates/refresh-agent-inventory/
   - Missing inline ref: phases.md
@@ -4041,31 +4101,31 @@ Templates in
   - Missing inline ref: <workspace-root>/.github/instructions/
   - Missing inline ref: <global-prompts>
   - Missing inline ref: <workspace-instructions>
-  - Missing inline ref: 
+  - Missing inline ref:
 /remember [>domain-name [scope]] lesson content
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
-- 
-  - Missing inline ref:  - Optional. Explicitly target a domain (e.g., 
-  - Missing inline ref: , 
+-
+  - Missing inline ref:  - Optional. Explicitly target a domain (e.g.,
+  - Missing inline ref: ,
   - Missing inline ref: )
-- 
-  - Missing inline ref: , 
-  - Missing inline ref:  (both mean global), 
-  - Missing inline ref: , or 
-  - Missing inline ref: . Defaults to 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
+-
+  - Missing inline ref: ,
+  - Missing inline ref:  (both mean global),
+  - Missing inline ref: , or
+  - Missing inline ref: . Defaults to
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
 
 ### Tag Line
 
@@ -4077,11 +4137,12 @@ Each distinct lesson has its own level 2 headline
 
 ## Process
 
-> 1. **Parse input** - Extract domain (if 
-  - Missing inline ref:  specified) and scope (
-  - Missing inline ref: templates/remember/process.md
-  - Missing inline ref: templates/remember/
-  - Missing inline ref: process.md
+> 1. **Parse input** - Extract domain (if
+>
+- Missing inline ref:  specified) and scope (
+- Missing inline ref: templates/remember/process.md
+- Missing inline ref: templates/remember/
+- Missing inline ref: process.md
 - `prompts\repo-management.prompt.md`
   - Missing skill: git-helper
   - Missing skill: repo-research-pipeline
@@ -4107,20 +4168,20 @@ git branch | grep -v -E "development|production" | xargs -r git branch -D
 git push origin --delete <branch> || true
 gh repo edit <owner>/<repo> --default-branch production
 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  | 
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  |
   - Missing inline ref:  for vulns |
-| Python | 
-  - Missing inline ref:  | 
-  - Missing inline ref:  per repo type (JS/TS uses 
-  - Missing inline ref: , Python uses 
+| Python |
+  - Missing inline ref:  |
+  - Missing inline ref:  per repo type (JS/TS uses
+  - Missing inline ref: , Python uses
 - `prompts\repo-research-pipeline.prompt.md`
   - Missing skill: repo-research-pipeline
   - Missing skill: web-research-pipeline
@@ -4146,14 +4207,15 @@ git diff --stat origin/main..HEAD | tail -3            # recent changes
 ls -la projects/<name>/src                             # structure overview
 
   - Missing inline ref:  | Overview, Architecture, Key Components, Technologies, Data Flow, Team |
-| 
+|
   - Missing inline ref:  | Year-in-numbers, Contributors, Seasonal Patterns, Themes, Plot Twists, Current Chapter |
 
 ## Rules
 
 1. **Be Specific** — Use actual file names, commit messages, and contributor names.
 2. **Evidence-Based** — Support observations with actual git data (never fabricate).
-3. **Write files, don't print content** — Use 
+3. **Write files, don't print content** — Use
+
 - `prompts\repo.prompt.md`
   - Missing prompt dependency: context-map
   - Missing prompt dependency: update-implementation-plan
@@ -4193,48 +4255,56 @@ ls -la projects/<name>/src                             # structure overview
   - Missing inline ref: find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | sort
   - Missing inline ref: web_search
   - Missing inline ref: pwd
-  - Missing inline ref: 
+  - Missing inline ref:
 web_search("Next.js 16 best practices 2026", limit=1)
 terminal("pwd")
 terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | sort")
 terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")
 
   - Missing inline ref: .
-> Orchestrator at 
-  - Missing inline ref:  and 
-  - Missing inline ref:  to extract tech stack.
-2. Run 
-  - Missing inline ref:  per project using the template in 
-  - Missing inline ref: 
+
+> Orchestrator at
+
+- Missing inline ref:  and
+- Missing inline ref:  to extract tech stack.
+
+1. Run
+
+- Missing inline ref:  per project using the template in
+- Missing inline ref:
 read_file("projects/<name>/RESEARCH_REPORT.md")         # if exists — for UPDATE
 write_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)
 web_extract([url1, url2, url3])                          # verify key links
 
-  - Missing inline ref: 
-2. Rewrite 
-  - Missing inline ref:  — 14 rows, file size, last-updated date.
-3. For each report, verify 
-  - Missing inline ref: 
+- Missing inline ref:
+
+1. Rewrite
+
+- Missing inline ref:  — 14 rows, file size, last-updated date.
+
+1. For each report, verify
+
+- Missing inline ref:
 terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \;")
 write_file("projects/RESEARCH_INDEX.md", content=<updated index>)
 
-  - Missing inline ref: 
+- Missing inline ref:
 terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")
 terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -c '^## ' \"$f\"; wc -c \"$f\"; done")
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ---
 
 ## Report Template
 
-Every 
-  - Missing inline ref:  must follow this structure exactly. Do not add or remove
-top-level sections. Subsections under 
-  - Missing inline ref:  are tech-specific and variable.
+Every
 
+- Missing inline ref:  must follow this structure exactly. Do not add or remove
+top-level sections. Subsections under
+- Missing inline ref:  are tech-specific and variable.
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ---
 
@@ -4242,80 +4312,82 @@ top-level sections. Subsections under
 
 | Gate | Condition | Verification Command |
 |------|-----------|----------------------|
-| All 14 reports exist | count = 14 | 
-  - Missing inline ref:  |
-| Each report ≥ 9 sections | 
-  - Missing inline ref:  ≥ 9 | per-report loop |
-| No report under 1KB | 
-  - Missing inline ref:  ≥ 1024 | per-report loop |
-| No report over 5KB | 
-  - Missing inline ref:  ≤ 5120 | per-report loop |
-| 28 URL spot-checks pass | 
-  - Missing inline ref:  non-404 | Phase 4 step 3 |
+| All 14 reports exist | count = 14 |
+
+- Missing inline ref:  |
+| Each report ≥ 9 sections |
+- Missing inline ref:  ≥ 9 | per-report loop |
+| No report under 1KB |
+- Missing inline ref:  ≥ 1024 | per-report loop |
+| No report over 5KB |
+- Missing inline ref:  ≤ 5120 | per-report loop |
+| 28 URL spot-checks pass |
+- Missing inline ref:  non-404 | Phase 4 step 3 |
 | RESEARCH_INDEX.md current | 14 rows, size + date correct | read + verify |
-| No fabricated findings | every fact traces to 
-  - Missing inline ref:  | manual review |
+| No fabricated findings | every fact traces to
+- Missing inline ref:  | manual review |
 | Scope respected | no branch/migration work started | agent self-check |
-| Sub-prompts accessible | 
-  - Missing inline ref: ](templates/_shared/skills-table-core.md#repo)
+| Sub-prompts accessible |
+- Missing inline ref: ](templates/_shared/skills-table-core.md#repo)
 
 | Skill | Phase | Purpose |
 |-------|-------|---------|
-| 
-  - Missing inline ref:  | 1 | Explore research angles per project |
-| 
-  - Missing inline ref:  | 0 | Structure research plan |
-| 
-  - Missing inline ref:  | 0, 4 | Detect stale/missing reports |
-| 
-  - Missing inline ref:  | 1 | Library API docs and patterns |
-| 
-  - Missing inline ref:  | 0 | Prototype report format before batch |
-| 
-  - Missing inline ref:  | 2 | Crisp, compact markdown writing |
-| 
-  - Missing inline ref:  | 2 | Research synthesis |
-| 
-  - Missing inline ref:  | — | Git history analysis and repo narrative |
-| 
-  - Missing inline ref:  | 1 | Delegated web search + extraction |
-| 
-  - Missing inline ref:  | 1 | Multi-project research orchestrator |
+|
+
+- Missing inline ref:  | 1 | Explore research angles per project |
+|
+- Missing inline ref:  | 0 | Structure research plan |
+|
+- Missing inline ref:  | 0, 4 | Detect stale/missing reports |
+|
+- Missing inline ref:  | 1 | Library API docs and patterns |
+|
+- Missing inline ref:  | 0 | Prototype report format before batch |
+|
+- Missing inline ref:  | 2 | Crisp, compact markdown writing |
+|
+- Missing inline ref:  | 2 | Research synthesis |
+|
+- Missing inline ref:  | — | Git history analysis and repo narrative |
+|
+- Missing inline ref:  | 1 | Delegated web search + extraction |
+|
+- Missing inline ref:  | 1 | Multi-project research orchestrator |
 
 ---
 
 ## Actions
 
-- 
+-
   - Missing inline ref:  — Search for guides, similar projects, cheatsheets
-- 
+-
   - Missing inline ref:  — Extract content from URLs; verify links before embedding
-- 
+-
   - Missing inline ref:  — Read project description
-- 
+-
   - Missing inline ref:  — Read tech stack and setup commands
-- 
+-
   - Missing inline ref:  — Read existing report for UPDATE
-- 
+-
   - Missing inline ref:  — Create or update RESEARCH_REPORT.md
-- 
+-
   - Missing inline ref:  — Count reports
-- 
+-
   - Missing inline ref:  — Check sizes
-- 
+-
   - Missing inline ref:  — Verify sections
-- 
+-
   - Missing inline ref:  — Load research writing skill
-- 
+-
   - Missing inline ref:  — Load crisp writing skill
-- 
+-
   - Missing inline ref:  — Delegate per-project research
-- 
+-
   - Missing inline ref:  — Research 3–4 projects concurrently
-- 
-  - Missing inline ref:  with 
+-
+  - Missing inline ref:  with
   - Missing inline ref:  prompt — Per-project web research
-- 
+-
   - Missing inline ref:  — Load sub-prompt orchestrator
 
 ---
@@ -4323,17 +4395,19 @@ top-level sections. Subsections under
 ## Secondary Goals
 
 > Execute ONLY after Phase 5 verification passes for all 14 reports.
-> Full specifications live in 
-  - Missing inline ref: .
+> Full specifications live in
+
+- Missing inline ref: .
 
 | # | Goal | Priority |
 |---|------|----------|
 | 1 | Consolidation — comicwise + Django-Scrapy-Selenium + selenium_webdriver → rhixecompany-comics | P1 |
-| 2 | Branch normalization — 
-  - Missing inline ref:  + 
-  - Missing inline ref:  only per repo | P2 |
-| 3 | Ignore file audit — fix all 
-  - Missing inline ref:  files | P3 |
+| 2 | Branch normalization —
+
+- Missing inline ref:  +
+- Missing inline ref:  only per repo | P2 |
+| 3 | Ignore file audit — fix all
+- Missing inline ref:  files | P3 |
 | 4 | Dependency audit — clean package.json / requirements.txt | P4 |
 | 5 | Bun migration — npm/pnpm → bun for JS/TS repos | P5 |
 | 6 | CI workflow setup — GitHub Actions for all repos | P6 |
@@ -4344,35 +4418,37 @@ top-level sections. Subsections under
 
 | Prompt | Location | Purpose |
 |--------|----------|---------|
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Script modernization for all 14 projects |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Workspace-level consolidation |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Branch norm, Bun migration, CI, consolidation |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Git history analysis and repo narrative |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Web search + extraction per project |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  | Multi-project research orchestrator |
+|
+
+- Missing inline ref:  |
+- Missing inline ref:  | Script modernization for all 14 projects |
+|
+- Missing inline ref:  |
+- Missing inline ref:  | Workspace-level consolidation |
+|
+- Missing inline ref:  |
+- Missing inline ref:  | Branch norm, Bun migration, CI, consolidation |
+|
+- Missing inline ref:  |
+- Missing inline ref:  | Git history analysis and repo narrative |
+|
+- Missing inline ref:  |
+- Missing inline ref:  | Web search + extraction per project |
+|
+- Missing inline ref:  |
+- Missing inline ref:  | Multi-project research orchestrator |
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\review-and-refactor.prompt.md`
   - Missing inline ref: .github/instructions/*.md
   - Missing inline ref: .github/copilot-instructions.md
   - Missing inline ref: templates/review-and-refactor/
   - Missing inline ref: phases.md
 - `prompts\ruby-mcp-server-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 my-mcp-server/
 ├── Gemfile
 ├── Rakefile
@@ -4396,64 +4472,58 @@ my-mcp-server/
 │       └── calculate_tool_test.rb
 └── README.md
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Gemfile Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Rakefile Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## lib/my_mcp_server.rb Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## bin/mcp-server Template
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 chmod +x bin/mcp-server
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## test/test_helper.rb Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## README.md Template
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 bundle install
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-  - Missing inline ref: bash
+- Missing inline ref: bash
 bundle exec rake test
 
-  - Missing inline ref: bash
+- Missing inline ref: bash
 bundle exec rake rubocop
 
-  - Missing inline ref: bash
+- Missing inline ref: bash
 bundle exec rake
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Integration with Claude Desktop
 
-Add to 
-  - Missing inline ref: 
+Add to
+
+- Missing inline ref:
 
 ## Project Structure
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 my-mcp-server/
 ├── Gemfile              # Dependencies
 ├── Rakefile             # Build tasks
@@ -4471,14 +4541,13 @@ my-mcp-server/
 │   └── tools/           # Tool tests
 └── README.md            # This file
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## License
 
 MIT
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Generation Instructions
 
@@ -4493,33 +4562,33 @@ MIT
 9. **Add proper error handling** with is_error flag
 10. **Provide both stdio and HTTP** usage examples
 
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\run-session-agentsmd-workflow.prompt.md`
   - Missing inline ref: templates/run-session-agentsmd-workflow/phases.md
   - Missing inline ref: templates/run-session-agentsmd-workflow/
   - Missing inline ref: phases.md
 - `prompts\rust-mcp-server-generator.prompt.md`
   - Missing inline ref: rmcp
-  - Missing inline ref: 
+  - Missing inline ref:
 {project-name}/
 ├── Cargo.toml
 ├── .gitignore
@@ -4540,66 +4609,62 @@ Detailed templates in
 └── tests/
     └── integration_test.rs
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Installation
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 cargo build --release
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Usage
 
 ### Stdio Transport
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 cargo run
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### SSE Transport
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 cargo run --features http -- --transport sse
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### HTTP Transport
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 cargo run --features http -- --transport http
 
-  - Missing inline ref: , 
-  - Missing inline ref: , and 
-  - Missing inline ref:  macros (
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: bash
+- Missing inline ref: ,
+- Missing inline ref: , and
+- Missing inline ref:  macros (
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: bash
 cd {project-name}
 cargo build
 cargo test
 cargo run
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 Now generate the complete project based on the user's requirements!
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\security.prompt.md`
   - Missing inline ref: templates/security/phases.md
   - Missing inline ref: templates/security/
@@ -4618,19 +4683,19 @@ Detailed templates in
   - Missing inline ref: src/scripts/seed/seed-orchestrator.ts
   - Missing inline ref: src/scripts/seed/index.ts
   - Missing inline ref: src/schemas/seed/
-  - Missing inline ref: 
+  - Missing inline ref:
 BaseSeeder<T>.seed() → loadData() → validateData() → processBatches() → insertBatch()
 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  and 
-  - Missing inline ref: 
-
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  and
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\session-agentsmd-full-workflow.prompt.md`
   - Missing inline ref: templates/session-agentsmd-full-workflow/phases.md
   - Missing inline ref: templates/session-agentsmd-full-workflow/
@@ -4639,14 +4704,13 @@ Templates in
   - Missing inline ref: templates/setup-component/
   - Missing inline ref: phases.md
 - `prompts\setup-enhanced.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ---
 
 ## 2. ✅ Quality Gate (Before Every PR)
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## 8. 🧭 How to Use This Guide
 
@@ -4661,52 +4725,57 @@ Templates in
 
 1. Check the **Reference Resolution Hierarchy** (Section 3) to find relevant code
 2. Apply the correct pattern from the appropriate reference file
-3. Run 
-  - Missing inline ref:  to validate
+3. Run
+
+- Missing inline ref:  to validate
 
 ### For Questions
 
 1. Check the **Reference Resolution Hierarchy** (Section 3) for the right source file
-2. Consult 
-  - Missing inline ref:  for expanded technical details
-3. Look at existing implementations in 
-  - Missing inline ref: 
+2. Consult
+
+- Missing inline ref:  for expanded technical details
+
+1. Look at existing implementations in
+
+- Missing inline ref:
 
 ## 12. 📖 Full Reference Files
 
 | File | Purpose |
 | --- | --- |
-| 
-  - Missing inline ref:  | Complete developer reference (25 sections) — patterns, code examples, architecture |
-| 
-  - Missing inline ref:  | Entity relationship details, constraints, cascade behavior |
-| 
-  - Missing inline ref:  | Quick-reference coding rules and conventions |
-| 
-  - Missing inline ref:  | File-pattern coding standards (TypeScript, Next.js, security, testing, performance) |
-| 
-  - Missing inline ref:  | All 30+ Drizzle tables, enums, relations |
-| 
-  - Missing inline ref:  | Abstract 
-  - Missing inline ref:  base class |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  type definition |
-| 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+|
+
+- Missing inline ref:  | Complete developer reference (25 sections) — patterns, code examples, architecture |
+|
+- Missing inline ref:  | Entity relationship details, constraints, cascade behavior |
+|
+- Missing inline ref:  | Quick-reference coding rules and conventions |
+|
+- Missing inline ref:  | File-pattern coding standards (TypeScript, Next.js, security, testing, performance) |
+|
+- Missing inline ref:  | All 30+ Drizzle tables, enums, relations |
+|
+- Missing inline ref:  | Abstract
+- Missing inline ref:  base class |
+|
+- Missing inline ref:  |
+- Missing inline ref:  type definition |
+|
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\setup-nextjs-frontend-stack.prompt.md`
   - Missing inline ref: src/app
   - Missing inline ref: Comic
@@ -4773,41 +4842,41 @@ Templates in
   - Missing inline ref: admin
   - Missing inline ref: docs/rbac.md
   - Missing inline ref: verifyAdmin()
-  - Missing inline ref: , 
-  - Missing inline ref:  or 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  (see 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  (see 
-  - Missing inline ref:  for admin-only actions. Return 
-  - Missing inline ref:  for comments with children, show 
-  - Missing inline ref:  or 
-  - Missing inline ref:  and 
+  - Missing inline ref: ,
+  - Missing inline ref:  or
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  (see
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  (see
+  - Missing inline ref:  for admin-only actions. Return
+  - Missing inline ref:  for comments with children, show
+  - Missing inline ref:  or
+  - Missing inline ref:  and
   - Missing inline ref: )
-  2. Use Drizzle ORM in 
-  - Missing inline ref:  or 
-  - Missing inline ref: 
-  3. Be exposed only via server actions in 
-  - Missing inline ref:  (with 
+  1. Use Drizzle ORM in
+  - Missing inline ref:  or
+  - Missing inline ref:
+  1. Be exposed only via server actions in
+  - Missing inline ref:  (with
   - Missing inline ref: )
-- All API responses must match 
+- All API responses must match
   - Missing inline ref: .
 - All new files must follow naming conventions and directory structure above.
 - All new features must include unit and E2E tests.
 - All sensitive actions must be logged to audit table.
-- All environment variables must be validated in 
+- All environment variables must be validated in
   - Missing inline ref: .
 
 ---
 
 If anything is ambiguous (naming, folder preference, or the desired implementation style for DAL), ask a focused question before scaffolding files.
 
-
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\setup.prompt.md`
   - Missing inline ref: templates/setup/1_project_architecture.md
   - Missing inline ref: templates/setup/2_essential_commands.md
@@ -4825,49 +4894,51 @@ Detailed templates in
   - Missing inline ref: BaseSeed<T>
   - Missing inline ref: templates/setup/8_seeding_system_cli__rest_api.md
   - Missing inline ref: next.config.ts
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ---
 
 ## 10. Provider Stack & Root Layout
 
 ### Root Layout (
-  - Missing inline ref: )
 
-- 7 custom fonts loaded via 
-  - Missing inline ref:  → 
-  - Missing inline ref: 
+- Missing inline ref: )
+
+- 7 custom fonts loaded via
+  - Missing inline ref:  →
+  - Missing inline ref:
 
 ### Provider Order (
-  - Missing inline ref: )
 
+- Missing inline ref: )
 
-  - Missing inline ref: 
+- Missing inline ref:
 SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider → children + lazy Toaster
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-- 
+-
   - Missing inline ref:  rendered only in development
-- 
+-
   - Missing inline ref:  lazy-loaded
-- 
+-
   - Missing inline ref:  receives theme config props
 
 ---
 
 ## 11. React Query Keys (
-  - Missing inline ref: 
+
+- Missing inline ref:
 
 ## 12. Middleware (
-  - Missing inline ref: )
 
+- Missing inline ref: )
 
-  - Missing inline ref:  is actually protected. Despite 
-  - Missing inline ref:  being in the matcher, the function has no 
-  - Missing inline ref:  check — it falls through to 
-  - Missing inline ref: . Additionally, it checks for a cookie named 
-  - Missing inline ref: , not a NextAuth session — this may not integrate with the actual auth system. See §21 (Technical Debt).
+- Missing inline ref:  is actually protected. Despite
+- Missing inline ref:  being in the matcher, the function has no
+- Missing inline ref:  check — it falls through to
+- Missing inline ref: . Additionally, it checks for a cookie named
+- Missing inline ref: , not a NextAuth session — this may not integrate with the actual auth system. See §21 (Technical Debt).
 
 ---
 
@@ -4875,115 +4946,121 @@ SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider �
 
 ### tsconfig.json
 
-- 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  → 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+-
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  →
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref: , etc.
 - Next.js plugin enabled, incremental builds
 
-### ESLint (Flat Config — 
-  - Missing inline ref: )
+### ESLint (Flat Config —
 
-- Extends 
-  - Missing inline ref:  + 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref:  (ignore 
-  - Missing inline ref:  prefix), 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+- Missing inline ref: )
+
+- Extends
+  - Missing inline ref:  +
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref:  (ignore
+  - Missing inline ref:  prefix),
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref:  are registered but have **no custom rules enabled**. Their built-in recommended configs may still apply through the plugin registration.
 
 ### Vitest (
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
 
 ---
 
 ## 14. Unique Project Conventions
 
 > ### React Compiler is ON
-> **Do NOT** manually add 
-  - Missing inline ref: , 
-  - Missing inline ref: , or 
-  - Missing inline ref: 
+>
+> **Do NOT** manually add
+
+- Missing inline ref: ,
+- Missing inline ref: , or
+- Missing inline ref:
 
 ## 15. VSCode Configuration
 
 > ### Settings (
-  - Missing inline ref: 
+
+- Missing inline ref:
 
 ## 18. Key Files Quick Reference
 
 | File | Purpose |
 | --- | --- |
-| 
-  - Missing inline ref:  | 27 tables, 4 enums, no 
-  - Missing inline ref:  (604 lines) |
-| 
-  - Missing inline ref:  | Abstract 
-  - Missing inline ref:  + error normalization |
-| 
-  - Missing inline ref:  | Reference DAL with eager loading via 
-  - Missing inline ref:  |
-| 
-  - Missing inline ref:  | Reference Server Action with auth + Zod + DAL |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref:  discriminated union |
-| 
-  - Missing inline ref:  | 
-  - Missing inline ref: , 
-  - Missing inline ref:  (bcryptjs) |
-| 
-  - Missing inline ref:  | NextAuth init — 
-  - Missing inline ref:  |
-| 
-  - Missing inline ref:  | Session strategy, all callbacks (known bugs noted) |
-| 
-  - Missing inline ref:  | GitHub + Credentials + Keycloak providers |
-| 
-  - Missing inline ref:  | DrizzleAdapter wiring |
-| 
-  - Missing inline ref:  | Zod-validated env vars — 
-  - Missing inline ref:  not 
-  - Missing inline ref:  (6 active fields) |
-| 
-  - Missing inline ref:  | React Query key factory + singleton |
-| 
-  - Missing inline ref:  | SSR-safe Date hook |
-| 
-  - Missing inline ref:  | Provider stack order |
-| 
-  - Missing inline ref:  | Middleware — protects 
-  - Missing inline ref:  only (⚠ 
-  - Missing inline ref:  unguarded) |
-| 
-  - Missing inline ref:  | React Compiler, Turbopack, images, security headers |
-| 
-  - Missing inline ref:  | Structured config — mostly stubs (see §21) |
-| 
-  - Missing inline ref:  | Template method for all seeders |
-| 
-  - Missing inline ref:  | Seed dependency resolution + orchestration |
-| 
-  - Missing inline ref:  | Seed REST API (5 HTTP methods) |
-| 
-  - Missing inline ref:  | Drizzle Kit config (schema path, dialect, pool) |
+|
+
+- Missing inline ref:  | 27 tables, 4 enums, no
+- Missing inline ref:  (604 lines) |
+|
+- Missing inline ref:  | Abstract
+- Missing inline ref:  + error normalization |
+|
+- Missing inline ref:  | Reference DAL with eager loading via
+- Missing inline ref:  |
+|
+- Missing inline ref:  | Reference Server Action with auth + Zod + DAL |
+|
+- Missing inline ref:  |
+- Missing inline ref:  discriminated union |
+|
+- Missing inline ref:  |
+- Missing inline ref: ,
+- Missing inline ref:  (bcryptjs) |
+|
+- Missing inline ref:  | NextAuth init —
+- Missing inline ref:  |
+|
+- Missing inline ref:  | Session strategy, all callbacks (known bugs noted) |
+|
+- Missing inline ref:  | GitHub + Credentials + Keycloak providers |
+|
+- Missing inline ref:  | DrizzleAdapter wiring |
+|
+- Missing inline ref:  | Zod-validated env vars —
+- Missing inline ref:  not
+- Missing inline ref:  (6 active fields) |
+|
+- Missing inline ref:  | React Query key factory + singleton |
+|
+- Missing inline ref:  | SSR-safe Date hook |
+|
+- Missing inline ref:  | Provider stack order |
+|
+- Missing inline ref:  | Middleware — protects
+- Missing inline ref:  only (⚠
+- Missing inline ref:  unguarded) |
+|
+- Missing inline ref:  | React Compiler, Turbopack, images, security headers |
+|
+- Missing inline ref:  | Structured config — mostly stubs (see §21) |
+|
+- Missing inline ref:  | Template method for all seeders |
+|
+- Missing inline ref:  | Seed dependency resolution + orchestration |
+|
+- Missing inline ref:  | Seed REST API (5 HTTP methods) |
+|
+- Missing inline ref:  | Drizzle Kit config (schema path, dialect, pool) |
 
 ---
 
@@ -4991,140 +5068,145 @@ SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider �
 
 | Category | Package | Version | Purpose |
 | --- | --- | --- | --- |
-| **Framework** | 
-  - Missing inline ref:  | 16.1.6 | App Router, Server Components, Turbopack |
-| **React** | 
-  - Missing inline ref:  / 
-  - Missing inline ref:  | 19.2.4 | UI rendering, Server Components |
-| **ORM** | 
-  - Missing inline ref:  / 
-  - Missing inline ref:  | 0.45.1 | Type-safe SQL, migrations |
-| **DB Driver** | 
-  - Missing inline ref:  | — | PostgreSQL client |
-| **Auth** | 
-  - Missing inline ref:  | 5.0.0-beta.30 | Authentication, database sessions |
-| **Auth Adapter** | 
-  - Missing inline ref:  | — | NextAuth ↔ Drizzle bridge |
-| **Validation** | 
-  - Missing inline ref:  | 4.3.6 | Runtime schema validation (⚠ v4 — different API from v3) |
-| **State** | 
-  - Missing inline ref:  | 5.0.11 | Client state management |
-| **Data Fetching** | 
-  - Missing inline ref:  | 5.x | Client-side caching |
-| **UI** | 
-  - Missing inline ref:  | — | Accessible primitives (via shadcn) |
-| **Styling** | 
-  - Missing inline ref:  | 4.x | Utility-first CSS |
-| **Icons** | 
-  - Missing inline ref:  | — | Icon library |
-| **Password** | 
-  - Missing inline ref:  | — | Password hashing |
-| **CLI** | 
-  - Missing inline ref:  | 14.0.3 | Seed CLI (devDependency, not runtime) |
-| **Monitoring** | 
-  - Missing inline ref:  | — | Error tracking |
-| **Testing** | 
-  - Missing inline ref:  | 4.0.18 | Unit tests (jsdom) |
-| **E2E Testing** | 
-  - Missing inline ref:  | — | Browser E2E tests |
-| **TypeScript** | 
-  - Missing inline ref:  types** — ESLint enforces 
-  - Missing inline ref: 
+| **Framework** |
+
+- Missing inline ref:  | 16.1.6 | App Router, Server Components, Turbopack |
+| **React** |
+- Missing inline ref:  /
+- Missing inline ref:  | 19.2.4 | UI rendering, Server Components |
+| **ORM** |
+- Missing inline ref:  /
+- Missing inline ref:  | 0.45.1 | Type-safe SQL, migrations |
+| **DB Driver** |
+- Missing inline ref:  | — | PostgreSQL client |
+| **Auth** |
+- Missing inline ref:  | 5.0.0-beta.30 | Authentication, database sessions |
+| **Auth Adapter** |
+- Missing inline ref:  | — | NextAuth ↔ Drizzle bridge |
+| **Validation** |
+- Missing inline ref:  | 4.3.6 | Runtime schema validation (⚠ v4 — different API from v3) |
+| **State** |
+- Missing inline ref:  | 5.0.11 | Client state management |
+| **Data Fetching** |
+- Missing inline ref:  | 5.x | Client-side caching |
+| **UI** |
+- Missing inline ref:  | — | Accessible primitives (via shadcn) |
+| **Styling** |
+- Missing inline ref:  | 4.x | Utility-first CSS |
+| **Icons** |
+- Missing inline ref:  | — | Icon library |
+| **Password** |
+- Missing inline ref:  | — | Password hashing |
+| **CLI** |
+- Missing inline ref:  | 14.0.3 | Seed CLI (devDependency, not runtime) |
+| **Monitoring** |
+- Missing inline ref:  | — | Error tracking |
+| **Testing** |
+- Missing inline ref:  | 4.0.18 | Unit tests (jsdom) |
+| **E2E Testing** |
+- Missing inline ref:  | — | Browser E2E tests |
+| **TypeScript** |
+- Missing inline ref:  types** — ESLint enforces
+- Missing inline ref:
+>
 > - **No manual memoization** — React Compiler is ON (
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: templates/setup/20_coding_standards_summary.md
-  - Missing inline ref: proxy.ts
-  - Missing inline ref: /dashboard
-  - Missing inline ref: /admin
-  - Missing inline ref: src/proxy.ts
-  - Missing inline ref: proxy.ts
-  - Missing inline ref: "auth-token"
-  - Missing inline ref: src/proxy.ts
-  - Missing inline ref: process.env
-  - Missing inline ref: auth-config.ts
-  - Missing inline ref: auth-providers.ts
-  - Missing inline ref: db.ts
-  - Missing inline ref: env.ts
-  - Missing inline ref: src/lib/env.ts
-  - Missing inline ref: relations()
-  - Missing inline ref: .with()
-  - Missing inline ref: comment.parentId
-  - Missing inline ref: src/database/schema.ts
-  - Missing inline ref: performance.instructions.md
-  - Missing inline ref: .github/instructions/performance.instructions.md
-  - Missing inline ref: comment-rating-dal.ts
-  - Missing inline ref: commentRating
-  - Missing inline ref: src/dal/comment-rating-dal.ts
-  - Missing inline ref: comic-schema.ts
-  - Missing inline ref: comic.schema.ts
-  - Missing inline ref: src/schemas/
-  - Missing inline ref: appConfig.ts
-  - Missing inline ref: database
-  - Missing inline ref: auth.secret
-  - Missing inline ref: app
-  - Missing inline ref: appConfig.ts
-  - Missing inline ref: src/database/schema.ts
-  - Missing inline ref: relations()
-  - Missing inline ref: src/dal/my-entity-dal.ts
-  - Missing inline ref: BaseDal<typeof myEntity.$inferSelect>
-  - Missing inline ref: src/schemas/my-entity-schema.ts
-  - Missing inline ref: createMyEntitySchema
-  - Missing inline ref: updateMyEntitySchema
-  - Missing inline ref: src/actions/my-entity.actions.ts
-  - Missing inline ref: "use server"
-  - Missing inline ref: auth()
-  - Missing inline ref: revalidatePath()
-  - Missing inline ref: ActionResult<T>
-  - Missing inline ref: src/app/(root)/my-feature/page.tsx
-  - Missing inline ref: loading.tsx
-  - Missing inline ref: error.tsx
-  - Missing inline ref: "use client"
-  - Missing inline ref: src/tests/
-  - Missing inline ref: .github/instructions/
-  - Missing inline ref: code-review.instructions.md
-  - Missing inline ref: **/*
-  - Missing inline ref: documentation.instructions.md
-  - Missing inline ref: **/*.md, **/*.ts, **/*.tsx
-  - Missing inline ref: nextjs.instructions.md
-  - Missing inline ref: **/app/**/*.tsx, **/app/**/*.ts
-  - Missing inline ref: performance.instructions.md
-  - Missing inline ref: **/*.ts, **/*.tsx, **/*.css
-  - Missing inline ref: security.instructions.md
-  - Missing inline ref: **/*.ts, **/*.tsx, **/*.js, **/*.jsx
-  - Missing inline ref: testing.instructions.md
-  - Missing inline ref: **/*.test.ts, **/*.test.tsx, **/*.spec.ts
-  - Missing inline ref: typescript.instructions.md
-  - Missing inline ref: **/*.ts, **/*.tsx
-  - Missing inline ref: templates/setup/24_quality_gate_debugger.md
-  - Missing inline ref: templates/setup/
-  - Missing inline ref: 1_project_architecture.md
-  - Missing inline ref: 11_react_query_keys_srclibquer.md
-  - Missing inline ref: 14_unique_project_conventions.md
-  - Missing inline ref: 15_vscode_configuration.md
-  - Missing inline ref: 16_common_tasks__step-by-step.md
-  - Missing inline ref: 17_testing.md
-  - Missing inline ref: 2_essential_commands.md
-  - Missing inline ref: 20_coding_standards_summary.md
-  - Missing inline ref: 24_quality_gate_debugger.md
-  - Missing inline ref: 3_environment_variables.md
-  - Missing inline ref: 4_database_schema__critical_fa.md
-  - Missing inline ref: 5_authentication_system.md
-  - Missing inline ref: 6_data_access_layer_dal.md
-  - Missing inline ref: 7_server_actions__primary_muta.md
-  - Missing inline ref: 8_seeding_system_cli__rest_api.md
+>
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: templates/setup/20_coding_standards_summary.md
+- Missing inline ref: proxy.ts
+- Missing inline ref: /dashboard
+- Missing inline ref: /admin
+- Missing inline ref: src/proxy.ts
+- Missing inline ref: proxy.ts
+- Missing inline ref: "auth-token"
+- Missing inline ref: src/proxy.ts
+- Missing inline ref: process.env
+- Missing inline ref: auth-config.ts
+- Missing inline ref: auth-providers.ts
+- Missing inline ref: db.ts
+- Missing inline ref: env.ts
+- Missing inline ref: src/lib/env.ts
+- Missing inline ref: relations()
+- Missing inline ref: .with()
+- Missing inline ref: comment.parentId
+- Missing inline ref: src/database/schema.ts
+- Missing inline ref: performance.instructions.md
+- Missing inline ref: .github/instructions/performance.instructions.md
+- Missing inline ref: comment-rating-dal.ts
+- Missing inline ref: commentRating
+- Missing inline ref: src/dal/comment-rating-dal.ts
+- Missing inline ref: comic-schema.ts
+- Missing inline ref: comic.schema.ts
+- Missing inline ref: src/schemas/
+- Missing inline ref: appConfig.ts
+- Missing inline ref: database
+- Missing inline ref: auth.secret
+- Missing inline ref: app
+- Missing inline ref: appConfig.ts
+- Missing inline ref: src/database/schema.ts
+- Missing inline ref: relations()
+- Missing inline ref: src/dal/my-entity-dal.ts
+- Missing inline ref: BaseDal<typeof myEntity.$inferSelect>
+- Missing inline ref: src/schemas/my-entity-schema.ts
+- Missing inline ref: createMyEntitySchema
+- Missing inline ref: updateMyEntitySchema
+- Missing inline ref: src/actions/my-entity.actions.ts
+- Missing inline ref: "use server"
+- Missing inline ref: auth()
+- Missing inline ref: revalidatePath()
+- Missing inline ref: ActionResult<T>
+- Missing inline ref: src/app/(root)/my-feature/page.tsx
+- Missing inline ref: loading.tsx
+- Missing inline ref: error.tsx
+- Missing inline ref: "use client"
+- Missing inline ref: src/tests/
+- Missing inline ref: .github/instructions/
+- Missing inline ref: code-review.instructions.md
+- Missing inline ref: **/*
+- Missing inline ref: documentation.instructions.md
+- Missing inline ref: **/*.md, **/*.ts,**/*.tsx
+- Missing inline ref: nextjs.instructions.md
+- Missing inline ref: **/app/**/*.tsx, **/app/**/*.ts
+- Missing inline ref: performance.instructions.md
+- Missing inline ref: **/*.ts, **/*.tsx,**/*.css
+- Missing inline ref: security.instructions.md
+- Missing inline ref: **/*.ts, **/*.tsx,**/*.js, **/*.jsx
+- Missing inline ref: testing.instructions.md
+- Missing inline ref: **/*.test.ts, **/*.test.tsx,**/*.spec.ts
+- Missing inline ref: typescript.instructions.md
+- Missing inline ref: **/*.ts, **/*.tsx
+- Missing inline ref: templates/setup/24_quality_gate_debugger.md
+- Missing inline ref: templates/setup/
+- Missing inline ref: 1_project_architecture.md
+- Missing inline ref: 11_react_query_keys_srclibquer.md
+- Missing inline ref: 14_unique_project_conventions.md
+- Missing inline ref: 15_vscode_configuration.md
+- Missing inline ref: 16_common_tasks__step-by-step.md
+- Missing inline ref: 17_testing.md
+- Missing inline ref: 2_essential_commands.md
+- Missing inline ref: 20_coding_standards_summary.md
+- Missing inline ref: 24_quality_gate_debugger.md
+- Missing inline ref: 3_environment_variables.md
+- Missing inline ref: 4_database_schema__critical_fa.md
+- Missing inline ref: 5_authentication_system.md
+- Missing inline ref: 6_data_access_layer_dal.md
+- Missing inline ref: 7_server_actions__primary_muta.md
+- Missing inline ref: 8_seeding_system_cli__rest_api.md
 - `prompts\shuffle-json-data.prompt.md`
   - Missing inline ref: Variables
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Workflow
 
 1. **Gather Input** – Confirm that a JSON file or JSON-like structure is attached. If not, pause and request the data file.
-2. **Review Configuration** – Merge defaults with any supplied variables under the 
-  - Missing inline ref:  header or prompt-level overrides.
-3. **Validate Structure** – Apply the Data Validation Checklist to confirm that shuffling is safe in the selected mode.
-4. **Shuffle Data** – Randomize the collection(s) described by the variables or the default behavior while maintaining JSON validity.
-5. **Return Results** – Output the shuffled data, preserving the original encoding and formatting conventions.
+2. **Review Configuration** – Merge defaults with any supplied variables under the
+
+- Missing inline ref:  header or prompt-level overrides.
+
+1. **Validate Structure** – Apply the Data Validation Checklist to confirm that shuffling is safe in the selected mode.
+2. **Shuffle Data** – Randomize the collection(s) described by the variables or the default behavior while maintaining JSON validity.
+3. **Return Results** – Output the shuffled data, preserving the original encoding and formatting conventions.
 
 ## Requirements for Shuffling Data
 
@@ -5138,24 +5220,23 @@ Below are two sample interactions demonstrating an error case and a successful c
 
 ### Missing File
 
-
-  - Missing inline ref: text
+- Missing inline ref: text
 [user]
+
 > /shuffle-json-data
 [agent]
 > Please provide a JSON file to shuffle. Preferably as chat variable or attached context.
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### Custom Configuration
 
-
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\skills-debug-prompt.prompt.md`
   - Missing inline ref: $HOME/AppData/Local/hermes/skills/
   - Missing inline ref: docs/skills-audit-results.json
@@ -5208,7 +5289,7 @@ Below are two sample interactions demonstrating an error case and a successful c
   - Missing inline ref: description
   - Missing inline ref: ## Goal\nUse when Use when <desc>
   - Missing inline ref: ## Goal\nUse when "<desc>" to accomplish...
-  - Missing inline ref:  count)                        | Append closing 
+  - Missing inline ref:  count)                        | Append closing
   - Missing inline ref: ## When to Use
   - Missing inline ref: ## Workflow
   - Missing inline ref: pip install
@@ -5247,48 +5328,62 @@ Below are two sample interactions demonstrating an error case and a successful c
   - Missing inline ref: prompts/skills-debug-prompt.prompt.md
   - Missing inline ref: \n")
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
-**C-grade next** — Fix major issues (boilerplate 
-  - Missing inline ref: , missing 
-  - Missing inline ref: 
-4. 
-  - Missing inline ref:  to review scope
-5. 
-  - Missing inline ref: 
+**C-grade next** — Fix major issues (boilerplate
+
+- Missing inline ref: , missing
+- Missing inline ref:
+
+1.
+
+- Missing inline ref:  to review scope
+
+1.
+
+- Missing inline ref:
 
 ## Steps
 
 1. Load required skills (
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: )
-2. Run 
-  - Missing inline ref:  — pull official updates
-3. Run 
-  - Missing inline ref:  + 
-  - Missing inline ref:  — build live inventory
-4. Reorganize misplaced root-level skills; remove duplicates
-5. Run audit script in batches of 7 → write per-skill reports + master index
-6. Write 
-  - Missing inline ref:  from audit findings
-7. Write 
-  - Missing inline ref:  for latest official versions
-- [ ] Run 
-  - Missing inline ref:  and 
+
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: )
+
+1. Run
+
+- Missing inline ref:  — pull official updates
+
+1. Run
+
+- Missing inline ref:  +
+- Missing inline ref:  — build live inventory
+
+1. Reorganize misplaced root-level skills; remove duplicates
+2. Run audit script in batches of 7 → write per-skill reports + master index
+3. Write
+
+- Missing inline ref:  from audit findings
+
+1. Write
+
+- Missing inline ref:  for latest official versions
+- [ ] Run
+  - Missing inline ref:  and
   - Missing inline ref:  for inventory
 - [ ] Reorganize misplaced root-level skills to correct categories
 - [ ] Remove confirmed duplicate skills
 - [ ] Batch-audit all SKILL.md files in groups of 7
-- [ ] Write per-skill reports to 
-  - Missing inline ref: 
-- [ ] Write master index to 
-  - Missing inline ref: 
-- [ ] Write remediation plan to 
-  - Missing inline ref: 
-- [ ] Write execution prompt to 
-  - Missing inline ref: 
+- [ ] Write per-skill reports to
+  - Missing inline ref:
+- [ ] Write master index to
+  - Missing inline ref:
+- [ ] Write remediation plan to
+  - Missing inline ref:
+- [ ] Write execution prompt to
+  - Missing inline ref:
 - [ ] Fix all F-grade skills (critical issues)
 - [ ] Fix all C-grade skills (major issues)
 - [ ] Fix B-grade skills in batches of 7
@@ -5297,29 +5392,29 @@ Below are two sample interactions demonstrating an error case and a successful c
 
 ## Actions
 
-- 
+-
   - Missing inline ref:  — Get live skill inventory
-- 
+-
   - Missing inline ref:  — Pull latest official skill versions
-- 
+-
   - Missing inline ref:  — Validate skill format after fix
-- 
+-
   - Missing inline ref:  — Enumerate all skill files
-- 
+-
   - Missing inline ref:  — Move misplaced skill to correct category
-- 
+-
   - Missing inline ref:  — Remove duplicate after verifying canonical exists
-- 
+-
   - Missing inline ref:  — Run batch audit across all skills
-- 
+-
   - Missing inline ref:  — Read individual skill for manual review
-- 
+-
   - Missing inline ref:  — Apply targeted skill fix
-- 
+-
   - Missing inline ref:  — Write audit reports, plans, or full skill rewrites
-- 
+-
   - Missing inline ref:  — Review scope before commit
-- 
+-
 - `prompts\sql-code-review.prompt.md`
   - Missing inline ref: templates/sql-code-review/security_analysis.md
   - Missing inline ref: templates/sql-code-review/performance_optimization.md
@@ -5337,55 +5432,53 @@ SELECT COUNT(*) as inconsistent_records
 FROM products
 WHERE price < 0 OR stock_quantity < 0;
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## 🎯 Review Output Format
 
 ### Issue Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\sql-optimization.prompt.md`
   - Missing inline ref: templates/sql-optimization/core_optimization_areas.md
   - Missing inline ref: templates/sql-optimization/performance_tuning_techniques.md
   - Missing inline ref: templates/sql-optimization/query_anti-patterns.md
   - Missing inline ref: templates/sql-optimization/database-agnostic_optimization.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Partial Index Strategy
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## 📊 Performance Monitoring Queries
 
 ### Query Performance Analysis
 
-
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\structured-autonomy-generate.prompt.md`
   - Missing inline ref: plans/{feature-name}/
   - Missing inline ref: runSubagent
@@ -5404,108 +5497,119 @@ Detailed templates in
   - Missing inline ref: [NEEDS CLARIFICATION]
   - Missing inline ref: [NEEDS CLARIFICATION]
   - Missing inline ref: plans/{feature-name}/plan.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\suggest-awesome-github-copilot-agents.prompt.md`
-  - Missing inline ref:  vs local 
+  - Missing inline ref:  vs local
   - Missing inline ref:  - Update recommended |
 
 ## Local Agent Discovery Process
 
-1. List all 
-  - Missing inline ref:  files in 
-  - Missing inline ref:  directory
-2. For each discovered file, read front matter to extract 
-  - Missing inline ref: 
-2. Fetch the remote version using the 
-  - Missing inline ref:  tool to get content from awesome-copilot repository agents folder
-- Scan local file system for existing agents in 
-  - Missing inline ref:  directory
+1. List all
 
+- Missing inline ref:  files in
+- Missing inline ref:  directory
+
+1. For each discovered file, read front matter to extract
+
+- Missing inline ref:
+
+1. Fetch the remote version using the
+
+- Missing inline ref:  tool to get content from awesome-copilot repository agents folder
+- Scan local file system for existing agents in
+  - Missing inline ref:  directory
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\suggest-awesome-github-copilot-instructions.prompt.md`
-  - Missing inline ref:  vs local 
+  - Missing inline ref:  vs local
   - Missing inline ref:  - Update recommended |
 
 ## Local Instructions Discovery Process
 
-1. List all 
-  - Missing inline ref:  files in the 
-  - Missing inline ref:  directory
-2. For each discovered file, read front matter to extract 
-  - Missing inline ref:  and 
-  - Missing inline ref: 
-2. Fetch the remote version using the 
-  - Missing inline ref:  (applies to specific file patterns via 
-  - Missing inline ref: 
+1. List all
+
+- Missing inline ref:  files in the
+- Missing inline ref:  directory
+
+1. For each discovered file, read front matter to extract
+
+- Missing inline ref:  and
+- Missing inline ref:
+
+1. Fetch the remote version using the
+
+- Missing inline ref:  (applies to specific file patterns via
+- Missing inline ref:
 
 ## Requirements
 
-- Use 
+- Use
   - Missing inline ref:  tool to get content from awesome-copilot repository instructions folder
-- Scan local file system for existing instructions in 
+- Scan local file system for existing instructions in
   - Missing inline ref:  directory
-- Read YAML front matter from local instruction files to extract descriptions and 
+- Read YAML front matter from local instruction files to extract descriptions and
   - Missing inline ref:  directory
-
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\suggest-awesome-github-copilot-prompts.prompt.md`
   - Missing inline ref: prompts/
   - Missing inline ref: templates/suggest-awesome-github-copilot-prompts/process.md
@@ -5547,51 +5651,53 @@ Detailed templates in
   - Missing inline ref: name
   - Missing inline ref: SKILL.md
   - Missing inline ref: SKILL.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Requirements
 
-- Use 
+- Use
   - Missing inline ref:  tool to get content from awesome-copilot repository skills documentation
-- Use 
+- Use
   - Missing inline ref:  tool to get individual skill content for download
-- Scan local file system for existing skills in 
+- Scan local file system for existing skills in
   - Missing inline ref:  directory
-- Read YAML front matter from local 
+- Read YAML front matter from local
   - Missing inline ref:  directory
-6. Ensure all bundled assets are downloaded alongside the updated 
-  - Missing inline ref: 
 
+1. Ensure all bundled assets are downloaded alongside the updated
+
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\swift-mcp-server-generator.prompt.md`
-  - Missing inline ref: 
+  - Missing inline ref:
 my-mcp-server/
 ├── Package.swift
 ├── Sources/
@@ -5612,63 +5718,57 @@ my-mcp-server/
 │       └── ServerTests.swift
 └── README.md
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Server.swift Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## ResourceDefinitions.swift Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## PromptDefinitions.swift Template
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## README.md Template
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 swift build -c release
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-  - Missing inline ref: bash
+- Missing inline ref: bash
 swift run
 
-  - Missing inline ref: bash
+- Missing inline ref: bash
 LOG_LEVEL=debug swift run
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Testing
 
-
-  - Missing inline ref: bash
+- Missing inline ref: bash
 swift test
 
-  - Missing inline ref:  - Entry point with ServiceLifecycle
-- 
+- Missing inline ref:  - Entry point with ServiceLifecycle
+-
   - Missing inline ref:  - Server configuration
-- 
+-
   - Missing inline ref:  - Tool definitions and handlers
-- 
+-
   - Missing inline ref:  - Resource definitions and handlers
-- 
+-
   - Missing inline ref:  - Prompt definitions and handlers
-- 
+-
   - Missing inline ref:  - Unit tests
 
 ## License
 
 MIT
 
-
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Generation Instructions
 
@@ -5685,49 +5785,55 @@ MIT
 
 ## Build and Run
 
+- Missing inline ref: bash
 
-  - Missing inline ref: bash
 # Build
+
 swift build
 
 # Run
+
 swift run
 
 # Test
+
 swift test
 
 # Release build
+
 swift build -c release
 
 # Install
+
 swift build -c release
 cp .build/release/MyMCPServer /usr/local/bin/
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Integration with Claude Desktop
 
-Add to 
-  - Missing inline ref: 
+Add to
 
-  - Missing inline ref: 
+- Missing inline ref:
 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\sync-hermes-copilot-codex.prompt.md`
   - Missing skill: using-superpowers
   - Missing skill: user-communication-preferences
@@ -5831,26 +5937,26 @@ Detailed templates in
   - Missing inline ref: #fetch
   - Missing inline ref: tldr
   - Missing inline ref: templates/tldr-prompt/url_resolver.md
-  - Missing inline ref:  for prompts, 
-  - Missing inline ref: 
+  - Missing inline ref:  for prompts,
+  - Missing inline ref:
 
-  - Missing inline ref:  for .agent.md, 
-  - Missing inline ref: , 
-  - Missing inline ref:  syntax for all user-provided values (e.g., 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
+  - Missing inline ref:  for .agent.md,
+  - Missing inline ref: ,
+  - Missing inline ref:  syntax for all user-provided values (e.g.,
+  - Missing inline ref: ,
+  - Missing inline ref: ,
   - Missing inline ref:  syntax consistently for user-provided values
 - ✓ Output is rendered directly in chat, not as a file creation
 - ✓ Content accurately reflects the source file's/documentation's purpose and usage
 - ✓ Response verbosity is appropriate for chat context (inline chat vs chat view)
 - ✓ MCP server content includes setup and tool usage examples when applicable
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
 - `prompts\typescript-mcp-server-generator.prompt.md`
   - Missing inline ref: npm init
   - Missing inline ref: @modelcontextprotocol/sdk
@@ -5937,7 +6043,7 @@ Detailed templates in
 
 Describe updates made, any manual reviews needed or issues encountered.
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ## Icons
 
@@ -5953,10 +6059,10 @@ Describe updates made, any manual reviews needed or issues encountered.
 - Parse JSON tags array and sort by semantic versioning
 - Maintain Bicep file validity and linting compliance
 
-
 ## Template References
 
-Templates in 
+Templates in
+
 - `prompts\update-docs-on-code-change.prompt.md`
   - Missing inline ref: templates/update-docs-on-code-change/phases.md
   - Missing inline ref: templates/update-docs-on-code-change/
@@ -5983,29 +6089,31 @@ Templates in
   - Missing inline ref: v1
   - Missing inline ref: v2
   - Missing inline ref: v1
-  - Missing inline ref: 
+  - Missing inline ref:
 <workspace_root>/plan/<purpose>-<component>-<version>.md
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Outputs
 
-- A complete implementation plan at 
+- A complete implementation plan at
   - Missing inline ref: ](templates/_shared/skills-table-core.md#update-implementation-plan)
 
-The skills listed below in the "Skills Required" section mirror the YAML front-matter 
-  - Missing inline ref:  declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.
+The skills listed below in the "Skills Required" section mirror the YAML front-matter
+
+- Missing inline ref:  declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.
 
 | Skill | Purpose |
 | --- | --- |
-| 
-  - Missing inline ref:  | Pre-change map of plan-related files and dependencies |
-| 
-  - Missing inline ref:  | Author structured implementation plans |
-| 
-  - Missing inline ref: 
+|
+
+- Missing inline ref:  | Pre-change map of plan-related files and dependencies |
+|
+- Missing inline ref:  | Author structured implementation plans |
+|
+- Missing inline ref:
 
 ## Actions Summary
 
@@ -6015,12 +6123,12 @@ The skills listed below in the "Skills Required" section mirror the YAML front-m
 4. Apply the correct status badge
 5. Verify all sections are present and accurate
 
-
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
 - `prompts\update-llms.prompt.md`
   - Missing inline ref: llms.txt
   - Missing inline ref: llms.txt
@@ -6031,65 +6139,65 @@ Detailed templates in
   - Missing inline ref: templates/update-llms/execution_steps.md
   - Missing inline ref: /llms.txt
   - Missing inline ref: templates/update-llms/update_strategy.md
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Success Criteria
 
-The updated 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+The updated
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\update-markdown-file-index.prompt.md`
   - Missing inline ref: ${file}
   - Missing inline ref: .md
   - Missing inline ref: .js
   - Missing inline ref: .py
   - Missing inline ref: markdown
+
 ## Files in ${folder}
 
 - [filename.ext](path/to/filename.ext) - Description
 - [filename2.ext](path/to/filename2.ext) - Description
 
-  - Missing inline ref: 
-- 
+  - Missing inline ref:
+-
 - `prompts\update-oo-component-documentation.prompt.md`
   - Missing inline ref: mermaid
 [Update diagram to reflect current architecture]
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
   - Missing inline ref: csharp
 // Update basic usage example to current API
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Advanced Usage
 
-
-  - Missing inline ref: csharp
+- Missing inline ref: csharp
 // Update advanced configuration patterns to current implementation
 
-  - Missing inline ref: 
+- Missing inline ref:
 
-
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
+Detailed templates in
+
 - `prompts\update-specification.prompt.md`
   - Missing inline ref: templates/update-specification/best_practices_for_ai-rea.md
   - Missing inline ref: templates/update-specification/8_dependencies__external_.md
   - Missing inline ref: code
 // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## 10. Validation Criteria
 
@@ -6099,36 +6207,34 @@ Detailed templates in
 
 [Link to related spec 1] [Link to relevant external documentation]
 
+- Missing inline ref:
 
-  - Missing inline ref: 
-
-
-  - Missing inline ref: 
-
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\web-research-pipeline.prompt.md`
   - Missing skill: web-research-pipeline
   - Missing skill: mcp-fetch
@@ -6148,17 +6254,21 @@ Detailed templates in
   - Missing inline ref: web_extract
 - `prompts\what-context-needed.prompt.md`
   - Missing inline ref: markdown
+
 ## Files I Need
 
 > ### Must See (required for accurate answer)
-> - 
-  - Missing inline ref: 
+>
+> -
+>
+- Missing inline ref:
 
 ## Template References
 
-Templates in 
-  - Missing inline ref: 
-- 
+Templates in
+
+- Missing inline ref:
+-
 - `prompts\workspace-consolidate.prompt.md`
   - Missing prompt dependency: context-map
   - Missing prompt dependency: update-implementation-plan
@@ -6228,97 +6338,128 @@ Bash/
 ├── tsconfig.json, package.json, bun.lock, bunfig.toml
 ├── README.md                         # STUB — links to docs/README.md
 
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ### Steps
 
-1. **Scan** for any remaining operational scripts outside 
-  - Missing inline ref:  (exclude
-   framework seeds, 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: )
-2. **Move** misplaced project docs into 
-  - Missing inline ref:  → 
-  - Missing inline ref:  (update internal references)
-    - 
-  - Missing inline ref:  → 
-  - Missing inline ref: 
-    - 
-  - Missing inline ref:  → 
-  - Missing inline ref: 
-    - 
-  - Missing inline ref:  → 
-  - Missing inline ref:  (replace root README with stub)
-3. **Create** 
-  - Missing inline ref:  stub that links to 
-  - Missing inline ref: 
-4. **Verify** 
-  - Missing inline ref:  counts against actual file
-   listing
-5. **Save** verification report to 
-  - Missing inline ref: , skip with note
-    - If 
-  - Missing inline ref: 
-   file
-7. **Validate isolated patches** — verify each applies independently
-8. **Dead patch auto-detection** — for each patch classified as 
-  - Missing inline ref:  against EVERY project directory (not just
-      prefix-matched)
-    - If a supposedly-obsolete patch applies cleanly to a live project, **promote
-      it** with corrected target
-    - If truly dead (no project found, cookiecutter template, abandoned
-      framework), leave in 
-  - Missing inline ref: 
-9. **Save patch debug report** to 
-  - Missing inline ref: 
-    - Reference to related docs in 
-  - Missing inline ref: 
+1. **Scan** for any remaining operational scripts outside
 
-3. **Ensure portability** — use relative paths, no absolute 
-  - Missing inline ref:  for each applied
+- Missing inline ref:  (exclude
+   framework seeds,
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref: )
+
+1. **Move** misplaced project docs into
+
+- Missing inline ref:  →
+
+- Missing inline ref:  (update internal references)
+    -
+
+- Missing inline ref:  →
+
+- Missing inline ref
+    -
+
+- Missing inline ref:  →
+
+- Missing inline ref
+    -
+
+- Missing inline ref:  →
+- Missing inline ref:  (replace root README with stub)
+
+1. **Create**
+
+- Missing inline ref:  stub that links to
+- Missing inline ref:
+
+1. **Verify**
+
+- Missing inline ref:  counts against actual file
+   listing
+
+1. **Save** verification report to
+
+- Missing inline ref: , skip with note
+  - If
+- Missing inline ref:
+   file
+
+1. **Validate isolated patches** — verify each applies independently
+2. **Dead patch auto-detection** — for each patch classified as
+
+- Missing inline ref:  against EVERY project directory (not just
+      prefix-matched)
+  - If a supposedly-obsolete patch applies cleanly to a live project, **promote
+      it** with corrected target
+  - If truly dead (no project found, cookiecutter template, abandoned
+      framework), leave in
+- Missing inline ref:
+
+1. **Save patch debug report** to
+
+- Missing inline ref:
+  - Reference to related docs in
+- Missing inline ref:
+
+1. **Ensure portability** — use relative paths, no absolute
+
+- Missing inline ref:  for each applied
    patch
-7. **Patch content integrity check** — verify structural integrity beyond
-   
-  - Missing inline ref: , 
-  - Missing inline ref: ) — use 
-  - Missing inline ref:  or relative paths
-    - All author emails have valid format (
-  - Missing inline ref:  in
+
+1. **Patch content integrity check** — verify structural integrity beyond
+
+- Missing inline ref: ,
+- Missing inline ref: ) — use
+- Missing inline ref:  or relative paths
+  - All author emails have valid format (
+- Missing inline ref:  in
       target project to detect dependency
-    - If B's commits contain A's HEAD as ancestor → A must apply first
-    - Serialize patches into a DAG-based execution order
-    - Save dependency graph to 
-  - Missing inline ref:  as mermaid
+  - If B's commits contain A's HEAD as ancestor → A must apply first
+  - Serialize patches into a DAG-based execution order
+  - Save dependency graph to
+- Missing inline ref:  as mermaid
       diagram
-9. **Save enhanced patches** to 
-  - Missing inline ref: 
-10. **Save enhancement log** to 
-  - Missing inline ref: , 
-  - Missing inline ref: )
-2. Does it have a known missing feature or bugfix that should be patched?
-3. Is documentation out of date compared to the project's actual state?
-4. Does 
-  - Missing inline ref: , 
-  - Missing inline ref: , 
-  - Missing inline ref: 
+
+1. **Save enhanced patches** to
+
+- Missing inline ref:
+
+1. **Save enhancement log** to
+
+- Missing inline ref: ,
+- Missing inline ref: )
+
+1. Does it have a known missing feature or bugfix that should be patched?
+2. Is documentation out of date compared to the project's actual state?
+3. Does
+
+- Missing inline ref: ,
+- Missing inline ref: ,
+- Missing inline ref:
    where absent
-3. **Missing config patches** — add 
-  - Missing inline ref: , 
-  - Missing inline ref: ,
-   
-  - Missing inline ref:  for consistency
-4. **Consistency patches** — normalize existing files to match 
-  - Missing inline ref: 
+
+1. **Missing config patches** — add
+
+- Missing inline ref: ,
+- Missing inline ref: ,
+
+- Missing inline ref:  for consistency
+
+1. **Consistency patches** — normalize existing files to match
+
+- Missing inline ref:
    conventions
-5. **Known bugfix patches** — fix bugs found during Phase 2's
-   
-  - Missing inline ref:  diagnostics
+
+1. **Known bugfix patches** — fix bugs found during Phase 2's
+
+- Missing inline ref:  diagnostics
 
 ### Patch Patch Generation
 
-
-  - Missing inline ref: plaintext
+- Missing inline ref: plaintext
 patches/
 ├── enhanced/                     # Enhanced versions of original patches
 │   ├── xamehi.patch
@@ -6333,28 +6474,29 @@ patches/
     ├── xamehi-tv.patch
     └── cookiecutter-django-tailwind.patch
 
-  - Missing inline ref: . All project-level docs go under
+- Missing inline ref: . All project-level docs go under
 
-  - Missing inline ref: . All Bash-specific docs go under 
-  - Missing inline ref: 
+- Missing inline ref: . All Bash-specific docs go under
+- Missing inline ref:
 
 #### Content Standards
 
 | Requirement                           | Why                             | Check                                                  |
 | ------------------------------------- | ------------------------------- | ------------------------------------------------------ |
-| Clear H1 title                        | Navigation, AI retrieval        | Document starts with 
-  - Missing inline ref:                          |
+| Clear H1 title                        | Navigation, AI retrieval        | Document starts with
+
+- Missing inline ref:                          |
 | 2-3 sentence summary after H1         | Quick human scan, AI snippet    | First paragraph is a summary                           |
 | Section headings (H2/H3)              | Scannability, TOC generation    | No walls of text                                       |
-| Code blocks with language tags        | Syntax highlighting, AI context | Every code block has 
-  - Missing inline ref: lang
-  - Missing inline ref: <!-- TOC -->
-  - Missing inline ref: See [projects/Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)
-  - Missing inline ref: sh,
-  - Missing inline ref: ts,
-  - Missing inline ref: $
-  - Missing inline ref: <!-- like this -->
-  - Missing inline ref: txt
+| Code blocks with language tags        | Syntax highlighting, AI context | Every code block has
+- Missing inline ref: lang
+- Missing inline ref: <!-- TOC -->
+- Missing inline ref: See [projects/Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)
+- Missing inline ref: sh,
+- Missing inline ref: ts,
+- Missing inline ref: $
+- Missing inline ref: <!-- like this -->
+- Missing inline ref: txt
 docs/                                         # Workspace-level reports
 ├── bash-migration-final-report.md            → verify frontmatter, add tags
 ├── bash-scripts-audit-results.md             → verify frontmatter, add tags
@@ -6372,63 +6514,66 @@ projects/Bash/docs/                                    # Bash project-specific d
 ├── MIGRATION-GUIDE.md                        → add frontmatter, optimize
 └── phase5-verification-report.md             → add frontmatter, optimize
 
-  - Missing inline ref: 
+- Missing inline ref:
 
 ### AI-Readiness Scoring Script
 
-Create 
-  - Missing inline ref:  that scores every 
-  - Missing inline ref:  between first 5 lines            |
-| Summary paragraph in first 3 lines    | +15                | non-empty paragraph within first 3 lines after H1 |
-| Language-tagged code blocks           | +10 each (max +30) | count 
-  - Missing inline ref: lang 
-  - Missing inline ref: test -f
-  - Missing inline ref: docs/ai-readiness-report.md
-  - Missing inline ref: repo.prompts.md
-  - Missing inline ref: 
+Create
 
-For each project under 
-  - Missing inline ref: 
-- Flag extra files as 
-  - Missing inline ref: 
-- Generate 
-  - Missing inline ref: 
-- [ ] Patch dependency graph saved to 
-  - Missing inline ref: 
-- [ ] AI-readiness report saved to 
-  - Missing inline ref: 
-- [ ] Doc symmetry report saved to 
-  - Missing inline ref: 
-- [ ] All active patches pass 
-  - Missing inline ref: 
-- [ ] All active patches have enhanced versions in 
-  - Missing inline ref: 
-- [ ] All missing patches created in 
+- Missing inline ref:  that scores every
+- Missing inline ref:  between first 5 lines            |
+| Summary paragraph in first 3 lines    | +15                | non-empty paragraph within first 3 lines after H1 |
+| Language-tagged code blocks           | +10 each (max +30) | count
+- Missing inline ref: lang
+- Missing inline ref: test -f
+- Missing inline ref: docs/ai-readiness-report.md
+- Missing inline ref: repo.prompts.md
+- Missing inline ref:
+
+For each project under
+
+- Missing inline ref:
+- Flag extra files as
+  - Missing inline ref:
+- Generate
+  - Missing inline ref:
+- [ ] Patch dependency graph saved to
+  - Missing inline ref:
+- [ ] AI-readiness report saved to
+  - Missing inline ref:
+- [ ] Doc symmetry report saved to
+  - Missing inline ref:
+- [ ] All active patches pass
+  - Missing inline ref:
+- [ ] All active patches have enhanced versions in
+  - Missing inline ref:
+- [ ] All missing patches created in
   - Missing inline ref: , project docs in
-      
-  - Missing inline ref: , Bash docs in 
-  - Missing inline ref: 
-- [ ] Every 
+
+  - Missing inline ref: , Bash docs in
+  - Missing inline ref:
+- [ ] Every
   - Missing inline ref:  file has YAML frontmatter and summary paragraph
 - [ ] No dead or misplaced documentation files
-- [ ] 
+- [ ]
   - Missing inline ref:  clean
 
-Generate 
-  - Missing inline ref:  — Find all bash scripts
-- 
+Generate
+
+- Missing inline ref:  — Find all bash scripts
+-
   - Missing inline ref:  — Test patch applicability
-- 
+-
   - Missing inline ref:  — Detect patch dependencies
-- 
+-
   - Missing inline ref:  — Write enhanced patches and reports
-- 
+-
   - Missing inline ref:  — Apply targeted doc fixes
-- 
+-
   - Missing inline ref:  — Check frontmatter presence
-- 
+-
   - Missing inline ref:  — Load patch management skill
-- 
+-
 - `prompts\write-coding-standards-from-file.prompt.md`
   - Missing inline ref: boolean
   - Missing inline ref: string[]
@@ -6437,40 +6582,40 @@ Generate
   - Missing inline ref: ${fixInconsistencies}
   - Missing inline ref: templates/write-coding-standards-from-file/variable_and_parameter_configu.md
   - Missing inline ref: ${fetchStyleURL} == true
-  - Missing inline ref: 
+  - Missing inline ref:
 
 ## Coding Standards Templates
 
-### 
-  - Missing inline ref: 
+###
 
+- Missing inline ref:
 
-  - Missing inline ref: text
-    
-  - Missing inline ref:  or 
-  - Missing inline ref: 
+- Missing inline ref: text
 
-  - Missing inline ref: 
+- Missing inline ref:  or
+- Missing inline ref:
 
-### 
-  - Missing inline ref: 
+- Missing inline ref:
 
+###
 
-  - Missing inline ref: text
-    
-  - Missing inline ref: markdown
+- Missing inline ref:
 
-    # Style Guide
+- Missing inline ref: text
+
+- Missing inline ref: markdown
+
+  # Style Guide
 
     This document defines the style and conventions used in this project.
     All contributions should follow these rules unless otherwise noted.
 
-    ## 1. General Code Style
+  ## 1. General Code Style
 
-    - Favor clarity over brevity.
-    - Keep functions and methods small and focused.
-    - Avoid repeating logic; prefer shared helpers/utilities.
-    - Remove unused variables, imports, code paths, and files.
+  - Favor clarity over brevity.
+  - Keep functions and methods small and focused.
+  - Avoid repeating logic; prefer shared helpers/utilities.
+  - Remove unused variables, imports, code paths, and files.
 
     ## 2. Naming Conventions
 
@@ -6478,62 +6623,63 @@ Generate
 
     | Item            | Convention           | Example            |
     |-----------------|----------------------|--------------------|
-    | Variables       | 
-  - Missing inline ref:    | 
-  - Missing inline ref:       |
-    | Functions       | 
-  - Missing inline ref:  | 
-  - Missing inline ref:       |
-    | Constants       | 
-  - Missing inline ref:    | 
-  - Missing inline ref:       |
-    | Types/Structs   | 
-  - Missing inline ref:          | 
-  - Missing inline ref:        |
-    | File Names      | 
-  - Missing inline ref:    | 
-  - Missing inline ref: c
+    | Variables       |
+- Missing inline ref:    |
+- Missing inline ref:       |
+    | Functions       |
+- Missing inline ref:  |
+- Missing inline ref:       |
+    | Constants       |
+- Missing inline ref:    |
+- Missing inline ref:       |
+    | Types/Structs   |
+- Missing inline ref:          |
+- Missing inline ref:        |
+    | File Names      |
+- Missing inline ref:    |
+- Missing inline ref: c
         if (condition) {
             do_something();
         } else {
             do_something_else();
         }
-        
-  - Missing inline ref: , not 
-  - Missing inline ref: text
+
+- Missing inline ref: , not
+- Missing inline ref: text
         Short summary (max ~50 chars)
         Optional longer explanation of context and rationale.
-        
-  - Missing inline ref: 
 
-    ### Reviews
-    - Keep pull requests reasonably small.
-    - Be respectful and constructive in review discussions.
-    - Address requested changes or explain if you disagree.
+- Missing inline ref:
+
+  ### Reviews
+
+  - Keep pull requests reasonably small.
+  - Be respectful and constructive in review discussions.
+  - Address requested changes or explain if you disagree.
 
     ## 7. Tests
 
-    - Write tests for new functionality.
-    - Tests should be deterministic (no randomness without seeding).
-    - Prefer readable test cases over complex test abstraction.
+  - Write tests for new functionality.
+  - Tests should be deterministic (no randomness without seeding).
+  - Prefer readable test cases over complex test abstraction.
 
     ## 8. Changes to This Guide
 
     Style evolves.
     Propose improvements by opening an issue or sending a patch updating this document.
-    
-  - Missing inline ref: 
 
-  - Missing inline ref: 
+- Missing inline ref:
 
+- Missing inline ref:
 
 ## Template References
 
-Detailed templates in 
-  - Missing inline ref: 
-- 
-  - Missing inline ref: 
-- 
+Detailed templates in
+
+- Missing inline ref:
+-
+  - Missing inline ref:
+-
 - `prompts\write-tests.prompt.md`
   - Missing inline ref: templates/write-tests/
   - Missing inline ref: phases.md
@@ -6542,7 +6688,7 @@ Detailed templates in
   - Missing reference: prompt-engineering
 
 ### references
-- None
 
+- None
 
 ---

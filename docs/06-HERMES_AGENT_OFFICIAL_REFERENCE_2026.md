@@ -47,6 +47,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 ```
 
 The installer handles:
+
 - Python 3.11 environment
 - Node.js v22
 - ripgrep & ffmpeg dependencies
@@ -244,6 +245,7 @@ mcp_servers:
 ```
 
 **Use when:**
+
 - Server installed locally
 - Low-latency access needed
 - Following MCP docs with `command`/`args`/`env`
@@ -261,6 +263,7 @@ mcp_servers:
 ```
 
 **Use when:**
+
 - Server hosted externally
 - Org exposes internal endpoints
 - Avoid local subprocesses
@@ -308,6 +311,7 @@ mcp_<server_name>_<tool_name>
 ```
 
 Examples:
+
 - `filesystem.read_file` → `mcp_filesystem_read_file`
 - `github.create-issue` → `mcp_github_create_issue`
 
@@ -436,12 +440,14 @@ hermes config edit
 **Cause**: PATH not updated after install
 
 **Fix**:
+
 ```bash
 source ~/.bashrc
 # Or open new terminal
 ```
 
 Also verify `~/AppData/Local/hermes/bin` is in PATH:
+
 ```bash
 echo $PATH | grep hermes
 ```
@@ -451,6 +457,7 @@ echo $PATH | grep hermes
 **Cause**: Invalid/mismatched API key
 
 **Fix**:
+
 ```bash
 hermes setup
 # Paste key without whitespace
@@ -462,6 +469,7 @@ hermes setup
 **Cause**: Stale registry cache
 
 **Fix**:
+
 ```bash
 hermes skills cache clean
 hermes skills add <name>
@@ -472,6 +480,7 @@ hermes skills add <name>
 **Cause**: Broken WSL2 DNS (common on enterprise networks)
 
 **Fix**:
+
 ```bash
 sudo bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
 # Re-run install
@@ -480,12 +489,14 @@ sudo bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
 #### MCP Server Not Connecting
 
 **Check**:
+
 1. Server is running: `ps aux | grep mcp`
 2. Config syntax is valid: `hermes config show`
 3. Command path exists: `which npx`
 4. Environment variables set: `echo $GITHUB_TOKEN`
 
 **Debug**:
+
 ```bash
 hermes mcp list              # List servers
 hermes logs                  # Check error logs
@@ -495,6 +506,7 @@ hermes doctor                # Run diagnostics
 #### Models Not Available
 
 **Fix**:
+
 ```bash
 hermes model              # Re-run model wizard
 hermes config set default_model "gpt-4o"
@@ -521,11 +533,11 @@ hermes debug
 
 ## Additional Resources
 
-- **Official Docs**: https://hermes-agent.nousresearch.com/docs
-- **GitHub Repo**: https://github.com/NousResearch/hermes-agent
-- **MCP Docs**: https://modelcontextprotocol.io
-- **Skill Registry**: https://skills.hermes-agent.io
-- **Community**: https://reddit.com/r/hermesagent
+- **Official Docs**: <https://hermes-agent.nousresearch.com/docs>
+- **GitHub Repo**: <https://github.com/NousResearch/hermes-agent>
+- **MCP Docs**: <https://modelcontextprotocol.io>
+- **Skill Registry**: <https://skills.hermes-agent.io>
+- **Community**: <https://reddit.com/r/hermesagent>
 
 ---
 

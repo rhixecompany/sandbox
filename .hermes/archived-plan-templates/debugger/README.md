@@ -5,6 +5,7 @@ Lines: 3140
 Templates: 17
 
 ## Templates
+
 - `14_conventions_for_ai_agents.md`
 - `code_examples.md`
 - `code_quality_standards.md`

@@ -5,6 +5,7 @@ Lines: 543
 Templates: 7
 
 ## Templates
+
 - `phase_0_auth__provider_invento.md`
 - `phase_1_model_catalog_discover.md`
 - `phase_2_free_model_extraction_.md`

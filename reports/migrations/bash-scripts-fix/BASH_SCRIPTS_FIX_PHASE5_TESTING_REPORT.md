@@ -9,6 +9,7 @@
 ## Executive Summary
 
 Phase 5 validates all 54 migrated scripts against acceptance criteria:
+
 - Execution success (exit code 0 on normal operations)
 - Help output available
 - Dry-run support (where applicable)
@@ -188,12 +189,14 @@ Each of the 54 scripts must pass:
 - [ ] ⚠️  **Error Handling** — Script exits with appropriate code on error
 
 **Pass Criteria:**
+
 - ALL required tests (✅) pass
 - Most optional tests (⚠️) pass (allow 1-2 exceptions per batch)
 
 ### Batch-Level Criteria
 
 Each batch must:
+
 - [ ] **All 6-11 scripts pass individual tests**
 - [ ] **No regressions from original versions**
 - [ ] **References verified (package.json, workflows)**
@@ -203,6 +206,7 @@ Each batch must:
 ### Project-Level Criteria
 
 All 54 scripts must:
+
 - [ ] **Pass individual tests (54/54)**
 - [ ] **Pass batch-level tests (7/7)**
 - [ ] **Pass integration tests** (all batches work together)
@@ -353,6 +357,7 @@ cat .github/workflows/*.yml | grep "Bash/migrations" | wc -l
 ## Phase 5 Completion Criteria
 
 ✅ Phase 5 is complete when:
+
 1. All 54 scripts tested and passing
 2. No CRITICAL defects found
 3. Integration tests pass (cross-batch calls work)
@@ -367,6 +372,7 @@ cat .github/workflows/*.yml | grep "Bash/migrations" | wc -l
 ## Transition to Phase 6
 
 Once Phase 5 testing is complete:
+
 1. Review test results (should be 100% pass rate)
 2. Check for any remaining issues
 3. Verify package.json and workflows

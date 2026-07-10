@@ -63,15 +63,18 @@ rhixecompany-comics/
 ## Architectural Patterns
 
 ### Dual-Stack Architecture
+
 - **Django Backend**: REST API (DRF), database management, Celery task orchestration
 - **Next.js Frontend**: Server Components, client interactivity, static optimization
 
 ### API Communication
+
 - Backend serves REST API at `/api/` via DRF
 - Frontend consumes backend API directly
 - Shared environment variables across stacks
 
 ### Async Task Processing
+
 - Celery handles background tasks (scraping, processing, notifications)
 - Redis as message broker and result backend
 - Celery Beat for scheduled periodic tasks

@@ -5,6 +5,7 @@ Lines: 411
 Templates: 6
 
 ## Templates
+
 - `batch_1_stabilize__clean.md`
 - `batch_2_scripts_consolidation.md`
 - `batch_3_seeds__quality_gate__t.md`

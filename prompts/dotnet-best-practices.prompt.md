@@ -101,10 +101,10 @@ Your task is to ensure .NET/C# code in ${selection} meets the best practices spe
 - Keep methods focused and cohesive
 - Implement proper disposal patterns for resources
 
-
 ## Template References
 
 Templates in `templates/dotnet-best-practices/`:
+
 - `asyncawait_patterns.md`
 - `code_quality.md`
 - `configuration__settings.md`

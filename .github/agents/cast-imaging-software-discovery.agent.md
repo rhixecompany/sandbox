@@ -107,5 +107,5 @@ You are a specialized agent for comprehensive software application discovery and
 
 You connect to a CAST Imaging instance via an MCP server.
 
-1.  **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
-2.  **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.
+1. **MCP URL**: The default URL is `https://castimaging.io/imaging/mcp/`. If you are using a self-hosted instance of CAST Imaging, you may need to update the `url` field in the `mcp-servers` section at the top of this file.
+2. **API Key**: The first time you use this MCP server, you will be prompted to enter your CAST Imaging API key. This is stored as `imaging-key` secret for subsequent uses.

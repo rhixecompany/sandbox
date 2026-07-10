@@ -48,7 +48,7 @@ HERMES_OPENROUTER_CACHE=true
 HERMES_OPENROUTER_CACHE_TTL=3600
 ```
 
-**Sign Up:** https://openrouter.ai/  
+**Sign Up:** <https://openrouter.ai/>  
 **Use Case:** 200+ models, flexible pricing, recommended for beginners
 
 #### OpenAI (GPT-4, GPT-4o)
@@ -58,7 +58,7 @@ OPENAI_API_KEY=sk-proj-...
 OPENAI_BASE_URL=https://api.openai.com/v1
 ```
 
-**Sign Up:** https://platform.openai.com/  
+**Sign Up:** <https://platform.openai.com/>  
 **Use Case:** Latest GPT models, production-grade
 
 #### Anthropic (Claude)
@@ -68,7 +68,7 @@ ANTHROPIC_API_KEY=sk-ant-...
 ANTHROPIC_BASE_URL=https://api.anthropic.com
 ```
 
-**Sign Up:** https://console.anthropic.com/  
+**Sign Up:** <https://console.anthropic.com/>  
 **Use Case:** Claude 3.5 Sonnet, best for reasoning
 
 #### Google Gemini
@@ -81,7 +81,7 @@ HERMES_GEMINI_CLIENT_SECRET=...    # Optional OAuth
 HERMES_GEMINI_PROJECT_ID=...       # For paid tiers
 ```
 
-**Sign Up:** https://aistudio.google.com/app/apikey  
+**Sign Up:** <https://aistudio.google.com/app/apikey>  
 **Use Case:** Free tier, Gemini models
 
 #### GitHub Copilot (ACP)
@@ -107,7 +107,7 @@ MINIMAX_CN_API_KEY=...            # China region
 MINIMAX_CN_BASE_URL=https://api.minimaxi.com/v1
 ```
 
-**Sign Up:** https://www.minimax.io/  
+**Sign Up:** <https://www.minimax.io/>  
 **Use Case:** Fast, affordable global models
 
 #### Kimi / Moonshot AI
@@ -119,7 +119,7 @@ KIMI_CN_API_KEY=...               # China endpoint
 KIMI_CN_BASE_URL=https://api.moonshot.cn/v1
 ```
 
-**Sign Up:** https://platform.kimi.ai/  
+**Sign Up:** <https://platform.kimi.ai/>  
 **Use Case:** Kimi K2.5, strong coding
 
 #### GLM / ZhipuAI (China)
@@ -131,7 +131,7 @@ ZAI_API_KEY=...                   # Alias
 Z_AI_API_KEY=...                  # Alias
 ```
 
-**Sign Up:** https://z.ai/ or https://open.bigmodel.cn/  
+**Sign Up:** <https://z.ai/> or <https://open.bigmodel.cn/>  
 **Use Case:** GLM-4-Plus, China market
 
 #### Nous Portal
@@ -142,7 +142,7 @@ NOUS_BASE_URL=https://portal.nousresearch.com/api/v1
 NOUS_INFERENCE_BASE_URL=...
 ```
 
-**Sign Up:** https://portal.nousresearch.com/  
+**Sign Up:** <https://portal.nousresearch.com/>  
 **Use Case:** Nous Research models
 
 #### OpenCode Zen (Pay-as-you-go)
@@ -152,7 +152,7 @@ OPENCODE_ZEN_API_KEY=...
 OPENCODE_ZEN_BASE_URL=https://opencode.ai/zen/v1
 ```
 
-**Sign Up:** https://opencode.ai/auth  
+**Sign Up:** <https://opencode.ai/auth>  
 **Use Case:** Curated, tested models
 
 #### OpenCode Go ($10/month)
@@ -162,7 +162,7 @@ OPENCODE_GO_API_KEY=...
 OPENCODE_GO_BASE_URL=https://opencode.ai/zen/go/v1
 ```
 
-**Sign Up:** https://opencode.ai/auth  
+**Sign Up:** <https://opencode.ai/auth>  
 **Use Case:** Open models (GLM-5, Kimi K2.5, MiniMax M2.5)
 
 #### Qwen OAuth (Alibaba)
@@ -173,7 +173,7 @@ DASHSCOPE_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
 HERMES_QWEN_BASE_URL=https://portal.qwen.ai/v1
 ```
 
-**Sign Up:** https://dashscope.aliyun.com/  
+**Sign Up:** <https://dashscope.aliyun.com/>  
 **Use Case:** Qwen Cloud models
 
 #### Other Providers
@@ -621,6 +621,7 @@ hermes mcp list
 ## Security Best Practices
 
 ✅ **DO:**
+
 - Store API keys in `~/AppData/Local/hermes/.env`
 - Use SSH backend for remote execution (protects API keys)
 - Rotate API keys regularly
@@ -628,6 +629,7 @@ hermes mcp list
 - Enable logging for auditing
 
 ❌ **DON'T:**
+
 - Commit `.env` to git
 - Share API keys via email/chat
 - Use API keys in `.hermes.md` (project config)

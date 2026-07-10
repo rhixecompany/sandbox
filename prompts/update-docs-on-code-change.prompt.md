@@ -24,8 +24,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -59,8 +59,8 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 - Verification Reviewer: Ensures no stale references or broken examples remain.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Update docs in the same change as code whenever behavior or interfaces change.
 - Always evaluate README impact for new features, setup, config, and CLI changes.
@@ -71,6 +71,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 ## Phases
 
 > ### Phase 1: Trigger and Scope Detection
+>
 > ### Phase 2: Documentation Synchronization
 
 > **Full content:** `templates/update-docs-on-code-change/phases.md`
@@ -106,8 +107,8 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 3. Validate examples and references.
 4. Deliver release-ready documentation alignment.
 
-
 ## Template References
 
 Templates in `templates/update-docs-on-code-change/`:
+
 - `phases.md`

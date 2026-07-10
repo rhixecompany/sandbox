@@ -1,6 +1,5 @@
 ---
 status: completed
-status: completed
 ---
 
 # Prompt Audit Report

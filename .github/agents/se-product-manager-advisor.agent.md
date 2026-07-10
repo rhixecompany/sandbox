@@ -187,7 +187,7 @@ Ask these questions to help prioritize:
 
 ## Document Creation & Management
 
-### For Every Feature Request, CREATE:
+### For Every Feature Request, CREATE
 
 1. **Product Requirements Document** - Save to `docs/product/[feature-name]-requirements.md`
 2. **GitHub Issues** - Using template above

@@ -1,6 +1,6 @@
 # asyncio in Python - GeeksforGeeks
 
-> **Source:** https://www.geeksforgeeks.org/python/asyncio-in-python
+> **Source:** <https://www.geeksforgeeks.org/python/asyncio-in-python>
 > **Retrieved:** 2026-05-31T12:17:10
 
 ---
@@ -16,11 +16,13 @@
 ## Key Concepts
 
 ### Asynchronous Functions
+
 - Defined using the `async` keyword
 - Use `await asyncio.sleep()` instead of `time.sleep()` for non-blocking delays
 - Must be executed using `asyncio.run()`
 
 ### Example: Basic Async Function
+
 ```python
 import asyncio
 
@@ -39,6 +41,7 @@ asyncio.run(fn())
 ## Async Event Loop
 
 ### Sequential Execution with `await`
+
 When one async function `await`s another, it waits for completion before continuing:
 
 ```python
@@ -64,6 +67,7 @@ asyncio.run(fn())
 **Execution Order:** `one` → `two` → `three` → `four` → `five`
 
 ### Concurrent Execution with `asyncio.create_task()`
+
 To achieve true concurrency, use `asyncio.create_task()` to schedule tasks that run during idle time:
 
 ```python
@@ -118,6 +122,7 @@ asyncio.run(main())
 ```
 
 **Behavior:**
+
 - All functions start concurrently
 - Completion order depends on sleep duration: `func3` (1s) → `func1` (2s) → `func2` (3s)
 - Ideal for simulating I/O-bound operations

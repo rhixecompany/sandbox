@@ -4,7 +4,7 @@
 
 A collection of 18 standalone Python utility scripts for common automation, data processing, and system administration tasks. Each script is self-contained, has minimal dependencies, and can be used independently.
 
-**Repository:** https://github.com/Rhixe-company/Python-projects  
+**Repository:** <https://github.com/Rhixe-company/Python-projects>  
 **Stack:** Python 3.8+ | Standard Library + Optional Dependencies  
 **Status:** Stable / Maintenance
 
@@ -84,6 +84,7 @@ password = generate_password(length=20)
 ### Network Scripts
 
 **Connectivity Checker:**
+
 ```bash
 # Single URL check
 python site_connectivity_checker.py https://example.com
@@ -96,6 +97,7 @@ python site_connectivity_checker.py https://example.com --timeout 30
 ```
 
 **Server Status Checker:**
+
 ```bash
 # Check a specific port
 python server_status_checker.py example.com --port 443
@@ -107,6 +109,7 @@ python server_status_checker.py example.com --common-ports
 ### Image Scripts
 
 **QR Code Generator:**
+
 ```bash
 # Basic QR code
 python qr_code_generator.py "https://example.com"
@@ -116,6 +119,7 @@ python qr_code_generator.py "https://example.com" --fill red --back lightyellow
 ```
 
 **Image Resizer:**
+
 ```bash
 # Resize to specific dimensions
 python image_resizer.py input.jpg output.jpg --width 800 --height 600
@@ -127,6 +131,7 @@ python image_resizer.py input.jpg output.jpg --width 400 --maintain-aspect
 ### Data Scripts
 
 **Currency Converter:**
+
 ```bash
 # Convert with live rates
 python currency_converter.py 100 USD EUR
@@ -136,6 +141,7 @@ python currency_converter.py --interactive
 ```
 
 **CSV/JSON Converter:**
+
 ```bash
 # CSV to JSON
 python csv_json_converter.py data.csv data.json
@@ -147,6 +153,7 @@ python csv_json_converter.py data.json data.csv
 ### File Management Scripts
 
 **File Organizer:**
+
 ```bash
 # Preview organization
 python file_organizer.py ~/Downloads --dry-run
@@ -159,6 +166,7 @@ python file_organizer.py ~/Downloads --config rules.json
 ```
 
 **Duplicate Finder:**
+
 ```bash
 # Scan directory
 python duplicate_finder.py ~/Documents
@@ -171,6 +179,7 @@ python duplicate_finder.py ~/Documents --delete
 ```
 
 **Batch File Renamer:**
+
 ```bash
 # Replace text in filenames
 python batch_file_renamer.py ./photos "old_" "new_"
@@ -185,6 +194,7 @@ python batch_file_renamer.py ./files ".txt" ".md" --dry-run
 ### Security Scripts
 
 **Password Generator:**
+
 ```bash
 # Default 16-char password
 python password_generator.py

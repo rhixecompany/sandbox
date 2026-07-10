@@ -115,4 +115,3 @@
 │ firecrawl-download              │ skills.sh │ update_available │
 └─────────────────────────────────┴───────────┴──────────────────┘
 74 update(s) available across 111 checked skill(s)
-

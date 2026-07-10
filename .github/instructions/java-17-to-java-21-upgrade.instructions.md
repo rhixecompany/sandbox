@@ -469,6 +469,7 @@ When reviewing code for Java 21 upgrade:
    ```
 
 3. **Record Pattern Usage**:
+
    ```java
    // From manual destructuring to record patterns
    if (point instanceof Point p) {

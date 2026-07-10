@@ -5,5 +5,6 @@ Lines: 428
 Templates: 2
 
 ## Templates
+
 - `configuration_variables.md`
 - `generated_prompt.md`

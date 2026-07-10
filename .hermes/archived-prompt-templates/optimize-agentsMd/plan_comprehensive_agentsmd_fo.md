@@ -22,12 +22,12 @@
 
 ### Phase 2: Alignment & Clarification
 
-7. If ambiguities or missing info are found (e.g., Cursor rules not present), ask the user only when the gap blocks correctness; otherwise note as "not present" and continue with explicit assumptions.
-8. Validate that all agentic rules are up-to-date and not in conflict.
+1. If ambiguities or missing info are found (e.g., Cursor rules not present), ask the user only when the gap blocks correctness; otherwise note as "not present" and continue with explicit assumptions.
+2. Validate that all agentic rules are up-to-date and not in conflict.
 
 ### Phase 3: Drafting the AGENTS.md
 
-9. Structure the file for agentic consumption:
+1. Structure the file for agentic consumption:
    - Introduction and purpose
    - Build/lint/test commands (with single test execution)
    - Code style guidelines (imports, formatting, types, naming, error handling)
@@ -38,14 +38,14 @@
    - Testing and verification requirements
    - Security and environment variable handling
    - Any additional agentic best practices
-10. Integrate and improve upon the existing `AGENTS.md` content, ensuring clarity, completeness, and actionable detail. If an existing section is already adequate, preserve and lightly edit it; fully rewrite only sections that are missing, outdated, or below the quality bar.
-11. Produce a thorough `AGENTS.md`. Length should reflect completeness of coverage, not a line count target. Do not pad content to reach a specific length.
+2. Integrate and improve upon the existing `AGENTS.md` content, ensuring clarity, completeness, and actionable detail. If an existing section is already adequate, preserve and lightly edit it; fully rewrite only sections that are missing, outdated, or below the quality bar.
+3. Produce a thorough `AGENTS.md`. Length should reflect completeness of coverage, not a line count target. Do not pad content to reach a specific length.
 
 ### Phase 4: Verification & Finalization
 
-12. Cross-check the new `AGENTS.md` against all source files for accuracy.
-13. Validate that all commands and patterns are correct and up-to-date.
-14. Save the plan and present the structure and key sections to the user for review.
+1. Cross-check the new `AGENTS.md` against all source files for accuracy.
+2. Validate that all commands and patterns are correct and up-to-date.
+3. Save the plan and present the structure and key sections to the user for review.
 
 ---
 

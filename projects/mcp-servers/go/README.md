@@ -78,11 +78,13 @@ This server speaks the MCP JSON-RPC protocol over stdio:
 ### Example: calling the greet tool
 
 Input (stdin):
+
 ```json
 {"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"greet","arguments":{"name":"Alice"}}}
 ```
 
 Output (stdout):
+
 ```json
 {"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\"greeting\":\"Hello, Alice! Welcome to the Go MCP server.\"}"}]}}
 ```

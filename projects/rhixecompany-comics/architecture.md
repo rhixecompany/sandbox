@@ -7,27 +7,32 @@ Rhixecompany Comics is a consolidated full-stack comics platform. The target des
 ## Layers
 
 ### Presentation Layer
+
 - Next.js App Router pages and layouts
 - Server components by default
 - Tailwind CSS for styling
 - Metadata lives in `frontend/src/app/layout.tsx`
 
 ### API Layer
+
 - Django + DRF
 - A simple health endpoint is present now
 - Future comic, user, and reading-list endpoints can be layered under `backend/apps/api/`
 
 ### Domain / Service Layer
+
 - `backend/apps/comics/` for catalog, chapters, and reading state
 - `backend/apps/users/` for profiles and authentication flows
 - `backend/apps/core/` for cross-cutting API utilities and health checks
 
 ### Scraping Layer
+
 - `backend/apps/scraping/` reserves the Django-side home for Scrapy spiders and Selenium-backed browser tasks
 - Selenium automation patterns come from `projects/selenium_webdriver`
 - Django/Celery scheduling patterns come from `projects/Django-Scrapy-Selenium`
 
 ### Infrastructure Layer
+
 - PostgreSQL-compatible settings in `backend/config/settings.py`
 - Redis-backed Celery broker/result settings
 - Static/media paths are explicit and environment-driven

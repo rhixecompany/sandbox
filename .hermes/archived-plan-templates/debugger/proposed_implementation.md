@@ -23,12 +23,15 @@
 ### React Components
 
 [List UI components needed]
+
 ```
 
 ### Step 4: Get Approval
 
 ```
+
 Wait for user to say "I approve the code so implement the code"
+
 ```
 
 ### Step 5: Implement Everything

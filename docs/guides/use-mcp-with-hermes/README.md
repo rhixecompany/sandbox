@@ -20,17 +20,20 @@
 ## 📦 Step 1: Install MCP Support
 
 **Standard install** (already includes MCP):
+
 ```bash
 uv pip install -e ".[all]"
 ```
 
 **Add MCP to existing install:**
+
 ```bash
 cd ~/AppData/Local/hermes/hermes-agent
 uv pip install -e ".[mcp]"
 ```
 
 **Prerequisites:**
+
 - `npx` for npm-based servers
 - `uvx` for Python MCP servers (recommended default)
 
@@ -48,6 +51,7 @@ mcp_servers:
 ```
 
 **Start Hermes:**
+
 ```bash
 hermes chat
 ```
@@ -71,6 +75,7 @@ hermes chat
 **Don't wait.** Filter aggressively from the start.
 
 ### Whitelist (Recommended for Sensitive Systems)
+
 ```yaml
 mcp_servers:
   github:
@@ -83,6 +88,7 @@ mcp_servers:
 ```
 
 ### Blacklist (For Dangerous Actions)
+
 ```yaml
 mcp_servers:
   stripe:
@@ -94,6 +100,7 @@ mcp_servers:
 ```
 
 ### Disable Utility Wrappers
+
 ```yaml
 mcp_servers:
   docs:
@@ -110,6 +117,7 @@ mcp_servers:
 **Use when:** Hermes runs in WSL2, Chrome runs on Windows.
 
 ### Setup
+
 ```bash
 # Add the bridge server
 hermes mcp add chrome-devtools-win \
@@ -124,18 +132,22 @@ hermes mcp test chrome-devtools-win
 ```
 
 ### Mental Model
+
 ```
 Hermes (WSL) → MCP stdio bridge → Windows Chrome
 ```
 
 ### Typical Prompt
+>
 > `调用 MCP 工具 mcp_chrome_devtools_win_list_pages，列出当前浏览器标签页。`
 
 ### When `/browser connect` Fails
+
 - Use `/browser connect` for **same-environment** setups
 - Use MCP bridge for **WSL→Windows** browser access
 
 ### Known Pitfalls
+
 | Issue | Solution |
 |-------|----------|
 | Path mapping (`/mnt/c/Users/...` vs `C:\Users\...`) | Use `chrome-devtools-mcp --autoConnect` |
@@ -160,6 +172,7 @@ Two categories of MCP functionality in Hermes:
 ## 📋 Common Patterns
 
 ### Pattern 1: Local Project Assistant
+
 ```yaml
 mcp_servers:
   fs:
@@ -169,11 +182,14 @@ mcp_servers:
     command: "uvx"
     args: ["mcp-server-git", "--repository", "/home/user/project"]
 ```
+
 **Prompts:**
+
 - `Review the project structure and identify where configuration lives.`
 - `Check the local git state and summarize what changed recently.`
 
 ### Pattern 2: GitHub Triage Assistant
+
 ```yaml
 mcp_servers:
   github:
@@ -186,11 +202,14 @@ mcp_servers:
     prompts: false
     resources: false
 ```
+
 **Prompts:**
+
 - `List open issues about MCP, cluster them by theme, and draft a high-quality issue for the most common bug.`
 - `Search the repo for uses of _discover_and_register_server and explain how MCP tools are registered.`
 
 ### Pattern 3: Internal API Assistant
+
 ```yaml
 mcp_servers:
   internal_api:

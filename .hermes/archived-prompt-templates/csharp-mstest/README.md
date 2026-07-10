@@ -5,6 +5,7 @@ Lines: 498
 Templates: 6
 
 ## Templates
+
 - `advanced_features.md`
 - `common_mistakes_to_avoid.md`
 - `data-driven_tests.md`

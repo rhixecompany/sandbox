@@ -1,6 +1,6 @@
 # Markdownify MCP Server
 
-**Source:** https://github.com/zcaceres/markdownify-mcp
+**Source:** <https://github.com/zcaceres/markdownify-mcp>
 
 ## Project Overview
 
@@ -14,6 +14,7 @@
 ## Features
 
 Converts **10+ content types** to Markdown:
+
 - 📄 PDF files
 - 🖼️ Images (with metadata extraction)
 - 🎵 Audio files (with transcription)
@@ -157,9 +158,10 @@ markdownify-mcp/
 
 ## Alternative: Enhanced UTF-8 Version (jdjr2024)
 
-**Source:** https://lobehub.com/es/mcp/jdjr2024-markdownify-mcp-utf8
+**Source:** <https://lobehub.com/es/mcp/jdjr2024-markdownify-mcp-utf8>
 
 Enhanced version with:
+
 - Comprehensive UTF-8 encoding support
 - Optimized handling of multilingual content
 - Optimized memory usage for large file conversions
@@ -201,6 +203,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test markdownify
 /reload-mcp
@@ -208,10 +211,10 @@ hermes mcp test markdownify
 
 ## References
 
-- GitHub: https://github.com/zcaceres/markdownify-mcp
+- GitHub: <https://github.com/zcaceres/markdownify-mcp>
 - Docker Hub: mcp/markdownify
-- Glama.ai: https://glama.ai/mcp/servers/bn5q4b0ett
-- explainx.ai: https://explainx.ai/mcp-servers/markdownify-mcp
-- MCPCursor: https://mcpcursor.com/server/markdownify-1-mcp
-- LobeHub (UTF-8): https://lobehub.com/es/mcp/jdjr2024-markdownify-mcp-utf8
-- MarkItDown Library: https://github.com/microsoft/markitdown
+- Glama.ai: <https://glama.ai/mcp/servers/bn5q4b0ett>
+- explainx.ai: <https://explainx.ai/mcp-servers/markdownify-mcp>
+- MCPCursor: <https://mcpcursor.com/server/markdownify-1-mcp>
+- LobeHub (UTF-8): <https://lobehub.com/es/mcp/jdjr2024-markdownify-mcp-utf8>
+- MarkItDown Library: <https://github.com/microsoft/markitdown>

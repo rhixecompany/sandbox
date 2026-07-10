@@ -24,6 +24,7 @@ Alternatively, you can sign in with your GitHub account.
 ### Home Page
 
 The home page displays a curated list of comics. You can:
+
 - Browse featured comics
 - Filter by genre
 - Search for specific titles
@@ -31,6 +32,7 @@ The home page displays a curated list of comics. You can:
 ### Search
 
 Use the search bar to find comics by:
+
 - Title
 - Author
 - Artist
@@ -39,6 +41,7 @@ Use the search bar to find comics by:
 ### Filtering
 
 Filter comics by:
+
 - **Genre**: Action, Romance, Fantasy, etc.
 - **Status**: Ongoing, Completed, Hiatus
 - **Category**: Webtoon, Manga, Manhwa
@@ -137,6 +140,7 @@ Access the admin dashboard at `/admin` to manage all content.
 ## Support
 
 For additional help:
+
 - Check the [FAQ](./FAQ.md)
 - Contact support through the website
 - Report bugs on GitHub

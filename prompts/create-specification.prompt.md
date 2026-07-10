@@ -99,7 +99,8 @@ The specification file must define the requirements, constraints, and interfaces
 
 ## 8. Dependencies & External Integrations
 
-> [Define the external systems, services, and architectural dependencies required 
+> [Define the external systems, services, and architectural dependencies required
+>
 > - **EXT-001**: [External system name] - [Purpose and integration type]
 
 > **Full content:** `templates/create-specification/8_dependencies__external_.md`
@@ -117,6 +118,7 @@ The specification file must define the requirements, constraints, and interfaces
 ## 11. Related Specifications / Further Reading
 
 [Link to related spec 1] [Link to relevant external documentation]
+
 ````
 
 

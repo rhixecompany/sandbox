@@ -7,6 +7,7 @@ Rhixescans is a comic reading web application built on the Next.js App Router ar
 ## Technology Stack
 
 ### Frontend Layer
+
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript (strict mode)
 - **UI Library**: React 19
@@ -14,16 +15,19 @@ Rhixescans is a comic reading web application built on the Next.js App Router ar
 - **State**: React Hooks + Server Actions
 
 ### Backend Layer
+
 - **Runtime**: Next.js API Routes / Server Actions
 - **ORM**: Prisma 6
 - **Database**: PostgreSQL
 
 ### Authentication
+
 - **Provider**: NextAuth v5 (beta)
 - **Strategy**: JWT (1-day expiry)
 - **Providers**: GitHub OAuth + Credentials (email/password)
 
 ### External Services
+
 - **Image Storage**: Uploadthing + external CDN (asuracomic.net)
 - **Payments**: Stripe, PayPal
 
@@ -197,10 +201,12 @@ src/lib/
 ## API Routes
 
 ### Authentication
+
 - `GET /api/auth/[...nextauth]` - NextAuth handler
 - Handles GitHub OAuth and credentials flow
 
 ### Server Actions
+
 - `createUser`, `updateUser`, `deleteUser`
 - `createComic`, `updateComic`, `deleteComic`
 - `createChapter`, `updateChapter`, `deleteChapter`
@@ -224,11 +230,13 @@ src/lib/
 ## Deployment
 
 ### Requirements
+
 - Node.js 18+
 - PostgreSQL database
 - Docker (optional)
 
 ### Environment Variables
+
 ```
 DATABASE_URL=postgresql://...
 AUTH_SECRET=...
@@ -241,6 +249,7 @@ PAYPAL_CLIENT_ID=...
 ```
 
 ### Docker Support
+
 - `docker-compose.local.yml` - Local development
 - `docker-compose.production.yml` - Production deployment
 - `compose/production/` - Production configs (Traefik, Redis)

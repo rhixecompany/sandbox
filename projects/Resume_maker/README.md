@@ -9,7 +9,7 @@ A CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn 
 ## Technology Stack
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Runtime** | Bun (latest), Node.js (fallback) |
 | **Language** | TypeScript ^5 (strict) |
 | **PDF Generation** | markdown-pdf ^11.0.0 |
@@ -88,7 +88,7 @@ bun index.ts --help
 ## CLI Commands
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `bun index.ts --input <file.json>` | Generate from JSON input |
 | `bun index.ts -i <file> -o <dir> -f <both\|md\|pdf>` | Specific output configuration |
 | `bun index.ts --help` | Display CLI help |

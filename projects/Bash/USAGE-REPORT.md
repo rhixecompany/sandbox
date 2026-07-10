@@ -387,6 +387,7 @@ FOUND: 151 remaining folders
    ```
 
 3. **Start Using**:
+
    ```bash
    bash upgrade.sh --help
    bash cache-clean.sh --all --dry-run

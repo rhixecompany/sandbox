@@ -260,6 +260,7 @@ done | wc -l
 ```
 
 **Expected output:**
+
 - 111+ skills scanned by `hermes skills audit`
 - 489+ total SKILL.md files
 - ~46 flat, ~443 nested
@@ -352,6 +353,7 @@ done
 ```
 
 **Then execute:**
+
 ```bash
 for name in baoyu-article-illustrator baoyu-comic creative-ideation peft \
             pixel-art simpo subagent-driven-development watchers; do
@@ -544,6 +546,7 @@ echo "Existing architecture docs: $count"
 ```
 
 **Manual invocation:**
+
 ```
 # Load the generators as skills
 hermes profile use code-architect
@@ -623,6 +626,7 @@ echo "Codex config: $HOME/.codex/ ($([ -d "$HOME/.codex" ] && echo '✅' || echo
 ### 6.4 Phase 3.3: Sync Assets
 
 **Plugin sync check:**
+
 ```bash
 echo "=== Plugin Sync ==="
 echo "Hermes plugins:"
@@ -636,6 +640,7 @@ diff <(ls ~/AppData/Local/hermes/plugins/) <(ls ~/Desktop/SandBox/.github/plugin
 ```
 
 **Hook sync check:**
+
 ```bash
 echo ""
 echo "=== Hook Sync ==="
@@ -689,6 +694,7 @@ hermes models list 2>&1 | grep -oP '^\w+' | sort | uniq -c | sort -rn
 ### 7.4 Phase 4.4-4.7: Benchmark & Report
 
 For a quick provider test:
+
 ```bash
 # Test a provider with a simple chat query
 hermes chat -q "Reply with 'OK' only" --provider openai-api --model gpt-4o-mini 2>&1

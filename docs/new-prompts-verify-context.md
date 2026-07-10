@@ -31,6 +31,7 @@
 ## Final State
 
 All 4 prompts now pass the enhance-markdown verification gates:
+
 - ✅ YAML frontmatter parses as single document
 - ✅ All required fields present (name, title, description, tags, version, author, license)
 - ✅ `metadata.hermes.related_skills` populated

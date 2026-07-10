@@ -1,6 +1,6 @@
 # How PayPal Works — PayPal US
 
-> **Source:** https://www.paypal.com/us/digital-wallet/how-paypal-works
+> **Source:** <https://www.paypal.com/us/digital-wallet/how-paypal-works>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---

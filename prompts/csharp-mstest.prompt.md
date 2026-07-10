@@ -73,6 +73,7 @@ public sealed class CalculatorTests
 ## Modern Assertion APIs
 
 > MSTest provides three assertion classes: `Assert`, `StringAssert`, and `Collecti
+>
 > ### Assert Class - Core Assertions
 
 > **Full content:** `templates/csharp-mstest/modern_assertion_apis.md`
@@ -87,6 +88,7 @@ public sealed class CalculatorTests
 ## TestContext
 
 > The `TestContext` class provides test run information, cancellation support, and
+>
 > ### Accessing TestContext
 
 > **Full content:** `templates/csharp-mstest/testcontext.md`
@@ -94,6 +96,7 @@ public sealed class CalculatorTests
 ## Advanced Features
 
 > ### Retry for Flaky Tests (MSTest 3.9+)
+>
 > public void FlakyTest() { }
 
 > **Full content:** `templates/csharp-mstest/advanced_features.md`
@@ -119,10 +122,10 @@ public sealed class CalculatorTests
 - Use interfaces to facilitate mocking
 - Mock dependencies to isolate units under test
 
-
 ## Template References
 
 Detailed templates in `templates/csharp-mstest/`:
+
 - `advanced_features.md`
 - `common_mistakes_to_avoid.md`
 - `data-driven_tests.md`

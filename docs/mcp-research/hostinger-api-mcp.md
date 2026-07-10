@@ -1,8 +1,8 @@
 # Hostinger API MCP Server
 
-**Source:** https://github.com/hostinger/api-mcp-server  
+**Source:** <https://github.com/hostinger/api-mcp-server>  
 **Package:** `hostinger-api-mcp`  
-**Official Docs:** https://www.hostinger.com/support/11079316-hostinger-api-mcp-server/
+**Official Docs:** <https://www.hostinger.com/support/11079316-hostinger-api-mcp-server/>
 
 ## Overview
 

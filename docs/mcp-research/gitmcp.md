@@ -34,11 +34,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-	"mcpServers": {
-		"gitmcp": {
-			"url": "https://gitmcp.io/{owner}/{repo}"
-		}
-	}
+ "mcpServers": {
+  "gitmcp": {
+   "url": "https://gitmcp.io/{owner}/{repo}"
+  }
+ }
 }
 ```
 
@@ -46,11 +46,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-	"mcpServers": {
-		"gitmcp": {
-			"url": "https://gitmcp.io/{owner}/{repo}"
-		}
-	}
+ "mcpServers": {
+  "gitmcp": {
+   "url": "https://gitmcp.io/{owner}/{repo}"
+  }
+ }
 }
 ```
 
@@ -58,11 +58,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-	"mcpServers": {
-		"gitmcp": {
-			"url": "https://gitmcp.io/{owner}/{repo}"
-		}
-	}
+ "mcpServers": {
+  "gitmcp": {
+   "url": "https://gitmcp.io/{owner}/{repo}"
+  }
+ }
 }
 ```
 
@@ -70,12 +70,12 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-	"mcpServers": {
-		"gitmcp": {
-			"command": "npx",
-			"args": ["-y", "mcp-remote", "https://gitmcp.io/{owner}/{repo}"]
-		}
-	}
+ "mcpServers": {
+  "gitmcp": {
+   "command": "npx",
+   "args": ["-y", "mcp-remote", "https://gitmcp.io/{owner}/{repo}"]
+  }
+ }
 }
 ```
 
@@ -83,11 +83,11 @@ Replace `{owner}` and `{repo}` with actual values.
 
 ```json
 {
-	"mcpServers": {
-		"gitmcp": {
-			"url": "https://gitmcp.io/{owner}/{repo}"
-		}
-	}
+ "mcpServers": {
+  "gitmcp": {
+   "url": "https://gitmcp.io/{owner}/{repo}"
+  }
+ }
 }
 ```
 

@@ -5,6 +5,7 @@ Lines: 489
 Templates: 7
 
 ## Templates
+
 - `advanced_postgresql_features.md`
 - `common_query_patterns.md`
 - `optimization_checklist.md`

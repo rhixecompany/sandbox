@@ -119,7 +119,7 @@ Project conventions and architecture (ComicWise / comicr)
   - Types: `{entity}.ts` in `src/types/`
 - Examples: See `src/components/ui/`, `src/utils/`, `src/schemas/`.
 
-2. Architecture & Data Flow
+1. Architecture & Data Flow
 
 - Strict 3-Layer Pattern (enforced):
   1. Schema Layer: Zod schemas in `src/schemas/` for all input validation (never use Drizzle schema for validation).
@@ -133,7 +133,7 @@ Project conventions and architecture (ComicWise / comicr)
 - RBAC: Roles: `user`, `moderator`, `admin` (see `docs/rbac.md`). Use `verifyAdmin()` for admin-only actions. All sensitive actions are logged to audit table.
 - Performance: Use Redis for hot data caching. Avoid N+1 queries, index all FKs/search fields. Use WebP/AVIF for images, lazy load in UI, code split for bundle size.
 
-3. Directory & File Structure
+1. Directory & File Structure
 
 ```
 src/
@@ -148,7 +148,7 @@ src/
 ├── hooks/                  # Custom React hooks
 ```
 
-4. Build, Test, and Validate
+1. Build, Test, and Validate
 
 - Install: `pnpm install`
 - Build: `pnpm build`
@@ -160,7 +160,7 @@ src/
 - Validate all: `pnpm validate`
 - Database: `pnpm db:push`, `pnpm db:seed`, `pnpm db:studio`
 
-5. API & Integration
+1. API & Integration
 
 - API routes: See `docs/api-reference.md` and OpenAPI spec. All responses: `{ success, data?, error?, message? }`.
 - Drizzle ORM: Used for all DB access.
@@ -168,53 +168,53 @@ src/
 - Playwright: For E2E tests.
 - Vitest: For unit tests.
 
-6. Security & Environment
+1. Security & Environment
 
 - Environment: All secrets/config in `.env.local` (see `src/lib/env.ts`). All env vars validated at startup.
 - Sensitive actions: All sensitive actions are logged to audit table.
 - CSRF/XSS: NextAuth handles CSRF; React + CSP headers for XSS.
 - Rate Limiting: See API docs for limits.
 
-7. RBAC & Permissions
+1. RBAC & Permissions
 
 - Roles: `user`, `moderator`, `admin` (see `docs/rbac.md`).
 - Permission Model: Resource/action format (e.g., `comic:create`).
 - Pattern: Always check role before action. Use `verifyAdmin()` for admin-only actions. Return `{ success: false, error }` for unauthorized.
 - Session: User session includes role info via NextAuth.
 
-8. Soft Delete & PII Anonymization
+1. Soft Delete & PII Anonymization
 
 - Users: Set `deletedAt`, anonymize name/email, remove image, preserve structure.
 - Comments: Set `deletedAt` for comments with children, show `[deleted]` in UI.
 
-9. Comment Threading
+1. Comment Threading
 
 - Flat-to-tree: Use `buildCommentTree` utility for O(n) conversion.
 - ParentId: Self-referencing for infinite nesting. Orphaned comments become root.
 
-10. Testing
+1. Testing
 
 - Unit: Zod schemas, utilities, RBAC, DAL, actions. Target 80%+ coverage.
 - E2E: Reader, profile, rating, comments, admin panel. Use Playwright.
 - Validation: `pnpm validate` runs type-check, lint, and all tests.
 
-11. Error Handling & API Response
+1. Error Handling & API Response
 
 - Success: `{ success: true, data }`
 - Error: `{ success: false, error: string }` or `{ success: false, error: { code, message } }`
 - Paginated: `{ success: true, data: [...], meta: { page, limit, total, totalPages, hasNextPage, hasPrevPage } }`
 
-12. Audit Logging
+1. Audit Logging
 
 - All sensitive actions: Log to both DB and file (see `docs/architecture.md`).
 - Audit log schema: See `docs/rbac.md` and `docs/architecture.md`.
 
-13. Storage & Caching
+1. Storage & Caching
 
 - Storage: Multi-provider (S3, ImageKit, Cloudinary, local). Use factory for runtime selection.
 - Caching: Redis (Upstash/ioredis) for hot data. Use cache abstraction in `lib/cache/`.
 
-14. Conventions for AI Agents
+1. Conventions for AI Agents
 
 - Never bypass the 3-layer pattern. All mutations/queries must:
   1. Validate input with Zod schema (`src/schemas/`)
@@ -229,7 +229,6 @@ src/
 ---
 
 If anything is ambiguous (naming, folder preference, or the desired implementation style for DAL), ask a focused question before scaffolding files.
-
 
 ## Template References
 

@@ -20,10 +20,12 @@ A CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn 
 **Description:** End-to-end generation of a resume document from structured JSON input data.
 
 **Entry Points:**
+
 - `bun index.ts --input <file.json>`
 - `bun index.ts -i alexander-input.json -o resume -f both`
 
 **Steps:**
+
 1. **CLI Parsing**: `parseArgs` parses `--input`, `--output`, `--format` flags
 2. **File Loading**: Reads JSON input file from filesystem
 3. **Data Validation**: `validateResumeData()` validates name, title, summary, experience, education, skills, contact info
@@ -40,6 +42,7 @@ A CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn 
 8. **Summary**: Reports generated output paths
 
 **Sequence Diagram:**
+
 ```
 User                    index.ts                    Filesystem              markdown-pdf
   |                        |                           |                       |
@@ -69,11 +72,13 @@ User                    index.ts                    Filesystem              mark
 ```
 
 **Error Handling:**
+
 - Validation failure → throw descriptive error listing missing fields
 - Missing input file → catch file read error, display usage help
 - PDF generation failure → report error, Markdown file still saved
 
 **Test Patterns:**
+
 - `validateResumeData()` unit tests for each validation rule
 - `generateResumeMarkdown()` snapshot tests for Markdown output
 - `scripts/smoke-resume.ts` — smoke test for end-to-end generation
@@ -86,9 +91,11 @@ User                    index.ts                    Filesystem              mark
 **Description:** Generating multiple document types (resume, cover letter, LinkedIn guide, interview prep) from a single JSON input.
 
 **Entry Points:**
+
 - `bun index.ts --input sample-input.json -f both`
 
 **Steps:**
+
 1. Loads JSON input data
 2. Validates core data (name, contact, experience, education)
 3. Generates **Resume** Markdown (main output)
@@ -99,9 +106,11 @@ User                    index.ts                    Filesystem              mark
 8. Saves all documents to `output/` directory
 
 **Error Handling:**
+
 - Per-document generation is isolated; one failure doesn't block others
 - Missing optional data (e.g., projects) → skip that document type gracefully
 
 **Test Patterns:**
+
 - E2E test with `sample-input.json`
 - Verify all output files exist in `output/`

@@ -1,6 +1,6 @@
 # Cloud Run MCP Server
 
-**Source:** https://github.com/GoogleCloudPlatform/cloud-run-mcp
+**Source:** <https://github.com/GoogleCloudPlatform/cloud-run-mcp>
 
 ## Overview
 

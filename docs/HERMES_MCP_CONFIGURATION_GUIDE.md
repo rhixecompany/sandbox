@@ -26,6 +26,7 @@
 ### What is Hermes Agent?
 
 Hermes Agent is an open-source CLI AI assistant framework by Nous Research that:
+
 - Connects to multiple LLM providers (OpenRouter, Gemini, OpenCode Zen, etc.)
 - Integrates with messaging platforms (Telegram, Discord, Slack, Signal, Matrix)
 - Provides specialized tools (browser automation, file operations, terminal execution)
@@ -34,14 +35,16 @@ Hermes Agent is an open-source CLI AI assistant framework by Nous Research that:
 - Runs cron jobs for scheduled automation
 
 **Current Setup (May 25, 2026):**
+
 - Model: gpt-5.4-mini (OpenAI Codex provider)
-- Base URL: https://opencode.ai/zen/v1/chat/completions
+- Base URL: <https://opencode.ai/zen/v1/chat/completions>
 - Fallback chain: Llama 70B → Gemini Flash
 - Status: Production ready
 
 ### What is Model Context Protocol (MCP)?
 
 MCP is an open standard for AI applications to connect to external data sources and tools. Think of it as "USB-C for AI" — a unified interface that:
+
 - Standardizes tool and resource discovery
 - Uses JSON-RPC 2.0 for all communication
 - Supports three core primitives:
@@ -50,6 +53,7 @@ MCP is an open standard for AI applications to connect to external data sources 
   - **Prompts**: Template instructions for specific workflows
 
 **Transport Options:**
+
 - **stdio**: Local subprocess communication (low overhead, secure via OS processes)
 - **HTTP/SSE**: Remote or multi-client servers (flexible, requires HTTPS for production)
 
@@ -69,6 +73,7 @@ MCP is an open standard for AI applications to connect to external data sources 
 ### Core Configuration Files
 
 **Global Configuration** (`~/AppData/Local/hermes/config.yaml`)
+
 ```yaml
 model:
   default: gpt-5.4-mini
@@ -104,6 +109,7 @@ mcp:
 ```
 
 **Environment File** (`~/AppData/Local/hermes/.env` or project `.env`)
+
 ```bash
 # LLM Provider Keys
 OPENROUTER_API_KEY=sk-...
@@ -152,6 +158,7 @@ HERMES_DOCKER_BINARY=/usr/bin/docker
 ### Server Lifecycle
 
 **Phase 1: Initialization**
+
 ```json
 Client → Server: initialize
   { protocolVersion: "2024-11-05", capabilities: {...}, clientInfo: {...} }
@@ -161,12 +168,14 @@ Client → Server: initialized
 ```
 
 **Phase 2: Message Exchange**
+
 - Client calls `tools/call`
 - Client reads `resources/read`
 - Client retrieves `prompts/get`
 - Bidirectional notifications and logging
 
 **Phase 3: Termination**
+
 ```json
 Client → Server: shutdown
 ```
@@ -188,10 +197,12 @@ Client → Server: shutdown
 ### Transport: stdio vs HTTP
 
 #### stdio Transport
+
 - **Best for:** Local development, single-client scenarios
 - **Security:** OS-level process isolation
 - **Setup:** Command launched as subprocess
 - **Example:**
+
   ```yaml
   servers:
     - name: filesystem
@@ -201,10 +212,12 @@ Client → Server: shutdown
   ```
 
 #### HTTP/SSE Transport
+
 - **Best for:** Remote servers, multi-client scenarios
 - **Security:** HTTPS mandatory, OAuth 2.0 recommended
 - **Setup:** Independent server process
 - **Example:**
+
   ```yaml
   servers:
     - name: remote-server
@@ -249,6 +262,7 @@ hermes config set model.base_url https://opencode.ai/zen/v1/chat/completions
 ```
 
 **Supported Providers:**
+
 - OpenRouter (default)
 - Google Gemini
 - OpenCode Zen
@@ -422,6 +436,7 @@ hermes mcp status
 ### Migration Strategy
 
 **Phase 1: Backup Current Configuration**
+
 ```bash
 # Create backup
 cp -r ~/AppData/Local/hermes/config.yaml ~/AppData/Local/hermes/config.yaml.backup.$(date +%s)
@@ -429,6 +444,7 @@ cp -r hermes.yaml hermes.yaml.backup.$(date +%s)
 ```
 
 **Phase 2: Identify Servers to Migrate**
+
 ```bash
 # List loaded MCP servers
 hermes mcp list
@@ -442,6 +458,7 @@ hermes mcp list
 **Phase 3: Install Package Manager Dependencies**
 
 For **bun** (your configured package manager):
+
 ```bash
 # Install bun globally (if not present)
 curl -fsSL https://bun.sh/install | bash
@@ -526,6 +543,7 @@ hermes tools list | grep -i docker
 The Docker MCP server exposes ~40 tools including:
 
 **Container Management:**
+
 - `docker/container/list`
 - `docker/container/create`
 - `docker/container/start`
@@ -537,6 +555,7 @@ The Docker MCP server exposes ~40 tools including:
 - `docker/container/remove`
 
 **Image Management:**
+
 - `docker/image/list`
 - `docker/image/pull`
 - `docker/image/push`
@@ -545,24 +564,28 @@ The Docker MCP server exposes ~40 tools including:
 - `docker/image/inspect`
 
 **Volume Management:**
+
 - `docker/volume/list`
 - `docker/volume/create`
 - `docker/volume/remove`
 - `docker/volume/inspect`
 
 **Network Management:**
+
 - `docker/network/list`
 - `docker/network/create`
 - `docker/network/remove`
 - `docker/network/inspect`
 
 **Compose & Orchestration:**
+
 - `docker/compose/up`
 - `docker/compose/down`
 - `docker/compose/status`
 - `docker/compose/logs`
 
 **Database Operations:**
+
 - `docker/db/query`
 - `docker/db/backup`
 - `docker/db/restore`
@@ -571,6 +594,7 @@ The Docker MCP server exposes ~40 tools including:
 ### Docker Server Configuration
 
 **Option 1: Local stdio Transport**
+
 ```yaml
 mcp:
   servers:
@@ -582,6 +606,7 @@ mcp:
 ```
 
 **Option 2: HTTP Transport via Gateway**
+
 ```yaml
 mcp:
   servers:
@@ -763,6 +788,7 @@ hermes skills list | head -10
 **Symptoms:** `Error: Failed to initialize MCP server 'docker'`
 
 **Solution:**
+
 ```bash
 # Check server command exists
 which docker-mcp-server || npm list -g docker-mcp-server
@@ -784,6 +810,7 @@ bun install -g docker-mcp-server
 **Symptoms:** `Tool 'docker/container/list' not found`
 
 **Solution:**
+
 ```bash
 # Reload MCP servers
 hermes mcp reload
@@ -803,6 +830,7 @@ hermes execute --tool "mcp/list_tools" --server docker
 **Symptoms:** `401 Unauthorized` or `Invalid API key`
 
 **Solution:**
+
 ```bash
 # Verify API keys in .env
 cat ~/AppData/Local/hermes/.env | grep API_KEY
@@ -824,6 +852,7 @@ hermes config reload
 **Symptoms:** `Error: connect ECONNREFUSED 127.0.0.1:3000`
 
 **Solution:**
+
 ```bash
 # Ensure Docker daemon is running
 docker ps  # Should return container list
@@ -844,6 +873,7 @@ ss -an | grep 3000       # Linux
 **Symptoms:** Slow tool execution, timeouts
 
 **Solution:**
+
 ```bash
 # Increase timeout values
 hermes config set terminal.timeout 600
@@ -929,12 +959,12 @@ hermes healthcheck --full
 
 ## References
 
-- **Hermes Agent Docs:** https://hermes-agent.nousresearch.com/docs
-- **MCP Specification:** https://modelcontextprotocol.io/
-- **MCP TypeScript SDK:** https://github.com/modelcontextprotocol/typescript-sdk
-- **MCP Python SDK:** https://github.com/modelcontextprotocol/python-sdk
-- **GitHub MCP Server:** https://github.com/modelcontextprotocol/servers/tree/main/src/github
-- **Docker MCP Server:** https://github.com/docker/docker-mcp-server
+- **Hermes Agent Docs:** <https://hermes-agent.nousresearch.com/docs>
+- **MCP Specification:** <https://modelcontextprotocol.io/>
+- **MCP TypeScript SDK:** <https://github.com/modelcontextprotocol/typescript-sdk>
+- **MCP Python SDK:** <https://github.com/modelcontextprotocol/python-sdk>
+- **GitHub MCP Server:** <https://github.com/modelcontextprotocol/servers/tree/main/src/github>
+- **Docker MCP Server:** <https://github.com/docker/docker-mcp-server>
 
 ---
 

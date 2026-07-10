@@ -33,4 +33,3 @@ python python_face_detection.py
 - Prefer typed annotations where practical.
 - Avoid adding cross-script coupling unless the repo already uses it.
 - Treat API keys and external requests as sensitive input.
-

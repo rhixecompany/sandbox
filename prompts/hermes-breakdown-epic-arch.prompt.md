@@ -42,8 +42,8 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 - `/docs/ways-of-work/plan/{epic-name}/arch.md`
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 1. Include an architecture overview.
 2. Show User, Application, Service, Data, and Infrastructure layers.
@@ -55,6 +55,7 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 ## Phases
 
 > ### Phase 1: Analyze the epic
+>
 > **Goal:** extract the architectural implications of the epic.
 
 > **Full content:** `templates/hermes-breakdown-epic-arch/phases.md`
@@ -66,8 +67,8 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 3. Add enablers, stack guidance, and estimates.
 4. Verify completeness and path correctness.
 
-
 ## Template References
 
 Templates in `templates/hermes-breakdown-epic-arch/`:
+
 - `phases.md`

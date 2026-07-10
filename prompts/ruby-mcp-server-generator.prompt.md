@@ -104,6 +104,7 @@ end
 ## lib/my_mcp_server/server.rb Template
 
 > # frozen_string_literal: true
+>
 > attr_reader :mcp_server
 
 > **Full content:** `templates/ruby-mcp-server-generator/libmy_mcp_serverserverrb_templ.md`
@@ -111,6 +112,7 @@ end
 ## lib/my_mcp_server/tools/greet_tool.rb Template
 
 > # frozen_string_literal: true
+>
 > class GreetTool < MCP::Tool
 
 > **Full content:** `templates/ruby-mcp-server-generator/libmy_mcp_servertoolscalculate.md`
@@ -118,6 +120,7 @@ end
 ## lib/my_mcp_server/tools/calculate_tool.rb Template
 
 > # frozen_string_literal: true
+>
 > class CalculateTool < MCP::Tool
 
 > **Full content:** `templates/ruby-mcp-server-generator/libmy_mcp_servertoolscalculate.md`
@@ -125,6 +128,7 @@ end
 ## lib/my_mcp_server/prompts/code_review_prompt.rb Template
 
 > # frozen_string_literal: true
+>
 > class CodeReviewPrompt < MCP::Prompt
 
 > **Full content:** `templates/ruby-mcp-server-generator/libmy_mcp_serverpromptscode_re.md`
@@ -132,6 +136,7 @@ end
 ## lib/my_mcp_server/resources/example_resource.rb Template
 
 > # frozen_string_literal: true
+>
 > class ExampleResource
 
 > **Full content:** `templates/ruby-mcp-server-generator/libmy_mcp_serverresourcesexamp.md`
@@ -176,6 +181,7 @@ require 'minitest/autorun'
 ## test/tools/greet_tool_test.rb Template
 
 > # frozen_string_literal: true
+>
 > require 'test_helper'
 
 > **Full content:** `templates/ruby-mcp-server-generator/testtoolsgreet_tool_testrb_tem.md`
@@ -183,6 +189,7 @@ require 'minitest/autorun'
 ## test/tools/calculate_tool_test.rb Template
 
 > # frozen_string_literal: true
+>
 > require 'test_helper'
 
 > **Full content:** `templates/ruby-mcp-server-generator/testtoolscalculate_tool_testrb.md`
@@ -299,10 +306,10 @@ MIT
 10. **Provide both stdio and HTTP** usage examples
 ```
 
-
 ## Template References
 
 Detailed templates in `templates/ruby-mcp-server-generator/`:
+
 - `libmy_mcp_serverpromptscode_re.md`
 - `libmy_mcp_serverresourcesexamp.md`
 - `libmy_mcp_serverserverrb_templ.md`

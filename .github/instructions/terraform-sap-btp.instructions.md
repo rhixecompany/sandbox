@@ -180,7 +180,7 @@ Subscriptions also depend on entitlements; add `depends_on` when the provider ca
 
 Use the Terraform MCP Server for interactive schema lookup, resource block drafting, and validation.
 
-1. Install & run server (see https://github.com/mcp/hashicorp/terraform-mcp-server).
+1. Install & run server (see <https://github.com/mcp/hashicorp/terraform-mcp-server>).
 2. Add it as a tool in your Copilot / MCP client configuration.
 3. Query provider schema (e.g., list resources, data sources) before authoring.
 4. Generate draft resource blocks, then refine manually for naming & tagging standards.
@@ -188,7 +188,7 @@ Use the Terraform MCP Server for interactive schema lookup, resource block draft
 
 ### Terraform Registry
 
-Reference the SAP BTP provider docs: https://registry.terraform.io/providers/SAP/btp/latest/docs for authoritative resource & data source fields. Cross‑check MCP responses with registry docs if uncertain.
+Reference the SAP BTP provider docs: <https://registry.terraform.io/providers/SAP/btp/latest/docs> for authoritative resource & data source fields. Cross‑check MCP responses with registry docs if uncertain.
 
 ## Anti‑Patterns (Avoid)
 

@@ -69,12 +69,15 @@ Browser → Next.js App Router → RSC/Server Action → Drizzle ORM → Postgre
 ## 3. Implementation Patterns
 
 ### Server Action Pattern
+
 All mutations use `"use server"` directives with Zod validation and typed error returns.
 
 ### Data Access
+
 Drizzle ORM with typed queries and migrations via `drizzle-kit`.
 
 ### Payment Flow
+
 Stripe webhooks for subscription lifecycle events; PayPal as secondary provider.
 
 ---

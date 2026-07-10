@@ -1,10 +1,8 @@
 ---
 status: completed
-status: completed
-status: completed
 ---
-# Plan: Implement Awesome Hermes Agent Docs Catalog
 
+# Plan: Implement Awesome Hermes Agent Docs Catalog
 **Date:** 2026-06-29
 **Status:** Draft
 **Workspace:** ~/Desktop/docs/awesome-hermes-agent/
@@ -44,6 +42,7 @@ List, triage, catalog, read, and produce a structured implementation (report/cat
 ### Deliverable location
 
 A consolidated markdown report saved at:
+
 - `~/Desktop/SandBox/docs/catalogs/awesome-hermes-agent-catalog.md`
 
 ---
@@ -53,11 +52,13 @@ A consolidated markdown report saved at:
 Three-phase execution:
 
 ### Phase 1 — Consolidate & Catalog (read-only analysis)
+
 - Already complete: all 11 files read in the inspection phase above.
 - Build a structured table cataloging every file with: path, size, source origin (repo URL), content summary, quality notes (duplicates, scraping artifacts), and actionability (can we install/use or is it reference-only).
 - Note the `<-- dupe -->` scrape artifacts for each file.
 
 ### Phase 2 — Implement (generate deliverable)
+
 - Create the output directory: `~/Desktop/SandBox/docs/catalogs/`
 - Write `awesome-hermes-agent-catalog.md` containing:
   - Header with repo info and ecosystem status
@@ -69,6 +70,7 @@ Three-phase execution:
   - **Cross-reference to existing Hermes setup** — which items are already present in this Hermes instance's skills/plugins
 
 ### Phase 3 — Verify
+
 - Read back the generated file, confirm all sections are present
 - Verify every URL referenced exists and resolves
 - Cross-check against the raw source files to ensure no omissions
@@ -79,10 +81,12 @@ Three-phase execution:
 ## 4. Step-by-Step Plan
 
 ### Step 1: Create output directory (if missing)
+
 - Path: `~/Desktop/SandBox/docs/catalogs/`
 - Command: `mkdir -p ~/Desktop/SandBox/docs/catalogs/`
 
 ### Step 2: Write catalog report
+
 - File: `~/Desktop/SandBox/docs/catalogs/awesome-hermes-agent-catalog.md`
 - Structure:
   1. Overview (repo, discovered date, file count)
@@ -94,6 +98,7 @@ Three-phase execution:
   7. Actionability matrix
 
 ### Step 3: Verify
+
 - Read back `awesome-hermes-agent-catalog.md`
 - Confirm all 11 files accounted for
 - Confirm no placeholder/boilerplate sections
@@ -128,6 +133,7 @@ No existing files are modified.
 | The awesome-list repo may have been updated since the 2026-05-06 snapshot | Include a "Last synced" marker in the catalog header |
 
 ### Open Questions
+
 1. Should the catalog be a standalone reference doc or should we also install any of the community skills listed?
 2. Do we want to cross-reference the community skills (wondelai/skills, litprog-skill, hermes-plugins, etc.) against the current Hermes skill inventory?
 

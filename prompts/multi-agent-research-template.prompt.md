@@ -117,6 +117,7 @@ The 7-step workflow is executed across the 6 phases below:
 ## Phase 2: MCP Server and Tool Research
 
 > Make comprehensive research for install, test, and verify steps for these MCP
+>
 > - sequential-thinking
 
 > **Full content:** `templates/multi-agent-research-template/phase_2_mcp_server_and_tool_re.md`
@@ -215,8 +216,8 @@ For this Phase:
 - [ ] Trigger matches filename stem convention
 - [ ] File uses `.prompt.md` extension ✅ (renamed from `.txt`)
 
-
 ## Template References
 
 Detailed templates in `templates/multi-agent-research-template/`:
+
 - `phase_2_mcp_server_and_tool_re.md`

@@ -54,7 +54,7 @@ For new projects, install the Microsoft Agent Framework package:
 dotnet add package Microsoft.Agents.AI
 ```
 
-## When working with Microsoft Agent Framework for .NET, you should:
+## When working with Microsoft Agent Framework for .NET, you should
 
 **General Best Practices:**
 

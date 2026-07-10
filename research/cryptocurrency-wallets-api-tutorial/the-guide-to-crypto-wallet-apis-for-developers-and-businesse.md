@@ -1,6 +1,6 @@
 # The Guide to Crypto Wallet APIs for Developers and Businesses
 
-> **Source:** https://vezgo.com/blog/crypto-wallet-apis-developers-businesses
+> **Source:** <https://vezgo.com/blog/crypto-wallet-apis-developers-businesses>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -39,13 +39,15 @@
 
 MPC splits private key into multiple shares held by separate parties. No single party ever holds the complete key.
 
-### 2026 MPC Stack:
+### 2026 MPC Stack
+
 - Distributed Key Generation (DKG)
 - Threshold Signature Scheme (TSS)
 - Policy-Based Signing
 - Transaction Simulation
 
-### Major MPC Providers:
+### Major MPC Providers
+
 Fireblocks, Portal, Cobo, Crypto APIs WaaS, BitGo
 
 ## Benefits

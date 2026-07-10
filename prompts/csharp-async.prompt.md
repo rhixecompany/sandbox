@@ -69,10 +69,10 @@ Your goal is to help me follow best practices for asynchronous programming in C#
 
 When reviewing my C# code, identify these issues and suggest improvements that follow these best practices.
 
-
 ## Template References
 
 Templates in `templates/csharp-async/`:
+
 - `common_pitfalls.md`
 - `exception_handling.md`
 - `implementation_patterns.md`

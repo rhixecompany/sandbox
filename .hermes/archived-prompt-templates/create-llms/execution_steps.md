@@ -30,7 +30,7 @@
 
 ### Step 4: Validation
 
-1. Verify compliance with https://llmstxt.org/ specification
+1. Verify compliance with <https://llmstxt.org/> specification
 2. Check that all links are valid and accessible
 3. Ensure the file serves as an effective LLM navigation tool
 4. Confirm the file is both human and machine readable

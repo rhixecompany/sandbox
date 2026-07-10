@@ -125,12 +125,14 @@ cd frontend && npm start
 ## Coding Standards
 
 ### Backend
+
 - **Python/Django**: DRF ViewSets + Serializers
 - **Authentication**: SimpleJWT token-based auth
 - **Social Auth**: django-allauth integration
 - **CORS**: django-cors-headers configuration
 
 ### Frontend
+
 - **React/JS**: ESLint react-app configuration
 - **Redux**: `constants/actions/reducers` pattern
 - **Material-UI 4**: UI component library

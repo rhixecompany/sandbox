@@ -20,12 +20,15 @@ tags:
 
 ---
 ## Goal
+
 Execute the plan at `.hermes/plans/hermes-configuration-spec.md`.
 
 ## Context
+
 This prompt loads and executes the consolidated plan document.
 
 ## Execution
+
 1. Load the plan from `.hermes/plans/hermes-configuration-spec.md`
 2. Follow the plan's phases and requirements
 3. Report progress and completion

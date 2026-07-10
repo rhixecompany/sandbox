@@ -15,7 +15,7 @@ git clone <repository-url>
 cd comicwise
 ```
 
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
@@ -23,14 +23,14 @@ npm install
 yarn install
 ```
 
-3. Configure environment:
+1. Configure environment:
 
 ```bash
 cp .env.example .env
 # Edit .env with your configuration
 ```
 
-4. Start the development server:
+1. Start the development server:
 
 ```bash
 npm run dev

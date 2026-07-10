@@ -1,6 +1,6 @@
 # Hermes Agent — Deep Dive & Build-Your-Own Guide
 
-> **Source:** https://dev.to/truongpx396/hermes-agent-deep-dive-build-your-own-guide-1pcc
+> **Source:** <https://dev.to/truongpx396/hermes-agent-deep-dive-build-your-own-guide-1pcc>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -8,6 +8,7 @@
 ## What Is Hermes?
 
 **Hermes** is a model-agnostic, self-improving conversational agent that runs:
+
 - Locally as CLI/TUI
 - On a server as messaging gateway (Telegram/Discord/Slack/WhatsApp/Signal)
 - As a scheduled cron worker

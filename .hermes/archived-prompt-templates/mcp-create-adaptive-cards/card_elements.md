@@ -5,6 +5,7 @@
 ## Card Elements
 
 ### TextBlock
+
 ```json
 {
   "type": "TextBlock",
@@ -17,6 +18,7 @@
 ```
 
 ### FactSet
+
 ```json
 {
   "type": "FactSet",
@@ -30,6 +32,7 @@
 ```
 
 ### Image
+
 ```json
 {
   "type": "Image",
@@ -40,6 +43,7 @@
 ```
 
 ### Container
+
 ```json
 {
   "type": "Container",
@@ -54,6 +58,7 @@
 ```
 
 ### ColumnSet
+
 ```json
 {
   "type": "ColumnSet",
@@ -73,6 +78,7 @@
 ```
 
 ### Actions
+
 ```json
 {
   "type": "Action.OpenUrl",

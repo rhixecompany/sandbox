@@ -1,6 +1,6 @@
 # Node.js Sandbox MCP Server
 
-**Source:** https://github.com/alfonsograziano/node-code-sandbox-mcp
+**Source:** <https://github.com/alfonsograziano/node-code-sandbox-mcp>
 
 ## Overview
 
@@ -8,6 +8,7 @@
 **Description:** A Node.js–based Model Context Protocol (MCP) server that spins up disposable Docker containers to execute arbitrary JavaScript with on-the-fly npm dependency installation.
 
 **Key Links:**
+
 - 🌐 [Official Website](https://jsdevai.com/)
 - 📦 [Docker Hub](https://hub.docker.com/r/mcp/node-code-sandbox)
 - 📖 [Use Cases](https://jsdevai.com/#use-cases)
@@ -26,6 +27,7 @@
 > **Docker must be installed and running** on your machine.
 
 **Pro Tip:** Pre-pull Docker images to avoid first-execution delays:
+
 ```bash
 docker pull node:lts-slim
 ```
@@ -72,6 +74,7 @@ docker run -d \
 **Quick Install:** [NPX Version](vscode:mcp/install?serverName=js-sandbox-mcp&type=npx) | [Docker Version](vscode:mcp/install?serverName=js-sandbox-mcp&type=docker)
 
 **Manual (`settings.json` or `.vscode/mcp.json`):**
+
 ```json
 {
   "mcp": {
@@ -101,18 +104,21 @@ Run a script in a brand-new disposable container.
 | `dependencies` | array | `[]` | npm packages: `{ name, version }` |
 
 **Behavior:**
+
 - Creates `index.js` + `package.json` in container
 - Runs `npm install --omit=dev --ignore-scripts --no-audit --loglevel=error`
 - Executes `node index.js`
 - Returns stdout + any saved files
 
 **Example:**
+
 ```javascript
 // Save a file during execution
 const fs = require('fs');
 fs.writeFileSync('hello.txt', 'Hello from sandbox!');
 console.log('File saved!');
 ```
+
 → Returns console output **and** `hello.txt` file
 
 ### 2. `sandbox_initialize` — Persistent Sandbox
@@ -220,6 +226,7 @@ mcp_servers:
 ```
 
 Then run:
+
 ```bash
 hermes mcp test node-code-sandbox
 /reload-mcp
@@ -227,7 +234,7 @@ hermes mcp test node-code-sandbox
 
 ## References
 
-- GitHub: https://github.com/alfonsograziano/node-code-sandbox-mcp
-- Docker Hub: https://hub.docker.com/r/mcp/node-code-sandbox
-- Official Site: https://jsdevai.com/
-- Glama: https://glama.ai/mcp/servers/ssdeanx/node-code-sandbox-mcp/tools
+- GitHub: <https://github.com/alfonsograziano/node-code-sandbox-mcp>
+- Docker Hub: <https://hub.docker.com/r/mcp/node-code-sandbox>
+- Official Site: <https://jsdevai.com/>
+- Glama: <https://glama.ai/mcp/servers/ssdeanx/node-code-sandbox-mcp/tools>

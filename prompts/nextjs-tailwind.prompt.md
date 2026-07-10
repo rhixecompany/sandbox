@@ -25,8 +25,8 @@ tags:
 
 ---
 ## Goal
-Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
 
+Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
 
 ## Description
 
@@ -60,8 +60,8 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 - Security Reviewer: Applies strict validation and safe handling of external inputs.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Prefer Server Components and mark client components only when necessary.
 - Plan component hierarchy before implementation.
@@ -72,6 +72,7 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 ## Phases
 
 > ### Phase 1: Architecture and Type Planning
+>
 > ### Phase 2: Implementation and Styling
 
 > **Full content:** `templates/nextjs-tailwind/phases.md`
@@ -107,8 +108,8 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 3. Style with semantic Tailwind patterns.
 4. Validate performance and security before handoff.
 
-
 ## Template References
 
 Templates in `templates/nextjs-tailwind/`:
+
 - `phases.md`

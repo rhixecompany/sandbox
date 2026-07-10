@@ -3,6 +3,7 @@
 > Extracted from `conventional-commit.prompt.md`.
 
 ## Legacy Prompt Details
+
 ### Instructions
 
 ```xml
@@ -23,7 +24,7 @@
 git commit -m "type(scope): description"
 ```
 
-6. Just execute this prompt and Copilot will handle the commit for you in the terminal.
+1. Just execute this prompt and Copilot will handle the commit for you in the terminal.
 
 ### Commit Message Structure
 

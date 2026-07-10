@@ -382,47 +382,47 @@ Response to Client Component
 
 ### Database & Queries
 
-5. **No N+1 queries** — Always use `.with()` in DAL for eager loading. Never loop over results and query again.
-6. **No raw SQL** — Always use Drizzle query builders. Never concatenate strings into queries.
-7. **Type-safe filtering** — Use `eq()`, `and()`, `or()` from Drizzle. Never use plain operators.
-8. **Cascade deletes preferred** — New FK columns should include `{ onDelete: "cascade" }`. Exceptions exist: `comic.authorId/artistId/typeId`, `bookmark.lastReadChapterId` (no cascade), `auditLog.userId` (`set null`).
-9. **Soft-delete filtering** — Filter `WHERE deletedAt IS NULL` on `user` and `comment` tables (the only tables with `deletedAt`).
-10. **Update `updatedAt`** — Every mutation must update `updatedAt` (automatic via `.$onUpdate()` in schema).
-11. **Use `$inferSelect`** — For DAL return types, use `typeof table.$inferSelect`, not raw types.
-12. **Return `null` not `undefined`** — DAL methods return `null` when record not found, not `undefined`.
+1. **No N+1 queries** — Always use `.with()` in DAL for eager loading. Never loop over results and query again.
+2. **No raw SQL** — Always use Drizzle query builders. Never concatenate strings into queries.
+3. **Type-safe filtering** — Use `eq()`, `and()`, `or()` from Drizzle. Never use plain operators.
+4. **Cascade deletes preferred** — New FK columns should include `{ onDelete: "cascade" }`. Exceptions exist: `comic.authorId/artistId/typeId`, `bookmark.lastReadChapterId` (no cascade), `auditLog.userId` (`set null`).
+5. **Soft-delete filtering** — Filter `WHERE deletedAt IS NULL` on `user` and `comment` tables (the only tables with `deletedAt`).
+6. **Update `updatedAt`** — Every mutation must update `updatedAt` (automatic via `.$onUpdate()` in schema).
+7. **Use `$inferSelect`** — For DAL return types, use `typeof table.$inferSelect`, not raw types.
+8. **Return `null` not `undefined`** — DAL methods return `null` when record not found, not `undefined`.
 
 ### Server Actions & Mutations
 
-13. **No API routes for mutations** — Use Server Actions (`"use server"`) for all write operations.
-14. **`ActionResult<T>` pattern** — Server Actions never throw. Always return `{ ok, data }` or `{ ok, error }`.
-15. **Auth check first** — First line in every Server Action must be `const session = await auth()`.
-16. **Zod validation before DB** — All external input goes through Zod schema before DB access.
-17. **Revalidate on mutations** — Call `revalidatePath()` or `revalidateTag()` after writes.
+1. **No API routes for mutations** — Use Server Actions (`"use server"`) for all write operations.
+2. **`ActionResult<T>` pattern** — Server Actions never throw. Always return `{ ok, data }` or `{ ok, error }`.
+3. **Auth check first** — First line in every Server Action must be `const session = await auth()`.
+4. **Zod validation before DB** — All external input goes through Zod schema before DB access.
+5. **Revalidate on mutations** — Call `revalidatePath()` or `revalidateTag()` after writes.
 
 ### Next.js App Router (v16 Breaking Changes)
 
-18. **Async params** — `params` and `searchParams` are now `Promise`. Must `await` them in pages/layouts.
-19. **Server Components by default** — Only mark components with `"use client"` if they need hooks/browser APIs.
-20. **No `export const dynamic = "force-dynamic"`** — Use `<Suspense>` boundaries for streaming instead.
-21. **Middleware via `src/proxy.ts`** — All auth/route protection via middleware, not individual pages.
+1. **Async params** — `params` and `searchParams` are now `Promise`. Must `await` them in pages/layouts.
+2. **Server Components by default** — Only mark components with `"use client"` if they need hooks/browser APIs.
+3. **No `export const dynamic = "force-dynamic"`** — Use `<Suspense>` boundaries for streaming instead.
+4. **Middleware via `src/proxy.ts`** — All auth/route protection via middleware, not individual pages.
 
 ### UI & Styling
 
-22. **Tailwind v4 syntax** — `bg-linear-to-br` (not `bg-gradient-to-br`), `aspect-2/3` (not `aspect-[2/3]`), `h-4!` (not `!h-4`).
-23. **shadcn/ui components** — Use established shadcn components. Add to registry via `shadcn-cli` if missing.
-24. **Responsive design** — Mobile-first: start with mobile layout, then add larger screen improvements.
+1. **Tailwind v4 syntax** — `bg-linear-to-br` (not `bg-gradient-to-br`), `aspect-2/3` (not `aspect-[2/3]`), `h-4!` (not `!h-4`).
+2. **shadcn/ui components** — Use established shadcn components. Add to registry via `shadcn-cli` if missing.
+3. **Responsive design** — Mobile-first: start with mobile layout, then add larger screen improvements.
 
 ### Hooks & Browser APIs
 
-25. **SSR-safe dates** — Never use `new Date()` in Server Components. Use `useCurrentYear()` from `hooks/use-now.tsx` in client.
-26. **No browser APIs in Server Components** — Never call `localStorage`, `window`, `document`, `Date.now()` in Server Components.
-27. **React hook rules** — Hooks only in Client Components, never conditionally, never in loops.
+1. **SSR-safe dates** — Never use `new Date()` in Server Components. Use `useCurrentYear()` from `hooks/use-now.tsx` in client.
+2. **No browser APIs in Server Components** — Never call `localStorage`, `window`, `document`, `Date.now()` in Server Components.
+3. **React hook rules** — Hooks only in Client Components, never conditionally, never in loops.
 
 ### Zod Validation
 
-28. **Zod v4 API** — Use v4 methods (`.pipe()`, `.coerce`, schema composition). Don't use v3 patterns.
-29. **Schema composition** — Reuse schemas via `.extend()`, `.pick()`, `.omit()` for DRY validation.
-30. **Custom error messages** — Use `.describe()` and `.refine()` for user-friendly validation errors.
+1. **Zod v4 API** — Use v4 methods (`.pipe()`, `.coerce`, schema composition). Don't use v3 patterns.
+2. **Schema composition** — Reuse schemas via `.extend()`, `.pick()`, `.omit()` for DRY validation.
+3. **Custom error messages** — Use `.describe()` and `.refine()` for user-friendly validation errors.
 
 ### Schema Facts
 

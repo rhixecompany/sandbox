@@ -1,4 +1,4 @@
-# Source: https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks
+# Source: <https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks>
 
 # Event Hooks
 
@@ -149,6 +149,7 @@ hooks:
 ```
 
 The hook receives a JSON payload on stdin:
+
 ```json
 {
   "event_type": "pre_tool_call",

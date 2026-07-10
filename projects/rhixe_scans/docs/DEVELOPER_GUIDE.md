@@ -107,6 +107,7 @@ rhixe_scans/
 ### Database (Prisma)
 
 The database schema is defined in `src/db/schema.prisma`. Key models:
+
 - User, Comic, Chapter, ChapterImage, ComicImage
 - Category, Genre, Author, Artist
 - Bookmark
@@ -114,6 +115,7 @@ The database schema is defined in `src/db/schema.prisma`. Key models:
 ### Authentication (NextAuth v5)
 
 Configuration in `src/auth.config.ts`:
+
 - GitHub OAuth provider
 - Credentials provider (email/password)
 - JWT session strategy
@@ -127,6 +129,7 @@ All form inputs are validated using Zod schemas defined in `src/lib/validators.t
 ### Creating a New Component
 
 1. Use shadcn/ui for base components:
+
    ```bash
    npx shadcn@latest add button
    ```
@@ -198,6 +201,7 @@ npm run build
 ### TypeScript Errors
 
 Ensure TypeScript is properly configured and all dependencies are installed:
+
 ```bash
 npx tsc --noEmit
 ```

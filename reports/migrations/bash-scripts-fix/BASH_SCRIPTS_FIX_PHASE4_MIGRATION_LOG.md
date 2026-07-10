@@ -10,6 +10,7 @@
 ### Batch 1: Banking Orchestrators — COMPLETE ✓
 
 **Scripts Migrated:** 6/6
+
 - projects/Banking/orchestrator.sh → Bash/migrations/banking-orchestrators/orchestrator.sh ✓
 - projects/Banking/orchestrator-unified.ps1 → Bash/migrations/banking-orchestrators/orchestrator-unified.ps1 ✓
 - projects/Banking/orchestrator-wrapper.sh → Bash/migrations/banking-orchestrators/orchestrator-wrapper.sh ✓
@@ -18,12 +19,14 @@
 - projects/Banking/orchestrator-config.sh → Bash/migrations/banking-orchestrators/orchestrator-config.sh ✓
 
 **Parity Verification:** ALL PASSED ✓
+
 - Help output: Verified ✓
 - Dry-run comparison: Verified ✓
 - Error handling: Verified ✓
 - Exit codes: Verified ✓
 
 **References Updated:**
+
 - Bash/package.json: 6 references ✓
 - .github/workflows: 2 references ✓
 - Bash/docs: 1 reference ✓
@@ -35,6 +38,7 @@
 ### Batch 2: Banking Install Framework — COMPLETE ✓
 
 **Scripts Migrated:** 11/11
+
 - projects/Banking/install.sh → Bash/migrations/banking-install-framework/install.sh ✓
 - projects/Banking/install-deps.sh → Bash/migrations/banking-install-framework/install-deps.sh ✓
 - projects/Banking/install-mcp.sh → Bash/migrations/banking-install-framework/install-mcp.sh ✓
@@ -45,6 +49,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 11 references ✓
 - .github/workflows: 4 references ✓
 
@@ -59,6 +64,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 9 references ✓
 - .github/workflows: 3 references ✓
 
@@ -73,6 +79,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 8 references ✓
 - .github/workflows: 2 references ✓
 
@@ -87,6 +94,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 10 references ✓
 - .github/workflows: 1 reference ✓
 
@@ -101,6 +109,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 7 references ✓
 
 **Git Commit:** `feat: migrate rhixe_scans scripts to Bash/migrations (batch 6/7)`
@@ -114,6 +123,7 @@
 **Parity Verification:** ALL PASSED ✓
 
 **References Updated:**
+
 - Bash/package.json: 3 references ✓
 
 **Git Commit:** `feat: migrate root & ecom scripts to Bash/migrations (batch 7/7)`
@@ -138,6 +148,7 @@
 ## Target Architecture
 
 All scripts now located in:
+
 ```
 Bash/migrations/
 ├── banking-orchestrators/          (6 scripts)
@@ -150,6 +161,7 @@ Bash/migrations/
 ```
 
 All scripts reference paths via environment variables:
+
 - `${SCRIPT_ROOT}` - Bash directory root
 - `${PROJECT_BANKING_DIR}` - projects/Banking location
 - `${PROJECT_COMICWISE_DIR}` - projects/comicwise location

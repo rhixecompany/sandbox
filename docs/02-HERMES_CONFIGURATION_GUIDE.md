@@ -474,7 +474,7 @@ PROJECT CONTEXT (from .hermes.md)
 
 ### OpenRouter (Recommended)
 
-1. **Sign up:** https://openrouter.ai/
+1. **Sign up:** <https://openrouter.ai/>
 2. **Create key:** Dashboard → API Keys
 3. **Set in Hermes:**
 
@@ -485,7 +485,7 @@ hermes config set model openrouter/gpt-4o
 
 ### Google Gemini
 
-1. **Get API Key:** https://aistudio.google.com/app/apikey
+1. **Get API Key:** <https://aistudio.google.com/app/apikey>
 2. **Set in Hermes:**
 
 ```bash
@@ -495,7 +495,7 @@ hermes config set model gemini-2.0-flash
 
 ### OpenAI GPT-4
 
-1. **Get API Key:** https://platform.openai.com/api-keys
+1. **Get API Key:** <https://platform.openai.com/api-keys>
 2. **Set in Hermes:**
 
 ```bash
@@ -505,7 +505,7 @@ hermes config set model gpt-4o
 
 ### Anthropic Claude
 
-1. **Get API Key:** https://console.anthropic.com/
+1. **Get API Key:** <https://console.anthropic.com/>
 2. **Set in Hermes:**
 
 ```bash
@@ -897,4 +897,3 @@ hermes config set terminal.timeout_seconds 120
 **Last Updated:** May 25, 2026
 **Author:** Alexa
 ```
-

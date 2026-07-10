@@ -5,6 +5,7 @@ Lines: 433
 Templates: 5
 
 ## Templates
+
 - `detailed_review_process.md`
 - `review_checklist_templates.md`
 - `review_framework.md`

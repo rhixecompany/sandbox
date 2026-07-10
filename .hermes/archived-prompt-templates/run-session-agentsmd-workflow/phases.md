@@ -5,6 +5,7 @@
 ## Phases
 
 ### Phase 1: Resolve Scope
+
 | Field | Details |
 | --- | --- |
 | Goal | Resolve argument into concrete target directories. |
@@ -13,6 +14,7 @@
 | Validation | Every target exists and is uniquely resolved. |
 
 ### Phase 2: Generate AGENTS
+
 | Field | Details |
 | --- | --- |
 | Goal | Create or update AGENTS.md in each target directory. |
@@ -21,6 +23,7 @@
 | Validation | AGENTS.md exists and is lint-valid markdown where diagnostics are available. |
 
 ### Phase 3: Commit and Publish
+
 | Field | Details |
 | --- | --- |
 | Goal | Commit AGENTS.md changes in each repo and publish PR-ready branches. |
@@ -29,6 +32,7 @@
 | Validation | Remote branch exists and points to expected commit SHA. |
 
 ### Phase 4: Reconcile and Report
+
 | Field | Details |
 | --- | --- |
 | Goal | Normalize branch naming and provide final auditable output. |

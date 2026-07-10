@@ -1,6 +1,6 @@
 # Persistent Memory | Hermes Agent - Nous Research
 
-> **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/memory
+> **Source:** <https://hermes-agent.nousresearch.com/docs/user-guide/features/memory>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** web_extract
 ---
@@ -30,6 +30,7 @@ User's project is a Rust web service at ~/code/myapi using Axum + SQLx§This mac
 ```
 
 The format includes:
+
 - A header showing which store (MEMORY or USER PROFILE)
 - Usage percentage and character counts so the agent knows capacity
 - Individual entries separated by `§` (section sign) delimiters
@@ -40,6 +41,7 @@ The format includes:
 ## Memory Tool Actions
 
 The agent uses the `memory` tool with these actions:
+
 - **add** — Add a new memory entry
 - **replace** — Replace an existing entry with updated content (uses substring matching via `old_text`)
 - **remove** — Remove an entry that's no longer relevant (uses substring matching via `old_text`)
@@ -64,6 +66,7 @@ If the substring matches multiple entries, an error is returned asking for a mor
 ### `memory` — Agent's Personal Notes
 
 For information the agent needs to remember about the environment, workflows, and lessons learned:
+
 - Environment facts (OS, tools, project structure)
 - Project conventions and configuration
 - Tool quirks and workarounds discovered
@@ -73,6 +76,7 @@ For information the agent needs to remember about the environment, workflows, an
 ### `user` — User Profile
 
 For information about the user's identity, preferences, and communication style:
+
 - Name, role, timezone
 - Communication preferences (concise vs detailed, format preferences)
 - Pet peeves and things to avoid
@@ -84,6 +88,7 @@ For information about the user's identity, preferences, and communication style:
 ### Save These (Proactively)
 
 The agent saves automatically — you don't need to ask. It saves when it learns:
+
 - **User preferences:** "I prefer TypeScript over JavaScript" → save to `user`
 - **Environment facts:** "This server runs Debian 12 with PostgreSQL 16" → save to `memory`
 - **Corrections:** "Don't use `sudo` for Docker commands, user is in docker group" → save to `memory`
@@ -111,6 +116,7 @@ Memory has strict character limits to keep system prompts bounded:
 ### What Happens When Memory is Full
 
 When the agent attempts a write that would exceed the limit, the `memory` tool returns an error. The agent then:
+
 1. Reviews current entries
 2. Consolidates similar entries
 3. Removes stale/irrelevant entries
@@ -121,13 +127,15 @@ The agent is responsible for making room — it does not silently drop data. Thi
 ### Practical Examples of Good Memory Entries
 
 **memory (agent notes):**
+
 - `This machine runs Windows 11, WSL2 Ubuntu 22.04, has Docker Desktop + Podman` (83 chars)
 - `Project uses pnpm workspaces, monorepo at ~/code/monorepo, TypeScript strict mode` (85 chars)
 - `Docker commands work without sudo — user is in docker group` (53 chars)
 - `Completed: migrated auth from JWT to session cookies on 2026-03-14` (59 chars)
-- `Avoid `npm install -g` — use `pnpm dlx` or project-local bins instead` (64 chars)
+- `Avoid`npm install -g` — use `pnpm dlx`or project-local bins instead` (64 chars)
 
 **user (user profile):**
+
 - `Name: Alex. Timezone: America/Los_Angeles (PDT). Work hours: Mon-Fri 9-5` (59 chars)
 - `Prefers concise responses — lead with action, explain second` (53 chars)
 - `Dislikes emoji and corporate-speak ("I'd be happy to help")` (52 chars)
@@ -141,6 +149,7 @@ The agent checks for near-duplicate entries before adding. Substring overlap >80
 ## Security Scanning
 
 All memory writes are scanned for:
+
 - Prompt injection patterns
 - PII (emails, API keys, tokens, addresses)
 - Suspicious instructions

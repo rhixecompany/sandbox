@@ -1,6 +1,6 @@
 # Flutterwave Transfers API - Introduction
 
-> **Source:** https://developer.flutterwave.com/docs/introduction-3
+> **Source:** <https://developer.flutterwave.com/docs/introduction-3>
 > **Retrieved:** 2026-06-01T00:00:00
 
 ---
@@ -11,7 +11,7 @@ Flutterwave Transfers enables global fund transfers across bank accounts, mobile
 
 ## Prerequisites
 
-- API credentials from https://onboarding.flutterwave.com/signup
+- API credentials from <https://onboarding.flutterwave.com/signup>
 - This guide covers one-time transfers (orchestrator flow)
 
 ## Transfer Flow (4 Steps)

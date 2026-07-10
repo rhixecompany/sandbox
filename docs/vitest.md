@@ -1,6 +1,6 @@
 # Vitest MCP Server
 
-**Source:** https://github.com/djankies/vitest-mcp
+**Source:** <https://github.com/djankies/vitest-mcp>
 
 > Note: The original URL `https://github.com/djankies/vitrst-mcp` returned a 404. The correct repository is `https://github.com/djankies/vitest-mcp`.
 
@@ -36,6 +36,7 @@ The Vitest MCP server works with any MCP-compatible IDE and supports all JavaScr
 #### Claude Code
 
 **Method 1: CLI Wizard (Interactive)**
+
 ```bash
 claude mcp add vitest npx -y @djankies/vitest-mcp
 ```
@@ -48,12 +49,14 @@ Create or edit `.mcp.json` in your project root.
 #### Claude Desktop
 
 **Configuration Location**:
+
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
 #### VS Code
 
 **Configuration Methods**:
+
 - `.vscode/mcp.json`
 - `MCP: Open User Configuration`
 
@@ -62,6 +65,7 @@ Create or edit `.mcp.json` in your project root.
 #### Cursor
 
 **Configuration Location**:
+
 - `.cursor/mcp.json`
 - `~/.cursor/mcp.json`
 
@@ -97,6 +101,7 @@ Prepending with `vitest-mcp:` ensures the tools are used.
 ## Available Tools
 
 ### `set_project_root`
+
 **Required first** - Sets the project root for all operations.
 
 | Parameter | Type | Required | Description |
@@ -106,6 +111,7 @@ Prepending with `vitest-mcp:` ensures the tools are used.
 ---
 
 ### `list_tests`
+
 Lists test files in your project to prevent LLMs from using command line tools.
 
 | Parameter | Type | Required | Description |
@@ -115,6 +121,7 @@ Lists test files in your project to prevent LLMs from using command line tools.
 ---
 
 ### `run_tests`
+
 Executes tests with structured output.
 
 | Parameter | Type | Required | Description |
@@ -127,6 +134,7 @@ Executes tests with structured output.
 ---
 
 ### `analyze_coverage`
+
 Analyzes test coverage with gap insights.
 
 | Parameter | Type | Required | Description |
@@ -144,6 +152,7 @@ Analyzes test coverage with gap insights.
 Automatically redirects Vitest commands to MCP tools. Add to `.claude/settings.local.json`.
 
 **Bypass the hook**:
+
 ```bash
 BYPASS_VITEST_HOOK=1
 # Or for entire session:
@@ -157,6 +166,7 @@ export BYPASS_VITEST_HOOK=1
 ### Vitest Configuration Priority
 
 The MCP server detects configuration files in this order:
+
 1. `vitest.mcp.config.ts`
 2. `vitest.config.ts`
 3. `vitest.config.js`

@@ -18,6 +18,7 @@ These servers allow AI assistants (e.g., **Claude Desktop, VS Code, Cursor, Wind
 ## 🛠️ Available MCP Servers
 
 ### 1. `mcp-neo4j-cypher` — Natural Language → Cypher Queries
+
 - **Function**: Translates natural language into Cypher queries.
 - **Features**:
   - Retrieves database schema.
@@ -25,11 +26,13 @@ These servers allow AI assistants (e.g., **Claude Desktop, VS Code, Cursor, Wind
 - **Requirement**: [APOC plugin](https://neo4j.com/docs/apoc/current/installation/) must be installed and enabled on the Neo4j instance.
 
 ### 2. `mcp-neo4j-memory` — Knowledge Graph Memory
+
 - **Function**: Stores and retrieves a **personal knowledge graph** in Neo4j.
 - **Use Case**: Persistent memory across sessions, conversations, and clients.
 - **Storage**: Local or remote Neo4j instance.
 
 ### 3. `mcp-neo4j-cloud-aura-api` — Neo4j Aura Cloud Management
+
 - **Function**: Manage **Neo4j Aura** instances via natural language.
 - **Capabilities**:
   - Create/destroy instances.
@@ -39,6 +42,7 @@ These servers allow AI assistants (e.g., **Claude Desktop, VS Code, Cursor, Wind
 - **Access**: Directly from AI assistant chat.
 
 ### 4. `mcp-neo4j-data-modeling` — Graph Data Modeling & Visualization
+
 - **Function**: Create, validate, and visualize Neo4j graph data models.
 - **Features**:
   - Import/export models from [Arrows.app](https://arrows.app).
@@ -51,6 +55,7 @@ These servers allow AI assistants (e.g., **Claude Desktop, VS Code, Cursor, Wind
 All servers support multiple transport modes, including:
 
 ### HTTP Transport
+
 - **Flag**: `--transport http`
 - **Environment variables** also supported.
 - Designed for **scalable, production-ready deployments**.

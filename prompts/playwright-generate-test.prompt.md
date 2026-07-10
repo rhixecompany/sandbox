@@ -44,8 +44,8 @@ Use when you need to playwright test generation for the current workspace or tas
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -55,18 +55,22 @@ Use when you need to playwright test generation for the current workspace or tas
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -101,12 +105,15 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 ## Personas
 
 ### @investigator
+
 A scenario investigator who gathers the facts needed to write a correct test.
 
 ### @author
+
 A test author who writes clean Playwright TypeScript.
 
 ### @runner
+
 A test runner who fixes issues until the test passes.
 
 ## Rules
@@ -121,6 +128,7 @@ A test runner who fixes issues until the test passes.
 ## Phases
 
 > ### Phase 1: Gather the scenario
+>
 > **Goal:** understand the behavior that needs to be tested.
 
 > **Full content:** `templates/playwright-generate-test/phases.md`

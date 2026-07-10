@@ -5,6 +5,7 @@ Lines: 254
 Templates: 3
 
 ## Templates
+
 - `examples.md`
 - `output_formatting_rules.md`
 - `usage.md`

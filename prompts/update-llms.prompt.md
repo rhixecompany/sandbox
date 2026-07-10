@@ -38,7 +38,7 @@ trigger: /update-llms
 ---
 ## Goal
 
-Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/.
+Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at <https://llmstxt.org/>.
 
 ## Context
 
@@ -56,8 +56,8 @@ Use when you need to work on the current workspace or task.
 - A concise verification note when the task benefits from one.
 
 ## Rules
+>
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
@@ -67,18 +67,22 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -89,6 +93,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 ## Analysis and Planning Phase
 
 > Before updating the `llms.txt` file, you must complete a thorough analysis:
+>
 > ### Step 1: Review Current File and Specification
 
 > **Full content:** `templates/update-llms/analysis_and_planning_phase.md`
@@ -96,6 +101,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 ## Implementation Requirements
 
 > ### Format Compliance
+>
 > The updated `llms.txt` file must maintain this exact structure per the specifica
 
 > **Full content:** `templates/update-llms/implementation_requirements.md`
@@ -103,6 +109,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 ## Execution Steps
 
 > ### Step 1: Current State Analysis
+>
 > 1. Read the existing `llms.txt` file thoroughly
 
 > **Full content:** `templates/update-llms/execution_steps.md`
@@ -128,7 +135,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 
 ### Specification Compliance
 
-- ✅ Follows https://llmstxt.org/ format exactly
+- ✅ Follows <https://llmstxt.org/> format exactly
 - ✅ Uses required markdown structure
 - ✅ Implements optional sections appropriately
 - ✅ File located at repository root (`/llms.txt`)
@@ -136,6 +143,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 ## Update Strategy
 
 > When adding new content:
+>
 > 1. Identify the appropriate section for new files
 
 > **Full content:** `templates/update-llms/update_strategy.md`
@@ -165,6 +173,7 @@ Update the existing `llms.txt` file to maintain accuracy and compliance with the
 
 - [Architecture Documentation](docs/architecture.md): Detailed system architecture
 - [Design Decisions](docs/decisions.md): Historical design decision records
+
 ```
 
 ## Success Criteria

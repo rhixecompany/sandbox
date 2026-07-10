@@ -1,11 +1,13 @@
-# Source: https://hermes-agent.nousresearch.com/docs/getting-started/learning-path
+# Source: <https://hermes-agent.nousresearch.com/docs/getting-started/learning-path>
 
 # Hermes Agent Learning Path - Comprehensive Summary
 
 ## Quick Start Command
+
 ```bash
 hermes setup --portal
 ```
+
 > **Note**: First-time users almost always want this — one OAuth covers a model plus four Tool Gateway tools (search/image/TTS/browser). See [Nous Portal](/docs/integrations/nous-portal).
 
 ---
@@ -23,26 +25,32 @@ hermes setup --portal
 ## Learning Paths by Use Case
 
 ### 🖥️ CLI Coding Assistant
+
 - Use Hermes as interactive terminal assistant for writing, reviewing, running code
 - Pass files directly via **context files** — agent can read, edit, and run code in your projects
 
 ### 🤖 Telegram/Discord Bot
+
 - Deploy Hermes as a bot on messaging platforms
 - Full project examples available in documentation
 
 ### ⚙️ Task Automation
+
 - Schedule recurring tasks, run batch jobs, chain agent actions
 - **Cron jobs** enable daily summaries, periodic checks, automated reports — runs without you present
 
 ### 🔧 Build Custom Tools/Skills
+
 - Extend Hermes with your own tools and reusable skill packages
 - **Important**: For most custom tool creation, start with **plugins** — the [Adding Tools](/docs/developer-guide/adding-tools) page is for built-in Hermes core development, not the usual user/custom-tool path
 
 ### 🧠 Train Models (RL)
+
 - Fine-tune model behavior via reinforcement learning using Hermes' RL training pipeline (powered by [Atropos](https://github.com/NousResearch/atropos))
 - **Prerequisite**: Understand basics of conversations and tool calls — run Beginner path first if new
 
 ### 🐍 Python Library Integration
+
 - Integrate Hermes Agent programmatically into your own Python applications
 
 ---
@@ -73,5 +81,6 @@ hermes setup --portal
 ---
 
 ## Prerequisites
+
 - Complete [Installation](/docs/getting-started/installation) and [Quickstart](/docs/getting-started/quickstart) before proceeding
 - All paths below assume a working installation

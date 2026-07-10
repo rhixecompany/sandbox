@@ -488,6 +488,7 @@ While Azure Logic Apps and Power Automate share the same underlying workflow eng
   ```
 
 - **Webhook Pattern**: For callback-based processing
+
   ```json
   "WebhookAction": {
     "type": "ApiConnectionWebhook",
@@ -1405,7 +1406,7 @@ Implement a multi-layered exception handling approach for robust workflows:
 }
 ```
 
-3. **Centralized Error Logging**:
+1. **Centralized Error Logging**:
    - Create a dedicated Logic App for error handling that other workflows can call
    - Log errors with correlation IDs for traceability across systems
    - Categorize errors by type and severity for better analysis

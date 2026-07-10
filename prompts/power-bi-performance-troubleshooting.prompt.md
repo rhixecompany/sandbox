@@ -27,6 +27,7 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Troubleshooting Methodology
 
 > ### Step 1: **Problem Definition and Scope**
+>
 > Begin by clearly defining the performance issue:
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/troubleshooting_methodology.md`
@@ -34,6 +35,7 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Diagnostic Tools and Techniques
 
 > ### **Power BI Desktop Tools**
+>
 > Performance Analyzer:
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/diagnostic_tools_and_technique.md`
@@ -41,13 +43,15 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Solution Framework
 
 > ### **Immediate Performance Fixes**
-> #### Model Optimization:
+>
+> #### Model Optimization
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/solution_framework.md`
 
 ## Troubleshooting Workflows
 
 > ### **Quick Win Checklist** (30 minutes)
+>
 > □ Check Performance Analyzer for obvious bottlenecks
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/troubleshooting_workflows.md`
@@ -55,6 +59,7 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Performance Monitoring Setup
 
 > ### **Proactive Monitoring**
+>
 > Key Performance Indicators:
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/performance_monitoring_setup.md`
@@ -62,6 +67,7 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Communication and Documentation
 
 > ### **Issue Reporting Template**
+>
 > Performance Issue Report:
 
 > **Full content:** `templates/power-bi-performance-troubleshooting/communication_and_documentatio.md`
@@ -69,6 +75,7 @@ You are a Power BI performance expert specializing in diagnosing and resolving p
 ## Template References
 
 Detailed templates in `templates/power-bi-performance-troubleshooting/`:
+
 - `communication_and_documentatio.md`
 - `diagnostic_tools_and_technique.md`
 - `performance_monitoring_setup.md`

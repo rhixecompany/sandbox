@@ -5,6 +5,7 @@ Lines: 188
 Templates: 6
 
 ## Templates
+
 - `additional_services.md`
 - `analysis_framework.md`
 - `common_optimization_patte.md`

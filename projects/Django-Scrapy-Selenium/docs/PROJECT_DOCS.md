@@ -4,7 +4,7 @@
 
 A full-stack web scraping platform that automates comic data collection from external sources. Combines Django REST API for data serving, Scrapy for web crawling, Selenium for JavaScript-rendered page handling, and PostgreSQL for persistent storage.
 
-**Repository:** https://github.com/Rhixe-company/Django-Scrapy-Selenium  
+**Repository:** <https://github.com/Rhixe-company/Django-Scrapy-Selenium>  
 **Stack:** Python 3.10+ | Django 4.x | DRF | Scrapy | Selenium | PostgreSQL  
 **Status:** Active Development / Maintenance
 
@@ -206,6 +206,7 @@ python manage.py test api.tests.test_api
 ```
 
 ### Test Coverage Focus
+
 - Model validation and constraints
 - API endpoint behavior (auth, CRUD, permissions)
 - Pipeline item processing

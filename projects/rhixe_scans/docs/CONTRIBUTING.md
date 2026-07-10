@@ -34,9 +34,11 @@ By participating in this project, you agree to abide by our Code of Conduct. We 
 
 1. Fork the repository
 2. Create a feature branch:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. Follow the coding standards
 4. Write tests for new functionality
 5. Update documentation if needed
@@ -44,9 +46,11 @@ By participating in this project, you agree to abide by our Code of Conduct. We 
 #### Submitting
 
 1. Push your changes:
+
    ```bash
    git push origin feature/your-feature-name
    ```
+
 2. Open a Pull Request
 3. Fill out the PR template completely
 4. Wait for review
@@ -106,6 +110,7 @@ type(scope): description
 ```
 
 Types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation
@@ -115,6 +120,7 @@ Types:
 - `chore`: Maintenance
 
 Example:
+
 ```
 feat(auth): add password reset functionality
 
@@ -161,6 +167,7 @@ npm run test:coverage
 ## Recognition
 
 Contributors will be recognized in:
+
 - CONTRIBUTORS.md file
 - Release notes
 - GitHub profile

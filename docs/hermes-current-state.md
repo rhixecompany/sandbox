@@ -18,6 +18,7 @@ All hooks have JSON configs + shell scripts in `~/AppData/Local/hermes/hooks/`.
 basic, copilot-provider, custom-provider, disk-cleanup, huggingface-provider, langfuse, nous, nous-provider, ollama-cloud-provider, openai-codex, openai-codex-provider, opencode-zen-provider, openrouter-provider, security-guidance, web-tavily
 
 **51 Disabled (notable):**
+
 - Provider: anthropic, bedrock, deepseek, gemini, nvidia, qwen-oauth, xai, alibaba, arcee, azure-foundry, copilot-acp, kilocode, kimi-coding, minimax, novita, stepfun, xiaomi, zai
 - Platform: discord, teams, google_chat, homeassistant, irc, line, mattermost, ntfy, photon, simplex
 - Web search: brave-free, ddgs, exa, firecrawl, parallel, searxng, xai

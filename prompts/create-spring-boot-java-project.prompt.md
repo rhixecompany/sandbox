@@ -97,6 +97,7 @@ cd ${input:projectName:demo-java}
 ## Add SpringDoc, Redis, JPA and MongoDB configurations
 
 > - Insert SpringDoc configurations into `application.properties` file
+>
 > # SpringDoc configurations
 
 > **Full content:** `templates/create-spring-boot-java-project/add_springdoc_redis_jpa_a.md`
@@ -136,10 +137,10 @@ cd ${input:projectName:demo-java}
 
 ## Let's do this step by step
 
-
 ## Template References
 
 Templates in `templates/create-spring-boot-java-project/`:
+
 - `add_additional_dependenci.md`
 - `add_docker-composeyaml_wi.md`
 - `add_springdoc_redis_jpa_a.md`

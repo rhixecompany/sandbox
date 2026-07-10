@@ -5,6 +5,7 @@ Lines: 255
 Templates: 3
 
 ## Templates
+
 - `phases.md`
 - `rules.md`
 - `steps.md`
