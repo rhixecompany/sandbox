@@ -8,18 +8,18 @@ A CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn 
 
 ## Technology Stack
 
-| Category | Technology |
-| --- | --- |
-| **Runtime** | Bun (latest), Node.js (fallback) |
-| **Language** | TypeScript ^5 (strict) |
-| **PDF Generation** | markdown-pdf ^11.0.0 |
-| **Linting** | ESLint 10.x, Prettier 3.x, Markdownlint, CSpell |
+| Category           | Technology                                      |
+| ------------------ | ----------------------------------------------- |
+| **Runtime**        | Bun (latest), Node.js (fallback)                |
+| **Language**       | TypeScript ^5 (strict)                          |
+| **PDF Generation** | markdown-pdf ^11.0.0                            |
+| **Linting**        | ESLint 10.x, Prettier 3.x, Markdownlint, CSpell |
 
 ## Architecture
 
 The generator follows a **Pipeline Processing Pattern**:
 
-```
+```text
 JSON Input File → index.ts (Entry Point)
                       ↓
             ┌─────────┼─────────┐
@@ -38,7 +38,7 @@ JSON Input File → index.ts (Entry Point)
 
 ## Project Structure
 
-```
+```text
 Resume_maker/
 ├── index.ts                 # Main entry point
 ├── sample-input.json        # Sample input data
@@ -87,13 +87,13 @@ bun index.ts --help
 
 ## CLI Commands
 
-| Command | Description |
-| --- | --- |
-| `bun index.ts --input <file.json>` | Generate from JSON input |
+| Command                                              | Description                   |
+| ---------------------------------------------------- | ----------------------------- |
+| `bun index.ts --input <file.json>`                   | Generate from JSON input      |
 | `bun index.ts -i <file> -o <dir> -f <both\|md\|pdf>` | Specific output configuration |
-| `bun index.ts --help` | Display CLI help |
-| `bun run typecheck` | TypeScript type checking |
-| `bun run lint` | ESLint + Prettier check |
+| `bun index.ts --help`                                | Display CLI help              |
+| `bun run typecheck`                                  | TypeScript type checking      |
+| `bun run lint`                                       | ESLint + Prettier check       |
 
 ## Coding Standards
 
