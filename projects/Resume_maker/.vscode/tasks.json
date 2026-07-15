@@ -2,8 +2,8 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "command": "bun run format",
-      "label": "Resume Maker: Format",
+      "command": "bun run lint:fix",
+      "label": "Resume Maker: Format & Fix",
       "type": "shell",
       "group": "build",
       "presentation": {

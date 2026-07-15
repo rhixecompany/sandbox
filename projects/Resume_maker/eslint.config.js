@@ -26,7 +26,6 @@ export default [
       ],
       "@typescript-eslint/no-explicit-any": "warn",
       "no-unused-vars": "off",
-      "no-explicit-any": "off",
     },
   },
   {

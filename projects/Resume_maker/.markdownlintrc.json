@@ -54,9 +54,7 @@
 	},
 	"fix": true,
 	"gitignore": true,
-	"globs": [
-		"**/*.md"
-	],
+	"globs": ["**/*.md"],
 	"ignores": [
 		"node_modules",
 		".next",
