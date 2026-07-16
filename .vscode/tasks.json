@@ -2,26 +2,6 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Bun: Run All Tests",
-      "type": "shell",
-      "command": "bun test",
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "label": "Bun: Type Check",
-      "type": "shell",
-      "command": "bun run tsc --noEmit",
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
       "command": "python3 -m pytest",
       "label": "Python: Test All",
       "type": "shell",
