@@ -22,7 +22,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | TypeScript | ^5 | Primary language (strict mode) |
 | React | ^19.1.0 | UI framework |
 | Next.js | ^15.3.3 | Full-stack framework |
@@ -38,7 +38,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ### Core Dependencies
 
 | Category | Dependencies |
-|---|---|
+| --- | --- |
 | **UI Framework** | next ^15.3.3, react ^19.1.0, react-dom ^19.1.0 |
 | **UI Components** | @radix-ui/* (18+ packages), embla-carousel, cmdk, vaul, sonner |
 | **Styling** | tailwindcss ^3.4.1, tailwind-merge, tailwindcss-animate, class-variance-authority, clsx |
@@ -58,7 +58,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ### Dev Dependencies
 
 | Category | Dependencies |
-|---|---|
+| --- | --- |
 | **Testing** | jest ^30.0.0, ts-jest ^29.4.0 |
 | **Linting** | eslint ^9, eslint-config-next 15.3.3 |
 | **Utilities** | dotenv, npm-check-updates, shx, ts-node, supabase |
@@ -86,7 +86,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ## External Integrations
 
 | Service | Package | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | Stripe | stripe, @stripe/react-stripe-js | Payment processing |
 | PayPal | @paypal/react-paypal-js | Payment processing |
 | UploadThing | uploadthing, @uploadthing/react | File uploads |
@@ -99,7 +99,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ## Key Scripts
 
 | Script | Description |
-|---|---|
+| --- | --- |
 | `dev` | Next.js dev with Turbopack |
 | `build` | Production build |
 | `db:migrate` | Prisma migrations |
@@ -156,6 +156,6 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ## Deployment
 
 | Platform | Notes |
-|---|---|
+| --- | --- |
 | Vercel | Primary target |
 | Docker | Available as alternative |

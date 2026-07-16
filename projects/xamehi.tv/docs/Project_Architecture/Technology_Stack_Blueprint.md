@@ -22,7 +22,7 @@ A streaming platform with a Django REST backend and React 17 frontend using Mate
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | Python | — | Backend language |
 | JavaScript (ES6+) | — | Frontend language |
 | React | ^17.0.1 | UI framework |
@@ -31,7 +31,7 @@ A streaming platform with a Django REST backend and React 17 frontend using Mate
 ### Backend Stack (Django/DRF)
 
 | Category | Technologies |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django (latest) |
 | **API Framework** | Django REST Framework |
 | **Auth** | SimpleJWT (djangorestframework-simplejwt) |
@@ -43,7 +43,7 @@ A streaming platform with a Django REST backend and React 17 frontend using Mate
 ### Frontend Stack (React 17)
 
 | Category | Dependencies |
-|---|---|
+| --- | --- |
 | **UI Framework** | react ^17.0.1, react-dom ^17.0.1 |
 | **UI Library** | @material-ui/core ^4.12.4, react-bootstrap ^1.4.0 |
 | **State Management** | redux ^4.0.5, redux-thunk ^2.3.0 |
@@ -86,7 +86,7 @@ xamehi.tv/
 ## Key Scripts
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `python manage.py runserver` | Backend on 127.0.0.1:8000 |
 | `python manage.py test` | Django tests |
 | `npm start` | Frontend on localhost:3000 |

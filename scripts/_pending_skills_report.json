@@ -1,44 +1,1874 @@
 {
   "applied": [
     [
-      "create_new",
-      "new_skill",
-      "create",
-      "created C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\new_skill"
-    ],
-    [
-      "patch_patchok",
-      "existing_skill",
+      "c2447c6c",
+      "using-superpowers",
       "patch",
-      "patched C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\SKILL.md"
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
     ],
     [
-      "write_file_wf",
-      "existing_skill",
+      "1980cd8f",
+      "hermes-hooks",
       "write_file",
-      "wrote C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\references\\x.md"
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-hooks\\references\\windows-hook-consent.md"
+    ],
+    [
+      "e33bfb2a",
+      "session-audit-report",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\session-audit-report\\SKILL.md"
+    ],
+    [
+      "f70b692e",
+      "user-communication-preferences",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\user-communication-preferences\\SKILL.md"
+    ],
+    [
+      "6080ea4c",
+      "autonomous-ai-agents\\using-superpowers",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\references\\session-startup-protocol.md"
+    ],
+    [
+      "c4ba8243",
+      "autonomous-ai-agents\\using-superpowers",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\references\\session-startup-protocol.md"
+    ],
+    [
+      "e6c98eb2",
+      "autonomous-ai-agents\\using-superpowers",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\references\\session-reporting.md"
+    ],
+    [
+      "868c80c0",
+      "devops\\validate-memories",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\references\\mcp-knowledge-graph-memory.md"
+    ],
+    [
+      "8c333489",
+      "devops\\validate-memories",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "5009b4cb",
+      "software-development/subagent-driven-development",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\subagent-driven-development\\SKILL.md"
+    ],
+    [
+      "b37cde3e",
+      "prompt-batch-fixer",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\prompt-batch-fixer\\SKILL.md"
+    ],
+    [
+      "c40aa491",
+      "validate-memories",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\references\\bulk-yaml-corruption-recovery.md"
+    ],
+    [
+      "7029a0ca",
+      "session-audit-report",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\session-audit-report\\SKILL.md"
+    ],
+    [
+      "7438b34b",
+      "hermes-profiles",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-migration-path-updates.md"
+    ],
+    [
+      "7018b4d7",
+      "user-communication-preferences",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\user-communication-preferences\\SKILL.md"
+    ],
+    [
+      "678cbb6a",
+      "session-audit-report",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\session-audit-report\\SKILL.md"
+    ],
+    [
+      "51a031bc",
+      "session-audit-report",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\session-audit-report\\references\\manual-report-template.md"
+    ],
+    [
+      "34c3c428",
+      "writing-skills",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\writing-skills\\references\\batch-script-wrapper-enhancement.md"
+    ],
+    [
+      "b38cfe72",
+      "writing-skills",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\writing-skills\\references\\batch-script-wrapper-enhancement.md"
+    ],
+    [
+      "4828464b",
+      "vscode-extension-playbook",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\vscode-extension-playbook\\references\\overview.md"
+    ],
+    [
+      "846f9cf2",
+      "vscode-extension-playbook",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\vscode-extension-playbook\\templates\\template.md"
+    ],
+    [
+      "729257de",
+      "make-skill-template",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\make-skill-template\\references\\overview.md"
+    ],
+    [
+      "b4f471ba",
+      "make-skill-template",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\make-skill-template\\templates\\template.md"
+    ],
+    [
+      "9f084990",
+      "suggest-awesome-github-copilot-instructions",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\suggest-awesome-github-copilot-instructions\\references\\overview.md"
+    ],
+    [
+      "13b063a6",
+      "suggest-awesome-github-copilot-instructions",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\suggest-awesome-github-copilot-instructions\\templates\\template.md"
+    ],
+    [
+      "185fe82f",
+      "batch-skills-remediation",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\references\\script-wrapper-creation.md"
+    ],
+    [
+      "d159fe60",
+      "skill-creator",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\skill-creator\\SKILL.md"
+    ],
+    [
+      "e94fe6d7",
+      "writing-skills",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\writing-skills\\SKILL.md"
+    ],
+    [
+      "1e366c42",
+      "prompt-management",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "1d9e1691",
+      "prompt-management",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "bc565344",
+      "prompt-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\references\\prompt-bulk-execution.md"
+    ],
+    [
+      "810dde4e",
+      "prompt-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\scripts\\gen_prompt_exec_batches.py"
+    ],
+    [
+      "a958309e",
+      "create-agentsmd",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\create-agentsmd\\SKILL.md"
+    ],
+    [
+      "7d01d270",
+      "create-agentsmd",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\create-agentsmd\\references\\codebase-agents-md-method.md"
+    ],
+    [
+      "30a5b422",
+      "create-agentsmd",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\create-agentsmd\\templates\\agents-md-template.md"
+    ],
+    [
+      "c09b42f2",
+      "verification-before-completion",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\verification-before-completion\\references\\ad-hoc-verify-python-windows.md"
+    ],
+    [
+      "f0f07bda",
+      "verification-before-completion",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\verification-before-completion\\SKILL.md"
+    ],
+    [
+      "88944942",
+      "prompt-management",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "23c7cc24",
+      "prompt-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\scripts\\fix_orphan_tags_in_fix_output.py"
+    ],
+    [
+      "4eee2fe8",
+      "prompt-management",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "7ea1e200",
+      "validate-prompts",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\validate-prompts\\references\\orphan-tag-fix.md"
+    ],
+    [
+      "6b285d5f",
+      "llm-provider-benchmarking",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\mlops\\llm-provider-benchmarking\\SKILL.md"
+    ],
+    [
+      "078e848b",
+      "msys2-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\msys2-management\\references\\environments-quickref.md"
+    ],
+    [
+      "f932d26f",
+      "msys2-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\msys2-management\\references\\toolchain-verification.md"
+    ],
+    [
+      "e356167b",
+      "prompt-management",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\references\\prompt-reference-cleanup.md"
+    ],
+    [
+      "c06dd215",
+      "prompt-library-consolidation",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\prompt-library-consolidation\\references\\prompt-migration-notes.md"
+    ],
+    [
+      "4aaada16",
+      "executing-plans",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\executing-plans\\references\\prompt-consolidation-pattern.md"
+    ],
+    [
+      "b6120314",
+      "vscode-workspace-configurator",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\vscode-workspace-configurator\\references\\cross-file-conflict-detection.md"
+    ],
+    [
+      "8edca357",
+      "consolidate-skills",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\consolidate-skills\\references\\flat-duplicate-removal.md"
+    ],
+    [
+      "2b1824eb",
+      "hermes-profiles",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-docs.md"
+    ],
+    [
+      "fd874b36",
+      "hermes-profiles",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-docs.md"
+    ],
+    [
+      "ce8dbee4",
+      "validate-memories",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\references\\hermes-file-layout.md"
+    ],
+    [
+      "fe3db0e3",
+      "validate-memories",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "f4fd39bc",
+      "profile-maintenance",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "5078738c",
+      "asyncio-full-tutorial",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-full-tutorial\\SKILL.md"
+    ],
+    [
+      "4eb13a8b",
+      "asyncio-geeksforgeeks",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-geeksforgeeks\\SKILL.md"
+    ],
+    [
+      "d3e77e00",
+      "asyncio-full-tutorial",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-full-tutorial\\SKILL.md"
+    ],
+    [
+      "831b180d",
+      "asyncio-part1-basics",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-part1-basics\\SKILL.md"
+    ],
+    [
+      "ff080e56",
+      "asyncio-geeksforgeeks",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-geeksforgeeks\\SKILL.md"
+    ],
+    [
+      "86a0f5a7",
+      "asyncio-9min-youtube",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-9min-youtube\\SKILL.md"
+    ],
+    [
+      "161844df",
+      "asyncio-complete-guide",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-complete-guide\\SKILL.md"
+    ],
+    [
+      "cb9808a6",
+      "asyncio-hands-on-walkthrough",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-hands-on-walkthrough\\SKILL.md"
+    ],
+    [
+      "ff47df90",
+      "binance-python-api-tutorial",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\binance-python-api-tutorial\\SKILL.md"
+    ],
+    [
+      "185a7339",
+      "binance-api-reference",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\binance-api-reference\\SKILL.md"
+    ],
+    [
+      "3b869e1c",
+      "busha-api-quickstart",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\busha-api-quickstart\\SKILL.md"
+    ],
+    [
+      "9b527fc1",
+      "busha-business-api",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\busha-business-api\\SKILL.md"
+    ],
+    [
+      "4c7b562f",
+      "crypto-wallet-quickstart",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\crypto-wallet-quickstart\\SKILL.md"
+    ],
+    [
+      "7b59edf2",
+      "crypto-wallet-api-guide",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\crypto-wallet-api-guide\\SKILL.md"
+    ],
+    [
+      "15451de0",
+      "flutterwave-transfers-api",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\flutterwave-transfers-api\\SKILL.md"
+    ],
+    [
+      "ed31005c",
+      "hermes-networkchuck-course",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-networkchuck-course\\SKILL.md"
+    ],
+    [
+      "3236a786",
+      "hermes-deep-dive-guide",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-deep-dive-guide\\SKILL.md"
+    ],
+    [
+      "45ade8a0",
+      "hermes-luma-memory-arch",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-luma-memory-arch\\SKILL.md"
+    ],
+    [
+      "91bcdd53",
+      "hermes-quickstart",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-quickstart\\SKILL.md"
+    ],
+    [
+      "3d737075",
+      "asyncio-patricks-blog",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-patricks-blog\\SKILL.md"
+    ],
+    [
+      "e8e5e24e",
+      "asyncio-complete-guide",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-complete-guide\\SKILL.md"
+    ],
+    [
+      "6fb347c8",
+      "asyncio-hands-on-walkthrough",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-hands-on-walkthrough\\SKILL.md"
+    ],
+    [
+      "128e63f1",
+      "asyncio-9min-youtube",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-9min-youtube\\SKILL.md"
+    ],
+    [
+      "f712df70",
+      "asyncio-part1-basics",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-part1-basics\\SKILL.md"
+    ],
+    [
+      "00b798f4",
+      "asyncio-complete-guide",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-complete-guide\\SKILL.md"
+    ],
+    [
+      "2b47036b",
+      "asyncio-hands-on-walkthrough",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-hands-on-walkthrough\\SKILL.md"
+    ],
+    [
+      "fff7e595",
+      "skill-judge",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\skill-judge\\SKILL.md"
+    ],
+    [
+      "dde93156",
+      "asyncio-full-tutorial",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\asyncio-full-tutorial\\SKILL.md"
+    ],
+    [
+      "6d109970",
+      "asyncio-full-tutorial",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-full-tutorial\\SKILL.md"
+    ],
+    [
+      "8614400d",
+      "skill-judge",
+      "patch",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\skill-judge\\SKILL.md"
+    ],
+    [
+      "276a4712",
+      "batch-skills-remediation",
+      "write_file",
+      "wrote C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\references\\manual-deep-remediation.md"
+    ],
+    [
+      "b694f122",
+      "batch-skills-remediation",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
+    ],
+    [
+      "9a2b8fdd",
+      "user-communication-preferences",
+      "edit",
+      "patched C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\user-communication-preferences\\SKILL.md"
     ]
   ],
   "failed": [
     [
-      "patch_patchbad",
-      "existing_skill",
+      "98e71647",
+      "devops\\validate-memories",
       "patch",
-      "old_string not found in C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill\\SKILL.md"
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\references\\mcp-knowledge-graph-memory.md"
+    ],
+    [
+      "15b0cef5",
+      "autonomous-ai-agents\\using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\references\\skill-library-hygiene.md"
+    ],
+    [
+      "7626e958",
+      "autonomous-ai-agents\\using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "fda23a3b",
+      "autonomous-ai-agents\\using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "83303cd4",
+      "validate-memories",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "d3d92ca7",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "3e59a205",
+      "validate-memories",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "534a1a1e",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "e33918ac",
+      "validate-memories",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "b1cf2b5e",
+      "using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "efff9249",
+      "using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "49411189",
+      "using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "9171f89b",
+      "using-superpowers",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\autonomous-ai-agents\\using-superpowers\\SKILL.md"
+    ],
+    [
+      "e607008d",
+      "fix-duplicate-hooks",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-duplicate-hooks\\SKILL.md"
+    ],
+    [
+      "4953bb29",
+      "add-hooks-to-config",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\add-hooks-to-config\\SKILL.md"
+    ],
+    [
+      "7a210ca7",
+      "audit-prompts",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\audit-prompts\\SKILL.md"
+    ],
+    [
+      "c9eb29a5",
+      "batch-skills-audit",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-skills-audit\\SKILL.md"
+    ],
+    [
+      "59988db3",
+      "batch-skills-remediation",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
+    ],
+    [
+      "e5092c78",
+      "benchmark-models",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\benchmark-models\\SKILL.md"
+    ],
+    [
+      "01f7eddb",
+      "boost-prompts",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\boost-prompts\\SKILL.md"
+    ],
+    [
+      "6636214c",
+      "convert-plaintext-to-md",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\convert-plaintext-to-md\\SKILL.md"
+    ],
+    [
+      "7fd9cd93",
+      "fix-frontmatter",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-frontmatter\\SKILL.md"
+    ],
+    [
+      "3d13f437",
+      "score-docs",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\score-docs\\SKILL.md"
+    ],
+    [
+      "cdd03c15",
+      "vscode-config-audit",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\vscode-config-audit\\SKILL.md"
+    ],
+    [
+      "15b83485",
+      "batch-update-hermes-paths",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\batch-update-hermes-paths\\SKILL.md"
+    ],
+    [
+      "3a75ae73",
+      "skills",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\skills\\SKILL.md"
+    ],
+    [
+      "d0d8ab12",
+      "analyze-hf-models",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\analyze-hf-models\\SKILL.md"
+    ],
+    [
+      "8237e86e",
+      "skills-audit",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\skills-audit\\SKILL.md"
+    ],
+    [
+      "a947d261",
+      "test-models",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\test-models\\SKILL.md"
+    ],
+    [
+      "53ece09f",
+      "writing-skills",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\writing-skills\\SKILL.md"
+    ],
+    [
+      "0da3ffee",
+      "skills",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\skills\\SKILL.md"
+    ],
+    [
+      "5e61c4ae",
+      "batch-skills-remediation",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
+    ],
+    [
+      "6d46f0ea",
+      "skill-judge",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\skill-judge\\SKILL.md"
+    ],
+    [
+      "5b595c1f",
+      "batch-skills-remediation",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
+    ],
+    [
+      "e74ca137",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "9af8e279",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "7c7e2807",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "834db4ec",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "9e983bb0",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "16353e02",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "8bff89e3",
+      "validate-prompts",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\validate-prompts\\SKILL.md"
+    ],
+    [
+      "730b3ae4",
+      "validate-memories",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "2d761921",
+      "validate-memories",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\validate-memories\\SKILL.md"
+    ],
+    [
+      "e0273562",
+      "session-audit-report",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\session-audit-report\\SKILL.md"
+    ],
+    [
+      "bfdeca99",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "5e72dbd9",
+      "prompt-management",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\prompt-management\\SKILL.md"
+    ],
+    [
+      "2cdf4291",
+      "executing-plans",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\executing-plans\\SKILL.md"
+    ],
+    [
+      "ca565cda",
+      "executing-plans",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\executing-plans\\SKILL.md"
+    ],
+    [
+      "cb44ff35",
+      "executing-plans",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\executing-plans\\SKILL.md"
+    ],
+    [
+      "fb4918ed",
+      "vscode-workspace-configurator",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\vscode-workspace-configurator\\SKILL.md"
+    ],
+    [
+      "eba53f09",
+      "vscode-workspace-configurator",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\vscode-workspace-configurator\\SKILL.md"
+    ],
+    [
+      "7cb93b5e",
+      "batch-skills-remediation",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
+    ],
+    [
+      "307c8ebd",
+      "consolidate-skills",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\consolidate-skills\\SKILL.md"
+    ],
+    [
+      "a0b3fb92",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "808e6fb8",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\SKILL.md"
+    ],
+    [
+      "00b8f43c",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-docs.md"
+    ],
+    [
+      "3f261a76",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-docs.md"
+    ],
+    [
+      "ca97e4bc",
+      "hermes-profiles",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\hermes-profiles\\references\\profile-docs.md"
+    ],
+    [
+      "bdf9cf14",
+      "writing-skills",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\writing-skills\\references\\skills-library-auditing.md"
+    ],
+    [
+      "c04436be",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "bbc11d60",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "18beeba3",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "1f68d220",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "6c13638f",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "3e09574e",
+      "profile-maintenance",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\profile-maintenance\\SKILL.md"
+    ],
+    [
+      "8f8ba948",
+      "user-communication-preferences",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\productivity\\user-communication-preferences\\SKILL.md"
+    ],
+    [
+      "91208ae5",
+      "asyncio-patricks-blog",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-patricks-blog\\SKILL.md"
+    ],
+    [
+      "1bda6ab4",
+      "cryptoapis-wallet-builder",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\cryptoapis-wallet-builder\\SKILL.md"
+    ],
+    [
+      "7e225eb4",
+      "hermes-persistent-memory",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-persistent-memory\\SKILL.md"
+    ],
+    [
+      "a62c3a0a",
+      "asyncio-full-tutorial",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-full-tutorial\\SKILL.md"
+    ],
+    [
+      "1ed28cf5",
+      "batch-skills-remediation",
+      "patch",
+      "old_string not found in C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation\\SKILL.md"
     ]
   ],
   "skipped": [
     [
-      "create_exist",
-      "existing_skill",
+      "90007619",
+      "fix-duplicate-hooks",
       "create",
-      "create target exists: C:\\Users\\Alexa\\AppData\\Local\\Temp\\hermes-verify-cfj8ntkj/hermes\\skills\\existing_skill"
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-duplicate-hooks"
     ],
     [
-      "delete_del",
-      "ghost",
-      "delete",
-      "delete target missing: ghost"
+      "4736df1a",
+      "add-hooks-to-config",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\add-hooks-to-config"
+    ],
+    [
+      "d7cef14d",
+      "audit-prompts",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\audit-prompts"
+    ],
+    [
+      "bca23d2e",
+      "batch-skills-remediation",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\qa\\batch-skills-remediation"
+    ],
+    [
+      "49c03107",
+      "benchmark-models",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\benchmark-models"
+    ],
+    [
+      "67e01bd4",
+      "boost-prompts",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\boost-prompts"
+    ],
+    [
+      "e9e0c2cd",
+      "fix-duplicate-hooks",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-duplicate-hooks"
+    ],
+    [
+      "1b55145c",
+      "add-hooks-to-config",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\add-hooks-to-config"
+    ],
+    [
+      "e855bf15",
+      "convert-plaintext-to-md",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\convert-plaintext-to-md"
+    ],
+    [
+      "4e507bc1",
+      "validate-prompts",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\validate-prompts"
+    ],
+    [
+      "b969d541",
+      "audit-prompts",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\audit-prompts"
+    ],
+    [
+      "052bbe45",
+      "vscode-config-audit",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\vscode-config-audit"
+    ],
+    [
+      "6d195f99",
+      "batch-skills-audit",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-skills-audit"
+    ],
+    [
+      "51b69c86",
+      "audit-plans",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\audit-plans"
+    ],
+    [
+      "6bce2c5b",
+      "mcp-security-audit",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\mcp\\mcp-security-audit"
+    ],
+    [
+      "1f390ff9",
+      "python-package-manager",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\python-package-manager"
+    ],
+    [
+      "2f158276",
+      "skill-library-audit",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\skill-library-audit"
+    ],
+    [
+      "6028fc8f",
+      "configure-hermes",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\configure-hermes"
+    ],
+    [
+      "d84e192c",
+      "fix-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-frontmatter"
+    ],
+    [
+      "bcd3a18f",
+      "batch-update-hermes-paths",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\batch-update-hermes-paths"
+    ],
+    [
+      "14e721bf",
+      "score-docs",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\score-docs"
+    ],
+    [
+      "1ffb2290",
+      "batch-update-hermes-paths",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\batch-update-hermes-paths"
+    ],
+    [
+      "6c21e9e4",
+      "fix-prompt-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-prompt-frontmatter"
+    ],
+    [
+      "986c984b",
+      "session-audit",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\session-audit"
+    ],
+    [
+      "5e0fa8c3",
+      "prompt-inventory",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\prompt-inventory"
+    ],
+    [
+      "fcdb0f62",
+      "normalize-prompt-actions",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\normalize-prompt-actions"
+    ],
+    [
+      "f9b6ea3c",
+      "fix-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-frontmatter-script"
+    ],
+    [
+      "396d87bf",
+      "fix-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-prompts-script"
+    ],
+    [
+      "f2b80586",
+      "audit-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\audit-prompts-script"
+    ],
+    [
+      "e138d8f5",
+      "boost-prompt-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\boost-prompt-script"
+    ],
+    [
+      "a20d9606",
+      "validate-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\validate-prompts-script"
+    ],
+    [
+      "59cc471b",
+      "analyze-hf-models",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\analyze-hf-models"
+    ],
+    [
+      "ca493ba7",
+      "apply-vscode-customizations",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\apply-vscode-customizations"
+    ],
+    [
+      "cb372655",
+      "fix-eslint-mismatches",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-eslint-mismatches"
+    ],
+    [
+      "6f9e1fa2",
+      "fix-frontmatter-yaml",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-frontmatter-yaml"
+    ],
+    [
+      "abee2b1f",
+      "batch-remediate",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\batch-remediate"
+    ],
+    [
+      "a9055b39",
+      "benchmark-models",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\benchmark-models"
+    ],
+    [
+      "b79f0b0e",
+      "boost-near-pass-refs",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\boost-near-pass-refs"
+    ],
+    [
+      "0738db5c",
+      "configure-hermes-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\configure-hermes-script"
+    ],
+    [
+      "e724bdeb",
+      "batch-update-hermes-paths-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-update-hermes-paths-script"
+    ],
+    [
+      "694a18bb",
+      "normalize-prompt-actions-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\normalize-prompt-actions-script"
+    ],
+    [
+      "eb039319",
+      "score-docs-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\score-docs-script"
+    ],
+    [
+      "fbd76fbc",
+      "audit-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\audit-prompts-script"
+    ],
+    [
+      "4bbb2ad8",
+      "validate-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\validate-prompts-script"
+    ],
+    [
+      "e1dc69a8",
+      "inventory-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\inventory-prompts-script"
+    ],
+    [
+      "c8e76a2b",
+      "boost-prompt-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\boost-prompt-script"
+    ],
+    [
+      "385c062b",
+      "fix-copilot-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-copilot-frontmatter-script"
+    ],
+    [
+      "acfb7f82",
+      "fix-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-frontmatter-script"
+    ],
+    [
+      "7507b091",
+      "audit-vscode-config-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\audit-vscode-config-script"
+    ],
+    [
+      "1c293a09",
+      "fix-duplicate-hooks-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-duplicate-hooks-script"
+    ],
+    [
+      "08c4675d",
+      "add-hooks-to-config-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\add-hooks-to-config-script"
+    ],
+    [
+      "178578f1",
+      "normalize-plans-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\normalize-plans-script"
+    ],
+    [
+      "3a8775c2",
+      "audit-vscode-config-v2-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\audit-vscode-config-v2-script"
+    ],
+    [
+      "82b707ba",
+      "fix-eslint-mismatches-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-eslint-mismatches-script"
+    ],
+    [
+      "12edd9bc",
+      "batch-delete-profiles-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-delete-profiles-script"
+    ],
+    [
+      "bb91256d",
+      "batch-remediate-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-remediate-script"
+    ],
+    [
+      "a7385536",
+      "batch-remediate-42-59-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-remediate-42-59-script"
+    ],
+    [
+      "65843d4d",
+      "batch-rewrite-worst-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-rewrite-worst-script"
+    ],
+    [
+      "de8f4f50",
+      "batch-skill-judge-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\batch-skill-judge-script"
+    ],
+    [
+      "25c19868",
+      "build-path-mapping-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\build-path-mapping-script"
+    ],
+    [
+      "8ae61b82",
+      "categorize-skills-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\categorize-skills-script"
+    ],
+    [
+      "e1936b12",
+      "consolidate-skills-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\consolidate-skills-script"
+    ],
+    [
+      "ecc2aa34",
+      "copilot-mcp-server-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\copilot-mcp-server-script"
+    ],
+    [
+      "bfedc8aa",
+      "create-missing-memories-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\create-missing-memories-script"
+    ],
+    [
+      "9cc61ee8",
+      "create-missing-souls-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\create-missing-souls-script"
+    ],
+    [
+      "6246f055",
+      "dedupe-skills-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\dedupe-skills-script"
+    ],
+    [
+      "90cf120a",
+      "dev-init-code-samples-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\dev-init-code-samples-script"
+    ],
+    [
+      "bee6bdcc",
+      "docs-inventory-report-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\docs-inventory-report-script"
+    ],
+    [
+      "8ab40e39",
+      "fix-copilot-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-copilot-frontmatter-script"
+    ],
+    [
+      "0d63426f",
+      "fix-crlf-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-crlf-frontmatter-script"
+    ],
+    [
+      "8cfdef06",
+      "fix-eslint-mismatches-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-eslint-mismatches-script"
+    ],
+    [
+      "9e9496e6",
+      "fix-fail-skills-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-fail-skills-script"
+    ],
+    [
+      "d41f0d60",
+      "fix-orphaned-brackets-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-orphaned-brackets-script"
+    ],
+    [
+      "a8ded296",
+      "fix-prompts-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-prompts-script"
+    ],
+    [
+      "01be3155",
+      "fix-prompts-comprehensive-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-prompts-comprehensive-script"
+    ],
+    [
+      "fb162b75",
+      "fix-yaml-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-yaml-frontmatter-script"
+    ],
+    [
+      "2dcd04c4",
+      "fix-copilot-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-copilot-frontmatter-script"
+    ],
+    [
+      "d0b3c42b",
+      "fix-crlf-frontmatter-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-crlf-frontmatter-script"
+    ],
+    [
+      "d605207a",
+      "fix-fail-skills-script",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\fix-fail-skills-script"
+    ],
+    [
+      "841ea29b",
+      "add-hooks-to-config",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\add-hooks-to-config"
+    ],
+    [
+      "b77f54e3",
+      "analyze-hf-models",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\analyze-hf-models"
+    ],
+    [
+      "6f38a73d",
+      "apply-vscode-customizations",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\apply-vscode-customizations"
+    ],
+    [
+      "74a3f4cd",
+      "boost-near-pass-refs",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\boost-near-pass-refs"
+    ],
+    [
+      "01f9daf2",
+      "build-path-mapping",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\build-path-mapping"
+    ],
+    [
+      "4f8cd429",
+      "categorize-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\categorize-skills"
+    ],
+    [
+      "e39ed7b5",
+      "configure-hermes",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\configure-hermes"
+    ],
+    [
+      "d351cfab",
+      "consolidate-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\consolidate-skills"
+    ],
+    [
+      "13f6fe06",
+      "fix-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-skills"
+    ],
+    [
+      "4d8937ad",
+      "generate-context-files",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\generate-context-files"
+    ],
+    [
+      "a84a3df2",
+      "generate-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\generate-skills"
+    ],
+    [
+      "b885a700",
+      "generate-vscode-audit-report",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\generate-vscode-audit-report"
+    ],
+    [
+      "654df481",
+      "generate-vscode-configs",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\generate-vscode-configs"
+    ],
+    [
+      "4de09075",
+      "hello",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hello"
+    ],
+    [
+      "299f2597",
+      "copilot-mcp-server",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\copilot-mcp-server"
+    ],
+    [
+      "f62b7cfc",
+      "create-missing-memories",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\create-missing-memories"
+    ],
+    [
+      "c0df21ee",
+      "create-missing-souls",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\create-missing-souls"
+    ],
+    [
+      "4f70a3a7",
+      "dedupe-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\dedupe-skills"
+    ],
+    [
+      "a005fe08",
+      "dev-init-code-samples",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\dev-init-code-samples"
+    ],
+    [
+      "a9c2a84d",
+      "docs-inventory-report",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\docs-inventory-report"
+    ],
+    [
+      "98feedaf",
+      "fix-copilot-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-copilot-frontmatter"
+    ],
+    [
+      "fb967421",
+      "fix-crlf-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-crlf-frontmatter"
+    ],
+    [
+      "683ba6d2",
+      "fix-duplicate-hooks",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-duplicate-hooks"
+    ],
+    [
+      "e2c06e6a",
+      "fix-eslint-mismatches",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-eslint-mismatches"
+    ],
+    [
+      "df0068be",
+      "fix-fail-skills",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-fail-skills"
+    ],
+    [
+      "8b6bd960",
+      "fix-orphaned-brackets",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-orphaned-brackets"
+    ],
+    [
+      "47b550c3",
+      "fix-prompts",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-prompts"
+    ],
+    [
+      "51f2e8d1",
+      "fix-prompts-comprehensive",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-prompts-comprehensive"
+    ],
+    [
+      "489f3f8b",
+      "fix-yaml-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-yaml-frontmatter"
+    ],
+    [
+      "57060566",
+      "fix-frontmatter",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\fix-frontmatter"
+    ],
+    [
+      "eb4e3a6d",
+      ".restore-backups\\official-optional-20260629-093600\\honcho",
+      "patch",
+      "patch file missing: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\.restore-backups\\official-optional-20260629-093600\\honcho\\SKILL.md"
+    ],
+    [
+      "06d76ca2",
+      "executing-prompt-workflows",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\software-development\\executing-prompt-workflows"
+    ],
+    [
+      "e6be5b17",
+      "llm-provider-benchmarking",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\mlops\\llm-provider-benchmarking"
+    ],
+    [
+      "7ef1c03a",
+      "msys2-management",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\devops\\msys2-management"
+    ],
+    [
+      "0e594b06",
+      "prompt-library-consolidation",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\prompt-library-consolidation"
+    ],
+    [
+      "2fc3ff09",
+      "binance-python-api-tutorial",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\binance-python-api-tutorial"
+    ],
+    [
+      "3ea43511",
+      "binance-api-reference",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\binance-api-reference"
+    ],
+    [
+      "61b0e2db",
+      "busha-api-quickstart",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\busha-api-quickstart"
+    ],
+    [
+      "a2da63a0",
+      "busha-business-api",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\busha-business-api"
+    ],
+    [
+      "f4e44d85",
+      "binance-python-api-tutorial",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\binance-python-api-tutorial"
+    ],
+    [
+      "f15699ad",
+      "binance-api-reference",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\binance-api-reference"
+    ],
+    [
+      "019a7d23",
+      "cryptoapis-wallet-builder",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\cryptoapis-wallet-builder"
+    ],
+    [
+      "a851c275",
+      "crypto-wallet-quickstart",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\crypto-wallet-quickstart"
+    ],
+    [
+      "11c8965e",
+      "crypto-wallet-api-guide",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\crypto-wallet-api-guide"
+    ],
+    [
+      "43a4bfe3",
+      "face-detection-uv4l-pi",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\face-detection-uv4l-pi"
+    ],
+    [
+      "c812a2ac",
+      "face-obscure-video-chat",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\creative\\face-obscure-video-chat"
+    ],
+    [
+      "664bab48",
+      "vsdc-video-masking",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\creative\\vsdc-video-masking"
+    ],
+    [
+      "ee5f2c60",
+      "face-detection-uv4l-pi",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\face-detection-uv4l-pi"
+    ],
+    [
+      "24428ac1",
+      "flutterwave-transfers-api",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\flutterwave-transfers-api"
+    ],
+    [
+      "7700b094",
+      "hermes-networkchuck-course",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-networkchuck-course"
+    ],
+    [
+      "ca82c53d",
+      "hermes-deep-dive-guide",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-deep-dive-guide"
+    ],
+    [
+      "2a750652",
+      "hermes-quickstart",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-quickstart"
+    ],
+    [
+      "5a4a8d78",
+      "hermes-luma-memory-arch",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-luma-memory-arch"
+    ],
+    [
+      "b9e57aca",
+      "hermes-persistent-memory",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-persistent-memory"
+    ],
+    [
+      "cdf0c0a0",
+      "hermes-personality-soul",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\hermes-personality-soul"
+    ],
+    [
+      "7efb6fe6",
+      "hermes-networkchuck-course",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-networkchuck-course"
+    ],
+    [
+      "10197db8",
+      "hermes-deep-dive-guide",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-deep-dive-guide"
+    ],
+    [
+      "da9dce57",
+      "hermes-luma-memory-arch",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-luma-memory-arch"
+    ],
+    [
+      "1a560954",
+      "hermes-persistent-memory",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-persistent-memory"
+    ],
+    [
+      "8dfd5ad7",
+      "hermes-deep-dive-guide",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\hermes-deep-dive-guide"
+    ],
+    [
+      "faba5bdf",
+      "asyncio-full-tutorial",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-full-tutorial"
+    ],
+    [
+      "4205d435",
+      "asyncio-geeksforgeeks",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-geeksforgeeks"
+    ],
+    [
+      "ffe5df7e",
+      "asyncio-patricks-blog",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-patricks-blog"
+    ],
+    [
+      "bfbfb840",
+      "asyncio-9min-youtube",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-9min-youtube"
+    ],
+    [
+      "ecf7a8c8",
+      "asyncio-part1-basics",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-part1-basics"
+    ],
+    [
+      "5e060159",
+      "asyncio-complete-guide",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-complete-guide"
+    ],
+    [
+      "0ed4bde1",
+      "asyncio-hands-on-walkthrough",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-hands-on-walkthrough"
+    ],
+    [
+      "88c7e5e3",
+      "paypal-how-it-works",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\paypal-how-it-works"
+    ],
+    [
+      "e91755a8",
+      "paypal-getting-started",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\paypal-getting-started"
+    ],
+    [
+      "8c247ead",
+      "paystack-getting-started",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\paystack-getting-started"
+    ],
+    [
+      "06ca20cb",
+      "paystack-dev-docs",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\paystack-dev-docs"
+    ],
+    [
+      "6f0900b3",
+      "how-paypal-works",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\how-paypal-works"
+    ],
+    [
+      "d30ee20d",
+      "busha-business-api",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\busha-business-api"
+    ],
+    [
+      "1f67aabf",
+      "asyncio-hands-on-walkthrough",
+      "create",
+      "create target exists: C:\\Users\\Alexa\\AppData\\Local/hermes\\skills\\development\\asyncio-hands-on-walkthrough"
     ]
   ]
 }

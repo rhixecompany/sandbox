@@ -7,7 +7,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 ## Backend
 
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | Python | 3.10+ | Runtime |
 | Django | 4.x | Web framework |
 | Django REST Framework | — | REST API |
@@ -17,7 +17,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 ## Scraping Stack
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | Scrapy | Web scraping framework |
 | Selenium WebDriver | Browser automation |
 | BeautifulSoup4 | HTML parsing |
@@ -25,7 +25,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 ## Frontend
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | Webpack | Module bundler |
 | Tailwind CSS 3 | Utility CSS |
 | Alpine.js | Lightweight interactivity |
@@ -35,7 +35,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 ## Database & Infrastructure
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | PostgreSQL | Production database |
 | SQLite | Development database |
 | Gunicorn | WSGI server |
@@ -44,7 +44,7 @@ Full-stack web scraping platform with Django backend, Scrapy spider management, 
 ## Quality
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | pytest | Python testing |
 | Prettier | JS formatting |
 | ESLint | JS linting |

@@ -245,7 +245,7 @@ python manage.py test video       # Run app tests
 ### Browsing Content
 
 | Page | URL | Description |
-|------|-----|-------------|
+| ------ | ----- | ------------- |
 | Home | `/` | Featured movies carousel, recently added |
 | Movies | `/movies/` | Paginated movie catalog with filters |
 | Movie Detail | `/movies/<slug>/` | Movie info, video player, reviews |
@@ -254,7 +254,7 @@ python manage.py test video       # Run app tests
 ### Authentication
 
 | Page | URL | Description |
-|------|-----|-------------|
+| ------ | ----- | ------------- |
 | Login | `/login/` | Email + password login |
 | Register | `/register/` | Create account with CustomUserCreationForm |
 | Account | `/account/` | View profile information |
@@ -265,7 +265,7 @@ python manage.py test video       # Run app tests
 Admin users can access CRUD operations via:
 
 | Action | Template URL | API Endpoint |
-|--------|-------------|-------------|
+| -------- | ------------- | ------------- |
 | Create Movie | `/create_movie/` | `POST /api/movies/` |
 | Update Movie | `/update_movie/<slug>/` | `PUT /api/movies/:pk/` |
 | Delete Movie | `/delete_movie/<slug>/` | `DELETE /api/movies/:pk/` |

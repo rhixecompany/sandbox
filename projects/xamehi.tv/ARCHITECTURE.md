@@ -102,7 +102,7 @@ python manage.py runserver
 ## Dependencies
 
 | Package | Purpose |
-|---------|---------|
+| --------- | --------- |
 | Django | Web framework |
 | djangorestframework | REST API |
 | djangorestframework-simplejwt | JWT authentication |

@@ -12,7 +12,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Runtime | Bun 1.3.14+, Node.js >= 18 |
 | Language | TypeScript (strict), PowerShell, Bash |
 | Linting | ESLint 10.x, Prettier 3.x, Markdownlint, CSpell |

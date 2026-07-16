@@ -44,8 +44,8 @@ actionEnum: "create" | "read" | "update" | "delete" | "manage";
 | `comic` | `rating: decimal(10,1)` | Aggregate display rating. NOT integer. `status` must match Title-Case enum. |
 | `rating` | `rating: integer` | Per-user 1–5 stars. Different type from `comic.rating`! Use `AVG(rating)` for aggregation. |
 | `bookmark` | Composite PK `(userId, comicId)` | Use `onConflictDoUpdate` for upserts |
-| `chapter` | Composite unique `(comicId, chapterNumber)` |  |
-| All FK cols |  | Must include `{ onDelete: "cascade" }` except `auditLog.userId` → `"set null"` |
+| `chapter` | Composite unique `(comicId, chapterNumber)` | |
+| All FK cols | | Must include `{ onDelete: "cascade" }` except `auditLog.userId` → `"set null"` |
 
 ### Complete Table List (27 tables)
 

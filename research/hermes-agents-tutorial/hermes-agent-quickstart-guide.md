@@ -35,7 +35,7 @@ hermes setup --portal  # recommended: Nous Portal (OAuth)
 ### Provider Quick Reference
 
 | Provider | Type | Setup |
-|----------|------|-------|
+| ---------- | ------ | ------- |
 | Nous Portal | Subscription, zero-config | `hermes setup --portal` |
 | OpenAI Codex | ChatGPT OAuth | `hermes model` |
 | Anthropic | Claude (Max OAuth or API key) | `hermes model` |
@@ -67,7 +67,7 @@ hermes --tui    # modern TUI (recommended)
 ## Slash Commands
 
 | Command | Action |
-|---------|--------|
+| --------- | -------- |
 | /help | Show all commands |
 | /tools | List available tools |
 | /model | Switch models |

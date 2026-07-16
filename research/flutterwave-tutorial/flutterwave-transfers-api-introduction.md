@@ -56,7 +56,7 @@ curl --request GET --url 'https://developersandbox-api.flutterwave.com/transfers
 ## Key Endpoints
 
 | Step | Endpoint | Purpose |
-|------|----------|---------|
+| ------ | ---------- | --------- |
 | 1 | POST /token | Generate auth token |
 | 2 | POST /banks/account-resolve | Validate bank account |
 | 3 | POST /direct-transfers | Initiate transfer |

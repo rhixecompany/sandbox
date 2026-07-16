@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | Django + React guide | <https://fdcservers.net/blog/how-to-build-a-simple-app-with-django-and-react> | Django + React CORS setup |
 | CRA → Vite migration | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | CRA deprecation; migration path |
 | Stop using CRA | <https://medium.com/@thedevnotebook/stop-using-create-react-app-in-2026-next-js-and-vite-have-taken-over-a7c5ac59c4ce> | why modern React moves to Vite |
@@ -71,6 +71,7 @@
 - **Development proxy strategy**:
   - CRA: `proxy` field in `package.json` (single backend only)
   - **Vite**: `server.proxy` in `vite.config.js` — supports multiple proxies
+
     ```js
     // vite.config.js
     export default defineConfig({
@@ -82,6 +83,7 @@
       }
     })
     ```
+
   - Reference: <https://tere.ro/development/vite-s-proxy-overlooked-feature>, <https://medium.com/@eric_abell/simplifying-api-proxies-in-vite-a-guide-to-vite-config-js-a5cc3a091a2f>
 - **Production CORS**:
   - Django: `django-cors-headers` with `CORS_ALLOWED_ORIGINS = ['https://yourdomain.com']`
@@ -102,6 +104,7 @@
 - **Express dev**: `nodemon index.js` for auto-reload
 - **React dev**: `npm start` (CRA) → migrate to `npm run dev` (Vite)
 - **Concurrent development**: Use `concurrently` or `npm-run-all`
+
   ```json
   "scripts": {
     "dev": "concurrently \"npm run dev:django\" \"npm run dev:express\" \"npm run dev:react\"",
@@ -110,6 +113,7 @@
     "dev:react": "vite"
   }
   ```
+
 - **Production**: Gunicorn for Django (`gunicorn xamehi.wsgi:application --bind 0.0.0.0:8000`), PM2 or similar for Express
 - Reference: <https://vxlabs.com/2015/12/08/gunicorn-as-your-django-development-server>
 
@@ -136,6 +140,7 @@
 8. Update `index.html` to reference `/src/main.jsx`
 9. Fix any `process.env` references → `import.meta.env.VITE_*`
 10. Test HMR, build, preview
+
 - Full guide: <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f>
 
 ---
@@ -143,7 +148,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | CRA → Vite migration | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | Step-by-step Guide |
 | Django CORS | <https://pypi.org/project/django-cors-headers/> | Package |
 | pgbouncer | <https://www.pgbouncer.org/> | Connection pooler docs |
@@ -173,7 +178,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | CRA deprecation | no security patches, slow builds | migrate to Vite |
 | Dual backend drift | API inconsistency | consolidate API into DRF |
 | DB connection exhaustion | application outages | pgbouncer with connection limits |
@@ -222,7 +227,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Vite migration | <https://dev.to/solitrix02/goodbye-cra-hello-vite-a-developers-2026-survival-guide-for-migration-2a9f> | CRA → Vite guide |
 | DRF Docs | <https://www.django-rest-framework.org/> | DRF official docs |
 | Express.js | <https://expressjs.com/> | Express web framework |
@@ -240,6 +245,7 @@
 ## New Research Added (2026-07-10)
 
 ### Vite Multi-Proxy Configuration for Triple-Service Dev
+
 ```js
 // vite.config.js
 import { defineConfig } from 'vite'
@@ -267,6 +273,7 @@ export default defineConfig({
 ```
 
 ### Django Settings for pgbouncer Transaction Pooling
+
 ```python
 # settings.py
 DATABASES = {
@@ -281,6 +288,7 @@ DATABASES = {
 ```
 
 ### Express pg-pool Configuration
+
 ```javascript
 // db.js
 const { Pool } = require('pg')
@@ -295,6 +303,7 @@ module.exports = pool
 ```
 
 ### Consolidated API Migration Strategy
+
 1. **Audit Express routes** — categorize by traffic/complexity
 2. **Create DRF equivalents** — serializers, viewsets, routers
 3. **Add proxy route in Express** — temporarily forward to Django

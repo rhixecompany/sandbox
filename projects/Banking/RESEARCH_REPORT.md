@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | comicwise | `projects/comicwise` | shared Next.js + auth + payment flows |
 | rhixe_scans | `projects/rhixe_scans` | shared Next.js + auth + media payments |
 | rhixecompany-comics | `projects/rhixecompany-comics` | shared PostgreSQL + Drizzle + Next.js |
@@ -38,7 +38,7 @@
 ### Drizzle ORM vs Prisma 7 (2026)
 
 | Feature | Drizzle | Prisma 7 |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Schema definition | TypeScript (code-first) | `.prisma` DSL (schema-first) |
 | Generation step | None — instant types | `prisma generate` required |
 | Bundle size (min+gzip) | ~12.2 KB | ~1.6 MB |
@@ -52,6 +52,7 @@
 | Maturity | Newer, fast-moving | Mature, larger ecosystem |
 
 **Decision guidance:**
+
 - **Choose Drizzle** if: SQL-comfortable team, serverless/edge deployments, bundle size critical, instant type feedback
 - **Choose Prisma** if: Abstraction preferred, broader DB support needed, comprehensive docs/community, migration tooling maturity
 
@@ -81,6 +82,7 @@
 - **Package**: `@auth/drizzle-adapter` (official, part of Better Auth)
 - **Installation**: `bun add drizzle-orm @auth/drizzle-adapter` + `bun add -d drizzle-kit`
 - **Adapter usage**:
+
   ```typescript
   import { DrizzleAdapter } from "@auth/drizzle-adapter"
   import { db } from "@/db"
@@ -96,6 +98,7 @@
     // ...
   }
   ```
+
 - **Schema**: Use `pgTable` with proper indexes; include all required columns per adapter spec
 - **Custom tables**: Pass `schema` object to `DrizzleAdapter(db, schema)` with custom table references
 - **Session strategy**: Database sessions recommended for fintech (revocable, auditable) vs JWT
@@ -145,7 +148,7 @@
 ### Bun Package Manager vs npm/pnpm Performance (2026)
 
 | Metric | npm | pnpm | Yarn Berry | Bun |
-|--------|-----|------|------------|-----|
+| -------- | ----- | ------ | ------------ | ----- |
 | Fresh install speed | Baseline | ~2× faster | Similar to npm | **20–30× faster** |
 | Disk usage | High | Minimal (hard links) | Low (PnP) | Standard |
 | Lockfile | `package-lock.json` | `pnpm-lock.yaml` | `yarn.lock` + `.pnp.cjs` | `bun.lockb` (binary) |
@@ -157,6 +160,7 @@
 | Maturity | Highest | High | High | **Production-ready 2026** |
 
 **Key tradeoffs:**
+
 - **Bun**: Raw speed, all-in-one runtime, drop-in npm replacement; binary lockfile not human-readable
 - **pnpm**: Best balance of speed, correctness, monorepo tooling; strict node_modules prevents phantom deps
 - **Yarn Berry**: Reproducibility via PnP, zero-installs; IDE/plugin compatibility friction
@@ -169,7 +173,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Next.js 16 | <https://nextjs.org/docs/app> | Docs |
 | Next.js 16 Production | <https://nextjs.org/docs/app/guides/production-checklist> | Guide |
 | Next.js 16 Release | <https://nextjs.org/blog/next-16> | Blog |
@@ -208,7 +212,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Assuming Sandbox = Production | OAuth failures in prod | Test in Production Trial plan |
 | Missing idempotency keys | Duplicate ACH transfers | `transfer_attempts` table with unique constraint |
 | Provider secrets in client code | Credential leakage | Server-only import pattern |
@@ -260,7 +264,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Next.js Docs | <https://nextjs.org/docs> | Framework docs |
 | Drizzle ORM | <https://orm.drizzle.dev> | TypeScript ORM docs |
 | Plaid Docs | <https://plaid.com/docs> | Banking API docs |

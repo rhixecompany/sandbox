@@ -26,8 +26,8 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 | `role` | `userRole` | `DEFAULT 'USER'` | Access level |
 | `avatarUrl` | `text` | `NULLABLE` | Profile image |
 | `deletedAt` | `timestamptz` | `NULLABLE` | Soft-delete |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
-| `updatedAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `updatedAt` | `timestamptz` | `DEFAULT NOW()` | |
 
 ### `comics`
 
@@ -43,8 +43,8 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 | `artistId` | `uuid` | `FK → artists.id` | Artist |
 | `totalChapters` | `integer` | `DEFAULT 0` | Chapter count |
 | `averageRating` | `decimal(3,2)` | `DEFAULT 0` | Aggregated rating |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
-| `updatedAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `updatedAt` | `timestamptz` | `DEFAULT NOW()` | |
 
 ### `chapters`
 
@@ -55,13 +55,13 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 | `number` | `decimal(10,2)` | `NOT NULL` | Chapter number |
 | `title` | `varchar(255)` | `NULLABLE` | Chapter title |
 | `imageCount` | `integer` | `DEFAULT 0` | Number of pages |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
 
 ### `chapter_images`
 
 | Column | Type | Constraints | Description |
 | --- | --- | --- | --- |
-| `id` | `uuid` | `PK` |  |
+| `id` | `uuid` | `PK` | |
 | `chapterId` | `uuid` | `FK → chapters.id CASCADE` | Parent chapter |
 | `pageNumber` | `integer` | `NOT NULL` | Page order |
 | `imageUrl` | `text` | `NOT NULL` | Image URL |
@@ -88,11 +88,11 @@ ComicWise uses **PostgreSQL 14+** with **Drizzle ORM** and **Neon** serverless P
 
 | Column | Type | Constraints | Description |
 | --- | --- | --- | --- |
-| `id` | `uuid` | `PK` |  |
-| `userId` | `uuid` | `FK → users.id CASCADE` |  |
-| `comicId` | `uuid` | `FK → comics.id CASCADE` |  |
-| `createdAt` | `timestamptz` | `DEFAULT NOW()` |  |
-| `UNIQUE` | `(userId, comicId)` |  | Prevents duplicates |
+| `id` | `uuid` | `PK` | |
+| `userId` | `uuid` | `FK → users.id CASCADE` | |
+| `comicId` | `uuid` | `FK → comics.id CASCADE` | |
+| `createdAt` | `timestamptz` | `DEFAULT NOW()` | |
+| `UNIQUE` | `(userId, comicId)` | | Prevents duplicates |
 
 ### `reading_history`
 

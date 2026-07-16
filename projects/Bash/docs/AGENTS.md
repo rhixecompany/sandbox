@@ -16,7 +16,7 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 ### Core Analysis
 
 | Agent | Purpose | Triggers |
-|---|---|---|
+| --- | --- | --- |
 | `mm-stack-detector` | Identify stack | stack |
 | `mm-dependency-mapper` | Map deps | imports, packages |
 | `mm-convention-extractor` | Extract style | conventions |
@@ -43,7 +43,7 @@ Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/cop
 ### By File
 
 | Type | Primary | Secondary |
-|---|---|---|
+| --- | --- | --- |
 | `.sh`, `.ps1`, `.bat` | `mm-stack-detector` | `mm-convention-extractor` |
 | `.md` | `mm-convention-extractor` | `mm-domain-extractor` |
 | `.log` | `mm-anti-pattern-detector` | `mm-dependency-mapper` |
@@ -108,7 +108,7 @@ mindmodel_lookup({ query: "create upgrade function" });
 ## Flags
 
 | Flag | Default |
-|---|---|
+| --- | --- |
 | `parallel_execution` | `true` |
 | `timeout_seconds` | `120` |
 | `retry_on_failure` | `true` |

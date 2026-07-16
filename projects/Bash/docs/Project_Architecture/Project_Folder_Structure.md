@@ -90,7 +90,7 @@ Bash/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Directories** | kebab-case / lowercase | `scripts/`, `src/core/`, `archive/artifacts/` |
 | **TypeScript files** | kebab-case.ts | `cache-clean.ts`, `git-commit-batches.ts` |
 | **Shell scripts** | kebab-case.sh | `execute-real.sh`, `clean_dependency_folders.sh` |
@@ -115,7 +115,7 @@ Bash/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Has `package.json` | ✅ Node.js / Bun project |
 | Has `bun.lock` | ✅ Uses Bun package manager |
 | Has `tsconfig.json` | ✅ TypeScript |

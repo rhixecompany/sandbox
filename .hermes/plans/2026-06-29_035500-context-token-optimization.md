@@ -3,6 +3,7 @@ status: completed
 ---
 
 # Context File Token Optimization Plan
+
 **Goal:** Eliminate cross-file redundancy to reduce per-turn token consumption.
 **Strategy:** DRY consolidation — each fact lives in one file, others reference it.
 **Net saving:** ~32KB (8,000 tokens per turn)
@@ -76,7 +77,7 @@ status: completed
 ## Total Impact
 
 | File | Before | After | Saving |
-|------|--------|-------|--------|
+| ------ | -------- | ------- | -------- |
 | SOUL.md | 5.5KB | 2.0KB | 3.5KB |
 | MASTER_RULES.md | 9.6KB | 5.0KB | 4.6KB |
 | USER.md | 1.3KB | 0.6KB | 0.7KB |

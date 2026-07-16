@@ -21,7 +21,7 @@ Python's `asyncio` is a library for writing **concurrent code** using the `async
 ### Concurrency vs Parallelism
 
 | Aspect | Concurrency (AsyncIO) | Parallelism (Threading/Multiprocessing) |
-|--------|----------------------|----------------------------------------|
+| -------- | ---------------------- | ---------------------------------------- |
 | Threads | Single thread | Multiple threads/processes |
 | CPU Usage | Efficient for I/O waits | True parallel execution |
 | GIL Impact | Avoids GIL contention | Limited by GIL (threading) |
@@ -118,7 +118,7 @@ except asyncio.TimeoutError:
 ## Common Pitfalls
 
 | Pitfall | Solution |
-|---------|----------|
+| --------- | ---------- |
 | `time.sleep()` in async code | Use `await asyncio.sleep()` |
 | Forgetting `await` on coroutine | Always await async functions |
 | Blocking I/O (requests, sqlite3) | Use async libraries (aiohttp, aiosqlite) |
@@ -130,6 +130,7 @@ except asyncio.TimeoutError:
 ## Animation Visualizations (from Video)
 
 The tutorial includes animated explanations of:
+
 1. **Event loop tick cycle** — how tasks yield and resume
 2. **Coroutine state machine** — suspended/resumed/completed states
 3. **Task scheduling** — `create_task` vs `gather` vs `as_completed`

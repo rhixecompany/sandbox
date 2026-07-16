@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | Awesome Python Scripts | <https://github.com/mahmoud/awesome-python-scripts> | curated utility script collection |
 | Python CLI Examples | <https://github.com/realpython/command-line-interfaces-python-argparse> | argparse examples |
 | Hitchhiker's Guide | <https://docs.python-guide.org/writing/structure> | canonical project structure |
@@ -27,6 +27,7 @@
 - Emerging 2026 standard for script packaging — supported by uv, hatch, pipx
 - Format: `# /// script` ... `# ///` with TOML content (dependencies, requires-python, [tool] table)
 - Example:
+
   ```python
   # /// script
   # requires-python = ">=3.11"
@@ -35,12 +36,14 @@
   import requests
   from rich.pretty import pprint
   ```
+
 - uv runs these with `uv run script.py` — auto-creates ephemeral env, installs deps
 - Can transition to full project with `pyproject.toml` when script grows
 
 ### Python 3.12/3.13/3.14: Version Guidance for 2026
 
 **Python 3.12 (Oct 2023)** — Cleanup release, now security-only (until Oct 2028):
+
 - Type parameter syntax (PEP 695): `class Stack[T]:` instead of `TypeVar`
 - F-strings unleashed (PEP 701): nested quotes, backslashes, multiline
 - Comprehension inlining (PEP 709): ~2x faster comprehensions, 11% real-world speedup
@@ -49,11 +52,13 @@
 - Better error messages (NameError suggests `self.`)
 
 **Python 3.13 (Oct 2024)** — Experimental foundations:
+
 - Free-threaded build (PEP 703) — experimental, separate `python3.13t` binary
 - JIT compiler (PEP 744) — experimental, copy-and-patch, not enabled by default
 - Many C extensions not thread-safe yet (NumPy needed patches)
 
 **Python 3.14 (Oct 2025)** — Delivery release (recommended for 2026):
+
 - Free-threading officially supported (PEP 779) — no longer experimental
 - JIT ships in binary releases
 - Template strings / t-strings (PEP 750)
@@ -97,6 +102,7 @@
   - Annotate function signatures (boundaries); let mypy infer locals
   - Use `# type: ignore` sparingly with specific error codes
 - pyproject.toml config:
+
   ```toml
   [tool.mypy]
   python_version = "3.12"
@@ -110,6 +116,7 @@
 - **Ruff replaces Black + Flake8 + isort + pyupgrade** — 800+ rules, runs in ms
 - Configured in `pyproject.toml` under `[tool.ruff]`
 - **Recommended 2026 baseline config**:
+
   ```toml
   [tool.ruff]
   line-length = 100
@@ -129,6 +136,7 @@
   quote-style = "double"
   docstring-code-format = true
   ```
+
 - Rule groups: E/F (pyflakes/pycodestyle), B (flake8-bugbear), I (isort), UP (pyupgrade), ANN (annotations), ARG (unused args), PTH (pathlib), ERA (eradicate)
 - Run: `uv run ruff check . --fix` then `uv run ruff format .`
 - Pre-commit: `uv run pre-commit run --all-files`
@@ -136,10 +144,12 @@
 ### Python Project Structure for Educational Repositories (2026)
 
 **For 18 standalone beginner scripts (current Python-projects):**
+
 - Keep flat structure — each script is independent, no shared package
 - Add `pyproject.toml` at root for tool config (ruff, mypy, pytest)
 - Use PEP 723 inline metadata in each script for standalone runnability
 - Example structure:
+
   ```
   Python-projects/
   ├── pyproject.toml           # tool config (ruff, mypy, pytest)
@@ -152,6 +162,7 @@
   ```
 
 **For growing projects (src layout):**
+
 ```
 my-project/
 ├── .python-version
@@ -168,6 +179,7 @@ my-project/
     ├── raw/
     └── processed/
 ```
+
 - `src/` layout improves imports, packaging, test isolation, type-checker config
 - uv init creates this by default
 
@@ -176,7 +188,7 @@ my-project/
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Python project structure | <https://docs.python-guide.org/writing/structure> | Guide |
 | argparse CLI | <https://realpython.com/command-line-interfaces-python-argparse> | Tutorial |
 | Typer docs | <https://typer.tiangolo.com/alternatives> | Docs |
@@ -205,7 +217,7 @@ my-project/
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Mutable default args | subtle bugs | `def foo(x=None): x = x or []` |
 | No `__main__` guard | unintended execution on import | always add guard |
 | Hardcoded paths | cross-platform breaks | `pathlib.Path(__file__).parent` |
@@ -250,7 +262,7 @@ my-project/
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Python docs | <https://docs.python.org/3/> | Language docs |
 | Typer docs | <https://typer.tiangolo.com/> | Modern Python CLI |
 | uv docs | <https://docs.astral.sh/uv/> | Fast Python package manager |

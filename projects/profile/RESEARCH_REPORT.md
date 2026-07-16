@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | Wagtail CMS | <https://github.com/wagtail/wagtail> | leading Django CMS; StreamField for blogs/content |
 | django-cms | <https://github.com/django-cms/django-cms> | enterprise Django CMS, mature plugin ecosystem |
 | djangocms-text-ckeditor5 | <https://github.com/django-cms/djangocms-text-ckeditor5> | CKEditor 5 integration for django-cms |
@@ -109,7 +109,7 @@ STORAGES = {
 ### Wagtail vs Custom Django CMS for Blog Platforms (2026)
 
 | Aspect | Wagtail | django-cms | Custom Django + CKEditor 5 |
-|--------|---------|------------|---------------------------|
+| -------- | --------- | ------------ | --------------------------- |
 | **Learning Curve** | Low (StreamField, great admin) | Medium (plugin architecture) | Low (just Django + field) |
 | **Flexibility** | High (StreamField blocks) | High (plugins, placeholders) | Maximum (build anything) |
 | **Content Editing** | Inline, preview, drafts | Frontend editing, plugins | Admin + CKEditor 5 widget |
@@ -127,7 +127,7 @@ STORAGES = {
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | django-storages GCS | <https://django-storages.readthedocs.io/en/latest/backends/gcloud.html> | Docs |
 | Cloud Run Django codelab | <https://codelabs.developers.google.com/codelabs/cloud-run-djangocms> | Tutorial |
 | GCS best practices | <https://cloud.google.com/storage/docs/best-practices> | Guide |
@@ -159,7 +159,7 @@ STORAGES = {
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | XSS via CKEditor | script injection | sanitize with bleach/nh3 server-side |
 | Missing `[google]` extra | `django-storages` fails | `pip install django-storages[google]` |
 | Static/media bucket confusion | ACL/caching chaos | separate buckets per purpose |
@@ -209,7 +209,7 @@ STORAGES = {
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Django Docs | <https://docs.djangoproject.com/en/4.2/> | Django 4.x documentation |
 | GCS Docs | <https://cloud.google.com/storage/docs> | GCS best practices |
 | django-ckeditor-5 | <https://github.com/hvlads/django-ckeditor-5> | CKEditor 5 integration |
@@ -225,6 +225,7 @@ STORAGES = {
 ## New Research Findings (2026-07-10)
 
 ### Query 1: Django 4.x + Google Cloud Storage media handling 2026
+
 - **STORAGES dict** is the modern API (Django 4.2+), replacing `DEFAULT_FILE_STORAGE` and `STATICFILES_STORAGE`
 - `django-storages[google]` package provides `storages.backends.gcloud.GoogleCloudStorage`
 - Critical settings: `GS_BUCKET_NAME`, `GS_CREDENTIALS` (service account), `GS_DEFAULT_ACL`, `GS_QUERYSTRING_AUTH`, `GS_IAM_SIGN_BLOB` for Cloud Run
@@ -232,6 +233,7 @@ STORAGES = {
 - `GS_BLOB_CHUNK_SIZE` for large uploads (must be multiple of 256KB)
 
 ### Query 2: CKEditor 5 integration with Django admin patterns
+
 - `django-ckeditor-5` (hvlads) is the active maintained package (v0.2.20)
 - Provides `CKEditor5Field`, `CKEditor5Widget`, custom storage via `CKEDITOR_5_FILE_STORAGE`
 - Configure via `CKEDITOR_5_CONFIGS` dict with toolbar, image, table, heading options
@@ -241,12 +243,14 @@ STORAGES = {
 - Server-side sanitization required: `bleach` or `nh3` — CKEditor 5 only does client-side
 
 ### Query 3: Django CMS blog patterns with cloud media storage
+
 - **Wagtail**: Best for content-heavy blogs; StreamField = flexible blocks; built-in image/document management with cloud storage backends
 - **django-cms**: Plugin architecture; `djangocms-text-ckeditor5` 0.48.0 (Apr 2026) has full CKEditor 5 parity including text-enabled plugins
 - **Custom Django**: Maximum control; `CKEditor5Field` + GCS storage + manual admin setup
 - For a profile/blog project, Wagtail or custom Django are lighter than django-cms
 
 ### Query 4: Docker + GCP deployment for Django applications
+
 - **Cloud Run** is the recommended serverless platform (not App Engine Flex)
 - **Cloud Build** with `cloudmigrate.yaml` for build → migrate → collectstatic → deploy
 - **Cloud SQL PostgreSQL** with Cloud SQL Auth Proxy (local) and built-in proxy (Cloud Run)
@@ -256,6 +260,7 @@ STORAGES = {
 - **Gunicorn** with Uvicorn workers for async: `gunicorn --worker-class uvicorn.workers.UvicornWorker`
 
 ### Query 5: Django collectstatic to GCS bucket configuration
+
 - Django 4.2+ uses `STORAGES["staticfiles"]` dict with `BACKEND` and `OPTIONS`
 - `GS_DEFAULT_ACL="publicRead"` + `GS_QUERYSTRING_AUTH=False` for public static assets
 - `GS_IS_GZIPPED=True` + `GZIP_CONTENT_TYPES` for automatic gzip
@@ -263,6 +268,7 @@ STORAGES = {
 - Run `collectstatic` in Cloud Build step or as Cloud Run Job
 
 ### Query 6: Wagtail vs custom Django CMS for blog platforms 2026
+
 - **Choose Wagtail if**: content editors need flexible page structures, built-in workflows, multi-site, search, image management
 - **Choose django-cms if**: complex plugin ecosystem needed, marketing integrations, versioning, multilingual built-in
 - **Choose custom Django + CKEditor 5 if**: simple blog, full control desired, team knows Django well, minimal dependencies
@@ -273,7 +279,7 @@ STORAGES = {
 ## Confidence Assessment
 
 | Metric | Score |
-|--------|-------|
+| -------- | ------- |
 | Source Diversity | 5/5 |
 | Recency (2026 sources) | 5/5 |
 | Factual Foundation | 5/5 |

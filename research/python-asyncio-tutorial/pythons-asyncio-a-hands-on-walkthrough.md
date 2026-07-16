@@ -42,7 +42,7 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 ### Definitions
 
 | Construct | Purpose |
-|---|---|
+| --- | --- |
 | `async def` | Defines a coroutine function |
 | `await` | Suspends execution of the calling coroutine until the awaited result is returned; yields control to the event loop |
 | `async for` | Iterates over an asynchronous iterator |

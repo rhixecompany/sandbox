@@ -3,7 +3,7 @@
 ## Test Framework
 
 | Layer | Tool | Scope |
-|-------|------|-------|
+| ------- | ------ | ------- |
 | Python Unit Tests | pytest + pytest-django | Models, views, forms |
 | Scrapy Tests | pytest + scrapy testing utilities | Spider output, pipelines |
 | Selenium Tests | pytest + Selenium WebDriver | Browser scraping |

@@ -8,7 +8,7 @@
 ## Core Documentation Files
 
 | File | Description |
-|------|-------------|
+| ------ | ------------- |
 | rest-api.md | Spot REST API – trading, account, market data |
 | web-socket-api.md | Spot WebSocket API |
 | web-socket-streams.md | Market Data WebSocket Streams |
@@ -22,7 +22,7 @@
 ## API Base URLs
 
 | Environment | URL |
-|-------------|-----|
+| ------------- | ----- |
 | Production REST | <https://api.binance.com> |
 | Production WS | wss://stream.binance.com:9443 |
 | Testnet REST | <https://testnet.binance.vision> |
@@ -44,7 +44,7 @@
 ## Rate Limits (Weight-based)
 
 | Limit Type | Weight |
-|------------|--------|
+| ------------ | -------- |
 | REQUEST_WEIGHT | 1200/min |
 | ORDERS | 10/sec, 100,000/day |
 | RAW_REQUESTS | 6,000/min |

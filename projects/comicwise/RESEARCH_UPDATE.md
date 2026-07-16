@@ -3,7 +3,7 @@
 ## Similar Open-Source Projects
 
 | Project | URL | Stack |
-|---------|-----|-------|
+| --------- | ----- | ------- |
 | **nextjs/saas-starter** | <https://github.com/nextjs/saas-starter> | Next.js + Postgres + Drizzle + Stripe + shadcn/ui ⭐15.8k |
 | **laribright/stripe-crashcourse** | <https://github.com/laribright/stripe-crashcourse> | Next.js + Drizzle + Stripe + PostgreSQL |
 | **burakorkmez/stripe-subscriptions** | <https://github.com/burakorkmez/stripe-subscriptions> | Next.js 14 + Prisma + MongoDB + Stripe + Kinde Auth |

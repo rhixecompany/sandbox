@@ -245,9 +245,9 @@ Use this table as a sample to track the progress of the upgrade across all proje
 
 | Project Name | Target Framework | Dependencies Updated | Builds Successfully | Tests Passing | Deployment Verified | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Project A | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ |  |
-| Project B | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ |  |
-| Project C | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ |  |
+| Project A | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
+| Project B | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
+| Project C | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
 
 > ✅ Mark each column as you complete the step for every project.
 

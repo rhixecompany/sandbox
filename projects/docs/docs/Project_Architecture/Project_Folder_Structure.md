@@ -32,7 +32,7 @@ docs/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Only `.md` files | ✅ Documentation-only project |
 | Has `Project_Architecture/` | ✅ Architecture documentation target |
 

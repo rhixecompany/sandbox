@@ -1,7 +1,7 @@
 # Validation Report — xamehi.tv
 
 | Gate | Status |
-|------|--------|
+| ------ | -------- |
 | Source AGENTS.md exists | ✅ PASS |
 | frontend/package.json has scripts & deps | ✅ PASS |
 | requirements.txt exists | ✅ PASS |

@@ -11,7 +11,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Backend Framework | Django 4.x + Django REST Framework (DRF) |
 | Frontend Framework | Next.js 16 (App Router) |
 | Language (Backend) | Python 3.10+ |

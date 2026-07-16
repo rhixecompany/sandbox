@@ -85,7 +85,7 @@ Django-Scrapy-Selenium/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Django apps** | lowercase | `apps/`, `home/`, `contrib/` |
 | **Docker compose files** | docker-compose.<env>.yml | `docker-compose.local.yml`, `docker-compose.production.yml` |
 | **Config files** | dotted-prefix | `.devcontainer/`, `.envs/` |
@@ -106,7 +106,7 @@ Django-Scrapy-Selenium/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Has `manage.py` | ✅ Django project |
 | Has `crawler/` | ✅ Scrapy crawler |
 | Has `api/` with Django apps | ✅ Django REST API |

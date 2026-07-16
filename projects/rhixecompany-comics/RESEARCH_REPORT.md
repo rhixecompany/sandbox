@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | Django + Next.js template | <https://github.com/nynvr/django-nextjs-postgresql-template> | Django 5.1 + DRF 3.15 + Next.js 15 + Docker |
 | Unfold Turbo | <https://github.com/unfoldadmin/turbo> | Django & Next.js boilerplate |
 | Django-Next.js Auth | <https://github.com/PikoCanFly/JWT-HTTPCookies-Django-DRF-NEXT.JS> | JWT + HttpOnly cookies; DRF + Next.js |
@@ -41,6 +41,7 @@
 ### Celery + Redis Production (2026)
 
 **Critical Settings (MUST CHANGE FROM DEFAULTS):**
+
 - `task_acks_late=True` — ack AFTER task completes, not before
 - `task_reject_on_worker_lost=True` — requeue tasks if worker dies mid-execution
 - `worker_prefetch_multiplier=1` — prevent worker from hoarding tasks
@@ -48,6 +49,7 @@
 - `task_acks_on_failure_or_timeout=True` — ack even on failure
 
 **Redis + Celery 5 Gotchas:**
+
 - `task_reject_on_worker_lost` does NOT work with Redis without `visibility_timeout` config
 - Default `visibility_timeout` is 1 hour — tasks running longer get redelivered unexpectedly
 - Workers stop consuming after Redis reconnection unless `--without-heartbeat --without-gossip --without-mingle` flags used
@@ -56,6 +58,7 @@
 - Retry with `max_retries` + exponential backoff
 
 **Deployment Patterns:**
+
 - During rolling deploy: tasks picked up but not finished VANISH if `task_acks_late=False`
 - 47 tasks lost in production incident — worker restart mid-execution = tasks gone
 - Use `task_reject_on_worker_lost=True` + proper `visibility_timeout` for reliable redelivery
@@ -80,6 +83,7 @@
 ### Tailwind CSS 4 + Radix UI Component Library Patterns
 
 **2026 Landscape:**
+
 1. **shadcn/ui** — default choice for React + Tailwind; CLI copies component source into your project; built on Radix primitives; full code ownership
 2. **Radix UI** — largest headless primitive library (28+ components); Radix Themes adds optional styled layer
 3. **daisyUI** — semantic class names (`btn btn-primary`), 35+ built-in themes, framework-agnostic
@@ -88,6 +92,7 @@
 6. **Spell UI** — motion-first components (Motion/Framer Motion), shadcn-compatible CLI
 
 **Radix + Tailwind CSS v4 Integration:**
+
 - Radix Themes uses `radix` CSS layer; Tailwind utilities in `utilities` layer
 - Order CSS layers: `@layer base < radix < utilities` so Tailwind overrides Radix
 - Use `@import "@radix-ui/themes/styles.css";` then Tailwind imports
@@ -97,6 +102,7 @@
 ### Docker Compose Multi-Service Orchestration Django + Next.js
 
 **2026 Best Practices:**
+
 - Use `docker compose` (v2, space not hyphen) — legacy binary deprecated
 - Compose spec v5.0.0 (late 2025) adds `include` directive for modular compose files
 - Separate `docker-compose.yml` (dev) and `docker-compose.prod.yml` (prod)
@@ -113,7 +119,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Next.js 16 | <https://nextjs.org/docs> | Docs |
 | Next.js Server/Client Components | <https://nextjs.org/docs/app/getting-started/server-and-client-components> | Guide |
 | Celery + Django | <https://docs.celeryq.dev/en/stable/django/> | Integration Guide |
@@ -145,7 +151,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | API field drift | runtime type mismatches | generate TS types from OpenAPI |
 | Celery `task_acks_late=False` | tasks vanish on worker restart | set `task_acks_late=True` |
 | Celery visibility timeout | duplicate executions | keep > longest task; ETA < timeout |
@@ -202,7 +208,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Next.js 16 Docs | <https://nextjs.org/docs> | App Router docs |
 | Next.js Server Components | <https://nextjs.org/docs/app/getting-started/server-and-client-components> | Server/Client Components guide |
 | Next.js Server Actions | <https://nextjs.org/docs/app/guides/forms> | Forms & mutations |

@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | django-react-ecommerce | <https://github.com/aishwaryaw/E-commerce-website-using-React-and-Django> | similar Django + React ecommerce pattern |
 | JustDjango PayPal guide | <https://justdjango.com/blog/django-react-paypal-payments> | PayPal webhook + Django integration |
 | multivendor ecommerce DRF | <https://dev.to/destinyfranks/build-a-multivendor-e-commerce-website-using-django-react-django-rest-framework-4115> | multivendor ecommerce with DRF + React |
@@ -80,6 +80,7 @@
 ### Django + React Dual-Server Development Proxy Configuration (2024-2025)
 
 - **Vite (React 18 default)**: Configure `server.proxy` in `vite.config.js`/`vite.config.ts`
+
   ```js
   export default defineConfig({
     server: {
@@ -93,6 +94,7 @@
     },
   })
   ```
+
 - **Environment Variables**: Use `VITE_API_BASE_URL` in `.env` for production API URL; proxy only active in dev (`npm run dev`)
 - **CORS (Django)**: `django-cors-headers` — `CORS_ALLOWED_ORIGINS = ['http://localhost:5173']` (Vite default), `CORS_ALLOW_CREDENTIALS = True` for cookies
 - **CSRF**: Django sets `csrftoken` cookie; frontend reads via `document.cookie` and sends `X-CSRFToken` header on mutating requests
@@ -102,8 +104,9 @@
 ### PostgreSQL Ecommerce Schema Patterns (Products, Orders, Carts)
 
 **Core Tables**:
+
 | Table | Key Columns | Notes |
-|-------|-------------|-------|
+| ------- | ------------- | ------- |
 | `users` (Custom User) | `id`, `email`, `password`, `first_name`, `last_name`, `is_staff` | Extend `AbstractUser`; email as USERNAME_FIELD |
 | `categories` | `id`, `name`, `slug`, `description`, `parent_id` (self-FK) | Hierarchical categories via MPTT or recursive CTE |
 | `products` | `id`, `category_id`, `name`, `slug`, `description`, `price`, `stock`, `is_active`, `created_at` | `price` = `DecimalField(max_digits=10, decimal_places=2)`; index on `category_id`, `is_active` |
@@ -115,13 +118,15 @@
 | `order_items` | `id`, `order_id`, `product_id`, `variant_id`, `product_name`, `variant_name`, `quantity`, `unit_price`, `total_price` | Denormalize name/price for historical accuracy |
 | `payments` | `id`, `order_id`, `provider` (paypal/stripe), `provider_id`, `amount`, `currency`, `status`, `raw_response` (JSONB) | Links to PayPal capture_id; webhook updates status |
 
-**Indexes**: 
+**Indexes**:
+
 - `products`: `(category_id, is_active)`, `(slug)` unique
 - `orders`: `(user_id, created_at)`, `(paypal_order_id)` unique
 - `cart_items`: `(cart_id, product_id, variant_id)` unique
 - `order_items`: `(order_id)`
 
-**Django ORM Optimizations**: 
+**Django ORM Optimizations**:
+
 - `select_related('category')` on product queries
 - `prefetch_related('images', 'variants')` for product detail
 - `annotate()` for cart totals, order counts
@@ -129,8 +134,10 @@
 ### DRF API Versioning and Pagination Best Practices
 
 **Versioning** (DRF built-in):
+
 - **Recommended**: `URLPathVersioning` — `/api/v1/products/`, `/api/v2/products/`
 - **Settings**:
+
   ```python
   REST_FRAMEWORK = {
       'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
@@ -139,18 +146,22 @@
       'VERSION_PARAM': 'version',
   }
   ```
+
 - **URLConf**: `path('api/v1/', include('api.v1.urls', namespace='v1'))`
 - **Serializer Context**: Include `request` in serializer context for version-aware hyperlinks
 - **Deprecation**: Use `DeprecationWarning` headers; sunset headers for deprecated versions
 
 **Pagination**:
+
 - **Global Default** (settings):
+
   ```python
   REST_FRAMEWORK = {
       'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
       'PAGE_SIZE': 20,
   }
   ```
+
 - **Per-View Override**: `pagination_class = PageNumberPagination` + `page_size = 50`
 - **Client Control**: `page_size_query_param = 'page_size'` + `max_page_size = 100`
 - **Styles**: `PageNumberPagination` (most common), `LimitOffsetPagination`, `CursorPagination` (for large datasets/real-time)
@@ -161,7 +172,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | DRF API Versioning | <https://oneuptime.com/blog/post/2026-02-02-django-api-versioning/> | Guide |
 | DRF Versioning Docs | <https://www.django-rest-framework.org/api-guide/versioning> | Docs |
 | DRF Pagination | <https://www.django-rest-framework.org/api-guide/pagination> | Docs |
@@ -194,7 +205,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | No API versioning | breaking changes affect clients | use `/api/v1/` from day one |
 | PayPal webhook unverified | fraudulent order processing | verify webhook signature via PayPal SDK |
 | CORS misconfiguration | frontend can't reach API | add django-cors-headers; whitelist origins |
@@ -245,7 +256,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | DRF Docs | <https://www.django-rest-framework.org/> | DRF official docs |
 | Redux Toolkit | <https://redux-toolkit.js.org/> | Redux Toolkit docs |
 | RTK Query | <https://redux-toolkit.js.org/rtk-query/overview> | RTK Query docs |
@@ -273,7 +284,7 @@
 ### Implementation Priorities
 
 | Priority | Task | Effort |
-|----------|------|--------|
+| ---------- | ------ | -------- |
 | 1 | Set up Django project with DRF, SimpleJWT, CORS, PostgreSQL | Medium |
 | 2 | Configure API versioning (`/api/v1/`) + pagination defaults | Low |
 | 3 | Build core models: User, Category, Product, Cart, Order, Payment | High |
@@ -288,7 +299,7 @@
 ### Tech Version Pinning (2026)
 
 | Package | Version | Notes |
-|---------|---------|-------|
+| --------- | --------- | ------- |
 | Django | 5.0+ | LTS preferred |
 | DRF | 3.15+ | |
 | SimpleJWT | 5.3+ | |

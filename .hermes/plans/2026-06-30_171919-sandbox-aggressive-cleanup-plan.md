@@ -3,6 +3,7 @@ status: completed
 ---
 
 # SandBox Aggressive Cleanup & Consolidation Plan
+>
 > **Created:** 2026-06-28  
 > **Completed:** 2026-06-28  
 > **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, .hermes/, docs/, root .md files  
@@ -398,7 +399,7 @@ Phase 0 → Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 5 → Phase 6 
 ## Disk Savings Estimate
 
 | Area | Current Size | After | Savings |
-|------|-------------|-------|---------|
+| ------ | ------------- | ------- | --------- |
 | judge_results/ | 120KB | ~90KB | ~30KB |
 | thoughts/ | ~40KB | 0 | ~40KB |
 | tool/ | ~25KB | 0 | ~25KB |

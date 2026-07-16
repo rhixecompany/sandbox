@@ -107,7 +107,7 @@ npm run build
 ## Troubleshooting
 
 | Problem | Solution |
-|---------|----------|
+| --------- | ---------- |
 | `ModuleNotFoundError: psycopg2` | Install PostgreSQL dev libraries |
 | Selenium fails | Install ChromeDriver matching Chrome version |
 | Celery won't connect | Ensure Redis is running: `redis-server` |

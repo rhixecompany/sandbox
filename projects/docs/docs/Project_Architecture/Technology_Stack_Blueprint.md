@@ -22,7 +22,7 @@ A documentation-only project containing architectural blueprints, dependency aud
 ### Languages & Formats
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | Markdown | — | Primary documentation format |
 | JSON | — | Configuration files |
 | YAML | — | VS Code settings |
@@ -30,7 +30,7 @@ A documentation-only project containing architectural blueprints, dependency aud
 ### Contents
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `docs/Project_Architecture/Project_Folder_Structure.md` | Folder structure reference |
 | `docs/Project_Architecture/Project_Architecture_Blueprint.md` | Architecture blueprint |
 | `DEPENDENCY_AUDIT.md` | Dependency audit report |
@@ -80,7 +80,7 @@ docs/
 ## Tools
 
 | Tool | Purpose |
-|---|---|
+| --- | --- |
 | VS Code | Primary editor |
 | Markdown linters | Quality control (inherited from root) |
 | Git | Version control for docs |

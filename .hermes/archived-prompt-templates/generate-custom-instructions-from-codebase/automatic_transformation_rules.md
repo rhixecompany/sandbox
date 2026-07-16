@@ -28,6 +28,7 @@ ${VALIDATION_REQUIRED == "true" ?
 
 ${CHANGE_FOCUS == "API Changes" || MIGRATION_TYPE == "Framework Version" ?
   "[API_CORRESPONDENCE_TABLE]
+
    | Old API   | New API   | Notes     | Example        |
    | --------- | --------- | --------- | -------------- |
    | [OLD_API] | [NEW_API] | [CHANGES] | [CODE_EXAMPLE] | " : ""} |

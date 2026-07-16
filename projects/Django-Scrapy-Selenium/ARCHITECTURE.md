@@ -70,7 +70,7 @@ A comprehensive web crawling and content management platform built with Django 5
 ## Component Relationships
 
 | Component | Responsibility | Dependencies |
-|-----------|---------------|--------------|
+| ----------- | --------------- | -------------- |
 | `config/` | Django settings, URLs, Celery config | django-environ, celery |
 | `api/` | Django applications (models, views, API) | Django, DRF, PostgreSQL |
 | `crawler/` | Scrapy spiders and crawling logic | Scrapy, Selenium |
@@ -83,7 +83,7 @@ A comprehensive web crawling and content management platform built with Django 5
 ## Dependencies
 
 | Package | Version | Purpose |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | django | 5.0 | Web framework |
 | scrapy | Latest | Web crawling framework |
 | selenium | Latest | Browser automation |

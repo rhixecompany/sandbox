@@ -35,7 +35,7 @@ docs/
 ## Contents
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `docs/Project_Architecture/Project_Folder_Structure.md` | Folder structure reference across projects |
 | `docs/Project_Architecture/Project_Architecture_Blueprint.md` | Architecture blueprint reference |
 | `DEPENDENCY_AUDIT.md` | Audit of project dependencies across the workspace |
@@ -48,7 +48,7 @@ docs/
 ## Tools
 
 | Tool | Purpose |
-|---|---|
+| --- | --- |
 | **VS Code** | Primary editor |
 | **Markdown linters** | Quality control (inherited from root) |
 | **Git** | Version control for documentation |

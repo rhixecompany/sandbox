@@ -11,7 +11,7 @@ A streaming platform with a Django REST backend and React 17 frontend using Mate
 ### Backend (Django/DRF)
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django (latest) |
 | **API Framework** | Django REST Framework (DRF) |
 | **Auth** | SimpleJWT (djangorestframework-simplejwt) |
@@ -23,7 +23,7 @@ A streaming platform with a Django REST backend and React 17 frontend using Mate
 ### Frontend (React 17)
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **UI Framework** | React ^17.0.1 |
 | **UI Library** | Material-UI ^4.12.4, React Bootstrap |
 | **State Management** | Redux ^4.0.5, redux-thunk |

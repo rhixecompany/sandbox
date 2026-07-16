@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | codingforentrepreneurs/Web-Scraping-with-Django-Celery | <https://github.com/codingforentrepreneurs/Web-Scraping-with-Django-Celery> | Django + Celery scraping scheduler |
 | scrapy-plugins/scrapy-playwright | <https://github.com/scrapy-plugins/scrapy-playwright> | Official Scrapy + Playwright integration |
 | scrapfly/scrapfly-scrapers | <https://github.com/scrapfly/scrapfly-scrapers> | Production scraping patterns 2026 |
@@ -66,7 +66,7 @@
 ### Playwright vs Selenium for Django Scraping (2026)
 
 | Dimension | Selenium 4.x | Playwright |
-|-----------|--------------|------------|
+| ----------- | -------------- | ------------ |
 | **Protocol** | HTTP/REST (W3C WebDriver) | WebSocket (CDP) — persistent connection |
 | **Wait mechanism** | External polling (`WebDriverWait`) | Internal event loop (`requestAnimationFrame`) |
 | **Speed** | Baseline | 2-3x faster (2.3x in benchmarks) |
@@ -111,7 +111,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Celery + Django | <https://docs.celeryq.dev/en/stable/django/> | Integration Guide |
 | Scrapy Architecture | <https://docs.scrapy.org/en/latest/topics/architecture.html> | Official Architecture |
 | Scrapy + Playwright | <https://scrapfly.io/blog/posts/web-scraping-dynamic-websites-with-scrapy-playwright> | Tutorial 2026 |
@@ -145,7 +145,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Scrapy + Django tight coupling | hard to test/debug | spiders in `crawler/spiders/`; called from Celery |
 | Selenium `webdriver` flag detected | CAPTCHA / blocking | override via CDP; use undetected-chromedriver |
 | Celery broker not running | tasks silently lost | always verify Redis/RabbitMQ is up |
@@ -199,7 +199,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Scrapy Docs | <https://docs.scrapy.org/> | Scrapy framework docs |
 | Scrapy Architecture | <https://docs.scrapy.org/en/latest/topics/architecture.html> | Core architecture diagram |
 | Scrapy Playwright | <https://github.com/scrapy-plugins/scrapy-playwright> | Official integration |

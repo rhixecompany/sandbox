@@ -9,7 +9,7 @@ A full-featured comic/manga reading platform built with Next.js 15, featuring Pr
 ## Technology Stack
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Framework** | Next.js ^15.3.3 (App Router) |
 | **Language** | TypeScript ^5 (strict) |
 | **UI** | React 19, Radix UI, shadcn/ui, Tailwind CSS 3.4 |
@@ -145,7 +145,7 @@ npm run clean            # Clean build artifacts
 ## Deployment
 
 | Platform | Notes |
-|---|---|
+| --- | --- |
 | **Vercel** | Primary deployment target |
 | **Docker** | Available as alternative |
 

@@ -95,7 +95,7 @@ rhixe_scans/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Django apps** | lowercase | `api/`, `home/`, `libary/`, `users/` |
 | **Next.js source** | kebab-case | `src/auth.config.ts`, `tailwind.config.ts` |
 | **Docker compose** | docker-compose.<env>.yml | `docker-compose.local.yml` |
@@ -118,7 +118,7 @@ rhixe_scans/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Has `backend/manage.py` | ✅ Django project |
 | Has `next.config.ts` | ✅ Next.js frontend |
 | Has `backend/crawler/` | ✅ Scrapy crawler |

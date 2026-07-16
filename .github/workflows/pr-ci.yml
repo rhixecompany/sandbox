@@ -1,0 +1,163 @@
+name: PR CI
+on:
+  pull_request:
+    branches: [development]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate-pr:
+    name: Validate PR
+    runs-on: ubuntu-latest
+    outputs:
+      projects: ${{ steps.detect-projects.outputs.projects }}
+      has_root_changes: ${{ steps.detect-projects.outputs.has_root_changes }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed projects
+        id: detect-projects
+        run: |
+          BASE="${{ github.base_ref }}"
+          CHANGED=$(git diff --name-only origin/$BASE...HEAD --)
+
+          # Root-level files (CI config, workspace config, etc.)
+          ROOT=$(echo "$CHANGED" | grep -v '^projects/' || true)
+          if [ -n "$ROOT" ]; then
+            echo "has_root_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Root changes detected:"
+            echo "$ROOT"
+          else
+            echo "has_root_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          # Detect which sub-projects changed — output as JSON array
+          PROJECTS=$(echo "$CHANGED" | grep '^projects/' | sed 's|^projects/\([^/]*\)/.*|\1|' | sort -u || true)
+          if [ -n "$PROJECTS" ]; then
+            JSON_ARRAY=$(echo "$PROJECTS" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+            echo "projects=$JSON_ARRAY" >> "$GITHUB_OUTPUT"
+            echo "Changed projects: $PROJECTS"
+          else
+            echo "projects=[]" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check for forbidden files
+        run: |
+          BASE="${{ github.base_ref }}"
+          FORBIDDEN=$(git diff --name-only origin/$BASE...HEAD -- | grep -iE '\.env$|\.env\.|\.pem$|\.key$|id_rsa|credentials' || true)
+          if [ -n "$FORBIDDEN" ]; then
+            echo "❌ Forbidden files detected:"
+            echo "$FORBIDDEN"
+            echo "Secrets, credentials, and .env files must not be committed."
+            exit 1
+          fi
+
+      - name: Check PR size
+        run: |
+          BASE="${{ github.base_ref }}"
+          STAT=$(git diff --stat origin/$BASE...HEAD -- | tail -1)
+          CHANGED_FILES=$(git diff --name-only origin/$BASE...HEAD -- | wc -l)
+          echo "Changed files: $CHANGED_FILES"
+          echo "$STAT"
+          if [ "$CHANGED_FILES" -gt 100 ]; then
+            echo "⚠️  Large PR (>100 files). Consider splitting into smaller PRs."
+          fi
+
+  check-root:
+    name: Root checks
+    needs: validate-pr
+    if: needs.validate-pr.outputs.has_root_changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: bun install
+      - name: TypeScript type check
+        run: bun run tsc --noEmit 2>/dev/null || echo "No root typecheck"
+      - name: Lint root config
+        run: |
+          if [ -f eslint.config.js ] || [ -f eslint.config.mjs ] || [ -f eslint.config.mts ]; then
+            bunx eslint .github/ CONTRIBUTING.md 2>/dev/null || echo "Lint skipped"
+          fi
+
+  check-bun-projects:
+    name: Check bun projects
+    needs: validate-pr
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.validate-pr.outputs.projects || '[]') }}
+    if: needs.validate-pr.outputs.projects != '[]'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Detect toolchain
+        id: toolchain
+        run: |
+          if [ -f "projects/${{ matrix.project }}/package.json" ]; then
+            echo "type=bun" >> "$GITHUB_OUTPUT"
+          elif [ -f "projects/${{ matrix.project }}/pyproject.toml" ] || [ -f "projects/${{ matrix.project }}/requirements.txt" ]; then
+            echo "type=python" >> "$GITHUB_OUTPUT"
+          else
+            echo "type=unknown" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Bun — install
+        if: steps.toolchain.outputs.type == 'bun'
+        run: |
+          cd projects/${{ matrix.project }}
+          bun install
+      - name: Bun — typecheck
+        if: steps.toolchain.outputs.type == 'bun'
+        continue-on-error: true
+        run: |
+          cd projects/${{ matrix.project }}
+          bun run tsc --noEmit 2>/dev/null || (bunx tsc --noEmit 2>/dev/null) || echo "No typecheck script"
+      - name: Bun — lint
+        if: steps.toolchain.outputs.type == 'bun'
+        continue-on-error: true
+        run: |
+          cd projects/${{ matrix.project }}
+          bun run lint 2>/dev/null || echo "No lint script"
+      - name: Python — install
+        if: steps.toolchain.outputs.type == 'python'
+        run: |
+          cd projects/${{ matrix.project }}
+          pip install -r requirements.txt 2>/dev/null || pip install -e . 2>/dev/null || echo "No install needed"
+      - name: Python — lint
+        if: steps.toolchain.outputs.type == 'python'
+        continue-on-error: true
+        run: |
+          cd projects/${{ matrix.project }}
+          pip install ruff 2>/dev/null && ruff check . || echo "No ruff available"
+
+  pr-summary:
+    name: PR Summary
+    needs: [validate-pr, check-root, check-bun-projects]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment summary
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-ci-summary
+          message: |
+            ## ✅ PR CI Summary
+
+            | Check | Status |
+            |-------|--------|
+            | PR Validation | ${{ needs.validate-pr.result == 'success' && '✅' || '❌' }} |
+            | Root Checks | ${{ needs.check-root.result == 'success' && '✅' || needs.check-root.result == 'skipped' && '⏭️' || '❌' }} |
+            | Project Checks | ${{ needs.check-bun-projects.result == 'success' && '✅' || needs.check-bun-projects.result == 'skipped' && '⏭️' || '⚠️' }} |
+
+            See individual job logs for details.

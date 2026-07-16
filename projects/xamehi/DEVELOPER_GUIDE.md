@@ -75,7 +75,7 @@ xamehi/
 ## API Endpoints
 
 | Endpoint | Method | Description |
-|----------|--------|-------------|
+| ---------- | -------- | ------------- |
 | `/` | GET | Health check |
 | `/convert?from_currency=USD&to_currency=EUR` | GET | Currency exchange rate |
 | `/news` | GET | Latest crypto news |
@@ -83,7 +83,7 @@ xamehi/
 ## Available Scripts
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `npm start` | Start React dev server |
 | `npm run server` | Start Express API with nodemon |
 | `npm run build` | Build React for production |

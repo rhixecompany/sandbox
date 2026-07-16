@@ -11,7 +11,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Backend Framework | Django 4.x |
 | REST API | Django REST Framework (DRF) |
 | Language | Python 3.10+ |

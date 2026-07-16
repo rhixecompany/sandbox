@@ -22,7 +22,7 @@ Copilot Studio  ─── POST /mcp ──►  MCP Server  ──► Tool Handle
 ### Key features
 
 | Feature | Detail |
-|---------|--------|
+| --------- | -------- |
 | **Protocol** | MCP (Model Context Protocol) v2025-03-26 |
 | **Transport** | Streamable HTTP (inline + SSE streaming) |
 | **RPC Format** | JSON-RPC 2.0 |
@@ -74,7 +74,7 @@ Accepts MCP method calls. Supports both inline and SSE streaming responses.
 **Request headers:**
 
 | Header | Value | Required |
-|--------|-------|----------|
+| -------- | ------- | ---------- |
 | `Content-Type` | `application/json` | Yes |
 | `x-ms-agentic-protocol` | `mcp` | Yes |
 | `Accept` | `application/json` or `text/event-stream` | No (default: `application/json`) |
@@ -82,7 +82,7 @@ Accepts MCP method calls. Supports both inline and SSE streaming responses.
 **Supported MCP methods:**
 
 | Method | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `initialize` | Protocol handshake; returns server capabilities |
 | `tools/list` | Lists all available tools with their input schemas |
 | `tools/call` | Invokes a tool by name with provided arguments |
@@ -108,7 +108,7 @@ Search for customers by name, email, or phone.
 **Parameters:**
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+| ----------- | ------ | ---------- | ------------- |
 | `query` | string | Yes | Search query |
 | `limit` | integer | No | Max results (1–50, default: 10) |
 | `status` | string | No | Filter: `active`, `inactive`, `lead`, `any` |

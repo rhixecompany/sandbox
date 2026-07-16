@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 **Current Configuration:**
 
 | Setting | Value | Notes |
-|---------|-------|-------|
+| --------- | ------- | ------- |
 | `SECRET_KEY` | Hardcoded (development) | **Must be moved to env var for production** |
 | `DEBUG` | `True` | Set `False` in production |
 | `ALLOWED_HOSTS` | `[]` | Must be configured before deployment |
@@ -342,7 +342,7 @@ src/
 ### Key Components
 
 | Component | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `Header.js` | Navigation bar |
 | `Footer.js` | Site footer |
 | `Movie.js` | Comic card component |
@@ -357,7 +357,7 @@ src/
 ### Screens
 
 | Screen | Route | Purpose |
-|--------|-------|---------|
+| -------- | ------- | --------- |
 | `HomeScreen.js` | `/` | Landing page with featured content |
 | `MovieScreen.js` | `/comic/:id` | Comic detail page |
 | `MoviesScreen.js` | `/comics` | Comic listing with filters |
@@ -372,7 +372,7 @@ src/
 ## 5. Current Repository Status
 
 | Component | Status | Notes |
-|-----------|--------|-------|
+| ----------- | -------- | ------- |
 | Django project scaffold | ✅ | Created with django-admin |
 | Settings/URLs | ✅ | Basic config, needs expansion |
 | Manga apps | ❌ | Need `comics` and `users` apps |

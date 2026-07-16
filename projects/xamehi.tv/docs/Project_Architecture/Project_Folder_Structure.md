@@ -63,7 +63,7 @@ xamehi.tv/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Django** | standard | `manage.py`, `player/`, `static/` |
 | **React** | kebab-case | `frontend/src/actions/`, `frontend/src/screens/` |
 | **Config** | dotted-prefix | `.github/`, `.vscode/` |
@@ -84,7 +84,7 @@ xamehi.tv/
 ## Project Type Indicators
 
 | Indicator | Value |
-|---|---|
+| --- | --- |
 | Has `manage.py` | ✅ Django project |
 | Has `frontend/src/` | ✅ React frontend |
 | Has `player/` | ✅ Video player module |

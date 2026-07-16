@@ -13,7 +13,7 @@ A collection of 18 standalone Python utility scripts for common automation, data
 ## Script Index
 
 | # | Script | Category | Dependencies | Lines |
-|---|--------|----------|-------------|-------|
+| --- | -------- | ---------- | ------------- | ------- |
 | 1 | site_connectivity_checker.py | Network | requests | ~80 |
 | 2 | server_status_checker.py | Network | socket (stdlib) | ~60 |
 | 3 | qr_code_generator.py | Image | qrcode, Pillow | ~70 |
@@ -271,7 +271,7 @@ yt-dlp>=2023.0.0
 ### Common Issues
 
 | Issue | Solution |
-|-------|----------|
+| ------- | ---------- |
 | `ModuleNotFoundError` | Install missing dependency with pip |
 | `ConnectionError` | Check internet connection and URL validity |
 | `PermissionError` | Check file write permissions |

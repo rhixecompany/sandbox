@@ -12,7 +12,7 @@ The **Binance API** enables programmatic interaction with Binance via Python to 
 ## Python Libraries
 
 | Library | Description |
-|---------|-------------|
+| --------- | ------------- |
 | python-binance | Most popular; strong community support |
 | CCXT | Supports 100+ exchanges; multi-language |
 | Binance Connector | Official Binance library |
@@ -55,7 +55,7 @@ bsm.start()
 ## Key Endpoints
 
 | Endpoint | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | GET /api/v3/account | Account balances |
 | GET /api/v3/ticker/price | Latest price |
 | POST /api/v3/order | Place order |

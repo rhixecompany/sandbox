@@ -11,7 +11,7 @@ A legacy dual-backend application combining Django REST Framework (Python) and E
 ### Backend 1: Django + DRF
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django (latest) |
 | **API Framework** | Django REST Framework (DRF) |
 | **Language** | Python ^3.10+ |
@@ -21,7 +21,7 @@ A legacy dual-backend application combining Django REST Framework (Python) and E
 ### Backend 2: Express.js
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Framework** | Express ^4.18.1 |
 | **Language** | JavaScript (CommonJS) |
 | **Middleware** | CORS |
@@ -30,7 +30,7 @@ A legacy dual-backend application combining Django REST Framework (Python) and E
 ### Frontend: React 18 (CRA)
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **UI Framework** | React ^18.2.0 |
 | **HTTP Client** | Axios ^0.27.2 |
 | **Build Tool** | Create React App (react-scripts 5.0.1) |
@@ -123,7 +123,7 @@ NODE_ENV=production node index.js
 ## Service Ports
 
 | Service | Port | Description |
-|---|---|---|
+| --- | --- | --- |
 | **React Frontend** | 3000 | Development server (CRA) |
 | **Express Backend** | 5000 | Node.js API (nodemon) |
 | **Django Backend** | 8000 | Python REST API |

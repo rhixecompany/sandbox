@@ -5,7 +5,7 @@
 ### Web Interface (htmx/HTML)
 
 | URL Pattern | Method | Purpose | Template |
-|-------------|--------|---------|----------|
+| ------------- | -------- | --------- | ---------- |
 | `/` | GET | Home page with recent comics | `pages/home.html` |
 | `/comics/` | GET | Browse comics with filters | `comics/list.html` |
 | `/comics/<id>/` | GET | Comic detail | `comics/detail.html` |
@@ -16,7 +16,7 @@
 ### htmx Endpoints (Partial HTML)
 
 | URL Pattern | htmx Trigger | Purpose |
-|-------------|--------------|---------|
+| ------------- | -------------- | --------- |
 | `GET /comics/filter/` | htmx:form | Filter comic list |
 | `GET /comics/page/<n>/` | htmx:click | Paginate results |
 | `POST /scrape/run/` | htmx:submit | Trigger scrap job |
@@ -85,7 +85,7 @@ cleanup_old_data.delay()             # Retention cleanup
 ### Django Admin
 
 | URL | Description |
-|-----|-------------|
+| ----- | ------------- |
 | `/admin/` | Admin dashboard |
 | `/admin/scraping/comic/` | Manage scraped comics |
 | `/admin/scraping/chapter/` | Manage chapters |

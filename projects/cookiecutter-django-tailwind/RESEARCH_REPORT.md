@@ -42,7 +42,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Django 5.x settings | <https://docs.djangoproject.com/en/5.2/topics/settings/> | Docs |
 | django-tailwind CLI | <https://django-tailwind.readthedocs.io/en/latest/installation.html> | Guide |
 | Django deploy checklist | <https://docs.djangoproject.com/en/6.0/howto/deployment/checklist> | Checklist |
@@ -62,7 +62,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Single settings.py | Security leaks, env confusion | Use 3-tier settings |
 | django-tailwind npm drift | Broken builds | Use standalone CLI binary |
 | Missing `check --deploy` | Production regressions | Run in CI/deploy pipeline |
@@ -99,7 +99,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Official Docs | <https://docs.djangoproject.com/en/5.2/> | Django 5.x documentation |
 | django-tailwind | <https://django-tailwind.readthedocs.io/> | Tailwind CSS integration |
 | Cookiecutter Django | <https://github.com/cookiecutter/cookiecutter-django> | Reference template |
@@ -112,6 +112,7 @@
 ### 1. Django 5.x Cookiecutter Template Best Practices 2026
 
 **Cookiecutter-Django 2026.07.03 (Latest Release — Jul 4, 2026):**
+
 - Supports Django 6.0 (latest), Python 3.14
 - 12-Factor settings via `django-environ` — base/local/production layering is default
 - Docker Compose for dev + production (Traefik + Let's Encrypt)
@@ -124,6 +125,7 @@
 - Active maintenance: 842 releases, 13.6k stars, 3.1k forks
 
 **Key Template Structure (from cookiecutter-django):**
+
 ```
 {{cookiecutter.project_slug}}/
 ├── config/
@@ -149,6 +151,7 @@
 **Versioning Strategy:** Calendar versioning (YYYY.MM.DD) — matches cookiecutter-django's release cadence. Template version bumps with each Django release.
 
 **Maintenance Best Practices:**
+
 - Fork and customize rather than modify upstream
 - Track upstream releases via GitHub releases/RSS
 - Use `cookiecutter --checkout` to test new template versions
@@ -160,6 +163,7 @@
 ### 2. django-tailwind + Alpine.js + htmx Integration Patterns
 
 **django-tailwind-cli (May 2026 Release):**
+
 - Standalone Tailwind CSS CLI binary — **eliminates npm/node_modules entirely**
 - Install via `pip install django-tailwind-cli`
 - Runs via `python manage.py tailwind build` or `python manage.py tailwind start` (watch mode)
@@ -184,6 +188,7 @@
    - Configure `content` paths in `tailwind.config.js` to include Django template dirs
 
 4. **Project Structure for HTMX/Alpine:**
+
    ```
    templates/
    ├── base.html          # Alpine x-data, HTMX config, Tailwind base
@@ -205,15 +210,16 @@
 ### 3. Django Project Template Maintenance & Versioning Strategies
 
 **Cookiecutter-Django Versioning:**
+
 - Calendar versioning: `YYYY.MM.DD` (e.g., `2026.07.03`)
 - Tracks Django LTS releases — template updates with each Django version
-- Changelog at: https://github.com/cookiecutter/cookiecutter-django/blob/main/CHANGELOG.md
+- Changelog at: <https://github.com/cookiecutter/cookiecutter-django/blob/main/CHANGELOG.md>
 
 **Template Maintenance Strategies:**
 
 1. **Fork & Customize:** Fork cookiecutter-django, add project-specific options to `cookiecutter.json`, customize template files
 2. **Upstream Sync:** Periodically rebase fork against upstream `main` branch
-3. **Generated Project Upgrades:** 
+3. **Generated Project Upgrades:**
    - No automated upgrade path for generated projects
    - Best practice: Generate new project from updated template, diff against existing, apply changes manually
    - Use `cookiecutter --replay` to regenerate with same inputs
@@ -221,6 +227,7 @@
 5. **Testing Template Changes:** Use cookiecutter-django's `tests/` with pytest + `pytest-cookies` for template validation
 
 **Django Project Versioning:**
+
 - Use `versioneer` or `setuptools-scm` for auto-versioning from git tags
 - Semantic versioning for the generated project (not the template)
 - Template version tracked separately in project README
@@ -275,6 +282,7 @@ loglevel = "info"
 ```
 
 **Docker Production Setup:**
+
 ```dockerfile
 # Multi-stage build
 FROM python:3.14-slim AS builder
@@ -293,6 +301,7 @@ CMD ["gunicorn", "--config", "gunicorn.conf.py", "config.wsgi:application"]
 ```
 
 **Key Production Settings (Django 5/6 Checklist):**
+
 - `DEBUG = False`
 - `ALLOWED_HOSTS` from environment
 - `SECURE_SSL_REDIRECT = True`
@@ -307,6 +316,7 @@ CMD ["gunicorn", "--config", "gunicorn.conf.py", "config.wsgi:application"]
 - Run `python manage.py check --deploy` in CI/CD pipeline
 
 **WhiteNoise + CDN (CloudFront/Cloudflare):**
+
 - Set `STATIC_HOST` from env var
 - Configure CDN to cache based on `Accept-Encoding` for Brotli/Gzip
 - WhiteNoise sets `Cache-Control: max-age=31536000, immutable` for hashed files
@@ -350,6 +360,7 @@ sentry_sdk.init(
 **Advanced Patterns:**
 
 1. **Error filtering:** Use `before_send` to filter noise
+
    ```python
    def before_send(event, hint):
        if "DisallowedHost" in str(event.get("exception", {})):
@@ -360,6 +371,7 @@ sentry_sdk.init(
    ```
 
 2. **Custom context:** Add request/user data
+
    ```python
    sentry_sdk.set_context("request", {"method": request.method, "path": request.path})
    sentry_sdk.set_user({"id": request.user.id, "email": request.user.email})
@@ -488,6 +500,7 @@ extensions = ["html"]
 ```
 
 **Pre-commit Workflow:**
+
 1. `pip install pre-commit`
 2. `pre-commit install`
 3. `pre-commit install --hook-type pre-push` (for django check --deploy)
@@ -498,7 +511,7 @@ extensions = ["html"]
 ## Updated Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Cookiecutter-Django Repo | <https://github.com/cookiecutter/cookiecutter-django> | Reference template (2026.07.03) |
 | Cookiecutter-Django Docs | <https://cookiecutter-django.readthedocs.io/> | Project generation options |
 | django-tailwind-cli | <https://pypi.org/project/django-tailwind-cli/> | Standalone Tailwind CLI |

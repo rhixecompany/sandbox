@@ -98,7 +98,7 @@ This post intentionally **avoids code examples** to focus on concepts. The next 
 ## Summary
 
 | Concept | Description |
-|-------|-------------|
+| ------- | ------------- |
 | **Asyncio Goal** | Efficient single-core usage during I/O waits |
 | **Not For** | CPU-bound parallelism or bypassing GIL |
 | **Core Mechanism** | Coroutines yield control; Event Loop schedules Tasks |

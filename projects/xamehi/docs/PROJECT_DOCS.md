@@ -136,7 +136,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
 ### Account Features
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | Registration | Email + password signup |
 | Login | JWT-based authentication |
 | Profile | View and edit personal information |
@@ -148,7 +148,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
 ### Bookmark Status
 
 | Status | Meaning |
-|--------|---------|
+| -------- | --------- |
 | Reading | Currently reading, shows in "Continue Reading" |
 | Completed | Finished all available chapters |
 | Plan to Read | Marked for future reading |
@@ -284,7 +284,7 @@ coverage report
 ## Roadmap
 
 | Phase | Features | Status |
-|-------|----------|--------|
+| ------- | ---------- | -------- |
 | 1 | Django project scaffold, settings | ✅ Done |
 | 2 | Comic + Chapter + Page models | ❌ Planned |
 | 3 | REST API endpoints | ❌ Planned |

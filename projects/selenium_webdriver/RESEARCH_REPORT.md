@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | Selenium Scraping Examples | <https://github.com/HasData/selenium-scraping> | driver setup, waits, proxies, Grid |
 | Puppeteer Extra Stealth | <https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth> | stealth evasion alternative |
 | Headless Browsers List | <https://github.com/dhamaniasad/HeadlessBrowsers> | comparison of all headless browsers |
@@ -50,7 +50,7 @@
 ### Selenium vs Playwright vs Puppeteer for Comic Scraping (2026)
 
 | Factor | Selenium | Playwright | Puppeteer |
-|--------|----------|------------|-----------|
+| -------- | ---------- | ------------ | ----------- |
 | **Detection resistance** | Moderate (needs stealth plugins) | High (auto-waits, better fingerprint) | Moderate (CDP-based) |
 | **Speed** | Baseline | **2-3x faster** | Fast (Chrome-only) |
 | **Cross-browser** | Chrome, Firefox, Safari, Edge | **Chromium, Firefox, WebKit** | Chrome/Firefox only |
@@ -61,7 +61,8 @@
 | **Auto-waits** | Manual (WebDriverWait) | **Built-in** | Manual |
 | **Proxy support** | Manual config | **Built-in context proxies** | Manual |
 
-**Recommendation for comic scraping 2026**: 
+**Recommendation for comic scraping 2026**:
+
 - **New projects**: Playwright + `playwright-extra` stealth + residential proxies
 - **Existing Selenium codebase**: Add `undetected-chromedriver` (Python) or `selenium-stealth` (Node) + Selenium Manager for driver management
 - **Hard targets (Cloudflare, etc.)**: Bright Data Scraping Browser or Apify + residential proxies
@@ -69,14 +70,17 @@
 ### Headless Chrome Scraping Anti-Detection Techniques (2026)
 
 **Layer 1: IP Reputation**
+
 - Residential/ISP proxies (Bright Data, IPRoyal, Oxylabs) — datacenter IPs flagged
 - Sticky sessions for logged-in state; rotate per request for stateless
 
 **Layer 2: TLS Fingerprint (JA3/JA4)**
+
 - Selenium uses browser's TLS stack — OK when driving real Chrome
 - Avoid raw HTTP clients (`requests`, `axios`, `fetch`) for protected targets
 
 **Layer 3: Browser Fingerprint**
+
 - `navigator.webdriver = true` → override via CDP: `Page.addScriptToEvaluateOnNewDocument({ source: "Object.defineProperty(navigator, 'webdriver', { get: () => undefined })" })`
 - Headless leaks: empty `navigator.plugins`, canvas/WebGL differences, missing Chrome runtime
 - **Fixes**: `headless: "new"` (Chrome 109+), `--disable-blink-features=AutomationControlled`, stealth plugins
@@ -84,15 +88,18 @@
 - **Testing**: `bot.sannysoft.com`, `browserleaks.com` to validate fingerprint
 
 **Layer 4: Behavioral Patterns**
+
 - Random delays (1-5s) between requests; avoid burst patterns
 - Human-like mouse movements, scrolling, click coordinates
 - Session reuse for batch scraping (single browser session)
 
 **Layer 5: CAPTCHA**
+
 - 2Captcha / Capsolver APIs for DIY
 - Bright Data Scraping Browser: auto-solves CAPTCHAs
 
 **Cloudflare Bypass (2026 ranking)**:
+
 1. Bright Data Scraping Browser (managed, high success)
 2. Playwright + stealth plugin + residential proxy (medium-high)
 3. `undetected-chromedriver` (Selenium, medium)
@@ -122,6 +129,7 @@ selenium-webdriver/
 ```
 
 **Key ES Module patterns**:
+
 - `import { Builder, By, until } from 'selenium-webdriver'`
 - `import chrome from 'selenium-webdriver/chrome.js'` (`.js` extension required)
 - Dynamic `import()` for optional deps (e.g., stealth plugin)
@@ -131,7 +139,7 @@ selenium-webdriver/
 ### Selenium Grid vs Local WebDriver for Scraping Scale (2026)
 
 | Factor | Local WebDriver | Selenium Grid / Selenoid |
-|--------|-----------------|--------------------------|
+| -------- | ----------------- | -------------------------- |
 | **Setup** | Zero config (Selenium Manager) | Hub + nodes / K8s / Docker |
 | **Parallelism** | Limited by CPU/RAM (1 browser ~200-500MB) | Horizontal scale across machines |
 | **Maintenance** | None | Infrastructure ops |
@@ -139,7 +147,8 @@ selenium-webdriver/
 | **Cloud alternatives** | — | Browserless, BrowserStack, Sauce Labs, Bright Data Scraping Browser |
 | **Selenoid** | — | Lightweight Go-based Grid alternative; auto-scales browsers in containers |
 
-**Recommendation**: 
+**Recommendation**:
+
 - Start local with Selenium Manager + session reuse (single browser, multiple tabs/pages)
 - Move to **Browserless** or **Bright Data Scraping Browser** for cloud scale — no Grid infra to manage
 - Selenium Grid / Selenoid only if you need on-prem control or have existing Grid investment
@@ -149,7 +158,7 @@ selenium-webdriver/
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Selenium JS docs | <https://www.selenium.dev/documentation> | Official docs |
 | Selenium waits | <https://www.selenium.dev/documentation/webdriver/waits> | Official guide |
 | Selenium Node.js guide | <https://scrape.do/blog/selenium-nodejs> | Tutorial |
@@ -178,7 +187,7 @@ selenium-webdriver/
 ## Common Pitfalls (Updated 2026)
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | ChromeDriver version mismatch | scraper breaks | **Use Selenium Manager (built-in)** |
 | `navigator.webdriver = true` | anti-bot detection | Override via CDP `Page.addScriptToEvaluateOnNewDocument` |
 | Headless mode detection | blocking | Use `headless: "new"` + stealth flags |
@@ -224,7 +233,7 @@ selenium-webdriver/
 ## Resources (Updated 2026)
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Selenium docs | <https://www.selenium.dev/documentation> | Browser automation docs |
 | Selenium waits | <https://www.selenium.dev/documentation/webdriver/waits> | Wait patterns |
 | Node.js best practices | <https://github.com/goldbergyoni/nodebestpractices> | Node.js best practices |

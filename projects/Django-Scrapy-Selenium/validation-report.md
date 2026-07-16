@@ -1,7 +1,7 @@
 # Validation Report — Django-Scrapy-Selenium
 
 | Gate | Status |
-|------|--------|
+| ------ | -------- |
 | Source AGENTS.md exists | ✅ PASS |
 | package.json has scripts & deps | ✅ PASS |
 | requirements.txt exists | ✅ PASS |

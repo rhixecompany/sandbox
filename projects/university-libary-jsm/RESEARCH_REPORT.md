@@ -14,7 +14,7 @@
 **Key Findings (2026):**
 
 | Pattern | Details |
-|---------|---------|
+| --------- | --------- |
 | **Driver** | Use `@neondatabase/serverless` with `drizzle-orm/neon-http` for HTTP-based serverless connections; `drizzle-orm/neon-serverless` for WebSocket connections |
 | **Connection** | `const sql = neon(process.env.DATABASE_URL); const db = drizzle(sql);` — no connection pool needed; Neon scales to zero |
 | **Cold Start** | Drizzle + Neon HTTP driver avoids cold-start tax of TCP drivers; ideal for Vercel Edge / serverless |
@@ -24,6 +24,7 @@
 | **Reference** | [Drizzle + Neon Tutorial 2026](https://orm.drizzle.team/docs/tutorials/drizzle-nextjs-neon), [Neon Serverless Guide 2026](https://encore.dev/articles/neon-serverless-postgres) |
 
 **Library-Specific Patterns:**
+
 - Use `drizzle-orm/neon-http` for App Router Server Components (no persistent connections)
 - `drizzle-orm/neon-serverless` for WebSocket connections in long-running processes (e.g., QStash workers)
 - Enable Neon connection pooling via `?pooler=true` in connection string for high-concurrency loan operations
@@ -35,7 +36,7 @@
 **Key Findings (2026):**
 
 | Pattern | Details |
-|---------|---------|
+| --------- | --------- |
 | **Rate Limiting** | `@upstash/ratelimit` — HTTP-based, connectionless, works on Vercel Edge; `ratelimit.limit(key)` returns `{ success, limit, remaining, reset }` |
 | **Caching** | `@upstash/redis` — REST API, no persistent connections; `redis.get(key)`, `redis.setex(key, ttl, value)` |
 | **Library Catalog Caching** | Cache book search results (TTL 5min), popular books (TTL 1hr), member profiles (TTL 15min) |
@@ -45,6 +46,7 @@
 | **Reference** | [Upstash Rate Limit Docs](https://upstash.com/docs/redis/sdks/ratelimit-ts/overview), [Upstash + Next.js 2026](https://noqta.tn/en/tutorials/upstash-redis-nextjs-rate-limiting-caching-2026) |
 
 **Library-Specific Patterns:**
+
 - Rate-limit `/api/books/search` at 60 req/min per IP
 - Rate-limit `/api/loans/create` at 10 req/min per member (prevent loan spam)
 - Cache book cover images via ImageKit + Redis (cache ImageKit transformation URLs)
@@ -57,7 +59,7 @@
 **Key Findings (2026):**
 
 | Pattern | Details |
-|---------|---------|
+| --------- | --------- |
 | **Adapter** | `@auth/drizzle-adapter` — official Drizzle adapter for Auth.js v5 |
 | **Schema** | Use Auth.js Drizzle schema: `users`, `accounts`, `sessions`, `verificationTokens`, `authenticators` |
 | **Install** | `pnpm add next-auth@beta @auth/drizzle-adapter drizzle-orm` |
@@ -68,6 +70,7 @@
 | **Reference** | [Auth.js Drizzle Adapter](https://authjs.dev/getting-started/adapters/drizzle), [NextAuth v5 + Drizzle + Neon Tutorial](https://www.youtube.com/watch?v=i6xOD_OqEdI) |
 
 **Library-Specific Auth Patterns:**
+
 - Role-based access: `MEMBER` (borrow/return), `LIBRARIAN` (manage books, approve loans), `ADMIN` (manage members, system config)
 - Email/password with Nodemailer for verification/reset (credentials provider)
 - OAuth: Google, GitHub for member self-registration
@@ -80,7 +83,7 @@
 **Key Findings (2026):**
 
 | Pattern | Details |
-|---------|---------|
+| --------- | --------- |
 | **QStash Client** | `@upstash/qstash` — `import { Client } from "@upstash/qstash"; const qstash = new Client({ token: process.env.QSTASH_TOKEN });` |
 | **Publish** | `await qstash.publishJSON({ url: "https://api.lib.vercel.app/api/qstash/loan-reminder", body: { memberId, bookId, dueDate }, delay: "24h" });` |
 | **Workflow** | `@upstash/workflow` — durable functions with retries, timeouts, `context.sleep()`, `context.run()` |
@@ -90,6 +93,7 @@
 | **Reference** | [Upstash Workflow](https://github.com/upstash/workflow-js), [QStash + Novu Notifications](https://upstash.com/blog/qstash-with-novu) |
 
 **Library Notification Patterns:**
+
 ```typescript
 // Loan due reminder workflow
 export const loanReminderWorkflow = createWorkflow({
@@ -110,7 +114,7 @@ export const loanReminderWorkflow = createWorkflow({
 **Key Findings (2026):**
 
 | Pattern | Details |
-|---------|---------|
+| --------- | --------- |
 | **Pooling** | Neon built-in pooler: append `?pooler=true` to connection string; uses PgBouncer in transaction mode |
 | **HTTP Driver** | `@neondatabase/serverless` with `drizzle-orm/neon-http` — no pooling needed (stateless HTTP) |
 | **WebSocket Driver** | `drizzle-orm/neon-serverless` — maintains persistent connections; use for long-running workers |
@@ -120,6 +124,7 @@ export const loanReminderWorkflow = createWorkflow({
 | **Reference** | [Neon Drizzle Integration](https://github.com/neondatabase/ai-rules/blob/main/neon-drizzle.mdc), [Neon Serverless Guide](https://encore.dev/articles/neon-serverless-postgres) |
 
 **Library Pooling Strategy:**
+
 - API routes (App Router): HTTP driver (`neon-http`) — stateless, scales to zero
 - QStash workers: WebSocket driver (`neon-serverless`) — persistent for workflow steps
 - Background jobs (cron): HTTP driver with `pooler=true`
@@ -330,6 +335,7 @@ export const finesRelations = relations(fines, ({ one }) => ({
 ```
 
 **Schema Best Practices (2026):**
+
 - Use `drizzle-zod` for Zod schema generation from Drizzle tables
 - Add trigram indexes (`pg_trgm`) on `books.title`, `authors.name` for fuzzy search
 - Use `integer` for monetary values (cents) to avoid floating-point issues
@@ -343,7 +349,7 @@ export const finesRelations = relations(fines, ({ one }) => ({
 **Key Findings (2026):**
 
 | Feature | Details |
-|---------|---------|
+| --------- | --------- |
 | **Next.js Integration** | `import { ImageKit } from "imagekitio-next";` — wrapper around `next/image` |
 | **Upload** | Server-side: `imagekit.upload({ file: buffer, fileName: "cover.jpg", folder: "/books/covers" })` |
 | **Transformations** | URL-based: `ik-imagekit.io/endpt/tr:w-400,h-600,q-80,f-auto/book/covers/isbn123.jpg` |
@@ -389,6 +395,7 @@ export async function deleteBookCover(isbn: string) {
 ```
 
 **Next.js Image Component Usage:**
+
 ```tsx
 import { ImageKitImage } from "imagekitio-next";
 
@@ -408,7 +415,7 @@ import { ImageKitImage } from "imagekitio-next";
 ## Summary of New 2026 Patterns Added
 
 | Area | Key 2026 Update |
-|------|-----------------|
+| ------ | ----------------- |
 | **Next.js 15 + Drizzle + Neon** | HTTP driver (`neon-http`) for serverless; Neon pooler for connection management; database branching for previews |
 | **Upstash Redis** | HTTP-based rate limiting (`@upstash/ratelimit`) works on Edge; sliding window algorithm; tiered limits |
 | **NextAuth v5 + Drizzle** | `@auth/drizzle-adapter` official; Neon requires per-request Pool; extend schema with library roles |
@@ -422,7 +429,7 @@ import { ImageKitImage } from "imagekitio-next";
 ## Related Workspace Projects (Cross-Reference)
 
 | Project | Shared Patterns |
-|---------|-----------------|
+| --------- | ----------------- |
 | **banking** | Next.js + Drizzle + Neon; fintech security, audit logs |
 | **rhixe_scans** | Next.js 15 catalog; search/filter UX for library |
 | **comicwise** | Next.js 15 + NextAuth v5; Redis realtime |
@@ -433,14 +440,14 @@ import { ImageKitImage } from "imagekitio-next";
 ## References
 
 | Resource | URL |
-|----------|-----|
-| Drizzle + Neon Tutorial | https://orm.drizzle.team/docs/tutorials/drizzle-nextjs-neon |
-| Neon Serverless Guide 2026 | https://encore.dev/articles/neon-serverless-postgres |
-| Upstash Rate Limit | https://upstash.com/docs/redis/sdks/ratelimit-ts/overview |
-| Auth.js Drizzle Adapter | https://authjs.dev/getting-started/adapters/drizzle |
-| Upstash Workflow | https://github.com/upstash/workflow-js |
-| ImageKit Next.js | https://imagekit.io/blog/nextjs-image-optimization |
-| Neon Drizzle AI Rules | https://github.com/neondatabase/ai-rules/blob/main/neon-drizzle.mdc |
+| ---------- | ----- |
+| Drizzle + Neon Tutorial | <https://orm.drizzle.team/docs/tutorials/drizzle-nextjs-neon> |
+| Neon Serverless Guide 2026 | <https://encore.dev/articles/neon-serverless-postgres> |
+| Upstash Rate Limit | <https://upstash.com/docs/redis/sdks/ratelimit-ts/overview> |
+| Auth.js Drizzle Adapter | <https://authjs.dev/getting-started/adapters/drizzle> |
+| Upstash Workflow | <https://github.com/upstash/workflow-js> |
+| ImageKit Next.js | <https://imagekit.io/blog/nextjs-image-optimization> |
+| Neon Drizzle AI Rules | <https://github.com/neondatabase/ai-rules/blob/main/neon-drizzle.mdc> |
 
 ---
 

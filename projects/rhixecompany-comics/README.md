@@ -11,7 +11,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Backend (Django)
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django 4.x |
 | **API Framework** | Django REST Framework (DRF) |
 | **Language** | Python ^3.10+ |
@@ -23,7 +23,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Frontend (Next.js)
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Framework** | Next.js ^16.0.0 (App Router) |
 | **UI** | React ^19.0.0 |
 | **Styling** | Tailwind CSS ^4.0.0 |

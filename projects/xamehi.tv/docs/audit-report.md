@@ -11,7 +11,7 @@ Django + DRF + gunicorn video streaming platform. Private repository.
 ## Findings
 
 | ID | Severity | Finding | Status |
-|----|----------|---------|--------|
+| ---- | ---------- | --------- | -------- |
 | F-001 | MEDIUM | requirements.txt had duplicate `whitenoise` entry | Fixed |
 | F-002 | MEDIUM | No .env.example for environment documentation | Fixed |
 | F-003 | LOW | .gitignore missing `/build` production section | Noted |

@@ -70,7 +70,7 @@ npm start         # react-scripts start
 ## Dependencies
 
 | Package | Purpose |
-|---------|---------|
+| --------- | --------- |
 | react, react-dom | UI framework |
 | express | Backend API server |
 | axios | HTTP client |

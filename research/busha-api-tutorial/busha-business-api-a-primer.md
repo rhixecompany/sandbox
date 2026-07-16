@@ -37,7 +37,7 @@ The Busha Business API provides programmatic access to stablecoins and digital a
 ## Use Cases
 
 | Use Case | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | Crypto Exchanges | Backend liquidity and wallet operations |
 | Remittance Services | Stablecoin settlement layer |
 | Payroll Platforms | Pay contractors in digital assets |

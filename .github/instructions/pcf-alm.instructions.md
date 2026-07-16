@@ -59,7 +59,7 @@ For `pac pcf push` to result in a release build, the `PcfBuildMode` is set insid
 
 | Command | Default Behavior | With PcfBuildMode=production |
 | --- | --- | --- |
-| npm start watch | Always development |  |
+| npm start watch | Always development | |
 | pac pcf push | Development build | Release build |
 | npm run build | Development build | `npm run build -- --buildMode production` |
 

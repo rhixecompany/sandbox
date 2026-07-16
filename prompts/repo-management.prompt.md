@@ -28,9 +28,11 @@ dependencies:
 - skill:gh-cli
 - skill:git-commit
 - skill:git-helper
+- skill:git-submodule-workflow
 - skill:github-actions-efficiency
 - skill:github-repo-management
 - skill:mcp-filesystem
+- skill:mcp-sequential-thinking
 - skill:monorepo-pr-workflow
 - skill:repo-research-pipeline
 - skill:vscode-cli
@@ -43,9 +45,11 @@ skills:
 - gh-cli
 - git-commit
 - git-helper
+- git-submodule-workflow
 - github-actions-efficiency
 - github-repo-management
 - mcp-filesystem
+- mcp-sequential-thinking
 - monorepo-pr-workflow
 - repo-research-pipeline
 - vscode-cli
@@ -60,9 +64,11 @@ metadata:
     - gh-cli
     - git-commit
     - git-helper
+    - git-submodule-workflow
     - github-actions-efficiency
     - github-repo-management
     - mcp-filesystem
+    - mcp-sequential-thinking
     - monorepo-pr-workflow
     - repo-research-pipeline
     - vscode-cli

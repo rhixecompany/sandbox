@@ -4,6 +4,7 @@ superseded_by: 2026-07-10_prompts-templates-consolidation-master-plan.md
 ---
 
 # Prompt Management Orchestration — Comprehensive Plan
+>
 > **Workflow:** Prompt Management (prompt-management skill) applied to `execute-all-prompts.prompt.md` and all 4 sub-prompts it orchestrates.
 > **Version:** 1.0.0 | **Author:** OWL (Alexa)
 
@@ -44,7 +45,7 @@ The primary objective is to design, specify, and execute a comprehensive prompt 
 ### 1.2 Scope
 
 | Dimension | Included | Excluded |
-|-----------|----------|----------|
+| ----------- | ---------- | ---------- |
 | Prompts | `execute-all-prompts.prompt.md` + 4 sub-prompts | Other 247 prompts in library |
 | Skills | 370+ local skills in `~/AppData/Local/hermes/skills/` | Bundled/hub-installed skills (read-only) |
 | Agents | Hermes, GitHub Copilot, OpenCode Codex | Other AI agents |
@@ -67,7 +68,7 @@ The primary objective is to design, specify, and execute a comprehensive prompt 
 ### 2.1 Primary Goals
 
 | Goal | Target | Success Metric |
-|------|--------|----------------|
+| ------ | -------- | ---------------- |
 | G1 | Audit and inventory all local skills | 100% of skills audited, `docs/local-skills.md` generated |
 | G2 | Categorize uncategorized skills | 0 skills in "uncategorized" state |
 | G3 | Deduplicate overlapping skills | 0 duplicate skill names across library |
@@ -80,7 +81,7 @@ The primary objective is to design, specify, and execute a comprehensive prompt 
 ### 2.2 Secondary Goals
 
 | Goal | Target | Priority |
-|------|--------|----------|
+| ------ | -------- | ---------- |
 | S1 | Extract DRY shared templates | Prompts with identical sections (skills tables, rules) wired to `_shared/` |
 | S2 | Tag all prompts with meaningful metadata | 0 prompts with empty `tags:` fields |
 | S3 | Fix broken skill references across prompts | 0 unresolved `skill:/` or `skill:unknown` refs |
@@ -191,7 +192,7 @@ $HOME/AppData/Local/hermes/
 **Dependencies:** None (entry point)
 
 | Step | Action | Input | Output | Verification |
-|------|--------|-------|--------|-------------|
+| ------ | -------- | ------- | -------- | ------------- |
 | 0.1 | Inventory target prompts | `prompts/*.prompt.md` | Target list (5 prompts) | All 5 files exist, frontmatter parseable |
 | 0.2 | Verify template directories | `prompts/templates/{name}/` | Dir status report | Each target has template dir or known missing |
 | 0.3 | Check shared templates | `prompts/templates/_shared/` | Shared template inventory | 12 templates present |
@@ -210,7 +211,7 @@ $HOME/AppData/Local/hermes/
 #### Sub-phase 1.1: Skills Audit & Inventory
 
 | Step | Action | Command/Tool | Expected Output |
-|------|--------|-------------|-----------------|
+| ------ | -------- | ------------- | ----------------- |
 | 1.1.1 | Run `hermes skills audit` | `terminal` | 111+ skills scanned, SAFE/BLOCKED verdicts |
 | 1.1.2 | Count skills by type | `execute_code` | Flat count, nested count, total |
 | 1.1.3 | Build inventory document | `write_file` | `docs/local-skills.md` |
@@ -221,7 +222,7 @@ $HOME/AppData/Local/hermes/
 #### Sub-phase 1.2: Categorize Skills
 
 | Step | Action | Input | Output |
-|------|--------|-------|--------|
+| ------ | -------- | ------- | -------- |
 | 1.2.1 | Identify uncategorized flat skills | `skills/` dir listing | List of 46 flat skills |
 | 1.2.2 | Map each to correct category | Category mapping table | Categorization plan |
 | 1.2.3 | Move or add frontmatter category | `patch`/`skill_manage` | 41+ skills with metadata.category |
@@ -231,7 +232,7 @@ $HOME/AppData/Local/hermes/
 #### Sub-phase 1.3: Deduplicate
 
 | Step | Action | Detection Method | Resolution |
-|------|--------|-----------------|------------|
+| ------ | -------- | ----------------- | ------------ |
 | 1.3.1 | Find same-name duplicates | `basename` comparison | 9 identified (creative-ideation, peft, etc.) |
 | 1.3.2 | Compare content sizes | `du -b` or `len()` | Cat copy is canonical (larger) |
 | 1.3.3 | Remove flat copy | `rm -rf skills/{name}` | `skill_manage` delete or direct rm |
@@ -242,7 +243,7 @@ $HOME/AppData/Local/hermes/
 #### Sub-phase 1.4: Judge Skills
 
 | Step | Action | Method |
-|------|--------|--------|
+| ------ | -------- | -------- |
 | 1.4.1 | Run skill-judge in batches | `skill_judge` on 10 skills/batch |
 | 1.4.2 | Collect results per batch | Save to `judge_results/batch_NNNN.md` |
 | 1.4.3 | Aggregate all results | Generate `judge_results/all_results.tsv` |
@@ -262,7 +263,7 @@ $HOME/AppData/Local/hermes/
 #### Sub-phase 1.5: Remediate
 
 | Threshold | Action | Scope |
-|-----------|--------|-------|
+| ----------- | -------- | ------- |
 | FAIL (<60) | Full rewrite of SKILL.md | 2 skills (bundled — blocked) |
 | WARN (60-79) | Patch frontmatter, structure, refs | 259 skills |
 | PASS (≥80) | No action | 89 skills |
@@ -296,7 +297,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 2.1: Generate Agent Context Files
 
 | Step | Skill | Output Location | Expected |
-|------|-------|----------------|----------|
+| ------ | ------- | ---------------- | ---------- |
 | 2.1.1 | `architecture-blueprint-generator` | `docs/Project_Architecture/` | Architecture context files |
 | 2.1.2 | `folder-structure-blueprint-generator` | `docs/Project_Architecture/` | Folder structure docs |
 | 2.1.3 | `technology-stack-blueprint-generator` | `docs/Project_Architecture/` | Tech stack documents |
@@ -304,7 +305,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 2.2: Audit VS Code Configuration
 
 | Step | Action | Tool | Expected |
-|------|--------|------|----------|
+| ------ | -------- | ------ | ---------- |
 | 2.2.1 | List all .vscode JSON files | `find .vscode -name '*.json'` | File count |
 | 2.2.2 | Validate each JSON | `python3 -c 'json.load(open(f))'` | 0 parse errors |
 | 2.2.3 | Triage configs by type | Manual classification | settings, tasks, launch, extensions, mcp |
@@ -323,7 +324,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 3.1: Inventory Instructions & Agents
 
 | Check | Source | Expected Count |
-|-------|--------|---------------|
+| ------- | -------- | --------------- |
 | Instructions | `.github/instructions/` | 186 files |
 | Agents | `.github/agents/` | 174 files |
 | Personalities to create | Instructions → personality mapping | 186 max |
@@ -332,7 +333,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 3.2: Identify Root Folders
 
 | Agent | Root Path | Status |
-|-------|-----------|--------|
+| ------- | ----------- | -------- |
 | Hermes | `~/AppData/Local/hermes/` | Active |
 | Copilot | `~/.copilot/` (or `.github/` in workspace) | Active |
 | Codex | `~/.codex/` | Check existence |
@@ -340,7 +341,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 3.3: Sync Assets Bidirectionally
 
 | Asset | Direction | Method |
-|-------|-----------|--------|
+| ------- | ----------- | -------- |
 | Skills | Hermes ↔ Copilot | `rsync` or `cp` with exclusion list |
 | Plugins | Hermes ↔ Copilot | Directory comparison → sync |
 | Hooks | Hermes ↔ Copilot | Directory comparison → sync |
@@ -365,7 +366,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 4.1: Auth Inventory
 
 | Provider | Auth Method | Status |
-|----------|------------|--------|
+| ---------- | ------------ | -------- |
 | copilot | gh auth token, GITHUB_TOKEN | Rate-limited (429) — ready to retry |
 | huggingface | HF_TOKEN env var | Active |
 | nous | OAuth (device code) | Exhausted (2m 48s left) |
@@ -377,7 +378,7 @@ Identify overlapping thin skills (<100 lines) and merge into umbrella skills usi
 #### Sub-phase 4.2-4.7: Discovery → Benchmarking → Report
 
 | Sub-phase | Action | Output |
-|-----------|--------|--------|
+| ----------- | -------- | -------- |
 | 4.2 | Discover model catalogs | `docs/model-catalogs.md` |
 | 4.3 | Extract free-tier models | Filtered model list |
 | 4.4 | Run standardized benchmarks | `judge_results/provider-benchmarks.md` |
@@ -425,7 +426,7 @@ Every phase implements the following safety gate pattern:
 ### 5.2 Gate Registry
 
 | Gate | Phase | Condition | Violation Action |
-|------|-------|-----------|-----------------|
+| ------ | ------- | ----------- | ----------------- |
 | G0 | 0 | All 5 prompts exist | Report missing → ask user |
 | G1.1 | 1.1 | Audit returns non-zero skills | Retry once → BLOCK |
 | G1.3 | 1.3 | Canonical copy verified before delete | BLOCK delete |
@@ -438,7 +439,7 @@ Every phase implements the following safety gate pattern:
 ### 5.3 Rollback Architecture
 
 | Scenario | Rollback Method |
-|----------|----------------|
+| ---------- | ---------------- |
 | Skill accidentally deleted | `git checkout` from last commit (skills in git) |
 | Broken SKILL.md | `git checkout` individual file |
 | VS Code config broken | `git checkout .vscode/` |
@@ -454,7 +455,7 @@ Every phase implements the following safety gate pattern:
 ### 6.1 Time Budget
 
 | Phase | Min Duration | Max Duration | Cumulative |
-|-------|-------------|-------------|------------|
+| ------- | ------------- | ------------- | ------------ |
 | Phase 0: Verification | 3 min | 5 min | 5 min |
 | Phase 1: Audit Judge Fix | 45 min | 90 min | 95 min |
 | Phase 2: Context Fix | 20 min | 45 min | 140 min |
@@ -465,7 +466,7 @@ Every phase implements the following safety gate pattern:
 ### 6.2 Resource Requirements
 
 | Resource | Requirement | Notes |
-|----------|-------------|-------|
+| ---------- | ------------- | ------- |
 | Tokens (model) | ~500K-1M input, ~100K-200K output | DeepSeek V4 via opencode-zen |
 | Disk space | <50MB for all artifacts | Mostly text files |
 | Network | Required for Phase 4 (provider benchmarks) | openrouter, huggingface |
@@ -481,7 +482,7 @@ Every phase implements the following safety gate pattern:
 ### 7.1 Risk Register
 
 | # | Risk | Probability | Impact | Mitigation |
-|---|------|-------------|--------|------------|
+| --- | ------ | ------------- | -------- | ------------ |
 | R1 | `hermes skills audit` blocks dangerous skills | Medium | Medium | Use `--force` where appropriate; note blocked skills |
 | R2 | Judge scores inconsistent across batches | Low | High | Calibrate first batch, lock thresholds, re-score sample |
 | R3 | Sub-agent stalls during delegation | Medium | High | Check signature artifacts on disk after 2-5 min; proceed if present |
@@ -496,7 +497,7 @@ Every phase implements the following safety gate pattern:
 ### 7.2 Contingency Plans
 
 | Risk | Plan A | Plan B |
-|------|--------|--------|
+| ------ | -------- | -------- |
 | R1 (blocked skills) | Use `--force` on CAUTION verdicts | Skip DANGEROUS verdicts (not overridable) |
 | R3 (stalled sub-agent) | Check artifacts, proceed | Re-delegate with simpler goal |
 | R4 (rate limited) | Note state, skip to next provider | Schedule cron job for retry |
@@ -509,7 +510,7 @@ Every phase implements the following safety gate pattern:
 ### 8.1 Primary Artifacts
 
 | ID | Artifact | Phase | Format | Location | Required |
-|----|----------|-------|--------|----------|----------|
+| ---- | ---------- | ------- | -------- | ---------- | ---------- |
 | D1 | Skills inventory | 1.1 | Markdown | `docs/local-skills.md` | Yes |
 | D2 | Path mapping | 1.1 | JSON | `docs/skill_name_to_path.json` | Yes |
 | D3 | Categorization plan | 1.2 | Markdown | `docs/categorization-plan.md` | Yes |
@@ -529,7 +530,7 @@ Every phase implements the following safety gate pattern:
 ### 8.2 Secondary Artifacts
 
 | ID | Artifact | Phase | Format | Location |
-|----|----------|-------|--------|----------|
+| ---- | ---------- | ------- | -------- | ---------- |
 | S1 | Prompt validation report | Cross | Markdown | `docs/prompt-validation-report.md` |
 | S2 | Prompt inventory | Cross | Markdown | `docs/prompt-inventory.md` |
 | S3 | Agent cross-reference | 3 | Markdown | `docs/agents-cross-reference.md` |
@@ -556,7 +557,7 @@ git revert <commit-hash>  # safe revert (not destructive)
 ### 9.2 Per-Phase Rollback
 
 | Phase | Rollback Command | Notes |
-|-------|-----------------|-------|
+| ------- | ----------------- | ------- |
 | 1.3 (dedupe) | Skills are in git; `git checkout HEAD~1 -- skills/` | Directory restore |
 | 1.5 (remediate) | `git checkout HEAD~1 -- skills/*/SKILL.md` | Only SKILL.md affected |
 | 2.2 (VS Code) | `git checkout HEAD~1 -- .vscode/` | All configs restored |
@@ -579,7 +580,7 @@ If any phase produces unexpected destructive behavior:
 ### 10.1 Completion Gates
 
 | Gate | Condition | Verified By |
-|------|-----------|-------------|
+| ------ | ----------- | ------------- |
 | Phase 0 | 5/5 prompts exist, all templates verified | File inventory |
 | Phase 1 | All 7 sub-phases complete, artifacts saved | `docs/final-verification.md` |
 | Phase 2 | Context files generated, VS Code configs valid | 59 docs, 0 JSON errors |
@@ -589,7 +590,7 @@ If any phase produces unexpected destructive behavior:
 ### 10.2 Quality Gates
 
 | Quality | Threshold | Measurement |
-|---------|-----------|-------------|
+| --------- | ----------- | ------------- |
 | Skill coverage | 100% inventoried | Count vs `find` |
 | Judge completeness | 350+ scored | `judge_results/all_results.tsv` |
 | Remediation improvement | Avg ≥ 73.6 | Before/after comparison |

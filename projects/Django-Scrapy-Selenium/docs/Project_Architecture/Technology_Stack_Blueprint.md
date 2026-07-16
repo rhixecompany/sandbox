@@ -22,7 +22,7 @@ A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | Python | ^3.10 / 3.12 | Primary backend language |
 | Django | ^4.x | Web framework & admin |
 | TypeScript | ^5.4.5 | Frontend scripting |
@@ -32,7 +32,7 @@ A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy
 ### Backend Dependencies
 
 | Category | Technologies |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django 4.x |
 | **API Framework** | Django REST Framework |
 | **Scraping** | Scrapy, Selenium, BeautifulSoup4 |
@@ -46,7 +46,7 @@ A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy
 ### Frontend Dependencies
 
 | Category | Technologies |
-|---|---|
+| --- | --- |
 | **Build Tool** | Webpack 5 (dev/prod config) |
 | **CSS Framework** | Tailwind CSS 3, daisyui, flowbite |
 | **JavaScript** | Alpine.js, htmx, hyperscript, jQuery, Select2 |
@@ -93,7 +93,7 @@ Django-Scrapy-Selenium/
 ## Key Scripts
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `python manage.py runserver` | Django dev server |
 | `celery -A config worker -l info` | Celery worker |
 | `scrapy crawl spider_name` | Run a Scrapy spider |

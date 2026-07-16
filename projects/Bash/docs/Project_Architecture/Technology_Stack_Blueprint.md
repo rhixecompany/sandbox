@@ -22,7 +22,7 @@ The Bash module is the primary automation toolkit for the SandBox workspace. It 
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | TypeScript | latest (via Bun) | Primary scripting language |
 | Bun | >=1.3.14 | JavaScript/TypeScript runtime & package manager |
 | Node.js | >=18 | Fallback runtime |
@@ -38,14 +38,14 @@ The Bash module is the primary automation toolkit for the SandBox workspace. It 
 ### Core Dependencies
 
 | Dependency | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | yaml | ^2.9.0 | YAML parsing |
 | zod | ^4.4.3 | Schema validation |
 
 ### Development Dependencies
 
 | Dependency | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | typescript | latest | Type checking |
 | eslint | ^10.4.0 | Linting framework |
 | @typescript-eslint/parser | ^8.59.4 | TypeScript ESLint parser |
@@ -65,7 +65,7 @@ The Bash module is the primary automation toolkit for the SandBox workspace. It 
 ## Scripts & Utilities
 
 | Script | Description |
-|---|---|
+| --- | --- |
 | `clean:cache` | Clear cache files (with `--dry-run` support) |
 | `clean:deps` | Clean dependencies (with `--dry-run` support) |
 | `commit:batches` | Batch git commits |
@@ -137,6 +137,6 @@ The Bash module is the primary automation toolkit for the SandBox workspace. It 
 ## CI/CD
 
 | Pipeline | File | Trigger |
-|---|---|---|
+| --- | --- | --- |
 | Bash Scripts CI | `.github/workflows/bash-scripts-ci.yml` | Push/PR |
 | Copilot Setup | `.github/workflows/copilot-setup-steps.yml` | Setup |

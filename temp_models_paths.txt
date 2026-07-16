@@ -1,3 +1,0 @@
-C:\Users\Alexa\Desktop\SandBox\opencode_zen_models.json
-C:\Users\Alexa\Desktop\SandBox\openrouter_models.json
-C:\Users\Alexa\Desktop\SandBox\nvidia_nim_models.json

@@ -60,7 +60,7 @@ class Comic(models.Model):
 Fields and relationships:
 
 | Model | Key Fields | Relationships |
-|-------|-----------|---------------|
+| ------- | ----------- | --------------- |
 | **Comic** | name, slug, alt_name, link, description, image, cover, status (6 choices), views, rating | FK→Type, FK→Author, FK→Artist, M2M→Genre |
 | **Chapter** | name, slug, link, release_date, volume, chapter_number | FK→Comic (CASCADE), unique(comic, chapter_number) |
 | **ChapterImage** | image, page_number | FK→Chapter (CASCADE), unique(chapter, page_number) |
@@ -219,7 +219,7 @@ Django REST Framework viewsets providing:
 ### Endpoints
 
 | Endpoint | Method | Description |
-|----------|--------|-------------|
+| ---------- | -------- | ------------- |
 | `/api/comics/` | GET, POST | List/create comics with filtering |
 | `/api/comics/{id}/` | GET, PUT, DELETE | Comic CRUD |
 | `/api/chapters/` | GET, POST | List/create chapters |

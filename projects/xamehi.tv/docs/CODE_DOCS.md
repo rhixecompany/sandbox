@@ -201,7 +201,7 @@ Movies
 **File:** `video/view.py`
 
 | Function | Route | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | `index()` | `/` | Homepage — featured movies (active, featured, limit 3) |
 | `movies()` | `/movies/` | Paginated movie list (5/page) with `MoviesFilter` |
 | `movie()` | `/<slug:slug>/` | Movie detail with comment form |
@@ -224,7 +224,7 @@ Movies
 #### Movies API
 
 | Endpoint | Method | Auth | Description |
-|----------|--------|------|-------------|
+| ---------- | -------- | ------ | ------------- |
 | `getMovies()` | GET /api/movies/ | Public | Paginated list with keyword search, 5/page |
 | `getTopMovies()` | GET /api/movies/top/ | Public | Top 5 rated movies (rating >= 4) |
 | `getMovie()` | GET /api/movies/:pk/ | Public | Single movie detail |
@@ -236,7 +236,7 @@ Movies
 #### Series API
 
 | Endpoint | Method | Auth | Description |
-|----------|--------|------|-------------|
+| ---------- | -------- | ------ | ------------- |
 | `getSeries()` | GET /api/series/ | Public | Paginated list with keyword search |
 | `getTopSeries()` | GET /api/series/top/ | Public | Top 5 rated series |
 | `getSerie()` | GET /api/series/:pk/ | Public | Single series detail |
@@ -248,7 +248,7 @@ Movies
 #### User API
 
 | Endpoint | Method | Auth | Description |
-|----------|--------|------|-------------|
+| ---------- | -------- | ------ | ------------- |
 | `loginUser()` | POST /api/users/login/ | Public | JWT token login |
 | `getUserProfile()` | GET /api/users/profile/ | Auth | Get profile |
 | `registerUser()` | POST /api/users/register/ | Public | Register new user |
@@ -415,7 +415,7 @@ store.js → Root reducer combining:
 ### Key Screens
 
 | Screen | Route | Data Source |
-|--------|-------|-------------|
+| -------- | ------- | ------------- |
 | HomeScreen | `/` | Latest movies, top movies, top series |
 | MovieScreen | `/movie/:id` | Single movie with reviews |
 | MoviesScreen | `/movies` | Paginated movie list |

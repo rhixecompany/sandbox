@@ -3,6 +3,7 @@ status: completed
 ---
 
 # Plan: Implement Awesome Hermes Agent Docs Catalog
+
 **Date:** 2026-06-29
 **Status:** Draft
 **Workspace:** ~/Desktop/docs/awesome-hermes-agent/
@@ -20,7 +21,7 @@ List, triage, catalog, read, and produce a structured implementation (report/cat
 ### Directory inventory (11 files, ~20 KB total)
 
 | Path | Size | Type |
-|------|------|------|
+| ------ | ------ | ------ |
 | `.actions.json` | 1.4 KB | Workflow metadata (4 actions, all read-only) |
 | `.discovery.json` | 174 B | Discovery metadata (repo, pages) |
 | `index.md` | 2.7 KB | Master index (already read in prior turn) |
@@ -127,7 +128,7 @@ No existing files are modified.
 ## 7. Risks, Tradeoffs, and Open Questions
 
 | Risk | Mitigation |
-|------|------------|
+| ------ | ------------ |
 | URLs in the awesome list may be stale (repo moved, deleted) | The catalog notes the discovery date and flags items as "not verified at write time" |
 | Section files in `pages/sections/` may drift from README.md content | Catalog notes they are extracted fragments and may not be in sync |
 | The awesome-list repo may have been updated since the 2026-05-06 snapshot | Include a "Last synced" marker in the catalog header |

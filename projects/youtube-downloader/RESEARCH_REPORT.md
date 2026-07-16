@@ -46,7 +46,7 @@
 - **YouTube ToS vs Copyright Law** — ToS violation is civil/contract; DMCA 1201 anti-circumvention is criminal
 - **RIAA vs youtube-dl (2020)** — tool itself not infringing; distribution for infringing use is the risk
 - **Personal use defense** — format-shifting for personal archive generally considered fair use in US
-- **Creative Commons content** — explicitly downloadable; filter with `--match-filter "license!=*"` 
+- **Creative Commons content** — explicitly downloadable; filter with `--match-filter "license!=*"`
 - **YouTube Premium** — official offline download; only legal method for copyrighted content
 - **Rate limiting as compliance** — `--limit-rate 5M --sleep-interval 5 --max-sleep-interval 15` demonstrates good faith
 
@@ -103,7 +103,7 @@
 ### YouTube API vs yt-dlp for Metadata
 
 | Aspect | YouTube Data API v3 | yt-dlp |
-|--------|---------------------|--------|
+| -------- | --------------------- | -------- |
 | Quota | 10,000 units/day | Unlimited |
 | Auth | API key / OAuth | Cookies optional |
 | Metadata depth | Structured, limited fields | Full raw extraction |
@@ -132,7 +132,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | yt-dlp 2026 | <https://dev.to/pickuma/yt-dlp-the-cli-video-downloader-developers-actually-use-in-2026-57jk> | Guide |
 | yt-dlp repo | <https://github.com/yt-dlp/yt-dlp#readme> | CLI docs |
 | curl_cffi | <https://github.com/yifeikong/curl_cffi> | TLS fingerprint library |
@@ -164,7 +164,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Unbounded filenames | FS conflicts | sanitize; include `%(id)s` in template |
 | Missing curl_cffi | `--impersonate` fails | `pip install "yt-dlp[curl-cffi]"` |
 | No FFmpeg in PATH | silent post-proc failure | detect at startup; fail fast |
@@ -208,7 +208,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | yt-dlp docs | <https://github.com/yt-dlp/yt-dlp#readme> | CLI documentation |
 | curl_cffi | <https://github.com/yifeikong/curl_cffi> | TLS fingerprint library |
 | FFmpeg Python | <https://github.com/kkroening/ffmpeg-python> | Python FFmpeg wrapper |
@@ -226,7 +226,7 @@
 ### Scripts Overview
 
 | Script | Purpose | Key Configuration |
-|--------|---------|-------------------|
+| -------- | --------- | ------------------- |
 | `main_noplaylist.py` | Single video download | `noplaylist=True`, format `136+ba,298+ba,232+ba,bv+ba`, MKV merge |
 | `main_playlist.py` | Playlist download | `noplaylist=False`, playlist-aware output template |
 | `main_loop_playlist.py` | Batch loop mode | Iterates URL list, same opts as playlist |
@@ -236,28 +236,34 @@
 ### Current Configuration Patterns
 
 **Format Selection** — Uses hardcoded format codes (`136`, `298`, `232`) + fallback `bv+ba`
+
 - **Issue**: Format codes change; selector syntax `bv*+ba` is more robust
 - **Recommendation**: Migrate to `bv*[height<=1080]+ba*[ext=m4a]`
 
 **Post-Processing** — Uses `FFmpegVideoConvertor` to MKV/MP4
+
 - **Missing**: `--embed-metadata`, `--embed-thumbnail`, `--embed-subs`, `--embed-chapters`
 - **Recommendation**: Add full embed chain for archival quality
 
 **Rate Limiting** — Not configured in scripts
+
 - **Missing**: `--limit-rate`, `--sleep-interval`, `--download-archive`
 - **Recommendation**: Add polite defaults; make configurable via CLI args
 
 **Cookies/Auth** — Not configured
+
 - **Missing**: `--cookies-from-browser` support
 - **Recommendation**: Add optional cookie browser arg for gated content
 
 **Output Templates** — Uses `%(uploader)s/%(title)s.%(ext)s` or playlist-aware variant
+
 - **Missing**: `%(id)s` for collision avoidance; `%(upload_date)s` for sorting
 - **Recommendation**: Standardize on `%(channel)s/%(upload_date)s_%(id)s.%(ext)s`
 
 ### Dependencies
 
 **`requirements/local.txt`** (dev environment):
+
 ```
 -r ./base.txt
 mypy
@@ -276,6 +282,7 @@ yt-dlp[curl-cffi]
 ```
 
 **Observations:**
+
 - `yt-dlp[curl-cffi]` correctly specified with extras
 - `base.txt` contains many unrelated dev deps (sphinx, jinja2, etc.) — should be split
 - Missing: `uv`, `ty` (new type checker), `rich` (for CLI output)
@@ -286,7 +293,9 @@ yt-dlp[curl-cffi]
 ## Recommended Improvements
 
 ### 1. Unified CLI Entry Point
+
 Replace 4 scripts with single Typer app:
+
 ```python
 # cli.py
 import typer
@@ -308,11 +317,13 @@ def batch(file: typer.FileText, ...):
 ```
 
 ### 2. Configuration Management
+
 - `config.yaml` or `pyproject.toml` for defaults
 - Environment variable overrides
 - CLI flags take precedence
 
 ### 3. Robust Defaults
+
 ```python
 DEFAULT_OPTS = {
     "format": "bv*[height<=1080]+ba*[ext=m4a]/bv*+ba/b",
@@ -337,6 +348,7 @@ DEFAULT_OPTS = {
 ```
 
 ### 4. URL Validation & Security
+
 ```python
 YOUTUBE_URL_PATTERN = re.compile(
     r"^https?://(www\.)?(youtube\.com|youtu\.be)/.+$"
@@ -347,11 +359,13 @@ def validate_url(url: str) -> bool:
 ```
 
 ### 5. Progress & Logging
+
 - Use `rich.progress` for beautiful console output
 - Structured logging with `loguru` or stdlib `logging`
 - JSON log output option for CI/automation
 
 ### 6. Testing
+
 - Unit tests for URL validation, config merging
 - Integration tests with `--flat-playlist` (no download)
 - Mock yt-dlp for fast CI runs

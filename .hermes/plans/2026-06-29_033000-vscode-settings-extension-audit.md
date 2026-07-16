@@ -113,7 +113,7 @@ Sync `.vscode/extensions.json` recommendations to match the 42 installed extensi
 ## Files Likely to Change
 
 | File | Action |
-|------|--------|
+| ------ | -------- |
 | `~AppData/Roaming/Code/User/settings.json` | Update — add missing extension configs |
 | `~/Desktop/SandBox/.vscode/settings.json` | Update — add project-relevant extension configs |
 | `~/Desktop/SandBox/.vscode/extensions.json` | Update — sync recommendations |
@@ -124,7 +124,7 @@ Sync `.vscode/extensions.json` recommendations to match the 42 installed extensi
 ## Risks & Trade-offs
 
 | Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|------------|
+| ------ | ----------- | -------- | ------------ |
 | Extension docs unavailable / generic | Medium | Low | Use well-known defaults; skip obscurely-documented settings |
 | settings.json syntax error after edit | Low | High | Validate with `python3 -m json.tool` after every batch |
 | Settings conflict between extensions | Low | Medium | Prefer extension-specific scoping (`[lang]` blocks) |

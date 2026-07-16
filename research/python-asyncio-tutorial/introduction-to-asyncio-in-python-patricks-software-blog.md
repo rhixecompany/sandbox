@@ -138,7 +138,7 @@ async def main():
 ### Performance Comparison
 
 | Approach | Execution Time |
-|--------|----------------|
+| -------- | ---------------- |
 | **Async (as_completed)** | **0.24 seconds** |
 | **Synchronous** | **1.80 seconds** |
 

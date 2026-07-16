@@ -11,7 +11,7 @@ React 18 + Django + Express.js full-stack application. Private repository.
 ## Findings
 
 | ID | Severity | Finding | Status |
-|----|----------|---------|--------|
+| ---- | ---------- | --------- | -------- |
 | F-001 | HIGH | README.md was empty (10 bytes) | Fixed |
 | F-002 | MEDIUM | No .env.example for environment documentation | Fixed |
 | F-003 | LOW | axios@0.27.2 outdated (current: 1.x) | Deferred |

@@ -82,7 +82,7 @@ xamehi.tv/
 ## Django Apps
 
 | App | Purpose |
-|-----|---------|
+| ----- | --------- |
 | `player` | Core movie player functionality, views, and models |
 | `video` | Video content management and streaming |
 | `frontend` | React SPA (built to static files) |
@@ -90,7 +90,7 @@ xamehi.tv/
 ## Available Commands
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `python manage.py runserver` | Start development server |
 | `python manage.py migrate` | Run database migrations |
 | `python manage.py createsuperuser` | Create admin user |

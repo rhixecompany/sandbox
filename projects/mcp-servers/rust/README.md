@@ -62,6 +62,7 @@ echo '{"jsonrpc":"2.0","id":1,"method":"ping"}' | cargo run
 Greet a person by name.
 
 **Parameters:**
+
 | Parameter | Type   | Required | Description          |
 |-----------|--------|----------|----------------------|
 | `name`    | string | yes      | Name of the person   |

@@ -13,6 +13,7 @@ status: completed
 ## Goal
 
 Execute a comprehensive multi-phase plan to:
+
 1. Update SOUL.md to only load/verify `user-communication-preferences` and load all superpowers skills
 2. Update `user-communication-preferences` skill to only load superpowers skills (systematic-debugging, code-review, etc.)
 3. Code review, debug, fix all errors/warnings/issues from all files at `./research/**/*`
@@ -36,7 +37,7 @@ Execute a comprehensive multi-phase plan to:
 ## Research Files Inventory (28 files, 7 subdirs)
 
 | Subdirectory | Files |
-|--------------|-------|
+| -------------- | ------- |
 | `binance-api-tutorial/` | 2 files |
 | `busha-api-tutorial/` | 2 files |
 | `cryptocurrency-wallets-api-tutorial/` | 3 files |
@@ -55,6 +56,7 @@ Execute a comprehensive multi-phase plan to:
 ### 1.1 Update SOUL.md (C:\Users\Alexa\AppData\Local\hermes\SOUL.md)
 
 **Changes:**
+
 - Modify "Skills Required at Session Start" to explicitly load all superpowers skills
 - Keep `user-communication-preferences` as mandatory
 - Remove any duplicate/conflicting skill loading instructions
@@ -67,12 +69,14 @@ Execute a comprehensive multi-phase plan to:
 **File:** `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\SKILL.md`
 
 **Changes:**
+
 - Add explicit `skill_view` calls for all superpowers skills in Phase 1
 - Remove duplicate profile routing tables (keep in SOUL.md only - DRY)
 - Add explicit loading workflow for superpowers skills
 - Ensure `references/preferences.md` is updated consistently
 
 ### 1.3 Verification
+
 - `read_file` SOUL.md → verify changes
 - `skill_view` user-communication-preferences → verify superpowers loading
 
@@ -85,6 +89,7 @@ Execute a comprehensive multi-phase plan to:
 **Tools:** `search_files`, `read_file`, `web_extract` (for source validation)
 
 **Checklist per file:**
+
 - [ ] Frontmatter completeness (source, retrieved date, title)
 - [ ] Content structure (headers, tables, code blocks)
 - [ ] No broken markdown (unclosed fences, bad tables)
@@ -97,6 +102,7 @@ Execute a comprehensive multi-phase plan to:
 ### 2.2 Fix Issues Found
 
 **Common issues expected:**
+
 - Missing frontmatter fields
 - Inconsistent markdown formatting
 - Broken tables
@@ -105,6 +111,7 @@ Execute a comprehensive multi-phase plan to:
 - Truncated content (check `truncated: false` in read_file)
 
 ### 2.3 Verification
+
 - Re-read all 28 files after fixes
 - Run markdown lint if available
 - Confirm no truncated content
@@ -119,6 +126,7 @@ Execute a comprehensive multi-phase plan to:
 **Action:** Delete skills that correspond to research topics (backup via git first)
 
 **Skills to delete (expected):**
+
 - Any skills in `research/`, `tutorials/`, `api/` categories that mirror research files
 - Duplicate skills with same name in flat and category paths
 
@@ -127,7 +135,7 @@ Execute a comprehensive multi-phase plan to:
 **Naming convention:** `<topic>-<source>` or `<category>-<topic>`
 
 | Research File | Proposed Skill Name | Category |
-|---------------|---------------------|----------|
+| --------------- | --------------------- | ---------- |
 | binance-python-api-a-step-by-step-guide.md | `binance-python-api-tutorial` | `development` |
 | official-binance-spot-api-documentation-github.md | `binance-api-reference` | `development` |
 | busha-quick-start-guide.md | `busha-api-quickstart` | `development` |
@@ -160,6 +168,7 @@ Execute a comprehensive multi-phase plan to:
 ### 3.3 Skill Structure Template
 
 Each skill must include:
+
 - **Frontmatter:** name, title, description (≤500 chars, starts with "Use when..."), version, author, license, tags
 - **Skills Required** table
 - **Workflow** with ≥3 phases (Setup, Execute, Verify minimum)
@@ -172,6 +181,7 @@ Each skill must include:
 ### 3.4 Batch Creation Strategy
 
 Create in batches of 7 (matching skill-judge batch size):
+
 - Batch 1: binance (2) + busha (2) + crypto-wallet (3) = 7
 - Batch 2: face-mask (3) + flutterwave (1) + hermes-agents (3) = 7
 - Batch 3: hermes-memory (3) + paypal (2) + paystack (2) = 7
@@ -185,6 +195,7 @@ Create in batches of 7 (matching skill-judge batch size):
 
 **Tool:** `skill_manage` with `skill-judge` skill loaded
 **Process:** For each new skill:
+
 1. Load skill-judge
 2. Evaluate skill
 3. Apply fixes (High → Medium → Low priority)
@@ -194,6 +205,7 @@ Create in batches of 7 (matching skill-judge batch size):
 ### 4.2 Expected Fixes per Skill (based on audit patterns)
 
 **High Priority (must fix to reach 80):**
+
 - Missing frontmatter fields (version, author, license, tags)
 - Missing verification checklist
 - Placeholder text (`[Add ... here]`)
@@ -202,17 +214,20 @@ Create in batches of 7 (matching skill-judge batch size):
 - Missing phased workflow (≥3 phases)
 
 **Medium Priority:**
+
 - SKILL.md > 250 lines → move detail to references/
 - Duplicate content between SKILL.md and references
 - Missing reference files (need ≥1 reference/template/script)
 
 **Low Priority:**
+
 - Formatting consistency
 - Minor DRY issues
 
 ### 4.3 Batch Judging
 
 Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for automation:
+
 - Find all new skills
 - Score each
 - Write results to `judge_results/batch_NNN_results.md`
@@ -223,7 +238,7 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 ## Files Likely to Change
 
 | File | Change Type |
-|------|-------------|
+| ------ | ------------- |
 | `C:\Users\Alexa\AppData\Local\hermes\SOUL.md` | Modify |
 | `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\SKILL.md` | Modify |
 | `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\references\preferences.md` | Modify |
@@ -237,12 +252,14 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 ## Tests / Validation
 
 ### Phase 1 Validation
+
 - [ ] SOUL.md loads only user-communication-preferences + superpowers
 - [ ] user-communication-preferences loads all superpowers skills explicitly
 - [ ] No duplicate profile routing tables
 - [ ] `hermes profile use exec-assistant` works
 
 ### Phase 2 Validation
+
 - [ ] All 28 research files pass markdown lint
 - [ ] No truncated content
 - [ ] Consistent frontmatter format
@@ -264,13 +281,14 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 ## ✅ Execution Summary (Completed 2026-07-10)
 
 | Phase | Status | Key Results |
-|-------|--------|-------------|
+| ------- | -------- | ------------- |
 | **Phase 1: SOUL.md & User-Comms** | ✅ Done | SOUL.md updated (1,770 chars); user-communication-preferences auto-loads superpowers |
 | **Phase 2: Research Audit** | ✅ Done | 28 files audited; 1 stub replaced with full content; all valid markdown |
 | **Phase 3: Skill Recreation** | ✅ Done | 28 new skills created in `skills/development/` and `skills/creative/` |
 | **Phase 4: Skill-Judge & Remediation** | ✅ Done | **All 23 skills ≥80** (avg 88.5, min 80, max 100) |
 
 ### Final Scores (23 skills evaluated)
+
 - 100: asyncio-part1-basics
 - 96: binance-api-reference
 - 95: flutterwave-transfers-api, hermes-networkchuck-course, hermes-luma-memory-arch, hermes-quickstart
@@ -282,12 +300,14 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 - 76: cryptoapis-wallet-builder (early run), asyncio-patricks-blog (early run) — *both remediated to ≥80*
 
 ### Assets Created
+
 - **28 SKILL.md** files with frontmatter, ≥3 phases, pitfalls, verification, Skills Required
 - **50+ reference files** (`references/`) with code patterns, error handling, platform detection
 - **20+ templates/scripts** (`templates/`, `scripts/`) for each skill
 - **Batch judge script:** `~/AppData/Local/hermes/scripts/batch_skill_judge.py`
 
 ### Profile Used
+
 - `exec-assistant` for SOUL/user-comms config
 - `code-architect` for audit, skill creation, judgment
 

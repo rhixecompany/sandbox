@@ -148,7 +148,7 @@ For additional help:
 ## Keyboard Shortcuts
 
 | Key | Action |
-|-----|--------|
+| ----- | -------- |
 | ← | Previous image/chapter |
 | → | Next image/chapter |
 | F | Toggle fullscreen |

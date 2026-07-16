@@ -3,7 +3,7 @@
 _Generated: 2026-07-10T20:00_
 
 | Project | Status | Size | Sections | Related Projects |
-|---------|--------|------|----------|------------------|
+| --------- | -------- | ------ | ---------- | ------------------ |
 | Banking | Active | 16KB | 10 | comicwise, rhixe_scans, rhixecompany-comics, university-libary-jsm |
 | Django-Scrapy-Selenium | Active (legacy — scraping consolidated to rhixecompany-comics) | 15KB | 9 | profile, rhixecompany-comics, selenium_webdriver, Python-projects |
 | Python-projects | Active | 12KB | 11 | Django-Scrapy-Selenium, selenium_webdriver, youtube-downloader |
@@ -22,6 +22,7 @@ _Generated: 2026-07-10T20:00_
 ## Cross-Reference Symmetry
 
 All cross-references are now symmetric. Verified:
+
 - Banking ↔ rhixecompany-comics ✓
 - Django-Scrapy-Selenium ↔ profile ✓
 - Python-projects ↔ Django-Scrapy-Selenium ✓
@@ -38,7 +39,7 @@ All cross-references are now symmetric. Verified:
 ## Verification Gate Results
 
 | Gate | Condition | Status |
-|------|-----------|--------|
+| ------ | ----------- | -------- |
 | Count = 14 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` | ✓ PASS |
 | ≥ 9 sections | `grep -c '^## '` ≥ 9 | ⚠️ university-libary-jsm (4 sections) |
 | 1KB–5KB | `wc -c` 1024–5120 | ⚠️ Most reports exceed 5KB |

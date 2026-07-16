@@ -28,7 +28,7 @@
 ## Types of Wallet APIs
 
 | API Type | Function | Use Case |
-|----------|----------|----------|
+| ---------- | ---------- | ---------- |
 | Transactional | Send/receive crypto | Payments, exchanges, bots |
 | Balance & Info | Read balances, history | Portfolio trackers, tax tools |
 | Wallet Management | Create wallets, addresses | Onboarding, treasury |

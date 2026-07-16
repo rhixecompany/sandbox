@@ -11,7 +11,7 @@ A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy
 ### Backend
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Web Framework** | Django 4.x |
 | **API Framework** | Django REST Framework (DRF) |
 | **Language** | Python 3.10+ / 3.12 |
@@ -23,7 +23,7 @@ A comprehensive web scraping platform combining Django (admin/dashboard), Scrapy
 ### Frontend
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Build Tool** | Webpack 5 (dev/prod config) |
 | **CSS Framework** | Tailwind CSS 3, daisyui, flowbite |
 | **JavaScript** | Alpine.js, htmx, hyperscript, jQuery |

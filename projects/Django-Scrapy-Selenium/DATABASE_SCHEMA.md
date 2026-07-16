@@ -9,7 +9,7 @@ The platform uses **PostgreSQL** as its primary database. The schema covers scra
 ### `scraping_comic`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| -------- | ------ | ------------- | ------------- |
 | `id` | `serial` | `PK` | Unique ID |
 | `title` | `varchar(500)` | `NOT NULL` | Comic title |
 | `slug` | `varchar(500)` | `UNIQUE` | URL-friendly name |
@@ -29,7 +29,7 @@ The platform uses **PostgreSQL** as its primary database. The schema covers scra
 ### `scraping_chapter`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| -------- | ------ | ------------- | ------------- |
 | `id` | `serial` | `PK` | |
 | `comic_id` | `integer` | `FK → scraping_comic.id` | Parent comic |
 | `number` | `decimal(10,2)` | `NOT NULL` | Chapter number |
@@ -44,7 +44,7 @@ The platform uses **PostgreSQL** as its primary database. The schema covers scra
 ### `scraping_scrapejob`
 
 | Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
+| -------- | ------ | ------------- | ------------- |
 | `id` | `serial` | `PK` | |
 | `spider_name` | `varchar(100)` | `NOT NULL` | Spider identifier |
 | `target_url` | `text` | `NULLABLE` | URL to scrape |
@@ -60,7 +60,7 @@ The platform uses **PostgreSQL** as its primary database. The schema covers scra
 Standard Django custom user model (django-allauth).
 
 | Column | Type | Constraints |
-|--------|------|-------------|
+| -------- | ------ | ------------- |
 | `id` | `serial` | `PK` |
 | `username` | `varchar(150)` | `UNIQUE NOT NULL` |
 | `email` | `varchar(254)` | `NOT NULL` |
@@ -72,7 +72,7 @@ Standard Django custom user model (django-allauth).
 ### `django_celery_beat_periodictask`
 
 | Column | Type | Description |
-|--------|------|-------------|
+| -------- | ------ | ------------- |
 | `id` | `serial` | PK |
 | `name` | `varchar(200)` | Task name |
 | `task` | `varchar(200)` | Task path |
@@ -83,7 +83,7 @@ Standard Django custom user model (django-allauth).
 ## Indexes
 
 | Table | Index | Columns |
-|-------|-------|---------|
+| ------- | ------- | --------- |
 | `scraping_comic` | `idx_comic_slug` | `slug` |
 | `scraping_comic` | `idx_comic_source` | `source` |
 | `scraping_comic` | `idx_comic_status` | `status` |

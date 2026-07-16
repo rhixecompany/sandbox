@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | DRF + SimpleJWT auth | <https://www.django-rest-framework.org/api-guide/authentication/> | DRF JWT authentication |
 | MUI v4 → v5 migration | <https://mui.com/material-ui/migration/migration-v4/> | Material-UI v4 to v5 migration |
 | ra-data-django-rest-framework | <https://github.com/bmihelac/ra-data-django-rest-framework> | React Admin DRF data provider |
@@ -25,12 +25,14 @@
 ### DRF + React 17 Streaming Platform Patterns (2026)
 
 **Core Architecture:**
+
 - Django REST Framework + React 17 (CRA-based) remains a solid stack for 2026 streaming platforms
 - Django 5.2 LTS + DRF 3.16 provide full stability and long-term support
 - PostgreSQL recommended for production (JSONB support for video metadata, better concurrency)
 - Gunicorn + WhiteNoise for small-to-medium deployments; add nginx/CDN for video delivery at scale
 
 **Streaming-Specific Patterns:**
+
 - **Video metadata API**: Use DRF ViewSets with custom actions for HLS/DASH manifest generation
 - **Media serving**: Serve static files via WhiteNoise/CDN; stream video via signed URLs or token auth
 - **Range requests**: Django's `FileResponse` supports HTTP 206 Partial Content for video seeking
@@ -38,6 +40,7 @@
 - **DRF serialization**: Nested serializers for Video → Renditions/Qualities → Segments hierarchy
 
 **Relevant Resource:**
+
 - Django REST Framework tutorial 2026: <https://tech-insider.org/django-rest-framework-tutorial-python-api-2026>
 - Reddit discussion on React+DRF stack viability 2026: <https://www.reddit.com/r/django/comments/1r4nkut/is_react_djangodrf_still_a_solid_stack_in_ai_era>
 
@@ -46,6 +49,7 @@
 ### React 17 + Material-UI 4 → React 18 + MUI 5 Migration
 
 **MUI v4 → v5 Key Changes (from official migration guide):**
+
 - **Styling engine**: JSS → Emotion (biggest breaking change)
 - **Package rename**: `@material-ui/*` → `@mui/*`
 - **React minimum**: v17.0.0 (React 18 fully supported)
@@ -53,6 +57,7 @@
 - **Default variants**: TextField `outlined`, Link `underline="always"`
 
 **Migration Tools (Automated):**
+
 ```bash
 # Core codemod - handles ~80% of changes
 npx @mui/codemod v5.0.0/preset-safe
@@ -65,12 +70,14 @@ npx @mui/codemod v5.0.0/link-underline-hover
 ```
 
 **Manual Changes Required:**
+
 - Replace `makeStyles`/`withStyles` with `styled()` or `sx` prop
 - Migrate `createMuiTheme` → `createTheme`; `ThemeProvider` import from `@mui/material/styles`
 - Update all imports: `@material-ui/core` → `@mui/material`, `@material-ui/icons` → `@mui/icons-material`
 - Add Emotion peer dependencies: `npm install @emotion/react @emotion/styled`
 
 **React 17 → 18 Upgrade:**
+
 - Update `index.js`: `ReactDOM.render()` → `ReactDOM.createRoot().render()`
 - Automatic batching, concurrent features opt-in
 - Mostly backward compatible; test `act()` warnings in tests
@@ -83,12 +90,14 @@ npx @mui/codemod v5.0.0/link-underline-hover
 ### video-react Player Integration with DRF Backend
 
 **video-react capabilities:**
+
 - Native HLS (via hls.js) and DASH (via dash.js) support
 - Props: `src` (string or array of sources), `poster`, `autoPlay`, `controls`, `playsInline`
 - Event handlers: `onPlay`, `onPause`, `onEnded`, `onError`, `onProgress`
 - Custom controls via `Player` sub-components
 
 **Integration Pattern with DRF:**
+
 ```jsx
 // Frontend: VideoPlayer.jsx
 import { Player } from 'video-react';
@@ -117,12 +126,14 @@ class VideoSerializer(serializers.ModelSerializer):
 ```
 
 **HLS/DASH Generation (Django + Celery + FFmpeg):**
+
 - Upload → trigger Celery task → FFmpeg transcode to multiple renditions
 - Generate `.m3u8` (HLS) and `.mpd` (DASH) manifests
 - Store in media storage (S3/GCS for production) or local media root
 - Serve manifests via DRF views with token authentication
 
 **Alternative Players:**
+
 - **react-player**: <https://github.com/cookpete/react-player> - supports HLS, DASH, YouTube, Vimeo
 - **react-all-player**: <https://dev.to/asadk/reactallplayer-one-player-to-rule-them-all-mp4-hls-dash-youtube-vimeo-1hoc> - unified API for all formats
 - **dash.js directly**: <https://www.smashingmagazine.com/2025/03/adaptive-video-streaming-dashjs-react> - full ABR control
@@ -132,6 +143,7 @@ class VideoSerializer(serializers.ModelSerializer):
 ### PayPal Integration with Django REST + React Frontend
 
 **Frontend (react-paypal-button-v2):**
+
 ```jsx
 import PayPalButton from 'react-paypal-button-v2';
 
@@ -154,6 +166,7 @@ import PayPalButton from 'react-paypal-button-v2';
 ```
 
 **Backend (DRF):**
+
 ```python
 # views.py
 class PayPalVerifyPaymentView(APIView):
@@ -175,11 +188,13 @@ class PayPalVerifyPaymentView(APIView):
 ```
 
 **Webhook Verification (Critical for Production):**
+
 - Register webhook endpoint in PayPal Developer Dashboard
 - Verify `PAYMENT.CAPTURE.COMPLETED` events
 - Validate webhook signature using `PAYPAL_WEBHOOK_ID` and `verify_webhook_signature`
 
 **Resources:**
+
 - react-paypal-button-v2: <https://github.com/Luehang/react-paypal-button-v2>
 - Django + React PayPal tutorial: <https://justdjango.com/blog/django-react-paypal-payments>
 
@@ -231,6 +246,7 @@ urlpatterns = [
 ```
 
 **Custom Social Adapter for JWT:**
+
 ```python
 # adapters.py
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
@@ -247,6 +263,7 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):
 ```
 
 **Frontend Flow:**
+
 1. User clicks "Login with Google" → redirects to `/accounts/google/login/`
 2. allauth handles OAuth flow → creates/links User
 3. Custom adapter generates JWT → returns to frontend callback URL
@@ -259,6 +276,7 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):
 ### Redux Toolkit Migration from Redux 4 + redux-thunk
 
 **Current Legacy Pattern (xamehi.tv):**
+
 ```javascript
 // store.js - legacy
 import { createStore, applyMiddleware, combineReducers } from 'redux';
@@ -271,6 +289,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 ```
 
 **Modern Redux Toolkit Pattern:**
+
 ```javascript
 // store.js - modern
 import { configureStore } from '@reduxjs/toolkit';
@@ -293,6 +312,7 @@ export const store = configureStore({
 ```
 
 **Slice Migration (reducer + actions + thunks → single file):**
+
 ```javascript
 // slices/videoSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
@@ -328,6 +348,7 @@ export default videoSlice.reducer;
 ```
 
 **RTK Query (Replace redux-thunk for API calls):**
+
 ```javascript
 // api/videoApi.js
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
@@ -370,6 +391,7 @@ export const { useGetVideosQuery, useGetVideoQuery, useCreateVideoMutation } = v
 ### React Admin Dashboard with DRF Backend Customization
 
 **Data Provider (ra-data-django-rest-framework):**
+
 ```javascript
 // App.js
 import { Admin, Resource } from 'react-admin';
@@ -386,6 +408,7 @@ const dataProvider = drfProvider('/api', fetchJsonWithAuthJWTToken);
 ```
 
 **Key Features of ra-data-django-rest-framework:**
+
 - **Pagination**: Works with DRF `PageNumberPagination` (set `page_size_query_param = 'page_size'`)
 - **Sorting**: Supports DRF `OrderingFilter`
 - **Filtering**: Maps React Admin filters to DRF filter backends
@@ -393,6 +416,7 @@ const dataProvider = drfProvider('/api', fetchJsonWithAuthJWTToken);
 - **Example app included** with Django backend + React Admin frontend
 
 **Customization Patterns:**
+
 ```javascript
 // Custom data provider for video-specific endpoints
 import { fetchUtils } from 'react-admin';
@@ -415,6 +439,7 @@ const videoDataProvider = {
 ### WhiteNoise Static Files Serving Django Production
 
 **Configuration (settings.py):**
+
 ```python
 # Middleware - WhiteNoise after SecurityMiddleware
 MIDDLEWARE = [
@@ -447,12 +472,14 @@ STATIC_URL = f'{STATIC_HOST}/static/' if STATIC_HOST else '/static/'
 ```
 
 **Key Features:**
+
 - Auto-generates versioned filenames with MD5 hashes (cache busting)
 - Gzip + Brotli compression
 - Serves `index.html` for SPA fallback (`WHITENOISE_INDEX_FILE = True`)
 - `collectstatic` still required; WhiteNoise serves from `STATIC_ROOT`
 
 **For Video Files (Media):**
+
 - WhiteNoise only serves **static** files, not user uploads
 - Use `django-storages` + S3/GCS for video media in production
 - Or nginx/X-Accel-Redirect for protected media
@@ -464,6 +491,7 @@ STATIC_URL = f'{STATIC_HOST}/static/' if STATIC_HOST else '/static/'
 ### CRA → Vite/Next.js Migration for Streaming Frontend
 
 **Why Migrate from CRA:**
+
 - CRA deprecated (React team no longer recommends it)
 - Slow builds, no native ESM, limited customization
 - Vite: instant HMR, optimized builds, native ES modules
@@ -472,12 +500,13 @@ STATIC_URL = f'{STATIC_HOST}/static/' if STATIC_HOST else '/static/'
 **Migration Paths:**
 
 | Target | Best For | Effort |
-|--------|----------|--------|
+| -------- | ---------- | -------- |
 | **Vite** | SPA streaming app (no SSR needed) | Low (~1 day) |
 | **Next.js App Router** | SEO, auth, server components | Medium (~1 week) |
 | **Next.js Pages Router** | Incremental migration | Medium |
 
 **CRA → Vite Steps:**
+
 ```bash
 # 1. Install Vite
 npm create vite@latest frontend -- --template react
@@ -491,6 +520,7 @@ npm create vite@latest frontend -- --template react
 ```
 
 **Vite Config for Django Backend:**
+
 ```javascript
 // vite.config.js
 export default defineConfig({
@@ -516,7 +546,7 @@ export default defineConfig({
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | MUI v4→v5 migration | <https://mui.com/material-ui/migration/migration-v4/> | Migration Guide |
 | React 18 upgrade | <https://react.dev/blog/2022/03/08/react-18-upgrade-guide> | Guide |
 | DRF SimpleJWT | <https://django-rest-framework-simplejwt.readthedocs.io/> | Docs |
@@ -541,17 +571,17 @@ export default defineConfig({
 4. **JWT security** — short-lived access tokens (5–15 min), refresh rotation; memory storage only
 5. **CORS restriction** — django-cors-headers with explicit allowed origins
 6. **Video streaming** — use signed URLs or token-authenticated manifests; serve via CDN
-5. **PayPal webhooks** — validate signatures before processing payments
-6. **React Admin DRF** — use `ra-data-django-rest-framework` for zero-config integration
-7. **Static files** — WhiteNoise for static; S3/GCS + django-storages for video media
-8. **Frontend build** — migrate CRA → Vite (SPA) or Next.js (SSR/SEO)
+7. **PayPal webhooks** — validate signatures before processing payments
+8. **React Admin DRF** — use `ra-data-django-rest-framework` for zero-config integration
+9. **Static files** — WhiteNoise for static; S3/GCS + django-storages for video media
+10. **Frontend build** — migrate CRA → Vite (SPA) or Next.js (SSR/SEO)
 
 ---
 
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | MUI v4 JSS → Emotion | Styling breaks | Use codemods (`@mui/codemod`) |
 | React createRoot missing | App won't render | Update to `createRoot()` in index.js |
 | SimpleJWT + allauth URL conflicts | Auth routes clash | Namespace allauth URLs under `/accounts/` |
@@ -602,7 +632,7 @@ export default defineConfig({
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | React 18 Docs | <https://react.dev/> | React official documentation |
 | MUI v5 | <https://mui.com/> | Material-UI v5 documentation |
 | SimpleJWT | <https://django-rest-framework-simplejwt.readthedocs.io/> | DRF JWT auth docs |
@@ -621,7 +651,7 @@ export default defineConfig({
 ## Research Notes (Section 13 Queries - Addressed)
 
 | Query | Status | Key Findings |
-|-------|--------|--------------|
+| ------- | -------- | -------------- |
 | Django REST Framework + React 17 streaming platform patterns 2026 | ✅ | DRF 3.16 + Django 5.2 LTS; PostgreSQL; Gunicorn+WhiteNoise; signed URLs for video |
 | React 17 + Material-UI 4 migration to React 18 + MUI 5 | ✅ | Codemods automate 80%; JSS→Emotion; package rename @material-ui→@mui |
 | video-react player integration with DRF backend | ✅ | HLS/DASH via src array; FFmpeg+Celery for transcoding; token auth on manifests |
@@ -636,19 +666,23 @@ export default defineConfig({
 ## Implementation Priority Recommendations
 
 ### Phase 1: Critical Upgrades (Week 1-2)
+
 1. **React 17 → 18 + MUI 4 → 5** — Use codemods; test thoroughly
 2. **Redux → Redux Toolkit + RTK Query** — Reduces boilerplate ~60%
 3. **CRA → Vite** — Immediate DX improvement; ~1 day migration
 
 ### Phase 2: Video Pipeline (Week 3-4)
-4. **HLS/DASH transcoding** — FFmpeg + Celery; generate manifests on upload
-5. **Token-authenticated manifests** — Secure video delivery
-6. **CDN integration** — CloudFront/Cloudflare for video segments
+
+1. **HLS/DASH transcoding** — FFmpeg + Celery; generate manifests on upload
+2. **Token-authenticated manifests** — Secure video delivery
+3. **CDN integration** — CloudFront/Cloudflare for video segments
 
 ### Phase 3: Auth & Payments (Week 5)
-7. **SimpleJWT + allauth integration** — Social login with JWT tokens
-8. **PayPal webhook verification** — Production-ready payment flow
+
+1. **SimpleJWT + allauth integration** — Social login with JWT tokens
+2. **PayPal webhook verification** — Production-ready payment flow
 
 ### Phase 4: Admin & Polish (Week 6)
-9. **React Admin customization** — Video-specific fields, manifest preview
-10. **WhiteNoise + S3 media** — Production static/media configuration
+
+1. **React Admin customization** — Video-specific fields, manifest preview
+2. **WhiteNoise + S3 media** — Production static/media configuration

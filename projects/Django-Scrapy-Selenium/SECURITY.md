@@ -97,7 +97,7 @@ PROXY_LIST = [
 ## 6. Rate Limiting
 
 | Endpoint | Rate | Burst |
-|----------|------|-------|
+| ---------- | ------ | ------- |
 | Scrape triggers | 10/hour | 2/minute |
 | API endpoints | 100/minute | 10/second |
 | Login attempts | 5/15min | - |

@@ -7,7 +7,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 ## Frontend
 
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | Next.js | 15.3.3 | React framework (App Router, Turbopack) |
 | React | 19.1.0 | UI library |
 | TypeScript | 5.x | Type safety |
@@ -21,7 +21,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 ## Backend & Database
 
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | Prisma ORM | 6.10.0 | Database ORM |
 | PostgreSQL | — | Database |
 | NextAuth v5 | 5.0.0-beta.25 | Authentication |
@@ -31,7 +31,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 ## Integrations
 
 | Integration | Purpose |
-|-------------|---------|
+| ------------- | --------- |
 | UploadThing | File uploads |
 | Resend | Email delivery |
 | WebSocket | Real-time features |
@@ -40,7 +40,7 @@ Full-featured comic reading web application with Next.js 15, Prisma ORM, Stripe/
 ## Dev & Quality
 
 | Tool | Version | Purpose |
-|------|---------|---------|
+| ------ | --------- | --------- |
 | Jest | 30.0.0 | Testing |
 | ts-jest | 29.4.0 | TypeScript Jest |
 | ESLint | 9.x | Linting |

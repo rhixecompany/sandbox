@@ -71,7 +71,7 @@ bun run lint:fix
 Key `bun run` script names (from `Bash/package.json`):
 
 | Script | Purpose |
-|---|---|
+| --- | --- |
 | `format` | Prettier write |
 | `typecheck` | `tsc --noEmit` |
 | `lint:strict` | ESLint, zero warnings |

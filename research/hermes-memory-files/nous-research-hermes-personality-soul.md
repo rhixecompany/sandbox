@@ -186,7 +186,7 @@ Examples:
 Hermes ships with built-in personalities you can switch to with `/personality`.
 
 | Name | Description |
-|------|-------------|
+| ------ | ------------- |
 | **helpful** | Friendly, general-purpose assistant |
 | **concise** | Brief, to-the-point responses |
 | **technical** | Detailed, accurate technical expert |

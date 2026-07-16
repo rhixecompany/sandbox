@@ -8,7 +8,7 @@
 **Stack:** Django 5 + Next.js 16 + Celery + Scrapy + PostgreSQL + Drizzle ORM
 
 | Layer | Technology | Source |
-|-------|-----------|--------|
+| ------- | ----------- | -------- |
 | Backend | Django 5.x + DRF | rhixecompany-comics (original) |
 | Frontend | Next.js 16 App Router | comicwise → inherited |
 | Scraping | Celery + Scrapy + Selenium | Django-Scrapy-Selenium → inherited |
@@ -20,7 +20,7 @@
 ## Decisions
 
 | Decision | Rationale |
-|----------|-----------|
+| ---------- | ----------- |
 | Keep dual-stack (Django + Next.js) | Both stacks have distinct advantages; Django for admin/scraping, Next.js for user-facing reader |
 | Adopt Playwright for new scrapers | Selenium is legacy-only from 2026; Playwright has native async, auto-wait, better anti-detection |
 | Migrate to Drizzle fully | Drizzle is code-first, no codegen, ~7KB bundle, better for edge/serverless |
@@ -29,7 +29,7 @@
 ## Pending Migrations
 
 | Item | Status | Target |
-|------|--------|--------|
+| ------ | -------- | -------- |
 | Frontend patterns from comicwise | 📋 Documented | ✅ Patterns extracted |
 | Scraping pipeline from Django-Scrapy-Selenium | 📋 Documented | ✅ Patterns extracted |
 | Selenium utilities from selenium_webdriver | 📋 Documented | ✅ Patterns extracted |

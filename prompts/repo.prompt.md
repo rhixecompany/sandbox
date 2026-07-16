@@ -44,8 +44,10 @@ dependencies:
 - skill:context7
 - skill:gh-cli
 - skill:git-commit
+- skill:git-submodule-workflow
 - skill:github-repo-management
 - skill:mcp-filesystem
+- skill:mcp-github
 - skill:mcp-memory
 - skill:mcp-sequential-thinking
 - skill:monorepo-pr-workflow
@@ -63,8 +65,10 @@ skills:
 - context7
 - gh-cli
 - git-commit
+- git-submodule-workflow
 - github-repo-management
 - mcp-filesystem
+- mcp-github
 - mcp-memory
 - mcp-sequential-thinking
 - monorepo-pr-workflow
@@ -84,8 +88,10 @@ metadata:
     - context7
     - gh-cli
     - git-commit
+    - git-submodule-workflow
     - github-repo-management
     - mcp-filesystem
+    - mcp-github
     - mcp-memory
     - mcp-sequential-thinking
     - monorepo-pr-workflow

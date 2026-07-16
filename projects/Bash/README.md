@@ -9,7 +9,7 @@ A comprehensive automation toolkit for the SandBox workspace, providing TypeScri
 ## Technology Stack
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Runtime** | Bun >=1.3.14, Node.js >=18 |
 | **Language** | TypeScript (strict), PowerShell 5.1+, Bash |
 | **Linting** | ESLint 10.x, Prettier 3.x, Markdownlint, CSpell |

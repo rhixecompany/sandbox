@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | rhixe_scans | `projects/rhixe_scans` | comic reader; shared Stripe + NextAuth + Tailwind |
 | rhixecompany-comics | `projects/rhixecompany-comics` | consolidation target |
 | university-libary-jsm | `projects/university-libary-jsm` | Next.js 15 + Prisma + PostgreSQL |
@@ -64,7 +64,7 @@
 - **Tailwind CSS v4** — new Vite-based engine, no config file needed, CSS-first
 - **shadcn/ui** compatible with Tailwind 4 via `@tailwindcss/postcss` plugin
 - **Radix UI** primitives unchanged — headless, accessible, unstyled
-- **Comic reader patterns:** 
+- **Comic reader patterns:**
   - `Dialog`/`Sheet` for reader modal
   - `Slider` for page navigation
   - `Keyboard` navigation via `useKeyboardShortcuts` hook
@@ -97,7 +97,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Next.js 16 | <https://nextjs.org/docs/app> | Docs |
 | Drizzle ORM | <https://orm.drizzle.dev> | Docs |
 | Stripe Node.js | <https://docs.stripe.com/api> | Docs |
@@ -135,7 +135,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Dual ORM during migration | Data drift | Eschew cross-ORM transactions; migrate one domain at a time |
 | Server data in client state | Stale data | TanStack Query for API; Zustand only for UI |
 | Missing Stripe webhook secret | 400 errors | Set `STRIPE_WEBHOOK_SECRET`; verify signature |
@@ -185,7 +185,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Next.js 16 | <https://nextjs.org/docs> | Framework docs |
 | Drizzle ORM | <https://orm.drizzle.dev> | TypeScript ORM |
 | Stripe Webhooks | <https://docs.stripe.com/billing/subscriptions/webhooks> | Webhook guide |
@@ -207,7 +207,9 @@
 ## 2026 Research Updates (Section 2 Queries)
 
 ### Query 1: Next.js 15/16 App Router comic streaming platform patterns
+
 **Key findings (2026):**
+
 - Next.js 16.2.6 (May 2026) ships Turbopack default, React 19.2, Cache Components (`"use cache"`), async `params`, renamed `proxy.ts` middleware
 - Partial Prerendering (PPR) enables static shell + dynamic streaming
 - Server Actions stable for mutations; use with `useFormState` + Zod
@@ -215,7 +217,9 @@
 - App Router patterns: Server Components by default, Client Components for reader UI
 
 ### Query 2: Prisma to Drizzle migration guide 2026
+
 **Key findings (2026):**
+
 - Drizzle v1 stable (0.45+), Prisma 7 rewrote engine in TypeScript
 - Bundle size: Drizzle ~50KB vs Prisma ~500KB+ — major factor for serverless/edge
 - Migration path: dual-ORM during transition, migrate domain-by-domain
@@ -223,7 +227,9 @@
 - Prisma: schema-first, Prisma Studio, wider DB support (MongoDB), mature migrations
 
 ### Query 3: Stripe subscription management for digital content platforms
+
 **Key findings (2026):**
+
 - Stripe Billing 0.7% on subscription volume
 - Embedded Checkout (no redirect), Customer Portal ($10/mo custom domain)
 - Server Actions for checkout session creation
@@ -232,7 +238,9 @@
 - Paywall patterns: webhook-driven access control + signed content URLs
 
 ### Query 4: NextAuth v5 beta with WebAuthn passkeys implementation
+
 **Key findings (2026):**
+
 - Auth.js v5 (NextAuth rebrand) in beta since 2023, production-ready
 - WebAuthn via `@auth/webauthn` or `better-auth` plugins
 - Migration guide at `authjs.dev/getting-started/migrating-to-v5`
@@ -241,7 +249,9 @@
 - NextAuth v5 still beta tag but widely used in production
 
 ### Query 5: Radix UI + shadcn/ui + Tailwind 4 comic reader components
+
 **Key findings (2026):**
+
 - Tailwind 4: Vite-based, CSS-first, `@import "tailwindcss"`, `@theme` directive
 - shadcn/ui compatible via `@tailwindcss/postcss` plugin
 - Radix primitives: Dialog (reader modal), Slider (page nav), ScrollArea (webtoon), Keyboard navigation hooks
@@ -249,7 +259,9 @@
 - Design tokens in CSS via `@theme` — no `tailwind.config.js` needed
 
 ### Query 6: Image optimization for comic/manga delivery (ImageKit, Cloudinary)
+
 **Key findings (2026):**
+
 - ImageKit: real-time transforms, signed URLs, auto WebP/AVIF, global CDN
 - Cloudinary: generous free tier, AI smart crop, auto quality/format, advanced transforms
 - Next.js `next/image` limited to self-hosted/Vercel; less flexible for comic pipelines
@@ -258,7 +270,9 @@
 - Multi-page chapters served as individual optimized images
 
 ### Query 7: Zustand + TanStack Query state management for reader apps
+
 **Key findings (2026):**
+
 - TanStack Query v5: server state (catalog, chapters, reading progress sync)
 - Zustand v5: client UI state (reader mode, zoom, theme, sidebar, preferences)
 - Pattern separation: async/server → TanStack Query; sync/UI → Zustand

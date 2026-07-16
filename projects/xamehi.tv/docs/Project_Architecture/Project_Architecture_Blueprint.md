@@ -11,7 +11,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Backend Framework | Django + Django REST Framework (DRF) |
 | Language (Backend) | Python 3.x |
 | Frontend Framework | React 17 |

@@ -37,7 +37,7 @@ Authorization: Bearer YOUR_SECRET_KEY
 ## Key Endpoints
 
 | Endpoint | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | POST /transaction/initialize | Initialize payment |
 | GET /transaction/verify/{ref} | Verify payment |
 | POST /transferrecipient | Create transfer recipient |

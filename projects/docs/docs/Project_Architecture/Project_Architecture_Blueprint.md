@@ -11,7 +11,7 @@
 ## Technology Stack Details
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | Format | Markdown |
 | Project Status | Read-only / Reference |
 
@@ -41,7 +41,7 @@ This project contains no executable code. It serves as a reference documentation
 ## Key Contents
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `DEPENDENCY_AUDIT.md` | Audit of project dependencies across the workspace |
 | `RESEARCH_APPENDIX.md` | Supplementary research documentation |
 

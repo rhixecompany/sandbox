@@ -3,12 +3,13 @@ status: completed
 ---
 
 # Categorization Plan
+>
 > Phase 1.2 deliverable
 
 ## Category Mapping
 
 | Category | Skills | Type |
-|----------|--------|------|
+| ---------- | -------- | ------ |
 | acpx-executor | acpx-executor | flat/singleton |
 | agentmail | agentmail | flat/singleton |
 | architecture | architecture-blueprint-generator, folder-structure-blueprint-generator, technology-stack-blueprint-generator | directory |

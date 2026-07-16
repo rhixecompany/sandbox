@@ -1,7 +1,7 @@
 # Validation Report — rhixe_scans
 
 | Gate | Status |
-|------|--------|
+| ------ | -------- |
 | Source AGENTS.md exists | ✅ PASS |
 | package.json has scripts & deps | ✅ PASS |
 | Next.js 15.3.3 confirmed | ✅ PASS |

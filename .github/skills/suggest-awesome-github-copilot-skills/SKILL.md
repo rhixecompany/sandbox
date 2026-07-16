@@ -74,12 +74,14 @@ When an outdated skill is identified:
 ## Notes
 
 - awesome-copilot `SKILL.md` front matter format:
+
   ```markdown
   ---
   name: "skill-name"
   description: "Brief description of what this skill provides and when to use it"
   ---
   ```
+
 - Each skill is a folder: `SKILL.md` + optional bundled assets; folder name
   lowercase-hyphenated and must match the `name` field.
 - Output only the table and the analysis — no extra commentary.

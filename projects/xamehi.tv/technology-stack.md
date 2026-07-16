@@ -7,7 +7,7 @@ Movie/television streaming website with Django REST backend and React 17 fronten
 ## Backend
 
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | Python | 3.x | Runtime |
 | Django | — | Web framework |
 | Django REST Framework | — | REST API |
@@ -18,7 +18,7 @@ Movie/television streaming website with Django REST backend and React 17 fronten
 ## Frontend
 
 | Technology | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | React | 17.0.1 | UI library |
 | Redux | 4.0.5 | State management |
 | Redux Thunk | 2.3.0 | Async middleware |
@@ -32,7 +32,7 @@ Movie/television streaming website with Django REST backend and React 17 fronten
 ## Database & Deployment
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | SQLite | Development database |
 | PostgreSQL | Production database |
 | Gunicorn | WSGI server |

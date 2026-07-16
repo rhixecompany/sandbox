@@ -9,7 +9,7 @@ A collection of 18 standalone Python scripts covering various domains: calculato
 ## Technology Stack
 
 | Category | Technology |
-|---|---|
+| --- | --- |
 | **Language** | Python ^3.x |
 | **Linting** | ruff |
 | **Type Checking** | mypy |
@@ -17,7 +17,7 @@ A collection of 18 standalone Python scripts covering various domains: calculato
 ### Dependencies
 
 | Library | Purpose |
-|---|---|
+| --- | --- |
 | **requests** | HTTP requests |
 | **opencv-python** | Face detection, image processing |
 | **matplotlib** | Data visualization |
@@ -77,7 +77,7 @@ mypy *.py
 ## Quality
 
 | Tool | Usage |
-|---|---|
+| --- | --- |
 | **ruff** | Code linting (all rules) |
 | **mypy** | Optional type checking |
 | **Manual testing** | No formal test suite (standalone scripts) |

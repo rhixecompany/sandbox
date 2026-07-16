@@ -11,7 +11,7 @@
 ## Similar Projects
 
 | Project | URL | Why Relevant |
-|---------|-----|--------------|
+| --------- | ----- | -------------- |
 | comicwise | `projects/comicwise` | shared comic reader; Stripe + NextAuth + Tailwind |
 | rhixecompany-comics | `projects/rhixecompany-comics` | shared comic reader; consolidation target |
 | university-libary-jsm | `projects/university-libary-jsm` | shared Next.js + Prisma + PostgreSQL catalog |
@@ -101,7 +101,7 @@
 ## Cheatsheets & Quick Reference
 
 | Topic | Resource | Type |
-|-------|----------|------|
+| ------- | ---------- | ------ |
 | Next.js 15 | <https://nextjs.org/docs> | Docs |
 | Prisma 6/7 | <https://www.prisma.io/docs> | Docs |
 | NextAuth v5 | <https://authjs.dev/getting-started> | Docs |
@@ -133,7 +133,7 @@
 ## Common Pitfalls
 
 | Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
+| --------- | -------- | ----------- |
 | Prisma pool exhaustion | 500s on hot-reload | singleton pattern in `lib/prisma.ts` |
 | Stripe webhook JSON body | signature verification fails | `request.text()` not `request.json()` |
 | WebSocket on Vercel | silent failure | custom server or SSE alternative |
@@ -183,7 +183,7 @@
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Next.js | <https://nextjs.org/docs> | Framework docs |
 | Prisma | <https://www.prisma.io/docs> | ORM docs |
 | Auth.js v5 | <https://authjs.dev/getting-started> | Auth docs |
@@ -202,6 +202,7 @@
 ### 1. Next.js 15 + Prisma 6 Comic Reader Platform Patterns
 
 **Key findings from research:**
+
 - Prisma 6 introduces `relationLoadStrategy` for JOIN vs query-level strategy selection
 - Nested create operations batched in single round-trip (v5.11+)
 - Edge-ready with serverless drivers (Neon, PlanetScale) via driver adapters
@@ -211,6 +212,7 @@
 - TypedSQL for type-safe raw SQL when needed for complex analytics queries
 
 **Comic-specific patterns:**
+
 - Chapter reader: Server Component for initial page, Client Component for navigation controls
 - Catalog: ISR with `revalidateTag` on new chapter publish
 - Image delivery: `next/image` with UploadThing signed URLs + `Cache-Control` headers
@@ -219,18 +221,21 @@
 ### 2. Dual Payment Provider (Stripe + PayPal) Integration Next.js
 
 **Stripe (Primary):**
+
 - App Router webhook: `request.text()` for raw body → `stripe.webhooks.constructEvent()`
 - Payment Element for unified UI (cards, PayPal, local methods)
 - Subscription management: Stripe Billing Portal + webhook sync
 - Webhook router pattern: typed handlers per event type (`invoice.payment_succeeded`, `customer.subscription.updated`)
 
 **PayPal (Secondary):**
+
 - `@paypal/react-paypal-js` for client-side SDK loading
 - Server-side: Orders v2 API (`/v2/checkout/orders` create + capture)
 - Webhook verification: check `PAYPAL-TRANSMISSION-SIG` header + `PAYPAL-CERT-URL`
 - Supports: one-time payments, subscriptions (billing plans)
 
 **Integration pattern:**
+
 - Unified payment service abstraction
 - Database: `PaymentProvider` enum (STRIPE | PAYPAL)
 - Idempotency keys on all payment operations
@@ -239,6 +244,7 @@
 ### 3. UploadThing File Upload for Comic/Manga Images
 
 **FileRouter design for comics:**
+
 ```typescript
 // Multiple routes for different upload types
 imageUploader: f({ image: { maxFileSize: '8MB', maxFileCount: 1 } })
@@ -255,11 +261,13 @@ coverUploader: f({ image: { maxFileSize: '4MB', maxFileCount: 1 } })
 ```
 
 **Security:**
+
 - Middleware validates user permissions before presigned URL generation
 - `onUploadComplete` runs on YOUR server — persist metadata, associate with chapter/series
 - Never trust client-provided file paths; use UploadThing's `file.ufsUrl`
 
 **Performance:**
+
 - SSR plugin eliminates loading flash
 - CDN delivery via UploadThing's global edge network
 - Automatic image optimization (WebP conversion, resize)
@@ -269,12 +277,14 @@ coverUploader: f({ image: { maxFileSize: '4MB', maxFileCount: 1 } })
 **Important caveat:** Auth.js (NextAuth v5) is now part of **Better Auth**. Consider migration path.
 
 **Supabase Adapter:**
+
 - Community-maintained (`@auth/supabase-adapter`)
 - Stores users/sessions in separate `next_auth` schema in Supabase PostgreSQL
 - Does NOT integrate with Supabase Auth (email/password, MFA, phone)
 - Use if: you want NextAuth providers + Supabase Postgres as DB
 
 **v5 Migration highlights:**
+
 - Config: `NextAuthOptions` → `NextAuthConfig`
 - Universal `auth()` function replaces `getServerSession`, `getSession`, `withAuth`, `getToken`, `useSession`
 - Cookie prefix: `next-auth` → `authjs`
@@ -286,7 +296,7 @@ coverUploader: f({ image: { maxFileSize: '4MB', maxFileCount: 1 } })
 **Architecture options:**
 
 | Approach | Vercel Compatible | Bidirectional | Complexity |
-|----------|-------------------|---------------|------------|
+| ---------- | ------------------- | --------------- | ------------ |
 | Native WebSocket + custom Node server | ❌ | ✅ | High |
 | Socket.io + custom Node server | ❌ | ✅ | Medium |
 | **SSE (Server-Sent Events)** | ✅ | ❌ (server→client only) | **Low** |
@@ -294,11 +304,13 @@ coverUploader: f({ image: { maxFileSize: '4MB', maxFileCount: 1 } })
 | Upstash QStash + SSE | ✅ | ✅ (via webhook) | Low |
 
 **Recommended for rhixe_scans on Vercel:**
+
 - **SSE for notifications:** Chapter releases, comments, system alerts
 - **Reading progress:** Debounced API calls (every 5-10s) → DB → SSE broadcast to other tabs/devices
 - **Multi-tab sync:** BroadcastChannel API for local tabs + SSE for cross-device
 
 **Implementation pattern:**
+
 ```typescript
 // app/api/reading-progress/stream/route.ts (SSE)
 export async function GET(req: Request) {
@@ -316,12 +328,14 @@ export async function GET(req: Request) {
 ### 6. TanStack Query + Zustand for Comic Library State Management
 
 **State separation:**
+
 | State Type | Examples | Library |
 |------------|----------|---------|
 | **Server State** | Comic catalog, chapters, reading history, user library, subscriptions | TanStack Query |
 | **Client State** | Reader settings (theme, fit, direction), UI modals, draft comments, reading progress (unsynced) | Zustand |
 
 **TanStack Query patterns for comics:**
+
 ```typescript
 // Query keys for invalidation
 const queryKeys = {
@@ -340,6 +354,7 @@ queryClient.prefetchQuery({
 ```
 
 **Zustand store for reader:**
+
 ```typescript
 interface ReaderState {
   fitMode: 'width' | 'height' | 'original';
@@ -353,6 +368,7 @@ interface ReaderState {
 ### 7. Prisma 6 Performance Optimization for Large Comic Catalogs
 
 **Schema indexing strategy:**
+
 ```prisma
 model Series {
   id          String   @id @default(cuid())
@@ -406,6 +422,7 @@ model ReadingProgress {
 ```
 
 **Query optimization patterns:**
+
 - Chapter reader: `relationLoadStrategy: "join"` for `chapter.pages`
 - Catalog: cursor pagination with `findMany({ take: 20, cursor: { id: lastId } })`
 - Library: `include: { series: { include: { latestChapter: true } } }` (2 queries)
@@ -413,6 +430,7 @@ model ReadingProgress {
 - Query Insights: `@prisma/sqlcommenter-query-insights` for production monitoring
 
 **Connection pooling:**
+
 - Development: singleton pattern in `lib/prisma.ts`
 - Production (Vercel): Prisma Accelerate or PgBouncer
 - Edge: Neon/PlanetScale serverless drivers with driver adapters
@@ -422,7 +440,7 @@ model ReadingProgress {
 ## Resources
 
 | Resource | URL | Description |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Next.js | <https://nextjs.org/docs> | Framework docs |
 | Prisma | <https://www.prisma.io/docs> | ORM docs |
 | Auth.js v5 | <https://authjs.dev/getting-started> | Auth docs |

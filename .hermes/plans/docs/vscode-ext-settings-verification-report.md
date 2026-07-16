@@ -30,7 +30,7 @@
 ### JSON Syntax
 
 | File | Status |
-|------|--------|
+| ------ | -------- |
 | Default settings.json | ✅ Valid |
 | Workspace settings.json | ✅ Valid |
 | Extensions.json | ✅ Valid |
@@ -38,7 +38,7 @@
 ### Extension Coverage Matrix
 
 | # | Extension ID | Config in Default | Notes |
-|---|-------------|-------------------|-------|
+| --- | ------------- | ------------------- | ------- |
 | 1 | aaron-bond.better-comments | ✅ | Tags, colors, multiline settings |
 | 2 | batisteo.vscode-django | ✅ | emmet + files.associations |
 | 3 | bierner.color-info | ✅ | Language selectors |
@@ -95,7 +95,7 @@
 ## Summary
 
 | Phase | Status | Details |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | Research | ✅ Complete | 14 marketplace pages fetched, remainder known from domain knowledge |
 | Default settings.json | ✅ Complete | 211 lines, 60+ settings across all relevant extensions |
 | Workspace settings.json | ✅ Complete | 87 lines, workspace-appropriate subset |
@@ -105,7 +105,7 @@
 **Total settings added vs original:**
 
 | File | Before | After | Δ |
-|------|--------|-------|---|
+| ------ | -------- | ------- | --- |
 | Default settings.json | 266 lines, 7.5KB | 211 lines, 10.4KB | +3KB settings content |
 | Workspace settings.json | 88 lines, 2.3KB | 87 lines, 2.6KB | +0.3KB, cleaner structure |
 | Extensions.json | 11 recs | 44 recs | +33 recommendations |
