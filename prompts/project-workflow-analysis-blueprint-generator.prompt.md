@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,23 +11,24 @@ description: Comprehensive technology-agnostic prompt generator for documenting 
   across multiple technologies including .NET, Java/Spring, React, and microservices
   architectures.
 tags:
-  - architecture
-  - csharp
-  - data
-  - documentation
-  - dotnet
-  - generator
-  - java
-  - ml
-  - prompts
-  - react
-  - spring
-  - testing
-  - typescript
-  - workflow
+- architecture
+- csharp
+- data
+- documentation
+- dotnet
+- generator
+- java
+- ml
+- prompts
+- react
+- spring
+- testing
+- typescript
+- workflow
 trigger: /project-workflow-analysis-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

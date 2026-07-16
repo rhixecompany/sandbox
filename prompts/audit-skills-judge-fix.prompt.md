@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,12 +9,12 @@ description: Run full skills audit, categorize, dedupe, consolidate, judge in ba
   of 10, remediate all reference files/scripts/SKILL.md, delete duplicates, and verify
   completion.
 tags:
-  - audit
-  - fix
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- audit
+- fix
+- prompts
+- skills
+- typescript
+- workflow
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -33,8 +31,9 @@ skills:
 - hermes-skills
 - skill-creator
 - writing-skills
-
-
+toolsets:
+- file
+- terminal
 ---
 # Audit Skills Judge Fix
 

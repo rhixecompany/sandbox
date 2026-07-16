@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,17 +8,18 @@ description: Comprehensive TypeScript and Next.js code quality prompt aligned to
   standards.
 trigger: /typescript
 tags:
-  - architecture
-  - backend
-  - configuration
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - skills
-  - typescript
-
-
+- architecture
+- backend
+- configuration
+- frontend
+- ml
+- nextjs
+- prompts
+- skills
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

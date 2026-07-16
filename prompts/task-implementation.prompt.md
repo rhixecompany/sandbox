@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,13 +8,14 @@ description: Comprehensive prompt for implementing tasks with clear phases, goal
   and verification.
 trigger: /task-implementation
 tags:
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - workflow
-
-
+- ai-assistant
+- ml
+- prompts
+- specification
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

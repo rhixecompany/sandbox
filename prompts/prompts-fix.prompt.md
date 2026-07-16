@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,13 +8,13 @@ trigger: /prompts-fix
 description: Sync and deduplicate prompt files across Hermes and Copilot with dependency
   mapping and platform-specific validation.
 tags:
-  - ai-assistant
-  - fix
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- ai-assistant
+- fix
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
@@ -30,8 +28,9 @@ dependencies:
 - skill:acpx-executor
 - skill:hermes-agent
 - skill:copilot-cli-quickstart
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

@@ -1,13 +1,6 @@
 ---
-
-
 toolsets:
-- createFile
-- editFiles
-- web/fetch
-- githubRepo
 - search
-- testFailure
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -16,13 +9,11 @@ name: write-coding-standards-from-file
 description: Write a coding standards document for a project using the coding styles
   from the file(s) and/or folder(s) passed as arguments in the prompt.
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /write-coding-standards-from-file
-
-
 ---
 ## Goal
 

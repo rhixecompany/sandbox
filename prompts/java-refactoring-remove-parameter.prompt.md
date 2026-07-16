@@ -1,21 +1,20 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: Refactoring Java Methods with Remove Parameter
+name: java-refactoring-remove-parameter
 title: Refactoring Java Methods With Remove Parameter
 description: Refactoring using Remove Parameter in Java Language
 trigger: /Refactoring Java Methods with Remove Parameter
 tags:
-  - backend
-  - java
-  - prompts
-  - refactoring
-  - typescript
-
-
+- backend
+- java
+- prompts
+- refactoring
+- typescript
+toolsets:
+- file
+- terminal
 ---
 # Refactoring Java Methods with Remove Parameter
 

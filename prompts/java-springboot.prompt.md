@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -14,16 +8,14 @@ title: Spring Boot Best Practices
 name: java-springboot
 description: Get best practices for developing applications with Spring Boot.
 tags:
-  - data
-  - frontend
-  - java
-  - ml
-  - prompts
-  - specification
-  - spring
+- data
+- frontend
+- java
+- ml
+- prompts
+- specification
+- spring
 trigger: /java-springboot
-
-
 ---
 # Spring Boot Best Practices
 

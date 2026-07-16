@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,17 +7,19 @@ name: typescript-mcp-server-generator
 description: Generate a complete MCP server project in TypeScript with tools, resources,
   and proper configuration
 tags:
-  - backend
-  - configuration
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
+- backend
+- configuration
+- generator
+- mcp
+- ml
+- prompts
+- specification
+- typescript
 trigger: /typescript-mcp-server-generator
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

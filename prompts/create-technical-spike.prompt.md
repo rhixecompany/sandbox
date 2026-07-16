@@ -1,23 +1,5 @@
 ---
-
-
 toolsets:
-- runCommands
-- runTasks
-- edit
-- search
-- extensions
-- usages
-- vscodeAPI
-- think
-- problems
-- changes
-- testFailure
-- openSimpleBrowser
-- web/fetch
-- githubRepo
-- todos
-- Microsoft Docs
 - search
 license: MIT
 author: Hermes Agent
@@ -27,14 +9,12 @@ name: create-technical-spike
 description: Create time-boxed technical spike documents for researching and resolving
   critical development decisions before implementation.
 tags:
-  - architecture
-  - generator
-  - prompts
-  - specification
-  - typescript
+- architecture
+- generator
+- prompts
+- specification
+- typescript
 trigger: /create-technical-spike
-
-
 ---
 title: "${input:SpikeTitle}"
 category: "${input:Category|Technical}"

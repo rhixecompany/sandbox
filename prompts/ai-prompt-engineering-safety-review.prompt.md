@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,12 +8,12 @@ trigger: /ai-prompt-engineering-safety-review
 description: Review a prompt for safety, bias, security, clarity, and effectiveness,
   then produce a safer improved version.
 tags:
-  - audit
-  - frontend
-  - ml
-  - prompts
-  - security
-  - typescript
+- audit
+- frontend
+- ml
+- prompts
+- security
+- typescript
 dependencies:
 - skill:prompt-engineering
 - skill:systematic-debugging
@@ -23,8 +21,9 @@ dependencies:
 skills:
 - prompt-engineering
 - systematic-debugging
-
-
+toolsets:
+- file
+- terminal
 ---
 # ai-prompt-engineering-safety-review
 

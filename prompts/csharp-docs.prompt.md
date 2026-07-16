@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,18 +10,16 @@ name: csharp-docs
 description: Ensure that C# types are documented with XML comments and follow best
   practices for documentation.
 tags:
-  - api
-  - csharp
-  - documentation
-  - dotnet
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- api
+- csharp
+- documentation
+- dotnet
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /csharp-docs
-
-
 ---
 # C# Documentation Best Practices
 

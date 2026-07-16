@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,17 +7,19 @@ name: breakdown-test
 description: Test Planning and Quality Assurance prompt that generates comprehensive
   test strategies, task breakdowns, and quality validation plans for GitHub projects.
 tags:
-  - generator
-  - git
-  - ml
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
+- generator
+- git
+- ml
+- planning
+- prompts
+- specification
+- testing
+- typescript
 trigger: /breakdown-test
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

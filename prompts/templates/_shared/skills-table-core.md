@@ -25,8 +25,9 @@ customizes the **Purpose** column for its domain.
 ## Per-Domain Purpose Variations
 
 ### agents-fix
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` (prompt) | Map impacted files and dependencies before edits |
 | `brainstorming` | Explore agent discovery and sync approaches |
 | `plans-and-specs` | Create structured plans for agent migration and dedup |
@@ -38,8 +39,9 @@ customizes the **Purpose** column for its domain.
 | `copilot-cli-quickstart` | Use Copilot CLI for quick validation and verification |
 
 ### prompts-fix
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` (prompt) | Map impacted files and dependencies before edits |
 | `brainstorming` | Explore prompt discovery and sync approaches |
 | `plans-and-specs` | Create structured plans for prompt migration and dedup |
@@ -52,8 +54,9 @@ customizes the **Purpose** column for its domain.
 | `copilot-cli-quickstart` | Use Copilot CLI for quick validation and verification |
 
 ### bash-scripts-fix
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` (prompt) | Map script directories and dependency impact before migration |
 | `brainstorming` | Explore script modernization approaches |
 | `plans-and-specs` | Create migration and fix plans |
@@ -65,8 +68,9 @@ customizes the **Purpose** column for its domain.
 | `script-orchestration` | Build unified orchestrators for large script repos |
 
 ### general
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` (prompt) | Map impacted files and dependencies before changes |
 | `brainstorming` | Explore approaches before implementation |
 | `plans-and-specs` | Create structured plans and specs |
@@ -80,8 +84,9 @@ customizes the **Purpose** column for its domain.
 | `acpx-executor` | Dispatch tasks to ACPX providers |
 
 ### workspace-consolidate
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` | Build dependency and file context before consolidation edits |
 | `brainstorming` | Explore consolidation strategies |
 | `plans-and-specs` | Create migration plan with specs |
@@ -94,8 +99,9 @@ customizes the **Purpose** column for its domain.
 | `project-consolidation` | Five-phase workflow for cleaning up and restructuring a project |
 
 ### skills-fix
+
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `context-map` (prompt) | Map skill locations and dependencies before edits |
 | `using-superpowers` | Load session startup checklist |
 | `brainstorming` | Explore skill reorganization approaches |

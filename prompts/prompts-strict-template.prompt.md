@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,16 +8,17 @@ description: Comprehensive prompt for enforcing strict .prompt.md template struc
   and formatting rules.
 trigger: /prompts-strict-template
 tags:
-  - audit
-  - fix
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
-
-
+- audit
+- fix
+- frontend
+- markdown
+- ml
+- prompts
+- skills
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

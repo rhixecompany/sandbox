@@ -1,8 +1,7 @@
 ---
-
-
 toolsets:
-- edit/editFiles
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,14 +10,12 @@ name: finalize-agent-prompt
 description: Finalize prompt file using the role of an AI agent to polish the prompt
   for the end user.
 tags:
-  - agents
-  - ml
-  - prompts
-  - specification
-  - typescript
+- agents
+- ml
+- prompts
+- specification
+- typescript
 trigger: /finalize-agent-prompt
-
-
 ---
 ## Goal
 

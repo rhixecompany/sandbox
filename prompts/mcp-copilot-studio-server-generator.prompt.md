@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,18 +7,19 @@ name: mcp-copilot-studio-server-generator
 description: Generate a complete MCP server implementation optimized for Copilot Studio
   integration with proper schema constraints and streamable HTTP support
 tags:
-  - ai-assistant
-  - backend
-  - generator
-  - mcp
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- backend
+- generator
+- mcp
+- ml
+- performance
+- prompts
+- specification
+- typescript
 trigger: /mcp-copilot-studio-server-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

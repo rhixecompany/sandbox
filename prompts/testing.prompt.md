@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,15 +7,16 @@ title: Testing
 description: Comprehensive testing prompt aligned to repository unit and E2E guidance.
 trigger: /testing
 tags:
-  - audit
-  - frontend
-  - planning
-  - prompts
-  - skills
-  - testing
-  - typescript
-
-
+- audit
+- frontend
+- planning
+- prompts
+- skills
+- testing
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

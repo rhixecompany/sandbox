@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /plan-batch-fix
 name: plan-batch-fix
 title: Batch Fix Errors, Warnings & Deprecations
@@ -13,11 +11,11 @@ version: 1.0.0
 author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - fix
-  - planning
-  - prompts
-  - skills
-  - typescript
+- fix
+- planning
+- prompts
+- skills
+- typescript
 dependencies:
 - skill:systematic-debugging
 - skill:subagent-driven-development
@@ -32,8 +30,9 @@ skills:
 - simplify
 - verification-before-completion
 - brainstorming
-
-
+toolsets:
+- file
+- terminal
 ---
 > **Shared template references:**
 >

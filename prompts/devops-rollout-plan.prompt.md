@@ -1,11 +1,6 @@
 ---
-
-
 toolsets:
-- codebase
-- terminalCommand
 - search
-- githubRepo
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,15 +10,13 @@ description: Generate comprehensive rollout plans with preflight checks, step-by
   deployment, verification signals, rollback procedures, and communication plans for
   infrastructure and application changes
 tags:
-  - deployment
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- deployment
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /devops-rollout-plan
-
-
 ---
 ## Goal
 

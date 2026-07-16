@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,17 +8,18 @@ description: Issue Planning and Automation prompt that generates comprehensive p
   plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities,
   and automated tracking.
 tags:
-  - generator
-  - git
-  - ml
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
+- generator
+- git
+- ml
+- planning
+- prompts
+- specification
+- testing
+- typescript
 trigger: /breakdown-plan
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

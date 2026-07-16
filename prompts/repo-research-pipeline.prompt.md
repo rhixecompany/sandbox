@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /repo-research-pipeline
 name: repo-research-pipeline
 title: Repo Research Pipeline (MCP-Enhanced)
@@ -13,14 +11,14 @@ version: 2.0.0
 author: Hermes Agent
 license: MIT
 tags:
-  - frontend
-  - generator
-  - git
-  - mcp
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- frontend
+- generator
+- git
+- mcp
+- prompts
+- skills
+- typescript
+- workflow
 dependencies:
 - skill:repo-research-pipeline
 - skill:web-research-pipeline
@@ -41,8 +39,9 @@ metadata:
     - mcp-github
     - mcp-fetch
     - domain-intel
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

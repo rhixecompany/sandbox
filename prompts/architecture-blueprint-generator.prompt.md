@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,16 +10,17 @@ description: Comprehensive project architecture blueprint generator that analyze
   implementation patterns, and provides extensible blueprints for maintaining architectural
   consistency and guiding new development.
 tags:
-  - architecture
-  - documentation
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - typescript
+- architecture
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- typescript
 trigger: /architecture-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

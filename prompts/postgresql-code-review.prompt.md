@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -17,17 +13,15 @@ description: PostgreSQL-specific code review assistant focusing on PostgreSQL be
   security features like Row Level Security (RLS).
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
-  - architecture
-  - audit
-  - database
-  - prompts
-  - security
-  - specification
-  - sql
-  - typescript
+- architecture
+- audit
+- database
+- prompts
+- security
+- specification
+- sql
+- typescript
 trigger: /postgresql-code-review
-
-
 ---
 ## Goal
 

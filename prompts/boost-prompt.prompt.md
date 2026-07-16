@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,12 +8,12 @@ trigger: /boost-prompt
 description: 'Interactive prompt refinement workflow: interrogates scope, deliverables,
   and constraints, then copies final markdown to clipboard using Joyride.'
 tags:
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - typescript
-  - workflow
+- frontend
+- markdown
+- ml
+- prompts
+- typescript
+- workflow
 dependencies:
 - skill:writing-skills
 - skill:writing-plans
@@ -25,8 +23,9 @@ dependencies:
 skills:
 - writing-skills
 - writing-plans
-
-
+toolsets:
+- file
+- terminal
 ---
 # boost-prompt
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,18 +11,19 @@ description: Intelligent README.md generation prompt that analyzes project docum
   while generating well-structured markdown documentation with proper formatting,
   cross-references, and developer-focused content.
 tags:
-  - ai-assistant
-  - architecture
-  - documentation
-  - generator
-  - git
-  - markdown
-  - prompts
-  - testing
-  - workflow
+- ai-assistant
+- architecture
+- documentation
+- generator
+- git
+- markdown
+- prompts
+- testing
+- workflow
 trigger: /readme-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

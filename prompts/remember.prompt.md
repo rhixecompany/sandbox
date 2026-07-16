@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,13 +8,14 @@ description: 'Transforms lessons learned into domain-organized memory instructio
   (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope
   is `global` (default), `user`, `workspace`, or `ws`.'
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /remember
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

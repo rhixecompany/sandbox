@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,14 +8,14 @@ trigger: /agents-fix
 description: Sync and deduplicate agent definitions across Hermes, and Copilot with
   dependency mapping and schema validation.
 tags:
-  - agents
-  - ai-assistant
-  - configuration
-  - fix
-  - ml
-  - prompts
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- configuration
+- fix
+- ml
+- prompts
+- typescript
+- workflow
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
@@ -44,8 +42,9 @@ skills:
 - simplify
 - acpx-executor
 - copilot-cli-quickstart
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

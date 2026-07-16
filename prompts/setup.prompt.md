@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,16 +7,18 @@ name: setup
 description: Comprehensive AI agent onboarding prompt for ComicWise — architecture,
   workflows, real code patterns, and conventions
 tags:
-  - agents
-  - architecture
-  - backend
-  - ml
-  - nextjs
-  - prompts
-  - typescript
+- agents
+- architecture
+- backend
+- ml
+- nextjs
+- prompts
+- typescript
 trigger: /setup
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## 1. Project Architecture
 

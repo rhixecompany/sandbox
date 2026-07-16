@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,14 +8,15 @@ description: Generates a comprehensive and best-practice-oriented .editorconfig 
   based on project analysis and user preferences.
 trigger: /editorconfig
 tags:
-  - configuration
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
-
-
+- configuration
+- generator
+- ml
+- prompts
+- specification
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

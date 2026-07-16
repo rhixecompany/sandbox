@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,14 +7,15 @@ name: pytest-coverage
 description: Run pytest tests with coverage, discover lines missing coverage, and
   increase coverage to 100%.
 tags:
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
+- ml
+- prompts
+- specification
+- testing
+- typescript
 trigger: /pytest-coverage
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

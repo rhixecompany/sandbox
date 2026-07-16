@@ -5,14 +5,15 @@ version: 2.0.0
 title: context-map
 name: context-map
 trigger: /context-map
-description: Build a dependency and reference map before making changes so implementation starts from the right files.
+description: Build a dependency and reference map before making changes so implementation
+  starts from the right files.
 tags:
-  - audit
-  - frontend
-  - prompts
-  - specification
-  - testing
-  - typescript
+- audit
+- frontend
+- prompts
+- specification
+- testing
+- typescript
 dependencies:
 - skill:codemap
 skills:
@@ -21,8 +22,9 @@ metadata:
   hermes:
     related_skills:
     - codemap
-
-
+toolsets:
+- file
+- terminal
 ---
 
 # context-map

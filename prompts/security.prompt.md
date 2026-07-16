@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,18 +8,19 @@ description: Comprehensive prompt for security review, vulnerability assessment,
   secure coding practices.
 trigger: /security
 tags:
-  - api
-  - architecture
-  - audit
-  - data
-  - documentation
-  - frontend
-  - prompts
-  - security
-  - skills
-  - typescript
-
-
+- api
+- architecture
+- audit
+- data
+- documentation
+- frontend
+- prompts
+- security
+- skills
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

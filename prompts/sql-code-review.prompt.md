@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -18,18 +14,16 @@ description: Universal SQL code review assistant that performs comprehensive sec
   coverage.
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
-  - audit
-  - backend
-  - data
-  - database
-  - ml
-  - prompts
-  - security
-  - sql
-  - typescript
+- audit
+- backend
+- data
+- database
+- ml
+- prompts
+- security
+- sql
+- typescript
 trigger: /sql-code-review
-
-
 ---
 ## Goal
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,14 +8,15 @@ description: 'Execute the AGENTS.md session workflow: introspection, tool discov
   profile matching, and reporting.'
 trigger: /run-session-agentsmd-workflow
 tags:
-  - agents
-  - git
-  - prompts
-  - specification
-  - typescript
-  - workflow
-
-
+- agents
+- git
+- prompts
+- specification
+- typescript
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

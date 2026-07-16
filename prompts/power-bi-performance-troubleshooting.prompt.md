@@ -1,8 +1,7 @@
 ---
-
-
 toolsets:
-- microsoft.docs.mcp
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,14 +10,12 @@ name: power-bi-performance-troubleshooting
 description: Systematic Power BI performance troubleshooting prompt for identifying,
   diagnosing, and resolving performance issues in Power BI models, reports, and queries.
 tags:
-  - frontend
-  - performance
-  - prompts
-  - specification
-  - typescript
+- frontend
+- performance
+- prompts
+- specification
+- typescript
 trigger: /power-bi-performance-troubleshooting
-
-
 ---
 # Power BI Performance Troubleshooting Guide
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -8,14 +6,16 @@ title: Create Spring Boot Kotlin project prompt
 name: create-spring-boot-kotlin-project
 description: Create Spring Boot Kotlin Project Skeleton
 tags:
-  - docker
-  - generator
-  - java
-  - prompts
-  - spring
+- docker
+- generator
+- java
+- prompts
+- spring
 trigger: /create-spring-boot-kotlin-project
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 # Create Spring Boot Kotlin project prompt
 

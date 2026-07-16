@@ -1,21 +1,20 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: sa-plan
+name: structured-autonomy-plan
 title: Sa Plan
 description: Structured Autonomy Planning Prompt
 trigger: /sa-plan
 tags:
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
-
-
+- ml
+- planning
+- prompts
+- specification
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

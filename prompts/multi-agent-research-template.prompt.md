@@ -1,20 +1,18 @@
 ---
-
-
 name: multi-agent-research-template
 title: Multi-Agent Research and Implementation Template
 description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current
   research targets while factoring out the shared workflow.
 tags:
-  - agents
-  - ai-assistant
-  - frontend
-  - ml
-  - planning
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- skills
+- typescript
+- workflow
 trigger: /multi-agent-research-template
 version: 1.0.0
 author: Hermes Agent
@@ -28,8 +26,10 @@ metadata:
     - research
     - planning
     - automation
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Skills Required
 
@@ -37,7 +37,7 @@ metadata:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#multi-agent-research-template)
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | codex | Codex agent execution |
 | copilot | Copilot agent execution |
 | hermes | Hermes agent execution |
@@ -57,7 +57,7 @@ equivalent command style and preserve the order of operations.
 <!-- Template variables use Jinja2-style {{var}} syntax -->
 
 | Variable | Value |
-|----------|-------|
+| ---------- | ------- |
 | `{{workspace_root}}` | `` `$HOME/Desktop/SandBox` `` (resolves to `C:\Users\Alexa\Desktop\SandBox`) |
 | `{{docs_root}}` | `` `docs/` `` |
 | `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` |
@@ -69,7 +69,7 @@ equivalent command style and preserve the order of operations.
 ## Agent Mapping
 
 | Agent | Approach | Notes |
-|-------|----------|-------|
+| ------- | ---------- | ------- |
 | Codex | Use terminal commands and workspace-local file edits. | |
 | Copilot | Use the equivalent Copilot workflow tools available in the current environment. | |
 | Hermes | Use Hermes CLI commands exactly as written in the target steps. | |
@@ -179,7 +179,7 @@ For this Phase:
 ## Output Requirements
 
 | # | Requirement | Description |
-|---|-------------|-------------|
+| --- | ------------- | ------------- |
 | 1 | Preserve targets | Preserve the current research targets. |
 | 2 | Reusable workflow | Keep the workflow reusable by changing only the template variables. |
 | 3 | Markdown output | Use Markdown for extracted docs, indexes, and notes. |
@@ -189,7 +189,7 @@ For this Phase:
 ## Verification Gates
 
 | # | Gate | Criteria |
-|---|------|----------|
+| --- | ------ | ---------- |
 | 1 | Target order | The research targets must be executed in order. |
 | 2 | Markdown output | The extracted pages must be written to Markdown files. |
 | 3 | Docs index | The docs index must list the new files. |

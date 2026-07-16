@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,15 +10,16 @@ description: 'Refresh workspace customization inventory and patch stale AGENTS o
   '
 trigger: /refresh-agent-inventory
 tags:
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - skills
-  - typescript
+- agents
+- ai-assistant
+- ml
+- prompts
+- skills
+- typescript
 mode: ask
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

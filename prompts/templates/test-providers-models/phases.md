@@ -42,7 +42,7 @@
 ## Current Status (2026-07-10)
 
 | Phase | Title | Status | Notes |
-|-------|-------|--------|-------|
+| ------- | ------- | -------- | ------- |
 | 0 | Auth & Provider Inventory | ✅ Complete | 9 providers from `hermes auth list` |
 | 1 | Model Catalog Discovery | ✅ Complete | OpenRouter 40, Nous 30 |
 | 2 | Free Model Extraction | ✅ Complete | 5 benchmarked, 4 excluded |

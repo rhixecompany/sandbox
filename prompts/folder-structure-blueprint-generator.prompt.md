@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,20 +10,21 @@ description: Comprehensive technology-agnostic prompt for analyzing and document
   naming conventions, file placement patterns, and extension templates for maintaining
   consistent code organization across diverse technology stacks.
 tags:
-  - architecture
-  - csharp
-  - dotnet
-  - generator
-  - java
-  - javascript
-  - ml
-  - prompts
-  - python
-  - react
-  - typescript
+- architecture
+- csharp
+- dotnet
+- generator
+- java
+- javascript
+- ml
+- prompts
+- python
+- react
+- typescript
 trigger: /folder-structure-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

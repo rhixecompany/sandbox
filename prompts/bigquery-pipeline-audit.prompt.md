@@ -1,9 +1,5 @@
 ---
-
-
 toolsets:
-- search/codebase
-- edit/editFiles
 - search
 license: MIT
 author: Hermes Agent
@@ -13,19 +9,17 @@ name: bigquery-pipeline-audit
 description: Audits Python + BigQuery pipelines for cost safety, idempotency, and
   production readiness. Returns a structured report with exact patch locations.
 tags:
-  - api
-  - audit
-  - configuration
-  - database
-  - ml
-  - prompts
-  - python
-  - security
-  - sql
-  - typescript
+- api
+- audit
+- configuration
+- database
+- ml
+- prompts
+- python
+- security
+- sql
+- typescript
 trigger: /bigquery-pipeline-audit
-
-
 ---
 ## A) COST EXPOSURE: What will actually get billed?
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,16 +7,18 @@ title: ComicWise Development Workflow
 description: Reusable prompt for ComicWise development sessions
 applyTo: '**/*'
 tags:
-  - architecture
-  - audit
-  - nextjs
-  - prompts
-  - testing
-  - typescript
-  - workflow
+- architecture
+- audit
+- nextjs
+- prompts
+- testing
+- typescript
+- workflow
 trigger: /comicwise-development
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 # ComicWise Development Prompt
 

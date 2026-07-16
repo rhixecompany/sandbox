@@ -1,23 +1,6 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- extensions
-- web/fetch
-- githubRepo
-- openSimpleBrowser
-- problems
-- runTasks
 - search
-- search/searchResults
-- runCommands/terminalLastCommand
-- runCommands/terminalSelection
-- testFailure
-- usages
-- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -26,17 +9,15 @@ name: create-architectural-decision-record
 description: Create an Architectural Decision Record (ADR) document for AI-optimized
   decision documentation.
 tags:
-  - architecture
-  - documentation
-  - generator
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
+- architecture
+- documentation
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
 trigger: /create-architectural-decision-record
-
-
 ---
 ## Goal
 

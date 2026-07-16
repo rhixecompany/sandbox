@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,13 +11,11 @@ description: Ensure that Java types are documented with Javadoc comments and fol
   best practices for documentation.
 trigger: /java-docs
 tags:
-  - documentation
-  - java
-  - prompts
-  - specification
-  - typescript
-
-
+- documentation
+- java
+- prompts
+- specification
+- typescript
 ---
 # Java Documentation (Javadoc) Best Practices
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,22 +12,23 @@ description: Comprehensive technology stack blueprint generator that analyzes co
   visual diagrams. Provides implementation-ready templates and maintains architectural
   consistency for guided development.
 tags:
-  - architecture
-  - configuration
-  - csharp
-  - documentation
-  - dotnet
-  - generator
-  - java
-  - javascript
-  - ml
-  - prompts
-  - python
-  - react
-  - typescript
+- architecture
+- configuration
+- csharp
+- documentation
+- dotnet
+- generator
+- java
+- javascript
+- ml
+- prompts
+- python
+- react
+- typescript
 trigger: /technology-stack-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

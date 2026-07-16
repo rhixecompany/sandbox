@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -14,16 +8,14 @@ title: TUnit Best Practices
 name: csharp-tunit
 description: Get best practices for TUnit unit testing, including data-driven tests
 tags:
-  - csharp
-  - data
-  - dotnet
-  - frontend
-  - prompts
-  - testing
-  - typescript
+- csharp
+- data
+- dotnet
+- frontend
+- prompts
+- testing
+- typescript
 trigger: /csharp-tunit
-
-
 ---
 # TUnit Best Practices
 

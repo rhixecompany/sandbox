@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,19 +7,20 @@ name: az-cost-optimize
 description: Analyze Azure resources used in the app (IaC files and/or resources in
   a target rg) and optimize costs - creating GitHub issues for identified optimizations.
 tags:
-  - azure
-  - backend
-  - configuration
-  - frontend
-  - generator
-  - git
-  - mcp
-  - performance
-  - prompts
-  - workflow
+- azure
+- backend
+- configuration
+- frontend
+- generator
+- git
+- mcp
+- performance
+- prompts
+- workflow
 trigger: /az-cost-optimize
-
-
+toolsets:
+- file
+- terminal
 ---
 # Azure Cost Optimize
 

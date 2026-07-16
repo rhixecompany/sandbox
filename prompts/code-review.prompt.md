@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,16 +8,17 @@ description: Comprehensive code review prompt for correctness, security, and tes
   risk.
 trigger: /code-review
 tags:
-  - audit
-  - data
-  - frontend
-  - prompts
-  - security
-  - skills
-  - testing
-  - typescript
-
-
+- audit
+- data
+- frontend
+- prompts
+- security
+- skills
+- testing
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

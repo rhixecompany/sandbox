@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /web-research-pipeline
 name: web-research-pipeline
 title: Web Research Pipeline (MCP-Enhanced)
@@ -13,13 +11,13 @@ version: 2.0.0
 author: Hermes Agent
 license: MIT
 tags:
-  - backend
-  - markdown
-  - mcp
-  - playwright
-  - prompts
-  - skills
-  - workflow
+- backend
+- markdown
+- mcp
+- playwright
+- prompts
+- skills
+- workflow
 dependencies:
 - skill:web-research-pipeline
 - skill:mcp-fetch
@@ -37,8 +35,10 @@ metadata:
     - mcp-fetch
     - firecrawl-scrape
     - domain-intel
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

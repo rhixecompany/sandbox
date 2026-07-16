@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,16 +11,14 @@ mode: agent
 description: Generate a complete TypeSpec declarative agent with instructions, capabilities,
   and conversation starters for Microsoft 365 Copilot
 tags:
-  - agents
-  - ai-assistant
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- agents
+- ai-assistant
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /typespec-create-agent
-
-
 ---
 ## Goal
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,10 +8,10 @@ trigger: /general
 description: General development workflow for analysis, planning, implementation,
   and verification with context mapping and AI-assisted execution.
 tags:
-  - planning
-  - prompts
-  - typescript
-  - workflow
+- planning
+- prompts
+- typescript
+- workflow
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
@@ -47,8 +45,9 @@ skills:
 - plan
 - writing-skills
 - acpx-executor
-
-
+toolsets:
+- file
+- terminal
 ---
 > General development workflow with planning, automation, and verification.
 

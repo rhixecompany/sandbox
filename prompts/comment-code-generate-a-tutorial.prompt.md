@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,17 +8,18 @@ description: Transform this Python script into a polished, beginner-friendly pro
   by refactoring the code, adding clear instructional comments, and generating a complete
   markdown tutorial.
 tags:
-  - generator
-  - markdown
-  - ml
-  - prompts
-  - python
-  - refactoring
-  - specification
-  - typescript
+- generator
+- markdown
+- ml
+- prompts
+- python
+- refactoring
+- specification
+- typescript
 trigger: /comment-code-generate-a-tutorial
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

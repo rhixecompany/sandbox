@@ -15,6 +15,7 @@ Source: `benchmark_providers.py` (fixed) + `benchmark_results.json` (regenerated
 The original `main()` had a dead resume-skip check (it iterated tasks but never passed
 `completed` into `benchmark_model`, which re-ran all 3 tasks unconditionally and merged
 stale 2026-07-09 rows). Corrected:
+
 - `benchmark_model(provider, model, completed)` now accepts + honors the skip set.
 - `main()` updates `completed` after each model and writes to
   `~/AppData/Local/hermes/scripts/benchmark_results.json`.

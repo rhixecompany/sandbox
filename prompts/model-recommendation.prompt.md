@@ -1,7 +1,7 @@
 ---
-
-
-toolsets: []
+toolsets:
+- file
+- terminal
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,15 +10,13 @@ name: model-recommendation
 description: Analyze chatmode or prompt files and recommend optimal AI models based
   on task complexity, required capabilities, and cost-efficiency
 tags:
-  - ai-assistant
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /model-recommendation
-
-
 ---
 ## Goal
 

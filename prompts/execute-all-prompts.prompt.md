@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,14 +11,14 @@ description: 'Orchestrates sequential execution of all 4 workspace prompt files:
 
   '
 tags:
-  - audit
-  - execution
-  - fix
-  - ml
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- audit
+- execution
+- fix
+- ml
+- prompts
+- skills
+- typescript
+- workflow
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -41,8 +39,9 @@ metadata:
     - plans-and-specs
     - executing-plans
     - verification-before-completion
-
-
+toolsets:
+- file
+- terminal
 ---
 # Execute All Prompts Orchestrator
 
@@ -74,7 +73,7 @@ This orchestrator runs 4 prompt files in order, each as a self-contained workflo
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#execute-all-prompts)
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Workflow foundation, session startup |
 | `user-communication-preferences` | Execution style and preferences |
 | `plans-and-specs` | Phase planning and progress tracking |

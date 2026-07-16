@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -17,15 +13,13 @@ description: PostgreSQL-specific development assistant focusing on unique Postgr
   window functions, and PostgreSQL extensions ecosystem.
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
-  - data
-  - database
-  - prompts
-  - specification
-  - sql
-  - typescript
+- data
+- database
+- prompts
+- specification
+- sql
+- typescript
 trigger: /postgresql-optimization
-
-
 ---
 ## Goal
 

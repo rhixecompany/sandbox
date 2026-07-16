@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -17,18 +13,16 @@ description: Universal SQL performance optimization assistant for comprehensive 
   optimization, batch operations, and performance monitoring guidance.
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 tags:
-  - backend
-  - data
-  - database
-  - frontend
-  - performance
-  - prompts
-  - specification
-  - sql
-  - typescript
+- backend
+- data
+- database
+- frontend
+- performance
+- prompts
+- specification
+- sql
+- typescript
 trigger: /sql-optimization
-
-
 ---
 ## Goal
 

@@ -1,8 +1,7 @@
 ---
-
-
 toolsets:
-- microsoft.docs.mcp
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,15 +10,13 @@ name: power-bi-report-design-consultation
 description: Power BI report visualization design prompt for creating effective, user-friendly,
   and accessible reports with optimal chart selection and layout design.
 tags:
-  - architecture
-  - data
-  - frontend
-  - prompts
-  - specification
-  - typescript
+- architecture
+- data
+- frontend
+- prompts
+- specification
+- typescript
 trigger: /power-bi-report-design-consultation
-
-
 ---
 # Power BI Report Visualization Designer
 

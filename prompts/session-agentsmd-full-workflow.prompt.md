@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,16 +8,17 @@ description: 'Execute the full session workflow: load agent context, read AGENTS
   apply rules, and report.'
 trigger: /session-agentsmd-full-workflow
 tags:
-  - agents
-  - architecture
-  - generator
-  - git
-  - prompts
-  - specification
-  - typescript
-  - workflow
-
-
+- agents
+- architecture
+- generator
+- git
+- prompts
+- specification
+- typescript
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

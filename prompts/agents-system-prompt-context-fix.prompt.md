@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,14 +8,14 @@ trigger: /agents-system-prompt-context-fix
 description: Create/update agent context files across project and subprojects, then
   audit and enhance VS Code workspace configuration.
 tags:
-  - agents
-  - architecture
-  - audit
-  - configuration
-  - fix
-  - generator
-  - prompts
-  - typescript
+- agents
+- architecture
+- audit
+- configuration
+- fix
+- generator
+- prompts
+- typescript
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -34,8 +32,9 @@ skills:
 - folder-structure-blueprint-generator
 - technology-stack-blueprint-generator
 - vscode-workspace-configurator
-
-
+toolsets:
+- file
+- terminal
 ---
 # Agents System Prompt Context Fix
 

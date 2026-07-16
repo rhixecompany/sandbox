@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,12 +8,12 @@ description: Consolidate scripts, patches, and documentation across the workspac
   with bash migration and audit workflows.
 trigger: /workspace-consolidate
 tags:
-  - documentation
-  - frontend
-  - ml
-  - prompts
-  - skills
-  - typescript
+- documentation
+- frontend
+- ml
+- prompts
+- skills
+- typescript
 dependencies:
 - prompt:context-map
 - prompt:update-implementation-plan
@@ -45,8 +43,9 @@ skills:
 - acpx-executor
 - git-patch-management
 - project-consolidation
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Skills Required
 

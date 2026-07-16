@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 version: 1.0.0
 title: Playwright Automation Fill In Form
@@ -10,19 +8,21 @@ description: Fill a form with Playwright MCP, stop before submission, and ask fo
 trigger: /playwright-automation-fill-in-form
 author: Alexa
 created: '2026-05-25T10:50:21.952313Z'
-compatibility:
+compatibility: null
 mcp_generator: None
 skill_stub: true
 tags:
-  - audit
-  - mcp
-  - ml
-  - playwright
-  - prompts
-  - specification
-  - typescript
-
-
+- audit
+- mcp
+- ml
+- playwright
+- prompts
+- specification
+- typescript
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

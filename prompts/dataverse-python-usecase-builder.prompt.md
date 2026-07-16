@@ -1,27 +1,26 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: Dataverse Python - Use Case Solution Builder
+name: dataverse-python-usecase-builder
 title: Dataverse Python   Use Case Solution Builder
 description: Generate complete solutions for specific Dataverse SDK use cases with
   architecture recommendations
 trigger: /Dataverse Python - Use Case Solution Builder
 tags:
-  - architecture
-  - data
-  - frontend
-  - generator
-  - ml
-  - performance
-  - prompts
-  - python
-  - specification
-  - typescript
-
-
+- architecture
+- data
+- frontend
+- generator
+- ml
+- performance
+- prompts
+- python
+- specification
+- typescript
+toolsets:
+- file
+- terminal
 ---
 # System Instructions
 

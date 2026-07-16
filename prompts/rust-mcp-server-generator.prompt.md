@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,16 +8,17 @@ description: Generate a complete Rust Model Context Protocol server project with
   prompts, resources, and tests using the official rmcp SDK
 trigger: /rust-mcp-server-generator
 tags:
-  - backend
-  - data
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - rust
-  - typescript
-
-
+- backend
+- data
+- frontend
+- generator
+- mcp
+- prompts
+- rust
+- typescript
+toolsets:
+- file
+- terminal
 ---
 # Rust MCP Server Generator
 

@@ -1,8 +1,7 @@
 ---
-
-
 toolsets:
-- microsoft.docs.mcp
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,14 +10,12 @@ name: power-bi-model-design-review
 description: Comprehensive Power BI data model design review prompt for evaluating
   model architecture, relationships, and optimization opportunities.
 tags:
-  - architecture
-  - audit
-  - data
-  - ml
-  - prompts
+- architecture
+- audit
+- data
+- ml
+- prompts
 trigger: /power-bi-model-design-review
-
-
 ---
 # Power BI Data Model Design Review
 

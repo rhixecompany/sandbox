@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,17 +9,18 @@ description: Technology-agnostic blueprint generator for creating comprehensive 
   architecture patterns, and exact technology versions by analyzing existing codebase
   patterns and avoiding assumptions.
 tags:
-  - ai-assistant
-  - architecture
-  - frontend
-  - generator
-  - git
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- architecture
+- frontend
+- generator
+- git
+- prompts
+- specification
+- typescript
 trigger: /copilot-instructions-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

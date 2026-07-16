@@ -1,13 +1,7 @@
 ---
-
-
 toolsets:
-- githubRepo
-- github
-- get_issue
-- get_issue_comments
-- get_me
-- list_issues
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,13 +9,11 @@ title: My Issues
 name: my-issues
 description: List my issues in the current repository
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /my-issues
-
-
 ---
 ## Goal
 

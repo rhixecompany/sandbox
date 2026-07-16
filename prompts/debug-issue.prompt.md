@@ -1,11 +1,6 @@
 ---
-
-
 toolsets:
-- codebase
 - search
-- runCommands
-- problems
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,17 +9,15 @@ name: debug-issue
 description: Debug an issue with reproducible analysis, root-cause isolation, and
   verification steps
 tags:
-  - ai-assistant
-  - debugging
-  - fix
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- debugging
+- fix
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /debug-issue
-
-
 ---
 <!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/prompts/debug-issue.prompt.md -->
 

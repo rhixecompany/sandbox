@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,15 +8,16 @@ description: 'Interactive, input-tool powered, task refinement workflow: interro
   scope, deliverables, constraints before carrying out the task; Requires the Joyride
   extension.'
 tags:
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /first-ask
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,22 +10,23 @@ description: Technology-agnostic prompt generator that creates customizable AI p
   with configurable analysis depth, categorization methods, and documentation formats
   to establish coding standards and maintain consistency across development teams.
 tags:
-  - architecture
-  - configuration
-  - csharp
-  - documentation
-  - dotnet
-  - generator
-  - java
-  - javascript
-  - ml
-  - prompts
-  - python
-  - react
-  - typescript
+- architecture
+- configuration
+- csharp
+- documentation
+- dotnet
+- generator
+- java
+- javascript
+- ml
+- prompts
+- python
+- react
+- typescript
 trigger: /code-exemplars-blueprint-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

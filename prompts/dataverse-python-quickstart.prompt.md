@@ -1,24 +1,24 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: Dataverse Python Quickstart Generator
+name: dataverse-python-quickstart
 title: Dataverse Python Quickstart Generator
 description: Generate Python SDK setup + CRUD + bulk + paging snippets using official
   patterns.
 trigger: /Dataverse Python Quickstart Generator
 tags:
-  - audit
-  - data
-  - frontend
-  - generator
-  - prompts
-  - python
-  - typescript
-
-
+- audit
+- data
+- frontend
+- generator
+- prompts
+- python
+- typescript
+toolsets:
+- file
+- terminal
+- web
 ---
 You are assisting with Microsoft Dataverse SDK for Python (preview). Generate concise Python snippets that:
 

@@ -1,32 +1,6 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- extensions
-- web/fetch
-- findTestFiles
-- githubRepo
-- new
-- openSimpleBrowser
-- problems
-- runCommands
-- runInTerminal2
-- runNotebooks
-- runTasks
-- runTests
 - search
-- search/searchResults
-- runCommands/terminalLastCommand
-- runCommands/terminalSelection
-- testFailure
-- usages
-- vscodeAPI
-- microsoft.docs.mcp
-- github
-- Microsoft Docs
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -35,17 +9,15 @@ name: create-github-action-workflow-specification
 description: Create a formal specification for an existing GitHub Actions CI/CD workflow,
   optimized for AI consumption and workflow maintenance.
 tags:
-  - ci-cd
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- ci-cd
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /create-github-action-workflow-specification
-
-
 ---
 ## Workflow Overview
 

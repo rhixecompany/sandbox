@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,18 +8,19 @@ description: Comprehensive prompt for synchronizing documentation whenever code 
   modify behavior, APIs, or workflows.
 trigger: /update-docs-on-code-change
 tags:
-  - api
-  - configuration
-  - documentation
-  - frontend
-  - maintenance
-  - ml
-  - prompts
-  - skills
-  - typescript
-  - workflow
-
-
+- api
+- configuration
+- documentation
+- frontend
+- maintenance
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

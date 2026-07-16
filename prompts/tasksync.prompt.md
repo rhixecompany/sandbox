@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,11 +8,12 @@ description: Comprehensive prompt for synchronizing tasks, implementations, and 
   across projects.
 trigger: /tasksync
 tags:
-  - frontend
-  - prompts
-  - workflow
-
-
+- frontend
+- prompts
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

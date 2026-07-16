@@ -1,7 +1,8 @@
 ---
-
-
-toolsets: []
+toolsets:
+- file
+- terminal
+- web
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,16 +12,14 @@ description: GraalVM Native Image expert that adds native image support to Java 
   builds the project, analyzes build errors, applies fixes, and iterates until successful
   compilation using Oracle best practices.
 tags:
-  - agents
-  - configuration
-  - fix
-  - frontend
-  - java
-  - prompts
-  - spring
+- agents
+- configuration
+- fix
+- frontend
+- java
+- prompts
+- spring
 trigger: /java-add-graalvm-native-image-support
-
-
 ---
 # GraalVM Native Image Agent
 

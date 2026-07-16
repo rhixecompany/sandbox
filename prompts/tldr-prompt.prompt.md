@@ -1,11 +1,6 @@
 ---
-
-
 toolsets:
-- web/fetch
-- search/readFile
 - search
-- search/textSearch
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,19 +9,17 @@ name: tldr-prompt
 description: Create tldr summaries for GitHub Copilot files (prompts, agents, instructions,
   collections), MCP servers, or documentation from URLs and queries.
 tags:
-  - agents
-  - ai-assistant
-  - backend
-  - documentation
-  - git
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
+- agents
+- ai-assistant
+- backend
+- documentation
+- git
+- mcp
+- ml
+- prompts
+- specification
+- typescript
 trigger: /tldr-prompt
-
-
 ---
 ## Goal
 

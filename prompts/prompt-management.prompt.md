@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,12 +10,12 @@ description: List, triage, catalog, consolidate, dedupe, template, validate, and
   into shared markdown, update prompts to use shared templates, create missing skills/scripts
   if they do not exist, and then declare the pipeline clean or continue remediation.
 tags:
-  - debugging
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
+- debugging
+- markdown
+- ml
+- prompts
+- skills
+- typescript
 dependencies:
 - skill:brainstorming
 - skill:plans-and-specs
@@ -46,8 +44,9 @@ skills:
 - skill-creator
 - writing-skills
 - verification-before-completion
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

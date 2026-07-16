@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,16 +7,17 @@ name: hermes-breakdown-feature-prd
 description: 'Hermes-equivalent: create a Feature PRD from a feature idea or parent
   epic.'
 tags:
-  - ai-assistant
-  - frontend
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- specification
+- typescript
 trigger: /hermes-breakdown-feature-prd
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

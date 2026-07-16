@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,16 +11,18 @@ description: 'Execute the skills remediation plan from docs/plan/skills-debug-pl
 
   '
 tags:
-  - ai-assistant
-  - audit
-  - data
-  - debugging
-  - fix
-  - prompts
-  - skills
-  - typescript
-
-
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- prompts
+- skills
+- typescript
+toolsets:
+- code_execution
+- file
+- terminal
 ---
 ## Goal
 

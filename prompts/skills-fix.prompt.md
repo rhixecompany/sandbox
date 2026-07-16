@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,15 +13,15 @@ description: 'Audit, debug, deduplicate, and enhance Hermes skills in the adminb
 
   '
 tags:
-  - ai-assistant
-  - audit
-  - data
-  - debugging
-  - fix
-  - generator
-  - prompts
-  - skills
-  - typescript
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- generator
+- prompts
+- skills
+- typescript
 dependencies:
 - prompt:context-map
 - prompt:update-implementation-plan
@@ -46,8 +44,11 @@ skills:
 - no-git-delete
 - no-net-fetch
 - skills-tools-preflight-check
-
-
+toolsets:
+- code_execution
+- file
+- terminal
+- web
 ---
 ## Goal
 

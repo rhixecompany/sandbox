@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,13 +8,14 @@ description: Comprehensive Playwright TypeScript prompt aligned to repository te
   standards.
 trigger: /playwright-typescript
 tags:
-  - playwright
-  - prompts
-  - skills
-  - testing
-  - typescript
-
-
+- playwright
+- prompts
+- skills
+- testing
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

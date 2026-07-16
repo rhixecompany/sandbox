@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 trigger: /sync-hermes-copilot-codex
@@ -10,13 +8,13 @@ version: 1.1.0
 description: Sync skills, plugins, and hooks across Hermes, Copilot, and Codex agents;
   create personalities and profiles from instruction/agent definitions.
 tags:
-  - agents
-  - ai-assistant
-  - git
-  - ml
-  - prompts
-  - skills
-  - typescript
+- agents
+- ai-assistant
+- git
+- ml
+- prompts
+- skills
+- typescript
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -31,8 +29,9 @@ metadata:
     - using-superpowers
     - user-communication-preferences
     - plans-and-specs
-
-
+toolsets:
+- file
+- terminal
 ---
 # Sync Hermes Copilot Codex
 

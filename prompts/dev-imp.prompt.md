@@ -221,7 +221,7 @@ Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
 ## Edge Cases & Pitfalls
 
 | Situation | Handling |
-|-----------|----------|
+| ----------- | ---------- |
 | No generator prompts found | Report "No generators available", proceed to Phase 6 with partial report |
 | Generator fails mid-run | Log the error, mark as ❌, continue to next generator |
 | User selects 0 generators | Confirm intent, proceed to Phase 6 with empty report |

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,15 +8,15 @@ trigger: /dev-init
 description: Create a comprehensive plan for converting plaintext prompts to markdown,
   enhancing prompt quality, and updating related implementation plans.
 tags:
-  - audit
-  - git
-  - markdown
-  - ml
-  - planning
-  - prompts
-  - security
-  - typescript
-  - workflow
+- audit
+- git
+- markdown
+- ml
+- planning
+- prompts
+- security
+- typescript
+- workflow
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:convert-plaintext-to-md.prompt.md
@@ -51,8 +49,9 @@ skills:
 - acpx-executor
 - executing-plans
 - simplify
-
-
+toolsets:
+- file
+- terminal
 ---
 >
 > Create a detailed prompt-library plan

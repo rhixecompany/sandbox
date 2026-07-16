@@ -50,11 +50,11 @@ only domain-specific skills here.
 
 ## Phases
 
-### Phase 1: ...
+### Phase 1
 
 Description of phase 1.
 
-### Phase 2: ...
+### Phase 2
 
 Description of phase 2.
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 version: 1.0.0
 title: Playwright Generate Test
@@ -10,19 +8,21 @@ description: Generate a Playwright test from a scenario, validate it against the
 trigger: /playwright-generate-test
 author: Alexa
 created: '2026-05-25T10:50:21.952313Z'
-compatibility:
+compatibility: null
 mcp_generator: None
 skill_stub: true
 tags:
-  - generator
-  - ml
-  - playwright
-  - prompts
-  - specification
-  - testing
-  - typescript
-
-
+- generator
+- ml
+- playwright
+- prompts
+- specification
+- testing
+- typescript
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

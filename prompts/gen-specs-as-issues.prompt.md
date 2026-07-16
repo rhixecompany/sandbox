@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,15 +7,16 @@ name: gen-specs-as-issues
 description: This workflow guides you through a systematic approach to identify missing
   features, prioritize them, and create detailed specifications for implementation.
 tags:
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /gen-specs-as-issues
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

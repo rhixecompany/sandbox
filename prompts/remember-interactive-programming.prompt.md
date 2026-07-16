@@ -1,10 +1,8 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: Interactive Programming Nudge
+name: remember-interactive-programming
 title: Interactive Programming Nudge
 description: A micro-prompt that reminds the agent that it is an interactive programmer.
   Works great in Clojure when Copilot has access to the REPL (probably via Backseat
@@ -12,14 +10,15 @@ description: A micro-prompt that reminds the agent that it is an interactive pro
   Adapt the prompt with any specific reminders in your workflow and/or workspace.
 trigger: /Interactive Programming Nudge
 tags:
-  - agents
-  - ai-assistant
-  - prompts
-  - specification
-  - typescript
-  - workflow
-
-
+- agents
+- ai-assistant
+- prompts
+- specification
+- typescript
+- workflow
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

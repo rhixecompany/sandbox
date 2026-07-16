@@ -1,10 +1,7 @@
 ---
-
-
 toolsets:
-- codebase
-- edit/editFiles
-- search/codebase
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,15 +9,13 @@ title: Generate Application from OpenAPI Spec
 name: openapi-to-application-code
 description: Generate a complete, production-ready application from an OpenAPI specification
 tags:
-  - api
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /openapi-to-application-code
-
-
 ---
 ## Goal
 

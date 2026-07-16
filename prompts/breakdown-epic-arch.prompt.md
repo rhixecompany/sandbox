@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,15 +7,16 @@ name: breakdown-epic-arch
 description: Prompt for creating the high-level technical architecture for an Epic,
   based on a Product Requirements Document.
 tags:
-  - architecture
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- architecture
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /breakdown-epic-arch
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

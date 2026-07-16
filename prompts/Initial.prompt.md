@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 name: initial
@@ -13,16 +11,17 @@ platforms: Windows, Linux, macOS
 packageManager: pnpm
 framework: Next.js 16
 tags:
-  - docker
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - typescript
-  - windows
+- docker
+- frontend
+- ml
+- nextjs
+- prompts
+- typescript
+- windows
 trigger: /initial
-
-
+toolsets:
+- file
+- terminal
 ---
 Read And understand @/**/*.ts, @/**/*.tsx, @/**/*.mjs, @/**/*.json , @/**/*.mts, @/**/*.json @/**/*.md, @/**/*.txt,   @/**/*.yml,   @/**/*.ps1, @/**/*.sh, @/**/*/Dockerfile, @/src, @scripts and the overall structure of the project.
 After fully understanding the project the package manager is pnpm  and the system is windows, Request all permissions needed to complete all tasks.

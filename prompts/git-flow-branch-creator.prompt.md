@@ -1,9 +1,7 @@
 ---
-
-
 toolsets:
-- runCommands/runInTerminal
-- runCommands/getTerminalOutput
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -12,14 +10,12 @@ name: git-flow-branch-creator
 description: Intelligent Git Flow branch creator that analyzes git status/diff and
   creates appropriate branches following the nvie Git Flow branching model.
 tags:
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /git-flow-branch-creator
-
-
 ---
 ## Goal
 

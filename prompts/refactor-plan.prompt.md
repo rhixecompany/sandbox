@@ -1,9 +1,7 @@
 ---
-
-
 toolsets:
-- codebase
-- terminalCommand
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,14 +9,12 @@ title: Refactor Plan
 name: refactor-plan
 description: Plan a multi-file refactor with proper sequencing and rollback steps
 tags:
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
 trigger: /refactor-plan
-
-
 ---
 ## Goal
 

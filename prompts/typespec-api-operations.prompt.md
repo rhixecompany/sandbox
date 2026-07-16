@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,14 +11,12 @@ mode: agent
 description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin
   with proper routing, parameters, and adaptive cards
 tags:
-  - api
-  - ml
-  - prompts
-  - specification
-  - typescript
+- api
+- ml
+- prompts
+- specification
+- typescript
 trigger: /typespec-api-operations
-
-
 ---
 ## Goal
 

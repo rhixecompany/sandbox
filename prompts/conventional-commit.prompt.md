@@ -1,9 +1,7 @@
 ---
-
-
 toolsets:
-- execute/runInTerminal
-- execute/getTerminalOutput
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,15 +12,13 @@ description: Prompt and workflow for generating conventional commit messages usi
   messages in line with the Conventional Commits specification, including instructions,
   examples, and validation.
 tags:
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /conventional-commit
-
-
 ---
 ## Goal
 

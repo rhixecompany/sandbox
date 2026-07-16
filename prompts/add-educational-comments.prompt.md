@@ -1,10 +1,7 @@
 ---
-
-
 toolsets:
-- edit/editFiles
-- web/fetch
-- todos
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,13 +10,11 @@ name: add-educational-comments
 description: Add educational comments to the file specified, or prompt asking for
   file to comment if one is not provided.
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /add-educational-comments
-
-
 ---
 ## Goal
 

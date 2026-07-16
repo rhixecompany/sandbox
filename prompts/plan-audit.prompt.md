@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /plan-audit
 name: plan-audit
 title: Audit Agent Stack
@@ -13,15 +11,15 @@ version: 1.0.0
 author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - agents
-  - ai-assistant
-  - audit
-  - configuration
-  - git
-  - planning
-  - prompts
-  - skills
-  - typescript
+- agents
+- ai-assistant
+- audit
+- configuration
+- git
+- planning
+- prompts
+- skills
+- typescript
 dependencies:
 - skill:context-map
 - skill:systematic-debugging
@@ -38,8 +36,9 @@ skills:
 - brainstorming
 - simplify
 - subagent-driven-development
-
-
+toolsets:
+- file
+- terminal
 ---
 > **Shared template references:**
 >

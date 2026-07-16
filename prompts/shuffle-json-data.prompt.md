@@ -1,10 +1,7 @@
 ---
-
-
 toolsets:
-- edit/editFiles
-- runInTerminal
-- pylanceRunCodeSnippet
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,14 +10,12 @@ name: shuffle-json-data
 description: Shuffle repetitive JSON objects safely by validating schema consistency
   before randomising entries.
 tags:
-  - data
-  - ml
-  - prompts
-  - specification
-  - typescript
+- data
+- ml
+- prompts
+- specification
+- typescript
 trigger: /shuffle-json-data
-
-
 ---
 ## Goal
 

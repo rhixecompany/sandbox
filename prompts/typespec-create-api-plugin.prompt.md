@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -15,16 +11,14 @@ mode: agent
 description: Generate a TypeSpec API plugin with REST operations, authentication,
   and Adaptive Cards for Microsoft 365 Copilot
 tags:
-  - ai-assistant
-  - api
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /typespec-create-api-plugin
-
-
 ---
 ## Goal
 

@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,16 +9,14 @@ title: C# Async Programming Best Practices
 name: csharp-async
 description: Get best practices for C# async programming
 tags:
-  - csharp
-  - data
-  - dotnet
-  - fix
-  - performance
-  - prompts
-  - typescript
+- csharp
+- data
+- dotnet
+- fix
+- performance
+- prompts
+- typescript
 trigger: /csharp-async
-
-
 ---
 # C# Async Programming Best Practices
 

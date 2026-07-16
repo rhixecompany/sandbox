@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,15 +7,16 @@ name: php-mcp-server-generator
 description: Generate a complete PHP Model Context Protocol server project with tools,
   resources, prompts, and tests using the official PHP SDK
 tags:
-  - backend
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - typescript
+- backend
+- frontend
+- generator
+- mcp
+- prompts
+- typescript
 trigger: /php-mcp-server-generator
-
-
+toolsets:
+- file
+- terminal
 ---
 # PHP MCP Server Generator
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,12 +8,12 @@ trigger: /bash-scripts-fix
 description: Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
   scripts across the workspace.
 tags:
-  - audit
-  - fix
-  - migration
-  - prompts
-  - typescript
-  - workflow
+- audit
+- fix
+- migration
+- prompts
+- typescript
+- workflow
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
@@ -42,8 +40,9 @@ skills:
 - simplify
 - acpx-executor
 - script-orchestration
-
-
+toolsets:
+- file
+- terminal
 ---
 > Search, identify, catalog, and modernize scripts across the workspace.
 

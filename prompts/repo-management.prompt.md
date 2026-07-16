@@ -6,17 +6,17 @@ description: 'Execute repo management operations across all project repos: branc
   normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
   repo-research-pipeline phase completes.
 
-'
+  '
 version: 2.0.0
 author: Hermes Agent
 license: MIT
 tags:
-  - audit
-  - frontend
-  - git
-  - prompts
-  - skills
-  - workflow
+- audit
+- frontend
+- git
+- prompts
+- skills
+- workflow
 dependencies:
 - skill:git-helper
 - skill:repo-research-pipeline
@@ -40,8 +40,9 @@ metadata:
     - github-repo-management
     - finishing-a-development-branch
     - workspace-audit
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

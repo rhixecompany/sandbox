@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -14,15 +8,13 @@ title: XUnit Best Practices
 name: csharp-xunit
 description: Get best practices for XUnit unit testing, including data-driven tests
 tags:
-  - csharp
-  - data
-  - dotnet
-  - prompts
-  - testing
-  - typescript
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
 trigger: /csharp-xunit
-
-
 ---
 # XUnit Best Practices
 

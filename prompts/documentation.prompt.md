@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,17 +8,18 @@ description: Comprehensive documentation prompt aligned to repository documentat
   standards.
 trigger: /documentation
 tags:
-  - api
-  - architecture
-  - documentation
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
-
-
+- api
+- architecture
+- documentation
+- frontend
+- markdown
+- ml
+- prompts
+- skills
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

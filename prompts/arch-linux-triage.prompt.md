@@ -1,11 +1,6 @@
 ---
-
-
 toolsets:
 - search
-- runCommands
-- terminalCommand
-- edit/editFiles
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,16 +9,14 @@ name: arch-linux-triage
 description: Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release
   best practices.
 tags:
-  - debugging
-  - fix
-  - frontend
-  - linux
-  - ml
-  - prompts
-  - typescript
+- debugging
+- fix
+- frontend
+- linux
+- ml
+- prompts
+- typescript
 trigger: /arch-linux-triage
-
-
 ---
 # Arch Linux Triage
 

@@ -1,13 +1,6 @@
 ---
-
-
 toolsets:
-- search/codebase
 - search
-- github
-- create_issue
-- search_issues
-- update_issue
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -16,15 +9,13 @@ name: create-github-issue-feature-from-specification
 description: Create GitHub Issue for feature request from specification file using
   feature_request.yml template.
 tags:
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-github-issue-feature-from-specification
-
-
 ---
 ## Goal
 

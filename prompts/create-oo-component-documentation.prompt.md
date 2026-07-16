@@ -1,23 +1,6 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- extensions
-- web/fetch
-- githubRepo
-- openSimpleBrowser
-- problems
-- runTasks
 - search
-- search/searchResults
-- runCommands/terminalLastCommand
-- runCommands/terminalSelection
-- testFailure
-- usages
-- vscodeAPI
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -26,16 +9,14 @@ name: create-oo-component-documentation
 description: Create comprehensive, standardized documentation for object-oriented
   components following industry best practices and architectural documentation standards.
 tags:
-  - architecture
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- architecture
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-oo-component-documentation
-
-
 ---
 ## Goal
 

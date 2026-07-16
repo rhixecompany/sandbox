@@ -10,20 +10,20 @@ description: 'Research all 14 projects via delegated sub-prompts: web search for
   crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
   ops to repo-management.prompt.md.
 
-'
+  '
 mode: agent
 system: 'You are a research orchestrator. Delegate web research to web-research-pipeline
-  sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization
-  or migration — those live in repo-management.prompt.md.
+  sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or
+  migration — those live in repo-management.prompt.md.
 
-'
+  '
 tags:
-  - architecture
-  - frontend
-  - performance
-  - prompts
-  - security
-  - typescript
+- architecture
+- frontend
+- performance
+- prompts
+- security
+- typescript
 dependencies:
 - prompt:context-map
 - prompt:update-implementation-plan
@@ -73,7 +73,10 @@ metadata:
     - repo-story-time
     - web-research-pipeline
     - repo-research-pipeline
-
+toolsets:
+- file
+- terminal
+- web
 ---
 
 ## Goal
@@ -353,7 +356,7 @@ List project name + shared technology. Must be symmetric.>
 ## Acceptance Criteria
 
 | Gate | Condition | Verification Command |
-|------|-----------|----------------------|
+| ------ | ----------- | ---------------------- |
 | All 14 reports exist | count = 14 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` |
 | Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop |
 | No report under 1KB | `wc -c` ≥ 1024 | per-report loop |
@@ -372,7 +375,7 @@ List project name + shared technology. Must be symmetric.>
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#repo)
 
 | Skill | Phase | Purpose |
-|-------|-------|---------|
+| ------- | ------- | --------- |
 | `brainstorming` | 1 | Explore research angles per project |
 | `plans-and-specs` | 0 | Structure research plan |
 | `systematic-debugging` | 0, 4 | Detect stale/missing reports |
@@ -416,7 +419,7 @@ List project name + shared technology. Must be symmetric.>
 > Full specifications live in `prompts/repo-management.prompt.md`.
 
 | # | Goal | Priority |
-|---|------|----------|
+| --- | ------ | ---------- |
 | 1 | Consolidation — comicwise + Django-Scrapy-Selenium + selenium_webdriver → rhixecompany-comics | P1 |
 | 2 | Branch normalization — `development` + `production` only per repo | P2 |
 | 3 | Ignore file audit — fix all `.*ignore` files | P3 |
@@ -429,7 +432,7 @@ List project name + shared technology. Must be symmetric.>
 ## Related Prompts
 
 | Prompt | Location | Purpose |
-|--------|----------|---------|
+| -------- | ---------- | --------- |
 | `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 14 projects |
 | `/workspace-consolidate` | `prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
 | `/repo-management` | `prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |

@@ -1,20 +1,19 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
-name: sa-implement
+name: structured-autonomy-implement
 title: Sa Implement
 description: Structured Autonomy Implementation Prompt
 trigger: /sa-implement
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
-
-
+- ml
+- prompts
+- specification
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

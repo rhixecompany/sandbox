@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,15 +7,16 @@ name: azure-resource-health-diagnose
 description: Analyze Azure resource health, diagnose issues from logs and telemetry,
   and create a remediation plan for identified problems.
 tags:
-  - azure
-  - fix
-  - ml
-  - prompts
-  - specification
-  - typescript
+- azure
+- fix
+- ml
+- prompts
+- specification
+- typescript
 trigger: /azure-resource-health-diagnose
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

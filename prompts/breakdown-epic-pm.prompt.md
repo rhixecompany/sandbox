@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,15 +8,16 @@ description: Prompt for creating an Epic Product Requirements Document (PRD) for
   new epic. This PRD will be used as input for generating a technical architecture
   specification.
 tags:
-  - architecture
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- architecture
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /breakdown-epic-pm
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

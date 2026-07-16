@@ -1,24 +1,8 @@
 ---
-
-
 toolsets:
-- vscode
-- execute
-- read
-- agent
-- edit
 - search
 - web
-- github/*
 - browser
-- vscode.mermaid-chat-features/renderMermaidDiagram
-- github.vscode-pull-request-github/issue_fetch
-- github.vscode-pull-request-github/labels_fetch
-- github.vscode-pull-request-github/notification_fetch
-- github.vscode-pull-request-github/doSearch
-- github.vscode-pull-request-github/activePullRequest
-- github.vscode-pull-request-github/pullRequestStatusChecks
-- github.vscode-pull-request-github/openPullRequest
 - todo
 license: MIT
 author: Hermes Agent
@@ -29,19 +13,17 @@ description: Refactor and update Banking documentation files (`AGENTS.md` and `.
   to maximize clarity, actionability, and AI agent productivity, following project
   conventions and Diátaxis principles.
 tags:
-  - agents
-  - ai-assistant
-  - documentation
-  - git
-  - ml
-  - nextjs
-  - prompts
-  - refactoring
-  - specification
-  - typescript
+- agents
+- ai-assistant
+- documentation
+- git
+- ml
+- nextjs
+- prompts
+- refactoring
+- specification
+- typescript
 trigger: /refactor-mardown-files
-
-
 ---
 ## Goal
 

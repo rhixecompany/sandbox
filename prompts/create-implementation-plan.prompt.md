@@ -1,25 +1,8 @@
 ---
-
-
 toolsets:
-- vscode/vscodeAPI
-- vscode/extensions
-- execute/testFailure
-- execute/runTask
-- execute/createAndRunTask
-- read/problems
-- read/readFile
-- read/terminalSelection
-- read/terminalLastCommand
-- read/getTaskOutput
-- agent
-- edit/editFiles
 - search
 - web
-- github/*
 - browser
-- vscode.mermaid-chat-features/renderMermaidDiagram
-- ms-azuretools.vscode-containers/containerToolsConfig
 - todo
 license: MIT
 author: Hermes Agent
@@ -29,16 +12,14 @@ name: create-implementation-plan
 description: Create a new implementation plan file for new features, refactoring existing
   code or upgrading packages, design, architecture or infrastructure.
 tags:
-  - architecture
-  - generator
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
+- architecture
+- generator
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
 trigger: /create-implementation-plan
-
-
 ---
 ## Goal
 

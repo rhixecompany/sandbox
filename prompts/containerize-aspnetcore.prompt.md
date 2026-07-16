@@ -1,10 +1,7 @@
 ---
-
-
 toolsets:
-- search/codebase
-- edit/editFiles
-- terminalCommand
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -13,19 +10,17 @@ name: containerize-aspnetcore
 description: Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile
   files customized for the project.
 tags:
-  - csharp
-  - docker
-  - dotnet
-  - frontend
-  - linux
-  - ml
-  - performance
-  - prompts
-  - security
-  - specification
+- csharp
+- docker
+- dotnet
+- frontend
+- linux
+- ml
+- performance
+- prompts
+- security
+- specification
 trigger: /containerize-aspnetcore
-
-
 ---
 # ASP.NET Core Docker Containerization Prompt
 

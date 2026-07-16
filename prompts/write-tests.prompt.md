@@ -1,24 +1,8 @@
 ---
-
-
 toolsets:
-- vscode
-- execute
-- read
-- agent
-- edit
 - search
 - web
-- github/*
 - browser
-- vscode.mermaid-chat-features/renderMermaidDiagram
-- github.vscode-pull-request-github/issue_fetch
-- github.vscode-pull-request-github/labels_fetch
-- github.vscode-pull-request-github/notification_fetch
-- github.vscode-pull-request-github/doSearch
-- github.vscode-pull-request-github/activePullRequest
-- github.vscode-pull-request-github/pullRequestStatusChecks
-- github.vscode-pull-request-github/openPullRequest
 - todo
 license: MIT
 author: Hermes Agent
@@ -27,16 +11,14 @@ title: Write Tests
 name: write-tests
 description: Generate unit or E2E tests for a component or module.
 tags:
-  - generator
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - testing
-  - typescript
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- testing
+- typescript
 trigger: /write-tests
-
-
 ---
 ## Goal
 

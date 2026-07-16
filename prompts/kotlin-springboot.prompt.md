@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -14,13 +8,11 @@ title: Spring Boot with Kotlin Best Practices
 name: kotlin-springboot
 description: Get best practices for developing applications with Spring Boot and Kotlin.
 tags:
-  - frontend
-  - ml
-  - prompts
-  - spring
+- frontend
+- ml
+- prompts
+- spring
 trigger: /kotlin-springboot
-
-
 ---
 # Spring Boot with Kotlin Best Practices
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,17 +7,19 @@ name: java-mcp-server-generator
 description: Generate a complete Model Context Protocol server project in Java using
   the official MCP Java SDK with reactive streams and optional Spring Boot integration.
 tags:
-  - backend
-  - frontend
-  - generator
-  - java
-  - mcp
-  - ml
-  - prompts
-  - typescript
+- backend
+- frontend
+- generator
+- java
+- mcp
+- ml
+- prompts
+- typescript
 trigger: /java-mcp-server-generator
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 # Java MCP Server Generator
 

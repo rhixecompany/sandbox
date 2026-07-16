@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,15 +8,16 @@ trigger: /prompt-builder
 description: Guide users through creating high-quality .prompt.md files with proper
   structure, tools, and best practices.
 tags:
-  - agents
-  - ai-assistant
-  - frontend
-  - git
-  - prompts
-  - typescript
-  - workflow
-
-
+- agents
+- ai-assistant
+- frontend
+- git
+- prompts
+- typescript
+- workflow
+toolsets:
+- file
+- terminal
 ---
 # prompt-builder
 

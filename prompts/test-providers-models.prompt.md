@@ -1,29 +1,37 @@
 ---
 name: test-providers-models
 title: Test Providers & Models
-description: "Inventory all authorized LLM providers from hermes auth list, discover their free-tier models, run standardized benchmarks (reasoning, tool calling, knowledge), and produce a cross-provider comparison report. Covers 6 providers: copilot, huggingface, nous, ollama-cloud, openai-api, openrouter."
+description: 'Inventory all authorized LLM providers from hermes auth list, discover
+  their free-tier models, run standardized benchmarks (reasoning, tool calling, knowledge),
+  and produce a cross-provider comparison report. Covers 6 providers: copilot, huggingface,
+  nous, ollama-cloud, openai-api, openrouter.'
 version: 1.0.1
 author: Hermes Agent
 license: MIT
 trigger: /test-providers-models
 tags:
-  - providers
-  - models
-  - benchmark
-  - hermes
-  - free-tier
+- providers
+- models
+- benchmark
+- hermes
+- free-tier
 dependencies:
-  - skill:test-providers-models
-  - skill:using-superpowers
-  - skill:plans-and-specs
-  - skill:user-communication-preferences
-  - skill:verification-before-completion
+- skill:test-providers-models
+- skill:using-superpowers
+- skill:plans-and-specs
+- skill:user-communication-preferences
+- skill:verification-before-completion
 skills:
-  - test-providers-models
-  - using-superpowers
-  - plans-and-specs
-  - user-communication-preferences
-  - verification-before-completion
+- test-providers-models
+- using-superpowers
+- plans-and-specs
+- user-communication-preferences
+- verification-before-completion
+toolsets:
+- code_execution
+- file
+- terminal
+- web
 ---
 ## Goal
 
@@ -32,7 +40,7 @@ Inventory and benchmark the free‑tier LLM models across all authorized provide
 ## Personas
 
 | Persona | When to Use |
-|---------|-------------|
+| --------- | ------------- |
 | OWL (System Admin) | Overall orchestration, profile selection |
 | Research Analyst | Data analysis, cross-provider comparison |
 | Code Architect | Benchmark execution, script development |
@@ -47,7 +55,7 @@ Inventory and benchmark the free‑tier LLM models across all authorized provide
 ## Profile Selection
 
 | Task | Recommended Profile |
-|------|----------------------|
+| ------ | ---------------------- |
 | Provider inventory & auth check | `default` |
 | Model catalog discovery | `research-analyst` |
 | Free model extraction & script creation | `code-architect` |

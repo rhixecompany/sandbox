@@ -8,16 +8,16 @@ title: 'Repository Analysis: Story from Git History'
 description: 'Generate a comprehensive repository summary and narrative story from
   commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
 
-'
+  '
 tags:
-  - architecture
-  - generator
-  - git
-  - go
-  - ml
-  - prompts
-  - typescript
-  - workflow
+- architecture
+- generator
+- git
+- go
+- ml
+- prompts
+- typescript
+- workflow
 dependencies:
 - skill:code-wiki
 - skill:writing-clearly-and-concisely
@@ -29,8 +29,9 @@ metadata:
     related_skills:
     - code-wiki
     - writing-clearly-and-concisely
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

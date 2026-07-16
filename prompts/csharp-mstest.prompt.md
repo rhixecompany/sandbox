@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -15,15 +9,13 @@ name: csharp-mstest
 description: Get best practices for MSTest 3.x/4.x unit testing, including modern
   assertion APIs and data-driven tests
 tags:
-  - api
-  - csharp
-  - dotnet
-  - prompts
-  - testing
-  - typescript
+- api
+- csharp
+- dotnet
+- prompts
+- testing
+- typescript
 trigger: /csharp-mstest
-
-
 ---
 # MSTest Best Practices (MSTest 3.x/4.x)
 

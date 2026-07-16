@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,19 +8,21 @@ trigger: /convert-plaintext-to-md
 description: Convert plaintext documentation to properly formatted markdown using
   explicit instructions, documented options, or reference files.
 tags:
-  - conversion
-  - documentation
-  - markdown
-  - ml
-  - prompts
-  - typescript
+- conversion
+- documentation
+- markdown
+- ml
+- prompts
+- typescript
 dependencies:
 - skill:enhance-markdown
 - skill:context-map
 skills:
 - enhance-markdown
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 # convert-plaintext-to-md
 
@@ -93,8 +93,8 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 | `instructions` | No | Additional text instructions for the conversion |
 | `platform={{name}}` | No | Target platform: GitHub (default), StackOverflow, VS Code, GitLab, CommonMark |
 | `--header [1-4]` | No | Add markdown header tags at specified level (level range: 1 to 4) |
-| `-p, --pattern <name|file>` | No | Apply a named structural pattern (for example, `api-doc`, `changelog`) or reference a local `.md` file as a layout pattern. If no pattern is found, fall back to markdown best practices |
-| `-s, --stop <N|eof>` | No | Convert only up to line N of the source plaintext (1-based), then write the partial result to `{{file}}.md`. Use `eof` to explicitly convert the entire file (default behavior) |
+| `-p, --pattern <name | file>` | No | Apply a named structural pattern (for example, `api-doc`, `changelog`) or reference a local `.md` file as a layout pattern. If no pattern is found, fall back to markdown best practices |
+| `-s, --stop <N | eof>` | No | Convert only up to line N of the source plaintext (1-based), then write the partial result to `{{file}}.md`. Use `eof` to explicitly convert the entire file (default behavior) |
 
 ## Predefined Instructions
 

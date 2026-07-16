@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /plan-execute
 name: plan-execute
 title: Execute Implementation Plan
@@ -13,9 +11,9 @@ version: 1.0.0
 author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - planning
-  - prompts
-  - typescript
+- planning
+- prompts
+- typescript
 dependencies:
 - skill:plans-and-specs
 - skill:subagent-driven-development
@@ -28,8 +26,9 @@ skills:
 - subagent-driven-development
 - verification-before-completion
 - writing-plans
-
-
+toolsets:
+- file
+- terminal
 ---
 > **Shared template references:**
 >

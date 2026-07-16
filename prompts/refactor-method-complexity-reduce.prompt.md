@@ -1,12 +1,7 @@
 ---
-
-
 toolsets:
-- search/changes
-- search/codebase
-- edit/editFiles
-- read/problems
-- execute/runTests
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -17,13 +12,11 @@ description: Refactor given method `${input:methodName}` to reduce its cognitive
 trigger: /refactor-method-complexity-reduce
 argument-hint: methodName=..., complexityThreshold=15
 tags:
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
-
-
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
 ---
 ## Goal
 

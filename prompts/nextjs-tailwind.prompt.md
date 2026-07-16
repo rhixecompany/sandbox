@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,19 +8,20 @@ description: Comprehensive Next.js and Tailwind implementation prompt aligned to
   standards.
 trigger: /nextjs-tailwind
 tags:
-  - architecture
-  - audit
-  - backend
-  - data
-  - frontend
-  - ml
-  - nextjs
-  - performance
-  - prompts
-  - security
-  - typescript
-
-
+- architecture
+- audit
+- backend
+- data
+- frontend
+- ml
+- nextjs
+- performance
+- prompts
+- security
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

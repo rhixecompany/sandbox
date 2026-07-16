@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,21 +7,22 @@ name: setup-enhanced
 description: Enhanced ComicWise AI agent setup — workflow, implementation strategy,
   and DRY practices
 tags:
-  - agents
-  - backend
-  - configuration
-  - data
-  - database
-  - frontend
-  - ml
-  - prompts
-  - setup
-  - sql
-  - typescript
-  - workflow
+- agents
+- backend
+- configuration
+- data
+- database
+- frontend
+- ml
+- prompts
+- setup
+- sql
+- typescript
+- workflow
 trigger: /setup-enhanced
-
-
+toolsets:
+- file
+- terminal
 ---
 ## 1. 🚀 Quick Start
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -8,18 +6,20 @@ title: Create MCP-based Declarative Agent for Microsoft 365 Copilot
 name: mcp-create-declarative-agent
 description: mcp-create-declarative-agent.prompt
 tags:
-  - agents
-  - ai-assistant
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- generator
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /mcp-create-declarative-agent
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

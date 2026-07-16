@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 version: 1.0.0
 title: Playwright Explore Website
@@ -10,19 +8,21 @@ description: Explore a website with Playwright MCP, document core flows, and pro
 trigger: /playwright-explore-website
 author: Alexa
 created: '2026-05-25T10:50:21.952313Z'
-compatibility:
+compatibility: null
 mcp_generator: None
 skill_stub: true
 tags:
-  - mcp
-  - ml
-  - playwright
-  - prompts
-  - specification
-  - testing
-  - typescript
-
-
+- mcp
+- ml
+- playwright
+- prompts
+- specification
+- testing
+- typescript
+toolsets:
+- file
+- terminal
+- web
 ---
 ## Goal
 

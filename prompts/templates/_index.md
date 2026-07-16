@@ -32,7 +32,7 @@ templates/
 ## Shared Templates
 
 | Template | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | `_shared/frontmatter.md` | Reusable YAML frontmatter patterns (Hermes + Copilot styles) |
 | `_shared/skill-refs.md` | Standard Hermes skill reference table |
 | `_shared/verification-checklist.md` | Common verification gate patterns |
@@ -40,6 +40,7 @@ templates/
 ## Per-Prompt Templates
 
 Each template folder contains:
+
 1. `README.md` — Section inventory, size, frontmatter type, usage notes
 2. Extracted long sections (when applicable, sections >40 lines)
 3. Additional reference templates (when applicable)

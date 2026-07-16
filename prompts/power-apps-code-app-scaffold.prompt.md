@@ -1,11 +1,5 @@
 ---
-
-
 toolsets:
-- changes
-- search/codebase
-- edit/editFiles
-- problems
 - search
 license: MIT
 author: Hermes Agent
@@ -15,13 +9,11 @@ name: power-apps-code-app-scaffold
 description: Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK
   integration, and connector configuration
 tags:
-  - audit
-  - frontend
-  - prompts
-  - specification
+- audit
+- frontend
+- prompts
+- specification
 trigger: /power-apps-code-app-scaffold
-
-
 ---
 # Power Apps Code Apps Project Scaffolding
 

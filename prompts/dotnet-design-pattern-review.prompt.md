@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -9,16 +7,17 @@ name: dotnet-design-pattern-review
 description: Review the C#/.NET code for design pattern implementation and suggest
   improvements.
 tags:
-  - architecture
-  - audit
-  - csharp
-  - dotnet
-  - frontend
-  - prompts
-  - typescript
+- architecture
+- audit
+- csharp
+- dotnet
+- frontend
+- prompts
+- typescript
 trigger: /dotnet-design-pattern-review
-
-
+toolsets:
+- file
+- terminal
 ---
 # .NET/C# Design Pattern Review
 

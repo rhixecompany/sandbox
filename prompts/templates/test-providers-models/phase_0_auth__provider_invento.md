@@ -11,7 +11,7 @@ Source: `hermes auth list` (live)
 ## Provider Inventory (from `hermes auth list` 2026-07-10)
 
 | # | Provider | Credentials | Status | Notes |
-|---|----------|-------------|--------|-------|
+| --- | ---------- | ------------- | -------- | ------- |
 | 1 | copilot | gh auth token, GITHUB_TOKEN | ⚠️ Rate-limited (429) | Both creds in cooldown (ready to retry) |
 | 2 | gemini | GOOGLE_API_KEY | ⚠️ Rate-limited (429) | In cooldown (was "active" 2026-07-09) |
 | 3 | huggingface | HF_TOKEN | ✅ Active | — |

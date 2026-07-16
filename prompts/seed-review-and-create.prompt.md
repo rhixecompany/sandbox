@@ -1,11 +1,7 @@
 ---
-
-
 toolsets:
-- codebase
-- editFiles
-- terminalLastCommand
-- runInTerminal
+- terminal
+- file
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -14,15 +10,13 @@ name: seed-review-and-create
 description: Review seed system files, create new seeders, fix issues, and implement
   improvements
 tags:
-  - audit
-  - documentation
-  - fix
-  - ml
-  - prompts
-  - specification
+- audit
+- documentation
+- fix
+- ml
+- prompts
+- specification
 trigger: /seed-review-and-create
-
-
 ---
 # Seed System Review & Enhancement
 

@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,16 +8,17 @@ description: Complete development kit for Microsoft 365 Copilot declarative agen
   with three comprehensive workflows (basic, advanced, validation), TypeSpec support,
   and Microsoft 365 Agents Toolkit integration
 tags:
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /declarative-agents
-
-
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

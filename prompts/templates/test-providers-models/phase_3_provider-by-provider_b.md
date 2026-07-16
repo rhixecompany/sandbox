@@ -12,7 +12,7 @@ Target: 5 accessible free models (15 tasks)
 ## Execution Matrix (live results)
 
 | Provider | Model | Status | Reasoning | Tool Calling | Knowledge | Notes |
-|----------|-------|--------|-----------|--------------|-----------|-------|
+| ---------- | ------- | -------- | ----------- | -------------- | ----------- | ------- |
 | nous | stepfun/step-3.7-flash:free | ✅ Complete | ✅ 82s | ⚠️ N/A (no fn) | ✅ 65s | Active, verbose self-narration |
 | openrouter | tencent/hy3:free | ✅ Complete | ✅ 51s | ⚠️ N/A (no fn) | ✅ 98s | Active, slowest knowledge |
 | huggingface | auto (HF Inference) | ✅ Complete | ✅ 46s | ⚠️ N/A (no fn) | ✅ 62s | Cleanest reasoning exposition |

@@ -1,13 +1,6 @@
 ---
-
-
 toolsets:
-- search/codebase
 - search
-- github
-- create_issue
-- search_issues
-- update_issue
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -16,16 +9,14 @@ name: create-github-issues-for-unmet-specification-requirements
 description: Create GitHub Issues for unimplemented requirements from specification
   files using feature_request.yml template.
 tags:
-  - frontend
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- frontend
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-github-issues-for-unmet-specification-requirements
-
-
 ---
 ## Goal
 

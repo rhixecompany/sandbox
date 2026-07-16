@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -11,21 +9,23 @@ description: Technology-agnostic blueprint generator for creating comprehensive 
   architecture patterns, and exact technology versions by analyzing existing codebase
   patterns and avoiding assumptions.
 tags:
-  - agents
-  - architecture
-  - data
-  - debugging
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
-  - workflow
+- agents
+- architecture
+- data
+- debugging
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- testing
+- typescript
+- workflow
 trigger: /agents-generator
-
-
+toolsets:
+- file
+- terminal
+- web
 ---
 Analyze this codebase to generate or update `AGENTS.md` for guiding AI coding agents.
 

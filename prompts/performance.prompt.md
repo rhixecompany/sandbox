@@ -1,6 +1,4 @@
 ---
-
-
 license: MIT
 author: Hermes Agent
 version: 1.0.0
@@ -10,17 +8,18 @@ description: Comprehensive performance prompt focused on measurable improvements
   safe optimizations.
 trigger: /performance
 tags:
-  - data
-  - database
-  - frontend
-  - performance
-  - prompts
-  - skills
-  - specification
-  - sql
-  - typescript
-
-
+- data
+- database
+- frontend
+- performance
+- prompts
+- skills
+- specification
+- sql
+- typescript
+toolsets:
+- file
+- terminal
 ---
 ## Goal
 

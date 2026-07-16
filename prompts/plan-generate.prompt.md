@@ -1,6 +1,4 @@
 ---
-
-
 trigger: /plan-generate
 name: plan-generate
 title: Generate Implementation Plan
@@ -14,13 +12,13 @@ version: 1.0.0
 author: Hermes Agent (consolidated)
 license: MIT
 tags:
-  - ai-assistant
-  - generator
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- generator
+- ml
+- planning
+- prompts
+- specification
+- typescript
 dependencies:
 - skill:plans-and-specs
 - skill:writing-plans
@@ -36,8 +34,9 @@ skills:
 - brainstorming
 - systematic-debugging
 - verification-before-completion
-
-
+toolsets:
+- file
+- terminal
 ---
 > **Shared template references:**
 >
