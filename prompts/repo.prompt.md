@@ -5,7 +5,7 @@ version: 2.1.0
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
 trigger: /repo
-description: 'Research all 14 projects via delegated sub-prompts: web search for similar
+description: 'Research all 16 projects via delegated sub-prompts: web search for similar
   projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in
   crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
   ops to repo-management.prompt.md.
@@ -109,7 +109,7 @@ toolsets:
 
 ## Goal
 
-Research each of the 14 projects under `projects/`. For every project:
+Research each of the 16 projects under `projects/`. For every project:
 
 1. **Web-search** for similar projects, guides, cheatsheets, best practices.
 2. **Extract** useful content: architecture patterns, tool recommendations,
@@ -127,10 +127,10 @@ Research each of the 14 projects under `projects/`. For every project:
 
 **Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
-All 14 reports currently exist on disk. Default action is **UPDATE** (refresh findings,
+All 16 reports currently exist on disk. Default action is **UPDATE** (refresh findings,
 verify links). Only fall back to **CREATE** if a report was deleted between sessions.
 
-### Repo Inventory (14 projects)
+### Repo Inventory (16 projects)
 
 | #  | Project                      | Type                                    | Action   |
 |----|------------------------------|-----------------------------------------|----------|
@@ -148,6 +148,8 @@ verify links). Only fall back to **CREATE** if a report was deleted between sess
 | 12 | xamehi                       | Full-stack (Django + Express + React)   | ✅ Update |
 | 13 | xamehi.tv                    | Streaming (DRF + React 17, Redux, MUI)  | ✅ Update |
 | 14 | youtube-downloader           | YouTube CLI (yt-dlp, curl_cffi)         | ✅ Update |
+| 15 | Bash                         | Automation Toolkit (Bun/TypeScript)      | ✅ Update |
+| 16 | Resume_maker                 | Job Documents Generator (Bun/CLI)       | ✅ Update |
 
 ---
 
@@ -162,7 +164,7 @@ verify links). Only fall back to **CREATE** if a report was deleted between sess
 - Every report's `## Related Projects` section must cross-reference other workspace
   projects sharing its tech stack. Use each project's `AGENTS.md` for tech overlap.
 - Symmetric cross-references: if A references B, B must reference A.
-- Do not advance to secondary goals until Phase 4 verification passes for all 14 reports.
+- Do not advance to secondary goals until Phase 4 verification passes for all 16 reports.
 
 ---
 
@@ -177,13 +179,13 @@ Verify tools and workspace before research begins.
 1. Test `web_search` with one real query — confirm results return.
 2. Confirm working dir: `pwd` → `$HOME/Desktop/SandBox`
 3. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | sort`
-4. Confirm count = 14. Flag any missing as CREATE targets.
+4. Confirm count = 16. Flag any missing as CREATE targets.
 
 **Tasks:**
 
 - [ ] `web_search` reachable (1 test query returns results)
 - [ ] `pwd` matches workspace path
-- [ ] 14 reports found on disk
+- [ ] 16 reports found on disk
 
 **Actions:**
 
@@ -201,7 +203,7 @@ terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")
 > Full workflow lives in `prompts/web-research-pipeline.prompt.md`.
 > Orchestrator at `prompts/repo-research-pipeline.prompt.md`.
 
-Delegate per-project web research. For each of the 14 projects:
+Delegate per-project web research. For each of the 16 projects:
 
 1. Read `projects/<name>/README.md` and `AGENTS.md` to extract tech stack.
 2. Run `web-research-pipeline.prompt.md` trigger with project name + stack params.
@@ -212,9 +214,9 @@ Each subagent receives: project name, tech stack, query list, target report path
 
 **Tasks:**
 
-- [ ] 1.1–1.14 README + AGENTS.md read for all 14 projects
+- [ ] 1.1–1.16 README + AGENTS.md read for all 16 projects
 - [ ] `docs/per-project-research-queries.md` written per project
-- [ ] All 14 delegated web-research runs completed
+- [ ] All 16 delegated web-research runs completed
 
 **Actions:**
 
@@ -241,7 +243,7 @@ Write or update `RESEARCH_REPORT.md` per project using the template in `## Repor
 
 **Tasks:**
 
-- [ ] 2.1–2.14 All 14 RESEARCH_REPORT.md files written/updated
+- [ ] 2.1–2.16 All 16 RESEARCH_REPORT.md files written/updated
 
 **Actions:**
 
@@ -260,15 +262,15 @@ Update the master index. Verify cross-references are symmetric.
 **Steps:**
 
 1. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md'`
-2. Rewrite `projects/RESEARCH_INDEX.md` — 14 rows, file size, last-updated date.
+2. Rewrite `projects/RESEARCH_INDEX.md` — 16 rows, file size, last-updated date.
 3. For each report, verify `## Related Projects` lists all workspace projects sharing its tech stack. Add missing references.
 4. Confirm symmetry: if A references B, read B and confirm B references A.
 
 **Tasks:**
 
-- [ ] Disk scan returns exactly 14 reports
+- [ ] Disk scan returns exactly 16 reports
 - [ ] `projects/RESEARCH_INDEX.md` rewritten with size + date per report
-- [ ] Cross-reference matrix symmetric across all 14 reports
+- [ ] Cross-reference matrix symmetric across all 16 reports
 
 **Actions:**
 
@@ -285,16 +287,16 @@ All gates must pass before this prompt is considered complete.
 
 **Steps:**
 
-1. Count: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l` → must be 14.
+1. Count: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l` → must be 16.
 2. Sections: each report must have 9+ `##` sections.
-3. URLs: spot-check 2 URLs per report (28 total) via `web_extract` — confirm non-404.
+3. URLs: spot-check 2 URLs per project (32 total) via `web_extract` — confirm non-404.
 4. Size: every report between 1KB and 5KB.
 
 **Tasks:**
 
-- [ ] Count = 14
+- [ ] Count = 16
 - [ ] Every report has ≥ 9 `##` sections
-- [ ] 28 URL spot-checks pass
+- [ ] 32 URL spot-checks pass
 - [ ] All reports 1KB–5KB
 
 **Actions:**
@@ -309,7 +311,7 @@ terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -
 
 ## Quick Repo Onboarding
 
-Run these lightweight intros when the user asks simple questions about the repo itself (not the 14 project research pipeline).
+Run these lightweight intros when the user asks simple questions about the repo itself (not the 16 project research pipeline).
 
 ### Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."
 
@@ -463,12 +465,12 @@ List project name + shared technology. Must be symmetric.>
 
 | Gate | Condition | Verification Command |
 | ------ | ----------- | ---------------------- |
-| All 14 reports exist | count = 14 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` |
+| All 16 reports exist | count = 16 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` |
 | Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop |
 | No report under 1KB | `wc -c` ≥ 1024 | per-report loop |
 | No report over 5KB | `wc -c` ≤ 5120 | per-report loop |
-| 28 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 |
-| RESEARCH_INDEX.md current | 14 rows, size + date correct | read + verify |
+| 32 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 |
+| RESEARCH_INDEX.md current | 16 rows, size + date correct | read + verify |
 | No fabricated findings | every fact traces to `web_search` | manual review |
 | Scope respected | no branch/migration work started | agent self-check |
 | Sub-prompts accessible | `prompts/*.prompt.md` resolves | file check |
@@ -520,7 +522,7 @@ List project name + shared technology. Must be symmetric.>
 
 ## Secondary Goals
 
-> Execute ONLY after Phase 5 verification passes for all 14 reports.
+> Execute ONLY after Phase 5 verification passes for all 16 reports.
 > Full specifications live in `prompts/repo-management.prompt.md`.
 
 | # | Goal | Priority |
@@ -538,7 +540,7 @@ List project name + shared technology. Must be symmetric.>
 
 | Prompt | Location | Purpose |
 | -------- | ---------- | --------- |
-| `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 14 projects |
+| `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 16 projects |
 | `/workspace-consolidate` | `prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
 | `/repo-management` | `prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |
 | `/repo-story-time` | `prompts/repo-story-time.prompt.md` | Git history analysis and repo narrative |
