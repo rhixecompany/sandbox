@@ -24,6 +24,7 @@ tags:
 - vscode
 - workflow
 dependencies:
+- prompt:repo-research-pipeline
 - skill:finishing-a-development-branch
 - skill:gh-cli
 - skill:git-commit
@@ -31,15 +32,12 @@ dependencies:
 - skill:git-submodule-workflow
 - skill:github-actions-efficiency
 - skill:github-repo-management
-- skill:mcp-filesystem
-- skill:mcp-sequential-thinking
 - skill:monorepo-pr-workflow
-- skill:repo-research-pipeline
-- skill:vscode-cli
 - skill:vscode-workspace-configurator
-- skill:web-research-pipeline
 - skill:workspace-audit
 - skill:writing-plans
+- tool:mcp-filesystem
+- tool:mcp-sequential-thinking
 skills:
 - finishing-a-development-branch
 - gh-cli
@@ -48,13 +46,8 @@ skills:
 - git-submodule-workflow
 - github-actions-efficiency
 - github-repo-management
-- mcp-filesystem
-- mcp-sequential-thinking
 - monorepo-pr-workflow
-- repo-research-pipeline
-- vscode-cli
 - vscode-workspace-configurator
-- web-research-pipeline
 - workspace-audit
 - writing-plans
 metadata:
@@ -67,19 +60,20 @@ metadata:
     - git-submodule-workflow
     - github-actions-efficiency
     - github-repo-management
-    - mcp-filesystem
-    - mcp-sequential-thinking
     - monorepo-pr-workflow
     - repo-research-pipeline
-    - vscode-cli
     - vscode-workspace-configurator
-    - web-research-pipeline
     - workspace-audit
+    # MCP tools:
+    - tool:mcp-filesystem
+    - tool:mcp-sequential-thinking
 toolsets:
 - browser
 - code_execution
 - file
+- mcp
 - terminal
+- web
 ---
 ## Goal
 

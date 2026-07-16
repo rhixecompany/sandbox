@@ -21,47 +21,37 @@ tags:
 - vscode
 - workflow
 dependencies:
+- prompt:web-research-pipeline
 - skill:domain-intel
 - skill:gh-cli
-- skill:mcp-fetch
-- skill:mcp-filesystem
-- skill:mcp-github
-- skill:mcp-memory
-- skill:mcp-playwright
-- skill:mcp-sequential-thinking
-- skill:repo-research-pipeline
-- skill:vscode-cli
-- skill:web-research-pipeline
+- tool:mcp-fetch
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-memory
+- tool:mcp-playwright
+- tool:mcp-sequential-thinking
 skills:
 - domain-intel
 - gh-cli
-- mcp-fetch
-- mcp-filesystem
-- mcp-github
-- mcp-memory
-- mcp-playwright
-- mcp-sequential-thinking
-- repo-research-pipeline
-- vscode-cli
 - web-research-pipeline
 metadata:
   hermes:
     related_skills:
     - domain-intel
     - gh-cli
-    - mcp-fetch
-    - mcp-filesystem
-    - mcp-github
-    - mcp-memory
-    - mcp-playwright
-    - mcp-sequential-thinking
-    - repo-research-pipeline
-    - vscode-cli
     - web-research-pipeline
+    # MCP tools:
+    - tool:mcp-fetch
+    - tool:mcp-filesystem
+    - tool:mcp-github
+    - tool:mcp-memory
+    - tool:mcp-playwright
+    - tool:mcp-sequential-thinking
 toolsets:
 - browser
 - code_execution
 - file
+- mcp
 - terminal
 - web
 ---

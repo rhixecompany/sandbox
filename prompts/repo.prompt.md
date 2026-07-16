@@ -41,41 +41,33 @@ dependencies:
 - skill:brainstorming
 - skill:code-wiki
 - skill:content-research-writer
-- skill:context7
 - skill:gh-cli
 - skill:git-commit
 - skill:git-submodule-workflow
 - skill:github-repo-management
-- skill:mcp-filesystem
-- skill:mcp-github
-- skill:mcp-memory
-- skill:mcp-sequential-thinking
 - skill:monorepo-pr-workflow
 - skill:plans-and-specs
 - skill:spike
 - skill:systematic-debugging
-- skill:vscode-cli
 - skill:web-research-pipeline
 - skill:writing-clearly-and-concisely
 - skill:writing-skills
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-memory
+- tool:mcp-sequential-thinking
 skills:
 - brainstorming
 - code-wiki
 - content-research-writer
-- context7
 - gh-cli
 - git-commit
 - git-submodule-workflow
 - github-repo-management
-- mcp-filesystem
-- mcp-github
-- mcp-memory
-- mcp-sequential-thinking
 - monorepo-pr-workflow
 - plans-and-specs
 - spike
 - systematic-debugging
-- vscode-cli
 - web-research-pipeline
 - writing-clearly-and-concisely
 - writing-skills
@@ -90,10 +82,6 @@ metadata:
     - git-commit
     - git-submodule-workflow
     - github-repo-management
-    - mcp-filesystem
-    - mcp-github
-    - mcp-memory
-    - mcp-sequential-thinking
     - monorepo-pr-workflow
     - plans-and-specs
     - repo-management
@@ -101,15 +89,21 @@ metadata:
     - repo-story-time
     - spike
     - systematic-debugging
-    - vscode-cli
     - web-research-pipeline
     - writing-clearly-and-concisely
     - writing-skills
+    # MCP tools:
+    - tool:mcp-filesystem
+    - tool:mcp-github
+    - tool:mcp-memory
+    - tool:mcp-sequential-thinking
 toolsets:
 - browser
 - code_execution
 - file
+- mcp
 - terminal
+- vision
 - web
 ---
 
@@ -213,7 +207,7 @@ Delegate per-project web research. For each of the 14 projects:
 2. Run `web-research-pipeline.prompt.md` trigger with project name + stack params.
 3. Let the sub-prompt handle: query generation, web_search, web_extract, and top-N URL synthesis.
 
-**Parallel execution:** Dispatch 3–4 projects concurrently via `dispatching-parallel-agents`.
+**Parallel execution:** Dispatch 3–4 projects concurrently via `delegate_task`.
 Each subagent receives: project name, tech stack, query list, target report path.
 
 **Tasks:**
@@ -229,7 +223,7 @@ read_file("projects/<name>/README.md")
 read_file("projects/<name>/AGENTS.md")
 # Delegate to sub-prompt:
 delegate_task(goal="Run web-research-pipeline prompt for project <name> with stack <tech>", toolsets=["web","file"])
-dispatching-parallel-agents(projects=[...], prompt="web-research-pipeline")
+delegate_task(projects=[...], prompt="web-research-pipeline")
 ```
 
 ---
@@ -519,7 +513,6 @@ List project name + shared technology. Must be symmetric.>
 - `skill_view(name="content-research-writer")` — Load research writing skill
 - `skill_view(name="writing-skills")` — Load crisp writing skill
 - `delegate_task(goal, toolsets=["web","file"])` — Delegate per-project research
-- `dispatching-parallel-agents` — Research 3–4 projects concurrently
 - `delegate_task` with `web-research-pipeline` prompt — Per-project web research
 - `skill_view(name="web-research-pipeline")` — Load sub-prompt orchestrator
 

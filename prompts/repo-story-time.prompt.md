@@ -20,20 +20,17 @@ tags:
 - vscode
 - workflow
 dependencies:
+- prompt:repo  # Quick Repo Onboarding (Q1–Q4)
 - skill:code-wiki
 - skill:gh-cli
 - skill:git-commit
-- skill:mcp-github
-- skill:mcp-sequential-thinking
-- skill:vscode-cli
 - skill:writing-clearly-and-concisely
+- tool:mcp-github
+- tool:mcp-sequential-thinking
 skills:
 - code-wiki
 - gh-cli
 - git-commit
-- mcp-github
-- mcp-sequential-thinking
-- vscode-cli
 - writing-clearly-and-concisely
 metadata:
   hermes:
@@ -41,17 +38,19 @@ metadata:
     - code-wiki
     - gh-cli
     - git-commit
-    - mcp-github
-    - mcp-sequential-thinking
-    - vscode-cli
     - writing-clearly-and-concisely
+    # MCP tools:
+    - tool:mcp-github
+    - tool:mcp-sequential-thinking
     related_prompts:
     - repo.prompt.md  # Quick Repo Onboarding (Q1–Q4)
 toolsets:
 - browser
 - code_execution
 - file
+- mcp
 - terminal
+- web
 ---
 ## Goal
 

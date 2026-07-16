@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "amannn.vscode-djlint",
-    "batisteo.vscode-django",
-    "esbenp.prettier-vscode",
-    "ms-python.python",
-    "ms-python.vscode-pylance"
-  ]
-}
