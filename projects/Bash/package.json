@@ -26,6 +26,7 @@
     "typecheck": "tsc --noEmit --pretty",
     "upgrade": "bunx tsx src/upgrade.ts",
     "upgrade:debug": "bunx tsx src/upgrade.ts --debug",
+    "test": "vitest run",
     "verify-install": "bash Bash/scripts/phase-5-verify-install.sh"
   },
   "dependencies": {

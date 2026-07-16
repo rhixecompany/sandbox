@@ -1,11 +1,4 @@
 {
-  "inputs": [
-    {
-      "type": "promptString",
-      "id": "workspaceFolder",
-      "description": "Workspace root path"
-    }
-  ],
   "servers": {
     "filesystem": {
       "command": "npx",

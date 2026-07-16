@@ -110,13 +110,14 @@ export function validateResumeData(data: ResumeData): ValidationResult {
 	}
 
 	for (const edu of data.education ?? []) {
-		if (!edu.degree) errors.push('Degree is required for education');
-		if (!edu.institution) errors.push('Institution is required for education');
-		if (!edu.graduationYear) errors.push('Graduation year is required for education');
+		if (!edu.degree?.trim()) continue;
+		if (!edu.institution?.trim()) errors.push('Institution is required for education');
+		if (!edu.graduationYear?.trim()) errors.push('Graduation year is required for education');
 	}
 
 	return { isValid: errors.length === 0, errors };
 }
+
 
 // ============================================================================
 // Formatters

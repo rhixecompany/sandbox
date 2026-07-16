@@ -1,0 +1,4177 @@
+[
+  {
+    "file": "Initial.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "name": "Initial",
+      "title": "ComicWise Project Setup - Complete Guide",
+      "description": "Complete project setup guide for ComicWise \u2014 Next.js 16 application with pnpm, covering installation, configuration, and development workflow.",
+      "version": "2.0.0",
+      "updated": "2025-12-29",
+      "platforms": "Windows, Linux, macOS",
+      "packageManager": "pnpm",
+      "framework": "Next.js 16",
+      "tags": [
+        "docker",
+        "frontend",
+        "ml",
+        "nextjs",
+        "prompts",
+        "typescript",
+        "windows"
+      ],
+      "trigger": "/Initial",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 24,
+      "n_headers": 0,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "docker",
+        "frontend",
+        "ml",
+        "nextjs",
+        "prompts",
+        "typescript",
+        "windows"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 5,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 3,
+      "size": 4790
+    }
+  },
+  {
+    "file": "agents-fix.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "agents-fix",
+      "title": "Agents Sync and Deduplication",
+      "trigger": "/agents-fix",
+      "description": "Sync and deduplicate agent definitions across Hermes, and Copilot with dependency mapping and schema validation.",
+      "tags": [
+        "agents",
+        "ai-assistant",
+        "configuration",
+        "fix",
+        "ml",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "dependencies": [
+        "prompt:context-map.prompt.md",
+        "prompt:update-implementation-plan.prompt.md",
+        "skill:brainstorming",
+        "skill:plans-and-specs",
+        "skill:dispatching-parallel-agents",
+        "skill:subagent-driven-development",
+        "skill:systematic-debugging",
+        "skill:simplify",
+        "skill:acpx-executor",
+        "skill:copilot-cli-quickstart",
+        "tool:terminal",
+        "tool:search_files",
+        "skill:introspection-only-general",
+        "skill:no-git-delete",
+        "skill:no-net-fetch",
+        "skill:skills-tools-preflight-check"
+      ],
+      "skills": [
+        "introspection-only-general",
+        "no-git-delete",
+        "no-net-fetch",
+        "skills-tools-preflight-check",
+        "brainstorming",
+        "plans-and-specs",
+        "dispatching-parallel-agents",
+        "subagent-driven-development",
+        "systematic-debugging",
+        "simplify",
+        "acpx-executor",
+        "copilot-cli-quickstart"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 60,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "agents",
+        "ai-assistant",
+        "configuration",
+        "fix",
+        "ml",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 21,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3955
+    }
+  },
+  {
+    "file": "agents-generator.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Agents Generator",
+      "name": "agents-generator",
+      "description": "Technology-agnostic blueprint generator for creating comprehensive AGENTS.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.",
+      "tags": [
+        "agents",
+        "architecture",
+        "data",
+        "debugging",
+        "frontend",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript",
+        "workflow"
+      ],
+      "trigger": "/agents-generator",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 20,
+      "n_headers": 0,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "agents",
+        "architecture",
+        "data",
+        "debugging",
+        "frontend",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 15,
+      "do_dont": 7,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 4,
+      "size": 2652
+    }
+  },
+  {
+    "file": "agents-system-prompt-context-fix.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Agents System Prompt Context Fix",
+      "name": "agents-system-prompt-context-fix",
+      "trigger": "/agents-system-prompt-context-fix",
+      "description": "Audit and repair GitHub Copilot/Hermes agent and instruction markdown: fix malformed frontmatter, missing fields, stale references, cross-repo path drift, and verification state across .github instructions/agents and related docs.",
+      "tags": [
+        "agents",
+        "copilot",
+        "instructions",
+        "prompts",
+        "audit",
+        "fix"
+      ],
+      "dependencies": [
+        "skill:using-superpowers",
+        "skill:user-communication-preferences",
+        "skill:executing-plans",
+        "skill:verification-before-completion"
+      ],
+      "skills": [
+        "using-superpowers",
+        "user-communication-preferences",
+        "executing-plans",
+        "verification-before-completion"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 40,
+      "n_headers": 6,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "agents",
+        "copilot",
+        "instructions",
+        "prompts",
+        "audit",
+        "fix"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 14,
+      "do_dont": 4,
+      "accept": 0,
+      "verify_kw": 7,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 2929
+    }
+  },
+  {
+    "file": "ai-prompt-engineering-safety-review.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "ai-prompt-engineering-safety-review",
+      "name": "ai-prompt-engineering-safety-review",
+      "trigger": "/ai-prompt-engineering-safety-review",
+      "description": "Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.",
+      "tags": [
+        "audit",
+        "frontend",
+        "ml",
+        "prompts",
+        "security",
+        "typescript"
+      ],
+      "dependencies": [
+        "skill:prompt-engineering",
+        "skill:systematic-debugging",
+        "skill:context-map"
+      ],
+      "skills": [
+        "prompt-engineering",
+        "systematic-debugging",
+        "context-map"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 49,
+      "n_headers": 10,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "frontend",
+        "ml",
+        "prompts",
+        "security",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 12,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3506
+    }
+  },
+  {
+    "file": "apple-appstore-reviewer.prompt.md",
+    "fm": {
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "apple-appstore-reviewer",
+      "title": "Apple App Store Reviewer",
+      "description": "Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons.",
+      "trigger": "/apple-appstore-reviewer",
+      "tags": [
+        "audit",
+        "fix",
+        "frontend",
+        "ml",
+        "prompts",
+        "rust",
+        "security",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 79,
+      "n_headers": 13,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "fix",
+        "frontend",
+        "ml",
+        "prompts",
+        "rust",
+        "security",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 30,
+      "do_dont": 11,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no workflow/phases section"
+      ],
+      "value": 2,
+      "size": 4041
+    }
+  },
+  {
+    "file": "architecture-blueprint-generator.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Comprehensive Project Architecture Blueprint Generator",
+      "name": "architecture-blueprint-generator",
+      "description": "Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.",
+      "tags": [
+        "architecture",
+        "documentation",
+        "frontend",
+        "generator",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "trigger": "/architecture-blueprint-generator",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 45,
+      "n_headers": 13,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "documentation",
+        "frontend",
+        "generator",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 18,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3642
+    }
+  },
+  {
+    "file": "arch-linux-triage.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Arch Linux Triage",
+      "name": "arch-linux-triage",
+      "description": "Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices.",
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "trigger": "/arch-linux-triage",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 24,
+      "n_headers": 5,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 11,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 2,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/arch-linux-triage/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 1293
+    }
+  },
+  {
+    "file": "aspnet-minimal-api-openapi.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "ASP.NET Minimal API with OpenAPI",
+      "name": "aspnet-minimal-api-openapi",
+      "description": "Create ASP.NET Minimal API endpoints with proper OpenAPI documentation",
+      "tags": [
+        "api",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/aspnet-minimal-api-openapi",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 33,
+      "n_headers": 6,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "api",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 25,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/aspnet-minimal-api-openapi/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 2228
+    }
+  },
+  {
+    "file": "az-cost-optimize.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Azure Cost Optimize",
+      "name": "az-cost-optimize",
+      "description": "Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.",
+      "tags": [
+        "azure",
+        "backend",
+        "configuration",
+        "frontend",
+        "generator",
+        "git",
+        "mcp",
+        "performance",
+        "prompts",
+        "workflow"
+      ],
+      "trigger": "/az-cost-optimize",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 72,
+      "n_headers": 16,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "azure",
+        "backend",
+        "configuration",
+        "frontend",
+        "generator",
+        "git",
+        "mcp",
+        "performance",
+        "prompts",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 38,
+      "do_dont": 0,
+      "accept": 2,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no explicit rules section"
+      ],
+      "value": 2,
+      "size": 4102
+    }
+  },
+  {
+    "file": "azure-resource-health-diagnose.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Azure Resource Health & Issue Diagnosis",
+      "name": "azure-resource-health-diagnose",
+      "description": "Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems.",
+      "tags": [
+        "azure",
+        "fix",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/azure-resource-health-diagnose",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 110,
+      "n_headers": 30,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "azure",
+        "fix",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 58,
+      "do_dont": 2,
+      "accept": 1,
+      "verify_kw": 5,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 5195
+    }
+  },
+  {
+    "file": "bash-scripts-fix.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "bash-scripts-fix",
+      "title": "Bash Scripts Modernization and Consolidation",
+      "trigger": "/bash-scripts-fix",
+      "description": "Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.",
+      "tags": [
+        "audit",
+        "fix",
+        "migration",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "dependencies": [
+        "prompt:context-map.prompt.md",
+        "prompt:update-implementation-plan.prompt.md",
+        "skill:brainstorming",
+        "skill:plans-and-specs",
+        "skill:dispatching-parallel-agents",
+        "skill:subagent-driven-development",
+        "skill:systematic-debugging",
+        "skill:simplify",
+        "skill:acpx-executor",
+        "skill:script-orchestration",
+        "tool:terminal",
+        "tool:search_files",
+        "skill:introspection-only-general",
+        "skill:no-git-delete",
+        "skill:no-net-fetch",
+        "skill:skills-tools-preflight-check"
+      ],
+      "skills": [
+        "introspection-only-general",
+        "no-git-delete",
+        "no-net-fetch",
+        "skills-tools-preflight-check",
+        "brainstorming",
+        "plans-and-specs",
+        "dispatching-parallel-agents",
+        "subagent-driven-development",
+        "systematic-debugging",
+        "simplify",
+        "acpx-executor",
+        "script-orchestration"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 103,
+      "n_headers": 15,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "fix",
+        "migration",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 38,
+      "do_dont": 2,
+      "accept": 1,
+      "verify_kw": 8,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 6980
+    }
+  },
+  {
+    "file": "bigquery-pipeline-audit.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "BigQuery Pipeline Audit: Cost, Safety and Production Readiness",
+      "name": "bigquery-pipeline-audit",
+      "description": "Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations.",
+      "tags": [
+        "api",
+        "audit",
+        "configuration",
+        "database",
+        "ml",
+        "prompts",
+        "python",
+        "security",
+        "sql",
+        "typescript"
+      ],
+      "trigger": "/bigquery-pipeline-audit",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 66,
+      "n_headers": 8,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "api",
+        "audit",
+        "configuration",
+        "database",
+        "ml",
+        "prompts",
+        "python",
+        "security",
+        "sql",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 27,
+      "do_dont": 4,
+      "accept": 0,
+      "verify_kw": 5,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/bigquery-pipeline-audit/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 5044
+    }
+  },
+  {
+    "file": "boost-prompt.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "boost-prompt",
+      "name": "boost-prompt",
+      "trigger": "/boost-prompt",
+      "description": "Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.",
+      "tags": [
+        "frontend",
+        "markdown",
+        "ml",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "dependencies": [
+        "skill:writing-skills",
+        "skill:writing-plans",
+        "skill:joyride",
+        "skill:context-map",
+        "skill:prompt-engineering"
+      ],
+      "skills": [
+        "writing-skills",
+        "writing-plans",
+        "joyride",
+        "context-map",
+        "prompt-engineering"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 57,
+      "n_headers": 11,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "frontend",
+        "markdown",
+        "ml",
+        "prompts",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 11,
+      "do_dont": 5,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3738
+    }
+  },
+  {
+    "file": "breakdown-epic-arch.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Epic Architecture Specification Prompt",
+      "name": "breakdown-epic-arch",
+      "description": "Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document.",
+      "tags": [
+        "architecture",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/breakdown-epic-arch",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 55,
+      "n_headers": 15,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 28,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3012
+    }
+  },
+  {
+    "file": "breakdown-epic-pm.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Epic Product Requirements Document (PRD) Prompt",
+      "name": "breakdown-epic-pm",
+      "description": "Prompt for creating an Epic Product Requirements Document (PRD) for a new epic. This PRD will be used as input for generating a technical architecture specification.",
+      "tags": [
+        "architecture",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/breakdown-epic-pm",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 47,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 21,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3035
+    }
+  },
+  {
+    "file": "breakdown-feature-implementation.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Feature Implementation Plan Prompt",
+      "name": "breakdown-feature-implementation",
+      "description": "Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.",
+      "tags": [
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/breakdown-feature-implementation",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "dependencies": [
+        "skill:subagent-driven-development"
+      ],
+      "skills": [
+        "subagent-driven-development"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 44,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 19,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 2781
+    }
+  },
+  {
+    "file": "breakdown-feature-prd.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Feature PRD Prompt",
+      "name": "breakdown-feature-prd",
+      "description": "Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic.",
+      "tags": [
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/breakdown-feature-prd",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 48,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 22,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 2943
+    }
+  },
+  {
+    "file": "breakdown-plan.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "GitHub Issue Planning & Project Automation Prompt",
+      "name": "breakdown-plan",
+      "description": "Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.",
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "planning",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "trigger": "/breakdown-plan",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "dependencies": [
+        "skill:subagent-driven-development"
+      ],
+      "skills": [
+        "subagent-driven-development"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 209,
+      "n_headers": 65,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "planning",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 98,
+      "do_dont": 3,
+      "accept": 15,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 9961
+    }
+  },
+  {
+    "file": "breakdown-test.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Test Planning & Quality Assurance Prompt",
+      "name": "breakdown-test",
+      "description": "Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.",
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "planning",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "trigger": "/breakdown-test",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "dependencies": [
+        "skill:subagent-driven-development"
+      ],
+      "skills": [
+        "subagent-driven-development"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 184,
+      "n_headers": 48,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "planning",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 95,
+      "do_dont": 1,
+      "accept": 2,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 9157
+    }
+  },
+  {
+    "file": "centos-linux-triage.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "CentOS Linux Triage",
+      "name": "centos-linux-triage",
+      "description": "Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld.",
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "trigger": "/centos-linux-triage",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 24,
+      "n_headers": 5,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 11,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 2,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/centos-linux-triage/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 1328
+    }
+  },
+  {
+    "file": "code-exemplars-blueprint-generator.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Code Exemplars Blueprint Generator",
+      "name": "code-exemplars-blueprint-generator",
+      "description": "Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams.",
+      "tags": [
+        "architecture",
+        "configuration",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "generator",
+        "java",
+        "javascript",
+        "ml",
+        "prompts",
+        "python",
+        "react",
+        "typescript"
+      ],
+      "trigger": "/code-exemplars-blueprint-generator",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 46,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "configuration",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "generator",
+        "java",
+        "javascript",
+        "ml",
+        "prompts",
+        "python",
+        "react",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 18,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3751
+    }
+  },
+  {
+    "file": "code-review.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "code-review",
+      "title": "Code Review",
+      "description": "Comprehensive code review prompt for correctness, security, and testing risk.",
+      "trigger": "/code-review",
+      "tags": [
+        "audit",
+        "data",
+        "frontend",
+        "prompts",
+        "security",
+        "skills",
+        "testing",
+        "typescript"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 61,
+      "n_headers": 13,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "data",
+        "frontend",
+        "prompts",
+        "security",
+        "skills",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 22,
+      "do_dont": 2,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 3596
+    }
+  },
+  {
+    "file": "comicwise-development.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "comicwise-development",
+      "title": "ComicWise Development Workflow",
+      "description": "Reusable prompt for ComicWise development sessions",
+      "applyTo": "**/*",
+      "tags": [
+        "architecture",
+        "audit",
+        "nextjs",
+        "prompts",
+        "testing",
+        "typescript",
+        "workflow"
+      ],
+      "trigger": "/comicwise-development",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 184,
+      "n_headers": 25,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "audit",
+        "nextjs",
+        "prompts",
+        "testing",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 34,
+      "do_dont": 7,
+      "accept": 1,
+      "verify_kw": 1,
+      "filler": 1,
+      "instruction_ratio": 0.99,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 8966
+    }
+  },
+  {
+    "file": "comment-code-generate-a-tutorial.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Comment Code Generate A Tutorial",
+      "name": "comment-code-generate-a-tutorial",
+      "description": "Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial.",
+      "tags": [
+        "generator",
+        "markdown",
+        "ml",
+        "prompts",
+        "python",
+        "refactoring",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/comment-code-generate-a-tutorial",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 35,
+      "n_headers": 11,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "markdown",
+        "ml",
+        "prompts",
+        "python",
+        "refactoring",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 19,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/comment-code-generate-a-tutorial/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 2161
+    }
+  },
+  {
+    "file": "containerize-aspnetcore.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "ASP.NET Core Docker Containerization Prompt",
+      "name": "containerize-aspnetcore",
+      "description": "Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile files customized for the project.",
+      "tags": [
+        "csharp",
+        "docker",
+        "dotnet",
+        "frontend",
+        "linux",
+        "ml",
+        "performance",
+        "prompts",
+        "security",
+        "specification"
+      ],
+      "trigger": "/containerize-aspnetcore",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 88,
+      "n_headers": 18,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "docker",
+        "dotnet",
+        "frontend",
+        "linux",
+        "ml",
+        "performance",
+        "prompts",
+        "security",
+        "specification"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 36,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 1,
+      "instruction_ratio": 0.99,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 5710
+    }
+  },
+  {
+    "file": "containerize-aspnet-framework.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "ASP.NET .NET Framework Containerization Prompt",
+      "name": "containerize-aspnet-framework",
+      "description": "Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project.",
+      "tags": [
+        "csharp",
+        "docker",
+        "dotnet",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "windows"
+      ],
+      "trigger": "/containerize-aspnet-framework",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 75,
+      "n_headers": 15,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "docker",
+        "dotnet",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "windows"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": false,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 28,
+      "do_dont": 2,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 1,
+      "instruction_ratio": 0.99,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no explicit rules section"
+      ],
+      "value": 2,
+      "size": 5075
+    }
+  },
+  {
+    "file": "context-map.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "2.0.0",
+      "title": "context-map",
+      "name": "context-map",
+      "trigger": "/context-map",
+      "description": "Build a dependency and reference map before making changes so implementation starts from the right files.",
+      "tags": [
+        "audit",
+        "frontend",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "dependencies": [
+        "skill:codemap"
+      ],
+      "skills": [
+        "codemap"
+      ],
+      "metadata": {
+        "hermes": {
+          "related_skills": [
+            "codemap"
+          ]
+        }
+      },
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 49,
+      "n_headers": 10,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "frontend",
+        "prompts",
+        "specification",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 12,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria"
+      ],
+      "value": 2,
+      "size": 2872
+    }
+  },
+  {
+    "file": "conventional-commit.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Conventional Commit",
+      "name": "conventional-commit",
+      "description": "Prompt and workflow for generating conventional commit messages using a structured XML format. Guides users to create standardized, descriptive commit messages in line with the Conventional Commits specification, including instructions, examples, and validation.",
+      "tags": [
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript",
+        "workflow"
+      ],
+      "trigger": "/conventional-commit",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 35,
+      "n_headers": 11,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 19,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/conventional-commit/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 2271
+    }
+  },
+  {
+    "file": "convert-plaintext-to-md.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "convert-plaintext-to-md",
+      "name": "convert-plaintext-to-md",
+      "trigger": "/convert-plaintext-to-md",
+      "description": "Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.",
+      "tags": [
+        "conversion",
+        "documentation",
+        "markdown",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "dependencies": [
+        "skill:enhance-markdown",
+        "skill:context-map"
+      ],
+      "skills": [
+        "enhance-markdown",
+        "context-map"
+      ],
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 66,
+      "n_headers": 12,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "conversion",
+        "documentation",
+        "markdown",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 21,
+      "do_dont": 5,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 5572
+    }
+  },
+  {
+    "file": "copilot-instructions-blueprint-generator.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Copilot Instructions Blueprint Generator",
+      "name": "copilot-instructions-blueprint-generator",
+      "description": "Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.",
+      "tags": [
+        "ai-assistant",
+        "architecture",
+        "frontend",
+        "generator",
+        "git",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/copilot-instructions-blueprint-generator",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 137,
+      "n_headers": 27,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "ai-assistant",
+        "architecture",
+        "frontend",
+        "generator",
+        "git",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 63,
+      "do_dont": 11,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 9534
+    }
+  },
+  {
+    "file": "cosmosdb-datamodeling.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Azure Cosmos DB NoSQL Data Modeling Expert System Prompt",
+      "name": "cosmosdb-datamodeling",
+      "description": "Step-by-step guide for capturing key application requirements for NoSQL use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices and common patterns, artifacts_produced: \"cosmosdb_requirements.md\" file and \"cosmosdb_data_model.md\" file",
+      "tags": [
+        "architecture",
+        "azure",
+        "data",
+        "database",
+        "frontend",
+        "ml",
+        "prompts",
+        "sql",
+        "typescript"
+      ],
+      "trigger": "/cosmosdb-datamodeling",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 140,
+      "n_headers": 30,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "azure",
+        "data",
+        "database",
+        "frontend",
+        "ml",
+        "prompts",
+        "sql",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 52,
+      "do_dont": 11,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 10593
+    }
+  },
+  {
+    "file": "create-agentsmd.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create high\u2011quality AGENTS.md file",
+      "name": "create-agentsmd",
+      "description": "Prompt for generating an AGENTS.md file for a repository",
+      "tags": [
+        "agents",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-agentsmd",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 146,
+      "n_headers": 33,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "agents",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 87,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 1,
+      "instruction_ratio": 0.99,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 7590
+    }
+  },
+  {
+    "file": "create-architectural-decision-record.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Architectural Decision Record",
+      "name": "create-architectural-decision-record",
+      "description": "Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.",
+      "tags": [
+        "architecture",
+        "documentation",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-architectural-decision-record",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 94,
+      "n_headers": 27,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "documentation",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 45,
+      "do_dont": 4,
+      "accept": 1,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/create-architectural-decision-record/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 4710
+    }
+  },
+  {
+    "file": "create-github-action-workflow-specification.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create GitHub Actions Workflow Specification",
+      "name": "create-github-action-workflow-specification",
+      "description": "Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance.",
+      "tags": [
+        "ci-cd",
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript",
+        "workflow"
+      ],
+      "trigger": "/create-github-action-workflow-specification",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 172,
+      "n_headers": 40,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "ci-cd",
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript",
+        "workflow"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 47,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 7143
+    }
+  },
+  {
+    "file": "create-github-issue-feature-from-specification.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create GitHub Issue from Specification",
+      "name": "create-github-issue-feature-from-specification",
+      "description": "Create GitHub Issue for feature request from specification file using feature_request.yml template.",
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-github-issue-feature-from-specification",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 48,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 25,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/create-github-issue-feature-from-specification/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 2617
+    }
+  },
+  {
+    "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create GitHub Issue from Implementation Plan",
+      "name": "create-github-issues-feature-from-implementation-plan",
+      "description": "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates.",
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-github-issues-feature-from-implementation-plan",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 48,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 25,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/create-github-issues-feature-from-implementation-plan/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 2668
+    }
+  },
+  {
+    "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create GitHub Issues for Unmet Specification Requirements",
+      "name": "create-github-issues-for-unmet-specification-requirements",
+      "description": "Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml template.",
+      "tags": [
+        "frontend",
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-github-issues-for-unmet-specification-requirements",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 53,
+      "n_headers": 15,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "frontend",
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 28,
+      "do_dont": 2,
+      "accept": 1,
+      "verify_kw": 5,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/create-github-issues-for-unmet-specification-requirements/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 2995
+    }
+  },
+  {
+    "file": "create-github-pull-request-from-specification.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create GitHub Pull Request from Specification",
+      "name": "create-github-pull-request-from-specification",
+      "description": "Create GitHub Pull Request for feature request from specification file using pull_request_template.md template.",
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-github-pull-request-from-specification",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 47,
+      "n_headers": 13,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "git",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 22,
+      "do_dont": 2,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 1,
+      "instruction_ratio": 0.98,
+      "refs": [
+        [
+          "template",
+          "templates/create-github-pull-request-from-specification/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 3287
+    }
+  },
+  {
+    "file": "create-implementation-plan.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web",
+        "browser",
+        "todo"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Implementation Plan",
+      "name": "create-implementation-plan",
+      "description": "Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.",
+      "tags": [
+        "architecture",
+        "generator",
+        "ml",
+        "prompts",
+        "refactoring",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-implementation-plan",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 130,
+      "n_headers": 30,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "generator",
+        "ml",
+        "prompts",
+        "refactoring",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 75,
+      "do_dont": 19,
+      "accept": 0,
+      "verify_kw": 4,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 7318
+    }
+  },
+  {
+    "file": "create-llms.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create LLMs.txt File from Repository Structure",
+      "name": "create-llms",
+      "description": "Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/",
+      "tags": [
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-llms",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 104,
+      "n_headers": 27,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 46,
+      "do_dont": 5,
+      "accept": 1,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 5228
+    }
+  },
+  {
+    "file": "create-oo-component-documentation.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Generate Standard OO Component Documentation",
+      "name": "create-oo-component-documentation",
+      "description": "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.",
+      "tags": [
+        "architecture",
+        "documentation",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-oo-component-documentation",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 130,
+      "n_headers": 29,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "documentation",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 64,
+      "do_dont": 4,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 7104
+    }
+  },
+  {
+    "file": "create-readme.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Readme",
+      "name": "create-readme",
+      "description": "Create a README.md file for the project",
+      "tags": [
+        "documentation",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-readme",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 47,
+      "n_headers": 13,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "documentation",
+        "generator",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": true,
+      "has_context": true,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 22,
+      "do_dont": 4,
+      "accept": 0,
+      "verify_kw": 3,
+      "filler": 1,
+      "instruction_ratio": 0.98,
+      "refs": [
+        [
+          "template",
+          "templates/create-readme/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "dead references"
+      ],
+      "value": 2,
+      "size": 3021
+    }
+  },
+  {
+    "file": "create-specification.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Specification",
+      "name": "create-specification",
+      "description": "Create a new specification file for the solution, optimized for Generative AI consumption.",
+      "tags": [
+        "documentation",
+        "frontend",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/create-specification",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 54,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "documentation",
+        "frontend",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": true,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 17,
+      "do_dont": 2,
+      "accept": 3,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no workflow/phases section"
+      ],
+      "value": 2,
+      "size": 3734
+    }
+  },
+  {
+    "file": "create-spring-boot-java-project.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Spring Boot Java project prompt",
+      "name": "create-spring-boot-java-project",
+      "description": "Create Spring Boot Java Project Skeleton",
+      "tags": [
+        "docker",
+        "generator",
+        "java",
+        "prompts",
+        "spring"
+      ],
+      "trigger": "/create-spring-boot-java-project",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 91,
+      "n_headers": 14,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "docker",
+        "generator",
+        "java",
+        "prompts",
+        "spring"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 33,
+      "do_dont": 4,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 1,
+      "instruction_ratio": 0.99,
+      "refs": [],
+      "issues": [
+        "missing plan"
+      ],
+      "value": 1,
+      "size": 4133
+    }
+  },
+  {
+    "file": "create-spring-boot-kotlin-project.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Create Spring Boot Kotlin project prompt",
+      "name": "create-spring-boot-kotlin-project",
+      "description": "Create Spring Boot Kotlin Project Skeleton",
+      "tags": [
+        "docker",
+        "generator",
+        "java",
+        "prompts",
+        "spring"
+      ],
+      "trigger": "/create-spring-boot-kotlin-project",
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 49,
+      "n_headers": 8,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "docker",
+        "generator",
+        "java",
+        "prompts",
+        "spring"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": true,
+      "has_acc_or_verify": true,
+      "bullets": 13,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 1,
+      "instruction_ratio": 0.98,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no workflow/phases section"
+      ],
+      "value": 2,
+      "size": 2560
+    }
+  },
+  {
+    "file": "csharp-async.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "C# Async Programming Best Practices",
+      "name": "csharp-async",
+      "description": "Get best practices for C# async programming",
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "fix",
+        "performance",
+        "prompts",
+        "typescript"
+      ],
+      "trigger": "/csharp-async",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 37,
+      "n_headers": 8,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "fix",
+        "performance",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 26,
+      "do_dont": 7,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/csharp-async/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 5,
+      "size": 2312
+    }
+  },
+  {
+    "file": "csharp-docs.prompt.md",
+    "fm": {
+      "toolsets": [
+        "terminal",
+        "file"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "C# Documentation Best Practices",
+      "name": "csharp-docs",
+      "description": "Ensure that C# types are documented with XML comments and follow best practices for documentation.",
+      "tags": [
+        "api",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/csharp-docs",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 49,
+      "n_headers": 7,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "api",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "frontend",
+        "ml",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 41,
+      "do_dont": 12,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/csharp-docs/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 4451
+    }
+  },
+  {
+    "file": "csharp-mcp-server-generator.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Generate C# MCP Server",
+      "name": "csharp-mcp-server-generator",
+      "description": "Generate a complete MCP server project in C# with tools, prompts, and proper configuration",
+      "tags": [
+        "backend",
+        "configuration",
+        "csharp",
+        "dotnet",
+        "frontend",
+        "generator",
+        "mcp",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "trigger": "/csharp-mcp-server-generator",
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 28,
+      "n_headers": 6,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "backend",
+        "configuration",
+        "csharp",
+        "dotnet",
+        "frontend",
+        "generator",
+        "mcp",
+        "prompts",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 9,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no workflow/phases section"
+      ],
+      "value": 3,
+      "size": 1907
+    }
+  },
+  {
+    "file": "csharp-nunit.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "NUnit Best Practices",
+      "name": "csharp-nunit",
+      "description": "Get best practices for NUnit unit testing, including data-driven tests",
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "trigger": "/csharp-nunit",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 60,
+      "n_headers": 9,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 49,
+      "do_dont": 2,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/csharp-nunit/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 3299
+    }
+  },
+  {
+    "file": "csharp-tunit.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "TUnit Best Practices",
+      "name": "csharp-tunit",
+      "description": "Get best practices for TUnit unit testing, including data-driven tests",
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "frontend",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "trigger": "/csharp-tunit",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 77,
+      "n_headers": 11,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "frontend",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 62,
+      "do_dont": 3,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/csharp-tunit/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 5478
+    }
+  },
+  {
+    "file": "csharp-xunit.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "XUnit Best Practices",
+      "name": "csharp-xunit",
+      "description": "Get best practices for XUnit unit testing, including data-driven tests",
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "trigger": "/csharp-xunit",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 57,
+      "n_headers": 9,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "csharp",
+        "data",
+        "dotnet",
+        "prompts",
+        "testing",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 46,
+      "do_dont": 2,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/csharp-xunit/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 3163
+    }
+  },
+  {
+    "file": "database.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web",
+        "todo"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Database Schema Guide for ComicWise",
+      "name": "database",
+      "description": "Database schema knowledge base for ComicWise - use for any database-related tasks",
+      "tags": [
+        "data",
+        "database",
+        "frontend",
+        "prompts",
+        "sql"
+      ],
+      "trigger": "/database",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 4,
+      "n_headers": 1,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "data",
+        "database",
+        "frontend",
+        "prompts",
+        "sql"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 1,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/database/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 5,
+      "size": 534
+    }
+  },
+  {
+    "file": "dataverse-python-advanced-patterns.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "dataverse-python-advanced-patterns",
+      "title": "Dataverse Python Advanced Patterns",
+      "description": "Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization techniques.",
+      "trigger": "/dataverse-python-advanced-patterns",
+      "tags": [
+        "data",
+        "database",
+        "generator",
+        "prompts",
+        "python",
+        "specification",
+        "sql"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 10,
+      "n_headers": 0,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "data",
+        "database",
+        "generator",
+        "prompts",
+        "python",
+        "specification",
+        "sql"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 0,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 4,
+      "size": 1467
+    }
+  },
+  {
+    "file": "dataverse-python-production-code.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "dataverse-python-production-code",
+      "title": "Dataverse Python   Production Code Generator",
+      "description": "Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices",
+      "trigger": "/dataverse-python-production-code",
+      "tags": [
+        "audit",
+        "backend",
+        "data",
+        "debugging",
+        "generator",
+        "ml",
+        "prompts",
+        "python",
+        "specification",
+        "typescript"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 45,
+      "n_headers": 8,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "backend",
+        "data",
+        "debugging",
+        "generator",
+        "ml",
+        "prompts",
+        "python",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 15,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no workflow/phases section"
+      ],
+      "value": 3,
+      "size": 2458
+    }
+  },
+  {
+    "file": "dataverse-python-quickstart.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "dataverse-python-quickstart",
+      "title": "Dataverse Python Quickstart Generator",
+      "description": "Generate Python SDK setup + CRUD + bulk + paging snippets using official patterns.",
+      "trigger": "/dataverse-python-quickstart",
+      "tags": [
+        "audit",
+        "data",
+        "frontend",
+        "generator",
+        "prompts",
+        "python",
+        "typescript"
+      ],
+      "toolsets": [
+        "file",
+        "terminal",
+        "web"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 7,
+      "n_headers": 0,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "audit",
+        "data",
+        "frontend",
+        "generator",
+        "prompts",
+        "python",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 6,
+      "do_dont": 1,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 4,
+      "size": 960
+    }
+  },
+  {
+    "file": "dataverse-python-usecase-builder.prompt.md",
+    "fm": {
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "name": "dataverse-python-usecase-builder",
+      "title": "Dataverse Python   Use Case Solution Builder",
+      "description": "Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations",
+      "trigger": "/dataverse-python-usecase-builder",
+      "tags": [
+        "architecture",
+        "data",
+        "frontend",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "python",
+        "specification",
+        "typescript"
+      ],
+      "toolsets": [
+        "file",
+        "terminal"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 92,
+      "n_headers": 15,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "architecture",
+        "data",
+        "frontend",
+        "generator",
+        "ml",
+        "performance",
+        "prompts",
+        "python",
+        "specification",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": true,
+      "has_rules": true,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 35,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria"
+      ],
+      "value": 2,
+      "size": 3943
+    }
+  },
+  {
+    "file": "debugger-prompt.prompt.md",
+    "fm": {
+      "name": "debugger-prompt",
+      "title": "Debugger Prompt",
+      "description": "Debugger Prompt",
+      "version": "1.0.0",
+      "trigger": "/debugger-prompt",
+      "author": "Hermes Agent",
+      "license": "MIT",
+      "toolsets": [
+        "web",
+        "terminal",
+        "file",
+        "code_execution"
+      ],
+      "tags": [
+        "debugging",
+        "errors",
+        "warnings",
+        "nextjs",
+        "typescript",
+        "linting"
+      ],
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "plans/debugger.md",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 62,
+      "n_headers": 1,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "debugging",
+        "errors",
+        "warnings",
+        "nextjs",
+        "typescript",
+        "linting"
+      ],
+      "plan": true,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 43,
+      "do_dont": 8,
+      "accept": 0,
+      "verify_kw": 1,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 2,
+      "size": 5982
+    }
+  },
+  {
+    "file": "debian-linux-triage.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Debian Linux Triage",
+      "name": "debian-linux-triage",
+      "description": "Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware guidance.",
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "trigger": "/debian-linux-triage",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": ""
+    },
+    "meta": {
+      "n_lines": 24,
+      "n_headers": 5,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "debugging",
+        "fix",
+        "frontend",
+        "linux",
+        "ml",
+        "prompts",
+        "typescript"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": true,
+      "bullets": 11,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 2,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [
+        [
+          "template",
+          "templates/debian-linux-triage/"
+        ]
+      ],
+      "issues": [
+        "missing plan",
+        "no explicit rules section",
+        "no workflow/phases section",
+        "dead references"
+      ],
+      "value": 4,
+      "size": 1330
+    }
+  },
+  {
+    "file": "development.prompt.md",
+    "fm": {
+      "toolsets": [
+        "web",
+        "todo"
+      ],
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "version": "1.0.0",
+      "title": "Development",
+      "name": "development",
+      "description": "\ud83d\ude80 ComicWise - Complete Project Setup & Scaffolding Guide",
+      "tags": [
+        "database",
+        "frontend",
+        "javascript",
+        "ml",
+        "nextjs",
+        "prompts",
+        "specification",
+        "sql"
+      ],
+      "trigger": "/development",
+      "scripts": [],
+      "skills": [],
+      "formatter": "default",
+      "plan": "",
+      "dependencies": []
+    },
+    "meta": {
+      "n_lines": 35,
+      "n_headers": 5,
+      "desc": true,
+      "tags_empty": false,
+      "tags": [
+        "database",
+        "frontend",
+        "javascript",
+        "ml",
+        "nextjs",
+        "prompts",
+        "specification",
+        "sql"
+      ],
+      "plan": false,
+      "formatter": true,
+      "has_goal": false,
+      "has_context": false,
+      "has_phases": false,
+      "has_rules": false,
+      "has_verify": false,
+      "has_acc_or_verify": false,
+      "bullets": 17,
+      "do_dont": 0,
+      "accept": 0,
+      "verify_kw": 0,
+      "filler": 0,
+      "instruction_ratio": 1.0,
+      "refs": [],
+      "issues": [
+        "missing plan",
+        "no acceptance/verification criteria",
+        "no explicit rules section",
+        "no workflow/phases section"
+      ],
+      "value": 4,
+      "size": 1669
+    }
+  }
+]

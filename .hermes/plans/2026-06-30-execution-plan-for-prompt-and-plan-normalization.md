@@ -1,5 +1,9 @@
 ---
-status: completed
+status: not_started
+status: not_started
+status: not_started
+status: not_started
+status: not_started
 ---
 # Execution Plan — Prompt and Plan Normalization
 
@@ -43,13 +47,11 @@ The directory `.hermes/plans/` contains mixed artifacts: executable plans/audits
 Objective: determine current executable vs non-executable state.
 
 **Tasks**
-
 - [ ] 1.1 inventory `.hermes/plans/**/*.md`
 - [ ] 1.2 classify executable gaps per file
 - [ ] 1.3 record normalization rules
 
 **Actions**
-
 - `search_files` target='files' path='.hermes/plans' pattern='*.md'
 - `read_file` on candidate plans
 - Record findings in `.hermes/plans/normalization-inventory.md`
@@ -61,14 +63,12 @@ Objective: make every plan executable.
 **Batch rule:** process <=7 files per batch until done.
 
 **Tasks**
-
 - [ ] 2.1 add missing frontmatter blocks
 - [ ] 2.2 align migrated docs into executable plan format or archive note
 - [ ] 2.3 remove false completion claims
 - [ ] 2.4 create missing executable plan for the current normalization goal
 
 **Actions**
-
 - `write_file`/`patch` for plan edits
 - `terminal` to run `git status --short`
 - `terminal` to run validation script if available
@@ -78,7 +78,6 @@ Objective: make every plan executable.
 Objective: confirm executable contract holds.
 
 **Verification**
-
 - All plans readable and parseable as planned artifacts.
 - No staged migration text masking completion state.
 - `.hermes/plans/execution-plan-for-prompt-and-plan-normalization.md` present.
@@ -88,7 +87,6 @@ Objective: confirm executable contract holds.
 Objective: deliver clean state.
 
 **Tasks**
-
 - [ ] 4.1 review `git status`
 - [ ] 4.2 run `git diff --check`
 - [ ] 4.3 `git commit` with `docs: normalize .hermes/plans for executable workflow`

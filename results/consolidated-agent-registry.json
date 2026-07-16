@@ -1,0 +1,1235 @@
+{
+  "generated": "2026-07-16 11:09",
+  "source_prompt": "prompts/agents-fix.prompt.md",
+  "ecosystems": [
+    "Copilot",
+    "Codex",
+    "Hermes"
+  ],
+  "counts": {
+    "copilot_agents": 174,
+    "copilot_instructions": 186,
+    "hermes_prompts": 0,
+    "codex_twins": 1
+  },
+  "registry": [
+    {
+      "concept": "4.1-Beast",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/4.1-Beast.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "CSharpExpert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/CSharpExpert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "Research Plan",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/Research Plan.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "Thinking-Beast-Mode",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/Thinking-Beast-Mode.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "Ultimate-Transparent-Thinking-Beast-Mode",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/Ultimate-Transparent-Thinking-Beast-Mode.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "WinFormsExpert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/WinFormsExpert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "accessibility",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/accessibility.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "address-comments",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/address-comments.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "adr-generator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/adr-generator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "aem-frontend-specialist",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/aem-frontend-specialist.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "agent-governance-reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/agent-governance-reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "amplitude-experiment-implementation",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/amplitude-experiment-implementation.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "api-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/api-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "apify-integration-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/apify-integration-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "arch",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/arch.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "arch-linux-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/arch-linux-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "arm-migration",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/arm-migration.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "atlassian-requirements-to-jira",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/atlassian-requirements-to-jira.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-iac-exporter",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-iac-exporter.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-iac-generator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-iac-generator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-logic-apps-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-logic-apps-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-principal-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-principal-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-saas-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-saas-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-verified-modules-bicep",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-verified-modules-bicep.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "azure-verified-modules-terraform",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/azure-verified-modules-terraform.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "bicep-implement",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/bicep-implement.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "bicep-plan",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/bicep-plan.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "blueprint-mode",
+      "ecosystems": "Copilot+Codex",
+      "copilot_agent": ".github/agents/blueprint-mode.agent.md",
+      "codex_twin": ".github/agents/blueprint-mode-codex.agent.md",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "blueprint-mode-codex",
+      "ecosystems": "Copilot+Codex",
+      "copilot_agent": ".github/agents/blueprint-mode-codex.agent.md",
+      "codex_twin": ".github/agents/blueprint-mode-codex.agent.md",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "cast-imaging-impact-analysis",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/cast-imaging-impact-analysis.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "cast-imaging-software-discovery",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/cast-imaging-software-discovery.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "cast-imaging-structural-quality-advisor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/cast-imaging-structural-quality-advisor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "centos-linux-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/centos-linux-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "clojure-interactive-programming",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/clojure-interactive-programming.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "code-tour",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/code-tour.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "comet-opik",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/comet-opik.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "context-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/context-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "context7",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/context7.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "critical-thinking",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/critical-thinking.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "csharp-dotnet-janitor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/csharp-dotnet-janitor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "csharp-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/csharp-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "custom-agent-foundry",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/custom-agent-foundry.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "debian-linux-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/debian-linux-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "debug",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/debug.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "debugger",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/debugger.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "declarative-agents-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/declarative-agents-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "demonstrate-understanding",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/demonstrate-understanding.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "devils-advocate",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/devils-advocate.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "devops-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/devops-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "diffblue-cover",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/diffblue-cover.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "dotnet-maui",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/dotnet-maui.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "dotnet-upgrade",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/dotnet-upgrade.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "droid",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/droid.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "drupal-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/drupal-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "dynatrace-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/dynatrace-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "elasticsearch-observability",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/elasticsearch-observability.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "electron-angular-native",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/electron-angular-native.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "expert-cpp-software-engineer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/expert-cpp-software-engineer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "expert-dotnet-software-engineer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/expert-dotnet-software-engineer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "expert-nextjs-developer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/expert-nextjs-developer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "expert-react-frontend-engineer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/expert-react-frontend-engineer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "fedora-linux-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/fedora-linux-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "frontend-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/frontend-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-browser-tester",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-browser-tester.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-devops",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-devops.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-documentation-writer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-documentation-writer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-implementer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-implementer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-orchestrator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-orchestrator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-planner",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-planner.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-researcher",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-researcher.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gem-reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gem-reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gilfoyle",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gilfoyle.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "github-actions-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/github-actions-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "go-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/go-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "gpt-5-beast-mode",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/gpt-5-beast-mode.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "hermes",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/hermes.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "hlbpa",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/hlbpa.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "implementation-plan",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/implementation-plan.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "insiders-a11y-tracker",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/insiders-a11y-tracker.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "janitor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/janitor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "java-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/java-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "jfrog-sec",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/jfrog-sec.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "kotlin-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/kotlin-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "kusto-assistant",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/kusto-assistant.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "laravel-expert-agent",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/laravel-expert-agent.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "launchdarkly-flag-cleanup",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/launchdarkly-flag-cleanup.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "lingodotdev-i18n",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/lingodotdev-i18n.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "mcp-m365-agent-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/mcp-m365-agent-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "mentor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/mentor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "meta-agentic-project-scaffold",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/meta-agentic-project-scaffold.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "microsoft-agent-framework-dotnet",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/microsoft-agent-framework-dotnet.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "microsoft-agent-framework-python",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/microsoft-agent-framework-python.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "microsoft-study-mode",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/microsoft-study-mode.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "microsoft_learn_contributor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/microsoft_learn_contributor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "modernization",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/modernization.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "monday-bug-fixer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/monday-bug-fixer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "mongodb-performance-advisor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/mongodb-performance-advisor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "ms-sql-dba",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/ms-sql-dba.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "neo4j-docker-client-generator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/neo4j-docker-client-generator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "neon-migration-specialist",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/neon-migration-specialist.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "neon-optimization-analyzer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/neon-optimization-analyzer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "octopus-deploy-release-notes-mcp",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/octopus-deploy-release-notes-mcp.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "openapi-to-application",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/openapi-to-application.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "pagerduty-incident-responder",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/pagerduty-incident-responder.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "php-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/php-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "pimcore-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/pimcore-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "plan",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/plan.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "planner",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/planner.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "platform-sre-kubernetes",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/platform-sre-kubernetes.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "playwright-tester",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/playwright-tester.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-builder",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-builder.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-fixer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-fixer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-generator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-generator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-implementer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-implementer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-linter",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-linter.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-planner",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-planner.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-researcher",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-researcher.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "polyglot-test-tester",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/polyglot-test-tester.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "postgresql-dba",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/postgresql-dba.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-bi-data-modeling-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-bi-data-modeling-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-bi-dax-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-bi-dax-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-bi-performance-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-bi-performance-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-bi-visualization-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-bi-visualization-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-platform-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-platform-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "power-platform-mcp-integration-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/power-platform-mcp-integration-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "prd",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/prd.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "principal-software-engineer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/principal-software-engineer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "prompt-builder",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/prompt-builder.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "prompt-engineer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/prompt-engineer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "python-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/python-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "qa-subagent",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/qa-subagent.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "reepl-linkedin",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/reepl-linkedin.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "refine-issue",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/refine-issue.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "repo-architect",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/repo-architect.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "research-technical-spike",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/research-technical-spike.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "ruby-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/ruby-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "rug-orchestrator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/rug-orchestrator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "rust-gpt-4.1-beast-mode",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/rust-gpt-4.1-beast-mode.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "rust-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/rust-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "salesforce-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/salesforce-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-gitops-ci-specialist",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-gitops-ci-specialist.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-product-manager-advisor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-product-manager-advisor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-responsible-ai-code",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-responsible-ai-code.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-security-reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-security-reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-system-architecture-reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-system-architecture-reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-technical-writer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-technical-writer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "se-ux-ui-designer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/se-ux-ui-designer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "search-ai-optimization-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/search-ai-optimization-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "semantic-kernel-dotnet",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/semantic-kernel-dotnet.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "semantic-kernel-python",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/semantic-kernel-python.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "shopify-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/shopify-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "simple-app-idea-generator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/simple-app-idea-generator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "software-engineer-agent-v1",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/software-engineer-agent-v1.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "specification",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/specification.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "stackhawk-security-onboarding",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/stackhawk-security-onboarding.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "swe-subagent",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/swe-subagent.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "swift-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/swift-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "task-planner",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/task-planner.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "task-researcher",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/task-researcher.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "tdd-green",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/tdd-green.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "tdd-red",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/tdd-red.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "tdd-refactor",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/tdd-refactor.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "tech-debt-remediation-plan",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/tech-debt-remediation-plan.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "technical-content-evaluator",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/technical-content-evaluator.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "terraform",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/terraform.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "terraform-azure-implement",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/terraform-azure-implement.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "terraform-azure-planning",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/terraform-azure-planning.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "terraform-iac-reviewer",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/terraform-iac-reviewer.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "typescript-mcp-expert",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/typescript-mcp-expert.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "voidbeast-gpt41enhanced",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/voidbeast-gpt41enhanced.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "wg-code-alchemist",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/wg-code-alchemist.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    },
+    {
+      "concept": "wg-code-sentinel",
+      "ecosystems": "Copilot",
+      "copilot_agent": ".github/agents/wg-code-sentinel.agent.md",
+      "codex_twin": "",
+      "hermes_prompt": ""
+    }
+  ]
+}

@@ -1,0 +1,5378 @@
+[
+  {
+    "name": "apple-notes",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0008789999992586672
+  },
+  {
+    "name": "apple-reminders",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.00141530000109924
+  },
+  {
+    "name": "arxiv",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.001409200001944555
+  },
+  {
+    "name": "ascii-video",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015109999985725153
+  },
+  {
+    "name": "blogwatcher",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.001854599999205675
+  },
+  {
+    "name": "debugger-tooling",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0015284999972209334
+  },
+  {
+    "name": "findmy",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0027955000005022157
+  },
+  {
+    "name": "github",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002242599999590311
+  },
+  {
+    "name": "github-auth",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005588199997873744
+  },
+  {
+    "name": "github-code-review",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.00174440000046161
+  },
+  {
+    "name": "github-issues",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0016802999998617452
+  },
+  {
+    "name": "github-pr-workflow",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.002961399997730041
+  },
+  {
+    "name": "github-workflow",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0027317999993101694
+  },
+  {
+    "name": "heartmula",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author"
+    ],
+    "duration": 0.004289000000426313
+  },
+  {
+    "name": "heartmula",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018467999980202876
+  },
+  {
+    "name": "hermes-config-troubleshooting",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0026072999971802346
+  },
+  {
+    "name": "huggingface-hub",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003942999999708263
+  },
+  {
+    "name": "imessage",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.003962200000387384
+  },
+  {
+    "name": "llama-cpp",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.001709399999526795
+  },
+  {
+    "name": "node-inspect-debugger",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.017697200000839075
+  },
+  {
+    "name": "notion",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004179399998974986
+  },
+  {
+    "name": "obsidian",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.020564500002365094
+  },
+  {
+    "name": "python-debugpy",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.020169999999779975
+  },
+  {
+    "name": "research-paper-writing",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.01729720000002999
+  },
+  {
+    "name": "songsee",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.017826399998739362
+  },
+  {
+    "name": "weights-and-biases",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.018374899998889305
+  },
+  {
+    "name": "acpx-executor",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.01860089999900083
+  },
+  {
+    "name": "apple",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.017167000001791166
+  },
+  {
+    "name": "architecture-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.01943290000053821
+  },
+  {
+    "name": "folder-structure-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042571000012685545
+  },
+  {
+    "name": "technology-stack-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007320000000618165
+  },
+  {
+    "name": "audit-plans",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.010972899999615038
+  },
+  {
+    "name": "agent-browser",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00748820000080741
+  },
+  {
+    "name": "agent-governance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0071935999985726085
+  },
+  {
+    "name": "agentic-eval",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027090000003227033
+  },
+  {
+    "name": "antigravity-cli",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.006285100000241073
+  },
+  {
+    "name": "blackbox",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0047710999970149714
+  },
+  {
+    "name": "claude-code",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.002575599999545375
+  },
+  {
+    "name": "codex",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0036432999986573122
+  },
+  {
+    "name": "customize-opencode",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005627599999570521
+  },
+  {
+    "name": "enhance-markdown",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.007408699999359669
+  },
+  {
+    "name": "grok",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005417099997430341
+  },
+  {
+    "name": "hermes-agent",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0058185999987472314
+  },
+  {
+    "name": "hermes-breakdown",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0011153000014019199
+  },
+  {
+    "name": "hermes-skill-library-maintenance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003109900000708876
+  },
+  {
+    "name": "honcho",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.006322500001260778
+  },
+  {
+    "name": "multi-agent-sync",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006984099996770965
+  },
+  {
+    "name": "opencode",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.01015929999994114
+  },
+  {
+    "name": "openhands",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004607599999872036
+  },
+  {
+    "name": "qwen-code",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00688580000132788
+  },
+  {
+    "name": "sequential-orchestration",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004829599998629419
+  },
+  {
+    "name": "template",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034371999972790945
+  },
+  {
+    "name": "using-superpowers",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006247299999813549
+  },
+  {
+    "name": "batch-skills-audit",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004309600000851788
+  },
+  {
+    "name": "binance-python-api-tutorial",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004566899999190355
+  },
+  {
+    "name": "evm",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004772899999807123
+  },
+  {
+    "name": "hyperliquid",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.005413499999121996
+  },
+  {
+    "name": "solana",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.002013900000747526
+  },
+  {
+    "name": "boost-prompt",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005125199997564778
+  },
+  {
+    "name": "boost-prompts",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.005018399999244139
+  },
+  {
+    "name": "bun-nextjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.04623630000060075
+  },
+  {
+    "name": "bun-shell",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section"
+    ],
+    "duration": 0.042201799999020295
+  },
+  {
+    "name": "chainlink",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.024050299998634728
+  },
+  {
+    "name": "ci-cd-best-practices",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.04159359999903245
+  },
+  {
+    "name": "ci-cd-pipeline-builder",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.00280669999847305
+  },
+  {
+    "name": "claude-code",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0033838999988802243
+  },
+  {
+    "name": "one-three-one-rule",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.00397529999827384
+  },
+  {
+    "name": "computer-use",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004425999999511987
+  },
+  {
+    "name": "algorithmic-art",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004472299999179086
+  },
+  {
+    "name": "architecture-diagram",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004515099997661309
+  },
+  {
+    "name": "ascii-art",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004865399998379871
+  },
+  {
+    "name": "ascii-video",
+    "score": 55,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0029977000012877397
+  },
+  {
+    "name": "baoyu-article-illustrator",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004741799999465002
+  },
+  {
+    "name": "baoyu-comic",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0031686000002082437
+  },
+  {
+    "name": "baoyu-infographic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036288000010245014
+  },
+  {
+    "name": "blender-mcp",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.00371639999866602
+  },
+  {
+    "name": "brand-guidelines",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005767200000263983
+  },
+  {
+    "name": "canvas-design",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002320699997653719
+  },
+  {
+    "name": "claude-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032888000023376662
+  },
+  {
+    "name": "comfyui",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00367529999857652
+  },
+  {
+    "name": "concept-diagrams",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.005744400001276517
+  },
+  {
+    "name": "content-research-writer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003500700000586221
+  },
+  {
+    "name": "creative-ideation",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003850999997666804
+  },
+  {
+    "name": "design-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004552800000965362
+  },
+  {
+    "name": "excalidraw",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005875099999684608
+  },
+  {
+    "name": "excalidraw-diagram-generator",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0038891999975021463
+  },
+  {
+    "name": "face-obscure-video-chat",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0016858000017236918
+  },
+  {
+    "name": "frontend-design",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00352049999855808
+  },
+  {
+    "name": "html-artifact",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0053410999971674755
+  },
+  {
+    "name": "humanizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0046538000024156645
+  },
+  {
+    "name": "hyperframes",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.005380000002332963
+  },
+  {
+    "name": "image-manipulation-image-magick",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0027282999981252942
+  },
+  {
+    "name": "kanban-video-orchestrator",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002142400000593625
+  },
+  {
+    "name": "legacy-circuit-mockups",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006471000000601634
+  },
+  {
+    "name": "manim-video",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004229699999996228
+  },
+  {
+    "name": "marp-slide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004449199997907272
+  },
+  {
+    "name": "meme-generation",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.003790900002059061
+  },
+  {
+    "name": "mermaid-diagrams",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003266199997597141
+  },
+  {
+    "name": "p5js",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004413599999679718
+  },
+  {
+    "name": "penpot-uiux-design",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00268560000040452
+  },
+  {
+    "name": "pixel-art",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004196900001261383
+  },
+  {
+    "name": "plantuml-ascii",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0051435000023047905
+  },
+  {
+    "name": "popular-web-designs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006066499998269137
+  },
+  {
+    "name": "pretext",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0029262999996717554
+  },
+  {
+    "name": "sketch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004356199999165256
+  },
+  {
+    "name": "songwriting-and-ai-music",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028153000021120533
+  },
+  {
+    "name": "theme-factory",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002823099999659462
+  },
+  {
+    "name": "touchdesigner-mcp",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.003750799998670118
+  },
+  {
+    "name": "vsdc-video-masking",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004623199998604832
+  },
+  {
+    "name": "web-artifacts-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004087900000740774
+  },
+  {
+    "name": "writing-clearly-and-concisely",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004527100001723738
+  },
+  {
+    "name": "jupyter-live-kernel",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005151800000021467
+  },
+  {
+    "name": "-agents-fix-discover",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037384999995992985
+  },
+  {
+    "name": "-agents-fix-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004174000001512468
+  },
+  {
+    "name": "-verify-and-dedupe",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018238999982713722
+  },
+  {
+    "name": "add-hooks-to-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00419540000075358
+  },
+  {
+    "name": "agents-system-prompt-context-fix-runner",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.002341100000194274
+  },
+  {
+    "name": "ai-prompt-engineering-safety-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023944999993545935
+  },
+  {
+    "name": "analyze-hf-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036056999997526873
+  },
+  {
+    "name": "analyze-skill-codeblocks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021340999992389698
+  },
+  {
+    "name": "apply-pending-memory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007539100002759369
+  },
+  {
+    "name": "apply-pending-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002619099999719765
+  },
+  {
+    "name": "apply-vscode-customizations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00388790000215522
+  },
+  {
+    "name": "asyncio-9min-youtube",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0033677999999781605
+  },
+  {
+    "name": "asyncio-complete-guide",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0029213000016170554
+  },
+  {
+    "name": "asyncio-full-tutorial",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0015442000003531575
+  },
+  {
+    "name": "asyncio-geeksforgeeks",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0037073000021337066
+  },
+  {
+    "name": "asyncio-hands-on-walkthrough",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0026804000008269213
+  },
+  {
+    "name": "asyncio-part1-basics",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004462500000954606
+  },
+  {
+    "name": "asyncio-patricks-blog",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0027164999992237426
+  },
+  {
+    "name": "audit-227",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028570000031322706
+  },
+  {
+    "name": "audit-227-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021425000013550743
+  },
+  {
+    "name": "audit-227-js",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006611300002987264
+  },
+  {
+    "name": "audit-agents-hashes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003012900000612717
+  },
+  {
+    "name": "audit-fix-remediate-safe",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0050799000018741935
+  },
+  {
+    "name": "audit-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004436399998667184
+  },
+  {
+    "name": "audit-vscode-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003251300000556512
+  },
+  {
+    "name": "audit-vscode-config-v2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003927999998268206
+  },
+  {
+    "name": "batch-delete-profiles",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021351000032154843
+  },
+  {
+    "name": "batch-localappdata-skillcode",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004515399999945657
+  },
+  {
+    "name": "batch-remediate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028496999984781723
+  },
+  {
+    "name": "batch-remediate-42-59",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006156600000394974
+  },
+  {
+    "name": "batch-rewrite-worst",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00471560000005411
+  },
+  {
+    "name": "batch-skill-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031043999988469295
+  },
+  {
+    "name": "batch-update-hermes-paths",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034594999997352716
+  },
+  {
+    "name": "benchmark-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002515500000299653
+  },
+  {
+    "name": "benchmark-providers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029578999965451658
+  },
+  {
+    "name": "benchmark-results",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020915999994031154
+  },
+  {
+    "name": "benchmark-run-20260710",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00809089999893331
+  },
+  {
+    "name": "binance-api-reference",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036338999998406507
+  },
+  {
+    "name": "boost-near-pass-refs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004878299998381408
+  },
+  {
+    "name": "build-path-mapping",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028567000008479226
+  },
+  {
+    "name": "busha-api-quickstart",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0033368000003974885
+  },
+  {
+    "name": "busha-business-api",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.009480200002144556
+  },
+  {
+    "name": "busha-quick-start-guide",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0023030999982438516
+  },
+  {
+    "name": "categorize-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003780000002734596
+  },
+  {
+    "name": "check-handle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019659999998111743
+  },
+  {
+    "name": "chrome-devtools",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0038234999992710073
+  },
+  {
+    "name": "configure-hermes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003962599999795202
+  },
+  {
+    "name": "consolidate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0062499999985448085
+  },
+  {
+    "name": "context-map",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019006000002264045
+  },
+  {
+    "name": "convert-plaintext-to-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004501899999013403
+  },
+  {
+    "name": "copilot-cli-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027020999987144023
+  },
+  {
+    "name": "copilot-mcp-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037068999990879092
+  },
+  {
+    "name": "copilot-sdk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002995599999849219
+  },
+  {
+    "name": "create-agentsmd",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0045006000000284985
+  },
+  {
+    "name": "create-implementation-plan",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0019224999996367842
+  },
+  {
+    "name": "create-missing-memories",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031559999988530762
+  },
+  {
+    "name": "create-missing-souls",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003440199998294702
+  },
+  {
+    "name": "create-readme",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00484860000142362
+  },
+  {
+    "name": "crypto-wallet-api-guide",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006710699999530334
+  },
+  {
+    "name": "crypto-wallet-quickstart",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00568829999974696
+  },
+  {
+    "name": "cryptoapis-wallet-builder",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003947400000470225
+  },
+  {
+    "name": "dedupe-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00241930000265711
+  },
+  {
+    "name": "dev-init-code-samples",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003664000003482215
+  },
+  {
+    "name": "docs-inventory-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0060101999988546595
+  },
+  {
+    "name": "execute-workflow",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002864499998395331
+  },
+  {
+    "name": "face-detection-uv4l-pi",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0015248999989125878
+  },
+  {
+    "name": "find-lock",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0009071999993466306
+  },
+  {
+    "name": "find-locking-pid",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023632999982510228
+  },
+  {
+    "name": "fix-copilot-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013596999997389503
+  },
+  {
+    "name": "fix-crlf-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002814899999066256
+  },
+  {
+    "name": "fix-duplicate-hooks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003195699999196222
+  },
+  {
+    "name": "fix-eslint-mismatches",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001980799999728333
+  },
+  {
+    "name": "fix-fail-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023595999991812278
+  },
+  {
+    "name": "fix-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028224999987287447
+  },
+  {
+    "name": "fix-frontmatter-yaml",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author"
+    ],
+    "duration": 0.0021524000003410038
+  },
+  {
+    "name": "fix-frontmatter-yaml-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027294999999867287
+  },
+  {
+    "name": "fix-orphaned-brackets",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003091499998845393
+  },
+  {
+    "name": "fix-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003300899999885587
+  },
+  {
+    "name": "fix-prompts-comprehensive",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022526000029756688
+  },
+  {
+    "name": "fix-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002885400001105154
+  },
+  {
+    "name": "fix-yaml-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003381700000318233
+  },
+  {
+    "name": "flutterwave-transfers-api",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003641400002379669
+  },
+  {
+    "name": "generate-context-files",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033092000012402423
+  },
+  {
+    "name": "generate-custom-instructions-from-codebase",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015161000010266434
+  },
+  {
+    "name": "generate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017349999980069697
+  },
+  {
+    "name": "generate-vscode-audit-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020107999989704695
+  },
+  {
+    "name": "generate-vscode-configs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004156999999395339
+  },
+  {
+    "name": "hello",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003775399996811757
+  },
+  {
+    "name": "hello-world",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002183200002036756
+  },
+  {
+    "name": "hermes-deep-dive-guide",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002103999999235384
+  },
+  {
+    "name": "hermes-luma-memory-arch",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00319139999919571
+  },
+  {
+    "name": "hermes-networkchuck-course",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002206199998909142
+  },
+  {
+    "name": "hermes-persistent-memory",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0022457999984908383
+  },
+  {
+    "name": "hermes-quickstart",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0022900999974808656
+  },
+  {
+    "name": "how-paypal-works",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00331229999937932
+  },
+  {
+    "name": "inventory-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030948999992688186
+  },
+  {
+    "name": "inventory-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030292000010376796
+  },
+  {
+    "name": "lcs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003251900001487229
+  },
+  {
+    "name": "list-cli-tools",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003484799999569077
+  },
+  {
+    "name": "make-skill-template",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017138000002887566
+  },
+  {
+    "name": "memory-repair",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003432299999985844
+  },
+  {
+    "name": "merge-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002227200002380414
+  },
+  {
+    "name": "merge-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002485299999534618
+  },
+  {
+    "name": "microsoft-code-reference",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0031321999995270744
+  },
+  {
+    "name": "microsoft-docs",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0031261000003723893
+  },
+  {
+    "name": "microsoft-skill-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020695999992312863
+  },
+  {
+    "name": "model-discovery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003124099999695318
+  },
+  {
+    "name": "normalize-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004795900000317488
+  },
+  {
+    "name": "normalize-prompt-actions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028454999992391095
+  },
+  {
+    "name": "patch-all-fail-sections",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023875999977462925
+  },
+  {
+    "name": "patch-fail-structure",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029162999999243766
+  },
+  {
+    "name": "paypal-getting-started",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0028330999994068407
+  },
+  {
+    "name": "paystack-dev-docs",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036247999996703584
+  },
+  {
+    "name": "paystack-getting-started",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.001675499999691965
+  },
+  {
+    "name": "phase4-reconstruct",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005882599998585647
+  },
+  {
+    "name": "phase4-reconstruct-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019020999970962293
+  },
+  {
+    "name": "prime-factors",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021167999984754715
+  },
+  {
+    "name": "prompt-audit-all",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003217699999368051
+  },
+  {
+    "name": "prompt-audit-all-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014104000001680106
+  },
+  {
+    "name": "prompt-batch-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002681799996935297
+  },
+  {
+    "name": "prompt-builder",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0010681999992812052
+  },
+  {
+    "name": "prompt-engineering",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002385099996899953
+  },
+  {
+    "name": "prompt-fix-metadata",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003149299998767674
+  },
+  {
+    "name": "prompt-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022511999995913357
+  },
+  {
+    "name": "prompt-repair-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00214129999949364
+  },
+  {
+    "name": "prompts-repair",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0019135999973514117
+  },
+  {
+    "name": "quarantine-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0043138000000908505
+  },
+  {
+    "name": "remove-flat-duplicates",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038635999990219716
+  },
+  {
+    "name": "repair-frontmatter-closes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002707600000576349
+  },
+  {
+    "name": "review-pending-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020617000009224284
+  },
+  {
+    "name": "score-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036708999978145584
+  },
+  {
+    "name": "session-audit-227",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027169999993930105
+  },
+  {
+    "name": "session-audit-227-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00397030000021914
+  },
+  {
+    "name": "skill-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020055000022694003
+  },
+  {
+    "name": "skill-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016183000007004011
+  },
+  {
+    "name": "skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018094000006385613
+  },
+  {
+    "name": "skills-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018734000004769769
+  },
+  {
+    "name": "suggest-awesome-github-copilot-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002169899998989422
+  },
+  {
+    "name": "suggest-awesome-github-copilot-instructions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029547000012826174
+  },
+  {
+    "name": "test-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002324199998838594
+  },
+  {
+    "name": "trim-banking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00218959999983781
+  },
+  {
+    "name": "trim-remaining",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001834999999118736
+  },
+  {
+    "name": "trim-research-reports",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003147800001897849
+  },
+  {
+    "name": "trim-research-reports-final",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002633599997352576
+  },
+  {
+    "name": "update-agents-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022000000026309863
+  },
+  {
+    "name": "update-implementation-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003350200000568293
+  },
+  {
+    "name": "using-git-worktrees",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005142499998328276
+  },
+  {
+    "name": "validate-prompt-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003160399999615038
+  },
+  {
+    "name": "validate-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003434000002016546
+  },
+  {
+    "name": "validate-vscode-configs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001281199998629745
+  },
+  {
+    "name": "validate-vscode-json",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014904000017850194
+  },
+  {
+    "name": "verify-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027068999988841824
+  },
+  {
+    "name": "verify-frontmatter-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003517400000419002
+  },
+  {
+    "name": "vscode-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00217740000152844
+  },
+  {
+    "name": "vscode-ext-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004581699999107514
+  },
+  {
+    "name": "vscode-ext-localization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016270999985863455
+  },
+  {
+    "name": "vscode-extension-playbook",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026489000010769814
+  },
+  {
+    "name": "vscode-workspace-configurator",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.001974099999642931
+  },
+  {
+    "name": "workiq-copilot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015473999992536847
+  },
+  {
+    "name": "writing-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005234899999777554
+  },
+  {
+    "name": "appinsights-instrumentation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002907699999923352
+  },
+  {
+    "name": "asdf",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0045629000014741905
+  },
+  {
+    "name": "aspire",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0013055999988864642
+  },
+  {
+    "name": "azure-deployment-preflight",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002306200000020908
+  },
+  {
+    "name": "azure-devops-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029055999984848313
+  },
+  {
+    "name": "azure-resource-visualizer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0027865999982168432
+  },
+  {
+    "name": "azure-role-selector",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020757999991474207
+  },
+  {
+    "name": "azure-static-web-apps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004763699998875381
+  },
+  {
+    "name": "cli",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0022008000014466234
+  },
+  {
+    "name": "customization-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002285999999003252
+  },
+  {
+    "name": "datadog",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034727000020211563
+  },
+  {
+    "name": "dependabot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004001299999799812
+  },
+  {
+    "name": "dependency-security-remediation",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0019537999978638254
+  },
+  {
+    "name": "docker-management",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0013328000022738706
+  },
+  {
+    "name": "entra-agent-user",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002608800001326017
+  },
+  {
+    "name": "env-path-portability",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0045123000018065795
+  },
+  {
+    "name": "fabric-lakehouse",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014502999983960763
+  },
+  {
+    "name": "git-history-preserving-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034826000010070857
+  },
+  {
+    "name": "github-actions-efficiency",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0028749000011885073
+  },
+  {
+    "name": "github-copilot-cli",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003679299999930663
+  },
+  {
+    "name": "glab",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024537999997846782
+  },
+  {
+    "name": "hermes-config-merge",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004574700000375742
+  },
+  {
+    "name": "hermes-hooks",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036165999990771525
+  },
+  {
+    "name": "hermes-profiles",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0029511999964597635
+  },
+  {
+    "name": "hermes-s6-container-supervision",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005308199997671181
+  },
+  {
+    "name": "hermes-setup",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004323599998315331
+  },
+  {
+    "name": "hermes-skills",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005747600000177044
+  },
+  {
+    "name": "hermes-system-maintenance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026247999994666316
+  },
+  {
+    "name": "jira",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002895699999498902
+  },
+  {
+    "name": "kanban-orchestrator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003559500000847038
+  },
+  {
+    "name": "kanban-worker",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003744699999515433
+  },
+  {
+    "name": "log-analysis-and-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006867199997941498
+  },
+  {
+    "name": "monorepo-pr-workflow",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004093200001079822
+  },
+  {
+    "name": "msys2-management",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003644400003395276
+  },
+  {
+    "name": "multi-stage-dockerfile",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025691000009828713
+  },
+  {
+    "name": "pending-store-apply",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006201399999554269
+  },
+  {
+    "name": "pinggy-tunnel",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004149699998379219
+  },
+  {
+    "name": "pnpm-package-manager",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002811700000165729
+  },
+  {
+    "name": "powerbi-modeling",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004874599999311613
+  },
+  {
+    "name": "profile-maintenance",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002632899999298388
+  },
+  {
+    "name": "projects-multi-repo-init-normalize",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004699400000390597
+  },
+  {
+    "name": "prompt-batch-fixer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0016467000023112632
+  },
+  {
+    "name": "provider-model-audit",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004010600001493003
+  },
+  {
+    "name": "provider-reliability-diagnostics",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0022962000002735294
+  },
+  {
+    "name": "rbac-audit-logging",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0044071000011172146
+  },
+  {
+    "name": "repo-management",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004764100001921179
+  },
+  {
+    "name": "secret-scanning",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0025034999998752028
+  },
+  {
+    "name": "service-integrations",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0031335999992734287
+  },
+  {
+    "name": "session-audit-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004590399999869987
+  },
+  {
+    "name": "session-history-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003975899999204557
+  },
+  {
+    "name": "snowflake-semanticview",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00517500000205473
+  },
+  {
+    "name": "terraform-azurerm-set-diff-analyzer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002136600000085309
+  },
+  {
+    "name": "tmux-terminal-multiplexer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00334619999921415
+  },
+  {
+    "name": "uv-package-manager",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002220100002887193
+  },
+  {
+    "name": "validate-memories",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002219800000602845
+  },
+  {
+    "name": "watchers",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0028713000028801616
+  },
+  {
+    "name": "webhook-subscriptions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031318999972427264
+  },
+  {
+    "name": "windows-installer-diagnostics",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00463099999979022
+  },
+  {
+    "name": "windows-maintenance-operations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005825700001878431
+  },
+  {
+    "name": "windows-package-management",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005281199999444652
+  },
+  {
+    "name": "work-on-ticket",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028239999992365483
+  },
+  {
+    "name": "workspace-audit",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0020862999990640674
+  },
+  {
+    "name": "dispatching-parallel-agents",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0023992999995243736
+  },
+  {
+    "name": "django-application",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0024165000031644013
+  },
+  {
+    "name": "django-celery",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.028486100000009174
+  },
+  {
+    "name": "adversarial-ux-test",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003323699998873053
+  },
+  {
+    "name": "dogfood",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0045279000005393755
+  },
+  {
+    "name": "drawio-skill",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004254300001775846
+  },
+  {
+    "name": "agentmail",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.002284399997733999
+  },
+  {
+    "name": "himalaya",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003978799999458715
+  },
+  {
+    "name": "emblem-ai-prompt-examples",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004670100002840627
+  },
+  {
+    "name": "enhance-prompt",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.026581499998428626
+  },
+  {
+    "name": "3-statement-model",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005739500000345288
+  },
+  {
+    "name": "comps-analysis",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0039663999996264465
+  },
+  {
+    "name": "dcf-model",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0042905000009341165
+  },
+  {
+    "name": "excel-author",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.010463899998285342
+  },
+  {
+    "name": "lbo-model",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0042840999994950835
+  },
+  {
+    "name": "merger-model",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004704200000560377
+  },
+  {
+    "name": "pptx-author",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.010366099999373546
+  },
+  {
+    "name": "stocks",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.00619130000268342
+  },
+  {
+    "name": "firecrawl-agent",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.02073469999959343
+  },
+  {
+    "name": "firecrawl-crawl",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.018865000001824228
+  },
+  {
+    "name": "firecrawl-download",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.03249080000023241
+  },
+  {
+    "name": "firecrawl-map",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.025344999998196727
+  },
+  {
+    "name": "firecrawl-scrape",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.026044400001410395
+  },
+  {
+    "name": "firecrawl-search",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.03203719999874011
+  },
+  {
+    "name": "fix-prompt-frontmatter",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.008590400000684895
+  },
+  {
+    "name": "minecraft-modpack-server",
+    "score": 50,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0016979000029095914
+  },
+  {
+    "name": "pokemon-player",
+    "score": 60,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.0005471000004035886
+  },
+  {
+    "name": "git-patch-management",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0003895999980159104
+  },
+  {
+    "name": "codebase-inspection",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0004231000020809006
+  },
+  {
+    "name": "finishing-a-development-branch",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004911700001684949
+  },
+  {
+    "name": "gh-cli",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.000740100000257371
+  },
+  {
+    "name": "git-commit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0010541999981796835
+  },
+  {
+    "name": "git-helper",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005339600000297651
+  },
+  {
+    "name": "git-submodule-workflow",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0004974999974365346
+  },
+  {
+    "name": "github-repo-management",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0005032999979448505
+  },
+  {
+    "name": "github",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0036663999999291264
+  },
+  {
+    "name": "sponsor-finder",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0006025000002409797
+  },
+  {
+    "name": "github-repo-management",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0008834000000206288
+  },
+  {
+    "name": "fitness-nutrition",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.0005085000011604279
+  },
+  {
+    "name": "neuroskill-bci",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0015142999982344918
+  },
+  {
+    "name": "hermes-agent",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0019732000000658445
+  },
+  {
+    "name": "hermes-desktop-plugins",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.005227400000876514
+  },
+  {
+    "name": "hermes-personality-soul",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036852000012004282
+  },
+  {
+    "name": "implementation-plan",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002572399997006869
+  },
+  {
+    "name": "introspection-only-general",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0030726000004506204
+  },
+  {
+    "name": "joyride",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0048916999985522125
+  },
+  {
+    "name": "litprog-skill",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: name",
+      "Missing frontmatter field: description"
+    ],
+    "duration": 0.00414920000184793
+  },
+  {
+    "name": "fastmcp",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0026591999994707294
+  },
+  {
+    "name": "hermes-mcp",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002748700000665849
+  },
+  {
+    "name": "mcp-ast-grep",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0016613000007055234
+  },
+  {
+    "name": "mcp-builder",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0051934999974037055
+  },
+  {
+    "name": "mcp-cli",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004210099999909289
+  },
+  {
+    "name": "mcp-code-sandbox",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002054700002190657
+  },
+  {
+    "name": "mcp-codex",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00204440000015893
+  },
+  {
+    "name": "mcp-docker",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0032629000015731435
+  },
+  {
+    "name": "mcp-fetch",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036389000015333295
+  },
+  {
+    "name": "mcp-filesystem",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00502760000017588
+  },
+  {
+    "name": "mcp-github",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003997599997092038
+  },
+  {
+    "name": "mcp-memory",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0037389999997685663
+  },
+  {
+    "name": "mcp-mindstudio",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002587599999969825
+  },
+  {
+    "name": "mcp-oauth-remote-gateway",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title"
+    ],
+    "duration": 0.00508579999950598
+  },
+  {
+    "name": "mcp-playwright",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005324900001141941
+  },
+  {
+    "name": "mcp-security-audit",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.009477799998421688
+  },
+  {
+    "name": "mcp-sequential-thinking",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0038211999999475665
+  },
+  {
+    "name": "mcp-smithery",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0063865000010991935
+  },
+  {
+    "name": "mcporter",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004273099999409169
+  },
+  {
+    "name": "native-mcp",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0018320000017411076
+  },
+  {
+    "name": "mcp-coding-agent-setup",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0019262999994680285
+  },
+  {
+    "name": "gif-search",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005156399998668348
+  },
+  {
+    "name": "slack-gif-creator",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0066609999994398095
+  },
+  {
+    "name": "spotify",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0069891000021016225
+  },
+  {
+    "name": "transloadit-media-processing",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005894299996725749
+  },
+  {
+    "name": "youtube-content",
+    "score": 55,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002035600002272986
+  },
+  {
+    "name": "openclaw-migration",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.006897000002936693
+  },
+  {
+    "name": "accelerate",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004911100000754232
+  },
+  {
+    "name": "chroma",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005204199998843251
+  },
+  {
+    "name": "clip",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0029221000004326925
+  },
+  {
+    "name": "lm-evaluation-harness",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0015522000030614436
+  },
+  {
+    "name": "weights-and-biases",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0018856000024243258
+  },
+  {
+    "name": "faiss",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.006242199997359421
+  },
+  {
+    "name": "flash-attention",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0043566999993345235
+  },
+  {
+    "name": "guidance",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0057373000017832965
+  },
+  {
+    "name": "huggingface-hub",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.00819690000207629
+  },
+  {
+    "name": "huggingface-tokenizers",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0056255000017699786
+  },
+  {
+    "name": "llama-cpp",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.007309399999940069
+  },
+  {
+    "name": "outlines",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.008176200000889366
+  },
+  {
+    "name": "vllm",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0056887999999162275
+  },
+  {
+    "name": "instructor",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.007737399999314221
+  },
+  {
+    "name": "lambda-labs",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002458500002830988
+  },
+  {
+    "name": "llava",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0010795000016514678
+  },
+  {
+    "name": "llm-provider-benchmarking",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.0034030999995593447
+  },
+  {
+    "name": "ml-models",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.006422700000257464
+  },
+  {
+    "name": "modal",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.011355700000422075
+  },
+  {
+    "name": "audiocraft",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006274499999562977
+  },
+  {
+    "name": "segment-anything",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.009204099998896709
+  },
+  {
+    "name": "nemo-curator",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0012745999993057922
+  },
+  {
+    "name": "obliteratus",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.003327400001580827
+  },
+  {
+    "name": "peft",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.00991980000253534
+  },
+  {
+    "name": "pinecone",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0037339999980758876
+  },
+  {
+    "name": "pytorch-fsdp",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.006418400000256952
+  },
+  {
+    "name": "pytorch-lightning",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0025320999993709847
+  },
+  {
+    "name": "qdrant",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0042318999985582195
+  },
+  {
+    "name": "dspy",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.008425799998803996
+  },
+  {
+    "name": "saelens",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.006043299999873852
+  },
+  {
+    "name": "simpo",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.005967600001895335
+  },
+  {
+    "name": "slime",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.007303700000193203
+  },
+  {
+    "name": "stable-diffusion",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.00811759999851347
+  },
+  {
+    "name": "tensorrt-llm",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.006689300000289222
+  },
+  {
+    "name": "torchtitan",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.007433000002492918
+  },
+  {
+    "name": "axolotl",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.006587500000023283
+  },
+  {
+    "name": "trl-fine-tuning",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.00471560000005411
+  },
+  {
+    "name": "unsloth",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004951799997797934
+  },
+  {
+    "name": "whisper",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.006829400001151953
+  },
+  {
+    "name": "no-git-delete",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004077099998539779
+  },
+  {
+    "name": "no-net-fetch",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0017788000004657079
+  },
+  {
+    "name": "note-taking-apps",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.008268900000985013
+  },
+  {
+    "name": "obsidian",
+    "score": 45,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005297899999277433
+  },
+  {
+    "name": "notion-spec-to-implementation",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version",
+      "Missing Overview section"
+    ],
+    "duration": 0.015018500002042856
+  },
+  {
+    "name": "mpp-agent",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.006453699999838136
+  },
+  {
+    "name": "stripe-link-cli",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0028314999981375877
+  },
+  {
+    "name": "stripe-projects",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004088399997272063
+  },
+  {
+    "name": "paypal-how-it-works",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004585300001053838
+  },
+  {
+    "name": "brainstorming",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0015767999975651037
+  },
+  {
+    "name": "plans-and-specs",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0015510999983234797
+  },
+  {
+    "name": "prompt-planning-orchestration",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003736000002390938
+  },
+  {
+    "name": "prd",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036314999997557607
+  },
+  {
+    "name": "airtable",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005392600000050152
+  },
+  {
+    "name": "canvas",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.006247600002097897
+  },
+  {
+    "name": "doc-coauthoring",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0030534999968949705
+  },
+  {
+    "name": "documentation-extraction-and-indexing",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0034418999966874253
+  },
+  {
+    "name": "documentation-writer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002057900001091184
+  },
+  {
+    "name": "docx",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0051154000029782765
+  },
+  {
+    "name": "file-organizer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003647999998065643
+  },
+  {
+    "name": "finnish-humanizer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.007114799998817034
+  },
+  {
+    "name": "google-workspace",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0028405000011844095
+  },
+  {
+    "name": "here-now",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0057304000001749955
+  },
+  {
+    "name": "internal-comms",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00476870000056806
+  },
+  {
+    "name": "linear",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.007938099999591941
+  },
+  {
+    "name": "maps",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00589840000247932
+  },
+  {
+    "name": "markdown-to-html",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002816800002619857
+  },
+  {
+    "name": "meeting-insights-analyzer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0012368999996397179
+  },
+  {
+    "name": "meeting-minutes",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0029632000005221926
+  },
+  {
+    "name": "memento-flashcards",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title"
+    ],
+    "duration": 0.0039133999998739455
+  },
+  {
+    "name": "nano-pdf",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005123500002810033
+  },
+  {
+    "name": "notion",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005766999998741085
+  },
+  {
+    "name": "ocr-and-documents",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004725899998447858
+  },
+  {
+    "name": "pdf",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005495500001416076
+  },
+  {
+    "name": "pdftk-server",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002997300001879921
+  },
+  {
+    "name": "petdex",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004860400000325171
+  },
+  {
+    "name": "powerpoint",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0025430000023334287
+  },
+  {
+    "name": "pptx",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0041270000001532026
+  },
+  {
+    "name": "prompt-consolidation",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004052700001921039
+  },
+  {
+    "name": "prompt-management",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005794900000182679
+  },
+  {
+    "name": "shop",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.002091000002110377
+  },
+  {
+    "name": "shopify",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004053500000736676
+  },
+  {
+    "name": "siyuan",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005945000000792788
+  },
+  {
+    "name": "task-management",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004990700002963422
+  },
+  {
+    "name": "teams-meeting-pipeline",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005926399997406406
+  },
+  {
+    "name": "telephony",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0019351000009919517
+  },
+  {
+    "name": "user-communication-preferences",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0029799000003549736
+  },
+  {
+    "name": "xlsx",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003544899998814799
+  },
+  {
+    "name": "yuanbao",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036796999993384816
+  },
+  {
+    "name": "project-consolidation",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0029133999996702187
+  },
+  {
+    "name": "prompt-engineering-patterns",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: version"
+    ],
+    "duration": 0.01631660000202828
+  },
+  {
+    "name": "prompt-library-consolidation",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.008525699999154313
+  },
+  {
+    "name": "prompt-library-maintenance",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005292699999699835
+  },
+  {
+    "name": "prompt-verification",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005933099997491809
+  },
+  {
+    "name": "python-package-manager",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0025040000000444707
+  },
+  {
+    "name": "audit-skills-judge-fix",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031464999992749654
+  },
+  {
+    "name": "batch-skills-remediation",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002452899996569613
+  },
+  {
+    "name": "boilerplate-stripper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005582699999649776
+  },
+  {
+    "name": "dogfood",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0041548000008333474
+  },
+  {
+    "name": "playwright-automation-fill-in-form",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0031796000002941582
+  },
+  {
+    "name": "playwright-generate-e2e-test",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0012099000014131889
+  },
+  {
+    "name": "playwright-generate-test",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006933599997864803
+  },
+  {
+    "name": "polyglot-test-agent",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005409800000052201
+  },
+  {
+    "name": "postgresql-code-review",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0013141999988874886
+  },
+  {
+    "name": "scoutqa-test",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004906099999061553
+  },
+  {
+    "name": "skill-judge",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0024034999987634365
+  },
+  {
+    "name": "test-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032216000035987236
+  },
+  {
+    "name": "verification-before-completion",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006240900002012495
+  },
+  {
+    "name": "web-design-reviewer",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00513890000001993
+  },
+  {
+    "name": "webapp-testing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014861000017845072
+  },
+  {
+    "name": "api-tutorial-catalog",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0036808000004384667
+  },
+  {
+    "name": "discover-mcp-capabilities",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002699100001336774
+  },
+  {
+    "name": "mcp-server-catalog",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.001652399998420151
+  },
+  {
+    "name": "project-architecture-index",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0015424000011989847
+  },
+  {
+    "name": "arxiv",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003105600000708364
+  },
+  {
+    "name": "bioinformatics",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section"
+    ],
+    "duration": 0.0033054999985324685
+  },
+  {
+    "name": "blogwatcher",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003462199998466531
+  },
+  {
+    "name": "darwinian-evolver",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0029168000000936445
+  },
+  {
+    "name": "domain-intel",
+    "score": 45,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.005309300002409145
+  },
+  {
+    "name": "drug-discovery",
+    "score": 65,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003790599999774713
+  },
+  {
+    "name": "duckduckgo-search",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0029447000015352387
+  },
+  {
+    "name": "gitnexus-explorer",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0017952000016521197
+  },
+  {
+    "name": "llm-wiki",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0038801999980933033
+  },
+  {
+    "name": "osint-investigation",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.002455299996654503
+  },
+  {
+    "name": "parallel-cli",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0026268999972671736
+  },
+  {
+    "name": "parallel-cli-web-research",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0051057999990007374
+  },
+  {
+    "name": "polymarket",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.006885199996759184
+  },
+  {
+    "name": "qmd",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.005456200000480749
+  },
+  {
+    "name": "repo-research-pipeline",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004951399998390116
+  },
+  {
+    "name": "research-paper-writing",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0037520000005315524
+  },
+  {
+    "name": "research-toolkit",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005169199997908436
+  },
+  {
+    "name": "scrapling",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.00656650000018999
+  },
+  {
+    "name": "searxng-search",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.003003600002557505
+  },
+  {
+    "name": "web-research-pipeline",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.008407599998463411
+  },
+  {
+    "name": "1password",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004965200001606718
+  },
+  {
+    "name": "godmode",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.004654000000300584
+  },
+  {
+    "name": "oss-forensics",
+    "score": 45,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0016695000012987293
+  },
+  {
+    "name": "sherlock",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0017074999996111728
+  },
+  {
+    "name": "unbroker",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0034712000015133526
+  },
+  {
+    "name": "web-pentest",
+    "score": 45,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: version",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0034597999983816408
+  },
+  {
+    "name": "session-audit",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0025262000017391983
+  },
+  {
+    "name": "shop-app",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0043889999979001
+  },
+  {
+    "name": "simplify",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004408599997987039
+  },
+  {
+    "name": "skill-library-audit",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0030249000010371674
+  },
+  {
+    "name": "skills-tools-preflight-check",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.004680500001995824
+  },
+  {
+    "name": "openhue",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004490200000873301
+  },
+  {
+    "name": "smithery-ai-cli",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.00416649999897345
+  },
+  {
+    "name": "xurl",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0065431000002718065
+  },
+  {
+    "name": "async-migration-patterns",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0031133999982557725
+  },
+  {
+    "name": "banking",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.001720799999020528
+  },
+  {
+    "name": "bash-scripts-audit-remediation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036942000006092712
+  },
+  {
+    "name": "caveman-unified",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038198000002012122
+  },
+  {
+    "name": "claude-api",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.004764299999806099
+  },
+  {
+    "name": "clonedeps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042635000027075876
+  },
+  {
+    "name": "code-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012654000020120293
+  },
+  {
+    "name": "code-wiki",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.0026499999985389877
+  },
+  {
+    "name": "codemap",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032871999974304345
+  },
+  {
+    "name": "context7",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0036266999995859805
+  },
+  {
+    "name": "debugging-hermes-tui-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025026000002981164
+  },
+  {
+    "name": "executing-plans",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002293099998496473
+  },
+  {
+    "name": "executing-prompt-workflows",
+    "score": 55,
+    "passed": false,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing frontmatter field: author",
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.003786299999774201
+  },
+  {
+    "name": "fluentui-blazor",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003984699997090502
+  },
+  {
+    "name": "generator-first-doc-workflow",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002407100000709761
+  },
+  {
+    "name": "hermes-agent-skill-authoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003122499998426065
+  },
+  {
+    "name": "httpie",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0044161000005260576
+  },
+  {
+    "name": "mindstudio-wrapper",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0020121000015933532
+  },
+  {
+    "name": "node-inspect-debugger",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.003567399999155896
+  },
+  {
+    "name": "nuget-manager",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002788899997540284
+  },
+  {
+    "name": "plan",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003038499999092892
+  },
+  {
+    "name": "project-docs",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0016948999982560053
+  },
+  {
+    "name": "python-debugpy",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.001853800000390038
+  },
+  {
+    "name": "quasi-coder",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0035891000006813556
+  },
+  {
+    "name": "receiving-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002841699999407865
+  },
+  {
+    "name": "refactor",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.005124200000864221
+  },
+  {
+    "name": "requesting-code-review",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0025325999995402526
+  },
+  {
+    "name": "rest-graphql-debug",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.003932299998268718
+  },
+  {
+    "name": "sandbox",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028526999994937796
+  },
+  {
+    "name": "script-orchestration",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.003973599999881117
+  },
+  {
+    "name": "shadcn",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002251800000522053
+  },
+  {
+    "name": "simplify-code",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.004460199997993186
+  },
+  {
+    "name": "spike",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0054801000005682
+  },
+  {
+    "name": "subagent-driven-development",
+    "score": 85,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0016489999979967251
+  },
+  {
+    "name": "systematic-debugging",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003373200001078658
+  },
+  {
+    "name": "test-driven-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025161000012303703
+  },
+  {
+    "name": "winapp-cli",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.002042800002527656
+  },
+  {
+    "name": "worktrunk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028301999991526827
+  },
+  {
+    "name": "writing-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036878999999316875
+  },
+  {
+    "name": "test-providers-models",
+    "score": 90,
+    "passed": true,
+    "errors": [
+      "Missing Overview section"
+    ],
+    "duration": 0.0037558000003627967
+  },
+  {
+    "name": "vscode-config-audit",
+    "score": 95,
+    "passed": true,
+    "errors": [
+      "Missing Pitfalls section"
+    ],
+    "duration": 0.0032452000014018267
+  },
+  {
+    "name": "cloudflare-temporary-deploy",
+    "score": 80,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section"
+    ],
+    "duration": 0.002890700001444202
+  },
+  {
+    "name": "page-agent",
+    "score": 70,
+    "passed": true,
+    "errors": [
+      "Missing frontmatter field: title",
+      "Missing Overview section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0032322000006388407
+  },
+  {
+    "name": "youtube-full",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.0025580000001355074
+  },
+  {
+    "name": "yuanbao",
+    "score": 75,
+    "passed": true,
+    "errors": [
+      "Missing Overview section",
+      "Missing Pitfalls section",
+      "Missing Workflow or When to Use section"
+    ],
+    "duration": 0.010351799999625655
+  }
+]

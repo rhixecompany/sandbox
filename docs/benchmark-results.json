@@ -1,0 +1,41 @@
+{
+  "orchestrator": "execute-all-prompts",
+  "generated": "2026-07-16T11:15:00Z",
+  "phases": {
+    "audit_skills_judge_fix": {
+      "status": "completed",
+      "total_skills": 574,
+      "passed": 574,
+      "failed": 0,
+      "average_score": 88.8,
+      "duplicate_dirs_removed": [".restore-backups.DISABLED", ".archive"]
+    },
+    "agents_fix": {
+      "status": "completed",
+      "copilot_agents": 174,
+      "copilot_instructions": 186,
+      "schema_issues_fixed": 1,
+      "codex_twins": 1
+    },
+    "audit_plans": {
+      "status": "completed",
+      "plans_dir": ".hermes/plans/",
+      "plans_initialized": 1
+    },
+    "prompts_repair": {
+      "status": "completed",
+      "total_prompts": 211,
+      "fixed": 2,
+      "unchanged": 209
+    },
+    "test_providers_models": {
+      "status": "completed",
+      "total_providers": 9,
+      "openrouter_models": 342,
+      "openrouter_free_models": 23,
+      "active_providers": ["opencode-zen", "nous", "openrouter"],
+      "rate_limited": ["gemini", "openai-codex"],
+      "inventory_written": "docs/providers-models-inventory.md"
+    }
+  }
+}
