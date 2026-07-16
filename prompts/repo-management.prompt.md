@@ -6,41 +6,72 @@ description: 'Execute repo management operations across all project repos: branc
   normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
   repo-research-pipeline phase completes.
 
+  Also provides Quick Repo Overview (Phase 0): repo summary, entrypoint detection,
+  and disk usage on demand.
+
   '
-version: 2.0.0
+version: 2.1.0
 author: Hermes Agent
 license: MIT
 tags:
 - audit
 - frontend
 - git
+- mcp
+- onboarding
 - prompts
 - skills
+- vscode
 - workflow
 dependencies:
-- skill:git-helper
-- skill:repo-research-pipeline
-- skill:web-research-pipeline
-- skill:github-repo-management
 - skill:finishing-a-development-branch
+- skill:gh-cli
+- skill:git-commit
+- skill:git-helper
+- skill:github-actions-efficiency
+- skill:github-repo-management
+- skill:mcp-filesystem
+- skill:monorepo-pr-workflow
+- skill:repo-research-pipeline
+- skill:vscode-cli
+- skill:vscode-workspace-configurator
+- skill:web-research-pipeline
 - skill:workspace-audit
+- skill:writing-plans
 skills:
-- git-helper
-- repo-research-pipeline
-- web-research-pipeline
-- github-repo-management
 - finishing-a-development-branch
+- gh-cli
+- git-commit
+- git-helper
+- github-actions-efficiency
+- github-repo-management
+- mcp-filesystem
+- monorepo-pr-workflow
+- repo-research-pipeline
+- vscode-cli
+- vscode-workspace-configurator
+- web-research-pipeline
 - workspace-audit
+- writing-plans
 metadata:
   hermes:
     related_skills:
-    - git-helper
-    - repo-research-pipeline
-    - web-research-pipeline
-    - github-repo-management
     - finishing-a-development-branch
+    - gh-cli
+    - git-commit
+    - git-helper
+    - github-actions-efficiency
+    - github-repo-management
+    - mcp-filesystem
+    - monorepo-pr-workflow
+    - repo-research-pipeline
+    - vscode-cli
+    - vscode-workspace-configurator
+    - web-research-pipeline
     - workspace-audit
 toolsets:
+- browser
+- code_execution
 - file
 - terminal
 ---
@@ -59,6 +90,23 @@ Leave every repo with:
 - [ ] Working directory is the SandBox root
 
 ## Workflow
+
+### Phase 0: Repo Overview (Onboarding)
+
+Run when the user asks about repo structure, disk usage, or needs an initial summary.
+
+**Steps:**
+1. **Summarize the repo** — Read AGENTS.md, README.md, package manifest. 5 bullets + entrypoint.
+2. **Check disk usage** — Scan from repo root, exclude noise dirs, show top 5.
+3. **Detect CI status** — Check if `.github/workflows/` exists.
+
+```bash
+# Disk usage
+du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5
+
+# Entrypoint detection
+grep -E '"main"|"start"|main\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.{py,ts} 2>/dev/null | head -10
+```
 
 ### Phase 1: Branch Normalization
 

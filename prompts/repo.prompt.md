@@ -1,14 +1,17 @@
 ---
 license: MIT
 author: Hermes Agent
-version: 2.0.0
+version: 2.1.0
 name: repo
-title: Repo Research Pipeline
+title: Repo Research Pipeline + Quick Onboarding
 trigger: /repo
 description: 'Research all 14 projects via delegated sub-prompts: web search for similar
   projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in
   crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
   ops to repo-management.prompt.md.
+
+  Also includes Quick Repo Onboarding (Q1–Q4): summarize repo in 5 bullets, find main
+  entrypoint, check current directory, set up GitHub PR workflow, check disk usage.
 
   '
 mode: agent
@@ -20,60 +23,85 @@ system: 'You are a research orchestrator. Delegate web research to web-research-
 tags:
 - architecture
 - frontend
+- git
+- mcp
+- onboarding
 - performance
 - prompts
 - security
 - typescript
+- vscode
 dependencies:
 - prompt:context-map
-- prompt:update-implementation-plan
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:systematic-debugging
-- skill:context7
-- skill:spike
-- skill:writing-skills
-- skill:content-research-writer
-- skill:github-repo-management
-- skill:code-wiki
-- skill:writing-clearly-and-concisely
 - prompt:repo-management
-- prompt:repo-story-time
-- prompt:web-research-pipeline
 - prompt:repo-research-pipeline
+- prompt:repo-story-time
+- prompt:update-implementation-plan
+- prompt:web-research-pipeline
+- skill:brainstorming
+- skill:code-wiki
+- skill:content-research-writer
+- skill:context7
+- skill:gh-cli
+- skill:git-commit
+- skill:github-repo-management
+- skill:mcp-filesystem
+- skill:mcp-memory
+- skill:mcp-sequential-thinking
+- skill:monorepo-pr-workflow
+- skill:plans-and-specs
+- skill:spike
+- skill:systematic-debugging
+- skill:vscode-cli
+- skill:web-research-pipeline
+- skill:writing-clearly-and-concisely
+- skill:writing-skills
 skills:
 - brainstorming
-- plans-and-specs
-- systematic-debugging
-- context7
-- spike
-- writing-skills
-- content-research-writer
-- github-repo-management
 - code-wiki
-- writing-clearly-and-concisely
-- repo-management
-- repo-story-time
+- content-research-writer
+- context7
+- gh-cli
+- git-commit
+- github-repo-management
+- mcp-filesystem
+- mcp-memory
+- mcp-sequential-thinking
+- monorepo-pr-workflow
+- plans-and-specs
+- spike
+- systematic-debugging
+- vscode-cli
 - web-research-pipeline
-- repo-research-pipeline
+- writing-clearly-and-concisely
+- writing-skills
 metadata:
   hermes:
     related_skills:
     - brainstorming
-    - plans-and-specs
-    - systematic-debugging
-    - context7
-    - spike
-    - writing-skills
-    - content-research-writer
-    - github-repo-management
     - code-wiki
-    - writing-clearly-and-concisely
+    - content-research-writer
+    - context7
+    - gh-cli
+    - git-commit
+    - github-repo-management
+    - mcp-filesystem
+    - mcp-memory
+    - mcp-sequential-thinking
+    - monorepo-pr-workflow
+    - plans-and-specs
     - repo-management
-    - repo-story-time
-    - web-research-pipeline
     - repo-research-pipeline
+    - repo-story-time
+    - spike
+    - systematic-debugging
+    - vscode-cli
+    - web-research-pipeline
+    - writing-clearly-and-concisely
+    - writing-skills
 toolsets:
+- browser
+- code_execution
 - file
 - terminal
 - web
@@ -274,6 +302,84 @@ All gates must pass before this prompt is considered complete.
 ```
 terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")
 terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -c '^## ' \"$f\"; wc -c \"$f\"; done")
+```
+
+
+---
+
+## Quick Repo Onboarding
+
+Run these lightweight intros when the user asks simple questions about the repo itself (not the 14 project research pipeline).
+
+### Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."
+
+**Phase: Onboarding — Single Repo**
+
+1. Read root files: `AGENTS.md`, `README.md`, `package.json`/`pyproject.toml`/`Cargo.toml`
+2. List top-level structure: `ls -la`
+3. Identify the main entrypoint (look for `main.py`, `index.ts`, `index.js`, `src/main.rs`, `cmd/`, `Program.cs`, or the `main`/`start`/`scripts` field in the manifest)
+4. Summarize in 5 bullets: what the repo is, tech stack, architecture shape, build/test commands, and the main entrypoint path
+
+**Actions:**
+```
+read_file("AGENTS.md")
+read_file("README.md")
+read_file("package.json") or read_file("pyproject.toml")
+terminal("ls -la && find . -maxdepth 3 -not -path '*/\\.*' -not -path '*/node_modules/*' -not -path '*/venv/*' | head -40")
+terminal("grep -E '\"main\"|\"start\"|main\\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.py src/*.ts 2>/dev/null | head -10")
+```
+
+### Q2: "Check my current directory and tell me what looks like the main project file."
+
+**Phase: Onboarding — Current Directory**
+
+1. `pwd` to confirm current directory
+2. `ls -la` for file listing, sorted by recency or size
+3. Read the most likely manifest (whatever config/file the directory contains)
+4. Report the dominant file type and the single most important file (the one with the entrypoint, build config, or primary data)
+
+**Actions:**
+```
+terminal("pwd && ls -la")
+terminal("ls -la | head -30")
+terminal("file * 2>/dev/null | head -20")
+```
+
+### Q3: "Help me set up a clean GitHub PR workflow for this codebase."
+
+**Phase: Onboarding — CI/GitHub**
+
+1. Detect project type (JS/TS → Bun or npm; Python → uv/pip; Rust → cargo; Go → go)
+2. Create `.github/workflows/ci.yml` from the detected type template.
+3. If `monorepo-pr-workflow` skill exists, load it for monorepo-specific branch/PR patterns.
+4. Suggest: branch protection rules (`development` + `production`), conventional commits, PR template.
+
+Templates cover:
+
+- **JS/TS:** `oven-sh/setup-bun`, `bun install`, `bun run build`, `bun run test` (or `npm` equivalent)
+- **Python:** `actions/setup-python`, `uv sync`/`pip install`, `ruff check`, `pytest`
+- **Generic:** `actions/checkout`, `setup-language`, `lint`, `test`
+
+**Actions:**
+```
+skill_view(name="monorepo-pr-workflow")
+read_file("AGENTS.md")  # for existing CI patterns
+terminal("ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'")
+```
+
+### Q4: "What's my disk usage? Show the top 5 largest directories."
+
+**Phase: Onboarding — Disk Analysis**
+
+1. Run disk usage scan from the repo root (or workspace root)
+2. Exclude noise directories (`.git`, `node_modules`, `venv`, `.venv`, `__pycache__`, `dist`, `build`, `target`)
+3. Show top 5 largest directories by size
+
+**Actions:**
+```
+terminal("du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5")
+# Fallback for bare repos:
+terminal("du -sh --exclude='.git' */ 2>/dev/null | sort -rh | head -5")
 ```
 
 ---

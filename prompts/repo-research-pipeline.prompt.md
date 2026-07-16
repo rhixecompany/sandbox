@@ -1,5 +1,6 @@
 ---
 trigger: /repo-research-pipeline
+version: 2.1.0
 name: repo-research-pipeline
 title: Repo Research Pipeline (MCP-Enhanced)
 description: 'Structured workflow for executing web research across multiple projects
@@ -7,7 +8,6 @@ description: 'Structured workflow for executing web research across multiple pro
   skill and web-research-pipeline skill.
 
   '
-version: 2.0.0
 author: Hermes Agent
 license: MIT
 tags:
@@ -18,30 +18,52 @@ tags:
 - prompts
 - skills
 - typescript
+- vscode
 - workflow
 dependencies:
-- skill:repo-research-pipeline
-- skill:web-research-pipeline
-- skill:mcp-github
-- skill:mcp-fetch
 - skill:domain-intel
+- skill:gh-cli
+- skill:mcp-fetch
+- skill:mcp-filesystem
+- skill:mcp-github
+- skill:mcp-memory
+- skill:mcp-playwright
+- skill:mcp-sequential-thinking
+- skill:repo-research-pipeline
+- skill:vscode-cli
+- skill:web-research-pipeline
 skills:
-- repo-research-pipeline
-- web-research-pipeline
-- mcp-github
-- mcp-fetch
 - domain-intel
+- gh-cli
+- mcp-fetch
+- mcp-filesystem
+- mcp-github
+- mcp-memory
+- mcp-playwright
+- mcp-sequential-thinking
+- repo-research-pipeline
+- vscode-cli
+- web-research-pipeline
 metadata:
   hermes:
     related_skills:
-    - repo-research-pipeline
-    - web-research-pipeline
-    - mcp-github
-    - mcp-fetch
     - domain-intel
+    - gh-cli
+    - mcp-fetch
+    - mcp-filesystem
+    - mcp-github
+    - mcp-memory
+    - mcp-playwright
+    - mcp-sequential-thinking
+    - repo-research-pipeline
+    - vscode-cli
+    - web-research-pipeline
 toolsets:
+- browser
+- code_execution
 - file
 - terminal
+- web
 ---
 ## Goal
 
@@ -59,6 +81,8 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 4. **Phase 4: Report Writing** — Write/update RESEARCH_REPORT.md per project
 5. **Phase 5: Index & Cross-Reference** — Verify cross-ref symmetry
 6. **Phase 6: Verification** — Count, size gate, URL spot-checks
+7. **Phase 7: Quick Onboarding** — For ad-hoc questions, delegate to `repo.prompt.md`'s
+   **Quick Repo Onboarding** section (Q1–Q4: summarize, entrypoint, PR workflow, disk usage).
 
 ## Rules
 

@@ -1,7 +1,7 @@
 ---
 license: MIT
 author: Hermes Agent
-version: 2.0.0
+version: 2.1.0
 name: repo-story-time
 trigger: /repo-story-time
 title: 'Repository Analysis: Story from Git History'
@@ -13,23 +13,43 @@ tags:
 - architecture
 - generator
 - git
-- go
+- mcp
 - ml
 - prompts
 - typescript
+- vscode
 - workflow
 dependencies:
 - skill:code-wiki
+- skill:gh-cli
+- skill:git-commit
+- skill:mcp-github
+- skill:mcp-sequential-thinking
+- skill:vscode-cli
 - skill:writing-clearly-and-concisely
 skills:
 - code-wiki
+- gh-cli
+- git-commit
+- mcp-github
+- mcp-sequential-thinking
+- vscode-cli
 - writing-clearly-and-concisely
 metadata:
   hermes:
     related_skills:
     - code-wiki
+    - gh-cli
+    - git-commit
+    - mcp-github
+    - mcp-sequential-thinking
+    - vscode-cli
     - writing-clearly-and-concisely
+    related_prompts:
+    - repo.prompt.md  # Quick Repo Onboarding (Q1–Q4)
 toolsets:
+- browser
+- code_execution
 - file
 - terminal
 ---
@@ -39,6 +59,9 @@ Transform any repository's git history into two deliverables:
 
 1. **REPOSITORY_SUMMARY.md** — Technical architecture and purpose overview
 2. **THE_STORY_OF_THIS_REPO.md** — Narrative story from commit history analysis
+
+For a lighter 5-bullet summary instead of a full story, use the
+**Quick Repo Onboarding** section in `repo.prompt.md` (Q1: summarize + entrypoint).
 
 ## Workflow
 
