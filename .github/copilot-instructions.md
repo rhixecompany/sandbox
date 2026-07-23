@@ -4,37 +4,38 @@ Project-wide guidance for GitHub Copilot in this workspace.
 
 ## Workspace shape
 
-- `Bash/` is the main automation toolkit and operational root.
-- `Bash/src/` contains the TypeScript implementations (`upgrade.ts`, `cache-clean.ts`, `clean-dep.ts`, `git-commit-batches.ts`).
-- `Bash/src/core/` contains shared utilities: `dry-run.ts`, `script-runner.ts`, `ast-transformer.ts`.
-- `Bash/src/migration/` contains migration helpers and the `ts-morph-helper.ts` code-transform layer.
-- `Bash/` root scripts (`*.sh`, `*.ps1`, `*.bat`) are thin wrappers that delegate to the TypeScript implementations.
-- `Bash/docs/` contains script documentation, `CODE_STYLE.md`, `ARCHITECTURE.md`, and style guidance.
-- `Bash/tests/` contains `verify-dryrun.sh` and `behavior/` + `integration/` sub-suites.
+- `projects/Bash/` is the main automation toolkit and operational root.
+- `projects/Bash/src/` contains the TypeScript implementations (`upgrade.ts`, `cache-clean.ts`, `clean-dep.ts`, `git-commit-batches.ts`).
+- `projects/Bash/src/core/` contains shared utilities: `dry-run.ts`, `script-runner.ts`, `ast-transformer.ts`.
+- `projects/Bash/src/migration/` contains migration helpers and the `ts-morph-helper.ts` code-transform layer.
+- `projects/Bash/` root scripts (`*.sh`, `*.ps1`, `*.bat`) are thin wrappers that delegate to the TypeScript implementations.
+- `projects/Bash/docs/` contains script documentation, `CODE_STYLE.md`, `ARCHITECTURE.md`, and style guidance.
+- `projects/Bash/tests/` contains `verify-dryrun.sh` and `behavior/` + `integration/` sub-suites.
 - `projects/` contains ~15 separate apps (Next.js, Django, Python, full-stack) with their own package managers and local instructions.
-- `Resume_maker/` is a standalone Bun/TypeScript project.
+- `projects/Resume_maker/` is a standalone Bun/TypeScript project.
 
 Use the nearest `AGENTS.md` and local `.github` instructions first; root guidance is fallback.
 
 ## Source of truth
 
-- `Bash/package.json` for scripts and task entrypoints.
-- `Bash/README.md` for the Bash toolkit overview and script reference.
-- `Bash/docs/CODE_STYLE.md` for naming, logging, and wrapper conventions.
-- `reports/inventory/refresh-agent-inventory-summary-2026-05-30.md` before creating new prompts, skills, agents, hooks, or plugins.
+- `projects/Bash/package.json` for scripts and task entrypoints.
+- `projects/Bash/README.md` for the Bash toolkit overview and script reference.
+- `projects/Bash/docs/CODE_STYLE.md` for naming, logging, and wrapper conventions.
+- `reports/inventory/refresh-agent-inventory-summary-*.md` before creating new prompts, skills, agents, hooks, or plugins. If missing, search existing `.github/` assets first and reuse instead of creating duplicates.
 
-Workspace inventory snapshot (2026-05-30):
+Workspace inventory snapshot (2026-07-23):
 
-- Instructions: 34
-- Agents: 159
-- Prompts: 185
-- Skills: 289
-- Hooks: 2
-- Plugins: 21
+- Instructions: 186
+- Agents: 174
+- Skills: ~235 local subset curated under `.github/skills/`
+- Prompts: 250+
+- Hooks: 3
+- Plugins: 15
+- Workflows: 17
 
 ## Commands
 
-Run these from `Bash/` unless the target subproject says otherwise.
+Run these from `projects/Bash/` unless the target subproject says otherwise.
 
 ```bash
 # Dependencies
@@ -49,7 +50,7 @@ bun run lint:strict
 bash tests/verify-dryrun.sh
 bash test-all.sh
 
-# Shell linting (run from Bash/ root)
+# Shell linting (run from projects/Bash/ root)
 shfmt -d .
 shellcheck $(git ls-files | grep -E '\.sh$' || true)
 ```
@@ -68,7 +69,7 @@ bun run format:markdown:check
 bun run lint:fix
 ```
 
-Key `bun run` script names (from `Bash/package.json`):
+Key `bun run` script names (from `projects/Bash/package.json`):
 
 | Script | Purpose |
 | --- | --- |

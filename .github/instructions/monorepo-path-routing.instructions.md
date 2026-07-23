@@ -21,8 +21,8 @@ Use this checklist before making edits in this workspace.
 - Confirm nearest AGENTS.md for that path.
 - Confirm matching instruction files for the target extension and folder.
 - Confirm project runtime root for commands:
-  - Use Bash/ for shared TypeScript automation scripts and validation commands.
-  - Use subproject root for project-local package.json and tests.
+  - Use `projects/Bash/` for shared TypeScript automation scripts and validation commands.
+  - Use subproject root for project-local `package.json` and tests.
 
 ## Duplicate-Asset Prevention
 
@@ -39,7 +39,7 @@ When reporting completed work, include:
 
 - The resolved AGENTS.md path used for the edit.
 - The instruction files that were applied.
-- The command root used for validation (for example, Bash/ or a subproject
+- The command root used for validation (for example, `projects/Bash/` or a subproject
   path).
 
 ## Safety Notes

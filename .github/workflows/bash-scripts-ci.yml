@@ -2,7 +2,7 @@ name: Bash Scripts CI
 on:
   pull_request:
     paths:
-      - 'Bash/**'
+      - 'projects/Bash/**'
       - '.github/workflows/**'
 jobs:
   verify:
@@ -37,7 +37,7 @@ jobs:
           fi
       - name: Run verify-dryrun
         run: |
-          bash ./Bash/tests/verify-dryrun.sh
+          bash ./projects/Bash/tests/verify-dryrun.sh
       - name: Run TypeScript tests
         run: |
           bun run test || npm run test || true

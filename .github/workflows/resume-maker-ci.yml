@@ -2,7 +2,7 @@ name: Resume Maker CI
 on:
   pull_request:
     paths:
-      - 'Resume_maker/**'
+      - 'projects/Resume_maker/**'
       - '.github/workflows/**'
 jobs:
   verify:
@@ -16,7 +16,7 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: |
-          cd Resume_maker
+          cd projects/Resume_maker
           if command -v bun >/dev/null 2>&1; then
             bun install || true
           else
@@ -24,9 +24,9 @@ jobs:
           fi
       - name: TypeScript type check
         run: |
-          cd Resume_maker
+          cd projects/Resume_maker
           bun run tsc --noEmit 2>/dev/null || npx tsc --noEmit 2>/dev/null || echo "Type check skipped"
       - name: Lint
         run: |
-          cd Resume_maker
+          cd projects/Resume_maker
           bun run lint 2>/dev/null || npm run lint 2>/dev/null || echo "Lint skipped"

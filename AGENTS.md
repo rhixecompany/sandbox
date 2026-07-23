@@ -128,7 +128,7 @@ Bun/TS orchestrator with 6 phases: Discovery → Clone → Triage → Debug → 
 
 **Orchestrator**: `powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode <mode>`
 
-⚠️ CI path filter `Bash/**` is wrong — should be `projects/Bash/**` (known issue §13).
+✅ CI path filter fixed to `projects/Bash/**` in `.github/workflows/bash-scripts-ci.yml` (§13).
 
 ## 7. Subprojects
 
@@ -136,8 +136,8 @@ Each `projects/*/` is autonomous with its own AGENTS.md. Key ones:
 
 | Project | Stack | Package Mgr |
 | --------- | ------- | ------------- |
-| `Resume_maker/` | Bun/TS | bun |
-| `Bash/` (toolkit) | Bun/TS | bun |
+| `projects/Resume_maker/` | Bun/TS | bun |
+| `projects/Bash/` (toolkit) | Bun/TS | bun |
 | `Banking/`, `comicwise/`, `ecom/` | Mixed | via Bash toolkit |
 | `cookiecutter-django-tailwind/`, `Django-Scrapy-Selenium/` | Python | pip/uv |
 | `mcp-servers/` | MCP servers | per-language |
@@ -178,13 +178,16 @@ Key workflows: `bash-scripts-ci.yml`, `validate-agentic-workflows-pr.yml`, `chec
 
 **Add Python script**: under `.github/scripts/`, use venv, make standalone.
 
-## 13. Known Stale References (verified 2026-07-09)
+## 13. Known Stale References (FIXED 2026-07-23)
 
-1. `.github/copilot-instructions.md` references root `Bash/` — toolkit is at `projects/Bash/`
-2. CI path filter `Bash/**` — should be `projects/Bash/**`
-3. `README.md` references `PROJECT_RULES.md` — file doesn't exist
-4. Prompt boilerplate "use pnpm" is wrong — toolchain is bun
-5. Inventory counts in `copilot-instructions.md` stale (2026-05-30 snapshot vs current 174 agents/186 instructions)
+1. `.github/copilot-instructions.md` historically referenced root `Bash/` — updated to `projects/Bash/`
+2. CI path filter `Bash/**` — updated to `projects/Bash/**` in `.github/workflows/bash-scripts-ci.yml`
+3. CI workflow `copilot-setup-steps.yml` — corrected `cd Bash` paths to `cd projects/Bash`
+4. `README.md` referenced `PROJECT_RULES.md` — file now created and referenced
+5. Prompt boilerplate "use pnpm" is wrong — toolchain is bun
+6. Inventory counts in `copilot-instructions.md` stale (2026-05-30 snapshot vs current 174 agents/186 instructions)
+7. `Resume_maker/` references normalized to `projects/Resume_maker/` in `.github/copilot-instructions.md` and `.github/workflows/resume-maker-ci.yml`
+8. `.github/instructions/monorepo-path-routing.instructions.md` updated to use `projects/Bash/`
 
 ## 14. Feedback
 

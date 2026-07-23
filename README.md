@@ -22,5 +22,8 @@ cd projects/<name>
 
 - `AGENTS.md` — Project-level agent configuration
 - `PROJECT_RULES.md` — Workspace rules
+- `MASTER_RULES.md` — Universal agent rules
+- `CLAUDE.md` — Claude-specific guidance
+- `.cursorrules` — Cursor IDE rules
 - `SESSION_REPORT.md` — Session history
 - `HERMES_PROFILE_REPORT.md` — Full profile audit

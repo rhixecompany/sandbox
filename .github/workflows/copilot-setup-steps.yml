@@ -24,25 +24,25 @@ jobs:
           bun-version: "1.3.14"
       - name: Install dependencies
         run: |
-          if [ -f Bash/package.json ]; then
-            cd Bash
+          if [ -f projects/Bash/package.json ]; then
+            cd projects/Bash
             bun install --frozen-lockfile || bun install
           else
-            echo "Bash/package.json not found; skipping install"
+            echo "projects/Bash/package.json not found; skipping install"
           fi
       - name: Run linter
         run: |
-          if [ -f Bash/package.json ]; then
-            cd Bash
+          if [ -f projects/Bash/package.json ]; then
+            cd projects/Bash
             bun run lint:strict --if-present || bun run lint --if-present
           else
-            echo "Bash/package.json not found; skipping lint"
+            echo "projects/Bash/package.json not found; skipping lint"
           fi
       - name: Run typecheck
         run: |
-          if [ -f Bash/package.json ]; then
-            cd Bash
+          if [ -f projects/Bash/package.json ]; then
+            cd projects/Bash
             bun run typecheck --if-present
           else
-            echo "Bash/package.json not found; skipping typecheck"
+            echo "projects/Bash/package.json not found; skipping typecheck"
           fi
