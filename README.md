@@ -4,11 +4,11 @@ Workspace for Hermes agent development, automation scripts, and multi-language p
 
 ## Subprojects
 
-- `projects/Bash/` — TypeScript/Bun automation toolkit
-- `projects/Resume_maker/` — TypeScript/Bun resume PDF generator
-- `projects/` — 16 subprojects across Python, TypeScript, Go, Rust, Java, and more
-- `docs/` — Hermes documentation and reference materials
-- `prompts/` — 250+ prompt files
+|- `projects/Bash/` — TypeScript/Bun automation toolkit
+|- `projects/Resume_maker/` — TypeScript/Bun resume PDF generator
+|- `projects/` — 16 subprojects across Python, TypeScript, Go, Rust, Java, and more
+|- `docs/` — Hermes documentation and reference materials
+|- `.github/prompts/` — canonical prompt library
 
 ## Quick Start
 

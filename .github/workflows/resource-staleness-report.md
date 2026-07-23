@@ -23,7 +23,7 @@ You are an AI agent that audits the resources in this repository to identify one
 Analyze all files in the following directories to determine when each file last had a **major** (substantive) change committed:
 
 - `agents/` (`.agent.md` files)
-- `prompts/` (`.prompt.md` files)
+- `.github/prompts/` (`.prompt.md` files under `.github/prompts/`)
 - `instructions/` (`.instructions.md` files)
 - `hooks/` (folders — check the folder's files)
 - `skills/` (folders — check the folder's files)
@@ -86,7 +86,7 @@ Organize the issue body as follows:
 
 | Resource | Type | Last Major Change | Days Ago |
 | --- | --- | --- | --- |
-| `prompts/example.prompt.md` | Prompt | 2025-02-01 | 20 |
+| `.github/prompts/example.prompt.md` | Prompt | 2025-02-01 | 20 |
 ```
 
 If a category has no resources, include the header with a note: "✅ No resources in this category."

@@ -27,7 +27,7 @@ Workspace inventory snapshot (2026-07-23):
 
 - Instructions: 186
 - Agents: 174
-- Skills: ~235 local subset curated under `.github/skills/`
+- Skills: ~235 local subset curated under `.github/prompts/skills/`
 - Prompts: 250+
 - Hooks: 3
 - Plugins: 15

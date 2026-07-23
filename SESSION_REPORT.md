@@ -78,3 +78,36 @@
 | `.github/workflows/copilot-setup-steps.yml` | Fixed `cd` paths |
 | `.github/workflows/resume-maker-ci.yml` | Updated path filter and `cd` paths |
 | `.github/instructions/monorepo-path-routing.instructions.md` | Fixed runtime root guidance |
+| `.github/prompts/` | Migrated from legacy roots |
+| `.github/workflows/deploy-website.yml` | Updated prompt path filters |
+| `.github/workflows/validate-readme.yml` | Updated prompt path filters |
+| `.github/workflows/resource-staleness-report.md` | Updated prompt reference paths |
+| `AGENTS.md` | Updated for canonical prompt paths |
+| `README.md` | Updated for canonical prompt paths |
+| `.github/prompts/agents/*` | Canonicalized migration and path fixes |
+| `.github/prompts/instructions/*` | Canonicalized migration and path fixes |
+| `.github/prompts/skills/*` | Canonicalized migration and path fixes |
+
+## Session End Capture
+| Field | Value |
+|-------|-------|
+| Session ID | 20260724_session-end-capture |
+| Title | Identity/tools recap, confirm preferred workflows, Telegram debug review |
+| When | July 24, 2026 |
+| Model | stepfun/step-3.7-flash:free (nous) |
+| Source | desktop-app |
+
+### Completed
+- Confirmed user identity/roles and Hermes tool inventory
+- Updated durable preference files:
+  - `SOUL.md`: added `clarify` and `delegate_task` operating rules
+  - `USER.md`: added clarifying-question and parallel-delegation preferences
+  - `MEMORY.md`: added durable reminders for `clarify` and `delegate_task`
+- Reviewed DEBUG logs and Telegram connectivity diagnostics
+- Added `docs/TELEGRAM_DEBUG_NOTES.md` with findings and evidence
+- Corrected `PROJECT_RULES.md` branch/status metadata to match current workspace
+
+### Open Items
+| Item | Status |
+|------|--------|
+| Telegram DEBUG recurrence triage | Pending next reconnect window / log review |

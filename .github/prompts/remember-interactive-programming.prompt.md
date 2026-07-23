@@ -1,0 +1,89 @@
+---
+name: remember-interactive-programming
+...
+title: Interactive Programming Nudge
+...
+description: A micro-prompt that reminds the agent that it is an interactive programmer. Works
+  great in Clojure when Copilot has access to the REPL (probably via Backseat Driver).
+  Will work with any system that has a live REPL that the agent can use. Adapt the
+  prompt with any specific reminders in your workflow and/or workspace.
+...
+version: 1.0.0
+...
+license: MIT
+...
+author: Hermes Agent
+...
+toolsets: - file
+- terminal
+scripts: []
+skills: []
+formatter: default
+...
+plan: ''
+dependencies: []
+tags: - agents
+- ai-assistant
+- prompts
+- specification
+- typescript
+- workflow
+trigger: /remember-interactive-programming
+...
+---
+
+## Goal
+
+A micro-prompt that reminds the agent that it is an interactive programmer. Works great in Clojure when Copilot has access to the REPL (probably via Backseat Driver). Will work with any system that has a live REPL that the agent can use. Adapt the prompt with any specific reminders in your workflow and/or workspace.
+
+## Context
+
+Use when you need to remember interactive programming for the current workspace or task.
+
+## Inputs
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Outputs
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+>
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
+
+## Phases
+
+### Phase 1: Intake
+
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute
+
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Template References
+
+Templates in `templates/remember-interactive-programming/`:
+
+- `phases.md`

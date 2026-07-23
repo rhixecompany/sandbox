@@ -1,6 +1,6 @@
 # SandBox — AGENTS.md
 
-Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then subproject-local `AGENTS.md`, then `.github/instructions/*.instructions.md`.
+Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then subproject-local `AGENTS.md`, then `.github/prompts/instructions/*.instructions.md`.
 
 > Verified against real repo files 2026-07-09. No aspirational practices.
 
@@ -11,7 +11,7 @@ Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this work
 Four concerns coexist:
 
 1. Workspace root — `AGENTS.md` (this), `.hermes.md`, `README.md`
-2. Copilot asset library — `.github/agents/` (174), `.github/instructions/` (186), `.github/skills/`
+2. Copilot asset library — `.github/prompts/agents/`, `.github/prompts/instructions/`, `.github/prompts/skills/`
 3. Automation toolkit — `projects/Bash/` (Bun/TS orchestrator)
 4. Subprojects — `projects/*` (autonomous per-language)
 
@@ -20,14 +20,14 @@ Four concerns coexist:
 ```
 SandBox/
 ├── AGENTS.md / .hermes.md / README.md   # root config
-├── .github/agents/          # 174 *.agent.md
-├── .github/instructions/    # 186 *.instructions.md
-├── .github/skills/          # curated Hermes skills subset
+├── .github/prompts/agents/      # agent prompt definitions
+├── .github/prompts/instructions/ # instruction prompt files
+├── .github/prompts/skills/       # repo-local skill prompts
 ├── .github/scripts/         # Python + PS audit tooling
 ├── .github/workflows/       # 17 CI workflows
 ├── .hermes/                 # Hermes plans, hooks, scripts
 ├── docs/                    # Hermes docs, audits, catalogs
-├── prompts/                 # 250+ *.prompt.md
+├── .github/prompts/                 # canonical prompt library
 ├── projects/Bash/           # automation toolkit (Bun/TS)
 ├── projects/*/              # autonomous subprojects
 ├── research/                # tutorial drafts
@@ -159,7 +159,7 @@ Key workflows: `bash-scripts-ci.yml`, `validate-agentic-workflows-pr.yml`, `chec
 - CLI: `%LOCALAPPDATA%/hermes/hermes-agent/venv/Scripts/hermes`
 - Profiles: `adminbot` (active), `default`, `code-architect`, `creative-director`, etc. Switch with `hermes profile use <name>`
 - Hooks: `session-logger`, `session-auto-commit`, `governance-audit`
-- Skills: curated in `.github/skills/`, full registry at `%LOCALAPPDATA%/hermes/skills/`
+- Skills: curated in `.github/prompts/skills/`, full registry at `%LOCALAPPDATA%/hermes/skills/`
 
 ## 11. Session Start
 
@@ -183,11 +183,12 @@ Key workflows: `bash-scripts-ci.yml`, `validate-agentic-workflows-pr.yml`, `chec
 1. `.github/copilot-instructions.md` historically referenced root `Bash/` — updated to `projects/Bash/`
 2. CI path filter `Bash/**` — updated to `projects/Bash/**` in `.github/workflows/bash-scripts-ci.yml`
 3. CI workflow `copilot-setup-steps.yml` — corrected `cd Bash` paths to `cd projects/Bash`
-4. `README.md` referenced `PROJECT_RULES.md` — file now created and referenced
+4. `README.md` referenced `PROJECT_RULES.md` — file now created
 5. Prompt boilerplate "use pnpm" is wrong — toolchain is bun
 6. Inventory counts in `copilot-instructions.md` stale (2026-05-30 snapshot vs current 174 agents/186 instructions)
 7. `Resume_maker/` references normalized to `projects/Resume_maker/` in `.github/copilot-instructions.md` and `.github/workflows/resume-maker-ci.yml`
-8. `.github/instructions/monorepo-path-routing.instructions.md` updated to use `projects/Bash/`
+8. `.github/prompts/instructions/monorepo-path-routing.instructions.md` updated to use `projects/Bash/`
+9. `.github/prompts/` created as canonical prompt library; legacy `.github/agents/`, `.github/instructions/`, `.github/skills/`, and root `prompts/` references migrated
 
 ## 14. Feedback
 

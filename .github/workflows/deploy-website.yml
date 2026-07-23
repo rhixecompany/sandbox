@@ -10,7 +10,7 @@ on:
     paths:
       - "website/**"
       - "agents/**"
-      - "prompts/**"
+      - ".github/prompts/**"
       - "instructions/**"
       - "skills/**"
       - "plugins/**"
