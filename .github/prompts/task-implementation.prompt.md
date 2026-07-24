@@ -43,7 +43,7 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#task-implementation)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Plan-driven implementation and dependency sequencing
 - Change tracking and release-note discipline

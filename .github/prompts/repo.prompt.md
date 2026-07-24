@@ -482,7 +482,7 @@ List project name + shared technology. Must be symmetric.>
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#repo)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Phase | Purpose |
 | ------- | ------- | --------- |

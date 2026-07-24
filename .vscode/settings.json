@@ -6,10 +6,21 @@
     "source.organizeImports": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
-  "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true,
-  "python.defaultInterpreterPath": "${workspaceFolder}/backend/venv/Scripts/python.exe",
+  "python.defaultInterpreterPath": "${workspaceFolder}/myvenv/Scripts/python.exe",
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+      "${workspaceFolder}/.github/scripts"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.formatting.provider": "none",
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.python",
+      "editor.formatOnSave": true
+    },
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
   "python-envs.venvFolders": [

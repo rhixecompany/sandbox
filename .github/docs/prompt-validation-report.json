@@ -1,0 +1,4575 @@
+{
+  "total_prompts": 211,
+  "invalid_frontmatter": [],
+  "invalid_version": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "agents-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "code-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "context-map.prompt.md",
+      "version": "2.0.0\n..."
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "copilot-instructions-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "database.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dataverse-python-advanced-patterns.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dataverse-python-quickstart.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "debugger-prompt.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dev-imp.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dev.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "development.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "documentation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "execute-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "features.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "general.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "github-copilot-starter.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "Initial.prompt.md",
+      "version": "2.0.0\n..."
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-docs.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "mcp-copilot-studio-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "migrate-to-next16.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "performance.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "pl.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "remember.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "version": "2.1.0\n..."
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "version": "2.1.0\n..."
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "version": "2.1.0\n..."
+    },
+    {
+      "file": "repo.prompt.md",
+      "version": "2.1.0\n..."
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "security.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "setup.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "suggest-awesome-github-copilot.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "testing.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "typescript.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "version": "2.0.0\n..."
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "version": "2.0.0\n..."
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "version": "1.0.0\n..."
+    },
+    {
+      "file": "zod-schema-generation.prompt.md",
+      "version": "1.0.0\n..."
+    }
+  ],
+  "invalid_tags": [],
+  "duplicate_names": [],
+  "duplicate_titles": [],
+  "duplicate_bodies": [],
+  "missing_refs": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "missing": [
+        "templates/add-educational-comments",
+        "templates/add-educational-comments/configuration_reference.md"
+      ]
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "missing": [
+        "templates/ai-prompt-engineering-safety-review",
+        "templates/ai-prompt-engineering-safety-review/phases.md"
+      ]
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "missing": [
+        "templates/apple-appstore-reviewer",
+        "templates/apple-appstore-reviewer/common_rejection_hotspots_use_.md",
+        "templates/apple-appstore-reviewer/inputs_you_should_look_for.md",
+        "templates/apple-appstore-reviewer/output_requirements_your_repor.md",
+        "templates/apple-appstore-reviewer/review_method_follow_this_orde.md"
+      ]
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "missing": [
+        "templates/arch-linux-triage"
+      ]
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/architecture-blueprint-generator",
+        "templates/architecture-blueprint-generator/generated_prompt.md"
+      ]
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "missing": [
+        "templates/aspnet-minimal-api-openapi"
+      ]
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "missing": [
+        "templates/az-cost-optimize",
+        "templates/az-cost-optimize/cost_optimization_brief_title.md",
+        "templates/az-cost-optimize/workflow_steps.md"
+      ]
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "missing": [
+        "templates/azure-resource-health-diagnose",
+        "templates/azure-resource-health-diagnose/workflow_steps.md"
+      ]
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "missing": [
+        "templates/bigquery-pipeline-audit"
+      ]
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "missing": [
+        "templates/boost-prompt",
+        "templates/boost-prompt/phases.md",
+        "templates/boost-prompt/tools_required.md"
+      ]
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "missing": [
+        "templates/breakdown-epic-arch",
+        "templates/breakdown-epic-arch/output_format.md"
+      ]
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "missing": [
+        "templates/breakdown-epic-pm",
+        "templates/breakdown-epic-pm/output_format.md"
+      ]
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "missing": [
+        "templates/breakdown-feature-implementation",
+        "templates/breakdown-feature-implementation/output_format.md"
+      ]
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "missing": [
+        "templates/breakdown-feature-prd",
+        "templates/breakdown-feature-prd/output_format.md"
+      ]
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "missing": [
+        "templates/breakdown-plan",
+        "templates/breakdown-plan/estimate.md",
+        "templates/breakdown-plan/output_format.md",
+        "templates/breakdown-plan/sprint_n_goal.md"
+      ]
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "missing": [
+        "templates/breakdown-test",
+        "templates/breakdown-test/output_format.md"
+      ]
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "missing": [
+        "templates/centos-linux-triage"
+      ]
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/code-exemplars-blueprint-generator",
+        "templates/code-exemplars-blueprint-generator/generated_prompt.md"
+      ]
+    },
+    {
+      "file": "code-review.prompt.md",
+      "missing": [
+        "templates/code-review",
+        "templates/code-review/phases.md"
+      ]
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "missing": [
+        "templates/comicwise-development",
+        "templates/comicwise-development/coding_rules_enforced.md",
+        "templates/comicwise-development/common_patterns.md",
+        "templates/comicwise-development/project_structure.md",
+        "templates/comicwise-development/testing_patterns.md"
+      ]
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "missing": [
+        "templates/comment-code-generate-a-tutorial"
+      ]
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "missing": [
+        "templates/containerize-aspnet-framework",
+        "templates/containerize-aspnet-framework/containerization_settings.md",
+        "templates/containerize-aspnet-framework/execution_process.md",
+        "templates/containerize-aspnet-framework/notes_on_stage_naming.md",
+        "templates/containerize-aspnet-framework/reference_materials.md"
+      ]
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "missing": [
+        "templates/containerize-aspnetcore",
+        "templates/containerize-aspnetcore/containerization_settings.md",
+        "templates/containerize-aspnetcore/example_dockerfile.md",
+        "templates/containerize-aspnetcore/execution_process.md",
+        "templates/containerize-aspnetcore/linux_distribution_variations.md"
+      ]
+    },
+    {
+      "file": "context-map.prompt.md",
+      "missing": [
+        "templates/context-map",
+        "templates/context-map/phases.md"
+      ]
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "missing": [
+        "templates/conventional-commit"
+      ]
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "missing": [
+        "templates/convert-plaintext-to-md",
+        "templates/convert-plaintext-to-md/phases.md"
+      ]
+    },
+    {
+      "file": "copilot-instructions-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/copilot-instructions-blueprint-generator",
+        "templates/copilot-instructions-blueprint-generator/code_quality_standards.md",
+        "templates/copilot-instructions-blueprint-generator/project-specific_guidance.md",
+        "templates/copilot-instructions-blueprint-generator/technology-specific_guidelines.md",
+        "templates/copilot-instructions-blueprint-generator/testing_approach.md"
+      ]
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "missing": [
+        "templates/cosmosdb-datamodeling",
+        "templates/cosmosdb-datamodeling/communication_guidelines.md",
+        "templates/cosmosdb-datamodeling/container_designs.md",
+        "templates/cosmosdb-datamodeling/core_design_philosophy.md",
+        "templates/cosmosdb-datamodeling/design_patterns.md",
+        "templates/cosmosdb-datamodeling/enhanced_aggregate_analysis.md",
+        "templates/cosmosdb-datamodeling/important_azure_cosmos_db_nosq.md",
+        "templates/cosmosdb-datamodeling/validation_checklist.md"
+      ]
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "missing": [
+        "templates/create-agentsmd",
+        "templates/create-agentsmd/file_structure_and_content_gui.md"
+      ]
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "missing": [
+        "templates/create-architectural-decision-record"
+      ]
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "missing": [
+        "templates/create-github-action-workflow-specification",
+        "templates/create-github-action-workflow-specification/mermaid_diagram_guideline.md",
+        "templates/create-github-action-workflow-specification/requirements_matrix.md"
+      ]
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "missing": [
+        "templates/create-github-issue-feature-from-specification"
+      ]
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "missing": [
+        "templates/create-github-issues-feature-from-implementation-plan"
+      ]
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "missing": [
+        "templates/create-github-issues-for-unmet-specification-requirements"
+      ]
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "missing": [
+        "templates/create-github-pull-request-from-specification"
+      ]
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "missing": [
+        "templates/create-implementation-plan",
+        "templates/create-implementation-plan/2_implementation_steps.md",
+        "templates/create-implementation-plan/status.md"
+      ]
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "missing": [
+        "templates/create-llms",
+        "templates/create-llms/analysis_and_planning_phase.md",
+        "templates/create-llms/execution_steps.md",
+        "templates/create-llms/implementation_requirements.md"
+      ]
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "missing": [
+        "templates/create-oo-component-documentation",
+        "templates/create-oo-component-documentation/2_architecture_section.md"
+      ]
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "missing": [
+        "templates/create-readme"
+      ]
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "missing": [
+        "templates/create-specification",
+        "templates/create-specification/8_dependencies__external_.md",
+        "templates/create-specification/best_practices_for_ai-rea.md"
+      ]
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "missing": [
+        "templates/create-spring-boot-java-project",
+        "templates/create-spring-boot-java-project/add_springdoc_redis_jpa_a.md"
+      ]
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "missing": [
+        "templates/create-spring-boot-kotlin-project",
+        "templates/create-spring-boot-kotlin-project/add_additional_dependenci.md"
+      ]
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "missing": [
+        "templates/create-technical-spike",
+        "templates/create-technical-spike/categories_for_technical_spike.md"
+      ]
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "missing": [
+        "templates/create-tldr-page",
+        "templates/create-tldr-page/examples.md",
+        "templates/create-tldr-page/output_formatting_rules.md",
+        "templates/create-tldr-page/usage.md"
+      ]
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "missing": [
+        "templates/csharp-async"
+      ]
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "missing": [
+        "templates/csharp-docs"
+      ]
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/csharp-mcp-server-generator",
+        "templates/csharp-mcp-server-generator/implementation_details.md"
+      ]
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "missing": [
+        "templates/csharp-mstest",
+        "templates/csharp-mstest/advanced_features.md",
+        "templates/csharp-mstest/common_mistakes_to_avoid.md",
+        "templates/csharp-mstest/data-driven_tests.md",
+        "templates/csharp-mstest/modern_assertion_apis.md",
+        "templates/csharp-mstest/test_lifecycle.md",
+        "templates/csharp-mstest/testcontext.md"
+      ]
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "missing": [
+        "templates/csharp-nunit"
+      ]
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "missing": [
+        "templates/csharp-tunit"
+      ]
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "missing": [
+        "templates/csharp-xunit"
+      ]
+    },
+    {
+      "file": "database.prompt.md",
+      "missing": [
+        "templates/database"
+      ]
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "missing": [
+        "templates/dataverse-python-production-code",
+        "templates/dataverse-python-production-code/client_management_pattern.md",
+        "templates/dataverse-python-production-code/code_structure.md",
+        "templates/dataverse-python-production-code/error_handling_structure.md"
+      ]
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "missing": [
+        "templates/dataverse-python-usecase-builder",
+        "templates/dataverse-python-usecase-builder/category_6_compliance__audit.md",
+        "templates/dataverse-python-usecase-builder/phase_3_pattern_selection.md",
+        "templates/dataverse-python-usecase-builder/phase_4_complete_implementatio.md",
+        "templates/dataverse-python-usecase-builder/phase_5_optimization_recommend.md"
+      ]
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "missing": [
+        "templates/debian-linux-triage"
+      ]
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "missing": [
+        "templates/debug-issue"
+      ]
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "missing": [
+        "templates/declarative-agents",
+        "templates/declarative-agents/core_features_across_all_workf.md"
+      ]
+    },
+    {
+      "file": "dev.prompt.md",
+      "missing": [
+        "templates/dev"
+      ]
+    },
+    {
+      "file": "development.prompt.md",
+      "missing": [
+        "templates/development",
+        "templates/development/comprehensive_setup_guide_for_.md",
+        "templates/development/tasks.md"
+      ]
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "missing": [
+        "templates/devops-rollout-plan",
+        "templates/devops-rollout-plan/input_requirements.md",
+        "templates/devops-rollout-plan/output_format.md"
+      ]
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "missing": [
+        "templates/documentation-writer"
+      ]
+    },
+    {
+      "file": "documentation.prompt.md",
+      "missing": [
+        "templates/documentation",
+        "templates/documentation/phases.md"
+      ]
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "missing": [
+        "templates/dotnet-best-practices"
+      ]
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "missing": [
+        "templates/dotnet-design-pattern-review"
+      ]
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "missing": [
+        "templates/dotnet-upgrade"
+      ]
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "missing": [
+        "templates/editorconfig",
+        "templates/editorconfig/execution.md"
+      ]
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "missing": [
+        "templates/ef-core"
+      ]
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "missing": [
+        "templates/execute-all-prompts/phases.md"
+      ]
+    },
+    {
+      "file": "features.prompt.md",
+      "missing": [
+        "templates/features"
+      ]
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "missing": [
+        "templates/fedora-linux-triage"
+      ]
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "missing": [
+        "templates/finalize-agent-prompt"
+      ]
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "missing": [
+        "templates/first-ask"
+      ]
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/folder-structure-blueprint-generator",
+        "templates/folder-structure-blueprint-generator/configuration_variables.md",
+        "templates/folder-structure-blueprint-generator/generated_prompt.md"
+      ]
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "missing": [
+        "templates/gen-specs-as-issues",
+        "templates/gen-specs-as-issues/3_prioritization_phase.md",
+        "templates/gen-specs-as-issues/4_specification_developme.md",
+        "templates/gen-specs-as-issues/55_work_distribution_opti.md"
+      ]
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "missing": [
+        "templates/generate-custom-instructions-from-codebase",
+        "templates/generate-custom-instructions-from-codebase/automatic_transformation_rules.md",
+        "templates/generate-custom-instructions-from-codebase/generated_prompt.md",
+        "templates/generate-custom-instructions-from-codebase/migration_monitoring.md"
+      ]
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "missing": [
+        "templates/generate-docs"
+      ]
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "missing": [
+        "templates/generator-orchestrator",
+        "templates/generator-orchestrator/phases.md",
+        "templates/generator-orchestrator/rules.md",
+        "templates/generator-orchestrator/steps.md"
+      ]
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "missing": [
+        "templates/git-flow-branch-creator"
+      ]
+    },
+    {
+      "file": "github-copilot-starter.prompt.md",
+      "missing": [
+        "templates/github-copilot-starter",
+        "templates/github-copilot-starter/--_and_httpsgithubcomgithubawe.md",
+        "templates/github-copilot-starter/configuration_files_to_create.md",
+        "templates/github-copilot-starter/react_guidelines.md",
+        "templates/github-copilot-starter/workflow_template_structure.md"
+      ]
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/go-mcp-server-generator",
+        "templates/go-mcp-server-generator/main_testgo_template.md",
+        "templates/go-mcp-server-generator/maingo_template.md",
+        "templates/go-mcp-server-generator/toolstool1go_template.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-epic-arch",
+        "templates/hermes-breakdown-epic-arch/phases.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-epic-pm",
+        "templates/hermes-breakdown-epic-pm/phases.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-feature-implementation",
+        "templates/hermes-breakdown-feature-implementation/phases.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-feature-prd",
+        "templates/hermes-breakdown-feature-prd/phases.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-plan",
+        "templates/hermes-breakdown-plan/phases.md"
+      ]
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "missing": [
+        "templates/hermes-breakdown-test",
+        "templates/hermes-breakdown-test/phases.md"
+      ]
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "missing": [
+        "templates/java-add-graalvm-native-image-support",
+        "templates/java-add-graalvm-native-image-support/framework-specific_considerati.md",
+        "templates/java-add-graalvm-native-image-support/your_approach.md"
+      ]
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "missing": [
+        "templates/java-junit"
+      ]
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/java-mcp-server-generator",
+        "templates/java-mcp-server-generator/gradle_buildgradlekts_template.md",
+        "templates/java-mcp-server-generator/maven_pomxml_template.md",
+        "templates/java-mcp-server-generator/mcpserverapplicationjava_templ.md",
+        "templates/java-mcp-server-generator/mcpservertestjava_template.md",
+        "templates/java-mcp-server-generator/project_generation.md",
+        "templates/java-mcp-server-generator/promptdefinitionsjava_template.md",
+        "templates/java-mcp-server-generator/prompthandlersjava_template.md",
+        "templates/java-mcp-server-generator/resourcehandlersjava_template.md",
+        "templates/java-mcp-server-generator/tooldefinitionsjava_template.md",
+        "templates/java-mcp-server-generator/toolhandlersjava_template.md"
+      ]
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "missing": [
+        "templates/java-refactoring-extract-method",
+        "templates/java-refactoring-extract-method/code_after_refactoring_2.md",
+        "templates/java-refactoring-extract-method/code_before_refactoring_2.md"
+      ]
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "missing": [
+        "templates/java-refactoring-remove-parameter"
+      ]
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "missing": [
+        "templates/java-springboot"
+      ]
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "missing": [
+        "templates/javascript-typescript-jest"
+      ]
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/kotlin-mcp-server-generator",
+        "templates/kotlin-mcp-server-generator/buildgradlekts_template.md",
+        "templates/kotlin-mcp-server-generator/serverkt_template.md",
+        "templates/kotlin-mcp-server-generator/servertestkt_template.md",
+        "templates/kotlin-mcp-server-generator/tool1kt_template.md"
+      ]
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "missing": [
+        "templates/kotlin-springboot"
+      ]
+    },
+    {
+      "file": "mcp-copilot-studio-server-generator.prompt.md",
+      "missing": [
+        "templates/mcp-copilot-studio-server-generator",
+        "templates/mcp-copilot-studio-server-generator/expected_output.md",
+        "templates/mcp-copilot-studio-server-generator/instructions.md"
+      ]
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "missing": [
+        "templates/mcp-create-adaptive-cards",
+        "templates/mcp-create-adaptive-cards/adaptive_card_template_languag.md",
+        "templates/mcp-create-adaptive-cards/adaptive_card_types.md",
+        "templates/mcp-create-adaptive-cards/card_elements.md",
+        "templates/mcp-create-adaptive-cards/common_patterns.md",
+        "templates/mcp-create-adaptive-cards/complete_example.md"
+      ]
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "missing": [
+        "templates/mcp-create-declarative-agent",
+        "templates/mcp-create-declarative-agent/mcp_server_integration.md",
+        "templates/mcp-create-declarative-agent/requirements.md"
+      ]
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "missing": [
+        "templates/mcp-deploy-manage-agents",
+        "templates/mcp-deploy-manage-agents/agent_types.md",
+        "templates/mcp-deploy-manage-agents/deployment_workflows.md"
+      ]
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "missing": [
+        "templates/memory-merger",
+        "templates/memory-merger/proposed_memories_for_mer.md"
+      ]
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "missing": [
+        "templates/mkdocs-translations",
+        "templates/mkdocs-translations/translation_rules.md"
+      ]
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "missing": [
+        "templates/model-recommendation",
+        "templates/model-recommendation/context7_query_templates.md",
+        "templates/model-recommendation/current_model_assessment.md",
+        "templates/model-recommendation/knowledge_base.md",
+        "templates/model-recommendation/model_recommendation.md",
+        "templates/model-recommendation/quality_assurance.md",
+        "templates/model-recommendation/workflow.md"
+      ]
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "missing": [
+        "templates/multi-agent-research-template",
+        "templates/multi-agent-research-template/phase_2_mcp_server_and_tool_re.md"
+      ]
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "missing": [
+        "templates/multi-stage-dockerfile"
+      ]
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "missing": [
+        "templates/my-issues"
+      ]
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "missing": [
+        "templates/my-pull-requests"
+      ]
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "missing": [
+        "templates/next-intl-add-language"
+      ]
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "missing": [
+        "templates/nextjs-tailwind",
+        "templates/nextjs-tailwind/phases.md"
+      ]
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "missing": [
+        "templates/openapi-to-application-code",
+        "templates/openapi-to-application-code/generation_process.md"
+      ]
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "missing": [
+        "templates/optimize-agentsMd",
+        "templates/optimize-agentsMd/plan_comprehensive_agentsmd_fo.md"
+      ]
+    },
+    {
+      "file": "performance.prompt.md",
+      "missing": [
+        "templates/performance",
+        "templates/performance/phases.md"
+      ]
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/php-mcp-server-generator",
+        "templates/php-mcp-server-generator/development.md",
+        "templates/php-mcp-server-generator/file_templates.md",
+        "templates/php-mcp-server-generator/tool_patterns.md"
+      ]
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "missing": [
+        "templates/playwright-automation-fill-in-form",
+        "templates/playwright-automation-fill-in-form/phases.md"
+      ]
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "missing": [
+        "templates/playwright-explore-website",
+        "templates/playwright-explore-website/phases.md"
+      ]
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "missing": [
+        "templates/playwright-generate-test",
+        "templates/playwright-generate-test/phases.md"
+      ]
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "missing": [
+        "templates/playwright-typescript",
+        "templates/playwright-typescript/phases.md"
+      ]
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "missing": [
+        "templates/postgresql-code-review",
+        "templates/postgresql-code-review/postgresql-specific_anti-patte.md",
+        "templates/postgresql-code-review/postgresql-specific_review_are.md",
+        "templates/postgresql-code-review/postgresql_code_quality_checkl.md"
+      ]
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "missing": [
+        "templates/postgresql-optimization",
+        "templates/postgresql-optimization/advanced_postgresql_features.md",
+        "templates/postgresql-optimization/common_query_patterns.md",
+        "templates/postgresql-optimization/optimization_checklist.md",
+        "templates/postgresql-optimization/postgresql-specific_features.md",
+        "templates/postgresql-optimization/postgresql_advanced_data_types.md",
+        "templates/postgresql-optimization/postgresql_extensions__tools.md",
+        "templates/postgresql-optimization/postgresql_performance_tuning.md"
+      ]
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "missing": [
+        "templates/power-apps-code-app-scaffold",
+        "templates/power-apps-code-app-scaffold/implementation_guidelines.md",
+        "templates/power-apps-code-app-scaffold/task.md"
+      ]
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "missing": [
+        "templates/power-bi-dax-optimization",
+        "templates/power-bi-dax-optimization/additional_services.md",
+        "templates/power-bi-dax-optimization/analysis_framework.md",
+        "templates/power-bi-dax-optimization/common_optimization_patte.md",
+        "templates/power-bi-dax-optimization/example_output_format.md",
+        "templates/power-bi-dax-optimization/optimization_process.md"
+      ]
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "missing": [
+        "templates/power-bi-model-design-review",
+        "templates/power-bi-model-design-review/detailed_review_process.md",
+        "templates/power-bi-model-design-review/review_checklist_templates.md",
+        "templates/power-bi-model-design-review/review_framework.md",
+        "templates/power-bi-model-design-review/review_output_structure.md",
+        "templates/power-bi-model-design-review/specialized_review_types.md"
+      ]
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "missing": [
+        "templates/power-bi-performance-troubleshooting",
+        "templates/power-bi-performance-troubleshooting/communication_and_documentatio.md",
+        "templates/power-bi-performance-troubleshooting/diagnostic_tools_and_technique.md",
+        "templates/power-bi-performance-troubleshooting/performance_monitoring_setup.md",
+        "templates/power-bi-performance-troubleshooting/solution_framework.md",
+        "templates/power-bi-performance-troubleshooting/troubleshooting_methodology.md",
+        "templates/power-bi-performance-troubleshooting/troubleshooting_workflows.md"
+      ]
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "missing": [
+        "templates/power-bi-report-design-consultation",
+        "templates/power-bi-report-design-consultation/design_consultation_framework.md",
+        "templates/power-bi-report-design-consultation/design_review_and_validation.md",
+        "templates/power-bi-report-design-consultation/visualization_design_process.md",
+        "templates/power-bi-report-design-consultation/visualization_recommendations_.md"
+      ]
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "missing": [
+        "templates/power-platform-mcp-connector-suite",
+        "templates/power-platform-mcp-connector-suite/validation_checklist.md"
+      ]
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/project-workflow-analysis-blueprint-generator",
+        "templates/project-workflow-analysis-blueprint-generator/generated_prompt.md"
+      ]
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "missing": [
+        "templates/projects-init",
+        "templates/projects-init/phase_1_triage_documentat.md",
+        "templates/projects-init/phase_2_migrate_prompts.md",
+        "templates/projects-init/phase_3_create_skills__up.md"
+      ]
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "missing": [
+        "templates/prompt-builder",
+        "templates/prompt-builder/phases.md"
+      ]
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "missing": [
+        "templates/<prompt-name>",
+        "templates/_index.md",
+        "templates/_shared",
+        "templates/_shared/**",
+        "templates/_shared/...",
+        "templates/_shared/deps-core.md",
+        "templates/_shared/frontmatter.md",
+        "templates/_shared/phases.md",
+        "templates/_shared/rules-core.md",
+        "templates/_shared/section-skeleton.md",
+        "templates/_shared/skills-table-core.md",
+        "templates/_shared/verification-checklist.md"
+      ]
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "missing": [
+        "templates/prompts-strict-template",
+        "templates/prompts-strict-template/phases.md"
+      ]
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "missing": [
+        "templates/pytest-coverage"
+      ]
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/python-mcp-server-generator",
+        "templates/python-mcp-server-generator/implementation_details.md"
+      ]
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "missing": [
+        "templates/quality-gate-debugger",
+        "templates/quality-gate-debugger/final_gate_status.md",
+        "templates/quality-gate-debugger/phase_0_generate_reports.md",
+        "templates/quality-gate-debugger/phase_1_triage.md"
+      ]
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/readme-blueprint-generator"
+      ]
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "missing": [
+        "templates/refactor-code",
+        "templates/refactor-code/steps.md"
+      ]
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "missing": [
+        "templates/refactor-mardown-files",
+        "templates/refactor-mardown-files/3_detailed_instructions__stand.md"
+      ]
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "missing": [
+        "templates/refactor-method-complexity-reduce",
+        "templates/refactor-method-complexity-reduce/instructions.md"
+      ]
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "missing": [
+        "templates/refactor-plan",
+        "templates/refactor-plan/refactor_plan_title.md"
+      ]
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "missing": [
+        "templates/refresh-agent-inventory"
+      ]
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "missing": [
+        "templates/remember-interactive-programming"
+      ]
+    },
+    {
+      "file": "remember.prompt.md",
+      "missing": [
+        "templates/remember",
+        "templates/remember/process.md"
+      ]
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "missing": [
+        "templates/review-and-refactor"
+      ]
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/ruby-mcp-server-generator",
+        "templates/ruby-mcp-server-generator/libmy_mcp_serverpromptscode_re.md",
+        "templates/ruby-mcp-server-generator/libmy_mcp_serverresourcesexamp.md",
+        "templates/ruby-mcp-server-generator/libmy_mcp_serverserverrb_templ.md",
+        "templates/ruby-mcp-server-generator/libmy_mcp_servertoolscalculate.md",
+        "templates/ruby-mcp-server-generator/testtoolscalculate_tool_testrb.md",
+        "templates/ruby-mcp-server-generator/testtoolsgreet_tool_testrb_tem.md",
+        "templates/ruby-mcp-server-generator/usage.md"
+      ]
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "missing": [
+        "templates/run-session-agentsmd-workflow",
+        "templates/run-session-agentsmd-workflow/phases.md"
+      ]
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/rust-mcp-server-generator",
+        "templates/rust-mcp-server-generator/development.md",
+        "templates/rust-mcp-server-generator/example_tool_patterns.md",
+        "templates/rust-mcp-server-generator/file_templates.md"
+      ]
+    },
+    {
+      "file": "security.prompt.md",
+      "missing": [
+        "templates/security",
+        "templates/security/phases.md"
+      ]
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "missing": [
+        "templates/seed-review-and-create",
+        "templates/seed-review-and-create/tasks.md"
+      ]
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "missing": [
+        "templates/session-agentsmd-full-workflow",
+        "templates/session-agentsmd-full-workflow/phases.md"
+      ]
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "missing": [
+        "templates/setup-component"
+      ]
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "missing": [
+        "templates/setup-enhanced",
+        "templates/setup-enhanced/10__anti-rate-limiting_strateg.md",
+        "templates/setup-enhanced/11__phase_execution_checklists.md",
+        "templates/setup-enhanced/3__reference_resolution_hierar.md",
+        "templates/setup-enhanced/4__dry_implementation_practice.md",
+        "templates/setup-enhanced/5__implementation_workflow_10_.md",
+        "templates/setup-enhanced/6__feature_implementation_phas.md",
+        "templates/setup-enhanced/7__content_integration_rules_d.md",
+        "templates/setup-enhanced/9__ai_personas_for_copilot_cli.md"
+      ]
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "missing": [
+        "templates/setup-nextjs-frontend-stack"
+      ]
+    },
+    {
+      "file": "setup.prompt.md",
+      "missing": [
+        "templates/setup",
+        "templates/setup/11_react_query_keys_srclibquer.md",
+        "templates/setup/14_unique_project_conventions.md",
+        "templates/setup/15_vscode_configuration.md",
+        "templates/setup/16_common_tasks__step-by-step.md",
+        "templates/setup/17_testing.md",
+        "templates/setup/1_project_architecture.md",
+        "templates/setup/20_coding_standards_summary.md",
+        "templates/setup/24_quality_gate_debugger.md",
+        "templates/setup/2_essential_commands.md",
+        "templates/setup/3_environment_variables.md",
+        "templates/setup/4_database_schema__critical_fa.md",
+        "templates/setup/5_authentication_system.md",
+        "templates/setup/6_data_access_layer_dal.md",
+        "templates/setup/7_server_actions__primary_muta.md",
+        "templates/setup/8_seeding_system_cli__rest_api.md"
+      ]
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "missing": [
+        "templates/shuffle-json-data",
+        "templates/shuffle-json-data/acceptable_json.md"
+      ]
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "missing": [
+        "templates/skills-debug-prompt",
+        "templates/skills-debug-prompt/execution_steps.md"
+      ]
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "missing": [
+        "templates/sql-code-review",
+        "templates/sql-code-review/code_quality__maintainability.md",
+        "templates/sql-code-review/common_anti-patterns.md",
+        "templates/sql-code-review/database-specific_best_practic.md",
+        "templates/sql-code-review/performance_optimization.md",
+        "templates/sql-code-review/priority_category_brief_descri.md",
+        "templates/sql-code-review/security_analysis.md",
+        "templates/sql-code-review/sql_review_checklist.md"
+      ]
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "missing": [
+        "templates/sql-optimization",
+        "templates/sql-optimization/core_optimization_areas.md",
+        "templates/sql-optimization/database-agnostic_optimization.md",
+        "templates/sql-optimization/performance_tuning_techniques.md",
+        "templates/sql-optimization/query_anti-patterns.md",
+        "templates/sql-optimization/universal_optimization_checkli.md"
+      ]
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "missing": [
+        "templates/structured-autonomy-generate",
+        "templates/structured-autonomy-generate/prerequisites.md",
+        "templates/structured-autonomy-generate/step_2_generate_implement.md"
+      ]
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "missing": [
+        "templates/structured-autonomy-implement"
+      ]
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "missing": [
+        "templates/structured-autonomy-plan",
+        "templates/structured-autonomy-plan/implementation_steps.md"
+      ]
+    },
+    {
+      "file": "suggest-awesome-github-copilot.prompt.md",
+      "missing": [
+        "templates/suggest-awesome-github-copilot-*"
+      ]
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/swift-mcp-server-generator",
+        "templates/swift-mcp-server-generator/mainswift_template.md",
+        "templates/swift-mcp-server-generator/packageswift_template.md",
+        "templates/swift-mcp-server-generator/prompthandlersswift_template.md",
+        "templates/swift-mcp-server-generator/resourcehandlersswift_template.md",
+        "templates/swift-mcp-server-generator/servertestsswift_template.md",
+        "templates/swift-mcp-server-generator/tooldefinitionsswift_template.md",
+        "templates/swift-mcp-server-generator/toolhandlersswift_template.md"
+      ]
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "missing": [
+        "templates/task-implementation",
+        "templates/task-implementation/phases.md"
+      ]
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "missing": [
+        "templates/tasksync",
+        "templates/tasksync/phases.md"
+      ]
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "missing": [
+        "templates/technology-stack-blueprint-generator",
+        "templates/technology-stack-blueprint-generator/generated_prompt.md"
+      ]
+    },
+    {
+      "file": "testing.prompt.md",
+      "missing": [
+        "templates/testing",
+        "templates/testing/phases.md"
+      ]
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "missing": [
+        "templates/tldr-prompt",
+        "templates/tldr-prompt/error_handling.md",
+        "templates/tldr-prompt/url_resolver.md"
+      ]
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "missing": [
+        "templates/typescript-mcp-server-generator",
+        "templates/typescript-mcp-server-generator/implementation_details.md"
+      ]
+    },
+    {
+      "file": "typescript.prompt.md",
+      "missing": [
+        "templates/typescript",
+        "templates/typescript/phases.md"
+      ]
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "missing": [
+        "templates/typespec-api-operations",
+        "templates/typespec-api-operations/adding_delete_operations.md",
+        "templates/typespec-api-operations/adding_get_operations.md",
+        "templates/typespec-api-operations/adding_patch_operations.md",
+        "templates/typespec-api-operations/adding_post_operations.md",
+        "templates/typespec-api-operations/advanced_features.md",
+        "templates/typespec-api-operations/best_practices.md",
+        "templates/typespec-api-operations/complete_crud_example.md"
+      ]
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "missing": [
+        "templates/typespec-create-agent",
+        "templates/typespec-create-agent/requirements.md",
+        "templates/typespec-create-agent/template_structure.md"
+      ]
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "missing": [
+        "templates/typespec-create-api-plugin",
+        "templates/typespec-create-api-plugin/authentication_options.md",
+        "templates/typespec-create-api-plugin/function_capabilities.md",
+        "templates/typespec-create-api-plugin/requirements.md"
+      ]
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "missing": [
+        "templates/update-avm-modules-in-bicep"
+      ]
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "missing": [
+        "templates/update-docs-on-code-change",
+        "templates/update-docs-on-code-change/phases.md"
+      ]
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "missing": [
+        "templates/update-implementation-plan",
+        "templates/update-implementation-plan/phases.md",
+        "templates/update-implementation-plan/rules.md"
+      ]
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "missing": [
+        "templates/update-llms",
+        "templates/update-llms/analysis_and_planning_phase.md",
+        "templates/update-llms/execution_steps.md",
+        "templates/update-llms/implementation_requirements.md",
+        "templates/update-llms/update_strategy.md"
+      ]
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "missing": [
+        "templates/update-markdown-file-index"
+      ]
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "missing": [
+        "templates/update-oo-component-documentation"
+      ]
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "missing": [
+        "templates/update-specification",
+        "templates/update-specification/8_dependencies__external_.md",
+        "templates/update-specification/best_practices_for_ai-rea.md"
+      ]
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "missing": [
+        "templates/what-context-needed",
+        "templates/what-context-needed/files_i_need.md"
+      ]
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "missing": [
+        "templates/write-coding-standards-from-file",
+        "templates/write-coding-standards-from-file/if_fetchstyleurl__true.md",
+        "templates/write-coding-standards-from-file/rules_and_configuration.md",
+        "templates/write-coding-standards-from-file/variable_and_parameter_configu.md"
+      ]
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "missing": [
+        "templates/write-tests"
+      ]
+    }
+  ],
+  "missing_skills": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "skill": "copilot-cli-quickstart"
+    },
+    {
+      "file": "agents-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "agents-system-prompt-context-fix.prompt.md",
+      "skill": "using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development"
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "skill": "prompt-engineering"
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "audit-skills-judge-fix.prompt.md",
+      "skill": "using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development"
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "skill": "script-orchestration"
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "skill": "writing-skills"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "skill": "joyride"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "skill": "prompt-engineering"
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "code-review.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "context-map.prompt.md",
+      "skill": "codemap"
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "skill": "enhance-markdown"
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "copilot-instructions-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "database.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dataverse-python-advanced-patterns.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dataverse-python-quickstart.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "debugger-prompt.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dev-imp.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "convert-plaintext-to-md"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "boost-prompt"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "ai-prompt-engineering-safety-review"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "update-implementation-plan"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "prompt-builder"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "writing-skills"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "executing-plans"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "dev.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "development.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "documentation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "using-superpowers"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "user-communication-preferences"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "executing-plans"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "execute-plan.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "features.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "context7"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "plan"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "writing-skills"
+    },
+    {
+      "file": "general.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "github-copilot-starter.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "Initial.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-docs.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "mcp-copilot-studio-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "migrate-to-next16.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "performance.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "pl.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "skill": "enhance-markdown"
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "skill": "hermes-skills"
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "skill": "skill-creator"
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "test-driven-development"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "skill-creator"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "writing-skills"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "verification-before-completion"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "skill": "test-skill"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "hermes-agent"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "skill": "copilot-cli-quickstart"
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "remember.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "finishing-a-development-branch"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "gh-cli"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "git-commit"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "git-helper"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "git-submodule-workflow"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "github-actions-efficiency"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "github-repo-management"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "monorepo-pr-workflow"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "vscode-workspace-configurator"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "workspace-audit"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "skill": "domain-intel"
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "skill": "gh-cli"
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "skill": "web-research-pipeline"
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "skill": "code-wiki"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "skill": "gh-cli"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "skill": "git-commit"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "skill": "writing-clearly-and-concisely"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "code-wiki"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "content-research-writer"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "gh-cli"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "git-commit"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "git-submodule-workflow"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "github-repo-management"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "monorepo-pr-workflow"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "spike"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "web-research-pipeline"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "writing-clearly-and-concisely"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "writing-skills"
+    },
+    {
+      "file": "repo.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "security.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "setup.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "using-superpowers"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "skill-judge"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "skill": "skill-creator"
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "suggest-awesome-github-copilot.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "sync-hermes-copilot-codex.prompt.md",
+      "skill": "using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development"
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "test-providers-models.prompt.md",
+      "skill": "using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development"
+    },
+    {
+      "file": "testing.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "typescript.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "skill": "writing-plans"
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "skill": "firecrawl-scrape"
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "skill": "domain-intel"
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "introspection-only-general"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "no-git-delete"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "no-net-fetch"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "skills-tools-preflight-check"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "context-map"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "brainstorming"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "plans-and-specs"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "dispatching-parallel-agents"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "subagent-driven-development"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "systematic-debugging"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "simplify"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "acpx-executor"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "git-patch-management"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "skill": "project-consolidation"
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "skill": "[]"
+    },
+    {
+      "file": "zod-schema-generation.prompt.md",
+      "skill": "prompt-engineering"
+    }
+  ],
+  "missing_scripts": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "agents-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "agents-system-prompt-context-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "audit-skills-judge-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "code-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "context-map.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "copilot-instructions-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "database.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dataverse-python-advanced-patterns.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dataverse-python-quickstart.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "debugger-prompt.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dev-imp.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dev.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "development.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "documentation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "execute-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "features.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "general.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "github-copilot-starter.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "Initial.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-docs.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "mcp-copilot-studio-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "migrate-to-next16.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "performance.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "pl.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "remember.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "repo.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "security.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "setup.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "suggest-awesome-github-copilot.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "sync-hermes-copilot-codex.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "test-providers-models.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "testing.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "typescript.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "script": "[]"
+    },
+    {
+      "file": "zod-schema-generation.prompt.md",
+      "script": "[]"
+    }
+  ]
+}

@@ -65,7 +65,7 @@ Supported target styles:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#session-agentsmd-full-workflow)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Repository discovery and workspace navigation.
 - Markdown authoring for AGENTS.md quality guidance.

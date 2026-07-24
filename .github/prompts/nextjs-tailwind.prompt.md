@@ -48,7 +48,7 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#nextjs-tailwind)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Next.js App Router architecture and React Server Components
 - Tailwind CSS responsive and semantic styling

@@ -35,7 +35,7 @@ trigger: /development
 > Personality: Expert Software Engineer, DevOps Specialist, Technical Writer
 > Project: ComicWise - Web Comic Platform
 
-> **Full content:** `templates/Developement/comprehensive_setup_guide_for_.md`
+> **Full content:** `templates/development/comprehensive_setup_guide_for_.md`
 
 ## Prerequisites
 
@@ -69,11 +69,11 @@ Complete all Tasks
 > 1 - Setup the project by installing all dependencies using pnpm, setting up the
 > 2 - Create, Optimize and Validate if exists copy file to end with .backup and Cr
 
-> **Full content:** `templates/Developement/tasks.md`
+> **Full content:** `templates/development/tasks.md`
 
 ## Template References
 
-Detailed templates in `templates/Developement/`:
+Detailed templates in `templates/development/`:
 
 - `comprehensive_setup_guide_for_.md`
 - `tasks.md`

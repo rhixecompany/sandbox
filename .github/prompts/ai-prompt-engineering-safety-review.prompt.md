@@ -77,7 +77,7 @@ Review an input prompt for safety, bias, security, clarity, and effectiveness, t
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#ai-prompt-engineering-safety-review)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Purpose |
 | --- | --- |

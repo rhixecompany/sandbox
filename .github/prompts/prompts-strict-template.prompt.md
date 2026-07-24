@@ -46,7 +46,7 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#prompts-strict-template)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Markdown structure and lint-aware formatting
 - Template compliance verification

@@ -97,7 +97,7 @@ workflow is inventory first, then plan, then review, then migrate, then verify.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#bash-scripts-fix)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 ## Phases
 

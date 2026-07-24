@@ -100,7 +100,7 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-automation-fill-in-form)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - `webapp-testing` — use browser automation to interact with the live form
 - `systematic-debugging` — resolve selector and filling issues methodically

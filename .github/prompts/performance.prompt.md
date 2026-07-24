@@ -46,7 +46,7 @@ Use this prompt when performance issues are suspected or when implementing featu
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#performance)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Performance profiling and bottleneck analysis
 - Query and caching strategy optimization

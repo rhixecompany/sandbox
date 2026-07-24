@@ -1,132 +1,145 @@
 ---
 name: audit-skills-judge-fix
-...
 title: Audit Skills Judge Fix
-...
-description: 'Run the full skills audit pipeline: inventory, audit, categorize, dedupe, judge,
-  remediate, consolidate, and verify Hermes skills.'
+project_path: C:\Users\Alexa\Desktop\SandBox
+description: Run local skills audit and collect findings; categorize skill health, duplicates, and dead entries; run judge scoring; remediate fixable issues; consolidate mappings; verify with tooling; write audit reports.
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - terminal
-- file
+toolsets: - file - terminal - browser - skills
 scripts: []
-skills: - using-superpowers
-- user-communication-preferences
-- verification-before-completion
+skills: - using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development
 formatter: default
-...
-plan: ''
-dependencies: - skill:using-superpowers
-- skill:user-communication-preferences
-- skill:verification-before-completion
-tags: - audit
-- judge
-- remediation
-- pipeline
+plan: |
+  ### Phase 1: Skills Audit Collection
+  - Enumerate Hermes skills: `hermes skills` → extract active skills
+  - Pull full SKILL.md for each skill: verify frontmatter completeness
+  - Collect metrics: skill_dir, name, title, version, author
+  
+  ### Phase 2: Health Categorization
+  - Calculate health score: (defined_fields_present / total_fields) * 100
+  - Define categories: healthy (>90), needs_attention (70-89), critical (<70)
+  - Generate summary: total skills, healthy, needs_attention, critical
+  
+  ### Phase 3: Judge Scoring
+  - Score each skill by: completeness, formatting, metadata consistency
+  - Risk factors: missing fields, outdated versions, unclear purpose
+  - Output: health report + prioritized action list
+
+  ### Phase 4: Remediation Planning
+  - For each critical skill: create remediation plan
+  - Staging steps: patch missing fields in SKILL.md
+  - Document changes: log in `docs/audit/skills-audit-restoration-log.md`
+
+  ### Phase 5: Verification & Reporting
+  - Re-run audit after remediation: confirm health improvement
+  - Generate final report: `docs/audit/skills-audit-final-report.md`
+  - Archive: compress audit logs
+
+dependencies: - skill:using-superpowers - skill:user-communication-preferences - skill:plans-and-specs - skill:executing-plans - skill:verification-before-completion - skill:subagent-driven-development
+tags: - audit - execution - fix - ml - prompts - skills - workflow
 trigger: /audit-skills-judge-fix
-...
+metadata:
+  related_skills: [using-superpowers, user-communication-preferences, plans-and-specs, executing-plans, verification-before-completion, subagent-driven-development]
+  workspace_path: C:\Users\Alexa\Desktop\SandBox
+  audit_output_dir: C:\Users\Alexa\Desktop\SandBox\docs\audit
 ---
 
 # Audit Skills Judge Fix
 
-> Strict sequential execution. Complete each phase before advancing.
+## Overview
 
-## Context
+Audit Hermes skills in the SandBox workspace, categorize health, run judge scoring, plan remediations, and verify improvements.
 
-- **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
-- **Hermes skills root:** `%LOCALAPPDATA%\hermes\skills`
-- **Outputs:** `docs/local-skills.md`, `judge_results/`, `docs/audit-skills-judge-fix-report.md`
-- **Reference skill:** `audit-skills-judge-fix` at `~/AppData/Local/hermes/skills/qa/audit-skills-judge-fix/SKILL.md`
+## Phase 1: Skills Audit Collection
 
-## Rules
+1. **Enumerate active skills**
+   - Run: `hermes skills` → output to `docs/audit/skills-list.txt`
+   - Extract skill names for processing
 
-1. Run phases in order without reordering.
-2. Verify each phase before proceeding.
-3. Do not delete evidence artifacts before verification.
-4. Re-judge after every remediation pass.
-5. Capture Judith score distribution into a report.
+2. **Collect skill metadata**
+   - For each skill, read SKILL.md: `C:\Users\Alexa\Desktop\SandBox\hermes\skills\<skill_name>\SKILL.md`
+   - Gather: name, title, description, version, author, linked_files count
+   - Store in structured audit data: `docs/audit/skills-audit-data.json`
 
-## Phase 1: Audit & Inventory
+## Phase 2: Health Categorization
 
-1. Verify or restore official skills: `hermes skills repair-official --restore --yes all`
-2. Inventory skills: `hermes skills list --source local > docs/local-skills.md`
-3. Count skill files: `find "$LOCALAPPDATA/hermes/skills" -name "SKILL.md" | wc -l`
-4. Run audit: `hermes skills audit`
-5. Rebuild path mapping: `python3 "$LOCALAPPDATA/hermes/scripts/build_path_mapping.py"`
+Categorize each skill based on completeness:
 
-**Exit:** `docs/local-skills.md` written, baseline counts recorded.
+- **Healthy (>90%)**: All required fields present, complete frontmatter, well-structured
+- **Needs Attention (70-89%)**: Minor gaps, one or two missing fields
+- **Critical (<70%)**: Major gaps, incomplete frontmatter, structural issues
 
----
-
-## Phase 2: Categorize + Deduplicate
-
-1. Categorize: `python3 "$LOCALAPPDATA/hermes/scripts/categorize_skills.py"`
-2. Deduplicate: `python3 "$LOCALAPPDATA/hermes/scripts/dedupe_skills.py"`
-3. Review `docs/dedupe-report.md`
-4. Delete flat duplicates only after review
-
-**Exit:** No duplicated active skills remaining; dedupe report written.
-
----
-
-## Phase 3: Judge
-
-```bash
-cd C:/Users/Alexa/Desktop/SandBox
-rm -f judge_results/batch_*.md judge_results/all_results.tsv judge_results/summary.md
-python3 "$LOCALAPPDATA/hermes/scripts/batch_skill_judge.py"
+Health score calculation:
+```yaml
+health_score: (defined_fields / total_required_fields) * 100
+total_required_fields: 12 (name, title, description, version, license, author, toolsets, scripts, skills, formatter, plan, tags)
 ```
 
-**Exit:** `judge_results/summary.md` exists and reflects current disk state.
+## Phase 3: Judge Scoring
 
----
+Score skills by:
 
-## Phase 4: Remediate
+- **Completeness**: Frontmatter completeness
+- **Formatting**: YAML syntax, markdown structure
+- **Metadata**: Consistent and clear metadata
+- **Risk Assessment**: Missing critical fields, outdated versions
+- **Overall Quality**: Documentation quality, consistency
 
-1. Structural fixes below 80: `python3 "$LOCALAPPDATA/hermes/scripts/batch_remediate.py"`
-2. YAML fixes: `python3 "$LOCALAPPDATA/hermes/scripts/fix_yaml_frontmatter.py"`
-3. FAIL skill rewrites: `python3 "$LOCALAPPDATA/hermes/scripts/fix_fail_skills.py"`
-4. Re-judge: rerun Phase 3
-5. Record lists:
-   - `judge_results/below_80_list.txt`
-   - `judge_results/needs_work_list.txt`
-   - `judge_results/rewrite_list.txt`
+Output: `docs/audit/skills-judge-scores.json` with per-skill scores and recommendations.
 
-**Exit:** Re-judge artifacts updated; score distribution documented.
+## Phase 4: Remediation Planning
 
----
+For **Critical** skills (score < 70%):
 
-## Phase 5: Deep Patch + Boost Near Pass
+1. **Analyze gaps**
+   - Read current SKILL.md
+   - Identify missing required fields
+   - List structural issues
 
-1. Quick first-aid: `python3 "$LOCALAPPDATA/hermes/scripts/patch_fail_structure.py"`
-2. Re-judge
-3. Full structure injection: `python3 "$LOCALAPPDATA/hermes/scripts/patch_all_fail_sections.py"`
-4. Re-judge
-5. Near-pass boost: `python3 "$LOCALAPPDATA/hermes/scripts/boost_near_pass_refs.py"`
-6. Final re-judge
+2. **Create remediation steps**
+   - For each missing field, draft corrective content
+   - Plan specific `patch` actions with exact old_string and new_string
 
-**Exit:** Final `judge_results/summary.md` reflects remediation.
+3. **Execute in staging**
+   - Apply patches to skill SKILL.md files
+   - Log all changes: `docs/audit/skills-audit-restoration-log.md`
 
----
+4. **Verify remediation**
+   - Re-run health assessment
+   - Confirm skills moved to Healthy or Needs Attention category
 
-## Phase 6: Consolidate
+## Phase 5: Verification & Reporting
 
-1. Consolidate: `python3 "$LOCALAPPDATA/hermes/scripts/consolidate_skills.py"`
-2. Re-run audit: `hermes skills audit`
-3. Re-run judge once more if audit indicates regression
+1. **Health verification**
+   - Run complete re-audit: `hermes skills` + analysis
+   - Compare before/after metrics
+   - Confirm improvements quantified
 
-**Exit:** Consolidation report updated.
+2. **Generate final report**
+   - `docs/audit/skills-audit-final-report.md` includes:
+     - Executive summary of improvements
+     - Skill health trends over time
+     - Remaining action items
+     - Recommendations for ongoing maintenance
 
----
+3. **Archive and cleanup**
+   - Compress audit logs: `docs/audit/skills-audit-logs.tar.gz`
+   - Clean temporary files in `docs/audit/`
 
-## Phase 7: Verify & Report
+## Exit Condition
 
-1. Verify score distribution from `judge_results/summary.md`
-2. Verify report at `docs/audit-skills-judge-fix-report.md`
-3. Commit: `git add docs/ judge_results/ && git commit -m "chore: skills audit pipeline $(date +%F)"`
+Audit complete when:
 
-**Verification:** user-communication-preferences verification checklist satisfied; no hardcoded Windows paths in patched scripts.
+- All skills assessed and categorized
+- Critical skills remediated to Healthy/Needs Attention
+- Verification report generated
+- Final metrics logged in progress tracker
+- Audit artifacts archived
+
+## Notes
+
+- This audit focuses on **compact, declarative skill quality**
+- Use `skill_manage` for actual skill patches, but document all planned changes
+- Maintain deterministic audit trail for reproducibility
+- Skip destructive deletions; focus on structural corrections and metadata enrichment

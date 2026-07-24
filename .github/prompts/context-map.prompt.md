@@ -78,7 +78,7 @@ Build a dependency and reference map before making changes so implementation sta
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#context-map)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Purpose |
 | --- | --- |

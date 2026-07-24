@@ -46,7 +46,7 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#documentation)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Technical writing for developers and maintainers
 - API and architecture documentation design

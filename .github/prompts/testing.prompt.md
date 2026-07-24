@@ -44,7 +44,7 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#testing)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Unit and integration test design
 - E2E flow verification with environment constraints

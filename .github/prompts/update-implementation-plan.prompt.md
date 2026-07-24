@@ -98,7 +98,7 @@ When combined in the output path template, these variables produce a concrete fi
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#update-implementation-plan)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.
 

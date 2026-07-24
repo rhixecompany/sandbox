@@ -48,7 +48,7 @@ Use this prompt for any change that handles external input, authentication, auth
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#security)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Threat modeling and trust-boundary analysis
 - Input validation and secure coding patterns

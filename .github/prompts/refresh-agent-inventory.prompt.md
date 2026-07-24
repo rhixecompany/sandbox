@@ -53,7 +53,7 @@ copilot instruction references.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#refresh-agent-inventory)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - customization-audit
 - context-map

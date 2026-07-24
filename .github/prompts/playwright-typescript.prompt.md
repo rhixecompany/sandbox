@@ -42,7 +42,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-typescript)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Playwright test design and isolation
 - Accessibility-first locator strategy

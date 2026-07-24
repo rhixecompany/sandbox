@@ -101,7 +101,7 @@ Explore a website with Playwright MCP, document core flows, and propose tests fr
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-explore-website)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - `webapp-testing` — navigate and exercise the live site with browser automation
 - `verification-before-completion` — confirm the exploration evidence before summarizing

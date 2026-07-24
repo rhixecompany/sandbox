@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/pyrightconfig.json",
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.venv",
+    "**/venv",
+    "**/env",
+    "**/.env",
+    "**/envs",
+    "**/venvs",
+    "**/.git",
+    "research",
+    "scripts",
+    "results",
+    "templates",
+    "docs",
+    "projects/**/{{cookiecutter.project_slug}}"
+  ],
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "basic"
+}

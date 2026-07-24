@@ -48,7 +48,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#update-docs-on-code-change)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Change-impact analysis across code and documentation
 - Documentation synchronization and migration guide authoring

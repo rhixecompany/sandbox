@@ -83,7 +83,7 @@ Use this prompt when prompt definitions, prompt-style prompts, or platform regis
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#prompts-fix)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 ## Phases
 

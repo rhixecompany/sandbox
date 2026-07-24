@@ -1,0 +1,16 @@
+[
+  {
+    "prompt": "dotnet-upgrade.prompt.md",
+    "missing_files": [
+      "dotnet-upgrade"
+    ],
+    "missing_dirs": []
+  },
+  {
+    "prompt": "setup-nextjs-frontend-stack.prompt.md",
+    "missing_files": [
+      "setup-nextjs-frontend-stack"
+    ],
+    "missing_dirs": []
+  }
+]

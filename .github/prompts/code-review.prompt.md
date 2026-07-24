@@ -45,7 +45,7 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#code-review)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Risk-based review and severity ranking
 - Security threat spotting and input-validation analysis

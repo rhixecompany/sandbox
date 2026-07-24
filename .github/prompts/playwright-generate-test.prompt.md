@@ -101,7 +101,7 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#playwright-generate-test)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - `webapp-testing` — use browser automation to validate the scenario in the live app
 - `test-driven-development` — translate observed behavior into a reliable test

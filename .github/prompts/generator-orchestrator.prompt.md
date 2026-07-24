@@ -52,7 +52,7 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#generator-orchestrator)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Dependency graph design for staged orchestration.
 - Prompt-composition and deterministic branching.

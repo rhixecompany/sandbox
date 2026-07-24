@@ -76,7 +76,7 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#convert-plaintext-to-md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Purpose |
 | --- | --- |

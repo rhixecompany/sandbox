@@ -103,7 +103,7 @@ execution, and validation.
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#general)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 ## Phases
 

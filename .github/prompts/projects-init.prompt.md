@@ -67,7 +67,7 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#projects-init)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill              | Purpose                                                 |
 | ------------------ | ------------------------------------------------------- |

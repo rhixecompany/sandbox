@@ -82,7 +82,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#boost-prompt)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Purpose |
 | --- | --- |

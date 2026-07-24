@@ -58,7 +58,7 @@ Argument contract:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#run-session-agentsmd-workflow)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Workspace discovery and path resolution.
 - AGENTS.md authoring from local evidence.

@@ -41,7 +41,7 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#tasksync)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Deterministic task-state management
 - Terminal-first interaction and fallback handling

@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# Wrapper: delegates to hooks/session-logger/hook.sh using native Windows paths
-set -euo pipefail
-LOCALAPPDATA="${LOCALAPPDATA:-C:/Users/Alexa/AppData/Local}"
-HOOK_SH="$LOCALAPPDATA/hermes/hooks/session-logger/hook.sh"
-cd "$LOCALAPPDATA/hermes"
-exec bash "$HOOK_SH"

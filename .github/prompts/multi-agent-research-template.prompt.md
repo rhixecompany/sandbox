@@ -44,7 +44,7 @@ metadata: hermes:
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md#multi-agent-research-template)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 | Skill | Purpose |
 | ------- | --------- |
