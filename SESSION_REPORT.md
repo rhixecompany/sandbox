@@ -1,64 +1,56 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-07-24T07:10+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-07-24T08:25+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
 
 | Field | Value |
 |-------|-------|
-| Session ID | 20260724_062000_wezterm |
-| Title | WezTerm Config Research, Debug, and Enhancement |
-| When | 2026-07-24T06:20+00:00 |
-| Model | stepfun/step-3.7-flash:free (nous) |
-| Source | live session + tool verification |
-
-## Current Session
-
-| Field | Value |
-|-------|-------|
-| Session ID | auto — 20260724_070000+ |
-| Title | Session startup (mandatory 5-skill) |
-| When | 2026-07-24T07:10+00:00 |
-| Model | deepseek-v4-flash-free (opencode-zen) |
+| Session ID | 20260724_070000_agents-system-prompt-context-fix |
+| Title | agents-system-prompt-context-fix + UK Money Earning Sites Research |
+| When | 2026-07-24T07:00+00:00 to ~08:25 |
+| Model | deepseek-v4-flash-free (opencode-zen) / google/gemma-4-31b-it:free (openrouter) |
 | Profile | default |
-| Source | desktop |
+| Source | desktop live session |
 
-## Mandatory 5-Skill Startup
+## What Was Done
 
-- [x] **using-superpowers** — loaded, Phase 1-4 completed
-- [x] **user-communication-preferences** — loaded, DRY/concise/Action-first enforced
-- [x] **session-audit-report** — loaded, this report generated
-- [x] **hermes-profiles** — loaded, profiles validated
-- [x] **validate-memories** — loaded, memories validated
+### Phase 1: agents-system-prompt-context-fix
+- Generated architecture/folders/techstack blueprints for **19 projects** (57 files, 671KB)
+- Removed **21 duplicate underscore-named stub files** (cookiecutter_django_tailwind_*, etc.)
+- VS Code audit: **119/119 JSON files passed**, 0 failures
+- Dispatched **4 background subagent batches** (12 parallel subagents)
+- All blueprints mirrored to `docs/Project_Architecture/projects/<name>/`
 
-**Superpowers skills loaded (9/9):** systematic-debugging, test-driven-development, writing-plans, subagent-driven-development, requesting-code-review, receiving-code-review, refactor, executing-plans, code-wiki
+### Phase 2: UK Money Earning Sites Research (web-research-pipeline)
+- Researched **20+ platforms** across 7 categories for UK earning
+- Extracted data from **10+ sources** (Save the Student, Scrimpr, r/beermoneyuk, etc.)
+- Built 7 deliverable files (research report, comparison guide, earnings kit)
 
-## Files Verified
+## Files Created This Session
 
-| File | Status | Size |
-|------|--------|------|
-| `SESSION_REPORT.md` | ✅ Updated | Current |
-| `~/AppData/Local/hermes/SOUL.md` | ✅ Exists | 1523 bytes — model stale (says gemma-4, runtime deepseek) |
-| `~/AppData/Local/hermes/memories/USER.md` | ✅ Exists | 962 bytes — model stale (says gpt-5.4-mini) |
-| `~/Desktop/SandBox/.hermes.md` | ✅ Verified | Present |
-| `~/Desktop/SandBox/AGENTS.md` | ✅ Verified | Present |
+| File | Size |
+|------|------|
+| `research/uk-money-earning-sites-research-2026.md` | 15 KB |
+| `research/uk-earning-sites-comparison.md` | 5.4 KB |
+| `earnings-kit/matched-betting-and-bank-switching.md` | 5.7 KB |
+| `earnings-kit/tips-and-maximisation.md` | 6.1 KB |
+| `earnings-kit/registration-checklist.md` | 3.9 KB |
+| `earnings-kit/profile-templates.md` | 2.5 KB |
+| `earnings-kit/earnings-tracker.csv` | 1.5 KB |
 
-## Key Insights & Corrections
+Plus 57 blueprint files under `docs/Project_Architecture/` and 17 mirrored project subdirectories.
 
-1. **SOUL.md model mismatch** — SOUL.md states `google/gemma-4-31b-it:free (openrouter)`, but runtime config.yaml shows `deepseek-v4-flash-free (opencode-zen)`. SOUL.md needs update.
-2. **USER.md model stale** — Shows `gpt-5.4-mini (openai-codex)` which is from a prior session. Not critical (pointer file), but should be noted.
-3. **Profile config vs runtime** — `hermes profile list` shows default profile configured as `deepseek-v4-flash-free`, which matches current runtime. No discrepancy.
-4. **Recent sessions found** — 3 sessions from today (2026-07-24), all under 11 messages each. No prior WezTerm session in browse results (archived).
+## Key Insights
+
+1. **agents-system-prompt-context-fix complete** — all 19 projects have architecture, folders, and techstack docs
+2. **VS Code audit passed** — 119/119 valid JSON, no issues
+3. **UK earning research complete** — 20+ platforms analysed, matched betting (£400–800 first month) + DataAnnotation (£20–40/hr) + UserTesting (£30/hr) are the top earners
+4. **No git commit made** — pending user approval
 
 ## Open Items
 
 | Item | Status |
 |------|--------|
-| Update SOUL.md model from gemma-4 → deepseek-v4 | Pending |
-| Update USER.md model from gpt-5.4-mini → deepseek-v4 | Pending |
-
-## Session Changelog
-
-| File | Action |
-|------|--------|
-| `SESSION_REPORT.md` | Updated for current session |
+| Blueprint files need git commit | Pending user approval |
+| Earnings kit ready for use | Done — sign up when ready |

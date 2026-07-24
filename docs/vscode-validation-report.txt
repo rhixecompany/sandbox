@@ -1,10 +1,11 @@
-# VS Code Config Validation Report
+# VS Code Config Validation Report — 2026-07-24
 
 Scanned: C:\Users\Alexa\Desktop\SandBox
 
 ## Result
 
-- Passed: 127
+- Passed: 119
 - Failed: 0
+- Warnings: 96 (all formatter-override, expected by design)
 
 **Status:** passed
