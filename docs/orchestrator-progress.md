@@ -1,122 +1,157 @@
 # Orchestrator Progress
 
-This file is appended between completed phases. Do not rewrite prior entries.
+Generated: 2026-07-24T05:10:25.389250+00:00
 
----
+- 2026-07-24T05:10:06 start phase1-inventory
+- 2026-07-24T05:10:09 finish phase1-inventory rc=0
+- 2026-07-24T05:10:09 start phase1-dedupe
+- 2026-07-24T05:10:10 finish phase1-dedupe rc=0
+- 2026-07-24T05:10:10 start phase1-judge
+- 2026-07-24T05:10:12 finish phase1-judge rc=0
+- 2026-07-24T05:10:13 start phase1-remediate
+- 2026-07-24T05:10:13 finish phase1-remediate rc=0
+- 2026-07-24T05:10:13 start phase1-consolidate
+- 2026-07-24T05:10:14 finish phase1-consolidate rc=0
+- 2026-07-24T05:10:14 start phase2-context
+- 2026-07-24T05:10:15 finish phase2-context rc=0
+- 2026-07-24T05:10:15 finish phase2-vscode rc=2
+- 2026-07-24T05:10:16 finish phase3 mirrored=211
+- 2026-07-24T05:10:24 start phase4-discovery
+- 2026-07-24T05:10:25 finish phase4-discovery rc=0
+- 2026-07-24T05:10:25 execute-all-prompts completed
 
-## Initialize
+- 2026-07-24T05:11:46.962094+00:00 start phase1-inventory
 
-**Date:** 2026-07-16
-**Orchestrator:** `execute-all-prompts`
-**Artifact status:** missing entries were repaired before execution.
+- 2026-07-24T05:11:49.913374+00:00 finish phase1-inventory rc=0
 
-|| Artifact | Path |
-|---------|------|
-| Orchestrator prompt | `%LOCALAPPDATA%\hermes\prompts\execute-all-prompts.prompt.md` |
-| Phases reference | `templates/execute-all-prompts/phases.md` |
-| Verification report | `docs/orchestrator-verification.md` |
-| Progress tracker | this file |
-| Phase 1 prompt | `%LOCALAPPDATA%\hermes\prompts\audit-skills-judge-fix.prompt.md` |
-| Phase 2 prompt | `%LOCALAPPDATA%\hermes\prompts\agents-system-prompt-context-fix.prompt.md` |
-| Phase 3 prompt | `%LOCALAPPDATA%\hermes\prompts\sync-hermes-copilot-codex.prompt.md` |
-| Phase 4 prompt | `%LOCALAPPDATA%\hermes\prompts\test-providers-models.prompt.md` |
+- 2026-07-24T05:11:49.916330+00:00 start phase1-dedupe
 
-**Started:** prompt artifacts repaired and verified.
+- 2026-07-24T05:11:50.874144+00:00 finish phase1-dedupe rc=0
 
----
+- 2026-07-24T05:11:50.876145+00:00 start phase1-judge
 
-## Phase 1: Audit Skills Judge Fix
+- 2026-07-24T05:11:52.383322+00:00 finish phase1-judge rc=0
 
-**Date:** 2026-07-16
-**Status:** COMPLETED ✓
+- 2026-07-24T05:11:52.779744+00:00 start phase1-remediate
 
-### Evidence
-- `docs/local-skills.md`: 427 lines (local skills inventory)
-- `judge_results/summary5.md`: 574 skills, 8 fail (initially 600, 23 fail → removed duplicates)
-- Final judge pass: **574 skills, 0 fail** (all PASS)
-- Removed `.restore-backups.DISABLED`, `.archive` duplicate directories
+- 2026-07-24T05:11:53.368079+00:00 finish phase1-remediate rc=0
 
----
+- 2026-07-24T05:11:53.370190+00:00 start phase1-consolidate
 
-## Phase 2: Agents System Prompt Context Fix
+- 2026-07-24T05:11:54.134936+00:00 finish phase1-consolidate rc=0
 
-**Date:** 2026-07-16
-**Status:** COMPLETED ✓
+- 2026-07-24T05:11:54.139527+00:00 start phase2-context
 
-### Evidence
-- Discovery: 174 Copilot agents, 186 instructions, 1 Codex twin pair
-- Schema defects: **1 → 0** (fixed `declarative-agents-architect.agent.md` missing `description`)
-- 3 semantic-duplicate groups flagged (not auto-fixed — preserve intent)
-- Report: `results/agents-fix.output.md`
-- Registry: `results/consolidated-agent-registry.json` (174 agents)
+- 2026-07-24T05:11:55.002193+00:00 finish phase2-context rc=0
 
----
+- 2026-07-24T05:11:55.685926+00:00 finish phase2-vscode rc=2
 
-## Phase 3: Audit Plans
+- 2026-07-24T05:11:56.370778+00:00 finish phase3 mirrored=211
 
-**Date:** 2026-07-16
-**Status:** COMPLETED ✓
+- 2026-07-24T05:12:05.097733+00:00 start phase4-discovery
 
-### Evidence
-- `.hermes/plans/` directory initialized with 1 executable plan
-- `normalize_plans.py` ran: plan frontmatter normalized, SESSION_REPORT.md regenerated
-- Saved: `SESSION_REPORT.md`, `.hermes/plans/2026-06-30-execution-plan-for-prompt-and-plan-normalization.md`
+- 2026-07-24T05:12:05.644237+00:00 finish phase4-discovery rc=0
 
----
+- 2026-07-24T05:12:55.432309+00:00 start phase1-inventory
 
-## Phase 4: Prompts Repair
+- 2026-07-24T05:12:57.503464+00:00 finish phase1-inventory rc=0
 
-**Date:** 2026-07-16
-**Status:** COMPLETED ✓
+- 2026-07-24T05:12:57.505552+00:00 start phase1-dedupe
 
-### Evidence
-- 211 prompt files scanned by `fix_prompts.py`
-- **2 fixed**, 209 unchanged (already clean)
-- Fixes applied: `FIX_TAGS_FORMAT` on `debugger-prompt.prompt.md` and `pl.prompt.md`
+- 2026-07-24T05:12:58.933885+00:00 finish phase1-dedupe rc=0
 
----
+- 2026-07-24T05:12:58.938272+00:00 start phase1-judge
 
-## Phase 5: Test Providers & Models
+- 2026-07-24T05:13:00.909704+00:00 finish phase1-judge rc=0
 
-**Date:** 2026-07-16
-**Status:** COMPLETED ✓
+- 2026-07-24T05:13:01.455572+00:00 start phase1-remediate
 
-### Evidence
-- Provider inventory: 9 providers, 21 configured credentials
-- OpenRouter catalog: 342 models, 23 free
-- Nvidia NIM free models available (15+)
-- Current config: primary=nous `stepfun/step-3.7-flash:free`, fallback=openrouter→qwen
-- Written: `docs/providers-models-inventory.md`, `docs/benchmark-results.json`
+- 2026-07-24T05:13:02.283257+00:00 finish phase1-remediate rc=0
 
----
+- 2026-07-24T05:13:02.285685+00:00 start phase1-consolidate
 
-## Final Verification
+- 2026-07-24T05:13:03.616514+00:00 finish phase1-consolidate rc=0
 
-**Status:** ✓ ALL PHASES COMPLETE
+- 2026-07-24T05:13:03.622253+00:00 start phase2-context
 
-| Phase | Status | Artifacts |
-|-------|--------|-----------|
-| 1. Audit Skills Judge Fix | ✅ | `judge_results/`, `docs/local-skills.md` |
-| 2. Agents System Prompt Context Fix | ✅ | `results/agents-fix.output.md`, `results/consolidated-agent-registry.json` |
-| 3. Audit Plans | ✅ | `.hermes/plans/`, `SESSION_REPORT.md` |
-| 4. Prompts Repair | ✅ | 211 prompts scanned, 2 fixed |
-| 5. Test Providers & Models | ✅ | `docs/providers-models-inventory.md`, `docs/benchmark-results.json` |
-- `judge_results/summary6.md`: 574 skills judged, **574 passed, 0 failed**
-- Average score: 88.8
-- All skills have proper frontmatter (name, title, description, version, author)
-- All skills have Overview, Pitfalls, and When to Use/Workflow sections
-- Removed duplicate/backup skill directories:
-  - `.restore-backups.DISABLED` (official optional backups)
-  - `.restore-backups` (nested backups in skills dir)
-  - `.archive` (archived skills)
-  - `.archive-github-cleanup` (github cleanup archive)
-- Fixed 23 skills with missing frontmatter fields and sections
-- Skill files on disk: 871 SKILL.md files
-- `hermes skills audit`: completed (103 skills scanned — community-source subset)
-- `build_path_mapping.py`: 591 skills indexed (includes .archive/.restore-backups)
+- 2026-07-24T05:13:04.548605+00:00 finish phase2-context rc=0
 
-### Notes
-- Official skills restored with `hermes skills repair-official --restore --yes all`
-- Unicode decode errors in hub cache files fixed before restore
-- Audit scan shows many community skills blocked (DANGEROUS/CAUTION verdicts)
-- Ready for Phase 2
+- 2026-07-24T05:13:05.429695+00:00 finish phase2-vscode rc=2
+
+- 2026-07-24T05:13:06.493648+00:00 finish phase3 mirrored=211
+
+- 2026-07-24T05:13:17.397098+00:00 start phase4-discovery
+
+- 2026-07-24T05:13:18.852186+00:00 finish phase4-discovery rc=0
+
+- 2026-07-24T05:15:48.050508+00:00 execute-all-prompts started
+
+- 2026-07-24T05:15:48.054934+00:00 start phase1-inventory
+
+- 2026-07-24T05:15:49.204766+00:00 finish phase1-inventory rc=0
+
+- 2026-07-24T05:15:49.206732+00:00 start phase1-dedupe
+
+- 2026-07-24T05:15:50.055874+00:00 finish phase1-dedupe rc=0
+
+- 2026-07-24T05:15:50.057743+00:00 start phase1-judge
+
+- 2026-07-24T05:15:51.414346+00:00 finish phase1-judge rc=0
+
+- 2026-07-24T05:15:51.738379+00:00 start phase1-remediate
+
+- 2026-07-24T05:15:52.260328+00:00 finish phase1-remediate rc=0
+
+- 2026-07-24T05:15:52.262129+00:00 start phase1-consolidate
+
+- 2026-07-24T05:15:52.923053+00:00 finish phase1-consolidate rc=0
+
+- 2026-07-24T05:15:52.929628+00:00 start phase2-context
+
+- 2026-07-24T05:15:53.641083+00:00 finish phase2-context rc=0
+
+- 2026-07-24T05:15:54.252788+00:00 finish phase2-vscode rc=2
+
+- 2026-07-24T05:15:55.037892+00:00 finish phase3 mirrored=211
+
+- 2026-07-24T05:16:03.030728+00:00 start phase4-discovery
+
+- 2026-07-24T05:16:03.625706+00:00 finish phase4-discovery rc=0
+
+- 2026-07-24T05:16:03.632682+00:00 execute-all-prompts completed
+
+- 2026-07-24T05:17:03.576972+00:00 execute-all-prompts started
+
+- 2026-07-24T05:17:03.582834+00:00 start phase1-inventory
+
+- 2026-07-24T05:17:05.864068+00:00 finish phase1-inventory rc=0
+
+- 2026-07-24T05:17:05.867276+00:00 start phase1-dedupe
+
+- 2026-07-24T05:17:07.158532+00:00 finish phase1-dedupe rc=0
+
+- 2026-07-24T05:17:07.161165+00:00 start phase1-judge
+
+- 2026-07-24T05:17:09.059006+00:00 finish phase1-judge rc=0
+
+- 2026-07-24T05:17:09.668967+00:00 start phase1-remediate
+
+- 2026-07-24T05:17:10.682892+00:00 finish phase1-remediate rc=0
+
+- 2026-07-24T05:17:10.687191+00:00 start phase1-consolidate
+
+- 2026-07-24T05:17:11.744837+00:00 finish phase1-consolidate rc=0
+
+- 2026-07-24T05:17:11.760422+00:00 start phase2-context
+
+- 2026-07-24T05:17:12.693470+00:00 finish phase2-context rc=0
+
+- 2026-07-24T05:18:17.387877+00:00 finish phase2-vscode rc=0
+
+- 2026-07-24T05:18:17.941401+00:00 finish phase3 mirrored=211
+
+- 2026-07-24T05:18:27.902855+00:00 start phase4-discovery
+
+- 2026-07-24T05:18:28.592806+00:00 finish phase4-discovery rc=0
+
+- 2026-07-24T05:18:28.599684+00:00 execute-all-prompts completed

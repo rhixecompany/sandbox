@@ -1,0 +1,650 @@
+name	path	score	errors	duration
+1password	C:\Users\Alexa\AppData\Local\hermes\skills\security\1password\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.000712799999746494
+3-statement-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\3-statement-model\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.001135399994382169
+accelerate	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\accelerate\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0014222999961930327
+acpx-executor	C:\Users\Alexa\AppData\Local\hermes\skills\acpx-executor\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.0011452000035205856
+apple	C:\Users\Alexa\AppData\Local\hermes\skills\apple\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.001189000002341345
+architecture-blueprint-generator	C:\Users\Alexa\AppData\Local\hermes\skills\architecture\architecture-blueprint-generator\SKILL.md	100		0.0019265000009909272
+folder-structure-blueprint-generator	C:\Users\Alexa\AppData\Local\hermes\skills\architecture\folder-structure-blueprint-generator\SKILL.md	100		0.0011183999959030189
+technology-stack-blueprint-generator	C:\Users\Alexa\AppData\Local\hermes\skills\architecture\technology-stack-blueprint-generator\SKILL.md	100		0.001544499995361548
+audit-plans	C:\Users\Alexa\AppData\Local\hermes\skills\audit-plans\SKILL.md	95	Missing Pitfalls section	0.0014536000016960315
+agent-browser	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\agent-browser\SKILL.md	90	Missing Overview section	0.0010638000021572225
+agent-governance	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\agent-governance\SKILL.md	100		0.002466500001901295
+agentic-eval	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\agentic-eval\SKILL.md	100		0.002450100000714883
+antigravity-cli	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\antigravity-cli\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.001610499995877035
+blackbox	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\blackbox\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0027685000022756867
+claude-code	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\claude-code\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.002130000000761356
+codex	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\codex\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0020507999943220057
+customize-opencode	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\customize-opencode\SKILL.md	100		0.0033819999953266233
+enhance-markdown	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\enhance-markdown\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.013158399997337256
+grok	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\grok\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.002905300003476441
+hermes-agent	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\hermes-agent\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.01424820000102045
+hermes-breakdown	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\hermes-breakdown\SKILL.md	90	Missing Overview section	0.014837100003205705
+hermes-skill-library-maintenance	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\hermes-skill-library-maintenance\SKILL.md	100		0.014489300003333483
+honcho	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\honcho\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0029052000027149916
+multi-agent-sync	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\multi-agent-sync\SKILL.md	90	Missing Overview section	0.018772299998090602
+opencode	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\opencode\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.021292600002198014
+openhands	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\openhands\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.01269519999914337
+qwen-code	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\qwen-code\SKILL.md	90	Missing Overview section	0.002329000002646353
+sequential-orchestration	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\sequential-orchestration\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.02242120000300929
+template	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\template\SKILL.md	100		0.017293199998675846
+using-superpowers	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\using-superpowers\SKILL.md	90	Missing Overview section	0.017641899998125155
+axolotl	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\axolotl\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.009967300000425894
+batch-skills-audit	C:\Users\Alexa\AppData\Local\hermes\skills\batch-skills-audit\SKILL.md	95	Missing Pitfalls section	0.00794280000263825
+binance-python-api-tutorial	C:\Users\Alexa\AppData\Local\hermes\skills\binance-python-api-tutorial\SKILL.md	90	Missing Overview section	0.007812800002284348
+evm	C:\Users\Alexa\AppData\Local\hermes\skills\blockchain\evm\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.008815499997581355
+hyperliquid	C:\Users\Alexa\AppData\Local\hermes\skills\blockchain\hyperliquid\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.007673200001590885
+solana	C:\Users\Alexa\AppData\Local\hermes\skills\blockchain\solana\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006624900001042988
+boost-prompt	C:\Users\Alexa\AppData\Local\hermes\skills\boost-prompt\SKILL.md	90	Missing Overview section	0.007884699996793643
+boost-prompts	C:\Users\Alexa\AppData\Local\hermes\skills\boost-prompts\SKILL.md	100		0.003797000004851725
+bun-nextjs	C:\Users\Alexa\AppData\Local\hermes\skills\bun-nextjs\SKILL.md	100		0.004902599997876678
+bun-shell	C:\Users\Alexa\AppData\Local\hermes\skills\bun-shell\SKILL.md	80	Missing frontmatter field: version; Missing Overview section	0.005904099998588208
+canvas	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\canvas\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.002352100003918167
+chainlink	C:\Users\Alexa\AppData\Local\hermes\skills\chainlink\SKILL.md	70	Missing frontmatter field: version; Missing Overview section; Missing Workflow or When to Use section	0.0057226999997510575
+chroma	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\chroma\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005884400001377799
+ci-cd-best-practices	C:\Users\Alexa\AppData\Local\hermes\skills\ci-cd-best-practices\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0026252999959979206
+ci-cd-pipeline-builder	C:\Users\Alexa\AppData\Local\hermes\skills\ci-cd-pipeline-builder\SKILL.md	65	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Pitfalls section	0.006192900000314694
+claude-code	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\claude-code\SKILL.md	90	Missing Overview section	0.00345730000117328
+cli	C:\Users\Alexa\AppData\Local\hermes\skills\devops\cli\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006197599999723025
+clip	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\clip\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.006384100001014303
+cloudflare-temporary-deploy	C:\Users\Alexa\AppData\Local\hermes\skills\web-development\cloudflare-temporary-deploy\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004957600001944229
+code-wiki	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\code-wiki\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.003545999999914784
+one-three-one-rule	C:\Users\Alexa\AppData\Local\hermes\skills\communication\one-three-one-rule\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005075200002465863
+computer-use	C:\Users\Alexa\AppData\Local\hermes\skills\computer-use\SKILL.md	90	Missing Overview section	0.004228899997542612
+algorithmic-art	C:\Users\Alexa\AppData\Local\hermes\skills\creative\algorithmic-art\SKILL.md	90	Missing Overview section	0.004409200002555735
+architecture-diagram	C:\Users\Alexa\AppData\Local\hermes\skills\creative\architecture-diagram\SKILL.md	100		0.0024879999982658774
+ascii-art	C:\Users\Alexa\AppData\Local\hermes\skills\creative\ascii-art\SKILL.md	90	Missing Overview section	0.0067746999993687496
+ascii-video	C:\Users\Alexa\AppData\Local\hermes\skills\creative\ascii-video\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author	0.0041412999999010935
+baoyu-article-illustrator	C:\Users\Alexa\AppData\Local\hermes\skills\creative\baoyu-article-illustrator\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.008683000000019092
+baoyu-comic	C:\Users\Alexa\AppData\Local\hermes\skills\creative\baoyu-comic\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004939400001603644
+baoyu-infographic	C:\Users\Alexa\AppData\Local\hermes\skills\creative\baoyu-infographic\SKILL.md	100		0.006266000003961381
+blender-mcp	C:\Users\Alexa\AppData\Local\hermes\skills\creative\blender-mcp\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0030823999986751005
+brand-guidelines	C:\Users\Alexa\AppData\Local\hermes\skills\creative\brand-guidelines\SKILL.md	90	Missing Overview section	0.0027506999977049418
+canvas-design	C:\Users\Alexa\AppData\Local\hermes\skills\creative\canvas-design\SKILL.md	90	Missing Overview section	0.0061158999960753135
+claude-design	C:\Users\Alexa\AppData\Local\hermes\skills\creative\claude-design\SKILL.md	100		0.007456100000126753
+comfyui	C:\Users\Alexa\AppData\Local\hermes\skills\creative\comfyui\SKILL.md	100		0.008238800000981428
+concept-diagrams	C:\Users\Alexa\AppData\Local\hermes\skills\creative\concept-diagrams\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.002922600004239939
+content-research-writer	C:\Users\Alexa\AppData\Local\hermes\skills\creative\content-research-writer\SKILL.md	100		0.0054136999970069155
+creative-ideation	C:\Users\Alexa\AppData\Local\hermes\skills\creative\creative-ideation\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00483669999812264
+design-md	C:\Users\Alexa\AppData\Local\hermes\skills\creative\design-md\SKILL.md	100		0.0022848000007797964
+excalidraw	C:\Users\Alexa\AppData\Local\hermes\skills\creative\excalidraw\SKILL.md	100		0.003297199997177813
+excalidraw-diagram-generator	C:\Users\Alexa\AppData\Local\hermes\skills\creative\excalidraw-diagram-generator\SKILL.md	90	Missing Overview section	0.011668000006466173
+face-obscure-video-chat	C:\Users\Alexa\AppData\Local\hermes\skills\creative\face-obscure-video-chat\SKILL.md	90	Missing Overview section	0.005132899997988716
+frontend-design	C:\Users\Alexa\AppData\Local\hermes\skills\creative\frontend-design\SKILL.md	90	Missing Overview section	0.009488100004091393
+html-artifact	C:\Users\Alexa\AppData\Local\hermes\skills\creative\html-artifact\SKILL.md	90	Missing Overview section	0.005506200002855621
+humanizer	C:\Users\Alexa\AppData\Local\hermes\skills\creative\humanizer\SKILL.md	100		0.007343299999774899
+hyperframes	C:\Users\Alexa\AppData\Local\hermes\skills\creative\hyperframes\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004136199997446965
+image-manipulation-image-magick	C:\Users\Alexa\AppData\Local\hermes\skills\creative\image-manipulation-image-magick\SKILL.md	90	Missing Overview section	0.0021297999992384575
+kanban-video-orchestrator	C:\Users\Alexa\AppData\Local\hermes\skills\creative\kanban-video-orchestrator\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006662599997071084
+legacy-circuit-mockups	C:\Users\Alexa\AppData\Local\hermes\skills\creative\legacy-circuit-mockups\SKILL.md	90	Missing Overview section	0.006935799996426795
+manim-video	C:\Users\Alexa\AppData\Local\hermes\skills\creative\manim-video\SKILL.md	100		0.008051500000874512
+marp-slide	C:\Users\Alexa\AppData\Local\hermes\skills\creative\marp-slide\SKILL.md	100		0.004820300004212186
+meme-generation	C:\Users\Alexa\AppData\Local\hermes\skills\creative\meme-generation\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.007800400002452079
+mermaid-diagrams	C:\Users\Alexa\AppData\Local\hermes\skills\creative\mermaid-diagrams\SKILL.md	100		0.007979000001796521
+p5js	C:\Users\Alexa\AppData\Local\hermes\skills\creative\p5js\SKILL.md	100		0.0026496999998926185
+penpot-uiux-design	C:\Users\Alexa\AppData\Local\hermes\skills\creative\penpot-uiux-design\SKILL.md	90	Missing Overview section	0.008350900003279094
+pixel-art	C:\Users\Alexa\AppData\Local\hermes\skills\creative\pixel-art\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006287299998803064
+plantuml-ascii	C:\Users\Alexa\AppData\Local\hermes\skills\creative\plantuml-ascii\SKILL.md	100		0.0060725000003003515
+popular-web-designs	C:\Users\Alexa\AppData\Local\hermes\skills\creative\popular-web-designs\SKILL.md	100		0.0032693999964976683
+pretext	C:\Users\Alexa\AppData\Local\hermes\skills\creative\pretext\SKILL.md	95	Missing Pitfalls section	0.003554499999154359
+sketch	C:\Users\Alexa\AppData\Local\hermes\skills\creative\sketch\SKILL.md	100		0.007562400001916103
+songwriting-and-ai-music	C:\Users\Alexa\AppData\Local\hermes\skills\creative\songwriting-and-ai-music\SKILL.md	100		0.005964700001641177
+theme-factory	C:\Users\Alexa\AppData\Local\hermes\skills\creative\theme-factory\SKILL.md	90	Missing Overview section	0.0027886000025318936
+touchdesigner-mcp	C:\Users\Alexa\AppData\Local\hermes\skills\creative\touchdesigner-mcp\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.0036668000029749237
+vsdc-video-masking	C:\Users\Alexa\AppData\Local\hermes\skills\creative\vsdc-video-masking\SKILL.md	90	Missing Overview section	0.005147199997736607
+web-artifacts-builder	C:\Users\Alexa\AppData\Local\hermes\skills\creative\web-artifacts-builder\SKILL.md	100		0.007115000000339933
+writing-clearly-and-concisely	C:\Users\Alexa\AppData\Local\hermes\skills\creative\writing-clearly-and-concisely\SKILL.md	90	Missing Overview section	0.009280499994929414
+creative-ideation	C:\Users\Alexa\AppData\Local\hermes\skills\creative\creative-ideation\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.003580500000680331
+darwinian-evolver	C:\Users\Alexa\AppData\Local\hermes\skills\research\darwinian-evolver\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0035891999941668473
+jupyter-live-kernel	C:\Users\Alexa\AppData\Local\hermes\skills\data-science\jupyter-live-kernel\SKILL.md	90	Missing Overview section	0.0021919000064372085
+dcf-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\dcf-model\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.005221500003244728
+-agents-fix-discover	C:\Users\Alexa\AppData\Local\hermes\skills\development\-agents-fix-discover\SKILL.md	100		0.007708700002694968
+-agents-fix-report	C:\Users\Alexa\AppData\Local\hermes\skills\development\-agents-fix-report\SKILL.md	100		0.0045449000026565045
+-verify-and-dedupe	C:\Users\Alexa\AppData\Local\hermes\skills\development\-verify-and-dedupe\SKILL.md	100		0.004316799997468479
+add-hooks-to-config	C:\Users\Alexa\AppData\Local\hermes\skills\development\add-hooks-to-config\SKILL.md	100		0.004041200001665857
+agents-system-prompt-context-fix-runner	C:\Users\Alexa\AppData\Local\hermes\skills\development\agents-system-prompt-context-fix-runner\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004366599998320453
+ai-prompt-engineering-safety-review	C:\Users\Alexa\AppData\Local\hermes\skills\development\ai-prompt-engineering-safety-review\SKILL.md	100		0.004468400002224371
+analyze-hf-models	C:\Users\Alexa\AppData\Local\hermes\skills\development\analyze-hf-models\SKILL.md	100		0.0033777999997255392
+analyze-skill-codeblocks	C:\Users\Alexa\AppData\Local\hermes\skills\development\analyze-skill-codeblocks\SKILL.md	100		0.0036480999988270923
+apply-pending-memory	C:\Users\Alexa\AppData\Local\hermes\skills\development\apply-pending-memory\SKILL.md	100		0.0053955000039422885
+apply-pending-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\apply-pending-skills\SKILL.md	100		0.006855600004200824
+apply-vscode-customizations	C:\Users\Alexa\AppData\Local\hermes\skills\development\apply-vscode-customizations\SKILL.md	100		0.0024069999999483116
+asyncio-9min-youtube	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-9min-youtube\SKILL.md	90	Missing Overview section	0.005050499996286817
+asyncio-complete-guide	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-complete-guide\SKILL.md	90	Missing Overview section	0.002934099997219164
+asyncio-full-tutorial	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-full-tutorial\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.0034398999996483326
+asyncio-geeksforgeeks	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-geeksforgeeks\SKILL.md	90	Missing Overview section	0.003807000000961125
+asyncio-hands-on-walkthrough	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-hands-on-walkthrough\SKILL.md	90	Missing Overview section	0.006770599997253157
+asyncio-part1-basics	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-part1-basics\SKILL.md	90	Missing Overview section	0.007932000000437256
+asyncio-patricks-blog	C:\Users\Alexa\AppData\Local\hermes\skills\development\asyncio-patricks-blog\SKILL.md	90	Missing Overview section	0.003458300001511816
+audit-227	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-227\SKILL.md	100		0.004544200004602317
+audit-227-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-227-cjs\SKILL.md	100		0.0063196999981300905
+audit-227-js	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-227-js\SKILL.md	100		0.004100099999050144
+audit-agents-hashes	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-agents-hashes\SKILL.md	100		0.0025626000060583465
+audit-fix-remediate-safe	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-fix-remediate-safe\SKILL.md	100		0.004065599998284597
+audit-prompts	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-prompts\SKILL.md	100		0.005387299999711104
+audit-vscode-config	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-vscode-config\SKILL.md	100		0.005473500001244247
+audit-vscode-config-v2	C:\Users\Alexa\AppData\Local\hermes\skills\development\audit-vscode-config-v2\SKILL.md	100		0.0019848000010824762
+batch-delete-profiles	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-delete-profiles\SKILL.md	100		0.005333700006303843
+batch-localappdata-skillcode	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-localappdata-skillcode\SKILL.md	100		0.002265600000100676
+batch-remediate	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-remediate\SKILL.md	100		0.005626899997878354
+batch-remediate-42-59	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-remediate-42-59\SKILL.md	100		0.004956800003128592
+batch-rewrite-worst	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-rewrite-worst\SKILL.md	100		0.001804300001822412
+batch-skill-judge	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-skill-judge\SKILL.md	100		0.0028894999995827675
+batch-update-hermes-paths	C:\Users\Alexa\AppData\Local\hermes\skills\development\batch-update-hermes-paths\SKILL.md	100		0.003618900002038572
+benchmark-models	C:\Users\Alexa\AppData\Local\hermes\skills\development\benchmark-models\SKILL.md	100		0.0024103999967337586
+benchmark-providers	C:\Users\Alexa\AppData\Local\hermes\skills\development\benchmark-providers\SKILL.md	100		0.00406479999946896
+benchmark-results	C:\Users\Alexa\AppData\Local\hermes\skills\development\benchmark-results\SKILL.md	100		0.004170899999735411
+benchmark-run-20260710	C:\Users\Alexa\AppData\Local\hermes\skills\development\benchmark-run-20260710\SKILL.md	100		0.007132200000341982
+binance-api-reference	C:\Users\Alexa\AppData\Local\hermes\skills\development\binance-api-reference\SKILL.md	90	Missing Overview section	0.00771060000261059
+boost-near-pass-refs	C:\Users\Alexa\AppData\Local\hermes\skills\development\boost-near-pass-refs\SKILL.md	100		0.0023644999964744784
+build-path-mapping	C:\Users\Alexa\AppData\Local\hermes\skills\development\build-path-mapping\SKILL.md	100		0.0044787999941036105
+busha-api-quickstart	C:\Users\Alexa\AppData\Local\hermes\skills\development\busha-api-quickstart\SKILL.md	90	Missing Overview section	0.0034690000029513612
+busha-business-api	C:\Users\Alexa\AppData\Local\hermes\skills\development\busha-business-api\SKILL.md	90	Missing Overview section	0.004195999994408339
+busha-quick-start-guide	C:\Users\Alexa\AppData\Local\hermes\skills\development\busha-quick-start-guide\SKILL.md	90	Missing Overview section	0.0030216999948606826
+categorize-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\categorize-skills\SKILL.md	100		0.0018437000035191886
+check-handle	C:\Users\Alexa\AppData\Local\hermes\skills\development\check-handle\SKILL.md	100		0.00389549999817973
+chrome-devtools	C:\Users\Alexa\AppData\Local\hermes\skills\development\chrome-devtools\SKILL.md	90	Missing Overview section	0.001393300000927411
+configure-hermes	C:\Users\Alexa\AppData\Local\hermes\skills\development\configure-hermes\SKILL.md	100		0.0030269999988377094
+consolidate-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\consolidate-skills\SKILL.md	100		0.008784300000115763
+context-map	C:\Users\Alexa\AppData\Local\hermes\skills\development\context-map\SKILL.md	100		0.004722500001662411
+convert-plaintext-to-md	C:\Users\Alexa\AppData\Local\hermes\skills\development\convert-plaintext-to-md\SKILL.md	100		0.0036242999995010905
+copilot-cli-quickstart	C:\Users\Alexa\AppData\Local\hermes\skills\development\copilot-cli-quickstart\SKILL.md	100		0.005180400003155228
+copilot-mcp-server	C:\Users\Alexa\AppData\Local\hermes\skills\development\copilot-mcp-server\SKILL.md	100		0.005213500000536442
+copilot-sdk	C:\Users\Alexa\AppData\Local\hermes\skills\development\copilot-sdk\SKILL.md	100		0.0018151999975088984
+create-agentsmd	C:\Users\Alexa\AppData\Local\hermes\skills\development\create-agentsmd\SKILL.md	90	Missing Overview section	0.004049500006658491
+create-implementation-plan	C:\Users\Alexa\AppData\Local\hermes\skills\development\create-implementation-plan\SKILL.md	90	Missing Overview section	0.006650199997238815
+create-missing-memories	C:\Users\Alexa\AppData\Local\hermes\skills\development\create-missing-memories\SKILL.md	100		0.008071599993854761
+create-missing-souls	C:\Users\Alexa\AppData\Local\hermes\skills\development\create-missing-souls\SKILL.md	100		0.006852400001662318
+create-readme	C:\Users\Alexa\AppData\Local\hermes\skills\development\create-readme\SKILL.md	100		0.006186499995237682
+crypto-wallet-api-guide	C:\Users\Alexa\AppData\Local\hermes\skills\development\crypto-wallet-api-guide\SKILL.md	90	Missing Overview section	0.000818000000435859
+crypto-wallet-quickstart	C:\Users\Alexa\AppData\Local\hermes\skills\development\crypto-wallet-quickstart\SKILL.md	90	Missing Overview section	0.002907500005676411
+cryptoapis-wallet-builder	C:\Users\Alexa\AppData\Local\hermes\skills\development\cryptoapis-wallet-builder\SKILL.md	90	Missing Overview section	0.002499599999282509
+dedupe-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\dedupe-skills\SKILL.md	100		0.0035472000017762184
+dev-init-code-samples	C:\Users\Alexa\AppData\Local\hermes\skills\development\dev-init-code-samples\SKILL.md	100		0.0026338000025134534
+docs-inventory-report	C:\Users\Alexa\AppData\Local\hermes\skills\development\docs-inventory-report\SKILL.md	100		0.00443039999663597
+execute-workflow	C:\Users\Alexa\AppData\Local\hermes\skills\development\execute-workflow\SKILL.md	100		0.00489489999745274
+face-detection-uv4l-pi	C:\Users\Alexa\AppData\Local\hermes\skills\development\face-detection-uv4l-pi\SKILL.md	90	Missing Overview section	0.008377099999052007
+find-lock	C:\Users\Alexa\AppData\Local\hermes\skills\development\find-lock\SKILL.md	100		0.0019289999981992878
+find-locking-pid	C:\Users\Alexa\AppData\Local\hermes\skills\development\find-locking-pid\SKILL.md	100		0.004988000000594184
+fix-copilot-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-copilot-frontmatter\SKILL.md	100		0.0037672000034945086
+fix-crlf-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-crlf-frontmatter\SKILL.md	100		0.004891500000667293
+fix-duplicate-hooks	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-duplicate-hooks\SKILL.md	100		0.002627800000482239
+fix-eslint-mismatches	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-eslint-mismatches\SKILL.md	100		0.005235299999185372
+fix-fail-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-fail-skills\SKILL.md	100		0.002754699999059085
+fix-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-frontmatter\SKILL.md	100		0.0064281000013579614
+fix-frontmatter-yaml	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-frontmatter-yaml\SKILL.md	80	Missing frontmatter field: version; Missing frontmatter field: author	0.0026045999984489754
+fix-frontmatter-yaml-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-frontmatter-yaml-cjs\SKILL.md	100		0.010273500003677327
+fix-orphaned-brackets	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-orphaned-brackets\SKILL.md	100		0.0035955000057583675
+fix-prompts	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-prompts\SKILL.md	100		0.0035281000018585473
+fix-prompts-comprehensive	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-prompts-comprehensive\SKILL.md	100		0.0022552000009454787
+fix-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-skills\SKILL.md	100		0.006543399998918176
+fix-yaml-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\fix-yaml-frontmatter\SKILL.md	100		0.0031219000011333264
+flutterwave-transfers-api	C:\Users\Alexa\AppData\Local\hermes\skills\development\flutterwave-transfers-api\SKILL.md	90	Missing Overview section	0.003459400002611801
+generate-context-files	C:\Users\Alexa\AppData\Local\hermes\skills\development\generate-context-files\SKILL.md	100		0.0034547000032034703
+generate-custom-instructions-from-codebase	C:\Users\Alexa\AppData\Local\hermes\skills\development\generate-custom-instructions-from-codebase\SKILL.md	100		0.004260200003045611
+generate-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\generate-skills\SKILL.md	100		0.002975999996124301
+generate-vscode-audit-report	C:\Users\Alexa\AppData\Local\hermes\skills\development\generate-vscode-audit-report\SKILL.md	100		0.005633299995679408
+generate-vscode-configs	C:\Users\Alexa\AppData\Local\hermes\skills\development\generate-vscode-configs\SKILL.md	100		0.004987200001778547
+hello	C:\Users\Alexa\AppData\Local\hermes\skills\development\hello\SKILL.md	100		0.008036200000788085
+hello-world	C:\Users\Alexa\AppData\Local\hermes\skills\development\hello-world\SKILL.md	100		0.0020493000047281384
+hermes-deep-dive-guide	C:\Users\Alexa\AppData\Local\hermes\skills\development\hermes-deep-dive-guide\SKILL.md	90	Missing Overview section	0.004434499998751562
+hermes-luma-memory-arch	C:\Users\Alexa\AppData\Local\hermes\skills\development\hermes-luma-memory-arch\SKILL.md	90	Missing Overview section	0.0044466000035754405
+hermes-networkchuck-course	C:\Users\Alexa\AppData\Local\hermes\skills\development\hermes-networkchuck-course\SKILL.md	90	Missing Overview section	0.0026632000008248724
+hermes-persistent-memory	C:\Users\Alexa\AppData\Local\hermes\skills\development\hermes-persistent-memory\SKILL.md	90	Missing Overview section	0.0052575000008801
+hermes-quickstart	C:\Users\Alexa\AppData\Local\hermes\skills\development\hermes-quickstart\SKILL.md	90	Missing Overview section	0.001790199996321462
+how-paypal-works	C:\Users\Alexa\AppData\Local\hermes\skills\development\how-paypal-works\SKILL.md	90	Missing Overview section	0.00472339999396354
+inventory-agents	C:\Users\Alexa\AppData\Local\hermes\skills\development\inventory-agents\SKILL.md	100		0.005672000006597955
+inventory-prompts	C:\Users\Alexa\AppData\Local\hermes\skills\development\inventory-prompts\SKILL.md	100		0.002922300001955591
+lcs	C:\Users\Alexa\AppData\Local\hermes\skills\development\lcs\SKILL.md	100		0.006745800004864577
+list-cli-tools	C:\Users\Alexa\AppData\Local\hermes\skills\development\list-cli-tools\SKILL.md	100		0.004126799998630304
+make-skill-template	C:\Users\Alexa\AppData\Local\hermes\skills\development\make-skill-template\SKILL.md	100		0.007207499998912681
+memory-repair	C:\Users\Alexa\AppData\Local\hermes\skills\development\memory-repair\SKILL.md	100		0.0034064999999827705
+merge-config	C:\Users\Alexa\AppData\Local\hermes\skills\development\merge-config\SKILL.md	100		0.0038401999991037883
+merge-skill	C:\Users\Alexa\AppData\Local\hermes\skills\development\merge-skill\SKILL.md	100		0.0051015999997616746
+microsoft-code-reference	C:\Users\Alexa\AppData\Local\hermes\skills\development\microsoft-skill-creator\microsoft-code-reference\SKILL.md	90	Missing Overview section	0.005469000003358815
+microsoft-docs	C:\Users\Alexa\AppData\Local\hermes\skills\development\microsoft-skill-creator\microsoft-docs\SKILL.md	90	Missing Overview section	0.004132699999900069
+microsoft-skill-creator	C:\Users\Alexa\AppData\Local\hermes\skills\development\microsoft-skill-creator\SKILL.md	100		0.003344499993545469
+model-discovery	C:\Users\Alexa\AppData\Local\hermes\skills\development\model-discovery\SKILL.md	100		0.0041181999986292794
+normalize-plans	C:\Users\Alexa\AppData\Local\hermes\skills\development\normalize-plans\SKILL.md	100		0.001516999996965751
+normalize-prompt-actions	C:\Users\Alexa\AppData\Local\hermes\skills\development\normalize-prompt-actions\SKILL.md	100		0.010203500001807697
+patch-all-fail-sections	C:\Users\Alexa\AppData\Local\hermes\skills\development\patch-all-fail-sections\SKILL.md	100		0.005103900002723094
+patch-fail-structure	C:\Users\Alexa\AppData\Local\hermes\skills\development\patch-fail-structure\SKILL.md	100		0.004048700000566896
+paypal-getting-started	C:\Users\Alexa\AppData\Local\hermes\skills\development\paypal-getting-started\SKILL.md	90	Missing Overview section	0.004232499995850958
+paystack-dev-docs	C:\Users\Alexa\AppData\Local\hermes\skills\development\paystack-dev-docs\SKILL.md	90	Missing Overview section	0.003958900000725407
+paystack-getting-started	C:\Users\Alexa\AppData\Local\hermes\skills\development\paystack-getting-started\SKILL.md	90	Missing Overview section	0.0022779999999329448
+phase4-reconstruct	C:\Users\Alexa\AppData\Local\hermes\skills\development\phase4-reconstruct\SKILL.md	100		0.003980400004365947
+phase4-reconstruct-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\phase4-reconstruct-cjs\SKILL.md	100		0.005529100002604537
+prime-factors	C:\Users\Alexa\AppData\Local\hermes\skills\development\prime-factors\SKILL.md	100		0.0034357000040472485
+prompt-audit-all	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-audit-all\SKILL.md	100		0.002829500001098495
+prompt-audit-all-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-audit-all-cjs\SKILL.md	100		0.0028626999992411584
+prompt-batch-audit	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-batch-audit\SKILL.md	100		0.0035025000033783726
+prompt-builder	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-builder\SKILL.md	90	Missing Overview section	0.004443600002559833
+prompt-engineering	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-engineering\SKILL.md	90	Missing Overview section	0.0036518999986583367
+prompt-fix-metadata	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-fix-metadata\SKILL.md	100		0.004172299995843787
+prompt-inventory	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-inventory\SKILL.md	100		0.0024122999966493808
+prompt-repair-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompt-repair-frontmatter\SKILL.md	100		0.0025239999959012493
+prompts-repair	C:\Users\Alexa\AppData\Local\hermes\skills\development\prompts-repair\SKILL.md	90	Missing Overview section	0.004870299999311101
+quarantine-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\quarantine-skills\SKILL.md	100		0.004281000001356006
+remove-flat-duplicates	C:\Users\Alexa\AppData\Local\hermes\skills\development\remove-flat-duplicates\SKILL.md	100		0.00360029999865219
+repair-frontmatter-closes	C:\Users\Alexa\AppData\Local\hermes\skills\development\repair-frontmatter-closes\SKILL.md	100		0.006906700000399724
+review-pending-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\review-pending-skills\SKILL.md	100		0.0062975000037113205
+score-docs	C:\Users\Alexa\AppData\Local\hermes\skills\development\score-docs\SKILL.md	100		0.007087799996952526
+session-audit-227	C:\Users\Alexa\AppData\Local\hermes\skills\development\session-audit-227\SKILL.md	100		0.0029712999967159703
+session-audit-227-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\session-audit-227-cjs\SKILL.md	100		0.005148099997313693
+skill-audit	C:\Users\Alexa\AppData\Local\hermes\skills\development\skill-audit\SKILL.md	100		0.0034744000004138798
+skill-creator	C:\Users\Alexa\AppData\Local\hermes\skills\development\skill-creator\SKILL.md	100		0.0024836000011418946
+skill-management	C:\Users\Alexa\AppData\Local\hermes\skills\development\skill-management\SKILL.md	95	Missing Pitfalls section	0.003558899996278342
+skills-audit	C:\Users\Alexa\AppData\Local\hermes\skills\development\skills-audit\SKILL.md	100		0.004077199999301229
+suggest-awesome-github-copilot-agents	C:\Users\Alexa\AppData\Local\hermes\skills\development\suggest-awesome-github-copilot-agents\SKILL.md	100		0.005409400000644382
+suggest-awesome-github-copilot-instructions	C:\Users\Alexa\AppData\Local\hermes\skills\development\suggest-awesome-github-copilot-instructions\SKILL.md	100		0.004366900000604801
+test-models	C:\Users\Alexa\AppData\Local\hermes\skills\development\test-models\SKILL.md	100		0.0028224999987287447
+trim-banking	C:\Users\Alexa\AppData\Local\hermes\skills\development\trim-banking\SKILL.md	100		0.005241599996224977
+trim-remaining	C:\Users\Alexa\AppData\Local\hermes\skills\development\trim-remaining\SKILL.md	100		0.004650700000638608
+trim-research-reports	C:\Users\Alexa\AppData\Local\hermes\skills\development\trim-research-reports\SKILL.md	100		0.0049813000005087815
+trim-research-reports-final	C:\Users\Alexa\AppData\Local\hermes\skills\development\trim-research-reports-final\SKILL.md	100		0.003838500000711065
+update-agents-md	C:\Users\Alexa\AppData\Local\hermes\skills\development\update-agents-md\SKILL.md	100		0.003458799998043105
+update-implementation-plan	C:\Users\Alexa\AppData\Local\hermes\skills\development\update-implementation-plan\SKILL.md	100		0.002430900000035763
+using-git-worktrees	C:\Users\Alexa\AppData\Local\hermes\skills\development\using-git-worktrees\SKILL.md	100		0.00440810000145575
+validate-prompt-inventory	C:\Users\Alexa\AppData\Local\hermes\skills\development\validate-prompt-inventory\SKILL.md	100		0.005614699999568984
+validate-prompts	C:\Users\Alexa\AppData\Local\hermes\skills\development\validate-prompts\SKILL.md	100		0.002861799999664072
+validate-vscode-configs	C:\Users\Alexa\AppData\Local\hermes\skills\development\validate-vscode-configs\SKILL.md	100		0.004549199999019038
+validate-vscode-json	C:\Users\Alexa\AppData\Local\hermes\skills\development\validate-vscode-json\SKILL.md	100		0.003823999999440275
+verify-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\development\verify-frontmatter\SKILL.md	100		0.004445799997483846
+verify-frontmatter-cjs	C:\Users\Alexa\AppData\Local\hermes\skills\development\verify-frontmatter-cjs\SKILL.md	100		0.004007099996670149
+vscode-cli	C:\Users\Alexa\AppData\Local\hermes\skills\development\vscode-cli\SKILL.md	100		0.008319300002767704
+vscode-ext-commands	C:\Users\Alexa\AppData\Local\hermes\skills\development\vscode-ext-commands\SKILL.md	100		0.0038659999991068617
+vscode-ext-localization	C:\Users\Alexa\AppData\Local\hermes\skills\development\vscode-ext-localization\SKILL.md	100		0.0023707000000285916
+vscode-extension-playbook	C:\Users\Alexa\AppData\Local\hermes\skills\development\vscode-extension-playbook\SKILL.md	100		0.003393099999811966
+vscode-workspace-configurator	C:\Users\Alexa\AppData\Local\hermes\skills\development\vscode-workspace-configurator\SKILL.md	90	Missing Overview section	0.006049600000551436
+workiq-copilot	C:\Users\Alexa\AppData\Local\hermes\skills\development\workiq-copilot\SKILL.md	100		0.007335899994359352
+writing-skills	C:\Users\Alexa\AppData\Local\hermes\skills\development\writing-skills\SKILL.md	100		0.0043226000052527525
+appinsights-instrumentation	C:\Users\Alexa\AppData\Local\hermes\skills\devops\appinsights-instrumentation\SKILL.md	100		0.00717360000271583
+asdf	C:\Users\Alexa\AppData\Local\hermes\skills\devops\asdf\SKILL.md	100		0.004695999996329192
+aspire	C:\Users\Alexa\AppData\Local\hermes\skills\devops\aspire\SKILL.md	90	Missing Overview section	0.0040353000003960915
+azure-deployment-preflight	C:\Users\Alexa\AppData\Local\hermes\skills\devops\azure-deployment-preflight\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.003327599995827768
+azure-devops-cli	C:\Users\Alexa\AppData\Local\hermes\skills\devops\azure-devops-cli\SKILL.md	100		0.007440599998517428
+azure-resource-visualizer	C:\Users\Alexa\AppData\Local\hermes\skills\devops\azure-resource-visualizer\SKILL.md	90	Missing Overview section	0.0037885999990976416
+azure-role-selector	C:\Users\Alexa\AppData\Local\hermes\skills\devops\azure-role-selector\SKILL.md	100		0.004709300003014505
+azure-static-web-apps	C:\Users\Alexa\AppData\Local\hermes\skills\devops\azure-static-web-apps\SKILL.md	100		0.0059157999930903316
+cli	C:\Users\Alexa\AppData\Local\hermes\skills\devops\cli\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006083599997509737
+customization-audit	C:\Users\Alexa\AppData\Local\hermes\skills\devops\customization-audit\SKILL.md	100		0.006446399995184038
+datadog	C:\Users\Alexa\AppData\Local\hermes\skills\devops\datadog\SKILL.md	100		0.005801800005428959
+dependabot	C:\Users\Alexa\AppData\Local\hermes\skills\devops\dependabot\SKILL.md	100		0.0032015000033425167
+dependency-security-remediation	C:\Users\Alexa\AppData\Local\hermes\skills\devops\dependency-security-remediation\SKILL.md	90	Missing Overview section	0.006699700003082398
+docker-management	C:\Users\Alexa\AppData\Local\hermes\skills\devops\docker-management\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.00473259999853326
+entra-agent-user	C:\Users\Alexa\AppData\Local\hermes\skills\devops\entra-agent-user\SKILL.md	100		0.005154200000106357
+env-path-portability	C:\Users\Alexa\AppData\Local\hermes\skills\devops\env-path-portability\SKILL.md	90	Missing Overview section	0.009112200001254678
+fabric-lakehouse	C:\Users\Alexa\AppData\Local\hermes\skills\devops\fabric-lakehouse\SKILL.md	100		0.005514600001333747
+git-history-preserving-migration	C:\Users\Alexa\AppData\Local\hermes\skills\devops\git-history-preserving-migration\SKILL.md	100		0.006540599999425467
+github-actions-efficiency	C:\Users\Alexa\AppData\Local\hermes\skills\devops\github-actions-efficiency\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.008624199996120296
+github-copilot-cli	C:\Users\Alexa\AppData\Local\hermes\skills\devops\github-copilot-cli\SKILL.md	90	Missing Overview section	0.003202599997166544
+github-repo-artifact-audit	C:\Users\Alexa\AppData\Local\hermes\skills\devops\github-repo-artifact-audit\SKILL.md	80	Missing frontmatter field: author; Missing Overview section	0.005052400003478397
+glab	C:\Users\Alexa\AppData\Local\hermes\skills\devops\glab\SKILL.md	100		0.004467300001124386
+hermes-config-merge	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-config-merge\SKILL.md	90	Missing Overview section	0.0065922000067075714
+hermes-hooks	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-hooks\SKILL.md	90	Missing Overview section	0.005590699998720083
+hermes-platform-debugging	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-platform-debugging\SKILL.md	90	Missing Overview section	0.00500849999662023
+hermes-profiles	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-profiles\SKILL.md	90	Missing Overview section	0.00694870000006631
+hermes-s6-container-supervision	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-s6-container-supervision\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00767249999626074
+hermes-setup	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-setup\SKILL.md	90	Missing Overview section	0.007594200003950391
+hermes-skills	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-skills\SKILL.md	90	Missing Overview section	0.001699100001133047
+hermes-system-maintenance	C:\Users\Alexa\AppData\Local\hermes\skills\devops\hermes-system-maintenance\SKILL.md	100		0.002435700000205543
+jira	C:\Users\Alexa\AppData\Local\hermes\skills\devops\jira\SKILL.md	100		0.00504259999433998
+kanban-orchestrator	C:\Users\Alexa\AppData\Local\hermes\skills\devops\kanban-orchestrator\SKILL.md	100		0.003657499997643754
+kanban-worker	C:\Users\Alexa\AppData\Local\hermes\skills\devops\kanban-worker\SKILL.md	100		0.012760899997374509
+log-analysis-and-triage	C:\Users\Alexa\AppData\Local\hermes\skills\devops\log-analysis-and-triage\SKILL.md	100		0.005894299996725749
+monorepo-pr-workflow	C:\Users\Alexa\AppData\Local\hermes\skills\devops\monorepo-pr-workflow\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.004528199999185745
+msys2-management	C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.01014009999926202
+multi-stage-dockerfile	C:\Users\Alexa\AppData\Local\hermes\skills\devops\multi-stage-dockerfile\SKILL.md	100		0.003952599996409845
+pending-store-apply	C:\Users\Alexa\AppData\Local\hermes\skills\devops\pending-store-apply\SKILL.md	90	Missing Overview section	0.002773300002445467
+pinggy-tunnel	C:\Users\Alexa\AppData\Local\hermes\skills\devops\pinggy-tunnel\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0060968000034336
+pnpm-package-manager	C:\Users\Alexa\AppData\Local\hermes\skills\devops\pnpm-package-manager\SKILL.md	90	Missing Overview section	0.00711800000135554
+powerbi-modeling	C:\Users\Alexa\AppData\Local\hermes\skills\devops\powerbi-modeling\SKILL.md	90	Missing Overview section	0.005617399998300243
+profile-maintenance	C:\Users\Alexa\AppData\Local\hermes\skills\devops\profile-maintenance\SKILL.md	90	Missing Overview section	0.0035462999949231744
+projects-multi-repo-init-normalize	C:\Users\Alexa\AppData\Local\hermes\skills\devops\projects-multi-repo-init-normalize\SKILL.md	100		0.005913099994359072
+prompt-batch-fixer	C:\Users\Alexa\AppData\Local\hermes\skills\devops\prompt-batch-fixer\SKILL.md	90	Missing Overview section	0.007356300004175864
+prompt-sync	C:\Users\Alexa\AppData\Local\hermes\skills\devops\prompt-sync\SKILL.md	90	Missing Overview section	0.00345769999694312
+provider-model-audit	C:\Users\Alexa\AppData\Local\hermes\skills\devops\provider-model-audit\SKILL.md	90	Missing Overview section	0.0037031999963801354
+provider-reliability-diagnostics	C:\Users\Alexa\AppData\Local\hermes\skills\devops\provider-reliability-diagnostics\SKILL.md	90	Missing Overview section	0.004147699997702148
+rbac-audit-logging	C:\Users\Alexa\AppData\Local\hermes\skills\devops\rbac-audit-logging\SKILL.md	100		0.00827430000208551
+repo-management	C:\Users\Alexa\AppData\Local\hermes\skills\devops\repo-management\SKILL.md	80	Missing frontmatter field: title; Missing Workflow or When to Use section	0.0034570999996503815
+secret-scanning	C:\Users\Alexa\AppData\Local\hermes\skills\devops\secret-scanning\SKILL.md	90	Missing Overview section	0.004469899999094196
+service-integrations	C:\Users\Alexa\AppData\Local\hermes\skills\devops\service-integrations\SKILL.md	90	Missing Overview section	0.00579420000576647
+session-audit-report	C:\Users\Alexa\AppData\Local\hermes\skills\devops\session-audit-report\SKILL.md	100		0.004720599994470831
+session-history-audit	C:\Users\Alexa\AppData\Local\hermes\skills\devops\session-history-audit\SKILL.md	100		0.005206299996643793
+snowflake-semanticview	C:\Users\Alexa\AppData\Local\hermes\skills\devops\snowflake-semanticview\SKILL.md	90	Missing Overview section	0.00610459999734303
+terraform-azurerm-set-diff-analyzer	C:\Users\Alexa\AppData\Local\hermes\skills\devops\terraform-azurerm-set-diff-analyzer\SKILL.md	100		0.005527400004211813
+tmux-terminal-multiplexer	C:\Users\Alexa\AppData\Local\hermes\skills\devops\tmux-terminal-multiplexer\SKILL.md	90	Missing Overview section	0.009299400000600144
+uv-package-manager	C:\Users\Alexa\AppData\Local\hermes\skills\devops\uv-package-manager\SKILL.md	90	Missing Overview section	0.00620869999693241
+validate-memories	C:\Users\Alexa\AppData\Local\hermes\skills\devops\validate-memories\SKILL.md	90	Missing Overview section	0.005802799998491537
+watchers	C:\Users\Alexa\AppData\Local\hermes\skills\devops\watchers\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0036271999997552484
+webhook-subscriptions	C:\Users\Alexa\AppData\Local\hermes\skills\devops\webhook-subscriptions\SKILL.md	100		0.002987699997902382
+windows-installer-diagnostics	C:\Users\Alexa\AppData\Local\hermes\skills\devops\windows-installer-diagnostics\SKILL.md	90	Missing Overview section	0.005104600000777282
+windows-maintenance-operations	C:\Users\Alexa\AppData\Local\hermes\skills\devops\windows-maintenance-operations\SKILL.md	100		0.006804399999964517
+windows-package-management	C:\Users\Alexa\AppData\Local\hermes\skills\devops\windows-package-management\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.007561600003100466
+work-on-ticket	C:\Users\Alexa\AppData\Local\hermes\skills\devops\work-on-ticket\SKILL.md	100		0.009876800002530217
+workspace-audit	C:\Users\Alexa\AppData\Local\hermes\skills\devops\workspace-audit\SKILL.md	90	Missing Overview section	0.005318800001987256
+workspace-python-tooling	C:\Users\Alexa\AppData\Local\hermes\skills\devops\workspace-python-tooling\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.0038475999972433783
+dispatching-parallel-agents	C:\Users\Alexa\AppData\Local\hermes\skills\dispatching-parallel-agents\SKILL.md	90	Missing Overview section	0.002844599999662023
+django-application	C:\Users\Alexa\AppData\Local\hermes\skills\django-application\SKILL.md	65	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Pitfalls section	0.0037698000014643185
+django-celery	C:\Users\Alexa\AppData\Local\hermes\skills\django-celery\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.011931599998206366
+adversarial-ux-test	C:\Users\Alexa\AppData\Local\hermes\skills\dogfood\adversarial-ux-test\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004349199996795505
+dogfood	C:\Users\Alexa\AppData\Local\hermes\skills\qa\dogfood\SKILL.md	75	Missing frontmatter field: title; Missing frontmatter field: author; Missing Pitfalls section	0.006823600000643637
+domain-intel	C:\Users\Alexa\AppData\Local\hermes\skills\research\domain-intel\SKILL.md	45	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.009719999994558748
+drawio-skill	C:\Users\Alexa\AppData\Local\hermes\skills\drawio-skill\SKILL.md	90	Missing Overview section	0.005006100000173319
+drug-discovery	C:\Users\Alexa\AppData\Local\hermes\skills\research\drug-discovery\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0040463999976054765
+dspy	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\research\dspy\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.003246300002501812
+duckduckgo-search	C:\Users\Alexa\AppData\Local\hermes\skills\research\duckduckgo-search\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.002319100000022445
+agentmail	C:\Users\Alexa\AppData\Local\hermes\skills\email\agentmail\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.005233700001554098
+himalaya	C:\Users\Alexa\AppData\Local\hermes\skills\email\himalaya\SKILL.md	90	Missing Overview section	0.005440599998109974
+emblem-ai-prompt-examples	C:\Users\Alexa\AppData\Local\hermes\skills\emblem-ai-prompt-examples\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.003932300001906697
+enhance-prompt	C:\Users\Alexa\AppData\Local\hermes\skills\enhance-prompt\SKILL.md	75	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section	0.008486699996865354
+excel-author	C:\Users\Alexa\AppData\Local\hermes\skills\finance\excel-author\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.011101599993708078
+faiss	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\faiss\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004847999996854924
+fastmcp	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\fastmcp\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0069600000060745515
+3-statement-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\3-statement-model\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0024486000038450584
+comps-analysis	C:\Users\Alexa\AppData\Local\hermes\skills\finance\comps-analysis\SKILL.md	75	Missing frontmatter field: title; Missing Pitfalls section; Missing Workflow or When to Use section	0.007519400001910981
+dcf-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\dcf-model\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.008911600001738407
+excel-author	C:\Users\Alexa\AppData\Local\hermes\skills\finance\excel-author\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0027601999972830527
+lbo-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\lbo-model\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0030454000007011928
+merger-model	C:\Users\Alexa\AppData\Local\hermes\skills\finance\merger-model\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.008951100004196633
+pptx-author	C:\Users\Alexa\AppData\Local\hermes\skills\finance\pptx-author\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0029614999948535115
+stocks	C:\Users\Alexa\AppData\Local\hermes\skills\finance\stocks\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.007360499999776948
+firecrawl-agent	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-agent\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.007211299998743925
+firecrawl-crawl	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-crawl\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.001782300001650583
+firecrawl-download	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-download\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.009042999998200685
+firecrawl-map	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-map\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005475099998875521
+firecrawl-scrape	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-scrape\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00431630000093719
+firecrawl-search	C:\Users\Alexa\AppData\Local\hermes\skills\firecrawl-search\SKILL.md	65	Missing frontmatter field: version; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004367200002889149
+fitness-nutrition	C:\Users\Alexa\AppData\Local\hermes\skills\health\fitness-nutrition\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.0056203999993158504
+fix-prompt-frontmatter	C:\Users\Alexa\AppData\Local\hermes\skills\fix-prompt-frontmatter\SKILL.md	95	Missing Pitfalls section	0.004376500000944361
+flash-attention	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\flash-attention\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005226499997661449
+minecraft-modpack-server	C:\Users\Alexa\AppData\Local\hermes\skills\gaming\minecraft-modpack-server\SKILL.md	60	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Workflow or When to Use section	0.0055309000017587095
+pokemon-player	C:\Users\Alexa\AppData\Local\hermes\skills\gaming\pokemon-player\SKILL.md	60	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Overview section	0.006543999996210914
+git-patch-management	C:\Users\Alexa\AppData\Local\hermes\skills\git-patch-management\SKILL.md	90	Missing Overview section	0.006366399997205008
+codebase-inspection	C:\Users\Alexa\AppData\Local\hermes\skills\github\codebase-inspection\SKILL.md	90	Missing Overview section	0.00338509999710368
+finishing-a-development-branch	C:\Users\Alexa\AppData\Local\hermes\skills\github\finishing-a-development-branch\SKILL.md	90	Missing Overview section	0.0065117999984067865
+gh-cli	C:\Users\Alexa\AppData\Local\hermes\skills\github\gh-cli\SKILL.md	90	Missing Overview section	0.0022882999983266927
+git-commit	C:\Users\Alexa\AppData\Local\hermes\skills\github\git-commit\SKILL.md	100		0.004003499998361804
+git-helper	C:\Users\Alexa\AppData\Local\hermes\skills\github\git-helper\SKILL.md	90	Missing Overview section	0.005370200000470504
+git-submodule-workflow	C:\Users\Alexa\AppData\Local\hermes\skills\github\git-submodule-workflow\SKILL.md	90	Missing Overview section	0.0062324999962584116
+github-repo-management	C:\Users\Alexa\AppData\Local\hermes\skills\github\github-repo-management\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.009834599994064774
+github	C:\Users\Alexa\AppData\Local\hermes\skills\github\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0038073999967309646
+sponsor-finder	C:\Users\Alexa\AppData\Local\hermes\skills\github\sponsor-finder\SKILL.md	90	Missing Overview section	0.005881400000362191
+github-repo-management	C:\Users\Alexa\AppData\Local\hermes\skills\github\github-repo-management\SKILL.md	90	Missing Overview section	0.006879000000481028
+gitnexus-explorer	C:\Users\Alexa\AppData\Local\hermes\skills\research\gitnexus-explorer\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.002156700000341516
+godmode	C:\Users\Alexa\AppData\Local\hermes\skills\security\godmode\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.0073631999985082075
+guidance	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\guidance\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0034061999976984225
+fitness-nutrition	C:\Users\Alexa\AppData\Local\hermes\skills\health\fitness-nutrition\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.002366600005188957
+neuroskill-bci	C:\Users\Alexa\AppData\Local\hermes\skills\health\neuroskill-bci\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.007440599998517428
+here-now	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\here-now\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.007368399994447827
+hermes-agent	C:\Users\Alexa\AppData\Local\hermes\skills\autonomous-ai-agents\hermes-agent\SKILL.md	90	Missing Overview section	0.0045736999963992275
+hermes-desktop-plugins	C:\Users\Alexa\AppData\Local\hermes\skills\hermes-desktop-plugins\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.004342599997471552
+hermes-hook-cleanup	C:\Users\Alexa\AppData\Local\hermes\skills\hermes-hook-cleanup\SKILL.md	90	Missing Overview section	0.006537400004162919
+hermes-personality-soul	C:\Users\Alexa\AppData\Local\hermes\skills\hermes-personality-soul\SKILL.md	90	Missing Overview section	0.0015994999994290993
+hermes-themes	C:\Users\Alexa\AppData\Local\hermes\skills\hermes-themes\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.008865600000717677
+huggingface-tokenizers	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\huggingface-tokenizers\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005520500002603512
+hyperframes	C:\Users\Alexa\AppData\Local\hermes\skills\creative\hyperframes\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0061891000004834495
+implementation-plan	C:\Users\Alexa\AppData\Local\hermes\skills\implementation-plan\SKILL.md	75	Missing frontmatter field: title; Missing frontmatter field: author; Missing Pitfalls section	0.006176999995659571
+instructor	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\instructor\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.009576500000548549
+introspection-only-general	C:\Users\Alexa\AppData\Local\hermes\skills\introspection-only-general\SKILL.md	90	Missing Overview section	0.004779900002176873
+joyride	C:\Users\Alexa\AppData\Local\hermes\skills\joyride\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.007504200002586003
+kanban-video-orchestrator	C:\Users\Alexa\AppData\Local\hermes\skills\creative\kanban-video-orchestrator\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006212000000232365
+lambda-labs	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\lambda-labs\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.002529999997932464
+litprog-skill	C:\Users\Alexa\AppData\Local\hermes\skills\litprog-skill\SKILL.md	80	Missing frontmatter field: name; Missing frontmatter field: description	0.004447599996638019
+llava	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\llava\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.011326400002872106
+fastmcp	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\fastmcp\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.004709200002253056
+hermes-mcp	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\hermes-mcp\SKILL.md	90	Missing Overview section	0.00391959999979008
+mcp-ast-grep	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-ast-grep\SKILL.md	90	Missing Overview section	0.0049305000065942295
+mcp-builder	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-builder\SKILL.md	90	Missing Overview section	0.001562799996463582
+mcp-cli	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-cli\SKILL.md	90	Missing Overview section	0.008068399998592213
+mcp-code-sandbox	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-code-sandbox\SKILL.md	90	Missing Overview section	0.0022823999970569275
+mcp-codex	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-codex\SKILL.md	90	Missing Overview section	0.005118100001709536
+mcp-docker	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-docker\SKILL.md	90	Missing Overview section	0.0041519000005791895
+mcp-fetch	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-fetch\SKILL.md	90	Missing Overview section	0.0011111999992863275
+mcp-filesystem	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-filesystem\SKILL.md	90	Missing Overview section	0.00452670000231592
+mcp-github	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-github\SKILL.md	90	Missing Overview section	0.002836899999238085
+mcp-memory	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-memory\SKILL.md	90	Missing Overview section	0.0017320999977528118
+mcp-mindstudio	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-mindstudio\SKILL.md	90	Missing Overview section	0.006153300004370976
+mcp-oauth-remote-gateway	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-oauth-remote-gateway\SKILL.md	90	Missing frontmatter field: title	0.0057230000020354055
+mcp-playwright	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-playwright\SKILL.md	90	Missing Overview section	0.007735400002275128
+mcp-security-audit	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-security-audit\SKILL.md	90	Missing Overview section	0.010368300005211495
+mcp-sequential-thinking	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-sequential-thinking\SKILL.md	90	Missing Overview section	0.00880709999910323
+mcp-smithery	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-smithery\SKILL.md	90	Missing Overview section	0.004341600004408974
+mcporter	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcporter\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0016113999954541214
+native-mcp	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\native-mcp\SKILL.md	90	Missing Overview section	0.0030800000022281893
+mcp-coding-agent-setup	C:\Users\Alexa\AppData\Local\hermes\skills\mcp-coding-agent-setup\SKILL.md	90	Missing Overview section	0.020194999997329433
+mcp-oauth-remote-gateway	C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-oauth-remote-gateway\SKILL.md	90	Missing frontmatter field: title	0.004411800000525545
+gif-search	C:\Users\Alexa\AppData\Local\hermes\skills\media\gif-search\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.006509400001959875
+slack-gif-creator	C:\Users\Alexa\AppData\Local\hermes\skills\media\slack-gif-creator\SKILL.md	90	Missing Overview section	0.0028630000015255064
+spotify	C:\Users\Alexa\AppData\Local\hermes\skills\media\spotify\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.009057700000994373
+transloadit-media-processing	C:\Users\Alexa\AppData\Local\hermes\skills\media\transloadit-media-processing\SKILL.md	90	Missing Overview section	0.00229869999748189
+youtube-content	C:\Users\Alexa\AppData\Local\hermes\skills\media\youtube-content\SKILL.md	65	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Pitfalls section	0.004590700002154335
+meme-generation	C:\Users\Alexa\AppData\Local\hermes\skills\creative\meme-generation\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0026877999989665113
+memento-flashcards	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\memento-flashcards\SKILL.md	90	Missing frontmatter field: title	0.005420500005129725
+openclaw-migration	C:\Users\Alexa\AppData\Local\hermes\skills\migration\openclaw-migration\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.003088400000706315
+accelerate	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\accelerate\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005740600005083252
+chroma	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\chroma\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0031604999967385083
+clip	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\clip\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005172299999685492
+lm-evaluation-harness	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\evaluation\lm-evaluation-harness\SKILL.md	90	Missing Overview section	0.0024312999958056025
+weights-and-biases	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\evaluation\weights-and-biases\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.008106699999189004
+faiss	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\faiss\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.01049129999591969
+flash-attention	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\flash-attention\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006069800001569092
+guidance	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\guidance\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.007552600000053644
+huggingface-hub	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\huggingface-hub\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.010591199999907985
+huggingface-tokenizers	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\huggingface-tokenizers\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.009187399999063928
+llama-cpp	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\inference\llama-cpp\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.010792100001708604
+outlines	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\inference\outlines\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.00697539999964647
+vllm	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\inference\vllm\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.007677199995669071
+instructor	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\instructor\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.007007099993643351
+lambda-labs	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\lambda-labs\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.010586399999738205
+llava	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\llava\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004889599993475713
+llm-provider-benchmarking	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\llm-provider-benchmarking\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.005169999996724073
+ml-models	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\ml-models\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.005005400002119131
+modal	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\modal\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00571749999653548
+audiocraft	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\models\audiocraft\SKILL.md	90	Missing Overview section	0.015261099993949756
+segment-anything	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\models\segment-anything\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.0032946999999694526
+nemo-curator	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\nemo-curator\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0062783000030322
+obliteratus	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\obliteratus\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0075960999965900555
+peft	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\peft\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.003530900001351256
+pinecone	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pinecone\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.006184099998790771
+pytorch-fsdp	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pytorch-fsdp\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.008478600000671577
+pytorch-lightning	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pytorch-lightning\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.01324489999387879
+qdrant	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\qdrant\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0025027999945450574
+dspy	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\research\dspy\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.002774900000076741
+saelens	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\saelens\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.009626600003684871
+simpo	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\simpo\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.009137599998211954
+slime	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\slime\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0077664999989792705
+stable-diffusion	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\stable-diffusion\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006211500003701076
+tensorrt-llm	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\tensorrt-llm\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.008548300000256859
+torchtitan	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\torchtitan\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.007002300000749528
+axolotl	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\axolotl\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.009770800003025215
+trl-fine-tuning	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\trl-fine-tuning\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.004186700003629085
+unsloth	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\unsloth\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.00635129999864148
+whisper	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\whisper\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004261000001861248
+modal	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\modal\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0052324999996926636
+nemo-curator	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\nemo-curator\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005436599996755831
+neuroskill-bci	C:\Users\Alexa\AppData\Local\hermes\skills\health\neuroskill-bci\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005993999999191146
+no-git-delete	C:\Users\Alexa\AppData\Local\hermes\skills\no-git-delete\SKILL.md	90	Missing Overview section	0.006494000001111999
+no-net-fetch	C:\Users\Alexa\AppData\Local\hermes\skills\no-net-fetch\SKILL.md	90	Missing Overview section	0.009425199998077005
+note-taking-apps	C:\Users\Alexa\AppData\Local\hermes\skills\note-taking\note-taking-apps\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.011069899999711197
+obsidian	C:\Users\Alexa\AppData\Local\hermes\skills\note-taking\obsidian\SKILL.md	85	Missing Pitfalls section; Missing Workflow or When to Use section	0.0044606000010389835
+notion-spec-to-implementation	C:\Users\Alexa\AppData\Local\hermes\skills\notion-spec-to-implementation\SKILL.md	80	Missing frontmatter field: version; Missing Overview section	0.008781799995631445
+obliteratus	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\obliteratus\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006776299997000024
+openclaw-migration	C:\Users\Alexa\AppData\Local\hermes\skills\migration\openclaw-migration\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0018550000022514723
+osint-investigation	C:\Users\Alexa\AppData\Local\hermes\skills\research\osint-investigation\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.004137700001592748
+oss-forensics	C:\Users\Alexa\AppData\Local\hermes\skills\security\oss-forensics\SKILL.md	45	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004840199995669536
+outlines	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\inference\outlines\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.008928600000217557
+mpp-agent	C:\Users\Alexa\AppData\Local\hermes\skills\payments\mpp-agent\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0013514000020222738
+stripe-link-cli	C:\Users\Alexa\AppData\Local\hermes\skills\payments\stripe-link-cli\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0028221999964443967
+stripe-projects	C:\Users\Alexa\AppData\Local\hermes\skills\payments\stripe-projects\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.007963700001710095
+paypal-how-it-works	C:\Users\Alexa\AppData\Local\hermes\skills\paypal-how-it-works\SKILL.md	90	Missing Overview section	0.004383799998322502
+peft	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\peft\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004336999998486135
+pinecone	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pinecone\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005415399995399639
+pixel-art	C:\Users\Alexa\AppData\Local\hermes\skills\creative\pixel-art\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004905200003122445
+brainstorming	C:\Users\Alexa\AppData\Local\hermes\skills\planning\brainstorming\SKILL.md	90	Missing Overview section	0.008822399999189656
+plans-and-specs	C:\Users\Alexa\AppData\Local\hermes\skills\planning\plans-and-specs\SKILL.md	90	Missing Overview section	0.0047631999987061135
+prompt-library-canonicalization	C:\Users\Alexa\AppData\Local\hermes\skills\planning\prompt-library-canonicalization\SKILL.md	90	Missing Overview section	0.002177100002882071
+prompt-planning-orchestration	C:\Users\Alexa\AppData\Local\hermes\skills\planning\prompt-planning-orchestration\SKILL.md	90	Missing Overview section	0.005641000003379304
+prd	C:\Users\Alexa\AppData\Local\hermes\skills\product\prd\SKILL.md	90	Missing Overview section	0.004308399998990353
+airtable	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\airtable\SKILL.md	90	Missing Overview section	0.004180399999313522
+canvas	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\canvas\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005436499995994382
+doc-coauthoring	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\doc-coauthoring\SKILL.md	90	Missing Overview section	0.002904000000853557
+documentation-extraction-and-indexing	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\documentation-extraction-and-indexing\SKILL.md	90	Missing Overview section	0.003859000004013069
+documentation-writer	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\documentation-writer\SKILL.md	90	Missing Overview section	0.003306999999040272
+docx	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\docx\SKILL.md	90	Missing Overview section	0.005953799998678733
+file-organizer	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\file-organizer\SKILL.md	90	Missing Overview section	0.005447400006232783
+finnish-humanizer	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\finnish-humanizer\SKILL.md	90	Missing Overview section	0.00411770000209799
+google-workspace	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\google-workspace\SKILL.md	90	Missing Overview section	0.005396399996243417
+here-now	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\here-now\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.006976900003792252
+internal-comms	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\internal-comms\SKILL.md	90	Missing Overview section	0.005458700004965067
+linear	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\linear\SKILL.md	90	Missing Overview section	0.004907700000330806
+maps	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\maps\SKILL.md	90	Missing Overview section	0.006059699997422285
+markdown-to-html	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\markdown-to-html\SKILL.md	90	Missing Overview section	0.00751730000047246
+meeting-insights-analyzer	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\meeting-insights-analyzer\SKILL.md	90	Missing Overview section	0.0008963000000221655
+meeting-minutes	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\meeting-minutes\SKILL.md	90	Missing Overview section	0.003985699993791059
+memento-flashcards	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\memento-flashcards\SKILL.md	90	Missing frontmatter field: title	0.005705700001271907
+nano-pdf	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\nano-pdf\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.003107899996393826
+notion	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\notion\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.007308699998247903
+ocr-and-documents	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\ocr-and-documents\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.003156699996907264
+pdf	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\pdf\SKILL.md	90	Missing Overview section	0.004743199999211356
+pdftk-server	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\pdftk-server\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.007013599999481812
+petdex	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\petdex\SKILL.md	90	Missing Overview section	0.00667760000214912
+powerpoint	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\powerpoint\SKILL.md	90	Missing Overview section	0.007712400001764763
+pptx	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\pptx\SKILL.md	90	Missing Overview section	0.008223500000895001
+prompt-consolidation	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-consolidation\SKILL.md	90	Missing Overview section	0.004472699998586904
+prompt-management	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\prompt-management\SKILL.md	90	Missing Overview section	0.005766499998571817
+shop	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\shop\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00665350000053877
+shopify	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\shopify\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.002964400002383627
+siyuan	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\siyuan\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.0065080999993369915
+task-management	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\task-management\SKILL.md	90	Missing Overview section	0.0044829000034951605
+teams-meeting-pipeline	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\teams-meeting-pipeline\SKILL.md	90	Missing Overview section	0.006642799999099225
+telephony	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\telephony\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.005513199997949414
+tui-widgets	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\tui-widgets\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.008447499996691477
+user-communication-preferences	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.006473599998571444
+xlsx	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\xlsx\SKILL.md	90	Missing Overview section	0.006993200004217215
+yuanbao	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\yuanbao\SKILL.md	90	Missing Overview section	0.003547599997546058
+project-consolidation	C:\Users\Alexa\AppData\Local\hermes\skills\project-consolidation\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.006326300004730001
+prompt-engineering-patterns	C:\Users\Alexa\AppData\Local\hermes\skills\prompt-engineering-patterns\SKILL.md	90	Missing frontmatter field: version	0.0034738000031211413
+prompt-library-consolidation	C:\Users\Alexa\AppData\Local\hermes\skills\prompt-library-consolidation\SKILL.md	90	Missing Overview section	0.005965700001979712
+prompt-library-maintenance	C:\Users\Alexa\AppData\Local\hermes\skills\prompt-library-maintenance\SKILL.md	90	Missing Overview section	0.005995200001052581
+prompt-verification	C:\Users\Alexa\AppData\Local\hermes\skills\prompt-verification\SKILL.md	90	Missing Overview section	0.006235799999558367
+python-package-manager	C:\Users\Alexa\AppData\Local\hermes\skills\python-package-manager\SKILL.md	95	Missing Pitfalls section	0.0038706999985151924
+pytorch-fsdp	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pytorch-fsdp\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.00787059999856865
+pytorch-lightning	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\pytorch-lightning\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005126299998664763
+audit-skills-judge-fix	C:\Users\Alexa\AppData\Local\hermes\skills\qa\audit-skills-judge-fix\SKILL.md	100		0.009250600000086706
+batch-skills-remediation	C:\Users\Alexa\AppData\Local\hermes\skills\qa\batch-skills-remediation\SKILL.md	90	Missing Overview section	0.008486299993819557
+boilerplate-stripper	C:\Users\Alexa\AppData\Local\hermes\skills\qa\boilerplate-stripper\SKILL.md	100		0.008902499997930136
+dogfood	C:\Users\Alexa\AppData\Local\hermes\skills\qa\dogfood\SKILL.md	95	Missing Pitfalls section	0.008590400000684895
+playwright-automation-fill-in-form	C:\Users\Alexa\AppData\Local\hermes\skills\qa\playwright-automation-fill-in-form\SKILL.md	90	Missing Overview section	0.008095800003502518
+playwright-generate-e2e-test	C:\Users\Alexa\AppData\Local\hermes\skills\qa\playwright-generate-e2e-test\SKILL.md	90	Missing Overview section	0.009614700000383891
+playwright-generate-test	C:\Users\Alexa\AppData\Local\hermes\skills\qa\playwright-generate-test\SKILL.md	90	Missing Overview section	0.00843219999660505
+polyglot-test-agent	C:\Users\Alexa\AppData\Local\hermes\skills\qa\polyglot-test-agent\SKILL.md	90	Missing Overview section	0.00827949999802513
+postgresql-code-review	C:\Users\Alexa\AppData\Local\hermes\skills\qa\postgresql-code-review\SKILL.md	90	Missing Overview section	0.008351600001333281
+prompt-library-audit	C:\Users\Alexa\AppData\Local\hermes\skills\qa\prompt-library-audit\SKILL.md	90	Missing Overview section	0.00401850000343984
+scoutqa-test	C:\Users\Alexa\AppData\Local\hermes\skills\qa\scoutqa-test\SKILL.md	90	Missing Overview section	0.007949400001962204
+skill-judge	C:\Users\Alexa\AppData\Local\hermes\skills\qa\skill-judge\SKILL.md	90	Missing Overview section	0.011079000003519468
+test-skill	C:\Users\Alexa\AppData\Local\hermes\skills\qa\test-skill\SKILL.md	100		0.0049154999942402355
+verification-before-completion	C:\Users\Alexa\AppData\Local\hermes\skills\qa\verification-before-completion\SKILL.md	90	Missing Overview section	0.0052500000019790605
+web-design-reviewer	C:\Users\Alexa\AppData\Local\hermes\skills\qa\web-design-reviewer\SKILL.md	90	Missing Overview section	0.005648199999995995
+webapp-testing	C:\Users\Alexa\AppData\Local\hermes\skills\qa\webapp-testing\SKILL.md	100		0.0036624999993364327
+qdrant	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\qdrant\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.00651050000305986
+api-tutorial-catalog	C:\Users\Alexa\AppData\Local\hermes\skills\reference\api-tutorial-catalog\SKILL.md	90	Missing Workflow or When to Use section	0.005686199998308439
+discover-mcp-capabilities	C:\Users\Alexa\AppData\Local\hermes\skills\reference\discover-mcp-capabilities\SKILL.md	90	Missing Overview section	0.008326600000145845
+mcp-server-catalog	C:\Users\Alexa\AppData\Local\hermes\skills\reference\mcp-server-catalog\SKILL.md	90	Missing Workflow or When to Use section	0.006308399999397807
+project-architecture-index	C:\Users\Alexa\AppData\Local\hermes\skills\reference\project-architecture-index\SKILL.md	90	Missing Workflow or When to Use section	0.005643700002110563
+arxiv	C:\Users\Alexa\AppData\Local\hermes\skills\research\arxiv\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004746300000988413
+bioinformatics	C:\Users\Alexa\AppData\Local\hermes\skills\research\bioinformatics\SKILL.md	70	Missing frontmatter field: title; Missing frontmatter field: author; Missing Overview section	0.002759300004981924
+blogwatcher	C:\Users\Alexa\AppData\Local\hermes\skills\research\blogwatcher\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.008849000005284324
+darwinian-evolver	C:\Users\Alexa\AppData\Local\hermes\skills\research\darwinian-evolver\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006120599995483644
+domain-intel	C:\Users\Alexa\AppData\Local\hermes\skills\research\domain-intel\SKILL.md	85	Missing Pitfalls section; Missing Workflow or When to Use section	0.008931399999710266
+drug-discovery	C:\Users\Alexa\AppData\Local\hermes\skills\research\drug-discovery\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005325799997081049
+duckduckgo-search	C:\Users\Alexa\AppData\Local\hermes\skills\research\duckduckgo-search\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0051404999976512045
+gitnexus-explorer	C:\Users\Alexa\AppData\Local\hermes\skills\research\gitnexus-explorer\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.008416000004217494
+llm-wiki	C:\Users\Alexa\AppData\Local\hermes\skills\research\llm-wiki\SKILL.md	90	Missing Overview section	0.005078300004242919
+osint-investigation	C:\Users\Alexa\AppData\Local\hermes\skills\research\osint-investigation\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.0037649999940185808
+parallel-cli	C:\Users\Alexa\AppData\Local\hermes\skills\research\parallel-cli\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.00532079999538837
+parallel-cli-web-research	C:\Users\Alexa\AppData\Local\hermes\skills\research\parallel-cli-web-research\SKILL.md	90	Missing Overview section	0.0055632000003242865
+polymarket	C:\Users\Alexa\AppData\Local\hermes\skills\research\polymarket\SKILL.md	90	Missing Overview section	0.00412040000082925
+qmd	C:\Users\Alexa\AppData\Local\hermes\skills\research\qmd\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005612000000837725
+repo-research-pipeline	C:\Users\Alexa\AppData\Local\hermes\skills\research\repo-research-pipeline\SKILL.md	90	Missing Overview section	0.005942600000707898
+research-paper-writing	C:\Users\Alexa\AppData\Local\hermes\skills\research\research-paper-writing\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.008089800001471303
+research-toolkit	C:\Users\Alexa\AppData\Local\hermes\skills\research\research-toolkit\SKILL.md	90	Missing Overview section	0.009131699996942189
+scrapling	C:\Users\Alexa\AppData\Local\hermes\skills\research\scrapling\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.0047587000008206815
+searxng-search	C:\Users\Alexa\AppData\Local\hermes\skills\research\searxng-search\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004622000000381377
+web-research-pipeline	C:\Users\Alexa\AppData\Local\hermes\skills\research\web-research-pipeline\SKILL.md	90	Missing Overview section	0.006988099994487129
+saelens	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\saelens\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.012409400005708449
+searxng-search	C:\Users\Alexa\AppData\Local\hermes\skills\research\searxng-search\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.010243099997751415
+1password	C:\Users\Alexa\AppData\Local\hermes\skills\security\1password\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.012722599996777717
+godmode	C:\Users\Alexa\AppData\Local\hermes\skills\security\godmode\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.0075970000034430996
+oss-forensics	C:\Users\Alexa\AppData\Local\hermes\skills\security\oss-forensics\SKILL.md	85	Missing Pitfalls section; Missing Workflow or When to Use section	0.004880300002696458
+sherlock	C:\Users\Alexa\AppData\Local\hermes\skills\security\sherlock\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006117899996752385
+unbroker	C:\Users\Alexa\AppData\Local\hermes\skills\security\unbroker\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006401500002539251
+web-pentest	C:\Users\Alexa\AppData\Local\hermes\skills\security\web-pentest\SKILL.md	85	Missing Pitfalls section; Missing Workflow or When to Use section	0.009513199998764321
+session-audit	C:\Users\Alexa\AppData\Local\hermes\skills\session-audit\SKILL.md	95	Missing Pitfalls section	0.007042699995508883
+shop	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\shop\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.012807300001441035
+shop-app	C:\Users\Alexa\AppData\Local\hermes\skills\shop-app\SKILL.md	90	Missing Overview section	0.0017288999952143058
+simplify	C:\Users\Alexa\AppData\Local\hermes\skills\simplify\SKILL.md	90	Missing Overview section	0.008900200002244674
+simpo	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\simpo\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005928099999437109
+skill-library-audit	C:\Users\Alexa\AppData\Local\hermes\skills\skill-library-audit\SKILL.md	95	Missing Pitfalls section	0.005758500003139488
+skills-tools-preflight-check	C:\Users\Alexa\AppData\Local\hermes\skills\skills-tools-preflight-check\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.00549930000124732
+slime	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\slime\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006110000002081506
+openhue	C:\Users\Alexa\AppData\Local\hermes\skills\smart-home\openhue\SKILL.md	90	Missing Overview section	0.008729700006369967
+smithery-ai-cli	C:\Users\Alexa\AppData\Local\hermes\skills\smithery-ai-cli\SKILL.md	90	Missing Overview section	0.010499200005142484
+xurl	C:\Users\Alexa\AppData\Local\hermes\skills\social-media\xurl\SKILL.md	90	Missing Overview section	0.004493600004934706
+async-migration-patterns	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\async-migration-patterns\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.007403099996736273
+banking	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\banking\SKILL.md	90	Missing Overview section	0.008579099994676653
+bash-scripts-audit-remediation	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\bash-scripts-audit-remediation\SKILL.md	100		0.010171000001719221
+caveman-unified	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\caveman-unified\SKILL.md	100		0.007441999994625803
+claude-api	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\claude-api\SKILL.md	90	Missing Overview section	0.005746300004830118
+clonedeps	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\clonedeps\SKILL.md	100		0.0036036000019521452
+code-docs	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\code-docs\SKILL.md	100		0.004852700003539212
+code-wiki	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\code-wiki\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.005447099996672478
+codemap	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\codemap\SKILL.md	100		0.006322999994154088
+context7	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\context7\SKILL.md	90	Missing Overview section	0.006006700001307763
+debugging-hermes-tui-commands	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\debugging-hermes-tui-commands\SKILL.md	100		0.006502900003397372
+executing-plans	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\executing-plans\SKILL.md	90	Missing Overview section	0.010994100004609209
+executing-prompt-workflows	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\executing-prompt-workflows\SKILL.md	85	Missing Pitfalls section; Missing Workflow or When to Use section	0.003514500000164844
+fluentui-blazor	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\fluentui-blazor\SKILL.md	90	Missing Overview section	0.01157680000324035
+generator-first-doc-workflow	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\generator-first-doc-workflow\SKILL.md	90	Missing Overview section	0.008791899999778252
+hermes-agent-skill-authoring	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\hermes-agent-skill-authoring\SKILL.md	100		0.006535900000017136
+httpie	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\httpie\SKILL.md	100		0.003752399999939371
+mindstudio-wrapper	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\mindstudio-wrapper\SKILL.md	80	Missing Overview section; Missing Workflow or When to Use section	0.004726600003778003
+node-inspect-debugger	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\node-inspect-debugger\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.006205400000908412
+nuget-manager	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\nuget-manager\SKILL.md	90	Missing Overview section	0.0033618999950704165
+plan	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\plan\SKILL.md	90	Missing Overview section	0.00532270000257995
+project-docs	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\project-docs\SKILL.md	85	Missing Overview section; Missing Pitfalls section	0.006162099998618942
+python-debugpy	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\python-debugpy\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.0024174999998649582
+quasi-coder	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\quasi-coder\SKILL.md	90	Missing Overview section	0.006042200002411846
+receiving-code-review	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\receiving-code-review\SKILL.md	100		0.005194600002141669
+refactor	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\refactor\SKILL.md	90	Missing Overview section	0.010982899999362417
+requesting-code-review	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\requesting-code-review\SKILL.md	90	Missing Overview section	0.004944100001011975
+rest-graphql-debug	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\rest-graphql-debug\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006395299998985138
+sandbox	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\sandbox\SKILL.md	100		0.004727300001832191
+script-orchestration	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\script-orchestration\SKILL.md	90	Missing Overview section	0.003949400001147296
+shadcn	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\shadcn\SKILL.md	100		0.006570500001544133
+simplify-code	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\simplify-code\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.006164900005387608
+spike	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\spike\SKILL.md	90	Missing Overview section	0.010493900001165457
+subagent-driven-development	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\subagent-driven-development\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.006031500000972301
+systematic-debugging	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\systematic-debugging\SKILL.md	100		0.007843799998227041
+test-driven-development	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\test-driven-development\SKILL.md	100		0.006779599993024021
+winapp-cli	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\winapp-cli\SKILL.md	90	Missing Overview section	0.00494819999585161
+worktrunk	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\worktrunk\SKILL.md	100		0.00473039999633329
+writing-plans	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\writing-plans\SKILL.md	100		0.0023373000003630295
+stable-diffusion	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\stable-diffusion\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.007264200001372956
+stocks	C:\Users\Alexa\AppData\Local\hermes\skills\finance\stocks\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.004951200004143175
+subagent-driven-development	C:\Users\Alexa\AppData\Local\hermes\skills\software-development\subagent-driven-development\SKILL.md	85	Missing frontmatter field: title; Missing Pitfalls section	0.006469800006016158
+telephony	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\telephony\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.00521149999985937
+tensorrt-llm	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\tensorrt-llm\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0076432999994722195
+test-providers-models	C:\Users\Alexa\AppData\Local\hermes\skills\test-providers-models\SKILL.md	90	Missing Overview section	0.005865400002221577
+torchtitan	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\torchtitan\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006499999995867256
+trl-fine-tuning	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\trl-fine-tuning\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005922399999690242
+unbroker	C:\Users\Alexa\AppData\Local\hermes\skills\security\unbroker\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.007321500001125969
+unsloth	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\training\unsloth\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.006768799998098984
+vscode-config-audit	C:\Users\Alexa\AppData\Local\hermes\skills\vscode-config-audit\SKILL.md	95	Missing Pitfalls section	0.0034218000000691973
+watchers	C:\Users\Alexa\AppData\Local\hermes\skills\devops\watchers\SKILL.md	75	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section	0.005354399996576831
+cloudflare-temporary-deploy	C:\Users\Alexa\AppData\Local\hermes\skills\web-development\cloudflare-temporary-deploy\SKILL.md	80	Missing frontmatter field: title; Missing Overview section	0.00513900000078138
+page-agent	C:\Users\Alexa\AppData\Local\hermes\skills\web-development\page-agent\SKILL.md	70	Missing frontmatter field: title; Missing Overview section; Missing Workflow or When to Use section	0.0057549999983166344
+web-pentest	C:\Users\Alexa\AppData\Local\hermes\skills\security\web-pentest\SKILL.md	45	Missing frontmatter field: title; Missing frontmatter field: version; Missing frontmatter field: author; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.006310700002359226
+whisper	C:\Users\Alexa\AppData\Local\hermes\skills\mlops\whisper\SKILL.md	65	Missing frontmatter field: title; Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.004013000005215872
+youtube-full	C:\Users\Alexa\AppData\Local\hermes\skills\youtube-full\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.005209499999182299
+yuanbao	C:\Users\Alexa\AppData\Local\hermes\skills\productivity\yuanbao\SKILL.md	75	Missing Overview section; Missing Pitfalls section; Missing Workflow or When to Use section	0.0032462999952258542

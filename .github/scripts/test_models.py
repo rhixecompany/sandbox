@@ -128,9 +128,26 @@ async def main() -> None:
         action="store_true",
         help="JSON output",
     )
+    parser.add_argument(
+        "--simulate",
+        action="store_true",
+        help="Generate synthetic model test results without network calls",
+    )
     args = parser.parse_args()
 
-    if args.config:
+    if args.simulate:
+        now = time.time()
+        results = [
+            {
+                "model": args.model or "echo-model",
+                "endpoint": args.endpoint,
+                "latency_s": 0.04,
+                "status": "ok",
+                "response": "echo: hello",
+                "simulated": True,
+            }
+        ]
+    elif args.config:
         config_path = Path(args.config).resolve()
         if not config_path.exists():
             print(f"Config not found: {config_path}", file=sys.stderr)

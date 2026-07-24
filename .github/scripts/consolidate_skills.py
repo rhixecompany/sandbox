@@ -124,6 +124,9 @@ async def main(argv: list[str] | None = None) -> None:
 
     if not duplicates:
         print("\nNo duplicates found. Nothing to consolidate.")
+        if args.report:
+            Path(args.report).write_text("[]", encoding="utf-8")
+            print(f"\nReport written to {args.report}")
         return
 
     # Consolidate

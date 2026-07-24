@@ -1,9 +1,29 @@
-# phases
+# Execute All Prompts — Phases
 
-> PLACEHOLDER — referenced by prompt `execute-all-prompts.prompt.md`. Author the real instructional content here.
+> Full operational phases for `prompts/execute-all-prompts.prompt.md`.
 
-## Purpose
-Defines the phases section used by the execute-all-prompts prompt; this template should hold the canonical instructions, checklist, or examples the prompt expects for this part of its workflow.
+## Phase 1: Audit Skills Judge Fix
 
-## Content
-TODO: populate with the canonical instructions/checklist/examples this prompt expects.
+- Execute `audit-skills-judge-fix.prompt.md`.
+- Gate: final verification report shows zero unresolved issues.
+
+## Phase 2: Agents System Prompt Context Fix
+
+- Execute `agents-system-prompt-context-fix.prompt.md`.
+- Gate: context docs are generated for root and each subproject; VS Code configs are triaged/verified.
+
+## Phase 3: Sync Hermes Copilot Codex
+
+- Execute `sync-hermes-copilot-codex.prompt.md`.
+- Gate: sync report written; conflicts resolved or documented; verification report complete.
+
+## Phase 4: Test Providers & Models
+
+- Execute `test-providers-models.prompt.md`.
+- Gate: comparison/report artifacts exist and fallback notes are documented.
+
+## Completion
+
+- Append progress after each phase.
+- Append evidence to `docs/orchestrator-verification.md` after each phase.
+- If any phase is blocked by a missing file/path, stop and report the exact blocker instead of fabricating work.

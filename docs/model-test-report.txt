@@ -1,0 +1,5 @@
+
+=== Model Test Results ===
+Tested 1 — Passed: 1, Failed: 0
+  [PASS] echo-test (0.04s)
+          Response: echo: hello

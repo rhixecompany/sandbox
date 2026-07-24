@@ -1,28 +1,65 @@
 ---
 name: agents-system-prompt-context-fix
-title: Agents System Prompt Context Fix
-description: Repair malformed frontmatter, missing fields, and stale context references in `.github/agents/` and `.github/instructions/` artifacts.
+title: "Agents System Prompt Context Fix"
+description: 'Fix and verify Hermes/Copilot/Codex agent system prompt context by '
+  'generating project context artifacts, auditing VS Code configs, and verifying completion.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets: - file - terminal
-scripts: []
-skills: - using-superpowers - user-communication-preferences - plans-and-specs - executing-plans - verification-before-completion - subagent-driven-development
-formatter: default
-dependencies: - skill:using-superpowers - skill:user-communication-preferences - skill:plans-and-specs - skill:executing-plans - skill:verification-before-completion - skill:subagent-driven-development
-tags: - audit - fix - prompts - repairs
+tags:
+- agents
+- system-prompt
+- context
+- verification
+- vscode
 trigger: /agents-system-prompt-context-fix
+formatter: default
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:verification-before-completion
 metadata:
-  related_skills: [using-superpowers, user-communication-preferences, plans-and-specs, executing-plans, verification-before-completion, subagent-driven-development]
+  hermes:
+    related_skills:
+    - using-superpowers
+    - user-communication-preferences
+    - verification-before-completion
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+plan: ''
 ---
 
 # Agents System Prompt Context Fix
 
-## Phase 2 Overview
+## Context
 
-1. Inspect `.github/agents/` and `.github/instructions/` for malformed frontmatter, missing fields, and stale context references.
-2. Repair frontmatter-only issues; do not alter agent behavior beyond prompt/spec correctness.
-3. Ensure context/spec references point to existing files in this repo.
-4. Verify each repaired artifact can be parsed as valid markdown/YAML frontmatter.
+- **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
+- **Progress artifact:** `docs/orchestrator-progress.md`
+- **Verification artifact:** `docs/orchestrator-verification.md`
 
-**Skip condition:** If no `.agent.md` or `.instructions.md` repair targets exist, mark phase complete with evidence.
+## Rules
+
+1. Execute phases in order.
+2. Each phase must pass its gate before advancing.
+3. If a referenced path is missing, pause and report the exact missing path instead of fabricating work.
+
+## Phases
+
+Full phase instructions live in `templates/agents-system-prompt-context-fix/phases.md`.
+
+| Order | Phase | Gate |
+| --- | --- | --- |
+| 1 | Generate Agent Context Files | context docs generated for root and each subproject |
+| 2 | Audit VS Code Configuration | all VS Code JSON configs triaged and verified |
+| 3 | Verify & Implement | verification report written and issues closed |
+
+## Verification Checklist
+
+- [ ] Phase 1 completed and verified
+- [ ] Phase 2 completed and verified
+- [ ] Phase 3 completed and verified
+- [ ] Progress logged in `docs/orchestrator-progress.md`
+- [ ] Final verification report in `docs/orchestrator-verification.md`

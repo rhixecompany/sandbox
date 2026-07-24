@@ -195,12 +195,13 @@ async def main(argv: list[str] | None = None) -> None:
         print(report[:1500])
         if len(report) > 1500:
             print(f"... ({len(report) - 1500} more chars)")
-
-        if args.output:
-            Path(args.output).write_text(report, encoding="utf-8")
-            print(f"\nReport written to {args.output}")
     else:
         print("No duplicates found above threshold.")
+        report = "# Skill Deduplication Report\n\nTotal duplicate pairs found: 0\n"
+
+    if args.output:
+        Path(args.output).write_text(report, encoding="utf-8")
+        print(f"\nReport written to {args.output}")
 
 
 if __name__ == "__main__":

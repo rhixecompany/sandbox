@@ -2,6 +2,8 @@ import asyncio
 import os
 import json
 
+SANDBOX = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
 
 async def main():
     # Configuration

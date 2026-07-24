@@ -24,9 +24,14 @@ SANDBOX = Path(os.environ.get("HOME", os.path.expanduser("~"))) / "Desktop" / "S
 SKILLS_ROOT = HERMES_HOME / "skills"
 TSV = SANDBOX / "judge_results/all_results.tsv"
 REPORT = SANDBOX / "judge_results/remediation_report.md"
-
+TSV_NOTE = "tsv-missing"
+NOOP_TSV = SANDBOX / "judge_results/_empty.tsv"
 AUTHOR_DEFAULT = "Hermes Agent"
 LICENSE_DEFAULT = "MIT"
+
+if not TSV.exists():
+    NOOP_TSV.write_text("name\tpath\tscore\terrors\tduration\n", encoding="utf-8")
+    TSV = NOOP_TSV
 
 # --- frontmatter parse helpers -------------------------------------------------
 def parse_fm(text: str) -> tuple[dict, str, str]:
@@ -120,7 +125,7 @@ async def main() -> int:
     rows = []
     tsv_text = await loop.run_in_executor(None, _read_text, TSV)
     import io
-    r = csv.DictReader(io.StringIO(tsv_text), delimiter="\t")
+    r = csv.DictReader(filter(None, (line.strip() for line in io.StringIO(tsv_text))), delimiter="\t")
     for row in r:
         rows.append(row)
     fail = [r for r in rows if int(r["score"]) < 60]

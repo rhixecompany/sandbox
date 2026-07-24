@@ -1,52 +1,38 @@
 ---
 name: execute-all-prompts
-...
-title: Execute All Prompts Orchestrator
-...
+title: "Execute All Prompts Orchestrator"
 description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix,
   agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models.
   Each prompt runs to completion before the next begins.'
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - file
-- terminal
-scripts: []
-skills: - using-superpowers
-- user-communication-preferences
-- plans-and-specs
-- executing-plans
-- verification-before-completion
-- subagent-driven-development
-formatter: default
-...
-plan: ''
-dependencies: - skill:using-superpowers
-- skill:user-communication-preferences
-- skill:plans-and-specs
-- skill:executing-plans
-- skill:verification-before-completion
-- skill:subagent-driven-development
-tags: - audit
+tags:
+- audit
 - execution
 - fix
-- ml
 - prompts
-- skills
-- typescript
 - workflow
 trigger: /execute-all-prompts
-...
-metadata: hermes:
-  related_skills:
-  - using-superpowers
-  - user-communication-preferences
-  - plans-and-specs
-  - executing-plans
-  - verification-before-completion
+formatter: default
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:verification-before-completion
+- skill:subagent-driven-development
+metadata:
+  hermes:
+    related_skills:
+    - using-superpowers
+    - user-communication-preferences
+    - verification-before-completion
+    - subagent-driven-development
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+plan: ''
 ---
 
 # Execute All Prompts Orchestrator
@@ -59,6 +45,12 @@ metadata: hermes:
 - **Hermes prompts root:** `C:\Users\Alexa\AppData\Local\hermes\prompts`
 - **Progress artifact:** `docs/orchestrator-progress.md`
 - **Verification artifact:** `docs/orchestrator-verification.md`
+
+## Execution Rule
+
+- This workflow is intended to be run through the available Hermes task interface.
+- If a dedicated `hermes prompt run ...` command is unavailable, execute this workflow by processing the referenced prompt files in sequence, preserving strict ordering and phase gates.
+- Only advance after the current phase passes its gate.
 
 ## Rules
 

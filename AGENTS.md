@@ -1,36 +1,26 @@
 # SandBox — AGENTS.md
 
-Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then subproject-local `AGENTS.md`, then `.github/prompts/instructions/*.instructions.md`.
+Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then subproject-local `AGENTS.md`.
 
 > Verified against real repo files 2026-07-09. No aspirational practices.
 
 ## 1. Workspace Big Picture
 
-**Hermes agent development workspace + Copilot config library + multi-language project portfolio.** Not a single compiled app.
+**Hermes agent development workspace + Copilot config library + multi-language project portfolio.**
 
-Four concerns coexist:
-
-1. Workspace root — `AGENTS.md` (this), `.hermes.md`, `README.md`
-2. Copilot asset library — `.github/prompts/agents/`, `.github/prompts/instructions/`, `.github/prompts/skills/`
-3. Automation toolkit — `projects/Bash/` (Bun/TS orchestrator)
-4. Subprojects — `projects/*` (autonomous per-language)
+1. Workspace root — `AGENTS.md` (this), `.hermes.md`
+2. Copilot asset library — `.github/prompts/`
+3. Subprojects — `projects/*` (autonomous per-language)
 
 ## 2. Directory Map
 
 ```
 SandBox/
 ├── AGENTS.md / .hermes.md / README.md   # root config
-├── .github/prompts/agents/      # agent prompt definitions
-├── .github/prompts/instructions/ # instruction prompt files
-├── .github/prompts/skills/       # repo-local skill prompts
-├── .github/scripts/         # Python + PS audit tooling
-├── .github/workflows/       # 17 CI workflows
-├── .hermes/                 # Hermes plans, hooks, scripts
-├── docs/                    # Hermes docs, audits, catalogs
-├── .github/prompts/                 # canonical prompt library
-├── projects/Bash/           # automation toolkit (Bun/TS)
-├── projects/*/              # autonomous subprojects
-├── research/                # tutorial drafts
+├── .github/prompts/      # canonical prompt library
+├── projects/Bash/        # automation toolkit or projects root
+├── projects/*/           # autonomous subprojects
+├── research/
 └── venv/ + requirements.txt # Python 3.11
 ```
 
@@ -59,148 +49,43 @@ bun run test                    # vitest
 bash tests/verify-dryrun.sh
 ```
 
-**Single-file lint** (don't run full project lint for one file):
+**Single-file lint:**
 
 ```bash
 bunx eslint --config eslint.config.mts <file.ts> --max-warnings=0
 bunx markdownlint-cli2 --config .markdownlintrc.json "<file.md>"
 ```
 
-Root `package.json` has no scripts. Run everything from `projects/Bash/`.
-
 ## 4. Conventions
 
-- **Multi-wrapper parity**: every Bash script ships as `.sh` + `.ps1` + `.bat`
-- **Dry-run**: destructive actions require `--dry-run` / `-DryRun`; upgrades/cleanups need confirmation
+- **Dry-run**: destructive actions require `--dry-run`; upgrades/cleanups need confirmation
 - **No backup files**: git for rollback; never create `.bak`/`.old`
 - **TypeScript strict**: no `any`, `noUncheckedIndexedAccess` on; `zod` v4 for runtime, `ts-morph` for AST
-- **Naming**: Bash=kebab-case/.sh, PowerShell=PascalCase/.ps1, Agents=kebab-case.agent.md, Python=PEP 8
+- **Naming**: Bash=kebab-case/.sh, PowerShell=PascalCase/.ps1, Python=PEP 8
 - **CRLF** per `.editorconfig` (Windows host); CI enforces
 - **Logs**: `logs/action_YYYYMMDD_HHMMSS.log`, no secrets
 
-## 5. Editing Copilot Assets (`.github/`)
-
-### 5.1 Agents (`*.agent.md`)
-
-```yaml
----
-description: "Concise purpose, single-quoted"
-name: "Display Name"
-tools: [read, edit, search]
-model: "Claude Sonnet 4.5"
-target: "vscode"
-infer: true
----
-```
-
-File name = `kebab-case.agent.md`. `tools` aliases: `read`, `edit`, `search`, `execute`, `web`, `agent`, `github/*`, `playwright/*`. Omit = all.
-
-### 5.2 Instructions (`*.instructions.md`)
-
-```yaml
----
-description: "When to apply"
-applyTo: "**/*.agent.md"
----
-```
-
-Use fine-grained `applyTo` globs, never blanket `**`.
-
-### 5.3 Before creating any asset
-
-1. Read `reports/inventory/refresh-agent-inventory-summary-*.md` for current counts
-2. Check `.github/scripts/` — run relevant audit after edits
-3. Update cross-reference docs in `docs/`
-
-## 6. Automation Toolkit — `projects/Bash/`
-
-Bun/TS orchestrator with 6 phases: Discovery → Clone → Triage → Debug → Remediation → Cross-Reference.
-
-| Script (via `bun run`) | Purpose |
-| ------------------------ | --------- |
-| `format` / `format:check` | Prettier |
-| `format:markdown:check` / `:fix` | markdownlint |
-| `typecheck` | tsc --noEmit |
-| `lint` / `lint:fix` / `lint:strict` | ESLint (flat, zero-warning) |
-| `clean:cache` / `clean:deps` | cache/dep cleanup |
-| `cross-ref` / `cross-ref:fix` | asset cross-reference |
-| `commit:batches` | git batch commits |
-
-**Orchestrator**: `powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode <mode>`
-
-✅ CI path filter fixed to `projects/Bash/**` in `.github/workflows/bash-scripts-ci.yml` (§13).
-
-## 7. Subprojects
-
-Each `projects/*/` is autonomous with its own AGENTS.md. Key ones:
-
-| Project | Stack | Package Mgr |
-| --------- | ------- | ------------- |
-| `projects/Resume_maker/` | Bun/TS | bun |
-| `projects/Bash/` (toolkit) | Bun/TS | bun |
-| `Banking/`, `comicwise/`, `ecom/` | Mixed | via Bash toolkit |
-| `cookiecutter-django-tailwind/`, `Django-Scrapy-Selenium/` | Python | pip/uv |
-| `mcp-servers/` | MCP servers | per-language |
-
-**Use subproject's local instructions**, not Bash conventions. Don't run bun in Python projects.
-
-## 8. CI / GitHub Workflows (17 total)
-
-Key workflows: `bash-scripts-ci.yml`, `validate-agentic-workflows-pr.yml`, `check-line-endings.yml`, `check-plugin-structure.yml`. Add workflows with tight path filters.
-
-## 9. Security
-
-- No secrets/`.env` committed; `dotenv-safe` only for `.env.example`
-- Least-privilege `tools` in agent frontmatter
-- Destructive ops behind `--dry-run`/confirmation
-
-## 10. Hermes Integration
+## 5. Hermes Integration
 
 - CLI: `%LOCALAPPDATA%/hermes/hermes-agent/venv/Scripts/hermes`
-- Profiles: `adminbot` (active), `default`, `code-architect`, `creative-director`, etc. Switch with `hermes profile use <name>`
+- Profiles: `default`, `alexa`, `code-architect`, `creative-director`, `exec-assistant`, `patient-tutor`, `research-analyst`
+- Switch: `hermes profile use <name>`
 - Hooks: `session-logger`, `session-auto-commit`, `governance-audit`
-- Skills: curated in `.github/prompts/skills/`, full registry at `%LOCALAPPDATA%/hermes/skills/`
+- Plugins: disk-cleanup, security-guidance, model-providers/openrouter
+- Session start: read `SESSION_REPORT.md` first; prefer validated MCP paths
 
-## 11. Session Start
+## 6. Common Recipes
 
-1. Read `SESSION_REPORT.md` first
-2. Prefer MCP tools (filesystem, github, ast-grep, memory, playwright, fetch, code-sandbox, mcp-docker, sequential-thinking, cli)
-3. Switch to correct Hermes profile for task
-4. After `.github` edits, run relevant `.github/scripts/` audit
+**Run toolkit**: `powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode <mode>` from `projects/Bash/` unless a subproject says otherwise.
 
-## 12. Common Recipes
+**Lint one file**: `bunx eslint --config eslint.config.mts <file.ts> --max-warnings=0` and/or `bunx markdownlint-cli2 <file.md>`.
 
-**Add agent**: copy template → set frontmatter → lint (`bunx markdownlint-cli2`) → run `inventory-agents.ps1` → update cross-ref docs.
+## 7. Model/Doc Lane Ownership
 
-**Lint one file**: `bunx eslint --config eslint.config.mts <file> --max-warnings=0` and/or `bunx markdownlint-cli2 <file.md>`.
-
-**Run toolkit**: `powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode cross-ref`
-
-**Add Python script**: under `.github/scripts/`, use venv, make standalone.
-
-## 13. Known Stale References (FIXED 2026-07-23)
-
-1. `.github/copilot-instructions.md` historically referenced root `Bash/` — updated to `projects/Bash/`
-2. CI path filter `Bash/**` — updated to `projects/Bash/**` in `.github/workflows/bash-scripts-ci.yml`
-3. CI workflow `copilot-setup-steps.yml` — corrected `cd Bash` paths to `cd projects/Bash`
-4. `README.md` referenced `PROJECT_RULES.md` — file now created
-5. Prompt boilerplate "use pnpm" is wrong — toolchain is bun
-6. Inventory counts in `copilot-instructions.md` stale (2026-05-30 snapshot vs current 174 agents/186 instructions)
-7. `Resume_maker/` references normalized to `projects/Resume_maker/` in `.github/copilot-instructions.md` and `.github/workflows/resume-maker-ci.yml`
-8. `.github/prompts/instructions/monorepo-path-routing.instructions.md` updated to use `projects/Bash/`
-9. `.github/prompts/` created as canonical prompt library; legacy `.github/agents/`, `.github/instructions/`, `.github/skills/`, and root `prompts/` references migrated
-
-## 14. Feedback
-
-- Flag if §13 stale references should be auto-fixed
-- Verify `.github/scripts/` paths before running
-- Subproject AGENTS.md is authoritative for its subtree
-
-## 15. PR Workflow
-
-See `CONTRIBUTING.md` for the full branching model and commit conventions.
-
-- **PR target:** `development` (not `master`)
-- **Branch naming:** `<type>/<project>/<description>` (e.g. `feat/resume-maker/add-html-output`)
-- **CI:** `.github/workflows/pr-ci.yml` auto-detects changed projects and runs per-project checks
-- **PR template:** `.github/pull_request_template.md` — fill out scope, type, and checklist
+| File | Lane |
+|------|------|
+| `.github/copilot-instructions.md` | Use as Copilot dispatch only; authoritative behavior lives in `AGENTS.md` |
+| `CLAUDE.md` | Claude-specific reasoning/tool behavior |
+| `.cursorrules` | Cursor IDE formatting/safety rules only |
+| `.hermes.md` | Hermes overrides/config sourcing |
+| `SOUL.md`, `MEMORY.md`, `USER.md` | Persona/memory rules; durable canonical rules are in `MEMORY.md` |

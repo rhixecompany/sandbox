@@ -1,0 +1,10 @@
+# VS Code Config Validation Report
+
+Scanned: C:\Users\Alexa\Desktop\SandBox
+
+## Result
+
+- Passed: 127
+- Failed: 0
+
+**Status:** passed

@@ -1,0 +1,11 @@
+{
+  "name": "session-auto-commit",
+  "version": "1.0.0",
+  "description": "Automatically commits session changes at session end.",
+  "events": ["on_session_end"],
+  "entrypoint": "hook.sh",
+  "config": {
+    "commit_message_prefix": "chore(session): ",
+    "include_untracked": false
+  }
+}
