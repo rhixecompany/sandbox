@@ -1,25 +1,29 @@
 {
-  "$schema": "https://json.schemastore.org/pyrightconfig.json",
-  "include": [
-    "."
-  ],
+  "include": ["."],
   "exclude": [
     "**/node_modules",
     "**/__pycache__",
-    "**/.venv",
-    "**/venv",
-    "**/env",
-    "**/.env",
-    "**/envs",
-    "**/venvs",
     "**/.git",
-    "research",
-    "scripts",
-    "results",
-    "templates",
-    "docs",
-    "projects/**/{{cookiecutter.project_slug}}"
+    "**/myvenv",
+    "**/.venv",
+    "**/build",
+    "**/dist",
+    "**/*.pyc",
+    "**/migrations",
+    "**/.github",
+    "**/docs"
   ],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none",
+  "reportOptionalMemberAccess": "none",
+  "reportPrivateUsage": "none",
   "pythonVersion": "3.11",
-  "typeCheckingMode": "basic"
+  "pythonPlatform": "Windows",
+  "strictListInference": true,
+  "strictDictionaryInference": true,
+  "strictSetInference": true,
+  "extraPaths": [
+    "myvenv/Lib/site-packages"
+  ]
 }

@@ -22,7 +22,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-| --- | --- | --- |
+|---|---|---|
 | Python | ^3.10+ | Backend language |
 | TypeScript | ^5 (strict) | Frontend language |
 | React | ^19.0.0 | UI framework |
@@ -32,7 +32,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Backend Stack (Django)
 
 | Category | Technologies |
-| --- | --- |
+|---|---|
 | **Web Framework** | Django 4.x |
 | **API Framework** | Django REST Framework |
 | **Async Tasks** | Celery + Redis |
@@ -43,7 +43,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Frontend Stack (Next.js)
 
 | Category | Dependencies |
-| --- | --- |
+|---|---|
 | **Framework** | next ^16.0.0 |
 | **UI** | react ^19.0.0, react-dom ^19.0.0 |
 | **Styling** | tailwindcss ^4.0.0 |
@@ -54,7 +54,7 @@ A dual-stack comic platform combining a Django REST Framework backend (API, admi
 ### Backend Convention Tools
 
 | Tool | Purpose |
-| --- | --- |
+|---|---|
 | pytest | Testing |
 | Black | Code formatting |
 | ruff | Linting |
@@ -95,7 +95,7 @@ rhixecompany-comics/
 ## Key Scripts
 
 | Command | Description |
-| --- | --- |
+|---|---|
 | `python manage.py runserver` | Django dev server |
 | `python manage.py test` | Run Django tests |
 | `celery -A config worker -l info` | Celery worker |

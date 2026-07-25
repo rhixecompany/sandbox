@@ -1,9 +1,13 @@
 import asyncio
-import json, os, glob, shutil, re, sys
+import glob
+import json
+import os
+import shutil
 
 HERMES_HOME = os.environ.get("LOCALAPPDATA", os.path.expanduser("~/AppData/Local")) + "/hermes"
 SKILLS_ROOT = os.path.join(HERMES_HOME, "skills")
 PENDING = "C:/Users/Alexa/Desktop/SandBox/scripts/_pending_skills_inbox"
+
 
 async def main():
     loop = asyncio.get_running_loop()
@@ -41,7 +45,9 @@ async def main():
     entries.sort(key=lambda x: x[0])  # timestamp order
 
     def do_create(p):
-        name = p["name"]; content = p.get("content", ""); cat = p.get("category", "")
+        name = p["name"]
+        content = p.get("content", "")
+        cat = p.get("category", "")
         d, exists = resolve_dir(name)
         if exists:
             # already on disk: fall through to patch-like behavior if content differs
@@ -58,7 +64,9 @@ async def main():
         return ("applied", f"created {d}")
 
     def do_write_file(p):
-        name = p["name"]; fp = p.get("file_path", ""); content = p.get("content", "")
+        name = p["name"]
+        fp = p.get("file_path", "")
+        content = p.get("content", "")
         d, exists = resolve_dir(name)
         if not exists:
             return ("skipped", f"write_file target missing: {name}")
@@ -68,7 +76,9 @@ async def main():
         return ("applied", f"wrote {target}")
 
     def do_patch(p):
-        name = p["name"]; old = p.get("old_string", ""); new = p.get("new_string", "")
+        name = p["name"]
+        old = p.get("old_string", "")
+        new = p.get("new_string", "")
         fp = p.get("file_path", "")
         d, exists = resolve_dir(name)
         if not exists:
@@ -95,10 +105,15 @@ async def main():
         shutil.rmtree(d)
         return ("applied", f"deleted {d}")
 
-    handlers = {"create": do_create, "write_file": do_write_file, "patch": do_patch,
-                "edit": do_edit, "delete": do_delete}
+    handlers = {
+        "create": do_create,
+        "write_file": do_write_file,
+        "patch": do_patch,
+        "edit": do_edit,
+        "delete": do_delete,
+    }
 
-    for ts, tid, act, p in entries:
+    for _ts, tid, act, p in entries:
         try:
             status, msg = handlers[act](p)
             results[status].append((tid, p.get("name", "?"), act, msg))
@@ -114,23 +129,30 @@ async def main():
         print(f"  {r[0]} | {r[1]} | {r[2]} | {r[3]}")
 
     # Write a machine-readable report
-    await loop.run_in_executor(None, _write_json, "C:/Users/Alexa/Desktop/SandBox/scripts/_pending_skills_report.json", results)
+    await loop.run_in_executor(
+        None, _write_json, "C:/Users/Alexa/Desktop/SandBox/scripts/_pending_skills_report.json", results
+    )
+
 
 def _read_sync(path):
     with open(path, encoding="utf-8") as f:
         return f.read()
 
+
 def _write_sync(path, content):
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
+
 
 def _load_json(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
+
 def _write_json(path, data):
     with open(path, "w") as fh:
         json.dump(data, fh, indent=2)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

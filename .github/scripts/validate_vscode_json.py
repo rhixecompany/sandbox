@@ -5,15 +5,15 @@ Async CLI that discovers and validates every JSON file under any .vscode/
 directory in the workspace tree.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
-def json_syntax_check(content: str) -> Optional[str]:
+def json_syntax_check(content: str) -> str | None:
     """Check JSON syntax, return error if invalid. CPU-bound."""
     try:
         json.loads(content)
@@ -22,7 +22,7 @@ def json_syntax_check(content: str) -> Optional[str]:
         return f"JSON error at line {e.lineno}, col {e.colno}: {e.msg}"
 
 
-async def validate_json_file(file_path: Path) -> Dict[str, Any]:
+async def validate_json_file(file_path: Path) -> dict[str, Any]:
     """Validate a single JSON file. I/O offloaded to thread."""
     try:
         content = await asyncio.to_thread(file_path.read_text, encoding="utf-8")
@@ -41,9 +41,7 @@ async def validate_json_file(file_path: Path) -> Dict[str, Any]:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Walk entire workspace and validate all .vscode JSON files."
-    )
+    parser = argparse.ArgumentParser(description="Walk entire workspace and validate all .vscode JSON files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -61,7 +59,7 @@ async def main() -> None:
     workspace = Path(args.workspace).resolve()
     ignore_parts = {"node_modules", ".git", ".next", "dist", "build", "coverage", "out", ".venv", "venv", "__pycache__"}
     vscode_dirs = list(workspace.rglob(".vscode"))
-    json_files: List[Path] = []
+    json_files: list[Path] = []
     for d in vscode_dirs:
         if d.is_dir() and not any(part in ignore_parts for part in d.parts):
             json_files.extend(f for f in d.glob("*.json") if not any(part in ignore_parts for part in f.parts))
@@ -69,9 +67,7 @@ async def main() -> None:
     if not json_files:
         msg = f"No .vscode JSON files found in {workspace}"
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, msg + "\n", encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, msg + "\n", encoding="utf-8")
         else:
             print(msg, file=sys.stderr)
         sys.exit(1)
@@ -81,7 +77,7 @@ async def main() -> None:
     passed = [r for r in results if r.get("passed")]
     failed = [r for r in results if not r.get("passed")]
 
-    lines = [f"=== VS Code JSON Validation ==="]
+    lines = ["=== VS Code JSON Validation ==="]
     lines.append(f"Scanned: {len(json_files)} | Passed: {len(passed)} | Failed: {len(failed)}")
     lines.append("")
 
@@ -100,9 +96,7 @@ async def main() -> None:
     report = "\n".join(lines)
 
     if args.output:
-        await asyncio.to_thread(
-            Path(args.output).write_text, report, encoding="utf-8"
-        )
+        await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
     else:
         print(report)
 

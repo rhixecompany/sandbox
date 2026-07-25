@@ -418,7 +418,7 @@ requirements/
 ## 8. Directory Statistics
 
 | Directory | Purpose | Estimated Files |
-|---|---|---|
+| --- | --- | --- |
 | `backend/` | Django REST API + Crawler | ~80 Python files |
 | `src/` | Next.js frontend | ~100 TSX/TS files |
 | `compose/` | Docker images | ~10 Dockerfiles |

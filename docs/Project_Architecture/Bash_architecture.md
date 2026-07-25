@@ -9,7 +9,7 @@
 ## Project Overview
 
 | Attribute | Value |
-|---|---|
+| --- | --- |
 | **Project Name** | Bash (opencode) |
 | **Type** | Multi-Phase Automation Toolkit |
 | **Architecture Pattern** | Phase-Based Orchestration + Modular Library |
@@ -104,7 +104,7 @@ flowchart LR
 ### Phase Detail
 
 | Phase | Script(s) | Description | Key Input | Key Output |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **1 — Discovery** | `phase-1-discovery.ps1`, `phase-1-deep-triage.ps1` | Inventory repositories and dependencies | Workspace scan | `repo-inventory.json`, `discovery-config.json` |
 | **2 — Clone** | `phase-2-clone.ps1`, `phase-2-clone-local.ps1`, `phase-2-light-inventory.ps1` | Clone repositories locally, light inventory for MEDIUM/LOW repos | `clone-config.json` | Cloned repos, `clone-template.json` |
 | **3 — Triage** | `phase-3-triage.ps1`, `phase-3-consolidation.js` | Analyze and categorize issues using `triage-utils.ps1` | `triage-config.json` | Findings, `triage-template.json` |
@@ -247,7 +247,7 @@ sequenceDiagram
 ## Key Architecture Decisions
 
 | Decision | Rationale |
-|---|---|
+| --- | --- |
 | **Bun-first runtime** | Faster execution than Node.js for TypeScript, built-in bundler, TypeScript support without tsx |
 | **PowerShell for orchestration** | Complex multi-phase workflows benefit from PowerShell's object pipeline, error handling, and job system |
 | **Triple-wrapper parity** | `.sh`/`.ps1`/`.bat` ensures the toolkit works on any OS without dependency on WSL or third-party tools |

@@ -105,7 +105,7 @@ Resume_maker/
 The project follows a **flat-by-convention, layered-by-purpose** organization:
 
 | Layer | Directory | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Entry** | Root (`/`) | Single entry point, all config, all data inputs |
 | **Source** | `index.ts` | Entire application logic (no module splitting) |
 | **Config** | Root dotfiles + `.vscode/` | Linting, formatting, spell-check, IDE |
@@ -119,6 +119,7 @@ The project follows a **flat-by-convention, layered-by-purpose** organization:
 ### Decision: Flat Source Layout
 
 The project deliberately avoids subdirectory modules or `src/` layout. This works because:
+
 - The entire application is a single ~933-line TypeScript file
 - No build step, no module bundling
 - No shared library; everything is self-contained in `index.ts`
@@ -132,7 +133,7 @@ The project deliberately avoids subdirectory modules or `src/` layout. This work
 The primary output directory. Contains both Markdown and PDF variants. Files are named by the `--output` CLI flag or auto-named.
 
 | Pattern | Example |
-|---|---|
+| --- | --- |
 | `{name}-resume.md` | `alexander-resume.md` |
 | `{name}-resume.pdf` | `alexander-resume.pdf` |
 | `{document-type}.md` | `cover-letter.md`, `interview-qa.md` |
@@ -141,6 +142,7 @@ The primary output directory. Contains both Markdown and PDF variants. Files are
 ### `scripts/` — Automation
 
 Currently contains a single smoke test script (`smoke-resume.ts`) that:
+
 1. Spawns `bun index.ts` with test arguments
 2. Verifies both `.md` and `.pdf` output files exist
 3. Exits non-zero on failure
@@ -162,7 +164,7 @@ Stores auto-generated or updated README files for sibling projects discovered vi
 ## 4. Naming Conventions
 
 | Category | Convention | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Source files** | `kebab-case.ts` | `index.ts`, `smoke-resume.ts` |
 | **Config files** | `.prefix` (dotfiles) | `.cspell.json`, `.markdownlint.json` |
 | **Input data** | `kebab-case.json` | `sample-input.json`, `alexander-input.json` |
@@ -236,7 +238,7 @@ flowchart LR
 ### Rule Summary
 
 | File Type | Location | Rationale |
-|---|---|---|
+| --- | --- | --- |
 | Entry point | Root | Single file, no subdirectory needed |
 | Config files | Root (dotfiles) | Standard Node/Bun convention |
 | Input data | Root | User-facing; easy to find and edit |
@@ -250,7 +252,7 @@ flowchart LR
 ## 6. Project Type Indicators
 
 | Indicator | Present? | Evidence |
-|---|---|---|
+| --- | --- | --- |
 | Node.js / Bun project | ✅ | `package.json` + `bun.lock` |
 | TypeScript | ✅ | `tsconfig.json` + `.ts` source |
 | ESLint | ✅ | `eslint.config.js` (flat config) |

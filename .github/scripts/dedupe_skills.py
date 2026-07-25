@@ -6,20 +6,17 @@ Usage:
                             [--dry-run] [--report PATH]
 """
 
-import asyncio
 import argparse
-import json
+import asyncio
 import sys
 from pathlib import Path
-from collections import defaultdict
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Dedupe Hermes skills")
     parser.add_argument("--skills-dir", default=None, help="Path to skills directory")
     parser.add_argument("--output", default=None, help="Output path for dedupe report")
-    parser.add_argument("--threshold", type=float, default=0.8,
-                        help="Similarity threshold (0.0-1.0, default: 0.8)")
+    parser.add_argument("--threshold", type=float, default=0.8, help="Similarity threshold (0.0-1.0, default: 0.8)")
     parser.add_argument("--dry-run", action="store_true", help="Preview without changes")
     parser.add_argument("--report", default=None, help="Save detailed report")
     return parser.parse_args(argv)
@@ -122,15 +119,17 @@ def _scan_and_find_duplicates(skills_dir: Path, threshold: float) -> list[dict]:
                 continue
             sim = _compute_similarity(a, b)
             if sim >= threshold:
-                duplicates.append({
-                    "skill_a": a["name"],
-                    "skill_a_path": a["path"],
-                    "skill_b": b["name"],
-                    "skill_b_path": b["path"],
-                    "similarity": round(sim, 3),
-                    "name_match": a["name"].lower() == b["name"].lower(),
-                    "exact_copy": a["text_length"] == b["text_length"],
-                })
+                duplicates.append(
+                    {
+                        "skill_a": a["name"],
+                        "skill_a_path": a["path"],
+                        "skill_b": b["name"],
+                        "skill_b_path": b["path"],
+                        "similarity": round(sim, 3),
+                        "name_match": a["name"].lower() == b["name"].lower(),
+                        "exact_copy": a["text_length"] == b["text_length"],
+                    }
+                )
                 checked.add(b["name"])
         checked.add(a["name"])
 

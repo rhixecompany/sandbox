@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Fix YAML frontmatter with embedded quotes in description fields."""
+
 import asyncio
-import os
 import re
-import yaml
 from pathlib import Path
+
+import yaml
 
 BASE = Path(r"C:\Users\Alexa\AppData\Local\hermes\skills")
 
@@ -20,7 +21,7 @@ async def main():
     for path in all_skills:
         try:
             content = path.read_text(encoding="utf-8")
-        except:
+        except Exception:
             continue
 
         fm_match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
@@ -37,7 +38,7 @@ async def main():
             if parsed and "name" in parsed:
                 skipped += 1  # YAML is fine
                 continue
-        except yaml.YAMLError as e:
+        except yaml.YAMLError:
             pass  # Needs fixing
 
         # Fix embedded quotes in description lines
@@ -48,7 +49,7 @@ async def main():
         for line in lines:
             stripped = line.strip()
             if stripped.startswith("description:"):
-                val = stripped[stripped.index(":")+1:].strip()
+                val = stripped[stripped.index(":") + 1 :].strip()
                 # Check for quoted string with embedded quotes
                 if val.startswith('"') and not val.endswith('"') and '"' in val[1:]:
                     # Unclosed quote - find and fix
@@ -65,7 +66,7 @@ async def main():
 
         if changed:
             new_fm = "\n".join(new_lines)
-            new_content = content[:fm_match.start(1)] + new_fm + content[fm_match.end(1):]
+            new_content = content[: fm_match.start(1)] + new_fm + content[fm_match.end(1) :]
             path.write_text(new_content, encoding="utf-8")
             print(f"✅ {path.parent.name}: fixed")
             fixed += 1
@@ -77,7 +78,7 @@ async def main():
             for line in lines:
                 stripped = line.strip()
                 if stripped.startswith("description:") and '"' in stripped:
-                    val = stripped[stripped.index(":")+1:].strip()
+                    val = stripped[stripped.index(":") + 1 :].strip()
                     if val.startswith('"') and val.endswith('"') and val.count('"') > 2:
                         inner = val[1:-1]
                         indent = " " * (len(line) - len(line.lstrip()))
@@ -87,7 +88,7 @@ async def main():
                 new_lines.append(line)
             if changed:
                 new_fm = "\n".join(new_lines)
-                new_content = content[:fm_match.start(1)] + new_fm + content[fm_match.end(1):]
+                new_content = content[: fm_match.start(1)] + new_fm + content[fm_match.end(1) :]
                 path.write_text(new_content, encoding="utf-8")
                 print(f"✅ {path.parent.name}: fixed (alt)")
                 fixed += 1

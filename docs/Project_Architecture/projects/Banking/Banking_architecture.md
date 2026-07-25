@@ -124,7 +124,7 @@ sequenceDiagram
 ### 1. App Router (Next.js 16)
 
 | Pattern | Implementation |
-|---|---|
+| --- | --- |
 | **Server Components** | Default rendering strategy for pages and layouts |
 | **Client Components** | Interactive UI (`"use client"` in forms, charts, Plaid Link) |
 | **Route Groups** | `(root)`, `(auth)`, `(admin)` for URL-free layout org |
@@ -154,7 +154,7 @@ Server Actions / Route Handlers
 ### 3. Financial Integration Layer
 
 | Service | Role | SDK | Webhook |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Plaid** | Bank account linking, transaction sync, identity verification | `plaid` + `react-plaid-link` | Plaid webhooks (item updates, transactions) |
 | **Dwolla** | ACH transfer processing, customer creation, funding sources | `dwolla-v2` | Dwolla webhooks (transfer status changes) |
 
@@ -165,7 +165,7 @@ Server Actions / Route Handlers
 ### 4. State Management
 
 | Store | Purpose | Technology |
-|---|---|---|
+| --- | --- | --- |
 | **UI Store** | Sidebar, theme, mobile nav | Zustand |
 | **Transfer Store** | Transfer form state | Zustand |
 | **Filter Store** | Transaction list filters | Zustand |
@@ -246,7 +246,7 @@ erDiagram
 ### Tables (10 total)
 
 | Table | Description | Key Columns |
-|---|---|---|
+| --- | --- | --- |
 | `users` | Core user authentication & profile | email, password, isAdmin, role |
 | `account` | NextAuth OAuth account links | provider, providerAccountId |
 | `session` | NextAuth session storage (unused with JWT) | sessionToken |
@@ -264,7 +264,7 @@ erDiagram
 ### Enums (4)
 
 | Enum | Values |
-|---|---|
+| --- | --- |
 | `user_role` | `user`, `admin`, `moderator` |
 | `transaction_status` | `pending`, `processing`, `completed`, `failed`, `cancelled` |
 | `transaction_type` | `credit`, `debit` |
@@ -297,7 +297,7 @@ graph TD
 ### Route Group Structure
 
 | Route Group | Path | Layout | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `(root)` | `/dashboard`, `/my-wallets`, `/payment-transfer`, `/transaction-history`, `/settings` | RootLayoutWrapper | Authenticated pages |
 | `(auth)` | `/sign-in`, `/sign-up` | AuthLayoutWrapper | Public auth pages |
 | `(admin)` | `/admin` | AdminLayoutWrapper | Admin panel |
@@ -307,7 +307,7 @@ graph TD
 ## API Routes
 
 | Route | Method | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `/api/auth/[...nextauth]` | ALL | NextAuth handler |
 | `/api/auth/local-create` | POST | Register new user credentials |
 | `/api/auth/local-validate` | POST | Validate sign-in credentials |
@@ -374,7 +374,7 @@ graph LR
 ### Deployment Options
 
 | Platform | Config | Notes |
-|---|---|---|
+| --- | --- | --- |
 | **Vercel** | `vercel.json` + `next.config.ts` | Primary production target |
 | **Docker** | `docker-compose.yml` + `compose/prod/` | Self-hosted with Traefik, Grafana, Prometheus |
 | **Railway** | `Railway.toml` | Alternative cloud deployment |
@@ -382,7 +382,7 @@ graph LR
 ### Monitoring
 
 | Tool | Purpose |
-|---|---|
+| --- | --- |
 | **Grafana** | Dashboard visualization (`compose/prod/grafana/`) |
 | **Prometheus** | Metrics collection + alerting (`compose/prod/prometheus/`) |
 | **Upstash QStash** | Scheduled/async task execution |

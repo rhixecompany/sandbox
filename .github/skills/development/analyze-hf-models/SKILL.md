@@ -22,6 +22,7 @@ Wrapper skill for the `analyze_hf_models.py` script in `~/AppData/Local/hermes/s
 **Location:** `~/AppData/Local/hermes/scripts/analyze_hf_models.py`
 
 **Usage:**
+
 ```bash
 python analyze_hf_models.py [options]
 ```
@@ -39,12 +40,15 @@ python analyze_hf_models.py [options]
 ## Workflow
 
 ### Phase 1: Setup
+
 Ensure `huggingface_hub` is installed and API token is configured if needed.
 
 ### Phase 2: Execute
+
 Run the script with model identifiers or search terms.
 
 ### Phase 3: Analyze Results
+
 Review the output for configuration differences or metadata patterns.
 
 ## Verification Checklist
@@ -56,5 +60,6 @@ Review the output for configuration differences or metadata patterns.
 - [ ] Results match expected model configurations
 
 ## Pitfalls
+
 - Rate limiting from HuggingFace API may slow analysis
 - Large model lists may require pagination handling

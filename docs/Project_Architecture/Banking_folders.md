@@ -496,7 +496,7 @@ Feature Page (Server Component)
 ### Component Category Summary
 
 | Category | Count | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **shadcn/ui primitives** | 40+ | button, card, dialog, input, table, tabs, select, form, chart, sidebar, sheet, calendar, drawer, popover, etc. |
 | **Layout wrappers** | 30+ | RootLayoutWrapper, AuthLayoutWrapper, PageShell, data-table, form, card, generic-* (8 templates) |
 | **Feature components** | 18 | dashboard-server-wrapper, payment-transfer-client-wrapper, my-wallets-server-wrapper, etc. |
@@ -511,7 +511,7 @@ Feature Page (Server Component)
 ## Server Actions (10 total)
 
 | Action File | Exports | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `auth.register.ts` | `registerUser` | Create user account |
 | `auth.signin.ts` | `signInWithCredentials` | Authenticate user |
 | `plaid.actions.ts` | `createLinkToken`, `exchangePublicToken` | Plaid Link flow |
@@ -529,7 +529,7 @@ Feature Page (Server Component)
 ## Data Access Layer (8 DAL modules)
 
 | DAL Module | Primary Tables | Key Operations |
-|---|---|---|
+| --- | --- | --- |
 | `user.dal.ts` | users, user_profiles | CRUD, soft delete, email lookup |
 | `wallet.dal.ts` | wallets | CRUD, soft delete, by user, by sharableId |
 | `transaction.dal.ts` | transactions | CRUD, by user, by wallet, filter, paginate |
@@ -544,7 +544,7 @@ Feature Page (Server Component)
 ## Zustand Stores (4 active stores)
 
 | Store | State | Actions |
-|---|---|---|
+| --- | --- | --- |
 | `ui-store.tsx` | sidebarOpen, theme, isMobile | toggleSidebar, setTheme |
 | `filter-store.tsx` | dateRange, status, category, type | setFilters, resetFilters |
 | `toast-store.tsx` | toasts[] | addToast, removeToast, clearToasts |
@@ -555,7 +555,7 @@ Feature Page (Server Component)
 ## Custom React Hooks (6)
 
 | Hook | Purpose |
-|---|---|
+| --- | --- |
 | `use-bank-connection.ts` | Plaid link token lifecycle, connection status |
 | `use-debounce.ts` | Debounce value for search inputs |
 | `use-mobile.tsx` | Responsive breakpoint detection |

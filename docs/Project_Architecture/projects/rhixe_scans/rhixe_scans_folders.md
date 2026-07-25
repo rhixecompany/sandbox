@@ -243,7 +243,7 @@ compose/
 ## 5. Directory Size Estimates
 
 | Directory | Role | Est. Files |
-|---|---|---|
+| --- | --- | --- |
 | `backend/api/libary/` | Core domain models, views, serializers | ~35 |
 | `backend/api/users/` | User management | ~10 |
 | `backend/crawler/` | Scrapy content ingestion | ~6 |

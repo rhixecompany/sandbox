@@ -11,7 +11,7 @@ status: in-progress
 
 - **Name**: Alexander Iseghohi
 - **GitHub**: rhixecompany
-- **LinkedIn**: https://www.linkedin.com/in/alexander-iseghohi-8a3a51209/
+- **LinkedIn**: <https://www.linkedin.com/in/alexander-iseghohi-8a3a51209/>
 - **Goal**: Get hired and start earning as a Full-Stack Developer
 
 ---
@@ -32,7 +32,7 @@ Transform all GitHub repositories into professional, job-ready portfolio pieces 
 ### All 7 Repositories
 
 | Repo | URL | Current Status | Action |
-|------|-----|----------------|--------|
+| ------ | ----- | ---------------- | -------- |
 | **banking** | github.com/rhixecompany/banking | ✅ Excellent (46KB comprehensive) | Keep as-is |
 | **university-libary-jsm** | github.com/rhixecompany/university-libary-jsm | ❌ Basic Next.js template | **UPDATE** |
 | **rhixe_scans** | github.com/rhixecompany/rhixe_scans | ❌ Minimal (63 bytes) | **REWRITE** |
@@ -155,6 +155,7 @@ bun run dev  # or python manage.py runserver
 - [Live Demo]
 - [Documentation]
 - [Related Blog/Tutorial]
+
 ```
 
 ---
@@ -481,7 +482,7 @@ Alexander Iseghohi
 ## Progress Tracking
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | Last Updated | May 27, 2026 |
 | Status | In Progress |
 | Next Action | Update repo READMEs (university-libary-jsm, rhixe_scans, xamehitv, selenium_webdriver, ecom, rhixecompany) |

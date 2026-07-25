@@ -17,9 +17,9 @@ import asyncio
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Tuple
+from typing import Any
 
 HOOKS_ROOT = Path(__file__).resolve().parent.parent
 HERMES_HOME = Path(os.environ.get("HERMES_HOME", "") or Path.home() / "AppData" / "Local" / "hermes")
@@ -57,7 +57,7 @@ def log_error(*args: Any) -> None:
 
 
 def _now_iso() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 now_iso = _now_iso
@@ -87,11 +87,11 @@ def normalize_event(event: str) -> str:
 
 
 def resolve_hook_name_from_env(prefix: str, fallback: str) -> str:
-    for key, value in os.environ.items():
+    for key, _value in os.environ.items():
         if key == f"{SKIP_PREFIX}{fallback.upper()}":
             return fallback
-        if key.startswith(SKIP_PREFIX) and key[len(SKIP_PREFIX):].lower() == prefix:
-            return key[len(SKIP_PREFIX):].lower()
+        if key.startswith(SKIP_PREFIX) and key[len(SKIP_PREFIX) :].lower() == prefix:
+            return key[len(SKIP_PREFIX) :].lower()
     return fallback
 
 
@@ -136,7 +136,7 @@ async def read_jsonl(file: Path) -> list[dict]:
         if not file.exists():
             return []
         records: list[dict] = []
-        with open(file, "r", encoding="utf-8") as f:
+        with open(file, encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if not line:
@@ -154,7 +154,7 @@ async def run_cmd(
     *args: str,
     cwd: Path | None = None,
     timeout: int = 30,
-) -> Tuple[int, str, str]:
+) -> tuple[int, str, str]:
     proc = await asyncio.create_subprocess_exec(
         *args,
         stdout=asyncio.subprocess.PIPE,
@@ -163,7 +163,7 @@ async def run_cmd(
     )
     try:
         stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=timeout)
-    except asyncio.TimeoutError:
+    except TimeoutError:
         proc.kill()
         await proc.wait()
         return -1, "", f"TIMEOUT after {timeout}s"
@@ -175,5 +175,5 @@ async def run_cmd(
     )
 
 
-async def run_git(*args: str, cwd: Path | None = None) -> Tuple[int, str, str]:
+async def run_git(*args: str, cwd: Path | None = None) -> tuple[int, str, str]:
     return await run_cmd("git", *args, cwd=cwd)

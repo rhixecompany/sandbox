@@ -17,7 +17,7 @@
 **Stack:** Next.js 15, Prisma 7, NextAuth v5, Stripe, Tailwind 4, shadcn/ui, Zustand, React Query 5, Zod 4
 
 | Pattern | Inherit? | Notes |
-| --------- | ---------- | ------- |
+|---------|----------|-------|
 | RSC chapter pages | ✅ | Render metadata server-side; only interactions need hydration |
 | Server Actions in `actions/` dir | ✅ | Use `'use server'` module-level + Zod validation |
 | Prisma DAL boundaries | ✅ | Keep access behind `dal/*` modules; precise `select`/`include` |
@@ -32,7 +32,7 @@
 **Stack:** Django 4.x, DRF, Scrapy, Selenium, Celery + Redis, PostgreSQL
 
 | Pattern | Inherit? | Notes |
-| --------- | ---------- | ------- |
+|---------|----------|-------|
 | Celery + Scrapy integration | ✅ | `shared_task` decorator; `AsyncCrawlerProcess` for spiders |
 | Django-Celery config | ✅ | `celery.py` with namespace config |
 | Dead-letter scraping logs | ✅ | Store raw HTML + parse failures for reprocessing |
@@ -45,7 +45,7 @@
 **Stack:** Node.js 18+, selenium-webdriver 4.x, ChromeDriver
 
 | Pattern | Inherit? | Notes |
-| --------- | ---------- | ------- |
+|---------|----------|-------|
 | Selenium Manager for drivers | ✅ | Zero-config driver management |
 | Explicit waits (no `sleep()`) | ✅ | `driver.wait(until.elementLocated(...))` |
 | Centralized retry utils | ✅ | `safeClick`, `safeGetText` with stale element retry |
@@ -56,7 +56,7 @@
 ## 4. Discarded Patterns
 
 | Pattern | Source | Reason Discarded |
-| --------- | -------- | ------------------ |
+|---------|--------|------------------|
 | pnpm package manager | comicwise | rhixecompany-comics uses npm; Bun migration planned separately |
 | Prisma ORM | comicwise | rhixecompany-comics uses Drizzle ORM instead |
 | Selenium for new scrapers | selenium_webdriver | Playwright is modern alternative; Selenium legacy-only from 2026 |

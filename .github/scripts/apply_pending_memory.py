@@ -1,13 +1,21 @@
 import asyncio
-import json, os, glob
+import glob
+import json
+import os
 
 HERMES_HOME = os.environ.get("LOCALAPPDATA", os.path.expanduser("~/AppData/Local")) + "/hermes"
 MEM = os.path.join(HERMES_HOME, "memories", "MEMORY.md")
 USR = os.path.join(HERMES_HOME, "memories", "USER.md")
 PENDING = os.path.join(HERMES_HOME, "pending", "memory")
 
-def load_sync(p): return open(p, encoding="utf-8").read() if os.path.isfile(p) else ""
-def save_sync(p, t): open(p, "w", encoding="utf-8").write(t)
+
+def load_sync(p):
+    return open(p, encoding="utf-8").read() if os.path.isfile(p) else ""
+
+
+def save_sync(p, t):
+    open(p, "w", encoding="utf-8").write(t)
+
 
 async def main():
     loop = asyncio.get_running_loop()
@@ -38,7 +46,8 @@ async def main():
                 return text.replace(old, ""), "applied", "removed"
             return text, "skipped", "not found"
         if a == "replace":
-            old = op.get("old_text", ""); new = op.get("content", "")
+            old = op.get("old_text", "")
+            new = op.get("content", "")
             if old and old in text:
                 return text.replace(old, new, 1), "applied", "replaced"
             if not old:  # replace with empty old = pure add
@@ -48,26 +57,28 @@ async def main():
             return text, "failed", "old not found"
         return text, "skipped", f"unknown op {a}"
 
-    for ts, tid, act, p in entries:
+    for _ts, tid, act, p in entries:
         tgt = p.get("target", "memory")
         store = u if tgt == "user" else m
-        path = USR if tgt == "user" else MEM
         try:
             if act in ("add", "replace"):
                 new, st, msg = apply_to(store, p)
                 if st == "applied":
-                    if tgt == "user": u = new
-                    else: m = new
+                    if tgt == "user":
+                        u = new
+                    else:
+                        m = new
                 results[st].append((tid, tgt, act, msg))
             elif act == "batch":
-                changed = False
                 for op in p.get("operations", []):
                     new, st, msg = apply_to(store, op)
                     results[st].append((tid, tgt, f"batch/{op.get('action')}", msg))
                     if st == "applied":
-                        store = new; changed = True
-                if tgt == "user": u = store
-                else: m = store
+                        store = new
+                if tgt == "user":
+                    u = store
+                else:
+                    m = store
             else:
                 results["skipped"].append((tid, tgt, act, "unhandled"))
         except Exception as e:
@@ -80,9 +91,11 @@ async def main():
     print("FAILED:", results["failed"][:10])
     print("SKIPPED sample:", results["skipped"][:8])
 
+
 def _load_json(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

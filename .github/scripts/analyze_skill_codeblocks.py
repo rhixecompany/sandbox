@@ -1,5 +1,7 @@
 import asyncio
-import os, re, glob, json
+import glob
+import os
+import re
 
 ROOT = os.path.join(os.environ["LOCALAPPDATA"], "hermes", "skills")
 # also scan references under skills
@@ -8,12 +10,15 @@ for base in [ROOT]:
     for md in glob.glob(os.path.join(base, "**", "*.md"), recursive=True):
         TARGETS.append(md)
 
-PATH_RE = re.compile(r'C:/Users/Alexa/AppData/Local/hermes|C:\\Users\\Alexa\\AppData\\Local\\hermes|~/AppData/Local/hermes|\$HOME/AppData/Local/hermes')
+PATH_RE = re.compile(
+    r"C:/Users/Alexa/AppData/Local/hermes|C:\\Users\\Alexa\\AppData\\Local\\hermes|~/AppData/Local/hermes|\$HOME/AppData/Local/hermes"
+)
 
-fence_re = re.compile(r'^```(\w*)')
+fence_re = re.compile(r"^```(\w*)")
+
+
 def split_blocks(lines):
     blocks = []  # (lang, start, end, list_of_lines)
-    i = 0
     cur = None
     for idx, ln in enumerate(lines):
         m = fence_re.match(ln.strip())
@@ -27,10 +32,17 @@ def split_blocks(lines):
             cur["lines"].append(ln)
     return blocks
 
+
 async def main():
     loop = asyncio.get_running_loop()
-    stats = {"in_code": 0, "in_prose": 0, "by_lang": {}, "files_with_code_matches": 0,
-             "python_code_matches": 0, "powershell_code_matches": 0}
+    stats = {
+        "in_code": 0,
+        "in_prose": 0,
+        "by_lang": {},
+        "files_with_code_matches": 0,
+        "python_code_matches": 0,
+        "powershell_code_matches": 0,
+    }
     file_report = []
     for md in TARGETS:
         text = await loop.run_in_executor(None, _read_file, md)
@@ -60,8 +72,18 @@ async def main():
         stats["in_code"] += in_code
         stats["in_prose"] += in_prose
         if in_code > 0:
-            file_report.append((md.replace(ROOT, "<skills>"), in_code, in_prose,
-                                {b["lang"]: sum(1 for l in b["lines"] if PATH_RE.search(l)) for b in blocks if any(PATH_RE.search(l) for l in b["lines"])}))
+            file_report.append(
+                (
+                    md.replace(ROOT, "<skills>"),
+                    in_code,
+                    in_prose,
+                    {
+                        b["lang"]: sum(1 for l in b["lines"] if PATH_RE.search(l))
+                        for b in blocks
+                        if any(PATH_RE.search(l) for l in b["lines"])
+                    },
+                )
+            )
 
     print(f"Scanned {len(TARGETS)} md files under skills/")
     print(f"Matches INSIDE code blocks (in-scope): {stats['in_code']}")
@@ -73,12 +95,14 @@ async def main():
     for fr in sorted(file_report, key=lambda x: -x[1]):
         print(f"  {fr[0]}: code={fr[1]} prose={fr[2]} langs={fr[3]}")
 
+
 def _read_file(path):
     try:
         with open(path, encoding="utf-8") as f:
             return f.read()
     except Exception:
         return None
+
 
 if __name__ == "__main__":
     asyncio.run(main())

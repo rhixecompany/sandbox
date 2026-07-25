@@ -32,5 +32,6 @@ Done when: summary file is written and every discovered hook has a catalog entry
   - `on_session_start`: session-logger (approved)
   - `pre_llm_call`: governance-audit (approved)
 - Confirmed docs folder: `C:/Users/Alexa/Desktop/SandBox/docs`
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec to quality)*

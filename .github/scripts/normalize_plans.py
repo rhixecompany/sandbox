@@ -1,59 +1,64 @@
 #!/usr/bin/env python3
 """Normalize .hermes/plans/*.md to a minimal executable plan contract + rebuild SESSION_REPORT.md afterwards."""
-import asyncio
-from pathlib import Path
-import re, subprocess, sys
-from datetime import datetime, timezone
 
-ROOT = Path('.').resolve()
-PLANS = ROOT / '.hermes' / 'plans'
-SKIP_DIRS = {'docs'}
-REPORT = ROOT / 'SESSION_REPORT.md'
-REPORT_SCRIPT = Path(r'C:\Users\Alexa\AppData\Local\hermes\skills\devops\session-audit-report\scripts\generate_session_report.py')
+import asyncio
+import re
+import subprocess
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path(".").resolve()
+PLANS = ROOT / ".hermes" / "plans"
+SKIP_DIRS = {"docs"}
+REPORT = ROOT / "SESSION_REPORT.md"
+REPORT_SCRIPT = Path(
+    r"C:\Users\Alexa\AppData\Local\hermes\skills\devops\session-audit-report\scripts\generate_session_report.py"
+)
 
 CHANGES = []
 
 
 def now_iso():
-    return datetime.now(timezone.utc).isoformat(timespec='minutes')
+    return datetime.now(UTC).isoformat(timespec="minutes")
 
 
 def normalize_plan(path: Path) -> bool:
-    text = path.read_text(encoding='utf-8', errors='ignore')
+    text = path.read_text(encoding="utf-8", errors="ignore")
     original = text
 
     # enforce fenced YAML frontmatter
-    if not text.startswith('---'):
-        text = '---\nstatus: not_started\n---\n\n' + text
+    if not text.startswith("---"):
+        text = "---\nstatus: not_started\n---\n\n" + text
     else:
-        m = re.match(r'^---\n(.*?)\n---\n(.*)$', text, re.S)
+        m = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
         if not m:
-            text = '---\nstatus: not_started\n---\n\n' + text
+            text = "---\nstatus: not_started\n---\n\n" + text
         else:
             meta, body = m.group(1), m.group(2)
-            if 'status:' not in meta.splitlines():
-                meta = 'status: not_started\n' + meta
-            text = f'---\n{meta}\n---\n{body}'
+            if "status:" not in meta.splitlines():
+                meta = "status: not_started\n" + meta
+            text = f"---\n{meta}\n---\n{body}"
 
     # remove migrated breadcrumb lines that promote draft headers as completion claims
-    text = re.sub(r'<!-- migrated from:.*?\n', '', text)
+    text = re.sub(r"<!-- migrated from:.*?\n", "", text)
     # replace false positive completion markers with actual status from frontmatter
-    text = re.sub(r'^> \*\*Status:\*\* ✅.*$', '', text, flags=re.M)
+    text = re.sub(r"^> \*\*Status:\*\* ✅.*$", "", text, flags=re.M)
     # collapse excessive whitespace
-    text = re.sub(r'\n{3,}', '\n\n', text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
 
     if text != original:
-        path.write_text(text, encoding='utf-8')
-        CHANGES.append((str(path.relative_to(ROOT)), 'normalized plan frontmatter/status'))
+        path.write_text(text, encoding="utf-8")
+        CHANGES.append((str(path.relative_to(ROOT)), "normalized plan frontmatter/status"))
         return True
     return False
 
 
 def ensure_executable_plan():
-    target = PLANS / '2026-06-30-execution-plan-for-prompt-and-plan-normalization.md'
+    target = PLANS / "2026-06-30-execution-plan-for-prompt-and-plan-normalization.md"
     if target.exists():
         return
-    content = '''---
+    content = """---
 status: not_started
 ---
 # Execution Plan — Prompt and Plan Normalization
@@ -142,41 +147,37 @@ Objective: deliver clean state.
 - [ ] 4.2 run `git diff --check`
 - [ ] 4.3 `git commit` with `docs: normalize .hermes/plans for executable workflow`
 - [ ] 4.4 `git push`
-'''
-    target.write_text(content, encoding='utf-8')
-    CHANGES.append((str(target.relative_to(ROOT)), 'created executable plan'))
+"""
+    target.write_text(content, encoding="utf-8")
+    CHANGES.append((str(target.relative_to(ROOT)), "created executable plan"))
 
 
 async def main():
     if not PLANS.exists():
-        print(f'missing plans dir: {PLANS}')
+        print(f"missing plans dir: {PLANS}")
         sys.exit(1)
 
-    for path in sorted(PLANS.rglob('*.md')):
+    for path in sorted(PLANS.rglob("*.md")):
         if any(part in SKIP_DIRS for part in path.parts):
             continue
         normalize_plan(path)
 
     ensure_executable_plan()
 
-    changed = '\n'.join(f'- {p} :: {a}' for p, a in CHANGES) or '- No changes'
-    print('Changes applied:\n' + changed)
+    changed = "\n".join(f"- {p} :: {a}" for p, a in CHANGES) or "- No changes"
+    print("Changes applied:\n" + changed)
 
     if REPORT_SCRIPT.exists():
-        await asyncio.to_thread(
-            subprocess.run,
-            [sys.executable, str(REPORT_SCRIPT), '--cwd', str(ROOT)],
-            check=False
-        )
+        await asyncio.to_thread(subprocess.run, [sys.executable, str(REPORT_SCRIPT), "--cwd", str(ROOT)], check=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())
 
 
-'''
+"""
 Summary:
 - Inspected plan inventory and current file set.
 - Applying normalization now: frontmatter,'status' field, migrated stubs, and an executable plan for the current workflow.
 - After edits, rerun verification, then commit and push. No stop condition requested by the user.
-'''
+"""

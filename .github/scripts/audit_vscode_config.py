@@ -1,8 +1,9 @@
 import asyncio
-import os
 import json
+import os
 
 SANDBOX = "C:/Users/Alexa/Desktop/SandBox"
+
 
 async def main():
     sandbox_root = SANDBOX
@@ -26,10 +27,10 @@ async def main():
         "xamehi.tv": "Django",
         "youtube-downloader": "Unknown",
         "Bash": "Bun",
-        "Resume_maker": "Bun"
+        "Resume_maker": "Bun",
     }
 
-    for root, dirs, files in os.walk(sandbox_root):
+    for root, dirs, _files in os.walk(sandbox_root):
         if ".git" in root:
             continue
         if "node_modules" in dirs:
@@ -54,24 +55,26 @@ async def main():
         settings = await loop.run_in_executor(None, _load_json, settings_path)
 
         # Check for Python formatters in non-Python projects
-        has_python_formatter = False
         has_nextjs_formatter = False
 
         for key in settings.get("editor", {}).get("defaultFormatter", "") or "":
             pass
 
         # Check language-specific formatters
-        for key, value in settings.items():
+        for key, _value in settings.items():
             if key.startswith("[") and key.endswith("]"):
                 lang = key[1:-1]
                 if lang == "python":
-                    has_python_formatter = True
+                    pass
                 if lang in ["javascript", "typescript", "typescriptreact"]:
                     has_nextjs_formatter = True
 
         # Check for formatter conflicts (multiple formatters for same language)
-        formatters = [(k, v.get("editor.defaultFormatter") if isinstance(v, dict) else None)
-                      for k, v in settings.items() if k.startswith("[")]
+        [
+            (k, v.get("editor.defaultFormatter") if isinstance(v, dict) else None)
+            for k, v in settings.items()
+            if k.startswith("[")
+        ]
 
         # Check for hardcoded Windows paths
         settings_str = json.dumps(settings)
@@ -93,7 +96,9 @@ async def main():
                 exts = await loop.run_in_executor(None, _load_json, ext_path)
                 recs = exts.get("recommendations", [])
                 if not any("eslint" in r for r in recs):
-                    issues["stack_mismatches"].append(f"{rel_root}/.vscode/settings.json - ESLint code action without extension")
+                    issues["stack_mismatches"].append(
+                        f"{rel_root}/.vscode/settings.json - ESLint code action without extension"
+                    )
 
     # Report
     print("=VS Code Configuration Audit Report=")
@@ -108,9 +113,11 @@ async def main():
             for item in items:
                 print(f"  - {item}")
 
+
 def _load_json(path):
     with open(path) as f:
         return json.load(f)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

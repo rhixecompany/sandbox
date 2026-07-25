@@ -5,13 +5,13 @@ Async CLI for probing model endpoints with sample prompts and measuring
 response latency and quality.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
 async def test_openai_compatible(
@@ -20,10 +20,10 @@ async def test_openai_compatible(
     api_key: str,
     prompt: str = "Say hello in one word.",
     timeout: int = 30,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Test an OpenAI-compatible chat endpoint via httpt-like call."""
-    import urllib.request
     import urllib.error
+    import urllib.request
 
     url = f"{endpoint.rstrip('/')}/chat/completions"
     payload = json.dumps(
@@ -43,9 +43,7 @@ async def test_openai_compatible(
     try:
         req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
         # Offload blocking HTTP call to thread
-        response = await asyncio.to_thread(
-            urllib.request.urlopen, req, timeout=timeout
-        )
+        response = await asyncio.to_thread(urllib.request.urlopen, req, timeout=timeout)
         latency = time.monotonic() - start
         body = json.loads(response.read().decode())
         return {
@@ -53,9 +51,7 @@ async def test_openai_compatible(
             "endpoint": endpoint,
             "latency_s": round(latency, 3),
             "status": "ok",
-            "response": body.get("choices", [{}])[0]
-            .get("message", {})
-            .get("content", ""),
+            "response": body.get("choices", [{}])[0].get("message", {}).get("content", ""),
         }
     except Exception as exc:
         latency = time.monotonic() - start
@@ -68,7 +64,7 @@ async def test_openai_compatible(
         }
 
 
-async def test_models_from_config(config_path: Path) -> List[Dict[str, Any]]:
+async def test_models_from_config(config_path: Path) -> list[dict[str, Any]]:
     """Read JSON config and test all listed models."""
     try:
         content = await asyncio.to_thread(config_path.read_text, encoding="utf-8")
@@ -90,9 +86,7 @@ async def test_models_from_config(config_path: Path) -> List[Dict[str, Any]]:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Test LLM model availability and response quality."
-    )
+    parser = argparse.ArgumentParser(description="Test LLM model availability and response quality.")
     parser.add_argument(
         "--config",
         type=str,
@@ -136,7 +130,7 @@ async def main() -> None:
     args = parser.parse_args()
 
     if args.simulate:
-        now = time.time()
+        time.time()
         results = [
             {
                 "model": args.model or "echo-model",
@@ -190,13 +184,11 @@ async def main() -> None:
             indent=2,
         )
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, output, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, output, encoding="utf-8")
         else:
             print(output)
     else:
-        lines = [f"\n=== Model Test Results ==="]
+        lines = ["\n=== Model Test Results ==="]
         lines.append(f"Tested {len(results)} — Passed: {len(passed)}, Failed: {len(failed)}")
         for r in results:
             status = "PASS" if r.get("status") == "ok" else "FAIL"
@@ -209,9 +201,7 @@ async def main() -> None:
                 lines.append(f"          Error: {r.get('error', 'unknown')}")
         report = "\n".join(lines)
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, report, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
         else:
             print(report)
 

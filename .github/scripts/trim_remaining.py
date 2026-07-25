@@ -5,16 +5,14 @@ Async CLI that strips specified content patterns after other trim passes
 have completed.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 # Default patterns for remaining unwanted sections to trim
-REMAINING_PATTERNS: List[str] = [
+REMAINING_PATTERNS: list[str] = [
     r"^##\s+(?:Appendix|Appendices)\s+(?:A|B|C|D|E)\b",
     r"^##\s+Changelog",
     r"^##\s+Version\s+History",
@@ -24,7 +22,7 @@ REMAINING_PATTERNS: List[str] = [
 ]
 
 
-async def load_patterns(pattern_file: Path) -> List[str]:
+async def load_patterns(pattern_file: Path) -> list[str]:
     """Load additional trim patterns from file."""
     try:
         content = await asyncio.to_thread(pattern_file.read_text, encoding="utf-8")
@@ -33,9 +31,9 @@ async def load_patterns(pattern_file: Path) -> List[str]:
     return [line.strip() for line in content.splitlines() if line.strip() and not line.startswith("#")]
 
 
-def find_matching_sections(lines: List[str], patterns: List[str]) -> List[Tuple[int, int]]:
+def find_matching_sections(lines: list[str], patterns: list[str]) -> list[tuple[int, int]]:
     """Find sections matching any of the given patterns."""
-    sections: List[Tuple[int, int]] = []
+    sections: list[tuple[int, int]] = []
     start_idx = None
 
     for i, line in enumerate(lines):
@@ -51,7 +49,7 @@ def find_matching_sections(lines: List[str], patterns: List[str]) -> List[Tuple[
     return sections
 
 
-async def trim_file(file_path: Path, patterns: List[str], dry_run: bool = False) -> dict:
+async def trim_file(file_path: Path, patterns: list[str], dry_run: bool = False) -> dict:
     """Remove sections matching patterns from a file."""
     try:
         content = await asyncio.to_thread(file_path.read_text, encoding="utf-8")
@@ -89,9 +87,7 @@ async def trim_file(file_path: Path, patterns: List[str], dry_run: bool = False)
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Remove remaining/unwanted content sections from files."
-    )
+    parser = argparse.ArgumentParser(description="Remove remaining/unwanted content sections from files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -128,19 +124,17 @@ async def main() -> None:
         print(f"No files matching {args.pattern} in {workspace}", file=sys.stderr)
         sys.exit(1)
 
-    results = await asyncio.gather(
-        *(trim_file(f, patterns, dry_run=args.dry_run) for f in files)
-    )
+    results = await asyncio.gather(*(trim_file(f, patterns, dry_run=args.dry_run) for f in files))
 
     trimmed = [r for r in results if r.get("trimmed")]
     total_removed = sum(r.get("sections_removed", 0) for r in trimmed)
 
-    print(f"\n=== Trim Remaining Report ===")
+    print("\n=== Trim Remaining Report ===")
     print(f"Scanned {len(files)} file(s)")
     print(f"Modified: {len(trimmed)} file(s)")
     print(f"Total sections removed: {total_removed}")
     if args.dry_run:
-        print(f"(dry-run — no files were modified)")
+        print("(dry-run — no files were modified)")
     for r in trimmed:
         print(f"  {r['file']}: {r['sections_removed']} section(s), {r['lines_removed']} line(s)")
         for h in r.get("headings", []):

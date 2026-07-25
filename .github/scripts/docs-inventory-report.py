@@ -5,13 +5,12 @@ Usage:
     python docs-inventory-report.py [--workspace PATH] [--output PATH] [--format json|md|csv]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
-from pathlib import Path
 from collections import defaultdict
-
+from pathlib import Path
 
 DOC_EXTS = {".md", ".rst", ".txt", ".pdf", ".html"}
 
@@ -42,18 +41,18 @@ def _scan_docs(root: Path) -> dict:
             try:
                 stat = filepath.stat()
                 size = stat.st_size
-                mtime = stat.st_mtime
             except OSError:
                 size = 0
-                mtime = 0
 
-            inventory[ext_key].append({
-                "path": rel_path,
-                "size": size,
-                "size_kb": round(size / 1024, 1),
-                "name": filepath.name,
-                "directory": str(filepath.parent),
-            })
+            inventory[ext_key].append(
+                {
+                    "path": rel_path,
+                    "size": size,
+                    "size_kb": round(size / 1024, 1),
+                    "name": filepath.name,
+                    "directory": str(filepath.parent),
+                }
+            )
 
     return dict(inventory)
 

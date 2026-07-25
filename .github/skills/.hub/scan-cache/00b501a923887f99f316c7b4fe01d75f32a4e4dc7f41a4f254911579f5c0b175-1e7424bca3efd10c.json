@@ -1,0 +1,25 @@
+{
+  "source": "skills-sh/affaan-m/everything-claude-code/prompt-optimizer",
+  "source_url": "https://github.com/affaan-m/everything-claude-code/tree/ed387446052dfbc6b52de149406b70efa65edc59/skills/prompt-optimizer",
+  "bundle_hash": "sha256:00b501a923887f99f316c7b4fe01d75f32a4e4dc7f41a4f254911579f5c0b175",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "community",
+  "findings": [
+    {
+      "pattern_id": "agent_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "SKILL.md",
+      "line": 65,
+      "match": "1. Check if a `CLAUDE.md` exists in the working directory \u2014 read it for project conventions",
+      "description": "references agent config files (could persist malicious instructions across sessions)"
+    }
+  ],
+  "rules": [
+    "agent_config_mod"
+  ],
+  "scanned_at": "2026-07-16T02:19:50.220978+00:00",
+  "summary": "prompt-optimizer: dangerous \u2014 1 finding(s) in persistence",
+  "fresh": true
+}

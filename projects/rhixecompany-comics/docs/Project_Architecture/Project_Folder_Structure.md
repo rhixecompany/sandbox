@@ -52,7 +52,7 @@ rhixecompany-comics/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-| --- | --- | --- |
+|---|---|---|
 | **Django apps** | lowercase plural | `apps/comics/`, `apps/users/`, `apps/core/` |
 | **Backend directories** | lowercase | `backend/config/`, `backend/apps/` |
 | **Frontend directories** | lowercase | `frontend/src/`, `frontend/public/` |
@@ -73,7 +73,7 @@ rhixecompany-comics/
 ## Project Type Indicators
 
 | Indicator | Value |
-| --- | --- |
+|---|---|
 | Has `backend/manage.py` | ✅ Django project |
 | Has `frontend/` | ✅ React frontend |
 | Has Docker Compose | ✅ Docker deployment |

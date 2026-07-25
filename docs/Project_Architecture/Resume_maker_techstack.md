@@ -40,7 +40,7 @@ mindmap
 ## 2. Language & Runtime
 
 | Technology | Version | Usage | Role |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **TypeScript** | ^5 (peer) | Primary development language | Type safety, interfaces, strict mode |
 | **Bun** | latest | Runtime & package manager | Execute `.ts` directly, install deps, run scripts |
 | **Node.js** | (fallback) | Compatibility | Used only if Bun unavailable |
@@ -51,7 +51,7 @@ mindmap
 **Mode:** Strict (`"strict": true`)
 
 | Setting | Value | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `target` | `ESNext` | Latest JS features |
 | `module` | `Preserve` | Keep ESM imports as-is |
 | `moduleResolution` | `bundler` | Bun-compatible resolution |
@@ -110,6 +110,7 @@ flowchart LR
 | `markdown-pdf` | ^11.0.0 | Convert Markdown files to PDF via CLI | MIT |
 
 The single production dependency is minimal — the application uses only Node.js/Bun built-ins for everything else:
+
 - `util.parseArgs` — CLI argument parsing (built-in)
 - `fs/promises`, `fs` — File I/O (built-in)
 - `path` — Path resolution (built-in)
@@ -119,7 +120,7 @@ The single production dependency is minimal — the application uses only Node.j
 ### Development Dependencies
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `@types/bun` | latest | TypeScript types for Bun runtime |
 | `@typescript-eslint/eslint-plugin` | ^8.59.2 | TypeScript-specific ESLint rules |
 | `@typescript-eslint/parser` | ^8.59.2 | TypeScript AST parser for ESLint |
@@ -135,7 +136,7 @@ The single production dependency is minimal — the application uses only Node.j
 ## 4. Scripts & Automation
 
 | Script | Command | Description |
-|---|---|---|
+| --- | --- | --- |
 | `build` / `start` | `bun index.ts` | Run generator with default (sample) data |
 | `help` | `bun index.ts --help` | Display CLI help |
 | `typecheck` | `bun tsc --noEmit` | TypeScript type checking |
@@ -170,7 +171,7 @@ flowchart LR
 **Format:** Flat config (`eslint.config.js`)
 
 | Rule | Severity | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `prettier/prettier` | `error` | Enforce Prettier formatting |
 | `@typescript-eslint/no-unused-vars` | `warn` | Catch unused variables (ignore `_` prefix) |
 | `@typescript-eslint/no-explicit-any` | `warn` | Discourage `any` type usage |
@@ -184,7 +185,7 @@ flowchart LR
 ### Command-Line Options (`CLIOptions`)
 
 | Flag | Short | Type | Default | Description |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `--input` | `-i` | `string` | — | Input JSON file path |
 | `--output` | `-o` | `string` | `output_resume` | Output filename (no extension) |
 | `--format` | `-f` | `string` | `markdown` | Output format: `markdown`, `pdf`, or `both` |
@@ -276,7 +277,7 @@ graph TD
 ## 8. Coding Conventions
 
 | Convention | Standard |
-|---|---|
+| --- | --- |
 | **Module System** | ES Modules (`"type": "module"`) |
 | **Type Safety** | TypeScript strict mode (`"strict": true`) |
 | **Entry Point** | `index.ts` (single file, no `src/` dir) |
@@ -293,7 +294,7 @@ graph TD
 ## 9. Licensing
 
 | Component | License |
-|---|---|
+| --- | --- |
 | Resume_maker application | MIT |
 | Author | Alexander Iseghohi |
 | `markdown-pdf` | MIT |

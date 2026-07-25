@@ -6,11 +6,16 @@
 		},
 		"MD013": {
 			"line_length": 500,
-			"tables": true
+			"tables": false,
+			"code_blocks": false
 		},
 		"MD022": true,
 		"MD024": false,
+		"MD025": {
+			"front_matter_title": ""
+		},
 		"MD026": false,
+		"MD028": false,
 		"MD031": true,
 		"MD033": {
 			"allowed_elements": [
@@ -42,21 +47,29 @@
 				"dfn",
 				"em",
 				"i",
-				"q"
+				"q",
+				"URL",
+				"command",
+				"T",
+				"repo",
+				"Class"
 			]
 		},
 		"MD034": true,
 		"MD036": false,
 		"MD040": true,
 		"MD041": false,
+		"MD046": {
+			"style": "fenced"
+		},
+		"MD048": {
+			"style": "backtick"
+		},
 		"MD058": true,
 		"MD060": true
 	},
 	"fix": true,
 	"gitignore": true,
-	"globs": [
-		"**/*.md"
-	],
 	"ignores": [
 		"node_modules",
 		".next",
@@ -72,6 +85,7 @@
 		"**/out/**",
 		"**/tmp/**",
 		"**/node_modules/**",
-		"**/.git/**"
+		"**/.git/**",
+		"projects/**"
 	]
 }

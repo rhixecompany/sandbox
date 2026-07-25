@@ -1,0 +1,16 @@
+Primary:   deepseek-v4-flash-free  (via opencode-zen)
+
+  Fallback chain (10 entries):
+    1. nvidia/nemotron-3-ultra:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    2. tencent/hy3:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    3. poolside/laguna-m.1:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    4. poolside/laguna-xs-2.1:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    5. nvidia/nemotron-3-super:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    6. cohere/north-mini-code:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    7. google/gemma-4-26b-a4b-it:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    8. openai/gpt-oss-20b:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    9. nvidia/nemotron-3-nano-30b-a3b:free  (via openrouter)  [https://openrouter.ai/api/v1]
+    10. nvidia/nemotron-nano-9b-v2:free  (via openrouter)  [https://openrouter.ai/api/v1]
+
+  Tried in order when the primary fails (rate-limit, 5xx, connection errors).
+  Docs: https://hermes-agent.nousresearch.com/docs/user-guide/features/fallback-providers

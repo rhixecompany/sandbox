@@ -3,32 +3,36 @@
 Batch rewrite script for worst-offender skills scoring <60.
 These skills need full rewrites with all structural elements.
 """
-import asyncio
-import os, re
 
-SKILLS_DIR = r'C:\Users\Alexa\AppData\Local\hermes\skills'
-RESULTS_FILE = r'C:\Users\Alexa\Desktop\SandBox\judge_results\all_results.tsv'
+import asyncio
+
+SKILLS_DIR = r"C:\Users\Alexa\AppData\Local\hermes\skills"
+RESULTS_FILE = r"C:\Users\Alexa\Desktop\SandBox\judge_results\all_results.tsv"
+
 
 def normalize_path(path):
     path = path.strip()
-    if path.startswith('/') and len(path) > 2 and path[2] == '/':
+    if path.startswith("/") and len(path) > 2 and path[2] == "/":
         drive = path[1].upper()
-        path = drive + ':' + path[2:]
-    path = path.replace('/', '\\')
+        path = drive + ":" + path[2:]
+    path = path.replace("/", "\\")
     return path
+
 
 def read_file_sync(path):
     path = normalize_path(path)
     try:
-        with open(path, 'r', encoding='utf-8') as f:
+        with open(path, encoding="utf-8") as f:
             return f.read()
-    except:
+    except Exception:
         return None
+
 
 def write_file_sync(path, content):
     path = normalize_path(path)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)
+
 
 async def main():
     loop = asyncio.get_running_loop()
@@ -37,38 +41,56 @@ async def main():
     results = {}
     results_text = await loop.run_in_executor(None, read_file_sync, RESULTS_FILE)
     if results_text:
-        for line in results_text.split('\n'):
-            parts = line.strip().split('|')
+        for line in results_text.split("\n"):
+            parts = line.strip().split("|")
             if len(parts) >= 10:
-                results[parts[0]] = {'path': parts[1], 'score': int(parts[2])}
+                results[parts[0]] = {"path": parts[1], "score": int(parts[2])}
 
     # Worst offenders (score < 60)
     worst_skills = [
-        ('drawio-skill', 30), ('playwright-automation-fill-in-form', 30),
-        ('playwright-generate-e2e-test', 30), ('playwright-generate-test', 30),
-        ('scoutqa-test', 31), ('transloadit-media-processing', 33),
-        ('postgresql-code-review', 34), ('snowflake-semanticview', 34),
-        ('ci-cd-best-practices', 35), ('gh-cli', 35), ('mcp-security-audit', 35),
-        ('chainlink', 36), ('django-celery', 37), ('prd', 37),
-        ('documentation-writer', 38), ('docx', 38), ('mcp-cli', 38),
-        ('microsoft-docs', 38), ('nuget-manager', 38), ('pptx', 38),
-        ('refactor', 38), ('create-implementation-plan', 39), ('domain-intel', 39),
-        ('doc-coauthoring', 41), ('file-organizer', 41), ('internal-comms', 41),
-        ('obsidian', 41), ('prompt-engineering', 41), ('slack-gif-creator', 41),
-        ('create-agentsmd', 42)
+        ("drawio-skill", 30),
+        ("playwright-automation-fill-in-form", 30),
+        ("playwright-generate-e2e-test", 30),
+        ("playwright-generate-test", 30),
+        ("scoutqa-test", 31),
+        ("transloadit-media-processing", 33),
+        ("postgresql-code-review", 34),
+        ("snowflake-semanticview", 34),
+        ("ci-cd-best-practices", 35),
+        ("gh-cli", 35),
+        ("mcp-security-audit", 35),
+        ("chainlink", 36),
+        ("django-celery", 37),
+        ("prd", 37),
+        ("documentation-writer", 38),
+        ("docx", 38),
+        ("mcp-cli", 38),
+        ("microsoft-docs", 38),
+        ("nuget-manager", 38),
+        ("pptx", 38),
+        ("refactor", 38),
+        ("create-implementation-plan", 39),
+        ("domain-intel", 39),
+        ("doc-coauthoring", 41),
+        ("file-organizer", 41),
+        ("internal-comms", 41),
+        ("obsidian", 41),
+        ("prompt-engineering", 41),
+        ("slack-gif-creator", 41),
+        ("create-agentsmd", 42),
     ]
 
     print(f"Total skills to rewrite: {len(worst_skills)}")
 
     success_count = 0
     fail_count = 0
-    for i, (name, score) in enumerate(worst_skills):
+    for i, (name, _score) in enumerate(worst_skills):
         if name in results:
             info = results[name]
-            path = info['path']
+            path = info["path"]
             content = await loop.run_in_executor(None, read_file_sync, path)
             if content:
-                skill_name = name.replace('-', ' ').title()
+                skill_name = name.replace("-", " ").title()
                 # Build complete skill structure
                 new_content = f"""---
 name: {name}
@@ -168,10 +190,11 @@ When this skill is not relevant to your task.
             fail_count += 1
             print(f"  SKIP: {name} - not in results")
 
-        if (i+1) % 10 == 0:
-            print(f"  Progress: {i+1}/{len(worst_skills)} ({success_count} ok, {fail_count} fail)")
+        if (i + 1) % 10 == 0:
+            print(f"  Progress: {i + 1}/{len(worst_skills)} ({success_count} ok, {fail_count} fail)")
 
     print(f"\nComplete: {success_count} success, {fail_count} fail out of {len(worst_skills)}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

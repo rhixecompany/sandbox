@@ -5,21 +5,20 @@ Async CLI for checking prompt file frontmatter completeness,
 semver versions, non-empty tags, and internal references.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
-
+from typing import Any
 
 # Required frontmatter fields for prompt files
 REQUIRED_FIELDS = {"name", "title", "description", "version", "tags"}
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(-[a-zA-Z0-9.]+)?(\+[a-zA-Z0-9.]+)?$")
 
 
-def parse_frontmatter(content: str) -> Tuple[Optional[Dict[str, Any]], str, int]:
+def parse_frontmatter(content: str) -> tuple[dict[str, Any] | None, str, int]:
     """Parse frontmatter from a .prompt.md file. CPU-bound."""
     if not content.startswith("---"):
         return None, "Missing opening frontmatter delimiter", 0
@@ -29,7 +28,7 @@ def parse_frontmatter(content: str) -> Tuple[Optional[Dict[str, Any]], str, int]
         return None, "Frontmatter not closed", 0
 
     fm_text = content[3:end]
-    fm: Dict[str, Any] = {}
+    fm: dict[str, Any] = {}
     for match in re.finditer(r"^(\w+)\s*:\s*(.+)$", fm_text, re.MULTILINE):
         key = match.group(1)
         val = match.group(2).strip().strip('"').strip("'")
@@ -38,9 +37,9 @@ def parse_frontmatter(content: str) -> Tuple[Optional[Dict[str, Any]], str, int]
     return fm, "", end + 3
 
 
-def validate_frontmatter(fm: Dict[str, Any]) -> List[str]:
+def validate_frontmatter(fm: dict[str, Any]) -> list[str]:
     """Validate frontmatter content. CPU-bound."""
-    errors: List[str] = []
+    errors: list[str] = []
     missing = REQUIRED_FIELDS - set(fm.keys())
     if missing:
         errors.append(f"Missing required fields: {', '.join(sorted(missing))}")
@@ -60,9 +59,9 @@ def validate_frontmatter(fm: Dict[str, Any]) -> List[str]:
     return errors
 
 
-def check_references(content: str) -> List[str]:
+def check_references(content: str) -> list[str]:
     """Check internal references resolve. CPU-bound."""
-    errors: List[str] = []
+    errors: list[str] = []
     refs = re.findall(r"\[.*?\]\(((?:\.\.?/)[^)]+)\)", content)
     # Note: full cross-reference resolution requires workspace context
     # Here we flag all relative refs for manual check
@@ -80,8 +79,8 @@ async def validate_prompt(file_path: Path) -> dict:
         return {"file": str(file_path), "error": str(exc), "passed": False}
 
     fm, parse_error, _ = parse_frontmatter(content)
-    errors: List[str] = []
-    warnings: List[str] = []
+    errors: list[str] = []
+    warnings: list[str] = []
 
     if parse_error:
         errors.append(parse_error)
@@ -114,9 +113,7 @@ async def validate_prompt(file_path: Path) -> dict:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Validate prompt files against frontmatter schema."
-    )
+    parser = argparse.ArgumentParser(description="Validate prompt files against frontmatter schema.")
     parser.add_argument(
         "--file",
         type=str,
@@ -167,7 +164,7 @@ async def main() -> None:
         files = list(workspace.glob(args.pattern))
 
     if not files:
-        print(f"No prompt files found to validate", file=sys.stderr)
+        print("No prompt files found to validate", file=sys.stderr)
         sys.exit(2)
 
     results = await asyncio.gather(*(validate_prompt(f) for f in files))
@@ -210,12 +207,10 @@ async def main() -> None:
             for w in r.get("warnings", []):
                 lines.append(f"- WARN: {w}")
             lines.append("")
-        await asyncio.to_thread(
-            report_path.write_text, "\n".join(lines), encoding="utf-8"
-        )
+        await asyncio.to_thread(report_path.write_text, "\n".join(lines), encoding="utf-8")
 
     # Console output
-    print(f"\n=== Prompt Validation ===")
+    print("\n=== Prompt Validation ===")
     print(f"Total: {len(results)} | Passed: {len(passed)} | Failed: {len(failed)}")
     for r in failed:
         print(f"  FAIL: {r['file']}")

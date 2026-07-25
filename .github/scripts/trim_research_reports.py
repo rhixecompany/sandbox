@@ -4,16 +4,14 @@
 Async CLI for cleaning RESEARCH_REPORT.md sections from markdown files.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 # Headings identifying research report sections
-REPORT_SECTION_PATTERNS: List[str] = [
+REPORT_SECTION_PATTERNS: list[str] = [
     r"^##\s+Research\s+Report",
     r"^##\s+Research\s+Overview",
     r"^##\s+Methodology",
@@ -35,7 +33,7 @@ async def trim_report_sections(file_path: Path, dry_run: bool = False) -> dict:
         return {"file": str(file_path), "error": str(exc), "trimmed": False}
 
     lines = content.splitlines()
-    sections: List[Tuple[int, int]] = []
+    sections: list[tuple[int, int]] = []
     start_idx = None
 
     for i, line in enumerate(lines):
@@ -77,9 +75,7 @@ async def trim_report_sections(file_path: Path, dry_run: bool = False) -> dict:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Remove research report sections from markdown files."
-    )
+    parser = argparse.ArgumentParser(description="Remove research report sections from markdown files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -105,19 +101,17 @@ async def main() -> None:
         print(f"No files matching {args.pattern} in {workspace}", file=sys.stderr)
         sys.exit(1)
 
-    results = await asyncio.gather(
-        *(trim_report_sections(f, dry_run=args.dry_run) for f in files)
-    )
+    results = await asyncio.gather(*(trim_report_sections(f, dry_run=args.dry_run) for f in files))
 
     trimmed = [r for r in results if r.get("trimmed")]
     total_removed = sum(r.get("sections_removed", 0) for r in trimmed)
 
-    print(f"\n=== Trim Research Reports ===")
+    print("\n=== Trim Research Reports ===")
     print(f"Scanned {len(files)} file(s)")
     print(f"Modified: {len(trimmed)} file(s)")
     print(f"Total research sections removed: {total_removed}")
     if args.dry_run:
-        print(f"(dry-run — no files were modified)")
+        print("(dry-run — no files were modified)")
     for r in trimmed:
         print(f"  {r['file']}: {r['sections_removed']} section(s), {r['lines_removed']} line(s)")
         for h in r.get("headings", []):

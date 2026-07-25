@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """execute_all_prompts.py — deterministic runner for `/execute-all-prompts`."""
+
 from __future__ import annotations
 
 import asyncio
@@ -26,7 +27,7 @@ def append(path: Path, text: str) -> None:
 
 
 def ts() -> str:
-    return datetime.datetime.now(datetime.timezone.utc).isoformat()
+    return datetime.datetime.now(datetime.UTC).isoformat()
 
 
 class GateFail(Exception):
@@ -56,6 +57,7 @@ async def exec_phase(name: str, cmd: list[str], script: Path) -> None:
 
 async def _json_to_tsv(json_path: Path, tsv_path: Path) -> None:
     import json as _json
+
     data = _json.loads(await asyncio.to_thread(json_path.read_text, encoding="utf-8"))
     name_to_path = {}
     if SKILLS.exists():
@@ -230,14 +232,14 @@ async def phase4() -> None:
 async def main() -> int:
     print("execute_all_prompts: main() starting")
     append(PROGRESS, f"- {ts()} execute-all-prompts started")
-    summary = ["# Orchestrator Verification\n\n", "Generated: " + ts() + "\n\n"]
+    ["# Orchestrator Verification\n\n", "Generated: " + ts() + "\n\n"]
     phases = [
         ("Phase 1", "Audit Skills Judge Fix", phase1),
         ("Phase 2", "Agents System Prompt Context Fix", phase2),
         ("Phase 3", "Sync Hermes Copilot Codex", phase3),
         ("Phase 4", "Test Providers & Models", phase4),
     ]
-    for idx, (label, title, fn) in enumerate(phases, 1):
+    for _idx, (label, title, fn) in enumerate(phases, 1):
         print(f"execute_all_prompts: running {label}")
         append(VERIFICATION, f"## {label} — {title}\n\n- Status: running\n- Evidence: _none yet_\n")
         try:
@@ -250,12 +252,13 @@ async def main() -> int:
         except Exception as exc:
             print(f"execute_all_prompts: {label} error={exc}")
             import traceback
+
             traceback.print_exc()
             append(VERIFICATION, f"- Status: error\n- Evidence: {type(exc).__name__}: {exc}\n\n")
             append(PROGRESS, f"- {ts()} {label} error: {exc}")
             return 3
         print(f"execute_all_prompts: {label} passed")
-        append(VERIFICATION, f"- Status: passed\n- Evidence: phase artifacts and report written\n\n")
+        append(VERIFICATION, "- Status: passed\n- Evidence: phase artifacts and report written\n\n")
 
     append(VERIFICATION, "\n## Final Checks\n\n- All phases pass: true\n")
     append(PROGRESS, f"- {ts()} execute-all-prompts completed")
@@ -268,6 +271,7 @@ if __name__ == "__main__":
         raise SystemExit(asyncio.run(main()))
     except Exception as exc:
         import traceback
+
         traceback.print_exc()
         print(f"execute_all_prompts: fatal {type(exc).__name__}: {exc}")
         raise

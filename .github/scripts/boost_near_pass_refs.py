@@ -6,12 +6,12 @@ Usage:
                                    [--dry-run] [--report FILE]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -47,7 +47,7 @@ def _scan_skill(skill_dir: Path) -> SkillRef:
             text = skill_md.read_text(encoding="utf-8")
             for keyword in ["Related Skills", "related_skills", "See Also", "Dependencies"]:
                 if keyword in text:
-                    ref_count += text.count(f"`") // 2  # estimate
+                    ref_count += text.count("`") // 2  # estimate
                     ref_types.append(keyword)
         except Exception:
             pass
@@ -62,9 +62,9 @@ def _scan_skill(skill_dir: Path) -> SkillRef:
         except Exception:
             pass
 
-    return SkillRef(name=name, skill_path=skill_path,
-                    ref_count=ref_count, ref_types=list(set(ref_types)),
-                    boost_applied=False)
+    return SkillRef(
+        name=name, skill_path=skill_path, ref_count=ref_count, ref_types=list(set(ref_types)), boost_applied=False
+    )
 
 
 async def scan_skill_async(skill_dir: Path) -> SkillRef:
@@ -119,7 +119,9 @@ async def main(argv: list[str] | None = None) -> None:
     scan_tasks = [scan_skill_async(sd) for sd in skill_dirs]
     refs = await asyncio.gather(*scan_tasks)
 
-    print(f"Found {sum(r.ref_count for r in refs)} references across {len([r for r in refs if r.ref_count > 0])} skills")
+    print(
+        f"Found {sum(r.ref_count for r in refs)} references across {len([r for r in refs if r.ref_count > 0])} skills"
+    )
 
     # Phase 2: Boost skills
     boost_candidates = [r for r in refs if r.ref_count > 0]

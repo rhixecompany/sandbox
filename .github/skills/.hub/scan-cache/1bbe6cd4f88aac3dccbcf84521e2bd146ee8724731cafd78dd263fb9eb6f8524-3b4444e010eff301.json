@@ -1,0 +1,35 @@
+{
+  "source": "official",
+  "source_url": "official/finance\\excel-author",
+  "bundle_hash": "sha256:1bbe6cd4f88aac3dccbcf84521e2bd146ee8724731cafd78dd263fb9eb6f8524",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 29,
+      "match": "pip install \"openpyxl>=3.0\"",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "python_subprocess",
+      "severity": "medium",
+      "category": "execution",
+      "file": "scripts\\recalc.py",
+      "line": 45,
+      "match": "subprocess.run(",
+      "description": "Python subprocess execution"
+    }
+  ],
+  "rules": [
+    "python_subprocess",
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-23T23:42:15.899514+00:00",
+  "summary": "excel-author: safe \u2014 2 finding(s) in execution, supply_chain",
+  "fresh": true
+}

@@ -5,13 +5,13 @@ Usage:
     python consolidate_skills.py [--skills-dir PATH] [--output PATH] [--dry-run] [--report PATH]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
-import sys
 import shutil
-from pathlib import Path
+import sys
 from collections import defaultdict
+from pathlib import Path
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -53,11 +53,13 @@ def _find_duplicates_by_name(skills_dir: Path) -> list[dict]:
     duplicates = []
     for name, entries in name_map.items():
         if len(entries) > 1:
-            duplicates.append({
-                "name": name,
-                "occurrences": entries,
-                "total": len(entries),
-            })
+            duplicates.append(
+                {
+                    "name": name,
+                    "occurrences": entries,
+                    "total": len(entries),
+                }
+            )
     return duplicates
 
 
@@ -88,11 +90,13 @@ def _consolidate_duplicate(dup: dict, skills_dir: Path, dry_run: bool) -> dict:
         if entry_path.exists():
             if not dry_run:
                 shutil.rmtree(entry_path)
-            results.append({
-                "removed": str(entry_path),
-                "canonical": canonical["path"],
-                "name": name,
-            })
+            results.append(
+                {
+                    "removed": str(entry_path),
+                    "canonical": canonical["path"],
+                    "name": name,
+                }
+            )
 
     return {
         "name": name,

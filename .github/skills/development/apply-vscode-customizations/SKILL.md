@@ -22,6 +22,7 @@ Wrapper skill for the `apply_vscode_customizations.py` script in `~/AppData/Loca
 **Location:** `~/AppData/Local/hermes/scripts/apply_vscode_customizations.py`
 
 **Usage:**
+
 ```bash
 python apply_vscode_customizations.py [options]
 ```
@@ -39,12 +40,15 @@ python apply_vscode_customizations.py [options]
 ## Workflow
 
 ### Phase 1: Setup
+
 Ensure VS Code is installed and current settings are backed up.
 
 ### Phase 2: Customize
+
 Run the script with the desired customization profile or arguments.
 
 ### Phase 3: Verify
+
 Open VS Code and confirm settings are applied correctly.
 
 ## Verification Checklist
@@ -56,5 +60,6 @@ Open VS Code and confirm settings are applied correctly.
 - [ ] VS Code restarts cleanly
 
 ## Pitfalls
+
 - May overwrite existing settings if not careful with merge behavior
 - Some extensions may require VS Code restart

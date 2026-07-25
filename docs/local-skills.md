@@ -424,4 +424,3 @@
 │ writing-plans             │ software-development │ local  │ local │ enabled │
 └───────────────────────────┴──────────────────────┴────────┴───────┴─────────┘
 0 hub-installed, 0 builtin, 420 local — 420 enabled, 0 disabled
-

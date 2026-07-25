@@ -11,6 +11,7 @@ Rules specifically for Cursor IDE's agent mode. Shared workspace rules stay in `
 ## 2. Code Style & Formatting
 
 ### TypeScript/JavaScript
+
 - **Indentation:** 2 spaces
 - **Line endings:** CRLF (Windows)
 - **Quotes:** Single quotes preferred
@@ -18,12 +19,14 @@ Rules specifically for Cursor IDE's agent mode. Shared workspace rules stay in `
 - **Strict mode:** Always on (`noUncheckedIndexedAccess: true`)
 
 ### Python
+
 - **Indentation:** 4 spaces
-- **Line length:** 88 characters
+- **Line length:** 120 characters (matches .ruff.toml)
 - **Quotes:** Double quotes for strings
 - **Type hints:** Required for public functions
 
 ### General
+
 - **Violations:** Zero-warning lint gate
 - **Format check:** Run `bun run format:check` before commit
 - **Type check:** Run `bun run typecheck` before commit
@@ -31,33 +34,39 @@ Rules specifically for Cursor IDE's agent mode. Shared workspace rules stay in `
 ## 3. File Operations
 
 ### New Files
+
 - Always include proper JSDoc/JSDoc-style comments
 - Add `// @ts-check` for JS files
 - Include `// no-inspect` comment for files not meant for debugging
 
 ### Editing
+
 - Use targeted edits, not wholesale rewrites
 - Preserve git history where possible
 - Update tests alongside code changes
 
 ### Deletions
+
 - Never delete `.git` directories
 - Archive dead code instead of deleting
-- Use `git rm` for tracked files
+- Use `git rm` for tracked files and `rm` for untracked files
 
 ## 4. Agent Behavior
 
 ### Tool Usage
+
 - Prefer MCP servers over direct file operations
 - Use `sequential-thinking` for multi-phase tasks
 - Document tool results in comments when useful
 
 ### Reasoning
+
 - Think before making changes
 - Verify after each modification
 - State assumptions explicitly
 
 ### Safety
+
 - Never modify `.env` files
 - Never write secrets to files
 - Always explain destructive operations

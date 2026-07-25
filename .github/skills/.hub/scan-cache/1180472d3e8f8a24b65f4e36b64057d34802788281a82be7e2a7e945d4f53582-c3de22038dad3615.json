@@ -1,0 +1,89 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\peft",
+  "bundle_hash": "sha256:1180472d3e8f8a24b65f4e36b64057d34802788281a82be7e2a7e945d4f53582",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 43,
+      "match": "pip install peft",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 46,
+      "match": "pip install peft bitsandbytes",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 49,
+      "match": "pip install peft transformers accelerate bitsandbytes datasets",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\troubleshooting.md",
+      "line": 16,
+      "match": "pip install bitsandbytes --no-cache-dir",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\troubleshooting.md",
+      "line": 22,
+      "match": "pip install .",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\troubleshooting.md",
+      "line": 32,
+      "match": "pip install triton",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\troubleshooting.md",
+      "line": 46,
+      "match": "pip install peft>=0.13.0 --upgrade",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "git_clone",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\troubleshooting.md",
+      "line": 19,
+      "match": "git clone https://github.com/TimDettmers/bitsandbytes.git",
+      "description": "clones a git repository at runtime"
+    }
+  ],
+  "rules": [
+    "git_clone",
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-16T02:34:23.737034+00:00",
+  "summary": "peft: safe \u2014 8 finding(s) in supply_chain",
+  "fresh": true
+}

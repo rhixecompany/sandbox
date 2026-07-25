@@ -19,6 +19,7 @@ Usage:
   python fix_prompt_library.py --all [--apply] [--report PATH]
   python fix_prompt_library.py --files a.prompt.md,b.prompt.md [--apply]
 """
+
 import argparse
 import json
 import os
@@ -40,69 +41,216 @@ UNIVERSAL_REQUIRED = ["name", "title", "description", "version", "author", "lice
 LOCAL_REQUIRED = ["scripts", "skills", "formatter", "plan", "toolsets"]
 
 HERMES_TOOLSETS = {
-    "web", "browser", "terminal", "file", "code_execution", "vision", "image_gen",
-    "moa", "tts", "skills", "todo", "memory", "context_engine", "session_search",
-    "clarify", "delegation", "cronjob", "mcp",
+    "web",
+    "browser",
+    "terminal",
+    "file",
+    "code_execution",
+    "vision",
+    "image_gen",
+    "moa",
+    "tts",
+    "skills",
+    "todo",
+    "memory",
+    "context_engine",
+    "session_search",
+    "clarify",
+    "delegation",
+    "cronjob",
+    "mcp",
 }
 # VS Code / Copilot tool names that are NOT valid Hermes toolsets -> drop or map
 VSCODE_DROP = {
-    "edit", "editfiles", "createfile", "vscode", "vscode.*", "extensions", "usages",
-    "problems", "todos", "changes", "testfailure", "vscodeapi", "githubrepo", "github",
-    "search", "microsoft.docs.mcp", "context7", "nextjs-docs-mcp", "playwright",
-    "io.github.chromedevtools", "runcommands", "terminalcommand", "runinterminal",
-    "execute", "search/codebase", "search/changes", "codebase", "openSimpleBrowser",
-    "web/fetch", "fetch", "runCommands/*", "github/*", "vscode.*", "extensions",
+    "edit",
+    "editfiles",
+    "createfile",
+    "vscode",
+    "vscode.*",
+    "extensions",
+    "usages",
+    "problems",
+    "todos",
+    "changes",
+    "testfailure",
+    "vscodeapi",
+    "githubrepo",
+    "github",
+    "search",
+    "microsoft.docs.mcp",
+    "context7",
+    "nextjs-docs-mcp",
+    "playwright",
+    "io.github.chromedevtools",
+    "runcommands",
+    "terminalcommand",
+    "runinterminal",
+    "execute",
+    "search/codebase",
+    "search/changes",
+    "codebase",
+    "openSimpleBrowser",
+    "web/fetch",
+    "fetch",
+    "runCommands/*",
+    "github/*",
 }
 VSCODE_MAP = {
-    "edit": "file", "editfiles": "file", "createfile": "file",
-    "web/fetch": "web", "fetch": "web", "opensimplebrowser": "web",
-    "runcommands": "terminal", "terminalcommand": "terminal", "runinterminal": "terminal",
-    "execute": "terminal", "execute/runinterminal": "terminal", "runcommands/*": "terminal",
-    "search/codebase": "file", "codebase": "file", "search/changes": "file",
-    "vscode.*": None, "extensions": None, "usages": None, "problems": None, "todos": None,
-    "changes": None, "testfailure": None, "vscodeapi": None, "githubrepo": None,
-    "github": None, "github/*": None, "microsoft.docs.mcp": "web", "context7": "web",
-    "nextjs-docs-mcp": "web", "playwright": "browser",
-    "io.github.chromedevtools": "browser", "vscode": None, "search": "web",
+    "edit": "file",
+    "editfiles": "file",
+    "createfile": "file",
+    "web/fetch": "web",
+    "fetch": "web",
+    "opensimplebrowser": "web",
+    "runcommands": "terminal",
+    "terminalcommand": "terminal",
+    "runinterminal": "terminal",
+    "execute": "terminal",
+    "execute/runinterminal": "terminal",
+    "runcommands/*": "terminal",
+    "search/codebase": "file",
+    "codebase": "file",
+    "search/changes": "file",
+    "vscode.*": None,
+    "extensions": None,
+    "usages": None,
+    "problems": None,
+    "todos": None,
+    "changes": None,
+    "testfailure": None,
+    "vscodeapi": None,
+    "githubrepo": None,
+    "github": None,
+    "github/*": None,
+    "microsoft.docs.mcp": "web",
+    "context7": "web",
+    "nextjs-docs-mcp": "web",
+    "playwright": "browser",
+    "io.github.chromedevtools": "browser",
+    "vscode": None,
+    "search": "web",
 }
 # Hermes native tools that are often mislabeled as `skill:`
 KNOWN_TOOLS = {
-    "terminal", "file", "web", "browser", "vision", "code_execution", "skills",
-    "todo", "memory", "session_search", "clarify", "delegation", "cronjob",
-    "search_files", "web_search", "image_gen", "tts", "context_engine",
+    "terminal",
+    "file",
+    "web",
+    "browser",
+    "vision",
+    "code_execution",
+    "skills",
+    "todo",
+    "memory",
+    "session_search",
+    "clarify",
+    "delegation",
+    "cronjob",
+    "search_files",
+    "web_search",
+    "image_gen",
+    "tts",
+    "context_engine",
 }
 KNOWN_MCP = {
-    "mcp-ast-grep", "mcp-code-sandbox", "mcp-codex", "mcp-copilot", "mcp-fetch",
-    "mcp-filesystem", "mcp-github", "mcp-linear", "mcp-docker", "mcp-memory",
-    "mcp-mindstudio", "mcp-playwright", "mcp-sequential-thinking", "mcp-smithery",
-    "ast-grep", "code-sandbox", "codex", "copilot-mcp", "fetch", "filesystem",
-    "github", "linear", "mcp-docker", "memory", "mindstudio", "playwright",
-    "sequential-thinking", "smithery",
+    "mcp-ast-grep",
+    "mcp-code-sandbox",
+    "mcp-codex",
+    "mcp-copilot",
+    "mcp-fetch",
+    "mcp-filesystem",
+    "mcp-github",
+    "mcp-linear",
+    "mcp-docker",
+    "mcp-memory",
+    "mcp-mindstudio",
+    "mcp-playwright",
+    "mcp-sequential-thinking",
+    "mcp-smithery",
+    "ast-grep",
+    "code-sandbox",
+    "codex",
+    "copilot-mcp",
+    "fetch",
+    "filesystem",
+    "github",
+    "linear",
+    "memory",
+    "mindstudio",
+    "playwright",
+    "sequential-thinking",
+    "smithery",
 }
 
 TAG_KEYWORDS = [
-    ("azure", "azure"), ("aws", "aws"), ("gcp", "gcp"), ("kubernetes", "kubernetes"),
-    ("k8s", "kubernetes"), ("docker", "docker"), ("container", "docker"),
-    ("spring", "spring"), ("asp.net", "dotnet"), ("aspnet", "dotnet"), (".net", "dotnet"),
-    ("react", "react"), ("next", "nextjs"), ("vue", "vue"), ("angular", "angular"),
-    ("python", "python"), ("django", "django"), ("fastapi", "python"),
-    ("typescript", "typescript"), ("javascript", "javascript"), ("node", "node"),
-    ("github", "github"), ("git", "git"), ("pr", "github"), ("pull-request", "github"),
-    ("issue", "github"), ("azure", "azure"), ("cosmos", "azure"), ("bigquery", "gcp"),
-    ("security", "security"), ("safety", "safety"), ("audit", "audit"),
-    ("review", "review"), ("test", "testing"), ("spec", "specification"),
-    ("specification", "specification"), ("plan", "planning"), ("planning", "planning"),
-    ("architecture", "architecture"), ("blueprint", "architecture"), ("doc", "documentation"),
-    ("documentation", "documentation"), ("readme", "documentation"), ("tutorial", "tutorial"),
-    ("comment", "documentation"), ("mcp", "mcp"), ("prompt", "prompts"),
-    ("prompts", "prompts"), ("skill", "skills"), ("agent", "agents"),
-    ("agents", "agents"), ("orchestrat", "orchestration"), ("delegat", "orchestration"),
-    ("linux", "linux"), ("triage", "troubleshooting"), ("debug", "debugging"),
-    ("convert", "conversion"), ("migration", "migration"), ("cost", "optimization"),
-    ("optimize", "optimization"), ("api", "api"), ("openapi", "api"),
-    ("datamodel", "data-modeling"), ("data-model", "data-modeling"),
-    ("comic", "creative"), ("creative", "creative"), ("appstore", "mobile"),
-    ("review", "review"), ("code-review", "review"),
+    ("azure", "azure"),
+    ("aws", "aws"),
+    ("gcp", "gcp"),
+    ("kubernetes", "kubernetes"),
+    ("k8s", "kubernetes"),
+    ("docker", "docker"),
+    ("container", "docker"),
+    ("spring", "spring"),
+    ("asp.net", "dotnet"),
+    ("aspnet", "dotnet"),
+    (".net", "dotnet"),
+    ("react", "react"),
+    ("next", "nextjs"),
+    ("vue", "vue"),
+    ("angular", "angular"),
+    ("python", "python"),
+    ("django", "django"),
+    ("fastapi", "python"),
+    ("typescript", "typescript"),
+    ("javascript", "javascript"),
+    ("node", "node"),
+    ("github", "github"),
+    ("git", "git"),
+    ("pr", "github"),
+    ("pull-request", "github"),
+    ("issue", "github"),
+    ("azure", "azure"),
+    ("cosmos", "azure"),
+    ("bigquery", "gcp"),
+    ("security", "security"),
+    ("safety", "safety"),
+    ("audit", "audit"),
+    ("review", "review"),
+    ("test", "testing"),
+    ("spec", "specification"),
+    ("specification", "specification"),
+    ("plan", "planning"),
+    ("planning", "planning"),
+    ("architecture", "architecture"),
+    ("blueprint", "architecture"),
+    ("doc", "documentation"),
+    ("documentation", "documentation"),
+    ("readme", "documentation"),
+    ("tutorial", "tutorial"),
+    ("comment", "documentation"),
+    ("mcp", "mcp"),
+    ("prompt", "prompts"),
+    ("prompts", "prompts"),
+    ("skill", "skills"),
+    ("agent", "agents"),
+    ("agents", "agents"),
+    ("orchestrat", "orchestration"),
+    ("delegat", "orchestration"),
+    ("linux", "linux"),
+    ("triage", "troubleshooting"),
+    ("debug", "debugging"),
+    ("convert", "conversion"),
+    ("migration", "migration"),
+    ("cost", "optimization"),
+    ("optimize", "optimization"),
+    ("api", "api"),
+    ("openapi", "api"),
+    ("datamodel", "data-modeling"),
+    ("data-model", "data-modeling"),
+    ("comic", "creative"),
+    ("creative", "creative"),
+    ("appstore", "mobile"),
+    ("review", "review"),
+    ("code-review", "review"),
 ]
 
 
@@ -115,7 +263,7 @@ def split_frontmatter(text):
     if not m:
         return None, text, False, None
     raw_fm = m.group(1)
-    body = text[m.end():]
+    body = text[m.end() :]
     try:
         fm = yaml.safe_load(raw_fm)
     except Exception:
@@ -151,11 +299,11 @@ def normalize_toolset_entry(t):
 
 def process_file(path, apply):
     slug = os.path.basename(path).replace(".prompt.md", "")
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         raw = f.read()
 
     # CRLF -> LF for frontmatter parsing safety, but preserve body exactly on rewrite
-    fm, body, had_fm, raw_fm = split_frontmatter(raw)
+    fm, body, had_fm, _raw_fm = split_frontmatter(raw)
     actions = []
     remaining_issues = []
 
@@ -279,9 +427,7 @@ def process_file(path, apply):
             ref = d[8:].strip()
             new_deps.append("tool:" + ref)
             actions.append(f"dep {d} -> tool:{ref}")
-        elif low.startswith("tool:"):
-            new_deps.append(d)
-        elif low.startswith("prompt:"):
+        elif low.startswith("tool:") or low.startswith("prompt:"):
             new_deps.append(d)
         else:
             # bare entry; assume skill
@@ -333,7 +479,7 @@ def process_file(path, apply):
         actions.append("added formatter: default")
     if "plan" not in fm:
         fm["plan"] = ""
-        actions.append("added plan: \"\"")
+        actions.append('added plan: ""')
 
     # ---- toolsets normalization ----
     ts = fm.get("toolsets")
@@ -378,14 +524,12 @@ def process_file(path, apply):
 
     # ---- legacy sections strip (body only) ----
     if re.search(r"^#{2,3}\s+Legacy Prompt Details", body, re.MULTILINE):
-        body = re.sub(r"\n#{2,3}\s+Legacy Prompt Details.*?(?=\n#{1,3}\s|\Z)",
-                      "", body, flags=re.DOTALL)
+        body = re.sub(r"\n#{2,3}\s+Legacy Prompt Details.*?(?=\n#{1,3}\s|\Z)", "", body, flags=re.DOTALL)
         actions.append("stripped Legacy Prompt Details section")
 
     # ---- write ----
     if apply and actions:
-        new_fm_text = yaml.dump(fm, sort_keys=False, default_flow_style=False,
-                                allow_unicode=True, width=4096)
+        new_fm_text = yaml.dump(fm, sort_keys=False, default_flow_style=False, allow_unicode=True, width=4096)
         out = "---\n" + new_fm_text + "---\n" + body
         with open(path, "w", encoding="utf-8") as f:
             f.write(out)

@@ -110,7 +110,7 @@ graph TB
 ### 2.1 Core Framework
 
 | Technology | Version | Purpose | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Next.js** | 15.3.3 | React framework (App Router) | File-based routing, RSC, Turbopack dev, SSR/SSG |
 | **React** | 19.1.0 | UI library | Latest stable with concurrent features |
 | **TypeScript** | 5.x | Type safety | Strict mode enabled (`strict: true`) |
@@ -119,7 +119,7 @@ graph TB
 ### 2.2 Styling & UI
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Tailwind CSS** | 3.4.1 | Utility-first CSS framework |
 | **Radix UI Primitives** | latest | Accessible headless UI components (16 packages) |
 | **shadcn/ui** | latest | Component collection built on Radix + Tailwind |
@@ -134,7 +134,7 @@ graph TB
 ### 2.3 State Management
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Zustand** | latest | Lightweight client state management |
 | **TanStack Query** | latest | Server state caching and synchronization |
 | **TanStack React Table** | 8.21.3 | Data table component (admin panels) |
@@ -142,7 +142,7 @@ graph TB
 ### 2.4 Forms & Validation
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **React Hook Form** | 7.58.1 | Performant form state management |
 | **Zod** | 3.25.67 | Schema validation (all API inputs) |
 | **@hookform/resolvers** | 5.1.1 | Zod integration with RHF |
@@ -150,7 +150,7 @@ graph TB
 ### 2.5 Utilities
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Slugify** | 1.6.6 | URL slug generation |
 | **Query String** | 9.2.1 | URL query parameter parsing |
 | **UUID** | 11.1.0 | Unique ID generation |
@@ -165,7 +165,7 @@ graph TB
 ### 3.1 Django Ecosystem
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Django** | 5.1+ | Web framework (Cookiecutter template) |
 | **Django REST Framework** | latest | REST API framework |
 | **Django CORS Headers** | latest | CORS management |
@@ -190,7 +190,7 @@ graph TB
 ### 3.2 Python Tooling
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Python** | 3.12 | Runtime |
 | **Poetry / pip** | — | Dependency management (`pyproject.toml`) |
 | **Gunicorn** | latest | Production WSGI server |
@@ -204,7 +204,7 @@ graph TB
 ### 3.3 Code Quality (Python)
 
 | Tool | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Ruff** | latest | Python linter (200+ rules) |
 | **mypy** | latest | Type checking with django-stubs |
 | **djLint** | latest | Django template linting |
@@ -217,7 +217,7 @@ graph TB
 ## 4. Database Technologies
 
 | Technology | Purpose | Configuration |
-|---|---|---|
+| --- | --- | --- |
 | **PostgreSQL** | Primary relational database | Dual ORM access (Prisma + Django ORM) |
 | **Redis 7** | Cache, Celery broker, session store | Master + slave replica |
 | **Prisma 6** | Type-safe ORM (Next.js side) | `src/db/schema.prisma`, 18 models |
@@ -226,7 +226,7 @@ graph TB
 ### 4.1 Database Models
 
 | Model | App | Key Fields |
-|---|---|---|
+| --- | --- | --- |
 | `User` | Both | email, password, emailVerified |
 | `Comic` | Both | title, slug, description, status, rating |
 | `Chapter` | Both | name, slug, title, numimages |
@@ -242,7 +242,7 @@ graph TB
 ## 5. Authentication & Security
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **NextAuth v5** | 5.0.0-beta.25 | Next.js authentication (credentials, Google) |
 | **django-allauth** | latest | Django authentication (email, Google OAuth) |
 | **SimpleJWT** | latest | JWT tokens for API access |
@@ -257,7 +257,7 @@ graph TB
 ## 6. Payment Processing
 
 | Technology | Version | Purpose | Integration |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Stripe** | 18.2.1 | Primary payment processor | `@stripe/react-stripe-js` + `stripe` (server) |
 | **PayPal** | 8.8.3 | Secondary payment processor | `@paypal/react-paypal-js` |
 
@@ -268,7 +268,7 @@ Both providers are integrated client-side with server-side webhook verification.
 ## 7. Media & File Storage
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **UploadThing** | 7.7.2 | Comic image uploads (S3-compatible) |
 | **@uploadthing/react** | 7.3.1 | UploadThing React integration |
 | **Django FileField** | built-in | Local media storage fallback |
@@ -280,7 +280,7 @@ Both providers are integrated client-side with server-side webhook verification.
 ## 8. Real-Time Communications
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **ws** | 8.18.2 | WebSocket server (chapter notifications) |
 | **Redis Pub/Sub** | — | Cross-process WebSocket message relay |
 | **Celery Progress** | latest | Task progress broadcast |
@@ -290,7 +290,7 @@ Both providers are integrated client-side with server-side webhook verification.
 ## 9. Email System
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Resend** | 4.6.0 | Transactional email delivery |
 | **React Email** | 4.0.16 | Email template components |
 | **@react-email/components** | 0.1.0 | Email component library |
@@ -301,7 +301,7 @@ Both providers are integrated client-side with server-side webhook verification.
 ## 10. Crawler & Content Pipeline
 
 | Technology | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Scrapy** | latest | Web scraping framework |
 | **Celery** | latest | Async crawl task orchestration |
 | **Redis** | 7 | Task queue broker |
@@ -373,7 +373,7 @@ sequenceDiagram
 ## 13. Deployment Technologies
 
 | Technology | Purpose |
-|---|---|
+| --- | --- |
 | **Docker Compose** | Local and production container orchestration |
 | **Vercel** | Next.js frontend deployment |
 | **Heroku** | Alternative deployment (Procfile) |
@@ -386,7 +386,7 @@ sequenceDiagram
 ## 14. Development Toolchain
 
 | Tool | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **Bun** | 1.3.14+ | JavaScript runtime & package manager |
 | **npm** | — | Fallback package manager |
 | **Jest** | 30.0.0 | TypeScript/React unit tests |
@@ -406,7 +406,7 @@ sequenceDiagram
 ## 15. Technology Stack Summary
 
 | Category | Primary | Secondary |
-|---|---|---|
+| --- | --- | --- |
 | **Frontend Framework** | Next.js 15 (App Router) | — |
 | **UI Library** | React 19 + TypeScript 5 | — |
 | **Styling** | Tailwind CSS 3 + Radix/shadcn | CVA, clsx, tailwind-merge |

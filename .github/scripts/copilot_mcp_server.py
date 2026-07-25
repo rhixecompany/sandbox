@@ -5,13 +5,12 @@ Usage:
     python copilot_mcp_server.py [--port INT] [--host STR] [--config PATH]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
-import sys
 import signal
+import sys
 from pathlib import Path
-from typing import Any
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -73,7 +72,8 @@ async def handle_mcp_request(request: dict) -> dict:
                 "description": info["description"],
                 "inputSchema": {
                     "type": "object",
-                    "properties": {"skill_name": {"type": "string"}} if "skill" in name
+                    "properties": {"skill_name": {"type": "string"}}
+                    if "skill" in name
                     else {"query": {"type": "string"}},
                     "required": [],
                 },

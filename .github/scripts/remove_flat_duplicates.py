@@ -1,17 +1,21 @@
 """Remove flat skill duplicates where canonical categorized versions exist.
 Reads from the dedupe report to find all ❌ (non-canonical) paths and deletes them.
 """
-import asyncio
-import os, re, shutil
 
-hermes_skills = os.path.join(os.environ.get("HOME", os.environ.get("USERPROFILE", "")),
-                              "AppData", "Local", "hermes", "skills")
+import asyncio
+import os
+import shutil
+
+hermes_skills = os.path.join(
+    os.environ.get("HOME", os.environ.get("USERPROFILE", "")), "AppData", "Local", "hermes", "skills"
+)
 
 
 async def main():
     # Read the dedupe report
-    dedupe_path = os.path.join(os.environ.get("HOME", os.environ.get("USERPROFILE", "")),
-                                "Desktop", "SandBox", "docs", "dedupe-report.md")
+    dedupe_path = os.path.join(
+        os.environ.get("HOME", os.environ.get("USERPROFILE", "")), "Desktop", "SandBox", "docs", "dedupe-report.md"
+    )
 
     with open(dedupe_path) as f:
         content = f.read()
@@ -28,7 +32,7 @@ async def main():
         parts = [p.strip() for p in line.split("|")]
         if len(parts) >= 4:
             # parts[1] = skill name, parts[2] = path
-            skill_name = parts[1]
+            parts[1]
             path_part = parts[2].strip()
 
             # Skip entries where the ❌ is on the categorized version
@@ -52,7 +56,7 @@ async def main():
                 print(f"SKIPPED (not found): {skill_dir}")
                 skipped += 1
 
-    print(f"\n---")
+    print("\n---")
     print(f"Removed: {removed}")
     print(f"Errors: {errors}")
     print(f"Skipped: {skipped}")

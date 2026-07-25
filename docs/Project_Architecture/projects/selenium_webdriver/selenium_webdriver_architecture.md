@@ -33,7 +33,7 @@ A Node.js browser-automation tool using **Selenium WebDriver 4.x** to scrape Jav
 ## Architecture Goals
 
 | Goal | Description |
-|------|-------------|
+| ------ | ------------- |
 | **Reliability** | Robust element interaction via explicit waits and StaleElement retry |
 | **Determinism** | No `sleep()` — all waits are condition-based via `WebDriverWait` |
 | **Resource Safety** | Guaranteed `driver.quit()` via `try/finally`; temp profile cleanup |
@@ -207,7 +207,7 @@ flowchart TD
 ```
 
 | Error Scenario | Handling |
-|----------------|----------|
+| ---------------- | ---------- |
 | `StaleElementReferenceException` | Retry up to 3× with 500ms delay, then throw |
 | Element not found / timeout | Catch, log, continue to next element |
 | Navigation failure | Catch in outer `try/catch`, log error |
@@ -248,7 +248,7 @@ stateDiagram-v2
 ## Architecture Decisions
 
 | Decision | Rationale |
-|----------|-----------|
+| ---------- | ----------- |
 | **Selenium over Scrapy** | Target site is a JS-heavy SPA — needs a real browser to render |
 | **Selenium over Playwright** | Existing codebase investment; Playwright noted as potential migration path |
 | **ES Modules** | Modern Node.js standard; `"type": "module"` in package.json |

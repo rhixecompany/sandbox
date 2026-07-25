@@ -5,22 +5,20 @@ Async CLI for scanning skill directories and validating structure,
 frontmatter, and linked resources.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 REQUIRED_FIELDS = {"name", "title", "description", "version", "author", "tags"}
 RECOMMENDED_FIELDS = {"license", "metadata"}
 
 
-def validate_skill_md(path: Path, content: str) -> Tuple[List[str], List[str]]:
+def validate_skill_md(path: Path, content: str) -> tuple[list[str], list[str]]:
     """Validate a SKILL.md file's frontmatter and structure. CPU-bound."""
-    errors: List[str] = []
-    warnings: List[str] = []
+    errors: list[str] = []
+    warnings: list[str] = []
 
     if not content.startswith("---"):
         errors.append("Missing opening frontmatter delimiter")
@@ -37,15 +35,11 @@ def validate_skill_md(path: Path, content: str) -> Tuple[List[str], List[str]]:
     present_fields = set(re.findall(r"^(\w+)\s*:", fm_block, re.MULTILINE))
     missing_required = REQUIRED_FIELDS - present_fields
     if missing_required:
-        errors.append(
-            f"Missing required frontmatter: {', '.join(sorted(missing_required))}"
-        )
+        errors.append(f"Missing required frontmatter: {', '.join(sorted(missing_required))}")
 
     missing_recommended = RECOMMENDED_FIELDS - present_fields
     if missing_recommended:
-        warnings.append(
-            f"Missing recommended frontmatter: {', '.join(sorted(missing_recommended))}"
-        )
+        warnings.append(f"Missing recommended frontmatter: {', '.join(sorted(missing_recommended))}")
 
     body = content[end + 3 :].strip()
     if not body:
@@ -87,17 +81,13 @@ async def audit_skill_dir(skill_dir: Path) -> dict:
     for sub in ("references", "templates", "scripts", "assets"):
         sub_path = skill_dir / sub
         if sub_path.is_dir():
-            result["files_found"].extend(
-                [str(p.relative_to(skill_dir)) for p in sorted(sub_path.iterdir())]
-            )
+            result["files_found"].extend([str(p.relative_to(skill_dir)) for p in sorted(sub_path.iterdir())])
 
     return result
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Audit skill files for quality and structure."
-    )
+    parser = argparse.ArgumentParser(description="Audit skill files for quality and structure.")
     parser.add_argument(
         "--skills-dir",
         type=str,
@@ -166,16 +156,12 @@ async def main() -> None:
             indent=2,
         )
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, output, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, output, encoding="utf-8")
         else:
             print(output)
     else:
-        lines = [f"\n=== Skills Audit Report ==="]
-        lines.append(
-            f"Scanned {len(skill_dirs)} skill(s) — Passed: {len(passed)}, Failed: {len(failed)}"
-        )
+        lines = ["\n=== Skills Audit Report ==="]
+        lines.append(f"Scanned {len(skill_dirs)} skill(s) — Passed: {len(passed)}, Failed: {len(failed)}")
         for r in results:
             status = "PASS" if r.get("passed") else "FAIL"
             lines.append(f"  [{status}] {r['directory']}")
@@ -185,9 +171,7 @@ async def main() -> None:
                 lines.append(f"          WARN:  {w}")
         report = "\n".join(lines)
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, report, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
         else:
             print(report)
 

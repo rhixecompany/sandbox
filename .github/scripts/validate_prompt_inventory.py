@@ -5,17 +5,17 @@ Async CLI that scans prompt files and generates a Markdown inventory
 with name, title, version, tags, and duplicate detection.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 
-def parse_frontmatter_basic(content: str) -> Dict[str, Any]:
+def parse_frontmatter_basic(content: str) -> dict[str, Any]:
     """Extract basic frontmatter fields. CPU-bound, purely local."""
-    fields: Dict[str, Any] = {}
+    fields: dict[str, Any] = {}
     if not content.startswith("---"):
         return fields
     end = content.find("---", 3)
@@ -29,7 +29,7 @@ def parse_frontmatter_basic(content: str) -> Dict[str, Any]:
     return fields
 
 
-async def parse_prompt_file(file_path: Path) -> Optional[Dict[str, Any]]:
+async def parse_prompt_file(file_path: Path) -> dict[str, Any] | None:
     """Parse a .prompt.md file and extract frontmatter. I/O offloaded."""
     try:
         content = await asyncio.to_thread(file_path.read_text, encoding="utf-8")
@@ -51,9 +51,7 @@ async def parse_prompt_file(file_path: Path) -> Optional[Dict[str, Any]]:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Render a Markdown inventory of all prompts."
-    )
+    parser = argparse.ArgumentParser(description="Render a Markdown inventory of all prompts.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -84,7 +82,7 @@ async def main() -> None:
     valid = [p for p in prompts if p is not None]
 
     # Detect name duplicates (CPU-bound)
-    seen: Dict[str, List[Dict[str, Any]]] = {}
+    seen: dict[str, list[dict[str, Any]]] = {}
     for p in valid:
         seen.setdefault(p["name"], []).append(p)
 
@@ -107,9 +105,7 @@ async def main() -> None:
     ]
 
     for idx, p in enumerate(valid, 1):
-        lines.append(
-            f"| {idx} | {p['name']} | {p['title']} | {p['version']} | {p['tags']} | {p['author']} |"
-        )
+        lines.append(f"| {idx} | {p['name']} | {p['title']} | {p['version']} | {p['tags']} | {p['author']} |")
 
     if duplicates:
         lines.extend(["", "---", "", "## Duplicate Names", ""])
@@ -122,9 +118,7 @@ async def main() -> None:
     report = "\n".join(lines) + "\n"
 
     if args.output:
-        await asyncio.to_thread(
-            Path(args.output).write_text, report, encoding="utf-8"
-        )
+        await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
     else:
         print(report)
 

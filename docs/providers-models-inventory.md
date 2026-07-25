@@ -5,7 +5,7 @@
 ## Summary
 
 | Provider | Status | Models | Free Models |
-|----------|--------|--------|-------------|
+| ---------- | -------- | -------- | ------------- |
 | OpenCode Zen | Active | ~50+ | 10+ |
 | OpenRouter | Active | 342 | 23 free |
 | Nous Research | Active | ~30+ | 10+ |
@@ -17,7 +17,7 @@
 ## Current Config
 
 | Setting | Value |
-|---------|-------|
+| --------- | ------- |
 | **Primary Model** | `stepfun/step-3.7-flash:free` (Nous) |
 | **Fallback** | OpenRouter → Qwen Qwen3 Coder (free) |
 | **Provider** | opencode-zen → nous → openrouter |
@@ -26,7 +26,7 @@
 ## OpenRouter Free Models (23)
 
 | Model | Provider |
-|-------|----------|
+| ------- | ---------- |
 | tencent/hy3:free | Tencent |
 | poolside/laguna-xs-2.1:free | Poolside |
 | nvidia/nemotron-3-ultra-550b-a55b:free | NVIDIA |
@@ -50,7 +50,7 @@
 ## Credentials Summary
 
 | Provider | Auth Type | Status |
-|----------|-----------|--------|
+| ---------- | ----------- | -------- |
 | Copilot | GitHub Token | Active |
 | Gemini | API Key | Rate-limited (429) |
 | HuggingFace | HF_TOKEN | Active |

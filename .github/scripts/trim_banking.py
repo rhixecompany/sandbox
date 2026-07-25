@@ -5,16 +5,14 @@ Async CLI that scans files for known banking/financial sections and
 trims them in-place or outputs to a new location.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 # Patterns identifying banking/financial content sections
-BANKING_SECTION_PATTERNS: List[str] = [
+BANKING_SECTION_PATTERNS: list[str] = [
     r"^##\s+Banking\s*(?:Integration|API|Setup|Overview)",
     r"^##\s+Payment\s*(?:Integration|Gateway|Processing|Methods)",
     r"^##\s+Financial\s*(?:Data|Reports|Statements)",
@@ -23,9 +21,9 @@ BANKING_SECTION_PATTERNS: List[str] = [
 ]
 
 
-def find_banking_sections(lines: List[str]) -> List[Tuple[int, int]]:
+def find_banking_sections(lines: list[str]) -> list[tuple[int, int]]:
     """Locate banking sections by heading patterns (CPU-bound)."""
-    sections: List[Tuple[int, int]] = []
+    sections: list[tuple[int, int]] = []
     start_idx = None
 
     for i, line in enumerate(lines):
@@ -80,9 +78,7 @@ async def trim_banking_from_file(file_path: Path, dry_run: bool = False) -> dict
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Remove banking/financial content from markdown files."
-    )
+    parser = argparse.ArgumentParser(description="Remove banking/financial content from markdown files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -108,19 +104,17 @@ async def main() -> None:
         print(f"No files matching {args.pattern} in {workspace}", file=sys.stderr)
         sys.exit(1)
 
-    results = await asyncio.gather(
-        *(trim_banking_from_file(f, dry_run=args.dry_run) for f in files)
-    )
+    results = await asyncio.gather(*(trim_banking_from_file(f, dry_run=args.dry_run) for f in files))
 
     trimmed = [r for r in results if r.get("trimmed")]
     total_removed = sum(r.get("sections_removed", 0) for r in trimmed)
 
-    print(f"\n=== Trim Banking Report ===")
+    print("\n=== Trim Banking Report ===")
     print(f"Scanned {len(files)} file(s)")
     print(f"Modified: {len(trimmed)} file(s)")
     print(f"Total banking sections removed: {total_removed}")
     if args.dry_run:
-        print(f"(dry-run — no files were modified)")
+        print("(dry-run — no files were modified)")
     for r in trimmed:
         print(f"  {r['file']}: {r['sections_removed']} section(s), {r['lines_removed']} line(s)")
         for h in r.get("headings", []):

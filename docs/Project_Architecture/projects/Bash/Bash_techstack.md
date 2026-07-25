@@ -9,7 +9,7 @@
 ## Project Identity
 
 | Attribute | Value |
-|---|---|
+| --- | --- |
 | **Project Name** | Bash (opencode) |
 | **Type** | Multi-Phase Automation Toolkit |
 | **Stack Type** | Bun/TypeScript + PowerShell + Shell |
@@ -63,7 +63,7 @@ mindmap
 ## Languages & Runtimes
 
 | Technology | Version | Role | Scope |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Bun** | >=1.3.14 | Primary JavaScript/TypeScript runtime & package manager | All TypeScript execution |
 | **TypeScript** | latest (strict mode) | Primary scripting language | `src/` — all utilities, core engine, migration tools |
 | **Node.js** | >=18 | Fallback runtime | When Bun is unavailable |
@@ -98,7 +98,7 @@ flowchart LR
 ```
 
 | Tool | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | **bun** | 1.3.14 | Primary: `bun install`, `bun run`, `bunx tsx` |
 | **npm** | (bundled with Node) | Fallback when Bun unavailable |
 | **PackageManager** | `bun@1.3.14` (in `package.json`) | Explicit engine pinning |
@@ -108,7 +108,7 @@ flowchart LR
 ## Core Dependencies (Production)
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **zod** | ^4.4.3 | Schema validation & type-safe parsing |
 | **yaml** | ^2.9.0 | YAML file parsing |
 
@@ -121,7 +121,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Code Quality & Linting
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **typescript** | latest | Type checking (`tsc --noEmit --pretty`) |
 | **eslint** | ^10.4.0 | Linting framework (flat config) |
 | **@eslint/js** | ^10.0.1 | ESLint JavaScript rules |
@@ -144,7 +144,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Formatting
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **prettier** | ^3.8.3 | Code formatter |
 | **prettier-plugin-organize-imports** | ^4.3.0 | Import organization |
 | **prettier-plugin-packagejson** | ^3.0.2 | package.json sorting |
@@ -154,7 +154,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Documentation Quality
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **markdownlint-cli2** | ^0.22.1 | Markdown style & standards |
 | **markdownlint** | ^0.40.0 | Markdown rules engine |
 | **cspell** | ^10.0.0 | Spell checking |
@@ -162,7 +162,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Testing
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **vitest** | ^4.1.7 | Unit test framework (TypeScript) |
 | **jsdom** | ^29.1.1 | DOM environment for tests |
 | **tsx** | ^4.22.3 | TypeScript execution engine |
@@ -170,7 +170,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Git Hooks & Workflow
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **husky** | ^9.1.7 | Git hook management |
 | **lint-staged** | ^16.4.0 | Staged file processing |
 | **cross-env** | ^10.1.0 | Cross-platform environment variables |
@@ -178,7 +178,7 @@ Minimal production footprint — the toolkit is primarily a **script orchestrati
 ### Utilities
 
 | Package | Version | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **rimraf** | ^6.1.3 | Cross-platform file cleanup |
 | **globby** | ^16.2.0 | Glob pattern matching |
 | **glob** | ^13.0.6 | Legacy glob support |
@@ -309,7 +309,7 @@ flowchart LR
 The toolkit defines **177 scripts** across **11 directories**, organized into 6 categories by the unified orchestrator:
 
 | Category | Script Count | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Core** | 64 | TypeScript sources, phase scripts, root wrappers |
 | **Banking** | 34 | Banking sub-project automation |
 | **Archive** | 51 | Retired git-commit-batch scripts |
@@ -323,7 +323,7 @@ The toolkit defines **177 scripts** across **11 directories**, organized into 6 
 ## Execution Modes
 
 | Mode | Command | Behavior |
-|---|---|---|
+| --- | --- | --- |
 | **Auto** | `orchestrator-unified.ps1` (default) | Runs core production pipeline sequentially: disk-analysis → cache-clean → clean-dependency-folders |
 | **Interactive** | `orchestrator-unified.ps1 -Mode interactive` | Menu-driven category/script selection |
 | **Discover** | `orchestrator-unified.ps1 -Mode discover` | Lists all 177 scripts, exits |
@@ -335,7 +335,7 @@ The toolkit defines **177 scripts** across **11 directories**, organized into 6 
 ## CI/CD Pipeline
 
 | Pipeline | File | Trigger | Actions |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Bash Scripts CI | `.github/workflows/bash-scripts-ci.yml` | Push/PR to main | install → format:check → typecheck → lint:strict → test → shell tests |
 | Copilot Setup | `.github/workflows/copilot-setup-steps.yml` | Setup | Copilot configuration |
 

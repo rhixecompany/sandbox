@@ -39,6 +39,7 @@ bun run lint:spell
 - Prefer Bun commands over npm/pnpm/yarn.
 - Treat generated output and source JSON as sensitive personal data.
 - Keep changes scoped to the CLI behavior being updated.
+
 # Resume_maker — Job Docs Generator
 
 **Naming**: `kebab-case.ts` for files; `camelCase` for variables/functions; `PascalCase` for interfaces/types; `kebab-case.json` for input data; `UPPER_CASE.md` for docs.

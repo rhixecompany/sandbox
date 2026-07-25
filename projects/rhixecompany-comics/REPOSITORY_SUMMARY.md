@@ -1,69 +1,123 @@
-# Repository Summary — `rhixecompany-comics`
+# REPOSITORY_SUMMARY.md
 
-> Generated from real local git history on 2026-07-16. All facts are evidence-based
-> (commit hashes, dates, file names) and were not invented.
+# rhixecompany-comics — Dual-Stack Comics Platform
 
-## Overview
+**Generated:** 2026-07-25  
+**Status:** Active  
+**Path:** `projects/rhixecompany-comics/`
 
-`rhixecompany-comics` is a **dual-stack comics platform** — a Django 4.x + DRF backend
-combined with a Next.js 16 frontend — maintained by **rhixecompany**. It is the only one of
-the five sibling repos with **6 commits** (the others have 5), because it carries two extra
-housekeeping commits ("updates" and "sync workspace artifacts"). It is explicitly described
-in `architecture.md` as a *consolidation* of scraping/automation patterns inherited from
-sibling repos (`selenium_webdriver`, `Django-Scrapy-Selenium`).
-
-The working tree holds a functional scaffold: a `backend/` Django app (entry point,
-settings, a health endpoint), a `frontend/` Next.js 16 shell, `scripts/`, `docs/`,
-`docker-compose.yml`, and the usual generated guides plus `RESEARCH_REPORT.md` and
-`web-research-rhixecompany-comics.md` (29 KB).
+---
 
 ## Architecture
 
-- **Type:** Dual-stack web platform (Django backend + Next.js frontend), two independent
-  stacks sharing a PostgreSQL database, Celery for async tasks.
-- **Backend:** Django 4.x + Django REST Framework, Python 3.10+; PostgreSQL; Celery + Redis.
-- **Frontend:** Next.js 16 App Router, TypeScript (strict), Server Components by default.
-- **API:** `/api/` on both stacks; health endpoint present now.
-- **Scraping layer:** `backend/apps/scraping/` reserves the Django home for Scrapy spiders
-  and Selenium-backed browser tasks (patterns from `selenium_webdriver`).
-- **Infra:** Docker Compose; Redis for Celery broker/result.
+| Property | Value |
+|----------|-------|
+| **Type** | Dual-stack web platform (Django backend + Next.js frontend) |
+| **Pattern** | Two independent stacks sharing PostgreSQL, Celery for async |
+| **Reference** | [Workflow Analysis](../docs/Project_Architecture/Workflow_Analysis.md) |
 
-## Key Components
+Django 4.x + DRF (backend API) + Next.js 16 App Router (frontend) + Celery + Redis. Scraping and comics management platform with separate frontend and backend services.
 
-| Path | Role |
-|------|------|
-| `backend/` | Django + DRF backend (apps: comics, users, core, scraping) |
-| `frontend/` | Next.js 16 App Router shell (`frontend/src/app/layout.tsx`) |
-| `scripts/` | Automation/tooling scripts |
-| `docs/` | Architecture & workflow docs |
-| `docker-compose.yml` | Multi-service orchestration |
-| `.env.example` / `.dockerignore` / `.editorconfig` | Config templates |
-| `architecture.md`, `technology-stack.md`, `tech-stack.md`, `folder-structure.md` | Generated guides |
-| `copilot-instructions.md`, `code-exemplars.md`, `cross-linking-report.md`, `execution-summary.md`, `validation-report.md`, `project-workflow.md` | Generated docs |
-| `RESEARCH_REPORT.md` / `web-research-rhixecompany-comics.md` | Research dossiers |
+---
 
-## Technologies
+## Technology Stack
 
-- **Backend:** Django 4.x, Django REST Framework, Python 3.10+
-- **Frontend:** Next.js 16, TypeScript (strict)
-- **Async:** Celery + Redis
-- **Database:** PostgreSQL (shared)
-- **Infra:** Docker Compose
-- **Inheritance:** Scrapy + Selenium patterns from sibling repos
-- **Tooling:** ruff/mypy (backend), ESLint/Prettier (frontend), VS Code (`.vscode/`, `.github/`)
+### Backend
+| Layer | Technology |
+|-------|------------|
+| **Framework** | Django 4.x + Django REST Framework |
+| **Language** | Python 3.10+ |
+| **Auth** | SimpleJWT + django-cors-headers |
+| **Database** | PostgreSQL (shared) |
+| **Async** | Celery + Redis |
+| **Infra** | Docker Compose, Gunicorn |
 
-## Data Flow
+### Frontend
+| Layer | Technology |
+|-------|------------|
+| **Framework** | Next.js 16 App Router |
+| **Language** | TypeScript (strict) |
+| **UI** | Tailwind CSS, MUI/Radix |
+| **State** | Redux Toolkit |
+| **Auth** | NextAuth.js |
+
+---
+
+## Project Structure
 
 ```
-Browser → Next.js frontend → Django API (/api/) → Domain apps (comics/users/core) → PostgreSQL
-                                └→ Scraping workers (Scrapy/Selenium) → External comic sources
+rhixecompany-comics/
+├── backend/                    # Django project
+│   ├── config/                # Settings (base/local/production)
+│   ├── apps/
+│   │   ├── comics/           # Comic management
+│   │   ├── scrapers/         # Scrapy/Selenium integration
+│   │   ├── users/            # User management
+│   │   └── tasks.py          # Celery tasks
+│   ├── requirements/
+│   │   ├── base.txt
+│   │   ├── local.txt
+│   │   └── production.txt
+│   └── manage.py
+├── frontend/                   # Next.js project
+│   ├── src/
+│   │   ├── app/              # App Router pages
+│   │   ├── components/       # React components
+│   │   ├── lib/              # Utilities
+│   │   └── store/            # Redux store
+│   ├── package.json
+│   └── next.config.js
+├── docker-compose.yml
+└── README.md
 ```
 
-## Team
+---
 
-| Contributor | Commits | Role |
-|-------------|---------|------|
-| `rhixecompany` <rhixecompany@gmail.com> | 6 / 6 (100%) | Sole author — setup, sync, config, docs, research reports |
+## Commands
 
-**Bus factor:** 1. All 6 commits were authored by a single contributor;
-no co-authors, merges, or external PRs.
+```bash
+# Backend
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements/local.txt
+python manage.py migrate
+python manage.py runserver
+
+# Celery
+celery -A config worker -l info
+
+# Frontend
+cd frontend
+npm install
+npm run dev
+npm run build
+npm test
+```
+
+---
+
+## Key Features
+
+| Feature | Implementation |
+|---------|----------------|
+| **Comic Management** | Django models + DRF serializers + Next.js UI |
+| **Scraping** | Scrapy spiders + Selenium utils + Celery tasks |
+| **Real-time** | WebSocket notifications (Redis) |
+| **Auth** | JWT (backend) + NextAuth (frontend) |
+| **Shared DB** | PostgreSQL with Django ORM + Prisma (frontend) |
+
+---
+
+## Consolidation Target (P1)
+
+Receives scraping logic from:
+- `Django-Scrapy-Selenium` — Scrapy spiders, Selenium utils, Celery tasks
+- `selenium_webdriver` — Node.js Selenium scripts (rewrite in Python)
+- `comicwise` — Feature overlap (comic reader)
+
+---
+
+## CI/CD
+
+**Workflow:** `.github/workflows/rhixecompany-comics-ci.yml`  
+**Jobs:** Backend (Python: ruff, mypy, pytest) + Frontend (TypeScript, ESLint, Next.js build)

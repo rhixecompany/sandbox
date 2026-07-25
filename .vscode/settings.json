@@ -7,20 +7,20 @@
   },
   "editor.inlineSuggest.enabled": true,
   "python.defaultInterpreterPath": "${workspaceFolder}/myvenv/Scripts/python.exe",
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.diagnosticMode": "workspace",
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.extraPaths": [
-      "${workspaceFolder}/.github/scripts"
-    ],
-    "python.linting.enabled": true,
-    "python.linting.ruffEnabled": true,
-    "python.formatting.provider": "none",
-    "[python]": {
-      "editor.defaultFormatter": "ms-python.python",
-      "editor.formatOnSave": true
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/.github/scripts"
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
     },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
   "python-envs.venvFolders": [
@@ -42,10 +42,6 @@
     "scss": "scss",
     "javascript": "jsx",
     "typescript": "tsx"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSave": true
   },
   "[django-html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -74,7 +70,7 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
       "icon": "terminal-cmd",

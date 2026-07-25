@@ -5,19 +5,17 @@ Provides async entry points for validating skill frontmatter, required
 sections, and structural integrity.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import re
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 REQUIRED_FRONTMATTER = {"name", "title", "description", "version", "author"}
 
 
-def check_frontmatter(path: Path, content: str) -> Tuple[int, List[str]]:
+def check_frontmatter(path: Path, content: str) -> tuple[int, list[str]]:
     """Validate YAML frontmatter has required fields."""
     notes = []
     if not content.startswith("---"):
@@ -34,7 +32,7 @@ def check_frontmatter(path: Path, content: str) -> Tuple[int, List[str]]:
     return 20, notes
 
 
-def check_sections(content: str) -> Tuple[int, List[str]]:
+def check_sections(content: str) -> tuple[int, list[str]]:
     """Check for required sections."""
     notes = []
     required = ["Overview", "Usage"]
@@ -71,9 +69,7 @@ async def audit_skill(file_path: Path) -> dict:
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Audit skill files for quality and completeness."
-    )
+    parser = argparse.ArgumentParser(description="Audit skill files for quality and completeness.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -116,13 +112,11 @@ async def main() -> None:
             indent=2,
         )
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, output, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, output, encoding="utf-8")
         else:
             print(output)
     else:
-        lines = [f"\n=== Skill Audit Report ==="]
+        lines = ["\n=== Skill Audit Report ==="]
         lines.append(f"Scanned {len(files)} file(s) — Passed: {len(passed)}, Failed: {len(failed)}")
         for r in results:
             status = "PASS" if r.get("passed") else "FAIL"
@@ -134,9 +128,7 @@ async def main() -> None:
                 lines.append(f"          ERROR: {r['error']}")
         report = "\n".join(lines)
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, report, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
         else:
             print(report)
 

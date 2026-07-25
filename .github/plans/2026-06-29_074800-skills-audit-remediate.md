@@ -21,5 +21,6 @@ C:\Users\Alexa\Desktop\SandBox\prompts\templates\_shared\skills-table-core.md ::
 C:\Users\Alexa\Desktop\SandBox\prompts\templates\_shared\verification-checklist.md :: missing_frontmatter
 C:\Users\Alexa\Desktop\SandBox\prompts\templates\RESEARCH_REPORT.template.md :: missing_frontmatter
 ```
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

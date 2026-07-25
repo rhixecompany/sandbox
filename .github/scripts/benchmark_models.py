@@ -7,14 +7,13 @@ Usage:
                               [--warm-up N] [--timeout N]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
-import sys
-import time
 import statistics
+import time
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -67,8 +66,9 @@ async def simulate_model_call(model: str, prompt: str, timeout: int) -> tuple[fl
     return sim_time, tokens
 
 
-async def benchmark_model(provider: str, model: str, prompts: list[str],
-                          iterations: int, warm_up: int, timeout: int) -> BenchmarkResult:
+async def benchmark_model(
+    provider: str, model: str, prompts: list[str], iterations: int, warm_up: int, timeout: int
+) -> BenchmarkResult:
     """Benchmark a single model with given prompts."""
     latencies: list[float] = []
     tokens_per_sec: list[float] = []
@@ -78,7 +78,7 @@ async def benchmark_model(provider: str, model: str, prompts: list[str],
     for i, prompt in enumerate(all_prompts):
         try:
             start = time.monotonic()
-            sim_time, tokens = await simulate_model_call(model, prompt, timeout)
+            _sim_time, tokens = await simulate_model_call(model, prompt, timeout)
             elapsed = time.monotonic() - start
             if i >= warm_up:
                 latencies.append(elapsed)
@@ -88,9 +88,15 @@ async def benchmark_model(provider: str, model: str, prompts: list[str],
                 errors += 1
 
     if not latencies:
-        return BenchmarkResult(provider=provider, model=model,
-                               avg_latency=0, avg_tokens_per_sec=0,
-                               total_tokens=0, error_rate=1.0, iterations=0)
+        return BenchmarkResult(
+            provider=provider,
+            model=model,
+            avg_latency=0,
+            avg_tokens_per_sec=0,
+            total_tokens=0,
+            error_rate=1.0,
+            iterations=0,
+        )
 
     return BenchmarkResult(
         provider=provider,
@@ -112,7 +118,7 @@ def format_table(results: list[BenchmarkResult]) -> str:
     for r in sorted(results, key=lambda x: x.avg_latency):
         lines.append(
             f"{r.provider:<20} {r.model:<25} {r.avg_latency:<12.3f} "
-            f"{r.avg_tokens_per_sec:<10.1f} {r.error_rate*100:<8.1f} {r.iterations:<6}"
+            f"{r.avg_tokens_per_sec:<10.1f} {r.error_rate * 100:<8.1f} {r.iterations:<6}"
         )
     return "\n".join(lines)
 
@@ -126,7 +132,7 @@ def format_markdown(results: list[BenchmarkResult]) -> str:
     for r in sorted(results, key=lambda x: x.avg_latency):
         lines.append(
             f"| {r.provider} | {r.model} | {r.avg_latency:.3f} | "
-            f"{r.avg_tokens_per_sec:.1f} | {r.error_rate*100:.1f}% | {r.iterations} |"
+            f"{r.avg_tokens_per_sec:.1f} | {r.error_rate * 100:.1f}% | {r.iterations} |"
         )
     return "\n".join(lines)
 
@@ -135,7 +141,9 @@ def format_csv(results: list[BenchmarkResult]) -> str:
     """Format results as CSV."""
     lines = ["provider,model,avg_latency,avg_tokens_per_sec,error_rate,iterations"]
     for r in sorted(results, key=lambda x: x.avg_latency):
-        lines.append(f"{r.provider},{r.model},{r.avg_latency:.3f},{r.avg_tokens_per_sec:.1f},{r.error_rate},{r.iterations}")
+        lines.append(
+            f"{r.provider},{r.model},{r.avg_latency:.3f},{r.avg_tokens_per_sec:.1f},{r.error_rate},{r.iterations}"
+        )
     return "\n".join(lines)
 
 
@@ -153,8 +161,9 @@ async def main(argv: list[str] | None = None) -> None:
     tasks = []
     for provider in providers:
         for model in models:
-            tasks.append(benchmark_model(provider.strip(), model.strip(), prompts,
-                                         args.iterations, args.warm_up, args.timeout))
+            tasks.append(
+                benchmark_model(provider.strip(), model.strip(), prompts, args.iterations, args.warm_up, args.timeout)
+            )
 
     results = await asyncio.gather(*tasks)
 

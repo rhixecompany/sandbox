@@ -100,7 +100,7 @@ selenium_webdriver/
 ## Naming Conventions
 
 | Category | Convention | Examples |
-|----------|------------|----------|
+| ---------- | ------------ | ---------- |
 | **Source files** | `kebab-case.js` | `scrape.js`, `utils.js`, `test1.js` |
 | **Config files** | Dotted-prefix | `.github/`, `.vscode/`, `.editorconfig`, `.gitignore` |
 | **Docs (root level)** | `UPPER_SNAKE_CASE.md` | `README.md`, `AGENTS.md`, `SECURITY.md` |
@@ -112,7 +112,7 @@ selenium_webdriver/
 ## File Placement Patterns
 
 | Pattern | Path | Purpose |
-|---------|------|---------|
+| --------- | ------ | --------- |
 | **Source code** | `src/*.js` | All executable scripts and modules |
 | **Documentation** | `docs/` | Architecture, code docs, research |
 | **Architecture blueprints** | `docs/Project_Architecture/` | Generated architecture documentation |
@@ -126,7 +126,7 @@ selenium_webdriver/
 ## Auto-Detection Indicators
 
 | Indicator | Present | Notes |
-|-----------|---------|-------|
+| ----------- | --------- | ------- |
 | `package.json` | ✅ | ES modules, `type: "module"` |
 | `bun.lock` | ✅ | Bun package manager compatibility |
 | `src/` directory | ✅ | 5 source files |
@@ -142,7 +142,7 @@ selenium_webdriver/
 ### `src/` — Source Code
 
 | File | Lines | Purpose |
-|------|-------|---------|
+| ------ | ------- | --------- |
 | `scrape.js` | 429 | **Primary entry point.** Full scraper: paginates 20 pages, extracts comic metadata + up to 3 chapters per comic, writes `comics.json` and `chapters.json`. Uses Chrome temp profiles. |
 | `utils.js` | 210 | **Shared utility library.** Retry wrappers for all Selenium DOM interactions: `clickElement`, `textElement`, `imageElement`, `hrefElement`, `performGet`, `safeClick`. |
 | `scrape2.js` | 122 | Simplified scraper variant. Paginates with explicit waits but fewer features (no chapter deep-dive). |
@@ -152,7 +152,7 @@ selenium_webdriver/
 ### `docs/Project_Architecture/` — Blueprint Documents
 
 | File | Content |
-|------|---------|
+| ------ | --------- |
 | `selenium_webdriver_architecture.md` | Architecture diagram, C4 context, sequence diagram, data flow, error handling |
 | `selenium_webdriver_folders.md` | **This file** — directory tree, naming conventions, file descriptions |
 | `selenium_webdriver_techstack.md` | Technology stack, version info, dependency analysis |
@@ -165,7 +165,7 @@ selenium_webdriver/
 ### `.vscode/` — Workspace Configuration
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `extensions.json` | Recommended VS Code extensions |
 | `launch.json` | Debug configurations for the scraper scripts |
 | `settings.json` | Workspace settings (formatting, linting) |
@@ -176,7 +176,7 @@ selenium_webdriver/
 ## Configuration Files
 
 | File | Role |
-|------|------|
+| ------ | ------ |
 | `package.json` | Dependencies (`selenium-webdriver@4.34.0`, `assert@2.1.0`), scripts (`test`, `format`, `format:check`) |
 | `bun.lock` | Lockfile for Bun package manager compatibility |
 | `.prettierrc` | Prettier formatting config |
@@ -191,7 +191,7 @@ selenium_webdriver/
 ## Documentation Files
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `AGENTS.md` | AI agent context — architecture summary, commands, conventions |
 | `README.md` | Project overview and quick-start |
 | `SETUP_GUIDE.md` | Detailed setup instructions |

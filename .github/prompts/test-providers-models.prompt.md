@@ -1,17 +1,17 @@
 ---
 name: test-providers-models
 title: "Test Providers & Models"
-description: 'Inventory providers, discover models, benchmark accessible free models, '
-  'compare providers, analyze rate limits/fallbacks, and create/update automation scripts.'
-version: 1.0.0
+description: "Inventory providers, discover models, benchmark accessible free models, compare providers, analyze rate limits/fallbacks, create/update automation scripts, and enrich findings with web research and external API documentation."
+version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- providers
-- models
-- benchmark
-- testing
-- fallback
+  - ai-assistant
+  - configuration
+  - prompts
+  - testing
+  - typescript
+  - workflow
 trigger: /test-providers-models
 formatter: default
 dependencies:
@@ -25,8 +25,6 @@ metadata:
     - user-communication-preferences
     - verification-before-completion
 toolsets:
-- file
-- terminal
 scripts: []
 skills: []
 plan: ''

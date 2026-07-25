@@ -21,17 +21,15 @@ if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
 from lib import (
-    is_skipped,
     json_get,
     log_debug,
     log_error,
     log_info,
+    normalize_event,
     now_iso,
     read_payload,
     skip_context,
     write_jsonl,
-    normalize_event,
-    read_jsonl,
 )
 
 _LOG_DIR = Path("C:/Users/Alexa/AppData/Local/hermes/logs/sessions")
@@ -200,7 +198,9 @@ async def main() -> None:
     raw_event = payload.get("event", "")
     event = normalize_event(raw_event)
 
-    log_debug(f"session-logger event={raw_event!r} normalized={event} session_id={json_get(payload, 'session_id', 'unknown')}")
+    log_debug(
+        f"session-logger event={raw_event!r} normalized={event} session_id={json_get(payload, 'session_id', 'unknown')}"
+    )
     handler = _EVENT_HANDLERS.get(event)
     if handler is None:
         log_error(f"Unknown event: {raw_event or '<unset>'}")

@@ -5,7 +5,7 @@
 ## Sync State Summary
 
 | Artifact | Root Count | .github Count | Status |
-|----------|-----------|--------------|--------|
+| ---------- | ----------- | -------------- | -------- |
 | prompts/ | 211 | 211 | ✅ Synced |
 | plans/ | 22 | 22 | ✅ Synced |
 | scripts/ | ~106 | ~109 | ✅ Synced (+3 extra in .github) |
@@ -15,8 +15,8 @@
 
 ## Action Taken
 
-1. **plans/** — 22 plan files copied to `.github/plans/`
-2. **hooks/** — 3 hook directories (governance-audit, session-auto-commit, session-logger) + lib.py/lib.sh copied to `.github/hooks/`
+1. __plans/__ — 22 plan files copied to `.github/plans/`
+2. __hooks/__ — 3 hook directories (governance-audit, session-auto-commit, session-logger) + lib.py/lib.sh copied to `.github/hooks/`
 3. `__pycache__` dirs excluded (runtime artifacts)
 
 ## Verification

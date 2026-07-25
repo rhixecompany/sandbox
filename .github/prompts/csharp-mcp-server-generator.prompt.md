@@ -1,76 +1,39 @@
 ---
 name: csharp-mcp-server-generator
-...
 title: Generate C# MCP Server
-...
 description: Generate a complete MCP server project in C# with tools, prompts, and proper configuration
-...
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - file
-- terminal
+toolsets:
+  - file
+  - terminal
 scripts: []
 skills: []
 formatter: default
-...
 plan: ''
-tags: - backend
-- configuration
-- csharp
-- dotnet
-- frontend
-- generator
-- mcp
-- prompts
-- specification
-- typescript
+tags:
+  - backend
+  - configuration
+  - csharp
+  - dotnet
+  - frontend
+  - generator
+  - mcp
+  - prompts
+  - specification
+  - typescript
+  - backend
+  - configuration
+  - csharp
+  - dotnet
+  - frontend
+  - generator
+  - mcp
+  - prompts
+  - specification
+  - typescript
 trigger: /csharp-mcp-server-generator
-...
 ---
 
-# Generate C# MCP Server
-
-Create a complete Model Context Protocol (MCP) server in C# with the following specifications:
-
-## Requirements
-
-1. **Project Structure**: Create a new C# console application with proper directory structure
-2. **NuGet Packages**: Include ModelContextProtocol (prerelease) and Microsoft.Extensions.Hosting
-3. **Logging Configuration**: Configure all logs to stderr to avoid interfering with stdio transport
-4. **Server Setup**: Use the Host builder pattern with proper DI configuration
-5. **Tools**: Create at least one useful tool with proper attributes and descriptions
-6. **Error Handling**: Include proper error handling and validation
-
-## Implementation Details
-
-> ### Basic Project Setup
->
-> - Use .NET 8.0 or later
-
-> **Full content:** `templates/csharp-mcp-server-generator/implementation_details.md`
-
-## Example Tool Types to Consider
-
-- File operations (read, write, search)
-- Data processing (transform, validate, analyze)
-- External API integrations (HTTP requests)
-- System operations (execute commands, check status)
-- Database operations (query, update)
-
-## Testing Guidance
-
-- Explain how to run the server
-- Provide example commands to test with MCP clients
-- Include troubleshooting tips
-
-Generate a complete, production-ready MCP server with comprehensive documentation and error handling.
-
-## Template References
-
-Templates in `templates/csharp-mcp-server-generator/`:
-
-- `implementation_details.md`
+# Generate C# MCP ServerCreate a complete Model Context Protocol (MCP) server in C# with the following specifications:## Requirements1. **Project Structure**: Create a new C# console application with proper directory structure2. **NuGet Packages**: Include ModelContextProtocol (prerelease) and Microsoft.Extensions.Hosting3. **Logging Configuration**: Configure all logs to stderr to avoid interfering with stdio transport4. **Server Setup**: Use the Host builder pattern with proper DI configuration5. **Tools**: Create at least one useful tool with proper attributes and descriptions6. **Error Handling**: Include proper error handling and validation## Implementation Details> ### Basic Project Setup>> - Use .NET 8.0 or later> **Full content:** `templates/csharp-mcp-server-generator/implementation_details.md`## Example Tool Types to Consider- File operations (read, write, search)- Data processing (transform, validate, analyze)- External API integrations (HTTP requests)- System operations (execute commands, check status)- Database operations (query, update)## Testing Guidance- Explain how to run the server- Provide example commands to test with MCP clients- Include troubleshooting tipsGenerate a complete, production-ready MCP server with comprehensive documentation and error handling.## Template ReferencesTemplates in `templates/csharp-mcp-server-generator/`:- `implementation_details.md`

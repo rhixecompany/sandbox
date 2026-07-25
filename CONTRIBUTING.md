@@ -2,7 +2,7 @@
 
 ## Branching Model
 
-```
+```text
 master ──── production releases
     └── development ──── integration branch
             ├── feat/<project>/<short-description>
@@ -13,18 +13,19 @@ master ──── production releases
 ```
 
 | Branch | Purpose | Protected | PR target |
-|--------|---------|-----------|-----------|
+| -------- | --------- | ----------- | ----------- |
 | `master` | Production-ready code | Yes | — |
 | `development` | Active integration | Yes | ← all PRs |
 | `production` | Release mirror | Yes | ← `master` hotfixes |
 
 ## Branch Naming Convention
 
-```
+```text
 <type>/<project>/<kebab-case-description>
 ```
 
 **Examples:**
+
 - `feat/resume-maker/add-html-output`
 - `fix/bash/install-script-permissions`
 - `docs/root/update-readme`
@@ -66,7 +67,7 @@ git push origin feat/resume-maker/add-html-output
 
 Follow conventional commits:
 
-```
+```text
 <type>: <description>
 
 feat: add HTML output option

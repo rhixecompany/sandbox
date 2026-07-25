@@ -1,17 +1,17 @@
 ---
 name: sync-hermes-copilot-codex
 title: "Sync Hermes Copilot Codex"
-description: 'Bidirectional sync of skills, plugins, hooks, prompts, and instructions '
-  'across Hermes, GitHub Copilot, and OpenAI Codex environments with verification.'
+description: "Bidirectional sync of skills, plugins, hooks, prompts, and instructions across Hermes, GitHub Copilot, and OpenAI Codex environments with verification."
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- sync
-- copilot
-- codex
-- hermes
-- prompts
+  - ai-assistant
+  - data
+  - prompts
+  - skills
+  - typescript
+  - workflow
 trigger: /sync-hermes-copilot-codex
 formatter: default
 dependencies:
@@ -25,8 +25,6 @@ metadata:
     - user-communication-preferences
     - verification-before-completion
 toolsets:
-- file
-- terminal
 scripts: []
 skills: []
 plan: ''

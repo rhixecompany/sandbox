@@ -7,8 +7,6 @@ Uses the MCP Python SDK (FastMCP) with stdio transport.
 from __future__ import annotations
 
 import fnmatch
-import os
-import sys
 from pathlib import Path
 from typing import Any
 

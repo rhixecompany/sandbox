@@ -7,11 +7,12 @@ Phase 3/6 of audit-skills-judge-fix pipeline.
 
 Usage: python merge_skill.py <absorbed_skill_name> <umbrella_skill_name>
 """
+
 import asyncio
 import os
-import sys
-import shutil
 import re
+import shutil
+import sys
 from pathlib import Path
 
 SKILLS_ROOT = Path(r"C:\Users\Alexa\AppData\Local\hermes\skills")
@@ -20,27 +21,27 @@ SKILLS_ROOT = Path(r"C:\Users\Alexa\AppData\Local\hermes\skills")
 def find_skill_path(skill_name):
     """Find the canonical path for a skill by name."""
     for root, dirs, files in os.walk(SKILLS_ROOT):
-        dirs[:] = [d for d in dirs if not d.startswith('.')]
-        if os.path.basename(root).lower() == skill_name.lower() and 'SKILL.md' in files:
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        if os.path.basename(root).lower() == skill_name.lower() and "SKILL.md" in files:
             return Path(root)
     return None
 
 
 def read_file(path):
     try:
-        return Path(path).read_text(encoding='utf-8')
-    except:
+        return Path(path).read_text(encoding="utf-8")
+    except Exception:
         return None
 
 
 def write_file(path, content):
-    Path(path).write_text(content, encoding='utf-8')
+    Path(path).write_text(content, encoding="utf-8")
 
 
 def copy_references(absorbed_path, umbrella_path):
     """Copy unique reference files from absorbed skill to umbrella."""
     copied = []
-    for ref_type in ['references', 'templates', 'scripts']:
+    for ref_type in ["references", "templates", "scripts"]:
         src_dir = absorbed_path / ref_type
         if not src_dir.exists():
             continue
@@ -74,7 +75,7 @@ def update_umbrella_absorbed_section(umbrella_path, absorbed_name, absorbed_desc
     absorbed_entry = f"| {absorbed_name} | {absorbed_desc} |"
 
     # Check if section exists
-    if re.search(r'##\s*Recently\s*Absorbed\s*Skills', content, re.IGNORECASE):
+    if re.search(r"##\s*Recently\s*Absorbed\s*Skills", content, re.IGNORECASE):
         # Append to existing section
         lines = content.splitlines()
         in_section = False
@@ -82,32 +83,34 @@ def update_umbrella_absorbed_section(umbrella_path, absorbed_name, absorbed_desc
         new_lines = []
         for line in lines:
             new_lines.append(line)
-            if re.match(r'##\s*Recently\s*Absorbed\s*Skills', line, re.IGNORECASE):
+            if re.match(r"##\s*Recently\s*Absorbed\s*Skills", line, re.IGNORECASE):
                 in_section = True
                 continue
-            if in_section and not inserted and line.strip().startswith('|'):
+            if in_section and not inserted and line.strip().startswith("|"):
                 # Check if already listed
                 if absorbed_name in line:
                     inserted = True
                     break
-            if in_section and not inserted and (line.strip() == '' or line.startswith('##')):
+            if in_section and not inserted and (line.strip() == "" or line.startswith("##")):
                 # End of table, insert before
                 new_lines.insert(-1, absorbed_entry)
                 inserted = True
         if not inserted:
             # Add at end of section
             for i, line in enumerate(new_lines):
-                if re.match(r'##\s*Recently\s*Absorbed\s*Skills', line, re.IGNORECASE):
+                if re.match(r"##\s*Recently\s*Absorbed\s*Skills", line, re.IGNORECASE):
                     # Find end of table
                     for j in range(i + 1, len(new_lines)):
-                        if new_lines[j].startswith('##') or (new_lines[j].strip() == '' and j > i + 2):
+                        if new_lines[j].startswith("##") or (new_lines[j].strip() == "" and j > i + 2):
                             new_lines.insert(j, absorbed_entry)
                             break
                     break
-        content = '\n'.join(new_lines)
+        content = "\n".join(new_lines)
     else:
         # Create new section at end
-        section = f"\n\n## Recently Absorbed Skills\n\n| Skill | Description |\n|-------|-------------|\n{absorbed_entry}\n"
+        section = (
+            f"\n\n## Recently Absorbed Skills\n\n| Skill | Description |\n|-------|-------------|\n{absorbed_entry}\n"
+        )
         content = content.rstrip() + section
 
     write_file(skill_md, content)
@@ -143,14 +146,14 @@ async def main():
     absorbed_fm = {}
     absorbed_content = read_file(absorbed_path / "SKILL.md")
     if absorbed_content:
-        fm_match = re.match(r'^---\s*\n(.*?)\n---', absorbed_content, re.DOTALL)
+        fm_match = re.match(r"^---\s*\n(.*?)\n---", absorbed_content, re.DOTALL)
         if fm_match:
-            for line in fm_match.group(1).split('\n'):
-                if ':' in line:
-                    k, v = line.split(':', 1)
+            for line in fm_match.group(1).split("\n"):
+                if ":" in line:
+                    k, v = line.split(":", 1)
                     absorbed_fm[k.strip()] = v.strip().strip("\"'")
 
-    absorbed_desc = absorbed_fm.get('description', 'No description')
+    absorbed_desc = absorbed_fm.get("description", "No description")
 
     # Copy references
     copied = copy_references(absorbed_path, umbrella_path)
@@ -161,11 +164,11 @@ async def main():
     # Update umbrella
     updated = update_umbrella_absorbed_section(umbrella_path, absorbed_name, absorbed_desc)
     if updated:
-        print(f"  Updated umbrella SKILL.md with absorbed skill entry")
+        print("  Updated umbrella SKILL.md with absorbed skill entry")
 
     print(f"\nNext step: Run skill_manage to archive '{absorbed_name}'")
     print(f"  skill_manage(action='delete', name='{absorbed_name}', absorbed_into='{umbrella_name}')")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())

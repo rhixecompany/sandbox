@@ -1,6 +1,6 @@
 import asyncio
-import os
 import json
+import os
 
 SANDBOX = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
@@ -49,7 +49,7 @@ async def main():
                     stack.append("TypeScript")
                 if "bun" in deps or os.path.exists(os.path.join(path, "bun.lock")):
                     stack.append("Bun")
-            except:
+            except Exception:
                 pass
 
         # Check for backend/frontend dual-stack
@@ -66,7 +66,7 @@ async def main():
                     be_deps = {**be_data.get("dependencies", {}), **be_data.get("devDependencies", {})}
                     if "django" in be_deps or os.path.exists(os.path.join(backend_path, "manage.py")):
                         has_django = True
-                except:
+                except Exception:
                     pass
             if os.path.exists(os.path.join(backend_path, "manage.py")):
                 has_django = True
@@ -80,7 +80,7 @@ async def main():
                     fe_deps = {**fe_data.get("dependencies", {}), **fe_data.get("devDependencies", {})}
                     if "next" in fe_deps:
                         has_next = True
-                except:
+                except Exception:
                     pass
 
         # Determine final stack
@@ -102,7 +102,9 @@ async def main():
                 has_django = True
             elif os.path.exists(req_txt) or os.path.exists(pyproject):
                 stack = ["Python"]
-            elif os.path.exists(pkg_json) and (os.path.exists(os.path.join(path, "bun.lock")) or "bun" in str(open(pkg_json).read())):
+            elif os.path.exists(pkg_json) and (
+                os.path.exists(os.path.join(path, "bun.lock")) or "bun" in str(open(pkg_json).read())
+            ):
                 stack = ["Bun", "TypeScript"]
             else:
                 stack = ["Unknown"]
@@ -115,7 +117,7 @@ async def main():
 ## Overview
 - **Project**: {name}
 - **Path**: {rel_path}
-- **Stack**: {', '.join(stack)}
+- **Stack**: {", ".join(stack)}
 
 ## Layer Analysis
 """)
@@ -130,13 +132,13 @@ async def main():
 
             f.write(f"""
 ## Cross-Cutting Concerns
-- **Auth**: {'NextAuth.js' if has_next else 'Django Auth' if has_django else 'N/A'}
+- **Auth**: {"NextAuth.js" if has_next else "Django Auth" if has_django else "N/A"}
 - **Error Handling**: Stack-specific patterns
 - **Logging**: Standard logging configuration
 - **Configuration**: Environment variables via .env files
 
 ## Extension Points
-- {'Django apps modular, Celery tasks' if has_django else 'TypeScript modules, component-based'}
+- {"Django apps modular, Celery tasks" if has_django else "TypeScript modules, component-based"}
 """)
 
         # Generate folder structure blueprint
@@ -172,7 +174,7 @@ async def main():
             for tech in stack[:3]:
                 f.write(f"| {tech} | Detected from project files |\n")
 
-            f.write(f"""
+            f.write("""
 ## Build & Test Commands
 """)
             if has_next:

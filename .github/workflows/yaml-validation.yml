@@ -1,0 +1,53 @@
+name: YAML Validation
+
+on:
+  push:
+    branches: [development, staged]
+    paths:
+      - '*.yml'
+      - '*.yaml'
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+      - 'projects/**/*.yml'
+      - 'projects/**/*.yaml'
+  pull_request:
+    branches: [development, staged]
+    paths:
+      - '*.yml'
+      - '*.yaml'
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+      - 'projects/**/*.yml'
+      - 'projects/**/*.yaml'
+
+permissions:
+  contents: read
+
+jobs:
+  yamllint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Validate all YAML files
+        run: |
+          EXIT_CODE=0
+          # Find all YAML files, excluding cookiecutter Jinja templates and node_modules
+          FILES=$(find . -name '*.yml' -o -name '*.yaml' | grep -v '/{{cookiecutter' | grep -v '/node_modules/' | grep -v '/\.git/' | sort)
+
+          for f in $FILES; do
+            if ! yamllint -c .yamllint.yaml "$f"; then
+              EXIT_CODE=1
+            fi
+          done
+
+          if [ "$EXIT_CODE" -eq 0 ]; then
+            echo "✅ All YAML files pass validation"
+          else
+            echo "❌ Some YAML files have issues"
+          fi
+          exit $EXIT_CODE

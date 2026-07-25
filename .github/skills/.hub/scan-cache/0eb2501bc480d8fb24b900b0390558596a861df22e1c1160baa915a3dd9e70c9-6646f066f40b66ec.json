@@ -1,0 +1,156 @@
+{
+  "source": "official",
+  "source_url": "official/security\\unbroker",
+  "bundle_hash": "sha256:0eb2501bc480d8fb24b900b0390558596a861df22e1c1160baa915a3dd9e70c9",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "caution",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "oversized_file",
+      "severity": "medium",
+      "category": "structural",
+      "file": "assets\\unbroker.png",
+      "line": 0,
+      "match": "349KB",
+      "description": "file is 349KB (limit: 256KB)"
+    },
+    {
+      "pattern_id": "too_many_files",
+      "severity": "medium",
+      "category": "structural",
+      "file": "(directory)",
+      "line": 0,
+      "match": "56 files",
+      "description": "skill has 56 files (limit: 50)"
+    },
+    {
+      "pattern_id": "hardcoded_ip_port",
+      "severity": "medium",
+      "category": "network",
+      "file": "SKILL.md",
+      "line": 85,
+      "match": "tools to `127.0.0.1:9222`. **`$PDD cdp` launches this for you** (finds Chrome/Chromium/Brave/Edge,",
+      "description": "hardcoded IP address with port"
+    },
+    {
+      "pattern_id": "hardcoded_ip_port",
+      "severity": "medium",
+      "category": "network",
+      "file": "references\\methods.md",
+      "line": 287,
+      "match": "browser backend to `127.0.0.1:9222`. Use a **dedicated debug profile** (`chrome-debug`), NOT the",
+      "description": "hardcoded IP address with port"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\autopilot.py",
+      "line": 206,
+      "match": "env = os.environ if env is None else env",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_subprocess",
+      "severity": "medium",
+      "category": "execution",
+      "file": "scripts\\cdp.py",
+      "line": 158,
+      "match": "proc = subprocess.Popen(cmd, **kwargs)",
+      "description": "Python subprocess execution"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\config.py",
+      "line": 81,
+      "match": "merged.update(os.environ)",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\config.py",
+      "line": 87,
+      "match": "env = os.environ if env is None else env",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\config.py",
+      "line": 142,
+      "match": "env = os.environ if env is None else env",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_subprocess",
+      "severity": "medium",
+      "category": "execution",
+      "file": "scripts\\crypto.py",
+      "line": 56,
+      "match": "subprocess.run([\"age-keygen\", \"-o\", str(p)], check=True, capture_output=True)",
+      "description": "Python subprocess execution"
+    },
+    {
+      "pattern_id": "python_subprocess",
+      "severity": "medium",
+      "category": "execution",
+      "file": "scripts\\crypto.py",
+      "line": 82,
+      "match": "out = subprocess.run([\"age\", \"-r\", recipient()], input=data, capture_output=True, check=True)",
+      "description": "Python subprocess execution"
+    },
+    {
+      "pattern_id": "python_subprocess",
+      "severity": "medium",
+      "category": "execution",
+      "file": "scripts\\crypto.py",
+      "line": 87,
+      "match": "out = subprocess.run([\"age\", \"-d\", \"-i\", str(identity_path())], input=data, capture_output=True, check=True)",
+      "description": "Python subprocess execution"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\emailer.py",
+      "line": 55,
+      "match": "env = os.environ if env is None else env",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\emailer.py",
+      "line": 69,
+      "match": "env = os.environ if env is None else env",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "shell_rc_mod",
+      "severity": "medium",
+      "category": "persistence",
+      "file": "scripts\\pdd.py",
+      "line": 256,
+      "match": "profile = Path(args.profile).expanduser() if args.profile else cdp.default_profile()",
+      "description": "references shell startup file"
+    }
+  ],
+  "rules": [
+    "hardcoded_ip_port",
+    "oversized_file",
+    "python_os_environ",
+    "python_subprocess",
+    "shell_rc_mod",
+    "too_many_files"
+  ],
+  "scanned_at": "2026-07-16T13:47:38.341032+00:00",
+  "summary": "unbroker: caution \u2014 15 finding(s) in execution, exfiltration, network, persistence, structural",
+  "fresh": true
+}

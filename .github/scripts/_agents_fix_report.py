@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Generate the consolidated agent registry + agents-fix verification report."""
+
 import asyncio
 import datetime
 import json
 import os
 
 ROOT = "C:/Users/Alexa/Desktop/SandBox"
+
 
 async def main():
     loop = asyncio.get_running_loop()
@@ -27,13 +29,15 @@ async def main():
         if r["in_hermes"]:
             ecosystems.append("Hermes")
         cat = "+".join(ecosystems) if ecosystems else "—"
-        reg_rows.append({
-            "concept": r["concept"],
-            "ecosystems": cat,
-            "copilot_agent": r["copilot_agent"],
-            "codex_twin": r["codex_twin"],
-            "hermes_prompt": r["hermes_prompt"],
-        })
+        reg_rows.append(
+            {
+                "concept": r["concept"],
+                "ecosystems": cat,
+                "copilot_agent": r["copilot_agent"],
+                "codex_twin": r["codex_twin"],
+                "hermes_prompt": r["hermes_prompt"],
+            }
+        )
 
     reg = {
         "generated": ts,
@@ -47,7 +51,9 @@ async def main():
         },
         "registry": reg_rows,
     }
-    await loop.run_in_executor(None, _write_json, os.path.join(ROOT, "results", "consolidated-agent-registry.json"), reg)
+    await loop.run_in_executor(
+        None, _write_json, os.path.join(ROOT, "results", "consolidated-agent-registry.json"), reg
+    )
 
     # ---------- verification report ----------
     def md_escape(x):
@@ -89,9 +95,23 @@ async def main():
     L.append("")
     L.append("| File | Name | Model | Tools |")
     L.append("| --- | --- | --- | --- |")
-    sample = [a for a in d["copilot_agents"] if a["slug"] in
-              ("architect", "debugger", "reviewer", "hermes", "qwen-code", "blueprint-mode",
-               "blueprint-mode-codex", "declarative-agents-architect", "csharp-dotnet-janitor", "dotnet-upgrade")]
+    sample = [
+        a
+        for a in d["copilot_agents"]
+        if a["slug"]
+        in (
+            "architect",
+            "debugger",
+            "reviewer",
+            "hermes",
+            "qwen-code",
+            "blueprint-mode",
+            "blueprint-mode-codex",
+            "declarative-agents-architect",
+            "csharp-dotnet-janitor",
+            "dotnet-upgrade",
+        )
+    ]
     for a in sample:
         L.append(f"| `{a['file']}` | {md_escape(a['name'])} | {md_escape(a['model'])} | {md_escape(str(a['tools']))} |")
     L.append("")
@@ -133,7 +153,9 @@ async def main():
     L.append("| --- | --- | --- |")
     L.append("| Janitorial .NET | `csharp-dotnet-janitor.agent.md`, `dotnet-upgrade.agent.md` | cleanup vs upgrade |")
     L.append("| Planning | `implementation-plan.agent.md`, `planner.agent.md` | plan authoring vs orchestration |")
-    L.append("| .NET AI frameworks | `microsoft-agent-framework-python.agent.md`, `semantic-kernel-python.agent.md` | distinct frameworks |")
+    L.append(
+        "| .NET AI frameworks | `microsoft-agent-framework-python.agent.md`, `semantic-kernel-python.agent.md` | distinct frameworks |"
+    )
     L.append("")
     L.append(f"No duplicate `name` fields were found across the {s['copilot_agents']} Copilot agents, so there is")
     L.append("nothing to deduplicate by name. The 171 Copilot-only / 213 Hermes-only gap is expected: the two")
@@ -153,8 +175,8 @@ async def main():
     L.append("### Validation command")
     L.append("")
     L.append("```bash")
-    L.append('ls .github/agents/*.agent.md | wc -l   # 174')
-    L.append('python3 _agents_fix_discover.py        # schema_issues: 0')
+    L.append("ls .github/agents/*.agent.md | wc -l   # 174")
+    L.append("python3 _agents_fix_discover.py        # schema_issues: 0")
     L.append("```")
     L.append("")
     L.append("## Artifacts Produced")
@@ -182,17 +204,21 @@ async def main():
     print(f"Report written: {len(report)} chars")
     print(f"Registry rows: {len(reg_rows)}")
 
+
 def _read_json(path):
     with open(path, encoding="utf-8") as f:
         return f.read()
+
 
 def _write_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
+
 def _write_text(path, text):
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

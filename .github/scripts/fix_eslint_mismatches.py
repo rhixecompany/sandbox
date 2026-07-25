@@ -1,7 +1,8 @@
 import asyncio
-import os
 import json
+import os
 
+SANDBOX = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sandbox_root = SANDBOX
 
 # All settings.json files to check
@@ -23,7 +24,7 @@ settings_files = [
     "projects/university-libary-jsm/.vscode/settings.json",
     "projects/xamehi/.vscode/settings.json",
     "projects/xamehi.tv/.vscode/settings.json",
-    "projects/youtube-downloader/.vscode/settings.json"
+    "projects/youtube-downloader/.vscode/settings.json",
 ]
 
 
@@ -45,10 +46,9 @@ async def main():
                 changed = True
 
         # Check for eslint in other locations (like source.addMissingImports might have eslint variant)
-        if "codeActionsOnSave" in settings:
-            if "source.fixAll.eslint" in settings["codeActionsOnSave"]:
-                del settings["codeActionsOnSave"]["source.fixAll.eslint"]
-                changed = True
+        if "codeActionsOnSave" in settings and "source.fixAll.eslint" in settings["codeActionsOnSave"]:
+            del settings["codeActionsOnSave"]["source.fixAll.eslint"]
+            changed = True
 
         if changed:
             with open(full_path, "w") as f:

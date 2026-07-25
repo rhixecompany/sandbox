@@ -6,11 +6,11 @@ Usage:
                                [--validate] [--dry-run] [--apply]
 """
 
-import asyncio
 import argparse
-import json
-import sys
+import asyncio
+import contextlib
 import re
+import sys
 from pathlib import Path
 
 
@@ -51,7 +51,6 @@ async def write_config_async(config_path: Path, content: str) -> None:
 def parse_yaml_simple(text: str) -> dict:
     """Simple YAML parser for config files (CPU-bound)."""
     result: dict = {}
-    current_key: str | None = None
     current_dict = result
     stack: list[dict] = [result]
     indent_levels: list[int] = [0]
@@ -80,13 +79,8 @@ def parse_yaml_simple(text: str) -> dict:
                     val = True
                 elif val.lower() == "false":
                     val = False
-                try:
-                    if "." in val:
-                        val = float(val)
-                    else:
-                        val = int(val)
-                except ValueError:
-                    pass
+                with contextlib.suppress(ValueError):
+                    val = float(val) if "." in val else int(val)
                 current_dict[key] = val
             else:
                 # Nested key
@@ -172,7 +166,7 @@ async def main(argv: list[str] | None = None) -> None:
     if args.validate:
         parsed = parse_yaml_simple(config_text)
         print(f"Config file: {config_path}")
-        print(f"Format: valid YAML structure")
+        print("Format: valid YAML structure")
         print(f"Settings: {len(parsed)} top-level keys")
         if "provider" not in parsed:
             print("WARNING: no 'provider' configured")
@@ -205,7 +199,7 @@ async def main(argv: list[str] | None = None) -> None:
             print(f"\nChanges applied to {config_path}")
         else:
             print(f"\nUse --apply to write changes to {config_path}")
-            print(f"Preview (use --dry-run to see full diff)")
+            print("Preview (use --dry-run to see full diff)")
 
 
 if __name__ == "__main__":

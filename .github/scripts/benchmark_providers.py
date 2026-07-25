@@ -6,14 +6,13 @@ Usage:
                                  [--iterations N] [--output FORMAT] [--report FILE] [--timeout N]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
-import sys
-import time
 import statistics
+import time
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -53,8 +52,7 @@ def load_test_prompts(path: str | None) -> list[str]:
     return TEST_PROMPTS
 
 
-async def benchmark_provider(provider: str, prompts: list[str],
-                              iterations: int, timeout: int) -> ProviderResult:
+async def benchmark_provider(provider: str, prompts: list[str], iterations: int, timeout: int) -> ProviderResult:
     """Benchmark a single provider by simulating API calls."""
     latencies: list[float] = []
     errors = 0
@@ -71,9 +69,16 @@ async def benchmark_provider(provider: str, prompts: list[str],
             errors += 1
 
     if not latencies:
-        return ProviderResult(provider=provider, avg_latency=0,
-                              min_latency=0, max_latency=0, p95_latency=0,
-                              success_rate=0, iterations=0, errors=errors)
+        return ProviderResult(
+            provider=provider,
+            avg_latency=0,
+            min_latency=0,
+            max_latency=0,
+            p95_latency=0,
+            success_rate=0,
+            iterations=0,
+            errors=errors,
+        )
 
     sorted_lat = sorted(latencies)
     p95_idx = max(0, int(len(sorted_lat) * 0.95) - 1)
@@ -98,7 +103,7 @@ def format_table(results: list[ProviderResult]) -> str:
         lines.append(
             f"{r.provider:<20} {r.avg_latency:<10.3f} {r.min_latency:<10.3f} "
             f"{r.max_latency:<10.3f} {r.p95_latency:<10.3f} "
-            f"{r.success_rate*100:<10.1f} {r.errors:<6}"
+            f"{r.success_rate * 100:<10.1f} {r.errors:<6}"
         )
     return "\n".join(lines)
 
@@ -112,7 +117,7 @@ def format_markdown(results: list[ProviderResult]) -> str:
         lines.append(
             f"| {r.provider} | {r.avg_latency:.3f} | {r.min_latency:.3f} | "
             f"{r.max_latency:.3f} | {r.p95_latency:.3f} | "
-            f"{r.success_rate*100:.1f}% | {r.errors} |"
+            f"{r.success_rate * 100:.1f}% | {r.errors} |"
         )
     return "\n".join(lines)
 
@@ -120,14 +125,18 @@ def format_markdown(results: list[ProviderResult]) -> str:
 def format_csv(results: list[ProviderResult]) -> str:
     lines = ["provider,avg_latency,min_latency,max_latency,p95_latency,success_rate,errors"]
     for r in sorted(results, key=lambda x: x.avg_latency):
-        lines.append(f"{r.provider},{r.avg_latency:.3f},{r.min_latency:.3f},{r.max_latency:.3f},{r.p95_latency:.3f},{r.success_rate},{r.errors}")
+        lines.append(
+            f"{r.provider},{r.avg_latency:.3f},{r.min_latency:.3f},{r.max_latency:.3f},{r.p95_latency:.3f},{r.success_rate},{r.errors}"
+        )
     return "\n".join(lines)
 
 
 async def main(argv: list[str] | None = None) -> None:
     args = parse_args(argv)
     prompts = load_test_prompts(args.test_file)
-    provider_list = [p.strip() for p in args.providers.split(",")] if args.providers else ["openai", "anthropic", "mistral"]
+    provider_list = (
+        [p.strip() for p in args.providers.split(",")] if args.providers else ["openai", "anthropic", "mistral"]
+    )
 
     print(f"Benchmarking {len(provider_list)} providers × {args.iterations} iterations")
     print()

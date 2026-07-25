@@ -26,6 +26,7 @@ Skills are stored in specific locations:
 | --- | --- | --- |
 | `.github/prompts/skills/<skill-name>/` | Project/repository | Recommended for project skills |
 | `.claude/skills/<skill-name>/` | Project/repository | Legacy, for backward compatibility |
+
 - `~/.github/prompts/skills/<skill-name>/` | Personal (user-wide) | Recommended for personal skills |
 | `~/.claude/skills/<skill-name>/` | Personal (user-wide) | Legacy, for backward compatibility |
 

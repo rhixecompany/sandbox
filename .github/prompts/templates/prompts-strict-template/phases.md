@@ -55,7 +55,7 @@ Concrete steps:
    - `description`,
    - dependency fields (`skills`, `toolsets`, `scripts`, `tags`).
    Confirm the block is valid YAML; if not, flag it as the first structural defect.
-2. **Extract top-level sections.** Collect every line beginning with `## ` (exactly two hashes, not `###`). Record them in document order, preserving their exact heading text.
+2. **Extract top-level sections.** Collect every line beginning with `##` (exactly two hashes, not `###`). Record them in document order, preserving their exact heading text.
 3. **Compare against the 11 required sections** from the ordered list above:
    - **Missing** — a required section absent from the document.
    - **Extra** — a section present that is not one of the 11 and is not an allowed trailing section.

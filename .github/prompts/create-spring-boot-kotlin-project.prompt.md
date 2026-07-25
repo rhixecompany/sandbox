@@ -1,103 +1,30 @@
 ---
 name: create-spring-boot-kotlin-project
-...
 title: Create Spring Boot Kotlin project prompt
-...
 description: Create Spring Boot Kotlin Project Skeleton
-...
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - file
-- terminal
-- web
+toolsets:
+  - file
+  - terminal
+  - web
 scripts: []
 skills: []
 formatter: default
-...
 plan: ''
-tags: - docker
-- generator
-- java
-- prompts
-- spring
+tags:
+  - docker
+  - generator
+  - java
+  - prompts
+  - spring
+  - docker
+  - generator
+  - java
+  - prompts
+  - spring
 trigger: /create-spring-boot-kotlin-project
-...
 ---
 
-# Create Spring Boot Kotlin project prompt
-
-- Please make sure you have the following software installed on your system:
-  - Java 21
-  - Docker
-  - Docker Compose
-
-- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md)
-
-- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md#download-spring-boot-project-template)
-
-## Check Java version
-
-- Run following command in terminal and check the version of Java
-
-```shell
-java -version
-```
-
-## Download Spring Boot project template
-
-- Run following command in terminal to download a Spring Boot project template
-
-```shell
-curl https://start.spring.io/starter.zip \
-  -d artifactId=${input:projectName:demo-kotlin} \
-  -d bootVersion=3.4.5 \
-  -d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \
-  -d javaVersion=21 \
-  -d language=kotlin \
-  -d packageName=com.example \
-  -d packaging=jar \
-  -d type=gradle-project-kotlin \
-  -o starter.zip
-```
-
-## Unzip the downloaded file
-
-- Run following command in terminal to unzip the downloaded file
-
-```shell
-unzip starter.zip -d ./${input:projectName:demo-kotlin}
-```
-
-## Remove the downloaded zip file
-
-- Run following command in terminal to delete the downloaded zip file
-
-```shell
-rm -f starter.zip
-```
-
-## Unzip the downloaded file
-
-- Run following command in terminal to unzip the downloaded file
-
-```shell
-unzip starter.zip -d ./${input:projectName:demo-kotlin}
-```
-
-## Add additional dependencies
-
-> - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency
-> implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.8.6")
-
-> **Full content:** `templates/create-spring-boot-kotlin-project/add_additional_dependenci.md`
-
-## Template References
-
-Templates in `templates/create-spring-boot-kotlin-project/`:
-
-- `add_additional_dependenci.md`
-- `download_spring_boot_proj.md`
+# Create Spring Boot Kotlin project prompt- Please make sure you have the following software installed on your system:  - Java 21  - Docker  - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md#download-spring-boot-project-template)## Check Java version- Run following command in terminal and check the version of Java```shelljava -version```## Download Spring Boot project template- Run following command in terminal to download a Spring Boot project template```shellcurl https://start.spring.io/starter.zip \  -d artifactId=${input:projectName:demo-kotlin} \  -d bootVersion=3.4.5 \  -d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \  -d javaVersion=21 \  -d language=kotlin \  -d packageName=com.example \  -d packaging=jar \  -d type=gradle-project-kotlin \  -o starter.zip```## Unzip the downloaded file- Run following command in terminal to unzip the downloaded file```shellunzip starter.zip -d ./${input:projectName:demo-kotlin}```## Remove the downloaded zip file- Run following command in terminal to delete the downloaded zip file```shellrm -f starter.zip```## Unzip the downloaded file- Run following command in terminal to unzip the downloaded file```shellunzip starter.zip -d ./${input:projectName:demo-kotlin}```## Add additional dependencies> - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency> implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.8.6")> **Full content:** `templates/create-spring-boot-kotlin-project/add_additional_dependenci.md`## Template ReferencesTemplates in `templates/create-spring-boot-kotlin-project/`:- `add_additional_dependenci.md`- `download_spring_boot_proj.md`

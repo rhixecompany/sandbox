@@ -14,7 +14,7 @@ Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this work
 
 ## 2. Directory Map
 
-```
+```text
 SandBox/
 ├── AGENTS.md / .hermes.md / README.md   # root config
 ├── .github/prompts/      # canonical prompt library
@@ -32,10 +32,12 @@ SandBox/
 | ------ | -------- | ------- |
 | **Bun** 1.3.14+ | `package.json` | runtime + pkg mgr + test runner |
 | **TypeScript** strict | `tsconfig.json` | `tsc --noEmit` in toolkit |
-| **ESLint** 10 flat | `eslint.config.mts` | zero-warning gate |
-| **Prettier** 3 | `.prettierrc.ts` | |
-| **markdownlint-cli2** | `.markdownlintrc.json` | |
-| **Vitest** 4 | | toolkit unit tests |
+| **ESLint** 10 flat | `eslint.config.mjs` | zero-warning gate |
+| **Prettier** 3 | `.prettierrc.json` | code formatter |
+| **markdownlint-cli2** | `.markdownlintrc.json` | markdown lint |
+| **cspell** 10 | `cspell.json` | spellcheck |
+| **pre-commit** 4.6 | `.pre-commit-config.yaml` | pre-commit hooks |
+| **git-cliff** 2.13 | `cliff.toml` | changelog generation |
 | **EditorConfig** | `.editorconfig` | tab, indent=2, crlf, utf-8 |
 
 **Validation from `projects/Bash/`:**
@@ -52,8 +54,17 @@ bash tests/verify-dryrun.sh
 **Single-file lint:**
 
 ```bash
-bunx eslint --config eslint.config.mts <file.ts> --max-warnings=0
-bunx markdownlint-cli2 --config .markdownlintrc.json "<file.md>"
+eslint --config eslint.config.mjs "<file.ts>" --max-warnings=0
+bunx markdownlint-cli2 --config .markdownlintrc.json --no-globs "<file.md>"
+cspell check --no-progress "<file>"
+```
+
+**Batch lint (root files):**
+
+```bash
+bunx markdownlint-cli2 --config .markdownlintrc.json --no-globs \
+  "*.md" ".github/copilot-instructions.md" ".github/pull_request_template.md"
+cspell check --no-progress "*.md" ".github/**/*.md"
 ```
 
 ## 4. Conventions
@@ -83,7 +94,7 @@ bunx markdownlint-cli2 --config .markdownlintrc.json "<file.md>"
 ## 7. Model/Doc Lane Ownership
 
 | File | Lane |
-|------|------|
+| ------ | ------ |
 | `.github/copilot-instructions.md` | Use as Copilot dispatch only; authoritative behavior lives in `AGENTS.md` |
 | `CLAUDE.md` | Claude-specific reasoning/tool behavior |
 | `.cursorrules` | Cursor IDE formatting/safety rules only |

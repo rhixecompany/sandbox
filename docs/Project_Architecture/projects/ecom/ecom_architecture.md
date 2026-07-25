@@ -103,7 +103,7 @@ sequenceDiagram
 ### 3.1 Django Project Structure
 
 | Module | Path | Purpose |
-|--------|------|---------|
+| -------- | ------ | --------- |
 | **Project Config** | `ecom/` | `settings.py`, `urls.py`, `wsgi.py`, `asgi.py` |
 | **Core App** | `base/` | All models, views, serializers, admin config |
 | **Management** | `manage.py` | Django CLI entry point |
@@ -155,7 +155,7 @@ sequenceDiagram
 **API Views** — Function-based `@api_view` decorators (not ViewSets):
 
 | View Module | Endpoints |
-|-------------|-----------|
+| ------------- | ----------- |
 | `product_views.py` | `getProducts`, `getProduct`, `createProduct`, `updateProduct`, `deleteProduct`, `uploadImage`, `createProductReview`, `getTopProducts` |
 | `order_views.py` | `addOrderItems`, `getMyOrders`, `getOrders`, `getOrderById`, `updateOrderToPaid`, `updateOrderToDelivered` |
 | `user_views.py` | `registerUser`, `updateUserProfile`, `getUserProfile`, `getUsers`, `getUserById`, `updateUser`, `deleteUser` + `MyTokenObtainPairView` |
@@ -272,7 +272,7 @@ graph TD
 ### 4.3 Routing Table
 
 | Route | Screen | Auth | Admin |
-|-------|--------|------|-------|
+| ------- | -------- | ------ | ------- |
 | `/` | HomeScreen | — | — |
 | `/login` | LoginScreen | — | — |
 | `/register` | RegisterScreen | — | — |
@@ -344,7 +344,7 @@ graph LR
 ## 7. Key Architectural Decisions
 
 | Decision | Rationale |
-|----------|-----------|
+| ---------- | ----------- |
 | **Separate frontend/backend** | Independent dev cycles, clear API contract, deployable separately |
 | **Function-based DRF views** | Simpler to reason about than ViewSets for this scale |
 | **Redux + Thunk (not Toolkit)** | Original CRA scaffold — mature, well-understood pattern |

@@ -5,8 +5,8 @@ Usage:
     python fix_crlf_frontmatter.py [--workspace PATH] [--dry-run] [--verbose] [--report PATH]
 """
 
-import asyncio
 import argparse
+import asyncio
 import sys
 from pathlib import Path
 
@@ -30,7 +30,7 @@ def _fix_crlf_in_frontmatter(text: str) -> tuple[str, bool]:
     if len(parts) < 3:
         return text, False
 
-    header = parts[0]
+    parts[0]
     fm = parts[1]
     body = parts[2]
 
@@ -129,6 +129,7 @@ async def main(argv: list[str] | None = None) -> None:
     if args.report:
         report_path = Path(args.report)
         import json
+
         report_path.write_text(
             json.dumps({"fixed": fixed, "errors": errors, "dry_run": args.dry_run}, indent=2),
             encoding="utf-8",

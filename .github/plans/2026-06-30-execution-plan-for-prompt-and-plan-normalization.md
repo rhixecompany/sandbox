@@ -93,5 +93,6 @@ Objective: deliver clean state.
 - [ ] 4.2 run `git diff --check`
 - [ ] 4.3 `git commit` with `docs: normalize .hermes/plans for executable workflow`
 - [ ] 4.4 `git push`
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

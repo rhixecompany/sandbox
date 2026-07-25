@@ -1,0 +1,64 @@
+{
+  "source": "official",
+  "source_url": "official/health\\fitness-nutrition",
+  "bundle_hash": "sha256:c56bc855ec5bdf18486bc92671858b951aae94fc0ce568d34bf451dcf14adb30",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "env_exfil_curl",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "SKILL.md",
+      "line": 173,
+      "match": "curl -s \"https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${ENCODED}&pageSize=5&dataType=Foundat...",
+      "description": "curl command interpolating secret environment variable"
+    },
+    {
+      "pattern_id": "env_exfil_curl",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "SKILL.md",
+      "line": 194,
+      "match": "curl -s \"https://api.nal.usda.gov/fdc/v1/food/${FDC_ID}?api_key=${API_KEY}\" \\",
+      "description": "curl command interpolating secret environment variable"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\nutrition_search.py",
+      "line": 20,
+      "match": "API_KEY = os.environ.get(\"USDA_API_KEY\", \"DEMO_KEY\")",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "scripts\\nutrition_search.py",
+      "line": 20,
+      "match": "API_KEY = os.environ.get(\"USDA_API_KEY\", \"DEMO_KEY\")",
+      "description": "reads secret via os.environ.get()"
+    },
+    {
+      "pattern_id": "echo_pipe_exec",
+      "severity": "critical",
+      "category": "obfuscation",
+      "file": "scripts\\nutrition_search.py",
+      "line": 8,
+      "match": "echo -e \"oats\\\\nbanana\\\\nwhey protein\" | python3 nutrition_search.py -",
+      "description": "echo piped to interpreter for execution"
+    }
+  ],
+  "rules": [
+    "echo_pipe_exec",
+    "env_exfil_curl",
+    "python_environ_get_secret",
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:33:58.168152+00:00",
+  "summary": "fitness-nutrition: dangerous \u2014 5 finding(s) in exfiltration, obfuscation",
+  "fresh": true
+}

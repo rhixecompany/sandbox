@@ -31,7 +31,7 @@
 ## Module Ownership Boundaries
 
 | Layer | Django App / Dir | Ownership | Inherited From |
-| ------- | ----------------- | ----------- | --------------- |
+|-------|-----------------|-----------|---------------|
 | API | `apps/api` | REST endpoints, URL routing | Django-Scrapy-Selenium patterns |
 | Comics | `apps/comics` | Models, serializers, views | comicwise (Prisma → Django ORM) |
 | Scraping | `apps/scraping` | Spiders, Selenium, Celery tasks | Django-Scrapy-Selenium + selenium_webdriver |
@@ -59,7 +59,7 @@
 ## What Was Retired
 
 | Component | Reason |
-| ----------- | -------- |
+|-----------|--------|
 | comicwise Prisma ORM | Replaced by Django ORM (consistent backend) |
 | comicwise NextAuth | Replaced by DRF JWT (single auth system) |
 | Django-Scrapy-Selenium Webpack | Replaced by Next.js build system |

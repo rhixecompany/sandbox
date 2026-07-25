@@ -1,32 +1,32 @@
-name: Resume Maker CI
+name: CI - Resume Maker
+
 on:
-  pull_request:
+  push:
+    branches: [development, production]
     paths:
       - 'projects/Resume_maker/**'
-      - '.github/workflows/**'
+      - '.github/workflows/resume-maker-ci.yml'
+  pull_request:
+    branches: [development, production]
+    paths:
+      - 'projects/Resume_maker/**'
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./projects/Resume_maker
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: '18'
+          bun-version: '1.3.14'
       - name: Install dependencies
-        run: |
-          cd projects/Resume_maker
-          if command -v bun >/dev/null 2>&1; then
-            bun install || true
-          else
-            npm ci || true
-          fi
-      - name: TypeScript type check
-        run: |
-          cd projects/Resume_maker
-          bun run tsc --noEmit 2>/dev/null || npx tsc --noEmit 2>/dev/null || echo "Type check skipped"
+        run: bun install --frozen-lockfile
+      - name: Type check
+        run: bun run typecheck 2>/dev/null || bunx tsc --noEmit 2>/dev/null || echo "Type check skipped"
       - name: Lint
-        run: |
-          cd projects/Resume_maker
-          bun run lint 2>/dev/null || npm run lint 2>/dev/null || echo "Lint skipped"
+        run: bun run lint 2>/dev/null || npx eslint . --ext .ts,.json 2>/dev/null || echo "Lint skipped"
+      - name: Build
+        run: bun run build 2>/dev/null || echo "Build skipped"

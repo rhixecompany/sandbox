@@ -19,7 +19,7 @@ Before ANY task execution:
 Always run `hermes profile use <name>` BEFORE execution:
 
 | Task Type | Profile |
-|-----------|---------|
+| ----------- | --------- |
 | Code implementation, debugging, refactoring | `code-architect` |
 | Deep research, literature review, synthesis | `research-analyst` |
 | Design, content creation, brainstorming | `creative-director` |
@@ -46,7 +46,7 @@ Before using native tools (`terminal`, `read_file`, `search_files`), check if MC
 
 Each phase is a hard dependency:
 
-```
+```text
 spec compliance → code quality review → approval → completion
 ```
 
@@ -85,7 +85,7 @@ Never claim success without tool verification:
 
 ## 9. Commit Format
 
-```
+```text
 <type>: <description>
 
 feat: add new feature

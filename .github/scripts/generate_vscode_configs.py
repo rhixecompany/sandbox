@@ -19,26 +19,18 @@ def settings_nextjs():
     return {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.fixAll.eslint": "explicit", "source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "files.associations": {"*.css": "tailwindcss"},
         "tailwindCSS.emmetCompletions": True,
-        "tailwindCSS.includeLanguages": {
-            "css": "css",
-            "scss": "scss",
-            "javascript": "jsx",
-            "typescript": "tsx"
-        },
+        "tailwindCSS.includeLanguages": {"css": "css", "scss": "scss", "javascript": "jsx", "typescript": "tsx"},
         "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[typescript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[typescriptreact]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
         "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
         "[css]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
-        "[scss]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
+        "[scss]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
     }
 
 
@@ -47,9 +39,7 @@ def settings_django():
     return {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
@@ -58,10 +48,7 @@ def settings_django():
         "python-envs.alwaysUseUv": True,
         "python-envs.autoActivate": True,
         "python-envs.venvFolders": [".venv", "env", "venv", ".env", "envs", "venvs"],
-        "files.associations": {
-            "**/*.{txt,in}": "django-txt",
-            "**/requirements/**/*.{txt,in}": "pip-requirements"
-        },
+        "files.associations": {"**/*.{txt,in}": "django-txt", "**/requirements/**/*.{txt,in}": "pip-requirements"},
         "[python]": {"editor.defaultFormatter": "ms-python.python", "editor.formatOnSave": True},
         "[html]": {"editor.defaultFormatter": "vscode.html-language-features"},
         "[django-html]": {"editor.defaultFormatter": "vscode.html-language-features"},
@@ -69,7 +56,7 @@ def settings_django():
         "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[typescript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -78,10 +65,7 @@ def settings_dualdjango_nextjs():
     return {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.fixAll.eslint": "explicit", "source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
@@ -93,13 +77,10 @@ def settings_dualdjango_nextjs():
         "files.associations": {
             "*.css": "tailwindcss",
             "**/*.{txt,in}": "django-txt",
-            "**/requirements/**/*.{txt,in}": "pip-requirements"
+            "**/requirements/**/*.{txt,in}": "pip-requirements",
         },
         "tailwindCSS.emmetCompletions": True,
-        "tailwindCSS.includeLanguages": {
-            "css": "css", "scss": "scss",
-            "javascript": "jsx", "typescript": "tsx"
-        },
+        "tailwindCSS.includeLanguages": {"css": "css", "scss": "scss", "javascript": "jsx", "typescript": "tsx"},
         "[python]": {"editor.defaultFormatter": "ms-python.python", "editor.formatOnSave": True},
         "[django-html]": {"editor.defaultFormatter": "vscode.html-language-features"},
         "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
@@ -109,7 +90,7 @@ def settings_dualdjango_nextjs():
         "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
         "[css]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[scss]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
-        "[html]": {"editor.defaultFormatter": "vscode.html-language-features"}
+        "[html]": {"editor.defaultFormatter": "vscode.html-language-features"},
     }
 
 
@@ -118,16 +99,13 @@ def settings_bun():
     return {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.fixAll": "explicit", "source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "[typescript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
         "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[shellscript]": {"editor.defaultFormatter": "foxundermoon.shell-format"}
+        "[shellscript]": {"editor.defaultFormatter": "foxundermoon.shell-format"},
     }
 
 
@@ -136,15 +114,12 @@ def settings_node():
     return {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.fixAll.eslint": "explicit", "source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[typescript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -153,9 +128,7 @@ def settings_python():
     return {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnSave": True,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.organizeImports": "explicit"},
         "editor.inlineSuggest.enabled": True,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
@@ -166,7 +139,7 @@ def settings_python():
         "python-envs.venvFolders": [".venv", "env", "venv", ".env", "envs", "venvs"],
         "[python]": {"editor.defaultFormatter": "ms-python.python", "editor.formatOnSave": True},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -175,12 +148,10 @@ def settings_go():
     return {
         "editor.formatOnSave": True,
         "editor.inlineSuggest.enabled": True,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
+        "editor.codeActionsOnSave": {"source.organizeImports": "explicit"},
         "[go]": {"editor.defaultFormatter": "golang.go"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -192,7 +163,7 @@ def settings_rust():
         "editor.codeActionsOnSave": {"source.organizeImports": "explicit"},
         "[rust]": {"editor.defaultFormatter": "rust-lang.rust-analyzer"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -204,7 +175,7 @@ def settings_java():
         "java.configuration.updateBuildConfiguration": "automatic",
         "[java]": {"editor.defaultFormatter": "redhat.java"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -215,7 +186,7 @@ def settings_kotlin():
         "editor.inlineSuggest.enabled": True,
         "[kotlin]": {"editor.defaultFormatter": "fwcd.kotlin"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -226,7 +197,7 @@ def settings_php():
         "editor.inlineSuggest.enabled": True,
         "[php]": {"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -237,7 +208,7 @@ def settings_ruby():
         "editor.inlineSuggest.enabled": True,
         "[ruby]": {"editor.defaultFormatter": "rebornix.ruby"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -248,7 +219,7 @@ def settings_swift():
         "editor.inlineSuggest.enabled": True,
         "[swift]": {"editor.defaultFormatter": "sswg.swift-lang"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -259,7 +230,7 @@ def settings_csharp():
         "editor.inlineSuggest.enabled": True,
         "[csharp]": {"editor.defaultFormatter": "ms-dotnettools.csharp"},
         "[json]": {"editor.defaultFormatter": "vscode.json-language-features"},
-        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"}
+        "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     }
 
 
@@ -273,8 +244,13 @@ def launch_nextjs():
             {"command": "npm run dev", "name": "Next.js: Dev Server", "request": "launch", "type": "node-terminal"},
             {"command": "npm run build", "name": "Next.js: Build", "request": "launch", "type": "node-terminal"},
             {"command": "npm run lint", "name": "Next.js: Lint", "request": "launch", "type": "node-terminal"},
-            {"command": "npx tsc --noEmit", "name": "TypeScript: Type Check", "request": "launch", "type": "node-terminal"}
-        ]
+            {
+                "command": "npx tsc --noEmit",
+                "name": "TypeScript: Type Check",
+                "request": "launch",
+                "type": "node-terminal",
+            },
+        ],
     }
 
 
@@ -285,9 +261,21 @@ def launch_nextjs_bun():
             {"command": "bun run dev", "name": "Next.js: Dev Server", "request": "launch", "type": "node-terminal"},
             {"command": "bun run build", "name": "Next.js: Build", "request": "launch", "type": "node-terminal"},
             {"command": "bun run lint", "name": "Next.js: Lint", "request": "launch", "type": "node-terminal"},
-            {"command": "bun run type-check", "name": "TypeScript: Type Check", "request": "launch", "type": "node-terminal"},
-            {"name": "Bun: Current File", "type": "node", "request": "launch", "runtimeExecutable": "bun", "program": "${file}", "console": "integratedTerminal"}
-        ]
+            {
+                "command": "bun run type-check",
+                "name": "TypeScript: Type Check",
+                "request": "launch",
+                "type": "node-terminal",
+            },
+            {
+                "name": "Bun: Current File",
+                "type": "node",
+                "request": "launch",
+                "runtimeExecutable": "bun",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -295,10 +283,32 @@ def launch_django():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Django: Runserver", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/manage.py", "args": ["runserver"], "django": True, "justMyCode": True},
-            {"name": "Django: Test", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/manage.py", "args": ["test", "--keepdb", "--verbosity=2"], "django": True, "justMyCode": True},
-            {"name": "Python: Current File", "type": "debugpy", "request": "launch", "program": "${file}", "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Django: Runserver",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage.py",
+                "args": ["runserver"],
+                "django": True,
+                "justMyCode": True,
+            },
+            {
+                "name": "Django: Test",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage.py",
+                "args": ["test", "--keepdb", "--verbosity=2"],
+                "django": True,
+                "justMyCode": True,
+            },
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -307,12 +317,34 @@ def launch_dualdjango_nextjs():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Django: Runserver", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/backend/manage.py", "args": ["runserver"], "django": True, "justMyCode": True},
-            {"name": "Django: Test", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/backend/manage.py", "args": ["test", "--keepdb", "--verbosity=2"], "django": True, "justMyCode": True},
+            {
+                "name": "Django: Runserver",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/backend/manage.py",
+                "args": ["runserver"],
+                "django": True,
+                "justMyCode": True,
+            },
+            {
+                "name": "Django: Test",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/backend/manage.py",
+                "args": ["test", "--keepdb", "--verbosity=2"],
+                "django": True,
+                "justMyCode": True,
+            },
             {"command": "npm run dev", "name": "Frontend: Dev Server", "request": "launch", "type": "node-terminal"},
             {"command": "npm run build", "name": "Frontend: Build", "request": "launch", "type": "node-terminal"},
-            {"name": "Python: Current File", "type": "debugpy", "request": "launch", "program": "${file}", "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -321,11 +353,39 @@ def launch_dualdjango_node():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Django: Runserver", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/manage.py", "args": ["runserver"], "django": True, "justMyCode": True},
-            {"name": "Django: Test", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/manage.py", "args": ["test", "--keepdb", "--verbosity=2"], "django": True, "justMyCode": True},
-            {"name": "Node.js: Current File", "type": "node", "request": "launch", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "Python: Current File", "type": "debugpy", "request": "launch", "program": "${file}", "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Django: Runserver",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage.py",
+                "args": ["runserver"],
+                "django": True,
+                "justMyCode": True,
+            },
+            {
+                "name": "Django: Test",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage.py",
+                "args": ["test", "--keepdb", "--verbosity=2"],
+                "django": True,
+                "justMyCode": True,
+            },
+            {
+                "name": "Node.js: Current File",
+                "type": "node",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -333,9 +393,23 @@ def launch_bun():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Bun: Current File", "type": "node", "request": "launch", "runtimeExecutable": "bun", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "Bun: Run All Tests", "type": "node", "request": "launch", "runtimeExecutable": "bun", "runtimeArgs": ["test"], "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Bun: Current File",
+                "type": "node",
+                "request": "launch",
+                "runtimeExecutable": "bun",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "Bun: Run All Tests",
+                "type": "node",
+                "request": "launch",
+                "runtimeExecutable": "bun",
+                "runtimeArgs": ["test"],
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -343,9 +417,22 @@ def launch_node():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Node.js: Current File", "type": "node", "request": "launch", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "npm start", "type": "node", "request": "launch", "runtimeExecutable": "npm", "runtimeArgs": ["start"], "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Node.js: Current File",
+                "type": "node",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "npm start",
+                "type": "node",
+                "request": "launch",
+                "runtimeExecutable": "npm",
+                "runtimeArgs": ["start"],
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -353,9 +440,21 @@ def launch_python():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Python: Current File", "type": "debugpy", "request": "launch", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "Python: Module", "type": "debugpy", "request": "launch", "module": "${command:extension.commandpack.fileModule}", "console": "integratedTerminal"}
-        ]
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "Python: Module",
+                "type": "debugpy",
+                "request": "launch",
+                "module": "${command:extension.commandpack.fileModule}",
+                "console": "integratedTerminal",
+            },
+        ],
     }
 
 
@@ -364,8 +463,14 @@ def launch_go():
         "version": "0.2.0",
         "configurations": [
             {"name": "Go: Current File", "type": "go", "request": "launch", "mode": "auto", "program": "${file}"},
-            {"name": "Go: Test Package", "type": "go", "request": "launch", "mode": "test", "program": "${workspaceFolder}"}
-        ]
+            {
+                "name": "Go: Test Package",
+                "type": "go",
+                "request": "launch",
+                "mode": "test",
+                "program": "${workspaceFolder}",
+            },
+        ],
     }
 
 
@@ -373,9 +478,23 @@ def launch_rust():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Rust: cargo run", "type": "lldb", "request": "launch", "program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}", "args": [], "cargo": {"args": ["build"]}},
-            {"name": "Rust: cargo test", "type": "lldb", "request": "launch", "program": "${workspaceFolder}/target/debug/deps/${workspaceFolderBasename}", "args": [], "cargo": {"args": ["test"]}}
-        ]
+            {
+                "name": "Rust: cargo run",
+                "type": "lldb",
+                "request": "launch",
+                "program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}",
+                "args": [],
+                "cargo": {"args": ["build"]},
+            },
+            {
+                "name": "Rust: cargo test",
+                "type": "lldb",
+                "request": "launch",
+                "program": "${workspaceFolder}/target/debug/deps/${workspaceFolderBasename}",
+                "args": [],
+                "cargo": {"args": ["test"]},
+            },
+        ],
     }
 
 
@@ -383,9 +502,15 @@ def launch_java():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "Java: Current File", "type": "java", "request": "launch", "mainClass": "${file}", "console": "integratedTerminal"},
-            {"name": "Java: Maven Build", "type": "shell", "request": "launch", "command": "mvn clean compile"}
-        ]
+            {
+                "name": "Java: Current File",
+                "type": "java",
+                "request": "launch",
+                "mainClass": "${file}",
+                "console": "integratedTerminal",
+            },
+            {"name": "Java: Maven Build", "type": "shell", "request": "launch", "command": "mvn clean compile"},
+        ],
     }
 
 
@@ -393,9 +518,19 @@ def launch_csharp():
     return {
         "version": "0.2.0",
         "configurations": [
-            {"name": "C#: Launch", "type": "coreclr", "request": "launch", "preLaunchTask": "build", "program": "${workspaceFolder}/bin/Debug/net8.0/${workspaceFolderBasename}.dll", "args": [], "cwd": "${workspaceFolder}", "console": "integratedTerminal", "stopAtEntry": False},
-            {"name": "C#: Attach", "type": "coreclr", "request": "attach", "processId": "${command:pickProcess}"}
-        ]
+            {
+                "name": "C#: Launch",
+                "type": "coreclr",
+                "request": "launch",
+                "preLaunchTask": "build",
+                "program": "${workspaceFolder}/bin/Debug/net8.0/${workspaceFolderBasename}.dll",
+                "args": [],
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal",
+                "stopAtEntry": False,
+            },
+            {"name": "C#: Attach", "type": "coreclr", "request": "attach", "processId": "${command:pickProcess}"},
+        ],
     }
 
 
@@ -406,12 +541,42 @@ def tasks_nextjs():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "npm run dev", "label": "Next.js: Dev", "type": "shell", "group": {"kind": "build", "isDefault": True}, "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "npm run build", "label": "Next.js: Build", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "npm run lint", "label": "Next.js: Lint", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "npx tsc --noEmit", "label": "TypeScript: Type Check", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "npm test", "label": "Tests", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "new"}}
-        ]
+            {
+                "command": "npm run dev",
+                "label": "Next.js: Dev",
+                "type": "shell",
+                "group": {"kind": "build", "isDefault": True},
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "npm run build",
+                "label": "Next.js: Build",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "npm run lint",
+                "label": "Next.js: Lint",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "npx tsc --noEmit",
+                "label": "TypeScript: Type Check",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "npm test",
+                "label": "Tests",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+        ],
     }
 
 
@@ -419,12 +584,42 @@ def tasks_nextjs_bun():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "bun run dev", "label": "Next.js: Dev", "type": "shell", "group": {"kind": "build", "isDefault": True}, "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "bun run build", "label": "Next.js: Build", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "bun run lint", "label": "Next.js: Lint", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "bun run type-check", "label": "TypeScript: Type Check", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "bun run test", "label": "Tests", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "new"}}
-        ]
+            {
+                "command": "bun run dev",
+                "label": "Next.js: Dev",
+                "type": "shell",
+                "group": {"kind": "build", "isDefault": True},
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "bun run build",
+                "label": "Next.js: Build",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "bun run lint",
+                "label": "Next.js: Lint",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "bun run type-check",
+                "label": "TypeScript: Type Check",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "bun run test",
+                "label": "Tests",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+        ],
     }
 
 
@@ -432,11 +627,35 @@ def tasks_django():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "python manage.py runserver", "label": "Django: Runserver", "type": "shell", "group": {"kind": "build", "isDefault": True}, "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "python manage.py test --keepdb --verbosity=2", "label": "Django: Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "python manage.py makemigrations", "label": "Django: Make Migrations", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "python manage.py migrate", "label": "Django: Migrate", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}}
-        ]
+            {
+                "command": "python manage.py runserver",
+                "label": "Django: Runserver",
+                "type": "shell",
+                "group": {"kind": "build", "isDefault": True},
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "python manage.py test --keepdb --verbosity=2",
+                "label": "Django: Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "python manage.py makemigrations",
+                "label": "Django: Make Migrations",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "python manage.py migrate",
+                "label": "Django: Migrate",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+        ],
     }
 
 
@@ -444,14 +663,56 @@ def tasks_dualdjango_nextjs():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "cd backend && python manage.py runserver", "label": "Django: Runserver", "type": "shell", "group": {"kind": "build"}, "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "cd frontend && npm run dev", "label": "Frontend: Dev", "type": "shell", "group": {"kind": "build"}, "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "cd backend && python manage.py test --keepdb --verbosity=2", "label": "Django: Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "cd backend && python manage.py makemigrations", "label": "Django: Make Migrations", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "cd backend && python manage.py migrate", "label": "Django: Migrate", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "cd frontend && npm run build", "label": "Frontend: Build", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "new"}},
-            {"command": "cd frontend && npm test", "label": "Frontend: Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "new"}}
-        ]
+            {
+                "command": "cd backend && python manage.py runserver",
+                "label": "Django: Runserver",
+                "type": "shell",
+                "group": {"kind": "build"},
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "cd frontend && npm run dev",
+                "label": "Frontend: Dev",
+                "type": "shell",
+                "group": {"kind": "build"},
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "cd backend && python manage.py test --keepdb --verbosity=2",
+                "label": "Django: Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "cd backend && python manage.py makemigrations",
+                "label": "Django: Make Migrations",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "cd backend && python manage.py migrate",
+                "label": "Django: Migrate",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "cd frontend && npm run build",
+                "label": "Frontend: Build",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+            {
+                "command": "cd frontend && npm test",
+                "label": "Frontend: Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "new"},
+            },
+        ],
     }
 
 
@@ -459,10 +720,28 @@ def tasks_bun():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "bun run format", "label": "Format", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "bun run typecheck", "label": "Type Check", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "bun test", "label": "Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}}
-        ]
+            {
+                "command": "bun run format",
+                "label": "Format",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "bun run typecheck",
+                "label": "Type Check",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "bun test",
+                "label": "Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+        ],
     }
 
 
@@ -470,10 +749,28 @@ def tasks_node():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "npm start", "label": "Start", "type": "shell", "group": {"kind": "build", "isDefault": True}, "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "npm test", "label": "Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "npm run lint", "label": "Lint", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}}
-        ]
+            {
+                "command": "npm start",
+                "label": "Start",
+                "type": "shell",
+                "group": {"kind": "build", "isDefault": True},
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "npm test",
+                "label": "Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "npm run lint",
+                "label": "Lint",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+        ],
     }
 
 
@@ -481,10 +778,28 @@ def tasks_python():
     return {
         "version": "2.0.0",
         "tasks": [
-            {"command": "python -m pytest", "label": "Test", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "ruff check .", "label": "Lint", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "mypy .", "label": "Type Check", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}}
-        ]
+            {
+                "command": "python -m pytest",
+                "label": "Test",
+                "type": "shell",
+                "group": "test",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "ruff check .",
+                "label": "Lint",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+            {
+                "command": "mypy .",
+                "label": "Type Check",
+                "type": "shell",
+                "group": "build",
+                "presentation": {"reveal": "always", "panel": "shared"},
+            },
+        ],
     }
 
 
@@ -497,12 +812,9 @@ def ext_bun():
             "esbenp.prettier-vscode",
             "oven.bun-vscode",
             "foxundermoon.shell-format",
-            "usernamehw.errorlens"
+            "usernamehw.errorlens",
         ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
+        "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
     }
 
 
@@ -514,12 +826,9 @@ def ext_nextjs():
             "dbaeumer.vscode-eslint",
             "ms-vscode.vscode-typescript-next",
             "formulahendry.auto-rename-tag",
-            "usernamehw.errorlens"
+            "usernamehw.errorlens",
         ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
+        "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
     }
 
 
@@ -532,12 +841,9 @@ def ext_nextjs_bun():
             "ms-vscode.vscode-typescript-next",
             "oven.bun-vscode",
             "formulahendry.auto-rename-tag",
-            "usernamehw.errorlens"
+            "usernamehw.errorlens",
         ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
+        "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
     }
 
 
@@ -547,9 +853,9 @@ def ext_django():
             "ms-python.python",
             "ms-python.vscode-pylance",
             "batisteo.vscode-django",
-            "amannn.vscode-djlint"
+            "amannn.vscode-djlint",
         ],
-        "unwantedRecommendations": []
+        "unwantedRecommendations": [],
     }
 
 
@@ -565,73 +871,47 @@ def ext_dualdjango():
             "dbaeumer.vscode-eslint",
             "ms-vscode.vscode-typescript-next",
             "formulahendry.auto-rename-tag",
-            "usernamehw.errorlens"
+            "usernamehw.errorlens",
         ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
+        "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
     }
 
 
 def ext_node():
     return {
-        "recommendations": [
-            "esbenp.prettier-vscode",
-            "dbaeumer.vscode-eslint",
-            "christian-kohler.npm-intellisense"
-        ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
+        "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "christian-kohler.npm-intellisense"],
+        "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
     }
 
 
 def ext_python():
     return {
-        "recommendations": [
-            "ms-python.python",
-            "ms-python.vscode-pylance",
-            "charliermarsh.ruff"
-        ],
-        "unwantedRecommendations": []
+        "recommendations": ["ms-python.python", "ms-python.vscode-pylance", "charliermarsh.ruff"],
+        "unwantedRecommendations": [],
     }
 
 
 def ext_go():
-    return {
-        "recommendations": ["golang.go"],
-        "unwantedRecommendations": []
-    }
+    return {"recommendations": ["golang.go"], "unwantedRecommendations": []}
 
 
 def ext_rust():
-    return {
-        "recommendations": ["rust-lang.rust-analyzer", "tamasfe.even-better-toml"],
-        "unwantedRecommendations": []
-    }
+    return {"recommendations": ["rust-lang.rust-analyzer", "tamasfe.even-better-toml"], "unwantedRecommendations": []}
 
 
 def ext_java():
     return {
         "recommendations": ["redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven"],
-        "unwantedRecommendations": []
+        "unwantedRecommendations": [],
     }
 
 
 def ext_csharp():
-    return {
-        "recommendations": ["ms-dotnettools.csharp", "ms-dotnettools.csdevkit"],
-        "unwantedRecommendations": []
-    }
+    return {"recommendations": ["ms-dotnettools.csharp", "ms-dotnettools.csdevkit"], "unwantedRecommendations": []}
 
 
 def ext_generic():
-    return {
-        "recommendations": [],
-        "unwantedRecommendations": []
-    }
+    return {"recommendations": [], "unwantedRecommendations": []}
 
 
 # ─── Repo Definitions ────────────────────────────────────────────────────────
@@ -663,9 +943,9 @@ REPOS_GENERATE = [
 
 REPOS_AUGMENT = [
     # ── Partial — add missing files ──
-    ("", "root"),                          # Root SandBox — has settings, needs launch/tasks/extensions/mcp.json
-    ("Bash", "bun"),                       # Has settings, needs launch/tasks/extensions
-    ("Resume_maker", "bun"),               # Has settings, needs launch/tasks/extensions
+    ("", "root"),  # Root SandBox — has settings, needs launch/tasks/extensions/mcp.json
+    ("Bash", "bun"),  # Has settings, needs launch/tasks/extensions
+    ("Resume_maker", "bun"),  # Has settings, needs launch/tasks/extensions
     ("projects/university-libary-jsm", "nextjs"),  # Has settings+launch, needs extensions+tasks
 ]
 
@@ -734,8 +1014,17 @@ def gen_configs(repo_path, stack):
         "python": tasks_python,
         "go": lambda: {"version": "2.0.0", "tasks": []},
         "rust": lambda: {"version": "2.0.0", "tasks": []},
-        "java": lambda: {"version": "2.0.0", "tasks": [{"command": "mvn clean compile", "label": "Build", "type": "shell", "group": "build"}]},
-        "csharp": lambda: {"version": "2.0.0", "tasks": [{"command": "dotnet build", "label": "Build", "type": "shell", "group": "build"}, {"command": "dotnet test", "label": "Test", "type": "shell", "group": "test"}]},
+        "java": lambda: {
+            "version": "2.0.0",
+            "tasks": [{"command": "mvn clean compile", "label": "Build", "type": "shell", "group": "build"}],
+        },
+        "csharp": lambda: {
+            "version": "2.0.0",
+            "tasks": [
+                {"command": "dotnet build", "label": "Build", "type": "shell", "group": "build"},
+                {"command": "dotnet test", "label": "Test", "type": "shell", "group": "test"},
+            ],
+        },
         "generic": lambda: {"version": "2.0.0", "tasks": []},
     }
     if stack in tasks_map:
@@ -772,7 +1061,7 @@ def gen_root_configs():
     root_settings["terminal.integrated.profiles.windows"] = {
         "Command Prompt": {"icon": "terminal-cmd", "path": "cmd.exe"},
         "Git Bash": {"icon": "terminal-bash", "source": "Git Bash"},
-        "PowerShell": {"icon": "terminal-powershell", "source": "PowerShell"}
+        "PowerShell": {"icon": "terminal-powershell", "source": "PowerShell"},
     }
     root_settings["workbench.editor.editorActionsLocation"] = "default"
     # Add shellscript formatting
@@ -780,61 +1069,107 @@ def gen_root_configs():
     write_json(os.path.join(vscode, "settings.json"), root_settings)
 
     # launch.json — multi-root, covers Bash scripts + Django + Next.js
-    write_json(os.path.join(vscode, "launch.json"), {
-        "version": "0.2.0",
-        "configurations": [
-            {"name": "Bun: Current File", "type": "node", "request": "launch", "runtimeExecutable": "bun", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "Bun: Run All Tests", "type": "node", "request": "launch", "runtimeExecutable": "bun", "runtimeArgs": ["test"], "console": "integratedTerminal"},
-            {"name": "Python: Current File", "type": "debugpy", "request": "launch", "program": "${file}", "console": "integratedTerminal"},
-            {"name": "Node.js: Current File", "type": "node", "request": "launch", "program": "${file}", "console": "integratedTerminal"}
-        ]
-    })
+    write_json(
+        os.path.join(vscode, "launch.json"),
+        {
+            "version": "0.2.0",
+            "configurations": [
+                {
+                    "name": "Bun: Current File",
+                    "type": "node",
+                    "request": "launch",
+                    "runtimeExecutable": "bun",
+                    "program": "${file}",
+                    "console": "integratedTerminal",
+                },
+                {
+                    "name": "Bun: Run All Tests",
+                    "type": "node",
+                    "request": "launch",
+                    "runtimeExecutable": "bun",
+                    "runtimeArgs": ["test"],
+                    "console": "integratedTerminal",
+                },
+                {
+                    "name": "Python: Current File",
+                    "type": "debugpy",
+                    "request": "launch",
+                    "program": "${file}",
+                    "console": "integratedTerminal",
+                },
+                {
+                    "name": "Node.js: Current File",
+                    "type": "node",
+                    "request": "launch",
+                    "program": "${file}",
+                    "console": "integratedTerminal",
+                },
+            ],
+        },
+    )
 
     # tasks.json
-    write_json(os.path.join(vscode, "tasks.json"), {
-        "version": "2.0.0",
-        "tasks": [
-            {"command": "python3 -m pytest", "label": "Python: Test All", "type": "shell", "group": "test", "presentation": {"reveal": "always", "panel": "shared"}},
-            {"command": "ruff check .", "label": "Python: Lint", "type": "shell", "group": "build", "presentation": {"reveal": "always", "panel": "shared"}}
-        ]
-    })
+    write_json(
+        os.path.join(vscode, "tasks.json"),
+        {
+            "version": "2.0.0",
+            "tasks": [
+                {
+                    "command": "python3 -m pytest",
+                    "label": "Python: Test All",
+                    "type": "shell",
+                    "group": "test",
+                    "presentation": {"reveal": "always", "panel": "shared"},
+                },
+                {
+                    "command": "ruff check .",
+                    "label": "Python: Lint",
+                    "type": "shell",
+                    "group": "build",
+                    "presentation": {"reveal": "always", "panel": "shared"},
+                },
+            ],
+        },
+    )
 
     # extensions.json — comprehensive multi-stack
-    write_json(os.path.join(vscode, "extensions.json"), {
-        "recommendations": [
-            "esbenp.prettier-vscode",
-            "ms-python.python",
-            "ms-python.vscode-pylance",
-            "batisteo.vscode-django",
-            "bradlc.vscode-tailwindcss",
-            "dbaeumer.vscode-eslint",
-            "oven.bun-vscode",
-            "foxundermoon.shell-format",
-            "usernamehw.errorlens",
-            "charliermarsh.ruff",
-            "davidanson.vscode-markdownlint"
-        ],
-        "unwantedRecommendations": [
-            "ms-vscode.vscode-typescript-tslint-plugin",
-            "hookyqr.beautify"
-        ]
-    })
+    write_json(
+        os.path.join(vscode, "extensions.json"),
+        {
+            "recommendations": [
+                "esbenp.prettier-vscode",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "batisteo.vscode-django",
+                "bradlc.vscode-tailwindcss",
+                "dbaeumer.vscode-eslint",
+                "oven.bun-vscode",
+                "foxundermoon.shell-format",
+                "usernamehw.errorlens",
+                "charliermarsh.ruff",
+                "davidanson.vscode-markdownlint",
+            ],
+            "unwantedRecommendations": ["ms-vscode.vscode-typescript-tslint-plugin", "hookyqr.beautify"],
+        },
+    )
 
     # mcp.json — root workspace only
-    write_json(os.path.join(vscode, "mcp.json"), {
-        "inputs": [
-            {"type": "promptString", "id": "workspaceFolder", "description": "Workspace root path"}
-        ],
-        "servers": {
-            "filesystem": {
-                "command": "npx",
-                "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
-            }
-        }
-    })
+    write_json(
+        os.path.join(vscode, "mcp.json"),
+        {
+            "inputs": [{"type": "promptString", "id": "workspaceFolder", "description": "Workspace root path"}],
+            "servers": {
+                "filesystem": {
+                    "command": "npx",
+                    "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"],
+                }
+            },
+        },
+    )
 
 
 # ─── Execution ───────────────────────────────────────────────────────────────
+
 
 async def main():
     print("=" * 60)

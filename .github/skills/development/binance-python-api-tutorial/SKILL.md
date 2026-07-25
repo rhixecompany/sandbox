@@ -55,6 +55,7 @@ client = Client(api_key, api_secret)
 ### Phase 2: Core REST Operations
 
 **Account & Market Data**
+
 ```python
 # Account info (requires signature)
 account = client.get_account()
@@ -67,6 +68,7 @@ depth = client.get_order_book(symbol="BTCUSDT", limit=100)
 ```
 
 **Trading Operations**
+
 ```python
 # Place LIMIT order
 order = client.create_order(

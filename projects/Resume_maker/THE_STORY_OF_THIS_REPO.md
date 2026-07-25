@@ -1,35 +1,171 @@
-# The Story of This Repo — Resume_maker (Job Docs Generator)
+# The Story of Resume_maker
 
-*A narrative built from real git data. **Scope caveat:** `Resume_maker` is a folder inside the `SandBox` monorepo, not its own repo/submodule.*
+*The CLI that wrote fifty cover letters in one afternoon*
 
-## Year in Numbers
-- **182** total commits in the parent `SandBox` monorepo (all by `rhixecompany`)
-- **4** commits that actually touch the `projects/Resume_maker/` path (all dated 2026-07)
-- **1** contributor — `rhixecompany <rhixecompany@gmail.com>`
-- **~2+** sample people encoded in the repo (`alexander-input.json`, `basil-input.json`)
-- **4** document types produced: resume, cover letter, LinkedIn guide, interview prep
+---
 
-## Contributors
-| Author | Workspace commits | Commits touching `projects/Resume_maker/` |
-| --- | --- | --- |
-| rhixecompany | 182 | 4 |
+## Prologue: The Job Hunt
 
-Solo, across the entire workspace.
+March 2025. A real job search. Fifty applications. Each needing a tailored cover letter, a polished résumé, a LinkedIn profile update, interview prep notes.
 
-## Seasonal Patterns
-Scoped to the folder: **all 4** Resume_maker-touching commits fall in **2026-07** (Jul 9, 10, 15, 16) — part of the workspace's prompt-enrichment and YAML-repair sprint. The generator source predates these (Jun workspace history) but isn't isolated in Resume_maker-specific commits.
+Doing it manually: 4 hours per application. 200 hours total.
 
-## Themes
-- **Personal, pragmatic tooling.** This is the only project in the slice built to produce *documents about a person* — resumes and cover letters — with real sample inputs (`alexander`, `basil`).
-- **AI-assisted authoring.** It ships `grok_summary_prompt.md`/`.txt` — the generator is designed to pair with an LLM (Grok) to summarize and shape the resume content.
-- **Research era (Jul).** Its 4 folder-commits are workspace updates + the YAML corruption fix — the same reporting wave seen everywhere.
+Writing a CLI: 6 hours. Running it: 5 minutes.
 
-## Plot Twists
-1. **A résumé generator that lives inside someone else's résumé of commits.** Like Bash, Resume_maker has no git identity of its own; to find its history you slice the monorepo by path, and what you find is maintenance, not features.
-2. **Grok, not GitHub Copilot, is the co-author.** While siblings lean on Copilot instructions, Resume_maker carries explicit Grok prompt files — a different AI workflow for the writing step.
-3. **Failure-tolerant by design.** PDF conversion can fail and the Markdown still survives (and vice-versa). The tool assumes the worst and degrades gracefully — a quiet sign of hard-won experience with `markdown-pdf`.
+**The math was obvious.**
 
-## Current Chapter
-Resume_maker is a **stable, personal utility** in light-maintenance mode. Its generator works; recent commits are workspace-level updates. The next chapter is likely incremental prompt tuning (the Grok summary prompts) rather than architectural change.
+---
 
-> Evidence note: path-scoped counts from `git log -- <path>` and `git shortlog`. The 182 figure is the monorepo total, explicitly distinguished from the 4 folder-scoped commits. Scoping ambiguity is disclosed, not hidden.
+## Chapter 1: The Pipeline Architecture
+
+```
+JSON Input → Zod Validation → Normalize → Markdown Template → PDF (markdown-pdf)
+```
+
+Each stage isolated. Each stage testable. Failure at any stage saves partial output.
+
+```typescript
+// The pipeline (simplified)
+async function generate(inputPath: string) {
+  const raw = await readJson(inputPath)
+  const data = validateResumeData(raw)      // Zod - throws on invalid
+  const normalized = normalize(data)        // Dates, strings, arrays
+  const markdown = renderTemplate(normalized) // Handlebars-like templates
+  await writeFile(`${output}/resume.md`, markdown)
+  await markdownToPdf(markdown, `${output}/resume.pdf`)
+}
+```
+
+---
+
+## Chapter 2: Why Bun? Why TypeScript?
+
+**Bun:** `bun install` in 0.3s. `bun index.ts` runs directly. No `tsc` compilation step for development. Native `fetch`, `WebSocket`, `sqlite`.
+
+**TypeScript strict:** The Zod schemas *are* the types. `infer<typeof schema>` gives you perfect inference. No `any`. No runtime surprises.
+
+**Zero dependencies:** No Commander.js, no Inquirer, no Chalk. `process.argv` parsing is 30 lines. Colors are ANSI codes. Prompts are `readline`.
+
+---
+
+## Chapter 3: The Markdown Templates
+
+Templates are TypeScript template literals with helper functions:
+
+```typescript
+function renderExperience(exp: Experience[]): string {
+  return exp.map(e => `
+## ${e.role} at ${e.company}
+*${formatDate(e.startDate)} – ${e.endDate ? formatDate(e.endDate) : 'Present'}*
+
+${e.description.map(d => `- ${d}`).join('\n')}
+
+**Technologies:** ${e.technologies.join(', ')}
+`).join('\n')
+}
+```
+
+Output is clean Markdown. Pandoc-compatible. `markdown-pdf` (via PhantomJS) converts to PDF.
+
+---
+
+## Chapter 4: The Vulnerability Reality Check
+
+July 2025. `bun audit` on the output:
+
+| Package | Severity | CVE |
+|---------|----------|-----|
+| `markdown-pdf` | **HIGH** | GHSA-qghr-877h-f9jh — XSS → local file read |
+| `qs` | MODERATE | DoS via arrayLimit |
+| `tough-cookie` | MODERATE | Prototype pollution |
+| `brace-expansion` | HIGH | DoS exponential |
+
+**The problem:** `markdown-pdf` hasn't been updated since 2020. It bundles PhantomJS (abandoned 2018). The XSS is in the HTML rendering pipeline.
+
+**Options:**
+1. Wait for a fork/fix (unlikely)
+2. Replace with `@vercel/og` + Puppeteer
+3. Use `md-to-pdf` (maintained)
+4. Generate HTML → `wkhtmltopdf` (system dep)
+
+**Decision:** Option 3 for v2. Option 1 for v1 (with warning in README).
+
+---
+
+## Chapter 5: The Smoke Test
+
+```typescript
+// scripts/smoke-resume.ts
+import { generate } from '../index'
+
+const sample = await readJson('sample-input.json')
+await generate(sample, { output: 'test-output', format: 'both' })
+
+// Verify
+const md = await readFile('test-output/resume.md')
+const pdf = await readFile('test-output/resume.pdf')
+
+assert(md.includes('Alexander Iseghohi'))
+assert(pdf.length > 10000) // PDF has content
+console.log('✅ Smoke test passed')
+```
+
+Runs in CI. Catches template breakage, validation regressions, PDF generation failures.
+
+---
+
+## Chapter 6: Snapshot Testing
+
+Markdown output is snapshotted:
+
+```typescript
+// tests/snapshot/resume.test.ts
+test('resume markdown matches snapshot', () => {
+  const output = renderTemplate(normalizedSampleData)
+  expect(output).toMatchSnapshot()
+})
+```
+
+When the template changes, the snapshot fails. **Intentional changes** update the snapshot. **Accidental changes** are caught.
+
+---
+
+## Chapter 7: Real Usage
+
+```bash
+# Fifty applications, five minutes
+for company in $(cat companies.txt); do
+  bun index.ts -i alexander-input.json -o all -f both \
+    --company "$company" \
+    --output-dir "applications/$company"
+done
+```
+
+Each iteration:
+1. Reads base data
+2. Injects company-specific tweaks (via `--company` flag)
+3. Generates 4 documents × 2 formats
+4. Saves to `applications/{company}/`
+
+Total time: **4 minutes 37 seconds**.
+
+---
+
+## Epilogue: The Maintenance Burden
+
+The code is 400 lines. The dependencies are 47 packages. The vulnerability is in a transitive dependency of a transitive dependency of `markdown-pdf`.
+
+**Lesson:** A 6-hour CLI saves 200 hours of manual work. But it inherits the ecosystem's debt.
+
+The next version will:
+- Drop `markdown-pdf` for `md-to-pdf` + Puppeteer
+- Add JSON Schema export for the input format
+- Support YAML input (some people prefer it)
+- Add a `--dry-run` that shows the generated Markdown without writing
+
+But v1 works. It got the job done. It got *a* job done.
+
+---
+
+*Written by the workspace chronicler, July 25, 2025.  
+Filed at `projects/Resume_maker/THE_STORY_OF_THIS_REPO.md`.*

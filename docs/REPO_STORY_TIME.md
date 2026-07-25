@@ -9,7 +9,7 @@ Git history narratives for the 14 workspace projects. All repos are single-autho
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `b4e0b04` | chore: initial local project setup for Banking |
 | `f38c26c` | update docs, vscode configs, and research reports |
 | `35c980d` | chore: vscode config audit and workspace updates |
@@ -24,7 +24,7 @@ Bootstrapped as a Next.js 16 fintech sandbox (Plaid + Dwolla). The initial setup
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | _initial_ | setup |
 | `c75056a` | update vscode configs and research reports |
 | `e2abfe8` | fix: resolve merge conflict markers in codebase |
@@ -41,7 +41,7 @@ The most active project (6 commits). Notable: a merge conflict fix (`e2abfe8`) s
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `95c5d18` | chore: initial local project setup for cookiecutter-django-tailwind |
 | `b4a0d2c` | update vscode configs and research reports |
 | `b08e0fb` | chore: vscode config audit and workspace updates |
@@ -56,7 +56,7 @@ Django 5.x + Tailwind starter template. Standard 4-commit lifecycle: setup → w
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `50eadb6` | chore: initial local project setup for Django-Scrapy-Selenium |
 | `1fc4e1e` | update docs, vscode configs, and research reports |
 | `6825bb0` | chore: vscode config audit and workspace updates |
@@ -71,7 +71,7 @@ Django 4.x scraping hub. Standard 4-commit pattern with CI config present.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `d330f24` | chore: initial local project setup for ecom |
 | `905d07e` | update docs, vscode configs, and research reports |
 | `900dd26` | chore: vscode config audit and workspace updates |
@@ -86,7 +86,7 @@ DRF + React ecommerce. Standard pattern.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `4ae124d` | chore: initial local project setup for profile |
 | `c5f8f53` | update vscode configs and research reports |
 | `725fb8e` | chore: vscode config audit and workspace updates |
@@ -101,7 +101,7 @@ Django blog/CMS. No CI workflow — gap noted in repo management.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `0433dab` | chore: initial local project setup for Python-projects |
 | `7499537` | update vscode configs and research reports |
 | `5807758` | chore: vscode config audit and workspace updates |
@@ -116,7 +116,7 @@ Script collection. No CI — gap noted.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `71568c2` | chore: initial local project setup for rhixe_scans |
 | `7d2ad85` | update docs, vscode configs, and research reports |
 | `7b816bb` | chore: vscode config audit and workspace updates |
@@ -131,7 +131,7 @@ Next.js comic reader. Has CI.
 **Timeline:** 2026-06-19 → 2026-07-10 (latest start)
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `2b74dcc` | updates |
 | `14c7457` | update docs, vscode configs, and research reports |
 | `325e663` | chore: sync workspace artifacts for rhixecompany-comics |
@@ -147,7 +147,7 @@ The newest project (started June 19). Dual-stack comics platform with Django + N
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `23f95c5` | chore: initial local project setup for selenium_webdriver |
 | `2cb83a5` | update docs, vscode configs, and research reports |
 | `7ec1bd0` | chore: vscode config audit and workspace updates |
@@ -162,7 +162,7 @@ Node.js Selenium utility. Has CI.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `770ece9` | chore: initial local project setup for university-libary-jsm |
 | `f91187d` | update vscode configs and research reports |
 | `c2bf3cf` | chore: vscode config audit and workspace updates |
@@ -177,7 +177,7 @@ Next.js library management. No CI — gap.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `6031d8f` | chore: initial local project setup for xamehi.tv |
 | `5c04890` | update docs, vscode configs, and research reports |
 | `4cc99ae` | chore: vscode config audit and workspace updates |
@@ -192,7 +192,7 @@ DRF + React streaming platform. Has CI.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `ef7c89f` | chore: initial local project setup for xamehi |
 | `0b775f6` | update vscode configs and research reports |
 | `a751bdf` | chore: vscode config audit and workspace updates |
@@ -207,7 +207,7 @@ Legacy dual-backend (Django + Express). No CI — gap.
 **Timeline:** 2026-06-12 → 2026-07-10
 
 | Commit | Message |
-|--------|---------|
+| -------- | --------- |
 | `09f48cd` | chore: initial local project setup for youtube-downloader |
 | `04df534` | update vscode configs and research reports |
 | `62f7306` | chore: vscode config audit and workspace updates |
@@ -220,7 +220,7 @@ Python CLI tool. No CI — gap.
 ## Summary
 
 | Metric | Value |
-|--------|-------|
+| -------- | ------- |
 | Total repos | 14 |
 | Commits across workspace | 59 total |
 | Single author | rhixecompany (14/14 repos) |

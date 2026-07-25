@@ -1,0 +1,25 @@
+{
+  "source": "official",
+  "source_url": "official/blockchain\\hyperliquid",
+  "bundle_hash": "sha256:584b7dd200d43a5cd19418308b0d42190a0e0e8b14cfd2bea955ab1d35993e84",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "caution",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\hyperliquid_client.py",
+      "line": 87,
+      "match": "value = os.environ.get(key, \"\").strip()",
+      "description": "accesses os.environ (potential env dump)"
+    }
+  ],
+  "rules": [
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:34:05.048394+00:00",
+  "summary": "hyperliquid: caution \u2014 1 finding(s) in exfiltration",
+  "fresh": true
+}

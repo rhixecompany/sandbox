@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Review pending skills in the hermes pending queue."""
+
 import asyncio
-import json, os, glob, re
+import glob
+import json
+import os
 from collections import Counter, defaultdict
 
 HERMES_HOME = os.environ.get("LOCALAPPDATA", os.path.expanduser("~/AppData/Local")) + "/hermes"
@@ -53,7 +56,7 @@ async def main():
         name = p.get("name", "?")
         cat = p.get("category", "")
         action_counter[act] += 1
-        cand, exists, found = resolve_name(name, cat)
+        cand, exists, _found = resolve_name(name, cat)
         rows.append((data["id"], act, name, cat, cand, exists))
         target_multi[name].append(data["id"])
         if act == "delete":
@@ -66,7 +69,7 @@ async def main():
         if act == "batch":
             for op in p.get("operations", []):
                 if op.get("action") == "replace" and op.get("content", "") == "":
-                    garbage.append((data["id"], name, f"batch replace empty: {op.get('old_text','')[:30]}"))
+                    garbage.append((data["id"], name, f"batch replace empty: {op.get('old_text', '')[:30]}"))
 
     print("=== ACTION HISTOGRAM ===")
     for k, v in action_counter.most_common():
@@ -80,7 +83,7 @@ async def main():
     for tid, name, cand, exists in edit_targets:
         print(f"  {tid} | {name} | exists={exists}")
 
-    print(f"\n=== DUPLICATE-PATCHED TARGETS (patched >1x) ===")
+    print("\n=== DUPLICATE-PATCHED TARGETS (patched >1x) ===")
     for name, ids in target_multi.items():
         if len(ids) > 1:
             acts = [r[1] for r in rows if r[2] == name]
@@ -90,8 +93,8 @@ async def main():
     for tid, name, note in garbage:
         print(f"  {tid} | {name} | {note}")
 
-    print(f"\n=== TARGETS NOT FOUND ON DISK (would create/relocate) ===")
-    missing = [(r[0], r[2], r[3]) for r in rows if not r[5] and r[1] in ("patch","edit","write_file","delete")]
+    print("\n=== TARGETS NOT FOUND ON DISK (would create/relocate) ===")
+    missing = [(r[0], r[2], r[3]) for r in rows if not r[5] and r[1] in ("patch", "edit", "write_file", "delete")]
     for tid, name, cand in missing:
         print(f"  {tid} | {name} | {cand}")
     print(f"\nTotal skills pending: {len(rows)}")

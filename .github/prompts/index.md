@@ -5,7 +5,7 @@ Canonical prompt library for this repository.
 ## Structure
 
 | Path | Contents |
-|------|----------|
+| ------ | ---------- |
 | `.github/prompts/agents/` | Copilot custom agent definitions |
 | `.github/prompts/instructions/` | Copilot instruction files |
 | `.github/prompts/skills/` | Repository-local skills |

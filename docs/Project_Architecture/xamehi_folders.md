@@ -84,7 +84,7 @@ xamehi/
 ## 2. Directory Purpose Overview
 
 | Directory / File | Purpose |
-|-----------------|---------|
+| ----------------- | --------- |
 | `public/` | Static assets served by React development server; includes PWA manifest, icons, HTML template |
 | `src/` | React application source code — components, styles, entry point |
 | `src/components/` | Presentational React components for the crypto dashboard |
@@ -201,7 +201,7 @@ graph TD
 ## 6. File Naming Conventions
 
 | Layer | Convention | Examples |
-|-------|-----------|---------|
+| ------- | ----------- | --------- |
 | **React** | PascalCase for components | `Converter.js`, `Newsfeed.js` |
 | **React** | camelCase for utilities | `reportWebVitals.js` |
 | **Django** | snake_case for Python files | `settings.py`, `urls.py` |
@@ -214,7 +214,7 @@ graph TD
 ## 7. What's Missing (Notable Gaps)
 
 | Missing Element | Impact |
-|----------------|--------|
+| ---------------- | -------- |
 | `requirements.txt` | Django Python dependencies not pinned |
 | `Dockerfile` / `docker-compose.yml` | No containerized development environment |
 | `tests/` directory | No test files for any layer |

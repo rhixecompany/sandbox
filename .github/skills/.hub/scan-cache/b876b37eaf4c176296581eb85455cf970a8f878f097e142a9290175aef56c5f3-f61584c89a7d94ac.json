@@ -1,0 +1,97 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\flash-attention",
+  "bundle_hash": "sha256:b876b37eaf4c176296581eb85455cf970a8f878f097e142a9290175aef56c5f3",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 36,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 69,
+      "match": "pip install --upgrade torch",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 157,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 253,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 302,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 308,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\transformers-integration.md",
+      "line": 28,
+      "match": "pip install transformers>=4.36",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\transformers-integration.md",
+      "line": 29,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\transformers-integration.md",
+      "line": 249,
+      "match": "pip install flash-attn --no-build-isolation",
+      "description": "pip install without version pinning"
+    }
+  ],
+  "rules": [
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-16T02:34:18.929457+00:00",
+  "summary": "flash-attention: safe \u2014 9 finding(s) in supply_chain",
+  "fresh": true
+}

@@ -1,6 +1,6 @@
 import asyncio
-import sys
 import datetime
+import sys
 
 
 async def main():

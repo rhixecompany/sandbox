@@ -27,7 +27,7 @@
 A **Node.js 18+** script-based web scraper using **Selenium WebDriver 4.34** to automate Chrome for JavaScript-heavy comic/manga site scraping. No build step, no deployment pipeline — direct execution via `node src/scrape.js`. ES Modules throughout with Prettier formatting.
 
 | Property | Value |
-|----------|-------|
+| ---------- | ------- |
 | **Stack Type** | Node.js (CLI Scraper) |
 | **Language** | JavaScript (ES2022+) |
 | **Module System** | ES Modules (`"type": "module"`) |
@@ -39,7 +39,7 @@ A **Node.js 18+** script-based web scraper using **Selenium WebDriver 4.34** to 
 ## Languages & Runtimes
 
 | Technology | Version | Usage | Scope |
-|------------|---------|-------|-------|
+| ------------ | --------- | ------- | ------- |
 | JavaScript (ES2022+) | — | All source files | `src/*.js` |
 | Node.js | ^18+ | JavaScript runtime | `package.json` engines |
 | npm | — | Package manager | `package-lock.json` |
@@ -59,7 +59,7 @@ A **Node.js 18+** script-based web scraper using **Selenium WebDriver 4.34** to 
 ### `selenium-webdriver` 4.34.0 Feature Set
 
 | Feature | Used? | Where |
-|---------|-------|-------|
+| --------- | ------- | ------- |
 | `Builder.forBrowser(chrome)` | ✅ | All scripts |
 | `Chrome.Options` | ✅ | `initializeDriver()` |
 | `WebDriverWait` / `until` | ✅ | `performGet`, pagination |
@@ -73,7 +73,7 @@ A **Node.js 18+** script-based web scraper using **Selenium WebDriver 4.34** to 
 ## Dev Dependencies
 
 | Dependency | Version | Purpose |
-|------------|---------|---------|
+| ------------ | --------- | --------- |
 | `prettier` | `^3.6.2` | Code formatting (2-space indent) |
 | `prettier-plugin-tailwindcss` | `^0.6.14` | Tailwind CSS class sorting (Prettier plugin) |
 | `pretty-quick` | `^4.2.2` | Run Prettier on changed files |
@@ -118,7 +118,7 @@ graph TD
 ```
 
 | Category | Tool | Version | Purpose |
-|----------|------|---------|---------|
+| ---------- | ------ | --------- | --------- |
 | **Runtime** | Node.js | ^18+ | Script execution environment |
 | **Package Manager** | npm | — | Dependency management |
 | **Package Manager (alt)** | Bun | 1.x | Faster installs (lockfile present) |
@@ -166,7 +166,7 @@ graph LR
 ## Licensing
 
 | Component | License | Notes |
-|-----------|---------|-------|
+| ----------- | --------- | ------- |
 | `selenium_webdriver` (project) | Not specified | Choose MIT / Apache-2.0 / Unlicense |
 | `selenium-webdriver` 4.x | Apache-2.0 | |
 | `assert` 2.1.0 | MIT | Browserify fork; not needed for Node.js 18+ |
@@ -178,7 +178,7 @@ graph LR
 ## Scripts Reference
 
 | Script | Command | Description |
-|--------|---------|-------------|
+| -------- | --------- | ------------- |
 | `test` | `node src/scrape.js` | Runs the main scraper |
 | `format` | `prettier --write './**/**/**/*.{js,mjs,cjs,...}'` | Format all source files |
 | `format:check` | `prettier --check './**/**/**/*.{js,mjs,cjs,...}'` | Check formatting without writing |
@@ -208,7 +208,7 @@ bun install        # Bun (alternative)
 ## Version Matrix
 
 | Component | Specified | Installed | Latest Available | Notes |
-|-----------|-----------|-----------|------------------|-------|
+| ----------- | ----------- | ----------- | ------------------ | ------- |
 | `selenium-webdriver` | `4.34.0` | 4.34.0 | ~4.34.x | Pinned exact version |
 | `assert` | `2.1.0` | 2.1.0 | 2.1.0 | Browserify polyfill; Node.js 18+ has native assert |
 | `prettier` | `^3.6.2` | Latest 3.x | 3.x | Compatible range |
@@ -221,7 +221,7 @@ bun install        # Bun (alternative)
 ### Short-term (recommended)
 
 | Change | Reason | Effort |
-|--------|--------|--------|
+| -------- | -------- | -------- |
 | Remove `assert` dependency | Native `node:assert` in Node.js 18+ | Low |
 | Add `eslint` config | Enforce code quality | Low |
 | Pin ChromeDriver version | Reproducible builds via Selenium Manager flags | Low |
@@ -229,7 +229,7 @@ bun install        # Bun (alternative)
 ### Medium-term
 
 | Change | Reason | Effort |
-|--------|--------|--------|
+| -------- | -------- | -------- |
 | Migrate to WebDriver BiDi | W3C standard, replaces CDP, cross-browser | Medium |
 | Add data persistence (SQLite) | Scalable storage over JSON files | Medium |
 | Upgrade to Selenium 5.x | Preview features (when stable) | Medium |

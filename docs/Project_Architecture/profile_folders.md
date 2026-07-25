@@ -108,7 +108,7 @@ profile/
 ## 2. Directory Purpose Summary
 
 | Directory | Purpose | Key Contents |
-|---|---|---|
+| --- | --- | --- |
 | `rhixecompany/` | Django project config | `settings.py`, `setting.py` (prod), `urls.py`, `wsgi.py`, `asgi.py` |
 | `base/` | Main application — all business logic | Models, views, forms, filters, signals, admin, templates |
 | `base/migrations/` | Database migration history | 15 auto-generated migration files |
@@ -127,7 +127,7 @@ profile/
 ## 3. Key File Roles
 
 | File | Role |
-|---|---|
+| --- | --- |
 | `manage.py` | Django CLI — runserver, migrate, makemigrations, collectstatic, test |
 | `rhixecompany/settings.py` | Dev config: SQLite DB, local storage, DEBUG=True, CKEditor config |
 | `rhixecompany/setting.py` | Prod config override: Cloud SQL PG, GCS storage, Secret Manager |
@@ -179,7 +179,7 @@ profile/
 ## 5. File Count by Category
 
 | Category | File Count | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Python source | ~15 | manage.py, settings, models, views, forms, etc. |
 | Migrations | 16 | 15 auto-generated + `__init__.py` |
 | HTML templates | 18 | 14 app templates + 4 project-level |

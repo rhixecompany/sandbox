@@ -1,0 +1,13 @@
+{
+  "source": "openai/skills/skills/.curated/notion-spec-to-implementation",
+  "source_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/notion-spec-to-implementation",
+  "bundle_hash": "sha256:c25e6a9f68ea636d443e2e2bd8955788d17cb8d5c5cc56d0ac08e731d7a89e5a",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "trusted",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-07-16T02:20:55.897773+00:00",
+  "summary": "notion-spec-to-implementation: clean scan, no threats detected",
+  "fresh": true
+}

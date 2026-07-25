@@ -312,5 +312,4 @@
 
 > **Execution:** Use the  skill to dispatch tasks via subagents with two-stage review (spec compliance → code quality).
 
-
 > Execution: Use the `subagent-driven-development` skill to dispatch tasks via subagents with two-stage review (spec compliance to code quality).

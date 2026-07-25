@@ -2,13 +2,19 @@
 """Verify duplicate-path skills: only delete flat-root copy if it is byte-identical
 to the canonical category-subdir copy. Safety-first: no deletion otherwise.
 Writes a JSON report of what was/wasn't removed."""
+
 from __future__ import annotations
+
 import asyncio
-import json, shutil, hashlib, os
+import hashlib
+import json
+import os
+import shutil
 from pathlib import Path
 
 HERMES_HOME = Path(os.environ.get("HOME", os.path.expanduser("~"))) / "AppData" / "Local" / "hermes"
 SANDBOX = Path(os.environ.get("HOME", os.path.expanduser("~"))) / "Desktop" / "SandBox"
+
 
 async def main():
     SKILLS = HERMES_HOME / "skills"
@@ -17,6 +23,7 @@ async def main():
     # Parse the dedupe-report.md table for (name, flat_path, canonical_path)
     report_text = await loop.run_in_executor(None, _read_text, SANDBOX / "docs/dedupe-report.md")
     import re
+
     rows = []
     for m in re.finditer(r"^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|", report_text, re.M):
         name = m.group(1).strip()
@@ -50,8 +57,7 @@ async def main():
         else:
             kept.append((name, "differs-from-canonical"))
 
-    out = {"removed": removed, "kept": kept,
-           "removed_count": len(removed), "kept_count": len(kept)}
+    out = {"removed": removed, "kept": kept, "removed_count": len(removed), "kept_count": len(kept)}
     await loop.run_in_executor(None, _write_json, SANDBOX / "judge_results/dedupe_action_report.json", out)
     print(f"Removed {len(removed)} identical flat duplicates; kept {len(kept)} (differ/missing).")
     for r in removed:
@@ -59,13 +65,16 @@ async def main():
     for k in kept:
         print("  KEPT   ", k[0], k[1])
 
+
 def _read_text(path):
     with open(path, encoding="utf-8") as f:
         return f.read()
 
+
 def _write_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

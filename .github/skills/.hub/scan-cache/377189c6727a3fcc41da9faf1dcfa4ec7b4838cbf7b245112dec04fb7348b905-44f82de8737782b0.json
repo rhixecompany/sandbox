@@ -1,0 +1,13 @@
+{
+  "source": "implementation-plan",
+  "source_url": "implementation-plan",
+  "bundle_hash": "sha256:377189c6727a3fcc41da9faf1dcfa4ec7b4838cbf7b245112dec04fb7348b905",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-07-16T02:17:24.309589+00:00",
+  "summary": "implementation-plan: clean scan, no threats detected",
+  "fresh": true
+}

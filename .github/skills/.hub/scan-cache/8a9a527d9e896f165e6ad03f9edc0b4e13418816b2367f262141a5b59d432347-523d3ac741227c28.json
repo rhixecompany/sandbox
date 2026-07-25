@@ -1,0 +1,63 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\pytorch-fsdp",
+  "bundle_hash": "sha256:8a9a527d9e896f165e6ad03f9edc0b4e13418816b2367f262141a5b59d432347",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "caution",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "oversized_file",
+      "severity": "medium",
+      "category": "structural",
+      "file": "references\\other.md",
+      "line": 0,
+      "match": "333KB",
+      "description": "file is 333KB (limit: 256KB)"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "SKILL.md",
+      "line": 38,
+      "match": "**Pattern 2:** Distributed communication package - torch.distributed# Created On: Jul 12, 2017 | Last Updated On: Sep...",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "hardcoded_ip_port",
+      "severity": "medium",
+      "category": "network",
+      "file": "SKILL.md",
+      "line": 38,
+      "match": "**Pattern 2:** Distributed communication package - torch.distributed# Created On: Jul 12, 2017 | Last Updated On: Sep...",
+      "description": "hardcoded IP address with port"
+    },
+    {
+      "pattern_id": "hardcoded_ip_port",
+      "severity": "medium",
+      "category": "network",
+      "file": "SKILL.md",
+      "line": 44,
+      "match": "**Pattern 3:** Initialization# The package needs to be initialized using the torch.distributed.init_process_group() o...",
+      "description": "hardcoded IP address with port"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "references\\other.md",
+      "line": 1724,
+      "match": "5. Another way to pass local_rank to the subprocesses via environment variable LOCAL_RANK. This behavior is enabled w...",
+      "description": "accesses os.environ (potential env dump)"
+    }
+  ],
+  "rules": [
+    "hardcoded_ip_port",
+    "oversized_file",
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:34:30.363688+00:00",
+  "summary": "pytorch-fsdp: caution \u2014 5 finding(s) in exfiltration, network, structural",
+  "fresh": true
+}

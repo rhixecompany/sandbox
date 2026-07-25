@@ -47,5 +47,6 @@ Consolidate the overlapping hooks planning fragments into one executable plan be
 - `hermes hooks list` and the relevant hook tests pass.
 - Conflicting docs/configs are updated and verified.
 - No unapproved secrets or backups were introduced.
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

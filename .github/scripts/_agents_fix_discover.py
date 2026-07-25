@@ -9,6 +9,7 @@ Parses the three ecosystems present in this repo:
 
 Produces structured JSON consumed by the report writer.
 """
+
 import asyncio
 import json
 import os
@@ -16,6 +17,7 @@ import re
 from collections import defaultdict
 
 ROOT = "C:/Users/Alexa/Desktop/SandBox"
+
 
 # ---- minimal YAML frontmatter parser (avoids third-party deps) -------------
 def parse_frontmatter(text):
@@ -53,28 +55,33 @@ def parse_frontmatter(text):
                 data[cur_key] = prev + " " + line.strip() if prev else line.strip()
     return data, body
 
+
 def _scalar(v):
     v = v.strip()
-    if v.startswith('[') and v.endswith(']'):
+    if v.startswith("[") and v.endswith("]"):
         inner = v[1:-1].strip()
         if not inner:
             return []
-        return [_scalar(x.strip().strip('"').strip("'")) for x in inner.split(',')]
+        return [_scalar(x.strip().strip('"').strip("'")) for x in inner.split(",")]
     if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
         return v[1:-1]
     return v
+
 
 async def read(path):
     loop = asyncio.get_running_loop()
     return await loop.run_in_executor(None, _read_sync, path)
 
+
 def _read_sync(path):
-    with open(path, "r", encoding="utf-8", errors="replace") as f:
+    with open(path, encoding="utf-8", errors="replace") as f:
         return f.read()
+
 
 def slug_from_file(path):
     base = os.path.basename(path)
     return re.sub(r"\.(agent|instructions|prompt)\.md$", "", base)
+
 
 async def main():
     # ---- discover Copilot agents -----------------------------------------------
@@ -88,18 +95,20 @@ async def main():
             p = os.path.join(agents_dir, fn)
             fm, body = parse_frontmatter(await read(p))
             slug = slug_from_file(fn)
-            copilot_agents.append({
-                "file": f".github/agents/{fn}",
-                "slug": slug,
-                "name": fm.get("name") or slug,
-                "name_in_fm": "name" in fm,
-                "description": (fm.get("description") or "")[:400],
-                "desc_in_fm": "description" in fm,
-                "tools": fm.get("tools") or [],
-                "model": fm.get("model") or "",
-                "body_chars": len(body),
-                "is_codex_twin": slug.endswith("-codex"),
-            })
+            copilot_agents.append(
+                {
+                    "file": f".github/agents/{fn}",
+                    "slug": slug,
+                    "name": fm.get("name") or slug,
+                    "name_in_fm": "name" in fm,
+                    "description": (fm.get("description") or "")[:400],
+                    "desc_in_fm": "description" in fm,
+                    "tools": fm.get("tools") or [],
+                    "model": fm.get("model") or "",
+                    "body_chars": len(body),
+                    "is_codex_twin": slug.endswith("-codex"),
+                }
+            )
 
     # ---- discover Copilot instructions ----------------------------------------
     copilot_instructions = []
@@ -110,13 +119,15 @@ async def main():
                 continue
             p = os.path.join(instr_dir, fn)
             fm, body = parse_frontmatter(await read(p))
-            copilot_instructions.append({
-                "file": f".github/instructions/{fn}",
-                "slug": slug_from_file(fn),
-                "name": fm.get("name") or slug_from_file(fn),
-                "description": (fm.get("description") or "")[:300],
-                "body_chars": len(body),
-            })
+            copilot_instructions.append(
+                {
+                    "file": f".github/instructions/{fn}",
+                    "slug": slug_from_file(fn),
+                    "name": fm.get("name") or slug_from_file(fn),
+                    "description": (fm.get("description") or "")[:300],
+                    "body_chars": len(body),
+                }
+            )
 
     # ---- discover Hermes agent-style prompts ----------------------------------
     hermes_prompts = []
@@ -128,19 +139,22 @@ async def main():
             p = os.path.join(prompts_dir, fn)
             fm, body = parse_frontmatter(await read(p))
             slug = slug_from_file(fn)
-            hermes_prompts.append({
-                "file": f"prompts/{fn}",
-                "slug": slug,
-                "name": fm.get("name") or slug,
-                "title": fm.get("title") or "",
-                "description": (fm.get("description") or "")[:400],
-                "tags": fm.get("tags") or [],
-                "body_chars": len(body),
-            })
+            hermes_prompts.append(
+                {
+                    "file": f"prompts/{fn}",
+                    "slug": slug,
+                    "name": fm.get("name") or slug,
+                    "title": fm.get("title") or "",
+                    "description": (fm.get("description") or "")[:400],
+                    "tags": fm.get("tags") or [],
+                    "body_chars": len(body),
+                }
+            )
 
     # ---- cross-reference / mapping --------------------------------------------
     # Codex twins: copilot agent slug == "<base>-codex" and a base twin exists
     codex_twins = [a for a in copilot_agents if a["is_codex_twin"]]
+
     def base_of(s):
         return re.sub(r"-codex$", "", s)
 
@@ -156,8 +170,11 @@ async def main():
         hp = hermes_by_slug.get(slug)
         # codex twin?
         codex_slug = slug + "-codex" if ca and not slug.endswith("-codex") else None
-        codex = copilot_by_slug.get(codex_slug) if codex_slug else (
-            copilot_by_slug.get(slug) if ca and ca["is_codex_twin"] else None)
+        codex = (
+            copilot_by_slug.get(codex_slug)
+            if codex_slug
+            else (copilot_by_slug.get(slug) if ca and ca["is_codex_twin"] else None)
+        )
         row = {
             "concept": slug,
             "copilot_agent": ca["file"] if ca else "",
@@ -177,12 +194,14 @@ async def main():
     for a in codex_twins:
         base = base_of(a["slug"])
         if base in copilot_by_slug:
-            dup_codex_twins.append({
-                "base": base,
-                "copilot": copilot_by_slug[base]["file"],
-                "codex": a["file"],
-                "same_name": copilot_by_slug[base]["name"] == a["name"],
-            })
+            dup_codex_twins.append(
+                {
+                    "base": base,
+                    "copilot": copilot_by_slug[base]["file"],
+                    "codex": a["file"],
+                    "same_name": copilot_by_slug[base]["name"] == a["name"],
+                }
+            )
 
     # 2) identical name fields across distict copilot agent files
     by_name = defaultdict(list)
@@ -254,9 +273,11 @@ async def main():
     for s in schema_issues[:10]:
         print(f"  {s}")
 
+
 def _write_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

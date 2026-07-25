@@ -45,7 +45,7 @@ def prime_factors(n: int) -> list[int]:
         return []
 
     smallest: int = _smallest_factor(n)
-    return [smallest] + prime_factors(n // smallest)
+    return [smallest, *prime_factors(n // smallest)]
 
 
 def _smallest_factor(n: int) -> int:

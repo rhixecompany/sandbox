@@ -41,7 +41,7 @@ rhixe_scans is a **dual-backend comic reading platform** combining a **Django RE
 ### 2.1 Dual-Application Pattern
 
 | Layer | Technology | Role |
-|---|---|---|
+| --- | --- | --- |
 | **Frontend SPA** | Next.js 15 App Router | Comic reader, user dashboard, admin panel |
 | **Backend API** | Django 5 + DRF | Content management, crawler orchestration, REST API |
 | **Database** | PostgreSQL | Primary data store (both apps share the same DB) |
@@ -138,7 +138,7 @@ User ──▶ Next.js (NextAuth v5)
 **Docker Services (from `docker-compose.local.yml`):**
 
 | Service | Container | Port | Purpose |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `django` | `rhixe/api:django` | 8000 | Django Gunicorn server |
 | `postgres` | `rhixe/api:postgres` | 5432 | Database |
 | `redis` | `rhixe/api:redis` | 6379 | Cache & broker |
@@ -291,16 +291,21 @@ backend/
 ## 9. Key Architectural Patterns
 
 ### 9.1 Server Actions (Next.js)
+
 Data mutations use Next.js Server Actions (in `src/lib/actions/`), running Prisma queries server-side without exposing an additional API layer for frontend mutations.
 
 ### 9.2 REST API (Django DRF)
+
 External integrations (crawler, third-party tools) and the Next.js frontend communicate with the Django backend via REST endpoints under `/api/`, secured with JWT (SimpleJWT) and session auth.
 
 ### 9.3 Celery Task Pipeline
+
 Crawling and image downloading are offloaded to Celery workers, with Redis as the broker. Flower provides monitoring. The pipeline: discover comics → queue chapter crawl → download images → update database.
 
 ### 9.4 Dual Payment Providers
+
 Stripe (primary, client-side via `@stripe/react-stripe-js`) and PayPal (secondary via `@paypal/react-paypal-js`) are both integrated on the frontend, with server-side verification through each provider's SDK.
 
 ### 9.5 Real-Time Updates
+
 WebSocket connections (via the `ws` library) push chapter release notifications and live updates to connected clients, relayed through Redis for cross-process communication.

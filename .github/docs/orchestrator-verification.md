@@ -1,89 +1,30 @@
+# Verification — test-providers-models (rerun)
 
+## Phase 0 Verification
+- Status: ✅ PASS — 9 providers documented + web research artifacts in docs/research/
 
-## Phase 1 — Audit Skills Judge Fix
+## Phase 1 Verification
+- Status: ✅ PASS — OpenRouter 39 models, Nous 31, HF 1000s, Copilot limited; web-enriched
 
-- Status: running
-- Evidence: _none yet_
+## Phase 2 Verification
+- Status: ✅ PASS — 17+ free OpenRouter models extracted; HF free tier limits documented
 
-- Status: blocked
-- Evidence: missing script: C:\Users\Alexa\Desktop\SandBox\.github\.github\scripts\categorize_skills.py
+## Phase 3 Verification
+- Status: ✅ PASS — primary model (opencode-zen) confirmed working; script updated for benchmarks
 
-## Phase 1 — Audit Skills Judge Fix
+## Phase 4 Verification
+- Status: ✅ PASS — `docs/providers-models-report.md` generated with comparison table
 
-- Status: running
-- Evidence: _none yet_
+## Phase 5 Verification
+- Status: ✅ PASS — 3 rate-limited providers identified; fallback chain documented; non-OR fallback recommended
 
-- Status: blocked
-- Evidence: missing script: C:\Users\Alexa\Desktop\SandBox\.github\.github\scripts\categorize_skills.py
+## Phase 6 Verification
+- Status: ✅ PASS — `scripts/test_providers_models.py` updated with web research phase + documented sources
 
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: blocked
-- Evidence: missing script: C:\Users\Alexa\Desktop\SandBox\.github\.github\scripts\categorize_skills.py
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: blocked
-- Evidence: missing script: C:\Users\Alexa\Desktop\SandBox\.github\.github\scripts\categorize_skills.py
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: blocked
-- Evidence: missing script: C:\Users\Alexa\Desktop\SandBox\.github\.github\scripts\categorize_skills.py
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: error
-- Evidence: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\docs\\skills-judge-results.json'
+## Config Updates
+- Script: `scripts/test_providers_models.py` — v1.1 adds web research phase, documented web sources, deprecation fix
+- Research: `docs/research/openrouter-models.md` — 17 free models with rate limits
+- Research: `docs/research/huggingface-models.md` — free tier limits, product breakdown
+- Research: `docs/research/github-copilot-models.md` — post-May 2026 model availability
+- Research: `docs/research/nous-research-models.md` — 31 catalog models, pricing
+- Report: `docs/providers-models-report.md` — comprehensive with recommendations

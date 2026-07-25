@@ -1,0 +1,44 @@
+{
+  "source": "official",
+  "source_url": "official/productivity\\shop",
+  "bundle_hash": "sha256:629f60bf9ec1d589f24c2698fd21a59874d0c7d9e3a23102564ee38a15d85259",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_npm_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 24,
+      "match": "pnpm add --global @shopify/shop-cli   # or: npm install --global @shopify/shop-cli",
+      "description": "npm install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_npm_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 28,
+      "match": "To upgrade: `pnpm add --global @shopify/shop-cli@latest` (or `npm install --global @shopify/shop-cli@latest`). Uninst...",
+      "description": "npm install without version pinning"
+    },
+    {
+      "pattern_id": "hermes_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "references\\direct-api.md",
+      "line": 26,
+      "match": "device_name=<your name> - <device>   # e.g. Max - Mac Mini; name from IDENTITY.md (OpenClaw) / ~/.hermes/SOUL.md (Her...",
+      "description": "references Hermes configuration files directly"
+    }
+  ],
+  "rules": [
+    "hermes_config_mod",
+    "unpinned_npm_install"
+  ],
+  "scanned_at": "2026-07-16T02:35:45.235192+00:00",
+  "summary": "shop: dangerous \u2014 3 finding(s) in persistence, supply_chain",
+  "fresh": true
+}

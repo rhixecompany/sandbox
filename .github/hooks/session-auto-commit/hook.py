@@ -59,7 +59,7 @@ async def _memory_upsert_auto_commit(session_id: str, payload: dict) -> None:
                 {
                     "entityName": session_id,
                     "contents": [
-                        f"session_event=auto_commit",
+                        "session_event=auto_commit",
                         f"profile={payload.get('profile', 'default')}",
                         f"working_dir={payload.get('working_dir', '')}",
                         f"status={payload.get('status', 'unknown')}",

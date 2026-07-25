@@ -1,0 +1,13 @@
+{
+  "source": "official",
+  "source_url": "official/web-development\\cloudflare-temporary-deploy",
+  "bundle_hash": "sha256:3215a951a4bc12c272bdab0115a10a7987f30aac52430198658f214c5e2372a0",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-07-16T02:35:18.771164+00:00",
+  "summary": "cloudflare-temporary-deploy: clean scan, no threats detected",
+  "fresh": true
+}

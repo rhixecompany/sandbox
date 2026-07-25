@@ -54,9 +54,7 @@ def main() -> int:
         if data is None:
             report["summary"]["parse_fail"] += 1
             report["failed_files"].append(rel)
-            report["sample_failures"].append(
-                {"file": rel, "raw_head": raw.splitlines()[:8] if raw else []}
-            )
+            report["sample_failures"].append({"file": rel, "raw_head": raw.splitlines()[:8] if raw else []})
         else:
             report["summary"]["parse_pass"] += 1
 

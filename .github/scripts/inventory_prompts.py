@@ -1,7 +1,8 @@
 """Fast inventory of prompt files for prompt-management Phase 1."""
-from __future__ import annotations
-import asyncio
 
+from __future__ import annotations
+
+import asyncio
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -19,9 +20,9 @@ async def main() -> int:
     lines = [
         "# Prompt Inventory",
         "",
-        f"- Prompts directory: `prompts/`",
+        "- Prompts directory: `prompts/`",
         f"- Prompt count: {len(rows)}",
-        f"- Last updated: (auto-generated)",
+        "- Last updated: (auto-generated)",
         "",
         "| Path | Name | Title | Version | Tags |",
         "| --- | --- | --- | --- | --- |",

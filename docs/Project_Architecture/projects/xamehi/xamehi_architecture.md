@@ -289,7 +289,7 @@ graph TD
 ## 6. Architectural Observations & Recommendations
 
 | Area | Current State | Recommendation |
-|------|--------------|----------------|
+| ------ | -------------- | ---------------- |
 | **Dual Backend** | Django + Express with no clear separation of concerns | Consolidate to single backend (either Django DRF or Express); remove the other |
 | **Port Conflict** | Express and Django both default to port 8000 | Change Express to port 5000 (per docs intent) or use environment-based port config |
 | **Django Usage** | Admin-only, no custom apps, no DRF endpoints | Either flesh out Django with DRF APIs, or remove it entirely |
@@ -305,16 +305,19 @@ graph TD
 ## 7. Architecture Decision Records
 
 ### ADR-001: Dual-Backend Pattern
+
 - **Context:** Application originally built with both Django and Express
 - **Decision:** Retain both for now; Express handles external API proxying, Django provides admin
 - **Consequence:** Two separate deployment pipelines, port management needed
 
 ### ADR-002: Express as API Gateway
+
 - **Context:** Frontend needs CORS-safe access to third-party APIs
 - **Decision:** Express acts as a BFF (Backend For Frontend), proxying RapidAPI calls
 - **Consequence:** Single point to manage API keys, rate limiting, and caching
 
 ### ADR-003: SQLite vs PostgreSQL
+
 - **Context:** AGENTS.md documents PostgreSQL; settings.py configures SQLite
 - **Decision:** Dev uses SQLite for simplicity; PostgreSQL intended for production
 - **Consequence:** Migration needed before production deployment; different DATABASES config

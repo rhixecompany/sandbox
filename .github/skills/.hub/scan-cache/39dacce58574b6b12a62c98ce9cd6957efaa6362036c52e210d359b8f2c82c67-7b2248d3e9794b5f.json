@@ -1,0 +1,25 @@
+{
+  "source": "skills-sh/google-labs-code/stitch-skills/enhance-prompt",
+  "source_url": "https://github.com/google-labs-code/stitch-skills/tree/ad4b8bc8c51991f53214b573c98eb4f46807e178/plugins/stitch-utilities/skills/enhance-prompt",
+  "bundle_hash": "sha256:39dacce58574b6b12a62c98ce9cd6957efaa6362036c52e210d359b8f2c82c67",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [
+    {
+      "pattern_id": "allowed_tools_field",
+      "severity": "low",
+      "category": "privilege_escalation",
+      "file": "SKILL.md",
+      "line": 4,
+      "match": "allowed-tools:",
+      "description": "skill declares allowed-tools (standard frontmatter; informational)"
+    }
+  ],
+  "rules": [
+    "allowed_tools_field"
+  ],
+  "scanned_at": "2026-07-16T02:17:08.536048+00:00",
+  "summary": "enhance-prompt: safe \u2014 1 finding(s) in privilege_escalation",
+  "fresh": true
+}

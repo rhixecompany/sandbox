@@ -402,7 +402,7 @@ Banking/
 ## Component Categories
 
 | Category | Count | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **shadcn/ui primitives** | 40+ | button, card, dialog, input, table, select, form, chart, sidebar |
 | **Layout wrappers** | 30+ | RootLayoutWrapper, AuthLayoutWrapper, generic-* templates |
 | **Feature components** | 18 | server/client wrappers for each page |

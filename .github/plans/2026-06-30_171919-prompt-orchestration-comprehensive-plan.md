@@ -611,4 +611,5 @@ The pipeline is accepted as COMPLETE when:
 
 *End of Comprehensive Plan — 856 lines*
 ---
+
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

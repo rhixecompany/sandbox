@@ -1,0 +1,61 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\inference\\outlines",
+  "bundle_hash": "sha256:0a54af52f8b857c63cfc1a89b6bc6beb9419affd5240416a8bd291e95ce4ddd7",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 33,
+      "match": "pip install outlines",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 36,
+      "match": "pip install outlines transformers  # Hugging Face models",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 37,
+      "match": "pip install outlines llama-cpp-python  # llama.cpp",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 38,
+      "match": "pip install outlines vllm  # vLLM for high-throughput",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "references\\backends.md",
+      "line": 558,
+      "match": "RUN pip install outlines",
+      "description": "pip install without version pinning"
+    }
+  ],
+  "rules": [
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-16T13:47:08.232861+00:00",
+  "summary": "outlines: safe \u2014 5 finding(s) in supply_chain",
+  "fresh": true
+}

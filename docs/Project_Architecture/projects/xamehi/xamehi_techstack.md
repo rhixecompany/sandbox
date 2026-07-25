@@ -61,7 +61,7 @@
 ### 2.1 Presentation Layer — Frontend
 
 | Technology | Version | Category | Purpose |
-|-----------|---------|----------|---------|
+| ----------- | --------- | ---------- | --------- |
 | **React** | ^18.2.0 | UI Framework | Component-based SPA with virtual DOM |
 | **ReactDOM** | ^18.2.0 | DOM Renderer | `createRoot` API for React 18 concurrent features |
 | **Create React App** | react-scripts 5.0.1 | Build Tool | Webpack-based build, dev server, HMR |
@@ -71,7 +71,7 @@
 ### 2.2 Client-Side Logic
 
 | Technology | Version | Category | Purpose |
-|-----------|---------|----------|---------|
+| ----------- | --------- | ---------- | --------- |
 | **Axios** | ^0.27.2 | HTTP Client | Promise-based requests to Express backend |
 | **React Hooks** | 18.2.0 | State Management | `useState` for local state, `useEffect` for data fetching |
 | **@testing-library/react** | ^13.3.0 | Testing | Component unit tests |
@@ -82,7 +82,7 @@
 ### 2.3 API / BFF Layer — Express.js
 
 | Technology | Version | Category | Purpose |
-|-----------|---------|----------|---------|
+| ----------- | --------- | ---------- | --------- |
 | **Express** | ^4.18.1 | Web Framework | HTTP server, routing, middleware |
 | **CORS** | ^2.8.5 | Middleware | Cross-origin resource sharing headers |
 | **Node.js** | (runtime) | Runtime | JavaScript runtime (version determined by deployment) |
@@ -93,7 +93,7 @@
 ### 2.4 Backend / Admin Layer — Django
 
 | Technology | Version | Category | Purpose |
-|-----------|---------|----------|---------|
+| ----------- | --------- | ---------- | --------- |
 | **Django** | 4.0.6 | Web Framework | Full-stack Python web framework |
 | **Python** | ^3.10+ | Language | Backend programming language |
 | **SQLite** | (built-in) | Database | Development database (default) |
@@ -104,14 +104,14 @@
 ### 2.5 External Integrations
 
 | Service | Endpoint | Purpose | Authentication |
-|---------|----------|---------|---------------|
+| --------- | ---------- | --------- | --------------- |
 | **Alpha Vantage** (via RapidAPI) | `https://alpha-vantage.p.rapidapi.com/query` | Real-time currency exchange rates | `X-RapidAPI-Key` header |
 | **Crypto News Live 3** (via RapidAPI) | `https://crypto-news-live3.p.rapidapi.com/news` | Cryptocurrency news headlines | `X-RapidAPI-Key` header |
 
 ### 2.6 Development Tooling
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | **VS Code** | Primary editor (`.vscode/` config provided) |
 | **ESLint** | Code linting (react-app config) |
 | **Browserslist** | Target browser compatibility matrix |
@@ -162,7 +162,7 @@ graph TD
 ## 4. Runtime Configuration
 
 | Variable | Where Used | Purpose |
-|----------|-----------|---------|
+| ---------- | ----------- | --------- |
 | `REACT_APP_RAPID_API_KEY` | Express `index.js` | API key for RapidAPI services |
 | `REACT_APP_API_URL` | `.env.example` (intended for React) | Backend API base URL |
 | `SECRET_KEY` | Django `settings.py` | Django cryptographic signing |
@@ -177,7 +177,7 @@ graph TD
 ## 5. Version Matrix
 
 | Dependency | package.json (declared) | Actual (resolved) |
-|-----------|------------------------|-------------------|
+| ----------- | ------------------------ | ------------------- |
 | react | ^18.2.0 | ~18.2.x |
 | react-dom | ^18.2.0 | ~18.2.x |
 | react-scripts | 5.0.1 | 5.0.1 |
@@ -195,7 +195,7 @@ graph TD
 ## 6. Stack Evaluation & Recommendations
 
 | Layer | Current Score | Issues | Recommended Upgrade |
-|-------|--------------|--------|-------------------|
+| ------- | -------------- | -------- | ------------------- |
 | **React Build** | ⚠️ Outdated | CRA is deprecated; slow builds | Vite 5.x or Next.js 14+ |
 | **React Version** | ✅ Current | React 18 is stable | Stay current |
 | **Express** | ✅ Stable | Works as BFF; well-tested | Stay or migrate endpoints to Django DRF |
@@ -214,7 +214,7 @@ graph TD
 ## 7. Glossary
 
 | Term | Definition |
-|------|-----------|
+| ------ | ----------- |
 | **BFF** | Backend For Frontend — a dedicated backend API that serves a specific frontend client |
 | **CRA** | Create React App — official React scaffolding/build tool (deprecated in favor of frameworks) |
 | **DRF** | Django REST Framework — toolkit for building Django REST APIs |

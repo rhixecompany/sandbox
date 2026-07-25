@@ -1,0 +1,25 @@
+{
+  "source": "official",
+  "source_url": "official/productivity\\telephony",
+  "bundle_hash": "sha256:56ef28493cd8e97d46abefc96b98552143a4cc7ed39d45b6a7bdfa794a0344e8",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "caution",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\telephony.py",
+      "line": 136,
+      "match": "value = os.environ.get(env_key, \"\")",
+      "description": "accesses os.environ (potential env dump)"
+    }
+  ],
+  "rules": [
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:34:42.693592+00:00",
+  "summary": "telephony: caution \u2014 1 finding(s) in exfiltration",
+  "fresh": true
+}

@@ -8,12 +8,10 @@ Usage: python3 fix_prompts_comprehensive.py [--dry-run] [--batch N]
 """
 
 import asyncio
+import glob
 import os
 import re
 import sys
-import glob
-import yaml
-from pathlib import Path
 
 PROMPTS_DIR = os.path.expanduser("~/Desktop/SandBox/prompts")
 DRY_RUN = "--dry-run" in sys.argv
@@ -28,129 +26,129 @@ LICENSE = "MIT"
 
 # ─── Tag Inference Map ───────────────────────────────────────────────────────
 KEYWORD_TAGS = {
-    r'python': ['python'],
-    r'typescript|tsx?': ['typescript'],
-    r'javascript|node': ['javascript'],
-    r'csharp|\.net|dotnet': ['csharp', 'dotnet'],
-    r'java(?!script)': ['java'],
-    r'ruby': ['ruby'],
-    r'rust': ['rust'],
-    r'go(?:lang)?\b': ['go'],
-    r'sql|postgres|mysql|database|query': ['database', 'sql'],
-    r'react': ['react'],
-    r'next\.?js': ['nextjs'],
-    r'django': ['django'],
-    r'express': ['express'],
-    r'spring': ['spring'],
-    r'docker|container': ['docker'],
-    r'kubernetes|k8s': ['kubernetes'],
-    r'azure|bicep': ['azure'],
-    r'aws': ['aws'],
-    r'gcp|google-cloud': ['gcp'],
-    r'ci.?cd': ['ci-cd'],
-    r'terraform': ['terraform'],
-    r'mcp': ['mcp'],
-    r'playwright': ['playwright'],
-    r'jest|pytest': ['testing'],
-    r'eslint|lint': ['linting'],
-    r'security|safety|injection|bias': ['security'],
-    r'performance|optimi[sz]e': ['performance'],
-    r'debug|triage': ['debugging'],
-    r'refactor': ['refactoring'],
-    r'migrate|upgrade': ['migration'],
-    r'documentation|readme|mkdocs': ['documentation'],
-    r'markdown': ['markdown'],
-    r'architect|blueprint|design|adr': ['architecture'],
-    r'specification|spec|feature': ['specification'],
-    r'agent|acp|acpx': ['agents'],
-    r'copilot|hermes|opencode': ['ai-assistant'],
-    r'api': ['api'],
-    r'git|github': ['git'],
-    r'linux': ['linux'],
-    r'windows': ['windows'],
-    r'agile|scrum|kanban': ['agile'],
-    r'workflow|orchestrat': ['workflow'],
-    r'planning|roadmap': ['planning'],
-    r'audit|review': ['audit'],
-    r'generator|generate|create-': ['generator'],
-    r'fix|repair|remediat': ['fix'],
-    r'data': ['data'],
-    r'machine.?learn|ml|ai': ['ml'],
-    r'frontend|ui|ux|css|html': ['frontend'],
-    r'backend|server': ['backend'],
-    r'test': ['testing'],
-    r'deploy': ['deployment'],
-    r'config': ['configuration'],
-    r'prompt': ['prompts'],
-    r'skill': ['skills'],
+    r"python": ["python"],
+    r"typescript|tsx?": ["typescript"],
+    r"javascript|node": ["javascript"],
+    r"csharp|\.net|dotnet": ["csharp", "dotnet"],
+    r"java(?!script)": ["java"],
+    r"ruby": ["ruby"],
+    r"rust": ["rust"],
+    r"go(?:lang)?\b": ["go"],
+    r"sql|postgres|mysql|database|query": ["database", "sql"],
+    r"react": ["react"],
+    r"next\.?js": ["nextjs"],
+    r"django": ["django"],
+    r"express": ["express"],
+    r"spring": ["spring"],
+    r"docker|container": ["docker"],
+    r"kubernetes|k8s": ["kubernetes"],
+    r"azure|bicep": ["azure"],
+    r"aws": ["aws"],
+    r"gcp|google-cloud": ["gcp"],
+    r"ci.?cd": ["ci-cd"],
+    r"terraform": ["terraform"],
+    r"mcp": ["mcp"],
+    r"playwright": ["playwright"],
+    r"jest|pytest": ["testing"],
+    r"eslint|lint": ["linting"],
+    r"security|safety|injection|bias": ["security"],
+    r"performance|optimi[sz]e": ["performance"],
+    r"debug|triage": ["debugging"],
+    r"refactor": ["refactoring"],
+    r"migrate|upgrade": ["migration"],
+    r"documentation|readme|mkdocs": ["documentation"],
+    r"markdown": ["markdown"],
+    r"architect|blueprint|design|adr": ["architecture"],
+    r"specification|spec|feature": ["specification"],
+    r"agent|acp|acpx": ["agents"],
+    r"copilot|hermes|opencode": ["ai-assistant"],
+    r"api": ["api"],
+    r"git|github": ["git"],
+    r"linux": ["linux"],
+    r"windows": ["windows"],
+    r"agile|scrum|kanban": ["agile"],
+    r"workflow|orchestrat": ["workflow"],
+    r"planning|roadmap": ["planning"],
+    r"audit|review": ["audit"],
+    r"generator|generate|create-": ["generator"],
+    r"fix|repair|remediat": ["fix"],
+    r"data": ["data"],
+    r"machine.?learn|ml|ai": ["ml"],
+    r"frontend|ui|ux|css|html": ["frontend"],
+    r"backend|server": ["backend"],
+    r"test": ["testing"],
+    r"deploy": ["deployment"],
+    r"config": ["configuration"],
+    r"prompt": ["prompts"],
+    r"skill": ["skills"],
 }
 
 NAME_PATTERN_TAGS = {
-    r'^plan-': ['planning'],
-    r'^execute-': ['execution'],
-    r'^create-': ['generator'],
-    r'^fix-': ['fix'],
-    r'^update-': ['maintenance'],
-    r'^migrate-': ['migration'],
-    r'^audit-': ['audit'],
-    r'^generate-': ['generator'],
-    r'^convert-': ['conversion'],
-    r'^validate-': ['validation'],
-    r'^debug-': ['debugging'],
-    r'^setup-': ['setup'],
-    r'^refactor-': ['refactoring'],
-    r'-mcp-': ['mcp'],
-    r'-blueprint-': ['architecture'],
-    r'-audit-': ['audit'],
-    r'-review$': ['review'],
-    r'-fix$': ['fix'],
-    r'-generator$': ['generator'],
+    r"^plan-": ["planning"],
+    r"^execute-": ["execution"],
+    r"^create-": ["generator"],
+    r"^fix-": ["fix"],
+    r"^update-": ["maintenance"],
+    r"^migrate-": ["migration"],
+    r"^audit-": ["audit"],
+    r"^generate-": ["generator"],
+    r"^convert-": ["conversion"],
+    r"^validate-": ["validation"],
+    r"^debug-": ["debugging"],
+    r"^setup-": ["setup"],
+    r"^refactor-": ["refactoring"],
+    r"-mcp-": ["mcp"],
+    r"-blueprint-": ["architecture"],
+    r"-audit-": ["audit"],
+    r"-review$": ["review"],
+    r"-fix$": ["fix"],
+    r"-generator$": ["generator"],
 }
 
 
 def slugify(name):
     s = name.replace(".prompt.md", "").replace(".prompt.txt", "").replace(".md", "")
-    s = re.sub(r'[^a-zA-Z0-9_-]', '-', s)
-    return s.lower().strip('-')
+    s = re.sub(r"[^a-zA-Z0-9_-]", "-", s)
+    return s.lower().strip("-")
 
 
 def titleize(name):
     s = slugify(name)
-    return s.replace('-', ' ').replace('_', ' ').title()
+    return s.replace("-", " ").replace("_", " ").title()
 
 
 def read_file(path):
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path, encoding="utf-8") as f:
         return f.read()
 
 
 def write_file(path, content):
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)
 
 
 def has_yaml_frontmatter(content):
-    return content.startswith('---\n') or content.startswith('---\r\n')
+    return content.startswith("---\n") or content.startswith("---\r\n")
 
 
 def parse_frontmatter(content):
-    lines = content.split('\n')
-    if not (lines[0].strip() == '---'):
+    lines = content.split("\n")
+    if lines[0].strip() != "---":
         return [], lines, False
     end_idx = -1
     for i in range(1, len(lines)):
-        if lines[i].strip() == '---':
+        if lines[i].strip() == "---":
             end_idx = i
             break
     if end_idx == -1:
         return [], lines, False
-    return lines[1:end_idx], lines[end_idx+1:], True
+    return lines[1:end_idx], lines[end_idx + 1 :], True
 
 
 def get_field(fm_lines, field):
     for line in fm_lines:
-        if line.startswith(field + ':'):
-            val = line[len(field)+1:].strip()
+        if line.startswith(field + ":"):
+            val = line[len(field) + 1 :].strip()
             if val:
                 return val
     return None
@@ -160,7 +158,7 @@ def update_field(fm_lines, field, value, add_if_missing=True):
     new_lines = []
     found = False
     for line in fm_lines:
-        if line.startswith(field + ':') or line.startswith(field + ': '):
+        if line.startswith(field + ":") or line.startswith(field + ": "):
             new_lines.append(f"{field}: {value}")
             found = True
         else:
@@ -171,17 +169,17 @@ def update_field(fm_lines, field, value, add_if_missing=True):
 
 
 def remove_field(fm_lines, field):
-    return [l for l in fm_lines if not (l.startswith(field + ':') or l.startswith(field + ': '))]
+    return [l for l in fm_lines if not (l.startswith(field + ":") or l.startswith(field + ": "))]
 
 
 def get_h1(content):
-    m = re.search(r'^# (.+)$', content, re.MULTILINE)
+    m = re.search(r"^# (.+)$", content, re.MULTILINE)
     return m.group(1).strip() if m else None
 
 
 def remove_legacy_section(content):
-    pattern = r'(?:\n|^)#{2,3} Legacy Prompt Details.*?(?=\n#+ |\Z)'
-    result = re.sub(pattern, '', content, flags=re.DOTALL)
+    pattern = r"(?:\n|^)#{2,3} Legacy Prompt Details.*?(?=\n#+ |\Z)"
+    result = re.sub(pattern, "", content, flags=re.DOTALL)
     return result
 
 
@@ -192,51 +190,51 @@ def fix_tags_format(fm_lines):
     while i < len(fm_lines):
         line = fm_lines[i]
         # Multi-line: tags: [] then next line(s) have [...]
-        if line.startswith('tags:') and '[]' in line:
-            if i + 1 < len(fm_lines) and fm_lines[i + 1].strip().startswith('['):
+        if line.startswith("tags:") and "[]" in line:
+            if i + 1 < len(fm_lines) and fm_lines[i + 1].strip().startswith("["):
                 bracket_lines = [fm_lines[i + 1]]
                 j = i + 2
-                while j < len(fm_lines) and ']' not in fm_lines[j]:
+                while j < len(fm_lines) and "]" not in fm_lines[j]:
                     bracket_lines.append(fm_lines[j])
                     j += 1
                 if j < len(fm_lines):
                     bracket_lines.append(fm_lines[j])
-                full = ' '.join(bl.strip() for bl in bracket_lines)
-                m = re.match(r'\[([^\]]*)\]', full)
+                full = " ".join(bl.strip() for bl in bracket_lines)
+                m = re.match(r"\[([^\]]*)\]", full)
                 if m:
                     items_str = m.group(1).strip()
-                    items = [item.strip().strip('"').strip("'") for item in items_str.split(',')]
+                    items = [item.strip().strip('"').strip("'") for item in items_str.split(",")]
                     items = [it for it in items if it]
                     if items:
-                        new_lines.append('tags:')
+                        new_lines.append("tags:")
                         for item in items:
-                            new_lines.append(f'  - {item}')
+                            new_lines.append(f"  - {item}")
                     else:
-                        new_lines.append('tags: []')
+                        new_lines.append("tags: []")
                 else:
-                    new_lines.append('tags: []')
+                    new_lines.append("tags: []")
                 i = j + 1
                 continue
         # Inline Python-list tags: [...]
-        if line.startswith('tags:') and '[' in line:
-            m = re.match(r'tags:\s*\[([^\]]*)\]', line)
+        if line.startswith("tags:") and "[" in line:
+            m = re.match(r"tags:\s*\[([^\]]*)\]", line)
             if m:
                 items_str = m.group(1).strip()
                 if not items_str:
-                    new_lines.append('tags: []')
+                    new_lines.append("tags: []")
                     i += 1
                     continue
-                items = [item.strip().strip('"').strip("'") for item in items_str.split(',')]
-                new_lines.append('tags:')
+                items = [item.strip().strip('"').strip("'") for item in items_str.split(",")]
+                new_lines.append("tags:")
                 for item in items:
                     if item:
-                        new_lines.append(f'  - {item}')
+                        new_lines.append(f"  - {item}")
                 i += 1
                 continue
         # Bare tags: with no value
-        if line.strip() == 'tags:' or line.strip() == 'tags:':
-            if i + 1 >= len(fm_lines) or not fm_lines[i + 1].lstrip().startswith('- '):
-                new_lines.append('tags: []')
+        if line.strip() == "tags:" or line.strip() == "tags:":
+            if i + 1 >= len(fm_lines) or not fm_lines[i + 1].lstrip().startswith("- "):
+                new_lines.append("tags: []")
                 i += 1
                 continue
         new_lines.append(line)
@@ -248,23 +246,20 @@ def standardize_dep_prefixes(fm_lines):
     new_lines = []
     in_deps = False
     for line in fm_lines:
-        if line.startswith('dependencies:'):
+        if line.startswith("dependencies:"):
             in_deps = True
             new_lines.append(line)
             continue
         if in_deps:
-            if line.startswith('  - ') or line.startswith('  -'):
-                dep = line.strip().lstrip('- ')
-                if dep.startswith('command:'):
-                    dep_name = dep.split(':', 1)[1].strip()
-                    new_lines.append(f'  - skill:{dep_name}')
-                elif dep.startswith('tool:'):
-                    dep_name = dep.split(':', 1)[1].strip()
-                    new_lines.append(f'  - skill:{dep_name}')
-                elif dep.startswith('skill:') or dep.startswith('prompt:'):
+            if line.startswith("  - ") or line.startswith("  -"):
+                dep = line.strip().lstrip("- ")
+                if dep.startswith("command:") or dep.startswith("tool:"):
+                    dep_name = dep.split(":", 1)[1].strip()
+                    new_lines.append(f"  - skill:{dep_name}")
+                elif dep.startswith("skill:") or dep.startswith("prompt:"):
                     new_lines.append(line)
                 else:
-                    new_lines.append(f'  - skill:{dep}')
+                    new_lines.append(f"  - skill:{dep}")
             else:
                 in_deps = False
                 new_lines.append(line)
@@ -276,9 +271,9 @@ def standardize_dep_prefixes(fm_lines):
 def infer_tags_for_file(filepath, fm_lines, body):
     """Infer tags from filename, frontmatter, and body content."""
     basename = os.path.basename(filepath)
-    name_val = get_field(fm_lines, 'name') or slugify(basename)
-    title_val = get_field(fm_lines, 'title') or titleize(basename)
-    desc_val = get_field(fm_lines, 'description') or ''
+    name_val = get_field(fm_lines, "name") or slugify(basename)
+    title_val = get_field(fm_lines, "title") or titleize(basename)
+    desc_val = get_field(fm_lines, "description") or ""
 
     source = f"{title_val} {name_val} {desc_val}\n"
     source += body[:500].lower()
@@ -297,7 +292,7 @@ def infer_tags_for_file(filepath, fm_lines, body):
             tags.update(tag_list)
 
     # Ensure 'prompts' tag is always present
-    tags.add('prompts')
+    tags.add("prompts")
 
     return sorted(tags)
 
@@ -314,16 +309,16 @@ def fix_file(filepath):
         return (filepath, [], f"Cannot read: {e}")
 
     # Skip .txt files
-    if basename.endswith('.prompt.txt') or basename.endswith('.txt'):
+    if basename.endswith(".prompt.txt") or basename.endswith(".txt"):
         return (filepath, [], None)
 
     has_fm = has_yaml_frontmatter(content)
 
     if not has_fm:
         name = slugify(basename)
-        title = titleize(basename).replace('.Prompt Md', '').replace('.Md', '')
+        title = titleize(basename).replace(".Prompt Md", "").replace(".Md", "")
         desc = title
-        new_content = f"---\nname: {name}\ntitle: \"{title}\"\ndescription: \"{desc}\"\nversion: 1.0.0\nauthor: \"{AUTHOR}\"\nlicense: {LICENSE}\ntags: []\n---\n\n{content}"
+        new_content = f'---\nname: {name}\ntitle: "{title}"\ndescription: "{desc}"\nversion: 1.0.0\nauthor: "{AUTHOR}"\nlicense: {LICENSE}\ntags: []\n---\n\n{content}'
         issues.append("ADD_YAML_FRONTMATTER")
         content = new_content
         has_fm = True
@@ -332,42 +327,41 @@ def fix_file(filepath):
     if not fm_lines and not has_fm:
         return (filepath, issues, "Could not parse frontmatter")
 
-    body = '\n'.join(body_lines)
+    body = "\n".join(body_lines)
     changed = False
 
     # 1. Add name: field
-    if not get_field(fm_lines, 'name'):
+    if not get_field(fm_lines, "name"):
         name = slugify(basename)
-        fm_lines = update_field(fm_lines, 'name', name)
+        fm_lines = update_field(fm_lines, "name", name)
         issues.append("ADD_NAME")
         changed = True
 
     # 2. Add title: field
-    if not get_field(fm_lines, 'title'):
+    if not get_field(fm_lines, "title"):
         h1 = get_h1(body)
         title = h1.strip('"') if h1 else titleize(basename)
-        fm_lines = update_field(fm_lines, 'title', title)
+        fm_lines = update_field(fm_lines, "title", title)
         issues.append("ADD_TITLE")
         changed = True
 
     # 3. Add version: field
-    if not get_field(fm_lines, 'version'):
-        fm_lines = update_field(fm_lines, 'version', '1.0.0')
+    if not get_field(fm_lines, "version"):
+        fm_lines = update_field(fm_lines, "version", "1.0.0")
         issues.append("ADD_VERSION")
         changed = True
 
     # 4. Add author: and license:
-    if not get_field(fm_lines, 'author'):
-        fm_lines = update_field(fm_lines, 'author', AUTHOR)
+    if not get_field(fm_lines, "author"):
+        fm_lines = update_field(fm_lines, "author", AUTHOR)
         issues.append("ADD_AUTHOR")
         changed = True
-    if not get_field(fm_lines, 'license'):
-        fm_lines = update_field(fm_lines, 'license', LICENSE)
+    if not get_field(fm_lines, "license"):
+        fm_lines = update_field(fm_lines, "license", LICENSE)
         issues.append("ADD_LICENSE")
         changed = True
 
     # 5. Fix tags format (Python list -> YAML array)
-    old_tags = [l for l in fm_lines if l.startswith('tags:')]
     new_fm = fix_tags_format(fm_lines)
     if new_fm != fm_lines:
         fm_lines = new_fm
@@ -375,7 +369,7 @@ def fix_file(filepath):
         changed = True
 
     # 5b. Remove Copilot-style fields
-    for field in ['agent', 'model', 'tools']:
+    for field in ["agent", "model", "tools"]:
         new_fm = remove_field(fm_lines, field)
         if new_fm != fm_lines:
             fm_lines = new_fm
@@ -400,7 +394,7 @@ def fix_file(filepath):
     # Check if tags is now empty (tags: [] or bare tags:)
     has_empty_tags = False
     for line in fm_lines:
-        if line.strip() == 'tags: []' or line.strip() == 'tags:':
+        if line.strip() == "tags: []" or line.strip() == "tags:":
             has_empty_tags = True
             break
 
@@ -410,10 +404,10 @@ def fix_file(filepath):
             # Replace empty tags with inferred
             new_fm = []
             for line in fm_lines:
-                if line.strip() == 'tags: []' or line.strip() == 'tags:':
-                    new_fm.append('tags:')
+                if line.strip() == "tags: []" or line.strip() == "tags:":
+                    new_fm.append("tags:")
                     for tag in inferred:
-                        new_fm.append(f'  - {tag}')
+                        new_fm.append(f"  - {tag}")
                 else:
                     new_fm.append(line)
             fm_lines = new_fm
@@ -422,7 +416,7 @@ def fix_file(filepath):
 
     # 9. Write if changed
     if changed:
-        fm_str = '\n'.join(fm_lines)
+        fm_str = "\n".join(fm_lines)
         new_content = f"---\n{fm_str}\n---\n\n{body.lstrip()}"
         if new_content != original:
             if not DRY_RUN:
@@ -433,10 +427,7 @@ def fix_file(filepath):
 
 
 async def main():
-    files = sorted(
-        glob.glob(os.path.join(PROMPTS_DIR, "*.prompt.md")),
-        key=os.path.getmtime
-    )
+    files = sorted(glob.glob(os.path.join(PROMPTS_DIR, "*.prompt.md")), key=os.path.getmtime)
 
     total = len(files)
     print(f"Total files to process: {total}")
@@ -444,7 +435,7 @@ async def main():
     batches = [(i, min(i + BATCH_SIZE, total)) for i in range(0, total, BATCH_SIZE)]
 
     if SPECIFIC_BATCH is not None:
-        if SPECIFIC_BATCH < 1 or SPECIFIC_BATCH > len(batches):
+        if SPECIFIC_BATCH < 1 or len(batches) < SPECIFIC_BATCH:
             print(f"Error: batch {SPECIFIC_BATCH} out of range (1-{len(batches)})")
             sys.exit(1)
         batches = [batches[SPECIFIC_BATCH - 1]]
@@ -456,13 +447,13 @@ async def main():
 
     for batch_num, (start, end) in enumerate(batches, 1):
         batch_files = files[start:end]
-        print(f"\n=== Batch {batch_num}/{len(batches)} (files {start+1}-{end}) ===")
+        print(f"\n=== Batch {batch_num}/{len(batches)} (files {start + 1}-{end}) ===")
 
         for i, filepath in enumerate(batch_files):
             file_num = start + i + 1
             basename = os.path.basename(filepath)
             result = fix_file(filepath)
-            path, issues, error = result
+            _path, issues, error = result
 
             if error:
                 print(f"  [{file_num}] ✗ {basename}: ERROR - {error}")
@@ -476,8 +467,10 @@ async def main():
                 print(f"  [{file_num}] - {basename}: OK")
 
     if DRY_RUN:
-        print(f"\n[DRY RUN] No files were modified.")
-    print(f"\nDone. {total} files processed, {total_written} written, {total_issues} issues fixed, {total_errors} errors.")
+        print("\n[DRY RUN] No files were modified.")
+    print(
+        f"\nDone. {total} files processed, {total_written} written, {total_issues} issues fixed, {total_errors} errors."
+    )
 
 
 if __name__ == "__main__":

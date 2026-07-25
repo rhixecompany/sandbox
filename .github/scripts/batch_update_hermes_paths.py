@@ -5,12 +5,11 @@ Usage:
     python batch_update_hermes_paths.py [--scan] [--workspace PATH] [--dry-run] [--apply] [--validate] [--mapping FILE]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 from pathlib import Path
-from datetime import datetime
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

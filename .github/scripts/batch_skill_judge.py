@@ -5,13 +5,13 @@ Usage:
     python batch_skill_judge.py [--skills-dir PATH] [--output PATH] [--json PATH] [--threshold INT]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 import time
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -51,8 +51,9 @@ def judge_skill(skill_path: Path) -> SkillResult:
     try:
         text = skill_path.read_text(encoding="utf-8")
     except Exception as e:
-        return SkillResult(name=name, score=0, passed=False,
-                           errors=[f"Cannot read: {e}"], duration=time.monotonic() - start)
+        return SkillResult(
+            name=name, score=0, passed=False, errors=[f"Cannot read: {e}"], duration=time.monotonic() - start
+        )
 
     # Simple scoring heuristics (CPU-bound, no IO)
     if not text.startswith("---"):
@@ -83,8 +84,7 @@ def judge_skill(skill_path: Path) -> SkillResult:
 
     score = max(0, min(100, score))
     passed = score >= 60
-    return SkillResult(name=name, score=score, passed=passed,
-                       errors=errors, duration=time.monotonic() - start)
+    return SkillResult(name=name, score=score, passed=passed, errors=errors, duration=time.monotonic() - start)
 
 
 async def judge_skill_async(skill_path: Path) -> SkillResult:

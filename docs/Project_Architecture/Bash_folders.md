@@ -9,7 +9,7 @@
 ## Project Identity
 
 | Attribute | Value |
-|---|---|
+| --- | --- |
 | **Project Name** | Bash (opencode) |
 | **Type** | Multi-Phase Automation Toolkit |
 | **Stack** | Bun/TypeScript + PowerShell + Shell |
@@ -260,7 +260,7 @@ Bash/
 ## Directory Role Summary
 
 | Directory | Role | Size (approx.) |
-|---|---|---|
+| --- | --- | --- |
 | `src/` | **TypeScript source** — CLI utilities, core engine, migration tools | 18 `.ts` files |
 | `scripts/` | **PowerShell orchestration pipeline** — 6-phase scripts + library modules + config | 50+ files |
 | `scripts/lib/` | **Reusable PowerShell modules** — core infra, domain services, data templates, scanners | 20+ files |
@@ -281,7 +281,7 @@ Bash/
 ## Naming Conventions
 
 | Convention | Pattern | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Directories** | kebab-case / lowercase | `scripts/lib/core/`, `archive/artifacts/` |
 | **TypeScript files** | kebab-case.ts | `cache-clean.ts`, `git-commit-batches.ts` |
 | **PowerShell scripts** | kebab-case.ps1 | `orchestrator-unified.ps1`, `disk-analysis.ps1` |
@@ -296,7 +296,7 @@ Bash/
 ## File Placement Patterns
 
 | Content Type | Location |
-|---|---|
+| --- | --- |
 | **TypeScript source** | `src/` with `core/`, `lib/`, `migration/` subdirectories |
 | **Orchestration scripts** | `scripts/` with phase-prefixed naming (`phase-N-name.ps1`) |
 | **Reusable library modules** | `scripts/lib/core/` (infrastructure), `scripts/lib/domain/` (business logic) |

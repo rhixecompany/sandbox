@@ -1,9 +1,11 @@
 # projects/xamehi.tv — Technology Stack Blueprint
 
 ## Detected Stack
+
 - Django, Python
 
 ## Key Technologies
+
 - Python dependencies:
   - Django
   - django-cors-headers
@@ -21,8 +23,10 @@
   - pillow
 
 ## Tooling and Conventions
+
 - Detect editor/tooling settings from `.vscode/` when present.
 - Keep formatter and linter recommendations aligned to the detected stack.
 
 ## Update Notes
+
 - Refresh after dependency or toolchain changes.

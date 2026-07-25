@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Read-only content-structure + safety audit for Hermes prompt library."""
+
+import json
 import os
 import re
-import json
 
 PROMPT_DIR = r"C:\Users\Alexa\AppData\Local\hermes\prompts"
 OUT = os.path.join(PROMPT_DIR, "docs", "content-safety-audit.md")
@@ -25,12 +26,24 @@ CRITICAL_PATTERNS = [
 
 # --- HIGH: destructive operations ---
 DESTRUCTIVE_PATTERNS = [
-    r"rm\s+-rf?\b", r"rm\s+-fr\b", r"rm\s+-r\b", r"sudo\s+rm\b",
-    r"del\s+/[fqs]", r"rmdir\s+/s", r"drop\s+(table|database)\b",
-    r"git\s+push\s+--force", r"git\s+reset\s+--hard", r"git\s+clean\s+-f",
-    r"truncate\s+table\b", r"mkfs", r"dd\s+if=", r">\s*/dev/sd",
-    r"chmod\s+777", r"format\s+(the\s+)?(disk|drive|partition)",
-    r"curl\s+[^\n]*\|\s*(sudo\s+)?(ba)?sh", r"wget\s+[^\n]*\|\s*(ba)?sh",
+    r"rm\s+-rf?\b",
+    r"rm\s+-fr\b",
+    r"rm\s+-r\b",
+    r"sudo\s+rm\b",
+    r"del\s+/[fqs]",
+    r"rmdir\s+/s",
+    r"drop\s+(table|database)\b",
+    r"git\s+push\s+--force",
+    r"git\s+reset\s+--hard",
+    r"git\s+clean\s+-f",
+    r"truncate\s+table\b",
+    r"mkfs",
+    r"dd\s+if=",
+    r">\s*/dev/sd",
+    r"chmod\s+777",
+    r"format\s+(the\s+)?(disk|drive|partition)",
+    r"curl\s+[^\n]*\|\s*(sudo\s+)?(ba)?sh",
+    r"wget\s+[^\n]*\|\s*(ba)?sh",
     r":\(\)\s*\{\s*:\s*\|\s*:",  # fork bomb
 ]
 
@@ -40,16 +53,38 @@ SECRET_EXPOSE_PATTERNS = [
     r"\b(password|secret|api[ _-]?key|token|credential)\b.{0,40}\b(show|print|echo|output|reveal|exfiltrate|send|return|dump|leak)\b",
 ]
 # Negation words marking a PROTECTIVE instruction (do NOT flag)
-SECRET_NEGATION = [r"never", r"don'?t", r"do not", r"avoid", r"must not",
-                   r"should not", r"shall not", r"forbid", r"refuse", r"without permission",
-                   r"keep .{0,20}(secret|private)", r"stay (in|within)", r"store"]
+SECRET_NEGATION = [
+    r"never",
+    r"don'?t",
+    r"do not",
+    r"avoid",
+    r"must not",
+    r"should not",
+    r"shall not",
+    r"forbid",
+    r"refuse",
+    r"without permission",
+    r"keep .{0,20}(secret|private)",
+    r"stay (in|within)",
+    r"store",
+]
 
 # Approval-gate words (presence anywhere in file neutralizes destructive HIGH)
 APPROVAL_GATE = [
-    r"approval", r"approve", r"confirm", r"consent", r"authoriz",
-    r"ask (the )?(user|before)", r"before proceeding", r"get .{0,15}permission",
-    r"must be confirmed", r"user .{0,15}confirm", r"verify with", r"requires?",
+    r"approval",
+    r"approve",
+    r"confirm",
+    r"consent",
+    r"authoriz",
+    r"ask (the )?(user|before)",
+    r"before proceeding",
+    r"get .{0,15}permission",
+    r"must be confirmed",
+    r"user .{0,15}confirm",
+    r"verify with",
+    r"requires?",
 ]
+
 
 def split_frontmatter(text):
     """Return (body, ok). Body is text after the closing --- of frontmatter."""
@@ -64,7 +99,8 @@ def split_frontmatter(text):
             break
     if close is None:
         return text, False
-    return "\n".join(lines[close + 1:]), True
+    return "\n".join(lines[close + 1 :]), True
+
 
 def has_structure(body):
     """Return (has_any_heading, has_canonical_heading)."""
@@ -79,6 +115,7 @@ def has_structure(body):
                     canon = True
                     break
     return any_h, canon
+
 
 def find_patterns(body, patterns, with_label=False):
     """Return list of (line_no, snippet, label) for matches."""
@@ -95,16 +132,17 @@ def find_patterns(body, patterns, with_label=False):
                 res.append((ln, snippet, label or pat))
     return res
 
+
 files = sorted(f for f in os.listdir(PROMPT_DIR) if f.endswith(".prompt.md"))
 
-structure_less = []            # no H2/H3 heading at all (true blob)
-noncanonical = []              # has headings but no canonical keyword section
+structure_less = []  # no H2/H3 heading at all (true blob)
+noncanonical = []  # has headings but no canonical keyword section
 critical_findings = []  # (file, line, snippet, label)
-high_findings = []      # (file, line, snippet, label)
+high_findings = []  # (file, line, snippet, label)
 
 for fn in files:
     path = os.path.join(PROMPT_DIR, fn)
-    with open(path, "r", encoding="utf-8", errors="replace") as fh:
+    with open(path, encoding="utf-8", errors="replace") as fh:
         text = fh.read()
     body, _ = split_frontmatter(text)
     any_h, canon = has_structure(body)
@@ -177,10 +215,14 @@ for f in high_findings:
 
 # Save intermediate for report build
 with open("/c/Users/Alexa/Desktop/SandBox/_audit_data.json", "w") as fh:
-    json.dump({
-        "summary": summary,
-        "structure_less": structure_less,
-        "noncanonical": noncanonical,
-        "critical": critical_findings,
-        "high": high_findings,
-    }, fh, indent=2)
+    json.dump(
+        {
+            "summary": summary,
+            "structure_less": structure_less,
+            "noncanonical": noncanonical,
+            "critical": critical_findings,
+            "high": high_findings,
+        },
+        fh,
+        indent=2,
+    )

@@ -21,7 +21,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ### Languages & Runtimes
 
 | Technology | Version | Usage |
-|---|---|---|
+| --- | --- | --- |
 | **TypeScript** | ^6.0.3 | Primary language (strict mode, full type safety) |
 | **React** | ^19.2.5 | UI framework (Server Components + Client Components) |
 | **Next.js** | 16.2.4 | Full-stack framework (App Router, Server Actions, Route Handlers) |
@@ -39,7 +39,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Frontend Stack
 
 | Category | Libraries |
-|---|---|
+| --- | --- |
 | **UI Framework** | `next@16.2.4`, `react@19.2.5`, `react-dom@19.2.5` |
 | **UI Components** | `@radix-ui/react-*` (15+ packages), `@base-ui/react`, `radix-ui`, `cmdk`, `vaul`, `sonner`, `embla-carousel-react` |
 | **Styling** | `tailwindcss@4.2.4`, `@tailwindcss/postcss`, `tailwind-merge`, `class-variance-authority`, `clsx`, `tw-animate-css` |
@@ -56,7 +56,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Backend / Database Stack
 
 | Category | Libraries |
-|---|---|
+| --- | --- |
 | **Database Driver** | `pg@8.20.0`, `postgres@3.4.9` |
 | **ORM** | `drizzle-orm@0.45.2`, `drizzle-kit@0.31.10` |
 | **Auth Framework** | `next-auth@4.24.14`, `@auth/drizzle-adapter@1.11.2` |
@@ -66,7 +66,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ### Database Schema (13 tables)
 
 | Table | Key Columns | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `users` | email, password, isAdmin, role (enum) | Core user auth & profile |
 | `account` | provider, providerAccountId, userId FK | NextAuth OAuth links |
 | `session` | sessionToken, userId FK | NextAuth session storage |
@@ -84,7 +84,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ### Database Enums (4)
 
 | Enum | Values |
-|---|---|
+| --- | --- |
 | `user_role` | `user` \| `admin` \| `moderator` |
 | `transaction_status` | `pending` \| `processing` \| `completed` \| `failed` \| `cancelled` |
 | `transaction_type` | `credit` \| `debit` |
@@ -95,7 +95,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Financial Integration
 
 | Service | Library | Version | Role |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Plaid API** | `plaid` | ^42.2.0 | Bank linking, transaction sync |
 | **Plaid Link** | `react-plaid-link` | ^4.1.1 | Client-side Plaid OAuth |
 | **Dwolla API** | `dwolla-v2` | ^3.4.0 | ACH transfers, customer mgmt |
@@ -113,7 +113,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Caching & Rate Limiting
 
 | Service | Library | Version | Purpose |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Upstash Redis** | `@upstash/redis` | ^1.37.0 | Serverless caching |
 | **Upstash Rate Limit** | `@upstash/ratelimit` | ^2.0.8 | API rate limiting |
 | **Upstash QStash** | `@upstash/qstash-cli` | — | Scheduled tasks |
@@ -123,7 +123,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Security
 
 | Layer | Technology |
-|---|---|
+| --- | --- |
 | Auth tokens | NextAuth JWT (HTTP-only cookies) |
 | Password hashing | bcryptjs |
 | Data encryption | AES-256-GCM (Plaid tokens, SSNs, account numbers) |
@@ -137,7 +137,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Testing Stack
 
 | Tool | Version | Scope |
-|---|---|---|
+| --- | --- | --- |
 | **Playwright** | ^1.59.1 | E2E browser tests (12+ spec files) |
 | **Vitest** | ^4.1.5 | Unit + integration tests |
 | **@testing-library/react** | ^16.3.2 | React component tests |
@@ -149,7 +149,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Code Quality
 
 | Area | Tools |
-|---|---|
+| --- | --- |
 | **Linting** | `eslint@10.3.0`, `typescript-eslint@8.59.1`, `eslint-config-next`, 15+ plugins |
 | **Formatting** | `prettier@3.8.3`, `markdownlint-cli2`, `cspell@10.0.0` |
 | **Pre-commit** | `husky@9.1.7`, `lint-staged@16.4.0` |
@@ -160,7 +160,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## CI/CD & Deployment
 
 | Platform | Config | Notes |
-|---|---|---|
+| --- | --- | --- |
 | **Vercel** | `vercel.json` | Primary production target |
 | **Docker** | `docker-compose.yml`, `compose/prod/` | Self-hosted with Traefik, Grafana, Prometheus |
 | **Railway** | `Railway.toml` | Alternative cloud deployment |
@@ -170,7 +170,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Environment Variables
 
 | Variable | Purpose |
-|---|---|
+| --- | --- |
 | `DATABASE_URL` | PostgreSQL connection string |
 | `NEXTAUTH_URL` / `NEXTAUTH_SECRET` | NextAuth config |
 | `PLAID_CLIENT_ID` / `PLAID_SECRET` / `PLAID_ENV` | Plaid integration |
@@ -184,7 +184,7 @@ A full-stack fintech application built with Next.js 16, featuring bank account i
 ## Key Scripts
 
 | Script | Purpose |
-|---|---|
+| --- | --- |
 | `bun run dev` | Development server |
 | `bun run build` | Production build |
 | `bun run test` | Playwright + Vitest |

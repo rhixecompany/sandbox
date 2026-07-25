@@ -1,8 +1,6 @@
 ---
 name: repo-management
-...
 title: Repo Management Pipeline
-...
 description: 'Execute repo management operations across all project repos: branch normalization,
   ignore file audit, dependency audit, and CI setup. Runs AFTER the repo-research-pipeline
   phase completes.
@@ -10,61 +8,17 @@ description: 'Execute repo management operations across all project repos: branc
   Also provides Quick Repo Overview (Phase 0): repo summary, entrypoint detection,
   and disk usage on demand.'
 version: 2.1.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+toolsets:
+  - browser
+  - code_execution
+  - file
+  - mcp
+  - terminal
+  - web
 scripts: []
-skills: - finishing-a-development-branch
-- gh-cli
-- git-commit
-- git-helper
-- git-submodule-workflow
-- github-actions-efficiency
-- github-repo-management
-- monorepo-pr-workflow
-- vscode-workspace-configurator
-- workspace-audit
-- writing-plans
-- subagent-driven-development
-formatter: default
-...
-plan: ''
-dependencies: - prompt:repo-research-pipeline
-- skill:finishing-a-development-branch
-- skill:gh-cli
-- skill:git-commit
-- skill:git-helper
-- skill:git-submodule-workflow
-- skill:github-actions-efficiency
-- skill:github-repo-management
-- skill:monorepo-pr-workflow
-- skill:vscode-workspace-configurator
-- skill:workspace-audit
-- skill:writing-plans
-- tool:mcp-filesystem
-- tool:mcp-sequential-thinking
-- skill:subagent-driven-development
-tags: - audit
-- frontend
-- git
-- mcp
-- onboarding
-- prompts
-- skills
-- vscode
-- workflow
-trigger: /repo-management
-...
-metadata: hermes:
-  related_skills:
+skills:
   - finishing-a-development-branch
   - gh-cli
   - git-commit
@@ -73,11 +27,56 @@ metadata: hermes:
   - github-actions-efficiency
   - github-repo-management
   - monorepo-pr-workflow
-  - repo-research-pipeline
   - vscode-workspace-configurator
   - workspace-audit
+  - writing-plans
+  - subagent-driven-development
+formatter: default
+plan: ''
+dependencies:
+  - prompt:repo-research-pipeline
+  - skill:finishing-a-development-branch
+  - skill:gh-cli
+  - skill:git-commit
+  - skill:git-helper
+  - skill:git-submodule-workflow
+  - skill:github-actions-efficiency
+  - skill:github-repo-management
+  - skill:monorepo-pr-workflow
+  - skill:vscode-workspace-configurator
+  - skill:workspace-audit
+  - skill:writing-plans
+  - tool:mcp-tavily
   - tool:mcp-filesystem
   - tool:mcp-sequential-thinking
+  - skill:subagent-driven-development
+tags:
+  - audit
+  - frontend
+  - git
+  - mcp
+  - onboarding
+  - prompts
+  - skills
+  - vscode
+  - workflow
+trigger: /repo-management
+metadata:
+  hermes:
+    related_skills:
+      - finishing-a-development-branch
+      - gh-cli
+      - git-commit
+      - git-helper
+      - git-submodule-workflow
+      - github-actions-efficiency
+      - github-repo-management
+      - monorepo-pr-workflow
+      - repo-research-pipeline
+      - vscode-workspace-configurator
+      - workspace-audit
+      - tool:mcp-filesystem
+      - tool:mcp-sequential-thinking
 ---
 
 ## Goal
@@ -101,6 +100,7 @@ Leave every repo with:
 Run when the user asks about repo structure, disk usage, or needs an initial summary.
 
 **Steps:**
+
 1. **Summarize the repo** — Read AGENTS.md, README.md, package manifest. 5 bullets + entrypoint.
 2. **Check disk usage** — Scan from repo root, exclude noise dirs, show top 5.
 3. **Detect CI status** — Check if `.github/workflows/` exists.
@@ -108,7 +108,6 @@ Run when the user asks about repo structure, disk usage, or needs an initial sum
 ```bash
 # Disk usage
 du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5
-
 # Entrypoint detection
 grep -E '"main"|"start"|main\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.{py,ts} 2>/dev/null | head -10
 ```

@@ -1,105 +1,29 @@
 ---
 name: what-context-needed
-...
 title: What Context Do You Need?
-...
 description: Ask Copilot what files it needs to see before answering a question
-...
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - terminal
-- file
+toolsets:
+  - terminal
+  - file
 scripts: []
 skills: []
 formatter: default
-...
 plan: ''
-tags: - ai-assistant
-- ml
-- prompts
-- specification
-- typescript
+tags:
+  - ai-assistant
+  - ml
+  - prompts
+  - specification
+  - typescript
+  - ai-assistant
+  - ml
+  - prompts
+  - specification
+  - typescript
 trigger: /what-context-needed
-...
 ---
 
-## Goal
-
-Ask Copilot what files it needs to see before answering a question.
-
-## Context
-
-Use when you need to work on the current workspace or task.
-
-## Inputs
-
-- The current workspace, repo, or document state.
-- The specific request, diff, spec, or files provided by the user.
-- Any prompt variables, paths, or constraints named in the original instructions.
-
-## Outputs
-
-- A complete result that matches the prompt's purpose.
-- A concise verification note when the task benefits from one.
-
-## Rules
->
-> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-- Follow the prompt literally and prefer evidence from the current workspace.
-- Keep the response structured, deterministic, and easy to act on.
-- Avoid changing unrelated files or adding unnecessary scope.
-- If something is unclear, state the assumption instead of guessing.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify the exact scope.
-- Locate the relevant files, diffs, or references.
-
-### Phase 2: Execute
-
-- Perform the requested work with the smallest safe change set.
-- Keep the steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check the result against the goal, rules, and inputs.
-- Confirm the output is usable and complete.
-
-### Phase 4: Hand off
-
-- Return the final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
-## My Question
-
-{{question}}
-
-## Instructions
-
-1. Based on my question, list the files you would need to examine
-2. Explain why each file is relevant
-3. Note any files you've already seen in this conversation
-4. Identify what you're uncertain about
-
-## Output Format
-
-```markdown
-## Files I Need
-
-> ### Must See (required for accurate answer)
-> - `path/to/file.ts` — [why needed]
-
-> **Full content:** `templates/what-context-needed/files_i_need.md`
-
-## Template References
-
-Templates in `templates/what-context-needed/`:
-- `files_i_need.md`
-- `phases.md`
+## GoalAsk Copilot what files it needs to see before answering a question.## ContextUse when you need to work on the current workspace or task.## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.## Phases### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.## My Question{{question}}## Instructions1. Based on my question, list the files you would need to examine2. Explain why each file is relevant3. Note any files you've already seen in this conversation4. Identify what you're uncertain about## Output Format```markdown## Files I Need> ### Must See (required for accurate answer)> - `path/to/file.ts` — [why needed]> **Full content:** `templates/what-context-needed/files_i_need.md`## Template ReferencesTemplates in `templates/what-context-needed/`:- `files_i_need.md`- `phases.md`

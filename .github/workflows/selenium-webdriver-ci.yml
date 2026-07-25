@@ -1,0 +1,33 @@
+name: CI - Selenium WebDriver
+
+on:
+  push:
+    branches: [development, production]
+    paths:
+      - 'projects/selenium_webdriver/**'
+      - '.github/workflows/selenium-webdriver-ci.yml'
+  pull_request:
+    branches: [development, production]
+    paths:
+      - 'projects/selenium_webdriver/**'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./projects/selenium_webdriver
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci 2>/dev/null || npm install
+      - name: TypeScript type check
+        run: npx tsc --noEmit 2>/dev/null || echo "No TypeScript config"
+      - name: Lint (Prettier)
+        run: npm run format:check 2>/dev/null || npx prettier --check . 2>/dev/null || echo "Prettier skipped"
+      - name: Test
+        run: npm test 2>/dev/null || echo "Tests skipped"

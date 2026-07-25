@@ -1,0 +1,34 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\faiss",
+  "bundle_hash": "sha256:9449d80aa61bbd4e4fecc3e60e53f60df671e0de9802c9f96cbde6d61395bf46",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 45,
+      "match": "pip install faiss-cpu",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 48,
+      "match": "pip install faiss-gpu",
+      "description": "pip install without version pinning"
+    }
+  ],
+  "rules": [
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-16T02:33:56.604412+00:00",
+  "summary": "faiss: safe \u2014 2 finding(s) in supply_chain",
+  "fresh": true
+}

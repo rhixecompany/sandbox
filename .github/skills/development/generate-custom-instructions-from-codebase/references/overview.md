@@ -1,0 +1,9 @@
+# Code Migration Instructions Generator — Reference Overview
+
+## Key Concepts
+
+- **Migration Instructions Generator** analyzes differences between two project states (branches, commits, or releases) and generates structured `.github/copilot-migration-instructions.md` files that train GitHub Copilot to automatically apply transformation patterns during future code modifications. This turns a one-time migration into reusable, automated knowledge.
+- **Phases** — The process has 4 phases: (1) Comparative State Analysis (detect structural changes, code transformations, and pattern extraction), (2) Migration Instructions Generation (create the structured markdown file), (3) Contextual Examples Generation (before/after code examples), and (4) Validation and Optimization (test and refine rules).
+- **Configuration Variables** — The generator is configured with variables like `MIGRATION_TYPE` (Framework Version, Architecture Refactoring, Technology Migration, etc.), `SOURCE_REFERENCE`/`TARGET_REFERENCE` (branch, commit, or tag), `AUTOMATION_LEVEL` (Conservative/Balanced/Aggressive), and `GENERATE_EXAMPLES` (include transformation examples).
+- **Use Cases** — Framework version migrations (Angular 14→17, React classes→hooks), technology stack evolution (jQuery→React, REST→GraphQL), architecture refactoring (monolith→microservices, MVC→Clean Architecture), and design pattern modernization.
+- **Key Benefit** — Unlike traditional migration docs, these instructions "train" Copilot to automatically apply the same transformation patterns, preventing architectural regression and maintaining code evolution consistency.

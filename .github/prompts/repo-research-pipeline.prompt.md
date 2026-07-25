@@ -1,71 +1,69 @@
 ---
 name: repo-research-pipeline
-...
 title: Repo Research Pipeline (MCP-Enhanced)
-...
 description: Structured workflow for executing web research across multiple projects and writing
   actionable RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline skill
   and web-research-pipeline skill.
-...
 version: 2.1.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+toolsets:
+  - browser
+  - code_execution
+  - file
+  - mcp
+  - terminal
+  - web
 scripts: []
-skills: - domain-intel
-- gh-cli
-- web-research-pipeline
-- subagent-driven-development
-formatter: default
-...
-plan: ''
-dependencies: - prompt:web-research-pipeline
-- skill:domain-intel
-- skill:gh-cli
-- tool:mcp-fetch
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-memory
-- tool:mcp-playwright
-- tool:mcp-sequential-thinking
-- skill:subagent-driven-development
-- skill:web-research-pipeline
-tags: - frontend
-- generator
-- git
-- mcp
-- prompts
-- skills
-- typescript
-- vscode
-- workflow
-trigger: /repo-research-pipeline
-...
-metadata: hermes:
-  related_skills:
+skills:
   - domain-intel
   - gh-cli
   - web-research-pipeline
+  - subagent-driven-development
+formatter: default
+plan: ''
+dependencies:
+  - prompt:web-research-pipeline
+  - skill:domain-intel
+  - skill:gh-cli
+  - tool:mcp-tavily
   - tool:mcp-fetch
   - tool:mcp-filesystem
   - tool:mcp-github
   - tool:mcp-memory
   - tool:mcp-playwright
   - tool:mcp-sequential-thinking
+  - skill:subagent-driven-development
+  - skill:web-research-pipeline
+tags:
+  - frontend
+  - generator
+  - git
+  - mcp
+  - prompts
+  - skills
+  - typescript
+  - vscode
+  - workflow
+trigger: /repo-research-pipeline
+metadata:
+  hermes:
+    related_skills:
+      - domain-intel
+      - gh-cli
+      - web-research-pipeline
+      - tool:mcp-fetch
+      - tool:mcp-filesystem
+      - tool:mcp-github
+      - tool:mcp-memory
+      - tool:mcp-playwright
+      - tool:mcp-sequential-thinking
 ---
 
 ## Goal
 
 Run research across all project repos and produce RESEARCH_REPORT.md files
-with verified sources. MCP-first: use mcp-github → mcp-fetch before built-in tools.
+with verified sources. **Tavily-first:** use `mcp__tavily__tavily_search` → `mcp__tavily__tavily_extract` before other backends.
 
 ## Workflow
 
@@ -87,5 +85,5 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 2. **VERIFY BEFORE CLAIMING** — Never report without running the command.
 3. **SIZE GATE** — Reports 1KB–5KB. Trim over 5KB, expand under 1KB.
 4. **SYMMETRIC CROSS-REFS** — If project A references B, B must reference A.
-5. **MCP-FIRST** — mcp-github → mcp-fetch → mcp-smithery before built-in tools.
-6. **MULTI-BACKEND** — If mcp-fetch fails, try firecrawl_scrape before giving up.
+5. **TAVILY-FIRST** — `mcp__tavily__tavily_search` → `mcp__tavily__tavily_extract` → `mcp__fetch__get_markdown` → firecrawl_scrape → `web_extract`.
+6. **MULTI-BACKEND** — Try all backends before declaring a URL failed.

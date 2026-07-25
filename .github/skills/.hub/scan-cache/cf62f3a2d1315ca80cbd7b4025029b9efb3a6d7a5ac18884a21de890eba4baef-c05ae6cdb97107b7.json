@@ -1,0 +1,71 @@
+{
+  "source": "official",
+  "source_url": "official/research\\osint-investigation",
+  "bundle_hash": "sha256:cf62f3a2d1315ca80cbd7b4025029b9efb3a6d7a5ac18884a21de890eba4baef",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_courtlistener.py",
+      "line": 130,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"COURTLISTENER_TOKEN\"))",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_courtlistener.py",
+      "line": 130,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"COURTLISTENER_TOKEN\"))",
+      "description": "reads secret via os.environ.get()"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_opencorporates.py",
+      "line": 176,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"OPENCORPORATES_API_TOKEN\"))",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_opencorporates.py",
+      "line": 176,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"OPENCORPORATES_API_TOKEN\"))",
+      "description": "reads secret via os.environ.get()"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_senate_ld.py",
+      "line": 127,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"SENATE_LDA_TOKEN\"))",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "scripts\\fetch_senate_ld.py",
+      "line": 127,
+      "match": "p.add_argument(\"--token\", default=os.environ.get(\"SENATE_LDA_TOKEN\"))",
+      "description": "reads secret via os.environ.get()"
+    }
+  ],
+  "rules": [
+    "python_environ_get_secret",
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:34:21.091656+00:00",
+  "summary": "osint-investigation: dangerous \u2014 6 finding(s) in exfiltration",
+  "fresh": true
+}

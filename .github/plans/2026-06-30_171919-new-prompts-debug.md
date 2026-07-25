@@ -16,5 +16,6 @@ Apply concrete fixes from the `./prompts` audit:
 - Batch audit complete: confirmed only these 2 blockers, no other severity-1 issues
 - Decorations phase complete: skill validation-only problems resolved
 - Prompt fixes pending
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

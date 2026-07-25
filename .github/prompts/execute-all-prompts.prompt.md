@@ -8,11 +8,16 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- audit
-- execution
-- fix
-- prompts
-- workflow
+  - ai-assistant
+  - audit
+  - data
+  - execution
+  - fix
+  - ml
+  - prompts
+  - skills
+  - typescript
+  - workflow
 trigger: /execute-all-prompts
 formatter: default
 dependencies:
@@ -28,8 +33,6 @@ metadata:
     - verification-before-completion
     - subagent-driven-development
 toolsets:
-- file
-- terminal
 scripts: []
 skills: []
 plan: ''

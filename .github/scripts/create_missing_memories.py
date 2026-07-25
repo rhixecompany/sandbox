@@ -5,11 +5,10 @@ Usage:
     python create_missing_memories.py [--profiles-dir PATH] [--dry-run] [--verbose]
 """
 
-import asyncio
 import argparse
+import asyncio
 import sys
 from pathlib import Path
-
 
 USER_TEMPLATE = """# User Profile
 

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Fix prompt metadata: remove duplicate external metadata blocks, then inject a single metadata block inside the first frontmatter."""
+
 import asyncio
-from pathlib import Path
 import re
+from pathlib import Path
 
 ROOT = Path("prompts")
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\s*\n---\s*\n", re.S)
@@ -17,7 +18,7 @@ def cleanup_external_metadata(path: Path, text: str) -> str:
     match = FRONTMATTER_RE.match(text)
     if not match:
         return text
-    after = text[match.end():]
+    after = text[match.end() :]
     metas = METADATA_BLOCK_RE.findall("\n" + after)
     if len(metas) <= 1:
         return text
@@ -38,16 +39,22 @@ def inject_metadata(path: Path, text: str) -> str:
     if "metadata:" in match.group(1):
         return text
     slug = path.stem.replace(" ", "-").replace("_", "-").lower()
-    block = "\nmetadata:\n  hermes:\n    related_skills: []\n    tags:\n    - {}\n".format(slug)
+    block = f"\nmetadata:\n  hermes:\n    related_skills: []\n    tags:\n    - {slug}\n"
     insertion = match.group(0) + block
-    rest = text[match.end():]
+    rest = text[match.end() :]
     UPDATED_COUNT += 1
     return insertion + rest
 
 
 async def main():
     for p in sorted(ROOT.rglob("*")):
-        if not p.is_file() or p.suffix != ".md" or "templates" in p.parts or "_shared" in p.parts or p.parent.name == "templates":
+        if (
+            not p.is_file()
+            or p.suffix != ".md"
+            or "templates" in p.parts
+            or "_shared" in p.parts
+            or p.parent.name == "templates"
+        ):
             continue
         text = p.read_text(encoding="utf-8", errors="ignore")
         if not text.startswith("---"):
@@ -59,6 +66,7 @@ async def main():
     print(f"cleaned_duplicates={CLEANUP_COUNT}")
     print(f"injected_metadata={UPDATED_COUNT}")
 
+    global REMAINING
     for p in sorted(ROOT.rglob("*.md")):
         if "templates" in p.parts or "_shared" in p.parts or p.parent.name == "templates":
             continue
@@ -71,5 +79,5 @@ async def main():
     print(f"remaining={REMAINING}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())

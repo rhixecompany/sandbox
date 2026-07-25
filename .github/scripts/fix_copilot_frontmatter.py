@@ -5,8 +5,8 @@ Usage:
     python fix_copilot_frontmatter.py [--skills-dir PATH] [--dry-run] [--verbose] [--report PATH]
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
@@ -68,8 +68,7 @@ def _fix_file(filepath: Path, dry_run: bool) -> dict:
     # Split frontmatter and body
     parts = text.split("---", 2)
     if len(parts) < 3:
-        return {"file": str(filepath), "status": "error",
-                "error": "Cannot parse frontmatter", "fixes": fixes}
+        return {"file": str(filepath), "status": "error", "error": "Cannot parse frontmatter", "fixes": fixes}
 
     fm_text = parts[1]
     body = parts[2]
@@ -116,7 +115,19 @@ def _fix_file(filepath: Path, dry_run: bool) -> dict:
     name = filepath.parent.name
     for field in REQUIRED_FIELDS:
         if field not in existing_fields and field not in ("tags",):
-            default = name if field == "name" else name.replace("-", " ").title() if field == "title" else "1.0.0" if field == "version" else "Hermes Agent" if field == "author" else "MIT" if field == "license" else ""
+            default = (
+                name
+                if field == "name"
+                else name.replace("-", " ").title()
+                if field == "title"
+                else "1.0.0"
+                if field == "version"
+                else "Hermes Agent"
+                if field == "author"
+                else "MIT"
+                if field == "license"
+                else ""
+            )
             new_fm_lines.insert(0, f"{field}: {default}")
             fixes.append(f"ADD_{field.upper()}")
         elif field == "tags" and field not in existing_fields:
@@ -171,6 +182,7 @@ async def main(argv: list[str] | None = None) -> None:
     if args.report:
         report_path = Path(args.report)
         import json
+
         report_path.write_text(
             json.dumps({"fixed": fixed, "errors": errors, "dry_run": args.dry_run}, indent=2),
             encoding="utf-8",

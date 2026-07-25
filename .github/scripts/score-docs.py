@@ -5,20 +5,19 @@ Provides async CLI entry points for scoring frontmatter, summary, headings,
 code blocks, cross-references, and wall-of-text detection.
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import re
 import sys
 from pathlib import Path
-from typing import List, Optional, Tuple
-
 
 # ---------------------------------------------------------------------------
 # Scoring criteria
 # ---------------------------------------------------------------------------
 
-def score_frontmatter(text: str) -> Tuple[int, List[str]]:
+
+def score_frontmatter(text: str) -> tuple[int, list[str]]:
     """YAML frontmatter present and well-formed (20 pts)."""
     notes = []
     if not text.startswith("---"):
@@ -42,9 +41,8 @@ def score_frontmatter(text: str) -> Tuple[int, List[str]]:
     return max(0, score), notes
 
 
-def score_summary(text: str) -> Tuple[int, List[str]]:
+def score_summary(text: str) -> tuple[int, list[str]]:
     """Non-empty summary paragraph within 3 lines of H1 (15 pts)."""
-    notes = []
     lines = text.splitlines()
     h1_idx = None
     for i, line in enumerate(lines):
@@ -61,7 +59,7 @@ def score_summary(text: str) -> Tuple[int, List[str]]:
     return 5, ["No summary paragraph within 3 lines of H1"]
 
 
-def score_code_blocks(text: str) -> Tuple[int, List[str]]:
+def score_code_blocks(text: str) -> tuple[int, list[str]]:
     """Language-tagged fenced code blocks, 10 pts each (max 30)."""
     notes = []
     blocks = re.findall(r"```(\w+)", text)
@@ -72,13 +70,11 @@ def score_code_blocks(text: str) -> Tuple[int, List[str]]:
     return score, notes
 
 
-def score_headings(text: str) -> Tuple[int, List[str]]:
+def score_headings(text: str) -> tuple[int, list[str]]:
     """H2/H3 breaks every <200 lines (15 pts)."""
     notes = []
     lines = text.splitlines()
-    heading_lines = [
-        i for i, line in enumerate(lines) if re.match(r"^#{2,3}\s", line)
-    ]
+    heading_lines = [i for i, line in enumerate(lines) if re.match(r"^#{2,3}\s", line)]
     if not heading_lines:
         return 0, ["No H2 or H3 headings found"]
     max_gap = 0
@@ -97,7 +93,7 @@ def score_headings(text: str) -> Tuple[int, List[str]]:
     return 10, notes
 
 
-def score_crossrefs(text: str, doc_path: Path) -> Tuple[int, List[str]]:
+def score_crossrefs(text: str, doc_path: Path) -> tuple[int, list[str]]:
     """Relative cross-references resolve (max 20)."""
     notes = []
     refs = re.findall(r"\[.*?\]\(((?:\.\.?/)[^)]+)\)", text)
@@ -129,6 +125,7 @@ def penalty_wall_of_text(text: str) -> int:
 # ---------------------------------------------------------------------------
 # Scoring engine
 # ---------------------------------------------------------------------------
+
 
 async def score_document(file_path: Path, threshold: int = 70) -> dict:
     """Score a single markdown document. File I/O is offloaded via thread."""
@@ -167,18 +164,14 @@ async def score_document(file_path: Path, threshold: int = 70) -> dict:
     penalty = penalty_wall_of_text(text)
     result["details"]["wall_of_text_penalty"] = penalty
 
-    total = (
-        fm_score + summary_score + code_score + heading_score + xref_score + penalty
-    )
+    total = fm_score + summary_score + code_score + heading_score + xref_score + penalty
     result["score"] = total
     result["passed"] = total >= threshold
     return result
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Score markdown documents for AI-readiness."
-    )
+    parser = argparse.ArgumentParser(description="Score markdown documents for AI-readiness.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -226,9 +219,7 @@ async def main() -> None:
         sys.exit(1)
 
     # Score each document — each file I/O is individually offloaded
-    results = await asyncio.gather(
-        *(score_document(f, args.threshold) for f in files)
-    )
+    results = await asyncio.gather(*(score_document(f, args.threshold) for f in files))
 
     passed = [r for r in results if r.get("passed")]
     failed = [r for r in results if not r.get("passed")]
@@ -239,13 +230,11 @@ async def main() -> None:
             indent=2,
         )
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, output, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, output, encoding="utf-8")
         else:
             print(output)
     else:
-        lines = [f"\n=== Score Docs Report ==="]
+        lines = ["\n=== Score Docs Report ==="]
         lines.append(f"Scanned {len(files)} file(s) — Passed: {len(passed)}, Failed: {len(failed)}")
         for r in results:
             status = "PASS" if r.get("passed") else "FAIL"
@@ -259,9 +248,7 @@ async def main() -> None:
                 lines.append(f"          ERROR: {r['error']}")
         report = "\n".join(lines)
         if args.output:
-            await asyncio.to_thread(
-                Path(args.output).write_text, report, encoding="utf-8"
-            )
+            await asyncio.to_thread(Path(args.output).write_text, report, encoding="utf-8")
         else:
             print(report)
 

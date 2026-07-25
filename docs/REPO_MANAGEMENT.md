@@ -7,7 +7,7 @@
 ## Branch Convention
 
 | Status | Detail |
-|--------|--------|
+| -------- | -------- |
 | ✅ All repos on `development` | Consistent branch name across workspace |
 | ⚠️ No `main`/`master` present | All active work is on development branches |
 | ⚠️ No feature branches detected | All commits go directly to development |
@@ -30,7 +30,7 @@ All projects include a .gitignore. No action needed.
 ## Dependency Management
 
 | Project | Package Manifests | Type |
-|---------|-------------------|------|
+| --------- | ------------------- | ------ |
 | Banking | `package.json`, `requirements.txt` | Node + Python |
 | comicwise | `package.json` | Node |
 | cookiecutter-django-tailwind | `pyproject.toml`, `requirements.txt` | Python (pyproject) |
@@ -47,6 +47,7 @@ All projects include a .gitignore. No action needed.
 | youtube-downloader | _(none detected)_ | ⚠️ No manifest |
 
 **Gaps found:**
+
 - ❌ **rhixecompany-comics**: No package.json, requirements.txt, or pyproject.toml detected
 - ❌ **youtube-downloader**: No lockfile or manifest detected (relies on pip install yt-dlp directly)
 - ⚠️ **Dual-manifest projects** (Banking, Django-Scrapy-Selenium, rhixe_scans): Mixed Node + Python manifests — ensure lockfiles are synced
@@ -56,7 +57,7 @@ All projects include a .gitignore. No action needed.
 ## CI/CD
 
 | Project | CI Workflows | Status |
-|---------|-------------|--------|
+| --------- | ------------- | -------- |
 | Banking | `auto-add-run-e2e.yml`, `build.yml`, `check-line-endings.yml` | ✅ 3 workflows |
 | comicwise | `ci.yml` | ✅ |
 | cookiecutter-django-tailwind | `ci.yml`, `django-issue-checker.yml`, `issue-manager.yml` | ✅ 3 workflows |
@@ -87,7 +88,7 @@ All projects use conventional commit messages (feat:, chore:, fix:). This is con
 ## Summary
 
 | Dimension | Status |
-|-----------|--------|
+| ----------- | -------- |
 | Branch convention | ✅ Consistent (`development`) |
 | .gitignore | ✅ 14/14 present |
 | Dependency manifest | ⚠️ 2 missing (rhixecompany-comics, youtube-downloader) |
@@ -95,6 +96,7 @@ All projects use conventional commit messages (feat:, chore:, fix:). This is con
 | Commit convention | ✅ Conventional commits used |
 
 ### Quick Wins
+
 1. Add `package.json` to **rhixecompany-comics** (Next.js 16 + React 19 project without a manifest!)
 2. Add `requirements.txt` or pyproject.toml to **youtube-downloader**
 3. Add basic `ci.yml` to the 5 repos without CI (profile, Python-projects, university-libary-jsm, xamehi, youtube-downloader)

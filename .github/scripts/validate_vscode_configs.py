@@ -4,6 +4,7 @@
 Async CLI for checking JSON syntax, required fields, and formatter
 conflicts across all .vscode/ directories in a workspace.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -11,7 +12,7 @@ import asyncio
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 
 def parse_args() -> argparse.Namespace:
@@ -23,7 +24,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--workspace", type=str, default=".", help="Root directory (default: .)")
     parser.add_argument("--output", type=str, default="", help="Write a summary report to this file path")
     parser.add_argument("--report", type=str, default="", help="Alias for output report path")
-    parser.add_argument("--allow-empty", action="store_true", help="Exit successfully when no .vscode JSON files are found")
+    parser.add_argument(
+        "--allow-empty", action="store_true", help="Exit successfully when no .vscode JSON files are found"
+    )
     parser.add_argument("--fix", action="store_true", help="Auto-fix simple issues (not yet implemented)")
     return parser.parse_args()
 
@@ -36,8 +39,8 @@ def check_json_syntax(content: str) -> str | None:
         return f"Invalid JSON: {e.msg} at line {e.lineno}, col {e.colno}"
 
 
-def check_formatter_conflicts(data: Any) -> List[str]:
-    warnings: List[str] = []
+def check_formatter_conflicts(data: Any) -> list[str]:
+    warnings: list[str] = []
     if not isinstance(data, dict):
         return warnings
     formatter = data.get("editor.defaultFormatter")
@@ -48,19 +51,17 @@ def check_formatter_conflicts(data: Any) -> List[str]:
                 if isinstance(lang_settings, dict):
                     lf = lang_settings.get("editor.defaultFormatter")
                     if lf and lf != formatter:
-                        warnings.append(
-                            f"Potential formatter conflict: global='{formatter}' vs {key}='{lf}'"
-                        )
+                        warnings.append(f"Potential formatter conflict: global='{formatter}' vs {key}='{lf}'")
     return warnings
 
 
-async def validate_vscode_file(file_path: Path) -> Dict[str, Any]:
+async def validate_vscode_file(file_path: Path) -> dict[str, Any]:
     try:
         content = await asyncio.to_thread(file_path.read_text, encoding="utf-8")
     except Exception as exc:
         return {"file": str(file_path), "error": f"Cannot read: {exc}", "passed": False}
 
-    result: Dict[str, Any] = {"file": str(file_path), "errors": [], "warnings": [], "passed": True}
+    result: dict[str, Any] = {"file": str(file_path), "errors": [], "warnings": [], "passed": True}
     syntax_error = check_json_syntax(content)
     if syntax_error:
         result["errors"].append(syntax_error)
@@ -71,9 +72,8 @@ async def validate_vscode_file(file_path: Path) -> Dict[str, Any]:
     if file_path.name == "settings.json":
         conflicts = check_formatter_conflicts(data)
         result["warnings"].extend(conflicts)
-    if file_path.name == "extensions.json":
-        if "recommendations" not in data:
-            result["warnings"].append("extensions.json missing 'recommendations' array")
+    if file_path.name == "extensions.json" and "recommendations" not in data:
+        result["warnings"].append("extensions.json missing 'recommendations' array")
     return result
 
 
@@ -83,7 +83,7 @@ async def main() -> None:
     report_path = Path(args.report or args.output) if (args.report or args.output) else None
     ignore_parts = {"node_modules", ".git", ".next", "dist", "build", "coverage", "out", ".venv", "venv", "__pycache__"}
     vscode_dirs = list(workspace.rglob(".vscode"))
-    json_files: List[Path] = []
+    json_files: list[Path] = []
     for d in vscode_dirs:
         if d.is_dir() and not any(part in ignore_parts for part in d.parts):
             json_files.extend(f for f in d.glob("*.json") if not any(part in ignore_parts for part in f.parts))
@@ -92,18 +92,20 @@ async def main() -> None:
     if not json_files:
         empty_message = f"No .vscode JSON files found in {workspace}"
         print(empty_message, file=sys.stderr)
-        report_lines.extend([
-            "# VS Code Config Validation Report",
-            "",
-            f"Scanned: {workspace}",
-            "",
-            "## Result",
-            "",
-            "- Passed: 0",
-            "- Failed: 0",
-            "",
-            f"**Status:** {empty_message}",
-        ])
+        report_lines.extend(
+            [
+                "# VS Code Config Validation Report",
+                "",
+                f"Scanned: {workspace}",
+                "",
+                "## Result",
+                "",
+                "- Passed: 0",
+                "- Failed: 0",
+                "",
+                f"**Status:** {empty_message}",
+            ]
+        )
         if report_path:
             report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
         if args.allow_empty:
@@ -131,18 +133,20 @@ async def main() -> None:
             for w in r["warnings"]:
                 print(f"    WARN: {w}")
 
-    report_lines.extend([
-        "# VS Code Config Validation Report",
-        "",
-        f"Scanned: {workspace}",
-        "",
-        "## Result",
-        "",
-        f"- Passed: {len(passed)}",
-        f"- Failed: {len(failed)}",
-        "",
-        f"**Status:** {'passed' if not failed else 'failed'}",
-    ])
+    report_lines.extend(
+        [
+            "# VS Code Config Validation Report",
+            "",
+            f"Scanned: {workspace}",
+            "",
+            "## Result",
+            "",
+            f"- Passed: {len(passed)}",
+            f"- Failed: {len(failed)}",
+            "",
+            f"**Status:** {'passed' if not failed else 'failed'}",
+        ]
+    )
     if report_path:
         report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
 

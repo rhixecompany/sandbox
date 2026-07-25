@@ -10,7 +10,13 @@
     "foxundermoon.shell-format",
     "usernamehw.errorlens",
     "charliermarsh.ruff",
-    "davidanson.vscode-markdownlint"
+    "davidanson.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker",
+    "timonwong.shellcheck",
+    "ms-azuretools.vscode-docker",
+    "bierner.markdown-mermaid",
+    "eamodio.gitlens"
   ],
   "unwantedRecommendations": [
     "ms-vscode.vscode-typescript-tslint-plugin",

@@ -32,4 +32,5 @@ Phase-restart: complete hook remediation after the unconfigure/delete/recreate c
 
 Done when summary is complete, hooks are recreated, and all conflicting docs are fixed with verification commands run.
 ---
+
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

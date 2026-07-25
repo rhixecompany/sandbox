@@ -1,16 +1,19 @@
 # projects/Django-Scrapy-Selenium — Architecture Blueprint
 
 ## Overview
+
 - Detected stack: Node.js, TypeScript, Tailwind, ESLint, Prettier, Django, Python
 - Architectural pattern: Full-stack dual-stack app (Django backend + JavaScript frontend/tooling)
 - Top-level components: docs, tests
 
 ## Component Map
+
 - `docs, tests`
 - Shared config: `.vscode/` when present
 - Docs: `docs/` when present
 
 ## Top-Level Structure
+
 ```text
 Django-Scrapy-Selenium/
 ├── .devcontainer/
@@ -102,13 +105,16 @@ Django-Scrapy-Selenium/
 ```
 
 ## Cross-Cutting Concerns
+
 - Configuration: environment and workspace configs live alongside the project.
 - Testing: test locations should follow the existing project layout.
 - Tooling: keep formatter/linter/editor settings in `.vscode/`.
 
 ## Extension Points
+
 - Add new features within the existing top-level component that matches the current layout.
 - Keep new dependencies aligned with the detected stack.
 
 ## Update Notes
+
 - Regenerate when component boundaries, package dependencies, or folder structure change.

@@ -1,8 +1,9 @@
 import asyncio
-import os
 import json
+import os
 
 SANDBOX = "C:/Users/Alexa/Desktop/SandBox"
+
 
 async def main():
     sandbox_root = SANDBOX
@@ -27,7 +28,7 @@ async def main():
         "projects/university-libary-jsm/.vscode/settings.json",
         "projects/xamehi/.vscode/settings.json",
         "projects/xamehi.tv/.vscode/settings.json",
-        "projects/youtube-downloader/.vscode/settings.json"
+        "projects/youtube-downloader/.vscode/settings.json",
     ]
 
     for rel_path in settings_files:
@@ -69,9 +70,11 @@ async def main():
     if not any(issues.values()):
         print("\n✓ ALL CHECKS PASSED - No issues found")
 
+
 def _load_json(path):
     with open(path) as f:
         return json.load(f)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

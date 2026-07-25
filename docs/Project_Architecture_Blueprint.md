@@ -3,10 +3,12 @@
 Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Workspace Overview
+
 - Multi-project monorepo/workspace with Bun/TypeScript, Django/Python, Go, Rust, Java, Kotlin, PHP, and utility examples.
 - Root-level shared tooling: `.vscode/`, docs, and workspace configuration files.
 
 ## Project Index
+
 | Project | Detected Stack | Architecture Pattern | Docs |
 | --- | --- | --- | --- |
 | `projects/Banking` | Next.js, React, Bun, TypeScript, Tailwind, ESLint, Prettier, Python | JavaScript/Bun application with feature-oriented source layout | `docs/Project_Architecture/projects/Banking/Banking_architecture.md` |
@@ -38,10 +40,12 @@ Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 | `projects/xamehi.tv/frontend` | React, Bun | JavaScript/Bun application with feature-oriented source layout | `docs/Project_Architecture/projects/xamehi.tv/frontend/frontend_architecture.md` |
 
 ## Cross-Cutting Architecture
+
 - Shared workspace-level VS Code configuration and generated docs.
 - Projects are intentionally isolated by folder, with per-project configs under `.vscode/` where needed.
 - Mixed stacks mean architecture docs should be read per project, then as a workspace map.
 
 ## Update Notes
+
 - Regenerate when project roots, dependencies, or folder structure change.
 - Keep per-project docs aligned with current manifests and top-level directories.

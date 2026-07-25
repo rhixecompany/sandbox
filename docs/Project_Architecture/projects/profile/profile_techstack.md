@@ -35,7 +35,7 @@
 ### 2.1 Core Framework
 
 | Technology | Version | Purpose | Justification |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Python** | 3.11+ | Runtime | Mature ecosystem, Django requires 3.8+ |
 | **Django** | 3.0.x | Web framework | Batteries-included: ORM, admin, auth, forms, signals, templates |
 | **Gunicorn** | — | WSGI server | Production-grade, Cloud Run compatible |
@@ -43,7 +43,7 @@
 ### 2.2 Django Packages
 
 | Package | Version (req.txt) | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `Django` | latest | Core framework |
 | `django-ckeditor` | latest | Rich text editing widget |
 | `django-crispy-forms` | latest | Bootstrap 4 form rendering |
@@ -59,7 +59,7 @@
 ### 2.3 Other Python Dependencies
 
 | Package | Purpose |
-|---|---|
+| --- | --- |
 | `sqlparse` | SQL query formatting (Django debug toolbar dependency) |
 | `pytz` | Timezone support |
 | `python-dateutil` | Date parsing utilities |
@@ -74,7 +74,7 @@
 ## 3. Frontend Stack
 
 | Technology | Role | Notes |
-|---|---|---|
+| --- | --- | --- |
 | **HTML5** | Structure | Django Template Language for server-side rendering |
 | **CSS3** | Styling | 4 theme variants (blue, green, purple, default) |
 | **JavaScript** | Interactivity | Custom `script.js` + CKEditor JS |
@@ -87,14 +87,14 @@
 ## 4. Database Stack
 
 | Environment | Engine | Configuration |
-|---|---|---|
+| --- | --- | --- |
 | **Development** | SQLite 3 | `db.sqlite3` in project root — zero config |
 | **Production** | PostgreSQL (Cloud SQL) | Via `rhixecompany/setting.py`, connection through Cloud SQL Auth Proxy |
 
 ### Database Models (4 tables + Django system tables)
 
 | Model | Table (implied) | Key Fields |
-|---|---|---|
+| --- | --- | --- |
 | `Profile` | `base_profile` | user (FK→User), first_name, last_name, email, profile_pic, bio, twitter |
 | `Tag` | `base_tag` | name |
 | `Post` | `base_post` | headline, sub_headline, thumbnail, body (RichText), created, active, featured, slug, tags (M2M) |
@@ -105,7 +105,7 @@
 ## 5. Infrastructure & DevOps
 
 | Technology | Role | Details |
-|---|---|---|
+| --- | --- | --- |
 | **Docker** | Containerization | Base image built in `migrate.yaml` for Cloud Run |
 | **Google Cloud Run** | Serverless hosting | Auto-scaling container platform |
 | **Google Cloud SQL** | Managed PostgreSQL | Private network, Auth Proxy for secure connections |
@@ -134,7 +134,7 @@
 ## 6. Development Tooling
 
 | Tool | Configuration | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | **VS Code** | `.vscode/settings.json` | Editor with Pylance, auto-format on save, organize imports |
 | **Debugpy** | `.vscode/launch.json` | Django runserver debug configuration |
 | **Pylance** | `.vscode/settings.json` | Python language server with basic type checking |
@@ -144,7 +144,7 @@
 ### VS Code Settings Highlights
 
 | Setting | Value |
-|---|---|
+| --- | --- |
 | Default formatter | `ms-python.python` |
 | Format on save | `true` |
 | Organize imports on save | `explicit` |
@@ -156,7 +156,7 @@
 ## 7. Environment Variables
 
 | Variable | Used By | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `SECRET_KEY` | `rhixecompany/setting.py` | Django secret key (Secret Manager) |
 | `APPLICATION_SETTINGS` | Cloud Build + env | Full settings override as env var |
 | `CLOUDRUN_SERVICE_URL` | `rhixecompany/setting.py` | Cloud Run hostname → ALLOWED_HOSTS |
@@ -172,7 +172,7 @@
 ## 8. Version Map
 
 | Layer | Technology | Version (approx.) |
-|---|---|---|
+| --- | --- | --- |
 | **Language** | Python | 3.11+ |
 | **Framework** | Django | 3.0.x |
 | **Database (dev)** | SQLite | 3.x |
@@ -188,7 +188,7 @@
 ## 9. Stack Constraints & Trade-offs
 
 | Constraint | Impact |
-|---|---|
+| --- | --- |
 | **Django 3.0** (not 4.x/5.x) | Lacks modern async ORM, Redis cache, and some security defaults |
 | **SQLite in dev** | No PostgreSQL-specific features testable locally; migration issues possible |
 | **CKEditor 4** (not CKEditor 5) | Older editor, no real-time collaboration, larger bundle size |

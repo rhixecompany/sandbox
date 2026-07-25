@@ -5,12 +5,12 @@ Usage:
     python categorize_skills.py [--skills-dir PATH] [--output PATH] [--format json|csv|md]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -41,9 +41,7 @@ def _parse_tags(fm_text: str) -> list[str]:
                 in_tags = False
         elif in_tags and line.strip().startswith("- "):
             tags.append(line.strip()[2:].strip())
-        elif in_tags and not line.strip():
-            in_tags = False
-        elif in_tags and not line.strip().startswith("- "):
+        elif (in_tags and not line.strip()) or (in_tags and not line.strip().startswith("- ")):
             in_tags = False
     return tags
 
@@ -93,9 +91,20 @@ def _categorize_skills(skills_dir: Path) -> dict:
         primary_cat = None
         for tag in tags:
             tag_lower = tag.lower().replace(" ", "-")
-            if tag_lower in ["development", "devops", "mlops", "security", "research",
-                             "creative", "productivity", "gaming", "qa", "finance",
-                             "data-science", "reference"]:
+            if tag_lower in [
+                "development",
+                "devops",
+                "mlops",
+                "security",
+                "research",
+                "creative",
+                "productivity",
+                "gaming",
+                "qa",
+                "finance",
+                "data-science",
+                "reference",
+            ]:
                 primary_cat = tag_lower
                 break
 
@@ -135,7 +144,7 @@ def format_csv(categories: dict) -> str:
     for cat_name in sorted(categories.keys()):
         for s in sorted(categories[cat_name], key=lambda x: x["name"]):
             tags = "; ".join(s["tags"]) if s["tags"] else ""
-            lines.append(f"{cat_name},{s['name']},\"{s['title']}\",\"{s['description']}\",\"{tags}\",{s['path']}")
+            lines.append(f'{cat_name},{s["name"]},"{s["title"]}","{s["description"]}","{tags}",{s["path"]}')
     return "\n".join(lines)
 
 

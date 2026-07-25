@@ -1,0 +1,30 @@
+copilot (3 credentials):
+  #1  GITHUB_TOKEN         api_key env:GITHUB_TOKEN
+  #2  COPILOT_GITHUB_TOKEN api_key env:COPILOT_GITHUB_TOKEN ←
+  #3  api-key-3            api_key manual
+
+gemini (1 credentials):
+  #1  GOOGLE_API_KEY       api_key env:GOOGLE_API_KEY rate-limited (429) (ready to retry) ←
+
+huggingface (1 credentials):
+  #1  HF_TOKEN             api_key env:HF_TOKEN ←
+
+nous (1 credentials):
+  #1  device_code          oauth   device_code ←
+
+ollama-cloud (1 credentials):
+  #1  OLLAMA_API_KEY       api_key env:OLLAMA_API_KEY ←
+
+openai-api (2 credentials):
+  #1  api-key-1            api_key manual ←
+  #2  OPENAI_API_KEY       api_key env:OPENAI_API_KEY
+
+openai-codex (2 credentials):
+  #1  openai-codex-oauth-1 oauth   device_code rate-limited usage_limit_reached (429) (14d 18h left)
+  #2  device_code          oauth   device_code ←
+
+openrouter (1 credentials):
+  #1  OPENROUTER_API_KEY   api_key env:OPENROUTER_API_KEY rate-limited (429) (6h 17m left)
+
+xai-oauth (1 credentials):
+  #1  device_code          oauth   device_code ←

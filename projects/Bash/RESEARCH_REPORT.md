@@ -5,7 +5,7 @@
 **Type:** Automation toolkit (Bun/TypeScript CLI + PowerShell + Bash orchestration)
 **Tech Stack:** TypeScript (strict), Node >=18, Bun >=1.3.14, PowerShell 5.1+, Bash, Vite
 **Status:** Active
-**Updated:** 2026-07-16
+**Updated:** 2026-07-24
 
 ---
 
@@ -13,27 +13,34 @@
 
 | Project | Why Relevant |
 |---------|--------------|
-| tsx (4.x) | Zero-config TS execution via esbuild — Bun makes tsx redundant |
-| ts-node | Legacy Node.js TS execution — Bun's native TS support is faster |
+| tsx (4.x) | Zero-config TS execution — Bun makes tsx redundant |
+| ts-node | Legacy Node.js TS execution — Bun's native TS is faster |
 | tsup | Bundle TS with esbuild — partially replaced by `bun build` |
-| Bun CLI Applications guide (oneuptime) | Production CLI patterns: parseArgs, subcommands, single-binary |
-| awesome-bun | Curated Bun ecosystem resources and tooling comparisons |
+| Bun CLI Applications (oneuptime) | Production CLI patterns: parseArgs, subcommands |
+| CLI Builder (MCP Market) | Standardized Bun/TS CLI framework, subcommands, JSON output |
+
+---
 
 ## Key Findings
 
-**Bun acquired by Anthropic (Dec 3, 2025):** Bun remains open source + MIT-licensed; >7M monthly downloads, 82K+ GitHub stars. It powers Claude Code's native installer. This de-risks Bun as a long-term runtime choice for the toolkit.
+**Bun rewritten from Zig to Rust (May 2026):** Sumner rewrote Bun from Zig to Rust using AI tools — >1M lines, passed test suite, merged within days. Addresses memory safety for Anthropic-scale workloads.
 
-**Bun v1.3.x stable (2026):** all-in-one runtime + package manager + bundler + test runner. Beats Node 22 on startup (8ms vs ~35ms), HTTP throughput (115K vs 48K req/s), and I/O (310ms vs 850ms for 10K files).
+**Bun v1.3.14 stable (May 13, 2026):** `Bun.$` cross-platform shell API replaces `dax`/`cross-env`/`rimraf` — portable across macOS, Linux, Windows. 8ms cold start, 115K req/s HTTP.
 
-**Phase-Based Orchestration:** 6-phase pipeline (Discovery → Clone → Triage → Debug → Remediation → Cross-Reference) with 15+ wrappers across 3 languages (.sh, .ps1, .bat) and centralized TypeScript in `src/`.
+**TS 7.0 "Corsa" (mid/late 2026):** Go-based compiler — 5-10× faster compiles, ~50% less memory. Breaking: `--strict` on by default, ES5/AMD/UMD dropped, `node`/`node10` resolution removed.
 
-## Cheatsheets & Quick Reference
+**Phase-Based Orchestration:** 6-phase pipeline (Discovery → Clone → Triage → Debug → Remediation → Cross-Reference) with 15+ wrappers across .sh + .ps1 + .bat.
+
+---
+
+## Cheatsheets
 
 | Topic | URL |
 |-------|-----|
-| Bun TypeScript config | https://bun.com/docs/typescript |
-| Bun + Vite integration | https://bun.com/docs/guides/ecosystem/vite |
-| Bun CLI Applications | https://oneuptime.com/blog/post/2026-01-31-bun-cli-applications/view |
+| Bun TypeScript | https://bun.com/docs/typescript |
+| Bun + Vite | https://bun.com/docs/guides/ecosystem/vite |
+| Bun CLI apps | https://oneuptime.com/blog/post/2026-01-31-bun-cli-applications/view |
+| DeployHQ Bun | https://www.deployhq.com/cheatsheets/bun |
 | ESLint flat config | https://eslint.org/docs/latest/use/configure/configuration-files |
 | Vitest | https://vitest.dev/guide/ |
 
@@ -44,14 +51,19 @@ bash tests/verify-dryrun.sh
 powershell -File orchestrator-unified.ps1 -Mode discover
 ```
 
+---
+
 ## Best Practices
-1. **Bun-native tooling** — `bun run` over `bunx tsx` for project TS files (faster, fewer deps)
+
+1. **Bun-native** — `bun run` over `bunx tsx` for project TS files (faster, fewer deps)
 2. **Multi-wrapper parity** — every script ships as `.sh` + `.ps1` + `.bat`
 3. **Dry-run first** — all destructive commands support `--dry-run` for safe preview
-4. **TypeScript strict** — full strict with `noUncheckedIndexedAccess`, `noImplicitOverride`
+4. **TypeScript strict** — `noUncheckedIndexedAccess`, `noImplicitOverride` on
 5. **Separate type-checking** — Bun strips types on-the-fly; run `tsc --noEmit` separately
 6. **Lockfile integrity** — commit `bun.lock`; verify in CI
-7. **TS 6/7 support** — keep `"types": ["bun"]` in `compilerOptions` (required on TS 6+)
+7. **TS 5.9+** — `strictInference: true`, `verbatimModuleSyntax: true`, `"types": ["bun"]`
+
+---
 
 ## Common Pitfalls
 
@@ -63,6 +75,8 @@ powershell -File orchestrator-unified.ps1 -Mode discover
 | Concurrent `fs.readFile` on Bun | Limit concurrent file ops (risk of segfault) |
 | Workspace `resolutions` unsupported | Manual dedup with `npm ls` |
 
+---
+
 ## Performance
 
 | Metric | Bun 1.3 | Node.js 22 |
@@ -73,22 +87,31 @@ powershell -File orchestrator-unified.ps1 -Mode discover
 | Package install (Next.js) | 4s | 28s (npm) |
 
 - `Bun.file()`/`Bun.write()` — 2–3× faster than node:fs
-- `Bun.sqlite` — outperforms better-sqlite3; `bun build --compile` — standalone binaries
+- `Bun.$` shell — cross-platform, no need for dax/cross-env/rimraf
+
+---
 
 ## Security
 
-Bun (like Node.js) has **no built-in permissions system** — Deno 2 is the only runtime with sandboxing. Mitigations used by the project:
+Bun has **no built-in permissions system** — Deno 2 is the only runtime with sandboxing. **June 2026 alert:** npm worm targeting Bun via `binding.gyp` credential stealers (Miasma/Hades variant) compromised 23 packages. Mitigations:
 
 1. **Lockfile verification** in CI — prevents supply chain tampering
 2. **Minimal trustedDependencies** — only `protobufjs`, `esbuild`, `sharp`
-4. **`dotenv-safe`** for env validation — no hardcoded secrets
-5. **`eslint-plugin-security`** + CodeQL-ready for code scanning
+3. **`dotenv-safe`** for env validation — no hardcoded secrets
+4. **`eslint-plugin-security`** + CodeQL-ready for code scanning
+5. **`bun audit`** — regularly scan for known vulnerabilities
+
+---
 
 ## Related Projects (in workspace)
-- **comicwise** — Bun/TS subproject sharing wrapper patterns and quality gates
-- **Banking** — PowerShell + Bash scripts sharing orchestration infrastructure
-- **ecom** — uses install.sh pattern derived from Bash toolkit
+
+- **Banking** — Bun package manager (`bun.lock`) + TS strict + Drizzle ORM + Next.js App Router
+- **comicwise** — TS strict + Next.js; shares CI quality gates and lint patterns
+- **ecom** — uses install.sh pattern derived from Bash toolkit; Python/Django stack
+- **mcp-servers** — TypeScript implementations share ESLint config and module resolution
 - **root SandBox** — shared CI in `.github/workflows/bash-scripts-ci.yml`
+
+---
 
 ## Resources
 
@@ -97,10 +120,14 @@ Bun (like Node.js) has **no built-in permissions system** — Deno 2 is the only
 | Bun TypeScript Docs | https://bun.com/docs/typescript |
 | Bun + Vite Guide | https://bun.com/docs/guides/ecosystem/vite |
 | Node.js API compat tracker | https://bun.com/docs/runtime/nodejs-apis |
-| Anthropic × Bun announcement | https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone |
+| Anthropic announcement | https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone |
+| Bun Wikipedia | https://en.wikipedia.org/wiki/Bun_(software) |
 | SPECS.md | `projects/Bash/SPECS.md` |
 | ORCHESTRATOR-IMPLEMENTATION.md | `projects/Bash/ORCHESTRATOR-IMPLEMENTATION.md` |
 
+---
+
 ### Methodology
-- 5 web searches (Bun vs Node 2026, Anthropic acquires Bun, Bun CLI apps, TS support) + 2 web_extract verifications (anthropic.com, bun.com/docs/typescript).
-- **Last verified:** 2026-07-16.
+3 Tavily advanced searches (`time_range=year`) + 3 prior searches (2026-07-16). Verified bun.com, deployhq.com, Wikipedia.
+
+**Last verified:** 2026-07-24.

@@ -1,102 +1,135 @@
-# Resume_maker — Research Report
+# Resume_maker Research Report
 
-> **Project:** Resume_maker — CLI document generator (JSON → Markdown + PDF)
-> **Stack:** TypeScript (strict), Bun runtime, markdown-pdf (PhantomJS), Zod
-> **Status:** Active
-> **Date:** 2026-07-16
+## Project Overview
+- **Project**: Resume_maker
+- **Type**: CLI Document Generator (JSON → Markdown + PDF)
+- **Status**: Active
 
----
+## Technology Stack
+- **Runtime**: Bun (latest), Node.js (fallback)
+- **Language**: TypeScript ^5 (strict mode)
+- **PDF Generation**: markdown-pdf ^11.0.0 (uses PhantomJS - deprecated)
+- **Linting/Quality**: ESLint 10.x (flat config), Prettier 3.x, Markdownlint, CSpell
+- **Module System**: ES Modules (`"type": "module"`)
+- **Entry Point**: `index.ts`
 
-## 1. Executive Summary
+## Key Queries Researched
+1. CLI resume generator markdown PDF TypeScript Bun best practices
+2. markdown-pdf npm package TypeScript configuration puppeteer options
+3. Bun CLI TypeScript strict ESLint Prettier Markdownlint CSpell configuration
+4. CLI generator tool TypeScript Bun JSON input markdown output best practices
+5. markdown-pdf PhantomJS deprecated alternatives puppeteer
+6. Bun CLI TypeScript best practices single executable compilation
+7. ESLint 10 flat config TypeScript strict configuration
+8. markdownlint markdown linting best practices CSpell spell checking
 
-Resume_maker's stack (Bun + TypeScript strict + markdown-pdf) is well-suited for a CLI document generator. Bun delivers fast cold start, native TypeScript execution, and standalone binary compilation. Primary risk is the PDF engine's heavyweight dependency — mitigated by always saving Markdown first. Note: **markdown-pdf v11 renders via PhantomJS** (HTML5 Boilerplate → PDF), not Puppeteer as previously assumed — PhantomJS is unmaintained, a supply-chain consideration.
+## Findings
 
-## 2. Bun Runtime (v1.3.x, acquired by Anthropic Dec 2025)
+### 1. Similar CLI Resume Generators & Tools
+- **awesome-markdown-resumes** (GitHub): Curated list of tools, templates, examples for markdown resumes
+  - markdown-resume (Node.js CLI for converting Markdown resumes to various formats)
+  - resume-cli (Command-line tool for JSON Resume - can convert from Markdown)
+  - md2resume (PHP-based CLI tool to generate HTML and PDF resumes from Markdown)
+  - MarkdownResume.app (Online editor with PDF export via Puppeteer)
+  - Resumey.Pro (Web-based markdown resume builder with themes)
+  - YAMLResume (YAML-based resume with LaTeX/XeTeX PDF generation)
 
-- **Cold start:** single-digit ms vs Node.js ~45 ms — critical for CLI UX.
-- **Native TypeScript:** full syntax — no tsc or ts-node needed.
-- **Standalone binaries:** `bun build --compile --target=bun-windows-x64` → single executable.
-- **Acquired by Anthropic** (Dec 3, 2025); remains MIT-licensed, >7M monthly downloads, 82K+ stars. Long-term runtime de-risked.
+- **md-to-pdf** (npm): Simple CLI using Marked + Puppeteer (modern alternative to markdown-pdf)
+- **markdown-pdf** (npm): Uses **deprecated PhantomJS** (since 2018) - major concern
+- **JSON Resume ecosystem**: Standardized JSON schema with multiple themes/renderers
 
-## 3. CLI Architecture
+### 2. markdown-pdf Critical Issues
+- **Uses PhantomJS** which has been **officially deprecated since 2018**
+- No longer maintained; security vulnerabilities unpatched
+- Alternatives: **md-to-pdf** (uses Puppeteer/headless Chrome), **markdown-pdf-ng**, **md-preview-pdf**
+- Migration path: Replace markdown-pdf with md-to-pdf or direct Puppeteer implementation
 
-- **Argument parsing:** built-in `util.parseArgs()` — no external library.
-- **Subcommand dispatch:** map commands (`resume`, `cover-letter`) to typed handlers.
-- **Colorized output:** TTY-aware ANSI codes — no chalk needed.
-- **Exit codes:** `0` success, `1` error.
-- **Cross-compile** for Windows/Linux/macOS.
-- **Standalone binaries:** `bun build --compile --target=bun-windows-x64` → single executable.
+### 3. Bun CLI Best Practices (from official docs & community)
+- **Argument parsing**: Use `util.parseArgs` (built-in) or `meow`/`commander` for complex CLIs
+- **Shebang**: `#!/usr/bin/env bun` at entry point
+- **Single executable compilation**: `bun build ./cli.ts --compile --outfile mycli`
+- **Cross-platform**: Can target different OSes via `--target` flag
+- **Type checking**: Run `bun run typecheck` separately (Bun transpiles but doesn't type-check)
+- **ES Modules**: Native support, use `"type": "module"` in package.json
 
-## 4. TypeScript Configuration
+### 4. TypeScript Strict Configuration (tsconfig.json)
+Current config is solid but could add:
+```json
+{
+  "strict": true,
+  "noUncheckedIndexedAccess": true,
+  "exactOptionalPropertyTypes": true,
+  "noImplicitOverride": true,
+  "noFallthroughCasesInSwitch": true,
+  "noUnusedLocals": true,    // Consider enabling
+  "noUnusedParameters": true // Consider enabling
+}
+```
 
-Current `strict: true` is solid. Recommended additions:
+### 5. ESLint 10 Flat Config Best Practices
+- Use `typescript-eslint` configs: `tseslint.configs.strict` for strict mode
+- Target only TypeScript files: `{ files: ['**/*.ts'] }`
+- Disable `no-unused-vars` (base) in favor of `@typescript-eslint/no-unused-vars`
+- Use `eslint.config.js` (ESM) not `.eslintrc.json`
 
-- `noUnusedLocals: true` — catches dead code.
-- `noUnusedParameters: true` — prefix unused params with `_`.
-- `exactOptionalPropertyTypes: true` — stricter optional handling.
-- Add `"types": ["bun"]` (required on TS 6/7). Always run `bun tsc --noEmit` in CI.
+### 6. Markdownlint Configuration Best Practices
+Current config is comprehensive. Key rules:
+- **MD007**: Indent 2 spaces for lists
+- **MD013**: Line length 500 (relaxed for tables)
+- **MD022**: Headers surrounded by blank lines
+- **MD024**: Allow duplicate headers (disabled)
+- **MD033**: Allow specific HTML elements (well configured)
+- **MD040**: Fenced code blocks must have language
+- Consider enabling MD024 (duplicate headers) for stricter docs
 
-## 5. Input Validation (Zod 4)
+### 7. CSpell Configuration Best Practices
+- Create `cspell.json` at project root (not in `.vscode/`)
+- Add custom dictionary for domain terms (e.g., "markdown-pdf", "Bun", "TypeScript")
+- Ignore patterns: code blocks, inline code, proper nouns
+- Use `cspell.json` with version field: `{"version": "0.2"}`
+- Run via `cspell "**/*.{md,ts}"` in package.json scripts
 
-- **Zod 4 is now stable** (zod.dev) — TypeScript-first, zero external deps, 2kb gzipped core.
-- **`safeParse` preferred** over `parse` — returns `{ success, data, error }`, no thrown exceptions.
-- **Inferred types** via `z.infer<typeof ResumeSchema>` — single source of truth.
-- **Recommendation:** replace manual `validateResumeData()` with Zod schemas.
+### 8. PDF Generation Alternatives (Modern)
+| Tool | Engine | Status | Notes |
+|------|--------|--------|-------|
+| markdown-pdf | PhantomJS | ❌ Deprecated | Security risks, no updates since 2018 |
+| md-to-pdf | Puppeteer | ✅ Active | Simple CLI, programmatic API |
+| md-to-pdf-ng | Puppeteer | ✅ Active | Fork with enhancements |
+| md-preview-pdf | Puppeteer | ✅ Active | Mermaid, math, syntax highlighting |
+| Direct Puppeteer | Puppeteer | ✅ Active | Full control, singleton browser pattern |
 
-## 6. Markdown → PDF Conversion
+### 9. Common Pitfalls & Solutions
+1. **PhantomJS in markdown-pdf**: Migrate to Puppeteer-based solution
+2. **ESLint + Bun**: Run `bun --bun eslint .` or use Node for linting
+3. **TypeScript strict mode**: Enable from project start; harder to add later
+4. **CLI argument parsing**: Use `util.parseArgs` (stdlib) or `meow` for help/version
+5. **PDF generation failure**: Always save Markdown first, then convert (current pattern is good)
+6. **Spell check false positives**: Configure ignore patterns for code blocks, proper nouns
+7. **Single executable**: Test cross-platform; ESM support still maturing
 
-Current stack: `markdown-pdf` v11 (marked/Remarkable → HTML → PhantomJS → PDF).
+### 10. Recommended Improvements for Resume_maker
+1. **Migrate PDF generation** from markdown-pdf to md-to-pdf or direct Puppeteer
+2. **Add cspell.json** configuration file
+3. **Enable stricter TypeScript flags** (noUnusedLocals, noUnusedParameters)
+4. **Add Bun compile script** for standalone executable distribution
+5. **Consider JSON Resume schema** compatibility for interoperability
+6. **Add CI/CD pipeline** for lint, typecheck, test on push
+7. **Document CLI flags** with `--help` output examples
 
-| Factor | Detail |
-|--------|--------|
-| Pros | Proven, customizable CSS, CLI + programmatic API |
-| Cons | PhantomJS unmaintained (~heavy, security debt), slower first-run |
-| Mitigation | Save Markdown always; PDF as optional second pass |
-| Alternatives | Puppeteer (active, 8M+ weekly dl), @react-pdf/renderer, PDFKit |
+## Architecture Pattern Validation
+The **Pipeline Processing Pattern** (JSON → Validate → Generate → Markdown → PDF) is sound and follows CLI best practices:
+- Input validation before processing ✓
+- Per-document isolation (one failure doesn't block others) ✓
+- Markdown preserved on PDF failure ✓
+- Clear separation of concerns ✓
 
-## 7. Security Considerations
-
-1. **Input validation:** always use Zod `safeParse` — never trust raw input.
-2. **Path traversal:** resolve paths relative to project root; reject `../` escapes.
-3. **Output safety:** require `--force` to overwrite existing files.
-4. **Supply chain:** `bun install --frozen-lockfile` in CI; pin exact versions.
-5. **Markdown injection:** escape user text in templates.
-6. **PDF engine:** prefer an actively-maintained renderer (Puppeteer) over PhantomJS.
-
-## 8. Common Pitfalls
-
-- **Windows paths:** PhantomJS/Chromium launch paths differ — test PDF on target OS.
-- **ESM:** project uses `"type": "module"` — use `import` everywhere.
-- **Headless launch:** may fail without system libs (libnss3, libx11).
-- **PhantomJS EOL:** unmaintained — plan migration to Puppeteer.
-- **High Bun open issues (~4,800):** stick to well-tested APIs.
-
-## 9. Competitive Landscape
-
-| Project | Stack | Differentiator |
-|---------|-------|----------------|
-| JSON Resume | JSON Schema + CLI | Community schema — consider adopting format |
-| RenderCV | Python + Typst | High-quality PDF, Python-only |
-| OpenResume | React, Next.js | Web-based, not CLI |
-| **Resume_maker** | **Bun + TS strict** | Fastest cold start, native TS, standalone binary |
-
-## 10. Recommendations
-
-1. Adopt Zod 4 — replace manual validation with type-safe schemas.
-2. Align with JSON Resume schema for community compatibility.
-3. Add `bun build --compile` for zero-dep binary distribution.
-4. Enable `noUnusedLocals`/`noUnusedParameters` in tsconfig.
-5. Two-phase output: Markdown always, PDF optional.
-6. Plan migration from PhantomJS (markdown-pdf) to Puppeteer.
-7. Add smoke tests with `bun test`.
-
-## Related Projects
-- See `projects/RESEARCH_INDEX.md` for cross-project references (Bash shares Bun/CLI patterns).
-
-## Resources
-| Bun acquires Anthropic | https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone |
-| Bun TypeScript docs | https://bun.com/docs/typescript |
-| Zod 4 | https://zod.dev/ |
-| markdown-pdf (npm) | https://www.npmjs.com/package/markdown-pdf |
-| Puppeteer | https://pptr.dev/ |
-| JSON Resume | https://jsonresume.org/ |
+## References
+- [Bun CLI Guide](https://bun.com/docs/bundler/executables)
+- [How to Build CLI with Bun](https://oneuptime.com/blog/post/2026-01-31-bun-cli-applications/view)
+- [TypeScript Strict Config](https://www.reddit.com/r/typescript/comments/1ixh398/recommendations_for_a_full_strict_type_tsconfig)
+- [ESLint Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files)
+- [markdownlint Rules](https://github.com/DavidAnson/markdownlint)
+- [CSpell Configuration](https://cspell.org/docs/configuration/)
+- [awesome-markdown-resumes](https://github.com/markdownresume/awesome-markdown-resumes)
+- [md-to-pdf (modern alternative)](https://github.com/simonhaenisch/md-to-pdf)
+- [PhantomJS Deprecation](https://smali-kazmi.medium.com/from-phantomjs-to-puppeteer-building-a-modern-html-to-pdf-converter-987def3caf1f)

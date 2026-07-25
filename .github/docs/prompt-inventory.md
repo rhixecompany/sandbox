@@ -3,7 +3,7 @@
 > Prompts: 211
 
 | Prompt | Title | Version | Tags | Refs | Missing Refs |
-|--------|-------|---------|------|------|--------------|
+| -------- | ------- | --------- | ------ | ------ | -------------- |
 | add-educational-comments.prompt | Add Educational Comments
 ... | 1.0.0
 ... | ml, prompts, specification... | 3 | 2 |

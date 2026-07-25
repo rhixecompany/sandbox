@@ -1,0 +1,71 @@
+{
+  "source": "official",
+  "source_url": "official/migration\\openclaw-migration",
+  "bundle_hash": "sha256:c42152665d5d4a461ab4821d5da271cbe4c0ce0ba938b9b21f1246664f33f7c4",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "agent_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 1148,
+      "match": "self.record(\"workspace-agents\", \"workspace/AGENTS.md\", \"\", \"skipped\", \"Source file not found\")",
+      "description": "references agent config files (could persist malicious instructions across sessions)"
+    },
+    {
+      "pattern_id": "agent_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 1335,
+      "match": "# OpenClaw's AGENTS.md, MEMORY.md, etc.",
+      "description": "references agent config files (could persist malicious instructions across sessions)"
+    },
+    {
+      "pattern_id": "hermes_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 419,
+      "match": "``~/.hermes/config.yaml`` (the real Hermes home) instead of the broken",
+      "description": "references Hermes configuration files directly"
+    },
+    {
+      "pattern_id": "hermes_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 420,
+      "match": "``~/.Hermes/config.yaml``.",
+      "description": "references Hermes configuration files directly"
+    },
+    {
+      "pattern_id": "hermes_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 2949,
+      "match": "\"- Review `~/.hermes/config.yaml` for any adjustments\",",
+      "description": "references Hermes configuration files directly"
+    },
+    {
+      "pattern_id": "hermes_config_mod",
+      "severity": "critical",
+      "category": "persistence",
+      "file": "scripts\\openclaw_to_hermes.py",
+      "line": 3116,
+      "match": "print(\"    1. Review ~/.hermes/config.yaml\")",
+      "description": "references Hermes configuration files directly"
+    }
+  ],
+  "rules": [
+    "agent_config_mod",
+    "hermes_config_mod"
+  ],
+  "scanned_at": "2026-07-16T02:34:18.014465+00:00",
+  "summary": "openclaw-migration: dangerous \u2014 6 finding(s) in persistence",
+  "fresh": true
+}

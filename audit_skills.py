@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Read-only skill-resolution + MCP-reference audit for prompt library."""
-import os, re, glob, json
+
+import glob
+import json
+import os
+import re
+
 import yaml
 
 SKILLS_ROOT = r"C:/Users/Alexa/AppData/Local/hermes/skills"
@@ -8,25 +13,52 @@ PROMPTS_ROOT = r"C:/Users/Alexa/AppData/Local/hermes/prompts"
 REPORT_PATH = os.path.join(PROMPTS_ROOT, "docs", "skill-resolution-audit.md")
 
 KNOWN_GOOD_MCP = {
-    "ast-grep", "code-sandbox", "codex", "copilot-mcp", "fetch", "filesystem",
-    "github", "linear", "mcp-docker", "memory", "mindstudio", "playwright",
-    "sequential-thinking", "smithery",
+    "ast-grep",
+    "code-sandbox",
+    "codex",
+    "copilot-mcp",
+    "fetch",
+    "filesystem",
+    "github",
+    "linear",
+    "mcp-docker",
+    "memory",
+    "mindstudio",
+    "playwright",
+    "sequential-thinking",
+    "smithery",
 }
 
 # Hermes built-in toolsets (these are toolSETS, not MCP servers -> mislabeled if under tool:)
 KNOWN_TOOLSETS = {
-    "terminal", "file", "search_files", "browser", "computer_use", "vision",
-    "web_search", "web_extract", "notes", "memory", "shell", "fs",
+    "terminal",
+    "file",
+    "search_files",
+    "browser",
+    "computer_use",
+    "vision",
+    "web_search",
+    "web_extract",
+    "notes",
+    "memory",
+    "shell",
+    "fs",
     # common aliases seen in frontmatter
-    "code_execution", "chromium", "scrape", "search", "read", "write",
+    "code_execution",
+    "chromium",
+    "scrape",
+    "search",
+    "read",
+    "write",
 }
 
 # Build the set of real skill dir names: every directory that contains a SKILL.md
 real_skill_dirs = set()
-for dirpath, dirnames, filenames in os.walk(SKILLS_ROOT):
+for dirpath, _dirnames, filenames in os.walk(SKILLS_ROOT):
     if "SKILL.md" in filenames:
         # the skill dir is the directory holding SKILL.md
         real_skill_dirs.add(os.path.basename(dirpath))
+
 
 def split_deps(deps):
     """Return (skills set, prompts set, tools set, raw list)."""
@@ -40,12 +72,13 @@ def split_deps(deps):
             continue
         raw.append(d)
         if d.startswith("skill:"):
-            skills.add(d[len("skill:"):])
+            skills.add(d[len("skill:") :])
         elif d.startswith("prompt:"):
-            prompts.add(d[len("prompt:"):])
+            prompts.add(d[len("prompt:") :])
         elif d.startswith("tool:"):
-            tools.add(d[len("tool:"):])
+            tools.add(d[len("tool:") :])
     return skills, prompts, tools, raw
+
 
 # Collect all prompt names referenced so we can resolve prompt: deps too
 prompt_files = sorted(glob.glob(os.path.join(PROMPTS_ROOT, "*.prompt.md")))
@@ -84,7 +117,7 @@ for pf in prompt_files:
     if isinstance(tv, list):
         for t in tv:
             if isinstance(t, str) and t.startswith("tool:"):
-                extra_tools.add(t[len("tool:"):])
+                extra_tools.add(t[len("tool:") :])
 
     # Normalize skill references: combine deps skills + skills list
     skill_refs = deps_skills | skills_list
@@ -98,7 +131,7 @@ for pf in prompt_files:
             issues["UNRESOLVED"].append(s)
     for t in sorted(tool_refs):
         if t.startswith("mcp-"):
-            server = t[len("mcp-"):]
+            server = t[len("mcp-") :]
             if server not in KNOWN_GOOD_MCP:
                 issues["UNKNOWN_MCP"].append(t)
         else:
@@ -112,15 +145,17 @@ for pf in prompt_files:
         total_unresolved += len(issues["UNRESOLVED"])
         total_unknown_mcp += len(issues["UNKNOWN_MCP"])
         total_mislabeled += len(issues["MISLABELED_TOOL"])
-    results.append({
-        "file": fname,
-        "fail": fail,
-        "unresolved": issues["UNRESOLVED"],
-        "unknown_mcp": issues["UNKNOWN_MCP"],
-        "mislabeled": issues["MISLABELED_TOOL"],
-        "skill_refs": sorted(skill_refs),
-        "tool_refs": sorted(tool_refs),
-    })
+    results.append(
+        {
+            "file": fname,
+            "fail": fail,
+            "unresolved": issues["UNRESOLVED"],
+            "unknown_mcp": issues["UNKNOWN_MCP"],
+            "mislabeled": issues["MISLABELED_TOOL"],
+            "skill_refs": sorted(skill_refs),
+            "tool_refs": sorted(tool_refs),
+        }
+    )
 
 failing = [r for r in results if r.get("fail")]
 print(f"Total prompt files scanned: {len(prompt_files)}")

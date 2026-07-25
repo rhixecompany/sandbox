@@ -3,17 +3,15 @@
 import asyncio
 import os
 import re
-import sys
 
-skill_dir = os.path.join(os.environ.get("USERPROFILE", "C:\\Users\\Alexa"),
-                         "AppData", "Local", "hermes", "skills")
+skill_dir = os.path.join(os.environ.get("USERPROFILE", "C:\\Users\\Alexa"), "AppData", "Local", "hermes", "skills")
 
 stats = {"total": 0, "added_vc": 0, "added_wu": 0, "added_wf": 0, "added_bp": 0, "errors": 0}
 errors_list = []
 
 
 def read_skill(path):
-    with open(path, "r", encoding="utf-8", errors="replace") as f:
+    with open(path, encoding="utf-8", errors="replace") as f:
         return f.read()
 
 
@@ -91,9 +89,9 @@ def add_when_to_use(content, skill_name, path):
 
     triggers = infer_triggers(content, skill_name)
     # Generate generic triggers based on skill name/purpose
-    name_lower = skill_name.lower()
+    skill_name.lower()
 
-    lines = [f"\n## When to Use\n"]
+    lines = ["\n## When to Use\n"]
     if triggers:
         lines.append("")
         for t in triggers[:4]:
@@ -104,7 +102,7 @@ def add_when_to_use(content, skill_name, path):
         lines.append(f"- When managing {skill_name} infrastructure or configurations")
         lines.append(f"- When automating or debugging {skill_name} workflows")
 
-    lines.append(f"- **Triggers**: \"{skill_name.lower()}\" required for a project")
+    lines.append(f'- **Triggers**: "{skill_name.lower()}" required for a project')
     lines.append("")
 
     # Find insertion point: before first ## section that's after the H1 and overview
@@ -148,7 +146,7 @@ def add_best_practices(content, skill_name):
     if has_section(content, ["Best Practices"]):
         return content, None
 
-    bp = f"""
+    bp = """
 ## Best Practices
 
 1. **Prepare before executing**: Ensure all prerequisites and dependencies are in place
@@ -163,7 +161,7 @@ def add_best_practices(content, skill_name):
 
 async def main():
     # Walk all skills
-    for root, dirs, files in os.walk(skill_dir):
+    for root, _dirs, files in os.walk(skill_dir):
         parts = root.replace("\\", "/").split("/")
         if "templates" in parts:
             continue
@@ -179,7 +177,6 @@ async def main():
 
             try:
                 content = read_skill(path)
-                original = content
                 skill_name = infer_skill_name(content, path)
                 changes = []
 
@@ -196,7 +193,9 @@ async def main():
                     stats["added_wu"] += 1
 
                 # 3. Add Workflow
-                if not has_section(content, ["Workflow", "Process", "Pipeline", "Phases", "The Process", "Decision Flow"]):
+                if not has_section(
+                    content, ["Workflow", "Process", "Pipeline", "Phases", "The Process", "Decision Flow"]
+                ):
                     content, _ = add_workflow(content, skill_name)
                     changes.append("wf")
                     stats["added_wf"] += 1
@@ -216,8 +215,8 @@ async def main():
                 errors_list.append(f"{path}: {e}")
                 print(f"  ERROR {path}: {e}")
 
-    print(f"\n{'='*60}")
-    print(f"Done. Stats:")
+    print(f"\n{'=' * 60}")
+    print("Done. Stats:")
     print(f"  Total skills scanned: {stats['total']}")
     print(f"  Verification Checklists added: {stats['added_vc']}")
     print(f"  When to Use sections added: {stats['added_wu']}")
@@ -225,7 +224,7 @@ async def main():
     print(f"  Best Practices added: {stats['added_bp']}")
     print(f"  Errors: {stats['errors']}")
     if errors_list:
-        print(f"\nErrors:")
+        print("\nErrors:")
         for e in errors_list:
             print(f"  {e}")
 

@@ -1,0 +1,36 @@
+extends: relaxed
+
+rules:
+  # Line length: relaxed for GHA shell blocks and long paths
+  line-length:
+    max: 400
+    level: error
+
+  # Enforce LF line endings
+  new-lines:
+    type: unix
+    level: error
+
+  # Require trailing newline at EOF
+  new-line-at-end-of-file:
+    level: error
+
+  # No trailing spaces
+  trailing-spaces:
+    level: error
+
+  # Indentation (2-space preferred for GHA)
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+    level: warning
+
+  # Comments should have a space after #
+  comments:
+    min-spaces-from-content: 1
+    level: warning
+
+ignore: |
+  *.lock.yml
+  *.lock.yaml
+  .venv/

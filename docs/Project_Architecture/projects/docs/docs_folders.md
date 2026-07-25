@@ -1,9 +1,11 @@
 # docs — Folder Structure Blueprint
 
 ## Overview
+
 Documentation repository containing reference documents for the SandBox workspace.
 
 ## Directory Tree
+
 ```text
 docs/
 ├── .github/
@@ -24,11 +26,13 @@ docs/
 ```
 
 ## File Placement Patterns
+
 - **Configuration:** `.github/`, root-level JSON/YAML
 - **Documentation:** Root `.md` files organized by topic
 - **Data/Exports:** JSON archives at root level
 
 ## Naming Conventions
+
 - Markdown files: lowercase kebab-case (`tech-stack.md`)
 - Config files: UPPER_SNAKE_CASE (`.yml`, `.json`)
 - Agent files: UPPERCASE (`AGENTS.md`, `README.md`)

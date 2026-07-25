@@ -5,16 +5,14 @@ Async CLI for a tighter trim pass targeting RESEARCH_REPORT.md files
 with stricter line limits and additional patterns.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import List, Tuple
-
 
 # Aggressive patterns for the final trim pass
-FINAL_PATTERNS: List[str] = [
+FINAL_PATTERNS: list[str] = [
     r"^##\s+Research\s+Report",
     r"^##\s+Research\s+Overview",
     r"^##\s+Methodology",
@@ -47,7 +45,7 @@ async def final_trim(file_path: Path, max_lines: int = 300, dry_run: bool = Fals
     lines = content.splitlines()
 
     # First pass: remove matching sections
-    sections: List[Tuple[int, int]] = []
+    sections: list[tuple[int, int]] = []
     start_idx = None
     for i, line in enumerate(lines):
         if any(re.match(p, line) for p in FINAL_PATTERNS):
@@ -88,9 +86,7 @@ async def final_trim(file_path: Path, max_lines: int = 300, dry_run: bool = Fals
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Final aggressive trim pass for research report files."
-    )
+    parser = argparse.ArgumentParser(description="Final aggressive trim pass for research report files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -124,19 +120,17 @@ async def main() -> None:
         print(f"No files matching {args.pattern} in {workspace}", file=sys.stderr)
         sys.exit(1)
 
-    results = await asyncio.gather(
-        *(final_trim(f, max_lines=max_line_count, dry_run=args.dry_run) for f in files)
-    )
+    results = await asyncio.gather(*(final_trim(f, max_lines=max_line_count, dry_run=args.dry_run) for f in files))
 
     trimmed = [r for r in results if r.get("trimmed")]
     total_removed = sum(r.get("sections_removed", 0) for r in trimmed)
 
-    print(f"\n=== Final Research Report Trim ===")
+    print("\n=== Final Research Report Trim ===")
     print(f"Scanned {len(files)} file(s)")
     print(f"Modified: {len(trimmed)} file(s)")
     print(f"Total sections removed: {total_removed}")
     if args.dry_run:
-        print(f"(dry-run — no files were modified)")
+        print("(dry-run — no files were modified)")
     for r in trimmed:
         lines_after = r.get("lines_after_trim", "?")
         print(f"  {r['file']}: {r['sections_removed']} section(s), {r['lines_removed']} line(s) → {lines_after} lines")

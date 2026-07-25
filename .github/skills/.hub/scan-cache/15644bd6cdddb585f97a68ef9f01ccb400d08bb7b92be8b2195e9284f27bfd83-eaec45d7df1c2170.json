@@ -1,0 +1,43 @@
+{
+  "source": "official",
+  "source_url": "official/mlops\\guidance",
+  "bundle_hash": "sha256:15644bd6cdddb585f97a68ef9f01ccb400d08bb7b92be8b2195e9284f27bfd83",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 33,
+      "match": "pip install guidance",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 36,
+      "match": "pip install guidance[transformers]  # Hugging Face models",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 37,
+      "match": "pip install guidance[llama_cpp]     # llama.cpp models",
+      "description": "pip install without version pinning"
+    }
+  ],
+  "rules": [
+    "unpinned_pip_install"
+  ],
+  "scanned_at": "2026-07-16T02:34:00.231662+00:00",
+  "summary": "guidance: safe \u2014 3 finding(s) in supply_chain",
+  "fresh": true
+}

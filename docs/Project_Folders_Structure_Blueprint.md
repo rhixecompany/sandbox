@@ -3,10 +3,12 @@
 Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Workspace Folder Overview
+
 - Root workspace contains shared config files plus a `projects/` collection of subprojects.
 - Folder organization is mixed: some projects are app-centric, some are backend/frontend splits, and some are language/tooling examples.
 
 ## Top-Level Tree
+
 ```text
 ./
 ├── .github/
@@ -109,12 +111,15 @@ Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 ```
 
 ## Naming Conventions
+
 - Preserve existing folder names exactly, including hyphens, underscores, and dots.
 - Avoid renaming subprojects unless a collision or portability issue is confirmed.
 
 ## File Placement
+
 - Keep workspace-level docs in `docs/`.
 - Keep per-project docs under `docs/Project_Architecture/` using the project path as namespace to avoid filename collisions.
 
 ## Update Notes
+
 - Refresh after any project move, split, or subproject addition.

@@ -14,11 +14,9 @@ from __future__ import annotations
 
 import asyncio
 import datetime as dt
-import io
 import json
 import os
 from pathlib import Path
-
 
 HOME = Path.home()
 HERMES = HOME / "AppData" / "Local" / "hermes"
@@ -48,15 +46,13 @@ class MemoryReporter:
         ]
         if self.errors:
             parts.append(f"errors({len(self.errors)}): " + "; ".join(self.errors))
-        parts.append(f"timestamp: {dt.datetime.now(dt.timezone.utc).isoformat()}")
+        parts.append(f"timestamp: {dt.datetime.now(dt.UTC).isoformat()}")
         return "\n".join(parts)
 
 
 def clean_stale_artifacts(reporter: MemoryReporter) -> None:
     candidates = (
-        sorted(MEMORIES.glob("*.lock"))
-        + sorted(MEMORIES.glob("*.bak.*"))
-        + sorted(MEMORIES.glob("*.corrupt*"))
+        sorted(MEMORIES.glob("*.lock")) + sorted(MEMORIES.glob("*.bak.*")) + sorted(MEMORIES.glob("*.corrupt*"))
     )
     for path in candidates:
         if path.exists():
@@ -71,7 +67,7 @@ def clean_stale_artifacts(reporter: MemoryReporter) -> None:
 
 
 def record_durable_artifacts(reporter: MemoryReporter) -> None:
-    now = dt.datetime.now(dt.timezone.utc).isoformat()
+    now = dt.datetime.now(dt.UTC).isoformat()
     records = [
         {
             "name": "MemoryRepairCompleted",
@@ -128,11 +124,7 @@ async def main() -> int:
         reporter.fail(f"missing built-in memory dir: {MEMORIES}")
 
     if mode == "status":
-        stale = (
-            sorted(MEMORIES.glob("*.lock"))
-            + sorted(MEMORIES.glob("*.bak.*"))
-            + sorted(MEMORIES.glob("*.corrupt*"))
-        )
+        stale = sorted(MEMORIES.glob("*.lock")) + sorted(MEMORIES.glob("*.bak.*")) + sorted(MEMORIES.glob("*.corrupt*"))
         reporter.info(f"stale files found: {len(stale)}")
         for path in stale:
             reporter.info(f"  - {path.name}")
@@ -140,9 +132,7 @@ async def main() -> int:
         if ARTIFACTS.exists():
             for path in sorted(ARTIFACTS.glob("*")):
                 reporter.info(f"  - {path.name}")
-        reporter.info(
-            "repair script is intentionally offline until a memory writer interface is added"
-        )
+        reporter.info("repair script is intentionally offline until a memory writer interface is added")
         print(reporter.render() + "\n")
         return 0
 

@@ -3,15 +3,19 @@
 **Goal**: Continue enhancing, deduplicating, consolidating, and validating all prompts in `./prompts`.
 
 **Current State** (as of this plan):
+
 - Completed Phase 1: Loaded required skills (`plan`, `plans-and-specs`, `prompt-management`).
 - Created an initial master plan (`2026-07-16_013954-enhance-markdown-prompts.md`).
 - Patched the validation utility `validate_prompt_frontmatter.py` to restrict validation to `*.prompt.md` files only (skip template markdown files).
 
 **Next Concrete Step**
+
 1. **Run the updated validation script** on the `./prompts` directory.
+
    ```bash
    python "C:/Users/Alexa/AppData/Local/hermes/skills/productivity/prompt-management/scripts/validate_prompt_frontmatter.py"
    ```
+
    - Capture the output; any remaining errors will be prompts with missing/invalid front‑matter (e.g., `update-implementation-plan.prompt.md`).
 2. **Analyse validation results** to produce a list of prompts requiring front‑matter fixes:
    - Required fields: `name`, `description`, `version`.
@@ -19,14 +23,18 @@
    - Add any missing optional fields (`toolsets`, `references`) as empty lists if not present.
 3. **Prepare patch directives** for each offending prompt (one‑per‑file). *Do not apply them yet* – this plan step records the intended actions.
    - Example patch snippet for `update-implementation-plan.prompt.md`:
+
      ```yaml
+
 ---
+
 name: update-implementation-plan
 title: Update Implementation Plan
 description: Create or update an implementation plan with new or updated requirements.
 version: 1.0.0
 trigger: /update-implementation-plan
 ---
+
 ```
 4. **Update the master plan** with a new section "Phase 2 – Front‑Matter Fixes" listing each prompt to be patched and the corresponding patch content.
 5. **Verification** – After patches are applied in a later execution phase, re‑run the validation script to ensure `All prompt front‑matter valid.`

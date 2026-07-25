@@ -1,0 +1,25 @@
+{
+  "source": "official",
+  "source_url": "official/blockchain\\solana",
+  "bundle_hash": "sha256:d25be4170039168781502af323ee3f953e04baa89b36a11e2575637f0f6635a0",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "caution",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\solana_client.py",
+      "line": 31,
+      "match": "RPC_URL = os.environ.get(",
+      "description": "accesses os.environ (potential env dump)"
+    }
+  ],
+  "rules": [
+    "python_os_environ"
+  ],
+  "scanned_at": "2026-07-16T02:34:37.170628+00:00",
+  "summary": "solana: caution \u2014 1 finding(s) in exfiltration",
+  "fresh": true
+}

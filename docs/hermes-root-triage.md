@@ -20,6 +20,7 @@
 **Count:** 333 files
 
 **Top-level sample:**
+
 - ... 333 more files
 
 ### scripts
@@ -27,6 +28,7 @@
 **Count:** 198 files
 
 **Top-level sample:**
+
 - `MEMORY_precompact.md
 - `USER_precompact.md
 - `_agents_fix_discover.py
@@ -83,8 +85,8 @@
 
 **Count:** 26 files
 
-- `__pycache__\lib.cpython-311.pyc
-- `__pycache__\lib.cpython-313.pyc
+- `**pycache**\lib.cpython-311.pyc
+- `**pycache**\lib.cpython-313.pyc
 - `governance-audit\README.md
 - `governance-audit\__pycache__\hook.cpython-313.pyc
 - `governance-audit\audit-prompt.sh
@@ -141,6 +143,7 @@
 - `mcp-install-plan.md
 
 ### templates
+
 - Missing on disk.
 
 ### skills
@@ -148,6 +151,7 @@
 **Count:** 3264 files
 
 **Top-level sample:**
+
 - `.bundled_manifest
 - `.curator_state
 - `.usage.json

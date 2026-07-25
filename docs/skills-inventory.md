@@ -124,7 +124,7 @@ Total categories: 97
 
 ## Constraint (3)
 
-- **introspection-only-general** — Constraint flag: restrict agent to introspection-only mode. Read and search files but never create, 
+- **introspection-only-general** — Constraint flag: restrict agent to introspection-only mode. Read and search files but never create,
   Tags: constraint, safety, introspection, read-only
 - **no-git-delete** — Constraint flag: never delete git history, branches, tags, or repository structure. Prevents destruc
   Tags: constraint, git, safety, preservation
@@ -148,7 +148,7 @@ Total categories: 97
 
 ## Cryptoapis (1)
 
-- **cryptoapis-wallet-builder** — Use when building crypto wallet infrastructure with CryptoAPIs — covers deposit address generation, 
+- **cryptoapis-wallet-builder** — Use when building crypto wallet infrastructure with CryptoAPIs — covers deposit address generation,
   Tags: cryptoapis, wallet, blockchain, hd-wallet, deposit-address
 
 ## Debugging (1)
@@ -179,7 +179,7 @@ Total categories: 97
 
 - **azure-devops-cli** — Use when working with Azure DevOps resources via Azure CLI — repos, pipelines,
   Tags: azure, devops, cli, pipelines, repos
-- **mcp-docker** — Exposes all docker MCP gateway tools for adding/removing/configuring MCP servers, code mode, GitHub 
+- **mcp-docker** — Exposes all docker MCP gateway tools for adding/removing/configuring MCP servers, code mode, GitHub
   Tags: mcp, docker, gateway, containers, devops
 
 ## Diagrams (1)
@@ -230,7 +230,7 @@ Total categories: 97
 
 ## Git (5)
 
-- **git-patch-management** — Manage Git patch files across multi-project workspaces. Use when creating, applying, organizing, or 
+- **git-patch-management** — Manage Git patch files across multi-project workspaces. Use when creating, applying, organizing, or
   Tags: git, patch, workspace, version-control
 - **git-submodule-workflow** — >
   Tags: git, submodules, monorepo, multi-project, github
@@ -248,14 +248,14 @@ Total categories: 97
 
 ## Gitlab (1)
 
-- **glab** — Use when managing GitLab resources from terminal — merge requests, issues, pipelines, repositories, 
+- **glab** — Use when managing GitLab resources from terminal — merge requests, issues, pipelines, repositories,
   Tags: gitlab, glab, cli, ci-cd, issues
 
 ## Hermes (11)
 
 - **hermes-config-merge** — Use when consolidating a Hermes profile config.yaml into the root config.yaml
   Tags: hermes, config, merge, sync, profiles
-- **hermes-deep-dive-guide** — Use when studying Hermes architecture, agent loop, system prompt assembly order, profile isolation, 
+- **hermes-deep-dive-guide** — Use when studying Hermes architecture, agent loop, system prompt assembly order, profile isolation,
   Tags: hermes, architecture, agent-loop, system-prompt, profiles
 - **hermes-hook-cleanup** — Use when auditing, deduplicating, or repairing Hermes shell hook artifacts and stale wrapper scripts
   Tags: hermes, hooks, cleanup, windows, audit
@@ -283,9 +283,9 @@ Total categories: 97
 
 ## Imported (119)
 
-- **agent-governance** — 
+- **agent-governance** —
   Tags: imported
-- **agentic-eval** — 
+- **agentic-eval** —
   Tags: imported
 - **airtable** — Airtable REST API via curl. Records CRUD, filters, upserts.
   Tags: imported
@@ -329,11 +329,11 @@ Total categories: 97
   Tags: imported, github, copilot, cli, onboarding
 - **copilot-sdk** — Build agentic applications with GitHub Copilot SDK. Use when embedding Copilot in apps, creating cus
   Tags: imported, github, copilot, sdk, agents
-- **create-readme** — Use when creating a README.md file for a project. Generates a comprehensive, well-structured README 
+- **create-readme** — Use when creating a README.md file for a project. Generates a comprehensive, well-structured README
   Tags: imported, documentation, readme, project-setup, scripts
 - **debugging-hermes-tui-commands** — Debug Hermes TUI slash commands: Python, gateway, Ink UI.
   Tags: imported
-- **dependabot** — 
+- **dependabot** —
   Tags: imported
 - **design-md** — Author/validate/export Google's DESIGN.md token spec files.
   Tags: imported
@@ -347,7 +347,7 @@ Total categories: 97
   Tags: imported
 - **finnish-humanizer** — Detect and remove AI-generated markers from Finnish text, making it sound
   Tags: imported
-- **fluentui-blazor** — 
+- **fluentui-blazor** —
   Tags: imported
 - **frontend-design** — Use when building web components, landing pages, dashboards, React components,
   Tags: imported
@@ -415,7 +415,7 @@ Total categories: 97
   Tags: imported
 - **microsoft-code-reference** — Look up Microsoft API references, find working code samples, and verify SDK code is correct. Use whe
   Tags: imported
-- **microsoft-skill-creator** — Create agent skills for Microsoft technologies using Learn MCP tools. Use when users want to create 
+- **microsoft-skill-creator** — Create agent skills for Microsoft technologies using Learn MCP tools. Use when users want to create
   Tags: imported, microsoft, azure, dotnet, mcp
 - **native-mcp** — MCP client: connect servers, register tools (stdio/HTTP).
   Tags: imported
@@ -487,13 +487,13 @@ Total categories: 97
   Tags: imported, planning, implementation, plan-management, scripts
 - **using-git-worktrees** — Use when starting feature work that needs isolation from current workspace or before executing imple
   Tags: imported, git, worktrees, isolation, workspace
-- **verification-before-completion** — Use when about to claim work is complete, fixed, or passing. Requires running verification commands 
+- **verification-before-completion** — Use when about to claim work is complete, fixed, or passing. Requires running verification commands
   Tags: imported
 - **vllm** — vLLM: high-throughput LLM serving, OpenAI API, quantization.
   Tags: imported
 - **vscode-cli** — Use when controlling Visual Studio Code from the `code` command: launching, installing extensions, m
   Tags: imported, vscode, cli, editor, debugging
-- **vscode-ext-commands** — Use when adding, updating, or refactoring commands in VS Code extension development. Covers command 
+- **vscode-ext-commands** — Use when adding, updating, or refactoring commands in VS Code extension development. Covers command
   Tags: imported, vscode, extension, commands, ide
 - **vscode-ext-localization** — Localize VS Code extension commands, walkthroughs, configuration, and in-code strings for internatio
   Tags: imported, vscode, extension, i18n, localization
@@ -540,7 +540,7 @@ Total categories: 97
   Tags: javascript, node, audit, prompts, frontmatter
 - **prompt-audit-all-cjs** — Performs audit-all on prompts
   Tags: javascript, audit, prompts, scripts
-- **session-audit-227** — Node.js CJS script that generates a comprehensive Markdown audit report of all Hermes sessions from 
+- **session-audit-227** — Node.js CJS script that generates a comprehensive Markdown audit report of all Hermes sessions from
   Tags: javascript, node, audit, sessions, cjs
 - **session-audit-227-cjs** — Session audit script for Hermes sessions
   Tags: javascript, audit, sessions, scripts
@@ -553,7 +553,7 @@ Total categories: 97
 
 - **convert-plaintext-to-md** — Convert plain text files, notes, or unstructured content into well-formatted Markdown with proper he
   Tags: markdown, conversion, documentation, formatting, scripts
-- **enhance-markdown** — Auditing, enhancing, and normalizing markdown/prompt files. Use for batch `.md`/`.txt`→`.markdown`, 
+- **enhance-markdown** — Auditing, enhancing, and normalizing markdown/prompt files. Use for batch `.md`/`.txt`→`.markdown`,
   Tags: markdown, audit, enhance, idempotent, plans-and-specs
 
 ## Mcp (12)
@@ -564,7 +564,7 @@ Total categories: 97
   Tags: mcp, code-sandbox, sandbox, nodejs, execution
 - **mcp-codex** — Exposes all Codex MCP tools for creating and continuing AI coding sessions via OpenAI Codex CLI. Inc
   Tags: mcp, codex, openai, coding-agent
-- **mcp-fetch** — Exposes all fetch MCP tools for extracting web page content as markdown, listing resources, reading 
+- **mcp-fetch** — Exposes all fetch MCP tools for extracting web page content as markdown, listing resources, reading
   Tags: mcp, fetch, web, content-extraction
 - **mcp-filesystem** — Exposes all filesystem MCP tools for reading, writing, editing, moving, and listing files and direct
   Tags: mcp, filesystem, file-ops, directory
@@ -618,7 +618,7 @@ Total categories: 97
   Tags: null
 - **jira** — Use when creating, viewing, transitioning, or managing Jira tickets,
   Tags: null
-- **windows-maintenance-operations** — 
+- **windows-maintenance-operations** —
   Tags: null
 - **work-on-ticket** — Use when starting work on a Jira ticket — fetching ticket details, creating
   Tags: null
@@ -715,7 +715,7 @@ Total categories: 97
 
 ## Prompt (4)
 
-- **boost-prompt** — Interactive prompt refinement workflow that interrogates scope, deliverables, and constraints, then 
+- **boost-prompt** — Interactive prompt refinement workflow that interrogates scope, deliverables, and constraints, then
   Tags: prompt, refinement, workflow, optimization
 - **prompt-consolidation** — Detect near-duplicate prompts, consolidate them into parameterized forms, normalize toolsets, and cl
   Tags: prompt, consolidation, dedup, audit, toolset
@@ -726,7 +726,7 @@ Total categories: 97
 
 ## Prompts (8)
 
-- **boost-prompts** — Comprehensive prompt quality audit and enhancement pipeline. Audits frontmatter, structure, content 
+- **boost-prompts** — Comprehensive prompt quality audit and enhancement pipeline. Audits frontmatter, structure, content
   Tags: prompts, quality, audit, enhancement, batch
 - **executing-prompt-workflows** — Execute a `.prompt.md` / trigger-style workflow file (agents-fix, bash-scripts-fix, skills-fix, work
   Tags: prompts, workflow, agents, sync, dedup
@@ -923,7 +923,7 @@ Total categories: 97
 
 ## Qa (1)
 
-- **batch-skills-remediation** — Run the full skills audit-judge-remediate-rejudge pipeline on all Hermes skills. Use when improving 
+- **batch-skills-remediation** — Run the full skills audit-judge-remediate-rejudge pipeline on all Hermes skills. Use when improving
   Tags: qa, skills, audit, remediation, batch
 
 ## Raspberry-Pi (1)
@@ -983,9 +983,9 @@ Total categories: 97
   Tags: azure, rbac, security, iam, least-privilege
 - **dependency-security-remediation** — Audit, triage, and fix vulnerable Python dependencies in venvs. Cross-reference manifests vs runtime
   Tags: security, venv, pip, remediation
-- **how-paypal-works** — Use when understanding PayPal's payment options, rewards, security, and business solutions from the 
+- **how-paypal-works** — Use when understanding PayPal's payment options, rewards, security, and business solutions from the
   Tags: paypal, payments, digital-wallet, cashback, business
-- **paypal-how-it-works** — Use when understanding PayPal's payment options, rewards, security, and business solutions — covers 
+- **paypal-how-it-works** — Use when understanding PayPal's payment options, rewards, security, and business solutions — covers
   Tags: paypal, payments, digital-wallet, cashback, business
 - **rbac-audit-logging** — Use when auditing RBAC role assignments and logging configurations in
   Tags: azure, rbac, security, audit, compliance
@@ -1012,14 +1012,14 @@ Total categories: 97
   Tags: skills, authoring, scaffolding, validation
 - **skill-library-audit** — Generate comprehensive skill library audit report. Runs skill-judge on all skills, categorizes by do
   Tags: skills, audit, report, quality, library
-- **skill-management** — Discover, install, update, configure, and manage Hermes skills across profiles. This skill provides 
+- **skill-management** — Discover, install, update, configure, and manage Hermes skills across profiles. This skill provides
   Tags: skills, management, configuration, hermes, scripts
 - **using-superpowers** — Use when starting any conversation. Establishes how to find and use skills, requiring Skill tool inv
   Tags: skills, workflow, onboarding, meta
 
 ## Terraform (1)
 
-- **terraform-azurerm-set-diff-analyzer** — Analyze Terraform plan JSON output for AzureRM Provider to distinguish between false-positive diffs 
+- **terraform-azurerm-set-diff-analyzer** — Analyze Terraform plan JSON output for AzureRM Provider to distinguish between false-positive diffs
   Tags: terraform, azure, diff-analysis, ci-cd, automation
 
 ## Testing (1)
@@ -1099,9 +1099,9 @@ Total categories: 97
   Tags: -
 - **1password** — Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, si
   Tags: -
-- **3-statement-model** — Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A 
+- **3-statement-model** — Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A
   Tags: -
-- **3-statement-model** — Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A 
+- **3-statement-model** — Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A
   Tags: -
 - **accelerate** — Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified
   Tags: -
@@ -1131,7 +1131,7 @@ Total categories: 97
   Tags: -
 - **baoyu-infographic** — Infographics: 21 layouts x 21 styles (信息图, 可视化).
   Tags: -
-- **bioinformatics** — Gateway to 400+ bioinformatics skills from bioSkills and ClawBio. Covers genomics, transcriptomics, 
+- **bioinformatics** — Gateway to 400+ bioinformatics skills from bioSkills and ClawBio. Covers genomics, transcriptomics,
   Tags: -
 - **blackbox** — Delegate coding tasks to Blackbox AI CLI agent. Multi-model agent with built-in judge that runs task
   Tags: -
@@ -1157,9 +1157,9 @@ Total categories: 97
   Tags: -
 - **claude-code** — Delegate coding to Claude Code CLI (features, PRs).
   Tags: -
-- **cli** — Run 150+ AI apps via inference.sh CLI (infsh) — image generation, video creation, LLMs, search, 3D, 
+- **cli** — Run 150+ AI apps via inference.sh CLI (infsh) — image generation, video creation, LLMs, search, 3D,
   Tags: -
-- **cli** — Run 150+ AI apps via inference.sh CLI (infsh) — image generation, video creation, LLMs, search, 3D, 
+- **cli** — Run 150+ AI apps via inference.sh CLI (infsh) — image generation, video creation, LLMs, search, 3D,
   Tags: -
 - **clip** — OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text ma
   Tags: -
@@ -1199,13 +1199,13 @@ Total categories: 97
   Tags: -
 - **django-celery** — Django + Celery async task patterns — configuration, task design, beat scheduling, retries, canvas w
   Tags: -
-- **docker-management** — Manage Docker containers, images, volumes, networks, and Compose stacks — lifecycle ops, debugging, 
+- **docker-management** — Manage Docker containers, images, volumes, networks, and Compose stacks — lifecycle ops, debugging,
   Tags: -
 - **dogfood** — Exploratory QA of web apps: find bugs, evidence, reports.
   Tags: -
-- **domain-intel** — Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection, 
+- **domain-intel** — Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection,
   Tags: -
-- **domain-intel** — Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection, 
+- **domain-intel** — Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection,
   Tags: -
 - **drug-discovery** — >
   Tags: -
@@ -1221,7 +1221,7 @@ Total categories: 97
   Tags: -
 - **emblem-ai-prompt-examples** — Curated prompt and usage examples for research, portfolio review, quote requests, approval-gated dra
   Tags: -
-- **enhance-prompt** — Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX 
+- **enhance-prompt** — Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX
   Tags: -
 - **evm** — Read-only EVM client: wallets, tokens, gas across 8 chains.
   Tags: -
@@ -1301,21 +1301,21 @@ Total categories: 97
   Tags: -
 - **huggingface-tokenizers** — Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <2
   Tags: -
-- **hyperframes** — Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head 
+- **hyperframes** — Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head
   Tags: -
-- **hyperframes** — Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head 
+- **hyperframes** — Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head
   Tags: -
 - **hyperliquid** — Hyperliquid market data, account history, trade review.
   Tags: -
-- **implementation-plan** — Create detailed implementation plans for software projects — break down features into steps, files, 
+- **implementation-plan** — Create detailed implementation plans for software projects — break down features into steps, files,
   Tags: -
 - **instructor** — Extract structured data from LLM responses with Pydantic validation, retry failed extractions automa
   Tags: -
 - **instructor** — Extract structured data from LLM responses with Pydantic validation, retry failed extractions automa
   Tags: -
-- **kanban-video-orchestrator** — Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when 
+- **kanban-video-orchestrator** — Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when
   Tags: -
-- **kanban-video-orchestrator** — Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when 
+- **kanban-video-orchestrator** — Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when
   Tags: -
 - **lambda-labs** — Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicate
   Tags: -
@@ -1323,7 +1323,7 @@ Total categories: 97
   Tags: -
 - **lbo-model** — Build leveraged buyout models in Excel — sources & uses, debt schedule, cash sweep, exit multiple, I
   Tags: -
-- **litprog-skill** — 
+- **litprog-skill** —
   Tags: -
 - **llama-cpp** — llama.cpp local GGUF inference + HF Hub model discovery.
   Tags: -
@@ -1341,7 +1341,7 @@ Total categories: 97
   Tags: -
 - **mcp-oauth-remote-gateway** — Manual OAuth for remote MCP servers on headless gateways.
   Tags: -
-- **mcporter** — Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), 
+- **mcporter** — Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio),
   Tags: -
 - **meme-generation** — Generate real meme images by picking a template and overlaying text with Pillow. Produces actual .pn
   Tags: -
@@ -1361,7 +1361,7 @@ Total categories: 97
   Tags: -
 - **mpp-agent** — Pay HTTP 402 APIs via Machine Payments Protocol (MPP).
   Tags: -
-- **multi-agent-sync** — Sync skills, plugins, hooks, personalities, and profiles across Hermes, Copilot, and Codex/OpenCode 
+- **multi-agent-sync** — Sync skills, plugins, hooks, personalities, and profiles across Hermes, Copilot, and Codex/OpenCode
   Tags: -
 - **nano-pdf** — Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).
   Tags: -
@@ -1566,7 +1566,7 @@ Total categories: 97
 
 ## Vsdc (1)
 
-- **vsdc-video-masking** — Use when applying video masks in VSDC Pro for face blurring, object tracking, and selective effects 
+- **vsdc-video-masking** — Use when applying video masks in VSDC Pro for face blurring, object tracking, and selective effects
   Tags: vsdc, video-editor, masking, face-blur, motion-tracking
 
 ## Wallet-Api (1)
@@ -1583,7 +1583,7 @@ Total categories: 97
 
 - **msys2-management** — Manage MSYS2 environments on Windows — install, update, invoke subshells, manage packages via pacman
   Tags: windows, msys2, toolchain, ucrt64, mingw64
-- **windows-installer-diagnostics** — Diagnose and fix Windows package installer failures — exit codes, installer logs, process blockers, 
+- **windows-installer-diagnostics** — Diagnose and fix Windows package installer failures — exit codes, installer logs, process blockers,
   Tags: windows, winget, installer, troubleshooting, diagnostics
 
 ## Writing (1)

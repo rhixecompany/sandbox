@@ -205,7 +205,7 @@ ecom/
 ## 2. Layout Summary
 
 | Area | Path | Purpose |
-|------|------|---------|
+| ------ | ------ | --------- |
 | **Django Config** | `ecom/` | Project settings, URL routing, WSGI/ASGI entry |
 | **Core App** | `base/` | Models, API views, serializers, admin, migrations |
 | **Frontend App** | `frontend/` | React SPA with Redux state management |
@@ -219,7 +219,7 @@ ecom/
 ## 3. Framework Conventions
 
 | Layer | Convention | Examples |
-|-------|------------|----------|
+| ------- | ------------ | ---------- |
 | **Django apps** | Single `base/` app (not split per domain) | `base/models.py`, `base/views/` |
 | **Django URLs** | Per-feature URL modules under `base/urls/` | `product_urls.py`, `order_urls.py` |
 | **API Views** | Function-based `@api_view` decorators | `getProducts`, `addOrderItems` |
@@ -232,7 +232,7 @@ ecom/
 ## 4. Key File Counts (source only, excluding node_modules and .git)
 
 | Category | Count |
-|----------|-------|
+| ---------- | ------- |
 | Python files (.py) | 20+ |
 | JavaScript files (.js) | 30+ |
 | Markdown docs (.md) | 25+ |

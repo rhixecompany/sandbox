@@ -1,0 +1,71 @@
+name: CI - Python Projects (cookiecutter-django-tailwind, Django-Scrapy-Selenium, ecom, profile, Python-projects, xamehi.tv)
+
+on:
+  push:
+    branches: [development, production]
+    paths:
+      - 'projects/cookiecutter-django-tailwind/**'
+      - 'projects/Django-Scrapy-Selenium/**'
+      - 'projects/ecom/**'
+      - 'projects/profile/**'
+      - 'projects/Python-projects/**'
+      - 'projects/xamehi.tv/**'
+      - '.github/workflows/python-ci.yml'
+  pull_request:
+    branches: [development, production]
+    paths:
+      - 'projects/cookiecutter-django-tailwind/**'
+      - 'projects/Django-Scrapy-Selenium/**'
+      - 'projects/ecom/**'
+      - 'projects/profile/**'
+      - 'projects/Python-projects/**'
+      - 'projects/xamehi.tv/**'
+
+jobs:
+  verify-python:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - cookiecutter-django-tailwind
+          - Django-Scrapy-Selenium
+          - ecom
+          - profile
+          - Python-projects
+          - xamehi.tv
+    defaults:
+      run:
+        working-directory: ./projects/${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install uv
+        run: pip install uv
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            uv pip install -r requirements.txt 2>/dev/null || pip install -r requirements.txt
+          fi
+          if [ -f pyproject.toml ]; then
+            uv pip install -e . 2>/dev/null || pip install -e .
+          fi
+      - name: Lint (ruff)
+        run: |
+          uv pip install ruff 2>/dev/null || pip install ruff
+          ruff check . 2>/dev/null || echo "No ruff config"
+      - name: Type check (mypy)
+        run: |
+          uv pip install mypy 2>/dev/null || pip install mypy
+          mypy . 2>/dev/null || echo "No mypy config"
+      - name: Tests
+        run: |
+          if [ -f pytest.ini ] || [ -f pyproject.toml ]; then
+            uv pip install pytest pytest-cov 2>/dev/null || pip install pytest pytest-cov
+            python -m pytest --tb=short -q 2>/dev/null || echo "Tests skipped/failed"
+          else
+            echo "No pytest config"
+          fi

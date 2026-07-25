@@ -10,7 +10,9 @@ replacing substantive content with a generic stub.
 
 Outputs: judge_results/remediation_report.md
 """
+
 from __future__ import annotations
+
 import asyncio
 import csv
 import os
@@ -33,6 +35,7 @@ if not TSV.exists():
     NOOP_TSV.write_text("name\tpath\tscore\terrors\tduration\n", encoding="utf-8")
     TSV = NOOP_TSV
 
+
 # --- frontmatter parse helpers -------------------------------------------------
 def parse_fm(text: str) -> tuple[dict, str, str]:
     """Return (fm_dict, fm_block, body). fm_block includes the --- fences."""
@@ -42,7 +45,7 @@ def parse_fm(text: str) -> tuple[dict, str, str]:
     if not m:
         return {}, "", text
     fm_block = text[: m.end()]
-    body = text[m.end():]
+    body = text[m.end() :]
     fm = {}
     for line in m.group(1).split("\n"):
         if ":" in line and not line.startswith((" ", "\t")):
@@ -50,11 +53,14 @@ def parse_fm(text: str) -> tuple[dict, str, str]:
             fm[k.strip()] = v.strip()
     return fm, fm_block, body
 
+
 def has_fm_field(fm: dict, key: str) -> bool:
     return bool(fm.get(key))
 
+
 def fm_has_section(fm_block: str, key: str) -> bool:
     return bool(re.search(rf"^\s*{re.escape(key)}\s*:", fm_block, re.MULTILINE))
+
 
 def add_fm_fields(fm: dict, fm_block: str) -> tuple[str, list[str]]:
     """Add missing frontmatter fields to the fm_block (before closing ---). Returns (new_block, added)."""
@@ -68,13 +74,14 @@ def add_fm_fields(fm: dict, fm_block: str) -> tuple[str, list[str]]:
         insertion = fm_block
     else:
         insertion = fm_block[:close]
-    new_lines = []
+
     # Fields to ensure
     def ensure(key, val):
         nonlocal insertion, added
         if not fm_has_section(insertion, key) and not has_fm_field(fm, key):
             insertion = insertion.rstrip("\n") + f"\n{key}: {val}\n"
             added.append(key)
+
     ensure("title", f'"{title}"')
     ensure("version", "1.0.0")
     ensure("author", AUTHOR_DEFAULT)
@@ -83,8 +90,10 @@ def add_fm_fields(fm: dict, fm_block: str) -> tuple[str, list[str]]:
         ensure("tags", "[imported]")
     return insertion.rstrip("\n") + "\n---\n", added
 
+
 def section_present(body: str, header: str) -> bool:
     return bool(re.search(rf"^#{{1,4}}\s*{re.escape(header)}\s*$", body, re.MULTILINE | re.IGNORECASE))
+
 
 def remediate_body(body: str, name: str) -> tuple[str, list[str]]:
     added = []
@@ -120,11 +129,13 @@ def remediate_body(body: str, name: str) -> tuple[str, list[str]]:
     new_body = body + "".join(append)
     return new_body, added
 
+
 async def main() -> int:
     loop = asyncio.get_running_loop()
     rows = []
     tsv_text = await loop.run_in_executor(None, _read_text, TSV)
     import io
+
     r = csv.DictReader(filter(None, (line.strip() for line in io.StringIO(tsv_text))), delimiter="\t")
     for row in r:
         rows.append(row)
@@ -178,13 +189,16 @@ async def main() -> int:
     print(f"Patched {len(fixed)} FAIL skills (additive). Report: {REPORT}")
     return 0
 
+
 def _read_text(path: Path) -> str:
     with open(path, encoding="utf-8", errors="ignore") as f:
         return f.read()
 
+
 def _write_text(path: Path, text: str) -> None:
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
+
 
 if __name__ == "__main__":
     sys.exit(asyncio.run(main()))

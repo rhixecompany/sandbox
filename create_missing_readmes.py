@@ -1,7 +1,4 @@
-import os
-import sys
 from pathlib import Path
-from datetime import date
 
 TARGET_ROOT = Path(r"C:/Users/Alexa/Desktop/SandBox/.github/prompts/templates")
 README_NAME = "README.md"

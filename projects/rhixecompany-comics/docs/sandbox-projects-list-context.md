@@ -55,7 +55,7 @@ projects/rhixecompany-comics/
 ## Migration Status
 
 | Component | Source | Target | Status |
-| ----------- | -------- | -------- | -------- |
+|-----------|--------|--------|--------|
 | Django config | Django-Scrapy-Selenium | backend/config/ | ✅ Migrated |
 | Comic models | comicwise (Prisma) | backend/apps/comics/ | ✅ Created |
 | API endpoints | comicwise | backend/apps/api/ | ✅ Created |

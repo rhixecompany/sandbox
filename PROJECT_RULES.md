@@ -7,7 +7,7 @@
 Files are loaded in this order (each overrides the previous):
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `.hermes.md` | Hermes-specific project overrides (profiles, MCP, hooks, plugins, toolsets) |
 | `AGENTS.md` | General agent guidance (toolchain, conventions, subprojects) |
 | `PROJECT_RULES.md` | This file — workspace-level rules |
@@ -33,7 +33,7 @@ Per SOUL.md and mandatory 5-skill startup:
 ## 4. Profile Routing
 
 | Task Type | Profile |
-|-----------|---------|
+| ----------- | --------- |
 | Code implementation, debugging, refactoring | `code-architect` |
 | Deep research, literature review, synthesis | `research-analyst` |
 | Design, content creation, brainstorming | `creative-director` |
@@ -47,7 +47,7 @@ Per SOUL.md and mandatory 5-skill startup:
 Before native tools, check MCP servers:
 
 | MCP Server | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | `filesystem` | File operations |
 | `github` | GitHub API |
 | `ast-grep` | Code search/replace |

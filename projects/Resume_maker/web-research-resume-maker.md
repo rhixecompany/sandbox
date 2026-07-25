@@ -26,6 +26,7 @@
 ## 1. Bun Runtime Overview & State in 2026
 
 ### Current State
+
 - **Latest stable:** Bun v1.3.14 (May 2026). Bun 1.4 in canary with 32% less memory and 5× lower idle CPU usage.
 - **Acquisition:** Anthropic acquired Bun in December 2025 — it now powers Claude Code. Remains MIT-licensed and open source.
 - **Stars:** ~105,000 GitHub stars (Q1 2026), on par with Node.js.
@@ -33,6 +34,7 @@
 - **Adoption:** ~28% of new JS projects on GitHub started with Bun in Q1 2026.
 
 ### Key Features Relevant to Resume_maker
+
 - **Native TypeScript:** `bun run index.ts` — no `tsc` or `ts-node` needed. Full syntax support (enums, decorators, namespaces, parameter properties).
 - **Built-in bundler:** `bun build ./index.ts --compile` produces a standalone executable (~60 MB).
 - **Package manager:** `bun install` is ~5× faster than npm.
@@ -40,8 +42,9 @@
 - **90%+ Node.js API compatibility.** Most npm packages work out of the box.
 
 ### Bun vs Node.js for CLI Tools
+
 | Factor | Bun | Node.js |
-|--------|-----|---------|
+| -------- | ----- | --------- |
 | Cold start | ~1.2 ms | ~45 ms |
 | TypeScript execution | Native, full syntax | Type stripping (no enums/namespaces by default) |
 | Single-binary compilation | `bun build --compile` (stable) | SEA (experimental) |
@@ -55,6 +58,7 @@
 ## 2. Performance & Optimization Tips
 
 ### Profiling Tools (Bun-Native)
+
 ```typescript
 // Nanosecond precision timing
 const start = Bun.nanoseconds();
@@ -68,23 +72,28 @@ console.log(`Took ${(end - start) / 1_000_000}ms`);
 - Heap snapshots: `bun --heap-prof script.ts`
 
 ### Startup Time Optimization
+
 - **Lazy loading:** Import modules only when needed inside functions, not at module top-level.
 - **Bun already fast:** Bun cold starts in ~1.2 ms vs Node's ~45 ms — for a CLI tool, this is already optimal.
 
 ### Memory Management
+
 - Use **TypedArrays** for numeric data instead of regular arrays when dealing with large datasets.
 - Beware of unbounded cache growth — use LRU caches with size limits.
 - Bun uses ~25–40% less memory than Node for API servers.
 
 ### File System & I/O
+
 - `Bun.file()` and `Bun.write()` are optimized for speed — prefer them over `fs` module.
 - `Bun.spawn()` is faster than `child_process` for subprocess execution.
 
 ### Build Optimization
+
 - `bun build --target=bun --minify --compile` produces optimized standalone binaries.
 - Tree shaking is automatic.
 
 ### Benchmark Reality
+
 - **Synthetic benchmarks:** Bun can be 4× faster than Node.js in raw HTTP throughput.
 - **Real-world apps (with DB/routing):** The gap narrows to ~3% — but for CPU-bound tasks and package installs, Bun maintains a 2× advantage.
 
@@ -93,11 +102,13 @@ console.log(`Took ${(end - start) / 1_000_000}ms`);
 ## 3. CLI Application Best Practices (Bun)
 
 ### Project Setup
+
 ```bash
 bun init                    # Scaffolds package.json, tsconfig.json, index.ts
 ```
 
 ### CLI Entry Point with Shebang
+
 ```typescript
 #!/usr/bin/env bun
 // cli.ts
@@ -105,6 +116,7 @@ const args = Bun.argv.slice(2); // Remove 'bun' and script path
 ```
 
 ### Argument Parsing (Built-in)
+
 ```typescript
 import { parseArgs } from "util";
 
@@ -122,6 +134,7 @@ const { values, positionals } = parseArgs({
 ```
 
 ### Subcommand Pattern
+
 ```typescript
 type CommandHandler = (args: string[]) => Promise<void> | void;
 
@@ -144,6 +157,7 @@ async function main() {
 ```
 
 ### Colorized Output (No Dependencies)
+
 ```typescript
 const isColorSupported = process.stdout.isTTY;
 
@@ -157,6 +171,7 @@ export const colors = {
 ```
 
 ### Standalone Binary Distribution
+
 ```bash
 # Compile to a single executable (no Bun/Node needed by user)
 bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
@@ -169,6 +184,7 @@ bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
 ```
 
 ### Exit Codes
+
 - `0`: Success
 - `1`: General error / unknown command
 - Use `process.exit(code)` for clean termination after error messages.
@@ -178,6 +194,7 @@ bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
 ## 4. TypeScript Strict Mode & Configuration
 
 ### Current Project Config (Good Baseline)
+
 ```json
 {
   "compilerOptions": {
@@ -194,16 +211,18 @@ bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
 ```
 
 ### Recommended Enhancement
+
 Consider enabling these additional flags for maximum safety:
 
 | Flag | Effect | Recommendation |
-|------|--------|---------------|
+| ------ | -------- | --------------- |
 | `noUnusedLocals: true` | Error on unused variables | ✅ Enable (catches dead code) |
 | `noUnusedParameters: true` | Error on unused params | ✅ Enable (prefix unused with `_`) |
 | `noPropertyAccessFromIndexSignature: true` | Force `obj["key"]` for index signatures | Optional |
 | `exactOptionalPropertyTypes: true` | Stricter optional property handling | ✅ Enable for data processing |
 
 ### Strict Mode Family (`strict: true` enables all)
+
 - `strictNullChecks` — `null`/`undefined` are not assignable to everything
 - `strictFunctionTypes` — Bivariant parameter checking
 - `strictBindCallApply` — Correct `bind`/`call`/`apply` typing
@@ -213,7 +232,9 @@ Consider enabling these additional flags for maximum safety:
 - `noImplicitThis` — Error on `this` with implicit `any`
 
 ### ESLint with TypeScript (Already Configured)
+
 The project already uses `@typescript-eslint` — ensure these rules are active:
+
 ```json
 "@typescript-eslint/no-explicit-any": "error",
 "@typescript-eslint/explicit-function-return-type": "warn",
@@ -225,6 +246,7 @@ The project already uses `@typescript-eslint` — ensure these rules are active:
 ## 5. Node.js/TypeScript Folder Structure Patterns
 
 ### Recommended: Feature-Based Organization (for larger projects)
+
 ```
 src/
 ├── cli/                    # CLI argument parsing, commands
@@ -244,10 +266,13 @@ src/
 ```
 
 ### Current Project (Appropriately Simple)
+
 For the current project's scope (single-file CLI tool with `index.ts` as entry), the flat structure works well. If the project grows, graduate to the feature-based pattern.
 
 ### Key Principle
+
 **Separation of concerns:**
+
 - CLI arg parsing → entry point
 - Document generation → isolated modules per document type
 - Validation → separate from business logic
@@ -258,9 +283,11 @@ For the current project's scope (single-file CLI tool with `index.ts` as entry),
 ## 6. Input Validation Best Practices (Zod)
 
 ### Why Zod for Resume_maker
+
 Zod is the industry-standard TypeScript-first validation library. Resume_maker reads structured JSON input — Zod ensures data integrity before processing.
 
 ### Basic Validation Example
+
 ```typescript
 import { z } from "zod";
 
@@ -295,11 +322,13 @@ if (!result.success) {
 ```
 
 ### Why safeParse Over parse
+
 - `safeParse` never throws — returns `{ success, data, error }`
 - `parse` throws on invalid data — better for try/catch patterns
 - For a CLI tool, `safeParse` is preferred for clean error reporting
 
 ### Integration with markdown-pdf
+
 Zod schemas can be the single source of truth for data shapes used across all document generators — reuse the inferred type.
 
 ---
@@ -307,7 +336,9 @@ Zod schemas can be the single source of truth for data shapes used across all do
 ## 7. Markdown → PDF Conversion Options
 
 ### Current: `markdown-pdf` v11
+
 The project already uses `markdown-pdf` (v11). This package:
+
 - Uses `marked` (Markdown → HTML) + Puppeteer (HTML → PDF)
 - Supports custom CSS styling
 - CLI and programmatic API
@@ -315,7 +346,7 @@ The project already uses `markdown-pdf` (v11). This package:
 ### Alternatives & Considerations
 
 | Library | Method | Pros | Cons |
-|---------|--------|------|------|
+| --------- | -------- | ------ | ------ |
 | **markdown-pdf** (current) | marked + Puppeteer | Proven, customizable CSS | Requires Chromium binary (~300 MB) |
 | **md-to-pdf** | marked + Puppeteer | Similar, actively maintained | Same Chromium dependency |
 | **Pandoc** | LaTeX/HTML engine | Best output quality | Heavy system dependency |
@@ -323,11 +354,14 @@ The project already uses `markdown-pdf` (v11). This package:
 | **Bun-native** | Custom HTML → PDF via BC | No extra dep | Not yet built in |
 
 ### Performance Note
+
 Puppeteer-based conversion (markdown-pdf) has a ~300 MB Chromium installation overhead and slower first-run startup. For a CLI tool users run infrequently, this is acceptable. For faster iteration, consider:
+
 - **Two-phase output:** Always save Markdown first (fast), offer PDF as optional second step.
 - **Caching:** Check if the Markdown hasn't changed before re-rendering PDF.
 
 ### CSS Customization for PDF
+
 ```css
 /* PDF styles for markdown-pdf */
 body {
@@ -346,33 +380,40 @@ h2 { font-size: 14pt; color: #444; }
 ## 8. Common Pitfalls with Bun
 
 ### 1. PATH Not Refreshed After Install
+
 **Problem:** `bun: command not found` after installation.
 **Fix:** Run `source ~/.bashrc` (or `~/.zshrc`) or reopen terminal.
 
 ### 2. Windows Compatibility Issues
+
 **Problem:** Some npm packages with native bindings don't work on Bun Windows.
 **Mitigation:** Test all dependencies with `bun run` early. Most pure-JS packages work. Native C++ addons (node-gyp) may fail.
 **Status:** The `markdown-pdf` package depends on Puppeteer which ships its own Chromium — this should work but test on Windows.
 
 ### 3. Open Issues Track Record
+
 **Problem:** Bun had ~4,800+ open issues on GitHub (March 2026) — a high count for its user base.
 **Mitigation:** Stick to well-tested APIs. Avoid edge-case features. Test thoroughly before releases.
 
 ### 4. `noUncheckedIndexedAccess` Surprises
+
 **Problem:** Enabling this in tsconfig makes all index signatures return `T | undefined`, which can cause friction.
 **Fix:** This is already enabled in the project. Use optional chaining (`?.`) or guard checks.
 
 ### 5. markdown-pdf Known Issues
+
 - Puppeteer can fail in headless environments if system dependencies (libnss3, libx11) are missing.
 - Large Markdown files may cause Puppeteer to timeout.
 - **Windows:** Chromium launch paths can differ — test PDF generation on Windows specifically.
 
 ### 6. ES Module (`"type": "module"`) Gotchas
+
 - Bun handles ESM natively — no `--experimental-modules` needed.
 - But `require()` is not available in ESM context — use `import` everywhere.
 - The project's `"type": "module"` in package.json is correct for Bun.
 
 ### 7. No Built-in `tsc` Type Checking
+
 - Bun runs `.ts` natively but skips type checking for speed.
 - **Always run `bun tsc --noEmit` in CI** — the project already has this as `typecheck` script.
 
@@ -381,14 +422,17 @@ h2 { font-size: 14pt; color: #444; }
 ## 9. Security Considerations
 
 ### For a CLI Tool (Resume_maker context)
+
 Since Resume_maker is a local CLI tool processing user-provided JSON files, the threat model is limited but not zero.
 
 ### 1. Input Validation (Critical)
+
 - **Always validate JSON input** before processing — malformed input could cause crashes or unexpected behavior.
 - Use Zod schemas with `safeParse` — never trust raw input.
 - Validate file paths in `--input`/`--output` flags — prevent path traversal attacks.
 
 ### 2. Path Traversal Protection
+
 ```typescript
 import { resolve, relative } from "path";
 
@@ -400,25 +444,30 @@ function isWithinProjectDirectory(userPath: string): boolean {
 ```
 
 ### 3. Output File Safety
+
 - Don't overwrite existing files without confirmation (or use `--force` flag).
 - Validate output directory exists before writing.
 
 ### 4. Dependency Supply Chain
+
 - **Use `bun install --frozen-lockfile` in CI** to prevent unexpected dependency updates.
 - Regularly scan dependencies for known vulnerabilities (consider `bun audit` or `npm audit`).
 - Pin exact versions in `package.json` for critical dependencies.
 
 ### 5. No Secrets in Code
+
 - Never hardcode API keys, tokens, or credentials.
 - Use environment variables or `.env` files for any secrets.
 - Add `output/` to `.gitignore` (already done).
 
 ### 6. Markdown Injection
+
 - If user-provided data is injected into Markdown templates, ensure proper escaping.
 - Malicious Markdown could break PDF rendering or produce unexpected output.
 - Escape special characters in user-provided text (names, descriptions, URLs).
 
 ### 7. Bun-Specific Security
+
 - Bun uses binary dead-code elimination rather than runtime permission checks (Deno's model).
 - This means: if a feature isn't compiled in, it can't be exploited — a different security philosophy.
 - For a CLI tool processing local files, this is adequate.
@@ -428,8 +477,9 @@ function isWithinProjectDirectory(userPath: string): boolean {
 ## 10. Similar Open-Source Projects
 
 ### Resume Builders & Generators
+
 | Project | Stack | Approach |
-|---------|-------|----------|
+| --------- | ------- | ---------- |
 | **OpenResume** | React, Next.js, TypeScript | Web-based resume builder + parser. Most popular open-source option. |
 | **Reactive Resume** | Vue.js, Node | Open-source builder with clean PDF exports. |
 | **JSON Resume** | JSON Schema + CLI + themes | Schema-driven — define resume as JSON, render with themes. Similar approach to Resume_maker. |
@@ -437,13 +487,16 @@ function isWithinProjectDirectory(userPath: string): boolean {
 | **MarkdownResume** | Markdown → PDF | Write in Markdown, export ATS-friendly PDF. Conceptually closest. |
 
 ### Key Differences for Resume_maker
+
 - **JSON Resume** uses a community schema — consider adopting it as input format.
 - **MarkdownResume** focuses on Markdown-first — Resume_maker already does this.
 - **RenderCV** uses YAML — Resume_maker uses JSON, which is more standard for programmatic input.
 - None of the above use Bun — Resume_maker's Bun runtime is a differentiator.
 
 ### Inspiration from JSON Resume
+
 JSON Resume's community-driven schema (`https://jsonresume.org/schema/`) is well-established. Consider aligning Resume_maker's input format with JSON Resume's schema for interoperability:
+
 - `basics` (name, email, phone, summary)
 - `work` (company, position, startDate, endDate, highlights)
 - `education` (institution, area, studyType, startDate, endDate)
@@ -455,6 +508,7 @@ JSON Resume's community-driven schema (`https://jsonresume.org/schema/`) is well
 ## 11. Key Takeaways for Resume_maker
 
 ### What's Already Good
+
 ✅ **TypeScript strict mode** — enabled with `strict: true` and useful extras
 ✅ **Bun runtime** — fast cold start, native TS, ideal for CLI tools
 ✅ **Markdown-first output** — fast generation, Git-friendly
@@ -464,6 +518,7 @@ JSON Resume's community-driven schema (`https://jsonresume.org/schema/`) is well
 ✅ **MIT license** — permissive open-source
 
 ### Recommended Improvements
+
 1. **Add Zod for input validation** — Replace or augment manual `validateResumeData()` with Zod schemas for type-safe, composable validation with clear error messages.
 2. **Consider JSON Resume schema compatibility** — Align input format with the established JSON Resume standard for wider adoption.
 3. **Add standalone binary distribution** — Use `bun build --compile` to distribute a single executable, no runtime required.
@@ -475,6 +530,7 @@ JSON Resume's community-driven schema (`https://jsonresume.org/schema/`) is well
 9. **DOCUMENT:** Cross-platform path handling — use `path.join()` / `path.resolve()` consistently for Windows compatibility.
 
 ### Resources
+
 - [Bun Official Docs](https://bun.com/docs)
 - [Bun CLI Applications Guide](https://oneuptime.com/blog/post/2026-01-31-bun-cli-applications/view)
 - [Bun Performance Optimization](https://oneuptime.com/blog/post/2026-01-31-bun-performance-optimization/view)

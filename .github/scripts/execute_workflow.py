@@ -5,13 +5,13 @@ Usage:
     python execute_workflow.py [--workflow FILE] [--dry-run] [--verbose] [--parallel]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 import time
+from dataclasses import dataclass
 from pathlib import Path
-from dataclasses import dataclass, asdict
 from typing import Any
 
 
@@ -77,9 +77,7 @@ async def execute_step(step: WorkflowStep, verbose: bool) -> StepResult:
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
             )
-            stdout, stderr = await asyncio.wait_for(
-                proc.communicate(), timeout=step.timeout
-            )
+            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=step.timeout)
             elapsed = time.monotonic() - start
             output = stdout.decode("utf-8", errors="replace").strip()
             error = stderr.decode("utf-8", errors="replace").strip()
@@ -89,8 +87,7 @@ async def execute_step(step: WorkflowStep, verbose: bool) -> StepResult:
                     print(f"    ✓ {step.name} ({elapsed:.2f}s)")
                     if output:
                         print(f"      {output[:200]}")
-                return StepResult(step=step.name, success=True,
-                                  duration=elapsed, output=output, error=error)
+                return StepResult(step=step.name, success=True, duration=elapsed, output=output, error=error)
             else:
                 if attempt < step.retries:
                     if verbose:
@@ -98,20 +95,19 @@ async def execute_step(step: WorkflowStep, verbose: bool) -> StepResult:
                     continue
                 if verbose:
                     print(f"    ✗ {step.name} ({elapsed:.2f}s): {error[:200]}")
-                return StepResult(step=step.name, success=False,
-                                  duration=elapsed, output=output, error=error)
+                return StepResult(step=step.name, success=False, duration=elapsed, output=output, error=error)
 
-        except asyncio.TimeoutError:
+        except TimeoutError:
             if attempt < step.retries:
                 if verbose:
                     print(f"    Timeout on {step.name}, retrying...")
                 continue
             elapsed = time.monotonic() - start
-            return StepResult(step=step.name, success=False,
-                              duration=elapsed, output="", error="Timeout")
+            return StepResult(step=step.name, success=False, duration=elapsed, output="", error="Timeout")
 
-    return StepResult(step=step.name, success=False,
-                      duration=time.monotonic() - start, output="", error="All retries failed")
+    return StepResult(
+        step=step.name, success=False, duration=time.monotonic() - start, output="", error="All retries failed"
+    )
 
 
 async def main(argv: list[str] | None = None) -> None:
@@ -125,8 +121,9 @@ async def main(argv: list[str] | None = None) -> None:
         print("ERROR: workflow has no steps", file=sys.stderr)
         sys.exit(1)
 
-    steps = [WorkflowStep(**s) if isinstance(s, dict) else WorkflowStep(name=str(s), command=str(s))
-             for s in steps_data]
+    steps = [
+        WorkflowStep(**s) if isinstance(s, dict) else WorkflowStep(name=str(s), command=str(s)) for s in steps_data
+    ]
 
     print(f"Workflow: {workflow_name}")
     print(f"Steps: {len(steps)}")
@@ -168,7 +165,7 @@ async def main(argv: list[str] | None = None) -> None:
     print(f"  Failed: {fail_count} / {len(steps)}")
 
     if fail_count > 0:
-        print(f"\nFailed steps:")
+        print("\nFailed steps:")
         for r in results:
             if not r.success:
                 print(f"  ✗ {r.step}: {r.error[:150]}")

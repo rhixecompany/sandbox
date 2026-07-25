@@ -140,5 +140,6 @@ Sync `.vscode/extensions.json` recommendations to match the 42 installed extensi
 - [ ] No duplicate or conflicting config keys
 - [ ] `.vscode/extensions.json` references all installed extensions
 - [ ] VS Code loads without errors (can be verified with `code --status`)
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

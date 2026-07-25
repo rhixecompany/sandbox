@@ -5,8 +5,8 @@ Usage:
     python build_path_mapping.py [--skills-dir PATH] [--output PATH] [--format json|md]
 """
 
-import asyncio
 import argparse
+import asyncio
 import json
 import sys
 from pathlib import Path
@@ -96,10 +96,7 @@ async def main(argv: list[str] | None = None) -> None:
     mapping = await build_mapping_async(skills_dir)
     print(f"Found {len(mapping)} skills")
 
-    if args.format == "json":
-        output = json.dumps(mapping, indent=2, ensure_ascii=False)
-    else:
-        output = format_markdown(mapping)
+    output = json.dumps(mapping, indent=2, ensure_ascii=False) if args.format == "json" else format_markdown(mapping)
 
     if args.output:
         output_path = Path(args.output)

@@ -1,0 +1,13 @@
+{
+  "source": "official",
+  "source_url": "official/research\\drug-discovery",
+  "bundle_hash": "sha256:40c445351a35d304bbf4e243a5680738b2af42fe270196fda8b7a8074ded199b",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-07-16T02:33:53.441750+00:00",
+  "summary": "drug-discovery: clean scan, no threats detected",
+  "fresh": true
+}

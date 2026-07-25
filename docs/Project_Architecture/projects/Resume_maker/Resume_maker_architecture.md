@@ -15,7 +15,7 @@ Resume_maker is a **single-entry, pipeline-processing CLI application** that tra
 ### Key Design Characteristics
 
 | Aspect | Decision |
-|---|---|
+| --- | --- |
 | **Deployment** | Single-file CLI tool (no server, no daemon) |
 | **Entry Strategy** | Single entry point (`index.ts`) — Bun-native execution |
 | **Processing Model** | Synchronous pipeline with async I/O for file ops |
@@ -182,7 +182,7 @@ graph TD
 ### Component Responsibilities
 
 | Component | Responsibility |
-|---|---|
+| --- | --- |
 | `parseCLIOptions` | Parse `--input`, `--output`, `--format`, `--projectsDir`, `--skipProjects`, `--verbose`, `--help` flags via Node.js `util.parseArgs` |
 | `validateResumeData` | Check required fields (name, title, summary, experience, education, skills, contact). Returns `{isValid, errors}` |
 | `processUserInput` | Normalize input: trim whitespace, set defaults for missing optional fields |
@@ -285,7 +285,7 @@ flowchart LR
 ### Error Handling Strategy
 
 | Scenario | Handling |
-|---|---|
+| --- | --- |
 | Missing required field | `validateResumeData` returns error → `throw Error` with field list |
 | Invalid JSON input | `JSON.parse` throws → caught in `main()` `try/catch` → `process.exit(1)` |
 | PDF conversion failure | `convertToPDF` rejects promise → Markdown file **still saved** |
@@ -302,7 +302,7 @@ flowchart LR
 ### Configuration Surface
 
 | Config File | Purpose |
-|---|---|
+| --- | --- |
 | `tsconfig.json` | TypeScript strict mode, ESNext target, Bun bundler mode |
 | `eslint.config.js` | TypeScript lint rules, Prettier integration |
 | `.markdownlint.json` / `.markdownlintrc.json` | Markdown formatting rules |
@@ -348,7 +348,7 @@ graph LR
 ## 7. Architectural Decisions
 
 | Decision | Rationale |
-|---|---|
+| --- | --- |
 | **Bun-native, no build step** | Bun runs TypeScript directly; `tsconfig.json` has `noEmit: true` |
 | **Single-file entry point** | ~933 lines manageable for a focused CLI tool; avoids premature module splitting |
 | **TypeScript strict** | Catches data-shape mismatches at compile time for a data-driven generator |

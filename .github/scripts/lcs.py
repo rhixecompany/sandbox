@@ -1,4 +1,5 @@
 """Longest Common Subsequence with type hints."""
+
 import asyncio
 
 
@@ -26,7 +27,7 @@ def lcs(s1: str, s2: str) -> str:
         prev, curr = curr, prev
 
     # Traceback to reconstruct the actual string
-    length = prev[n]
+    prev[n]
     result = []
     i, j = m, n
     while i > 0 and j > 0:

@@ -175,5 +175,6 @@ Make `prompts/` the single source of truth for prompt assets.
 1. Phase 6: Final Verification
 1. Risks \& Mitigations
 1. Deliverables
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

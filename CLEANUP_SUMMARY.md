@@ -8,7 +8,7 @@
 ## Phase Completion Status
 
 | Phase | Status | Notes |
-|-------|--------|-------|
+| ------- | -------- | ------- |
 | **0: Safety & Baseline** | ✅ | `git stash push -u -m "pre-cleanup-baseline"` |
 | **1: Delete Specified Targets** | ✅ | 11 dirs + 22 files removed |
 | **2: Migrate Scripts to Hermes** | ✅ | 3 root scripts moved, project scripts copied |
@@ -24,7 +24,7 @@
 ## Metrics
 
 | Metric | Before | After |
-|--------|--------|-------|
+| -------- | -------- | ------- |
 | Root directories | 15+ | 16 (essential only) |
 | Root `.md` files | 6+ | 4 (clean) |
 | Deleted directories | — | 11 |
@@ -39,11 +39,13 @@
 ## Key Deletions (Phase 1)
 
 **Directories:**
+
 - `.playwright-mcp/`, `.tmp/`, `benchmark_output/`, `benchmark_results/`
 - `docs/` (old — 330+ files), `final_work/`, `judge_results/`, `plan/` (old)
 - `reports/`, `results/`, `thoughts/`
 
 **Files:**
+
 - `dev-imp-report.md`, `MEMORY_DUMP.md`, `SESSION_AUDIT_227.md`, `research-skills-duplication-analysis.md`
 - `lcs.py`, `greeting.py`, `generate_skills.py`, `_agents_fix_discover.py`, `_agents_fix_report.py`
 - `nvidia_nim_models.json`, `opencode_zen_models.json`, `openrouter_models.json`
@@ -54,11 +56,13 @@
 ## Scripts Migrated (Phase 2)
 
 **Moved to `%LOCALAPPDATA%\hermes\scripts\`:**
+
 - `generate_skills.py`
 - `_agents_fix_discover.py`
 - `_agents_fix_report.py`
 
 **Copied from `scripts/`:**
+
 - `analyze_skill_codeblocks.py`
 - `apply_pending_memory.py`
 - `apply_pending_skills.py`
@@ -72,7 +76,7 @@
 
 ## New Docs Structure (Phase 5)
 
-```
+```text
 docs/
 ├── Project_Architecture/      # 57 blueprint files (19×3)
 ├── architecture/              # 19 architecture blueprints
@@ -90,7 +94,7 @@ docs/
 ## Validation Results (Phase 7)
 
 | Check | Result |
-|-------|--------|
+| ------- | -------- |
 | All JSON valid (9 key configs) | ✅ PASS |
 | Python syntax (project scripts) | ✅ PASS |
 | Python syntax (Hermes scripts) | ✅ PASS |
@@ -100,7 +104,7 @@ docs/
 
 ## Remaining Workspace Structure
 
-```
+```text
 SandBox/
 ├── .github/           # Preserved (agents, instructions, skills, workflows)
 ├── .hermes/           # Preserved (profiles, skills, plans)

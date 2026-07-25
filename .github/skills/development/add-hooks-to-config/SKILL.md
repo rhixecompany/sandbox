@@ -22,6 +22,7 @@ Wrapper skill for the `add_hooks_to_config.py` script in `~/AppData/Local/hermes
 **Location:** `~/AppData/Local/hermes/scripts/add_hooks_to_config.py`
 
 **Usage:**
+
 ```bash
 python add_hooks_to_config.py [options]
 ```
@@ -39,12 +40,15 @@ python add_hooks_to_config.py [options]
 ## Workflow
 
 ### Phase 1: Setup
+
 Ensure Hermes is installed and config files are accessible.
 
 ### Phase 2: Execute
+
 Run the script with the appropriate arguments to add hooks.
 
 ### Phase 3: Verify
+
 Check that hooks appear in the config and test one hook lifecycle.
 
 ## Verification Checklist
@@ -56,5 +60,6 @@ Check that hooks appear in the config and test one hook lifecycle.
 - [ ] Original config backup is preserved
 
 ## Pitfalls
+
 - Running the script multiple times may create duplicate entries
 - Ensure Hermes is not actively running during config modification

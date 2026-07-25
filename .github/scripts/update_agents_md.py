@@ -5,12 +5,11 @@ Async CLI for scanning projects and injecting architecture blueprints,
 folder structures, and tech stacks into AGENTS.md files.
 """
 
-import asyncio
 import argparse
+import asyncio
 import re
 import sys
 from pathlib import Path
-from typing import List, Optional
 
 ARCHITECTURE_BOILERPLATE = """## Architecture
 
@@ -32,7 +31,7 @@ ARCHITECTURE_BOILERPLATE = """## Architecture
 """
 
 
-async def read_file_safe(file_path: Path) -> Optional[str]:
+async def read_file_safe(file_path: Path) -> str | None:
     """Read file content safely via thread."""
     try:
         return await asyncio.to_thread(file_path.read_text, encoding="utf-8")
@@ -49,7 +48,7 @@ async def write_file_safe(file_path: Path, content: str) -> bool:
         return False
 
 
-async def find_agents_md_files(workspace: Path) -> List[Path]:
+async def find_agents_md_files(workspace: Path) -> list[Path]:
     """Find all AGENTS.md files in workspace."""
     return list(workspace.rglob("AGENTS.md"))
 
@@ -67,17 +66,14 @@ async def add_architecture_section(file_path: Path, dry_run: bool = False) -> di
     # Append architecture section
     new_content = content.rstrip() + "\n\n" + ARCHITECTURE_BOILERPLATE + "\n"
 
-    if not dry_run:
-        if not await write_file_safe(file_path, new_content):
-            return {"file": str(file_path), "error": "Cannot write file", "updated": False}
+    if not dry_run and not await write_file_safe(file_path, new_content):
+        return {"file": str(file_path), "error": "Cannot write file", "updated": False}
 
     return {"file": str(file_path), "updated": True, "dry_run": dry_run}
 
 
 async def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Add Architecture sections to AGENTS.md files."
-    )
+    parser = argparse.ArgumentParser(description="Add Architecture sections to AGENTS.md files.")
     parser.add_argument(
         "--workspace",
         type=str,
@@ -98,21 +94,19 @@ async def main() -> None:
         print(f"No AGENTS.md files found in {workspace}", file=sys.stderr)
         sys.exit(1)
 
-    results = await asyncio.gather(
-        *(add_architecture_section(f, dry_run=args.dry_run) for f in agents_files)
-    )
+    results = await asyncio.gather(*(add_architecture_section(f, dry_run=args.dry_run) for f in agents_files))
 
     updated = [r for r in results if r.get("updated")]
     skipped = [r for r in results if not r.get("updated") and not r.get("error")]
     errors = [r for r in results if r.get("error")]
 
-    print(f"\n=== Update AGENTS.md Report ===")
+    print("\n=== Update AGENTS.md Report ===")
     print(f"Found {len(agents_files)} AGENTS.md file(s)")
     print(f"Updated: {len(updated)}")
     print(f"Skipped (already has section): {len(skipped)}")
     print(f"Errors: {len(errors)}")
     if args.dry_run:
-        print(f"(dry-run — no files were modified)")
+        print("(dry-run — no files were modified)")
     for r in updated:
         print(f"  + {r['file']}")
     for r in skipped:

@@ -1,0 +1,157 @@
+{
+  "source": "official",
+  "source_url": "official/research\\darwinian-evolver",
+  "bundle_hash": "sha256:54582b24e43858675a9ab3efbf4953238cde15a43ffcbc62238e212ee590eecb",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "prompt_injection_ignore",
+      "severity": "critical",
+      "category": "injection",
+      "file": "SKILL.md",
+      "line": 164,
+      "match": "reject phrases like \"ignore previous instructions\" with HTTP 400. Wrap",
+      "description": "prompt injection: ignore previous instructions"
+    },
+    {
+      "pattern_id": "unpinned_pip_install",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 179,
+      "match": "8. **No PyPI package.** `pip install darwinian-evolver` will pull the wrong",
+      "description": "pip install without version pinning"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 67,
+      "match": "&& uv run darwinian_evolver --help | head -5",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 76,
+      "match": "uv run darwinian_evolver parrot \\",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 102,
+      "match": "uv run --with openai python \"$SKILL_DIR/scripts/parrot_openrouter.py\" \\",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 110,
+      "match": "uv run --with openai python \"$SKILL_DIR/scripts/show_snapshot.py\" \\",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 174,
+      "match": "6. **CLI is hardcoded to Anthropic.** `uv run darwinian_evolver <problem>`",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 189,
+      "match": "cd \"$DE_DIR\" && uv run darwinian_evolver --help >/dev/null && \\",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "git_clone",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 59,
+      "match": "[ -d darwinian_evolver ] || git clone --depth 1 https://github.com/imbue-ai/darwinian_evolver.git",
+      "description": "clones a git repository at runtime"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "scripts\\parrot_openrouter.py",
+      "line": 39,
+      "match": "key = os.environ.get(\"OPENROUTER_API_KEY\")",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "scripts\\parrot_openrouter.py",
+      "line": 39,
+      "match": "key = os.environ.get(\"OPENROUTER_API_KEY\")",
+      "description": "reads secret via os.environ.get()"
+    },
+    {
+      "pattern_id": "python_os_environ",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "templates\\custom_problem_template.py",
+      "line": 47,
+      "match": "key = os.environ.get(\"OPENROUTER_API_KEY\")",
+      "description": "accesses os.environ (potential env dump)"
+    },
+    {
+      "pattern_id": "python_environ_get_secret",
+      "severity": "critical",
+      "category": "exfiltration",
+      "file": "templates\\custom_problem_template.py",
+      "line": 47,
+      "match": "key = os.environ.get(\"OPENROUTER_API_KEY\")",
+      "description": "reads secret via os.environ.get()"
+    },
+    {
+      "pattern_id": "uv_run",
+      "severity": "medium",
+      "category": "supply_chain",
+      "file": "templates\\custom_problem_template.py",
+      "line": 10,
+      "match": "OPENROUTER_API_KEY=... uv run --with openai python /path/to/this_file.py \\",
+      "description": "uv run (may auto-install unpinned dependencies)"
+    },
+    {
+      "pattern_id": "context_exfil",
+      "severity": "high",
+      "category": "exfiltration",
+      "file": "templates\\custom_problem_template.py",
+      "line": 90,
+      "match": "# TODO: include enough context for the LLM to diagnose the failure.",
+      "description": "instructs agent to output/share conversation history"
+    }
+  ],
+  "rules": [
+    "context_exfil",
+    "git_clone",
+    "prompt_injection_ignore",
+    "python_environ_get_secret",
+    "python_os_environ",
+    "unpinned_pip_install",
+    "uv_run"
+  ],
+  "scanned_at": "2026-07-16T02:33:49.944325+00:00",
+  "summary": "darwinian-evolver: dangerous \u2014 15 finding(s) in exfiltration, injection, supply_chain",
+  "fresh": true
+}

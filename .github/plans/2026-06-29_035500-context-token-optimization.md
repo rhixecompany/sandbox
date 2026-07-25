@@ -86,5 +86,6 @@ status: completed
 | AGENTS.md | 9.5KB | 4.0KB | 5.5KB |
 | PROJECT_RULES.md | 7.1KB | 3.0KB | 4.1KB |
 | **Total** | **47.4KB** | **22.1KB** | **~25KB (6,500 tok)** |
+
 ---
 *Workflow: subagent-driven-development | Two-stage review (spec → quality)*

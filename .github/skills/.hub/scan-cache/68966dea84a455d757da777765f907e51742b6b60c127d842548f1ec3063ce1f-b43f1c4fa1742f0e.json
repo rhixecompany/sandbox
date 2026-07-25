@@ -1,0 +1,62 @@
+{
+  "source": "official",
+  "source_url": "official/devops\\cli",
+  "bundle_hash": "sha256:68966dea84a455d757da777765f907e51742b6b60c127d842548f1ec3063ce1f",
+  "scanner_version": "skills-guard-v1",
+  "verdict": "dangerous",
+  "trust_level": "builtin",
+  "findings": [
+    {
+      "pattern_id": "curl_pipe_shell",
+      "severity": "critical",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 40,
+      "match": "curl -fsSL https://cli.inference.sh | sh",
+      "description": "curl piped to shell (download-and-execute)"
+    },
+    {
+      "pattern_id": "curl_pipe_shell",
+      "severity": "critical",
+      "category": "supply_chain",
+      "file": "references\\authentication.md",
+      "line": 6,
+      "match": "curl -fsSL https://cli.inference.sh | sh",
+      "description": "curl piped to shell (download-and-execute)"
+    },
+    {
+      "pattern_id": "curl_pipe_shell",
+      "severity": "critical",
+      "category": "supply_chain",
+      "file": "references\\authentication.md",
+      "line": 44,
+      "match": "curl -fsSL https://cli.inference.sh | sh",
+      "description": "curl piped to shell (download-and-execute)"
+    },
+    {
+      "pattern_id": "system_overwrite",
+      "severity": "critical",
+      "category": "destructive",
+      "file": "references\\cli-reference.md",
+      "line": 78,
+      "match": "infsh completion bash > /etc/bash_completion.d/infsh",
+      "description": "overwrites system configuration file"
+    },
+    {
+      "pattern_id": "curl_pipe_shell",
+      "severity": "critical",
+      "category": "supply_chain",
+      "file": "references\\cli-reference.md",
+      "line": 6,
+      "match": "curl -fsSL https://cli.inference.sh | sh",
+      "description": "curl piped to shell (download-and-execute)"
+    }
+  ],
+  "rules": [
+    "curl_pipe_shell",
+    "system_overwrite"
+  ],
+  "scanned_at": "2026-07-16T02:34:07.073677+00:00",
+  "summary": "cli: dangerous \u2014 5 finding(s) in destructive, supply_chain",
+  "fresh": true
+}

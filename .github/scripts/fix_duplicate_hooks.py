@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Fix duplicate hooks_auto_accept line in config.yaml."""
+
 import asyncio
 
-config_path = r'C:\Users\Alexa\AppData\Local\hermes\config.yaml'
+config_path = r"C:\Users\Alexa\AppData\Local\hermes\config.yaml"
 
 
 async def main():
-    with open(config_path, 'r') as f:
+    with open(config_path) as f:
         lines = f.readlines()
 
     # Remove duplicate hooks_auto_accept lines
@@ -14,7 +15,7 @@ async def main():
     seen_hooks_auto_accept = False
     for line in lines:
         stripped = line.strip()
-        if stripped == 'hooks_auto_accept: true':
+        if stripped == "hooks_auto_accept: true":
             if not seen_hooks_auto_accept:
                 new_lines.append(line)
                 seen_hooks_auto_accept = True
@@ -22,7 +23,7 @@ async def main():
         else:
             new_lines.append(line)
 
-    with open(config_path, 'w') as f:
+    with open(config_path, "w") as f:
         f.writelines(new_lines)
 
     print("Fixed duplicate hooks_auto_accept line")

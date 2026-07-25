@@ -3,6 +3,7 @@
 Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 
 ## 1. Banking
+
 - `Next.js 16 best practices fintech 2026`
 - `Plaid API integration patterns security`
 - `Dwolla payment processing ACH`
@@ -10,6 +11,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Upstash Redis caching fintech`
 
 ## 2. comicwise
+
 - `Next.js 16 comic streaming platform architecture`
 - `Prisma vs Drizzle ORM migration 2026`
 - `Stripe subscription management best practices`
@@ -17,6 +19,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `ImageKit vs Cloudinary media optimization`
 
 ## 3. cookiecutter-django-tailwind
+
 - `Django 5.x project template best practices`
 - `Tailwind CSS Django integration patterns`
 - `cookiecutter template structure conventions`
@@ -24,6 +27,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Django production deployment 2026`
 
 ## 4. Django-Scrapy-Selenium
+
 - `Scrapy Selenium integration dynamic content scraping`
 - `Django Scrapy integration dashboard patterns`
 - `Celery Redis scraping task management`
@@ -31,6 +35,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Scrapy spider deployment monitoring`
 
 ## 5. ecom
+
 - `Django REST Framework ecommerce best practices`
 - `React Redux ecommerce patterns`
 - `PayPal integration Django React`
@@ -38,6 +43,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `React Bootstrap ecommerce UI patterns`
 
 ## 6. profile
+
 - `Django 4.x CKEditor 5 integration`
 - `Google Cloud Storage Django media files`
 - `Django blog CMS architecture patterns`
@@ -45,6 +51,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Django rich text editing best practices`
 
 ## 7. Python-projects
+
 - `Python beginner projects best practices 2026`
 - `OpenCV Python face detection tutorial`
 - `BeautifulSoup web scraping Python`
@@ -52,6 +59,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Python script project organization`
 
 ## 8. rhixe_scans
+
 - `Next.js 15 comic reader platform architecture`
 - `Prisma 6 ORM performance optimization`
 - `Stripe PayPal dual payment integration`
@@ -59,6 +67,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Supabase NextAuth integration`
 
 ## 9. rhixecompany-comics
+
 - `Django DRF Next.js dual stack architecture`
 - `Next.js 16 Django backend integration`
 - `Celery Redis Django async tasks`
@@ -66,6 +75,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Django Next.js monorepo patterns`
 
 ## 10. selenium_webdriver
+
 - `Selenium WebDriver 4 Node.js patterns`
 - `ChromeDriver configuration best practices`
 - `Node.js web scraping anti-detection`
@@ -73,6 +83,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Node.js ES modules Selenium 2026`
 
 ## 11. university-libary-jsm
+
 - `Next.js 15 Drizzle ORM Neon serverless`
 - `Neon PostgreSQL serverless best practices`
 - `Upstash Redis rate limiting caching`
@@ -80,6 +91,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Library management system architecture`
 
 ## 12. xamehi
+
 - `Django Express dual backend architecture`
 - `Create React App modernization migration`
 - `React 18 Django API integration patterns`
@@ -87,6 +99,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `Legacy React migration strategies`
 
 ## 13. xamehi.tv
+
 - `Django REST Framework streaming platform`
 - `React 17 Material-UI 4 patterns`
 - `video-react player integration`
@@ -94,6 +107,7 @@ Generated: 2026-07-16 for the /repo pipeline UPDATE pass.
 - `DRF SimpleJWT best practices`
 
 ## 14. youtube-downloader
+
 - `yt-dlp Python integration patterns 2026`
 - `curl_cffi Python HTTP client`
 - `YouTube downloader CLI architecture`

@@ -1,0 +1,90 @@
+<div
+            class="github-markdown-body"
+            data-color-mode="auto"
+            data-light-theme="light"
+            data-dark-theme="dark"
+        >
+            <div class="github-markdown-content"><span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;default&quot;,&quot;lightModeTheme&quot;:&quot;default&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+                <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="cursorrules--cursor-ide-agent-rules">.cursorrules — Cursor IDE Agent Rules</h1>
+<p>Rules specifically for Cursor IDE's agent mode. Shared workspace rules stay in <code>AGENTS.md</code>.</p>
+<h2 id="1-context-loading">1. Context Loading</h2>
+<ol>
+<li><code>.cursorrules</code> (current directory)</li>
+<li>Parent <code>.cursorrules</code> files</li>
+<li><code>AGENTS.md</code></li>
+</ol>
+<h2 id="2-code-style--formatting">2. Code Style &amp; Formatting</h2>
+<h3 id="typescriptjavascript">TypeScript/JavaScript</h3>
+<ul>
+<li><strong>Indentation:</strong> 2 spaces</li>
+<li><strong>Line endings:</strong> CRLF (Windows)</li>
+<li><strong>Quotes:</strong> Single quotes preferred</li>
+<li><strong>Semicolons:</strong> Required</li>
+<li><strong>Strict mode:</strong> Always on (<code>noUncheckedIndexedAccess: true</code>)</li>
+</ul>
+<h3 id="python">Python</h3>
+<ul>
+<li><strong>Indentation:</strong> 4 spaces</li>
+<li><strong>Line length:</strong> 88 characters</li>
+<li><strong>Quotes:</strong> Double quotes for strings</li>
+<li><strong>Type hints:</strong> Required for public functions</li>
+</ul>
+<h3 id="general">General</h3>
+<ul>
+<li><strong>Violations:</strong> Zero-warning lint gate</li>
+<li><strong>Format check:</strong> Run <code>bun run format:check</code> before commit</li>
+<li><strong>Type check:</strong> Run <code>bun run typecheck</code> before commit</li>
+</ul>
+<h2 id="3-file-operations">3. File Operations</h2>
+<h3 id="new-files">New Files</h3>
+<ul>
+<li>Always include proper JSDoc/JSDoc-style comments</li>
+<li>Add <code>// @ts-check</code> for JS files</li>
+<li>Include <code>// no-inspect</code> comment for files not meant for debugging</li>
+</ul>
+<h3 id="editing">Editing</h3>
+<ul>
+<li>Use targeted edits, not wholesale rewrites</li>
+<li>Preserve git history where possible</li>
+<li>Update tests alongside code changes</li>
+</ul>
+<h3 id="deletions">Deletions</h3>
+<ul>
+<li>Never delete <code>.git</code> directories</li>
+<li>Always delete dead code instead of Archive</li>
+<li>Use <code>git rm</code> for tracked files and <code>rm</code> for untracked files</li>
+</ul>
+<h2 id="4-agent-behavior">4. Agent Behavior</h2>
+<h3 id="tool-usage">Tool Usage</h3>
+<ul>
+<li>Prefer MCP servers over direct file operations</li>
+<li>Use <code>sequential-thinking</code> for multi-phase tasks</li>
+<li>Document tool results in comments when useful</li>
+</ul>
+<h3 id="reasoning">Reasoning</h3>
+<ul>
+<li>Think before making changes</li>
+<li>Verify after each modification</li>
+<li>State assumptions explicitly</li>
+</ul>
+<h3 id="safety">Safety</h3>
+<ul>
+<li>Never modify <code>.env</code> files</li>
+<li>Never write secrets to files</li>
+<li>Always explain destructive operations</li>
+</ul>
+<h2 id="5-common-mistakes-to-avoid">5. Common Mistakes to Avoid</h2>
+<ol>
+<li>Using <code>any</code> type in TypeScript</li>
+<li>Skipping type checks or lint passes</li>
+<li>Committing without running tests</li>
+<li>Creating backup files (<code>.bak</code>, <code>.old</code>, etc.)</li>
+<li>Hardcoding paths or environment variables</li>
+</ol>
+<h2 id="6-cursor-specific-scope">6. Cursor-Specific Scope</h2>
+<p>This file only formats Cursor IDE behavior. For toolchain details, see <code>AGENTS.md</code>.<br>
+For Claude-specific behavior, see <code>CLAUDE.md</code>.<br>
+For Hermes-specific overrides, see <code>.hermes.md</code>.</p>
+</div>
+        </div>

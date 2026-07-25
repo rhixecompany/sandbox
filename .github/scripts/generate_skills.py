@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate proper script wrapper skill files for Hermes."""
+
 import asyncio
 import os
 
@@ -8,11 +9,13 @@ SKILLS_DIR = r"C:\Users\Alexa\AppData\Local\hermes\skills\development"
 
 EXCLUDE = {"__pycache__", "skill_name_to_path.json", "memory_repair_artifacts"}
 
-scripts = sorted([
-    f for f in os.listdir(SCRIPTS_DIR)
-    if f not in EXCLUDE and not f.startswith(".")
-    and os.path.isfile(os.path.join(SCRIPTS_DIR, f))
-])
+scripts = sorted(
+    [
+        f
+        for f in os.listdir(SCRIPTS_DIR)
+        if f not in EXCLUDE and not f.startswith(".") and os.path.isfile(os.path.join(SCRIPTS_DIR, f))
+    ]
+)
 
 
 def script_to_skill_name(filename):
@@ -365,9 +368,9 @@ async def main():
         count += 1
         print(f"  ✓ {skill_name} ← {script}")
 
-    print(f"\n{'='*50}")
+    print(f"\n{'=' * 50}")
     print(f"Total skills created: {count}")
-    print(f"{'='*50}")
+    print(f"{'=' * 50}")
 
 
 if __name__ == "__main__":

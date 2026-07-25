@@ -1,17 +1,17 @@
 ---
 name: agents-system-prompt-context-fix
 title: "Agents System Prompt Context Fix"
-description: 'Fix and verify Hermes/Copilot/Codex agent system prompt context by '
-  'generating project context artifacts, auditing VS Code configs, and verifying completion.'
+description: "Fix and verify Hermes/Copilot/Codex agent system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion."
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- agents
-- system-prompt
-- context
-- verification
-- vscode
+  - agents
+  - ai-assistant
+  - fix
+  - prompts
+  - typescript
+  - workflow
 trigger: /agents-system-prompt-context-fix
 formatter: default
 dependencies:
@@ -25,8 +25,6 @@ metadata:
     - user-communication-preferences
     - verification-before-completion
 toolsets:
-- file
-- terminal
 scripts: []
 skills: []
 plan: ''

@@ -1,155 +1,66 @@
 ---
 name: general
-...
 title: General Development Workflow
-...
 description: General development workflow for analysis, planning, implementation, and verification
   with context mapping and AI-assisted execution.
-...
 version: 1.0.0
-...
 license: MIT
-...
 author: Hermes Agent
-...
-toolsets: - file
-- terminal
+toolsets:
+  - file
+  - terminal
 scripts: []
-skills: - introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- context-map
-- brainstorming
-- plans-and-specs
-- dispatching-parallel-agents
-- subagent-driven-development
-- systematic-debugging
-- simplify
-- context7
-- plan
-- writing-skills
-- acpx-executor
+skills:
+  - introspection-only-general
+  - no-git-delete
+  - no-net-fetch
+  - skills-tools-preflight-check
+  - context-map
+  - brainstorming
+  - plans-and-specs
+  - dispatching-parallel-agents
+  - subagent-driven-development
+  - systematic-debugging
+  - simplify
+  - context7
+  - plan
+  - writing-skills
+  - acpx-executor
 formatter: default
-...
 plan: ''
-dependencies: - prompt:context-map.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:dispatching-parallel-agents
-- skill:subagent-driven-development
-- skill:systematic-debugging
-- skill:simplify
-- skill:context7
-- skill:plan
-- skill:writing-skills
-- skill:acpx-executor
-- tool:terminal
-- tool:search_files
-- tool:web_search
-- tool:delegate_task
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-- skill:context-map
-tags: - planning
-- prompts
-- typescript
-- workflow
+dependencies:
+  - prompt:context-map.prompt.md
+  - prompt:update-implementation-plan.prompt.md
+  - skill:brainstorming
+  - skill:plans-and-specs
+  - skill:dispatching-parallel-agents
+  - skill:subagent-driven-development
+  - skill:systematic-debugging
+  - skill:simplify
+  - skill:context7
+  - skill:plan
+  - skill:writing-skills
+  - skill:acpx-executor
+  - tool:terminal
+  - tool:search_files
+  - tool:web_search
+  - tool:delegate_task
+  - skill:introspection-only-general
+  - skill:no-git-delete
+  - skill:no-net-fetch
+  - skill:skills-tools-preflight-check
+  - skill:context-map
+tags:
+  - documentation
+  - planning
+  - prompts
+  - typescript
+  - workflow
+  - planning
+  - prompts
+  - typescript
+  - workflow
 trigger: /general
-...
 ---
 
-> General development workflow with planning, automation, and verification.
-
-## Goal
-
-Handle multi-step development work with a predictable loop: map context, plan,
-implement, and verify.
-
-## Context
-
-Use this prompt when a task spans more than one step or needs explicit file
-impact analysis before coding. It combines file mapping, planning, direct CLI
-execution, and validation.
-
-## Inputs
-
-- Task description
-- Optional target area, files, or bug report
-- Workspace context and relevant documentation
-- Optional constraints, performance targets, or output format requirements
-
-## Outputs
-
-- A dependency-aware context map
-- A short execution plan
-- Implemented changes or commands
-- Verification notes and follow-up actions
-
-## Rules
-
-> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-> Domain-specific additions below.
-
-1. Use Context7 or equivalent docs before changing code.
-2. Plan before coding when the scope is multi-step.
-3. Keep changes small and verifiable.
-4. Use direct CLI execution for implementation and verification.
-5. Keep the workflow deterministic and easy to resume.
-
-## Skills Required
-
-> See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
-
-## Phases
-
-### Phase 1: Analyze
-
-Map the impacted files, read the relevant docs, and confirm the current state
-before changing anything.
-
-### Phase 2: Plan
-
-Use brainstorming and plans-and-specs to define the smallest safe execution
-path. Split the work into parallel streams only when the dependencies are clear.
-
-### Phase 3: Execute
-
-Run commands, write code, and manage files directly from the AI client. Use
-dispatching-parallel-agents for concurrent work when it reduces risk or
-turnaround time.
-
-### Phase 4: Verify
-
-Test changes, validate outputs, and confirm the task is complete.
-
-## Steps
-
-1. Load `context-map` prompt (`prompts/context-map.prompt.md`) and inspect the affected files.
-2. Use Context7 docs or equivalent references for the relevant APIs or patterns.
-3. Create a compact plan with clear checkpoints.
-4. Implement the change with direct CLI/file operations.
-5. Verify the result with tests, diffs, or other evidence.
-6. Update tickets or docs if required.
-
-## Tasks
-
-- [ ] Map impacted files and dependencies before any code work
-- [ ] Apply structured problem-solving to complex issues
-- [ ] Create a compact plan before coding
-- [ ] Use parallel agents only when the scope is independent
-- [ ] Run commands and scripts directly from the terminal
-- [ ] Manage files and configuration via CLI
-- [ ] Verify all changes pass the required checks
-
-## Actions
-
-1. Map the scope and identify dependencies.
-2. Plan the work and split parallel tasks when safe.
-3. Execute the change with direct tooling.
-4. Verify the result against the original goal.
-5. Return the final outcome with the evidence needed to trust it.
+> General development workflow with planning, automation, and verification.## GoalHandle multi-step development work with a predictable loop: map context, plan,implement, and verify.## ContextUse this prompt when a task spans more than one step or needs explicit fileimpact analysis before coding. It combines file mapping, planning, direct CLIexecution, and validation.## Inputs- Task description- Optional target area, files, or bug report- Workspace context and relevant documentation- Optional constraints, performance targets, or output format requirements## Outputs- A dependency-aware context map- A short execution plan- Implemented changes or commands- Verification notes and follow-up actions## Rules> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)> Domain-specific additions below.1. Use Context7 or equivalent docs before changing code.2. Plan before coding when the scope is multi-step.3. Keep changes small and verifiable.4. Use direct CLI execution for implementation and verification.5. Keep the workflow deterministic and easy to resume.## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)## Phases### Phase 1: AnalyzeMap the impacted files, read the relevant docs, and confirm the current statebefore changing anything.### Phase 2: PlanUse brainstorming and plans-and-specs to define the smallest safe executionpath. Split the work into parallel streams only when the dependencies are clear.### Phase 3: ExecuteRun commands, write code, and manage files directly from the AI client. Usedispatching-parallel-agents for concurrent work when it reduces risk orturnaround time.### Phase 4: VerifyTest changes, validate outputs, and confirm the task is complete.## Steps1. Load `context-map` prompt (`prompts/context-map.prompt.md`) and inspect the affected files.2. Use Context7 docs or equivalent references for the relevant APIs or patterns.3. Create a compact plan with clear checkpoints.4. Implement the change with direct CLI/file operations.5. Verify the result with tests, diffs, or other evidence.6. Update tickets or docs if required.## Tasks- [ ] Map impacted files and dependencies before any code work- [ ] Apply structured problem-solving to complex issues- [ ] Create a compact plan before coding- [ ] Use parallel agents only when the scope is independent- [ ] Run commands and scripts directly from the terminal- [ ] Manage files and configuration via CLI- [ ] Verify all changes pass the required checks## Actions1. Map the scope and identify dependencies.2. Plan the work and split parallel tasks when safe.3. Execute the change with direct tooling.4. Verify the result against the original goal.5. Return the final outcome with the evidence needed to trust it.

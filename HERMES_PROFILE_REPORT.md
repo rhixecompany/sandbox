@@ -5,7 +5,7 @@
 ## Profile Inventory
 
 | Profile | Model | Provider | Status |
-|---------|-------|----------|--------|
+| --------- | ------- | ---------- | -------- |
 | **default** ⬤ | google/gemma-4-31b-it:free | openrouter | Active (current session) |
 | alexa | google/gemma-4-31b-it:free | openrouter | Available |
 | code-architect | google/gemma-4-31b-it:free | openrouter | Available |
@@ -18,7 +18,7 @@
 ## Core Files Status
 
 | File | Location | Status |
-|------|----------|--------|
+| ------ | ---------- | -------- |
 | `SOUL.md` | `~/AppData/Local/hermes/SOUL.md` | ✓ Present, valid |
 | `USER.md` | `~/AppData/Local/hermes/memories/USER.md` | ✓ Present, 373 bytes |
 | `MEMORY.md` | `~/AppData/Local/hermes/memories/MEMORY.md` | ✓ Present, 1053 bytes |
@@ -26,7 +26,7 @@
 ## Workspace Files
 
 | File | Status | Notes |
-|------|--------|-------|
+| ------ | -------- | ------- |
 | `.hermes.md` | ✓ Present | 60 lines, valid |
 | `AGENTS.md` | ✓ Present | 202 lines, valid |
 | `PROJECT_RULES.md` | ✓ Created | 176 lines |
@@ -40,7 +40,7 @@
 ## Provider Chain
 
 | Priority | Provider | Model | Status |
-|----------|----------|-------|--------|
+| ---------- | ---------- | ------- | -------- |
 | Primary | openrouter | google/gemma-4-31b-it:free | ✓ Active |
 | 2 | openrouter | nemotron-3-ultra | ✓ Available |
 | 3 | openrouter | hy3 | ✓ Available |
@@ -56,7 +56,7 @@
 ## MCP Servers (14)
 
 | Server | Purpose | Status |
-|--------|---------|--------|
+| -------- | --------- | -------- |
 | ast-grep | code search/replace | ✓ Configured |
 | code-sandbox | Node.js jest | ✓ Configured |
 | codex | Codex CLI | ✓ Configured |
@@ -89,7 +89,7 @@
 ## Verification Summary
 
 | Check | Status |
-|-------|--------|
+| ------- | -------- |
 | All 5 mandatory skills loaded | ✓ |
 | USER.md < 1375 bytes | ✓ (373 bytes) |
 | MEMORY.md < 2200 bytes | ✓ (1053 bytes) |

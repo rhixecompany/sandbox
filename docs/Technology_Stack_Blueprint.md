@@ -3,9 +3,11 @@
 Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Stack Overview
+
 - The workspace mixes JavaScript/Bun, Python/Django, and several language-specific service/tooling examples.
 
 ## Project Stack Index
+
 | Project | Stack | Key Dependencies / Markers |
 | --- | --- | --- |
 | `projects/Banking` | Next.js, React, Bun, TypeScript, Tailwind, ESLint, Prettier, Python | next, react, react-dom, typescript, tailwindcss, eslint, prettier, vitest, eslint-config-prettier, @typescript-eslint/parser |
@@ -37,5 +39,6 @@ Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 | `projects/xamehi.tv/frontend` | React, Bun | react, react-dom, @material-ui/core, @testing-library/jest-dom, @testing-library/react, @testing-library/user-event, axios, caniuse-lite, ra-data-simple-rest, react-admin |
 
 ## Update Notes
+
 - Re-run after dependency or build-tool changes.
 - Use the project-level tech-stack docs for deeper per-repo detail.

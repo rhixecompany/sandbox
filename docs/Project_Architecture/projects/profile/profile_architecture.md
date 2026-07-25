@@ -122,7 +122,7 @@ Post ─────────────────────┤  headlin
 ### 3.2 View Layer (FBVs)
 
 | View | Route | Auth Required | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `home` | `/` | No | 3 featured posts landing |
 | `posts` | `/posts/` | No | Paginated list + filter |
 | `post` | `/post/<slug>/` | No | Detail + comment form |
@@ -161,7 +161,7 @@ Post ─────────────────────┤  headlin
 ### 3.4 Signal Wiring
 
 | Signal | Trigger | Action |
-|---|---|---|
+| --- | --- | --- |
 | `post_save` (User) | User created | Auto-create Profile |
 | `post_save` (User) | User updated | Auto-sync Profile fields |
 | `pre_save` (User) | User saving | Set username = email |
@@ -239,7 +239,7 @@ Post ─────────────────────┤  headlin
 ## 7. Key Design Decisions
 
 | Decision | Choice | Rationale |
-|---|---|---|
+| --- | --- | --- |
 | View pattern | Function-Based Views | Simpler for CRUD-heavy portfolio; CBVs preferred per AGENTS.md but FBVs used in practice |
 | Rich text | CKEditor 4 (static) | Mature, self-hosted, no external dependency |
 | Media storage | GCS (prod) / local (dev) | Scalable, cost-effective for blog images |
