@@ -20,8 +20,9 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from _pathutil import resolve_path
 
-HOOKS_ROOT = Path(__file__).resolve().parent.parent
+HOOKS_ROOT = resolve_path(__file__).parent.parent
 HERMES_HOME = Path(os.environ.get("HERMES_HOME", "") or Path.home() / "AppData" / "Local" / "hermes")
 HERMES_LOGS = HERMES_HOME / "logs" / "hermes"
 SKIP_PREFIX = "SKIP_"
