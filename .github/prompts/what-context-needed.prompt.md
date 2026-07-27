@@ -18,11 +18,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /what-context-needed
 ---
 

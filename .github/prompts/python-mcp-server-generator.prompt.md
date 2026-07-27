@@ -24,15 +24,6 @@ tags:
   - python
   - specification
   - typescript
-  - backend
-  - configuration
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - python
-  - specification
-  - typescript
 trigger: /python-mcp-server-generator
 ---
 

@@ -36,12 +36,6 @@ tags:
   - planning
   - prompts
   - specification
-  - ai-assistant
-  - generator
-  - ml
-  - planning
-  - prompts
-  - specification
   - typescript
 trigger: /plan-generate
 ---

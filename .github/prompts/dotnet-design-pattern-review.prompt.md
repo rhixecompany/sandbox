@@ -20,13 +20,6 @@ tags:
   - frontend
   - prompts
   - typescript
-  - architecture
-  - audit
-  - csharp
-  - dotnet
-  - frontend
-  - prompts
-  - typescript
 trigger: /dotnet-design-pattern-review
 ---
 

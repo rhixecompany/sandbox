@@ -25,16 +25,6 @@ tags:
   - specification
   - testing
   - typescript
-  - audit
-  - fix
-  - frontend
-  - ml
-  - prompts
-  - rust
-  - security
-  - specification
-  - testing
-  - typescript
 trigger: /apple-appstore-reviewer
 ---
 

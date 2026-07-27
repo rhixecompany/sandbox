@@ -18,10 +18,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /add-educational-comments
 ---
 

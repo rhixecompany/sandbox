@@ -19,11 +19,6 @@ tags:
   - data
   - ml
   - prompts
-  - architecture
-  - audit
-  - data
-  - ml
-  - prompts
 trigger: /power-bi-model-design-review
 ---
 

@@ -21,14 +21,6 @@ tags:
   - skills
   - testing
   - typescript
-  - audit
-  - data
-  - frontend
-  - prompts
-  - security
-  - skills
-  - testing
-  - typescript
 trigger: /code-review
 ---
 

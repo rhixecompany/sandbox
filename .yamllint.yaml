@@ -34,3 +34,5 @@ ignore: |
   *.lock.yml
   *.lock.yaml
   .venv/
+  myvenv/
+  venv/

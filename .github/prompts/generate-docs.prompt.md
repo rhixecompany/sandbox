@@ -23,14 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - documentation
-  - generator
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - typescript
 trigger: /generate-docs
 ---
 

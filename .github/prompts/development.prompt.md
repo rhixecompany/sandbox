@@ -22,14 +22,6 @@ tags:
   - prompts
   - specification
   - sql
-  - database
-  - frontend
-  - javascript
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - sql
 trigger: /development
 ---
 

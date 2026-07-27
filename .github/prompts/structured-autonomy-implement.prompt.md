@@ -20,10 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /structured-autonomy-implement
 ---
 

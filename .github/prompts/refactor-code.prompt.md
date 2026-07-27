@@ -24,15 +24,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - linting
-  - markdown
-  - migration
-  - ml
-  - nextjs
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /refactor-code
 ---
 

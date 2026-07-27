@@ -21,13 +21,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - api
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /typespec-create-api-plugin
 mode: agent
 ---

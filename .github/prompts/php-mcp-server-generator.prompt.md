@@ -20,12 +20,6 @@ tags:
   - mcp
   - prompts
   - typescript
-  - backend
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - typescript
 trigger: /php-mcp-server-generator
 ---
 

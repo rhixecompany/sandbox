@@ -19,11 +19,6 @@ tags:
   - prompts
   - refactoring
   - typescript
-  - frontend
-  - java
-  - prompts
-  - refactoring
-  - typescript
 trigger: /java-refactoring-extract-method
 ---
 

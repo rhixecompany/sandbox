@@ -21,11 +21,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
 trigger: /structured-autonomy-plan
 ---
 

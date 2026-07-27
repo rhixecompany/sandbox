@@ -18,10 +18,6 @@ tags:
   - performance
   - prompts
   - specification
-  - ml
-  - performance
-  - prompts
-  - specification
 trigger: /power-bi-dax-optimization
 ---
 

@@ -23,14 +23,6 @@ tags:
   - setup
   - specification
   - typescript
-  - generator
-  - ml
-  - nextjs
-  - prompts
-  - react
-  - setup
-  - specification
-  - typescript
 trigger: /setup-component
 ---
 

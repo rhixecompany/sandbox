@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - configuration
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /editorconfig
 ---
 

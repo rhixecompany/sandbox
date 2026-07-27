@@ -21,10 +21,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /breakdown-feature-implementation
 ---
 

@@ -20,13 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - frontend
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
 trigger: /hermes-breakdown-epic-pm
 ---
 

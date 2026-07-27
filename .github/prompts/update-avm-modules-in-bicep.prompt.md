@@ -19,13 +19,6 @@ tags:
   - specification
   - testing
   - typescript
-  - azure
-  - maintenance
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /update-avm-modules-in-bicep
 ---
 

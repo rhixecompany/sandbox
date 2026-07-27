@@ -22,11 +22,6 @@ tags:
   - skills
   - specification
   - workflow
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - workflow
 trigger: /task-implementation
 ---
 

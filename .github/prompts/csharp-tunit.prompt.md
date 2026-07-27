@@ -19,13 +19,6 @@ tags:
   - prompts
   - testing
   - typescript
-  - csharp
-  - data
-  - dotnet
-  - frontend
-  - prompts
-  - testing
-  - typescript
 trigger: /csharp-tunit
 ---
 

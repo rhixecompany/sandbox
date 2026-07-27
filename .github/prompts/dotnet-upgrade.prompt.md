@@ -20,12 +20,6 @@ tags:
   - migration
   - prompts
   - typescript
-  - audit
-  - csharp
-  - dotnet
-  - migration
-  - prompts
-  - typescript
 trigger: /dotnet-upgrade
 ---
 

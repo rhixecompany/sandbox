@@ -22,13 +22,6 @@ tags:
   - prompts
   - ruby
   - typescript
-  - audit
-  - backend
-  - generator
-  - mcp
-  - prompts
-  - ruby
-  - typescript
 trigger: /ruby-mcp-server-generator
 ---
 

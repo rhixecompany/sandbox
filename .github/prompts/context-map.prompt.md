@@ -1,6 +1,6 @@
 ---
 name: context-map
-title: context-map
+title: Context Map
 description: Build a dependency and reference map before making changes so implementation starts
   from the right files.
 version: 2.0.0

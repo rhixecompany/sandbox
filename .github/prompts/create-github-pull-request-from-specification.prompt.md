@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-github-pull-request-from-specification
 ---
 

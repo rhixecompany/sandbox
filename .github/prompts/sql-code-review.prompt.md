@@ -27,15 +27,6 @@ tags:
   - specification
   - sql
   - typescript
-  - audit
-  - backend
-  - data
-  - database
-  - ml
-  - prompts
-  - security
-  - sql
-  - typescript
 trigger: /sql-code-review
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 ---

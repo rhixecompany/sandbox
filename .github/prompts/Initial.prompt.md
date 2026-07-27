@@ -26,13 +26,6 @@ tags:
   - prompts
   - typescript
   - windows
-  - docker
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - typescript
-  - windows
 trigger: /Initial
 ---
 

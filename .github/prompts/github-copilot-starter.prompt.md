@@ -25,15 +25,6 @@ tags:
   - react
   - specification
   - typescript
-  - ai-assistant
-  - configuration
-  - frontend
-  - git
-  - ml
-  - prompts
-  - react
-  - specification
-  - typescript
 trigger: /github-copilot-starter
 ---
 

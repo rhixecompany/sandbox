@@ -19,13 +19,6 @@ tags:
   - prompts
   - specification
   - spring
-  - data
-  - frontend
-  - java
-  - ml
-  - prompts
-  - specification
-  - spring
 trigger: /java-springboot
 ---
 

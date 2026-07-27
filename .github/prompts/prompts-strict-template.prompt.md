@@ -22,14 +22,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - audit
-  - fix
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
 trigger: /prompts-strict-template
 ---
 

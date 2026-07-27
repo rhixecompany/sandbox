@@ -20,13 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-oo-component-documentation
 ---
 

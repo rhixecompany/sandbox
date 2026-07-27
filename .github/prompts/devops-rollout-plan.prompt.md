@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - deployment
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /devops-rollout-plan
 ---
 

@@ -22,13 +22,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - backend
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /swift-mcp-server-generator
 ---
 

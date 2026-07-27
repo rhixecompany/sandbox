@@ -24,13 +24,6 @@ tags:
   - ml
   - prompts
   - typescript
-  - architecture
-  - documentation
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - typescript
 trigger: /architecture-blueprint-generator
 ---
 

@@ -20,13 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - frontend
-  - maintenance
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /update-specification
 ---
 

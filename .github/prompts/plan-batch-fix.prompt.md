@@ -33,11 +33,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - fix
-  - planning
-  - prompts
-  - skills
-  - typescript
 trigger: /plan-batch-fix
 ---
 

@@ -20,12 +20,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /gen-specs-as-issues
 ---
 

@@ -26,13 +26,6 @@ tags:
   - prompts
   - typescript
   - workflow
-  - agents
-  - architecture
-  - backend
-  - ml
-  - nextjs
-  - prompts
-  - typescript
 trigger: /setup
 ---
 

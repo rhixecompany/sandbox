@@ -19,11 +19,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /refactor-method-complexity-reduce
 argument-hint: methodName=..., complexityThreshold=15
 ---

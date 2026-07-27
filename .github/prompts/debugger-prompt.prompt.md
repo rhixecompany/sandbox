@@ -29,11 +29,8 @@ tags:
   - prompts
   - sql
   - typescript
-  - debugging
   - errors
   - warnings
-  - nextjs
-  - typescript
   - linting
 trigger: /debugger-prompt
 ---

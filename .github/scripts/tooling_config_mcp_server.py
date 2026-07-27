@@ -329,62 +329,59 @@ def _editorconfig_validate(project_root: str | None = None) -> dict:
 if __name__ == "__main__":
     from mcp.server.fastmcp import FastMCP
 
-    mcp = FastMCP(
-        "tooling-config",
-        description="Project tooling: pre-commit, git-cliff (changelog), .gitignore, .gitmodules, .editorconfig",
-    )
+    mcp = FastMCP("tooling-config")
 
     # pre-commit
-    @mcp.tool
+    @mcp.tool()
     def precommit_init(project_root: str | None = None) -> dict:
         """Create .pre-commit-config.yaml with basic hooks."""
         return _precommit_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def precommit_install(project_root: str | None = None) -> dict:
         """Run pre-commit install."""
         return _precommit_install(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def precommit_run(project_root: str | None = None, all_files: bool = True, hook: str = "") -> dict:
         """Run pre-commit. all_files=true runs on all files; pass hook name to run specific hook."""
         return _precommit_run(project_root, all_files, hook)
 
     # changelog
-    @mcp.tool
+    @mcp.tool()
     def changelog_init(project_root: str | None = None) -> dict:
         """Create cliff.toml for git-cliff changelog generation."""
         return _changelog_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def changelog_generate(project_root: str | None = None, unreleased: bool = True) -> dict:
         """Generate CHANGELOG.md from git history via git-cliff."""
         return _changelog_generate(project_root, unreleased)
 
     # .gitignore
-    @mcp.tool
+    @mcp.tool()
     def gitignore_init(project_root: str | None = None) -> dict:
         """Create .gitignore with Python/JS common ignores."""
         return _gitignore_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def gitignore_validate(project_root: str | None = None) -> dict:
         """Validate .gitignore exists and checks for common patterns."""
         return _gitignore_validate(project_root)
 
     # .gitmodules
-    @mcp.tool
+    @mcp.tool()
     def gitmodules_validate(project_root: str | None = None) -> dict:
         """Validate .gitmodules syntax and list submodules."""
         return _gitmodules_validate(project_root)
 
     # .editorconfig
-    @mcp.tool
+    @mcp.tool()
     def editorconfig_init(project_root: str | None = None) -> dict:
         """Create .editorconfig with standard defaults."""
         return _editorconfig_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def editorconfig_validate(project_root: str | None = None) -> dict:
         """Validate .editorconfig exists and has sections."""
         return _editorconfig_validate(project_root)

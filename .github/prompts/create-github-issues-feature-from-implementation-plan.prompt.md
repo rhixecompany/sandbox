@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-github-issues-feature-from-implementation-plan
 ---
 

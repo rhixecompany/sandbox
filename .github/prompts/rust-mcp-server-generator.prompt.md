@@ -22,14 +22,6 @@ tags:
   - prompts
   - rust
   - typescript
-  - backend
-  - data
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - rust
-  - typescript
 trigger: /rust-mcp-server-generator
 ---
 

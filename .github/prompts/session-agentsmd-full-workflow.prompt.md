@@ -25,14 +25,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - architecture
-  - generator
-  - git
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /session-agentsmd-full-workflow
 ---
 

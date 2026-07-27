@@ -17,11 +17,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - typescript
 trigger: /next-intl-add-language
 ---
 

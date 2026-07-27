@@ -22,14 +22,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - architecture
-  - data
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /hermes-breakdown-epic-arch
 ---
 

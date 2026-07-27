@@ -1,6 +1,6 @@
 ---
 name: convert-plaintext-to-md
-title: convert-plaintext-to-md
+title: Convert Plaintext to Markdown
 description: Convert plaintext documentation to properly formatted markdown using explicit instructions,
   documented options, or reference files.
 version: 1.0.0
@@ -20,12 +20,6 @@ dependencies:
   - skill:enhance-markdown
   - skill:context-map
 tags:
-  - conversion
-  - documentation
-  - markdown
-  - ml
-  - prompts
-  - typescript
   - conversion
   - documentation
   - markdown

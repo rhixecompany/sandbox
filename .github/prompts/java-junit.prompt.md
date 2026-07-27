@@ -19,13 +19,6 @@ tags:
   - prompts
   - testing
   - typescript
-  - api
-  - data
-  - frontend
-  - java
-  - prompts
-  - testing
-  - typescript
 trigger: /java-junit
 ---
 

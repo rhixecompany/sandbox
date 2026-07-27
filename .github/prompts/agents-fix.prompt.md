@@ -51,14 +51,6 @@ tags:
   - prompts
   - typescript
   - workflow
-  - agents
-  - ai-assistant
-  - configuration
-  - fix
-  - ml
-  - prompts
-  - typescript
-  - workflow
 trigger: /agents-fix
 ---
 

@@ -27,15 +27,6 @@ tags:
   - prompts
   - testing
   - typescript
-  - audit
-  - debugging
-  - fix
-  - frontend
-  - generator
-  - linting
-  - prompts
-  - testing
-  - typescript
 trigger: /quality-gate-debugger
 ---
 

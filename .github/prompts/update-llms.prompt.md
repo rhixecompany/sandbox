@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - maintenance
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /update-llms
 ---
 

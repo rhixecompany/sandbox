@@ -21,13 +21,6 @@ tags:
   - testing
   - typescript
   - workflow
-  - architecture
-  - audit
-  - nextjs
-  - prompts
-  - testing
-  - typescript
-  - workflow
 trigger: /comicwise-development
 applyTo: '**/*'
 ---

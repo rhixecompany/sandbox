@@ -28,15 +28,6 @@ tags:
   - prompts
   - testing
   - workflow
-  - ai-assistant
-  - architecture
-  - documentation
-  - generator
-  - git
-  - markdown
-  - prompts
-  - testing
-  - workflow
 trigger: /readme-blueprint-generator
 ---
 

@@ -22,13 +22,6 @@ tags:
   - specification
   - testing
   - typescript
-  - generator
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /write-tests
 ---
 

@@ -49,12 +49,6 @@ tags:
   - prompts
   - typescript
   - workflow
-  - audit
-  - fix
-  - migration
-  - prompts
-  - typescript
-  - workflow
 trigger: /bash-scripts-fix
 ---
 

@@ -21,14 +21,6 @@ tags:
   - refactoring
   - testing
   - typescript
-  - configuration
-  - debugging
-  - performance
-  - playwright
-  - prompts
-  - refactoring
-  - testing
-  - typescript
 trigger: /dev
 ---
 

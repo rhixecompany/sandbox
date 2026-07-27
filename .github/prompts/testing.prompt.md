@@ -21,13 +21,6 @@ tags:
   - skills
   - testing
   - typescript
-  - audit
-  - frontend
-  - planning
-  - prompts
-  - skills
-  - testing
-  - typescript
 trigger: /testing
 ---
 

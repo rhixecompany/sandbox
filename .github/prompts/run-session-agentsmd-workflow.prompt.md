@@ -23,12 +23,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - git
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /run-session-agentsmd-workflow
 ---
 

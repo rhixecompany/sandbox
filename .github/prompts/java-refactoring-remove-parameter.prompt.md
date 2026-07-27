@@ -19,11 +19,6 @@ tags:
   - prompts
   - refactoring
   - typescript
-  - backend
-  - java
-  - prompts
-  - refactoring
-  - typescript
 trigger: /java-refactoring-remove-parameter
 ---
 

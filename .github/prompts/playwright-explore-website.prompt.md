@@ -22,13 +22,6 @@ tags:
   - specification
   - testing
   - typescript
-  - mcp
-  - ml
-  - playwright
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /playwright-explore-website
 compatibility: null
 created: '2026-05-25T10:50:21.952313Z'

@@ -27,16 +27,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - agents
-  - ai-assistant
-  - documentation
-  - git
-  - ml
-  - nextjs
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /refactor-mardown-files
 ---
 

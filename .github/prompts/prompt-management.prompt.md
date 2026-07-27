@@ -51,12 +51,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - debugging
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
 trigger: /prompt-management
 ---
 

@@ -24,16 +24,6 @@ tags:
   - security
   - skills
   - typescript
-  - api
-  - architecture
-  - audit
-  - data
-  - documentation
-  - frontend
-  - prompts
-  - security
-  - skills
-  - typescript
 trigger: /security
 ---
 

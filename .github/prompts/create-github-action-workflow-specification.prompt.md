@@ -22,14 +22,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - ci-cd
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /create-github-action-workflow-specification
 ---
 

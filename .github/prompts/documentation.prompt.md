@@ -22,15 +22,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - api
-  - architecture
-  - documentation
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
 trigger: /documentation
 ---
 

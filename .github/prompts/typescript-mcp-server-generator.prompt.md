@@ -23,14 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - backend
-  - configuration
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /typescript-mcp-server-generator
 ---
 

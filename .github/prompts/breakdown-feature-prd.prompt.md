@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /breakdown-feature-prd
 ---
 

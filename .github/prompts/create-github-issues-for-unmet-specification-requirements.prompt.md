@@ -20,13 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - frontend
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-github-issues-for-unmet-specification-requirements
 ---
 

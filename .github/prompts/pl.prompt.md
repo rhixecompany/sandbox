@@ -30,7 +30,6 @@ tags:
   - warnings
   - deprecations
   - batch-fix
-  - linting
   - build
 trigger: /pl
 ---

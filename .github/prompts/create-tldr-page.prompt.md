@@ -21,13 +21,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-tldr-page
 ---
 

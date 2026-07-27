@@ -24,17 +24,6 @@ tags:
   - security
   - specification
   - typescript
-  - ai-assistant
-  - api
-  - architecture
-  - data
-  - deployment
-  - frontend
-  - ml
-  - prompts
-  - security
-  - specification
-  - typescript
 trigger: /hermes-breakdown-feature-implementation
 ---
 

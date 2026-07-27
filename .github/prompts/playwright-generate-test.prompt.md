@@ -22,13 +22,6 @@ tags:
   - specification
   - testing
   - typescript
-  - generator
-  - ml
-  - playwright
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /playwright-generate-test
 compatibility: null
 created: '2026-05-25T10:50:21.952313Z'

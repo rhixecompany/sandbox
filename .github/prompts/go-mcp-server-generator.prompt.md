@@ -23,14 +23,6 @@ tags:
   - mcp
   - prompts
   - typescript
-  - backend
-  - configuration
-  - frontend
-  - generator
-  - go
-  - mcp
-  - prompts
-  - typescript
 trigger: /go-mcp-server-generator
 ---
 

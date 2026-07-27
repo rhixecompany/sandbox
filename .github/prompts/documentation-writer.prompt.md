@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /documentation-writer
 ---
 

@@ -17,10 +17,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /write-coding-standards-from-file
 ---
 

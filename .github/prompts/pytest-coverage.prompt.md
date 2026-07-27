@@ -19,11 +19,6 @@ tags:
   - specification
   - testing
   - typescript
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /pytest-coverage
 ---
 

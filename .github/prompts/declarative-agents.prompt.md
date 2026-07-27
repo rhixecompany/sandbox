@@ -22,13 +22,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /declarative-agents
 ---
 

@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - azure
-  - fix
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /azure-resource-health-diagnose
 ---
 

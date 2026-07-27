@@ -23,16 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - backend
-  - configuration
-  - csharp
-  - dotnet
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - specification
-  - typescript
 trigger: /csharp-mcp-server-generator
 ---
 

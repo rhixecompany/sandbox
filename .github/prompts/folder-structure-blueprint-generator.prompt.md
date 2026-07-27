@@ -26,17 +26,8 @@ tags:
   - python
   - react
   - typescript
-  - architecture
   - csharp
   - dotnet
-  - generator
-  - java
-  - javascript
-  - ml
-  - prompts
-  - python
-  - react
-  - typescript
 trigger: /folder-structure-blueprint-generator
 ---
 

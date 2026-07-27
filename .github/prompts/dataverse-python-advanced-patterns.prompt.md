@@ -22,13 +22,6 @@ tags:
   - python
   - specification
   - sql
-  - data
-  - database
-  - generator
-  - prompts
-  - python
-  - specification
-  - sql
 trigger: /dataverse-python-advanced-patterns
 ---
 

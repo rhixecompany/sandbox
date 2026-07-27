@@ -20,11 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /git-flow-branch-creator
 ---
 

@@ -54,12 +54,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - documentation
-  - frontend
-  - ml
-  - prompts
-  - skills
-  - typescript
 trigger: /workspace-consolidate
 ---
 

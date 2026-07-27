@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - docker
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /multi-stage-dockerfile
 ---
 

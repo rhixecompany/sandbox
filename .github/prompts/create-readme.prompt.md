@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-readme
 ---
 

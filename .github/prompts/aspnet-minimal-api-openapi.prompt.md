@@ -18,13 +18,8 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
   - csharp
-  - documentation
   - dotnet
-  - prompts
-  - specification
-  - typescript
 trigger: /aspnet-minimal-api-openapi
 ---
 

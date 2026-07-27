@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - agents
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /finalize-agent-prompt
 ---
 

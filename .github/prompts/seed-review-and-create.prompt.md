@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - audit
-  - documentation
-  - fix
-  - ml
-  - prompts
-  - specification
 trigger: /seed-review-and-create
 ---
 

@@ -28,19 +28,8 @@ tags:
   - python
   - react
   - typescript
-  - architecture
-  - configuration
   - csharp
-  - documentation
   - dotnet
-  - generator
-  - java
-  - javascript
-  - ml
-  - prompts
-  - python
-  - react
-  - typescript
 trigger: /code-exemplars-blueprint-generator
 ---
 

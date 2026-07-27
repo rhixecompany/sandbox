@@ -18,11 +18,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - generator
-  - prompts
-  - specification
-  - typescript
 trigger: /create-technical-spike
 ---
 

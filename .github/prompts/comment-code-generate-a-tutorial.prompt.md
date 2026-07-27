@@ -23,14 +23,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - generator
-  - markdown
-  - ml
-  - prompts
-  - python
-  - refactoring
-  - specification
-  - typescript
 trigger: /comment-code-generate-a-tutorial
 ---
 

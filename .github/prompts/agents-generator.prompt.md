@@ -29,18 +29,6 @@ tags:
   - testing
   - typescript
   - workflow
-  - agents
-  - architecture
-  - data
-  - debugging
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
-  - workflow
 trigger: /agents-generator
 ---
 

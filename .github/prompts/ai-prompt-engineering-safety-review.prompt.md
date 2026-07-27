@@ -1,6 +1,6 @@
 ---
 name: ai-prompt-engineering-safety-review
-title: ai-prompt-engineering-safety-review
+title: AI Prompt Engineering Safety Review
 description: Review a prompt for safety, bias, security, clarity, and effectiveness, then produce
   a safer improved version.
 version: 1.0.0
@@ -21,12 +21,6 @@ dependencies:
   - skill:systematic-debugging
   - skill:context-map
 tags:
-  - audit
-  - frontend
-  - ml
-  - prompts
-  - security
-  - typescript
   - audit
   - frontend
   - ml

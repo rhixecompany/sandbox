@@ -21,13 +21,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /optimize-agentsMd
 ---
 

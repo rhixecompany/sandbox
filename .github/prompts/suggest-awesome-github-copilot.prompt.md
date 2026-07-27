@@ -23,11 +23,6 @@ tags:
   - skills
   - typescript
   - copilot
-  - agents
-  - ai-assistant
-  - git
-  - prompts
-  - skills
 trigger: /suggest-awesome-github-copilot
 ---
 

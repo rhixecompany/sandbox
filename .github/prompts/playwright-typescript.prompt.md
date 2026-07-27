@@ -19,11 +19,6 @@ tags:
   - skills
   - testing
   - typescript
-  - playwright
-  - prompts
-  - skills
-  - testing
-  - typescript
 trigger: /playwright-typescript
 ---
 

@@ -18,12 +18,6 @@ tags:
   - prompts
   - testing
   - typescript
-  - csharp
-  - data
-  - dotnet
-  - prompts
-  - testing
-  - typescript
 trigger: /csharp-nunit
 ---
 

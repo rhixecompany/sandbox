@@ -22,14 +22,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - debugging
-  - fix
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /debug-issue
 ---
 

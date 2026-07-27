@@ -25,15 +25,7 @@ tags:
   - prompts
   - typescript
   - workflow
-  - architecture
-  - backend
-  - documentation
-  - generator
   - git
-  - mcp
-  - prompts
-  - typescript
-  - workflow
 trigger: /generator-orchestrator
 ---
 

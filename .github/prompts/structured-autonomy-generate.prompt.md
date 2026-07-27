@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /structured-autonomy-generate
 ---
 

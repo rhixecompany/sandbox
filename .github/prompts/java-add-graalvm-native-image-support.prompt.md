@@ -23,13 +23,6 @@ tags:
   - java
   - prompts
   - spring
-  - agents
-  - configuration
-  - fix
-  - frontend
-  - java
-  - prompts
-  - spring
 trigger: /java-add-graalvm-native-image-support
 ---
 

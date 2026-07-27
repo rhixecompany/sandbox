@@ -21,13 +21,7 @@ tags:
   - specification
   - windows
   - csharp
-  - docker
   - dotnet
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - windows
 trigger: /containerize-aspnet-framework
 ---
 

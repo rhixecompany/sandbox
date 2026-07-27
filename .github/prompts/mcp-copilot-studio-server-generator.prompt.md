@@ -23,15 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - backend
-  - generator
-  - mcp
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /mcp-copilot-studio-server-generator
 ---
 

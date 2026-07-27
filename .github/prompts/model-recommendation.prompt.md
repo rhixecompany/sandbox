@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /model-recommendation
 ---
 

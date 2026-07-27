@@ -20,12 +20,6 @@ tags:
   - specification
   - testing
   - typescript
-  - frontend
-  - linting
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /features
 ---
 

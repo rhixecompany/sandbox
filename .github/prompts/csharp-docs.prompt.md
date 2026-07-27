@@ -23,15 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - csharp
-  - documentation
-  - dotnet
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /csharp-docs
 ---
 

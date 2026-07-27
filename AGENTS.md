@@ -100,3 +100,21 @@ cspell check --no-progress "*.md" ".github/**/*.md"
 | `.cursorrules` | Cursor IDE formatting/safety rules only |
 | `.hermes.md` | Hermes overrides/config sourcing |
 | `SOUL.md`, `MEMORY.md`, `USER.md` | Persona/memory rules; durable canonical rules are in `MEMORY.md` |
+
+## Architecture
+
+### Technology Stack
+<!-- Auto-populated tech stack will go here -->
+
+### Folder Structure
+<!-- Auto-populated folder structure will go here -->
+
+### Architecture Overview
+<!-- Project architecture description -->
+
+### Key Components
+- _Component 1_: description
+- _Component 2_: description
+
+### Data Flow
+<!-- Data flow description -->

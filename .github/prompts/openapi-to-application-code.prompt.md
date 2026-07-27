@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /openapi-to-application-code
 ---
 

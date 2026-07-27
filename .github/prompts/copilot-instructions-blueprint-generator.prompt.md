@@ -24,14 +24,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - ai-assistant
-  - architecture
-  - frontend
-  - generator
-  - git
-  - prompts
-  - specification
-  - typescript
 trigger: /copilot-instructions-blueprint-generator
 ---
 

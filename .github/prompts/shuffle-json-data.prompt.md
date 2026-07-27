@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - data
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /shuffle-json-data
 ---
 

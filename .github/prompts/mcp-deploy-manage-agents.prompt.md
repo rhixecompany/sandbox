@@ -22,14 +22,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - deployment
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /mcp-deploy-manage-agents
 ---
 

@@ -22,14 +22,6 @@ tags:
   - mcp
   - prompts
   - typescript
-  - agents
-  - ai-assistant
-  - data
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - typescript
 trigger: /power-platform-mcp-connector-suite
 ---
 

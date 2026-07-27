@@ -23,13 +23,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - architecture
-  - generator
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /create-implementation-plan
 ---
 

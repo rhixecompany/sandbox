@@ -1,6 +1,6 @@
 ---
 name: prompt-builder
-title: prompt-builder
+title: Prompt Builder
 description: Guide users through creating high-quality .prompt.md files with proper structure,
   tools, and best practices.
 version: 1.0.0
@@ -14,13 +14,6 @@ skills: []
 formatter: default
 plan: ''
 tags:
-  - agents
-  - ai-assistant
-  - frontend
-  - git
-  - prompts
-  - typescript
-  - workflow
   - agents
   - ai-assistant
   - frontend

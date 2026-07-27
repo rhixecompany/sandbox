@@ -30,18 +30,6 @@ tags:
   - sql
   - typescript
   - workflow
-  - agents
-  - backend
-  - configuration
-  - data
-  - database
-  - frontend
-  - ml
-  - prompts
-  - setup
-  - sql
-  - typescript
-  - workflow
 trigger: /setup-enhanced
 ---
 

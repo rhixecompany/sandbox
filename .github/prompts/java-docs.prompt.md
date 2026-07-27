@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - java
-  - prompts
-  - specification
-  - typescript
 trigger: /java-docs
 ---
 

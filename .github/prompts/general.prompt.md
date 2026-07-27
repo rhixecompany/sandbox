@@ -56,10 +56,6 @@ tags:
   - prompts
   - typescript
   - workflow
-  - planning
-  - prompts
-  - typescript
-  - workflow
 trigger: /general
 ---
 

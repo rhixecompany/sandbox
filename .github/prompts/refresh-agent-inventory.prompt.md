@@ -20,12 +20,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - skills
-  - typescript
 trigger: /refresh-agent-inventory
 mode: ask
 ---

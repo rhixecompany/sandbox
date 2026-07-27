@@ -26,14 +26,6 @@ tags:
   - specification
   - testing
   - typescript
-  - generator
-  - git
-  - ml
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /breakdown-plan
 ---
 

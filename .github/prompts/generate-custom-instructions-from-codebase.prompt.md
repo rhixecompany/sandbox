@@ -25,15 +25,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - ai-assistant
-  - generator
-  - git
-  - migration
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /generate-custom-instructions-from-codebase
 ---
 

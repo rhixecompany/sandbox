@@ -22,15 +22,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - architecture
-  - backend
-  - configuration
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - skills
-  - typescript
 trigger: /typescript
 ---
 

@@ -29,20 +29,8 @@ tags:
   - testing
   - typescript
   - workflow
-  - architecture
   - csharp
-  - data
-  - documentation
   - dotnet
-  - generator
-  - java
-  - ml
-  - prompts
-  - react
-  - spring
-  - testing
-  - typescript
-  - workflow
 trigger: /project-workflow-analysis-blueprint-generator
 ---
 

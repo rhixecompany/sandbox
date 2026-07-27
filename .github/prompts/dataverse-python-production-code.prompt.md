@@ -25,16 +25,6 @@ tags:
   - python
   - specification
   - typescript
-  - audit
-  - backend
-  - data
-  - debugging
-  - generator
-  - ml
-  - prompts
-  - python
-  - specification
-  - typescript
 trigger: /dataverse-python-production-code
 ---
 

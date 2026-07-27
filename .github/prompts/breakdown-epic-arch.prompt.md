@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /breakdown-epic-arch
 ---
 

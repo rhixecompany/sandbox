@@ -23,12 +23,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - ai-assistant
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /remember-interactive-programming
 ---
 

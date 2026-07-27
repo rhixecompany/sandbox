@@ -65,15 +65,7 @@ tags:
   - security
   - typescript
   - workflow
-  - audit
   - git
-  - markdown
-  - ml
-  - planning
-  - prompts
-  - security
-  - typescript
-  - workflow
 trigger: /dev-init
 ---
 

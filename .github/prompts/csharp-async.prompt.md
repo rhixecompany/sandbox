@@ -20,13 +20,6 @@ tags:
   - performance
   - prompts
   - typescript
-  - csharp
-  - data
-  - dotnet
-  - fix
-  - performance
-  - prompts
-  - typescript
 trigger: /csharp-async
 ---
 

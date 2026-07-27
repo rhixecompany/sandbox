@@ -24,16 +24,6 @@ tags:
   - skills
   - typescript
   - workflow
-  - api
-  - configuration
-  - documentation
-  - frontend
-  - maintenance
-  - ml
-  - prompts
-  - skills
-  - typescript
-  - workflow
 trigger: /update-docs-on-code-change
 ---
 

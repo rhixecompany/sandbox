@@ -21,14 +21,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - csharp
-  - documentation
-  - dotnet
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /dotnet-best-practices
 ---
 

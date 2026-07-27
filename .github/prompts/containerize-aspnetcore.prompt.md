@@ -23,15 +23,7 @@ tags:
   - security
   - specification
   - csharp
-  - docker
   - dotnet
-  - frontend
-  - linux
-  - ml
-  - performance
-  - prompts
-  - security
-  - specification
 trigger: /containerize-aspnetcore
 ---
 

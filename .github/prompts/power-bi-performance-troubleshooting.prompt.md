@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - frontend
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /power-bi-performance-troubleshooting
 ---
 

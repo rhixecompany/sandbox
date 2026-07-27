@@ -23,16 +23,6 @@ tags:
   - security
   - sql
   - typescript
-  - api
-  - audit
-  - configuration
-  - database
-  - ml
-  - prompts
-  - python
-  - security
-  - sql
-  - typescript
 trigger: /bigquery-pipeline-audit
 ---
 

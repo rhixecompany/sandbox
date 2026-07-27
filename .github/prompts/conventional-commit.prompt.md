@@ -22,12 +22,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /conventional-commit
 ---
 

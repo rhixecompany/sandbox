@@ -18,11 +18,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /refactor-plan
 ---
 

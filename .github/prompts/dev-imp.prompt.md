@@ -27,15 +27,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - audit
-  - debugging
-  - fix
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /dev-imp
 ---
 

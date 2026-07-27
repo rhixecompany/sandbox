@@ -24,16 +24,6 @@ tags:
   - performance
   - prompts
   - workflow
-  - azure
-  - backend
-  - configuration
-  - frontend
-  - generator
-  - git
-  - mcp
-  - performance
-  - prompts
-  - workflow
 trigger: /az-cost-optimize
 ---
 

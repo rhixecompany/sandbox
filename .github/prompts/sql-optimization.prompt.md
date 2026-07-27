@@ -25,15 +25,6 @@ tags:
   - specification
   - sql
   - typescript
-  - backend
-  - data
-  - database
-  - frontend
-  - performance
-  - prompts
-  - specification
-  - sql
-  - typescript
 trigger: /sql-optimization
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 ---

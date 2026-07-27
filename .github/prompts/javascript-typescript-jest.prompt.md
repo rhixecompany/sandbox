@@ -20,12 +20,6 @@ tags:
   - specification
   - testing
   - typescript
-  - javascript
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /javascript-typescript-jest
 ---
 

@@ -23,15 +23,6 @@ tags:
   - specification
   - testing
   - typescript
-  - ai-assistant
-  - frontend
-  - generator
-  - git
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
 trigger: /hermes-breakdown-plan
 ---
 

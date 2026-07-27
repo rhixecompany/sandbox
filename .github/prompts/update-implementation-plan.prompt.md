@@ -1,6 +1,6 @@
 ---
 name: update-implementation-plan
-title: update-implementation-plan
+title: Update Implementation Plan
 description: Create or update an implementation plan with new or updated requirements for features,
   refactoring, package upgrades, design, or infrastructure.
 version: 2.0.0

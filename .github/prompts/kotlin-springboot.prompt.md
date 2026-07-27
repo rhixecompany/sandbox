@@ -16,10 +16,6 @@ tags:
   - ml
   - prompts
   - spring
-  - frontend
-  - ml
-  - prompts
-  - spring
 trigger: /kotlin-springboot
 ---
 

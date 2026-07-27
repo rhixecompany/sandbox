@@ -62,15 +62,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - ai-assistant
-  - audit
-  - data
-  - debugging
-  - fix
-  - generator
-  - prompts
-  - skills
-  - typescript
 trigger: /skills-fix
 ---
 

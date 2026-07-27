@@ -18,11 +18,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-llms
 ---
 

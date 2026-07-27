@@ -201,41 +201,41 @@ def _cspell_check(path: str = ".", project_root: str | None = None) -> dict:
 if __name__ == "__main__":
     from mcp.server.fastmcp import FastMCP
 
-    mcp = FastMCP("tooling-lint", description="Linting & formatting: eslint, prettier, markdownlint-cli2, cspell")
+    mcp = FastMCP("tooling-lint")
 
-    @mcp.tool
+    @mcp.tool()
     def eslint_init(project_root: str | None = None) -> dict:
         """Create eslint.config.mjs with recommended JS/TS config."""
         return _eslint_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def eslint_check(path: str = ".", project_root: str | None = None, fix: bool = False) -> dict:
         """Run eslint check. fix=true to auto-fix issues."""
         return _eslint_check(path, project_root, fix)
 
-    @mcp.tool
+    @mcp.tool()
     def prettier_init(project_root: str | None = None) -> dict:
         """Create .prettierrc.json with recommended defaults."""
         return _prettier_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def prettier_check(path: str = ".", project_root: str | None = None, fix: bool = False) -> dict:
         """Run prettier check. fix=true to format in-place."""
         return _prettier_check(path, project_root, fix)
 
-    @mcp.tool
+    @mcp.tool()
     def markdownlint_check(
         path: str = "*.md", project_root: str | None = None, config: str = ".markdownlintrc.json", fix: bool = False
     ) -> dict:
         """Run markdownlint on files. fix=true to auto-fix."""
         return _markdownlint_check(path, project_root, config, fix)
 
-    @mcp.tool
+    @mcp.tool()
     def cspell_init(project_root: str | None = None) -> dict:
         """Create cspell.json with basic spellcheck config."""
         return _cspell_init(project_root)
 
-    @mcp.tool
+    @mcp.tool()
     def cspell_check(path: str = ".", project_root: str | None = None) -> dict:
         """Run cspell spellcheck on files/directory."""
         return _cspell_check(path, project_root)

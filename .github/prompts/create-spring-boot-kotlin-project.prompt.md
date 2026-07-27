@@ -19,11 +19,6 @@ tags:
   - java
   - prompts
   - spring
-  - docker
-  - generator
-  - java
-  - prompts
-  - spring
 trigger: /create-spring-boot-kotlin-project
 ---
 

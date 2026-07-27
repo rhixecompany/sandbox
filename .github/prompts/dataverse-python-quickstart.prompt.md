@@ -22,13 +22,6 @@ tags:
   - prompts
   - python
   - typescript
-  - audit
-  - data
-  - frontend
-  - generator
-  - prompts
-  - python
-  - typescript
 trigger: /dataverse-python-quickstart
 ---
 

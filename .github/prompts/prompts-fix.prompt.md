@@ -43,13 +43,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - ai-assistant
-  - fix
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /prompts-fix
 ---
 

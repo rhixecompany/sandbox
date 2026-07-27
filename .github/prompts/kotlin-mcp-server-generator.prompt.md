@@ -21,13 +21,6 @@ tags:
   - mcp
   - prompts
   - typescript
-  - backend
-  - configuration
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - typescript
 trigger: /kotlin-mcp-server-generator
 ---
 

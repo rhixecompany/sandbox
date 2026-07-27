@@ -39,15 +39,6 @@ tags:
   - prompts
   - skills
   - typescript
-  - agents
-  - ai-assistant
-  - audit
-  - configuration
-  - git
-  - planning
-  - prompts
-  - skills
-  - typescript
 trigger: /plan-audit
 ---
 

@@ -19,12 +19,6 @@ tags:
   - refactoring
   - specification
   - typescript
-  - audit
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
 trigger: /review-and-refactor
 ---
 

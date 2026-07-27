@@ -24,14 +24,6 @@ tags:
   - specification
   - sql
   - typescript
-  - architecture
-  - audit
-  - database
-  - prompts
-  - security
-  - specification
-  - sql
-  - typescript
 trigger: /postgresql-code-review
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 ---

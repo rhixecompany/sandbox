@@ -22,15 +22,6 @@ tags:
   - specification
   - sql
   - typescript
-  - data
-  - database
-  - frontend
-  - performance
-  - prompts
-  - skills
-  - specification
-  - sql
-  - typescript
 trigger: /performance
 ---
 

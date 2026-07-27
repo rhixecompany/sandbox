@@ -20,12 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - data
-  - frontend
-  - prompts
-  - specification
-  - typescript
 trigger: /power-bi-report-design-consultation
 ---
 

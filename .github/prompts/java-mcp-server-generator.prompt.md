@@ -23,14 +23,6 @@ tags:
   - ml
   - prompts
   - typescript
-  - backend
-  - frontend
-  - generator
-  - java
-  - mcp
-  - ml
-  - prompts
-  - typescript
 trigger: /java-mcp-server-generator
 ---
 

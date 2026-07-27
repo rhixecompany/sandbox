@@ -1,6 +1,6 @@
 ---
 name: boost-prompt
-title: boost-prompt
+title: Boost Prompt
 description: 'Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints,
   then copies final markdown to clipboard using Joyride.'
 version: 1.0.0
@@ -25,12 +25,6 @@ dependencies:
   - skill:context-map
   - skill:prompt-engineering
 tags:
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - typescript
-  - workflow
   - frontend
   - markdown
   - ml

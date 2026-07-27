@@ -20,13 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - documentation
-  - maintenance
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /update-oo-component-documentation
 ---
 

@@ -22,14 +22,6 @@ tags:
   - setup
   - specification
   - typescript
-  - architecture
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - setup
-  - specification
-  - typescript
 trigger: /setup-nextjs-frontend-stack
 ---
 

@@ -23,15 +23,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - agents
-  - ai-assistant
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /mcp-create-declarative-agent
 ---
 

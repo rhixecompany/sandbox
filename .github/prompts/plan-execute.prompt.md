@@ -30,9 +30,6 @@ tags:
   - planning
   - prompts
   - typescript
-  - planning
-  - prompts
-  - typescript
 trigger: /plan-execute
 ---
 

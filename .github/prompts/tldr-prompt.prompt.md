@@ -23,16 +23,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - agents
-  - ai-assistant
-  - backend
-  - documentation
-  - git
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /tldr-prompt
 ---
 

@@ -17,9 +17,6 @@ tags:
   - frontend
   - prompts
   - workflow
-  - frontend
-  - prompts
-  - workflow
 trigger: /tasksync
 ---
 

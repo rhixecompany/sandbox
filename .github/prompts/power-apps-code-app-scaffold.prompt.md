@@ -17,10 +17,6 @@ tags:
   - frontend
   - prompts
   - specification
-  - audit
-  - frontend
-  - prompts
-  - specification
 trigger: /power-apps-code-app-scaffold
 ---
 

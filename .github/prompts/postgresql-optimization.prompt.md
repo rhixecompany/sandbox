@@ -22,12 +22,6 @@ tags:
   - specification
   - sql
   - typescript
-  - data
-  - database
-  - prompts
-  - specification
-  - sql
-  - typescript
 trigger: /postgresql-optimization
 tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 ---

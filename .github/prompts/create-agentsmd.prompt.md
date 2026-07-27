@@ -19,12 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - agents
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /create-agentsmd
 ---
 

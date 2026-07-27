@@ -20,13 +20,6 @@ tags:
   - ml
   - prompts
   - typescript
-  - debugging
-  - fix
-  - frontend
-  - linux
-  - ml
-  - prompts
-  - typescript
 trigger: /arch-linux-triage
 ---
 

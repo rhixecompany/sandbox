@@ -21,13 +21,6 @@ tags:
   - specification
   - typescript
   - workflow
-  - generator
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
 trigger: /mcp-create-adaptive-cards
 ---
 

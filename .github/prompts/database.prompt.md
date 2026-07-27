@@ -19,11 +19,6 @@ tags:
   - frontend
   - prompts
   - sql
-  - data
-  - database
-  - frontend
-  - prompts
-  - sql
 trigger: /database
 ---
 

@@ -25,15 +25,6 @@ tags:
   - prompts
   - sql
   - typescript
-  - architecture
-  - azure
-  - data
-  - database
-  - frontend
-  - ml
-  - prompts
-  - sql
-  - typescript
 trigger: /cosmosdb-datamodeling
 ---
 

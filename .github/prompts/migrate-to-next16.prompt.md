@@ -25,16 +25,6 @@ tags:
   - react
   - testing
   - typescript
-  - api
-  - configuration
-  - frontend
-  - linting
-  - migration
-  - nextjs
-  - prompts
-  - react
-  - testing
-  - typescript
 trigger: /migrate-to-next16
 ---
 

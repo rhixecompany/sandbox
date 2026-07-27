@@ -24,7 +24,6 @@ tags:
   - specification
   - typescript
   - plan
-  - execution
   - workflow
 trigger: /execute-plan
 ---

@@ -20,14 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - architecture
-  - documentation
-  - generator
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /create-architectural-decision-record
 ---
 

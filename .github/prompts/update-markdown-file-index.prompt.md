@@ -18,12 +18,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - maintenance
-  - markdown
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /update-markdown-file-index
 ---
 

@@ -19,11 +19,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - api
-  - ml
-  - prompts
-  - specification
-  - typescript
 trigger: /typespec-api-operations
 mode: agent
 ---

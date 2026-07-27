@@ -23,12 +23,6 @@ tags:
   - prompts
   - sql
   - typescript
-  - data
-  - database
-  - generator
-  - prompts
-  - sql
-  - typescript
 trigger: /zod-schema-generation
 ---
 

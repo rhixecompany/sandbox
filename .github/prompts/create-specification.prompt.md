@@ -20,14 +20,6 @@ tags:
   - prompts
   - specification
   - typescript
-  - documentation
-  - frontend
-  - generator
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
 trigger: /create-specification
 ---
 

@@ -25,17 +25,6 @@ tags:
   - security
   - skills
   - typescript
-  - architecture
-  - audit
-  - backend
-  - data
-  - frontend
-  - ml
-  - nextjs
-  - performance
-  - prompts
-  - security
-  - typescript
 trigger: /nextjs-tailwind
 ---
 

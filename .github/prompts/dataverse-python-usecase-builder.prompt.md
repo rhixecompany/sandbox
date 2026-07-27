@@ -25,16 +25,6 @@ tags:
   - python
   - specification
   - typescript
-  - architecture
-  - data
-  - frontend
-  - generator
-  - ml
-  - performance
-  - prompts
-  - python
-  - specification
-  - typescript
 trigger: /dataverse-python-usecase-builder
 ---
 

@@ -19,12 +19,6 @@ tags:
   - prompts
   - testing
   - typescript
-  - api
-  - csharp
-  - dotnet
-  - prompts
-  - testing
-  - typescript
 trigger: /csharp-mstest
 ---
 
