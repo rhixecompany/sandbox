@@ -1,8 +1,7 @@
 ---
 name: create-oo-component-documentation
 title: Generate Standard OO Component Documentation
-description: Create comprehensive, standardized documentation for object-oriented components following
-  industry best practices and architectural documentation standards.
+description: 'Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
@@ -11,7 +10,7 @@ toolsets:
 scripts: []
 skills: []
 formatter: default
-plan: ''
+plan: None
 tags:
   - architecture
   - documentation
@@ -21,6 +20,199 @@ tags:
   - specification
   - typescript
 trigger: /create-oo-component-documentation
+dependencies: []
+metadata:
+  hermes: {}
 ---
+## GoalCreate comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.
 
-## GoalCreate comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.## ContextUse when you need to work on the current workspace or task.## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.## Phases### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.## Documentation Standards- DOC-001: Follow C4 Model documentation levels (Context, Containers, Components, Code)- DOC-002: Align with Arc42 software architecture documentation template- DOC-003: Comply with IEEE 1016 Software Design Description standard- DOC-004: Use Agile Documentation principles (just enough documentation that adds value)- DOC-005: Target developers and maintainers as primary audience## Analysis Instructions- ANA-001: Determine path type (folder vs single file) and identify primary component- ANA-002: Examine source code files for class structures and inheritance- ANA-003: Identify design patterns and architectural decisions- ANA-004: Document public APIs, interfaces, and dependencies- ANA-005: Recognize creational/structural/behavioral patterns- ANA-006: Document method parameters, return values, exceptions- ANA-007: Assess performance, security, reliability, maintainability- ANA-008: Infer integration patterns and data flow## Language-Specific Optimizations- LNG-001: **C#/.NET** - async/await, dependency injection, configuration, disposal- LNG-002: **Java** - Spring framework, annotations, exception handling, packaging- LNG-003: **TypeScript/JavaScript** - modules, async patterns, types, npm- LNG-004: **Python** - packages, virtual environments, type hints, testing## Error Handling- ERR-001: Path doesn't exist - provide correct format guidance- ERR-002: No source files found - suggest alternative locations- ERR-003: Unclear structure - document findings and request clarification- ERR-004: Non-standard patterns - document custom approaches- ERR-005: Insufficient code - focus on available information, highlight gaps## Output FormatGenerate well-structured Markdown with clear heading hierarchy, code blocks, tables, bullet points, and proper formatting for readability and maintainability.## File LocationThe documentation should be saved in the `/docs/components/` directory and named according to the convention: `[component-name]-documentation.md`.## Required Documentation StructureThe documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:````md---title: [Component Name] - Technical Documentationcomponent_path: `${input:ComponentPath}`version: [Optional: e.g., 1.0, Date]date_created: [YYYY-MM-DD]last_updated: [Optional: YYYY-MM-DD]owner: [Optional: Team/Individual responsible for this component]---# [Component Name] Documentation[A short concise introduction to the component and its purpose within the system.]## 1. Component Overview### Purpose/Responsibility- OVR-001: State component's primary responsibility- OVR-002: Define scope (included/excluded functionality)- OVR-003: Describe system context and relationships## 2. Architecture Section> - ARC-001: Document design patterns used (Repository, Factory, Observer, etc.)> - ARC-002: List internal and external dependencies with purposes> **Full content:** `templates/create-oo-component-documentation/2_architecture_section.md`## 3. Interface Documentation- INT-001: Document all public interfaces and usage patterns- INT-002: Create method/property reference table- INT-003: Document events/callbacks/notification mechanisms| Method/Property | Purpose | Parameters | Return Type | Usage Notes || --- | --- | --- | --- | --- || [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |## 4. Implementation Details- IMP-001: Document main implementation classes and responsibilities- IMP-002: Describe configuration requirements and initialization- IMP-003: Document key algorithms and business logic- IMP-004: Note performance characteristics and bottlenecks## 5. Usage Examples### Basic Usage```csharp// Basic usage examplevar component = new ComponentName();component.DoSomething();```### Advanced Usage```csharp// Advanced configuration patternsvar options = new ComponentOptions();var component = ComponentFactory.Create(options);await component.ProcessAsync(data);```- USE-001: Provide basic usage examples- USE-002: Show advanced configuration patterns- USE-003: Document best practices and recommended patterns## 6. Quality Attributes- QUA-001: Security (authentication, authorization, data protection)- QUA-002: Performance (characteristics, scalability, resource usage)- QUA-003: Reliability (error handling, fault tolerance, recovery)- QUA-004: Maintainability (standards, testing, documentation)- QUA-005: Extensibility (extension points, customization options)## 7. Reference Information- REF-001: List dependencies with versions and purposes- REF-002: Complete configuration options reference- REF-003: Testing guidelines and mock setup- REF-004: Troubleshooting (common issues, error messages)- REF-005: Related documentation links- REF-006: Change history and migration notes``````## Template ReferencesDetailed templates in `templates/create-oo-component-documentation/`:- `2_architecture_section.md`
+## ContextUse when you need to work on the current workspace or task.
+
+## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+
+## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+
+## Phases
+
+### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+
+### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+
+## Documentation Standards- DOC-001: Follow C4 Model documentation levels (Context, Containers, Components, Code)- DOC-002: Align with Arc42 software architecture documentation template- DOC-003: Comply with IEEE 1016 Software Design Description standard- DOC-004: Use Agile Documentation principles (just enough documentation that adds value)- DOC-005: Target developers and maintainers as primary audience
+
+## Analysis Instructions- ANA-001: Determine path type (folder vs single file) and identify primary component- ANA-002: Examine source code files for class structures and inheritance- ANA-003: Identify design patterns and architectural decisions- ANA-004: Document public APIs, interfaces, and dependencies- ANA-005: Recognize creational/structural/behavioral patterns- ANA-006: Document method parameters, return values, exceptions- ANA-007: Assess performance, security, reliability, maintainability- ANA-008: Infer integration patterns and data flow
+
+## Language-Specific Optimizations- LNG-001: **C#/.NET** - async/await, dependency injection, configuration, disposal- LNG-002: **Java** - Spring framework, annotations, exception handling, packaging- LNG-003: **TypeScript/JavaScript** - modules, async patterns, types, npm- LNG-004: **Python** - packages, virtual environments, type hints, testing
+
+## Error Handling- ERR-001: Path doesn't exist - provide correct format guidance- ERR-002: No source files found - suggest alternative locations- ERR-003: Unclear structure - document findings and request clarification- ERR-004: Non-standard patterns - document custom approaches- ERR-005: Insufficient code - focus on available information, highlight gaps
+
+## Output FormatGenerate well-structured Markdown with clear heading hierarchy, code blocks, tables, bullet points, and proper formatting for readability and maintainability.
+
+## File LocationThe documentation should be saved in the `/docs/components/` directory and named according to the convention: `[component-name]-documentation.md`.
+
+## Required Documentation StructureThe documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:````md---title: [Component Name] - Technical Documentationcomponent_path: `${input:ComponentPath}`version: [Optional: e.g., 1.0, Date]date_created: [YYYY-MM-DD]last_updated: [Optional: YYYY-MM-DD]owner: [Optional: Team/Individual responsible for this component]---# [Component Name] Documentation[A short concise introduction to the component and its purpose within the system.]
+
+## 1. Component Overview
+
+### Purpose/Responsibility- OVR-001: State component's primary responsibility- OVR-002: Define scope (included/excluded functionality)- OVR-003: Describe system context and relationships
+
+## 2. Architecture Section> - ARC-001: Document design patterns used (Repository, Factory, Observer, etc.)> - ARC-002: List internal and external dependencies with purposes> **Full content:** `templates/create-oo-component-documentation/2_architecture_section.md`
+
+## 3. Interface Documentation- INT-001: Document all public interfaces and usage patterns- INT-002: Create method/property reference table- INT-003: Document events/callbacks/notification mechanisms| Method/Property | Purpose | Parameters | Return Type | Usage Notes || --- | --- | --- | --- | --- || [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |
+
+## 4. Implementation Details- IMP-001: Document main implementation classes and responsibilities- IMP-002: Describe configuration requirements and initialization- IMP-003: Document key algorithms and business logic- IMP-004: Note performance characteristics and bottlenecks
+
+## 5. Usage Examples
+
+### Basic Usage```csharp// Basic usage examplevar component = new ComponentName();component.DoSomething();```
+
+### Advanced Usage```csharp// Advanced configuration patternsvar options = new ComponentOptions();var component = ComponentFactory.Create(options);await component.ProcessAsync(data);```- USE-001: Provide basic usage examples- USE-002: Show advanced configuration patterns- USE-003: Document best practices and recommended patterns
+
+## 6. Quality Attributes- QUA-001: Security (authentication, authorization, data protection)- QUA-002: Performance (characteristics, scalability, resource usage)- QUA-003: Reliability (error handling, fault tolerance, recovery)- QUA-004: Maintainability (standards, testing, documentation)- QUA-005: Extensibility (extension points, customization options)
+
+## 7. Reference Information- REF-001: List dependencies with versions and purposes- REF-002: Complete configuration options reference- REF-003: Testing guidelines and mock setup- REF-004: Troubleshooting (common issues, error messages)- REF-005: Related documentation links- REF-006: Change history and migration notes``````
+
+## Template ReferencesDetailed templates in `templates/create-oo-component-documentation/`:- `2_architecture_section.md`
+
+## Personas
+
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+
+## Personality
+
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+
+## Context
+
+Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
+
+
+## Rules
+
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+### Domain Rules
+
+- Fix root causes, not symptoms.
+- Check siblings for the same flaw.
+- Restore from git clean before retrying.
+
+### Standing Rules
+
+1. **Map before touch** — Understand before making changes.
+2. **Smallest safe change** — Minimal change that achieves the goal.
+3. **Verify before claim** — Test before reporting complete.
+4. **Report blockers** — State clearly when something fails.
+
+
+## Phases
+
+### Phase 1: Intake
+- Read the request and identify scope.
+- Locate relevant files, diffs, references.
+
+### Phase 2: Execute
+- Perform work with smallest safe change set.
+- Keep steps explicit and reproducible.
+
+### Phase 3: Verify
+- Check result against goal, rules, inputs.
+- Confirm output is usable and complete.
+
+### Phase 4: Hand Off
+- Return final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+|---|------|-----------|
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+
+## Goal
+
+Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.
+
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+
+## Skills Required
+
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+|-------|---------|
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+

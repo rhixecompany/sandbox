@@ -123,3 +123,22 @@ mindmodel_lookup({ query: "create upgrade function" });
 - Ignoring agent errors
 - Overwriting `.mindmodel` without analysis
 - Missing progress output during long operations
+
+## Architecture
+
+### Technology Stack
+<!-- Auto-populated tech stack will go here -->
+
+### Folder Structure
+<!-- Auto-populated folder structure will go here -->
+
+### Architecture Overview
+<!-- Project architecture description -->
+
+### Key Components
+- _Component 1_: description
+- _Component 2_: description
+
+### Data Flow
+<!-- Data flow description -->
+

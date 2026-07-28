@@ -1,0 +1,110 @@
+{
+  "name": "generator-orchestrator-manifest",
+  "version": "1.0.0",
+  "mode": "full|quick|custom",
+  "validation_level": "strict|normal|skip",
+  "include_code_generation": true,
+  "stages_requested": ["A", "B", "C", "D", "E"],
+  "timestamp": "ISO8601",
+  "stages": {
+    "A": {
+      "started": "ISO8601",
+      "finished": "ISO8601",
+      "prompts": {
+        "technology-stack-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "blueprints/technology-stack-blueprint.md",
+          "gate": "pass|fail"
+        },
+        "folder-structure-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "blueprints/folder-structure-blueprint.md",
+          "gate": "pass|fail"
+        }
+      },
+      "gate_result": "pass|fail|degraded"
+    },
+    "B": {
+      "started": "ISO8601",
+      "finished": "ISO8601",
+      "prompts": {
+        "architecture-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "blueprints/architecture-blueprint.md",
+          "gate": "pass|fail"
+        },
+        "project-workflow-analysis-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "blueprints/workflow-analysis-blueprint.md",
+          "gate": "pass|fail"
+        },
+        "code-exemplars-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "blueprints/code-exemplars-blueprint.md",
+          "gate": "pass|fail"
+        }
+      },
+      "gate_result": "pass|fail|degraded"
+    },
+    "C": {
+      "started": "ISO8601",
+      "finished": "ISO8601",
+      "prompts": {
+        "copilot-instructions-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "copilot-instructions.md",
+          "gate": "pass|fail"
+        },
+        "readme-blueprint-generator": {
+          "status": "success|degraded|failed",
+          "output": "README.md",
+          "gate": "pass|fail"
+        }
+      },
+      "gate_result": "pass|fail|degraded"
+    },
+    "D": {
+      "started": "ISO8601",
+      "finished": "ISO8601",
+      "stack_detected": "typescript|python|swift|copilot-studio|multiple",
+      "prompts": {
+        "typescript-mcp-server-generator": {
+          "status": "success|degraded|failed|skipped",
+          "output": "mcp-servers/typescript/",
+          "gate": "pass|fail|n/a"
+        },
+        "python-mcp-server-generator": {
+          "status": "success|degraded|failed|skipped",
+          "output": "mcp-servers/python/",
+          "gate": "pass|fail|n/a"
+        },
+        "swift-mcp-server-generator": {
+          "status": "success|degraded|failed|skipped",
+          "output": "mcp-servers/swift/",
+          "gate": "pass|fail|n/a"
+        },
+        "mcp-copilot-studio-server-generator": {
+          "status": "success|degraded|failed|skipped",
+          "output": "mcp-servers/copilot-studio/",
+          "gate": "pass|fail|n/a"
+        }
+      },
+      "gate_result": "pass|fail|degraded"
+    },
+    "E": {
+      "started": "ISO8601",
+      "finished": "ISO8601",
+      "consistency_validation": {
+        "cross_doc_stack_match": "pass|fail",
+        "cross_doc_version_match": "pass|fail",
+        "cross_doc_project_name_match": "pass|fail",
+        "dependency_trace_clean": "pass|fail",
+        "no_forward_references": "pass|fail"
+      },
+      "manifest_written": "orchestrator-manifest.json",
+      "validation_report_written": "orchestrator-validation-report.md",
+      "handoff_decision": "PASS|FAIL",
+      "handoff_reason": "All gates green|Cross-doc inconsistency at Stage C|Stage B gate fail after retry"
+    }
+  }
+}

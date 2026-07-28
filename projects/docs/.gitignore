@@ -11,3 +11,10 @@ Thumbs.db
 # Misc
 *.log
 .cache/
+
+node_modules/
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.next/

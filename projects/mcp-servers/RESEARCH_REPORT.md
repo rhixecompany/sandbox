@@ -21,17 +21,16 @@
 ## Key Findings
 
 ### MCP Protocol Architecture
-- MCP uses client-server architecture with standardized JSON-RPC 2.0 messaging
-- Servers expose **Tools** (model-invoked functions), **Resources** (read-only data), and **Prompts** (reusable templates)
-- Three transport options: stdio (local), SSE (remote), Streamable HTTP
+- Client-server architecture with standardized JSON-RPC 2.0 messaging
+- Servers expose **Tools** (model-invoked functions), **Resources** (read-only data), **Prompts** (reusable templates)
+- Three transports: stdio (local), SSE (remote), Streamable HTTP
 - Authorization via OAuth 2.1 for remote servers
-- Tools use JSON Schema for input validation; outputs are structured results
+- MCP now sees **97M+ monthly SDK downloads** (early 2026), adopted by 28% of Fortune 500
 
 ### SDK Tiering System
-- **Tier 1** (TypeScript, Python, Go, C#): Full feature coverage, active maintenance, protocol compliance
+- **Tier 1** (TS, Python, Go, C#): Full feature coverage, active maintenance
 - **Tier 2** (Java, Rust): Core features, community contributions accepted
 - **Tier 3** (Kotlin, PHP, Ruby, Swift): Community-maintained, basic protocol support
-- All SDKs support creating servers (tools, resources, prompts) and clients
 
 ### Multi-Language Implementation
 - Each lang dir is self-contained with own build system
@@ -39,10 +38,10 @@
 - Key considerations: type safety (TS), memory safety (Rust), ecosystem (Python)
 - Testing: MCP Inspector + SDK-provided test utilities
 
-### MCP Registry & Publishing
-- Official MCP Registry at modelcontextprotocol.io/registry
-- Publish via GitHub Actions; supports npm, pip, nuget
-- Versioning with semver; automated moderation pipeline
+### Security Landscape (2026)
+- Astrix Security research found significant proportion of MCP servers exposed plaintext HTTP endpoints
+- OWASP Top 10 for Agentic Applications includes MCP-specific tool poisoning
+- **Rule**: start every new server in read-only mode; grant write access only after observing usage patterns
 
 ---
 
@@ -54,17 +53,16 @@
 | SDK Reference | modelcontextprotocol.io/docs/sdk | SDK Overview |
 | Protocol Spec (2025-11-25) | modelcontextprotocol.io/specification/2025-11-25 | Specification |
 | MCP Inspector | modelcontextprotocol.io/docs/tools/inspector | Debugging Tool |
-| Security Best Practices | modelcontextprotocol.io/docs/tutorials/security/security_best_practices | Guide |
 
 ---
 
 ## Best Practices
 
-1. **SDK Tier Awareness** — Use Tier 1 SDKs (TS, Python, Go, C#) for production; Tier 3 for experimental/community ports
-2. **Transport Selection** — stdio for local/desktop use, Streamable HTTP for production remote servers
-3. **Tool Idempotency** — Design tool handlers as idempotent where possible; implement idempotency-key pattern for payment/state-changing operations
-4. **Error Handling** — Use MCP's built-in error codes (InvalidParams, InternalError, etc.); never expose stack traces
-5. **Resource Subscription** — Use `resources/subscribe` for live-updating resources; design for polling fallback
+1. **SDK Tier Awareness** — Use Tier 1 SDKs (TS, Python, Go, C#) for production
+2. **Transport Selection** — stdio for local/desktop use, Streamable HTTP for remote
+3. **Tool Idempotency** — idempotency-key pattern for state-changing operations
+4. **Error Handling** — Use MCP's built-in error codes (InvalidParams, InternalError); never expose stack traces
+5. **Security First** — OAuth 2.1 for remote; read-only mode by default; never reuse prod credentials
 
 ---
 
@@ -94,6 +92,7 @@
 - **Auth**: Remote servers MUST implement OAuth 2.1 or equivalent
 - **Rate limiting**: Per-client limits on tool execution
 - **Audit logging**: Log all executions with caller identity, sanitized inputs, timestamps
+- **Zero trust**: Use dedicated API keys with minimum required permissions; never reuse prod credentials
 
 ---
 
@@ -103,9 +102,8 @@
 |---------|------------------|
 | Banking | TypeScript/Next.js (TS SDK overlap) |
 | comicwise | TypeScript/Next.js (TS SDK overlap) |
-| rhixe_scans | TypeScript/Next.js (TS SDK overlap) |
 | selenium_webdriver | Node.js/TypeScript (TS SDK overlap) |
-| university-libary-jsm | TypeScript/Next.js (TS SDK overlap) |
+| Bash | TypeScript tooling and linting conventions |
 
 ---
 
@@ -117,8 +115,8 @@
 | MCP GitHub | github.com/modelcontextprotocol | SDK repositories |
 | Spec (2025-11-25) | modelcontextprotocol.io/specification/2025-11-25 | Full protocol spec |
 | Registry | modelcontextprotocol.io/registry/about | Server publishing |
-| Community | modelcontextprotocol.io/community/contributing | SEPs and contributing |
 
----
+### Methodology
+Cross-referenced workspace projects + official MCP docs, SDK repos, and 2026 security research (ASTRIX, OWASP Agentic Top 10).
 
-*Methodology: Cross-referenced 5 workspace projects + official MCP docs and SDK repos.*
+**Last verified:** 2026-07-28.

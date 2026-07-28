@@ -1,32 +1,21 @@
-# projects/xamehi.tv — Technology Stack Blueprint
+# xamehi.tv Technology Stack
 
-## Detected Stack
+**Generated:** 2026-07-28
 
-- Django, Python
+## Primary Stack
 
-## Key Technologies
+| Category | Technology |
+|----------|-----------|
+| **Type** | Python/Django (Backend) |
+| **Pattern** | Django + Video streaming backend |
+| **Stack** | Django, Python, Gunicorn, SQLite |
 
-- Python dependencies:
-  - Django
-  - django-cors-headers
-  - django-filter
-  - django-js-asset
-  - django-storages
-  - djangorestframework
-  - djangorestframework-simplejwt
-  - gunicorn
-  - virtualenv
-  - whitenoise
-  - django-allauth
-  - dj-database-url
-  - psycopg2-binary
-  - pillow
+## Development Tools
 
-## Tooling and Conventions
+- **Version Control:** Shared monorepo git
+- **Linting:** Workspace-root shared configs
+- **Documentation:** Standardized doc set per project convention
 
-- Detect editor/tooling settings from `.vscode/` when present.
-- Keep formatter and linter recommendations aligned to the detected stack.
+## Dependencies
 
-## Update Notes
-
-- Refresh after dependency or toolchain changes.
+Managed via project-specific package manager.

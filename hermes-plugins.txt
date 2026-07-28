@@ -1,0 +1,13 @@
+hermes plugins install -f --enable gh-skills-builder@awesome-copilot ;
+hermes plugins install -f --enable github-copilot-modernization@awesome-copilot ;
+hermes plugins install -f --enable project-planning@awesome-copilot ;
+hermes plugins install -f --enable skills-for-copilot-studio@awesome-copilot ;
+hermes plugins install -f --enable whatidid@awesome-copilot ;
+hermes plugins install -f --enable where-was-i@awesome-copilot ;
+hermes plugins install -f --enable superpowers@superpowers-marketplace ;
+hermes plugins install -f --enable elements-of-style@superpowers-marketplace ;
+hermes plugins install -f --enable superpowers-developing-for-claude-code@superpowers-marketplace ;
+hermes plugins install -f --enable context-engineering@awesome-copilot ;
+hermes plugins install -f --enable copilot-goal-skill@awesome-copilot ;
+hermes plugins install -f --enable convert-to-md@awesome-copilot ;
+hermes plugins install -f --enable copilot-sdk@awesome-copilot ;

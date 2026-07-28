@@ -1,92 +1,21 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
-  },
-  "editor.inlineSuggest.enabled": true,
-  "python.defaultInterpreterPath": "${workspaceFolder}/myvenv/Scripts/python.exe",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.autoSearchPaths": true,
-  "python.analysis.extraPaths": [
-    "${workspaceFolder}/.github/scripts"
-  ],
   "[python]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit"
-    },
     "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "python-envs.alwaysUseUv": true,
-  "python-envs.autoActivate": true,
-  "python-envs.venvFolders": [
-    ".venv",
-    "env",
-    "venv",
-    ".env",
-    "envs",
-    "venvs"
-  ],
-  "files.associations": {
-    "*.css": "tailwindcss",
-    "**/*.{txt,in}": "django-txt",
-    "**/requirements/**/*.{txt,in}": "pip-requirements"
-  },
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.includeLanguages": {
-    "css": "css",
-    "scss": "scss",
-    "javascript": "jsx",
-    "typescript": "tsx"
-  },
-  "[django-html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+  "files.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.profiles.windows": {
-    "Command Prompt": {
-      "icon": "terminal-cmd",
-      "path": "cmd.exe"
-    },
-    "Git Bash": {
-      "icon": "terminal-bash",
-      "source": "Git Bash"
-    },
-    "PowerShell": {
-      "icon": "terminal-powershell",
-      "source": "PowerShell"
-    }
-  },
-  "workbench.editor.editorActionsLocation": "default",
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "search.exclude": {
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/dist": true
   }
 }

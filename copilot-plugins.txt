@@ -1,0 +1,13 @@
+copilot plugin install gh-skills-builder@awesome-copilot ;
+copilot plugin install github-copilot-modernization@awesome-copilot ;
+copilot plugin install project-planning@awesome-copilot ;
+copilot plugin install skills-for-copilot-studio@awesome-copilot ;
+copilot plugin install whatidid@awesome-copilot ;
+copilot plugin install where-was-i@awesome-copilot ;
+copilot plugin install superpowers@superpowers-marketplace ;
+copilot plugin install elements-of-style@superpowers-marketplace ;
+copilot plugin install superpowers-developing-for-claude-code@superpowers-marketplace ;
+copilot plugin install context-engineering@awesome-copilot ;
+copilot plugin install copilot-goal-skill@awesome-copilot ;
+copilot plugin install convert-to-md@awesome-copilot ;
+copilot plugin install copilot-sdk@awesome-copilot ;

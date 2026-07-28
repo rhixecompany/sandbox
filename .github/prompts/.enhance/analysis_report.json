@@ -1,0 +1,920 @@
+{
+  "total_files": 216,
+  "issue_counts": {
+    "critical": 0,
+    "high": 20,
+    "medium": 0,
+    "info": 10
+  },
+  "files_no_frontmatter": [],
+  "all_issues": {
+    "high": {
+      "MALFORMED_HEADINGS": [
+        "add-educational-comments",
+        "breakdown-plan",
+        "convert-plaintext-to-md",
+        "cosmosdb-datamodeling",
+        "create-github-action-workflow-specification",
+        "create-oo-component-documentation",
+        "create-tldr-page",
+        "csharp-mstest",
+        "java-add-graalvm-native-image-support",
+        "php-mcp-server-generator",
+        "prompts-strict-template",
+        "repo",
+        "ruby-mcp-server-generator",
+        "rust-mcp-server-generator",
+        "shuffle-json-data",
+        "structured-autonomy-plan",
+        "tldr-prompt",
+        "update-avm-modules-in-bicep",
+        "workspace-consolidate",
+        "write-coding-standards-from-file"
+      ]
+    },
+    "info": {
+      "RULES_INLINE_NOT_SHARED": [
+        "agents-system-prompt-context-fix",
+        "audit-skills-judge-fix",
+        "execute-all-prompts",
+        "repo-management",
+        "repo-research-pipeline",
+        "repo-story-time",
+        "sync-hermes-copilot-codex",
+        "test-providers-models",
+        "web-research-pipeline"
+      ],
+      "DESCRIPTION_TOO_SHORT": [
+        "pl"
+      ]
+    },
+    "critical": {},
+    "medium": {}
+  },
+  "per_file": [
+    {
+      "name": "add-educational-comments",
+      "issue_count": 1
+    },
+    {
+      "name": "agents-fix",
+      "issue_count": 0
+    },
+    {
+      "name": "agents-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "agents-system-prompt-context-fix",
+      "issue_count": 1
+    },
+    {
+      "name": "ai-prompt-engineering-safety-review",
+      "issue_count": 0
+    },
+    {
+      "name": "apple-appstore-reviewer",
+      "issue_count": 0
+    },
+    {
+      "name": "arch-linux-triage",
+      "issue_count": 0
+    },
+    {
+      "name": "architecture-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "aspnet-minimal-api-openapi",
+      "issue_count": 0
+    },
+    {
+      "name": "audit-skills-judge-fix",
+      "issue_count": 1
+    },
+    {
+      "name": "az-cost-optimize",
+      "issue_count": 0
+    },
+    {
+      "name": "azure-resource-health-diagnose",
+      "issue_count": 0
+    },
+    {
+      "name": "bash-scripts-fix",
+      "issue_count": 0
+    },
+    {
+      "name": "bigquery-pipeline-audit",
+      "issue_count": 0
+    },
+    {
+      "name": "boost-prompt",
+      "issue_count": 0
+    },
+    {
+      "name": "breakdown-epic-arch",
+      "issue_count": 0
+    },
+    {
+      "name": "breakdown-epic-pm",
+      "issue_count": 0
+    },
+    {
+      "name": "breakdown-feature-implementation",
+      "issue_count": 0
+    },
+    {
+      "name": "breakdown-feature-prd",
+      "issue_count": 0
+    },
+    {
+      "name": "breakdown-plan",
+      "issue_count": 1
+    },
+    {
+      "name": "breakdown-test",
+      "issue_count": 0
+    },
+    {
+      "name": "centos-linux-triage",
+      "issue_count": 0
+    },
+    {
+      "name": "code-exemplars-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "code-review",
+      "issue_count": 0
+    },
+    {
+      "name": "comicwise-development",
+      "issue_count": 0
+    },
+    {
+      "name": "comment-code-generate-a-tutorial",
+      "issue_count": 0
+    },
+    {
+      "name": "comprehensive-prompt-enhancer",
+      "issue_count": 0
+    },
+    {
+      "name": "containerize-aspnet-framework",
+      "issue_count": 0
+    },
+    {
+      "name": "containerize-aspnetcore",
+      "issue_count": 0
+    },
+    {
+      "name": "context-map",
+      "issue_count": 0
+    },
+    {
+      "name": "conventional-commit",
+      "issue_count": 0
+    },
+    {
+      "name": "convert-plaintext-to-md",
+      "issue_count": 1
+    },
+    {
+      "name": "copilot-instructions-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "cosmosdb-datamodeling",
+      "issue_count": 1
+    },
+    {
+      "name": "create-agentsmd",
+      "issue_count": 0
+    },
+    {
+      "name": "create-architectural-decision-record",
+      "issue_count": 0
+    },
+    {
+      "name": "create-github-action-workflow-specification",
+      "issue_count": 1
+    },
+    {
+      "name": "create-github-issue-feature-from-specification",
+      "issue_count": 0
+    },
+    {
+      "name": "create-github-issues-feature-from-implementation-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "create-github-issues-for-unmet-specification-requirements",
+      "issue_count": 0
+    },
+    {
+      "name": "create-github-pull-request-from-specification",
+      "issue_count": 0
+    },
+    {
+      "name": "create-implementation-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "create-llms",
+      "issue_count": 0
+    },
+    {
+      "name": "create-oo-component-documentation",
+      "issue_count": 1
+    },
+    {
+      "name": "create-readme",
+      "issue_count": 0
+    },
+    {
+      "name": "create-specification",
+      "issue_count": 0
+    },
+    {
+      "name": "create-spring-boot-java-project",
+      "issue_count": 0
+    },
+    {
+      "name": "create-spring-boot-kotlin-project",
+      "issue_count": 0
+    },
+    {
+      "name": "create-technical-spike",
+      "issue_count": 0
+    },
+    {
+      "name": "create-tldr-page",
+      "issue_count": 1
+    },
+    {
+      "name": "csharp-async",
+      "issue_count": 0
+    },
+    {
+      "name": "csharp-docs",
+      "issue_count": 0
+    },
+    {
+      "name": "csharp-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "csharp-mstest",
+      "issue_count": 1
+    },
+    {
+      "name": "csharp-nunit",
+      "issue_count": 0
+    },
+    {
+      "name": "csharp-tunit",
+      "issue_count": 0
+    },
+    {
+      "name": "csharp-xunit",
+      "issue_count": 0
+    },
+    {
+      "name": "database",
+      "issue_count": 0
+    },
+    {
+      "name": "dataverse-python-advanced-patterns",
+      "issue_count": 0
+    },
+    {
+      "name": "dataverse-python-production-code",
+      "issue_count": 0
+    },
+    {
+      "name": "dataverse-python-quickstart",
+      "issue_count": 0
+    },
+    {
+      "name": "dataverse-python-usecase-builder",
+      "issue_count": 0
+    },
+    {
+      "name": "debian-linux-triage",
+      "issue_count": 0
+    },
+    {
+      "name": "debug-issue",
+      "issue_count": 0
+    },
+    {
+      "name": "debugger-prompt",
+      "issue_count": 0
+    },
+    {
+      "name": "declarative-agents",
+      "issue_count": 0
+    },
+    {
+      "name": "dev-imp",
+      "issue_count": 0
+    },
+    {
+      "name": "dev-init",
+      "issue_count": 0
+    },
+    {
+      "name": "dev",
+      "issue_count": 0
+    },
+    {
+      "name": "development",
+      "issue_count": 0
+    },
+    {
+      "name": "devops-rollout-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "documentation-writer",
+      "issue_count": 0
+    },
+    {
+      "name": "documentation",
+      "issue_count": 0
+    },
+    {
+      "name": "dotnet-best-practices",
+      "issue_count": 0
+    },
+    {
+      "name": "dotnet-design-pattern-review",
+      "issue_count": 0
+    },
+    {
+      "name": "dotnet-upgrade",
+      "issue_count": 0
+    },
+    {
+      "name": "editorconfig",
+      "issue_count": 0
+    },
+    {
+      "name": "ef-core",
+      "issue_count": 0
+    },
+    {
+      "name": "execute-all-prompts",
+      "issue_count": 1
+    },
+    {
+      "name": "execute-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "features",
+      "issue_count": 0
+    },
+    {
+      "name": "fedora-linux-triage",
+      "issue_count": 0
+    },
+    {
+      "name": "finalize-agent-prompt",
+      "issue_count": 0
+    },
+    {
+      "name": "first-ask",
+      "issue_count": 0
+    },
+    {
+      "name": "folder-structure-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "gen-specs-as-issues",
+      "issue_count": 0
+    },
+    {
+      "name": "general",
+      "issue_count": 0
+    },
+    {
+      "name": "generate-custom-instructions-from-codebase",
+      "issue_count": 0
+    },
+    {
+      "name": "generate-docs",
+      "issue_count": 0
+    },
+    {
+      "name": "generator-orchestrator",
+      "issue_count": 0
+    },
+    {
+      "name": "git-flow-branch-creator",
+      "issue_count": 0
+    },
+    {
+      "name": "github-copilot-starter",
+      "issue_count": 0
+    },
+    {
+      "name": "go-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-epic-arch",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-epic-pm",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-feature-implementation",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-feature-prd",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-breakdown-test",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-doctor-systematic-debugging",
+      "issue_count": 0
+    },
+    {
+      "name": "Initial",
+      "issue_count": 0
+    },
+    {
+      "name": "java-add-graalvm-native-image-support",
+      "issue_count": 1
+    },
+    {
+      "name": "java-docs",
+      "issue_count": 0
+    },
+    {
+      "name": "java-junit",
+      "issue_count": 0
+    },
+    {
+      "name": "java-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "java-refactoring-extract-method",
+      "issue_count": 0
+    },
+    {
+      "name": "java-refactoring-remove-parameter",
+      "issue_count": 0
+    },
+    {
+      "name": "java-springboot",
+      "issue_count": 0
+    },
+    {
+      "name": "javascript-typescript-jest",
+      "issue_count": 0
+    },
+    {
+      "name": "kotlin-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "kotlin-springboot",
+      "issue_count": 0
+    },
+    {
+      "name": "list-all-installed-vscode-extension",
+      "issue_count": 0
+    },
+    {
+      "name": "mcp-copilot-studio-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "mcp-create-adaptive-cards",
+      "issue_count": 0
+    },
+    {
+      "name": "mcp-create-declarative-agent",
+      "issue_count": 0
+    },
+    {
+      "name": "mcp-deploy-manage-agents",
+      "issue_count": 0
+    },
+    {
+      "name": "memory-merger",
+      "issue_count": 0
+    },
+    {
+      "name": "migrate-to-next16",
+      "issue_count": 0
+    },
+    {
+      "name": "mkdocs-translations",
+      "issue_count": 0
+    },
+    {
+      "name": "model-recommendation",
+      "issue_count": 0
+    },
+    {
+      "name": "multi-agent-research-template",
+      "issue_count": 0
+    },
+    {
+      "name": "multi-stage-dockerfile",
+      "issue_count": 0
+    },
+    {
+      "name": "my-issues",
+      "issue_count": 0
+    },
+    {
+      "name": "my-pull-requests",
+      "issue_count": 0
+    },
+    {
+      "name": "next-intl-add-language",
+      "issue_count": 0
+    },
+    {
+      "name": "nextjs-tailwind",
+      "issue_count": 0
+    },
+    {
+      "name": "openapi-to-application-code",
+      "issue_count": 0
+    },
+    {
+      "name": "optimize-agentsMd",
+      "issue_count": 0
+    },
+    {
+      "name": "parallel-mcp-install",
+      "issue_count": 0
+    },
+    {
+      "name": "performance",
+      "issue_count": 0
+    },
+    {
+      "name": "php-mcp-server-generator",
+      "issue_count": 1
+    },
+    {
+      "name": "pl",
+      "issue_count": 1
+    },
+    {
+      "name": "plan-audit",
+      "issue_count": 0
+    },
+    {
+      "name": "plan-batch-fix",
+      "issue_count": 0
+    },
+    {
+      "name": "plan-execute",
+      "issue_count": 0
+    },
+    {
+      "name": "plan-generate",
+      "issue_count": 0
+    },
+    {
+      "name": "playwright-automation-fill-in-form",
+      "issue_count": 0
+    },
+    {
+      "name": "playwright-explore-website",
+      "issue_count": 0
+    },
+    {
+      "name": "playwright-generate-test",
+      "issue_count": 0
+    },
+    {
+      "name": "playwright-typescript",
+      "issue_count": 0
+    },
+    {
+      "name": "postgresql-code-review",
+      "issue_count": 0
+    },
+    {
+      "name": "postgresql-optimization",
+      "issue_count": 0
+    },
+    {
+      "name": "power-apps-code-app-scaffold",
+      "issue_count": 0
+    },
+    {
+      "name": "power-bi-dax-optimization",
+      "issue_count": 0
+    },
+    {
+      "name": "power-bi-model-design-review",
+      "issue_count": 0
+    },
+    {
+      "name": "power-bi-performance-troubleshooting",
+      "issue_count": 0
+    },
+    {
+      "name": "power-bi-report-design-consultation",
+      "issue_count": 0
+    },
+    {
+      "name": "power-platform-mcp-connector-suite",
+      "issue_count": 0
+    },
+    {
+      "name": "project-workflow-analysis-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "projects-init",
+      "issue_count": 0
+    },
+    {
+      "name": "prompt-builder",
+      "issue_count": 0
+    },
+    {
+      "name": "prompt-management",
+      "issue_count": 0
+    },
+    {
+      "name": "prompts-fix",
+      "issue_count": 0
+    },
+    {
+      "name": "prompts-strict-template",
+      "issue_count": 1
+    },
+    {
+      "name": "pytest-coverage",
+      "issue_count": 0
+    },
+    {
+      "name": "python-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "quality-gate-debugger",
+      "issue_count": 0
+    },
+    {
+      "name": "readme-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "refactor-code",
+      "issue_count": 0
+    },
+    {
+      "name": "refactor-mardown-files",
+      "issue_count": 0
+    },
+    {
+      "name": "refactor-method-complexity-reduce",
+      "issue_count": 0
+    },
+    {
+      "name": "refactor-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "refresh-agent-inventory",
+      "issue_count": 0
+    },
+    {
+      "name": "remember-interactive-programming",
+      "issue_count": 0
+    },
+    {
+      "name": "remember",
+      "issue_count": 0
+    },
+    {
+      "name": "repo-management",
+      "issue_count": 1
+    },
+    {
+      "name": "repo-research-pipeline",
+      "issue_count": 1
+    },
+    {
+      "name": "repo-story-time",
+      "issue_count": 1
+    },
+    {
+      "name": "repo",
+      "issue_count": 1
+    },
+    {
+      "name": "review-and-refactor",
+      "issue_count": 0
+    },
+    {
+      "name": "ruby-mcp-server-generator",
+      "issue_count": 1
+    },
+    {
+      "name": "run-session-agentsmd-workflow",
+      "issue_count": 0
+    },
+    {
+      "name": "rust-mcp-server-generator",
+      "issue_count": 1
+    },
+    {
+      "name": "security",
+      "issue_count": 0
+    },
+    {
+      "name": "seed-review-and-create",
+      "issue_count": 0
+    },
+    {
+      "name": "session-agentsmd-full-workflow",
+      "issue_count": 0
+    },
+    {
+      "name": "setup-component",
+      "issue_count": 0
+    },
+    {
+      "name": "setup-enhanced",
+      "issue_count": 0
+    },
+    {
+      "name": "setup-nextjs-frontend-stack",
+      "issue_count": 0
+    },
+    {
+      "name": "setup",
+      "issue_count": 0
+    },
+    {
+      "name": "shuffle-json-data",
+      "issue_count": 1
+    },
+    {
+      "name": "skills-debug-prompt",
+      "issue_count": 0
+    },
+    {
+      "name": "skills-fix",
+      "issue_count": 0
+    },
+    {
+      "name": "sql-code-review",
+      "issue_count": 0
+    },
+    {
+      "name": "sql-optimization",
+      "issue_count": 0
+    },
+    {
+      "name": "structured-autonomy-generate",
+      "issue_count": 0
+    },
+    {
+      "name": "structured-autonomy-implement",
+      "issue_count": 0
+    },
+    {
+      "name": "structured-autonomy-plan",
+      "issue_count": 1
+    },
+    {
+      "name": "suggest-awesome-github-copilot",
+      "issue_count": 0
+    },
+    {
+      "name": "swift-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "sync-hermes-copilot-codex",
+      "issue_count": 1
+    },
+    {
+      "name": "task-implementation",
+      "issue_count": 0
+    },
+    {
+      "name": "tasksync",
+      "issue_count": 0
+    },
+    {
+      "name": "technology-stack-blueprint-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "test-providers-models",
+      "issue_count": 1
+    },
+    {
+      "name": "testing",
+      "issue_count": 0
+    },
+    {
+      "name": "tldr-prompt",
+      "issue_count": 1
+    },
+    {
+      "name": "typescript-mcp-server-generator",
+      "issue_count": 0
+    },
+    {
+      "name": "typescript",
+      "issue_count": 0
+    },
+    {
+      "name": "typespec-api-operations",
+      "issue_count": 0
+    },
+    {
+      "name": "typespec-create-agent",
+      "issue_count": 0
+    },
+    {
+      "name": "typespec-create-api-plugin",
+      "issue_count": 0
+    },
+    {
+      "name": "uk-earnings-research-pipeline",
+      "issue_count": 0
+    },
+    {
+      "name": "update-avm-modules-in-bicep",
+      "issue_count": 1
+    },
+    {
+      "name": "update-docs-on-code-change",
+      "issue_count": 0
+    },
+    {
+      "name": "update-implementation-plan",
+      "issue_count": 0
+    },
+    {
+      "name": "update-llms",
+      "issue_count": 0
+    },
+    {
+      "name": "update-markdown-file-index",
+      "issue_count": 0
+    },
+    {
+      "name": "update-oo-component-documentation",
+      "issue_count": 0
+    },
+    {
+      "name": "update-specification",
+      "issue_count": 0
+    },
+    {
+      "name": "web-research-pipeline",
+      "issue_count": 1
+    },
+    {
+      "name": "what-context-needed",
+      "issue_count": 0
+    },
+    {
+      "name": "workspace-consolidate",
+      "issue_count": 1
+    },
+    {
+      "name": "write-coding-standards-from-file",
+      "issue_count": 1
+    },
+    {
+      "name": "write-tests",
+      "issue_count": 0
+    },
+    {
+      "name": "zod-schema-generation",
+      "issue_count": 0
+    }
+  ]
+}

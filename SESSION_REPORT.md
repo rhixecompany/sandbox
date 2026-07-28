@@ -1,171 +1,145 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-07-27T14:30+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-07-28 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
 
 | Field | Value |
 |-------|-------|
-| Session ID | `20260727_<auto>` |
-| Title | MSYS Path Debugging & Hermes Script Fixes |
-| When | 2026-07-27 (current session) |
-| Model | `deepseek-v4-flash-free` (opencode-zen) |
+| Session ID | 20260728_010919_5892ec |
+| Title | Soul Enhancer Fully Implemented |
+| When | July 28, 2026 ~01:10 |
+| Model | deepseek-v4-flash-free (opencode-zen) |
 | Source | tui |
-| Profile | default |
 
-## Tools Used (This Session)
+## Tools Used
 
 | Tool | Calls | Purpose |
 |------|-------|---------|
-| terminal | ~30 | Shell diagnostics, grep for `.resolve()` patterns, file ops, verification |
-| read_file | ~15 | Inspect patched scripts, existing files, skill content |
-| patch | ~25 | Batch-fix `Path().resolve()` → `resolve_path()` in 18 scripts + 2 hooks |
-| write_file | 2 | Create `_pathutil.py`, write SESSION_REPORT.md |
-| skill_manage | 6 | Patch `windows-msys2-path-portability` skill, load/review skills |
-| skill_view | 4 | Load user-communication-preferences, windows-msys2-path-portability, update-agents-md |
-| search_files | 4 | Find resolve patterns in scripts, search for files |
-| execute_code | 1 | Batch-apply Pattern A fixes (15 scripts at once) |
-| todo | 2 | Track verification checklist |
-| session_search | 4 | Browse recent sessions |
-| memory | 0 (verified) | HOME env not affected — confirmed safe |
-| clarify | 0 | No ambiguous decisions |
+| terminal | ~30 | Log analysis, MCP testing, hook config, git ops |
+| read_file | 6 | SOUL.md, MCP scripts, config |
+| skill_view | 6 | soul-enhancer, hermes-personality-soul, log-analysis-and-triage, mcp-server-health |
+| write_file | 4 | SKILL.md (mcp-server-health), scripts, SESSION_REPORT.md |
+| todo | 3 | Track 5-item implementation checklist |
+| session_search | 1 | Browse recent sessions |
 
 ## Skills Loaded
 
 | Skill | Trigger |
 |-------|---------|
-| session-audit-report | Stacked `/session-audit-report` invocation |
-| user-communication-preferences | Stacked `/user-communication-preferences` |
-| validate-memories | Stacked `/validate-memories` |
-| hermes-profiles | Stacked `/hermes-profiles` |
-| windows-msys2-path-portability | Patched during session |
-| update-agents-md | Reviewed for patch verification |
+| using-superpowers | Session start |
+| soul-enhancer | `/soul-enhancer fully implement` |
+| hermes-personality-soul | `/soul-enhancer fully implement` |
+| log-analysis-and-triage | `/log-analysis-and-triage fully implement 1-3` |
+| mcp-server-health | Created during session |
 
 ## Key Insights & Corrections
 
-1. **`Path().resolve()` corrupts MSYS paths on Windows** — With `MSYS_NO_PATHCONV=1`, passing `/c/Users/...` to Python `Path().resolve()` produces `C:\c\Users\...` (a real directory separate from `C:\Users\...`). This affects all Hermes Python scripts that accept CLI args containing MSYS-style paths.
+1. **3 MCP servers (tooling-lint, tooling-config, python-quality) all fixed** — FastMCP version mismatch (`description=` param removed). Python MCP server scripts restored from git HEAD, .bat wrappers pointed to correct paths, all passing handshake tests.
+2. **mcp-server-health skill created** — Comprehensive documentation for all 17 MCP servers with test scripts and hook integration.
+3. **Hook preflight check wired** — `mcp_preflight_check.py` registered as 3rd `pre_llm_call` hook, timeout fixed to int (30).
+4. **Hook config timeout string→int** — All 7 hook entries validated with integer timeouts.
+5. **Checkpoint store git init** — Fixed `checkpoint_manager` git errors.
+6. **14 project repos** — All pushed via delegated git operations.
 
-2. **`$HOME` env var is NOT affected** — MSYS2 auto-translates `HOME` to Windows-native `C:\Users\Alexa` before Python sees it. Verified via `python -c "import os; print(repr(os.environ['HOME']))"`.
+## Current Session — uk-earnings-research-pipeline
 
-3. **`__file__` IS affected** — When scripts are invoked as `python /c/.../script.py`, `__file__` gets the raw MSYS path and `Path(__file__).resolve()` corrupts it. Fixed 5 files with `__file__` pattern.
+| Field | Value |
+|-------|-------|
+| Model | deepseek-v4-flash-free (opencode-zen) |
+| Profile | default |
+| Source | TUI |
+| Work | Full UK Earnings Kit refresh — 8 parallel subagents, 50+ platforms, 30 files |
 
-4. **`C:\c\` artifact tree existed with 60 stale files (362KB)** — From months of scripts writing to the wrong path. Included parallel `.git` directory, stale Hermes config, and stale workspace files. **Deleted entirely.**
+### Tools Used
 
-5. **21 files patched total** — 18 scripts + 2 hooks + 1 shared utility created. All pass compilation check.
+| Tool | Calls | Purpose |
+|------|-------|---------|
+| session_search | 2+ | Past session context recovery |
+| read_file | 6+ | Prompt analysis, existing kit, subagent transcripts |
+| delegate_task | 3 | 8 parallel research subagents (3 batches) |
+| write_file | 20+ | 16 new kit files + 8 moved research outputs |
+| patch | 4 | Updates to existing files |
+| honcho_search/context | 2 | Cross-session memory retrieval |
+| terminal | 5+ | Directory ops, file moves, verification |
 
-## Open Items
+### Skills Loaded
 
-| Item | Status |
+| Skill | Trigger |
+|-------|---------|
+| using-superpowers | Session startup |
+| user-communication-preferences | Bundled |
+| brainstorming | Prompt requirements |
+| subagent-driven-development | 8 parallel research subagents |
+| web-research-pipeline | Research methodology |
+| plans-and-specs | Plan structure |
+| session-audit-report | End capture |
+
+### Changelog (Current Session)
+
+| File | Action |
 |------|--------|
-| Run all patched scripts in real workflows to catch runtime edge cases | Pending — only compilation-checked |
-| Update `update-agents-md` skill reference file (was blocked by write approval) | Pending — approval needed |
-| Verify `C:\c\` doesn't get recreated by existing cron jobs | Pending — cron jobs use old scripts until restarted |
+| `SESSION_REPORT.md` | Updated — current session capture |
+| `uk-earnings-kit/` (30 files total) | **24 new files created**, 6 existing updated |
+| `uk-earnings-kit/platforms/` (7 files) | **Created** — per-category deep-dives |
+| `uk-earnings-kit/samples/` (3 files) | **Created** — earnings week, tax return, referral messages |
+| `uk-earnings-kit/references/scoring_matrix.csv` | **Created** — 40+ platforms scored |
+| `uk-earnings-kit/references/` (8 research files) | **Created by subagents, moved into kit** |
+| `uk-earnings-kit/templates/platform_evaluation.md` | **Created** |
+| `uk-earnings-kit/templates/expense_log.md` | **Created** |
+| `uk-earnings-kit/trackers/referral_tracker.md` | **Created** |
+| `uk-earnings-kit/RESEARCH_REPORT.md` | **Created** — full executive summary |
+| `uk-earnings-kit/platforms/bank_switching_financial.md` | **Updated** — fresh Co-op £300, TSB £310 data |
 
+### Key Findings
+
+1. **Co-operative Bank £300** — best current switch offer (not previously documented)
+2. **TSB £310** — highest lump sum (not previously documented)
+3. **EverUp, Cheddar, Airtime Rewards** — new high-value cashback apps
+4. **Vetto $40-300/hr, AfterQuery $40-50/hr** — new AI training platforms
+5. **Prime Opinion, Panel Opinion** — new survey platforms with fast payouts
+6. **8 subagents completed** — 50+ platforms validated with fresh July 2026 data
+7. **30 files** in kit across 7 folders (up from 14)
 ## Errors Resolved
 
 | Error | Fix |
 |-------|-----|
-| `Path('/c/Users/...').resolve()` → `C:\c\Users\...` (wrong dir) | Created `_pathutil.resolve_path()` that normalizes MSYS `/x/...` → `X:/...` before `.resolve()` |
-| `update_agents_md.py` wrote AGENTS.md to phantom `C:\c\` path | Patched script to use `resolve_path()`; hand-fixed real AGENTS.md |
-| Phantom `C:\c\` directory existed with 60 stale files | `rm -rf /c/c/` — all stale artifacts removed |
-| `generate_session_report.py` timeout (rglob on deep tree) | Not fixed — pre-existing issue, unrelated to MSYS path |
-| `_final_test.py` couldn't be invoked with MSYS `/c/` path | Used `cygpath -w` to convert — the exact issue being fixed |
+| `MCP server 'tooling-lint/tooling-config/python-quality' failed: ENOENT` | Restored Python scripts from git HEAD, fixed .bat wrappers |
+| `Hook 'pre_tool_use' failed: spawn powershell ENOENT` | Hook config fixed (timeout int, path resolution) |
+| `checkpoint_manager: not a git repository: store` | `git init` in checkpoints/store |
+| `ModuleNotFoundError: No module named 'tooling_lint_mcp'` | Python entry points restored from git HEAD |
+| FastMCP `description=` param removed in newer `mcp` library | Updated all 3 MCP servers to new API |
 
 ## Session Changelog
 
 | File | Action |
 |------|--------|
-| `~/AppData/Local/hermes/scripts/_pathutil.py` | **Created** — shared `resolve_path()` utility for MSYS-safe path normalization |
-| `~/AppData/Local/hermes/scripts/update_agents_md.py` | Patched — `Path(workspace).resolve()` → `resolve_path(workspace)` |
-| `~/AppData/Local/hermes/scripts/score-docs.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/skill_audit.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/skills-audit.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/trim_banking.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/trim_remaining.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/trim_research_reports.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/trim_research_reports_final.py` | Patched — `Path(args.path).resolve()` → `resolve_path(args.path)` |
-| `~/AppData/Local/hermes/scripts/validate_prompt_inventory.py` | Patched — `Path(args.prompts_dir).resolve()` → `resolve_path(args.prompts_dir)` |
-| `~/AppData/Local/hermes/scripts/validate_prompts.py` | Patched — `Path(args.prompts_dir).resolve()` → `resolve_path(args.prompts_dir)` |
-| `~/AppData/Local/hermes/scripts/validate_vscode_configs.py` | Patched — `Path(config_dir).resolve()` → `resolve_path(config_dir)` |
-| `~/AppData/Local/hermes/scripts/validate_vscode_json.py` | Patched — `Path(config_dir).resolve()` → `resolve_path(config_dir)` |
-| `~/AppData/Local/hermes/scripts/batch_update_hermes_paths.py` | Patched — `Path(args.target).resolve()` → `resolve_path(args.target)` |
-| `~/AppData/Local/hermes/scripts/test_models.py` | Patched — `Path(models_dir).resolve()` → `resolve_path(models_dir)` |
-| `~/AppData/Local/hermes/scripts/batch_skill_judge.py` | Patched — `Path(args.skills_dir).resolve()` → `resolve_path(args.skills_dir)` |
-| `~/AppData/Local/hermes/scripts/execute_all_prompts.py` | Patched — `Path(__file__).resolve()` → `resolve_path(__file__)` |
-| `~/AppData/Local/hermes/scripts/generate_vscode_audit_report.py` | Patched — `Path(__file__).resolve()` → `resolve_path(__file__)` |
-| `~/AppData/Local/hermes/scripts/inventory_prompts.py` | Patched — `Path(__file__).resolve()` → `resolve_path(__file__)` |
-| `~/AppData/Local/hermes/hooks/post-exec-state-log.py` | Patched — `Path(__file__).resolve()` → `resolve_path(__file__)` |
-| `~/AppData/Local/hermes/hooks/lib.py` | Patched — `Path(__file__).resolve()` → `resolve_path(__file__)` |
-| `~/AppData/Local/hermes/hooks/_pathutil.py` | **Created** — copy of shared utility for hooks |
-| `~/AppData/Local/hermes/skills/development/windows-msys2-path-portability/SKILL.md` | Patched — added pitfall entry for `_pathutil.resolve_path()` |
-| `C:\Users\Alexa\Desktop\SandBox\AGENTS.md` | Patched — added Architecture section (manual fix for deleted phantom copy) |
-| `C:\c\` (entire directory tree, 60 files, 362KB) | **Deleted** — stale artifact from months of broken path resolution |
+| `devops/mcp-server-health/SKILL.md` | Created — comprehensive MCP server docs |
+| `devops/mcp-server-health/scripts/test_all_mcp_servers.py` | Created — full handshake test script |
+| `devops/mcp-server-health/scripts/mcp_preflight_check.py` | Created — hook-ready health check |
+| `~/AppData/Local/hermes/config.yaml` | Hook preflight check wired + timeout int fixes |
+| `~/AppData/Local/hermes/checkpoints/store/.git` | Initialized (checkpoint_manager fix) |
 
-## Changelog (Prior Session — `20260725_030246_a1b263`)
+---
 
-| File | Action |
-|------|--------|
-| `.github/workflows/*.yml` (4 files) | Validated/fixed — pipeline checks |
-| `.yamllint.yaml` | Updated — config alignment |
-| `AGENTS.md` | Updated — Architecture section patched in |
-| `projects/*` (13 submodule entries) | Updated — workspace maintenance |
-
-## Current Session End Capture — 2026-07-27
+## Current Session
 
 | Field | Value |
 |-------|-------|
-| Session ID | Not exposed by the current API session; `session_search` returned prior sessions only |
-| Title | Install and Validate Parallel MCP Servers in Hermes |
-| Profile | `default` |
-| Harness | Hermes Agent CLI/TUI, active profile `default` |
-| Model | `gpt-5.6-luna` via `openai-codex` |
-| Source | cli |
+| Session ID | (new) |
+| Started | July 28, 2026 |
+| Profile | default |
+| Model | deepseek-v4-flash-free (opencode-zen) |
+| Fallback | google/gemma-4-31b-it:free (openrouter) |
+| Platform | desktop (TUI) |
+| User | Alexa |
 
-### Current Session Results
+### Mandatory 5-Skill Startup
 
-- Registered `parallel-search` through `hermes mcp add`; no authentication configured.
-- Registered `parallel-task` through Hermes OAuth 2.1 PKCE; no literal API key written.
-- Search validation passed: `web_search`, `web_fetch`.
-- Task validation passed: `createDeepResearch`, `createTaskGroup`, `getStatus`, `getResultMarkdown`.
-- `hermes config check` completed without a new MCP configuration error.
-- Created and validated `.github/prompts/parallel-mcp-install.prompt.md` (231 lines; YAML frontmatter and credential guard passed).
-- Runtime reload remains required before the new MCP tools enter this conversation’s live tool registry.
-
-### Current Session Changelog
-
-| File | Action |
-|------|--------|
-| `C:\Users\Alexa\AppData\Local\hermes\config.yaml` | Updated through Hermes CLI: added `parallel-search` and OAuth-backed `parallel-task` |
-| `C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\parallel-mcp-install.prompt.md` | Created reusable Smithery-informed Hermes MCP installation, validation, and implementation workflow |
-| Hermes OAuth credential store | OAuth configuration created by Hermes CLI; no API key value recorded in workspace/config |
-
-### Prompt Library Debugging — 2026-07-27
-
-**Scope:** All 213 `.prompt.md` files under `.github/prompts/`
-
-**Issues found & fixed:**
-
-| Issue | Files affected | Fix |
-|-------|---------------|-----|
-| Duplicate tags (each tag listed twice in YAML frontmatter) | 197 | Deduplicated — unique tags preserved |
-| Title exactly equals kebab-case name | 6 | Set human-readable titles |
-
-**Files with title fixes:**
-- `ai-prompt-engineering-safety-review` → "AI Prompt Engineering Safety Review"
-- `boost-prompt` → "Boost Prompt"
-- `context-map` → "Context Map"
-- `convert-plaintext-to-md` → "Convert Plaintext to Markdown"
-- `prompt-builder` → "Prompt Builder"
-- `update-implementation-plan` → "Update Implementation Plan"
-
-**Verification:** 213/213 files pass validation (no missing required fields, no duplicate tags, no title==name). Fix scripts cleaned up after completion.
-
-### Hermes Diagnostic Sequence — 2026-07-27
-
-**Commands executed:** `hermes doctor`, `hermes doctor --fix`, `hermes status`, `hermes insights`, `hermes logs list`, `hermes logs errors`, `hermes logs desktop`, `hermes logs gateway`, `hermes logs gui`, `hermes logs agent`
-
-**Key findings:**
-- `doctor`: 2 dependency advisories (web: 8 high build-tool-only, ui-tui: 7 high build-tool-only); `--fix` completed but advisories remain (npm audit found)
-- `hooks`: 7 shell hooks used `bash` which resolves to WSL on Windows. Fixed all 7 to use `"C:/Program Files/Git/usr/bin/bash.exe"` via `hermes config set`
-- `logs errors`: WSL bash, null filesystem MCP argument, stale `browser.cloud_provider`, signal-on-worker-thread, tooling MCP connection failures
-- **Unresolved** (non-blocking): filesystem MCP null arg, TUI gateway signal handler, stale browser config, tooling MCP connections, npm dependency advisories, skills warnings
+| Skill | Status |
+|-------|--------|
+| `/using-superpowers` | ✓ Loaded |
+| `/user-communication-preferences` | ✓ Loaded |
+| `/session-audit-report` | ✓ Loaded |
+| `/hermes-profiles` | ✓ Loaded |
+| `/validate-memories` | ✓ Loaded |

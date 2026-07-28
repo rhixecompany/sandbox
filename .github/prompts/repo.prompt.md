@@ -1,8 +1,7 @@
 ---
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
-description: "Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md.
-Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage."
+description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage.'
 version: 2.1.0
 license: MIT
 author: Hermes Agent
@@ -32,7 +31,7 @@ skills:
   - writing-skills
   - subagent-driven-development
 formatter: default
-plan: ''
+plan: None
 dependencies:
   - prompt:context-map
   - prompt:repo-management
@@ -75,36 +74,10 @@ tags:
   - vscode
 trigger: /repo
 metadata:
-  hermes:
-    related_skills:
-      - brainstorming
-      - code-wiki
-      - content-research-writer
-      - context7
-      - gh-cli
-      - git-commit
-      - git-submodule-workflow
-      - github-repo-management
-      - monorepo-pr-workflow
-      - plans-and-specs
-      - repo-management
-      - repo-research-pipeline
-      - repo-story-time
-      - spike
-      - systematic-debugging
-      - web-research-pipeline
-      - writing-clearly-and-concisely
-      - writing-skills
-      - tool:mcp-filesystem
-      - tool:mcp-github
-      - tool:mcp-memory
-      - tool:mcp-sequential-thinking
+  hermes: {}
 mode: agent
-system: "You are a research orchestrator. Delegate web research to web-research-pipeline sub-prompt.\
-  \ Stop at Phase 4 (verification). Do not start branch normalization or migration\
-  \ \u2014 those live in repo-management.prompt.md."
+system: You are a research orchestrator. Delegate web research to web-research-pipeline sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or migration — those live in repo-management.prompt.md.
 ---
-
 ## Goal
 
 Research each of the 17 projects under `projects/`. For every project:
@@ -145,17 +118,59 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 
 ### Phase 1: Web Research (delegated)> Full workflow lives in `prompts/web-research-pipeline.prompt.md`.> Orchestrator at `prompts/repo-research-pipeline.prompt.md`.Delegate per-project web research. For each of the 17 projects:1. Read `projects/<name>/README.md` and `AGENTS.md` to extract tech stack.2. Run `web-research-pipeline.prompt.md` trigger with project name + stack params.3. Let the sub-prompt handle: query generation, `mcp__tavily__tavily_search`, `mcp__tavily__tavily_extract`, and top-N URL synthesis.**Parallel execution:** Dispatch 3–4 projects concurrently via `delegate_task`.Each subagent receives: project name, tech stack, query list, target report path.**Tasks:**- [ ] 1.1–1.17 README + AGENTS.md read for all 17 projects- [ ] `docs/per-project-research-queries.md` written per project- [ ] All 17 delegated web-research runs completed**Actions:**```read_file("projects/<name>/README.md")read_file("projects/<name>/AGENTS.md")# Delegate to sub-prompt:delegate_task(goal="Run web-research-pipeline prompt for project <name> with stack <tech>", toolsets=["web","file","mcp"])```---
 
-### Phase 2: Report WritingWrite or update `RESEARCH_REPORT.md` per project using the template in `## Report Template`. Research data comes from Phase 1's delegated runs.**Steps per project:**1. If report exists: read current content, merge new findings, remove stale links.2. If report missing: create from template using Phase 1 research output.3. Verify 2–3 key links with `mcp__tavily__tavily_extract` before embedding.4. Enforce size gate: 1KB–5KB. Cut encyclopedic content.**Tasks:**- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (17 new for `mcp-servers`)**Actions:**```read_file("projects/<name>/RESEARCH_REPORT.md")         # if exists — for UPDATEwrite_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)tool_call(name="mcp__tavily__tavily_extract", arguments={"urls":[url1, url2, url3]})  # verify key links```---
+### Phase 2: Report WritingWrite or update `RESEARCH_REPORT.md` per project using the template in `
 
-### Phase 3: Index & Cross-ReferenceUpdate the master index. Verify cross-references are symmetric.**Steps:**1. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md'`2. Rewrite `projects/RESEARCH_INDEX.md` — 17 rows, file size, last-updated date.3. For each report, verify `## Related Projects` lists all workspace projects sharing its tech stack. Add missing references for `mcp-servers`.4. Confirm symmetry: if A references B, read B and confirm B references A.**Tasks:**- [ ] Disk scan returns exactly 17 reports- [ ] `projects/RESEARCH_INDEX.md` rewritten with size + date per report- [ ] Cross-reference matrix symmetric across all 17 reports**Actions:**```terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \;")write_file("projects/RESEARCH_INDEX.md", content=<updated index>)```---
+## Report Template`. Research data comes from Phase 1's delegated runs.**Steps per project:**1. If report exists: read current content, merge new findings, remove stale links.2. If report missing: create from template using Phase 1 research output.3. Verify 2–3 key links with `mcp__tavily__tavily_extract` before embedding.4. Enforce size gate: 1KB–5KB. Cut encyclopedic content.**Tasks:**- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (17 new for `mcp-servers`)**Actions:**```read_file("projects/<name>/RESEARCH_REPORT.md")         # if exists — for UPDATEwrite_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)tool_call(name="mcp__tavily__tavily_extract", arguments={"urls":[url1, url2, url3]})  # verify key links```---
 
-### Phase 4: VerificationAll gates must pass before this prompt is considered complete.**Steps:**1. Count: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l` → must be 17.2. Sections: each report must have 9+ `##` sections.3. URLs: spot-check 2 URLs per project (34 total) via `mcp__tavily__tavily_extract` — confirm non-404.4. Size: every report between 1KB and 5KB.**Tasks:**- [ ] Count = 17- [ ] Every report has ≥ 9 `##` sections- [ ] 34 URL spot-checks pass- [ ] All reports 1KB–5KB**Actions:**```terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -c '^## ' \"$f\"; wc -c \"$f\"; done")```---
+### Phase 3: Index & Cross-ReferenceUpdate the master index. Verify cross-references are symmetric.**Steps:**1. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md'`2. Rewrite `projects/RESEARCH_INDEX.md` — 17 rows, file size, last-updated date.3. For each report, verify `
 
-## Quick Repo OnboardingRun these lightweight intros when the user asks simple questions about the repo itself (not the 17 project research pipeline).### Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."**Phase: Onboarding — Single Repo**1. Read root files: `AGENTS.md`, `README.md`, `package.json`/`pyproject.toml`/`Cargo.toml`2. List top-level structure: `ls -la`3. Identify the main entrypoint (look for `main.py`, `index.ts`, `index.js`, `src/main.rs`, `cmd/`, `Program.cs`, or the `main`/`start`/`scripts` field in the manifest)4. Summarize in 5 bullets: what the repo is, tech stack, architecture shape, build/test commands, and the main entrypoint path**Actions:**```read_file("AGENTS.md")read_file("README.md")read_file("package.json") or read_file("pyproject.toml")terminal("ls -la && find . -maxdepth 3 -not -path '*/\\.*' -not -path '*/node_modules/*' -not -path '*/venv/*' | head -40")terminal("grep -E '\"main\"|\"start\"|main\\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.py src/*.ts 2>/dev/null | head -10")```### Q2: "Check my current directory and tell me what looks like the main project file."**Phase: Onboarding — Current Directory**1. `pwd` to confirm current directory2. `ls -la` for file listing, sorted by recency or size3. Read the most likely manifest (whatever config/file the directory contains)4. Report the dominant file type and the single most important file (the one with the entrypoint, build config, or primary data)**Actions:**```terminal("pwd && ls -la")terminal("ls -la | head -30")terminal("file * 2>/dev/null | head -20")```### Q3: "Help me set up a clean GitHub PR workflow for this codebase."**Phase: Onboarding — CI/GitHub**1. Detect project type (JS/TS → Bun or npm; Python → uv/pip; Rust → cargo; Go → go)2. Create `.github/workflows/ci.yml` from the detected type template.3. If `monorepo-pr-workflow` skill exists, load it for monorepo-specific branch/PR patterns.4. Suggest: branch protection rules (`development` + `production`), conventional commits, PR template.Templates cover:- **JS/TS:** `oven-sh/setup-bun`, `bun install`, `bun run build`, `bun run test` (or `npm` equivalent)- **Python:** `actions/setup-python`, `uv sync`/`pip install`, `ruff check`, `pytest`- **Generic:** `actions/checkout`, `setup-language`, `lint`, `test`**Actions:**```skill_view(name="monorepo-pr-workflow")read_file("AGENTS.md")  # for existing CI patternsterminal("ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'")```### Q4: "What's my disk usage? Show the top 5 largest directories."**Phase: Onboarding — Disk Analysis**1. Run disk usage scan from the repo root (or workspace root)2. Exclude noise directories (`.git`, `node_modules`, `venv`, `.venv`, `__pycache__`, `dist`, `build`, `target`)3. Show top 5 largest directories by size**Actions:**```terminal("du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5")# Fallback for bare repos:terminal("du -sh --exclude='.git' */ 2>/dev/null | sort -rh | head -5")```---
+## Related Projects` lists all workspace projects sharing its tech stack. Add missing references for `mcp-servers`.4. Confirm symmetry: if A references B, read B and confirm B references A.**Tasks:**- [ ] Disk scan returns exactly 17 reports- [ ] `projects/RESEARCH_INDEX.md` rewritten with size + date per report- [ ] Cross-reference matrix symmetric across all 17 reports**Actions:**```terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \;")write_file("projects/RESEARCH_INDEX.md", content=<updated index>)```---
 
-## Report TemplateEvery `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or removetop-level sections. Subsections under `## Key Findings` are tech-specific and variable.```markdown# RESEARCH_REPORT.md## Project: <name>**Type:** <project type>**Tech Stack:** <framework>, <database>, <auth>, <other key tech>**Status:** Active | Stale | Consolidation target## Similar Projects| Project | URL | Why Relevant ||---------|-----|--------------|| <name>  | <github url> | <1-line relevance> |## Key Findings### <Technology/Topic><2–3 crisp bullets — each backed by a web_search result>### <Technology/Topic><2–3 crisp bullets>## Cheatsheets & Quick Reference| Topic | Resource | Type ||-------|----------|------|| <topic> | <url> | Cheatsheet / Guide / Docs |## Best Practices1. **<practice>** — <one-line why>2. **<practice>** — <one-line why>3. **<practice>** — <one-line why>4. **<practice>** — <one-line why>5. **<practice>** — <one-line why>## Common Pitfalls| Pitfall | Impact | Avoidance ||---------|--------|-----------|| <pitfall> | <impact> | <one-line fix> |## Performance<Top 3–5 performance optimizations specific to this project's stack>## Security<Top 3–5 security considerations for this project's stack>## Related Projects (in workspace)<Cross-references to other workspace projects sharing this tech stack.List project name + shared technology. Must be symmetric.>## Resources| Resource      | URL   | Description                  ||---------------|-------|------------------------------|| Official Docs | <url> | <framework> documentation    || Community     | <url> | Forum / Discord / Reddit     || Tutorial      | <url> | Key tutorial or guide        |```---
+### Phase 4: VerificationAll gates must pass before this prompt is considered complete.**Steps:**1. Count: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l` → must be 17.2. Sections: each report must have 9+ `##` sections.3. URLs: spot-check 2 URLs per project (34 total) via `mcp__tavily__tavily_extract` — confirm non-404.4. Size: every report between 1KB and 5KB.**Tasks:**- [ ] Count = 17- [ ] Every report has ≥ 9 `##` sections- [ ] 34 URL spot-checks pass- [ ] All reports 1KB–5KB**Actions:**```terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | wc -l")terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -c '^
 
-## Acceptance Criteria| Gate | Condition | Verification Command || ------ | ----------- | ---------------------- || All 17 reports exist | count = 17 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` || Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop || No report under 1KB | `wc -c` ≥ 1024 | per-report loop || No report over 5KB | `wc -c` ≤ 5120 | per-report loop || 34 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 || RESEARCH_INDEX.md current | 17 rows, size + date correct | read + verify || No fabricated findings | every fact traces to `web_search` | manual review || Scope respected | no branch/migration work started | agent self-check || Sub-prompts accessible | `.github/prompts/*.prompt.md` resolves | file check |---
+## ' \"$f\"; wc -c \"$f\"; done")```---
+
+## Quick Repo OnboardingRun these lightweight intros when the user asks simple questions about the repo itself (not the 17 project research pipeline).
+
+### Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."**Phase: Onboarding — Single Repo**1. Read root files: `AGENTS.md`, `README.md`, `package.json`/`pyproject.toml`/`Cargo.toml`2. List top-level structure: `ls -la`3. Identify the main entrypoint (look for `main.py`, `index.ts`, `index.js`, `src/main.rs`, `cmd/`, `Program.cs`, or the `main`/`start`/`scripts` field in the manifest)4. Summarize in 5 bullets: what the repo is, tech stack, architecture shape, build/test commands, and the main entrypoint path**Actions:**```read_file("AGENTS.md")read_file("README.md")read_file("package.json") or read_file("pyproject.toml")terminal("ls -la && find . -maxdepth 3 -not -path '*/\\.*' -not -path '*/node_modules/*' -not -path '*/venv/*' | head -40")terminal("grep -E '\"main\"|\"start\"|main\\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.py src/*.ts 2>/dev/null | head -10")```
+
+### Q2: "Check my current directory and tell me what looks like the main project file."**Phase: Onboarding — Current Directory**1. `pwd` to confirm current directory2. `ls -la` for file listing, sorted by recency or size3. Read the most likely manifest (whatever config/file the directory contains)4. Report the dominant file type and the single most important file (the one with the entrypoint, build config, or primary data)**Actions:**```terminal("pwd && ls -la")terminal("ls -la | head -30")terminal("file * 2>/dev/null | head -20")```
+
+### Q3: "Help me set up a clean GitHub PR workflow for this codebase."**Phase: Onboarding — CI/GitHub**1. Detect project type (JS/TS → Bun or npm; Python → uv/pip; Rust → cargo; Go → go)2. Create `.github/workflows/ci.yml` from the detected type template.3. If `monorepo-pr-workflow` skill exists, load it for monorepo-specific branch/PR patterns.4. Suggest: branch protection rules (`development` + `production`), conventional commits, PR template.Templates cover:- **JS/TS:** `oven-sh/setup-bun`, `bun install`, `bun run build`, `bun run test` (or `npm` equivalent)- **Python:** `actions/setup-python`, `uv sync`/`pip install`, `ruff check`, `pytest`- **Generic:** `actions/checkout`, `setup-language`, `lint`, `test`**Actions:**```skill_view(name="monorepo-pr-workflow")read_file("AGENTS.md")  # for existing CI patternsterminal("ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'")```
+
+### Q4: "What's my disk usage? Show the top 5 largest directories."**Phase: Onboarding — Disk Analysis**1. Run disk usage scan from the repo root (or workspace root)2. Exclude noise directories (`.git`, `node_modules`, `venv`, `.venv`, `__pycache__`, `dist`, `build`, `target`)3. Show top 5 largest directories by size**Actions:**```terminal("du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5")# Fallback for bare repos:terminal("du -sh --exclude='.git' */ 2>/dev/null | sort -rh | head -5")```---
+
+## Report TemplateEvery `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or removetop-level sections. Subsections under `
+
+## Key Findings` are tech-specific and variable.```markdown# RESEARCH_REPORT.md
+
+## Project: <name>**Type:** <project type>**Tech Stack:** <framework>, <database>, <auth>, <other key tech>**Status:** Active | Stale | Consolidation target
+
+## Similar Projects| Project | URL | Why Relevant ||---------|-----|--------------|| <name>  | <github url> | <1-line relevance> |
+
+## Key Findings
+
+### <Technology/Topic><2–3 crisp bullets — each backed by a web_search result>
+
+### <Technology/Topic><2–3 crisp bullets>
+
+## Cheatsheets & Quick Reference| Topic | Resource | Type ||-------|----------|------|| <topic> | <url> | Cheatsheet / Guide / Docs |
+
+## Best Practices1. **<practice>** — <one-line why>2. **<practice>** — <one-line why>3. **<practice>** — <one-line why>4. **<practice>** — <one-line why>5. **<practice>** — <one-line why>
+
+## Common Pitfalls| Pitfall | Impact | Avoidance ||---------|--------|-----------|| <pitfall> | <impact> | <one-line fix> |
+
+## Performance<Top 3–5 performance optimizations specific to this project's stack>
+
+## Security<Top 3–5 security considerations for this project's stack>
+
+## Related Projects (in workspace)<Cross-references to other workspace projects sharing this tech stack.List project name + shared technology. Must be symmetric.>
+
+## Resources| Resource      | URL   | Description                  ||---------------|-------|------------------------------|| Official Docs | <url> | <framework> documentation    || Community     | <url> | Forum / Discord / Reddit     || Tutorial      | <url> | Key tutorial or guide        |```---
+
+## Acceptance Criteria| Gate | Condition | Verification Command || ------ | ----------- | ---------------------- || All 17 reports exist | count = 17 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` || Each report ≥ 9 sections | `grep -c '^
+
+## '` ≥ 9 | per-report loop || No report under 1KB | `wc -c` ≥ 1024 | per-report loop || No report over 5KB | `wc -c` ≤ 5120 | per-report loop || 34 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 || RESEARCH_INDEX.md current | 17 rows, size + date correct | read + verify || No fabricated findings | every fact traces to `web_search` | manual review || Scope respected | no branch/migration work started | agent self-check || Sub-prompts accessible | `.github/prompts/*.prompt.md` resolves | file check |---
 
 ## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Phase | Purpose || ------- | ------- | --------- || `brainstorming` | 1 | Explore research angles per project || `plans-and-specs` | 0 | Structure research plan || `systematic-debugging` | 0, 4 | Detect stale/missing reports || `context7` | 1 | Library API docs and patterns || `spike` | 0 | Prototype report format before batch || `writing-skills` | 2 | Crisp, compact markdown writing || `content-research-writer` | 2 | Research synthesis || `repo-management` | — | Post-research: branch norm, CI, consolidation || `repo-story-time` | — | Git history analysis and repo narrative || `web-research-pipeline` | 1 | Delegated web search + extraction || `repo-research-pipeline` | 1 | Multi-project research orchestrator || `github-repo-management` | — | GitHub repo operations for post-research || `code-wiki` | — | Repo analysis for repo-story-time || `writing-clearly-and-concisely` | — | Clean writing for repo-story-time |---
 
@@ -179,3 +194,122 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 ## Related Prompts| Prompt | Location | Purpose || -------- | ---------- | --------- || `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 16 projects || `/workspace-consolidate` | `prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation || `/repo-management` | `prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation || `/repo-story-time` | `prompts/repo-story-time.prompt.md` | Git history analysis and repo narrative || `/web-research-pipeline` | `prompts/web-research-pipeline.prompt.md` | Web search + extraction per project || `/repo-research-pipeline` | `prompts/repo-research-pipeline.prompt.md` | Multi-project research orchestrator |---
 
 ## Template ReferencesTemplates in `.hermes/archived-prompt-templates/repo.prompts/`:- `README.md` — Section inventory
+
+## Personas
+
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+
+## Personality
+
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+
+## Rules
+
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+### Domain Rules
+
+- Fix root causes, not symptoms.
+- Check siblings for the same flaw.
+- Restore from git clean before retrying.
+
+### Standing Rules
+
+1. **Map before touch** — Understand before making changes.
+2. **Smallest safe change** — Minimal change that achieves the goal.
+3. **Verify before claim** — Test before reporting complete.
+4. **Report blockers** — State clearly when something fails.
+
+
+## Workflow
+
+See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton.md) for workflow structure.
+
+1. **Diagnose** — Run diagnostics.
+2. **Plan** — Determine minimal changes.
+3. **Fix** — Apply changes incrementally.
+4. **Verify** — Confirm fix works.
+5. **Document** — Note what changed.
+
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+|---|------|-----------|
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+
+## Skills Required
+
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+|-------|---------|
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+

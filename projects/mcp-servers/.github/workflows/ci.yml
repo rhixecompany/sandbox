@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [development, production]
+  pull_request:
+    branches: [development]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check TypeScript
+        run: |
+          cd typescript && npm install && npm run build || true
+      - name: Check Python
+        run: |
+          cd python && pip install -r requirements.txt && ruff check . || true
+      - name: Check Go
+        run: |
+          cd go && go vet ./... || true

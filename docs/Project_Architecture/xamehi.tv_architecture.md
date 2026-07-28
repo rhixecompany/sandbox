@@ -1,103 +1,52 @@
-# projects/xamehi.tv — Architecture Blueprint
+# xamehi.tv Architecture
+
+**Generated:** 2026-07-28  
+**Project Type:** Python/Django (Backend)  
+**Architecture Pattern:** Django + Video streaming backend
 
 ## Overview
 
-- Detected stack: Django, Python
-- Architectural pattern: Django backend service
-- Top-level components: frontend, docs
+Video platform backend with Django admin, video management, and player integration.
 
-## Component Map
+## Technology Stack
 
-- `frontend, docs`
-- Shared config: `.vscode/` when present
-- Docs: `docs/` when present
+Django, Python, Gunicorn, SQLite
 
-## Top-Level Structure
+## Source Layout
 
-```text
-xamehi.tv/
-├── .github/
-│   ├── workflows/
-│   └── copilot-instructions.md
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   ├── .eslintcache
-│   ├── bun.lock
-│   ├── debug.log
-│   ├── package-lock.json
-│   └── package.json
-├── player/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── static/
-│   └── admin/
-├── video/
-│   ├── migrations/
-│   ├── urls/
-│   ├── views/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── decorators.py
-│   ├── filters.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── pymongo_views.py
-│   ├── serializers.py
-│   ├── tests.py
-│   ├── url.py
-│   └── view.py
-├── .env.example
-├── AGENTS.md
-├── API_REFERENCE.md
-├── ARCHITECTURE.md
-├── AUDIT_xamehi.tv.md
-├── CHANGELOG.md
-├── code-exemplars.md
-├── CONTRIBUTING.md
-├── copilot-instructions.md
-├── cross-linking-report.md
-├── DATABASE_SCHEMA.md
-├── DEPLOYMENT_GUIDE.md
-├── DEVELOPER_GUIDE.md
-├── DEVELOPMENT_GUIDE.md
-├── execution-summary.md
-├── folder-structure.md
-├── gunicorn.service
-├── gunicorn.socket
-├── manage.py
-├── Procfile
-├── project-workflow.md
-├── README.md
-├── REPOSITORY_SUMMARY.md
-├── requirements.txt
-├── RESEARCH_REPORT.md
-├── runtime.txt
-├── SECURITY.md
-├── SETUP_GUIDE.md
-├── technology-stack.md
-├── TESTING_GUIDE.md
-├── THE_STORY_OF_THIS_REPO.md
-├── USER_GUIDE.md
-├── validation-report.md
-└── web-research-xamehi-tv.md
+player/, video/, templates/
+
+## Architecture Diagram
+
+```mermaid
+graph TD
+    subgraph "xamehi.tv"
+        MAIN[Main Entry Point]
+        SRC[Source Code]
+        BUILD[Build System]
+    end
+    subgraph "Dependencies"
+        DEPS[Package Dependencies]
+        EXT[External Services]
+    end
+    MAIN --> SRC
+    SRC --> BUILD
+    BUILD --> DEPS
+    SRC --> EXT
 ```
+
+## Key Patterns
+
+- **Django + Video streaming backend**
+- Version control: Shared monorepo git
 
 ## Cross-Cutting Concerns
 
-- Configuration: environment and workspace configs live alongside the project.
-- Testing: test locations should follow the existing project layout.
-- Tooling: keep formatter/linter/editor settings in `.vscode/`.
+- **Linting/Formatting:** Aligned with workspace root configs (ESLint, Prettier, Ruff)
+- **Documentation:** AGENTS.md + standard doc files per project convention
+- **Dependencies:** Managed via project-specific package manager
 
-## Extension Points
+## Related Documents
 
-- Add new features within the existing top-level component that matches the current layout.
-- Keep new dependencies aligned with the detected stack.
-
-## Update Notes
-
-- Regenerate when component boundaries, package dependencies, or folder structure change.
+- [Folder Structure](./xamehi.tv_folders.md)
+- [Technology Stack](./xamehi.tv_techstack.md)

@@ -1,0 +1,220 @@
+# 🏗 Technology Stack Blueprint - youtube-downloader
+
+**Project Path:** `projects/youtube-downloader`
+**Generated:** 2026-07-28
+**Status:** Active — Python CLI Tool (yt-dlp + curl_cffi)
+
+---
+
+## Core Technologies
+
+| Category | Technology | Version | License |
+|----------|-----------|---------|---------|
+| **Language** | Python | 3.x (3.11+ recommended) | PSF |
+| **Core Library** | yt-dlp | Latest | Unlicense |
+| **HTTP Client** | curl_cffi | Latest | MIT |
+| **External** | FFmpeg | Latest | GPL/LGPL |
+
+---
+
+## Architecture
+
+**Pattern:** Single-file CLI scripts with shared utilities
+```
+youtube-downloader/
+├── main_noplaylist.py      # Single video download
+├── main_playlist.py        # Playlist download
+├── main_loop_noplaylist.py # Batch single videos
+├── main_loop_playlist.py   # Batch playlists
+├── test.py                 # Test suite
+└── requirements.txt        # (inferred)
+```
+
+### Script Purposes
+
+| Script | Purpose |
+|--------|---------|
+| `main_noplaylist.py` | Download single video/audio |
+| `main_playlist.py` | Download entire playlist |
+| `main_loop_noplaylist.py` | Loop: download multiple single URLs |
+| `main_loop_playlist.py` | Loop: download multiple playlists |
+| `test.py` | Verify installation & basic functionality |
+
+---
+
+## Dependencies
+
+### Python Packages
+```text
+yt-dlp>=2024.1.0
+curl_cffi>=0.7.0
+```
+
+### System Dependencies
+```bash
+# FFmpeg (required for post-processing)
+# macOS: brew install ffmpeg
+# Ubuntu: apt install ffmpeg
+# Windows: choco install ffmpeg or download from ffmpeg.org
+
+# Python 3.11+
+```
+
+### Optional Quality Tools
+```text
+ruff>=0.1.0      # Linting
+mypy>=1.0.0      # Type checking
+pytest>=7.0.0    # Testing
+```
+
+---
+
+## Usage
+
+### Installation
+```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install yt-dlp curl_cffi
+
+# Verify FFmpeg
+ffmpeg -version
+```
+
+### Commands
+
+| Task | Command |
+|------|---------|
+| **Single video** | `python main_noplaylist.py "https://youtube.com/watch?v=..."` |
+| **Playlist** | `python main_playlist.py "https://youtube.com/playlist?list=..."` |
+| **Batch singles** | `python main_loop_noplaylist.py urls.txt` |
+| **Batch playlists** | `python main_loop_playlist.py playlists.txt` |
+| **Run tests** | `python test.py` |
+| **Lint** | `ruff check .` |
+| **Type check** | `mypy *.py` |
+
+### Input Files Format
+```
+# urls.txt (one per line)
+https://youtube.com/watch?v=abc123
+https://youtube.com/watch?v=def456
+
+# playlists.txt (one per line)
+https://youtube.com/playlist?list=PLxxx
+https://youtube.com/playlist?list=PLyyy
+```
+
+---
+
+## Key Features
+
+### yt-dlp Capabilities
+- **400+ sites** supported (YouTube, Vimeo, Twitter, etc.)
+- **Format selection**: best, worst, specific codecs, audio-only
+- **Subtitles**: Download, embed, convert
+- **Metadata**: Embed thumbnail, chapters, info.json
+- **Post-processors**: FFmpeg for conversion, merging, thumbnails
+- **SponsorBlock**: Remove sponsored segments
+- **Cookies**: Browser cookie extraction for private content
+
+### curl_cffi Benefits
+- **TLS Fingerprinting**: Mimics real browser (Chrome, Firefox, Safari)
+- **Bypasses**: Some anti-bot protections
+- **HTTP/2**: Full HTTP/2 support
+- **Performance**: Faster than standard requests
+
+---
+
+## Configuration
+
+### yt-dlp Config (`~/.config/yt-dlp/config` or `--config-location`)
+```ini
+# Default options
+--format "bestvideo+bestaudio/best"
+--merge-output-format mkv
+--embed-thumbnail
+--embed-metadata
+--embed-chapters
+--sponsorblock-remove all
+--write-info-json
+--write-subtitles
+--sub-langs en,en-US
+--convert-subtitles srt
+```
+
+### Common Flags
+```bash
+# Quality
+-f "bestvideo[height<=1080]+bestaudio/best[height<=1080]"
+
+# Audio only
+-x --audio-format mp3 --audio-quality 0
+
+# Playlist items
+--playlist-items 1-5,10,15-20
+
+# Date filter
+--dateafter 20240101
+
+# Rate limit
+--limit-rate 1M
+
+# Retries
+--retries 5 --fragment-retries 5
+```
+
+---
+
+## Testing
+
+```bash
+# Basic test
+python test.py
+
+# With pytest (if configured)
+pytest -v
+
+# Test specific functionality
+python -c "import yt_dlp; print(yt_dlp.version.__version__)"
+```
+
+---
+
+## CI/CD
+
+**Workflow:** `.github/workflows/youtube-downloader-ci.yml`
+
+```yaml
+- python -m venv venv
+- pip install yt-dlp curl_cffi ruff mypy pytest
+- ruff check .
+- mypy *.py
+- python test.py
+```
+
+---
+
+## License
+
+| Component | License |
+|-----------|---------|
+| yt-dlp | Unlicense (Public Domain) |
+| curl_cffi | MIT |
+| FFmpeg | GPL 2.0+ / LGPL 2.1+ |
+| This project | See LICENSE file |
+
+---
+
+## Maintenance Notes
+
+- **Update yt-dlp frequently**: `pip install -U yt-dlp` (site changes break extractors)
+- **FFmpeg version**: Keep updated for codec support
+- **curl_cffi**: Update for new browser TLS fingerprints
+- **No web UI**: Pure CLI — no deployment pipeline needed
+
+---
+
+*Generated by Hermes Agent Technology Stack Blueprint Generator*

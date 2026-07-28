@@ -53,7 +53,7 @@ jsonschema-specifications==2025.9.1
 markdown==3.10.2
 markdown-it-py==4.2.0
 markupsafe==3.0.3
-mcp==1.26.0
+mcp==1.28.1
 mdurl==0.1.2
 microsoft-teams-api==2.0.13.4
 microsoft-teams-apps==2.0.13.4
@@ -65,7 +65,7 @@ oauthlib==3.3.1
 openai==2.24.0
 packaging==26.0
 pathspec==1.1.1
-pillow==12.2.0
+pillow==12.3.0
 pip==26.1.2
 pluggy==1.6.0
 portalocker==3.2.0

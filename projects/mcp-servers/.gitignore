@@ -44,3 +44,5 @@ venv/
 # Misc
 *.tgz
 .cache/
+
+.next/

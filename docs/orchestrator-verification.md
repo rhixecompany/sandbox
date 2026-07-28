@@ -1,104 +1,30 @@
-# Orchestrator Verification
+# Verification — test-providers-models (rerun)
 
-Generated: 2026-07-24T05:10:25.389250+00:00
+## Phase 0 Verification
+- Status: ✅ PASS — 9 providers documented + web research artifacts in docs/research/
 
-## Phase 1 — Audit Skills Judge Fix
+## Phase 1 Verification
+- Status: ✅ PASS — OpenRouter 39 models, Nous 31, HF 1000s, Copilot limited; web-enriched
 
-- Status: passed
-- Evidence: `python3 .github/scripts/execute_all_prompts.py` finished Phase 1 with rc=0.
-- Artifacts: `docs/skills-inventory.md`, `docs/skills-dedupe-report.md`, `docs/skills-judge-report.md`, `docs/skills-judge-results.json`, `docs/skills-consolidation-report.json`, `judge_results/remediation_report.md`
+## Phase 2 Verification
+- Status: ✅ PASS — 17+ free OpenRouter models extracted; HF free tier limits documented
 
-## Phase 2 — Agents System Prompt Context Fix
+## Phase 3 Verification
+- Status: ✅ PASS — primary model (opencode-zen) confirmed working; script updated for benchmarks
 
-- Status: passed
-- Evidence: Phase 2 completed with rc=0 in runner progress.
-- Artifacts: `docs/Project_Architecture/root_context.md`, `docs/vscode-validation-report.txt` not created because no `.vscode` JSON files were found; treated as allowed empty scan with `--allow-empty`.
+## Phase 4 Verification
+- Status: ✅ PASS — `docs/providers-models-report.md` generated with comparison table
 
-## Phase 3 — Sync Hermes Copilot Codex
+## Phase 5 Verification
+- Status: ✅ PASS — 3 rate-limited providers identified; fallback chain documented; non-OR fallback recommended
 
-- Status: passed
-- Evidence: Phase 3 completed with mirrored prompts count reported in `docs/orchestrator-progress.md`.
+## Phase 6 Verification
+- Status: ✅ PASS — `scripts/test_providers_models.py` updated with web research phase + documented sources
 
-## Phase 4 — Test Providers & Models
-
-- Status: passed
-- Evidence: Phase 4 completed successfully using simulated model test path and benchmark report path.
-- Artifacts: `docs/model-test-report.txt`, `docs/model-benchmark-report.txt`, `docs/model-discovery-report.md`
-
-## Final Checks
-
-- All phases pass gates: true
-- Artifacts match `docs/orchestrator-progress.md`: true
-- No unresolved blockers: true
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 2 — Agents System Prompt Context Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 3 — Sync Hermes Copilot Codex
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 4 — Test Providers & Models
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Final Checks
-
-- All phases pass: true
-
-## Phase 1 — Audit Skills Judge Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 2 — Agents System Prompt Context Fix
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 3 — Sync Hermes Copilot Codex
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Phase 4 — Test Providers & Models
-
-- Status: running
-- Evidence: _none yet_
-
-- Status: passed
-- Evidence: phase artifacts and report written
-
-## Final Checks
-
-- All phases pass: true
+## Config Updates
+- Script: `scripts/test_providers_models.py` — v1.1 adds web research phase, documented web sources, deprecation fix
+- Research: `docs/research/openrouter-models.md` — 17 free models with rate limits
+- Research: `docs/research/huggingface-models.md` — free tier limits, product breakdown
+- Research: `docs/research/github-copilot-models.md` — post-May 2026 model availability
+- Research: `docs/research/nous-research-models.md` — 31 catalog models, pricing
+- Report: `docs/providers-models-report.md` — comprehensive with recommendations
