@@ -105,7 +105,9 @@ Create a new specification file for the solution, optimized for Generative AI co
 
 ## 9. Examples & Edge Cases
 
-```code    // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases```
+```c
+ode    // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
+```
 
 ## 10. Validation Criteria
 

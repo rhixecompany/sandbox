@@ -28,7 +28,7 @@
 **Set:** Exactly 11 root generator prompts as declared in `generator-orchestrator.prompt.md`.
 
 | # | Prompt File | Role | Tags (Primary) |
-|---|-------------|------|----------------|
+| --- | ------------- | ------ | ---------------- |
 | 1 | `technology-stack-blueprint-generator.prompt.md` | **Analysis** | architecture, python, typescript, dotnet, java, javascript, react |
 | 2 | `folder-structure-blueprint-generator.prompt.md` | **Analysis** | architecture, typescript, python, java, react, dotnet |
 | 3 | `architecture-blueprint-generator.prompt.md` | **Documentation** | architecture, documentation, typescript |
@@ -46,7 +46,7 @@
 Each prompt was checked for required frontmatter fields:
 
 | Field | Status |
-|-------|--------|
+| ------- | -------- |
 | `name` | ✅ All 11 present |
 | `title` | ✅ All 11 present |
 | `description` | ✅ All 11 present |
@@ -93,7 +93,7 @@ Stage E (Always runs — final consolidation)
 ### Dependency Edges — Prerequisite Matrix
 
 | Downstream Generator | Depends On |
-|----------------------|------------|
+| ---------------------- | ------------ |
 | `architecture-blueprint-generator` | technology-stack, folder-structure |
 | `project-workflow-analysis-blueprint-generator` | technology-stack, folder-structure, architecture |
 | `code-exemplars-blueprint-generator` | technology-stack, folder-structure |
@@ -104,7 +104,7 @@ Stage E (Always runs — final consolidation)
 ### Stage Dependency Table
 
 | Stage | Contains | Parallel | Gate Before Next | Conditional |
-|-------|----------|----------|------------------|-------------|
+| ------- | ---------- | ---------- | ------------------ | ------------- |
 | **A** | technology-stack, folder-structure | ✅ Yes (both) | ✅ Gate A | ❌ No |
 | **B** | architecture, workflow-analysis, code-exemplars | ❌ No (ordered: arch → workflow → exemplars) | ✅ Gate B | ❌ No |
 | **C** | copilot-instructions, readme | ✅ Yes (both) | ✅ Gate C | ❌ No |
@@ -120,7 +120,7 @@ Stage E (Always runs — final consolidation)
 #### technology-stack-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | Root project directory, source files |
 | **Output file** | `blueprints/technology-stack-blueprint.md` |
 | **Required sections** | `## Stack Summary`, `## Languages & Runtimes`, `## Frameworks & Libraries`, `## Build Tooling`, `## Deployment Target` |
@@ -129,7 +129,7 @@ Stage E (Always runs — final consolidation)
 #### folder-structure-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | Root project directory, source files |
 | **Output file** | `blueprints/folder-structure-blueprint.md` |
 | **Required sections** | `## Folder Structure`, `## Naming Conventions`, `## File Placement Patterns` |
@@ -140,7 +140,7 @@ Stage E (Always runs — final consolidation)
 #### architecture-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | technology-stack-blueprint.md, folder-structure-blueprint.md, source files |
 | **Output file** | `blueprints/architecture-blueprint.md` |
 | **Required sections** | `## Architecture Overview`, `## Component Diagram`, `## Data Flow`, `## Pattern Decisions` |
@@ -149,7 +149,7 @@ Stage E (Always runs — final consolidation)
 #### project-workflow-analysis-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | technology-stack-blueprint.md, folder-structure-blueprint.md, architecture-blueprint.md, source files |
 | **Output file** | `blueprints/workflow-analysis-blueprint.md` |
 | **Required sections** | `## Entry Points`, `## Service Layer`, `## Data Access`, `## Error Handling`, `## Testing Strategy` |
@@ -158,7 +158,7 @@ Stage E (Always runs — final consolidation)
 #### code-exemplars-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | technology-stack-blueprint.md, folder-structure-blueprint.md, source files |
 | **Output file** | `blueprints/code-exemplars-blueprint.md` |
 | **Required sections** | `## Exemplar Categories`, `## Code Samples by Pattern`, `## Standards Recommendations` |
@@ -169,7 +169,7 @@ Stage E (Always runs — final consolidation)
 #### copilot-instructions-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | All Stage A + Stage B outputs |
 | **Output file** | `.github/copilot-instructions.md` |
 | **Required sections** | `## Technology Stack`, `## Architecture Patterns`, `## Workflow Conventions`, `## Code Standards`, `## Testing Approach` |
@@ -178,7 +178,7 @@ Stage E (Always runs — final consolidation)
 #### readme-blueprint-generator
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | All Stage A + Stage B + Stage C outputs |
 | **Output file** | `README.md` |
 | **Required sections** | `## Overview`, `## Tech Stack`, `## Getting Started`, `## Project Structure`, `## Architecture`, `## Contributing` |
@@ -189,7 +189,7 @@ Stage E (Always runs — final consolidation)
 #### MCP Server Generators (all four)
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Input** | technology-stack-blueprint.md (stack detection) |
 | **Output dir** | `servers/<language>/` |
 | **Required files (TypeScript)** | `package.json`, `src/index.ts`, `tsconfig.json` |
@@ -205,6 +205,7 @@ Stage E (Always runs — final consolidation)
 ### Gate A — After Stage A
 
 **Pass if all:**
+
 - [ ] `blueprints/technology-stack-blueprint.md` exists
 - [ ] `blueprints/folder-structure-blueprint.md` exists
 - [ ] Tech stack file has all required sections (see contract)
@@ -212,6 +213,7 @@ Stage E (Always runs — final consolidation)
 - [ ] Stack detection is unambiguous (or if ambiguous, degraded mode recorded)
 
 **Fail — retry then degrade:**
+
 1. Retry failed generator once with `validation-level=stricter`
 2. If retry fails, record degraded warning in the manifest
 3. Continue with generic-safe defaults
@@ -219,6 +221,7 @@ Stage E (Always runs — final consolidation)
 ### Gate B — After Stage B
 
 **Pass if all:**
+
 - [ ] `blueprints/architecture-blueprint.md` exists with diagram
 - [ ] `blueprints/workflow-analysis-blueprint.md` exists with data-flow section
 - [ ] `blueprints/code-exemplars-blueprint.md` exists with ≥3 categories
@@ -226,12 +229,14 @@ Stage E (Always runs — final consolidation)
 - [ ] Dependency trace: each artifact references only prior completed outputs
 
 **Fail — hard block:**
+
 - Architecture missing diagram → retry once, then fail handoff
 - Forward reference detected → fail handoff immediately
 
 ### Gate C — After Stage C
 
 **Pass if all:**
+
 - [ ] `.github/copilot-instructions.md` exists
 - [ ] `README.md` exists
 - [ ] **Cross-document consistency check:**
@@ -241,18 +246,21 @@ Stage E (Always runs — final consolidation)
   - [ ] No contradictory conventions
 
 **Fail — hard block:**
+
 - Any cross-doc inconsistency → emit remediation checklist → FAIL handoff
 - Inconsistencies are NOT automatically fixable — orchestrator emits targeted items
 
 ### Gate D — After Stage D
 
 **Pass if all:**
+
 - [ ] For each detected technology, MCP server project exists
 - [ ] Language-specific project config is valid (parseable)
 - [ ] At least one tool definition exists per generated server
 - [ ] MCP server name does not conflict with any other generated server
 
 **Fail — retry then degrade:**
+
 - Missing project config → retry once
 - No tool definitions → retry with explicit tool spec
 - Retry fails → record degraded, include server skeleton with TODOs
@@ -267,7 +275,7 @@ Stage E (Always runs — final consolidation)
 ## 5. Execution Mode Matrix
 
 | Mode | Stage A | Stage B | Stage C | Stage D | Stage E | Default `validation-level` |
-|------|---------|---------|---------|---------|---------|---------------------------|
+| ------ | --------- | --------- | --------- | --------- | --------- | --------------------------- |
 | `full` | ✅ | ✅ | ✅ | ✅ (conditional) | ✅ | `strict` |
 | `quick` | ✅ | ❌ | ❌ | ❌ | ✅ (reduced) | `normal` |
 | `custom` | ✅ (auto-injected if B/C/D selected) | As specified | As specified | As specified + `include-code-generation` flag | ✅ | As specified |
@@ -275,7 +283,7 @@ Stage E (Always runs — final consolidation)
 ### Custom Mode Flags
 
 | Flag | Values | Default | Effect |
-|------|--------|---------|--------|
+| ------ | -------- | --------- | -------- |
 | `stages` | e.g. `A,B` | A–E (full) | Select stages; prerequisites auto-injected |
 | `include-code-generation` | `true`/`false` | Derived from mode | Controls Stage D |
 | `validation-level` | `strict`/`normal`/`skip` | `strict` | Gate strictness |
@@ -286,7 +294,7 @@ Stage E (Always runs — final consolidation)
 ## 6. Failure & Degraded-Mode Policy
 
 | Scenario | Action | Gate Impact | Output Marker |
-|----------|--------|-------------|---------------|
+| ---------- | -------- | ------------- | --------------- |
 | Generator produces no output | Retry once with stricter constraints | Blocked until retry | `status: degraded` |
 | Retry also fails | Continue with generic fallback | Gate passes (degraded) | `status: degraded_warning` |
 | Cross-document inconsistency | Emit remediation checklist items | Gate FAILS | `status: failed` |
@@ -303,7 +311,7 @@ Stage E (Always runs — final consolidation)
 The following fields must be identical across ALL generated artifacts:
 
 | Consistency Key | Source Generator | Checked In |
-|-----------------|-----------------|------------|
+| ----------------- | ----------------- | ------------ |
 | `project.name` | technology-stack | All docs in B, C, E |
 | `stack.primary_language` | technology-stack | architecture, workflow, exemplars, copilot-instructions, readme |
 | `stack.framework_versions` | technology-stack | architecture, copilot-instructions, readme |

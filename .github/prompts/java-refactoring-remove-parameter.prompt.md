@@ -60,19 +60,27 @@ You are an expert in refactoring Java methods.Below are **2 examples** (with tit
 
 ## Code Before Refactoring 1
 
-```javapublic Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster(), isCloud);            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster(), isCloud));    }}```
+```java
+public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster(), isCloud);            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster(), isCloud));    }}
+```
 
 ## Code After Refactoring 1
 
-```javapublic Backend selectBackendForGroupCommit(long tableId, ConnectContext context)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster());            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster()));    }}```
+```java
+public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster());            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster()));    }}
+```
 
 ## Code Before Refactoring 2
 
-```javaNodeImpl( long id, long firstRel, long firstProp ){     this( id, false );}```
+```java
+NodeImpl( long id, long firstRel, long firstProp ){     this( id, false );}
+```
 
 ## Code After Refactoring 2
 
-```javaNodeImpl( long id){     this( id, false );}```
+```java
+NodeImpl( long id){     this( id, false );}
+```
 
 ## TaskApply **Remove Parameter** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.Always return a complete and compilable method (Java 17).Perform intermediate steps internally:
 

@@ -74,9 +74,11 @@ myserver/├── go.mod├── go.sum├── main.go├── tools/│   
 
 ## go.mod Template
 
-```gomodule github.com/yourusername/
+```go
+module github.com/yourusername/
 
-{PROJECT_NAME}}go 1.23require (    github.com/modelcontextprotocol/go-sdk v1.0.0)```
+{PROJECT_NAME}}go 1.23require (    github.com/modelcontextprotocol/go-sdk v1.0.0)
+```
 
 ## main.go Template
 
@@ -92,13 +94,17 @@ myserver/├── go.mod├── go.sum├── main.go├── tools/│   
 
 ## tools/registry.go Template
 
-```gopackage toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) {    RegisterTool1(server)    RegisterTool2(server)    // Register additional tools here}```
+```go
+package toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) {    RegisterTool1(server)    RegisterTool2(server)    // Register additional tools here}
+```
 
 ## config/config.go Template
 
-```gopackage configimport "os"type Config struct {    ServerName string    Version    string    LogLevel   string}func Load() *Config {    return &Config{        ServerName: getEnv("SERVER_NAME", "
+```go
+package configimport "os"type Config struct {    ServerName string    Version    string    LogLevel   string}func Load() *Config {    return &Config{        ServerName: getEnv("SERVER_NAME", "
 
-{PROJECT_NAME}}"),        Version:    getEnv("VERSION", "v1.0.0"),        LogLevel:   getEnv("LOG_LEVEL", "info"),    }}func getEnv(key, defaultValue string) string {    if value := os.Getenv(key); value != "" {        return value    }    return defaultValue}```
+{PROJECT_NAME}}"),        Version:    getEnv("VERSION", "v1.0.0"),        LogLevel:   getEnv("LOG_LEVEL", "info"),    }}func getEnv(key, defaultValue string) string {    if value := os.Getenv(key); value != "" {        return value    }    return defaultValue}
+```
 
 ## main_test.go Template
 
@@ -108,7 +114,8 @@ myserver/├── go.mod├── go.sum├── main.go├── tools/│   
 
 ## README.md Template
 
-```markdown#
+```markdown
+#
 
 {PROJECT_NAME}}A Model Context Protocol (MCP) server built with Go.
 
@@ -148,7 +155,8 @@ Run tests:\`\`\`bash go test ./... \`\`\`Build:\`\`\`bash go build -o
 
 ## License
 
-MIT```
+MIT
+```
 
 ## Generation Instructions
 
@@ -212,18 +220,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -239,7 +251,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -262,7 +274,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -287,12 +299,13 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
 ## Related Prompts
 
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|----------|--------|
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

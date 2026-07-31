@@ -126,9 +126,11 @@ When asked to create a Swift MCP server, generate a complete project with this s
 
 ## Server.swift Template
 
-```swiftimport MCPimport Loggingfunc createServer() async -
+```swift
+import MCPimport Loggingfunc createServer() async -
 
-> Server {    let server = Server(        name: "MyMCPServer",        version: "1.0.0",        capabilities: .init(            prompts: .init(listChanged: true),            resources: .init(subscribe: true, listChanged: true),            tools: .init(listChanged: true)        )    )    // Register tool handlers    await registerToolHandlers(server: server)    // Register resource handlers    await registerResourceHandlers(server: server)    // Register prompt handlers    await registerPromptHandlers(server: server)    return server}```
+> Server {    let server = Server(        name: "MyMCPServer",        version: "1.0.0",        capabilities: .init(            prompts: .init(listChanged: true),            resources: .init(subscribe: true, listChanged: true),            tools: .init(listChanged: true)        )    )    // Register tool handlers    await registerToolHandlers(server: server)    // Register resource handlers    await registerResourceHandlers(server: server)    // Register prompt handlers    await registerPromptHandlers(server: server)    return server}
+```
 
 ## ToolDefinitions.swift Template
 

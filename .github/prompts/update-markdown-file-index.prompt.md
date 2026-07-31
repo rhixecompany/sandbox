@@ -129,7 +129,8 @@ Choose format based on file types and existing content:
 
 folder
 
-- [filename.ext](path/to/filename.ext) - Description- [filename2.ext](path/to/filename2.ext) - Description```
+- [filename.ext](path/to/filename.ext) - Description- [filename2.ext](path/to/filename2.ext) - Description
+```
 
 ### Option 2: Detailed Table
 
@@ -207,18 +208,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -234,7 +239,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -261,7 +266,7 @@ Update a markdown file section with an index/table of files from a specified fol
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -286,4 +291,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

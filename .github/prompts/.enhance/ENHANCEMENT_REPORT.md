@@ -7,16 +7,20 @@
 ## Changes Applied This Session
 
 ### 1. Fixed Concatenated Headings (194 files)
+
 Split 194 prompt files with sections concatenated on single lines into proper multi-line markdown with blank-line separators between `##` and `###` headings. Two-pass approach preserves `###` sub-headings attached to their parent `##` section while cleanly splitting independent `##` sections.
 
 ### 2. Fixed Description Issues (4 files)
+
 - `uk-earnings-research-pipeline`: Added trailing period to description
 - `debugger-prompt`, `optimize-agentsMd`, `pl`: Expanded short descriptions (>30 chars)
 
 ### 3. Fixed comprehensive-prompt-enhancer Frontmatter Skills
-Removed ` — description` annotations from skills list (7 entries) to align with library conventions.
+
+Removed `— description` annotations from skills list (7 entries) to align with library conventions.
 
 ### 4. Updated Analyzer
+
 - Added `## Workflow` to `STRUCTURAL_SECTIONS` to recognize workflow-based prompts as having execution sections (resolved 2 MISSING_EXECUTION_SECTION issues)
 - Anchored the `## Rules` extraction regex (`^## Rules`) so `### Rules` H3 sections no longer false-positive as RULES_INLINE_NOT_SHARED
 
@@ -25,7 +29,7 @@ Removed ` — description` annotations from skills list (7 entries) to align wit
 All fixers in `.enhance/` write **LF only** (matches `.gitattributes` `*.md text eol=lf`); `core.autocrlf=true` was the root cause of `\r\r\r\n` frontmatter corruption in earlier passes.
 
 | Pass | Script | Fixes | Files |
-|------|--------|-------|-------|
+| ------ | -------- | ------- | ------- |
 | 1 | `fix_glued_headings.py` | 256 + 48 (re-run) | 121 + 28 |
 | 2 | `fix_residual_glue.py` | 746 + 40 | 152 + 27 |
 | 3 | `fix_tail_glue.py` | 64 | 37 |
@@ -36,6 +40,7 @@ All fixers in `.enhance/` write **LF only** (matches `.gitattributes` `*.md text
 | 8 | `fix_tail_manual.py` + `fix_tail_generic.py` | 25 + 48 | 17 + 17 |
 
 Additional repairs this session:
+
 - `pl.prompt.md` — full rebuild (stub description, collapsed template, broken fences, embedded duplicate prompt removed)
 - `create-oo-component-documentation.prompt.md` — collapsed template region restored from git history (879b4532)
 - `structured-autonomy-plan.prompt.md` — camelCase + sentence glue split
@@ -44,7 +49,7 @@ Additional repairs this session:
 ## Final Analysis Results (post-campaign)
 
 | Severity | Count |
-|----------|-------|
+| ---------- | ------- |
 | CRITICAL | 0 |
 | HIGH | 0 |
 | MEDIUM | 0 |

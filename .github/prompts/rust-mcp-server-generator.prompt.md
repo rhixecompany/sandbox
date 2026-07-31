@@ -78,33 +78,41 @@ project-name}/├── Cargo.toml├── .gitignore├── README.md├─�
 
 ## Installation
 
-```bashcargo build --release```````
+```bash
+cargo build --release```````
 
 ## Usage
 
 ### Stdio Transport
 
 ```
+
 bashcargo run
+
 ```
 
 ### SSE Transport
 
 ```
+
 bashcargo run --features http -- --transport sse
+
 ```
 
 ### HTTP Transport
 
 ```
+
 bashcargo run --features http -- --transport http
+
 ```
 
 ## Configuration
 
 Configure in your MCP client (e.g., Claude Desktop):```json{  "mcpServers": {    "
 
-project-name}": {      "command": "path/to/target/release/{project-name}",      "args": []    }  }}```
+project-name}": {      "command": "path/to/target/release/{project-name}",      "args": []    }  }}
+```
 
 ## Tools
 

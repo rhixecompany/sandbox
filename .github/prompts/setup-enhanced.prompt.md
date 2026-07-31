@@ -74,7 +74,8 @@ Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY
 
 ## 1. 🚀 Quick Start
 
-```bashpnpm install                              # Install dependenciescp .env.local.example .env.local          # Configure DATABASE_URL, AUTH_SECRETpnpm db:push                              # Apply schema to databasepnpm type-check                           # Verify zero TypeScript errorspnpm dev                                  # Start dev server (port 3000)```---
+```bash
+pnpm install                              # Install dependenciescp .env.local.example .env.local          # Configure DATABASE_URL, AUTH_SECRETpnpm db:push                              # Apply schema to databasepnpm type-check                           # Verify zero TypeScript errorspnpm dev                                  # Start dev server (port 3000)```---
 
 ## 2. ✅ Quality Gate (Before Every PR)
 

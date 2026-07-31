@@ -118,7 +118,8 @@ ${PROJECT_TYPE="Auto-detect|.NET|Java|JavaScript|TypeScript|React|Angular|Python
 
 ### 1. Core Instruction Structure
 
-```markdown# GitHub Copilot Instructions
+```markdown
+# GitHub Copilot Instructions
 
 ## Priority GuidelinesWhen generating code for this repository:1. **Version Compatibility**: Always detect and respect the exact versions of languages, frameworks, and libraries used in this project2. **Context Files**: Prioritize patterns and standards defined in the .github/copilot directory3. **Codebase Patterns**: When context files don't provide specific guidance, scan the codebase for established patterns4. **Architectural Consistency**: Maintain our ${ARCHITECTURE_STYLE} architectural style and established boundaries5. **Code Quality**: Prioritize ${CODE_QUALITY_FOCUS == "All" ? "maintainability, performance, security, accessibility, and testability" : CODE_QUALITY_FOCUS} in all generated code
 

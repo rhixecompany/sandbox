@@ -146,7 +146,8 @@ csharp// Update basic usage example to current API
 
 ### Advanced Usage
 
-```csharp// Update advanced configuration patterns to current implementation```- USE-001: Update basic usage examples- USE-002: Refresh advanced configuration patterns- USE-003: Update best practices and recommended patterns
+```csharp
+// Update advanced configuration patterns to current implementation```- USE-001: Update basic usage examples- USE-002: Refresh advanced configuration patterns- USE-003: Update best practices and recommended patterns
 
 ## 6. Quality Attributes
 

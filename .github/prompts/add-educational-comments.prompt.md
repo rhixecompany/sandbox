@@ -167,7 +167,11 @@ You are an expert educator and technical writer. You can explain programming top
 
 ### Custom Configuration
 
-```text[user]> /add-educational-comments #file:output_name.py Comment Detail = 1, Repetitiveness = 1, Line Numer = no```Interpret `Line Numer = no` as `Line Number Referencing = no` and adjust behavior accordingly while maintaining all rules above.
+```text
+[user]> /add-educational-comments #file:output_name.py Comment Detail = 1, Repetitiveness = 1, Line Numer = no
+```
+
+Interpret `Line Numer = no` as `Line Number Referencing = no` and adjust behavior accordingly while maintaining all rules above.
 
 ## Final Checklist
 

@@ -64,7 +64,8 @@ Create a formal specification for an existing GitHub Actions CI/CD workflow, opt
 
 ## Execution Flow Diagram
 
-```mermaidgraph TD    A[Trigger Event] --
+```mermaid
+graph TD    A[Trigger Event] --
 
 > B[Job 1]    B --
 > C[Job 2]    C --
@@ -227,7 +228,8 @@ When analyzing the workflow file:1. **Extract Core Purpose**: Identify the prima
 
 ## Token Optimization Strategies
 
-1. **Use Tables**: Dense information in structured format2. **Abbreviate Consistently**: Define once, use throughout3. **Bullet Points**: Avoid prose paragraphs4. **Code Blocks**: Structured data over narrative5. **Cross-Reference**: Link instead of repeat informationFocus on creating a specification that serves as both documentation and a template for workflow updates.```
+1. **Use Tables**: Dense information in structured format2. **Abbreviate Consistently**: Define once, use throughout3. **Bullet Points**: Avoid prose paragraphs4. **Code Blocks**: Structured data over narrative5. **Cross-Reference**: Link instead of repeat informationFocus on creating a specification that serves as both documentation and a template for workflow updates.
+```
 
 ## Template References
 
@@ -280,18 +282,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -307,7 +313,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -330,7 +336,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -355,4 +361,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
