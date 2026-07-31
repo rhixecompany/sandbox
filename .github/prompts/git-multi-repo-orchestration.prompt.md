@@ -1,0 +1,199 @@
+---
+name: git-multi-repo-orchestration
+title: Git Multi-Repo Orchestration
+description: 'Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across all repos in ./projects.'
+version: 1.0.0
+license: MIT
+author: Alexa
+toolsets:
+  - terminal
+  - file
+  - mcp
+  - delegation
+scripts: []
+skills:
+  - git-multi-repo-orchestration
+  - gh-cli
+  - git-commit
+  - git-helper
+  - git-submodule-workflow
+  - github-pr-workflow
+  - github-repo-management
+  - github-code-review
+  - finishing-a-development-branch
+  - git-history-preserving-migration
+  - monorepo-pr-workflow
+  - workspace-audit
+  - repo-management
+formatter: default
+plan: plans/git-multi-repo-orchestration.md
+dependencies:
+  - skill:git-multi-repo-orchestration
+  - skill:gh-cli
+  - skill:git-commit
+  - skill:git-helper
+  - skill:git-submodule-workflow
+  - skill:github-pr-workflow
+  - skill:github-repo-management
+  - skill:github-code-review
+  - skill:finishing-a-development-branch
+  - skill:git-history-preserving-migration
+  - skill:monorepo-pr-workflow
+  - skill:workspace-audit
+  - skill:repo-management
+  - tool:mcp-github
+tags:
+  - git
+  - github
+  - submodules
+  - pr
+  - orchestration
+  - multi-repo
+  - workflow
+trigger: /git-multi-repo-orchestration
+metadata:
+  hermes: {}
+---
+
+## Goal
+
+Load and use all git skills to run the full git lifecycle across **all repos in `./projects`**:
+
+- `git add` → `git commit` (conventional) → `git push` to `development`
+- Submodule sync (foreach, update, parent pointer bump)
+- Create, update, open, and close all PRs via `gh pr create` (**review-then-merge**)
+- Merge directly into `development` and push
+- Sync `development` → `production`
+
+## Prerequisites
+
+- [ ] `gh auth status` — active account + `repo`, `workflow` scopes
+- [ ] Working directory is the SandBox root (`~/Desktop/SandBox`)
+- [ ] `git submodule status` baseline recorded
+- [ ] User approval for the repo batch (no commits/pushes without consent)
+
+## Skill Bundle
+
+Load ALL git skills first: `git-multi-repo-orchestration` (umbrella), `gh-cli`, `git-commit`, `git-helper`, `git-submodule-workflow`, `github-pr-workflow`, `github-repo-management`, `github-code-review`, `finishing-a-development-branch`, `git-history-preserving-migration`, `monorepo-pr-workflow`, `workspace-audit`, `repo-management`.
+
+## Workflow
+
+### Phase 0: Inventory
+
+```bash
+cd ~/Desktop/SandBox
+gh auth status
+git submodule status
+for d in projects/*/; do [ -d "$d/.git" ] && echo "${d#projects/}"; done
+```
+
+Record dirty baseline per repo. **Do not proceed if auth is missing.**
+
+### Phase 1: Commit & Push to Development
+
+For each repo on `development`:
+
+```bash
+cd projects/<repo>
+git status --short
+git add <files>
+git commit -m "type(scope): subject
+
+- bullet detail"
+git push origin development
+```
+
+- Conventional types: `feat`, `fix`, `refactor`, `docs`, `test`, `ci`, `chore`, `perf`.
+- Feature-branch repos: push branch, open PR (Phase 3), do NOT merge directly.
+
+### Phase 2: Submodule Sync
+
+```bash
+git submodule foreach 'git status --short && git fetch origin'
+git submodule update --remote development
+git submodule sync
+# From SandBox root, AFTER child pushes:
+git add projects/* && git commit -m "chore(submodules): bump project pointers"
+git push origin development
+```
+
+### Phase 3: PR Lifecycle — Review-Then-Merge
+
+```bash
+git checkout -b feat/<description> development
+# make changes, commit, push
+git push -u origin HEAD
+
+gh pr create \
+  --title "feat: <description>" \
+  --body "## Summary
+- <change 1>
+- <change 2>
+
+## Test Plan
+- [ ] CI green
+- [ ] Reviewed" \
+  --base development
+```
+
+- **Update:** `gh pr edit <N> --title ... --body ...`
+- **Review:** `gh pr diff <N>`, `gh pr checks <N> --watch`, `--add-reviewer <user>`
+- **Merge after review:** `gh pr merge <N> --merge --delete-branch` (or `--squash`)
+- **Close unmerged:** `gh pr close <N> --comment "<reason>"`
+- **After merge:** `git checkout development && git pull origin development`
+
+**Gate:** no `--auto` / admin-merge — wait for review.
+
+### Phase 4: Development → Production Sync
+
+```bash
+git checkout production && git pull origin production
+git merge --ff-only development
+git push origin production
+git checkout development
+```
+
+**FF failure:** STOP → request explicit user approval → force-push and log to `.copilot/session-state/PRODUCTION_FORCE_PUSH_LOG.md`.
+
+### Phase 5: Verification
+
+```bash
+for d in projects/*/; do
+  [ -d "$d/.git" ] || continue
+  cd "$d" && echo "== ${d#projects/}: $(git branch --show-current) | $(git status --short | wc -l) dirty"
+  cd ~/Desktop/SandBox
+done
+git submodule status | grep -v '^ ' && echo "SUBMODULES DIRTY" || echo "SUBMODULES CLEAN"
+gh pr list --state open --limit 50
+```
+
+## Rules
+
+- **No commit/push unless asked** — approval per repo batch.
+- **No force-push** to `production` without explicit user consent (log it).
+- **No auto-merge** — review-then-merge is the default PR flow.
+- **No branch deletion** without approval.
+- **Submodule ordering** — child pushes BEFORE parent pointer commit.
+- **Never blind `git add -A`** at SandBox root — `.copilot/` is git-ignored session workspace.
+
+## Verification
+
+- [ ] All repos on `development` pushed with conventional commits
+- [ ] `git submodule status` clean (no `+` prefix)
+- [ ] PRs review-then-merged (or open for review, as requested)
+- [ ] `production` synced to `development` (FF or approved force-push)
+- [ ] Final sweep: 0 unexpected dirty repos
+- [ ] Audit trail logged
+
+## MCP Servers & Tools
+
+Prefer MCP-first per tooling policy: `github` (repo/PR API), `filesystem` (file ops), `terminal` (git/gh), `sequential-thinking` (planning).
+
+## Tasks
+
+- [ ] Phase 0: verify auth, discover repos, baseline
+- [ ] Phase 1: commit + push each repo to development
+- [ ] Phase 2: submodule sync + parent pointer bump
+- [ ] Phase 3: open/update/review/merge/close PRs
+- [ ] Phase 4: sync development → production
+- [ ] Phase 5: final sweep + audit trail
