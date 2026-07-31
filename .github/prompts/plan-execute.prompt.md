@@ -72,10 +72,6 @@ Load and execute any implementation plan step-by-step. Reads the plan from a `.p
 
 > **Shared template references:**>> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
-## Goal
-
-Execute a structured implementation plan from start to finish. Load the plan file, process each phase in order with verification gates, and report completion or blockers.**Consolidates:** All previous `execute-plan-*` and `execute-*plan*` prompts(comicwise-session, debugger, eslint, optimization, setup, skills-debug,acpx-agent-integration, bash-scripts-plan, dev-init, docs, hermes-config,orchestrator, per-repo, prompt-conversion, sandbox-projects-merge, etc.)
-
 ## Input
 
 - **Plan file path** — e.g. `prompts/plan-xxx.prompt.md` or `.hermes/plans/xxx.md`
@@ -193,16 +189,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 

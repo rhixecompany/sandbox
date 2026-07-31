@@ -126,26 +126,18 @@ General development workflow for analysis, planning, implementation, and verific
 
 > General development workflow with planning, automation, and verification.
 
-## Goal
-
-Handle multi-step development work with a predictable loop: map context, plan,implement, and verify.
-
 ## Context
 
 Use this prompt when a task spans more than one step or needs explicit fileimpact analysis before coding. It combines file mapping, planning, direct CLIexecution, and validation.
 
-## Input
-
-s
+## Inputs
 
 - Task description
 - Optional target area, files, or bug report
 - Workspace context and relevant documentation
 - Optional constraints, performance targets, or output format requirements
 
-## Output
-
-s
+## Outputs
 
 - A dependency-aware context map
 - A short execution plan
@@ -226,49 +218,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -299,18 +248,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -322,10 +259,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-## Tasks
-
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
-- [ ] Verify against acceptance criteria
-- [ ] Document results and decisions

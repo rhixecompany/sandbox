@@ -140,7 +140,31 @@ project-name}": {      "command": "path/to/target/release/{project-name}",      
 
 > #[derive(Debug, Deserialize, JsonSchema)]
 
-## Running the Generated ServerAfter generation:```bashcd
+## Running the Generated Server
+
+After generation:
+
+```bash
+cd {project-name}
+cargo build
+cargo test
+cargo run
+```
+
+For Claude Desktop integration:
+
+```json
+{
+  "mcpServers": {
+    "{project-name}": {
+      "command": "path/to/{project-name}/target/release/{project-name}",
+      "args": []
+    }
+  }
+}
+```
+
+Now generate the complete project based on the user's requirements!
 
 project-name}cargo buildcargo testcargo run```For Claude Desktop integration:```json{  "mcpServers": {    "{project-name}": {      "command": "path/to/{project-name}/target/release/{project-name}",      "args": []    }  }}```Now generate the complete project based on the user's requirements!
 

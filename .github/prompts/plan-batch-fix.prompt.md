@@ -78,10 +78,6 @@ Scan a codebase for errors, warnings, and deprecations, then fix them systematic
 
 > **Shared template references:**>> - [Core rules](templates/_shared/rules-core.md)> - [Skills table](templates/_shared/skills-table-core.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
-## Goal
-
-Identify and fix all errors, warnings, and deprecations across a codebase. Operates in batches to avoid overwhelming context, with verification after each batch.**Consolidates:** `plan-batch-fix-all-scan` + `plan-batch-fix-errors-warnings`(which were near-duplicate prompts for the same purpose).
-
 ## Input
 
 - **Target directory** — Codebase root to scan (default: workspace root)
@@ -111,7 +107,9 @@ For each batch (default: 7 files per batch):1. Pick the batch of files with the 
 
 ### Phase 3: Full re-scan
 
-After all batches complete, run the full scan again.- If zero errors remain → done.- If errors remain but are pre-existing or out of scope → document in report.
+After all batches complete, run the full scan again.
+- If zero errors remain → done.
+- If errors remain but are pre-existing or out of scope → document in report.
 
 ### Phase 4: Report
 
@@ -197,16 +195,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 

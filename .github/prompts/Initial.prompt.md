@@ -29,6 +29,7 @@ trigger: /Initial
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow.

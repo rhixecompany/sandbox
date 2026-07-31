@@ -90,10 +90,6 @@ Audit the full agent stack across Hermes, GitHub Copilot, and shared infrastruct
 
 > **Shared template references:**>> - [Core rules](templates/_shared/rules-core.md)> - [Skills table](templates/_shared/skills-table-core.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
-## Goal
-
-Perform a comprehensive audit of all agents across configured platforms (Hermes, Copilot, Codex). Inventory their definitions, capabilities, tool exposure, and cross-references. Report inconsistencies, duplicates, and registration gaps.**Consolidates:** `plan-acpx-agent-stack-audit-hermes`,`plan-acpx-agent-stack-audit-shared`,`plan-acpx-agent-stack-audit-copilot`(three separate prompts that shared the same audit approach).
-
 ## Input
 
 - **Scope** — Which platforms to audit: `hermes`, `copilot`, `shared`, or `all`
@@ -211,16 +207,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 

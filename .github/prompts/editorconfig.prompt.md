@@ -58,17 +58,13 @@ Generates a comprehensive and best-practice-oriented .editorconfig file based on
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -112,7 +108,8 @@ s
 
 ## 🧑‍💻 USER PREFERENCES
 
-- **Indentation Style**: Use spaces, not tabs.- **Indentation Size**: 2 spaces.
+- **Indentation Style**: Use spaces, not tabs.
+- **Indentation Size**: 2 spaces.
 
 ## 🚀 EXECUTION
 
@@ -122,7 +119,16 @@ s
 
 ## Rule-by-Rule Explanation
 
-- `root = true`: This is a best practice that stops the EditorConfig search in the current directory. Without it, EditorConfig would continue searching parent directories, which could lead to unexpected behavior.- `[*]`: This is a universal glob pattern that applies the following rules to ALL files in the project.- `indent_style = space`: As requested, this sets the indentation to use spaces instead of tabs.- `indent_size = 2`: As requested, this sets the indentation size to 2 spaces.- `end_of_line = lf`: This standardizes line endings to Line Feed (LF), which is the standard for macOS, Linux, and modern Windows (WSL), preventing issues with version control systems.- `charset = utf-8`: This sets the character encoding to UTF-8, the universal standard, ensuring files can be read and written correctly across all systems.- `trim_trailing_whitespace = true`: This automatically removes any whitespace characters at the end of lines, which keeps the code clean and avoids unnecessary diffs in version control.- `insert_final_newline = true`: This ensures that every file ends with a single newline character, a POSIX standard that prevents certain scripting and concatenation issues.- `[*.md]`: This glob pattern applies specific rules only to Markdown files.- `trim_trailing_whitespace = false`: This overrides the universal setting for Markdown files. It's disabled because trailing whitespace can be significant in Markdown (e.g., for creating hard line breaks).
+- `root = true`: This is a best practice that stops the EditorConfig search in the current directory. Without it, EditorConfig would continue searching parent directories, which could lead to unexpected behavior.
+- `[*]`: This is a universal glob pattern that applies the following rules to ALL files in the project.
+- `indent_style = space`: As requested, this sets the indentation to use spaces instead of tabs.
+- `indent_size = 2`: As requested, this sets the indentation size to 2 spaces.
+- `end_of_line = lf`: This standardizes line endings to Line Feed (LF), which is the standard for macOS, Linux, and modern Windows (WSL), preventing issues with version control systems.
+- `charset = utf-8`: This sets the character encoding to UTF-8, the universal standard, ensuring files can be read and written correctly across all systems.
+- `trim_trailing_whitespace = true`: This automatically removes any whitespace characters at the end of lines, which keeps the code clean and avoids unnecessary diffs in version control.
+- `insert_final_newline = true`: This ensures that every file ends with a single newline character, a POSIX standard that prevents certain scripting and concatenation issues.
+- `[*.md]`: This glob pattern applies specific rules only to Markdown files.
+- `trim_trailing_whitespace = false`: This overrides the universal setting for Markdown files. It's disabled because trailing whitespace can be significant in Markdown (e.g., for creating hard line breaks).
 
 ## Template References
 
@@ -147,49 +153,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -212,10 +175,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
 
 ## Subgoals
 

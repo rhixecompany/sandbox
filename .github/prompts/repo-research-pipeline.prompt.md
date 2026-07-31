@@ -47,6 +47,7 @@ trigger: /repo-research-pipeline
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Run research across all project repos and produce RESEARCH_REPORT.md files

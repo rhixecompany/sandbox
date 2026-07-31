@@ -82,7 +82,9 @@ Three-phase workspace initialization: triage MD documentation files, migrate pro
 
 ## Description
 
-This prompt initialises a new or stale workspace by running a three-phase cleanup and consolidation pipeline. Phase 1 discovers and deduplicates all markdown documentation files. Phase 2 discovers prompt files, migrates them to `.github/prompts/`, and consolidates. Phase 3 indexes the new prompt directory, creates any needed skills and helper scripts, and updates all prompts to reference the skills they need.**Critical rules (must appear within the first 15% of execution):**- **Only then constraint** — Each phase completes fully before the next begins. No overlapping phases.- **Delete only after verification** — Before deleting any file, confirm the canonical copy exists in the target location.- **Count before and after** — Record file counts at each phase start and end; report deltas.
+This prompt initialises a new or stale workspace by running a three-phase cleanup and consolidation pipeline. Phase 1 discovers and deduplicates all markdown documentation files. Phase 2 discovers prompt files, migrates them to `.github/prompts/`, and consolidates. Phase 3 indexes the new prompt directory, creates any needed skills and helper scripts, and updates all prompts to reference the skills they need.**Critical rules (must appear within the first 15% of execution):**- **Only then constraint** — Each phase completes fully before the next begins. No overlapping phases.
+- **Delete only after verification** — Before deleting any file, confirm the canonical copy exists in the target location.
+- **Count before and after** — Record file counts at each phase start and end; report deltas.
 
 ## Context
 
@@ -141,10 +143,6 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 
 Detailed templates in `templates/projects-init/`:
 
-## Template References
-
-Templates in `templates/projects-init/`:- `actions_summary.md`- `context.md`- `description.md`- `phase_1_triage_documentat.md`- `phase_2_migrate_prompts.md`- `phase_3_create_skills__up.md`- `rules.md`- `skills_required.md`
-
 ## Personas
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
@@ -163,49 +161,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
 
 ## Best Practices
 
@@ -236,18 +191,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 

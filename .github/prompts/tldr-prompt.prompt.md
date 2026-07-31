@@ -64,17 +64,13 @@ Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, c
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -122,7 +118,8 @@ You MUST accomplish the following:1. **Require input source** - You MUST receive
 
 ### Required
 
-You MUST receive at least one of the following. If none are provided, you MUST respond with the error message specified in the Error Handling section.- **GitHub Copilot customization files** - Files with extensions: .prompt.md, .agent.md, .instructions.md, .collections.md  - If one or more files are passed without `#file`, you MUST apply the file reading tool to all files  - If more than one file (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining files  - Recognize file type by extension and use appropriate invocation syntax in examples- **URL** - Link to Copilot file, MCP server documentation, or Copilot documentation  - If one or more URLs are passed without `#fetch`, you MUST apply the fetch tool to all URLs  - If more than one URL (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining URLs- **Text data/query** - Raw text about Copilot features, MCP servers, or usage questions will be considered **Ambiguous Queries**  - If the user provides raw text without a **specific file** or **URL**, identify the topic:    - Prompts, agents, instructions, collections → Search workspace first      - If no relevant files found, check <https://github.com/github/awesome-copilot> and resolve to <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}}> (e.g., <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md>)    - MCP servers → Prioritize <https://modelcontextprotocol.io/> and <https://code.visualstudio.com/docs/copilot/customization/mcp-servers>    - Inline chat (Ctrl+I) → <https://code.visualstudio.com/docs/copilot/inline-chat>    - Chat view/general → <https://code.visualstudio.com/docs/copilot/> and <https://docs.github.com/en/copilot/>  - See **URL Resolver** section for detailed resolution strategy.
+You MUST receive at least one of the following. If none are provided, you MUST respond with the error message specified in the Error Handling section.
+- **GitHub Copilot customization files** - Files with extensions: .prompt.md, .agent.md, .instructions.md, .collections.md  - If one or more files are passed without `#file`, you MUST apply the file reading tool to all files  - If more than one file (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining files  - Recognize file type by extension and use appropriate invocation syntax in examples- **URL** - Link to Copilot file, MCP server documentation, or Copilot documentation  - If one or more URLs are passed without `#fetch`, you MUST apply the fetch tool to all URLs  - If more than one URL (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining URLs- **Text data/query** - Raw text about Copilot features, MCP servers, or usage questions will be considered **Ambiguous Queries**  - If the user provides raw text without a **specific file** or **URL**, identify the topic:    - Prompts, agents, instructions, collections → Search workspace first      - If no relevant files found, check <https://github.com/github/awesome-copilot> and resolve to <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}}> (e.g., <https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md>)    - MCP servers → Prioritize <https://modelcontextprotocol.io/> and <https://code.visualstudio.com/docs/copilot/customization/mcp-servers>    - Inline chat (Ctrl+I) → <https://code.visualstudio.com/docs/copilot/inline-chat>    - Chat view/general → <https://code.visualstudio.com/docs/copilot/> and <https://docs.github.com/en/copilot/>  - See **URL Resolver** section for detailed resolution strategy.
 
 ## URL Resolver
 
@@ -186,49 +183,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -251,10 +205,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries.
 
 ## Subgoals
 

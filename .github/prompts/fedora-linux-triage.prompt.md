@@ -56,9 +56,7 @@ Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
 
 # Fedora Linux TriageYou are a Fedora Linux expert. Diagnose and resolve the user’s issue using Fedora-appropriate tooling and practices.
 
-## Input
-
-s
+## Inputs
 
 - `${input:FedoraRelease}` (optional)
 - `${input:ProblemSummary}`

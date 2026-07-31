@@ -68,17 +68,13 @@ Refactor and update Banking documentation files (`AGENTS.md` and `.github/copilo
 
 Use when you need to next.js expert for the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -131,19 +127,43 @@ Analyze, refactor, and update the `AGENTS.md`,`.cursorrules` and `.github/copilo
 
 ## 4. Output Requirements
 
-- Produce fully rewritten versions of `AGENTS.md`,`.cursorrules` and `.github/copilot-instructions.md`, ready for direct commit.- Use clear, hierarchical headings, bullet points, callout blocks, and code blocks.- All instructions must be actionable, concise, and unambiguous.- Add a “Last Updated” section with the current date and summary of major changes.- Output must pass markdown linting and render correctly in GitHub and VS Code preview.- All code samples must be syntactically correct and match the current codebase.- All links and references must resolve to real files or sections.- Deliver three markdown files: `AGENTS.md`,`.cursorrules` and `.github/copilot-instructions.md`.
+- Produce fully rewritten versions of `AGENTS.md`,`.cursorrules` and `.github/copilot-instructions.md`, ready for direct commit.
+- Use clear, hierarchical headings, bullet points, callout blocks, and code blocks.
+- All instructions must be actionable, concise, and unambiguous.
+- Add a “Last Updated” section with the current date and summary of major changes.
+- Output must pass markdown linting and render correctly in GitHub and VS Code preview.
+- All code samples must be syntactically correct and match the current codebase.
+- All links and references must resolve to real files or sections.
+- Deliver three markdown files: `AGENTS.md`,`.cursorrules` and `.github/copilot-instructions.md`.
 
 ## 5. Tool & Capability Requirements
 
-- File system access to read/write `AGENTS.md`, `.cursorrules`, `.github/copilot-instructions.md`, and reference files.- Markdown linting and formatting tools (e.g., `markdownlint`).- Codebase search tools to resolve file paths, section headings, and code samples.- Date and metadata insertion for “Last Updated” sections.- Diátaxis and documentation skills, referencing `.github/instructions/documentation.instructions.md`.- AI agent capabilities for chunked processing, persona-driven prompting, and anti-rate-limiting.- Optional: Use “documentation-writer” and “refactor” skills if available.
+- File system access to read/write `AGENTS.md`, `.cursorrules`, `.github/copilot-instructions.md`, and reference files.
+- Markdown linting and formatting tools (e.g., `markdownlint`).- Codebase search tools to resolve file paths, section headings, and code samples.
+- Date and metadata insertion for “Last Updated” sections.
+- Diátaxis and documentation skills, referencing `.github/instructions/documentation.instructions.md`.- AI agent capabilities for chunked processing, persona-driven prompting, and anti-rate-limiting.
+- Optional: Use “documentation-writer” and “refactor” skills if available.
 
 ## 6. Technical Configuration
 
-- Use GPT-4.1 or higher.- Operate in “Documentation Refactorer” persona with Diátaxis expertise.- Chunk large files for processing; checkpoint after each section.- Back up original files before overwriting.- Run `markdownlint`, `npm run validate` for validation.- Load and apply `.github/instructions/documentation.instructions.md` and other relevant instructions.- Output must be valid markdown, ready for direct commit.
+- Use GPT-4.1 or higher.
+- Operate in “Documentation Refactorer” persona with Diátaxis expertise.
+- Chunk large files for processing; checkpoint after each section.
+- Back up original files before overwriting.
+- Run `markdownlint`, `npm run validate` for validation.
+- Load and apply `.github/instructions/documentation.instructions.md` and other relevant instructions.
+- Output must be valid markdown, ready for direct commit.
 
 ## 7. Quality & Validation Criteria
 
-- All instructions must be clear, concise, and actionable.- All references must be accurate and up-to-date.- Output must pass markdown linting and render correctly.- All required sections must be present and fully populated.- Run `npm run validate` to ensure no regressions.- Adhere to Banking documentation standards and Diátaxis principles.- Include “Last Updated” and, if needed, “Migration Notes” sections.- Output must be peer-reviewed and approved before commit.
+- All instructions must be clear, concise, and actionable.
+- All references must be accurate and up-to-date.
+- Output must pass markdown linting and render correctly.
+- All required sections must be present and fully populated.
+- Run `npm run validate` to ensure no regressions.
+- Adhere to Banking documentation standards and Diátaxis principles.
+- Include “Last Updated” and, if needed, “Migration Notes” sections.
+- Output must be peer-reviewed and approved before commit.
 
 ## Template References
 
@@ -168,49 +188,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -233,10 +210,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Refactor and update Banking documentation files (`AGENTS.md` and `.github/copilot-instructions.md`) to maximize clarity, actionability, and AI agent productivity, following project conventions and Diátaxis principles.
 
 ## Subgoals
 

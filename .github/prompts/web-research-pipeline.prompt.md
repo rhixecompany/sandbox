@@ -29,6 +29,7 @@ trigger: /web-research-pipeline
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Web search → extract full content → save as formatted markdown. **Tavily-first approach:** prefer `mcp__tavily__tavily_search` + `mcp__tavily__tavily_extract`, fall back to `mcp__fetch__get_markdown`, then `web_extract`.

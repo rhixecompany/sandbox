@@ -36,3 +36,34 @@
 - Script updated with web research phase + source documentation
 - Research artifacts saved under docs/research/ (4 provider docs)
 - Comprehensive report generated
+
+---
+
+# Orchestrator Progress — agents-system-prompt-context-fix (2026-07-31)
+
+> Trigger: /agents-system-prompt-context-fix implement fully
+
+## Phase 0 — Awesome Copilot Agent Install
+- Status: ✅ complete
+- 30 Tier 1–3 agents downloaded from github/awesome-copilot into `.github/agents/`
+- Tier 1: 12 MCP experts (python/typescript/go/rust/java/kotlin/php/ruby/swift/csharp + mcp-m365 + context7)
+- Tier 2: 6 prompt/agent-library agents (prompt-builder, prompt-engineer, custom-agent-foundry, declarative-agents-architect, agent-governance-reviewer, repo-architect)
+- Tier 3: 12 stack/workflow agents (react-frontend, react18-auditor, playwright-tester, qa-subagent, tdd-red/green/refactor, github-actions-expert, se-technical-writer, adr-generator, implementation-plan, one-shot-feature-issue-planner)
+- Coverage report: `awesome-copilot-agents-report.md` (223-agent comparison)
+
+## Phase 1 — Generate Agent Context Files
+- Status: ✅ complete
+- Root blueprints already present: Technology_Stack_Blueprint.md, Project_Architecture_Blueprint.md, Project_Folders_Structure_Blueprint.md
+- 18/19 projects already had TECHNOLOGY_STACK.md (prior run 2026-07-28)
+- Gap closed: generated `projects/docs/TECHNOLOGY_STACK.md`
+- docs/Project_Architecture/ INDEX covers all projects (architecture/folders/techstack per project)
+
+## Phase 2 — Audit VS Code Configuration
+- Status: ✅ complete
+- Scanned 126 JSON files across 30+ .vscode dirs (excluded node_modules/.git/vendor trees)
+- 125 passed initially; 1 failure: `hermes-profiles/plugins/awesome-copilot/.vscode/settings.json` (trailing comma line 19)
+- Fixed: removed trailing comma in `yaml.schemas`
+- Re-verify: 126/126 PASS
+
+## Phase 3 — Verify and Implement
+- Status: ✅ complete (see docs/orchestrator-verification.md)

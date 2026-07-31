@@ -60,18 +60,14 @@ Suggest [awesome-copilot](https://github.com/github/awesome-copilot) content tha
 
 Use when expanding the local Copilot content library with resources from the community awesome-copilot repository. The prompt adapts to the chosen content type.
 
-## Input
-
-s
+## Inputs
 
 - `type` — content type to suggest: `agents | instructions | prompts | skills`
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result matching the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -180,49 +176,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -232,23 +185,9 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Find GitHub Copilot content (agents, instructions, prompts, or skills) from the awesome-copilot repository that add coverage the repo lacks, and flag local duplicates or outdated copies.
 
 ## Subgoals
 

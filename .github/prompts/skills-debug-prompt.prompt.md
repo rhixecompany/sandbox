@@ -73,10 +73,6 @@ Apply fixes to all F-grade and C-grade skills identified in the audit.Target: F=
 
 > For each F3/F3b skill, read the file and fix the `
 
-## Goal
-
-` section:> **Full content:**
-
 ## Tools
 
 - `read_file(path)` — Read skill before fixing- `patch(path, old_string, new_string)` — Apply targeted fix- `write_file(path, content)` — Full rewrite if needed- `execute_code(code)` — Re-run audit verification
@@ -103,10 +99,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
@@ -169,10 +161,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Execute the skills remediation plan from docs/plan/skills-debug-plan.md. Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade (unclosed fences, duplicate headings), then verify.
 
 ## Subgoals
 

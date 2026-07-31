@@ -25,6 +25,7 @@ trigger: /dataverse-python-advanced-patterns
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization techniques.

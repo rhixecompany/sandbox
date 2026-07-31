@@ -29,6 +29,7 @@ trigger: /migrate-to-next16
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Automate Next.js 16 migration tasks.

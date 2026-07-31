@@ -112,13 +112,12 @@ When you cite an issue, include **at least one**:- File path + line range (if av
 
 ## Tone & Style
 
-- Be direct and practical.- Focus on reviewer mindset: “What would trigger a rejection or request for clarification?”- Prefer short, clear recommendations with test steps.---
+- Be direct and practical.
+- Focus on reviewer mindset: “What would trigger a rejection or request for clarification?”- Prefer short, clear recommendations with test steps.---
 
 ## Example Priority Patterns (Guidance)Typical P0/P1 examples:
 
 - App crashes on launch- Missing camera/photos/location usage description while requesting it- Subscription paywall without restore- External payment for digital features- Login wall with no explanation + no demo/testing path- Reviewer can’t access core value without special setup and no notesTypical P2/P3 examples:- Better empty states- Clearer onboarding copy- More robust offline handling- More transparent “why we ask” permission screens---
-
-## What You Should Do First When Run
 
 ## What You Should Do First When Run
 

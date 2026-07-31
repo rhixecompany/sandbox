@@ -132,7 +132,21 @@ def check_file(path):
         issues["info"].append("DESCRIPTION_TOO_SHORT")
     if desc and (desc.endswith('.') is False):
         issues["info"].append("DESCRIPTION_NO_PERIOD")
-    
+
+    # Duplicate standard sections (13-section target state: each appears once)
+    std_sections = ["Goal", "Subgoals", "Personas", "Personality", "Context", "Rules",
+                    "Phases", "Best Practices", "Verification Checklist",
+                    "Skills Required", "MCP Servers & Tools", "Tasks", "Dependencies",
+                    "Template References"]
+    for sec in std_sections:
+        n = len(re.findall(r'^##\s*' + re.escape(sec) + r'\s*$', body, re.MULTILINE | re.IGNORECASE))
+        if n > 1:
+            issues["info"].append(f"DUPLICATE_SECTION:{sec}x{n}")
+
+    # Orphan-s artifacts from glue repair (## Inputs split into ## Input + s)
+    if re.search(r'^##\s+[^\n]+\n\ns\n\n', body, re.MULTILINE):
+        issues["info"].append("ORPHAN_S_ARTIFACT")
+
     return dict(issues), fm, text, body
 
 def main():

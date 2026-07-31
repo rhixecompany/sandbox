@@ -22,6 +22,7 @@ dependencies: []
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Inventory all installed VS Code extensions, research their documentation, and apply findings to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.

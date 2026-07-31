@@ -58,17 +58,13 @@ Prompt for creating the high-level technical architecture for an Epic, based on 
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -104,13 +100,16 @@ s
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Goal
-
-Act as a Senior Software Architect. Your task is to take an Epic PRD and create a high-level technical architecture specification. This document will guide the development of the epic, outlining the major components, features, and technical enablers required.
-
 ## Context Considerations
 
-- The Epic PRD from the Product Manager.- **Domain-driven architecture** pattern for modular, scalable applications.- **Self-hosted and SaaS deployment** requirements.- **Docker containerization** for all services.- **TypeScript/Next.js** stack with App Router.- **Turborepo monorepo** patterns.- **tRPC** for type-safe APIs.- **Stack Auth** for authentication.**Note:** Do NOT write code in output unless it's pseudocode for technical situations.
+- The Epic PRD from the Product Manager.
+- **Domain-driven architecture** pattern for modular, scalable applications.
+- **Self-hosted and SaaS deployment** requirements.
+- **Docker containerization** for all services.
+- **TypeScript/Next.js** stack with App Router.
+- **Turborepo monorepo** patterns.
+- **tRPC** for type-safe APIs.
+- **Stack Auth** for authentication.**Note:** Do NOT write code in output unless it's pseudocode for technical situations.
 
 ## Output Format
 
@@ -145,49 +144,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -210,10 +166,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document.
 
 ## Subgoals
 

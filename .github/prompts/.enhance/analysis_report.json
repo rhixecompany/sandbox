@@ -1,5 +1,5 @@
 {
-  "total_files": 216,
+  "total_files": 217,
   "issue_counts": {
     "critical": 0,
     "high": 0,
@@ -376,6 +376,10 @@
     },
     {
       "name": "git-flow-branch-creator",
+      "issue_count": 0
+    },
+    {
+      "name": "git-multi-repo-orchestration",
       "issue_count": 0
     },
     {

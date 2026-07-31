@@ -58,17 +58,13 @@ Analyze chatmode or prompt files and recommend optimal AI models based on task c
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -114,9 +110,7 @@ Analyze `.agent.md` or `.prompt.md` files to understand their purpose, complexit
 
 > 1)- **Context**: GitHub Copilot subscription tiers (Free: 2K completions + 50 chat/month with 0x models only; Pro: unlimited 0x + 1000 premium/month; Pro+: unlimited 0x + 5000 premium/month)
 
-## Input
-
-s
+## Inputs
 
 Required:- `${input:filePath:Path to .agent.md or .prompt.md file}` - Absolute or workspace-relative path to the file to analyzeOptional:- `${input:subscriptionTier:Pro}` - User's Copilot subscription tier (Free, Pro, Pro+) - defaults to Pro- `${input:priorityFactor:Balanced}` - Optimization priority (Speed, Cost, Quality, Balanced) - defaults to Balanced
 
@@ -188,10 +182,6 @@ Generate a structured markdown report with the following sections:```markdown# A
 
 ## Deprecation Notices[If applicable, list any deprecated models in current configuration]⚠️ **Deprecated Model in Use**: [Model Name] (Deprecation date: [YYYY-MM-DD])**Migration Path**:- **Current**: [Deprecated Model]- **Replacement**: [Recommended Model]- **Action Required**: Update `model:` field in frontmatter by [date]- **Behavioral Changes**: [any expected differences]
 
-## Context
-
-7 Verification[If Context7 was used for verification]**Queries Executed**:- Topic: "[query topic]"- Library: `/websites/github_en_copilot`- Key Findings: [summary]
-
 ## Additional Considerations
 
 ### Subscription Tier Recommendations[Specific advice based on Free/Pro/Pro+ tier]
@@ -254,10 +244,6 @@ If user asks "Which model is better between X and Y for this file?":1. Focus com
 
 ### Model Changelog & Deprecations (October 2025)
 
-## Context
-
-7 Query Templates> Use these query patterns when verification needed:> **Model Capabilities**:> **Full content:**
-
 ## Template References
 
 Detailed section templates in `templates/model-recommendation/`:- `context7_query_templates.md`- `current_model_assessment.md`- `knowledge_base.md`- `model_recommendation.md`- `quality_assurance.md`- `workflow.md`
@@ -281,49 +267,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -346,10 +289,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency.
 
 ## Subgoals
 

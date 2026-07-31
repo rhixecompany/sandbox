@@ -68,6 +68,58 @@ Additional repairs this session:
 - **comprehensive_enhance.py**: Idempotent (0 files modified on re-run) ✓
 - **Section coverage**: All prompts have Goal/Context/Rules/Phases/Verification or equivalent ✓
 - **Analyzer (2026-07-31)**: 0 CRITICAL / 0 HIGH / 0 MEDIUM / 0 INFO across all 216 prompts ✓
+
+## 2026-07-31 Comprehensive Enhancer Implementation — Latent Defect Repair
+
+`/comprehensive-prompt-enhancer implement fully` run. The enhancer itself was already
+idempotent (0 pending changes); this session root-caused and repaired four latent
+defect classes the analyzer did not detect:
+
+### Defect classes found & fixed
+
+| Class | Root cause | Files | Fixes |
+| ----- | ---------- | ----- | ----- |
+| Duplicate standard sections | Older enhancer version appended sections without `heading_exists` check | 143 | 387 removals (kept first/domain occurrence) |
+| Orphan `s` artifacts | 228eae32 glue-repair split `## Inputs- ...` into `## Input` + `s` + list | 117 | 231 merges (restored plural headings) |
+| Bullet glue | Body lists merged: `sentence.- Next item` | 49 | 114 splits |
+| Fence/heading glue | `- text```shellCMD``` ` and collapsed `\ ` continuations | 3 | spring-boot×2, rust-mcp reconstruction |
+
+Plus manual repairs: `git-multi-repo-orchestration` Rules ref, `apple-appstore-reviewer`
+dup heading, `cosmosdb-datamodeling` dup heading + `### Solved Patterns` glue,
+`create-spring-boot-kotlin-project` dup Unzip block, `prompt-management`
+`## Verification checklist` → `## Library Verification Checklist` (case-dup).
+
+### Tooling added
+
+- `.enhance/fix_prompt_artifacts.py` — orphan-s merge, bullet-glue split, dup-section
+  removal (keep-first), blank-line normalization. Dry-run default, `--apply` writes,
+  preserves per-file newline style, idempotent.
+- `.enhance/fix_fence_glue.py` — code-fence + shell-continuation repair for the
+  spring-boot/rust prompts.
+- `analyze_prompts.py` — new checks: `DUPLICATE_SECTION` (case-insensitive, 13 standard
+  sections) and `ORPHAN_S_ARTIFACT`. Library now at 0 issues including these.
+- `comprehensive-prompt-enhancer.prompt.md` — `scripts:` frontmatter + Dependencies
+  updated to list the two new fixers.
+
+### Verification (217 prompts)
+
+- Analyzer: 0 CRITICAL / 0 HIGH / 0 MEDIUM / 0 INFO (incl. new checks) ✓
+- YAML frontmatter: 217/217 parse clean ✓
+- `comprehensive_enhance.py --dry-run`: 0 files modified (idempotent) ✓
+- `fix_prompt_artifacts.py` dry-run: 0 files (idempotent) ✓
+- Structural: 0 duplicate standard sections, 0 orphan-s, 0 glued headings,
+  0 `promptmetadata` artifacts (excl. checklist line) ✓
+- Git: 189 files changed (+1075/−7985) — deletions are removed dup blocks
+
+### Open items
+
+- Deeper glue flavors (word-dash `launch- Missing`, colon-dash `examples:- Better`,
+  zero-separator `notesTypical`) remain in ~5 severely mangled files
+  (e.g. `apple-appstore-reviewer` line 119, `cosmosdb-datamodeling`). These need
+  per-file manual repair — auto-fix is too risky for prose.
+- Section ordering in composite files (legacy body + appended standard block) is not
+  canonical 13-section order; functionally complete, aesthetically non-standard.
+
 - **markdownlint (2026-07-31)**: 310 errors vs 358 HEAD baseline (−48); all increases are pre-existing content exposed by splits ✓
 - **Line endings (2026-07-31)**: 0 CR files, all LF per `.gitattributes` ✓
 - **Git state**: 1,021 files changed in `.github/prompts` (heading repairs + prior session's DRY enhancement), uncommitted

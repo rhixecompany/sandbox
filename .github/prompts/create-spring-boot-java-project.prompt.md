@@ -58,23 +58,51 @@ Create Spring Boot Java Project Skeleton.
 
 ## Check Java version
 
-- Run following command in terminal and check the version of Java```shelljava -version```
+- Run following command in terminal and check the version of Java
+
+```shell
+java -version
+```
 
 ## Download Spring Boot project template
 
-- Run following command in terminal to download a Spring Boot project template```shellcurl https://start.spring.io/starter.zip \  -d artifactId=${input:projectName:demo-java} \  -d bootVersion=3.4.5 \  -d dependencies=lombok,configuration-processor,web,data-jpa,postgresql,data-redis,data-mongodb,validation,cache,testcontainers \  -d javaVersion=21 \  -d packageName=com.example \  -d packaging=jar \  -d type=maven-project \  -o starter.zip```
+- Run following command in terminal to download a Spring Boot project template
+
+```shell
+curl https://start.spring.io/starter.zip \
+  -d artifactId=${input:projectName:demo-java} \
+  -d bootVersion=3.4.5 \
+  -d dependencies=lombok,configuration-processor,web,data-jpa,postgresql,data-redis,data-mongodb,validation,cache,testcontainers \
+  -d javaVersion=21 \
+  -d packageName=com.example \
+  -d packaging=jar \
+  -d type=maven-project \
+  -o starter.zip
+```
 
 ## Unzip the downloaded file
 
-- Run following command in terminal to unzip the downloaded file```shellunzip starter.zip -d ./${input:projectName:demo-java}```
+- Run following command in terminal to unzip the downloaded file
+
+```shell
+unzip starter.zip -d ./${input:projectName:demo-java}
+```
 
 ## Remove the downloaded zip file
 
-- Run following command in terminal to delete the downloaded zip file```shellrm -f starter.zip```
+- Run following command in terminal to delete the downloaded zip file
+
+```shell
+rm -f starter.zip
+```
 
 ## Change directory to the project root
 
-- Run following command in terminal to change directory to the project root```shellcd ${input:projectName:demo-java}```
+- Run following command in terminal to change directory to the project root
+
+```shell
+cd ${input:projectName:demo-java}
+```
 
 ## Add additional dependencies
 
@@ -106,7 +134,11 @@ Create Spring Boot Java Project Skeleton.
 
 ## Run Maven test command
 
-- Run maven clean test command to check if the project is working```shell./mvnw clean test```
+- Run maven clean test command to check if the project is working
+
+```shell
+./mvnw clean test
+```
 
 ## Run Maven run command (Optional)
 

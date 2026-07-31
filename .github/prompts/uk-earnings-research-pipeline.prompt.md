@@ -38,6 +38,7 @@ dependencies: []
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.

@@ -163,7 +163,8 @@ export function proxy(request: NextRequest) {  const token = request.cookies.get
 
 ### tsconfig.json
 
-- `strict: true`, `target: ES2022`, `module: esnext`, `jsx: "react-jsx"`- Path aliases: `@/*` → `./src/*`, plus shortcuts: `@database`, `@env`, `@hooks`, `@lib`, `@schemas`, `@ui`, etc.- Next.js plugin enabled, incremental builds
+- `strict: true`, `target: ES2022`, `module: esnext`, `jsx: "react-jsx"`- Path aliases: `@/*` → `./src/*`, plus shortcuts: `@database`, `@env`, `@hooks`, `@lib`, `@schemas`, `@ui`, etc.
+- Next.js plugin enabled, incremental builds
 
 ### ESLint (Flat Config — `eslint.config.mts`)
 

@@ -84,10 +84,6 @@ Generate a detailed, structured implementation plan from a goal or specification
 
 > **Shared template references:**>> - [Frontmatter patterns](templates/_shared/frontmatter.md)> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
-## Goal
-
-Generate a complete, phased implementation plan from a high-level goal or specification. The output is a self-contained `.prompt.md` file (or an `.hermes/plans/` plan document) that can be loaded and executed by `plan-execute`.
-
 ## Core Rules
 
 See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additional plan-specific rules:1. **Phases must be sequential** — Each phase must complete before the next begins.2. **Each phase has a verification gate** — Explicit checks that phase is done.3. **Dependencies are explicit** — Every skill, prompt, and tool referenced must exist.4. **DRY output** — Generated plans reference shared templates where possible.5. **One plan = one goal** — Never combine unrelated goals into a single plan.
@@ -105,19 +101,11 @@ See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additio
 
 Generate a plan with these sections:```markdown
 
-## Goal
-
-Concise statement of what this plan achieves.
-
-## Input
-
-s
+## Inputs
 
 - Files, APIs, data sources the plan consumes
 
-## Output
-
-s
+## Outputs
 
 - Files, reports, artifacts the plan produces
 
@@ -145,16 +133,6 @@ s
 2. Confirm all referenced skills/prompts/tools exist.
 3. If the plan targets `.github/prompts/*.prompt.md`, validate frontmatter.
 4. Run the plan through `dry_run_prompts.py` for smoke-testing.
-
-## Verification Checklist
-
-- [ ] Goal is clearly stated and scoped
-- [ ] All phases have explicit verification gates
-- [ ] Every `skill:`, `prompt:`, `tool:` reference resolves to an existing asset
-- [ ] Plan is self-contained (no missing context)
-- [ ] Phase ordering is logical (no circular dependencies)
-- [ ] DRY: no duplicated content that belongs in `_shared/`
-- [ ] If `.prompt.md` output: frontmatter has `name`, `title`, `version`, `description`, `tags`
 
 ## Personas
 
@@ -196,28 +174,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -226,16 +182,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 

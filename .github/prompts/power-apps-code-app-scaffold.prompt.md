@@ -68,9 +68,7 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 
 > - Visual Studio Code with Power Platform Tools extension
 
-## Deliverable
-
-s
+## Deliverables
 
 1. Complete project scaffolding with all necessary files
 2. Working sample application with connector integration
@@ -101,10 +99,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 

@@ -161,7 +161,9 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 
 ## Notes & constraints
 
-- Fail-fast: quality-gate stops at first failing gate. This will require iterative runs after fixes.- Tests and build may require .env.local and a reachable DB (pnpm db:push + seed). If DB not available, tests can be deferred or run selectively.- No new dependencies will be added. Follow project's coding standards (no `any`, use Zod, auth-first, DAL patterns).
+- Fail-fast: quality-gate stops at first failing gate. This will require iterative runs after fixes.
+- Tests and build may require .env.local and a reachable DB (pnpm db:push + seed). If DB not available, tests can be deferred or run selectively.
+- No new dependencies will be added. Follow project's coding standards (no `any`, use Zod, auth-first, DAL patterns).
 
 ## Next actionRun the quality-gate script to generate fresh report files. After that the triage step will parse the report files and produce the triage table.
 
