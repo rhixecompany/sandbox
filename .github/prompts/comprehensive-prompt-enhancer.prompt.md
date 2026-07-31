@@ -19,6 +19,8 @@ toolsets:
 scripts:
   - .enhance/comprehensive_enhance.py
   - .enhance/analyze_prompts.py
+  - .enhance/fix_prompt_artifacts.py
+  - .enhance/fix_fence_glue.py
 skills:
   - using-superpowers
   - subagent-driven-development
@@ -232,7 +234,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 - **PyYAML** — `pip install pyyaml` for YAML validation
 - **Git** — Rollback via `git checkout -- .github/prompts/` if enhancement corrupts files
 - **Shared templates** — `templates/_shared/` must exist with all 12 reference files
-- **Enhancement scripts** — `.enhance/comprehensive_enhance.py`, `.enhance/analyze_prompts.py` must exist
+- **Enhancement scripts** — `.enhance/comprehensive_enhance.py`, `.enhance/analyze_prompts.py`, `.enhance/fix_prompt_artifacts.py`, `.enhance/fix_fence_glue.py` must exist
 
 ## Workflow
 

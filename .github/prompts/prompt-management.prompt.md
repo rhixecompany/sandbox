@@ -124,9 +124,13 @@ Run the strict validator on all prompt front matter. Compare each `frontmatter` 
 - If a duplicate prompt is found by content or function, evaluate carefully before deletion. Keep intentional parallel domain-specific prompts when they have distinct `name`, `title`, `dependencies`, or scope.
 - Do not delete files solely for structural similarity; remove only exact or near-identical duplicates after confirming no exact refs remain.
 
-## Verification checklist
+## Library Verification Checklist
 
-- Every `.prompt.md` includes required frontmatter fields: `name`, `title`, `description`, `version`, `tags`.- `version` is semver-like and not blank.- `tags` is a non-empty list.- No prompt references a missing skill/script.- No duplicate prompt by content or function remains.- The shared templates at `templates/_shared/...` are linked from prompts and loadable.
+- Every `.prompt.md` includes required frontmatter fields: `name`, `title`, `description`, `version`, `tags`.- `version` is semver-like and not blank.
+- `tags` is a non-empty list.
+- No prompt references a missing skill/script.
+- No duplicate prompt by content or function remains.
+- The shared templates at `templates/_shared/...` are linked from prompts and loadable.
 
 ## Phases
 
@@ -326,28 +330,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -370,10 +352,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline clean or continue remediation.
 
 ## Subgoals
 

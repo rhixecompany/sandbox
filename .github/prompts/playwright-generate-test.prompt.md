@@ -70,17 +70,13 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 Use when you need to playwright test generation for the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -120,12 +116,6 @@ s
 
 Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.
 
-## Context
-
-- Use a provided scenario; if none is given, ask for one before starting.
-- Do not write the final test prematurely.
-- Run the prescribed steps with Playwright MCP before emitting the test file.
-
 ## Skills Required
 
 > See full table with per-domain purposes:
@@ -150,21 +140,6 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 ### @runnerA test runner who fixes issues until the test passes.
 
-## Rules
-
-1. Ask for the scenario if it is missing.
-2. Do not generate the final test until the workflow steps are complete.
-3. Save the generated test in the tests directory.
-4. Use Playwright TypeScript with @playwright/test.
-5. Execute the test and iterate until it passes.
-6. Keep the final test aligned with the observed behavior.
-
-## Phases
-
-### Phase 1: Gather the scenario
-
-> **Goal:** understand the behavior that needs to be tested.
-
 ## Steps
 
 - Clarify the scenario.
@@ -174,11 +149,16 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 ## Tasks
 
-- Capture the scenario.- Observe the live behavior.- Draft the Playwright test.- Execute and stabilize it.
+- Capture the scenario.
+- Observe the live behavior.
+- Draft the Playwright test.
+- Execute and stabilize it.
 
 ## Subtasks
 
-- Ask for missing scenario details.- Collect selectors and outcomes.- Save the test in tests/.- Repeat until the test passes.
+- Ask for missing scenario details.
+- Collect selectors and outcomes.
+- Save the test in tests/.- Repeat until the test passes.
 
 ## Actions Summary
 
@@ -191,16 +171,6 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 Templates in `templates/playwright-generate-test/`:- `phases.md`
 
-## Personas
-
-See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
-
-| Persona | When to Use |
-| ------- | ----------- |
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -209,49 +179,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
 
 ## Best Practices
 
@@ -276,28 +203,12 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
-## Goal
-
-Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
@@ -310,10 +221,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-## Tasks
-
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
-- [ ] Verify against acceptance criteria
-- [ ] Document results and decisions

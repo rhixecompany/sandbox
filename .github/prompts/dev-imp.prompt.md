@@ -214,25 +214,6 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 - [ ] `dev-imp-report.md` written at PWD
 - [ ] Report is crispy format (tables, emoji, scannable)
 
-## Personas
-
-See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
-
-| Persona | When to Use |
-| ------- | ----------- |
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
-
-## Personality
-
-See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
-
-- **Tone**: Direct, practical, actionable
-- **Style**: Structured with clear steps and verification
-- **Avoid**: Ambiguity, assumptions, scope creep
-- **Encourage**: Evidence-based decisions, minimal changes
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
@@ -284,16 +265,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 

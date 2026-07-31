@@ -36,6 +36,7 @@ dependencies: []
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Systematically eliminate all errors, warnings, and deprecations in this codebase, fixing only what the validation scripts surface and documenting every significant fix.

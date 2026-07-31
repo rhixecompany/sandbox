@@ -30,6 +30,7 @@ scripts: []
 skills: []
 plan: None
 ---
+
 ## Goal
 
 Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models. Each prompt runs to completion before the next begins.

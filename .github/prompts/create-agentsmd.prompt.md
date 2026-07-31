@@ -58,17 +58,13 @@ Prompt for generating an AGENTS.md file for a repository.
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -164,12 +160,19 @@ Here's a real example from the agents.md website:```markdown# Sample AGENTS.md f
 
 - Use `pnpm dlx turbo run where <project_name
 
-> ` to jump to a package instead of scanning with `ls`.- Run`pnpm install --filter <project_name>` to add the package to your workspace so Vite, ESLint, and TypeScript can see it.- Use `pnpm create vite@latest <project_name
-> -- --template react-ts` to spin up a new React + Vite package with TypeScript checks ready.- Check the name field inside each package's package.json to confirm the right name—skip the top-level one.
+> ` to jump to a package instead of scanning with `ls`.- Run`pnpm install --filter <project_name>` to add the package to your workspace so Vite, ESLint, and TypeScript can see it.
+- Use `pnpm create vite@latest <project_name
+> -- --template react-ts` to spin up a new React + Vite package with TypeScript checks ready.
+- Check the name field inside each package's package.json to confirm the right name—skip the top-level one.
 
 ## Test
 
-ing instructions- Find the CI plan in the .github/workflows folder.- Run `pnpm turbo run test --filter <project_name>` to run every check defined for that package.- From the package root you can just call `pnpm test`. The commit should pass all tests before you merge.- To focus on one step, add the Vitest pattern: `pnpm vitest run -t "<test name>"`.- Fix any test or type errors until the whole suite is green.- After moving files or changing imports, run `pnpm lint --filter <project_name>` to be sure ESLint and TypeScript rules still pass.- Add or update tests for the code you change, even if nobody asked.
+ing instructions- Find the CI plan in the .github/workflows folder.
+- Run `pnpm turbo run test --filter <project_name>` to run every check defined for that package.
+- From the package root you can just call `pnpm test`. The commit should pass all tests before you merge.
+- To focus on one step, add the Vitest pattern: `pnpm vitest run -t "<test name>"`.- Fix any test or type errors until the whole suite is green.
+- After moving files or changing imports, run `pnpm lint --filter <project_name>` to be sure ESLint and TypeScript rules still pass.
+- Add or update tests for the code you change, even if nobody asked.
 
 ## PR instructions
 
@@ -225,58 +228,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
-## Best Practices
-
-See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
-
-1. **DRY** — Reference shared templates instead of duplicating content.
-2. **Structured output** — Use clear sections with consistent heading levels.
-3. **Verification gates** — Always verify before claiming completion.
-4. **Minimal changes** — Fix root cause, not symptoms.
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
@@ -290,10 +241,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Prompt for generating an AGENTS.md file for a repository.
 
 ## Subgoals
 

@@ -70,17 +70,13 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 Use when you need to playwright form fill automation for the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -120,12 +116,6 @@ s
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.
 
-## Context
-
-- Use the provided form URL and the provided field values.
-- If a required value or file path is missing, ask for clarification before continuing.
-- Never submit the form without explicit user approval.
-
 ## Skills Required
 
 > See full table with per-domain purposes:
@@ -147,21 +137,6 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 ### @checkerA reviewer who verifies the form is ready but not submitted.
 
-## Rules
-
-1. Navigate to the provided form URL first.
-2. Fill each field exactly as requested.
-3. Upload the provided image path only if it exists locally.
-4. Do not submit the form.
-5. Ask for a review before any submission step.
-6. If a field cannot be found, stop and report the blocker.
-
-## Phases
-
-> **Goal:** confirm the form details before touching the page.>
->
-> - Validate the form inputs.
-
 ## Steps
 
 - Confirm input values.
@@ -171,11 +146,17 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 ## Tasks
 
-- Validate inputs.- Fill the form fields.- Upload the image if valid.- Pause before submit.
+- Validate inputs.
+- Fill the form fields.
+- Upload the image if valid.
+- Pause before submit.
 
 ## Subtasks
 
-- Check the URL.- Verify each field label.- Confirm the upload path exists.- Report the ready-to-review state.
+- Check the URL.
+- Verify each field label.
+- Confirm the upload path exists.
+- Report the ready-to-review state.
 
 ## Actions Summary
 
@@ -188,16 +169,6 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 Templates in `templates/playwright-automation-fill-in-form/`:- `phases.md`
 
-## Personas
-
-See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
-
-| Persona | When to Use |
-| ------- | ----------- |
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -206,49 +177,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
 
 ## Best Practices
 
@@ -273,28 +201,12 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
-## Goal
-
-Fill a form with Playwright MCP, stop before submission, and ask for a human review.
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
@@ -307,10 +219,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-## Tasks
-
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
-- [ ] Verify against acceptance criteria
-- [ ] Document results and decisions

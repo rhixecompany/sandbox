@@ -424,15 +424,6 @@ See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton
 4. **Verify** — Confirm fix works.
 5. **Document** — Note what changed.
 
-## Best Practices
-
-See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
-
-1. **DRY** — Reference shared templates instead of duplicating content.
-2. **Structured output** — Use clear sections with consistent heading levels.
-3. **Verification gates** — Always verify before claiming completion.
-4. **Minimal changes** — Fix root cause, not symptoms.
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
@@ -453,18 +444,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 

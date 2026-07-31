@@ -194,6 +194,10 @@ def heading_exists(body, heading):
     """Check if a heading exists in body."""
     return bool(re.search(r'^##\s*' + re.escape(heading) + r'\s*$', body, re.MULTILINE | re.IGNORECASE))
 
+def heading_exists_prefix(body, heading):
+    """Check if a heading exists allowing parenthetical/suffix variants (e.g. '## Rules (from shared-rules-core)')."""
+    return bool(re.search(r'^##\s*' + re.escape(heading) + r'(?:\s|\(|$)', body, re.MULTILINE | re.IGNORECASE))
+
 def enhance(pf, dry=True):
     changes = []
     text = pf.read_text(encoding="utf-8")
@@ -234,7 +238,7 @@ def enhance(pf, dry=True):
         ctx = CONTEXTS.get(cat, CONTEXTS["general"])
         appendix.append(S_CONTEXT_TMPL.format(text=ctx))
         changes.append(("SECT", f"Context ({cat})"))
-    if not heading_exists(body, "Rules"):
+    if not heading_exists_prefix(body, "Rules"):
         rules = DOMAIN_RULES.get(cat, DOMAIN_RULES["general"])
         appendix.append(S_RULES.format(rules=rules))
         changes.append(("SECT", f"Rules ({cat})"))

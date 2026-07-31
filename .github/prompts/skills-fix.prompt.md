@@ -140,17 +140,13 @@ Full lifecycle audit and remediation of the Hermes adminbot skill library.Discov
 - **Batch size:** exactly 7 skills per turn
 - **Grade scale:** A (clean) → A- (minor) → B (1 major / 3+ minor) → C (2+ major) → F (critical)
 
-## Input
-
-s
+## Inputs
 
 - Hermes skills directory (`hermes skills list` output)
 - Existing per-skill reports if resuming from a prior run
 - Optional priority areas or category filters from user
 
-## Output
-
-s
+## Outputs
 
 - Reorganized skill directory (correct categories, no duplicate root-level skills)
 - Per-skill audit reports at `docs/<category>/<skill>/skills-debug-context.md`
@@ -180,14 +176,6 @@ s
 ## Known Issue Patterns (from 2026-06-04 audit)
 
 | Code | Pattern                                                    | Fix                                          || ---- | ---------------------------------------------------------- | -------------------------------------------- || F1   | Missing YAML frontmatter `---` block                       | Add frontmatter with `name:`, `description:` || F2   | Missing required frontmatter key (`name`/`description`)    | Add the key with a value                     || F3   | Boilerplate: `
-
-## Goal
-
-\nUse when Use when <desc>` | Replace with clean one-line description      || F3b  | Boilerplate: `
-
-## Goal
-
-\nUse when "<desc>" to accomplish...` | Replace with clean description               || C2   | Unclosed code fence (odd ``` count)                        | Append closing ` ``` ` at end of file        || S1   | Missing `
 
 ## When to Use` or `
 
@@ -226,27 +214,7 @@ Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimp
 
 ### Phase 5: Execute Fixes (Priority Order)**F-grade first** — Fix critical issues (unclosed fences, missing frontmatter):````python# For unclosed code fences: append closing fencewith open(skill_path, 'a', encoding='utf-8') as f:    f.write("\n```\n")````**C-grade next** — Fix major issues (boilerplate `
 
-## Goal
-
-`, missing`
-
 ## When to Use`):```python# F3 fix pattern:content = content.replace(    "
-
-## Goal
-
-\nUse when Use when <desc>",    "
-
-## Goal
-
-\n<desc>")```**B-grade last** — Fix moderate issues in batches of 7 (S1 section stubs, R1 dedup,S2 heading gaps, C1 stale comments).
-
-### Phase 6: Verify
-
-1. Re-run audit script — confirm F=0, C=0, total issues reduced
-2. Update master index with re-run results
-3. Mark plan checklist items `[x]`
-4. `git diff --stat` to review scope
-5. `git commit -m "chore: skill library audit and remediation <date>"`
 
 ## Steps
 
@@ -312,49 +280,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -377,10 +302,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Audit, debug, deduplicate, and enhance Hermes skills in the adminbot profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt → applies fixes in priority order (F → C → B → A-).
 
 ## Subgoals
 
@@ -412,10 +333,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-## Tasks
-
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
-- [ ] Verify against acceptance criteria
-- [ ] Document results and decisions

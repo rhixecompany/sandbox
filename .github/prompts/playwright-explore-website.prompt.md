@@ -70,17 +70,13 @@ Explore a website with Playwright MCP, document core flows, and propose tests fr
 
 Use when you need to playwright website exploration for the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -120,12 +116,6 @@ s
 
 Explore a website with Playwright MCP, document core flows, and propose tests from the findings.
 
-## Context
-
-- Use the provided URL; if none is provided, ask the user for one.
-- Focus on the main user journeys rather than exhaustive coverage.
-- Record locators and observed outcomes while exploring.
-
 ## Skills Required
 
 > See full table with per-domain purposes:
@@ -153,21 +143,6 @@ A careful site explorer who finds the main flows without over-driving the app.
 
 A test-minded reviewer who turns exploration notes into concrete test cases.
 
-## Rules
-
-1. Navigate to the provided URL before exploring.
-2. If no URL is provided, ask for one instead of guessing.
-3. Inspect 3 to 5 core flows only.
-4. Capture useful locators and expected outcomes.
-5. Close the browser context when finished.
-6. Provide a concise summary and test ideas.
-
-## Phases
-
-### Phase 1: Start and orient
-
-> **Goal:** load the site and identify the main areas worth exploring.
-
 ## Steps
 
 - Open the URL.
@@ -177,11 +152,17 @@ A test-minded reviewer who turns exploration notes into concrete test cases.
 
 ## Tasks
 
-- Confirm the URL.- Exercise the main user journeys.- Record evidence.- Summarize and suggest tests.
+- Confirm the URL.
+- Exercise the main user journeys.
+- Record evidence.
+- Summarize and suggest tests.
 
 ## Subtasks
 
-- Ask for a URL if missing.- Capture locators for key controls.- Note observed outcomes.- Close the browser context.
+- Ask for a URL if missing.
+- Capture locators for key controls.
+- Note observed outcomes.
+- Close the browser context.
 
 ## Actions Summary
 
@@ -194,16 +175,6 @@ A test-minded reviewer who turns exploration notes into concrete test cases.
 
 Templates in `templates/playwright-explore-website/`:- `phases.md`
 
-## Personas
-
-See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
-
-| Persona | When to Use |
-| ------- | ----------- |
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -212,49 +183,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
 
 ## Best Practices
 
@@ -279,28 +207,12 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
-## Goal
-
-Explore a website with Playwright MCP, document core flows, and propose tests from the findings.
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
@@ -313,10 +225,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-## Tasks
-
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
-- [ ] Verify against acceptance criteria
-- [ ] Document results and decisions

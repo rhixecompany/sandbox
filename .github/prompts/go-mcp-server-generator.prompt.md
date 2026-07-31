@@ -239,15 +239,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Best Practices
-
-See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
-
-1. **DRY** — Reference shared templates instead of duplicating content.
-2. **Structured output** — Use clear sections with consistent heading levels.
-3. **Verification gates** — Always verify before claiming completion.
-4. **Minimal changes** — Fix root cause, not symptoms.
-
 ## Verification Checklist
 
 | # | Gate | Criterion |

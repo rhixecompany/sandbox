@@ -86,9 +86,7 @@ GraalVM Native Image expert that adds native image support to Java applications,
 
 1. **Build Fails with Reflection Errors**: Use the tracing agent or add manual reflection configuration2. **Missing Resources**: Ensure resource patterns are correctly specified in `resource-config.json`3. **ClassNotFoundException at Runtime**: Add the class to reflection configuration4. **Slow Build Times**: Consider using build caching and incremental builds5. **Large Image Size**: Use `--gc=serial` (default) or `--gc=epsilon` (no-op GC for testing) and analyze dependencies
 
-## Reference
-
-s
+## References
 
 - [GraalVM Native Image Documentation](https://www.graalvm.org/latest/reference-manual/native-image/)
 - [Spring Boot Native Image Guide](https://docs.spring.io/spring-boot/docs/current/reference/html/native-image.html)
@@ -162,15 +160,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
-## Best Practices
-
-See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
-
-1. **DRY** — Reference shared templates instead of duplicating content.
-2. **Structured output** — Use clear sections with consistent heading levels.
-3. **Verification gates** — Always verify before claiming completion.
-4. **Minimal changes** — Fix root cause, not symptoms.
 
 ## Verification Checklist
 

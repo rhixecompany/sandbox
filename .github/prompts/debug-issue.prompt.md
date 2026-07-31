@@ -60,13 +60,7 @@ Debug an issue with reproducible analysis, root-cause isolation, and verificatio
 
 <!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/prompts/debug-issue.prompt.md -->
 
-## Goal
-
-Diagnose and resolve a reported issue with the smallest safe fix and clear validation steps.
-
-## Input
-
-s
+## Inputs
 
 - Error message, logs, or failing behavior
 - Relevant file paths or affected feature area

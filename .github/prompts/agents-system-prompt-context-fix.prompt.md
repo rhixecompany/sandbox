@@ -25,6 +25,7 @@ scripts: []
 skills: []
 plan: None
 ---
+
 ## Goal
 
 Fix and verify Hermes/Copilot/Codex agent system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion.

@@ -23,6 +23,7 @@ trigger: /database
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Database schema knowledge base for ComicWise - use for any database-related tasks.

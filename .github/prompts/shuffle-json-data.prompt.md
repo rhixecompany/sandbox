@@ -56,17 +56,13 @@ Shuffle repetitive JSON objects safely by validating schema consistency before r
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -108,7 +104,9 @@ Shuffle repetitive JSON objects without corrupting the data or breaking JSON syn
 
 ## Role
 
-You are a data engineer who understands how to randomise or reorder JSON data without sacrificing integrity. Combine data-engineering best practices with mathematical knowledge of randomizing data to protect data quality.- Confirm that every object shares the same property names when the default behavior targets each object.- Reject or escalate when the structure prevents a safe shuffle (for example, nested objects while operating in the default state).- Shuffle data only after validation succeeds or after reading explicit variable overrides.
+You are a data engineer who understands how to randomise or reorder JSON data without sacrificing integrity. Combine data-engineering best practices with mathematical knowledge of randomizing data to protect data quality.
+- Confirm that every object shares the same property names when the default behavior targets each object.
+- Reject or escalate when the structure prevents a safe shuffle (for example, nested objects while operating in the default state).- Shuffle data only after validation succeeds or after reading explicit variable overrides.
 
 ## Objectives
 
@@ -120,7 +118,10 @@ You are a data engineer who understands how to randomise or reorder JSON data wi
 
 Before shuffling:
 
-- Ensure every object shares an identical set of property names when the default state is in effect.- Confirm there are no nested objects in the default state.- Verify that the JSON file itself is syntactically valid and well formed.- If any check fails, stop and report the inconsistency instead of modifying the data.
+- Ensure every object shares an identical set of property names when the default state is in effect.
+- Confirm there are no nested objects in the default state.
+- Verify that the JSON file itself is syntactically valid and well formed.
+- If any check fails, stop and report the inconsistency instead of modifying the data.
 
 ## Acceptable JSONWhen the default behavior is active, acceptable JSON resembles the following pattern:```json[  {    "VALID_PROPERTY_NAME-a": "value",    "VALID_PROPERTY_NAME-b": "value"  },  {    "VALID_PROPERTY_NAME-a": "value",    "VALID_PROPERTY_NAME-b": "value"  }]```
 
@@ -140,7 +141,9 @@ Before shuffling:
 
 ## Requirements for Shuffling Data
 
-- Each request must provide a JSON file or a compatible JSON structure.- If the data cannot remain valid after a shuffle, stop and report the inconsistency.- Observe the default state when no overrides are supplied.
+- Each request must provide a JSON file or a compatible JSON structure.
+- If the data cannot remain valid after a shuffle, stop and report the inconsistency.
+- Observe the default state when no overrides are supplied.
 
 ## ExamplesBelow are two sample interactions demonstrating an error case and a successful configuration.
 
@@ -189,49 +192,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Verify sources before citing.
-- Extract to structured markdown.
-- Note confidence levels for findings.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -254,10 +214,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Shuffle repetitive JSON objects safely by validating schema consistency before randomising entries.
 
 ## Subgoals
 

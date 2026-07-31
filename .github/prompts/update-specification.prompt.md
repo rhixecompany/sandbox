@@ -58,17 +58,13 @@ Update an existing specification file for the solution, optimized for Generative
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -162,10 +158,6 @@ ode// Code snippet or data example demonstrating the correct application of the 
 
 Detailed templates in `templates/update-specification/`:
 
-## Template References
-
-Templates in `templates/update-specification/`:- `11_related_specifications.md`- `3_requirements_constraint.md`- `5_acceptance_criteria.md`- `6_test_automation_strateg.md`- `8_dependencies__external_.md`- `9_examples__edge_cases.md`- `best_practices_for_ai-rea.md`- `inputs.md`- `legacy_prompt_details.md`- `phases.md`- `rules.md`
-
 ## Personas
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
@@ -184,49 +176,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
 
 ## Best Practices
 
@@ -250,10 +199,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code.
 
 ## Subgoals
 

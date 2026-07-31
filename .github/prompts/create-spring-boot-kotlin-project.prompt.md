@@ -58,23 +58,44 @@ Create Spring Boot Kotlin Project Skeleton.
 
 ## Check Java version
 
-- Run following command in terminal and check the version of Java```shelljava -version```
+- Run following command in terminal and check the version of Java
+
+```shell
+java -version
+```
 
 ## Download Spring Boot project template
 
-- Run following command in terminal to download a Spring Boot project template```shellcurl https://start.spring.io/starter.zip \  -d artifactId=${input:projectName:demo-kotlin} \  -d bootVersion=3.4.5 \  -d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \  -d javaVersion=21 \  -d language=kotlin \  -d packageName=com.example \  -d packaging=jar \  -d type=gradle-project-kotlin \  -o starter.zip```
+- Run following command in terminal to download a Spring Boot project template
+
+```shell
+curl https://start.spring.io/starter.zip \
+  -d artifactId=${input:projectName:demo-kotlin} \
+  -d bootVersion=3.4.5 \
+  -d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \
+  -d javaVersion=21 \
+  -d language=kotlin \
+  -d packageName=com.example \
+  -d packaging=jar \
+  -d type=gradle-project-kotlin \
+  -o starter.zip
+```
 
 ## Unzip the downloaded file
 
-- Run following command in terminal to unzip the downloaded file```shellunzip starter.zip -d ./${input:projectName:demo-kotlin}```
+- Run following command in terminal to unzip the downloaded file
+
+```shell
+unzip starter.zip -d ./${input:projectName:demo-kotlin}
+```
 
 ## Remove the downloaded zip file
 
-- Run following command in terminal to delete the downloaded zip file```shellrm -f starter.zip```
+- Run following command in terminal to delete the downloaded zip file
 
-## Unzip the downloaded file
-
-- Run following command in terminal to unzip the downloaded file```shellunzip starter.zip -d ./${input:projectName:demo-kotlin}```
+```shell
+rm -f starter.zip
+```
 
 ## Add additional dependencies
 

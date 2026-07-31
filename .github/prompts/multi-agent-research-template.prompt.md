@@ -102,7 +102,15 @@ Reusable prompt for Codex, Copilot, and Hermes. It preserves the current researc
 
 ## Shared Rules
 
-> These are guiding principles, not actionable tasks.- [ ] If a plan already exists, update it before starting anything else.- [ ] Research first, then extract, then write docs, then plan, then implement, then verify.- [ ] Preserve the current research targets unless the user explicitly changes them.- [ ] Keep each stage reversible and easy to resume.- [ ] Write extracted findings to Markdown under `docs/` with a clear index.- [ ] Do not mark work complete until the relevant verification checks pass.- [ ] If a step depends on a native agent command, use the active agent's equivalent instead of forcing one syntax across all agents.- [ ] Keep the prompt reusable: replace only the template variables, not the workflow.
+> These are guiding principles, not actionable tasks.
+- [ ] If a plan already exists, update it before starting anything else.
+- [ ] Research first, then extract, then write docs, then plan, then implement, then verify.
+- [ ] Preserve the current research targets unless the user explicitly changes them.
+- [ ] Keep each stage reversible and easy to resume.
+- [ ] Write extracted findings to Markdown under `docs/` with a clear index.
+- [ ] Do not mark work complete until the relevant verification checks pass.
+- [ ] If a step depends on a native agent command, use the active agent's equivalent instead of forcing one syntax across all agents.
+- [ ] Keep the prompt reusable: replace only the template variables, not the workflow.
 
 ## Core Workflow
 
@@ -112,7 +120,12 @@ The 7-step workflow is executed across the 6 phases below:1. **Update plan** —
 
 ## Phase 1: Skills Discovery and Audit
 
-- [ ] Start with `/plan` if a plan already exists; update it.- [ ] Execute Hermes skills browse to list everything available.- [ ] Search and filter the top 50 best skills that are not already installed or available.- [ ] Execute Hermes skills search with the skill name to find skills by keyword.- [ ] Install all matching skills after a security scan.- [ ] Run `/skills audit`.- [ ] Run `/systematic-debugging` to debug and fix all issues.
+- [ ] Start with `/plan` if a plan already exists; update it.
+- [ ] Execute Hermes skills browse to list everything available.
+- [ ] Search and filter the top 50 best skills that are not already installed or available.
+- [ ] Execute Hermes skills search with the skill name to find skills by keyword.
+- [ ] Install all matching skills after a security scan.
+- [ ] Run `/skills audit`.- [ ] Run `/systematic-debugging` to debug and fix all issues.
 
 ## Phase 2: MCP Server and Tool Research
 
@@ -125,19 +138,37 @@ The 7-step workflow is executed across the 6 phases below:1. **Update plan** —
 
 Research these sources and extract each page into Markdown:
 
-- [awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent)- [Skills Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)- [MCP Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)- [Use MCP with Hermes Guide](https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes)- [Personality Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)- [Context Files Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files)- [Quickstart Guide](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)- [Tips and Workflow Guidance](https://hermes-agent.nousresearch.com/docs/guides/tips)- [Tools Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/tools)- [Learning Path Guide](https://hermes-agent.nousresearch.com/docs/getting-started/learning-path)- [Hooks Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks)- [Plugins Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins)For this Phase:- [ ] Save a Markdown file for each page.- [ ] Format each file with clean, readable Markdown.- [ ] Create an index catalog in the current directory.- [ ] Organize the output into `docs/` subfolders using proper names.- [ ] Read the newly created Markdown files.- [ ] Update the plan from those findings.- [ ] Implement only after the plan is ready.- [ ] Verify that the pages were extracted and cataloged.
+- [awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent)- [Skills Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)- [MCP Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)- [Use MCP with Hermes Guide](https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes)- [Personality Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)- [Context Files Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files)- [Quickstart Guide](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)- [Tips and Workflow Guidance](https://hermes-agent.nousresearch.com/docs/guides/tips)- [Tools Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/tools)- [Learning Path Guide](https://hermes-agent.nousresearch.com/docs/getting-started/learning-path)- [Hooks Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks)- [Plugins Feature Documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins)For this Phase:- [ ] Save a Markdown file for each page.
+- [ ] Format each file with clean, readable Markdown.
+- [ ] Create an index catalog in the current directory.
+- [ ] Organize the output into `docs/` subfolders using proper names.
+- [ ] Read the newly created Markdown files.
+- [ ] Update the plan from those findings.
+- [ ] Implement only after the plan is ready.
+- [ ] Verify that the pages were extracted and cataloged.
 
 ## Phase 4: Profiles and Workspace Markdown
 
-- [ ] Research all Markdown files in `docs/*`.- [ ] Identify all available profiles.- [ ] Create profiles with `hermes profile create {profile name} --clone-all`.- [ ] Confirm the clones copy config, keys, `SOUL.md`, memories, skills, and sessions.- [ ] Install, verify, test, debug, and fix issues in each profile.
+- [ ] Research all Markdown files in `docs/*`.- [ ] Identify all available profiles.
+- [ ] Create profiles with `hermes profile create {profile name} --clone-all`.- [ ] Confirm the clones copy config, keys, `SOUL.md`, memories, skills, and sessions.
+- [ ] Install, verify, test, debug, and fix issues in each profile.
 
 ## Phase 5: Docs Inventory
 
-- [ ] Inspect `docs/*` for hooks, skills, and plugins.- [ ] Install the plugins first.- [ ] Verify, test, debug, and fix issues in the plugins.- [ ] Then verify, test, debug, and fix issues in the hooks.- [ ] Then verify, test, debug, and fix issues in the skills.
+- [ ] Inspect `docs/*` for hooks, skills, and plugins.
+- [ ] Install the plugins first.
+- [ ] Verify, test, debug, and fix issues in the plugins.
+- [ ] Then verify, test, debug, and fix issues in the hooks.
+- [ ] Then verify, test, debug, and fix issues in the skills.
 
 ## Phase 6: Configuration Hierarchy Audit
 
-- [ ] List all hooks, tools, skills, and plugins.- [ ] List all MCP servers, hooks, tools, skills, and plugins.- [ ] List all plugin hooks, tools, and skills.- [ ] Create missing items when needed.- [ ] Verify and enhance existing items when they are already present.- [ ] Validate the configuration hierarchy in this order:  `.hermes.md` -
+- [ ] List all hooks, tools, skills, and plugins.
+- [ ] List all MCP servers, hooks, tools, skills, and plugins.
+- [ ] List all plugin hooks, tools, and skills.
+- [ ] Create missing items when needed.
+- [ ] Verify and enhance existing items when they are already present.
+- [ ] Validate the configuration hierarchy in this order:  `.hermes.md` -
 
 > `AGENTS.md` -
 > `CLAUDE.md` -
@@ -241,16 +272,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-## Verification Checklist
-
-| # | Gate | Criterion |
-| --- | ------ | ----------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -261,18 +282,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 

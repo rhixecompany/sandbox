@@ -27,6 +27,7 @@ scripts: []
 skills: []
 plan: None
 ---
+
 ## Goal
 
 Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.

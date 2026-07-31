@@ -80,19 +80,16 @@ Create or update an implementation plan with new or updated requirements for fea
 
 # update-implementation-plan> Create or update an implementation plan file with new or updated requirements for features, refactoring, package upgrades, design, architecture, or infrastructure.
 
-## Goal
-
-Systematically create or update structured implementation plans with proper version control and status tracking. This ensures all requirements, dependencies, and implementation steps are documented and discoverable for team coordination and project tracking.
-
 ## Context
 
 Use when you need to create or update an implementation plan for the current workspace or task. The output implementation plan follows a standard section template with status badges.
 
-## Input
+## Inputs
 
-s
-
-The following inputs are gathered to create or update an implementation plan:- **Workspace State**: The current contents of `<workspace_root>`, including existing files, directory structure, and any plan files in the `plan/` directory. Discovered via Phase 1 file system scan.- **User Request**: The specific request, diff, spec, or features provided by the user initiating the command. Passed as command arguments or context.- **Plan Variables**: Any explicit prompt variables, paths, or constraints named in the original instructions (e.g., `<purpose>`, `<component>`, `<version>`). Extracted from user input.- **Existing Plan File**: If updating an existing plan, the current content at `<workspace_root>/plan/<purpose>-<component>-<version>.md`. Loaded during Phase 1 assessment.
+The following inputs are gathered to create or update an implementation plan:- **Workspace State**: The current contents of `<workspace_root>`, including existing files, directory structure, and any plan files in the `plan/` directory. Discovered via Phase 1 file system scan.
+- **User Request**: The specific request, diff, spec, or features provided by the user initiating the command. Passed as command arguments or context.
+- **Plan Variables**: Any explicit prompt variables, paths, or constraints named in the original instructions (e.g., `<purpose>`, `<component>`, `<version>`). Extracted from user input.
+- **Existing Plan File**: If updating an existing plan, the current content at `<workspace_root>/plan/<purpose>-<component>-<version>.md`. Loaded during Phase 1 assessment.
 
 ## Template Variables
 
@@ -100,9 +97,7 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 
 > ` | Absolute path to project root | `$HOME/Desktop/SandBox` (e.g. `C:\Users\Alexa\Desktop\Sandbox`) || `<purpose>` | Slug derived from task/feature name | `feature-auth-refactor` || `<component>` | Target component or module | `database` || `<version>` | Plan version (typically `v1`, `v2`) | `v1` |**Composite Example:**When combined in the output path template, these variables produce a concrete file path:```<workspace_root>/plan/<purpose>-<component>-<version>.md`$HOME/Desktop/Sandbox/plan/feature-auth-refactor-database-v1.md````
 
-## Output
-
-s
+## Outputs
 
 - A complete implementation plan at `<workspace_root>/plan/<purpose>-<component>-<version>.md`
 - A concise verification note when the task benefits from one
@@ -160,49 +155,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -232,18 +184,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 

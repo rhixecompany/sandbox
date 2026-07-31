@@ -58,25 +58,17 @@ Guide users through creating high-quality .prompt.md files with proper structure
 
 # prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
 
-## Goal
-
-Guide users through creating high-quality `.prompt.md` files by systematically gathering requirements and generating a complete, production-ready prompt file.
-
 ## Context
 
 Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask` and `agent` modes, the workflow asks exactly one focused question for each of the 9 topic areas (9 questions total) across identity, persona, task, context, instructions, output, tools, configuration, and validation. In `edit` mode, use the existing draft as the primary source and ask only targeted gap questions where needed.**Critical rules (must appear within the first 15% of execution):**- Never overwrite existing `.prompt.md` files without user confirmation- Always follow patterns from the 4 reference prompts listed in the Reference Patterns section of this prompt- Generate prompts optimized for AI consumption (token-efficient, structured)
 
-## Input
-
-s
+## Inputs
 
 - User's answers to 9 discovery questions (gathered interactively)
 - Existing prompt files in this repository for pattern reference
 - Workspace context for domain-specific customization
 
-## Output
-
-s
+## Outputs
 
 - A complete `.prompt.md` file with frontmatter, persona, task, instructions, context, output, and quality sections
 - A confirmation of the generated file path
@@ -163,49 +155,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Read existing code before writing new code.
-- Match project conventions and style.
-- Add tests for new functionality.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -235,18 +184,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
-## Skills Required
-
-See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
-
-| Skill | Purpose |
-| ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 

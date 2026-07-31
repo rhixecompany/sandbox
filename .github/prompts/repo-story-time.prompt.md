@@ -47,6 +47,7 @@ metadata:
   related_prompts:
     - repo.prompt.md
 ---
+
 ## Goal
 
 Transform any repository's git history into two deliverables:

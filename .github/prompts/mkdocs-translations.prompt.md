@@ -56,17 +56,13 @@ Generate a language translation for a mkdocs documentation stack.
 
 Use when you need to work on the current workspace or task.
 
-## Input
-
-s
+## Inputs
 
 - The current workspace, repo, or document state.
 - The specific request, diff, spec, or files provided by the user.
 - Any prompt variables, paths, or constraints named in the original instructions.
 
-## Output
-
-s
+## Outputs
 
 - A complete result that matches the prompt's purpose.
 - A concise verification note when the task benefits from one.
@@ -120,13 +116,17 @@ Translate all documentation from the `docs/docs/en` and `docs/docs/includes/en` 
 
 The following is the task list you must complete. Check each item off as it is done and report that to the user.
 
-- [ ] Begin by listing all files and subdirectories under `docs/docs/en`.- [ ] Then list all files and subdirectories under `docs/docs/includes/en`.- [ ] Translate **every file** in the list **one by one** in the order shown. Do not skip, reorder, or stop after a fixed number of files.- [ ] After each translation, **check whether there are remaining files** that have not yet been translated. If there are, **continue automatically** with the next file.- [ ] Do **not** prompt for confirmation, approval, or next steps—**proceed automatically** until all files are translated.- [ ] Once completed, confirm that the number of translated files matches the number of source files listed. If any files remain unprocessed, resume from where you left off.---
+- [ ] Begin by listing all files and subdirectories under `docs/docs/en`.- [ ] Then list all files and subdirectories under `docs/docs/includes/en`.- [ ] Translate **every file** in the list **one by one** in the order shown. Do not skip, reorder, or stop after a fixed number of files.
+- [ ] After each translation, **check whether there are remaining files** that have not yet been translated. If there are, **continue automatically** with the next file.
+- [ ] Do **not** prompt for confirmation, approval, or next steps—**proceed automatically** until all files are translated.
+- [ ] Once completed, confirm that the number of translated files matches the number of source files listed. If any files remain unprocessed, resume from where you left off.---
 
 ## Folder Structure and Output
 
 Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language
 
-> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
+> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.
+- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
 
 ## Include Path Updates
 
@@ -144,7 +144,10 @@ Before starting to create **any** new files, create a new git branch using the t
 
 ## Translating Includes (`docs/docs/includes/en`)
 
-- Create a new folder under `docs/docs/includes/` using the target language code provided by the user.- Translate each file using the same rules as above.- Maintain the same file and folder structure in the translated output.- Save each translated file in the appropriate target language folder.
+- Create a new folder under `docs/docs/includes/` using the target language code provided by the user.
+- Translate each file using the same rules as above.
+- Maintain the same file and folder structure in the translated output.
+- Save each translated file in the appropriate target language folder.
 
 ## Template References
 
@@ -169,49 +172,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
-
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
-## Rules
-
-See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-
-### Domain Rules
-
-- Fix root causes, not symptoms.
-- Check siblings for the same flaw.
-- Restore from git clean before retrying.
-
-### Standing Rules
-
-1. **Map before touch** — Understand before making changes.
-2. **Smallest safe change** — Minimal change that achieves the goal.
-3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
-
-## Phases
-
-### Phase 1: Intake
-
-- Read the request and identify scope.
-- Locate relevant files, diffs, references.
-
-### Phase 2: Execute
-
-- Perform work with smallest safe change set.
-- Keep steps explicit and reproducible.
-
-### Phase 3: Verify
-
-- Check result against goal, rules, inputs.
-- Confirm output is usable and complete.
-
-### Phase 4: Hand Off
-
-- Return final artifact or findings clearly.
-- Stop once the requested result is delivered.
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -234,10 +194,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-
-## Goal
-
-Generate a language translation for a mkdocs documentation stack.
 
 ## Subgoals
 

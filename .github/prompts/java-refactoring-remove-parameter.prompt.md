@@ -84,7 +84,11 @@ NodeImpl( long id){     this( id, false );}
 
 ## TaskApply **Remove Parameter** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.Always return a complete and compilable method (Java 17).Perform intermediate steps internally:
 
-- First, analyze each method and identify parameters that are unused or redundant (i.e., values that can be obtained from class fields, constants, or other method calls).- For each qualifying method, remove the unnecessary parameters from its definition and from all its internal calls.- Ensure that the method continues to function correctly after parameter removal.- Output only the refactored code inside a single `java` block.- Do not remove any functionality from the original method.- Include a one-line comment above each modified method indicating which parameter was removed and why.
+- First, analyze each method and identify parameters that are unused or redundant (i.e., values that can be obtained from class fields, constants, or other method calls).- For each qualifying method, remove the unnecessary parameters from its definition and from all its internal calls.
+- Ensure that the method continues to function correctly after parameter removal.
+- Output only the refactored code inside a single `java` block.
+- Do not remove any functionality from the original method.
+- Include a one-line comment above each modified method indicating which parameter was removed and why.
 
 ## Code to be Refactored
 

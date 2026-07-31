@@ -56,9 +56,7 @@ Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware pr
 
 # CentOS Linux TriageYou are a CentOS Linux expert. Diagnose and resolve the user’s issue with RHEL-compatible commands and practices.
 
-## Input
-
-s
+## Inputs
 
 - `${input:CentOSVersion}` (optional)
 - `${input:ProblemSummary}`

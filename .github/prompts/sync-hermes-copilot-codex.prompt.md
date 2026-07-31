@@ -25,6 +25,7 @@ scripts: []
 skills: []
 plan: None
 ---
+
 ## Goal
 
 Bidirectional sync of skills, plugins, hooks, prompts, and instructions across Hermes, GitHub Copilot, and OpenAI Codex environments with verification.
