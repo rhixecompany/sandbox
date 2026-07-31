@@ -1,50 +1,117 @@
 ---
+
 name: hermes-breakdown-test
+
 title: Hermes Breakdown Test
+
 description: 'Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ai-assistant
+
   - debugging
+
   - frontend
+
   - generator
+
   - ml
+
   - planning
+
   - prompts
+
   - specification
+
   - testing
+
   - typescript
+
 trigger: /hermes-breakdown-test
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalProduce a QA package that turns feature artifacts into a clear test strategy and issue checklist.
 
-## Context- Use when feature planning needs QA structure and test coverage guidance.- Prefer concrete, implementation-aware but not implementation-bound test planning.- Keep the output useful for QA, engineering, and issue triage.- Align the strategy with the available feature artifacts.
+## Goal
 
-## Inputs- Feature PRD path- `technical-breakdown.md`- `implementation-plan.md` (recommended)
+Produce a QA package that turns feature artifacts into a clear test strategy and issue checklist.
 
-## Outputs- `/docs/ways-of-work/plan/{epic}/{feature}/test-strategy.md`- `/docs/ways-of-work/plan/{epic}/{feature}/test-issues-checklist.md`- `/docs/ways-of-work/plan/{epic}/{feature}/qa-plan.md`
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)1. Include test scope and quality-risk mapping.2. Use ISTQB-style technique selection where helpful.3. Map the feature to ISO25010 quality characteristics.4. Include environment, data, and CI/CD considerations.5. Provide concrete issue templates for unit, integration, e2e, performance, and security coverage.6. Include labeling and prioritization guidance.
+- Use when feature planning needs QA structure and test coverage guidance.
+- Prefer concrete, implementation-aware but not implementation-bound test planning.
+- Keep the output useful for QA, engineering, and issue triage.
+- Align the strategy with the available feature artifacts.
 
-## Phases>
+## Input
 
-### Phase 1: Read the feature artifacts>> **Goal:** understand the feature and the likely QA surface.> **Full content:** `templates/hermes-breakdown-test/phases.md`
+s
 
-## Actions Summary1. Read the feature artifacts.2. Draft the test strategy, checklist, and QA plan.3. Add risk mapping and coverage guidance.4. Verify completeness and path correctness.
+- Feature PRD path
+- `technical-breakdown.md`
+- `implementation-plan.md` (recommended)
 
-## Template ReferencesTemplates in `templates/hermes-breakdown-test/`:- `phases.md`
+## Output
+
+s
+
+- `/docs/ways-of-work/plan/{epic}/{feature}/test-strategy.md`
+- `/docs/ways-of-work/plan/{epic}/{feature}/test-issues-checklist.md`
+- `/docs/ways-of-work/plan/{epic}/{feature}/qa-plan.md`
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+1. Include test scope and quality-risk mapping.
+2. Use ISTQB-style technique selection where helpful.
+3. Map the feature to ISO25010 quality characteristics.
+4. Include environment, data, and CI/CD considerations.
+5. Provide concrete issue templates for unit, integration, e2e, performance, and security coverage.
+6. Include labeling and prioritization guidance.
+
+## Phases
+
+### Phase 1: Read the feature artifacts
+
+> **Goal:** understand the feature and the likely QA surface.
+
+## Actions Summary
+
+1. Read the feature artifacts.
+2. Draft the test strategy, checklist, and QA plan.
+3. Add risk mapping and coverage guidance.
+4. Verify completeness and path correctness.
+
+## Template References
+
+Templates in `templates/hermes-breakdown-test/`:- `phases.md`
 
 ## Personas
 
@@ -56,7 +123,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -66,11 +132,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -89,25 +153,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -118,17 +184,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -138,7 +202,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -146,19 +209,17 @@ Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from f
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -171,8 +232,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -180,5 +239,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

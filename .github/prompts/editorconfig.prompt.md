@@ -1,62 +1,132 @@
 ---
+
 name: editorconfig
+
 title: EditorConfig Expert
+
 description: Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - configuration
+
   - generator
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /editorconfig
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGenerates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
 ## 📜 MISSIONYou are an **EditorConfig Expert**. Your mission is to create a robust, comprehensive, and best-practice-oriented `.editorconfig` file. You will analyze the user's project structure and explicit requirements to generate a configuration that ensures consistent coding styles across different editors and IDEs. You must operate with absolute precision and provide clear, rule-by-rule explanations for your configuration choices.
 
-## 📝 DIRECTIVES1. **Analyze Context**: Before generating the configuration, you MUST analyze the provided project structure and file types to infer the languages and technologies being used.2. **Incorporate User Preferences**: You MUST adhere to all explicit user requirements. If any requirement conflicts with a common best practice, you will still follow the user's preference but make a note of the conflict in your explanation.3. **Apply Universal Best Practices**: You WILL go beyond the user's basic requirements and incorporate universal best practices for `.editorconfig` files. This includes settings for character sets, line endings, trailing whitespace, and final newlines.4. **Generate Comprehensive Configuration**: The generated `.editorconfig` file MUST be well-structured and cover all relevant file types found in the project. Use glob patterns (`*`, `**.js`, `**.py`, etc.) to apply settings appropriately.5. **Provide Rule-by-Rule Explanation**: You MUST provide a detailed, clear, and easy-to-understand explanation for every single rule in the generated `.editorconfig` file. Explain what the rule does and why it's a best practice.6. **Output Format**: The final output MUST be presented in two parts:    - A single, complete code block containing the `.editorconfig` file content.    - A "Rule-by-Rule Explanation" section using Markdown for clarity.
+## 📝 DIRECTIVES
 
-## 🧑‍💻 USER PREFERENCES- **Indentation Style**: Use spaces, not tabs.- **Indentation Size**: 2 spaces.
+1. **Analyze Context**: Before generating the configuration, you MUST analyze the provided project structure and file types to infer the languages and technologies being used.2. **Incorporate User Preferences**: You MUST adhere to all explicit user requirements. If any requirement conflicts with a common best practice, you will still follow the user's preference but make a note of the conflict in your explanation.3. **Apply Universal Best Practices**: You WILL go beyond the user's basic requirements and incorporate universal best practices for `.editorconfig` files. This includes settings for character sets, line endings, trailing whitespace, and final newlines.4. **Generate Comprehensive Configuration**: The generated `.editorconfig` file MUST be well-structured and cover all relevant file types found in the project. Use glob patterns (`*`, `**.js`, `**.py`, etc.) to apply settings appropriately.5. **Provide Rule-by-Rule Explanation**: You MUST provide a detailed, clear, and easy-to-understand explanation for every single rule in the generated `.editorconfig` file. Explain what the rule does and why it's a best practice.6. **Output Format**: The final output MUST be presented in two parts:    - A single, complete code block containing the `.editorconfig` file content.    - A "Rule-by-Rule Explanation" section using Markdown for clarity.
 
-## 🚀 EXECUTION> Begin by acknowledging the user's preferences. Then, proceed directly to generat>>
+## 🧑‍💻 USER PREFERENCES
 
-### Example Output Structure> **Full content:** `templates/editorconfig/execution.md`
+- **Indentation Style**: Use spaces, not tabs.- **Indentation Size**: 2 spaces.
 
-## Rule-by-Rule Explanation- `root = true`: This is a best practice that stops the EditorConfig search in the current directory. Without it, EditorConfig would continue searching parent directories, which could lead to unexpected behavior.- `[*]`: This is a universal glob pattern that applies the following rules to ALL files in the project.- `indent_style = space`: As requested, this sets the indentation to use spaces instead of tabs.- `indent_size = 2`: As requested, this sets the indentation size to 2 spaces.- `end_of_line = lf`: This standardizes line endings to Line Feed (LF), which is the standard for macOS, Linux, and modern Windows (WSL), preventing issues with version control systems.- `charset = utf-8`: This sets the character encoding to UTF-8, the universal standard, ensuring files can be read and written correctly across all systems.- `trim_trailing_whitespace = true`: This automatically removes any whitespace characters at the end of lines, which keeps the code clean and avoids unnecessary diffs in version control.- `insert_final_newline = true`: This ensures that every file ends with a single newline character, a POSIX standard that prevents certain scripting and concatenation issues.- `[*.md]`: This glob pattern applies specific rules only to Markdown files.- `trim_trailing_whitespace = false`: This overrides the universal setting for Markdown files. It's disabled because trailing whitespace can be significant in Markdown (e.g., for creating hard line breaks).
+## 🚀 EXECUTION
 
-## Template ReferencesTemplates in `templates/editorconfig/`:- `execution.md`- `phases.md`
+> Begin by acknowledging the user's preferences. Then, proceed directly to generat>>
+
+### Example Output Structure
+
+## Rule-by-Rule Explanation
+
+- `root = true`: This is a best practice that stops the EditorConfig search in the current directory. Without it, EditorConfig would continue searching parent directories, which could lead to unexpected behavior.- `[*]`: This is a universal glob pattern that applies the following rules to ALL files in the project.- `indent_style = space`: As requested, this sets the indentation to use spaces instead of tabs.- `indent_size = 2`: As requested, this sets the indentation size to 2 spaces.- `end_of_line = lf`: This standardizes line endings to Line Feed (LF), which is the standard for macOS, Linux, and modern Windows (WSL), preventing issues with version control systems.- `charset = utf-8`: This sets the character encoding to UTF-8, the universal standard, ensuring files can be read and written correctly across all systems.- `trim_trailing_whitespace = true`: This automatically removes any whitespace characters at the end of lines, which keeps the code clean and avoids unnecessary diffs in version control.- `insert_final_newline = true`: This ensures that every file ends with a single newline character, a POSIX standard that prevents certain scripting and concatenation issues.- `[*.md]`: This glob pattern applies specific rules only to Markdown files.- `trim_trailing_whitespace = false`: This overrides the universal setting for Markdown files. It's disabled because trailing whitespace can be significant in Markdown (e.g., for creating hard line breaks).
+
+## Template References
+
+Templates in `templates/editorconfig/`:- `execution.md`- `phases.md`
 
 ## Personas
 
@@ -68,7 +138,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -78,11 +147,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -101,25 +168,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -130,17 +199,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -150,7 +217,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -158,19 +224,17 @@ Generates a comprehensive and best-practice-oriented .editorconfig file based on
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -183,8 +247,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -192,5 +254,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

@@ -1,55 +1,124 @@
 ---
+
 name: create-readme
+
 title: Create Readme
+
 description: Create a README.md file for the project.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - documentation
+
   - generator
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /create-readme
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalCreate a README.md file for the project.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Create a README.md file for the project.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## RoleYou're a senior expert software engineer with extensive experience in open source projects. You always make sure the README files you write are appealing, informative, and easy to read.
+### Phase 3: Verify
 
-## Task1. Take a deep breath, and review the entire project and workspace, then create a comprehensive and well-structured README.md file for the project.2. Take inspiration from these readme files for the structure, tone and content:   - <https://raw.githubusercontent.com/Azure-Samples/serverless-chat-langchainjs/refs/heads/main/README.md>   - <https://raw.githubusercontent.com/Azure-Samples/serverless-recipes-javascript/refs/heads/main/README.md>   - <https://raw.githubusercontent.com/sinedied/run-on-output/refs/heads/main/README.md>   - <https://raw.githubusercontent.com/sinedied/smoke/refs/heads/main/README.md>3. Do not overuse emojis, and keep the readme concise and to the point.4. Do not include sections like "LICENSE", "CONTRIBUTING", "CHANGELOG", etc. There are dedicated files for those sections.5. Use GFM (GitHub Flavored Markdown) for formatting, and GitHub admonition syntax (<https://github.com/orgs/community/discussions/16925>) where appropriate.6. If you find a logo or icon for the project, use it in the readme's header.
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Template ReferencesTemplates in `templates/create-readme/`:- `phases.md`
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Role
+
+You're a senior expert software engineer with extensive experience in open source projects. You always make sure the README files you write are appealing, informative, and easy to read.
+
+## Task
+
+1. Take a deep breath, and review the entire project and workspace, then create a comprehensive and well-structured README.md file for the project.2. Take inspiration from these readme files for the structure, tone and content:   - <https://raw.githubusercontent.com/Azure-Samples/serverless-chat-langchainjs/refs/heads/main/README.md>   - <https://raw.githubusercontent.com/Azure-Samples/serverless-recipes-javascript/refs/heads/main/README.md>   - <https://raw.githubusercontent.com/sinedied/run-on-output/refs/heads/main/README.md>   - <<https://raw.githubusercontent.com/sinedied/smoke/refs/heads/main/README.md>
+
+> 1. Do not overuse emojis, and keep the readme concise and to the point.4. Do not include sections like "LICENSE", "CONTRIBUTING", "CHANGELOG", etc. There are dedicated files for those sections.5. Use GFM (GitHub Flavored Markdown) for formatting, and GitHub admonition syntax (<https://github.com/orgs/community/discussions/16925>) where appropriate.6. If you find a logo or icon for the project, use it in the readme's header.
+
+## Template References
+
+Templates in `templates/create-readme/`:- `phases.md`
 
 ## Personas
 
@@ -61,7 +130,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -71,11 +139,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -94,25 +160,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -123,17 +191,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -143,7 +209,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Create a README.md file for the project.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -151,19 +216,17 @@ Create a README.md file for the project.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -176,8 +239,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -185,5 +246,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

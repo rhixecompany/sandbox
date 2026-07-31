@@ -1,64 +1,155 @@
 ---
+
 name: ef-core
+
 title: Entity Framework Core Best Practices
+
 description: Get best practices for Entity Framework Core.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /ef-core
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGet best practices for Entity Framework Core.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Get best practices for Entity Framework Core.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Data Context Design- Keep DbContext classes focused and cohesive- Use constructor injection for configuration options- Override OnModelCreating for fluent API configuration- Separate entity configurations using IEntityTypeConfiguration- Consider using DbContextFactory pattern for console apps or tests
+### Phase 3: Verify
 
-## Entity Design- Use meaningful primary keys (consider natural vs surrogate keys)- Implement proper relationships (one-to-one, one-to-many, many-to-many)- Use data annotations or fluent API for constraints and validations- Implement appropriate navigational properties- Consider using owned entity types for value objects
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Performance- Use AsNoTracking() for read-only queries- Implement pagination for large result sets with Skip() and Take()- Use Include() to eager load related entities when needed- Consider projection (Select) to retrieve only required fields- Use compiled queries for frequently executed queries- Avoid N+1 query problems by properly including related data
+### Phase 4: Hand off
 
-## Migrations- Create small, focused migrations- Name migrations descriptively- Verify migration SQL scripts before applying to production- Consider using migration bundles for deployment- Add data seeding through migrations when appropriate
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Querying- Use IQueryable judiciously and understand when queries execute- Prefer strongly-typed LINQ queries over raw SQL- Use appropriate query operators (Where, OrderBy, GroupBy)- Consider database functions for complex operations- Implement specifications pattern for reusable queries
+## Data Context Design
 
-## Change Tracking & Saving- Use appropriate change tracking strategies- Batch your SaveChanges() calls- Implement concurrency control for multi-user scenarios- Consider using transactions for multiple operations- Use appropriate DbContext lifetimes (scoped for web apps)
+- Keep DbContext classes focused and cohesive- Use constructor injection for configuration options- Override OnModelCreating for fluent API configuration- Separate entity configurations using IEntityTypeConfiguration- Consider using DbContextFactory pattern for console apps or tests
 
-## Security- Avoid SQL injection by using parameterized queries- Implement appropriate data access permissions- Be careful with raw SQL queries- Consider data encryption for sensitive information- Use migrations to manage database user permissions
+## Entity Design
 
-## Testing- Use in-memory database provider for unit tests- Create separate testing contexts with SQLite for integration tests- Mock DbContext and DbSet for pure unit tests- Test migrations in isolated environments- Consider snapshot testing for model changesWhen reviewing my EF Core code, identify issues and suggest improvements that follow these best practices.
+- Use meaningful primary keys (consider natural vs surrogate keys)- Implement proper relationships (one-to-one, one-to-many, many-to-many)- Use data annotations or fluent API for constraints and validations- Implement appropriate navigational properties- Consider using owned entity types for value objects
 
-## Template ReferencesTemplates in `templates/ef-core/`:- `phases.md`
+## Performance
+
+- Use AsNoTracking() for read-only queries
+- Implement pagination for large result sets with Skip() and Take()
+- Use Include() to eager load related entities when needed
+- Consider projection (Select) to retrieve only required fields
+- Use compiled queries for frequently executed queries
+- Avoid N+1 query problems by properly including related data
+
+## Migrations
+
+- Create small, focused migrations- Name migrations descriptively- Verify migration SQL scripts before applying to production- Consider using migration bundles for deployment- Add data seeding through migrations when appropriate
+
+## Querying
+
+- Use IQueryable judiciously and understand when queries execute- Prefer strongly-typed LINQ queries over raw SQL- Use appropriate query operators (Where, OrderBy, GroupBy)- Consider database functions for complex operations- Implement specifications pattern for reusable queries
+
+## Change Tracking & Saving
+
+- Use appropriate change tracking strategies- Batch your SaveChanges() calls- Implement concurrency control for multi-user scenarios- Consider using transactions for multiple operations- Use appropriate DbContext lifetimes (scoped for web apps)
+
+## Security
+
+- Avoid SQL injection by using parameterized queries
+- Implement appropriate data access permissions
+- Be careful with raw SQL queries
+- Consider data encryption for sensitive information
+- Use migrations to manage database user permissions
+
+## Test
+
+ing
+
+- Use in-memory database provider for unit tests
+- Create separate testing contexts with SQLite for integration tests
+- Mock DbContext and DbSet for pure unit tests
+- Test migrations in isolated environments
+- Consider snapshot testing for model changesWhen reviewing my EF Core code, identify issues and suggest improvements that follow these best practices.
+
+## Template References
+
+Templates in `templates/ef-core/`:- `phases.md`
 
 ## Personas
 
@@ -70,7 +161,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -80,11 +170,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -103,25 +191,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -132,17 +222,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -152,7 +240,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Get best practices for Entity Framework Core.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -160,19 +247,17 @@ Get best practices for Entity Framework Core.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -185,8 +270,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -194,5 +277,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

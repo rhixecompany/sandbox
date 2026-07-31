@@ -2,59 +2,21 @@
   "total_files": 216,
   "issue_counts": {
     "critical": 0,
-    "high": 20,
+    "high": 0,
     "medium": 0,
-    "info": 10
+    "info": 0
   },
   "files_no_frontmatter": [],
   "all_issues": {
-    "high": {
-      "MALFORMED_HEADINGS": [
-        "add-educational-comments",
-        "breakdown-plan",
-        "convert-plaintext-to-md",
-        "cosmosdb-datamodeling",
-        "create-github-action-workflow-specification",
-        "create-oo-component-documentation",
-        "create-tldr-page",
-        "csharp-mstest",
-        "java-add-graalvm-native-image-support",
-        "php-mcp-server-generator",
-        "prompts-strict-template",
-        "repo",
-        "ruby-mcp-server-generator",
-        "rust-mcp-server-generator",
-        "shuffle-json-data",
-        "structured-autonomy-plan",
-        "tldr-prompt",
-        "update-avm-modules-in-bicep",
-        "workspace-consolidate",
-        "write-coding-standards-from-file"
-      ]
-    },
-    "info": {
-      "RULES_INLINE_NOT_SHARED": [
-        "agents-system-prompt-context-fix",
-        "audit-skills-judge-fix",
-        "execute-all-prompts",
-        "repo-management",
-        "repo-research-pipeline",
-        "repo-story-time",
-        "sync-hermes-copilot-codex",
-        "test-providers-models",
-        "web-research-pipeline"
-      ],
-      "DESCRIPTION_TOO_SHORT": [
-        "pl"
-      ]
-    },
     "critical": {},
-    "medium": {}
+    "high": {},
+    "medium": {},
+    "info": {}
   },
   "per_file": [
     {
       "name": "add-educational-comments",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "agents-fix",
@@ -66,7 +28,7 @@
     },
     {
       "name": "agents-system-prompt-context-fix",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "ai-prompt-engineering-safety-review",
@@ -90,7 +52,7 @@
     },
     {
       "name": "audit-skills-judge-fix",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "az-cost-optimize",
@@ -130,7 +92,7 @@
     },
     {
       "name": "breakdown-plan",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "breakdown-test",
@@ -178,7 +140,7 @@
     },
     {
       "name": "convert-plaintext-to-md",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "copilot-instructions-blueprint-generator",
@@ -186,7 +148,7 @@
     },
     {
       "name": "cosmosdb-datamodeling",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "create-agentsmd",
@@ -198,7 +160,7 @@
     },
     {
       "name": "create-github-action-workflow-specification",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "create-github-issue-feature-from-specification",
@@ -226,7 +188,7 @@
     },
     {
       "name": "create-oo-component-documentation",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "create-readme",
@@ -250,7 +212,7 @@
     },
     {
       "name": "create-tldr-page",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "csharp-async",
@@ -266,7 +228,7 @@
     },
     {
       "name": "csharp-mstest",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "csharp-nunit",
@@ -366,7 +328,7 @@
     },
     {
       "name": "execute-all-prompts",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "execute-plan",
@@ -458,7 +420,7 @@
     },
     {
       "name": "java-add-graalvm-native-image-support",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "java-docs",
@@ -574,11 +536,11 @@
     },
     {
       "name": "php-mcp-server-generator",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "pl",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "plan-audit",
@@ -666,7 +628,7 @@
     },
     {
       "name": "prompts-strict-template",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "pytest-coverage",
@@ -714,19 +676,19 @@
     },
     {
       "name": "repo-management",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "repo-research-pipeline",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "repo-story-time",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "repo",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "review-and-refactor",
@@ -734,7 +696,7 @@
     },
     {
       "name": "ruby-mcp-server-generator",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "run-session-agentsmd-workflow",
@@ -742,7 +704,7 @@
     },
     {
       "name": "rust-mcp-server-generator",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "security",
@@ -774,7 +736,7 @@
     },
     {
       "name": "shuffle-json-data",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "skills-debug-prompt",
@@ -802,7 +764,7 @@
     },
     {
       "name": "structured-autonomy-plan",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "suggest-awesome-github-copilot",
@@ -814,7 +776,7 @@
     },
     {
       "name": "sync-hermes-copilot-codex",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "task-implementation",
@@ -830,7 +792,7 @@
     },
     {
       "name": "test-providers-models",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "testing",
@@ -838,7 +800,7 @@
     },
     {
       "name": "tldr-prompt",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "typescript-mcp-server-generator",
@@ -866,7 +828,7 @@
     },
     {
       "name": "update-avm-modules-in-bicep",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "update-docs-on-code-change",
@@ -894,7 +856,7 @@
     },
     {
       "name": "web-research-pipeline",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "what-context-needed",
@@ -902,11 +864,11 @@
     },
     {
       "name": "workspace-consolidate",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "write-coding-standards-from-file",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "write-tests",

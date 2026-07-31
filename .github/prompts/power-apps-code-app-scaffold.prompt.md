@@ -1,45 +1,87 @@
 ---
+
 name: power-apps-code-app-scaffold
+
 title: Power Apps Code Apps Project Scaffolding
+
 description: 'Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - audit
+
   - frontend
+
   - prompts
+
   - specification
+
 trigger: /power-apps-code-app-scaffold
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration.
 
 # Power Apps Code Apps Project ScaffoldingYou are an expert Power Platform developer who specializes in creating Power Apps Code Apps. Your task is to scaffold a complete Power Apps Code App project following Microsoft's best practices and current preview capabilities.
 
-## ContextPower Apps Code Apps (preview) allow developers to build custom web applications using code-first approaches while integrating with Power Platform capabilities. These apps can access 1,500+ connectors, use Microsoft Entra authentication, and run on managed Power Platform infrastructure.
+## Context
 
-## Task> Create a complete Power Apps Code App project structure with the following compo>>
+Power Apps Code Apps (preview) allow developers to build custom web applications using code-first approaches while integrating with Power Platform capabilities. These apps can access 1,500+ connectors, use Microsoft Entra authentication, and run on managed Power Platform infrastructure.
 
-### 1. Project Initialization> **Full content:** `templates/power-apps-code-app-scaffold/task.md`
+## Task
 
-## Implementation Guidelines>
+> Create a complete Power Apps Code App project structure with the following compo>>
 
-### Prerequisites to Mention>> - Visual Studio Code with Power Platform Tools extension> **Full content:** `templates/power-apps-code-app-scaffold/implementation_guidelines.md`
+### 1. Project Initialization
 
-## Deliverables1. Complete project scaffolding with all necessary files2. Working sample application with connector integration3. Comprehensive documentation and setup instructions4. Development and deployment scripts5. TypeScript configuration optimized for Power Apps Code Apps6. Best practices implementation examplesEnsure the generated project follows Microsoft's official Power Apps Code Apps documentation and samples from <https://github.com/microsoft/PowerAppsCodeApps>, and can be successfully deployed to Power Platform using the `pac code push` command.
+> **Full content:**
 
-## Template ReferencesDetailed templates in `templates/power-apps-code-app-scaffold/`:- `implementation_guidelines.md`- `task.md`
+## Implementation Guidelines
+
+### Prerequisites to Mention
+
+> - Visual Studio Code with Power Platform Tools extension
+
+## Deliverable
+
+s
+
+1. Complete project scaffolding with all necessary files
+2. Working sample application with connector integration
+3. Comprehensive documentation and setup instructions
+4. Development and deployment scripts
+5. TypeScript configuration optimized for Power Apps Code Apps
+6. Best practices implementation examplesEnsure the generated project follows Microsoft's official Power Apps Code Apps documentation and samples from <https://github.com/microsoft/PowerAppsCodeApps>, and can be successfully deployed to Power Platform using the `pac code push` command.
+
+## Template References
+
+Detailed templates in `templates/power-apps-code-app-scaffold/`:- `implementation_guidelines.md`- `task.md`
 
 ## Personas
 
@@ -51,7 +93,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -61,11 +102,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -84,25 +123,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -113,17 +154,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -136,19 +175,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -161,8 +198,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -170,5 +205,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

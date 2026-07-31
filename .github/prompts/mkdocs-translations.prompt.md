@@ -1,67 +1,154 @@
 ---
+
 name: mkdocs-translations
+
 title: MkDocs AI Translator
+
 description: Generate a language translation for a mkdocs documentation stack.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - documentation
+
   - generator
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /mkdocs-translations
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGenerate a language translation for a mkdocs documentation stack.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Generate a language translation for a mkdocs documentation stack.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## RoleYou are a professional technical writer and translator.
+### Phase 3: Verify
 
-## Required Input**Before proceeding, ask the user to specify the target translation language and locale code.**  Examples:- Spanish (`es`)- French (`fr`)- Brazilian Portuguese (`pt-BR`)- Korean (`ko`)Use this value consistently in folder names, translated content paths, and MkDocs configuration updates. Once confirmed, proceed with the instructions below.---
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## ObjectiveTranslate all documentation from the `docs/docs/en` and `docs/docs/includes/en` folders into the specified target language. Preserve the original folder structure and all Markdown formatting.---
+### Phase 4: Hand off
 
-## File Listing and Translation OrderThe following is the task list you must complete. Check each item off as it is done and report that to the user.- [ ] Begin by listing all files and subdirectories under `docs/docs/en`.- [ ] Then list all files and subdirectories under `docs/docs/includes/en`.- [ ] Translate **every file** in the list **one by one** in the order shown. Do not skip, reorder, or stop after a fixed number of files.- [ ] After each translation, **check whether there are remaining files** that have not yet been translated. If there are, **continue automatically** with the next file.- [ ] Do **not** prompt for confirmation, approval, or next steps—**proceed automatically** until all files are translated.- [ ] Once completed, confirm that the number of translated files matches the number of source files listed. If any files remain unprocessed, resume from where you left off.---
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Folder Structure and OutputBefore starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language>`.- Create a new folder under `docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
+## Role
 
-## Include Path Updates- Update include references in files to reflect the new locale.    Example:     `includes/en/introduction-event.md` → `includes/es/introduction-event.md`    Replace `es` with the actual locale code provided by the user.---
+You are a professional technical writer and translator.
 
-## MkDocs Configuration Update- [ ] Modify the `mkdocs.yml` configuration:  - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code.  - [ ] Provide appropriate translations for:    - [ ] `nav_translations`    - [ ] `admonition_translations`---
+## Required Input
 
-## Translation Rules> - Use accurate, clear, and technically appropriate translations.> - Always use computer industry-standard terminology.> **Full content:** `templates/mkdocs-translations/translation_rules.md`
+**Before proceeding, ask the user to specify the target translation language and locale code.**  Examples:
 
-## Translating Includes (`docs/docs/includes/en`)- Create a new folder under `docs/docs/includes/` using the target language code provided by the user.- Translate each file using the same rules as above.- Maintain the same file and folder structure in the translated output.- Save each translated file in the appropriate target language folder.
+- Spanish (`es`)- French (`fr`)- Brazilian Portuguese (`pt-BR`)- Korean (`ko`)Use this value consistently in folder names, translated content paths, and MkDocs configuration updates. Once confirmed, proceed with the instructions below.---
 
-## Template ReferencesTemplates in `templates/mkdocs-translations/`:- `folder_structure_and_outp.md`- `phases.md`- `translation_rules.md`
+## Objective
+
+Translate all documentation from the `docs/docs/en` and `docs/docs/includes/en` folders into the specified target language. Preserve the original folder structure and all Markdown formatting.---
+
+## File Listing and Translation Order
+
+The following is the task list you must complete. Check each item off as it is done and report that to the user.
+
+- [ ] Begin by listing all files and subdirectories under `docs/docs/en`.- [ ] Then list all files and subdirectories under `docs/docs/includes/en`.- [ ] Translate **every file** in the list **one by one** in the order shown. Do not skip, reorder, or stop after a fixed number of files.- [ ] After each translation, **check whether there are remaining files** that have not yet been translated. If there are, **continue automatically** with the next file.- [ ] Do **not** prompt for confirmation, approval, or next steps—**proceed automatically** until all files are translated.- [ ] Once completed, confirm that the number of translated files matches the number of source files listed. If any files remain unprocessed, resume from where you left off.---
+
+## Folder Structure and Output
+
+Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language
+
+> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
+
+## Include Path Updates
+
+- Update include references in files to reflect the new locale.    Example:     `includes/en/introduction-event.md` → `includes/es/introduction-event.md`    Replace `es` with the actual locale code provided by the user.---
+
+## MkDocs Configuration Update
+
+- [ ] Modify the `mkdocs.yml` configuration:  - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code.  - [ ] Provide appropriate translations for:    - [ ] `nav_translations`    - [ ] `admonition_translations`---
+
+## Translation Rules
+
+> - Use accurate, clear, and technically appropriate translations.
+> - Always use computer industry-standard terminology.
+> **Full content:**
+
+## Translating Includes (`docs/docs/includes/en`)
+
+- Create a new folder under `docs/docs/includes/` using the target language code provided by the user.- Translate each file using the same rules as above.- Maintain the same file and folder structure in the translated output.- Save each translated file in the appropriate target language folder.
+
+## Template References
+
+Templates in `templates/mkdocs-translations/`:- `folder_structure_and_outp.md`- `phases.md`- `translation_rules.md`
 
 ## Personas
 
@@ -73,7 +160,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -83,11 +169,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -106,25 +190,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -135,17 +221,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -155,7 +239,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Generate a language translation for a mkdocs documentation stack.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -163,19 +246,17 @@ Generate a language translation for a mkdocs documentation stack.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -188,8 +269,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -197,5 +276,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

@@ -1,87 +1,185 @@
 ---
+
 name: sql-code-review
+
 title: SQL Code Review
+
 description: 'Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - audit
+
   - backend
+
   - data
+
   - database
+
   - ml
+
   - prompts
+
   - security
+
   - specification
+
   - sql
+
   - typescript
+
 trigger: /sql-code-review
+
 tested_with: 'GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025'
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalUniversal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## 🔒 Security Analysis>
+### Phase 3: Verify
 
-### SQL Injection Prevention>> -- ❌ CRITICAL: SQL Injection vulnerability> **Full content:** `templates/sql-code-review/security_analysis.md`
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## ⚡ Performance Optimization>
+### Phase 4: Hand off
 
-### Query Structure Analysis>> -- ❌ BAD: Inefficient query patterns> **Full content:** `templates/sql-code-review/performance_optimization.md`
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## 🛠️ Code Quality & Maintainability>
+## 🔒 Security Analysis
 
-### SQL Style & Formatting>> -- ❌ BAD: Poor formatting and style> **Full content:** `templates/sql-code-review/code_quality__maintainability.md`
+### SQL Injection Prevention
 
-## 🗄️ Database-Specific Best Practices> -- Use JSONB for JSON data> CREATE TABLE events (> **Full content:** `templates/sql-code-review/database-specific_best_practic.md`
+> -- ❌ CRITICAL: SQL Injection vulnerability
+
+## ⚡ Performance Optimization
+
+### Query Structure Analysis
+
+> -- ❌ BAD: Inefficient query patterns
+
+## 🛠️ Code Quality & Maintainability
+
+### SQL Style & Formatting
+
+> -- ❌ BAD: Poor formatting and style
+
+## 🗄️ Database-Specific Best Practices
+
+> -- Use JSONB for JSON data
+> CREATE TABLE events (
+> **Full content:**
 
 ## 🧪 Testing & Validation
 
-### Data Integrity Checks```sql-- Verify referential integritySELECT o.user_idFROM orders oLEFT JOIN users u ON o.user_id = u.idWHERE u.id IS NULL;-- Check for data consistencySELECT COUNT(*) as inconsistent_recordsFROM productsWHERE price < 0 OR stock_quantity < 0;```
+### Data Integrity Checks
 
-### Performance Testing- **Execution Plans**: Review query execution plans- **Load Testing**: Test queries with realistic data volumes- **Stress Testing**: Verify performance under concurrent load- **Regression Testing**: Ensure optimizations don't break functionality
+```
+sql-- Verify referential integritySELECT o.user_idFROM orders oLEFT JOIN users u ON o.user_id = u.idWHERE u.id IS NULL;-- Check for data consistencySELECT COUNT(*) as inconsistent_recordsFROM productsWHERE price < 0 OR stock_quantity < 0;
+```
 
-## 📊 Common Anti-Patterns>
+### Performance Testing
 
-### N+1 Query Problem>> -- ❌ BAD: N+1 queries in application code> **Full content:** `templates/sql-code-review/common_anti-patterns.md`
+- **Execution Plans**: Review query execution plans
+- **Load Testing**: Test queries with realistic data volumes
+- **Stress Testing**: Verify performance under concurrent load
+- **Regression Testing**: Ensure optimizations don't break functionality
 
-## 📋 SQL Review Checklist> - [ ] All user inputs are parameterized> - [ ] No dynamic SQL construction with string concatenation> **Full content:** `templates/sql-code-review/sql_review_checklist.md`
+## 📊 Common Anti-Patterns
+
+### N+1 Query Problem
+
+> -- ❌ BAD: N+1 queries in application code
+
+## 📋 SQL Review Checklist
+
+> - [ ] All user inputs are parameterized
+> - [ ] No dynamic SQL construction with string concatenation
+> **Full content:**
 
 ## 🎯 Review Output Format
 
-### Issue Template````
+### Issue Template
 
-## [PRIORITY] [CATEGORY]: [Brief Description]> **Location**: [Table/View/Procedure name and line number if applicable]> **Issue**: [Detailed explanation of the problem]> **Full content:** `templates/sql-code-review/priority_category_brief_descri.md`
+````
 
-## Template ReferencesDetailed templates in `templates/sql-code-review/`:- `code_quality__maintainability.md`- `common_anti-patterns.md`- `database-specific_best_practic.md`- `performance_optimization.md`- `priority_category_brief_descri.md`- `security_analysis.md`- `sql_review_checklist.md`
+## [PRIORITY] [CATEGORY]: [Brief Description]
+
+> **Location**: [Table/View/Procedure name and line number if applicable]
+> **Issue**: [Detailed explanation of the problem]
+> **Full content:**
+
+## Template References
+
+Detailed templates in `templates/sql-code-review/`:- `code_quality__maintainability.md`- `common_anti-patterns.md`- `database-specific_best_practic.md`- `performance_optimization.md`- `priority_category_brief_descri.md`- `security_analysis.md`- `sql_review_checklist.md`
 
 ## Personas
 
@@ -93,7 +191,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -103,11 +200,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -125,7 +220,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -145,7 +239,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -154,7 +247,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -166,7 +258,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -175,14 +266,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -196,7 +285,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -208,8 +296,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -217,5 +303,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 

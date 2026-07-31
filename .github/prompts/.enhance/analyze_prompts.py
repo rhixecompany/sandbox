@@ -110,7 +110,7 @@ def check_file(path):
     # DRY compliance — check for inline core rules instead of reference
     if "## Rules" in found_sections:
         # Check if it's a reference to shared or inline
-        rules_section_match = re.search(r'## Rules\s*\n(.*?)(?=^## |\Z)', body, re.MULTILINE | re.DOTALL)
+        rules_section_match = re.search(r'^## Rules\s*\n(.*?)(?=^## |\Z)', body, re.MULTILINE | re.DOTALL)
         if rules_section_match:
             rules_text = rules_section_match.group(1)
             if "_shared/rules-core" not in rules_text and "rules-core" not in rules_text:

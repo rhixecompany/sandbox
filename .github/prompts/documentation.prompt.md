@@ -1,61 +1,136 @@
 ---
+
 name: documentation
+
 title: Documentation
+
 description: Comprehensive documentation prompt aligned to repository documentation standards.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - api
+
   - architecture
+
   - documentation
+
   - frontend
+
   - markdown
+
   - ml
+
   - prompts
+
   - skills
+
   - typescript
+
 trigger: /documentation
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalUse when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 
-## DescriptionCreate and maintain documentation that is accurate, complete, and updated in the same change set as code updates.
+## Goal
 
-## ContextUse this prompt when writing or updating markdown docs, TSDoc comments, API docs, README sections, architecture notes, or doc examples.
+Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 
-## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)- Technical writing for developers and maintainers- API and architecture documentation design- Consistency and change-tracking discipline
+## Description
 
-## Subagents| Subagent | Role | When to Use || --- | --- | --- || Docs Writer | Drafts and restructures docs for clarity | Always || API Documenter | Ensures endpoint docs are accurate and complete | API or SDK updates || Reviewer | Checks doc drift and missing sections | Final verification |
+Create and maintain documentation that is accurate, complete, and updated in the same change set as code updates.
 
-## Personas- Docs Writer: Produces concise, accurate docs with practical examples.- API Documenter: Maps implementation to endpoint and schema documentation.- Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Update documentation in the same PR or change as code modifications.- Use TSDoc for non-trivial types, functions, hooks, and component props.- Ensure README setup and usage instructions remain executable.- Keep examples current and aligned with current APIs and config.- Validate internal links and remove obsolete references.
+Use this prompt when writing or updating markdown docs, TSDoc comments, API docs, README sections, architecture notes, or doc examples.
 
-## Phases>
+## Skills Required
 
-### Phase 1: Documentation Impact Analysis>>
+> See full table with per-domain purposes:
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-### Phase 2: Authoring and Synchronization> **Full content:** `templates/documentation/phases.md`
+- Technical writing for developers and maintainers
+- API and architecture documentation design
+- Consistency and change-tracking discipline
 
-## Steps1. Identify code changes that alter behavior, APIs, setup, or configuration.2. Map each change to required documentation updates.3. Update README, API docs, and relevant architecture references.4. Refresh examples, TSDoc, and configuration documentation.5. Validate links, terminology consistency, and maintenance readiness.
+## Subagents
 
-## Tasks- Task 1.1 — Build a documentation impact matrix for all relevant code changes.- Task 1.2 — Update user-facing docs such as README and usage guides.- Task 1.3 — Update developer-facing docs including TSDoc and architecture notes.- Task 1.4 — Verify examples, links, and API references for correctness.- Task 1.5 — Publish a concise change summary of documentation updates.
+| Subagent | Role | When to Use || --
 
-## Subtasks- Subtask 1.1.1 — Identify public API and configuration surface changes.- Subtask 1.2.1 — Revise setup, usage, and troubleshooting sections when needed.- Subtask 1.3.1 — Add or refresh TSDoc on complex types and hooks.- Subtask 1.4.1 — Statistically validate snippets for syntax and symbol accuracy.- Subtask 1.5.1 — Note any known doc debt and planned follow-ups.
+- | --- | --- || Docs Writer | Drafts and restructures docs for clarity | Always || API Documenter | Ensures endpoint docs are accurate and complete | API or SDK updates || Reviewer | Checks doc drift and missing sections | Final verification |
 
-## Actions Summary1. Analyze doc impact.2. Update all affected docs in the same change.3. Validate correctness and link integrity.4. Deliver a maintainable, synchronized documentation set.
+## Personas
 
-## Template ReferencesTemplates in `templates/documentation/`:- `phases.md`
+- Docs Writer: Produces concise, accurate docs with practical examples.
+- API Documenter: Maps implementation to endpoint and schema documentation.
+- Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Update documentation in the same PR or change as code modifications.
+- Use TSDoc for non-trivial types, functions, hooks, and component props.
+- Ensure README setup and usage instructions remain executable.
+- Keep examples current and aligned with current APIs and config.
+- Validate internal links and remove obsolete references.
+
+## Phases
+
+### Phase 1: Documentation Impact Analysis
+
+### Phase 2: Authoring and Synchronization
+
+## Steps
+
+1. Identify code changes that alter behavior, APIs, setup, or configuration.
+2. Map each change to required documentation updates.
+3. Update README, API docs, and relevant architecture references.
+4. Refresh examples, TSDoc, and configuration documentation.
+5. Validate links, terminology consistency, and maintenance readiness.
+
+## Tasks
+
+- Task 1.1 — Build a documentation impact matrix for all relevant code changes.- Task 1.2 — Update user-facing docs such as README and usage guides.- Task 1.3 — Update developer-facing docs including TSDoc and architecture notes.- Task 1.4 — Verify examples, links, and API references for correctness.- Task 1.5 — Publish a concise change summary of documentation updates.
+
+## Subtasks
+
+- Subtask 1.1.1 — Identify public API and configuration surface changes.- Subtask 1.2.1 — Revise setup, usage, and troubleshooting sections when needed.- Subtask 1.3.1 — Add or refresh TSDoc on complex types and hooks.- Subtask 1.4.1 — Statistically validate snippets for syntax and symbol accuracy.- Subtask 1.5.1 — Note any known doc debt and planned follow-ups.
+
+## Actions Summary
+
+1. Analyze doc impact.
+2. Update all affected docs in the same change.
+3. Validate correctness and link integrity.
+4. Deliver a maintainable, synchronized documentation set.
+
+## Template References
+
+Templates in `templates/documentation/`:- `phases.md`
 
 ## Personas
 
@@ -67,7 +142,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -77,11 +151,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -100,25 +172,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -129,17 +203,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -149,7 +221,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Comprehensive documentation prompt aligned to repository documentation standards.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -157,19 +228,17 @@ Comprehensive documentation prompt aligned to repository documentation standards
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -182,8 +251,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -191,5 +258,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

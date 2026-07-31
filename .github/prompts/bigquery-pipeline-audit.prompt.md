@@ -1,51 +1,98 @@
 ---
+
 name: bigquery-pipeline-audit
+
 title: 'BigQuery Pipeline Audit: Cost, Safety and Production Readiness'
+
 description: 'Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - api
+
   - audit
+
   - configuration
+
   - database
+
   - ml
+
   - prompts
+
   - python
+
   - security
+
   - sql
+
   - typescript
+
 trigger: /bigquery-pipeline-audit
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations.
 
-## A) COST EXPOSURE: What will actually get billed?Locate every BigQuery job trigger (`client.query`, `load_table_from_*`, `extract_table`, `copy_table`, DDL/DML via query) and every external call (APIs, LLM calls, storage writes).For each, answer:- Is this inside a loop, retry block, or async gather?- What is the realistic worst-case call count?- For each `client.query`, is `QueryJobConfig.maximum_bytes_billed` set? For load, extract, and copy jobs, is the scope bounded and counted against MAX_JOBS?- Is the same SQL and params being executed more than once in a single run? Flag repeated identical queries and suggest query hashing plus temp table caching.**Flag immediately if:**- Any BQ query runs once per date or once per entity in a loop- Worst-case BQ job count exceeds 20- `maximum_bytes_billed` is missing on any `client.query` call---
+## A) COST EXPOSURE: What will actually get billed?
 
-## B) DRY RUN AND EXECUTION MODESVerify a `--mode` flag exists with at least `dry_run` and `execute` options.- `dry_run` must print the plan and estimated scope with zero billed BQ execution (BigQuery dry-run estimation via job config is allowed) and zero external API or LLM calls- `execute` requires explicit confirmation for prod (`--env=prod --confirm`)- Prod must not be the default environmentIf missing, propose a minimal `argparse` patch with safe defaults.---
+Locate every BigQuery job trigger (`client.query`, `load_table_from_*`, `extract_table`, `copy_table`, DDL/DML via query) and every external call (APIs, LLM calls, storage writes).For each, answer:
 
-## C) BACKFILL AND LOOP DESIGN**Hard fail if:** the script runs one BQ query per date or per entity in a loop.Check that date-range backfills use one of:1. A single set-based query with `GENERATE_DATE_ARRAY`2. A staging table loaded with all dates then one join query3. Explicit chunks with a hard `MAX_CHUNKS` capAlso check:- Is the date range bounded by default (suggest 14 days max without `--override`)?- If the script crashes mid-run, is it safe to re-run without double-writing?- For backdated simulations, verify data is read from time-consistent snapshots (`FOR SYSTEM_TIME AS OF`, partitioned as-of tables, or dated snapshot tables). Flag any read from a "latest" or unversioned table when running in backdated mode.Suggest a concrete rewrite if the current approach is row-by-row.---
+- Is this inside a loop, retry block, or async gather?- What is the realistic worst-case call count?- For each `client.query`, is `QueryJobConfig.maximum_bytes_billed` set? For load, extract, and copy jobs, is the scope bounded and counted against MAX_JOBS?- Is the same SQL and params being executed more than once in a single run? Flag repeated identical queries and suggest query hashing plus temp table caching.**Flag immediately if:**- Any BQ query runs once per date or once per entity in a loop- Worst-case BQ job count exceeds 20- `maximum_bytes_billed` is missing on any `client.query` call---
 
-## D) QUERY SAFETY AND SCAN SIZEFor each query, check:- **Partition filter** is on the raw column, not `DATE(ts)`, `CAST(...)`, or any function that prevents pruning- **No `SELECT *`**: only columns actually used downstream- **Joins will not explode**: verify join keys are unique or appropriately scoped and flag any potential many-to-many- **Expensive operations** (`REGEXP`, `JSON_EXTRACT`, UDFs) only run after partition filtering, not on full table scansProvide a specific SQL fix for any query that fails these checks.---
+## B) DRY RUN AND EXECUTION MODESVerify a `--mode` flag exists with at least `dry_run` and `execute` options.
 
-## E) SAFE WRITES AND IDEMPOTENCYIdentify every write operation. Flag plain `INSERT`/append with no dedup logic.Each write should use one of:1. `MERGE` on a deterministic key (e.g., `entity_id + date + model_version`)2. Write to a staging table scoped to the run, then swap or merge into final3. Append-only with a dedupe view: `QUALIFY ROW_NUMBER() OVER (PARTITION BY <key>) = 1`Also check:- Will a re-run create duplicate rows?- Is the write disposition (`WRITE_TRUNCATE` vs `WRITE_APPEND`) intentional and documented?- Is `run_id` being used as part of the merge or dedupe key? If so, flag it. `run_id` should be stored as a metadata column, not as part of the uniqueness key, unless you explicitly want multi-run history.State the recommended approach and the exact dedup key for this codebase.---
+- `dry_run` must print the plan and estimated scope with zero billed BQ execution (BigQuery dry-run estimation via job config is allowed) and zero external API or LLM calls- `execute` requires explicit confirmation for prod (`--env=prod --confirm`)- Prod must not be the default environmentIf missing, propose a minimal `argparse` patch with safe defaults.---
 
-## F) OBSERVABILITY: Can you debug a failure?Verify:- Failures raise exceptions and abort with no silent `except: pass` or warn-only- Each BQ job logs: job ID, bytes processed or billed when available, slot milliseconds, and duration- A run summary is logged or written at the end containing: `run_id, env, mode, date_range, tables written, total BQ jobs, total bytes`- `run_id` is present and consistent across all log linesIf `run_id` is missing, propose a one-line fix: `run_id = run_id or datetime.utcnow().strftime('%Y%m%dT%H%M%S')`---
+## C) BACKFILL AND LOOP DESIGN
 
-## Final**1. PASS / FAIL** with specific reasons per section (A to F). **2. Patch list** ordered by risk, referencing exact functions to change. **3. If FAIL: Top 3 cost risks** with a rough worst-case estimate (e.g., "loop over 90 dates x 3 retries = 270 BQ jobs").
+**Hard fail if:** the script runs one BQ query per date or per entity in a loop.Check that date-range backfills use one of:1. A single set-based query with `GENERATE_DATE_ARRAY`2. A staging table loaded with all dates then one join query3. Explicit chunks with a hard `MAX_CHUNKS` capAlso check:- Is the date range bounded by default (suggest 14 days max without `--override`)?- If the script crashes mid-run, is it safe to re-run without double-writing?- For backdated simulations, verify data is read from time-consistent snapshots (`FOR SYSTEM_TIME AS OF`, partitioned as-of tables, or dated snapshot tables). Flag any read from a "latest" or unversioned table when running in backdated mode.Suggest a concrete rewrite if the current approach is row-by-row.---
 
-## Template ReferencesTemplates in `templates/bigquery-pipeline-audit/`:- `a_cost_exposure_what_will.md`- `c_backfill_and_loop_desig.md`- `e_safe_writes_and_idempot.md`
+## D) QUERY SAFETY AND SCAN SIZEFor each query, check:
+
+- **Partition filter** is on the raw column, not `DATE(ts)`, `CAST(...)`, or any function that prevents pruning- **No `SELECT *`**: only columns actually used downstream- **Joins will not explode**: verify join keys are unique or appropriately scoped and flag any potential many-to-many- **Expensive operations** (`REGEXP`, `JSON_EXTRACT`, UDFs) only run after partition filtering, not on full table scansProvide a specific SQL fix for any query that fails these checks.---
+
+## E) SAFE WRITES AND IDEMPOTENCYIdentify every write operation. Flag plain `INSERT`/append with no dedup logic.Each write should use one of:1. `MERGE` on a deterministic key (e.g., `entity_id + date + model_version`)2. Write to a staging table scoped to the run, then swap or merge into final3. Append-only with a dedupe view: `QUALIFY ROW_NUMBER() OVER (PARTITION BY <key
+
+> ) = 1`Also check:- Will a re-run create duplicate rows?- Is the write disposition (`WRITE_TRUNCATE` vs `WRITE_APPEND`) intentional and documented?- Is`run_id` being used as part of the merge or dedupe key? If so, flag it. `run_id` should be stored as a metadata column, not as part of the uniqueness key, unless you explicitly want multi-run history.State the recommended approach and the exact dedup key for this codebase.---
+
+## F) OBSERVABILITY: Can you debug a failure?Verify:
+
+- Failures raise exceptions and abort with no silent `except: pass` or warn-only- Each BQ job logs: job ID, bytes processed or billed when available, slot milliseconds, and duration- A run summary is logged or written at the end containing: `run_id, env, mode, date_range, tables written, total BQ jobs, total bytes`- `run_id` is present and consistent across all log linesIf `run_id` is missing, propose a one-line fix: `run_id = run_id or datetime.utcnow().strftime('%Y%m%dT%H%M%S')`---
+
+## Final
+
+**1. PASS / FAIL** with specific reasons per section (A to F). **2. Patch list** ordered by risk, referencing exact functions to change. **3. If FAIL: Top 3 cost risks** with a rough worst-case estimate (e.g., "loop over 90 dates x 3 retries = 270 BQ jobs").
+
+## Template References
+
+Templates in `templates/bigquery-pipeline-audit/`:- `a_cost_exposure_what_will.md`- `c_backfill_and_loop_desig.md`- `e_safe_writes_and_idempot.md`
 
 ## Personas
 
@@ -57,7 +104,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -67,11 +113,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -90,25 +134,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -119,17 +165,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -142,19 +186,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -167,8 +209,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -176,5 +216,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

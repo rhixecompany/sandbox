@@ -83,6 +83,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 The prompt library at `./.github/prompts/` contains `.prompt.md` files that may be partially enhanced. Target state: every prompt has all 13 structural sections (Goal, Subgoals, Personas, Personality, Context, Rules, Phases, Best Practices, Verification Checklist, Skills Required, MCP Servers & Tools, Tasks, Dependencies) with shared templates referenced via DRY, not inlined.
 
 Enhancement scripts live in `.enhance/`:
+
 - `comprehensive_enhance.py` — Appends missing sections using shared templates
 - `analyze_prompts.py` — Scans all prompts for frontmatter validity, section coverage, DRY compliance
 - `repair_yaml_v2.py` — Targeted YAML quote repair for stubborn files
@@ -101,7 +102,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Idempotent** — Every script and workflow must be safe to re-run without side effects or duplicate content.
 3. **No backup artifacts** — Use git for rollback. Never create `.bak`, `.old`, or timestamped copies.
 4. **YAML validity is mandatory** — All 214 prompts must pass `yaml.safe_load` without errors. Broken YAML blocks the entire pipeline.
-5. **Quote all YAML values with `: ` or `#` or `[]{}`** — These are YAML mapping indicators and will break parse without proper quoting. Prefer single quotes for values containing `"`; double quotes otherwise.
+5. **Quote all YAML values with `:` or `#` or `[]{}`** — These are YAML mapping indicators and will break parse without proper quoting. Prefer single quotes for values containing `"`; double quotes otherwise.
 6. **Verify before claim** — After each phase, run the analyzer and check `--dry-run` output before declaring phase complete.
 
 ### Standing Rules
@@ -130,7 +131,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ### Phase 3: YAML Repair (if needed)
 
 1. Identify parse failures and categorize root cause:
-   - Unquoted `: ` in values → `repair_yaml_v2.py` or manual single-quote fix
+   - Unquoted `:` in values → `repair_yaml_v2.py` or manual single-quote fix
    - Unescaped internal `"` → switch to single-quote wrapping
    - Copilot-style frontmatter not migrated → add `trigger:`, `mode: agent`, proper `description:`
 2. Fix each category with targeted patches. Never batch-fix blindly.
@@ -172,7 +173,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Discovery | Analyzer runs, sample prompts reviewed, templates read |
 | 2 | Enhancement | `comprehensive_enhance.py` runs without errors, all prompts updated |
 | 3 | YAML | All prompts pass `yaml.safe_load` — zero parse failures |
@@ -200,7 +201,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow and mandatory startup |
 | `subagent-driven-development` | Implement -> spec-review -> quality-review pipeline within each task |
 | `brainstorming` | Ideation for enhancement strategy and edge case identification |
@@ -212,7 +213,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 ## MCP Servers & Tools
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `filesystem` (MCP) | Read/write prompt files, list directories |
 | `ast-grep` (MCP) | Code search across prompts for patterns |
 | `memory` (MCP) | Persistent cross-session fact storage |

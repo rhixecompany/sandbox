@@ -30,10 +30,13 @@ metadata:
   hermes: {}
 ---
 ## Goal
+
 Web search → extract full content → save as formatted markdown. **Tavily-first approach:** prefer `mcp__tavily__tavily_search` + `mcp__tavily__tavily_extract`, fall back to `mcp__fetch__get_markdown`, then `web_extract`.
 
 ## Workflow
+
 Load the `web-research-pipeline` skill (this is a delegation prompt):
+
 1. **Phase 1: Preflight** — Verify Tavily MCP server healthy
 2. **Phase 2: Search** — `mcp__tavily__tavily_search` with bounded queries; use `search_depth: advanced` for thorough results, `time_range: year` for recency
 3. **Phase 3: Extract** — `mcp__tavily__tavily_extract` → `mcp__fetch__get_markdown` → `web_extract`
@@ -42,6 +45,9 @@ Load the `web-research-pipeline` skill (this is a delegation prompt):
 6. **Phase 6: Report** — Summary table
 
 ## Rules
+>
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
 1. **Tavily-first** — Prefer `mcp__tavily__tavily_search` over other backends.
 2. **Multi-backend fallback** — Try all backends before declaring a URL failed.
 3. **Never fabricate** — Every finding must trace to a real search or extraction.
@@ -58,7 +64,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -68,11 +73,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
-
 
 ## Best Practices
 
@@ -83,17 +86,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -106,19 +107,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -131,8 +130,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -140,5 +137,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

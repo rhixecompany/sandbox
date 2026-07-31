@@ -1,50 +1,95 @@
 ---
+
 name: csharp-mcp-server-generator
+
 title: 'Generate C# MCP Server'
+
 description: 'Generate a complete MCP server project in C# with tools, prompts, and proper configuration.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - backend
+
   - configuration
+
   - csharp
+
   - dotnet
+
   - frontend
+
   - generator
+
   - mcp
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /csharp-mcp-server-generator
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Generate a complete MCP server project in C# with tools, prompts, and proper configuration.
 
 # Generate C# MCP ServerCreate a complete Model Context Protocol (MCP) server in C# with the following specifications:
 
-## Requirements1. **Project Structure**: Create a new C# console application with proper directory structure2. **NuGet Packages**: Include ModelContextProtocol (prerelease) and Microsoft.Extensions.Hosting3. **Logging Configuration**: Configure all logs to stderr to avoid interfering with stdio transport4. **Server Setup**: Use the Host builder pattern with proper DI configuration5. **Tools**: Create at least one useful tool with proper attributes and descriptions6. **Error Handling**: Include proper error handling and validation
+## Requirements
 
-## Implementation Details>
+1. **Project Structure**: Create a new C# console application with proper directory structure
+2. **NuGet Packages**: Include ModelContextProtocol (prerelease) and Microsoft.Extensions.Hosting
+3. **Logging Configuration**: Configure all logs to stderr to avoid interfering with stdio transport
+4. **Server Setup**: Use the Host builder pattern with proper DI configuration
+5. **Tools**: Create at least one useful tool with proper attributes and descriptions
+6. **Error Handling**: Include proper error handling and validation
 
-### Basic Project Setup>> - Use .NET 8.0 or later> **Full content:** `templates/csharp-mcp-server-generator/implementation_details.md`
+## Implementation Details
 
-## Example Tool Types to Consider- File operations (read, write, search)- Data processing (transform, validate, analyze)- External API integrations (HTTP requests)- System operations (execute commands, check status)- Database operations (query, update)
+### Basic Project Setup
 
-## Testing Guidance- Explain how to run the server- Provide example commands to test with MCP clients- Include troubleshooting tipsGenerate a complete, production-ready MCP server with comprehensive documentation and error handling.
+> - Use .NET 8.0 or later
 
-## Template ReferencesTemplates in `templates/csharp-mcp-server-generator/`:- `implementation_details.md`
+## Example Tool Types to Consider
+
+- File operations (read, write, search)- Data processing (transform, validate, analyze)- External API integrations (HTTP requests)- System operations (execute commands, check status)- Database operations (query, update)
+
+## Test
+
+ing Guidance- Explain how to run the server- Provide example commands to test with MCP clients- Include troubleshooting tipsGenerate a complete, production-ready MCP server with comprehensive documentation and error handling.
+
+## Template References
+
+Templates in `templates/csharp-mcp-server-generator/`:- `implementation_details.md`
 
 ## Personas
 
@@ -56,7 +101,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -66,11 +110,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -89,25 +131,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -118,17 +162,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -141,19 +183,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -166,8 +206,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -176,4 +214,18 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
 
+## Related Prompts
 
+Other language variants of this MCP server generator:
+
+| Language | Prompt |
+| ---------- | -------- |
+| TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
+| Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
+| Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |
+| Go | [`go-mcp-server-generator.prompt.md`](go-mcp-server-generator.prompt.md) |
+| Swift | [`swift-mcp-server-generator.prompt.md`](swift-mcp-server-generator.prompt.md) |
+| Kotlin | [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md) |
+| Java | [`java-mcp-server-generator.prompt.md`](java-mcp-server-generator.prompt.md) |
+| PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
+| Ruby | [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md) |

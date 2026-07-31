@@ -1,58 +1,133 @@
 ---
+
 name: context-map
+
 title: Context Map
+
 description: Build a dependency and reference map before making changes so implementation starts from the right files.
+
 version: 2.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills:
+
   - codemap
+
 formatter: default
+
 plan: None
+
 dependencies:
+
   - skill:codemap
+
 tags:
+
   - audit
+
   - frontend
+
   - prompts
+
   - specification
+
   - testing
+
   - typescript
+
 trigger: /context-map
+
 metadata:
+
   hermes: None
+
   related_skills:
+
     - codemap
+
 ---
+
 ## Goal
 
 Build a dependency and reference map before making changes so implementation starts from the right files.
 
 # context-map> Build a dependency-aware context map before implementation begins.
 
-## GoalBuild a dependency and reference map before making changes so implementation starts from the right files.
+## Goal
 
-## Context- Use when the task needs a safe pre-change inventory- Focus on direct dependencies, related tests, and nearby patterns- Keep the map concrete and file-driven- Do not proceed to implementation until the map is reviewed
+Build a dependency and reference map before making changes so implementation starts from the right files.
 
-## Inputs- Task description- Optional target area, feature, or bug report- Optional constraints or known files
+## Context
 
-## Outputs- A context map with files to modify, dependencies, tests, and reference patterns- A short risk assessment- Present the context map as a Markdown table with columns: File | Role (modify/dependency/test) | Notes- Follow with a bulleted risk assessment of 3-5 items max
+- Use when the task needs a safe pre-change inventory
+- Focus on direct dependencies, related tests, and nearby patterns
+- Keep the map concrete and file-driven
+- Do not proceed to implementation until the map is reviewed
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 12. Search for the files directly related to the task3. Identify imports, exports, and other dependencies4. Identify the likely test files5. If no related test files are found, explicitly state "No related tests identified" in the map and flag it as a risk item6. Find 2-3 existing code examples in the codebase that demonstrate the same pattern (for example, same hook usage, same module export style) that the new change should follow7. Call out breaking-change risks clearly8. Stop after mapping; do not implement yet
+## Input
 
-## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose || --- | --- || `codemap` | Codebase discovery and dependency mapping (loads symbol tables, dependency trees, and cross-file references) |
+s
 
-## Phases>
+- Task description
+- Optional target area, feature, or bug report
+- Optional constraints or known files
 
-### Phase 1: Discover the scope>> **Goal:** find the files and relationships that matter.>> **Full content:** `templates/context-map/phases.md`
+## Output
 
-## Actions Summary1. **Phase 1:** Discover the scope2. **Phase 2:** Map dependencies, tests, and reference patterns3. **Phase 3:** Record the risks and review completeness4. **Phase 4:** Return the context map and stop
+s
 
-## Template ReferencesTemplates in `templates/context-map/`:- `phases.md`
+- A context map with files to modify, dependencies, tests, and reference patterns
+- A short risk assessment
+- Present the context map as a Markdown table with columns: File | Role (modify/dependency/test) | Notes
+- Follow with a bulleted risk assessment of 3-5 items max
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 1
+2. Search for the files directly related to the task
+3. Identify imports, exports, and other dependencies
+4. Identify the likely test files
+5. If no related test files are found, explicitly state "No related tests identified" in the map and flag it as a risk item
+6. Find 2-3 existing code examples in the codebase that demonstrate the same pattern (for example, same hook usage, same module export style) that the new change should follow
+7. Call out breaking-change risks clearly
+8. Stop after mapping; do not implement yet
+
+## Skills Required
+
+> See full table with per-domain purposes:
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
+| --- | --- |
+| `codemap` | Codebase discovery and dependency mapping (loads symbol tables, dependency trees, and cross-file references) |
+
+## Phases
+
+### Phase 1: Discover the scope
+
+> **Goal:** find the files and relationships that matter.>
+
+## Actions Summary
+
+1. **Phase 1:** Discover the scope
+2. **Phase 2:** Map dependencies, tests, and reference patterns
+3. **Phase 3:** Record the risks and review completeness
+4. **Phase 4:** Return the context map and stop
+
+## Template References
+
+Templates in `templates/context-map/`:- `phases.md`
 
 ## Personas
 
@@ -64,7 +139,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -74,11 +148,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -97,25 +169,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -126,17 +200,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -149,19 +221,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -174,8 +244,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -183,5 +251,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

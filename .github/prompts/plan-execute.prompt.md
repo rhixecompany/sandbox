@@ -1,60 +1,127 @@
 ---
+
 name: plan-execute
+
 title: Execute Implementation Plan
+
 description: 'Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md` or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent (consolidated)
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills:
+
   - plans-and-specs
+
   - subagent-driven-development
+
   - verification-before-completion
+
   - writing-plans
+
 formatter: default
+
 plan: None
+
 dependencies:
+
   - skill:plans-and-specs
+
   - skill:subagent-driven-development
+
   - skill:verification-before-completion
+
   - skill:writing-plans
+
   - tool:terminal
+
   - tool:search_files
+
 tags:
+
   - debugging
+
   - planning
+
   - prompts
+
   - typescript
+
 trigger: /plan-execute
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md` or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.
 
 > **Shared template references:**>> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
-## GoalExecute a structured implementation plan from start to finish. Load the plan file, process each phase in order with verification gates, and report completion or blockers.**Consolidates:** All previous `execute-plan-*` and `execute-*plan*` prompts(comicwise-session, debugger, eslint, optimization, setup, skills-debug,acpx-agent-integration, bash-scripts-plan, dev-init, docs, hermes-config,orchestrator, per-repo, prompt-conversion, sandbox-projects-merge, etc.)
+## Goal
 
-## Input- **Plan file path** — e.g. `prompts/plan-xxx.prompt.md` or `.hermes/plans/xxx.md`- **Optional overrides** — phase to start from, env vars, profile selections
+Execute a structured implementation plan from start to finish. Load the plan file, process each phase in order with verification gates, and report completion or blockers.**Consolidates:** All previous `execute-plan-*` and `execute-*plan*` prompts(comicwise-session, debugger, eslint, optimization, setup, skills-debug,acpx-agent-integration, bash-scripts-plan, dev-init, docs, hermes-config,orchestrator, per-repo, prompt-conversion, sandbox-projects-merge, etc.)
 
-## Core RulesSee [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additional execution-specific rules:1. **Strict sequential** — Never skip ahead. Complete each phase, verify its gate, then proceed.2. **No silent failures** — If a phase fails, stop and report before retrying or continuing.3. **Git checkpoint per phase** — After each successful phase, `git add && git commit` with descriptive message.4. **Idempotent phases** — Each phase should be safe to re-run if it fails mid-way.5. **Plan is read-only** — Never modify the plan file during execution; log progress separately.
+## Input
+
+- **Plan file path** — e.g. `prompts/plan-xxx.prompt.md` or `.hermes/plans/xxx.md`
+- **Optional overrides** — phase to start from, env vars, profile selections
+
+## Core Rules
+
+See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additional execution-specific rules:1. **Strict sequential** — Never skip ahead. Complete each phase, verify its gate, then proceed.2. **No silent failures** — If a phase fails, stop and report before retrying or continuing.3. **Git checkpoint per phase** — After each successful phase, `git add && git commit` with descriptive message.4. **Idempotent phases** — Each phase should be safe to re-run if it fails mid-way.5. **Plan is read-only** — Never modify the plan file during execution; log progress separately.
 
 ## Workflow
 
-### Phase 1: Load plan1. Read the plan file (`read_file`).2. Parse phases, gates, dependencies, and outputs.3. Verify all referenced skills/prompts/tools exist.4. Write session start marker to `.hermes/plans/docs/<plan-name>-progress.md`.
+### Phase 1: Load plan
 
-### Phase 2: Execute phasesFor each phase in order:1. **Pre-check** — Confirm verification gate from previous phase is met.2. **Execute** — Run the steps using appropriate tools.3. **Verify** — Run the phase's verification gate explicitly.4. **Checkpoint** — `git add -A && git commit -m "feat(plan): <plan-name> phase <N>: <name>"`5. **Log** — Update progress doc with phase result.
+1. Read the plan file (`read_file`).
+2. Parse phases, gates, dependencies, and outputs.
+3. Verify all referenced skills/prompts/tools exist.
+4. Write session start marker to `.hermes/plans/docs/<plan-name>-progress.md`.
 
-### Phase 3: Final verification1. Run the plan's full verification checklist.2. Confirm all outputs exist and match expected format.3. Write session summary to progress doc.
+### Phase 2: Execute phases
 
-### Phase 4: ReportSummarise:- Phases completed / total- Any skipped phases and why- All verification gates passed- Outputs produced- Git commit SHAs for each phase
+For each phase in order:1. **Pre-check** — Confirm verification gate from previous phase is met.2. **Execute** — Run the steps using appropriate tools.3. **Verify** — Run the phase's verification gate explicitly.4. **Checkpoint** — `git add -A && git commit -m "feat(plan): <plan-name
 
-## Verification Checklist- [ ] Plan loaded and parsed successfully- [ ] All phase dependencies resolved- [ ] Each phase executed in strict order- [ ] Verification gate passed for every phase- [ ] Git checkpoint committed after each phase- [ ] No dangling processes or background jobs- [ ] All expected outputs exist and are valid- [ ] Progress doc written with complete trail
+> phase <N>: <name>"`5. **Log** — Update progress doc with phase result.
+
+### Phase 3: Final verification
+
+1. Run the plan's full verification checklist.
+2. Confirm all outputs exist and match expected format.
+3. Write session summary to progress doc.
+
+### Phase 4: Report
+
+Summarise:
+
+- Phases completed / total- Any skipped phases and why- All verification gates passed- Outputs produced- Git commit SHAs for each phase
+
+## Verification Checklist
+
+- [ ] Plan loaded and parsed successfully
+- [ ] All phase dependencies resolved
+- [ ] Each phase executed in strict order
+- [ ] Verification gate passed for every phase
+- [ ] Git checkpoint committed after each phase
+- [ ] No dangling processes or background jobs
+- [ ] All expected outputs exist and are valid
+- [ ] Progress doc written with complete trail
 
 ## Personas
 
@@ -66,7 +133,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -76,11 +142,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -99,25 +163,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -128,17 +194,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -151,19 +215,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -176,8 +238,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -185,5 +245,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

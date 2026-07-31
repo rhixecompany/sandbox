@@ -1,66 +1,139 @@
 ---
+
 name: create-technical-spike
+
 title: Create Technical Spike Document
+
 description: Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - architecture
+
   - generator
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /create-technical-spike
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
 
 title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴 Not Started"priority: "${input:Priority|High}"timebox: "${input:Timebox|1 week}"created: [YYYY-MM-DD]updated: [YYYY-MM-DD]owner: "${input:Owner}"---# ${input:SpikeTitle}
 
-## Summary**Spike Objective:** [Clear, specific question or decision that needs resolution]**Why This Matters:** [Impact on development/architecture decisions]**Timebox:** [How much time allocated to this spike]**Decision Deadline:** [When this must be resolved to avoid blocking development]
+## Summary
 
-## Research Question(s)**Primary Question:** [Main technical question that needs answering]**Secondary Questions:**- [Related question 1]- [Related question 2]- [Related question 3]
+**Spike Objective:** [Clear, specific question or decision that needs resolution]**Why This Matters:** [Impact on development/architecture decisions]**Timebox:** [How much time allocated to this spike]**Decision Deadline:** [When this must be resolved to avoid blocking development]
+
+## Research Question(s)
+
+**Primary Question:** [Main technical question that needs answering]**Secondary Questions:**
+
+- [Related question 1]- [Related question 2]- [Related question 3]
 
 ## Investigation Plan
 
-### Research Tasks- [ ] [Specific research task 1]- [ ] [Specific research task 2]- [ ] [Specific research task 3]- [ ] [Create proof of concept/prototype]- [ ] [Document findings and recommendations]
+### Research Tasks
 
-### Success Criteria**This spike is complete when:**- [ ] [Specific criteria 1]- [ ] [Specific criteria 2]- [ ] [Clear recommendation documented]- [ ] [Proof of concept completed (if applicable)]
+- [ ] [Specific research task 1]
+- [ ] [Specific research task 2]
+- [ ] [Specific research task 3]
+- [ ] [Create proof of concept/prototype]
+- [ ] [Document findings and recommendations]
 
-## Technical Context**Related Components:** [List system components affected by this decision]**Dependencies:** [What other spikes or decisions depend on resolving this]**Constraints:** [Known limitations or requirements that affect the solution]
+### Success Criteria
+
+**This spike is complete when:**
+
+- [ ] [Specific criteria 1]
+- [ ] [Specific criteria 2]
+- [ ] [Clear recommendation documented]
+- [ ] [Proof of concept completed (if applicable)]
+
+## Technical Context
+
+**Related Components:** [List system components affected by this decision]**Dependencies:** [What other spikes or decisions depend on resolving this]**Constraints:** [Known limitations or requirements that affect the solution]
 
 ## Research Findings
 
-### Investigation Results[Document research findings, test results, and evidence gathered]
+### Investigation Results
 
-### Prototype/Testing Notes[Results from any prototypes, spikes, or technical experiments]
+[Document research findings, test results, and evidence gathered]
 
-### External Resources- [Link to relevant documentation]- [Link to API references]- [Link to community discussions]- [Link to examples/tutorials]
+### Prototype/Testing Notes
+
+[Results from any prototypes, spikes, or technical experiments]
+
+### External Resources
+
+- [Link to relevant documentation]
+- [Link to API references]
+- [Link to community discussions]
+- [Link to examples/tutorials]
 
 ## Decision
 
-### Recommendation[Clear recommendation based on research findings]
+### Recommendation
 
-### Rationale[Why this approach was chosen over alternatives]
+[Clear recommendation based on research findings]
 
-### Implementation Notes[Key considerations for implementation]
+### Rationale
 
-### Follow-up Actions- [ ] [Action item 1]- [ ] [Action item 2]- [ ] [Update architecture documents]- [ ] [Create implementation tasks]
+[Why this approach was chosen over alternatives]
 
-## Status History| Date   | Status         | Notes                    || ------ | -------------- | ------------------------ || [Date] | 🔴 Not Started | Spike created and scoped || [Date] | 🟡 In Progress | Research commenced       || [Date] | 🟢 Complete    | [Resolution summary]     |---_Last updated: [Date] by [Name]_```
+### Implementation Notes
 
-## Categories for Technical Spikes> - Third-party API capabilities and limitations> - Integration patterns and authentication> **Full content:** `templates/create-technical-spike/categories_for_technical_spike.md`
+[Key considerations for implementation]
+
+### Follow-up Actions
+
+- [ ] [Action item 1]
+- [ ] [Action item 2]
+- [ ] [Update architecture documents]
+- [ ] [Create implementation tasks]
+
+## Status History
+
+| Date   | Status         | Notes                    || -----
+
+- | -------------- | ------------------------ || [Date] | 🔴 Not Started | Spike created and scoped || [Date] | 🟡 In Progress | Research commenced       || [Date] | 🟢 Complete    | [Resolution summary]     |---_Last updated: [Date] by [Name]_```
+
+## Categories for Technical Spikes
+
+> - Third-party API capabilities and limitations
+> - Integration patterns and authentication
+> **Full content:**
 
 ## File Naming ConventionsUse descriptive, kebab-case names that indicate the category and specific unknown:**API/Integration Examples:**- `api-copilot-chat-integration-spike.md`- `api-azure-speech-realtime-spike.md`- `api-vscode-extension-capabilities-spike.md`**Performance Examples:**- `performance-audio-processing-latency-spike.md`- `performance-extension-host-limitations-spike.md`- `performance-webrtc-reliability-spike.md`**Architecture Examples:**- `architecture-voice-pipeline-design-spike.md`- `architecture-state-management-spike.md`- `architecture-error-handling-strategy-spike.md`
 
@@ -68,15 +141,31 @@ title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴
 
 ## Research Strategy
 
-### Phase 1: Information Gathering1. **Search existing documentation** using search/fetch tools2. **Analyze codebase** for existing patterns and constraints3. **Research external resources** (APIs, libraries, examples)
+### Phase 1: Information Gathering
 
-### Phase 2: Validation & Testing1. **Create focused prototypes** to test specific hypotheses2. **Run targeted experiments** to validate assumptions3. **Document test results** with supporting evidence
+1. **Search existing documentation** using search/fetch tools
+2. **Analyze codebase** for existing patterns and constraints
+3. **Research external resources** (APIs, libraries, examples)
 
-### Phase 3: Decision & Documentation1. **Synthesize findings** into clear recommendations2. **Document implementation guidance** for development team3. **Create follow-up tasks** for implementation
+### Phase 2: Validation & Testing
 
-## Tools Usage- **search/searchResults:** Research existing solutions and documentation- **fetch/githubRepo:** Analyze external APIs, libraries, and examples- **codebase:** Understand existing system constraints and patterns- **runTasks:** Execute prototypes and validation tests- **editFiles:** Update research progress and findings- **vscodeAPI:** Test VS Code extension capabilities and limitationsFocus on time-boxed research that resolves critical technical decisions and unblocks development progress.
+1. **Create focused prototypes** to test specific hypotheses
+2. **Run targeted experiments** to validate assumptions
+3. **Document test results** with supporting evidence
 
-## Template ReferencesDetailed templates in `templates/create-technical-spike/`:- `categories_for_technical_spike.md`
+### Phase 3: Decision & Documentation
+
+1. **Synthesize findings** into clear recommendations
+2. **Document implementation guidance** for development team
+3. **Create follow-up tasks** for implementation
+
+## Tools Usage
+
+- **search/searchResults:** Research existing solutions and documentation- **fetch/githubRepo:** Analyze external APIs, libraries, and examples- **codebase:** Understand existing system constraints and patterns- **runTasks:** Execute prototypes and validation tests- **editFiles:** Update research progress and findings- **vscodeAPI:** Test VS Code extension capabilities and limitationsFocus on time-boxed research that resolves critical technical decisions and unblocks development progress.
+
+## Template References
+
+Detailed templates in `templates/create-technical-spike/`:- `categories_for_technical_spike.md`
 
 ## Personas
 
@@ -88,7 +177,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -98,11 +186,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -121,25 +207,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -150,17 +238,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -173,19 +259,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -198,8 +282,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -207,5 +289,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

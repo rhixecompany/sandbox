@@ -39,15 +39,18 @@ metadata:
   hermes: {}
 ---
 ## Goal
+
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
 
 ## Context
+
 - **User**: Alexa (UK-based, Site Supervisor/Manager background, Rexos Properties May 2025–June 2026)
 - **Workspace**: `C:\Users\Alexa\Desktop\SandBox\`
 - **Prior Work**: UK Earnings Kit created 2026-07-24 at `uk-earnings-kit/` (11 files, 4 folders, 3 Tavily searches, 25+ platforms documented)
 - **Standing Goal**: "Better than Outlier/Attapoll" — declared complete 2026-07-25 but needs continuous validation
 
 ## Personas
+
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
@@ -57,6 +60,7 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **QA Engineer** | Signup flow testing, validation gates, quality checks |
 
 ## Personality
+
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
@@ -65,9 +69,11 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Encourage**: Evidence-based decisions, MCP-first tooling, parallel execution
 
 ## Rules
+
 See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
+
 - **No fabricated pay rates** — mark "unverified" if no independent source
 - **UK tax compliance first** — trading allowance (£1,000) is a shield, not a loophole
 - **Scam elimination criteria are mandatory** — auto-reject platforms failing thresholds
@@ -75,6 +81,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - **Minimum 3 independent sources per platform** — Reddit, Trustpilot, official, user reports
 
 ### Standing Rules
+
 1. **Map before touch** — Inventory all prior session data before new research
 2. **Parallel first** — Dispatch subagents for independent categories simultaneously
 3. **Smallest safe change** — Update files incrementally, verify each write
@@ -84,26 +91,31 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 0: Context Recovery & Inventory (MANDATORY FIRST)
+
 - `session_search(query="uk earnings kit OR outlier OR attapoll OR UK earning platforms", limit=5)`
 - `search_files(target="files", path="C:/Users/Alexa/Desktop/SandBox", file_glob="**/*.md")`
 - `honcho_search(query="UK earning platforms OR Outlier OR Attapoll OR survey sites OR AI training UK")`
 - `honcho_context(peer="user")`
 
 ### Phase 1: Systematic Platform Discovery
+
 **1.1 Category Mapping** — Use `/brainstorming` for 10 platform categories
 **1.2 Parallel Web Research** — Dispatch 8 leaf subagents via `/subagent-driven-development`:
-  - AI Training / Data Annotation (Outlier alternatives)
-  - Survey & Micro-tasks (Attapoll alternatives)
-  - User Testing / UX Research
-  - Market Research Panels
-  - Bank Switching / Financial Incentives
-  - Cashback / Receipt Scanning
-  - Mystery Shopping / Field Tasks
-  - Freelance / Gig Platforms (UK construction/property/facilities)
+
+- AI Training / Data Annotation (Outlier alternatives)
+- Survey & Micro-tasks (Attapoll alternatives)
+- User Testing / UX Research
+- Market Research Panels
+- Bank Switching / Financial Incentives
+- Cashback / Receipt Scanning
+- Mystery Shopping / Field Tasks
+- Freelance / Gig Platforms (UK construction/property/facilities)
 **1.3 MCP Tool Enrichment** — Tavily (search/extract/research) + Firecrawl (scrape/crawl) for each platform
 
 ### Phase 2: Rigorous Filtering & Scoring
+
 **2.1 Scoring Matrix** (weighted):
+
 - Effective £/hour: 30%
 - Reliability: 20%
 - UK Accessibility: 15%
@@ -113,6 +125,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Time to First £: 5%
 
 **2.2 Elimination Criteria** (auto-reject):
+
 - Pay < £5/hr effective
 - No UK payout method (PayPal UK, UK bank transfer, Wise GBP)
 - >30% disqualification rate on surveys
@@ -122,12 +135,15 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Requires US SSN/ITIN/W-8BEN without UK alternative
 
 ### Phase 3: Deep Validation (Top 20 Platforms)
+
 **3.1 Sign-up Flow Testing** — Browser automation for each top candidate
 **3.2 Sentiment Mining** — Reddit/Trustpilot/Forum searches via Tavily
 **3.3 Tax & Legal Compliance** — HMRC trading allowance, SA thresholds, expense tracking
 
 ### Phase 4: Output Generation — Complete Execution Kit
+
 Create folder structure at `uk-earnings-kit/` with:
+
 - `platforms/` — per-category deep-dives
 - `references/` — master CSV, scoring XLSX, links, tax guidance, scam warnings
 - `trackers/` — earnings XLSX, tax tracker, bank switch log, weekly planner, referral tracker
@@ -136,6 +152,7 @@ Create folder structure at `uk-earnings-kit/` with:
 - `RESEARCH_REPORT.md` — executive summary, top 5 recommendations, 30-day action plan
 
 ### Phase 5: Verification & Handoff
+
 - All platforms ≥3 independent sources
 - Pay rates verified via recent (≤3 months) UK user reports
 - Tax guidance cites HMRC.gov.uk pages
@@ -145,6 +162,7 @@ Create folder structure at `uk-earnings-kit/` with:
 - Update `SESSION_REPORT.md`
 
 ## Best Practices
+
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content
@@ -157,7 +175,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Inventory | All prior session data loaded and referenced |
 | 2 | Discovery | 8 categories researched, ≥50 platforms found |
 | 3 | Scoring | All platforms scored, elimination criteria applied |
@@ -166,13 +184,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 6 | Quality | Gates passed, session report updated |
 
 ## Dependencies
+
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Skills Required
+
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `user-communication-preferences` | Concise, action-first, DRY output |
 | `brainstorming` | Structured idea generation for categories |
@@ -182,10 +202,11 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `web-research-pipeline` | Web search → extract → scrape → save workflow |
 
 ## MCP Servers & Tools
+
 The following MCP servers and tools are available. Use them in preference to native equivalents per MCP-first tooling policy.
 
 | MCP Server | Tools Used |
-|------------|------------|
+| ------------ | ------------ |
 | `tavily` | `tavily_search`, `tavily_extract`, `tavily_research`, `tavily_crawl`, `tavily_map` |
 | `firecrawl` | `firecrawl_scrape`, `firecrawl_crawl`, `firecrawl_map`, `firecrawl_search`, `firecrawl_extract` |
 | `playwright` | `browser_navigate`, `browser_snapshot`, `browser_click`, `browser_type`, `browser_wait_for` |
@@ -194,6 +215,7 @@ The following MCP servers and tools are available. Use them in preference to nat
 | `sequential-thinking` | Structured reasoning for complex scoring |
 
 ## Tasks
+
 - [ ] Phase 0: Load all prior session data and existing files
 - [ ] Phase 1: Brainstorm categories → dispatch 8 parallel subagents → MCP enrich
 - [ ] Phase 2: Apply scoring matrix → filter with elimination criteria
@@ -202,6 +224,7 @@ The following MCP servers and tools are available. Use them in preference to nat
 - [ ] Phase 5: Verify quality gates → update session report
 
 ## Subgoals
+
 1. **Prepare** — Understand requirements, load context, inventory prior work
 2. **Discover** — Systematic platform discovery across 8 categories
 3. **Evaluate** — Score, filter, validate with evidence

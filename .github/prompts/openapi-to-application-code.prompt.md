@@ -1,64 +1,142 @@
 ---
+
 name: openapi-to-application-code
+
 title: Generate Application from OpenAPI Spec
+
 description: 'Generate a complete, production-ready application from an OpenAPI specification.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - api
+
   - generator
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /openapi-to-application-code
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGenerate a complete, production-ready application from an OpenAPI specification.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Generate a complete, production-ready application from an OpenAPI specification.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Input Requirements1. **OpenAPI Specification**: Provide either:   - A URL to the OpenAPI spec (e.g., `https://api.example.com/openapi.json`)   - A local file path to the OpenAPI spec   - The full OpenAPI specification content pasted directly2. **Project Details** (if not in spec):   - Project name and description   - Target framework and version   - Package/namespace naming conventions   - Authentication method (if not specified in OpenAPI)
+### Phase 3: Verify
 
-## Generation Process>
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-### Step 1: Analyze the OpenAPI Specification>> - Validate the OpenAPI spec for completeness and correctness> **Full content:** `templates/openapi-to-application-code/generation_process.md`
+### Phase 4: Hand off
 
-## Output StructureThe generated application will include:```project-name/├── README.md                      # Setup and usage instructions├── [build-config]                 # Framework-specific build files (pom.xml, build.gradle, package.json, etc.)├── src/│   ├── main/│   │   ├── [language]/│   │   │   ├── controllers/       # HTTP endpoint handlers│   │   │   ├── services/          # Business logic│   │   │   ├── models/            # Data models and DTOs│   │   │   ├── repositories/      # Data access (if applicable)│   │   │   └── config/            # Application configuration│   │   └── resources/             # Configuration files│   └── test/│       ├── [language]/│       │   ├── controllers/       # Controller tests│       │   └── services/          # Service tests│       └── resources/             # Test configuration├── .gitignore├── .env.example                   # Environment variables template└── docker-compose.yml             # Optional: Docker setup (if applicable)```
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Best Practices Applied- **Framework Conventions**: Follows framework-specific naming, structure, and patterns- **Separation of Concerns**: Clear layers with controllers, services, and repositories- **Error Handling**: Comprehensive error handling with meaningful responses- **Validation**: Input validation and schema validation throughout- **Logging**: Structured logging for debugging and monitoring- **Testing**: Unit tests for services and controllers- **Documentation**: Inline code documentation and setup instructions- **Security**: Implements authentication/authorization from OpenAPI spec- **Scalability**: Design patterns support growth and maintenance
+## Input Requirements
 
-## Next StepsAfter generation:1. Review the generated code structure and make customizations as needed2. Install dependencies according to framework requirements3. Configure environment variables and database connections4. Run tests to verify generated code5. Start the development server6. Test endpoints using the provided examples
+1. **OpenAPI Specification**: Provide either:
 
-## Questions to Ask if Needed- Should the application include database/ORM setup, or just in-memory/mock data?- Do you want Docker configuration for containerization?- Should authentication be JWT, OAuth2, API keys, or basic auth?- Do you need integration tests or just unit tests?- Any specific database technology preferences?- Should the API include pagination, filtering, and sorting examples?
+- A URL to the OpenAPI spec (e.g., `https://api.example.com/openapi.json`)   - A local file path to the OpenAPI spec   - The full OpenAPI specification content pasted directly2. **Project Details** (if not in spec):   - Project name and description   - Target framework and version   - Package/namespace naming conventions   - Authentication method (if not specified in OpenAPI)
 
-## Template ReferencesDetailed templates in `templates/openapi-to-application-code/`:- `generation_process.md`
+## Generation Process
+
+### Step 1: Analyze the OpenAPI Specification
+
+>
+> - Validate the OpenAPI spec for completeness and correctness
+> **Full content:**
+
+## Output Structure
+
+The generated application will include:```project-name/├── README.md                      # Setup and usage instructions├── [build-config]                 # Framework-specific build files (pom.xml, build.gradle, package.json, etc.)├── src/│   ├── main/│   │   ├── [language]/│   │   │   ├── controllers/       # HTTP endpoint handlers│   │   │   ├── services/          # Business logic│   │   │   ├── models/            # Data models and DTOs│   │   │   ├── repositories/      # Data access (if applicable)│   │   │   └── config/            # Application configuration│   │   └── resources/             # Configuration files│   └── test/│       ├── [language]/│       │   ├── controllers/       # Controller tests│       │   └── services/          # Service tests│       └── resources/             # Test configuration├── .gitignore├── .env.example                   # Environment variables template└── docker-compose.yml             # Optional: Docker setup (if applicable)```
+
+## Best Practices Applied
+
+- **Framework Conventions**: Follows framework-specific naming, structure, and patterns- **Separation of Concerns**: Clear layers with controllers, services, and repositories- **Error Handling**: Comprehensive error handling with meaningful responses- **Validation**: Input validation and schema validation throughout- **Logging**: Structured logging for debugging and monitoring- **Testing**: Unit tests for services and controllers- **Documentation**: Inline code documentation and setup instructions- **Security**: Implements authentication/authorization from OpenAPI spec- **Scalability**: Design patterns support growth and maintenance
+
+## Next Steps
+
+After generation:1. Review the generated code structure and make customizations as needed2. Install dependencies according to framework requirements3. Configure environment variables and database connections4. Run tests to verify generated code5. Start the development server6. Test endpoints using the provided examples
+
+## Questions to Ask if Needed
+
+- Should the application include database/ORM setup, or just in-memory/mock data?- Do you want Docker configuration for containerization?- Should authentication be JWT, OAuth2, API keys, or basic auth?- Do you need integration tests or just unit tests?- Any specific database technology preferences?- Should the API include pagination, filtering, and sorting examples?
+
+## Template References
+
+Detailed templates in `templates/openapi-to-application-code/`:- `generation_process.md`
 
 ## Personas
 
@@ -70,7 +148,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -80,11 +157,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -103,25 +178,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -132,17 +209,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -152,7 +227,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Generate a complete, production-ready application from an OpenAPI specification.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -160,19 +234,17 @@ Generate a complete, production-ready application from an OpenAPI specification.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -185,8 +257,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -194,5 +264,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

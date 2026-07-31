@@ -1,63 +1,145 @@
 ---
+
 name: mcp-copilot-studio-server-generator
+
 title: Power Platform MCP Connector Generator
+
 description: Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ai-assistant
+
   - backend
+
   - generator
+
   - mcp
+
   - ml
+
   - performance
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /mcp-copilot-studio-server-generator
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGenerate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Instructions> Create a complete MCP server implementation that:>> 1. **Uses Copilot Studio MCP Pattern:**> **Full content:** `templates/mcp-copilot-studio-server-generator/instructions.md`
+### Phase 3: Verify
 
-## Context Variables- **Server Purpose**: [Describe what the MCP server should accomplish]- **Tools Needed**: [List of specific tools to implement]- **Resources**: [Types of resources to provide]- **Authentication**: [Auth method: none, api-key, oauth2]- **Host Environment**: [Azure Function, Express.js, FastAPI, etc.]- **Target APIs**: [External APIs to integrate with]
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Expected Output> 1. **apiDefinition.swagger.json** with:>> - Proper `x-ms-agentic-protocol: mcp-streamable-1.0`> **Full content:** `templates/mcp-copilot-studio-server-generator/expected_output.md`
+### Phase 4: Hand off
 
-## Validation ChecklistEnsure generated code:- [ ] No reference types in schemas- [ ] All type fields are single types- [ ] Enum handling via string with validation- [ ] Resources available through tool outputs- [ ] Full URI endpoints- [ ] JSON-RPC 2.0 compliance- [ ] Proper x-ms-agentic-protocol header- [ ] McpResponse/McpErrorResponse schemas- [ ] Clear tool descriptions for Copilot Studio- [ ] Generative Orchestration compatible
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Example Usage```yamlServer Purpose: Customer data management and analysisTools Needed:  - searchCustomers  - getCustomerDetails  - analyzeCustomerTrendsResources:  - Customer profiles  - Analysis reportsAuthentication: oauth2Host Environment: Azure FunctionTarget APIs: CRM System REST API```
+## Instructions
 
-## Template ReferencesTemplates in `templates/mcp-copilot-studio-server-generator/`:- `example_usage.md`- `expected_output.md`- `instructions.md`- `phases.md`
+> Create a complete MCP server implementation that:>
+>
+> 1. **Uses Copilot Studio MCP Pattern:**
+
+## Context Variables
+
+- **Server Purpose**: [Describe what the MCP server should accomplish]- **Tools Needed**: [List of specific tools to implement]- **Resources**: [Types of resources to provide]- **Authentication**: [Auth method: none, api-key, oauth2]- **Host Environment**: [Azure Function, Express.js, FastAPI, etc.]- **Target APIs**: [External APIs to integrate with]
+
+## Expected Output
+
+> 1. **apiDefinition.swagger.json** with:>
+>
+> - Proper `x-ms-agentic-protocol: mcp-streamable-1.0`
+> **Full content:**
+
+## Validation Checklist
+
+Ensure generated code:- [ ] No reference types in schemas- [ ] All type fields are single types- [ ] Enum handling via string with validation- [ ] Resources available through tool outputs- [ ] Full URI endpoints- [ ] JSON-RPC 2.0 compliance- [ ] Proper x-ms-agentic-protocol header- [ ] McpResponse/McpErrorResponse schemas- [ ] Clear tool descriptions for Copilot Studio- [ ] Generative Orchestration compatible
+
+## Example Usage
+
+```yamlServer Purpose: Customer data management and analysisTools Needed:
+
+- searchCustomers  - getCustomerDetails  - analyzeCustomerTrendsResources:  - Customer profiles  - Analysis reportsAuthentication: oauth2Host Environment: Azure FunctionTarget APIs: CRM System REST API```
+
+## Template References
+
+Templates in `templates/mcp-copilot-studio-server-generator/`:- `example_usage.md`- `expected_output.md`- `instructions.md`- `phases.md`
 
 ## Personas
 
@@ -69,7 +151,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -79,11 +160,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -101,7 +180,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -121,7 +199,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -130,7 +207,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -142,7 +218,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -151,14 +226,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Generate a complete MCP server implementation optimized for Copilot Studio integration with proper schema constraints and streamable HTTP support.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -172,7 +245,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -184,8 +256,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -193,5 +263,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 

@@ -1,98 +1,243 @@
 ---
+
 name: swift-mcp-server-generator
+
 title: Swift MCP Server Generator
+
 description: Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - backend
+
   - generator
+
   - mcp
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /swift-mcp-server-generator
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalGenerate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Project GenerationWhen asked to create a Swift MCP server, generate a complete project with this structure:```my-mcp-server/├── Package.swift├── Sources/│   └── MyMCPServer/│       ├── main.swift│       ├── Server.swift│       ├── Tools/│       │   ├── ToolDefinitions.swift│       │   └── ToolHandlers.swift│       ├── Resources/│       │   ├── ResourceDefinitions.swift│       │   └── ResourceHandlers.swift│       └── Prompts/│           ├── PromptDefinitions.swift│           └── PromptHandlers.swift├── Tests/│   └── MyMCPServerTests/│       └── ServerTests.swift└── README.md```
+### Phase 3: Verify
 
-## Package.swift Template> // swift-tools-version: 6.0> import PackageDescription> **Full content:** `templates/swift-mcp-server-generator/packageswift_template.md`
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## main.swift Template> import ServiceLifecycle> struct MCPService: Service {> **Full content:** `templates/swift-mcp-server-generator/mainswift_template.md`
+### Phase 4: Hand off
 
-## Server.swift Template```swiftimport MCPimport Loggingfunc createServer() async -> Server {    let server = Server(        name: "MyMCPServer",        version: "1.0.0",        capabilities: .init(            prompts: .init(listChanged: true),            resources: .init(subscribe: true, listChanged: true),            tools: .init(listChanged: true)        )    )    // Register tool handlers    await registerToolHandlers(server: server)    // Register resource handlers    await registerResourceHandlers(server: server)    // Register prompt handlers    await registerPromptHandlers(server: server)    return server}```
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## ToolDefinitions.swift Template> func getToolDefinitions() -> [Tool] {> description: "Generate a greeting message",> **Full content:** `templates/swift-mcp-server-generator/tooldefinitionsswift_template.md`
+## Project Generation
 
-## ToolHandlers.swift Template> private let logger = Logger(label: "com.example.mcp-server.tools")> func registerToolHandlers(server: Server) async {> **Full content:** `templates/swift-mcp-server-generator/toolhandlersswift_template.md`
+When asked to create a Swift MCP server, generate a complete project with this structure:```my-mcp-server/├── Package.swift├── Sources/│   └── MyMCPServer/│       ├── main.swift│       ├── Server.swift│       ├── Tools/│       │   ├── ToolDefinitions.swift│       │   └── ToolHandlers.swift│       ├── Resources/│       │   ├── ResourceDefinitions.swift│       │   └── ResourceHandlers.swift│       └── Prompts/│           ├── PromptDefinitions.swift│           └── PromptHandlers.swift├── Tests/│   └── MyMCPServerTests/│       └── ServerTests.swift└── README.md```
 
-## ResourceDefinitions.swift Template```swiftimport MCPfunc getResourceDefinitions() -> [Resource] {    [        Resource(            name: "Example Data",            uri: "resource://data/example",            description: "Example resource data",            mimeType: "application/json"        ),        Resource(            name: "Configuration",            uri: "resource://config",            description: "Server configuration",            mimeType: "application/json"        )    ]}```
+## Package.swift Template
 
-## ResourceHandlers.swift Template> private let logger = Logger(label: "com.example.mcp-server.resources")> actor ResourceState {> **Full content:** `templates/swift-mcp-server-generator/resourcehandlersswift_template.md`
+> // swift-tools-version: 6.0
+> import PackageDescription
+> **Full content:**
 
-## PromptDefinitions.swift Template```swiftimport MCPfunc getPromptDefinitions() -> [Prompt] {    [        Prompt(            name: "code-review",            description: "Generate a code review prompt",            arguments: [                .init(name: "language", description: "Programming language", required: true),                .init(name: "focus", description: "Review focus area", required: false)            ]        )    ]}```
+## main.swift Template
 
-## PromptHandlers.swift Template> private let logger = Logger(label: "com.example.mcp-server.prompts")> func registerPromptHandlers(server: Server) async {> **Full content:** `templates/swift-mcp-server-generator/prompthandlersswift_template.md`
+> import ServiceLifecycle
+> struct MCPService: Service {
+> **Full content:**
 
-## ServerTests.swift Template> @testable import MyMCPServer> final class ServerTests: XCTestCase {> **Full content:** `templates/swift-mcp-server-generator/servertestsswift_template.md`
+## Server.swift Template
 
-## README.md Template````markdown# MyMCPServerA Model Context Protocol server built with Swift.
+```swiftimport MCPimport Loggingfunc createServer() async -
 
-## Features- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ Prompts: code-review- ✅ Graceful shutdown with ServiceLifecycle- ✅ Structured logging with swift-log- ✅ Full test coverage
+> Server {    let server = Server(        name: "MyMCPServer",        version: "1.0.0",        capabilities: .init(            prompts: .init(listChanged: true),            resources: .init(subscribe: true, listChanged: true),            tools: .init(listChanged: true)        )    )    // Register tool handlers    await registerToolHandlers(server: server)    // Register resource handlers    await registerResourceHandlers(server: server)    // Register prompt handlers    await registerPromptHandlers(server: server)    return server}```
 
-## Requirements- Swift 6.0+- macOS 13+, iOS 16+, or Linux
+## ToolDefinitions.swift Template
 
-## Installation```bashswift build -c release```````
+> func getToolDefinitions() -
+> [Tool] {
+> description: "Generate a greeting message",
+> **Full content:**
 
-## UsageRun the server:```bashswift run```Or with logging:```bashLOG_LEVEL=debug swift run```
+## ToolHandlers.swift Template
 
-## Testing```bashswift test```
+> private let logger = Logger(label: "com.example.mcp-server.tools")
+> func registerToolHandlers(server: Server) async {
+> **Full content:**
 
-## DevelopmentThe server uses:- [MCP Swift SDK](https://github.com/modelcontextprotocol/swift-sdk) - MCP protocol implementation- [swift-log](https://github.com/apple/swift-log) - Structured logging- [swift-service-lifecycle](https://github.com/swift-server/swift-service-lifecycle) - Graceful shutdown
+## ResourceDefinitions.swift Template```swiftimport MCPfunc getResourceDefinitions() -
 
-## Project Structure- `Sources/MyMCPServer/main.swift` - Entry point with ServiceLifecycle- `Sources/MyMCPServer/Server.swift` - Server configuration- `Sources/MyMCPServer/Tools/` - Tool definitions and handlers- `Sources/MyMCPServer/Resources/` - Resource definitions and handlers- `Sources/MyMCPServer/Prompts/` - Prompt definitions and handlers- `Tests/` - Unit tests
+> [Resource] {    [        Resource(            name: "Example Data",            uri: "resource://data/example",            description: "Example resource data",            mimeType: "application/json"        ),        Resource(            name: "Configuration",            uri: "resource://config",            description: "Server configuration",            mimeType: "application/json"        )    ]}```
 
-## LicenseMIT````
+## ResourceHandlers.swift Template
 
-## Generation Instructions1. **Ask for project name and description**2. **Generate all files** with proper naming3. **Use actor-based state** for thread safety4. **Include comprehensive logging** with swift-log5. **Implement graceful shutdown** with ServiceLifecycle6. **Add tests** for all handlers7. **Use modern Swift concurrency** (async/await)8. **Follow Swift naming conventions** (camelCase, PascalCase)9. **Include error handling** with proper MCPError usage10. **Document public APIs** with doc comments
+> private let logger = Logger(label: "com.example.mcp-server.resources")
+> actor ResourceState {
+> **Full content:**
+
+## PromptDefinitions.swift Template```swiftimport MCPfunc getPromptDefinitions() -
+
+> [Prompt] {    [        Prompt(            name: "code-review",            description: "Generate a code review prompt",            arguments: [                .init(name: "language", description: "Programming language", required: true),                .init(name: "focus", description: "Review focus area", required: false)            ]        )    ]}```
+
+## PromptHandlers.swift Template
+
+> private let logger = Logger(label: "com.example.mcp-server.prompts")
+> func registerPromptHandlers(server: Server) async {
+> **Full content:**
+
+## ServerTests.swift Template
+
+> @testable import MyMCPServer
+> final class ServerTests: XCTestCase {
+> **Full content:**
+
+## README.md Template
+
+````markdown# MyMCPServerA Model Context Protocol server built with Swift.
+
+## Feature
+
+s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ Prompts: code-review- ✅ Graceful shutdown with ServiceLifecycle- ✅ Structured logging with swift-log- ✅ Full test coverage
+
+## Requirements
+
+- Swift 6.0+- macOS 13+, iOS 16+, or Linux
+
+## Installation
+
+```bashswift
+ build -c release````
+```
+
+## Usage
+
+Run the server:```bashswift run```Or with logging:```bashLOG_LEVEL=debug swift run```
+
+## Test
+
+ing
+
+```
+
+bashswift test
+
+```
+
+## Development
+
+The server uses:
+
+- [MCP Swift SDK](https://github.com/modelcontextprotocol/swift-sdk) - MCP protocol implementation- [swift-log](https://github.com/apple/swift-log) - Structured logging- [swift-service-lifecycle](https://github.com/swift-server/swift-service-lifecycle) - Graceful shutdown
+
+## Project Structure
+
+- `Sources/MyMCPServer/main.swift` - Entry point with ServiceLifecycle- `Sources/MyMCPServer/Server.swift` - Server configuration- `Sources/MyMCPServer/Tools/` - Tool definitions and handlers- `Sources/MyMCPServer/Resources/` - Resource definitions and handlers- `Sources/MyMCPServer/Prompts/` - Prompt definitions and handlers- `Tests/` - Unit tests
+
+## License
+
+MIT````
+
+## Generation Instructions
+
+1. **Ask for project name and description**
+2. **Generate all files** with proper naming
+3. **Use actor-based state** for thread safety
+4. **Include comprehensive logging** with swift-log
+5. **Implement graceful shutdown** with ServiceLifecycle
+6. **Add tests** for all handlers
+7. **Use modern Swift concurrency** (async/await)
+8. **Follow Swift naming conventions** (camelCase, PascalCase)
+9. **Include error handling** with proper MCPError usage
+1
+10. **Document public APIs** with doc comments
 
 ## Build and Run```bash# Buildswift build# Runswift run# Testswift test# Release buildswift build -c release# Installswift build -c releasecp .build/release/MyMCPServer /usr/local/bin/````
 
-## Integration with Claude DesktopAdd to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "/path/to/MyMCPServer"    }  }}```````
+## Integration with Claude Desktop
 
-## Template ReferencesDetailed templates in `templates/swift-mcp-server-generator/`:- `mainswift_template.md`- `packageswift_template.md`- `prompthandlersswift_template.md`- `resourcehandlersswift_template.md`- `servertestsswift_template.md`- `tooldefinitionsswift_template.md`- `toolhandlersswift_template.md`
+Add to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "/path/to/MyMCPServer"    }  }}```````
+
+## Template References
+
+Detailed templates in `templates/swift-mcp-server-generator/`:- `mainswift_template.md`- `packageswift_template.md`- `prompthandlersswift_template.md`- `resourcehandlersswift_template.md`- `servertestsswift_template.md`- `tooldefinitionsswift_template.md`- `toolhandlersswift_template.md`
 
 ## Personas
 
@@ -104,7 +249,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -114,11 +258,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -137,25 +279,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -166,17 +310,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -186,7 +328,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -194,19 +335,17 @@ Generate a complete Model Context Protocol server project in Swift using the off
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -219,8 +358,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -229,4 +366,18 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
 
+## Related Prompts
 
+Other language variants of this MCP server generator:
+
+| Language | Prompt |
+| ---------- | -------- |
+| TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
+| Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
+| Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |
+| Go | [`go-mcp-server-generator.prompt.md`](go-mcp-server-generator.prompt.md) |
+| Kotlin | [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md) |
+| Java | [`java-mcp-server-generator.prompt.md`](java-mcp-server-generator.prompt.md) |
+| C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
+| PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
+| Ruby | [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md) |

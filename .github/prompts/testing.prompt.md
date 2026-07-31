@@ -1,60 +1,134 @@
 ---
+
 name: testing
+
 title: Testing
+
 description: Comprehensive testing prompt aligned to repository unit and E2E guidance.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - audit
+
   - frontend
+
   - ml
+
   - planning
+
   - prompts
+
   - skills
+
   - testing
+
   - typescript
+
 trigger: /testing
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalUse when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
-## DescriptionCreate, update, and validate tests that provide deterministic coverage for public behavior and critical flows such as authentication, payments, and reconciliation.
+## Goal
 
-## ContextUse this prompt for tests under tests/ and for planning or reviewing validation strategy for changed behavior.
+Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
-## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)- Unit and integration test design- E2E flow verification with environment constraints- Deterministic test isolation and mocking
+## Description
 
-## Subagents| Subagent | Role | When to Use || --- | --- | --- || Unit Test Author | Builds focused deterministic unit tests | Business logic changes || E2E Test Author | Builds realistic end-to-end scenarios | User flow changes || Test Reliability Reviewer | Removes flakes and env coupling | Intermittent failures |
+Create, update, and validate tests that provide deterministic coverage for public behavior and critical flows such as authentication, payments, and reconciliation.
 
-## Personas- Unit Test Author: Maximizes signal-to-noise with small focused tests.- E2E Test Author: Validates critical user journeys in realistic conditions.- Test Reliability Reviewer: Eliminates nondeterminism and fragile assumptions.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Prefer fast deterministic unit tests with mocked external dependencies.- Cover critical paths and public behavior changes.- Run Playwright E2E against expected local test server conditions.- Keep test files focused and readable.- Ensure CI-relevant commands and prerequisites are respected.
+Use this prompt for tests under tests/ and for planning or reviewing validation strategy for changed behavior.
 
-## Phases>
+## Skills Required
 
-### Phase 1: Coverage Planning>>
+> See full table with per-domain purposes:
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-### Phase 2: Test Authoring> **Full content:** `templates/testing/phases.md`
+- Unit and integration test design
+- E2E flow verification with environment constraints
+- Deterministic test isolation and mocking
 
-## Steps1. Identify changed behavior and risk-critical paths.2. Design unit and E2E test cases for required coverage.3. Implement deterministic tests and mocks.4. Run tests and resolve failures or instability.5. Summarize coverage and remaining gaps.
+## Subagents
 
-## Tasks- Task 1.1 — Define coverage requirements for changed and critical behavior.- Task 1.2 — Implement unit tests for logic and edge cases.- Task 1.3 — Implement or update E2E tests for key user flows.- Task 1.4 — Execute tests and stabilize failures.- Task 1.5 — Record coverage outcomes and residual testing risk.
+| Subagent | Role | When to Use || --
 
-## Subtasks- Subtask 1.1.1 — Map tests to public surface and risk areas.- Subtask 1.2.1 — Mock external services and keep assertions deterministic.- Subtask 1.3.1 — Ensure environment assumptions are explicit and reproducible.- Subtask 1.4.1 — Eliminate brittle timing and order dependencies.- Subtask 1.5.1 — Flag any deferred tests with rationale.
+- | --- | --- || Unit Test Author | Builds focused deterministic unit tests | Business logic changes || E2E Test Author | Builds realistic end-to-end scenarios | User flow changes || Test Reliability Reviewer | Removes flakes and env coupling | Intermittent failures |
 
-## Actions Summary1. Plan risk-based coverage.2. Write deterministic tests.3. Execute and stabilize.4. Deliver clear test confidence and gap reporting.
+## Personas
 
-## Template ReferencesTemplates in `templates/testing/`:- `phases.md`
+- Unit Test Author: Maximizes signal-to-noise with small focused tests.
+- E2E Test Author: Validates critical user journeys in realistic conditions.
+- Test Reliability Reviewer: Eliminates nondeterminism and fragile assumptions.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Prefer fast deterministic unit tests with mocked external dependencies.
+- Cover critical paths and public behavior changes.
+- Run Playwright E2E against expected local test server conditions.
+- Keep test files focused and readable.
+- Ensure CI-relevant commands and prerequisites are respected.
+
+## Phases
+
+### Phase 1: Coverage Planning
+
+### Phase 2: Test Authoring
+
+## Steps
+
+1. Identify changed behavior and risk-critical paths.
+2. Design unit and E2E test cases for required coverage.
+3. Implement deterministic tests and mocks.
+4. Run tests and resolve failures or instability.
+5. Summarize coverage and remaining gaps.
+
+## Tasks
+
+- Task 1.1 — Define coverage requirements for changed and critical behavior.- Task 1.2 — Implement unit tests for logic and edge cases.- Task 1.3 — Implement or update E2E tests for key user flows.- Task 1.4 — Execute tests and stabilize failures.- Task 1.5 — Record coverage outcomes and residual testing risk.
+
+## Subtasks
+
+- Subtask 1.1.1 — Map tests to public surface and risk areas.- Subtask 1.2.1 — Mock external services and keep assertions deterministic.- Subtask 1.3.1 — Ensure environment assumptions are explicit and reproducible.- Subtask 1.4.1 — Eliminate brittle timing and order dependencies.- Subtask 1.5.1 — Flag any deferred tests with rationale.
+
+## Actions Summary
+
+1. Plan risk-based coverage.
+2. Write deterministic tests.
+3. Execute and stabilize.
+4. Deliver clear test confidence and gap reporting.
+
+## Template References
+
+Templates in `templates/testing/`:- `phases.md`
 
 ## Personas
 
@@ -66,7 +140,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -76,11 +149,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -99,25 +170,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -128,17 +201,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -148,7 +219,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Comprehensive testing prompt aligned to repository unit and E2E guidance.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -156,19 +226,17 @@ Comprehensive testing prompt aligned to repository unit and E2E guidance.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -181,8 +249,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -190,5 +256,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

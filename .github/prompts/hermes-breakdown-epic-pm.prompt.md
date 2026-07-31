@@ -1,47 +1,108 @@
 ---
+
 name: hermes-breakdown-epic-pm
+
 title: Hermes Breakdown Epic Pm
+
 description: 'Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ai-assistant
+
   - frontend
+
   - ml
+
   - planning
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /hermes-breakdown-epic-pm
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalProduce a complete Epic PRD that is ready for downstream feature planning.
 
-## Context- Use when the user provides an epic idea, short brief, or high-level request.- Keep the output measurable, concise, and aligned to business value.- Ask a short clarifying list if the input is missing key details.- Do not drift into implementation detail.
+## Goal
 
-## Inputs- Epic idea text or short brief- Optional target metrics or constraints
+Produce a complete Epic PRD that is ready for downstream feature planning.
 
-## Outputs- `/docs/ways-of-work/plan/{epic-name}/epic.md`
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)1. Include problem, solution, and impact.2. Define user personas and high-level journeys.3. Include functional and non-functional business requirements.4. Include success metrics and out-of-scope items.5. Estimate business value in a clear, comparable way.6. Ask for clarification when the epic is underspecified.
+- Use when the user provides an epic idea, short brief, or high-level request.
+- Keep the output measurable, concise, and aligned to business value.
+- Ask a short clarifying list if the input is missing key details.
+- Do not drift into implementation detail.
 
-## Phases>
+## Input
 
-### Phase 1: Understand the epic>> **Goal:** capture the idea, audience, and business objective.> **Full content:** `templates/hermes-breakdown-epic-pm/phases.md`
+s
 
-## Actions Summary1. Read the epic brief.2. Draft the Epic PRD structure and content.3. Add journeys, requirements, metrics, and scope limits.4. Verify completeness and file path.
+- Epic idea text or short brief
+- Optional target metrics or constraints
 
-## Template ReferencesTemplates in `templates/hermes-breakdown-epic-pm/`:- `phases.md`
+## Output
+
+s
+
+- `/docs/ways-of-work/plan/{epic-name}/epic.md`
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+1. Include problem, solution, and impact.
+2. Define user personas and high-level journeys.
+3. Include functional and non-functional business requirements.
+4. Include success metrics and out-of-scope items.
+5. Estimate business value in a clear, comparable way.
+6. Ask for clarification when the epic is underspecified.
+
+## Phases
+
+### Phase 1: Understand the epic
+
+> **Goal:** capture the idea, audience, and business objective.
+
+## Actions Summary
+
+1. Read the epic brief.
+2. Draft the Epic PRD structure and content.
+3. Add journeys, requirements, metrics, and scope limits.
+4. Verify completeness and file path.
+
+## Template References
+
+Templates in `templates/hermes-breakdown-epic-pm/`:- `phases.md`
 
 ## Personas
 
@@ -53,7 +114,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -63,11 +123,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -86,25 +144,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -115,17 +175,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -135,7 +193,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -143,19 +200,17 @@ Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or req
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -168,8 +223,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -177,5 +230,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

@@ -1,49 +1,109 @@
 ---
+
 name: csharp-xunit
+
 title: XUnit Best Practices
+
 description: 'Get best practices for XUnit unit testing, including data-driven tests.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - csharp
+
   - data
+
   - dotnet
+
   - prompts
+
   - testing
+
   - typescript
+
 trigger: /csharp-xunit
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Get best practices for XUnit unit testing, including data-driven tests.
 
 # XUnit Best PracticesYour goal is to help me write effective unit tests with XUnit, covering both standard and data-driven testing approaches.
 
-## Project Setup- Use a separate test project with naming convention `[ProjectName].Tests`- Reference Microsoft.NET.Test.Sdk, xunit, and xunit.runner.visualstudio packages- Create test classes that match the classes being tested (e.g., `CalculatorTests` for `Calculator`)- Use .NET SDK test commands: `dotnet test` for running tests
+## Project Setup
 
-## Test Structure- No test class attributes required (unlike MSTest/NUnit)- Use fact-based tests with `[Fact]` attribute for simple tests- Follow the Arrange-Act-Assert (AAA) pattern- Name tests using the pattern `MethodName_Scenario_ExpectedBehavior`- Use constructor for setup and `IDisposable.Dispose()` for teardown- Use `IClassFixture<T>` for shared context between tests in a class- Use `ICollectionFixture<T>` for shared context between multiple test classes
+- Use a separate test project with naming convention `[ProjectName].Tests`- Reference Microsoft.NET.Test.Sdk, xunit, and xunit.runner.visualstudio packages- Create test classes that match the classes being tested (e.g., `CalculatorTests` for `Calculator`)- Use .NET SDK test commands: `dotnet test` for running tests
 
-## Standard Tests- Keep tests focused on a single behavior- Avoid testing multiple behaviors in one test method- Use clear assertions that express intent- Include only the assertions needed to verify the test case- Make tests independent and idempotent (can run in any order)- Avoid test interdependencies
+## Test Structure
 
-## Data-Driven Tests- Use `[Theory]` combined with data source attributes- Use `[InlineData]` for inline test data- Use `[MemberData]` for method-based test data- Use `[ClassData]` for class-based test data- Create custom data attributes by implementing `DataAttribute`- Use meaningful parameter names in data-driven tests
+- No test class attributes required (unlike MSTest/NUnit)
+- Use fact-based tests with `[Fact]` attribute for simple tests
+- Follow the Arrange-Act-Assert (AAA) pattern
+- Name tests using the pattern `MethodName_Scenario_ExpectedBehavior`
+- Use constructor for setup and `IDisposable.Dispose()` for teardown
+- Use `IClassFixture<T
 
-## Assertions- Use `Assert.Equal` for value equality- Use `Assert.Same` for reference equality- Use `Assert.True`/`Assert.False` for boolean conditions- Use `Assert.Contains`/`Assert.DoesNotContain` for collections- Use `Assert.Matches`/`Assert.DoesNotMatch` for regex pattern matching- Use `Assert.Throws<T>` or `await Assert.ThrowsAsync<T>` to test exceptions- Use fluent assertions library for more readable assertions
+> ` for shared context between tests in a class- Use `ICollectionFixture<T>` for shared context between multiple test classes
 
-## Mocking and Isolation- Consider using Moq or NSubstitute alongside XUnit- Mock dependencies to isolate units under test- Use interfaces to facilitate mocking- Consider using a DI container for complex test setups
+## Standard Tests
 
-## Test Organization- Group tests by feature or component- Use `[Trait("Category", "CategoryName")]` for categorization- Use collection fixtures to group tests with shared dependencies- Consider output helpers (`ITestOutputHelper`) for test diagnostics- Skip tests conditionally with `Skip = "reason"` in fact/theory attributes
+- Keep tests focused on a single behavior- Avoid testing multiple behaviors in one test method- Use clear assertions that express intent- Include only the assertions needed to verify the test case- Make tests independent and idempotent (can run in any order)- Avoid test interdependencies
 
-## Template ReferencesTemplates in `templates/csharp-xunit/`:- `assertions.md`- `data-driven_tests.md`- `mocking_and_isolation.md`- `project_setup.md`- `standard_tests.md`- `test_organization.md`- `test_structure.md`
+## Data-Driven Tests
+
+- Use `[Theory]` combined with data source attributes
+- Use `[InlineData]` for inline test data
+- Use `[MemberData]` for method-based test data
+- Use `[ClassData]` for class-based test data
+- Create custom data attributes by implementing `DataAttribute`
+- Use meaningful parameter names in data-driven tests
+
+## Assertions
+
+- Use `Assert.Equal` for value equality
+- Use `Assert.Same` for reference equality
+- Use `Assert.True`/`Assert.False` for boolean conditions
+- Use `Assert.Contains`/`Assert.DoesNotContain` for collections
+- Use `Assert.Matches`/`Assert.DoesNotMatch` for regex pattern matching
+- Use `Assert.Throws<T
+
+> ` or `await Assert.ThrowsAsync<T>` to test exceptions- Use fluent assertions library for more readable assertions
+
+## Mocking and Isolation
+
+- Consider using Moq or NSubstitute alongside XUnit- Mock dependencies to isolate units under test- Use interfaces to facilitate mocking- Consider using a DI container for complex test setups
+
+## Test Organization
+
+- Group tests by feature or component- Use `[Trait("Category", "CategoryName")]` for categorization- Use collection fixtures to group tests with shared dependencies- Consider output helpers (`ITestOutputHelper`) for test diagnostics- Skip tests conditionally with `Skip = "reason"` in fact/theory attributes
+
+## Template References
+
+Templates in `templates/csharp-xunit/`:- `assertions.md`- `data-driven_tests.md`- `mocking_and_isolation.md`- `project_setup.md`- `standard_tests.md`- `test_organization.md`- `test_structure.md`
 
 ## Personas
 
@@ -55,7 +115,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -65,11 +124,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -88,25 +145,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -117,17 +176,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -140,19 +197,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -165,8 +220,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -174,5 +227,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

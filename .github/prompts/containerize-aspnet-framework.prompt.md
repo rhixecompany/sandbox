@@ -1,64 +1,125 @@
 ---
+
 name: containerize-aspnet-framework
+
 title: ASP.NET .NET Framework Containerization Prompt
+
 description: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - docker
+
   - frontend
+
   - ml
+
   - prompts
+
   - specification
+
   - windows
+
   - csharp
+
   - dotnet
+
 trigger: /containerize-aspnet-framework
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project.
 
 # ASP.NET .NET Framework Containerization PromptContainerize the ASP.NET (.NET Framework) project specified in the containerization settings below, focusing **exclusively** on changes required for the application to run in a Windows Docker container. Containerization should consider all settings specified here.**REMEMBER:** This is a .NET Framework application, not .NET Core. The containerization process will be different from that of a .NET Core application.
 
-## Containerization Settings> This section of the prompt contains the specific settings and configurations req> Any settings that are not specified will be set to default values. The default v> **Full content:** `templates/containerize-aspnet-framework/containerization_settings.md`
+## Containerization Settings
 
-## Scope- ✅ App configuration modification to ensure config builders are used to read app settings and connection strings from the environment variables- ✅ Dockerfile creation and configuration for an ASP.NET application- ✅ Specifying multiple stages in the Dockerfile to build/publish the application and copy the output to the final image- ✅ Configuration of Windows container platform compatibility (Windows Server Core or Full)- ✅ Proper handling of dependencies (GAC assemblies, MSIs, COM components)- ❌ No infrastructure setup (assumed to be handled separately)- ❌ No code changes beyond those required for containerization
+> This section of the prompt contains the specific settings and configurations req
+> Any settings that are not specified will be set to default values. The default v
+> **Full content:**
 
-## Execution Process> 1. Review the containerization settings above to understand the containerization> 2. Create a `progress.md` file to track changes with check marks> **Full content:** `templates/containerize-aspnet-framework/execution_process.md`
+## Scope
 
-## Build and Runtime Verificationconfirm that Docker build succeeds once the Dockerfile is completed. Use the following command to build the Docker image:```bashdocker build -t aspnet-app:latest .```If the build fails, review the error messages and make necessary adjustments to the Dockerfile or project configuration. Report success/failure.
+- ✅ App configuration modification to ensure config builders are used to read app settings and connection strings from the environment variables- ✅ Dockerfile creation and configuration for an ASP.NET application- ✅ Specifying multiple stages in the Dockerfile to build/publish the application and copy the output to the final image- ✅ Configuration of Windows container platform compatibility (Windows Server Core or Full)- ✅ Proper handling of dependencies (GAC assemblies, MSIs, COM components)- ❌ No infrastructure setup (assumed to be handled separately)- ❌ No code changes beyond those required for containerization
 
-## Progress TrackingMaintain a `progress.md` file with the following structure:```markdown# Containerization Progress
+## Execution Process
 
-## Environment Detection- [ ] .NET Framework version detection (version: \_\_\_)- [ ] Windows Server SKU selection (SKU: \_\_\_)- [ ] Windows Server version selection (Version: \_\_\_)
+> 1. Review the containerization settings above to understand the containerization
+> 2. Create a `progress.md` file to track changes with check marks
+> **Full content:**
 
-## Configuration Changes- [ ] Web.config modifications for configuration builders- [ ] NuGet package source configuration (if applicable)- [ ] Copy LogMonitorConfig.json and adjust if required by settings
+## Build and Runtime Verification
 
-## Containerization- [ ] Dockerfile creation- [ ] .dockerignore file creation- [ ] Build stage created with SDK image- [ ] sln, csproj, packages.config, and (if applicable) NuGet.config copied for package restore- [ ] Runtime stage created with runtime image- [ ] Non-root user configuration- [ ] Dependency handling (GAC, MSI, COM, registry, additional files, etc.)- [ ] Health check configuration (if applicable)- [ ] Special requirements implementation
+confirm that Docker build succeeds once the Dockerfile is completed. Use the following command to build the Docker image:```bashdocker build -t aspnet-app:latest .```If the build fails, review the error messages and make necessary adjustments to the Dockerfile or project configuration. Report success/failure.
 
-## Verification- [ ] Review containerization settings and make sure that all requirements are met- [ ] Docker build success```Do not pause for confirmation between steps. Continue methodically until the application has been containerized and Docker build succeeds.**YOU ARE NOT DONE UNTIL ALL CHECKBOXES ARE MARKED!** This includes building the Docker image successfully and addressing any issues that arise during the build process.
+## Progress Tracking
 
-## Reference Materials>
+Maintain a `progress.md` file with the following structure:```markdown# Containerization Progress
 
-### Example Dockerfile>> An example Dockerfile for an ASP.NET (.NET Framework) application using a Window> **Full content:** `templates/containerize-aspnet-framework/reference_materials.md`
+## Environment Detection
 
-## Adapting this Example**Note:** Customize this template based on the specific requirements in the containerization settings.When adapting this example Dockerfile:1. Replace `YourSolution.sln`, `YourProject.csproj`, etc. with your actual file names2. Adjust the Windows Server and .NET Framework versions as needed3. Modify the dependency installation steps based on your requirements and remove any unnecessary ones4. Add or remove stages as needed for your specific workflow
+- [ ] .NET Framework version detection (version: \_\_\_)- [ ] Windows Server SKU selection (SKU: \_\_\_)- [ ] Windows Server version selection (Version: \_\_\_)
 
-## Notes on Stage Naming> - The `AS stage-name` syntax gives each stage a name> - Use `--from=stage-name` to copy files from a previous stage> **Full content:** `templates/containerize-aspnet-framework/notes_on_stage_naming.md`
+## Configuration Changes
 
-## Template ReferencesDetailed templates in `templates/containerize-aspnet-framework/`:- `containerization_settings.md`- `execution_process.md`- `notes_on_stage_naming.md`- `reference_materials.md`
+- [ ] Web.config modifications for configuration builders- [ ] NuGet package source configuration (if applicable)- [ ] Copy LogMonitorConfig.json and adjust if required by settings
+
+## Containerization
+
+- [ ] Dockerfile creation- [ ] .dockerignore file creation- [ ] Build stage created with SDK image- [ ] sln, csproj, packages.config, and (if applicable) NuGet.config copied for package restore- [ ] Runtime stage created with runtime image- [ ] Non-root user configuration- [ ] Dependency handling (GAC, MSI, COM, registry, additional files, etc.)- [ ] Health check configuration (if applicable)- [ ] Special requirements implementation
+
+## Verification
+
+- [ ] Review containerization settings and make sure that all requirements are met
+- [ ] Docker build success```Do not pause for confirmation between steps. Continue methodically until the application has been containerized and Docker build succeeds.**YOU ARE NOT DONE UNTIL ALL CHECKBOXES ARE MARKED!** This includes building the Docker image successfully and addressing any issues that arise during the build process.
+
+## Reference Materials
+
+### Example Dockerfile
+
+> An example Dockerfile for an ASP.NET (.NET Framework) application using a Window
+
+## Adapting this Example
+
+**Note:** Customize this template based on the specific requirements in the containerization settings.When adapting this example Dockerfile:1. Replace `YourSolution.sln`, `YourProject.csproj`, etc. with your actual file names2. Adjust the Windows Server and .NET Framework versions as needed3. Modify the dependency installation steps based on your requirements and remove any unnecessary ones4. Add or remove stages as needed for your specific workflow
+
+## Notes on Stage Naming
+
+> - The `AS stage-name` syntax gives each stage a name
+> - Use `--from=stage-name` to copy files from a previous stage
+> **Full content:**
+
+## Template References
+
+Detailed templates in `templates/containerize-aspnet-framework/`:- `containerization_settings.md`- `execution_process.md`- `notes_on_stage_naming.md`- `reference_materials.md`
 
 ## Personas
 
@@ -70,7 +131,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -80,11 +140,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -103,25 +161,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -132,17 +192,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -155,19 +213,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -180,8 +236,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -189,5 +243,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

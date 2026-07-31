@@ -53,6 +53,7 @@ Use this when onboarding to a new machine, auditing your extension footprint, or
    - If VS Code CLI is not in PATH, see **Error Handling** below.
 2. Capture the output. Each line is `publisher.extension-name` optionally with `@version` when `--show-versions` is used.
 3. Save the raw list to `.vscode/extension-inventory.md` with YAML frontmatter:
+
    ```yaml
    ---
    generated: <ISO date>
@@ -60,6 +61,7 @@ Use this when onboarding to a new machine, auditing your extension footprint, or
    count: <N>
    ---
    ```
+
 4. Enrich the inventory: for each extension, derive a rough category (language support, theme, linter, debugger, snippets, etc.) from the publisher and extension name. Don't web-search at this stage — just note the heuristic.
 5. **Verification gate:** Confirm the count matches what the Extensions panel shows. If `code --list-extensions` returns 0 or errors, escalate.
 
@@ -70,6 +72,7 @@ For each extension, do NOT fetch docs individually (too many round-trips). Inste
 1. **Batch by market page:** For each unique `publisher.extension-name`, fetch `https://marketplace.visualstudio.com/items?itemName=<publisher>.<extension>` using `web_extract`.
 2. Extract: short description, categories/tags, known settings this extension contributes, and any notable configuration guidance.
 3. Save per-extension dossier to `docs/vscode-extensions/<publisher>.<extension>/README.md`:
+
    ```markdown
    # <Display Name>
    - **ID:** `publisher.extension`  - **Version:** X.Y.Z
@@ -85,6 +88,7 @@ For each extension, do NOT fetch docs individually (too many round-trips). Inste
    ## Notes
    <your analysis: is this active? does it overlap with other installed extensions?>
    ```
+
 4. **Failover:** If `web_extract` fails for a specific extension page (network, 404, rate-limit), log the failure in the dossier with `[FETCH_FAILED]` but continue with the others. Do NOT block Phase 2 on a single extension — the extension name alone carries signal.
 
 ### Phase 3: Synthesize — Identify Conflicts, Gaps, and Optimizations
@@ -94,7 +98,7 @@ For each extension, do NOT fetch docs individually (too many round-trips). Inste
    - **Inactive/discontinued extensions** (check `--list-extensions` against marketplace status)
    - **Extensions relevant to the current workspace** (match against project files, `package.json`, `requirements.txt`, etc.)
    - **Extensions missing but suggested by project files** (e.g. a `pyproject.toml` without Python extension)
-2. Cross-reference: Check if the current user `settings.json` references settings from these extensions (search `C:\Users\Alexa\AppData\Roaming\Code\User\settings.json` for extension-prefixed keys). 
+2. Cross-reference: Check if the current user `settings.json` references settings from these extensions (search `C:\Users\Alexa\AppData\Roaming\Code\User\settings.json` for extension-prefixed keys).
 3. Produce a **Settings Report** as `.vscode/settings-report.md` with sections:
    - Extensions to keep
    - Extensions to review (potential duplicates)
@@ -123,7 +127,7 @@ Reference these files by their Markdown links rather than duplicating their cont
 ## Error Handling
 
 | Error | Handling |
-|-------|----------|
+| ------- | ---------- |
 | `code` CLI not in PATH | On Windows, the default path is `C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code\bin`. Fall back to the full path `"C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd" --list-extensions`. If still not found, install VS Code or add to PATH. |
 | Marketplace page 404 | Extension may be unpublished or private. Log as `[UNPUBLISHED]` and skip. |
 | Rate-limited by marketplace | Back off 5 seconds between fetches. If still blocked, surface the failure and continue without that dossier — partial data is actionable. |
@@ -149,7 +153,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -159,11 +162,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -182,7 +183,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -192,17 +192,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -215,19 +213,17 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -240,8 +236,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -249,5 +243,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

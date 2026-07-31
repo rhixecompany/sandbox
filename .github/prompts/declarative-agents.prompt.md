@@ -1,61 +1,132 @@
 ---
+
 name: declarative-agents
+
 title: Microsoft 365 Declarative Agents Development Kit
+
 description: 'Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - agents
+
   - ai-assistant
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
   - workflow
+
 trigger: /declarative-agents
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalComplete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.
 
-## ContextUse when you need to declarative agents for the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to declarative agents for the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Workflow 1: Basic Agent Creation**Perfect for**: New developers, simple agents, quick prototypesI'll guide you through:1. **Agent Planning**: Define purpose, target users, and core capabilities2. **Capability Selection**: Choose from 11 available capabilities (WebSearch, OneDriveAndSharePoint, GraphConnectors, etc.)3. **Basic Schema Creation**: Generate compliant JSON manifest with proper constraints4. **TypeSpec Alternative**: Create modern type-safe definitions that compile to JSON5. **Testing Setup**: Configure Agents Playground for local testing6. **Toolkit Integration**: Leverage Microsoft 365 Agents Toolkit for enhanced development
+### Phase 3: Verify
 
-## Workflow 2: Advanced Enterprise Agent Design**Perfect for**: Complex enterprise scenarios, production deployment, advanced featuresI'll help you architect:1. **Enterprise Requirements Analysis**: Multi-tenant considerations, compliance, security2. **Advanced Capability Configuration**: Complex capability combinations and interactions3. **Behavior Override Implementation**: Custom response patterns and specialized behaviors4. **Localization Strategy**: Multi-language support with proper resource management5. **Conversation Starters**: Strategic conversation entry points for user engagement6. **Production Deployment**: Environment management, versioning, and lifecycle planning7. **Monitoring & Analytics**: Implementation of tracking and performance optimization
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Workflow 3: Validation & Optimization**Perfect for**: Existing agents, troubleshooting, performance optimizationI'll perform:1. **Schema Compliance Validation**: Full v1.5 specification adherence checking2. **Character Limit Optimization**: Name (100), description (1000), instructions (8000)3. **Capability Audit**: Verify proper capability configuration and usage4. **TypeSpec Migration**: Convert existing JSON to modern TypeSpec definitions5. **Testing Protocol**: Comprehensive validation using Agents Playground6. **Performance Analysis**: Identify bottlenecks and optimization opportunities7. **Best Practices Review**: Alignment with Microsoft guidelines and recommendations
+### Phase 4: Hand off
 
-## Core Features Across All Workflows>
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-### Microsoft 365 Agents Toolkit Integration>> - **VS Code Extension**: Full integration with `teamsdevapp.ms-teams-vscode-exte> **Full content:** `templates/declarative-agents/core_features_across_all_workf.md`
+## Workflow 1: Basic Agent Creation
 
-## Template ReferencesDetailed templates in `templates/declarative-agents/`:- `core_features_across_all_workf.md`
+**Perfect for**: New developers, simple agents, quick prototypesI'll guide you through:1. **Agent Planning**: Define purpose, target users, and core capabilities2. **Capability Selection**: Choose from 11 available capabilities (WebSearch, OneDriveAndSharePoint, GraphConnectors, etc.)3. **Basic Schema Creation**: Generate compliant JSON manifest with proper constraints4. **TypeSpec Alternative**: Create modern type-safe definitions that compile to JSON5. **Testing Setup**: Configure Agents Playground for local testing6. **Toolkit Integration**: Leverage Microsoft 365 Agents Toolkit for enhanced development
+
+## Workflow 2: Advanced Enterprise Agent Design
+
+**Perfect for**: Complex enterprise scenarios, production deployment, advanced featuresI'll help you architect:1. **Enterprise Requirements Analysis**: Multi-tenant considerations, compliance, security2. **Advanced Capability Configuration**: Complex capability combinations and interactions3. **Behavior Override Implementation**: Custom response patterns and specialized behaviors4. **Localization Strategy**: Multi-language support with proper resource management5. **Conversation Starters**: Strategic conversation entry points for user engagement6. **Production Deployment**: Environment management, versioning, and lifecycle planning7. **Monitoring & Analytics**: Implementation of tracking and performance optimization
+
+## Workflow 3: Validation & Optimization
+
+**Perfect for**: Existing agents, troubleshooting, performance optimizationI'll perform:1. **Schema Compliance Validation**: Full v1.5 specification adherence checking2. **Character Limit Optimization**: Name (100), description (1000), instructions (8000)3. **Capability Audit**: Verify proper capability configuration and usage4. **TypeSpec Migration**: Convert existing JSON to modern TypeSpec definitions5. **Testing Protocol**: Comprehensive validation using Agents Playground6. **Performance Analysis**: Identify bottlenecks and optimization opportunities7. **Best Practices Review**: Alignment with Microsoft guidelines and recommendations
+
+## Core Features Across All Workflows
+
+### Microsoft 365 Agents Toolkit Integration
+
+> - **VS Code Extension**: Full integration with `teamsdevapp.ms-teams-vscode-exte
+
+## Template References
+
+Detailed templates in `templates/declarative-agents/`:- `core_features_across_all_workf.md`
 
 ## Personas
 
@@ -67,7 +138,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -77,11 +147,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -100,25 +168,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -129,17 +199,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -149,7 +217,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -157,19 +224,17 @@ Complete development kit for Microsoft 365 Copilot declarative agents with three
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -182,8 +247,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -191,5 +254,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

@@ -1,123 +1,273 @@
 ---
+
 name: breakdown-test
+
 title: 'Test Planning & Quality Assurance Prompt'
+
 description: 'Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
   - web
+
 scripts: []
+
 skills:
+
   - subagent-driven-development
+
 formatter: default
+
 plan: None
+
 dependencies:
+
   - skill:subagent-driven-development
+
 tags:
+
   - generator
+
   - git
+
   - ml
+
   - planning
+
   - prompts
+
   - specification
+
   - testing
+
   - typescript
+
 trigger: /breakdown-test
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalTest Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## GoalAct as a senior Quality Assurance Engineer and Test Architect with expertise in ISTQB frameworks, ISO 25010 quality standards, and modern testing practices. Your task is to take feature artifacts (PRD, technical breakdown, implementation plan) and generate comprehensive test planning, task breakdown, and quality assurance documentation for GitHub project management.
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Goal
+
+Act as a senior Quality Assurance Engineer and Test Architect with expertise in ISTQB frameworks, ISO 25010 quality standards, and modern testing practices. Your task is to take feature artifacts (PRD, technical breakdown, implementation plan) and generate comprehensive test planning, task breakdown, and quality assurance documentation for GitHub project management.
 
 ## Quality Standards Framework
 
-### ISTQB Framework Application- **Test Process Activities**: Planning, monitoring, analysis, design, implementation, execution, completion- **Test Design Techniques**: Black-box, white-box, and experience-based testing approaches- **Test Types**: Functional, non-functional, structural, and change-related testing- **Risk-Based Testing**: Risk assessment and mitigation strategies
+### ISTQB Framework Application
 
-### ISO 25010 Quality Model- **Quality Characteristics**: Functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, portability- **Quality Validation**: Measurement and assessment approaches for each characteristic- **Quality Gates**: Entry and exit criteria for quality checkpoints
+- **Test Process Activities**: Planning, monitoring, analysis, design, implementation, execution, completion
+- **Test Design Techniques**: Black-box, white-box, and experience-based testing approaches
+- **Test Types**: Functional, non-functional, structural, and change-related testing
+- **Risk-Based Testing**: Risk assessment and mitigation strategies
 
-## Input RequirementsBefore using this prompt, ensure you have:
+### ISO 25010 Quality Model
 
-### Core Feature Documents1. **Feature PRD**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}.md`2. **Technical Breakdown**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md`3. **Implementation Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`4. **GitHub Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project-plan.md`
+- **Quality Characteristics**: Functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, portability
+- **Quality Validation**: Measurement and assessment approaches for each characteristic
+- **Quality Gates**: Entry and exit criteria for quality checkpoints
 
-## Output Format> Create comprehensive test planning documentation:>> 1. **Test Strategy**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/test-s> **Full content:** `templates/breakdown-test/output_format.md`
+## Input Requirements
+
+Before using this prompt, ensure you have:
+
+### Core Feature Documents
+
+1. **Feature PRD**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}.md`
+2. **Technical Breakdown**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md`
+3. **Implementation Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
+4. **GitHub Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project-plan.md`
+
+## Output Format
+
+> Create comprehensive test planning documentation:>
+>
+> 1. **Test Strategy**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/test-s
+> **Full content:**
 
 ## GitHub Issue Templates for Testing
 
-### Test Strategy Issue Template```markdown# Test Strategy: {Feature Name}
+### Test Strategy Issue Template
 
-## Test Strategy Overview{Summary of testing approach based on ISTQB and ISO 25010}
+```markdown# Test Strategy: {Feature Name}
 
-## ISTQB Framework Application**Test Design Techniques Used:**- [ ] Equivalence Partitioning- [ ] Boundary Value Analysis- [ ] Decision Table Testing- [ ] State Transition Testing- [ ] Experience-Based Testing**Test Types Coverage:**- [ ] Functional Testing- [ ] Non-Functional Testing- [ ] Structural Testing- [ ] Change-Related Testing (Regression)
+## Test Strategy Overview
 
-## ISO 25010 Quality Characteristics**Priority Assessment:**- [ ] Functional Suitability: {Critical/High/Medium/Low}- [ ] Performance Efficiency: {Critical/High/Medium/Low}- [ ] Compatibility: {Critical/High/Medium/Low}- [ ] Usability: {Critical/High/Medium/Low}- [ ] Reliability: {Critical/High/Medium/Low}- [ ] Security: {Critical/High/Medium/Low}- [ ] Maintainability: {Critical/High/Medium/Low}- [ ] Portability: {Critical/High/Medium/Low}
+Summary of testing approach based on ISTQB and ISO 25010
 
-## Quality Gates- [ ] Entry criteria defined- [ ] Exit criteria established- [ ] Quality thresholds documented
+## ISTQB Framework Application
+
+**Test Design Techniques Used:**- [ ] Equivalence Partitioning- [ ] Boundary Value Analysis- [ ] Decision Table Testing- [ ] State Transition Testing- [ ] Experience-Based Testing**Test Types Coverage:**- [ ] Functional Testing- [ ] Non-Functional Testing- [ ] Structural Testing- [ ] Change-Related Testing (Regression)
+
+## ISO 25010 Quality Characteristics**Priority Assessment:**
+
+- [ ] Functional Suitability: {Critical/High/Medium/Low}- [ ] Performance Efficiency: {Critical/High/Medium/Low}- [ ] Compatibility: {Critical/High/Medium/Low}- [ ] Usability: {Critical/High/Medium/Low}- [ ] Reliability: {Critical/High/Medium/Low}- [ ] Security: {Critical/High/Medium/Low}- [ ] Maintainability: {Critical/High/Medium/Low}- [ ] Portability: {Critical/High/Medium/Low}
+
+## Quality Gate
+
+s
+
+- [ ] Entry criteria defined
+- [ ] Exit criteria established
+- [ ] Quality thresholds documented
 
 ## Labels`test-strategy`, `istqb`, `iso25010`, `quality-gates`
 
-## Estimate{Strategic planning effort: 2-3 story points}```
+## Estimate
 
-### Playwright Test Implementation Issue Template```markdown# Playwright Tests: {Story/Component Name}
+{Strategic planning effort: 2-3 story points}```
 
-## Test Implementation Scope{Specific user story or component being tested}
+### Playwright Test Implementation Issue Template
+
+```markdown# Playwright Tests: {Story/Component Name}
+
+## Test Implementation Scope
+
+Specific user story or component being tested
 
 ## ISTQB Test Case Design**Test Design Technique**: {Selected ISTQB technique} **Test Type**: {Functional/Non-Functional/Structural/Change-Related}
 
-## Test Cases to Implement**Functional Tests:**- [ ] Happy path scenarios- [ ] Error handling validation- [ ] Boundary value testing- [ ] Input validation testing**Non-Functional Tests:**- [ ] Performance testing (response time < {threshold})- [ ] Accessibility testing (WCAG compliance)- [ ] Cross-browser compatibility- [ ] Mobile responsiveness
+## Test Cases to Implement**Functional Tests:**
 
-## Playwright Implementation Tasks- [ ] Page Object Model development- [ ] Test fixture setup- [ ] Test data management- [ ] Test case implementation- [ ] Visual regression tests- [ ] CI/CD integration
+- [ ] Happy path scenarios- [ ] Error handling validation- [ ] Boundary value testing- [ ] Input validation testing**Non-Functional Tests:**- [ ] Performance testing (response time < {threshold})- [ ] Accessibility testing (WCAG compliance)- [ ] Cross-browser compatibility- [ ] Mobile responsiveness
 
-## Acceptance Criteria- [ ] All test cases pass- [ ] Code coverage targets met (>80%)- [ ] Performance thresholds validated- [ ] Accessibility standards verified
+## Playwright Implementation Tasks
+
+- [ ] Page Object Model development- [ ] Test fixture setup- [ ] Test data management- [ ] Test case implementation- [ ] Visual regression tests- [ ] CI/CD integration
+
+## Acceptance Criteria
+
+- [ ] All test cases pass
+- [ ] Code coverage targets met (>80%)
+- [ ] Performance thresholds validated
+- [ ] Accessibility standards verified
 
 ## Labels`playwright`, `e2e-test`, `quality-validation`
 
-## Estimate{Test implementation effort: 2-5 story points}```
+## Estimate
 
-### Quality Assurance Issue Template```markdown# Quality Assurance: {Feature Name}
+{Test implementation effort: 2-5 story points}```
 
-## Quality Validation Scope{Overall quality validation for feature/epic}
+### Quality Assurance Issue Template
 
-## ISO 25010 Quality Assessment**Quality Characteristics Validation:**- [ ] Functional Suitability: Completeness, correctness, appropriateness- [ ] Performance Efficiency: Time behavior, resource utilization, capacity- [ ] Usability: Interface aesthetics, accessibility, learnability, operability- [ ] Security: Confidentiality, integrity, authentication, authorization- [ ] Reliability: Fault tolerance, recovery, availability- [ ] Compatibility: Browser, device, integration compatibility- [ ] Maintainability: Code quality, modularity, testability- [ ] Portability: Environment adaptability, installation procedures
+```markdown# Quality Assurance: {Feature Name}
 
-## Quality Gates Validation**Entry Criteria:**- [ ] All implementation tasks completed- [ ] Unit tests passing- [ ] Code review approved**Exit Criteria:**- [ ] All test types completed with >95% pass rate- [ ] No critical/high severity defects- [ ] Performance benchmarks met- [ ] Security validation passed
+## Quality Validation Scope
 
-## Quality Metrics- [ ] Test coverage: {target}%- [ ] Defect density: <{threshold} defects/KLOC- [ ] Performance: Response time <{threshold}ms- [ ] Accessibility: WCAG {level} compliance- [ ] Security: Zero critical vulnerabilities
+Overall quality validation for feature/epic
+
+## ISO 25010 Quality Assessment**Quality Characteristics Validation:**
+
+- [ ] Functional Suitability: Completeness, correctness, appropriateness- [ ] Performance Efficiency: Time behavior, resource utilization, capacity- [ ] Usability: Interface aesthetics, accessibility, learnability, operability- [ ] Security: Confidentiality, integrity, authentication, authorization- [ ] Reliability: Fault tolerance, recovery, availability- [ ] Compatibility: Browser, device, integration compatibility- [ ] Maintainability: Code quality, modularity, testability- [ ] Portability: Environment adaptability, installation procedures
+
+## Quality Gate
+
+s Validation**Entry Criteria:**- [ ] All implementation tasks completed- [ ] Unit tests passing- [ ] Code review approved**Exit Criteria:**- [ ] All test types completed with
+
+> 95% pass rate- [ ] No critical/high severity defects- [ ] Performance benchmarks met- [ ] Security validation passed
+
+## Quality Metrics
+
+- [ ] Test coverage: {target}%- [ ] Defect density: <{threshold} defects/KLOC- [ ] Performance: Response time <{threshold}ms- [ ] Accessibility: WCAG {level} compliance- [ ] Security: Zero critical vulnerabilities
 
 ## Labels`quality-assurance`, `iso25010`, `quality-gates`
 
-## Estimate{Quality validation effort: 3-5 story points}```
+## Estimate
+
+{Quality validation effort: 3-5 story points}```
 
 ## Success Metrics
 
-### Test Coverage Metrics- **Code Coverage**: >80% line coverage, >90% branch coverage for critical paths- **Functional Coverage**: 100% acceptance criteria validation- **Risk Coverage**: 100% high-risk scenario testing- **Quality Characteristics Coverage**: Validation for all applicable ISO 25010 characteristics
+### Test Coverage Metrics
 
-### Quality Validation Metrics- **Defect Detection Rate**: >95% of defects found before production- **Test Execution Efficiency**: >90% test automation coverage- **Quality Gate Compliance**: 100% quality gates passed before release- **Risk Mitigation**: 100% identified risks addressed with mitigation strategies
+- **Code Coverage**: >80% line coverage, >90% branch coverage for critical paths
+- **Functional Coverage**: 100% acceptance criteria validation
+- **Risk Coverage**: 100% high-risk scenario testing
+- **Quality Characteristics Coverage**: Validation for all applicable ISO 25010 characteristics
 
-### Process Efficiency Metrics- **Test Planning Time**: <2 hours to create comprehensive test strategy- **Test Implementation Speed**: <1 day per story point of test development- **Quality Feedback Time**: <2 hours from test completion to quality assessment- **Documentation Completeness**: 100% test issues have complete template informationThis comprehensive test planning approach ensures thorough quality validation aligned with industry standards while maintaining efficient project management and clear accountability for all testing activities.````
+### Quality Validation Metrics
 
-## Template ReferencesDetailed templates in `templates/breakdown-test/`:- `output_format.md`
+- **Defect Detection Rate**: >95% of defects found before production
+- **Test Execution Efficiency**: >90% test automation coverage
+- **Quality Gate Compliance**: 100% quality gates passed before release
+- **Risk Mitigation**: 100% identified risks addressed with mitigation strategies
+
+### Process Efficiency Metrics
+
+- **Test Planning Time**: <2 hours to create comprehensive test strategy
+- **Test Implementation Speed**: <1 day per story point of test development
+- **Quality Feedback Time**: <2 hours from test completion to quality assessment
+- **Documentation Completeness**: 100% test issues have complete template informationThis comprehensive test planning approach ensures thorough quality validation aligned with industry standards while maintaining efficient project management and clear accountability for all testing activities.````
+
+## Template References
+
+Detailed templates in `templates/breakdown-test/`:- `output_format.md`
 
 ## Personas
 
@@ -129,7 +279,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -139,11 +288,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -161,7 +308,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -181,7 +327,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -190,7 +335,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -202,7 +346,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -211,14 +354,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -232,7 +373,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -244,8 +384,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -253,5 +391,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 

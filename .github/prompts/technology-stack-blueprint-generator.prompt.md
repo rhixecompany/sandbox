@@ -1,24 +1,47 @@
 ---
 name: technology-stack-blueprint-generator
+title: Technology Stack Blueprint Generator
 description: Generates comprehensive technology stack documentation for all projects in the workspace. Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md at the workspace root.
 version: 2.0.0
-tags: [documentation, architecture, technology-stack, blueprint, multi-project]
+license: MIT
 author: Hermes Agent
+toolsets:
+  - file
+  - terminal
+scripts: []
+skills:
+  - technology-stack-blueprint-generator
+formatter: default
+plan: None
+tags:
+  - documentation
+  - architecture
+  - technology-stack
+  - blueprint
+  - multi-project
+trigger: /technology-stack-blueprint-generator
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 # Technology Stack Blueprint Generator
 
-## Purpose
+## Goal
+
 Generate comprehensive technology stack documentation for every project in the workspace, placing each project's documentation directly inside its own directory (not in a centralized docs/ folder), plus a master workspace-level blueprint.
 
 ## Core Requirements
 
 ### Output Locations
+
 1. **Per-Project**: `projects/<project-name>/TECHNOLOGY_STACK.md` — each project gets its own file in its root
 2. **Workspace Root**: `Technology_Stack_Blueprint.md` — master cross-project blueprint
 
 ### Documentation Depth
+
 Each TECHNOLOGY_STACK.md must include:
+
 - Technology stack overview table (Language, Framework, Runtime, Package Manager, Database, Key Dependencies)
 - Version information for all major dependencies (from package.json, requirements.txt, pyproject.toml, Cargo.toml, go.mod, pom.xml, build.gradle.kts, composer.json, Package.swift, *.csproj)
 - Dependency analysis (production vs dev, outdated flags if detectable)
@@ -29,6 +52,7 @@ Each TECHNOLOGY_STACK.md must include:
 - CI/CD pipeline references (from .github/workflows/)
 
 ### Master Blueprint Must Include
+
 - Workspace-wide technology inventory (all languages, runtimes, package managers detected)
 - Cross-project dependency map
 - Shared tooling configurations
@@ -38,6 +62,7 @@ Each TECHNOLOGY_STACK.md must include:
 ## Workflow
 
 ### Phase 1: Discovery
+
 1. Scan workspace for all project directories containing build manifests
 2. Identify project types by manifest files:
    - `package.json` → Node.js/TypeScript/Bun
@@ -53,7 +78,9 @@ Each TECHNOLOGY_STACK.md must include:
 3. Build project inventory with paths
 
 ### Phase 2: Analysis (Per Project)
+
 For each discovered project:
+
 1. Read all manifest/config files
 2. Parse dependencies and versions
 3. Detect frameworks from dependency names
@@ -62,7 +89,9 @@ For each discovered project:
 6. Detect architecture patterns (check for backend/frontend split, dual-stack, etc.)
 
 ### Phase 3: Generation (Per Project)
+
 Write `projects/<project-name>/TECHNOLOGY_STACK.md` with:
+
 - Project header (path, generated date, status)
 - Technology stack table
 - Detailed dependency sections
@@ -72,7 +101,9 @@ Write `projects/<project-name>/TECHNOLOGY_STACK.md` with:
 - Architecture notes
 
 ### Phase 4: Master Blueprint Generation
+
 Write `Technology_Stack_Blueprint.md` at workspace root with:
+
 - Cross-project technology matrix
 - Shared tooling summary
 - Dependency version alignment analysis

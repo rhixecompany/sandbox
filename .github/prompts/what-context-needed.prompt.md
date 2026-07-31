@@ -1,59 +1,131 @@
 ---
+
 name: what-context-needed
+
 title: What Context Do You Need?
+
 description: Ask Copilot what files it needs to see before answering a question.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ai-assistant
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /what-context-needed
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalAsk Copilot what files it needs to see before answering a question.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Ask Copilot what files it needs to see before answering a question.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## My Question{{question}}
+### Phase 3: Verify
 
-## Instructions1. Based on my question, list the files you would need to examine2. Explain why each file is relevant3. Note any files you've already seen in this conversation4. Identify what you're uncertain about
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Output Format```markdown
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## My Question
+
+{question
+
+## Instructions
+
+1. Based on my question, list the files you would need to examine
+2. Explain why each file is relevant
+3. Note any files you've already seen in this conversation
+4. Identify what you're uncertain about
+
+## Output Format
+
+```markdown
 
 ## Files I Need>
 
-### Must See (required for accurate answer)> - `path/to/file.ts` — [why needed]> **Full content:** `templates/what-context-needed/files_i_need.md`
+### Must See (required for accurate answer)
 
-## Template ReferencesTemplates in `templates/what-context-needed/`:- `files_i_need.md`- `phases.md`
+> - `path/to/file.ts` — [why needed]
+
+## Template References
+
+Templates in `templates/what-context-needed/`:- `files_i_need.md`- `phases.md`
 
 ## Personas
 
@@ -65,7 +137,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -75,11 +146,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
-
 
 ## Rules
 
@@ -97,7 +166,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -117,7 +185,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -126,7 +193,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -138,7 +204,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -147,14 +212,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Ask Copilot what files it needs to see before answering a question.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -168,7 +231,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -180,8 +242,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -189,5 +249,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 

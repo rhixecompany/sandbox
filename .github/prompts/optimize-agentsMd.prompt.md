@@ -1,57 +1,126 @@
 ---
+
 name: optimize-agentsMd
+
 title: Optimize Agentsmd
+
 description: Use when needing to optimize-agentsmd.prompt.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 dependencies: []
+
 tags:
+
   - agents
+
   - ml
+
   - performance
+
   - prompts
+
   - specification
+
   - typescript
+
   - workflow
+
 trigger: /optimize-agentsMd
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalUse this prompt to handle the optimize agentsmd workflow.
 
-## ContextUse when you need to optimize agentsmd for the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Use this prompt to handle the optimize agentsmd workflow.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note summarizing what was changed, assumptions made, and any missing sources.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the chat response structured, deterministic, and easy to act on; if the artifact is large, provide a concise summary plus the file update.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear and non-blocking, state the assumption explicitly; if it blocks correctness, ask for clarification or mark it as "not present".
+Use when you need to optimize agentsmd for the current workspace or task.
 
-## PhasesThe outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, Phase 2 Execute = Phases 2-3, Phase 3 Verify = Phase 4, Phase 4 Hand off = final presentation.
+## Input
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+s
 
-### Phase 2: Execute- Produce the AGENTS.md rewrite/update described in the source prompt details; do not constrain scope when full coverage updates are required.- Keep the steps explicit and reproducible.
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+## Output
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+s
 
-## Source Prompt Details```text
+- A complete result that matches the prompt's purpose.
+- A concise verification note summarizing what was changed, assumptions made, and any missing sources.
 
-## Plan: Comprehensive AGENTS.md for Agentic Coding in Banking Repo> **TL;DR:** I will analyze the codebase and existing documentation to produce a d>
+## Rules
 
-### Phase 1: Discovery & Research> **Full content:** `templates/optimize-agentsMd/plan_comprehensive_agentsmd_fo.md`
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
-## Template ReferencesDetailed templates in `templates/optimize-agentsMd/`:- `plan_comprehensive_agentsmd_fo.md`
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the chat response structured, deterministic, and easy to act on; if the artifact is large, provide a concise summary plus the file update.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear and non-blocking, state the assumption explicitly; if it blocks correctness, ask for clarification or mark it as "not present".
+
+## Phases
+
+The outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, Phase 2 Execute = Phases 2-3, Phase 3 Verify = Phase 4, Phase 4 Hand off = final presentation.
+
+### Phase 1: Intake
+
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute
+
+- Produce the AGENTS.md rewrite/update described in the source prompt details; do not constrain scope when full coverage updates are required.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Source Prompt Details
+
+```text
+
+## Plan: Comprehensive AGENTS.md for Agentic Coding in Banking Repo
+
+> **TL;DR:** I will analyze the codebase and existing documentation to produce a d>
+
+### Phase 1: Discovery & Research
+
+## Template References
+
+Detailed templates in `templates/optimize-agentsMd/`:- `plan_comprehensive_agentsmd_fo.md`
 
 ## Personas
 
@@ -63,7 +132,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -73,11 +141,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -95,7 +161,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -115,7 +180,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -124,7 +188,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -136,7 +199,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -145,14 +207,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 optimize-agentsMd.prompt.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -166,7 +226,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -178,8 +237,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -187,5 +244,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 

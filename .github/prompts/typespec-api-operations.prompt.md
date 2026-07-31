@@ -1,86 +1,187 @@
 ---
+
 name: typespec-api-operations
+
 title: Add TypeSpec API Operations
+
 description: 'Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - api
+
   - ml
+
   - prompts
+
   - specification
+
   - typescript
+
 trigger: /typespec-api-operations
+
 mode: agent
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalAdd GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
 
-## ContextUse when you need to typespec api operations for the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to typespec api operations for the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## Adding GET Operations>
+### Phase 3: Verify
 
-### Simple GET - List All Items>> @get op listItems(): Item[];> **Full content:** `templates/typespec-api-operations/adding_get_operations.md`
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Adding POST Operations>
+### Phase 4: Hand off
 
-### Simple POST - Create Item>> - @param item The item to create> **Full content:** `templates/typespec-api-operations/adding_post_operations.md`
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Adding PATCH Operations>
+## Adding GET Operations
 
-### Simple PATCH - Update Item>> - Update an existing item.> **Full content:** `templates/typespec-api-operations/adding_patch_operations.md`
+### Simple GET
 
-## Adding DELETE Operations> - @param id The ID of the item to delete> @route("/items/{id}")> **Full content:** `templates/typespec-api-operations/adding_delete_operations.md`
+- List All Items
 
-## Complete CRUD Example>
+>
+> @get op listItems(): Item[];
+> **Full content:**
 
-### Define the Service and Models>> @server("<https://api.example.com>")> **Full content:** `templates/typespec-api-operations/complete_crud_example.md`
+## Adding POST Operations
 
-## Advanced Features>
+### Simple POST
 
-### Multiple Query Parameters>> @query userId?: integer,> **Full content:** `templates/typespec-api-operations/advanced_features.md`
+- Create Item
 
-## Testing PromptsAfter adding operations, test with these prompts:**GET Operations:**- "List all items and show them in a table"- "Show me items for user ID 1"- "Get the details of item 42"**POST Operations:**- "Create a new item with title 'My Task' for user 1"- "Add an item: title 'New Feature', description 'Add login'"**PATCH Operations:**- "Update item 10 with title 'Updated Title'"- "Change the status of item 5 to completed"**DELETE Operations:**- "Delete item 99"- "Remove the item with ID 15"
+>
+> - @param item The item to create
+> **Full content:**
 
-## Best Practices> - Use descriptive parameter names: `userId` not `uid`> - Be consistent across operations> **Full content:** `templates/typespec-api-operations/best_practices.md`
+## Adding PATCH Operations
+
+### Simple PATCH
+
+- Update Item
+
+>
+> - Update an existing item.
+> **Full content:**
+
+## Adding DELETE Operations
+
+> - @param id The ID of the item to delete
+> @route("/items/{id}")
+> **Full content:**
+
+## Complete CRUD Example
+
+### Define the Service and Models
+
+> @server("<https://api.example.com>")
+
+## Advanced Features
+
+### Multiple Query Parameters
+
+> @query userId?: integer,
+
+## Test
+
+ing PromptsAfter adding operations, test with these prompts:**GET Operations:**- "List all items and show them in a table"- "Show me items for user ID 1"- "Get the details of item 42"**POST Operations:**- "Create a new item with title 'My Task' for user 1"- "Add an item: title 'New Feature', description 'Add login'"**PATCH Operations:**- "Update item 10 with title 'Updated Title'"- "Change the status of item 5 to completed"**DELETE Operations:**- "Delete item 99"- "Remove the item with ID 15"
+
+## Best Practices
+
+> - Use descriptive parameter names: `userId` not `uid`
+> - Be consistent across operations
 
 ## Common Issues
 
-### Issue: Parameter not showing in Copilot**Solution**: Check parameter is properly decorated with `@query`, `@path`, or `@body`
+### Issue: Parameter not showing in Copilot
 
-### Issue: Adaptive card not rendering**Solution**: Verify file path in `@card` decorator and check JSON syntax
+**Solution**: Check parameter is properly decorated with `@query`, `@path`, or `@body`
 
-### Issue: Confirmation not appearing**Solution**: Ensure `@capabilities` decorator is properly formatted with confirmation object
+### Issue: Adaptive card not rendering
 
-### Issue: Model property not appearing in response**Solution**: Check if property needs `@visibility(Lifecycle.Read)` or remove it if it should be writable
+**Solution**: Verify file path in `@card` decorator and check JSON syntax
 
-## Template ReferencesDetailed templates in `templates/typespec-api-operations/`:- `adding_delete_operations.md`- `adding_get_operations.md`- `adding_patch_operations.md`- `adding_post_operations.md`- `advanced_features.md`- `best_practices.md`- `complete_crud_example.md`
+### Issue: Confirmation not appearing
+
+**Solution**: Ensure `@capabilities` decorator is properly formatted with confirmation object
+
+### Issue: Model property not appearing in response
+
+**Solution**: Check if property needs `@visibility(Lifecycle.Read)` or remove it if it should be writable
+
+## Template References
+
+Detailed templates in `templates/typespec-api-operations/`:- `adding_delete_operations.md`- `adding_get_operations.md`- `adding_patch_operations.md`- `adding_post_operations.md`- `advanced_features.md`- `best_practices.md`- `complete_crud_example.md`
 
 ## Personas
 
@@ -92,7 +193,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -102,11 +202,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -125,25 +223,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -154,17 +254,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -174,7 +272,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -182,19 +279,17 @@ Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -207,8 +302,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -216,5 +309,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

@@ -1,8 +1,8 @@
 # Prompt Library Enhancement Report
 
-**Date:** 2026-07-27
+**Date:** 2026-07-27 (updated 2026-07-31)
 **Session:** Current
-**Scope:** `.github/prompts/` — 216 `.prompt.md` files
+**Scope:** `.github/prompts/` — 216 `.prompt.md` files + ~500 nested templates
 
 ## Changes Applied This Session
 
@@ -18,42 +18,43 @@ Removed ` — description` annotations from skills list (7 entries) to align wit
 
 ### 4. Updated Analyzer
 - Added `## Workflow` to `STRUCTURAL_SECTIONS` to recognize workflow-based prompts as having execution sections (resolved 2 MISSING_EXECUTION_SECTION issues)
+- Anchored the `## Rules` extraction regex (`^## Rules`) so `### Rules` H3 sections no longer false-positive as RULES_INLINE_NOT_SHARED
 
-## Final Analysis Results
+## 2026-07-31 Session — Heading-Glue Repair Campaign (Passes 1–8)
 
-| Severity | Count | Details |
-|----------|-------|---------|
-| CRITICAL | 0 | — |
-| HIGH | 20 | All are `MALFORMED_HEADINGS` — false positives from analyzer regex matching `#` in inline code, template vars (`#{...}`), language names (`C#`), and code block attributes (`#[...]`). Not actual heading issues. |
-| MEDIUM | 0 | — |
-| INFO | 10 | 9 `RULES_INLINE_NOT_SHARED`, 1 `DESCRIPTION_TOO_SHORT` (`pl.prompt.md`) |
+All fixers in `.enhance/` write **LF only** (matches `.gitattributes` `*.md text eol=lf`); `core.autocrlf=true` was the root cause of `\r\r\r\n` frontmatter corruption in earlier passes.
 
-## False Positive Details (20 MALFORMED_HEADINGS)
+| Pass | Script | Fixes | Files |
+|------|--------|-------|-------|
+| 1 | `fix_glued_headings.py` | 256 + 48 (re-run) | 121 + 28 |
+| 2 | `fix_residual_glue.py` | 746 + 40 | 152 + 27 |
+| 3 | `fix_tail_glue.py` | 64 | 37 |
+| 4 | `fix_tail_glue2.py` | 297 | 107 |
+| 5 | `normalize_lf.py` | 584 files → LF | — |
+| 6 | `fix_fence_lang.py` | 8 | 5 |
+| 7 | `fix_collapsed_bullets.py` | 3 | 2 |
+| 8 | `fix_tail_manual.py` + `fix_tail_generic.py` | 25 + 48 | 17 + 17 |
 
-All 20 are analyzer limitations — inline `#` characters within code blocks, URLs, template syntax, or language references:
+Additional repairs this session:
+- `pl.prompt.md` — full rebuild (stub description, collapsed template, broken fences, embedded duplicate prompt removed)
+- `create-oo-component-documentation.prompt.md` — collapsed template region restored from git history (879b4532)
+- `structured-autonomy-plan.prompt.md` — camelCase + sentence glue split
+- `bigquery-pipeline-audit`, `postgresql-code-review`, `power-bi-*` — orphan `>`/`>>` markers stripped
 
-| File | Inline `#` Source |
-|------|-------------------|
-| add-educational-comments | `#file:` param, concatenated section |
-| breakdown-plan | `#{...}` template vars |
-| convert-plaintext-to-md | `#file:` param |
-| cosmosdb-datamodeling | `#1` reference |
-| create-github-action-workflow-specification | Mermaid diagram `#` node IDs |
-| create-oo-component-documentation | `C#` language name |
-| create-tldr-page | `#fetch #` command syntax |
-| csharp-mstest | `#123` issue reference |
-| java-add-graalvm-native-image-support | URL `#` fragments |
-| php-mcp-server-generator | `#[...]` PHP attributes |
-| prompts-strict-template | No `#` visible (possible edge case) |
-| repo | `#tool:` subagent directive |
-| ruby-mcp-server-generator | `#` Ruby comments |
-| rust-mcp-server-generator | `#[...]` Rust attributes |
-| shuffle-json-data | `#file:` param |
-| structured-autonomy-plan | `#tool:` reference |
-| tldr-prompt | edge case |
-| update-avm-modules-in-bicep | `#search #fetch` tool refs |
-| workspace-consolidate | conventional commit format |
-| write-coding-standards-from-file | `#fetch` URL hash |
+## Final Analysis Results (post-campaign)
+
+| Severity | Count |
+|----------|-------|
+| CRITICAL | 0 |
+| HIGH | 0 |
+| MEDIUM | 0 |
+| INFO | 0 |
+
+- **markdownlint**: 310 errors (baseline HEAD: 358) — net −48; increases in MD033/MD040 are pre-existing inline HTML/bare fences now visible after splits, not new corruption
+- **YAML frontmatter**: 0 broken across all 216 prompts
+- **CR files**: 0 (all LF)
+- **Residual glue**: 0 true bracket/bold/brace glue; remaining scanner hits are legit hyphenated headings
+- **Idempotency**: all 8 passes re-run clean (0/0/0/0)
 
 ## Verification
 
@@ -61,11 +62,7 @@ All 20 are analyzer limitations — inline `#` characters within code blocks, UR
 - **0 files** with no frontmatter ✓
 - **comprehensive_enhance.py**: Idempotent (0 files modified on re-run) ✓
 - **Section coverage**: All prompts have Goal/Context/Rules/Phases/Verification or equivalent ✓
-- **Git state**: 227 files changed (mostly from prior session's 13-section DRY enhancement)
-- **Corruption check**: No `promptmetadata` artifacts, no YAML array flattening detected ✓
-
-## Remaining Work (Optional)
-
-- **Fix analyzer MALFORMED_HEADINGS regex** to exclude inline `#` in code blocks, URLs, template vars — would drop 20 false positives to 0
-- **Convert 9 RULES_INLINE_NOT_SHARED** to shared template references (INFO)
-- **Extend `pl.prompt.md` description** beyond 30 chars (INFO)
+- **Analyzer (2026-07-31)**: 0 CRITICAL / 0 HIGH / 0 MEDIUM / 0 INFO across all 216 prompts ✓
+- **markdownlint (2026-07-31)**: 310 errors vs 358 HEAD baseline (−48); all increases are pre-existing content exposed by splits ✓
+- **Line endings (2026-07-31)**: 0 CR files, all LF per `.gitattributes` ✓
+- **Git state**: 1,021 files changed in `.github/prompts` (heading repairs + prior session's DRY enhancement), uncommitted

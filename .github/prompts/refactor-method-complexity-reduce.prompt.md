@@ -1,62 +1,138 @@
 ---
+
 name: refactor-method-complexity-reduce
+
 title: Refactor Method Complexity Reduce
+
 description: 'Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.'
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - terminal
+
   - file
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - ml
+
   - prompts
+
   - refactoring
+
   - specification
+
   - typescript
+
 trigger: /refactor-method-complexity-reduce
+
 argument-hint: 'methodName=..., complexityThreshold=15'
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalRefactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
 
-## ContextUse when you need to work on the current workspace or task.
+## Goal
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+Use when you need to work on the current workspace or task.
+
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## ObjectiveRefactor the method `${input:methodName}`, to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting logic into focused helper methods.
+### Phase 3: Verify
 
-## Instructions> 1. **Analyze the current method** to identify sources of cognitive complexity:>> - Nested conditional statements> **Full content:** `templates/refactor-method-complexity-reduce/instructions.md`
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
 
-## Implementation Approach- Extract helper methods before refactoring the main flow- Test incrementally to ensure no regressions- Use meaningful names that describe the extracted responsibility- Keep extracted methods close to where they're used- Consider making repeated code patterns into generic methods
+### Phase 4: Hand off
 
-## ResultThe refactored method should:- Have cognitive complexity reduced to the target threshold of `${input:complexityThreshold}` or below- Be more readable and maintainable- Have clear separation of concerns- Be easier to test and debug- Retain all original functionality
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
 
-## Testing and Validation**CRITICAL: After completing the refactoring, you MUST:**1. **Run all existing tests** related to the refactored method and its surrounding functionality2. **MANDATORY: Explicitly verify test results show "failed=0"**   - **NEVER assume tests passed** - always examine the actual test output   - Search for the summary line containing pass/fail counts (e.g., "passed=X failed=Y")   - **If the summary shows any number other than "failed=0", tests have FAILED**   - If test output is in a file, read the entire file to locate and verify the failure count   - Running tests is NOT the same as verifying tests passed   - **Do not proceed** until you have explicitly confirmed zero failures3. **If any tests fail (failed > 0):**   - State clearly how many tests failed   - Analyze each failure to understand what functionality was broken   - Common causes: null handling, empty collection checks, condition logic errors   - Identify the root cause in the refactored code   - Correct the refactored code to restore the original behavior   - Re-run tests and verify "failed=0" in the output   - Repeat until all tests pass (failed=0)4. **Verify compilation** - Ensure there are no compilation errors5. **Check cognitive complexity** - Confirm the metric is at or below the target threshold of `${input:complexityThreshold}`
+## ObjectiveRefactor the method `$
 
-## Confirmation Checklist- [ ] Code compiles without errors- [ ] **Test results explicitly state "failed=0"** (verified by reading the output)- [ ] All test failures analyzed and corrected (if any occurred)- [ ] Cognitive complexity is at or below the target threshold of `${input:complexityThreshold}`- [ ] All original functionality is preserved- [ ] Code follows project conventions and standards
+input:methodName}`, to reduce its cognitive complexity to`${input:complexityThreshold}` or below, by extracting logic into focused helper methods.
 
-## Template ReferencesDetailed templates in `templates/refactor-method-complexity-reduce/`:- `instructions.md`
+## Instructions
+
+> 1. **Analyze the current method** to identify sources of cognitive complexity:>
+>
+> - Nested conditional statements
+
+## Implementation Approach
+
+- Extract helper methods before refactoring the main flow- Test incrementally to ensure no regressions- Use meaningful names that describe the extracted responsibility- Keep extracted methods close to where they're used- Consider making repeated code patterns into generic methods
+
+## ResultThe refactored method should:
+
+- Have cognitive complexity reduced to the target threshold of `${input:complexityThreshold}` or below- Be more readable and maintainable- Have clear separation of concerns- Be easier to test and debug- Retain all original functionality
+
+## Test
+
+ing and Validation**CRITICAL: After completing the refactoring, you MUST:**1. **Run all existing tests** related to the refactored method and its surrounding functionality2. **MANDATORY: Explicitly verify test results show "failed=0"**   - **NEVER assume tests passed** - always examine the actual test output   - Search for the summary line containing pass/fail counts (e.g., "passed=X failed=Y")   - **If the summary shows any number other than "failed=0", tests have FAILED**   - If test output is in a file, read the entire file to locate and verify the failure count   - Running tests is NOT the same as verifying tests passed   - **Do not proceed** until you have explicitly confirmed zero failures3. **If any tests fail (failed > 0):**   - State clearly how many tests failed   - Analyze each failure to understand what functionality was broken   - Common causes: null handling, empty collection checks, condition logic errors   - Identify the root cause in the refactored code   - Correct the refactored code to restore the original behavior   - Re-run tests and verify "failed=0" in the output   - Repeat until all tests pass (failed=0)4. **Verify compilation** - Ensure there are no compilation errors5. **Check cognitive complexity** - Confirm the metric is at or below the target threshold of `${input:complexityThreshold}`
+
+## Confirmation Checklist
+
+- [ ] Code compiles without errors- [ ] **Test results explicitly state "failed=0"** (verified by reading the output)- [ ] All test failures analyzed and corrected (if any occurred)- [ ] Cognitive complexity is at or below the target threshold of `${input:complexityThreshold}`- [ ] All original functionality is preserved- [ ] Code follows project conventions and standards
+
+## Template References
+
+Detailed templates in `templates/refactor-method-complexity-reduce/`:- `instructions.md`
 
 ## Personas
 
@@ -68,7 +144,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -78,11 +153,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -101,25 +174,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -130,17 +205,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -150,7 +223,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -158,19 +230,17 @@ Refactor given method `${input:methodName}` to reduce its cognitive complexity t
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -183,8 +253,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -192,5 +260,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

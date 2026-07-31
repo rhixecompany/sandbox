@@ -1,91 +1,213 @@
 ---
+
 name: java-mcp-server-generator
+
 title: Java MCP Server Generator
+
 description: Generate a complete Model Context Protocol server project in Java using the official MCP Java SDK with reactive streams and optional Spring Boot integration.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
   - web
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - backend
+
   - frontend
+
   - generator
+
   - java
+
   - mcp
+
   - ml
+
   - prompts
+
   - typescript
+
 trigger: /java-mcp-server-generator
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
+
 ## Goal
 
 Generate a complete Model Context Protocol server project in Java using the official MCP Java SDK with reactive streams and optional Spring Boot integration.
 
 # Java MCP Server GeneratorGenerate a complete, production-ready MCP server in Java using the official Java SDK with Maven or Gradle.
 
-## Project Generation> When asked to create a Java MCP server, generate a complete project with this st> ├── pom.xml (or build.gradle.kts)> **Full content:** `templates/java-mcp-server-generator/project_generation.md`
+## Project Generation
 
-## Maven pom.xml Template> <?xml version="1.0" encoding="UTF-8"?>> <project xmlns="<http://maven.apache.org/POM/4.0.0>"> **Full content:** `templates/java-mcp-server-generator/maven_pomxml_template.md`
+> When asked to create a Java MCP server, generate a complete project with this st
+> ├── pom.xml (or build.gradle.kts)
+> **Full content:**
 
-## Gradle build.gradle.kts Template> group = "com.example"> sourceCompatibility = JavaVersion.VERSION_17> **Full content:** `templates/java-mcp-server-generator/gradle_buildgradlekts_template.md`
+## Maven pom.xml Template
 
-## McpServerApplication.java Template> package com.example.mcp;> import com.example.mcp.tools.ToolHandlers;> **Full content:** `templates/java-mcp-server-generator/mcpserverapplicationjava_templ.md`
+> <?xml version="1.0" encoding="UTF-8"?>
+> <project xmlns="<http://maven.apache.org/POM/4.0.0>"
+> **Full content:**
 
-## ToolDefinitions.java Template> package com.example.mcp.tools;> import io.mcp.json.JsonSchema;> **Full content:** `templates/java-mcp-server-generator/tooldefinitionsjava_template.md`
+## Gradle build.gradle.kts Template
 
-## ToolHandlers.java Template> package com.example.mcp.tools;> import com.fasterxml.jackson.databind.JsonNode;> **Full content:** `templates/java-mcp-server-generator/toolhandlersjava_template.md`
+> group = "com.example"
+> sourceCompatibility = JavaVersion.VERSION_17
+> **Full content:**
 
-## ResourceDefinitions.java Template```javapackage com.example.mcp.resources;import io.mcp.server.resource.Resource;import java.util.List;public class ResourceDefinitions {    public static List<Resource> getResources() {        return List.of(            Resource.builder()                .name("Example Data")                .uri("resource://data/example")                .description("Example resource data")                .mimeType("application/json")                .build(),            Resource.builder()                .name("Configuration")                .uri("resource://config")                .description("Server configuration")                .mimeType("application/json")                .build()        );    }}```
+## McpServerApplication.java Template
 
-## ResourceHandlers.java Template> package com.example.mcp.resources;> import io.mcp.server.McpServer;> **Full content:** `templates/java-mcp-server-generator/resourcehandlersjava_template.md`
+> package com.example.mcp;
+> import com.example.mcp.tools.ToolHandlers;
+> **Full content:**
 
-## PromptDefinitions.java Template> package com.example.mcp.prompts;> import io.mcp.server.prompt.Prompt;> **Full content:** `templates/java-mcp-server-generator/promptdefinitionsjava_template.md`
+## ToolDefinitions.java Template
 
-## PromptHandlers.java Template> package com.example.mcp.prompts;> import io.mcp.server.McpServer;> **Full content:** `templates/java-mcp-server-generator/prompthandlersjava_template.md`
+> package com.example.mcp.tools;
+> import io.mcp.json.JsonSchema;
+> **Full content:**
 
-## McpServerTest.java Template> package com.example.mcp;> import com.fasterxml.jackson.databind.ObjectMapper;> **Full content:** `templates/java-mcp-server-generator/mcpservertestjava_template.md`
+## ToolHandlers.java Template
 
-## README.md Template````markdown# My MCP ServerA Model Context Protocol server built with Java and the official MCP Java SDK.
+> package com.example.mcp.tools;
+> import com.fasterxml.jackson.databind.JsonNode;
+> **Full content:**
 
-## Features- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ Prompts: code-review- ✅ Reactive Streams with Project Reactor- ✅ Structured logging with SLF4J- ✅ Full test coverage
+## ResourceDefinitions.java Template```javapackage com.example.mcp.resources;import io.mcp.server.resource.Resource;import java.util.List;public class ResourceDefinitions {    public static List<Resource
 
-## Requirements- Java 17 or later- Maven 3.6+ or Gradle 7+
+> getResources() {        return List.of(            Resource.builder()                .name("Example Data")                .uri("resource://data/example")                .description("Example resource data")                .mimeType("application/json")                .build(),            Resource.builder()                .name("Configuration")                .uri("resource://config")                .description("Server configuration")                .mimeType("application/json")                .build()        );    }}```
+
+## ResourceHandlers.java Template
+
+> package com.example.mcp.resources;
+> import io.mcp.server.McpServer;
+> **Full content:**
+
+## PromptDefinitions.java Template
+
+> package com.example.mcp.prompts;
+> import io.mcp.server.prompt.Prompt;
+> **Full content:**
+
+## PromptHandlers.java Template
+
+> package com.example.mcp.prompts;
+> import io.mcp.server.McpServer;
+> **Full content:**
+
+## McpServerTest.java Template
+
+> package com.example.mcp;
+> import com.fasterxml.jackson.databind.ObjectMapper;
+> **Full content:**
+
+## README.md Template
+
+````markdown# My MCP ServerA Model Context Protocol server built with Java and the official MCP Java SDK.
+
+## Feature
+
+s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ Prompts: code-review- ✅ Reactive Streams with Project Reactor- ✅ Structured logging with SLF4J- ✅ Full test coverage
+
+## Requirements
+
+- Java 17 or later
+- Maven 3.6+ or Gradle 7+
 
 ## Build
 
-### Maven```bashmvn clean package```````
+### Maven
 
-### Gradle```bash./gradlew build```
+```
+bashmvn clean package````
+```
+
+### Gradle
+
+```
+bash./gradlew build
+```
 
 ## Run
 
-### Maven```bashjava -jar target/my-mcp-server-1.0.0.jar```
+### Maven
 
-### Gradle```bash./gradlew run```
+```
+bashjava -jar target/my-mcp-server-1.0.0.jar
+```
 
-## Testing
+### Gradle
 
-### Maven```bashmvn test```
+```
+bash./gradlew run
+```
 
-### Gradle```bash./gradlew test```
+## Test
 
-## Integration with Claude DesktopAdd to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "java",      "args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]    }  }}```
+ing
 
-## LicenseMIT```
+### Maven
 
-## Generation Instructions1. **Ask for project name and package**2. **Choose build tool** (Maven or Gradle)3. **Generate all files** with proper package structure4. **Use Reactive Streams** for async handlers5. **Include comprehensive logging** with SLF4J6. **Add tests** for all handlers7. **Follow Java conventions** (camelCase, PascalCase)8. **Include error handling** with proper responses9. **Document public APIs** with Javadoc10. **Provide both sync and async** examples```
+```
+bashmvn test
+```
 
-## Template ReferencesDetailed section templates in `templates/java-mcp-server-generator/`:- `gradle_buildgradlekts_template.md`- `maven_pomxml_template.md`- `mcpserverapplicationjava_templ.md`- `mcpservertestjava_template.md`- `project_generation.md`- `promptdefinitionsjava_template.md`- `prompthandlersjava_template.md`- `resourcehandlersjava_template.md`- `tooldefinitionsjava_template.md`- `toolhandlersjava_template.md`
+### Gradle
+
+```
+bash./gradlew test
+```
+
+## Integration with Claude Desktop
+
+Add to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "java",      "args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]    }  }}```
+
+## License
+
+MIT```
+
+## Generation Instructions
+
+1. **Ask for project name and package**
+2. **Choose build tool** (Maven or Gradle)
+3. **Generate all files** with proper package structure
+4. **Use Reactive Streams** for async handlers
+5. **Include comprehensive logging** with SLF4J
+6. **Add tests** for all handlers
+7. **Follow Java conventions** (camelCase, PascalCase)
+8. **Include error handling** with proper responses
+9. **Document public APIs** with Javadoc
+1
+0. **Provide both sync and async** examples```
+
+## Template References
+
+Detailed section templates in `templates/java-mcp-server-generator/`:- `gradle_buildgradlekts_template.md`- `maven_pomxml_template.md`- `mcpserverapplicationjava_templ.md`- `mcpservertestjava_template.md`- `project_generation.md`- `promptdefinitionsjava_template.md`- `prompthandlersjava_template.md`- `resourcehandlersjava_template.md`- `tooldefinitionsjava_template.md`- `toolhandlersjava_template.md`
 
 ## Personas
 
@@ -97,7 +219,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -107,11 +228,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -129,7 +248,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -149,7 +267,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -158,7 +275,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -170,7 +286,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -181,7 +296,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -195,7 +309,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -207,8 +320,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -216,5 +327,18 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+## Related Prompts
 
+Other language variants of this MCP server generator:
 
+| Language | Prompt |
+|----------|--------|
+| TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
+| Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
+| Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |
+| Go | [`go-mcp-server-generator.prompt.md`](go-mcp-server-generator.prompt.md) |
+| Swift | [`swift-mcp-server-generator.prompt.md`](swift-mcp-server-generator.prompt.md) |
+| Kotlin | [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md) |
+| C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
+| PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
+| Ruby | [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md) |

@@ -4,6 +4,12 @@ Project-wide guidance for GitHub Copilot in the SandBox monorepo.
 
 > **Source of Truth:** This workspace is governed by `AGENTS.md` (canonical). All other instruction files (CLAUDE.md, .cursorrules, .hermes.md) are thin stubs that defer to AGENTS.md. If a rule here differs from AGENTS.md, AGENTS.md wins.
 
+> **Quick Links:** This file covers practical setup and subproject reference. For exhaustive guidance on patterns, conventions, and MCP server details, see `AGENTS.md`:
+> - § 2 (Technology Stack) — language versions, framework details, Python dual-install
+> - § 4 (Subproject Directory) — complete project inventory with entry points
+> - § 5 (Code Patterns & Conventions) — TypeScript, Python, Bash, PowerShell patterns
+> - § 9 (MCP Server Precedence) — when to use MCP vs native CLI
+
 ---
 
 ## 1. Priority Guidelines
@@ -18,7 +24,97 @@ When generating code for this repository:
 
 ---
 
-## 2. Technology Version Detection
+## 2. Workspace Setup & Python Environment
+
+### 2.1 Initial Setup (One-time)
+
+This workspace requires Python 3.11 (in venv) for root-level scripts. System Python 3.13 is also available but separate.
+
+**On Windows (PowerShell):**
+```powershell
+# Activate venv (creates if missing)
+. venv\Scripts\Activate.ps1
+
+# Install workspace dependencies
+pip install -r requirements.txt
+# Or use faster uv:
+uv pip install -r requirements.txt
+
+# Verify Python versions
+python --version      # Should show 3.11.x (venv)
+python3 --version     # Shows 3.13.14 (system, for reference)
+```
+
+**On Linux/macOS (Bash):**
+```bash
+# Activate venv
+source venv/bin/activate
+
+# Install workspace dependencies
+pip install -r requirements.txt
+# Or: uv pip install -r requirements.txt
+
+# Verify Python versions
+python --version      # Should show 3.11.x (venv)
+python3 --version     # Shows 3.13.14 (system)
+```
+
+### 2.2 Python Version Clarification
+
+- **`python` (3.11.15)** — Use this for workspace root scripts in `scripts/`. Always run from activated venv.
+- **`python3` (3.13.14)** — System Python. Use only for one-off commands if needed; prefer venv.
+- **PEP 668** — Virtual environment is required; `pip install` to system Python is blocked.
+- **`uv`** — Fast pip alternative. Available in venv; `uv pip install` is faster than `pip install`.
+
+### 2.3 Root-Level Package Manager
+
+The workspace root has a minimal `package.json` (Bun workspace marker). Don't use it directly.
+
+---
+
+## 3. Workspace Root Scripts
+
+The `scripts/` directory contains 100+ Python automation scripts for Hermes maintenance, audits, and tooling. All scripts follow the pattern below and should be run from the workspace root with the venv activated.
+
+**Key Scripts:**
+
+| Script | Purpose |
+|--------|---------|
+| `health_check.py` | Verify workspace health (venv, deps, config) |
+| `build_registry.py` | Build prompt/skill registry from workspace |
+| `audit_prompts.py` | Audit prompt library for issues (frontmatter, duplicates, etc.) |
+| `validate_vscode_configs.py` | Validate VS Code workspace settings |
+| `build_env.py` | Build `.env` or environment config |
+| `memory_repair.py` | Repair Hermes memory artifacts |
+
+**Running a script:**
+```bash
+# Activate venv first
+source venv/bin/activate  # Linux/macOS
+# or: . venv\Scripts\Activate.ps1  # PowerShell
+
+# Run any script
+python scripts/health_check.py
+python scripts/build_registry.py --output registry.json
+python scripts/audit_prompts.py --report report.md
+
+# All scripts support --help
+python scripts/health_check.py --help
+```
+
+**Script Patterns:**
+
+All workspace scripts follow these conventions:
+- Entry point: `if __name__ == "__main__": main()`
+- CLI: `argparse` for command-line args
+- Logging: timestamped console output, optional `--log` for file output
+- Dry-run: many scripts support `--dry-run` flag
+- Type hints: all functions have type hints
+- Docstrings: module and function docstrings required
+
+---
+
+## 4. Technology Version Detection
 
 Before generating code, scan the codebase to identify:
 
@@ -390,22 +486,45 @@ bun run format && bun run typecheck && bun run lint:strict && bun run test
 
 ---
 
-## 9. MCP Server Precedence
+## 9. MCP Servers
 
-Before using native CLI tools, prefer MCP servers:
+The workspace has **16 active MCP servers** configured in `.mcp.json`. Prefer MCP tools over native CLI commands:
 
-| Capability | MCP Server | Avoid |
-|------------|------------|-------|
-| File operations | `filesystem` | cat, head, echo > |
-| Code search/replace | `ast-grep` | grep, sed |
-| GitHub API | `github` | gh CLI |
-| Browser automation | `playwright` | manual curl |
-| Multi-step reasoning | `sequential-thinking` | unstructured planning |
-| Python lint/type-check | `python-quality` | manual ruff/pyright |
-| JS lint/format/spell | `tooling-lint` | manual eslint/prettier |
-| Containers | `mcp-docker` | docker CLI |
-| JavaScript execution | `code-sandbox` | node/bun directly |
-| Web content | `fetch` | curl for web pages |
+| Server | Capabilities | When to Use |
+|--------|-------------|------------|
+| **filesystem** | Read/write/search files, directory ops | File CRUD, searching file contents, stat ops |
+| **ast-grep** | AST-based code search and rewrite | Finding patterns in code, refactoring across files |
+| **github** | GitHub API (issues, PRs, repos, commits) | GitHub operations (search code, create issues, manage PRs) |
+| **playwright** | Browser automation, screenshots, form filling | Interactive web testing, browser automation, scraping |
+| **sequential-thinking** | Structured multi-step reasoning | Complex planning, decision trees, analysis |
+| **fetch** | HTTP requests, web page content extraction | Fetching plain-text URLs, markdown conversion |
+| **code-sandbox** | Isolated Node.js/Jest execution | Running JavaScript code safely |
+| **mcp-docker** | Container management + GitHub ops | Docker/Docker Compose operations |
+| **copilot-mcp** | Copilot provider operations | Copilot CLI integration |
+| **memory** | Persistent cross-session memory | Durable facts, context preservation |
+| **python-quality** | Ruff lint/format + Pyright typecheck | Python code quality checks |
+| **tooling-lint** | ESLint, Prettier, markdownlint, cspell | JavaScript/TypeScript/Markdown linting and formatting |
+| **tooling-config** | pre-commit, git-cliff, .gitignore/.editorconfig | Config file validation and generation |
+| **linear** | Linear.app project management | Issue tracking and project planning |
+| **smithery** | MCP registry and discovery | Finding and installing new MCP tools |
+| **mindstudio** | Third-party integrations (Gmail, Slack, Notion) | External service automation |
+
+**MCP Configuration:** Defined in `.mcp.json` at workspace root. To update server list or config, edit `.mcp.json` directly.
+
+**Avoid native CLI when MCP is available:**
+
+| Task | Use | NOT |
+|------|-----|-----|
+| File operations | `filesystem` MCP | `cat`, `head`, `echo >` |
+| Code search/replace | `ast-grep` MCP | `grep`, `sed` |
+| GitHub API | `github` MCP | `gh` CLI |
+| Browser automation | `playwright` MCP | manual `curl` |
+| Multi-step reasoning | `sequential-thinking` MCP | unstructured planning |
+| Python lint/type-check | `python-quality` MCP | manual `ruff`/`pyright` |
+| JS lint/format/spell | `tooling-lint` MCP | manual `eslint`/`prettier` |
+| Containers | `mcp-docker` MCP | `docker` CLI directly |
+| JavaScript execution | `code-sandbox` MCP | `node`/`bun` directly |
+| Web content | `fetch` MCP | `curl` for web pages |
 
 ---
 
@@ -469,7 +588,77 @@ git log --oneline origin/development..  # Review commits
 
 ---
 
-## 12. Project-Specific Guidance
+## 12. Subproject Quick Reference
+
+This workspace contains **18+ subprojects** under `projects/`. Each is autonomous with its own package manager, build system, and test suite. Use this table to quickly find the right commands for each project.
+
+| Project | Language/Stack | Entry Point | Test Command | Notes |
+|---------|----------------|------------|------------|-------|
+| **Bash/** | TS + Bash + PS1 | `src/` scripts | `bun run test` | 6-phase orchestrator, vitest |
+| **Banking/** | Next.js 16 + Drizzle | `src/app/` | `npm run test` | Fintech dashboard, npm (NOT bun) |
+| **comicwise/** | Next.js 15 + Prisma | `src/app/` | `npm run test` | Comic storefront, npm |
+| **ecom/** | Django + React | `backend/manage.py` | `python manage.py test` (backend) | Dual-stack: Django :8000 + React :3000 |
+| **Resume_maker/** | Bun/TS | `index.ts` | None (script only) | PDF/MD generator from JSON |
+| **mcp-servers/** | Multi-language | Per-language | Per-language build | TS, Python, Go, Java, Rust, etc. |
+| **Python-projects/** | Python scripts | Standalone `.py` | `pytest` | 18 beginner-to-intermediate scripts |
+| **Django-Scrapy-Selenium/** | Python | Per-usage | Per-usage | Scraping/automation toolkit |
+| **cookiecutter-django-tailwind/** | Django template | Cookiecutter scaffold | Follow README | Project scaffold generator |
+| **rhixe_scans/** | Check README | Check README | Check README | Project-specific |
+| **rhixecompany-comics/** | Check README | Check README | Check README | Project-specific |
+| **selenium_webdriver/** | Python/Selenium | Standalone | Manual | Browser automation scripts |
+| **university-libary-jsm/** | Check README | Check README | Check README | Library system |
+| **xamehi/** | Check README | Check README | Check README | Media project |
+| **xamehi.tv/** | Check README | Check README | Check README | Media project |
+| **youtube-downloader/** | Check README | Check README | Check README | YouTube tool |
+| **profile/** | Check README | Check README | Check README | Profile config |
+| **docs/** | Markdown | N/A | N/A | Architecture & reference docs |
+
+### Quick Commands by Project Type
+
+**TypeScript/Bun projects (Bash, Resume_maker):**
+```bash
+cd projects/Bash
+bun install --frozen-lockfile
+bun run typecheck && bun run lint:strict
+bun run test -- --grep "pattern"
+bun run test -- src/file.test.ts
+```
+
+**Next.js projects (Banking, comicwise) — use npm, NOT bun:**
+```bash
+cd projects/Banking
+npm install
+npm run dev           # Start dev server
+npm run build         # Production build
+npm run lint          # ESLint
+npm run test          # Jest or Vitest
+```
+
+**Django/Python projects (ecom backend, Python-projects):**
+```bash
+cd projects/ecom/backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver    # :8000
+python manage.py test         # Run tests
+
+# Or for standalone Python projects:
+cd projects/Python-projects
+pytest --grep "test_name"     # Run specific test
+python script_name.py         # Run script directly
+```
+
+**Workspace root (primarily Bash/TS orchestration):**
+```bash
+cd /  # Workspace root
+bun install --frozen-lockfile
+bun run format && bun run typecheck && bun run lint:strict
+bun run test
+```
+
+---
+
+## 13. Project-Specific Guidance
 
 ### projects/Bash/ (Primary TypeScript Toolkit)
 - **Runtime:** Bun 1.3.14+ | **Tests:** Vitest | **Lint:** ESLint flat config (zero-warnings gate)

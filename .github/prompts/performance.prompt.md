@@ -1,61 +1,136 @@
 ---
+
 name: performance
+
 title: Performance
+
 description: Comprehensive performance prompt focused on measurable improvements and safe optimizations.
+
 version: 1.0.0
+
 license: MIT
+
 author: Hermes Agent
+
 toolsets:
+
   - file
+
   - terminal
+
 scripts: []
+
 skills: []
+
 formatter: default
+
 plan: None
+
 tags:
+
   - data
+
   - database
+
   - frontend
+
   - performance
+
   - prompts
+
   - skills
+
   - specification
+
   - sql
+
   - typescript
+
 trigger: /performance
+
 dependencies: []
+
 metadata:
+
   hermes: {}
+
 ---
-## GoalUse when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
-## DescriptionImprove application performance through measured, high-impact optimizations across data access, rendering, and caching paths.
+## Goal
 
-## ContextUse this prompt when performance issues are suspected or when implementing features that can affect latency, throughput, bundle size, or query cost.
+Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
-## Skills Required> See full table with per-domain purposes:> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)- Performance profiling and bottleneck analysis- Query and caching strategy optimization- Frontend bundle and rendering optimization
+## Description
 
-## Subagents| Subagent | Role | When to Use || --- | --- | --- || Performance Analyst | Identifies bottlenecks and baseline metrics | Always || Data Optimizer | Improves DB/query and pagination behavior | Data-heavy changes || Frontend Optimizer | Reduces client bundle and render cost | UI-heavy changes |
+Improve application performance through measured, high-impact optimizations across data access, rendering, and caching paths.
 
-## Personas- Performance Analyst: Requires evidence before recommending optimization.- Data Optimizer: Prioritizes caching, pagination, and query efficiency.- Frontend Optimizer: Minimizes JS shipped to clients and avoids unnecessary hydration.
+## Context
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Measure before optimizing and report baseline and delta when possible.- Prioritize highest-impact bottlenecks first.- Use pagination for large result sets.- Prefer server-side execution where possible to reduce client bundle size.- Avoid speculative micro-optimizations without evidence.
+Use this prompt when performance issues are suspected or when implementing features that can affect latency, throughput, bundle size, or query cost.
 
-## Phases>
+## Skills Required
 
-### Phase 1: Baseline and Bottleneck Discovery>>
+> See full table with per-domain purposes:
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-### Phase 2: Targeted Optimization> **Full content:** `templates/performance/phases.md`
+- Performance profiling and bottleneck analysis
+- Query and caching strategy optimization
+- Frontend bundle and rendering optimization
 
-## Steps1. Collect baseline metrics and identify hotspots.2. Rank bottlenecks by user impact and frequency.3. Implement minimal optimizations for top-ranked bottlenecks.4. Re-measure and compare against baseline.5. Document gains, limits, and next candidates.
+## Subagents
 
-## Tasks- Task 1.1 — Establish baseline metrics for key paths.- Task 1.2 — Identify and rank bottlenecks with evidence.- Task 1.3 — Optimize queries, caching, rendering, or bundles where needed.- Task 1.4 — Re-run measurements and verify non-regression.- Task 1.5 — Record impact and future optimization backlog.
+| Subagent | Role | When to Use || --
 
-## Subtasks- Subtask 1.1.1 — Capture latency, throughput, and resource usage indicators.- Subtask 1.2.1 — Distinguish CPU, IO, and network constraints.- Subtask 1.3.1 — Add pagination and caching for expensive read paths.- Subtask 1.4.1 — Validate no change in correctness or security behavior.- Subtask 1.5.1 — Summarize measurable wins and remaining bottlenecks.
+- | --- | --- || Performance Analyst | Identifies bottlenecks and baseline metrics | Always || Data Optimizer | Improves DB/query and pagination behavior | Data-heavy changes || Frontend Optimizer | Reduces client bundle and render cost | UI-heavy changes |
 
-## Actions Summary1. Measure first.2. Optimize the biggest bottlenecks only.3. Re-measure and validate correctness.4. Report measurable outcomes.
+## Personas
 
-## Template ReferencesTemplates in `templates/performance/`:- `phases.md`
+- Performance Analyst: Requires evidence before recommending optimization.
+- Data Optimizer: Prioritizes caching, pagination, and query efficiency.
+- Frontend Optimizer: Minimizes JS shipped to clients and avoids unnecessary hydration.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Measure before optimizing and report baseline and delta when possible.
+- Prioritize highest-impact bottlenecks first.
+- Use pagination for large result sets.
+- Prefer server-side execution where possible to reduce client bundle size.
+- Avoid speculative micro-optimizations without evidence.
+
+## Phases
+
+### Phase 1: Baseline and Bottleneck Discovery
+
+### Phase 2: Targeted Optimization
+
+## Steps
+
+1. Collect baseline metrics and identify hotspots.
+2. Rank bottlenecks by user impact and frequency.
+3. Implement minimal optimizations for top-ranked bottlenecks.
+4. Re-measure and compare against baseline.
+5. Document gains, limits, and next candidates.
+
+## Tasks
+
+- Task 1.1 — Establish baseline metrics for key paths.- Task 1.2 — Identify and rank bottlenecks with evidence.- Task 1.3 — Optimize queries, caching, rendering, or bundles where needed.- Task 1.4 — Re-run measurements and verify non-regression.- Task 1.5 — Record impact and future optimization backlog.
+
+## Subtasks
+
+- Subtask 1.1.1 — Capture latency, throughput, and resource usage indicators.- Subtask 1.2.1 — Distinguish CPU, IO, and network constraints.- Subtask 1.3.1 — Add pagination and caching for expensive read paths.- Subtask 1.4.1 — Validate no change in correctness or security behavior.- Subtask 1.5.1 — Summarize measurable wins and remaining bottlenecks.
+
+## Actions Summary
+
+1. Measure first.
+2. Optimize the biggest bottlenecks only.
+3. Re-measure and validate correctness.
+4. Report measurable outcomes.
+
+## Template References
+
+Templates in `templates/performance/`:- `phases.md`
 
 ## Personas
 
@@ -67,7 +142,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -77,11 +151,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
-
 
 ## Rules
 
@@ -100,25 +172,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
 
-
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -129,17 +203,15 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
-
 
 ## Dependencies
 
@@ -149,7 +221,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Comprehensive performance prompt focused on measurable improvements and safe optimizations.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
@@ -157,19 +228,17 @@ Comprehensive performance prompt focused on measurable improvements and safe opt
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
@@ -182,8 +251,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -191,5 +258,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-

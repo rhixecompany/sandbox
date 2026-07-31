@@ -28,131 +28,306 @@ trigger: /breakdown-plan
 metadata:
   hermes: {}
 ---
-## GoalIssue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
+## Goal
 
-## ContextUse when you need to work on the current workspace or task.
+Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
 
-## Inputs- The current workspace, repo, or document state.- The specific request, diff, spec, or files provided by the user.- Any prompt variables, paths, or constraints named in the original instructions.
+## Context
 
-## Outputs- A complete result that matches the prompt's purpose.- A concise verification note when the task benefits from one.
+Use when you need to work on the current workspace or task.
 
-## Rules>> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)- Follow the prompt literally and prefer evidence from the current workspace.- Keep the response structured, deterministic, and easy to act on.- Avoid changing unrelated files or adding unnecessary scope.- If something is unclear, state the assumption instead of guessing.
+## Input
+
+s
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Output
+
+s
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
 
 ## Phases
 
-### Phase 1: Intake- Read the request and identify the exact scope.- Locate the relevant files, diffs, or references.
+### Phase 1: Intake
 
-### Phase 2: Execute- Perform the requested work with the smallest safe change set.- Keep the steps explicit and reproducible.
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
 
-### Phase 3: Verify- Check the result against the goal, rules, and inputs.- Confirm the output is usable and complete.
+### Phase 2: Execute
 
-### Phase 4: Hand off- Return the final artifact or findings clearly.- Stop once the requested result is delivered.
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
 
-## GoalAct as a senior Project Manager and DevOps specialist with expertise in Agile methodology and GitHub project management. Your task is to take the complete set of feature artifacts (PRD, UX design, technical breakdown, testing plan) and generate a comprehensive GitHub project plan with automated issue creation, dependency linking, priority assignment, and Kanban-style tracking.
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Goal
+
+Act as a senior Project Manager and DevOps specialist with expertise in Agile methodology and GitHub project management. Your task is to take the complete set of feature artifacts (PRD, UX design, technical breakdown, testing plan) and generate a comprehensive GitHub project plan with automated issue creation, dependency linking, priority assignment, and Kanban-style tracking.
 
 ## GitHub Project Management Best Practices
 
-### Agile Work Item Hierarchy- **Epic**: Large business capability spanning multiple features (milestone level)- **Feature**: Deliverable user-facing functionality within an epic- **Story**: User-focused requirement that delivers value independently- **Enabler**: Technical infrastructure or architectural work supporting stories- **Test**: Quality assurance work for validating stories and enablers- **Task**: Implementation-level work breakdown for stories/enablers
+### Agile Work Item Hierarchy
 
-### Project Management Principles- **INVEST Criteria**: Independent, Negotiable, Valuable, Estimable, Small, Testable- **Definition of Ready**: Clear acceptance criteria before work begins- **Definition of Done**: Quality gates and completion criteria- **Dependency Management**: Clear blocking relationships and critical path identification- **Value-Based Prioritization**: Business value vs. effort matrix for decision making
+- **Epic**: Large business capability spanning multiple features (milestone level)
+- **Feature**: Deliverable user-facing functionality within an epic
+- **Story**: User-focused requirement that delivers value independently
+- **Enabler**: Technical infrastructure or architectural work supporting stories
+- **Test**: Quality assurance work for validating stories and enablers
+- **Task**: Implementation-level work breakdown for stories/enablers
 
-## Input RequirementsBefore using this prompt, ensure you have the complete testing workflow artifacts:
+### Project Management Principles
 
-### Core Feature Documents1. **Feature PRD**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}.md`2. **Technical Breakdown**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md`3. **Implementation Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
+- **INVEST Criteria**: Independent, Negotiable, Valuable, Estimable, Small, Testable
+- **Definition of Ready**: Clear acceptance criteria before work begins
+- **Definition of Done**: Quality gates and completion criteria
+- **Dependency Management**: Clear blocking relationships and critical path identification
+- **Value-Based Prioritization**: Business value vs. effort matrix for decision making
 
-### Related Planning Prompts- **Test Planning**: Use `plan-test` prompt for comprehensive test strategy, quality assurance planning, and test issue creation- **Architecture Planning**: Use `plan-epic-arch` prompt for system architecture and technical design- **Feature Planning**: Use `plan-feature-prd` prompt for detailed feature requirements and specifications
+## Input Requirements
 
-## Output Format> Create two primary deliverables:>> 1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project> **Full content:** `templates/breakdown-plan/output_format.md`
+Before using this prompt, ensure you have the complete testing workflow artifacts:
 
-## Epic Description{Epic summary from PRD}
+### Core Feature Documents
 
-## Business Value- **Primary Goal**: {Main business objective}- **Success Metrics**: {KPIs and measurable outcomes}- **User Impact**: {How users will benefit}
+1. **Feature PRD**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}.md`
+2. **Technical Breakdown**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md`
+3. **Implementation Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`
 
-## Epic Acceptance Criteria- [ ] {High-level requirement 1}- [ ] {High-level requirement 2}- [ ] {High-level requirement 3}
+### Related Planning Prompts
 
-## Features in this Epic- [ ] #{feature-issue-number} - {Feature Name}
+- **Test Planning**: Use `plan-test` prompt for comprehensive test strategy, quality assurance planning, and test issue creation
+- **Architecture Planning**: Use `plan-epic-arch` prompt for system architecture and technical design
+- **Feature Planning**: Use `plan-feature-prd` prompt for detailed feature requirements and specifications
 
-## Definition of Done- [ ] All feature stories completed- [ ] End-to-end testing passed- [ ] Performance benchmarks met- [ ] Documentation updated- [ ] User acceptance testing completed
+## Output Format
 
-## Labels`epic`, `{priority-level}`, `{value-tier}`
+> Create two primary deliverables:>
+>
+> 1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project
+> **Full content:**`templates/breakdown-plan/output_format.md`
 
-## Milestone{Release version/date}
+## Epic Description
 
-## Estimate{Epic-level t-shirt size: XS, S, M, L, XL, XXL}```
+Epic summary from PRD
 
-### Feature Issue Template```markdown# Feature: {Feature Name}
+## Business Value
 
-## Feature Description{Feature summary from PRD}
+- **Primary Goal**: {Main business objective}- **Success Metrics**: {KPIs and measurable outcomes}- **User Impact**: {How users will benefit}
 
-## User Stories in this Feature- [ ] #{story-issue-number} - {User Story Title}- [ ] #{story-issue-number} - {User Story Title}
+## Epic Acceptance Criteria
 
-## Technical Enablers- [ ] #{enabler-issue-number} - {Enabler Title}- [ ] #{enabler-issue-number} - {Enabler Title}
+- [ ] {High-level requirement 1}- [ ] {High-level requirement 2}- [ ] {High-level requirement 3}
 
-## Dependencies**Blocks**: {List of issues this feature blocks} **Blocked by**: {List of issues blocking this feature}
+## Feature
 
-## Acceptance Criteria- [ ] {Feature-level requirement 1}- [ ] {Feature-level requirement 2}
+s in this Epic- [ ] #{feature-issue-number} - {Feature Name}
 
-## Definition of Done- [ ] All user stories delivered- [ ] Technical enablers completed- [ ] Integration testing passed- [ ] UX review approved- [ ] Performance testing completed
+## Definition of Done
 
-## Labels`feature`, `{priority-level}`, `{value-tier}`, `{component-name}`
+- [ ] All feature stories completed- [ ] End-to-end testing passed- [ ] Performance benchmarks met- [ ] Documentation updated- [ ] User acceptance testing completed
 
-## Epic#{epic-issue-number}
+## Labels`epic`, `
 
-## Estimate{Story points or t-shirt size}```
+priority-level}`,`{value-tier}`
 
-### User Story Issue Template```markdown# User Story: {Story Title}
+## Milestone
 
-## Story StatementAs a **{user type}**, I want **{goal}** so that **{benefit}**.
+Release version/date
 
-## Acceptance Criteria- [ ] {Specific testable requirement 1}- [ ] {Specific testable requirement 2}- [ ] {Specific testable requirement 3}
+## Estimate
 
-## Technical Tasks- [ ] #{task-issue-number} - {Implementation task}- [ ] #{task-issue-number} - {Integration task}
+Epic-level t-shirt size: XS, S, M, L, XL, XXL}```
 
-## Testing Requirements- [ ] #{test-issue-number} - {Test implementation}
+### Feature Issue Template
 
-## Dependencies**Blocked by**: {Dependencies that must be completed first}
+```markdown# Feature: {Feature Name}
 
-## Definition of Done- [ ] Acceptance criteria met- [ ] Code review approved- [ ] Unit tests written and passing- [ ] Integration tests passing- [ ] UX design implemented- [ ] Accessibility requirements met
+## Feature Description
 
-## Labels`user-story`, `{priority-level}`, `frontend/backend/fullstack`, `{component-name}`
+Feature summary from PRD
 
-## Feature#{feature-issue-number}
+## User Stories in this Feature
 
-## Estimate{Story points: 1, 2, 3, 5, 8}```
+- [ ] #{story-issue-number} - {User Story Title}- [ ] #{story-issue-number} - {User Story Title}
 
-### Technical Enabler Issue Template```markdown# Technical Enabler: {Enabler Title}
+## Technical Enablers
 
-## Enabler Description{Technical work required to support user stories}
+- [ ] #{enabler-issue-number} - {Enabler Title}- [ ] #{enabler-issue-number} - {Enabler Title}
 
-## Technical Requirements- [ ] {Technical requirement 1}- [ ] {Technical requirement 2}
+## Dependencies
 
-## Implementation Tasks- [ ] #{task-issue-number} - {Implementation detail}- [ ] #{task-issue-number} - {Infrastructure setup}
+**Blocks**: {List of issues this feature blocks} **Blocked by**: {List of issues blocking this feature}
 
-## User Stories EnabledThis enabler supports:- #{story-issue-number} - {Story title}- #{story-issue-number} - {Story title}
+## Acceptance Criteria
 
-## Acceptance Criteria- [ ] {Technical validation 1}- [ ] {Technical validation 2}- [ ] Performance benchmarks met
+- [ ] {Feature-level requirement 1}
+- [ ] {Feature-level requirement 2}
 
-## Definition of Done- [ ] Implementation completed- [ ] Unit tests written- [ ] Integration tests passing- [ ] Documentation updated- [ ] Code review approved
+## Definition of Done
 
-## Labels`enabler`, `{priority-level}`, `infrastructure/api/database`, `{component-name}`
+- [ ] All user stories delivered- [ ] Technical enablers completed- [ ] Integration testing passed- [ ] UX review approved- [ ] Performance testing completed
 
-## Feature#{feature-issue-number}
+## Labels`feature`, `
 
-## Estimate> {Story points or effort estimate}>
+priority-level}`, `{value-tier}`, `{component-name}`
 
-### 4. Priority and Value Matrix> **Full content:** `templates/breakdown-plan/estimate.md`
+## Epic#
 
-## Sprint {N} Goal> **Primary Objective**: {Main deliverable for this sprint}> **Stories in Sprint**:> **Full content:** `templates/breakdown-plan/sprint_n_goal.md`
+epic-issue-number
+
+## Estimate
+
+Story points or t-shirt size}```
+
+### User Story Issue Template
+
+```markdown# User Story: {Story Title}
+
+## Story Statement
+
+As a **{user type}**, I want **{goal}** so that **{benefit}**.
+
+## Acceptance Criteria
+
+- [ ] {Specific testable requirement 1}
+- [ ] {Specific testable requirement 2}
+- [ ] {Specific testable requirement 3}
+
+## Technical Tasks
+
+- [ ] #{task-issue-number} - {Implementation task}- [ ] #{task-issue-number} - {Integration task}
+
+## Test
+
+ing Requirements- [ ] #{test-issue-number} - {Test implementation}
+
+## Dependencies
+
+**Blocked by**: {Dependencies that must be completed first}
+
+## Definition of Done
+
+- [ ] Acceptance criteria met- [ ] Code review approved- [ ] Unit tests written and passing- [ ] Integration tests passing- [ ] UX design implemented- [ ] Accessibility requirements met
+
+## Labels`user-story`, `
+
+priority-level}`, `frontend/backend/fullstack`, `{component-name}`
+
+## Feature
+
+#{feature-issue-number}
+
+## Estimate
+
+Story points: 1, 2, 3, 5, 8}```
+
+### Technical Enabler Issue Template
+
+```markdown# Technical Enabler: {Enabler Title}
+
+## Enabler Description
+
+Technical work required to support user stories
+
+## Technical Requirements
+
+- [ ] {Technical requirement 1}- [ ] {Technical requirement 2}
+
+## Implementation Tasks
+
+- [ ] #{task-issue-number} - {Implementation detail}- [ ] #{task-issue-number} - {Infrastructure setup}
+
+## User Stories Enabled
+
+This enabler supports:
+
+- #{story-issue-number} - {Story title}- #{story-issue-number} - {Story title}
+
+## Acceptance Criteria
+
+- [ ] {Technical validation 1}
+- [ ] {Technical validation 2}
+- [ ] Performance benchmarks met
+
+## Definition of Done
+
+- [ ] Implementation completed- [ ] Unit tests written- [ ] Integration tests passing- [ ] Documentation updated- [ ] Code review approved
+
+## Labels`enabler`, `
+
+priority-level}`, `infrastructure/api/database`, `{component-name}`
+
+## Feature
+
+#{feature-issue-number}
+
+## Estimate
+
+> {Story points or effort estimate}>
+
+### 4. Priority and Value Matrix
+
+> **Full content:** `templates/breakdown-plan/estimate.md`
+
+## Sprint
+
+N} Goal
+
+> **Primary Objective**: {Main deliverable for this sprint}
+> **Stories in Sprint**:
+> **Full content:** `templates/breakdown-plan/sprint_n_goal.md`
 
 ## Success Metrics
 
-### Project Management KPIs- **Sprint Predictability**: >80% of committed work completed per sprint- **Cycle Time**: Average time from "In Progress" to "Done" <5 business days- **Lead Time**: Average time from "Backlog" to "Done" <2 weeks- **Defect Escape Rate**: <5% of stories require post-release fixes- **Team Velocity**: Consistent story point delivery across sprints
+### Project Management KPIs
 
-### Process Efficiency Metrics- **Issue Creation Time**: <1 hour to create full feature breakdown- **Dependency Resolution**: <24 hours to resolve blocking dependencies- **Status Update Accuracy**: >95% automated status transitions working correctly- **Documentation Completeness**: 100% of issues have required template fields- **Cross-Team Collaboration**: <2 business days for external dependency resolution
+- **Sprint Predictability**: >80% of committed work completed per sprint
+- **Cycle Time**: Average time from "In Progress" to "Done" <5 business days
+- **Lead Time**: Average time from "Backlog" to "Done" <2 weeks
+- **Defect Escape Rate**: <5% of stories require post-release fixes
+- **Team Velocity**: Consistent story point delivery across sprints
 
-### Project Delivery Metrics- **Definition of Done Compliance**: 100% of completed stories meet DoD criteria- **Acceptance Criteria Coverage**: 100% of acceptance criteria validated- **Sprint Goal Achievement**: >90% of sprint goals successfully delivered- **Stakeholder Satisfaction**: >90% stakeholder approval for completed features- **Planning Accuracy**: <10% variance between estimated and actual delivery timeThis comprehensive GitHub project management approach ensures complete traceability from epic-level planning down to individual implementation tasks, with automated tracking and clear accountability for all team members.````
+### Process Efficiency Metrics
 
-## Template ReferencesDetailed templates in `templates/breakdown-plan/`:- `estimate.md`- `output_format.md`- `sprint_n_goal.md`
+- **Issue Creation Time**: <1 hour to create full feature breakdown
+- **Dependency Resolution**: <24 hours to resolve blocking dependencies
+- **Status Update Accuracy**: >95% automated status transitions working correctly
+- **Documentation Completeness**: 100% of issues have required template fields
+- **Cross-Team Collaboration**: <2 business days for external dependency resolution
+
+### Project Delivery Metrics
+
+- **Definition of Done Compliance**: 100% of completed stories meet DoD criteria
+- **Acceptance Criteria Coverage**: 100% of acceptance criteria validated
+- **Sprint Goal Achievement**: >90% of sprint goals successfully delivered
+- **Stakeholder Satisfaction**: >90% stakeholder approval for completed features
+- **Planning Accuracy**: <10% variance between estimated and actual delivery timeThis comprehensive GitHub project management approach ensures complete traceability from epic-level planning down to individual implementation tasks, with automated tracking and clear accountability for all team members.````
+
+## Template References
+
+Detailed templates in `templates/breakdown-plan/`:- `estimate.md`- `output_format.md`- `sprint_n_goal.md`
 
 ## Personas
 
@@ -164,7 +339,6 @@ See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared 
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
-
 ## Personality
 
 See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
@@ -174,11 +348,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Rules
 
@@ -196,7 +368,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State clearly when something fails.
-
 
 ## Phases
 
@@ -216,7 +387,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -225,7 +395,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
-
 
 ## Verification Checklist
 
@@ -237,7 +406,6 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
-
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
@@ -246,14 +414,12 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
 
-
 ## Subgoals
 
 1. **Prepare** — Understand requirements and prerequisites.
 2. **Execute** — Follow structured workflow with incremental progress.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
-
 
 ## Skills Required
 
@@ -267,7 +433,6 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
-
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
@@ -279,8 +444,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
-
-
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -288,5 +451,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
 
