@@ -63,3 +63,8 @@ bun.lockb
 # Project-specific
 docs/.github/
 docs/.vscode/
+
+# Session workspace (plan artifacts, force-push logs — git-ignored per FINAL_REPORT)
+.copilot/
+# Hermes profile mirror (local artifact, do not commit)
+hermes-profiles/
