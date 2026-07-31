@@ -68,7 +68,42 @@ def split_opener(line: str) -> tuple[str, str] | None:
     return "```" + fence_lang, content
 
 
+# Files classified as pre-existing complex multi-fence glue / paste-placeholder
+# conventions (verified identical to pre-campaign, listed in phase4/phase5
+# KNOWN_FENCE_CONVENTIONS allowlist). Auto-splitting these risks content loss or
+# cannot reach balanced parity; they are deliberately left for manual review.
+SKIP_FILES = {
+    "ruby-mcp-server-generator.prompt.md",
+    "memory-merger.prompt.md",
+    "optimize-agentsMd.prompt.md",
+    "what-context-needed.prompt.md",
+    "refactor-plan.prompt.md",
+    "az-cost-optimize.prompt.md",
+    "create-llms.prompt.md",
+    "comicwise-development.prompt.md",
+    "breakdown-plan.prompt.md",
+    "copilot-instructions-blueprint-generator.prompt.md",
+    "dev-imp.prompt.md",
+    "features.prompt.md",
+    "kotlin-mcp-server-generator.prompt.md",
+    "php-mcp-server-generator.prompt.md",
+    "quality-gate-debugger.prompt.md",
+    "remember.prompt.md",
+    "add-educational-comments.prompt.md",
+    "update-oo-component-documentation.prompt.md",
+    "update-specification.prompt.md",
+    "templates/create-architectural-decision-record/required_documentation_st.md",
+    "templates/create-github-action-workflow-specification/token_optimization_strate.md",
+    "templates/memory-merger/process.md",
+    "templates/structured-autonomy-plan/step_3_plan_generation.md",
+    "templates/update-markdown-file-index/files_in_folder.md",
+}
+
+
 def fix_file(path: Path) -> tuple[int, int]:
+    rel = str(path.relative_to(PROMPTS_DIR)).replace("\\", "/")
+    if rel in SKIP_FILES:
+        return 0, 0
     text = path.read_text(encoding="utf-8", newline="")
     lines = text.split("\n")
     out: list[str] = []
@@ -78,6 +113,11 @@ def fix_file(path: Path) -> tuple[int, int]:
         stripped = line.strip()
         # 4-backtick escaped fence — leave untouched
         if stripped.startswith("````"):
+            out.append(line)
+            continue
+        # Nested multi-fence glue (e.g. ...end```Make the file executable:```bashchmod...```)
+        # contains 3+ backtick-triple markers on one line — beyond safe auto-split.
+        if stripped.count("```") >= 3:
             out.append(line)
             continue
         # Plain fence marker line (exactly ``` or ```lang) — toggle state, keep as-is
