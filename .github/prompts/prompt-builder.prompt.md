@@ -124,7 +124,12 @@ Based on analysis of existing prompts, ensure the generated prompt includes:
 
 ## Reference Patterns
 
-Generated prompts follow patterns from existing high-quality prompts:- [`playwright-generate-test.prompt.md`](prompts/playwright-generate-test.prompt.md) — Code generation scaffold- [`create-github-action-workflow-specification.prompt.md`](prompts/create-github-action-workflow-specification.prompt.md) — Structured specification- [`architecture-blueprint-generator.prompt.md`](prompts/architecture-blueprint-generator.prompt.md) — Comprehensive blueprint- [`create-implementation-plan.prompt.md`](prompts/create-implementation-plan.prompt.md) — Implementation plan
+Generated prompts follow patterns from existing high-quality prompts:
+
+- [`playwright-generate-test.prompt.md`](./playwright-generate-test.prompt.md) — Code generation scaffold
+- [`create-github-action-workflow-specification.prompt.md`](./create-github-action-workflow-specification.prompt.md) — Structured specification
+- [`architecture-blueprint-generator.prompt.md`](./architecture-blueprint-generator.prompt.md) — Comprehensive blueprint
+- [`create-implementation-plan.prompt.md`](./create-implementation-plan.prompt.md) — Implementation plan
 
 ## Actions Summary
 

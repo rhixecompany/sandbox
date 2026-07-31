@@ -30,7 +30,7 @@ These rules govern all execution of the generator-orchestrator prompt.
 ### Failure Policy
 
 | Failure | Action | Gate Impact |
-|---------|--------|-------------|
+| --------- | -------- | ------------- |
 | Generator produces no output | Retry once with stricter constraints | Blocked until retry |
 | Retry also fails | Record degraded warning, use generic fallback | Gate passes with warning |
 | Cross-doc inconsistency | Emit remediation checklist | Gate FAILS — hard handoff failure |

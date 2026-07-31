@@ -78,7 +78,9 @@ Reusable prompt for ComicWise development sessions.
 
 ## Quick Start (New Session)
 
-```bash# 1. Install & setuppnpm installcp .env.local.example .env.local    # Edit with your DATABASE_URL, AUTH_SECRETpnpm db:push# 2. Start developmentpnpm dev                            # Port 3000, Turbopack# 3. Run quality gatespnpm validate                       # Runs: type-check, lint:fix, test, health checks```
+```bash
+# 1. Install & setuppnpm installcp .env.local.example .env.local    # Edit with your DATABASE_URL, AUTH_SECRETpnpm db:push# 2. Start developmentpnpm dev                            # Port 3000, Turbopack# 3. Run quality gatespnpm validate                       # Runs: type-check, lint:fix, test, health checks
+```
 
 ## Essential Commands
 
@@ -88,9 +90,11 @@ Reusable prompt for ComicWise development sessions.
 
 ## Data Flow Architecture
 
-```HTTP Request    ↓Next.js Middleware (src/proxy.ts)  • Auth check (await auth())  • Route protection (/profile, /bookmarks, /ratings, /admin)    ↓Server Component (App Router page)  • Await async params/searchParams (v16 breaking change)  • Call DAL methods for data    ↓DAL Layer (src/dal/*-dal.ts)  • All queries use Drizzle with eager loading (.with())  • Never use raw SQL or loop queries (no N+1)  • Return properly typed results ($inferSelect)    ↓Client Component / Zustand / React Query  • Use props data from Server Component  • Zustand for UI state (reader mode, sidebar toggle)  • React Query for dynamic server state    ↓Server Actions (src/actions/*-actions.ts)  • Mutations: auth → validate → mutate → revalidate  • Never throw: return ActionResult<T
+```HTTP
+ Request    ↓Next.js Middleware (src/proxy.ts)  • Auth check (await auth())  • Route protection (/profile, /bookmarks, /ratings, /admin)    ↓Server Component (App Router page)  • Await async params/searchParams (v16 breaking change)  • Call DAL methods for data    ↓DAL Layer (src/dal/*-dal.ts)  • All queries use Drizzle with eager loading (.with())  • Never use raw SQL or loop queries (no N+1)  • Return properly typed results ($inferSelect)    ↓Client Component / Zustand / React Query  • Use props data from Server Component  • Zustand for UI state (reader mode, sidebar toggle)  • React Query for dynamic server state    ↓Server Actions (src/actions/*-actions.ts)  • Mutations: auth → validate → mutate → revalidate  • Never throw: return ActionResult<T
 
-> (ok + data/error)    ↓HTTP Response```
+> (ok + data/error)    ↓HTTP Response
+```
 
 ## Project Structure
 
@@ -106,7 +110,9 @@ Reusable prompt for ComicWise development sessions.
 
 ## Path Aliases (tsconfig.json)
 
-```typescript@/*        → ./src/*ui         → ./src/components/ui/*database   → ./src/database/*schemas    → ./src/schemas/*env        → ./src/lib/env.tshooks      → ./src/hooks/*appConfig  → ./appConfig.tslib        → ./src/lib/*types      → ./src/types/*components → ./src/components/*utils      → ./src/lib/utils.tsassets     → ./src/assets/*styles     → ./src/styles/*tests      → ./src/tests/*```
+```typescript
+@/*        → ./src/*ui         → ./src/components/ui/*database   → ./src/database/*schemas    → ./src/schemas/*env        → ./src/lib/env.tshooks      → ./src/hooks/*appConfig  → ./appConfig.tslib        → ./src/lib/*types      → ./src/types/*components → ./src/components/*utils      → ./src/lib/utils.tsassets     → ./src/assets/*styles     → ./src/styles/*tests      → ./src/tests/*
+```
 
 ## Common Patterns
 
@@ -128,7 +134,9 @@ ing Patterns>
 
 ## Quality Gate (Must Pass Before Commits)
 
-```bash# Run all quality gates at oncepnpm validate# Or run individuallypnpm type-check     # Must be 0 errors (blocks deployment)pnpm lint:fix       # Auto-fix and validatepnpm test           # Must pass 241/241 (no regressions)pnpm build          # Must succeed (production build)```
+```bash
+# Run all quality gates at oncepnpm validate# Or run individuallypnpm type-check     # Must be 0 errors (blocks deployment)pnpm lint:fix       # Auto-fix and validatepnpm test           # Must pass 241/241 (no regressions)pnpm build          # Must succeed (production build)
+```
 
 ## Environment Variables
 
@@ -148,7 +156,7 @@ ing Patterns>
 
 | Issue | Solution || --- | --- || Type errors (TS2307) | Check import path aliases in `tsconfig.json` || N+1 query errors | Add `.with({ relations: true })` to DAL queries || Action throws instead of returns | Wrap in try-catch, return `ActionResult<T
 
-> ` || Styling not applying | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) || DB connection fails | Verify `DATABASE_URL` and run `pnpm db:studio` to test || Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts` || Hydration mismatch | Use `useCurrentYear()` hook not `new Date()` in server code |
+> `|| Styling not applying | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) || DB connection fails | Verify`DATABASE_URL` and run `pnpm db:studio` to test || Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts` || Hydration mismatch | Use `useCurrentYear()` hook not `new Date()` in server code |
 
 ## When Stuck
 
@@ -211,18 +219,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -238,7 +250,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -261,7 +273,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -286,4 +298,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

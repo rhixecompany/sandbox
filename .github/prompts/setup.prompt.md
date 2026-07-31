@@ -153,7 +153,9 @@ SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider �
 
 ## 12. Middleware (`src/proxy.ts`)
 
-```typescriptexport function proxy(request: NextRequest) {  const token = request.cookies.get("auth-token");  if (request.nextUrl.pathname.startsWith("/dashboard")) {    if (!token)      return NextResponse.redirect(new URL("/login", request.url));  }  return NextResponse.next();}export const config = {  matcher: ["/dashboard/:path*", "/admin/:path*"]};```
+```typescript
+export function proxy(request: NextRequest) {  const token = request.cookies.get("auth-token");  if (request.nextUrl.pathname.startsWith("/dashboard")) {    if (!token)      return NextResponse.redirect(new URL("/login", request.url));  }  return NextResponse.next();}export const config = {  matcher: ["/dashboard/:path*", "/admin/:path*"]};
+```
 
 > **⚠ Incomplete middleware:** Only `/dashboard` is actually protected. Despite `/admin/:path*` being in the matcher, the function has no `admin` check — it falls through to `NextResponse.next()`. Additionally, it checks for a cookie named `"auth-token"`, not a NextAuth session — this may not integrate with the actual auth system. See §21 (Technical Debt).---
 

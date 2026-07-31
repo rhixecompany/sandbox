@@ -64,7 +64,8 @@ Ask the user for:1. **Project name** (e.g., "my-mcp-server")2. **Server descript
 
 ```
 
-project-name}/├── composer.json├── .gitignore├── README.md├── server.php├── src/│   ├── Tools/│   │   └── {ToolClass}.php│   ├── Resources/│   │   └── {ResourceClass}.php│   ├── Prompts/│   │   └── {PromptClass}.php│   └── Providers/│       └── {CompletionProvider}.php└── tests/    └── ToolsTest.php```
+project-name}/├── composer.json├── .gitignore├── README.md├── server.php├── src/│   ├── Tools/│   │   └── {ToolClass}.php│   ├── Resources/│   │   └── {ResourceClass}.php│   ├── Prompts/│   │   └── {PromptClass}.php│   └── Providers/│       └── {CompletionProvider}.php└── tests/    └── ToolsTest.php
+```
 
 ## File Templates
 
@@ -79,7 +80,8 @@ project-name}/├── composer.json├── .gitignore├── README.md├�
 
 ## Installation
 
-```bashcomposer install```````
+```bash
+composer install```````
 
 ## Usage
 
@@ -146,7 +148,8 @@ bashvendor/bin/phpunit
 
 ### Dynamic Resource
 
-```php#
+```php
+#
 [McpResourceTemplate(uriTemplate: 'user://{id}')]public function getUser(string $id): array{    return $this->users[$id] ?? throw new \RuntimeException('User not found');}
 ```
 

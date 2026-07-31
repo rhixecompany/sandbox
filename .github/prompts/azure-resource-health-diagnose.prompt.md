@@ -137,9 +137,11 @@ s
 
 ### Phase 1: Immediate Actions (0-2 hours)
 
-```bash   # Critical fixes to restore service   [Azure CLI commands with explanations]```   ````
+```bash
+   # Critical fixes to restore service   [Azure CLI commands with explanations]```   ````
 
-### Phase 2: Short-term Fixes (2-24 hours)   ```bash   # Performance and reliability improvements   [Azure CLI commands with explanations]```
+### Phase 2: Short-term Fixes (2-24 hours)   ```bash   # Performance and reliability improvements   [Azure CLI commands with explanations]
+```
 
 ### Phase 3: Long-term Improvements (1-4 weeks)   ```bash   # Architectural and preventive measures   [Azure CLI commands and configuration changes]```
 

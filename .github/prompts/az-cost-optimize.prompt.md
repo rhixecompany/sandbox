@@ -90,7 +90,8 @@ Analyze Azure resources used in the app (IaC files and/or resources in a target 
 
 ## 🏗️ Current Architecture Overview
 
-```mermaid   graph TB       subgraph "Resource Group: [name]"           [Generated architecture diagram showing current resources and costs]       end```   ````
+```mermaid
+   graph TB       subgraph "Resource Group: [name]"           [Generated architecture diagram showing current resources and costs]       end```   ````
 
 ## 📋 Implementation Tracking
 
