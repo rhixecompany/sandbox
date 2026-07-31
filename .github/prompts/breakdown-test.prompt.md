@@ -155,7 +155,8 @@ Before using this prompt, ensure you have:
 
 ### Test Strategy Issue Template
 
-```markdown# Test Strategy: {Feature Name}
+```markdown
+# Test Strategy: {Feature Name}
 
 ## Test Strategy Overview
 
@@ -181,11 +182,13 @@ s
 
 ## Estimate
 
-{Strategic planning effort: 2-3 story points}```
+{Strategic planning effort: 2-3 story points}
+```
 
 ### Playwright Test Implementation Issue Template
 
-```markdown# Playwright Tests: {Story/Component Name}
+```markdown
+# Playwright Tests: {Story/Component Name}
 
 ## Test Implementation Scope
 
@@ -212,11 +215,13 @@ Specific user story or component being tested
 
 ## Estimate
 
-{Test implementation effort: 2-5 story points}```
+{Test implementation effort: 2-5 story points}
+```
 
 ### Quality Assurance Issue Template
 
-```markdown# Quality Assurance: {Feature Name}
+```markdown
+# Quality Assurance: {Feature Name}
 
 ## Quality Validation Scope
 
@@ -240,7 +245,8 @@ s Validation**Entry Criteria:**- [ ] All implementation tasks completed- [ ] Uni
 
 ## Estimate
 
-{Quality validation effort: 3-5 story points}```
+{Quality validation effort: 3-5 story points}
+```
 
 ## Success Metrics
 
@@ -312,18 +318,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -339,7 +349,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -366,7 +376,7 @@ Test Planning and Quality Assurance prompt that generates comprehensive test str
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -391,4 +401,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

@@ -100,7 +100,9 @@ No external scripts required — all phases are executed directly via delegated 
 
 ## Profile
 
-```yamlprofile: code-architectmodel: deepseek-v4-flash-freetoolsets: [terminal, file, web]```
+```yaml
+profile: code-architectmodel: deepseek-v4-flash-freetoolsets: [terminal, file, web]
+```
 
 ## Personality
 

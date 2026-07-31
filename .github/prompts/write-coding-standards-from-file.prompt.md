@@ -160,7 +160,9 @@ fileName}.length
 
 ### Braces (example in C, adjust for your language)
 
-```c        if (condition) {            do_something();        } else {            do_something_else();        }```
+```c
+        if (condition) {            do_something();        } else {            do_something_else();        }
+```
 
 ### Spacing
 

@@ -76,15 +76,19 @@ myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle
 
 ## settings.gradle.kts Template
 
-```kotlinrootProject.name = "
+```kotlin
+rootProject.name = "
 
-{PROJECT_NAME}}"```
+{PROJECT_NAME}}"
+```
 
 ## Main.kt Template
 
-```kotlinpackage com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.StdioServerTransportimport kotlinx.coroutines.runBlockingimport io.github.oshai.kotlinlogging.KotlinLoggingprivate val logger = KotlinLogging.logger
+```kotlin
+package com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.StdioServerTransportimport kotlinx.coroutines.runBlockingimport io.github.oshai.kotlinlogging.KotlinLoggingprivate val logger = KotlinLogging.logger
 
-}fun main() = runBlocking {    logger.info { "Starting MCP server..." }    val config = loadConfig()    val server = createServer(config)    // Use stdio transport    val transport = StdioServerTransport()    logger.info { "Server '${config.name}' v${config.version} ready" }    server.connect(transport)}```
+}fun main() = runBlocking {    logger.info { "Starting MCP server..." }    val config = loadConfig()    val server = createServer(config)    // Use stdio transport    val transport = StdioServerTransport()    logger.info { "Server '${config.name}' v${config.version} ready" }    server.connect(transport)}
+```
 
 ## Server.kt Template
 
@@ -94,9 +98,11 @@ myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle
 
 ## Config.kt Template
 
-```kotlinpackage com.example.myserver.configimport kotlinx.serialization.Serializable@Serializabledata class Config(    val name: String = "
+```kotlin
+package com.example.myserver.configimport kotlinx.serialization.Serializable@Serializabledata class Config(    val name: String = "
 
-{PROJECT_NAME}}",    val version: String = "1.0.0",    val description: String = "{{PROJECT_DESCRIPTION}}")fun loadConfig(): Config {    return Config(        name = System.getenv("SERVER_NAME") ?: "{{PROJECT_NAME}}",        version = System.getenv("VERSION") ?: "1.0.0",        description = System.getenv("DESCRIPTION") ?: "{{PROJECT_DESCRIPTION}}"    )}```
+{PROJECT_NAME}}",    val version: String = "1.0.0",    val description: String = "{{PROJECT_DESCRIPTION}}")fun loadConfig(): Config {    return Config(        name = System.getenv("SERVER_NAME") ?: "{{PROJECT_NAME}}",        version = System.getenv("VERSION") ?: "1.0.0",        description = System.getenv("DESCRIPTION") ?: "{{PROJECT_DESCRIPTION}}"    )}
+```
 
 ## Tool1.kt Template
 
@@ -114,7 +120,8 @@ myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle
 
 ## README.md Template
 
-```markdown#
+```markdown
+#
 
 {PROJECT_NAME}}A Model Context Protocol (MCP) server built with Kotlin.
 
@@ -157,7 +164,8 @@ Run tests:\`\`\`bash ./gradlew test \`\`\`Build:\`\`\`bash ./gradlew build \`\`\
 
 ## License
 
-MIT```
+MIT
+```
 
 ## Generation Instructions
 
@@ -245,18 +253,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -272,7 +284,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -295,7 +307,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -320,12 +332,13 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
 ## Related Prompts
 
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|----------|--------|
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

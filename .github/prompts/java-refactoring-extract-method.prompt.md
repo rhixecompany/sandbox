@@ -60,13 +60,17 @@ You are an expert in refactoring Java methods.Below are **2 examples** (with tit
 
 ## Code Before Refactoring 1
 
-```javapublic FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerId) {    assertNotBuild();    if (bpartnerId
+```java
+public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerId) {    assertNotBuild();    if (bpartnerId
 
-> 0) {        setC_BPartner_ID(bpartnerId);    }    return this;}```
+> 0) {        setC_BPartner_ID(bpartnerId);    }    return this;}
+```
 
 ## Code After Refactoring 1
 
-```javapublic FactLineBuilder bpartnerIdIfNotNull(final BPartnerId bpartnerId) {    if (bpartnerId != null) {        return bpartnerId(bpartnerId);    } else {        return this;    }}public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerRepoId) {    return bpartnerIdIfNotNull(BPartnerId.ofRepoIdOrNull(bpartnerRepoId));}```
+```java
+public FactLineBuilder bpartnerIdIfNotNull(final BPartnerId bpartnerId) {    if (bpartnerId != null) {        return bpartnerId(bpartnerId);    } else {        return this;    }}public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerRepoId) {    return bpartnerIdIfNotNull(BPartnerId.ofRepoIdOrNull(bpartnerRepoId));}
+```
 
 ## Code Before Refactoring 2
 
@@ -139,18 +143,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -166,7 +174,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -189,7 +197,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -214,4 +222,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

@@ -10,12 +10,15 @@ tags: [template, generated, technology-stack]
 ## Execution Checklist
 
 ### Phase 1: Project Discovery
+
 - [ ] Scan `projects/` for all directories containing build manifests
 - [ ] Build inventory: project name, path, manifest type(s)
 - [ ] Output: JSON array of discovered projects
 
 ### Phase 2: Per-Project Analysis
+
 For each project:
+
 - [ ] Read all manifest files (package.json, requirements.txt, pyproject.toml, Cargo.toml, go.mod, pom.xml, build.gradle.kts, composer.json, Package.swift, *.csproj, Gemfile)
 - [ ] Parse dependencies with versions
 - [ ] Detect frameworks from dependency names
@@ -25,12 +28,15 @@ For each project:
 - [ ] Detect architecture (check for backend/, frontend/, apps/, packages/ subdirectories)
 
 ### Phase 3: Per-Project Generation
+
 For each project:
+
 - [ ] Write `projects/<project-name>/TECHNOLOGY_STACK.md`
 - [ ] Verify file exists and has >50 lines
 - [ ] Validate Markdown syntax
 
 ### Phase 4: Master Blueprint Generation
+
 - [ ] Write `Technology_Stack_Blueprint.md` at workspace root
 - [ ] Include cross-project technology matrix
 - [ ] Include shared tooling summary

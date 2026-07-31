@@ -118,7 +118,8 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 
 ### Report Format
 
-```markdown# Quality Gate Triage Report> Generated: YYYY-MM-DD HH:MM:SS Session: Quality Gate Debugger v2.1 Iterations to zero: N (or "In progress" if stopped early)
+```markdown
+# Quality Gate Triage Report> Generated: YYYY-MM-DD HH:MM:SS Session: Quality Gate Debugger v2.1 Iterations to zero: N (or "In progress" if stopped early)
 
 ## Execution Summary
 

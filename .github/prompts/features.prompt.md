@@ -56,7 +56,8 @@ Complete feature implementation tasks for profiles, comics, chapters, bookmarks.
 
 ## Validation Commands
 
-```bash# Type check all feature filespnpm type-check# Lint feature componentspnpm lint src/app/\(root\) src/components# Run feature-related testspnpm test:unit:run tests/unit/features# E2E test user flowspnpm test:e2e tests/e2e/user-flows.spec.ts```---
+```bash
+# Type check all feature filespnpm type-check# Lint feature componentspnpm lint src/app/\(root\) src/components# Run feature-related testspnpm test:unit:run tests/unit/features# E2E test user flowspnpm test:e2e tests/e2e/user-flows.spec.ts```---
 
 ## Success Criteria
 

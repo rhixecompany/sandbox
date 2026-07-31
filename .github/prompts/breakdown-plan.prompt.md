@@ -162,7 +162,8 @@ Epic-level t-shirt size: XS, S, M, L, XL, XXL}```
 
 ### Feature Issue Template
 
-```markdown# Feature: {Feature Name}
+```markdown
+# Feature: {Feature Name}
 
 ## Feature Description
 
@@ -199,11 +200,13 @@ epic-issue-number
 
 ## Estimate
 
-Story points or t-shirt size}```
+Story points or t-shirt size}
+```
 
 ### User Story Issue Template
 
-```markdown# User Story: {Story Title}
+```markdown
+# User Story: {Story Title}
 
 ## Story Statement
 
@@ -241,11 +244,13 @@ priority-level}`, `frontend/backend/fullstack`, `{component-name}`
 
 ## Estimate
 
-Story points: 1, 2, 3, 5, 8}```
+Story points: 1, 2, 3, 5, 8}
+```
 
 ### Technical Enabler Issue Template
 
-```markdown# Technical Enabler: {Enabler Title}
+```markdown
+# Technical Enabler: {Enabler Title}
 
 ## Enabler Description
 
