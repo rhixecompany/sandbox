@@ -4,7 +4,7 @@ name: skills-fix
 
 title: Skills Audit and Remediation
 
-description: 'Audit, debug, deduplicate, and enhance Hermes skills in the adminbot profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt → applies fixes in priority order (F → C → B → A-).'
+description: 'Audit, debug, deduplicate, and enhance Hermes skills in the default profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt → applies fixes in priority order (F → C → B → A-).'
 
 version: 1.0.0
 
@@ -128,7 +128,7 @@ metadata:
 
 ## Goal
 
-Full lifecycle audit and remediation of the Hermes adminbot skill library.Discovers all SKILL.md files, reorganizes misplaced skills, deduplicatescross-category copies, audits every skill for quality issues, generatesreports, plans fixes, and applies them in priority order.
+Full lifecycle audit and remediation of the Hermes default skill library.Discovers all SKILL.md files, reorganizes misplaced skills, deduplicatescross-category copies, audits every skill for quality issues, generatesreports, plans fixes, and applies them in priority order.
 
 ## Context
 
@@ -332,4 +332,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
-
