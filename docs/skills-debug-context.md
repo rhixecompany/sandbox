@@ -1,0 +1,131 @@
+# Skills Debug Context — Master Index
+
+> Generated: 2026-07-31 by /skills-fix audit pipeline (final pass) | Skills root: `C:\Users\Alexa\AppData\Local\hermes\skills\`
+
+**Grade distribution (591 skills):** **A**=238 | **A-**=282 | **B**=71 | **C**=0 | **F**=0
+
+| Grade | Meaning |
+|---|---|
+| A | clean |
+| A- | 1+ minor |
+| B | 1 major / 3+ minor |
+| C | 2+ major |
+| F | critical |
+
+## Issue Summary (by grade)
+
+| Grade | Count | Typical issues |
+|---|---|---|
+| A | 238 | none |
+| A- | 282 | 1-2 minor (missing optional section, over-250-lines, stale pattern) |
+| B | 71 | 1 major (dup headings / heading jumps) or 3+ minors |
+| C | 0 | — (cleared) |
+| F | 0 | — (cleared) |
+
+## B-Grade Skills (71) — remaining issues
+
+| Skill | Path | Issues |
+|---|---|---|
+| acpx-executor | `acpx-executor/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder |
+| apple | `apple/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use', 'quick reference'] |
+| claude-code | `autonomous-ai-agents/claude-code/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M3:Table pipe inconsistent (+1) |
+| codex | `autonomous-ai-agents/codex/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: npm install -g |
+| computer-use | `autonomous-ai-agents/computer-use/SKILL.md` | B1:Missing section(s): ['pitfalls']; M3:Table pipe inconsistent; M4:Over 250 lines (370) |
+| grok | `autonomous-ai-agents/grok/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M4:Over 250 lines (309) |
+| hermes-agent | `autonomous-ai-agents/hermes-agent/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['configuration', 'tools & skills']; C2:Stale pattern: pip install; M4:Over 250 lines (1142) |
+| using-superpowers | `autonomous-ai-agents/using-superpowers/SKILL.md` | R1:Duplicate heading(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME |
+| Chainlink | `blockchain/chainlink/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M1:Missing license; M1:Missing tags |
+| boost-prompt | `boost-prompt/SKILL.md` | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder |
+| bun-shell | `bun-shell/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (407) |
+| manim-video | `creative/manim-video/SKILL.md` | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (300) |
+| joyride | `development/joyride/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder |
+| litprog-skill | `development/litprog-skill/SKILL.md` | B1:Missing section(s): ['when to use']; M2:Placeholder: placeholder; M4:Over 250 lines (361) |
+| using-git-worktrees | `development/using-git-worktrees/SKILL.md` | B1:Missing section(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (278) |
+| writing-skills | `development/writing-skills/SKILL.md` | B1:Missing section(s): ['when to use']; R1:Duplicate heading(s): ['batch judge optimization (key learnings from 116-skill audit)', 'proven enhancement sequence', 'pitfall: line count trap']; M4:Over 250 lines (435) |
+| windows-package-management | `devops/windows-package-management/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['winget', 'chocolatey'] |
+| workspace-audit | `devops/workspace-audit/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (336) |
+| django-celery | `django-celery/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (482) |
+| dcf-model | `finance/dcf-model/SKILL.md` | B1:Missing section(s): ['when to use', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (1279) |
+| excel-author | `finance/excel-author/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M4:Over 250 lines (264) |
+| github | `github/SKILL.md` | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; M2:Placeholder: FIXME |
+| git-helper | `github/git-helper/SKILL.md` | R1:Duplicate heading(s): ['step-by-step', 'pitfalls'] |
+| github-code-review | `github/github-code-review/SKILL.md` | B1:Missing section(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME; M4:Over 250 lines (493) |
+| fastmcp | `mcp/fastmcp/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['references']; C2:Stale pattern: pip install; M4:Over 250 lines (313) |
+| huggingface-accelerate | `mlops/accelerate/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (345) |
+| chroma | `mlops/chroma/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (427) |
+| clip | `mlops/clip/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (274) |
+| evaluating-llms-harness | `mlops/evaluation/evaluating-llms-harness/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499) |
+| weights-and-biases | `mlops/evaluation/weights-and-biases/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (604) |
+| optimizing-attention-flash | `mlops/flash-attention/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (376) |
+| guidance | `mlops/guidance/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (586) |
+| huggingface-tokenizers | `mlops/huggingface-tokenizers/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (537) |
+| llama-cpp | `mlops/inference/llama-cpp/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (269) |
+| outlines | `mlops/inference/outlines/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['llama.cpp']; C2:Stale pattern: pip install; M4:Over 250 lines (670) |
+| serving-llms-vllm | `mlops/inference/serving-llms-vllm/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (374) |
+| instructor | `mlops/instructor/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (754) |
+| lambda-labs-gpu-cloud | `mlops/lambda-labs/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['launch instance', 'terminate instance']; C2:Stale pattern: pip install; M4:Over 250 lines (557) |
+| llava | `mlops/llava/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325) |
+| modal-serverless-gpu | `mlops/modal/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (364) |
+| nemo-curator | `mlops/nemo-curator/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (403) |
+| obliteratus | `mlops/obliteratus/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M3:Table pipe inconsistent; M4:Over 250 lines (343) |
+| peft-fine-tuning | `mlops/peft/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (454) |
+| pinecone | `mlops/pinecone/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (379) |
+| pytorch-lightning | `mlops/pytorch-lightning/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (360) |
+| qdrant-vector-search | `mlops/qdrant/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (516) |
+| dspy | `mlops/research/dspy/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (600) |
+| sparse-autoencoder-training | `mlops/saelens/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['step-by-step', 'checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (402) |
+| slime-rl-training | `mlops/slime/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (479) |
+| stable-diffusion-image-generation | `mlops/stable-diffusion/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (535) |
+| distributed-llm-pretraining-torchtitan | `mlops/torchtitan/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (373) |
+| fine-tuning-with-trl | `mlops/training/trl-fine-tuning/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499) |
+| whisper | `mlops/whisper/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (338) |
+| no-git-delete | `no-git-delete/SKILL.md` | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder |
+| memento-flashcards | `productivity/memento-flashcards/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325) |
+| notion | `productivity/notion/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['search', 'read page metadata', 'read page as markdown (agent-friendly)']; M4:Over 250 lines (468) |
+| powerpoint | `productivity/powerpoint/SKILL.md` | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (288) |
+| shop | `productivity/shop/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['checkout', 'orders'] |
+| prompt-library-maintenance | `prompt-library-maintenance/SKILL.md` | R1:Duplicate heading(s): ['pitfalls', 'verification checklist']; M2:Placeholder: TODO; M3:Table pipe inconsistent |
+| skill-judge | `qa/skill-judge/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['reference files']; M2:Placeholder: placeholder; M4:Over 250 lines (255) |
+| discover-mcp-capabilities | `reference/discover-mcp-capabilities/SKILL.md` | M2:Placeholder: placeholder; M2:Placeholder: placeholder; M4:Over 250 lines (355) |
+| parallel-cli | `research/parallel-cli/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (403) |
+| qmd | `research/qmd/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: npm install -g; M4:Over 250 lines (454) |
+| research-paper-writing | `research/research-paper-writing/SKILL.md` | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M3:Table pipe inconsistent (+1) |
+| scrapling | `research/scrapling/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (341) |
+| caveman-unified | `software-development/caveman-unified/SKILL.md` | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow'] |
+| python-quality | `software-development/python-quality/SKILL.md` | C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (358) |
+| sandbox | `software-development/sandbox/SKILL.md` | R1:Duplicate heading(s): ['overview', 'when to use', 'verification checklist'] |
+| worktrunk | `software-development/worktrunk/SKILL.md` | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow'] |
+| firecrawl-map | `web-development/firecrawl-map/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent |
+| firecrawl-search | `web-development/firecrawl-search/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent |
+
+## Clean Skills (A-grade, 238)
+
+`architecture-blueprint-generator`, `folder-structure-blueprint-generator`, `technology-stack-blueprint-generator`, `agent-browser`, `customize-opencode`, `template`, `algorithmic-art`, `architecture-diagram`, `brand-guidelines`, `canvas-design`, `content-research-writer`, `face-obscure-video-chat`
+`frontend-design`, `marp-slide`, `mermaid-diagrams`, `pretext`, `theme-factory`, `vsdc-video-masking`, `web-artifacts-builder`, `writing-clearly-and-concisely`, `jupyter-live-kernel`, `-agents-fix-discover`, `-agents-fix-report`, `-verify-and-dedupe`
+`add-hooks-to-config`, `ai-prompt-engineering-safety-review`, `analyze-hf-models`, `analyze-skill-codeblocks`, `apply-pending-memory`, `apply-pending-skills`, `apply-vscode-customizations`, `audit-227-cjs`, `audit-227-js`, `audit-227`, `audit-agents-hashes`, `audit-fix-remediate-safe`
+`audit-prompts`, `audit-vscode-config-v2`, `audit-vscode-config`, `batch-delete-profiles`, `batch-localappdata-skillcode`, `batch-remediate-42-59`, `batch-remediate`, `batch-rewrite-worst`, `batch-skill-judge`, `batch-update-hermes-paths`, `benchmark-models`, `benchmark-providers`
+`benchmark-results`, `benchmark-run-20260710`, `binance-api-reference`, `boost-near-pass-refs`, `build-path-mapping`, `busha-api-quickstart`, `busha-business-api`, `busha-quick-start-guide`, `categorize-skills`, `check-handle`, `chrome-devtools`, `configure-hermes`
+`consolidate-skills`, `context-map`, `convert-plaintext-to-md`, `copilot-mcp-server`, `copilot-sdk`, `create-agentsmd`, `create-implementation-plan`, `create-missing-memories`, `create-missing-souls`, `create-readme`, `crypto-wallet-api-guide`, `cryptoapis-wallet-builder`
+`dedupe-skills`, `dev-init-code-samples`, `docs-inventory-report`, `execute-workflow`, `face-detection-uv4l-pi`, `find-lock`, `find-locking-pid`, `fix-copilot-frontmatter`, `fix-crlf-frontmatter`, `fix-duplicate-hooks`, `fix-eslint-mismatches`, `fix-fail-skills`
+`fix-frontmatter-yaml-cjs`, `fix-frontmatter-yaml`, `fix-frontmatter`, `fix-orphaned-brackets`, `fix-prompts-comprehensive`, `fix-prompts`, `fix-skills`, `fix-yaml-frontmatter`, `generate-context-files`, `generate-custom-instructions-from-codebase`, `generate-skills`, `generate-vscode-audit-report`
+`generate-vscode-configs`, `hello-world`, `hello`, `hermes-deep-dive-guide`, `hermes-luma-memory-arch`, `hermes-networkchuck-course`, `how-paypal-works`, `inventory-agents`, `inventory-prompts`, `lcs`, `list-cli-tools`, `make-skill-template`
+`memory-repair`, `merge-config`, `merge-skill`, `microsoft-code-reference`, `microsoft-docs`, `model-discovery`, `normalize-plans`, `normalize-prompt-actions`, `patch-all-fail-sections`, `patch-fail-structure`, `paypal-getting-started`, `paystack-dev-docs`
+`paystack-getting-started`, `phase4-reconstruct-cjs`, `phase4-reconstruct`, `prime-factors`, `prompt-audit-all-cjs`, `prompt-batch-audit`, `prompt-builder`, `prompt-engineering`, `prompt-fix-metadata`, `prompt-inventory`, `prompt-repair-frontmatter`, `quarantine-skills`
+`remove-flat-duplicates`, `repair-frontmatter-closes`, `review-pending-skills`, `score-docs`, `session-audit-227-cjs`, `session-audit-227`, `skill-audit`, `skill-creator`, `skills-audit`, `suggest-awesome-github-copilot-agents`, `suggest-awesome-github-copilot-instructions`, `test-models`
+`trim-banking`, `trim-remaining`, `trim-research-reports-final`, `trim-research-reports`, `update-agents-md`, `validate-prompt-inventory`, `validate-prompts`, `validate-vscode-configs`, `validate-vscode-json`, `verify-frontmatter-cjs`, `verify-frontmatter`, `vscode-cli`
+`appinsights-instrumentation`, `asdf`, `azure-deployment-preflight`, `azure-devops-cli`, `azure-role-selector`, `customization-audit`, `datadog`, `git-history-preserving-migration`, `github-actions-efficiency`, `glab`, `hermes-config-merge`, `hermes-personality-soul`
+`jira`, `kanban-orchestrator`, `kanban-worker`, `powerbi-modeling`, `prompt-batch-fixer`, `provider-model-audit`, `rbac-audit-logging`, `repo-management`, `snowflake-semanticview`, `terraform-azurerm-set-diff-analyzer`, `validate-memories`, `work-on-ticket`
+`drawio-skill`, `finishing-a-development-branch`, `git-multi-repo-orchestration`, `hermes-hook-cleanup`, `introspection-only-general`, `mcp-builder`, `mcp-cli`, `mcp-security-audit`, `slack-gif-creator`, `transloadit-media-processing`, `youtube-full`, `llm-provider-benchmarking`
+`no-net-fetch`, `paypal-how-it-works`, `brainstorming`, `plans-and-specs`, `prompt-planning-orchestration`, `prd`, `doc-coauthoring`, `documentation-writer`, `docx`, `file-organizer`, `finnish-humanizer`, `internal-comms`
+`meeting-insights-analyzer`, `pdf`, `pdftk-server`, `pptx`, `task-management`, `teams-meeting-pipeline`, `user-communication-preferences`, `xlsx`, `yuanbao`, `prompt-library-consolidation`, `dogfood`, `playwright-automation-fill-in-form`
+`playwright-generate-e2e-test`, `playwright-generate-test`, `polyglot-test-agent`, `postgresql-code-review`, `scoutqa-test`, `test-skill`, `webapp-testing`, `research-actionable-kit`, `web-research-pipeline`, `banking`, `claude-api`, `clonedeps`
+`code-docs`, `codemap`, `context7`, `httpie`, `node-build-verification`, `nuget-manager`, `project-docs`, `project-research-reports`, `receiving-code-review`, `shadcn`
+
+## Summary
+
+- Total: 591 | A: 238 | A-: 282 | B: 71 | C: 0 | F: 0
+- Phase 1: 7 duplicates removed, 24 flat skills categorized
+- Phase 2: F-grade 21 → 0 (descriptions, embedded YAML, fences)
+- Phase 3: C-grade 22 → 0 (missing core sections added, fence-aware audit)
+- Phase 4: frontmatter bulk-fix (234 tags, 36 license, 4 author, 2 version) + 3 pre-existing YAML errors repaired
+- Remaining B-grade issues are cosmetic/informational (dup headings, heading jumps, long files, pip/npm install warnings) — documented, not rewritten
