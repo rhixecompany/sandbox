@@ -66,7 +66,7 @@ def main() -> int:
             m = re.match(r"^(```+)", line.strip())
             if m and len(m.group(1)) == 3:
                 depth += 1
-        rel = str(p.relative_to(PROMPTS_DIR))
+        rel = str(p.relative_to(PROMPTS_DIR)).replace("\\", "/")
         if depth % 2 != 0 and rel not in KNOWN_FENCE_CONVENTIONS:
             fence_broken.append(rel)
     results["markdown_fences"] = {"status": "PASS" if not fence_broken else "FAIL", "unbalanced": fence_broken}
