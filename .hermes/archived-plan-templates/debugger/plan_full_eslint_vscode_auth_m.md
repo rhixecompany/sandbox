@@ -27,20 +27,16 @@ This plan merges all best practices, code samples, and config patterns from your
 
     ```json
     {
-      "editor.formatOnSave": true,
-      "editor.tabSize": 2,
-      "eslint.lintTask.enable": true,
-      "eslint.useFlatConfig": true,
-      "eslint.validate": [
-        "javascript",
-        "typescript",
-        "typescriptreact"
-      ],
-      "explorer.fileNesting.enabled": true,
-      "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.test.ts, ${capture}.spec.ts",
-        "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx"
-      }
+    	"editor.formatOnSave": true,
+    	"editor.tabSize": 2,
+    	"eslint.lintTask.enable": true,
+    	"eslint.useFlatConfig": true,
+    	"eslint.validate": ["javascript", "typescript", "typescriptreact"],
+    	"explorer.fileNesting.enabled": true,
+    	"explorer.fileNesting.patterns": {
+    		"*.ts": "${capture}.test.ts, ${capture}.spec.ts",
+    		"*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx"
+    	}
     }
     ```
 
@@ -48,20 +44,16 @@ This plan merges all best practices, code samples, and config patterns from your
 
     ```json
     {
-      "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss",
-        "PulkitGangwar.nextjs-snippets",
-        "Prisma.prisma",
-        "vitest.explorer",
-        "github.copilot-chat"
-      ],
-      "unwantedRecommendations": [
-        "hookyqr.beautify",
-        "dbaeumer.jshint",
-        "eg2.tslint"
-      ]
+    	"recommendations": [
+    		"dbaeumer.vscode-eslint",
+    		"esbenp.prettier-vscode",
+    		"bradlc.vscode-tailwindcss",
+    		"PulkitGangwar.nextjs-snippets",
+    		"Prisma.prisma",
+    		"vitest.explorer",
+    		"github.copilot-chat"
+    	],
+    	"unwantedRecommendations": ["hookyqr.beautify", "dbaeumer.jshint", "eg2.tslint"]
     }
     ```
 
@@ -82,7 +74,7 @@ This plan merges all best practices, code samples, and config patterns from your
     import { Auth } from "@auth/core";
     import { authConfig } from "./auth-config";
     export default function handler(request: Request) {
-      return Auth(request, authConfig);
+    	return Auth(request, authConfig);
     }
     ```
 
@@ -92,30 +84,30 @@ This plan merges all best practices, code samples, and config patterns from your
     import { adapter } from "./auth-adapter";
     import { providers } from "./auth-providers";
     export const authConfig = {
-      providers,
-      adapter,
-      session: {
-        strategy: "database",
-        maxAge: 2592000,
-        updateAge: 86400
-      },
-      secret: process.env.AUTH_SECRET!,
-      trustHost: true,
-      useSecureCookies: process.env.NODE_ENV === "production",
-      callbacks: {
-        async session({ session }) {
-          return session;
-        },
-        async jwt({ token }) {
-          return token;
-        },
-        async signIn() {
-          return true;
-        },
-        async redirect({ url, baseUrl }) {
-          return url.startsWith("/") ? `${baseUrl}${url}` : url;
-        }
-      }
+    	providers,
+    	adapter,
+    	session: {
+    		strategy: "database",
+    		maxAge: 2592000,
+    		updateAge: 86400,
+    	},
+    	secret: process.env.AUTH_SECRET!,
+    	trustHost: true,
+    	useSecureCookies: process.env.NODE_ENV === "production",
+    	callbacks: {
+    		async session({ session }) {
+    			return session;
+    		},
+    		async jwt({ token }) {
+    			return token;
+    		},
+    		async signIn() {
+    			return true;
+    		},
+    		async redirect({ url, baseUrl }) {
+    			return url.startsWith("/") ? `${baseUrl}${url}` : url;
+    		},
+    	},
     };
     ```
 
@@ -126,23 +118,23 @@ This plan merges all best practices, code samples, and config patterns from your
     import Credentials from "@auth/core/providers/credentials";
     import Keycloak from "@auth/core/providers/keycloak";
     export const providers = [
-      GitHub({
-        clientId: process.env.GITHUB_CLIENT_ID!,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET!
-      }),
-      Credentials({
-        name: "Credentials",
-        credentials: {
-          username: { label: "Username", type: "text" },
-          password: { label: "Password", type: "password" }
-        },
-        authorize: async () => null
-      }),
-      Keycloak({
-        clientId: process.env.KEYCLOAK_CLIENT_ID!,
-        clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
-        issuer: process.env.KEYCLOAK_ISSUER!
-      })
+    	GitHub({
+    		clientId: process.env.GITHUB_CLIENT_ID!,
+    		clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+    	}),
+    	Credentials({
+    		name: "Credentials",
+    		credentials: {
+    			username: { label: "Username", type: "text" },
+    			password: { label: "Password", type: "password" },
+    		},
+    		authorize: async () => null,
+    	}),
+    	Keycloak({
+    		clientId: process.env.KEYCLOAK_CLIENT_ID!,
+    		clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
+    		issuer: process.env.KEYCLOAK_ISSUER!,
+    	}),
     ];
     ```
 
@@ -150,18 +142,13 @@ This plan merges all best practices, code samples, and config patterns from your
 
     ```typescript
     import { db } from "@/database/db";
-    import {
-      user,
-      account,
-      session,
-      verificationToken
-    } from "@/database/schema";
+    import { user, account, session, verificationToken } from "@/database/schema";
     import { DrizzleAdapter } from "@auth/drizzle-adapter";
     export const adapter = DrizzleAdapter(db, {
-      usersTable: user,
-      accountsTable: account,
-      sessionsTable: session,
-      verificationTokensTable: verificationToken
+    	usersTable: user,
+    	accountsTable: account,
+    	sessionsTable: session,
+    	verificationTokensTable: verificationToken,
     });
     ```
 
@@ -169,13 +156,13 @@ This plan merges all best practices, code samples, and config patterns from your
 
     ```typescript
     export const signIn = async (provider: string, options?: any) => {
-      /* ... */
+    	/* ... */
     };
     export const signOut = async () => {
-      /* ... */
+    	/* ... */
     };
     export const getSession = async () => {
-      /* ... */
+    	/* ... */
     };
     ```
 
@@ -184,7 +171,7 @@ This plan merges all best practices, code samples, and config patterns from your
     ```typescript
     export const proxyUrl = process.env.AUTH_PROXY_URL || "";
     export default function proxy() {
-      return Response.json({ status: "ok" });
+    	return Response.json({ status: "ok" });
     }
     ```
 

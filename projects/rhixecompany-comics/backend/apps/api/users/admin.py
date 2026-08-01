@@ -1,4 +1,6 @@
 from allauth.account.decorators import secure_admin_login
+from api.users.forms import UserAdminChangeForm, UserAdminCreationForm
+from api.users.models import User
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import admin as auth_admin
@@ -9,28 +11,15 @@ from django.utils.translation import gettext_lazy as _
 from django_celery_beat.admin import ClockedScheduleAdmin as BaseClockedScheduleAdmin
 from django_celery_beat.admin import CrontabScheduleAdmin as BaseCrontabScheduleAdmin
 from django_celery_beat.admin import PeriodicTaskAdmin as BasePeriodicTaskAdmin
-from django_celery_beat.admin import PeriodicTaskForm
-from django_celery_beat.admin import TaskSelectWidget
-from django_celery_beat.models import ClockedSchedule
-from django_celery_beat.models import CrontabSchedule
-from django_celery_beat.models import IntervalSchedule
-from django_celery_beat.models import PeriodicTask
-from django_celery_beat.models import SolarSchedule
+from django_celery_beat.admin import PeriodicTaskForm, TaskSelectWidget
+from django_celery_beat.models import ClockedSchedule, CrontabSchedule, IntervalSchedule, PeriodicTask, SolarSchedule
 from import_export.admin import ImportExportModelAdmin
-from import_export.forms import ExportForm
-from import_export.forms import ImportForm
+from import_export.forms import ExportForm, ImportForm
 from unfold.admin import ModelAdmin
-from unfold.contrib.filters.admin import DropdownFilter
-from unfold.contrib.filters.admin import TextFilter
-from unfold.contrib.forms.widgets import ArrayWidget
-from unfold.contrib.forms.widgets import WysiwygWidget
+from unfold.contrib.filters.admin import DropdownFilter, TextFilter
+from unfold.contrib.forms.widgets import ArrayWidget, WysiwygWidget
 from unfold.forms import AdminPasswordChangeForm
-from unfold.widgets import UnfoldAdminSelectWidget
-from unfold.widgets import UnfoldAdminTextInputWidget
-
-from api.users.forms import UserAdminChangeForm
-from api.users.forms import UserAdminCreationForm
-from api.users.models import User
+from unfold.widgets import UnfoldAdminSelectWidget, UnfoldAdminTextInputWidget
 
 admin.site.index_title = "Welcome to the Rhixescans admin area"
 admin.site.site_header = "Rhixescans Admin"

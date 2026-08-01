@@ -131,12 +131,12 @@ asyncio.run(main())
 
 ## Key Differences: Async vs Multi-threading
 
-| Feature | Asyncio | Multi-threading |
-| --------- | --------- | ----------------- |
-| Concurrency Model | Single-threaded, cooperative | Preemptive, OS-managed |
-| Best For | I/O-bound tasks | CPU-bound tasks |
-| Overhead | Low (no thread creation) | Higher (thread management) |
-| Control | Explicit (`await`) | Implicit (OS scheduler) |
+| Feature           | Asyncio                      | Multi-threading            |
+| ----------------- | ---------------------------- | -------------------------- |
+| Concurrency Model | Single-threaded, cooperative | Preemptive, OS-managed     |
+| Best For          | I/O-bound tasks              | CPU-bound tasks            |
+| Overhead          | Low (no thread creation)     | Higher (thread management) |
+| Control           | Explicit (`await`)           | Implicit (OS scheduler)    |
 
 ---
 
@@ -150,4 +150,4 @@ asyncio.run(main())
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

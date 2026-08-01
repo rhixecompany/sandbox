@@ -27,13 +27,13 @@
 
 ## Types of Wallet APIs
 
-| API Type | Function | Use Case |
-| ---------- | ---------- | ---------- |
-| Transactional | Send/receive crypto | Payments, exchanges, bots |
-| Balance & Info | Read balances, history | Portfolio trackers, tax tools |
-| Wallet Management | Create wallets, addresses | Onboarding, treasury |
-| Custodial | Provider holds keys | Beginner apps, regulated |
-| Non-Custodial | User holds keys | Self-custody, DeFi, MPC |
+| API Type          | Function                  | Use Case                      |
+| ----------------- | ------------------------- | ----------------------------- |
+| Transactional     | Send/receive crypto       | Payments, exchanges, bots     |
+| Balance & Info    | Read balances, history    | Portfolio trackers, tax tools |
+| Wallet Management | Create wallets, addresses | Onboarding, treasury          |
+| Custodial         | Provider holds keys       | Beginner apps, regulated      |
+| Non-Custodial     | User holds keys           | Self-custody, DeFi, MPC       |
 
 ## MPC (Multi-Party Computation)
 
@@ -59,4 +59,4 @@ Fireblocks, Portal, Cobo, Crypto APIs WaaS, BitGo
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

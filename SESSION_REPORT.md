@@ -1,79 +1,72 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-07-31T23:00+01:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-08-01 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
 
-| Field | Value |
-| --- | --- |
-| Session ID | 20260731_223426_c183d7 |
-| Title | Implementing GitHub Copilot Agent Suggestion |
-| When | 2026-07-31 22:35 → ~22:50 (local, state.db) |
-| Model | deepseek-v4-flash-free |
-| Source | tui (state.db) |
+| Field      | Value                                       |
+| ---------- | ------------------------------------------- |
+| Session ID | 20260801_035344_26443e                      |
+| Title      | Skill Startup and Session Audit             |
+| When       | 2026-08-01 03:56 → ~04:00 (local, state.db) |
+| Model      | deepseek-v4-flash-free (opencode-zen)       |
+| Source     | tui (state.db)                              |
+
+> Correction: prior report pointed at `024625_ce38dc`; live browse shows `26443e` is the true last completed session. `024625_ce38dc` (repo tooling implementation pipeline) remains the prior session and its open items carry forward.
 
 ## Tools Used
 
-| Tool | Calls | Purpose |
-| --- | --- | --- |
-| terminal | 11 | curl agent downloads, npm ci/build, JSON validation, git checks |
-| read_file | 2 | prompt file + repo context |
-| search_files | 2 | agent/prompt file discovery |
-| skill_view | 1 | suggest-awesome-github-copilot-agents |
-
-*Counts sampled from the 30-message session_search window; full session = 134 messages.*
+| Tool         | Calls | Purpose                                                                                                           |
+| ------------ | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| terminal     | 20+   | eslint runs (mcp-server-typescript, mcp-servers, rhixecompany-comics), tooling_full_check.py, grep classification |
+| search_files | 3     | script dir verification, config discovery                                                                         |
+| read_file    | 6     | eslint.config.mjs reads, script existence                                                                         |
+| skill_view   | 5     | mandatory startup stack                                                                                           |
 
 ## Skills Loaded
 
-| Skill | Trigger |
-| --- | --- |
-| using-superpowers | Mandatory startup |
-| user-communication-preferences | Mandatory startup |
-| hermes-profiles | Mandatory startup |
-| validate-memories | Mandatory startup |
-| session-audit-report | User invoked `/session-audit-report` |
-| suggest-awesome-github-copilot-agents | Agent download task |
+| Skill                                                                                                       | Trigger                   |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------- |
+| using-superpowers, user-communication-preferences, session-audit-report, hermes-profiles, validate-memories | Mandatory 5-skill startup |
 
 ## Key Insights & Corrections
 
-1. **generate_session_report.py wrote a sparse placeholder again (4th recurrence)** — pointed at nonexistent session `20260731_225031_07aa6b`. Real last session (`20260731_223426_c183d7`) found via `session_search` browse; report written manually. The script remains unreliable on this install.
-2. **Copilot agents imported clean: 30/30** from `github/awesome-copilot` → `.github/agents/`, all non-empty, frontmatter-valid after fixing 1 upstream defect (missing `description` in `declarative-agents-architect.agent.md`). Coverage report: `awesome-copilot-agents-report.md` (223-agent comparison).
-3. **js-yaml 5.2.0 is ESM-only** — `import yaml from "js-yaml"` fails (no default export); fixed via namespace import `import * as yaml` in `eng/yaml-parser.mjs` (hermes-profiles mirror).
-4. **hermes-profiles/ is gitignored** (mirror tree) — VS Code settings fix + yaml-parser fix there cause zero repo pollution.
-5. **Corruption watch: false positives only** — `promptmetadata` hits in the 2 known files (`.enhance/ENHANCEMENT_REPORT.md`, `comprehensive-prompt-enhancer.prompt.md`), no frontmatter corruption.
-6. Model/provider unchanged: deepseek-v4-flash-free (opencode-zen) matches config. No correction needed.
+1. **eslint globals fix worked**: rhixecompany-comics `no-undef` dropped **391 → 76** after globals config landed (server respawn required — earlier grep -c failures were hardline block, not config).
+2. **Remaining 936 rhixecompany-comics problems (783 errors) are legacy REPORT-category**, not safe auto-fixes: 438 `@typescript-eslint/no-unused-expressions`, 153 no-unused-vars, 92 ts no-unused-vars, 40 no-redeclare, in one-off scripts (`scripts/scraper/*.js`, `frontend/src/scripts/*.ts`). Per prompt Phase 4 scope → report, don't auto-fix.
+3. **eslint counts after fixes**: mcp-server-typescript 10 → 4 problems; mcp-servers 65 → 25.
+4. **search_files MSYS path false negatives**: scripts dir read empty via search_files but intact on disk (158 files, verified via `ls`). Use terminal for existence checks on `~/AppData/Local/hermes/scripts`.
+5. **4 tooling-level failures introduced by config creations** (tooling_full_check): prettier exit 2 on `.prettierrc.json`, ruff check exit 2, ruff format exit 2, prettier exit 2 on `.github/copilot-instructions.md`. Session ended mid-isolation of which repos own them — **unresolved**.
 
 ## Open Items
 
-| Item | Status |
-| --- | --- |
-| 30 agents in `.github/agents/` uncommitted | Awaiting user: commit or add `.github/agents/README.md` index |
-| 201 modified files in working tree | Mostly pre-existing prompt-library state (192 at session start) |
+| Item                                                                                                                    | Status                                            |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Isolate + fix 4 TOOLING FAILs (prettier .prettierrc.json / ruff check / ruff format / prettier copilot-instructions.md) | **Blocked → next action** (hard gate for Phase 4) |
+| rhixecompany-comics 936 eslint findings                                                                                 | REPORT category per scope — document, no auto-fix |
+| tooling_full_check.py re-run to 0 tooling failures                                                                      | Pending (gate for Phase 4)                        |
+| Phase 4: create + verify `/execute-workflow`-family prompt                                                              | Pending (hard gate after Phase 3)                 |
+| Phase 5: execute prompt+plan to completion                                                                              | Pending                                           |
+| Uncommitted git: 148 staged deletions (scripts/ + 3 MCP servers), 769 modified, 42 untracked                            | Awaiting commit decision                          |
 
 ## Errors Resolved
 
-| Error | Fix |
-| --- | --- |
-| generate_session_report.py clobbered report with bogus placeholder | Manual rewrite from session_search (this file) |
-| `declarative-agents-architect.agent.md` missing `description` frontmatter | Added; 30/30 frontmatter-valid |
-| Trailing comma in `hermes-profiles/plugins/awesome-copilot/.vscode/settings.json` | Fixed → 126/126 JSON configs PASS |
-| `npm run build` failed: js-yaml 5.2.0 ESM default-import | `npm ci` + namespace import in `eng/yaml-parser.mjs` → build exit 0 |
+| Error                                                 | Fix                                                                           |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------- |
+| search_files reported scripts/ empty (false negative) | Verified via `ls` — 158 files intact; search_files path resolution issue only |
+| eslint no-undef flood (391) in rhixecompany-comics    | globals config fix → 76 (respawn required)                                    |
+| eslint exit 1 but empty tail output                   | Checked via `grep -E "problems\|error\|warning"` — real counts: 4 / 25 / 936  |
 
 ## Session Changelog
 
-| File | Action |
-| --- | --- |
-| `.github/agents/*.agent.md` (30 files) | Downloaded from github/awesome-copilot (Tier 1–3) |
-| `.github/agents/declarative-agents-architect.agent.md` | Frontmatter `description` added (upstream defect) |
-| `awesome-copilot-agents-report.md` | Coverage report written (223-agent comparison, 68KB) |
-| `projects/docs/TECHNOLOGY_STACK.md` | Generated → 19/19 projects covered (Phase 1 gap closed) |
-| `docs/orchestrator-progress.md` | Progress report appended (Phase 3) |
-| `docs/orchestrator-verification.md` | Verification report appended, gates PASS (Phase 3) |
-| `hermes-profiles/plugins/awesome-copilot/.vscode/settings.json` | Trailing comma fixed (gitignored mirror) |
-| `hermes-profiles/plugins/awesome-copilot/eng/yaml-parser.mjs` | Namespace import fix (gitignored mirror) |
-| `SESSION_REPORT.md` | Rewritten manually with verified session data (this file) |
+| File                                                        | Action                                               |
+| ----------------------------------------------------------- | ---------------------------------------------------- |
+| `projects/mcp-server-typescript/eslint.config.mjs`          | Patched via tooling_lint template (10 → 4 problems)  |
+| `projects/mcp-servers/eslint.config.mjs`                    | Patched via tooling_lint template (65 → 25 problems) |
+| `projects/rhixecompany-comics/eslint.config.mjs`            | Globals fix (no-undef 391 → 76)                      |
+| `~/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py` | Template patched (respawned to apply)                |
+| `SESSION_REPORT.md`                                         | Rewritten with verified last session (this file)     |
 
 ## Corruption Watch
 
-- `promptmetadata` grep: 2 hits — `.github/prompts/.enhance/ENHANCEMENT_REPORT.md` + `.github/prompts/comprehensive-prompt-enhancer.prompt.md` = known false positives (report text + prompt's own checklist), frontmatter clean.
-- YAML frontmatter: no bulk-edit corruption detected; prompt files untouched this session.
+- No bulk-edit YAML frontmatter corruption detected (eslint config changes were targeted patches).
+- 148 staged deletions from prior session still uncommitted — recoverable via git history.

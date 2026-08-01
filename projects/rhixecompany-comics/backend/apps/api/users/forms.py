@@ -1,19 +1,20 @@
-from allauth.account.forms import AddEmailForm
-from allauth.account.forms import ChangePasswordForm
-from allauth.account.forms import LoginForm
-from allauth.account.forms import ResetPasswordForm
-from allauth.account.forms import ResetPasswordKeyForm
-from allauth.account.forms import SetPasswordForm
-from allauth.account.forms import SignupForm
-from allauth.account.forms import UserTokenForm
+from allauth.account.forms import (
+    AddEmailForm,
+    ChangePasswordForm,
+    LoginForm,
+    ResetPasswordForm,
+    ResetPasswordKeyForm,
+    SetPasswordForm,
+    SignupForm,
+    UserTokenForm,
+)
 from allauth.socialaccount.forms import DisconnectForm
 from allauth.socialaccount.forms import SignupForm as SocialSignupForm
+from api.users.models import User
+from api.users.widgets import MyCustomImageWidget
 from django import forms
 from django.contrib.auth import forms as admin_forms
 from django.utils.translation import gettext_lazy as _
-
-from api.users.models import User
-from api.users.widgets import MyCustomImageWidget
 
 
 class UserAdminChangeForm(admin_forms.UserChangeForm):
@@ -97,7 +98,7 @@ class UserCreationForm(admin_forms.UserCreationForm):
         for field in self.fields:
             f = str(field)
             new_data = {
-                "placeholder": _(f"Enter your {f}"),  # noqa: INT001
+                "placeholder": _(f"Enter your {f}"),
                 "class": "",
             }
             self.fields[str(field)].widget.attrs.update(new_data)

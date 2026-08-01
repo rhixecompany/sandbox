@@ -1,16 +1,16 @@
 [
-  {
-    "name": "opencode-zen",
-    "status": "timeout",
-    "latency_ms": 10000,
-    "model_tested": "deepseek-v4-flash-free",
-    "error": "Timeout"
-  },
-  {
-    "name": "copilot-cli",
-    "status": "timeout",
-    "latency_ms": 30000,
-    "model_tested": "gpt-5-mini",
-    "error": "Timeout"
-  }
+	{
+		"name": "opencode-zen",
+		"status": "timeout",
+		"latency_ms": 10000,
+		"model_tested": "deepseek-v4-flash-free",
+		"error": "Timeout"
+	},
+	{
+		"name": "copilot-cli",
+		"status": "timeout",
+		"latency_ms": 30000,
+		"model_tested": "gpt-5-mini",
+		"error": "Timeout"
+	}
 ]

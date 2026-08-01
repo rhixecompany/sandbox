@@ -5,6 +5,7 @@ Project-wide guidance for GitHub Copilot in the SandBox monorepo.
 > **Source of Truth:** This workspace is governed by `AGENTS.md` (canonical). All other instruction files (CLAUDE.md, .cursorrules, .hermes.md) are thin stubs that defer to AGENTS.md. If a rule here differs from AGENTS.md, AGENTS.md wins.
 
 > **Quick Links:** This file covers practical setup and subproject reference. For exhaustive guidance on patterns, conventions, and MCP server details, see `AGENTS.md`:
+>
 > - § 2 (Technology Stack) — language versions, framework details, Python dual-install
 > - § 4 (Subproject Directory) — complete project inventory with entry points
 > - § 5 (Code Patterns & Conventions) — TypeScript, Python, Bash, PowerShell patterns
@@ -31,6 +32,7 @@ When generating code for this repository:
 This workspace requires Python 3.11 (in venv) for root-level scripts. System Python 3.13 is also available but separate.
 
 **On Windows (PowerShell):**
+
 ```powershell
 # Activate venv (creates if missing)
 . venv\Scripts\Activate.ps1
@@ -46,6 +48,7 @@ python3 --version     # Shows 3.13.14 (system, for reference)
 ```
 
 **On Linux/macOS (Bash):**
+
 ```bash
 # Activate venv
 source venv/bin/activate
@@ -61,7 +64,7 @@ python3 --version     # Shows 3.13.14 (system)
 
 ### 2.2 Python Version Clarification
 
-- **`python` (3.11.15)** — Use this for workspace root scripts in `scripts/`. Always run from activated venv.
+- **`python` (3.11.15)** — Use this for workspace root automation scripts in `~/AppData/Local/hermes/scripts/`. Always run from activated venv.
 - **`python3` (3.13.14)** — System Python. Use only for one-off commands if needed; prefer venv.
 - **PEP 668** — Virtual environment is required; `pip install` to system Python is blocked.
 - **`uv`** — Fast pip alternative. Available in venv; `uv pip install` is faster than `pip install`.
@@ -74,37 +77,39 @@ The workspace root has a minimal `package.json` (Bun workspace marker). Don't us
 
 ## 3. Workspace Root Scripts
 
-The `scripts/` directory contains 100+ Python automation scripts for Hermes maintenance, audits, and tooling. All scripts follow the pattern below and should be run from the workspace root with the venv activated.
+The `~/AppData/Local/hermes/scripts/` directory contains 100+ Python automation scripts for Hermes maintenance, audits, and tooling. All scripts follow the pattern below and should be run from the workspace root with the venv activated.
 
 **Key Scripts:**
 
-| Script | Purpose |
-|--------|---------|
-| `health_check.py` | Verify workspace health (venv, deps, config) |
-| `build_registry.py` | Build prompt/skill registry from workspace |
-| `audit_prompts.py` | Audit prompt library for issues (frontmatter, duplicates, etc.) |
-| `validate_vscode_configs.py` | Validate VS Code workspace settings |
-| `build_env.py` | Build `.env` or environment config |
-| `memory_repair.py` | Repair Hermes memory artifacts |
+| Script                       | Purpose                                                         |
+| ---------------------------- | --------------------------------------------------------------- |
+| `health_check.py`            | Verify workspace health (venv, deps, config)                    |
+| `build_registry.py`          | Build prompt/skill registry from workspace                      |
+| `audit_prompts.py`           | Audit prompt library for issues (frontmatter, duplicates, etc.) |
+| `validate_vscode_configs.py` | Validate VS Code workspace settings                             |
+| `build_env.py`               | Build `.env` or environment config                              |
+| `memory_repair.py`           | Repair Hermes memory artifacts                                  |
 
 **Running a script:**
+
 ```bash
 # Activate venv first
 source venv/bin/activate  # Linux/macOS
 # or: . venv\Scripts\Activate.ps1  # PowerShell
 
 # Run any script
-python scripts/health_check.py
-python scripts/build_registry.py --output registry.json
-python scripts/audit_prompts.py --report report.md
+python ~/AppData/Local/hermes/scripts/health_check.py
+python ~/AppData/Local/hermes/scripts/build_registry.py --output registry.json
+python ~/AppData/Local/hermes/scripts/audit_prompts.py --report report.md
 
 # All scripts support --help
-python scripts/health_check.py --help
+python ~/AppData/Local/hermes/scripts/health_check.py --help
 ```
 
 **Script Patterns:**
 
 All workspace scripts follow these conventions:
+
 - Entry point: `if __name__ == "__main__": main()`
 - CLI: `argparse` for command-line args
 - Logging: timestamped console output, optional `--log` for file output
@@ -120,19 +125,19 @@ Before generating code, scan the codebase to identify:
 
 ### 2.1 Language Versions
 
-| Language | Detected Version | Indicators |
-|----------|-----------------|------------|
-| **TypeScript** | ESNext (strict) | `tsconfig.json` → `"target": "ESNext"`, `"strict": true` |
-| **Python** | 3.11 | `pyrightconfig.json` → `"pythonVersion": "3.11"`, `.ruff.toml` → `"py311"` |
-| **Bash** | POSIX + bashisms | Shebang `#!/usr/bin/env bash`, `set -euo pipefail` |
-| **PowerShell** | 5.1+ | `.ps1` extensions, `PascalCase` naming |
+| Language       | Detected Version | Indicators                                                                 |
+| -------------- | ---------------- | -------------------------------------------------------------------------- |
+| **TypeScript** | ESNext (strict)  | `tsconfig.json` → `"target": "ESNext"`, `"strict": true`                   |
+| **Python**     | 3.11             | `pyrightconfig.json` → `"pythonVersion": "3.11"`, `.ruff.toml` → `"py311"` |
+| **Bash**       | POSIX + bashisms | Shebang `#!/usr/bin/env bash`, `set -euo pipefail`                         |
+| **PowerShell** | 5.1+             | `.ps1` extensions, `PascalCase` naming                                     |
 
 ### 2.2 Runtime Versions
 
-| Runtime | Version | Indicators |
-|---------|---------|------------|
-| **Bun** | >=1.3.14 | `package.json` → `"packageManager": "bun@1.3.14"`, `bunfig.toml`, `bun.lock` |
-| **Node.js** | >=18 | `package.json` → `"engines": {"node": ">=18"}` |
+| Runtime     | Version  | Indicators                                                                   |
+| ----------- | -------- | ---------------------------------------------------------------------------- |
+| **Bun**     | >=1.3.14 | `package.json` → `"packageManager": "bun@1.3.14"`, `bunfig.toml`, `bun.lock` |
+| **Node.js** | >=18     | `package.json` → `"engines": {"node": ">=18"}`                               |
 
 ### 2.3 Framework & Library Versions
 
@@ -157,15 +162,15 @@ Key dependencies across the workspace (see `projects/Bash/package.json` for exha
 
 ## 3. Context Files (Source of Truth Hierarchy)
 
-| Priority | File | Purpose |
-|----------|------|---------|
-| 1 | `AGENTS.md` (workspace root) | Canonical workspace rules, toolchain, conventions |
-| 2 | `projects/<name>/AGENTS.md` | Subproject-specific overrides |
-| 3 | `CLAUDE.md` | Claude model-specific guidance (defer to AGENTS.md) |
-| 4 | `.cursorrules` | Cursor IDE rules (defer to AGENTS.md) |
-| 5 | `.hermes.md` | Hermes profile config |
-| 6 | `CONTRIBUTING.md` | Git workflow, PR guidelines, branch naming |
-| 7 | `.github/prompts/` | Canonical MCP prompt library |
+| Priority | File                         | Purpose                                             |
+| -------- | ---------------------------- | --------------------------------------------------- |
+| 1        | `AGENTS.md` (workspace root) | Canonical workspace rules, toolchain, conventions   |
+| 2        | `projects/<name>/AGENTS.md`  | Subproject-specific overrides                       |
+| 3        | `CLAUDE.md`                  | Claude model-specific guidance (defer to AGENTS.md) |
+| 4        | `.cursorrules`               | Cursor IDE rules (defer to AGENTS.md)               |
+| 5        | `.hermes.md`                 | Hermes profile config                               |
+| 6        | `CONTRIBUTING.md`            | Git workflow, PR guidelines, branch naming          |
+| 7        | `.github/prompts/`           | Canonical MCP prompt library                        |
 
 ### Useful auxiliary files in `.github/copilot/` (if they exist):
 
@@ -191,7 +196,7 @@ SandBox/
 ├── projects/[14+ others]/               # Multi-language subprojects
 ├── .github/prompts/                      # Canonical MCP prompt library
 ├── .github/workflows/                    # CI/CD (shared across projects)
-├── scripts/                              # Workspace-level Python/Shell automation scripts
+├── scripts/                              # Pointer README only — canonical scripts live in ~/AppData/Local/hermes/scripts/
 ├── venv/ + requirements.txt              # Python 3.11 environment
 └── docs/                                 # Hermes docs + references
 ```
@@ -215,35 +220,35 @@ import { parseArgs } from "./lib/cli.js";
 
 // Interfaces before implementation
 export interface CliArgs {
-  flags: Set<string>;
-  named: Record<string, string>;
-  positional: string[];
+	flags: Set<string>;
+	named: Record<string, string>;
+	positional: string[];
 }
 
 // JSDoc on all exports
 /** CLI argument parsing utilities */
 export function parseArgs(argv: string[]): CliArgs {
-  // ... implementation
+	// ... implementation
 }
 
 // Error classes extend built-in Error
 export class ScriptError extends Error {
-  constructor(
-    message: string,
-    public readonly exitCode: number = 1,
-  ) {
-    super(message);
-    this.name = "ScriptError";
-  }
+	constructor(
+		message: string,
+		public readonly exitCode: number = 1,
+	) {
+		super(message);
+		this.name = "ScriptError";
+	}
 }
 
 // Dry-run pattern for destructive operations
 export class DryRunExecutor {
-  constructor(private opts: DryRunOptions) {}
+	constructor(private opts: DryRunOptions) {}
 
-  async writeFile(path: string, content: string): Promise<void> {
-    // Log operation, check this.opts.dryRun before executing
-  }
+	async writeFile(path: string, content: string): Promise<void> {
+		// Log operation, check this.opts.dryRun before executing
+	}
 }
 
 // Module structure: types → class → convenience functions
@@ -251,6 +256,7 @@ export class DryRunExecutor {
 ```
 
 **Key rules:**
+
 - Shebang `#!/usr/bin/env bun` for executable TypeScript files
 - Use `.js` extension in import specifiers (Bun resolves to `.ts`)
 - Prefer `Bun.write()`, `Bun.file()`, `Bun.spawn()` over Node.js fs alternatives
@@ -302,6 +308,7 @@ if __name__ == "__main__":
 ```
 
 **Key rules:**
+
 - Shebang `#!/usr/bin/env python3`
 - Module docstrings: `"""..."""` triple double quotes
 - Functions: `def func_name() -> None:` with type hints
@@ -330,6 +337,7 @@ fi
 ```
 
 **Key rules:**
+
 - `#!/usr/bin/env bash` shebang
 - `set -euo pipefail` for strict error handling
 - `IFS=$'\n\t'` for safe word splitting
@@ -357,6 +365,7 @@ function Invoke-Cleanup {
 ### 5.5 Shell Wrapper Convention
 
 Every tool/script should provide multi-platform wrappers:
+
 - `.sh` — Bash implementation
 - `.ps1` — PowerShell implementation
 - `.bat` — Batch/Cmd implementation
@@ -370,8 +379,8 @@ All three wrappers must support `--help` and `--dry-run`.
 import { dim } from "./colors.js";
 
 const log = {
-  info: (msg: string) => console.log(`[${new Date().toISOString()}] ${msg}`),
-  error: (msg: string) => console.error(`[${new Date().toISOString()}] ERROR: ${msg}`),
+	info: (msg: string) => console.log(`[${new Date().toISOString()}] ${msg}`),
+	error: (msg: string) => console.error(`[${new Date().toISOString()}] ERROR: ${msg}`),
 };
 ```
 
@@ -389,15 +398,16 @@ import { describe, expect, it } from "vitest";
 import { parseArgs } from "../lib/cli.js";
 
 describe("parseArgs", () => {
-  it("parses flags", () => {
-    const result = parseArgs(["--verbose", "--dry-run"]);
-    expect(result.flags.has("verbose")).toBe(true);
-    expect(result.flags.has("dry-run")).toBe(true);
-  });
+	it("parses flags", () => {
+		const result = parseArgs(["--verbose", "--dry-run"]);
+		expect(result.flags.has("verbose")).toBe(true);
+		expect(result.flags.has("dry-run")).toBe(true);
+	});
 });
 ```
 
 **Commands:**
+
 ```bash
 bun run test                        # All tests
 bun run test -- --grep "pattern"    # Filter by name
@@ -432,6 +442,7 @@ pytest projects/<name>/
 ### 7.2 Commit Messages
 
 Conventional commits format:
+
 ```
 <type>: <description>
 
@@ -490,41 +501,41 @@ bun run format && bun run typecheck && bun run lint:strict && bun run test
 
 The workspace has **16 active MCP servers** configured in `.mcp.json`. Prefer MCP tools over native CLI commands:
 
-| Server | Capabilities | When to Use |
-|--------|-------------|------------|
-| **filesystem** | Read/write/search files, directory ops | File CRUD, searching file contents, stat ops |
-| **ast-grep** | AST-based code search and rewrite | Finding patterns in code, refactoring across files |
-| **github** | GitHub API (issues, PRs, repos, commits) | GitHub operations (search code, create issues, manage PRs) |
-| **playwright** | Browser automation, screenshots, form filling | Interactive web testing, browser automation, scraping |
-| **sequential-thinking** | Structured multi-step reasoning | Complex planning, decision trees, analysis |
-| **fetch** | HTTP requests, web page content extraction | Fetching plain-text URLs, markdown conversion |
-| **code-sandbox** | Isolated Node.js/Jest execution | Running JavaScript code safely |
-| **mcp-docker** | Container management + GitHub ops | Docker/Docker Compose operations |
-| **copilot-mcp** | Copilot provider operations | Copilot CLI integration |
-| **memory** | Persistent cross-session memory | Durable facts, context preservation |
-| **python-quality** | Ruff lint/format + Pyright typecheck | Python code quality checks |
-| **tooling-lint** | ESLint, Prettier, markdownlint, cspell | JavaScript/TypeScript/Markdown linting and formatting |
-| **tooling-config** | pre-commit, git-cliff, .gitignore/.editorconfig | Config file validation and generation |
-| **linear** | Linear.app project management | Issue tracking and project planning |
-| **smithery** | MCP registry and discovery | Finding and installing new MCP tools |
-| **mindstudio** | Third-party integrations (Gmail, Slack, Notion) | External service automation |
+| Server                  | Capabilities                                    | When to Use                                                |
+| ----------------------- | ----------------------------------------------- | ---------------------------------------------------------- |
+| **filesystem**          | Read/write/search files, directory ops          | File CRUD, searching file contents, stat ops               |
+| **ast-grep**            | AST-based code search and rewrite               | Finding patterns in code, refactoring across files         |
+| **github**              | GitHub API (issues, PRs, repos, commits)        | GitHub operations (search code, create issues, manage PRs) |
+| **playwright**          | Browser automation, screenshots, form filling   | Interactive web testing, browser automation, scraping      |
+| **sequential-thinking** | Structured multi-step reasoning                 | Complex planning, decision trees, analysis                 |
+| **fetch**               | HTTP requests, web page content extraction      | Fetching plain-text URLs, markdown conversion              |
+| **code-sandbox**        | Isolated Node.js/Jest execution                 | Running JavaScript code safely                             |
+| **mcp-docker**          | Container management + GitHub ops               | Docker/Docker Compose operations                           |
+| **copilot-mcp**         | Copilot provider operations                     | Copilot CLI integration                                    |
+| **memory**              | Persistent cross-session memory                 | Durable facts, context preservation                        |
+| **python-quality**      | Ruff lint/format + Pyright typecheck            | Python code quality checks                                 |
+| **tooling-lint**        | ESLint, Prettier, markdownlint, cspell          | JavaScript/TypeScript/Markdown linting and formatting      |
+| **tooling-config**      | pre-commit, git-cliff, .gitignore/.editorconfig | Config file validation and generation                      |
+| **linear**              | Linear.app project management                   | Issue tracking and project planning                        |
+| **smithery**            | MCP registry and discovery                      | Finding and installing new MCP tools                       |
+| **mindstudio**          | Third-party integrations (Gmail, Slack, Notion) | External service automation                                |
 
 **MCP Configuration:** Defined in `.mcp.json` at workspace root. To update server list or config, edit `.mcp.json` directly.
 
 **Avoid native CLI when MCP is available:**
 
-| Task | Use | NOT |
-|------|-----|-----|
-| File operations | `filesystem` MCP | `cat`, `head`, `echo >` |
-| Code search/replace | `ast-grep` MCP | `grep`, `sed` |
-| GitHub API | `github` MCP | `gh` CLI |
-| Browser automation | `playwright` MCP | manual `curl` |
-| Multi-step reasoning | `sequential-thinking` MCP | unstructured planning |
-| Python lint/type-check | `python-quality` MCP | manual `ruff`/`pyright` |
-| JS lint/format/spell | `tooling-lint` MCP | manual `eslint`/`prettier` |
-| Containers | `mcp-docker` MCP | `docker` CLI directly |
-| JavaScript execution | `code-sandbox` MCP | `node`/`bun` directly |
-| Web content | `fetch` MCP | `curl` for web pages |
+| Task                   | Use                       | NOT                        |
+| ---------------------- | ------------------------- | -------------------------- |
+| File operations        | `filesystem` MCP          | `cat`, `head`, `echo >`    |
+| Code search/replace    | `ast-grep` MCP            | `grep`, `sed`              |
+| GitHub API             | `github` MCP              | `gh` CLI                   |
+| Browser automation     | `playwright` MCP          | manual `curl`              |
+| Multi-step reasoning   | `sequential-thinking` MCP | unstructured planning      |
+| Python lint/type-check | `python-quality` MCP      | manual `ruff`/`pyright`    |
+| JS lint/format/spell   | `tooling-lint` MCP        | manual `eslint`/`prettier` |
+| Containers             | `mcp-docker` MCP          | `docker` CLI directly      |
+| JavaScript execution   | `code-sandbox` MCP        | `node`/`bun` directly      |
+| Web content            | `fetch` MCP               | `curl` for web pages       |
 
 ---
 
@@ -549,6 +560,7 @@ When updating a prompt, also update its cross-references. Avoid duplicating prom
 ## 11. Common Tasks
 
 ### Start a new feature
+
 ```bash
 git checkout development && git pull
 git checkout -b feat/projectname/description
@@ -560,6 +572,7 @@ git push origin feat/projectname/description
 ```
 
 ### Run checks for a subproject
+
 ```bash
 cd projects/<name>
 bun install --frozen-lockfile
@@ -568,12 +581,14 @@ bun run test -- --grep "pattern"
 ```
 
 ### Debug a failing test
+
 ```bash
 bun run test -- --grep "test name"      # Run specific test
 bun run test -- src/file.test.ts        # Run specific file
 ```
 
 ### Before submitting a PR
+
 ```bash
 git diff --stat origin/development      # Review scope
 bun run format && bun run typecheck && bun run lint:strict && bun run test
@@ -581,6 +596,7 @@ git log --oneline origin/development..  # Review commits
 ```
 
 ### Add a new script with dry-run support
+
 1. Create `.sh` implementation with `DRY_RUN_SUPPORT=true` marker
 2. Create `.ps1` and `.bat` wrappers with identical CLI interface
 3. All wrappers support `--help` and `--dry-run`
@@ -592,30 +608,31 @@ git log --oneline origin/development..  # Review commits
 
 This workspace contains **18+ subprojects** under `projects/`. Each is autonomous with its own package manager, build system, and test suite. Use this table to quickly find the right commands for each project.
 
-| Project | Language/Stack | Entry Point | Test Command | Notes |
-|---------|----------------|------------|------------|-------|
-| **Bash/** | TS + Bash + PS1 | `src/` scripts | `bun run test` | 6-phase orchestrator, vitest |
-| **Banking/** | Next.js 16 + Drizzle | `src/app/` | `npm run test` | Fintech dashboard, npm (NOT bun) |
-| **comicwise/** | Next.js 15 + Prisma | `src/app/` | `npm run test` | Comic storefront, npm |
-| **ecom/** | Django + React | `backend/manage.py` | `python manage.py test` (backend) | Dual-stack: Django :8000 + React :3000 |
-| **Resume_maker/** | Bun/TS | `index.ts` | None (script only) | PDF/MD generator from JSON |
-| **mcp-servers/** | Multi-language | Per-language | Per-language build | TS, Python, Go, Java, Rust, etc. |
-| **Python-projects/** | Python scripts | Standalone `.py` | `pytest` | 18 beginner-to-intermediate scripts |
-| **Django-Scrapy-Selenium/** | Python | Per-usage | Per-usage | Scraping/automation toolkit |
-| **cookiecutter-django-tailwind/** | Django template | Cookiecutter scaffold | Follow README | Project scaffold generator |
-| **rhixe_scans/** | Check README | Check README | Check README | Project-specific |
-| **rhixecompany-comics/** | Check README | Check README | Check README | Project-specific |
-| **selenium_webdriver/** | Python/Selenium | Standalone | Manual | Browser automation scripts |
-| **university-libary-jsm/** | Check README | Check README | Check README | Library system |
-| **xamehi/** | Check README | Check README | Check README | Media project |
-| **xamehi.tv/** | Check README | Check README | Check README | Media project |
-| **youtube-downloader/** | Check README | Check README | Check README | YouTube tool |
-| **profile/** | Check README | Check README | Check README | Profile config |
-| **docs/** | Markdown | N/A | N/A | Architecture & reference docs |
+| Project                           | Language/Stack       | Entry Point           | Test Command                      | Notes                                  |
+| --------------------------------- | -------------------- | --------------------- | --------------------------------- | -------------------------------------- |
+| **Bash/**                         | TS + Bash + PS1      | `src/` scripts        | `bun run test`                    | 6-phase orchestrator, vitest           |
+| **Banking/**                      | Next.js 16 + Drizzle | `src/app/`            | `npm run test`                    | Fintech dashboard, npm (NOT bun)       |
+| **comicwise/**                    | Next.js 15 + Prisma  | `src/app/`            | `npm run test`                    | Comic storefront, npm                  |
+| **ecom/**                         | Django + React       | `backend/manage.py`   | `python manage.py test` (backend) | Dual-stack: Django :8000 + React :3000 |
+| **Resume_maker/**                 | Bun/TS               | `index.ts`            | None (script only)                | PDF/MD generator from JSON             |
+| **mcp-servers/**                  | Multi-language       | Per-language          | Per-language build                | TS, Python, Go, Java, Rust, etc.       |
+| **Python-projects/**              | Python scripts       | Standalone `.py`      | `pytest`                          | 18 beginner-to-intermediate scripts    |
+| **Django-Scrapy-Selenium/**       | Python               | Per-usage             | Per-usage                         | Scraping/automation toolkit            |
+| **cookiecutter-django-tailwind/** | Django template      | Cookiecutter scaffold | Follow README                     | Project scaffold generator             |
+| **rhixe_scans/**                  | Check README         | Check README          | Check README                      | Project-specific                       |
+| **rhixecompany-comics/**          | Check README         | Check README          | Check README                      | Project-specific                       |
+| **selenium_webdriver/**           | Python/Selenium      | Standalone            | Manual                            | Browser automation scripts             |
+| **university-libary-jsm/**        | Check README         | Check README          | Check README                      | Library system                         |
+| **xamehi/**                       | Check README         | Check README          | Check README                      | Media project                          |
+| **xamehi.tv/**                    | Check README         | Check README          | Check README                      | Media project                          |
+| **youtube-downloader/**           | Check README         | Check README          | Check README                      | YouTube tool                           |
+| **profile/**                      | Check README         | Check README          | Check README                      | Profile config                         |
+| **docs/**                         | Markdown             | N/A                   | N/A                               | Architecture & reference docs          |
 
 ### Quick Commands by Project Type
 
 **TypeScript/Bun projects (Bash, Resume_maker):**
+
 ```bash
 cd projects/Bash
 bun install --frozen-lockfile
@@ -625,6 +642,7 @@ bun run test -- src/file.test.ts
 ```
 
 **Next.js projects (Banking, comicwise) — use npm, NOT bun:**
+
 ```bash
 cd projects/Banking
 npm install
@@ -635,6 +653,7 @@ npm run test          # Jest or Vitest
 ```
 
 **Django/Python projects (ecom backend, Python-projects):**
+
 ```bash
 cd projects/ecom/backend
 pip install -r requirements.txt
@@ -649,6 +668,7 @@ python script_name.py         # Run script directly
 ```
 
 **Workspace root (primarily Bash/TS orchestration):**
+
 ```bash
 cd /  # Workspace root
 bun install --frozen-lockfile
@@ -661,19 +681,23 @@ bun run test
 ## 13. Project-Specific Guidance
 
 ### projects/Bash/ (Primary TypeScript Toolkit)
+
 - **Runtime:** Bun 1.3.14+ | **Tests:** Vitest | **Lint:** ESLint flat config (zero-warnings gate)
 - **Pattern:** Phase-based orchestration, dry-run everywhere, multi-wrapper parity
 - **ORM/Validation:** zod v4, ts-morph for AST transformations
 
 ### projects/Resume_maker/ (TypeScript PDF Generator)
+
 - **Runtime:** Bun 1.3.14+ | **Tests:** Vitest
 - Generates PDF/TXT/vCard output from structured JSON input
 
 ### Python Projects (Django-Scrapy-Selenium, ecom, etc.)
+
 - **Python: 3.11** | **Lint:** Ruff (select E,F,I,N,W,UP,B,SIM,ARG,RUF) | **Type-check:** Pyright basic
 - **Format:** Ruff (double quotes, spaces, 120 chars)
 - **Test:** pytest 9.0.3
 
 ### projects/mcp-servers/ (Multi-Language MCP Servers)
+
 - Contains MCP server implementations in TypeScript, Python, Go, Java, Kotlin, C#, PHP, Ruby, Rust, Swift
 - Each has its own `AGENTS.md` for project-specific patterns

@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Read the available planning inputs | Source summary |
-| 1.2 | Identify the scope boundary and dependencies | Scope map |
-| 1.3 | Capture the target output paths | Output plan |
+| Step | Action                                       | Output         |
+| ---- | -------------------------------------------- | -------------- |
+| 1.1  | Read the available planning inputs           | Source summary |
+| 1.2  | Identify the scope boundary and dependencies | Scope map      |
+| 1.3  | Capture the target output paths              | Output plan    |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Draft the project overview | Overview section |
-| 2.2 | Build the Work Item Hierarchy diagram | Mermaid hierarchy |
-| 2.3 | Add issue breakdown, prioritization, and estimation guidance | Planning sections |
+| Step | Action                                                       | Output            |
+| ---- | ------------------------------------------------------------ | ----------------- |
+| 2.1  | Draft the project overview                                   | Overview section  |
+| 2.2  | Build the Work Item Hierarchy diagram                        | Mermaid hierarchy |
+| 2.3  | Add issue breakdown, prioritization, and estimation guidance | Planning sections |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Draft the pre-creation checklist | Checklist |
-| 3.2 | Draft per-level checklists | Level checklists |
-| 3.3 | Add the GitHub Actions snippet | Automation sample |
+| Step | Action                           | Output            |
+| ---- | -------------------------------- | ----------------- |
+| 3.1  | Draft the pre-creation checklist | Checklist         |
+| 3.2  | Draft per-level checklists       | Level checklists  |
+| 3.3  | Add the GitHub Actions snippet   | Automation sample |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Verify file paths | Path check |
-| 4.2 | Verify required sections exist | Content check |
-| 4.3 | Confirm backups were created before overwrite | Safety check |
+| Step | Action                                        | Output        |
+| ---- | --------------------------------------------- | ------------- |
+| 4.1  | Verify file paths                             | Path check    |
+| 4.2  | Verify required sections exist                | Content check |
+| 4.3  | Confirm backups were created before overwrite | Safety check  |
 
 #### Tasks
 

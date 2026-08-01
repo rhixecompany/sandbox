@@ -9,72 +9,61 @@
 ```typescript
 // TypeScript interfaces for the seeding system
 export interface SeedOptions {
-  verbose?: boolean;
-  dryRun?: boolean;
-  skipValidation?: boolean;
-  useTransaction?: boolean;
-  batchSize?: number;
-  concurrency?: number;
-  imageStrategy?: "urls" | "local" | "imagekit";
-  forceOverwrite?: boolean;
+	verbose?: boolean;
+	dryRun?: boolean;
+	skipValidation?: boolean;
+	useTransaction?: boolean;
+	batchSize?: number;
+	concurrency?: number;
+	imageStrategy?: "urls" | "local" | "imagekit";
+	forceOverwrite?: boolean;
 }
 
 export interface SeedConfig {
-  entities: (
-    | "types"
-    | "authors"
-    | "artists"
-    | "genres"
-    | "comics"
-    | "chapters"
-    | "users"
-    | "all"
-  )[];
-  options: SeedOptions;
-  timestamp: Date;
+	entities: ("types" | "authors" | "artists" | "genres" | "comics" | "chapters" | "users" | "all")[];
+	options: SeedOptions;
+	timestamp: Date;
 }
 
 export interface EntityResult {
-  entityName: string;
-  inserted: number;
-  updated: number;
-  skipped: number;
-  errors: SeedError[];
-  duration: number;
-  success: boolean;
+	entityName: string;
+	inserted: number;
+	updated: number;
+	skipped: number;
+	errors: SeedError[];
+	duration: number;
+	success: boolean;
 }
 
 export interface SeedReport {
-  timestamp: Date;
-  success: boolean;
-  totalDuration: number;
-  results: EntityResult[];
-  warnings: string[];
-  errors: string[];
-  summary: {
-    totalInserted: number;
-    totalUpdated: number;
-    totalSkipped: number;
-    totalErrors: number;
-  };
+	timestamp: Date;
+	success: boolean;
+	totalDuration: number;
+	results: EntityResult[];
+	warnings: string[];
+	errors: string[];
+	summary: {
+		totalInserted: number;
+		totalUpdated: number;
+		totalSkipped: number;
+		totalErrors: number;
+	};
 }
 
 export interface SeedError {
-  itemIndex: number;
-  value: unknown;
-  message: string;
+	itemIndex: number;
+	value: unknown;
+	message: string;
 }
 
-export type ActionResult<T> =
-  | { ok: true; data: T }
-  | { ok: false; error: string };
+export type ActionResult<T> = { ok: true; data: T } | { ok: false; error: string };
 
 export interface LookupCache {
-  authors: Map<string, { id: string; name: string }>;
-  artists: Map<string, { id: string; name: string }>;
-  types: Map<string, string>; // name → id
-  genres: Map<string, string>;
-  comics: Map<string, string>; // slug → id
+	authors: Map<string, { id: string; name: string }>;
+	artists: Map<string, { id: string; name: string }>;
+	types: Map<string, string>; // name → id
+	genres: Map<string, string>;
+	comics: Map<string, string>; // slug → id
 }
 ```
 
@@ -84,47 +73,47 @@ export interface LookupCache {
 import chalk from "chalk";
 
 export class Logger {
-  private verbose: boolean = false;
+	private verbose: boolean = false;
 
-  constructor(verbose: boolean = false) {
-    this.verbose = verbose;
-  }
+	constructor(verbose: boolean = false) {
+		this.verbose = verbose;
+	}
 
-  info(message: string): void {
-    console.log(chalk.blue("ℹ"), message);
-  }
+	info(message: string): void {
+		console.log(chalk.blue("ℹ"), message);
+	}
 
-  success(message: string): void {
-    console.log(chalk.green("✓"), message);
-  }
+	success(message: string): void {
+		console.log(chalk.green("✓"), message);
+	}
 
-  warn(message: string): void {
-    console.log(chalk.yellow("⚠"), message);
-  }
+	warn(message: string): void {
+		console.log(chalk.yellow("⚠"), message);
+	}
 
-  error(message: string): void {
-    console.log(chalk.red("✗"), message);
-  }
+	error(message: string): void {
+		console.log(chalk.red("✗"), message);
+	}
 
-  debug(message: string): void {
-    if (this.verbose) {
-      console.log(chalk.gray("➤"), message);
-    }
-  }
+	debug(message: string): void {
+		if (this.verbose) {
+			console.log(chalk.gray("➤"), message);
+		}
+	}
 
-  section(title: string): void {
-    console.log("\n" + chalk.cyan.bold("━".repeat(50)));
-    console.log(chalk.cyan.bold(`  ${title}`));
-    console.log(chalk.cyan.bold("━".repeat(50)) + "\n");
-  }
+	section(title: string): void {
+		console.log("\n" + chalk.cyan.bold("━".repeat(50)));
+		console.log(chalk.cyan.bold(`  ${title}`));
+		console.log(chalk.cyan.bold("━".repeat(50)) + "\n");
+	}
 
-  progress(message: string): void {
-    console.log(chalk.white("→"), message);
-  }
+	progress(message: string): void {
+		console.log(chalk.white("→"), message);
+	}
 
-  table(data: Record<string, unknown>[]): void {
-    console.table(data);
-  }
+	table(data: Record<string, unknown>[]): void {
+		console.table(data);
+	}
 }
 
 export const logger = new Logger();
@@ -136,19 +125,19 @@ export const logger = new Logger();
 import { z } from "zod";
 
 export const userSeedSchema = z.array(
-  z.object({
-    id: z.string().uuid().optional(),
-    email: z.string().email(),
-    name: z.string().min(1),
-    password: z.string().min(6),
-    role: z.enum(["user", "admin", "moderator"]).default("user"),
-    image: z.string().url().nullable().optional(),
-    emailVerified: z.coerce.date().nullable().optional(),
-    status: z.boolean().default(true),
-    createdAt: z.coerce.date().default(() => new Date()),
-    updatedAt: z.coerce.date().default(() => new Date()),
-    lastActivityDate: z.coerce.date().nullable().optional()
-  })
+	z.object({
+		id: z.string().uuid().optional(),
+		email: z.string().email(),
+		name: z.string().min(1),
+		password: z.string().min(6),
+		role: z.enum(["user", "admin", "moderator"]).default("user"),
+		image: z.string().url().nullable().optional(),
+		emailVerified: z.coerce.date().nullable().optional(),
+		status: z.boolean().default(true),
+		createdAt: z.coerce.date().default(() => new Date()),
+		updatedAt: z.coerce.date().default(() => new Date()),
+		lastActivityDate: z.coerce.date().nullable().optional(),
+	}),
 );
 
 export type UserSeed = z.infer<typeof userSeedSchema>;
@@ -159,59 +148,52 @@ export type UserSeed = z.infer<typeof userSeedSchema>;
 ```typescript
 import { z } from "zod";
 
-const comicStatusEnum = z.enum([
-  "Ongoing",
-  "Completed",
-  "Hiatus",
-  "Dropped",
-  "Season End",
-  "Coming Soon"
-]);
+const comicStatusEnum = z.enum(["Ongoing", "Completed", "Hiatus", "Dropped", "Season End", "Coming Soon"]);
 
 export const comicSeedSchema = z.array(
-  z.object({
-    title: z.string().min(1),
-    slug: z.string().min(1),
-    description: z.string().optional(),
-    url: z.string().url().optional(),
-    rating: z.coerce.number().min(0).max(10).default(0),
-    status: comicStatusEnum.default("Ongoing"),
-    serialization: z.string().optional(),
-    updatedAt: z.coerce.date().default(() => new Date()),
-    views: z.coerce.number().default(0),
-    coverImage: z.string().url().nullable(),
-    type: z
-      .object({
-        name: z.string()
-      })
-      .optional(),
-    author: z
-      .object({
-        name: z.string()
-      })
-      .nullable()
-      .optional(),
-    artist: z
-      .object({
-        name: z.string()
-      })
-      .nullable()
-      .optional(),
-    genres: z
-      .array(
-        z.object({
-          name: z.string()
-        })
-      )
-      .default([]),
-    images: z
-      .array(
-        z.object({
-          url: z.string().url()
-        })
-      )
-      .default([])
-  })
+	z.object({
+		title: z.string().min(1),
+		slug: z.string().min(1),
+		description: z.string().optional(),
+		url: z.string().url().optional(),
+		rating: z.coerce.number().min(0).max(10).default(0),
+		status: comicStatusEnum.default("Ongoing"),
+		serialization: z.string().optional(),
+		updatedAt: z.coerce.date().default(() => new Date()),
+		views: z.coerce.number().default(0),
+		coverImage: z.string().url().nullable(),
+		type: z
+			.object({
+				name: z.string(),
+			})
+			.optional(),
+		author: z
+			.object({
+				name: z.string(),
+			})
+			.nullable()
+			.optional(),
+		artist: z
+			.object({
+				name: z.string(),
+			})
+			.nullable()
+			.optional(),
+		genres: z
+			.array(
+				z.object({
+					name: z.string(),
+				}),
+			)
+			.default([]),
+		images: z
+			.array(
+				z.object({
+					url: z.string().url(),
+				}),
+			)
+			.default([]),
+	}),
 );
 
 export type ComicSeed = z.infer<typeof comicSeedSchema>;
@@ -225,52 +207,40 @@ import path from "path";
 import { Logger } from "./logger";
 
 export class DataLoader {
-  private cache = new Map<string, unknown[]>();
-  private logger: Logger;
+	private cache = new Map<string, unknown[]>();
+	private logger: Logger;
 
-  constructor(logger: Logger) {
-    this.logger = logger;
-  }
+	constructor(logger: Logger) {
+		this.logger = logger;
+	}
 
-  async loadWithFallback<T>(baseFileName: string): Promise<T[]> {
-    const cacheKey = baseFileName;
-    if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey) as T[];
-    }
+	async loadWithFallback<T>(baseFileName: string): Promise<T[]> {
+		const cacheKey = baseFileName;
+		if (this.cache.has(cacheKey)) {
+			return this.cache.get(cacheKey) as T[];
+		}
 
-    const candidates = [
-      `${baseFileName}.json`,
-      `${baseFileName}-data1.json`,
-      `${baseFileName}-data2.json`
-    ];
+		const candidates = [`${baseFileName}.json`, `${baseFileName}-data1.json`, `${baseFileName}-data2.json`];
 
-    for (const candidate of candidates) {
-      const filePath = path.join(
-        process.cwd(),
-        "src/data",
-        candidate
-      );
-      try {
-        const content = await fs.readFile(filePath, "utf-8");
-        const data = JSON.parse(content) as T[];
-        this.cache.set(cacheKey, data);
-        this.logger.success(
-          `Loaded ${data.length} records from ${candidate}`
-        );
-        return data;
-      } catch (error) {
-        this.logger.debug(
-          `Failed to load ${candidate}, trying next...`
-        );
-      }
-    }
+		for (const candidate of candidates) {
+			const filePath = path.join(process.cwd(), "src/data", candidate);
+			try {
+				const content = await fs.readFile(filePath, "utf-8");
+				const data = JSON.parse(content) as T[];
+				this.cache.set(cacheKey, data);
+				this.logger.success(`Loaded ${data.length} records from ${candidate}`);
+				return data;
+			} catch (error) {
+				this.logger.debug(`Failed to load ${candidate}, trying next...`);
+			}
+		}
 
-    throw new Error(`No data file found for ${baseFileName}`);
-  }
+		throw new Error(`No data file found for ${baseFileName}`);
+	}
 
-  clearCache(): void {
-    this.cache.clear();
-  }
+	clearCache(): void {
+		this.cache.clear();
+	}
 }
 ```
 
@@ -282,110 +252,97 @@ import { Logger } from "../logger";
 import { EntityResult, LookupCache, SeedOptions } from "../types";
 
 export abstract class BaseSeeder<T> {
-  protected entityName: string;
-  protected schema: z.ZodType;
-  protected cache: LookupCache;
-  protected logger: Logger;
-  protected options: SeedOptions;
-  protected dependencies: string[] = [];
+	protected entityName: string;
+	protected schema: z.ZodType;
+	protected cache: LookupCache;
+	protected logger: Logger;
+	protected options: SeedOptions;
+	protected dependencies: string[] = [];
 
-  constructor(
-    entityName: string,
-    schema: z.ZodType,
-    cache: LookupCache,
-    logger: Logger,
-    options: SeedOptions
-  ) {
-    this.entityName = entityName;
-    this.schema = schema;
-    this.cache = cache;
-    this.logger = logger;
-    this.options = options;
-  }
+	constructor(entityName: string, schema: z.ZodType, cache: LookupCache, logger: Logger, options: SeedOptions) {
+		this.entityName = entityName;
+		this.schema = schema;
+		this.cache = cache;
+		this.logger = logger;
+		this.options = options;
+	}
 
-  // Template method pattern
-  async seed(): Promise<EntityResult> {
-    this.logger.section(`Seeding ${this.entityName}`);
+	// Template method pattern
+	async seed(): Promise<EntityResult> {
+		this.logger.section(`Seeding ${this.entityName}`);
 
-    try {
-      const data = await this.loadData();
-      const validated = await this.validateData(data);
+		try {
+			const data = await this.loadData();
+			const validated = await this.validateData(data);
 
-      if (this.options.dryRun) {
-        this.logger.warn("DRY RUN: No data will be persisted");
-        return {
-          entityName: this.entityName,
-          inserted: validated.length,
-          updated: 0,
-          skipped: 0,
-          errors: [],
-          duration: 0,
-          success: true
-        };
-      }
+			if (this.options.dryRun) {
+				this.logger.warn("DRY RUN: No data will be persisted");
+				return {
+					entityName: this.entityName,
+					inserted: validated.length,
+					updated: 0,
+					skipped: 0,
+					errors: [],
+					duration: 0,
+					success: true,
+				};
+			}
 
-      return await this.insertBatch(validated);
-    } catch (error) {
-      this.logger.error(`Error seeding ${this.entityName}: ${error}`);
-      return {
-        entityName: this.entityName,
-        inserted: 0,
-        updated: 0,
-        skipped: 0,
-        errors: [
-          { itemIndex: 0, value: null, message: String(error) }
-        ],
-        duration: 0,
-        success: false
-      };
-    }
-  }
+			return await this.insertBatch(validated);
+		} catch (error) {
+			this.logger.error(`Error seeding ${this.entityName}: ${error}`);
+			return {
+				entityName: this.entityName,
+				inserted: 0,
+				updated: 0,
+				skipped: 0,
+				errors: [{ itemIndex: 0, value: null, message: String(error) }],
+				duration: 0,
+				success: false,
+			};
+		}
+	}
 
-  // Abstract methods - subclasses must implement
-  protected abstract getDataSources(): string[];
-  protected abstract transformData(raw: T): unknown;
-  protected abstract insertBatch(data: T[]): Promise<EntityResult>;
+	// Abstract methods - subclasses must implement
+	protected abstract getDataSources(): string[];
+	protected abstract transformData(raw: T): unknown;
+	protected abstract insertBatch(data: T[]): Promise<EntityResult>;
 
-  // Concrete implementations
-  protected async loadData(): Promise<T[]> {
-    const sources = this.getDataSources();
-    // Load from JSON files with fallback pattern
-    this.logger.debug(
-      `Loading data from sources: ${sources.join(", ")}`
-    );
-    // Implementation delegates to DataLoader
-    return [] as T[];
-  }
+	// Concrete implementations
+	protected async loadData(): Promise<T[]> {
+		const sources = this.getDataSources();
+		// Load from JSON files with fallback pattern
+		this.logger.debug(`Loading data from sources: ${sources.join(", ")}`);
+		// Implementation delegates to DataLoader
+		return [] as T[];
+	}
 
-  protected async validateData(data: T[]): Promise<T[]> {
-    if (this.options.skipValidation) {
-      return data;
-    }
+	protected async validateData(data: T[]): Promise<T[]> {
+		if (this.options.skipValidation) {
+			return data;
+		}
 
-    const validated: T[] = [];
-    const errors: Array<{ index: number; error: string }> = [];
+		const validated: T[] = [];
+		const errors: Array<{ index: number; error: string }> = [];
 
-    for (let i = 0; i < data.length; i++) {
-      const result = this.schema.safeParse(data[i]);
-      if (result.success) {
-        validated.push(result.data as T);
-      } else {
-        errors.push({
-          index: i,
-          error:
-            result.error.errors[0]?.message || "Validation failed"
-        });
-      }
-    }
+		for (let i = 0; i < data.length; i++) {
+			const result = this.schema.safeParse(data[i]);
+			if (result.success) {
+				validated.push(result.data as T);
+			} else {
+				errors.push({
+					index: i,
+					error: result.error.errors[0]?.message || "Validation failed",
+				});
+			}
+		}
 
-    if (errors.length > 0 && this.options.verbose) {
-      this.logger.warn(
-        `${errors.length} validation errors encountered`
-      );
-    }
+		if (errors.length > 0 && this.options.verbose) {
+			this.logger.warn(`${errors.length} validation errors encountered`);
+		}
 
-    return validated;
-  }
+		return validated;
+	}
 }
 ```
 
@@ -514,56 +471,46 @@ import { z } from "zod";
 import { SeedConfig } from "./types";
 
 const envSchema = z.object({
-  DATABASE_URL: z.string().url(),
-  NODE_ENV: z
-    .enum(["development", "production"])
-    .default("development"),
-  IMAGEKIT_PUBLIC_KEY: z.string().optional(),
-  IMAGEKIT_PRIVATE_KEY: z.string().optional()
+	DATABASE_URL: z.string().url(),
+	NODE_ENV: z.enum(["development", "production"]).default("development"),
+	IMAGEKIT_PUBLIC_KEY: z.string().optional(),
+	IMAGEKIT_PRIVATE_KEY: z.string().optional(),
 });
 
 export function parseCliArgs(): SeedConfig {
-  const program = new Command();
+	const program = new Command();
 
-  program
-    .command("seed [entities...]")
-    .description("Seed database with test data")
-    .option(
-      "--batch-size <number>",
-      "Batch size for processing",
-      "100"
-    )
-    .option("--concurrency <number>", "Concurrent operations", "5")
-    .option("--verbose", "Verbose logging")
-    .option("--dry-run", "Validate without persisting")
-    .option("--force", "Force overwrite existing data")
-    .option("--no-transaction", "Disable transactions")
-    .option("--skip-validation", "Skip Zod validation")
-    .option(
-      "--image-strategy <mode>",
-      "Image strategy: urls|local|imagekit",
-      "urls"
-    )
-    .action((entities, options) => {
-      const env = envSchema.parse(process.env);
+	program
+		.command("seed [entities...]")
+		.description("Seed database with test data")
+		.option("--batch-size <number>", "Batch size for processing", "100")
+		.option("--concurrency <number>", "Concurrent operations", "5")
+		.option("--verbose", "Verbose logging")
+		.option("--dry-run", "Validate without persisting")
+		.option("--force", "Force overwrite existing data")
+		.option("--no-transaction", "Disable transactions")
+		.option("--skip-validation", "Skip Zod validation")
+		.option("--image-strategy <mode>", "Image strategy: urls|local|imagekit", "urls")
+		.action((entities, options) => {
+			const env = envSchema.parse(process.env);
 
-      return {
-        entities: entities.length === 0 ? ["all"] : entities,
-        options: {
-          batchSize: parseInt(options.batchSize),
-          concurrency: parseInt(options.concurrency),
-          verbose: options.verbose,
-          dryRun: options.dryRun,
-          useTransaction: options.transaction,
-          skipValidation: options.skipValidation,
-          forceOverwrite: options.force,
-          imageStrategy: options.imageStrategy
-        },
-        timestamp: new Date()
-      } satisfies SeedConfig;
-    });
+			return {
+				entities: entities.length === 0 ? ["all"] : entities,
+				options: {
+					batchSize: parseInt(options.batchSize),
+					concurrency: parseInt(options.concurrency),
+					verbose: options.verbose,
+					dryRun: options.dryRun,
+					useTransaction: options.transaction,
+					skipValidation: options.skipValidation,
+					forceOverwrite: options.force,
+					imageStrategy: options.imageStrategy,
+				},
+				timestamp: new Date(),
+			} satisfies SeedConfig;
+		});
 
-  return program.parse().opts();
+	return program.parse().opts();
 }
 ```
 

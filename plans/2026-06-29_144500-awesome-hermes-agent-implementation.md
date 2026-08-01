@@ -20,19 +20,19 @@ List, triage, catalog, read, and produce a structured implementation (report/cat
 
 ### Directory inventory (11 files, ~20 KB total)
 
-| Path | Size | Type |
-| ------ | ------ | ------ |
-| `.actions.json` | 1.4 KB | Workflow metadata (4 actions, all read-only) |
-| `.discovery.json` | 174 B | Discovery metadata (repo, pages) |
-| `index.md` | 2.7 KB | Master index (already read in prior turn) |
-| `pages/README.md` | 6.2 KB | Main awesome list content |
-| `pages/CONTRIBUTING.md` | 2.6 KB | Contribution guidelines |
-| `pages/CODE_OF_CONDUCT.md` | 2.1 KB | Contributor Covenant v2.0 |
-| `pages/sections/core-overview.md` | 977 B | Hermes capabilities |
-| `pages/sections/getting-started-(3-step-path).md` | 1.4 KB | Getting started guide |
-| `pages/sections/official-resources-(nous-research-maintained).md` | 1.7 KB | Official Nous resources |
-| `pages/sections/preamble.md` | 453 B | Title + ecosystem status |
-| `pages/sections/skills-&-plugins.md` | 1.4 KB | Community skills list |
+| Path                                                              | Size   | Type                                         |
+| ----------------------------------------------------------------- | ------ | -------------------------------------------- |
+| `.actions.json`                                                   | 1.4 KB | Workflow metadata (4 actions, all read-only) |
+| `.discovery.json`                                                 | 174 B  | Discovery metadata (repo, pages)             |
+| `index.md`                                                        | 2.7 KB | Master index (already read in prior turn)    |
+| `pages/README.md`                                                 | 6.2 KB | Main awesome list content                    |
+| `pages/CONTRIBUTING.md`                                           | 2.6 KB | Contribution guidelines                      |
+| `pages/CODE_OF_CONDUCT.md`                                        | 2.1 KB | Contributor Covenant v2.0                    |
+| `pages/sections/core-overview.md`                                 | 977 B  | Hermes capabilities                          |
+| `pages/sections/getting-started-(3-step-path).md`                 | 1.4 KB | Getting started guide                        |
+| `pages/sections/official-resources-(nous-research-maintained).md` | 1.7 KB | Official Nous resources                      |
+| `pages/sections/preamble.md`                                      | 453 B  | Title + ecosystem status                     |
+| `pages/sections/skills-&-plugins.md`                              | 1.4 KB | Community skills list                        |
 
 ### Quality observations
 
@@ -109,8 +109,8 @@ Three-phase execution:
 
 ## 5. Files Likely to Change
 
-| File | Action |
-|------|--------|
+| File                                                              | Action |
+| ----------------------------------------------------------------- | ------ |
 | `~/Desktop/SandBox/docs/catalogs/awesome-hermes-agent-catalog.md` | CREATE |
 
 No existing files are modified.
@@ -127,11 +127,11 @@ No existing files are modified.
 
 ## 7. Risks, Tradeoffs, and Open Questions
 
-| Risk | Mitigation |
-| ------ | ------------ |
-| URLs in the awesome list may be stale (repo moved, deleted) | The catalog notes the discovery date and flags items as "not verified at write time" |
-| Section files in `pages/sections/` may drift from README.md content | Catalog notes they are extracted fragments and may not be in sync |
-| The awesome-list repo may have been updated since the 2026-05-06 snapshot | Include a "Last synced" marker in the catalog header |
+| Risk                                                                      | Mitigation                                                                           |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| URLs in the awesome list may be stale (repo moved, deleted)               | The catalog notes the discovery date and flags items as "not verified at write time" |
+| Section files in `pages/sections/` may drift from README.md content       | Catalog notes they are extracted fragments and may not be in sync                    |
+| The awesome-list repo may have been updated since the 2026-05-06 snapshot | Include a "Last synced" marker in the catalog header                                 |
 
 ### Open Questions
 
@@ -151,4 +151,5 @@ No existing files are modified.
 - [ ] Deliverable saved under `~/Desktop/SandBox/docs/catalogs/`
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

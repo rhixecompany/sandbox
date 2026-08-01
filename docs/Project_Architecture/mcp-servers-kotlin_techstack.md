@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Kotlin/Gradle (MCP) |
+| Category    | Technology                          |
+| ----------- | ----------------------------------- |
+| **Type**    | Kotlin/Gradle (MCP)                 |
 | **Pattern** | Kotlin MCP server with Gradle build |
-| **Stack** | Kotlin, Gradle |
+| **Stack**   | Kotlin, Gradle                      |
 
 ## Development Tools
 

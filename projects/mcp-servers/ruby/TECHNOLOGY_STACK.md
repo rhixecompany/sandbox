@@ -21,10 +21,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Tools/Resources:** Defined via mcp gem DSL
 
 ### Project Structure
+
 ```
 mcp-servers/ruby/
 ├── bin/                    # Executable scripts
@@ -41,11 +43,13 @@ mcp-servers/ruby/
 ## Dependencies (`Gemfile`)
 
 ### Production
+
 ```ruby
 gem 'mcp', '~> 0.4.0'
 ```
 
 ### Development
+
 ```ruby
 group :development do
   gem 'rake', '~> 13.0'

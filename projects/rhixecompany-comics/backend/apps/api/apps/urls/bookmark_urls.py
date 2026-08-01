@@ -1,6 +1,5 @@
-from django.urls import path
-
 from api.apps.views import bookmark_views as views
+from django.urls import path
 
 app_name = "bookmarks"
 urlpatterns = [

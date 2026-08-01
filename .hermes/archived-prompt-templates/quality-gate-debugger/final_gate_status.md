@@ -41,3 +41,4 @@ The triage report is critical because it:
 - ✅ Tracks iteration count (useful for optimizing the fix process)
 - ✅ Documents workarounds or edge cases for maintainability
 - ✅ Serves as checklist for code reviews
+```

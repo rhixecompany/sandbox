@@ -15,7 +15,7 @@
 - [ ] Consolidation framework applied; candidates reviewed
 - [ ] Design considerations captured (subject to final validation) ✅
 
-```
+`````
 
 ### Multi-Document vs Separate Containers Decision Framework
 
@@ -53,3 +53,4 @@ Creation Trigger: Only after USER confirms all access patterns captured and vali
 
 ````markdown
 # Azure Cosmos DB NoSQL Data Model
+`````

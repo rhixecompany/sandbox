@@ -44,28 +44,20 @@ import { eq } from "drizzle-orm";
 import { db } from "../database/db";
 import { user as userTable } from "../database/schema";
 
-export async function getUserByUsername(
-  username: string
-): Promise<User | null> {
-  const result = await db
-    .select()
-    .from(userTable)
-    .where(eq(userTable.name, username));
-  if (!result[0]) return null;
-  return {
-    id: result[0].id,
-    name: result[0].name ?? undefined,
-    email: result[0].email,
-    role: result[0].role,
-    passwordHash: result[0].password ?? undefined
-  };
+export async function getUserByUsername(username: string): Promise<User | null> {
+	const result = await db.select().from(userTable).where(eq(userTable.name, username));
+	if (!result[0]) return null;
+	return {
+		id: result[0].id,
+		name: result[0].name ?? undefined,
+		email: result[0].email,
+		role: result[0].role,
+		passwordHash: result[0].password ?? undefined,
+	};
 }
 
-export async function verifyPassword(
-  plain: string,
-  hash: string
-): Promise<boolean> {
-  return bcrypt.compare(plain, hash);
+export async function verifyPassword(plain: string, hash: string): Promise<boolean> {
+	return bcrypt.compare(plain, hash);
 }
 ```
 
@@ -95,9 +87,9 @@ await signIn("github", { redirectTo: "/dashboard" });
 
 // Client Component — Credentials sign-in (no redirect, handle in-page)
 const result = await signIn("credentials", {
-  username: "user",
-  password: "pass",
-  redirect: false
+	username: "user",
+	password: "pass",
+	redirect: false,
 });
 if (result?.error) showError(result.error);
 ```

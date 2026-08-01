@@ -3,7 +3,7 @@ status: completed
 ---
 
 # SandBox Aggressive Cleanup & Consolidation Plan
->
+
 > **Created:** 2026-06-28  
 > **Completed:** 2026-06-28  
 > **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, .hermes/, docs/, root .md files  
@@ -129,7 +129,7 @@ Use `search_files` across the workspace for references to `.github/scripts/` or 
 ### 3.1 Categorize files
 
 - **37 batch files (5-zero padding, ~800B each):** Compact summary — `batch_XXXXX_results.md`
-- **37 batch files (4-zero padding, ~1200B each):** Detailed results — `batch_XXXX_results.md`  
+- **37 batch files (4-zero padding, ~1200B each):** Detailed results — `batch_XXXX_results.md`
 - **1 TSV:** `all_results.tsv` (41KB)
 - **2 reports:** `remediation-log.md`, `summary.md`
 
@@ -398,16 +398,17 @@ Phase 0 → Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 5 → Phase 6 
 
 ## Disk Savings Estimate
 
-| Area | Current Size | After | Savings |
-| ------ | ------------- | ------- | --------- |
-| judge_results/ | 120KB | ~90KB | ~30KB |
-| thoughts/ | ~40KB | 0 | ~40KB |
-| tool/ | ~25KB | 0 | ~25KB |
-| .agents/ | 4KB | 0 | ~4KB |
-| docs/ | ~5MB | ~3MB | ~2MB |
-| Root .md files | ~70KB | ~50KB | ~20KB |
-| .hermes/ | ~100KB | ~50KB | ~50KB |
-| **Total** | **~5.4MB** | **~3.2MB** | **~2.2MB** |
+| Area           | Current Size | After      | Savings    |
+| -------------- | ------------ | ---------- | ---------- |
+| judge_results/ | 120KB        | ~90KB      | ~30KB      |
+| thoughts/      | ~40KB        | 0          | ~40KB      |
+| tool/          | ~25KB        | 0          | ~25KB      |
+| .agents/       | 4KB          | 0          | ~4KB       |
+| docs/          | ~5MB         | ~3MB       | ~2MB       |
+| Root .md files | ~70KB        | ~50KB      | ~20KB      |
+| .hermes/       | ~100KB       | ~50KB      | ~50KB      |
+| **Total**      | **~5.4MB**   | **~3.2MB** | **~2.2MB** |
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

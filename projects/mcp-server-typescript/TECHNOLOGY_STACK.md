@@ -21,11 +21,13 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server implementation
+
 - **STDIO transport** for local tool usage
 - **Tools, Resources, Prompts** exposed via SDK
 - **Zod schemas** for input validation
 
 ### Project Structure
+
 ```
 mcp-server-typescript/
 ├── src/
@@ -44,12 +46,14 @@ mcp-server-typescript/
 ## Dependencies
 
 ### Production (2 packages)
+
 | Package | Version | Purpose |
 |---------|---------|---------|
 | `@modelcontextprotocol/sdk` | ^1.8.0 | Official MCP TypeScript SDK |
 | `zod` | ^3.24.3 | Schema validation |
 
 ### Development (3 packages)
+
 | Package | Version | Purpose |
 |---------|---------|---------|
 | `@types/node` | ^22.14.1 | Node.js type definitions |
@@ -101,6 +105,7 @@ mcp-server-typescript/
 ## MCP Capabilities
 
 ### Tools (example structure)
+
 ```typescript
 // src/tools/calculator.ts
 import { z } from "zod";
@@ -123,6 +128,7 @@ export function registerCalculatorTool(server: McpServer) {
 ```
 
 ### Resources (example structure)
+
 ```typescript
 // src/resources/config.ts
 export function registerConfigResource(server: McpServer) {

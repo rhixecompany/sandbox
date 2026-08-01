@@ -1,7 +1,5 @@
-from django.urls import resolve
-from django.urls import reverse
-
 from api.users.models import User
+from django.urls import resolve, reverse
 
 
 def test_detail(user: User):

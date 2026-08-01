@@ -1,19 +1,16 @@
 {
-  "inputs": [
-    {
-      "type": "promptString",
-      "id": "workspaceFolder",
-      "description": "Workspace root path"
-    }
-  ],
-  "servers": {
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "${workspaceFolder}"
-      ]
-    }
-  }
+	"inputs": [
+		{
+			"type": "promptString",
+			"id": "workspaceFolder",
+			"description": "Workspace root path",
+			"default": "${workspaceFolder}"
+		}
+	],
+	"servers": {
+		"filesystem": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+		}
+	}
 }

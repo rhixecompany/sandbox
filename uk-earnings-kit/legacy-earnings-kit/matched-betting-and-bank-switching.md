@@ -9,27 +9,28 @@
 ## PART 1: Matched Betting
 
 ### What It Is
+
 Matched betting uses free bet offers from bookmakers to guarantee profit. You place a "back" bet with the bookmaker and a "lay" bet on a betting exchange (Betfair/Smarkets) so you're covered regardless of the outcome. The free bet becomes pure profit.
 
 **It is NOT gambling.** You win regardless of the result.
 
 ### How Much Can You Make?
 
-| Phase | Duration | Conservative | Aggressive |
-|-------|----------|-------------|------------|
-| Welcome offers | First week | £400 | £800+ |
-| Daily reloads | Ongoing (£100–300/mo) | £100/mo | £300/mo |
-| Extra place offers | During big race meets | £50–100/mo | £200/mo |
-| 2UP / early payout | Football season | £30–50/mo | £100/mo |
-| Each-way arbing | During Grand National etc. | £100 | £500 |
+| Phase              | Duration                   | Conservative | Aggressive |
+| ------------------ | -------------------------- | ------------ | ---------- |
+| Welcome offers     | First week                 | £400         | £800+      |
+| Daily reloads      | Ongoing (£100–300/mo)      | £100/mo      | £300/mo    |
+| Extra place offers | During big race meets      | £50–100/mo   | £200/mo    |
+| 2UP / early payout | Football season            | £30–50/mo    | £100/mo    |
+| Each-way arbing    | During Grand National etc. | £100         | £500       |
 
 ### Platforms Compared
 
-| Platform | Monthly Cost | Free Trial | Best For |
-|----------|-------------|-----------|----------|
-| **Outplayed** (formerly Profit Accumulator) | £29.99 | Yes | Beginners, best UI, most tools |
-| **OddsMonkey** | £17.99 | Yes | Cheaper, good community |
-| **MatchedBettingBlog** | Free | — | Free calculators, fewer tools |
+| Platform                                    | Monthly Cost | Free Trial | Best For                       |
+| ------------------------------------------- | ------------ | ---------- | ------------------------------ |
+| **Outplayed** (formerly Profit Accumulator) | £29.99       | Yes        | Beginners, best UI, most tools |
+| **OddsMonkey**                              | £17.99       | Yes        | Cheaper, good community        |
+| **MatchedBettingBlog**                      | Free         | —          | Free calculators, fewer tools  |
 
 ### What You Need
 
@@ -74,14 +75,15 @@ Using a typical "Bet £10, Get £30 in Free Bets" offer:
 ## PART 2: Bank Switching
 
 ### What It Is
+
 UK banks pay you cash to switch your current account to them using the Current Account Switch Service (CASS). It's guaranteed by law — your direct debits, payments, and balance transfer automatically within 7 days.
 
 ### Current Offers (July 2026)
 
-| Bank | Offer | Requirements |
-|------|-------|-------------|
-| Co-operative Bank | Up to **£300** | Eligible existing customers |
-| Various | £175–220 | Switch + deposit + direct debits |
+| Bank              | Offer          | Requirements                     |
+| ----------------- | -------------- | -------------------------------- |
+| Co-operative Bank | Up to **£300** | Eligible existing customers      |
+| Various           | £175–220       | Switch + deposit + direct debits |
 
 > **Check current offers:** money-saving blogs update these monthly. Search "best bank switching offers July 2026."
 
@@ -111,16 +113,17 @@ UK banks pay you cash to switch your current account to them using the Current A
 
 ## PART 3: Combined Strategy
 
-| Month | Action | Expected Earnings |
-|-------|--------|------------------|
-| **Month 1** | Start matched betting (welcome offers) + 1 bank switch | £575–800 |
-| **Month 2** | Continue matched betting reloads + apply for bank switch #2 | £275–500 |
-| **Month 3** | Matched betting + collect bank switch #2 bonus | £375–600 |
-| **Month 4** | Matched betting + bank switch #3 | £275–500 |
-| **Ongoing** | £100–300/mo matched betting + bank switch every 3–4 months | £150–450/mo |
+| Month       | Action                                                      | Expected Earnings |
+| ----------- | ----------------------------------------------------------- | ----------------- |
+| **Month 1** | Start matched betting (welcome offers) + 1 bank switch      | £575–800          |
+| **Month 2** | Continue matched betting reloads + apply for bank switch #2 | £275–500          |
+| **Month 3** | Matched betting + collect bank switch #2 bonus              | £375–600          |
+| **Month 4** | Matched betting + bank switch #3                            | £275–500          |
+| **Ongoing** | £100–300/mo matched betting + bank switch every 3–4 months  | £150–450/mo       |
 
 **Total Year 1 (conservative):** £2,000–4,000
 
 > **Both are tax-free:**
+>
 > - Matched betting = gambling winnings = no tax
 > - Bank switching incentives = typically treated as savings interest

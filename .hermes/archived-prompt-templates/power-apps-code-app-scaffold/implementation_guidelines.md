@@ -44,14 +44,10 @@ Include working examples for Office 365 Users:
 
 ```typescript
 // Example: Get current user profile
-const profile = await Office365UsersService.MyProfile_V2(
-  "id,displayName,jobTitle,userPrincipalName"
-);
+const profile = await Office365UsersService.MyProfile_V2("id,displayName,jobTitle,userPrincipalName");
 
 // Example: Get user photo
-const photoData = await Office365UsersService.UserPhoto_V2(
-  profile.data.id
-);
+const photoData = await Office365UsersService.UserPhoto_V2(profile.data.id);
 ```
 
 ### Current Limitations to Document

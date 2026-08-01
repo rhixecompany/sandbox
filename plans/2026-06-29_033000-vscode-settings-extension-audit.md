@@ -112,24 +112,24 @@ Sync `.vscode/extensions.json` recommendations to match the 42 installed extensi
 
 ## Files Likely to Change
 
-| File | Action |
-| ------ | -------- |
-| `~AppData/Roaming/Code/User/settings.json` | Update — add missing extension configs |
-| `~/Desktop/SandBox/.vscode/settings.json` | Update — add project-relevant extension configs |
-| `~/Desktop/SandBox/.vscode/extensions.json` | Update — sync recommendations |
-| `~AppData/Roaming/Code/User/keybindings.json` | Read-only check (if exists) |
+| File                                          | Action                                          |
+| --------------------------------------------- | ----------------------------------------------- |
+| `~AppData/Roaming/Code/User/settings.json`    | Update — add missing extension configs          |
+| `~/Desktop/SandBox/.vscode/settings.json`     | Update — add project-relevant extension configs |
+| `~/Desktop/SandBox/.vscode/extensions.json`   | Update — sync recommendations                   |
+| `~AppData/Roaming/Code/User/keybindings.json` | Read-only check (if exists)                     |
 
 ---
 
 ## Risks & Trade-offs
 
-| Risk | Likelihood | Impact | Mitigation |
-| ------ | ----------- | -------- | ------------ |
-| Extension docs unavailable / generic | Medium | Low | Use well-known defaults; skip obscurely-documented settings |
-| settings.json syntax error after edit | Low | High | Validate with `python3 -m json.tool` after every batch |
-| Settings conflict between extensions | Low | Medium | Prefer extension-specific scoping (`[lang]` blocks) |
-| Workspace override silently overrides default | Low | Low | Document which settings differ in workspace vs default |
-| Rate limiting from marketplace | Low | Medium | Batch requests; use web_extract/firecrawl with spacing |
+| Risk                                          | Likelihood | Impact | Mitigation                                                  |
+| --------------------------------------------- | ---------- | ------ | ----------------------------------------------------------- |
+| Extension docs unavailable / generic          | Medium     | Low    | Use well-known defaults; skip obscurely-documented settings |
+| settings.json syntax error after edit         | Low        | High   | Validate with `python3 -m json.tool` after every batch      |
+| Settings conflict between extensions          | Low        | Medium | Prefer extension-specific scoping (`[lang]` blocks)         |
+| Workspace override silently overrides default | Low        | Low    | Document which settings differ in workspace vs default      |
+| Rate limiting from marketplace                | Low        | Medium | Batch requests; use web_extract/firecrawl with spacing      |
 
 ---
 
@@ -142,4 +142,5 @@ Sync `.vscode/extensions.json` recommendations to match the 42 installed extensi
 - [ ] VS Code loads without errors (can be verified with `code --status`)
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

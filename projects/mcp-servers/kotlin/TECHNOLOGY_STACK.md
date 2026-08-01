@@ -24,10 +24,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Packaging:** Fat JAR (via custom Gradle task)
 
 ### Project Structure
+
 ```
 mcp-servers/kotlin/
 ├── build.gradle.kts

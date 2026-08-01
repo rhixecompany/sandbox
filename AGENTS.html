@@ -1,25 +1,34 @@
-<div
-            class="github-markdown-body"
-            data-color-mode="auto"
-            data-light-theme="light"
-            data-dark-theme="dark"
-        >
-            <div class="github-markdown-content"><span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;default&quot;,&quot;lightModeTheme&quot;:&quot;default&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
-                <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
-				<p>m# SandBox — <a href="http://AGENTS.html">AGENTS.md</a></p>
-<p>Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then subproject-local <code>AGENTS.md</code>.</p>
-<blockquote>
-<p>Verified against real repo files 2026-07-09. No aspirational practices.</p>
-</blockquote>
-<h2 id="1-workspace-big-picture">1. Workspace Big Picture</h2>
-<p><strong>Hermes agent development workspace + Copilot config library + multi-language project portfolio.</strong></p>
-<ol>
-<li>Workspace root — <code>AGENTS.md</code> (this), <code>.hermes.md</code></li>
-<li>Copilot asset library — <code>.github/prompts/</code></li>
-<li>Subprojects — <code>projects/*</code> (autonomous per-language)</li>
-</ol>
-<h2 id="2-directory-map">2. Directory Map</h2>
-<pre><code>SandBox/
+<div class="github-markdown-body" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+	<div class="github-markdown-content">
+		<span
+			id="markdown-mermaid"
+			aria-hidden="true"
+			data-config='{"darkModeTheme":"default","lightModeTheme":"default","maxTextSize":50000,"clickDrag":"alt","showControls":"onHoverOrFocus","resizable":true,"maxHeight":""}'
+		></span>
+		<span
+			id="markdown-mermaid"
+			aria-hidden="true"
+			data-config='{"darkModeTheme":"vscode","lightModeTheme":"vscode","maxTextSize":50000,"clickDrag":"alt","showControls":"onHoverOrFocus","resizable":true,"maxHeight":""}'
+		></span>
+		<p>m# SandBox — <a href="http://AGENTS.html">AGENTS.md</a></p>
+		<p>
+			Guidance for AI coding agents (GitHub Copilot, Codex, Hermes, etc.) in this workspace. Follow this FIRST, then
+			subproject-local <code>AGENTS.md</code>.
+		</p>
+		<blockquote>
+			<p>Verified against real repo files 2026-07-09. No aspirational practices.</p>
+		</blockquote>
+		<h2 id="1-workspace-big-picture">1. Workspace Big Picture</h2>
+		<p>
+			<strong>Hermes agent development workspace + Copilot config library + multi-language project portfolio.</strong>
+		</p>
+		<ol>
+			<li>Workspace root — <code>AGENTS.md</code> (this), <code>.hermes.md</code></li>
+			<li>Copilot asset library — <code>.github/prompts/</code></li>
+			<li>Subprojects — <code>projects/*</code> (autonomous per-language)</li>
+		</ol>
+		<h2 id="2-directory-map">2. Directory Map</h2>
+		<pre><code>SandBox/
 ├── AGENTS.md / .hermes.md / README.md   # root config
 ├── .github/prompts/      # canonical prompt library
 ├── projects/Bash/        # automation toolkit or projects root
@@ -27,117 +36,136 @@
 ├── research/
 └── venv/ + requirements.txt # Python 3.11
 </code></pre>
-<h2 id="3-toolchain--commands">3. Toolchain &amp; Commands</h2>
-<p><strong>Do NOT use pnpm.</strong> Package manager: <code>bun@1.3.14+</code></p>
-<table>
-<thead>
-<tr>
-<th>Tool</th>
-<th>Config</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Bun</strong> 1.3.14+</td>
-<td><code>package.json</code></td>
-<td>runtime + pkg mgr + test runner</td>
-</tr>
-<tr>
-<td><strong>TypeScript</strong> strict</td>
-<td><code>tsconfig.json</code></td>
-<td><code>tsc --noEmit</code> in toolkit</td>
-</tr>
-<tr>
-<td><strong>ESLint</strong> 10 flat</td>
-<td><code>eslint.config.mts</code></td>
-<td>zero-warning gate</td>
-</tr>
-<tr>
-<td><strong>Prettier</strong> 3</td>
-<td><code>.prettierrc.ts</code></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>markdownlint-cli2</strong></td>
-<td><code>.markdownlintrc.json</code></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Vitest</strong> 4</td>
-<td></td>
-<td>toolkit unit tests</td>
-</tr>
-<tr>
-<td><strong>EditorConfig</strong></td>
-<td><code>.editorconfig</code></td>
-<td>tab, indent=2, crlf, utf-8</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Validation from <code>projects/Bash/</code>:</strong></p>
-<pre><code class="language-bash">bun install --frozen-lockfile
+		<h2 id="3-toolchain--commands">3. Toolchain &amp; Commands</h2>
+		<p><strong>Do NOT use pnpm.</strong> Package manager: <code>bun@1.3.14+</code></p>
+		<table>
+			<thead>
+				<tr>
+					<th>Tool</th>
+					<th>Config</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>Bun</strong> 1.3.14+</td>
+					<td><code>package.json</code></td>
+					<td>runtime + pkg mgr + test runner</td>
+				</tr>
+				<tr>
+					<td><strong>TypeScript</strong> strict</td>
+					<td><code>tsconfig.json</code></td>
+					<td><code>tsc --noEmit</code> in toolkit</td>
+				</tr>
+				<tr>
+					<td><strong>ESLint</strong> 10 flat</td>
+					<td><code>eslint.config.mts</code></td>
+					<td>zero-warning gate</td>
+				</tr>
+				<tr>
+					<td><strong>Prettier</strong> 3</td>
+					<td><code>.prettierrc.ts</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>markdownlint-cli2</strong></td>
+					<td><code>.markdownlintrc.json</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>Vitest</strong> 4</td>
+					<td></td>
+					<td>toolkit unit tests</td>
+				</tr>
+				<tr>
+					<td><strong>EditorConfig</strong></td>
+					<td><code>.editorconfig</code></td>
+					<td>tab, indent=2, crlf, utf-8</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<strong>Validation from <code>projects/Bash/</code>:</strong>
+		</p>
+		<pre><code class="language-bash">bun install --frozen-lockfile
 bun run format / format:check   <span class="hljs-comment"># prettier</span>
 bun run typecheck               <span class="hljs-comment"># tsc --noEmit</span>
 bun run lint:strict             <span class="hljs-comment"># eslint --max-warnings=0</span>
 bun run <span class="hljs-built_in">test</span>                    <span class="hljs-comment"># vitest</span>
 bash tests/verify-dryrun.sh
 </code></pre>
-<p><strong>Single-file lint:</strong></p>
-<pre><code class="language-bash">bunx eslint --config eslint.config.mts &lt;file.ts&gt; --max-warnings=0
+		<p><strong>Single-file lint:</strong></p>
+		<pre><code class="language-bash">bunx eslint --config eslint.config.mts &lt;file.ts&gt; --max-warnings=0
 bunx markdownlint-cli2 --config .markdownlintrc.json <span class="hljs-string">&quot;&lt;file.md&gt;&quot;</span>
 </code></pre>
-<h2 id="4-conventions">4. Conventions</h2>
-<ul>
-<li><strong>Dry-run</strong>: destructive actions require <code>--dry-run</code>; upgrades/cleanups need confirmation</li>
-<li><strong>No backup files</strong>: git for rollback; never create <code>.bak</code>/<code>.old</code></li>
-<li><strong>TypeScript strict</strong>: no <code>any</code>, <code>noUncheckedIndexedAccess</code> on; <code>zod</code> v4 for runtime, <code>ts-morph</code> for AST</li>
-<li><strong>Naming</strong>: Bash=kebab-case/.sh, PowerShell=PascalCase/.ps1, Python=PEP 8</li>
-<li><strong>CRLF</strong> per <code>.editorconfig</code> (Windows host); CI enforces</li>
-<li><strong>Logs</strong>: <code>logs/action_YYYYMMDD_HHMMSS.log</code>, no secrets</li>
-</ul>
-<h2 id="5-hermes-integration">5. Hermes Integration</h2>
-<ul>
-<li>CLI: <code>%LOCALAPPDATA%/hermes/hermes-agent/venv/Scripts/hermes</code></li>
-<li>Profiles: <code>default</code>, <code>alexa</code>, <code>code-architect</code>, <code>creative-director</code>, <code>exec-assistant</code>, <code>patient-tutor</code>, <code>research-analyst</code></li>
-<li>Switch: <code>hermes profile use &lt;name&gt;</code></li>
-<li>Hooks: <code>session-logger</code>, <code>session-auto-commit</code>, <code>governance-audit</code></li>
-<li>Plugins: disk-cleanup, security-guidance, model-providers/openrouter</li>
-<li>Session start: read <code>SESSION_REPORT.md</code> first; prefer validated MCP paths</li>
-</ul>
-<h2 id="6-common-recipes">6. Common Recipes</h2>
-<p><strong>Run toolkit</strong>: <code>powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode &lt;mode&gt;</code> from <code>projects/Bash/</code> unless a subproject says otherwise.</p>
-<p><strong>Lint one file</strong>: <code>bunx eslint --config eslint.config.mts &lt;file.ts&gt; --max-warnings=0</code> and/or <code>bunx markdownlint-cli2 &lt;file.md&gt;</code>.</p>
-<h2 id="7-modeldoc-lane-ownership">7. Model/Doc Lane Ownership</h2>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th>Lane</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>.github/copilot-instructions.md</code></td>
-<td>Use as Copilot dispatch only; authoritative behavior lives in <code>AGENTS.md</code></td>
-</tr>
-<tr>
-<td><code>CLAUDE.md</code></td>
-<td>Claude-specific reasoning/tool behavior</td>
-</tr>
-<tr>
-<td><code>.cursorrules</code></td>
-<td>Cursor IDE formatting/safety rules only</td>
-</tr>
-<tr>
-<td><code>.hermes.md</code></td>
-<td>Hermes overrides/config sourcing</td>
-</tr>
-<tr>
-<td><code>SOUL.md</code>, <code>MEMORY.md</code>, <code>USER.md</code></td>
-<td>Persona/memory rules; durable canonical rules are in <code>MEMORY.md</code></td>
-</tr>
-</tbody>
-</table>
+		<h2 id="4-conventions">4. Conventions</h2>
+		<ul>
+			<li>
+				<strong>Dry-run</strong>: destructive actions require <code>--dry-run</code>; upgrades/cleanups need
+				confirmation
+			</li>
+			<li><strong>No backup files</strong>: git for rollback; never create <code>.bak</code>/<code>.old</code></li>
+			<li>
+				<strong>TypeScript strict</strong>: no <code>any</code>, <code>noUncheckedIndexedAccess</code> on;
+				<code>zod</code> v4 for runtime, <code>ts-morph</code> for AST
+			</li>
+			<li><strong>Naming</strong>: Bash=kebab-case/.sh, PowerShell=PascalCase/.ps1, Python=PEP 8</li>
+			<li><strong>CRLF</strong> per <code>.editorconfig</code> (Windows host); CI enforces</li>
+			<li><strong>Logs</strong>: <code>logs/action_YYYYMMDD_HHMMSS.log</code>, no secrets</li>
+		</ul>
+		<h2 id="5-hermes-integration">5. Hermes Integration</h2>
+		<ul>
+			<li>CLI: <code>%LOCALAPPDATA%/hermes/hermes-agent/venv/Scripts/hermes</code></li>
+			<li>
+				Profiles: <code>default</code>, <code>alexa</code>, <code>code-architect</code>, <code>creative-director</code>,
+				<code>exec-assistant</code>, <code>patient-tutor</code>, <code>research-analyst</code>
+			</li>
+			<li>Switch: <code>hermes profile use &lt;name&gt;</code></li>
+			<li>Hooks: <code>session-logger</code>, <code>session-auto-commit</code>, <code>governance-audit</code></li>
+			<li>Plugins: disk-cleanup, security-guidance, model-providers/openrouter</li>
+			<li>Session start: read <code>SESSION_REPORT.md</code> first; prefer validated MCP paths</li>
+		</ul>
+		<h2 id="6-common-recipes">6. Common Recipes</h2>
+		<p>
+			<strong>Run toolkit</strong>:
+			<code>powershell.exe -NoProfile -File scripts/orchestrator-unified.ps1 -Mode &lt;mode&gt;</code> from
+			<code>projects/Bash/</code> unless a subproject says otherwise.
+		</p>
+		<p>
+			<strong>Lint one file</strong>:
+			<code>bunx eslint --config eslint.config.mts &lt;file.ts&gt; --max-warnings=0</code> and/or
+			<code>bunx markdownlint-cli2 &lt;file.md&gt;</code>.
+		</p>
+		<h2 id="7-modeldoc-lane-ownership">7. Model/Doc Lane Ownership</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>File</th>
+					<th>Lane</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>.github/copilot-instructions.md</code></td>
+					<td>Use as Copilot dispatch only; authoritative behavior lives in <code>AGENTS.md</code></td>
+				</tr>
+				<tr>
+					<td><code>CLAUDE.md</code></td>
+					<td>Claude-specific reasoning/tool behavior</td>
+				</tr>
+				<tr>
+					<td><code>.cursorrules</code></td>
+					<td>Cursor IDE formatting/safety rules only</td>
+				</tr>
+				<tr>
+					<td><code>.hermes.md</code></td>
+					<td>Hermes overrides/config sourcing</td>
+				</tr>
+				<tr>
+					<td><code>SOUL.md</code>, <code>MEMORY.md</code>, <code>USER.md</code></td>
+					<td>Persona/memory rules; durable canonical rules are in <code>MEMORY.md</code></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
-        </div>

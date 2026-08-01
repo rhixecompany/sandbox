@@ -80,21 +80,21 @@ For each available model, evaluate against these dimensions:
 
 #### Model Capabilities Matrix
 
-| Model | Multiplier | Speed | Code Quality | Reasoning | Context | Vision | Best For |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-4.1 | 0x | Fast | Good | Good | 128K | ✅ | Balanced general tasks, included in all plans |
-| GPT-5 mini | 0x | Fastest | Good | Basic | 128K | ❌ | Simple tasks, quick responses, cost-effective |
-| GPT-5 | 1x | Moderate | Excellent | Advanced | 128K | ✅ | Complex code, advanced reasoning, multi-turn chat |
-| GPT-5 Codex | 1x | Fast | Excellent | Good | 128K | ❌ | Code optimization, refactoring, algorithmic tasks |
-| Claude Sonnet 3.5 | 1x | Moderate | Excellent | Excellent | 200K | ✅ | Code generation, long context, balanced reasoning |
-| Claude Sonnet 4 | 1x | Moderate | Excellent | Advanced | 200K | ❌ | Complex code, robust reasoning, enterprise tasks |
-| Claude Sonnet 4.5 | 1x | Moderate | Excellent | Expert | 200K | ✅ | Advanced code, architecture, design patterns |
-| Claude Opus 4.1 | 10x | Slow | Outstanding | Expert | 1M | ✅ | Large codebases, architectural review, research |
-| Gemini 2.5 Pro | 1x | Moderate | Excellent | Advanced | 2M | ✅ | Very long context, multi-modal, real-time data |
-| Gemini 2.0 Flash (dep.) | 0.25x | Fastest | Good | Good | 1M | ❌ | Fast responses, cost-effective (deprecated) |
-| Grok Code Fast 1 | 0.25x | Fastest | Good | Basic | 128K | ❌ | Speed-critical simple tasks, preview (free) |
-| o3 (deprecated) | 1x | Slow | Good | Expert | 128K | ❌ | Advanced reasoning, algorithmic optimization |
-| o4-mini (deprecated) | 0.33x | Fast | Good | Good | 128K | ❌ | Reasoning at lower cost (deprecated) |
+| Model                   | Multiplier | Speed    | Code Quality | Reasoning | Context | Vision | Best For                                          |
+| ----------------------- | ---------- | -------- | ------------ | --------- | ------- | ------ | ------------------------------------------------- |
+| GPT-4.1                 | 0x         | Fast     | Good         | Good      | 128K    | ✅     | Balanced general tasks, included in all plans     |
+| GPT-5 mini              | 0x         | Fastest  | Good         | Basic     | 128K    | ❌     | Simple tasks, quick responses, cost-effective     |
+| GPT-5                   | 1x         | Moderate | Excellent    | Advanced  | 128K    | ✅     | Complex code, advanced reasoning, multi-turn chat |
+| GPT-5 Codex             | 1x         | Fast     | Excellent    | Good      | 128K    | ❌     | Code optimization, refactoring, algorithmic tasks |
+| Claude Sonnet 3.5       | 1x         | Moderate | Excellent    | Excellent | 200K    | ✅     | Code generation, long context, balanced reasoning |
+| Claude Sonnet 4         | 1x         | Moderate | Excellent    | Advanced  | 200K    | ❌     | Complex code, robust reasoning, enterprise tasks  |
+| Claude Sonnet 4.5       | 1x         | Moderate | Excellent    | Expert    | 200K    | ✅     | Advanced code, architecture, design patterns      |
+| Claude Opus 4.1         | 10x        | Slow     | Outstanding  | Expert    | 1M      | ✅     | Large codebases, architectural review, research   |
+| Gemini 2.5 Pro          | 1x         | Moderate | Excellent    | Advanced  | 2M      | ✅     | Very long context, multi-modal, real-time data    |
+| Gemini 2.0 Flash (dep.) | 0.25x      | Fastest  | Good         | Good      | 1M      | ❌     | Fast responses, cost-effective (deprecated)       |
+| Grok Code Fast 1        | 0.25x      | Fastest  | Good         | Basic     | 128K    | ❌     | Speed-critical simple tasks, preview (free)       |
+| o3 (deprecated)         | 1x         | Slow     | Good         | Expert    | 128K    | ❌     | Advanced reasoning, algorithmic optimization      |
+| o4-mini (deprecated)    | 0.33x      | Fast     | Good         | Good      | 128K    | ❌     | Reasoning at lower cost (deprecated)              |
 
 #### Selection Decision Tree
 
@@ -177,3 +177,5 @@ START
 If file does not specify a `model` field:
 
 ```markdown
+
+```

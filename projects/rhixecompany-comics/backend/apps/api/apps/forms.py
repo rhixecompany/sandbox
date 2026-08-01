@@ -1,13 +1,7 @@
+from api.apps.models import Chapter, ChapterImage, Comic, ComicImage, Comment
+from api.users.widgets import MyCustomCKEditorWidget, MyCustomImageWidget
 from django import forms
 from django.utils.translation import gettext_lazy as _
-
-from api.apps.models import Chapter
-from api.apps.models import ChapterImage
-from api.apps.models import Comic
-from api.apps.models import ComicImage
-from api.apps.models import Comment
-from api.users.widgets import MyCustomCKEditorWidget
-from api.users.widgets import MyCustomImageWidget
 
 
 class ComicForm(forms.ModelForm):
@@ -41,7 +35,7 @@ class ComicForm(forms.ModelForm):
         for field in self.fields:
             f = str(field)
             new_data = {
-                "placeholder": _(f"Enter your {f}"),  # noqa: INT001
+                "placeholder": _(f"Enter your {f}"),
                 "class": "",
             }
             self.fields[str(field)].widget.attrs.update(new_data)
@@ -62,7 +56,7 @@ class ComicImageForm(forms.ModelForm):
         for field in self.fields:
             f = str(field)
             new_data = {
-                "placeholder": _(f"Enter your {f}"),  # noqa: INT001
+                "placeholder": _(f"Enter your {f}"),
                 "class": "",
             }
             self.fields[str(field)].widget.attrs.update(new_data)
@@ -93,7 +87,7 @@ class ChapterForm(forms.ModelForm):
         for field in self.fields:
             f = str(field)
             new_data = {
-                "placeholder": _(f"Enter your {f}"),  # noqa: INT001
+                "placeholder": _(f"Enter your {f}"),
                 "class": "",
             }
             self.fields[str(field)].widget.attrs.update(new_data)
@@ -114,7 +108,7 @@ class ChapterImageForm(forms.ModelForm):
         for field in self.fields:
             f = str(field)
             new_data = {
-                "placeholder": _(f"Enter your {f}"),  # noqa: INT001
+                "placeholder": _(f"Enter your {f}"),
                 "class": "",
             }
             self.fields[str(field)].widget.attrs.update(new_data)

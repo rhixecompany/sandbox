@@ -78,4 +78,5 @@ After delivering recommendations, offer an optional second pass:
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

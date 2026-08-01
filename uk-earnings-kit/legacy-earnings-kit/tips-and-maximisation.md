@@ -3,10 +3,13 @@
 ## General Principles
 
 ### 1. Stack, Don't Single-Source
+
 Never rely on ONE platform. Join 4–6 across categories. Surveys run out. Tests dry up. AI projects pause. Having multiple platforms means you always have something to do.
 
 ### 2. The Browser Tab Strategy
+
 Keep these tabs open always:
+
 - **Prolific** (with Prolific Assistant extension)
 - **UserTesting** dashboard
 - **Qmee** (as browser sidebar)
@@ -14,15 +17,18 @@ Keep these tabs open always:
 Studies disappear in seconds. Whoever sees them first gets them.
 
 ### 3. Profile Completeness = Earnings
+
 Researchers filter by demographics. An incomplete profile means you won't be matched. Fill EVERY field. Keep it updated if your circumstances change.
 
 ### 4. Timing Matters
+
 - **Prolific**: Studies drop more on weekdays, 9am–5pm UK time
 - **UserTesting**: Check mornings — new tests appear then
 - **Freecash games**: Start on Monday to track progress over the full week
 - **DataAnnotation**: New projects drop randomly — check multiple times a day
 
 ### 5. Cash Out Early
+
 Don't hoard points. If a site gets banned or your account is closed, you could lose everything. Cash out as soon as you hit the minimum threshold.
 
 ---
@@ -70,17 +76,18 @@ Don't hoard points. If a site gets banned or your account is closed, you could l
 
 ## Avoiding Scams — Red Flags
 
-| Red Flag | What to Do |
-|----------|-----------|
-| **"Pay £XX to unlock better surveys"** | Scam — legitimate sites are free to join |
-| **"Guaranteed £X,000/month"** | Lie — no reputable site guarantees income |
-| **Requests your bank login, not just sort code** | Scam — PayPal or bank transfer only |
-| **Too-good-to-be-true pay (£50/hr for surveys)** | Probably a scam or impossible to achieve |
-| **No Trustpilot reviews or under 3.5 stars** | Skip it |
-| **Sites that pay in "points" with no clear £ value** | Usually not worthwhile |
-| **Asking for upfront payment to join** | 100% scam |
+| Red Flag                                             | What to Do                                |
+| ---------------------------------------------------- | ----------------------------------------- |
+| **"Pay £XX to unlock better surveys"**               | Scam — legitimate sites are free to join  |
+| **"Guaranteed £X,000/month"**                        | Lie — no reputable site guarantees income |
+| **Requests your bank login, not just sort code**     | Scam — PayPal or bank transfer only       |
+| **Too-good-to-be-true pay (£50/hr for surveys)**     | Probably a scam or impossible to achieve  |
+| **No Trustpilot reviews or under 3.5 stars**         | Skip it                                   |
+| **Sites that pay in "points" with no clear £ value** | Usually not worthwhile                    |
+| **Asking for upfront payment to join**               | 100% scam                                 |
 
 **Site vetting checklist:**
+
 - [ ] Search "[site name] + scam" before signing up
 - [ ] Check Trustpilot rating (4.0+ is good)
 - [ ] Check Reddit r/beermoneyuk for real user reviews
@@ -93,12 +100,14 @@ Don't hoard points. If a site gets banned or your account is closed, you could l
 ## Tax Info (UK-specific)
 
 ### Trading Allowance
+
 - **£1,000/year** tax-free from all side hustles combined
 - This is your TOTAL across ALL platforms
 - Includes surveys, user testing, AI training, freelancing
 - You do NOT need to declare this to HMRC unless you exceed £1,000
 
 ### Registering as Self-Employed
+
 - Required if you earn over £1,000/year from side hustles
 - Register by October 5th following the tax year end (April 5th)
 - File a Self Assessment tax return each year
@@ -108,7 +117,9 @@ Don't hoard points. If a site gets banned or your account is closed, you could l
   - **Income tax**: 20% on profits over £12,570
 
 ### Record Keeping
+
 Keep records of:
+
 - Date and amount of each payment received
 - Platform + transaction ID
 - Any expenses (internet, equipment, courses — you can deduct these)
@@ -121,26 +132,26 @@ Keep records of:
 MONDAY
   Morning: Check Prolific (15 min)
   Evening: UserTesting — check dashboard (10 min)
-  
+
 TUESDAY
   Morning: Prolific studies (20 min)
   Evening: Freecash game offer progress (30 min)
-  
+
 WEDNESDAY
   Morning: DataAnnotation check for new projects (10 min)
   Evening: UserTesting deep session if tests available (20 min)
-  
+
 THURSDAY
   Morning: Prolific studies (20 min)
   Evening: Freecash grinding or survey stack (30 min)
-  
+
 FRIDAY
   Morning: Check all platforms, cash out where possible (15 min)
   Weekend: Batch work — DataAnnotation, User Interviews apps
-  
+
 SATURDAY
   Deep work session: DataAnnotation or UserTesting (1-2 hrs)
-  
+
 SUNDAY
   Review weekly earnings, update tracker, plan next week (15 min)
 ```
@@ -149,9 +160,9 @@ SUNDAY
 
 ## Recommended Browser Extensions
 
-| Extension | Purpose |
-|-----------|---------|
-| Prolific Assistant | Notifies when new studies appear |
-| Qmee | Browser sidebar surveys while you browse |
-| Honey | Automatic coupon codes (combos with Swagbucks cashback) |
-| Keepa / CamelCamelCamel | Amazon price tracking (useful for Swagbucks shopping) |
+| Extension               | Purpose                                                 |
+| ----------------------- | ------------------------------------------------------- |
+| Prolific Assistant      | Notifies when new studies appear                        |
+| Qmee                    | Browser sidebar surveys while you browse                |
+| Honey                   | Automatic coupon codes (combos with Swagbucks cashback) |
+| Keepa / CamelCamelCamel | Amazon price tracking (useful for Swagbucks shopping)   |

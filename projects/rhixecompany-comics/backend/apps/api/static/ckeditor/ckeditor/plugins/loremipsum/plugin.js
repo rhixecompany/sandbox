@@ -22,7 +22,7 @@
         
             case LOREM_TEXT_TYPE.PARAGRAPH:
             	
-                var paragraphsArray = new Array ();
+                var paragraphsArray = [];
                 
                 for (var i = 0; i < count; i++) {
                 	// random number between 10 and 20
@@ -35,7 +35,7 @@
                 
             case LOREM_TEXT_TYPE.SENTENCE:
             	
-                var sentencesArray = new Array ();
+                var sentencesArray = [];
                 
                 for (var i = 0; i < count; i++) {
                 	// random number between 5 and 10

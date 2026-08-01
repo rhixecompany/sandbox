@@ -21,10 +21,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Packaging:** Fat JAR (uber-jar with all dependencies)
 
 ### Project Structure
+
 ```
 mcp-servers/java/
 ├── pom.xml

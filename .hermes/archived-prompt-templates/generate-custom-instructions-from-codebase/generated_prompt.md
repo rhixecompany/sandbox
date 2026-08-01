@@ -46,3 +46,4 @@ Create a `.github/copilot-migration-instructions.md` file with this structure:
 
 \`\`\`markdown
 # GitHub Copilot Migration Instructions
+```

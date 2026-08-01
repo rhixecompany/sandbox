@@ -14,3 +14,4 @@ mcp-servers/go/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── main.go  # Primary source code
+```

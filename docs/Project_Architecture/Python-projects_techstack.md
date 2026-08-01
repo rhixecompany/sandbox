@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python (Scripts) |
+| Category    | Technology                         |
+| ----------- | ---------------------------------- |
+| **Type**    | Python (Scripts)                   |
 | **Pattern** | Educational Python utility scripts |
-| **Stack** | Python 3.11 |
+| **Stack**   | Python 3.11                        |
 
 ## Development Tools
 

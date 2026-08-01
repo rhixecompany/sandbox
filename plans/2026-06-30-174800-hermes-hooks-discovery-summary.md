@@ -34,4 +34,5 @@ Done when: summary file is written and every discovered hook has a catalog entry
 - Confirmed docs folder: `C:/Users/Alexa/Desktop/SandBox/docs`
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec to quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec to quality)_

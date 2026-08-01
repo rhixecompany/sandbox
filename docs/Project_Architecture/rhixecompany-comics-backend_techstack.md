@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Backend) |
+| Category    | Technology                                  |
+| ----------- | ------------------------------------------- |
+| **Type**    | Python/Django (Backend)                     |
 | **Pattern** | Django + Docker backend for comics platform |
-| **Stack** | Django, Python, Docker Compose, PostgreSQL |
+| **Stack**   | Django, Python, Docker Compose, PostgreSQL  |
 
 ## Development Tools
 

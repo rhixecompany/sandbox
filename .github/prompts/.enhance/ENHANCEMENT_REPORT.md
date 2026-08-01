@@ -82,7 +82,7 @@ defect classes the analyzer did not detect:
 | Duplicate standard sections | Older enhancer version appended sections without `heading_exists` check | 143 | 387 removals (kept first/domain occurrence) |
 | Orphan `s` artifacts | 228eae32 glue-repair split `## Inputs- ...` into `## Input` + `s` + list | 117 | 231 merges (restored plural headings) |
 | Bullet glue | Body lists merged: `sentence.- Next item` | 49 | 114 splits |
-| Fence/heading glue | `- text```shellCMD``` ` and collapsed `\ ` continuations | 3 | spring-boot×2, rust-mcp reconstruction |
+| Fence/heading glue | `- text```shellCMD``` ` and collapsed `\` continuations | 3 | spring-boot×2, rust-mcp reconstruction |
 
 Plus manual repairs: `git-multi-repo-orchestration` Rules ref, `apple-appstore-reviewer`
 dup heading, `cosmosdb-datamodeling` dup heading + `### Solved Patterns` glue,

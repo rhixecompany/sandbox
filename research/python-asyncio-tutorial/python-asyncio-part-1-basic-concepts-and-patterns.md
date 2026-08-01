@@ -9,7 +9,7 @@
 
 ## Overview
 
-This post introduces the **core concepts behind Python's asyncio library**, focusing on *what it is and isn’t*, without diving into implementation details. It targets experienced Python programmers who want a conceptual foundation before learning syntax.
+This post introduces the **core concepts behind Python's asyncio library**, focusing on _what it is and isn’t_, without diving into implementation details. It targets experienced Python programmers who want a conceptual foundation before learning syntax.
 
 > **Key Insight**: Asyncio is **not** about multithreading or bypassing the Global Interpreter Lock (GIL). It’s about **efficiently using a single CPU core** during I/O-bound operations.
 
@@ -97,16 +97,16 @@ This post intentionally **avoids code examples** to focus on concepts. The next 
 
 ## Summary
 
-| Concept | Description |
-| ------- | ------------- |
-| **Asyncio Goal** | Efficient single-core usage during I/O waits |
-| **Not For** | CPU-bound parallelism or bypassing GIL |
-| **Core Mechanism** | Coroutines yield control; Event Loop schedules Tasks |
-| **Best For** | I/O-bound applications (e.g., web servers, APIs) |
-| **Key Abstraction** | Event Loop + Tasks with independent stacks |
+| Concept             | Description                                          |
+| ------------------- | ---------------------------------------------------- |
+| **Asyncio Goal**    | Efficient single-core usage during I/O waits         |
+| **Not For**         | CPU-bound parallelism or bypassing GIL               |
+| **Core Mechanism**  | Coroutines yield control; Event Loop schedules Tasks |
+| **Best For**        | I/O-bound applications (e.g., web servers, APIs)     |
+| **Key Abstraction** | Event Loop + Tasks with independent stacks           |
 
 > **Takeaway**: Asyncio enables **cooperative concurrency** — not parallelism — by structuring code to yield during waits, keeping the CPU busy with useful work.
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

@@ -32,11 +32,7 @@ ext_validator = FileExtensionValidator(
 
 def panel_location(instance, filename):
     return "{}/{}/{}".format(
-        str(instance.comic.slug)
-        .replace(" ", "_")
-        .replace(":", " ")
-        .replace("/", "")
-        .replace("\\", ""),
+        str(instance.comic.slug).replace(" ", "_").replace(":", " ").replace("/", "").replace("\\", ""),
         instance.chapter.slug,
         filename,
     )
@@ -44,11 +40,7 @@ def panel_location(instance, filename):
 
 def comic_location(instance, filename):
     return "{}/{}".format(
-        str(instance.comic.slug)
-        .replace(" ", "_")
-        .replace(":", " ")
-        .replace("/", "")
-        .replace("\\", ""),
+        str(instance.comic.slug).replace(" ", "_").replace(":", " ").replace("/", "").replace("\\", ""),
         filename,
     )
 
@@ -141,7 +133,7 @@ class Author(models.Model):
         return self.name
 
     def get_author_comics_children(self):
-        return self.comicauthor.all()  # type: ignore  # noqa: PGH003
+        return self.comicauthor.all()  # type: ignore
 
 
 class Artist(models.Model):
@@ -155,7 +147,7 @@ class Artist(models.Model):
         return self.name
 
     def get_comics_children(self):
-        return self.comicartist.all()  # type: ignore  # noqa: PGH003
+        return self.comicartist.all()  # type: ignore
 
 
 class Type(models.Model):
@@ -173,7 +165,7 @@ class Type(models.Model):
         return self.name
 
     def get_comics_children(self):
-        return self.comictype.all()  # type: ignore  # noqa: PGH003
+        return self.comictype.all()  # type: ignore
 
 
 class Comic(models.Model):
@@ -269,13 +261,13 @@ class Comic(models.Model):
         return reverse("comics:delete_comic", kwargs={"slug": self.slug})
 
     def get_comic_images_children(self):
-        return self.comicitems.all()  # type: ignore  # noqa: PGH003
+        return self.comicitems.all()  # type: ignore
 
     def get_chapters_children(self):
-        return self.comicchapters.all()  # type: ignore  # noqa: PGH003
+        return self.comicchapters.all()  # type: ignore
 
     def get_comments_children(self):
-        return self.comiccomments.all()  # type: ignore  # noqa: PGH003
+        return self.comiccomments.all()  # type: ignore
 
 
 class ComicImage(models.Model):
@@ -328,9 +320,7 @@ class UserItem(models.Model):
         verbose_name = "Useritem"
 
     def __str__(self):
-        return (
-            f"Order - {self.order} User - {self.user.email} Comic - {self.comic.title}"
-        )
+        return f"Order - {self.order} User - {self.user.email} Comic - {self.comic.title}"
 
 
 class Chapter(models.Model):
@@ -382,10 +372,10 @@ class Chapter(models.Model):
         return reverse("chapters:delete_chapter", kwargs={"slug": self.slug})
 
     def get_chapter_images_children(self):
-        return self.chapteritems.all()  # type: ignore  # noqa: PGH003
+        return self.chapteritems.all()  # type: ignore
 
     def get_comments_children(self):
-        return self.chaptercomments.all()  # type: ignore  # noqa: PGH003
+        return self.chaptercomments.all()  # type: ignore
 
     def get_hx_comic_edit_url(self):
         kwargs = {"parent_slug": self.comic.slug, "id": self.pk}
@@ -437,7 +427,7 @@ class Comment(models.Model):
         "Text",
         null=True,
         config_name="default",
-    )  # type: ignore  # noqa: PGH003
+    )  # type: ignore
     chapter = models.ForeignKey(
         Chapter,
         on_delete=models.CASCADE,
@@ -468,7 +458,7 @@ class Comment(models.Model):
         return self.text
 
     def get_chapter_children(self):
-        return self.chaptercomments.all()  # type: ignore  # noqa: PGH003
+        return self.chaptercomments.all()  # type: ignore
 
     def get_comic_children(self):
-        return self.comiccomments.all()  # type: ignore  # noqa: PGH003
+        return self.comiccomments.all()  # type: ignore

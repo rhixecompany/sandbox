@@ -50,7 +50,9 @@
 ## Profile Templates
 
 ### Prolific Profile
+
 Keep demographics accurate and up to date. Be specific about:
+
 - Age, gender, location (UK)
 - Employment status and industry
 - Education level
@@ -62,6 +64,7 @@ Keep demographics accurate and up to date. Be specific about:
 - Social media usage
 
 ### UserTesting Profile
+
 - Device: Laptop/desktop + microphone (USB preferred)
 - Internet: Stable broadband
 - Language: English (UK)
@@ -71,6 +74,7 @@ Keep demographics accurate and up to date. Be specific about:
 - Speak clearly, think out loud, be honest
 
 ### DataAnnotation Tech Profile
+
 - Take the qualification test seriously
 - Identify your best domains: writing, coding, STEM, finance, legal, medical
 - Higher domain expertise = higher pay (£50–100+/hr)
@@ -78,21 +82,21 @@ Keep demographics accurate and up to date. Be specific about:
 
 ## Reddit Communities to Join
 
-| Subreddit | Purpose |
-|-----------|---------|
-| r/beermoneyuk | UK earnings reports, platform recommendations |
-| r/ProlificAc | Prolific-specific tips, study alerts |
-| r/usertesting | UserTesting tips, test availability |
-| r/matchedbetting | Matched betting discussion |
-| r/sidehustle | General side hustle ideas |
-| r/beermoney | International beermoney (US/UK/CA/AU) |
+| Subreddit        | Purpose                                       |
+| ---------------- | --------------------------------------------- |
+| r/beermoneyuk    | UK earnings reports, platform recommendations |
+| r/ProlificAc     | Prolific-specific tips, study alerts          |
+| r/usertesting    | UserTesting tips, test availability           |
+| r/matchedbetting | Matched betting discussion                    |
+| r/sidehustle     | General side hustle ideas                     |
+| r/beermoney      | International beermoney (US/UK/CA/AU)         |
 
 ## Recommended Browser Extensions
 
-| Extension | Purpose |
-|-----------|---------|
-| Prolific Assistant | Study notifications |
-| Qmee | Passive survey sidebar |
+| Extension               | Purpose                                     |
+| ----------------------- | ------------------------------------------- |
+| Prolific Assistant      | Study notifications                         |
+| Qmee                    | Passive survey sidebar                      |
 | Keepa / CamelCamelCamel | Amazon price history (combos with cashback) |
-| Honey | Automatic coupons |
-| uBlock Origin | Block ads on survey-heavy sites |
+| Honey                   | Automatic coupons                           |
+| uBlock Origin           | Block ads on survey-heavy sites             |

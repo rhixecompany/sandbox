@@ -15,7 +15,7 @@ SELECT
     SUM(amount) OVER (PARTITION BY product_id ORDER BY order_date) as running_total,
     ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY amount DESC) as rank
 FROM sales;
-````
+```
 
 ### Common Table Expressions (CTEs)
 

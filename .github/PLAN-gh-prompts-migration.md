@@ -12,20 +12,20 @@ Make `.github/` the single source of truth for all prompt-family assets, migrate
 
 ## Existing Plans Reviewed
 
-| Plan | Role | Status |
-| ------ | ------ | -------- |
+| Plan                                                                           | Role                        | Status                      |
+| ------------------------------------------------------------------------------ | --------------------------- | --------------------------- |
 | `.hermes/plans/2026-06-30-execution-plan-for-prompt-and-plan-normalization.md` | Meta-normalization template | Stale/duplicate frontmatter |
-| `projects/Bash/PLAN.md` | Bash toolkit roadmap | Active, separate scope |
-| `projects/Bash/SPECS.md` | Bash toolkit specs | Active, separate scope |
+| `projects/Bash/PLAN.md`                                                        | Bash toolkit roadmap        | Active, separate scope      |
+| `projects/Bash/SPECS.md`                                                       | Bash toolkit specs          | Active, separate scope      |
 
 ## Verified Current State
 
-| Source | Count | Notes |
-| -------- | ------- | ------- |
-| `.github/prompts/` | 1133 files | Canonical; agents, instructions, archived |
-| `%LOCALAPPDATA%\hermes\prompts` | 211 `.prompt.md` | Legacy; not yet migrated |
-| Exact duplicates in `.github/prompts` | 0 | By body hash |
-| Exact duplicates in legacy prompts | 0 | By file hash |
+| Source                                | Count            | Notes                                     |
+| ------------------------------------- | ---------------- | ----------------------------------------- |
+| `.github/prompts/`                    | 1133 files       | Canonical; agents, instructions, archived |
+| `%LOCALAPPDATA%\hermes\prompts`       | 211 `.prompt.md` | Legacy; not yet migrated                  |
+| Exact duplicates in `.github/prompts` | 0                | By body hash                              |
+| Exact duplicates in legacy prompts    | 0                | By file hash                              |
 
 ## Phases
 

@@ -94,7 +94,7 @@ export class ImageStrategy {
         const cleanup = (): void => {
           const idx = active.indexOf(promise);
           if (idx > -1) {
-            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+             
             active.splice(idx, 1);
           }
         };

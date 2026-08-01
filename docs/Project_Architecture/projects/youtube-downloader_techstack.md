@@ -20,6 +20,7 @@
 ## Architecture
 
 **Pattern:** Single-file CLI scripts with shared utilities
+
 ```
 youtube-downloader/
 ├── main_noplaylist.py      # Single video download
@@ -45,12 +46,14 @@ youtube-downloader/
 ## Dependencies
 
 ### Python Packages
+
 ```text
 yt-dlp>=2024.1.0
 curl_cffi>=0.7.0
 ```
 
 ### System Dependencies
+
 ```bash
 # FFmpeg (required for post-processing)
 # macOS: brew install ffmpeg
@@ -61,6 +64,7 @@ curl_cffi>=0.7.0
 ```
 
 ### Optional Quality Tools
+
 ```text
 ruff>=0.1.0      # Linting
 mypy>=1.0.0      # Type checking
@@ -72,6 +76,7 @@ pytest>=7.0.0    # Testing
 ## Usage
 
 ### Installation
+
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -97,6 +102,7 @@ ffmpeg -version
 | **Type check** | `mypy *.py` |
 
 ### Input Files Format
+
 ```
 # urls.txt (one per line)
 https://youtube.com/watch?v=abc123
@@ -112,6 +118,7 @@ https://youtube.com/playlist?list=PLyyy
 ## Key Features
 
 ### yt-dlp Capabilities
+
 - **400+ sites** supported (YouTube, Vimeo, Twitter, etc.)
 - **Format selection**: best, worst, specific codecs, audio-only
 - **Subtitles**: Download, embed, convert
@@ -121,6 +128,7 @@ https://youtube.com/playlist?list=PLyyy
 - **Cookies**: Browser cookie extraction for private content
 
 ### curl_cffi Benefits
+
 - **TLS Fingerprinting**: Mimics real browser (Chrome, Firefox, Safari)
 - **Bypasses**: Some anti-bot protections
 - **HTTP/2**: Full HTTP/2 support
@@ -131,6 +139,7 @@ https://youtube.com/playlist?list=PLyyy
 ## Configuration
 
 ### yt-dlp Config (`~/.config/yt-dlp/config` or `--config-location`)
+
 ```ini
 # Default options
 --format "bestvideo+bestaudio/best"
@@ -146,6 +155,7 @@ https://youtube.com/playlist?list=PLyyy
 ```
 
 ### Common Flags
+
 ```bash
 # Quality
 -f "bestvideo[height<=1080]+bestaudio/best[height<=1080]"

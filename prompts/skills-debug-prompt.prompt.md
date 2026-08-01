@@ -1,13 +1,23 @@
 ---
 name: skills-debug-prompt
 title: Skills Debug Execution Prompt
-description: 'Execute the skills-debug remediation plan: fix C-grade skill issues (missing frontmatter fields, missing core sections), then bulk-fix B-grade frontmatter, verify with hermes skills check + re-audit, and commit.'
+description: "Execute the skills-debug remediation plan: fix C-grade skill issues
+  (missing frontmatter fields, missing core sections), then bulk-fix B-grade frontmatter,
+  verify with hermes skills check + re-audit, and commit."
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets: [code_execution, file, terminal]
+toolsets:
+  - code_execution
+  - file
+  - terminal
 trigger: /skills-debug-prompt
-tags: [skills, audit, remediation, fix]
+tags:
+  - skills
+  - audit
+  - remediation
+  - fix
+  - hermes
 ---
 
 # Skills Debug Execution Prompt
@@ -48,10 +58,10 @@ Fix all remaining C-grade and B-grade skill issues found by the `/skills-fix` au
 
 ## Verification Checklist
 
-| # | Gate | Criterion |
-|---|------|-----------|
-| 1 | Scope | Only SKILL.md files under skills root touched |
-| 2 | Quality | `hermes skills check` passes for patched skills |
-| 3 | Tests | Re-audit shows F=0 and reduced C/B counts |
-| 4 | Regression | No skills deleted, no canonical copies lost |
-| 5 | Docs | Plan checklist + master index updated |
+| #   | Gate       | Criterion                                       |
+| --- | ---------- | ----------------------------------------------- |
+| 1   | Scope      | Only SKILL.md files under skills root touched   |
+| 2   | Quality    | `hermes skills check` passes for patched skills |
+| 3   | Tests      | Re-audit shows F=0 and reduced C/B counts       |
+| 4   | Regression | No skills deleted, no canonical copies lost     |
+| 5   | Docs       | Plan checklist + master index updated           |

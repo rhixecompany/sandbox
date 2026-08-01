@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Open the provided URL | Loaded page |
-| 1.2 | Identify the main navigation and primary actions | Flow shortlist |
-| 1.3 | Pick 3 to 5 core flows | Exploration plan |
+| Step | Action                                           | Output           |
+| ---- | ------------------------------------------------ | ---------------- |
+| 1.1  | Open the provided URL                            | Loaded page      |
+| 1.2  | Identify the main navigation and primary actions | Flow shortlist   |
+| 1.3  | Pick 3 to 5 core flows                           | Exploration plan |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Trigger the selected user flows | Interaction notes |
-| 2.2 | Record visible UI responses | Outcome log |
-| 2.3 | Capture locators for key elements | Locator list |
+| Step | Action                            | Output            |
+| ---- | --------------------------------- | ----------------- |
+| 2.1  | Trigger the selected user flows   | Interaction notes |
+| 2.2  | Record visible UI responses       | Outcome log       |
+| 2.3  | Capture locators for key elements | Locator list      |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Summarize the flows explored | Flow summary |
-| 3.2 | List the key locators and outcomes | Evidence table |
-| 3.3 | Note any issues or observations | Findings |
+| Step | Action                             | Output         |
+| ---- | ---------------------------------- | -------------- |
+| 3.1  | Summarize the flows explored       | Flow summary   |
+| 3.2  | List the key locators and outcomes | Evidence table |
+| 3.3  | Note any issues or observations    | Findings       |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Convert exploration notes into test ideas | Test list |
-| 4.2 | Close the browser context | Clean shutdown |
-| 4.3 | Deliver the summary | Final report |
+| Step | Action                                    | Output         |
+| ---- | ----------------------------------------- | -------------- |
+| 4.1  | Convert exploration notes into test ideas | Test list      |
+| 4.2  | Close the browser context                 | Clean shutdown |
+| 4.3  | Deliver the summary                       | Final report   |
 
 #### Tasks
 

@@ -121,28 +121,28 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function createPost(formData: FormData) {
-  const title = formData.get("title") as string;
-  const body = formData.get("body") as string;
+	const title = formData.get("title") as string;
+	const body = formData.get("body") as string;
 
-  // Validate
-  if (!title || !body) {
-    return { error: "Title and body are required" };
-  }
+	// Validate
+	if (!title || !body) {
+		return { error: "Title and body are required" };
+	}
 
-  // Create post
-  const res = await fetch("https://api.example.com/posts", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title, body })
-  });
+	// Create post
+	const res = await fetch("https://api.example.com/posts", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ title, body }),
+	});
 
-  if (!res.ok) {
-    return { error: "Failed to create post" };
-  }
+	if (!res.ok) {
+		return { error: "Failed to create post" };
+	}
 
-  // Revalidate and redirect
-  revalidatePath("/posts");
-  redirect("/posts");
+	// Revalidate and redirect
+	revalidatePath("/posts");
+	redirect("/posts");
 }
 ```
 
@@ -203,42 +203,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const searchParams = request.nextUrl.searchParams;
-  const page = searchParams.get("page") || "1";
+	const searchParams = request.nextUrl.searchParams;
+	const page = searchParams.get("page") || "1";
 
-  try {
-    const res = await fetch(
-      `https://api.example.com/posts?page=${page}`
-    );
-    const data = await res.json();
+	try {
+		const res = await fetch(`https://api.example.com/posts?page=${page}`);
+		const data = await res.json();
 
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json(
-      { error: "Failed to fetch posts" },
-      { status: 500 }
-    );
-  }
+		return NextResponse.json(data);
+	} catch (error) {
+		return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
+	}
 }
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
+	try {
+		const body = await request.json();
 
-    const res = await fetch("https://api.example.com/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body)
-    });
+		const res = await fetch("https://api.example.com/posts", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(body),
+		});
 
-    const data = await res.json();
-    return NextResponse.json(data, { status: 201 });
-  } catch (error) {
-    return NextResponse.json(
-      { error: "Failed to create post" },
-      { status: 500 }
-    );
-  }
+		const data = await res.json();
+		return NextResponse.json(data, { status: 201 });
+	} catch (error) {
+		return NextResponse.json({ error: "Failed to create post" }, { status: 500 });
+	}
 }
 ```
 
@@ -250,21 +242,21 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // Check authentication
-  const token = request.cookies.get("auth-token");
+	// Check authentication
+	const token = request.cookies.get("auth-token");
 
-  // Protect routes
-  if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    if (!token) {
-      return NextResponse.redirect(new URL("/login", request.url));
-    }
-  }
+	// Protect routes
+	if (request.nextUrl.pathname.startsWith("/dashboard")) {
+		if (!token) {
+			return NextResponse.redirect(new URL("/login", request.url));
+		}
+	}
 
-  return NextResponse.next();
+	return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/admin/:path*"]
+	matcher: ["/dashboard/:path*", "/admin/:path*"],
 };
 ```
 
@@ -306,32 +298,29 @@ export async function ProductList() {
 import { revalidateTag, updateTag, refresh } from "next/cache";
 
 export async function updateProduct(productId: string, data: any) {
-  // Update the product
-  const res = await fetch(
-    `https://api.example.com/products/${productId}`,
-    {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-      next: { tags: [`product-${productId}`, "products"] }
-    }
-  );
+	// Update the product
+	const res = await fetch(`https://api.example.com/products/${productId}`, {
+		method: "PUT",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(data),
+		next: { tags: [`product-${productId}`, "products"] },
+	});
 
-  if (!res.ok) {
-    return { error: "Failed to update product" };
-  }
+	if (!res.ok) {
+		return { error: "Failed to update product" };
+	}
 
-  // Use new v16 cache APIs
-  // updateTag: More granular control over tag updates
-  await updateTag(`product-${productId}`);
+	// Use new v16 cache APIs
+	// updateTag: More granular control over tag updates
+	await updateTag(`product-${productId}`);
 
-  // revalidateTag: Revalidate all paths with this tag
-  await revalidateTag("products");
+	// revalidateTag: Revalidate all paths with this tag
+	await revalidateTag("products");
 
-  // refresh: Force a full refresh of the current route
-  await refresh();
+	// refresh: Force a full refresh of the current route
+	await refresh();
 
-  return { success: true };
+	return { success: true };
 }
 ```
 
@@ -373,7 +362,7 @@ You help developers build high-quality Next.js 16 applications that are performa
 
 intelligently merge `.github/prompts/debug-issue.prompt.md`,`.github/prompts/debugger-prompt.md`,`.github/prompts/plan-batchFixAllErrorsWarningsAndDeprecations.prompt.md`,`.github/prompts/plan-eslintPluginAuditAndUpdate.prompt.md`,`.github/prompts/plan-fullEslintVscodeAuthModernization.prompt.md`,`.github/prompts/plan-optimize.prompt.md`,`.github/prompts/plan-setup.prompt.md` files into `.github/prompts/plan-debug-issues.prompt.md`
 
-/create-implementation-plan /plan-database `--- agent: 'Next.js Expert' description: 'Complete database architecture, implementation architect, and feature planning guide for ComicWise' model: 'Claude Haiku 4.5' tools: [vscode, execute, read, agent, edit, search, web, 'github/*', 'context7/*', 'modelcontextprotocol-servers-sequentialthinking/*', 'next-devtools/*', 'nextjs-docs-mcp/*', 'sentry/*', 'shadcn/*', 'github/*', 'io.github.chromedevtools/chrome-devtools-mcp/*', 'io.github.upstash/context7/*', 'playwright/*', vscode.mermaid-chat-features/renderMermaidDiagram, github.vscode-pull-request-github/issue_fetch, github.vscode-pull-request-github/suggest-fix, github.vscode-pull-request-github/searchSyntax, github.vscode-pull-request-github/doSearch, github.vscode-pull-request-github/renderIssues, github.vscode-pull-request-github/activePullRequest, github.vscode-pull-request-github/openPullRequest, ms-azuretools.vscode-containers/containerToolsConfig, prisma.prisma/prisma-migrate-status, prisma.prisma/prisma-migrate-dev, prisma.prisma/prisma-migrate-reset, prisma.prisma/prisma-studio, prisma.prisma/prisma-platform-login, prisma.prisma/prisma-postgres-create-database, todo]
+/create-implementation-plan /plan-database `--- agent: 'Next.js Expert' description: 'Complete database architecture, implementation architect, and feature planning guide for ComicWise' model: 'Claude Haiku 4.5' tools: [vscode, execute, read, agent, edit, search, web, 'github/_', 'context7/_', 'modelcontextprotocol-servers-sequentialthinking/_', 'next-devtools/_', 'nextjs-docs-mcp/_', 'sentry/_', 'shadcn/_', 'github/_', 'io.github.chromedevtools/chrome-devtools-mcp/_', 'io.github.upstash/context7/_', 'playwright/*', vscode.mermaid-chat-features/renderMermaidDiagram, github.vscode-pull-request-github/issue_fetch, github.vscode-pull-request-github/suggest-fix, github.vscode-pull-request-github/searchSyntax, github.vscode-pull-request-github/doSearch, github.vscode-pull-request-github/renderIssues, github.vscode-pull-request-github/activePullRequest, github.vscode-pull-request-github/openPullRequest, ms-azuretools.vscode-containers/containerToolsConfig, prisma.prisma/prisma-migrate-status, prisma.prisma/prisma-migrate-dev, prisma.prisma/prisma-migrate-reset, prisma.prisma/prisma-studio, prisma.prisma/prisma-platform-login, prisma.prisma/prisma-postgres-create-database, todo]
 
 ---
 

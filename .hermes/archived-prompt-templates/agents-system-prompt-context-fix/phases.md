@@ -72,4 +72,5 @@ Extracted from `agents-system-prompt-context-fix.prompt.md`.
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

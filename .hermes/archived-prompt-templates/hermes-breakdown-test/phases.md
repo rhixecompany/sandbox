@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Read the feature PRD and supporting docs | QA brief |
-| 1.2 | Identify the riskiest behaviors | Risk summary |
-| 1.3 | Note missing inputs or assumptions | Gap list |
+| Step | Action                                   | Output       |
+| ---- | ---------------------------------------- | ------------ |
+| 1.1  | Read the feature PRD and supporting docs | QA brief     |
+| 1.2  | Identify the riskiest behaviors          | Risk summary |
+| 1.3  | Note missing inputs or assumptions       | Gap list     |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Write the test scope and quality model mapping | Strategy draft |
-| 2.2 | Add the test issue checklist | Checklist draft |
-| 2.3 | Add the QA plan and execution notes | QA plan draft |
+| Step | Action                                         | Output          |
+| ---- | ---------------------------------------------- | --------------- |
+| 2.1  | Write the test scope and quality model mapping | Strategy draft  |
+| 2.2  | Add the test issue checklist                   | Checklist draft |
+| 2.3  | Add the QA plan and execution notes            | QA plan draft   |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Check for missing test categories | Coverage gap list |
-| 3.2 | Simplify wording and reduce overlap | Refined draft |
-| 3.3 | Confirm file names and output paths | File-ready output |
+| Step | Action                              | Output            |
+| ---- | ----------------------------------- | ----------------- |
+| 3.1  | Check for missing test categories   | Coverage gap list |
+| 3.2  | Simplify wording and reduce overlap | Refined draft     |
+| 3.3  | Confirm file names and output paths | File-ready output |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Re-read the final artifacts | Verification notes |
-| 4.2 | Confirm the required sections are present | Section check |
-| 4.3 | Confirm the target paths | Output confirmation |
+| Step | Action                                    | Output              |
+| ---- | ----------------------------------------- | ------------------- |
+| 4.1  | Re-read the final artifacts               | Verification notes  |
+| 4.2  | Confirm the required sections are present | Section check       |
+| 4.3  | Confirm the target paths                  | Output confirmation |
 
 #### Tasks
 

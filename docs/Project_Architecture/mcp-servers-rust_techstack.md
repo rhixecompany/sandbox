@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Rust (MCP) |
+| Category    | Technology                 |
+| ----------- | -------------------------- |
+| **Type**    | Rust (MCP)                 |
 | **Pattern** | Rust MCP server with Cargo |
-| **Stack** | Rust, Cargo |
+| **Stack**   | Rust, Cargo                |
 
 ## Development Tools
 

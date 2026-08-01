@@ -15,9 +15,9 @@
 
 #### TypeScript Errors (1)
 
-| File | Line | Error | Root Cause | Fix Strategy |
-| --- | --- | --- | --- | --- |
-| `src/tests/e2e/reading.spec.ts` | 163 | TS2769: No overload matches `toHaveAttribute()` | `initialAriaPressed` is `string \| null`, method expects `string \| RegExp` | Add null assertion or conditional check |
+| File                            | Line | Error                                           | Root Cause                                                                  | Fix Strategy                            |
+| ------------------------------- | ---- | ----------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------- |
+| `src/tests/e2e/reading.spec.ts` | 163  | TS2769: No overload matches `toHaveAttribute()` | `initialAriaPressed` is `string \| null`, method expects `string \| RegExp` | Add null assertion or conditional check |
 
 #### ESLint Errors (30)
 
@@ -32,17 +32,17 @@
 
 #### Test Failures (21 / 175)
 
-| File | Count | Issue Type | Analysis Required |
-| --- | --- | --- | --- |
-| `src/tests/auth.test.ts` | 1 | Assertion logic | Mock setup vs. actual implementation |
-| `src/tests/rating.test.ts` | 1 | Assertion failure | Expected vs. actual test result |
-| `src/tests/search.actions.test.ts` | 3 | Promise/mock issues | Await patterns and mock configuration |
-| `src/tests/comic-dal.spec.ts` | 1 | Missing await | Async operation not awaited |
-| `src/tests/comic-schema.spec.ts` | 1 | Schema validation | Validation logic mismatch |
-| `src/tests/search-dal.spec.ts` | 2 | Query/data issues | DAL query logic |
-| `src/tests/comment.test.ts` | 1 | Logic error | Test assertion or code logic |
-| `src/tests/reading-progress.test.ts` | 3 | Async/state issues | Promise handling and state |
-| Other files | 8 | Various | Auto-fix vs. manual fix decision |
+| File                                 | Count | Issue Type          | Analysis Required                     |
+| ------------------------------------ | ----- | ------------------- | ------------------------------------- |
+| `src/tests/auth.test.ts`             | 1     | Assertion logic     | Mock setup vs. actual implementation  |
+| `src/tests/rating.test.ts`           | 1     | Assertion failure   | Expected vs. actual test result       |
+| `src/tests/search.actions.test.ts`   | 3     | Promise/mock issues | Await patterns and mock configuration |
+| `src/tests/comic-dal.spec.ts`        | 1     | Missing await       | Async operation not awaited           |
+| `src/tests/comic-schema.spec.ts`     | 1     | Schema validation   | Validation logic mismatch             |
+| `src/tests/search-dal.spec.ts`       | 2     | Query/data issues   | DAL query logic                       |
+| `src/tests/comment.test.ts`          | 1     | Logic error         | Test assertion or code logic          |
+| `src/tests/reading-progress.test.ts` | 3     | Async/state issues  | Promise handling and state            |
+| Other files                          | 8     | Various             | Auto-fix vs. manual fix decision      |
 
 ### Implementation Plan
 

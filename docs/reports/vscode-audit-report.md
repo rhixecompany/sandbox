@@ -71,4 +71,3 @@ Single formatter per language. `editor.formatOnSave: true` globally.
 4. No changes needed for `settings.json`, `mcp.json`
 
 ---
-

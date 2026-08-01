@@ -10,8 +10,8 @@ normalization) + Phase 3/4 (CI) for the `docs` tree.
 ## Local branches (git branch -vv)
 
 - `* development` b8b86b0f — [origin/development] "feat: add Bash + Resume_maker to repo prompt, expand 14→16 project refs" (current branch)
-- `master`      0792d250 — [origin/master] "updates"
-- `production`  0792d250 — [origin/production] "updates"
+- `master` 0792d250 — [origin/master] "updates"
+- `production` 0792d250 — [origin/production] "updates"
 
 ## Remote branches (git branch -r)
 
@@ -22,12 +22,12 @@ normalization) + Phase 3/4 (CI) for the `docs` tree.
 
 ## GitHub default branch (gh repo view --json defaultBranchRef)
 
-- **master**  (master is the current GitHub default; origin/HEAD points to origin/master)
+- **master** (master is the current GitHub default; origin/HEAD points to origin/master)
 
 ## Remote / origin
 
-- origin  <https://github.com/rhixecompany/sandbox.git> (fetch)
-- origin  <https://github.com/rhixecompany/sandbox.git> (push)
+- origin <https://github.com/rhixecompany/sandbox.git> (fetch)
+- origin <https://github.com/rhixecompany/sandbox.git> (push)
 
 ## CI workflow pre-existing state
 

@@ -3,13 +3,14 @@
 
 Writes POST_APPLY_VERIFICATION.json to .copilot/session-state/.
 """
+
 from __future__ import annotations
 
 import json
 import re
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -17,42 +18,56 @@ PROMPTS_DIR = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO_ROOT / ".copilot" / "session-state"
 FM_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
-PLACEHOLDER_RE = re.compile(r"^(path/to/|\.\./\.\./|<|\[|examples/|docs/|spec/|README|CONTRIBUTING|CODE_OF_CONDUCT|link$|.*\.(md|json|txt|ya?ml|toml)$)")
+PLACEHOLDER_RE = re.compile(
+    r"^(path/to/|\.\./\.\./|<|\[|examples/|docs/|spec/|README|CONTRIBUTING|CODE_OF_CONDUCT|link$|.*\.(md|json|txt|ya?ml|toml)$)"
+)
 KNOWN_FENCE_CONVENTIONS = {
-    "add-educational-comments.prompt.md", "az-cost-optimize.prompt.md",
-    "breakdown-plan.prompt.md", "comicwise-development.prompt.md",
-    "copilot-instructions-blueprint-generator.prompt.md", "create-llms.prompt.md",
-    "dev-imp.prompt.md", "features.prompt.md",
-    "kotlin-mcp-server-generator.prompt.md", "optimize-agentsMd.prompt.md",
-    "php-mcp-server-generator.prompt.md", "quality-gate-debugger.prompt.md",
-    "refactor-plan.prompt.md", "remember.prompt.md",
-    "memory-merger.prompt.md", "ruby-mcp-server-generator.prompt.md",
+    "add-educational-comments.prompt.md",
+    "az-cost-optimize.prompt.md",
+    "breakdown-plan.prompt.md",
+    "comicwise-development.prompt.md",
+    "copilot-instructions-blueprint-generator.prompt.md",
+    "create-llms.prompt.md",
+    "dev-imp.prompt.md",
+    "features.prompt.md",
+    "kotlin-mcp-server-generator.prompt.md",
+    "optimize-agentsMd.prompt.md",
+    "php-mcp-server-generator.prompt.md",
+    "quality-gate-debugger.prompt.md",
+    "refactor-plan.prompt.md",
+    "remember.prompt.md",
+    "memory-merger.prompt.md",
+    "ruby-mcp-server-generator.prompt.md",
     "templates/create-architectural-decision-record/required_documentation_st.md",
     "templates/create-github-action-workflow-specification/token_optimization_strate.md",
     "templates/memory-merger/process.md",
     "templates/structured-autonomy-plan/step_3_plan_generation.md",
     "templates/update-markdown-file-index/files_in_folder.md",
-    "update-oo-component-documentation.prompt.md", "update-specification.prompt.md",
+    "update-oo-component-documentation.prompt.md",
+    "update-specification.prompt.md",
     "what-context-needed.prompt.md",
 }
 
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    files = sorted(p for p in PROMPTS_DIR.rglob("*") if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md")))
+    ts = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
+    files = sorted(
+        p for p in PROMPTS_DIR.rglob("*") if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md"))
+    )
     results = {}
 
     # YAML
     yaml_broken = []
     try:
         import yaml  # type: ignore
+
         for p in files:
             m = FM_RE.match(p.read_text(encoding="utf-8", errors="replace"))
             if m:
                 try:
                     yaml.safe_load(m.group(1))
-                except Exception:  # noqa: BLE001
+                except Exception:
                     yaml_broken.append(str(p.relative_to(PROMPTS_DIR)))
     except ImportError:
         pass
@@ -94,11 +109,15 @@ def main() -> int:
 
     # git state
     r = subprocess.run(["git", "-C", str(REPO_ROOT), "status", "--porcelain"], capture_output=True, text=True)
-    dirty = [l for l in r.stdout.splitlines() if l.strip()]
+    dirty = [line for line in r.stdout.splitlines() if line.strip()]
     results["git_working_tree"] = {"status": "PASS" if not dirty else "WARN", "dirty_entries": len(dirty)}
 
-    report = {"generated": ts, "files_checked": len(files), "checks": results,
-              "requirement": "All Critical checks MUST pass after apply"}
+    report = {
+        "generated": ts,
+        "files_checked": len(files),
+        "checks": results,
+        "requirement": "All Critical checks MUST pass after apply",
+    }
     (OUT_DIR / "POST_APPLY_VERIFICATION.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     print(json.dumps({k: v["status"] for k, v in results.items()}, indent=2))

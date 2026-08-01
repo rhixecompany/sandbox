@@ -13,14 +13,14 @@ Central documentation resource for the SandBox workspace. Contains architecture 
 
 ## Contents
 
-| Resource | Description |
-| ---------- | ------------- |
-| `architecture.md` | Workspace-level architecture overview |
-| `tech-stack.md` | Cross-project technology index |
-| `folder-structure.md` | Top-level directory map |
-| `README.md` | Entry point and navigation |
+| Resource               | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `architecture.md`      | Workspace-level architecture overview    |
+| `tech-stack.md`        | Cross-project technology index           |
+| `folder-structure.md`  | Top-level directory map                  |
+| `README.md`            | Entry point and navigation               |
 | `RESEARCH_APPENDIX.md` | Research campaign supplementary material |
-| `DEPENDENCY_AUDIT.md` | Cross-project dependency analysis |
+| `DEPENDENCY_AUDIT.md`  | Cross-project dependency analysis        |
 
 ## Data Flow
 

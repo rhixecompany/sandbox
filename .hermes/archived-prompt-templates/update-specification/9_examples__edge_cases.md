@@ -8,4 +8,6 @@
 // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
 ```
 
-````
+```
+
+```

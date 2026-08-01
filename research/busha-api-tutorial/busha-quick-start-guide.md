@@ -41,10 +41,10 @@ Status: "Pending Verification" → Email notification on approval
 
 ## Key Types
 
-| Key Type | Use Case | Security |
-|----------|----------|----------|
+| Key Type    | Use Case             | Security             |
+| ----------- | -------------------- | -------------------- |
 | Public Keys | Front-end apps, SDKs | Safe for client-side |
-| Secret Keys | Server-side only | Must be confidential |
+| Secret Keys | Server-side only     | Must be confidential |
 
 ## Integration Flow
 
@@ -62,4 +62,4 @@ Status: "Pending Verification" → Email notification on approval
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

@@ -61,4 +61,5 @@ Extracted from `ai-prompt-engineering-safety-review.prompt.md`.
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

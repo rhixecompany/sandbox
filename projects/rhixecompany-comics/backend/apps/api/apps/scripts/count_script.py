@@ -1,9 +1,6 @@
 from pprint import pprint
 
-from api.apps.models import Chapter
-from api.apps.models import ChapterImage
-from api.apps.models import Comic
-from api.apps.models import ComicImage
+from api.apps.models import Chapter, ChapterImage, Comic, ComicImage
 
 
 def run():
@@ -18,7 +15,7 @@ def run():
         .all()
     )
     comic_images = ComicImage.objects.select_related("comic").all()
-    pprint(  # noqa: T203
+    pprint(
         {
             "Comics": comics.values()[0:2],
             "Comics_Count": comics.count(),
@@ -26,11 +23,9 @@ def run():
             "ComicsImage_Count": comic_images.count(),
         },
     )
-    chapters = (
-        Chapter.objects.prefetch_related("chapteritems").select_related("comic").all()
-    )
+    chapters = Chapter.objects.prefetch_related("chapteritems").select_related("comic").all()
     chapter_images = ChapterImage.objects.select_related("comic", "chapter").all()
-    pprint(  # noqa: T203
+    pprint(
         {
             "Chapters": chapters.values()[0:2],
             "Chapters_Count": chapters.count(),

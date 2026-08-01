@@ -79,12 +79,12 @@ CLI/API → SeedOrchestrator → Seeder.seed() → Zod validate → Batch Proces
 
 ### Why This Structure?
 
-| Decision | Rationale |
-| --- | --- |
-| **DAL layer** | Type-safe queries, N+1 prevention via `.with()`, error normalization |
-| **Server Actions for mutations** | No API routes for app mutations — colocated, progressive enhancement |
-| **Modular auth** | 4 files (`auth.ts`, `auth-config.ts`, `auth-providers.ts`, `auth-adapter.ts`) for independent testability and provider swapping |
-| **Drizzle ORM** | Type-safe SQL, lightweight, Neon-compatible, excellent migration tooling |
-| **Separate seed schemas** | Seed data shapes differ from app schemas (e.g., external IDs, author name strings vs FK IDs) |
+| Decision                         | Rationale                                                                                                                       |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **DAL layer**                    | Type-safe queries, N+1 prevention via `.with()`, error normalization                                                            |
+| **Server Actions for mutations** | No API routes for app mutations — colocated, progressive enhancement                                                            |
+| **Modular auth**                 | 4 files (`auth.ts`, `auth-config.ts`, `auth-providers.ts`, `auth-adapter.ts`) for independent testability and provider swapping |
+| **Drizzle ORM**                  | Type-safe SQL, lightweight, Neon-compatible, excellent migration tooling                                                        |
+| **Separate seed schemas**        | Seed data shapes differ from app schemas (e.g., external IDs, author name strings vs FK IDs)                                    |
 
 ---

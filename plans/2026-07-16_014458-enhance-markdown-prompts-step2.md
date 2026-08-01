@@ -17,14 +17,17 @@
    ```
 
    - Capture the output; any remaining errors will be prompts with missing/invalid front‑matter (e.g., `update-implementation-plan.prompt.md`).
+
 2. **Analyse validation results** to produce a list of prompts requiring front‑matter fixes:
    - Required fields: `name`, `description`, `version`.
    - Ensure `trigger:` follows the pattern `/<slug>` where slug = filename without `.prompt.md`.
    - Add any missing optional fields (`toolsets`, `references`) as empty lists if not present.
-3. **Prepare patch directives** for each offending prompt (one‑per‑file). *Do not apply them yet* – this plan step records the intended actions.
+3. **Prepare patch directives** for each offending prompt (one‑per‑file). _Do not apply them yet_ – this plan step records the intended actions.
    - Example patch snippet for `update-implementation-plan.prompt.md`:
 
      ```yaml
+
+     ```
 
 ---
 
@@ -57,3 +60,4 @@ trigger: /update-implementation-plan
 
 
 > Execution: Use the `subagent-driven-development` skill to dispatch tasks via subagents with two-stage review (spec compliance to code quality).
+```

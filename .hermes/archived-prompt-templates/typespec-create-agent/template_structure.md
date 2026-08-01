@@ -31,4 +31,4 @@ namespace [AgentName] {
   // Add capabilities as operations here
   op capabilityName is AgentCapabilities.[CapabilityType]<[Parameters]>;
 }
-````
+```

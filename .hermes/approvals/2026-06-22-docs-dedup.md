@@ -2,7 +2,7 @@
 
 **Requestor:** OWL (Hermes Agent)  
 **Scope:** 459 auto-generated files across 2 directories  
-**Created:** 2026-06-22  
+**Created:** 2026-06-22
 
 ## Deletion Manifest
 
@@ -53,6 +53,6 @@ python3 skills-audit.py         # re-run audit for skills-audit
 
 [ ] Yes — proceed with deletion  
 [ ] No — cancel  
-[ ] Review manifest first  
+[ ] Review manifest first
 
-**Valid until:** 2026-06-23  
+**Valid until:** 2026-06-23

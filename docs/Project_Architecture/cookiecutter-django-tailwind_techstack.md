@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Template) |
-| **Pattern** | Cookiecutter project template with Docker |
-| **Stack** | Django 5, Python 3.11, Tailwind CSS, Docker Compose, PostgreSQL |
+| Category    | Technology                                                      |
+| ----------- | --------------------------------------------------------------- |
+| **Type**    | Python/Django (Template)                                        |
+| **Pattern** | Cookiecutter project template with Docker                       |
+| **Stack**   | Django 5, Python 3.11, Tailwind CSS, Docker Compose, PostgreSQL |
 
 ## Development Tools
 

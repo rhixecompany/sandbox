@@ -97,6 +97,7 @@
 ## Coding Conventions
 
 ### TypeScript
+
 - **Strict mode**: All strict flags enabled
 - **No `any`**: Use `unknown` with type guards
 - **Modules**: ESM only (`"type": "module"`)
@@ -104,6 +105,7 @@
 - **Validation**: Zod schemas for all API inputs
 
 ### React/Next.js
+
 - **Components**: Function components only (no classes)
 - **Server Components**: Default in App Router
 - **Client Components**: Only when needed (`'use client'`)
@@ -111,11 +113,13 @@
 - **Styling**: `cn()` utility + CVA for variants
 
 ### Database
+
 - **Schema**: `src/db/schema.ts` (Drizzle)
 - **Migrations**: `drizzle-kit generate/migrate` (not `db:push`)
 - **Studio**: `drizzle-kit studio` for inspection
 
 ### Testing
+
 - **Unit**: Vitest (`src/**/*.test.ts`)
 - **E2E**: Playwright (`tests/`, Chromium project)
 - **Database**: Playwright prepares test DB
@@ -125,6 +129,7 @@
 ## Usage Patterns
 
 ### API Routes
+
 ```
 src/app/api/
 ├── auth/[...nextauth]/      # NextAuth.js
@@ -136,6 +141,7 @@ src/app/api/
 ```
 
 ### Database Schema
+
 ```typescript
 // src/db/schema.ts
 import { pgTable, serial, text, timestamp, integer, decimal } from 'drizzle-orm/pg-core';
@@ -148,12 +154,14 @@ export const accounts = pgTable('accounts', {
 ```
 
 ### Authentication Flow
+
 1. NextAuth.js with credentials + Plaid OAuth
 2. JWT strategy with secure cookies
 3. Middleware protection for `/dashboard/*`
 4. Server-side session via `getServerSession`
 
 ### Payment Flow (Plaid + Dwolla)
+
 1. User links bank via Plaid Link (client-side)
 2. Plaid public_token exchanged for access_token (server)
 3. Access_token stored encrypted

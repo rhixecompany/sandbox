@@ -1,28 +1,16 @@
+from api.apps.filters import ChapterFilter
+from api.apps.forms import ChapterForm, ChapterImageForm, CommentForm
+from api.apps.models import Chapter, ChapterImage, Comic
+from api.users.decorators import admin_only, user_only
 from django.conf import settings
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
-from django.http import Http404
-from django.http import HttpRequest
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect
-from django.shortcuts import render
+from django.http import Http404, HttpRequest, HttpResponse
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_http_methods
 from django_htmx.http import trigger_client_event
 from django_htmx.middleware import HtmxDetails
-
-from api.apps.filters import ChapterFilter
-from api.apps.forms import ChapterForm
-from api.apps.forms import ChapterImageForm
-from api.apps.forms import CommentForm
-from api.apps.models import Chapter
-from api.apps.models import ChapterImage
-from api.apps.models import Comic
-from api.users.decorators import admin_only
-from api.users.decorators import user_only
 
 
 # Typing pattern recommended by django-stubs:
@@ -42,7 +30,7 @@ def chapter_list_view(
     paginator = Paginator(chapter_filter.qs, settings.PAGINATE_BY)
     page_number = request.GET.get("page")
     try:
-        page_obj = paginator.page(page_number)  # type: ignore  # noqa: PGH003
+        page_obj = paginator.page(page_number)  # type: ignore
     except PageNotAnInteger:
         page_obj = paginator.page(1)
 
@@ -91,7 +79,7 @@ def chapter_detail_hx_view(
         paginator = Paginator(chapters, 1)
         page_number = request.GET.get("page")
         try:
-            page_obj = paginator.page(page_number)  # type: ignore  # noqa: PGH003
+            page_obj = paginator.page(page_number)  # type: ignore
         except PageNotAnInteger:
             page_obj = paginator.page(1)
 
@@ -206,11 +194,7 @@ def chapter_delete_view(
     slug=None,
 ) -> HttpResponse:
     try:
-        obj = (
-            Chapter.objects.prefetch_related("chapteritems")
-            .select_related("comic")
-            .get(slug=slug)
-        )
+        obj = Chapter.objects.prefetch_related("chapteritems").select_related("comic").get(slug=slug)
     except:  # noqa: E722
         obj = None
     if obj is None:
@@ -237,16 +221,12 @@ def chapter_delete_view(
 def chapter_images_update_hx_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     if not request.htmx:
         raise Http404
     try:
-        parent_obj = (
-            Chapter.objects.prefetch_related("chapteritems")
-            .select_related("comic")
-            .get(slug=parent_slug)
-        )
+        parent_obj = Chapter.objects.prefetch_related("chapteritems").select_related("comic").get(slug=parent_slug)
     except:  # noqa: E722
         parent_obj = None
     if parent_obj is None:
@@ -287,7 +267,7 @@ def chapter_images_update_hx_view(
 def chapter_images_delete_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     try:
         obj = ChapterImage.objects.select_related("comic", "chapter").get(

@@ -1,6 +1,7 @@
 ---
 status: completed
 ---
+
 # Execution Plan — Prompt and Plan Normalization
 
 > **For Hermes:** Use `executing-plans` skill to execute this plan task-by-task.
@@ -95,4 +96,5 @@ Objective: deliver clean state.
 - [ ] 4.4 `git push`
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

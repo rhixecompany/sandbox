@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Utility) |
+| Category    | Technology                                |
+| ----------- | ----------------------------------------- |
+| **Type**    | TypeScript/Bun (Utility)                  |
 | **Pattern** | PDF generation from structured JSON input |
-| **Stack** | Bun, TypeScript, ESLint |
+| **Stack**   | Bun, TypeScript, ESLint                   |
 
 ## Development Tools
 

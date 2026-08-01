@@ -9,6 +9,7 @@
 ## Architecture Overview
 
 **Pattern:** Two independent stacks sharing PostgreSQL database
+
 ```
 rhixecompany-comics/
 ├── backend/    # Django 5 + DRF + Celery + Scrapy + Selenium
@@ -39,6 +40,7 @@ rhixecompany-comics/
 | **Env** | python-dotenv | ^1.0 | BSD |
 
 ### Backend Dependencies (`requirements.txt`)
+
 ```text
 Django>=5.0,<5.2
 djangorestframework>=3.15,<4.0
@@ -75,6 +77,7 @@ drf-spectacular>=0.27,<1.0
 | **State** | Zustand + TanStack Query | Latest | MIT |
 
 ### Frontend Dependencies (`frontend/package.json`)
+
 ```json
 {
   "dependencies": {
@@ -129,12 +132,14 @@ drf-spectacular>=0.27,<1.0
 ```
 
 ### Celery Tasks
+
 - **Scheduled scraping** (Celery Beat → daily/weekly)
 - **Image processing** (compression, thumbnails)
 - **Notification dispatch** (email, push)
 - **Data aggregation** (stats, recommendations)
 
 ### Scrapy Spiders
+
 - **Comic metadata** from publisher sites
 - **Chapter lists** and image URLs
 - **Rate limited** with polite delays
@@ -145,6 +150,7 @@ drf-spectacular>=0.27,<1.0
 ## Frontend Architecture
 
 **Next.js 16 App Router** with:
+
 - Server Components by default
 - Client Components for interactivity
 - Server Actions for mutations
@@ -240,6 +246,7 @@ model Chapter {
 ## Commands
 
 ### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -261,6 +268,7 @@ mypy .
 ```
 
 ### Frontend
+
 ```bash
 cd frontend
 npm install
@@ -275,6 +283,7 @@ npm run test
 ```
 
 ### Full Stack (Docker)
+
 ```bash
 docker-compose up -d
 # backend: 8000, frontend: 3000, db: 5432, redis: 6379

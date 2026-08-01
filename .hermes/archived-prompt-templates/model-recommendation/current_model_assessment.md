@@ -10,7 +10,7 @@ Recommendation: [Keep current model | Consider switching to [Recommended Model]]
 
 Rationale: [Explanation]
 
-```
+````
 
 **Tool Alignment Check**:
 
@@ -34,7 +34,7 @@ Using `context7/get-library-docs` with library ID `/websites/github_en_copilot`:
 - Query topic: "model capabilities [specific capability question]"
 - Retrieve current model features, multipliers, deprecation status
 - Cross-reference against analyzed file requirements
-```
+````
 
 **Example Context7 Usage**:
 

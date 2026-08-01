@@ -22,10 +22,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Async:** tokio full runtime
 
 ### Project Structure
+
 ```
 mcp-servers/rust/
 ├── Cargo.toml
@@ -104,6 +106,7 @@ async fn main() -> Result<(), anyhow::Error> {
 ## Tool Implementation Pattern
 
 ### Using rmcp macros (recommended)
+
 ```rust
 // src/tools/greet.rs
 use rmcp::{tool, model::*};
@@ -118,6 +121,7 @@ impl MyMcpServer {
 ```
 
 ### Manual implementation (if needed)
+
 ```rust
 // Alternative manual tool definition
 use rmcp::{model::*, ServerHandler, RequestContext};

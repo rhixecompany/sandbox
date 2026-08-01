@@ -1,7 +1,6 @@
-from django.db.models.signals import pre_delete
-
 from api.users.models import User
 from api.users.utils import delete_instance_image
+from django.db.models.signals import pre_delete
 
 
 def user_image_pre_delete(sender, instance, *args, **kwargs):

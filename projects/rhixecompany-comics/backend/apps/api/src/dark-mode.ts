@@ -20,7 +20,7 @@ const themeToggleBtn = document.getElementById(
   "theme-toggle",
 ) as HTMLBodyElement;
 
-let event1 = new Event("dark-mode");
+const event1 = new Event("dark-mode");
 
 themeToggleBtn.addEventListener("click", function () {
   // toggle icons

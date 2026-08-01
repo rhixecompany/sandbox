@@ -2,8 +2,8 @@ name: Bash Scripts CI
 on:
   pull_request:
     paths:
-      - 'projects/Bash/**'
-      - '.github/workflows/**'
+      - "projects/Bash/**"
+      - ".github/workflows/**"
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: |
           if command -v bun >/dev/null 2>&1; then

@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (MCP) |
+| Category    | Technology                     |
+| ----------- | ------------------------------ |
+| **Type**    | TypeScript/Bun (MCP)           |
 | **Pattern** | TypeScript MCP server with Bun |
-| **Stack** | Bun, TypeScript |
+| **Stack**   | Bun, TypeScript                |
 
 ## Development Tools
 

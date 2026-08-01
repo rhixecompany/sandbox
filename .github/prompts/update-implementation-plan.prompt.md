@@ -87,6 +87,7 @@ Use when you need to create or update an implementation plan for the current wor
 ## Inputs
 
 The following inputs are gathered to create or update an implementation plan:- **Workspace State**: The current contents of `<workspace_root>`, including existing files, directory structure, and any plan files in the `plan/` directory. Discovered via Phase 1 file system scan.
+
 - **User Request**: The specific request, diff, spec, or features provided by the user initiating the command. Passed as command arguments or context.
 - **Plan Variables**: Any explicit prompt variables, paths, or constraints named in the original instructions (e.g., `<purpose>`, `<component>`, `<version>`). Extracted from user input.
 - **Existing Plan File**: If updating an existing plan, the current content at `<workspace_root>/plan/<purpose>-<component>-<version>.md`. Loaded during Phase 1 assessment.

@@ -16,22 +16,14 @@ In Next.js 16, `searchParams` must be `await`ed:
 
 ```typescript
 // ❌ WRONG (Next.js 15 pattern)
-export default function Page({
-  searchParams
-}: {
-  searchParams: { page?: string };
-}) {
-  const page = searchParams.page;
+export default function Page({ searchParams }: { searchParams: { page?: string } }) {
+	const page = searchParams.page;
 }
 
 // ✅ CORRECT (Next.js 16)
-export default async function Page({
-  searchParams
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
-  const params = await searchParams;
-  const page = params.page;
+export default async function Page({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+	const params = await searchParams;
+	const page = params.page;
 }
 ```
 
@@ -63,7 +55,7 @@ const year = useCurrentYear(); // null during SSR, number after hydration
 ```typescript
 // Pattern used in src/lib/env.ts
 throw new Error(`Validation failed:\n${errors}`, {
-  cause: originalError
+	cause: originalError,
 });
 ```
 
@@ -79,15 +71,10 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
 export const useMyStore = create<State>()(
-  devtools(
-    persist(
-      set => ({
-        /* initial state + actions */
-      }),
-      { name: "store-name" }
-    ),
-    { name: "MyStore" }
-  )
+	devtools(
+		persist((set) => ({/* initial state + actions */}), { name: "store-name" }),
+		{ name: "MyStore" },
+	),
 );
 ```
 

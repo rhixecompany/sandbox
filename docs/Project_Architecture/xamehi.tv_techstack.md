@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Backend) |
+| Category    | Technology                       |
+| ----------- | -------------------------------- |
+| **Type**    | Python/Django (Backend)          |
 | **Pattern** | Django + Video streaming backend |
-| **Stack** | Django, Python, Gunicorn, SQLite |
+| **Stack**   | Django, Python, Gunicorn, SQLite |
 
 ## Development Tools
 

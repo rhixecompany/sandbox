@@ -20,10 +20,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Autoloading:** PSR-4 via Composer autoloader
 
 ### Project Structure
+
 ```
 mcp-servers/php/
 ├── src/

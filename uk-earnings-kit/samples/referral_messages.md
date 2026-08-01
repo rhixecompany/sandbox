@@ -29,7 +29,7 @@ Use these templates when referring friends to earning platforms. Many platforms 
 
 > "Prolific is an academic survey site that actually pays well — £8-15/hr. Studies are interesting, payments go to PayPal. Much better than Attapoll/Outlier. Sign up here: [prolific.co](https://www.prolific.co)"
 
-*(Prolific doesn't have a referral program — share the direct link)*
+_(Prolific doesn't have a referral program — share the direct link)_
 
 ### Freecash
 
@@ -51,13 +51,13 @@ Use these templates when referring friends to earning platforms. Many platforms 
 
 ## Best Practices
 
-| Do | Don't |
-|----|-------|
+| Do                                      | Don't                                  |
+| --------------------------------------- | -------------------------------------- |
 | Mention how much you've actually earned | Lie about earnings or make wild claims |
-| Say it's UK-friendly | Post in non-UK groups |
-| Include non-ref link for trust | Only share referral links |
-| Be honest about requirements | Claim it's "zero effort" |
-| Post in relevant communities | Spam the same message everywhere |
+| Say it's UK-friendly                    | Post in non-UK groups                  |
+| Include non-ref link for trust          | Only share referral links              |
+| Be honest about requirements            | Claim it's "zero effort"               |
+| Post in relevant communities            | Spam the same message everywhere       |
 
 ---
 

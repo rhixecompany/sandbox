@@ -1,4 +1,5 @@
 """Configures Django app config for the scraping module."""
+
 from __future__ import annotations
 
 from django.apps import AppConfig

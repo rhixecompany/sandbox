@@ -1,22 +1,15 @@
+from api.apps.models import Comic, ComicStatus, UserItem
+from api.apps.validators import get_max_order, reorder
+from api.users.decorators import user_function
 from django.contrib.auth.decorators import user_passes_test
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.utils.timezone import now
-from django.utils.timezone import timedelta
+from django.utils.timezone import now, timedelta
 from django.views.decorators.http import require_http_methods
 from django_htmx.http import trigger_client_event
 from render_block import render_block_to_string
-
-from api.apps.models import Comic
-from api.apps.models import ComicStatus
-from api.apps.models import UserItem
-from api.apps.validators import get_max_order
-from api.apps.validators import reorder
-from api.users.decorators import user_function
 
 
 @require_http_methods(["GET"])
@@ -33,12 +26,12 @@ def bookmarks(request):
     except EmptyPage:
         page_obj = paginator.page(paginator.num_pages)
     page_obj = paginator.get_page(page_number)
-    monthly = Q(updated_at__gte=(now() - timedelta(days=31)).date()) & Q(
-        status=ComicStatus.ONGOING  # noqa: COM812
-    ) | Q(status=ComicStatus.SEASON_END)
-    weekly = Q(updated_at__gte=(now() - timedelta(days=7)).date()) & Q(
-        status=ComicStatus.ONGOING  # noqa: COM812
-    ) | Q(status=ComicStatus.SEASON_END)
+    monthly = Q(updated_at__gte=(now() - timedelta(days=31)).date()) & Q(status=ComicStatus.ONGOING) | Q(
+        status=ComicStatus.SEASON_END
+    )
+    weekly = Q(updated_at__gte=(now() - timedelta(days=7)).date()) & Q(status=ComicStatus.ONGOING) | Q(
+        status=ComicStatus.SEASON_END
+    )
 
     monqueryset = (
         Comic.objects.prefetch_related(
@@ -83,7 +76,7 @@ def bookmarks(request):
         html = render_block_to_string(
             "partials/bookmark/grid.html",
             "bookmarkcomics",
-            context,  # type: ignore  # noqa: PGH003
+            context,  # type: ignore
         )
         return HttpResponse(html)
     return render(request, "bookmark/list.html", context)
@@ -97,7 +90,7 @@ def load(request):
         "items": queryset,
     }
 
-    html = render_block_to_string("partials/bookmarks.html", "comicbookmark", context)  # type: ignore  # noqa: PGH003
+    html = render_block_to_string("partials/bookmarks.html", "comicbookmark", context)  # type: ignore
     return HttpResponse(html)
 
 
@@ -121,7 +114,7 @@ def add_bookmark(request):
         html = render_block_to_string(
             "partials/comic/bookmark.html",
             "comicbookmark",
-            context,  # type: ignore  # noqa: PGH003
+            context,  # type: ignore
         )
         response = HttpResponse(html)
 
@@ -142,7 +135,7 @@ def delete_bookmark(request, comic_id):
         html = render_block_to_string(
             "partials/comic/bookmark.html",
             "comicbookmark",
-            context,  # type: ignore  # noqa: PGH003
+            context,  # type: ignore
         )
         response = HttpResponse(html)
         return trigger_client_event(response, "comic_bookmark")
@@ -181,7 +174,7 @@ def sort(request):
         html = render_block_to_string(
             "partials/bookmark/grid.html",
             "bookmarkcomics",
-            context,  # type: ignore  # noqa: PGH003
+            context,  # type: ignore
         )
         return HttpResponse(html)
     return render(request, "bookmark/list.html", context)

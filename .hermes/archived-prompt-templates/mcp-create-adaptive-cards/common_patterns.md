@@ -8,39 +8,39 @@
 
 ```json
 {
-  "type": "Container",
-  "$data": "${items}",
-  "items": [
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "width": "auto",
-          "items": [
-            {
-              "type": "Image",
-              "url": "${thumbnailUrl}",
-              "size": "small",
-              "$when": "${thumbnailUrl != null}"
-            }
-          ]
-        },
-        {
-          "type": "Column",
-          "width": "stretch",
-          "items": [
-            {
-              "type": "TextBlock",
-              "text": "${title}",
-              "weight": "bolder",
-              "wrap": true
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"type": "Container",
+	"$data": "${items}",
+	"items": [
+		{
+			"type": "ColumnSet",
+			"columns": [
+				{
+					"type": "Column",
+					"width": "auto",
+					"items": [
+						{
+							"type": "Image",
+							"url": "${thumbnailUrl}",
+							"size": "small",
+							"$when": "${thumbnailUrl != null}"
+						}
+					]
+				},
+				{
+					"type": "Column",
+					"width": "stretch",
+					"items": [
+						{
+							"type": "TextBlock",
+							"text": "${title}",
+							"weight": "bolder",
+							"wrap": true
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 
@@ -48,9 +48,9 @@
 
 ```json
 {
-  "type": "TextBlock",
-  "text": "${status}",
-  "color": "${if(status == 'Completed', 'good', if(status == 'In Progress', 'attention', 'default'))}"
+	"type": "TextBlock",
+	"text": "${status}",
+	"color": "${if(status == 'Completed', 'good', if(status == 'In Progress', 'attention', 'default'))}"
 }
 ```
 
@@ -58,9 +58,11 @@
 
 ```json
 {
-  "type": "TextBlock",
-  "text": "$${formatNumber(amount, 2)}"
+	"type": "TextBlock",
+	"text": "$${formatNumber(amount, 2)}"
 }
 ```
 
-````
+```
+
+```

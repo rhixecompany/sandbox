@@ -200,9 +200,10 @@
 
 2. **Generate Detailed Report**:
 
-   ````markdown
+   ```markdown
    # Azure Resource Health Report: [Resource Name]
 
    **Generated**: [Timestamp]  
    **Resource**: [Full Resource ID]  
    **Overall Health**: [Status with color indicator]
+   ```

@@ -34,17 +34,17 @@ hermes setup --portal  # recommended: Nous Portal (OAuth)
 
 ### Provider Quick Reference
 
-| Provider | Type | Setup |
-| ---------- | ------ | ------- |
-| Nous Portal | Subscription, zero-config | `hermes setup --portal` |
-| OpenAI Codex | ChatGPT OAuth | `hermes model` |
-| Anthropic | Claude (Max OAuth or API key) | `hermes model` |
-| OpenRouter | Multi-provider routing | API key |
-| Hugging Face | 20+ open models | HF_TOKEN |
-| AWS Bedrock | Claude, Nova, Llama | IAM role |
-| DeepSeek | Direct API | DEEPSEEK_API_KEY |
-| GitHub Copilot | Copilot subscription | OAuth |
-| Custom Endpoint | vLLM, Ollama, etc. | Base URL + API key |
+| Provider        | Type                          | Setup                   |
+| --------------- | ----------------------------- | ----------------------- |
+| Nous Portal     | Subscription, zero-config     | `hermes setup --portal` |
+| OpenAI Codex    | ChatGPT OAuth                 | `hermes model`          |
+| Anthropic       | Claude (Max OAuth or API key) | `hermes model`          |
+| OpenRouter      | Multi-provider routing        | API key                 |
+| Hugging Face    | 20+ open models               | HF_TOKEN                |
+| AWS Bedrock     | Claude, Nova, Llama           | IAM role                |
+| DeepSeek        | Direct API                    | DEEPSEEK_API_KEY        |
+| GitHub Copilot  | Copilot subscription          | OAuth                   |
+| Custom Endpoint | vLLM, Ollama, etc.            | Base URL + API key      |
 
 ## Minimum Context Requirement
 
@@ -52,9 +52,9 @@ hermes setup --portal  # recommended: Nous Portal (OAuth)
 
 ## Settings Storage
 
-| File | Contents |
-|------|----------|
-| ~/AppData/Local/hermes/.env | Secrets and tokens |
+| File                               | Contents            |
+| ---------------------------------- | ------------------- |
+| ~/AppData/Local/hermes/.env        | Secrets and tokens  |
 | ~/AppData/Local/hermes/config.yaml | Non-secret settings |
 
 ## First Chat
@@ -66,13 +66,13 @@ hermes --tui    # modern TUI (recommended)
 
 ## Slash Commands
 
-| Command | Action |
-| --------- | -------- |
-| /help | Show all commands |
-| /tools | List available tools |
-| /model | Switch models |
-| /personality pirate | Try a personality |
-| /save | Save conversation |
+| Command             | Action               |
+| ------------------- | -------------------- |
+| /help               | Show all commands    |
+| /tools              | List available tools |
+| /model              | Switch models        |
+| /personality pirate | Try a personality    |
+| /save               | Save conversation    |
 
 ## Key Features
 
@@ -86,4 +86,4 @@ hermes --tui    # modern TUI (recommended)
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

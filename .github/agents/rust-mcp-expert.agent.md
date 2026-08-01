@@ -398,6 +398,7 @@ Advise on performance:
    ```
 
 4. **Batch operations:**
+
    ```rust
    async fn batch_process(&self, items: Vec<Item>) -> Vec<Result<(), Error>> {
        use futures::future::join_all;
@@ -439,12 +440,12 @@ CMD ["my-mcp-server"]
 
 ```json
 {
-  "mcpServers": {
-    "my-rust-server": {
-      "command": "/path/to/target/release/my-mcp-server",
-      "args": []
-    }
-  }
+	"mcpServers": {
+		"my-rust-server": {
+			"command": "/path/to/target/release/my-mcp-server",
+			"args": []
+		}
+	}
 }
 ```
 

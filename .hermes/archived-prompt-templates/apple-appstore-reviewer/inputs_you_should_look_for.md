@@ -54,4 +54,5 @@ When given a repository, locate and inspect:
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

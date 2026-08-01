@@ -6,10 +6,10 @@
 
 ### When to Use What
 
-| Context | Pattern | Why |
-| --- | --- | --- |
-| **App code** (UI mutations) | Server Action → DAL | Type-safe, auth, validation, cache invalidation |
-| **Seeding** (bulk insert) | Seeder → direct Drizzle | Batch performance (50k items in ~8 min vs hours via DAL) |
+| Context                     | Pattern                 | Why                                                      |
+| --------------------------- | ----------------------- | -------------------------------------------------------- |
+| **App code** (UI mutations) | Server Action → DAL     | Type-safe, auth, validation, cache invalidation          |
+| **Seeding** (bulk insert)   | Seeder → direct Drizzle | Batch performance (50k items in ~8 min vs hours via DAL) |
 
 ### Seeder Template (`BaseSeed<T>`)
 
@@ -21,30 +21,30 @@ import { db } from "@/database/db";
 import { myEntity } from "@/database/schema";
 
 export class MyEntitySeeder extends BaseSeed<MyEntity> {
-  entityName = "MyEntity"; // Display name
-  entityDataKey = "myEntities"; // Root key in JSON file
-  dependencies = []; // Seeders that must run first
-  dataSourceName = "my-entity"; // Filename: src/data/my-entity.json
+	entityName = "MyEntity"; // Display name
+	entityDataKey = "myEntities"; // Root key in JSON file
+	dependencies = []; // Seeders that must run first
+	dataSourceName = "my-entity"; // Filename: src/data/my-entity.json
 
-  protected getDataSources() {
-    return [this.dataSourceName];
-  }
+	protected getDataSources() {
+		return [this.dataSourceName];
+	}
 
-  protected transformData(items: unknown[]): MyEntity[] {
-    return items.map(item => {
-      /* normalize raw JSON → typed entity */
-    });
-  }
+	protected transformData(items: unknown[]): MyEntity[] {
+		return items.map((item) => {
+			/* normalize raw JSON → typed entity */
+		});
+	}
 
-  protected async insertBatch(data: MyEntity[]): Promise<void> {
-    await db
-      .insert(myEntity)
-      .values(data)
-      .onConflictDoUpdate({
-        target: myEntity.id,
-        set: { updatedAt: new Date() }
-      });
-  }
+	protected async insertBatch(data: MyEntity[]): Promise<void> {
+		await db
+			.insert(myEntity)
+			.values(data)
+			.onConflictDoUpdate({
+				target: myEntity.id,
+				set: { updatedAt: new Date() },
+			});
+	}
 }
 
 export const myEntitySeeder = new MyEntitySeeder(); // Singleton
@@ -96,17 +96,17 @@ users (independent)
 
 ```json
 {
-  "entities": "all | comics | chapters | authors | artists | genres | types",
-  "options": {
-    "batchSize": 100,
-    "concurrency": 3,
-    "verbose": false,
-    "dryRun": false,
-    "skipValidation": false,
-    "useTransaction": true,
-    "forceOverwrite": false,
-    "imageStrategy": "urls"
-  }
+	"entities": "all | comics | chapters | authors | artists | genres | types",
+	"options": {
+		"batchSize": 100,
+		"concurrency": 3,
+		"verbose": false,
+		"dryRun": false,
+		"skipValidation": false,
+		"useTransaction": true,
+		"forceOverwrite": false,
+		"imageStrategy": "urls"
+	}
 }
 ```
 

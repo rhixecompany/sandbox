@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Backend) |
-| **Pattern** | Django REST Framework + React frontend |
-| **Stack** | Django, Python 3, DRF, SQLite, Gunicorn, React frontend |
+| Category    | Technology                                              |
+| ----------- | ------------------------------------------------------- |
+| **Type**    | Python/Django (Backend)                                 |
+| **Pattern** | Django REST Framework + React frontend                  |
+| **Stack**   | Django, Python 3, DRF, SQLite, Gunicorn, React frontend |
 
 ## Development Tools
 

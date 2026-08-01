@@ -84,9 +84,9 @@ Organize the issue body as follows:
 
 ### 🟡 Aging Resources (14–30 days since last major change)
 
-| Resource | Type | Last Major Change | Days Ago |
-| --- | --- | --- | --- |
-| `.github/prompts/example.prompt.md` | Prompt | 2025-02-01 | 20 |
+| Resource                            | Type   | Last Major Change | Days Ago |
+| ----------------------------------- | ------ | ----------------- | -------- |
+| `.github/prompts/example.prompt.md` | Prompt | 2025-02-01        | 20       |
 ```
 
 If a category has no resources, include the header with a note: "✅ No resources in this category."

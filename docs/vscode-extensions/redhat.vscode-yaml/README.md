@@ -11,7 +11,7 @@ YAML Language Support by Red Hat, with built-in Kubernetes syntax support.
 
 ## Contributed Settings
 
-yaml.*, yaml.disableSchemaDetection, yaml.schemas, yaml.format.*
+yaml._, yaml.disableSchemaDetection, yaml.schemas, yaml.format._
 
 ## Notes
 

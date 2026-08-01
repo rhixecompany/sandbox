@@ -12,20 +12,20 @@ A JSON representation showing 5-10 representative documents for the container
 
 ```json
 [
-  {
-    "id": "user_123",
-    "partitionKey": "user_123",
-    "type": "user",
-    "name": "John Doe",
-    "email": "john@example.com"
-  },
-  {
-    "id": "order_456",
-    "partitionKey": "user_123",
-    "type": "order",
-    "userId": "user_123",
-    "amount": 99.99
-  }
+	{
+		"id": "user_123",
+		"partitionKey": "user_123",
+		"type": "user",
+		"name": "John Doe",
+		"email": "john@example.com"
+	},
+	{
+		"id": "order_456",
+		"partitionKey": "user_123",
+		"type": "order",
+		"userId": "user_123",
+		"amount": 99.99
+	}
 ]
 ```
 
@@ -58,3 +58,4 @@ A JSON representation showing 5-10 representative documents for the container
   ```
 - **Access Patterns Served**: [Pattern #2, #5 - specific pattern references]
 - **RU Impact**: [expected RU consumption and optimization reasoning]
+````

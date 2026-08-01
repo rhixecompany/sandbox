@@ -34,4 +34,5 @@ Goal: fully optimize all `.prompt.md` files under `./prompts` using an enhance-m
 - `docs/enhance-markdown-results.md`
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

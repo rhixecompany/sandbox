@@ -1,6 +1,5 @@
-from django.db.models import Max
-
 from api.apps.models import UserItem
+from django.db.models import Max
 
 
 def get_max_order(user) -> int:

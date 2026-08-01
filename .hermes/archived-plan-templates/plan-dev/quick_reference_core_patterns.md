@@ -8,29 +8,23 @@
 
 ```typescript
 "use server";
-type ActionResult<T> =
-  | { ok: true; data: T }
-  | { ok: false; error: string };
+type ActionResult<T> = { ok: true; data: T } | { ok: false; error: string };
 
-export async function myAction(
-  input: unknown
-): Promise<ActionResult<MyType>> {
-  const session = await auth();
-  if (!session?.user?.id)
-    return { ok: false, error: "Not authenticated" };
+export async function myAction(input: unknown): Promise<ActionResult<MyType>> {
+	const session = await auth();
+	if (!session?.user?.id) return { ok: false, error: "Not authenticated" };
 
-  const parsed = schema.safeParse(input);
-  if (!parsed.success)
-    return { ok: false, error: parsed.error.errors[0]?.message };
+	const parsed = schema.safeParse(input);
+	if (!parsed.success) return { ok: false, error: parsed.error.errors[0]?.message };
 
-  try {
-    const result = await dal.create(parsed.data);
-    revalidatePath("/path");
-    return { ok: true, data: result };
-  } catch (error) {
-    console.error("[myAction]", error);
-    return { ok: false, error: "Operation failed" };
-  }
+	try {
+		const result = await dal.create(parsed.data);
+		revalidatePath("/path");
+		return { ok: true, data: result };
+	} catch (error) {
+		console.error("[myAction]", error);
+		return { ok: false, error: "Operation failed" };
+	}
 }
 ```
 
@@ -38,25 +32,21 @@ export async function myAction(
 
 ```typescript
 export class MyDal extends BaseDal<MyType> {
-  async list(options?: { limit?: number; offset?: number }) {
-    return db.query.myTable.findMany({
-      limit: options?.limit ?? 20,
-      offset: options?.offset ?? 0,
-      with: {
-        /* eager load relationships */
-      },
-      orderBy: t => desc(t.createdAt)
-    });
-  }
+	async list(options?: { limit?: number; offset?: number }) {
+		return db.query.myTable.findMany({
+			limit: options?.limit ?? 20,
+			offset: options?.offset ?? 0,
+			with: {/* eager load relationships */},
+			orderBy: (t) => desc(t.createdAt),
+		});
+	}
 
-  async getById(id: number) {
-    return db.query.myTable.findFirst({
-      where: eq(myTable.id, id),
-      with: {
-        /* relationships */
-      }
-    });
-  }
+	async getById(id: number) {
+		return db.query.myTable.findFirst({
+			where: eq(myTable.id, id),
+			with: {/* relationships */},
+		});
+	}
 }
 ```
 

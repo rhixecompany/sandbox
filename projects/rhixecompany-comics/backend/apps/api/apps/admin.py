@@ -1,29 +1,25 @@
+from api.apps.models import (
+    Artist,
+    Author,
+    Chapter,
+    ChapterImage,
+    Comic,
+    ComicImage,
+    ComicStatus,
+    Comment,
+    Genre,
+    Type,
+    UserItem,
+)
+from api.users.admin import CustomDropdownFilter, CustomTextFilter
 from django.contrib import admin
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from import_export.admin import ImportExportModelAdmin
-from import_export.forms import ExportForm
-from import_export.forms import ImportForm
-from unfold.admin import ModelAdmin
-from unfold.admin import TabularInline
-from unfold.contrib.filters.admin import RangeDateFilter
-from unfold.contrib.filters.admin import RangeDateTimeFilter
-from unfold.contrib.forms.widgets import ArrayWidget
-from unfold.contrib.forms.widgets import WysiwygWidget
-
-from api.apps.models import Artist
-from api.apps.models import Author
-from api.apps.models import Chapter
-from api.apps.models import ChapterImage
-from api.apps.models import Comic
-from api.apps.models import ComicImage
-from api.apps.models import ComicStatus
-from api.apps.models import Comment
-from api.apps.models import Genre
-from api.apps.models import Type
-from api.apps.models import UserItem
-from api.users.admin import CustomDropdownFilter
-from api.users.admin import CustomTextFilter
+from import_export.forms import ExportForm, ImportForm
+from unfold.admin import ModelAdmin, TabularInline
+from unfold.contrib.filters.admin import RangeDateFilter, RangeDateTimeFilter
+from unfold.contrib.forms.widgets import ArrayWidget, WysiwygWidget
 
 
 class CommentInline(TabularInline):
@@ -129,13 +125,13 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been completed",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been completed.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been completed.",
                 f"{user.email}",
                 fail_silently=False,
             )
         self.message_user(
             request,
-            "Selected comics have been marked as completed and users have been notified.",  # noqa: E501
+            "Selected comics have been marked as completed and users have been notified.",
         )
 
     @admin.action(description="Mark selected Comic as ongoing")
@@ -149,7 +145,7 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been ongoing",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been ongoing.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been ongoing.",
                 f"{user.email}",
                 fail_silently=False,
             )
@@ -169,7 +165,7 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been hiatus",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been hiatus.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been hiatus.",
                 f"{user.email}",
                 fail_silently=False,
             )
@@ -189,7 +185,7 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been dropped",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been dropped.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been dropped.",
                 f"{user.email}",
                 fail_silently=False,
             )
@@ -209,13 +205,13 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been season_end",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been Season End.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been Season End.",
                 f"{user.email}",
                 fail_silently=False,
             )
         self.message_user(
             request,
-            "Selected comics have been marked as Season End and users have been notified.",  # noqa: E501
+            "Selected comics have been marked as Season End and users have been notified.",
         )
 
     @admin.action(description="Mark selected Comic as Coming Soon")
@@ -229,13 +225,13 @@ class ComicAdminClass(ModelAdmin, ImportExportModelAdmin):
             user = comic.user
             user.email_user(
                 "Your comic has been coming_soon",
-                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been Coming Soon.",  # noqa: E501
+                f"Dear {user.username}, \n\nYour comic with Title {comic.title} has been Coming Soon.",
                 f"{user.email}",
                 fail_silently=False,
             )
         self.message_user(
             request,
-            "Selected comics have been marked as Coming Soon and users have been notified.",  # noqa: E501
+            "Selected comics have been marked as Coming Soon and users have been notified.",
         )
 
 

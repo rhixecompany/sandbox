@@ -1,11 +1,10 @@
 from datetime import timedelta
 
+from api.apps.filters import SearchFilter
+from api.apps.models import Comic
 from django.db.models import Q
 from django.http import HttpRequest
 from django.utils.timezone import now
-
-from api.apps.filters import SearchFilter
-from api.apps.models import Comic
 
 
 def load(request: HttpRequest) -> dict[str, str]:

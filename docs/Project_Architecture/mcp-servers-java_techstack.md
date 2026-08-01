@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Java/Maven (MCP) |
+| Category    | Technology                       |
+| ----------- | -------------------------------- |
+| **Type**    | Java/Maven (MCP)                 |
 | **Pattern** | Java MCP server with Maven build |
-| **Stack** | Java, Maven |
+| **Stack**   | Java, Maven                      |
 
 ## Development Tools
 

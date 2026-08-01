@@ -4,22 +4,22 @@ on:
   push:
     branches: [development, production]
     paths:
-      - 'projects/cookiecutter-django-tailwind/**'
-      - 'projects/Django-Scrapy-Selenium/**'
-      - 'projects/ecom/**'
-      - 'projects/profile/**'
-      - 'projects/Python-projects/**'
-      - 'projects/xamehi.tv/**'
-      - '.github/workflows/python-ci.yml'
+      - "projects/cookiecutter-django-tailwind/**"
+      - "projects/Django-Scrapy-Selenium/**"
+      - "projects/ecom/**"
+      - "projects/profile/**"
+      - "projects/Python-projects/**"
+      - "projects/xamehi.tv/**"
+      - ".github/workflows/python-ci.yml"
   pull_request:
     branches: [development, production]
     paths:
-      - 'projects/cookiecutter-django-tailwind/**'
-      - 'projects/Django-Scrapy-Selenium/**'
-      - 'projects/ecom/**'
-      - 'projects/profile/**'
-      - 'projects/Python-projects/**'
-      - 'projects/xamehi.tv/**'
+      - "projects/cookiecutter-django-tailwind/**"
+      - "projects/Django-Scrapy-Selenium/**"
+      - "projects/ecom/**"
+      - "projects/profile/**"
+      - "projects/Python-projects/**"
+      - "projects/xamehi.tv/**"
 
 jobs:
   verify-python:
@@ -41,8 +41,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-          cache: 'pip'
+          python-version: "3.12"
+          cache: "pip"
       - name: Install uv
         run: pip install uv
       - name: Install dependencies

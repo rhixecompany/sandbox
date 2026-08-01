@@ -3,6 +3,7 @@
 > **Source:** <https://hermes-agent.nousresearch.com/docs/user-guide/features/memory>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** web_extract
+
 ---
 
 Hermes Agent has bounded, curated memory that persists across sessions. This lets it remember your preferences, your projects, your environment, and things it has learned.
@@ -11,10 +12,10 @@ Hermes Agent has bounded, curated memory that persists across sessions. This let
 
 Two files make up the agent's memory:
 
-| File | Purpose | Char Limit |
-| --- | --- | --- |
+| File          | Purpose                                                                 | Char Limit                |
+| ------------- | ----------------------------------------------------------------------- | ------------------------- |
 | **MEMORY.md** | Agent's personal notes — environment facts, conventions, things learned | 2,200 chars (~800 tokens) |
-| **USER.md** | User profile — your preferences, communication style, expectations | 1,375 chars (~500 tokens) |
+| **USER.md**   | User profile — your preferences, communication style, expectations      | 1,375 chars (~500 tokens) |
 
 Both are stored in `~/.hermes/memories/` and are injected into the system prompt as a frozen snapshot at session start. The agent manages its own memory via the `memory` tool — it can add, replace, or remove entries.
 
@@ -108,10 +109,10 @@ The agent saves automatically — you don't need to ask. It saves when it learns
 
 Memory has strict character limits to keep system prompts bounded:
 
-| Store | Limit | Typical entries |
-| --- | --- | --- |
-| memory | 2,200 chars | 8-15 entries |
-| user | 1,375 chars | 5-10 entries |
+| Store  | Limit       | Typical entries |
+| ------ | ----------- | --------------- |
+| memory | 2,200 chars | 8-15 entries    |
+| user   | 1,375 chars | 5-10 entries    |
 
 ### What Happens When Memory is Full
 
@@ -132,7 +133,7 @@ The agent is responsible for making room — it does not silently drop data. Thi
 - `Project uses pnpm workspaces, monorepo at ~/code/monorepo, TypeScript strict mode` (85 chars)
 - `Docker commands work without sudo — user is in docker group` (53 chars)
 - `Completed: migrated auth from JWT to session cookies on 2026-03-14` (59 chars)
-- `Avoid`npm install -g` — use `pnpm dlx`or project-local bins instead` (64 chars)
+- `Avoid`npm install -g`— use`pnpm dlx`or project-local bins instead` (64 chars)
 
 **user (user profile):**
 
@@ -162,13 +163,13 @@ Hermes maintains a full session history in a SQLite database (`state.db`) with F
 
 ### `session_search` vs `memory`
 
-| Aspect | `session_search` | `memory` |
-| --- | --- | --- |
-| **Scope** | All past conversations | Curated facts only |
-| **Freshness** | Real-time — includes last message | Frozen at session start |
-| **Granularity** | Full messages | Condensed entries |
-| **Cost** | On-demand query | Always in prompt |
-| **Use for** | "What did we discuss about X last month?" | "What OS does the user run?" |
+| Aspect          | `session_search`                          | `memory`                     |
+| --------------- | ----------------------------------------- | ---------------------------- |
+| **Scope**       | All past conversations                    | Curated facts only           |
+| **Freshness**   | Real-time — includes last message         | Frozen at session start      |
+| **Granularity** | Full messages                             | Condensed entries            |
+| **Cost**        | On-demand query                           | Always in prompt             |
+| **Use for**     | "What did we discuss about X last month?" | "What OS does the user run?" |
 
 Both can be used in the same turn — the agent decides based on the question.
 
@@ -178,11 +179,11 @@ Memory behavior is controlled via `~/.hermes/config.yaml`:
 
 ```yaml
 memory:
-  auto_write: true          # Agent writes to memory when it learns something
-  reflection_enabled: true  # Daily reflection pass synthesizes memories
-  write_approval: prompt    # "prompt" | "auto" — ask before writing
-  char_limit_memory: 2200   # Custom limit (default 2200)
-  char_limit_user: 1375     # Custom limit (default 1375)
+  auto_write: true # Agent writes to memory when it learns something
+  reflection_enabled: true # Daily reflection pass synthesizes memories
+  write_approval: prompt # "prompt" | "auto" — ask before writing
+  char_limit_memory: 2200 # Custom limit (default 2200)
+  char_limit_user: 1375 # Custom limit (default 1375)
 ```
 
 - `auto_write: false` → agent tells you what it would write, you decide
@@ -239,4 +240,4 @@ Hermes supports pluggable memory backends. The built-in provider uses the local 
 
 ---
 
-*Extracted by web-research-pipeline v2.0.0*
+_Extracted by web-research-pipeline v2.0.0_

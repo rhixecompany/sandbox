@@ -20,12 +20,12 @@ Python's `asyncio` is a library for writing **concurrent code** using the `async
 
 ### Concurrency vs Parallelism
 
-| Aspect | Concurrency (AsyncIO) | Parallelism (Threading/Multiprocessing) |
-| -------- | ---------------------- | ---------------------------------------- |
-| Threads | Single thread | Multiple threads/processes |
-| CPU Usage | Efficient for I/O waits | True parallel execution |
-| GIL Impact | Avoids GIL contention | Limited by GIL (threading) |
-| Use Case | Network, file I/O, databases | CPU-intensive computation |
+| Aspect     | Concurrency (AsyncIO)        | Parallelism (Threading/Multiprocessing) |
+| ---------- | ---------------------------- | --------------------------------------- |
+| Threads    | Single thread                | Multiple threads/processes              |
+| CPU Usage  | Efficient for I/O waits      | True parallel execution                 |
+| GIL Impact | Avoids GIL contention        | Limited by GIL (threading)              |
+| Use Case   | Network, file I/O, databases | CPU-intensive computation               |
 
 ---
 
@@ -117,13 +117,13 @@ except asyncio.TimeoutError:
 
 ## Common Pitfalls
 
-| Pitfall | Solution |
-| --------- | ---------- |
-| `time.sleep()` in async code | Use `await asyncio.sleep()` |
-| Forgetting `await` on coroutine | Always await async functions |
-| Blocking I/O (requests, sqlite3) | Use async libraries (aiohttp, aiosqlite) |
-| Creating too many concurrent tasks | Use `Semaphore` to limit concurrency |
-| Not handling `CancelledError` | Catch and re-raise or cleanup properly |
+| Pitfall                            | Solution                                 |
+| ---------------------------------- | ---------------------------------------- |
+| `time.sleep()` in async code       | Use `await asyncio.sleep()`              |
+| Forgetting `await` on coroutine    | Always await async functions             |
+| Blocking I/O (requests, sqlite3)   | Use async libraries (aiohttp, aiosqlite) |
+| Creating too many concurrent tasks | Use `Semaphore` to limit concurrency     |
+| Not handling `CancelledError`      | Catch and re-raise or cleanup properly   |
 
 ---
 
@@ -146,4 +146,4 @@ The tutorial includes animated explanations of:
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

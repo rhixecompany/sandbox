@@ -23,37 +23,36 @@ This document identifies high-quality code exemplars across the workspace, organ
 ```typescript
 // Schema definitions with descriptive metadata
 const databaseSchema = z.object({
-  DATABASE_URL: z
-    .string()
-    .trim()
-    .url()
-    .describe("PostgreSQL connection string - REQUIRED")
-    .refine((val) => val !== undefined && val.length > 0, {
-      message: "DATABASE_URL is required for database connectivity",
-    }),
+	DATABASE_URL: z
+		.string()
+		.trim()
+		.url()
+		.describe("PostgreSQL connection string - REQUIRED")
+		.refine((val) => val !== undefined && val.length > 0, {
+			message: "DATABASE_URL is required for database connectivity",
+		}),
 });
 
 // Parse functions with safe validation
 function parseDatabaseConfig(): DatabaseConfig {
-  const result = databaseSchema.safeParse({
-    DATABASE_URL: process.env.DATABASE_URL,
-  });
-  if (!result.success) {
-    throw new Error(
-      `Database config validation failed: ${result.error.message}`,
-    );
-  }
-  return result.data;
+	const result = databaseSchema.safeParse({
+		DATABASE_URL: process.env.DATABASE_URL,
+	});
+	if (!result.success) {
+		throw new Error(`Database config validation failed: ${result.error.message}`);
+	}
+	return result.data;
 }
 
 // Singleton exports with convenience helpers
 export const database = parseDatabaseConfig();
 export function isPlaidConfigured(): boolean {
-  return !!(plaid.PLAID_CLIENT_ID && plaid.PLAID_SECRET);
+	return !!(plaid.PLAID_CLIENT_ID && plaid.PLAID_SECRET);
 }
 ```
 
 **Why exemplary:**
+
 - Zod schemas with `.describe()` for documentation
 - `.safeParse()` + explicit error messages (no silent failures)
 - Singleton exports + feature-flag helpers (`isXConfigured()`)
@@ -75,34 +74,32 @@ import { auth } from "@/lib/auth";
 import { logger } from "@/lib/logger";
 
 export async function getRecentTransactions(
-  limit = 10,
+	limit = 10,
 ): Promise<{ ok: boolean; transactions?: Transaction[]; error?: string }> {
-  // Input validation via Zod
-  const LimitSchema = z.number().int().positive().max(100).default(10);
-  const parsedLimit = LimitSchema.safeParse(limit);
-  if (!parsedLimit.success) {
-    return { error: parsedLimit.error.issues[0].message, ok: false };
-  }
+	// Input validation via Zod
+	const LimitSchema = z.number().int().positive().max(100).default(10);
+	const parsedLimit = LimitSchema.safeParse(limit);
+	if (!parsedLimit.success) {
+		return { error: parsedLimit.error.issues[0].message, ok: false };
+	}
 
-  try {
-    const session = await auth();
-    if (!session?.user?.id) {
-      return { error: "Not authenticated", ok: false };
-    }
+	try {
+		const session = await auth();
+		if (!session?.user?.id) {
+			return { error: "Not authenticated", ok: false };
+		}
 
-    const transactions = await transactionDal.findByUserIdWithWallets(
-      session.user.id,
-      parsedLimit.data,
-    );
-    return { ok: true, transactions };
-  } catch (error) {
-    logger.error("getRecentTransactions error:", error);
-    return { error: "Failed to get recent transactions", ok: false };
-  }
+		const transactions = await transactionDal.findByUserIdWithWallets(session.user.id, parsedLimit.data);
+		return { ok: true, transactions };
+	} catch (error) {
+		logger.error("getRecentTransactions error:", error);
+		return { error: "Failed to get recent transactions", ok: false };
+	}
 }
 ```
 
 **Why exemplary:**
+
 - Explicit `ok/error` return shape (no exceptions across server boundary)
 - Zod validation with `.safeParse()` on every input
 - Early returns for auth failures
@@ -117,25 +114,26 @@ export async function getRecentTransactions(
 
 ```typescript
 async function processInBatches<T, R>(
-  items: T[],
-  batchSize: number,
-  fn: (item: T) => Promise<R>,
-  delayMs = 500,
+	items: T[],
+	batchSize: number,
+	fn: (item: T) => Promise<R>,
+	delayMs = 500,
 ): Promise<R[]> {
-  const results: R[] = [];
-  for (let i = 0; i < items.length; i += batchSize) {
-    const batch = items.slice(i, i + batchSize);
-    const res = await Promise.all(batch.map(fn));
-    results.push(...res);
-    if (i + batchSize < items.length) {
-      await new Promise((r) => setTimeout(r, delayMs));
-    }
-  }
-  return results;
+	const results: R[] = [];
+	for (let i = 0; i < items.length; i += batchSize) {
+		const batch = items.slice(i, i + batchSize);
+		const res = await Promise.all(batch.map(fn));
+		results.push(...res);
+		if (i + batchSize < items.length) {
+			await new Promise((r) => setTimeout(r, delayMs));
+		}
+	}
+	return results;
 }
 ```
 
 **Why exemplary:**
+
 - Generic reusable batch processor
 - Parallel execution within batch, sequential between batches
 - Configurable delay for rate limiting
@@ -150,40 +148,41 @@ async function processInBatches<T, R>(
 
 ```typescript
 export async function POST(req: Request) {
-  try {
-    const rawBody = await req.text();
-    const headersList = await headers();
-    const signature = headersList.get("x-dwolla-signature");
+	try {
+		const rawBody = await req.text();
+		const headersList = await headers();
+		const signature = headersList.get("x-dwolla-signature");
 
-    // Verify signature
-    const client = getDwollaClient();
-    const ok = (client as any).webhookVerify(
-      { "webhook-url": env.DWOLLA_BASE_URL, "x-dwolla-signature": signature },
-      rawBody,
-    );
-    if (!ok) {
-      return NextResponse.json({ error: "Invalid signature", ok: false }, { status: 401 });
-    }
+		// Verify signature
+		const client = getDwollaClient();
+		const ok = (client as any).webhookVerify(
+			{ "webhook-url": env.DWOLLA_BASE_URL, "x-dwolla-signature": signature },
+			rawBody,
+		);
+		if (!ok) {
+			return NextResponse.json({ error: "Invalid signature", ok: false }, { status: 401 });
+		}
 
-    // Flexible payload extraction
-    const body = JSON.parse(rawBody);
-    const transferId = body?.resource?.id ?? body?.links?.resource?.id ?? body?.id;
-    const status = body?.resource?.status ?? body?.status ?? body?.data?.status ?? body?.topic;
+		// Flexible payload extraction
+		const body = JSON.parse(rawBody);
+		const transferId = body?.resource?.id ?? body?.links?.resource?.id ?? body?.id;
+		const status = body?.resource?.status ?? body?.status ?? body?.data?.status ?? body?.topic;
 
-    // Update via DAL
-    const rows = await dwollaDal.findByDwollaTransferIdOrTransferUrl(String(transferId));
-    for (const r of rows) {
-      await dwollaDal.updateTransferStatus(r.id, String(status));
-    }
+		// Update via DAL
+		const rows = await dwollaDal.findByDwollaTransferIdOrTransferUrl(String(transferId));
+		for (const r of rows) {
+			await dwollaDal.updateTransferStatus(r.id, String(status));
+		}
 
-    return NextResponse.json({ ok: true, updated: true });
-  } catch (err) {
-    return NextResponse.json({ error: String(err), ok: false }, { status: 500 });
-  }
+		return NextResponse.json({ ok: true, updated: true });
+	} catch (err) {
+		return NextResponse.json({ error: String(err), ok: false }, { status: 500 });
+	}
 }
 ```
 
 **Why exemplary:**
+
 - Raw body capture before JSON parse (required for signature verification)
 - Fallback chain for payload extraction (`??` operator)
 - Proper HTTP status codes (401, 400, 500)
@@ -223,6 +222,7 @@ typescript: { ignoreBuildErrors: false },
 ```
 
 **Why exemplary:**
+
 - Full security header suite
 - Modern image formats with CSP sandbox
 - `standalone` output for Docker
@@ -256,6 +256,7 @@ video: "retain-on-failure",
 ```
 
 **Why exemplary:**
+
 - Timeout constants with descriptive names
 - CI vs local behavior split (parallelism, retries, reporters)
 - Artifact collection only on failure
@@ -270,26 +271,31 @@ video: "retain-on-failure",
 ```typescript
 export const userRole = pgEnum("user_role", ["user", "admin", "moderator"]);
 export const transactionStatus = pgEnum("transaction_status", [
-  "pending", "processing", "completed", "failed", "cancelled",
+	"pending",
+	"processing",
+	"completed",
+	"failed",
+	"cancelled",
 ]);
 
 export const users = pgTable("users", {
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  deletedAt: timestamp("deleted_at", { mode: "date" }), // soft delete
-  email: varchar("email", { length: 255 }).notNull().unique(),
-  emailVerified: timestamp("emailVerified", { mode: "date" }),
-  id: text("id")
-    .primaryKey()
-    .notNull()
-    .$defaultFn(() => crypto.randomUUID()),
-  image: varchar("image", { length: 255 }),
-  isActive: boolean("is_active").default(true),
-  isAdmin: boolean("is_admin").default(false),
-  // ...
+	createdAt: timestamp("created_at").defaultNow().notNull(),
+	deletedAt: timestamp("deleted_at", { mode: "date" }), // soft delete
+	email: varchar("email", { length: 255 }).notNull().unique(),
+	emailVerified: timestamp("emailVerified", { mode: "date" }),
+	id: text("id")
+		.primaryKey()
+		.notNull()
+		.$defaultFn(() => crypto.randomUUID()),
+	image: varchar("image", { length: 255 }),
+	isActive: boolean("is_active").default(true),
+	isAdmin: boolean("is_admin").default(false),
+	// ...
 });
 ```
 
 **Why exemplary:**
+
 - Enums for constrained values (type-safe)
 - `$defaultFn(() => crypto.randomUUID())` for client-side IDs
 - Soft-delete pattern with `deletedAt`
@@ -329,6 +335,7 @@ def my_task(self, seconds):
 ```
 
 **Why exemplary:**
+
 - `bind=True` for `self` access to progress recorder
 - `ProgressRecorder` for real-time UI updates
 - `call_command` to invoke Django management commands
@@ -369,6 +376,7 @@ AUTOTHROTTLE_TARGET_CONCURRENCY = 8.0
 ```
 
 **Why exemplary:**
+
 - Rotating user-agent middleware (not hardcoded)
 - AutoThrottle for adaptive rate limiting
 - Custom retry middleware for 429 handling
@@ -430,6 +438,7 @@ if __name__ == "__main__":
 ```
 
 **Why exemplary:**
+
 - Module docstring + function docstring (Google style)
 - Type hints on all functions
 - `argparse` with help text
@@ -473,6 +482,7 @@ write_jsonl() {
 ```
 
 **Why exemplary:**
+
 - `readonly` for constants
 - Output to stderr (`>&2`) for logs
 - `jq` for safe JSON extraction with default
@@ -502,6 +512,7 @@ exec node server.js
 ```
 
 **Why exemplary:**
+
 - `set -euo pipefail` (strict mode)
 - `chown` for non-root user
 - `--frozen-lockfile` for reproducible builds
@@ -525,6 +536,7 @@ fi
 ```
 
 **Why exemplary:**
+
 - Delegates to TypeScript implementation
 - Passes through all arguments (`"$@"`)
 - `set -e` for error propagation
@@ -580,6 +592,7 @@ await server.connect(transport);
 ```
 
 **Why exemplary:**
+
 - ESM imports with `.js` extensions
 - Full JSON Schema for tool inputs with `enum` constraints
 - `McpError` with standard error codes
@@ -634,6 +647,7 @@ if __name__ == "__main__":
 ```
 
 **Why exemplary:**
+
 - `from __future__ import annotations` (postponed evaluation)
 - FastMCP decorator-based tool registration
 - Google-style docstrings on every tool
@@ -650,29 +664,26 @@ if __name__ == "__main__":
 
 ```typescript
 function isDryRunFlagSet(argv = process.argv): boolean {
-  if (argv.includes("--dry-run") || argv.includes("-n")) return true;
-  if (process.env["DRY_RUN"] === "true" || process.env["DRY_RUN"] === "1") return true;
-  const globalDry = (globalThis as unknown as { __SCRIPTS_DRY_RUN?: boolean | string }).__SCRIPTS_DRY_RUN;
-  if (globalDry === true || globalDry === "true" || globalDry === "1") return true;
-  return false;
+	if (argv.includes("--dry-run") || argv.includes("-n")) return true;
+	if (process.env["DRY_RUN"] === "true" || process.env["DRY_RUN"] === "1") return true;
+	const globalDry = (globalThis as unknown as { __SCRIPTS_DRY_RUN?: boolean | string }).__SCRIPTS_DRY_RUN;
+	if (globalDry === true || globalDry === "true" || globalDry === "1") return true;
+	return false;
 }
 
-export async function writeFile(
-  filePath: string,
-  content: string,
-  options: IoOptions = {},
-): Promise<void> {
-  if (options.dryRun ?? isDryRunFlagSet()) {
-    log("writeFile", { filePath, preview: maskPreview(content) }, options.json);
-    return;
-  }
-  await mkdirp(path.dirname(filePath));
-  await fs.promises.writeFile(filePath, content, "utf8");
-  log("writeFile", { filePath, bytes: content.length }, options.json);
+export async function writeFile(filePath: string, content: string, options: IoOptions = {}): Promise<void> {
+	if (options.dryRun ?? isDryRunFlagSet()) {
+		log("writeFile", { filePath, preview: maskPreview(content) }, options.json);
+		return;
+	}
+	await mkdirp(path.dirname(filePath));
+	await fs.promises.writeFile(filePath, content, "utf8");
+	log("writeFile", { filePath, bytes: content.length }, options.json);
 }
 ```
 
 **Why exemplary:**
+
 - Multi-source dry-run detection (CLI, env, global)
 - `maskPreview` for secret-safe logging
 - JSON or human-readable log modes
@@ -686,33 +697,34 @@ export async function writeFile(
 
 ```typescript
 function extractFrontmatter(content: string): { frontmatter: Record<string, unknown>; content: string } {
-  const frontmatterRegex = /^---\n([\s\S]*?)---/;
-  const match = content.match(frontmatterRegex);
-  if (match) {
-    try {
-      const frontmatter = yaml.load(match[1]) as Record<string, unknown>;
-      const body = content.slice(match[0].length);
-      return { content: body, frontmatter };
-    } catch {
-      return { content, frontmatter: {} };
-    }
-  }
-  return { content, frontmatter: {} };
+	const frontmatterRegex = /^---\n([\s\S]*?)---/;
+	const match = content.match(frontmatterRegex);
+	if (match) {
+		try {
+			const frontmatter = yaml.load(match[1]) as Record<string, unknown>;
+			const body = content.slice(match[0].length);
+			return { content: body, frontmatter };
+		} catch {
+			return { content, frontmatter: {} };
+		}
+	}
+	return { content, frontmatter: {} };
 }
 
 export async function readSkillsDir(): Promise<Entry[]> {
-  const pattern = path.join(SKILLS_DIR, "*/SKILL.md").replaceAll("\\", "/");
-  const files = await glob(pattern);
-  const entries: Entry[] = [];
-  for (const file of files) {
-    const entry = readMarkdownFile(file, { category: "skills" });
-    if (entry) entries.push(entry);
-  }
-  return entries;
+	const pattern = path.join(SKILLS_DIR, "*/SKILL.md").replaceAll("\\", "/");
+	const files = await glob(pattern);
+	const entries: Entry[] = [];
+	for (const file of files) {
+		const entry = readMarkdownFile(file, { category: "skills" });
+		if (entry) entries.push(entry);
+	}
+	return entries;
 }
 ```
 
 **Why exemplary:**
+
 - Regex with `[\s\S]*?` for multiline frontmatter
 - Try/catch for malformed YAML
 - Cross-platform path normalization (`replaceAll("\\", "/")`)
@@ -731,35 +743,36 @@ addFormats(ajv as unknown as Parameters<typeof addFormats>[0]);
 let validateFn: null | ReturnType<typeof ajv.compile> = null;
 
 function getValidator() {
-  if (!validateFn) {
-    const schemaPath = path.join(ROOT_FOLDER, ".opencode/schema.json");
-    const schemaContent = fs.readFileSync(schemaPath, "utf8");
-    validateFn = ajv.compile(JSON.parse(schemaContent));
-  }
-  return validateFn;
+	if (!validateFn) {
+		const schemaPath = path.join(ROOT_FOLDER, ".opencode/schema.json");
+		const schemaContent = fs.readFileSync(schemaPath, "utf8");
+		validateFn = ajv.compile(JSON.parse(schemaContent));
+	}
+	return validateFn;
 }
 
 export function validateEntry(data: unknown, filePath: string): ValidationResult {
-  const validate = getValidator();
-  const cleanData = { ...(data as Record<string, unknown>) };
-  delete cleanData._filePath;
-  delete cleanData._fileName;
+	const validate = getValidator();
+	const cleanData = { ...(data as Record<string, unknown>) };
+	delete cleanData._filePath;
+	delete cleanData._fileName;
 
-  const valid = validate(cleanData);
-  if (!valid && validate.errors) {
-    const errors: ValidationError[] = validate.errors.map((err) => ({
-      keyword: err.keyword,
-      message: err.message ?? "Unknown error",
-      params: err.params as Record<string, unknown>,
-      path: err.instancePath || "/",
-    }));
-    return { errors, filePath, valid: false };
-  }
-  return { errors: null, filePath, valid: true };
+	const valid = validate(cleanData);
+	if (!valid && validate.errors) {
+		const errors: ValidationError[] = validate.errors.map((err) => ({
+			keyword: err.keyword,
+			message: err.message ?? "Unknown error",
+			params: err.params as Record<string, unknown>,
+			path: err.instancePath || "/",
+		}));
+		return { errors, filePath, valid: false };
+	}
+	return { errors: null, filePath, valid: true };
 }
 ```
 
 **Why exemplary:**
+
 - Lazy-compiled validator (singleton pattern)
 - `allErrors: true` for comprehensive reporting
 - Internal field stripping before validation
@@ -771,42 +784,42 @@ export function validateEntry(data: unknown, filePath: string): ValidationResult
 
 ### 7.1 TypeScript Standards (Enforced Across Projects)
 
-| Rule | Example | Source |
-|------|---------|--------|
-| **Strict mode** | `typescript: { ignoreBuildErrors: false }` | `next.config.ts` |
-| **Zod for validation** | `const Schema = z.object({...}); Schema.safeParse(input)` | `app-config.ts`, actions |
-| **Explicit return types** | `export async function fn(): Promise<Result>` | All server actions |
-| **`"use server"` directive** | Top of every server action file | `transaction.actions.ts` |
-| **Error shape: `{ok, data?, error?}`** | Consistent across actions/webhooks | Banking, Comicwise |
-| **JSDoc on public APIs** | `/** ... */` with `@param`, `@returns` | Schema, DAL, utils |
-| **ESM imports with `.js`** | `import { x } from "./tools/greeting.js"` | MCP TypeScript |
-| **Path aliases** | `@/lib/auth`, `@/dal`, `@/types` | `tsconfig.json` |
+| Rule                                   | Example                                                   | Source                   |
+| -------------------------------------- | --------------------------------------------------------- | ------------------------ |
+| **Strict mode**                        | `typescript: { ignoreBuildErrors: false }`                | `next.config.ts`         |
+| **Zod for validation**                 | `const Schema = z.object({...}); Schema.safeParse(input)` | `app-config.ts`, actions |
+| **Explicit return types**              | `export async function fn(): Promise<Result>`             | All server actions       |
+| **`"use server"` directive**           | Top of every server action file                           | `transaction.actions.ts` |
+| **Error shape: `{ok, data?, error?}`** | Consistent across actions/webhooks                        | Banking, Comicwise       |
+| **JSDoc on public APIs**               | `/** ... */` with `@param`, `@returns`                    | Schema, DAL, utils       |
+| **ESM imports with `.js`**             | `import { x } from "./tools/greeting.js"`                 | MCP TypeScript           |
+| **Path aliases**                       | `@/lib/auth`, `@/dal`, `@/types`                          | `tsconfig.json`          |
 
 ---
 
 ### 7.2 Python Standards
 
-| Rule | Example | Source |
-|------|---------|--------|
-| **Type hints everywhere** | `def fn(x: int) -> str:` | All Python-projects |
-| **Google-style docstrings** | `"""Summary.\n\nArgs:\n    x: Desc.\nReturns:\n    Desc."""` | MCP Python, scripts |
-| **`from __future__ import annotations`** | Postponed evaluation | MCP Python |
-| **`if __name__ == "__main__"`** | Entry point guard | All scripts |
-| **`argparse` for CLI** | Structured argument parsing | `qr_code_generator.py` |
-| **Pathlib over os.path** | `Path("file").read_text()` | MCP Python |
+| Rule                                     | Example                                                      | Source                 |
+| ---------------------------------------- | ------------------------------------------------------------ | ---------------------- |
+| **Type hints everywhere**                | `def fn(x: int) -> str:`                                     | All Python-projects    |
+| **Google-style docstrings**              | `"""Summary.\n\nArgs:\n    x: Desc.\nReturns:\n    Desc."""` | MCP Python, scripts    |
+| **`from __future__ import annotations`** | Postponed evaluation                                         | MCP Python             |
+| **`if __name__ == "__main__"`**          | Entry point guard                                            | All scripts            |
+| **`argparse` for CLI**                   | Structured argument parsing                                  | `qr_code_generator.py` |
+| **Pathlib over os.path**                 | `Path("file").read_text()`                                   | MCP Python             |
 
 ---
 
 ### 7.3 Bash Standards
 
-| Rule | Example | Source |
-|------|---------|--------|
-| **`set -euo pipefail`** | Strict error handling | Entrypoint, deploy |
-| **`readonly` for constants** | `readonly RED='\033[0;31m'` | `lib.sh` |
-| **Stderr for logs** | `echo "msg" >&2` | `lib.sh` |
-| **`"$@"` for passthrough** | Forward all args | `deploy.sh` |
-| **`exec` for PID 1** | `exec node server.js` | Entrypoint |
-| **Functions over inline** | `log_info() { ... }` | `lib.sh` |
+| Rule                         | Example                     | Source             |
+| ---------------------------- | --------------------------- | ------------------ |
+| **`set -euo pipefail`**      | Strict error handling       | Entrypoint, deploy |
+| **`readonly` for constants** | `readonly RED='\033[0;31m'` | `lib.sh`           |
+| **Stderr for logs**          | `echo "msg" >&2`            | `lib.sh`           |
+| **`"$@"` for passthrough**   | Forward all args            | `deploy.sh`        |
+| **`exec` for PID 1**         | `exec node server.js`       | Entrypoint         |
+| **Functions over inline**    | `log_info() { ... }`        | `lib.sh`           |
 
 ---
 
@@ -862,30 +875,30 @@ import { logger } from "@/lib/logger";
 import { someDal } from "@/dal";
 
 const InputSchema = z.object({
-  id: z.string().uuid(),
-  limit: z.number().int().positive().max(100).default(20),
+	id: z.string().uuid(),
+	limit: z.number().int().positive().max(100).default(20),
 });
 
 export async function myAction(
-  input: z.infer<typeof InputSchema>,
+	input: z.infer<typeof InputSchema>,
 ): Promise<{ ok: boolean; data?: SomeType; error?: string }> {
-  const parsed = InputSchema.safeParse(input);
-  if (!parsed.success) {
-    return { error: parsed.error.issues[0].message, ok: false };
-  }
+	const parsed = InputSchema.safeParse(input);
+	if (!parsed.success) {
+		return { error: parsed.error.issues[0].message, ok: false };
+	}
 
-  try {
-    const session = await auth();
-    if (!session?.user?.id) {
-      return { error: "Not authenticated", ok: false };
-    }
+	try {
+		const session = await auth();
+		if (!session?.user?.id) {
+			return { error: "Not authenticated", ok: false };
+		}
 
-    const result = await someDal.doThing(session.user.id, parsed.data);
-    return { ok: true, data: result };
-  } catch (error) {
-    logger.error("myAction error:", error);
-    return { error: "Operation failed", ok: false };
-  }
+		const result = await someDal.doThing(session.user.id, parsed.data);
+		return { ok: true, data: result };
+	} catch (error) {
+		logger.error("myAction error:", error);
+		return { error: "Operation failed", ok: false };
+	}
 }
 ```
 
@@ -898,28 +911,28 @@ import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  try {
-    const rawBody = await req.text();
-    const signature = (await headers()).get("x-signature-header");
+	try {
+		const rawBody = await req.text();
+		const signature = (await headers()).get("x-signature-header");
 
-    // Verify signature
-    if (!verifySignature(rawBody, signature)) {
-      return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
-    }
+		// Verify signature
+		if (!verifySignature(rawBody, signature)) {
+			return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
+		}
 
-    const body = JSON.parse(rawBody);
-    const resourceId = body.resource?.id ?? body.id;
-    const status = body.resource?.status ?? body.status;
+		const body = JSON.parse(rawBody);
+		const resourceId = body.resource?.id ?? body.id;
+		const status = body.resource?.status ?? body.status;
 
-    if (!resourceId || !status) {
-      return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
-    }
+		if (!resourceId || !status) {
+			return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+		}
 
-    await dal.updateStatus(resourceId, status);
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
-  }
+		await dal.updateStatus(resourceId, status);
+		return NextResponse.json({ ok: true });
+	} catch (err) {
+		return NextResponse.json({ error: String(err) }, { status: 500 });
+	}
 }
 ```
 
@@ -996,53 +1009,53 @@ main "$@"
 
 ## 9. Anti-Patterns to Avoid (Observed in Codebase)
 
-| Anti-Pattern | Better Alternative | Location |
-|--------------|-------------------|----------|
-| `try/catch` without error shape | Return `{ok, error}` | Avoided in Banking actions |
-| Raw `process.env` in hot paths | Singleton config module | `app-config.ts` |
-| Hardcoded user agents | Rotating middleware | Scrapy settings |
-| `console.log` in production | Structured `logger` | `lib/logger.ts` |
-| Inline SQL strings | Drizzle/Prisma ORM | `schema.ts` |
-| `any` type in TypeScript | Generics + Zod inference | Avoided in Banking |
-| Sync I/O in async functions | `await fs.promises` | `io.ts` |
-| Global mutable state | Module-scoped singletons | `validation.ts` |
+| Anti-Pattern                    | Better Alternative       | Location                   |
+| ------------------------------- | ------------------------ | -------------------------- |
+| `try/catch` without error shape | Return `{ok, error}`     | Avoided in Banking actions |
+| Raw `process.env` in hot paths  | Singleton config module  | `app-config.ts`            |
+| Hardcoded user agents           | Rotating middleware      | Scrapy settings            |
+| `console.log` in production     | Structured `logger`      | `lib/logger.ts`            |
+| Inline SQL strings              | Drizzle/Prisma ORM       | `schema.ts`                |
+| `any` type in TypeScript        | Generics + Zod inference | Avoided in Banking         |
+| Sync I/O in async functions     | `await fs.promises`      | `io.ts`                    |
+| Global mutable state            | Module-scoped singletons | `validation.ts`            |
 
 ---
 
 ## 10. Tooling & Quality Gates
 
-| Tool | Purpose | Config Location |
-|------|---------|-----------------|
-| **TypeScript** | Strict type checking | `tsconfig.json`, `next.config.ts` |
-| **ESLint** | Linting | `.eslintrc.js` (per project) |
-| **Prettier** | Formatting | `.prettierrc.ts` |
-| **Ruff** | Python lint/format | `.ruff.toml` |
-| **MyPy** | Python type checking | `pyrightconfig.json` |
-| **Playwright** | E2E testing | `playwright.config.ts` |
-| **Husky** | Git hooks | `.husky/` |
-| **lint-staged** | Pre-commit | `.lintstagedrc.ts` |
-| **Drizzle Kit** | Migrations | `drizzle.config.ts` |
-| **Prisma** | ORM + migrate | `prisma/schema.prisma` |
+| Tool            | Purpose              | Config Location                   |
+| --------------- | -------------------- | --------------------------------- |
+| **TypeScript**  | Strict type checking | `tsconfig.json`, `next.config.ts` |
+| **ESLint**      | Linting              | `.eslintrc.js` (per project)      |
+| **Prettier**    | Formatting           | `.prettierrc.ts`                  |
+| **Ruff**        | Python lint/format   | `.ruff.toml`                      |
+| **MyPy**        | Python type checking | `pyrightconfig.json`              |
+| **Playwright**  | E2E testing          | `playwright.config.ts`            |
+| **Husky**       | Git hooks            | `.husky/`                         |
+| **lint-staged** | Pre-commit           | `.lintstagedrc.ts`                |
+| **Drizzle Kit** | Migrations           | `drizzle.config.ts`               |
+| **Prisma**      | ORM + migrate        | `prisma/schema.prisma`            |
 
 ---
 
 ## 11. Summary of Exemplars by Category
 
-| Category | Count | Key Files |
-|----------|-------|-----------|
-| **Config/Validation** | 4 | `app-config.ts`, `drizzle.config.ts`, `validation.ts`, `settings.py` |
-| **Server Actions** | 8 | `transaction.actions.ts`, `plaid.actions.ts`, `dwolla.actions.ts` |
-| **API Routes/Webhooks** | 3 | `dwolla/webhook/route.ts`, `auth/[...nextauth]/route.ts` |
-| **Database/ORM** | 2 | `schema.ts` (Drizzle), `prisma/schema.prisma` |
-| **Testing/E2E** | 1 | `playwright.config.ts` |
-| **Async Tasks** | 2 | `tasks.py` (Celery), `processInBatches` |
-| **MCP Servers** | 2 | `typescript/src/index.ts`, `python/main.py` |
-| **Bash Libraries** | 2 | `lib.sh`, `entrypoint.sh` |
-| **Python Scripts** | 18 | `qr_code_generator.py`, etc. |
-| **Utility Modules** | 5 | `io.ts`, `markdown.ts`, `yaml.ts`, `constants.ts`, `template.ts` |
+| Category                | Count | Key Files                                                            |
+| ----------------------- | ----- | -------------------------------------------------------------------- |
+| **Config/Validation**   | 4     | `app-config.ts`, `drizzle.config.ts`, `validation.ts`, `settings.py` |
+| **Server Actions**      | 8     | `transaction.actions.ts`, `plaid.actions.ts`, `dwolla.actions.ts`    |
+| **API Routes/Webhooks** | 3     | `dwolla/webhook/route.ts`, `auth/[...nextauth]/route.ts`             |
+| **Database/ORM**        | 2     | `schema.ts` (Drizzle), `prisma/schema.prisma`                        |
+| **Testing/E2E**         | 1     | `playwright.config.ts`                                               |
+| **Async Tasks**         | 2     | `tasks.py` (Celery), `processInBatches`                              |
+| **MCP Servers**         | 2     | `typescript/src/index.ts`, `python/main.py`                          |
+| **Bash Libraries**      | 2     | `lib.sh`, `entrypoint.sh`                                            |
+| **Python Scripts**      | 18    | `qr_code_generator.py`, etc.                                         |
+| **Utility Modules**     | 5     | `io.ts`, `markdown.ts`, `yaml.ts`, `constants.ts`, `template.ts`     |
 
 **Total high-quality exemplars identified: ~50 files across 11 pattern categories**
 
 ---
 
-*Generated by code-exemplars-blueprint-generator analysis of the SandBox workspace.*
+_Generated by code-exemplars-blueprint-generator analysis of the SandBox workspace._

@@ -65,6 +65,7 @@ Use when "Comprehensive session workflow for generating AGENTS.md files, committ
 ## Description
 
 Run a full AGENTS.md generation and git reconciliation workflow across explicitly requested targets in this repository.This prompt is designed to cover all tasks requested in one session:- Generate AGENTS.md for a specific target project folder.
+
 - Repeat generation for each project under projects/.- Perform git add, commit, and push in each project repository.
 - Reconcile to consistent PR-ready branch names.
 - Output a compact final table with repo, branch, and commit SHA.
@@ -72,6 +73,7 @@ Run a full AGENTS.md generation and git reconciliation workflow across explicitl
 ## Context
 
 Use this prompt when the user asks for AGENTS.md generation and git automation for one or more subprojects.Expected workspace shape:- projects/ contains multiple project repositories.
+
 - Some projects may already have AGENTS.md.
 - The top-level workspace may track projects as nested repos/submodules.Supported target styles:- Single target argument, for example: Bash or Resume_maker.
 - Batch target argument, for example: each project in projects/.
@@ -158,6 +160,7 @@ Use this prompt when the user asks for AGENTS.md generation and git automation f
 - Subtask 3.2.1 — Push commit SHA to branch chore/agentsmd-YYYYMMDD-<repo
 
 > .- Subtask 3.2.2 — If history is oversized or push fails, use a clean clone fallback branch publish.
+
 - Subtask 4.1.1 — Check remote branch existence and SHA match.
 - Subtask 4.2.1 — Output compact table sorted by repo name.
 
@@ -223,4 +226,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
-

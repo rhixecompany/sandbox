@@ -8,8 +8,8 @@
 
 ```json
 {
-  "type": "TextBlock",
-  "text": "${if(field, field, 'N/A')}"  // Show field or 'N/A'
+	"type": "TextBlock",
+	"text": "${if(field, field, 'N/A')}" // Show field or 'N/A'
 }
 ```
 
@@ -17,8 +17,8 @@
 
 ```json
 {
-  "type": "TextBlock",
-  "text": "${formatNumber(amount, 2)}"  // Two decimal places
+	"type": "TextBlock",
+	"text": "${formatNumber(amount, 2)}" // Two decimal places
 }
 ```
 
@@ -36,8 +36,8 @@
 
 ```json
 {
-  "type": "Image",
-  "url": "${imageUrl}",
-  "$when": "${imageUrl != null}"  // Only show if imageUrl exists
+	"type": "Image",
+	"url": "${imageUrl}",
+	"$when": "${imageUrl != null}" // Only show if imageUrl exists
 }
 ```

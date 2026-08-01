@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-23  
 **Plan:** `.hermes/plans/2026-07-23-comprehensive-github-prompts-plan.md`  
-**Status:** Approved and executed  
+**Status:** Approved and executed
 
 ## Summary
 
@@ -10,13 +10,13 @@ All prompt-family assets are now canonical under `.github/prompts/`. Legacy root
 
 ## Canonical Structure
 
-| Directory | Files | Notes |
-|-----------|-------|-------|
-| `.github/prompts/agents/` | 174 | `*.agent.md` |
-| `.github/prompts/instructions/` | 186 | `*.instructions.md` |
-| `.github/prompts/skills/` | 1 | `**/SKILL.md` |
-| `.github/prompts/archived/` | 771 | Archived templates |
-| **Total** | **1133** | Active + archived |
+| Directory                       | Files    | Notes               |
+| ------------------------------- | -------- | ------------------- |
+| `.github/prompts/agents/`       | 174      | `*.agent.md`        |
+| `.github/prompts/instructions/` | 186      | `*.instructions.md` |
+| `.github/prompts/skills/`       | 1        | `**/SKILL.md`       |
+| `.github/prompts/archived/`     | 771      | Archived templates  |
+| **Total**                       | **1133** | Active + archived   |
 
 ## Exact-Duplicate Body Scan
 
@@ -28,6 +28,7 @@ All prompt-family assets are now canonical under `.github/prompts/`. Legacy root
 ## Cross-Reference Normalization
 
 ### Updated Files
+
 - `README.md` — `.github/prompts/` as canonical prompt library
 - `AGENTS.md` — canonical prompt paths in project table and stale-ref tracker
 - `.github/copilot-instructions.md` — inventory snapshot updated
@@ -36,16 +37,17 @@ All prompt-family assets are now canonical under `.github/prompts/`. Legacy root
 - `.github/workflows/resource-staleness-report.md` — prompt reference paths updated
 
 ### Canonical Prompt Files Verified Clean
+
 - `.github/prompts/agents/*.agent.md` — 0 legacy stale refs
 - `.github/prompts/instructions/*.instructions.md` — 0 legacy stale refs
 
 ## Legacy Directory Status
 
-| Legacy Path | Status |
-|-------------|--------|
-| `.github/agents/` | Removed |
+| Legacy Path             | Status  |
+| ----------------------- | ------- |
+| `.github/agents/`       | Removed |
 | `.github/instructions/` | Removed |
-| `.github/skills/` | Removed |
+| `.github/skills/`       | Removed |
 
 ## Verification Artifacts
 

@@ -8,18 +8,18 @@ If the default behavior is active, reject files that contain nested objects or i
 
 ```json
 [
-  {
-    "VALID_PROPERTY_NAME-a": {
-      "VALID_PROPERTY_NAME-a": "value",
-      "VALID_PROPERTY_NAME-b": "value"
-    },
-    "VALID_PROPERTY_NAME-b": "value"
-  },
-  {
-    "VALID_PROPERTY_NAME-a": "value",
-    "VALID_PROPERTY_NAME-b": "value",
-    "VALID_PROPERTY_NAME-c": "value"
-  }
+	{
+		"VALID_PROPERTY_NAME-a": {
+			"VALID_PROPERTY_NAME-a": "value",
+			"VALID_PROPERTY_NAME-b": "value"
+		},
+		"VALID_PROPERTY_NAME-b": "value"
+	},
+	{
+		"VALID_PROPERTY_NAME-a": "value",
+		"VALID_PROPERTY_NAME-b": "value",
+		"VALID_PROPERTY_NAME-c": "value"
+	}
 ]
 ```
 

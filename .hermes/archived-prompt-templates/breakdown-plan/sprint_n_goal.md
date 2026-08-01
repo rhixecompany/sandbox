@@ -13,7 +13,7 @@
 
 **Total Commitment**: {points} story points **Success Criteria**: {Measurable outcomes}
 
-```
+````
 
 ### 8. GitHub Project Board Configuration
 
@@ -75,7 +75,7 @@ jobs:
               labels: ['feature', 'priority-medium'],
               milestone: epic.data.milestone?.number
             });
-```
+````
 
 ##### Automated Status Updates
 

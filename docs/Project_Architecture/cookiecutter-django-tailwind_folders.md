@@ -14,3 +14,4 @@ cookiecutter-django-tailwind/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── {{cookiecutter.project_slug}}/  # Primary source code
+```

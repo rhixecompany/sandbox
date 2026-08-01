@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Read the PRD and supporting notes | Requirements summary |
-| 1.2 | Identify technical constraints | Constraint list |
-| 1.3 | Capture dependencies and unknowns | Risk notes |
+| Step | Action                            | Output               |
+| ---- | --------------------------------- | -------------------- |
+| 1.1  | Read the PRD and supporting notes | Requirements summary |
+| 1.2  | Identify technical constraints    | Constraint list      |
+| 1.3  | Capture dependencies and unknowns | Risk notes           |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Write the goal and technical considerations | Opening sections |
-| 2.2 | Add architecture, schema, and API sections | Core design sections |
-| 2.3 | Add frontend, deployment, security, and performance notes | Delivery sections |
+| Step | Action                                                    | Output               |
+| ---- | --------------------------------------------------------- | -------------------- |
+| 2.1  | Write the goal and technical considerations               | Opening sections     |
+| 2.2  | Add architecture, schema, and API sections                | Core design sections |
+| 2.3  | Add frontend, deployment, security, and performance notes | Delivery sections    |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Check for missing required sections | Gap list |
-| 3.2 | Tighten language and remove fluff | Refined draft |
-| 3.3 | Verify the file path and naming | File-ready output |
+| Step | Action                              | Output            |
+| ---- | ----------------------------------- | ----------------- |
+| 3.1  | Check for missing required sections | Gap list          |
+| 3.2  | Tighten language and remove fluff   | Refined draft     |
+| 3.3  | Verify the file path and naming     | File-ready output |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Re-read the final plan | Verification notes |
-| 4.2 | Confirm the required sections exist | Section check |
-| 4.3 | Confirm the target path | Output confirmation |
+| Step | Action                              | Output              |
+| ---- | ----------------------------------- | ------------------- |
+| 4.1  | Re-read the final plan              | Verification notes  |
+| 4.2  | Confirm the required sections exist | Section check       |
+| 4.3  | Confirm the target path             | Output confirmation |
 
 #### Tasks
 

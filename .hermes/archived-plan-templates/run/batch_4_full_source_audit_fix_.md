@@ -8,18 +8,18 @@
 
 ### Pre-Identified Issues to Fix
 
-| # | File | Issue | Fix |
-| --- | --- | --- | --- |
-| 1 | `src/actions/auth-db.ts` | Not a Server Action (no `"use server"`) | Move to `src/dal/auth-db.ts` |
-| 2 | `src/dal/search-dal.ts` | Only DAL not extending `BaseDal<T>` | Make it extend `BaseDal<ComicType>` |
-| 3 | `src/dal/search-dal.ts` L116,118 | 2 `any` types | Replace with proper interfaces |
-| 4 | `src/actions/goals.actions.ts` | Wrong import `./actions-types` | Change to `@/types/actions-types` |
-| 5 | `src/schemas/comic-schema.ts` | Dead file — imported nowhere | Delete |
-| 6 | `src/tests/example.spec.ts` | Playwright placeholder | Delete |
-| 7 | `src/tests/schemas/comic-schema.spec.ts` | Name doesn't match what it tests | Rename to `comic.schema.spec.ts` |
-| 8 | `src/actions/reading-progress.actions.ts` + `reading-progress.ts` | Potential duplicates | Investigate and merge |
-| 9 | `src/dal/comment-rating-dal.ts` | Bundles 2 DALs in one file | Investigate if should split |
-| 10 | 12 files (20 usages) | `process.env` used directly | Migrate ALL to `getEnv()` |
+| #   | File                                                              | Issue                                   | Fix                                 |
+| --- | ----------------------------------------------------------------- | --------------------------------------- | ----------------------------------- |
+| 1   | `src/actions/auth-db.ts`                                          | Not a Server Action (no `"use server"`) | Move to `src/dal/auth-db.ts`        |
+| 2   | `src/dal/search-dal.ts`                                           | Only DAL not extending `BaseDal<T>`     | Make it extend `BaseDal<ComicType>` |
+| 3   | `src/dal/search-dal.ts` L116,118                                  | 2 `any` types                           | Replace with proper interfaces      |
+| 4   | `src/actions/goals.actions.ts`                                    | Wrong import `./actions-types`          | Change to `@/types/actions-types`   |
+| 5   | `src/schemas/comic-schema.ts`                                     | Dead file — imported nowhere            | Delete                              |
+| 6   | `src/tests/example.spec.ts`                                       | Playwright placeholder                  | Delete                              |
+| 7   | `src/tests/schemas/comic-schema.spec.ts`                          | Name doesn't match what it tests        | Rename to `comic.schema.spec.ts`    |
+| 8   | `src/actions/reading-progress.actions.ts` + `reading-progress.ts` | Potential duplicates                    | Investigate and merge               |
+| 9   | `src/dal/comment-rating-dal.ts`                                   | Bundles 2 DALs in one file              | Investigate if should split         |
+| 10  | 12 files (20 usages)                                              | `process.env` used directly             | Migrate ALL to `getEnv()`           |
 
 ### process.env Violations to Fix (ALL 20)
 

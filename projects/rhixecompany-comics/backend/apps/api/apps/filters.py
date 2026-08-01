@@ -1,16 +1,10 @@
 import django_filters
+from api.apps.models import Chapter, Comic, ComicStatus, Genre, Type
+from api.users.models import User
+from api.users.widgets import MyCheckboxSelectMultiple, MyRadioSelect
 from django.db import models
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-
-from api.apps.models import Chapter
-from api.apps.models import Comic
-from api.apps.models import ComicStatus
-from api.apps.models import Genre
-from api.apps.models import Type
-from api.users.models import User
-from api.users.widgets import MyCheckboxSelectMultiple
-from api.users.widgets import MyRadioSelect
 
 
 class Order(models.TextChoices):
@@ -101,7 +95,7 @@ class ComicFilter(django_filters.FilterSet):
                 "hx-indicator": ".progress",
                 "hx-swap": "outerHTML",
                 "script": "on htmx:afterOnLoad set my value to ''",
-                "_": "on input show <tbody>tr/> in closest <table/> when its textContent.toLowerCase() contains my value.toLowerCase()",  # noqa: E501
+                "_": "on input show <tbody>tr/> in closest <table/> when its textContent.toLowerCase() contains my value.toLowerCase()",
             },
         )
         self.form.fields["genres"].widget.attrs.update(

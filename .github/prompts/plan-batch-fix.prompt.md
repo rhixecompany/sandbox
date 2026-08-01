@@ -108,6 +108,7 @@ For each batch (default: 7 files per batch):1. Pick the batch of files with the 
 ### Phase 3: Full re-scan
 
 After all batches complete, run the full scan again.
+
 - If zero errors remain → done.
 - If errors remain but are pre-existing or out of scope → document in report.
 

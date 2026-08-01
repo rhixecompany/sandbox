@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-fix_tail_glue2.py — Fourth-pass fix for glued headings that survived
-passes 1–3. Handles three categories, all fence-aware:
+fix_tail_glue2.py - Fourth-pass fix for glued headings that survived
+passes 1-3. Handles three categories, all fence-aware:
 
   1. Table pipe without leading space: `## Subagents| Subagent | Role |`
      (pass 3 required a space before the pipe; these have none).
@@ -16,6 +16,7 @@ passes 1–3. Handles three categories, all fence-aware:
 
 Dry-run by default; --apply writes. Always LF output.
 """
+
 import argparse
 import re
 import sys
@@ -34,16 +35,25 @@ def looks_like_heading(prefix: str) -> bool:
         return False
     if re.search(r"[.!?] [a-z]", p):
         return False
-    if any(ch in p for ch in ("**", "`", "[", "{", "|", "<", ">")):
-        return False
-    return True
+    return not any(ch in p for ch in ("**", "`", "[", "{", "|", "<", ">"))
 
 
 # Suffix first words that are proper-noun / identifier fragments — never split
 # before these (GitHub→Hub, SpringDoc→Doc, ComicWise→Wise, BigQuery→Query).
 IDENTIFIER_TAILS = {
-    "Script", "SQL", "API", "UI", "UX", "JS", "TS", "ID", "DB",
-    "Doc", "Wise", "Hub", "Query",
+    "Script",
+    "SQL",
+    "API",
+    "UI",
+    "UX",
+    "JS",
+    "TS",
+    "ID",
+    "DB",
+    "Doc",
+    "Wise",
+    "Hub",
+    "Query",
 }
 
 
@@ -70,14 +80,14 @@ def fix_line(line: str) -> list[str] | None:
     tm = re.match(r"^(.+?)\| ", rest)
     if tm and "|" not in tm.group(1) and looks_like_heading(tm.group(1)):
         heading = (marker + " " + tm.group(1)).strip()
-        content = rest[tm.end():]
+        content = rest[tm.end() :]
         if heading and content:
             return [heading, "", "| " + content.lstrip("| ")]
 
     # --- 2. camelCase / sentence-boundary glue ---
     # multi-word heading + multi-word content; prefer sentence boundaries
     # (`billed?Locate`) then camelCase (`OutputUpon`).
-    for split_at, prefix, suffix in sentence_glue_boundaries(rest):
+    for _, prefix, suffix in sentence_glue_boundaries(rest):
         # heading prefix: multi-word, heading-like
         if " " not in prefix or not looks_like_heading(prefix):
             continue

@@ -42,7 +42,9 @@ jobs:
         run: npm run build
 
       - name: Fix line endings
-        run: bash scripts/fix-line-endings.sh
+        # Canonical fix-line-endings.sh lives in ~/AppData/Local/hermes/scripts (not in-repo; CI can't reach it).
+        # Inline the same LF normalization so the workflow stays self-contained.
+        run: find . -name '*.md' -type f -exec sed -i 's/\r$//' {} \;
 
       - name: Publish to main
         run: |

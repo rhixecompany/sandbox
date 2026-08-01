@@ -2,18 +2,18 @@
 
 ## Core Technologies
 
-| Technology | Usage | Evidence |
-| ------------ | ------- | ---------- |
-| Markdown | Primary documentation format | `.md` files |
-| YAML | CI/GitHub Actions configuration | `.yml` files |
-| JSON | Data/configuration storage | `.json` files |
+| Technology | Usage                           | Evidence      |
+| ---------- | ------------------------------- | ------------- |
+| Markdown   | Primary documentation format    | `.md` files   |
+| YAML       | CI/GitHub Actions configuration | `.yml` files  |
+| JSON       | Data/configuration storage      | `.json` files |
 
 ## Tooling
 
-| Tool | Purpose |
-|------|---------|
-| GitHub Actions | CI — TODO scanner workflow |
-| markdownlint | Markdown quality validation |
+| Tool           | Purpose                     |
+| -------------- | --------------------------- |
+| GitHub Actions | CI — TODO scanner workflow  |
+| markdownlint   | Markdown quality validation |
 
 ## Build & CI
 

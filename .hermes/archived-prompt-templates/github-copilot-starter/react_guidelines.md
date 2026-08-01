@@ -10,7 +10,7 @@
 - Keep components small and focused
 - Use CSS modules for component styling
 
-```
+````
 
 **Prompts (.prompt.md):**
 
@@ -36,7 +36,7 @@ Requirements for the form:
 * Use TypeScript types to ensure type safety
 * Customize UX-friendly validation rules
 
-```
+````
 
 **Chat Modes (.agent.md):**
 

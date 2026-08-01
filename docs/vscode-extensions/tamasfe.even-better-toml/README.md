@@ -11,7 +11,7 @@ Fully-featured TOML support.
 
 ## Contributed Settings
 
-evenBetterToml.*, taplo.*
+evenBetterToml._, taplo._
 
 ## Notes
 

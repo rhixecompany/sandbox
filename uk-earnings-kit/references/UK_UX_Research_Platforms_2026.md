@@ -7,29 +7,30 @@
 
 ## Quick Summary
 
-| # | Platform | Pay Per Test/Session | Est. Hourly Rate | UK? | Test Freq. | Min Age | Payout | Entry |
-|---|----------|---------------------|------------------|-----|-----------|---------|--------|-------|
-| 1 | **UserInterviews** | £50–£150/hr studies | £50–£150/hr | ✅ | Medium (app-based) | 16 | PayPal, Amazon GC, Visa GC | Profile + screeners |
-| 2 | **Respondent.io** | $50–$400+ per study | $50–$100/hr | ✅ | Medium (app-based) | 18 | PayPal (via Tremendous) | Profile + screeners |
-| 3 | **dscout** | $30–$200+ per mission | $20–$50/hr | ✅ | Low-Med | 18 | PayPal | Application + sample |
-| 4 | **Userlytics** | $5–$20 (unmod) / $10–$50 (live) | $15–$40/hr | ✅ | Med-High | 16 | PayPal | Qual test + profile |
-| 5 | **TestingTime** | ~€40/£50 avg per session | £30–£60/hr | ✅ | Low (1-2x month) | 18 | PayPal, bank transfer | Profile + screeners |
-| 6 | **IntelliZoom** | $5–$50 (mostly $8–$10) | $15–$40/hr | ✅ | High (high volume) | 18 | PayPal (2 weeks) | Profile sign-up |
-| 7 | **Trymata** (fka TryMyUI) | $5–$30 per test | $10–$30/hr | ✅ | Low-Med | 18 | PayPal | Qual test + profile |
-| 8 | **Userbrain** | $5 per test (5-20min) | ~$15/hr | ✅ | Medium | 18 | PayPal (weeks) | Qual test |
-| 9 | **UserFeel** | $10 per test (~20min) | ~$30/hr | ✅ | Low-Med | 18 | PayPal, Payoneer | Qual test + profile |
-| 10 | **Prolific** | £6/hr min (typical £9–15/hr) | £9–£15/hr | ✅ | High (daily studies) | 18 | PayPal | Profile (academic focus) |
-| 11 | **Lyssna** (fka UsabilityHub) | Varies (panel credits ~$1/test) | $5–$15/hr | ✅ | Low-Med | 18 | PayPal | Profile sign-up |
-| 12 | **WhatUsersDo** | ~£8 per test | ~£12–15/hr | ✅ | Low | 18 | PayPal | Qual test + profile |
-| 13 | **PlaytestCloud** | ~$9 per 15min game test | ~$36/hr | ✅ | Low-Med | 13 | PayPal | Profile sign-up |
-| 14 | **UserCrowd** | <$1 per quick test | Low ($3–5/hr) | ✅ | High (micro-tasks) | 18 | PayPal | Profile sign-up |
-| 15 | **Loop11** | Varies per test | Varies | ✅ | Low | 18 | PayPal, gift cards | Qual test |
+| #   | Platform                      | Pay Per Test/Session            | Est. Hourly Rate | UK? | Test Freq.           | Min Age | Payout                     | Entry                    |
+| --- | ----------------------------- | ------------------------------- | ---------------- | --- | -------------------- | ------- | -------------------------- | ------------------------ |
+| 1   | **UserInterviews**            | £50–£150/hr studies             | £50–£150/hr      | ✅  | Medium (app-based)   | 16      | PayPal, Amazon GC, Visa GC | Profile + screeners      |
+| 2   | **Respondent.io**             | $50–$400+ per study             | $50–$100/hr      | ✅  | Medium (app-based)   | 18      | PayPal (via Tremendous)    | Profile + screeners      |
+| 3   | **dscout**                    | $30–$200+ per mission           | $20–$50/hr       | ✅  | Low-Med              | 18      | PayPal                     | Application + sample     |
+| 4   | **Userlytics**                | $5–$20 (unmod) / $10–$50 (live) | $15–$40/hr       | ✅  | Med-High             | 16      | PayPal                     | Qual test + profile      |
+| 5   | **TestingTime**               | ~€40/£50 avg per session        | £30–£60/hr       | ✅  | Low (1-2x month)     | 18      | PayPal, bank transfer      | Profile + screeners      |
+| 6   | **IntelliZoom**               | $5–$50 (mostly $8–$10)          | $15–$40/hr       | ✅  | High (high volume)   | 18      | PayPal (2 weeks)           | Profile sign-up          |
+| 7   | **Trymata** (fka TryMyUI)     | $5–$30 per test                 | $10–$30/hr       | ✅  | Low-Med              | 18      | PayPal                     | Qual test + profile      |
+| 8   | **Userbrain**                 | $5 per test (5-20min)           | ~$15/hr          | ✅  | Medium               | 18      | PayPal (weeks)             | Qual test                |
+| 9   | **UserFeel**                  | $10 per test (~20min)           | ~$30/hr          | ✅  | Low-Med              | 18      | PayPal, Payoneer           | Qual test + profile      |
+| 10  | **Prolific**                  | £6/hr min (typical £9–15/hr)    | £9–£15/hr        | ✅  | High (daily studies) | 18      | PayPal                     | Profile (academic focus) |
+| 11  | **Lyssna** (fka UsabilityHub) | Varies (panel credits ~$1/test) | $5–$15/hr        | ✅  | Low-Med              | 18      | PayPal                     | Profile sign-up          |
+| 12  | **WhatUsersDo**               | ~£8 per test                    | ~£12–15/hr       | ✅  | Low                  | 18      | PayPal                     | Qual test + profile      |
+| 13  | **PlaytestCloud**             | ~$9 per 15min game test         | ~$36/hr          | ✅  | Low-Med              | 13      | PayPal                     | Profile sign-up          |
+| 14  | **UserCrowd**                 | <$1 per quick test              | Low ($3–5/hr)    | ✅  | High (micro-tasks)   | 18      | PayPal                     | Profile sign-up          |
+| 15  | **Loop11**                    | Varies per test                 | Varies           | ✅  | Low                  | 18      | PayPal, gift cards         | Qual test                |
 
 ---
 
 ## Detailed Platform Profiles
 
 ### 1. UserInterviews ⭐⭐⭐⭐⭐
+
 - **Website:** userinterviews.com
 - **Pay:** £50–£150 per hour for 1:1 interviews; studies range £50–£400+
 - **Test Types:** 1:1 moderated interviews, focus groups, diary studies, surveys, unmoderated tests
@@ -44,6 +45,7 @@
 ---
 
 ### 2. Respondent.io ⭐⭐⭐⭐⭐
+
 - **Website:** respondent.io
 - **Pay:** $50–$400+ per study typical; focus groups $150–$250; online surveys $50–$150
 - **Test Types:** 1:1 interviews, focus groups, usability tests, surveys
@@ -58,6 +60,7 @@
 ---
 
 ### 3. dscout ⭐⭐⭐⭐
+
 - **Website:** dscout.com
 - **Pay:** $30–$200+ per mission (diary studies, video responses, multi-day)
 - **Test Types:** Diary studies, usability testing, field studies, media-rich surveys, interviews
@@ -72,6 +75,7 @@
 ---
 
 ### 4. Userlytics ⭐⭐⭐⭐⭐
+
 - **Website:** userlytics.com
 - **Pay:** Unmoderated: $5–$20 per 10–20min test. Moderated/Live: $10–$50 per session
 - **Test Types:** Website tests, app tests, prototype tests, live interviews, card sorting
@@ -86,6 +90,7 @@
 ---
 
 ### 5. TestingTime ⭐⭐⭐⭐⭐
+
 - **Website:** testingtime.com
 - **Pay:** Average ~€40/£50 per study (range £30–£100/hr)
 - **Test Types:** Usability tests, focus groups, interviews, product tests
@@ -100,6 +105,7 @@
 ---
 
 ### 6. IntelliZoom ⭐⭐⭐⭐
+
 - **Website:** intellizoom.com
 - **Pay:** $5–$50 per test (typical $8–$10 for 10–20min unmoderated)
 - **Test Types:** Think-aloud tests (£8–£15), mobile tasks (£5–£10), surveys (£0.80–£3), prototype tests (£5–£12)
@@ -114,6 +120,7 @@
 ---
 
 ### 7. Trymata (formerly TryMyUI) ⭐⭐⭐⭐
+
 - **Website:** trymata.com
 - **Pay:** $5–$30 per test (typically $10 for ~20min)
 - **Test Types:** Website usability testing, app testing, live interviews
@@ -128,6 +135,7 @@
 ---
 
 ### 8. Userbrain ⭐⭐⭐⭐
+
 - **Website:** userbrain.com
 - **Pay:** $5 per test (5–20min) = ~$15/hr
 - **Test Types:** Quick unmoderated website and app testing (5-20min video sessions)
@@ -142,6 +150,7 @@
 ---
 
 ### 9. UserFeel ⭐⭐⭐⭐
+
 - **Website:** userfeel.com
 - **Pay:** $10 per test (~20min) = ~$30/hr
 - **Test Types:** Qualitative website usability tests with screen recording and think-aloud
@@ -156,6 +165,7 @@
 ---
 
 ### 10. Prolific ⭐⭐⭐⭐⭐
+
 - **Website:** prolific.com
 - **Pay:** £6/hr minimum (typically £9–£15/hr in practice)
 - **Test Types:** Academic studies, surveys, AI training tasks, behavioural experiments
@@ -170,6 +180,7 @@
 ---
 
 ### 11. Lyssna (formerly UsabilityHub) ⭐⭐⭐⭐
+
 - **Website:** lyssna.com
 - **Pay (participant):** Panel credits ~$1 per completed test; varies by study
 - **Test Types:** Five-second tests, design surveys, navigation tests, preference tests
@@ -184,6 +195,7 @@
 ---
 
 ### 12. WhatUsersDo ⭐⭐⭐
+
 - **Website:** whatusersdo.com
 - **Pay:** ~£8 per test (typically less than $10 standard)
 - **Test Types:** Unmoderated website usability tests
@@ -198,6 +210,7 @@
 ---
 
 ### 13. PlaytestCloud ⭐⭐⭐⭐
+
 - **Website:** playtestcloud.com
 - **Pay:** ~$9 per 15-minute game test (~$36/hr)
 - **Test Types:** Mobile game testing (iOS/Android)
@@ -212,6 +225,7 @@
 ---
 
 ### 14. UserCrowd ⭐⭐⭐
+
 - **Website:** usercrowd.com
 - **Pay:** Less than $1 per test (micro-tasks)
 - **Test Types:** 5-second tests, preference tests, design comparison
@@ -226,6 +240,7 @@
 ---
 
 ### 15. Loop11 ⭐⭐⭐
+
 - **Website:** loop11.com
 - **Pay:** Varies per test
 - **Test Types:** Task-based usability tests with quantitative metrics
@@ -240,34 +255,38 @@
 
 ## Platforms Absorbed or Defunct
 
-| Platform | Status | Notes |
-|----------|--------|-------|
-| **Validately** | ❌ Absorbed | Merged into UserTesting (now UserZoom GO). Existing testers moved to UserTesting network. |
-| **UserZoom** | ❌ Absorbed | Now part of UserTesting. IntelliZoom is the tester-facing panel arm. |
-| **Lookback** | ⚠️ Researcher tool | Primarily a tool for researchers, not a direct participant-pay platform. Integrated with User Interviews for recruitment. No direct tester sign-up. |
-| **Maze** | ⚠️ Researcher tool | Primarily for prototype testing by researchers. Their $1/credit panel pays participants but not a direct-sign-up platform for testers. |
+| Platform       | Status             | Notes                                                                                                                                               |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Validately** | ❌ Absorbed        | Merged into UserTesting (now UserZoom GO). Existing testers moved to UserTesting network.                                                           |
+| **UserZoom**   | ❌ Absorbed        | Now part of UserTesting. IntelliZoom is the tester-facing panel arm.                                                                                |
+| **Lookback**   | ⚠️ Researcher tool | Primarily a tool for researchers, not a direct participant-pay platform. Integrated with User Interviews for recruitment. No direct tester sign-up. |
+| **Maze**       | ⚠️ Researcher tool | Primarily for prototype testing by researchers. Their $1/credit panel pays participants but not a direct-sign-up platform for testers.              |
 
 ---
 
 ## Strategic Recommendations for Alexa (UK-based)
 
 ### Tier 1 — Best for supplementary income (alongside UserTesting)
+
 1. **UserInterviews** — Highest per-hour rate (£50–150/hr). Apply to studies regularly.
 2. **Respondent.io** — £50–400 per study. High pay, competitive screeners.
 3. **Prolific** — Daily studies, UK-based, reliable £9–15/hr. High volume.
 4. **Userlytics** — Good mix of quick tests and live sessions. Second-best quick-test volume after UserTesting.
 
 ### Tier 2 — Good secondary platforms
-5. **IntelliZoom** — High test volume for UK users. Easy entry. Lower per-test but consistent.
-6. **TestingTime** — Occasional high-paying sessions (£50+/hr). Infrequent but worth having.
-7. **dscout** — Diary studies pay well ($30–200+). Good for deep, interesting work.
+
+1. **IntelliZoom** — High test volume for UK users. Easy entry. Lower per-test but consistent.
+2. **TestingTime** — Occasional high-paying sessions (£50+/hr). Infrequent but worth having.
+3. **dscout** — Diary studies pay well ($30–200+). Good for deep, interesting work.
 
 ### Tier 3 — Nice-to-have (low effort, lower pay)
-8. **Userbrain** — $5/tests. OK for quick tasks when you have 10 mins.
-9. **Trymata** — Standard $10/tests. Decent backup.
-10. **UserFeel** — $10/tests. Good backup.
+
+1. **Userbrain** — $5/tests. OK for quick tasks when you have 10 mins.
+2. **Trymata** — Standard $10/tests. Decent backup.
+3. **UserFeel** — $10/tests. Good backup.
 
 ### Estimated Monthly Earnings (active across 5+ platforms)
+
 - **Casual** (1hr/day): ~£100–200/month
 - **Moderate** (2-3hr/day): ~£300–600/month
 - **Active** (4-5hr/day): ~£600–1,500+/month (including high-value interviews)
@@ -277,6 +296,7 @@
 ## Methodology & Sources
 
 This research compiled data from:
+
 - 12 independent web searches (July 2026)
 - 15+ extracted web pages (review/comparison sites, official platform pages)
 - Cross-referenced with Reddit communities (r/usertesting, r/beermoneyuk, r/WorkOnline)

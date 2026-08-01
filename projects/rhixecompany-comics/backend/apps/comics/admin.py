@@ -1,4 +1,5 @@
 """Admin configuration for comics models."""
+
 from __future__ import annotations
 
 from django.contrib import admin

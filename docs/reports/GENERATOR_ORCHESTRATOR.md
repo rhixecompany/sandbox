@@ -141,6 +141,7 @@ The orchestrator manages **exactly 11** root generator prompts. Each is confirme
 ### Gate A (Post Stage A)
 
 **Must pass:**
+
 - [ ] `blueprints/technology-stack-blueprint.md` exists
 - [ ] Contains `## Stack Summary` with at least one language entry
 - [ ] `blueprints/folder-structure-blueprint.md` exists
@@ -152,6 +153,7 @@ The orchestrator manages **exactly 11** root generator prompts. Each is confirme
 ### Gate B (Post Stage B)
 
 **Must pass:**
+
 - [ ] All three Stage B outputs exist
 - [ ] `architecture-blueprint.md` has `## Component Diagram` with diagram (Mermaid/PlantUML/ASCII)
 - [ ] `workflow-analysis-blueprint.md` has `## Data Flow` section
@@ -162,6 +164,7 @@ The orchestrator manages **exactly 11** root generator prompts. Each is confirme
 ### Gate C (Post Stage C)
 
 **Must pass:**
+
 - [ ] `copilot-instructions.md` exists
 - [ ] `README.md` exists
 - [ ] **Cross-doc consistency** — project name, stack, version identical across:
@@ -173,6 +176,7 @@ The orchestrator manages **exactly 11** root generator prompts. Each is confirme
 ### Gate D (Post Stage D)
 
 **Must pass per generator:**
+
 - [ ] Output directory exists with project config (`package.json`, `pyproject.toml`, `Package.swift`, or equivalent)
 - [ ] At least one tool definition present (MCP tool registration)
 - [ ] Valid syntax for target language
@@ -334,6 +338,7 @@ def select_mcp_generators(stack_blueprint: dict, include_code_gen: bool) -> list
 ## 11. Maintenance
 
 When adding/removing a root generator:
+
 1. Update inventory table in this document
 2. Update prerequisite matrix
 3. Update stage assignment (A/B/C/D)

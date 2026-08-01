@@ -1,7 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import FileExtensionValidator
-from django.db.models import CharField
-from django.db.models import ImageField
+from django.db.models import CharField, ImageField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from PIL import Image
@@ -9,11 +8,7 @@ from PIL import Image
 
 def user_image_location(instance, filename):
     return "{}/{}".format(
-        str(instance.email)
-        .replace(" ", "_")
-        .replace(":", " ")
-        .replace("/", "")
-        .replace("\\", ""),
+        str(instance.email).replace(" ", "_").replace(":", " ").replace("/", "").replace("\\", ""),
         filename,
     )
 
@@ -69,8 +64,8 @@ class User(AbstractUser):
         if self.image:
             img = Image.open(self.image.path)
 
-            if img.height > 100 or img.width > 100:  # noqa: PLR2004
-                print(f"saving {self.image.path}")  # noqa: T201
+            if img.height > 100 or img.width > 100:
+                print(f"saving {self.image.path}")
                 output_size = (300, 300)
                 img.thumbnail(output_size)
                 img.save(self.image.path)

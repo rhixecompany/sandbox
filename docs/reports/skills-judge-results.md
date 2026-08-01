@@ -2,12 +2,14 @@
 
 Skills scored: 631 (post-dedup)
 Strict structural criteria (not body content):
+
 - Missing frontmatter: −40
 - Missing `name:`: −30
 - Missing `description:`: −30
 - Empty file: −50
 
 ## Results
+
 - Pass (≥80): 631
 - Fail (<80): 0
 

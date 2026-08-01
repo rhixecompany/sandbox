@@ -55,33 +55,33 @@
 
 ```json
 {
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "actions": [
-    {
-      "type": "Action.OpenUrl",
-      "title": "View Details",
-      "url": "https://example.com/items/${id}"
-    }
-  ],
-  "body": [
-    {
-      "type": "Container",
-      "$data": "${$root}",
-      "items": [
-        {
-          "type": "TextBlock",
-          "text": "**${if(title, title, 'N/A')}**",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "${if(description, description, 'N/A')}",
-          "wrap": true
-        }
-      ]
-    }
-  ],
-  "type": "AdaptiveCard",
-  "version": "1.5"
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"actions": [
+		{
+			"type": "Action.OpenUrl",
+			"title": "View Details",
+			"url": "https://example.com/items/${id}"
+		}
+	],
+	"body": [
+		{
+			"type": "Container",
+			"$data": "${$root}",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "**${if(title, title, 'N/A')}**",
+					"wrap": true
+				},
+				{
+					"type": "TextBlock",
+					"text": "${if(description, description, 'N/A')}",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"type": "AdaptiveCard",
+	"version": "1.5"
 }
 ```

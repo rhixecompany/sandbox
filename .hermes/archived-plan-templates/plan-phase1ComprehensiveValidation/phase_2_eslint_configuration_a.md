@@ -27,18 +27,18 @@
 
 #### Plugin Additions Needed
 
-| Plugin | Category | Purpose | Required |
-| --- | --- | --- | --- |
-| `@eslint/js` | Core | JavaScript recommended rules | ✅ Critical |
-| `eslint-plugin-import-x` | Import | Import order, duplicate detection | ✅ Critical |
-| `eslint-plugin-jest` | Testing | Jest-specific rules | ✅ Important |
-| `eslint-plugin-n` | Node.js | Node.js best practices | ✅ Important |
-| `eslint-plugin-perfectionist` | Code Quality | Sorting/organization | ⚠️ Nice-to-have |
-| `eslint-plugin-react-refresh` | React | React Refresh compatibility | ✅ Important |
-| `eslint-plugin-security` | Security | Security vulnerability detection | ✅ Critical |
-| `eslint-plugin-testing-library` | Testing | Testing Library best practices | ✅ Important |
-| `eslint-plugin-unicorn` | Code Quality | Awesome code patterns | ⚠️ Nice-to-have |
-| `globals` | Core | Global variables (Node, browser) | ✅ Critical |
+| Plugin                          | Category     | Purpose                           | Required        |
+| ------------------------------- | ------------ | --------------------------------- | --------------- |
+| `@eslint/js`                    | Core         | JavaScript recommended rules      | ✅ Critical     |
+| `eslint-plugin-import-x`        | Import       | Import order, duplicate detection | ✅ Critical     |
+| `eslint-plugin-jest`            | Testing      | Jest-specific rules               | ✅ Important    |
+| `eslint-plugin-n`               | Node.js      | Node.js best practices            | ✅ Important    |
+| `eslint-plugin-perfectionist`   | Code Quality | Sorting/organization              | ⚠️ Nice-to-have |
+| `eslint-plugin-react-refresh`   | React        | React Refresh compatibility       | ✅ Important    |
+| `eslint-plugin-security`        | Security     | Security vulnerability detection  | ✅ Critical     |
+| `eslint-plugin-testing-library` | Testing      | Testing Library best practices    | ✅ Important    |
+| `eslint-plugin-unicorn`         | Code Quality | Awesome code patterns             | ⚠️ Nice-to-have |
+| `globals`                       | Core         | Global variables (Node, browser)  | ✅ Critical     |
 
 **Installation Command**:
 

@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Next.js) |
-| **Pattern** | Next.js App Router with Server Actions + Admin Panel |
-| **Stack** | Next.js, React, Bun, TypeScript, Tailwind CSS, shadcn/ui, Drizzle ORM, Playwright |
+| Category    | Technology                                                                        |
+| ----------- | --------------------------------------------------------------------------------- |
+| **Type**    | TypeScript/Bun (Next.js)                                                          |
+| **Pattern** | Next.js App Router with Server Actions + Admin Panel                              |
+| **Stack**   | Next.js, React, Bun, TypeScript, Tailwind CSS, shadcn/ui, Drizzle ORM, Playwright |
 
 ## Development Tools
 

@@ -16,12 +16,7 @@
 
 ```ts
 userRole: "user" | "admin" | "moderator";
-comicStatus: "Ongoing" |
-  "Hiatus" |
-  "Completed" |
-  "Dropped" |
-  "Season End" |
-  "Coming Soon";
+comicStatus: "Ongoing" | "Hiatus" | "Completed" | "Dropped" | "Season End" | "Coming Soon";
 resourceEnum: defined in schema;
 actionEnum: defined in schema;
 ```

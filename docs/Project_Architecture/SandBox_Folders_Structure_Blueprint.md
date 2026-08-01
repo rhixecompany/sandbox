@@ -16,13 +16,13 @@ The SandBox workspace is a **monorepo** containing:
 
 ### Organizational Principles
 
-| Principle | Description |
-|-----------|-------------|
-| **Project isolation** | Each project lives in its own directory under `projects/` with its own config, dependencies, and documentation |
-| **Workspace-level automation** | Root-level scripts (Python, Bash) orchestrate cross-project operations, audits, and quality checks |
-| **AI/Agent tooling** | `.github/prompts/` contains 150+ prompt templates consumed by Copilot, Codex, and Hermes agents |
-| **Self-documenting** | Every project has `README.md`, `THE_STORY_OF_THIS_REPO.md`, and `docs/Project_Architecture/` |
-| **Root-level documentation** | `docs/` at workspace root aggregates cross-cutting blueprints, audits, and reports |
+| Principle                      | Description                                                                                                    |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| **Project isolation**          | Each project lives in its own directory under `projects/` with its own config, dependencies, and documentation |
+| **Workspace-level automation** | Root-level scripts (Python, Bash) orchestrate cross-project operations, audits, and quality checks             |
+| **AI/Agent tooling**           | `.github/prompts/` contains 150+ prompt templates consumed by Copilot, Codex, and Hermes agents                |
+| **Self-documenting**           | Every project has `README.md`, `THE_STORY_OF_THIS_REPO.md`, and `docs/Project_Architecture/`                   |
+| **Root-level documentation**   | `docs/` at workspace root aggregates cross-cutting blueprints, audits, and reports                             |
 
 ---
 
@@ -99,11 +99,11 @@ SandBox/
 
 ### 3.1 Banking — Full-Stack Fintech Application
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Next.js 16 + Drizzle ORM + Plaid + Dwolla |
-| **Type** | Full-Stack Fintech |
-| **Status** | Active |
+| Attribute  | Value                                     |
+| ---------- | ----------------------------------------- |
+| **Stack**  | Next.js 16 + Drizzle ORM + Plaid + Dwolla |
+| **Type**   | Full-Stack Fintech                        |
+| **Status** | Active                                    |
 
 ```
 projects/Banking/
@@ -154,11 +154,11 @@ projects/Banking/
 
 ### 3.2 Bash — Automation Toolkit
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Bun / TypeScript |
-| **Type** | Automation Toolkit |
-| **Status** | Active |
+| Attribute  | Value              |
+| ---------- | ------------------ |
+| **Stack**  | Bun / TypeScript   |
+| **Type**   | Automation Toolkit |
+| **Status** | Active             |
 
 ```
 projects/Bash/
@@ -202,11 +202,11 @@ projects/Bash/
 
 ### 3.3 comicwise — Comic Streaming Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Next.js 16 + Prisma/Drizzle + Stripe |
-| **Type** | Full-Stack Content Streaming |
-| **Status** | Active |
+| Attribute  | Value                                |
+| ---------- | ------------------------------------ |
+| **Stack**  | Next.js 16 + Prisma/Drizzle + Stripe |
+| **Type**   | Full-Stack Content Streaming         |
+| **Status** | Active                               |
 
 ```
 projects/comicwise/
@@ -283,11 +283,11 @@ projects/comicwise/
 
 ### 3.4 cookiecutter-django-tailwind — Django Project Generator
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django 5.x + Tailwind CSS |
-| **Type** | Project Generator / Cookiecutter Template |
-| **Status** | Active |
+| Attribute  | Value                                     |
+| ---------- | ----------------------------------------- |
+| **Stack**  | Django 5.x + Tailwind CSS                 |
+| **Type**   | Project Generator / Cookiecutter Template |
+| **Status** | Active                                    |
 
 ```
 projects/cookiecutter-django-tailwind/
@@ -328,11 +328,11 @@ projects/cookiecutter-django-tailwind/
 
 ### 3.5 Django-Scrapy-Selenium — Web Scraping Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django 4.x + Scrapy + Selenium + Celery |
-| **Type** | Web Scraping Platform |
-| **Status** | Active |
+| Attribute  | Value                                   |
+| ---------- | --------------------------------------- |
+| **Stack**  | Django 4.x + Scrapy + Selenium + Celery |
+| **Type**   | Web Scraping Platform                   |
+| **Status** | Active                                  |
 
 ```
 projects/Django-Scrapy-Selenium/
@@ -395,11 +395,11 @@ projects/Django-Scrapy-Selenium/
 
 ### 3.6 docs — Documentation-Only Project
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Markdown |
-| **Type** | Documentation-Only Project |
-| **Status** | Reference / Read-Only |
+| Attribute  | Value                      |
+| ---------- | -------------------------- |
+| **Stack**  | Markdown                   |
+| **Type**   | Documentation-Only Project |
+| **Status** | Reference / Read-Only      |
 
 ```
 projects/docs/
@@ -415,11 +415,11 @@ projects/docs/
 
 ### 3.7 ecom — Ecommerce Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django REST Framework + React/Redux |
-| **Type** | Full-Stack Ecommerce |
-| **Status** | Active |
+| Attribute  | Value                               |
+| ---------- | ----------------------------------- |
+| **Stack**  | Django REST Framework + React/Redux |
+| **Type**   | Full-Stack Ecommerce                |
+| **Status** | Active                              |
 
 ```
 projects/ecom/
@@ -449,11 +449,11 @@ projects/ecom/
 
 ### 3.8 mcp-servers — Multi-Language MCP Server Collection
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | 10 languages (TypeScript, Python, Go, Rust, Java, Kotlin, C#, PHP, Ruby, Swift) |
-| **Type** | Multi-Language MCP Server Collection |
-| **Status** | Active |
+| Attribute  | Value                                                                           |
+| ---------- | ------------------------------------------------------------------------------- |
+| **Stack**  | 10 languages (TypeScript, Python, Go, Rust, Java, Kotlin, C#, PHP, Ruby, Swift) |
+| **Type**   | Multi-Language MCP Server Collection                                            |
+| **Status** | Active                                                                          |
 
 ```
 projects/mcp-servers/
@@ -496,11 +496,11 @@ projects/mcp-servers/
 
 ### 3.9 profile — Django Profile/Portfolio Site
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django |
-| **Type** | Profile/Portfolio Application |
-| **Status** | Active |
+| Attribute  | Value                         |
+| ---------- | ----------------------------- |
+| **Stack**  | Django                        |
+| **Type**   | Profile/Portfolio Application |
+| **Status** | Active                        |
 
 ```
 projects/profile/
@@ -531,11 +531,11 @@ projects/profile/
 
 ### 3.10 Python-projects — 18 Beginner Scripts
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Python 3.x |
-| **Type** | Script Collection (Educational/Utility) |
-| **Status** | Active |
+| Attribute  | Value                                   |
+| ---------- | --------------------------------------- |
+| **Stack**  | Python 3.x                              |
+| **Type**   | Script Collection (Educational/Utility) |
+| **Status** | Active                                  |
 
 ```
 projects/Python-projects/
@@ -572,11 +572,11 @@ projects/Python-projects/
 
 ### 3.11 Resume_maker — Job Documents Generator
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Bun / TypeScript |
-| **Type** | CLI Document Generator |
-| **Status** | Active |
+| Attribute  | Value                  |
+| ---------- | ---------------------- |
+| **Stack**  | Bun / TypeScript       |
+| **Type**   | CLI Document Generator |
+| **Status** | Active                 |
 
 ```
 projects/Resume_maker/
@@ -598,11 +598,11 @@ projects/Resume_maker/
 
 ### 3.12 rhixe_scans — Comic/Manga Reader Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Next.js 15 + Prisma 6 |
-| **Type** | Full-Stack Comic Reader |
-| **Status** | Active |
+| Attribute  | Value                   |
+| ---------- | ----------------------- |
+| **Stack**  | Next.js 15 + Prisma 6   |
+| **Type**   | Full-Stack Comic Reader |
+| **Status** | Active                  |
 
 ```
 projects/rhixe_scans/
@@ -662,11 +662,11 @@ projects/rhixe_scans/
 
 ### 3.13 rhixecompany-comics — Dual-Stack Comics Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django 4.x + Next.js 16 + Celery |
-| **Type** | Dual-Stack Web Application |
-| **Status** | Active |
+| Attribute  | Value                            |
+| ---------- | -------------------------------- |
+| **Stack**  | Django 4.x + Next.js 16 + Celery |
+| **Type**   | Dual-Stack Web Application       |
+| **Status** | Active                           |
 
 ```
 projects/rhixecompany-comics/
@@ -702,11 +702,11 @@ projects/rhixecompany-comics/
 
 ### 3.14 selenium_webdriver — Chrome Web Scraper
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Node.js 18+ + Selenium WebDriver 4.x |
-| **Type** | CLI Scraper Tool |
-| **Status** | Active |
+| Attribute  | Value                                |
+| ---------- | ------------------------------------ |
+| **Stack**  | Node.js 18+ + Selenium WebDriver 4.x |
+| **Type**   | CLI Scraper Tool                     |
+| **Status** | Active                               |
 
 ```
 projects/selenium_webdriver/
@@ -724,11 +724,11 @@ projects/selenium_webdriver/
 
 ### 3.15 university-libary-jsm — Library Management System
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Next.js 15 + Drizzle ORM + Neon |
-| **Type** | Full-Stack Library Management |
-| **Status** | Active |
+| Attribute  | Value                           |
+| ---------- | ------------------------------- |
+| **Stack**  | Next.js 15 + Drizzle ORM + Neon |
+| **Type**   | Full-Stack Library Management   |
+| **Status** | Active                          |
 
 ```
 projects/university-libary-jsm/
@@ -781,11 +781,11 @@ projects/university-libary-jsm/
 
 ### 3.16 xamehi.tv — Streaming Platform
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django REST + React 17 |
-| **Type** | Full-Stack Streaming Platform |
-| **Status** | Active |
+| Attribute  | Value                         |
+| ---------- | ----------------------------- |
+| **Stack**  | Django REST + React 17        |
+| **Type**   | Full-Stack Streaming Platform |
+| **Status** | Active                        |
 
 ```
 projects/xamehi.tv/
@@ -816,11 +816,11 @@ projects/xamehi.tv/
 
 ### 3.17 xamehi — Triple-Service Web Application
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Django + Express + React 18 |
-| **Type** | Triple-Service Web Application |
-| **Status** | Legacy / Active |
+| Attribute  | Value                          |
+| ---------- | ------------------------------ |
+| **Stack**  | Django + Express + React 18    |
+| **Type**   | Triple-Service Web Application |
+| **Status** | Legacy / Active                |
 
 ```
 projects/xamehi/
@@ -838,11 +838,11 @@ projects/xamehi/
 
 ### 3.18 youtube-downloader — CLI Video Downloader
 
-| Attribute | Value |
-|-----------|-------|
-| **Stack** | Python 3.x + yt-dlp |
-| **Type** | CLI Utility Tool |
-| **Status** | Active |
+| Attribute  | Value               |
+| ---------- | ------------------- |
+| **Stack**  | Python 3.x + yt-dlp |
+| **Type**   | CLI Utility Tool    |
+| **Status** | Active              |
 
 ```
 projects/youtube-downloader/
@@ -868,70 +868,70 @@ projects/youtube-downloader/
 
 ### 4.1 Configuration Files
 
-| Pattern | Location | Examples |
-|---------|----------|----------|
-| Root workspace config | `SandBox/` root | `.editorconfig`, `.gitignore`, `.mcp.json`, `.ruff.toml` |
-| Root tooling config | `SandBox/` | `pyrightconfig.json`, `tsconfig.json`, `bun.lock`, `package.json` |
-| Project-level config | `projects/<project>/` | `package.json`, `tsconfig.json`, `pyproject.toml` |
-| Environment variables | `projects/<project>/.envs/` | `.envs/local/`, `.envs/production/` |
-| VS Code | `<project>/.vscode/` | `settings.json`, `extensions.json` |
-| Agent config | `<project>/.claude/`, `<project>/.cursor/` | Skills, rules, hooks |
-| CI/CD | `<project>/.github/workflows/` | YAML workflow files |
-| MCP | `SandBox/.mcp.json`, `<project>/docs/mcp/` | MCP server registrations |
-| Docker Compose | `<project>/compose/` | `docker-compose.yml`, `compose/local/`, `compose/production/` |
+| Pattern               | Location                                   | Examples                                                          |
+| --------------------- | ------------------------------------------ | ----------------------------------------------------------------- |
+| Root workspace config | `SandBox/` root                            | `.editorconfig`, `.gitignore`, `.mcp.json`, `.ruff.toml`          |
+| Root tooling config   | `SandBox/`                                 | `pyrightconfig.json`, `tsconfig.json`, `bun.lock`, `package.json` |
+| Project-level config  | `projects/<project>/`                      | `package.json`, `tsconfig.json`, `pyproject.toml`                 |
+| Environment variables | `projects/<project>/.envs/`                | `.envs/local/`, `.envs/production/`                               |
+| VS Code               | `<project>/.vscode/`                       | `settings.json`, `extensions.json`                                |
+| Agent config          | `<project>/.claude/`, `<project>/.cursor/` | Skills, rules, hooks                                              |
+| CI/CD                 | `<project>/.github/workflows/`             | YAML workflow files                                               |
+| MCP                   | `SandBox/.mcp.json`, `<project>/docs/mcp/` | MCP server registrations                                          |
+| Docker Compose        | `<project>/compose/`                       | `docker-compose.yml`, `compose/local/`, `compose/production/`     |
 
 ### 4.2 Source Code / Business Logic
 
-| Pattern | Location | 
-|---------|----------|
-| Next.js pages/routes | `<project>/src/app/` or `<project>/app/` |
-| React components | `<project>/src/components/` (sub-divided by domain) |
-| Server actions | `<project>/src/lib/actions/` or `<project>/src/actions/` |
-| Django apps | `<project>/<appname>/` or `<project>/api/<appname>/` |
-| Scrapy spiders | `<project>/crawler/spiders/` |
-| MCP server tools | `<project>/src/tools/` or `<project>/Tools/` |
-| Shared libraries | `<project>/src/lib/` or `<project>/lib/` |
-| TypeScript types | `<project>/src/types/` or `<project>/types/` |
-| Validation schemas | `<project>/src/schemas/` |
+| Pattern              | Location                                                 |
+| -------------------- | -------------------------------------------------------- |
+| Next.js pages/routes | `<project>/src/app/` or `<project>/app/`                 |
+| React components     | `<project>/src/components/` (sub-divided by domain)      |
+| Server actions       | `<project>/src/lib/actions/` or `<project>/src/actions/` |
+| Django apps          | `<project>/<appname>/` or `<project>/api/<appname>/`     |
+| Scrapy spiders       | `<project>/crawler/spiders/`                             |
+| MCP server tools     | `<project>/src/tools/` or `<project>/Tools/`             |
+| Shared libraries     | `<project>/src/lib/` or `<project>/lib/`                 |
+| TypeScript types     | `<project>/src/types/` or `<project>/types/`             |
+| Validation schemas   | `<project>/src/schemas/`                                 |
 
 ### 4.3 Database
 
-| Pattern | Location |
-|---------|----------|
-| ORM schemas | `<project>/database/` or `<project>/src/database/` |
-| Migrations | `<project>/database/drizzle/` or `<project>/src/db/migrations/` |
-| Fixtures | `<project>/fixtures/` |
-| Seed data | `<project>/src/schemas/seed/` or `<project>/src/scripts/seed/` |
+| Pattern     | Location                                                        |
+| ----------- | --------------------------------------------------------------- |
+| ORM schemas | `<project>/database/` or `<project>/src/database/`              |
+| Migrations  | `<project>/database/drizzle/` or `<project>/src/db/migrations/` |
+| Fixtures    | `<project>/fixtures/`                                           |
+| Seed data   | `<project>/src/schemas/seed/` or `<project>/src/scripts/seed/`  |
 
 ### 4.4 Styles and Assets
 
-| Pattern | Location |
-|---------|----------|
-| Global styles | `<project>/src/styles/` or `<project>/styles/` |
-| UI primitives | `<project>/src/components/ui/` |
-| Static files | `<project>/static/` or `<project>/public/` |
-| Images/icons | `<project>/public/images/`, `<project>/public/icons/` |
-| Fonts | `<project>/src/styles/fonts/` or `<project>/app/fonts/` |
+| Pattern       | Location                                                |
+| ------------- | ------------------------------------------------------- |
+| Global styles | `<project>/src/styles/` or `<project>/styles/`          |
+| UI primitives | `<project>/src/components/ui/`                          |
+| Static files  | `<project>/static/` or `<project>/public/`              |
+| Images/icons  | `<project>/public/images/`, `<project>/public/icons/`   |
+| Fonts         | `<project>/src/styles/fonts/` or `<project>/app/fonts/` |
 
 ### 4.5 Tests
 
-| Pattern | Location |
-|---------|----------|
+| Pattern    | Location                                          |
+| ---------- | ------------------------------------------------- |
 | Unit tests | `<project>/src/tests/unit/` or `<project>/tests/` |
-| E2E tests | `<project>/src/tests/e2e/` |
-| Fixtures | `<project>/fixtures/` |
+| E2E tests  | `<project>/src/tests/e2e/`                        |
+| Fixtures   | `<project>/fixtures/`                             |
 
 ### 4.6 Documentation
 
-| Pattern | Location |
-|---------|----------|
-| Project README | `<project>/README.md` |
-| Story of the repo | `<project>/THE_STORY_OF_THIS_REPO.md` |
-| Repository summary | `<project>/REPOSITORY_SUMMARY.md` |
+| Pattern                 | Location                               |
+| ----------------------- | -------------------------------------- |
+| Project README          | `<project>/README.md`                  |
+| Story of the repo       | `<project>/THE_STORY_OF_THIS_REPO.md`  |
+| Repository summary      | `<project>/REPOSITORY_SUMMARY.md`      |
 | Architecture blueprints | `<project>/docs/Project_Architecture/` |
-| API references | `<project>/API_REFERENCE.md` |
-| Setup guides | `<project>/SETUP_GUIDE.md` |
-| Stack docs | `<project>/technology-stack.md` |
+| API references          | `<project>/API_REFERENCE.md`           |
+| Setup guides            | `<project>/SETUP_GUIDE.md`             |
+| Stack docs              | `<project>/technology-stack.md`        |
 
 ---
 
@@ -939,41 +939,41 @@ projects/youtube-downloader/
 
 ### 5.1 File Naming Patterns
 
-| Convention | Used In | Examples |
-|-----------|---------|----------|
-| **snake_case** | Python scripts, data files | `main_loop_playlist.py`, `automate_morning_text.py` |
-| **PascalCase** | Next.js components, React files, some TypeScript | React components, Next.js page files |
-| **kebab-case** | Directories, route groups, utility dirs | `compose/local/`, `cookiecutter-django-tailwind/` |
-| **UPPER_CASE** | Log/output dirs, constants | `BATCH_LOGS/`, `CONTRIBUTORS.txt` |
-| **dot-prefixed** | Config directories | `.github/`, `.vscode/`, `.envs/`, `.husky/` |
+| Convention       | Used In                                          | Examples                                            |
+| ---------------- | ------------------------------------------------ | --------------------------------------------------- |
+| **snake_case**   | Python scripts, data files                       | `main_loop_playlist.py`, `automate_morning_text.py` |
+| **PascalCase**   | Next.js components, React files, some TypeScript | React components, Next.js page files                |
+| **kebab-case**   | Directories, route groups, utility dirs          | `compose/local/`, `cookiecutter-django-tailwind/`   |
+| **UPPER_CASE**   | Log/output dirs, constants                       | `BATCH_LOGS/`, `CONTRIBUTORS.txt`                   |
+| **dot-prefixed** | Config directories                               | `.github/`, `.vscode/`, `.envs/`, `.husky/`         |
 
 ### 5.2 Directory Naming Conventions
 
-| Pattern | Usage |
-|---------|-------|
-| `<project-name>/` | Root project directory (hyphenated, e.g., `cookiecutter-django-tailwind/`) |
-| `src/` | Primary source code directory (Next.js, TypeScript, Rust, Java projects) |
-| `app/` | Next.js App Router directory |
-| `api/` | Django API apps or Next.js API routes |
-| `compose/` | Docker Compose configurations |
-| `config/` | Framework configuration (Django settings) |
-| `docs/` | Documentation |
-| `lib/` | Shared/shared libraries |
-| `public/` | Static assets |
-| `scripts/` | Utility/build scripts |
-| `tests/` | Test suites |
-| `(auth)/`, `(root)/` | Next.js route groups (parenthesized) |
+| Pattern              | Usage                                                                      |
+| -------------------- | -------------------------------------------------------------------------- |
+| `<project-name>/`    | Root project directory (hyphenated, e.g., `cookiecutter-django-tailwind/`) |
+| `src/`               | Primary source code directory (Next.js, TypeScript, Rust, Java projects)   |
+| `app/`               | Next.js App Router directory                                               |
+| `api/`               | Django API apps or Next.js API routes                                      |
+| `compose/`           | Docker Compose configurations                                              |
+| `config/`            | Framework configuration (Django settings)                                  |
+| `docs/`              | Documentation                                                              |
+| `lib/`               | Shared/shared libraries                                                    |
+| `public/`            | Static assets                                                              |
+| `scripts/`           | Utility/build scripts                                                      |
+| `tests/`             | Test suites                                                                |
+| `(auth)/`, `(root)/` | Next.js route groups (parenthesized)                                       |
 
 ### 5.3 Organizational Patterns
 
-| Pattern | Description | Examples |
-|---------|-------------|---------|
-| **By Feature** | Components grouped by domain | `components/comics/`, `components/auth/`, `components/feed/` (comicwise) |
-| **By Layer** | Code split by architectural layer | `actions/`, `reducers/`, `components/`, `screens/` (Redux pattern) |
-| **By Environment** | Config split by deployment env | `compose/local/`, `compose/production/`, `.envs/local/` |
-| **By Language** | Multi-language projects | `mcp-servers/csharp/`, `mcp-servers/go/`, `mcp-servers/python/` |
-| **By Service** | Backend/frontend separation | `backend/` + `frontend/` (rhixecompany-comics, rhixe_scans) |
-| **Route Groups** | Next.js App Router collocation | `app/(auth)/`, `app/(root)/`, `app/admin/`, `app/api/` |
+| Pattern            | Description                       | Examples                                                                 |
+| ------------------ | --------------------------------- | ------------------------------------------------------------------------ |
+| **By Feature**     | Components grouped by domain      | `components/comics/`, `components/auth/`, `components/feed/` (comicwise) |
+| **By Layer**       | Code split by architectural layer | `actions/`, `reducers/`, `components/`, `screens/` (Redux pattern)       |
+| **By Environment** | Config split by deployment env    | `compose/local/`, `compose/production/`, `.envs/local/`                  |
+| **By Language**    | Multi-language projects           | `mcp-servers/csharp/`, `mcp-servers/go/`, `mcp-servers/python/`          |
+| **By Service**     | Backend/frontend separation       | `backend/` + `frontend/` (rhixecompany-comics, rhixe_scans)              |
+| **Route Groups**   | Next.js App Router collocation    | `app/(auth)/`, `app/(root)/`, `app/admin/`, `app/api/`                   |
 
 ---
 
@@ -1016,6 +1016,7 @@ projects/youtube-downloader/
 ### 6.3 MCP Server Projects (mcp-servers/*)
 
 Each language directory follows its ecosystem's standard:
+
 - **TypeScript/Python/Go/Rust:** `src/` + `dist/`
 - **Java/Kotlin:** `src/main/` + Maven wrapper
 - **C#:** `Tools/` directory
@@ -1027,14 +1028,14 @@ Each language directory follows its ecosystem's standard:
 
 ## 7. Build and Output Organization
 
-| Artifact | Location | Notes |
-|----------|----------|-------|
-| Node modules | `<project>/node_modules/` | Excluded from version control |
-| Python venv | `<project>/.venv/` | Per-project virtual environment |
-| Compiled output | `<project>/dist/` | TypeScript, MCP servers |
-| Ruff cache | `<project>/.ruff_cache/` | Python linter cache |
-| Judge results | `SandBox/judge_results/` | Workspace-level QA reports |
-| Reports | `SandBox/results/` | Benchmark/analysis output |
+| Artifact        | Location                  | Notes                           |
+| --------------- | ------------------------- | ------------------------------- |
+| Node modules    | `<project>/node_modules/` | Excluded from version control   |
+| Python venv     | `<project>/.venv/`        | Per-project virtual environment |
+| Compiled output | `<project>/dist/`         | TypeScript, MCP servers         |
+| Ruff cache      | `<project>/.ruff_cache/`  | Python linter cache             |
+| Judge results   | `SandBox/judge_results/`  | Workspace-level QA reports      |
+| Reports         | `SandBox/results/`        | Benchmark/analysis output       |
 
 ---
 
@@ -1107,19 +1108,20 @@ src/tools/
 
 ### Current Enforcement Mechanisms
 
-| Mechanism | Scope | Description |
-|-----------|-------|-------------|
-| `.editorconfig` | Workspace root | Coding style consistency |
-| `.gitignore` | Workspace root | Prevents generated files from being committed |
-| ESLint/Ruff | Per-project | Linting enforces code patterns |
-| Prettier | Per-project | Code formatting |
-| GitHub Actions | Per-project `.github/workflows/` | CI enforces quality gates |
-| Pyright | Workspace root | Python type checking |
-| Hermes prompts | `.github/prompts/` | Agent instruction templates enforce conventions |
+| Mechanism       | Scope                            | Description                                     |
+| --------------- | -------------------------------- | ----------------------------------------------- |
+| `.editorconfig` | Workspace root                   | Coding style consistency                        |
+| `.gitignore`    | Workspace root                   | Prevents generated files from being committed   |
+| ESLint/Ruff     | Per-project                      | Linting enforces code patterns                  |
+| Prettier        | Per-project                      | Code formatting                                 |
+| GitHub Actions  | Per-project `.github/workflows/` | CI enforces quality gates                       |
+| Pyright         | Workspace root                   | Python type checking                            |
+| Hermes prompts  | `.github/prompts/`               | Agent instruction templates enforce conventions |
 
 ### Maintenance
 
 This blueprint should be updated when:
+
 - A new project is added to `projects/`
 - An existing project undergoes significant restructuring
 - Cross-cutting naming conventions change
@@ -1127,4 +1129,4 @@ This blueprint should be updated when:
 
 ---
 
-*Generated 2026-07-28 for the SandBox workspace (17 projects under `projects/`).*
+_Generated 2026-07-28 for the SandBox workspace (17 projects under `projects/`)._

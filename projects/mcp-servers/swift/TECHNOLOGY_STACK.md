@@ -21,11 +21,13 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Service Lifecycle:** Managed via swift-service-lifecycle
 - **Logging:** swift-log structured logging
 
 ### Project Structure
+
 ```
 mcp-servers/swift/
 ├── Package.swift              # Package manifest

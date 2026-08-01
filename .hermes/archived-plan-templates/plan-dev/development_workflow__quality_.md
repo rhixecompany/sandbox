@@ -11,8 +11,8 @@
    ```typescript
    // src/schemas/feature-schema.ts
    export const createSchema = z.object({
-     field1: z.string().min(1),
-     field2: z.number()
+   	field1: z.string().min(1),
+   	field2: z.number(),
    });
    export type CreateInput = z.infer<typeof createSchema>;
    ```
@@ -22,9 +22,9 @@
    ```typescript
    // src/dal/feature-dal.ts
    export class FeatureDal extends BaseDal<FeatureType> {
-     async create(data: CreateInput) {
-       /* ... */
-     }
+   	async create(data: CreateInput) {
+   		/* ... */
+   	}
    }
    ```
 
@@ -34,15 +34,15 @@
    // src/actions/feature-actions.ts
    "use server";
    export async function createFeatureAction(input: unknown) {
-     const parsed = schema.safeParse(input);
-     if (!parsed.success) return { ok: false, error: "..." };
-     try {
-       const result = await featureDal.create(parsed.data);
-       revalidatePath("/feature");
-       return { ok: true, data: result };
-     } catch (error) {
-       return { ok: false, error: "Failed to create" };
-     }
+   	const parsed = schema.safeParse(input);
+   	if (!parsed.success) return { ok: false, error: "..." };
+   	try {
+   		const result = await featureDal.create(parsed.data);
+   		revalidatePath("/feature");
+   		return { ok: true, data: result };
+   	} catch (error) {
+   		return { ok: false, error: "Failed to create" };
+   	}
    }
    ```
 
@@ -66,9 +66,9 @@
    ```typescript
    // src/tests/feature.spec.ts
    describe("Feature", () => {
-     it("validates correctly", () => {
-       /* ... */
-     });
+   	it("validates correctly", () => {
+   		/* ... */
+   	});
    });
    ```
 

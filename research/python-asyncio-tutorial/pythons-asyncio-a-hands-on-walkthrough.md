@@ -17,12 +17,12 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 
 ### Concurrency vs. Parallelism
 
-- **Async I/O is concurrency, not parallelism.** It gives a *feeling* of concurrency using a single thread.
+- **Async I/O is concurrency, not parallelism.** It gives a _feeling_ of concurrency using a single thread.
 - **Threading** and **multiprocessing** are alternative concurrency models in Python (`threading`, `multiprocessing`, `concurrent.futures`).
 - Async I/O is more closely aligned with threading than multiprocessing but is distinct from both.
 
 ### The Chess Analogy (Miguel Grinberg)
->
+
 > **Synchronous**: Judit Polgár plays one game at a time. 24 games × 30 min = **12 hours**.
 >
 > **Asynchronous**: Judit moves from table to table, making one move at each. 24 games × 2 min per round × 30 rounds = **1 hour**.
@@ -41,12 +41,12 @@ Python's `asyncio` library enables concurrent code using `async` and `await` key
 
 ### Definitions
 
-| Construct | Purpose |
-| --- | --- |
-| `async def` | Defines a coroutine function |
-| `await` | Suspends execution of the calling coroutine until the awaited result is returned; yields control to the event loop |
-| `async for` | Iterates over an asynchronous iterator |
-| `async with` | Asynchronous version of `with` for async context managers |
+| Construct    | Purpose                                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `async def`  | Defines a coroutine function                                                                                       |
+| `await`      | Suspends execution of the calling coroutine until the awaited result is returned; yields control to the event loop |
+| `async for`  | Iterates over an asynchronous iterator                                                                             |
+| `async with` | Asynchronous version of `with` for async context managers                                                          |
 
 ### Rules
 
@@ -187,3 +187,4 @@ async def fetch_posts(user):
 ---
 
 *Extracted by web-research-pipeline v1.0.0*
+```

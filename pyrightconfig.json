@@ -1,29 +1,27 @@
 {
-  "include": ["."],
-  "exclude": [
-    "**/node_modules",
-    "**/__pycache__",
-    "**/.git",
-    "**/myvenv",
-    "**/.venv",
-    "**/build",
-    "**/dist",
-    "**/*.pyc",
-    "**/migrations",
-    "**/.github",
-    "**/docs"
-  ],
-  "typeCheckingMode": "basic",
-  "reportMissingImports": "warning",
-  "reportMissingTypeStubs": "none",
-  "reportOptionalMemberAccess": "none",
-  "reportPrivateUsage": "none",
-  "pythonVersion": "3.11",
-  "pythonPlatform": "Windows",
-  "strictListInference": true,
-  "strictDictionaryInference": true,
-  "strictSetInference": true,
-  "extraPaths": [
-    "myvenv/Lib/site-packages"
-  ]
+	"include": ["."],
+	"exclude": [
+		"**/node_modules",
+		"**/__pycache__",
+		"**/.git",
+		"**/myvenv",
+		"**/.venv",
+		"**/build",
+		"**/dist",
+		"**/*.pyc",
+		"**/migrations",
+		"**/.github",
+		"**/docs"
+	],
+	"typeCheckingMode": "basic",
+	"reportMissingImports": "warning",
+	"reportMissingTypeStubs": "none",
+	"reportOptionalMemberAccess": "none",
+	"reportPrivateUsage": "none",
+	"pythonVersion": "3.11",
+	"pythonPlatform": "Windows",
+	"strictListInference": true,
+	"strictDictionaryInference": true,
+	"strictSetInference": true,
+	"extraPaths": [".venv/Lib/site-packages"]
 }

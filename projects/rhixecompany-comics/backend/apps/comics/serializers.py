@@ -1,4 +1,5 @@
 """DRF serializers for comic models."""
+
 from __future__ import annotations
 
 from rest_framework import serializers
@@ -60,14 +61,25 @@ class ChapterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chapter
         fields = [
-            "id", "uuid", "name", "title", "slug", "spider", "url",
-            "updated_at", "timestamp", "numpages", "comic", "comic_title",
+            "id",
+            "uuid",
+            "name",
+            "title",
+            "slug",
+            "spider",
+            "url",
+            "updated_at",
+            "timestamp",
+            "numpages",
+            "comic",
+            "comic_title",
             "chapter_images",
         ]
 
 
 class ChapterListSerializer(serializers.ModelSerializer):
     """Compact serializer for list views."""
+
     class Meta:
         model = Chapter
         fields = ["id", "name", "slug", "numpages", "updated_at", "comic"]
@@ -84,15 +96,32 @@ class ComicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comic
         fields = [
-            "id", "uuid", "title", "slug", "description", "status",
-            "rating", "serialization", "numchapters", "spider", "url",
-            "numitems", "timestamp", "updated_at", "type", "genres",
-            "author", "artist", "chapters", "images",
+            "id",
+            "uuid",
+            "title",
+            "slug",
+            "description",
+            "status",
+            "rating",
+            "serialization",
+            "numchapters",
+            "spider",
+            "url",
+            "numitems",
+            "timestamp",
+            "updated_at",
+            "type",
+            "genres",
+            "author",
+            "artist",
+            "chapters",
+            "images",
         ]
 
 
 class ComicListSerializer(serializers.ModelSerializer):
     """Compact serializer for list views."""
+
     type_name = serializers.CharField(source="type.name", read_only=True, allow_null=True)
     author_name = serializers.CharField(source="author.name", read_only=True, allow_null=True)
     thumbnail = serializers.SerializerMethodField()
@@ -100,8 +129,16 @@ class ComicListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comic
         fields = [
-            "id", "title", "slug", "status", "rating",
-            "numchapters", "updated_at", "type_name", "author_name", "thumbnail",
+            "id",
+            "title",
+            "slug",
+            "status",
+            "rating",
+            "numchapters",
+            "updated_at",
+            "type_name",
+            "author_name",
+            "thumbnail",
         ]
 
     def get_thumbnail(self, obj):

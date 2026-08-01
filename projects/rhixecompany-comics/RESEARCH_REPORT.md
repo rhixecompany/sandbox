@@ -21,6 +21,7 @@
 ## Key Findings
 
 ### Django + Next.js Dual-Stack (2026)
+
 - **Biggest risk:** API field drift — maintain OpenAPI spec; generate TS types from DRF
 - **Django at `/api/`** — CORS via `django-cors-headers` 4.9+ with explicit origins
 - **Server Actions** — eliminate boilerplate API routes in Next.js
@@ -28,11 +29,13 @@
 - **`proxy.ts` replaces `middleware.ts`** — explicit boundary for auth and redirects
 
 ### Next.js 16 + React 19 (2026)
+
 - **Turbopack default** — 2–5× faster builds, ~400% faster dev startup
 - **`"use cache"` directive** — explicit caching replaces implicit magic
 - **React Compiler, Server Actions, `use()` hook** — all production-stable
 
 ### Celery + Redis Production (2026)
+
 - **Critical config:** `task_acks_late=True`, `task_reject_on_worker_lost=True`
 - **Queue separation** — dedicated queues for scraping vs content processing
 - **`worker_prefetch_multiplier=1`** — prevent workers from hoarding tasks
@@ -115,5 +118,6 @@
 | Tailwind CSS 4 | <https://tailwindcss.com/docs> |
 
 ### Research Methodology
+
 - **Web search:** Tavily search (2026 Django+Next.js dual-stack, Celery, Scrapy patterns)
 - **Last verified:** 2026-07-28

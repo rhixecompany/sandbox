@@ -7,26 +7,26 @@
 
 ## Core Documentation Files
 
-| File | Description |
-| ------ | ------------- |
-| rest-api.md | Spot REST API – trading, account, market data |
-| web-socket-api.md | Spot WebSocket API |
-| web-socket-streams.md | Market Data WebSocket Streams |
-| user-data-stream.md | User Data WebSocket Streams |
-| sbe-market-data-streams.md | SBE Market Data Streams |
-| fix-api.md | FIX API |
-| enums.md | Enum definitions |
-| errors.md | Error codes and messages |
-| filters.md | Trading rules and filters |
+| File                       | Description                                   |
+| -------------------------- | --------------------------------------------- |
+| rest-api.md                | Spot REST API – trading, account, market data |
+| web-socket-api.md          | Spot WebSocket API                            |
+| web-socket-streams.md      | Market Data WebSocket Streams                 |
+| user-data-stream.md        | User Data WebSocket Streams                   |
+| sbe-market-data-streams.md | SBE Market Data Streams                       |
+| fix-api.md                 | FIX API                                       |
+| enums.md                   | Enum definitions                              |
+| errors.md                  | Error codes and messages                      |
+| filters.md                 | Trading rules and filters                     |
 
 ## API Base URLs
 
-| Environment | URL |
-| ------------- | ----- |
-| Production REST | <https://api.binance.com> |
-| Production WS | wss://stream.binance.com:9443 |
-| Testnet REST | <https://testnet.binance.vision> |
-| Data API | <https://data-api.binance.vision> |
+| Environment     | URL                               |
+| --------------- | --------------------------------- |
+| Production REST | <https://api.binance.com>         |
+| Production WS   | wss://stream.binance.com:9443     |
+| Testnet REST    | <https://testnet.binance.vision>  |
+| Data API        | <https://data-api.binance.vision> |
 
 ## Authentication
 
@@ -43,11 +43,11 @@
 
 ## Rate Limits (Weight-based)
 
-| Limit Type | Weight |
-| ------------ | -------- |
-| REQUEST_WEIGHT | 1200/min |
-| ORDERS | 10/sec, 100,000/day |
-| RAW_REQUESTS | 6,000/min |
+| Limit Type     | Weight              |
+| -------------- | ------------------- |
+| REQUEST_WEIGHT | 1200/min            |
+| ORDERS         | 10/sec, 100,000/day |
+| RAW_REQUESTS   | 6,000/min           |
 
 ## Error Codes
 
@@ -60,4 +60,4 @@ Common errors:
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

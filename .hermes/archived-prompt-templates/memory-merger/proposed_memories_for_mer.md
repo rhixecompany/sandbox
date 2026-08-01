@@ -42,3 +42,4 @@ Once the final merged instructions meet 10/10 criteria:
   - Include proper frontmatter if creating new file
   - **Merge `applyTo` patterns** from both memory and instruction files if both exist, ensuring comprehensive coverage without duplication
 - **Remove** merged sections from the memory file
+```

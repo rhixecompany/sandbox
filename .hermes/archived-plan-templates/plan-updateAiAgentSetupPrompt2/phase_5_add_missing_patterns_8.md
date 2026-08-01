@@ -10,56 +10,48 @@ In Next.js 16, `searchParams` is a **Promise** that must be `await`ed:
 
 ```typescript
 // ❌ WRONG (Next.js 15 pattern)
-export default function Page({
-  searchParams
-}: {
-  searchParams: { page?: string };
-}) {
-  const page = searchParams.page;
+export default function Page({ searchParams }: { searchParams: { page?: string } }) {
+	const page = searchParams.page;
 }
 
 // ✅ CORRECT (Next.js 16)
-export default async function Page({
-  searchParams
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
-  const params = await searchParams;
-  const page = params.page;
+export default async function Page({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+	const params = await searchParams;
+	const page = params.page;
 }
 ```
 
 ### Step 27 — Add cascade delete scenarios to §4
 
-| Scenario | Cascades To | Exception |
-| --- | --- | --- |
-| **Delete User** | bookmark, rating, comment, readingProgress, notification, readerSettings, userPreference | `auditLog.userId` → SET NULL (not cascade) |
-| **Delete Comic** | chapter, bookmark, rating, comment, comicToGenre, comicImage, readingProgress | — |
-| **Delete Chapter** | chapterImage, readingProgress (for that chapter) | `bookmark.lastReadChapterId` → SET NULL |
+| Scenario           | Cascades To                                                                              | Exception                                  |
+| ------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **Delete User**    | bookmark, rating, comment, readingProgress, notification, readerSettings, userPreference | `auditLog.userId` → SET NULL (not cascade) |
+| **Delete Comic**   | chapter, bookmark, rating, comment, comicToGenre, comicImage, readingProgress            | —                                          |
+| **Delete Chapter** | chapterImage, readingProgress (for that chapter)                                         | `bookmark.lastReadChapterId` → SET NULL    |
 
 ### Step 28 — Add N+1 anti-pattern catalog to §6
 
-| Trap | Wrong | Right |
-| --- | --- | --- |
-| Comics + Authors | `for (comic of comics) { await getAuthor(comic.authorId) }` | `.with({ author: true })` |
-| Bookmarks + Comics + Genres | Loop through bookmarks, fetch each comic | `db.query.bookmark.findMany({ with: { comic: { with: { genres: true } } } })` |
-| Comment Threading | `comment.parentId` has no FK ref — can't use `.with()` | Manual SQL JOIN or add `relations()` to schema |
-| Reading Progress Dashboard | Separate queries for each stat | `count()`, `sum()`, `avg()` in single aggregate query |
+| Trap                        | Wrong                                                       | Right                                                                         |
+| --------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Comics + Authors            | `for (comic of comics) { await getAuthor(comic.authorId) }` | `.with({ author: true })`                                                     |
+| Bookmarks + Comics + Genres | Loop through bookmarks, fetch each comic                    | `db.query.bookmark.findMany({ with: { comic: { with: { genres: true } } } })` |
+| Comment Threading           | `comment.parentId` has no FK ref — can't use `.with()`      | Manual SQL JOIN or add `relations()` to schema                                |
+| Reading Progress Dashboard  | Separate queries for each stat                              | `count()`, `sum()`, `avg()` in single aggregate query                         |
 
 ### Step 29 — Add pagination metadata shape
 
 ```typescript
 interface PaginatedResponse<T> {
-  success: boolean;
-  data: T[];
-  meta: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-    hasNextPage: boolean;
-    hasPrevPage: boolean;
-  };
+	success: boolean;
+	data: T[];
+	meta: {
+		page: number;
+		limit: number;
+		total: number;
+		totalPages: number;
+		hasNextPage: boolean;
+		hasPrevPage: boolean;
+	};
 }
 ```
 
@@ -104,9 +96,9 @@ await signIn("github", { redirectTo: "/dashboard" });
 
 // Client Component — Credentials sign-in (no redirect, handle in-page)
 const result = await signIn("credentials", {
-  username: "user",
-  password: "pass",
-  redirect: false
+	username: "user",
+	password: "pass",
+	redirect: false,
 });
 if (result?.error) showError(result.error);
 ```

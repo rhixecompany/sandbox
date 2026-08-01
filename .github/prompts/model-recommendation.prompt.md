@@ -165,7 +165,21 @@ Generate a structured markdown report with the following sections:```markdown# A
 > **Multiplier**: [X]x ([cost implications for subscription tier]) **Strengths**:
 > **Full content:**
 
-## Auto Model Selection Assessment**Suitability**: [Recommended | Not Recommended | Situational][Explanation of whether auto-selection is appropriate for this task]**Rationale**:- [Reason 1]- [Reason 2]**Manual Override Scenarios**:- [Scenario where user should manually select model]- [Scenario where user should manually select model]
+## Auto Model Selection Assessment
+
+**Suitability**: [Recommended | Not Recommended | Situational]
+
+*Explanation of whether auto-selection is appropriate for this task*
+
+**Rationale**:
+
+- [Reason 1]
+- [Reason 2]
+
+**Manual Override Scenarios**:
+
+- [Scenario where user should manually select model]
+- [Scenario where user should manually select model]
 
 ## Implementation Guidance
 

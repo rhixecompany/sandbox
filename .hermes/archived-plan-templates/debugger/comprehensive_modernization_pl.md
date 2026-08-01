@@ -36,24 +36,24 @@ import zod from "eslint-plugin-zod";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  ...prettier,
-  {
-    plugins: {
-      "better-tailwindcss": betterTailwind,
-      playwright,
-      vitest,
-      drizzle,
-      zod
-    },
-    rules: {
-      "better-tailwindcss/classnames-order": "warn",
-      "drizzle/no-raw-sql": "error",
-      "zod/noAny": "error"
-    }
-  },
-  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"])
+	...nextVitals,
+	...nextTs,
+	...prettier,
+	{
+		plugins: {
+			"better-tailwindcss": betterTailwind,
+			playwright,
+			vitest,
+			drizzle,
+			zod,
+		},
+		rules: {
+			"better-tailwindcss/classnames-order": "warn",
+			"drizzle/no-raw-sql": "error",
+			"zod/noAny": "error",
+		},
+	},
+	globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
 
 export default eslintConfig;
@@ -73,17 +73,17 @@ export default eslintConfig;
 
 ```json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "eslint.lintTask.enable": true,
-  "eslint.useFlatConfig": true,
-  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.test.ts, ${capture}.spec.ts",
-    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx"
-  }
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"eslint.lintTask.enable": true,
+	"eslint.useFlatConfig": true,
+	"eslint.validate": ["javascript", "typescript", "typescriptreact"],
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"*.ts": "${capture}.test.ts, ${capture}.spec.ts",
+		"*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx"
+	}
 }
 ```
 
@@ -91,18 +91,14 @@ export default eslintConfig;
 
 ```json
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "PulkitGangwar.nextjs-snippets",
-    "vitest.explorer"
-  ],
-  "unwantedRecommendations": [
-    "hookyqr.beautify",
-    "dbaeumer.jshint",
-    "eg2.tslint"
-  ]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"bradlc.vscode-tailwindcss",
+		"PulkitGangwar.nextjs-snippets",
+		"vitest.explorer"
+	],
+	"unwantedRecommendations": ["hookyqr.beautify", "dbaeumer.jshint", "eg2.tslint"]
 }
 ```
 
@@ -135,78 +131,64 @@ export default eslintConfig;
   import providers from "./auth-providers";
 
   type Session = {
-    user?: User;
-    lastLogin?: number | null;
-    [key: string]: unknown;
+  	user?: User;
+  	lastLogin?: number | null;
+  	[key: string]: unknown;
   };
 
   type Token = {
-    user?: User;
-    role?: string;
-    lastLogin?: number;
-    provider?: string;
-    [key: string]: unknown;
+  	user?: User;
+  	role?: string;
+  	lastLogin?: number;
+  	provider?: string;
+  	[key: string]: unknown;
   };
 
   const session = {
-    strategy: "database",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    updateAge: 24 * 60 * 60 // 1 day
+  	strategy: "database",
+  	maxAge: 30 * 24 * 60 * 60, // 30 days
+  	updateAge: 24 * 60 * 60, // 1 day
   };
 
   const callbacks = {
-    async session({
-      session,
-      token,
-      user
-    }: {
-      session: Session;
-      token: Token;
-      user?: User;
-    }): Promise<Session> {
-      session.user = user || token?.user;
-      session.lastLogin = token?.lastLogin || null;
-      return session;
-    },
-    async jwt({
-      token,
-      user,
-      account
-    }: {
-      token: Token;
-      user?: User;
-      account?: Record<string, unknown>;
-    }): Promise<Token> {
-      if (user) {
-        token.user = user;
-        token.role = user.role || "user";
-        token.lastLogin = Date.now();
-      }
-      if (account) token.provider = account.provider as string;
-      return token;
-    },
-    async signIn({ user }: { user?: User }): Promise<boolean> {
-      if (user?.email?.endsWith("@comicwise.app")) return true;
-      return false;
-    },
-    async redirect({
-      url,
-      baseUrl
-    }: {
-      url: string;
-      baseUrl: string;
-    }): Promise<string> {
-      return url.startsWith("/") ? `${baseUrl}/dashboard` : url;
-    }
+  	async session({ session, token, user }: { session: Session; token: Token; user?: User }): Promise<Session> {
+  		session.user = user || token?.user;
+  		session.lastLogin = token?.lastLogin || null;
+  		return session;
+  	},
+  	async jwt({
+  		token,
+  		user,
+  		account,
+  	}: {
+  		token: Token;
+  		user?: User;
+  		account?: Record<string, unknown>;
+  	}): Promise<Token> {
+  		if (user) {
+  			token.user = user;
+  			token.role = user.role || "user";
+  			token.lastLogin = Date.now();
+  		}
+  		if (account) token.provider = account.provider as string;
+  		return token;
+  	},
+  	async signIn({ user }: { user?: User }): Promise<boolean> {
+  		if (user?.email?.endsWith("@comicwise.app")) return true;
+  		return false;
+  	},
+  	async redirect({ url, baseUrl }: { url: string; baseUrl: string }): Promise<string> {
+  		return url.startsWith("/") ? `${baseUrl}/dashboard` : url;
+  	},
   };
 
   const authConfig = {
-    adapter,
-    providers,
-    session,
-    callbacks,
-    secret: process.env.AUTH_SECRET,
-    trustHost: true
+  	adapter,
+  	providers,
+  	session,
+  	callbacks,
+  	secret: process.env.AUTH_SECRET,
+  	trustHost: true,
   };
 
   export default authConfig;
@@ -220,43 +202,41 @@ export default eslintConfig;
   import Keycloak from "@auth/core/providers/keycloak";
 
   type CredentialsInput = {
-    username?: string;
-    password?: string;
+  	username?: string;
+  	password?: string;
   };
 
   type User = {
-    id: string;
-    name?: string;
-    email: string;
-    role?: string;
-    passwordHash?: string;
+  	id: string;
+  	name?: string;
+  	email: string;
+  	role?: string;
+  	passwordHash?: string;
   };
 
   const providers = [
-    GitHub({
-      clientId: process.env.GITHUB_CLIENT_ID!,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET!
-    }),
-    Credentials({
-      name: "Credentials",
-      credentials: {
-        username: { label: "Username", type: "text" },
-        password: { label: "Password", type: "password" }
-      },
-      async authorize(
-        credentials: CredentialsInput
-      ): Promise<User | null> {
-        // Example: fetch user from DB and verify password
-        // const user = await getUserByUsername(credentials.username);
-        // if (user && verifyPassword(credentials.password, user.passwordHash)) return user;
-        return null;
-      }
-    }),
-    Keycloak({
-      clientId: process.env.KEYCLOAK_CLIENT_ID!,
-      clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
-      issuer: process.env.KEYCLOAK_ISSUER!
-    })
+  	GitHub({
+  		clientId: process.env.GITHUB_CLIENT_ID!,
+  		clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+  	}),
+  	Credentials({
+  		name: "Credentials",
+  		credentials: {
+  			username: { label: "Username", type: "text" },
+  			password: { label: "Password", type: "password" },
+  		},
+  		async authorize(credentials: CredentialsInput): Promise<User | null> {
+  			// Example: fetch user from DB and verify password
+  			// const user = await getUserByUsername(credentials.username);
+  			// if (user && verifyPassword(credentials.password, user.passwordHash)) return user;
+  			return null;
+  		},
+  	}),
+  	Keycloak({
+  		clientId: process.env.KEYCLOAK_CLIENT_ID!,
+  		clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
+  		issuer: process.env.KEYCLOAK_ISSUER!,
+  	}),
   ];
 
   export default providers;
@@ -267,18 +247,13 @@ export default eslintConfig;
   ```typescript
   import { DrizzleAdapter } from "@auth/drizzle-adapter";
   import { db } from "./database/db";
-  import {
-    account,
-    session,
-    user,
-    verificationToken
-  } from "./database/schema";
+  import { account, session, user, verificationToken } from "./database/schema";
 
   const adapter = DrizzleAdapter(db, {
-    usersTable: user,
-    accountsTable: account,
-    sessionsTable: session,
-    verificationTokensTable: verificationToken
+  	usersTable: user,
+  	accountsTable: account,
+  	sessionsTable: session,
+  	verificationTokensTable: verificationToken,
   });
 
   export default adapter;
@@ -289,21 +264,16 @@ export default eslintConfig;
   ```typescript
   import { auth, signIn, signOut } from "../auth";
 
-  export async function signInAction(
-    provider: string,
-    options?: Record<string, unknown>
-  ): Promise<unknown> {
-    return signIn(provider, options);
+  export async function signInAction(provider: string, options?: Record<string, unknown>): Promise<unknown> {
+  	return signIn(provider, options);
   }
 
-  export async function signOutAction(
-    options?: Record<string, unknown>
-  ): Promise<unknown> {
-    return signOut(options);
+  export async function signOutAction(options?: Record<string, unknown>): Promise<unknown> {
+  	return signOut(options);
   }
 
   export async function getSessionAction(): Promise<unknown> {
-    return auth.getSession();
+  	return auth.getSession();
   }
   ```
 

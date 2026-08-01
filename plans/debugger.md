@@ -1,6 +1,7 @@
 ---
 status: completed
 ---
+
 title: "Copilot Instructions Generator - Codebase analysis spec"
 category: "SPEC"
 source: "prompts/debugger.prompt.md"
@@ -546,6 +547,7 @@ grep -r "export async function.*Action" src/actions
 ## Special Patterns
 
 > ### Idempotent Operations (Bookmarks)
+>
 > export async function addBookmarkAction(input: unknown) {
 
 > **Full content:** `templates/debugger/special_patterns.md`
@@ -560,6 +562,7 @@ grep -r "export async function.*Action" src/actions
 ## Template References
 
 Detailed section templates in `templates/debugger/`:
+
 - `14_conventions_for_ai_agents.md`
 - `code_examples.md`
 - `code_quality_standards.md`
@@ -577,5 +580,8 @@ Detailed section templates in `templates/debugger/`:
 - `special_patterns.md`
 - `summary.md`
 - `testing_approach.md`
+
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_
+```
