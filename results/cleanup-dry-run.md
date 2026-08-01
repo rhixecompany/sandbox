@@ -1,12 +1,12 @@
 # Cleanup Dry-Run Report
 
-> Generated: 2026-08-01 08:15:09 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-08-01 09:07:04 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Summary
 
 | Class | Dirs | Reclaimable (known) | Action |
 |-------|------|--------------------|--------|
-| SAFE | 0 | 0.0 MB | delete pending approval |
+| SAFE | 31 | 7411.6 MB | delete pending approval |
 | ASK | 1 | 284.5 MB | per-item decision |
 | SYSTEM | 69 | (protected) | never touch |
 
@@ -14,6 +14,37 @@
 
 | Path | Kind | Size | Git |
 |------|------|------|-----|
+| `C:\Users\Alexa\Desktop\SandBox\.venv` | .venv | 401.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\node_modules` | node_modules | 70.4 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Banking\.venv` | .venv | 52.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Banking\node_modules` | node_modules | 1208.9 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Bash\node_modules` | node_modules | 339.8 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\comicwise\node_modules` | node_modules | 1006.4 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\cookiecutter-django-tailwind\.venv` | .venv | 0.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\cookiecutter-django-tailwind\docs\.venv` | .venv | 58.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\cookiecutter-django-tailwind\{{cookiecutter.project_slug}}\.venv` | .venv | 0.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\cookiecutter-django-tailwind\{{cookiecutter.project_slug}}\node_modules` | node_modules | 180.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Django-Scrapy-Selenium\.venv` | .venv | 0.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Django-Scrapy-Selenium\node_modules` | node_modules | 218.8 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\ecom\.venv` | .venv | 0.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\ecom\docs\node_modules` | node_modules | 8.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\mcp-server-typescript\node_modules` | node_modules | 50.4 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\mcp-servers\copilot-studio\node_modules` | node_modules | 30.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\mcp-servers\typescript\node_modules` | node_modules | 50.5 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\profile\.venv` | .venv | 138.9 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Python-projects\.venv` | .venv | 271.2 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\Resume_maker\node_modules` | node_modules | 75.3 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\rhixe_scans\.venv` | .venv | 172.9 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\rhixe_scans\node_modules` | node_modules | 910.7 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\rhixecompany-comics\.venv` | .venv | 0.1 MB | *** NOT GITIGNORED — deletion would remove tracked files *** |
+| `C:\Users\Alexa\Desktop\SandBox\projects\rhixecompany-comics\backend\.venv` | .venv | 154.4 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\rhixecompany-comics\frontend\node_modules` | node_modules | 490.4 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\selenium_webdriver\node_modules` | node_modules | 86.2 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\university-libary-jsm\node_modules` | node_modules | 1068.0 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\xamehi.tv\.venv` | .venv | 99.7 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\xamehi\.venv` | .venv | 0.1 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\xamehi\node_modules` | node_modules | 268.6 MB | gitignored (safe) |
+| `C:\Users\Alexa\Desktop\SandBox\projects\youtube-downloader\.venv` | .venv | 0.1 MB | gitignored (safe) |
 
 ## ASK — needs per-item user decision
 
