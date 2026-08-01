@@ -81,6 +81,8 @@ Run the full diagnostic chain (see Goal Statement #4) + `/systematic-debugging` 
 
 - 2026-08-01 — **Phase 1 COMPLETE**: `scripts/cleanup_inventory.py` built; dry-run at `results/cleanup-dry-run.md` (27 SAFE / 1 ASK / 69 SYSTEM); approval recorded `.hermes/approvals/20260801_cleanup-delete-safe.md` (+1 Alexa via clarify); **deleted 27 dirs (~8,070.9 MB), 0 skipped**; re-scan shows 0 SAFE; tracked-deletion sweep across root + 14 repos clean.
 - 2026-08-01 — Phase 2 STARTED (root venv + deps recreation, tooling check, VS Code audit).
+- 2026-08-01 — Phase 2 ROOT COMPLETE: root venv recreated (uv, 135 pkgs), root node_modules restored (bun, 273 pkgs); VS Code audit done (43=43 extensions aligned, tasks.json markdownlint problemMatcher added, user settings +4 keys: formatOnSaveMode, ignoreRecommendations, pasteUrlAsFormattedLink, notebook.formatOnSave); **G2 PASSED — 0 tooling failures** (was 17): root-caused verifier bug (preferred `.markdownlintrc.json`, a v0.x name cli2 rejects → now `.markdownlint-cli2.jsonc`), deleted 17 legacy configs (4 tracked), created cli2 configs in Bash + Resume_maker, reinstalled deps in Resume_maker (bun) + university-libary-jsm (npm ci, 1121 pkgs). Root commit landed: `chore(cleanup): inventory tool, delete node_modules/venvs (8GB), fix markdownlint configs + verifier, align vscode`.
+- 2026-08-01 — Phase 2 PER-REPO in progress: venv recreation batch (uv) + node_modules restore batch (bun/npm --ignore-scripts) running in background.
 
 - G0: inventory script runs, classifications correct (spot-check 5 paths)
 - G1: dry-run report exists + user approved; SAFE deletions done; `git status` clean of tracked deletions
