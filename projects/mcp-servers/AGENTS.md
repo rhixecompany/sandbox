@@ -31,9 +31,9 @@ Multi-language MCP (Model Context Protocol) server implementations. Each directo
 <!-- Project architecture description -->
 
 ### Key Components
+
 - _Component 1_: description
 - _Component 2_: description
 
 ### Data Flow
 <!-- Data flow description -->
-

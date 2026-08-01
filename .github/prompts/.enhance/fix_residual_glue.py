@@ -15,6 +15,7 @@ Word-hyphen headings (`Cross-Cutting`, `0-24h`) are NOT glue and are skipped.
 Blockquote is detected BEFORE dash because quote content frequently contains
 `- ` items — matching dash first would split at the wrong place.
 """
+
 import argparse
 import re
 import sys
@@ -48,17 +49,17 @@ def fix_line(line: str) -> list[str] | None:
     m2 = re.match(r"^(#{2,4}) ([^\n]+?)> ?(?=\S)", line)
     if m2:
         heading = m2.group(1) + " " + m2.group(2).strip()
-        rest = line[m2.end():]
+        rest = line[m2.end() :]
         # If the text right after > looks like content (not another heading word),
         # and the heading has no internal `>` mid-word, treat as glue.
         if heading and not re.search(r"[a-z]>[a-z]", heading) and len(rest) > 3:
-            return [heading, ""] + split_blockquote_content("> " + rest)
+            return [heading, "", *split_blockquote_content("> " + rest)]
 
     # --- 2. Tight dash before task/bold: `Heading- [ ]` / `Heading- **` ---
     m = re.match(r"^(#{2,4}) ([^\n]+?)-(?= \[|\*\*)", line)
     if m and not WORD_HYPHEN.search(m.group(2)) and not NUM_HYPHEN.search(m.group(2)):
         heading = (m.group(1) + " " + m.group(2)).strip()
-        content = "- " + line[m.end():].lstrip()
+        content = "- " + line[m.end() :].lstrip()
         if heading and content.strip() != "-":
             return [heading, "", content]
 
@@ -66,7 +67,7 @@ def fix_line(line: str) -> list[str] | None:
     m = re.match(r"^(#{2,4}) ([^\n]+?)- (?=\S)", line)
     if m and not WORD_HYPHEN.search(m.group(2)) and not NUM_HYPHEN.search(m.group(2)):
         heading = (m.group(1) + " " + m.group(2)).strip()
-        content = "- " + line[m.end():].lstrip()
+        content = "- " + line[m.end() :].lstrip()
         if heading and content.strip() != "-":
             return [heading, "", content]
 
@@ -75,10 +76,16 @@ def fix_line(line: str) -> list[str] | None:
     m = re.match(r"^(#{2,4}) ([^\n]+?)\{(?=\S)", line)
     if m:
         heading = (m.group(1) + " " + m.group(2)).strip()
-        content = line[m.end():].rstrip("}")
+        content = line[m.end() :].rstrip("}")
         # guard: heading must not contain content markers (dash-space, bold, quote)
-        if (heading and content and not heading.endswith(("{", "-"))
-                and "- " not in heading and "**" not in heading and "> " not in heading):
+        if (
+            heading
+            and content
+            and not heading.endswith(("{", "-"))
+            and "- " not in heading
+            and "**" not in heading
+            and "> " not in heading
+        ):
             return [heading, "", content]
 
     return None
@@ -88,7 +95,6 @@ def fix_text(text: str) -> tuple[str, int]:
     """Apply all residual glue fixes. Returns (new_text, total_changes)."""
     changes = 0
     new_lines = []
-    crlf = "\r\n" in text
     for raw_line in text.split("\n"):
         line = raw_line.rstrip("\r\n")
         if line.startswith(("## ", "### ", "#### ")):

@@ -41,4 +41,5 @@ ${DIAGRAM_TYPE != "None" ? `Create ${DIAGRAM_TYPE} diagrams at multiple levels o
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

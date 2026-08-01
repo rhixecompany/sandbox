@@ -5,12 +5,15 @@
 ---
 
 ## Monday
+
 **Morning (15 min)**
+
 - [ ] Check Prolific studies (keep tab open)
 - [ ] Check Qmee sidebar
 - [ ] Cash out any instant-payout platforms
 
 **Evening (30–60 min)**
+
 - [ ] Matched betting: reload offers
 - [ ] UserTesting: check dashboard for tests
 - [ ] Target: £15–40
@@ -18,11 +21,14 @@
 ---
 
 ## Tuesday
+
 **Morning (15 min)**
+
 - [ ] Check Prolific studies
 - [ ] Check Qmee sidebar
 
 **Evening (30–60 min)**
+
 - [ ] DataAnnotation: work session (1–2 hrs if projects available)
 - [ ] Freecash: complete 1 game milestone or high-pay survey
 - [ ] Target: £20–50
@@ -30,11 +36,14 @@
 ---
 
 ## Wednesday
+
 **Morning (15 min)**
+
 - [ ] Check Prolific studies
 - [ ] Check Qmee sidebar
 
 **Evening (30–60 min)**
+
 - [ ] Matched betting: reload offers
 - [ ] UserTesting: check dashboard
 - [ ] Target: £15–40
@@ -42,11 +51,14 @@
 ---
 
 ## Thursday
+
 **Morning (15 min)**
+
 - [ ] Check Prolific studies
 - [ ] Check Qmee sidebar
 
 **Evening (30–60 min)**
+
 - [ ] DataAnnotation: work session
 - [ ] User Interviews / Respondent: apply to new studies
 - [ ] TestingTime: check invitations
@@ -55,12 +67,15 @@
 ---
 
 ## Friday
+
 **Morning (15 min)**
+
 - [ ] Check Prolific studies
 - [ ] Check Qmee sidebar
 - [ ] **Cash out ALL platforms** (Friday habit)
 
 **Evening (30–60 min)**
+
 - [ ] Matched betting: reload offers
 - [ ] Weekly review: update tracker, note issues
 - [ ] Plan next week
@@ -69,7 +84,9 @@
 ---
 
 ## Saturday
+
 **Batch Session (1–2 hrs)**
+
 - [ ] DataAnnotation: extended session (highest £/hr)
 - [ ] Prolific: batch complete studies
 - [ ] Freecash: game grinding session
@@ -78,7 +95,9 @@
 ---
 
 ## Sunday
+
 **Batch Session (30–60 min)**
+
 - [ ] Prolific: catch-up session
 - [ ] Plan next week's matched betting offers
 - [ ] Review tracker, adjust goals
@@ -88,13 +107,13 @@
 
 ## Weekly Totals Tracker
 
-| Week | Prolific | UserTesting | DataAnnotation | Matched Betting | Freecash | Surveys/Other | Total |
-|------|----------|-------------|----------------|-----------------|----------|---------------|-------|
-| 1    |          |             |                |                 |          |               |       |
-| 2    |          |             |                |                 |          |               |       |
-| 3    |          |             |                |                 |          |               |       |
-| 4    |          |             |                |                 |          |               |       |
-| **Month** | | | | | | | **£** |
+| Week      | Prolific | UserTesting | DataAnnotation | Matched Betting | Freecash | Surveys/Other | Total |
+| --------- | -------- | ----------- | -------------- | --------------- | -------- | ------------- | ----- |
+| 1         |          |             |                |                 |          |               |       |
+| 2         |          |             |                |                 |          |               |       |
+| 3         |          |             |                |                 |          |               |       |
+| 4         |          |             |                |                 |          |               |       |
+| **Month** |          |             |                |                 |          |               | **£** |
 
 ---
 
@@ -103,6 +122,7 @@
 **Target Tier:** ☐ Casual (£100–200) ☐ Moderate (£300–600) ☐ Active (£600–1,200) ☐ Full-time (£1,500+)
 
 **This Month's Focus:**
+
 - [ ] Complete DataAnnotation qualification
 - [ ] Finish matched betting welcome offers
 - [ ] Execute 1 bank switch
@@ -110,6 +130,7 @@
 - [ ] Get first UserTesting 5-star rating
 
 **Platforms to Add This Month:**
+
 - [ ] User Interviews
 - [ ] Respondent
 - [ ] TestingTime
@@ -118,4 +139,4 @@
 
 ---
 
-*Print multiple copies — one per week. File completed weeks in a folder.*
+_Print multiple copies — one per week. File completed weeks in a folder._

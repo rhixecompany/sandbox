@@ -41,9 +41,9 @@
 
 ## Files to Update
 
-| File | Action |
-|------|--------|
-| `UK_EARNING_SITES_MASTER.md` | Update Tiers 1-4, add Tier 5 |
-| `references/platform_links.md` | Add new platform URLs |
-| `references/ai_training_platforms.md` | **NEW** — deep dive on AI training alternatives |
-| `.hermes/plans/uk-earnings-update-plan.md` | This plan |
+| File                                       | Action                                          |
+| ------------------------------------------ | ----------------------------------------------- |
+| `UK_EARNING_SITES_MASTER.md`               | Update Tiers 1-4, add Tier 5                    |
+| `references/platform_links.md`             | Add new platform URLs                           |
+| `references/ai_training_platforms.md`      | **NEW** — deep dive on AI training alternatives |
+| `.hermes/plans/uk-earnings-update-plan.md` | This plan                                       |

@@ -32,7 +32,7 @@
 
 Wait for user to say "I approve the code so implement the code"
 
-```
+````
 
 ### Step 5: Implement Everything
 
@@ -50,6 +50,6 @@ pnpm run type-check
 pnpm run lint:fix
 pnpm test
 pnpm run build
-```
+````
 
 ---

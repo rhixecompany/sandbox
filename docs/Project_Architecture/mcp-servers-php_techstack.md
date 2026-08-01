@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | PHP/Composer (MCP) |
+| Category    | Technology                   |
+| ----------- | ---------------------------- |
+| **Type**    | PHP/Composer (MCP)           |
 | **Pattern** | PHP MCP server with Composer |
-| **Stack** | PHP, Composer |
+| **Stack**   | PHP, Composer                |
 
 ## Development Tools
 

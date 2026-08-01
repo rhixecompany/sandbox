@@ -8,6 +8,7 @@ Deliverables (written to .copilot/session-state/):
 - analysis-manifest.json         combined machine-readable findings
 - analysis-manifest.md           human-readable report
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -15,7 +16,7 @@ import json
 import re
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -39,7 +40,7 @@ def split_fm(text: str) -> tuple[dict, str]:
             continue
         key, _, val = line.partition(":")
         data[key.strip()] = val.strip().strip("'\"")
-    return data, text[m.end():]
+    return data, text[m.end() :]
 
 
 def normalize_body(body: str) -> str:
@@ -59,30 +60,33 @@ def jaccard(a: set[str], b: set[str]) -> float:
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    files = sorted(p for p in PROMPTS_DIR.rglob("*") if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md")))
+    files = sorted(
+        p for p in PROMPTS_DIR.rglob("*") if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md"))
+    )
 
     records = []
     for p in files:
         text = p.read_text(encoding="utf-8", errors="replace")
         fm, body = split_fm(text)
         rel = str(p.relative_to(PROMPTS_DIR)).replace("\\", "/")
-        records.append({
-            "path": rel,
-            "fm": fm,
-            "body": body,
-            "norm": normalize_body(body),
-            "name": (fm.get("name") or p.stem).lower(),
-            "title": (fm.get("title") or p.stem).lower(),
-            "tags": [t.strip().lower() for t in re.split(r"[,\s]+", fm.get("tags", "")) if t.strip()],
-        })
+        records.append(
+            {
+                "path": rel,
+                "fm": fm,
+                "body": body,
+                "norm": normalize_body(body),
+                "name": (fm.get("name") or p.stem).lower(),
+                "title": (fm.get("title") or p.stem).lower(),
+                "tags": [t.strip().lower() for t in re.split(r"[,\s]+", fm.get("tags", "")) if t.strip()],
+            }
+        )
 
     # 1) Exact duplicates by normalized body hash
     by_hash: dict[str, list[str]] = defaultdict(list)
     for r in records:
         h = hashlib.sha256(r["norm"].encode("utf-8")).hexdigest()
         by_hash[h].append(r["path"])
-    dup_clusters = [{"hash": h, "count": len(paths), "files": paths}
-                    for h, paths in by_hash.items() if len(paths) > 1]
+    dup_clusters = [{"hash": h, "count": len(paths), "files": paths} for h, paths in by_hash.items() if len(paths) > 1]
     dup_clusters.sort(key=lambda c: -c["count"])
 
     # 2) Frontmatter patterns
@@ -114,10 +118,12 @@ def main() -> int:
                 group.append(records[j])
         if len(group) > 1:
             used.update(id(r) for r in group[1:])
-            overlap_clusters.append({
-                "score_basis": "name+title token jaccard >= 0.6",
-                "files": [r["path"] for r in group],
-            })
+            overlap_clusters.append(
+                {
+                    "score_basis": "name+title token jaccard >= 0.6",
+                    "files": [r["path"] for r in group],
+                }
+            )
 
     # 4) Template candidates: repeated section headings
     section_counter: Counter[str] = Counter()
@@ -127,12 +133,11 @@ def main() -> int:
             if 3 <= len(h) <= 60:
                 section_counter[h] += 1
     template_candidates = [
-        {"section": heading, "occurrences": count}
-        for heading, count in section_counter.most_common(30) if count >= 5
+        {"section": heading, "occurrences": count} for heading, count in section_counter.most_common(30) if count >= 5
     ]
 
     manifest = {
-        "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "generated": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
         "scope": str(PROMPTS_DIR),
         "total_prompts": len(records),
         "exact_duplicate_clusters": len(dup_clusters),
@@ -144,28 +149,38 @@ def main() -> int:
         "template_candidate_sections": template_candidates,
     }
 
-    (OUT_DIR / "duplicate-clusters.json").write_text(json.dumps({"generated": manifest["generated"], "clusters": dup_clusters}, indent=2), encoding="utf-8")
-    (OUT_DIR / "semantic-overlap-flags.json").write_text(json.dumps({"generated": manifest["generated"], "clusters": overlap_clusters}, indent=2), encoding="utf-8")
-    (OUT_DIR / "template-candidates.json").write_text(json.dumps({"generated": manifest["generated"], "candidates": template_candidates}, indent=2), encoding="utf-8")
+    (OUT_DIR / "duplicate-clusters.json").write_text(
+        json.dumps({"generated": manifest["generated"], "clusters": dup_clusters}, indent=2), encoding="utf-8"
+    )
+    (OUT_DIR / "semantic-overlap-flags.json").write_text(
+        json.dumps({"generated": manifest["generated"], "clusters": overlap_clusters}, indent=2), encoding="utf-8"
+    )
+    (OUT_DIR / "template-candidates.json").write_text(
+        json.dumps({"generated": manifest["generated"], "candidates": template_candidates}, indent=2), encoding="utf-8"
+    )
     (OUT_DIR / "analysis-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
     md = f"""# Prompt Library Analysis Manifest
 
-> Generated: {manifest['generated']} | Scope: `.github/prompts/` (717 files)
+> Generated: {manifest["generated"]} | Scope: `.github/prompts/` (717 files)
 
 ## Executive Summary
 
-- **Exact duplicate clusters:** {manifest['exact_duplicate_clusters']} ({manifest['exact_duplicate_files']} files)
-- **Semantic overlap clusters (manual review):** {manifest['semantic_overlap_clusters']}
-- **Template candidate sections:** {len(template_candidates)} shared headings repeated ≥5×
-- **Frontmatter fields observed:** {', '.join(k for k in fm_fields)}
+- **Exact duplicate clusters:** {manifest["exact_duplicate_clusters"]} ({manifest["exact_duplicate_files"]} files)
+- **Semantic overlap clusters (manual review):** {manifest["semantic_overlap_clusters"]}
+- **Template candidate sections:** {len(template_candidates)} shared headings repeated ≥5x
+- **Frontmatter fields observed:** {", ".join(k for k in fm_fields)}
 
 ## Exact Duplicates
 
 """
     if dup_clusters:
         for c in dup_clusters[:20]:
-            md += f"- **{c['count']}×** `{c['files'][0]}`" + (f" (also: {', '.join(c['files'][1:4])})" if len(c['files']) > 1 else "") + "\n"
+            md += (
+                f"- **{c['count']}x** `{c['files'][0]}`"  # ASCII x for the report (avoids RUF001)
+                + (f" (also: {', '.join(c['files'][1:4])})" if len(c["files"]) > 1 else "")
+                + "\n"
+            )
     else:
         md += "(none found)\n"
 
@@ -187,14 +202,19 @@ def main() -> int:
     md += "\n".join(f"- `{p}` ({n})" for p, n in name_prefix.most_common(15)) + "\n"
     (OUT_DIR / "analysis-manifest.md").write_text(md, encoding="utf-8")
 
-    print(json.dumps({
-        "total_prompts": len(records),
-        "exact_duplicate_clusters": len(dup_clusters),
-        "exact_duplicate_files": sum(c["count"] for c in dup_clusters),
-        "semantic_overlap_clusters": len(overlap_clusters),
-        "template_candidates": len(template_candidates),
-        "output_dir": str(OUT_DIR),
-    }, indent=2))
+    print(
+        json.dumps(
+            {
+                "total_prompts": len(records),
+                "exact_duplicate_clusters": len(dup_clusters),
+                "exact_duplicate_files": sum(c["count"] for c in dup_clusters),
+                "semantic_overlap_clusters": len(overlap_clusters),
+                "template_candidates": len(template_candidates),
+                "output_dir": str(OUT_DIR),
+            },
+            indent=2,
+        )
+    )
     return 0
 
 

@@ -1,12 +1,9 @@
-from django.conf import settings
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-from django.core.paginator import Paginator
-from django.db.models import Q
-from django.shortcuts import render
-
 from api.apps.filters import SearchFilter
 from api.apps.models import Comic
+from django.conf import settings
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.db.models import Q
+from django.shortcuts import render
 
 
 def index(request):

@@ -35,4 +35,4 @@ Approved: yes — user explicitly approved full implementation of the plan befor
 Status: completed for plan validation and approved cleanup. Prompt-management stage is queued as the next executed stage.
 ---
 
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

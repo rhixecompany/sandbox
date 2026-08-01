@@ -8,7 +8,7 @@
 # Python AsyncIO Explained in 9 Minutes – Summary
 
 **Source**: [NeuralNine – YouTube](https://www.youtube.com/watch?v=q_yk3oV14hE)  
-**Published**: August 1, 2025 | **Views**: 16,097 | **Subscribers**: 470,000  
+**Published**: August 1, 2025 | **Views**: 16,097 | **Subscribers**: 470,000
 
 ---
 
@@ -144,4 +144,4 @@ except asyncio.TimeoutError:
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

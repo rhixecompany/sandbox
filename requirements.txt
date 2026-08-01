@@ -37,6 +37,9 @@ google-auth-oauthlib==1.3.1
 googleapis-common-protos==1.75.0
 h11==0.16.0
 -e file:///C:/Users/Alexa/AppData/Local/hermes/hermes-agent
+# NOTE: the editable hermes-agent line above is excluded from the sandbox .venv
+# install (its own venv at hermes-agent/venv provides it) because hermes-agent
+# pins exact versions (e.g. cryptography==48.0.1) that conflict with this freeze.
 honcho-ai==2.0.1
 httpcore==1.0.9
 httplib2==0.32.0
@@ -129,3 +132,9 @@ wcwidth==0.8.2
 websockets==15.0.1
 yarl==1.24.2
 youtube-transcript-api==1.2.4
+# Dev / quality tooling
+mypy
+types-requests
+types-PyYAML
+types-python-dateutil
+pre-commit

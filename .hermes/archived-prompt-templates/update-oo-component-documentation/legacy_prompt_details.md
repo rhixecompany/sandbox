@@ -65,7 +65,7 @@ Update the existing Markdown file maintaining its structure while refreshing con
 
 Update the existing documentation following the same template structure, ensuring all sections reflect current implementation:
 
-````md
+```md
 ---
 title: [Component Name] - Technical Documentation
 component_path: [Current component path]
@@ -79,3 +79,4 @@ tags: [Update tags as needed based on current functionality]
 # [Component Name] Documentation
 
 [Update introduction to reflect current component purpose and capabilities]
+```

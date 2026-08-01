@@ -61,11 +61,13 @@ Use when "Execution prompt for AGENTS.md generation, per-repo git operations, br
 ## Description
 
 Execute the full AGENTS.md workflow using one argument.Supported argument values:- A single target directory name, for example: Bash or Resume_maker.
+
 - projects-all, meaning process every direct child directory under projects/.
 
 ## Context
 
 Use this prompt when the user wants the workflow executed, not just designed.This prompt executes the implementation pattern defined in:- prompts/session-agentsmd-full-workflow.prompt.mdArgument contract:- If no argument is provided, default to projects-all.
+
 - If an argument does not resolve to an existing target directory, fail fast and report valid options.
 
 ## Skills Required
@@ -148,6 +150,7 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 - Subtask 3.2.1 — Publish branch chore/agentsmd-YYYYMMDD-<repo
 
 > .- Subtask 3.2.2 — Use clean clone fallback for history-size or divergence failures.
+
 - Subtask 4.1.1 — Confirm remote refs exist for every target repo branch.
 - Subtask 4.2.1 — Include repo, branch, commit SHA, and status in final output.
 
@@ -212,4 +215,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
-

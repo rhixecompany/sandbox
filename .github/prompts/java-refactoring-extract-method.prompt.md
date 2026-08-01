@@ -91,6 +91,7 @@ public FactLineBuilder bpartnerIdIfNotNull(final BPartnerId bpartnerId) {    if 
 > 15  - NOM (Number of Statements)
 > 10  - CC (Cyclomatic Complexity)
 > 10- For each qualifying method, identify code blocks that can be extracted into separate methods.
+
 - Extract at least one new method with a descriptive name.
 - Output only the refactored code inside a single `java` block.
 - Do not remove any functionality from the original method.

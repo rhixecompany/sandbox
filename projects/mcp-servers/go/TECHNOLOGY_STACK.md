@@ -19,10 +19,12 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Packaging:** Single static binary
 
 ### Project Structure
+
 ```
 mcp-servers/go/
 ├── go.mod

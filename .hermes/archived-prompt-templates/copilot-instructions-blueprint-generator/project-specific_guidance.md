@@ -49,3 +49,4 @@ The final copilot-instructions.md should:
 - Be comprehensive yet concise enough for Copilot to effectively use
 
 Important: Only include guidance based on patterns actually observed in the codebase. Explicitly instruct Copilot to prioritize consistency with existing code over external best practices or newer language features. "
+```

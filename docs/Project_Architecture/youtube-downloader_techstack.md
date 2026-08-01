@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python (Scripts) |
+| Category    | Technology                       |
+| ----------- | -------------------------------- |
+| **Type**    | Python (Scripts)                 |
 | **Pattern** | YouTube download utility scripts |
-| **Stack** | Python 3, pytube/yt-dlp |
+| **Stack**   | Python 3, pytube/yt-dlp          |
 
 ## Development Tools
 

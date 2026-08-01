@@ -81,44 +81,40 @@ Document findings in `docs/proposedFixes.md` and `docs/proposedFixes.json` befor
 
 ```typescript
 export const entityName = pgTable(
-  "entity_name",
-  {
-    // Primary Key (required)
-    id: serial("id").primaryKey(),
+	"entity_name",
+	{
+		// Primary Key (required)
+		id: serial("id").primaryKey(),
 
-    // Foreign Keys (for relationships)
-    userId: text("userId")
-      .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
+		// Foreign Keys (for relationships)
+		userId: text("userId")
+			.notNull()
+			.references(() => user.id, { onDelete: "cascade" }),
 
-    // Status/Enum Fields
-    status: entityStatus("status").default("active"),
+		// Status/Enum Fields
+		status: entityStatus("status").default("active"),
 
-    // Data Fields
-    title: text("title").notNull(),
-    description: text("description"),
-    metadata: jsonb("metadata").$type<YourType>(),
+		// Data Fields
+		title: text("title").notNull(),
+		description: text("description"),
+		metadata: jsonb("metadata").$type<YourType>(),
 
-    // Timestamps (always include)
-    createdAt: timestamp("createdAt", { mode: "date" })
-      .defaultNow()
-      .notNull(),
-    updatedAt: timestamp("updatedAt", { mode: "date" })
-      .defaultNow()
-      .notNull(),
+		// Timestamps (always include)
+		createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
+		updatedAt: timestamp("updatedAt", { mode: "date" }).defaultNow().notNull(),
 
-    // Soft Delete (optional but recommended)
-    deletedAt: timestamp("deletedAt", { mode: "date" })
-  },
-  table => [
-    // Indexes for query performance
-    index("idx_userId").on(table.userId),
-    index("idx_status").on(table.status),
-    index("idx_createdAt").on(table.createdAt),
+		// Soft Delete (optional but recommended)
+		deletedAt: timestamp("deletedAt", { mode: "date" }),
+	},
+	(table) => [
+		// Indexes for query performance
+		index("idx_userId").on(table.userId),
+		index("idx_status").on(table.status),
+		index("idx_createdAt").on(table.createdAt),
 
-    // Unique constraints for business rules
-    unique("unique_user_entity").on(table.userId, table.title)
-  ]
+		// Unique constraints for business rules
+		unique("unique_user_entity").on(table.userId, table.title),
+	],
 );
 ```
 
@@ -140,11 +136,11 @@ export const entityName = pgTable(
 
 ```typescript
 export abstract class BaseDal<T> {
-  abstract list(options?: ListOptions): Promise<T[]>;
-  abstract getById(id: number): Promise<T | null>;
-  abstract create(data: CreateInput): Promise<T>;
-  abstract update(id: number, data: UpdateInput): Promise<T | null>;
-  abstract delete(id: number): Promise<void>;
+	abstract list(options?: ListOptions): Promise<T[]>;
+	abstract getById(id: number): Promise<T | null>;
+	abstract create(data: CreateInput): Promise<T>;
+	abstract update(id: number, data: UpdateInput): Promise<T | null>;
+	abstract delete(id: number): Promise<void>;
 }
 ```
 
@@ -157,63 +153,53 @@ import { entity } from "@/database/schema";
 import { eq, and, desc } from "drizzle-orm";
 
 export interface ListEntityOptions {
-  limit?: number;
-  offset?: number;
-  status?: string;
-  orderBy?: "asc" | "desc";
+	limit?: number;
+	offset?: number;
+	status?: string;
+	orderBy?: "asc" | "desc";
 }
 
 export class EntityDal extends BaseDal<Entity> {
-  async list(options?: ListEntityOptions) {
-    const {
-      limit = 20,
-      offset = 0,
-      status,
-      orderBy = "desc"
-    } = options ?? {};
+	async list(options?: ListEntityOptions) {
+		const { limit = 20, offset = 0, status, orderBy = "desc" } = options ?? {};
 
-    let query = db.select().from(entity);
+		let query = db.select().from(entity);
 
-    const filters = [];
-    if (status) filters.push(eq(entity.status, status));
-    if (filters.length) {
-      query = query.where(and(...filters));
-    }
+		const filters = [];
+		if (status) filters.push(eq(entity.status, status));
+		if (filters.length) {
+			query = query.where(and(...filters));
+		}
 
-    return query
-      .orderBy(
-        orderBy === "asc" ? entity.createdAt : desc(entity.createdAt)
-      )
-      .limit(limit)
-      .offset(offset)
-      .execute();
-  }
+		return query
+			.orderBy(orderBy === "asc" ? entity.createdAt : desc(entity.createdAt))
+			.limit(limit)
+			.offset(offset)
+			.execute();
+	}
 
-  async getById(id: number) {
-    const [result] = await db
-      .select()
-      .from(entity)
-      .where(eq(entity.id, id));
-    return result ?? null;
-  }
+	async getById(id: number) {
+		const [result] = await db.select().from(entity).where(eq(entity.id, id));
+		return result ?? null;
+	}
 
-  async create(data: CreateEntityInput) {
-    const [result] = await db.insert(entity).values(data).returning();
-    return result;
-  }
+	async create(data: CreateEntityInput) {
+		const [result] = await db.insert(entity).values(data).returning();
+		return result;
+	}
 
-  async update(id: number, data: UpdateEntityInput) {
-    const [result] = await db
-      .update(entity)
-      .set({ ...data, updatedAt: new Date() })
-      .where(eq(entity.id, id))
-      .returning();
-    return result ?? null;
-  }
+	async update(id: number, data: UpdateEntityInput) {
+		const [result] = await db
+			.update(entity)
+			.set({ ...data, updatedAt: new Date() })
+			.where(eq(entity.id, id))
+			.returning();
+		return result ?? null;
+	}
 
-  async delete(id: number) {
-    await db.delete(entity).where(eq(entity.id, id));
-  }
+	async delete(id: number) {
+		await db.delete(entity).where(eq(entity.id, id));
+	}
 }
 
 export const entityDal = new EntityDal();
@@ -236,22 +222,16 @@ Location: `src/schemas/${entity}.schema.ts`
 import { z } from "zod";
 
 export const CreateEntitySchema = z.object({
-  title: z
-    .string("Title is required")
-    .min(3, "Title must be at least 3 characters")
-    .max(200, "Title must be less than 200 characters"),
+	title: z
+		.string("Title is required")
+		.min(3, "Title must be at least 3 characters")
+		.max(200, "Title must be less than 200 characters"),
 
-  description: z
-    .string()
-    .max(2000, "Description is too long")
-    .optional(),
+	description: z.string().max(2000, "Description is too long").optional(),
 
-  email: z
-    .string("Email is required")
-    .email("Invalid email format")
-    .toLowerCase(),
+	email: z.string("Email is required").email("Invalid email format").toLowerCase(),
 
-  status: z.enum(["draft", "published", "archived"]).default("draft")
+	status: z.enum(["draft", "published", "archived"]).default("draft"),
 });
 
 export const UpdateEntitySchema = CreateEntitySchema.partial();
@@ -280,111 +260,97 @@ Location: `src/actions/${entity}.actions.ts`
 
 import { auth } from "@/auth";
 import { entityDal } from "@/dal/${entity}-dal";
-import {
-  CreateEntitySchema,
-  UpdateEntitySchema
-} from "@/schemas/${entity}.schema";
+import { CreateEntitySchema, UpdateEntitySchema } from "@/schemas/${entity}.schema";
 import { revalidatePath } from "next/cache";
 
-type ActionResult<T> =
-  | { ok: true; data: T }
-  | { ok: false; error: string };
+type ActionResult<T> = { ok: true; data: T } | { ok: false; error: string };
 
-export async function getEntityAction(
-  id: number
-): Promise<ActionResult<Entity>> {
-  try {
-    const entity = await entityDal.getById(id);
-    if (!entity) return { ok: false, error: "Entity not found" };
-    return { ok: true, data: entity };
-  } catch (error) {
-    console.error("[getEntityAction]", error);
-    return { ok: false, error: "Failed to fetch entity" };
-  }
+export async function getEntityAction(id: number): Promise<ActionResult<Entity>> {
+	try {
+		const entity = await entityDal.getById(id);
+		if (!entity) return { ok: false, error: "Entity not found" };
+		return { ok: true, data: entity };
+	} catch (error) {
+		console.error("[getEntityAction]", error);
+		return { ok: false, error: "Failed to fetch entity" };
+	}
 }
 
-export async function createEntityAction(
-  input: unknown
-): Promise<ActionResult<Entity>> {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return { ok: false, error: "You must be signed in" };
-  }
+export async function createEntityAction(input: unknown): Promise<ActionResult<Entity>> {
+	const session = await auth();
+	if (!session?.user?.id) {
+		return { ok: false, error: "You must be signed in" };
+	}
 
-  const parsed = CreateEntitySchema.safeParse(input);
-  if (!parsed.success) {
-    const [error] = parsed.error.errors;
-    return { ok: false, error: error?.message ?? "Invalid input" };
-  }
+	const parsed = CreateEntitySchema.safeParse(input);
+	if (!parsed.success) {
+		const [error] = parsed.error.errors;
+		return { ok: false, error: error?.message ?? "Invalid input" };
+	}
 
-  try {
-    const entity = await entityDal.create({
-      ...parsed.data,
-      userId: session.user.id
-    });
+	try {
+		const entity = await entityDal.create({
+			...parsed.data,
+			userId: session.user.id,
+		});
 
-    revalidatePath("/entities");
-    return { ok: true, data: entity };
-  } catch (error) {
-    console.error("[createEntityAction]", error);
-    return { ok: false, error: "Failed to create entity" };
-  }
+		revalidatePath("/entities");
+		return { ok: true, data: entity };
+	} catch (error) {
+		console.error("[createEntityAction]", error);
+		return { ok: false, error: "Failed to create entity" };
+	}
 }
 
-export async function updateEntityAction(
-  id: number,
-  input: unknown
-): Promise<ActionResult<Entity>> {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return { ok: false, error: "You must be signed in" };
-  }
+export async function updateEntityAction(id: number, input: unknown): Promise<ActionResult<Entity>> {
+	const session = await auth();
+	if (!session?.user?.id) {
+		return { ok: false, error: "You must be signed in" };
+	}
 
-  const parsed = UpdateEntitySchema.safeParse(input);
-  if (!parsed.success) {
-    return { ok: false, error: "Invalid input" };
-  }
+	const parsed = UpdateEntitySchema.safeParse(input);
+	if (!parsed.success) {
+		return { ok: false, error: "Invalid input" };
+	}
 
-  try {
-    const entity = await entityDal.getById(id);
-    if (!entity) return { ok: false, error: "Entity not found" };
-    if (entity.userId !== session.user.id) {
-      return { ok: false, error: "Unauthorized" };
-    }
+	try {
+		const entity = await entityDal.getById(id);
+		if (!entity) return { ok: false, error: "Entity not found" };
+		if (entity.userId !== session.user.id) {
+			return { ok: false, error: "Unauthorized" };
+		}
 
-    const updated = await entityDal.update(id, parsed.data);
-    if (!updated) return { ok: false, error: "Update failed" };
+		const updated = await entityDal.update(id, parsed.data);
+		if (!updated) return { ok: false, error: "Update failed" };
 
-    revalidatePath("/entities");
-    return { ok: true, data: updated };
-  } catch (error) {
-    console.error("[updateEntityAction]", error);
-    return { ok: false, error: "Failed to update entity" };
-  }
+		revalidatePath("/entities");
+		return { ok: true, data: updated };
+	} catch (error) {
+		console.error("[updateEntityAction]", error);
+		return { ok: false, error: "Failed to update entity" };
+	}
 }
 
-export async function deleteEntityAction(
-  id: number
-): Promise<ActionResult<void>> {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return { ok: false, error: "You must be signed in" };
-  }
+export async function deleteEntityAction(id: number): Promise<ActionResult<void>> {
+	const session = await auth();
+	if (!session?.user?.id) {
+		return { ok: false, error: "You must be signed in" };
+	}
 
-  try {
-    const entity = await entityDal.getById(id);
-    if (!entity) return { ok: false, error: "Entity not found" };
-    if (entity.userId !== session.user.id) {
-      return { ok: false, error: "Unauthorized" };
-    }
+	try {
+		const entity = await entityDal.getById(id);
+		if (!entity) return { ok: false, error: "Entity not found" };
+		if (entity.userId !== session.user.id) {
+			return { ok: false, error: "Unauthorized" };
+		}
 
-    await entityDal.delete(id);
-    revalidatePath("/entities");
-    return { ok: true, data: undefined };
-  } catch (error) {
-    console.error("[deleteEntityAction]", error);
-    return { ok: false, error: "Failed to delete entity" };
-  }
+		await entityDal.delete(id);
+		revalidatePath("/entities");
+		return { ok: true, data: undefined };
+	} catch (error) {
+		console.error("[deleteEntityAction]", error);
+		return { ok: false, error: "Failed to delete entity" };
+	}
 }
 ```
 

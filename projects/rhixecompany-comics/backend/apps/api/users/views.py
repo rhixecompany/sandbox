@@ -1,29 +1,19 @@
+from api.apps.filters import UserFilter
+from api.users.decorators import admin_only, user_only
+from api.users.forms import UserChangeForm, UserCreationForm
+from api.users.models import User
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import QuerySet
-from django.http import Http404
-from django.http import HttpRequest
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect
-from django.shortcuts import render
+from django.http import Http404, HttpRequest, HttpResponse
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.http import require_http_methods
-from django.views.generic import RedirectView
-from django.views.generic import UpdateView
+from django.views.generic import RedirectView, UpdateView
 from django_htmx.middleware import HtmxDetails
-
-from api.apps.filters import UserFilter
-from api.users.decorators import admin_only
-from api.users.decorators import user_only
-from api.users.forms import UserChangeForm
-from api.users.forms import UserCreationForm
-from api.users.models import User
 
 
 # Typing pattern recommended by django-stubs:

@@ -14,3 +14,4 @@ mcp-servers/typescript/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── src/index.ts  # Primary source code
+```

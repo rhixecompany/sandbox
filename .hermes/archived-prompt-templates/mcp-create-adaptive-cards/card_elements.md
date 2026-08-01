@@ -8,12 +8,12 @@
 
 ```json
 {
-  "type": "TextBlock",
-  "text": "Text content",
-  "size": "medium",      // small, default, medium, large, extraLarge
-  "weight": "bolder",    // lighter, default, bolder
-  "color": "attention",  // default, dark, light, accent, good, warning, attention
-  "wrap": true
+	"type": "TextBlock",
+	"text": "Text content",
+	"size": "medium", // small, default, medium, large, extraLarge
+	"weight": "bolder", // lighter, default, bolder
+	"color": "attention", // default, dark, light, accent, good, warning, attention
+	"wrap": true
 }
 ```
 
@@ -21,13 +21,13 @@
 
 ```json
 {
-  "type": "FactSet",
-  "facts": [
-    {
-      "title": "Label",
-      "value": "Value"
-    }
-  ]
+	"type": "FactSet",
+	"facts": [
+		{
+			"title": "Label",
+			"value": "Value"
+		}
+	]
 }
 ```
 
@@ -35,10 +35,10 @@
 
 ```json
 {
-  "type": "Image",
-  "url": "https://example.com/image.png",
-  "size": "medium",  // auto, stretch, small, medium, large
-  "style": "default" // default, person
+	"type": "Image",
+	"url": "https://example.com/image.png",
+	"size": "medium", // auto, stretch, small, medium, large
+	"style": "default" // default, person
 }
 ```
 
@@ -46,14 +46,14 @@
 
 ```json
 {
-  "type": "Container",
-  "$data": "${items}",  // Iterate over array
-  "items": [
-    {
-      "type": "TextBlock",
-      "text": "${name}"
-    }
-  ]
+	"type": "Container",
+	"$data": "${items}", // Iterate over array
+	"items": [
+		{
+			"type": "TextBlock",
+			"text": "${name}"
+		}
+	]
 }
 ```
 
@@ -81,8 +81,8 @@
 
 ```json
 {
-  "type": "Action.OpenUrl",
-  "title": "View Details",
-  "url": "https://example.com/item/${id}"
+	"type": "Action.OpenUrl",
+	"title": "View Details",
+	"url": "https://example.com/item/${id}"
 }
 ```

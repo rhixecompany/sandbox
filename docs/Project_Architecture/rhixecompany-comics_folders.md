@@ -14,3 +14,4 @@ rhixecompany-comics/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── frontend/src/  # Primary source code
+```

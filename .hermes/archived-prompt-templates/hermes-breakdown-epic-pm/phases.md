@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Read the epic idea or brief | Input summary |
-| 1.2 | Identify users and goals | Persona summary |
-| 1.3 | Note missing information | Clarification list |
+| Step | Action                      | Output             |
+| ---- | --------------------------- | ------------------ |
+| 1.1  | Read the epic idea or brief | Input summary      |
+| 1.2  | Identify users and goals    | Persona summary    |
+| 1.3  | Note missing information    | Clarification list |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Write the goal and impact | Goal section |
-| 2.2 | Add personas, journeys, and requirements | PRD body |
-| 2.3 | Add metrics and out-of-scope sections | Validation sections |
+| Step | Action                                   | Output              |
+| ---- | ---------------------------------------- | ------------------- |
+| 2.1  | Write the goal and impact                | Goal section        |
+| 2.2  | Add personas, journeys, and requirements | PRD body            |
+| 2.3  | Add metrics and out-of-scope sections    | Validation sections |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Check for missing sections | Gap list |
-| 3.2 | Remove vague language | Refined draft |
-| 3.3 | Confirm the output path | File-ready draft |
+| Step | Action                     | Output           |
+| ---- | -------------------------- | ---------------- |
+| 3.1  | Check for missing sections | Gap list         |
+| 3.2  | Remove vague language      | Refined draft    |
+| 3.3  | Confirm the output path    | File-ready draft |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Re-read the final PRD | Verification notes |
-| 4.2 | Confirm the required sections exist | Section check |
-| 4.3 | Confirm the target path | Output confirmation |
+| Step | Action                              | Output              |
+| ---- | ----------------------------------- | ------------------- |
+| 4.1  | Re-read the final PRD               | Verification notes  |
+| 4.2  | Confirm the required sections exist | Section check       |
+| 4.3  | Confirm the target path             | Output confirmation |
 
 #### Tasks
 

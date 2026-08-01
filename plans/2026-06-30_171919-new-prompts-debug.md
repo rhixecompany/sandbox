@@ -18,4 +18,5 @@ Apply concrete fixes from the `./prompts` audit:
 - Prompt fixes pending
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

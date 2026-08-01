@@ -20,7 +20,7 @@ _LIB_DIR = _HOOK_DIR.parent
 if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
-from lib import (
+from lib import (  # noqa: E402  (sys.path bootstrap above is required)
     json_get,
     log_debug,
     log_error,

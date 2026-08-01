@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Full-Stack (React + Django) |
+| Category    | Technology                           |
+| ----------- | ------------------------------------ |
+| **Type**    | Full-Stack (React + Django)          |
 | **Pattern** | React frontend + Django REST backend |
-| **Stack** | React, Node.js, Django, Python, DRF |
+| **Stack**   | React, Node.js, Django, Python, DRF  |
 
 ## Development Tools
 

@@ -10,52 +10,47 @@ Schema defined in `src/database/schema.ts` (604 lines, **27 tables**, 4 enums).
 
 ```typescript
 // Title-Case values for comicStatus
-comicStatus: "Ongoing" |
-  "Hiatus" |
-  "Completed" |
-  "Dropped" |
-  "Season End" |
-  "Coming Soon";
+comicStatus: "Ongoing" | "Hiatus" | "Completed" | "Dropped" | "Season End" | "Coming Soon";
 
 // Lowercase values for userRole
 userRole: "user" | "admin" | "moderator";
 
 // RBAC enums (used by permission and auditLog tables)
 resourceEnum: "comic" |
-  "chapter" |
-  "user" |
-  "comment" |
-  "rating" |
-  "bookmark" |
-  "notification" |
-  "author" |
-  "artist" |
-  "genre" |
-  "type" |
-  "system";
+	"chapter" |
+	"user" |
+	"comment" |
+	"rating" |
+	"bookmark" |
+	"notification" |
+	"author" |
+	"artist" |
+	"genre" |
+	"type" |
+	"system";
 actionEnum: "create" | "read" | "update" | "delete" | "manage";
 ```
 
 ### Key Table Facts
 
-| Table | Key Column | Gotcha |
-| --- | --- | --- |
-| `user` | `id: text` (UUID string) | NOT integer. Password nullable (OAuth users). Has `deletedAt` for soft delete. Has `settings` JSONB column. |
-| `comic` | `rating: decimal(10,1)` | Aggregate display rating. NOT integer. `status` must match Title-Case enum. |
-| `rating` | `rating: integer` | Per-user 1–5 stars. Different type from `comic.rating`! Use `AVG(rating)` for aggregation. |
-| `bookmark` | Composite PK `(userId, comicId)` | Use `onConflictDoUpdate` for upserts |
-| `chapter` | Composite unique `(comicId, chapterNumber)` | |
-| All FK cols | | Must include `{ onDelete: "cascade" }` except `auditLog.userId` → `"set null"` |
+| Table       | Key Column                                  | Gotcha                                                                                                      |
+| ----------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `user`      | `id: text` (UUID string)                    | NOT integer. Password nullable (OAuth users). Has `deletedAt` for soft delete. Has `settings` JSONB column. |
+| `comic`     | `rating: decimal(10,1)`                     | Aggregate display rating. NOT integer. `status` must match Title-Case enum.                                 |
+| `rating`    | `rating: integer`                           | Per-user 1–5 stars. Different type from `comic.rating`! Use `AVG(rating)` for aggregation.                  |
+| `bookmark`  | Composite PK `(userId, comicId)`            | Use `onConflictDoUpdate` for upserts                                                                        |
+| `chapter`   | Composite unique `(comicId, chapterNumber)` |                                                                                                             |
+| All FK cols |                                             | Must include `{ onDelete: "cascade" }` except `auditLog.userId` → `"set null"`                              |
 
 ### Complete Table List (27 tables)
 
-| Category | Tables |
-| --- | --- |
-| **Auth/User** | `user`, `account`, `session`, `verificationToken`, `authenticator`, `passwordResetToken` |
-| **Content** | `type`, `author`, `artist`, `genre`, `comic`, `chapter`, `comicImage`, `chapterImage`, `comicToGenre` (junction) |
-| **User Activity** | `bookmark`, `comment`, `readingProgress`, `readerSettings`, `rating`, `notification`, `userPreference` |
-| **RBAC** | `role`, `permission`, `rolePermission`, `userRole2` |
-| **Audit** | `auditLog` |
+| Category          | Tables                                                                                                           |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Auth/User**     | `user`, `account`, `session`, `verificationToken`, `authenticator`, `passwordResetToken`                         |
+| **Content**       | `type`, `author`, `artist`, `genre`, `comic`, `chapter`, `comicImage`, `chapterImage`, `comicToGenre` (junction) |
+| **User Activity** | `bookmark`, `comment`, `readingProgress`, `readerSettings`, `rating`, `notification`, `userPreference`           |
+| **RBAC**          | `role`, `permission`, `rolePermission`, `userRole2`                                                              |
+| **Audit**         | `auditLog`                                                                                                       |
 
 ### RBAC Tables
 
@@ -72,18 +67,18 @@ userRole2:      { userId, roleId, assignedBy (FK → user) }  // Composite PK
 
 ```typescript
 auditLog: {
-  (id,
-    userId,
-    action,
-    resource(resourceEnum),
-    resourceId,
-    details,
-    oldValues,
-    newValues,
-    ipAddress,
-    userAgent,
-    sessionId,
-    createdAt);
+	(id,
+		userId,
+		action,
+		resource(resourceEnum),
+		resourceId,
+		details,
+		oldValues,
+		newValues,
+		ipAddress,
+		userAgent,
+		sessionId,
+		createdAt);
 }
 // ⚠ EXCEPTION: userId uses onDelete: "set null" (NOT cascade)
 // This preserves audit trail when users are deleted
@@ -134,10 +129,10 @@ User ──→ AuditLog (set null on delete)
 
 ### Cascade Delete Scenarios
 
-| Scenario | Cascades To | Exception |
-| --- | --- | --- |
-| **Delete User** | bookmark, rating, comment, readingProgress, notification, readerSettings, userPreference, userRole2 | `auditLog.userId` → SET NULL (not cascade) |
-| **Delete Comic** | chapter, bookmark, rating, comment, comicToGenre, comicImage, readingProgress | — |
-| **Delete Chapter** | chapterImage, readingProgress (for that chapter) | `bookmark.lastReadChapterId` → SET NULL |
+| Scenario           | Cascades To                                                                                         | Exception                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **Delete User**    | bookmark, rating, comment, readingProgress, notification, readerSettings, userPreference, userRole2 | `auditLog.userId` → SET NULL (not cascade) |
+| **Delete Comic**   | chapter, bookmark, rating, comment, comicToGenre, comicImage, readingProgress                       | —                                          |
+| **Delete Chapter** | chapterImage, readingProgress (for that chapter)                                                    | `bookmark.lastReadChapterId` → SET NULL    |
 
 ---

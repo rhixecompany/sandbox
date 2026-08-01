@@ -137,10 +137,10 @@ async def main():
 
 ### Performance Comparison
 
-| Approach | Execution Time |
-| -------- | ---------------- |
+| Approach                 | Execution Time   |
+| ------------------------ | ---------------- |
 | **Async (as_completed)** | **0.24 seconds** |
-| **Synchronous** | **1.80 seconds** |
+| **Synchronous**          | **1.80 seconds** |
 
 → **~7.5x faster** due to concurrent I/O
 
@@ -193,4 +193,4 @@ async def main():
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

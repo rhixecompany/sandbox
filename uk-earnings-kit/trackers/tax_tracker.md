@@ -9,16 +9,16 @@
 
 ## The £1,000 Trading Allowance — Your First Shield
 
-| Income Type | Counts Toward Allowance? | Notes |
-|-------------|--------------------------|-------|
-| Surveys (Prolific, Swagbucks, etc.) | **YES** | Trading income |
-| User Testing (UserTesting, Userlytics) | **YES** | Trading income |
-| AI Training (DataAnnotation, Outlier) | **YES** | Trading income |
-| Freelance/Gig (Fiverr, TaskRabbit) | **YES** | Trading income |
-| Matched Betting | **NO** | Gambling winnings = tax-free |
-| Bank Switching Bonuses | **NO*** | Savings interest (covered by PSA £1,000) |
-| Cashback (TopCashback, Quidco) | **NO** | Discount, not income |
-| Crypto rewards (Freecash crypto) | **YES** | Trading income if disposed |
+| Income Type                            | Counts Toward Allowance? | Notes                                    |
+| -------------------------------------- | ------------------------ | ---------------------------------------- |
+| Surveys (Prolific, Swagbucks, etc.)    | **YES**                  | Trading income                           |
+| User Testing (UserTesting, Userlytics) | **YES**                  | Trading income                           |
+| AI Training (DataAnnotation, Outlier)  | **YES**                  | Trading income                           |
+| Freelance/Gig (Fiverr, TaskRabbit)     | **YES**                  | Trading income                           |
+| Matched Betting                        | **NO**                   | Gambling winnings = tax-free             |
+| Bank Switching Bonuses                 | **NO***                  | Savings interest (covered by PSA £1,000) |
+| Cashback (TopCashback, Quidco)         | **NO**                   | Discount, not income                     |
+| Crypto rewards (Freecash crypto)       | **YES**                  | Trading income if disposed               |
 
 \* Bank switching cash incentives are treated as savings interest, covered by the **Personal Savings Allowance (£1,000 basic rate, £500 higher rate)**. Not trading income.
 
@@ -26,102 +26,109 @@
 
 ## Monthly Tracking Table
 
-| Month | Surveys | User Testing | AI Training | Freelance | Matched Betting | Bank Switch | Cashback | **Total Trading** | **Cumulative Trading** | Over £1,000? |
-|-------|---------|--------------|-------------|-----------|-----------------|-------------|----------|-------------------|------------------------|--------------|
-| Apr 2026 |  |  |  |  |  |  |  |  |  |  |
-| May 2026 |  |  |  |  |  |  |  |  |  |  |
-| Jun 2026 |  |  |  |  |  |  |  |  |  |  |
-| Jul 2026 |  |  |  |  |  |  |  |  |  |  |
-| Aug 2026 |  |  |  |  |  |  |  |  |  |  |
-| Sep 2026 |  |  |  |  |  |  |  |  |  |  |
-| Oct 2026 |  |  |  |  |  |  |  |  |  |  |
-| Nov 2026 |  |  |  |  |  |  |  |  |  |  |
-| Dec 2026 |  |  |  |  |  |  |  |  |  |  |
-| Jan 2027 |  |  |  |  |  |  |  |  |  |  |
-| Feb 2027 |  |  |  |  |  |  |  |  |  |  |
-| Mar 2027 |  |  |  |  |  |  |  |  |  |  |
-| **TOTAL** |  |  |  |  |  |  |  |  |  |  |
+| Month     | Surveys | User Testing | AI Training | Freelance | Matched Betting | Bank Switch | Cashback | **Total Trading** | **Cumulative Trading** | Over £1,000? |
+| --------- | ------- | ------------ | ----------- | --------- | --------------- | ----------- | -------- | ----------------- | ---------------------- | ------------ |
+| Apr 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| May 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Jun 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Jul 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Aug 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Sep 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Oct 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Nov 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Dec 2026  |         |              |             |           |                 |             |          |                   |                        |              |
+| Jan 2027  |         |              |             |           |                 |             |          |                   |                        |              |
+| Feb 2027  |         |              |             |           |                 |             |          |                   |                        |              |
+| Mar 2027  |         |              |             |           |                 |             |          |                   |                        |              |
+| **TOTAL** |         |              |             |           |                 |             |          |                   |                        |              |
 
 ---
 
 ## Platform-by-Platform Log
 
 ### Prolific (Academic Surveys)
-| Date | Study | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
-|------|-------|-------------|-----------|-----------|----------|
-|  |  |  |  |  | 2026/27 |
-|  |  |  |  |  | 2026/27 |
-| **Subtotal** |  |  |  |  |  |
+
+| Date         | Study | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
+| ------------ | ----- | ----------- | --------- | --------- | -------- |
+|              |       |             |           |           | 2026/27  |
+|              |       |             |           |           | 2026/27  |
+| **Subtotal** |       |             |           |           |          |
 
 ### UserTesting / Userlytics / TestingTime
-| Date | Platform | Test Type | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
-|------|----------|-----------|-------------|-----------|-----------|----------|
-|  |  |  |  |  |  | 2026/27 |
-|  |  |  |  |  |  | 2026/27 |
-| **Subtotal** |  |  |  |  |  |  |
+
+| Date         | Platform | Test Type | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
+| ------------ | -------- | --------- | ----------- | --------- | --------- | -------- |
+|              |          |           |             |           |           | 2026/27  |
+|              |          |           |             |           |           | 2026/27  |
+| **Subtotal** |          |           |             |           |           |          |
 
 ### DataAnnotation.tech / Outlier / Alignerr
-| Date | Platform | Project Type | Hours | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
-|------|----------|--------------|-------|-------------|-----------|-----------|----------|
-|  |  |  |  |  |  |  | 2026/27 |
-|  |  |  |  |  |  |  | 2026/27 |
-| **Subtotal** |  |  |  |  |  |  |  |
+
+| Date         | Platform | Project Type | Hours | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
+| ------------ | -------- | ------------ | ----- | ----------- | --------- | --------- | -------- |
+|              |          |              |       |             |           |           | 2026/27  |
+|              |          |              |       |             |           |           | 2026/27  |
+| **Subtotal** |          |              |       |             |           |           |          |
 
 ### Matched Betting (Outplayed/OddsMonkey)
-| Date | Bookmaker | Offer Type | Profit (GBP) | Notes |
-|------|-----------|------------|--------------|-------|
-|  |  |  |  | TAX-FREE |
-|  |  |  |  | TAX-FREE |
-| **Subtotal** |  |  |  | **All tax-free** |
+
+| Date         | Bookmaker | Offer Type | Profit (GBP) | Notes            |
+| ------------ | --------- | ---------- | ------------ | ---------------- |
+|              |           |            |              | TAX-FREE         |
+|              |           |            |              | TAX-FREE         |
+| **Subtotal** |           |            |              | **All tax-free** |
 
 ### Bank Switching
-| Date | Bank Switched To | Bonus (GBP) | Direct Debits Moved | Bonus Received | Tax Treatment |
-|------|------------------|-------------|---------------------|----------------|---------------|
-|  |  |  |  |  | Savings Interest (PSA) |
-|  |  |  |  |  | Savings Interest (PSA) |
-| **Subtotal** |  |  |  |  | **Covered by PSA £1,000** |
+
+| Date         | Bank Switched To | Bonus (GBP) | Direct Debits Moved | Bonus Received | Tax Treatment             |
+| ------------ | ---------------- | ----------- | ------------------- | -------------- | ------------------------- |
+|              |                  |             |                     |                | Savings Interest (PSA)    |
+|              |                  |             |                     |                | Savings Interest (PSA)    |
+| **Subtotal** |                  |             |                     |                | **Covered by PSA £1,000** |
 
 ### Freecash / Swagbucks / Branded Surveys / Qmee / OnePoll
-| Date | Platform | Activity | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
-|------|----------|----------|-------------|-----------|-----------|----------|
-|  |  |  |  |  |  | 2026/27 |
-|  |  |  |  |  |  | 2026/27 |
-| **Subtotal** |  |  |  |  |  |  |
+
+| Date         | Platform | Activity | Gross (GBP) | Net (GBP) | Paid Date | Tax Year |
+| ------------ | -------- | -------- | ----------- | --------- | --------- | -------- |
+|              |          |          |             |           |           | 2026/27  |
+|              |          |          |             |           |           | 2026/27  |
+| **Subtotal** |          |          |             |           |           |          |
 
 ---
 
 ## Year-End Summary (Auto-Calculate from Above)
 
-| Category | Total Gross | Allowable Expenses | Net Trading Income |
-|----------|-------------|-------------------|-------------------|
-| Surveys |  |  |  |
-| User Testing |  |  |  |
-| AI Training |  |  |  |
-| Freelance/Gig |  |  |  |
-| **Total Trading Income** |  |  |  |
-| **Less: Trading Allowance** |  |  | **£1,000** |
-| **Taxable Trading Profit** |  |  |  |
+| Category                    | Total Gross | Allowable Expenses | Net Trading Income |
+| --------------------------- | ----------- | ------------------ | ------------------ |
+| Surveys                     |             |                    |                    |
+| User Testing                |             |                    |                    |
+| AI Training                 |             |                    |                    |
+| Freelance/Gig               |             |                    |                    |
+| **Total Trading Income**    |             |                    |                    |
+| **Less: Trading Allowance** |             |                    | **£1,000**         |
+| **Taxable Trading Profit**  |             |                    |                    |
 
 ### Other Income (Non-Trading)
-| Category | Total | Tax Treatment |
-|----------|-------|---------------|
-| Matched Betting |  | Tax-free (gambling) |
-| Bank Switch Bonuses |  | Savings Interest → PSA |
-| Cashback |  | Not income (discount) |
+
+| Category            | Total | Tax Treatment          |
+| ------------------- | ----- | ---------------------- |
+| Matched Betting     |       | Tax-free (gambling)    |
+| Bank Switch Bonuses |       | Savings Interest → PSA |
+| Cashback            |       | Not income (discount)  |
 
 ---
 
 ## Allowable Expenses (Keep Receipts 6 Years)
 
-| Date | Platform | Expense Type | Amount (GBP) | Receipt? | Notes |
-|------|----------|--------------|--------------|----------|-------|
-|  |  | Matched betting subscription |  |  | Wholly & exclusively |
-|  |  | Equipment (mic, webcam) |  |  | Apportioned if personal use |
-|  |  | Software subscriptions |  |  |  |
-|  |  | Internet (proportion) |  |  |  |
-|  |  | Training/courses |  |  |  |
-|  |  | Accountancy fees |  |  |  |
-| **Total Expenses** |  |  |  |  |  |
+| Date               | Platform | Expense Type                 | Amount (GBP) | Receipt? | Notes                       |
+| ------------------ | -------- | ---------------------------- | ------------ | -------- | --------------------------- |
+|                    |          | Matched betting subscription |              |          | Wholly & exclusively        |
+|                    |          | Equipment (mic, webcam)      |              |          | Apportioned if personal use |
+|                    |          | Software subscriptions       |              |          |                             |
+|                    |          | Internet (proportion)        |              |          |                             |
+|                    |          | Training/courses             |              |          |                             |
+|                    |          | Accountancy fees             |              |          |                             |
+| **Total Expenses** |          |                              |              |          |                             |
 
 > **Rule:** Expenses must be "wholly and exclusively" for the trade. Personal use = apportion.
 
@@ -129,16 +136,16 @@
 
 ## Action Checklist by Date
 
-| Deadline | Action | Status |
-|----------|--------|--------|
-| **5 Oct 2027** | Register for Self Assessment (if trading income >£1,000) | ☐ |
-| **31 Oct 2027** | Paper tax return deadline | ☐ |
-| **31 Jan 2028** | Online tax return deadline + first payment on account | ☐ |
-| **31 Jul 2028** | Second payment on account | ☐ |
-| **Ongoing** | Log every earning event in tracker | ☐ |
-| **Ongoing** | Save all payout screenshots (platform + PayPal + bank) | ☐ |
-| **Ongoing** | Keep expense receipts (digital OK) | ☐ |
-| **Annual** | Review if trading allowance still covers you | ☐ |
+| Deadline        | Action                                                   | Status |
+| --------------- | -------------------------------------------------------- | ------ |
+| **5 Oct 2027**  | Register for Self Assessment (if trading income >£1,000) | ☐      |
+| **31 Oct 2027** | Paper tax return deadline                                | ☐      |
+| **31 Jan 2028** | Online tax return deadline + first payment on account    | ☐      |
+| **31 Jul 2028** | Second payment on account                                | ☐      |
+| **Ongoing**     | Log every earning event in tracker                       | ☐      |
+| **Ongoing**     | Save all payout screenshots (platform + PayPal + bank)   | ☐      |
+| **Ongoing**     | Keep expense receipts (digital OK)                       | ☐      |
+| **Annual**      | Review if trading allowance still covers you             | ☐      |
 
 ---
 
@@ -170,4 +177,4 @@ START: Did you earn > £1,000 total from (Surveys + User Testing + AI Training +
 
 ---
 
-*This tracker is a template. Consult a qualified accountant for your specific situation. Tax rules change — verify at gov.uk before filing.*
+_This tracker is a template. Consult a qualified accountant for your specific situation. Tax rules change — verify at gov.uk before filing._

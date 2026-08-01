@@ -20,11 +20,13 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Tools:** Greeting tool, File search tool
 - **Resources:** File system access
 
 ### Project Structure
+
 ```
 mcp-servers/python/
 ├── main.py                 # Entry point
@@ -39,6 +41,7 @@ mcp-servers/python/
 ## Dependencies (`pyproject.toml`)
 
 ### Production
+
 ```toml
 dependencies = [
     "mcp[cli]>=1.28.0",
@@ -46,6 +49,7 @@ dependencies = [
 ```
 
 ### Build System
+
 ```toml
 [build-system]
 requires = ["hatchling"]
@@ -53,6 +57,7 @@ build-backend = "hatchling.build"
 ```
 
 ### Entry Point
+
 ```toml
 [project.scripts]
 python-mcp-server = "main:main"

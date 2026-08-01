@@ -21,11 +21,13 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO
 - **Hosting:** Generic Host (Microsoft.Extensions.Hosting)
 - **Dependency Injection:** Built-in DI container
 
 ### Project Structure
+
 ```
 mcp-servers/csharp/
 ├── Program.cs                 # Entry point + host setup

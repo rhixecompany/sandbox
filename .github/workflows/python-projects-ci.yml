@@ -4,12 +4,12 @@ on:
   push:
     branches: [development, production]
     paths:
-      - 'projects/Python-projects/**'
-      - '.github/workflows/python-projects-ci.yml'
+      - "projects/Python-projects/**"
+      - ".github/workflows/python-projects-ci.yml"
   pull_request:
     branches: [development, production]
     paths:
-      - 'projects/Python-projects/**'
+      - "projects/Python-projects/**"
 
 jobs:
   verify:
@@ -21,8 +21,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
           cache-dependency-path: projects/Python-projects/requirements.txt
       - name: Install dependencies
         run: |

@@ -53,7 +53,8 @@ Cargo.lock
 
 ### README.md
 
-````markdown
+```markdown
 # {Project Name}
 
 {Server description}
+```

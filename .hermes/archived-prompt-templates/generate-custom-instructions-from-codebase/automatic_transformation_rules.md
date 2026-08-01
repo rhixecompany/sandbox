@@ -7,7 +7,7 @@
 ### 1. Mandatory Transformations
 
 ${AUTOMATION_LEVEL != "Conservative" ?
-  "[AUTOMATIC_TRANSFORMATION_RULES]
+"[AUTOMATIC_TRANSFORMATION_RULES]
 
 - **Old Pattern**: [OLD_CODE]
 - **New Pattern**: [NEW_CODE]
@@ -17,7 +17,7 @@ ${AUTOMATION_LEVEL != "Conservative" ?
 ### 2. Transformations with Validation
 
 ${VALIDATION_REQUIRED == "true" ?
-  "[TRANSFORMATIONS_WITH_VALIDATION]
+"[TRANSFORMATIONS_WITH_VALIDATION]
 
 - **Detected Pattern**: [DESCRIPTION]
 - **Suggested Transformation**: [NEW_APPROACH]
@@ -27,11 +27,11 @@ ${VALIDATION_REQUIRED == "true" ?
 ### 3. API Correspondences
 
 ${CHANGE_FOCUS == "API Changes" || MIGRATION_TYPE == "Framework Version" ?
-  "[API_CORRESPONDENCE_TABLE]
+"[API_CORRESPONDENCE_TABLE]
 
-   | Old API   | New API   | Notes     | Example        |
-   | --------- | --------- | --------- | -------------- |
-   | [OLD_API] | [NEW_API] | [CHANGES] | [CODE_EXAMPLE] | " : ""} |
+| Old API   | New API   | Notes     | Example        |
+| --------- | --------- | --------- | -------------- |
+| [OLD_API] | [NEW_API] | [CHANGES] | [CODE_EXAMPLE] | " : ""} |
 
 ### 4. New Patterns to Adopt
 

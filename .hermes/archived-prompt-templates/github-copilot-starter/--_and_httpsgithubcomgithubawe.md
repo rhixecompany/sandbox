@@ -63,3 +63,4 @@ applyTo: "\*_/_.java" description: "Java Spring Boot development standards"
 - **Database Development**: PostgreSQL, SQL Server, and general database best practices
 - **Azure Development**: Infrastructure as Code, serverless functions
 - **Security & Performance**: Security frameworks, accessibility, performance optimization
+```

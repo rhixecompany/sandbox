@@ -83,6 +83,7 @@ July 2025. `bun audit` on the output:
 **The problem:** `markdown-pdf` hasn't been updated since 2020. It bundles PhantomJS (abandoned 2018). The XSS is in the HTML rendering pipeline.
 
 **Options:**
+
 1. Wait for a fork/fix (unlikely)
 2. Replace with `@vercel/og` + Puppeteer
 3. Use `md-to-pdf` (maintained)
@@ -142,6 +143,7 @@ done
 ```
 
 Each iteration:
+
 1. Reads base data
 2. Injects company-specific tweaks (via `--company` flag)
 3. Generates 4 documents × 2 formats
@@ -158,6 +160,7 @@ The code is 400 lines. The dependencies are 47 packages. The vulnerability is in
 **Lesson:** A 6-hour CLI saves 200 hours of manual work. But it inherits the ecosystem's debt.
 
 The next version will:
+
 - Drop `markdown-pdf` for `md-to-pdf` + Puppeteer
 - Add JSON Schema export for the input format
 - Support YAML input (some people prefer it)

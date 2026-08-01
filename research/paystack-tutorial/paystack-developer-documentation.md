@@ -36,15 +36,15 @@ Authorization: Bearer YOUR_SECRET_KEY
 
 ## Key Endpoints
 
-| Endpoint | Purpose |
-| ---------- | --------- |
-| POST /transaction/initialize | Initialize payment |
-| GET /transaction/verify/{ref} | Verify payment |
-| POST /transferrecipient | Create transfer recipient |
-| POST /transfer | Initiate transfer |
-| GET /transfer/{id} | Check transfer status |
-| GET /bank | List banks |
-| GET /bank/resolve | Resolve bank account |
+| Endpoint                      | Purpose                   |
+| ----------------------------- | ------------------------- |
+| POST /transaction/initialize  | Initialize payment        |
+| GET /transaction/verify/{ref} | Verify payment            |
+| POST /transferrecipient       | Create transfer recipient |
+| POST /transfer                | Initiate transfer         |
+| GET /transfer/{id}            | Check transfer status     |
+| GET /bank                     | List banks                |
+| GET /bank/resolve             | Resolve bank account      |
 
 ## Webhook Events
 
@@ -65,4 +65,4 @@ Available for: PHP, Python, Node.js, Ruby, Java, Go, .NET
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

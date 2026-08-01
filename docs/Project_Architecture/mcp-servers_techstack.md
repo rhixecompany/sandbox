@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Multi-Language (MCP) |
-| **Pattern** | MCP Protocol reference implementations |
-| **Stack** | Go, Rust, Java/Maven, Kotlin/Gradle, PHP/Composer, Python, TypeScript/Bun, C#, Ruby, Swift |
+| Category    | Technology                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------ |
+| **Type**    | Multi-Language (MCP)                                                                       |
+| **Pattern** | MCP Protocol reference implementations                                                     |
+| **Stack**   | Go, Rust, Java/Maven, Kotlin/Gradle, PHP/Composer, Python, TypeScript/Bun, C#, Ruby, Swift |
 
 ## Development Tools
 

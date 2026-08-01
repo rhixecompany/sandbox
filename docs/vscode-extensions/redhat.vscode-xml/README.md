@@ -11,7 +11,7 @@ XML Language Support by Red Hat, with schema validation, code completion, and mo
 
 ## Contributed Settings
 
-xml.server.vmargs, xml.format.*, xml.codeLens.*, xml.preferences.*
+xml.server.vmargs, xml.format._, xml.codeLens._, xml.preferences.*
 
 ## Notes
 

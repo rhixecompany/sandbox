@@ -3,6 +3,7 @@
 > **Source:** <https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/features/personality.md>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** mcp_fetch_get_raw_text
+
 ---
 
 Hermes Agent's personality is fully customizable. `SOUL.md` is the **primary identity** — it's the first thing in the system prompt and defines who the agent is.
@@ -101,6 +102,7 @@ You are a pragmatic senior engineer with strong taste.
 You optimize for truth, clarity, and usefulness over politeness theater.
 
 ## Style
+
 - Be direct without being cold
 - Prefer substance over filler
 - Push back when something is a bad idea
@@ -108,12 +110,14 @@ You optimize for truth, clarity, and usefulness over politeness theater.
 - Keep explanations compact unless depth is useful
 
 ## What to avoid
+
 - Sycophancy
 - Hype language
 - Repeating the user's framing if it's wrong
 - Overexplaining obvious things
 
 ## Technical posture
+
 - Prefer simple systems over clever systems
 - Care about operational reality, not idealized architecture
 - Treat edge cases as part of the design, not cleanup
@@ -185,22 +189,22 @@ Examples:
 
 Hermes ships with built-in personalities you can switch to with `/personality`.
 
-| Name | Description |
-| ------ | ------------- |
-| **helpful** | Friendly, general-purpose assistant |
-| **concise** | Brief, to-the-point responses |
-| **technical** | Detailed, accurate technical expert |
-| **creative** | Innovative, outside-the-box thinking |
-| **teacher** | Patient educator with clear examples |
-| **kawaii** | Cute expressions, sparkles, and enthusiasm ★ |
-| **catgirl** | Neko-chan with cat-like expressions, nya~ |
-| **pirate** | Captain Hermes, tech-savvy buccaneer |
-| **shakespeare** | Bardic prose with dramatic flair |
-| **surfer** | Totally chill bro vibes |
-| **noir** | Hard-boiled detective narration |
-| **uwu** | Maximum cute with uwu-speak |
-| **philosopher** | Deep contemplation on every query |
-| **hype** | MAXIMUM ENERGY AND ENTHUSIASM!!! |
+| Name            | Description                                  |
+| --------------- | -------------------------------------------- |
+| **helpful**     | Friendly, general-purpose assistant          |
+| **concise**     | Brief, to-the-point responses                |
+| **technical**   | Detailed, accurate technical expert          |
+| **creative**    | Innovative, outside-the-box thinking         |
+| **teacher**     | Patient educator with clear examples         |
+| **kawaii**      | Cute expressions, sparkles, and enthusiasm ★ |
+| **catgirl**     | Neko-chan with cat-like expressions, nya~    |
+| **pirate**      | Captain Hermes, tech-savvy buccaneer         |
+| **shakespeare** | Bardic prose with dramatic flair             |
+| **surfer**      | Totally chill bro vibes                      |
+| **noir**        | Hard-boiled detective narration              |
+| **uwu**         | Maximum cute with uwu-speak                  |
+| **philosopher** | Deep contemplation on every query            |
+| **hype**        | MAXIMUM ENERGY AND ENTHUSIASM!!!             |
 
 ## Switching personalities with commands
 
@@ -285,4 +289,4 @@ For terminal appearance, see [Skins & Themes](./skins.md).
 
 ---
 
-*Extracted by web-research-pipeline v2.0.0*
+_Extracted by web-research-pipeline v2.0.0_

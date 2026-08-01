@@ -1,6 +1,5 @@
-from django.urls import path
-
 from api.apps.views import chapter_views as views
+from django.urls import path
 
 app_name = "chapters"
 urlpatterns = [

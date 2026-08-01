@@ -1,4 +1,5 @@
 """DRF viewsets for comic models."""
+
 from __future__ import annotations
 
 from django_filters.rest_framework import DjangoFilterBackend
@@ -66,9 +67,16 @@ class TypeViewSet(viewsets.ModelViewSet):
 
 
 class ComicViewSet(viewsets.ModelViewSet):
-    queryset = Comic.objects.prefetch_related(
-        "genres", "comicitems", "comicchapters", "followers",
-    ).select_related("author", "artist", "type", "user").all()
+    queryset = (
+        Comic.objects.prefetch_related(
+            "genres",
+            "comicitems",
+            "comicchapters",
+            "followers",
+        )
+        .select_related("author", "artist", "type", "user")
+        .all()
+    )
     pagination_class = StandardPagination
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ["status", "type__name", "genres__name"]

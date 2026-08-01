@@ -18,15 +18,15 @@ When facing massive write volumes, **data binning/chunking** can reduce write op
 
 ```json
 {
-  "chunkId": 1,
-  "chunkSize": 100,
-  "id": "chunk_001",
-  "partitionKey": "account_test_chunk_001",
-  "records": [
-    { "recordId": 1, "data": "..." },
-    { "recordId": 2, "data": "..." }
-    // ... 98 more records
-  ]
+	"chunkId": 1,
+	"chunkSize": 100,
+	"id": "chunk_001",
+	"partitionKey": "account_test_chunk_001",
+	"records": [
+		{ "recordId": 1, "data": "..." },
+		{ "recordId": 2, "data": "..." }
+		// ... 98 more records
+	]
 }
 ```
 
@@ -58,20 +58,20 @@ When multiple entity types are frequently accessed together, group them in the s
 
 ```json
 [
-  {
-    "id": "user_123",
-    "partitionKey": "user_123",
-    "type": "user",
-    "name": "John Doe",
-    "email": "john@example.com"
-  },
-  {
-    "id": "order_456",
-    "partitionKey": "user_123",
-    "type": "order",
-    "userId": "user_123",
-    "amount": 99.99
-  }
+	{
+		"id": "user_123",
+		"partitionKey": "user_123",
+		"type": "user",
+		"name": "John Doe",
+		"email": "john@example.com"
+	},
+	{
+		"id": "order_456",
+		"partitionKey": "user_123",
+		"type": "order",
+		"userId": "user_123",
+		"amount": 99.99
+	}
 ]
 ```
 
@@ -170,24 +170,24 @@ StudentCourseLessons container:
 
 ```json
 [
-  {
-    "id": "student_123",
-    "partitionKey": "student_123",
-    "type": "student"
-  },
-  {
-    "id": "course_456",
-    "partitionKey": "student_123",
-    "type": "course",
-    "courseId": "course_456"
-  },
-  {
-    "id": "lesson_789",
-    "partitionKey": "student_123",
-    "type": "lesson",
-    "courseId": "course_456",
-    "lessonId": "lesson_789"
-  }
+	{
+		"id": "student_123",
+		"partitionKey": "student_123",
+		"type": "student"
+	},
+	{
+		"id": "course_456",
+		"partitionKey": "student_123",
+		"type": "course",
+		"courseId": "course_456"
+	},
+	{
+		"id": "lesson_789",
+		"partitionKey": "student_123",
+		"type": "lesson",
+		"courseId": "course_456",
+		"lessonId": "lesson_789"
+	}
 ]
 ```
 
@@ -207,10 +207,10 @@ TenantData container:
 
 ```json
 {
-  "customerId": "customer_789",
-  "id": "record_123",
-  "partitionKey": "tenant_456_customer_789",
-  "tenantId": "tenant_456"
+	"customerId": "customer_789",
+	"id": "record_123",
+	"partitionKey": "tenant_456_customer_789",
+	"tenantId": "tenant_456"
 }
 ```
 
@@ -245,14 +245,10 @@ Example: Products container where only sale items need sale_price indexed
 
 ```json
 {
-  "indexingPolicy": {
-    "includedPaths": [
-      { "path": "/name/*" },
-      { "path": "/category/*" },
-      { "path": "/sale_price/*" }
-    ],
-    "excludedPaths": [{ "path": "/*" }]
-  }
+	"indexingPolicy": {
+		"includedPaths": [{ "path": "/name/*" }, { "path": "/category/*" }, { "path": "/sale_price/*" }],
+		"excludedPaths": [{ "path": "/*" }]
+	}
 }
 ```
 
@@ -265,43 +261,29 @@ Azure Cosmos DB doesn't enforce unique constraints beyond the id+partitionKey co
 ```javascript
 // Stored procedure for creating user with unique email
 function createUserWithUniqueEmail(userData) {
-  var context = getContext();
-  var container = context.getCollection();
+	var context = getContext();
+	var container = context.getCollection();
 
-  // Check if email already exists
-  var query = `SELECT * FROM c WHERE c.email = "${userData.email}"`;
+	// Check if email already exists
+	var query = `SELECT * FROM c WHERE c.email = "${userData.email}"`;
 
-  var isAccepted = container.queryDocuments(
-    container.getSelfLink(),
-    query,
-    function (err, documents) {
-      if (err)
-        throw new Error("Error querying documents: " + err.message);
+	var isAccepted = container.queryDocuments(container.getSelfLink(), query, function (err, documents) {
+		if (err) throw new Error("Error querying documents: " + err.message);
 
-      if (documents.length > 0) {
-        throw new Error("Email already exists");
-      }
+		if (documents.length > 0) {
+			throw new Error("Email already exists");
+		}
 
-      // Email is unique, create the user
-      var isAccepted = container.createDocument(
-        container.getSelfLink(),
-        userData,
-        function (err, document) {
-          if (err)
-            throw new Error(
-              "Error creating document: " + err.message
-            );
-          context.getResponse().setBody(document);
-        }
-      );
+		// Email is unique, create the user
+		var isAccepted = container.createDocument(container.getSelfLink(), userData, function (err, document) {
+			if (err) throw new Error("Error creating document: " + err.message);
+			context.getResponse().setBody(document);
+		});
 
-      if (!isAccepted)
-        throw new Error("The query was not accepted by the server.");
-    }
-  );
+		if (!isAccepted) throw new Error("The query was not accepted by the server.");
+	});
 
-  if (!isAccepted)
-    throw new Error("The query was not accepted by the server.");
+	if (!isAccepted) throw new Error("The query was not accepted by the server.");
 }
 ```
 
@@ -317,7 +299,7 @@ Hierarchical Partition Keys provide natural query boundaries using multiple fiel
 
 ```json
 {
-  "partitionKey": "account_123_test_456_chunk_001" // Synthetic composite
+	"partitionKey": "account_123_test_456_chunk_001" // Synthetic composite
 }
 ```
 
@@ -325,11 +307,11 @@ Hierarchical Partition Keys provide natural query boundaries using multiple fiel
 
 ```json
 {
-  "partitionKey": {
-    "version": 2,
-    "kind": "MultiHash",
-    "paths": ["/accountId", "/testId", "/chunkId"]
-  }
+	"partitionKey": {
+		"version": 2,
+		"kind": "MultiHash",
+		"paths": ["/accountId", "/testId", "/chunkId"]
+	}
 }
 ```
 
@@ -417,11 +399,11 @@ Example: Session tokens with 24-hour expiration
 
 ```json
 {
-  "createdAt": "2024-01-01T12:00:00Z",
-  "id": "sess_abc123",
-  "partitionKey": "user_456",
-  "ttl": 86400,
-  "userId": "user_456"
+	"createdAt": "2024-01-01T12:00:00Z",
+	"id": "sess_abc123",
+	"partitionKey": "user_456",
+	"ttl": 86400,
+	"userId": "user_456"
 }
 ```
 
@@ -429,7 +411,7 @@ Container-level TTL configuration:
 
 ```json
 {
-  "defaultTtl": -1 // Enable TTL, no default expiration
+	"defaultTtl": -1 // Enable TTL, no default expiration
 }
 ```
 

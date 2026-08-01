@@ -4,50 +4,50 @@
 
 ## 💰 Cost Optimization: [Brief Title]
 
-   **Monthly Savings**: $X | **Risk Level**: [Low/Medium/High] | **Implementation Effort**: X days
+**Monthly Savings**: $X | **Risk Level**: [Low/Medium/High] | **Implementation Effort**: X days
 
 ### 📋 Description
 
-   [Clear explanation of the optimization and why it's needed]
+[Clear explanation of the optimization and why it's needed]
 
 ### 🔧 Implementation
 
-   **IaC Files Detected**: [Yes/No - based on file_search results]
+**IaC Files Detected**: [Yes/No - based on file_search results]
 
-   ```bash
-   # If IaC files found: Show IaC modifications + deployment
-   # File: infrastructure/bicep/modules/app-service.bicep
-   # Change: sku.name: 'S3' → 'B2'
-   az deployment group create --resource-group [rg] --template-file infrastructure/bicep/main.bicep
+```bash
+# If IaC files found: Show IaC modifications + deployment
+# File: infrastructure/bicep/modules/app-service.bicep
+# Change: sku.name: 'S3' → 'B2'
+az deployment group create --resource-group [rg] --template-file infrastructure/bicep/main.bicep
 
-   # If no IaC files: Direct Azure CLI commands + warning
-   # ⚠️ No IaC files found. If they exist elsewhere, modify those instead.
-   az appservice plan update --name [plan] --sku B2
-   ```
+# If no IaC files: Direct Azure CLI commands + warning
+# ⚠️ No IaC files found. If they exist elsewhere, modify those instead.
+az appservice plan update --name [plan] --sku B2
+```
 
-   ````
+`````
 
-   ### 📊 Evidence
-   - Current Configuration: [details]
-   - Usage Pattern: [evidence from monitoring data]
-   - Cost Impact: $X/month → $Y/month
-   - Best Practice Alignment: [reference to Azure best practices if applicable]
+### 📊 Evidence
+- Current Configuration: [details]
+- Usage Pattern: [evidence from monitoring data]
+- Cost Impact: $X/month → $Y/month
+- Best Practice Alignment: [reference to Azure best practices if applicable]
 
-   ### ✅ Validation Steps
-   - [ ] Test in non-production environment
-   - [ ] Verify no performance degradation
-   - [ ] Confirm cost reduction in Azure Cost Management
-   - [ ] Update monitoring and alerts if needed
+### ✅ Validation Steps
+- [ ] Test in non-production environment
+- [ ] Verify no performance degradation
+- [ ] Confirm cost reduction in Azure Cost Management
+- [ ] Update monitoring and alerts if needed
 
-   ### ⚠️ Risks & Considerations
-   - [Risk 1 and mitigation]
-   - [Risk 2 and mitigation]
+### ⚠️ Risks & Considerations
+- [Risk 1 and mitigation]
+- [Risk 2 and mitigation]
 
-   **Priority Score**: X | **Value**: X/10 | **Risk**: X/10
+**Priority Score**: X | **Value**: X/10 | **Risk**: X/10
 
-   ```
+```
 
-   ```
+```
 
 ### Step 7: Create EPIC Coordinating Issue
 
@@ -55,11 +55,12 @@
 
 1. **Create EPIC Issue**:
 
-   **Title**: `[EPIC] Azure Cost Optimization Initiative - $X/month potential savings`
+**Title**: `[EPIC] Azure Cost Optimization Initiative - $X/month potential savings`
 
-   **Body Template**:
+**Body Template**:
 
-   ````markdown
-   # 🎯 Azure Cost Optimization EPIC
+````markdown
+# 🎯 Azure Cost Optimization EPIC
 
-   **Total Potential Savings**: $X/month | **Implementation Timeline**: X weeks
+**Total Potential Savings**: $X/month | **Implementation Timeline**: X weeks
+`````

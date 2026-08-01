@@ -49,6 +49,7 @@
 ## Technology Matrix
 
 ### Frontend (TypeScript)
+
 | Project | Framework | UI Lib | State | Styling | DB/ORM |
 |---------|-----------|--------|-------|---------|--------|
 | Banking | Next.js 16 (App) | shadcn/ui | React Query | Tailwind | Drizzle |
@@ -60,6 +61,7 @@
 | xamehi.tv (FE) | React 17 (CRA) | MUI 4 | Redux | MUI | - |
 
 ### Backend (Python)
+
 | Project | Framework | Auth | DB | Async | Deploy |
 |---------|-----------|------|----|-------|--------|
 | ecom | DRF 3.13 | JWT | PostgreSQL | - | - |
@@ -70,6 +72,7 @@
 | xamehi.tv | DRF | SimpleJWT + allauth | PostgreSQL | - | Gunicorn |
 
 ### Tooling & Automation
+
 | Project | Language | Runtime | Purpose |
 |---------|----------|---------|---------|
 | Bash | TypeScript | Bun | 6-phase automation orchestrator |
@@ -139,6 +142,7 @@ feature/* (short-lived, deleted after merge)
 ## Dependency Health (July 2025 Audit)
 
 ### Critical Vulnerabilities
+
 | Project | Package | Severity | CVE |
 |---------|---------|----------|-----|
 | Resume_maker | markdown-pdf | HIGH | GHSA-qghr-877h-f9jh (XSS → local file read) |
@@ -149,6 +153,7 @@ feature/* (short-lived, deleted after merge)
 | Banking | brace-expansion | MODERATE | GHSA-jxxr-4gwj-5jf2 |
 
 ### Outdated Major Versions (Sample)
+
 | Project | Current | Latest | Gap |
 |---------|---------|--------|-----|
 | ecom | Django 3.1 | 5.1 | 2 major |

@@ -17,7 +17,7 @@ style TriggerNode fill:#e1f5fe
 style SuccessNode fill:#e8f5e8
 style FailureNode fill:#ffebee
 style ProcessNode fill:#f3e5f5
-````
+```
 
 ### Complex Workflows
 
@@ -32,4 +32,4 @@ graph TD
         D[Staging] --> E[Production]
     end
     C --> D
-````
+```

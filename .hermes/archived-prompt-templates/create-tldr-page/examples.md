@@ -58,4 +58,4 @@ You MAY fetch these example tldr pages to understand the proper format and style
 - Reset everything the way it was in the latest commit:
 
 `git reset --hard; git clean {{[-f|--force]}}`
-````
+```

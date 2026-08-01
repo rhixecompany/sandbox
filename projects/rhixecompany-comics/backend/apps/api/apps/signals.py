@@ -1,14 +1,6 @@
-from django.db.models.signals import post_save
-from django.db.models.signals import pre_delete
-from django.db.models.signals import pre_save
-
-from api.apps.models import Chapter
-from api.apps.models import ChapterImage
-from api.apps.models import Comic
-from api.apps.models import ComicImage
-from api.apps.utils import delete_instance_image
-from api.apps.utils import slugify_instance_name
-from api.apps.utils import slugify_instance_title
+from api.apps.models import Chapter, ChapterImage, Comic, ComicImage
+from api.apps.utils import delete_instance_image, slugify_instance_name, slugify_instance_title
+from django.db.models.signals import post_save, pre_delete, pre_save
 
 
 def comic_pre_save(sender, instance, *args, **kwargs):

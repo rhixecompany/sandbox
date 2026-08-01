@@ -14,3 +14,4 @@ rhixecompany-comics/backend/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── Standard Django app structure  # Primary source code
+```

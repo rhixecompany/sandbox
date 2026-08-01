@@ -7,9 +7,7 @@
 ### ActionResult Type (`src/actions/types.ts`)
 
 ```typescript
-export type ActionResult<T> =
-  | { ok: true; data: T }
-  | { ok: false; error: string };
+export type ActionResult<T> = { ok: true; data: T } | { ok: false; error: string };
 ```
 
 ### Standard Pattern (`src/actions/comic.actions.ts`)
@@ -23,30 +21,27 @@ import { CreateComicSchema } from "@/schemas/comic.schema";
 import { comicDal } from "@/dal/comic-dal";
 import type { ActionResult } from "./types";
 
-export async function createComicAction(
-  input: unknown
-): Promise<ActionResult<ComicType>> {
-  // 1. Auth check
-  const session = await auth();
-  if (!session?.user?.id)
-    return { ok: false, error: "Not authenticated" };
+export async function createComicAction(input: unknown): Promise<ActionResult<ComicType>> {
+	// 1. Auth check
+	const session = await auth();
+	if (!session?.user?.id) return { ok: false, error: "Not authenticated" };
 
-  // 2. Zod validation
-  const parsed = CreateComicSchema.safeParse(input);
-  if (!parsed.success)
-    return {
-      ok: false,
-      error: parsed.error.errors[0]?.message ?? "Invalid"
-    };
+	// 2. Zod validation
+	const parsed = CreateComicSchema.safeParse(input);
+	if (!parsed.success)
+		return {
+			ok: false,
+			error: parsed.error.errors[0]?.message ?? "Invalid",
+		};
 
-  // 3. DAL operation
-  try {
-    const comic = await comicDal.create(parsed.data);
-    revalidatePath("/comics");
-    return { ok: true, data: comic };
-  } catch (e) {
-    return { ok: false, error: "Failed to create comic" };
-  }
+	// 3. DAL operation
+	try {
+		const comic = await comicDal.create(parsed.data);
+		revalidatePath("/comics");
+		return { ok: true, data: comic };
+	} catch (e) {
+		return { ok: false, error: "Failed to create comic" };
+	}
 }
 ```
 

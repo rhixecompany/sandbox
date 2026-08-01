@@ -1,8 +1,11 @@
 target-version = "py311"
 line-length = 120
 exclude = [
-  "projects/cookiecutter-django-tailwind/",
+  "projects/",
+  "hermes-profiles/",
+  "node_modules/",
   "myvenv/",
+  ".venv/",
   ".git/",
   "__pycache__/",
 ]

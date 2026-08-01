@@ -1,0 +1,16 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+.next/
+out/
+dist/
+build/
+coverage/
+*.min.*
+*.lock
+package-lock.json
+**/*.html
+**/templates/**
+docs/
+copilot-studio/package-lock.json

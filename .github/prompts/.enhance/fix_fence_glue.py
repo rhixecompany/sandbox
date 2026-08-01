@@ -9,6 +9,7 @@ Handles:
 
 Dry-run default; `--apply` writes.
 """
+
 import re
 import sys
 from pathlib import Path
@@ -26,6 +27,7 @@ def fix_spring_boot(text):
         cmd = m.group(2).strip()
         cmd = CONT_RE.sub("\\\n  ", cmd)
         return f"{bullet}\n\n```shell\n{cmd}\n```"
+
     return FENCE_RE.sub(repl, text)
 
 
@@ -35,7 +37,9 @@ def fix_kotlin_dup(text):
         return text
     tail = re.sub(
         r"## Unzip the downloaded file\n\n- Run following command in terminal to unzip the downloaded file\n\n```shell\nunzip[^\n]*\n```\n\n?",
-        "", tail, count=1,
+        "",
+        tail,
+        count=1,
     )
     return head + sep + tail
 

@@ -16,6 +16,7 @@ content without a newline.
 
 Dry-run by default; --apply writes. LF output.
 """
+
 import argparse
 import re
 import sys

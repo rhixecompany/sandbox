@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Next.js) |
-| **Pattern** | Next.js full-stack with NextAuth and Drizzle |
-| **Stack** | Next.js, React, Node.js, TypeScript, Tailwind CSS, Drizzle ORM, NextAuth.js, shadcn/ui |
+| Category    | Technology                                                                             |
+| ----------- | -------------------------------------------------------------------------------------- |
+| **Type**    | TypeScript/Bun (Next.js)                                                               |
+| **Pattern** | Next.js full-stack with NextAuth and Drizzle                                           |
+| **Stack**   | Next.js, React, Node.js, TypeScript, Tailwind CSS, Drizzle ORM, NextAuth.js, shadcn/ui |
 
 ## Development Tools
 

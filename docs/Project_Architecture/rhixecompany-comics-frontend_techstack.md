@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Next.js) |
-| **Pattern** | Next.js frontend for comics platform |
-| **Stack** | Next.js, React, Bun, TypeScript, Tailwind CSS, shadcn/ui |
+| Category    | Technology                                               |
+| ----------- | -------------------------------------------------------- |
+| **Type**    | TypeScript/Bun (Next.js)                                 |
+| **Pattern** | Next.js frontend for comics platform                     |
+| **Stack**   | Next.js, React, Bun, TypeScript, Tailwind CSS, shadcn/ui |
 
 ## Development Tools
 

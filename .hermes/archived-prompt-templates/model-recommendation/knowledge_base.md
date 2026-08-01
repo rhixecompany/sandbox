@@ -6,14 +6,14 @@
 
 ### Model Multiplier Cost Reference
 
-| Multiplier | Meaning | Free Tier | Pro Usage | Pro+ Usage |
-| --- | --- | --- | --- | --- |
-| 0x | Included in all plans, no premium count | ✅ | Unlimited | Unlimited |
-| 0.25x | 4 requests = 1 premium request | ❌ | 4000 uses | 20000 uses |
-| 0.33x | 3 requests = 1 premium request | ❌ | 3000 uses | 15000 uses |
-| 1x | 1 request = 1 premium request | ❌ | 1000 uses | 5000 uses |
-| 1.25x | 1 request = 1.25 premium requests | ❌ | 800 uses | 4000 uses |
-| 10x | 1 request = 10 premium requests (very expensive) | ❌ | 100 uses | 500 uses |
+| Multiplier | Meaning                                          | Free Tier | Pro Usage | Pro+ Usage |
+| ---------- | ------------------------------------------------ | --------- | --------- | ---------- |
+| 0x         | Included in all plans, no premium count          | ✅        | Unlimited | Unlimited  |
+| 0.25x      | 4 requests = 1 premium request                   | ❌        | 4000 uses | 20000 uses |
+| 0.33x      | 3 requests = 1 premium request                   | ❌        | 3000 uses | 15000 uses |
+| 1x         | 1 request = 1 premium request                    | ❌        | 1000 uses | 5000 uses  |
+| 1.25x      | 1 request = 1.25 premium requests                | ❌        | 800 uses  | 4000 uses  |
+| 10x        | 1 request = 10 premium requests (very expensive) | ❌        | 100 uses  | 500 uses   |
 
 ### Model Changelog & Deprecations (October 2025)
 

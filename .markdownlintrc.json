@@ -1,91 +1,18 @@
 {
-	"config": {
-		"default": true,
-		"MD007": {
-			"indent": 2
-		},
-		"MD013": {
-			"line_length": 500,
-			"tables": false,
-			"code_blocks": false
-		},
-		"MD022": true,
-		"MD024": false,
-		"MD025": {
-			"front_matter_title": ""
-		},
-		"MD026": false,
-		"MD028": false,
-		"MD031": true,
-		"MD033": {
-			"allowed_elements": [
-				"br",
-				"details",
-				"kbd",
-				"summary",
-				"sub",
-				"sup",
-				"table",
-				"tbody",
-				"td",
-				"tfoot",
-				"th",
-				"thead",
-				"tr",
-				"u",
-				"var",
-				"wbr",
-				"del",
-				"ins",
-				"mark",
-				"abbr",
-				"b",
-				"bdi",
-				"bdo",
-				"cite",
-				"code",
-				"dfn",
-				"em",
-				"i",
-				"q",
-				"URL",
-				"command",
-				"T",
-				"repo",
-				"Class"
-			]
-		},
-		"MD034": true,
-		"MD036": false,
-		"MD040": true,
-		"MD041": false,
-		"MD046": {
-			"style": "fenced"
-		},
-		"MD048": {
-			"style": "backtick"
-		},
-		"MD058": true,
-		"MD060": true
-	},
-	"fix": true,
-	"gitignore": true,
-	"ignores": [
-		"node_modules",
-		".next",
-		".git",
-		"build",
-		"coverage",
-		"dist",
-		"out",
-		"tmp",
-		"**/build/**",
-		"**/coverage/**",
-		"**/dist/**",
-		"**/out/**",
-		"**/tmp/**",
-		"**/node_modules/**",
-		"**/.git/**",
-		"projects/**"
-	]
+	"MD001": false,
+	"MD003": false,
+	"MD007": { "indent": 2 },
+	"MD010": { "code_blocks": false },
+	"MD013": false,
+	"MD024": false,
+	"MD025": false,
+	"MD026": false,
+	"MD028": false,
+	"MD033": false,
+	"MD034": false,
+	"MD036": false,
+	"MD040": false,
+	"MD041": false,
+	"MD059": false,
+	"MD060": false
 }

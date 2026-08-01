@@ -6,8 +6,8 @@ from django.http import JsonResponse
 def health(_request):
     return JsonResponse(
         {
-            'service': 'rhixecompany-comics',
-            'status': 'ok',
-            'layer': 'backend',
+            "service": "rhixecompany-comics",
+            "status": "ok",
+            "layer": "backend",
         }
     )

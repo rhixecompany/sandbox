@@ -173,6 +173,7 @@ export default function Reader({ params }: { params: { slug: string } }) {
 ```
 
 **ISR (Incremental Static Regeneration):**
+
 ```typescript
 // app/comics/[slug]/page.tsx
 export const revalidate = 3600 // 1 hour
@@ -184,6 +185,7 @@ export async function generateStaticParams() {
 ```
 
 **Webhook revalidation:**
+
 ```typescript
 // api/webhooks/django/route.ts
 export async function POST(req: Request) {
@@ -247,7 +249,8 @@ export async function getServerSession() {
 └─────────────┴─────────────┴──────────┴──────────────┘
 ```
 
-**Production:** 
+**Production:**
+
 - Django → Railway/Render (or GCP Cloud Run)
 - Next.js → Vercel (edge functions, ISR, image optimization)
 - Postgres → Neon (serverless) or managed PG

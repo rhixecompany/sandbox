@@ -50,9 +50,9 @@ model MyAgent {
 
 ```json
 {
-  "description": "${AGENT_DESCRIPTION}",
-  "instructions": "${AGENT_INSTRUCTIONS}",
-  "name": "${AGENT_NAME}"
+	"description": "${AGENT_DESCRIPTION}",
+	"instructions": "${AGENT_INSTRUCTIONS}",
+	"name": "${AGENT_NAME}"
 }
 ```
 

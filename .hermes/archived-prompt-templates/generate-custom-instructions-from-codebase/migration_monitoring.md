@@ -24,19 +24,19 @@ How to report incorrect transformations to Copilot:
 ### Phase 3: Contextual Examples Generation
 
 ${GENERATE_EXAMPLES == "true" ?
-  "#### Transformation Examples
-   For each identified pattern, generate:
+"#### Transformation Examples
+For each identified pattern, generate:
 
-   \`\`\`
-   // BEFORE (${SOURCE_REFERENCE})
-   [OLD_CODE_EXAMPLE]
+\`\`\`
+// BEFORE (${SOURCE_REFERENCE})
+[OLD_CODE_EXAMPLE]
 
-   // AFTER (${TARGET_REFERENCE})
-   [NEW_CODE_EXAMPLE]
+// AFTER (${TARGET_REFERENCE})
+[NEW_CODE_EXAMPLE]
 
-   // COPILOT INSTRUCTIONS
-   When you see this pattern [TRIGGER], transform it to [NEW_PATTERN] following these steps: [STEPS]
-   \`\`\`" : ""}
+// COPILOT INSTRUCTIONS
+When you see this pattern [TRIGGER], transform it to [NEW_PATTERN] following these steps: [STEPS]
+\`\`\`" : ""}
 
 ### Phase 4: Validation and Optimization
 
@@ -50,7 +50,7 @@ ${GENERATE_EXAMPLES == "true" ?
 #### Iterative Optimization
 
 ${AUTOMATION_LEVEL == "Aggressive" ?
-  "- Refine rules to maximize automation
+"- Refine rules to maximize automation
 
 - Reduce false positives in detection
 - Improve transformation accuracy
@@ -68,5 +68,7 @@ Migration instructions that enable GitHub Copilot to:
 
 These instructions transform Copilot into an intelligent migration assistant, capable of reproducing your technology evolution decisions consistently and reliably.
 "
+
+```
 
 ```

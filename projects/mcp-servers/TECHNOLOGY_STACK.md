@@ -64,6 +64,7 @@ All implementations follow the same MCP pattern:
 ## Quick Start (All Languages)
 
 ### TypeScript (mcp-servers/typescript)
+
 ```bash
 cd mcp-servers/typescript
 npm install
@@ -73,6 +74,7 @@ npm run start        # Run compiled
 ```
 
 ### Python (mcp-servers/python)
+
 ```bash
 cd mcp-servers/python
 uv sync              # or: pip install -e .
@@ -80,6 +82,7 @@ python -m main       # Run server
 ```
 
 ### Go (mcp-servers/go)
+
 ```bash
 cd mcp-servers/go
 go mod download
@@ -88,6 +91,7 @@ go run main.go       # Run directly
 ```
 
 ### Java (mcp-servers/java)
+
 ```bash
 cd mcp-servers/java
 mvn package
@@ -95,6 +99,7 @@ java -jar target/java-mcp-server.jar
 ```
 
 ### Kotlin (mcp-servers/kotlin)
+
 ```bash
 cd mcp-servers/kotlin
 ./gradlew run
@@ -102,6 +107,7 @@ cd mcp-servers/kotlin
 ```
 
 ### PHP (mcp-servers/php)
+
 ```bash
 cd mcp-servers/php
 composer install
@@ -109,6 +115,7 @@ php server.php
 ```
 
 ### Rust (mcp-servers/rust)
+
 ```bash
 cd mcp-servers/rust
 cargo run
@@ -116,18 +123,21 @@ cargo run
 ```
 
 ### Swift (mcp-servers/swift)
+
 ```bash
 cd mcp-servers/swift
 swift run MyMCPServer
 ```
 
 ### C# (mcp-servers/csharp)
+
 ```bash
 cd mcp-servers/csharp
 dotnet run
 ```
 
 ### Ruby (mcp-servers/ruby)
+
 ```bash
 cd mcp-servers/ruby
 bundle install
@@ -135,6 +145,7 @@ bundle exec bin/your-server
 ```
 
 ### Copilot Studio (mcp-servers/copilot-studio) — HTTP Transport
+
 ```bash
 cd mcp-servers/copilot-studio
 npm install

@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | React/Bun (Frontend) |
+| Category    | Technology                        |
+| ----------- | --------------------------------- |
+| **Type**    | React/Bun (Frontend)              |
 | **Pattern** | React frontend for video platform |
-| **Stack** | React, Bun |
+| **Stack**   | React, Bun                        |
 
 ## Development Tools
 

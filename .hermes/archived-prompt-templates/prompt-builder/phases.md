@@ -16,17 +16,17 @@ Preflight requirement:
 
 These 9 topic areas guide the discovery process. The actual interactive questions are phrased during execution.
 
-| Topic # | Area | Details |
-| --- | --- | --- |
-| 1 | Prompt Identity & Purpose | Filename, one-sentence description, category |
-| 2 | Persona Definition | Role, expertise level, domain knowledge, qualifications |
-| 3 | Task Specification | Primary task, secondary tasks, inputs, constraints |
-| 4 | Context & Variable Requirements | Selection, file references, input variables, workspace vars |
-| 5 | Detailed Instructions & Standards | Step-by-step process, coding standards, patterns, things to avoid |
-| 6 | Output Requirements | Format, new files, modifications, examples |
-| 7 | Tool & Capability Requirements | File ops, execution, external, specialized, analysis tools |
-| 8 | Technical Configuration | Mode (agent/ask/edit), model requirements, special constraints |
-| 9 | Quality & Validation Criteria | Success measurement, validation steps, error handling |
+| Topic # | Area                              | Details                                                           |
+| ------- | --------------------------------- | ----------------------------------------------------------------- |
+| 1       | Prompt Identity & Purpose         | Filename, one-sentence description, category                      |
+| 2       | Persona Definition                | Role, expertise level, domain knowledge, qualifications           |
+| 3       | Task Specification                | Primary task, secondary tasks, inputs, constraints                |
+| 4       | Context & Variable Requirements   | Selection, file references, input variables, workspace vars       |
+| 5       | Detailed Instructions & Standards | Step-by-step process, coding standards, patterns, things to avoid |
+| 6       | Output Requirements               | Format, new files, modifications, examples                        |
+| 7       | Tool & Capability Requirements    | File ops, execution, external, specialized, analysis tools        |
+| 8       | Technical Configuration           | Mode (agent/ask/edit), model requirements, special constraints    |
+| 9       | Quality & Validation Criteria     | Success measurement, validation steps, error handling             |
 
 ### Phase 2: Generate
 

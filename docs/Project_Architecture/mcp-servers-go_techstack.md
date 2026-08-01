@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Go (MCP) |
+| Category    | Technology                       |
+| ----------- | -------------------------------- |
+| **Type**    | Go (MCP)                         |
 | **Pattern** | Go MCP server with tool registry |
-| **Stack** | Go modules |
+| **Stack**   | Go modules                       |
 
 ## Development Tools
 

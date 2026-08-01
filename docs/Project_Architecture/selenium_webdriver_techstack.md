@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Utility) |
+| Category    | Technology                            |
+| ----------- | ------------------------------------- |
+| **Type**    | TypeScript/Bun (Utility)              |
 | **Pattern** | Selenium WebDriver browser automation |
-| **Stack** | Bun, TypeScript, Selenium, Prettier |
+| **Stack**   | Bun, TypeScript, Selenium, Prettier   |
 
 ## Development Tools
 

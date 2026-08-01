@@ -10,14 +10,14 @@ Add image domains, CDN/proxy support, security headers:
 
 ```ts
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "**.cdnjs.cloudflare.com" },
-      { protocol: "https", hostname: "**.githubusercontent.com" }
-    ],
-    formats: ["image/avif", "image/webp"]
-  }
-  // Keep existing experimental flags
+	images: {
+		remotePatterns: [
+			{ protocol: "https", hostname: "**.cdnjs.cloudflare.com" },
+			{ protocol: "https", hostname: "**.githubusercontent.com" },
+		],
+		formats: ["image/avif", "image/webp"],
+	},
+	// Keep existing experimental flags
 };
 ```
 
@@ -48,15 +48,15 @@ Verify scripts:
 
 ```json
 {
-  "scripts": {
-    "type-gen": "next build --experimental-build-mode compile",
-    "type-check": "tsc --noEmit",
-    "lint:fix": "eslint . --fix && prettier --write .",
-    "test": "vitest run",
-    "test:ui": "playwright test",
-    "db:push": "drizzle-kit push",
-    "db:seed": "tsx src/scripts/seed.ts"
-  }
+	"scripts": {
+		"type-gen": "next build --experimental-build-mode compile",
+		"type-check": "tsc --noEmit",
+		"lint:fix": "eslint . --fix && prettier --write .",
+		"test": "vitest run",
+		"test:ui": "playwright test",
+		"db:push": "drizzle-kit push",
+		"db:seed": "tsx src/scripts/seed.ts"
+	}
 }
 ```
 

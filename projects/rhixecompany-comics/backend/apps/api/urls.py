@@ -1,4 +1,5 @@
 """API URL configuration — routes for all comic resources."""
+
 from __future__ import annotations
 
 from django.urls import include, path

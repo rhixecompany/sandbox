@@ -202,4 +202,4 @@ async def setter():
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Automation) |
-| **Pattern** | Modular TypeScript automation toolkit |
-| **Stack** | Bun 1.3, TypeScript strict, ESLint flat, Prettier, Vitest, Zod v4 |
+| Category    | Technology                                                        |
+| ----------- | ----------------------------------------------------------------- |
+| **Type**    | TypeScript/Bun (Automation)                                       |
+| **Pattern** | Modular TypeScript automation toolkit                             |
+| **Stack**   | Bun 1.3, TypeScript strict, ESLint flat, Prettier, Vitest, Zod v4 |
 
 ## Development Tools
 

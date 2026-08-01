@@ -36,12 +36,14 @@
 ## Architecture Pattern
 
 **Next.js App Router** with:
+
 - Server Components by default
 - Client Components only when needed (interactivity)
 - Route Groups for layout separation
 - Server Actions for mutations
 
 ### Data Flow
+
 ```
 Client → Server Components (RSC) → Drizzle ORM → PostgreSQL
          ↓

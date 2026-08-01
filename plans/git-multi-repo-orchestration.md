@@ -19,14 +19,14 @@ Execute the complete git lifecycle across every repo in `./projects`:
 
 ### 5 Sequential Phases
 
-| Phase | Duration | Risk | Focus |
-|-------|----------|------|-------|
-| **0. Inventory** | 10 min | Low | Auth check, repo discovery, dirty baseline |
-| **1. Commit & Push** | 45 min | Medium | Per-repo add/commit/push to development |
-| **2. Submodule Sync** | 20 min | Medium | Child pushes, pointer bump, parent commit |
-| **3. PR Lifecycle** | 40 min | Medium | gh pr create/edit/review/merge/close |
-| **4. Dev → Prod Sync** | 20 min | High | FF merge, approval-gated force-push |
-| **5. Verification** | 10 min | Low | Dirty sweep, submodule clean, PR list |
+| Phase                  | Duration | Risk   | Focus                                      |
+| ---------------------- | -------- | ------ | ------------------------------------------ |
+| **0. Inventory**       | 10 min   | Low    | Auth check, repo discovery, dirty baseline |
+| **1. Commit & Push**   | 45 min   | Medium | Per-repo add/commit/push to development    |
+| **2. Submodule Sync**  | 20 min   | Medium | Child pushes, pointer bump, parent commit  |
+| **3. PR Lifecycle**    | 40 min   | Medium | gh pr create/edit/review/merge/close       |
+| **4. Dev → Prod Sync** | 20 min   | High   | FF merge, approval-gated force-push        |
+| **5. Verification**    | 10 min   | Low    | Dirty sweep, submodule clean, PR list      |
 
 **Total:** ~2.5 hours (excluding user review gates)
 
@@ -45,12 +45,14 @@ Execute the complete git lifecycle across every repo in `./projects`:
 ## 📋 PHASE BREAKDOWN
 
 ### Phase 0: Inventory (10 min, Low Risk)
+
 - Verify `gh auth status` (active account + `repo`, `workflow` scopes)
 - `git submodule status` — record parent + submodule SHAs
 - Discover git repos: `for d in projects/*/; do [ -d "$d/.git" ] && echo "${d#projects/}"; done`
 - Record dirty baseline per repo (`git status --short | wc -l`)
 
 ### Phase 1: Per-Repo Commit & Push (45 min, Medium Risk)
+
 - Loop each repo on `development`:
   1. `git status --short` — review changes
   2. `git add <files>` — stage (never blind `add -A` at root)
@@ -59,11 +61,13 @@ Execute the complete git lifecycle across every repo in `./projects`:
 - Repos on feature branches: push branch + open PR (Phase 3), do NOT merge directly
 
 ### Phase 2: Submodule Sync (20 min, Medium Risk)
+
 - `git submodule foreach 'git status --short && git fetch origin'`
 - `git submodule update --remote development && git submodule sync`
 - From SandBox root: `git add projects/*` → commit `chore(submodules): bump project pointers` → push
 
 ### Phase 3: PR Lifecycle — Review-Then-Merge (40 min, Medium Risk)
+
 - **Open:** `gh pr create --base development --title "feat: ..." --body "<summary + test plan>"`
 - **Update:** `gh pr edit <N> --title ... --body ...`; push commits to branch
 - **Review:** `gh pr diff <N>`, `gh pr checks <N> --watch`, `--add-reviewer`
@@ -72,11 +76,13 @@ Execute the complete git lifecycle across every repo in `./projects`:
 - **Gate:** NO auto-merge / admin-merge in review-then-merge flow
 
 ### Phase 4: Development → Production Sync (20 min, High Risk)
+
 - Per repo: `git checkout production && git pull` → `git merge --ff-only development` → `git push origin production` → `git checkout development`
 - **If FF fails:** STOP → request explicit user approval for force-push → log to `.copilot/session-state/PRODUCTION_FORCE_PUSH_LOG.md` (prior convention: 12/14 repos needed this once)
 - Optional: tag release `git tag vX.Y.Z && git push origin vX.Y.Z`
 
 ### Phase 5: Verification (10 min, Low Risk)
+
 - Per-repo sweep: current branch + dirty count
 - `git submodule status | grep -v '^ '` → must be empty (all clean)
 - `gh pr list --state open` → only expected PRs
@@ -85,13 +91,13 @@ Execute the complete git lifecycle across every repo in `./projects`:
 
 ## 🛡️ SAFETY GATES
 
-| Gate | Rule |
-|------|------|
-| Commit/push | Only when user asked; approval per repo batch |
-| Force-push | Explicit user consent required; logged |
-| PR merge | Review-then-merge only; no `--auto` |
-| Branch delete | User approval required |
-| Destructive ops | Approval file under `.hermes/approvals/` |
+| Gate            | Rule                                          |
+| --------------- | --------------------------------------------- |
+| Commit/push     | Only when user asked; approval per repo batch |
+| Force-push      | Explicit user consent required; logged        |
+| PR merge        | Review-then-merge only; no `--auto`           |
+| Branch delete   | User approval required                        |
+| Destructive ops | Approval file under `.hermes/approvals/`      |
 
 ## 🛡️ ROLLBACK
 

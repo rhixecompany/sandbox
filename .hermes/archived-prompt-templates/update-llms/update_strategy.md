@@ -40,3 +40,4 @@ Example structure for `llms.txt`:
 > [Concise description of the repository's purpose and scope]
 
 [Optional additional context paragraphs without headings]
+```

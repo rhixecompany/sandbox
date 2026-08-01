@@ -8,6 +8,7 @@ strips every CR so files match the declared canonical LF state.
 
 Safe: idempotent; --dry-run default; --apply writes.
 """
+
 import argparse
 import sys
 from pathlib import Path

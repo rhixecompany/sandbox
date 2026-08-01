@@ -36,13 +36,13 @@ The Busha Business API provides programmatic access to stablecoins and digital a
 
 ## Use Cases
 
-| Use Case | Description |
-| ---------- | ------------- |
-| Crypto Exchanges | Backend liquidity and wallet operations |
-| Remittance Services | Stablecoin settlement layer |
-| Payroll Platforms | Pay contractors in digital assets |
-| Savings & Investment Apps | Execute crypto trades |
-| Payment Processors | Accept stablecoin payments |
+| Use Case                  | Description                             |
+| ------------------------- | --------------------------------------- |
+| Crypto Exchanges          | Backend liquidity and wallet operations |
+| Remittance Services       | Stablecoin settlement layer             |
+| Payroll Platforms         | Pay contractors in digital assets       |
+| Savings & Investment Apps | Execute crypto trades                   |
+| Payment Processors        | Accept stablecoin payments              |
 
 ## Technical Details
 
@@ -72,4 +72,4 @@ Typical integration time: 1-2 weeks
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

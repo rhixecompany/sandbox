@@ -19,3 +19,4 @@
 ### Option 3: Categorized Sections
 
 Group files by type/category with separate sections or sub-tables.
+```

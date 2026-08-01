@@ -11,7 +11,7 @@ Supercharge Git within VS Code — visualize code authorship via Git blame annot
 
 ## Contributed Settings
 
-gitlens.codeLens.*, gitlens.currentLine.enabled, gitlens.defaultDateStyle, gitlens.hovers.*, gitlens.statusBar.*
+gitlens.codeLens._, gitlens.currentLine.enabled, gitlens.defaultDateStyle, gitlens.hovers._, gitlens.statusBar.*
 
 ## Notes
 

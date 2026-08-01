@@ -1,4 +1,5 @@
 """Comic, chapter, bookmark, and related models for the comics platform."""
+
 from __future__ import annotations
 
 import uuid

@@ -4,21 +4,21 @@ on:
   push:
     branches: [development, staged]
     paths:
-      - '*.yml'
-      - '*.yaml'
-      - '.github/workflows/*.yml'
-      - '.github/workflows/*.yaml'
-      - 'projects/**/*.yml'
-      - 'projects/**/*.yaml'
+      - "*.yml"
+      - "*.yaml"
+      - ".github/workflows/*.yml"
+      - ".github/workflows/*.yaml"
+      - "projects/**/*.yml"
+      - "projects/**/*.yaml"
   pull_request:
     branches: [development, staged]
     paths:
-      - '*.yml'
-      - '*.yaml'
-      - '.github/workflows/*.yml'
-      - '.github/workflows/*.yaml'
-      - 'projects/**/*.yml'
-      - 'projects/**/*.yaml'
+      - "*.yml"
+      - "*.yaml"
+      - ".github/workflows/*.yml"
+      - ".github/workflows/*.yaml"
+      - "projects/**/*.yml"
+      - "projects/**/*.yaml"
 
 permissions:
   contents: read

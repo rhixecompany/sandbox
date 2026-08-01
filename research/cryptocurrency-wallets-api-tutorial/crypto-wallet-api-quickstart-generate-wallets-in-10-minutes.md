@@ -46,7 +46,7 @@ configuration = cobo_waas2.Configuration(
 JavaScript:
 
 ```javascript
-const CoboWaas2 = require('@cobo/cobo-waas2');
+const CoboWaas2 = require("@cobo/cobo-waas2");
 apiClient.setPrivateKey("<your-api-secret>");
 apiClient.setEnv(CoboWaas2.Env.DEV);
 ```
@@ -100,4 +100,4 @@ api_instance.create_transaction(
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

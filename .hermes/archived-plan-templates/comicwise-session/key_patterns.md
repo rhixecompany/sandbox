@@ -11,11 +11,11 @@ import { BaseDal } from "./base-dal";
 type EntityType = typeof entity.$inferSelect;
 
 export class EntityDal extends BaseDal<EntityType> {
-  async list() {
-    return db.query.entity.findMany({
-      with: { relations: true } // Always eager load
-    });
-  }
+	async list() {
+		return db.query.entity.findMany({
+			with: { relations: true }, // Always eager load
+		});
+	}
 }
 export const entityDal = new EntityDal();
 ```
@@ -27,27 +27,23 @@ export const entityDal = new EntityDal();
 import { auth } from "@/auth";
 import type { ActionResult } from "./types";
 
-export async function actionName(
-  input: unknown
-): Promise<ActionResult<T>> {
-  // 1. Auth first
-  const session = await auth();
-  if (!session?.user?.id)
-    return { ok: false, error: "Not authenticated" };
+export async function actionName(input: unknown): Promise<ActionResult<T>> {
+	// 1. Auth first
+	const session = await auth();
+	if (!session?.user?.id) return { ok: false, error: "Not authenticated" };
 
-  // 2. Validate
-  const parsed = Schema.safeParse(input);
-  if (!parsed.success)
-    return { ok: false, error: parsed.error.errors[0]?.message };
+	// 2. Validate
+	const parsed = Schema.safeParse(input);
+	if (!parsed.success) return { ok: false, error: parsed.error.errors[0]?.message };
 
-  try {
-    // 3. Mutate
-    const result = await dal.create(parsed.data);
-    revalidatePath("/path");
-    return { ok: true, data: result };
-  } catch (error) {
-    return { ok: false, error: "Failed to create" };
-  }
+	try {
+		// 3. Mutate
+		const result = await dal.create(parsed.data);
+		revalidatePath("/path");
+		return { ok: true, data: result };
+	} catch (error) {
+		return { ok: false, error: "Failed to create" };
+	}
 }
 ```
 

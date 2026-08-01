@@ -310,6 +310,6 @@
 
 88|- **Interactive prompts** — If `hermes mcp add` blocks, try `echo "y" | hermes mcp add ...` or run inside a PTY: `hermes mcp add ...` manually in your own terminal.
 
-> **Execution:** Use the  skill to dispatch tasks via subagents with two-stage review (spec compliance → code quality).
+> **Execution:** Use the skill to dispatch tasks via subagents with two-stage review (spec compliance → code quality).
 
 > Execution: Use the `subagent-driven-development` skill to dispatch tasks via subagents with two-stage review (spec compliance to code quality).

@@ -6,7 +6,7 @@
 
 {Story points or effort estimate}
 
-```
+````
 
 ### 4. Priority and Value Matrix
 
@@ -51,7 +51,7 @@ graph LR
     H[API Design] --> D
     I[Database Schema] --> C
     J[Authentication] --> D
-```
+````
 
 ##### Dependency Types
 
@@ -72,3 +72,5 @@ graph LR
 ##### Sprint Goal Definition
 
 ```markdown
+
+```

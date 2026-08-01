@@ -42,13 +42,13 @@ Rerun all validation scripts until all gates pass with zero errors/warnings.
 
 ### Key Debugging Patterns
 
-| Pattern | Problem | Solution |
-| --- | --- | --- |
-| `new Date()` in Server Component | `NEXT_PRERENDER_CURRENT_TIME` | Use `useCurrentYear()` hook |
-| `toHaveText()` without argument | Playwright 1.58+ requires arg | Use `toBeVisible()` instead |
-| `try { ... } catch { throw err }` | Useless try/catch | Remove try/catch wrapper |
-| Duplicate export | `TS2300` error | Use `export type { X }` for types |
-| `isolatedModules` type re-export | `TS1205` error | Separate type exports from value exports |
+| Pattern                           | Problem                       | Solution                                 |
+| --------------------------------- | ----------------------------- | ---------------------------------------- |
+| `new Date()` in Server Component  | `NEXT_PRERENDER_CURRENT_TIME` | Use `useCurrentYear()` hook              |
+| `toHaveText()` without argument   | Playwright 1.58+ requires arg | Use `toBeVisible()` instead              |
+| `try { ... } catch { throw err }` | Useless try/catch             | Remove try/catch wrapper                 |
+| Duplicate export                  | `TS2300` error                | Use `export type { X }` for types        |
+| `isolatedModules` type re-export  | `TS1205` error                | Separate type exports from value exports |
 
 ### Documentation Requirements
 

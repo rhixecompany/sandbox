@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Full Stack) |
-| **Pattern** | Django MVT + Scrapy + Selenium + Next.js frontend |
-| **Stack** | Django 5, Python 3.11, Scrapy, Selenium, Next.js, TypeScript, PostgreSQL, Docker |
+| Category    | Technology                                                                       |
+| ----------- | -------------------------------------------------------------------------------- |
+| **Type**    | Python/Django (Full Stack)                                                       |
+| **Pattern** | Django MVT + Scrapy + Selenium + Next.js frontend                                |
+| **Stack**   | Django 5, Python 3.11, Scrapy, Selenium, Next.js, TypeScript, PostgreSQL, Docker |
 
 ## Development Tools
 

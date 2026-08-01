@@ -11,9 +11,11 @@ tags: [research, uk-earnings, income-generation, web-research, skills-pipeline]
 # UK Earnings Research Pipeline
 
 ## Goal
+
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
 
 ## Context
+
 - **User**: Alexa (UK-based, Site Supervisor/Manager background, Rexos Properties May 2025–June 2026)
 - **Workspace**: `C:\Users\Alexa\Desktop\SandBox\`
 - **Prior Work**: UK Earnings Kit created 2026-07-24 at `uk-earnings-kit/` (11 files, 4 folders, 3 Tavily searches, 25+ platforms documented)
@@ -38,24 +40,29 @@ tags: [research, uk-earnings, income-generation, web-research, skills-pipeline]
 ## Phase 0: Context Recovery & Inventory (MANDATORY FIRST)
 
 ### 0.1 Load Prior Session Data
+
 ```
 session_search(query="uk earnings kit OR outlier OR attapoll OR UK earning platforms", limit=5)
 ```
+
 - Retrieve all prior research sessions
 - Extract platform lists, pay rates, verification status, user feedback
 - Identify gaps in previous coverage
 
 ### 0.2 Read All Existing Files
+
 ```
 search_files(target="files", path="C:/Users/Alexa/Desktop/SandBox", file_glob="**/*.md")
 search_files(target="files", path="C:/Users/Alexa/Desktop/SandBox", file_glob="**/*.txt")
 search_files(target="files", path="C:/Users/Alexa/Desktop/SandBox", file_glob="**/*.json")
 ```
+
 - Load `uk-earnings-kit/` completely
 - Load any `references/*.md`, `trackers/*.md`, `templates/*.md`
 - Load session reports, memory files, skill outputs
 
 ### 0.3 Honcho Memory Recall
+
 ```
 honcho_search(query="UK earning platforms OR Outlier OR Attapoll OR survey sites OR AI training UK")
 honcho_search(query="bank switching UK OR side hustle UK 2026")
@@ -67,7 +74,9 @@ honcho_context(peer="user")
 ## Phase 1: Systematic Platform Discovery
 
 ### 1.1 Category Mapping (Brainstorming)
+
 Use `/brainstorming` to generate platform categories:
+
 - AI Training / Data Annotation (Outlier competitors)
 - Survey & Micro-tasks (Attapoll competitors)
 - User Testing / UX Research
@@ -82,6 +91,7 @@ Use `/brainstorming` to generate platform categories:
 - Skill-based Platforms
 
 ### 1.2 Parallel Web Research (Web Research Pipeline)
+
 Dispatch **parallel subagents** via `/subagent-driven-development` — one per category:
 
 ```python
@@ -98,7 +108,9 @@ delegate_task(tasks=[
 ```
 
 ### 1.3 MCP Tool Enrichment
+
 For each platform discovered, use **Tavily MCP** for deep extraction:
+
 ```
 mcp__tavily__tavily_search(query="[platform name] UK review 2026 pay rate Trustpilot")
 mcp__tavily__tavily_extract(urls=["[platform URL]", "[Trustpilot URL]", "[Reddit UK thread]"])
@@ -106,6 +118,7 @@ mcp__tavily__tavily_research(topic="[platform name] UK tax implications HMRC tra
 ```
 
 Use **Firecrawl MCP** for full-site extraction:
+
 ```
 mcp__firecrawl_scrape__firecrawl_scrape(url="[platform dashboard/help center]")
 mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
@@ -116,17 +129,19 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 ## Phase 2: Rigorous Filtering & Scoring
 
 ### 2.1 Scoring Matrix (Apply to Every Platform)
-| Dimension | Weight | Measurement |
-|-----------|--------|-------------|
-| **Effective £/hour** | 30% | Realistic after disqualifications, wait times |
-| **Reliability** | 20% | Payout consistency, platform age, company stability |
-| **UK Accessibility** | 15% | UK sign-up, GBP payout, UK support, no VPN needed |
-| **Entry Barrier** | 10% | Skills, equipment, approval time, invitation-only |
-| **Scalability** | 10% | Hourly cap, task availability, referral multiplier |
-| **Tax Efficiency** | 10% | Trading allowance eligible, expense deductibility |
-| **Time to First £** | 5% | Days from sign-up to withdrawable balance |
+
+| Dimension            | Weight | Measurement                                         |
+| -------------------- | ------ | --------------------------------------------------- |
+| **Effective £/hour** | 30%    | Realistic after disqualifications, wait times       |
+| **Reliability**      | 20%    | Payout consistency, platform age, company stability |
+| **UK Accessibility** | 15%    | UK sign-up, GBP payout, UK support, no VPN needed   |
+| **Entry Barrier**    | 10%    | Skills, equipment, approval time, invitation-only   |
+| **Scalability**      | 10%    | Hourly cap, task availability, referral multiplier  |
+| **Tax Efficiency**   | 10%    | Trading allowance eligible, expense deductibility   |
+| **Time to First £**  | 5%     | Days from sign-up to withdrawable balance           |
 
 ### 2.2 Elimination Criteria (Auto-real Filters
+
 - ❌ Pay < £5/hr effective
 - ❌ No UK payout method (PayPal UK, UK bank transfer, Wise GBP)
 - ❌ >30% disqualification rate on surveys
@@ -140,7 +155,9 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 ## Phase 3: Deep Validation (Top 20 Platforms)
 
 ### 3.1 Sign-up Flow Testing (Browser Automation)
+
 For each top candidate:
+
 ```
 browser_navigate(url="[signup URL]")
 browser_snapshot(full=true)
@@ -148,6 +165,7 @@ browser_snapshot(full=true)
 ```
 
 ### 3.2 Reddit/Trustpilot/Forum Sentiment Mining
+
 ```
 mcp__tavily__tavily_search(query="[platform] UK Reddit 2026 payment proof")
 mcp__tavily__tavily_search(query="[platform] UK banned account review")
@@ -155,6 +173,7 @@ mcp__tavily__tavily_search(query="[platform] vs Outlier vs Attapoll UK")
 ```
 
 ### 3.3 Tax & Legal Compliance Check
+
 - HMRC trading allowance (£1,000) applicability
 - Self-assessment threshold
 - Expense tracking requirements
@@ -165,6 +184,7 @@ mcp__tavily__tavily_search(query="[platform] vs Outlier vs Attapoll UK")
 ## Phase 4: Output Generation — Complete Execution Kit
 
 ### 4.1 Create/Update Folder Structure
+
 ```
 C:\Users\Alexa\Desktop\SandBox\uk-earnings-kit\
 ├── platforms/
@@ -203,27 +223,28 @@ C:\Users\Alexa\Desktop\SandBox\uk-earnings-kit\
 
 ### 4.2 Required Output Files
 
-| File | Purpose |
-|------|---------|
-| `platforms/*/platform_name.md` | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots) |
-| `references/platform_master_list.csv` | All platforms with scores, filterable |
-| `references/scoring_matrix.xlsx` | Weighted scores, ranked, conditional formatting |
-| `references/platform_links.md` | Direct signup/referral links (affiliate where beneficial) |
-| `references/tax_guidance_uk_2026.md` | HMRC rules, trading allowance, allowable expenses, record-keeping |
-| `references/scam_warnings.md` | Red flags, known scams, verification checklist |
-| `trackers/earnings_tracker.xlsx` | Multi-platform, auto-sum, tax-year tabs |
-| `trackers/tax_tracker.md` | Running total vs £1,000 allowance, SA trigger alert |
-| `trackers/weekly_planner.md` | Time-blocked routine, platform rotation, KPI targets |
-| `templates/platform_evaluation.md` | Reusable for new platforms |
-| `templates/weekly_routine.md` | Printable, checkbox-driven |
-| `samples/sample_earnings_week.xlsx` | Realistic example |
-| `RESEARCH_REPORT.md` | Executive summary, top 5 recommendations, 30-day action plan |
+| File                                  | Purpose                                                             |
+| ------------------------------------- | ------------------------------------------------------------------- |
+| `platforms/*/platform_name.md`        | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots) |
+| `references/platform_master_list.csv` | All platforms with scores, filterable                               |
+| `references/scoring_matrix.xlsx`      | Weighted scores, ranked, conditional formatting                     |
+| `references/platform_links.md`        | Direct signup/referral links (affiliate where beneficial)           |
+| `references/tax_guidance_uk_2026.md`  | HMRC rules, trading allowance, allowable expenses, record-keeping   |
+| `references/scam_warnings.md`         | Red flags, known scams, verification checklist                      |
+| `trackers/earnings_tracker.xlsx`      | Multi-platform, auto-sum, tax-year tabs                             |
+| `trackers/tax_tracker.md`             | Running total vs £1,000 allowance, SA trigger alert                 |
+| `trackers/weekly_planner.md`          | Time-blocked routine, platform rotation, KPI targets                |
+| `templates/platform_evaluation.md`    | Reusable for new platforms                                          |
+| `templates/weekly_routine.md`         | Printable, checkbox-driven                                          |
+| `samples/sample_earnings_week.xlsx`   | Realistic example                                                   |
+| `RESEARCH_REPORT.md`                  | Executive summary, top 5 recommendations, 30-day action plan        |
 
 ---
 
 ## Phase 5: Verification & Handoff
 
 ### 5.1 Quality Gates
+
 - [ ] All platforms have ≥3 independent sources
 - [ ] Pay rates verified via recent (≤3 months) UK user reports
 - [ ] Tax guidance cites HMRC.gov.uk pages
@@ -232,6 +253,7 @@ C:\Users\Alexa\Desktop\SandBox\uk-earnings-kit\
 - [ ] Weekly planner fits A4 printable
 
 ### 5.2 Session Report
+
 ```
 session_search() → capture this session's work
 Update SESSION_REPORT.md with: platforms found, files created, gaps, next actions
@@ -242,6 +264,7 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ## Execution Instructions for Subagents
 
 ### Orchestrator (You)
+
 1. Load all 7 skills in order
 2. Execute Phase 0 — report inventory
 3. Dispatch 8 parallel leaf subagents (Phase 1.2)
@@ -251,6 +274,7 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 7. Verify quality gates (Phase 5)
 
 ### Leaf Subagents
+
 - **MUST** use Tavily MCP + Firecrawl MCP + web_search + web_extract
 - **MUST** cite sources with URLs and timestamps
 - **MUST** output structured JSON + markdown per platform
@@ -260,6 +284,7 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ---
 
 ## Communication Preferences (from USER.md)
+
 - **Concise bullets**, lead with result, skip fluff
 - **Action-first**: command then explanation
 - **Batch independent calls** — parallelize everything
@@ -269,6 +294,7 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ---
 
 ## Safety & Ethics
+
 - No referral fraud, no multi-accounting, no VPN spoofing
 - Disclose affiliate relationships
 - Respect platform ToS
@@ -278,8 +304,9 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ---
 
 ## Trigger Phrase
+
 > **"/uk-earnings-research-pipeline"** — loads this entire prompt as the task instruction
 
 ---
 
-*Generated by Hermes Agent using stacked skill bundles. This prompt is idempotent — re-running updates existing files without duplication.*
+_Generated by Hermes Agent using stacked skill bundles. This prompt is idempotent — re-running updates existing files without duplication._

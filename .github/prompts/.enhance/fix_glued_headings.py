@@ -14,12 +14,14 @@ blockquotes, numbered lists, code fences) lost to newline collapse.
 
 SAFE: dry-run by default. Pass --apply to write changes. Preserves CRLF/LF.
 """
+
 import argparse
 import re
 import sys
 from pathlib import Path
 
 PROMPTS_DIR = Path(r"C:\Users\Alexa\Desktop\SandBox\.github\prompts")
+
 
 # ---------------------------------------------------------------------------
 # Heading dictionary
@@ -35,42 +37,132 @@ def load_heading_names():
             line = line.rstrip("\r\n")
             for marker in ("## ", "### ", "# "):
                 if line.startswith(marker):
-                    rest = line[len(marker):]
+                    rest = line[len(marker) :]
                     if rest and not rest[0].isspace() and len(rest) <= 60:
                         names.add(rest)
     # 2) canonical standard section names
     std = [
-        "Goal", "Context", "Inputs", "Outputs", "Rules", "Phases", "Role",
-        "Objectives", "Workflow", "Personas", "Personality", "Best Practices",
-        "Verification Checklist", "Dependencies", "Subgoals", "Skills Required",
-        "MCP Servers & Tools", "Tasks", "Template References",
-        "Configuration Variables", "Generated Prompt", "Description",
-        "Actions", "Actions Summary", "Project", "Output", "Implementation",
-        "Test", "Quality", "Overview", "Purpose", "Core Requirements",
-        "Success Criteria", "Anti-Patterns", "Domain Rules", "Standing Rules",
-        "Educational Commenting Rules", "Workflow Steps", "Input", "Method",
-        "Examples", "Notes", "References", "Prerequisites", "Deliverables",
-        "Constraints", "Acceptance Criteria", "Primary Objective",
-        "Severity Definitions", "Evidence Standard", "Instructions", "Steps",
-        "Configuration Reference", "Final Checklist", "Key Findings",
-        "Investigation Plan", "Integration Points", "Access Pattern Mapping",
-        "Additional Considerations", "Advanced Use Cases", "Available Tools",
-        "Build", "Change Management", "Code Review Findings",
-        "Common Issues", "Completion Checklist", "Completion Report",
-        "Consequences", "Contract", "Decision", "Error Handling",
-        "Execution Constraints", "Failure Handling", "Gate Results",
-        "Generation Modes", "Governance and Compliance", "Input/Output Contracts",
-        "Requirements", "Assumptions", "Decisions", "Risks", "Open Questions",
-        "Next Steps", "Phase 1: Intake", "Phase 2: Execute", "Phase 3: Verify",
-        "Phase 4: Hand Off", "Phase 1: Discovery", "Phase 2: Analysis",
-        "Phase 3: Generation", "Phase 4: Verification", "Phase 1", "Phase 2",
-        "Phase 3", "Phase 4", "Phase 5", "Phase 6", "Step 1", "Step 2", "Step 3",
-        "License", "Feature", "Progress Tracking", "Scope", "Testing",
-        "Troubleshooting", "Edge Cases & Exceptions", "Anti-Patterns to Avoid",
-        "Primary Objective", "Deliverable", "Response Semantics",
-        "Common Patterns", "Error Handling", "Validation Checklist",
-        "Implementation Details", "Implementation Status", "Invocation Order",
-        "Invocation", "Branching", "Template Structure", "What You Should Do First When Run",
+        "Goal",
+        "Context",
+        "Inputs",
+        "Outputs",
+        "Rules",
+        "Phases",
+        "Role",
+        "Objectives",
+        "Workflow",
+        "Personas",
+        "Personality",
+        "Best Practices",
+        "Verification Checklist",
+        "Dependencies",
+        "Subgoals",
+        "Skills Required",
+        "MCP Servers & Tools",
+        "Tasks",
+        "Template References",
+        "Configuration Variables",
+        "Generated Prompt",
+        "Description",
+        "Actions",
+        "Actions Summary",
+        "Project",
+        "Output",
+        "Implementation",
+        "Test",
+        "Quality",
+        "Overview",
+        "Purpose",
+        "Core Requirements",
+        "Success Criteria",
+        "Anti-Patterns",
+        "Domain Rules",
+        "Standing Rules",
+        "Educational Commenting Rules",
+        "Workflow Steps",
+        "Input",
+        "Method",
+        "Examples",
+        "Notes",
+        "References",
+        "Prerequisites",
+        "Deliverables",
+        "Constraints",
+        "Acceptance Criteria",
+        "Primary Objective",
+        "Severity Definitions",
+        "Evidence Standard",
+        "Instructions",
+        "Steps",
+        "Configuration Reference",
+        "Final Checklist",
+        "Key Findings",
+        "Investigation Plan",
+        "Integration Points",
+        "Access Pattern Mapping",
+        "Additional Considerations",
+        "Advanced Use Cases",
+        "Available Tools",
+        "Build",
+        "Change Management",
+        "Code Review Findings",
+        "Common Issues",
+        "Completion Checklist",
+        "Completion Report",
+        "Consequences",
+        "Contract",
+        "Decision",
+        "Error Handling",
+        "Execution Constraints",
+        "Failure Handling",
+        "Gate Results",
+        "Generation Modes",
+        "Governance and Compliance",
+        "Input/Output Contracts",
+        "Requirements",
+        "Assumptions",
+        "Decisions",
+        "Risks",
+        "Open Questions",
+        "Next Steps",
+        "Phase 1: Intake",
+        "Phase 2: Execute",
+        "Phase 3: Verify",
+        "Phase 4: Hand Off",
+        "Phase 1: Discovery",
+        "Phase 2: Analysis",
+        "Phase 3: Generation",
+        "Phase 4: Verification",
+        "Phase 1",
+        "Phase 2",
+        "Phase 3",
+        "Phase 4",
+        "Phase 5",
+        "Phase 6",
+        "Step 1",
+        "Step 2",
+        "Step 3",
+        "License",
+        "Feature",
+        "Progress Tracking",
+        "Scope",
+        "Testing",
+        "Troubleshooting",
+        "Edge Cases & Exceptions",
+        "Anti-Patterns to Avoid",
+        "Primary Objective",
+        "Deliverable",
+        "Response Semantics",
+        "Common Patterns",
+        "Error Handling",
+        "Validation Checklist",
+        "Implementation Details",
+        "Implementation Status",
+        "Invocation Order",
+        "Invocation",
+        "Branching",
+        "Template Structure",
+        "What You Should Do First When Run",
     ]
     names.update(std)
     # 3) domain-specific H3 names harvested from glued lines themselves:
@@ -88,10 +180,15 @@ def load_heading_names():
                 cand = m.group(1).strip()
                 # plausible heading: starts uppercase, ends word char, short,
                 # no sentence-ending punctuation, no code fences
-                if (cand and cand[0].isupper() and len(cand) <= 60
-                        and not re.search(r"[.!?]$", cand)
-                        and "```" not in cand and "`" not in cand
-                        and not re.search(r"[a-z][A-Z]", cand)):
+                if (
+                    cand
+                    and cand[0].isupper()
+                    and len(cand) <= 60
+                    and not re.search(r"[.!?]$", cand)
+                    and "```" not in cand
+                    and "`" not in cand
+                    and not re.search(r"[a-z][A-Z]", cand)
+                ):
                     names.add(cand)
             # also: heading glued directly to a code fence `### Name```text`
             m2 = re.match(r"^(.*?)```", rest)
@@ -101,7 +198,7 @@ def load_heading_names():
                     names.add(cand)
     # drop names that clearly contain content OR are obvious garbage
     bad = re.compile(
-        r"[-–] [a-z]|> |```|\$\{|\{\{|\#\{|[a-z][A-Z]|^\d"  # original patterns
+        r"[-–] [a-z]|> |```|\$\{|\{\{|\#\{|[a-z][A-Z]|^\d"  # noqa: RUF001  (en-dash detection is intentional)
         r"|^Go'?$|^Task'?$|^Tasks'?$|^Example'?$|^Examples'?$"  # truncated forms
         r"|^Best Practice'?$|^Do'?$|^Don'?t'?$|^Do Not'?$|^DO NOT'?$"
         r"|^Best'?$|^Good'?$|^Bad'?$|^Run'?$|^Go'?$|^Stop'?$"
@@ -203,10 +300,10 @@ def split_content(rest):
 
 def fix_line(line, marker):
     """If line is a glued heading, return (fixed_lines, changed). Else (None, False)."""
-    text = line[len(marker):]
+    text = line[len(marker) :]
     for name in HEADING_NAMES:
         if text.startswith(name) and len(text) > len(name):
-            rest = text[len(name):]
+            rest = text[len(name) :]
             # GLUE signature: collapse removed the space between heading and
             # content, so the next char touches the name (no space).
             if rest[0] != " ":
@@ -218,7 +315,7 @@ def fix_line(line, marker):
                 if rest.strip() in (">", ">>"):
                     return [f"{marker}{name}"], True
                 body = split_content(rest)
-                fixed = [f"{marker}{name}", ""] + body
+                fixed = [f"{marker}{name}", "", *body]
                 return fixed, True
     return None, False
 
@@ -226,14 +323,13 @@ def fix_line(line, marker):
 def fix_file(path):
     """Returns (changed_count, new_text) or (0, None)."""
     raw = path.read_bytes()
-    crlf = b"\r\n" in raw
     text = raw.decode("utf-8", errors="replace")
 
     fm_match = re.match(r"^---\r?\n.*?\r?\n---\r?\n", text, re.DOTALL)
     if not fm_match:
         return 0, None
     head = fm_match.group(0)
-    body = text[fm_match.end():]
+    body = text[fm_match.end() :]
     lines = body.split("\n")
 
     out = []
@@ -242,7 +338,7 @@ def fix_file(path):
         line = line.rstrip("\r\n")
         if line.startswith("## ") or line.startswith("### "):
             marker = "## " if line.startswith("## ") else "### "
-            fixed, is_change = fix_line(line, marker)
+            fixed, _ = fix_line(line, marker)
             if fixed is not None:
                 out.extend(fixed)
                 changed += 1

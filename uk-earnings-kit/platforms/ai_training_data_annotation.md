@@ -10,32 +10,33 @@ AI training and data annotation platforms pay workers to train AI models by comp
 
 ## Platform Comparison
 
-*(Populated from research subagent results — see RESEARCH_REPORT.md for status)*
+_(Populated from research subagent results — see RESEARCH_REPORT.md for status)_
 
-| Platform | £/hr | UK Access | Entry Barrier | Reliability | Payout Method | Payout Speed | Verdict |
-|----------|------|-----------|--------------|-------------|---------------|-------------|---------|
-| DataAnnotation.tech | £20-40 | ✅ Yes | Medium | ★★★★☆ | PayPal | 7 days | ⭐ Top pick |
-| Mercor | $40-150/hr | ✅ Yes | Low | ★★★★★ | Wise/Bank | Weekly | ⭐ Top earner |
-| Alignerr | $20-50/hr | ⏳ Limited | Medium | ★★★☆☆ | PayPal | 14 days | Watch list |
-| Invisible Technologies | $25-100/hr | ✅ Yes | Medium-High | ★★★★☆ | Bank Transfer | Bi-weekly | ⭐ Good backup |
-| Braintrust | $40-150/hr | ✅ Yes | High | ★★★★★ | PayPal/Bank | Net 30 | Premium only |
-| OneForma | $10-30/hr | ✅ Yes | Low | ★★★☆☆ | PayPal/Skrill | Weekly | ✅ Good starter |
-| CrowdGen (by Appen) | $10-25/hr | ✅ Yes | Low | ★★★☆☆ | PayPal | Weekly | ✅ Backup |
-| Toloka | $8-15/hr | ✅ Yes | Low | ★★☆☆☆ | PayPal/Skrill | Daily | ⚠️ Low pay |
-| Clickworker | $8-15/hr | ✅ Yes | Very Low | ★★☆☆☆ | PayPal | 7 days | ⚠️ Low pay |
-| Stellar AI | $15-25/hr | ✅ Yes | Low | ★★★☆☆ | PayPal | Varies | ✅ Promising |
-| Remotasks | $10-20/hr | ✅ Yes | Low | ★★☆☆☆ | PayPal | 14 days | ⚠️ Mixed |
-| Vetto | $40-300/hr | ✅ Yes | High | ★★★★☆ | Unknown | Varies | ⭐ Specialist |
-| Surge AI | $14-22/hr | ✅ Yes | Medium | ★★★★☆ | PayPal | 14 days | ✅ Solid |
-| AfterQuery | $40-50/hr | ✅ Yes | Medium | ★★★★☆ | PayPal | Varies | ⭐ Good rates |
-| RWS (Linguistics) | $15-20/hr | ✅ Yes | Medium | ★★★★☆ | Bank Transfer | 30 days | ✅ Niche |
-| Appen | $10-20/hr | ✅ Yes | Low | ★★★☆☆ | PayPal | Weekly | ⚠️ Inconsistent |
+| Platform               | £/hr       | UK Access  | Entry Barrier | Reliability | Payout Method | Payout Speed | Verdict         |
+| ---------------------- | ---------- | ---------- | ------------- | ----------- | ------------- | ------------ | --------------- |
+| DataAnnotation.tech    | £20-40     | ✅ Yes     | Medium        | ★★★★☆       | PayPal        | 7 days       | ⭐ Top pick     |
+| Mercor                 | $40-150/hr | ✅ Yes     | Low           | ★★★★★       | Wise/Bank     | Weekly       | ⭐ Top earner   |
+| Alignerr               | $20-50/hr  | ⏳ Limited | Medium        | ★★★☆☆       | PayPal        | 14 days      | Watch list      |
+| Invisible Technologies | $25-100/hr | ✅ Yes     | Medium-High   | ★★★★☆       | Bank Transfer | Bi-weekly    | ⭐ Good backup  |
+| Braintrust             | $40-150/hr | ✅ Yes     | High          | ★★★★★       | PayPal/Bank   | Net 30       | Premium only    |
+| OneForma               | $10-30/hr  | ✅ Yes     | Low           | ★★★☆☆       | PayPal/Skrill | Weekly       | ✅ Good starter |
+| CrowdGen (by Appen)    | $10-25/hr  | ✅ Yes     | Low           | ★★★☆☆       | PayPal        | Weekly       | ✅ Backup       |
+| Toloka                 | $8-15/hr   | ✅ Yes     | Low           | ★★☆☆☆       | PayPal/Skrill | Daily        | ⚠️ Low pay      |
+| Clickworker            | $8-15/hr   | ✅ Yes     | Very Low      | ★★☆☆☆       | PayPal        | 7 days       | ⚠️ Low pay      |
+| Stellar AI             | $15-25/hr  | ✅ Yes     | Low           | ★★★☆☆       | PayPal        | Varies       | ✅ Promising    |
+| Remotasks              | $10-20/hr  | ✅ Yes     | Low           | ★★☆☆☆       | PayPal        | 14 days      | ⚠️ Mixed        |
+| Vetto                  | $40-300/hr | ✅ Yes     | High          | ★★★★☆       | Unknown       | Varies       | ⭐ Specialist   |
+| Surge AI               | $14-22/hr  | ✅ Yes     | Medium        | ★★★★☆       | PayPal        | 14 days      | ✅ Solid        |
+| AfterQuery             | $40-50/hr  | ✅ Yes     | Medium        | ★★★★☆       | PayPal        | Varies       | ⭐ Good rates   |
+| RWS (Linguistics)      | $15-20/hr  | ✅ Yes     | Medium        | ★★★★☆       | Bank Transfer | 30 days      | ✅ Niche        |
+| Appen                  | $10-20/hr  | ✅ Yes     | Low           | ★★★☆☆       | PayPal        | Weekly       | ⚠️ Inconsistent |
 
 ---
 
 ## Recommended Platforms — Detailed
 
 ### 1. DataAnnotation.tech
+
 **£20-40/hr** | ✅ UK | **Verdict: ⭐ Top Pick**
 
 - **Type:** AI training, coding, writing, reasoning tasks
@@ -49,6 +50,7 @@ AI training and data annotation platforms pay workers to train AI models by comp
 - **Trustpilot:** 4.3/5 (800+ reviews)
 
 ### 2. Mercor
+
 **$40-150/hr** | ✅ UK | **Verdict: ⭐ Top Earner**
 
 - **Type:** AI interview/evaluation platform
@@ -61,6 +63,7 @@ AI training and data annotation platforms pay workers to train AI models by comp
 - **Reddit Sentiment:** Very positive but limited to skilled professionals
 
 ### 3. Invisible Technologies
+
 **$25-100/hr** | ✅ UK | **Verdict: ⭐ Good Backup**
 
 - **Type:** Long-term structured AI training projects

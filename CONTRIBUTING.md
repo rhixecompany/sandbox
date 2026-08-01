@@ -12,11 +12,11 @@ master ──── production releases
             └── chore/<project>/<short-description>
 ```
 
-| Branch | Purpose | Protected | PR target |
-| -------- | --------- | ----------- | ----------- |
-| `master` | Production-ready code | Yes | — |
-| `development` | Active integration | Yes | ← all PRs |
-| `production` | Release mirror | Yes | ← `master` hotfixes |
+| Branch        | Purpose               | Protected | PR target           |
+| ------------- | --------------------- | --------- | ------------------- |
+| `master`      | Production-ready code | Yes       | —                   |
+| `development` | Active integration    | Yes       | ← all PRs           |
+| `production`  | Release mirror        | Yes       | ← `master` hotfixes |
 
 ## Branch Naming Convention
 

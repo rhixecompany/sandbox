@@ -9,11 +9,11 @@
 
 ## The Three Allowances That Protect You
 
-| Allowance | Amount | What It Covers |
-|-----------|--------|----------------|
-| **Trading Allowance** | £1,000/year | **All** self-employment/misc trading income combined |
-| **Property Allowance** | £1,000/year | Rental income (not relevant here) |
-| **Personal Savings Allowance** | £1,000 (basic) / £500 (higher) | Bank interest, bank switch bonuses |
+| Allowance                      | Amount                         | What It Covers                                       |
+| ------------------------------ | ------------------------------ | ---------------------------------------------------- |
+| **Trading Allowance**          | £1,000/year                    | **All** self-employment/misc trading income combined |
+| **Property Allowance**         | £1,000/year                    | Rental income (not relevant here)                    |
+| **Personal Savings Allowance** | £1,000 (basic) / £500 (higher) | Bank interest, bank switch bonuses                   |
 
 **Key rule:** You can use **both** Trading Allowance AND Personal Savings Allowance in the same year — they're separate.
 
@@ -21,45 +21,50 @@
 
 ## Income Classification by Platform
 
-| Platform / Activity | HMRC Classification | Allowance Applied | Taxable? |
-|---------------------|---------------------|-------------------|----------|
-| **Prolific, Swagbucks, Branded Surveys, etc.** | Trading income (miscellaneous) | **Trading Allowance** | Only if total > £1,000 |
-| **UserTesting, Userlytics, TestingTime** | Trading income (miscellaneous) | **Trading Allowance** | Only if total > £1,000 |
-| **DataAnnotation, Outlier, AI training** | Trading income (miscellaneous) | **Trading Allowance** | Only if total > £1,000 |
-| **Freelance (Fiverr, Upwork, TaskRabbit)** | Trading income (self-employment) | **Trading Allowance** | Only if total > £1,000 |
-| **Matched Betting** | **Gambling winnings** | **None needed — tax-free** | **NO — always tax-free** |
-| **Bank Switch Bonuses** | Savings interest | **Personal Savings Allowance** | Only if interest > £1,000/£500 |
-| **Cashback (TopCashback, Quidco)** | Discount, not income | N/A | **NO** |
-| **Crypto rewards (Freecash crypto)** | Capital gain on disposal | CGT allowance (£3,000) | Only when sold/swapped |
-| **Mystery Shopping fees** | Trading income | **Trading Allowance** | Only if total > £1,000 |
-| **Mystery Shopping reimbursements** | Not income (expense recovery) | N/A | **NO** |
+| Platform / Activity                            | HMRC Classification              | Allowance Applied              | Taxable?                       |
+| ---------------------------------------------- | -------------------------------- | ------------------------------ | ------------------------------ |
+| **Prolific, Swagbucks, Branded Surveys, etc.** | Trading income (miscellaneous)   | **Trading Allowance**          | Only if total > £1,000         |
+| **UserTesting, Userlytics, TestingTime**       | Trading income (miscellaneous)   | **Trading Allowance**          | Only if total > £1,000         |
+| **DataAnnotation, Outlier, AI training**       | Trading income (miscellaneous)   | **Trading Allowance**          | Only if total > £1,000         |
+| **Freelance (Fiverr, Upwork, TaskRabbit)**     | Trading income (self-employment) | **Trading Allowance**          | Only if total > £1,000         |
+| **Matched Betting**                            | **Gambling winnings**            | **None needed — tax-free**     | **NO — always tax-free**       |
+| **Bank Switch Bonuses**                        | Savings interest                 | **Personal Savings Allowance** | Only if interest > £1,000/£500 |
+| **Cashback (TopCashback, Quidco)**             | Discount, not income             | N/A                            | **NO**                         |
+| **Crypto rewards (Freecash crypto)**           | Capital gain on disposal         | CGT allowance (£3,000)         | Only when sold/swapped         |
+| **Mystery Shopping fees**                      | Trading income                   | **Trading Allowance**          | Only if total > £1,000         |
+| **Mystery Shopping reimbursements**            | Not income (expense recovery)    | N/A                            | **NO**                         |
 
 ---
 
 ## How the Trading Allowance Works
 
 ### Scenario A: Total trading income ≤ £1,000
+
 - **No registration needed**
 - **No tax return needed**
 - **No tax payable**
 - Keep records anyway (6 years)
 
 ### Scenario B: Total trading income > £1,000
+
 You have **two choices**:
 
 #### Option 1: Claim Trading Allowance (simpler)
+
 - Deduct £1,000 from gross income
 - Pay tax on the remainder
 - **Cannot claim actual expenses** if you use this
 - Best if expenses < £1,000
 
 #### Option 2: Claim Actual Expenses (better if high costs)
+
 - Deduct actual allowable expenses
 - Pay tax on (gross – expenses)
 - **Cannot claim Trading Allowance** if you do this
 - Best if expenses > £1,000 (e.g., matched betting subscription, equipment, travel)
 
 **Example:**
+
 - Gross survey/testing/AI income: £2,500
 - Matched betting sub: £360/year
 - Equipment (mic, webcam): £150
@@ -105,6 +110,7 @@ You have **two choices**:
 ## When to Register for Self Assessment
 
 **Must register if ANY:**
+
 - Trading income > £1,000 (before expenses/allowance)
 - You want to claim expenses instead of allowance
 - You have other reasons (rental, foreign income, etc.)
@@ -118,17 +124,17 @@ You have **two choices**:
 
 ## Allowable Expenses (If Not Using Trading Allowance)
 
-| Expense | Allowable? | Notes |
-|---------|------------|-------|
-| Matched betting subscription | ❌ | Personal (gambling tools) |
-| Internet/phone (proportion) | ✅ | Business use % only |
-| Computer/laptop | ✅ | Capital allowance (AIA) |
-| Microphone/webcam | ✅ | Equipment |
-| Training/courses | ✅ | Wholly & exclusively for business |
-| Travel to mystery shops | ✅ | Mileage 45p/mi (first 10k mi) |
-| Home office | ✅ | Simplified: £6/week or actual % |
-| Accountant fees | ✅ | For tax return prep |
-| Bank fees (business account) | ✅ | If separate business account |
+| Expense                      | Allowable? | Notes                             |
+| ---------------------------- | ---------- | --------------------------------- |
+| Matched betting subscription | ❌         | Personal (gambling tools)         |
+| Internet/phone (proportion)  | ✅         | Business use % only               |
+| Computer/laptop              | ✅         | Capital allowance (AIA)           |
+| Microphone/webcam            | ✅         | Equipment                         |
+| Training/courses             | ✅         | Wholly & exclusively for business |
+| Travel to mystery shops      | ✅         | Mileage 45p/mi (first 10k mi)     |
+| Home office                  | ✅         | Simplified: £6/week or actual %   |
+| Accountant fees              | ✅         | For tax return prep               |
+| Bank fees (business account) | ✅         | If separate business account      |
 
 ---
 
@@ -136,23 +142,24 @@ You have **two choices**:
 
 For each earning event, record:
 
-| Date | Platform | Category | Gross (£) | Fees (£) | Net (£) | Payout Method | Tax Classification | Notes |
-|------|----------|----------|-----------|----------|---------|---------------|-------------------|-------|
-| 2026-07-21 | Prolific | Surveys | 5.50 | 0.00 | 5.50 | PayPal | Trading | Study #12345 |
-| 2026-07-21 | Outplayed | Matched Betting | 50.00 | 0.00 | 50.00 | Bank | **Gambling (exempt)** | Welcome offer 1 |
+| Date       | Platform  | Category        | Gross (£) | Fees (£) | Net (£) | Payout Method | Tax Classification    | Notes           |
+| ---------- | --------- | --------------- | --------- | -------- | ------- | ------------- | --------------------- | --------------- |
+| 2026-07-21 | Prolific  | Surveys         | 5.50      | 0.00     | 5.50    | PayPal        | Trading               | Study #12345    |
+| 2026-07-21 | Outplayed | Matched Betting | 50.00     | 0.00     | 50.00   | Bank          | **Gambling (exempt)** | Welcome offer 1 |
 
 ---
 
 ## Tax Calculation Quick Reference (2026/27)
 
-| Band | Income Range | Tax Rate |
-|------|-------------|----------|
-| Personal Allowance | £0 – £12,570 | 0% |
-| Basic Rate | £12,571 – £50,270 | 20% |
-| Higher Rate | £50,271 – £125,140 | 40% |
-| Additional Rate | > £125,140 | 45% |
+| Band               | Income Range       | Tax Rate |
+| ------------------ | ------------------ | -------- |
+| Personal Allowance | £0 – £12,570       | 0%       |
+| Basic Rate         | £12,571 – £50,270  | 20%      |
+| Higher Rate        | £50,271 – £125,140 | 40%      |
+| Additional Rate    | > £125,140         | 45%      |
 
 **National Insurance (Class 4, if self-employed profits > £12,570):**
+
 - 6% on £12,570 – £50,270
 - 2% on > £50,270
 
@@ -173,17 +180,20 @@ For each earning event, record:
 ## Action Plan by Earnings Level
 
 ### Casual (£0–1,000/year trading)
+
 - [ ] Track everything in spreadsheet
 - [ ] No registration needed
 - [ ] No tax return needed
 
 ### Moderate (£1,000–5,000/year trading)
+
 - [ ] Register for Self Assessment by 5 Oct 2027
 - [ ] Choose: Trading Allowance OR actual expenses
 - [ ] File 2026/27 return by 31 Jan 2028
 - [ ] Pay any tax by 31 Jan 2028
 
 ### Active (£5,000+/year or mixed income)
+
 - [ ] Consider separate business bank account
 - [ ] Use accounting software (FreeAgent, QuickBooks, Xero)
 - [ ] Consider accountant for first return
@@ -202,4 +212,4 @@ For each earning event, record:
 
 ---
 
-*This is guidance, not professional tax advice. Consult an accountant for your specific situation. Tax rules change — verify with HMRC for the current tax year.*
+_This is guidance, not professional tax advice. Consult an accountant for your specific situation. Tax rules change — verify with HMRC for the current tax year._

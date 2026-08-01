@@ -25,84 +25,84 @@
 
 ### Runtimes & Package Managers
 
-| Technology | Version | Usage |
-|-----------|---------|-------|
-| **Bun** | 1.3.14+ | Primary runtime & package manager (TypeScript projects) |
-| **Node.js** | 18 / 20 | Legacy JavaScript projects |
-| **Python** | 3.11 / 3.13 | Backend services, automation scripts, data processing |
-| **pnpm** | latest | comicwise project |
-| **npm** | latest | Legacy JS projects |
-| **uv / pip** | latest | Python dependency management |
+| Technology   | Version     | Usage                                                   |
+| ------------ | ----------- | ------------------------------------------------------- |
+| **Bun**      | 1.3.14+     | Primary runtime & package manager (TypeScript projects) |
+| **Node.js**  | 18 / 20     | Legacy JavaScript projects                              |
+| **Python**   | 3.11 / 3.13 | Backend services, automation scripts, data processing   |
+| **pnpm**     | latest      | comicwise project                                       |
+| **npm**      | latest      | Legacy JS projects                                      |
+| **uv / pip** | latest      | Python dependency management                            |
 
 ### Frontend Frameworks
 
-| Framework | Used In |
-|-----------|---------|
-| **Next.js 16** (App Router) | Banking, rhixecompany-comics |
+| Framework                   | Used In                                       |
+| --------------------------- | --------------------------------------------- |
+| **Next.js 16** (App Router) | Banking, rhixecompany-comics                  |
 | **Next.js 15** (App Router) | comicwise, rhixe_scans, university-libary-jsm |
-| **React 18** (CRA) | xamehi |
-| **React 17** (CRA) | xamehi.tv |
-| **Django Templates** | profile, ecom |
+| **React 18** (CRA)          | xamehi                                        |
+| **React 17** (CRA)          | xamehi.tv                                     |
+| **Django Templates**        | profile, ecom                                 |
 
 ### Backend & API
 
-| Technology | Used In |
-|-----------|---------|
+| Technology       | Used In                                               |
+| ---------------- | ----------------------------------------------------- |
 | **Django / DRF** | ecom, profile, rhixecompany-comics, xamehi, xamehi.tv |
-| **Express.js** | xamehi |
-| **FastAPI** | Python automation services |
-| **Prisma** | comicwise, rhixe_scans, rhixecompany-comics |
-| **Drizzle ORM** | Banking, university-libary-jsm |
+| **Express.js**   | xamehi                                                |
+| **FastAPI**      | Python automation services                            |
+| **Prisma**       | comicwise, rhixe_scans, rhixecompany-comics           |
+| **Drizzle ORM**  | Banking, university-libary-jsm                        |
 
 ### Databases & Infrastructure
 
-| Technology | Used In |
-|-----------|---------|
-| **PostgreSQL** | Primary database (multiple projects) |
-| **Neon Serverless PostgreSQL** | university-libary-jsm |
-| **Redis** | Caching / session store (university-libary-jsm) |
-| **Stripe** | Payment processing (comicwise, rhixe_scans) |
-| **PayPal** | Payment processing (rhixe_scans, xamehi.tv, ecom) |
-| **Plaid / Dwolla** | Banking / fintech (Banking) |
+| Technology                     | Used In                                           |
+| ------------------------------ | ------------------------------------------------- |
+| **PostgreSQL**                 | Primary database (multiple projects)              |
+| **Neon Serverless PostgreSQL** | university-libary-jsm                             |
+| **Redis**                      | Caching / session store (university-libary-jsm)   |
+| **Stripe**                     | Payment processing (comicwise, rhixe_scans)       |
+| **PayPal**                     | Payment processing (rhixe_scans, xamehi.tv, ecom) |
+| **Plaid / Dwolla**             | Banking / fintech (Banking)                       |
 
 ### Tooling & Quality Gates
 
-| Tool | Purpose | Config |
-|------|---------|--------|
-| **TypeScript** (`tsc --noEmit`) | Type checking | `tsconfig.json` (strict mode) |
-| **ESLint** 10 (flat config) | JS/TS linting (zero-warnings gate) | `eslint.config.mts` |
-| **Prettier** 3 | Code formatting | `.prettierrc.ts` |
-| **Ruff** | Python linting & formatting | `.ruff.toml` |
-| **Pyright** | Python type checking | `pyrightconfig.json` |
-| **markdownlint-cli2** | Markdown linting | `.markdownlintrc.json` |
-| **cspell** 10 | Spell checking | `cspell.json` |
-| **pre-commit** 4.6 | Git hooks | `.pre-commit-config.yaml` |
-| **git-cliff** 2.13 | Changelog generation | `cliff.toml` |
-| **EditorConfig** | Cross-editor consistency | `.editorconfig` |
-| **ShellCheck + shfmt** | Shell script quality | `.shellcheckrc` |
-| **codespell** | Spelling verification | `.codespellrc` |
+| Tool                            | Purpose                            | Config                        |
+| ------------------------------- | ---------------------------------- | ----------------------------- |
+| **TypeScript** (`tsc --noEmit`) | Type checking                      | `tsconfig.json` (strict mode) |
+| **ESLint** 10 (flat config)     | JS/TS linting (zero-warnings gate) | `eslint.config.mts`           |
+| **Prettier** 3                  | Code formatting                    | `.prettierrc.ts`              |
+| **Ruff**                        | Python linting & formatting        | `.ruff.toml`                  |
+| **Pyright**                     | Python type checking               | `pyrightconfig.json`          |
+| **markdownlint-cli2**           | Markdown linting                   | `.markdownlintrc.json`        |
+| **cspell** 10                   | Spell checking                     | `cspell.json`                 |
+| **pre-commit** 4.6              | Git hooks                          | `.pre-commit-config.yaml`     |
+| **git-cliff** 2.13              | Changelog generation               | `cliff.toml`                  |
+| **EditorConfig**                | Cross-editor consistency           | `.editorconfig`               |
+| **ShellCheck + shfmt**          | Shell script quality               | `.shellcheckrc`               |
+| **codespell**                   | Spelling verification              | `.codespellrc`                |
 
 ### MCP Server Ecosystem
 
 16 MCP servers integrated for enhanced agent capabilities:
 
-| Server | Purpose |
-|--------|---------|
-| `ast-grep` | AST-based code search & replace |
-| `code-sandbox` | Isolated Node.js execution |
-| `fetch` | HTTP content extraction |
-| `filesystem` | Sandboxed file operations |
-| `github` | GitHub API operations |
-| `linear` | Project management |
-| `mcp-docker` | Container management |
-| `memory` | Persistent agent memory |
-| `mindstudio` | Multi-modal AI tools |
-| `playwright` | Browser automation |
-| `sequential-thinking` | Structured reasoning |
-| `smithery` | MCP registry |
-| `python-quality` | Ruff + Pyright integration |
-| `tooling-lint` | ESLint, Prettier, markdownlint, cspell |
-| `tooling-config` | Pre-commit, git-cliff, editorconfig |
+| Server                | Purpose                                |
+| --------------------- | -------------------------------------- |
+| `ast-grep`            | AST-based code search & replace        |
+| `code-sandbox`        | Isolated Node.js execution             |
+| `fetch`               | HTTP content extraction                |
+| `filesystem`          | Sandboxed file operations              |
+| `github`              | GitHub API operations                  |
+| `linear`              | Project management                     |
+| `mcp-docker`          | Container management                   |
+| `memory`              | Persistent agent memory                |
+| `mindstudio`          | Multi-modal AI tools                   |
+| `playwright`          | Browser automation                     |
+| `sequential-thinking` | Structured reasoning                   |
+| `smithery`            | MCP registry                           |
+| `python-quality`      | Ruff + Pyright integration             |
+| `tooling-lint`        | ESLint, Prettier, markdownlint, cspell |
+| `tooling-config`      | Pre-commit, git-cliff, editorconfig    |
 
 ## 🧬 Project Architecture
 
@@ -111,7 +111,7 @@ SandBox/                              # Monorepo root
 ├── .github/                          # GitHub configuration
 │   ├── prompts/                      # Canonical prompt library (200+ prompts)
 │   ├── workflows/                    # CI/CD pipelines (18 workflows)
-│   ├── scripts/                      # Shared GitHub automation scripts
+│   ├── scripts/                      # Shared GitHub automation scripts (per-repo)
 │   ├── hooks/                        # Git hooks
 │   └── copilot-instructions.md       # Workspace-wide Copilot guidance
 ├── projects/                         # All subprojects (17+)
@@ -136,7 +136,7 @@ SandBox/                              # Monorepo root
 │   ├── architecture/                 # Architecture blueprints
 │   ├── Project_Architecture/         # Per-project architecture docs
 │   └── tech-stack/                   # Technology stack analysis
-├── scripts/                          # Python automation scripts
+├── scripts/                          # Pointer README — canonical scripts live in ~/AppData/Local/hermes/scripts/
 │   ├── audit_prompts.py/             # Prompt library auditing
 │   ├── fix_*  /                      # Batch remediation scripts
 │   ├── generate_skills.py/           # Skill generation
@@ -187,55 +187,55 @@ Developer PR ──→ pr-ci.yml (detect changed projects)
 
 ### Active Projects
 
-| # | Project | Language/Framework | Status | Description |
-|---|---------|-------------------|--------|-------------|
-| 1 | **Banking** | TypeScript, Next.js 16, Drizzle, Plaid/Dwolla | ✅ Active | Fintech application |
-| 2 | **Bash** | TypeScript, Bun | ✅ Active | 6-phase automation orchestrator with multi-wrapper parity |
-| 3 | **comicwise** | TypeScript, Next.js 15, Prisma, Stripe | ✅ Active | Comic book streaming platform |
-| 4 | **mcp-servers** | TypeScript, Python, Go, Rust, Java, Kotlin, PHP, Ruby, Swift, C# | ✅ Active | MCP server implementations across 10 languages |
-| 5 | **Resume_maker** | TypeScript, Bun | ✅ Active | JSON → Markdown → PDF resume generator |
-| 6 | **rhixe_scans** | TypeScript, Next.js 15, Prisma, WebSocket, Stripe/PayPal | ✅ Active | Comic reader platform |
-| 7 | **rhixecompany-comics** | TypeScript/Python, Next.js 16 + Django, Prisma, Celery | ✅ Active | Full comics platform |
-| 8 | **selenium_webdriver** | JavaScript, Node.js, Selenium 4 | ✅ Active | Chrome browser automation |
-| 9 | **university-libary-jsm** | TypeScript, Next.js 15, Drizzle, Neon, Redis | ✅ Active | University library management system |
-| 10 | **xamehi.tv** | Python, DRF + React 17, PayPal, JWT | ✅ Active | Video streaming platform |
-| 11 | **youtube-downloader** | Python 3.11, yt-dlp | ✅ Active | YouTube download CLI tool |
+| #   | Project                   | Language/Framework                                               | Status    | Description                                               |
+| --- | ------------------------- | ---------------------------------------------------------------- | --------- | --------------------------------------------------------- |
+| 1   | **Banking**               | TypeScript, Next.js 16, Drizzle, Plaid/Dwolla                    | ✅ Active | Fintech application                                       |
+| 2   | **Bash**                  | TypeScript, Bun                                                  | ✅ Active | 6-phase automation orchestrator with multi-wrapper parity |
+| 3   | **comicwise**             | TypeScript, Next.js 15, Prisma, Stripe                           | ✅ Active | Comic book streaming platform                             |
+| 4   | **mcp-servers**           | TypeScript, Python, Go, Rust, Java, Kotlin, PHP, Ruby, Swift, C# | ✅ Active | MCP server implementations across 10 languages            |
+| 5   | **Resume_maker**          | TypeScript, Bun                                                  | ✅ Active | JSON → Markdown → PDF resume generator                    |
+| 6   | **rhixe_scans**           | TypeScript, Next.js 15, Prisma, WebSocket, Stripe/PayPal         | ✅ Active | Comic reader platform                                     |
+| 7   | **rhixecompany-comics**   | TypeScript/Python, Next.js 16 + Django, Prisma, Celery           | ✅ Active | Full comics platform                                      |
+| 8   | **selenium_webdriver**    | JavaScript, Node.js, Selenium 4                                  | ✅ Active | Chrome browser automation                                 |
+| 9   | **university-libary-jsm** | TypeScript, Next.js 15, Drizzle, Neon, Redis                     | ✅ Active | University library management system                      |
+| 10  | **xamehi.tv**             | Python, DRF + React 17, PayPal, JWT                              | ✅ Active | Video streaming platform                                  |
+| 11  | **youtube-downloader**    | Python 3.11, yt-dlp                                              | ✅ Active | YouTube download CLI tool                                 |
 
 ### Maintenance / Template Projects
 
-| # | Project | Language/Framework | Status | Description |
-|---|---------|-------------------|--------|-------------|
-| 12 | **cookiecutter-django-tailwind** | Python, Django 5, Tailwind | 🔧 Maintenance | Cookiecutter project template |
-| 13 | **Django-Scrapy-Selenium** | Python, Django, Scrapy, Selenium, Celery | 🔧 Consolidation target | Web scraping framework |
-| 14 | **ecom** | Python, Django 3.1, DRF, React/Redux | 🔧 Maintenance | E-commerce platform (legacy) |
-| 15 | **profile** | Python, Django, GCS, CKEditor 5 | 🔧 Maintenance | Blog / CMS |
-| 16 | **xamehi** | Python/JS, Django + Express + React | 🔧 Consolidation target | Full-stack application |
-| 17 | **Python-projects** | Python 3.11 | 📦 Archive candidate | 18 beginner Python scripts |
+| #   | Project                          | Language/Framework                       | Status                  | Description                   |
+| --- | -------------------------------- | ---------------------------------------- | ----------------------- | ----------------------------- |
+| 12  | **cookiecutter-django-tailwind** | Python, Django 5, Tailwind               | 🔧 Maintenance          | Cookiecutter project template |
+| 13  | **Django-Scrapy-Selenium**       | Python, Django, Scrapy, Selenium, Celery | 🔧 Consolidation target | Web scraping framework        |
+| 14  | **ecom**                         | Python, Django 3.1, DRF, React/Redux     | 🔧 Maintenance          | E-commerce platform (legacy)  |
+| 15  | **profile**                      | Python, Django, GCS, CKEditor 5          | 🔧 Maintenance          | Blog / CMS                    |
+| 16  | **xamehi**                       | Python/JS, Django + Express + React      | 🔧 Consolidation target | Full-stack application        |
+| 17  | **Python-projects**              | Python 3.11                              | 📦 Archive candidate    | 18 beginner Python scripts    |
 
 ### CI/CD Pipeline
 
 18 GitHub Actions workflows handle automated quality control:
 
-| Workflow | Trigger | Scope |
-|----------|---------|-------|
-| `pr-ci.yml` | PR → `development` | Monorepo-aware multi-project validation |
-| `bash-scripts-ci.yml` | PR touching Bash | TypeScript tests + shell validation |
-| `python-ci.yml` | Python changes | Ruff + Pyright |
-| `validate-readme.yml` | PR → `staged` | README freshness check |
-| `codespell.yml` | Push/PR → `staged` | Spelling |
-| `deploy-website.yml` | Push → `main` | Astro → GitHub Pages |
-| `traffic-reporting.yml` | Daily 1am | GitHub traffic stats |
+| Workflow                | Trigger            | Scope                                   |
+| ----------------------- | ------------------ | --------------------------------------- |
+| `pr-ci.yml`             | PR → `development` | Monorepo-aware multi-project validation |
+| `bash-scripts-ci.yml`   | PR touching Bash   | TypeScript tests + shell validation     |
+| `python-ci.yml`         | Python changes     | Ruff + Pyright                          |
+| `validate-readme.yml`   | PR → `staged`      | README freshness check                  |
+| `codespell.yml`         | Push/PR → `staged` | Spelling                                |
+| `deploy-website.yml`    | Push → `main`      | Astro → GitHub Pages                    |
+| `traffic-reporting.yml` | Daily 1am          | GitHub traffic stats                    |
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-| Tool | Version | Installation |
-|------|---------|-------------|
-| **Bun** | 1.3.14+ | `npm install -g bun` or [bun.sh](https://bun.sh) |
-| **Python** | 3.11+ | [python.org](https://python.org) or `winget install Python.Python.3.11` |
-| **Node.js** | 18+ | [nodejs.org](https://nodejs.org) or `winget install OpenJS.NodeJS` |
-| **Git** | latest | `winget install Git.Git` |
+| Tool        | Version | Installation                                                            |
+| ----------- | ------- | ----------------------------------------------------------------------- |
+| **Bun**     | 1.3.14+ | `npm install -g bun` or [bun.sh](https://bun.sh)                        |
+| **Python**  | 3.11+   | [python.org](https://python.org) or `winget install Python.Python.3.11` |
+| **Node.js** | 18+     | [nodejs.org](https://nodejs.org) or `winget install OpenJS.NodeJS`      |
+| **Git**     | latest  | `winget install Git.Git`                                                |
 
 ### Quick Start
 
@@ -292,6 +292,7 @@ feature/*   ← short-lived branches, deleted after merge
 ```
 
 **Examples:**
+
 - `feat/resume-maker/add-html-output`
 - `fix/bash/install-script-permissions`
 - `docs/root/update-readme`
@@ -355,13 +356,13 @@ refactor: extract PDF generation to separate module
 
 ### Language-Specific Rules
 
-| Language | Style Guide | Key Rules |
-|----------|------------|-----------|
-| **TypeScript** | Strict mode | No `any`, no implicit returns, `noUncheckedIndexedAccess`, `zod` v4 for validation |
-| **Python** | PEP 8 | 4-space indent, double quotes, Ruff linting |
-| **Bash** | Kebab-case | `.sh` extension, ShellCheck validated |
-| **PowerShell** | PascalCase | `.ps1` extension, 4-space indent |
-| **Markdown** | markdownlint | `.markdownlintrc.json` rules |
+| Language       | Style Guide  | Key Rules                                                                          |
+| -------------- | ------------ | ---------------------------------------------------------------------------------- |
+| **TypeScript** | Strict mode  | No `any`, no implicit returns, `noUncheckedIndexedAccess`, `zod` v4 for validation |
+| **Python**     | PEP 8        | 4-space indent, double quotes, Ruff linting                                        |
+| **Bash**       | Kebab-case   | `.sh` extension, ShellCheck validated                                              |
+| **PowerShell** | PascalCase   | `.ps1` extension, 4-space indent                                                   |
+| **Markdown**   | markdownlint | `.markdownlintrc.json` rules                                                       |
 
 ### General Conventions
 
@@ -422,6 +423,7 @@ pytest --cov=.
 ### CI Validation
 
 Every PR triggers the `pr-ci.yml` workflow which:
+
 1. Detects which project(s) changed
 2. Runs appropriate toolchain checks (install, typecheck, lint)
 3. Validates no forbidden files (`.env`, credentials, binaries)
@@ -440,15 +442,15 @@ Every PR triggers the `pr-ci.yml` workflow which:
 
 ### Key Resources
 
-| File | Purpose |
-|------|---------|
-| [`AGENTS.md`](AGENTS.md) | Canonical agent instructions, toolchain, routing |
-| [`CLAUDE.md`](CLAUDE.md) | Claude model guidance |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Git workflow, PR guidelines, branch naming |
-| [`.cursorrules`](.cursorrules) | Cursor IDE configuration |
-| [`.hermes.md`](.hermes.md) | Hermes Agent profile & MCP config |
-| [`docs/`](docs/) | Architecture docs, tech stack analysis |
-| [`.github/prompts/`](.github/prompts/) | 200+ canonical MCP prompts |
+| File                                   | Purpose                                          |
+| -------------------------------------- | ------------------------------------------------ |
+| [`AGENTS.md`](AGENTS.md)               | Canonical agent instructions, toolchain, routing |
+| [`CLAUDE.md`](CLAUDE.md)               | Claude model guidance                            |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md)   | Git workflow, PR guidelines, branch naming       |
+| [`.cursorrules`](.cursorrules)         | Cursor IDE configuration                         |
+| [`.hermes.md`](.hermes.md)             | Hermes Agent profile & MCP config                |
+| [`docs/`](docs/)                       | Architecture docs, tech stack analysis           |
+| [`.github/prompts/`](.github/prompts/) | 200+ canonical MCP prompts                       |
 
 ## 📄 License
 

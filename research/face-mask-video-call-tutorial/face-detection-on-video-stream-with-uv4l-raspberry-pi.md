@@ -55,4 +55,4 @@ Located at `/usr/share/uv4l/demos/facedetection/`:
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

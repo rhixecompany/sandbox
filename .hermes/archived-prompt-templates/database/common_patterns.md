@@ -8,14 +8,14 @@
 
 ```typescript
 const comic = await db.query.comic.findFirst({
-  where: eq(comic.slug, "comic-title"),
-  with: {
-    author: true,
-    artist: true,
-    type: true,
-    genres: { with: { genre: true } },
-    chapters: { orderBy: [c => desc(c.chapterNumber)] }
-  }
+	where: eq(comic.slug, "comic-title"),
+	with: {
+		author: true,
+		artist: true,
+		type: true,
+		genres: { with: { genre: true } },
+		chapters: { orderBy: [(c) => desc(c.chapterNumber)] },
+	},
 });
 ```
 
@@ -23,9 +23,9 @@ const comic = await db.query.comic.findFirst({
 
 ```typescript
 const bookmarks = await db.query.bookmark.findMany({
-  where: eq(bookmark.userId, userId),
-  with: { comic: true, lastReadChapter: true },
-  orderBy: b => desc(b.updatedAt)
+	where: eq(bookmark.userId, userId),
+	with: { comic: true, lastReadChapter: true },
+	orderBy: (b) => desc(b.updatedAt),
 });
 ```
 
@@ -33,10 +33,7 @@ const bookmarks = await db.query.bookmark.findMany({
 
 ```typescript
 const progress = await db.query.readingProgress.findFirst({
-  where: and(
-    eq(readingProgress.userId, userId),
-    eq(readingProgress.comicId, comicId)
-  ),
-  with: { chapter: true }
+	where: and(eq(readingProgress.userId, userId), eq(readingProgress.comicId, comicId)),
+	with: { chapter: true },
 });
 ```

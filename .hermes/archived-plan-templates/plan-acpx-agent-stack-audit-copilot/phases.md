@@ -6,11 +6,11 @@
 
 ### Phase 1: Runtime and Liveness
 
-| Field | Details |
-| --- | --- |
-| Goal | Prove tool versions, auth state, and liveness. |
-| Inputs | CLI tools and machine-local config. |
-| Outputs | Version/liveness evidence. |
+| Field      | Details                                        |
+| ---------- | ---------------------------------------------- |
+| Goal       | Prove tool versions, auth state, and liveness. |
+| Inputs     | CLI tools and machine-local config.            |
+| Outputs    | Version/liveness evidence.                     |
 | Validation | All commands return output or explicit errors. |
 
 **Commands**
@@ -30,12 +30,12 @@ acpx --version
 
 ### Phase 2: Routing and Drift Scan
 
-| Field | Details |
-| --- | --- |
-| Goal | Resolve provider naming and route contradictions. |
-| Inputs | Repo docs and scan output. |
-| Outputs | Final routing decisions. |
-| Validation | Contradictions have explicit decisions. |
+| Field      | Details                                           |
+| ---------- | ------------------------------------------------- |
+| Goal       | Resolve provider naming and route contradictions. |
+| Inputs     | Repo docs and scan output.                        |
+| Outputs    | Final routing decisions.                          |
+| Validation | Contradictions have explicit decisions.           |
 
 **Commands**
 
@@ -49,11 +49,11 @@ rg -n '"plugin"|hooks|opencode-handoff|rate-limit|quota|cost-guard' .opencode
 
 ### Phase 3: Repo Validation
 
-| Field | Details |
-| --- | --- |
-| Goal | Run repository format, type, and lint gates. |
-| Inputs | `projects/Bash/` toolchain scripts. |
-| Outputs | Validation pass/fail evidence. |
+| Field      | Details                                      |
+| ---------- | -------------------------------------------- |
+| Goal       | Run repository format, type, and lint gates. |
+| Inputs     | `projects/Bash/` toolchain scripts.          |
+| Outputs    | Validation pass/fail evidence.               |
 | Validation | Commands complete with exit status captured. |
 
 **Commands**

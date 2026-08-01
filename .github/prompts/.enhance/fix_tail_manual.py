@@ -8,6 +8,7 @@ Each entry: (relpath, old_line_prefix, new_lines). Applied only when the line
 starts with the exact old prefix (whitespace-sensitive), so no collateral
 damage. Dry-run default; --apply writes. LF output.
 """
+
 import argparse
 import re
 import sys
@@ -17,81 +18,130 @@ PROMPTS_DIR = Path(r"C:\Users\Alexa\Desktop\SandBox\.github\prompts")
 
 FIXES = [
     # (relpath, old_prefix, [replacement lines])
-    ("bigquery-pipeline-audit.prompt.md",
-     "## C) BACKFILL AND LOOP DESIGN**Hard fail if:**",
-     ["## C) BACKFILL AND LOOP DESIGN", "", "**Hard fail if:**"]),
-    ("breakdown-plan.prompt.md",
-     "## Story StatementAs a **{user type}**",
-     ["## Story Statement", "", "As a **{user type}**"]),
-    ("comicwise-development.prompt.md",
-     "## Project State Summary**ComicWise**",
-     ["## Project State Summary", "", "**ComicWise**"]),
-    ("create-spring-boot-java-project.prompt.md",
-     "## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services- Create",
-     ["## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services", "", "- Create"]),
-    ("declarative-agents.prompt.md",
-     "## Workflow 1: Basic Agent Creation**Perfect for**:",
-     ["## Workflow 1: Basic Agent Creation", "", "**Perfect for**:"]),
-    ("declarative-agents.prompt.md",
-     "## Workflow 2: Advanced Enterprise Agent Design**Perfect for**:",
-     ["## Workflow 2: Advanced Enterprise Agent Design", "", "**Perfect for**:"]),
-    ("dev-imp.prompt.md",
-     "## ScriptsNo external scripts required",
-     ["## Scripts", "", "No external scripts required"]),
-    ("editorconfig.prompt.md",
-     "## Rule-by-Rule Explanation- `root = true`:",
-     ["## Rule-by-Rule Explanation", "", "- `root = true`:"]),
-    ("java-junit.prompt.md",
-     "## Data-Driven (Parameterized) Tests- Use `@ParameterizedTest`",
-     ["## Data-Driven (Parameterized) Tests", "", "- Use `@ParameterizedTest`"]),
-    ("mkdocs-translations.prompt.md",
-     "## ObjectiveTranslate all documentation",
-     ["## Objective", "", "Translate all documentation"]),
-    ("model-recommendation.prompt.md",
-     "## MissionAnalyze `.agent.md`",
-     ["## Mission", "", "Analyze `.agent.md`"]),
-    ("model-recommendation.prompt.md",
-     "### Analyzing Multiple FilesIf user provides multiple files:",
-     ["### Analyzing Multiple Files", "", "If user provides multiple files:"]),
-    ("model-recommendation.prompt.md",
-     "### Comparative AnalysisIf user asks",
-     ["### Comparative Analysis", "", "If user asks"]),
-    ("model-recommendation.prompt.md",
-     "### Example 4: Free Tier User with Planning Mode**File**:",
-     ["### Example 4: Free Tier User with Planning Mode", "", "**File**:"]),
-    ("playwright-explore-website.prompt.md",
-     "### @explorerA careful site explorer",
-     ["### @explorer", "", "A careful site explorer"]),
-    ("playwright-explore-website.prompt.md",
-     "### @testerA test-minded reviewer",
-     ["### @tester", "", "A test-minded reviewer"]),
-    ("postgresql-code-review.prompt.md",
-     "## 🎯 PostgreSQL-Specific Review Areas>",
-     ["## 🎯 PostgreSQL-Specific Review Areas"]),
-    ("postgresql-code-review.prompt.md",
-     "## 🔍 PostgreSQL-Specific Anti-Patterns>",
-     ["## 🔍 PostgreSQL-Specific Anti-Patterns"]),
-    ("postgresql-code-review.prompt.md",
-     "## 📝 PostgreSQL-Specific Review Guidelines1. **Data Type Optimization**",
-     ["## 📝 PostgreSQL-Specific Review Guidelines", "", "1. **Data Type Optimization**"]),
-    ("postgresql-optimization.prompt.md",
-     "## � PostgreSQL-Specific Features",
-     ["## PostgreSQL-Specific Features"]),
-    ("power-bi-model-design-review.prompt.md",
-     "### **Phase 1: Model Architecture Analysis**>> #",
-     ["### **Phase 1: Model Architecture Analysis**"]),
-    ("power-bi-performance-troubleshooting.prompt.md",
-     "### **Immediate Performance Fixes**>> #",
-     ["### **Immediate Performance Fixes**"]),
-    ("remember.prompt.md",
-     "### ApplyTo FrontmatterTarget specific file patterns",
-     ["### Apply to Frontmatter", "", "Target specific file patterns"]),
-    ("setup.prompt.md",
-     "## 9. Next.js Configuration (`next.config.ts`)Key settings active",
-     ["## 9. Next.js Configuration (`next.config.ts`)", "", "Key settings active"]),
-    ("setup.prompt.md",
-     "### Provider Order (`src/components/layout/layout-provider.tsx`)```SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider → children + lazy Toaster```- `ReactQueryDevtools` rendered only in development- `Toaster` lazy-loaded- `ThemeProvider` receives theme config props---",
-     ["### Provider Order (`src/components/layout/layout-provider.tsx`)", "", "```tsx", "SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider → children + lazy Toaster", "```", "", "- `ReactQueryDevtools` rendered only in development", "- `Toaster` lazy-loaded", "- `ThemeProvider` receives theme config props", "---"]),
+    (
+        "bigquery-pipeline-audit.prompt.md",
+        "## C) BACKFILL AND LOOP DESIGN**Hard fail if:**",
+        ["## C) BACKFILL AND LOOP DESIGN", "", "**Hard fail if:**"],
+    ),
+    (
+        "breakdown-plan.prompt.md",
+        "## Story StatementAs a **{user type}**",
+        ["## Story Statement", "", "As a **{user type}**"],
+    ),
+    (
+        "comicwise-development.prompt.md",
+        "## Project State Summary**ComicWise**",
+        ["## Project State Summary", "", "**ComicWise**"],
+    ),
+    (
+        "create-spring-boot-java-project.prompt.md",
+        "## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services- Create",
+        ["## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services", "", "- Create"],
+    ),
+    (
+        "declarative-agents.prompt.md",
+        "## Workflow 1: Basic Agent Creation**Perfect for**:",
+        ["## Workflow 1: Basic Agent Creation", "", "**Perfect for**:"],
+    ),
+    (
+        "declarative-agents.prompt.md",
+        "## Workflow 2: Advanced Enterprise Agent Design**Perfect for**:",
+        ["## Workflow 2: Advanced Enterprise Agent Design", "", "**Perfect for**:"],
+    ),
+    ("dev-imp.prompt.md", "## ScriptsNo external scripts required", ["## Scripts", "", "No external scripts required"]),
+    (
+        "editorconfig.prompt.md",
+        "## Rule-by-Rule Explanation- `root = true`:",
+        ["## Rule-by-Rule Explanation", "", "- `root = true`:"],
+    ),
+    (
+        "java-junit.prompt.md",
+        "## Data-Driven (Parameterized) Tests- Use `@ParameterizedTest`",
+        ["## Data-Driven (Parameterized) Tests", "", "- Use `@ParameterizedTest`"],
+    ),
+    (
+        "mkdocs-translations.prompt.md",
+        "## ObjectiveTranslate all documentation",
+        ["## Objective", "", "Translate all documentation"],
+    ),
+    ("model-recommendation.prompt.md", "## MissionAnalyze `.agent.md`", ["## Mission", "", "Analyze `.agent.md`"]),
+    (
+        "model-recommendation.prompt.md",
+        "### Analyzing Multiple FilesIf user provides multiple files:",
+        ["### Analyzing Multiple Files", "", "If user provides multiple files:"],
+    ),
+    (
+        "model-recommendation.prompt.md",
+        "### Comparative AnalysisIf user asks",
+        ["### Comparative Analysis", "", "If user asks"],
+    ),
+    (
+        "model-recommendation.prompt.md",
+        "### Example 4: Free Tier User with Planning Mode**File**:",
+        ["### Example 4: Free Tier User with Planning Mode", "", "**File**:"],
+    ),
+    (
+        "playwright-explore-website.prompt.md",
+        "### @explorerA careful site explorer",
+        ["### @explorer", "", "A careful site explorer"],
+    ),
+    (
+        "playwright-explore-website.prompt.md",
+        "### @testerA test-minded reviewer",
+        ["### @tester", "", "A test-minded reviewer"],
+    ),
+    (
+        "postgresql-code-review.prompt.md",
+        "## 🎯 PostgreSQL-Specific Review Areas>",
+        ["## 🎯 PostgreSQL-Specific Review Areas"],
+    ),
+    (
+        "postgresql-code-review.prompt.md",
+        "## 🔍 PostgreSQL-Specific Anti-Patterns>",
+        ["## 🔍 PostgreSQL-Specific Anti-Patterns"],
+    ),
+    (
+        "postgresql-code-review.prompt.md",
+        "## 📝 PostgreSQL-Specific Review Guidelines1. **Data Type Optimization**",
+        ["## 📝 PostgreSQL-Specific Review Guidelines", "", "1. **Data Type Optimization**"],
+    ),
+    ("postgresql-optimization.prompt.md", "## � PostgreSQL-Specific Features", ["## PostgreSQL-Specific Features"]),
+    (
+        "power-bi-model-design-review.prompt.md",
+        "### **Phase 1: Model Architecture Analysis**>> #",
+        ["### **Phase 1: Model Architecture Analysis**"],
+    ),
+    (
+        "power-bi-performance-troubleshooting.prompt.md",
+        "### **Immediate Performance Fixes**>> #",
+        ["### **Immediate Performance Fixes**"],
+    ),
+    (
+        "remember.prompt.md",
+        "### ApplyTo FrontmatterTarget specific file patterns",
+        ["### Apply to Frontmatter", "", "Target specific file patterns"],
+    ),
+    (
+        "setup.prompt.md",
+        "## 9. Next.js Configuration (`next.config.ts`)Key settings active",
+        ["## 9. Next.js Configuration (`next.config.ts`)", "", "Key settings active"],
+    ),
+    (
+        "setup.prompt.md",
+        "### Provider Order (`src/components/layout/layout-provider.tsx`)```SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider → children + lazy Toaster```- `ReactQueryDevtools` rendered only in development- `Toaster` lazy-loaded- `ThemeProvider` receives theme config props---",
+        [
+            "### Provider Order (`src/components/layout/layout-provider.tsx`)",
+            "",
+            "```tsx",
+            "SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider → children + lazy Toaster",
+            "```",
+            "",
+            "- `ReactQueryDevtools` rendered only in development",
+            "- `Toaster` lazy-loaded",
+            "- `ThemeProvider` receives theme config props",
+            "---",
+        ],
+    ),
 ]
 
 
@@ -112,7 +162,7 @@ def fix_text(path: Path) -> tuple[str, int]:
             if stripped.startswith(old):
                 # preserve original indentation for heading
                 indent = stripped[: len(stripped) - len(stripped.lstrip())]
-                remainder = stripped[len(old):]
+                remainder = stripped[len(old) :]
                 out.extend(indent + n for n in new_lines)
                 if remainder:
                     # append remainder to the LAST emitted line (prose/content

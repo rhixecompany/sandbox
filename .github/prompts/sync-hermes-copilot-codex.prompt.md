@@ -1,8 +1,8 @@
 ---
 name: sync-hermes-copilot-codex
-title: Sync Hermes Copilot Codex
-description: 'Bidirectional sync of skills, plugins, hooks, prompts, and instructions across Hermes, GitHub Copilot, and OpenAI Codex environments with verification.'
-version: 1.0.0
+title: Sync Hermes Copilot Codex OpenCode
+description: 'Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, GitHub Copilot, OpenAI Codex, and OpenCode environments with verification.'
+version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
@@ -15,22 +15,25 @@ tags:
 trigger: /sync-hermes-copilot-codex
 formatter: default
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
+  - skill:multi-agent-sync
+  - skill:hermes-profiles
+  - skill:opencode
   - skill:verification-before-completion
-metadata:
-  hermes: {}
-toolsets: None
+toolsets:
+  - file
+  - terminal
+  - skills
 scripts: []
-skills: []
+skills:
+  - multi-agent-sync
+  - hermes-profiles
+  - opencode
 plan: None
 ---
 
 ## Goal
 
-Bidirectional sync of skills, plugins, hooks, prompts, and instructions across Hermes, GitHub Copilot, and OpenAI Codex environments with verification.
-
-# Sync Hermes Copilot Codex
+Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, GitHub Copilot, OpenAI Codex, and OpenCode environments with verification.
 
 ## Context
 
@@ -38,6 +41,11 @@ Bidirectional sync of skills, plugins, hooks, prompts, and instructions across H
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
 - **Progress artifact:** `docs/orchestrator-progress.md`
 - **Verification artifact:** `docs/orchestrator-verification.md`
+- **Agent roots:**
+  - Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
+  - GitHub Copilot → `.github/` (agents/*.agent.md, hooks/, instructions/, skills/)
+  - OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
+  - OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
 
 ## Rules
 
@@ -46,6 +54,8 @@ Bidirectional sync of skills, plugins, hooks, prompts, and instructions across H
 1. Execute phases in order; do not reorder.
 2. Each phase must pass its gate before advancing.
 3. Conflicts should be resolved or documented, not silently dropped.
+4. **One platform at a time** — sync Hermes, Copilot, Codex, and OpenCode sequentially, verifying each before the next.
+5. **No backup files** — use git history for rollback; never create `.bak`, `.old`, or timestamped copies.
 
 ## Phases
 
@@ -54,7 +64,7 @@ Full phase instructions live in `templates/sync-hermes-copilot-codex/phases.md`.
 | Order | Phase | Gate |
 | --- | --- | --- |
 | 1 | Inventory Instructions & Agents | inventories complete; personality/profile mappings created |
-| 2 | Identify Agent Roots | all 3 roots confirmed; paths documented |
+| 2 | Identify Agent Roots | all 4 roots confirmed; paths documented |
 | 3 | Bidirectional Sync | sync report written; conflicts resolved or documented |
 | 4 | Verify Completion | verification report written; all critical assets in sync |
 
@@ -90,11 +100,11 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton.md) for workflow structure.
 
-1. **Diagnose** — Run diagnostics.
-2. **Plan** — Determine minimal changes.
-3. **Fix** — Apply changes incrementally.
-4. **Verify** — Confirm fix works.
-5. **Document** — Note what changed.
+1. **Diagnose** — Run diagnostics on all 4 agent roots.
+2. **Plan** — Determine minimal changes; map per-platform asset formats.
+3. **Fix** — Apply changes incrementally, one platform at a time.
+4. **Verify** — Confirm fix works via file-backed evidence.
+5. **Document** — Note what changed in the progress artifact.
 
 ## Best Practices
 
@@ -122,9 +132,10 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 | Skill | Purpose |
 | ------- | --------- |
-| `using-superpowers` | Foundational skill workflow |
+| `multi-agent-sync` | Canonical multi-platform sync workflow (Hermes, Copilot, Codex/OpenCode) |
+| `hermes-profiles` | Profile identity & state across Hermes |
+| `opencode` | OpenCode CLI usage, roots, and verification |
 | `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
@@ -132,6 +143,8 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
+| Server | Purpose |
+| ------ | ------- |
 | `ast-grep` | AST-based code search and replace |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
@@ -141,8 +154,9 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 ## Tasks
 
-- [ ] Understand requirements and scope
-- [ ] Plan approach and identify resources
-- [ ] Execute work incrementally
+- [ ] Understand requirements and scope (4 platforms)
+- [ ] Inventory each platform's assets and agent roots
+- [ ] Plan approach and identify per-platform format mappings
+- [ ] Execute work incrementally, one platform at a time
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions

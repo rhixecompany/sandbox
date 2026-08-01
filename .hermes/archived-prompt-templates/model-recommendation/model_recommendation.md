@@ -36,12 +36,12 @@
 
 ### 📊 Model Comparison for This Task
 
-| Criterion | [Primary Model] | [Alternative 1] | [Alternative 2] |
-| --- | --- | --- | --- |
-| Task Fit | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| Code Quality | [rating] | [rating] | [rating] |
-| Reasoning | [rating] | [rating] | [rating] |
-| Speed | [rating] | [rating] | [rating] |
-| Cost Efficiency | [rating] | [rating] | [rating] |
-| Context Capacity | [capacity] | [capacity] | [capacity] |
-| Vision Support | [Yes/No] | [Yes/No] | [Yes/No] |
+| Criterion        | [Primary Model] | [Alternative 1] | [Alternative 2] |
+| ---------------- | --------------- | --------------- | --------------- |
+| Task Fit         | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐        | ⭐⭐⭐          |
+| Code Quality     | [rating]        | [rating]        | [rating]        |
+| Reasoning        | [rating]        | [rating]        | [rating]        |
+| Speed            | [rating]        | [rating]        | [rating]        |
+| Cost Efficiency  | [rating]        | [rating]        | [rating]        |
+| Context Capacity | [capacity]      | [capacity]      | [capacity]      |
+| Vision Support   | [Yes/No]        | [Yes/No]        | [Yes/No]        |

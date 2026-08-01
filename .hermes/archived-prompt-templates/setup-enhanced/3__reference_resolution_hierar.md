@@ -8,27 +8,27 @@ When implementing features, consult these sources in priority order:
 
 ### Tier 1 — Latest Standards (Primary)
 
-| Source | Purpose |
-| --- | --- |
-| `.github/copilot-instructions.md` | Current architectural standards and coding rules |
-| `.github/instructions/*.md` | File-pattern-specific guidelines (TypeScript, Next.js, security, testing, performance) |
+| Source                            | Purpose                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------- |
+| `.github/copilot-instructions.md` | Current architectural standards and coding rules                                       |
+| `.github/instructions/*.md`       | File-pattern-specific guidelines (TypeScript, Next.js, security, testing, performance) |
 
 ### Tier 2 — Entity & Schema Details
 
-| Source | Purpose |
-| --- | --- |
+| Source                         | Purpose                                             |
+| ------------------------------ | --------------------------------------------------- |
 | `docs/database-context-map.md` | Entity relationships, constraints, cascade behavior |
-| `src/database/schema.ts` | Table definitions, enums, indexes (30+ tables) |
+| `src/database/schema.ts`       | Table definitions, enums, indexes (30+ tables)      |
 
 ### Tier 3 — Concrete Implementations
 
-| Source | Purpose |
-| --- | --- |
-| `src/dal/*.ts` | Data Access Layer patterns (`BaseDal<T>`, eager loading) |
-| `src/actions/*.ts` | Server Actions with `ActionResult<T>` pattern |
-| `src/schemas/*.ts` | Zod validation schemas per domain |
-| `src/components/**/*.tsx` | UI components with proper typing |
-| `src/app/**/*.tsx` | Page implementations and route structure |
+| Source                    | Purpose                                                  |
+| ------------------------- | -------------------------------------------------------- |
+| `src/dal/*.ts`            | Data Access Layer patterns (`BaseDal<T>`, eager loading) |
+| `src/actions/*.ts`        | Server Actions with `ActionResult<T>` pattern            |
+| `src/schemas/*.ts`        | Zod validation schemas per domain                        |
+| `src/components/**/*.tsx` | UI components with proper typing                         |
+| `src/app/**/*.tsx`        | Page implementations and route structure                 |
 
 ### Context Resolution Rules
 
@@ -62,13 +62,13 @@ When existing code matches your need:
 
 ### File Reference Lookup
 
-| Need | Search Location | Reference Example |
-| --- | --- | --- |
-| DAL Pattern | `src/dal/*.ts` | `comic-dal.ts` for eager loading |
-| Server Action | `src/actions/*.ts` | `comic.actions.ts` for `ActionResult<T>` |
-| Zod Schema | `src/schemas/*.ts` | `comic-schema.ts` for validation |
-| UI Component | `src/components/` | Extend from shadcn primitives |
-| Page Layout | `src/app/(root)/` | Mirror existing page structure |
-| Type Definition | `src/types/` | Use `z.infer<typeof schema>` |
+| Need            | Search Location    | Reference Example                        |
+| --------------- | ------------------ | ---------------------------------------- |
+| DAL Pattern     | `src/dal/*.ts`     | `comic-dal.ts` for eager loading         |
+| Server Action   | `src/actions/*.ts` | `comic.actions.ts` for `ActionResult<T>` |
+| Zod Schema      | `src/schemas/*.ts` | `comic-schema.ts` for validation         |
+| UI Component    | `src/components/`  | Extend from shadcn primitives            |
+| Page Layout     | `src/app/(root)/`  | Mirror existing page structure           |
+| Type Definition | `src/types/`       | Use `z.infer<typeof schema>`             |
 
 ---

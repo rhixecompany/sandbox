@@ -110,16 +110,17 @@ pie title Technology Stack Distribution
 
 ### Architectural Boundaries
 
-| Boundary | Enforcement |
-|----------|-------------|
-| Project Isolation | Separate `package.json`, `bun.lock`, or `requirements.txt` per project |
-| Git Isolation | Each project can have its own `.gitignore`, sometimes own git history |
-| Tooling Consistency | Shared root configs for linting, formatting, and EditorConfig |
-| Agent Guidance | Per-project `AGENTS.md` files with project-specific rules |
+| Boundary            | Enforcement                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| Project Isolation   | Separate `package.json`, `bun.lock`, or `requirements.txt` per project |
+| Git Isolation       | Each project can have its own `.gitignore`, sometimes own git history  |
+| Tooling Consistency | Shared root configs for linting, formatting, and EditorConfig          |
+| Agent Guidance      | Per-project `AGENTS.md` files with project-specific rules              |
 
 ### Hybrid Adaptations
 
 The workspace adapts a **monorepo-with-multiple-git-repos** hybrid model:
+
 - Some projects share a single parent git repo (SandBox)
 - The Banking project has its own independent `.git` directory (nested repo)
 - Submodules are configured via `.gitmodules` for external references
@@ -135,7 +136,7 @@ C4Context
     title System Context diagram for SandBox Monorepo
 
     Person(dev, "Developer", "Works on projects using Hermes/Copilot agents")
-    
+
     System_Boundary(sandbox, "SandBox Workspace") {
         System(ts_projects, "TypeScript/Bun Projects", "Next.js apps, automation tools, utilities")
         System(django_projects, "Django/Python Projects", "Backend services, scrapers, templates")
@@ -188,7 +189,7 @@ graph LR
     AGENTS --> NPM
     AGENTS --> GO
     PROMPTS --> AGENTS
-    
+
     BUN --> ESLINT
     BUN --> PRETTIER
     BUN --> TSC
@@ -242,6 +243,7 @@ flowchart TD
 **Projects:** Banking, comicwise, rhixe_scans, university-libary-jsm, rhixecompany-comics/frontend, xamehi.tv/frontend, ecom/frontend
 
 **Purpose and Responsibility:**
+
 - Full-stack web applications using Next.js App Router
 - Server-side rendering with React Server Components
 - API endpoints via Next.js API routes
@@ -249,6 +251,7 @@ flowchart TD
 - UI built with Tailwind CSS + shadcn/ui components
 
 **Internal Structure:**
+
 ```
 src/
 ├── app/           # Next.js App Router pages & API routes
@@ -265,6 +268,7 @@ src/
 ```
 
 **Interaction Patterns:**
+
 - **Server Components** for data fetching → Client Components for interactivity
 - **Server Actions** for form submissions and mutations
 - **API Routes** for external integrations (Plaid, Clerk, Stripe)
@@ -275,6 +279,7 @@ src/
 **Projects:** ecom, profile, xamehi.tv, Django-Scrapy-Selenium, cookiecutter-django-tailwind, rhixe_scans/backend, rhixecompany-comics/backend
 
 **Purpose and Responsibility:**
+
 - RESTful API backends using Django REST Framework
 - Database schema management via Django ORM migrations
 - Web scraping pipelines (Scrapy + Selenium)
@@ -282,6 +287,7 @@ src/
 - Template rendering for server-rendered pages
 
 **Internal Structure (standard Django layout):**
+
 ```
 project/
 ├── config/       # Settings (base, local, production)
@@ -303,9 +309,11 @@ project/
 
 **Purpose and Responsibility:**
 Reference implementations of MCP (Model Context Protocol) servers across 10 languages:
+
 - TypeScript, Go, Rust, Java, Kotlin, PHP, Python, C#, Ruby, Swift
 
 **Interaction Patterns:**
+
 - MCP stdio transport for local development
 - Tool registration and discovery patterns
 - Standardized server lifecycle (init → connect → handle → disconnect)
@@ -315,6 +323,7 @@ Reference implementations of MCP (Model Context Protocol) servers across 10 lang
 **Projects:** Bash (TypeScript/Bun toolkit), Python-projects, youtube-downloader, selenium_webdriver
 
 **Purpose and Responsibility:**
+
 - Cross-platform automation scripts (Bash, PowerShell, Python)
 - Video downloading and processing
 - Selenium webdriver configurations
@@ -376,14 +385,14 @@ graph TB
 
 ### Dependency Rules
 
-| Layer | Can Depend On | Cannot Depend On |
-|-------|--------------|------------------|
-| UI Components | Server Components, lib/utils, hooks | Direct data access |
-| Server Components | Data layer, API, lib | Client-side state |
-| API Routes | Data layer, external services | UI components |
-| Django Views | Models, Forms, Templates | Raw HTTP handling |
-| Django Models | Only itself + Django ORM | Views, Templates |
-| MCP Tools | Shared lib, external SDKs | Project-specific UI |
+| Layer             | Can Depend On                       | Cannot Depend On    |
+| ----------------- | ----------------------------------- | ------------------- |
+| UI Components     | Server Components, lib/utils, hooks | Direct data access  |
+| Server Components | Data layer, API, lib                | Client-side state   |
+| API Routes        | Data layer, external services       | UI components       |
+| Django Views      | Models, Forms, Templates            | Raw HTTP handling   |
+| Django Models     | Only itself + Django ORM            | Views, Templates    |
+| MCP Tools         | Shared lib, external SDKs           | Project-specific UI |
 
 ---
 
@@ -392,11 +401,13 @@ graph TB
 ### Domain Models
 
 **TypeScript Projects:**
+
 - **Banking:** Users, Accounts, Transactions, Plaid integrations, Categories
 - **comicwise:** Users, Comics, Chapters, Ratings, Comments, Bookmarks, Genres
 - **university-library:** Books, Users, Auth sessions, Reading lists
 
 **Django Projects:**
+
 - **ecom:** Products, Categories, Orders, Cart, User profiles
 - **Django-Scrapy-Selenium:** Scraped content, Crawl jobs, API endpoints
 - **profile/xamehi.tv:** User profiles, Media content, Player state
@@ -420,6 +431,7 @@ flowchart LR
 ```
 
 ### Caching Strategies
+
 - **Next.js:** Built-in data cache, full route cache, ISR (Incremental Static Regeneration)
 - **Django:** Template fragment caching, database query caching via cache framework
 
@@ -429,30 +441,34 @@ flowchart LR
 
 ### Authentication & Authorization
 
-| Project | Auth Approach |
-|---------|---------------|
-| Banking | Clerk (third-party auth) |
-| comicwise | Custom auth + session management |
-| university-library | NextAuth.js |
-| Django projects | django-allauth, JWT tokens, session auth |
-| rhixe_scans | Clerk + Django session bridging |
+| Project            | Auth Approach                            |
+| ------------------ | ---------------------------------------- |
+| Banking            | Clerk (third-party auth)                 |
+| comicwise          | Custom auth + session management         |
+| university-library | NextAuth.js                              |
+| Django projects    | django-allauth, JWT tokens, session auth |
+| rhixe_scans        | Clerk + Django session bridging          |
 
 ### Error Handling & Resilience
+
 - **TypeScript:** Server Action try/catch with error boundaries, React ErrorBoundary components
 - **Django:** Standard Django exception handling, middleware-based error responses
 - **Scripts:** Return code checking, verbose error reporting
 
 ### Logging & Monitoring
+
 - **TypeScript:** Console logging in dev, structured logging patterns
 - **Django:** Python logging module, Sentry integration (where configured)
 - **Pre-commit:** Git hooks for linting/formatting before commits
 
 ### Validation
+
 - **TypeScript:** Zod schemas for runtime validation, TypeScript strict mode
 - **Django:** Form validation, Serializer validation (DRF), Model field validation
 - **Cross-project:** Pre-commit hooks for lint + format + spellcheck
 
 ### Configuration Management
+
 - **TypeScript:** `.env.local`, `app-config.ts`, environment variables via `process.env`
 - **Django:** Split settings (base/local/production), `.env` files, docker-compose env vars
 - **Shared:** `.gitignore` patterns for secrets, `.editorconfig` for encoding
@@ -463,13 +479,13 @@ flowchart LR
 
 ### API Patterns by Project
 
-| Project | API Type | Auth | Transport |
-|---------|----------|------|-----------|
-| Banking | Next.js API + App Router | Clerk JWT | HTTP/JSON |
-| comicwise | Next.js API Routes | Session | HTTP/JSON |
-| Django-Scrapy-Selenium | Django REST Framework | Token/Session | HTTP/JSON |
-| ecom | Django REST | Session | HTTP/JSON |
-| mcp-servers | MCP Protocol | stdio/API key | stdio/HTTP |
+| Project                | API Type                 | Auth          | Transport  |
+| ---------------------- | ------------------------ | ------------- | ---------- |
+| Banking                | Next.js API + App Router | Clerk JWT     | HTTP/JSON  |
+| comicwise              | Next.js API Routes       | Session       | HTTP/JSON  |
+| Django-Scrapy-Selenium | Django REST Framework    | Token/Session | HTTP/JSON  |
+| ecom                   | Django REST              | Session       | HTTP/JSON  |
+| mcp-servers            | MCP Protocol             | stdio/API key | stdio/HTTP |
 
 ### Communication Flows
 
@@ -502,6 +518,7 @@ flowchart TD
 **Package Manager:** Bun 1.3+ (NOT npm/pnpm — enforced at workspace level)
 
 **Key Patterns:**
+
 - **Next.js App Router** — File-system based routing with layouts, loading states, error boundaries
 - **Server Components** — Default rendering strategy for React components
 - **Server Actions** — Form handling and data mutations without explicit API routes
@@ -513,6 +530,7 @@ flowchart TD
 ### Python / Django Architectural Patterns
 
 **Key Patterns:**
+
 - **MVT (Model-View-Template)** — Django's standard architectural pattern
 - **Django REST Framework** — API view sets, serializers, permissions
 - **Scrapy + Selenium** — Web scraping with JS-rendered content support
@@ -584,15 +602,15 @@ server.tool('my-tool', { input: z.string() }, async ({ input }) => {
 
 ### Testing Strategy by Stack
 
-| Layer | Tool | Scope |
-|-------|------|-------|
-| TypeScript Unit | Vitest | Functions, utilities, hooks |
-| TypeScript Integration | Playwright | E2E browser tests |
-| Django Unit | pytest-django | Models, views, serializers |
-| Django Integration | pytest + client | API endpoint tests |
-| MCP Servers | Language-native | Tool function testing |
-| Documentation | markdownlint | Formatting, structure |
-| Overall Quality | pre-commit | All lint + format + typecheck |
+| Layer                  | Tool            | Scope                         |
+| ---------------------- | --------------- | ----------------------------- |
+| TypeScript Unit        | Vitest          | Functions, utilities, hooks   |
+| TypeScript Integration | Playwright      | E2E browser tests             |
+| Django Unit            | pytest-django   | Models, views, serializers    |
+| Django Integration     | pytest + client | API endpoint tests            |
+| MCP Servers            | Language-native | Tool function testing         |
+| Documentation          | markdownlint    | Formatting, structure         |
+| Overall Quality        | pre-commit      | All lint + format + typecheck |
 
 ---
 
@@ -642,35 +660,39 @@ graph TB
 6. Add to workspace index in root `README.md`
 
 ### Modifying Existing Components
+
 - Each subproject is fully isolated — changes don't affect others
 - Follow per-project `AGENTS.md` conventions
 - Run quality gates before committing (lint → typecheck → test)
 
 ### Integration Patterns
+
 - **Cross-project data sharing:** Via REST APIs or shared databases
 - **MCP server sharing:** MCP protocol enables any client to use any server
 - **Prompt library reuse:** Prompts in `.github/prompts/` can be used across all projects
 
 ### Extension Points
 
-| Extension Point | Mechanism |
-|----------------|-----------|
-| New MCP server | Add directory under `projects/mcp-servers/` |
-| New prompt | Add `.prompt.md` under `.github/prompts/` |
-| New automation script | Add to `scripts/` |
-| New shared config | Add to workspace root |
+| Extension Point       | Mechanism                                   |
+| --------------------- | ------------------------------------------- |
+| New MCP server        | Add directory under `projects/mcp-servers/` |
+| New prompt            | Add `.prompt.md` under `.github/prompts/`   |
+| New automation script | Add to `scripts/`                           |
+| New shared config     | Add to workspace root                       |
 
 ---
 
 ## 14. Architecture Governance
 
 ### Consistency Maintenance
+
 - **Root-level tooling** enforces consistent formatting (`.editorconfig`) and linting (`.markdownlintrc.json`)
 - **AGENTS.md** per project ensures agent-aware development
 - **Pre-commit hooks** enforce quality gates before commits
 - **Documentation templates** provide standardized project documentation
 
 ### Automated Compliance Checks
+
 - ESLint with `max-warnings=0` for TypeScript
 - Ruff + Pyright for Python
 - markdownlint for documentation
@@ -694,24 +716,24 @@ graph TB
 
 ### Starting Points by Feature Type
 
-| Feature Type | Starting Point |
-|-------------|----------------|
-| New Next.js page | `src/app/<route>/page.tsx` |
-| New API endpoint | `src/app/api/<name>/route.ts` |
-| New Django model | `api/models.py` |
-| New Django view | `api/views.py` |
-| New MCP tool | `tools/<tool-name>.ts` in mcp-server |
-| New script | `scripts/<name>.py` or `scripts/<name>.sh` |
+| Feature Type     | Starting Point                             |
+| ---------------- | ------------------------------------------ |
+| New Next.js page | `src/app/<route>/page.tsx`                 |
+| New API endpoint | `src/app/api/<name>/route.ts`              |
+| New Django model | `api/models.py`                            |
+| New Django view  | `api/views.py`                             |
+| New MCP tool     | `tools/<tool-name>.ts` in mcp-server       |
+| New script       | `scripts/<name>.py` or `scripts/<name>.sh` |
 
 ### Common Pitfalls
 
-| Pitfall | Mitigation |
-|---------|------------|
+| Pitfall                | Mitigation                                                      |
+| ---------------------- | --------------------------------------------------------------- |
 | Cross-project coupling | Keep projects isolated — don't import across project boundaries |
-| Missing lint | Run `bun run lint:strict` before commit |
-| Outdated docs | Regenerate architecture docs when structure changes |
-| Environment drift | Use `.env.example` and docker-compose for reproducible setups |
-| Ignoring AGENTS.md | Always check per-project agent guidance first |
+| Missing lint           | Run `bun run lint:strict` before commit                         |
+| Outdated docs          | Regenerate architecture docs when structure changes             |
+| Environment drift      | Use `.env.example` and docker-compose for reproducible setups   |
+| Ignoring AGENTS.md     | Always check per-project agent guidance first                   |
 
 ---
 

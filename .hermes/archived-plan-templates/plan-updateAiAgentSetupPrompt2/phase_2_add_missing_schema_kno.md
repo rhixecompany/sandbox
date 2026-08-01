@@ -33,9 +33,9 @@ Fields: `userId` (`onDelete: "set null"` — exception to cascade rule), `action
 
 ```typescript
 settings: jsonb("settings").$type<{
-  emailNotifications?: boolean;
-  profileVisibility?: "private" | "public";
-  readingHistoryVisibility?: boolean;
+	emailNotifications?: boolean;
+	profileVisibility?: "private" | "public";
+	readingHistoryVisibility?: boolean;
 }>();
 ```
 
@@ -47,17 +47,17 @@ settings: jsonb("settings").$type<{
 
 ```typescript
 resourceEnum: "comic" |
-  "chapter" |
-  "user" |
-  "comment" |
-  "rating" |
-  "bookmark" |
-  "notification" |
-  "author" |
-  "artist" |
-  "genre" |
-  "type" |
-  "system";
+	"chapter" |
+	"user" |
+	"comment" |
+	"rating" |
+	"bookmark" |
+	"notification" |
+	"author" |
+	"artist" |
+	"genre" |
+	"type" |
+	"system";
 actionEnum: "create" | "read" | "update" | "delete" | "manage";
 ```
 

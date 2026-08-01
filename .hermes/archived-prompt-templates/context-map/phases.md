@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Search for task-related files | File shortlist |
-| 1.2 | Map direct dependencies | Dependency list |
-| 1.3 | Identify related tests and patterns | Reference list |
+| Step | Action                              | Output          |
+| ---- | ----------------------------------- | --------------- |
+| 1.1  | Search for task-related files       | File shortlist  |
+| 1.2  | Map direct dependencies             | Dependency list |
+| 1.3  | Identify related tests and patterns | Reference list  |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Organize files to modify | Modify list |
-| 2.2 | Organize dependent files and tests | Dependency and test lists |
-| 2.3 | Add reference patterns and risks | Context map |
+| Step | Action                             | Output                    |
+| ---- | ---------------------------------- | ------------------------- |
+| 2.1  | Organize files to modify           | Modify list               |
+| 2.2  | Organize dependent files and tests | Dependency and test lists |
+| 2.3  | Add reference patterns and risks   | Context map               |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Check for missing files or dependencies | Gap list |
-| 3.2 | Check for unclear risk items | Risk notes |
-| 3.3 | Prepare the final map | Review-ready map |
+| Step | Action                                  | Output           |
+| ---- | --------------------------------------- | ---------------- |
+| 3.1  | Check for missing files or dependencies | Gap list         |
+| 3.2  | Check for unclear risk items            | Risk notes       |
+| 3.3  | Prepare the final map                   | Review-ready map |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Summarize the scope | Summary |
-| 4.2 | Present the map | Context map |
-| 4.3 | State the main risks | Risk assessment |
+| Step | Action               | Output          |
+| ---- | -------------------- | --------------- |
+| 4.1  | Summarize the scope  | Summary         |
+| 4.2  | Present the map      | Context map     |
+| 4.3  | State the main risks | Risk assessment |
 
 #### Tasks
 

@@ -16,7 +16,13 @@ out/
 .env.*.local
 
 # IDE
-.vscode/
+# .vscode/ is ignored wholesale except the shareable config files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
 .idea/
 *.swp
 *.swo

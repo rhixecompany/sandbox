@@ -3,9 +3,10 @@
 Treats only lines that START with ``` as fence markers (inline single/double
 backticks don't count). 4-backtick escaped fences are handled by the regex.
 """
-from pathlib import Path
+
 import re
 import sys
+from pathlib import Path
 
 p = Path(sys.argv[1] if len(sys.argv) > 1 else ".github/prompts")
 flagged = []

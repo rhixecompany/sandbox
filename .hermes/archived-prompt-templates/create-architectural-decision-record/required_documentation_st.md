@@ -18,3 +18,4 @@ superseded_by: ""
 ---
 
 # ADR-NNNN: [Decision Title]
+```

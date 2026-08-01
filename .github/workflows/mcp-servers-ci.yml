@@ -4,12 +4,12 @@ on:
   push:
     branches: [development, production]
     paths:
-      - 'projects/mcp-servers/**'
-      - '.github/workflows/mcp-servers-ci.yml'
+      - "projects/mcp-servers/**"
+      - ".github/workflows/mcp-servers-ci.yml"
   pull_request:
     branches: [development, production]
     paths:
-      - 'projects/mcp-servers/**'
+      - "projects/mcp-servers/**"
 
 jobs:
   verify:
@@ -17,20 +17,20 @@ jobs:
     strategy:
       matrix:
         include:
-          - project: 'projects/mcp-servers/typescript'
-            language: 'typescript'
+          - project: "projects/mcp-servers/typescript"
+            language: "typescript"
             cmd: 'bun install && bun run typecheck 2>/dev/null || bunx tsc --noEmit 2>/dev/null || echo "TS check skipped"'
-          - project: 'projects/mcp-servers/python'
-            language: 'python'
+          - project: "projects/mcp-servers/python"
+            language: "python"
             cmd: 'pip install -r requirements.txt 2>/dev/null || echo "No requirements" && python -m py_compile *.py 2>/dev/null || echo "Syntax check"'
-          - project: 'projects/mcp-servers/go'
-            language: 'go'
+          - project: "projects/mcp-servers/go"
+            language: "go"
             cmd: 'go build ./... 2>/dev/null || echo "Go build skipped"'
-          - project: 'projects/mcp-servers/rust'
-            language: 'rust'
+          - project: "projects/mcp-servers/rust"
+            language: "rust"
             cmd: 'cargo check 2>/dev/null || echo "Rust check skipped"'
-          - project: 'projects/mcp-servers/java'
-            language: 'java'
+          - project: "projects/mcp-servers/java"
+            language: "java"
             cmd: 'mvn compile -q 2>/dev/null || echo "Maven skipped"'
     steps:
       - uses: actions/checkout@v4

@@ -76,16 +76,17 @@ status: completed
 
 ## Total Impact
 
-| File | Before | After | Saving |
-| ------ | -------- | ------- | -------- |
-| SOUL.md | 5.5KB | 2.0KB | 3.5KB |
-| MASTER_RULES.md | 9.6KB | 5.0KB | 4.6KB |
-| USER.md | 1.3KB | 0.6KB | 0.7KB |
-| MEMORY.md | 2.1KB | 1.5KB | 0.6KB |
-| .hermes.md | 12.3KB | 6.0KB | 6.3KB |
-| AGENTS.md | 9.5KB | 4.0KB | 5.5KB |
-| PROJECT_RULES.md | 7.1KB | 3.0KB | 4.1KB |
-| **Total** | **47.4KB** | **22.1KB** | **~25KB (6,500 tok)** |
+| File             | Before     | After      | Saving                |
+| ---------------- | ---------- | ---------- | --------------------- |
+| SOUL.md          | 5.5KB      | 2.0KB      | 3.5KB                 |
+| MASTER_RULES.md  | 9.6KB      | 5.0KB      | 4.6KB                 |
+| USER.md          | 1.3KB      | 0.6KB      | 0.7KB                 |
+| MEMORY.md        | 2.1KB      | 1.5KB      | 0.6KB                 |
+| .hermes.md       | 12.3KB     | 6.0KB      | 6.3KB                 |
+| AGENTS.md        | 9.5KB      | 4.0KB      | 5.5KB                 |
+| PROJECT_RULES.md | 7.1KB      | 3.0KB      | 4.1KB                 |
+| **Total**        | **47.4KB** | **22.1KB** | **~25KB (6,500 tok)** |
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

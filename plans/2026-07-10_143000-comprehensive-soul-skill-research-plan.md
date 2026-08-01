@@ -36,18 +36,18 @@ Execute a comprehensive multi-phase plan to:
 
 ## Research Files Inventory (28 files, 7 subdirs)
 
-| Subdirectory | Files |
-| -------------- | ------- |
-| `binance-api-tutorial/` | 2 files |
-| `busha-api-tutorial/` | 2 files |
+| Subdirectory                           | Files   |
+| -------------------------------------- | ------- |
+| `binance-api-tutorial/`                | 2 files |
+| `busha-api-tutorial/`                  | 2 files |
 | `cryptocurrency-wallets-api-tutorial/` | 3 files |
-| `face-mask-video-call-tutorial/` | 3 files |
-| `flutterwave-tutorial/` | 1 file |
-| `hermes-agents-tutorial/` | 3 files |
-| `hermes-memory-files/` | 3 files |
-| `paypal-tutorial/` | 2 files |
-| `paystack-tutorial/` | 2 files |
-| `python-asyncio-tutorial/` | 7 files |
+| `face-mask-video-call-tutorial/`       | 3 files |
+| `flutterwave-tutorial/`                | 1 file  |
+| `hermes-agents-tutorial/`              | 3 files |
+| `hermes-memory-files/`                 | 3 files |
+| `paypal-tutorial/`                     | 2 files |
+| `paystack-tutorial/`                   | 2 files |
+| `python-asyncio-tutorial/`             | 7 files |
 
 ---
 
@@ -134,36 +134,36 @@ Execute a comprehensive multi-phase plan to:
 
 **Naming convention:** `<topic>-<source>` or `<category>-<topic>`
 
-| Research File | Proposed Skill Name | Category |
-| --------------- | --------------------- | ---------- |
-| binance-python-api-a-step-by-step-guide.md | `binance-python-api-tutorial` | `development` |
-| official-binance-spot-api-documentation-github.md | `binance-api-reference` | `development` |
-| busha-quick-start-guide.md | `busha-api-quickstart` | `development` |
-| busha-business-api-a-primer.md | `busha-business-api` | `development` |
-| build-crypto-wallets-using-apis-cryptoapis.md | `cryptoapis-wallet-builder` | `development` |
-| crypto-wallet-api-quickstart-generate-wallets-in-10-minutes.md | `crypto-wallet-quickstart` | `development` |
-| the-guide-to-crypto-wallet-apis-for-developers-and-businesses.md | `crypto-wallet-api-guide` | `development` |
-| face-detection-on-video-stream-with-uv4l-raspberry-pi.md | `face-detection-uv4l-pi` | `development` |
-| how-to-automatically-obscure-your-face-during-video-chat-ask.md | `face-obscure-video-chat` | `creative` |
-| how-to-mask-videos-in-vsdc-video-editor.md | `vsdc-video-masking` | `creative` |
-| flutterwave-transfers-api-introduction.md | `flutterwave-transfers-api` | `development` |
-| hermes-agent-build-your-own-learning-ai-worker-networkchuck.md | `hermes-networkchuck-course` | `development` |
-| hermes-agent-deep-dive-build-your-own-guide.md | `hermes-deep-dive-guide` | `development` |
-| hermes-agent-quickstart-guide.md | `hermes-quickstart` | `development` |
-| luma-dock-hermes-memory-architecture.md | `hermes-luma-memory-arch` | `development` |
-| nous-research-hermes-persistent-memory.md | `hermes-persistent-memory` | `development` |
-| nous-research-hermes-personality-soul.md | `hermes-personality-soul` | `development` |
-| how-paypal-works-paypal-us.md | `paypal-how-it-works` | `development` |
-| how-to-get-started-with-paypal.md | `paypal-getting-started` | `development` |
-| getting-started-with-paystack.md | `paystack-getting-started` | `development` |
-| paystack-developer-documentation.md | `paystack-dev-docs` | `development` |
-| asyncio-in-python-full-tutorial-youtube.md | `asyncio-full-tutorial` | `development` |
-| asyncio-in-python-geeksforgeeks.md | `asyncio-geeksforgeeks` | `development` |
-| introduction-to-asyncio-in-python-patricks-software-blog.md | `asyncio-patricks-blog` | `development` |
-| python-asyncio-explained-in-9-minutes-youtube.md | `asyncio-9min-youtube` | `development` |
-| python-asyncio-part-1-basic-concepts-and-patterns.md | `asyncio-part1-basics` | `development` |
-| python-asyncio-complete-guide-to-asynchronous-progr.md | `asyncio-complete-guide` | `development` |
-| pythons-asyncio-a-hands-on-walkthrough.md | `asyncio-hands-on` | `development` |
+| Research File                                                    | Proposed Skill Name           | Category      |
+| ---------------------------------------------------------------- | ----------------------------- | ------------- |
+| binance-python-api-a-step-by-step-guide.md                       | `binance-python-api-tutorial` | `development` |
+| official-binance-spot-api-documentation-github.md                | `binance-api-reference`       | `development` |
+| busha-quick-start-guide.md                                       | `busha-api-quickstart`        | `development` |
+| busha-business-api-a-primer.md                                   | `busha-business-api`          | `development` |
+| build-crypto-wallets-using-apis-cryptoapis.md                    | `cryptoapis-wallet-builder`   | `development` |
+| crypto-wallet-api-quickstart-generate-wallets-in-10-minutes.md   | `crypto-wallet-quickstart`    | `development` |
+| the-guide-to-crypto-wallet-apis-for-developers-and-businesses.md | `crypto-wallet-api-guide`     | `development` |
+| face-detection-on-video-stream-with-uv4l-raspberry-pi.md         | `face-detection-uv4l-pi`      | `development` |
+| how-to-automatically-obscure-your-face-during-video-chat-ask.md  | `face-obscure-video-chat`     | `creative`    |
+| how-to-mask-videos-in-vsdc-video-editor.md                       | `vsdc-video-masking`          | `creative`    |
+| flutterwave-transfers-api-introduction.md                        | `flutterwave-transfers-api`   | `development` |
+| hermes-agent-build-your-own-learning-ai-worker-networkchuck.md   | `hermes-networkchuck-course`  | `development` |
+| hermes-agent-deep-dive-build-your-own-guide.md                   | `hermes-deep-dive-guide`      | `development` |
+| hermes-agent-quickstart-guide.md                                 | `hermes-quickstart`           | `development` |
+| luma-dock-hermes-memory-architecture.md                          | `hermes-luma-memory-arch`     | `development` |
+| nous-research-hermes-persistent-memory.md                        | `hermes-persistent-memory`    | `development` |
+| nous-research-hermes-personality-soul.md                         | `hermes-personality-soul`     | `development` |
+| how-paypal-works-paypal-us.md                                    | `paypal-how-it-works`         | `development` |
+| how-to-get-started-with-paypal.md                                | `paypal-getting-started`      | `development` |
+| getting-started-with-paystack.md                                 | `paystack-getting-started`    | `development` |
+| paystack-developer-documentation.md                              | `paystack-dev-docs`           | `development` |
+| asyncio-in-python-full-tutorial-youtube.md                       | `asyncio-full-tutorial`       | `development` |
+| asyncio-in-python-geeksforgeeks.md                               | `asyncio-geeksforgeeks`       | `development` |
+| introduction-to-asyncio-in-python-patricks-software-blog.md      | `asyncio-patricks-blog`       | `development` |
+| python-asyncio-explained-in-9-minutes-youtube.md                 | `asyncio-9min-youtube`        | `development` |
+| python-asyncio-part-1-basic-concepts-and-patterns.md             | `asyncio-part1-basics`        | `development` |
+| python-asyncio-complete-guide-to-asynchronous-progr.md           | `asyncio-complete-guide`      | `development` |
+| pythons-asyncio-a-hands-on-walkthrough.md                        | `asyncio-hands-on`            | `development` |
 
 ### 3.3 Skill Structure Template
 
@@ -237,15 +237,15 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 
 ## Files Likely to Change
 
-| File | Change Type |
-| ------ | ------------- |
-| `C:\Users\Alexa\AppData\Local\hermes\SOUL.md` | Modify |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\SKILL.md` | Modify |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\references\preferences.md` | Modify |
-| `C:\Users\Alexa\Desktop\SandBox\research\**\*.md` (28 files) | Modify (fixes) |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\<category>\<skill-name>\SKILL.md` (28 new) | Create |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\<category>\<skill-name>\references\*.md` (28+) | Create |
-| `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` | Create |
+| File                                                                                                               | Change Type    |
+| ------------------------------------------------------------------------------------------------------------------ | -------------- |
+| `C:\Users\Alexa\AppData\Local\hermes\SOUL.md`                                                                      | Modify         |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\SKILL.md`                  | Modify         |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\productivity\user-communication-preferences\references\preferences.md` | Modify         |
+| `C:\Users\Alexa\Desktop\SandBox\research\**\*.md` (28 files)                                                       | Modify (fixes) |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\<category>\<skill-name>\SKILL.md` (28 new)                             | Create         |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\<category>\<skill-name>\references\*.md` (28+)                         | Create         |
+| `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py`                                                 | Create         |
 
 ---
 
@@ -280,12 +280,12 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 
 ## ✅ Execution Summary (Completed 2026-07-10)
 
-| Phase | Status | Key Results |
-| ------- | -------- | ------------- |
-| **Phase 1: SOUL.md & User-Comms** | ✅ Done | SOUL.md updated (1,770 chars); user-communication-preferences auto-loads superpowers |
-| **Phase 2: Research Audit** | ✅ Done | 28 files audited; 1 stub replaced with full content; all valid markdown |
-| **Phase 3: Skill Recreation** | ✅ Done | 28 new skills created in `skills/development/` and `skills/creative/` |
-| **Phase 4: Skill-Judge & Remediation** | ✅ Done | **All 23 skills ≥80** (avg 88.5, min 80, max 100) |
+| Phase                                  | Status  | Key Results                                                                          |
+| -------------------------------------- | ------- | ------------------------------------------------------------------------------------ |
+| **Phase 1: SOUL.md & User-Comms**      | ✅ Done | SOUL.md updated (1,770 chars); user-communication-preferences auto-loads superpowers |
+| **Phase 2: Research Audit**            | ✅ Done | 28 files audited; 1 stub replaced with full content; all valid markdown              |
+| **Phase 3: Skill Recreation**          | ✅ Done | 28 new skills created in `skills/development/` and `skills/creative/`                |
+| **Phase 4: Skill-Judge & Remediation** | ✅ Done | **All 23 skills ≥80** (avg 88.5, min 80, max 100)                                    |
 
 ### Final Scores (23 skills evaluated)
 
@@ -297,7 +297,7 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 - 86: asyncio-9min-youtube, asyncio-hands-on-walkthrough, asyncio-hands-on-walkthrough (dup)
 - 83: crypto-wallet-api-guide, hermes-deep-dive-guide, how-paypal-works, paystack-getting-started
 - 80: asyncio-patricks-blog, crypto-wallet-quickstart, hermes-persistent-memory, face-detection-uv4l-pi
-- 76: cryptoapis-wallet-builder (early run), asyncio-patricks-blog (early run) — *both remediated to ≥80*
+- 76: cryptoapis-wallet-builder (early run), asyncio-patricks-blog (early run) — _both remediated to ≥80_
 
 ### Assets Created
 
@@ -311,7 +311,7 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 - `exec-assistant` for SOUL/user-comms config
 - `code-architect` for audit, skill creation, judgment
 
-*All phases completed per plan. Goal achieved.*
+_All phases completed per plan. Goal achieved._
 
 1. **User confirmation** on plan
 2. Switch to `exec-assistant` profile
@@ -324,4 +324,4 @@ Create `C:\Users\Alexa\AppData\Local\hermes\scripts\batch_skill_judge.py` for au
 
 ---
 
-*Plan saved to: `.hermes/plans/2026-07-10_143000-comprehensive-soul-skill-research-plan.md`*
+_Plan saved to: `.hermes/plans/2026-07-10_143000-comprehensive-soul-skill-research-plan.md`_

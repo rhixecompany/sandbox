@@ -67,7 +67,7 @@ One-to-One: Store the related ID in both documents
 { "id": "user_123", "partitionKey": "user_123", "profileId": "profile_456" }
 // Profiles container
 { "id": "profile_456", "partitionKey": "profile_456", "userId": "user_123" }
-````
+```
 
 One-to-Many: Use same partition key for parent-child relationship
 
@@ -90,10 +90,10 @@ Frequently accessed attributes: Denormalize sparingly
 ```json
 // Orders document
 {
-  "customerId": "user_123",
-  "customerName": "John Doe", // Include customer name to avoid lookup
-  "id": "order_789",
-  "partitionKey": "user_123"
+	"customerId": "user_123",
+	"customerName": "John Doe", // Include customer name to avoid lookup
+	"id": "order_789",
+	"partitionKey": "user_123"
 }
 ```
 

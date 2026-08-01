@@ -21,6 +21,7 @@ Fix: merge the language token back onto the opener: ```lang + rest.
 
 Dry-run by default; --apply writes. LF output.
 """
+
 import argparse
 import re
 import sys
@@ -43,16 +44,19 @@ def fix_text(text: str) -> tuple[str, int]:
         if line.strip() == "```" and i + 1 < len(lines):
             nxt = lines[i + 1].rstrip("\r\n")
             m = SIG.match(nxt.strip())
-            if m and len(m.group(1)) <= 12 and not nxt.strip().startswith(("```", "~~~")):
-                # ensure the next line is NOT itself a fence closer
-                if nxt.strip() != "```":
-                    lang = m.group(1)
-                    # rebuild: opener with language + content minus the lang token
-                    out.append("```" + lang)
-                    out.append(nxt.strip()[len(lang):])
-                    changes += 1
-                    i += 2
-                    continue
+            if (
+                m
+                and len(m.group(1)) <= 12
+                and not nxt.strip().startswith(("```", "~~~"))
+                and nxt.strip() != "```"  # next line must NOT itself be a fence closer
+            ):
+                lang = m.group(1)
+                # rebuild: opener with language + content minus the lang token
+                out.append("```" + lang)
+                out.append(nxt.strip()[len(lang) :])
+                changes += 1
+                i += 2
+                continue
         out.append(line)
         i += 1
 

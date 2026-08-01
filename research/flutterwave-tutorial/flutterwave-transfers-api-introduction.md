@@ -55,12 +55,12 @@ curl --request GET --url 'https://developersandbox-api.flutterwave.com/transfers
 
 ## Key Endpoints
 
-| Step | Endpoint | Purpose |
-| ------ | ---------- | --------- |
-| 1 | POST /token | Generate auth token |
-| 2 | POST /banks/account-resolve | Validate bank account |
-| 3 | POST /direct-transfers | Initiate transfer |
-| 4 | GET /transfers/{id} | Query status |
+| Step | Endpoint                    | Purpose               |
+| ---- | --------------------------- | --------------------- |
+| 1    | POST /token                 | Generate auth token   |
+| 2    | POST /banks/account-resolve | Validate bank account |
+| 3    | POST /direct-transfers      | Initiate transfer     |
+| 4    | GET /transfers/{id}         | Query status          |
 
 ## Required Headers
 
@@ -71,10 +71,10 @@ curl --request GET --url 'https://developersandbox-api.flutterwave.com/transfers
 
 ## Error Codes
 
-| Code | Type | Description |
-|------|------|-------------|
+| Code   | Type                     | Description                  |
+| ------ | ------------------------ | ---------------------------- |
 | 201409 | REFERENCE_ALREADY_EXISTS | Duplicate transfer reference |
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

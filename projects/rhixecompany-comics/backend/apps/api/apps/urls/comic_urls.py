@@ -1,6 +1,5 @@
-from django.urls import path
-
 from api.apps.views import comic_views as views
+from django.urls import path
 
 app_name = "comics"
 urlpatterns = [

@@ -99,10 +99,7 @@ class MyCustomImageWidget(forms.ClearableFileInput):
         return upload
 
     def value_omitted_from_data(self, data, files, name):
-        return (
-            super().value_omitted_from_data(data, files, name)
-            and self.clear_checkbox_name(name) not in data
-        )
+        return super().value_omitted_from_data(data, files, name) and self.clear_checkbox_name(name) not in data
 
 
 class MyCheckboxSelectMultiple(forms.RadioSelect):
@@ -110,8 +107,8 @@ class MyCheckboxSelectMultiple(forms.RadioSelect):
     input_type = "checkbox"
     template_name = "partials/widgets/checkbox_select.html"
     option_template_name = "partials/widgets/checkbox_option.html"
-    # template_name = "django/forms/widgets/checkbox_select.html" # noqa: ERA001
-    # option_template_name = "django/forms/widgets/checkbox_option.html" # noqa: ERA001
+    # template_name = "django/forms/widgets/checkbox_select.html"
+    # option_template_name = "django/forms/widgets/checkbox_option.html"
 
     def use_required_attribute(self, initial):
         # Don't use the 'required' attribute because browser validation would

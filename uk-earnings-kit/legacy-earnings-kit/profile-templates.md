@@ -36,6 +36,7 @@ Under 15k / 15-25k / 25-40k / 40-60k / 60-100k / Over 100k
 **Internet speed:** _______ Mbps (test at speedtest.net)
 
 **Key demographics for matching:**
+
 - Age range: 18-24 / 25-34 / 35-44 / 45-54 / 55+
 - Household income: _____________
 - Children in household: Yes / No / Ages: _________
@@ -60,11 +61,13 @@ Under 15k / 15-25k / 25-40k / 40-60k / 60-100k / Over 100k
 # DataAnnotation.tech — Qualification Prep
 
 The qualification test involves:
+
 - Writing prompts and evaluating AI responses
 - Following detailed style guidelines
 - Demonstrating reasoning and attention to detail
 
 **Tips to pass:**
+
 1. Write in clear, natural English — not robotic
 2. Follow instructions exactly (they test this)
 3. Be thorough in your reasoning
@@ -72,6 +75,7 @@ The qualification test involves:
 5. If coding, write clean, well-commented code
 
 **Good subject areas (pick what you know):**
+
 - Creative writing
 - Coding (Python, JavaScript, etc.)
 - Finance / Accounting

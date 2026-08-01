@@ -4,12 +4,13 @@
 Reads git diff stat for the enhancement commits, plus the ENHANCEMENT_REPORT
 summary, and writes CHANGELOG.json + CHANGELOG.md to .copilot/session-state/.
 """
+
 from __future__ import annotations
 
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -24,7 +25,7 @@ def git(*args: str) -> str:
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    ts = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
     # File-level change stats across the enhancement commits (prompts only)
     stat_lines = git("diff", "--numstat", "04f216e9..228eae32", "--", ".github/prompts/").splitlines()
@@ -36,12 +37,14 @@ def main() -> int:
         added, deleted, path = parts
         if path == "-" or added == "-":
             continue
-        entries.append({
-            "file": path,
-            "additions": int(added),
-            "deletions": int(deleted),
-            "change_type": "modify",
-        })
+        entries.append(
+            {
+                "file": path,
+                "additions": int(added),
+                "deletions": int(deleted),
+                "change_type": "modify",
+            }
+        )
 
     total_add = sum(e["additions"] for e in entries)
     total_del = sum(e["deletions"] for e in entries)
@@ -114,7 +117,7 @@ def main() -> int:
     for s in changelog["special_repairs"]:
         md += f"- {s}\n"
 
-    md += f"\n## Per-File Changes ({len(entries)} files)\n\n| File | + | − |\n|------|---|---|\n"
+    md += f"\n## Per-File Changes ({len(entries)} files)\n\n| File | + | − |\n|------|---|---|\n"  # noqa: RUF001  (minus sign is intentional display char)
     for e in sorted(entries, key=lambda x: -x["additions"])[:200]:
         md += f"| `{e['file']}` | {e['additions']} | {e['deletions']} |\n"
     if len(entries) > 200:
@@ -122,9 +125,18 @@ def main() -> int:
 
     (OUT_DIR / "CHANGELOG.md").write_text(md, encoding="utf-8")
 
-    print(json.dumps({"files_changed": len(entries), "additions": total_add, "deletions": total_del,
-                      "changelog_json": (OUT_DIR / "CHANGELOG.json").stat().st_size,
-                      "changelog_md": (OUT_DIR / "CHANGELOG.md").stat().st_size}, indent=2))
+    print(
+        json.dumps(
+            {
+                "files_changed": len(entries),
+                "additions": total_add,
+                "deletions": total_del,
+                "changelog_json": (OUT_DIR / "CHANGELOG.json").stat().st_size,
+                "changelog_md": (OUT_DIR / "CHANGELOG.md").stat().st_size,
+            },
+            indent=2,
+        )
+    )
     return 0
 
 

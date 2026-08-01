@@ -18,6 +18,7 @@ This script:
 
 Safe: --dry-run by default. Pass --apply to write.
 """
+
 import argparse
 import re
 import sys

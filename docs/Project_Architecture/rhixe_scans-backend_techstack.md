@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Backend) |
+| Category    | Technology                                 |
+| ----------- | ------------------------------------------ |
+| **Type**    | Python/Django (Backend)                    |
 | **Pattern** | Django REST API backend for scans platform |
-| **Stack** | Django, Python, DRF |
+| **Stack**   | Django, Python, DRF                        |
 
 ## Development Tools
 

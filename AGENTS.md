@@ -23,7 +23,7 @@ SandBox/
 │   ├── mcp-servers/         # Multi-language MCP server implementations
 │   ├── Python-projects/     # 18 standalone Python scripts
 │   └── ...                  # 10+ additional subprojects
-├── scripts/                 # 100+ Python/Files management/automation scripts
+├── scripts/                 # Pointer README — canonical scripts live in ~/AppData/Local/hermes/scripts/
 ├── docs/                    # Documentation, architecture blueprints, audits
 ├── .hermes/                 # Hermes session state, plans, audits
 ├── .vscode/                 # VS Code workspace settings
@@ -39,27 +39,27 @@ SandBox/
 
 ## 2. Technology Stack
 
-| Layer | Technology | Notes |
-|-------|-----------|-------|
-| **Runtime (TS)** | Bun 1.3.14+ | Runtime + package manager + test runner. DO NOT use npm/pnpm unless project says otherwise |
-| **Runtime (Python)** | Python 3.11 / 3.13 | Dual install: python3=3.13.14, python=3.11.15 (venv). PEP 668 enforced |
-| **Python Package Mgr** | pip + uv | Requirements in `requirements.txt`. Prefer uv for speed |
-| **TypeScript** | ESNext target, strict mode | `tsconfig.json` — `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, `Preserve` modules |
-| **Python Quality** | Ruff + Pyright | Ruff for lint/format (select E,F,I,N,W,UP,B), Pyright for typecheck |
-| **JS Linting** | ESLint 10 flat config | `eslint.config.mts` — zero-warning gate (`--max-warnings=0`) |
-| **Formatter** | Prettier 3 | `.prettierrc.json` / `.prettierrc.ts` |
-| **Markdown** | markdownlint-cli2 | `.markdownlintrc.json` — MD013 line_length=500, fenced backtick style |
-| **Spell Check** | cspell 10 | `cspell.json` |
-| **Testing (TS)** | Vitest | `bun run test` or `vitest run` |
-| **Testing (Python)** | pytest 9 | `pytest` with `pytest-asyncio` |
-| **Browser Testing** | Playwright | `.github/prompts/playwright-*.prompt.md` patterns |
-| **Pre-commit** | pre-commit 4.6 | `.pre-commit-config.yaml` |
-| **Changelog** | git-cliff 2.13 | `cliff.toml` |
-| **EditorConfig** | `.editorconfig` | indent_style=tab, indent_size=2, end_of_line=crlf, charset=utf-8 |
-| **DB ORM (TS projects)** | Drizzle (Banking) / Prisma (comicwise) | Schema in `src/db/schema.ts` or `prisma/schema.prisma` |
-| **DB ORM (Python)** | Django ORM (ecom) | Migrations via `manage.py makemigrations` |
-| **CI/CD** | GitHub Actions | `.github/workflows/` shared across workspace |
-| **Infra** | Docker Compose | For multi-container apps (Banking, ecom, comicwise) |
+| Layer                    | Technology                             | Notes                                                                                      |
+| ------------------------ | -------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Runtime (TS)**         | Bun 1.3.14+                            | Runtime + package manager + test runner. DO NOT use npm/pnpm unless project says otherwise |
+| **Runtime (Python)**     | Python 3.11 / 3.13                     | Dual install: python3=3.13.14, python=3.11.15 (venv). PEP 668 enforced                     |
+| **Python Package Mgr**   | pip + uv                               | Requirements in `requirements.txt`. Prefer uv for speed                                    |
+| **TypeScript**           | ESNext target, strict mode             | `tsconfig.json` — `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, `Preserve` modules   |
+| **Python Quality**       | Ruff + Pyright                         | Ruff for lint/format (select E,F,I,N,W,UP,B), Pyright for typecheck                        |
+| **JS Linting**           | ESLint 10 flat config                  | `eslint.config.mts` — zero-warning gate (`--max-warnings=0`)                               |
+| **Formatter**            | Prettier 3                             | `.prettierrc.json` / `.prettierrc.ts`                                                      |
+| **Markdown**             | markdownlint-cli2                      | `.markdownlintrc.json` — MD013 line_length=500, fenced backtick style                      |
+| **Spell Check**          | cspell 10                              | `cspell.json`                                                                              |
+| **Testing (TS)**         | Vitest                                 | `bun run test` or `vitest run`                                                             |
+| **Testing (Python)**     | pytest 9                               | `pytest` with `pytest-asyncio`                                                             |
+| **Browser Testing**      | Playwright                             | `.github/prompts/playwright-*.prompt.md` patterns                                          |
+| **Pre-commit**           | pre-commit 4.6                         | `.pre-commit-config.yaml`                                                                  |
+| **Changelog**            | git-cliff 2.13                         | `cliff.toml`                                                                               |
+| **EditorConfig**         | `.editorconfig`                        | indent_style=tab, indent_size=2, end_of_line=crlf, charset=utf-8                           |
+| **DB ORM (TS projects)** | Drizzle (Banking) / Prisma (comicwise) | Schema in `src/db/schema.ts` or `prisma/schema.prisma`                                     |
+| **DB ORM (Python)**      | Django ORM (ecom)                      | Migrations via `manage.py makemigrations`                                                  |
+| **CI/CD**                | GitHub Actions                         | `.github/workflows/` shared across workspace                                               |
+| **Infra**                | Docker Compose                         | For multi-container apps (Banking, ecom, comicwise)                                        |
 
 ### Python Toolchain Detail
 
@@ -84,17 +84,17 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 
 ### Key Components
 
-| Component | Path | Stack | Purpose |
-|-----------|------|-------|---------|
-| **Bash Toolkit** | `projects/Bash/` | Bun/TS + PowerShell + Bash | Multi-phase automation pipeline (discover → clone → triage → debug → remediation → cross-ref) |
-| **Banking App** | `projects/Banking/` | Next.js 16, Drizzle ORM, Plaid, Dwolla | Full-stack fintech dashboard with transaction management |
-| **Comicwise** | `projects/comicwise/` | Next.js 15, Prisma, Stripe | Digital comic storefront with subscription management |
-| **Ecom** | `projects/ecom/` | Django REST + React/Redux, PayPal | Dual-stack ecommerce platform |
-| **MCP Servers** | `projects/mcp-servers/` | 10 languages (TS, Python, Go, Rust, Java, Kotlin, PHP, Ruby, Swift, C#) | Reference MCP server implementations |
-| **Python Scripts** | `projects/Python-projects/` | Python 3.x | 18 standalone beginner-to-intermediate scripts |
-| **Prompt Library** | `.github/prompts/` | Markdown + YAML frontmatter | 190+ canonical prompt templates |
-| **Workspace Scripts** | `scripts/` | Python | 100+ automation scripts for Hermes maintenance, audits, tooling |
-| **Documentation** | `docs/` | Markdown | Architecture blueprints, audits, references, research |
+| Component             | Path                              | Stack                                                                   | Purpose                                                                                                   |
+| --------------------- | --------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Bash Toolkit**      | `projects/Bash/`                  | Bun/TS + PowerShell + Bash                                              | Multi-phase automation pipeline (discover → clone → triage → debug → remediation → cross-ref)             |
+| **Banking App**       | `projects/Banking/`               | Next.js 16, Drizzle ORM, Plaid, Dwolla                                  | Full-stack fintech dashboard with transaction management                                                  |
+| **Comicwise**         | `projects/comicwise/`             | Next.js 15, Prisma, Stripe                                              | Digital comic storefront with subscription management                                                     |
+| **Ecom**              | `projects/ecom/`                  | Django REST + React/Redux, PayPal                                       | Dual-stack ecommerce platform                                                                             |
+| **MCP Servers**       | `projects/mcp-servers/`           | 10 languages (TS, Python, Go, Rust, Java, Kotlin, PHP, Ruby, Swift, C#) | Reference MCP server implementations                                                                      |
+| **Python Scripts**    | `projects/Python-projects/`       | Python 3.x                                                              | 18 standalone beginner-to-intermediate scripts                                                            |
+| **Prompt Library**    | `.github/prompts/`                | Markdown + YAML frontmatter                                             | 190+ canonical prompt templates                                                                           |
+| **Workspace Scripts** | `~/AppData/Local/hermes/scripts/` | Python                                                                  | 100+ automation scripts for Hermes maintenance, audits, tooling (canonical; repo `scripts/` is a pointer) |
+| **Documentation**     | `docs/`                           | Markdown                                                                | Architecture blueprints, audits, references, research                                                     |
 
 ### Cross-Component Communication
 
@@ -112,13 +112,13 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 
 ### Data Flow Patterns
 
-| Pattern | Example | Description |
-|---------|---------|-------------|
-| **Phase Pipeline** | `projects/Bash/` | Sequential 6-phase: Discovery → Clone → Triage → Debug → Remediation → Cross-Reference |
-| **Full-Stack API** | `projects/Banking/` | Next.js App Router → Drizzle ORM → PostgreSQL; Plaid/Dwolla webhooks |
-| **Dual-Stack** | `projects/ecom/` | Django REST API (`:8000`) + React frontend (`:3000`) proxied in dev |
-| **Subscription** | `projects/comicwise/` | Next.js → Prisma → PostgreSQL; Stripe recurring payments via webhooks |
-| **Standalone Script** | `projects/Python-projects/` | Single-file, no framework, shared `requirements.txt` |
+| Pattern               | Example                     | Description                                                                            |
+| --------------------- | --------------------------- | -------------------------------------------------------------------------------------- |
+| **Phase Pipeline**    | `projects/Bash/`            | Sequential 6-phase: Discovery → Clone → Triage → Debug → Remediation → Cross-Reference |
+| **Full-Stack API**    | `projects/Banking/`         | Next.js App Router → Drizzle ORM → PostgreSQL; Plaid/Dwolla webhooks                   |
+| **Dual-Stack**        | `projects/ecom/`            | Django REST API (`:8000`) + React frontend (`:3000`) proxied in dev                    |
+| **Subscription**      | `projects/comicwise/`       | Next.js → Prisma → PostgreSQL; Stripe recurring payments via webhooks                  |
+| **Standalone Script** | `projects/Python-projects/` | Single-file, no framework, shared `requirements.txt`                                   |
 
 ---
 
@@ -126,25 +126,25 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 
 Each subproject is self-contained with its own `AGENTS.md`. Brief reference:
 
-| Project | Type | Entry Point | Test Command |
-|---------|------|-------------|-------------|
-| `Bash/` | TS automation | `src/` scripts, `orchestrator-unified.ps1` | `bun run test`, `bash test-all.sh` |
-| `Banking/` | Next.js fintech | `src/app/` App Router | `npm run test` |
-| `comicwise/` | Next.js comics | `src/app/` App Router | `npm run test` |
-| `ecom/` | Django + React | `backend/manage.py`, `frontend/` | `python manage.py test`, `npm test` |
-| `mcp-servers/` | Multi-language MCP | Per-language subdirectory | Per-language build system |
-| `Python-projects/` | Python scripts | Standalone `.py` files | Manual (`ruff check`, `mypy`) |
-| `cookiecutter-django-tailwind/` | Django template | Cookiecutter scaffold | Follow project README |
-| `Django-Scrapy-Selenium/` | Scrapy/Selenium | Per-usage | Per-usage |
-| `Resume_maker/` | TS resume gen | `src/` | `bun run test` |
-| `rhixe_scans/` | TBD | Check project README | Check project README |
-| `rhixecompany-comics/` | TBD | Check project README | Check project README |
-| `selenium_webdriver/` | Selenium automation | Standalone | Manual |
-| `university-libary-jsm/` | Library system | Check project README | Check project README |
-| `xamehi/`, `xamehi.tv/` | Media projects | Check project README | Check project README |
-| `youtube-downloader/` | YouTube tool | Check project README | Check project README |
-| `profile/` | Profile config | Check project README | Check project README |
-| `docs/` | Documentation | Markdown files | N/A |
+| Project                         | Type                | Entry Point                                | Test Command                        |
+| ------------------------------- | ------------------- | ------------------------------------------ | ----------------------------------- |
+| `Bash/`                         | TS automation       | `src/` scripts, `orchestrator-unified.ps1` | `bun run test`, `bash test-all.sh`  |
+| `Banking/`                      | Next.js fintech     | `src/app/` App Router                      | `npm run test`                      |
+| `comicwise/`                    | Next.js comics      | `src/app/` App Router                      | `npm run test`                      |
+| `ecom/`                         | Django + React      | `backend/manage.py`, `frontend/`           | `python manage.py test`, `npm test` |
+| `mcp-servers/`                  | Multi-language MCP  | Per-language subdirectory                  | Per-language build system           |
+| `Python-projects/`              | Python scripts      | Standalone `.py` files                     | Manual (`ruff check`, `mypy`)       |
+| `cookiecutter-django-tailwind/` | Django template     | Cookiecutter scaffold                      | Follow project README               |
+| `Django-Scrapy-Selenium/`       | Scrapy/Selenium     | Per-usage                                  | Per-usage                           |
+| `Resume_maker/`                 | TS resume gen       | `src/`                                     | `bun run test`                      |
+| `rhixe_scans/`                  | TBD                 | Check project README                       | Check project README                |
+| `rhixecompany-comics/`          | TBD                 | Check project README                       | Check project README                |
+| `selenium_webdriver/`           | Selenium automation | Standalone                                 | Manual                              |
+| `university-libary-jsm/`        | Library system      | Check project README                       | Check project README                |
+| `xamehi/`, `xamehi.tv/`         | Media projects      | Check project README                       | Check project README                |
+| `youtube-downloader/`           | YouTube tool        | Check project README                       | Check project README                |
+| `profile/`                      | Profile config      | Check project README                       | Check project README                |
+| `docs/`                         | Documentation       | Markdown files                             | N/A                                 |
 
 ---
 
@@ -159,9 +159,9 @@ python -m venv venv
 source venv/Scripts/activate  # or .venv/Scripts/activate
 pip install -r requirements.txt
 
-# Run root-level Python scripts
-python scripts/health_check.py
-python scripts/build_registry.py
+# Run root-level Python scripts (canonical location)
+python ~/AppData/Local/hermes/scripts/health_check.py
+python ~/AppData/Local/hermes/scripts/build_registry.py
 
 # Bun/TypeScript (workspace root - minimal)
 bun install
@@ -283,14 +283,14 @@ bun run src/server.ts
 
 ### File Naming
 
-| Language | Convention | Example |
-|----------|-----------|---------|
-| TypeScript | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx` |
-| Python | `snake_case.py` (PEP 8) | `health_check.py`, `audit_prompts.py` |
-| PowerShell | `PascalCase.ps1` | `Orchestrator-Unified.ps1`, `Disk-Analysis.ps1` |
-| Shell (Bash) | `kebab-case.sh` | `test-all.sh`, `cache-clean.sh` |
-| Batch | `kebab-case.bat` | `cache-clean.bat`, `upgrade.bat` |
-| Markdown | `kebab-case.md` | `health-check.md`, `research-report.md` |
+| Language     | Convention                                               | Example                                         |
+| ------------ | -------------------------------------------------------- | ----------------------------------------------- |
+| TypeScript   | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`             |
+| Python       | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py`           |
+| PowerShell   | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`, `Disk-Analysis.ps1` |
+| Shell (Bash) | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`                 |
+| Batch        | `kebab-case.bat`                                         | `cache-clean.bat`, `upgrade.bat`                |
+| Markdown     | `kebab-case.md`                                          | `health-check.md`, `research-report.md`         |
 
 ### Code Style
 
@@ -304,7 +304,9 @@ bun run src/server.ts
 ### Multi-Wrapper Parity
 
 Every script that could run cross-platform MUST have three wrappers:
+
 ```bash
+# Canonical: ~/AppData/Local/hermes/scripts/
 scripts/operation.sh     # Bash (Linux/WSL/Git Bash)
 scripts/operation.ps1    # PowerShell (Windows)
 scripts/operation.bat    # Batch (Windows fallback)
@@ -315,15 +317,15 @@ scripts/operation.bat    # Batch (Windows fallback)
 ```jsonc
 // tsconfig.json — root
 {
-  "compilerOptions": {
-    "strict": true,
-    "noUncheckedIndexedAccess": true,   // Must check array/object access
-    "noImplicitOverride": true,         // Must use `override` keyword
-    "verbatimModuleSyntax": true,       // import type { X } syntax
-    "moduleDetection": "force",
-    "noFallthroughCasesInSwitch": true,
-    "allowImportingTsExtensions": true  // Use .ts extension in imports
-  }
+	"compilerOptions": {
+		"strict": true,
+		"noUncheckedIndexedAccess": true, // Must check array/object access
+		"noImplicitOverride": true, // Must use `override` keyword
+		"verbatimModuleSyntax": true, // import type { X } syntax
+		"moduleDetection": "force",
+		"noFallthroughCasesInSwitch": true,
+		"allowImportingTsExtensions": true, // Use .ts extension in imports
+	},
 }
 ```
 
@@ -375,24 +377,24 @@ Examples:
 
 Before using native tools (terminal commands, direct file access), check MCP servers. The workspace has **16 active MCP servers** configured:
 
-| Priority | MCP Server | Equivalent Native | Purpose |
-|----------|-----------|-------------------|---------|
-| 1 | `filesystem` | `read_file`, `write_file`, `search_files`, `patch` | File read/write/stat/search ops |
-| 2 | `github` | `gh` CLI | PR, issues, file contents, repos |
-| 3 | `ast-grep` | `grep`/`rg` | AST-based code search and replace |
-| 4 | `playwright` | `browser_*` tools | Browser automation for interactive pages |
-| 5 | `fetch` | `curl` | HTTP web page content extraction |
-| 6 | `sequential-thinking` | N/A | Structured multi-step reasoning |
-| 7 | `code-sandbox` | `terminal` | Isolated Node.js sandbox for running code |
-| 8 | `mcp-docker` | `docker` CLI | Container management + GitHub ops |
-| 9 | `memory` | N/A | Persistent cross-session memory |
-| 10 | `python-quality` | Manual | Ruff lint + Pyright typecheck on Python files |
-| 11 | `tooling-lint` | Manual | ESLint, Prettier, markdownlint, cspell |
-| 12 | `tooling-config` | Manual | pre-commit, git-cliff, .gitignore validation |
-| 13 | `copilot-mcp` | Copilot CLI | Copilot provider operations |
-| 14 | `mindstudio` | N/A | Third-party integrations (Gmail, Google, Slack, Notion) |
-| 15 | `smithery` | N/A | MCP registry and discovery |
-| 16 | `linear` | `linear` CLI | Project management |
+| Priority | MCP Server            | Equivalent Native                                  | Purpose                                                 |
+| -------- | --------------------- | -------------------------------------------------- | ------------------------------------------------------- |
+| 1        | `filesystem`          | `read_file`, `write_file`, `search_files`, `patch` | File read/write/stat/search ops                         |
+| 2        | `github`              | `gh` CLI                                           | PR, issues, file contents, repos                        |
+| 3        | `ast-grep`            | `grep`/`rg`                                        | AST-based code search and replace                       |
+| 4        | `playwright`          | `browser_*` tools                                  | Browser automation for interactive pages                |
+| 5        | `fetch`               | `curl`                                             | HTTP web page content extraction                        |
+| 6        | `sequential-thinking` | N/A                                                | Structured multi-step reasoning                         |
+| 7        | `code-sandbox`        | `terminal`                                         | Isolated Node.js sandbox for running code               |
+| 8        | `mcp-docker`          | `docker` CLI                                       | Container management + GitHub ops                       |
+| 9        | `memory`              | N/A                                                | Persistent cross-session memory                         |
+| 10       | `python-quality`      | Manual                                             | Ruff lint + Pyright typecheck on Python files           |
+| 11       | `tooling-lint`        | Manual                                             | ESLint, Prettier, markdownlint, cspell                  |
+| 12       | `tooling-config`      | Manual                                             | pre-commit, git-cliff, .gitignore validation            |
+| 13       | `copilot-mcp`         | Copilot CLI                                        | Copilot provider operations                             |
+| 14       | `mindstudio`          | N/A                                                | Third-party integrations (Gmail, Google, Slack, Notion) |
+| 15       | `smithery`            | N/A                                                | MCP registry and discovery                              |
+| 16       | `linear`              | `linear` CLI                                       | Project management                                      |
 
 ### When to Use Native Tools Instead
 
@@ -420,16 +422,16 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Key Prompt Categories
 
-| Category | Example Files | Purpose |
-|----------|--------------|---------|
+| Category         | Example Files                                                                                                                                    | Purpose                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
 | **Architecture** | `architecture-blueprint-generator.prompt.md`, `folder-structure-blueprint-generator.prompt.md`, `technology-stack-blueprint-generator.prompt.md` | Generate architecture docs |
-| **Generator** | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md` | Generate agent guidance |
-| **Dev** | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md` | Development workflows |
-| **Testing** | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md` | Test generation |
-| **DevOps** | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md` | Infrastructure |
-| **Planning** | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md` | Project planning |
-| **Content** | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md` | Content creation |
-| **Copilot** | `github-copilot-starter.prompt.md`, `copilot-instructions-blueprint-generator.prompt.md` | Copilot configuration |
+| **Generator**    | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md`                                                | Generate agent guidance    |
+| **Dev**          | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md`                                                                      | Development workflows      |
+| **Testing**      | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md`                                                       | Test generation            |
+| **DevOps**       | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md`                         | Infrastructure             |
+| **Planning**     | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md`                                                  | Project planning           |
+| **Content**      | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md`                                                                   | Content creation           |
+| **Copilot**      | `github-copilot-starter.prompt.md`, `copilot-instructions-blueprint-generator.prompt.md`                                                         | Copilot configuration      |
 
 ### Rules for Prompt Files
 
@@ -445,15 +447,15 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Profile Configuration
 
-| Profile | Model | Provider | Use Case |
-|---------|-------|----------|----------|
-| default | deepseek-v4-flash-free | opencode-zen | General purpose |
-| alexa | google/gemma-4-31b-it:free | openrouter | Operations/DevOps |
-| code-architect | google/gemma-4-31b-it:free | openrouter | Code, debugging, refactoring |
-| creative-director | google/gemma-4-31b-it:free | openrouter | Design, content creation |
-| exec-assistant | google/gemma-4-31b-it:free | openrouter | Planning, administration |
-| patient-tutor | google/gemma-4-31b-it:free | openrouter | Tutorials, explanations |
-| research-analyst | google/gemma-4-31b-it:free | openrouter | Research, synthesis |
+| Profile           | Model                      | Provider     | Use Case                     |
+| ----------------- | -------------------------- | ------------ | ---------------------------- |
+| default           | deepseek-v4-flash-free     | opencode-zen | General purpose              |
+| alexa             | google/gemma-4-31b-it:free | openrouter   | Operations/DevOps            |
+| code-architect    | google/gemma-4-31b-it:free | openrouter   | Code, debugging, refactoring |
+| creative-director | google/gemma-4-31b-it:free | openrouter   | Design, content creation     |
+| exec-assistant    | google/gemma-4-31b-it:free | openrouter   | Planning, administration     |
+| patient-tutor     | google/gemma-4-31b-it:free | openrouter   | Tutorials, explanations      |
+| research-analyst  | google/gemma-4-31b-it:free | openrouter   | Research, synthesis          |
 
 ### Session Startup Sequence
 
@@ -471,14 +473,14 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### File Hierarchy (Precedence Order)
 
-| # | File | Purpose | Authority |
-|---|------|---------|-----------|
-| 1 | `.hermes.md` | Hermes-specific overrides | Highest — overrides all below |
-| 2 | `AGENTS.md` | General agent guidance | This file |
-| 3 | `PROJECT_RULES.md` | Workspace-level rules | Rules |
-| 4 | `MASTER_RULES.md` | Universal agent rules | Cross-project rules |
-| 5 | `CLAUDE.md` | Claude-specific behavior | Copilot/Claude only |
-| 6 | `.cursorrules` | Cursor IDE rules | Cursor IDE only |
+| #   | File               | Purpose                   | Authority                     |
+| --- | ------------------ | ------------------------- | ----------------------------- |
+| 1   | `.hermes.md`       | Hermes-specific overrides | Highest — overrides all below |
+| 2   | `AGENTS.md`        | General agent guidance    | This file                     |
+| 3   | `PROJECT_RULES.md` | Workspace-level rules     | Rules                         |
+| 4   | `MASTER_RULES.md`  | Universal agent rules     | Cross-project rules           |
+| 5   | `CLAUDE.md`        | Claude-specific behavior  | Copilot/Claude only           |
+| 6   | `.cursorrules`     | Cursor IDE rules          | Cursor IDE only               |
 
 ### Available Hermes Toolsets (16)
 
@@ -553,15 +555,15 @@ npm run dev -- --inspect
 
 ## 12. Known Issues & Pitfalls
 
-| Issue | Affects | Workaround |
-|-------|---------|------------|
-| CRLF line endings in shell scripts | Windows Git Bash | Scripts need `#!/bin/bash` and LF endings — check `.gitattributes` |
-| `pip install -e file:///...` in requirements.txt | Workspace root | The editable install path is absolute to `C:\Users\Alexa\...`; use `venv/` |
-| Bun + Windows path translation | Workspace root | MSYS2 paths (`/c/Users/...`) vs Windows paths (`C:\Users\...`) — prefer absolute Windows paths |
-| Copilot context overflow | All agents with ~652 skills | Use `--disable-builtin-mcps` and `--no-custom-instructions` flags |
-| `projects/**` excluded from markdownlint | Workspace markdown | Subproject markdown is linted independently in each project |
-| Dual Python installs (3.13 vs 3.11) | Python scripts | Always activate venv; `python` is 3.11, `python3` is 3.13 |
-| `ruff check .` vs `ruff format .` | Python | These are separate commands — lint ≠ format |
+| Issue                                            | Affects                     | Workaround                                                                                     |
+| ------------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------- |
+| CRLF line endings in shell scripts               | Windows Git Bash            | Scripts need `#!/bin/bash` and LF endings — check `.gitattributes`                             |
+| `pip install -e file:///...` in requirements.txt | Workspace root              | The editable install path is absolute to `C:\Users\Alexa\...`; use `venv/`                     |
+| Bun + Windows path translation                   | Workspace root              | MSYS2 paths (`/c/Users/...`) vs Windows paths (`C:\Users\...`) — prefer absolute Windows paths |
+| Copilot context overflow                         | All agents with ~652 skills | Use `--disable-builtin-mcps` and `--no-custom-instructions` flags                              |
+| `projects/**` excluded from markdownlint         | Workspace markdown          | Subproject markdown is linted independently in each project                                    |
+| Dual Python installs (3.13 vs 3.11)              | Python scripts              | Always activate venv; `python` is 3.11, `python3` is 3.13                                      |
+| `ruff check .` vs `ruff format .`                | Python                      | These are separate commands — lint ≠ format                                                    |
 
 ---
 
@@ -578,7 +580,7 @@ npm run dev -- --inspect
 # - Uses `argparse` or `fire` for CLI
 # - Type hints on all function signatures
 
-# Example from scripts/health_check.py:
+# Example from ~/AppData/Local/hermes/scripts/health_check.py:
 def check_provider(provider_name: str) -> dict[str, bool]:
     ...
 ```

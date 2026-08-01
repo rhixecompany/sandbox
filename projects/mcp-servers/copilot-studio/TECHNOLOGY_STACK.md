@@ -21,11 +21,13 @@
 ## Architecture
 
 **Pattern:** MCP Server with HTTP/Streamable Transport for Power Platform integration
+
 - **Transport:** HTTP (not STDIO) — enables Copilot Studio connection
 - **Auth:** OAuth 2.0 / Managed Identity for Dataverse
 - **API:** Microsoft Dataverse Web API
 
 ### Project Structure
+
 ```
 mcp-servers/copilot-studio/
 ├── src/
@@ -48,6 +50,7 @@ mcp-servers/copilot-studio/
 ## Dependencies (`package.json`)
 
 ### Production
+
 ```json
 {
   "dependencies": {
@@ -60,6 +63,7 @@ mcp-servers/copilot-studio/
 ```
 
 ### Development
+
 ```json
 {
   "devDependencies": {
@@ -96,6 +100,7 @@ Copilot Studio ──HTTP──▶ Express Server ──MCP Protocol──▶ Da
 ```
 
 ### Endpoints
+
 - `POST /mcp` — MCP protocol messages (initialize, tools/list, tools/call, etc.)
 - `GET /health` — Health check
 - `GET /.well-known/mcp` — Server discovery

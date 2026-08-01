@@ -50,4 +50,5 @@ Extracted from `apple-appstore-reviewer.prompt.md`.
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

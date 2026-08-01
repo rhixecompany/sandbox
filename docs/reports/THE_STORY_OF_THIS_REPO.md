@@ -61,6 +61,7 @@ Three comic projects. Three scraping projects. Two Django+React hybrids.
 **The realization:** `rhixecompany-comics` was trying to be the unified platform. `comicwise` and `rhixe_scans` were feature forks that never merged back. `Django-Scrapy-Selenium` and `selenium_webdriver` did the same thing in different languages on different runtimes.
 
 The consolidation plan was born (P1 priority, still open):
+
 - Merge `comicwise` + `Django-Scrapy-Selenium` + `selenium_webdriver` → `rhixecompany-comics`
 - Migrate `xamehi` (dual backend) into the same stack
 - One comic platform. One scraping pipeline. One codebase.
@@ -72,6 +73,7 @@ The consolidation plan was born (P1 priority, still open):
 The repository discovered prompt engineering. `.github/prompts/` grew from 12 files to 170+.
 
 Each prompt a specialist:
+
 - `repo.prompt.md` — "Research all 17 projects"
 - `web-research-pipeline.prompt.md` — "Search, extract, synthesize"
 - `create-implementation-plan.prompt.md` — "Break down, specify, execute"
@@ -102,6 +104,7 @@ profiles:
 Sixteen MCP servers connected: GitHub, Playwright, Sequential Thinking, Filesystem, Memory, Code Sandbox, Tavily, Python Quality, Tooling Lint, Docker, Copilot, MindStudio, Smithery, Fetch, AST-Grep, Linear.
 
 The agent didn't just answer questions. It *did* things:
+
 - Created 17 `RESEARCH_REPORT.md` files in one session (`ce2ce7a7`)
 - Fixed 170+ prompt frontmatter corruptions (`a5ca06b0`)
 - Migrated `Bash/` and `Resume_maker/` from root to `projects/` (`734113eb`)
@@ -114,13 +117,17 @@ The agent didn't just answer questions. It *did* things:
 Three converging efforts:
 
 ### 1. Branch Normalization
+
 Every project had accumulated `chore/workspace-maintenance-20260716` branches. Some had `master` remotes. The root had three branches. July 25: **all 17 projects + root normalized to `development` + `production` only.** Legacy branches purged locally and remotely.
 
 ### 2. Ignore File Audit
+
 `.gitignore` files were chaos — some 1300 lines (generated templates), some missing entirely. Root `.gitignore` expanded from 23 lines to 60+. `mcp-servers` and `docs` got their first `.gitignore`s. `rhixe_scans` replaced its 1375-line generated monster with 20 curated lines.
 
 ### 3. Dependency Health
+
 `bun audit` across 9 TypeScript projects. Critical findings:
+
 - `markdown-pdf` in `Resume_maker` — HIGH (XSS → local file read)
 - `@hono/node-server` in `Banking` — MODERATE (path traversal on Windows)
 - `valibot`, `brace-expansion`, `qs`, `tough-cookie` — moderate DoS vectors
@@ -136,6 +143,7 @@ A side quest that became a main character.
 **User:** "I'm in the UK. I want to earn money. Find me better sites than Outlier and Attapoll."
 
 **Agent:** Ran 5 Tavily deep researches over 3 sessions. Built a 14-file kit:
+
 - `UK_EARNING_SITES_MASTER.md` — 346 lines, 4 tiers (AI Training, Freelance, Micro-tasks, Passive)
 - `references/ai_training_platforms.md` — 20 platforms deep-dive
 - `references/platform_links.md` — 30+ direct signup URLs
@@ -151,6 +159,7 @@ The kit lives at `uk-earnings-kit/`. It has its own plan file. Its own session h
 ## Chapter 8: Where We Are (July 25, 2025)
 
 ### The Numbers
+
 - **17 projects** under `projects/`
 - **170+ prompts** in `.github/prompts/`
 - **18 CI workflows** in `.github/workflows/`
@@ -160,6 +169,7 @@ The kit lives at `uk-earnings-kit/`. It has its own plan file. Its own session h
 - **3 contributors** (human + 2 AI personas)
 
 ### Active Workstreams
+
 | Priority | Workstream | Status |
 |----------|------------|--------|
 | P1 | Comic platform consolidation | Planning |
@@ -170,6 +180,7 @@ The kit lives at `uk-earnings-kit/`. It has its own plan file. Its own session h
 | P6 | Full CI coverage | 🔄 8/17 projects |
 
 ### The Unfinished Stories
+
 - `ecom` on Django 3.1 — security liability
 - `xamehi` dual-backend — architectural dead end
 - `mcp-servers` — 10 languages, 0 CI
@@ -183,6 +194,7 @@ The kit lives at `uk-earnings-kit/`. It has its own plan file. Its own session h
 This was supposed to be a sandbox. A place to try things and throw them away.
 
 Instead it became a city:
+
 - Districts with different languages, different laws
 - Infrastructure (CI, prompts, agents) shared across boroughs
 - A transit system (`pr-ci.yml`) that knows which district you're visiting

@@ -11,4 +11,5 @@ Extracted from `Developement.prompt.md`.
 ```
 
 ---
-*Full content in original prompt.*
+
+_Full content in original prompt._

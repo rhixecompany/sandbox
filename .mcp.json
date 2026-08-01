@@ -1,17 +1,11 @@
 {
 	"mcpServers": {
 		"ast-grep": {
-			"args": [
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			],
+			"args": ["-y", "@notprolands/ast-grep-mcp"],
 			"command": "npx"
 		},
 		"fetch": {
-			"args": [
-				"-y",
-				"mcp-server-fetch-typescript"
-			],
+			"args": ["-y", "mcp-server-fetch-typescript"],
 			"command": "npx"
 		},
 		"filesystem": {
@@ -26,20 +20,11 @@
 			"command": "npx"
 		},
 		"github": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-github"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-github"],
 			"command": "npx"
 		},
 		"mcp-docker": {
-			"args": [
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"adminbot"
-			],
+			"args": ["mcp", "gateway", "run", "--profile", "adminbot"],
 			"command": "docker",
 			"env": {
 				"LOCALAPPDATA": "~/AppData\\Local",
@@ -50,24 +35,15 @@
 			}
 		},
 		"memory": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-memory"],
 			"command": "npx"
 		},
 		"playwright": {
-			"args": [
-				"-y",
-				"@playwright/mcp@latest"
-			],
+			"args": ["-y", "@playwright/mcp@latest"],
 			"command": "npx"
 		},
 		"sequential-thinking": {
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
 			"command": "npx"
 		}
 	}

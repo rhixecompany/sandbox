@@ -41,4 +41,4 @@ Bitcoin, Ethereum, Litecoin, Bitcoin Cash, Dogecoin, Dash, and many more.
 
 ---
 
-*Extracted by web-research-pipeline v1.0.0*
+_Extracted by web-research-pipeline v1.0.0_

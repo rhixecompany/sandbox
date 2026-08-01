@@ -14,15 +14,11 @@
 // Replace type
 type BookmarkType = typeof bookmark.$inferSelect;
 export class BookmarkDal extends BaseDal<BookmarkType> {
-  // fix getById to return BookmarkType | null
-  async getById(id: number): Promise<BookmarkType | null> {
-    const result = await db
-      .select()
-      .from(bookmark)
-      .where(eq(bookmark.id, id))
-      .limit(1);
-    return result[0] ?? null;
-  }
+	// fix getById to return BookmarkType | null
+	async getById(id: number): Promise<BookmarkType | null> {
+		const result = await db.select().from(bookmark).where(eq(bookmark.id, id)).limit(1);
+		return result[0] ?? null;
+	}
 }
 // Add at bottom:
 export const bookmarkDal = new BookmarkDal();
@@ -36,19 +32,17 @@ export const bookmarkDal = new BookmarkDal();
 import { chapter, chapterImage } from "@/database/schema";
 type ChapterType = typeof chapter.$inferSelect;
 export class ChapterDal extends BaseDal<ChapterType> {
-  async list(options?: DalOptions & { comicId?: number }) {
-    return db.query.chapter.findMany({
-      where: options?.comicId
-        ? eq(chapter.comicId, options.comicId)
-        : undefined,
-      limit: options?.limit ?? 20,
-      offset: options?.offset ?? 0,
-      orderBy: (c, { asc }) => [asc(c.chapterNumber)],
-      with: {
-        images: { orderBy: (i, { asc }) => [asc(i.pageNumber)] }
-      }
-    });
-  }
+	async list(options?: DalOptions & { comicId?: number }) {
+		return db.query.chapter.findMany({
+			where: options?.comicId ? eq(chapter.comicId, options.comicId) : undefined,
+			limit: options?.limit ?? 20,
+			offset: options?.offset ?? 0,
+			orderBy: (c, { asc }) => [asc(c.chapterNumber)],
+			with: {
+				images: { orderBy: (i, { asc }) => [asc(i.pageNumber)] },
+			},
+		});
+	}
 }
 export const chapterDal = new ChapterDal();
 ```
@@ -149,47 +143,40 @@ const conditions: SQL[] = [];
 eq(comic.status, dbStatus as ComicStatusEnum);
 
 // Add missing actions:
-export async function updateComicAction(
-  id: number,
-  input: unknown
-): Promise<ActionResult<ComicType>> {
-  const session = await auth();
-  if (!session?.user)
-    return { ok: false, error: "Not authenticated" };
-  const parsed = UpdateComicSchema.safeParse(input);
-  if (!parsed.success)
-    return {
-      ok: false,
-      error: parsed.error.errors[0]?.message ?? "Invalid"
-    };
-  try {
-    const comic = await comicDal.update(id, parsed.data);
-    if (!comic) return { ok: false, error: "Comic not found" };
-    revalidatePath("/comics");
-    revalidatePath(`/comics/${id}`);
-    return { ok: true, data: comic };
-  } catch (e) {
-    console.error("[updateComicAction]", e);
-    return { ok: false, error: "Failed to update comic" };
-  }
+export async function updateComicAction(id: number, input: unknown): Promise<ActionResult<ComicType>> {
+	const session = await auth();
+	if (!session?.user) return { ok: false, error: "Not authenticated" };
+	const parsed = UpdateComicSchema.safeParse(input);
+	if (!parsed.success)
+		return {
+			ok: false,
+			error: parsed.error.errors[0]?.message ?? "Invalid",
+		};
+	try {
+		const comic = await comicDal.update(id, parsed.data);
+		if (!comic) return { ok: false, error: "Comic not found" };
+		revalidatePath("/comics");
+		revalidatePath(`/comics/${id}`);
+		return { ok: true, data: comic };
+	} catch (e) {
+		console.error("[updateComicAction]", e);
+		return { ok: false, error: "Failed to update comic" };
+	}
 }
 
-export async function deleteComicAction(
-  id: number
-): Promise<ActionResult<void>> {
-  const session = await auth();
-  const u = session?.user as { role?: unknown };
-  if (typeof u?.role !== "string" || u.role !== "admin")
-    return { ok: false, error: "Forbidden" };
-  try {
-    await comicDal.delete(id);
-    revalidatePath("/comics");
-    revalidatePath("/admin/comics");
-    return { ok: true, data: undefined };
-  } catch (e) {
-    console.error("[deleteComicAction]", e);
-    return { ok: false, error: "Failed to delete comic" };
-  }
+export async function deleteComicAction(id: number): Promise<ActionResult<void>> {
+	const session = await auth();
+	const u = session?.user as { role?: unknown };
+	if (typeof u?.role !== "string" || u.role !== "admin") return { ok: false, error: "Forbidden" };
+	try {
+		await comicDal.delete(id);
+		revalidatePath("/comics");
+		revalidatePath("/admin/comics");
+		return { ok: true, data: undefined };
+	} catch (e) {
+		console.error("[deleteComicAction]", e);
+		return { ok: false, error: "Failed to delete comic" };
+	}
 }
 ```
 

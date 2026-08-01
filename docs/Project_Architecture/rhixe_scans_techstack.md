@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Full-Stack (Next.js + Django) |
-| **Pattern** | Next.js frontend + Django REST backend |
-| **Stack** | Next.js, React, Bun, TypeScript, Tailwind CSS, Django, Python, DRF |
+| Category    | Technology                                                         |
+| ----------- | ------------------------------------------------------------------ |
+| **Type**    | Full-Stack (Next.js + Django)                                      |
+| **Pattern** | Next.js frontend + Django REST backend                             |
+| **Stack**   | Next.js, React, Bun, TypeScript, Tailwind CSS, Django, Python, DRF |
 
 ## Development Tools
 

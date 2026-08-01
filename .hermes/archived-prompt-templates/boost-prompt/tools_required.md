@@ -4,9 +4,9 @@
 
 ## Tools Required
 
-| Tool | Purpose |
-| --- | --- |
-| `joyride_request_human_input` | Interactive user input via VS Code Joyride extension |
+| Tool                             | Purpose                                                       |
+| -------------------------------- | ------------------------------------------------------------- |
+| `joyride_request_human_input`    | Interactive user input via VS Code Joyride extension          |
 | `vscode.env.clipboard.writeText` | Copy text to system clipboard via Joyride (ClojureScript API) |
 
 ### Joyride Setup

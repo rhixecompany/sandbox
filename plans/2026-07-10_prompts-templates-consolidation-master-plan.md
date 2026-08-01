@@ -177,4 +177,5 @@ Make `prompts/` the single source of truth for prompt assets.
 1. Deliverables
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

@@ -150,12 +150,12 @@ If you see errors about missing reflection configuration, create or update `src/
 
 ```json
 [
-  {
-    "name": "com.example.YourClass",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allDeclaredFields": true
-  }
+	{
+		"name": "com.example.YourClass",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true,
+		"allDeclaredFields": true
+	}
 ]
 ```
 
@@ -165,13 +165,9 @@ For missing resources, create `src/main/resources/META-INF/native-image/resource
 
 ```json
 {
-  "resources": {
-    "includes": [
-      { "pattern": "application.properties" },
-      { "pattern": ".*\\.yml" },
-      { "pattern": ".*\\.yaml" }
-    ]
-  }
+	"resources": {
+		"includes": [{ "pattern": "application.properties" }, { "pattern": ".*\\.yml" }, { "pattern": ".*\\.yaml" }]
+	}
 }
 ```
 
@@ -181,15 +177,15 @@ For JNI-related errors, create `src/main/resources/META-INF/native-image/jni-con
 
 ```json
 [
-  {
-    "name": "com.example.NativeClass",
-    "methods": [
-      {
-        "name": "nativeMethod",
-        "parameterTypes": ["java.lang.String"]
-      }
-    ]
-  }
+	{
+		"name": "com.example.NativeClass",
+		"methods": [
+			{
+				"name": "nativeMethod",
+				"parameterTypes": ["java.lang.String"]
+			}
+		]
+	}
 ]
 ```
 

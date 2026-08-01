@@ -6,8 +6,8 @@ A production-ready [Model Context Protocol (MCP)](https://modelcontextprotocol.i
 
 - **Stdio transport** — Communicates via standard input/output
 - **Two example tools**:
-  - `greet` — Friendly greeting with style/customization options
-  - `calculator` — Arithmetic operations with edge-case handling
+    - `greet` — Friendly greeting with style/customization options
+    - `calculator` — Arithmetic operations with edge-case handling
 - **One system resource** — `mcp://system/info` exposing runtime diagnostics
 - **Schema validation** — All tools validated with Zod
 - **TypeScript + ES modules** — Strict mode, declaration maps, source maps
@@ -55,6 +55,7 @@ Then open the Inspector URL in your browser (default: http://localhost:6274).
 ```
 
 Or with `tsx` (no build step):
+
 ```json
 {
   "mcpServers": {
@@ -74,6 +75,7 @@ Or with `tsx` (no build step):
 Greet a user with a friendly message.
 
 **Arguments:**
+
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `name` | string | Yes | Name of the person to greet |
@@ -81,6 +83,7 @@ Greet a user with a friendly message.
 | `style` | enum | No | `"casual"` (default), `"formal"`, `"enthusiastic"` |
 
 **Example:**
+
 ```json
 {
   "name": "Hermes",
@@ -94,6 +97,7 @@ Greet a user with a friendly message.
 Perform arithmetic operations on two numbers.
 
 **Arguments:**
+
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `a` | number | Yes | First operand |
@@ -101,6 +105,7 @@ Perform arithmetic operations on two numbers.
 | `operation` | enum | Yes | `"add"`, `"subtract"`, `"multiply"`, `"divide"`, `"power"`, `"modulo"` |
 
 **Example:**
+
 ```json
 {
   "a": 10,
@@ -116,6 +121,7 @@ Perform arithmetic operations on two numbers.
 System and runtime information (read-only).
 
 **Returns:** JSON with:
+
 - Hostname, platform, OS type/release, architecture
 - Node.js version
 - Uptime (seconds)
@@ -145,6 +151,7 @@ projects/mcp-server-typescript/
 1. Create `src/tools/my-tool.ts` with a Zod schema + handler
 2. Export `MyToolArgsSchema` and `myTool` handler
 3. Import and register in `src/index.ts`:
+
    ```typescript
    import { myTool, MyToolArgsSchema } from "./tools/my-tool.js";
    
@@ -162,6 +169,7 @@ projects/mcp-server-typescript/
 
 1. Create `src/resources/my-resource.ts` with handler + metadata
 2. Import and register in `src/index.ts`:
+
    ```typescript
    import { myResourceRead, myResource } from "./resources/my-resource.js";
    

@@ -144,6 +144,7 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 
 > Stage B -
 > Stage C dependencies.
+
 - Subtask 1.2.2 — Encode Stage D as conditional on stack detection and include-code-generation.
 - Subtask 2.1.1 — Apply default `mode=full` when missing.
 - Subtask 2.1.2 — Apply default `validation-level=strict` when missing.
@@ -235,4 +236,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
-

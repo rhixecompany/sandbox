@@ -10,11 +10,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Read the scenario or ask for it | Test brief |
-| 1.2 | Identify the expected user outcome | Behavior map |
-| 1.3 | Note constraints and edge cases | Test scope |
+| Step | Action                             | Output       |
+| ---- | ---------------------------------- | ------------ |
+| 1.1  | Read the scenario or ask for it    | Test brief   |
+| 1.2  | Identify the expected user outcome | Behavior map |
+| 1.3  | Note constraints and edge cases    | Test scope   |
 
 #### Tasks
 
@@ -28,11 +28,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Drive the scenario in the browser | Interaction notes |
-| 2.2 | Capture the UI state and selectors | Locator notes |
-| 2.3 | Record failures or important signals | Evidence |
+| Step | Action                               | Output            |
+| ---- | ------------------------------------ | ----------------- |
+| 2.1  | Drive the scenario in the browser    | Interaction notes |
+| 2.2  | Capture the UI state and selectors   | Locator notes     |
+| 2.3  | Record failures or important signals | Evidence          |
 
 #### Tasks
 
@@ -46,11 +46,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 3.1 | Translate the observed flow into test steps | Draft test |
-| 3.2 | Save the file in the tests directory | Test file |
-| 3.3 | Check the test against the scenario | Draft validation |
+| Step | Action                                      | Output           |
+| ---- | ------------------------------------------- | ---------------- |
+| 3.1  | Translate the observed flow into test steps | Draft test       |
+| 3.2  | Save the file in the tests directory        | Test file        |
+| 3.3  | Check the test against the scenario         | Draft validation |
 
 #### Tasks
 
@@ -64,11 +64,11 @@
 
 #### Steps
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 4.1 | Execute the test file | Run result |
-| 4.2 | Fix failures and rerun | Stable test |
-| 4.3 | Verify the final pass | Completed test |
+| Step | Action                 | Output         |
+| ---- | ---------------------- | -------------- |
+| 4.1  | Execute the test file  | Run result     |
+| 4.2  | Fix failures and rerun | Stable test    |
+| 4.3  | Verify the final pass  | Completed test |
 
 #### Tasks
 

@@ -23,6 +23,7 @@ STRICT guards against false positives (learned from dry-run feedback):
 Output: heading + blank line + content. Always LF (matches .gitattributes).
 Dry-run by default; --apply writes.
 """
+
 import argparse
 import re
 import sys
@@ -48,8 +49,7 @@ def looks_like_heading(prefix: str, forbid_bad_chars: bool = True) -> bool:
         return False
     if forbid_bad_chars:
         # characters that indicate content (not a heading) leaked into prefix
-        if any(ch in p for ch in ("**", "`", "[", "{", "|")):
-            return False
+        return not any(ch in p for ch in ("**", "`", "[", "{", "|"))
     return True
 
 
@@ -64,7 +64,7 @@ def fix_line(line: str) -> list[str] | None:
     tm = re.match(r"^(.+?)(?:\| \|| \| |\|\| )", rest)
     if tm and "|" not in tm.group(1) and looks_like_heading(tm.group(1)):
         heading = (marker + " " + tm.group(1)).strip()
-        content = rest[tm.end():]
+        content = rest[tm.end() :]
         if heading and content:
             return [heading, "", "| " + content.lstrip("| ")]
 
@@ -72,7 +72,7 @@ def fix_line(line: str) -> list[str] | None:
     cm = re.match(r"^(.+?)```", rest)
     if cm and looks_like_heading(cm.group(1), forbid_bad_chars=False) and len(cm.group(1)) < 60:
         heading = (marker + " " + cm.group(1)).strip()
-        content = rest[cm.end():]
+        content = rest[cm.end() :]
         if heading and content:
             return [heading, "", "```" + content]
 
@@ -81,7 +81,7 @@ def fix_line(line: str) -> list[str] | None:
     nm = re.match(r"^([^\d]+?)(\d{1,2})\.(?= |\*\*)", rest)
     if nm and int(nm.group(2)) <= 20 and looks_like_heading(nm.group(1)):
         heading = (marker + " " + nm.group(1)).strip()
-        content = rest[nm.start(2):]
+        content = rest[nm.start(2) :]
         if heading and content:
             return [heading, "", content]
 

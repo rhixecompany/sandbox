@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | TypeScript/Bun (Next.js) |
-| **Pattern** | Next.js App Router with Server Actions |
-| **Stack** | Next.js 15, React 19, Bun 1.3, TypeScript strict, Tailwind CSS, shadcn/ui, Drizzle ORM, Clerk Auth, Plaid API |
+| Category    | Technology                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------- |
+| **Type**    | TypeScript/Bun (Next.js)                                                                                      |
+| **Pattern** | Next.js App Router with Server Actions                                                                        |
+| **Stack**   | Next.js 15, React 19, Bun 1.3, TypeScript strict, Tailwind CSS, shadcn/ui, Drizzle ORM, Clerk Auth, Plaid API |
 
 ## Development Tools
 

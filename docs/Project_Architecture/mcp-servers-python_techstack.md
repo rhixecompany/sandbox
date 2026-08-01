@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python (MCP) |
+| Category    | Technology        |
+| ----------- | ----------------- |
+| **Type**    | Python (MCP)      |
 | **Pattern** | Python MCP server |
-| **Stack** | Python 3 |
+| **Stack**   | Python 3          |
 
 ## Development Tools
 

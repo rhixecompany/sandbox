@@ -19,6 +19,7 @@ dedicated workspace.
 ```
 
 **If you have coding/domain experience, add:**
+
 ```
 Background in [coding/finance/law/medicine/STEM] with [X years] experience.
 Able to review domain-specific content and provide expert-level evaluation
@@ -32,6 +33,7 @@ of technical accuracy and reasoning.
 **Format:** 1-3 hour unpaid assessment (10-20% pass rate)
 
 **What they test:**
+
 - **Writing tasks:** You're given a prompt, write a response. Show reasoning, use examples, be thorough.
 - **Ranking tasks:** Compare 2-4 AI responses. Explain WHY one is better (facts, clarity, safety, completeness).
 - **Code tasks (if applicable):** Debugging, writing functions, explaining logic.
@@ -55,6 +57,7 @@ time horizon. Use concrete numbers, relatable example, step-by-step breakdown.
 ```
 
 **Tips:**
+
 - Write more than the minimum — thorough answers score higher
 - Show your reasoning step-by-step (chain of thought)
 - If ranking, justify each score with specific examples from the text
@@ -88,6 +91,7 @@ Result: [Outcome — metric if possible, e.g., "completed 2 days early"]
 ```
 
 **Tips:**
+
 - Speak clearly, at a moderate pace
 - Look at the camera, not the screen
 - Have good lighting and a quiet room
@@ -152,19 +156,19 @@ Less competitive, simpler applications. Key tips:
 
 ## Quick Apply Checklist
 
-| Step | Done? |
-|------|-------|
-| Write/update CV with AI training profile | ☐ |
-| Prepare writing samples (3 topics) | ☐ |
-| Practice Mercor AI interview questions | ☐ |
-| Take DataAnnotation qualification test | ☐ |
-| Complete Mercor application | ☐ |
-| Apply to Alignerr | ☐ |
-| Apply to Invisible Technologies | ☐ |
-| Create dedicated email for applications | ☐ |
-| Set up quiet workspace for video interviews | ☐ |
-| Test microphone and webcam | ☐ |
+| Step                                        | Done? |
+| ------------------------------------------- | ----- |
+| Write/update CV with AI training profile    | ☐     |
+| Prepare writing samples (3 topics)          | ☐     |
+| Practice Mercor AI interview questions      | ☐     |
+| Take DataAnnotation qualification test      | ☐     |
+| Complete Mercor application                 | ☐     |
+| Apply to Alignerr                           | ☐     |
+| Apply to Invisible Technologies             | ☐     |
+| Create dedicated email for applications     | ☐     |
+| Set up quiet workspace for video interviews | ☐     |
+| Test microphone and webcam                  | ☐     |
 
 ---
 
-*See `references/ai_training_platforms.md` for full platform comparison and signup links in `references/platform_links.md`*
+_See `references/ai_training_platforms.md` for full platform comparison and signup links in `references/platform_links.md`_

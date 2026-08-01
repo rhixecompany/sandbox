@@ -20,6 +20,7 @@ SAFETY (zero data loss):
 Usage: python fix_collapsed_fences.py [--apply]
 Default = dry-run (prints per-file fix counts, changes nothing).
 """
+
 from __future__ import annotations
 
 import re
@@ -29,17 +30,71 @@ from pathlib import Path
 PROMPTS_DIR = Path(__file__).resolve().parents[1]
 APPLY = "--apply" in sys.argv
 
-CLOSE_RE = re.compile(r"^(.*?[^\s`])(```)\s*$")   # line ends with ``` after real content
+CLOSE_RE = re.compile(r"^(.*?[^\s`])(```)\s*$")  # line ends with ``` after real content
 
 # Known fence languages (lowercase). Longest-prefix match against the token.
 KNOWN_LANGS = [
-    "dockerfile", "makefile", "powershell", "markdown", "javascript", "typescript",
-    "html", "python", "yaml", "json", "bash", "shell", "text", "java", "ruby",
-    "php", "kotlin", "swift", "sql", "xml", "css", "scss", "graphql", "go",
-    "rust", "csharp", "cpp", "c", "tsx", "jsx", "ts", "js", "yml", "sh", "ps1",
-    "bat", "cmd", "ini", "toml", "csv", "diff", "console", "log", "env", "http",
-    "docker", "nginx", "apache", "prisma", "zsh", "fish", "erb", "sass", "less",
-    "plaintext", "plain", "terminal", "output", "prompt", "md", "mermaid",
+    "dockerfile",
+    "makefile",
+    "powershell",
+    "markdown",
+    "javascript",
+    "typescript",
+    "html",
+    "python",
+    "yaml",
+    "json",
+    "bash",
+    "shell",
+    "text",
+    "java",
+    "ruby",
+    "php",
+    "kotlin",
+    "swift",
+    "sql",
+    "xml",
+    "css",
+    "scss",
+    "graphql",
+    "go",
+    "rust",
+    "csharp",
+    "cpp",
+    "c",
+    "tsx",
+    "jsx",
+    "ts",
+    "js",
+    "yml",
+    "sh",
+    "ps1",
+    "bat",
+    "cmd",
+    "ini",
+    "toml",
+    "csv",
+    "diff",
+    "console",
+    "log",
+    "env",
+    "http",
+    "docker",
+    "nginx",
+    "apache",
+    "prisma",
+    "zsh",
+    "fish",
+    "erb",
+    "sass",
+    "less",
+    "plaintext",
+    "plain",
+    "terminal",
+    "output",
+    "prompt",
+    "md",
+    "mermaid",
 ]
 
 
@@ -167,8 +222,9 @@ def fix_file(path: Path) -> tuple[int, int]:
 
 
 def main() -> int:
-    files = sorted(p for p in PROMPTS_DIR.rglob("*")
-                   if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md")))
+    files = sorted(
+        p for p in PROMPTS_DIR.rglob("*") if p.is_file() and (p.suffix == ".md" or p.name.endswith(".prompt.md"))
+    )
     total_a = total_b = 0
     touched = 0
     for f in files:

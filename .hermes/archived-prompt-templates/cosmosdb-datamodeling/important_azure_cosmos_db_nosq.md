@@ -10,20 +10,20 @@ In aggregate-oriented design, Azure Cosmos DB NoSQL offers multiple levels of ag
 
 1. Multi-Document Container Aggregates
 
-  Multiple related entities grouped by sharing the same partition key but stored as separate documents with different IDs. This provides:
+Multiple related entities grouped by sharing the same partition key but stored as separate documents with different IDs. This provides:
 
-   • Efficient querying of related data with a single SQL query
-   • Transactional consistency within the partition using stored procedures/triggers
-   • Flexibility to access individual documents
-   • No size constraints per document (each document limited to 2MB)
+• Efficient querying of related data with a single SQL query
+• Transactional consistency within the partition using stored procedures/triggers
+• Flexibility to access individual documents
+• No size constraints per document (each document limited to 2MB)
 
 1. Single Document Aggregates
 
-  Multiple entities combined into a single Cosmos DB document. This provides:
+Multiple entities combined into a single Cosmos DB document. This provides:
 
-   • Atomic updates across all data in the aggregate
-   • Single point read retrieval for all data. Make sure to reference the document by id and partition key via API (example `ReadItemAsync<Order>(id: "order0103", partitionKey: new PartitionKey("TimS1234"));` instead of using a query with `SELECT * FROM c WHERE c.id = "order0103" AND c.partitionKey = "TimS1234"` for point reads examples)
-   • Subject to 2MB document size limit
+• Atomic updates across all data in the aggregate
+• Single point read retrieval for all data. Make sure to reference the document by id and partition key via API (example `ReadItemAsync<Order>(id: "order0103", partitionKey: new PartitionKey("TimS1234"));` instead of using a query with `SELECT * FROM c WHERE c.id = "order0103" AND c.partitionKey = "TimS1234"` for point reads examples)
+• Subject to 2MB document size limit
 
 When designing aggregates, consider both levels based on your requirements.
 
@@ -32,14 +32,14 @@ When designing aggregates, consider both levels based on your requirements.
 • **Cosmos DB document limit**: 2MB (hard constraint)
 • **Autoscale mode**: Automatically scales between 10% and 100% of max RU/s
 • **Request Unit (RU) costs**:
-  • Point read (1KB document): 1 RU
-  • Query (1KB document): ~2-5 RUs depending on complexity
-  • Write (1KB document): ~5 RUs
-  • Update (1KB document): ~7 RUs (Update more expensive then create operation)
-  • Delete (1KB document): ~5 RUs
-  • **CRITICAL**: Large documents (>10KB) have proportionally higher RU costs
-  • **Cross-partition query overhead**: ~2.5 RU per physical partition scanned
-  • **Realistic RU estimation**: Always calculate based on actual document sizes, not theoretical 1KB
+• Point read (1KB document): 1 RU
+• Query (1KB document): ~2-5 RUs depending on complexity
+• Write (1KB document): ~5 RUs
+• Update (1KB document): ~7 RUs (Update more expensive then create operation)
+• Delete (1KB document): ~5 RUs
+• **CRITICAL**: Large documents (>10KB) have proportionally higher RU costs
+• **Cross-partition query overhead**: ~2.5 RU per physical partition scanned
+• **Realistic RU estimation**: Always calculate based on actual document sizes, not theoretical 1KB
 • **Storage**: $0.25/GB-month
 • **Throughput**: $0.008/RU per hour (manual), $0.012/RU per hour (autoscale)
 • **Monthly seconds**: 2,592,000

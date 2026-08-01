@@ -11,6 +11,7 @@ fix_tail_generic.py — Final generic glue rules that are provably safe:
 Template placeholders with a space (`## 💰 Cost Optimization: [Brief Title]`)
 are untouched. Fence-aware. Dry-run default; --apply writes. LF output.
 """
+
 import argparse
 import re
 import sys
@@ -30,9 +31,7 @@ def plausible_head(head: str) -> bool:
         return False
     if re.search(r"[a-z][A-Z]", h):  # camelCase inside head — not a heading
         return False
-    if h.endswith((":", "-", "|", ">")):
-        return False
-    return True
+    return not h.endswith((":", "-", "|", ">"))
 
 
 def fix_text(text: str) -> tuple[str, int]:
@@ -60,7 +59,7 @@ def fix_text(text: str) -> tuple[str, int]:
         m = BRACKET.match(line)
         if m and plausible_head(m.group(2)) and not m.group(2).endswith(" "):
             head = (m.group(1) + " " + m.group(2)).strip()
-            content = "[" + line[m.end():]  # keep the [ marker
+            content = "[" + line[m.end() :]  # keep the [ marker
             if content:
                 out.extend([head, "", content])
                 changes += 1
@@ -70,7 +69,7 @@ def fix_text(text: str) -> tuple[str, int]:
             m = BOLD.match(line)
             if m and plausible_head(m.group(2)) and not m.group(2).endswith(" "):
                 head = (m.group(1) + " " + m.group(2)).strip()
-                content = "**" + line[m.end():]  # keep the ** marker
+                content = "**" + line[m.end() :]  # keep the ** marker
                 if content:
                     out.extend([head, "", content])
                     changes += 1

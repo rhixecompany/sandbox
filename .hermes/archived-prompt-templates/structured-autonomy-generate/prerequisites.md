@@ -52,3 +52,5 @@ Make sure that the use is currently on the `{feature-name}` branch before beginn
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change. </plan_template>
 
 ```
+
+```

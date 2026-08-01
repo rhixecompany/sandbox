@@ -200,4 +200,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
-

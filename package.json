@@ -1,12 +1,27 @@
 {
-  "name": "sandbox",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"name": "sandbox",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"markdownlint": "markdownlint-cli2 --config .markdownlint-cli2.jsonc \"**/*.md\"",
+		"spellcheck": "cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress",
+		"typecheck": "tsc --noEmit",
+		"check": "npm run lint && npm run format:check && npm run markdownlint && npm run spellcheck"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/bun": "latest",
+		"@types/node": "^24.0.0",
+		"cspell": "^10.0.1",
+		"eslint": "^10.0.1",
+		"globals": "^17.8.0",
+		"markdownlint-cli2": "^0.19.1",
+		"prettier": "^3.9.6",
+		"typescript": "^5.9.0",
+		"typescript-eslint": "^8.65.0"
+	}
 }

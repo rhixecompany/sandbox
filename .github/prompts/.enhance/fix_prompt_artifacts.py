@@ -19,9 +19,10 @@ Two defect classes introduced by earlier bulk scripts (commit 228eae32 era):
 Idempotent: re-running on a clean library produces zero changes.
 Usage: python fix_prompt_artifacts.py [--apply]
 """
+
+import pathlib
 import re
 import sys
-import pathlib
 
 P = pathlib.Path(__file__).resolve().parent.parent  # .github/prompts
 DRY = "--apply" not in sys.argv
@@ -36,9 +37,19 @@ PLURALIZE = {
 
 # Standard sections that must appear exactly once (keep first occurrence).
 ALLOWED_DUP = {
-    "Goal", "Subgoals", "Personas", "Personality", "Context", "Rules",
-    "Phases", "Best Practices", "Verification Checklist",
-    "Skills Required", "MCP Servers & Tools", "Tasks", "Dependencies",
+    "Goal",
+    "Subgoals",
+    "Personas",
+    "Personality",
+    "Context",
+    "Rules",
+    "Phases",
+    "Best Practices",
+    "Verification Checklist",
+    "Skills Required",
+    "MCP Servers & Tools",
+    "Tasks",
+    "Dependencies",
     "Template References",
 }
 
@@ -140,7 +151,7 @@ def fix_bullet_glue(lines):
 def normalize_separation(lines):
     """Ensure every '## ' heading is preceded by a blank line (unless first line)."""
     out = []
-    for i, ln in enumerate(lines):
+    for _, ln in enumerate(lines):
         if HEADING_RE.match(ln) and out and out[-1].strip() != "":
             out.append("")
         out.append(ln)

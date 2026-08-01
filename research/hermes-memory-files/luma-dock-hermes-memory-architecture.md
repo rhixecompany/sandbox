@@ -3,6 +3,7 @@
 > **Source:** <https://lumadock.com/tutorials/hermes-memory-architecture-explained>
 > **Retrieved:** 2026-07-09T21:15:30
 > **Backend:** web_extract
+
 ---
 
 One of the things that makes Hermes feel different from a stock LLM chat is that it remembers you. Not in a buzzy "AI with personality" way; in a flat, mechanical, file-on-disk way. Your persona lives in a markdown file. Your facts live in another markdown file. Your conversation history lives in a SQLite database. Each one is a thing you can read, edit and delete with normal command-line tools, which means the memory layer is debuggable in a way that "just trust the LLM" memory systems aren't.
@@ -42,12 +43,15 @@ A reasonable SOUL.md for a personal agent:
 
 ```markdown
 # Persona
+
 You are Alice's assistant. You are concise, direct and slightly dry.
 You don't apologise unless you've done something wrong.
 You don't use emoji.
 You match the user's tone: terse with terse messages, more conversational
 when the user is being conversational.
+
 # Boundaries
+
 If the user asks for help with something destructive (deleting files,
 sending money, posting publicly), you confirm before acting.
 You don't pretend to be a human.
@@ -57,11 +61,15 @@ MEMORY.md is the agent's working knowledge. It's where the agent (or you) writes
 
 ```markdown
 # Memory
+
 ## Projects
+
 - Working on a Next.js SaaS app called BrightCart, deployed on Coolify.
 - The codebase is at ~/code/brightcart, main branch is main.
 - Stripe is the payment provider. Webhooks point at /api/stripe-webhook.
+
 ## Preferences
+
 - Prefer Postgres over MySQL for new projects.
 - Use ripgrep over grep for searching code.
 - Replies should default to short unless I explicitly ask for detail.
@@ -71,6 +79,7 @@ USER.md is parallel to MEMORY.md but more strictly factual: things specifically 
 
 ```markdown
 # User
+
 Name: Alice Chen
 Timezone: Europe/London
 Work hours: Mon-Fri 09:00-18:00
@@ -161,7 +170,9 @@ Keep the format consistent. The agent doesn't strictly parse MEMORY.md or USER.m
 
 ```markdown
 # Top-level
+
 ## Section
+
 ### Sub-section
 ```
 
@@ -209,4 +220,4 @@ HERMES_LOG_LEVEL=debug
 
 ---
 
-*Extracted by web-research-pipeline v2.0.0*
+_Extracted by web-research-pipeline v2.0.0_

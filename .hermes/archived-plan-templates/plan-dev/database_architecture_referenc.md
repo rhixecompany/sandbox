@@ -6,35 +6,35 @@
 
 ### Key Tables & Relationships
 
-| Table | Primary Purpose | Key Constraint | Cascades To |
-| --- | --- | --- | --- |
-| `user` | User accounts | Email unique | 10+ tables |
-| `comic` | Comic entries | Title/slug unique | chapter, images, bookmarks, ratings |
-| `chapter` | Comic chapters | (comicId, chapterNumber) unique | images, reading_progress, comments |
-| `bookmark` | Reading list | Composite (userId, comicId) | None (idempotent) |
-| `readingProgress` | Reading position | Per (user, comic) | None (update-only) |
-| `comment` | Discussions | With parentId for replies | None (soft delete) |
-| `notification` | User alerts | Linked to comic/chapter | None |
+| Table             | Primary Purpose  | Key Constraint                  | Cascades To                         |
+| ----------------- | ---------------- | ------------------------------- | ----------------------------------- |
+| `user`            | User accounts    | Email unique                    | 10+ tables                          |
+| `comic`           | Comic entries    | Title/slug unique               | chapter, images, bookmarks, ratings |
+| `chapter`         | Comic chapters   | (comicId, chapterNumber) unique | images, reading_progress, comments  |
+| `bookmark`        | Reading list     | Composite (userId, comicId)     | None (idempotent)                   |
+| `readingProgress` | Reading position | Per (user, comic)               | None (update-only)                  |
+| `comment`         | Discussions      | With parentId for replies       | None (soft delete)                  |
+| `notification`    | User alerts      | Linked to comic/chapter         | None                                |
 
 ### Critical Query Patterns
 
 ```typescript
 // Get comic with relationships
 const comic = await db.query.comic.findFirst({
-  where: eq(comic.slug, slug),
-  with: {
-    author: true,
-    artist: true,
-    genres: { with: { genre: true } },
-    chapters: { orderBy: [c => desc(c.chapterNumber)] }
-  }
+	where: eq(comic.slug, slug),
+	with: {
+		author: true,
+		artist: true,
+		genres: { with: { genre: true } },
+		chapters: { orderBy: [(c) => desc(c.chapterNumber)] },
+	},
 });
 
 // Get user's bookmarks
 const bookmarks = await db.query.bookmark.findMany({
-  where: eq(bookmark.userId, userId),
-  with: { comic: true, lastReadChapter: true },
-  orderBy: b => desc(b.updatedAt)
+	where: eq(bookmark.userId, userId),
+	with: { comic: true, lastReadChapter: true },
+	orderBy: (b) => desc(b.updatedAt),
 });
 ```
 

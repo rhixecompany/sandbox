@@ -11,7 +11,7 @@ Python language support with IntelliSense (Pylance), debugging, linting, formatt
 
 ## Contributed Settings
 
-python.analysis.*, python.defaultInterpreterPath, python.languageServer, python.terminal.*, python.envFile
+python.analysis._, python.defaultInterpreterPath, python.languageServer, python.terminal._, python.envFile
 
 ## Notes
 

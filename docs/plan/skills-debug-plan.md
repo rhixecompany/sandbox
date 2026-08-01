@@ -4,14 +4,14 @@
 
 ## Baseline (post-audit, pre-fix)
 
-| Grade | Count | Meaning |
-|---|---|---|
-| A | 39 | clean |
-| A- | 282 | 1+ minor issue |
-| B | 71 | 1 major / 3+ minor |
-| C | 0 | 2+ major issues (cleared) |
-| F | 0 | critical (all fixed) |
-| **Total** | **591** | |
+| Grade     | Count   | Meaning                   |
+| --------- | ------- | ------------------------- |
+| A         | 39      | clean                     |
+| A-        | 282     | 1+ minor issue            |
+| B         | 71      | 1 major / 3+ minor        |
+| C         | 0       | 2+ major issues (cleared) |
+| F         | 0       | critical (all fixed)      |
+| **Total** | **591** |                           |
 
 ## Phase 1 — Reorganize & Deduplicate ✅ COMPLETE
 
@@ -37,9 +37,11 @@
 Completed: fence-aware re-audit showed most C-grade flags were false positives (headings inside code fences). Added missing core sections (When to Use / Verification Checklist) to 8 C1 files; fixed 3 pre-existing YAML frontmatter errors. Remaining heading-jump/dup-heading findings are cosmetic and documented.
 
 ### Frontmatter (add missing tags)
+
 - [ ] github/git-helper, github/github-auth, github/github-code-review, github/github-issues, github/github-pr-workflow, mcp/mcp-sequential-thinking, mlops/accelerate, mlops/evaluation/weights-and-biases, mlops/inference/outlines, mlops/lambda-labs, mlops/pinecone, mlops/research/dspy, mlops/saelens, productivity/notion, productivity/shop, qa/audit-skills-judge-fix, software-development/python-quality, software-development/worktrunk, autonomous-ai-agents/hermes-agent, creative/image-manipulation-image-magick, devops/hermes-setup, software-development/rest-graphql-debug
 
 ### Missing core sections (add compact When to Use / Verification Checklist)
+
 - [ ] github/github-auth — add When to Use, Workflow, Pitfalls, Verification Checklist
 - [ ] github/github-code-review — add When to Use, Pitfalls, Verification Checklist
 - [ ] github/github-issues — add When to Use, Pitfalls, Verification Checklist
@@ -53,14 +55,17 @@ Completed: fence-aware re-audit showed most C-grade flags were false positives (
 - [ ] mlops/accelerate, mlops/lambda-labs, mlops/saelens — add Verification Checklist
 
 ### Duplicate headings (merge) — needs manual review per file
+
 - [ ] creative/image-manipulation-image-magick, devops/hermes-setup, github/git-helper, qa/audit-skills-judge-fix, software-development/python-quality, software-development/worktrunk, mcp/mcp-sequential-thinking, mlops/* (accelerate, weights-and-biases, outlines, lambda-labs, pinecone, saelens), productivity/notion, productivity/shop
 
 ### Heading jumps (H2→H4) — cosmetic, low priority
+
 - [ ] all C-grade files (structural; safe to leave, markdown renders fine)
 
 ## Phase 4 — B-grade (moderate) ✅ COMPLETE (241 → 71)
 
 Bulk frontmatter fix applied (tags +234, license +36, author +4, version +2); added missing core sections to 10 additional C1 files. Remaining 71 B-grade are cosmetic/informational (dup headings, heading jumps, over-250-line, pip/npm install warnings) — documented in master index, not rewritten.
+
 1. Missing frontmatter `version`/`author`/`license`/`tags` (M1) — bulk add
 2. Over-250-line SKILL.md (M4) — document only (content moves to references are skill-specific)
 3. Placeholders (`None documented yet`, `TODO`) — targeted removal

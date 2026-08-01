@@ -1,28 +1,17 @@
+from api.apps.filters import ComicFilter
+from api.apps.forms import ChapterForm, ComicForm, ComicImageForm, CommentForm
+from api.apps.models import Chapter, Comic, ComicImage
+from api.apps.tables import ComicTable
+from api.users.decorators import admin_only, user_only
 from django.conf import settings
 from django.db.models import Q
-from django.http import Http404
-from django.http import HttpRequest
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect
-from django.shortcuts import render
+from django.http import Http404, HttpRequest, HttpResponse
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_http_methods
 from django_htmx.http import trigger_client_event
 from django_htmx.middleware import HtmxDetails
 from django_tables2 import RequestConfig
-
-from api.apps.filters import ComicFilter
-from api.apps.forms import ChapterForm
-from api.apps.forms import ComicForm
-from api.apps.forms import ComicImageForm
-from api.apps.forms import CommentForm
-from api.apps.models import Chapter
-from api.apps.models import Comic
-from api.apps.models import ComicImage
-from api.apps.tables import ComicTable
-from api.users.decorators import admin_only
-from api.users.decorators import user_only
 
 
 # Typing pattern recommended by django-stubs:
@@ -37,7 +26,7 @@ class HtmxHttpRequest(HttpRequest):
 def comic_list_view(
     request: HtmxHttpRequest,
 ) -> HttpResponse:
-    title = request.GET.get("title")  # type: ignore  # noqa: PGH003
+    title = request.GET.get("title")  # type: ignore
     types = request.GET.getlist("type")
     status = request.GET.get("status")
     updated_at = request.GET.get("updated_at")
@@ -49,7 +38,7 @@ def comic_list_view(
     updated_atq = updated_at if updated_at is not None else ""
     if titleq:
         qs = (
-            Comic.objects.search(query=titleq)  # type: ignore  # noqa: PGH003
+            Comic.objects.search(query=titleq)  # type: ignore
             .prefetch_related(
                 "comicitems",
                 "genres",
@@ -121,7 +110,7 @@ def comic_list_view(
     )
 
     table = ComicTable(qs)
-    RequestConfig(request, paginate={"per_page": settings.PAGINATE_BY}).configure(table)  # type: ignore  # noqa: PGH003
+    RequestConfig(request, paginate={"per_page": settings.PAGINATE_BY}).configure(table)  # type: ignore
     htmx_template_name = "partials/comics/container.html"
     template_name = "comics/comic_list.html"
     context = {"filter": comic_filter, "table": table}
@@ -286,10 +275,10 @@ def comic_delete_view(request: HtmxHttpRequest, slug=None) -> HttpResponse:
 @admin_only
 @require_http_methods(["GET", "DELETE"])
 def comic_image_delete_all_view(request: HtmxHttpRequest) -> HttpResponse:
-    data = request.GET.getlist("mycheck", "")  # type: ignore  # noqa: PGH003
+    data = request.GET.getlist("mycheck", "")  # type: ignore
 
     comic_images = ComicImage.objects.filter(id__in=data)
-    print(list(comic_images))  # noqa: T201
+    print(list(comic_images))
 
     if request.htmx:
         response = HttpResponse("")
@@ -304,10 +293,10 @@ def comic_image_delete_all_view(request: HtmxHttpRequest) -> HttpResponse:
 @admin_only
 @require_http_methods(["GET", "DELETE"])
 def comic_delete_all_view(request: HtmxHttpRequest) -> HttpResponse:
-    data = request.GET.getlist("id", "")  # type: ignore  # noqa: PGH003
+    data = request.GET.getlist("id", "")  # type: ignore
 
     comics = Comic.objects.filter(id__in=data)
-    print(list(comics))  # noqa: T201
+    print(list(comics))
 
     if request.htmx:
         response = HttpResponse("")
@@ -324,7 +313,7 @@ def comic_delete_all_view(request: HtmxHttpRequest) -> HttpResponse:
 def comic_images_update_hx_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     template_name = "comics/upload-image.html"
     if request.htmx:
@@ -382,7 +371,7 @@ def comic_images_update_hx_view(
 def comic_images_delete_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     try:
         obj = ComicImage.objects.select_related("comic").get(
@@ -415,7 +404,7 @@ def comic_images_delete_view(
 def comic_chapters_update_hx_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     template_name = "comics/upload-chapter.html"
     if request.htmx:
@@ -474,7 +463,7 @@ def comic_chapters_update_hx_view(
 def comic_chapters_delete_view(
     request: HtmxHttpRequest,
     parent_slug=None,
-    id=None,  # noqa: A002
+    id=None,
 ) -> HttpResponse:
     try:
         obj = (

@@ -1,4 +1,5 @@
 """Classify remaining fence flags: campaign regression vs pre-existing convention."""
+
 import subprocess
 from pathlib import Path
 
@@ -51,4 +52,4 @@ for f in files:
         marker = "  (pre-existing convention)"
     else:
         marker = "  (changed)"
-    print(f"{str(f):<62} {str(pre):>4} {now:>4}{marker}")
+    print(f"{f!s:<62} {pre!s:>4} {now:>4}{marker}")

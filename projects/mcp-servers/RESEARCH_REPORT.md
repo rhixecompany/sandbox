@@ -1,6 +1,7 @@
 # RESEARCH_REPORT.md
 
 ## Project: mcp-servers
+
 **Type:** Multi-language MCP server implementations
 **Tech Stack:** TypeScript, Python, Go, Rust, Java, Kotlin, PHP, Ruby, Swift, C# (MCP Protocol SDK)
 **Status:** Active
@@ -21,6 +22,7 @@
 ## Key Findings
 
 ### MCP Protocol Architecture
+
 - Client-server architecture with standardized JSON-RPC 2.0 messaging
 - Servers expose **Tools** (model-invoked functions), **Resources** (read-only data), **Prompts** (reusable templates)
 - Three transports: stdio (local), SSE (remote), Streamable HTTP
@@ -28,17 +30,20 @@
 - MCP now sees **97M+ monthly SDK downloads** (early 2026), adopted by 28% of Fortune 500
 
 ### SDK Tiering System
+
 - **Tier 1** (TS, Python, Go, C#): Full feature coverage, active maintenance
 - **Tier 2** (Java, Rust): Core features, community contributions accepted
 - **Tier 3** (Kotlin, PHP, Ruby, Swift): Community-maintained, basic protocol support
 
 ### Multi-Language Implementation
+
 - Each lang dir is self-contained with own build system
 - Shared JSON-RPC protocol enables cross-language reference
 - Key considerations: type safety (TS), memory safety (Rust), ecosystem (Python)
 - Testing: MCP Inspector + SDK-provided test utilities
 
 ### Security Landscape (2026)
+
 - Astrix Security research found significant proportion of MCP servers exposed plaintext HTTP endpoints
 - OWASP Top 10 for Agentic Applications includes MCP-specific tool poisoning
 - **Rule**: start every new server in read-only mode; grant write access only after observing usage patterns
@@ -117,6 +122,7 @@
 | Registry | modelcontextprotocol.io/registry/about | Server publishing |
 
 ### Methodology
+
 Cross-referenced workspace projects + official MCP docs, SDK repos, and 2026 security research (ASTRIX, OWASP Agentic Top 10).
 
 **Last verified:** 2026-07-28.

@@ -1,9 +1,8 @@
+from api.apps.models import UserItem
+from api.users.models import User
 from django.conf import settings
 from django.db.models import Q
 from django.http import HttpRequest
-
-from api.apps.models import UserItem
-from api.users.models import User
 
 
 def allauth_settings(request: HttpRequest) -> dict[str, str]:

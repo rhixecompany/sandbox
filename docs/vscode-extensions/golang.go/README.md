@@ -11,7 +11,7 @@ Rich Go language support for Visual Studio Code.
 
 ## Contributed Settings
 
-go.*, gopls.*
+go._, gopls._
 
 ## Notes
 

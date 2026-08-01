@@ -23,4 +23,5 @@ C:\Users\Alexa\Desktop\SandBox\prompts\templates\RESEARCH_REPORT.template.md :: 
 ```
 
 ---
-*Workflow: subagent-driven-development | Two-stage review (spec → quality)*
+
+_Workflow: subagent-driven-development | Two-stage review (spec → quality)_

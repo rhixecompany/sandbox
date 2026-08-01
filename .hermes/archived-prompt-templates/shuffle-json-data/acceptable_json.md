@@ -8,13 +8,13 @@ When the default behavior is active, acceptable JSON resembles the following pat
 
 ```json
 [
-  {
-    "VALID_PROPERTY_NAME-a": "value",
-    "VALID_PROPERTY_NAME-b": "value"
-  },
-  {
-    "VALID_PROPERTY_NAME-a": "value",
-    "VALID_PROPERTY_NAME-b": "value"
-  }
+	{
+		"VALID_PROPERTY_NAME-a": "value",
+		"VALID_PROPERTY_NAME-b": "value"
+	},
+	{
+		"VALID_PROPERTY_NAME-a": "value",
+		"VALID_PROPERTY_NAME-b": "value"
+	}
 ]
 ```

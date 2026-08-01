@@ -1,4 +1,5 @@
 """Scrapy/Selenium integration management commands."""
+
 from __future__ import annotations
 
 import json
@@ -71,10 +72,12 @@ class Command(BaseCommand):
             results = []
             for item in items[:50]:
                 try:
-                    results.append({
-                        "text": item.text.strip(),
-                        "href": item.get_attribute("href") or "",
-                    })
+                    results.append(
+                        {
+                            "text": item.text.strip(),
+                            "href": item.get_attribute("href") or "",
+                        }
+                    )
                 except Exception:
                     continue
             return results

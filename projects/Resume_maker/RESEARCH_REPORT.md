@@ -20,6 +20,7 @@
 ## Key Findings
 
 ### Bun CLI Best Practices (2026)
+
 - **Argument parsing** — Use `util.parseArgs` (built-in) or `meow`/`commander`
 - **Single executable** — `bun build ./cli.ts --compile --outfile mycli`
 - **Cross-platform** — `--target` flag for different OS targets
@@ -27,11 +28,13 @@
 - **ES Modules** — Native support with `"type": "module"` in package.json
 
 ### markdown-pdf (PhantomJS) Deprecation
+
 - PhantomJS **deprecated since 2018** — security vulnerabilities unpatched
 - **Alternatives:** md-to-pdf (Puppeteer), direct Puppeteer conversion
 - Current Markdown-first pattern (save .md before .pdf attempt) is correct fallback
 
 ### TypeScript Strict Configuration
+
 | Flag | Purpose |
 |------|---------|
 | `noUncheckedIndexedAccess` | Catch undefined array/object access |
@@ -106,6 +109,7 @@
 | md-to-pdf (migration target) | <https://github.com/simonhaenisch/md-to-pdf> |
 
 ### Research Methodology
+
 - **Web search:** Tavily MCP, web_search
 - **Framework docs:** Bun docs, TypeScript docs, ESLint docs
 - **Last verified:** 2026-07-28

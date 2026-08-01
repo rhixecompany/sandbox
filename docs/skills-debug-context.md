@@ -4,99 +4,99 @@
 
 **Grade distribution (591 skills):** **A**=238 | **A-**=282 | **B**=71 | **C**=0 | **F**=0
 
-| Grade | Meaning |
-|---|---|
-| A | clean |
-| A- | 1+ minor |
-| B | 1 major / 3+ minor |
-| C | 2+ major |
-| F | critical |
+| Grade | Meaning            |
+| ----- | ------------------ |
+| A     | clean              |
+| A-    | 1+ minor           |
+| B     | 1 major / 3+ minor |
+| C     | 2+ major           |
+| F     | critical           |
 
 ## Issue Summary (by grade)
 
-| Grade | Count | Typical issues |
-|---|---|---|
-| A | 238 | none |
-| A- | 282 | 1-2 minor (missing optional section, over-250-lines, stale pattern) |
-| B | 71 | 1 major (dup headings / heading jumps) or 3+ minors |
-| C | 0 | — (cleared) |
-| F | 0 | — (cleared) |
+| Grade | Count | Typical issues                                                      |
+| ----- | ----- | ------------------------------------------------------------------- |
+| A     | 238   | none                                                                |
+| A-    | 282   | 1-2 minor (missing optional section, over-250-lines, stale pattern) |
+| B     | 71    | 1 major (dup headings / heading jumps) or 3+ minors                 |
+| C     | 0     | — (cleared)                                                         |
+| F     | 0     | — (cleared)                                                         |
 
 ## B-Grade Skills (71) — remaining issues
 
-| Skill | Path | Issues |
-|---|---|---|
-| acpx-executor | `acpx-executor/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder |
-| apple | `apple/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use', 'quick reference'] |
-| claude-code | `autonomous-ai-agents/claude-code/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M3:Table pipe inconsistent (+1) |
-| codex | `autonomous-ai-agents/codex/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: npm install -g |
-| computer-use | `autonomous-ai-agents/computer-use/SKILL.md` | B1:Missing section(s): ['pitfalls']; M3:Table pipe inconsistent; M4:Over 250 lines (370) |
-| grok | `autonomous-ai-agents/grok/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M4:Over 250 lines (309) |
-| hermes-agent | `autonomous-ai-agents/hermes-agent/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['configuration', 'tools & skills']; C2:Stale pattern: pip install; M4:Over 250 lines (1142) |
-| using-superpowers | `autonomous-ai-agents/using-superpowers/SKILL.md` | R1:Duplicate heading(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME |
-| Chainlink | `blockchain/chainlink/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M1:Missing license; M1:Missing tags |
-| boost-prompt | `boost-prompt/SKILL.md` | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder |
-| bun-shell | `bun-shell/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (407) |
-| manim-video | `creative/manim-video/SKILL.md` | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (300) |
-| joyride | `development/joyride/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder |
-| litprog-skill | `development/litprog-skill/SKILL.md` | B1:Missing section(s): ['when to use']; M2:Placeholder: placeholder; M4:Over 250 lines (361) |
-| using-git-worktrees | `development/using-git-worktrees/SKILL.md` | B1:Missing section(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (278) |
-| writing-skills | `development/writing-skills/SKILL.md` | B1:Missing section(s): ['when to use']; R1:Duplicate heading(s): ['batch judge optimization (key learnings from 116-skill audit)', 'proven enhancement sequence', 'pitfall: line count trap']; M4:Over 250 lines (435) |
-| windows-package-management | `devops/windows-package-management/SKILL.md` | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['winget', 'chocolatey'] |
-| workspace-audit | `devops/workspace-audit/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (336) |
-| django-celery | `django-celery/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (482) |
-| dcf-model | `finance/dcf-model/SKILL.md` | B1:Missing section(s): ['when to use', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (1279) |
-| excel-author | `finance/excel-author/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M4:Over 250 lines (264) |
-| github | `github/SKILL.md` | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; M2:Placeholder: FIXME |
-| git-helper | `github/git-helper/SKILL.md` | R1:Duplicate heading(s): ['step-by-step', 'pitfalls'] |
-| github-code-review | `github/github-code-review/SKILL.md` | B1:Missing section(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME; M4:Over 250 lines (493) |
-| fastmcp | `mcp/fastmcp/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['references']; C2:Stale pattern: pip install; M4:Over 250 lines (313) |
-| huggingface-accelerate | `mlops/accelerate/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (345) |
-| chroma | `mlops/chroma/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (427) |
-| clip | `mlops/clip/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (274) |
-| evaluating-llms-harness | `mlops/evaluation/evaluating-llms-harness/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499) |
-| weights-and-biases | `mlops/evaluation/weights-and-biases/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (604) |
-| optimizing-attention-flash | `mlops/flash-attention/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (376) |
-| guidance | `mlops/guidance/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (586) |
-| huggingface-tokenizers | `mlops/huggingface-tokenizers/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (537) |
-| llama-cpp | `mlops/inference/llama-cpp/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (269) |
-| outlines | `mlops/inference/outlines/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['llama.cpp']; C2:Stale pattern: pip install; M4:Over 250 lines (670) |
-| serving-llms-vllm | `mlops/inference/serving-llms-vllm/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (374) |
-| instructor | `mlops/instructor/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (754) |
-| lambda-labs-gpu-cloud | `mlops/lambda-labs/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['launch instance', 'terminate instance']; C2:Stale pattern: pip install; M4:Over 250 lines (557) |
-| llava | `mlops/llava/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325) |
-| modal-serverless-gpu | `mlops/modal/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (364) |
-| nemo-curator | `mlops/nemo-curator/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (403) |
-| obliteratus | `mlops/obliteratus/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M3:Table pipe inconsistent; M4:Over 250 lines (343) |
-| peft-fine-tuning | `mlops/peft/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (454) |
-| pinecone | `mlops/pinecone/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (379) |
-| pytorch-lightning | `mlops/pytorch-lightning/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (360) |
-| qdrant-vector-search | `mlops/qdrant/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (516) |
-| dspy | `mlops/research/dspy/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (600) |
-| sparse-autoencoder-training | `mlops/saelens/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['step-by-step', 'checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (402) |
-| slime-rl-training | `mlops/slime/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (479) |
-| stable-diffusion-image-generation | `mlops/stable-diffusion/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (535) |
-| distributed-llm-pretraining-torchtitan | `mlops/torchtitan/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (373) |
-| fine-tuning-with-trl | `mlops/training/trl-fine-tuning/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499) |
-| whisper | `mlops/whisper/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (338) |
-| no-git-delete | `no-git-delete/SKILL.md` | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder |
-| memento-flashcards | `productivity/memento-flashcards/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325) |
-| notion | `productivity/notion/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['search', 'read page metadata', 'read page as markdown (agent-friendly)']; M4:Over 250 lines (468) |
-| powerpoint | `productivity/powerpoint/SKILL.md` | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (288) |
-| shop | `productivity/shop/SKILL.md` | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['checkout', 'orders'] |
-| prompt-library-maintenance | `prompt-library-maintenance/SKILL.md` | R1:Duplicate heading(s): ['pitfalls', 'verification checklist']; M2:Placeholder: TODO; M3:Table pipe inconsistent |
-| skill-judge | `qa/skill-judge/SKILL.md` | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['reference files']; M2:Placeholder: placeholder; M4:Over 250 lines (255) |
-| discover-mcp-capabilities | `reference/discover-mcp-capabilities/SKILL.md` | M2:Placeholder: placeholder; M2:Placeholder: placeholder; M4:Over 250 lines (355) |
-| parallel-cli | `research/parallel-cli/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (403) |
-| qmd | `research/qmd/SKILL.md` | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: npm install -g; M4:Over 250 lines (454) |
-| research-paper-writing | `research/research-paper-writing/SKILL.md` | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M3:Table pipe inconsistent (+1) |
-| scrapling | `research/scrapling/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (341) |
-| caveman-unified | `software-development/caveman-unified/SKILL.md` | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow'] |
-| python-quality | `software-development/python-quality/SKILL.md` | C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (358) |
-| sandbox | `software-development/sandbox/SKILL.md` | R1:Duplicate heading(s): ['overview', 'when to use', 'verification checklist'] |
-| worktrunk | `software-development/worktrunk/SKILL.md` | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow'] |
-| firecrawl-map | `web-development/firecrawl-map/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent |
-| firecrawl-search | `web-development/firecrawl-search/SKILL.md` | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent |
+| Skill                                  | Path                                                | Issues                                                                                                                                                                                                                 |
+| -------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| acpx-executor                          | `acpx-executor/SKILL.md`                            | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder                                                                                                             |
+| apple                                  | `apple/SKILL.md`                                    | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use', 'quick reference']                                                                                             |
+| claude-code                            | `autonomous-ai-agents/claude-code/SKILL.md`         | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M3:Table pipe inconsistent (+1)                                                                 |
+| codex                                  | `autonomous-ai-agents/codex/SKILL.md`               | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: npm install -g                                                                              |
+| computer-use                           | `autonomous-ai-agents/computer-use/SKILL.md`        | B1:Missing section(s): ['pitfalls']; M3:Table pipe inconsistent; M4:Over 250 lines (370)                                                                                                                               |
+| grok                                   | `autonomous-ai-agents/grok/SKILL.md`                | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: npm install -g; M4:Over 250 lines (309)                                                                         |
+| hermes-agent                           | `autonomous-ai-agents/hermes-agent/SKILL.md`        | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['configuration', 'tools & skills']; C2:Stale pattern: pip install; M4:Over 250 lines (1142)                                   |
+| using-superpowers                      | `autonomous-ai-agents/using-superpowers/SKILL.md`   | R1:Duplicate heading(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME                                                                                                                                     |
+| Chainlink                              | `blockchain/chainlink/SKILL.md`                     | B1:Missing section(s): ['workflow', 'verification checklist']; M1:Missing license; M1:Missing tags                                                                                                                     |
+| boost-prompt                           | `boost-prompt/SKILL.md`                             | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder                                                                                                                     |
+| bun-shell                              | `bun-shell/SKILL.md`                                | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (407)                                                                                                           |
+| manim-video                            | `creative/manim-video/SKILL.md`                     | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (300)                                                                                                                       |
+| joyride                                | `development/joyride/SKILL.md`                      | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder                                                                                                             |
+| litprog-skill                          | `development/litprog-skill/SKILL.md`                | B1:Missing section(s): ['when to use']; M2:Placeholder: placeholder; M4:Over 250 lines (361)                                                                                                                           |
+| using-git-worktrees                    | `development/using-git-worktrees/SKILL.md`          | B1:Missing section(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (278)                                                                                                                         |
+| writing-skills                         | `development/writing-skills/SKILL.md`               | B1:Missing section(s): ['when to use']; R1:Duplicate heading(s): ['batch judge optimization (key learnings from 116-skill audit)', 'proven enhancement sequence', 'pitfall: line count trap']; M4:Over 250 lines (435) |
+| windows-package-management             | `devops/windows-package-management/SKILL.md`        | B1:Missing section(s): ['workflow']; R1:Duplicate heading(s): ['winget', 'chocolatey']                                                                                                                                 |
+| workspace-audit                        | `devops/workspace-audit/SKILL.md`                   | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (336)                                                                       |
+| django-celery                          | `django-celery/SKILL.md`                            | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (482)                                                                                                  |
+| dcf-model                              | `finance/dcf-model/SKILL.md`                        | B1:Missing section(s): ['when to use', 'verification checklist']; M2:Placeholder: TODO; M4:Over 250 lines (1279)                                                                                                       |
+| excel-author                           | `finance/excel-author/SKILL.md`                     | B1:Missing section(s): ['workflow', 'verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M4:Over 250 lines (264)                                                                            |
+| github                                 | `github/SKILL.md`                                   | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; M2:Placeholder: FIXME                                                                                                                         |
+| git-helper                             | `github/git-helper/SKILL.md`                        | R1:Duplicate heading(s): ['step-by-step', 'pitfalls']                                                                                                                                                                  |
+| github-code-review                     | `github/github-code-review/SKILL.md`                | B1:Missing section(s): ['pitfalls']; M2:Placeholder: TODO; M2:Placeholder: FIXME; M4:Over 250 lines (493)                                                                                                              |
+| fastmcp                                | `mcp/fastmcp/SKILL.md`                              | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['references']; C2:Stale pattern: pip install; M4:Over 250 lines (313)                                                                     |
+| huggingface-accelerate                 | `mlops/accelerate/SKILL.md`                         | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (345)                                                                                                              |
+| chroma                                 | `mlops/chroma/SKILL.md`                             | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (427)                                                                                                  |
+| clip                                   | `mlops/clip/SKILL.md`                               | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (274)                                                                                                  |
+| evaluating-llms-harness                | `mlops/evaluation/evaluating-llms-harness/SKILL.md` | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499)                                                                                                  |
+| weights-and-biases                     | `mlops/evaluation/weights-and-biases/SKILL.md`      | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (604)                                                                                                  |
+| optimizing-attention-flash             | `mlops/flash-attention/SKILL.md`                    | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (376)                                                                                                              |
+| guidance                               | `mlops/guidance/SKILL.md`                           | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (586)                                                                                                  |
+| huggingface-tokenizers                 | `mlops/huggingface-tokenizers/SKILL.md`             | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (537)                                                                                                  |
+| llama-cpp                              | `mlops/inference/llama-cpp/SKILL.md`                | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; M4:Over 250 lines (269)                                                                    |
+| outlines                               | `mlops/inference/outlines/SKILL.md`                 | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['llama.cpp']; C2:Stale pattern: pip install; M4:Over 250 lines (670)                                                                        |
+| serving-llms-vllm                      | `mlops/inference/serving-llms-vllm/SKILL.md`        | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (374)                                                                                                  |
+| instructor                             | `mlops/instructor/SKILL.md`                         | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (754)                                                                                                  |
+| lambda-labs-gpu-cloud                  | `mlops/lambda-labs/SKILL.md`                        | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['launch instance', 'terminate instance']; C2:Stale pattern: pip install; M4:Over 250 lines (557)                                          |
+| llava                                  | `mlops/llava/SKILL.md`                              | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325)                                                                                                  |
+| modal-serverless-gpu                   | `mlops/modal/SKILL.md`                              | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (364)                                                                                                  |
+| nemo-curator                           | `mlops/nemo-curator/SKILL.md`                       | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (403)                                                                                                  |
+| obliteratus                            | `mlops/obliteratus/SKILL.md`                        | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M3:Table pipe inconsistent; M4:Over 250 lines (343)                                                                      |
+| peft-fine-tuning                       | `mlops/peft/SKILL.md`                               | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (454)                                                                                                  |
+| pinecone                               | `mlops/pinecone/SKILL.md`                           | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (379)                                                                                                  |
+| pytorch-lightning                      | `mlops/pytorch-lightning/SKILL.md`                  | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (360)                                                                                                              |
+| qdrant-vector-search                   | `mlops/qdrant/SKILL.md`                             | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (516)                                                                                                  |
+| dspy                                   | `mlops/research/dspy/SKILL.md`                      | B1:Missing section(s): ['workflow', 'pitfalls']; C2:Stale pattern: pip install; M4:Over 250 lines (600)                                                                                                                |
+| sparse-autoencoder-training            | `mlops/saelens/SKILL.md`                            | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['step-by-step', 'checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (402)                                                      |
+| slime-rl-training                      | `mlops/slime/SKILL.md`                              | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (479)                                                                                                              |
+| stable-diffusion-image-generation      | `mlops/stable-diffusion/SKILL.md`                   | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (535)                                                                                                              |
+| distributed-llm-pretraining-torchtitan | `mlops/torchtitan/SKILL.md`                         | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (373)                                                                                                              |
+| fine-tuning-with-trl                   | `mlops/training/trl-fine-tuning/SKILL.md`           | B1:Missing section(s): ['pitfalls', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (499)                                                                                                  |
+| whisper                                | `mlops/whisper/SKILL.md`                            | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (338)                                                                                                  |
+| no-git-delete                          | `no-git-delete/SKILL.md`                            | R1:Duplicate heading(s): ['when to use']; M2:Placeholder: placeholder; M2:Placeholder: placeholder                                                                                                                     |
+| memento-flashcards                     | `productivity/memento-flashcards/SKILL.md`          | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (325)                                                                                                  |
+| notion                                 | `productivity/notion/SKILL.md`                      | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['search', 'read page metadata', 'read page as markdown (agent-friendly)']; M4:Over 250 lines (468)                            |
+| powerpoint                             | `productivity/powerpoint/SKILL.md`                  | R1:Duplicate heading(s): ['when to use']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (288)                                                                                     |
+| shop                                   | `productivity/shop/SKILL.md`                        | B1:Missing section(s): ['workflow', 'pitfalls']; R1:Duplicate heading(s): ['checkout', 'orders']                                                                                                                       |
+| prompt-library-maintenance             | `prompt-library-maintenance/SKILL.md`               | R1:Duplicate heading(s): ['pitfalls', 'verification checklist']; M2:Placeholder: TODO; M3:Table pipe inconsistent                                                                                                      |
+| skill-judge                            | `qa/skill-judge/SKILL.md`                           | B1:Missing section(s): ['verification checklist']; R1:Duplicate heading(s): ['reference files']; M2:Placeholder: placeholder; M4:Over 250 lines (255)                                                                  |
+| discover-mcp-capabilities              | `reference/discover-mcp-capabilities/SKILL.md`      | M2:Placeholder: placeholder; M2:Placeholder: placeholder; M4:Over 250 lines (355)                                                                                                                                      |
+| parallel-cli                           | `research/parallel-cli/SKILL.md`                    | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (403)                                                                            |
+| qmd                                    | `research/qmd/SKILL.md`                             | B1:Missing section(s): ['verification checklist']; C2:Stale pattern: npm install -g; M4:Over 250 lines (454)                                                                                                           |
+| research-paper-writing                 | `research/research-paper-writing/SKILL.md`          | B1:Missing section(s): ['verification checklist']; M2:Placeholder: TODO; C2:Stale pattern: pip install; M3:Table pipe inconsistent (+1)                                                                                |
+| scrapling                              | `research/scrapling/SKILL.md`                       | B1:Missing section(s): ['workflow', 'verification checklist']; C2:Stale pattern: pip install; M4:Over 250 lines (341)                                                                                                  |
+| caveman-unified                        | `software-development/caveman-unified/SKILL.md`     | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow']                                                                                                                                                |
+| python-quality                         | `software-development/python-quality/SKILL.md`      | C2:Stale pattern: pip install; C2:Stale pattern: npm install -g; M4:Over 250 lines (358)                                                                                                                               |
+| sandbox                                | `software-development/sandbox/SKILL.md`             | R1:Duplicate heading(s): ['overview', 'when to use', 'verification checklist']                                                                                                                                         |
+| worktrunk                              | `software-development/worktrunk/SKILL.md`           | R1:Duplicate heading(s): ['when to use', 'when not to use', 'workflow']                                                                                                                                                |
+| firecrawl-map                          | `web-development/firecrawl-map/SKILL.md`            | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent                                                                                    |
+| firecrawl-search                       | `web-development/firecrawl-search/SKILL.md`         | B1:Missing section(s): ['workflow', 'verification checklist']; R1:Duplicate heading(s): ['when to use']; M3:Table pipe inconsistent                                                                                    |
 
 ## Clean Skills (A-grade, 238)
 

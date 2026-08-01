@@ -22,11 +22,13 @@
 ## Architecture
 
 **Pattern:** MCP (Model Context Protocol) Server
+
 - **Transport:** STDIO (stdio transport)
 - **Tools:** Greeting + Calculation tools
 - **Resources:** File system / configuration access
 
 ### Project Structure
+
 ```
 mcp-servers/typescript/
 ├── src/
@@ -46,6 +48,7 @@ mcp-servers/typescript/
 ## Dependencies (`package.json`)
 
 ### Production
+
 ```json
 {
   "dependencies": {
@@ -56,6 +59,7 @@ mcp-servers/typescript/
 ```
 
 ### Development
+
 ```json
 {
   "devDependencies": {

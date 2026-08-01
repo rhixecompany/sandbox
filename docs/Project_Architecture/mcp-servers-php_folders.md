@@ -14,3 +14,4 @@ mcp-servers/php/
 ├── THE_STORY_OF_THIS_REPO.md # Project history
 ├── docs/                     # Project documentation
 ├── server.php  # Primary source code
+```

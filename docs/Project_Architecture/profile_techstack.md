@@ -4,11 +4,11 @@
 
 ## Primary Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Type** | Python/Django (Backend) |
-| **Pattern** | Django REST API with user profiles |
-| **Stack** | Django, Python 3, DRF, Gunicorn, SQLite |
+| Category    | Technology                              |
+| ----------- | --------------------------------------- |
+| **Type**    | Python/Django (Backend)                 |
+| **Pattern** | Django REST API with user profiles      |
+| **Stack**   | Django, Python 3, DRF, Gunicorn, SQLite |
 
 ## Development Tools
 

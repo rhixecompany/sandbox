@@ -5,7 +5,7 @@
 ## Plan: Batch Fix All Errors, Warnings, and Deprecations
 
 **TL;DR:**
-Batch fix all errors, warnings, and deprecations surfaced by `pnpm install`, `pnpm validate`  . Auto-format, document, and verify all changes, ensuring zero issues remain and all fixes are traceable and standards-compliant.
+Batch fix all errors, warnings, and deprecations surfaced by `pnpm install`, `pnpm validate` . Auto-format, document, and verify all changes, ensuring zero issues remain and all fixes are traceable and standards-compliant.
 
 ---
 

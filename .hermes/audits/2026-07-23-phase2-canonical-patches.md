@@ -15,9 +15,10 @@ No stale references to legacy `.github/agents/` or `.github/instructions/` were 
 ## Outside Scope / Context Only
 
 Legacy path references still exist in non-canonical locations and were intentionally left untouched per task scope:
+
 - `.github/prompts/index.md` — documentation note forbidding legacy paths.
 - `.hermes/plans/*` and other `.hermes/archived-*` files — historical plan/docs references.
 
 ## Changed Files
 
-*None.*
+_None._

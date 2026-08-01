@@ -73,7 +73,7 @@ jobs:
   run: mvn compile
 - name: Run tests
   run: mvn test
-````
+```
 
 **AVOID in workflows:**
 
