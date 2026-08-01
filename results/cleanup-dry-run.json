@@ -1,0 +1,781 @@
+{
+  "generated": "2026-08-01 08:07:00",
+  "rows": [
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 420388377,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 73807092,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 86831590,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 1268433515,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 1055246006,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 97740610,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 314608346,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 58929591,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 79186544,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\docs\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 8423395,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\frontend\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 277944353,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-server-typescript\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 52862345,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\copilot-studio\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 31617801,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\python\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 53240409,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\typescript\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 53023352,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 292990826,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 97709074,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 218613970,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 1119531498,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\backend\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 194112865,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 525405428,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 90526999,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 1119864167,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 136468128,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\frontend\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 352224859,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 282510952,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 100721652,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.bun\\install\\global\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+      "kind": "node_modules",
+      "class": "ASK",
+      "size": 298325559,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.config\\opencode\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.copilot\\plugin-data\\awesome-copilot\\skills-for-copilot-studio\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.opencode\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\aaron-bond.better-comments-3.0.2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\batisteo.vscode-django-1.15.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\editorconfig.editorconfig-0.18.2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\esbenp.prettier-vscode-12.4.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\mhutchie.git-graph-1.30.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\ms-python.python-2026.4.0-win32-x64\\out\\client\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\naumovs.color-highlight-2.8.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\poppywu124.hermes-chat-0.7.1\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\streetsidesoftware.code-spell-checker-4.5.6\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\.vscode\\extensions\\yzhang.markdown-all-in-one-3.6.3\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\desktop-plugins\\mindstudio-agent\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv",
+      "kind": "venv",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\web\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\lsp\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\mcp-installs\\n8n\\.venv",
+      "kind": ".venv",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\mindstudio-agent\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\TypeScript\\5.7\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\TypeScript\\5.9\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\TypeScript\\6.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\TypeScript\\7.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\0496d3f111c50e47\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\10ef016a9f374f0f\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\15b07286cbcc3329\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\15c61037b1978c83\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\1d6e82a4126006c4\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\3c2a9ea6c4b6e0a2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\3dfbf5a9eea4a1b3\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\4b4c857f6efdfb61\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\4d5fc182ca17062b\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\53fe1c3a42633f15\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\5a9d879542beca3a\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\7c7555b0b81cc7e0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\7d4dbd92651b5703\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\9833c18b2d85bc59\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\a3241bba59c344f5\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\a4a8334d33a2444a\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\a5b920f00216d246\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\ab5cd9f6d13a2312\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\ac0ed6aa23b37c1e\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\b9f6a1af4f442d5e\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\de2bd410102f5eda\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\e1d02297e53f5c6c\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\e41f203b7505f1fb\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\e54cca0e4081644e\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\npm-cache\\_npx\\eea3e334587ab2c9\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\nvm\\v25.9.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\nvm\\v26.5.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\10.25.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\10.26.0\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\10.26.2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\10.28.1\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\10.28.2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\9.13.2\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\.tools\\@pnpm+win-x64\\9.14.4\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\global\\5\\.pnpm\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm\\global\\5\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\venv",
+      "kind": "venv",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp\\.bcf73ef435fbea5a-00000004.copilot-win32-x64\\clipboard\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp\\.bcf73ef435fbea5a-00000004.copilot-win32-x64\\foundry-local-sdk\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp\\.bcf73ef435fbea5a-00000004.copilot-win32-x64\\webview\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp\\bunx-2902128598-markdownlint-cli2@latest\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp\\pytest-of-Alexa\\pytest-6\\test_scan_all_accepts_install_0\\venv",
+      "kind": "venv",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\vscode-sqltools\\Data\\node_modules",
+      "kind": "node_modules",
+      "class": "SYSTEM",
+      "size": null,
+      "repo": null,
+      "tracked": "no-repo"
+    }
+  ]
+}

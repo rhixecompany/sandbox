@@ -65,6 +65,10 @@
 | `projects/rhixecompany-comics/eslint.config.mjs`            | Globals fix (no-undef 391 → 76)                      |
 | `~/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py` | Template patched (respawned to apply)                |
 | `SESSION_REPORT.md`                                         | Rewritten with verified last session (this file)     |
+| `scripts/cleanup_inventory.py`                              | NEW: cleanup inventory/dry-run tool (classify SAFE/SYSTEM/ASK, size, git-check, --apply) |
+| `results/cleanup-dry-run.md` + `.json`                      | NEW: dry-run report — 27 SAFE / 1 ASK / 69 SYSTEM, ~8,070.9 MB reclaimable |
+| `.hermes/approvals/20260801_cleanup-delete-safe.md`         | NEW: recorded approval (+1 Alexa) for SAFE deletion |
+| 27 node_modules/.venv/venv dirs (SandBox root + projects)   | DELETED ~8,070.9 MB (approved); re-scan 0 SAFE, no tracked deletions |
 
 ## Corruption Watch
 
