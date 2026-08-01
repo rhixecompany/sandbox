@@ -1,17 +1,44 @@
 {
-  "total_files": 217,
+  "total_files": 219,
   "issue_counts": {
     "critical": 0,
     "high": 0,
-    "medium": 0,
-    "info": 0
+    "medium": 7,
+    "info": 2
   },
   "files_no_frontmatter": [],
   "all_issues": {
+    "medium": {
+      "MISSING_RECOMMENDED_FM:dependencies": [
+        "repo-tooling-implementation",
+        "tooling-implementation"
+      ],
+      "MISSING_GOAL_OR_OVERVIEW": [
+        "repo-tooling-implementation"
+      ],
+      "MISSING_RECOMMENDED_FM:tags": [
+        "tooling-implementation"
+      ],
+      "MISSING_RECOMMENDED_FM:trigger": [
+        "tooling-implementation"
+      ],
+      "MISSING_TRIGGER": [
+        "tooling-implementation"
+      ],
+      "EMPTY_TAGS": [
+        "tooling-implementation"
+      ]
+    },
+    "info": {
+      "MISSING_RULES_SECTION": [
+        "repo-tooling-implementation"
+      ],
+      "RULES_INLINE_NOT_SHARED": [
+        "tooling-implementation"
+      ]
+    },
     "critical": {},
-    "high": {},
-    "medium": {},
-    "info": {}
+    "high": {}
   },
   "per_file": [
     {
@@ -691,6 +718,10 @@
       "issue_count": 0
     },
     {
+      "name": "repo-tooling-implementation",
+      "issue_count": 3
+    },
+    {
       "name": "repo",
       "issue_count": 0
     },
@@ -805,6 +836,10 @@
     {
       "name": "tldr-prompt",
       "issue_count": 0
+    },
+    {
+      "name": "tooling-implementation",
+      "issue_count": 6
     },
     {
       "name": "typescript-mcp-server-generator",

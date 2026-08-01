@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-01 08:07:00",
+  "generated": "2026-08-01 09:07:04",
   "rows": [
     {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 420388377,
+      "size": 420477749,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
@@ -13,7 +13,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 73807092,
+      "size": 73801186,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
@@ -21,7 +21,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 86831590,
+      "size": 54566687,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking",
       "tracked": "ignored"
     },
@@ -29,8 +29,16 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 1268433515,
+      "size": 1267577193,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 356310279,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
     {
@@ -45,7 +53,31 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 97740610,
+      "size": 122576,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\docs\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 60859568,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\{{cookiecutter.project_slug}}\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 122726,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\{{cookiecutter.project_slug}}\\node_modules",
+      "kind": "node_modules",
+      "class": "SAFE",
+      "size": 188780655,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind",
       "tracked": "ignored"
     },
@@ -53,7 +85,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 314608346,
+      "size": 122546,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium",
       "tracked": "ignored"
     },
@@ -61,7 +93,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 58929591,
+      "size": 229439586,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium",
       "tracked": "ignored"
     },
@@ -69,7 +101,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 79186544,
+      "size": 122456,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
       "tracked": "ignored"
     },
@@ -77,15 +109,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\docs\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 8423395,
-      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
-      "tracked": "ignored"
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\frontend\\node_modules",
-      "kind": "node_modules",
-      "class": "SAFE",
-      "size": 277944353,
+      "size": 8402607,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom",
       "tracked": "ignored"
     },
@@ -93,7 +117,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-server-typescript\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 52862345,
+      "size": 52868583,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
@@ -101,15 +125,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\copilot-studio\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 31617801,
-      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
-      "tracked": "ignored"
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\python\\.venv",
-      "kind": ".venv",
-      "class": "SAFE",
-      "size": 53240409,
+      "size": 31556025,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
@@ -117,15 +133,23 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\typescript\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 53023352,
+      "size": 52971165,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+      "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 145666709,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile",
       "tracked": "ignored"
     },
     {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 292990826,
+      "size": 284385462,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects",
       "tracked": "ignored"
     },
@@ -133,7 +157,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 97709074,
+      "size": 78986879,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
       "tracked": "ignored"
     },
@@ -141,7 +165,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 218613970,
+      "size": 181296945,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans",
       "tracked": "ignored"
     },
@@ -149,15 +173,23 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 1119531498,
+      "size": 954955893,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans",
       "tracked": "ignored"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\.venv",
+      "kind": ".venv",
+      "class": "SAFE",
+      "size": 122531,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics",
+      "tracked": "NOT-IGNORED"
     },
     {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\backend\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 194112865,
+      "size": 161853433,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics",
       "tracked": "ignored"
     },
@@ -165,7 +197,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\frontend\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 525405428,
+      "size": 514246050,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics",
       "tracked": "ignored"
     },
@@ -173,7 +205,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 90526999,
+      "size": 90433554,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver",
       "tracked": "ignored"
     },
@@ -181,7 +213,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 1119864167,
+      "size": 1119882588,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm",
       "tracked": "ignored"
     },
@@ -189,23 +221,23 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 136468128,
+      "size": 104578109,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv",
       "tracked": "ignored"
     },
     {
-      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\frontend\\node_modules",
-      "kind": "node_modules",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\.venv",
+      "kind": ".venv",
       "class": "SAFE",
-      "size": 352224859,
-      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv",
+      "size": 122466,
+      "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi",
       "tracked": "ignored"
     },
     {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\node_modules",
       "kind": "node_modules",
       "class": "SAFE",
-      "size": 282510952,
+      "size": 281608442,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi",
       "tracked": "ignored"
     },
@@ -213,7 +245,7 @@
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.venv",
       "kind": ".venv",
       "class": "SAFE",
-      "size": 100721652,
+      "size": 122526,
       "repo": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader",
       "tracked": "ignored"
     },
