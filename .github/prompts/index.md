@@ -6,8 +6,8 @@ Canonical prompt library for this repository.
 
 | Path | Contents |
 | ------ | ---------- |
-| `.github/prompts/agents/` | Copilot custom agent definitions |
-| `.github/prompts/instructions/` | Copilot instruction files |
+| `.github/prompts/agents/` | Agent definitions (deprecated) |
+| `.github/prompts/instructions/` | Instruction files (deprecated) |
 | `.github/prompts/skills/` | Repository-local skills |
 | `.github/prompts/archived/` | Archived prompt and plan templates |
 

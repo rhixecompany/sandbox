@@ -1,7 +1,7 @@
 ---
 name: execute-all-prompts
 title: Execute All Prompts Orchestrator
-description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models. Each prompt runs to completion before the next begins.'
+description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models. Each prompt runs to completion before the next begins.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
@@ -70,7 +70,7 @@ Full phase instructions live in `templates/execute-all-prompts/phases.md`.
 | ------ | ------- | ----------- |
 | 1 | Audit Skills Judge Fix | `audit-skills-judge-fix.prompt.md` |
 | 2 | Agents System Prompt Context Fix | `agents-system-prompt-context-fix.prompt.md` |
-| 3 | Sync Hermes Copilot Codex | `sync-hermes-copilot-codex.prompt.md` |
+|| 3 | Sync Hermes OpenCode | `sync-hermes-opencode.prompt.md` |
 | 4 | Test Providers & Models | `test-providers-models.prompt.md` |
 
 ## Verification Checklist (Orchestrator Level)

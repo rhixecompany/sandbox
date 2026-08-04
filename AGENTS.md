@@ -431,7 +431,7 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 | **DevOps**       | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md`                         | Infrastructure             |
 | **Planning**     | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md`                                                  | Project planning           |
 | **Content**      | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md`                                                                   | Content creation           |
-| **Copilot**      | `github-copilot-starter.prompt.md`, `copilot-instructions-blueprint-generator.prompt.md`                                                         | Copilot configuration      |
+| **OpenCode**     | `opencode.json`, `~\.opencode\`                                                                                                                  | OpenCode configuration     |
 
 ### Rules for Prompt Files
 
@@ -492,7 +492,7 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Active Plugins (15)
 
-`basic`, `copilot-provider`, `custom-provider`, `disk-cleanup`, `huggingface-provider`, `langfuse`, `nous`, `nous-provider`, `ollama-cloud-provider`, `openai-codex`, `openai-codex-provider`, `opencode-zen-provider`, `openrouter-provider`, `security-guidance`, `web-tavily`
+`basic`, `custom-provider`, `disk-cleanup`, `huggingface-provider`, `langfuse`, `nous`, `nous-provider`, `ollama-cloud-provider`, `openai-codex`, `openai-codex-provider`, `opencode-zen-provider`, `openrouter-provider`, `security-guidance`, `web-tavily`
 
 ---
 
@@ -555,15 +555,15 @@ npm run dev -- --inspect
 
 ## 12. Known Issues & Pitfalls
 
-| Issue                                            | Affects                     | Workaround                                                                                     |
-| ------------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| CRLF line endings in shell scripts               | Windows Git Bash            | Scripts need `#!/bin/bash` and LF endings — check `.gitattributes`                             |
-| `pip install -e file:///...` in requirements.txt | Workspace root              | The editable install path is absolute to `C:\Users\Alexa\...`; use `venv/`                     |
-| Bun + Windows path translation                   | Workspace root              | MSYS2 paths (`/c/Users/...`) vs Windows paths (`C:\Users\...`) — prefer absolute Windows paths |
-| Copilot context overflow                         | All agents with ~652 skills | Use `--disable-builtin-mcps` and `--no-custom-instructions` flags                              |
-| `projects/**` excluded from markdownlint         | Workspace markdown          | Subproject markdown is linted independently in each project                                    |
-| Dual Python installs (3.13 vs 3.11)              | Python scripts              | Always activate venv; `python` is 3.11, `python3` is 3.13                                      |
-| `ruff check .` vs `ruff format .`                | Python                      | These are separate commands — lint ≠ format                                                    |
+| Issue                                            | Affects                     | Workaround                                                                                                                                                   |
+| ------------------------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CRLF line endings in shell scripts               | Windows Git Bash            | Scripts need `#!/bin/bash` and LF endings — check `.gitattributes`                                                                                           |
+| `pip install -e file:///...` in requirements.txt | Workspace root              | The editable install path is absolute to `C:\Users\Alexa\...`; use `venv/`                                                                                   |
+| Bun + Windows path translation                   | Workspace root              | MSYS/git-bash paths (`/c/Users/...`) vs Windows paths (`C:\\Users\\...`) — prefer absolute Windows paths; prefix native tool calls with `MSYS_NO_PATHCONV=1` |
+| OpenCode context overflow                        | All agents with ~652 skills | Use `--disable-builtin-mcps` and `--no-custom-instructions` flags                                                                                            |
+| `projects/**` excluded from markdownlint         | Workspace markdown          | Subproject markdown is linted independently in each project                                                                                                  |
+| Dual Python installs (3.13 vs 3.11)              | Python scripts              | Always activate venv; `python` is 3.11, `python3` is 3.13                                                                                                    |
+| `ruff check .` vs `ruff format .`                | Python                      | These are separate commands — lint ≠ format                                                                                                                  |
 
 ---
 

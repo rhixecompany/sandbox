@@ -31,10 +31,11 @@ passed for each — no tracked files are affected), reinstallable from lockfiles
 ## Rollback plan
 
 Reinstall per repo (exact commands):
+
 - npm/bun: `bun install` or `npm ci` in each repo root / frontend / docs
 - python: `uv venv && uv pip install -r requirements.txt` (or `uv sync`)
 - Root: `bun install`; `.venv` via uv per requirements.txt
-Phase 2 (tooling implementation) will recreate the required venvs anyway.
+  Phase 2 (tooling implementation) will recreate the required venvs anyway.
 
 ## Verification steps (post-delete)
 
