@@ -12,9 +12,9 @@
 - Execute `agents-system-prompt-context-fix.prompt.md`.
 - Gate: context docs are generated for root and each subproject; VS Code configs are triaged/verified.
 
-## Phase 3: Sync Hermes Copilot Codex
+## Phase 3: Sync Hermes OpenCode
 
-- Execute `sync-hermes-copilot-codex.prompt.md`.
+- Execute `sync-hermes-opencode.prompt.md`.
 - Gate: sync report written; conflicts resolved or documented; verification report complete.
 
 ## Phase 4: Test Providers & Models

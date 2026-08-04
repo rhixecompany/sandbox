@@ -1,8 +1,8 @@
 ---
-name: sync-hermes-copilot-codex
-title: Sync Hermes Copilot Codex OpenCode
-description: 'Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, GitHub Copilot, OpenAI Codex, and OpenCode environments with verification.'
-version: 1.1.0
+name: sync-hermes-opencode
+title: Sync Hermes OpenCode Codex
+description: 'Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.'
+version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
@@ -12,7 +12,7 @@ tags:
   - skills
   - typescript
   - workflow
-trigger: /sync-hermes-copilot-codex
+trigger: /sync-hermes-opencode
 formatter: default
 dependencies:
   - skill:multi-agent-sync
@@ -33,7 +33,7 @@ plan: None
 
 ## Goal
 
-Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, GitHub Copilot, OpenAI Codex, and OpenCode environments with verification.
+Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.
 
 ## Context
 
@@ -43,7 +43,6 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 - **Verification artifact:** `docs/orchestrator-verification.md`
 - **Agent roots:**
   - Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
-  - GitHub Copilot → `.github/` (agents/*.agent.md, hooks/, instructions/, skills/)
   - OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
   - OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
 
@@ -54,17 +53,17 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 1. Execute phases in order; do not reorder.
 2. Each phase must pass its gate before advancing.
 3. Conflicts should be resolved or documented, not silently dropped.
-4. **One platform at a time** — sync Hermes, Copilot, Codex, and OpenCode sequentially, verifying each before the next.
+4. **One platform at a time** — sync Hermes, Codex, and OpenCode sequentially, verifying each before the next.
 5. **No backup files** — use git history for rollback; never create `.bak`, `.old`, or timestamped copies.
 
 ## Phases
 
-Full phase instructions live in `templates/sync-hermes-copilot-codex/phases.md`.
+Full phase instructions live in `templates/sync-hermes-opencode/phases.md`.
 
 | Order | Phase | Gate |
 | --- | --- | --- |
 | 1 | Inventory Instructions & Agents | inventories complete; personality/profile mappings created |
-| 2 | Identify Agent Roots | all 4 roots confirmed; paths documented |
+| 2 | Identify Agent Roots | all 3 roots confirmed; paths documented |
 | 3 | Bidirectional Sync | sync report written; conflicts resolved or documented |
 | 4 | Verify Completion | verification report written; all critical assets in sync |
 
@@ -100,7 +99,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton.md) for workflow structure.
 
-1. **Diagnose** — Run diagnostics on all 4 agent roots.
+1. **Diagnose** — Run diagnostics on all 3 agent roots.
 2. **Plan** — Determine minimal changes; map per-platform asset formats.
 3. **Fix** — Apply changes incrementally, one platform at a time.
 4. **Verify** — Confirm fix works via file-backed evidence.
@@ -132,7 +131,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 | Skill | Purpose |
 | ------- | --------- |
-| `multi-agent-sync` | Canonical multi-platform sync workflow (Hermes, Copilot, Codex/OpenCode) |
+| `multi-agent-sync` | Canonical multi-platform sync workflow (Hermes, Codex, OpenCode) |
 | `hermes-profiles` | Profile identity & state across Hermes |
 | `opencode` | OpenCode CLI usage, roots, and verification |
 | `systematic-debugging` | Root cause analysis and fix |
@@ -154,7 +153,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 ## Tasks
 
-- [ ] Understand requirements and scope (4 platforms)
+- [ ] Understand requirements and scope (3 platforms)
 - [ ] Inventory each platform's assets and agent roots
 - [ ] Plan approach and identify per-platform format mappings
 - [ ] Execute work incrementally, one platform at a time

@@ -58,26 +58,26 @@
 
 ## Session Changelog
 
-| File                                                        | Action                                               |
-| ----------------------------------------------------------- | ---------------------------------------------------- |
-| `projects/mcp-server-typescript/eslint.config.mjs`          | Patched via tooling_lint template (10 → 4 problems)  |
-| `projects/mcp-servers/eslint.config.mjs`                    | Patched via tooling_lint template (65 → 25 problems) |
-| `projects/rhixecompany-comics/eslint.config.mjs`            | Globals fix (no-undef 391 → 76)                      |
-| `~/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py` | Template patched (respawned to apply)                |
-| `SESSION_REPORT.md`                                         | Rewritten with verified last session (this file)     |
-| `scripts/cleanup_inventory.py`                              | NEW: cleanup inventory/dry-run tool (classify SAFE/SYSTEM/ASK, size, git-check, --apply) |
-| `results/cleanup-dry-run.md` + `.json`                      | NEW: dry-run report — 27 SAFE / 1 ASK / 69 SYSTEM, ~8,070.9 MB reclaimable |
-| `.hermes/approvals/20260801_cleanup-delete-safe.md`         | NEW: recorded approval (+1 Alexa) for SAFE deletion |
-| 27 node_modules/.venv/venv dirs (SandBox root + projects)   | DELETED ~8,070.9 MB (approved); re-scan 0 SAFE, no tracked deletions |
-| `~/AppData/Local/hermes/scripts/tooling_full_check.py`      | PATCHED: markdownlint config detection → `.markdownlint-cli2.jsonc` (was preferring unsupported `.markdownlintrc.json`) |
-| 17 `.markdownlintrc.json` (root + 16 repos)                 | DELETED legacy v0.x configs (4 tracked); cli2 configs created in Bash + Resume_maker; G2: 17 → **0 tooling failures** |
-| VS Code user settings                                       | +4 keys: `editor.formatOnSaveMode`, `extensions.ignoreRecommendations`, `markdown.editor.pasteUrlAsFormattedLink.enabled`, `notebook.formatOnSave.enabled` |
-| `.vscode/tasks.json`                                        | markdownlint task gained custom problemMatcher |
-| Per-repo deps (12 venvs + 23 node_modules)                  | RESTORED via uv / bun / npm `--ignore-scripts` (phantomjs + db:migrate postinstall traps avoided) |
-| `projects/rhixecompany-comics` `projects/university-libary-jsm` | COMMITTED + PUSHED (f601217, 2bc208c); PRs comics#2, ULJ#3 (dev→prod) |
-| Root repo                                                   | 4 commits pushed (b74f0209, cba2236c, d3ce727c, tmp-cleanup); PR sandbox#10 updated |
-| `tmp_repair_list.py`                                        | DELETED (temp junk) |
-| Hermes diagnostics                                         | doctor ✓, security audit 0 vulns (147 components), logs: only benign optional-toolset warnings |
+| File                                                            | Action                                                                                                                                                     |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `projects/mcp-server-typescript/eslint.config.mjs`              | Patched via tooling_lint template (10 → 4 problems)                                                                                                        |
+| `projects/mcp-servers/eslint.config.mjs`                        | Patched via tooling_lint template (65 → 25 problems)                                                                                                       |
+| `projects/rhixecompany-comics/eslint.config.mjs`                | Globals fix (no-undef 391 → 76)                                                                                                                            |
+| `~/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py`     | Template patched (respawned to apply)                                                                                                                      |
+| `SESSION_REPORT.md`                                             | Rewritten with verified last session (this file)                                                                                                           |
+| `scripts/cleanup_inventory.py`                                  | NEW: cleanup inventory/dry-run tool (classify SAFE/SYSTEM/ASK, size, git-check, --apply)                                                                   |
+| `results/cleanup-dry-run.md` + `.json`                          | NEW: dry-run report — 27 SAFE / 1 ASK / 69 SYSTEM, ~8,070.9 MB reclaimable                                                                                 |
+| `.hermes/approvals/20260801_cleanup-delete-safe.md`             | NEW: recorded approval (+1 Alexa) for SAFE deletion                                                                                                        |
+| 27 node_modules/.venv/venv dirs (SandBox root + projects)       | DELETED ~8,070.9 MB (approved); re-scan 0 SAFE, no tracked deletions                                                                                       |
+| `~/AppData/Local/hermes/scripts/tooling_full_check.py`          | PATCHED: markdownlint config detection → `.markdownlint-cli2.jsonc` (was preferring unsupported `.markdownlintrc.json`)                                    |
+| 17 `.markdownlintrc.json` (root + 16 repos)                     | DELETED legacy v0.x configs (4 tracked); cli2 configs created in Bash + Resume_maker; G2: 17 → **0 tooling failures**                                      |
+| VS Code user settings                                           | +4 keys: `editor.formatOnSaveMode`, `extensions.ignoreRecommendations`, `markdown.editor.pasteUrlAsFormattedLink.enabled`, `notebook.formatOnSave.enabled` |
+| `.vscode/tasks.json`                                            | markdownlint task gained custom problemMatcher                                                                                                             |
+| Per-repo deps (12 venvs + 23 node_modules)                      | RESTORED via uv / bun / npm `--ignore-scripts` (phantomjs + db:migrate postinstall traps avoided)                                                          |
+| `projects/rhixecompany-comics` `projects/university-libary-jsm` | COMMITTED + PUSHED (f601217, 2bc208c); PRs comics#2, ULJ#3 (dev→prod)                                                                                      |
+| Root repo                                                       | 4 commits pushed (b74f0209, cba2236c, d3ce727c, tmp-cleanup); PR sandbox#10 updated                                                                        |
+| `tmp_repair_list.py`                                            | DELETED (temp junk)                                                                                                                                        |
+| Hermes diagnostics                                              | doctor ✓, security audit 0 vulns (147 components), logs: only benign optional-toolset warnings                                                             |
 
 ## Corruption Watch
 
