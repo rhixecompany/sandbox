@@ -5,6 +5,12 @@ description: 'Execute the tooling-implementation plan: verify, check, fix, and v
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+tags:
+  - configuration
+  - linting
+  - maintenance
+  - tooling
+  - workflow
 toolsets:
   - file
   - terminal

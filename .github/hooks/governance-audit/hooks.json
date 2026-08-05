@@ -1,12 +1,12 @@
 {
-	"name": "governance-audit",
-	"version": "1.0.0",
-	"description": "Governance and compliance audit hooks for session lifecycle and LLM calls.",
-	"events": ["on_session_start", "on_session_end", "pre_llm_call"],
-	"entrypoint": "hook.sh",
-	"config": {
-		"audit_log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/hermes/governance",
-		"retention_days": 90,
-		"checks": ["prompt_injection", "secret_leak", "policy_compliance"]
-	}
+  "name": "governance-audit",
+  "version": "1.0.0",
+  "description": "Governance and compliance audit hooks for session lifecycle and LLM calls.",
+  "events": ["on_session_start", "on_session_end", "pre_llm_call"],
+  "entrypoint": "hook.sh",
+  "config": {
+    "audit_log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/hermes/governance",
+    "retention_days": 90,
+    "checks": ["prompt_injection", "secret_leak", "policy_compliance"]
+  }
 }

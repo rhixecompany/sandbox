@@ -20,7 +20,7 @@ _LIB_DIR = _HOOK_DIR.parent
 if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
-from lib import (  # noqa: E402  (sys.path bootstrap above is required)
+from lib import (
     json_get,
     log_debug,
     log_error,
@@ -195,6 +195,9 @@ async def main() -> None:
         sys.exit(0)
 
     payload = read_payload()
+    # Hermes serializes the event as hook_event_name; accept both spellings.
+    if not payload.get("event"):
+        payload["event"] = payload.get("hook_event_name", "")
     raw_event = payload.get("event", "")
     event = normalize_event(raw_event)
 

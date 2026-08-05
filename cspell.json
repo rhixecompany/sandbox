@@ -195,6 +195,20 @@
 		"visualforce",
 		"Visualforce",
 		"visualise",
+		"bunx",
+		"dedupe",
+		"eslintcache",
+		"intelgraphicsprofiles",
+		"LOCALAPPDATA",
+		"MSYS",
+		"nethood",
+		"nuxt",
+		"openagent",
+		"onedrive",
+		"printhood",
+		"reinstallable",
+		"subrepos",
+		"topdown",
 		"WCAG"
 	],
 	"ignoreWords": [],
@@ -217,6 +231,7 @@
 		".github/prompts/**",
 		"prompts/**",
 		"docs/reports/**",
+		"results/**",
 		"**/*.prompt.md",
 		"uk-earnings-kit/**"
 	]

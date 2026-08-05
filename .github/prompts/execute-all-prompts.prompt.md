@@ -70,7 +70,7 @@ Full phase instructions live in `templates/execute-all-prompts/phases.md`.
 | ------ | ------- | ----------- |
 | 1 | Audit Skills Judge Fix | `audit-skills-judge-fix.prompt.md` |
 | 2 | Agents System Prompt Context Fix | `agents-system-prompt-context-fix.prompt.md` |
-|| 3 | Sync Hermes OpenCode | `sync-hermes-opencode.prompt.md` |
+| 3 | Sync Hermes OpenCode | `sync-hermes-opencode.prompt.md` |
 | 4 | Test Providers & Models | `test-providers-models.prompt.md` |
 
 ## Verification Checklist (Orchestrator Level)
