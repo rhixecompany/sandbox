@@ -79,3 +79,93 @@
 ## Phase 3 — Verify and Implement
 
 - Status: ✅ complete (see docs/orchestrator-verification.md)
+
+---
+
+# Orchestrator Progress — sync-hermes-opencode (2026-08-05)
+
+> Trigger: /execute-all-prompts implement fully (Phase 3)
+
+## Phase 1 — Inventory Instructions & Agents
+
+- Status: ✅ complete
+- Hermes: 621 skills (33 categories + 30 flat), 13 profiles, 3 hooks, 15 plugins
+- Codex: 144 agents, 621 skills (synced), 10 plugins
+- OpenCode: 621 skills (synced), workspace config
+- Personality/profile mappings created (17 categories from 144 Codex agents)
+
+## Phase 2 — Identify Agent Roots
+
+- Status: ✅ complete
+- Hermes: C:\Users\Alexa\AppData\Local\hermes\
+- Codex: C:\Users\Alexa\.codex\
+- OpenCode: C:\Users\Alexa\.opencode\ + C:\Users\Alexa\Desktop\SandBox\opencode.json
+- All 3 roots confirmed and documented
+
+## Phase 3 — Bidirectional Sync
+
+- Status: ✅ complete
+- Skills: All 621 Hermes skills synced to Codex and OpenCode (3 missing added: disk-space-cleanup, oh-my-openagent-setup, windows-deelevation)
+- Hooks: 3 Hermes hooks copied to workspace .github/hooks/ (session-logger, session-auto-commit, governance-audit)
+- Profiles/Agents: Mapping documented (13 Hermes profiles ↔ 144 Codex agents)
+- Config: Platform-optimized models preserved (Hermes: gpt-5.4-mini, Codex: gpt-5.4-mini, OpenCode: opencode/deepseek-v4-flash-free)
+- Cross-platform inventory written to docs/cross-platform-inventory.md
+- Verification script created at scripts/verify_sync.py
+
+## Phase 4 — Verify Completion
+
+- Status: ✅ complete
+- All 22 verification checks passed
+- Cross-platform inventory document exists
+- Verification script runs successfully with zero errors
+
+---
+
+# Orchestrator Progress — audit-skills-judge-fix (2026-08-05)
+
+> Trigger: /execute-all-prompts implement fully (Phase 1)
+
+## Phase 1 — Skills Audit & Inventory
+
+- Status: ✅ complete
+- Inventory artifact: docs/skill-judge-report.md (625 skills audited)
+- JSON results: docs/skill-judge-results.json
+- Average score: 96.8/100
+
+## Phase 2 — Categorize Skills
+
+- Status: ✅ complete
+- 33 categories identified in Hermes skills directory
+- Mapping saved in cross-platform inventory
+
+## Phase 3 — Deduplicate & Consolidate
+
+- Status: ✅ complete
+- Flat duplicates already resolved in Codex/OpenCode targets
+- No flat duplicates remain with categorized counterparts
+
+## Phase 4 — Judge Skills
+
+- Status: ✅ complete
+- All 625 skills judged via batch_skill_judge.py
+- 623 passed (≥60), 2 failed (<60) initially
+- After remediation: 625/625 passing (100%)
+
+## Phase 5 — Remediate Skills
+
+- Status: ✅ complete
+- Fixed windows-deelevation: added title, version, author, license, tags, Overview, Workflow, Skills Required, Verification Checklist
+- Fixed image-vision-fallback: added title, version, author, license, tags, Overview, Workflow, Skills Required, Verification Checklist
+- Both skills now score ≥80 (passing with margin)
+
+## Phase 6 — Consolidate Umbrella Skills
+
+- Status: ✅ complete
+- No umbrella skill consolidation needed at this time
+- Skills are well-organized in 33 categories
+
+## Phase 7 — Final Verification
+
+- Status: ✅ complete
+- Final batch judge run: 625/625 passing, average 96.8
+- All skills meet quality threshold (≥60)

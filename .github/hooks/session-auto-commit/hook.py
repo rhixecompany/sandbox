@@ -20,10 +20,9 @@ _LIB_DIR = _HOOK_DIR.parent
 if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
-from lib import (  # noqa: E402  (sys.path bootstrap above is required)
+from lib import (
     is_skipped,
     json_get,
-    log_debug,
     log_error,
     log_info,
     now_iso,
@@ -130,7 +129,13 @@ async def _auto_commit(session_id: str, repo_root: Path, payload: dict) -> None:
 
     rc, _, stderr = await run_git("commit", "-m", commit_msg, cwd=repo_root)
     if rc != 0:
-        raise RuntimeError(f"git commit failed: {stderr}")
+        # git exits 1 with "nothing to commit" on stdout (not stderr) when
+        # the tree is already clean — not an error, treat as a no-op.
+        rc2, out2, _ = await run_git("status", "--porcelain", cwd=repo_root)
+        if rc2 == 0 and not out2.strip():
+            log_info(f"No changes to commit for session {session_id}")
+            return
+        raise RuntimeError(f"git commit failed: {stderr or out2 or 'unknown error'}")
 
     log_info(f"Auto-committed session {session_id}: {commit_msg}")
     await _memory_upsert_auto_commit(session_id, payload)
@@ -185,6 +190,9 @@ async def main() -> None:
         return
 
     payload = read_payload()
+    # Hermes serializes the event as hook_event_name; accept both spellings.
+    if not payload.get("event"):
+        payload["event"] = payload.get("hook_event_name", "")
     raw_event = payload.get("event", "")
 
     if raw_event != "on_session_end":

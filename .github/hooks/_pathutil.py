@@ -52,10 +52,7 @@ def _fix_msys(p: str) -> str:
         try:
             r = subprocess.run(
                 ["cygpath", "-w", p],
-                capture_output=True,
-                text=True,
-                check=True,
-                timeout=5,
+                capture_output=True, text=True, check=True, timeout=5,
             )
             if r.returncode == 0:
                 return r.stdout.strip()

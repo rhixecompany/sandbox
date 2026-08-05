@@ -24,7 +24,7 @@ skills: []
 
 formatter: default
 
-plan: 
+plan: None
 
 tags:
 
