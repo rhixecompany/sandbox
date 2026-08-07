@@ -1,56 +1,103 @@
 {
 	"$schema": "https://json.schemastore.org/mcp.json",
+	"inputs": [
+		{
+			"default": "${workspaceFolder}",
+			"description": "Workspace root path",
+			"id": "workspaceFolder",
+			"type": "promptString"
+		}
+	],
 	"mcpServers": {
 		"ast-grep": {
-			"command": "npx",
-			"args": ["-y", "@notprolands/ast-grep-mcp"]
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			],
+			"command": "npx"
 		},
 		"code-sandbox": {
-			"command": "npx",
-			"args": ["-y", "node-code-sandbox-mcp"]
-		},
-		"fetch": {
-			"command": "npx",
-			"args": ["-y", "mcp-server-fetch-typescript"]
-		},
-		"filesystem": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/Alexa", "C:/Users/Alexa/AppData/Local/hermes"]
-		},
-		"github": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-github"],
-			"env": {
-				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
-			}
-		},
-		"mcp-docker": {
-			"command": "docker",
-			"args": ["mcp", "gateway", "run", "--profile", "adminbot"]
-		},
-		"memory": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-memory"]
-		},
-		"playwright": {
-			"command": "npx",
-			"args": ["-y", "@playwright/mcp@latest"]
-		},
-		"sequential-thinking": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-		},
-		"neon": {
-			"type": "http",
-			"url": "https://mcp.neon.tech/mcp"
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			],
+			"command": "npx"
 		},
 		"context7": {
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
 		},
+		"fetch": {
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			],
+			"command": "npx"
+		},
+		"filesystem": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa/AppData/Local/hermes",
+				"${workspaceFolder}"
+			],
+			"command": "npx"
+		},
+		"github": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
+			"command": "npx",
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+			}
+		},
+		"mcp-docker": {
+			"args": [
+				"mcp",
+				"gateway",
+				"run",
+				"--profile",
+				"adminbot"
+			],
+			"command": "docker"
+		},
+		"memory": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			],
+			"command": "npx"
+		},
+		"neon": {
+			"type": "http",
+			"url": "https://mcp.neon.tech/mcp"
+		},
+		"playwright": {
+			"args": [
+				"-y",
+				"@playwright/mcp@latest"
+			],
+			"command": "npx"
+		},
 		"sentry": {
 			"type": "http",
 			"url": "https://mcp.sentry.dev/mcp"
+		},
+		"sequential-thinking": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			],
+			"command": "npx"
+		},
+		"smithery": {
+			"type": "http",
+			"url": "https://mcp.smithery.ai/alexanderrhixe30"
 		},
 		"tavily": {
 			"type": "http",

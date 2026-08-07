@@ -1,16 +1,102 @@
 {
 	"inputs": [
 		{
-			"type": "promptString",
-			"id": "workspaceFolder",
+			"default": "${workspaceFolder}",
 			"description": "Workspace root path",
-			"default": "${workspaceFolder}"
+			"id": "workspaceFolder",
+			"type": "promptString"
 		}
 	],
 	"servers": {
+		"ast-grep": {
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			],
+			"command": "npx"
+		},
+		"code-sandbox": {
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			],
+			"command": "npx"
+		},
+		"context7": {
+			"type": "http",
+			"url": "https://mcp.context7.com/mcp"
+		},
+		"fetch": {
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			],
+			"command": "npx"
+		},
 		"filesystem": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa/AppData/Local/hermes",
+				"${workspaceFolder}"
+			],
+			"command": "npx"
+		},
+		"github": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
 			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+			}
+		},
+		"mcp-docker": {
+			"args": [
+				"mcp",
+				"gateway",
+				"run",
+				"--profile",
+				"adminbot"
+			],
+			"command": "docker"
+		},
+		"memory": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			],
+			"command": "npx"
+		},
+		"neon": {
+			"type": "http",
+			"url": "https://mcp.neon.tech/mcp"
+		},
+		"playwright": {
+			"args": [
+				"-y",
+				"@playwright/mcp@latest"
+			],
+			"command": "npx"
+		},
+		"sentry": {
+			"type": "http",
+			"url": "https://mcp.sentry.dev/mcp"
+		},
+		"sequential-thinking": {
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			],
+			"command": "npx"
+		},
+		"tavily": {
+			"type": "http",
+			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
 		}
 	}
 }
