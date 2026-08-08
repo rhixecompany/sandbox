@@ -2,7 +2,7 @@
 name: setup-bun-bunx
 title: Migrate npm/npx to Bun/Bunx Across Repos
 description: 'Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager, then commit and push.'
-version: 1.0.0
+version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
@@ -32,17 +32,18 @@ metadata:
 
 ## Goal
 
-Update **all usage of `npm` → `bun` and `npx` → `bunx`** in three scopes: this repository, all sub-repositories under it, and the Hermes root (`~/AppData/Local/hermes`). Audit every `package.json`, `*.toml`, and `.npmrc` file, use smaller/leaner dependencies and dev dependencies, uninstall all unused dependencies, set **bun as the default package manager**, then commit and push in this repo and all sub-repos — debugging and fixing every issue encountered.
+First **clean up npm/bun remnants and upgrade bun to the latest version** (`bun upgrade`), then update **all usage of `npm` → `bun` and `npx` → `bunx`** in three scopes: this repository, all sub-repositories under it, and the Hermes root (`~/AppData/Local/hermes`). Audit every `package.json`, `*.toml`, and `.npmrc` file, use smaller/leaner dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies, set **bun as the default package manager**, then commit and push in this repo and all sub-repos — debugging and fixing every issue encountered.
 
 ## Subgoals
 
-1. **Audit** — Inventory `npm`/`npx` usage and dependency manifests across all three scopes.
-2. **Migrate** — Replace `npm` with `bun` and `npx` with `bunx` in scripts, docs, and CI.
-3. **Slim** — Trim unnecessary dependencies and dev dependencies; prefer smaller alternatives.
-4. **Uninstall** — Remove all unused dependencies (`bun pm prune`, `bun remove`).
-5. **Default** — Make `bun` the default package manager (`packageManager` field, remove npm lockfiles, `.npmrc` → `.bunfig.toml` where applicable).
-6. **Verify** — Run the project's checks (`bun run lint`, `bun run typecheck`, `bun run check`) after every migration.
-7. **Ship** — `git add -A; git commit -m "updates"; git push` in this repo and all sub-repos, debugging and fixing all issues.
+1. **Upgrade** — Run `bun upgrade` everywhere; confirm the latest Bun version on this machine.
+2. **Audit** — Inventory `npm`/`npx` usage and dependency manifests across all three scopes.
+3. **Migrate** — Replace `npm` with `bun` and `npx` with `bunx` in scripts, docs, and CI.
+4. **Slim** — Trim unnecessary dependencies and dev dependencies; prefer smaller alternatives.
+5. **Uninstall** — Remove all unused dependencies (`bun pm prune`, `bun remove`).
+6. **Default** — Make `bun` the default package manager (`packageManager` field, remove npm lockfiles, `.npmrc` → `.bunfig.toml` where applicable).
+7. **Verify** — Run the project's checks (`bun run lint`, `bun run typecheck`, `bun run check`) after every migration.
+8. **Ship** — `git add -A; git commit -m "updates"; git push` in this repo and all sub-repos, debugging and fixing all issues.
 
 ## Personas
 
@@ -72,6 +73,16 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 7. **Commit/push only after green** — Do not commit failing repos; debug and fix first.
 
 ## Steps
+
+### Phase 0 — Cleanup & Upgrade
+
+1. Confirm the current Bun version and upgrade to latest:
+   ```bash
+   bun --version
+   bun upgrade
+   bun --version   # confirm version bump
+   ```
+2. Clean stale npm/bun artifacts (orphan `package-lock.json`, `node_modules/.package-lock.json`, mixed lockfiles).
 
 ### Phase 1 — Audit
 

@@ -169,7 +169,7 @@ Smithery lets you add MCP server integrations to your app without managing the c
 ### Quick Start
 
 
-  
+
 #### CLI
     ```bash
     # 1. Log in to Smithery
@@ -184,9 +184,9 @@ Smithery lets you add MCP server integrations to your app without managing the c
     # 4. Call a tool
     smithery tool call exa search '{"query": "latest news about MCP"}'
     ```
-  
 
-  
+
+
 #### AI SDK
     ```bash
     bun install @smithery/api @ai-sdk/mcp ai @ai-sdk/anthropic
@@ -213,9 +213,9 @@ Smithery lets you add MCP server integrations to your app without managing the c
 
     await mcpClient.close();
     ```
-  
 
-  
+
+
 #### MCP TypeScript SDK
     ```bash
     bun install @smithery/api @modelcontextprotocol/sdk
@@ -240,11 +240,11 @@ Smithery lets you add MCP server integrations to your app without managing the c
       arguments: { query: 'latest news about MCP' }
     });
     ```
-  
 
-  
+
+
 #### Typed SDK
-    
+
 > **Warning:** > Typed SDKs are in preview. Breaking changes may happen without notice.
 
 
@@ -275,7 +275,7 @@ Smithery lets you add MCP server integrations to your app without managing the c
     // Use callTool when a tool was added after your SDK was generated.
     const result = await exa.callTool('search', { query: 'latest news about MCP' });
     ```
-  
+
 
 
 ### Servers with Configuration
@@ -285,7 +285,7 @@ Some MCP servers require configuration like API keys or project IDs. How you pas
 Check the server's page on [smithery.ai](https://smithery.ai) to see what configuration it requires and where each value should go.
 
 
-  
+
 #### CLI
     ```bash
     # Add a server with config (API key as header, project ID as query param)
@@ -294,9 +294,9 @@ Check the server's page on [smithery.ai](https://smithery.ai) to see what config
       --id my-browserbase \
       --headers '{"browserbaseApiKey": "your-browserbase-api-key"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     import Smithery from '@smithery/api';
@@ -323,9 +323,9 @@ Check the server's page on [smithery.ai](https://smithery.ai) to see what config
       connectionId: conn.connectionId,
     });
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST "https://smithery.run/my-app" \
@@ -338,7 +338,7 @@ Check the server's page on [smithery.ai](https://smithery.ai) to see what config
         }
       }'
     ```
-  
+
 
 
 Unlike OAuth-based servers that return `auth_required`, servers configured with API keys return `connected` immediately when all required fields are provided upfront. If any required fields are missing, the connection returns `input_required` with the config schema and missing fields — see [Handling Configuration](#handling-configuration-input_required) below.
@@ -356,7 +356,7 @@ When your agent serves multiple users, you'll need to track which connections be
 When a user wants to connect an integration (e.g., GitHub), create a connection with their `userId` in metadata:
 
 
-  
+
 #### CLI
     ```bash
     smithery mcp add github \
@@ -369,9 +369,9 @@ When a user wants to connect an integration (e.g., GitHub), create a connection 
     # → https://auth.smithery.ai/...
     # Visit the URL to authorize
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const conn = await smithery.connections.set('user-123-github', {
@@ -386,7 +386,7 @@ When a user wants to connect an integration (e.g., GitHub), create a connection 
       redirect(conn.status.setupUrl);
     }
     ```
-  
+
 
 
 #### 2. List a User's Connections
@@ -394,14 +394,14 @@ When a user wants to connect an integration (e.g., GitHub), create a connection 
 When your agent needs to know what tools are available for a user, list their connections:
 
 
-  
+
 #### CLI
     ```bash
     smithery mcp list --metadata '{"userId": "user-123"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const result = await smithery.connections.list('my-app', {
@@ -413,7 +413,7 @@ When your agent needs to know what tools are available for a user, list their co
       console.log(`${conn.name}: ${conn.status.state}`);
     }
     ```
-  
+
 
 
 #### 3. Use Tools Across Connections
@@ -421,7 +421,7 @@ When your agent needs to know what tools are available for a user, list their co
 Create MCP clients for each connection and aggregate their tools:
 
 
-  
+
 #### CLI
     ```bash
     # List tools for a connection
@@ -431,9 +431,9 @@ Create MCP clients for each connection and aggregate their tools:
     smithery tool call user-123-github search_repositories \
       '{"query": "mcp"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const allTools = [];
@@ -456,7 +456,7 @@ Create MCP clients for each connection and aggregate their tools:
       prompt: userMessage,
     });
     ```
-  
+
 
 
 Or skip the iteration entirely and hand a [single namespace URL](#namespace-mcp-endpoint) to an MCP client.
@@ -543,7 +543,7 @@ You don't need to register OAuth apps, configure redirect URIs, or handle token 
 When you need to send a user through OAuth, prefer creating or updating the connection first and redirecting to the hosted `setupUrl`. That gives you a stable `connectionId` to retry with after the user returns to your app.
 
 
-  
+
 #### CLI
     ```bash
     # Connect to a server that requires OAuth
@@ -555,9 +555,9 @@ When you need to send a user through OAuth, prefer creating or updating the conn
     # → connection_id: abc-123-github
     # Visit the URL to authorize, then retry
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const conn = await smithery.connections.set('abc-123-github', {
@@ -571,21 +571,21 @@ When you need to send a user through OAuth, prefer creating or updating the conn
 
     // Save conn.connectionId and retry with it after the user returns
     ```
-  
+
 
 
 After the user completes authorization and returns to your app, retry with the saved `connectionId`:
 
 
-  
+
 #### CLI
     ```bash
     # After authorization, the connection is ready
     smithery tool list abc-123-github
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { transport } = await createConnection({
@@ -595,7 +595,7 @@ After the user completes authorization and returns to your app, retry with the s
     const mcpClient = await createMCPClient({ transport });
     const tools = await mcpClient.tools();
     ```
-  
+
 
 
 #### Handling Configuration (`input_required`)
@@ -609,7 +609,7 @@ When a server requires configuration that wasn't provided, the connection return
 In a TTY terminal, the CLI prompts for missing values automatically. Otherwise, provide them explicitly:
 
 
-  
+
 #### CLI
     ```bash
     # Interactive: CLI prompts for missing fields
@@ -621,9 +621,9 @@ In a TTY terminal, the CLI prompts for missing values automatically. Otherwise, 
       --id my-browserbase \
       --headers '{"browserbaseApiKey": "your-api-key"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const conn = await smithery.connections.set('my-browserbase', {
@@ -642,9 +642,9 @@ In a TTY terminal, the CLI prompts for missing values automatically. Otherwise, 
       });
     }
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     # Create — returns input_required if config is missing
@@ -662,7 +662,7 @@ In a TTY terminal, the CLI prompts for missing values automatically. Otherwise, 
         "headers": { "browserbaseApiKey": "your-api-key" }
       }'
     ```
-  
+
 
 
 
@@ -674,7 +674,7 @@ In a TTY terminal, the CLI prompts for missing values automatically. Otherwise, 
 Service tokens let you safely use Smithery from browsers, mobile apps, and AI agents without exposing your API key. Your backend mints a scoped token, then your client uses it to call tools directly.
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[{
@@ -685,9 +685,9 @@ Service tokens let you safely use Smithery from browsers, mobile apps, and AI ag
       "ttl": "1h"
     }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     // Create a token scoped to a specific user's connections
@@ -705,9 +705,9 @@ Service tokens let you safely use Smithery from browsers, mobile apps, and AI ag
 
     // Send `token` to your client — safe for browser use
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -725,21 +725,21 @@ Service tokens let you safely use Smithery from browsers, mobile apps, and AI ag
         ]
       }'
     ```
-  
+
 
 
 This token can only access connections in `my-app` where `metadata.userId` matches `user-123`. Initialize the client with the token:
 
 
-  
+
 #### CLI
     ```bash
     # Use the scoped token to call tools
     SMITHERY_API_KEY=$TOKEN smithery tool list user-123-github
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const smithery = new Smithery({ apiKey: token })
@@ -750,7 +750,7 @@ This token can only access connections in `my-app` where `metadata.userId` match
       connectionId: 'user-123-github',
     })
     ```
-  
+
 
 
 
@@ -766,7 +766,7 @@ For full API documentation, see the API Reference section in the sidebar.
 Use the CLI or an MCP client over your connection's transport:
 
 
-  
+
 #### CLI
     ```bash
     # List available tools
@@ -776,9 +776,9 @@ Use the CLI or an MCP client over your connection's transport:
     smithery tool call user-123-github search_repositories \
       '{"query": "mcp"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { transport } = await createConnection({
@@ -795,7 +795,7 @@ Use the CLI or an MCP client over your connection's transport:
     })
     await mcpClient.close()
     ```
-  
+
 
 
 
@@ -816,7 +816,7 @@ Uplink is useful when:
 Uplink uses `smithery mcp add`. If the URL resolves to `localhost` (or `127.0.0.1`), or you pass a command in place of a URL, the CLI opens an uplink tunnel in the background and registers the connection against your namespace.
 
 
-  
+
 #### Smithery package
     ```bash
     # Pull a hosted Smithery package and run it locally — no setup required
@@ -824,23 +824,23 @@ Uplink uses `smithery mcp add`. If the URL resolves to `localhost` (or `127.0.0.
     ```
 
     [`smithery/mouseless`](https://github.com/smithery-ai/mouseless) is our computer-use MCP. The CLI launches it on your machine and exposes it through Smithery.
-  
 
-  
+
+
 ##### Local HTTP server
     ```bash
     # Point at an MCP server already running locally
     smithery mcp add http://localhost:9090/mcp --id chrome
     ```
-  
 
-  
+
+
 ##### Stdio command
     ```bash
     # Let the CLI spawn and manage a stdio MCP server
     smithery mcp add --id chrome -- bunx -y @chromedevtools/chrome-devtools-mcp
     ```
-  
+
 
 
 The CLI stays running and prints live status:
@@ -856,15 +856,15 @@ While the CLI is running, `my-app/chrome` behaves like any other Smithery connec
 Reach the uplinked server through the standard Smithery surface — no special transport handling required:
 
 
-  
+
 #### CLI
     ```bash
     smithery tool list chrome
     smithery tool call chrome navigate '{"url": "https://smithery.ai"}'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     import Smithery from '@smithery/api';
@@ -882,7 +882,7 @@ Reach the uplinked server through the standard Smithery surface — no special t
     const mcpClient = await createMCPClient({ transport });
     const tools = await mcpClient.tools();
     ```
-  
+
 
 
 ### How it works
@@ -966,7 +966,7 @@ For general Smithery setup, see [Connect to MCPs](/docs/use/connect).
 When your app serves multiple users, you'll want each user's token to only access their own connections. You do this by tagging connections with `metadata` (e.g., `{ userId: "user-123" }`) when you create them, then creating a token with the same metadata constraint. The token will only be able to see connections whose metadata matches.
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[{
@@ -977,9 +977,9 @@ When your app serves multiple users, you'll want each user's token to only acces
       "ttl": "1h"
     }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token, expiresAt } = await smithery.tokens.create({
@@ -996,9 +996,9 @@ When your app serves multiple users, you'll want each user's token to only acces
 
     // Send `token` to your client — safe for browser use
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1016,7 +1016,7 @@ When your app serves multiple users, you'll want each user's token to only acces
         ]
       }'
     ```
-  
+
 
 
 This token can list and call tools on connections in `my-app` where `metadata.userId` is `user-123` — nothing else. Even if the client tries to access another user's connection, the request is denied.
@@ -1024,7 +1024,7 @@ This token can list and call tools on connections in `my-app` where `metadata.us
 You can also match on multiple metadata fields at once. Fields within a single metadata object are AND'd, so the token below only matches connections where both `userId` and `tier` match:
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[{
@@ -1035,9 +1035,9 @@ You can also match on multiple metadata fields at once. Fields within a single m
       "ttl": "1h"
     }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token } = await smithery.tokens.create({
@@ -1052,9 +1052,9 @@ You can also match on multiple metadata fields at once. Fields within a single m
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1072,7 +1072,7 @@ You can also match on multiple metadata fields at once. Fields within a single m
         ]
       }'
     ```
-  
+
 
 
 ### Multi-Level Access (Workspace / Org)
@@ -1086,7 +1086,7 @@ Real apps often have multiple access levels. For example, a user should see:
 Pass **multiple constraints** in the `policy` array. Each constraint is an independent grant — the token can access anything that matches **any** of them.
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[
@@ -1113,9 +1113,9 @@ Pass **multiple constraints** in the `policy` array. Each constraint is an indep
       }
     ]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token } = await smithery.tokens.create({
@@ -1147,9 +1147,9 @@ Pass **multiple constraints** in the `policy` array. Each constraint is an indep
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1181,7 +1181,7 @@ Pass **multiple constraints** in the `policy` array. Each constraint is an indep
         ]
       }'
     ```
-  
+
 
 
 The token holder sees connections matching **any** of the three grants. This replaces the need for separate tokens per access level.
@@ -1201,7 +1201,7 @@ You can create a narrower token from an existing service token. The new token ca
 This is useful when your backend holds a broad token and needs to hand out more restricted tokens per request. For example, using the multi-level token from the previous section as the starting point:
 
 
-  
+
 #### CLI
     ```bash
     # Narrow the broad token to just one user's connections
@@ -1213,9 +1213,9 @@ This is useful when your backend holds a broad token and needs to hand out more 
         "ttl": "20m"
       }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     // Broad token from earlier — covers user, workspace, and global connections
@@ -1236,9 +1236,9 @@ This is useful when your backend holds a broad token and needs to hand out more 
     // userToken can only read user-123's connections —
     // the workspace and global grants from the parent are excluded
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     # Narrow the broad token to just one user's connections
@@ -1256,7 +1256,7 @@ This is useful when your backend holds a broad token and needs to hand out more 
         ]
       }'
     ```
-  
+
 
 
 **When to use this:** Your backend mints one broad token at startup (e.g., all connections in a namespace). Per request, it narrows that token for the specific user or context before passing it to client code.
@@ -1276,7 +1276,7 @@ Control what operations a token can perform on each resource.
 #### Read-Only Dashboard Token
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[{
@@ -1286,9 +1286,9 @@ Control what operations a token can perform on each resource.
       "ttl": "1h"
     }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token } = await smithery.tokens.create({
@@ -1302,9 +1302,9 @@ Control what operations a token can perform on each resource.
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1321,13 +1321,13 @@ Control what operations a token can perform on each resource.
         ]
       }'
     ```
-  
+
 
 
 #### Execute-Only Agent Token
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[{
@@ -1338,9 +1338,9 @@ Control what operations a token can perform on each resource.
       "ttl": "30m"
     }]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token } = await smithery.tokens.create({
@@ -1355,9 +1355,9 @@ Control what operations a token can perform on each resource.
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1375,7 +1375,7 @@ Control what operations a token can perform on each resource.
         ]
       }'
     ```
-  
+
 
 
 #### Multi-Resource Token
@@ -1383,7 +1383,7 @@ Control what operations a token can perform on each resource.
 A single token can grant access to multiple resources by passing multiple constraints in the `policy` array:
 
 
-  
+
 #### CLI
     ```bash
     smithery auth token --policy '[
@@ -1402,9 +1402,9 @@ A single token can grant access to multiple resources by passing multiple constr
       }
     ]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     const { token } = await smithery.tokens.create({
@@ -1425,9 +1425,9 @@ A single token can grant access to multiple resources by passing multiple constr
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     curl -X POST https://api.smithery.ai/tokens \
@@ -1451,7 +1451,7 @@ A single token can grant access to multiple resources by passing multiple constr
         ]
       }'
     ```
-  
+
 
 
 ### Constraint Reference
@@ -1498,7 +1498,7 @@ Two rules govern every constraint:
 When you pass **multiple constraints** in the `policy` array, each is an independent grant. The token can access anything matching **any** constraint.
 
 
-  
+
 #### CLI
     ```bash
     # Two grants: read alice's connections OR read/write servers
@@ -1514,9 +1514,9 @@ When you pass **multiple constraints** in the `policy` array, each is an indepen
       }
     ]'
     ```
-  
 
-  
+
+
 #### TypeScript SDK
     ```typescript
     // Two grants: read alice's connections OR read/write servers
@@ -1534,9 +1534,9 @@ When you pass **multiple constraints** in the `policy` array, each is an indepen
       ],
     })
     ```
-  
 
-  
+
+
 #### cURL
     ```bash
     # Two grants: read alice's connections OR read/write servers
@@ -1557,7 +1557,7 @@ When you pass **multiple constraints** in the `policy` array, each is an indepen
         ]
       }'
     ```
-  
+
 
 
 
