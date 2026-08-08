@@ -11,25 +11,32 @@ Respondent.io,user-testing,60000,5,6,6,5,5,9,6.8,KEEP,,verified,high value; low 
 PlaybookUX,user-testing,30000,5,6,6,3,5,21,6.5,KEEP,,unverified,invite-only
 Remotasks/Outlier,ai-training,15000,6,9,8,6,5,7,6.35,KEEP,,verified,weekly baseline
 Test.io,user-testing,15000,6,9,8,5,6,14,6.25,KEEP,,verified,bug pace
+SagaPoll Store Visits,mystery-shopping,15000,6,10,8,4,5,14,6.2,KEEP,,verified,"5,000pts=NGN30k; store audit photo tasks"
 Betakitesting,user-testing,22500,6,6,7,4,5,21,6.15,KEEP,,blog,Tremendous rails
 Userlytics,user-testing,15000,7,8,7,4,6,10,6.1,KEEP,,verified,PayPal gate
 TimeBucks,surveys,6000,7,9,8,5,6,7,5.65,KEEP,,verified,$3 min; multi rails
 Mindrift (Toloka),ai-training,12000,5,8,8,4,6,7,5.6,KEEP,,community,bi-weekly
 FreeCash,surveys,7500,6,8,8,6,5,3,5.55,KEEP,,verified,offer walls > surveys
 Clickworker,surveys,10500,6,8,7,5,6,14,5.55,KEEP,,verified,weekly PayPal/Payoneer
+Zenith Salary Acct,bank-switching,2000,8,9,8,6,6,5,5.55,KEEP,,verified,7.95% p.a. + salary advance
+Appen Mystery Shopper,mystery-shopping,13500,6,8,6,5,5,30,5.5,KEEP,,verified,Freelance NG listings; USD $3-15/hr equiv
 CrowdGen (Appen),ai-training,10500,5,9,8,5,5,21,5.4,KEEP,,verified,monthly
+Kuda Referral,bank-switching,1500,7,10,6,5,5,14,4.95,KEEP,,verified,NGN4-12k/ref official; T2 referee req
 SagaPoll,surveys,1800,6,10,9,4,5,21,4.88,KEEP,,verified,native NGN bank
+NLP Nigeria (agency),mystery-shopping,10000,4,9,7,3,5,30,4.8,KEEP,,verified,Pan-NG ops; cash per visit
 TGM Panel (NG),surveys,3750,5,10,7,5,5,21,4.78,KEEP,,verified,good comp; PayPal gripes
 Premise,surveys,2500,5,9,8,4,5,14,4.6,KEEP,,verified,location tasks
 Trymata,user-testing,9000,5,6,7,3,5,14,4.6,KEEP,,unverified,
 Microworkers,surveys,4500,5,8,8,3,5,14,4.55,KEEP,,community,$9 min
 IntelliZoom,user-testing,6000,5,7,8,3,5,14,4.55,KEEP,,unverified,filler
+Premise Field Tasks,mystery-shopping,2000,5,9,8,4,5,10,4.55,KEEP,,verified,NGN150-2k/task; NGN rails
 PlaytestCloud,user-testing,7500,5,6,8,3,5,21,4.45,KEEP,,possible,low NG volume
 UserFeel,user-testing,6000,5,6,7,3,5,14,4.3,KEEP,,unverified,
 Toluna,surveys,1500,5,9,8,3,5,30,4.25,KEEP,,verified,huge NG panel; slow
 UserDirect,user-testing,4500,5,6,7,3,5,14,4.15,KEEP,,unverified,
 Ipsos iSay,surveys,3000,5,7,7,4,5,30,4.1,KEEP,,unverified,NG rate unverified
 Surveoo,surveys,1500,4,7,7,3,5,21,3.7,KEEP,,unverified,NG redemption issues
+Streetbees,mystery-shopping,4500,3,5,7,2,5,21,3.4,KEEP,,unverified,Works unofficially; supply skews UK/US
 GeoPoll,surveys,900,6,10,9,3,5,7,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,airtime not cash
 UserTesting,user-testing,0,3,1,4,4,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,NOT supported NG
 UserInterviews,user-testing,0,3,1,4,4,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,NOT supported NG
@@ -38,3 +45,21 @@ Swagbucks,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-lock
 Qmee,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-locked
 Prolific,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-locked
 MoBrog,surveys,0,3,1,4,2,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,VPN fraud risk
+OPay Referral,bank-switching,600,5,10,7,4,5,7,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,"NGN800/ref; up to NGN3,600/yr login"
+PalmPay Welcome/Ref,bank-switching,900,6,10,7,4,5,7,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,"welcome <=NGN5,550 while promo + NGN250 pair"
+Risevest Naira Vault Ref,bank-switching,500,6,10,6,5,5,90,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,up to 4% upfront on referral investments
+PiggyVest Signup/Ref,bank-switching,400,5,10,6,4,5,10,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGN1k+NGN1k; lock NGN2.1k to unlock
+Moniepoint Refer&Earn,bank-switching,800,6,10,6,5,5,30,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGN4/transaction 12-mo tail
+Flutterwave Send Ref,bank-switching,300,6,9,5,4,5,14,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGN5k+NGN5k but NGN200k min transfer
+JumiaPay (Jumia One),cashback-receipts,1000,6,10,9,3,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,3%/20% vouchers; NGN1-1.5k/mo
+OPay Cashback,cashback-receipts,700,6,10,9,3,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,up to 6% airtime
+PalmPay PalmPoints,cashback-receipts,800,6,10,9,3,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,tiered 1-5% + 50% palmpts
+Moniepoint Rewards,cashback-receipts,400,6,10,9,3,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,up to 2% recharge
+Kuda Coins/Premium,cashback-receipts,500,7,10,7,3,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,Premium cashback; NGN50k avg bal
+Chipper Cash 2%,cashback-receipts,300,4,9,8,2,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,2% airtime; account issues
+Branch 2% Bills,cashback-receipts,500,4,9,8,2,5,1,0.0,ELIMINATED,"pay < NGN1,500/hr effective",unverified,2% bill payment
+Fetch Rewards,cashback-receipts,0,3,1,5,1,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,US/CA/UK only
+Ibotta / Receipt Hog,cashback-receipts,0,3,1,5,1,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,US-only
+Roamler,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,EU-only; NG defunct
+BeMyEye,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,EU-only
+Field Agent,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,NG not served; SA only in Africa
