@@ -8,7 +8,7 @@
     and return vulnerability data as hashtables.
     
 .NOTES
-    npm audit is handled in dependency-scanner.ps1
+    bun audit is handled in dependency-scanner.ps1
     This file focuses on pnpm, yarn, poetry, maven, gradle, nuget, go, bundler, composer, bun
 #>
 

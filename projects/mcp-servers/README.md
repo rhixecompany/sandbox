@@ -27,7 +27,7 @@ Each language directory is fully self-contained. Pick the one you want and follo
 
 ```bash
 # TypeScript
-cd typescript && npm install && npm run build && npm start
+cd typescript && bun install && bun run build && bun run start
 
 # Python (with uv)
 cd python && uv sync && uv run python-mcp-server
@@ -40,7 +40,7 @@ cd go && go run .
 > The fastest way to exercise any server locally is the MCP Inspector:
 >
 > ```bash
-> npx @modelcontextprotocol/inspector node typescript/dist/index.js
+> bunx @modelcontextprotocol/inspector node typescript/dist/index.js
 > ```
 >
 > Swap in the entry point for whichever language server you are testing.

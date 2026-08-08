@@ -113,7 +113,7 @@ foreach ($plan in $remediationPlans) {
     $mdContent += "### Dependencies`n`n"
     $mdContent += "- **Total Packages**: $($plan.dependencies.total_packages)`n"
     $mdContent += "- **Package Managers**: $($plan.dependencies.managers)`n"
-    $mdContent += "- **Action**: Run npm audit / pip audit and update outdated packages`n`n"
+    $mdContent += "- **Action**: Run bun audit / pip audit and update outdated packages`n`n"
     
     $mdContent += "### Git History`n`n"
     $mdContent += "- **Total Commits**: $($plan.git.total_commits)`n"

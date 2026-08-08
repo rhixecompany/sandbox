@@ -42,7 +42,7 @@ fi
 
 # prisma via npm (fits the user's stack)
 echo "== prisma =="
-if npm install --prefix "$LOCALAPPDATA/hermes/lsp" --silent --no-fund --no-audit @prisma/language-server >/dev/null 2>&1; then
+if bun install --prefix "$LOCALAPPDATA/hermes/lsp" --silent --no-fund --no-audit @prisma/language-server >/dev/null 2>&1; then
   PRISMA_BIN="$LOCALAPPDATA/hermes/lsp/node_modules/.bin/prisma-language-server"
   if [ -f "$PRISMA_BIN" ] || [ -f "$PRISMA_BIN.cmd" ]; then
     cp -f "$PRISMA_BIN" "$BIN_DIR/prisma-language-server" 2>/dev/null || true
@@ -51,7 +51,7 @@ if npm install --prefix "$LOCALAPPDATA/hermes/lsp" --silent --no-fund --no-audit
     echo "   installed but bin not found"; fail=1
   fi
 else
-  echo "   npm install FAILED"; fail=1
+  echo "   bun install FAILED"; fail=1
 fi
 
 rm -rf "$TMP_DIR"

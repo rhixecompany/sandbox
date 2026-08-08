@@ -221,5 +221,5 @@ graph TD
 | `components/` subdirectories | All components flat in one folder — scales poorly |
 | Django custom apps | No `crypto/` or `api/` app directories |
 | CI/CD config | No `.github/workflows/` for automated testing/deployment |
-| Static assets build output | `build/` directory (produced by `npm run build`) not present |
+| Static assets build output | `build/` directory (produced by `bun run build`) not present |
 | Environment variable loader for Django | Django has no `python-dotenv`; settings reads from OS env only |

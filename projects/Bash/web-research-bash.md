@@ -395,7 +395,7 @@ export default defineConfig({
 ### Recommended Security Practices
 
 1. **Lockfile integrity** — Commit `bun.lock` to version control and verify with CI checks
-2. **Dependency auditing** — Use `bun audit` (or `npm audit`) to check for known vulnerabilities
+2. **Dependency auditing** — Use `bun audit` (or `bun audit`) to check for known vulnerabilities
 3. **Minimal trusted dependencies** — Only mark as trusted what absolutely needs postinstall scripts
 4. **Environment variables** — Use `dotenv` or `dotenv-safe` (already in devDependencies); never hardcode secrets
 5. **Code scanning** — Consider GitHub's CodeQL or `eslint-plugin-security` (already in devDependencies)
@@ -423,7 +423,7 @@ export default defineConfig({
 |---------|-------------|-----------|
 | **tsx** (4.x) | TypeScript Execute — run TS files via Node.js (uses esbuild) | Similar goal: zero-config TS execution. Bun makes tsx redundant. |
 | **ts-node** | TypeScript execution and REPL for Node.js | Legacy approach; Bun's native TS support is faster |
-| **npx/npm exec** | Run npm package binaries | Bunx replaces this with `bunx` |
+| **bunx/npm exec** | Run npm package binaries | Bunx replaces this with `bunx` |
 | **esbuild** | Extremely fast bundler (Go-based) | Bun's internal bundler is inspired by esbuild's speed |
 | **tsup** | Bundle TS with esbuild, no config | Partially replaced by Bun's `bun build` |
 | **tsc** (TypeScript Compiler) | Official TS compiler | Still needed for type checking even with Bun |

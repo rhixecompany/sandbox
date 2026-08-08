@@ -250,7 +250,7 @@ bash clean_dependency_folders.sh --max-depth 2 --auto
 
 ```bash
 cd ~/Desktop/Sandbox/Bash
-npm install
+bun install
 ```
 
 ### Restore Caches
@@ -262,7 +262,7 @@ npm install
 
 ```bash
 cd ~/Desktop/Sandbox/Resume_maker
-npm install
+bun install
 ```
 
 ---
@@ -322,7 +322,7 @@ npm install
 
 ### Short-term (1-2 weeks)
 
-- [ ] If Bash project needed: `npm install`
+- [ ] If Bash project needed: `bun install`
 - [ ] Monitor disk usage
 - [ ] Test script scheduling
 

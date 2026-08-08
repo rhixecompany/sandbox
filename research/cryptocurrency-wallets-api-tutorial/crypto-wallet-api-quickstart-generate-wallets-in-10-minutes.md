@@ -28,7 +28,7 @@ pip install cobo-waas2
 JavaScript:
 
 ```bash
-npm install @cobo/cobo-waas2 --save
+bun install @cobo/cobo-waas2 --save
 ```
 
 ## Authentication

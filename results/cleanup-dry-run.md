@@ -128,7 +128,7 @@
 
 ## Reinstall reference (post-cleanup)
 
-- npm/bun: `bun install` (or `npm ci` where lockfile present)
+- npm/bun: `bun install` (or `bun install --frozen-lockfile` where lockfile present)
 - python: `uv venv` + `uv pip install -r requirements.txt` (or `uv sync`)
 
 > Gate: SAFE deletions require recorded approval (see executing-plans skill:

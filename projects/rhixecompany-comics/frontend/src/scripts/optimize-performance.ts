@@ -23,7 +23,7 @@ function main() {
   // Pass through all arguments
   const args = ["--performance", ...process.argv.slice(2)];
 
-  const child = spawn("npx", ["tsx", scriptPath, ...args], {
+  const child = spawn("bunx", ["tsx", scriptPath, ...args], {
     stdio: "inherit",
     shell: true,
     cwd: process.cwd(),

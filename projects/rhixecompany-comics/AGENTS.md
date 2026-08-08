@@ -31,9 +31,9 @@ celery -A config worker -l info
 
 # Frontend
 cd frontend
-npm install
-npm run dev
-npm test
+bun install
+bun run dev
+bun run test
 ```
 
 ## Conventions

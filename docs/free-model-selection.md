@@ -32,14 +32,15 @@ so effective order is reasoning → context). Configured 2026-08-08 via
 `/test-providers-models`.
 
 - model.provider = opencode-zen
-- model.default   = deepseek-v4-flash-free   (PRIMARY, proven working)
+- model.default = deepseek-v4-flash-free (PRIMARY, proven working)
 - fallback_providers (ordered):
-  1. opencode-zen      → deepseek-v4-flash-free (128K, reasoning✓)
-  2. openrouter        → nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓)
-  3. gemini            → gemini-2.5-flash (1M, ✓)
-  4. ollama-cloud      → nemotron-3-ultra (1M, ✓)
+  1. opencode-zen → deepseek-v4-flash-free (128K, reasoning✓)
+  2. openrouter → nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓)
+  3. gemini → gemini-2.5-flash (1M, ✓)
+  4. ollama-cloud → nemotron-3-ultra (1M, ✓)
 
 Full working-model ranking (per-provider default_model above):
+
 1. nemotron-3-ultra-free (opencode-zen, 1M, ✓)
 2. nvidia/nemotron-3-ultra-550b-a55b:free (openrouter, 1M, ✓)
 3. nvidia/nemotron-3-super-120b-a12b:free (openrouter, 1M, ✓)

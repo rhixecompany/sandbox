@@ -11,11 +11,11 @@
 	"mcpServers": {
 		"ast-grep": {
 			"args": ["-y", "@notprolands/ast-grep-mcp"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"code-sandbox": {
 			"args": ["-y", "node-code-sandbox-mcp"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"context7": {
 			"type": "http",
@@ -23,7 +23,7 @@
 		},
 		"fetch": {
 			"args": ["-y", "mcp-server-fetch-typescript"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"filesystem": {
 			"args": [
@@ -33,11 +33,11 @@
 				"C:/Users/Alexa/AppData/Local/hermes",
 				"${workspaceFolder}"
 			],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"github": {
 			"args": ["-y", "@modelcontextprotocol/server-github"],
-			"command": "npx",
+			"command": "bunx",
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
 			}
@@ -48,7 +48,7 @@
 		},
 		"memory": {
 			"args": ["-y", "@modelcontextprotocol/server-memory"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"neon": {
 			"type": "http",
@@ -56,7 +56,7 @@
 		},
 		"playwright": {
 			"args": ["-y", "@playwright/mcp@0.0.78"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"sentry": {
 			"type": "http",
@@ -64,7 +64,7 @@
 		},
 		"sequential-thinking": {
 			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-			"command": "npx"
+			"command": "bunx"
 		},
 		"smithery": {
 			"type": "http",

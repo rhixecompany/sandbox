@@ -451,7 +451,7 @@ function isWithinProjectDirectory(userPath: string): boolean {
 ### 4. Dependency Supply Chain
 
 - **Use `bun install --frozen-lockfile` in CI** to prevent unexpected dependency updates.
-- Regularly scan dependencies for known vulnerabilities (consider `bun audit` or `npm audit`).
+- Regularly scan dependencies for known vulnerabilities (consider `bun audit` or `bun audit`).
 - Pin exact versions in `package.json` for critical dependencies.
 
 ### 5. No Secrets in Code

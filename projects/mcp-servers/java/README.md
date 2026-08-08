@@ -83,7 +83,7 @@ java-mcp-server/
 You can test the server using the [MCP CLI tool](https://github.com/modelcontextprotocol/cli):
 
 ```bash
-npx @modelcontextprotocol/cli inspect java -jar target/java-mcp-server.jar
+bunx @modelcontextprotocol/cli inspect java -jar target/java-mcp-server.jar
 ```
 
 ## Building

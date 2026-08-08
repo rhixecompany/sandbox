@@ -9,7 +9,7 @@ Validates the audit pipeline with one repo (comicwise) before batch execution
 .DESCRIPTION
 Tests:
   1. Repo detection (stack auto-detection)
-  2. Diagnostic execution (npm audit, outdated, lint, test, build)
+  2. Diagnostic execution (bun audit, outdated, lint, test, build)
   3. Finding parsing (convert diagnostics â†’ Finding objects)
   4. Batch consolidation (group findings into batches)
   5. Verification (ensure output structure is valid)
@@ -120,14 +120,14 @@ if (-not $SkipDiagnostics) {
         "javascript" {
             Write-Info "Checking for npm..."
             if (Get-Command npm -ErrorAction SilentlyContinue) {
-                Write-Info "Running npm audit..."
-                $auditOutput = & npm audit --json 2>&1 | ConvertFrom-Json -ErrorAction SilentlyContinue
+                Write-Info "Running bun audit..."
+                $auditOutput = & bun audit --json 2>&1 | ConvertFrom-Json -ErrorAction SilentlyContinue
                 $diagnosticsOutput.diagnostics += @{
                     type = "npm-audit"
                     status = if ($auditOutput) { "success" } else { "failed" }
                     output = $auditOutput
                 }
-                Write-Success "npm audit completed"
+                Write-Success "bun audit completed"
             } else {
                 Write-Err "npm not found"
             }

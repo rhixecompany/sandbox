@@ -28,18 +28,16 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Validate plugins
-        run: npm run plugin:validate
+        run: bun run plugin:validate
 
       - name: Update README.md
-        run: npm start
+        run: bun run start
 
       - name: Check for file changes
         id: check-diff
@@ -74,7 +72,7 @@ jobs:
 
             The update script detected changes that need to be made.
 
-            Please run `npm start` locally and commit the changes before merging this PR.
+            Please run `bun run start` locally and commit the changes before merging this PR.
 
             <details>
               <summary>View diff</summary>
@@ -87,5 +85,5 @@ jobs:
       - name: Fail workflow if files need updating
         if: steps.check-diff.outputs.status == 'failure'
         run: |
-          echo "❌ Generated files need to be updated. Please run `npm start` locally and commit the changes."
+          echo "❌ Generated files need to be updated. Please run `bun run start` locally and commit the changes."
           exit 1

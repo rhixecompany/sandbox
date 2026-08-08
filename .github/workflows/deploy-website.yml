@@ -44,23 +44,22 @@ jobs:
           fetch-depth: 0 # Full history needed for git-based last updated dates
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "20"
-          cache: "npm"
+          cache: "bun"
 
       - name: Install root dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Install website dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
         working-directory: ./website
 
       - name: Generate website data
-        run: npm run website:data
+        run: bun run website:data
 
       - name: Build Astro site
-        run: npm run build
+        run: bun run build
         working-directory: ./website
 
       - name: Setup Pages

@@ -121,7 +121,7 @@ git clone [REPO_URL]
 cd [REPO_NAME]
 
 # Install
-bun install  # or npm install / pip install
+bun install  # or bun install / pip install
 
 # Run
 bun run dev  # or python manage.py runserver

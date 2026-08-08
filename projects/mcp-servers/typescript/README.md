@@ -25,23 +25,23 @@ A production-ready [Model Context Protocol (MCP)](https://modelcontextprotocol.i
 cd projects/mcp-servers/typescript
 
 # Install dependencies
-npm install
+bun install
 
 # Build the TypeScript source
-npm run build
+bun run build
 ```
 
 ### Running the Server
 
 ```bash
 # Start the server (stdio transport)
-npm start
+bun run start
 ```
 
 Or with hot-reload during development:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ### Testing the Server
@@ -49,7 +49,7 @@ npm run dev
 You can test the server with any MCP client (e.g., the [MCP Inspector](https://github.com/modelcontextprotocol/inspector)):
 
 ```bash
-npx @modelcontextprotocol/inspector node dist/index.js
+bunx @modelcontextprotocol/inspector node dist/index.js
 ```
 
 Or test manually from another shell by piping JSON-RPC messages:

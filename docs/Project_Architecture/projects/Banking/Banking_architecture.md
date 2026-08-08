@@ -406,7 +406,7 @@ graph LR
 
 - **New banking features** via App Router route groups in `src/app/(root)/`
 - **New financial integrations** via `src/lib/` (add provider, schema, DAL)
-- **New UI components** via `npx shadcn add` or `bun run generate:component`
+- **New UI components** via `bunx shadcn add` or `bun run generate:component`
 - **New API endpoints** as Route Handlers under `src/app/api/`
 - **New DAL modules** in `src/dal/` following the existing pattern
 - **New code generators** in `scripts/generate/` (action, component, dal, feature)

@@ -69,8 +69,8 @@ mcp-server-typescript/
 | `build` | `tsc` | Compile TypeScript to `dist/` |
 | `start` | `node dist/index.js` | Run compiled server |
 | `dev` | `tsx src/index.ts` | Run with hot reload |
-| `inspect` | `npx @modelcontextprotocol/inspector node dist/index.js` | Debug with MCP Inspector |
-| `inspect:dev` | `npx @modelcontextprotocol/inspector tsx src/index.ts` | Debug without build |
+| `inspect` | `bunx @modelcontextprotocol/inspector node dist/index.js` | Debug with MCP Inspector |
+| `inspect:dev` | `bunx @modelcontextprotocol/inspector tsx src/index.ts` | Debug without build |
 | `clean` | `rm -rf dist` | Remove build output |
 | `typecheck` | `tsc --noEmit` | Type check only |
 
@@ -151,22 +151,22 @@ export function registerConfigResource(server: McpServer) {
 
 ```bash
 # Install
-npm install
+bun install
 
 # Development (hot reload)
-npm run dev
+bun run dev
 
 # Type check
-npm run typecheck
+bun run typecheck
 
 # Build
-npm run build
+bun run build
 
 # Run compiled
-npm run start
+bun run start
 
 # Debug with Inspector
-npm run inspect:dev
+bun run inspect:dev
 ```
 
 ---
@@ -175,8 +175,8 @@ npm run inspect:dev
 
 | Check | Command |
 |-------|---------|
-| **Type Check** | `npm run typecheck` |
-| **Build** | `npm run build` |
+| **Type Check** | `bun run typecheck` |
+| **Build** | `bun run build` |
 | **Schema Validation** | Zod runtime validation |
 
 ---

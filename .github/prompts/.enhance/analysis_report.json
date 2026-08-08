@@ -1,21 +1,31 @@
 {
-  "total_files": 221,
+  "total_files": 222,
   "issue_counts": {
     "critical": 0,
     "high": 0,
-    "medium": 0,
-    "info": 1
+    "medium": 1,
+    "info": 5
   },
   "files_no_frontmatter": [],
   "all_issues": {
     "info": {
       "RULES_INLINE_NOT_SHARED": [
-        "setup-groq-cloud"
+        "all-repo-docker-setup",
+        "setup-bun-bunx",
+        "setup-groq-cloud",
+        "smithery-setup"
+      ],
+      "MISSING_RULES_SECTION": [
+        "test-providers-models"
+      ]
+    },
+    "medium": {
+      "MISSING_EXECUTION_SECTION:no_Phases/Steps/Workflow": [
+        "test-providers-models"
       ]
     },
     "critical": {},
-    "high": {},
-    "medium": {}
+    "high": {}
   },
   "per_file": [
     {
@@ -40,7 +50,7 @@
     },
     {
       "name": "all-repo-docker-setup",
-      "issue_count": 0
+      "issue_count": 1
     },
     {
       "name": "apple-appstore-reviewer",
@@ -735,6 +745,10 @@
       "issue_count": 0
     },
     {
+      "name": "setup-bun-bunx",
+      "issue_count": 1
+    },
+    {
       "name": "setup-component",
       "issue_count": 0
     },
@@ -768,7 +782,7 @@
     },
     {
       "name": "smithery-setup",
-      "issue_count": 0
+      "issue_count": 1
     },
     {
       "name": "sql-code-review",
@@ -812,7 +826,7 @@
     },
     {
       "name": "test-providers-models",
-      "issue_count": 0
+      "issue_count": 2
     },
     {
       "name": "testing",

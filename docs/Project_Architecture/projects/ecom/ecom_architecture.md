@@ -321,7 +321,7 @@ sequenceDiagram
 graph LR
     subgraph "Development"
         DevBE["Backend :8000<br/>python manage.py runserver"]
-        DevFE["Frontend :3000<br/>npm start (proxy → :9000)"]
+        DevFE["Frontend :3000<br/>bun run start (proxy → :9000)"]
     end
 
     subgraph "Production (Docker / Heroku)"

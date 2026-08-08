@@ -53,7 +53,7 @@ Clean up code, apply security best practices, and enhance design whilst keeping 
 - **Authentication/Authorisation** - Implement proper access controls if specified in issue
 - **Data protection** - Encrypt sensitive data, use secure connection strings
 - **Error handling** - Avoid information disclosure through exception details
-- **Dependency scanning** - Check for vulnerable packages (`npm audit`, `pip audit`, `dotnet list package --vulnerable`, etc.)
+- **Dependency scanning** - Check for vulnerable packages (`bun audit`, `pip audit`, `dotnet list package --vulnerable`, etc.)
 - **Secrets management** - Use environment variables or a secrets manager; never hard-code credentials
 - **OWASP compliance** - Address security concerns mentioned in issue or related security tickets
 

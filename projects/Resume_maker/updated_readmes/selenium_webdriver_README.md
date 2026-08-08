@@ -100,29 +100,29 @@ git clone https://github.com/rhixecompany/selenium_webdriver.git
 cd selenium_webdriver
 
 # Install dependencies
-npm install
+bun install
 
 # Run all tests
-npm test
+bun run test
 
 # Run specific test file
-npm test -- tests/login.test.js
+bun run test -- tests/login.test.js
 
 # Run with report
-npm run test:report
+bun run test:report
 ```
 
 ### Basic Test Execution
 
 ```bash
 # Run all tests
-npm test
+bun run test
 
 # Run in headless mode
-npm run test:headless
+bun run test:headless
 
 # Generate Allure report
-npm run report
+bun run report
 ```
 
 ---
@@ -308,9 +308,9 @@ module.exports = { createDriver };
 
 ```bash
 # Install ChromeDriver
-npm install chromedriver
+bun install chromedriver
 # Or use webdriver-manager
-npm install webdriver-manager
+bun install webdriver-manager
 ```
 
 **Element not found**

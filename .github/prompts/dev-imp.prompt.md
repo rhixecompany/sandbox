@@ -106,7 +106,7 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 
 ### Phase 3: Verify Implementation Status (Only After All Generators Complete)1. Check the target project state:
 
-- All expected files exist (per each generator's spec)   - All expected modifications applied   - No partial or incomplete implementations   - Git status is clean or has expected changes2. Try to build/compile the project (`npm run build`, `dotnet build`, `cargo check`, etc.)3. Run the test suite if applicable4. Report any implementation gaps or failures
+- All expected files exist (per each generator's spec)   - All expected modifications applied   - No partial or incomplete implementations   - Git status is clean or has expected changes2. Try to build/compile the project (`bun run build`, `dotnet build`, `cargo check`, etc.)3. Run the test suite if applicable4. Report any implementation gaps or failures
 
 ### Phase 4: Code Review Changed Files (Only After Verification Passes)For EVERY file changed by any generator:1. Read the full file content2. Check:
 

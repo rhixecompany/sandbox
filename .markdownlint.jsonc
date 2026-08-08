@@ -42,7 +42,7 @@
 		"MD031": true,
 		"MD036": false,
 		"MD047": true,
-		"MD059": false
+		"MD059": false,
 	},
 	"ignores": [
 		"**/node_modules/**",
@@ -58,6 +58,6 @@
 		"**/build/**",
 		"**/.next/**",
 		"**/.git/**",
-		".markdownlint.jsonc"
-	]
+		".markdownlint.jsonc",
+	],
 }

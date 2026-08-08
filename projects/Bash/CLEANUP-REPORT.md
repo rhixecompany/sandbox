@@ -70,7 +70,7 @@ To restore npm dependencies:
 
 ```bash
 cd ~/Desktop/Sandbox/Bash
-npm install
+bun install
 ```
 
 ---
@@ -145,7 +145,7 @@ If the Bash project needs npm modules:
 
 ```bash
 cd ~/Desktop/Sandbox/Bash
-npm install
+bun install
 ```
 
 ### Option 2: Cleanup Resume Project Dependencies

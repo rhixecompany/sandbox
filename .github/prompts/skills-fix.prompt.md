@@ -118,7 +118,7 @@ Full lifecycle audit and remediation of the Hermes default skill library.Discove
 
 ## Workflow
 
-`(exact heading)  | Add section or accept semantic variant       || S2   | Heading level jump (H2 → H4 with no H3)                    | Insert intermediate heading                  || C1   | Stale patterns (`pip install`,`npm install -g`)           | Note as supply_chain warning                 || R1   | Duplicate section heading                                  | Remove second occurrence, merge content      |
+`(exact heading)  | Add section or accept semantic variant       || S2   | Heading level jump (H2 → H4 with no H3)                    | Insert intermediate heading                  || C1   | Stale patterns (`pip install`,`bun install -g`)           | Note as supply_chain warning                 || R1   | Duplicate section heading                                  | Remove second occurrence, merge content      |
 
 ## Reorganization Map (from 2026-06-04 session)Skills moved to correct categories:- `agent-browser` → `autonomous-ai-agents/`- `algorithmic-art` → `creative/`- `asdf` → `devops/`- `banking` → `software-development/`- `brainstorming` → `planning/` (was duplicate with `development/brainstorming`)- `brand-guidelines` → `creative/`- `canvas-design` → `creative/`- `validate-memories` → `devops/`- `watchers` → `devops/`Duplicates removed:- `development/brainstorming` (canonical: `planning/brainstorming`)- `(root)/dogfood` (canonical: `qa/dogfood`)- `(root)/yuanbao` (canonical: `productivity/yuanbao`)
 

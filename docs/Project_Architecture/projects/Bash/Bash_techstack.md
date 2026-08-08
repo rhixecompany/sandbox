@@ -79,7 +79,7 @@ mindmap
 flowchart LR
     subgraph PM["Package Management"]
         BUN[bun install<br/>bunx tsx<br/>bun run]
-        NPM[npm install<br/>npx tsx]
+        NPM[bun install<br/>bunx tsx]
     end
 
     subgraph Lock["Lock Files"]

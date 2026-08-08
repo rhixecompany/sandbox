@@ -112,7 +112,7 @@ git clone https://github.com/rhixecompany/university-libary-jsm.git
 cd university-libary-jsm
 
 # Install dependencies
-npm install
+bun install
 # or
 bun install
 
@@ -123,12 +123,12 @@ cp .env.example .env.local
 DATABASE_URL=postgresql://user:password@localhost:5432/library_db
 
 # Push database schema
-npm run db:push
+bun run db:push
 # or
 bun run db:push
 
 # Start the development server
-npm run dev
+bun run dev
 # or
 bun run dev
 ```
@@ -261,7 +261,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 **Build errors**
 
-- Run `npm run type-check` to see type errors
+- Run `bun run type-check` to see type errors
 - Ensure all dependencies are installed
 - Clear .next cache: `rm -rf .next`
 

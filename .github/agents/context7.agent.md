@@ -594,7 +594,7 @@ get -
    ### Migration Steps:
 
    1. Update dependency file ({package.json|requirements.txt|Gemfile|etc})
-   2. Install/update: {npm install|pip install|bundle update|etc}
+   2. Install/update: {bun install|pip install|bundle update|etc}
    3. Code changes required
    4. Test thoroughly
 

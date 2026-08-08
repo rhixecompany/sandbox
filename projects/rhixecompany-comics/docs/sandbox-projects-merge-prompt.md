@@ -9,10 +9,10 @@
 cd backend && python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && cd ..
 
 # 2. Install frontend deps
-cd frontend && npm install && cd ..
+cd frontend && bun install && cd ..
 
 # 3. Build & verify
-cd frontend && npm run build && cd ..
+cd frontend && bun run build && cd ..
 cd backend && python manage.py check --deploy && cd ..
 
 # 4. Initialize git remote (example)
@@ -45,8 +45,8 @@ The `.github/workflows/test.yml` runs on push to `development`/`production`:
 
 - [ ] `python manage.py check --deploy` passes
 - [ ] `python manage.py test` passes
-- [ ] `cd frontend && npm run typecheck` passes
-- [ ] `cd frontend && npm run lint` passes
+- [ ] `cd frontend && bun run typecheck` passes
+- [ ] `cd frontend && bun run lint` passes
 - [ ] `docker compose build` completes
 - [ ] `production` branch at scaffold commit `32a7f8d`
 - [ ] `development` branch at consolidation commit `42a77c5`

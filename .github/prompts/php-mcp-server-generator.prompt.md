@@ -93,7 +93,7 @@ bashvendor/bin/phpunit
 ## Development
 
 > Test with MCP Inspector:
-> npx @modelcontextprotocol/inspector php server.php
+> bunx @modelcontextprotocol/inspector php server.php
 > **Full content:**
 
 ## Implementation Guidelines

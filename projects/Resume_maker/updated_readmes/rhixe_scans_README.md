@@ -139,8 +139,8 @@ docker-compose -f docker-compose.production.yml up --build
 
 ```bash
 cd frontend  # or src/
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 #### Backend (Django)
@@ -261,8 +261,8 @@ Includes:
 ### Frontend (Jest)
 
 ```bash
-npm run test
-npm run test:coverage
+bun run test
+bun run test:coverage
 ```
 
 ### Backend (Pytest)
@@ -280,7 +280,7 @@ pytest --cov
 
 **Frontend build fails**
 
-- Clear node_modules and reinstall: `rm -rf node_modules && npm install`
+- Clear node_modules and reinstall: `rm -rf node_modules && bun install`
 - Check Node.js version (should be 18+)
 
 **Backend migration errors**

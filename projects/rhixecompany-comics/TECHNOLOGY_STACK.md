@@ -271,15 +271,15 @@ mypy .
 
 ```bash
 cd frontend
-npm install
-npx prisma generate
-npx prisma migrate dev
-npm run dev  # :3000
+bun install
+bunx prisma generate
+bunx prisma migrate dev
+bun run dev  # :3000
 
 # Quality
-npm run lint
-npm run type-check
-npm run test
+bun run lint
+bun run type-check
+bun run test
 ```
 
 ### Full Stack (Docker)
