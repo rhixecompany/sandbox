@@ -44,7 +44,7 @@
 - **Eligibility:** Any UBA account; no salary needed. Savings account opens at **₦0** (zero opening balance).
 - **Reliability:** HIGH (official bank promotion, still promoted July–Aug 2026).
 - **Red flag:** Coins value/expiry terms change; treat as minor perk, not income.
-- Sources: https://www.instagram.com/reel/DbBkZYII0U_ | ubagroup.com UBA LEO launch info | https://www.ubagroup.com/nigeria/personal-banking/accounts/savings-account?list=1
+- Sources: https://www.instagram.com/reel/DbBkZYII0U_ | https://www.instagram.com/reel/CAzkn86nwQk | https://www.ubagroup.com/nigeria/personal-banking/accounts/savings-account
 - *(Older claims: "NextGen Account ₦15k pocket money" = 2020-era campaign, DEAD. Do not chase.)* — Instagram reel CAzkxNWkQk.
 
 ### 6. Zenith Bank — Salary Savings account (interest + salary advance) — VERIFIED
@@ -106,7 +106,7 @@
 - **Eligibility:** must hold Moniepoint Business Banking app (free for business owners and agents — an adjacent fit for a site supervisor managing contractor payments).
 - **Reliability:** HIGH — official Moniepoint blog + BusinessPost.
 - **Red flag:** earnings depend on referees transacting; zero for inactive referrals; not a sign-up bonus.
-- Sources: https://businesspost.ng/banking/moniepoint/profile-increases | https://moniepointtong.com/blog/moniepoint-referral-program | https://moniepoint.com/ng/reward-promotion-terms-conditions
+- Sources: https://businesspost.ng/banking/moniepoint-introduces-refer-and-earn-program | https://moniepoint.com/blog/moniepoint-referral-program | https://moniepoint.com/ng/reward-promotion-terms-conditions
 
 ### 14. PiggyVest — ₦1,000 sign-up bonus + ₦1,000/referral — VERIFIED (community-consensual)
 - **Bonus:** new user ₦1,000 + ₦1,000 for referrer on each funded referral.
@@ -127,7 +127,7 @@
 - **Qualification:** referral must buy a plan; locked options (e.g. Naira Vault) add bonus points ("Referral Champion", Jan 2026).
 - **Reliability:** HIGH — official blog; App-Store reviews good on rewards timely.
 - **Red flag:** commission is a % of friend's investment — real income only on chunky referred amounts; paid in stages (90–180 days), not instantly. Unusable for month-1 income.
-- Sources: https://risevest.com/blog/naira-referral-commissions-are-here | https://risevest.com/blog/be-our-writing-referral-champion | https://risevest.com/blog/your-referral-reward-just-got-better-on-rise
+- Sources: https://risevest.com/blog/naira-referral-commissions-are-here | https://risevest.com/blog/be-our-next-referral-champion | https://risevest.com/blog/your-referral-reward-just-got-better-on-rise
 
 ### 17. Rais — NO VERIFIABLE 2026 OFFER (unverified)
 - **Status:** No official Rais (Nigeria) reward/switch program could be found as of Aug 2026; most web hits for "Rais bonus" are the US "Raisin" platform (different product) or SEO noise. **Do not act on "Rais sign-up bonuses" circulating in chats.**
@@ -137,7 +137,7 @@
 ### 18b. Bonus — Flutterwave Send App (NGN) referral — VERIFIED (2025 program, still listed)
 - **Referral:** you **and** your friend each get **₦5,000** when the friend signs up with your link, completes KYC, and makes a first transfer of **≥ ₦200,000** (NGN route). Paid within 14 days of eligibility.
 - **Reliability:** HIGH — official block. **Red flag:** ₦200k minimum transfer — not meaningful for small balances; do not transfer the money just for the bonus.
-- Source: https://send.flutterwave.com/blog/introducing-the-send-app-reframed-referral-program-earn-ngn5000-reward-for
+- Source: https://send.flutterwave.com/blog/introducing-the-send-app-ngn-referral-program-earn-ngn5000-reward-for
 - Also: Platnova — up to ₦5,000 per referral on registration+KYC (official refer&earn page): https://platnova.com/refer_and_earn
 
 ---

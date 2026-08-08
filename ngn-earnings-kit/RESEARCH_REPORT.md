@@ -36,9 +36,9 @@
 - 39 platforms scored. 8 **eliminated**: GeoPoll (sub-threshold, airtime-only), UserTesting/UserInterviews/Maze (not NG), Swagbucks/Qmee/Prolific/MoBrog (geo-locked / VPN-fraud risk) — see `references/platform_master_list.csv`.
 
 ## 4. Validation summary (Phase 3)
-- **Mercer:** ✅ legit, payments reliable, selective (feast-or-famine).
+- **Mercor:** ✅ legit, payments reliable, selective (feast-or-famine).
 - **DataAnnotation:** ⚠️ legit but 2.6% acceptance; Trustpilot mixed.
-- **uTead:** ✅ Payoneer works in Nigeria (Nigerian tutorials confirm).
+- **uTest:** ✅ Payoneer works in Nigeria (Nigerian tutorials confirm).
 - **TimeBucks:** ⚠️ legit but complaint-heavy (Facebook NG group + Xolvie reports).
 
 ## 5. Tax & compliance (critical for NG)
