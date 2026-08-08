@@ -233,7 +233,7 @@ sequenceDiagram
 
     Note over Dev,RapidAPI: Three concurrent processes in development
 
-    Dev->>Terminal: npm run server
+    Dev->>Terminal: bun run server
     Terminal->>Express: nodemon index.js
     Express-->>Terminal: Listening on port 8000
 
@@ -243,7 +243,7 @@ sequenceDiagram
 
     Note over Express,Django: ⚠ Port conflict — both default to 8000
 
-    Dev->>Terminal: npm start
+    Dev->>Terminal: bun run start
     Terminal->>React: react-scripts start
     React-->>Terminal: Listening on port 3000
     React-->>Dev: Opens http://localhost:3000
@@ -275,7 +275,7 @@ graph TD
     Django --> DB[(SQLite Database)]
     
     subgraph "Build Pipeline"
-        Build[npm run build] --> Static[build/ directory]
+        Build[bun run build] --> Static[build/ directory]
         Collect[python manage.py collectstatic] --> DjangoStatic[Django Static Files]
     end
     

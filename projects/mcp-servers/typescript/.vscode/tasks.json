@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "command": "npm start",
+      "command": "bun run start",
       "label": "Start",
       "type": "shell",
       "group": {
@@ -15,7 +15,7 @@
       }
     },
     {
-      "command": "npm test",
+      "command": "bun run test",
       "label": "Test",
       "type": "shell",
       "group": "test",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "command": "npm run lint",
+      "command": "bun run lint",
       "label": "Lint",
       "type": "shell",
       "group": "build",

@@ -23,8 +23,8 @@
 No runtime dependencies. Markdown-only documentation repository. Tooling inherited from workspace root (`package.json`).
 
 ```text
-markdownlint-cli2   (via root npx)
-cspell              (via root npx)
+markdownlint-cli2   (via root bunx)
+cspell              (via root bunx)
 ```
 
 ---
@@ -79,10 +79,10 @@ Shared workspace configuration files:
 
 ```bash
 # Markdown linting (from workspace root)
-npx markdownlint-cli2 "projects/docs/**/*.md"
+bunx markdownlint-cli2 "projects/docs/**/*.md"
 
 # Spell check
-npx cspell "projects/docs/**/*.md"
+bunx cspell "projects/docs/**/*.md"
 ```
 
 No build or run commands — static documentation only.

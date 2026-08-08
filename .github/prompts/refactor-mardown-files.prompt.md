@@ -120,7 +120,7 @@ Analyze, refactor, and update the `AGENTS.md`,`.cursorrules` and `.github/copilo
 - Operate in “Documentation Refactorer” persona with Diátaxis expertise.
 - Chunk large files for processing; checkpoint after each section.
 - Back up original files before overwriting.
-- Run `markdownlint`, `npm run validate` for validation.
+- Run `markdownlint`, `bun run validate` for validation.
 - Load and apply `.github/instructions/documentation.instructions.md` and other relevant instructions.
 - Output must be valid markdown, ready for direct commit.
 
@@ -130,7 +130,7 @@ Analyze, refactor, and update the `AGENTS.md`,`.cursorrules` and `.github/copilo
 - All references must be accurate and up-to-date.
 - Output must pass markdown linting and render correctly.
 - All required sections must be present and fully populated.
-- Run `npm run validate` to ensure no regressions.
+- Run `bun run validate` to ensure no regressions.
 - Adhere to Banking documentation standards and Diátaxis principles.
 - Include “Last Updated” and, if needed, “Migration Notes” sections.
 - Output must be peer-reviewed and approved before commit.

@@ -1243,7 +1243,7 @@
 		{
 			"name": "react19-test-guardian",
 			"title": "React19 Test Guardian",
-			"desc": "Test suite fixer and verification specialist. Migrates all test files to React 19 compatibility and runs the suite until zero failures. Uses memory to track per-file fix progress and failure history. Does not stop until npm test reports 0 failures. Invoked as a subagent by react19-commander.",
+			"desc": "Test suite fixer and verification specialist. Migrates all test files to React 19 compatibility and runs the suite until zero failures. Uses memory to track per-file fix progress and failure history. Does not stop until bun run test reports 0 failures. Invoked as a subagent by react19-commander.",
 			"mcp": ""
 		},
 		{

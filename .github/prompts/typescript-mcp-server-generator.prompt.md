@@ -102,7 +102,7 @@ Use when you need to work on the current workspace or task.
 
 ## Test
 
-ing Guidance- Explain how to run the server (`npm start` or `bunx tsx server.ts`)- Provide MCP Inspector command: `npx @modelcontextprotocol/inspector`- For HTTP servers, include connection URL: `http://localhost:PORT/mcp`- Include example tool invocations- Add troubleshooting tips for common issues
+ing Guidance- Explain how to run the server (`bun run start` or `bunx tsx server.ts`)- Provide MCP Inspector command: `bunx @modelcontextprotocol/inspector`- For HTTP servers, include connection URL: `http://localhost:PORT/mcp`- Include example tool invocations- Add troubleshooting tips for common issues
 
 ## Additional Features to Consider
 

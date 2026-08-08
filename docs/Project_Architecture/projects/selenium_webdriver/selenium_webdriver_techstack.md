@@ -199,7 +199,7 @@ node src/test1.js
 node src/test.js
 
 # Install dependencies
-npm install        # npm
+bun install        # npm
 bun install        # Bun (alternative)
 ```
 

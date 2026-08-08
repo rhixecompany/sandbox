@@ -67,10 +67,10 @@ All implementations follow the same MCP pattern:
 
 ```bash
 cd mcp-servers/typescript
-npm install
-npm run dev          # Development with hot reload
-npm run build        # Compile to dist/
-npm run start        # Run compiled
+bun install
+bun run dev          # Development with hot reload
+bun run build        # Compile to dist/
+bun run start        # Run compiled
 ```
 
 ### Python (mcp-servers/python)
@@ -148,8 +148,8 @@ bundle exec bin/your-server
 
 ```bash
 cd mcp-servers/copilot-studio
-npm install
-npm run dev
+bun install
+bun run dev
 # Runs on HTTP :3000 for Copilot Studio integration
 ```
 

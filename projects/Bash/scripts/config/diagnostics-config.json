@@ -18,23 +18,23 @@
         },
         {
           "name": "npm-audit",
-          "command": "npm audit --json",
+          "command": "bun audit --json",
           "description": "Security vulnerability audit",
           "parseJson": true
         },
         {
           "name": "npm-lint",
-          "command": "npm run lint 2>&1 || true",
+          "command": "bun run lint 2>&1 || true",
           "description": "Run linter if available"
         },
         {
           "name": "npm-test",
-          "command": "npm run test 2>&1 || true",
+          "command": "bun run test 2>&1 || true",
           "description": "Run tests if available"
         },
         {
           "name": "npm-build",
-          "command": "npm run build 2>&1 || true",
+          "command": "bun run build 2>&1 || true",
           "description": "Run build if available"
         }
       ]
@@ -56,18 +56,18 @@
         },
         {
           "name": "npm-audit",
-          "command": "npm audit --json",
+          "command": "bun audit --json",
           "description": "Security vulnerability audit",
           "parseJson": true
         },
         {
           "name": "npm-lint",
-          "command": "npm run lint 2>&1 || true",
+          "command": "bun run lint 2>&1 || true",
           "description": "Run linter if available"
         },
         {
           "name": "npm-test",
-          "command": "npm run test 2>&1 || true",
+          "command": "bun run test 2>&1 || true",
           "description": "Run tests if available"
         }
       ]

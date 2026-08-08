@@ -106,8 +106,8 @@ mcp-servers/typescript/
 | `build` | `tsc` | Compile TypeScript to `dist/` |
 | `start` | `node dist/index.js` | Run compiled server |
 | `dev` | `tsx watch src/index.ts` | Run with hot reload |
-| `inspect` | `npx @modelcontextprotocol/inspector node dist/index.js` | Debug with MCP Inspector |
-| `inspect:dev` | `npx @modelcontextprotocol/inspector tsx src/index.ts` | Debug without build |
+| `inspect` | `bunx @modelcontextprotocol/inspector node dist/index.js` | Debug with MCP Inspector |
+| `inspect:dev` | `bunx @modelcontextprotocol/inspector tsx src/index.ts` | Debug without build |
 | `clean` | `rm -rf dist` | Remove build output |
 | `typecheck` | `tsc --noEmit` | Type check only |
 
@@ -201,25 +201,25 @@ export function registerCalculatorTool(server: McpServer) {
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Development (hot reload)
-npm run dev
+bun run dev
 
 # Type check
-npm run typecheck
+bun run typecheck
 
 # Build
-npm run build
+bun run build
 
 # Start production
-npm run start
+bun run start
 
 # Debug with Inspector
-npm run inspect:dev
+bun run inspect:dev
 
 # Clean
-npm run clean
+bun run clean
 ```
 
 ---
@@ -228,10 +228,10 @@ npm run clean
 
 | Check | Command |
 |-------|---------|
-| **Type Check** | `npm run typecheck` |
-| **Build** | `npm run build` |
-| **Format** | `npx prettier --check .` (if configured) |
-| **Lint** | `npx eslint .` (if configured) |
+| **Type Check** | `bun run typecheck` |
+| **Build** | `bun run build` |
+| **Format** | `bunx prettier --check .` (if configured) |
+| **Lint** | `bunx eslint .` (if configured) |
 
 ---
 

@@ -392,7 +392,7 @@ Creates a model response for the given chat conversation.
 
 * messagesarrayRequired  
 A list of messages comprising the conversation so far.  
-#### Show possible types
+**Show possible types**
 * modelstringRequired  
 ID of the model to use. For details on which models are compatible with the Chat API, see available [models](https://console.groq.com/docs/models)
 * citation_optionsstring or nullOptionalDefaults to enabled  
@@ -400,12 +400,12 @@ Allowed values: `enabled, disabled`
 Whether to enable citations in the response. When enabled, the model will include citations for information retrieved from provided documents or web searches.
 * compound_customobject or nullOptional  
 Custom configuration of models and tools for Compound.  
-#### Show properties
+**Show properties**
 * disable_tool_validationbooleanOptionalDefaults to false  
 If set to true, groq will return called tools without validating that the tool is present in request.tools. tool_choice=required/none will still be enforced, but the request cannot require a specific tool be used.
 * documentsarray or nullOptional  
 A list of documents to provide context for the conversation. Each document contains text that can be referenced by the model.  
-#### Show properties
+**Show properties**
 * exclude_domainsDeprecatedarray or nullOptional  
 Deprecated: Use search_settings.exclude_domains instead. A list of domains to exclude from the search results when the model uses a web search tool.
 * frequency_penaltynumber or nullOptionalDefaults to 0  
@@ -415,11 +415,11 @@ This is not yet supported by any of our models. Number between -2.0 and 2.0. Pos
 Deprecated in favor of `tool_choice`.  
 Controls which (if any) function is called by the model. `none` means the model will not call a function and instead generates a message. `auto` means the model can pick between generating a message or calling a function. Specifying a particular function via `{"name": "my_function"}` forces the model to call that function.  
 `none` is the default when no functions are present. `auto` is the default if functions are present.  
-#### Show possible types
+**Show possible types**
 * functionsDeprecatedarray or nullOptional  
 Deprecated in favor of `tools`.  
 A list of functions the model may generate JSON inputs for.  
-#### Show properties
+**Show properties**
 * include_domainsDeprecatedarray or nullOptional  
 Deprecated: Use search_settings.include_domains instead. A list of domains to include in the search results when the model uses a web search tool.
 * include_reasoningboolean or nullOptional  
@@ -451,10 +451,10 @@ Allowed values: `hidden, raw, parsed`
 Specifies how to output reasoning tokens This field is mutually exclusive with `include_reasoning`.
 * response_formatobject / object / object or nullOptional  
 An object specifying the format that the model must output. Setting to `{ "type": "json_schema", "json_schema": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema. `json_schema` response format is only available on [supported models](https://console.groq.com/docs/structured-outputs#supported-models). Setting to `{ "type": "json_object" }` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using `json_schema` is preferred for models that support it.  
-#### Show possible types
+**Show possible types**
 * search_settingsobject or nullOptional  
 Settings for web search functionality when the model uses a web search tool.  
-#### Show properties
+**Show properties**
 * seedinteger or nullOptional  
 If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the `system_fingerprint` response parameter to monitor changes in the backend.
 * service_tierstring or nullOptional  
@@ -465,24 +465,24 @@ The service tier to use for the request. Defaults to `on_demand`.
   * `flex` uses the flex tier, which will succeed or fail quickly.
 * stopstring / array or nullOptional  
 Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.  
-#### Show possible types
+**Show possible types**
 * storeboolean or nullOptional  
 This parameter is not currently supported.
 * streamboolean or nullOptionalDefaults to false  
 If set, partial message deltas will be sent. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent%5Fevents/Using%5Fserver-sent%5Fevents#Event%5Fstream%5Fformat) as they become available, with the stream terminated by a `data: [DONE]` message. [Example code](https://console.groq.com/docs/text-chat#streaming-a-chat-completion).
 * stream_optionsobject or nullOptional  
 Options for streaming response. Only set this when you set `stream: true`.  
-#### Show properties
+**Show properties**
 * temperaturenumber or nullOptionalDefaults to 1  
 Range: 0 - 2  
 What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.
 * tool_choicestring / object or nullOptional  
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.  
 `none` is the default when no tools are present. `auto` is the default if tools are present.  
-#### Show possible types
+**Show possible types**
 * toolsarray or nullOptional  
 A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.  
-#### Show properties
+**Show properties**
 * top_logprobsinteger or nullOptional  
 Range: 0 - 20  
 This is not yet supported by any of our models. An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. `logprobs` must be set to `true` if this parameter is used.
@@ -496,14 +496,14 @@ A unique identifier representing your end-user, which can help us monitor and de
 
 * choicesarray  
 A list of chat completion choices. Can be more than one if `n` is greater than 1.  
-#### Show properties
+**Show properties**
 * createdinteger  
 The Unix timestamp (in seconds) of when the chat completion was created.
 * idstring  
 A unique identifier for the chat completion.
 * mcp_list_toolsarray or null  
 List of discovered MCP tools from connected servers.  
-#### Show properties
+**Show properties**
 * modelstring  
 The model used for the chat completion.
 * objectstring  
@@ -517,12 +517,12 @@ This fingerprint represents the backend configuration that the model runs with.
 Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
 * usageobject  
 Usage statistics for the completion request.  
-#### Show properties
+**Show properties**
 * usage_breakdown  
 Detailed usage breakdown by model when multiple models are used in the request for compound AI systems.
 * x_groqobject  
 Groq-specific metadata for non-streaming chat completion responses.  
-#### Show properties
+**Show properties**
 
 ```bash
 curl https://api.groq.com/openai/v1/chat/completions -s \
@@ -631,7 +631,7 @@ Creates a model response for the given input.
 
 * inputstring / arrayRequired  
 Text input to the model, used to generate a response.  
-#### Show possible types
+**Show possible types**
 * modelstringRequired  
 ID of the model to use. For details on which models are compatible with the Responses API, see available [models](https://console.groq.com/docs/models)
 * instructionsstring or nullOptional  
@@ -644,7 +644,7 @@ Custom key-value pairs for storing additional information. Maximum of 16 pairs.
 Enable parallel execution of multiple tool calls.
 * reasoningobject or nullOptional  
 Configuration for reasoning capabilities when using [models that support reasoning](https://console.groq.com/docs/reasoning).  
-#### Show properties
+**Show properties**
 * service_tierstring or nullOptionalDefaults to auto  
 Allowed values: `auto, default, flex`  
 Specifies the latency tier to use for processing the request.
@@ -657,14 +657,14 @@ Range: 0 - 2
 Controls randomness in the response generation. Range: 0 to 2. Lower values produce more deterministic outputs, higher values increase variety and creativity.
 * textobjectOptional  
 Response format configuration. Supports plain text or structured JSON output.  
-#### Show properties
+**Show properties**
 * tool_choicestring / object or nullOptional  
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.  
 `none` is the default when no tools are present. `auto` is the default if tools are present.  
-#### Show possible types
+**Show possible types**
 * toolsarray or nullOptional  
 List of tools available to the model. Currently supports function definitions only. Maximum of 128 functions.  
-#### Show properties
+**Show properties**
 * top_pnumber or nullOptionalDefaults to 1  
 Range: 0 - 1  
 Nucleus sampling parameter that controls the cumulative probability cutoff. Range: 0 to 1. A value of 0.1 restricts sampling to tokens within the top 10% probability mass.
@@ -682,12 +682,12 @@ Whether the response was generated in the background.
 The Unix timestamp (in seconds) of when the response was created.
 * errorobject or null  
 An error object if the response failed.  
-#### Show properties
+**Show properties**
 * idstring  
 A unique identifier for the response.
 * incomplete_detailsobject or null  
 Details about why the response is incomplete.  
-#### Show properties
+**Show properties**
 * instructionsstring or null  
 The system instructions used for the response.
 * max_output_tokensinteger or null  
@@ -703,14 +703,14 @@ Allowed values: `response`
 The object type, which is always `response`.
 * outputarray  
 An array of content items generated by the model.  
-#### Show possible types
+**Show possible types**
 * parallel_tool_callsboolean  
 Whether the model can run tool calls in parallel.
 * previous_response_idstring or null  
 Not supported. Always null.
 * reasoningobject or null  
 Configuration options for [models that support reasoning](https://console.groq.com/docs/reasoning).  
-#### Show properties
+**Show properties**
 * service_tierstring  
 Allowed values: `auto, default, flex`  
 The service tier used for processing.
@@ -723,14 +723,14 @@ Whether the response was stored.
 The sampling temperature used.
 * textobject  
 Text format configuration used for the response.  
-#### Show properties
+**Show properties**
 * tool_choicestring / object or null  
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.  
 `none` is the default when no tools are present. `auto` is the default if tools are present.  
-#### Show possible types
+**Show possible types**
 * toolsarray  
 The tools that were available to the model.  
-#### Show properties
+**Show properties**
 * top_logprobsinteger  
 The number of top log probabilities returned.
 * top_pnumber  
@@ -740,7 +740,7 @@ Allowed values: `auto, disabled`
 The truncation strategy used.
 * usageobject  
 Usage statistics for the response request.  
-#### Show properties
+**Show properties**
 * userstring or null  
 The user identifier.
 
@@ -1099,7 +1099,7 @@ List all available [models](https://console.groq.com/docs/models).
 [Response Object](https://console.groq.com/docs/api-reference#models-list-returns)
 
 * dataarray  
-#### Show properties
+**Show properties**
 * objectstring  
 Allowed values: `list`
 
@@ -1321,7 +1321,7 @@ The API endpoint used by the batch.
 * error_file_idstring  
 The ID of the file containing the outputs of requests with errors.
 * errorsobject  
-#### Show properties
+**Show properties**
 * expired_atinteger  
 The Unix timestamp (in seconds) for when the batch expired.
 * expires_atinteger  
@@ -1344,7 +1344,7 @@ The object type, which is always `batch`.
 The ID of the file containing the outputs of successfully executed requests.
 * request_countsobject  
 The request counts for different statuses within the batch.  
-#### Show properties
+**Show properties**
 * statusstring  
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`  
 The current status of the batch.
@@ -1448,7 +1448,7 @@ The API endpoint used by the batch.
 * error_file_idstring  
 The ID of the file containing the outputs of requests with errors.
 * errorsobject  
-#### Show properties
+**Show properties**
 * expired_atinteger  
 The Unix timestamp (in seconds) for when the batch expired.
 * expires_atinteger  
@@ -1471,7 +1471,7 @@ The object type, which is always `batch`.
 The ID of the file containing the outputs of successfully executed requests.
 * request_countsobject  
 The request counts for different statuses within the batch.  
-#### Show properties
+**Show properties**
 * statusstring  
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`  
 The current status of the batch.
@@ -1550,7 +1550,7 @@ List your organization's batches.
 [Response Object](https://console.groq.com/docs/api-reference#batches-list-returns)
 
 * dataarray  
-#### Show properties
+**Show properties**
 * objectstring  
 Allowed values: `list`
 
@@ -1645,7 +1645,7 @@ The API endpoint used by the batch.
 * error_file_idstring  
 The ID of the file containing the outputs of requests with errors.
 * errorsobject  
-#### Show properties
+**Show properties**
 * expired_atinteger  
 The Unix timestamp (in seconds) for when the batch expired.
 * expires_atinteger  
@@ -1668,7 +1668,7 @@ The object type, which is always `batch`.
 The ID of the file containing the outputs of successfully executed requests.
 * request_countsobject  
 The request counts for different statuses within the batch.  
-#### Show properties
+**Show properties**
 * statusstring  
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`  
 The current status of the batch.
@@ -1860,7 +1860,7 @@ Returns a list of files.
 [Response Object](https://console.groq.com/docs/api-reference#files-list-returns)
 
 * dataarray  
-#### Show properties
+**Show properties**
 * objectstring  
 Allowed values: `list`
 
@@ -2102,7 +2102,7 @@ Lists all previously created fine tunings. This endpoint is in closed beta. [Con
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-list-returns)
 
 * dataarray  
-#### Show properties
+**Show properties**
 * objectstring
 
 ```bash
@@ -2178,7 +2178,7 @@ Type is the type of fine tuning format such as "lora".
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-create-returns)
 
 * dataobject  
-#### Show properties
+**Show properties**
 * idstring
 * objectstring
 
@@ -2259,7 +2259,7 @@ Retrieves an existing fine tuning by id This endpoint is in closed beta. [Contac
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-get-returns)
 
 * dataobject  
-#### Show properties
+**Show properties**
 * idstring
 * objectstring
 

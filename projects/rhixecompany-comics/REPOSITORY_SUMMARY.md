@@ -90,10 +90,10 @@ celery -A config worker -l info
 
 # Frontend
 cd frontend
-npm install
-npm run dev
-npm run build
-npm test
+bun install
+bun run dev
+bun run build
+bun run test
 ```
 
 ---

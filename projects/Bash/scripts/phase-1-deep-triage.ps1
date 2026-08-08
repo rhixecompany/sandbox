@@ -91,7 +91,7 @@ foreach ($repo in $criticalHighRepos) {
                     severity = "HIGH"
                     description = "node_modules directory exists but is empty"
                     path = "$repoPath/node_modules"
-                    proposed_fix = "Run 'npm install' to restore dependencies"
+                    proposed_fix = "Run 'bun install' to restore dependencies"
                     complexity = "LOW"
                     risk = "MEDIUM"
                 }

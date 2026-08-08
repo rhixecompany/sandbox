@@ -19,15 +19,15 @@ cd backend && pip install -r requirements.txt
 cd backend && python manage.py migrate
 cd backend && python manage.py createsuperuser
 cd backend && python manage.py runserver
-cd frontend && npm install
-cd frontend && npm run dev
+cd frontend && bun install
+cd frontend && bun run dev
 docker compose up -d
 cd backend && python manage.py test
-cd frontend && npm run test
+cd frontend && bun run test
 cd backend && ruff check .
-cd frontend && npm run lint
+cd frontend && bun run lint
 cd backend && python manage.py check --deploy
-cd frontend && npm run build
+cd frontend && bun run build
 ```
 
 ## Architecture

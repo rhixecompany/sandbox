@@ -8,7 +8,7 @@
 
 - B1:Missing section(s): ['workflow', 'verification checklist']
 - M2:Placeholder: TODO
-- C2:Stale pattern: npm install -g
+- C2:Stale pattern: bun install -g
 - M3:Table pipe inconsistent
 - M4:Over 250 lines (757)
 

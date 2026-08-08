@@ -16,26 +16,26 @@ A production-ready [Model Context Protocol (MCP)](https://modelcontextprotocol.i
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Build
-npm run build
+bun run build
 
 # Run (stdio transport)
-npm start
+bun run start
 
 # Or run in dev mode (no build step)
-npm run dev
+bun run dev
 ```
 
 ## MCP Inspector (Recommended for testing)
 
 ```bash
 # With built output
-npm run inspect
+bun run inspect
 
 # Or directly with dev server
-npm run inspect:dev
+bun run inspect:dev
 ```
 
 Then open the Inspector URL in your browser (default: http://localhost:6274).
@@ -143,7 +143,7 @@ projects/mcp-server-typescript/
 │   │   └── calculator.ts     # calculator tool
 │   └── resources/
 │       └── system-info.ts    # system-info resource
-└── dist/                     # Compiled output (after npm run build)
+└── dist/                     # Compiled output (after bun run build)
 ```
 
 ## Adding a New Tool
@@ -183,13 +183,13 @@ projects/mcp-server-typescript/
 
 | Command | Description |
 |---------|-------------|
-| `npm run build` | Compile TypeScript to `dist/` |
-| `npm start` | Run built server (stdio) |
-| `npm run dev` | Run with `tsx` (no build) |
-| `npm run inspect` | Open MCP Inspector with built server |
-| `npm run inspect:dev` | Open MCP Inspector with dev server |
-| `npm run typecheck` | Type-check without emitting |
-| `npm run clean` | Remove `dist/` |
+| `bun run build` | Compile TypeScript to `dist/` |
+| `bun run start` | Run built server (stdio) |
+| `bun run dev` | Run with `tsx` (no build) |
+| `bun run inspect` | Open MCP Inspector with built server |
+| `bun run inspect:dev` | Open MCP Inspector with dev server |
+| `bun run typecheck` | Type-check without emitting |
+| `bun run clean` | Remove `dist/` |
 
 ## Requirements
 

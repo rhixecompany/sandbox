@@ -133,7 +133,7 @@ The agent is responsible for making room — it does not silently drop data. Thi
 - `Project uses pnpm workspaces, monorepo at ~/code/monorepo, TypeScript strict mode` (85 chars)
 - `Docker commands work without sudo — user is in docker group` (53 chars)
 - `Completed: migrated auth from JWT to session cookies on 2026-03-14` (59 chars)
-- `Avoid`npm install -g`— use`pnpm dlx`or project-local bins instead` (64 chars)
+- `Avoid`bun install -g`— use`pnpm dlx`or project-local bins instead` (64 chars)
 
 **user (user profile):**
 

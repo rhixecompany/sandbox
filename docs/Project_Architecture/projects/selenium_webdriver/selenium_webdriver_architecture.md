@@ -48,7 +48,7 @@ A Node.js browser-automation tool using **Selenium WebDriver 4.x** to scrape Jav
 C4Context
   title System Context — Selenium WebDriver Scraper
 
-  Person(user, "Developer", "Runs node src/scrape.js or npm test")
+  Person(user, "Developer", "Runs node src/scrape.js or bun run test")
   System_Boundary(scraper_system, "selenium_webdriver Scraper") {
     System(scraper, "Selenium Scraper", "Node.js 18+ script that automates Chrome to scrape comics/manga")
   }

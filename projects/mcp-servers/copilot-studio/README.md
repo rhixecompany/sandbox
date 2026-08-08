@@ -47,20 +47,20 @@ Copilot Studio  ─── POST /mcp ──►  MCP Server  ──► Tool Handle
 cd projects/mcp-servers/copilot-studio
 
 # Install dependencies
-npm install
+bun install
 
 # Build TypeScript
-npm run build
+bun run build
 
 # Start the server
-npm start
+bun run start
 ```
 
 The server starts on **<http://localhost:3121>** by default.  
 Override with `PORT` and `HOST` environment variables:
 
 ```bash
-PORT=8080 HOST=127.0.0.1 npm start
+PORT=8080 HOST=127.0.0.1 bun run start
 ```
 
 ---

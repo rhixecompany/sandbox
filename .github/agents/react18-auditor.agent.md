@@ -343,7 +343,7 @@ These patterns WORKED in React 17 but will produce wrong behavior in React 18 wi
 
 ## Ordered Migration Plan
 
-1. npm install react@18.3.1 react-dom@18.3.1
+1. bun install react@18.3.1 react-dom@18.3.1
 2. Upgrade testing-library / RTL to v14+
 3. Upgrade Apollo, Emotion, react-router
 4. [IF ENZYME] Rewrite all Enzyme tests to RTL

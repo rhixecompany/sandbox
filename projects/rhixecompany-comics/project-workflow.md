@@ -18,8 +18,8 @@ python manage.py runserver
 
 ```bash
 cd frontend
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ## Validation
@@ -36,8 +36,8 @@ python manage.py check
 
 ```bash
 cd frontend
-npm run typecheck
-npm run build
+bun run typecheck
+bun run build
 ```
 
 ## Development Notes

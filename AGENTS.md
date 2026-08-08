@@ -126,25 +126,25 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 
 Each subproject is self-contained with its own `AGENTS.md`. Brief reference:
 
-| Project                         | Type                | Entry Point                                | Test Command                        |
-| ------------------------------- | ------------------- | ------------------------------------------ | ----------------------------------- |
-| `Bash/`                         | TS automation       | `src/` scripts, `orchestrator-unified.ps1` | `bun run test`, `bash test-all.sh`  |
-| `Banking/`                      | Next.js fintech     | `src/app/` App Router                      | `npm run test`                      |
-| `comicwise/`                    | Next.js comics      | `src/app/` App Router                      | `npm run test`                      |
-| `ecom/`                         | Django + React      | `backend/manage.py`, `frontend/`           | `python manage.py test`, `npm test` |
-| `mcp-servers/`                  | Multi-language MCP  | Per-language subdirectory                  | Per-language build system           |
-| `Python-projects/`              | Python scripts      | Standalone `.py` files                     | Manual (`ruff check`, `mypy`)       |
-| `cookiecutter-django-tailwind/` | Django template     | Cookiecutter scaffold                      | Follow project README               |
-| `Django-Scrapy-Selenium/`       | Scrapy/Selenium     | Per-usage                                  | Per-usage                           |
-| `Resume_maker/`                 | TS resume gen       | `src/`                                     | `bun run test`                      |
-| `rhixe_scans/`                  | TBD                 | Check project README                       | Check project README                |
-| `rhixecompany-comics/`          | TBD                 | Check project README                       | Check project README                |
-| `selenium_webdriver/`           | Selenium automation | Standalone                                 | Manual                              |
-| `university-libary-jsm/`        | Library system      | Check project README                       | Check project README                |
-| `xamehi/`, `xamehi.tv/`         | Media projects      | Check project README                       | Check project README                |
-| `youtube-downloader/`           | YouTube tool        | Check project README                       | Check project README                |
-| `profile/`                      | Profile config      | Check project README                       | Check project README                |
-| `docs/`                         | Documentation       | Markdown files                             | N/A                                 |
+| Project                         | Type                | Entry Point                                | Test Command                            |
+| ------------------------------- | ------------------- | ------------------------------------------ | --------------------------------------- |
+| `Bash/`                         | TS automation       | `src/` scripts, `orchestrator-unified.ps1` | `bun run test`, `bash test-all.sh`      |
+| `Banking/`                      | Next.js fintech     | `src/app/` App Router                      | `bun run test`                          |
+| `comicwise/`                    | Next.js comics      | `src/app/` App Router                      | `bun run test`                          |
+| `ecom/`                         | Django + React      | `backend/manage.py`, `frontend/`           | `python manage.py test`, `bun run test` |
+| `mcp-servers/`                  | Multi-language MCP  | Per-language subdirectory                  | Per-language build system               |
+| `Python-projects/`              | Python scripts      | Standalone `.py` files                     | Manual (`ruff check`, `mypy`)           |
+| `cookiecutter-django-tailwind/` | Django template     | Cookiecutter scaffold                      | Follow project README                   |
+| `Django-Scrapy-Selenium/`       | Scrapy/Selenium     | Per-usage                                  | Per-usage                               |
+| `Resume_maker/`                 | TS resume gen       | `src/`                                     | `bun run test`                          |
+| `rhixe_scans/`                  | TBD                 | Check project README                       | Check project README                    |
+| `rhixecompany-comics/`          | TBD                 | Check project README                       | Check project README                    |
+| `selenium_webdriver/`           | Selenium automation | Standalone                                 | Manual                                  |
+| `university-libary-jsm/`        | Library system      | Check project README                       | Check project README                    |
+| `xamehi/`, `xamehi.tv/`         | Media projects      | Check project README                       | Check project README                    |
+| `youtube-downloader/`           | YouTube tool        | Check project README                       | Check project README                    |
+| `profile/`                      | Profile config      | Check project README                       | Check project README                    |
+| `docs/`                         | Documentation       | Markdown files                             | N/A                                     |
 
 ---
 
@@ -214,12 +214,12 @@ bun run lint:fix               # ESLint auto-fix
 ```bash
 cd projects/Banking
 
-npm run dev        # Next.js dev server
-npm run build      # Production build
-npm run lint       # ESLint
-npm run db:generate  # Drizzle schema → migrations
-npm run db:push      # Push migrations to DB
-npm run db:studio    # Drizzle Studio (GUI)
+bun run dev        # Next.js dev server
+bun run build      # Production build
+bun run lint       # ESLint
+bun run db:generate  # Drizzle schema → migrations
+bun run db:push      # Push migrations to DB
+bun run db:studio    # Drizzle Studio (GUI)
 ```
 
 ### Comicwise Project
@@ -227,12 +227,12 @@ npm run db:studio    # Drizzle Studio (GUI)
 ```bash
 cd projects/comicwise
 
-npm run dev              # Next.js dev server
-npm run build            # Production build
-npm run lint             # ESLint
-npx prisma generate      # Prisma client
-npx prisma db push       # Push schema
-npx prisma studio        # Prisma Studio (GUI)
+bun run dev              # Next.js dev server
+bun run build            # Production build
+bun run lint             # ESLint
+bunx prisma generate      # Prisma client
+bunx prisma db push       # Push schema
+bunx prisma studio        # Prisma Studio (GUI)
 ```
 
 ### Ecom Project (Dual-Stack)
@@ -247,9 +247,9 @@ python manage.py test         # Backend tests
 
 # Frontend
 cd projects/ecom/frontend
-npm install
-npm start                     # :3000
-npm test                      # Frontend tests
+bun install
+bun run start                     # :3000
+bun run test                      # Frontend tests
 ```
 
 ### Python Projects
@@ -540,7 +540,7 @@ vitest run path/to/test_file.ts
 
 # Debug in browser (Next.js projects)
 # Add `debugger` statement, then:
-npm run dev -- --inspect
+bun run dev -- --inspect
 ```
 
 ### General Debugging Workflow

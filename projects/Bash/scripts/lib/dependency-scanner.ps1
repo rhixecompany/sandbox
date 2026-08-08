@@ -19,7 +19,7 @@ function Invoke-NpmAudit {
     try {
         Push-Location $RepoPath
         
-        $auditOutput = npm audit --json 2>$null | ConvertFrom-Json
+        $auditOutput = bun audit --json 2>$null | ConvertFrom-Json
         
         Pop-Location
         

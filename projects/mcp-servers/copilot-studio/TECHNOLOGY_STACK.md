@@ -272,16 +272,16 @@ PORT=3000
 
 ```bash
 # Install
-npm install
+bun install
 
 # Develop
-npm run dev
+bun run dev
 
 # Build
-npm run build
+bun run build
 
 # Start
-npm run start
+bun run start
 
 # Docker (production)
 docker build -t copilot-studio-mcp .

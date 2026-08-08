@@ -8,7 +8,7 @@
 
 - R1:Duplicate heading(s): ['when to use']
 - C2:Stale pattern: pip install
-- C2:Stale pattern: npm install -g
+- C2:Stale pattern: bun install -g
 - M4:Over 250 lines (288)
 
 Report generated 2026-07-31 by /skills-fix audit (final pass).

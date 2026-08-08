@@ -14,10 +14,10 @@
 
 **Async Tasks**: Celery with Redis broker; Celery Beat for scheduled/cron tasks; tasks defined in `tasks.py` per Django app; long-running tasks return progress via Celery result backend.
 
-**Testing**: `python manage.py test` (Django); `npm test` (Next.js); separate test databases.
+**Testing**: `python manage.py test` (Django); `bun run test` (Next.js); separate test databases.
 
 **Security**: No `.env` secrets in VCS; CORS configured between frontend and backend; Django DRF authentication for API; rate limiting on Celery tasks; sanitize all user inputs.
 
 **Env**: `DATABASE_URL`, `SECRET_KEY`, `CELERY_BROKER_URL` (Redis), `NEXT_PUBLIC_API_URL`, CORS origins.
 
-**Commands**: `cd backend && pip install -r requirements.txt && python manage.py migrate && python manage.py runserver` (backend); `cd frontend && npm install && npm run dev` (frontend); `celery -A config worker -l info` (worker); `python manage.py test` (backend test); `npm test` (frontend test); `docker compose up -d` (full stack).
+**Commands**: `cd backend && pip install -r requirements.txt && python manage.py migrate && python manage.py runserver` (backend); `cd frontend && bun install && bun run dev` (frontend); `celery -A config worker -l info` (worker); `python manage.py test` (backend test); `bun run test` (frontend test); `docker compose up -d` (full stack).

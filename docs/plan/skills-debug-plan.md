@@ -64,12 +64,12 @@ Completed: fence-aware re-audit showed most C-grade flags were false positives (
 
 ## Phase 4 — B-grade (moderate) ✅ COMPLETE (241 → 71)
 
-Bulk frontmatter fix applied (tags +234, license +36, author +4, version +2); added missing core sections to 10 additional C1 files. Remaining 71 B-grade are cosmetic/informational (dup headings, heading jumps, over-250-line, pip/npm install warnings) — documented in master index, not rewritten.
+Bulk frontmatter fix applied (tags +234, license +36, author +4, version +2); added missing core sections to 10 additional C1 files. Remaining 71 B-grade are cosmetic/informational (dup headings, heading jumps, over-250-line, pip/bun install warnings) — documented in master index, not rewritten.
 
 1. Missing frontmatter `version`/`author`/`license`/`tags` (M1) — bulk add
 2. Over-250-line SKILL.md (M4) — document only (content moves to references are skill-specific)
 3. Placeholders (`None documented yet`, `TODO`) — targeted removal
-4. Stale patterns (`pip install`, `npm install -g`) — note as supply_chain warnings, do NOT rewrite working instructions
+4. Stale patterns (`pip install`, `bun install -g`) — note as supply_chain warnings, do NOT rewrite working instructions
 
 ## Phase 5 — Verify ✅ COMPLETE
 

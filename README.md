@@ -232,7 +232,7 @@ Developer PR ──→ pr-ci.yml (detect changed projects)
 
 | Tool        | Version | Installation                                                            |
 | ----------- | ------- | ----------------------------------------------------------------------- |
-| **Bun**     | 1.3.14+ | `npm install -g bun` or [bun.sh](https://bun.sh)                        |
+| **Bun**     | 1.3.14+ | `bun install -g bun` or [bun.sh](https://bun.sh)                        |
 | **Python**  | 3.11+   | [python.org](https://python.org) or `winget install Python.Python.3.11` |
 | **Node.js** | 18+     | [nodejs.org](https://nodejs.org) or `winget install OpenJS.NodeJS`      |
 | **Git**     | latest  | `winget install Git.Git`                                                |

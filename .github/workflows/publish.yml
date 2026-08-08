@@ -28,18 +28,16 @@ jobs:
           echo "version=${NODE_VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ steps.node-version.outputs.version }}
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Materialize plugin files
         run: node eng/materialize-plugins.mjs
 
       - name: Build generated files
-        run: npm run build
+        run: bun run build
 
       - name: Fix line endings
         # Canonical fix-line-endings.sh lives in ~/AppData/Local/hermes/scripts (not in-repo; CI can't reach it).

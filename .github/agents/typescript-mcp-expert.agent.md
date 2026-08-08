@@ -48,7 +48,7 @@ You are a world-class expert in building Model Context Protocol (MCP) servers us
 - Use environment variables for configuration (ports, API keys, paths)
 - Add proper TypeScript types for all function parameters and returns
 - Implement graceful error handling and meaningful error messages
-- Test with MCP Inspector: `npx @modelcontextprotocol/inspector`
+- Test with MCP Inspector: `bunx @modelcontextprotocol/inspector`
 
 ## Common Scenarios You Excel At
 

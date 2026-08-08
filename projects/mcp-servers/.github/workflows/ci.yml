@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check TypeScript
         run: |
-          cd typescript && npm install && npm run build || true
+          cd typescript && bun install && bun run build || true
       - name: Check Python
         run: |
           cd python && pip install -r requirements.txt && ruff check . || true

@@ -11,7 +11,7 @@ class FindingParser {
   }
 
   /**
-   * Parse npm audit JSON output
+   * Parse bun audit JSON output
    */
   parseNpmAudit(auditJson, repoId) {
     if (!auditJson || !auditJson.vulnerabilities) {
@@ -170,7 +170,7 @@ class FindingParser {
     const allFindings = [];
     const diagnostics = scanResult.diagnostics || {};
 
-    // Parse npm audit
+    // Parse bun audit
     if (diagnostics["npm-audit"] && diagnostics["npm-audit"].vulnerabilities) {
       allFindings.push(...this.parseNpmAudit(diagnostics["npm-audit"], repoId));
     }

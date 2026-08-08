@@ -22,7 +22,7 @@ Contains no executable code. Serves as a centralized reference for dependency au
 ```bash
 # No build/run commands — static documentation only
 # Markdown linting (inherited from root workspace):
-cd ../.. && npx markdownlint-cli2 "projects/docs/**/*.md"
+cd ../.. && bunx markdownlint-cli2 "projects/docs/**/*.md"
 ```
 
 ## Conventions

@@ -99,8 +99,8 @@ rhixecompany-comics/
 | `python manage.py runserver` | Django dev server |
 | `python manage.py test` | Run Django tests |
 | `celery -A config worker -l info` | Celery worker |
-| `npm run dev` (frontend) | Next.js dev server |
-| `npm test` (frontend) | Frontend tests |
+| `bun run dev` (frontend) | Next.js dev server |
+| `bun run test` (frontend) | Frontend tests |
 
 ---
 

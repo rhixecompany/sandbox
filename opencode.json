@@ -10,18 +10,18 @@
 		},
 		"AST_GREP": {
 			"type": "local",
-			"command": ["npx", "-y", "@notprolands/ast-grep-mcp"],
+			"command": ["bunx", "-y", "@notprolands/ast-grep-mcp"],
 			"enabled": true
 		},
 		"CODE_SANDBOX": {
 			"type": "local",
-			"command": ["npx", "-y", "node-code-sandbox-mcp"],
+			"command": ["bunx", "-y", "node-code-sandbox-mcp"],
 			"enabled": true
 		},
 		"FILESYSTEM": {
 			"type": "local",
 			"command": [
-				"npx",
+				"bunx",
 				"-y",
 				"@modelcontextprotocol/server-filesystem",
 				"C:/Users/Alexa",
@@ -31,22 +31,22 @@
 		},
 		"GITHUB": {
 			"type": "local",
-			"command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-github"],
 			"enabled": true
 		},
 		"MEMORY": {
 			"type": "local",
-			"command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-memory"],
 			"enabled": true
 		},
 		"PLAYWRIGHT": {
 			"type": "local",
-			"command": ["npx", "-y", "@playwright/mcp@0.0.78"],
+			"command": ["bunx", "-y", "@playwright/mcp@0.0.78"],
 			"enabled": true
 		},
 		"SEQUENTIAL_THINKING": {
 			"type": "local",
-			"command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
 			"enabled": true
 		}
 	}

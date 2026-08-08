@@ -120,11 +120,11 @@ cd xamehitv
 
 # Install frontend dependencies
 cd frontend
-npm install
+bun install
 
 # Install backend dependencies
 cd ../backend
-npm install
+bun install
 
 # Configure environment
 cp .env.example .env
@@ -132,11 +132,11 @@ cp .env.example .env
 
 # Start backend
 cd backend
-npm run dev
+bun run dev
 
 # Start frontend (in a new terminal)
 cd frontend
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) (Vite) for frontend.
@@ -251,7 +251,7 @@ GET /api/content?search=show
 
 **Frontend build issues**
 
-- Clear node_modules: `rm -rf node_modules && npm install`
+- Clear node_modules: `rm -rf node_modules && bun install`
 - Check Node.js version
 
 **Streaming issues**
