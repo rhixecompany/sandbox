@@ -1,8 +1,8 @@
 {
   "frontmatter_present": true,
   "frontmatter_raw": "name: setup-groq-cloud\ntitle: Groq Cloud Setup \u2014 Comprehensive Reference & Prompt\ndescription: 'Converted and consolidated Groq Cloud documentation (Quickstart, Supported Models, OpenAI Compatibility, API Reference, Rate Limits) into a structured reference and agent prompt for setting up and using the Groq API.'\nversion: 1.0.0\nlicense: MIT\nauthor: Hermes Agent\ntags:\n  - groq\n  - llm\n  - api\n  - setup\n  - reference\n  - documentation\ntoolsets:\n  - file\n  - terminal\n  - web\n  - skills\ntrigger: /setup-groq-cloud\nskills: []\ndependencies: []\nmetadata:\n  hermes: {source: setup-groq-cloud.prompt.txt, converted: '2026-08-08'}",
-  "total_fences": 174,
-  "bare_fences": 66,
+  "total_fences": 87,
+  "bare_fences": 0,
   "lang_tags": [
     "bash",
     "javascript",
