@@ -381,11 +381,27 @@ def verify(content):
     report["frontmatter_present"] = bool(m)
     report["frontmatter_raw"] = m.group(1) if m else None
 
-    # Bare fences (no language tag)
-    fences = re.findall(r"```(\w*)", content)
-    report["total_fences"] = len(fences)
-    report["bare_fences"] = sum(1 for f in fences if f == "")
-    report["lang_tags"] = sorted(set(f for f in fences if f))
+    # Bare fences (opening fences with no language tag)
+    in_fence = False
+    total_fences = 0
+    bare_fences = 0
+    lang_tags = set()
+    for ln in content.splitlines():
+        s = ln.strip()
+        if s.startswith("```"):
+            if not in_fence:
+                in_fence = True
+                total_fences += 1
+                tag = s[3:].strip()
+                if tag == "":
+                    bare_fences += 1
+                else:
+                    lang_tags.add(tag)
+            else:
+                in_fence = False
+    report["total_fences"] = total_fences
+    report["bare_fences"] = bare_fences
+    report["lang_tags"] = sorted(lang_tags)
 
     # Heading levels used
     levels = [len(ln) - len(ln.lstrip("#")) for ln in content.splitlines() if re.match(r"^#{1,6}\s", ln)]
