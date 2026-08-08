@@ -7,6 +7,7 @@
 | Field | Value |
 | --- | --- |
 | Session ID | 20260808_134625_b456e2 |
+| Title | Fully implement session start capture |
 | When | 2026-08-08T12:47+00:00 |
 | Model | deepseek-v4-flash-free (opencode-zen) |
 | Source | cli |
