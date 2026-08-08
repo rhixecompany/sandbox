@@ -1,0 +1,4 @@
+platform_name,category,effective_ngn_per_hour,reliability_score(1-10),ng_accessibility,entry_barrier,scalability,tax_efficiency,time_to_first_ngn_days,total_score,eliminated,note
+Mercor,ai-training,9000,8,7,6,7,7,3,7.55,FALSE,AI tasks
+DataAnnotation.tech,ai-training,1800,7,6,5,4,6,30,5.4,FALSE,verify NGN
+Atapoll,surveys-microtasks,1500,6,8,8,3,5,7,5.6,FALSE,low pay per task verify
