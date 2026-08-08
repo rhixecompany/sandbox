@@ -1,0 +1,6 @@
+/goal /using-superpowers /user-communication-preferences  /plan /plans-and-specs update all usage of npm in this repo and all sub repos to bun. stepup,debug,fix,validate all needed,optional  package.json,toml,.npmrc files use smaller dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies
+update all usage of npx in this repo and all sub repos to bunx. stepup,debug,fix,validate all needed,optional  package.json,toml,.npmrc files use smaller dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies
+update all usage of npm in Hermes root to bun. stepup,debug,fix,validate all needed,optional  package.json,toml,.npmrc files use smaller dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies  
+update all usage of npx in Hermes root to bunx. stepup,debug,fix,validate all needed,optional  package.json,toml,.npmrc files use smaller dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies
+use bun as the default package manager
+execute `git add -A ; git commit -m "updates" ; git push` in this repo and all sub repos, debug and fix all issues
