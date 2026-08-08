@@ -120,7 +120,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -132,13 +132,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill | Purpose |
-|-------|---------|
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
+| Skill                              | Purpose                                 |
+| ---------------------------------- | --------------------------------------- |
+| `using-superpowers`                | Foundational skill workflow             |
+| `systematic-debugging`             | Root cause analysis and fix             |
+| `git-patch-management`             | Patch creation and management           |
+| `executing-plans`                  | Execute plans step by step              |
+| `verification-before-completion`   | Validate before claiming done           |
 
 
 ## MCP Servers & Tools

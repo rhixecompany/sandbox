@@ -88,16 +88,16 @@ metadata:
 
 ## Tasks
 
-| # | Task (Subtask parent) | Phase |
-|---|------------------------|-------|
-| 1 | Recover prior data (sub: search sessions, read files, Honcho recall) | 0 |
-| 2 | Map platform categories (sub: 11 brainstormed categories) | 1 |
-| 3 | Dispatch parallel discovery (sub: 8 leaf sub-agents) | 1 |
-| 4 | Enrich with MCP (sub: Tavily + Firecrawl per platform) | 1 |
-| 5 | Score & filter (sub: matrix + elimination rules) | 2 |
-| 6 | Deep validate top-20 (sub: sign-up, sentiment, tax) | 3 |
-| 7 | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4 |
-| 8 | Verify & handoff (sub: quality gates, session report) | 5 |
+| #   | Task (Subtask parent)                                                           | Phase   |
+| --- | ------------------------                                                        | ------- |
+| 1   | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0       |
+| 2   | Map platform categories (sub: 11 brainstormed categories)                       | 1       |
+| 3   | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1       |
+| 4   | Enrich with MCP (sub: Tavily + Firecrawl per platform)                          | 1       |
+| 5   | Score & filter (sub: matrix + elimination rules)                                | 2       |
+| 6   | Deep validate top-20 (sub: sign-up, sentiment, tax)                             | 3       |
+| 7   | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4       |
+| 8   | Verify & handoff (sub: quality gates, session report)                           | 5       |
 
 ## Context
 
@@ -215,15 +215,15 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 
 ### 2.1 Scoring Matrix (Apply to Every Platform)
 
-| Dimension            | Weight | Measurement                                         |
-| -------------------- | ------ | --------------------------------------------------- |
+| Dimension               | Weight | Measurement                                         |
+| --------------------    | ------ | --------------------------------------------------- |
 | **Effective vXNNGN/..** | 30%    | Realistic after disqualifications, wait times       |
-| **Reliability**      | 20%    | Payout consistency, platform age, company stability |
-| **UK Accessibility** | 15%    | UK sign-up, GBP payout, UK support, no VPN needed   |
-| **Entry Barrier**    | 10%    | Skills, equipment, approval time, invitation-only   |
-| **Scalability**      | 10%    | Hourly cap, task availability, referral multiplier  |
-| **Tax Efficiency**   | 10%    | Trading allowance eligible, expense deductibility   |
-| **Time to First £**  | 5%     | Days from sign-up to withdrawable balance           |
+| **Reliability**         | 20%    | Payout consistency, platform age, company stability |
+| **UK Accessibility**    | 15%    | UK sign-up, GBP payout, UK support, no VPN needed   |
+| **Entry Barrier**       | 10%    | Skills, equipment, approval time, invitation-only   |
+| **Scalability**         | 10%    | Hourly cap, task availability, referral multiplier  |
+| **Tax Efficiency**      | 10%    | Trading allowance eligible, expense deductibility   |
+| **Time to First £**     | 5%     | Days from sign-up to withdrawable balance           |
 
 ### 2.2 Elimination Criteria (Auto-Filters)
 
