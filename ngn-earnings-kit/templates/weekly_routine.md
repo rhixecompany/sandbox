@@ -1,37 +1,41 @@
-# Weekly Planner — NGN Earnings Routine
+# Weekly Routine — NGN Earnings (10–12 hrs/week)
 
-Print this page (A4). Tick boxes as you complete blocks. Target: **10–12 focused hours/week** across 3–4 platforms.
+Print this page (A4). Tick as you go. Target **10–12 focused hours/week** across 3–4 platforms.
 
 ## Daily Block Template (Mon–Fri)
 
-| Time | Focus | Platform | Goal |
-|------|-------|----------|------|
-| 07:00–08:00 | AI training (deep work) | [top AI platform] | 2 tasks / ₦X |
-| 12:30–13:00 | Surveys (lunch) | [survey app] | 2 surveys |
-| 18:30–19:30 | Mixed / admin | rotation | invoicing, trackers |
-| 21:00–21:30 | Passive app check | [passive app] | daily bonus |
+| Time (WAT) | Block | Platform | Est. NGN/h | Notes |
+|------------|-------|----------|-----------|-------|
+| 07:30–08:15 | AI task session 1 | Mercor / Invisible / Stellar (your approved set) | 24k+ | Deep focus, no toggling |
+| 12:00–12:30 | Survey/GPT cash-flow | TimeBucks / FreeCash | 4.5k–7.5k | Sort by reward/time; skip < $0.20/5-min |
+| 17:00–18:00 | User-testing batch | uTest / Test.io / Testlio | 7.5k–22.5k | Check every project board; bug-hunt 1hr |
+| 20:00–20:15 | Admin | Log earnings → trackers | — | 5-min daily, no backlog |
 
-## Rotation Plan (prevent burnout + rate caps)
+## US/UK survey flood window
+- Scale up surveys **10:00–14:00 WAT** (morning EST) — routers flood then.
+- Nigerian-local routers peak **18:00–21:00 WAT** — works TimeBucks/FreeCash offers.
 
-| Day | Platform A | Platform B | Platform C |
-|-----|-----------|-----------|-----------|
-| Mon | AI training | Surveys | — |
-| Tue | AI training | User testing | Passive |
-| Wed | Surveys | Freelance gigs | Passive |
-| Thu | AI training | User testing | — |
-| Fri | Surveys | AI training | Passive |
-| Sat | Bank switch tasks + cashback | — | — |
-| Sun | Planning + tracker update | Learning | — |
+## Platform rotation (weekly rhythm)
+| Day | Focus |
+|-----|-------|
+| Mon | uTest/Test.io cycle sweep + Mercor assessment if pending |
+| Tue | TimeBucks/FreeCash + SagaPoll store visit (if commute allows) |
+| Wed | Testlio projects (plan 1–3 hr) |
+| Thu | Respondent screener applications (10 min, targeted) |
+| Fri | Cash-flow day: surveys + payout cleanup (transfers weekly) |
+| Sat | Store visits (Premise/SagaPoll) + referral outreach (3 msgs) + passive-app hygiene |
+| Sun | Review: totals vs plan, tax tracker update, next week |
 
-## Weekly KPI Targets
+## Scam & hygiene sweep (Sunday 10 min)
+- Verify no new "too-good" app in your feeds (check references/scam_warnings.md)
+- Confirm payout rails unchanged on your active platforms
+- Keep 2FA on PayPal; withdraw weekly
 
-- [ ] ₦30,000+ total weekly (conservative: 10h × ₦3,000/hr)
-- [ ] 3 referrals sent (referral_tracker.md)
-- [ ] 2 user-testing screeners submitted
-- [ ] Earnings tracker updated daily (Sun backup)
-- [ ] Tax tracker running total updated
-- [ ] 1 scam watchlist check (scam_warnings.md)
+## KPIs
+- Total NGN/week: **≥ ₦35,000** (mix: AI 50%, testing 30%, surveys/GPT 15%, misc 5%)
+- Effective rate: **≥ ₦3,000/hr** blended
+- Screener attempts: ≥ 2/week; applications submitted ≥ 3/week
+- Referrals sent: 3/week (Kuda/Rise-style)
 
-## Notes
-- Payout day is inconsistent across platforms → log every payment in tax_tracker.md the day it lands.
-- Spend earned money monthly: NGN bank account that keeps history (Kuda / Opay / PiggyVest) — receipts for tax.
+---
+*Built from ngn-earnings-research pipeline (Aug 2026). Rates are targets, not guarantees.*

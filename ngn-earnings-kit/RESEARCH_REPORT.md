@@ -33,7 +33,12 @@
 | 10 | Microworkers | micro | 4,500 | PayPal (7.5% fee) | Entry microtasks |
 
 ## 3. Category scoring results (Phase 2 detail)
-- 39 platforms scored. 8 **eliminated**: GeoPoll (sub-threshold, airtime-only), UserTesting/UserInterviews/Maze (not NG), Swagbucks/Qmee/Prolific/MoBrog (geo-locked / VPN-fraud risk) — see `references/platform_master_list.csv`.
+- 64 platforms scored across 6 categories (ai-training 9, user-testing 15, surveys 15, bank-switching 8, cashback-receipts 9, mystery-shopping 8). 26 **eliminated**: geo-locked (UserTesting/UserInterviews/Maze/Swagbucks/Qmee/Prolific/MoBrog/Roamler/BeMyEye/Field Agent/Fetch/Ibotta), sub-threshold (GeoPoll airtime-only), or pay < ₦1,500/hr effective. Full matrix: `references/platform_master_list.csv` + `references/scoring_matrix.xlsx`.
+
+## 3b. Bank-switching & cashback reality (batch-2 findings)
+- **Bank switching:** Nigeria has NO CASS-equivalent cash switching bonus. Banks sell lotteries (Fidelity GAIM, Access XtraWins, Union Save&Win) — expected value ≈ 0 unless you win. Real cash = fintech **referral** programs: Kuda (₦4k–12k/ref), OPay (₦800/ref), PalmPay (welcome ≤₦5,550 while promo + ₦250/pair), PiggyVest (₦1k+₦1k, lock ₦2.1k), Risevest (up to 4% upfront on Naira Vault referrals). Salary-side value: Zenith 7.95% p.a. + salary advance beats any bonus.
+- **Cashback/receipts:** No international receipt scanner works in NG (Fetch/Ibotta/Receipt Hog = US/CA/UK only). Real NG plays: JumiaPay (3% + 20% first-month voucher ≈ ₦1–1.5k/mo), OPay (≤6% airtime), PalmPay PalmPoints, Moniepoint Rewards (≤2%), Kuda Coins/Premium, Chipper Cash (2%, account issues), Branch (2%). Realistic total stack: **₦2,500–6,000/month** — a small % return, not side income.
+- **Mystery shopping:** Global apps geo-locked out of NG (Roamler/BeMyEye/Field Agent). Working NG stack = SagaPoll store-visits + Premise location tasks + Appen Mystery Shopper (NG job postings) + local agencies (NLP Nigeria, BARE International, Mintel). Field-task reality: no big native shelf-snap app; store-audit skills = your supervisor background fits.
 
 ## 4. Validation summary (Phase 3)
 - **Mercor:** ✅ legit, payments reliable, selective (feast-or-famine).
