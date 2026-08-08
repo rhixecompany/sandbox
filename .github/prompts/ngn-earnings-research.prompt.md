@@ -317,7 +317,7 @@ C:\Users\Alexa\Desktop\SandBox\ngn-earnings-kit\
 | `references/tax_guidance_ngn_2026.md` | FIRS rules, income tax reporting, allowable expenses, record-keeping |
 | `references/scam_warnings.md`         | Red flags, known scams, verification checklist                       |
 | `trackers/earnings_tracker.xlsx`      | Multi-platform, auto-sum, tax-year tabs                              |
-| `trackers/tax_tracker.md`             | Running total vs NGN960,000 allowance, SA trigger alert              |
+| `trackers/tax_tracker.md`             | Running total vs ₦800,000 tax-free threshold (NTA 2025), SA trigger alert              |
 | `trackers/weekly_planner.md`          | Time-blocked routine, platform rotation, KPI targets                 |
 | `templates/platform_evaluation.md`    | Reusable for new platforms                                           |
 | `templates/weekly_routine.md`         | Printable, checkbox-driven                                           |
