@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # YAML / Workflow Audit & Fix Plan
 
 **Date:** 2026-07-25

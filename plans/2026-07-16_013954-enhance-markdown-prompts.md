@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Enhance Markdown for All Prompts (Batch Audit & Consolidation)
 
 **Goal**:

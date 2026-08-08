@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Prompt Enhancement Batch 1 - Fix Plan
 
 ## Phase 2: Fix Planning (enhance-markdown skill)

@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Repair Plan: `.github/prompts/*.prompt.md`
 
 Sources of truth per prompt:

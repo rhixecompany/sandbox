@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 1|# MCP Server Installation Plan
 2|
 3|> **Status:** Phase 4 - Install Commands Added

@@ -5,8 +5,8 @@ description: "Install/test ruff-mypy-pyright, triage+migrate scripts to hermes/s
 version: 1.0.0
 author: Hermes Agent
 license: MIT
+status: completed
 tags: [planning, tooling, async, typescript, python, ruff, mypy, pyright, prompt-management, subrepos, hermes-doctor]
-status: in_progress
 created: 2026-08-01
 ---
 

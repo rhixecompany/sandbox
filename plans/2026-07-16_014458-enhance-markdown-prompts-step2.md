@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Enhance Markdown for All Prompts – Step 2
 
 **Goal**: Continue enhancing, deduplicating, consolidating, and validating all prompts in `./prompts`.

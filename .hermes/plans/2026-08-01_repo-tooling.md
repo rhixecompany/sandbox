@@ -5,9 +5,9 @@ description: "Prompt-management on repo-*.prompt.md → per-repo plans/specs, th
 version: 1.1.0
 author: Hermes Agent
 license: MIT
+status: completed
 tags:
   [planning, prompt-management, tooling, ruff, pyright, eslint, prettier, cspell, markdownlint, pre-commit, subrepos]
-status: completed
 created: 2026-08-01
 completed: 2026-08-01
 ---

@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Enhance Markdown for All Prompts – Step 3
 
 **Goal**: Continue the full‑pass enhancement of every prompt in `./prompts`.
