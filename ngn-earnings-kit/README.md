@@ -21,11 +21,23 @@
 | `scripts/` | `build_master_list.py` + `extend_master_list.py` (re-score pipeline) |
 
 ## Top 5 (validated Aug 2026)
-1. **uTest (Applause)** — Payoneer ✓ NG, ₦7.5k–75k/item, daily cycles
-2. **Testlio / Test.io** — hourly weekly pay, ₦15k–52.5k/hr (Testlio)
-3. **Mercor** — highest AI ceiling ₦24k–150k/hr, selective
-4. **TimeBucks / FreeCash** — $3-min GPTs, ₦4.5k–15k/day realistic
-5. **SagaPoll / Premise** — NGN-native; store visits beat surveys 10×
+1. **Mercor** — highest AI ceiling ₦24k–150k/hr, selective, weekly Wise/bank payouts
+2. **Upwork** — most viable global freelance; NG avg $163/job; Cleva/Payoneer rails
+3. **DataAnnotation.tech** — strong AI pay but 2.6% acceptance; verify NGN rails
+4. **Invisible / Stellar AI** — high AI pay (₦35k–37.5k/hr), selective assessment
+5. **uTest (Applause) / Testlio** — Payoneer ✓ NG; ₦15k–52.5k/hr, daily cycles
+
+## Top 5 by category (quick picks)
+| Category | Top pick | Why |
+|----------|----------|-----|
+| AI training | **Mercor** | highest ceiling, weekly payout |
+| Freelance | **Upwork** | escrow, USD→NGN via Cleva |
+| User testing | **uTest** | Payoneer ✓, daily cycles |
+| Surveys | **TimeBucks / FreeCash** | $3-min GPTs, PayPal NG ✓ |
+| Field tasks | **SagaPoll** | NGN-native, 5k pts=₦30k |
+| Bank referral | **Kuda** | ₦4–12k/ref, T2 referee |
+| Cashback | **JumiaPay** | 3% + 20% first month |
+| Passive | **Pawns.app** | NG-verified, BTC→naira |
 
 ## Rules (from ngn-earnings-research.prompt.md)
 - No fabrication — unverified rates stay "(unverified)"
@@ -36,9 +48,9 @@
 
 ## Verification Gates
 - [x] 8 category deep-dives written (sourced)
-- [x] Master list 64 platforms scored, 26 eliminated
+- [x] Master list **83 platforms scored, 46 kept / 37 eliminated** (8 categories)
 - [x] Top picks validated (sentiment + geo + tax)
-- [x] Tax guidance cites FIRS/PwC/official pages
+- [x] Tax guidance cites FIRS/NTA 2025 (₦800k threshold) + official pages
 - [x] Trackers open clean in Excel (xlsx verified)
 - [x] Weekly planner A4-printable
 
