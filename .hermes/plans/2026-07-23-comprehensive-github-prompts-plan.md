@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # 2026-07-23 Comprehensive Plan: Normalize `.github` Prompt Assets and Cross-References
 
 > Status: approved for execution

@@ -1,17 +1,21 @@
 {
-  "total_files": 220,
+  "total_files": 221,
   "issue_counts": {
     "critical": 0,
     "high": 0,
     "medium": 0,
-    "info": 0
+    "info": 1
   },
   "files_no_frontmatter": [],
   "all_issues": {
+    "info": {
+      "RULES_INLINE_NOT_SHARED": [
+        "setup-groq-cloud"
+      ]
+    },
     "critical": {},
     "high": {},
-    "medium": {},
-    "info": {}
+    "medium": {}
   },
   "per_file": [
     {
@@ -737,6 +741,10 @@
     {
       "name": "setup-enhanced",
       "issue_count": 0
+    },
+    {
+      "name": "setup-groq-cloud",
+      "issue_count": 1
     },
     {
       "name": "setup-nextjs-frontend-stack",

@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # Oh My OpenAgent / Oh My Hermes — Installation & Verification Plan
 
 **Date:** 2026-08-05 | **Status:** Executed | **Owner:** OWL

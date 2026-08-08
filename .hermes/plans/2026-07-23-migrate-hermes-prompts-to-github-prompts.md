@@ -1,3 +1,7 @@
+---
+status: completed
+---
+
 # 2026-07-23 Migrate Hermes prompts to `.github/prompts`
 
 ## Goal

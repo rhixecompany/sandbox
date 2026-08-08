@@ -5,8 +5,8 @@ description: "Implement, debug, fix, and validate the three tooling stacks acros
 version: 1.1.0
 author: Hermes Agent
 license: MIT
-tags: [tooling, ruff, pyright, eslint, prettier, cspell, markdownlint, pre-commit, git-cliff, mcp]
 status: completed
+tags: [tooling, ruff, pyright, eslint, prettier, cspell, markdownlint, pre-commit, git-cliff, mcp]
 created: 2026-08-01
 completed: 2026-08-01
 ---

@@ -5,8 +5,8 @@ description: "Merge the desktop goal (tooling-config/tooling-lint enhancement, v
 version: 1.0.0
 author: Hermes Agent
 license: MIT
+status: completed
 tags: [goal, cleanup, node_modules, venv, tooling, ruff, mypy, pylance, vscode, prompts, plans]
-status: active
 created: 2026-08-01
 ---
 
