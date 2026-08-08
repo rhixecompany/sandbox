@@ -22,13 +22,17 @@ if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
 from lib import (
+    git_snapshot,
     json_get,
     log_debug,
     log_error,
     log_info,
     normalize_event,
     now_iso,
+    platform_snapshot,
     read_payload,
+    resolve_profile,
+    resolve_user,
     skip_context,
     write_jsonl,
 )
@@ -115,19 +119,27 @@ def _log_paths(session_id: str) -> tuple[Path, Path | None]:
 async def handle_on_session_start(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
-    profile = json_get(payload, "profile", "default")
-    user = json_get(payload, "user", "unknown")
-    model = json_get(payload, "model", "unknown")
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or "unknown"
+    platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
 
     record: dict = {
         "event": "session_start",
         "session_id": session_id,
         "timestamp": timestamp,
-        "profile": profile,
-        "user": user,
+        "profile": json_get(payload, "profile", "") or resolve_profile(),
+        "user": json_get(payload, "user", "") or resolve_user(),
         "model": model,
+        "platform": platform,
+        "working_dir": working_dir,
         "checks": ["prompt_injection", "secret_leak", "policy_compliance"],
     }
+
+    if working_dir:
+        try:
+            record.update(await git_snapshot(working_dir))
+        except Exception as exc:
+            log_debug(f"governance-audit: git snapshot skipped: {exc}")
 
     current, deprecated = _log_paths(session_id)
     await _ensure_log_file(current)
@@ -135,8 +147,8 @@ async def handle_on_session_start(payload: dict) -> None:
     if deprecated is not None:
         await _ensure_log_file(deprecated)
         await write_jsonl(deprecated, record)
-    await _memory_upsert_governance(session_id, payload)
-    log_info(f"Governance audit session start logged: {session_id}")
+    await _memory_upsert_governance(session_id, record)
+    log_info(f"Governance session start captured: {session_id} ({model})")
 
 
 async def handle_on_session_end(payload: dict) -> None:
@@ -173,11 +185,10 @@ async def handle_on_session_end(payload: dict) -> None:
 async def handle_pre_llm_call(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
-    model = json_get(payload, "model", "unknown")
-    provider = json_get(payload, "provider", "unknown")
-    prompt_length = json_get(payload, "prompt_length", "0")
-    system_prompt_length = json_get(payload, "system_prompt_length", "0")
-    user_message = json_get(payload, "user_message", "")
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or "unknown"
+    provider = json_get(payload, "extra.provider") or json_get(payload, "provider") or ""
+    user_message = json_get(payload, "extra.user_message") or ""
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
     event_type = json_get(payload, "event", "pre_llm_call")
 
     record: dict = {
@@ -186,9 +197,9 @@ async def handle_pre_llm_call(payload: dict) -> None:
         "timestamp": timestamp,
         "model": model,
         "provider": provider,
-        "prompt_length": int(prompt_length) if str(prompt_length).isdigit() else 0,
-        "system_prompt_length": int(system_prompt_length) if str(system_prompt_length).isdigit() else 0,
-        "user_message": user_message,
+        "working_dir": working_dir,
+        "prompt_length": len(user_message),
+        "prompt_summary": (user_message[:220] + "…") if len(user_message) > 220 else user_message,
         "checks": ["prompt_injection", "secret_leak", "policy_compliance"],
     }
 

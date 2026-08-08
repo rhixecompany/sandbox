@@ -1,0 +1,25 @@
+# 📊 Earnings Tracker — NGN
+
+Log every single payment. This is your FIRS-ready source of truth.
+
+| Date | Platform | Category | Task / Description | Payout (NGN) | Fee | Net NGN | Method | Ref/ID |
+|------|----------|----------|--------------------|--------------|--------|---------|--------|--------|
+| 2026-08-10 | | | | | | | | |
+
+## How to use
+- Add one row per payment / per day (whichever is granular enough).
+- Convert foreign-currency payouts at the CBN/I&E rate on payout day; note the rate in Ref column.
+- Monthly totals auto-talk to `trackers/tax_tracker.md`.
+
+## Monthly Rollup
+| Month | Total NGN | Cumulative | vs ₦800,000 tax-free limit (NTA 2025) | Notes |
+|-------|-----------|------------|-------------------------|-------|
+| 2026-08 | | | | |
+| 2026-09 | | | | |
+| 2026-10 | | | | |
+| 2026-11 | | | | |
+| ... | | | | |
+
+## Notes on NGN tax threshold
+- Nigeria Tax Act 2025 (effective 1 Jan 2026): first ₦800,000 of annual income is tax-free for everyone (incl. freelancers/self-employed). Progressive bands above: 15% to 25%.
+- Keep records regardless: banks/FIRS may ask; income tax reporting builds a shield.

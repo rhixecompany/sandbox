@@ -1,0 +1,5 @@
+date,platform,category,description,amount_ngn,taxable,notes
+2026-08-08,ExampleSurvey,surveys,"Completed 2 surveys",1200,true,"min payout note"
+2026-08-08,AIExample,ai-training,"2 tasks done",3800,true,
+2026-08-08,UserTestPro,user-testing,"Heatmap test",450,true,
+2026-08-08,PassiveCo,passive-apps,"Bandwidth",300,false,"non-taxable just to track"
