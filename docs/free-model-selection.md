@@ -25,14 +25,28 @@ Verified live (HTTP probes run 2026-08-07). Working = ready for fallback chain.
 - **xai-oauth**: personal-team spending limit (402).
 - **openai-codex**: oauth rate-limited (429).
 
-## Configured fallback chain (9 deep / 4 providers)
+## Configured fallback chain (provider level, ordered by rule)
 
-1. nemotron-3-ultra-free (opencode-zen)
-2. nvidia/nemotron-3-ultra-550b-a55b:free (openrouter)
-3. nvidia/nemotron-3-super-120b-a12b:free (openrouter)
-4. nemotron-3-ultra (ollama-cloud)
-5. google/gemma-4-31b-it:free (openrouter)
-6. google/gemma-4-26b-a4b-it:free (openrouter)
-7. gemini-2.5-flash (gemini)
-8. nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (openrouter)
-9. openai/gpt-oss-20b:free (openrouter)
+Rule: **vision → reasoning → context size** (no working free model has vision,
+so effective order is reasoning → context). Configured 2026-08-08 via
+`/test-providers-models`.
+
+- model.provider = opencode-zen
+- model.default   = deepseek-v4-flash-free   (PRIMARY, proven working)
+- fallback_providers (ordered):
+  1. opencode-zen      → deepseek-v4-flash-free (128K, reasoning✓)
+  2. openrouter        → nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓)
+  3. gemini            → gemini-2.5-flash (1M, ✓)
+  4. ollama-cloud      → nemotron-3-ultra (1M, ✓)
+
+Full working-model ranking (per-provider default_model above):
+1. nemotron-3-ultra-free (opencode-zen, 1M, ✓)
+2. nvidia/nemotron-3-ultra-550b-a55b:free (openrouter, 1M, ✓)
+3. nvidia/nemotron-3-super-120b-a12b:free (openrouter, 1M, ✓)
+4. gemini-2.5-flash (gemini, 1M, ✓)
+5. nemotron-3-ultra (ollama-cloud, 1M, ✓)
+6. nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (openrouter, 256K, ✓)
+7. deepseek-v4-flash-free (opencode-zen, 128K, ✓) — PRIMARY
+8. google/gemma-4-31b-it:free (openrouter, 262K, ✗)
+9. google/gemma-4-26b-a4b-it:free (openrouter, 262K, ✗)
+10. openai/gpt-oss-20b:free (openrouter, 131K, ✗)
