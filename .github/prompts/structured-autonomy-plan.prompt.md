@@ -1,55 +1,29 @@
 ---
-
 name: structured-autonomy-plan
-
 title: Sa Plan
-
 description: Structured Autonomy Planning Prompt.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - ml
-
   - planning
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /structured-autonomy-plan
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

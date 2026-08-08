@@ -1,53 +1,28 @@
 ---
-
 name: model-recommendation
-
 title: AI Model Recommendation for Copilot Chat Modes and Prompts
-
 description: 'Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ai-assistant
-
   - frontend
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /model-recommendation
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

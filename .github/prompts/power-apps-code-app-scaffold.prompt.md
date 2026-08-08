@@ -1,47 +1,25 @@
 ---
-
 name: power-apps-code-app-scaffold
-
 title: Power Apps Code Apps Project Scaffolding
-
 description: 'Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - audit
-
   - frontend
-
   - prompts
-
   - specification
-
 trigger: /power-apps-code-app-scaffold
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

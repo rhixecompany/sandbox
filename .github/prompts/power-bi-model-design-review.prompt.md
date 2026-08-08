@@ -1,51 +1,27 @@
 ---
-
 name: power-bi-model-design-review
-
 title: Power BI Data Model Design Review
-
 description: 'Comprehensive Power BI data model design review prompt for evaluating model architecture, relationships, and optimization opportunities.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - audit
-
   - data
-
   - ml
-
   - prompts
-
 trigger: /power-bi-model-design-review
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

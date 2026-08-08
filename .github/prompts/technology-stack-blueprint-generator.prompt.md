@@ -12,7 +12,7 @@ scripts: []
 skills:
   - technology-stack-blueprint-generator
 formatter: default
-plan: None
+plan: 'None'
 tags:
   - documentation
   - architecture
@@ -24,6 +24,7 @@ dependencies: []
 metadata:
   hermes: {}
 ---
+
 # Technology Stack Blueprint Generator
 
 ## Goal

@@ -20,17 +20,17 @@ skills:
   - writing-clearly-and-concisely
   - subagent-driven-development
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - prompt:repo
-  - skill:code-wiki
-  - skill:gh-cli
-  - skill:git-commit
-  - skill:writing-clearly-and-concisely
-  - tool:mcp-tavily
-  - tool:mcp-github
-  - tool:mcp-sequential-thinking
-  - skill:subagent-driven-development
+  - "prompt:repo"
+  - "skill:code-wiki"
+  - "skill:gh-cli"
+  - "skill:git-commit"
+  - "skill:writing-clearly-and-concisely"
+  - "tool:mcp-tavily"
+  - "tool:mcp-github"
+  - "tool:mcp-sequential-thinking"
+  - "skill:subagent-driven-development"
 tags:
   - architecture
   - generator

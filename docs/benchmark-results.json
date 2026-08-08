@@ -1,0 +1,119 @@
+{
+	"generated_at": "2026-08-07T19:25:00Z",
+	"method": "Live HTTP probe + /models catalog fetch per authorized provider",
+	"providers": {
+		"opencode-zen": {
+			"status": "working",
+			"note": "current primary provider; deepseek-v4-flash-free is the live session model"
+		},
+		"openrouter": {
+			"status": "working",
+			"free_models_total": 17,
+			"verified_working": 6
+		},
+		"deepseek": {
+			"status": "no-credit-402",
+			"note": "direct API returns 402 Payment Required (no credit); use via opencode-zen instead"
+		},
+		"gemini": {
+			"status": "working",
+			"note": "gemini-2.5-flash returns 200; 2.0-flash/pro quota 429"
+		},
+		"ollama-cloud": {
+			"status": "working",
+			"note": "nemotron-3-ultra returns 200"
+		},
+		"huggingface": {
+			"status": "no-models",
+			"note": "token valid, endpoint reachable, but no inference providers enabled for any model (all 400)"
+		},
+		"nous": {
+			"status": "blocked-403",
+			"note": "Cloudflare 403 on /models"
+		},
+		"xai-oauth": {
+			"status": "no-credit-402",
+			"note": "personal-team-blocked spending limit"
+		},
+		"openai-codex": {
+			"status": "rate-limited-429",
+			"note": "oauth rate-limited"
+		},
+		"copilot": {
+			"status": "configured",
+			"note": "3 credentials present, GitHub token active"
+		}
+	},
+	"working_models": [
+		{
+			"provider": "opencode-zen",
+			"model": "deepseek-v4-flash-free",
+			"ctx": 128000,
+			"reasoning": true,
+			"live": "session-primary"
+		},
+		{
+			"provider": "opencode-zen",
+			"model": "nemotron-3-ultra-free",
+			"ctx": 1000000,
+			"reasoning": true,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+			"ctx": 1000000,
+			"reasoning": true,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "nvidia/nemotron-3-super-120b-a12b:free",
+			"ctx": 1000000,
+			"reasoning": true,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+			"ctx": 256000,
+			"reasoning": true,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "google/gemma-4-31b-it:free",
+			"ctx": 262000,
+			"reasoning": false,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "google/gemma-4-26b-a4b-it:free",
+			"ctx": 262000,
+			"reasoning": false,
+			"live": "working"
+		},
+		{
+			"provider": "openrouter",
+			"model": "openai/gpt-oss-20b:free",
+			"ctx": 131000,
+			"reasoning": false,
+			"live": "working"
+		},
+		{
+			"provider": "gemini",
+			"model": "gemini-2.5-flash",
+			"ctx": 1000000,
+			"reasoning": true,
+			"live": "working"
+		},
+		{
+			"provider": "ollama-cloud",
+			"model": "nemotron-3-ultra",
+			"ctx": 1000000,
+			"reasoning": true,
+			"live": "working"
+		}
+	]
+}

@@ -12,9 +12,9 @@ scripts: []
 skills:
   - subagent-driven-development
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - skill:subagent-driven-development
+  - "skill:subagent-driven-development"
 tags:
   - generator
   - git
@@ -398,4 +398,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

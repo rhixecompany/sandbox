@@ -16,13 +16,13 @@ skills:
   - smithery-ai-cli
   - verification-before-completion
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:hermes-mcp
-  - skill:smithery-ai-cli
-  - skill:verification-before-completion
+  - "skill:using-superpowers"
+  - "skill:user-communication-preferences"
+  - "skill:hermes-mcp"
+  - "skill:smithery-ai-cli"
+  - "skill:verification-before-completion"
 tags:
   - agents
   - authentication
@@ -37,6 +37,7 @@ trigger: /parallel-mcp-install
 metadata:
   hermes: {}
 ---
+
 # Parallel MCP Installation and Validation Workflow
 
 ## Goal

@@ -1,59 +1,31 @@
 ---
-
 name: mcp-deploy-manage-agents
-
 title: Deploy and Manage MCP-Based Agents
-
 description: mcp-deploy-manage-agents.prompt.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - agents
-
   - deployment
-
   - mcp
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /mcp-deploy-manage-agents
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

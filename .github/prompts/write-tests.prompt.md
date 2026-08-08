@@ -1,57 +1,30 @@
 ---
-
 name: write-tests
-
 title: Write Tests
-
 description: Generate unit or E2E tests for a component or module.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
   - browser
-
   - todo
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - generator
-
   - ml
-
   - nextjs
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /write-tests
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

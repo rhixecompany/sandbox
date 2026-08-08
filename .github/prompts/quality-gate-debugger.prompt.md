@@ -1,65 +1,34 @@
 ---
-
 name: quality-gate-debugger
-
 title: 'Quality Gate Debugger — Triage & Batch Fix'
-
 description: 'Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
   - browser
-
   - todo
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
 plan: plans/debugger.md
-
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - audit
-
   - debugging
-
   - fix
-
   - frontend
-
   - generator
-
   - linting
-
   - prompts
-
   - testing
-
   - typescript
-
 trigger: /quality-gate-debugger
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
@@ -289,4 +258,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

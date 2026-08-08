@@ -15,15 +15,15 @@ tags:
 trigger: /test-providers-models
 formatter: default
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:verification-before-completion
+  - "skill:using-superpowers"
+  - "skill:user-communication-preferences"
+  - "skill:verification-before-completion"
 metadata:
   hermes: {}
-toolsets: None
+toolsets: 'None'
 scripts: []
 skills: []
-plan: None
+plan: 'None'
 ---
 
 ## Goal

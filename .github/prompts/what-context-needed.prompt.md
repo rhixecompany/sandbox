@@ -1,51 +1,27 @@
 ---
-
 name: what-context-needed
-
 title: What Context Do You Need?
-
 description: Ask Copilot what files it needs to see before answering a question.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ai-assistant
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /what-context-needed
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
@@ -202,4 +178,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

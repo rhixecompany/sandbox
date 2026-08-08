@@ -1,51 +1,27 @@
 ---
-
 name: create-github-issues-feature-from-implementation-plan
-
 title: Create GitHub Issue from Implementation Plan
-
 description: Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - generator
-
   - git
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /create-github-issues-feature-from-implementation-plan
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

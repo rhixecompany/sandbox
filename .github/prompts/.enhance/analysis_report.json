@@ -1,44 +1,17 @@
 {
-  "total_files": 219,
+  "total_files": 220,
   "issue_counts": {
     "critical": 0,
     "high": 0,
-    "medium": 7,
-    "info": 2
+    "medium": 0,
+    "info": 0
   },
   "files_no_frontmatter": [],
   "all_issues": {
-    "medium": {
-      "MISSING_RECOMMENDED_FM:dependencies": [
-        "repo-tooling-implementation",
-        "tooling-implementation"
-      ],
-      "MISSING_GOAL_OR_OVERVIEW": [
-        "repo-tooling-implementation"
-      ],
-      "MISSING_RECOMMENDED_FM:tags": [
-        "tooling-implementation"
-      ],
-      "MISSING_RECOMMENDED_FM:trigger": [
-        "tooling-implementation"
-      ],
-      "MISSING_TRIGGER": [
-        "tooling-implementation"
-      ],
-      "EMPTY_TAGS": [
-        "tooling-implementation"
-      ]
-    },
-    "info": {
-      "MISSING_RULES_SECTION": [
-        "repo-tooling-implementation"
-      ],
-      "RULES_INLINE_NOT_SHARED": [
-        "tooling-implementation"
-      ]
-    },
     "critical": {},
-    "high": {}
+    "high": {},
+    "medium": {},
+    "info": {}
   },
   "per_file": [
     {
@@ -59,6 +32,10 @@
     },
     {
       "name": "ai-prompt-engineering-safety-review",
+      "issue_count": 0
+    },
+    {
+      "name": "all-repo-docker-setup",
       "issue_count": 0
     },
     {
@@ -167,10 +144,6 @@
     },
     {
       "name": "convert-plaintext-to-md",
-      "issue_count": 0
-    },
-    {
-      "name": "copilot-instructions-blueprint-generator",
       "issue_count": 0
     },
     {
@@ -326,6 +299,10 @@
       "issue_count": 0
     },
     {
+      "name": "disk-space-cleanup",
+      "issue_count": 0
+    },
+    {
       "name": "documentation-writer",
       "issue_count": 0
     },
@@ -410,10 +387,6 @@
       "issue_count": 0
     },
     {
-      "name": "github-copilot-starter",
-      "issue_count": 0
-    },
-    {
       "name": "go-mcp-server-generator",
       "issue_count": 0
     },
@@ -439,6 +412,10 @@
     },
     {
       "name": "hermes-breakdown-test",
+      "issue_count": 0
+    },
+    {
+      "name": "hermes-comprehensive-setup",
       "issue_count": 0
     },
     {
@@ -494,10 +471,6 @@
       "issue_count": 0
     },
     {
-      "name": "mcp-copilot-studio-server-generator",
-      "issue_count": 0
-    },
-    {
       "name": "mcp-create-adaptive-cards",
       "issue_count": 0
     },
@@ -547,6 +520,10 @@
     },
     {
       "name": "nextjs-tailwind",
+      "issue_count": 0
+    },
+    {
+      "name": "oh-my-openagent-setup",
       "issue_count": 0
     },
     {
@@ -719,7 +696,7 @@
     },
     {
       "name": "repo-tooling-implementation",
-      "issue_count": 3
+      "issue_count": 0
     },
     {
       "name": "repo",
@@ -782,6 +759,10 @@
       "issue_count": 0
     },
     {
+      "name": "smithery-setup",
+      "issue_count": 0
+    },
+    {
       "name": "sql-code-review",
       "issue_count": 0
     },
@@ -802,15 +783,11 @@
       "issue_count": 0
     },
     {
-      "name": "suggest-awesome-github-copilot",
-      "issue_count": 0
-    },
-    {
       "name": "swift-mcp-server-generator",
       "issue_count": 0
     },
     {
-      "name": "sync-hermes-copilot-codex",
+      "name": "sync-hermes-opencode",
       "issue_count": 0
     },
     {
@@ -839,7 +816,7 @@
     },
     {
       "name": "tooling-implementation",
-      "issue_count": 6
+      "issue_count": 0
     },
     {
       "name": "typescript-mcp-server-generator",

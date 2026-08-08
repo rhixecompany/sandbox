@@ -1,55 +1,29 @@
 ---
-
 name: aspnet-minimal-api-openapi
-
 title: ASP.NET Minimal API with OpenAPI
-
 description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - api
-
   - documentation
-
   - prompts
-
   - specification
-
   - typescript
-
   - csharp
-
   - dotnet
-
 trigger: /aspnet-minimal-api-openapi
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

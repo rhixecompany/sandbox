@@ -1,57 +1,30 @@
 ---
-
 name: debug-issue
-
 title: Debug Issue
-
 description: 'Debug an issue with reproducible analysis, root-cause isolation, and verification steps.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ai-assistant
-
   - configuration
-
   - debugging
-
   - fix
-
   - git
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /debug-issue
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

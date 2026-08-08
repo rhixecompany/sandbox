@@ -1,53 +1,28 @@
 ---
-
 name: update-avm-modules-in-bicep
-
 title: Update Azure Verified Modules in Bicep Files
-
 description: Update Azure Verified Modules (AVM) to latest versions in Bicep files.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - azure
-
   - maintenance
-
   - ml
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /update-avm-modules-in-bicep
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

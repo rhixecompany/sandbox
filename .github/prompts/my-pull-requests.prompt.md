@@ -1,49 +1,26 @@
 ---
-
 name: my-pull-requests
-
 title: My Pull Requests
-
 description: List my pull requests in the current repository.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /my-pull-requests
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

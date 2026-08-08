@@ -1,55 +1,29 @@
 ---
-
 name: postgresql-optimization
-
 title: PostgreSQL Development Assistant
-
 description: 'PostgreSQL-specific development assistant focusing on unique PostgreSQL features, advanced data types, and PostgreSQL-exclusive capabilities. Covers JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and PostgreSQL extensions ecosystem.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - data
-
   - database
-
   - prompts
-
   - specification
-
   - sql
-
   - typescript
-
 trigger: /postgresql-optimization
-
 tested_with: 'GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025'
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
@@ -258,4 +232,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

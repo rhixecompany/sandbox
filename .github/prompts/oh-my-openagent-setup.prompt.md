@@ -1,80 +1,162 @@
 ---
 name: oh-my-openagent-setup
 title: Oh My OpenAgent Setup
-description: 'Install, configure, and verify Oh My OpenAgent (OMO) and the Oh My Hermes workflow layer on top of OpenCode CLI with deterministic, read-only verification.'
+description: Provision and verify Oh My OpenAgent and the Oh My Hermes workflow layer on top of OpenCode CLI + Hermes Agent with deterministic validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - hermes
   - opencode
+  - oh-my-openagent
   - setup
-  - ops
-  - workflow
-trigger: /oh-my-openagent-setup
-formatter: default
-dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:verification-before-completion
-  - skill:oh-my-openagent-setup
+  - validation
 toolsets:
-  - file
   - terminal
-scripts:
-  - ~/Desktop/SandBox/scripts/omo_doctor.py
-skills:
-  - using-superpowers
-  - user-communication-preferences
-  - verification-before-completion
-  - oh-my-openagent-setup
-plan: None
+  - file
+  - skills
+  - todo
+trigger: /oh-my-openagent-setup
+skills: []
+dependencies: []
 metadata:
   hermes: {}
 ---
-
 ## Goal
 
-Provision and verify Oh My OpenAgent (OMO, formerly oh-my-opencode) and the Oh My Hermes workflow layer on top of OpenCode CLI + Hermes Agent, with deterministic, non-destructive validation.
+Execute the `oh-my-openagent-setup` workflow. Full details: `templates/oh-my-openagent-setup/README.md`.
+
+## Template Reference
+
+Detailed template in `templates/oh-my-openagent-setup/`:
+- `README.md`
+
+## Execution
+
+See `templates/oh-my-openagent-setup/README.md` for phases/steps/workflow.
+
+## Steps
+
+1. Read `templates/oh-my-openagent-setup/README.md`.
+2. Execute the workflow.
+3. Verify outputs.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+
+## Personas
+
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+
+## Personality
+
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
 
 ## Context
 
-- OpenCode on Windows resolves as `opencode.cmd`.
-- Canonical verification script: `scripts/omo_doctor.py`.
-- Config lives at `~/.config/opencode/oh-my-openagent.jsonc` or `oh-my-opencode.jsonc`.
-- Non-interactive Hermes-driven runs should set `OPENCODE_DISABLE_EMBEDDED_WEB_UI=true`, `OPENCODE_DISABLE_SHARE=true`, and `OPENCODE_DISABLE_AUTOUPDATE=true`.
+Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
-## Workflow
 
-1. Confirm prerequisites:
-   - `opencode --version` is at least 1.4.0.
-   - `bun --version` is available.
-2. Install OMO:
-   - interactive: `bunx oh-my-openagent install`
-   - non-interactive: `bunx oh-my-openagent install --no-tui --claude=yes --openai=yes --gemini=yes --copilot=yes`
-3. Confirm the config maps the orchestrator/worker/helper roles to the expected models and categories.
-4. Authenticate OpenCode:
-   - `opencode auth login`
-   - `opencode auth list` should show at least one provider.
-5. Verify read-only health:
-   - `python scripts/omo_doctor.py`
-   - `bunx oh-my-openagent doctor`
-   - `opencode agents`
-6. Optional smoke test:
-   - `opencode run "@sisyphus <task> with @oracle review"`
-7. If the Oh My Hermes workflow layer is in scope, confirm the plugin copy/sync and Hermes restart requirements before claiming completion.
+## Phases
+
+### Phase 1: Intake
+- Read the request and identify scope.
+- Locate relevant files, diffs, references.
+
+### Phase 2: Execute
+- Perform work with smallest safe change set.
+- Keep steps explicit and reproducible.
+
+### Phase 3: Verify
+- Check result against goal, rules, inputs.
+- Confirm output is usable and complete.
+
+### Phase 4: Hand Off
+- Return final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
 
 ## Verification Checklist
 
-- [ ] `opencode --version` and `bun --version` are present.
-- [ ] OMO install completed or was already present.
-- [ ] `opencode auth list` shows at least one provider.
-- [ ] `scripts/omo_doctor.py` exits 0.
-- [ ] `bunx oh-my-openagent doctor` reports System OK.
-- [ ] `opencode agents` lists at least one agent.
+| # | Gate | Criterion |
+|---|------|-----------|
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
 
-## Guardrails
 
-- Read-only verification only; never delete auth or downgrade configs.
-- Never print API keys or secrets.
-- Do not hardcode a paid provider unless the user has already authenticated it.
+## Skills Required
+
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+|-------|---------|
+| `using-superpowers` | Foundational skill workflow |
+| `test-driven-development` | TDD workflow enforcement |
+| `code-review` | Code quality assurance |
+| `systematic-debugging` | Debugging and root cause analysis |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `code-sandbox` | Isolated code execution and testing |
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+

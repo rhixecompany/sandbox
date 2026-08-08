@@ -1,71 +1,37 @@
 ---
-
 name: setup-enhanced
-
 title: 'ComicWise — AI Agent Setup & Implementation Guide'
-
 description: 'Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - agents
-
   - backend
-
   - configuration
-
   - data
-
   - database
-
   - frontend
-
   - linting
-
   - ml
-
   - prompts
-
   - setup
-
   - sql
-
   - typescript
-
   - workflow
-
 trigger: /setup-enhanced
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

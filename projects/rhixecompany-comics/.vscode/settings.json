@@ -30,12 +30,32 @@
 	"python.analysis.autoImportCompletions": true,
 	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
 	"ruff.lineLength": 120,
-	"ruff.lint.select": ["E", "F", "I", "N", "W", "UP", "B", "SIM", "ARG", "RUF"],
+	"ruff.lint.select": [
+		"E",
+		"F",
+		"I",
+		"N",
+		"W",
+		"UP",
+		"B",
+		"SIM",
+		"ARG",
+		"RUF"
+	],
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.profiles.windows": {
-		"Command Prompt": { "icon": "terminal-cmd", "path": "cmd.exe" },
-		"Git Bash": { "icon": "terminal-bash", "source": "Git Bash" },
-		"PowerShell": { "icon": "terminal-powershell", "source": "PowerShell" }
+		"Command Prompt": {
+			"icon": "terminal-cmd",
+			"path": "cmd.exe"
+		},
+		"Git Bash": {
+			"icon": "terminal-bash",
+			"source": "Git Bash"
+		},
+		"PowerShell": {
+			"icon": "terminal-powershell",
+			"source": "PowerShell"
+		}
 	},
 	"[python]": {
 		"editor.defaultFormatter": "charliermarsh.ruff",
@@ -44,12 +64,29 @@
 			"source.organizeImports.ruff": "explicit"
 		}
 	},
-	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-	"[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
-	"[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.wordWrap": "on" },
-	"[shellscript]": { "editor.defaultFormatter": "foxundermoon.shell-format" },
-	"[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" }
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.wordWrap": "on"
+	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[toml]": {
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	}
 }

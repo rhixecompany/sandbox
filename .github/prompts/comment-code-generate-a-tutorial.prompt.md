@@ -1,57 +1,30 @@
 ---
-
 name: comment-code-generate-a-tutorial
-
 title: Comment Code Generate A Tutorial
-
 description: 'Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - generator
-
   - markdown
-
   - ml
-
   - prompts
-
   - python
-
   - refactoring
-
   - specification
-
   - typescript
-
 trigger: /comment-code-generate-a-tutorial
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

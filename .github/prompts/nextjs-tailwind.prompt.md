@@ -1,65 +1,34 @@
 ---
-
 name: nextjs-tailwind
-
 title: Nextjs Tailwind
-
 description: Comprehensive Next.js and Tailwind implementation prompt aligned to project standards.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - audit
-
   - backend
-
   - data
-
   - frontend
-
   - ml
-
   - nextjs
-
   - performance
-
   - prompts
-
   - security
-
   - skills
-
   - typescript
-
 trigger: /nextjs-tailwind
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

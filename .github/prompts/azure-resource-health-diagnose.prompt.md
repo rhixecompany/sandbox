@@ -1,53 +1,28 @@
 ---
-
 name: azure-resource-health-diagnose
-
 title: 'Azure Resource Health & Issue Diagnosis'
-
 description: 'Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - azure
-
   - fix
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /azure-resource-health-diagnose
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

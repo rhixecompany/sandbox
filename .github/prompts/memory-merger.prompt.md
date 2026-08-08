@@ -1,49 +1,26 @@
 ---
-
 name: memory-merger
-
 title: Memory Merger
-
 description: 'Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /memory-merger
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

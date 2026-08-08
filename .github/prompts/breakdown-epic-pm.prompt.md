@@ -1,53 +1,28 @@
 ---
-
 name: breakdown-epic-pm
-
 title: Epic Product Requirements Document (PRD) Prompt
-
 description: Prompt for creating an Epic Product Requirements Document (PRD) for a new epic. This PRD will be used as input for generating a technical architecture specification.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - frontend
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /breakdown-epic-pm
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

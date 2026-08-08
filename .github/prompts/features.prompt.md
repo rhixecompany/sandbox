@@ -1,53 +1,28 @@
 ---
-
 name: features
-
 title: ComicWise - Feature Implementation Guide
-
 description: 'Complete feature implementation tasks for profiles, comics, chapters, bookmarks.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
   - todo
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - frontend
-
   - linting
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /features
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

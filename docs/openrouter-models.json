@@ -1,0 +1,86 @@
+{
+	"provider": "openrouter",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 1000000,
+			"reasoning": true,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "nvidia/nemotron-3-super-120b-a12b:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 1000000,
+			"reasoning": true,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 256000,
+			"reasoning": true,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "google/gemma-4-31b-it:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 262000,
+			"reasoning": false,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "google/gemma-4-26b-a4b-it:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 262000,
+			"reasoning": false,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "openai/gpt-oss-20b:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 131000,
+			"reasoning": false,
+			"known_source": "live probe",
+			"status": "working"
+		},
+		{
+			"id": "qwen/qwen3-coder:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 1000000,
+			"reasoning": true,
+			"known_source": "live probe",
+			"status": "unavailable-free-404"
+		},
+		{
+			"id": "tencent/hy3:free",
+			"provider": "openrouter",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 262000,
+			"reasoning": false,
+			"known_source": "live probe",
+			"status": "unavailable-free-404"
+		}
+	]
+}

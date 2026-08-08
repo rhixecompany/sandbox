@@ -1,53 +1,28 @@
 ---
-
 name: review-and-refactor
-
 title: Review And Refactor
-
 description: Review and refactor code in your project according to defined instructions.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - audit
-
   - ml
-
   - prompts
-
   - refactoring
-
   - specification
-
   - typescript
-
 trigger: /review-and-refactor
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

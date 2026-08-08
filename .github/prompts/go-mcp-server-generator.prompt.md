@@ -1,59 +1,31 @@
 ---
-
 name: go-mcp-server-generator
-
 title: Go MCP Server Project Generator
-
 description: 'Generate a complete Go MCP server project with proper structure, dependencies, and implementation using the official github.com/modelcontextprotocol/go-sdk.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - backend
-
   - configuration
-
   - documentation
-
   - frontend
-
   - generator
-
   - go
-
   - mcp
-
   - prompts
-
   - typescript
-
 trigger: /go-mcp-server-generator
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

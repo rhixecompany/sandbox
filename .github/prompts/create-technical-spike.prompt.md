@@ -1,49 +1,26 @@
 ---
-
 name: create-technical-spike
-
 title: Create Technical Spike Document
-
 description: Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - generator
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /create-technical-spike
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

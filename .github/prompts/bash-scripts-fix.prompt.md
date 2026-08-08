@@ -1,109 +1,56 @@
 ---
-
 name: bash-scripts-fix
-
 title: Bash Scripts Modernization and Consolidation
-
 description: 'Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - introspection-only-general
-
   - no-git-delete
-
   - no-net-fetch
-
   - skills-tools-preflight-check
-
   - brainstorming
-
   - plans-and-specs
-
   - dispatching-parallel-agents
-
   - subagent-driven-development
-
   - systematic-debugging
-
   - simplify
-
   - acpx-executor
-
   - script-orchestration
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - prompt:context-map.prompt.md
-
-  - prompt:update-implementation-plan.prompt.md
-
-  - skill:brainstorming
-
-  - skill:plans-and-specs
-
-  - skill:dispatching-parallel-agents
-
-  - skill:subagent-driven-development
-
-  - skill:systematic-debugging
-
-  - skill:simplify
-
-  - skill:acpx-executor
-
-  - skill:script-orchestration
-
-  - tool:terminal
-
-  - tool:search_files
-
-  - skill:introspection-only-general
-
-  - skill:no-git-delete
-
-  - skill:no-net-fetch
-
-  - skill:skills-tools-preflight-check
-
+  - "prompt:context-map.prompt.md"
+  - "prompt:update-implementation-plan.prompt.md"
+  - "skill:brainstorming"
+  - "skill:plans-and-specs"
+  - "skill:dispatching-parallel-agents"
+  - "skill:subagent-driven-development"
+  - "skill:systematic-debugging"
+  - "skill:simplify"
+  - "skill:acpx-executor"
+  - "skill:script-orchestration"
+  - "tool:terminal"
+  - "tool:search_files"
+  - "skill:introspection-only-general"
+  - "skill:no-git-delete"
+  - "skill:no-net-fetch"
+  - "skill:skills-tools-preflight-check"
 tags:
-
   - audit
-
   - fix
-
   - migration
-
   - prompts
-
   - typescript
-
   - workflow
-
 trigger: /bash-scripts-fix
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

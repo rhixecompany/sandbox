@@ -1,0 +1,16 @@
+{
+	"provider": "huggingface",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "(no inference providers enabled)",
+			"provider": "huggingface",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 0,
+			"reasoning": false,
+			"known_source": "catalog + router 400",
+			"status": "token-valid-no-models"
+		}
+	]
+}

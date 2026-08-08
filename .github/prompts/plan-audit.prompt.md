@@ -1,87 +1,45 @@
 ---
-
 name: plan-audit
-
 title: Audit Agent Stack
-
 description: 'Audit the full agent stack across Hermes, GitHub Copilot, and shared infrastructure. Inventory agents, plugins, MCP tools, custom agents, instructions, and prompt files. Report gaps, duplicates, and registration issues.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent (consolidated)
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - context-map
-
   - systematic-debugging
-
   - verification-before-completion
-
   - brainstorming
-
   - simplify
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:context-map
-
-  - skill:systematic-debugging
-
-  - skill:verification-before-completion
-
-  - skill:brainstorming
-
-  - skill:simplify
-
-  - skill:subagent-driven-development
-
-  - tool:terminal
-
-  - tool:search_files
-
+  - "skill:context-map"
+  - "skill:systematic-debugging"
+  - "skill:verification-before-completion"
+  - "skill:brainstorming"
+  - "skill:simplify"
+  - "skill:subagent-driven-development"
+  - "tool:terminal"
+  - "tool:search_files"
 tags:
-
   - agents
-
   - ai-assistant
-
   - audit
-
   - configuration
-
   - git
-
   - planning
-
   - prompts
-
   - skills
-
   - typescript
-
 trigger: /plan-audit
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

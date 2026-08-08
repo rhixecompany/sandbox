@@ -1,0 +1,26 @@
+{
+	"provider": "opencode-zen",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "deepseek-v4-flash-free",
+			"provider": "opencode-zen",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 128000,
+			"reasoning": true,
+			"known_source": "live-primary",
+			"status": "working"
+		},
+		{
+			"id": "nemotron-3-ultra-free",
+			"provider": "opencode-zen",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 1000000,
+			"reasoning": true,
+			"known_source": "live-primary",
+			"status": "working"
+		}
+	]
+}

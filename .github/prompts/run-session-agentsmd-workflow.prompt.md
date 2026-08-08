@@ -1,57 +1,30 @@
 ---
-
 name: run-session-agentsmd-workflow
-
 title: Run Agents.md Workflow
-
 description: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching, and reporting.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - agents
-
   - git
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /run-session-agentsmd-workflow
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

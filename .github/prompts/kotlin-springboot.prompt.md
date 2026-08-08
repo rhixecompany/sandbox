@@ -1,47 +1,25 @@
 ---
-
 name: kotlin-springboot
-
 title: Spring Boot with Kotlin Best Practices
-
 description: Get best practices for developing applications with Spring Boot and Kotlin.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - frontend
-
   - ml
-
   - prompts
-
   - spring
-
 trigger: /kotlin-springboot
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

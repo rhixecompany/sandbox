@@ -1,73 +1,38 @@
 ---
-
 name: boost-prompt
-
 title: Boost Prompt
-
 description: 'Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - writing-skills
-
   - writing-plans
-
   - joyride
-
   - context-map
-
   - prompt-engineering
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:writing-skills
-
-  - skill:writing-plans
-
-  - skill:joyride
-
-  - skill:context-map
-
-  - skill:prompt-engineering
-
+  - "skill:writing-skills"
+  - "skill:writing-plans"
+  - "skill:joyride"
+  - "skill:context-map"
+  - "skill:prompt-engineering"
 tags:
-
   - frontend
-
   - markdown
-
   - ml
-
   - prompts
-
   - typescript
-
   - workflow
-
 trigger: /boost-prompt
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

@@ -1,161 +1,82 @@
 ---
-
 name: repo
-
 title: Repo Research Pipeline + Quick Onboarding
-
 description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage.'
-
 version: 2.1.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - browser
-
   - code_execution
-
   - file
-
   - mcp
-
   - terminal
-
   - vision
-
   - web
-
 scripts: []
-
 skills:
-
   - brainstorming
-
   - code-wiki
-
   - content-research-writer
-
   - gh-cli
-
   - git-commit
-
   - git-submodule-workflow
-
   - github-repo-management
-
   - monorepo-pr-workflow
-
   - plans-and-specs
-
   - spike
-
   - systematic-debugging
-
   - web-research-pipeline
-
   - writing-clearly-and-concisely
-
   - writing-skills
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - prompt:context-map
-
-  - prompt:repo-management
-
-  - prompt:repo-research-pipeline
-
-  - prompt:repo-story-time
-
-  - prompt:update-implementation-plan
-
-  - prompt:web-research-pipeline
-
-  - skill:brainstorming
-
-  - skill:code-wiki
-
-  - skill:content-research-writer
-
-  - skill:gh-cli
-
-  - skill:git-commit
-
-  - skill:git-submodule-workflow
-
-  - skill:github-repo-management
-
-  - skill:monorepo-pr-workflow
-
-  - skill:plans-and-specs
-
-  - skill:spike
-
-  - skill:systematic-debugging
-
-  - skill:web-research-pipeline
-
-  - skill:writing-clearly-and-concisely
-
-  - skill:writing-skills
-
-  - skill:subagent-driven-development
-
-  - skill:firecrawl-search
-
-  - skill:firecrawl-scrape
-
-  - tool:mcp-filesystem
-
-  - tool:mcp-github
-
-  - tool:mcp-memory
-
-  - tool:mcp-sequential-thinking
-
-  - tool:mcp-tavily
-
+  - "prompt:context-map"
+  - "prompt:repo-management"
+  - "prompt:repo-research-pipeline"
+  - "prompt:repo-story-time"
+  - "prompt:update-implementation-plan"
+  - "prompt:web-research-pipeline"
+  - "skill:brainstorming"
+  - "skill:code-wiki"
+  - "skill:content-research-writer"
+  - "skill:gh-cli"
+  - "skill:git-commit"
+  - "skill:git-submodule-workflow"
+  - "skill:github-repo-management"
+  - "skill:monorepo-pr-workflow"
+  - "skill:plans-and-specs"
+  - "skill:spike"
+  - "skill:systematic-debugging"
+  - "skill:web-research-pipeline"
+  - "skill:writing-clearly-and-concisely"
+  - "skill:writing-skills"
+  - "skill:subagent-driven-development"
+  - "skill:firecrawl-search"
+  - "skill:firecrawl-scrape"
+  - "tool:mcp-filesystem"
+  - "tool:mcp-github"
+  - "tool:mcp-memory"
+  - "tool:mcp-sequential-thinking"
+  - "tool:mcp-tavily"
 tags:
-
   - architecture
-
   - frontend
-
   - git
-
   - mcp
-
   - onboarding
-
   - performance
-
   - prompts
-
   - security
-
   - typescript
-
   - vscode
-
 trigger: /repo
-
 metadata:
-
   hermes: {}
-
 mode: agent
-
 system: You are a research orchestrator. Delegate web research to web-research-pipeline sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or migration — those live in repo-management.prompt.md.
-
 ---
 
 ## Goal

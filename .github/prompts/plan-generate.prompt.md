@@ -1,81 +1,42 @@
 ---
-
 name: plan-generate
-
 title: Generate Implementation Plan
-
 description: 'Generate a detailed, structured implementation plan from a goal or specification. Produces a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent (consolidated)
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - plans-and-specs
-
   - writing-plans
-
   - simplify
-
   - brainstorming
-
   - systematic-debugging
-
   - verification-before-completion
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:plans-and-specs
-
-  - skill:writing-plans
-
-  - skill:simplify
-
-  - skill:brainstorming
-
-  - skill:systematic-debugging
-
-  - skill:verification-before-completion
-
-  - prompt:context-map.prompt.md
-
+  - "skill:plans-and-specs"
+  - "skill:writing-plans"
+  - "skill:simplify"
+  - "skill:brainstorming"
+  - "skill:systematic-debugging"
+  - "skill:verification-before-completion"
+  - "prompt:context-map.prompt.md"
 tags:
-
   - ai-assistant
-
   - generator
-
   - ml
-
   - planning
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /plan-generate
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

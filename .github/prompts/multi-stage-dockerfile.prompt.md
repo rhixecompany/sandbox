@@ -1,53 +1,28 @@
 ---
-
 name: multi-stage-dockerfile
-
 title: Multi Stage Dockerfile
-
 description: Create optimized multi-stage Dockerfiles for any language or framework.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - docker
-
   - ml
-
   - performance
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /multi-stage-dockerfile
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
