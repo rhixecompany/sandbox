@@ -1,4 +1,40 @@
-platform_name,category,effective_ngn_per_hour,reliability_score(1-10),ng_accessibility,entry_barrier,scalability,tax_efficiency,time_to_first_ngn_days,total_score,eliminated,note
-Mercor,ai-training,9000,8,7,6,7,7,3,7.55,FALSE,AI tasks
-DataAnnotation.tech,ai-training,1800,7,6,5,4,6,30,5.4,FALSE,verify NGN
-Atapoll,surveys-microtasks,1500,6,8,8,3,5,7,5.6,FALSE,low pay per task verify
+name,category,ngn_ph,reliability,ng_access,entry,scalability,tax,t2n_days,total,eliminated,reason,status,note
+Mercor,ai-training,24000,8,9,8,8,7,3,8.15,KEEP,,verified,Wise/bank weekly; top pick
+DataAnnotation.tech,ai-training,45000,7,6,7,6,6,10,7.5,KEEP,,likely,PayPal ~3-7d; steady
+Invisible Technologies,ai-training,35000,6,8,7,5,6,14,7.5,KEEP,,verified,PayPal/Payoneer 2x/mo
+Stellar AI,ai-training,37500,6,7,7,6,6,10,7.45,KEEP,,community,PayPal weekly; $25 base
+Braintrust,ai-training,60000,6,7,5,7,5,30,7.1,KEEP,,likely,net30 slow
+Micro1,ai-training,45000,5,7,6,6,5,14,7.05,KEEP,,community,AI trainer $20-60
+Testlio,user-testing,22500,7,8,6,5,6,7,6.95,KEEP,,verified,hourly; weekly
+uTest (Applause),user-testing,15000,8,9,8,6,6,4,6.85,KEEP,,verified,best NG crowdtesting
+Respondent.io,user-testing,60000,5,6,6,5,5,9,6.8,KEEP,,verified,high value; low volume
+PlaybookUX,user-testing,30000,5,6,6,3,5,21,6.5,KEEP,,unverified,invite-only
+Remotasks/Outlier,ai-training,15000,6,9,8,6,5,7,6.35,KEEP,,verified,weekly baseline
+Test.io,user-testing,15000,6,9,8,5,6,14,6.25,KEEP,,verified,bug pace
+Betakitesting,user-testing,22500,6,6,7,4,5,21,6.15,KEEP,,blog,Tremendous rails
+Userlytics,user-testing,15000,7,8,7,4,6,10,6.1,KEEP,,verified,PayPal gate
+TimeBucks,surveys,6000,7,9,8,5,6,7,5.65,KEEP,,verified,$3 min; multi rails
+Mindrift (Toloka),ai-training,12000,5,8,8,4,6,7,5.6,KEEP,,community,bi-weekly
+FreeCash,surveys,7500,6,8,8,6,5,3,5.55,KEEP,,verified,offer walls > surveys
+Clickworker,surveys,10500,6,8,7,5,6,14,5.55,KEEP,,verified,weekly PayPal/Payoneer
+CrowdGen (Appen),ai-training,10500,5,9,8,5,5,21,5.4,KEEP,,verified,monthly
+SagaPoll,surveys,1800,6,10,9,4,5,21,4.88,KEEP,,verified,native NGN bank
+TGM Panel (NG),surveys,3750,5,10,7,5,5,21,4.78,KEEP,,verified,good comp; PayPal gripes
+Premise,surveys,2500,5,9,8,4,5,14,4.6,KEEP,,verified,location tasks
+Trymata,user-testing,9000,5,6,7,3,5,14,4.6,KEEP,,unverified,
+Microworkers,surveys,4500,5,8,8,3,5,14,4.55,KEEP,,community,$9 min
+IntelliZoom,user-testing,6000,5,7,8,3,5,14,4.55,KEEP,,unverified,filler
+PlaytestCloud,user-testing,7500,5,6,8,3,5,21,4.45,KEEP,,possible,low NG volume
+UserFeel,user-testing,6000,5,6,7,3,5,14,4.3,KEEP,,unverified,
+Toluna,surveys,1500,5,9,8,3,5,30,4.25,KEEP,,verified,huge NG panel; slow
+UserDirect,user-testing,4500,5,6,7,3,5,14,4.15,KEEP,,unverified,
+Ipsos iSay,surveys,3000,5,7,7,4,5,30,4.1,KEEP,,unverified,NG rate unverified
+Surveoo,surveys,1500,4,7,7,3,5,21,3.7,KEEP,,unverified,NG redemption issues
+GeoPoll,surveys,900,6,10,9,3,5,7,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,airtime not cash
+UserTesting,user-testing,0,3,1,4,4,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,NOT supported NG
+UserInterviews,user-testing,0,3,1,4,4,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,NOT supported NG
+Maze,user-testing,0,3,1,3,3,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,tool not panel
+Swagbucks,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-locked
+Qmee,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-locked
+Prolific,surveys,0,4,1,6,4,5,999,0.0,ELIMINATED,NG unavailable,BLOCKED,geo-locked
+MoBrog,surveys,0,3,1,4,2,4,999,0.0,ELIMINATED,NG unavailable,BLOCKED,VPN fraud risk

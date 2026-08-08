@@ -1,22 +1,52 @@
 # 🔗 Platform Links — NGN Earnings Kit
 
-> Full curated link list. **No affiliate links without disclosure** (see ethics rule). All URLs verified during research — some are direct signup, some landing pages. Update after research completes.
+> Curated link list. **Disclosure rule:** referral links marked (ref) — always disclose. Every URL below came from research (Aug 2026) — non-exhaustive; deep-dives live in `platforms/*/`.
+> **No affiliate links hidden.** If the platform offers a signup bonus, it's noted.
 
-## How to use
-- Install the top 5 platforms in priority order (see RESEARCH_REPORT.md)
-- Click through, complete signup checklist (`templates/signup_checklist.md`)
-- Keep your own note of which email uses which platform
+## 🥇 Tier 1 — Start here (validated, proven rails)
 
-## Quick-links table (populated from research)
-| Platform | Category | Signup URL | Referral? | NGN verified |
-|----------|----------|-----------|-----------|--------------|
-| Mercor | ai | https://mercor.com | | ✅ |
-| DataAnnotation.tech | ai | https://www.dataannotation.tech | | ⚠️ verify |
-| Atapoll | survey | https://www.atapoll.com | | ⚠️ verify |
-| [add from research] | | | | |
+| Platform | Category | URL | Payout | Verified? | Bonus |
+|----------|----------|-----|--------|-----------|-------|
+| **Mercor** | ai-training | https://mercor.com | Wise/bank weekly | ✅ | — |
+| **uTest (Applause)** | user-testing | https://www.utest.com | Payoneer/PayPal 15th+EOM | ✅ | — |
+| **Testlio** | user-testing | https://testlio.com | Payoneer/PayPal weekly | ✅ | — |
+| **Test.io** | user-testing | https://test.io | PayPal/Payoneer monthly | ✅ | — |
+| **Userlytics** | user-testing | https://www.userlytics.com | PayPal | ✅ | — |
+| **Respondent.io** | user-testing | https://www.respondent.io | Tremendous→PayPal | ⚠️ invites rare | — |
 
-*(rows inserted when research reports land — keep this file tidy idempotently)*
+## 🥈 Tier 2 — AI training (selective but real)
 
-## Batch-import tip
-- On Android, open the platform URL → Tachiyomi-style install might not apply; instead just create accounts.
-- Use the signup checklist and the platform deep-dive docs under `platforms/*/`.
+| Platform | Category | Install | Payout | Verified? |
+|----------|----------|---------|--------|-----------|
+| **DataAnnotation.tech** | ai-training | https://www.dataannotation.tech | PayPal | ⚠️ 2.6% acceptance |
+| **Invisible Technologies** | ai-training | https://invisible.co | PayPal/Payoneer | ✅ NG job posts |
+| **Stellar AI** | ai-training | https://stellarlabs.ai | PayPal | ⚠️ community |
+| **Micro1** | ai-training | https://micro1.ai | USD | ⚠️ community |
+| **Braintrust** | ai-training | https://www.usebraintrust.com | Stripe/Wise | ⚠️ |
+| **CrowdGen (Appen)** | ai-training | https://crowdgen.com | PayPal/Payoneer/Airtm | ✅ monthly |
+| **Mindrift** | ai-training | https://mindrift.app | PayPal/Payoneer | ⚠️ |
+| **Remotask/Outlier** | ai-training | https://outlier.ai | PayPal/Airtm | ✅ weekly |
+
+## 🥉 Tier 3 — Surveys & microtasks (side income)
+
+| Platform | Category | Install | Payout | Verified? |
+|----------|----------|--------|--------|-----------|
+| **TimeBucks** | surveys | https://timebucks.com | PayPal $3 min, crypto | ✅ |
+| **FreeCash** | surveys | https://freecash.com | PayPal ($5), crypto, bank | ✅ |
+| **SagaPoll** | surveys | https://sagapoll.com (Play Store) | Bank/mobile-money | ✅ native NG |
+| **Premise** | surveys | https://premise.com (app) | NGN airtime/BTC | ✅ |
+| **GeoPoll** | surveys | https://www.geopoll.com (app) | airtime | ⚠️ subthreshold |
+| **TGM Panel (NG)** | surveys | https://tgmpanel.ng | PayPal/CY.SEND | ✅ SurveyPolice |
+| **Clickworker** | surveys | https://www.clickworker.com | PayPal/Payoneer weekly | ✅ |
+| **Microworkers** | surveys | https://www.microworkers.com | PayPal 7.5% fee | ✅ |
+
+## ❌ Do NOT use from Nigeria (geo-locked / fraud risk)
+| Platform | Why |
+|----------|-----|
+| Swagbucks, Qmee, Prolific | Official country lists exclude NG; VPN = ban + lost balance |
+| MoBrog | NG community flags VPN route; location fraud risk |
+| UserTesting, UserInterviews, Maze | Not supported in Nigeria |
+
+## Quick-add tip
+- Open link → sign up → complete `templates/signup_checklist.md` per platform.
+- Prefer Payoneer for uTest/Testlio; PayPal for the rest; bank for SagaPoll.
