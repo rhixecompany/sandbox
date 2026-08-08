@@ -1,51 +1,27 @@
 ---
-
 name: java-refactoring-extract-method
-
 title: Refactoring Java Methods With Extract Method
-
 description: Refactoring using Extract Methods in Java Language.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - frontend
-
   - java
-
   - prompts
-
   - refactoring
-
   - typescript
-
 trigger: /java-refactoring-extract-method
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

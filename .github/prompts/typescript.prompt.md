@@ -1,59 +1,31 @@
 ---
-
 name: typescript
-
 title: 'TypeScript & Next.js'
-
 description: Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - backend
-
   - configuration
-
   - frontend
-
   - ml
-
   - nextjs
-
   - prompts
-
   - skills
-
   - typescript
-
 trigger: /typescript
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

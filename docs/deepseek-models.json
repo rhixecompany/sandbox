@@ -1,0 +1,26 @@
+{
+	"provider": "deepseek",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "deepseek-v4-flash",
+			"provider": "deepseek",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 128000,
+			"reasoning": true,
+			"known_source": "catalog",
+			"status": "no-credit-402"
+		},
+		{
+			"id": "deepseek-v4-pro",
+			"provider": "deepseek",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 128000,
+			"reasoning": true,
+			"known_source": "catalog",
+			"status": "no-credit-402"
+		}
+	]
+}

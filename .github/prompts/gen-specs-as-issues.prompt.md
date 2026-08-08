@@ -1,53 +1,28 @@
 ---
-
 name: gen-specs-as-issues
-
 title: 'Product Manager Assistant: Feature Identification and Specification'
-
 description: 'This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - frontend
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /gen-specs-as-issues
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

@@ -1,97 +1,50 @@
 ---
-
 name: prompts-fix
-
 title: prompts Sync and Deduplication
-
 description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific validation.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
   - brainstorming
-
   - plans-and-specs
-
   - dispatching-parallel-agents
-
   - systematic-debugging
-
   - simplify
-
   - acpx-executor
-
   - hermes-agent
-
   - copilot-cli-quickstart
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - prompt:context-map.prompt.md
-
-  - prompt:update-implementation-plan.prompt.md
-
-  - prompt:skills-fix.prompt.md
-
-  - skill:brainstorming
-
-  - skill:plans-and-specs
-
-  - skill:dispatching-parallel-agents
-
-  - skill:subagent-driven-development
-
-  - skill:systematic-debugging
-
-  - skill:simplify
-
-  - skill:acpx-executor
-
-  - skill:hermes-agent
-
-  - skill:copilot-cli-quickstart
-
+  - "prompt:context-map.prompt.md"
+  - "prompt:update-implementation-plan.prompt.md"
+  - "prompt:skills-fix.prompt.md"
+  - "skill:brainstorming"
+  - "skill:plans-and-specs"
+  - "skill:dispatching-parallel-agents"
+  - "skill:subagent-driven-development"
+  - "skill:systematic-debugging"
+  - "skill:simplify"
+  - "skill:acpx-executor"
+  - "skill:hermes-agent"
+  - "skill:copilot-cli-quickstart"
 tags:
-
   - ai-assistant
-
   - fix
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /prompts-fix
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

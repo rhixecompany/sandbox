@@ -28,20 +28,20 @@ skills:
 formatter: default
 plan: plans/git-multi-repo-orchestration.md
 dependencies:
-  - skill:git-multi-repo-orchestration
-  - skill:gh-cli
-  - skill:git-commit
-  - skill:git-helper
-  - skill:git-submodule-workflow
-  - skill:github-pr-workflow
-  - skill:github-repo-management
-  - skill:github-code-review
-  - skill:finishing-a-development-branch
-  - skill:git-history-preserving-migration
-  - skill:monorepo-pr-workflow
-  - skill:workspace-audit
-  - skill:repo-management
-  - tool:mcp-github
+  - "skill:git-multi-repo-orchestration"
+  - "skill:gh-cli"
+  - "skill:git-commit"
+  - "skill:git-helper"
+  - "skill:git-submodule-workflow"
+  - "skill:github-pr-workflow"
+  - "skill:github-repo-management"
+  - "skill:github-code-review"
+  - "skill:finishing-a-development-branch"
+  - "skill:git-history-preserving-migration"
+  - "skill:monorepo-pr-workflow"
+  - "skill:workspace-audit"
+  - "skill:repo-management"
+  - "tool:mcp-github"
 tags:
   - git
   - github

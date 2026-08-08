@@ -15,10 +15,10 @@ tags:
 trigger: /sync-hermes-opencode
 formatter: default
 dependencies:
-  - skill:multi-agent-sync
-  - skill:hermes-profiles
-  - skill:opencode
-  - skill:verification-before-completion
+  - "skill:multi-agent-sync"
+  - "skill:hermes-profiles"
+  - "skill:opencode"
+  - "skill:verification-before-completion"
 toolsets:
   - file
   - terminal
@@ -28,7 +28,7 @@ skills:
   - multi-agent-sync
   - hermes-profiles
   - opencode
-plan: None
+plan: 'None'
 ---
 
 ## Goal

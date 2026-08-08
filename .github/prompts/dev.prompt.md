@@ -1,57 +1,30 @@
 ---
-
 name: dev
-
 title: Task1
-
 description: The purpose of the prompt is to get my codebase optimized and refactored.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - configuration
-
   - debugging
-
   - performance
-
   - playwright
-
   - prompts
-
   - refactoring
-
   - testing
-
   - typescript
-
 trigger: /dev
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

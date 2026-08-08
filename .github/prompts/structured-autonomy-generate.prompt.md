@@ -1,51 +1,27 @@
 ---
-
 name: structured-autonomy-generate
-
 title: Sa Generate
-
 description: Structured Autonomy Implementation Generator Prompt.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - generator
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /structured-autonomy-generate
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

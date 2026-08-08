@@ -1,55 +1,29 @@
 ---
-
 name: optimize-agentsMd
-
 title: Optimize Agentsmd
-
 description: Use when needing to optimize-agentsmd.prompt.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - agents
-
   - ml
-
   - performance
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /optimize-agentsMd
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
@@ -197,4 +171,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-

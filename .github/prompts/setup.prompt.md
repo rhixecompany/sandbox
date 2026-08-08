@@ -1,63 +1,33 @@
 ---
-
 name: setup
-
 title: 'ComicWise — AI Agent Setup & Onboarding'
-
 description: 'Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code patterns, and conventions.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
   - web
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - agents
-
   - architecture
-
   - backend
-
   - ml
-
   - nextjs
-
   - prompts
-
   - typescript
-
   - workflow
-
 trigger: /setup
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

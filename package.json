@@ -7,7 +7,7 @@
 		"lint:fix": "eslint . --fix",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"markdownlint": "markdownlint-cli2 --config .markdownlint-cli2.jsonc \"**/*.md\"",
+		"markdownlint": "markdownlint-cli2 --config .markdownlint.jsonc \"**/*.md\"",
 		"spellcheck": "cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress",
 		"typecheck": "tsc --noEmit",
 		"check": "npm run lint && npm run format:check && npm run markdownlint && npm run spellcheck"

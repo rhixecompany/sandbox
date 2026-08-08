@@ -1,49 +1,26 @@
 ---
-
 name: next-intl-add-language
-
 title: Next Intl Add Language
-
 description: Add new language to a Next.js + next-intl application.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ml
-
   - nextjs
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /next-intl-add-language
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

@@ -1,53 +1,28 @@
 ---
-
 name: update-specification
-
 title: Update Specification
-
 description: 'Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - frontend
-
   - maintenance
-
   - ml
-
   - performance
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /update-specification
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

@@ -1,57 +1,30 @@
 ---
-
 name: task-implementation
-
 title: Task Implementation
-
 description: 'Comprehensive prompt for implementing tasks with clear phases, goals, and verification.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - ai-assistant
-
   - ml
-
   - prompts
-
   - skills
-
   - specification
-
   - workflow
-
 trigger: /task-implementation
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

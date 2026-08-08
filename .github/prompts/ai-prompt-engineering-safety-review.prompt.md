@@ -1,65 +1,34 @@
 ---
-
 name: ai-prompt-engineering-safety-review
-
 title: AI Prompt Engineering Safety Review
-
 description: 'Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - prompt-engineering
-
   - systematic-debugging
-
   - context-map
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:prompt-engineering
-
-  - skill:systematic-debugging
-
-  - skill:context-map
-
+  - "skill:prompt-engineering"
+  - "skill:systematic-debugging"
+  - "skill:context-map"
 tags:
-
   - audit
-
   - frontend
-
   - ml
-
   - prompts
-
   - security
-
   - typescript
-
 trigger: /ai-prompt-engineering-safety-review
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

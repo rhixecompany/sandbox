@@ -1,53 +1,28 @@
 ---
-
 name: java-springboot
-
 title: Spring Boot Best Practices
-
 description: Get best practices for developing applications with Spring Boot.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - data
-
   - frontend
-
   - java
-
   - ml
-
   - prompts
-
   - specification
-
   - spring
-
 trigger: /java-springboot
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

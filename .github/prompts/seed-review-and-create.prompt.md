@@ -1,55 +1,29 @@
 ---
-
 name: seed-review-and-create
-
 title: 'Seed System Review & Enhancement'
-
 description: 'Review seed system files, create new seeders, fix issues, and implement improvements.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - audit
-
   - documentation
-
   - fix
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /seed-review-and-create
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

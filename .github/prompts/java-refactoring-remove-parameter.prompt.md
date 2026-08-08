@@ -1,51 +1,27 @@
 ---
-
 name: java-refactoring-remove-parameter
-
 title: Refactoring Java Methods With Remove Parameter
-
 description: Refactoring using Remove Parameter in Java Language.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - backend
-
   - java
-
   - prompts
-
   - refactoring
-
   - typescript
-
 trigger: /java-refactoring-remove-parameter
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

@@ -1,53 +1,28 @@
 ---
-
 name: structured-autonomy-implement
-
 title: Sa Implement
-
 description: Structured Autonomy Implementation Prompt.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /structured-autonomy-implement
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

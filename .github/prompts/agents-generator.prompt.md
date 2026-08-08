@@ -12,7 +12,7 @@ toolsets:
 scripts: []
 skills: []
 formatter: default
-plan: None
+plan: 'None'
 tags:
   - agents
   - architecture

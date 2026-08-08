@@ -1,65 +1,34 @@
 ---
-
 name: playwright-generate-test
-
 title: Playwright Generate Test
-
 description: 'Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Alexa
-
 toolsets:
-
   - file
-
   - terminal
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - generator
-
   - ml
-
   - playwright
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /playwright-generate-test
-
-compatibility: None
-
+compatibility: 'None'
 created: 2026-05-25 10:50:21.952313+00:00
-
-mcp_generator: None
-
+mcp_generator: 'None'
 skill_stub: 'True'
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

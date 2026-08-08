@@ -27,24 +27,24 @@ skills:
   - writing-plans
   - subagent-driven-development
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - prompt:repo-research-pipeline
-  - skill:finishing-a-development-branch
-  - skill:gh-cli
-  - skill:git-commit
-  - skill:git-helper
-  - skill:git-submodule-workflow
-  - skill:github-actions-efficiency
-  - skill:github-repo-management
-  - skill:monorepo-pr-workflow
-  - skill:vscode-workspace-configurator
-  - skill:workspace-audit
-  - skill:writing-plans
-  - tool:mcp-tavily
-  - tool:mcp-filesystem
-  - tool:mcp-sequential-thinking
-  - skill:subagent-driven-development
+  - "prompt:repo-research-pipeline"
+  - "skill:finishing-a-development-branch"
+  - "skill:gh-cli"
+  - "skill:git-commit"
+  - "skill:git-helper"
+  - "skill:git-submodule-workflow"
+  - "skill:github-actions-efficiency"
+  - "skill:github-repo-management"
+  - "skill:monorepo-pr-workflow"
+  - "skill:vscode-workspace-configurator"
+  - "skill:workspace-audit"
+  - "skill:writing-plans"
+  - "tool:mcp-tavily"
+  - "tool:mcp-filesystem"
+  - "tool:mcp-sequential-thinking"
+  - "skill:subagent-driven-development"
 tags:
   - audit
   - frontend

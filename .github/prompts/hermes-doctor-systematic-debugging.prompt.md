@@ -15,12 +15,12 @@ skills:
   - hermes-mcp
   - verification-before-completion
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - skill:systematic-debugging
-  - skill:hermes-agent
-  - skill:hermes-mcp
-  - skill:verification-before-completion
+  - "skill:systematic-debugging"
+  - "skill:hermes-agent"
+  - "skill:hermes-mcp"
+  - "skill:verification-before-completion"
 tags:
   - debugging
   - diagnostics
@@ -35,6 +35,7 @@ trigger: /hermes-doctor-systematic-debugging
 metadata:
   hermes: {}
 ---
+
 # Hermes Doctor and Systematic Remediation
 
 ## Goal

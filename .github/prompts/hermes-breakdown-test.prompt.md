@@ -1,61 +1,32 @@
 ---
-
 name: hermes-breakdown-test
-
 title: Hermes Breakdown Test
-
 description: 'Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ai-assistant
-
   - debugging
-
   - frontend
-
   - generator
-
   - ml
-
   - planning
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /hermes-breakdown-test
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

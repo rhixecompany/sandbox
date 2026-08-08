@@ -1,5 +1,53 @@
 {
 	"$schema": "https://opencode.ai/config.json",
 	"model": "opencode/deepseek-v4-flash-free",
-	"small_model": "opencode/deepseek-v4-flash-free"
+	"small_model": "opencode/deepseek-v4-flash-free",
+	"mcp": {
+		"MCP_DOCKER": {
+			"type": "local",
+			"command": ["docker", "mcp", "gateway", "run", "--profile", "adminbot"],
+			"enabled": true
+		},
+		"AST_GREP": {
+			"type": "local",
+			"command": ["npx", "-y", "@notprolands/ast-grep-mcp"],
+			"enabled": true
+		},
+		"CODE_SANDBOX": {
+			"type": "local",
+			"command": ["npx", "-y", "node-code-sandbox-mcp"],
+			"enabled": true
+		},
+		"FILESYSTEM": {
+			"type": "local",
+			"command": [
+				"npx",
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa/AppData/Local/hermes"
+			],
+			"enabled": true
+		},
+		"GITHUB": {
+			"type": "local",
+			"command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+			"enabled": true
+		},
+		"MEMORY": {
+			"type": "local",
+			"command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+			"enabled": true
+		},
+		"PLAYWRIGHT": {
+			"type": "local",
+			"command": ["npx", "-y", "@playwright/mcp@0.0.78"],
+			"enabled": true
+		},
+		"SEQUENTIAL_THINKING": {
+			"type": "local",
+			"command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+			"enabled": true
+		}
+	}
 }

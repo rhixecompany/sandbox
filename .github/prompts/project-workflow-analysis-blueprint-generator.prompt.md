@@ -1,69 +1,36 @@
 ---
-
 name: project-workflow-analysis-blueprint-generator
-
 title: Project Workflow Documentation Generator
-
 description: 'Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - data
-
   - documentation
-
   - generator
-
   - java
-
   - ml
-
   - prompts
-
   - react
-
   - spring
-
   - testing
-
   - typescript
-
   - workflow
-
   - csharp
-
   - dotnet
-
 trigger: /project-workflow-analysis-blueprint-generator
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

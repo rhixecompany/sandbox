@@ -1,0 +1,16 @@
+{
+	"provider": "nous",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "(no free models - 403)",
+			"provider": "nous",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 0,
+			"reasoning": false,
+			"known_source": "live 403",
+			"status": "blocked-403"
+		}
+	]
+}

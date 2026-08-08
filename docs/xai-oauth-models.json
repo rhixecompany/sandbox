@@ -1,0 +1,16 @@
+{
+	"provider": "xai-oauth",
+	"fetched_at": "2026-08-07",
+	"models": [
+		{
+			"id": "grok-4",
+			"provider": "xai",
+			"prompt_cost": 0,
+			"completion_cost": 0,
+			"context_length": 256000,
+			"reasoning": true,
+			"known_source": "catalog",
+			"status": "no-credit-402"
+		}
+	]
+}

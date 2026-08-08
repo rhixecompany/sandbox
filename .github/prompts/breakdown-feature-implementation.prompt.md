@@ -1,53 +1,28 @@
 ---
-
 name: breakdown-feature-implementation
-
 title: Feature Implementation Plan Prompt
-
 description: 'Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /breakdown-feature-implementation
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

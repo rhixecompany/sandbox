@@ -1,51 +1,27 @@
 ---
-
 name: shuffle-json-data
-
 title: Shuffle JSON Data
-
 description: Shuffle repetitive JSON objects safely by validating schema consistency before randomising entries.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - data
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /shuffle-json-data
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

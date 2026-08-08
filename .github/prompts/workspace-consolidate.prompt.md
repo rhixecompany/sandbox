@@ -1,119 +1,61 @@
 ---
-
 name: workspace-consolidate
-
 title: 'Workspace Consolidation — Scripts, Patches, Docs'
-
 description: 'Consolidate scripts, patches, and documentation across the workspace with bash migration and audit workflows.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - introspection-only-general
-
   - no-git-delete
-
   - no-net-fetch
-
   - skills-tools-preflight-check
-
   - context-map
-
   - brainstorming
-
   - plans-and-specs
-
   - dispatching-parallel-agents
-
   - subagent-driven-development
-
   - systematic-debugging
-
   - simplify
-
   - acpx-executor
-
   - git-patch-management
-
   - project-consolidation
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - prompt:context-map
-
-  - prompt:update-implementation-plan
-
-  - skill:brainstorming
-
-  - skill:plans-and-specs
-
-  - skill:dispatching-parallel-agents
-
-  - skill:subagent-driven-development
-
-  - skill:systematic-debugging
-
-  - skill:simplify
-
-  - skill:acpx-executor
-
-  - skill:git-patch-management
-
-  - skill:project-consolidation
-
-  - tool:terminal
-
-  - tool:search_files
-
-  - skill:introspection-only-general
-
-  - skill:no-git-delete
-
-  - skill:no-net-fetch
-
-  - skill:skills-tools-preflight-check
-
-  - skill:context-map
-
+  - "prompt:context-map"
+  - "prompt:update-implementation-plan"
+  - "skill:brainstorming"
+  - "skill:plans-and-specs"
+  - "skill:dispatching-parallel-agents"
+  - "skill:subagent-driven-development"
+  - "skill:systematic-debugging"
+  - "skill:simplify"
+  - "skill:acpx-executor"
+  - "skill:git-patch-management"
+  - "skill:project-consolidation"
+  - "tool:terminal"
+  - "tool:search_files"
+  - "skill:introspection-only-general"
+  - "skill:no-git-delete"
+  - "skill:no-net-fetch"
+  - "skill:skills-tools-preflight-check"
+  - "skill:context-map"
 tags:
-
   - agents
-
   - documentation
-
   - frontend
-
   - ml
-
   - prompts
-
   - skills
-
   - typescript
-
 trigger: /workspace-consolidate
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

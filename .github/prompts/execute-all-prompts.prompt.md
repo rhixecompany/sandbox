@@ -19,16 +19,16 @@ tags:
 trigger: /execute-all-prompts
 formatter: default
 dependencies:
-  - skill:using-superpowers
-  - skill:user-communication-preferences
-  - skill:verification-before-completion
-  - skill:subagent-driven-development
+  - "skill:using-superpowers"
+  - "skill:user-communication-preferences"
+  - "skill:verification-before-completion"
+  - "skill:subagent-driven-development"
 metadata:
   hermes: {}
-toolsets: None
+toolsets: 'None'
 scripts: []
 skills: []
-plan: None
+plan: 'None'
 ---
 
 ## Goal

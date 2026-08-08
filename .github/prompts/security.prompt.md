@@ -1,61 +1,32 @@
 ---
-
 name: security
-
 title: Security Review
-
 description: 'Comprehensive prompt for security review, vulnerability assessment, and secure coding practices.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - api
-
   - architecture
-
   - audit
-
   - data
-
   - documentation
-
   - frontend
-
   - prompts
-
   - security
-
   - skills
-
   - typescript
-
 trigger: /security
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

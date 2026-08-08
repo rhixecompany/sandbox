@@ -1,51 +1,27 @@
 ---
-
 name: mkdocs-translations
-
 title: MkDocs AI Translator
-
 description: Generate a language translation for a mkdocs documentation stack.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - documentation
-
   - generator
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /mkdocs-translations
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

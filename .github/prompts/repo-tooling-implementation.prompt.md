@@ -1,118 +1,160 @@
 ---
 name: repo-tooling-implementation
-title: "Repo Tooling Implementation (Prompt-Managed)"
-description: 'Execute the repo-tooling master plan: per-repo PLAN.md/SPEC.md via prompt-management on repo-*.prompt.md, then full python-quality/tooling-config/tooling-lint implementation across ./ and subrepos, with verification gates. Runs AFTER scripts consolidation (Stage A) and artifact creation (Stage B).'
+title: Repo Tooling Implementation
+description: 'Fully implement the repo-tooling master plan with verification, fixes, and artifact delivery across the SandBox workspace.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-trigger: /repo-tooling-implementation
 tags:
-  - repo
   - tooling
-  - implementation
-  - planning
-  - prompt-management
+  - repo
+  - verification
+  - remediation
 toolsets:
-  - browser
-  - code_execution
-  - file
-  - mcp
   - terminal
-  - web
-scripts:
-  - ~/AppData/Local/hermes/scripts/repo-plan-spec.py
-  - ~/AppData/Local/hermes/scripts/repo-planning-quick-commands.sh
-  - ~/AppData/Local/hermes/scripts/tooling_full_check.py
-skills:
-  - executing-plans
-  - executing-prompt-workflows
-  - prompt-management
-  - repo-planning
-  - tooling-implementation
-  - python-quality
-  - tooling-config
-  - tooling-lint
+  - file
+  - skills
+  - todo
+trigger: /repo-tooling-implementation
+skills: []
+dependencies: []
+metadata:
+  hermes: {}
 ---
+## Goal
 
-# Repo Tooling Implementation (Prompt-Managed)
+Execute the `repo-tooling-implementation` workflow. Full details: `templates/repo-tooling-implementation/README.md`.
 
-## Purpose
+## Template Reference
 
-Fully implement the repo-tooling master plan (`.hermes/plans/2026-08-01_repo-tooling.md`):
+Detailed template in `templates/repo-tooling-implementation/`:
+- `README.md`
 
-1. Run prompt-management over the three `repo-*.prompt.md` prompts to produce per-repo plans and specs.
-2. Implement the full tooling stack (`python-quality`, `tooling-config`, `tooling-lint`) across `./` and all `projects/` subrepos.
-3. Debug, fix, and validate every bug, issue, error, and warning encountered.
-4. Close with a verification report.
+## Execution
 
-Strict ordering: planning artifacts BEFORE tooling fixes; verification AFTER fixes. Only then mark the master plan complete.
+See `templates/repo-tooling-implementation/README.md` for phases/steps/workflow.
 
-## Phase 1 — Per-Repo Plans + Specs
+## Steps
 
-1. Load `repo-planning` skill and read `.github/prompts/repo-management.prompt.md`, `repo-research-pipeline.prompt.md`, `repo-story-time.prompt.md`.
-2. Generate PLAN.md + SPEC.md for the root and every `projects/*/` subrepo:
-   - `python ~/AppData/Local/hermes/scripts/repo-plan-spec.py --root` (dry-run) → `python ~/AppData/Local/hermes/scripts/repo-plan-spec.py --root --apply`
-   - Never overwrite an existing PLAN.md/SPEC.md (generator already refuses).
-3. Verify: `python .github/scripts/tooling_full_check.py --plans` → expect **0 failures** (all repos have valid PLAN.md + SPEC.md frontmatter).
+1. Read `templates/repo-tooling-implementation/README.md`.
+2. Execute the workflow.
+3. Verify outputs.
 
-**Gate 1: `--plans` reports zero plan/spec failures before proceeding.**
+## Rules
 
-## Phase 2 — Tooling Implementation
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
-1. Load `tooling-implementation` + `python-quality` + `tooling-config` + `tooling-lint` skills.
-2. For each repo (root + subrepos), apply the applicable stack:
-   - `python-quality`: ruff + pyright configs (`.ruff.toml`, `pyrightconfig.json`)
-   - `tooling-config`: `.gitignore`, `.editorconfig`, `.pre-commit-config.yaml`, `cliff.toml`
-   - `tooling-lint`: `eslint.config.mjs`, `.prettierrc.json`, `cspell.json`, `.markdownlintrc.json`
-3. Only create where MISSING — never overwrite customized configs.
-4. Follow the canonical configs: ruff py311/120 select E/F/I/N/W/UP/B/SIM/ARG/RUF ignore E501/N818; root excludes `projects/`, `hermes-profiles/`, generated dirs.
+## Subgoals
 
-**Gate 2: config matrix verified on disk (no missing configs for detected stack) before checking.**
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
 
-## Phase 3 — Check
 
-1. Run the canonical verifier: `python ~/AppData/Local/hermes/scripts/tooling_full_check.py` (per-repo).
-2. Also run: `ruff check .`, `ruff format --check .`, `eslint .`, `prettier --check .`, `cspell lint "**/*"`, `markdownlint-cli2 --config .markdownlintrc.json "**/*.md"`, `pre-commit validate-config`.
-3. Record findings per repo with exit-code classification (exit 2 = TOOLING FAIL = blocker; findings-only exits 0/1 = data).
+## Personas
 
-**Gate 3: zero TOOLING FAIL rows (timeout / missing tool / unexpected exit) across all repos.**
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-## Phase 4 — Fix (safe subset)
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
 
-Fix ONLY:
 
-- Config/ignore/deps bugs (missing files, invalid UTF-8, wrong filenames, missing deps)
-- Safe auto-fixes: `ruff check --fix`, `prettier --write` on code-only globs (`**/*.{js,ts,jsx,tsx,json,jsonc,css,scss,html}`)
-- Real undefined-name bugs (F821) and broken hook imports
+## Personality
 
-REPORT (do not blindly rewrite):
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
-- Remaining ruff unsafe-only fixes, pyright errors, markdownlint debt in curated prompts, cspell long-tail terms
-- For each FIX, record before/after counts.
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
 
-**Gate 4: fixes are FIX-scope only; curated debt is documented as REPORT.**
 
-## Phase 5 — Validate + Close
+## Context
 
-1. Re-run `python ~/AppData/Local/hermes/scripts/tooling_full_check.py` → **0 tooling-level failures**.
-2. Re-run `python ~/AppData/Local/hermes/scripts/tooling_full_check.py --plans` → **0 plan/spec failures**.
-3. Update the master plan: fill Lessons Learned, bump version, set `status: completed`.
-4. Write final verification report to `.github/scripts/reports/VERIFICATION_REPORT.md` with before/after counts. (Report dir stays in-repo; scripts live in `~/AppData/Local/hermes/scripts/`.)
+Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
-**Gate 5: fresh sweeps green + master plan completed + verification report written.**
 
-## Completion Criteria
+## Phases
 
-- [ ] Per-repo PLAN.md + SPEC.md exist and validate (Gate 1)
-- [ ] Tooling configs present for every applicable repo (Gate 2)
-- [ ] Verifier completes with zero tooling-level failures (Gate 3)
-- [ ] Safe fixes applied; debt classified REPORT (Gate 4)
-- [ ] Fresh sweeps green, plan `status: completed`, verification report written (Gate 5)
-- [ ] MCP servers still live after any path changes (kill python.exe respawn pattern)
+### Phase 1: Intake
+- Read the request and identify scope.
+- Locate relevant files, diffs, references.
 
-## Constraints
+### Phase 2: Execute
+- Perform work with smallest safe change set.
+- Keep steps explicit and reproducible.
 
-- `C:/Users/Alexa/Desktop/SandBox` is the root; 14 `projects/` are git submodules — do NOT commit inside them unless asked.
-- LF-only writes; `.gitattributes` `*.md eol=lf`.
-- Run verifier fresh whenever evidence is questioned (no stale reports).
-- Report blockers honestly; never fabricate results.
+### Phase 3: Verify
+- Check result against goal, rules, inputs.
+- Confirm output is usable and complete.
+
+### Phase 4: Hand Off
+- Return final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+|---|------|-----------|
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+
+## Skills Required
+
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+|-------|---------|
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+

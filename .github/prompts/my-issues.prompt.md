@@ -1,49 +1,26 @@
 ---
-
 name: my-issues
-
 title: My Issues
-
 description: List my issues in the current repository.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /my-issues
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

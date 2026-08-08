@@ -1,65 +1,34 @@
 ---
-
 name: playwright-explore-website
-
 title: Playwright Explore Website
-
 description: 'Explore a website with Playwright MCP, document core flows, and propose tests from the findings.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Alexa
-
 toolsets:
-
   - file
-
   - terminal
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - mcp
-
   - ml
-
   - playwright
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /playwright-explore-website
-
-compatibility: None
-
+compatibility: 'None'
 created: 2026-05-25 10:50:21.952313+00:00
-
-mcp_generator: None
-
+mcp_generator: 'None'
 skill_stub: 'True'
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

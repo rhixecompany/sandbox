@@ -1,63 +1,33 @@
 ---
-
 name: execute-plan
-
 title: Execute Plan
-
 description: Load and execute any plan document from .hermes/plans/ by specifying its filename.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - subagent-driven-development
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:subagent-driven-development
-
+  - "skill:subagent-driven-development"
 tags:
-
   - agents
-
   - ai-assistant
-
   - execution
-
   - frontend
-
   - prompts
-
   - specification
-
   - typescript
-
   - plan
-
   - workflow
-
 trigger: /execute-plan
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

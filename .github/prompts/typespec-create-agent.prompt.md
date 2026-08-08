@@ -1,57 +1,30 @@
 ---
-
 name: typespec-create-agent
-
 title: Create TypeSpec Declarative Agent
-
 description: 'Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - agents
-
   - ai-assistant
-
   - generator
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /typespec-create-agent
-
 mode: agent
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

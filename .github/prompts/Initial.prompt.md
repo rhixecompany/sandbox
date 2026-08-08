@@ -15,7 +15,7 @@ toolsets:
 scripts: []
 skills: []
 formatter: default
-plan: None
+plan: 'None'
 dependencies: []
 tags:
   - docker

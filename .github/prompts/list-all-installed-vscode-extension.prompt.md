@@ -13,7 +13,7 @@ toolsets:
 scripts: []
 skills: []
 formatter: default
-plan: None
+plan: 'None'
 tags:
   - prompts
   - list-all-installed-vscode-extension

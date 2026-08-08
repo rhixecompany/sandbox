@@ -19,20 +19,20 @@ skills:
   - web-research-pipeline
   - subagent-driven-development
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - prompt:web-research-pipeline
-  - skill:domain-intel
-  - skill:gh-cli
-  - tool:mcp-tavily
-  - tool:mcp-fetch
-  - tool:mcp-filesystem
-  - tool:mcp-github
-  - tool:mcp-memory
-  - tool:mcp-playwright
-  - tool:mcp-sequential-thinking
-  - skill:subagent-driven-development
-  - skill:web-research-pipeline
+  - "prompt:web-research-pipeline"
+  - "skill:domain-intel"
+  - "skill:gh-cli"
+  - "tool:mcp-tavily"
+  - "tool:mcp-fetch"
+  - "tool:mcp-filesystem"
+  - "tool:mcp-github"
+  - "tool:mcp-memory"
+  - "tool:mcp-playwright"
+  - "tool:mcp-sequential-thinking"
+  - "skill:subagent-driven-development"
+  - "skill:web-research-pipeline"
 tags:
   - frontend
   - generator

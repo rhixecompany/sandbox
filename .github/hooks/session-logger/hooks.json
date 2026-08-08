@@ -1,11 +1,11 @@
 {
-  "name": "session-logger",
-  "version": "1.0.0",
-  "description": "Logs Hermes session lifecycle and prompt events for replay and audit.",
-  "events": ["on_session_start", "on_session_end", "pre_llm_call"],
-  "entrypoint": "hook.sh",
-  "config": {
-    "log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/sessions",
-    "retention_days": 30
-  }
+	"name": "session-logger",
+	"version": "1.0.0",
+	"description": "Logs Hermes session lifecycle and prompt events for replay and audit.",
+	"events": ["on_session_start", "on_session_end", "pre_llm_call"],
+	"entrypoint": "hook.sh",
+	"config": {
+		"log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/sessions",
+		"retention_days": 30
+	}
 }

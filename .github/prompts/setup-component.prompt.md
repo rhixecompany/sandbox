@@ -1,59 +1,31 @@
 ---
-
 name: setup-component
-
 title: Setup Component
-
 description: Generate a new React/Next.js component.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
   - browser
-
   - todo
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - generator
-
   - ml
-
   - nextjs
-
   - prompts
-
   - react
-
   - setup
-
   - specification
-
   - typescript
-
 trigger: /setup-component
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

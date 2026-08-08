@@ -14,11 +14,11 @@ scripts: []
 skills:
   - domain-intel
 formatter: default
-plan: None
+plan: 'None'
 dependencies:
-  - tool:mcp-tavily
-  - tool:mcp-fetch
-  - skill:domain-intel
+  - "tool:mcp-tavily"
+  - "tool:mcp-fetch"
+  - "skill:domain-intel"
 tags:
   - backend
   - markdown

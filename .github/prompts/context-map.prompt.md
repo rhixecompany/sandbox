@@ -1,61 +1,32 @@
 ---
-
 name: context-map
-
 title: Context Map
-
 description: Build a dependency and reference map before making changes so implementation starts from the right files.
-
 version: 2.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills:
-
   - codemap
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies:
-
-  - skill:codemap
-
+  - "skill:codemap"
 tags:
-
   - audit
-
   - frontend
-
   - prompts
-
   - specification
-
   - testing
-
   - typescript
-
 trigger: /context-map
-
 metadata:
-
-  hermes: None
-
+  hermes: "None"
   related_skills:
-
     - codemap
-
 ---
 
 ## Goal

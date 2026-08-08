@@ -1,51 +1,27 @@
 ---
-
 name: csharp-nunit
-
 title: NUnit Best Practices
-
 description: 'Get best practices for NUnit unit testing, including data-driven tests.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - csharp
-
   - data
-
   - dotnet
-
   - prompts
-
   - testing
-
   - typescript
-
 trigger: /csharp-nunit
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

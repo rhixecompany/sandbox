@@ -1,57 +1,30 @@
 ---
-
 name: create-github-action-workflow-specification
-
 title: Create GitHub Actions Workflow Specification
-
 description: 'Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - ci-cd
-
   - generator
-
   - git
-
   - ml
-
   - performance
-
   - prompts
-
   - specification
-
   - typescript
-
   - workflow
-
 trigger: /create-github-action-workflow-specification
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

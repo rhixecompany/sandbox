@@ -1,59 +1,31 @@
 ---
-
 name: comicwise-development
-
 title: ComicWise Development Workflow
-
 description: Reusable prompt for ComicWise development sessions.
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - architecture
-
   - audit
-
   - nextjs
-
   - prompts
-
   - testing
-
   - typescript
-
   - workflow
-
 trigger: /comicwise-development
-
 applyTo: '**/*'
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

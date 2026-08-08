@@ -1,51 +1,27 @@
 ---
-
 name: power-bi-performance-troubleshooting
-
 title: Power BI Performance Troubleshooting Guide
-
 description: 'Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - terminal
-
   - file
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - frontend
-
   - performance
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /power-bi-performance-troubleshooting
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

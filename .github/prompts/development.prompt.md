@@ -1,57 +1,30 @@
 ---
-
 name: development
-
 title: Development
-
 description: '🚀 ComicWise - Complete Project Setup & Scaffolding Guide.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
   - todo
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 dependencies: []
-
 tags:
-
   - database
-
   - frontend
-
   - javascript
-
   - ml
-
   - nextjs
-
   - prompts
-
   - specification
-
   - sql
-
 trigger: /development
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

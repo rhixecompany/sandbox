@@ -1,53 +1,28 @@
 ---
-
 name: centos-linux-triage
-
 title: CentOS Linux Triage
-
 description: 'Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - web
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - debugging
-
   - fix
-
   - frontend
-
   - linux
-
   - ml
-
   - prompts
-
   - typescript
-
 trigger: /centos-linux-triage
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal

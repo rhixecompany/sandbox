@@ -1,51 +1,27 @@
 ---
-
 name: breakdown-feature-prd
-
 title: Feature PRD Prompt
-
 description: 'Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic.'
-
 version: 1.0.0
-
 license: MIT
-
 author: Hermes Agent
-
 toolsets:
-
   - file
-
   - terminal
-
 scripts: []
-
 skills: []
-
 formatter: default
-
-plan: None
-
+plan: 'None'
 tags:
-
   - frontend
-
   - ml
-
   - prompts
-
   - specification
-
   - typescript
-
 trigger: /breakdown-feature-prd
-
 dependencies: []
-
 metadata:
-
   hermes: {}
-
 ---
 
 ## Goal
