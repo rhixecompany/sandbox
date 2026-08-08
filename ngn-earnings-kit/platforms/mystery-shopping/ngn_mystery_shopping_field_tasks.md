@@ -26,11 +26,11 @@ Real paid *in-person field work*, operating in Nigeria **today**:
 | Platform | Official country list (source) | NG? | Note |
 |---|---|---|---|
 | **Roamler** | "UK, Netherlands, Germany, France, Belgium, Spain, Italy, Sweden, Poland, Turkey…" (roamler.com/using-roamler-across-europe; Wikipedia "Areas served: Europe") | ❌ | No NG operation on the official 2026 list. Third-party "Roamler Nigeria" promo content from ~2019–2021 was pilot/short-lived; treat as **defunct for NG**. Pay benchmark: €2–6/task (EU). |
-| **BeMyEye** | Europe-centric; dev = "BEMYEYE ITALY SRL" (Play Store), langs EU-only (App Store) | ❌ | Not in NG; missions are geo-listed in EU markets like. Pay benchmark €1.5–8/task (EU) |
+| **BeMyEye** | Europe-centric; dev = "BEMYEYE ITALY SRL" (Play Store), langs EU-only (App Store) | ❌ | Not in NG; missions are geo-listed in EU markets only. Pay benchmark €1.5–8/task (EU) |
 | **Field Agent** | "United States, Canada, Mexico, Ecuador, U.K., Spain, South Africa, Australia" (app.fieldagent.net "Where to Find Us"; Wikipedia) | ❌ | Nigeria NOT served. Africa presence = South Africa only: SA missions R160–R500 (~₦14k–44k at ~₦88/R) e.g. stock & price audits (Field Agent SA LinkedIn, 2026). One FB post claimed "Field Agent lets Nigerian students earn" — treat as affiliate spam, matches no official NG coverage |
 | **BeMyEye / iSecretShop etc.** | US-centric (iSecretShop App Store) | ❌ | US/CA-only portals |
 
-**Global mystery platforms that DO recruit in Nigeria (§4):** App4, Mintel, Bare International (larger accounts publish globally; NG reach varies — verify per project address ugliness).
+**Global mystery platforms that DO recruit in Nigeria (§4):** Appen, Mintel, BARE International (larger accounts publish globally; NG reach varies — verify per project)
 
 ---
 
