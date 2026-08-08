@@ -21,13 +21,18 @@ if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
 from lib import (
+    git_snapshot,
     json_get,
+    load_model_config,
     log_debug,
     log_error,
     log_info,
     normalize_event,
     now_iso,
+    platform_snapshot,
     read_payload,
+    resolve_profile,
+    resolve_user,
     skip_context,
     write_jsonl,
 )
@@ -73,34 +78,68 @@ async def _memory_upsert_session(session_id: str, payload: dict) -> None:
         log_debug(f"session-logger: mcp memory mirror skipped: {exc}")
 
 
+def _resolve_start_ctx(payload: dict) -> dict:
+    """Merge wire payload + resolved environment/identity into one context dict.
+
+    The runtime's on_session_start stdin is:
+        {"hook_event_name":"on_session_start","session_id":"...","cwd":"...",
+         "extra":{"model":"...","platform":"..."}}
+    User/profile/model are never top-level fields — resolve them locally.
+    """
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
+    model_cfg = load_model_config()
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or model_cfg["model"]
+    platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
+    snapshot = platform_snapshot()
+    return {
+        "session_id": json_get(payload, "session_id", "unknown"),
+        "profile": json_get(payload, "profile", "") or resolve_profile(),
+        "user": json_get(payload, "user", "") or resolve_user(),
+        "model": model,
+        "provider": json_get(payload, "extra.provider") or json_get(payload, "provider") or model_cfg["provider"],
+        "platform": platform,
+        "working_dir": working_dir,
+        "hostname": snapshot["hostname"],
+        "os": snapshot["os"],
+        "python": snapshot["python"],
+        "command": json_get(payload, "command", ""),
+    }
+
+
 async def handle_on_session_start(payload: dict) -> None:
-    session_id = json_get(payload, "session_id", "unknown")
+    ctx = _resolve_start_ctx(payload)
     timestamp = json_get(payload, "timestamp", now_iso())
-    profile = json_get(payload, "profile", "default")
-    user = json_get(payload, "user", "unknown")
-    model = json_get(payload, "model", "unknown")
-    working_dir = json_get(payload, "working_dir", "")
-    command = json_get(payload, "command", "")
 
     record: dict = {
         "event": "session_start",
-        "session_id": session_id,
+        "session_id": ctx["session_id"],
         "timestamp": timestamp,
-        "profile": profile,
-        "user": user,
-        "model": model,
-        "working_dir": working_dir,
-        "command": command,
+        "profile": ctx["profile"],
+        "user": ctx["user"],
+        "model": ctx["model"],
+        "provider": ctx["provider"],
+        "platform": ctx["platform"],
+        "working_dir": ctx["working_dir"],
+        "hostname": ctx["hostname"],
+        "os": ctx["os"],
+        "python": ctx["python"],
+        "command": ctx["command"],
     }
 
-    log_file = _LOG_DIR / f"{session_id}.jsonl"
+    if ctx["working_dir"]:
+        try:
+            record.update(await git_snapshot(ctx["working_dir"]))
+        except Exception as exc:
+            log_debug(f"session-logger: git snapshot skipped: {exc}")
+
+    log_file = _LOG_DIR / f"{ctx['session_id']}.jsonl"
     try:
         await write_jsonl(log_file, record)
-        await _memory_upsert_session(session_id, record)
-        log_info(f"Session start logged: {session_id}")
+        await _memory_upsert_session(ctx["session_id"], record)
+        log_info(f"Session start captured: {ctx['session_id']} ({ctx['model']}@{ctx['provider']})")
     except FileNotFoundError:
         record.setdefault("diagnostics", []).append(f"missing_log_file:{log_file}")
-        log_error(f"Session start failed for {session_id}: missing log file at {log_file}")
+        log_error(f"Session start failed for {ctx['session_id']}: missing log file at {log_file}")
 
 
 async def handle_on_session_end(payload: dict) -> None:
@@ -142,14 +181,15 @@ async def handle_on_session_end(payload: dict) -> None:
 async def handle_pre_llm_call(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
-    model = json_get(payload, "model", "unknown")
-    provider = json_get(payload, "provider", "unknown")
-    prompt_length = json_get(payload, "prompt_length", "0")
-    system_prompt_length = json_get(payload, "system_prompt_length", "0")
-    tools_count = json_get(payload, "tools_count", "0")
+    model_cfg = load_model_config()
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or model_cfg["model"]
+    provider = json_get(payload, "extra.provider") or json_get(payload, "provider") or model_cfg["provider"]
+    platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
+    user_message = json_get(payload, "extra.user_message") or ""
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
     event_type = json_get(payload, "event", "pre_llm_call")
-    prompt_summary = json_get(payload, "prompt_summary", "")
-    session_end = json_get(payload, "session_end", "")
+    is_first_turn = str(json_get(payload, "extra.is_first_turn", "false")).lower() in ("1", "true", "yes")
+    summary = (user_message[:220] + "…") if len(user_message) > 220 else user_message
 
     record: dict = {
         "event": event_type,
@@ -157,18 +197,18 @@ async def handle_pre_llm_call(payload: dict) -> None:
         "timestamp": timestamp,
         "model": model,
         "provider": provider,
-        "prompt_length": int(prompt_length) if str(prompt_length).isdigit() else 0,
-        "system_prompt_length": int(system_prompt_length) if str(system_prompt_length).isdigit() else 0,
-        "tools_count": int(tools_count) if str(tools_count).isdigit() else 0,
-        "prompt_summary": prompt_summary,
-        "session_end": session_end,
+        "platform": platform,
+        "working_dir": working_dir,
+        "prompt_length": len(user_message),
+        "prompt_summary": summary,
+        "is_first_turn": is_first_turn,
     }
 
     log_file = _LOG_DIR / f"{session_id}.jsonl"
     try:
         await write_jsonl(log_file, record)
         await _memory_upsert_session(session_id, record)
-        log_info(f"LLM call logged: {session_id} -> {model} ({prompt_length} chars)")
+        log_info(f"LLM call captured: {session_id} -> {model} ({len(user_message)} chars)")
     except FileNotFoundError:
         record.setdefault("diagnostics", []).append(f"missing_log_file:{log_file}")
         log_error(f"LLM call logging failed for {session_id}: missing log file at {log_file}")

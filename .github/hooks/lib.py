@@ -176,5 +176,93 @@ async def run_cmd(
     )
 
 
-async def run_git(*args: str, cwd: Path | None = None) -> tuple[int, str, str]:
-    return await run_cmd("git", *args, cwd=cwd)
+async def run_git(
+    *args: str, cwd: Path | None = None, timeout: int = 30
+) -> tuple[int, str, str]:
+    return await run_cmd("git", *args, cwd=cwd, timeout=timeout)
+
+
+# ---------------------------------------------------------------------------
+# Session-start capture helpers
+# ---------------------------------------------------------------------------
+
+def resolve_user() -> str:
+    """Best-effort OS user for the active session (env USERNAME/USER → getpass)."""
+    for key in ("USERNAME", "USER", "LOGNAME"):
+        value = os.environ.get(key)
+        if value:
+            return value
+    try:
+        import getpass
+
+        return getpass.getuser()
+    except Exception:
+        return "unknown"
+
+
+def resolve_profile() -> str:
+    """Active Hermes profile: env override → config, else 'default'."""
+    for key in ("HERMES_PROFILE", "HERMES_PROFILE_NAME", "PROFILE_NAME"):
+        value = os.environ.get(key)
+        if value:
+            return value
+    try:
+        import yaml as _yaml  # type: ignore[import-untyped]
+
+        cfg = _yaml.safe_load((HERMES_HOME / "config.yaml").read_text(encoding="utf-8"))
+        if isinstance(cfg, dict):
+            for probe in ("active_profile", "profile", "profiles"):
+                val = cfg.get(probe)
+                if isinstance(val, str) and val:
+                    return val
+    except Exception:
+        pass
+    return "default"
+
+
+def load_model_config() -> dict:
+    """Read canonical model + provider from config.yaml (fail-open)."""
+    try:
+        import yaml as _yaml  # type: ignore[import-untyped]
+
+        cfg = _yaml.safe_load((HERMES_HOME / "config.yaml").read_text(encoding="utf-8"))
+        model = cfg.get("model") or {}
+        return {
+            "model": str(model.get("default") or "unknown"),
+            "provider": str(model.get("provider") or "unknown"),
+        }
+    except Exception:
+        return {"model": "unknown", "provider": "unknown"}
+
+
+def platform_snapshot() -> dict:
+    """Static host snapshot: hostname, OS, python runtime."""
+    import platform as _platform
+
+    return {
+        "hostname": _platform.node() or "unknown",
+        "os": f"{_platform.system()} {_platform.release()}".strip() or "unknown",
+        "python": _platform.python_version() or "unknown",
+    }
+
+
+async def git_snapshot(cwd: str | None) -> dict:
+    """Best-effort git state of *cwd*: branch, head sha, dirty-file count.
+
+    Every field degrades gracefully when *cwd* is not a git repo or git is
+    unavailable — hooks must never fail because of git.
+    """
+    if not cwd:
+        return {"git_branch": "", "git_sha": "", "git_dirty": 0}
+    work = Path(cwd)
+    code, branch, _err = await run_git("branch", "--show-current", cwd=work, timeout=10)
+    code2, sha, _err2 = await run_git("rev-parse", "--short", "HEAD", cwd=work, timeout=10)
+    code3, dirty_out, _err3 = await run_git(
+        "status", "--porcelain", cwd=work, timeout=10
+    )
+    dirty = len([ln for ln in dirty_out.splitlines() if ln.strip()]) if code3 == 0 else 0
+    return {
+        "git_branch": branch.strip() if code == 0 and branch.strip() else "",
+        "git_sha": sha.strip() if code2 == 0 and sha.strip() else "",
+        "git_dirty": dirty,
+    }

@@ -219,7 +219,7 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 | --------------------   | ------ | ---------------------------------------------------  |
 | **Effective NGN/hour** | 30%    | Realistic after disqualifications, wait times        |
 | **Reliability**        | 20%    | Payout consistency, platform age, company stability  |
-| **NG Accessibility**   | 15%    | ngn sign-up, GBP payout, ngn support, no VPN needed  |
+| **NG Accessibility**   | 15%    | ngn sign-up, NGN payout, ngn support, no VPN needed  |
 | **Entry Barrier**      | 10%    | Skills, equipment, approval time, invitation-only    |
 | **Scalability**        | 10%    | Hourly cap, task availability, referral multiplier   |
 | **Tax Efficiency**     | 10%    | income tax reporting eligible, expense deductibility |
@@ -259,7 +259,7 @@ mcp__tavily__tavily_search(query="[platform] vs Outlier vs Attapoll ngn")
 
 ### 3.3 Tax & Legal Compliance Check
 
-- FIRS income tax reporting (NGN960,000) applicability
+- FIRS income tax reporting (₦800,000 tax-free threshold under Nigeria Tax Act 2025) applicability
 - FIRS tax registration threshold
 - Expense tracking requirements
 - Platform provides tax documents?
