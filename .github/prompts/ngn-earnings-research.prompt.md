@@ -88,16 +88,16 @@ metadata:
 
 ## Tasks
 
-| # | Task (Subtask parent) | Phase |
-|---|------------------------|-------|
-| 1 | Recover prior data (sub: search sessions, read files, Honcho recall) | 0 |
-| 2 | Map platform categories (sub: 11 brainstormed categories) | 1 |
-| 3 | Dispatch parallel discovery (sub: 8 leaf sub-agents) | 1 |
-| 4 | Enrich with MCP (sub: Tavily + Firecrawl per platform) | 1 |
-| 5 | Score & filter (sub: matrix + elimination rules) | 2 |
-| 6 | Deep validate top-20 (sub: sign-up, sentiment, tax) | 3 |
-| 7 | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4 |
-| 8 | Verify & handoff (sub: quality gates, session report) | 5 |
+| #   | Task (Subtask parent)                                                           | Phase   |
+| --- | ------------------------                                                        | ------- |
+| 1   | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0       |
+| 2   | Map platform categories (sub: 11 brainstormed categories)                       | 1       |
+| 3   | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1       |
+| 4   | Enrich with MCP (sub: Tavily + Firecrawl per platform)                          | 1       |
+| 5   | Score & filter (sub: matrix + elimination rules)                                | 2       |
+| 6   | Deep validate top-20 (sub: sign-up, sentiment, tax)                             | 3       |
+| 7   | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4       |
+| 8   | Verify & handoff (sub: quality gates, session report)                           | 5       |
 
 ## Context
 
@@ -215,15 +215,15 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 
 ### 2.1 Scoring Matrix (Apply to Every Platform)
 
-| Dimension            | Weight | Measurement                                         |
-| -------------------- | ------ | --------------------------------------------------- |
-| **Effective NGN/hour** | 30%    | Realistic after disqualifications, wait times       |
-| **Reliability**      | 20%    | Payout consistency, platform age, company stability |
-| **NG Accessibility** | 15%    | ngn sign-up, GBP payout, ngn support, no VPN needed   |
-| **Entry Barrier**    | 10%    | Skills, equipment, approval time, invitation-only   |
-| **Scalability**      | 10%    | Hourly cap, task availability, referral multiplier  |
-| **Tax Efficiency**   | 10%    | income tax reporting eligible, expense deductibility   |
-| **Time to First NGN**  | 5%     | Days from sign-up to withdrawable balance           |
+| Dimension              | Weight | Measurement                                          |
+| --------------------   | ------ | ---------------------------------------------------  |
+| **Effective NGN/hour** | 30%    | Realistic after disqualifications, wait times        |
+| **Reliability**        | 20%    | Payout consistency, platform age, company stability  |
+| **NG Accessibility**   | 15%    | ngn sign-up, GBP payout, ngn support, no VPN needed  |
+| **Entry Barrier**      | 10%    | Skills, equipment, approval time, invitation-only    |
+| **Scalability**        | 10%    | Hourly cap, task availability, referral multiplier   |
+| **Tax Efficiency**     | 10%    | income tax reporting eligible, expense deductibility |
+| **Time to First NGN**  | 5%     | Days from sign-up to withdrawable balance            |
 
 ### 2.2 Elimination Criteria (Auto-Filters)
 
@@ -308,21 +308,21 @@ C:\Users\Alexa\Desktop\SandBox\ngn-earnings-kit\
 
 ### 4.2 Required Output Files
 
-| File                                  | Purpose                                                             |
-| ------------------------------------- | ------------------------------------------------------------------- |
-| `platforms/*/platform_name.md`        | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots) |
-| `references/platform_master_list.csv` | All platforms with scores, filterable                               |
-| `references/scoring_matrix.xlsx`      | Weighted scores, ranked, conditional formatting                     |
-| `references/platform_links.md`        | Direct signup/referral links (affiliate where beneficial)           |
-| `references/tax_guidance_ngn_2026.md`  | FIRS rules, income tax reporting, allowable expenses, record-keeping   |
-| `references/scam_warnings.md`         | Red flags, known scams, verification checklist                      |
-| `trackers/earnings_tracker.xlsx`      | Multi-platform, auto-sum, tax-year tabs                             |
-| `trackers/tax_tracker.md`             | Running total vs NGN960,000 allowance, SA trigger alert                 |
-| `trackers/weekly_planner.md`          | Time-blocked routine, platform rotation, KPI targets                |
-| `templates/platform_evaluation.md`    | Reusable for new platforms                                          |
-| `templates/weekly_routine.md`         | Printable, checkbox-driven                                          |
-| `samples/sample_earnings_week.xlsx`   | Realistic example                                                   |
-| `RESEARCH_REPORT.md`                  | Executive summary, top 5 recommendations, 30-day action plan        |
+| File                                  | Purpose                                                              |
+| ------------------------------------- | -------------------------------------------------------------------  |
+| `platforms/*/platform_name.md`        | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots)  |
+| `references/platform_master_list.csv` | All platforms with scores, filterable                                |
+| `references/scoring_matrix.xlsx`      | Weighted scores, ranked, conditional formatting                      |
+| `references/platform_links.md`        | Direct signup/referral links (affiliate where beneficial)            |
+| `references/tax_guidance_ngn_2026.md` | FIRS rules, income tax reporting, allowable expenses, record-keeping |
+| `references/scam_warnings.md`         | Red flags, known scams, verification checklist                       |
+| `trackers/earnings_tracker.xlsx`      | Multi-platform, auto-sum, tax-year tabs                              |
+| `trackers/tax_tracker.md`             | Running total vs NGN960,000 allowance, SA trigger alert              |
+| `trackers/weekly_planner.md`          | Time-blocked routine, platform rotation, KPI targets                 |
+| `templates/platform_evaluation.md`    | Reusable for new platforms                                           |
+| `templates/weekly_routine.md`         | Printable, checkbox-driven                                           |
+| `samples/sample_earnings_week.xlsx`   | Realistic example                                                    |
+| `RESEARCH_REPORT.md`                  | Executive summary, top 5 recommendations, 30-day action plan         |
 
 ---
 
