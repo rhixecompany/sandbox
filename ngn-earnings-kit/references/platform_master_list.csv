@@ -1,5 +1,6 @@
 name,category,ngn_ph,reliability,ng_access,entry,scalability,tax,t2n_days,total,eliminated,reason,status,note
 Mercor,ai-training,24000,8,9,8,8,7,3,8.15,KEEP,,verified,Wise/bank weekly; top pick
+Upwork,freelance-gigs,45000,7,9,6,8,6,21,7.95,KEEP,,verified,NG avg $163/job; escrow; Cleva/Payoneer rails
 DataAnnotation.tech,ai-training,45000,7,6,7,6,6,10,7.5,KEEP,,likely,PayPal ~3-7d; steady
 Invisible Technologies,ai-training,35000,6,8,7,5,6,14,7.5,KEEP,,verified,PayPal/Payoneer 2x/mo
 Stellar AI,ai-training,37500,6,7,7,6,6,10,7.45,KEEP,,community,PayPal weekly; $25 base
@@ -8,23 +9,30 @@ Micro1,ai-training,45000,5,7,6,6,5,14,7.05,KEEP,,community,AI trainer $20-60
 Testlio,user-testing,22500,7,8,6,5,6,7,6.95,KEEP,,verified,hourly; weekly
 uTest (Applause),user-testing,15000,8,9,8,6,6,4,6.85,KEEP,,verified,best NG crowdtesting
 Respondent.io,user-testing,60000,5,6,6,5,5,9,6.8,KEEP,,verified,high value; low volume
+Toptal,freelance-gigs,90000,6,6,3,7,6,60,6.8,KEEP,,verified,"High ceiling, elite gate"
 PlaybookUX,user-testing,30000,5,6,6,3,5,21,6.5,KEEP,,unverified,invite-only
 Remotasks/Outlier,ai-training,15000,6,9,8,6,5,7,6.35,KEEP,,verified,weekly baseline
 Test.io,user-testing,15000,6,9,8,5,6,14,6.25,KEEP,,verified,bug pace
 SagaPoll Store Visits,mystery-shopping,15000,6,10,8,4,5,14,6.2,KEEP,,verified,"5,000pts=NGN30k; store audit photo tasks"
 Betakitesting,user-testing,22500,6,6,7,4,5,21,6.15,KEEP,,blog,Tremendous rails
 Userlytics,user-testing,15000,7,8,7,4,6,10,6.1,KEEP,,verified,PayPal gate
+Fiverr,freelance-gigs,15000,6,8,7,7,6,30,6.05,KEEP,,verified,Documentation gigs; 20% seller fee
+Jobberman,freelance-gigs,12000,6,10,8,4,6,21,5.9,KEEP,,verified,NG job board; salary roles
+MyJobMag,freelance-gigs,12000,6,10,8,4,6,21,5.9,KEEP,,verified,NG job board
 TimeBucks,surveys,6000,7,9,8,5,6,7,5.65,KEEP,,verified,$3 min; multi rails
 Mindrift (Toloka),ai-training,12000,5,8,8,4,6,7,5.6,KEEP,,community,bi-weekly
 FreeCash,surveys,7500,6,8,8,6,5,3,5.55,KEEP,,verified,offer walls > surveys
 Clickworker,surveys,10500,6,8,7,5,6,14,5.55,KEEP,,verified,weekly PayPal/Payoneer
 Zenith Salary Acct,bank-switching,2000,8,9,8,6,6,5,5.55,KEEP,,verified,7.95% p.a. + salary advance
+Contra,freelance-gigs,15000,5,7,7,5,5,14,5.55,KEEP,,unverified,Zero-commission; USDC rails
 Appen Mystery Shopper,mystery-shopping,13500,6,8,6,5,5,30,5.5,KEEP,,verified,Freelance NG listings; USD $3-15/hr equiv
 CrowdGen (Appen),ai-training,10500,5,9,8,5,5,21,5.4,KEEP,,verified,monthly
+Freelancer.com,freelance-gigs,12000,5,8,7,5,5,21,5.3,KEEP,,verified,Race-to-bottom; Payoneer
 Kuda Referral,bank-switching,1500,7,10,6,5,5,14,4.95,KEEP,,verified,NGN4-12k/ref official; T2 referee req
 SagaPoll,surveys,1800,6,10,9,4,5,21,4.88,KEEP,,verified,native NGN bank
 NLP Nigeria (agency),mystery-shopping,10000,4,9,7,3,5,30,4.8,KEEP,,verified,Pan-NG ops; cash per visit
 TGM Panel (NG),surveys,3750,5,10,7,5,5,21,4.78,KEEP,,verified,good comp; PayPal gripes
+PeoplePerHour,freelance-gigs,10500,5,6,6,5,5,30,4.7,KEEP,,verified,EU/UK-focused; Payoneer route
 Premise,surveys,2500,5,9,8,4,5,14,4.6,KEEP,,verified,location tasks
 Trymata,user-testing,9000,5,6,7,3,5,14,4.6,KEEP,,unverified,
 Microworkers,surveys,4500,5,8,8,3,5,14,4.55,KEEP,,community,$9 min
@@ -63,3 +71,14 @@ Ibotta / Receipt Hog,cashback-receipts,0,3,1,5,1,4,999,0.0,ELIMINATED,geo-locked
 Roamler,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,EU-only; NG defunct
 BeMyEye,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,EU-only
 Field Agent,mystery-shopping,0,4,1,5,2,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,NG not served; SA only in Africa
+Pawns.app / IPRoyal,passive-apps,750,6,9,8,3,5,30,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGM2-8k/mo passive + surveys; BTC/Visa GC payout in NG
+Honeygain,passive-apps,900,7,8,7,3,5,120,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGM2-5k/mo; Min $20 = 4-8 months to first payout
+EarnApp (Bright Data),passive-apps,600,7,9,8,3,5,30,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGM1.5-4.5k/mo; min ~$2.5 fastest bandwidth payout
+Cointiply / FreeBitco.in,passive-apps,300,5,8,9,2,5,14,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,NGM150-1.5k/mo faucets; legit dust
+Pi Network,passive-apps,500,3,8,8,1,5,365,0.0,ELIMINATED,"pay < NGN1,500/hr effective",verified,Speculative; not income
+PacketStream,passive-apps,200,4,5,7,2,5,60,0.0,ELIMINATED,"pay < NGN1,500/hr effective",unverified,NG demand near zero
+TraffMonetizer,passive-apps,150,4,5,7,2,5,60,0.0,ELIMINATED,"pay < NGN1,500/hr effective",unverified,legit dust
+DistributedMint,passive-apps,0,2,4,5,1,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,no verifiable info; site unreachable
+Spilr,passive-apps,0,2,4,5,1,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,RED FLAG - no real app
+Cloud mining apps,passive-apps,0,1,4,4,1,3,999,0.0,ELIMINATED,geo-locked,BLOCKED,"HIGH RISK - scam class, you lose deposits"
+Telegram tap-to-earn,passive-apps,0,2,5,6,1,4,999,0.0,ELIMINATED,geo-locked,BLOCKED,Near-zero after TGE

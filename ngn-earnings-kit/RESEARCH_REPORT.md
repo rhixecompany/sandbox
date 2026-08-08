@@ -1,7 +1,7 @@
 # 📗 RESEARCH_REPORT — NGN Earnings Kit (better than Outlier & Atapoll)
 
 **Date:** 2026-08-08 · **Region:** Nigeria (NGN) · **Audience:** Alexa (Site Supervisor background)
-**Method:** 8 parallel research passes → 39-platform scored matrix → top-picks validation (sentiment + geo + tax checks).
+**Method:** 8 parallel research passes → 83-platform scored matrix → top-picks validation (sentiment + geo + tax checks).
 **Exchange basis:** US$1 ≈ ₦1,500 (mid-2026). All figures sourced; `(unverified)` = no citable source at compile time.
 
 ---
@@ -21,24 +21,28 @@
 
 | # | Platform | Category | Est. NGN/h | Payout rails | Why now |
 |---|----------|----------|-----------|--------------|---------|
-| 1 | uTest (Applause) | user-testing | 15,000+ | Payoneer (NG ✓) | Reliable, daily cycles, NG-verified |
-| 2 | Testlio | user-testing | 22,500 | Payoneer weekly | Hourly pay, weekly cash |
-| 3 | Mercor | ai-training | 24,000+ | Wise/bank | Top ceiling, validated |
-| 4 | TimeBucks | surveys | 6,000 | PayPal $3 min | Fastest side-daily |
-| 5 | FreeCash | surveys | 7,500 | PayPal/crypto | Offer-wall volume |
-| 6 | DataAnnotation.tech | ai-training | 45,000 (if approved) | PayPal | High value; 2.6% odds |
-| 7 | SagaPoll | surveys/store | variable | Bank NG | NGN-native; store-visit |
-| 8 | Clickworker | micro | 10,500 | PayPal/Payoneer | Weekly; 136 countries |
-| 9 | Respondent.io | UX/interviews | 60,000 (rare) | Tremendous→PayPal | B2B niche |
-| 10 | Microworkers | micro | 4,500 | PayPal (7.5% fee) | Entry microtasks |
+| 1 | Mercor | ai-training | 24,000+ | Wise/bank | Top ceiling, validated |
+| 2 | Upwork | freelance-gigs | 45,000 | Cleva/Payoneer | Escrow; NG avg $163/job |
+| 3 | uTest (Applause) | user-testing | 15,000+ | Payoneer (NG ✓) | Reliable, daily cycles |
+| 4 | Testlio | user-testing | 22,500 | Payoneer weekly | Hourly pay, weekly cash |
+| 5 | DataAnnotation.tech | ai-training | 45,000 (if approved) | PayPal | High value; 2.6% odds |
+| 6 | Invisible / Stellar AI | ai-training | 35,000–37,500 | bank/Wise | High AI pay after assessment |
+| 7 | TimeBucks | surveys | 6,000 | PayPal $3 min | Fastest side-daily |
+| 8 | FreeCash | surveys | 7,500 | PayPal/crypto | Offer-wall volume |
+| 9 | SagaPoll | surveys/store | variable | Bank NG | NGN-native; store-visit |
+| 10 | Toptal | freelance-gigs | 90,000 | Payoneer | Elite ceiling after gate |
 
 ## 3. Category scoring results (Phase 2 detail)
-- 64 platforms scored across 6 categories (ai-training 9, user-testing 15, surveys 15, bank-switching 8, cashback-receipts 9, mystery-shopping 8). 26 **eliminated**: geo-locked (UserTesting/UserInterviews/Maze/Swagbucks/Qmee/Prolific/MoBrog/Roamler/BeMyEye/Field Agent/Fetch/Ibotta), sub-threshold (GeoPoll airtime-only), or pay < ₦1,500/hr effective. Full matrix: `references/platform_master_list.csv` + `references/scoring_matrix.xlsx`.
+- **83 platforms scored across all 8 categories** (ai-training 9, user-testing 15, surveys 15, freelance-gigs 8, bank-switching 8, cashback-receipts 9, mystery-shopping 8, passive-apps 11). **46 kept, 37 eliminated** (geo-locked / sub-threshold / scam-class). Full matrix: `references/platform_master_list.csv` + `references/scoring_matrix.xlsx`.
 
 ## 3b. Bank-switching & cashback reality (batch-2 findings)
 - **Bank switching:** Nigeria has NO CASS-equivalent cash switching bonus. Banks sell lotteries (Fidelity GAIM, Access XtraWins, Union Save&Win) — expected value ≈ 0 unless you win. Real cash = fintech **referral** programs: Kuda (₦4k–12k/ref), OPay (₦800/ref), PalmPay (welcome ≤₦5,550 while promo + ₦250/pair), PiggyVest (₦1k+₦1k, lock ₦2.1k), Risevest (up to 4% upfront on Naira Vault referrals). Salary-side value: Zenith 7.95% p.a. + salary advance beats any bonus.
-- **Cashback/receipts:** No international receipt scanner works in NG (Fetch/Ibotta/Receipt Hog = US/CA/UK only). Real NG plays: JumiaPay (3% + 20% first-month voucher ≈ ₦1–1.5k/mo), OPay (≤6% airtime), PalmPay PalmPoints, Moniepoint Rewards (≤2%), Kuda Coins/Premium, Chipper Cash (2%, account issues), Branch (2%). Realistic total stack: **₦2,500–6,000/month** — a small % return, not side income.
-- **Mystery shopping:** Global apps geo-locked out of NG (Roamler/BeMyEye/Field Agent). Working NG stack = SagaPoll store-visits + Premise location tasks + Appen Mystery Shopper (NG job postings) + local agencies (NLP Nigeria, BARE International, Mintel). Field-task reality: no big native shelf-snap app; store-audit skills = your supervisor background fits.
+- **Cashback/receipts:** No international receipt scanner works in NG (Fetch/Ibotta/Receipt Hog = US/CA/UK only). Real NG plays: JumiaPay (3% + 20% first-month voucher ≈ ₦1–1.5k/mo), OPay (≤6% airtime), PalmPay PalmPoints, Moniepoint Rewards (≤2%), Kuda Coins/Premium, Chipper Cash (2%, account issues), Korra (2%). Realistic total stack: **₦2,500–6,000/month** — a small % return, not side income.
+- **Mystery shopping:** Global apps geo-locked out of NG (Roamler/BeMyEye/Field Agent). Working NG stack = SagaPoll store-visits + Premise location tasks + Appen Mystery Shopper (NG job postings) + local agencies (NLP Nigeria, BARE International, Mintel). Your supervisor background is the literal skill set for store audits.
+
+## 3c. Freelancing & passive reality (batch-3 findings)
+- **Freelancing:** Upwork = most viable global platform (escrow; NG avg $163/job; Cleva/Grey/Raenest USD rails + Payoneer; realistic M3 ₦150–750k/mo). Fiverr = viable 2nd (documentation gigs; 20% seller fee; M1 ₦15–75k). Freelancer.com = race-to-bottom; PeoplePerHour = EU/UK-focused. Nigeria job boards (Jobberman, MyJobMag) for salary roles. PayPal NG = **send-only, not for receiving** — key correction; use Payoneer + USD virtual accounts.
+- **Passive apps — be honest about them:** bandwidth sharing (Pawns.app ✅ NG-verified BTC/Visa GC payout, ngn 2–8k/mo; Honeygain — min $20 = 4–8 months to first payout; EarnApp — fastest min ~$2.5) — but **net loss on metered mobile data** (NG data costs ≈ $0.39/GB vs $0.10–0.20/GB earned). Realistic ceiling for ALL legit passive apps: **₦15–25k/month** — not the ₦100k viral claims. Scam class: cloud-mining/tap-to-earn — avoid.
 
 ## 4. Validation summary (Phase 3)
 - **Mercor:** ✅ legit, payments reliable, selective (feast-or-famine).
