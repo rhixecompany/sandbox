@@ -2,8 +2,6 @@
 
 > Extracted from `mkdocs-translations.prompt.md`.
 
-## Folder Structure and Output
-
 Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language>`.
 
 - Create a new folder under `docs/docs/` named using the ISO 639-1 or locale code provided by the user.  

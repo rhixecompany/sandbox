@@ -2,8 +2,6 @@
 
 > Extracted from `java-refactoring-extract-method.prompt.md`.
 
-## Task
-
 Apply **Extract Method** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.
 
 Always return a complete and compilable method (Java 17).

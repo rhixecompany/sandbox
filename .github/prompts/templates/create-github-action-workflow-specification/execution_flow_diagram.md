@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Execution Flow Diagram
-
 ```mermaid
 graph TD
     A[Trigger Event] --> B[Job 1]
@@ -18,4 +16,3 @@ graph TD
     style E fill:#e8f5e8
 ```
 
-````

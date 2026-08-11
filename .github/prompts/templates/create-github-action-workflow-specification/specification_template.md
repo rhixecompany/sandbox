@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Specification Template
-
 Save as: `/spec/spec-process-cicd-[workflow-name].md`
 
 ````md

@@ -2,8 +2,6 @@
 
 > Extracted from `conventional-commit.prompt.md`.
 
-## Legacy Prompt Details
-
 ### Instructions
 
 ```xml

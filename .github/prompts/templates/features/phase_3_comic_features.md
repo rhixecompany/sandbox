@@ -2,8 +2,6 @@
 
 > Extracted from `features.prompt.md`.
 
-## Phase 3: Comic Features
-
 ### Task 3.1: Comics Listing Page ✅
 
 **File:** `src/app/(root)/comics/page.tsx` (373 lines)

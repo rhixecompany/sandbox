@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Compliance & Governance
-
 ### Audit Requirements
 
 - **Execution Logs**: [Retention policy]

@@ -6,60 +6,57 @@ version: 2.1.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - browser
-  - code_execution
-  - file
-  - mcp
-  - terminal
-  - web
+- browser
+- code_execution
+- file
+- mcp
+- terminal
+- web
 scripts: []
 skills:
-  - finishing-a-development-branch
-  - gh-cli
-  - git-commit
-  - git-helper
-  - git-submodule-workflow
-  - github-actions-efficiency
-  - github-repo-management
-  - monorepo-pr-workflow
-  - vscode-workspace-configurator
-  - workspace-audit
-  - writing-plans
-  - subagent-driven-development
+- finishing-a-development-branch
+- gh-cli
+- git-commit
+- git-helper
+- git-submodule-workflow
+- github-actions-efficiency
+- github-repo-management
+- vscode-workspace-configurator
+- workspace-audit
+- writing-plans
+- subagent-driven-development
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "prompt:repo-research-pipeline"
-  - "skill:finishing-a-development-branch"
-  - "skill:gh-cli"
-  - "skill:git-commit"
-  - "skill:git-helper"
-  - "skill:git-submodule-workflow"
-  - "skill:github-actions-efficiency"
-  - "skill:github-repo-management"
-  - "skill:monorepo-pr-workflow"
-  - "skill:vscode-workspace-configurator"
-  - "skill:workspace-audit"
-  - "skill:writing-plans"
-  - "tool:mcp-tavily"
-  - "tool:mcp-filesystem"
-  - "tool:mcp-sequential-thinking"
-  - "skill:subagent-driven-development"
+- prompt:repo-research-pipeline
+- skill:finishing-a-development-branch
+- skill:gh-cli
+- skill:git-commit
+- skill:git-helper
+- skill:git-submodule-workflow
+- skill:github-actions-efficiency
+- skill:github-repo-management
+- skill:vscode-workspace-configurator
+- skill:workspace-audit
+- skill:writing-plans
+- tool:mcp-tavily
+- tool:mcp-filesystem
+- tool:mcp-sequential-thinking
+- skill:subagent-driven-development
 tags:
-  - audit
-  - frontend
-  - git
-  - mcp
-  - onboarding
-  - prompts
-  - skills
-  - vscode
-  - workflow
+- audit
+- frontend
+- git
+- mcp
+- onboarding
+- prompts
+- skills
+- vscode
+- workflow
 trigger: /repo-management
 metadata:
   hermes: {}
 ---
-
 ## Goal
 
 Leave every repo with:
@@ -110,7 +107,7 @@ For each repo, verify `.gitignore` covers: `node_modules/`, `.env`, `*.pyc`, `__
 ### Phase 3: Dependency Audit
 
 | Repo type | Tool | Audit command |
-|-----------|------|---------------|
+|| ----------- | ------ | --------------- ||
 | JS/TS (Bun) | `bun pm ls` | `bun audit` for vulns |
 | Python | `pip list` | `pip-audit` for vulns |
 
@@ -132,7 +129,7 @@ Create `.github/workflows/ci.yml` per repo type (JS/TS uses `oven-sh/setup-bun`,
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -162,7 +159,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -185,7 +182,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

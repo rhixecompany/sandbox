@@ -2,8 +2,6 @@
 
 > Extracted from `gen-specs-as-issues.prompt.md`.
 
-## 5. GitHub Issue Creation Phase
-
 - For each specification, create a GitHub issue:
   - Clear, descriptive title
   - Comprehensive specification in the body

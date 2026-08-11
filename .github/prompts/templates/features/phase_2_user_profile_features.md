@@ -2,8 +2,6 @@
 
 > Extracted from `features.prompt.md`.
 
-## Phase 2: User Profile Features
-
 ### Task 2.1: Profile View Page ✅
 
 **File:** `src/app/(root)/profile/page.tsx`

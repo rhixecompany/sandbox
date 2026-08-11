@@ -14,7 +14,7 @@ Per-domain skills referenced by prompt workflows. Prompts link here via
 ## prompts-fix
 
 | Skill | Purpose |
-| ----- | ------- |
+|| ----- | ------- ||
 | `subagent-driven-development` | Implement → spec-review → quality-review pipeline (serial within task) |
 | `dispatching-parallel-agents` | Parallel fan-out of independent discovery/sync work |
 | `systematic-debugging` | Four-phase root cause debugging when sync diverges |
@@ -28,7 +28,7 @@ Per-domain skills referenced by prompt workflows. Prompts link here via
 ## prompts-strict-template
 
 | Skill | Purpose |
-| ----- | ------- |
+|| ----- | ------- ||
 | `enhance-markdown` | Audit, normalize, and enhance markdown formatting |
 | `skill-judge` | Score structure/compliance of generated prompt files |
 | `writing-skills` | Author clear, compliant prompt prose |

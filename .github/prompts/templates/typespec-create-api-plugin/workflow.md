@@ -2,8 +2,6 @@
 
 > Extracted from `typespec-create-api-plugin.prompt.md`.
 
-## Workflow
-
 Ask the user:
 
 1. What is the API base URL and purpose?

@@ -35,7 +35,7 @@ Source: `hermes config show`, model catalog fetch (live)
 ### Other Providers (from `hermes auth list` + config)
 
 | Provider | Auth Status | Model Access Method |
-| ---------- | ------------- | --------------------- |
+|| ---------- | ------------- | --------------------- ||
 | copilot | Rate-limited (429) | GitHub Copilot CLI / VS Code |
 | gemini | Rate-limited (429) | `gemini-3.5-flash` (default in config) |
 | huggingface | Active | HF Inference API (`auto`, free tier) |

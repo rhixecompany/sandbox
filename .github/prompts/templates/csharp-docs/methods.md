@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-docs.prompt.md`.
 
-## Methods
-
 - Use `<param>` to describe method parameters.
   - The description should be a noun phrase that doesn't specify the data type.
   - Begin with an introductory article.

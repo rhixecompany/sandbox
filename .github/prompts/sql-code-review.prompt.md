@@ -143,6 +143,7 @@ sql-- Verify referential integritySELECT o.user_idFROM orders oLEFT JOIN users u
 > **Issue**: [Detailed explanation of the problem]
 > **Full content:**
 
+```
 ## Template References
 
 Detailed templates in `templates/sql-code-review/`:- `code_quality__maintainability.md`- `common_anti-patterns.md`- `database-specific_best_practic.md`- `performance_optimization.md`- `priority_category_brief_descri.md`- `security_analysis.md`- `sql_review_checklist.md`
@@ -152,7 +153,7 @@ Detailed templates in `templates/sql-code-review/`:- `code_quality__maintainabil
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -178,7 +179,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -201,7 +202,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

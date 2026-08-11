@@ -2,8 +2,6 @@
 
 > Extracted from `memory-merger.prompt.md`.
 
-## Process
-
 ### 1. Parse Input and Read Files
 
 - **Extract** domain and scope from user input
@@ -17,4 +15,3 @@
 
 Review all memory sections and present them for merger consideration:
 
-```

@@ -2,8 +2,6 @@
 
 > Extracted from `multi-stage-dockerfile.prompt.md`.
 
-## Phases
-
 ### Phase 1: Intake
 
 - Read the request and identify the exact scope.

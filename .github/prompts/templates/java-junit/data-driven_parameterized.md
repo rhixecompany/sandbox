@@ -2,8 +2,6 @@
 
 > Extracted from `java-junit.prompt.md`.
 
-## Data-Driven (Parameterized) Tests
-
 - Use `@ParameterizedTest` to mark a method as a parameterized test.
 - Use `@ValueSource` for simple literal values (strings, ints, etc.).
 - Use `@MethodSource` to refer to a factory method that provides test arguments as a `Stream`, `Collection`, etc.

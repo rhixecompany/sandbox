@@ -2,8 +2,6 @@
 
 > Extracted from `java-junit.prompt.md`.
 
-## Test Organization
-
 - Group tests by feature or component using packages.
 - Use `@Tag` to categorize tests (e.g., `@Tag("fast")`, `@Tag("integration")`).
 - Use `@TestMethodOrder(MethodOrderer.OrderAnnotation.class)` and `@Order` to control test execution order when strictly necessary.

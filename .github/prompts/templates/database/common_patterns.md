@@ -2,8 +2,6 @@
 
 > Extracted from `database.prompt.md`.
 
-## Common Patterns
-
 ### Get Comic with All Details
 
 ```typescript

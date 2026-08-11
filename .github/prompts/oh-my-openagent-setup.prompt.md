@@ -6,20 +6,23 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - opencode
-  - oh-my-openagent
-  - setup
-  - validation
+- opencode
+- oh-my-openagent
+- setup
+- validation
 toolsets:
-  - terminal
-  - file
-  - skills
-  - todo
+- terminal
+- file
+- skills
+- todo
 trigger: /oh-my-openagent-setup
 skills: []
 dependencies: []
 metadata:
   hermes: {}
+scripts: []
+formatter: default
+plan: ''
 ---
 ## Goal
 
@@ -28,6 +31,7 @@ Execute the `oh-my-openagent-setup` workflow. Full details: `templates/oh-my-ope
 ## Template Reference
 
 Detailed template in `templates/oh-my-openagent-setup/`:
+
 - `README.md`
 
 ## Execution
@@ -57,7 +61,7 @@ See `templates/oh-my-openagent-setup/README.md` for phases/steps/workflow.
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -81,18 +85,22 @@ Use when implementing, modifying, or debugging code. Read the codebase first, un
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -110,7 +118,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -123,7 +131,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `test-driven-development` | TDD workflow enforcement |
 | `code-review` | Code quality assurance |
@@ -159,4 +167,3 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
-

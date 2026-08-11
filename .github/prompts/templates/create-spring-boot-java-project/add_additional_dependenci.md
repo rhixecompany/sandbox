@@ -2,8 +2,6 @@
 
 > Extracted from `create-spring-boot-java-project.prompt.md`.
 
-## Add additional dependencies
-
 - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency into `pom.xml` file
 
 ```xml

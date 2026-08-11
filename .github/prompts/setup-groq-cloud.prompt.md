@@ -1,29 +1,33 @@
 ---
 name: setup-groq-cloud
 title: Groq Cloud Setup — Comprehensive Reference & Prompt
-description: 'Converted and consolidated Groq Cloud documentation (Quickstart, Supported Models, OpenAI Compatibility, API Reference, Rate Limits) into a structured reference and agent prompt for setting up and using the Groq API.'
+description: Converted and consolidated Groq Cloud documentation (Quickstart, Supported Models, OpenAI Compatibility, API Reference, Rate Limits) into a structured reference and agent prompt for setting up and using the Groq API.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - groq
-  - llm
-  - api
-  - setup
-  - reference
-  - documentation
+- groq
+- llm
+- api
+- setup
+- reference
+- documentation
 toolsets:
-  - file
-  - terminal
-  - web
-  - skills
+- file
+- terminal
+- web
+- skills
 trigger: /setup-groq-cloud
 skills: []
 dependencies: []
 metadata:
-  hermes: {source: setup-groq-cloud.prompt.txt, converted: '2026-08-08'}
+  hermes:
+    source: setup-groq-cloud.prompt.txt
+    converted: '2026-08-08'
+scripts: []
+formatter: default
+plan: ''
 ---
-
 ## Goal
 
 Guide an agent (or a developer following this prompt) through setting up and using Groq Cloud: create an API key, configure the environment, make the first chat completion, choose models, use OpenAI-compatible client libraries, call the REST API, and respect rate limits. The full reference is embedded under `## Groq Cloud Reference` below.
@@ -64,14 +68,17 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 ## Phases
 
 ### Phase 1: Provision
+
 - Create an API key at `https://console.groq.com/keys`.
 - Export `GROQ_API_KEY` in the environment (see Reference > Quickstart).
 
 ### Phase 2: First Request
+
 - Install the SDK (`pip install groq` or `pnpm add ai @ai-sdk/groq`).
 - Send a first chat completion (see Reference > Quickstart / API Reference).
 
 ### Phase 3: Productionize
+
 - Choose a model from Reference > Supported Models.
 - Wire OpenAI-compatible clients via `base_url=https://api.groq.com/openai/v1` (see Reference > OpenAI Compatibility).
 - Implement rate-limit backoff (see Reference > Rate Limits).
@@ -86,7 +93,7 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Key | API key created and exported as `GROQ_API_KEY` |
 | 2 | First call | A chat completion returns content |
 | 3 | Model | Model ID matches one in Supported Models |
@@ -96,7 +103,7 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 ## Skills Required
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational workflow |
 | `systematic-debugging` | Root-cause API/SDK errors |
 | `verification-before-completion` | Validate before claiming done |
@@ -104,7 +111,7 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 ## MCP Servers & Tools
 
 | Tool | Purpose |
-|------|---------|
+|| ------ | --------- ||
 | `fetch` | Pull live Groq docs if the embedded reference is stale |
 | `filesystem` | Read/write integration files |
 | `terminal` | Install SDKs, run scripts |
@@ -237,7 +244,7 @@ Explore all available models on GroqCloud.
 **Note:** Production models are intended for use in your production environments. They meet or exceed our high standards for speed, quality, and reliability. Read more [here](https://console.groq.com/docs/deprecations).
 
 | MODEL ID                                                                                                                                 | SPEED (T/SEC) | PRICE PER 1M TOKENS      | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
+|| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- ||
 | [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.1 8B](/docs/model/llama-3.1-8b-instant)llama-3.1-8b-instant                 | 560           | $0.05 input$0.08 output  | 250K TPM1K RPM               | 131,072                 | 131,072               | -            |
 | [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.3 70B](/docs/model/llama-3.3-70b-versatile)llama-3.3-70b-versatile          | 280           | $0.59 input$0.79 output  | 300K TPM1K RPM               | 131,072                 | 32,768                | -            |
 | [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)GPT OSS 120B](/docs/model/openai/gpt-oss-120b)openai/gpt-oss-120b                 | 500           | $0.15 input$0.60 output  | 250K TPM1K RPM               | 131,072                 | 65,536                | -            |
@@ -250,7 +257,7 @@ Explore all available models on GroqCloud.
 Systems are a collection of models and tools that work together to answer a user query.
 
 | MODEL ID                                                                                                                      | SPEED (T/SEC) | PRICE PER 1M TOKENS | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | ---------------------------- | ----------------------- | --------------------- | ------------- |
+|| ----------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | ---------------------------- | ----------------------- | --------------------- | ------------- ||
 | [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound](/docs/compound/systems/compound)groq/compound                | 450           | -                  | 200K TPM200 RPM              | 131,072                 | 8,192                 | -            |
 | [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound Mini](/docs/compound/systems/compound-mini)groq/compound-mini | 450           | -                  | 200K TPM200 RPM              | 131,072                 | 8,192                 | -            |
 
@@ -261,7 +268,7 @@ Systems are a collection of models and tools that work together to answer a user
 **Note:** Preview models are intended for evaluation purposes only and should not be used in production environments as they may be discontinued at short notice. Read more about deprecations [here](https://console.groq.com/docs/deprecations).
 
 | MODEL ID                                                                                                                                                                   | SPEED (T/SEC) | PRICE PER 1M TOKENS      | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
+|| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- ||
 | [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus Arabic Saudi](/docs/model/canopylabs/orpheus-arabic-saudi)canopylabs/orpheus-arabic-saudi | -            | $40.00 per 1M characters | 50K TPM250 RPM               | 4,000                   | 50,000                | -            |
 | [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus V1 English](/docs/model/canopylabs/orpheus-v1-english)canopylabs/orpheus-v1-english       | -            | $22.00 per 1M characters | 50K TPM250 RPM               | 4,000                   | 50,000                | -            |
 | [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama Prompt Guard 2 22M](/docs/model/meta-llama/llama-prompt-guard-2-22m)meta-llama/llama-prompt-guard-2-22m         | -            | $0.03 input$0.03 output  | 30K TPM100 RPM               | 512                     | 512                   | -            |
@@ -2405,12 +2412,12 @@ The following is a high level summary and there may be exceptions to these limit
 
 **Need higher rate limits?** Upgrade to [Developer plan](https://console.groq.com/settings/billing/plans) to access higher limits, [Batch](https://console.groq.com/docs/batch) and [Flex](https://console.groq.com/docs/flex-processing) processing, and more. Note that the limits shown below are the base limits for the Developer plan, and higher limits are available for select workloads and enterprise use cases.
 
-|          |     |     |     |     |     |     |
-| -------- | --- | --- | --- | --- | --- | --- |
+||||||||||
+|| -------- | --- | --- | --- | --- | --- | --- ||
 | MODEL ID | RPM | RPD | TPM | TPD | ASH | ASD |
 
 | canopylabs/orpheus-arabic-saudi     | 10 | 100   | 1.2K | 3.6K | -   | -    |
-| ----------------------------------- | -- | ----- | ---- | ---- | ---- | ----- |
+|| ----------------------------------- | -- | ----- | ---- | ---- | ---- | ----- ||
 | canopylabs/orpheus-v1-english       | 10 | 100   | 1.2K | 3.6K | -   | -    |
 | groq/compound                       | 30 | 250   | 70K  | -   | -   | -    |
 | groq/compound-mini                  | 30 | 250   | 70K  | -   | -   | -    |
@@ -2432,7 +2439,7 @@ In addition to viewing your limits on your account's [limits](https://console.gr
 The following headers are set (values are illustrative):
 
 | Header                         | Value    | Notes                                    |
-| ------------------------------ | -------- | ---------------------------------------- |
+|| ------------------------------ | -------- | ---------------------------------------- ||
 | retry-after                    | 2        | In seconds                               |
 | x-ratelimit-limit-requests     | 14400    | Always refers to Requests Per Day (RPD)  |
 | x-ratelimit-limit-tokens       | 18000    | Always refers to Tokens Per Minute (TPM) |

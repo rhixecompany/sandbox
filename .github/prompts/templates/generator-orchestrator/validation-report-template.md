@@ -9,7 +9,7 @@
 ## Gate Results
 
 | Gate | Status | Details |
-| ------ | -------- | --------- |
+|| ------ | -------- | --------- ||
 | A | <STATUS> | <details> |
 | B | <STATUS> | <details> |
 | C | <STATUS> | <details> |
@@ -34,7 +34,7 @@
 ## Artifact Summary
 
 | Path | Size | Status |
-| ------ | ------ | -------- |
+|| ------ | ------ | -------- ||
 | blueprints/technology-stack-blueprint.md | <size> | <status> |
 | blueprints/folder-structure-blueprint.md | <size> | <status> |
 | blueprints/architecture-blueprint.md | <size> | <status> |

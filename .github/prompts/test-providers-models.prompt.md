@@ -1,33 +1,39 @@
 ---
 name: test-providers-models
 title: Test Providers & Models — Benchmark, Delegate, and Configure Fallback Chain
-description: 'Inventory all authorized LLM providers, delegate live capability probes to subagents with full context, rank working free models by vision → reasoning → context size, and configure the Hermes primary model + fallback chain from proven working models per authorized provider.'
+description: Inventory all authorized LLM providers, delegate live capability probes to subagents with full context, rank working free models by vision → reasoning → context size, and configure the Hermes primary model + fallback chain from proven working models per authorized provider.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - providers
-  - models
-  - benchmark
-  - free-tier
-  - fallback
-  - subagents
-  - config
-  - hermes
+- providers
+- models
+- benchmark
+- free-tier
+- fallback
+- subagents
+- config
+- hermes
 toolsets:
-  - file
-  - terminal
-  - web
-  - skills
-  - delegation
+- file
+- terminal
+- web
+- skills
+- delegation
 trigger: /test-providers-models
 skills:
-  - devops/test-providers-models
-dependencies: []
+- test-providers-models
+dependencies:
+- skill:test-providers-models
 metadata:
-  hermes: {source: devops/test-providers-models, reimplemented: '2026-08-08', data-snapshot: '2026-08-07'}
+  hermes:
+    source: devops/test-providers-models
+    reimplemented: '2026-08-08'
+    data-snapshot: '2026-08-07'
+scripts: []
+formatter: default
+plan: ''
 ---
-
 ## Goal
 
 Produce a **verified, ordered fallback chain** across all authorized Hermes providers, using only models that *actually work* (probed live, not assumed), and configure Hermes (`model` + `fallback_providers`) accordingly. The ordering rule is deterministic:
@@ -93,12 +99,13 @@ NOTE: No working free model in the verified set has vision. The rule therefore
 Dispatch in parallel (3 clusters). Each subagent gets the full Context Block above.
 
 | Subagent | Cluster | Providers |
-| -------- | ------- | --------- |
+|| -------- | ------- | --------- ||
 | A | Zen/router/deepseek | opencode-zen, openrouter, deepseek |
 | B | Google/cloud/nous/hf | gemini, ollama-cloud, nous, huggingface |
 | C | OAuth/codex/copilot/xai | openai-codex, copilot, xai-oauth |
 
 Each subagent:
+
 - Runs the probe for every candidate free model of its cluster.
 - If a provider is rate-limited (429) or blocked (403), reports `working=false` with the error and falls back to the baseline entry in the Context Block.
 - Returns ONLY the structured `provider | model | working | vision | reasoning | ctx` lines.

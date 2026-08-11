@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-issue-feature-from-specification.prompt.md`.
 
-## Phases
-
 ### Phase 1: Intake
 
 - Read the request and identify the exact scope.

@@ -2,8 +2,6 @@
 
 > Extracted from `java-junit.prompt.md`.
 
-## Test Structure
-
 - Test classes should have a `Test` suffix, e.g., `CalculatorTest` for a `Calculator` class.
 - Use `@Test` for test methods.
 - Follow the Arrange-Act-Assert (AAA) pattern.

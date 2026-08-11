@@ -2,8 +2,6 @@
 
 > Extracted from `update-specification.prompt.md`.
 
-## 5. Acceptance Criteria
-
 [Define clear, testable acceptance criteria for each requirement using Given-When-Then format where appropriate.]
 
 - **AC-001**: Given [context], When [action], Then [expected outcome]

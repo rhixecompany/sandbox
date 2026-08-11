@@ -2,8 +2,6 @@
 
 > Extracted from `shuffle-json-data.prompt.md`.
 
-## Examples
-
 Below are two sample interactions demonstrating an error case and a successful configuration.
 
 ### Missing File

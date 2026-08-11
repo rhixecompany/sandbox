@@ -24,7 +24,7 @@ tags: [template, research, report]
 ## Similar Projects
 
 | Project | URL          | Why Relevant       |
-| ------- | ------------ | ------------------ |
+|| ------- | ------------ | ------------------ ||
 | <name>  | <github url> | <1-line relevance> |
 | <name>  | <url>        | <1-line relevance> |
 
@@ -51,7 +51,7 @@ tags: [template, research, report]
 ## Cheatsheets & Quick Reference
 
 | Topic   | Resource | Type                                 |
-| ------- | -------- | ------------------------------------ |
+|| ------- | -------- | ------------------------------------ ||
 | <topic> | <url>    | Cheatsheet / Guide / Docs / Tutorial |
 | <topic> | <url>    | Cheatsheet / Guide / Docs / Tutorial |
 
@@ -70,7 +70,7 @@ tags: [template, research, report]
 ## Common Pitfalls
 
 | Pitfall   | Impact   | Avoidance      |
-| --------- | -------- | -------------- |
+|| --------- | -------- | -------------- ||
 | <pitfall> | <impact> | <one-line fix> |
 | <pitfall> | <impact> | <one-line fix> |
 | <pitfall> | <impact> | <one-line fix> |
@@ -111,7 +111,7 @@ tags: [template, research, report]
 ## Resources
 
 | Resource      | URL   | Description                                   |
-| ------------- | ----- | --------------------------------------------- |
+|| ------------- | ----- | --------------------------------------------- ||
 | Official Docs | <url> | <framework> official documentation            |
 | Community     | <url> | Forum / Discord / Reddit / GitHub Discussions |
 | Tutorial      | <url> | Key tutorial or getting-started guide         |

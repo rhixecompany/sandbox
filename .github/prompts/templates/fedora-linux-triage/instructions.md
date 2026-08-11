@@ -2,8 +2,6 @@
 
 > Extracted from `fedora-linux-triage.prompt.md`.
 
-## Instructions
-
 1. Confirm Fedora release and environment assumptions.
 2. Provide a step-by-step triage plan using `systemctl`, `journalctl`, and `dnf`.
 3. Offer remediation steps with copy-paste-ready commands.

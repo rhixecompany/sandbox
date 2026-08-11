@@ -2,8 +2,6 @@
 
 > Extracted from `memory-merger.prompt.md`.
 
-## Example
-
 ```
 User: "/memory-merger >clojure"
 

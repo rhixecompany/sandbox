@@ -2,8 +2,6 @@
 
 > Extracted from `update-specification.prompt.md`.
 
-## Legacy Prompt Details
-
 # Update Specification
 
 Your goal is to update the existing specification file `${file}` based on new requirements or updates to any existing code.

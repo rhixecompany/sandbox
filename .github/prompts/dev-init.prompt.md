@@ -110,7 +110,7 @@ Use this prompt when a prompt-library refresh needs planning beforeimplementatio
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill                                 | Purpose                                                          |
-| ------------------------------------- | ---------------------------------------------------------------- |
+|| ------------------------------------- | ---------------------------------------------------------------- ||
 | `context-map` (prompt)                | Map source, destination, and dependency impact before conversion |
 | `convert-plaintext-to-md`             | Convert plaintext prompts to markdown                            |
 | `boost-prompt`                        | Improve prompt quality and structure                             |
@@ -219,7 +219,10 @@ bashread_file("docs/dev-init-comprehensive-plan.md")read_file("docs/dev-init-spe
 
 ### Step 6.1 — Structural Audit
 
-For each `.github/prompts/*.md`:```bash# Check frontmatterhead -10 Prompts/<name
+For each `.github/prompts/*.md`:
+
+```bash
+# Check frontmatterhead -10 Prompts/<name
 
 > .prompts.md | grep "^title:"head -10 Prompts/<name>.prompts.md | grep "^description:"head -10 Prompts/<name>.prompts.md | grep "^trigger:"head -10 Prompts/<name>.prompts.md | grep "^tags:"# Check required sections existgrep -c "^
 
@@ -233,7 +236,8 @@ For each `.github/prompts/*.md`:```bash# Check frontmatterhead -10 Prompts/<name
 
 ## Actions
 
-" Prompts/<name>.prompts.md```
+" Prompts/<name>.prompts.md
+```
 
 ### Step 6.2 — Cross-Reference Validation
 
@@ -318,7 +322,7 @@ When all 7 phases are complete, output:```======================================
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -344,7 +348,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

@@ -9,7 +9,7 @@ Scoring (0–10). Reasoning: correctness + clarity of step-by-step. Knowledge: c
 (Astana, 2022 rename) + live citation where produced. Tool-calling: N/A (no function available).
 
 | Model | Provider | Reasoning | Knowledge | Tool Calling | Avg Latency | Verdict |
-| ------- | ---------- | ----------- | ----------- | -------------- | ------------- | --------- |
+|| ------- | ---------- | ----------- | ----------- | -------------- | ------------- | --------- ||
 | auto (Grok free) | xai-oauth | 9 | 9 | N/A (honest) | 41s | 🥇 Fastest, strong |
 | auto (HF Inference) | huggingface | 10 | 9 | N/A (honest) | 53s | 🥈 Cleanest reasoning |
 | auto (deepseek-v4-flash-free) | ollama-cloud | 10 | 9 | N/A (honest) | 56s | 🥉 Strong alternative |

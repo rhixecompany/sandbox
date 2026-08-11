@@ -1,43 +1,43 @@
 ---
 name: parallel-mcp-install
 title: Install and Validate Parallel MCP Servers in Hermes
-description: 'Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the active Hermes Agent harness, preserve credential boundaries, validate discovered tools, and begin implementation only after all gates pass.'
+description: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the active Hermes Agent harness, preserve credential boundaries, validate discovered tools, and begin implementation only after all gates pass.
 version: 1.0.0
 license: MIT
 author: Alexa
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 skills:
-  - using-superpowers
-  - user-communication-preferences
-  - hermes-mcp
-  - smithery-ai-cli
-  - verification-before-completion
+- using-superpowers
+- user-communication-preferences
+- hermes-mcp
+- smithery-ai-cli
+- verification-before-completion
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "skill:using-superpowers"
-  - "skill:user-communication-preferences"
-  - "skill:hermes-mcp"
-  - "skill:smithery-ai-cli"
-  - "skill:verification-before-completion"
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:hermes-mcp
+- skill:smithery-ai-cli
+- skill:verification-before-completion
 tags:
-  - agents
-  - authentication
-  - hermes
-  - mcp
-  - parallel
-  - security
-  - smithery
-  - streamable-http
-  - verification
+- agents
+- authentication
+- hermes
+- mcp
+- parallel
+- security
+- smithery
+- streamable-http
+- verification
 trigger: /parallel-mcp-install
 metadata:
   hermes: {}
+scripts: []
 ---
-
 # Parallel MCP Installation and Validation Workflow
 
 ## Goal
@@ -45,7 +45,7 @@ metadata:
 Install and validate these two remote Streamable HTTP MCP servers in the MCP client harness that is actually running the agent:
 
 | Server | Endpoint | Authentication | Required tools |
-| --- | --- | --- | --- |
+|| --- | --- | --- | --- ||
 | Parallel Search | `https://search.parallel.ai/mcp` | No auth by default | `web_search`, `web_fetch` |
 | Parallel Task | `https://task-mcp.parallel.ai/mcp` | OAuth preferred; API-key fallback | `createDeepResearch`, `createTaskGroup`, `getStatus`, `getResultMarkdown` |
 
@@ -192,7 +192,7 @@ Only after Phases 1–5 pass:
 ## Failure Handling
 
 | Condition | Action |
-| --- | --- |
+|| --- | --- ||
 | Active harness cannot be identified | Stop; report the observed runtime and ask for the correct client only if necessary |
 | Search returns `auth_required` | Stop and ask the user to complete the provided browser flow; do not add a key |
 | Task returns `auth_required` | Complete OAuth in the browser, then retry connection |
@@ -221,7 +221,7 @@ Only after Phases 1–5 pass:
 Return a compact table:
 
 | Field | Result |
-| --- | --- |
+|| --- | --- ||
 | Active harness/profile | `<value>` |
 | Search server | `<connected/error>` |
 | Search tools | `<list>` |
@@ -237,7 +237,7 @@ Return a compact table:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -306,7 +306,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -329,7 +329,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

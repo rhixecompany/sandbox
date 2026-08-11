@@ -2,8 +2,6 @@
 
 > Extracted from `power-bi-dax-optimization.prompt.md`.
 
-## Request Instructions
-
 To use this prompt effectively, provide:
 
 1. **The DAX formula** you want optimized

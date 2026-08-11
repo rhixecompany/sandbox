@@ -6,47 +6,44 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - subagent-driven-development
-  - brainstorming
-  - plans-and-specs
-  - dispatching-parallel-agents
-  - systematic-debugging
-  - simplify
-  - acpx-executor
-  - hermes-agent
-  - copilot-cli-quickstart
+- subagent-driven-development
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- systematic-debugging
+- simplify
+- acpx-executor
+- hermes-agent
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "prompt:context-map.prompt.md"
-  - "prompt:update-implementation-plan.prompt.md"
-  - "prompt:skills-fix.prompt.md"
-  - "skill:brainstorming"
-  - "skill:plans-and-specs"
-  - "skill:dispatching-parallel-agents"
-  - "skill:subagent-driven-development"
-  - "skill:systematic-debugging"
-  - "skill:simplify"
-  - "skill:acpx-executor"
-  - "skill:hermes-agent"
-  - "skill:copilot-cli-quickstart"
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- prompt:skills-fix.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:hermes-agent
 tags:
-  - ai-assistant
-  - fix
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- ai-assistant
+- fix
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /prompts-fix
 metadata:
   hermes: {}
 ---
-
 ## Goal
 
 Sync prompt files across Hermes and Copilot without losing trigger names or platform-specific behavior.
@@ -129,7 +126,7 @@ Verify that each platform still matches its expected schema and that no prompts 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -155,7 +152,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

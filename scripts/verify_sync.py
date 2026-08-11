@@ -48,7 +48,7 @@ def get_skill_names(root):
 
 hermes_skills = get_skill_names("~/AppData/Local/hermes/skills")
 codex_skills = get_skill_names("~/.codex/skills/hermes-auto")
-opencode_skills = get_skill_names("~/.opencode/skills/hermes-auto")
+opencode_skills = get_skill_names("~/.opencode/skills")
 
 check(len(hermes_skills) == len(codex_skills) == len(opencode_skills),
       f"Skill counts match: Hermes={len(hermes_skills)}, Codex={len(codex_skills)}, OpenCode={len(opencode_skills)}")
@@ -117,7 +117,7 @@ with open(expand("~/Desktop/SandBox/opencode.json")) as f:
 opencode_model = opencode_config.get('model', '')
 
 # Models should be platform-optimized, not identical
-check(hermes_model == 'gpt-5.4-mini', f"Hermes model: {hermes_model}")
+check(hermes_model == 'deepseek-v4-flash-free', f"Hermes model: {hermes_model}")
 check(codex_model == 'gpt-5.4-mini', f"Codex model: {codex_model}")
 check(opencode_model == 'opencode/deepseek-v4-flash-free', f"OpenCode model: {opencode_model}")
 

@@ -40,7 +40,7 @@ Inventory the target file before changing a single character. The goal is a prec
 drift report you can act on in Phase 2.
 
 | Field | Details |
-| --- | --- |
+|| --- | --- ||
 | **Phase** | 1 — Structural Intake |
 | **Input** | Path to the target `.prompt.md` (and, if referenced, its `templates/<name>/` directory). |
 | **Output** | A drift report: ordered list of present sections, list of missing/extra/out-of-order sections, and frontmatter field inventory. |
@@ -72,7 +72,7 @@ Apply the fixes identified in Phase 1, in required-section order, preserving the
 author's wording, trigger, and intent.
 
 | Field | Details |
-| --- | --- |
+|| --- | --- ||
 | **Phase** | 2 — Template Normalization |
 | **Input** | The target `.prompt.md` plus the Phase 1 drift report. |
 | **Output** | A rewritten target file where all 11 required sections exist, are ordered correctly, each Phase has a valid Field/Details table, and Tasks/Subtasks use strict numbering; plus a compliance report. |

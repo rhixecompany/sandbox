@@ -143,6 +143,7 @@ sql-- Identify slow queriesSELECT query, calls, total_time, mean_time, rowsFROM 
 
 **Original Query**:[Original SQL with performance issues]**Issues Identified**:- Sequential scan on large table (Cost: 15000.00)- Missing index on frequently queried column- Inefficient join order**Optimized Query**:[Improved SQL with explanations]**Recommended Indexes**:```sqlCREATE INDEX idx_table_column ON table(column);````**Performance Impact**: Expected 80% improvement in execution time````
 
+```
 ## 🚀 Advanced PostgreSQL Features
 
 > -- Running totals and rankings
@@ -158,7 +159,7 @@ Detailed templates in `templates/postgresql-optimization/`:- `advanced_postgresq
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -184,7 +185,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -207,7 +208,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

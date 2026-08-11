@@ -85,7 +85,7 @@ Analyze `.agent.md` or `.prompt.md` files to understand their purpose, complexit
 
 > 1)- **Context**: GitHub Copilot subscription tiers (Free: 2K completions + 50 chat/month with 0x models only; Pro: unlimited 0x + 1000 premium/month; Pro+: unlimited 0x + 5000 premium/month)
 
-## Inputs
+## Prompt Variables
 
 Required:- `${input:filePath:Path to .agent.md or .prompt.md file}` - Absolute or workspace-relative path to the file to analyzeOptional:- `${input:subscriptionTier:Pro}` - User's Copilot subscription tier (Free, Pro, Pro+) - defaults to Pro- `${input:priorityFactor:Balanced}` - Optimization priority (Speed, Cost, Quality, Balanced) - defaults to Balanced
 
@@ -242,7 +242,7 @@ Detailed section templates in `templates/model-recommendation/`:- `context7_quer
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -268,7 +268,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -291,7 +291,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

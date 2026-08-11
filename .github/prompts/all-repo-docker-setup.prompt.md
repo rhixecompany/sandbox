@@ -1,33 +1,37 @@
 ---
 name: all-repo-docker-setup
 title: All Repository Docker Setup and Cleanup
-description: 'For each repository in the rhixecompany org, clone to ./projects, build or update Dockerfiles/images, run security scans, create cleanup plans, fix container errors, and clean up unused Docker resources.'
+description: For each repository in the rhixecompany org, clone to ./projects, build or update Dockerfiles/images, run security scans, create cleanup plans, fix container errors, and clean up unused Docker resources.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-  - docker
-  - devops
-  - cleanup
-  - security
-  - automation
-  - rhixecompany
+- docker
+- devops
+- cleanup
+- security
+- automation
+- rhixecompany
 toolsets:
-  - terminal
-  - file
-  - skills
-  - todo
+- terminal
+- file
+- skills
+- todo
 trigger: /all-repo-docker-setup
 skills:
-  - docker-management
-  - disk-space-cleanup
-dependencies: []
+- docker-management
+- disk-space-cleanup
+dependencies:
+- skill:docker-management
+- skill:disk-space-cleanup
 metadata:
   hermes:
     source: all-repo-docker-setup.prompt.txt
     converted: '2026-08-08'
+scripts: []
+formatter: default
+plan: ''
 ---
-
 ## Goal
 
 For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.
@@ -73,27 +77,37 @@ The source is `all-repo-docker-setup.prompt.txt` — an operational runbook for 
 For each repo **in the list of repositories by rhixecompany**:
 
 1. Clone the repository to `./projects`:
+
    ```bash
    git clone <repository_url> ./projects/<repository_name>
    ```
+
 2. Navigate into the cloned repository:
+
    ```bash
    cd ./projects/<repository_name>
    ```
+
 3. Check if a `Dockerfile` exists:
    - **If it does not exist** — create a minimal, correct `Dockerfile` (multi-stage where possible; set a small base image).
    - **If it does exist** — debug and fix it, update it to a smaller image where safe, then build:
+
      ```bash
      docker build -t <image_name> .
      ```
+
 4. If no `Dockerfile` exists but `docker-compose.yml` does, build with:
+
    ```bash
    docker-compose build
    ```
+
 5. If neither `Dockerfile` nor `docker-compose.yml` exists, log the exact message and create the log file in the repo root:
+
    ```bash
    printf 'No Docker configuration found for this repository.\n' > docker_setup.log
    ```
+
 6. Security scan the built image (e.g. `trivy image`, `docker scout cves`, `grype`) and implement or suggest fixes for High/Critical findings.
 7. Suggest, create, and implement a cleanup plan for the repo's Docker assets (`.dockerignore`, removal of junk blobs, multi-stage consolidation, unused deps).
 8. Fix all container errors found during build/run verification.

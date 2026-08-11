@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Validation Criteria
-
 ### Workflow Validation
 
 - **VLD-001**: [Validation rule]

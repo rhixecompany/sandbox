@@ -6,7 +6,7 @@ Source: `hermes auth list` + Phase 3 benchmark data (live)
 ## Rate Limit Profile Per Provider
 
 | Provider | Limit Type | Status (live) | Cooldown | Auto-Reset |
-| ---------- | ----------- | --------------- | ---------- | ------------ |
+|| ---------- | ----------- | --------------- | ---------- | ------------ ||
 | copilot | 429 rate limit | ⚠️ Limited | ~22m | ✅ Yes |
 | gemini | 429 rate limit | ⚠️ Limited | unknown | ✅ Yes |
 | openai-codex | usage limit | ⚠️ Exhausted | 28d 20h | ❌ No |

@@ -100,7 +100,8 @@ fileName}.length
 
 ### `"m", "minimal"
 
-`````text    ```markdown
+```text
+```markdown
 
 ## 1. Introduction    ***Purpose:** Briefly explain why the coding standards are being established (e.g., to improve code quality, maintainability, and team collaboration).*   **Scope:** Define which languages, projects, or modules this specification applies to.
 
@@ -120,7 +121,10 @@ fileName}.length
 
 ### `"v", verbose"
 
-`````text    ```markdown    # Style Guide    This document defines the style and conventions used in this project.    All contributions should follow these rules unless otherwise noted.
+```text
+```markdown
+# Style Guide
+This document defines the style and conventions used in this project.    All contributions should follow these rules unless otherwise noted.
 
 ## 1. General Code Style
 
@@ -175,7 +179,7 @@ Detailed templates in `templates/write-coding-standards-from-file/`:- `if_fetchs
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -201,7 +205,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -224,7 +228,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

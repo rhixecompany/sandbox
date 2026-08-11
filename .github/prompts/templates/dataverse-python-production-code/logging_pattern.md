@@ -2,8 +2,6 @@
 
 > Extracted from `dataverse-python-production-code.prompt.md`.
 
-## Logging Pattern
-
 ```python
 import logging
 

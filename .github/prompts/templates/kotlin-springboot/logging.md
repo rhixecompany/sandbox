@@ -2,8 +2,6 @@
 
 > Extracted from `kotlin-springboot.prompt.md`.
 
-## Logging
-
 - **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object.
 
   ```kotlin

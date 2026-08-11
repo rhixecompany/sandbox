@@ -73,7 +73,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
-| --- | --- |
+|| --- | --- ||
 | `context-map` | Preflight map of relevant files and references before refinement |
 | `writing-skills` | Crafting and optimizing prompts and instructions |
 | `writing-plans` | Structured prompt authoring and organization (section layout, phase flow) |
@@ -109,7 +109,7 @@ Templates in `templates/boost-prompt/`:- `phases.md`- `tools_required.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -135,7 +135,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

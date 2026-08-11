@@ -2,8 +2,6 @@
 
 > Extracted from `update-avm-modules-in-bicep.prompt.md`.
 
-## Phases
-
 ### Phase 1: Intake
 
 - Read the request and identify the exact scope.

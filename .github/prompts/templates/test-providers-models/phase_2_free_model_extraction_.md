@@ -11,7 +11,7 @@ Source: Model catalog fetch + `hermes auth list` + live benchmark validation
 ## Active Providers with Free/Zero-Cost Models (benchmarked 2026-07-10)
 
 | Provider | Status | Free Model Used | Benchmarked |
-| ---------- | -------- | ----------------- | ------------- |
+|| ---------- | -------- | ----------------- | ------------- ||
 | nous | ✅ Active | stepfun/step-3.7-flash:free | ✅ 15/15 tasks |
 | openrouter | ✅ Active (flipped) | tencent/hy3:free | ✅ 15/15 tasks |
 | huggingface | ✅ Active | HF Inference `auto` (free tier) | ✅ 15/15 tasks |
@@ -21,7 +21,7 @@ Source: Model catalog fetch + `hermes auth list` + live benchmark validation
 ## Rate-Limited / No-Free-Tier Providers (excluded from benchmark)
 
 | Provider | Reason | Cooldown |
-| ---------- | -------- | ---------- |
+|| ---------- | -------- | ---------- ||
 | copilot | 429 rate-limited | ~22m |
 | gemini | 429 rate-limited | unknown (volatile) |
 | openai-codex | usage_limit_reached | 28d 20h |
@@ -30,7 +30,7 @@ Source: Model catalog fetch + `hermes auth list` + live benchmark validation
 ## OpenRouter (9 free models — all accessible via Hermes provider chain)
 
 | Model ID | Description | Tier |
-| ---------- | ------------- | ------ |
+|| ---------- | ------------- | ------ ||
 | openrouter/elephant-alpha | auto-routes to cheapest coder | ✓ Needed |
 | poolside/laguna-m.1:free | free | ✓ Needed |
 | tencent/hy3:free | free | ✓ Needed |

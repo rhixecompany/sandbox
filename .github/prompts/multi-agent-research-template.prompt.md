@@ -44,7 +44,7 @@ Reusable prompt for Codex, Copilot, and Hermes. It preserves the current researc
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | codex | Codex agent execution |
 | copilot | Copilot agent execution |
 | hermes | Hermes agent execution |
@@ -170,7 +170,7 @@ Detailed templates in `templates/multi-agent-research-template/`:- `phase_2_mcp_
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |

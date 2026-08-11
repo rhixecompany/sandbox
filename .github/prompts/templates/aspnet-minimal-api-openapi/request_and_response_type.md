@@ -2,8 +2,6 @@
 
 > Extracted from `aspnet-minimal-api-openapi.prompt.md`.
 
-## Request and Response Types
-
 - Define explicit request and response DTOs/models
 - Create clear model classes with proper validation attributes
 - Use record types for immutable request/response objects

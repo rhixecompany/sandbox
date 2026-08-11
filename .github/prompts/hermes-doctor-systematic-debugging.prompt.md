@@ -1,41 +1,41 @@
 ---
 name: hermes-doctor-systematic-debugging
-title: 'Hermes Doctor, Logs, and Systematic Remediation'
-description: 'Run the complete Hermes health and log diagnostic sequence, investigate root causes with systematic-debugging, apply minimal fixes, and verify zero actionable issues remain.'
+title: Hermes Doctor, Logs, and Systematic Remediation
+description: Run the complete Hermes health and log diagnostic sequence, investigate root causes with systematic-debugging, apply minimal fixes, and verify zero actionable issues remain.
 version: 1.0.0
 license: MIT
 author: Alexa
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 skills:
-  - systematic-debugging
-  - hermes-agent
-  - hermes-mcp
-  - verification-before-completion
+- systematic-debugging
+- hermes-agent
+- hermes-mcp
+- verification-before-completion
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "skill:systematic-debugging"
-  - "skill:hermes-agent"
-  - "skill:hermes-mcp"
-  - "skill:verification-before-completion"
+- skill:systematic-debugging
+- skill:hermes-agent
+- skill:hermes-mcp
+- skill:verification-before-completion
 tags:
-  - debugging
-  - diagnostics
-  - doctor
-  - errors
-  - hermes
-  - logs
-  - remediation
-  - system
-  - verification
+- debugging
+- diagnostics
+- doctor
+- errors
+- hermes
+- logs
+- remediation
+- system
+- verification
 trigger: /hermes-doctor-systematic-debugging
 metadata:
   hermes: {}
+scripts: []
 ---
-
 # Hermes Doctor and Systematic Remediation
 
 ## Goal
@@ -99,7 +99,7 @@ hermes logs agent
 For each command record:
 
 | Field | Required |
-| --- | --- |
+|| --- | --- ||
 | Exit code | Yes |
 | Errors | Yes, redacted |
 | Warnings | Yes, redacted |
@@ -177,7 +177,7 @@ Completion requires:
 ## Failure Handling
 
 | Failure | Response |
-| --- | --- |
+|| --- | --- ||
 | `doctor` fails | Stop before `--fix`; investigate the exact failure |
 | `doctor --fix` changes state but remains unhealthy | Re-run doctor, isolate the remaining finding, then fix one issue |
 | Log target missing | Verify with `hermes logs list`; classify as absent/non-applicable versus broken logging |
@@ -191,7 +191,7 @@ Completion requires:
 Return a compact evidence table:
 
 | Component | Initial state | Root cause | Fix | Final verification |
-|---|---|---|---|---|
+|| --- | --- | --- | --- | --- ||
 | Doctor |  |  |  |  |
 | Status |  |  |  |  |
 | Insights |  |  |  |  |
@@ -213,7 +213,7 @@ Also report:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -282,7 +282,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -305,7 +305,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

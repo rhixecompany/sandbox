@@ -2,8 +2,6 @@
 
 > Extracted from `gen-specs-as-issues.prompt.md`.
 
-## 6. Final Review Phase
-
 - Summarize all created specifications
 - Highlight implementation dependencies between features
 - Suggest a logical implementation order

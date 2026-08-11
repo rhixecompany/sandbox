@@ -1,60 +1,55 @@
 ---
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
-description: 'Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across all repos in ./projects.'
+description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across all repos in ./projects.
 version: 1.0.0
 license: MIT
 author: Alexa
 toolsets:
-  - terminal
-  - file
-  - mcp
-  - delegation
+- terminal
+- file
+- mcp
+- delegation
 scripts: []
 skills:
-  - git-multi-repo-orchestration
-  - gh-cli
-  - git-commit
-  - git-helper
-  - git-submodule-workflow
-  - github-pr-workflow
-  - github-repo-management
-  - github-code-review
-  - finishing-a-development-branch
-  - git-history-preserving-migration
-  - monorepo-pr-workflow
-  - workspace-audit
-  - repo-management
+- gh-cli
+- git-commit
+- git-helper
+- git-submodule-workflow
+- github-pr-workflow
+- github-repo-management
+- github-code-review
+- finishing-a-development-branch
+- git-history-preserving-migration
+- workspace-audit
+- repo-management
 formatter: default
 plan: plans/git-multi-repo-orchestration.md
 dependencies:
-  - "skill:git-multi-repo-orchestration"
-  - "skill:gh-cli"
-  - "skill:git-commit"
-  - "skill:git-helper"
-  - "skill:git-submodule-workflow"
-  - "skill:github-pr-workflow"
-  - "skill:github-repo-management"
-  - "skill:github-code-review"
-  - "skill:finishing-a-development-branch"
-  - "skill:git-history-preserving-migration"
-  - "skill:monorepo-pr-workflow"
-  - "skill:workspace-audit"
-  - "skill:repo-management"
-  - "tool:mcp-github"
+- skill:gh-cli
+- skill:git-commit
+- skill:git-helper
+- skill:git-submodule-workflow
+- skill:github-pr-workflow
+- skill:github-repo-management
+- skill:github-code-review
+- skill:finishing-a-development-branch
+- skill:git-history-preserving-migration
+- skill:workspace-audit
+- skill:repo-management
+- tool:mcp-github
 tags:
-  - git
-  - github
-  - submodules
-  - pr
-  - orchestration
-  - multi-repo
-  - workflow
+- git
+- github
+- submodules
+- pr
+- orchestration
+- multi-repo
+- workflow
 trigger: /git-multi-repo-orchestration
 metadata:
   hermes: {}
 ---
-
 ## Goal
 
 Load and use all git skills to run the full git lifecycle across **all repos in `./projects`**:
@@ -212,7 +207,7 @@ Prefer MCP-first per tooling policy: `github` (repo/PR API), `filesystem` (file 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -242,7 +237,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -254,7 +249,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

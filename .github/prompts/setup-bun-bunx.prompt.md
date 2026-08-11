@@ -1,35 +1,40 @@
 ---
 name: setup-bun-bunx
 title: Migrate npm/npx to Bun/Bunx Across Repos
-description: 'Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager, then commit and push.'
+description: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager, then commit and push.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-  - bun
-  - bunx
-  - npm
-  - npx
-  - migration
-  - package-manager
-  - dependencies
+- bun
+- bunx
+- npm
+- npx
+- migration
+- package-manager
+- dependencies
 toolsets:
-  - terminal
-  - file
-  - skills
-  - todo
+- terminal
+- file
+- skills
+- todo
 trigger: /setup-bun-bunx
 skills:
-  - bun-nextjs
-  - bun-shell
-  - pnpm-package-manager
-dependencies: []
+- bun-nextjs
+- bun-shell
+- pnpm-package-manager
+dependencies:
+- skill:bun-nextjs
+- skill:bun-shell
+- skill:pnpm-package-manager
 metadata:
   hermes:
     source: setup-bun-bunx.prompt.txt
     converted: '2026-08-08'
+scripts: []
+formatter: default
+plan: ''
 ---
-
 ## Goal
 
 First **clean up npm/bun remnants and upgrade bun to the latest version** (`bun upgrade`), then update **all usage of `npm` → `bun` and `npx` → `bunx`** in three scopes: this repository, all sub-repositories under it, and the Hermes root (`~/AppData/Local/hermes`). Audit every `package.json`, `*.toml`, and `.npmrc` file, use smaller/leaner dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies, set **bun as the default package manager**, then commit and push in this repo and all sub-repos — debugging and fixing every issue encountered.
@@ -77,20 +82,24 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 ### Phase 0 — Cleanup & Upgrade
 
 1. Confirm the current Bun version and upgrade to latest:
+
    ```bash
    bun --version
    bun upgrade
    bun --version   # confirm version bump
    ```
+
 2. Clean stale npm/bun artifacts (orphan `package-lock.json`, `node_modules/.package-lock.json`, mixed lockfiles).
 
 ### Phase 1 — Audit
 
 1. In **this repo**, list all `npm`/`npx` usage and all manifests:
+
    ```bash
    grep -rInE '\b(npm|npx)\b' --include='*.json' --include='*.toml' --include='*.md' --include='*.sh' --include='*.yml' --include='*.yaml' .
    find . -name 'package.json' -not -path '*/node_modules/*' -not -path '*/.git/*'
    ```
+
 2. Repeat for **sub-repos** and the **Hermes root** (`~/AppData/Local/hermes`).
 3. Write the inventory (file → npm/npx occurrences → dependency list) to a scratchpad.
 
@@ -107,6 +116,7 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
    - Replace heavyweight packages with smaller equivalents (e.g. `lodash` → native/`es-toolkit`) — only where behavior is preserved and tests pass.
    - Prefer devDependencies over dependencies for build-only tools.
 8. Uninstall unused packages:
+
    ```bash
    bun remove <pkg>          # per package
    bun pm prune              # prune extraneous
@@ -121,6 +131,7 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 ### Phase 5 — Verify
 
 12. Run in every touched repo:
+
     ```bash
     bun install
     bun run lint
@@ -128,8 +139,10 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
     bun run check
     bun run format
     ```
+
 13. Fix every error (missing deps, broken scripts, path casing on Windows). Use `bunx` for tools Bun does not bundle.
 14. Confirm no remaining `npm`/`npx` references except documented exceptions:
+
     ```bash
     grep -rInE '\b(npm|npx)\b' --include='*.json' --include='*.toml' --include='*.md' --include='*.sh' --include='*.yml' . | grep -v node_modules
     ```
@@ -137,11 +150,13 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 ### Phase 6 — Commit & Push
 
 15. In **this repo and all sub-repos**, commit and push:
+
     ```bash
     git add -A
     git commit -m "updates"
     git push
     ```
+
 16. Debug and fix all issues (auth, hooks, divergent branches) until push succeeds.
 
 ## Verification

@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Analysis Instructions
-
 When analyzing the workflow file:
 
 1. **Extract Core Purpose**: Identify the primary business objective

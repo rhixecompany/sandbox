@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-issues-for-unmet-specification-requirements.prompt.md`.
 
-## Phases
-
 ### Phase 1: Intake
 
 - Read the request and identify the exact scope.

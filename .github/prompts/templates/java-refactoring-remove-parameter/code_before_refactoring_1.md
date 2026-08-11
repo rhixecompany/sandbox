@@ -2,8 +2,6 @@
 
 > Extracted from `java-refactoring-remove-parameter.prompt.md`.
 
-## Code Before Refactoring 1
-
 ```java
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)
         throws LoadException, DdlException {

@@ -98,6 +98,8 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 
 - | --- | --- | --- | --- | --- || 1 | import-resolution | Kebab-case import paths | 14 | 1 | ✓ || 2 | type-error | Missing await keywords | 1 | 1 | ✓ || 3 | lint-warning | useState in effect | 1 | 2 | ⚠ || … |  |
 
+```
+
 ## Stats
 
 - **Total issues triaged**: NN- **Total files modified**: NN- **Iterations to reach goal**: N- **Final gate status**: [Summary below]
@@ -145,7 +147,7 @@ Detailed templates in `templates/quality-gate-debugger/`:- `final_gate_status.md
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -183,18 +185,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -210,7 +216,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -233,7 +239,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
