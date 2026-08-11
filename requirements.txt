@@ -2,12 +2,13 @@ agent-client-protocol==0.9.0
 aiohappyeyeballs==2.7.1
 aiohttp==3.14.3
 aiosignal==1.4.0
-annotated-doc==0.0.4
+annotated-doc==0.0.5
 annotated-types==0.8.0
 anthropic==0.87.0
 anyio==4.14.2
 ast-serialize==0.8.0
 attrs==26.1.0
+audioop-lts==0.2.2
 av==18.0.0
 boto3==1.42.89
 botocore==1.42.97
@@ -76,7 +77,7 @@ msal==1.37.0
 multidict==6.7.1
 mypy==2.3.0
 mypy-extensions==1.1.0
-nemo-relay==0.6.0
+nemo-relay==0.7.2
 nodeenv==1.10.0
 numpy==2.4.6
 oauthlib==3.3.1
@@ -112,7 +113,7 @@ python-discovery==1.5.1
 python-dotenv==1.2.2
 python-multipart==0.0.32
 python-telegram-bot==22.6
-pytz==2026.2
+pytz==2026.3.post1
 pywin32==311
 pywinpty==2.0.15
 pyyaml==6.0.3
@@ -139,7 +140,7 @@ tenacity==9.1.4
 termcolor==3.3.0
 tokenizers==0.23.1
 tornado==6.5.7
-tqdm==4.69.1
+tqdm==4.70.0
 ty==0.0.21
 types-python-dateutil==2.9.0.20260807
 types-pyyaml==6.0.12.20260724
