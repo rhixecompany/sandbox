@@ -271,6 +271,15 @@ async def main() -> None:
     raw_event = payload.get("event", "")
     event = normalize_event(raw_event)
 
+    # Guard: hermes hooks doctor and manual harness fires use synthetic ids
+    # ("test-session", "unknown", "e2e-*"). Never write per-session JSONL under
+    # a fake id — that pollutes the governance log store.
+    session_id = json_get(payload, "session_id", "unknown")
+    if not session_id or session_id == "unknown" or session_id.startswith(("test", "e2e-")):
+        log_info(f"governance-audit skipped for synthetic session id {session_id!r}")
+        await _log_skip(session_id, "synthetic_session_id")
+        return
+
     log_debug(
         f"governance-audit event={raw_event!r} normalized={event} session_id={json_get(payload, 'session_id', 'unknown')}"
     )

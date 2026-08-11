@@ -156,6 +156,23 @@ async def handle_session_end(payload: dict) -> None:
     working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
     raw_event = payload.get("event", "")
 
+    # Guard: hermes hooks doctor and manual harness fires use synthetic ids
+    # ("test-session", "unknown", "e2e-*"). Never commit a dirty tree under a
+    # fake session — that pollutes history with junk commit messages.
+    if not session_id or session_id == "unknown" or session_id.startswith(("test", "e2e-")):
+        log_info(f"session-auto-commit skipped for synthetic session id {session_id!r}")
+        await write_jsonl(
+            _SKIPS_JSONL,
+            {
+                "event": "skipped",
+                "session_id": session_id,
+                "reason": "synthetic_session_id",
+                "working_dir": working_dir,
+                "timestamp": now_iso(),
+            },
+        )
+        return
+
     repo_root = await _repo_root_for(Path(working_dir) if working_dir else None)
     if repo_root is None:
         log_info(f"No git repository found for session {session_id}; skipping auto-commit")

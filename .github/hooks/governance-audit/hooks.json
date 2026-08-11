@@ -1,7 +1,7 @@
 {
   "name": "governance-audit",
-  "version": "1.1.0",
-  "description": "Governance and compliance audit hooks for session lifecycle and LLM calls. Session end capture derives status/duration/turns from wire fields + accumulated JSONL.",
+  "version": "1.1.1",
+  "description": "Governance and compliance audit hooks for session lifecycle and LLM calls. Session end capture derives status/duration/turns from wire fields + accumulated JSONL. Skips synthetic test session ids.",
   "events": ["on_session_start", "on_session_end", "pre_llm_call"],
   "entrypoint": "hook.sh",
   "config": {

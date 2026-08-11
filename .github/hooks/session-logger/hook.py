@@ -280,6 +280,24 @@ async def main() -> None:
     raw_event = payload.get("event", "")
     event = normalize_event(raw_event)
 
+    # Guard: hermes hooks doctor and manual harness fires use synthetic ids
+    # ("test-session", "unknown", "e2e-*"). Never write per-session JSONL under
+    # a fake id — that pollutes the session log store and report generation.
+    session_id = json_get(payload, "session_id", "unknown")
+    if not session_id or session_id == "unknown" or session_id.startswith(("test", "e2e-")):
+        log_info(f"Session logger skipped for synthetic session id {session_id!r}")
+        await write_jsonl(
+            _LOG_DIR / "skips.jsonl",
+            {
+                "event": "skipped",
+                "hook": ctx["hook_name"],
+                "reason": "synthetic_session_id",
+                "session_id": session_id,
+                "timestamp": now_iso(),
+            },
+        )
+        sys.exit(0)
+
     log_debug(
         f"session-logger event={raw_event!r} normalized={event} session_id={json_get(payload, 'session_id', 'unknown')}"
     )
