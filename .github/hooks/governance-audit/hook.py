@@ -124,7 +124,8 @@ async def handle_on_session_start(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
     working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
-    model = json_get(payload, "extra.model") or json_get(payload, "model") or "unknown"
+    model_cfg = load_model_config()
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or model_cfg["model"]
     platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
 
     record: dict = {
@@ -134,6 +135,7 @@ async def handle_on_session_start(payload: dict) -> None:
         "profile": json_get(payload, "profile", "") or resolve_profile(),
         "user": json_get(payload, "user", "") or resolve_user(),
         "model": model,
+        "provider": json_get(payload, "extra.provider") or json_get(payload, "provider") or model_cfg["provider"],
         "platform": platform,
         "working_dir": working_dir,
         "checks": ["prompt_injection", "secret_leak", "policy_compliance"],
@@ -178,9 +180,11 @@ async def handle_on_session_end(payload: dict) -> None:
     derived_turns = sum(1 for rec in history if rec.get("event") == "pre_llm_call")
 
     duration_ms_raw = json_get(payload, "duration_ms", "")
+    duration_sec_raw = json_get(payload, "duration_seconds", "")
     turns_raw = json_get(payload, "turns", "")
     tokens_in_raw = json_get(payload, "tokens_in", "")
     tokens_out_raw = json_get(payload, "tokens_out", "")
+    exit_code_raw = json_get(payload, "exit_code", "")
 
     record: dict = {
         "event": "session_end",
@@ -194,10 +198,11 @@ async def handle_on_session_end(payload: dict) -> None:
         "working_dir": working_dir,
         "status": status,
         "duration_ms": int(duration_ms_raw) if duration_ms_raw.lstrip("-").isdigit() else derived_duration * 1000,
-        "duration_seconds": derived_duration,
+        "duration_seconds": int(duration_sec_raw) if duration_sec_raw.lstrip("-").isdigit() else derived_duration,
         "turns": int(turns_raw) if turns_raw.isdigit() else derived_turns,
         "tokens_in": int(tokens_in_raw) if tokens_in_raw.isdigit() else 0,
         "tokens_out": int(tokens_out_raw) if tokens_out_raw.isdigit() else 0,
+        "exit_code": int(exit_code_raw) if exit_code_raw.lstrip("-").isdigit() else (1 if status == "failed" else 0),
         "checks": ["prompt_injection", "secret_leak", "policy_compliance"],
     }
 

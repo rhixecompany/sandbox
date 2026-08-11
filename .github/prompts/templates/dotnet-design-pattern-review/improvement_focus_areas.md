@@ -2,8 +2,6 @@
 
 > Extracted from `dotnet-design-pattern-review.prompt.md`.
 
-## Improvement Focus Areas
-
 - **Command Handlers**: Validation in base class, consistent error handling, proper resource management
 - **Factories**: Dependency configuration, service provider integration, disposal patterns
 - **Providers**: Connection management, async patterns, exception handling and logging

@@ -2,8 +2,6 @@
 
 > Extracted from `repo-story-time.prompt.md`.
 
-## Methodology
-
 ### Phase 1: Repository Exploration
 
 **EXECUTE these commands immediately** to understand the repository structure and purpose:

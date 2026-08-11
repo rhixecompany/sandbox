@@ -2,8 +2,6 @@
 
 > Extracted from `update-specification.prompt.md`.
 
-## 3. Requirements, Constraints & Guidelines
-
 [Explicitly list all requirements, constraints, rules, and guidelines. Use bullet points or tables for clarity.]
 
 - **REQ-001**: Requirement 1

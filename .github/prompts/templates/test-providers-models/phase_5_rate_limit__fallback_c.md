@@ -2,8 +2,6 @@
 
 > Extracted from `test-providers-models.prompt.md` for DRY templating.
 
-## Phase 5: Rate Limit & Fallback Chain Analysis (Optional ◇)
-
 **Profile:** `adminbot` | **Persona:** DevOps Engineer
 
 **Goal:** Analyze provider rate limits, cooldown periods, and optimal fallback
@@ -20,7 +18,7 @@ chain configuration.
 ### Steps
 
 | Step | Action                                   | Output                |
-| ---- | ---------------------------------------- | --------------------- |
+|| ---- | ---------------------------------------- | --------------------- ||
 | 5.1  | Analyze rate-limit patterns per provider | Rate limit report     |
 | 5.2  | Test fallback chain switching            | Fallback test results |
 | 5.3  | Recommend optimal provider order         | Config recommendation |

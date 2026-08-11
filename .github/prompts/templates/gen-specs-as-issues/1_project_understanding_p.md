@@ -2,8 +2,6 @@
 
 > Extracted from `gen-specs-as-issues.prompt.md`.
 
-## 1. Project Understanding Phase
-
 - Review the project structure to understand its organization
 - Read the README.md and other documentation files to understand the project's core functionality
 - Identify the existing implementation status by examining:

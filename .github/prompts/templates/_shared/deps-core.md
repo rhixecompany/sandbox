@@ -41,7 +41,7 @@ skills:
 ## Per-Field Notes
 
 | Dep prefix | Type | Purpose |
-| -------- | ------ | --------- |
+|| -------- | ------ | --------- ||
 | `prompt:` | Other prompt | Reference another prompt file for context |
 | `skill:` | Hermes skill | Load a reusable skill module |
 | `tool:` | MCP tool | Declare a required MCP tool |

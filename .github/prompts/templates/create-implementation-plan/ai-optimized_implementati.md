@@ -2,8 +2,6 @@
 
 > Extracted from `create-implementation-plan.prompt.md`.
 
-## AI-Optimized Implementation Standards
-
 - Use explicit, unambiguous language with zero interpretation required
 - Structure all content as machine-parseable formats (tables, lists, structured data)
 - Include specific file paths, line numbers, and exact code references where applicable

@@ -1,60 +1,57 @@
 ---
 name: agents-fix
 title: Agents Sync and Deduplication
-description: 'Sync and deduplicate agent definitions across Hermes, and Copilot with dependency mapping and schema validation.'
+description: Sync and deduplicate agent definitions across Hermes, and Copilot with dependency mapping and schema validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - introspection-only-general
-  - no-git-delete
-  - no-net-fetch
-  - skills-tools-preflight-check
-  - brainstorming
-  - plans-and-specs
-  - dispatching-parallel-agents
-  - subagent-driven-development
-  - systematic-debugging
-  - simplify
-  - acpx-executor
-  - copilot-cli-quickstart
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- acpx-executor
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "prompt:context-map.prompt.md"
-  - "prompt:update-implementation-plan.prompt.md"
-  - "skill:brainstorming"
-  - "skill:plans-and-specs"
-  - "skill:dispatching-parallel-agents"
-  - "skill:subagent-driven-development"
-  - "skill:systematic-debugging"
-  - "skill:simplify"
-  - "skill:acpx-executor"
-  - "skill:copilot-cli-quickstart"
-  - "tool:terminal"
-  - "tool:search_files"
-  - "skill:introspection-only-general"
-  - "skill:no-git-delete"
-  - "skill:no-net-fetch"
-  - "skill:skills-tools-preflight-check"
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- tool:terminal
+- tool:search_files
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
 tags:
-  - agents
-  - ai-assistant
-  - configuration
-  - fix
-  - ml
-  - prompts
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- configuration
+- fix
+- ml
+- prompts
+- typescript
+- workflow
 trigger: /agents-fix
 metadata:
   hermes: {}
 ---
-
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
@@ -135,7 +132,7 @@ Verify that each platform still matches its expected schema and that no agentswe
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -161,7 +158,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

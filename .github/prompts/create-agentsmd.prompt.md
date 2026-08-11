@@ -93,7 +93,10 @@ Use when you need to work on the current workspace or task.
 
 ## Example Template
 
-Use this as a starting template and customize based on the specific project:```markdown# AGENTS.md
+Use this as a starting template and customize based on the specific project:
+
+```markdown
+# AGENTS.md
 
 ## Project Overview[Brief description of the project, its purpose, and key technologies]
 
@@ -125,11 +128,15 @@ ing Instructions- Run all tests: `[command]`- Run unit tests: `[command]`- Run i
 
 ## Additional Notes
 
-- [Any project-specific context]- [Common gotchas or troubleshooting tips]- [Performance considerations]```
+- [Any project-specific context]- [Common gotchas or troubleshooting tips]- [Performance considerations]
+```
 
 ## Working Example from agents.md
 
-Here's a real example from the agents.md website:```markdown# Sample AGENTS.md file
+Here's a real example from the agents.md website:
+
+```markdown
+# Sample AGENTS.md file
 
 ## Dev environment tips
 
@@ -157,7 +164,8 @@ ing instructions- Find the CI plan in the .github/workflows folder.
 
 - Title format: [<project_name
 
-> ] <Title>- Always run `pnpm lint` and `pnpm test` before committing.```
+> ] <Title>- Always run `pnpm lint` and `pnpm test` before committing.
+```
 
 ## Implementation Steps
 

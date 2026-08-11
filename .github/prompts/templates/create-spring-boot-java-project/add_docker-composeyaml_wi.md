@@ -2,8 +2,6 @@
 
 > Extracted from `create-spring-boot-java-project.prompt.md`.
 
-## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services
-
 - Create `docker-compose.yaml` at project root and add following services: `redis:6`, `postgresql:17` and `mongo:8`.
   - redis service should have
     - password `rootroot`

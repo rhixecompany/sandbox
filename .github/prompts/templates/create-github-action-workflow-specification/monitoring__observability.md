@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Monitoring & Observability
-
 ### Key Metrics
 
 - **Success Rate**: [Target percentage]
@@ -13,5 +11,5 @@
 ### Alerting
 
 | Condition   | Severity | Notification Target |
-| ----------- | -------- | ------------------- |
+|| ----------- | -------- | ------------------- ||
 | [Condition] | [Level]  | [Who/Where]         |

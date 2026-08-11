@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-tunit.prompt.md`.
 
-## Migration from xUnit
-
 - Replace `[Fact]` with `[Test]`
 - Replace `[Theory]` with `[Test]` and use `[Arguments]` for data
 - Replace `[InlineData]` with `[Arguments]`

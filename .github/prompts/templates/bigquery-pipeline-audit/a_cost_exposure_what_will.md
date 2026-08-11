@@ -2,8 +2,6 @@
 
 > Extracted from `bigquery-pipeline-audit.prompt.md`.
 
-## A) COST EXPOSURE: What will actually get billed?
-
 Locate every BigQuery job trigger (`client.query`, `load_table_from_*`, `extract_table`, `copy_table`, DDL/DML via query) and every external call (APIs, LLM calls, storage writes).
 
 For each, answer:

@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Input/Output Contracts
-
 ### Inputs
 
 ```yaml

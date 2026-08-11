@@ -2,8 +2,6 @@
 
 > Extracted from `shuffle-json-data.prompt.md`.
 
-## Unacceptable JSON (Default State)
-
 If the default behavior is active, reject files that contain nested objects or inconsistent property names. For example:
 
 ```json

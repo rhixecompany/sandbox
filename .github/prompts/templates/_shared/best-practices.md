@@ -13,7 +13,7 @@ Cross-cutting best practices applicable to all prompts.
 ## Content Rules
 
 | Rule | Description |
-| ------ | ------------- |
+|| ------ | ------------- ||
 | **DRY** | Never repeat the same instruction across sections. Cross-reference instead. |
 | **Action-first** | Lead with the command/action, explain after. |
 | **Verification gates** | Every prompt should have explicit success criteria. |

@@ -2,8 +2,6 @@
 
 > Extracted from `ruby-mcp-server-generator.prompt.md`.
 
-## lib/my_mcp_server/tools/greet_tool.rb Template
-
 ```ruby
 # frozen_string_literal: true
 

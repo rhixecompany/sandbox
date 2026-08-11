@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-xunit.prompt.md`.
 
-## Test Structure
-
 - No test class attributes required (unlike MSTest/NUnit)
 - Use fact-based tests with `[Fact]` attribute for simple tests
 - Follow the Arrange-Act-Assert (AAA) pattern

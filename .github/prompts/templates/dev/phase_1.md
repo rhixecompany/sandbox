@@ -2,8 +2,6 @@
 
 > Extracted from `dev.prompt.md`.
 
-## Phase 1
-
 # Task1
 
 - list all test in src/backuptests and src/tests then triage

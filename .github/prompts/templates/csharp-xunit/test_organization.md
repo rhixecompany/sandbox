@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-xunit.prompt.md`.
 
-## Test Organization
-
 - Group tests by feature or component
 - Use `[Trait("Category", "CategoryName")]` for categorization
 - Use collection fixtures to group tests with shared dependencies

@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-nunit.prompt.md`.
 
-## Test Structure
-
 - Apply `[TestFixture]` attribute to test classes
 - Use `[Test]` attribute for test methods
 - Follow the Arrange-Act-Assert (AAA) pattern

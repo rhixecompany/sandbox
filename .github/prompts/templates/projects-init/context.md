@@ -2,8 +2,6 @@
 
 > Extracted from `projects-init.prompt.md`.
 
-## Context
-
 - **Source reference:** `projects-init.prompt.txt` (raw specification)
 - **Target scope:** `pwd` (workspace root), `docs/`, `.github/prompts/`
 - **Phase 1 outputs:** Consolidated markdown documentation inventory + deleted duplicates

@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-xunit.prompt.md`.
 
-## Assertions
-
 - Use `Assert.Equal` for value equality
 - Use `Assert.Same` for reference equality
 - Use `Assert.True`/`Assert.False` for boolean conditions

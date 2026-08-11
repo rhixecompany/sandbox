@@ -1,41 +1,49 @@
 ---
 name: uk-earnings-research
-title: "UK Earnings Research Pipeline — Better Than Outlier & Attapoll"
-description: "Comprehensive research pipeline using stacked skills to identify superior UK earning platforms, leveraging all prior session data and MCP tools."
+title: UK Earnings Research Pipeline — Better Than Outlier & Attapoll
+description: Comprehensive research pipeline using stacked skills to identify superior UK earning platforms, leveraging all prior session data and MCP tools.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - uk
-  - uk-earnings
-  - income-generation
-  - web-research
-  - skills-pipeline
-  - subagents
+- uk
+- uk-earnings
+- income-generation
+- web-research
+- skills-pipeline
+- subagents
 toolsets:
-  - web
-  - browser
-  - terminal
-  - file
-  - skills
-  - session_search
-  - delegation
-  - clarify
+- web
+- browser
+- terminal
+- file
+- skills
+- session_search
+- delegation
+- clarify
 trigger: /uk-earnings-research
 skills:
-  - using-superpowers
-  - user-communication-preferences
-  - brainstorming
-  - subagent-driven-development
-  - web-research-pipeline
-  - enhance-markdown
-dependencies: []
+- using-superpowers
+- user-communication-preferences
+- brainstorming
+- subagent-driven-development
+- web-research-pipeline
+- enhance-markdown
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:brainstorming
+- skill:subagent-driven-development
+- skill:web-research-pipeline
+- skill:enhance-markdown
 metadata:
   hermes:
     source: uk-earnings-research.prompt.txt
     converted: '2026-08-08'
+scripts: []
+formatter: default
+plan: ''
 ---
-
 # UK Earnings Research Pipeline
 
 ## Goal
@@ -89,7 +97,7 @@ metadata:
 ## Tasks
 
 | #   | Task (Subtask parent)                                                           | Phase   |
-| --- | ------------------------                                                        | ------- |
+|| --- | ------------------------ | ------- ||
 | 1   | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0       |
 | 2   | Map platform categories (sub: 11 brainstormed categories)                       | 1       |
 | 3   | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1       |
@@ -216,7 +224,7 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 ### 2.1 Scoring Matrix (Apply to Every Platform)
 
 | Dimension               | Weight | Measurement                                         |
-| --------------------    | ------ | --------------------------------------------------- |
+|| -------------------- | ------ | --------------------------------------------------- ||
 | **Effective vXNNGN/..** | 30%    | Realistic after disqualifications, wait times       |
 | **Reliability**         | 20%    | Payout consistency, platform age, company stability |
 | **UK Accessibility**    | 15%    | UK sign-up, GBP payout, UK support, no VPN needed   |
@@ -309,7 +317,7 @@ C:\Users\Alexa\Desktop\SandBox\uk-earnings-kit\
 ### 4.2 Required Output Files
 
 | File                                  | Purpose                                                             |
-| ------------------------------------- | ------------------------------------------------------------------- |
+|| ------------------------------------- | ------------------------------------------------------------------- ||
 | `platforms/*/platform_name.md`        | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots) |
 | `references/platform_master_list.csv` | All platforms with scores, filterable                               |
 | `references/scoring_matrix.xlsx`      | Weighted scores, ranked, conditional formatting                     |

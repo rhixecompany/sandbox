@@ -2,8 +2,6 @@
 
 > Extracted from `create-implementation-plan.prompt.md`.
 
-## Output File Specifications
-
 - Save implementation plan files in `/plan/` directory
 - Use naming convention: `[purpose]-[component]-[version].md`
 - Purpose prefixes: `upgrade|refactor|feature|data|infrastructure|process|architecture|design`

@@ -56,7 +56,7 @@ those locally:
 |-------|--------|
 | session_id | payload |
 | timestamp | payload or now |
-| status | `extra.turn_exit_reason` → `extra.status` → `extra.completed/failed/interrupted` booleans → `unknown` |
+| status | `extra.turn_exit_reason` → `extra.status` → `extra.completed/failed/interrupted` booleans → `unknown`; raw repr values (e.g. `text_response(finish_reason=stop)`) are normalized via `lib.normalize_status` to `completed` / `failed` / `interrupted` / `truncated` |
 | duration_seconds | payload `duration_seconds` override → computed from the session_start record timestamp in the same JSONL |
 | duration_ms | payload `duration_ms` override → derived duration × 1000 |
 | turns | payload `turns` override → count of `pre_llm_call` records in the same JSONL |

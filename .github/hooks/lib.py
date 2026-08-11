@@ -268,20 +268,69 @@ async def git_snapshot(cwd: str | None) -> dict:
     }
 
 
+_STATUS_VOCAB = {
+    "completed": "completed",
+    "complete": "completed",
+    "success": "completed",
+    "succeeded": "completed",
+    "stop": "completed",
+    "tool_calls": "completed",
+    "failed": "failed",
+    "failure": "failed",
+    "error": "failed",
+    "interrupted": "interrupted",
+    "interrupt": "interrupted",
+    "cancelled": "interrupted",
+    "canceled": "interrupted",
+    "cancel": "interrupted",
+    "aborted": "interrupted",
+    "abort": "interrupted",
+}
+
+
+def normalize_status(raw: str) -> str:
+    """Collapse raw wire exit values into a small status vocabulary.
+
+    The runtime's ``extra.turn_exit_reason`` on ``on_session_end`` is a
+    stringified response object (e.g. ``text_response(finish_reason=stop)``),
+    never a bare token. Known shapes collapse to ``completed``/``failed``/
+    ``interrupted``; ``finish_reason=length`` becomes ``truncated``. Anything
+    unrecognized is returned verbatim so no signal is lost.
+    """
+    value = (raw or "").strip()
+    lowered = value.lower()
+    if not lowered:
+        return "unknown"
+    lowered = lowered.replace("_", " ").replace("(", " ").replace(")", " ")
+    if "finish reason=stop" in lowered:
+        return "completed"
+    if "finish reason=length" in lowered:
+        return "truncated"
+    if lowered.startswith("text response") or lowered.startswith("tool call"):
+        return "completed"
+    if any(token in lowered for token in ("interrupt", "cancel", "abort")):
+        return "interrupted"
+    if any(token in lowered for token in ("error", "fail", "exception")):
+        return "failed"
+    return _STATUS_VOCAB.get(lowered, value)
+
+
 def resolve_end_status(payload: dict) -> str:
     """Derive a human-readable session status from the fields the runtime
     actually sends on on_session_end.
 
     Wire order: ``extra.turn_exit_reason`` (e.g. ``completed``, ``failed``,
     ``interrupted``) -> ``extra.status`` -> ``extra.completed/failed/
-    interrupted`` booleans -> ``"unknown"``.
+    interrupted`` booleans -> ``unknown``. Every raw value passes through
+    :func:`normalize_status` so repr-shaped exit reasons (e.g.
+    ``text_response(finish_reason=stop)``) collapse to clean tokens.
     """
-    reason = (json_get(payload, "extra.turn_exit_reason") or "").strip().lower()
+    reason = json_get(payload, "extra.turn_exit_reason")
     if reason:
-        return reason
-    status = (json_get(payload, "extra.status") or "").strip().lower()
+        return normalize_status(reason)
+    status = json_get(payload, "extra.status")
     if status:
-        return status
+        return normalize_status(status)
     if str(json_get(payload, "extra.completed", "false")).lower() in ("1", "true", "yes"):
         return "completed"
     if str(json_get(payload, "extra.failed", "false")).lower() in ("1", "true", "yes"):

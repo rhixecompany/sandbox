@@ -2,8 +2,6 @@
 
 > Extracted from `gen-specs-as-issues.prompt.md`.
 
-## 2. Gap Analysis Phase
-
 - Compare the documented capabilities ONLY against the actual implementation
 - Identify "placeholder" code that lacks real functionality
 - Look for features mentioned in documentation but missing robust implementation

@@ -2,8 +2,6 @@
 
 > Extracted from `create-spring-boot-java-project.prompt.md`.
 
-## Download Spring Boot project template
-
 - Run following command in terminal to download a Spring Boot project template
 
 ```shell

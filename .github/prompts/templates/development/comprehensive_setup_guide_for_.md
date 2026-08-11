@@ -2,8 +2,6 @@
 
 > Extracted from `Developement.prompt.md`.
 
-## Comprehensive setup guide for ComicWise - a modern web comic platform built with Next.js 16, PostgreSQL, Redis, and AI-powered features
-
 Personality: Expert Software Engineer, DevOps Specialist, Technical Writer
 Project: ComicWise - Web Comic Platform
 Technologies: Next.js 16, PostgreSQL, Redis, AI-powered features

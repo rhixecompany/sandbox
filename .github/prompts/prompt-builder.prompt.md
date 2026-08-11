@@ -70,7 +70,7 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
-| --- | --- |
+|| --- | --- ||
 | `context-map` | Preflight mapping of reference prompts and affected files |
 | `writing-plans` | Structured prompt authoring and section organization |
 | `writing-skills` | Crafting and optimizing prompts and instructions |
@@ -115,7 +115,7 @@ Detailed templates in `templates/prompt-builder/`:- `phases.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -141,7 +141,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

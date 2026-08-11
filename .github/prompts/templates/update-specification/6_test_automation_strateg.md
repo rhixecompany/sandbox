@@ -2,8 +2,6 @@
 
 > Extracted from `update-specification.prompt.md`.
 
-## 6. Test Automation Strategy
-
 [Define the testing approach, frameworks, and automation requirements.]
 
 - **Test Levels**: Unit, Integration, End-to-End

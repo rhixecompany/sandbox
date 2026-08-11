@@ -5,7 +5,7 @@ Canonical prompt library for this repository.
 ## Structure
 
 | Path | Contents |
-| ------ | ---------- |
+|| ------ | ---------- ||
 | `.github/prompts/*.prompt.md` | Canonical prompts (220+) |
 | `.github/prompts/templates/` | Extracted prompt bodies by trigger |
 | `.github/prompts/.enhance/` | Enhancement and validation tooling |

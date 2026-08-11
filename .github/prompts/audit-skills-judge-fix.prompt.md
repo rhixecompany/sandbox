@@ -6,28 +6,32 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-  - ai-assistant
-  - audit
-  - data
-  - fix
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- ai-assistant
+- audit
+- data
+- fix
+- prompts
+- skills
+- typescript
+- workflow
 trigger: /audit-skills-judge-fix
 formatter: default
 dependencies:
-  - "skill:using-superpowers"
-  - "skill:user-communication-preferences"
-  - "skill:verification-before-completion"
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:verification-before-completion
 metadata:
   hermes: {}
-toolsets: 'None'
+toolsets:
+- terminal
+- file
 scripts: []
-skills: []
-plan: 'None'
+skills:
+- using-superpowers
+- user-communication-preferences
+- verification-before-completion
+plan: None
 ---
-
 ## Goal
 
 Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.
@@ -53,7 +57,7 @@ Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediati
 Full phase instructions live in `templates/audit-skills-judge-fix/phases.md`.
 
 | Order | Phase | Gate |
-| --- | --- | --- |
+|| --- | --- | --- ||
 | 1 | Skills Audit & Inventory | inventory artifacts exist and paths are valid |
 | 2 | Categorize Skills | 0 empty categories; mapping saved |
 | 3 | Deduplicate & Consolidate | duplicates resolved and report written |
@@ -79,7 +83,7 @@ Full phase instructions live in `templates/audit-skills-judge-fix/phases.md`.
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -128,7 +132,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

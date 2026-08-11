@@ -14,7 +14,7 @@ Use this standard verification checklist pattern in prompts.
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | YAML | Frontmatter parses without errors |
 | 2 | Skills | All `dependencies:` and `skills:` reference existing skills |
 | 3 | Trigger | Trigger matches filename stem |

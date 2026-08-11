@@ -13,17 +13,20 @@ Use this to discover all available pages before exploring further.
 ## Core Concepts
 
 ### Namespaces
+
 - Globally unique identifier grouping connections
 - One namespace per application/environment
 - Auto-created if not specified
 
 ### Connections
+
 - Long-lived sessions to MCP servers
 - Store credentials securely (write-only)
 - Include custom metadata for filtering
 - Return serverInfo with name/version
 
 ### Authentication Methods
+
 - **API Key**: Backend only, full namespace access
 - **Service Token**: Browser/mobile/agents, scoped access
 - **OAuth Flow**: Managed by Smithery, no redirect URI config needed
@@ -31,6 +34,7 @@ Use this to discover all available pages before exploring further.
 ## Quick Start
 
 ### CLI
+
 ```bash
 # 1. Log in to Smithery
 smithery auth login
@@ -46,6 +50,7 @@ smithery tool call exa search '{"query": "latest news about MCP"}'
 ```
 
 ### TypeScript SDK
+
 ```typescript
 import { createMCPClient } from '@ai-sdk/mcp';
 import { createConnection } from '@smithery/api/mcp';
@@ -61,6 +66,7 @@ const tools = await mcpClient.tools();
 ## Server Configuration
 
 ### With API Keys
+
 ```bash
 smithery mcp add \
   '@browserbasehq/mcp-browserbase?browserbaseProjectId=your-project-id' \
@@ -69,6 +75,7 @@ smithery mcp add \
 ```
 
 ### OAuth-Enabled Servers
+
 ```bash
 # Returns auth_required with setup URL
 smithery mcp add github
@@ -100,7 +107,7 @@ Tool names prefixed with connection ID for uniqueness.
 ## Connection Status
 
 | Status           | Description                                                                 |
-| ---------------- | --------------------------------------------------------------------------- |
+|| ---------------- | --------------------------------------------------------------------------- ||
 | `connected`      | Ready to use                                                                 |
 | `auth_required`  | OAuth needed; includes `setupUrl`                                           |
 | `input_required` | Needs configuration; includes `setupUrl`, `http` schema, `missing` fields  |

@@ -6,79 +6,78 @@ version: 2.1.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - browser
-  - code_execution
-  - file
-  - mcp
-  - terminal
-  - vision
-  - web
+- browser
+- code_execution
+- file
+- mcp
+- terminal
+- vision
+- web
 scripts: []
 skills:
-  - brainstorming
-  - code-wiki
-  - content-research-writer
-  - gh-cli
-  - git-commit
-  - git-submodule-workflow
-  - github-repo-management
-  - monorepo-pr-workflow
-  - plans-and-specs
-  - spike
-  - systematic-debugging
-  - web-research-pipeline
-  - writing-clearly-and-concisely
-  - writing-skills
-  - subagent-driven-development
+- brainstorming
+- code-wiki
+- content-research-writer
+- gh-cli
+- git-commit
+- git-submodule-workflow
+- github-repo-management
+- plans-and-specs
+- spike
+- systematic-debugging
+- web-research-pipeline
+- writing-clearly-and-concisely
+- writing-skills
+- subagent-driven-development
+- firecrawl-search
+- firecrawl-scrape
 formatter: default
-plan: 'None'
+plan: None
 dependencies:
-  - "prompt:context-map"
-  - "prompt:repo-management"
-  - "prompt:repo-research-pipeline"
-  - "prompt:repo-story-time"
-  - "prompt:update-implementation-plan"
-  - "prompt:web-research-pipeline"
-  - "skill:brainstorming"
-  - "skill:code-wiki"
-  - "skill:content-research-writer"
-  - "skill:gh-cli"
-  - "skill:git-commit"
-  - "skill:git-submodule-workflow"
-  - "skill:github-repo-management"
-  - "skill:monorepo-pr-workflow"
-  - "skill:plans-and-specs"
-  - "skill:spike"
-  - "skill:systematic-debugging"
-  - "skill:web-research-pipeline"
-  - "skill:writing-clearly-and-concisely"
-  - "skill:writing-skills"
-  - "skill:subagent-driven-development"
-  - "skill:firecrawl-search"
-  - "skill:firecrawl-scrape"
-  - "tool:mcp-filesystem"
-  - "tool:mcp-github"
-  - "tool:mcp-memory"
-  - "tool:mcp-sequential-thinking"
-  - "tool:mcp-tavily"
+- prompt:context-map
+- prompt:repo-management
+- prompt:repo-research-pipeline
+- prompt:repo-story-time
+- prompt:update-implementation-plan
+- prompt:web-research-pipeline
+- skill:brainstorming
+- skill:code-wiki
+- skill:content-research-writer
+- skill:gh-cli
+- skill:git-commit
+- skill:git-submodule-workflow
+- skill:github-repo-management
+- skill:plans-and-specs
+- skill:spike
+- skill:systematic-debugging
+- skill:web-research-pipeline
+- skill:writing-clearly-and-concisely
+- skill:writing-skills
+- skill:subagent-driven-development
+- skill:firecrawl-search
+- skill:firecrawl-scrape
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-memory
+- tool:mcp-sequential-thinking
+- tool:mcp-tavily
 tags:
-  - architecture
-  - frontend
-  - git
-  - mcp
-  - onboarding
-  - performance
-  - prompts
-  - security
-  - typescript
-  - vscode
+- architecture
+- frontend
+- git
+- mcp
+- onboarding
+- performance
+- prompts
+- security
+- typescript
+- vscode
 trigger: /repo
 metadata:
   hermes: {}
 mode: agent
 system: You are a research orchestrator. Delegate web research to web-research-pipeline sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or migration — those live in repo-management.prompt.md.
 ---
-
 ## Goal
 
 Research each of the 17 projects under `projects/`. For every project:
@@ -135,11 +134,7 @@ Verify tools and workspace before research begins.**Steps:**1. Test `mcp__tavily
 
 ### Phase 2: Report Writing
 
-Write or update `RESEARCH_REPORT.md` per project using the template in `
-
-## Report Template
-
-`. Research data comes from Phase 1's delegated runs.**Steps per project:**1. If report exists: read current content, merge new findings, remove stale links.2. If report missing: create from template using Phase 1 research output.3. Verify 2–3 key links with`mcp__tavily__tavily_extract` before embedding.4. Enforce size gate: 1KB–5KB. Cut encyclopedic content.**Tasks:**- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (17 new for `mcp-servers`)**Actions:**```read_file("projects/<name
+Write or update `RESEARCH_REPORT.md` per project using the template in `## Report Template`. Research data comes from Phase 1's delegated runs.**Steps per project:**1. If report exists: read current content, merge new findings, remove stale links.2. If report missing: create from template using Phase 1 research output.3. Verify 2–3 key links with`mcp__tavily__tavily_extract` before embedding.4. Enforce size gate: 1KB–5KB. Cut encyclopedic content.**Tasks:**- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (17 new for `mcp-servers`)**Actions:**```read_file("projects/<name
 
 > /RESEARCH_REPORT.md")         # if exists — for UPDATEwrite_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)tool_call(name="mcp__tavily__tavily_extract", arguments={"urls":[url1, url2, url3]})  # verify key links```---
 
@@ -179,11 +174,10 @@ Run these lightweight intros when the user asks simple questions about the repo 
 
 ## Report Template
 
-Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or removetop-level sections. Subsections under `
+Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or remove top-level sections. Subsections under `## Key Findings` are tech-specific and variable.
 
-## Key Findings
-
-` are tech-specific and variable.```markdown# RESEARCH_REPORT.md
+```markdown
+# RESEARCH_REPORT.md
 
 ## Project: <name
 
@@ -242,7 +236,10 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 > | <framework
 > documentation    || Community     | <url
 > | Forum / Discord / Reddit     || Tutorial      | <url
-> | Key tutorial or guide        |```---
+> | Key tutorial or guide        |
+```
+
+---
 
 ## Acceptance Criteria
 
@@ -254,7 +251,7 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Phase | Purpose |
-| ------- | ------- | --------- |
+|| ------- | ------- | --------- ||
 | `brainstorming` | 1 | Explore research angles per project |
 | `plans-and-specs` | 0 | Structure research plan |
 | `systematic-debugging` | 0, 4 | Detect stale/missing reports |
@@ -304,7 +301,7 @@ Templates in `.hermes/archived-prompt-templates/repo.prompts/`:- `README.md` —
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -348,7 +345,7 @@ See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

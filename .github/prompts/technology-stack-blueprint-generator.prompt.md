@@ -1,30 +1,28 @@
 ---
 name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
-description: 'Generates comprehensive technology stack documentation for all projects in the workspace. Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md at the workspace root.'
+description: Generates comprehensive technology stack documentation for all projects in the workspace. Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md at the workspace root.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
-skills:
-  - technology-stack-blueprint-generator
+skills: []
 formatter: default
-plan: 'None'
+plan: None
 tags:
-  - documentation
-  - architecture
-  - technology-stack
-  - blueprint
-  - multi-project
+- documentation
+- architecture
+- technology-stack
+- blueprint
+- multi-project
 trigger: /technology-stack-blueprint-generator
 dependencies: []
 metadata:
   hermes: {}
 ---
-
 # Technology Stack Blueprint Generator
 
 ## Goal
@@ -149,7 +147,7 @@ Write `Technology_Stack_Blueprint.md` at workspace root with:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -179,7 +177,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|---|------|-----------|
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -191,7 +189,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|-------|---------|
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `test-driven-development` | TDD workflow enforcement |
 | `code-review` | Code quality assurance |

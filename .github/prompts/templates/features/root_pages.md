@@ -2,8 +2,6 @@
 
 > Extracted from `features.prompt.md`.
 
-## Root Pages
-
 ### Task: Home Page Enhancement
 
 **File:** `src/app/(root)/page.tsx`

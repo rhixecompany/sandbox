@@ -7,42 +7,45 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
-  - delegation
+- file
+- terminal
+- web
+- delegation
 scripts:
-  - .enhance/comprehensive_enhance.py
-  - .enhance/analyze_prompts.py
-  - .enhance/fix_prompt_artifacts.py
-  - .enhance/fix_fence_glue.py
+- .enhance/comprehensive_enhance.py
+- .enhance/analyze_prompts.py
+- .enhance/fix_prompt_artifacts.py
+- .enhance/fix_fence_glue.py
 skills:
-  - using-superpowers
-  - subagent-driven-development
-  - brainstorming
-  - prompt-engineering-patterns
-  - prompt-management
-  - system-owner-docs
-  - skill-judge
+- using-superpowers
+- subagent-driven-development
+- brainstorming
+- prompt-engineering-patterns
+- prompt-management
+- skill-judge
 dependencies:
-  - "skill:using-superpowers"
-  - "skill:subagent-driven-development"
-  - "skill:brainstorming"
-  - "skill:prompt-engineering-patterns"
-  - "skill:prompt-management"
-  - "skill:system-owner-docs"
-  - "skill:skill-judge"
+- skill:using-superpowers
+- skill:subagent-driven-development
+- skill:brainstorming
+- skill:prompt-engineering-patterns
+- skill:prompt-management
+- skill:skill-judge
 tags:
-  - hermes
-  - prompts
-  - enhancement
-  - library
-  - DRY
-  - workflow
+- hermes
+- prompts
+- enhancement
+- library
+- DRY
+- workflow
 metadata:
-  hermes: {'tags': ['prompts', 'enhancement', 'library']}
+  hermes:
+    tags:
+    - prompts
+    - enhancement
+    - library
+formatter: default
+plan: ''
 ---
-
 ## Goal
 
 Enhance and update all prompts at `./.github/prompts/*.prompt.md` using the DRY principle, prompt engineering best practices, and all appropriate structural sections — personas, profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensure each prompt and all its files are verified, validated, and have zero issues remaining.
@@ -60,7 +63,7 @@ Enhance and update all prompts at `./.github/prompts/*.prompt.md` using the DRY 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -169,7 +172,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Discovery | Analyzer runs, sample prompts reviewed, templates read |
 | 2 | Enhancement | `comprehensive_enhance.py` runs without errors, all prompts updated |
 | 3 | YAML | All prompts pass `yaml.safe_load` — zero parse failures |
@@ -197,7 +200,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow and mandatory startup |
 | `subagent-driven-development` | Implement -> spec-review -> quality-review pipeline within each task |
 | `brainstorming` | Ideation for enhancement strategy and edge case identification |
@@ -209,7 +212,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 ## MCP Servers & Tools
 
 | Tool | Purpose |
-| ------ | --------- |
+|| ------ | --------- ||
 | `filesystem` (MCP) | Read/write prompt files, list directories |
 | `ast-grep` (MCP) | Code search across prompts for patterns |
 | `memory` (MCP) | Persistent cross-session fact storage |

@@ -2,8 +2,6 @@
 
 > Extracted from `bigquery-pipeline-audit.prompt.md`.
 
-## E) SAFE WRITES AND IDEMPOTENCY
-
 Identify every write operation. Flag plain `INSERT`/append with no dedup logic.
 
 Each write should use one of:

@@ -2,8 +2,6 @@
 
 > Extracted from `features.prompt.md`.
 
-## Phase 4: Chapter Reader
-
 ### Task 4.1: Chapter Reader Page ✅
 
 **File:** `src/app/(root)/comics/[slug]/[chapterNumber]/page.tsx`

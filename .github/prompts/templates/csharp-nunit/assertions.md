@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-nunit.prompt.md`.
 
-## Assertions
-
 - Use `Assert.That` with constraint model (preferred NUnit style)
 - Use constraints like `Is.EqualTo`, `Is.SameAs`, `Contains.Item`
 - Use `Assert.AreEqual` for simple value equality (classic style)

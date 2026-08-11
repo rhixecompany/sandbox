@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Change Management
-
 ### Update Process
 
 1. **Specification Update**: Modify this document first
@@ -15,5 +13,5 @@
 ### Version History
 
 | Version | Date   | Changes               | Author   |
-| ------- | ------ | --------------------- | -------- |
+|| ------- | ------ | --------------------- | -------- ||
 | 1.0     | [Date] | Initial specification | [Author] |

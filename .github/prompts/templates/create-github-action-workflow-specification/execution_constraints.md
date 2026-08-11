@@ -2,8 +2,6 @@
 
 > Extracted from `create-github-action-workflow-specification.prompt.md`.
 
-## Execution Constraints
-
 ### Runtime Constraints
 
 - **Timeout**: [Maximum execution time]

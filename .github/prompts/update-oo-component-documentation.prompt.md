@@ -120,6 +120,8 @@ csharp// Update basic usage example to current API
 ```csharp
 // Update advanced configuration patterns to current implementation```- USE-001: Update basic usage examples- USE-002: Refresh advanced configuration patterns- USE-003: Update best practices and recommended patterns
 
+```
+
 ## 6. Quality Attributes
 
 - QUA-001: Update security (authentication, authorization, data protection)- QUA-002: Refresh performance (characteristics, scalability, resource usage)- QUA-003: Update reliability (error handling, fault tolerance, recovery)- QUA-004: Refresh maintainability (standards, testing, documentation)- QUA-005: Update extensibility (extension points, customization options)
@@ -137,7 +139,7 @@ Detailed templates in `templates/update-oo-component-documentation/`:- `legacy_p
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-| ------- | ----------- |
+|| ------- | ----------- ||
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -163,7 +165,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-| --- | ------ | ----------- |
+|| --- | ------ | ----------- ||
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -186,7 +188,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-| ------- | --------- |
+|| ------- | --------- ||
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

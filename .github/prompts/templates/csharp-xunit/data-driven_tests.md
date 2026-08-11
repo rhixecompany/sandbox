@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-xunit.prompt.md`.
 
-## Data-Driven Tests
-
 - Use `[Theory]` combined with data source attributes
 - Use `[InlineData]` for inline test data
 - Use `[MemberData]` for method-based test data

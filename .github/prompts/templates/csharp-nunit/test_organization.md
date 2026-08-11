@@ -2,8 +2,6 @@
 
 > Extracted from `csharp-nunit.prompt.md`.
 
-## Test Organization
-
 - Group tests by feature or component
 - Use categories with `[Category("CategoryName")]`
 - Use `[Order]` to control test execution order when necessary

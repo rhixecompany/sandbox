@@ -2,8 +2,6 @@
 
 > Extracted from `create-implementation-plan.prompt.md`.
 
-## 1. Requirements & Constraints
-
 [Explicitly list all requirements & constraints that affect the plan and constrain how it is implemented. Use bullet points or tables for clarity.]
 
 - **REQ-001**: Requirement 1

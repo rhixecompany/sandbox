@@ -32,7 +32,7 @@ templates/
 ## Shared Templates
 
 | Template | Purpose |
-| ---------- | --------- |
+|| ---------- | --------- ||
 | `_shared/frontmatter.md` | Reusable YAML frontmatter patterns (Hermes + Copilot styles) |
 | `_shared/skill-refs.md` | Standard Hermes skill reference table |
 | `_shared/verification-checklist.md` | Common verification gate patterns |
