@@ -21,6 +21,7 @@ if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
 from lib import (
+    duration_seconds_between,
     git_snapshot,
     json_get,
     load_model_config,
@@ -30,7 +31,9 @@ from lib import (
     normalize_event,
     now_iso,
     platform_snapshot,
+    read_jsonl,
     read_payload,
+    resolve_end_status,
     resolve_profile,
     resolve_user,
     skip_context,
@@ -145,34 +148,70 @@ async def handle_on_session_start(payload: dict) -> None:
 async def handle_on_session_end(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
-    duration_ms = json_get(payload, "duration_ms", "0")
-    turns = json_get(payload, "turns", "0")
-    tokens_in = json_get(payload, "tokens_in", "0")
-    tokens_out = json_get(payload, "tokens_out", "0")
-    status = json_get(payload, "status", "unknown")
-    working_dir = json_get(payload, "working_dir", "")
-    exit_code = json_get(payload, "exit_code", "")
-    duration_seconds = json_get(payload, "duration_seconds", "")
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
+    model_cfg = load_model_config()
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or model_cfg["model"]
+    platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
+    snapshot = platform_snapshot()
+    status = resolve_end_status(payload)
+
+    # The runtime never sends duration/turns/tokens on on_session_end (verified
+    # wire shape: extra.{completed,failed,interrupted,turn_exit_reason}). Derive
+    # what we can from the accumulated session JSONL — the start record gives
+    # duration, each pre_llm_call row is a turn — and treat any future wire
+    # fields as explicit overrides.
+    history = await read_jsonl(_LOG_DIR / f"{session_id}.jsonl")
+    start_ts = next(
+        (rec.get("timestamp", "") for rec in history if rec.get("event") == "session_start"),
+        "",
+    )
+    derived_duration = duration_seconds_between(start_ts, timestamp) if start_ts else 0
+    derived_turns = sum(1 for rec in history if rec.get("event") == "pre_llm_call")
+
+    duration_ms_raw = json_get(payload, "duration_ms", "")
+    duration_sec_raw = json_get(payload, "duration_seconds", "")
+    turns_raw = json_get(payload, "turns", "")
+    tokens_in_raw = json_get(payload, "tokens_in", "")
+    tokens_out_raw = json_get(payload, "tokens_out", "")
+    exit_code_raw = json_get(payload, "exit_code", "")
 
     record: dict = {
         "event": "session_end",
         "session_id": session_id,
         "timestamp": timestamp,
-        "duration_ms": int(duration_ms) if str(duration_ms).isdigit() else 0,
-        "duration_seconds": int(duration_seconds) if str(duration_seconds).isdigit() else 0,
-        "turns": int(turns) if str(turns).isdigit() else 0,
-        "tokens_in": int(tokens_in) if str(tokens_in).isdigit() else 0,
-        "tokens_out": int(tokens_out) if str(tokens_out).isdigit() else 0,
-        "status": status,
+        "profile": json_get(payload, "profile", "") or resolve_profile(),
+        "user": json_get(payload, "user", "") or resolve_user(),
+        "model": model,
+        "provider": json_get(payload, "extra.provider") or json_get(payload, "provider") or model_cfg["provider"],
+        "platform": platform,
         "working_dir": working_dir,
-        "exit_code": int(exit_code) if str(exit_code).lstrip("-").isdigit() else 0,
+        "hostname": snapshot["hostname"],
+        "os": snapshot["os"],
+        "python": snapshot["python"],
+        "command": json_get(payload, "command", ""),
+        "status": status,
+        "duration_ms": int(duration_ms_raw) if duration_ms_raw.lstrip("-").isdigit() else derived_duration * 1000,
+        "duration_seconds": int(duration_sec_raw) if duration_sec_raw.lstrip("-").isdigit() else derived_duration,
+        "turns": int(turns_raw) if turns_raw.isdigit() else derived_turns,
+        "tokens_in": int(tokens_in_raw) if tokens_in_raw.isdigit() else 0,
+        "tokens_out": int(tokens_out_raw) if tokens_out_raw.isdigit() else 0,
+        "exit_code": int(exit_code_raw) if exit_code_raw.lstrip("-").isdigit() else (1 if status == "failed" else 0),
     }
+
+    if working_dir:
+        try:
+            record.update(await git_snapshot(working_dir))
+        except Exception as exc:
+            log_debug(f"session-logger: git snapshot skipped: {exc}")
 
     log_file = _LOG_DIR / f"{session_id}.jsonl"
     try:
         await write_jsonl(log_file, record)
         await _memory_upsert_session(session_id, record)
-        log_info(f"Session end logged: {session_id} ({duration_ms}ms, {turns} turns)")
+        log_info(
+            f"Session end captured: {session_id} status={status} "
+            f"duration={record['duration_seconds']}s turns={record['turns']}"
+        )
     except FileNotFoundError:
         record.setdefault("diagnostics", []).append(f"missing_log_file:{log_file}")
         log_error(f"Session end failed for {session_id}: missing log file at {log_file}")

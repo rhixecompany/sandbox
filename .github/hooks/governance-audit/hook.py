@@ -22,15 +22,19 @@ if str(_LIB_DIR) not in sys.path:
     sys.path.insert(0, str(_LIB_DIR))
 
 from lib import (
+    duration_seconds_between,
     git_snapshot,
     json_get,
+    load_model_config,
     log_debug,
     log_error,
     log_info,
     normalize_event,
     now_iso,
     platform_snapshot,
+    read_jsonl,
     read_payload,
+    resolve_end_status,
     resolve_profile,
     resolve_user,
     skip_context,
@@ -154,32 +158,65 @@ async def handle_on_session_start(payload: dict) -> None:
 async def handle_on_session_end(payload: dict) -> None:
     session_id = json_get(payload, "session_id", "unknown")
     timestamp = json_get(payload, "timestamp", now_iso())
-    duration_ms = json_get(payload, "duration_ms", "0")
-    turns = json_get(payload, "turns", "0")
-    tokens_in = json_get(payload, "tokens_in", "0")
-    tokens_out = json_get(payload, "tokens_out", "0")
-    status = json_get(payload, "status", "unknown")
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
+    model_cfg = load_model_config()
+    model = json_get(payload, "extra.model") or json_get(payload, "model") or model_cfg["model"]
+    platform = json_get(payload, "extra.platform") or json_get(payload, "platform") or ""
+    status = resolve_end_status(payload)
+
+    # Same derivation contract as session-logger: the runtime never sends
+    # duration/turns on on_session_end, so compute them from the accumulated
+    # JSONL (start record timestamp + pre_llm_call rows) and honor any future
+    # wire fields as overrides.
+    current, deprecated = _log_paths(session_id)
+    history = await read_jsonl(current)
+    start_ts = next(
+        (rec.get("timestamp", "") for rec in history if rec.get("event") == "session_start"),
+        "",
+    )
+    derived_duration = duration_seconds_between(start_ts, timestamp) if start_ts else 0
+    derived_turns = sum(1 for rec in history if rec.get("event") == "pre_llm_call")
+
+    duration_ms_raw = json_get(payload, "duration_ms", "")
+    turns_raw = json_get(payload, "turns", "")
+    tokens_in_raw = json_get(payload, "tokens_in", "")
+    tokens_out_raw = json_get(payload, "tokens_out", "")
 
     record: dict = {
         "event": "session_end",
         "session_id": session_id,
         "timestamp": timestamp,
-        "duration_ms": int(duration_ms) if str(duration_ms).isdigit() else 0,
-        "turns": int(turns) if str(turns).isdigit() else 0,
-        "tokens_in": int(tokens_in) if str(tokens_in).isdigit() else 0,
-        "tokens_out": int(tokens_out) if str(tokens_out).isdigit() else 0,
+        "profile": json_get(payload, "profile", "") or resolve_profile(),
+        "user": json_get(payload, "user", "") or resolve_user(),
+        "model": model,
+        "provider": json_get(payload, "extra.provider") or json_get(payload, "provider") or model_cfg["provider"],
+        "platform": platform,
+        "working_dir": working_dir,
         "status": status,
+        "duration_ms": int(duration_ms_raw) if duration_ms_raw.lstrip("-").isdigit() else derived_duration * 1000,
+        "duration_seconds": derived_duration,
+        "turns": int(turns_raw) if turns_raw.isdigit() else derived_turns,
+        "tokens_in": int(tokens_in_raw) if tokens_in_raw.isdigit() else 0,
+        "tokens_out": int(tokens_out_raw) if tokens_out_raw.isdigit() else 0,
         "checks": ["prompt_injection", "secret_leak", "policy_compliance"],
     }
 
-    current, deprecated = _log_paths(session_id)
+    if working_dir:
+        try:
+            record.update(await git_snapshot(working_dir))
+        except Exception as exc:
+            log_debug(f"governance-audit: git snapshot skipped: {exc}")
+
     await _ensure_log_file(current)
     await write_jsonl(current, record)
     if deprecated is not None:
         await _ensure_log_file(deprecated)
         await write_jsonl(deprecated, record)
-    await _memory_upsert_governance(session_id, payload)
-    log_info(f"Governance audit session end logged: {session_id} ({duration_ms}ms, {turns} turns)")
+    await _memory_upsert_governance(session_id, record)
+    log_info(
+        f"Governance audit session end captured: {session_id} status={status} "
+        f"duration={derived_duration}s turns={record['turns']}"
+    )
 
 
 async def handle_pre_llm_call(payload: dict) -> None:

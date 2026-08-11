@@ -151,7 +151,9 @@ async def handle_session_end(payload: dict) -> None:
         return
 
     session_id = json_get(payload, "session_id", "unknown")
-    working_dir = json_get(payload, "working_dir", "")
+    # Envelope sends cwd, not working_dir — honor either so repo discovery
+    # never depends on the hook process's own CWD.
+    working_dir = json_get(payload, "cwd") or json_get(payload, "working_dir") or ""
     raw_event = payload.get("event", "")
 
     repo_root = await _repo_root_for(Path(working_dir) if working_dir else None)
