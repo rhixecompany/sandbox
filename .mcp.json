@@ -11,11 +11,22 @@
 	"mcpServers": {
 		"ast-grep": {
 			"args": ["-y", "@notprolands/ast-grep-mcp"],
-			"command": "bunx"
+			"command": "npx"
 		},
 		"code-sandbox": {
 			"args": ["-y", "node-code-sandbox-mcp"],
-			"command": "bunx"
+			"command": "npx"
+		},
+		"django": {
+			"args": ["-y", "django-mcp"],
+			"command": "npx",
+			"env": {
+				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
+			}
+		},
+		"docs": {
+			"args": ["-y", "docs-mcp", "docs/"],
+			"command": "npx"
 		},
 		"context7": {
 			"type": "http",
@@ -23,7 +34,7 @@
 		},
 		"fetch": {
 			"args": ["-y", "mcp-server-fetch-typescript"],
-			"command": "bunx"
+			"command": "npx"
 		},
 		"filesystem": {
 			"args": [
@@ -33,11 +44,11 @@
 				"C:/Users/Alexa/AppData/Local/hermes",
 				"${workspaceFolder}"
 			],
-			"command": "bunx"
+			"command": "npx"
 		},
 		"github": {
 			"args": ["-y", "@modelcontextprotocol/server-github"],
-			"command": "bunx",
+			"command": "npx",
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
 			}
@@ -48,7 +59,7 @@
 		},
 		"memory": {
 			"args": ["-y", "@modelcontextprotocol/server-memory"],
-			"command": "bunx"
+			"command": "npx"
 		},
 		"neon": {
 			"type": "http",
@@ -56,7 +67,18 @@
 		},
 		"playwright": {
 			"args": ["-y", "@playwright/mcp@0.0.78"],
-			"command": "bunx"
+			"command": "npx"
+		},
+		"postgres": {
+			"args": ["-y", "postgres-mcp"],
+			"command": "npx",
+			"env": {
+				"DATABASE_URL": "${env:DATABASE_URL}"
+			}
+		},
+		"pytest": {
+			"args": ["-y", "pytest-mcp"],
+			"command": "npx"
 		},
 		"sentry": {
 			"type": "http",
@@ -64,7 +86,7 @@
 		},
 		"sequential-thinking": {
 			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-			"command": "bunx"
+			"command": "npx"
 		},
 		"smithery": {
 			"type": "http",

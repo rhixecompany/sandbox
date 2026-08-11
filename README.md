@@ -11,6 +11,7 @@
 
 ## Table of Contents
 
+- [AI Assistant & Copilot Instructions](#-ai-assistant--copilot-instructions)
 - [Technology Stack](#-technology-stack)
 - [Project Architecture](#-project-architecture)
 - [Project Index](#-project-index)
@@ -21,7 +22,28 @@
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## 🏗 Technology Stack
+## 🤖 AI Assistant & Copilot Instructions
+
+**For GitHub Copilot, Claude, or other AI assistants:** See [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
+
+This guide provides:
+- **Quick Start** — Setup for workspace and subprojects
+- **Subproject-Specific Guidance** — Detailed commands & patterns for Bash, Banking, comicwise, and ecom
+- **MCP Server Configuration** — 18 servers (14 configured, 4 recommended)
+- **Common Tasks** — Practical workflows with copy-paste examples
+- **Reference Tables** — Lookup guide for quick answers
+
+**Quick links:**
+- [Bash Toolkit](/.github/copilot-instructions.md#bash--automation-toolkit-projectsbash) — TS automation pipeline
+- [Banking App](/.github/copilot-instructions.md#banking--fintech-app-projectsbanking) — Next.js 16 + Drizzle
+- [Comicwise](/.github/copilot-instructions.md#comicwise--comic-streaming-projectscomicwise) — Next.js 15 + Prisma (quality gates)
+- [Ecom](/.github/copilot-instructions.md#ecom--django--react-projectsecom) — Django + React (dual servers)
+
+---
+
+## Table of Contents
+
+- [Technology Stack](#-technology-stack)
 
 ### Runtimes & Package Managers
 
