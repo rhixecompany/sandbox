@@ -1,7 +1,7 @@
 {
   "name": "session-logger",
-  "version": "1.1.0",
-  "description": "Logs Hermes session lifecycle and prompt events for replay and audit. Session start capture resolves user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload.",
+  "version": "1.2.0",
+  "description": "Logs Hermes session lifecycle and prompt events for replay and audit. Start and end capture resolve user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload; end capture derives status, duration, and turns from wire fields + accumulated JSONL.",
   "events": ["on_session_start", "on_session_end", "pre_llm_call"],
   "entrypoint": "hook.sh",
   "config": {

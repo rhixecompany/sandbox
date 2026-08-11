@@ -183,7 +183,7 @@ async def run_git(
 
 
 # ---------------------------------------------------------------------------
-# Session-start capture helpers
+# Session capture helpers
 # ---------------------------------------------------------------------------
 
 def resolve_user() -> str:
@@ -266,3 +266,42 @@ async def git_snapshot(cwd: str | None) -> dict:
         "git_sha": sha.strip() if code2 == 0 and sha.strip() else "",
         "git_dirty": dirty,
     }
+
+
+def resolve_end_status(payload: dict) -> str:
+    """Derive a human-readable session status from the fields the runtime
+    actually sends on on_session_end.
+
+    Wire order: ``extra.turn_exit_reason`` (e.g. ``completed``, ``failed``,
+    ``interrupted``) -> ``extra.status`` -> ``extra.completed/failed/
+    interrupted`` booleans -> ``"unknown"``.
+    """
+    reason = (json_get(payload, "extra.turn_exit_reason") or "").strip().lower()
+    if reason:
+        return reason
+    status = (json_get(payload, "extra.status") or "").strip().lower()
+    if status:
+        return status
+    if str(json_get(payload, "extra.completed", "false")).lower() in ("1", "true", "yes"):
+        return "completed"
+    if str(json_get(payload, "extra.failed", "false")).lower() in ("1", "true", "yes"):
+        return "failed"
+    if str(json_get(payload, "extra.interrupted", "false")).lower() in ("1", "true", "yes"):
+        return "interrupted"
+    return "unknown"
+
+
+def duration_seconds_between(start_iso: str, end_iso: str) -> int:
+    """Whole seconds between two ISO-8601 timestamps; 0 on any parse failure.
+
+    Handles ``Z`` suffix (UTC) and ``+00:00`` offsets. Hooks must never fail
+    because a timestamp is malformed — callers should treat 0 as "unknown".
+    """
+    if not start_iso or not end_iso:
+        return 0
+    try:
+        a = datetime.fromisoformat(start_iso.replace("Z", "+00:00"))
+        b = datetime.fromisoformat(end_iso.replace("Z", "+00:00"))
+        return max(0, int((b - a).total_seconds()))
+    except (ValueError, TypeError, OverflowError):
+        return 0
