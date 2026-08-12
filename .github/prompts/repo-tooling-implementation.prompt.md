@@ -75,11 +75,11 @@ See `templates/repo-tooling-implementation/README.md` for phases/steps/workflow.
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona | When to Use |
-|| ------- | ----------- ||
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
+| Persona        When to Use                            |
+| -------        -----------                            |
+| **Developer**  Implementation, debugging, refactoring |
+| **Reviewer**   Code review, quality assurance         |
+| **User**       General purpose, operations            |
 
 
 ## Personality
@@ -132,58 +132,59 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate | Criterion |
-|| --- | ------ | ----------- ||
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
+| #    Gate        Criterion                           |
+| ---  ------      -----------                         |
+| 1    Scope       Change matches the original request |
+| 2    Quality     Meets project standards             |
+| 3    Tests       Tests pass (if applicable)          |
+| 4    Regression  No unintended side effects          |
+| 5    Docs        Changes documented if needed        |
 
 
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill | Purpose |
-|| ------- | --------- ||
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
+| Skill                             Purpose                       |
+| -------                           ---------                     |
+| `using-superpowers`               Foundational skill workflow   |
+| `systematic-debugging`            Root cause analysis and fix   |
+| `git-patch-management`            Patch creation and management |
+| `executing-plans`                 Execute plans step by step    |
+| `verification-before-completion`  Validate before claiming done |
 
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server | Purpose |
-|--------|---------|
-| `filesystem` | File read/write operations |
-| `github` | GitHub API operations |
-| `sequential-thinking` | Structured reasoning for complex problems |
-| `ast-grep` | AST-based code search and replace |
-| `fetch` | Web page content extraction |
-| `playwright` | Browser automation for interactive pages |
-| `tavily` | Web search + URL extraction |
+| Server                 Purpose                                   |
+| --------               ---------                                 |
+| `filesystem`           File read/write operations                |
+| `github`               GitHub API operations                     |
+| `sequential-thinking`  Structured reasoning for complex problems |
+| `ast-grep`             AST-based code search and replace         |
+| `fetch`                Web page content extraction               |
+| `playwright`           Browser automation for interactive pages  |
+| `tavily`               Web search + URL extraction               |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook | When | Behavior |
-|------|------|----------|
-| `session-logger` | session start/end | Logs session metadata |
-| `governance-audit` | session events | Audits governance compliance |
-| `session-auto-commit` | session end | Auto-commits session state |
-| `pre-exec-validate.sh` | before commands | Validates command execution |
-| `post-exec-state-log.py` | after commands | Appends state log |
+| Hook                      When               Behavior                     |
+| ------                    ------             ----------                   |
+| `session-logger`          session start/end  Logs session metadata        |
+| `governance-audit`        session events     Audits governance compliance |
+| `session-auto-commit`     session end        Auto-commits session state   |
+| `pre-exec-validate.sh`    before commands    Validates command execution  |
+| `post-exec-state-log.py`  after commands     Appends state log            |
 
 ## Scripts
 
 - `.github/prompts/.enhance/analyze_prompts.py` — Prompt-library analyzer (audit/verify)
 - `.github/hooks/*` — Hook implementations listed in the Hooks section
+
 ## Tasks
 
 - [ ] Understand requirements and scope

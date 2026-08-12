@@ -29,7 +29,7 @@ skills:
 - writing-plans
 - subagent-driven-development
 formatter: default
-plan: None
+plan: null
 dependencies:
 - prompt:repo-research-pipeline
 - skill:finishing-a-development-branch
@@ -106,12 +106,14 @@ Per git-helper skill steps: normalize to `development` + `production`, set `prod
 2. **Show remote candidates:** `git branch -r | grep -v -E "development|production"` — confirm which branches exist on origin.
 3. **Present the list to the user** with a proposed action per branch (delete local / delete remote / keep). Wait for explicit typed approval (e.g. `approved`) before running any deletion.
 4. **Execute only after approval:**
+
    ```bash
    # Local: delete one branch at a time after approval
    git branch -D <branch>
    # Remote: delete one branch at a time after approval
    git push origin --delete <branch> || true
    ```
+
 5. **Set default branch:** `gh repo edit <owner>/<repo> --default-branch production`
 6. **Verify:** `git branch` shows only `development` + `production`.
 
@@ -129,10 +131,10 @@ For each repo, verify `.gitignore` covers: `node_modules/`, `.env`, `*.pyc`, `__
 
 ### Phase 3: Dependency Audit
 
-| Repo type | Tool | Audit command |
-|| ----------- | ------ | --------------- ||
-| JS/TS (Bun) | `bun pm ls` | `bun audit` for vulns |
-| Python | `pip list` | `pip-audit` for vulns |
+| Repo type    Tool         Audit command         |
+| -----------  ------       ---------------       |
+| JS/TS (Bun)  `bun pm ls`  `bun audit` for vulns |
+| Python       `pip list`   `pip-audit` for vulns |
 
 ### Phase 4: CI Workflow Setup
 
@@ -151,11 +153,11 @@ Create `.github/workflows/ci.yml` per repo type (JS/TS uses `oven-sh/setup-bun`,
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona | When to Use |
-|| ------- | ----------- ||
-| **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
+| Persona        When to Use                            |
+| -------        -----------                            |
+| **Developer**  Implementation, debugging, refactoring |
+| **Reviewer**   Code review, quality assurance         |
+| **User**       General purpose, operations            |
 
 ## Personality
 
@@ -181,13 +183,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate | Criterion |
-|| --- | ------ | ----------- ||
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
+| #    Gate        Criterion                           |
+| ---  ------      -----------                         |
+| 1    Scope       Change matches the original request |
+| 2    Quality     Meets project standards             |
+| 3    Tests       Tests pass (if applicable)          |
+| 4    Regression  No unintended side effects          |
+| 5    Docs        Changes documented if needed        |
 
 ## Dependencies
 
@@ -204,39 +206,39 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill | Purpose |
-|| ------- | --------- ||
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
-| `verification-before-completion` | Validate before claiming done |
+| Skill                             Purpose                       |
+| -------                           ---------                     |
+| `using-superpowers`               Foundational skill workflow   |
+| `systematic-debugging`            Root cause analysis and fix   |
+| `git-patch-management`            Patch creation and management |
+| `executing-plans`                 Execute plans step by step    |
+| `verification-before-completion`  Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server | Purpose |
-|--------|---------|
-| `tavily` | Web search + URL extraction |
-| `filesystem` | File read/write operations |
-| `github` | GitHub API operations |
-| `sequential-thinking` | Structured reasoning for complex problems |
-| `ast-grep` | AST-based code search and replace |
-| `fetch` | Web page content extraction |
-| `playwright` | Browser automation for interactive pages |
+| Server                 Purpose                                   |
+| --------               ---------                                 |
+| `tavily`               Web search + URL extraction               |
+| `filesystem`           File read/write operations                |
+| `github`               GitHub API operations                     |
+| `sequential-thinking`  Structured reasoning for complex problems |
+| `ast-grep`             AST-based code search and replace         |
+| `fetch`                Web page content extraction               |
+| `playwright`           Browser automation for interactive pages  |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook | When | Behavior |
-|------|------|----------|
-| `session-logger` | session start/end | Logs session metadata |
-| `governance-audit` | session events | Audits governance compliance |
-| `session-auto-commit` | session end | Auto-commits session state |
-| `pre-exec-validate.sh` | before commands | Validates command execution |
-| `post-exec-state-log.py` | after commands | Appends state log |
+| Hook                      When               Behavior                     |
+| ------                    ------             ----------                   |
+| `session-logger`          session start/end  Logs session metadata        |
+| `governance-audit`        session events     Audits governance compliance |
+| `session-auto-commit`     session end        Auto-commits session state   |
+| `pre-exec-validate.sh`    before commands    Validates command execution  |
+| `post-exec-state-log.py`  after commands     Appends state log            |
 
 ## Scripts
 
