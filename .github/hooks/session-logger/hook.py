@@ -41,6 +41,7 @@ from lib import (
 )
 
 import session_end_capture  # noqa: E402  (hooks dir on sys.path via _LIB_DIR above)
+import session_start_capture  # noqa: E402  (hooks dir on sys.path via _LIB_DIR above)
 
 _LOG_DIR = Path("C:/Users/Alexa/AppData/Local/hermes/logs/sessions")
 _HOOK_PREFIX = "session-logger"
@@ -142,6 +143,17 @@ async def handle_on_session_start(payload: dict) -> None:
         await write_jsonl(log_file, record)
         await _memory_upsert_session(ctx["session_id"], record)
         log_info(f"Session start captured: {ctx['session_id']} ({ctx['model']}@{ctx['provider']})")
+        # Full start capture: session row + git baseline + environment
+        # from state.db/payload -> <session_id>.start.json, consumed by
+        # session-audit-report as the diff anchor for the end changelog.
+        try:
+            capture = await asyncio.to_thread(
+                session_start_capture.run_capture, ctx["session_id"], payload, timestamp
+            )
+            artifact = capture.get("artifact") or capture.get("capture_error") or "?"
+            log_info(f"Session start capture written: {ctx['session_id']} -> {artifact}")
+        except Exception as exc:  # noqa: BLE001 - capture must never break the hook
+            log_debug(f"session-logger: full start capture skipped: {exc}")
     except FileNotFoundError:
         record.setdefault("diagnostics", []).append(f"missing_log_file:{log_file}")
         log_error(f"Session start failed for {ctx['session_id']}: missing log file at {log_file}")
@@ -216,9 +228,14 @@ async def handle_on_session_end(payload: dict) -> None:
         )
         # Full end capture: tools/skills/changelog/errors/prompts from
         # state.db -> <session_id>.end.json, consumed by session-audit-report.
+        # The wire never carries duration/turns, so the derived values are
+        # passed through explicitly (they are already in the lifecycle record).
         try:
+            capture_payload = dict(payload)
+            capture_payload["duration_seconds"] = str(record["duration_seconds"])
+            capture_payload["turns"] = str(record["turns"])
             capture = await asyncio.to_thread(
-                session_end_capture.run_capture, session_id, payload, timestamp
+                session_end_capture.run_capture, session_id, capture_payload, timestamp
             )
             artifact = capture.get("artifact") or capture.get("capture_error") or "?"
             log_info(f"Session end capture written: {session_id} -> {artifact}")
