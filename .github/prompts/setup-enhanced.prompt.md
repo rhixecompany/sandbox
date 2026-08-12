@@ -54,6 +54,10 @@ pnpm test                # Vitest unit tests (jsdom)
 pnpm build               # Production build validation
 ```
 
+All four commands must pass before merging any code.
+
+---
+
 ## 3. 📚 Reference Resolution Hierarchy
 
 > When implementing features, consult these sources in priority order:>>

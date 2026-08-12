@@ -116,14 +116,16 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 2: Short-term Fixes (2-24 hours)
 
-```
-bash   # Performance and reliability improvements   [Azure CLI commands with explanations]
+```bash
+
+# Performance and reliability improvements   [Azure CLI commands with explanations]
 ```
 
 ### Phase 3: Long-term Improvements (1-4 weeks)
 
-```
-bash   # Architectural and preventive measures   [Azure CLI commands and configuration changes]
+```bash
+
+# Architectural and preventive measures   [Azure CLI commands and configuration changes]
 ```
 
 ## 📈 Monitoring Recommendations

@@ -41,10 +41,15 @@ Review seed system files, create new seeders, fix issues, and implement improvem
 ## Architecture
 
 The seed system uses the **Template Method Pattern**:
+
 ```
 BaseSeeder<T>.seed() → loadData() → validateData() → processBatches() → insertBatch()
 ```
-> .seed() → loadData() → validateData() → processBatches() → insertBatch()```- **Abstract methods** each seeder must implement: `getDataSources()`, `getUniqueField()`, `transformData()`, `insertBatch()`- **LookupCache** is shared across all seeders for deduplication (entity name → ID maps)- **SeedOrchestrator** manages dependency order and coordinates seeding- **Entity order**: users → types → authors → artists → genres → comics → comic-images → chapters → chapter-images
+
+- **Abstract methods** each seeder must implement: `getDataSources()`, `getUniqueField()`, `transformData()`, `insertBatch()`
+- **LookupCache** is shared across all seeders for deduplication (entity name → ID maps)
+- **SeedOrchestrator** manages dependency order and coordinates seeding
+- **Entity order**: users → types → authors → artists → genres → comics → comic-images → chapters → chapter-images
 
 ## Tasks
 
@@ -180,3 +185,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
+

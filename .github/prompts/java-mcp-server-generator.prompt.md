@@ -99,7 +99,6 @@ public class ResourceDefinitions {
     }
 }
 ```
-> getResources() {        return List.of(            Resource.builder()                .name("Example Data")                .uri("resource://data/example")                .description("Example resource data")                .mimeType("application/json")                .build(),            Resource.builder()                .name("Configuration")                .uri("resource://config")                .description("Server configuration")                .mimeType("application/json")                .build()        );    }}```
 
 ## ResourceHandlers.java Template
 

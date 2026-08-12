@@ -2,31 +2,28 @@
 """Phase 3 (Class C) — repair collapsed/glued fence blocks using intact history.
 
 Damage shapes handled:
-  S1. Start-line glued opener:  ```lang<first code line>...   (newlines stripped)
-       - Sometimes the rest of the block continues as '>' prefixed lines.
-       - Sometimes the closing ``` and following text are glued on the same line.
-  S3. Odd fence parity per file (fixed by the S1 restores).
+  S1. Start-line glued opener:  ```lang<first code line>...   (newlines collapsed)
+  S2. Glued opener + '>' continuation lines that complete the collapsed block
+  S3. Odd fence parity (opener without closer, extra closers)
 
-Strategy (never fabricate):
-  1. EXACT: current collapsed body (whitespace-normalized) == an intact fence
-     body at 879b4532 -> replace the damaged region with the intact block.
-  2. PREFIX: current body is a prefix of an intact body and the remainder of
-     the intact body appears as the following '>' continuation lines ->
-     replace region with the full intact block (lossless recovery).
-  3. TAIL: current line has extra text glued AFTER the closing ``` -> keep
-     that text as its own line after the restored fence.
-  4. NO_MATCH: structural split only — put the opener on its own line, keep
-     the collapsed content, flag for manual review.
+Repair strategy (never fabricate):
+  - EXACT / PREFIX / TAIL match vs intact history (commit INTACT):
+      replace the damaged region with the lossless intact block (+ followup).
+  - NO match (content enhanced since INTACT): structural split only —
+      fence opener on its own line, content preserved verbatim, flagged
+      [MANUAL REVIEW] in the report.
 
 Usage:
-  python fix_collapsed_fences.py            # dry-run report
+  python fix_collapsed_fences.py            # dry-run
   python fix_collapsed_fences.py --apply    # write changes
+  python fix_collapsed_fences.py --files a.prompt.md b.prompt.md
 """
 import argparse
 import re
 import subprocess
 import sys
 from pathlib import Path
+from typing import Any
 
 ROOT = Path.home() / "Desktop/SandBox"
 PROMPTS = ROOT / ".github/prompts"
@@ -38,6 +35,7 @@ KNOWN_LANGS = [
     "php", "csharp", "cs", "go", "rust", "rs", "html", "css", "sql",
     "dockerfile", "text", "console", "shell", "tsx", "jsx", "xml", "toml",
     "ini", "env", "graphql", "gql", "powershell", "ps1", "diff", "patch",
+    "mermaid", "txt", "zsh", "makefile", "gradle", "properties",
 ]
 
 
@@ -66,17 +64,29 @@ def intact_text(name: str):
 
 
 def intact_fence_bodies(name: str):
-    """Return [(lang, body, start_line, end_line)] from intact version."""
+    """Return [(lang, body, start_line, end_line, followup)] from intact version."""
     text = intact_text(name)
     if text is None:
         return []
     bodies = []
+    ilines = text.split("\n")
     for m in re.finditer(
         r"^(`{3,})([^\s`]*)[ \t]*\n(.*?)^\1[ \t]*$", text, re.M | re.S
     ):
         start = text[: m.start()].count("\n") + 1
         end = start + m.group(3).count("\n")
-        bodies.append((m.group(2), m.group(3), start, end))
+        # followup: lines after the closing fence, up to the next fence or heading
+        followup = ""
+        k = end + 2  # 1-based line after the closing fence -> 0-based index
+        while k < len(ilines):
+            ln = ilines[k]
+            if re.match(r"^(`{3,})", ln) or re.match(r"^#{1,6}\s", ln):
+                break
+            followup += ln + "\n"
+            k += 1
+            if k - (end + 2) > 12:  # cap
+                break
+        bodies.append((m.group(2), m.group(3), start, end, followup.rstrip("\n")))
     return bodies
 
 
@@ -87,7 +97,6 @@ def analyze_line(line: str):
         return None
     opener, glue, rest = m.group(1), m.group(2), m.group(3)
     # Legitimate bare opener: ```lang with nothing glued -> not damage.
-    # Accepts ```, ```text, ```mermaid, ```graph TB, etc.
     if not rest.strip():
         if not glue or glue in KNOWN_LANGS or split_lang_glue(glue)[0] is not None \
                 or re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{0,15}", glue):
@@ -102,22 +111,28 @@ def analyze_line(line: str):
     else:
         body = rest
         has_close = False
-    lang, b2 = split_lang_glue(glue)
-    if b2 is not None and glue != lang:
-        body = b2 + body
+    if glue in KNOWN_LANGS:
+        # ```bash <glued content> — lang is exactly known, rest is body
+        lang = glue
+        body = body.lstrip()
     else:
-        # glue is not a language marker — it's the start of the collapsed body
-        body = glue + body
+        lang, b2 = split_lang_glue(glue)
+        if b2 is not None and glue != lang:
+            body = b2 + body
+        else:
+            # glue is not a language marker — it's the start of the collapsed body
+            body = glue + body
     if not body.strip() and not tail.strip():
         return None
     return ("T1" if has_close else "T2", lang or "", body, tail, has_close)
 
 
-def find_repair(name: str, lines, idx: int, a):
+def find_repair(name: str, lines, idx: int, a) -> dict[str, Any] | None:
     """Determine repair for a damaged line at idx (0-based). Returns dict or None."""
     typ, lang, body, tail, has_close = a
     # Gather region: this line + following '>' continuation lines (raw, keep '>')
     region_lines = [lines[idx]]
+    region_idx = [idx]
     j = idx + 1
     while j < len(lines):
         nxt = lines[j]
@@ -132,6 +147,7 @@ def find_repair(name: str, lines, idx: int, a):
             break
         if nxt.lstrip().startswith(">"):
             region_lines.append(nxt)
+            region_idx.append(j)
             j += 1
         else:
             break
@@ -144,46 +160,90 @@ def find_repair(name: str, lines, idx: int, a):
     region_stripped = norm(body + cont_stripped)
     intact_bodies = intact_fence_bodies(name)
     if not intact_bodies:
-        return {"action": "split", "reason": "no-intact", "region": region_lines}
+        return {"action": "split", "reason": "no-intact", "region": region_lines, "region_idx": region_idx}
 
     best = None
-    for ilang, ibody, istart, iend in intact_bodies:
+    for ilang, ibody, istart, iend, ifollow in intact_bodies:
         ib_norm = norm(ibody)
         if ib_norm and (ib_norm == region_raw or ib_norm == region_stripped):
-            best = ("exact", ilang, ibody, istart, iend)
+            best = ("exact", ilang, ibody, istart, iend, ifollow)
             break
     if best is None:
         # PREFIX: intact body starts with region content (recover lost tail)
-        for ilang, ibody, istart, iend in intact_bodies:
+        for ilang, ibody, istart, iend, ifollow in intact_bodies:
             ib_norm = norm(ibody)
             if ib_norm.startswith(region_raw) and len(ib_norm) > len(region_raw):
-                best = ("prefix", ilang, ibody, istart, iend)
+                best = ("prefix", ilang, ibody, istart, iend, ifollow)
                 break
         if best is None:
-            for ilang, ibody, istart, iend in intact_bodies:
+            for ilang, ibody, istart, iend, ifollow in intact_bodies:
                 ib_norm = norm(ibody)
                 if ib_norm.startswith(region_stripped) and len(ib_norm) > len(region_stripped):
-                    best = ("prefix", ilang, ibody, istart, iend)
+                    best = ("prefix", ilang, ibody, istart, iend, ifollow)
                     break
     if best is None:
-        # TAIL: intact body is a prefix of the region content (extra glued on)
-        for ilang, ibody, istart, iend in intact_bodies:
+        # TAIL: intact body is a prefix of the region content (extra glued on).
+        # The extra may be (a) the block's followup text, (b) followup + one or
+        # more subsequent intact fences, or (c) just a stray closing fence.
+        for k, (ilang, ibody, istart, iend, ifollow) in enumerate(intact_bodies):
             ib_norm = norm(ibody)
-            if ib_norm and (region_raw.startswith(ib_norm) or region_stripped.startswith(ib_norm)):
-                best = ("tail", ilang, ibody, istart, iend)
+            if not ib_norm:
+                continue
+            matched = None
+            if region_raw.startswith(ib_norm):
+                matched = region_raw
+            elif region_stripped.startswith(ib_norm):
+                matched = region_stripped
+            if matched is None:
+                continue
+            extra_norm = matched[len(ib_norm):]
+            # The extra often begins with the closing fence (```) that our
+            # restore already provides; strip it before comparing.
+            if extra_norm.startswith("```"):
+                extra_norm = extra_norm[3:]
+            if not extra_norm:
+                best = ("tail", ilang, ibody, istart, iend, ifollow)
+                break
+            if ifollow and norm(ifollow) == extra_norm:
+                best = ("tail", ilang, ibody, istart, iend, ifollow)
+                break
+            # (b) followup + subsequent fences (e.g. "Make the file
+            # executable:" + a chmod bash block) — reconstruct from intact.
+            extended = ifollow
+            for ilang2, ibody2, istart2, iend2, ifollow2 in intact_bodies[k + 1:]:
+                fence2 = "\n\n```" + (ilang2 + "\n" if ilang2 else "\n") + ibody2 + "\n```"
+                extended += fence2
+                if norm(extended) == extra_norm:
+                    best = ("tail", ilang, ibody, istart, iend, extended)
+                    break
+                if norm(extended).startswith(extra_norm) and len(extra_norm) > 5:
+                    best = ("tail", ilang, ibody, istart, iend, extended)
+                    break
+                # keep extending while extra_norm is longer than current
+                if len(extra_norm) > len(norm(extended)):
+                    continue
+                break
+            if best is not None:
+                break
+            # (c) tiny residue (<=4 chars: stray ```, artifact) — the region
+            # is the intact body plus a glued fence closer: restore losslessly.
+            if len(extra_norm) <= 4:
+                best = ("tail", ilang, ibody, istart, iend, "")
                 break
 
     if best is None:
-        return {"action": "split", "reason": "no-match", "region": region_lines}
+        return {"action": "split", "reason": "no-match", "region": region_lines, "region_idx": region_idx}
 
-    action, ilang, ibody, istart, iend = best
+    action, ilang, ibody, istart, iend, ifollow = best
     return {
         "action": "restore",
         "mode": action,
         "lang": ilang,
         "intact_body": ibody,
+        "followup": ifollow,
         "tail": tail,
         "region": region_lines,
+        "region_idx": region_idx,
     }
 
 
@@ -206,42 +266,44 @@ def build_restored_text(name: str, lines):
             i += 1
             orig_i += 1
             continue
-        region = rep["region"]
+        region = list(rep["region"])
+        region_idx: list[int] = [int(x) for x in rep["region_idx"]]
+        rspan = region_idx[-1] - region_idx[0] + 1  # full span incl. skipped blanks
         orig_start = orig_i + 1  # 1-based original line number of region start
         if rep["action"] == "restore":
-            block = "```" + (rep["lang"] + "\n" if rep["lang"] else "\n")
-            block += rep["intact_body"]
+            block = "```" + (str(rep["lang"]) + "\n" if str(rep["lang"]) else "\n")
+            block += str(rep["intact_body"])
             if not block.endswith("\n"):
                 block += "\n"
             block += "```"
             # keep trailing text glued after the closer as its own line
-            if rep["tail"].strip():
-                block += "\n" + rep["tail"].strip()
+            if str(rep["tail"]).strip():
+                block += "\n" + str(rep["tail"]).strip()
+            # TAIL mode: append the intact followup text (e.g. "Make the file
+            # executable:" + a second fence) so no content is lost.
+            if rep["mode"] == "tail" and str(rep["followup"]).strip():
+                block += "\n\n" + str(rep["followup"]).strip()
             replacement = block.split("\n")
-            out[i : i + len(region)] = replacement
+            out[region_idx[0] : region_idx[-1] + 1] = replacement
             details.append(
                 f"L{orig_start} restore({rep['mode']}, {rep['lang'] or 'none'}): "
                 f"{len(region)} region line(s) -> {len(replacement)} line(s)"
             )
             changed += 1
-            i += len(replacement)
-            orig_i += len(region)
+            i = region_idx[0] + len(replacement)
+            orig_i += rspan
         else:
-            # structural split: opener on own line, keep content collapsed
-            opener = out[i].split("```")[0] + "```"
-            rest = out[i][len(opener):]
-            # if the line ends with a close marker, separate it
-            m2 = re.search(r"(`{3,})\s*$", rest)
-            content = rest
-            closer = ""
-            if m2:
-                content = rest[: m2.start()]
-                closer = m2.group(1)
+            # structural split: use analyzed lang/body (never re-parse)
+            lang, body, tail, has_close = a[1], a[2], a[3], a[4]
+            opener = "```" + (lang + "\n" if lang else "\n")
             new_lines = [opener]
-            if content.strip():
-                new_lines.append(content.rstrip())
-            if closer:
+            if body.strip():
+                new_lines.append(body.rstrip())
+            if has_close:
                 new_lines.append("```")  # normalize to 3 backticks
+            elif tail.strip():
+                # no closer on the line but trailing text — keep it
+                new_lines.append(tail.rstrip())
             out[i : i + 1] = new_lines
             details.append(
                 f"L{orig_start} split (NO_MATCH: {rep['reason']}) -> "

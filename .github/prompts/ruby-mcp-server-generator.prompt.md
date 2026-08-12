@@ -84,31 +84,31 @@ end
 
 ## lib/my_mcp_server/server.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > attr_reader :mcp_server
 > **Full content:**
 
 ## lib/my_mcp_server/tools/greet_tool.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > class GreetTool < MCP::Tool
 > **Full content:**
 
 ## lib/my_mcp_server/tools/calculate_tool.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > class CalculateTool < MCP::Tool
 > **Full content:**
 
 ## lib/my_mcp_server/prompts/code_review_prompt.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > class CodeReviewPrompt < MCP::Prompt
 > **Full content:**
 
 ## lib/my_mcp_server/resources/example_resource.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > class ExampleResource
 > **Full content:**
 
@@ -132,7 +132,13 @@ rescue StandardError => e
   exit 1
 end
 ```
-> e  warn "Error: #{e.message}"  warn e.backtrace.join("\n")  exit 1end```Make the file executable:```bashchmod +x bin/mcp-server```
+
+Make the file executable:
+
+```bash
+chmod +x bin/mcp-server
+
+```
 
 ## test/test_helper.rb Template
 
@@ -146,13 +152,13 @@ require 'minitest/autorun'
 
 ## test/tools/greet_tool_test.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > require 'test_helper'
 > **Full content:**
 
 ## test/tools/calculate_tool_test.rb Template
 
-> # frozen_string_literal: true>
+> `# frozen_string_literal: true`
 > require 'test_helper'
 > **Full content:**
 
@@ -373,3 +379,4 @@ Other language variants of this MCP server generator:
 | Java | [`java-mcp-server-generator.prompt.md`](java-mcp-server-generator.prompt.md) |
 | C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
 | PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
+
