@@ -126,6 +126,7 @@ For EVERY file changed by any generator:1. Read the full file content2. Check:
 ### Phase 6: Generate Implementation Report (Only After All Fixes Verified)
 
 Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
+
 ```markdown
 
 # Dev Imp Report — <date>
@@ -136,10 +137,8 @@ Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
 
 ## Generators Executed
 
-- <name
-
-> — ✅ completed- <name
-> — ✅ completed
+- <name> — ✅ completed
+- <name> — ✅ completed
 
 ## Files Changed
 

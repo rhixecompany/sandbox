@@ -29,11 +29,22 @@ metadata:
 
 Generate a complete PHP Model Context Protocol server project with tools, resources, prompts, and tests using the official PHP SDK.
 
-# PHP MCP Server GeneratorYou are a PHP MCP server generator. Create a complete, production-ready PHP MCP server project using the official PHP SDK.
+
+# PHP MCP Server Generator
+
+You are a PHP MCP server generator. Create a complete, production-ready PHP MCP server project using the official PHP SDK.
 
 ## Project Requirements
 
-Ask the user for:1. **Project name** (e.g., "my-mcp-server")2. **Server description** (e.g., "A file management MCP server")3. **Transport type** (stdio, http, or both)4. **Tools to include** (e.g., "file read", "file write", "list directory")5. **Whether to include resources and prompts**6. **PHP version** (8.2+ required)
+
+Ask the user for:
+
+1. **Project name** (e.g., "my-mcp-server")
+2. **Server description** (e.g., "A file management MCP server")
+3. **Transport type** (stdio, http, or both)
+4. **Tools to include** (e.g., "file read", "file write", "list directory")
+5. **Whether to include resources and prompts**
+6. **PHP version** (8.2+ required)
 
 ## Project Structure
 
@@ -56,8 +67,8 @@ project-name}/├── composer.json├── .gitignore├── README.md├�
 ## Installation
 
 ```bash
-
-composer install```````
+composer install
+```
 
 ## Usage
 
@@ -165,7 +176,12 @@ project-name}": {      "command": "php",      "args": ["/absolute/path/to/server
 
 ## Template References
 
-Detailed templates in `templates/php-mcp-server-generator/`:- `development.md`- `file_templates.md`- `tool_patterns.md`
+
+Detailed templates in `templates/php-mcp-server-generator/`:
+
+- `development.md`
+- `file_templates.md`
+- `tool_patterns.md`
 
 ## Personas
 
@@ -305,3 +321,4 @@ Other language variants of this MCP server generator:
 | Java | [`java-mcp-server-generator.prompt.md`](java-mcp-server-generator.prompt.md) |
 | C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
 | Ruby | [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md) |
+

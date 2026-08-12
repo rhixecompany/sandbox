@@ -90,13 +90,26 @@ Use when you need to work on the current workspace or task.
 
 Always use tools `#search`, `#searchResults`,`#fetch`, `#editFiles`, `#runCommands`, `#todos` if available. Avoid writing code to perform tasks.
 
-## Breaking Change Policy⚠️ **PAUSE for approval** if updates involve:
 
-- Incompatible parameter changes- Security/compliance modifications- Behavioral changes
+## Breaking Change Policy
+
+⚠️ **PAUSE for approval** if updates involve:
+
+
+- Incompatible parameter changes
+- Security/compliance modifications
+- Behavioral changes
 
 ## Output Format
 
-Only display results in table with icons:```markdown| Module | Current | Latest | Status | Action | Docs || --- | --- | --- | --- | --- | --- || avm/res/compute/vm | 0.1.0 | 0.2.0 | 🔄 | Updated | [📖](link) || avm/res/storage/account | 0.3.0 | 0.3.0 | ✅ | Current | [📖](link) |
+
+Only display results in table with icons:
+
+```markdown
+| Module | Current | Latest | Status | Action | Docs |
+| --- | --- | --- | --- | --- | --- |
+| avm/res/compute/vm | 0.1.0 | 0.2.0 | 🔄 | Updated | [📖](link) |
+| avm/res/storage/account | 0.3.0 | 0.3.0 | ✅ | Current | [📖](link) |
 
 ### Summary of Updates
 
@@ -106,7 +119,12 @@ Describe updates made, any manual reviews needed or issues encountered.
 
 ## Icons
 
-- 🔄 Updated- ✅ Current- ⚠️ Manual review required- ❌ Failed- 📖 Documentation
+
+- 🔄 Updated
+- ✅ Current
+- ⚠️ Manual review required
+- ❌ Failed
+- 📖 Documentation
 
 ## Requirements
 
@@ -116,7 +134,10 @@ Describe updates made, any manual reviews needed or issues encountered.
 
 ## Template References
 
-Templates in `templates/update-avm-modules-in-bicep/`:- `phases.md`
+
+Templates in `templates/update-avm-modules-in-bicep/`:
+
+- `phases.md`
 
 ## Personas
 
@@ -197,4 +218,5 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
 

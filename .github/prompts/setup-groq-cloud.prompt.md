@@ -320,6 +320,8 @@ headers = {
 response = requests.get(url, headers=headers)
 
 print(response.json())
+```
+
 ```json
 
 ### OpenAI Compatibility
@@ -333,6 +335,8 @@ We also have our own [Groq Python and Groq TypeScript libraries](https://console
 ### Configuring OpenAI to Use Groq API
 
 To start using Groq with OpenAI's client libraries, pass your Groq API key to the `api_key` parameter and change the `base_url` to `https://api.groq.com/openai/v1`:
+
+```
 
 ```python
 import os
@@ -624,6 +628,8 @@ print(chat_completion.choices[0].message.content)
   "system_fingerprint": "fp_179b0f92c9",
   "x_groq": { "id": "req_01jbd6g2qdfw2adyrt2az8hz4w" }
 }
+```
+
 ```json
 
 [Responses (beta)](https://console.groq.com/docs/api-reference#responses)
@@ -753,6 +759,8 @@ The user identifier.
 
 Example request
 
+```
+
 ```bash
 curl https://api.groq.com/openai/v1/responses -s \
 -H "Content-Type: application/json" \
@@ -823,6 +831,8 @@ curl https://api.groq.com/openai/v1/responses -s \
   "parallel_tool_calls": true,
   "store": false
 }
+```
+
 ```json
 
 [Audio](https://console.groq.com/docs/api-reference#audio)
@@ -857,6 +867,8 @@ The audio URL to translate/transcribe (supports Base64URL). Either a file or a U
 
 * textstring
 The transcribed text.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/audio/transcriptions \
@@ -913,6 +925,8 @@ with open(filename, "rb") as file:
     "id": "req_unique_id"
   }
 }
+```
+
 ```json
 
 [Create translation](https://console.groq.com/docs/api-reference#audio-translation)
@@ -940,6 +954,8 @@ The audio URL to translate/transcribe (supports Base64URL). Either file or url m
 [Response Object](https://console.groq.com/docs/api-reference#audio-translation-returns)
 
 * textstring
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/audio/translations \
@@ -995,6 +1011,8 @@ with open(filename, "rb") as file:
     "id": "req_unique_id"
   }
 }
+```
+
 ```json
 
 [Create speech](https://console.groq.com/docs/api-reference#audio-speech)
@@ -1024,6 +1042,8 @@ The speed of the generated audio.
 [Returns](https://console.groq.com/docs/api-reference#audio-speech-returns)
 
 Returns an audio file in `wav` format.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/audio/speech \
@@ -1093,6 +1113,8 @@ response.write_to_file(speech_file_path)
 
 ```json
 "string"
+```
+
 ```json
 
 [Models](https://console.groq.com/docs/api-reference#models)
@@ -1109,6 +1131,8 @@ List all available [models](https://console.groq.com/docs/models).
 **Show properties**
 * objectstring
 Allowed values: `list`
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/models \
@@ -1222,6 +1246,8 @@ print(models)
     }
   ]
 }
+```
+
 ```json
 
 [Retrieve model](https://console.groq.com/docs/api-reference#models-retrieve)
@@ -1241,6 +1267,8 @@ Allowed values: `model`
 The object type, which is always "model".
 * owned_bystring
 The organization that owns the model.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/models/llama-3.3-70b-versatile \
@@ -1287,6 +1315,8 @@ print(model)
   "public_apps": null,
   "max_completion_tokens": 8192
 }
+```
+
 ```json
 
 [Batches](https://console.groq.com/docs/api-reference#batches)
@@ -1355,6 +1385,8 @@ The request counts for different statuses within the batch.
 * statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/batches \
@@ -1430,6 +1462,8 @@ print(batch.id)
   "completed_at": null,
   "in_progress_at": null
 }
+```
+
 ```json
 
 [Retrieve batch](https://console.groq.com/docs/api-reference#batches-retrieve)
@@ -1482,6 +1516,8 @@ The request counts for different statuses within the batch.
 * statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw \
@@ -1546,6 +1582,8 @@ print(batch.id)
   "completed_at": null,
   "in_progress_at": null
 }
+```
+
 ```json
 
 [List batches](https://console.groq.com/docs/api-reference#batches-list)
@@ -1560,6 +1598,8 @@ List your organization's batches.
 **Show properties**
 * objectstring
 Allowed values: `list`
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/batches \
@@ -1627,6 +1667,8 @@ print(batch_list.data)
     }
   ]
 }
+```
+
 ```json
 
 [Cancel batch](https://console.groq.com/docs/api-reference#batches-cancel)
@@ -1679,6 +1721,8 @@ The request counts for different statuses within the batch.
 * statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
+
+```
 
 ```bash
 curl -X POST https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw/cancel \
@@ -1743,6 +1787,8 @@ print(batch.id)
   "completed_at": null,
   "in_progress_at": null
 }
+```
+
 ```json
 
 [Files](https://console.groq.com/docs/api-reference#files)
@@ -1781,6 +1827,8 @@ The object type, which is always `file`.
 * purposestring
 Allowed values: `batch, batch_output`
 The intended purpose of the file. Supported values are `batch`, and `batch_output`.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/files \
@@ -1856,6 +1904,8 @@ except Exception as e:
   "filename": "batch_file.jsonl",
   "purpose": "batch"
 }
+```
+
 ```json
 
 [List files](https://console.groq.com/docs/api-reference#files-list)
@@ -1870,6 +1920,8 @@ Returns a list of files.
 **Show properties**
 * objectstring
 Allowed values: `list`
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/files \
@@ -1919,6 +1971,8 @@ print(file_list.data)
     }
   ]
 }
+```
+
 ```json
 
 [Delete file](https://console.groq.com/docs/api-reference#files-delete)
@@ -1933,6 +1987,8 @@ Delete a file.
 * idstring
 * objectstring
 Allowed values: `file`
+
+```
 
 ```bash
 curl -X DELETE https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
@@ -1976,6 +2032,8 @@ print(file_delete)
   "object": "file",
   "deleted": true
 }
+```
+
 ```json
 
 [Retrieve file](https://console.groq.com/docs/api-reference#files-retrieve)
@@ -2000,6 +2058,8 @@ The object type, which is always `file`.
 * purposestring
 Allowed values: `batch, batch_output`
 The intended purpose of the file. Supported values are `batch`, and `batch_output`.
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
@@ -2046,6 +2106,8 @@ print(file)
   "filename": "batch_file.jsonl",
   "purpose": "batch"
 }
+```
+
 ```json
 
 [Download file](https://console.groq.com/docs/api-reference#files-download)
@@ -2057,6 +2119,8 @@ Returns the contents of the specified file.
 [Returns](https://console.groq.com/docs/api-reference#files-download-returns)
 
 The file content
+
+```
 
 ```bash
 curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t/content \
@@ -2096,6 +2160,8 @@ print(response)
 
 ```json
 "string"
+```
+
 ```json
 
 [Fine Tuning](https://console.groq.com/docs/api-reference#fine-tuning)
@@ -2111,6 +2177,8 @@ Lists all previously created fine tunings. This endpoint is in closed beta. [Con
 * dataarray
 **Show properties**
 * objectstring
+
+```
 
 ```bash
 curl https://api.groq.com/v1/fine_tunings -s \
@@ -2163,6 +2231,8 @@ print(fine_tunings)
         }
     ]
 }
+```
+
 ```json
 
 [Create fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-create)
@@ -2188,6 +2258,8 @@ Type is the type of fine tuning format such as "lora".
 **Show properties**
 * idstring
 * objectstring
+
+```
 
 ```bash
 curl https://api.groq.com/v1/fine_tunings -s \
@@ -2255,6 +2327,8 @@ print(fine_tunings)
         "fine_tuned_model": "string"
     }
 }
+```
+
 ```json
 
 [Get fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-get)
@@ -2269,6 +2343,8 @@ Retrieves an existing fine tuning by id This endpoint is in closed beta. [Contac
 **Show properties**
 * idstring
 * objectstring
+
+```
 
 ```bash
 curl https://api.groq.com/v1/fine_tunings/:id -s \
@@ -2320,6 +2396,8 @@ print(fine_tuning)
         "fine_tuned_model": "string"
     }
 }
+```
+
 ```json
 
 [Delete fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-delete)
@@ -2333,6 +2411,8 @@ Deletes an existing fine tuning by id This endpoint is in closed beta. [Contact 
 * deletedboolean
 * idstring
 * objectstring
+
+```
 
 ```bash
 curl -X DELETE https://api.groq.com/v1/fine_tunings/:id -s \
@@ -2373,6 +2453,8 @@ client.fine_tunings.delete(id="<id>")
     "object": "fine_tuning",
     "deleted": true
 }
+```
+
 ```json
 
 ### Rate Limits

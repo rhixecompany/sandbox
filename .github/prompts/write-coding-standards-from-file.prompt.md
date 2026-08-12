@@ -102,6 +102,8 @@ fileName}.length
 
 ```text
 
+```
+
 ```markdown
 
 ## 1. Introduction
@@ -138,7 +140,11 @@ fileName}.length
 
 ### `"v", verbose"
 
+```
+
 ```text
+
+```
 
 ```markdown
 
@@ -160,6 +166,8 @@ Use descriptive names. Avoid abbreviations unless well-known.
 - Indentation: **4 spaces**    - Line length: **max 100 characters**    - Encoding: **UTF-8**, no BOM    - End files with a newline
 
 ### Braces (example in C, adjust for your language)
+
+```
 
 ```c
 

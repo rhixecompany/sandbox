@@ -295,7 +295,7 @@ def build_restored_text(name: str, lines):
         else:
             # structural split: use analyzed lang/body (never re-parse)
             lang, body, tail, has_close = a[1], a[2], a[3], a[4]
-            opener = "```" + (lang + "\n" if lang else "\n")
+            opener = "```" + lang  # no trailing \n — join() adds separators
             new_lines = [opener]
             if body.strip():
                 new_lines.append(body.rstrip())

@@ -41,12 +41,15 @@ When asked to create a Ruby MCP server, generate a complete project with this st
 
 ```ruby
 source 'https://rubygems.org'
-gem 'mcp', '~
 
-> 0.4.0'group :development, :test do  gem 'minitest', '~
-> 5.0'  gem 'rake', '~
-> 13.0'  gem 'rubocop', '~
-> 1.50'end```
+gem 'mcp', '~> 0.4.0'
+
+group :development, :test do
+  gem 'minitest', '~> 5.0'
+  gem 'rake', '~> 13.0'
+  gem 'rubocop', '~> 1.50'
+end
+```
 
 ## Rakefile Template
 
@@ -169,9 +172,15 @@ require 'minitest/autorun'
 
 A Model Context Protocol server built with Ruby and the official MCP Ruby SDK.
 
-## Feature
+## Features
 
-s- ✅ Tools: greet, calculate- ✅ Prompts: code_review- ✅ Resources: example-data- ✅ Input/output schemas- ✅ Tool annotations- ✅ Structured content- ✅ Full test coverage
+- ✅ Tools: greet, calculate
+- ✅ Prompts: code_review
+- ✅ Resources: example-data
+- ✅ Input/output schemas
+- ✅ Tool annotations
+- ✅ Structured content
+- ✅ Full test coverage
 
 ## Requirements
 
@@ -179,9 +188,10 @@ s- ✅ Tools: greet, calculate- ✅ Prompts: code_review- ✅ Resources: example
 
 ## Installation
 
-```bashbundle
- install````
+```bash
+bundle install
 ```
+````
 
 ## Usage
 
@@ -221,7 +231,9 @@ my-mcp-server/
 
 ## License
 
-MIT```
+MIT
+
+```
 
 ## Generation Instructions
 
@@ -234,8 +246,8 @@ MIT```
 7. **Implement comprehensive tests** for all tools
 8. **Follow Ruby conventions** (snake_case, modules, frozen_string_literal)
 9. **Add proper error handling** with is_error flag
-1
-10. **Provide both stdio and HTTP** usage examples```
+10. **Provide both stdio and HTTP** usage examples
+```
 
 ## Template References
 

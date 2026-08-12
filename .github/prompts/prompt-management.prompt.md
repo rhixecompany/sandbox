@@ -87,9 +87,10 @@ Produce the current prompt inventory without changing files. The inventory is a 
 
 ### 1.1 Discover files
 
-Collect every prompt artifact under `.github/prompts/`:- `.github/prompts/*.prompt.md`- duplicate directories under `templates/<prompt-name
+Collect every prompt artifact under `.github/prompts/`:
 
-> /`- index`templates/_index.md` if present
+- `.github/prompts/*.prompt.md`
+- duplicate directories under `templates/<prompt-name>/` — index `templates/_index.md` if present
 
 ### 1.2 Parse metadata
 
@@ -199,9 +200,15 @@ Collect all:
 
 ### 5.2 Create missing skills
 
-For each missing skill:- create `~/AppData/Local/hermes/skills/<name
+For each missing skill:
 
-> /SKILL.md`- include minimal viable content:  - frontmatter  - when to use  - workflow  - verification checklist- if the skill already exists elsewhere in repo, import/reference it instead
+- create `~/AppData/Local/hermes/skills/<name>/SKILL.md`
+- include minimal viable content:
+  - frontmatter
+  - when to use
+  - workflow
+  - verification checklist
+- if the skill already exists elsewhere in repo, import/reference it instead
 
 ### 5.3 Create missing scripts
 
