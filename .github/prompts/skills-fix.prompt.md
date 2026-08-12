@@ -146,7 +146,17 @@ Skills moved to correct categories:
 
 ### Phase 3: Batch Audit
 
-Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimplement equivalent logic in `execute_code`. For each skill in batches of 7:1. Read SKILL.md content2. Check: frontmatter present, required keys, boilerplate corruption3. Check: required sections (with variant matching)4. Check: heading hierarchy, code fence parity, table pipe consistency5. Check: stale patterns, duplicate headings, placeholder text6. Assign grade (A/A-/B/C/F) and write per-skill report7. Append to master index
+
+Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) or
+implement equivalent logic in `execute_code`. For each skill in batches of 7:
+
+1. Read SKILL.md content
+2. Check: frontmatter present, required keys, boilerplate corruption
+3. Check: required sections (with variant matching)
+4. Check: heading hierarchy, code fence parity, table pipe consistency
+5. Check: stale patterns, duplicate headings, placeholder text
+6. Assign grade (A/A-/B/C/F) and write per-skill report
+7. Append to master index
 
 ### Phase 4: Generate Plan and Execution Prompt
 
@@ -162,6 +172,8 @@ Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimp
 # For unclosed code fences: append closing fencewith open(skill_path, 'a', encoding='utf-8') as f:    f.write("\n```\n")````**C-grade next** — Fix major issues (boilerplate `
 
 ## When to Use`):
+
+```
 
 ```python
 # F3 fix pattern:
@@ -191,9 +203,20 @@ content = content.replace(
 
 ## Tasks
 
-- [ ] Run `hermes skills update` for latest official versions- [ ] Run `hermes skills list` and `find` for inventory- [ ] Reorganize misplaced root-level skills to correct categories- [ ] Remove confirmed duplicate skills- [ ] Batch-audit all SKILL.md files in groups of 7- [ ] Write per-skill reports to `docs/<category
-
-> /<skill>/skills-debug-context.md`- [ ] Write master index to`docs/skills-debug-context.md`- [ ] Write remediation plan to`docs/plan/skills-debug-plan.md`- [ ] Write execution prompt to`prompts/skills-debug-prompt.prompt.md`- [ ] Fix all F-grade skills (critical issues)- [ ] Fix all C-grade skills (major issues)- [ ] Fix B-grade skills in batches of 7- [ ] Re-run audit and verify F=0, C=0- [ ] Update plan checklist and commit
+- [ ] Run `hermes skills update` for latest official versions
+- [ ] Run `hermes skills list` and `find` for inventory
+- [ ] Reorganize misplaced root-level skills to correct categories
+- [ ] Remove confirmed duplicate skills
+- [ ] Batch-audit all SKILL.md files in groups of 7
+- [ ] Write per-skill reports to `docs/<category>/<skill>/skills-debug-context.md`
+- [ ] Write master index to `docs/skills-debug-context.md`
+- [ ] Write remediation plan to `docs/plan/skills-debug-plan.md`
+- [ ] Write execution prompt to `.github/prompts/skills-debug-prompt.prompt.md`
+- [ ] Fix all F-grade skills (critical issues)
+- [ ] Fix all C-grade skills (major issues)
+- [ ] Fix B-grade skills in batches of 7
+- [ ] Re-run audit and verify F=0, C=0
+- [ ] Update plan checklist and commit
 
 ## Actions
 
@@ -212,7 +235,11 @@ content = content.replace(
 
 ## Subagents
 
-When processing B-grade batch remediations, dispatch in parallel using:```pythondelegate_task(tasks=[
+
+When processing B-grade batch remediations, dispatch in parallel using:
+
+```python
+delegate_task(tasks=[
 
 "goal": "Fix B-grade issues in batch: skill-a, skill-b, skill-c, skill-d, skill-e, skill-f, skill-g",     "context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",     "toolsets": ["file", "terminal"]},    # up to 3 concurrent batches])```
 
@@ -287,4 +314,5 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
+
 

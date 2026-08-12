@@ -32,11 +32,23 @@ metadata:
 
 Reusable prompt for ComicWise development sessions.
 
-# ComicWise Development Prompt**Version**: 1.0 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Ready**: ✅ Yes
+
+# ComicWise Development Prompt
+
+**Version**: 1.0 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Ready**: ✅ Yes
 
 ## Project State Summary
 
-**ComicWise** is a production-ready Next.js 16.1.6 manga/comic reader with:- ✅ Phase 4.3 (Reading Analytics) complete- ✅ Batch 4 (Code Audit & Standardization) complete- ✅ 241/241 tests passing (zero regressions)- ✅ 0 TypeScript errors enforced- ✅ 100% dark mode coverage- ✅ WCAG 2.1 AA accessibility- ✅ 98/100 architecture quality score
+
+**ComicWise** is a production-ready Next.js 16.1.6 manga/comic reader with:
+
+- ✅ Phase 4.3 (Reading Analytics) complete
+- ✅ Batch 4 (Code Audit & Standardization) complete
+- ✅ 241/241 tests passing (zero regressions)
+- ✅ 0 TypeScript errors enforced
+- ✅ 100% dark mode coverage
+- ✅ WCAG 2.1 AA accessibility
+- ✅ 98/100 architecture quality score
 
 ### Tech Stack
 
@@ -51,7 +63,16 @@ Reusable prompt for ComicWise development sessions.
 ## Quick Start (New Session)
 
 ```bash
-# 1. Install & setuppnpm installcp .env.local.example .env.local    # Edit with your DATABASE_URL, AUTH_SECRETpnpm db:push# 2. Start developmentpnpm dev                            # Port 3000, Turbopack# 3. Run quality gatespnpm validate                       # Runs: type-check, lint:fix, test, health checks
+# 1. Install & setup
+pnpm install
+cp .env.local.example .env.local    # Edit with your DATABASE_URL, AUTH_SECRET
+pnpm db:push
+
+# 2. Start development
+pnpm dev                            # Port 3000, Turbopack
+
+# 3. Run quality gates
+pnpm validate                       # Runs: type-check, lint:fix, test, health checks
 ```
 
 ## Essential Commands
@@ -83,7 +104,20 @@ Reusable prompt for ComicWise development sessions.
 ## Path Aliases (tsconfig.json)
 
 ```typescript
-@/*        → ./src/*ui         → ./src/components/ui/*database   → ./src/database/*schemas    → ./src/schemas/*env        → ./src/lib/env.tshooks      → ./src/hooks/*appConfig  → ./appConfig.tslib        → ./src/lib/*types      → ./src/types/*components → ./src/components/*utils      → ./src/lib/utils.tsassets     → ./src/assets/*styles     → ./src/styles/*tests      → ./src/tests/*
+@/*        → ./src/*
+ui         → ./src/components/ui/*
+database   → ./src/database/*
+schemas    → ./src/schemas/*
+env        → ./src/lib/env.ts
+hooks      → ./src/hooks/*
+appConfig  → ./appConfig.ts
+lib        → ./src/lib/*
+types      → ./src/types/*
+components → ./src/components/*
+utils      → ./src/lib/utils.ts
+assets     → ./src/assets/*
+styles     → ./src/styles/*
+tests      → ./src/tests/*
 ```
 
 ## Common Patterns
@@ -94,7 +128,15 @@ Reusable prompt for ComicWise development sessions.
 
 ## Database Schema Facts
 
-- **`comic.rating`** = `decimal(10,1)` — aggregate with `AVG(rating)`. The `rating.rating` column = `integer` (1–5 stars)- **`comicStatus` enum**: "Ongoing", "Hiatus", "Completed", "Dropped", "Season End", "Coming Soon"- **`user.id`** = `text` (UUID string), not integer- **`bookmark`** = composite PK on `(userId, comicId)` → use `onConflictDoUpdate` for upserts- **`bookmark.status`** = `text` field (default "Reading"), not pgEnum- **4 enums total**: `userRole`, `comicStatus`, `resourceEnum`, `actionEnum`- **Soft deletes**: Only `user` and `comment` tables have `deletedAt` → filter on those tables only- **Cascade deletes**: Most FKs have `{ onDelete: "cascade" }`. Exceptions: `comic.authorId/artistId/typeId`, `bookmark.lastReadChapterId` (no cascade); `auditLog.userId` (`set null`)
+
+- **`comic.rating`** = `decimal(10,1)` — aggregate with `AVG(rating)`. The `rating.rating` column = `integer` (1–5 stars)
+- **`comicStatus` enum**: "Ongoing", "Hiatus", "Completed", "Dropped", "Season End", "Coming Soon"
+- **`user.id`** = `text` (UUID string), not integer
+- **`bookmark`** = composite PK on `(userId, comicId)` → use `onConflictDoUpdate` for upserts
+- **`bookmark.status`** = `text` field (default "Reading"), not pgEnum
+- **4 enums total**: `userRole`, `comicStatus`, `resourceEnum`, `actionEnum`
+- **Soft deletes**: Only `user` and `comment` tables have `deletedAt` → filter on those tables only
+- **Cascade deletes**: Most FKs have `{ onDelete: "cascade" }`. Exceptions: `comic.authorId/artistId/typeId`, `bookmark.lastReadChapterId` (no cascade); `auditLog.userId` (`set null`)
 
 ## Test
 
@@ -107,7 +149,14 @@ ing Patterns>
 ## Quality Gate (Must Pass Before Commits)
 
 ```bash
-# Run all quality gates at oncepnpm validate# Or run individuallypnpm type-check     # Must be 0 errors (blocks deployment)pnpm lint:fix       # Auto-fix and validatepnpm test           # Must pass 241/241 (no regressions)pnpm build          # Must succeed (production build)
+# Run all quality gates at once
+pnpm validate
+
+# Or run individually
+pnpm type-check     # Must be 0 errors (blocks deployment)
+pnpm lint:fix       # Auto-fix and validate
+pnpm test           # Must pass 241/241 (no regressions)
+pnpm build          # Must succeed (production build)
 ```
 
 ## Environment Variables
@@ -115,10 +164,18 @@ ing Patterns>
 **Required** (in `.env.local`):
 
 ```
-DATABASE_URL=postgresql://user:password@host:port/databaseAUTH_SECRET=openssl rand -hex 32```**Optional** (see `.env.local.example` for full list):
+DATABASE_URL=postgresql://user:password@host:port/database
+AUTH_SECRET=openssl rand -hex 32
+```
 
-- `AUTH_GITHUB_ID`, `AUTH_GITHUB_SECRET`- `AUTH_KEYCLOAK_URL`, etc.
-- `NEXTAUTH_URL` (override default)All validated via `src/lib/env.ts` at startup using Zod.
+**Optional** (see `.env.local.example` for full list):
+
+
+- `AUTH_GITHUB_ID`, `AUTH_GITHUB_SECRET`
+- `AUTH_KEYCLOAK_URL`, etc.
+- `NEXTAUTH_URL` (override default)
+
+All validated via `src/lib/env.ts` at startup using Zod.
 
 ## Reference Documentation
 
@@ -134,21 +191,50 @@ DATABASE_URL=postgresql://user:password@host:port/databaseAUTH_SECRET=openssl ra
 
 ## When Stuck
 
-1. **Architecture questions** — Check `.github/copilot-instructions.md` (2500+ lines) or ask about system design2. **Component issues** — Reference `.github/instructions/design-system.instructions.md`3. **Database/ORM** — Review DAL examples (eager loading with `.with()`)4. **Type errors** — Use `getEnv()` not `process.env`, import types with `import type`5. **Tests failing** — Check mocks in `src/tests/setup-env.ts`6. **Performance** — Reference `.github/instructions/performance-optimization.instructions.md`
+
+1. **Architecture questions** — Check `.github/copilot-instructions.md` (2500+ lines) or ask about system design
+2. **Component issues** — Reference `.github/instructions/design-system.instructions.md`
+3. **Database/ORM** — Review DAL examples (eager loading with `.with()`)
+4. **Type errors** — Use `getEnv()` not `process.env`, import types with `import type`
+5. **Tests failing** — Check mocks in `src/tests/setup-env.ts`
+6. **Performance** — Reference `.github/instructions/performance-optimization.instructions.md`
 
 ## Development Workflow
 
-1. **Start session**: `pnpm install && pnpm db:push && pnpm dev`2. **Make changes**: Follow patterns above, run `pnpm validate` frequently3. **Commit**: Ensure `pnpm validate` passes (0 errors, 241/241 tests)4. **Deploy**: Run `pnpm build` for production readiness5. **Debug**: Use `pnpm test --watch` or `pnpm test:ui --debug` for debugging
+
+1. **Start session**: `pnpm install && pnpm db:push && pnpm dev`
+2. **Make changes**: Follow patterns above, run `pnpm validate` frequently
+3. **Commit**: Ensure `pnpm validate` passes (0 errors, 241/241 tests)
+4. **Deploy**: Run `pnpm build` for production readiness
+5. **Debug**: Use `pnpm test --watch` or `pnpm test:ui --debug` for debugging
 
 ## Next Phase
 
 **Phase 4.4 (Social Features)**: Reviews, ratings, sharing
 
-- **Estimated Duration**: 4-5 days- **Dependencies**: ✅ Phase 4.3 complete, all gates passing- **Success Criteria**: 0 type errors, 250+ passing tests, production build**Future Phases**:- **Phase 4.5** — Mobile optimization & PWA- **Phase 6** — Advanced features---**Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
+
+- **Estimated Duration**: 4-5 days
+- **Dependencies**: ✅ Phase 4.3 complete, all gates passing
+- **Success Criteria**: 0 type errors, 250+ passing tests, production build
+
+**Future Phases**:
+
+- **Phase 4.5** — Mobile optimization & PWA
+- **Phase 6** — Advanced features
+
+---
+
+**Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
 
 ## Template References
 
-Detailed templates in `templates/comicwise-development/`:- `coding_rules_enforced.md`- `common_patterns.md`- `project_structure.md`- `testing_patterns.md`
+
+Detailed templates in `templates/comicwise-development/`:
+
+- `coding_rules_enforced.md`
+- `common_patterns.md`
+- `project_structure.md`
+- `testing_patterns.md`
 
 ## Personas
 
@@ -272,3 +358,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+

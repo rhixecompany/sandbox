@@ -141,9 +141,24 @@ sql-- Identify slow queriesSELECT query, calls, total_time, mean_time, rowsFROM 
 
 ## Query Performance Analysis
 
-**Original Query**:[Original SQL with performance issues]**Issues Identified**:- Sequential scan on large table (Cost: 15000.00)- Missing index on frequently queried column- Inefficient join order**Optimized Query**:[Improved SQL with explanations]**Recommended Indexes**:```sqlCREATE INDEX idx_table_column ON table(column);````**Performance Impact**: Expected 80% improvement in execution time````
+**Original Query**:
+[Original SQL with performance issues]
 
-```
+**Issues Identified**:
+- Sequential scan on large table (Cost: 15000.00)
+- Missing index on frequently queried column
+- Inefficient join order
+
+**Optimized Query**:
+[Improved SQL with explanations]
+
+**Recommended Indexes**:
+```sql
+CREATE INDEX idx_table_column ON table(column);
+````
+
+**Performance Impact**: Expected 80% improvement in execution time
+
 ## 🚀 Advanced PostgreSQL Features
 
 > -- Running totals and rankings

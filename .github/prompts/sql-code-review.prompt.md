@@ -143,7 +143,8 @@ sql-- Verify referential integritySELECT o.user_idFROM orders oLEFT JOIN users u
 > **Issue**: [Detailed explanation of the problem]
 > **Full content:**
 
-```
+````
+
 ## Template References
 
 Detailed templates in `templates/sql-code-review/`:- `code_quality__maintainability.md`- `common_anti-patterns.md`- `database-specific_best_practic.md`- `performance_optimization.md`- `priority_category_brief_descri.md`- `security_analysis.md`- `sql_review_checklist.md`

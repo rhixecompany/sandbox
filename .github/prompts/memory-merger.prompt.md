@@ -96,32 +96,56 @@ sMemory instructions can be stored in two scopes:- **Global** (`global` or `user
 
 ### 1. Parse Input and Read Files
 
-- **Extract** domain and scope from user input- **Determine** file paths:  - Global: `<global-prompts
-
-> /{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md` - Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`- The user can have mistyped the domain, if you don't find the memory file, glob the directory and determine if there may be a match there. Ask the user for input if in doubt.
+- **Extract** domain and scope from user input
+- **Determine** file paths:
+  - Global: `<global-prompts>/{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md`
+  - Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`
+- The user can have mistyped the domain, if you don't find the memory file, glob the directory and determine if there may be a match there. Ask the user for input if in doubt.
 
 - **Read** both files (memory file must exist; instruction file may not)
 
 ### 2. Analyze and Propose
 
-Review all memory sections and present them for merger consideration:```
 
-## Proposed Memories for Merger>
+Review all memory sections and present them for merger consideration:
+
+```
+
+## Proposed Memories for Merger
 
 ### Memory: [Headline]
 
 > **Content:** [Key points]
+```
 
 ## Example
 
 ```
-User: "/memory-merger
+User: "/memory-merger >clojure"
 
-> clojure"Agent:1. Reads clojure-memory.instructions.md and clojure.instructions.md2. Proposes 3 memories for merger3. [STOPS]User: "go"Agent:4. Defines quality bar for 10/105. Merges new instructions candidate, iterates to 10/106. Updates clojure.instructions.md7. Cleans clojure-memory.instructions.md```
+Agent:
+1. Reads clojure-memory.instructions.md and clojure.instructions.md
+2. Proposes 3 memories for merger
+3. [STOPS]
+
+User: "go"
+
+Agent:
+4. Defines quality bar for 10/10
+5. Merges new instructions candidate, iterates to 10/10
+6. Updates clojure.instructions.md
+7. Cleans clojure-memory.instructions.md
+```
 
 ## Template References
 
-Templates in `templates/memory-merger/`:- `example.md`- `phases.md`- `process.md`- `proposed_memories_for_mer.md`
+
+Templates in `templates/memory-merger/`:
+
+- `example.md`
+- `phases.md`
+- `process.md`
+- `proposed_memories_for_mer.md`
 
 ## Personas
 
@@ -202,3 +226,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+

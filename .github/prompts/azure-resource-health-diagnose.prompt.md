@@ -111,34 +111,43 @@ Use when you need to work on the current workspace or task.
 ### Phase 1: Immediate Actions (0-2 hours)
 
 ```bash
-
-   # Critical fixes to restore service   [Azure CLI commands with explanations]```   ````
+# Critical fixes to restore service
+[Azure CLI commands with explanations]
+```
 
 ### Phase 2: Short-term Fixes (2-24 hours)
 
 ```bash
-
-# Performance and reliability improvements   [Azure CLI commands with explanations]
+# Performance and reliability improvements
+[Azure CLI commands with explanations]
 ```
 
 ### Phase 3: Long-term Improvements (1-4 weeks)
 
 ```bash
-
-# Architectural and preventive measures   [Azure CLI commands and configuration changes]
+# Architectural and preventive measures
+[Azure CLI commands and configuration changes]
 ```
 
 ## 📈 Monitoring Recommendations
 
-- **Alerts to Configure**: [List of recommended alerts]   - **Dashboards to Create**: [Monitoring dashboard suggestions]   - **Regular Health Checks**: [Recommended frequency and scope]
+- **Alerts to Configure**: [List of recommended alerts]
+- **Dashboards to Create**: [Monitoring dashboard suggestions]
+- **Regular Health Checks**: [Recommended frequency and scope]
 
 ## ✅ Validation Steps
 
-- [ ] Verify issue resolution through logs   - [ ] Confirm performance improvements   - [ ] Test application functionality   - [ ] Update monitoring and alerting   - [ ] Document lessons learned
+- [ ] Verify issue resolution through logs
+- [ ] Confirm performance improvements
+- [ ] Test application functionality
+- [ ] Update monitoring and alerting
+- [ ] Document lessons learned
 
 ## 📝 Prevention Measures
 
-- [Recommendations to prevent similar issues]   - [Process improvements]   - [Monitoring enhancements]   ```   ```
+- [Recommendations to prevent similar issues]
+- [Process improvements]
+- [Monitoring enhancements]
 
 ## Error Handling
 

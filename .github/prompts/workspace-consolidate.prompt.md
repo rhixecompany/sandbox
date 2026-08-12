@@ -105,11 +105,42 @@ For EACH patch (skip obsolete unless reclassifying):1. **Identify target project
 
 ### Phase 3: Enhance All Patches
 
-For each patch that passed debug:1. **Enrich commit messages** with:    - Conventional commit format: `type(scope): description`    - Reference to related docs in `docs/project-docs/<name
+For each patch that passed debug:
 
-> /` - Co-author credits if multi-contributor2. **Add metadata headers** to each commit:    ```text    From: <original-author
->    Date: <original-date
->    Subject: feat(xamehi): add user authentication module    References: docs/project-docs/xamehi/architecture.md    Related: #42, #87    ---    ```3. **Ensure portability** — use relative paths, no absolute `C:\...` references4. **Normalize line endings** — LF only (no CRLF)5. **Strip binary blobs** — remove unnecessary binary content that bloats patch6. **Record rollback tags**: `git tag PATCH-<name>-<date>` for each applied   patch7. **Patch content integrity check** — verify structural integrity beyond `--check`:    - No binary blob >1MB (flag for git bloat reduction)    - No absolute Windows paths (`C:\Users\...`,`D:\...`) — use`$HOME`or relative paths    - All author emails have valid format (`<user@domain.tld>`)    - No duplicate commits across patches (detect via commit hash)    - No trailing whitespace on diff context lines    - Flag violations but do not block — log to enhancement report8. **Patch dependency grapher** — build ordering graph before enhancement:    - For each pair of patches (A, B), use`git merge-base --is-ancestor` in      target project to detect dependency    - If B's commits contain A's HEAD as ancestor → A must apply first    - Serialize patches into a DAG-based execution order    - Save dependency graph to `docs/patch-dependency-graph.md` as mermaid      diagram9. **Save enhanced patches** to `patches/enhanced/<name>.patch`10. **Save enhancement log** to`docs/patch-enhancement-log.md`
+1. **Enrich commit messages** with:
+   - Conventional commit format: `type(scope): description`
+   - Reference to related docs in `docs/project-docs/<name>/`
+   - Co-author credits if multi-contributor
+
+2. **Add metadata headers** to each commit:
+
+   ```text
+   From: <original-author>
+   Date: <original-date>
+   Subject: feat(xamehi): add user authentication module
+   References: docs/project-docs/xamehi/architecture.md
+   Related: #42, #87
+   ---
+   ```
+
+3. **Ensure portability** — use relative paths, no absolute `C:\...` references
+4. **Normalize line endings** — LF only (no CRLF)
+5. **Strip binary blobs** — remove unnecessary binary content that bloats patch
+6. **Record rollback tags**: `git tag PATCH-<name>-<date>` for each applied patch
+7. **Patch content integrity check** — verify structural integrity beyond `--check`:
+   - No binary blob >1MB (flag for git bloat reduction)
+   - No absolute Windows paths (`C:\Users\...`,`D:\...`) — use `$HOME` or relative paths
+   - All author emails have valid format (`<user@domain.tld>`)
+   - No duplicate commits across patches (detect via commit hash)
+   - No trailing whitespace on diff context lines
+   - Flag violations but do not block — log to enhancement report
+8. **Patch dependency grapher** — build ordering graph before enhancement:
+   - For each pair of patches (A, B), use `git merge-base --is-ancestor` in target project to detect dependency
+   - If B's commits contain A's HEAD as ancestor → A must apply first
+   - Serialize patches into a DAG-based execution order
+   - Save dependency graph to `docs/patch-dependency-graph.md` as mermaid diagram
+9. **Save enhanced patches** to `patches/enhanced/<name>.patch`
+10. **Save enhancement log** to `docs/patch-enhancement-log.md`
 
 ### Phase 4: Create Missing Patches
 

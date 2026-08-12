@@ -32,7 +32,10 @@ metadata:
 
 Generate a complete Model Context Protocol server project in Java using the official MCP Java SDK with reactive streams and optional Spring Boot integration.
 
-# Java MCP Server GeneratorGenerate a complete, production-ready MCP server in Java using the official Java SDK with Maven or Gradle.
+
+# Java MCP Server Generator
+
+Generate a complete, production-ready MCP server in Java using the official Java SDK with Maven or Gradle.
 
 ## Project Generation
 
@@ -132,9 +135,14 @@ public class ResourceDefinitions {
 
 A Model Context Protocol server built with Java and the official MCP Java SDK.
 
-## Feature
+## Features
 
-s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ Prompts: code-review- ✅ Reactive Streams with Project Reactor- ✅ Structured logging with SLF4J- ✅ Full test coverage
+- ✅ Tools: greet, calculate
+- ✅ Resources: example data, configuration
+- ✅ Prompts: code-review
+- ✅ Reactive Streams with Project Reactor
+- ✅ Structured logging with SLF4J
+- ✅ Full test coverage
 
 ## Requirements
 
@@ -145,10 +153,10 @@ s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ 
 
 ### Maven
 
+```bash
+mvn clean package
 ```
-
-bashmvn clean package````
-```
+````
 
 ### Gradle
 
@@ -193,11 +201,26 @@ bash./gradlew test
 
 ## Integration with Claude Desktop
 
-Add to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "java",      "args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]    }  }}```
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-mcp-server": {
+      "command": "java",
+      "args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]
+    }
+  }
+}
+```
 
 ## License
 
-MIT```
+
+MIT
+
+```
 
 ## Generation Instructions
 
@@ -210,12 +233,24 @@ MIT```
 7. **Follow Java conventions** (camelCase, PascalCase)
 8. **Include error handling** with proper responses
 9. **Document public APIs** with Javadoc
-1
-0. **Provide both sync and async** examples```
+10. **Provide both sync and async** examples
+```
 
 ## Template References
 
-Detailed section templates in `templates/java-mcp-server-generator/`:- `gradle_buildgradlekts_template.md`- `maven_pomxml_template.md`- `mcpserverapplicationjava_templ.md`- `mcpservertestjava_template.md`- `project_generation.md`- `promptdefinitionsjava_template.md`- `prompthandlersjava_template.md`- `resourcehandlersjava_template.md`- `tooldefinitionsjava_template.md`- `toolhandlersjava_template.md`
+
+Detailed section templates in `templates/java-mcp-server-generator/`:
+
+- `gradle_buildgradlekts_template.md`
+- `maven_pomxml_template.md`
+- `mcpserverapplicationjava_templ.md`
+- `mcpservertestjava_template.md`
+- `project_generation.md`
+- `promptdefinitionsjava_template.md`
+- `prompthandlersjava_template.md`
+- `resourcehandlersjava_template.md`
+- `tooldefinitionsjava_template.md`
+- `toolhandlersjava_template.md`
 
 ## Personas
 
@@ -355,3 +390,4 @@ Other language variants of this MCP server generator:
 | C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
 | PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
 | Ruby | [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md) |
+
