@@ -254,3 +254,26 @@ enhance, update all prompts at "./.github/prompts/*.prompt.md" using DRY princip
 ### Phase Sequence
 
 Execute strictly in order: **Discovery → Enhancement → YAML Repair → Verification → Documentation**. Do not proceed to the next phase until the current one passes all gates.
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`ai-prompt-engineering-safety-review.prompt.md`](ai-prompt-engineering-safety-review.prompt.md)
+- [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
+- [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
+- [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)

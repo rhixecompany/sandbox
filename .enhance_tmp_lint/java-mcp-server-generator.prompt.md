@@ -17,6 +17,7 @@ Generate a complete, production-ready MCP server in Java using the official Java
 ## Maven pom.xml Template
 
 > <?xml version="1.0" encoding="UTF-8"?>
+>
 > <project xmlns="http://maven.apache.org/POM/4.0.0"
 
 > **Full content:** `templates/java-mcp-server-generator/maven_pomxml_template.md`
@@ -177,12 +178,12 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-  "mcpServers": {
-    "my-mcp-server": {
-      "command": "java",
-      "args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]
-    }
-  }
+	"mcpServers": {
+		"my-mcp-server": {
+			"command": "java",
+			"args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]
+		}
+	}
 }
 ```
 
@@ -209,6 +210,7 @@ MIT
 ## Template References
 
 Detailed section templates in `templates/java-mcp-server-generator/`:
+
 - `gradle_buildgradlekts_template.md`
 - `maven_pomxml_template.md`
 - `mcpserverapplicationjava_templ.md`

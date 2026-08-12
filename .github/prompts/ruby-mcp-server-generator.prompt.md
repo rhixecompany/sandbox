@@ -12,7 +12,7 @@ toolsets:
 scripts: []
 skills: []
 formatter: default
-plan: 'None'
+plan: null
 tags:
   - audit
   - backend
@@ -392,3 +392,15 @@ Other language variants of this MCP server generator:
 | C# | [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md) |
 | PHP | [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md) |
 
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

@@ -56,6 +56,7 @@ Ask the user for:
 ```bash
 composer install
 ```
+
 ````
 
 ## Usage
@@ -174,3 +175,4 @@ Detailed templates in `templates/php-mcp-server-generator/`:
 - `development.md`
 - `file_templates.md`
 - `tool_patterns.md`
+````

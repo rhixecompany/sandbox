@@ -65,6 +65,12 @@ Reference content was converted from `smithery-setup.prompt.txt` (a concatenated
 
 ## Rules
 
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
 1. **Reference-first** — For exact fields, endpoints, and statuses, use the `## Smithery Reference` below; do not guess parameters.
 2. **Credential hygiene** — Never print or commit API keys; use `SMITHERY_API_KEY` env var; prefer scoped service tokens for client-facing code.
 3. **TTL discipline** — When minting service tokens, always set a TTL (max 24h); scope to the minimum operations and metadata needed.
@@ -1907,3 +1913,23 @@ const allTools = Object.assign({}, ...(await Promise.all(clients.map(c => c.tool
 * [Connect to MCPs](/docs/use/connect) — Full guide including OAuth handling, multi-user setups, and service tokens
 * [Token Scoping](/docs/use/token-scoping) — Secure browser and mobile access
 * [Vercel AI SDK MCP Documentation](https://ai-sdk.dev/docs/ai-sdk-core/mcp-tools)
+
+## MCP Servers & Tools
+
+- **Smithery MCP** — registry/search/toolbox management (this prompt's subject).
+- **Terminal** — `smithery` CLI install/configure calls.
+- **Web tools** — `web_search`, `web_extract` for registry documentation.
+
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

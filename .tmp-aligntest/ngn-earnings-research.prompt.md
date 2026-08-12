@@ -6,44 +6,45 @@ version: 2.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- ngn
-- ngn-earnings
-- income-generation
-- web-research
-- skills-pipeline
-- subagents
+  - ngn
+  - ngn-earnings
+  - income-generation
+  - web-research
+  - skills-pipeline
+  - subagents
 toolsets:
-- web
-- browser
-- terminal
-- file
-- skills
-- session_search
-- delegation
-- clarify
+  - web
+  - browser
+  - terminal
+  - file
+  - skills
+  - session_search
+  - delegation
+  - clarify
 trigger: /ngn-earnings-research
 skills:
-- using-superpowers
-- user-communication-preferences
-- brainstorming
-- subagent-driven-development
-- web-research-pipeline
-- enhance-markdown
+  - using-superpowers
+  - user-communication-preferences
+  - brainstorming
+  - subagent-driven-development
+  - web-research-pipeline
+  - enhance-markdown
 dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:brainstorming
-- skill:subagent-driven-development
-- skill:web-research-pipeline
-- skill:enhance-markdown
+  - skill:using-superpowers
+  - skill:user-communication-preferences
+  - skill:brainstorming
+  - skill:subagent-driven-development
+  - skill:web-research-pipeline
+  - skill:enhance-markdown
 metadata:
   hermes:
     source: ngn-earnings-research.prompt.txt
-    converted: '2026-08-08'
+    converted: "2026-08-08"
 scripts: []
 formatter: default
-plan: ''
+plan: ""
 ---
+
 # NGN Earnings Research Pipeline
 
 ## Goal
@@ -96,16 +97,16 @@ plan: ''
 
 ## Tasks
 
-| # | Task (Subtask parent)                                                           | Phase |
-| - | ------------------------------------------------------------------------------- | ----- |
-| 1 | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0     |
-| 2 | Map platform categories (sub: 11 brainstormed categories)                       | 1     |
-| 3 | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1     |
-| 4 | Enrich with MCP (sub: Tavily + Firecrawl per platform)                          | 1     |
-| 5 | Score & filter (sub: matrix + elimination rules)                                | 2     |
-| 6 | Deep validate top-20 (sub: sign-up, sentiment, tax)                             | 3     |
-| 7 | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4     |
-| 8 | Verify & handoff (sub: quality gates, session report)                           | 5     |
+| #   | Task (Subtask parent)                                                           | Phase |
+| --- | ------------------------------------------------------------------------------- | ----- |
+| 1   | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0     |
+| 2   | Map platform categories (sub: 11 brainstormed categories)                       | 1     |
+| 3   | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1     |
+| 4   | Enrich with MCP (sub: Tavily + Firecrawl per platform)                          | 1     |
+| 5   | Score & filter (sub: matrix + elimination rules)                                | 2     |
+| 6   | Deep validate top-20 (sub: sign-up, sentiment, tax)                             | 3     |
+| 7   | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4     |
+| 8   | Verify & handoff (sub: quality gates, session report)                           | 5     |
 
 ## Context
 

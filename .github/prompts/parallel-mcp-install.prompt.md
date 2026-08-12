@@ -16,7 +16,7 @@ skills:
 - smithery-ai-cli
 - verification-before-completion
 formatter: default
-plan: None
+plan: null
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -354,3 +354,32 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`csharp-mcp-server-generator.prompt.md`](csharp-mcp-server-generator.prompt.md)
+- [`go-mcp-server-generator.prompt.md`](go-mcp-server-generator.prompt.md)
+- [`java-mcp-server-generator.prompt.md`](java-mcp-server-generator.prompt.md)
+- [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md)
+- [`php-mcp-server-generator.prompt.md`](php-mcp-server-generator.prompt.md)
+- [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md)
+- [`ruby-mcp-server-generator.prompt.md`](ruby-mcp-server-generator.prompt.md)
+- [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md)
+- [`swift-mcp-server-generator.prompt.md`](swift-mcp-server-generator.prompt.md)
+- [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md)

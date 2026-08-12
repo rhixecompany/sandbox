@@ -13,7 +13,7 @@ scripts: []
 skills:
   - subagent-driven-development
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
   - "skill:subagent-driven-development"
 tags:
@@ -290,3 +290,15 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`dev-init.prompt.md`](dev-init.prompt.md)
+- [`dev.prompt.md`](dev.prompt.md)

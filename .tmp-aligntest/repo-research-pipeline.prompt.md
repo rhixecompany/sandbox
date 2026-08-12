@@ -8,43 +8,43 @@ version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+  - browser
+  - code_execution
+  - file
+  - mcp
+  - terminal
+  - web
 scripts: []
 skills:
-- domain-intel
-- gh-cli
-- web-research-pipeline
-- subagent-driven-development
+  - domain-intel
+  - gh-cli
+  - web-research-pipeline
+  - subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-- prompt:web-research-pipeline
-- skill:domain-intel
-- skill:gh-cli
-- tool:mcp-tavily
-- tool:mcp-fetch
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-memory
-- tool:mcp-playwright
-- tool:mcp-sequential-thinking
-- skill:subagent-driven-development
-- skill:web-research-pipeline
+  - prompt:web-research-pipeline
+  - skill:domain-intel
+  - skill:gh-cli
+  - tool:mcp-tavily
+  - tool:mcp-fetch
+  - tool:mcp-filesystem
+  - tool:mcp-github
+  - tool:mcp-memory
+  - tool:mcp-playwright
+  - tool:mcp-sequential-thinking
+  - skill:subagent-driven-development
+  - skill:web-research-pipeline
 tags:
-- frontend
-- generator
-- git
-- mcp
-- prompts
-- skills
-- typescript
-- vscode
-- workflow
+  - frontend
+  - generator
+  - git
+  - mcp
+  - prompts
+  - skills
+  - typescript
+  - vscode
+  - workflow
 trigger: /repo-research-pipeline
 metadata:
   hermes: {}
@@ -84,11 +84,11 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona     | When to Use                                |
-| ----------- | ------------------------------------------ |
-| **Developer | **  Implementation, debugging, refactoring |
-| **Reviewer* | *   Code review, quality assurance         |
-| **User**    | General purpose, operations                |
+| Persona     | When to Use                               |
+| ----------- | ----------------------------------------- |
+| **Developer | ** Implementation, debugging, refactoring |
+| *_Reviewer_ | * Code review, quality assurance          |
+| **User**    | General purpose, operations               |
 
 ## Personality
 
@@ -114,13 +114,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate      | Criterion                           |
-| - | --------- | ----------------------------------- |
-| 1 | Scope     | Change matches the original request |
-| 2 | Quality   | Meets project standards             |
-| 3 | Tests     | Tests pass (if applicable)          |
-| 4 | Regressio | n  No unintended side effects       |
-| 5 | Docs      | Changes documented if needed        |
+| #   | Gate      | Criterion                           |
+| --- | --------- | ----------------------------------- |
+| 1   | Scope     | Change matches the original request |
+| 2   | Quality   | Meets project standards             |
+| 3   | Tests     | Tests pass (if applicable)          |
+| 4   | Regressio | n No unintended side effects        |
+| 5   | Docs      | Changes documented if needed        |
 
 ## Dependencies
 
@@ -137,13 +137,13 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| `using-superpowers`  | Foundational skill workflow                 |
-| `systematic-debuggin | g`            Root cause analysis and fix   |
-| `git-patch-managemen | t`            Patch creation and management |
-| `executing-plans`    | Execute plans step by step                  |
-| `verification-before | -completion`  Validate before claiming done |
+| Skill                | Purpose                                    |
+| -------------------- | ------------------------------------------ |
+| `using-superpowers`  | Foundational skill workflow                |
+| `systematic-debuggin | g` Root cause analysis and fix             |
+| `git-patch-managemen | t` Patch creation and management           |
+| `executing-plans`    | Execute plans step by step                 |
+| `verification-before | -completion` Validate before claiming done |
 
 ## MCP Servers & Tools
 
@@ -157,20 +157,20 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `github`        | GitHub API operations                                  |
 | `memory`        | Persistent memory operations                           |
 | `playwright`    | Browser automation for interactive pages               |
-| `sequential-thi | nking`  Structured reasoning for complex problems      |
+| `sequential-thi | nking` Structured reasoning for complex problems       |
 | `ast-grep`      | AST-based code search and replace                      |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook             | When                   | Behavior                            |
-| ---------------- | ---------------------- | ----------------------------------- |
-| `session-logger` | session star           | t/end  Logs session metadata        |
-| `governance-audi | t`        session even | ts     Audits governance compliance |
-| `session-auto-co | mmit`     session end  | Auto-commits session state          |
-| `pre-exec-valida | te.sh`    before comma | nds    Validates command execution  |
-| `post-exec-state | -log.py`  after comman | ds     Appends state log            |
+| Hook             | When                  | Behavior                        |
+| ---------------- | --------------------- | ------------------------------- |
+| `session-logger` | session star          | t/end Logs session metadata     |
+| `governance-audi | t` session even       | ts Audits governance compliance |
+| `session-auto-co | mmit` session end     | Auto-commits session state      |
+| `pre-exec-valida | te.sh` before comma   | nds Validates command execution |
+| `post-exec-state | -log.py` after comman | ds Appends state log            |
 
 ## Scripts
 

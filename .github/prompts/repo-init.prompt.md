@@ -140,3 +140,13 @@ The following workspace hooks run around this prompt's execution (see `.github/h
 2. **Execute** — Inventory → refresh doc → scaffold → verify.
 3. **Verify** — All gates pass; idempotency confirmed.
 4. **Document** — Inventory doc committed with "as of" date.
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`repo-management.prompt.md`](repo-management.prompt.md)
+- [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
+- [`repo-story-time.prompt.md`](repo-story-time.prompt.md)
+- [`repo-tooling-implementation.prompt.md`](repo-tooling-implementation.prompt.md)
+- [`repo.prompt.md`](repo.prompt.md)

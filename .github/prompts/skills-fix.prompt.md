@@ -26,7 +26,7 @@ skills:
   - skill-judge
   - skill-creator
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
   - "prompt:context-map"
   - "prompt:update-implementation-plan"
@@ -241,7 +241,9 @@ When processing B-grade batch remediations, dispatch in parallel using:
 ```python
 delegate_task(tasks=[
 
-"goal": "Fix B-grade issues in batch: skill-a, skill-b, skill-c, skill-d, skill-e, skill-f, skill-g",     "context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",     "toolsets": ["file", "terminal"]},    # up to 3 concurrent batches])```
+"goal": "Fix B-grade issues in batch: skill-a, skill-b, skill-c, skill-d, skill-e, skill-f, skill-g",     "context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",     "toolsets": ["file", "terminal"]},    # up to 3 concurrent batches
+])
+```
 
 ## Personas
 
@@ -315,4 +317,22 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
+## Hooks
 
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`skills-debug-prompt.prompt.md`](skills-debug-prompt.prompt.md)

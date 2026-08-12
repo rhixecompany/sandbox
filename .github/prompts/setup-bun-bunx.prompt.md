@@ -69,6 +69,12 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 
 ## Rules
 
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
 1. **No npm/npx left behind** — Every manifest/script/CI reference to `npm`/`npx` becomes `bun`/`bunx`.
 2. **Smaller is better** — Replace heavyweight deps with smaller equivalents where behavior is preserved; document each swap.
 3. **Uninstall unused** — Remove packages not referenced by any import/script; record removals.
@@ -167,3 +173,35 @@ Source: `setup-bun-bunx.prompt.txt` — a migration runbook to move this workspa
 - All lint/typecheck/check/format pass with bun in this repo, sub-repos, and Hermes root.
 - Commits pushed in this repo and all sub-repos.
 - Removal report: packages removed, packages swapped, size deltas.
+
+## MCP Servers & Tools
+
+- **Terminal** — `bun`/`bunx` execution for migration and verification.
+- **File tools** — read/patch manifests (`package.json`, `tsconfig.json`).
+- **Tooling-lint MCP** — eslint/prettier checks across touched repos.
+- **Tooling-config MCP** — pre-commit/.gitignore validation.
+
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`setup-component.prompt.md`](setup-component.prompt.md)
+- [`setup-enhanced.prompt.md`](setup-enhanced.prompt.md)
+- [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
+- [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
+- [`setup.prompt.md`](setup.prompt.md)

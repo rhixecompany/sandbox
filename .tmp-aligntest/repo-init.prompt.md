@@ -7,23 +7,23 @@ version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- repo-init
-- ai-agents
-- inventory
-- scaffolding
-- cross-platform
+  - repo-init
+  - ai-agents
+  - inventory
+  - scaffolding
+  - cross-platform
 trigger: /repo-init
 formatter: default
 dependencies:
-- skill:repo-init
-- skill:verification-before-completion
+  - skill:repo-init
+  - skill:verification-before-completion
 toolsets:
-- file
-- terminal
-- skills
+  - file
+  - terminal
+  - skills
 skills:
-- repo-init
-- verification-before-completion
+  - repo-init
+  - verification-before-completion
 plan: null
 ---
 
@@ -52,12 +52,12 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ## Phases
 
-| Order | Phase          | Gate                                                          |
-| ----- | -------------- | ------------------------------------------------------------- |
-| 1     | Inventory agen | ts       `--list-agents` prints all platforms with real paths |
-| 2     | Refresh invent | ory doc  `docs/ai-agents-inventory.md` regenerated, committed |
-| 3     | Scaffold targe | t repo   `--init <dir>` exit 0, files created                 |
-| 4     | Verify resolut | ion      `--verify <dir>` exit 0, RESULT: OK                  |
+| Order | Phase          | Gate                                                         |
+| ----- | -------------- | ------------------------------------------------------------ |
+| 1     | Inventory agen | ts `--list-agents` prints all platforms with real paths      |
+| 2     | Refresh invent | ory doc `docs/ai-agents-inventory.md` regenerated, committed |
+| 3     | Scaffold targe | t repo `--init <dir>` exit 0, files created                  |
+| 4     | Verify resolut | ion `--verify <dir>` exit 0, RESULT: OK                      |
 
 ## Verification Checklist
 
@@ -70,10 +70,10 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ## Personas
 
-| Persona     | When to Use                                            |
-| ----------- | ------------------------------------------------------ |
-| **Developer | **  Running the init on a repo, verifying output       |
-| **Reviewer* | *   Checking idempotency, no-secrets, and completeness |
+| Persona     | When to Use                                          |
+| ----------- | ---------------------------------------------------- |
+| **Developer | ** Running the init on a repo, verifying output      |
+| *_Reviewer_ | * Checking idempotency, no-secrets, and completeness |
 
 ## Personality
 
@@ -110,7 +110,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 | --------------- | --------------------------------------------------- |
 | `filesystem`    | File read/write operations                          |
 | `github`        | GitHub API operations (agent inventory cross-check) |
-| `sequential-thi | nking`  Structured reasoning for complex problems   |
+| `sequential-thi | nking` Structured reasoning for complex problems    |
 | `ast-grep`      | AST-based code search and replace                   |
 | `fetch`         | Web page content extraction                         |
 | `playwright`    | Browser automation for interactive pages            |
@@ -120,13 +120,13 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook             | When                   | Behavior                            |
-| ---------------- | ---------------------- | ----------------------------------- |
-| `session-logger` | session star           | t/end  Logs session metadata        |
-| `governance-audi | t`        session even | ts     Audits governance compliance |
-| `session-auto-co | mmit`     session end  | Auto-commits session state          |
-| `pre-exec-valida | te.sh`    before comma | nds    Validates command execution  |
-| `post-exec-state | -log.py`  after comman | ds     Appends state log            |
+| Hook             | When                  | Behavior                        |
+| ---------------- | --------------------- | ------------------------------- |
+| `session-logger` | session star          | t/end Logs session metadata     |
+| `governance-audi | t` session even       | ts Audits governance compliance |
+| `session-auto-co | mmit` session end     | Auto-commits session state      |
+| `pre-exec-valida | te.sh` before comma   | nds Validates command execution |
+| `post-exec-state | -log.py` after comman | ds Appends state log            |
 
 ## Scripts
 

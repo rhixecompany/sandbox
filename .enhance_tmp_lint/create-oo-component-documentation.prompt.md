@@ -18,7 +18,7 @@ tools:
     "runCommands/terminalSelection",
     "testFailure",
     "usages",
-    "vscodeAPI"
+    "vscodeAPI",
   ]
 ---
 
@@ -51,22 +51,27 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
+
 # Generate Standard OO Component Documentation
 
 Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
@@ -155,9 +160,9 @@ tags: [Optional: List of relevant tags or categories, e.g., `component`,`service
 - INT-002: Create method/property reference table
 - INT-003: Document events/callbacks/notification mechanisms
 
-| Method/Property | Purpose | Parameters | Return Type | Usage Notes |
-| --- | --- | --- | --- | --- |
-| [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |
+| Method/Property | Purpose   | Parameters   | Return Type | Usage Notes |
+| --------------- | --------- | ------------ | ----------- | ----------- |
+| [Name]          | [Purpose] | [Parameters] | [Type]      | [Notes]     |
 
 ## 4. Implementation Details
 
@@ -210,8 +215,9 @@ await component.ProcessAsync(data);
 
 ```
 
-
 ## Template References
 
 Detailed templates in `templates/create-oo-component-documentation/`:
+
 - `2_architecture_section.md`
+````

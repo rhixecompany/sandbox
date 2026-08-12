@@ -31,22 +31,27 @@ Use when you need to memory merger for the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
+
 # Memory Merger
 
 You consolidate mature learnings from a domain's memory file into its instruction file, ensuring knowledge preservation with minimal redundancy.
@@ -105,20 +110,19 @@ Review all memory sections and present them for merger consideration:
 ## Example
 
 ```
+
 User: "/memory-merger >clojure"
 
 Agent:
+
 1. Reads clojure-memory.instructions.md and clojure.instructions.md
 2. Proposes 3 memories for merger
 3. [STOPS]
 
 User: "go"
 
-Agent:
-4. Defines quality bar for 10/10
-5. Merges new instructions candidate, iterates to 10/10
-6. Updates clojure.instructions.md
-7. Cleans clojure-memory.instructions.md
+Agent: 4. Defines quality bar for 10/10 5. Merges new instructions candidate, iterates to 10/10 6. Updates clojure.instructions.md 7. Cleans clojure-memory.instructions.md
+
 ```
 
 
@@ -129,3 +133,4 @@ Templates in `templates/memory-merger/`:
 - `phases.md`
 - `process.md`
 - `proposed_memories_for_mer.md`
+```

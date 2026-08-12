@@ -60,6 +60,12 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 
 ## Rules
 
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
 1. **DRY** — Reference the embedded docs; do not restate parameter lists inline when the reference covers them.
 2. **Key safety** — Never print or commit the API key. Use `GROQ_API_KEY` env var.
 3. **Verify before claim** — Confirm model IDs and endpoints against the reference before using them.
@@ -2455,8 +2461,6 @@ client.fine_tunings.delete(id="<id>")
 }
 ```
 
-```json
-
 ### Rate Limits
 
 > Understand Groq API rate limits, headers, and best practices for managing request and token quotas in your applications.
@@ -2488,7 +2492,7 @@ In addition to the combined TPM limit, some organizations are also subject to se
 
 If these limits are configured on your account, you'll see your TPM value on the [Limits page](https://console.groq.com/settings/limits) — hover over it to see the **"X in / Y out"** breakdown. If no breakdown appears, your organization has a single combined TPM cap with no separate input/output limits.
 
-### Rate Limits
+### Rate Limits Summary
 
 The following is a high level summary and there may be exceptions to these limits. You can view the current, exact rate limits for your organization on the [limits page](https://console.groq.com/settings/limits) in your account settings.
 
@@ -2534,3 +2538,27 @@ The following headers are set (values are illustrative):
 When you exceed rate limits, our API returns a `429 Too Many Requests` HTTP status code.
 
 **Note**: `retry-after` is only set if you hit the rate limit and status code 429 is returned. The other headers are always included.
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`setup-bun-bunx.prompt.md`](setup-bun-bunx.prompt.md)
+- [`setup-component.prompt.md`](setup-component.prompt.md)
+- [`setup-enhanced.prompt.md`](setup-enhanced.prompt.md)
+- [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
+- [`setup.prompt.md`](setup.prompt.md)

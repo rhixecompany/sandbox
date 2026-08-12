@@ -196,3 +196,13 @@ The following workspace hooks run around this prompt's execution (see `.github/h
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`repo-init.prompt.md`](repo-init.prompt.md)
+- [`repo-management.prompt.md`](repo-management.prompt.md)
+- [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
+- [`repo-tooling-implementation.prompt.md`](repo-tooling-implementation.prompt.md)
+- [`repo.prompt.md`](repo.prompt.md)

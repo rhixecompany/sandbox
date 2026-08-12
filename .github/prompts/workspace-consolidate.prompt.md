@@ -25,7 +25,7 @@ skills:
   - git-patch-management
   - project-consolidation
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
   - "prompt:context-map"
   - "prompt:update-implementation-plan"
@@ -146,30 +146,50 @@ For each patch that passed debug:
 
 ### Gap Analysis
 
-For each project in `projects/`, check:1. Does it have local uncommitted changes? (`git diff`, `git status`)2. Does it have a known missing feature or bugfix that should be patched?3. Is documentation out of date compared to the project's actual state?4. Does `docs/project-docs/<name
+For each project in `projects/`, check:
 
-> /` have all 11 required artifacts from the   generator-orchestrator?
+1. Does it have local uncommitted changes? (`git diff`, `git status`)
+2. Does it have a known missing feature or bugfix that should be patched?
+3. Is documentation out of date compared to the project's actual state?
+4. Does `docs/project-docs/<name>` have all 11 required artifacts from the generator-orchestrator?
 
 ### Patch Creation
 
-Create patches for any gaps found:1. **Missing documentation patches** — update README, add missing doc sections2. **Missing metadata patches** — add `.gitignore`, `.editorconfig`, `LICENSE`   where absent3. **Missing config patches** — add `tsconfig.json`, `eslint.config`,   `.prettierrc` for consistency4. **Consistency patches** — normalize existing files to match `CODE_STYLE.md`   conventions5. **Known bugfix patches** — fix bugs found during Phase 2's   `git apply --check` diagnostics
+Create patches for any gaps found:
+
+1. **Missing documentation patches** — update README, add missing doc sections
+2. **Missing metadata patches** — add `.gitignore`, `.editorconfig`, `LICENSE` where absent
+3. **Missing config patches** — add `tsconfig.json`, `eslint.config`, `.prettierrc` for consistency
+4. **Consistency patches** — normalize existing files to match `CODE_STYLE.md` conventions
+5. **Known bugfix patches** — fix bugs found during Phase 2's `git apply --check` diagnostics
 
 ### Patch Patch Generation
 
-```
-
-plaintextpatches/├── enhanced/                     # Enhanced versions of original patches│   ├── xamehi.patch│   ├── rhixe-company.patch│   ├── python-projects.patch│   └── youtube-downloader.patch├── new/                          # Newly created patches│   ├── <project-name>-docs.patch│   └── <project-name>-config.patch└── obsolete/                     # Unchanged archive    ├── django-scrapy-selenium.patch    ├── xamehi-tv.patch    └── cookiecutter-django-tailwind.patch
+```plaintext
+patches/
+├── enhanced/                     # Enhanced versions of original patches
+│   ├── xamehi.patch
+│   ├── rhixe-company.patch
+│   ├── python-projects.patch
+│   └── youtube-downloader.patch
+├── new/                          # Newly created patches
+│   ├── <project-name>-docs.patch
+│   └── <project-name>-config.patch
+└── obsolete/                     # Unchanged archive
+    ├── django-scrapy-selenium.patch
+    ├── xamehi-tv.patch
+    └── cookiecutter-django-tailwind.patch
 ```
 
 ### Phase 5: Document Organization & Optimization
 
 ### All Reports Under docs/
 
-All workspace-level reports go under `docs/`.
+All workspace-level reports go under `docs/`. All Bash-specific docs go under `projects/Bash/docs/`.
 
-> /`. All Bash-specific docs go under`projects/Bash/docs/`.
+### Doc Optimization for Humans AND AI
 
-### Doc Optimization for Humans AND AIEach document must be optimal for both human readers and AI consumption: #
+Each document must be optimal for both human readers and AI consumption:
 
 ### Required Frontmatter (YAML)
 
@@ -203,26 +223,54 @@ updated: YYYY-MM-DD
 - [ ] Tables have aligned columns and no empty required cells
 - [ ] Terminal commands use `$` prefix to distinguish from output
 - [ ] AI directives (if any) are in HTML comments `<!-- like this -->`
-- [ ] Status reflects current reality (not copy-pasted from template)#
+- [ ] Status reflects current reality (not copy-pasted from template)
 
 ### Files to Optimize
 
-```
-
-txtdocs/                                         # Workspace-level reports├── bash-migration-final-report.md            → verify frontmatter, add tags├── bash-scripts-audit-results.md             → verify frontmatter, add tags├── bash-scripts-list-context.md              → verify frontmatter, add tags├── bash-fix-implementation-plan.md           → verify frontmatter, add tags├── project-docs/<project>/*.md              → verify each has frontmatterprojects/Bash/docs/                                    # Bash project-specific docs├── AGENTS.md                                 → add frontmatter, optimize├── ARCHITECTURE.md                           → add frontmatter, optimize├── CODE_STYLE.md                             → add frontmatter, optimize├── README.md                                 → add frontmatter, optimize├── bash-scripts-safety-audit.md              → add frontmatter, optimize├── FINAL-SUMMARY.md                          → add frontmatter, optimize├── MIGRATION-GUIDE.md                        → add frontmatter, optimize└── phase5-verification-report.md             → add frontmatter, optimize
+```text
+docs/                                         # Workspace-level reports
+├── bash-migration-final-report.md            → verify frontmatter, add tags
+├── bash-scripts-audit-results.md             → verify frontmatter, add tags
+├── bash-scripts-list-context.md              → verify frontmatter, add tags
+├── bash-fix-implementation-plan.md           → verify frontmatter, add tags
+├── project-docs/<project>/*.md               → verify each has frontmatter
+projects/Bash/docs/                           # Bash project-specific docs
+├── AGENTS.md                                 → add frontmatter, optimize
+├── ARCHITECTURE.md                           → add frontmatter, optimize
+├── CODE_STYLE.md                             → add frontmatter, optimize
+├── README.md                                 → add frontmatter, optimize
+├── bash-scripts-safety-audit.md              → add frontmatter, optimize
+├── FINAL-SUMMARY.md                          → add frontmatter, optimize
+├── MIGRATION-GUIDE.md                        → add frontmatter, optimize
+└── phase5-verification-report.md             → add frontmatter, optimize
 ```
 
 ### AI-Readiness Scoring Script
 
 Create `projects/Bash/scripts/score-docs.sh` that scores every `.md` file on AI-readiness:
 
-> 500 lines with no H2/H3 | −20                | wall-of-text detection                            |Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = rewriterequired.Output `docs/ai-readiness-report.md` with per-file scores and specificremediation per file.
+| > 500 lines with no H2/H3 | −20 | wall-of-text detection |
+Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = rewrite required.Output `docs/ai-readiness-report.md` with per-file scores and specific remediation per file.
 
 ### Doc Symmetry Validator
 
-Cross-reference Phase 5 output against the generator-orchestrator manifestexpectation from `repo.prompts.md`:```yamlRequired artifacts per project (11 files):    technology-stack.md, folder-structure.md, architecture.md,    project-workflow.md, code-exemplars.md, copilot-instructions.md, readme.md,    artifact-manifest.json, cross-linking-report.md, validation-report.md,    execution-summary.md```For each project under `docs/project-docs/<name
+Cross-reference Phase 5 output against the generator-orchestrator manifest expectation from `repo.prompts.md`:
 
-> /`:- Check which of the 11 required artifacts exist- Flag missing files as`gap`- Flag extra files as`bonus`- Generate`docs/doc-symmetry-report.md` with project-by-project completeness  matrix- For projects with <8/11 artifacts, recommend re-running generator-orchestrator
+```yaml
+Required artifacts per project (11 files):
+    technology-stack.md, folder-structure.md, architecture.md,
+    project-workflow.md, code-exemplars.md, copilot-instructions.md, readme.md,
+    artifact-manifest.json, cross-linking-report.md, validation-report.md,
+    execution-summary.md
+```
+
+For each project under `docs/project-docs/<name>`:
+
+- Check which of the 11 required artifacts exist
+- Flag missing files as `gap`
+- Flag extra files as `bonus`
+- Generate `docs/doc-symmetry-report.md` with project-by-project completeness matrix
+- For projects with <8/11 artifacts, recommend re-running generator-orchestrator
 
 ### Phase 6: Final Verification
 
@@ -343,3 +391,15 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

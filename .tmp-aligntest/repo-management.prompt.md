@@ -1,65 +1,66 @@
 ---
 name: repo-management
 title: Repo Management Pipeline
-description: 'Execute repo management operations across all project repos: branch
+description: "Execute repo management operations across all project repos: branch
   normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
   repo-research-pipeline phase completes. Also provides Quick Repo Overview (Phase
-  0): repo summary, entrypoint detection, and disk usage on demand.'
+  0): repo summary, entrypoint detection, and disk usage on demand."
 version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+  - browser
+  - code_execution
+  - file
+  - mcp
+  - terminal
+  - web
 scripts: []
 skills:
-- finishing-a-development-branch
-- gh-cli
-- git-commit
-- git-helper
-- git-submodule-workflow
-- github-actions-efficiency
-- github-repo-management
-- vscode-workspace-configurator
-- workspace-audit
-- writing-plans
-- subagent-driven-development
+  - finishing-a-development-branch
+  - gh-cli
+  - git-commit
+  - git-helper
+  - git-submodule-workflow
+  - github-actions-efficiency
+  - github-repo-management
+  - vscode-workspace-configurator
+  - workspace-audit
+  - writing-plans
+  - subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-- prompt:repo-research-pipeline
-- skill:finishing-a-development-branch
-- skill:gh-cli
-- skill:git-commit
-- skill:git-helper
-- skill:git-submodule-workflow
-- skill:github-actions-efficiency
-- skill:github-repo-management
-- skill:vscode-workspace-configurator
-- skill:workspace-audit
-- skill:writing-plans
-- tool:mcp-tavily
-- tool:mcp-filesystem
-- tool:mcp-sequential-thinking
-- skill:subagent-driven-development
+  - prompt:repo-research-pipeline
+  - skill:finishing-a-development-branch
+  - skill:gh-cli
+  - skill:git-commit
+  - skill:git-helper
+  - skill:git-submodule-workflow
+  - skill:github-actions-efficiency
+  - skill:github-repo-management
+  - skill:vscode-workspace-configurator
+  - skill:workspace-audit
+  - skill:writing-plans
+  - tool:mcp-tavily
+  - tool:mcp-filesystem
+  - tool:mcp-sequential-thinking
+  - skill:subagent-driven-development
 tags:
-- audit
-- frontend
-- git
-- mcp
-- onboarding
-- prompts
-- skills
-- vscode
-- workflow
+  - audit
+  - frontend
+  - git
+  - mcp
+  - onboarding
+  - prompts
+  - skills
+  - vscode
+  - workflow
 trigger: /repo-management
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Leave every repo with:
@@ -153,11 +154,11 @@ Create `.github/workflows/ci.yml` per repo type (JS/TS uses `oven-sh/setup-bun`,
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona     | When to Use                                |
-| ----------- | ------------------------------------------ |
-| **Developer | **  Implementation, debugging, refactoring |
-| **Reviewer* | *   Code review, quality assurance         |
-| **User**    | General purpose, operations                |
+| Persona     | When to Use                               |
+| ----------- | ----------------------------------------- |
+| **Developer | ** Implementation, debugging, refactoring |
+| *_Reviewer_ | * Code review, quality assurance          |
+| **User**    | General purpose, operations               |
 
 ## Personality
 
@@ -183,13 +184,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate      | Criterion                           |
-| - | --------- | ----------------------------------- |
-| 1 | Scope     | Change matches the original request |
-| 2 | Quality   | Meets project standards             |
-| 3 | Tests     | Tests pass (if applicable)          |
-| 4 | Regressio | n  No unintended side effects       |
-| 5 | Docs      | Changes documented if needed        |
+| #   | Gate      | Criterion                           |
+| --- | --------- | ----------------------------------- |
+| 1   | Scope     | Change matches the original request |
+| 2   | Quality   | Meets project standards             |
+| 3   | Tests     | Tests pass (if applicable)          |
+| 4   | Regressio | n No unintended side effects        |
+| 5   | Docs      | Changes documented if needed        |
 
 ## Dependencies
 
@@ -206,39 +207,39 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| `using-superpowers`  | Foundational skill workflow                 |
-| `systematic-debuggin | g`            Root cause analysis and fix   |
-| `git-patch-managemen | t`            Patch creation and management |
-| `executing-plans`    | Execute plans step by step                  |
-| `verification-before | -completion`  Validate before claiming done |
+| Skill                | Purpose                                    |
+| -------------------- | ------------------------------------------ |
+| `using-superpowers`  | Foundational skill workflow                |
+| `systematic-debuggin | g` Root cause analysis and fix             |
+| `git-patch-managemen | t` Patch creation and management           |
+| `executing-plans`    | Execute plans step by step                 |
+| `verification-before | -completion` Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server          | Purpose                                           |
-| --------------- | ------------------------------------------------- |
-| `tavily`        | Web search + URL extraction                       |
-| `filesystem`    | File read/write operations                        |
-| `github`        | GitHub API operations                             |
-| `sequential-thi | nking`  Structured reasoning for complex problems |
-| `ast-grep`      | AST-based code search and replace                 |
-| `fetch`         | Web page content extraction                       |
-| `playwright`    | Browser automation for interactive pages          |
+| Server          | Purpose                                          |
+| --------------- | ------------------------------------------------ |
+| `tavily`        | Web search + URL extraction                      |
+| `filesystem`    | File read/write operations                       |
+| `github`        | GitHub API operations                            |
+| `sequential-thi | nking` Structured reasoning for complex problems |
+| `ast-grep`      | AST-based code search and replace                |
+| `fetch`         | Web page content extraction                      |
+| `playwright`    | Browser automation for interactive pages         |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook             | When                   | Behavior                            |
-| ---------------- | ---------------------- | ----------------------------------- |
-| `session-logger` | session star           | t/end  Logs session metadata        |
-| `governance-audi | t`        session even | ts     Audits governance compliance |
-| `session-auto-co | mmit`     session end  | Auto-commits session state          |
-| `pre-exec-valida | te.sh`    before comma | nds    Validates command execution  |
-| `post-exec-state | -log.py`  after comman | ds     Appends state log            |
+| Hook             | When                  | Behavior                        |
+| ---------------- | --------------------- | ------------------------------- |
+| `session-logger` | session star          | t/end Logs session metadata     |
+| `governance-audi | t` session even       | ts Audits governance compliance |
+| `session-auto-co | mmit` session end     | Auto-commits session state      |
+| `pre-exec-valida | te.sh` before comma   | nds Validates command execution |
+| `post-exec-state | -log.py` after comman | ds Appends state log            |
 
 ## Scripts
 
