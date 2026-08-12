@@ -1,27 +1,37 @@
 ---
 name: documentation
 title: Documentation
-description: Comprehensive documentation prompt aligned to repository documentation standards.
+description: Comprehensive documentation prompt aligned to repository documentation
+  standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - architecture
-  - documentation
-  - frontend
-  - markdown
-  - ml
-  - prompts
-  - skills
-  - typescript
+- api
+- architecture
+- documentation
+- frontend
+- markdown
+- ml
+- prompts
+- skills
+- typescript
+- api
+- architecture
+- documentation
+- frontend
+- markdown
+- ml
+- prompts
+- skills
+- typescript
 trigger: /documentation
 dependencies: []
 metadata:

@@ -1,22 +1,28 @@
 ---
 name: create-llms
 title: Create LLMs.txt File from Repository Structure
-description: 'Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/.'
+description: Create an llms.txt file from scratch based on repository structure following
+  the llms.txt specification at https://llmstxt.org/.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-llms
 dependencies: []
 metadata:

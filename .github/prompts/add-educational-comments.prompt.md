@@ -1,22 +1,27 @@
 ---
 name: add-educational-comments
 title: Add Educational Comments
-description: 'Add educational comments to the file specified, or prompt asking for file to comment if one is not provided.'
+description: Add educational comments to the file specified, or prompt asking for
+  file to comment if one is not provided.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /add-educational-comments
 dependencies: []
 metadata:

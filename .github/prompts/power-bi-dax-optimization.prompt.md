@@ -1,22 +1,27 @@
 ---
 name: power-bi-dax-optimization
 title: Power BI DAX Formula Optimizer
-description: 'Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations.'
+description: Comprehensive Power BI DAX formula optimization prompt for improving
+  performance, readability, and maintainability of DAX calculations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - performance
-  - prompts
-  - specification
+- ml
+- performance
+- prompts
+- specification
+- ml
+- performance
+- prompts
+- specification
 trigger: /power-bi-dax-optimization
 dependencies: []
 metadata:

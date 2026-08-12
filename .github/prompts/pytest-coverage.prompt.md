@@ -1,23 +1,29 @@
 ---
 name: pytest-coverage
 title: Pytest Coverage
-description: 'Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%.'
+description: Run pytest tests with coverage, discover lines missing coverage, and
+  increase coverage to 100%.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
+- ml
+- prompts
+- specification
+- testing
+- typescript
+- ml
+- prompts
+- specification
+- testing
+- typescript
 trigger: /pytest-coverage
 dependencies: []
 metadata:

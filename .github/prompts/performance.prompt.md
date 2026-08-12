@@ -1,27 +1,37 @@
 ---
 name: performance
 title: Performance
-description: Comprehensive performance prompt focused on measurable improvements and safe optimizations.
+description: Comprehensive performance prompt focused on measurable improvements and
+  safe optimizations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - data
-  - database
-  - frontend
-  - performance
-  - prompts
-  - skills
-  - specification
-  - sql
-  - typescript
+- data
+- database
+- frontend
+- performance
+- prompts
+- skills
+- specification
+- sql
+- typescript
+- data
+- database
+- frontend
+- performance
+- prompts
+- skills
+- specification
+- sql
+- typescript
 trigger: /performance
 dependencies: []
 metadata:

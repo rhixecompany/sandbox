@@ -1,36 +1,45 @@
 ---
 name: pl
 title: Pl
-description: 'Batch fix all errors, warnings, and deprecations surfaced by pnpm test:ui, lint:fix, and build, documenting each fix in Markdown and JSON.'
+description: Batch fix all errors, warnings, and deprecations surfaced by pnpm test:ui,
+  lint:fix, and build, documenting each fix in Markdown and JSON.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
-  - terminal
-  - file
-  - code_execution
-  - session_search
+- web
+- terminal
+- file
+- code_execution
+- session_search
 scripts: []
 skills: []
 formatter: default
 plan: plans/2026-06-29_144500-awesome-hermes-agent-implementation.md
 tags:
-  - documentation
-  - fix
-  - frontend
-  - linting
-  - markdown
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
-  - errors
-  - warnings
-  - deprecations
-  - batch-fix
-  - build
+- fix
+- frontend
+- linting
+- markdown
+- ml
+- prompts
+- testing
+- typescript
+- documentation
+- fix
+- frontend
+- linting
+- markdown
+- ml
+- prompts
+- specification
+- testing
+- typescript
+- errors
+- warnings
+- deprecations
+- batch-fix
+- build
 trigger: /pl
 dependencies: []
 metadata:

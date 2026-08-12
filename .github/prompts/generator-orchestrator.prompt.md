@@ -1,30 +1,38 @@
 ---
 name: generator-orchestrator
 title: Generator Orchestrator
-description: Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation.
+description: Dependency-aware orchestrator prompt for root blueprint and MCP generator
+  prompts with strict stage gates and consistency validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - architecture
-  - backend
-  - documentation
-  - generator
-  - mcp
-  - prompts
-  - typescript
-  - workflow
-  - git
+- architecture
+- backend
+- generator
+- mcp
+- prompts
+- typescript
+- workflow
+- architecture
+- backend
+- documentation
+- generator
+- mcp
+- prompts
+- typescript
+- workflow
+- git
 trigger: /generator-orchestrator
 metadata:
   hermes: {}

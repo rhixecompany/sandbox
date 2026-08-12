@@ -1,26 +1,35 @@
 ---
 name: hermes-breakdown-epic-arch
 title: Hermes Breakdown Epic Arch
-description: 'Hermes-equivalent: create a high-level Epic Architecture Specification from an Epic PRD.'
+description: 'Hermes-equivalent: create a high-level Epic Architecture Specification
+  from an Epic PRD.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ai-assistant
-  - architecture
-  - data
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- architecture
+- data
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- ai-assistant
+- architecture
+- data
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /hermes-breakdown-epic-arch
 dependencies: []
 metadata:

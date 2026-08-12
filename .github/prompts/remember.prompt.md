@@ -1,22 +1,28 @@
 ---
 name: remember
 title: Memory Keeper
-description: 'Transforms lessons learned into domain-organized memory instructions (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope is `global` (default), `user`, `workspace`, or `ws`.'
+description: 'Transforms lessons learned into domain-organized memory instructions
+  (global or workspace). Syntax: `/remember [>domain [scope]] lesson clue` where scope
+  is `global` (default), `user`, `workspace`, or `ws`.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /remember
 dependencies: []
 metadata:

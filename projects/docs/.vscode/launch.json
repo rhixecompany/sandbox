@@ -17,6 +17,16 @@
         "start"
       ],
       "console": "integratedTerminal"
+    },
+    {
+      "name": "npm start",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "start"
+      ],
+      "console": "integratedTerminal"
     }
   ]
 }

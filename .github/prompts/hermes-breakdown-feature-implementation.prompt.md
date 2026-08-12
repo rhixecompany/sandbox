@@ -1,29 +1,41 @@
 ---
 name: hermes-breakdown-feature-implementation
 title: Hermes Breakdown Feature Implementation
-description: 'Hermes-equivalent: produce a Feature Implementation Plan from a Feature PRD.'
+description: 'Hermes-equivalent: produce a Feature Implementation Plan from a Feature
+  PRD.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ai-assistant
-  - api
-  - architecture
-  - data
-  - deployment
-  - frontend
-  - ml
-  - prompts
-  - security
-  - specification
-  - typescript
+- ai-assistant
+- api
+- architecture
+- data
+- deployment
+- frontend
+- ml
+- prompts
+- security
+- specification
+- typescript
+- ai-assistant
+- api
+- architecture
+- data
+- deployment
+- frontend
+- ml
+- prompts
+- security
+- specification
+- typescript
 trigger: /hermes-breakdown-feature-implementation
 dependencies: []
 metadata:

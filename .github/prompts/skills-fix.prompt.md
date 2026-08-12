@@ -1,63 +1,76 @@
 ---
 name: skills-fix
 title: Skills Audit and Remediation
-description: 'Audit, debug, deduplicate, and enhance Hermes skills in the default profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt → applies fixes in priority order (F → C → B → A-).'
+description: Audit, debug, deduplicate, and enhance Hermes skills in the default profile.
+  Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits
+  all SKILL.md files in groups of 7 → generates per-skill reports and a master index
+  → creates a remediation plan and execution prompt → applies fixes in priority order
+  (F → C → B → A-).
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - code_execution
-  - file
-  - terminal
-  - web
+- code_execution
+- file
+- terminal
+- web
 scripts: []
 skills:
-  - introspection-only-general
-  - no-git-delete
-  - no-net-fetch
-  - skills-tools-preflight-check
-  - subagent-driven-development
-  - using-superpowers
-  - brainstorming
-  - plans-and-specs
-  - dispatching-parallel-agents
-  - systematic-debugging
-  - simplify
-  - skill-judge
-  - skill-creator
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- subagent-driven-development
+- using-superpowers
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- systematic-debugging
+- simplify
+- skill-judge
+- skill-creator
 formatter: default
 plan: null
 dependencies:
-  - "prompt:context-map"
-  - "prompt:update-implementation-plan"
-  - "prompt:skills-debug-prompt"
-  - "skill:using-superpowers"
-  - "skill:brainstorming"
-  - "skill:plans-and-specs"
-  - "skill:dispatching-parallel-agents"
-  - "skill:subagent-driven-development"
-  - "skill:systematic-debugging"
-  - "skill:simplify"
-  - "skill:skill-judge"
-  - "skill:skill-creator"
-  - "tool:terminal"
-  - "tool:patch"
-  - "tool:write_file"
-  - "tool:execute_code"
-  - "skill:introspection-only-general"
-  - "skill:no-git-delete"
-  - "skill:no-net-fetch"
-  - "skill:skills-tools-preflight-check"
+- prompt:context-map
+- prompt:update-implementation-plan
+- prompt:skills-debug-prompt
+- skill:using-superpowers
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:skill-judge
+- skill:skill-creator
+- tool:terminal
+- tool:patch
+- tool:write_file
+- tool:execute_code
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
 tags:
-  - ai-assistant
-  - audit
-  - data
-  - debugging
-  - fix
-  - generator
-  - prompts
-  - skills
-  - typescript
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- generator
+- prompts
+- skills
+- typescript
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- generator
+- prompts
+- skills
+- typescript
 trigger: /skills-fix
 metadata:
   hermes: {}

@@ -1,34 +1,22 @@
 ---
 name: us-earnings-research
 title: US Earnings Research Pipeline — Better Than Outlier & Attapoll
-description: Comprehensive research pipeline using stacked skills to identify superior US earning platforms, leveraging all prior session data and MCP tools.
+description: Comprehensive research pipeline using stacked skills to identify superior
+  US earning platforms, leveraging all prior session data and MCP tools.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- us
-- us-earnings
-- income-generation
-- web-research
-- skills-pipeline
-- subagents
-toolsets:
-- web
-- browser
-- terminal
-- file
+- data
+- frontend
+- mcp
+- prompts
 - skills
-- session_search
-- delegation
-- clarify
+- specification
+- typescript
+toolsets: null
 trigger: /us-earnings-research
-skills:
-- using-superpowers
-- user-communication-preferences
-- brainstorming
-- subagent-driven-development
-- web-research-pipeline
-- enhance-markdown
+skills: null
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -44,6 +32,7 @@ scripts: []
 formatter: default
 plan: ''
 ---
+
 # US Earnings Research Pipeline
 
 ## Goal

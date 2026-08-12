@@ -1,24 +1,30 @@
 ---
 name: playwright-typescript
 title: Playwright Typescript
-description: Comprehensive Playwright TypeScript prompt aligned to repository testing standards.
+description: Comprehensive Playwright TypeScript prompt aligned to repository testing
+  standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - frontend
-  - playwright
-  - prompts
-  - skills
-  - testing
-  - typescript
+- playwright
+- prompts
+- skills
+- testing
+- typescript
+- frontend
+- playwright
+- prompts
+- skills
+- testing
+- typescript
 trigger: /playwright-typescript
 dependencies: []
 metadata:

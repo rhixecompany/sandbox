@@ -6,20 +6,26 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-readme
 dependencies: []
 metadata:

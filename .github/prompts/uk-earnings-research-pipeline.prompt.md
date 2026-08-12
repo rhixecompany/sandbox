@@ -1,38 +1,24 @@
 ---
 name: uk-earnings-research-pipeline
 title: UK Earnings Research Pipeline — Better Than Outlier & Attapoll
-description: Comprehensive research pipeline using stacked skills to identify superior UK earning platforms, leveraging all prior session data and MCP tools.
+description: Comprehensive research pipeline using stacked skills to identify superior
+  UK earning platforms, leveraging all prior session data and MCP tools.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- web
-- terminal
-- file
-- code_execution
-- vision
-- delegation
-- skills
-- todo
-- memory
-- session_search
+toolsets: null
 scripts: []
-skills:
-- using-superpowers
-- user-communication-preferences
-- brainstorming
-- subagent-driven-development
-- plan
-- plans-and-specs
-- web-research-pipeline
+skills: null
 formatter: default
 plan: null
 tags:
-- research
-- uk-earnings
-- income-generation
-- web-research
-- skills-pipeline
+- data
+- frontend
+- mcp
+- prompts
+- skills
+- specification
+- typescript
 trigger: /uk-earnings-research-pipeline
 dependencies:
 - skill:using-superpowers
@@ -45,6 +31,7 @@ dependencies:
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.

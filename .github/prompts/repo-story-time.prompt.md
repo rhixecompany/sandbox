@@ -6,20 +6,9 @@ description: Generate a comprehensive repository summary and narrative story fro
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+toolsets: null
 scripts: []
-skills:
-- code-wiki
-- gh-cli
-- git-commit
-- writing-clearly-and-concisely
-- subagent-driven-development
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -34,13 +23,11 @@ dependencies:
 - skill:subagent-driven-development
 tags:
 - architecture
+- frontend
 - generator
 - git
-- mcp
-- ml
+- go
 - prompts
-- typescript
-- vscode
 - workflow
 trigger: /repo-story-time
 metadata:

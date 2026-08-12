@@ -6,18 +6,24 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /mkdocs-translations
 dependencies: []
 metadata:

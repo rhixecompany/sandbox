@@ -1,24 +1,39 @@
 ---
 name: skills-debug-prompt
 title: Skills Debug Execution Prompt
-description: "Execute the skills-debug remediation plan: fix C-grade skill issues
+description: 'Execute the skills-debug remediation plan: fix C-grade skill issues
   (missing frontmatter fields, missing core sections), then bulk-fix B-grade frontmatter,
-  verify with hermes skills check + re-audit, and commit."
+  verify with hermes skills check + re-audit, and commit.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - code_execution
-  - file
-  - terminal
+- code_execution
+- file
+- terminal
 trigger: /skills-debug-prompt
 tags:
-  - skills
+  - ai-assistant
   - audit
-  - remediation
+  - data
+  - debugging
   - fix
-  - hermes
+  - ml
+  - prompts
+  - skills
+  - typescript
+- skills
+- audit
+- remediation
+- fix
+- hermes
 ---
+
+## Actions
+
+- Follow the prompt workflow as specified.
+- Produce the requested deliverable(s) in the exact structure requested.
+- Validate output against acceptance criteria before finishing.
 
 # Skills Debug Execution Prompt
 

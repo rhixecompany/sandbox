@@ -1,29 +1,39 @@
 ---
 name: breakdown-plan
-title: 'GitHub Issue Planning & Project Automation Prompt'
-description: 'Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.'
+title: GitHub Issue Planning & Project Automation Prompt
+description: Issue Planning and Automation prompt that generates comprehensive project
+  plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities,
+  and automated tracking.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - generator
-  - git
-  - ml
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
+- generator
+- git
+- ml
+- planning
+- prompts
+- specification
+- testing
+- typescript
+- generator
+- git
+- ml
+- planning
+- prompts
+- specification
+- testing
+- typescript
 trigger: /breakdown-plan
 metadata:
   hermes: {}

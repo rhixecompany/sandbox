@@ -1,29 +1,36 @@
 ---
 name: dataverse-python-production-code
 title: Dataverse Python   Production Code Generator
-description: 'Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices.'
+description: Generate production-ready Python code using Dataverse SDK with error
+  handling, optimization, and best practices.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - audit
-  - backend
-  - data
-  - debugging
-  - generator
-  - ml
-  - prompts
-  - python
-  - specification
-  - typescript
+- data
+- generator
+- prompts
+- python
+- specification
+- typescript
+- audit
+- backend
+- data
+- debugging
+- generator
+- ml
+- prompts
+- python
+- specification
+- typescript
 trigger: /dataverse-python-production-code
 metadata:
   hermes: {}

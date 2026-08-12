@@ -6,21 +6,28 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - audit
-  - frontend
-  - ml
-  - planning
-  - prompts
-  - skills
-  - testing
-  - typescript
+- audit
+- frontend
+- planning
+- prompts
+- skills
+- testing
+- typescript
+- audit
+- frontend
+- ml
+- planning
+- prompts
+- skills
+- testing
+- typescript
 trigger: /testing
 dependencies: []
 metadata:

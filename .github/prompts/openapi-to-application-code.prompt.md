@@ -1,24 +1,30 @@
 ---
 name: openapi-to-application-code
 title: Generate Application from OpenAPI Spec
-description: 'Generate a complete, production-ready application from an OpenAPI specification.'
+description: Generate a complete, production-ready application from an OpenAPI specification.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /openapi-to-application-code
 dependencies: []
 metadata:

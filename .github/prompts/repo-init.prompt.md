@@ -7,23 +7,20 @@ version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- repo-init
-- ai-agents
-- inventory
-- scaffolding
-- cross-platform
+- agents
+- ai-assistant
+- generator
+- git
+- ml
+- prompts
+- typescript
 trigger: /repo-init
 formatter: default
 dependencies:
 - skill:repo-init
 - skill:verification-before-completion
-toolsets:
-- file
-- terminal
-- skills
-skills:
-- repo-init
-- verification-before-completion
+toolsets: null
+skills: null
 plan: null
 ---
 

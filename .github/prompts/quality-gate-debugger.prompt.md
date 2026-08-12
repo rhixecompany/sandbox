@@ -1,31 +1,41 @@
 ---
 name: quality-gate-debugger
-title: 'Quality Gate Debugger — Triage & Batch Fix'
-description: 'Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.'
+title: Quality Gate Debugger — Triage & Batch Fix
+description: Triage quality-gate report files (type-check, lint, test, build) and
+  batch-fix all issues.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
-  - browser
-  - todo
+- web
+- browser
+- todo
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: plans/debugger.md
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - audit
-  - debugging
-  - fix
-  - frontend
-  - generator
-  - linting
-  - prompts
-  - testing
-  - typescript
+- audit
+- debugging
+- fix
+- frontend
+- generator
+- linting
+- prompts
+- testing
+- typescript
+- audit
+- debugging
+- fix
+- frontend
+- generator
+- linting
+- prompts
+- testing
+- typescript
 trigger: /quality-gate-debugger
 metadata:
   hermes: {}

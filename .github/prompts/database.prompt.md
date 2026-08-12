@@ -1,24 +1,33 @@
 ---
 name: database
 title: Database Schema Guide for ComicWise
-description: Database schema knowledge base for ComicWise - use for any database-related tasks.
+description: Database schema knowledge base for ComicWise - use for any database-related
+  tasks.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
-  - todo
+- web
+- todo
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - data
-  - database
-  - frontend
-  - prompts
-  - sql
+- audit
+- data
+- database
+- debugging
+- frontend
+- prompts
+- refactoring
+- sql
+- data
+- database
+- frontend
+- prompts
+- sql
 trigger: /database
 metadata:
   hermes: {}

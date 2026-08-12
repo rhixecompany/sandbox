@@ -1,34 +1,26 @@
 ---
 name: hermes-comprehensive-setup
 title: Comprehensive Hermes and OpenCode Setup, Migration, and Validation
-description: 'Configure Hermes and OpenCode using best practices: load all prompts, plans, markdown files, skills, MCP servers, hooks, and templates. Run enhancement, validation, and dry-run verification end to end.'
+description: 'Configure Hermes and OpenCode using best practices: load all prompts,
+  plans, markdown files, skills, MCP servers, hooks, and templates. Run enhancement,
+  validation, and dry-run verification end to end.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- hermes
-- opencode
-- migration
+- ai-assistant
+- backend
+- configuration
+- documentation
+- markdown
 - mcp
-- validation
-- setup
-- automation
-toolsets:
-- terminal
-- file
+- ml
+- prompts
 - skills
-- todo
-- web
-- browser
-- memory
-- context_engine
-- session_search
-- delegation
-- code_execution
-scripts:
-- ~/AppData/Local/hermes/scripts/build_registry.py
-- ~/AppData/Local/hermes/scripts/audit_prompts.py
-- ~/AppData/Local/hermes/scripts/verify_sync.py
+- typescript
+- workflow
+toolsets: null
+scripts: null
 trigger: /hermes-comprehensive-setup
 skills: []
 dependencies: []
@@ -37,6 +29,7 @@ metadata:
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 Execute the `hermes-comprehensive-setup` workflow. Full details: `templates/hermes-comprehensive-setup/README.md`.

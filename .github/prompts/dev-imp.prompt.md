@@ -1,31 +1,41 @@
 ---
 name: dev-imp
 title: Development Implementation Manager
-description: 'Meta-prompt that discovers generator prompts, implements them, verifies, code-reviews, debugs, reports.'
+description: Meta-prompt that discovers generator prompts, implements them, verifies,
+  code-reviews, debugs, reports.
 version: 1.0.0
 license: MIT
 author: OWL
 toolsets:
-  - terminal
-  - file
-  - web
+- terminal
+- file
+- web
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - audit
-  - debugging
-  - fix
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- audit
+- debugging
+- fix
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- audit
+- debugging
+- fix
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /dev-imp
 metadata:
   hermes: {}

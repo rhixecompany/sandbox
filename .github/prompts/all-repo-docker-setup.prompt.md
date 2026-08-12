@@ -1,26 +1,25 @@
 ---
 name: all-repo-docker-setup
 title: All Repository Docker Setup and Cleanup
-description: For each repository in the rhixecompany org, clone to ./projects, build or update Dockerfiles/images, run security scans, create cleanup plans, fix container errors, and clean up unused Docker resources.
+description: For each repository in the rhixecompany org, clone to ./projects, build
+  or update Dockerfiles/images, run security scans, create cleanup plans, fix container
+  errors, and clean up unused Docker resources.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
+- debugging
 - docker
-- devops
-- cleanup
+- fix
+- frontend
+- ml
+- performance
+- prompts
 - security
-- automation
-- rhixecompany
-toolsets:
-- terminal
-- file
-- skills
-- todo
+- typescript
+toolsets: null
 trigger: /all-repo-docker-setup
-skills:
-- docker-management
-- disk-space-cleanup
+skills: null
 dependencies:
 - skill:docker-management
 - skill:disk-space-cleanup
@@ -32,6 +31,7 @@ scripts: []
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.

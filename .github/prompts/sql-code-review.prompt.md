@@ -1,30 +1,43 @@
 ---
 name: sql-code-review
 title: SQL Code Review
-description: 'Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.'
+description: Universal SQL code review assistant that performs comprehensive security,
+  maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL,
+  SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards,
+  and anti-pattern detection. Complements SQL optimization prompt for complete development
+  coverage.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - audit
-  - backend
-  - data
-  - database
-  - ml
-  - prompts
-  - security
-  - specification
-  - sql
-  - typescript
+- audit
+- backend
+- data
+- database
+- ml
+- prompts
+- security
+- sql
+- typescript
+- audit
+- backend
+- data
+- database
+- ml
+- prompts
+- security
+- specification
+- sql
+- typescript
 trigger: /sql-code-review
-tested_with: 'GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025'
+tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 dependencies: []
 metadata:
   hermes: {}

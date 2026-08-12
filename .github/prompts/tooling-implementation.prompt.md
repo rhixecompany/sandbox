@@ -1,31 +1,26 @@
 ---
 name: tooling-implementation
-title: 'Full Tooling Implementation: python-quality / tooling-lint / tooling-config across ./ and subrepos'
-description: 'Execute the tooling-implementation plan: verify, check, fix, and validate the python-quality, tooling-lint, and tooling-config stacks across the SandBox root and all projects/ subrepos, then write the artifact.'
+title: 'Full Tooling Implementation: python-quality / tooling-lint / tooling-config
+  across ./ and subrepos'
+description: 'Execute the tooling-implementation plan: verify, check, fix, and validate
+  the python-quality, tooling-lint, and tooling-config stacks across the SandBox root
+  and all projects/ subrepos, then write the artifact.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
 - configuration
+- documentation
+- fix
 - linting
-- maintenance
-- tooling
+- ml
+- prompts
+- python
+- typescript
 - workflow
-toolsets:
-- file
-- terminal
-- skills
-- todo
-scripts:
-- ~/AppData/Local/hermes/scripts/tooling_full_check.py
-skills:
-- tooling-implementation
-- executing-plans
-- executing-prompt-workflows
-- execute-workflow
-- python-quality
-- tooling-lint
-- tooling-config
+toolsets: null
+scripts: null
+skills: null
 trigger: /tooling-implementation
 dependencies:
 - skill:executing-plans
@@ -40,6 +35,7 @@ metadata:
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 Execute the `tooling-implementation` workflow. Full details: `templates/tooling-implementation/README.md`.

@@ -1,0 +1,11 @@
+{
+	"repo": "C:\\Users\\Alexa\\Desktop\\SandBox",
+	"target_glob": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\*.prompt.md",
+	"summary": {
+		"verified_total": 226,
+		"parse_pass": 226,
+		"parse_fail": 0
+	},
+	"failed_files": [],
+	"sample_failures": []
+}

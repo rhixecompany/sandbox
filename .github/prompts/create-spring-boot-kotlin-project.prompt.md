@@ -6,19 +6,24 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - docker
-  - generator
-  - java
-  - prompts
-  - spring
+- docker
+- generator
+- java
+- prompts
+- spring
+- docker
+- generator
+- java
+- prompts
+- spring
 trigger: /create-spring-boot-kotlin-project
 dependencies: []
 metadata:

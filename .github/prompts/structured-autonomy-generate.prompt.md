@@ -6,19 +6,24 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /structured-autonomy-generate
 metadata:
   hermes: {}

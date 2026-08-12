@@ -1,28 +1,15 @@
 ---
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
-description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across all repos in ./projects.
+description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
+  PRs (gh pr create, review-then-merge), merge directly into development, and sync
+  to production across all repos in ./projects.
 version: 1.0.0
 license: MIT
 author: Alexa
-toolsets:
-- terminal
-- file
-- mcp
-- delegation
+toolsets: null
 scripts: []
-skills:
-- gh-cli
-- git-commit
-- git-helper
-- git-submodule-workflow
-- github-pr-workflow
-- github-repo-management
-- github-code-review
-- finishing-a-development-branch
-- git-history-preserving-migration
-- workspace-audit
-- repo-management
+skills: null
 formatter: default
 plan: plans/git-multi-repo-orchestration.md
 dependencies:
@@ -39,17 +26,18 @@ dependencies:
 - skill:repo-management
 - tool:mcp-github
 tags:
+- audit
+- frontend
 - git
-- github
-- submodules
-- pr
-- orchestration
-- multi-repo
+- prompts
+- skills
+- typescript
 - workflow
 trigger: /git-multi-repo-orchestration
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Load and use all git skills to run the full git lifecycle across **all repos in `./projects`**:

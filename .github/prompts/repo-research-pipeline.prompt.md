@@ -7,19 +7,9 @@ description: Structured workflow for executing web research across multiple proj
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+toolsets: null
 scripts: []
-skills:
-- domain-intel
-- gh-cli
-- web-research-pipeline
-- subagent-driven-development
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -36,14 +26,12 @@ dependencies:
 - skill:subagent-driven-development
 - skill:web-research-pipeline
 tags:
-- frontend
+- backend
 - generator
-- git
 - mcp
 - prompts
 - skills
 - typescript
-- vscode
 - workflow
 trigger: /repo-research-pipeline
 metadata:

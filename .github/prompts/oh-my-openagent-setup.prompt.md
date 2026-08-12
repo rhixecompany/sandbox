@@ -1,20 +1,20 @@
 ---
 name: oh-my-openagent-setup
 title: Oh My OpenAgent Setup
-description: Provision and verify Oh My OpenAgent and the Oh My Hermes workflow layer on top of OpenCode CLI + Hermes Agent with deterministic validation.
+description: Provision and verify Oh My OpenAgent and the Oh My Hermes workflow layer
+  on top of OpenCode CLI + Hermes Agent with deterministic validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- opencode
-- oh-my-openagent
-- setup
-- validation
-toolsets:
-- terminal
-- file
-- skills
-- todo
+- agents
+- ai-assistant
+- documentation
+- ml
+- prompts
+- typescript
+- workflow
+toolsets: null
 trigger: /oh-my-openagent-setup
 skills: []
 dependencies: []
@@ -24,6 +24,7 @@ scripts: []
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 Execute the `oh-my-openagent-setup` workflow. Full details: `templates/oh-my-openagent-setup/README.md`.

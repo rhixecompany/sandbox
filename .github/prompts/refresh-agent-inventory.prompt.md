@@ -1,24 +1,31 @@
 ---
 name: refresh-agent-inventory
 title: Refresh Agent Inventory
-description: Refresh workspace customization inventory and patch stale AGENTS or copilot instruction references.
+description: Refresh workspace customization inventory and patch stale AGENTS or copilot
+  instruction references.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - skills
-  - typescript
+- agents
+- ai-assistant
+- ml
+- prompts
+- skills
+- typescript
+- agents
+- ai-assistant
+- ml
+- prompts
+- skills
+- typescript
 trigger: /refresh-agent-inventory
 mode: ask
 dependencies: []

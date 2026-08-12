@@ -1,29 +1,38 @@
 ---
 name: session-agentsmd-full-workflow
 title: Session Agents.md Full Workflow
-description: 'Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and report.'
+description: 'Execute the full session workflow: load agent context, read AGENTS.md,
+  apply rules, and report.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - agents
-  - architecture
-  - generator
-  - git
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- agents
+- architecture
+- generator
+- git
+- prompts
+- specification
+- typescript
+- workflow
+- agents
+- architecture
+- generator
+- git
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /session-agentsmd-full-workflow
 metadata:
   hermes: {}

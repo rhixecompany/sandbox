@@ -1,23 +1,30 @@
 ---
 name: create-github-pull-request-from-specification
 title: Create GitHub Pull Request from Specification
-description: Create GitHub Pull Request for feature request from specification file using pull_request_template.md template.
+description: Create GitHub Pull Request for feature request from specification file
+  using pull_request_template.md template.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-github-pull-request-from-specification
 dependencies: []
 metadata:

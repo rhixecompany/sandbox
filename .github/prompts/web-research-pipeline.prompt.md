@@ -1,30 +1,38 @@
 ---
 name: web-research-pipeline
 title: Web Research Pipeline (Tavily-First)
-description: 'Search the web, extract full content from discovered pages, and save crisply formatted markdown files — one per source. Uses Tavily MCP as primary search/extract backend.'
+description: Search the web, extract full content from discovered pages, and save
+  crisply formatted markdown files — one per source. Uses Tavily MCP as primary search/extract
+  backend.
 version: 2.1.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
-  - mcp
+- file
+- terminal
+- web
+- mcp
 scripts: []
 skills:
-  - domain-intel
+- domain-intel
 formatter: default
 plan: null
 dependencies:
-  - "tool:mcp-tavily"
-  - "tool:mcp-fetch"
-  - "skill:domain-intel"
+- tool:mcp-tavily
+- tool:mcp-fetch
+- skill:domain-intel
 tags:
-  - backend
-  - markdown
-  - mcp
-  - tavily
-  - workflows
+- backend
+- markdown
+- mcp
+- prompts
+- skills
+- workflow
+- backend
+- markdown
+- mcp
+- tavily
+- workflows
 trigger: /web-research-pipeline
 metadata:
   hermes: {}

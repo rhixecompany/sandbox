@@ -6,21 +6,26 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - subagent-driven-development
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "skill:subagent-driven-development"
+- skill:subagent-driven-development
 tags:
-  - ml
-  - planning
-  - prompts
-  - specification
-  - typescript
+- ml
+- planning
+- prompts
+- specification
+- typescript
+- ml
+- planning
+- prompts
+- specification
+- typescript
 trigger: /structured-autonomy-plan
 metadata:
   hermes: {}

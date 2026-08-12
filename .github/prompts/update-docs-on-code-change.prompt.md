@@ -1,28 +1,39 @@
 ---
 name: update-docs-on-code-change
 title: Update Docs on Code Change
-description: 'Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows.'
+description: Comprehensive prompt for synchronizing documentation whenever code changes
+  modify behavior, APIs, or workflows.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - configuration
-  - documentation
-  - frontend
-  - maintenance
-  - ml
-  - prompts
-  - skills
-  - typescript
-  - workflow
+- api
+- configuration
+- documentation
+- frontend
+- maintenance
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+- api
+- configuration
+- documentation
+- frontend
+- maintenance
+- ml
+- prompts
+- skills
+- typescript
+- workflow
 trigger: /update-docs-on-code-change
 dependencies: []
 metadata:

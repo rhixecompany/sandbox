@@ -6,19 +6,24 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - backend
-  - java
-  - prompts
-  - refactoring
-  - typescript
+- backend
+- java
+- prompts
+- refactoring
+- typescript
+- backend
+- java
+- prompts
+- refactoring
+- typescript
 trigger: /java-refactoring-remove-parameter
 metadata:
   hermes: {}

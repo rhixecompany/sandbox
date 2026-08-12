@@ -2,27 +2,17 @@
 trigger: /comprehensive-prompt-enhancer
 name: comprehensive-prompt-enhancer
 title: Comprehensive Prompt Library Enhancer
-description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY principle, best practices, and all appropriate structural sections: personas, profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures each prompt and all its files are verified, validated.'
+description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using
+  DRY principle, best practices, and all appropriate structural sections: personas,
+  profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals,
+  checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures
+  each prompt and all its files are verified, validated.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- file
-- terminal
-- web
-- delegation
-scripts:
-- .enhance/comprehensive_enhance.py
-- .enhance/analyze_prompts.py
-- .enhance/fix_prompt_artifacts.py
-- .enhance/fix_fence_glue.py
-skills:
-- using-superpowers
-- subagent-driven-development
-- brainstorming
-- prompt-engineering-patterns
-- prompt-management
-- skill-judge
+toolsets: null
+scripts: null
+skills: null
 dependencies:
 - skill:using-superpowers
 - skill:subagent-driven-development
@@ -31,21 +21,20 @@ dependencies:
 - skill:prompt-management
 - skill:skill-judge
 tags:
-- hermes
+- audit
+- backend
+- git
+- mcp
+- ml
 - prompts
-- enhancement
-- library
-- DRY
-- workflow
+- skills
+- typescript - prompts - enhancement - library
 metadata:
-  hermes:
-    tags:
-    - prompts
-    - enhancement
-    - library
+  hermes: null
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 Enhance and update all prompts at `./.github/prompts/*.prompt.md` using the DRY principle, prompt engineering best practices, and all appropriate structural sections — personas, profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensure each prompt and all its files are verified, validated, and have zero issues remaining.

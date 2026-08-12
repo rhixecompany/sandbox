@@ -1,26 +1,32 @@
 ---
 name: list-all-installed-vscode-extension
 title: List All Installed Vscode Extension
-description: 'Inventory all installed VS Code extensions, research their documentation, and apply findings to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.'
+description: 'Inventory all installed VS Code extensions, research their documentation,
+  and apply findings to optimize user and workspace settings. Multi-phase: discover
+  → research → synthesize → configure.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- terminal
-- web
-- file
+toolsets: null
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
+- audit
+- configuration
+- debugging
+- documentation
+- fix
+- performance
 - prompts
-- list-all-installed-vscode-extension
+- typescript
 trigger: /list-all-installed-vscode-extension
 dependencies: []
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Inventory all installed VS Code extensions, research their documentation, and apply findings to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.

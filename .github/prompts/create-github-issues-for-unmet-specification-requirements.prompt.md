@@ -1,24 +1,32 @@
 ---
 name: create-github-issues-for-unmet-specification-requirements
 title: Create GitHub Issues for Unmet Specification Requirements
-description: Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml template.
+description: Create GitHub Issues for unimplemented requirements from specification
+  files using feature_request.yml template.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - frontend
-  - generator
-  - git
-  - ml
-  - prompts
-  - specification
-  - typescript
+- frontend
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
+- frontend
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-github-issues-for-unmet-specification-requirements
 dependencies: []
 metadata:

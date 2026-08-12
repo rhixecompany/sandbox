@@ -1,30 +1,40 @@
 ---
 name: Initial
 title: ComicWise Project Setup - Complete Guide
-description: 'Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow.'
+description: Complete project setup guide for ComicWise — Next.js 16 application with
+  pnpm, covering installation, configuration, and development workflow.
 version: 2.0.0
 updated: 2025-12-29
 license: MIT
 author: Hermes Agent
-platforms: 'Windows, Linux, macOS'
+platforms: Windows, Linux, macOS
 packageManager: pnpm
 framework: Next.js 16
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - docker
-  - frontend
-  - ml
-  - nextjs
-  - prompts
-  - typescript
-  - windows
+- configuration
+- docker
+- frontend
+- ml
+- nextjs
+- prompts
+- typescript
+- windows
+- workflow
+- docker
+- frontend
+- ml
+- nextjs
+- prompts
+- typescript
+- windows
 trigger: /Initial
 metadata:
   hermes: {}

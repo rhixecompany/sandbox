@@ -1,22 +1,20 @@
 ---
 name: disk-space-cleanup
 title: Disk Space Cleanup
-description: Clean up disk space by removing unused Docker resources, cache, logs, and temporary files with a safe, reversible plan.
+description: Clean up disk space by removing unused Docker resources, cache, logs,
+  and temporary files with a safe, reversible plan.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- cleanup
-- disk
 - docker
-- maintenance
-toolsets:
-- terminal
-- file
-- skills
-- todo
-scripts:
-- ~/AppData/Local/hermes/scripts/cleanup_disk.py
+- documentation
+- ml
+- prompts
+- typescript
+- workflow
+toolsets: null
+scripts: null
 trigger: /disk-space-cleanup
 skills: []
 dependencies: []
@@ -25,6 +23,7 @@ metadata:
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 Execute the `disk-space-cleanup` workflow. Full details: `templates/disk-space-cleanup/README.md`.

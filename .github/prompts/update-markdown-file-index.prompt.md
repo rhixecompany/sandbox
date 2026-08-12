@@ -1,23 +1,30 @@
 ---
 name: update-markdown-file-index
 title: Update Markdown File Index
-description: Update a markdown file section with an index/table of files from a specified folder.
+description: Update a markdown file section with an index/table of files from a specified
+  folder.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - maintenance
-  - markdown
-  - ml
-  - prompts
-  - specification
-  - typescript
+- maintenance
+- markdown
+- ml
+- prompts
+- specification
+- typescript
+- maintenance
+- markdown
+- ml
+- prompts
+- specification
+- typescript
 trigger: /update-markdown-file-index
 dependencies: []
 metadata:

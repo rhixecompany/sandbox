@@ -1,24 +1,32 @@
 ---
 name: create-oo-component-documentation
 title: Generate Standard OO Component Documentation
-description: 'Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.'
+description: Create comprehensive, standardized documentation for object-oriented
+  components following industry best practices and architectural documentation standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - architecture
-  - documentation
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- architecture
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- architecture
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /create-oo-component-documentation
 dependencies: []
 metadata:

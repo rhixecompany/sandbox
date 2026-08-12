@@ -1,28 +1,30 @@
 ---
 name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
-description: Generates comprehensive technology stack documentation for all projects in the workspace. Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md at the workspace root.
+description: Generates comprehensive technology stack documentation for all projects
+  in the workspace. Each project gets its own TECHNOLOGY_STACK.md in its root directory,
+  plus a master Technology_Stack_Blueprint.md at the workspace root.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- file
-- terminal
+toolsets: null
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-- documentation
 - architecture
-- technology-stack
-- blueprint
-- multi-project
+- documentation
+- frontend
+- generator
+- prompts
+- typescript
 trigger: /technology-stack-blueprint-generator
 dependencies: []
 metadata:
   hermes: {}
 ---
+
 # Technology Stack Blueprint Generator
 
 ## Goal

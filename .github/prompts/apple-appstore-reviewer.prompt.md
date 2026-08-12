@@ -1,29 +1,38 @@
 ---
 name: apple-appstore-reviewer
 title: Apple App Store Reviewer
-description: Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons.
+description: Serves as a reviewer of the codebase with instructions on looking for
+  Apple App Store optimizations or rejection reasons.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - audit
-  - fix
-  - frontend
-  - ml
-  - prompts
-  - rust
-  - security
-  - specification
-  - testing
-  - typescript
+- audit
+- fix
+- frontend
+- prompts
+- rust
+- security
+- testing
+- typescript
+- audit
+- fix
+- frontend
+- ml
+- prompts
+- rust
+- security
+- specification
+- testing
+- typescript
 trigger: /apple-appstore-reviewer
 metadata:
   hermes: {}
