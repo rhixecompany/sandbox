@@ -40,6 +40,8 @@ from lib import (
     write_jsonl,
 )
 
+import session_end_capture  # noqa: E402  (hooks dir on sys.path via _LIB_DIR above)
+
 _LOG_DIR = Path("C:/Users/Alexa/AppData/Local/hermes/logs/sessions")
 _HOOK_PREFIX = "session-logger"
 _HOOK_FALLBACK_NAME = "session_logger"
@@ -212,6 +214,16 @@ async def handle_on_session_end(payload: dict) -> None:
             f"Session end captured: {session_id} status={status} "
             f"duration={record['duration_seconds']}s turns={record['turns']}"
         )
+        # Full end capture: tools/skills/changelog/errors/prompts from
+        # state.db -> <session_id>.end.json, consumed by session-audit-report.
+        try:
+            capture = await asyncio.to_thread(
+                session_end_capture.run_capture, session_id, payload, timestamp
+            )
+            artifact = capture.get("artifact") or capture.get("capture_error") or "?"
+            log_info(f"Session end capture written: {session_id} -> {artifact}")
+        except Exception as exc:  # noqa: BLE001 - capture must never break the hook
+            log_debug(f"session-logger: full end capture skipped: {exc}")
     except FileNotFoundError:
         record.setdefault("diagnostics", []).append(f"missing_log_file:{log_file}")
         log_error(f"Session end failed for {session_id}: missing log file at {log_file}")
