@@ -83,6 +83,15 @@ sMemory instructions can be stored in two scopes:- **Global** (`global` or `user
 /memory-merger >domain-name [scope]
 ```
 
+- `>domain-name` - Required. The domain to merge (e.g., `>clojure`, `>git-workflow`, `>prompt-engineering`)
+- `[scope]` - Optional. One of: `global`, `user` (both mean global), `workspace`, or `ws`. Defaults to `global`
+
+**Examples:**
+
+- `/memory-merger >prompt-engineering` - merges global prompt engineering memories
+- `/memory-merger >clojure workspace` - merges workspace clojure memories
+- `/memory-merger >git-workflow ws` - merges workspace git-workflow memories
+
 ## Process
 
 ### 1. Parse Input and Read Files

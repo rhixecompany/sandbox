@@ -101,6 +101,7 @@ Only display results in table with icons:```markdown| Module | Current | Latest 
 ### Summary of Updates
 
 Describe updates made, any manual reviews needed or issues encountered.
+
 ```
 
 ## Icons
@@ -196,3 +197,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+

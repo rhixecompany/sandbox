@@ -156,6 +156,7 @@ Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimp
 ### Phase 5: Execute Fixes (Priority Order)
 
 **F-grade first** — Fix critical issues (unclosed fences, missing frontmatter):
+
 ```python
 
 # For unclosed code fences: append closing fencewith open(skill_path, 'a', encoding='utf-8') as f:    f.write("\n```\n")````**C-grade next** — Fix major issues (boilerplate `
@@ -286,3 +287,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
+

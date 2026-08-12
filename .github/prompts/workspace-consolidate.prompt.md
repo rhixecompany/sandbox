@@ -143,6 +143,7 @@ All workspace-level reports go under `docs/`.
 ### Required Frontmatter (YAML)
 
 Every `.md` file should have standard frontmatter:
+
 ```yaml
 ---
 title: Human-Readable Title
@@ -310,3 +311,4 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
+

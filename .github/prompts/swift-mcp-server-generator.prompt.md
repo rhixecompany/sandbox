@@ -137,7 +137,6 @@ func getResourceDefinitions() -> [Resource] {
     ]
 }
 ```
-> [Resource] {    [        Resource(            name: "Example Data",            uri: "resource://data/example",            description: "Example resource data",            mimeType: "application/json"        ),        Resource(            name: "Configuration",            uri: "resource://config",            description: "Server configuration",            mimeType: "application/json"        )    ]}```
 
 ## ResourceHandlers.swift Template
 
@@ -163,7 +162,6 @@ func getPromptDefinitions() -> [Prompt] {
     ]
 }
 ```
-> [Prompt] {    [        Prompt(            name: "code-review",            description: "Generate a code review prompt",            arguments: [                .init(name: "language", description: "Programming language", required: true),                .init(name: "focus", description: "Review focus area", required: false)            ]        )    ]}```
 
 ## PromptHandlers.swift Template
 
