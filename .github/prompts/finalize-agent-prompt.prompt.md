@@ -1,23 +1,29 @@
 ---
 name: finalize-agent-prompt
 title: Finalize Agent Prompt
-description: Finalize prompt file using the role of an AI agent to polish the prompt for the end user.
+description: Finalize prompt file using the role of an AI agent to polish the prompt
+  for the end user.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - ml
-  - prompts
-  - specification
-  - typescript
+- agents
+- ml
+- prompts
+- specification
+- typescript
+- agents
+- ml
+- prompts
+- specification
+- typescript
 trigger: /finalize-agent-prompt
 dependencies: []
 metadata:

@@ -1,31 +1,43 @@
 ---
 name: agents-generator
 title: Agents Generator
-description: 'Technology-agnostic blueprint generator for creating comprehensive AGENTS.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.'
+description: Technology-agnostic blueprint generator for creating comprehensive AGENTS.md
+  files that guide GitHub Copilot to produce code consistent with project standards,
+  architecture patterns, and exact technology versions by analyzing existing codebase
+  patterns and avoiding assumptions.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - architecture
-  - data
-  - debugging
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- architecture
+- frontend
+- generator
+- git
+- ml
+- prompts
+- typescript
+- agents
+- architecture
+- data
+- debugging
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- testing
+- typescript
+- workflow
 trigger: /agents-generator
 dependencies: []
 metadata:

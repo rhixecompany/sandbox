@@ -1,23 +1,31 @@
 ---
 name: csharp-mstest
 title: MSTest Best Practices (MSTest 3.x/4.x)
-description: 'Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests.'
+description: Get best practices for MSTest 3.x/4.x unit testing, including modern
+  assertion APIs and data-driven tests.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - csharp
-  - dotnet
-  - prompts
-  - testing
-  - typescript
+- api
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
+- api
+- csharp
+- dotnet
+- prompts
+- testing
+- typescript
 trigger: /csharp-mstest
 dependencies: []
 metadata:

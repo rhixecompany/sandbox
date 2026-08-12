@@ -1,24 +1,31 @@
 ---
 name: editorconfig
 title: EditorConfig Expert
-description: Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
+description: Generates a comprehensive and best-practice-oriented .editorconfig file
+  based on project analysis and user preferences.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - configuration
-  - generator
-  - ml
-  - prompts
-  - specification
-  - typescript
+- configuration
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- configuration
+- generator
+- ml
+- prompts
+- specification
+- typescript
 trigger: /editorconfig
 dependencies: []
 metadata:

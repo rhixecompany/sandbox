@@ -6,17 +6,22 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - typescript
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
 trigger: /next-intl-add-language
 dependencies: []
 metadata:

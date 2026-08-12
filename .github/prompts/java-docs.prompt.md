@@ -1,23 +1,29 @@
 ---
 name: java-docs
 title: Java Documentation (Javadoc)
-description: Ensure that Java types are documented with Javadoc comments and follow best practices for documentation.
+description: Ensure that Java types are documented with Javadoc comments and follow
+  best practices for documentation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - documentation
-  - java
-  - prompts
-  - specification
-  - typescript
+- documentation
+- java
+- prompts
+- specification
+- typescript
+- documentation
+- java
+- prompts
+- specification
+- typescript
 trigger: /java-docs
 dependencies: []
 metadata:

@@ -1,26 +1,32 @@
 ---
 name: ruby-mcp-server-generator
 title: Ruby MCP Server Generator
-description: Generate a complete Model Context Protocol server project in Ruby using the official MCP Ruby SDK gem.
+description: Generate a complete Model Context Protocol server project in Ruby using
+  the official MCP Ruby SDK gem.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - audit
-  - backend
-  - generator
-  - mcp
-  - prompts
-  - ruby
-  - typescript
+- backend
+- generator
+- mcp
+- prompts
+- ruby
+- audit
+- backend
+- generator
+- mcp
+- prompts
+- ruby
+- typescript
 trigger: /ruby-mcp-server-generator
 dependencies: []
 metadata:

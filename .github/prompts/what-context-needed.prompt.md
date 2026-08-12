@@ -6,18 +6,23 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
 trigger: /what-context-needed
 dependencies: []
 metadata:

@@ -1,27 +1,37 @@
 ---
 name: hermes-breakdown-plan
 title: Hermes Breakdown Plan
-description: 'Hermes-equivalent: generate a GitHub project plan from PRD, technical breakdown, implementation plan, and test strategy artifacts.'
+description: 'Hermes-equivalent: generate a GitHub project plan from PRD, technical
+  breakdown, implementation plan, and test strategy artifacts.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ai-assistant
-  - frontend
-  - generator
-  - git
-  - planning
-  - prompts
-  - specification
-  - testing
-  - typescript
+- ai-assistant
+- frontend
+- generator
+- git
+- planning
+- prompts
+- specification
+- testing
+- typescript
+- ai-assistant
+- frontend
+- generator
+- git
+- planning
+- prompts
+- specification
+- testing
+- typescript
 trigger: /hermes-breakdown-plan
 dependencies: []
 metadata:

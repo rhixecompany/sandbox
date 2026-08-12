@@ -1,36 +1,18 @@
 ---
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
-description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage.'
+description: 'Research all 17 projects via delegated sub-prompts: web search for similar
+  projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in
+  crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
+  ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize
+  repo in 5 bullets, find main entrypoint, check current directory, set up GitHub
+  PR workflow, check disk usage.'
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- vision
-- web
+toolsets: null
 scripts: []
-skills:
-- brainstorming
-- code-wiki
-- content-research-writer
-- gh-cli
-- git-commit
-- git-submodule-workflow
-- github-repo-management
-- plans-and-specs
-- spike
-- systematic-debugging
-- web-research-pipeline
-- writing-clearly-and-concisely
-- writing-skills
-- subagent-driven-development
-- firecrawl-search
-- firecrawl-scrape
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -65,18 +47,20 @@ tags:
 - architecture
 - frontend
 - git
-- mcp
-- onboarding
+- markdown
+- ml
 - performance
 - prompts
 - security
 - typescript
-- vscode
+- workflow
 trigger: /repo
 metadata:
   hermes: {}
 mode: agent
-system: You are a research orchestrator. Delegate web research to web-research-pipeline sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or migration — those live in repo-management.prompt.md.
+system: You are a research orchestrator. Delegate web research to web-research-pipeline
+  sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or
+  migration — those live in repo-management.prompt.md.
 ---
 
 ## Goal
@@ -90,6 +74,8 @@ Research each of the 17 projects under `projects/`. For every project:
 3. **Update** `RESEARCH_REPORT.md` if it exists — refresh findings, verify links, add new discoveries.
 
 4. **Create** `RESEARCH_REPORT.md` if missing — new report from the template in the Report Template section.
+
+
 
 **Output:** one `RESEARCH_REPORT.md` per project root. Updated `projects/RESEARCH_INDEX.md`.
 

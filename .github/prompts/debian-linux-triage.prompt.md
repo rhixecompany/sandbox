@@ -1,24 +1,31 @@
 ---
 name: debian-linux-triage
 title: Debian Linux Triage
-description: 'Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware guidance.'
+description: Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware
+  guidance.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - debugging
-  - fix
-  - frontend
-  - linux
-  - ml
-  - prompts
-  - typescript
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- debugging
+- fix
+- frontend
+- linux
+- ml
+- prompts
+- typescript
 trigger: /debian-linux-triage
 dependencies: []
 metadata:

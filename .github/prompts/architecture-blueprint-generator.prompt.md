@@ -1,25 +1,36 @@
 ---
 name: architecture-blueprint-generator
 title: Comprehensive Project Architecture Blueprint Generator
-description: 'Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.'
+description: Comprehensive project architecture blueprint generator that analyzes
+  codebases to create detailed architectural documentation. Automatically detects
+  technology stacks and architectural patterns, generates visual diagrams, documents
+  implementation patterns, and provides extensible blueprints for maintaining architectural
+  consistency and guiding new development.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - architecture
-  - documentation
-  - frontend
-  - generator
-  - ml
-  - prompts
-  - typescript
+- architecture
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- typescript
+- architecture
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- typescript
 trigger: /architecture-blueprint-generator
 dependencies: []
 metadata:

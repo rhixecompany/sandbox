@@ -3,32 +3,15 @@
   "issue_counts": {
     "critical": 0,
     "high": 0,
-    "medium": 1,
-    "info": 8
+    "medium": 0,
+    "info": 0
   },
   "files_no_frontmatter": [],
   "all_issues": {
-    "info": {
-      "RULES_INLINE_NOT_SHARED": [
-        "all-repo-docker-setup",
-        "ngn-earnings-research",
-        "setup-bun-bunx",
-        "setup-groq-cloud",
-        "smithery-setup",
-        "uk-earnings-research",
-        "us-earnings-research"
-      ],
-      "MISSING_RULES_SECTION": [
-        "test-providers-models"
-      ]
-    },
-    "medium": {
-      "MISSING_EXECUTION_SECTION:no_Phases/Steps/Workflow": [
-        "test-providers-models"
-      ]
-    },
     "critical": {},
-    "high": {}
+    "high": {},
+    "medium": {},
+    "info": {}
   },
   "per_file": [
     {
@@ -53,7 +36,7 @@
     },
     {
       "name": "all-repo-docker-setup",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "apple-appstore-reviewer",
@@ -541,7 +524,7 @@
     },
     {
       "name": "ngn-earnings-research",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "oh-my-openagent-setup",
@@ -757,7 +740,7 @@
     },
     {
       "name": "setup-bun-bunx",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "setup-component",
@@ -769,7 +752,7 @@
     },
     {
       "name": "setup-groq-cloud",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "setup-nextjs-frontend-stack",
@@ -793,7 +776,7 @@
     },
     {
       "name": "smithery-setup",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "sql-code-review",
@@ -837,7 +820,7 @@
     },
     {
       "name": "test-providers-models",
-      "issue_count": 2
+      "issue_count": 0
     },
     {
       "name": "testing",
@@ -877,7 +860,7 @@
     },
     {
       "name": "uk-earnings-research",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "update-avm-modules-in-bicep",
@@ -909,7 +892,7 @@
     },
     {
       "name": "us-earnings-research",
-      "issue_count": 1
+      "issue_count": 0
     },
     {
       "name": "web-research-pipeline",

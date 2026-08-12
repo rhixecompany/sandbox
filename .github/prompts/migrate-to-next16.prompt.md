@@ -6,25 +6,35 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
-  - browser
-  - todo
+- web
+- browser
+- todo
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - api
-  - configuration
-  - frontend
-  - linting
-  - migration
-  - nextjs
-  - prompts
-  - react
-  - testing
-  - typescript
+- api
+- configuration
+- frontend
+- linting
+- migration
+- nextjs
+- prompts
+- react
+- testing
+- typescript
+- api
+- configuration
+- frontend
+- linting
+- migration
+- nextjs
+- prompts
+- react
+- testing
+- typescript
 trigger: /migrate-to-next16
 metadata:
   hermes: {}

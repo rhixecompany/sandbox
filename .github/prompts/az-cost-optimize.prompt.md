@@ -1,28 +1,36 @@
 ---
 name: az-cost-optimize
 title: Azure Cost Optimize
-description: Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.
+description: Analyze Azure resources used in the app (IaC files and/or resources in
+  a target rg) and optimize costs - creating GitHub issues for identified optimizations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - azure
-  - backend
-  - configuration
-  - frontend
-  - generator
-  - git
-  - mcp
-  - performance
-  - prompts
-  - workflow
+- azure
+- generator
+- git
+- performance
+- prompts
+- typescript
+- workflow
+- azure
+- backend
+- configuration
+- frontend
+- generator
+- git
+- mcp
+- performance
+- prompts
+- workflow
 trigger: /az-cost-optimize
 dependencies: []
 metadata:

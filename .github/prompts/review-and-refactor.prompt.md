@@ -6,19 +6,25 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - audit
-  - ml
-  - prompts
-  - refactoring
-  - specification
-  - typescript
+- audit
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+- audit
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
 trigger: /review-and-refactor
 dependencies: []
 metadata:

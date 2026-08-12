@@ -1,26 +1,35 @@
 ---
 name: code-review
 title: Code Review
-description: 'Comprehensive code review prompt for correctness, security, and testing risk.'
+description: Comprehensive code review prompt for correctness, security, and testing
+  risk.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - audit
-  - data
-  - frontend
-  - prompts
-  - security
-  - skills
-  - testing
-  - typescript
+- audit
+- data
+- frontend
+- prompts
+- security
+- skills
+- testing
+- typescript
+- audit
+- data
+- frontend
+- prompts
+- security
+- skills
+- testing
+- typescript
 trigger: /code-review
 dependencies: []
 metadata:

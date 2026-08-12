@@ -6,17 +6,21 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ml
-  - prompts
-  - specification
-  - typescript
+- ml
+- prompts
+- specification
+- typescript
+- ml
+- prompts
+- specification
+- typescript
 trigger: /my-pull-requests
 dependencies: []
 metadata:

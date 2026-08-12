@@ -1,21 +1,26 @@
 ---
 name: tasksync
 title: Task Sync
-description: 'Comprehensive prompt for synchronizing tasks, implementations, and updates across projects.'
+description: Comprehensive prompt for synchronizing tasks, implementations, and updates
+  across projects.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - frontend
-  - prompts
-  - workflow
+- frontend
+- prompts
+- typescript
+- workflow
+- frontend
+- prompts
+- workflow
 trigger: /tasksync
 dependencies: []
 metadata:

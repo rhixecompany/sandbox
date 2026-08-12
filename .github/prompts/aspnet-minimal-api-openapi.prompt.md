@@ -6,20 +6,25 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - documentation
-  - prompts
-  - specification
-  - typescript
-  - csharp
-  - dotnet
+- api
+- documentation
+- prompts
+- specification
+- typescript
+- api
+- documentation
+- prompts
+- specification
+- typescript
+- csharp
+- dotnet
 trigger: /aspnet-minimal-api-openapi
 dependencies: []
 metadata:

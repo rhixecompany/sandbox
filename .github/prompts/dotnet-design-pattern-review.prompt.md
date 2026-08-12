@@ -1,25 +1,33 @@
 ---
 name: dotnet-design-pattern-review
-title: '.NET/C# Design Pattern Review'
-description: 'Review the C#/.NET code for design pattern implementation and suggest improvements.'
+title: .NET/C# Design Pattern Review
+description: Review the C#/.NET code for design pattern implementation and suggest
+  improvements.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - architecture
-  - audit
-  - csharp
-  - dotnet
-  - frontend
-  - prompts
-  - typescript
+- architecture
+- audit
+- csharp
+- dotnet
+- frontend
+- prompts
+- typescript
+- architecture
+- audit
+- csharp
+- dotnet
+- frontend
+- prompts
+- typescript
 trigger: /dotnet-design-pattern-review
 dependencies: []
 metadata:

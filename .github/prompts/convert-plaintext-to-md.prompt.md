@@ -1,30 +1,37 @@
 ---
 name: convert-plaintext-to-md
 title: Convert Plaintext to Markdown
-description: 'Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.'
+description: Convert plaintext documentation to properly formatted markdown using
+  explicit instructions, documented options, or reference files.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills:
-  - enhance-markdown
-  - context-map
+- enhance-markdown
+- context-map
 formatter: default
 plan: null
 dependencies:
-  - "skill:enhance-markdown"
-  - "skill:context-map"
+- skill:enhance-markdown
+- skill:context-map
 tags:
-  - conversion
-  - documentation
-  - markdown
-  - ml
-  - prompts
-  - typescript
+- conversion
+- documentation
+- markdown
+- ml
+- prompts
+- typescript
+- conversion
+- documentation
+- markdown
+- ml
+- prompts
+- typescript
 trigger: /convert-plaintext-to-md
 metadata:
   hermes: {}

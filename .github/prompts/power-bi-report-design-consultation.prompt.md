@@ -1,24 +1,31 @@
 ---
 name: power-bi-report-design-consultation
 title: Power BI Report Visualization Designer
-description: 'Power BI report visualization design prompt for creating effective, user-friendly, and accessible reports with optimal chart selection and layout design.'
+description: Power BI report visualization design prompt for creating effective, user-friendly,
+  and accessible reports with optimal chart selection and layout design.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - architecture
-  - data
-  - frontend
-  - prompts
-  - specification
-  - typescript
+- architecture
+- data
+- frontend
+- prompts
+- specification
+- typescript
+- architecture
+- data
+- frontend
+- prompts
+- specification
+- typescript
 trigger: /power-bi-report-design-consultation
 dependencies: []
 metadata:

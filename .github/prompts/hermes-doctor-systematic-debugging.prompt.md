@@ -1,19 +1,14 @@
 ---
 name: hermes-doctor-systematic-debugging
 title: Hermes Doctor, Logs, and Systematic Remediation
-description: Run the complete Hermes health and log diagnostic sequence, investigate root causes with systematic-debugging, apply minimal fixes, and verify zero actionable issues remain.
+description: Run the complete Hermes health and log diagnostic sequence, investigate
+  root causes with systematic-debugging, apply minimal fixes, and verify zero actionable
+  issues remain.
 version: 1.0.0
 license: MIT
 author: Alexa
-toolsets:
-- file
-- terminal
-- web
-skills:
-- systematic-debugging
-- hermes-agent
-- hermes-mcp
-- verification-before-completion
+toolsets: null
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -22,20 +17,20 @@ dependencies:
 - skill:hermes-mcp
 - skill:verification-before-completion
 tags:
+- agents
+- ai-assistant
 - debugging
-- diagnostics
-- doctor
-- errors
-- hermes
-- logs
-- remediation
-- system
-- verification
+- fix
+- frontend
+- ml
+- prompts
+- typescript
 trigger: /hermes-doctor-systematic-debugging
 metadata:
   hermes: {}
 scripts: []
 ---
+
 # Hermes Doctor and Systematic Remediation
 
 ## Goal

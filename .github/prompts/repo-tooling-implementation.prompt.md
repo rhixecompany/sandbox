@@ -7,22 +7,15 @@ version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- tooling
-- repo
-- verification
-- remediation
-toolsets:
-- terminal
-- file
-- skills
-- todo
+- documentation
+- fix
+- ml
+- prompts
+- typescript
+- workflow
+toolsets: null
 trigger: /repo-tooling-implementation
-skills:
-- using-superpowers
-- systematic-debugging
-- verification-before-completion
-- executing-plans
-- tooling-implementation
+skills: null
 dependencies:
 - prompt:repo
 - skill:executing-plans
@@ -39,6 +32,7 @@ scripts: []
 formatter: default
 plan: null
 ---
+
 ## Goal
 
 Execute the `repo-tooling-implementation` workflow. Full details: `templates/repo-tooling-implementation/README.md`.

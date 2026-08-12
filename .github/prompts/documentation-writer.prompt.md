@@ -1,23 +1,31 @@
 ---
 name: documentation-writer
 title: Diátaxis Documentation Expert
-description: 'Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.'
+description: Diátaxis Documentation Expert. An expert technical writer specializing
+  in creating high-quality software documentation, guided by the principles and structure
+  of the Diátaxis technical documentation authoring framework.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - documentation
-  - frontend
-  - ml
-  - prompts
-  - specification
-  - typescript
+- documentation
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- documentation
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 trigger: /documentation-writer
 dependencies: []
 metadata:

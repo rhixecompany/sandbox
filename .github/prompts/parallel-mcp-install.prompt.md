@@ -1,20 +1,14 @@
 ---
 name: parallel-mcp-install
 title: Install and Validate Parallel MCP Servers in Hermes
-description: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the active Hermes Agent harness, preserve credential boundaries, validate discovered tools, and begin implementation only after all gates pass.
+description: Register Parallel Search and Parallel Task Streamable HTTP MCP servers
+  in the active Hermes Agent harness, preserve credential boundaries, validate discovered
+  tools, and begin implementation only after all gates pass.
 version: 1.0.0
 license: MIT
 author: Alexa
-toolsets:
-- file
-- terminal
-- web
-skills:
-- using-superpowers
-- user-communication-preferences
-- hermes-mcp
-- smithery-ai-cli
-- verification-before-completion
+toolsets: null
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -25,19 +19,20 @@ dependencies:
 - skill:verification-before-completion
 tags:
 - agents
-- authentication
-- hermes
+- ai-assistant
+- api
+- backend
+- frontend
 - mcp
-- parallel
-- security
-- smithery
-- streamable-http
-- verification
+- ml
+- prompts
+- workflow
 trigger: /parallel-mcp-install
 metadata:
   hermes: {}
 scripts: []
 ---
+
 # Parallel MCP Installation and Validation Workflow
 
 ## Goal

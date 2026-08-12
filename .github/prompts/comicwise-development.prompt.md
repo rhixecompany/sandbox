@@ -6,21 +6,27 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - architecture
-  - audit
-  - nextjs
-  - prompts
-  - testing
-  - typescript
-  - workflow
+- audit
+- nextjs
+- prompts
+- testing
+- typescript
+- workflow
+- architecture
+- audit
+- nextjs
+- prompts
+- testing
+- typescript
+- workflow
 trigger: /comicwise-development
 applyTo: '**/*'
 dependencies: []

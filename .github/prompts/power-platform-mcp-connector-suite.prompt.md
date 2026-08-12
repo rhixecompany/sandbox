@@ -1,26 +1,32 @@
 ---
 name: power-platform-mcp-connector-suite
 title: Power Platform MCP Connector Suite
-description: 'Generate complete Power Platform custom connector with MCP integration for Copilot Studio - includes schema generation, troubleshooting, and validation.'
+description: Generate complete Power Platform custom connector with MCP integration
+  for Copilot Studio - includes schema generation, troubleshooting, and validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - ai-assistant
-  - data
-  - frontend
-  - generator
-  - mcp
-  - prompts
-  - typescript
+- ai-assistant
+- frontend
+- generator
+- mcp
+- prompts
+- agents
+- ai-assistant
+- data
+- frontend
+- generator
+- mcp
+- prompts
+- typescript
 trigger: /power-platform-mcp-connector-suite
 dependencies: []
 metadata:

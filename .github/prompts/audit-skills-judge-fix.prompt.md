@@ -1,7 +1,8 @@
 ---
 name: audit-skills-judge-fix
 title: Audit Skills Judge Fix
-description: 'Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.'
+description: 'Audit, judge, and fix skills in the Hermes library: inventory, dedupe,
+  remediation, consolidation, and final verification.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
@@ -12,7 +13,6 @@ tags:
 - fix
 - prompts
 - skills
-- typescript
 - workflow
 trigger: /audit-skills-judge-fix
 formatter: default
@@ -22,16 +22,12 @@ dependencies:
 - skill:verification-before-completion
 metadata:
   hermes: {}
-toolsets:
-- terminal
-- file
+toolsets: null
 scripts: []
-skills:
-- using-superpowers
-- user-communication-preferences
-- verification-before-completion
+skills: null
 plan: null
 ---
+
 ## Goal
 
 Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.

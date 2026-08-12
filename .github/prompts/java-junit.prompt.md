@@ -1,24 +1,31 @@
 ---
 name: java-junit
 title: JUnit 5+ Best Practices
-description: 'Get best practices for JUnit 5 unit testing, including data-driven tests.'
+description: Get best practices for JUnit 5 unit testing, including data-driven tests.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - data
-  - frontend
-  - java
-  - prompts
-  - testing
-  - typescript
+- api
+- data
+- frontend
+- java
+- prompts
+- testing
+- typescript
+- api
+- data
+- frontend
+- java
+- prompts
+- testing
+- typescript
 trigger: /java-junit
 dependencies: []
 metadata:

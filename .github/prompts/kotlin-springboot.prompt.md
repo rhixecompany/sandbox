@@ -6,16 +6,20 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - frontend
-  - ml
-  - prompts
-  - spring
+- frontend
+- ml
+- prompts
+- spring
+- frontend
+- ml
+- prompts
+- spring
 trigger: /kotlin-springboot
 dependencies: []
 metadata:

@@ -1,13 +1,16 @@
 ---
 name: sync-hermes-opencode
 title: Sync Hermes OpenCode Codex
-description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.
+description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions
+  across Hermes, OpenAI Codex, and OpenCode environments with verification.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
+- agents
 - ai-assistant
 - data
+- ml
 - prompts
 - skills
 - typescript
@@ -19,18 +22,12 @@ dependencies:
 - skill:hermes-profiles
 - skill:opencode
 - skill:verification-before-completion
-toolsets:
-- file
-- terminal
-- skills
+toolsets: null
 scripts: []
-skills:
-- multi-agent-sync
-- hermes-profiles
-- opencode
-- verification-before-completion
+skills: null
 plan: null
 ---
+
 ## Goal
 
 Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.

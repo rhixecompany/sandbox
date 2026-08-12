@@ -1,24 +1,31 @@
 ---
 name: arch-linux-triage
 title: Arch Linux Triage
-description: 'Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices.'
+description: Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release
+  best practices.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - debugging
-  - fix
-  - frontend
-  - linux
-  - ml
-  - prompts
-  - typescript
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- debugging
+- fix
+- frontend
+- linux
+- ml
+- prompts
+- typescript
 trigger: /arch-linux-triage
 dependencies: []
 metadata:

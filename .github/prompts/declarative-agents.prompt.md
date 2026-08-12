@@ -1,25 +1,34 @@
 ---
 name: declarative-agents
 title: Microsoft 365 Declarative Agents Development Kit
-description: 'Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.'
+description: Complete development kit for Microsoft 365 Copilot declarative agents
+  with three comprehensive workflows (basic, advanced, validation), TypeSpec support,
+  and Microsoft 365 Agents Toolkit integration.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - ai-assistant
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- agents
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- agents
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /declarative-agents
 dependencies: []
 metadata:

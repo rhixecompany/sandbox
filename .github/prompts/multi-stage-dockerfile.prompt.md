@@ -6,19 +6,25 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - docker
-  - ml
-  - performance
-  - prompts
-  - specification
-  - typescript
+- docker
+- ml
+- performance
+- prompts
+- specification
+- typescript
+- docker
+- ml
+- performance
+- prompts
+- specification
+- typescript
 trigger: /multi-stage-dockerfile
 dependencies: []
 metadata:

@@ -1,33 +1,38 @@
 ---
 name: plan-execute
 title: Execute Implementation Plan
-description: 'Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md` or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.'
+description: Load and execute any implementation plan step-by-step. Reads the plan
+  from a `.prompt.md` or `.md` file, runs each phase sequentially with verification
+  gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.
 version: 1.0.0
 license: MIT
 author: Hermes Agent (consolidated)
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - plans-and-specs
-  - subagent-driven-development
-  - verification-before-completion
-  - writing-plans
+- plans-and-specs
+- subagent-driven-development
+- verification-before-completion
+- writing-plans
 formatter: default
 plan: null
 dependencies:
-  - "skill:plans-and-specs"
-  - "skill:subagent-driven-development"
-  - "skill:verification-before-completion"
-  - "skill:writing-plans"
-  - "tool:terminal"
-  - "tool:search_files"
+- skill:plans-and-specs
+- skill:subagent-driven-development
+- skill:verification-before-completion
+- skill:writing-plans
+- tool:terminal
+- tool:search_files
 tags:
-  - debugging
-  - planning
-  - prompts
-  - typescript
+- planning
+- prompts
+- typescript
+- debugging
+- planning
+- prompts
+- typescript
 trigger: /plan-execute
 metadata:
   hermes: {}

@@ -1,24 +1,30 @@
 ---
 name: git-flow-branch-creator
 title: Git Flow Branch Creator
-description: Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate branches following the nvie Git Flow branching model.
+description: Intelligent Git Flow branch creator that analyzes git status/diff and
+  creates appropriate branches following the nvie Git Flow branching model.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - terminal
-  - file
+- terminal
+- file
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - git
-  - linting
-  - ml
-  - prompts
-  - specification
-  - typescript
+- git
+- ml
+- prompts
+- specification
+- typescript
+- git
+- linting
+- ml
+- prompts
+- specification
+- typescript
 trigger: /git-flow-branch-creator
 dependencies: []
 metadata:

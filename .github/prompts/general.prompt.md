@@ -1,60 +1,66 @@
 ---
 name: general
 title: General Development Workflow
-description: 'General development workflow for analysis, planning, implementation, and verification with context mapping and AI-assisted execution.'
+description: General development workflow for analysis, planning, implementation,
+  and verification with context mapping and AI-assisted execution.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - introspection-only-general
-  - no-git-delete
-  - no-net-fetch
-  - skills-tools-preflight-check
-  - context-map
-  - brainstorming
-  - plans-and-specs
-  - dispatching-parallel-agents
-  - subagent-driven-development
-  - systematic-debugging
-  - simplify
-  - context7
-  - plan
-  - writing-skills
-  - acpx-executor
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- context7
+- plan
+- writing-skills
+- acpx-executor
 formatter: default
 plan: null
 dependencies:
-  - "prompt:context-map.prompt.md"
-  - "prompt:update-implementation-plan.prompt.md"
-  - "skill:brainstorming"
-  - "skill:plans-and-specs"
-  - "skill:dispatching-parallel-agents"
-  - "skill:subagent-driven-development"
-  - "skill:systematic-debugging"
-  - "skill:simplify"
-  - "skill:context7"
-  - "skill:plan"
-  - "skill:writing-skills"
-  - "skill:acpx-executor"
-  - "tool:terminal"
-  - "tool:search_files"
-  - "tool:web_search"
-  - "tool:delegate_task"
-  - "skill:introspection-only-general"
-  - "skill:no-git-delete"
-  - "skill:no-net-fetch"
-  - "skill:skills-tools-preflight-check"
-  - "skill:context-map"
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:context7
+- skill:plan
+- skill:writing-skills
+- skill:acpx-executor
+- tool:terminal
+- tool:search_files
+- tool:web_search
+- tool:delegate_task
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
+- skill:context-map
 tags:
-  - documentation
-  - planning
-  - prompts
-  - typescript
-  - workflow
+- ml
+- planning
+- prompts
+- typescript
+- workflow
+- documentation
+- planning
+- prompts
+- typescript
+- workflow
 trigger: /general
 metadata:
   hermes: {}

@@ -1,26 +1,14 @@
 ---
 name: agents-fix
 title: Agents Sync and Deduplication
-description: Sync and deduplicate agent definitions across Hermes, and Copilot with dependency mapping and schema validation.
+description: Sync and deduplicate agent definitions across Hermes, and Copilot with
+  dependency mapping and schema validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- file
-- terminal
+toolsets: null
 scripts: []
-skills:
-- introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- brainstorming
-- plans-and-specs
-- dispatching-parallel-agents
-- subagent-driven-development
-- systematic-debugging
-- simplify
-- acpx-executor
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -52,6 +40,7 @@ trigger: /agents-fix
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.

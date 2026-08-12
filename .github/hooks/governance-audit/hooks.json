@@ -1,12 +1,12 @@
 {
-  "name": "governance-audit",
-  "version": "1.2.0",
-  "description": "Governance and compliance audit hooks for session lifecycle and LLM calls. Session end capture derives status (normalized), duration, turns, and exit_code from wire fields + accumulated JSONL; start capture resolves provider like session-logger. Skips synthetic test session ids.",
-  "events": ["on_session_start", "on_session_end", "pre_llm_call"],
-  "entrypoint": "hook.sh",
-  "config": {
-    "audit_log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/hermes/governance",
-    "retention_days": 90,
-    "checks": ["prompt_injection", "secret_leak", "policy_compliance"]
-  }
+	"name": "governance-audit",
+	"version": "1.2.0",
+	"description": "Governance and compliance audit hooks for session lifecycle and LLM calls. Session end capture derives status (normalized), duration, turns, and exit_code from wire fields + accumulated JSONL; start capture resolves provider like session-logger. Skips synthetic test session ids.",
+	"events": ["on_session_start", "on_session_end", "pre_llm_call"],
+	"entrypoint": "hook.sh",
+	"config": {
+		"audit_log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/hermes/governance",
+		"retention_days": 90,
+		"checks": ["prompt_injection", "secret_leak", "policy_compliance"]
+	}
 }

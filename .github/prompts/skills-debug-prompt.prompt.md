@@ -1,27 +1,37 @@
 ---
 name: skills-debug-prompt
 title: Skills Debug and Remediation Execution
-description: 'Execute the skills remediation plan from docs/plan/skills-debug-plan.md. Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade (unclosed fences, duplicate headings), then verify.'
+description: Execute the skills remediation plan from docs/plan/skills-debug-plan.md.
+  Fix F-grade skills first (boilerplate, missing frontmatter), then C-grade (unclosed
+  fences, duplicate headings), then verify.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - code_execution
-  - file
-  - terminal
+- code_execution
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - ai-assistant
-  - audit
-  - data
-  - debugging
-  - fix
-  - prompts
-  - skills
-  - typescript
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- prompts
+- skills
+- typescript
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- prompts
+- skills
+- typescript
 trigger: /skills-debug-prompt
 dependencies: []
 metadata:

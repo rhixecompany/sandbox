@@ -1,25 +1,33 @@
 ---
 name: first-ask
 title: First Ask
-description: 'Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension.'
+description: 'Interactive, input-tool powered, task refinement workflow: interrogates
+  scope, deliverables, constraints before carrying out the task; Requires the Joyride
+  extension.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - frontend
-  - linting
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- frontend
+- linting
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /first-ask
 dependencies: []
 metadata:

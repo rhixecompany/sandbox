@@ -8,26 +8,9 @@ description: 'Execute repo management operations across all project repos: branc
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- web
+toolsets: null
 scripts: []
-skills:
-- finishing-a-development-branch
-- gh-cli
-- git-commit
-- git-helper
-- git-submodule-workflow
-- github-actions-efficiency
-- github-repo-management
-- vscode-workspace-configurator
-- workspace-audit
-- writing-plans
-- subagent-driven-development
+skills: null
 formatter: default
 plan: null
 dependencies:
@@ -50,16 +33,13 @@ tags:
 - audit
 - frontend
 - git
-- mcp
-- onboarding
 - prompts
-- skills
-- vscode
 - workflow
 trigger: /repo-management
 metadata:
   hermes: {}
 ---
+
 ## Goal
 
 Leave every repo with:

@@ -1,27 +1,37 @@
 ---
 name: bigquery-pipeline-audit
 title: 'BigQuery Pipeline Audit: Cost, Safety and Production Readiness'
-description: 'Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations.'
+description: Audits Python + BigQuery pipelines for cost safety, idempotency, and
+  production readiness. Returns a structured report with exact patch locations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - api
-  - audit
-  - configuration
-  - database
-  - ml
-  - prompts
-  - python
-  - security
-  - sql
-  - typescript
+- api
+- audit
+- database
+- ml
+- prompts
+- python
+- security
+- sql
+- typescript
+- api
+- audit
+- configuration
+- database
+- ml
+- prompts
+- python
+- security
+- sql
+- typescript
 trigger: /bigquery-pipeline-audit
 dependencies: []
 metadata:

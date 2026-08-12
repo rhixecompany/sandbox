@@ -1,28 +1,25 @@
 ---
 name: setup-bun-bunx
 title: Migrate npm/npx to Bun/Bunx Across Repos
-description: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager, then commit and push.
+description: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos,
+  and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused
+  deps, set bun as the default package manager, then commit and push.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- bun
-- bunx
-- npm
-- npx
+- ai-assistant
+- audit
+- data
 - migration
-- package-manager
-- dependencies
-toolsets:
-- terminal
-- file
-- skills
-- todo
+- ml
+- prompts
+- setup
+- testing
+- typescript
+toolsets: null
 trigger: /setup-bun-bunx
-skills:
-- bun-nextjs
-- bun-shell
-- pnpm-package-manager
+skills: null
 dependencies:
 - skill:bun-nextjs
 - skill:bun-shell
@@ -35,6 +32,7 @@ scripts: []
 formatter: default
 plan: ''
 ---
+
 ## Goal
 
 First **clean up npm/bun remnants and upgrade bun to the latest version** (`bun upgrade`), then update **all usage of `npm` → `bun` and `npx` → `bunx`** in three scopes: this repository, all sub-repositories under it, and the Hermes root (`~/AppData/Local/hermes`). Audit every `package.json`, `*.toml`, and `.npmrc` file, use smaller/leaner dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies, set **bun as the default package manager**, then commit and push in this repo and all sub-repos — debugging and fixing every issue encountered.

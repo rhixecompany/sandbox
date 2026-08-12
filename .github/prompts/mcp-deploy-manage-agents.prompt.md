@@ -6,22 +6,30 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
-  - web
+- file
+- terminal
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - agents
-  - deployment
-  - mcp
-  - ml
-  - prompts
-  - specification
-  - typescript
-  - workflow
+- agents
+- deployment
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- agents
+- deployment
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 trigger: /mcp-deploy-manage-agents
 dependencies: []
 metadata:

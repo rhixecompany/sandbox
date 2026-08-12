@@ -1,36 +1,45 @@
 ---
 name: plan-batch-fix
-title: 'Batch Fix Errors, Warnings & Deprecations'
-description: 'Scan a codebase for errors, warnings, and deprecations, then fix them systematically in batches. Supports lint issues, TypeScript errors, deprecated API usage, and code quality problems.'
+title: Batch Fix Errors, Warnings & Deprecations
+description: Scan a codebase for errors, warnings, and deprecations, then fix them
+  systematically in batches. Supports lint issues, TypeScript errors, deprecated API
+  usage, and code quality problems.
 version: 1.0.0
 license: MIT
 author: Hermes Agent (consolidated)
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - systematic-debugging
-  - subagent-driven-development
-  - simplify
-  - verification-before-completion
-  - brainstorming
+- systematic-debugging
+- subagent-driven-development
+- simplify
+- verification-before-completion
+- brainstorming
 formatter: default
 plan: null
 dependencies:
-  - "skill:systematic-debugging"
-  - "skill:subagent-driven-development"
-  - "skill:simplify"
-  - "skill:verification-before-completion"
-  - "skill:brainstorming"
-  - "tool:terminal"
-  - "tool:search_files"
+- skill:systematic-debugging
+- skill:subagent-driven-development
+- skill:simplify
+- skill:verification-before-completion
+- skill:brainstorming
+- tool:terminal
+- tool:search_files
 tags:
-  - fix
-  - planning
-  - prompts
-  - skills
-  - typescript
+- api
+- fix
+- linting
+- planning
+- prompts
+- skills
+- typescript
+- fix
+- planning
+- prompts
+- skills
+- typescript
 trigger: /plan-batch-fix
 metadata:
   hermes: {}

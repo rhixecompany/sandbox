@@ -1,27 +1,35 @@
 ---
 name: zod-schema-generation
 title: Zod Schema Generation
-description: 'Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples with full type safety.'
+description: Generate Zod validation schemas from TypeScript types, database schemas,
+  or JSON samples with full type safety.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - prompt-engineering
+- prompt-engineering
 formatter: default
 plan: null
 dependencies:
-  - "skill:prompt-engineering"
+- skill:prompt-engineering
 tags:
-  - data
-  - database
-  - generator
-  - prompts
-  - sql
-  - typescript
+- data
+- database
+- generator
+- prompts
+- security
+- sql
+- typescript
+- data
+- database
+- generator
+- prompts
+- sql
+- typescript
 trigger: /zod-schema-generation
 metadata:
   hermes: {}

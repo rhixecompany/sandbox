@@ -6,19 +6,24 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - frontend
-  - java
-  - prompts
-  - refactoring
-  - typescript
+- frontend
+- java
+- prompts
+- refactoring
+- typescript
+- frontend
+- java
+- prompts
+- refactoring
+- typescript
 trigger: /java-refactoring-extract-method
 metadata:
   hermes: {}

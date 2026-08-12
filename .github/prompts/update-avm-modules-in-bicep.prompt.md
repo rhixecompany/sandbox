@@ -6,19 +6,26 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - azure
-  - maintenance
-  - ml
-  - prompts
-  - specification
-  - testing
-  - typescript
+- azure
+- maintenance
+- ml
+- prompts
+- specification
+- testing
+- typescript
+- azure
+- maintenance
+- ml
+- prompts
+- specification
+- testing
+- typescript
 trigger: /update-avm-modules-in-bicep
 dependencies: []
 metadata:

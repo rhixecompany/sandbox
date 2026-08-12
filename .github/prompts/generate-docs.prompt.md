@@ -6,23 +6,31 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
-  - browser
-  - todo
+- web
+- browser
+- todo
 scripts: []
 skills: []
 formatter: default
 plan: null
 dependencies: []
 tags:
-  - api
-  - documentation
-  - generator
-  - ml
-  - nextjs
-  - prompts
-  - specification
-  - typescript
+- api
+- documentation
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
+- api
+- documentation
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
 trigger: /generate-docs
 metadata:
   hermes: {}

@@ -1,70 +1,79 @@
 ---
 name: dev-init
 title: Dev Init - Prompt Conversion and Enhancement Planning
-description: 'Create a comprehensive plan for converting plaintext prompts to markdown, enhancing prompt quality, and updating related implementation plans.'
+description: Create a comprehensive plan for converting plaintext prompts to markdown,
+  enhancing prompt quality, and updating related implementation plans.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 scripts: []
 skills:
-  - introspection-only-general
-  - no-git-delete
-  - no-net-fetch
-  - skills-tools-preflight-check
-  - context-map
-  - convert-plaintext-to-md
-  - boost-prompt
-  - ai-prompt-engineering-safety-review
-  - update-implementation-plan
-  - prompt-builder
-  - brainstorming
-  - plans-and-specs
-  - writing-skills
-  - writing-plans
-  - acpx-executor
-  - executing-plans
-  - simplify
-  - subagent-driven-development
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- convert-plaintext-to-md
+- boost-prompt
+- ai-prompt-engineering-safety-review
+- update-implementation-plan
+- prompt-builder
+- brainstorming
+- plans-and-specs
+- writing-skills
+- writing-plans
+- acpx-executor
+- executing-plans
+- simplify
+- subagent-driven-development
 formatter: default
 plan: null
 dependencies:
-  - "prompt:context-map.prompt.md"
-  - "prompt:convert-plaintext-to-md.prompt.md"
-  - "prompt:boost-prompt.prompt.md"
-  - "prompt:ai-prompt-engineering-safety-review.prompt.md"
-  - "prompt:update-implementation-plan.prompt.md"
-  - "prompt:prompt-builder.prompt.md"
-  - "skill:brainstorming"
-  - "skill:plans-and-specs"
-  - "skill:writing-skills"
-  - "skill:writing-plans"
-  - "skill:acpx-executor"
-  - "skill:executing-plans"
-  - "skill:simplify"
-  - "skill:subagent-driven-development"
-  - "skill:introspection-only-general"
-  - "skill:no-git-delete"
-  - "skill:no-net-fetch"
-  - "skill:skills-tools-preflight-check"
-  - "skill:context-map"
-  - "skill:convert-plaintext-to-md"
-  - "skill:boost-prompt"
-  - "skill:ai-prompt-engineering-safety-review"
-  - "skill:update-implementation-plan"
-  - "skill:prompt-builder"
+- prompt:context-map.prompt.md
+- prompt:convert-plaintext-to-md.prompt.md
+- prompt:boost-prompt.prompt.md
+- prompt:ai-prompt-engineering-safety-review.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- prompt:prompt-builder.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:writing-skills
+- skill:writing-plans
+- skill:acpx-executor
+- skill:executing-plans
+- skill:simplify
+- skill:subagent-driven-development
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
+- skill:context-map
+- skill:convert-plaintext-to-md
+- skill:boost-prompt
+- skill:ai-prompt-engineering-safety-review
+- skill:update-implementation-plan
+- skill:prompt-builder
 tags:
-  - audit
-  - markdown
-  - ml
-  - planning
-  - prompts
-  - security
-  - typescript
-  - workflow
-  - git
+- audit
+- markdown
+- ml
+- planning
+- prompts
+- security
+- typescript
+- workflow
+- audit
+- markdown
+- ml
+- planning
+- prompts
+- security
+- typescript
+- workflow
+- git
 trigger: /dev-init
 metadata:
   hermes: {}

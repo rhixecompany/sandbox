@@ -1,24 +1,31 @@
 ---
 name: fedora-linux-triage
 title: Fedora Linux Triage
-description: 'Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.'
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware
+  guidance.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - web
+- web
 scripts: []
 skills: []
 formatter: default
 plan: null
 tags:
-  - debugging
-  - fix
-  - frontend
-  - linux
-  - ml
-  - prompts
-  - typescript
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- debugging
+- fix
+- frontend
+- linux
+- ml
+- prompts
+- typescript
 trigger: /fedora-linux-triage
 dependencies: []
 metadata:
