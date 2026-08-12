@@ -99,7 +99,7 @@ NOTE: No working free model in the verified set has vision. The rule therefore
 Dispatch in parallel (3 clusters). Each subagent gets the full Context Block above.
 
 | Subagent | Cluster | Providers |
-|| -------- | ------- | --------- ||
+| -------- | ------- | --------- |
 | A | Zen/router/deepseek | opencode-zen, openrouter, deepseek |
 | B | Google/cloud/nous/hf | gemini, ollama-cloud, nous, huggingface |
 | C | OAuth/codex/copilot/xai | openai-codex, copilot, xai-oauth |

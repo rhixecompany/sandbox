@@ -75,7 +75,9 @@ Use when you need to work on the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## Multi-Stage Structure- Use a builder stage for compilation, dependency installation, and other build-time operations- Use a separate runtime stage that only includes what's needed to run the application- Copy only the necessary artifacts from the builder stage to the runtime stage- Use meaningful stage names with the `AS` keyword (e.g., `FROM node:18 AS builder`)- Place stages in logical order: dependencies → build → test → runtime
+## Multi-Stage Structure
+
+- Use a builder stage for compilation, dependency installation, and other build-time operations- Use a separate runtime stage that only includes what's needed to run the application- Copy only the necessary artifacts from the builder stage to the runtime stage- Use meaningful stage names with the `AS` keyword (e.g., `FROM node:18 AS builder`)- Place stages in logical order: dependencies → build → test → runtime
 
 ## Base Images
 
@@ -102,7 +104,7 @@ Templates in `templates/multi-stage-dockerfile/`:- `phases.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -128,7 +130,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -151,7 +153,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

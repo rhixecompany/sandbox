@@ -56,6 +56,7 @@ Orchestrate the full lifecycle of running generator prompts against a target pro
 ### Data Flow
 
 ```
+
 discover generators → user selects subset → implement each sequentially  → (only then) verify implementation status  → (only then) code-review all changed files  → (only then) debug and fix all issues  → (only then) re-verify all fixes  → (only then) generate implementation report
 ```
 
@@ -70,6 +71,7 @@ No external scripts required — all phases are executed directly via delegated 
 ## Profile
 
 ```yaml
+
 profile: code-architectmodel: deepseek-v4-flash-freetoolsets: [terminal, file, web]
 ```
 
@@ -108,7 +110,9 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 
 - All expected files exist (per each generator's spec)   - All expected modifications applied   - No partial or incomplete implementations   - Git status is clean or has expected changes2. Try to build/compile the project (`bun run build`, `dotnet build`, `cargo check`, etc.)3. Run the test suite if applicable4. Report any implementation gaps or failures
 
-### Phase 4: Code Review Changed Files (Only After Verification Passes)For EVERY file changed by any generator:1. Read the full file content2. Check:
+### Phase 4: Code Review Changed Files (Only After Verification Passes)
+
+For EVERY file changed by any generator:1. Read the full file content2. Check:
 
 - Correctness — does the code do what the spec intended?   - Style — matches project conventions and language idioms   - Edge cases — error handling, nulls, boundaries   - Security — no hardcoded secrets, injection vectors, permission issues   - Dependencies — properly declared in project manifest3. Collate findings into:   - **Critical Issues** (must fix before proceeding)   - **Important Issues** (should fix)   - **Minor Issues** (optional)   - **Praise** (what was done well)
 
@@ -119,7 +123,12 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 3. Confirm no regressions
 4. Only proceed when zero Critical and zero Important issues remain
 
-### Phase 6: Generate Implementation Report (Only After All Fixes Verified)Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:```markdown# Dev Imp Report — <date>
+### Phase 6: Generate Implementation Report (Only After All Fixes Verified)
+
+Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
+```markdown
+
+# Dev Imp Report — <date>
 
 ## Summary
 
@@ -132,7 +141,9 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 > — ✅ completed- <name
 > — ✅ completed
 
-## Files Changed| File | Action | Lines ||------|--------|-------|| path/to/file | created/modified | +N/-N |
+## Files Changed
+
+| File | Action | Lines ||------|--------|-------|| path/to/file | created/modified | +N/-N |
 
 ## Code Review Findings
 
@@ -148,7 +159,9 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 
 - item 1- item 2
 
-## Fixes Applied| Issue | File | Fix ||-------|------|-----|| description | path | what was done |
+## Fixes Applied
+
+| Issue | File | Fix ||-------|------|-----|| description | path | what was done |
 
 ## Verification
 
@@ -156,7 +169,9 @@ For EACH selected generator (run one at a time, sequentially):1. Read the genera
 - Tests: ✅ / ❌ (<N> passed, <N> failed)
 - Lint: ✅ / ❌
 
-## Final Status**All phases complete. Implementation ready for use.**```
+## Final Status**All phases complete. Implementation ready for use.**
+
+```
 
 ### Report Style ("Crispy")
 
@@ -251,7 +266,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

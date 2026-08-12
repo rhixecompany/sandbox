@@ -77,7 +77,7 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.| Skill | Purpose |
-|| --- | --- ||
+| --- | --- |
 | `context-map` | Pre-change map of plan-related files and dependencies |
 | `writing-plans` | Author structured implementation plans |
 | `plans-and-specs` | Plan and spec namespace management |
@@ -105,7 +105,7 @@ Detailed templates in `templates/update-implementation-plan/`:- `phases.md`- `ru
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -131,7 +131,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

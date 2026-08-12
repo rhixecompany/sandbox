@@ -101,7 +101,9 @@ Review all memory sections and present them for merger consideration:```
 
 > **Content:** [Key points]
 
-## Example```User: "/memory-merger
+## Example
+
+```User: "/memory-merger
 
 > clojure"Agent:1. Reads clojure-memory.instructions.md and clojure.instructions.md2. Proposes 3 memories for merger3. [STOPS]User: "go"Agent:4. Defines quality bar for 10/105. Merges new instructions candidate, iterates to 10/106. Updates clojure.instructions.md7. Cleans clojure-memory.instructions.md```
 
@@ -114,7 +116,7 @@ Templates in `templates/memory-merger/`:- `example.md`- `phases.md`- `process.md
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -140,7 +142,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -163,7 +165,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

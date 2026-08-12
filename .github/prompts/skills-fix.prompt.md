@@ -114,13 +114,17 @@ Full lifecycle audit and remediation of the Hermes default skill library.Discove
 
 | Code | Pattern                                                    | Fix                                          || ---- | ---------------------------------------------------------- | -------------------------------------------- || F1   | Missing YAML frontmatter `---` block                       | Add frontmatter with `name:`, `description:` || F2   | Missing required frontmatter key (`name`/`description`)    | Add the key with a value                     || F3   | Boilerplate: `
 
-## When to Use` or `
+## When to Use
+
+- ` or `
 
 ## Workflow
 
 `(exact heading)  | Add section or accept semantic variant       || S2   | Heading level jump (H2 → H4 with no H3)                    | Insert intermediate heading                  || C1   | Stale patterns (`pip install`,`bun install -g`)           | Note as supply_chain warning                 || R1   | Duplicate section heading                                  | Remove second occurrence, merge content      |
 
-## Reorganization Map (from 2026-06-04 session)Skills moved to correct categories:- `agent-browser` → `autonomous-ai-agents/`- `algorithmic-art` → `creative/`- `asdf` → `devops/`- `banking` → `software-development/`- `brainstorming` → `planning/` (was duplicate with `development/brainstorming`)- `brand-guidelines` → `creative/`- `canvas-design` → `creative/`- `validate-memories` → `devops/`- `watchers` → `devops/`Duplicates removed:- `development/brainstorming` (canonical: `planning/brainstorming`)- `(root)/dogfood` (canonical: `qa/dogfood`)- `(root)/yuanbao` (canonical: `productivity/yuanbao`)
+## Reorganization Map (from 2026-06-04 session)
+
+Skills moved to correct categories:
 
 ## Phases
 
@@ -149,9 +153,16 @@ Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimp
 1. Write `docs/plan/skills-debug-plan.md` — phased fix plan from audit findings
 2. Write `prompts/skills-debug-prompt.prompt.md` — prompt to execute the plan
 
-### Phase 5: Execute Fixes (Priority Order)**F-grade first** — Fix critical issues (unclosed fences, missing frontmatter):````python# For unclosed code fences: append closing fencewith open(skill_path, 'a', encoding='utf-8') as f:    f.write("\n```\n")````**C-grade next** — Fix major issues (boilerplate `
+### Phase 5: Execute Fixes (Priority Order)
 
-## When to Use`):```python# F3 fix pattern:content = content.replace(    "
+**F-grade first** — Fix critical issues (unclosed fences, missing frontmatter):
+```python
+
+# For unclosed code fences: append closing fencewith open(skill_path, 'a', encoding='utf-8') as f:    f.write("\n```\n")````**C-grade next** — Fix major issues (boilerplate `
+
+## When to Use`):
+
+```python# F3 fix pattern:content = content.replace(    "
 
 ## Steps
 
@@ -203,7 +214,7 @@ When processing B-grade batch remediations, dispatch in parallel using:```python
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -229,7 +240,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -252,7 +263,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

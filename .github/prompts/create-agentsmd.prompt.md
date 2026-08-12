@@ -98,7 +98,8 @@ Use this as a starting template and customize based on the specific project:
 ```markdown
 # AGENTS.md
 
-## Project Overview[Brief description of the project, its purpose, and key technologies]
+## Project Overview
+[Brief description of the project, its purpose, and key technologies]
 
 ## Setup Commands
 

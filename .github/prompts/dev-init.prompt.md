@@ -110,7 +110,7 @@ Use this prompt when a prompt-library refresh needs planning beforeimplementatio
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill                                 | Purpose                                                          |
-|| ------------------------------------- | ---------------------------------------------------------------- ||
+| ------------------------------------- | ---------------------------------------------------------------- |
 | `context-map` (prompt)                | Map source, destination, and dependency impact before conversion |
 | `convert-plaintext-to-md`             | Convert plaintext prompts to markdown                            |
 | `boost-prompt`                        | Improve prompt quality and structure                             |
@@ -186,28 +186,42 @@ Run the conversion and enhancement pipeline end-to-end. Idempotent — safe to r
 ### Entry Check
 
 ```
+
 IF docs/prompt-conversion-enhancement-plan.md EXISTS → read it, skip to Step 5.3ELSE IF docs/dev-init-comprehensive-plan.md EXISTS → plan exists, skip to Step 5.2ELSE → run Phase 1–4 first, then return here
 ```
 
 ### Step 5.1 — Load Plan Artifacts
 
 ```
+
 bashread_file("docs/dev-init-comprehensive-plan.md")read_file("docs/dev-init-spec.md")read_file("projects/Bash/archive/artifacts/context-maps/dev-init.context.json")
 ```
 
-### Step 5.2 — Run `context-map`1. Load `prompts/context-map.prompt.md`2. Map all `.github/prompts/*.txt` → `.github/prompts/*.md` pairs3. Map all `.github/prompts/*.prompt.md` dependencies4. Write `docs/prompts-cross-reference-registry.md`
+### Step 5.2 — Run `context-map`
 
-### Step 5.3 — Run `convert-plaintext-to-md`For each `.github/prompts/*.txt` file:1. Read raw `.txt` content2. Apply enhancement (Stanford/Anthropic patterns):    - Critical rules in first 15%    - Nesting depth ≤ 4    - Instruction ratio 40–50%    - Single source of truth (no rule repeated
+1. Load `prompts/context-map.prompt.md`2. Map all `.github/prompts/*.txt` → `.github/prompts/*.md` pairs3. Map all `.github/prompts/*.prompt.md` dependencies4. Write `docs/prompts-cross-reference-registry.md`
+
+### Step 5.3 — Run `convert-plaintext-to-md`
+
+For each `.github/prompts/*.txt` file:1. Read raw `.txt` content2. Apply enhancement (Stanford/Anthropic patterns):    - Critical rules in first 15%    - Nesting depth ≤ 4    - Instruction ratio 40–50%    - Single source of truth (no rule repeated
 
 > 2×)    - 3-tier prioritization: Safety → Core Workflow → Optimization3. Apply 9-section template:   `Skills → Subagents → Personas → Rules → Phases → Steps → Tasks → Subtasks → Actions`4. Write to `.github/prompts/<same-stem>.md` (overwrite if exists)
 
-### Step 5.4 — Run `boost-prompt`For each `.github/prompts/*.md` file:1. Load `prompts/boost-prompt.prompt.md`2. Apply quality enhancements:    - Strengthen rule language (imperative, specific)    - Add missing frontmatter (title, description, tags, trigger)    - Ensure consistent heading hierarchy    - Remove redundant sections3. **Constraint Preservation Audit**: log any rule removals with justification4. Write enhanced file back
+### Step 5.4 — Run `boost-prompt`
 
-### Step 5.5 — Run `ai-prompt-engineering-safety-review`For each `.github/prompts/*.md` and `.github/prompts/*.prompt.md`:1. Load `prompts/ai-prompt-engineering-safety-review.prompt.md`2. Check for:    - Credential handling safety    - Backup/rollback instructions present    - Approval workflows for destructive ops    - No fabricated verification claims3. Add safety notes where missing4. **Fail if critical safety constraints removed** — halt and report
+For each `.github/prompts/*.md` file:1. Load `prompts/boost-prompt.prompt.md`2. Apply quality enhancements:    - Strengthen rule language (imperative, specific)    - Add missing frontmatter (title, description, tags, trigger)    - Ensure consistent heading hierarchy    - Remove redundant sections3. **Constraint Preservation Audit**: log any rule removals with justification4. Write enhanced file back
 
-### Step 5.6 — Run `prompt-builder`For any missing prompts:1. Load `prompts/prompt-builder.prompt.md`2. Scaffold new `.prompt.md` files from template3. Populate with content from plan artifacts
+### Step 5.5 — Run `ai-prompt-engineering-safety-review`
 
-### Step 5.7 — Run `update-implementation-plan`1. Load `prompts/update-implementation-plan.prompt.md`2. Update `docs/dev-init-comprehensive-plan.md` with:    - Actual files processed    - Issues found and resolved    - Remaining items3. Mark completed phases
+For each `.github/prompts/*.md` and `.github/prompts/*.prompt.md`:1. Load `prompts/ai-prompt-engineering-safety-review.prompt.md`2. Check for:    - Credential handling safety    - Backup/rollback instructions present    - Approval workflows for destructive ops    - No fabricated verification claims3. Add safety notes where missing4. **Fail if critical safety constraints removed** — halt and report
+
+### Step 5.6 — Run `prompt-builder`
+
+For any missing prompts:1. Load `prompts/prompt-builder.prompt.md`2. Scaffold new `.prompt.md` files from template3. Populate with content from plan artifacts
+
+### Step 5.7 — Run `update-implementation-plan`
+
+1. Load `prompts/update-implementation-plan.prompt.md`2. Update `docs/dev-init-comprehensive-plan.md` with:    - Actual files processed    - Issues found and resolved    - Remaining items3. Mark completed phases
 
 ### Tasks
 
@@ -222,6 +236,7 @@ bashread_file("docs/dev-init-comprehensive-plan.md")read_file("docs/dev-init-spe
 For each `.github/prompts/*.md`:
 
 ```bash
+
 # Check frontmatterhead -10 Prompts/<name
 
 > .prompts.md | grep "^title:"head -10 Prompts/<name>.prompts.md | grep "^description:"head -10 Prompts/<name>.prompts.md | grep "^trigger:"head -10 Prompts/<name>.prompts.md | grep "^tags:"# Check required sections existgrep -c "^
@@ -242,13 +257,17 @@ For each `.github/prompts/*.md`:
 ### Step 6.2 — Cross-Reference Validation
 
 ```bash
+
 # Verify all internal references resolvegrep -o '\[.*\](\./[^)]*)' Prompts/<name>.prompts.md | while read ref; do  path=$(echo "$ref" | sed 's/.*(\(.*\))/\1/')  test -f "$path" || echo "BROKEN REF: $ref in Prompts/<name>.prompts.md"done
+
 ```
 
 ### Step 6.3 — Conflict Detection
 
 ```bash
+
 # Check for duplicate triggers across Prompts/grep -h "^trigger:" Prompts/*.prompts.md | sort | uniq -d# Check for duplicate titlesgrep -h "^title:" Prompts/*.prompts.md | sort | uniq -d
+
 ```
 
 ### Step 6.4 — Quality Scoring
@@ -260,19 +279,26 @@ Score each `.github/prompts/*.md`:| Criterion                             | Poin
 ### Step 6.5 — Write Verification Report
 
 ```markdown
+
 # docs/dev-init-verification-report.md
 
 ## Summary
 
 - Total .md files: N- Optimal (≥80): N- Needs work (60–79): N- Rewrite required (<60): N
 
-## Per-File Scores| File | Score | Issues || ---- | ----- | ------ || ...  | ...   | ...    |
+## Per-File Scores
 
-## Conflicts Found| Type              | Files | Resolution || ----------------
+| File | Score | Issues || ---- | ----- | ------ || ...  | ...   | ...    |
+
+## Conflicts Found
+
+| Type              | Files | Resolution || ----------------
 
 - | ----- | ---------- || Duplicate trigger | ...   | ...        |
 
-## Broken References| File | Reference | Status || ---
+## Broken References
+
+| File | Reference | Status || ---
 
 - | --------- | ------ || ...  | ...       | ...    |
 ```
@@ -289,15 +315,21 @@ Score each `.github/prompts/*.md`:| Criterion                             | Poin
 
 Write `docs/prompts-cross-reference-registry.md`:```markdown# Prompts Cross-Reference Registry
 
-## Prompts/\*.md (Conversion Targets)| File                  | Trigger     | Status | Score | Depends On                           || --------------------
+## Prompts/\*.md (Conversion Targets)
+
+| File                  | Trigger     | Status | Score | Depends On                           || --------------------
 
 - | ----------- | ------ | ----- | ------------------------------------ || skills-fix.prompts.md | /skills-fix | ✅     | 85    | context-map, skill-judge             || dev-init.prompts.md   | /dev-init   | ✅     | 90    | context-map, convert-plaintext-to-md || ...                   | ...         | ...    | ...   | ...                                  |
 
-## prompts/\*.prompt.md (Workflow Prompts)| File                              | Purpose             | Used By             || --------------------------------
+## prompts/\*.prompt.md (Workflow Prompts)
+
+| File                              | Purpose             | Used By             || --------------------------------
 
 - | ------------------- | ------------------- || context-map.prompt.md             | Dependency mapping  | All dev-init phases || convert-plaintext-to-md.prompt.md | TXT→MD conversion   | Phase 5.3           || boost-prompt.prompt.md            | Quality enhancement | Phase 5.4           || ...                               | ...                 | ...                 |
 
-## Conflict Log| Conflict | Files | Resolution || -------
+## Conflict Log
+
+| Conflict | Files | Resolution || -------
 
 - | ----- | ---------- || ...      | ...   | ...        |```
 
@@ -322,7 +354,7 @@ When all 7 phases are complete, output:```======================================
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -348,7 +380,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

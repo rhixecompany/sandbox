@@ -88,7 +88,9 @@ Use when you need to work on the current workspace or task.
 
 > **Action**: Retrieve diagnostic and troubleshooting best practices **Tools**: Az
 
-## 🔍 Executive Summary   [Brief overview of health status and key findings]
+## 🔍 Executive Summary
+
+[Brief overview of health status and key findings]
 
 ## 📊 Health Metrics
 
@@ -109,12 +111,17 @@ Use when you need to work on the current workspace or task.
 ### Phase 1: Immediate Actions (0-2 hours)
 
 ```bash
+
    # Critical fixes to restore service   [Azure CLI commands with explanations]```   ````
 
-### Phase 2: Short-term Fixes (2-24 hours)   ```bash   # Performance and reliability improvements   [Azure CLI commands with explanations]
+### Phase 2: Short-term Fixes (2-24 hours)
+
+```bash   # Performance and reliability improvements   [Azure CLI commands with explanations]
 ```
 
-### Phase 3: Long-term Improvements (1-4 weeks)   ```bash   # Architectural and preventive measures   [Azure CLI commands and configuration changes]```
+### Phase 3: Long-term Improvements (1-4 weeks)
+
+```bash   # Architectural and preventive measures   [Azure CLI commands and configuration changes]```
 
 ## 📈 Monitoring Recommendations
 
@@ -150,7 +157,7 @@ Detailed templates in `templates/azure-resource-health-diagnose/`:- `workflow_st
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -176,7 +183,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -199,7 +206,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

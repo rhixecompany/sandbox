@@ -77,7 +77,9 @@ Add MCP capabilities to existing Power Platform connector with proper validation
 
 Prepare connector for Microsoft certification submission with complete metadata and validation compliance.
 
-### Mode 6: OAuth Security HardeningImplement OAuth 2.0 authentication enhanced with MCP security best practices and advanced token validation.
+### Mode 6: OAuth Security Hardening
+
+Implement OAuth 2.0 authentication enhanced with MCP security best practices and advanced token validation.
 
 ## Expected Output
 
@@ -94,6 +96,7 @@ Prepare connector for Microsoft certification submission with complete metadata 
 ## Example Usage
 
 ```yaml
+
 Mode: Complete New ConnectorConnector Name: Customer Analytics MCPServer Purpose: Customer data analysis and insightsTools Needed:
 
 - searchCustomers: Find customers by criteria  - getCustomerProfile: Retrieve detailed customer data  - analyzeCustomerTrends: Generate trend analysisResources:  - Customer profiles (JSON data)  - Analysis reports (structured data)Authentication: oauth2Host Environment: Azure FunctionTarget APIs: CRM REST API
@@ -108,7 +111,7 @@ Detailed templates in `templates/power-platform-mcp-connector-suite/`:- `validat
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -177,7 +180,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -200,7 +203,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

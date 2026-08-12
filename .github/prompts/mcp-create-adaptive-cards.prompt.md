@@ -85,11 +85,17 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 
 ## Response Semantics Properties
 
-### data_pathJSONPath query indicating where data resides in API response:```json"data_path": "$"           // Root of response"data_path": "$.results"   // In results property"data_path": "$.data.items"// Nested path```
+### data_pathJSONPath query indicating where data resides in API response:
 
-### propertiesMap response fields for Copilot citations:```json"properties": {  "title": "$.name",            // Citation title  "subtitle": "$.description",  // Citation subtitle  "url": "$.link"               // Citation link}```
+```json"data_path": "$"           // Root of response"data_path": "$.results"   // In results property"data_path": "$.data.items"// Nested path```
 
-### template_selectorProperty on each item indicating which template to use:```json"template_selector": "$.displayTemplate"```
+### propertiesMap response fields for Copilot citations:
+
+```json"properties": {  "title": "$.name",            // Citation title  "subtitle": "$.description",  // Citation subtitle  "url": "$.link"               // Citation link}```
+
+### template_selectorProperty on each item indicating which template to use:
+
+```json"template_selector": "$.displayTemplate"```
 
 ## Adaptive Card Template Language
 
@@ -159,7 +165,7 @@ Detailed templates in `templates/mcp-create-adaptive-cards/`:- `adaptive_card_te
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -185,7 +191,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -208,7 +214,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

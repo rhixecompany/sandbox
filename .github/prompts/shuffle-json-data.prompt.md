@@ -100,7 +100,9 @@ Before shuffling:
 - Verify that the JSON file itself is syntactically valid and well formed.
 - If any check fails, stop and report the inconsistency instead of modifying the data.
 
-## Acceptable JSONWhen the default behavior is active, acceptable JSON resembles the following pattern:```json[  {    "VALID_PROPERTY_NAME-a": "value",    "VALID_PROPERTY_NAME-b": "value"  },  {    "VALID_PROPERTY_NAME-a": "value",    "VALID_PROPERTY_NAME-b": "value"  }]```
+## Acceptable JSON
+
+When the default behavior is active, acceptable JSON resembles the following pattern:
 
 ## Unacceptable JSON (Default State)
 
@@ -122,17 +124,21 @@ Before shuffling:
 - If the data cannot remain valid after a shuffle, stop and report the inconsistency.
 - Observe the default state when no overrides are supplied.
 
-## ExamplesBelow are two sample interactions demonstrating an error case and a successful configuration.
+## Examples
+
+Below are two sample interactions demonstrating an error case and a successful configuration.
 
 ### Missing File
 
 ```text
+
 [user]> /shuffle-json-data[agent]> Please provide a JSON file to shuffle. Preferably as chat variable or attached context.
 ```
 
 ### Custom Configuration
 
 ```text
+
 [user]> /shuffle-json-data #file:funFacts.json ignoreProperties = "year", "category"; requiredProperties = "fact"
 ```
 
@@ -142,7 +148,9 @@ Unless variables in this prompt or in a request override the defaults, treat the
 
 - fileName = **REQUIRED**- ignoreProperties = none- requiredProperties = first set of properties from the first object- nesting = false
 
-## VariablesWhen provided, the following variables override the default state. Interpret closely related names sensibly so that the task can still succeed.
+## Variables
+
+When provided, the following variables override the default state.
 
 - ignoreProperties- requiredProperties- nesting
 
@@ -155,7 +163,7 @@ Templates in `templates/shuffle-json-data/`:- `acceptable_json.md`- `examples.md
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -181,7 +189,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -204,7 +212,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

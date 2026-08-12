@@ -39,6 +39,7 @@ You will create a Kotlin MCP server with:1. **Project Structure**: Gradle-based 
 ## Template Structure
 
 ```
+
 myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle.properties├── src/│   ├── main/│   │   └── kotlin/│   │       └── com/example/myserver/│   │           ├── Main.kt│   │           ├── Server.kt│   │           ├── config/│   │           │   └── Config.kt│   │           └── tools/│   │               ├── Tool1.kt│   │               └── Tool2.kt│   └── test/│       └── kotlin/│           └── com/example/myserver/│               └── ServerTest.kt└── README.md
 ```
 
@@ -51,6 +52,7 @@ myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle
 ## settings.gradle.kts Template
 
 ```kotlin
+
 rootProject.name = "
 
 {PROJECT_NAME}}"
@@ -59,6 +61,7 @@ rootProject.name = "
 ## Main.kt Template
 
 ```kotlin
+
 package com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.StdioServerTransportimport kotlinx.coroutines.runBlockingimport io.github.oshai.kotlinlogging.KotlinLoggingprivate val logger = KotlinLogging.logger
 
 }fun main() = runBlocking {    logger.info { "Starting MCP server..." }    val config = loadConfig()    val server = createServer(config)    // Use stdio transport    val transport = StdioServerTransport()    logger.info { "Server '${config.name}' v${config.version} ready" }    server.connect(transport)}
@@ -73,6 +76,7 @@ package com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.Std
 ## Config.kt Template
 
 ```kotlin
+
 package com.example.myserver.configimport kotlinx.serialization.Serializable@Serializabledata class Config(    val name: String = "
 
 {PROJECT_NAME}}",    val version: String = "1.0.0",    val description: String = "{{PROJECT_DESCRIPTION}}")fun loadConfig(): Config {    return Config(        name = System.getenv("SERVER_NAME") ?: "{{PROJECT_NAME}}",        version = System.getenv("VERSION") ?: "1.0.0",        description = System.getenv("DESCRIPTION") ?: "{{PROJECT_DESCRIPTION}}"    )}
@@ -84,7 +88,9 @@ package com.example.myserver.configimport kotlinx.serialization.Serializable@Ser
 > import io.modelcontextprotocol.kotlin.sdk.server.Server
 > **Full content:**
 
-## tools/ToolRegistry.kt Template```kotlinpackage com.example.myserver.toolsimport io.modelcontextprotocol.kotlin.sdk.server.Serverfun Server.registerTools() {    registerTool1()    registerTool2()    // Register additional tools here}```
+## tools/ToolRegistry.kt Template
+
+```kotlinpackage com.example.myserver.toolsimport io.modelcontextprotocol.kotlin.sdk.server.Serverfun Server.registerTools() {    registerTool1()    registerTool2()    // Register additional tools here}```
 
 ## ServerTest.kt Template
 
@@ -95,6 +101,7 @@ package com.example.myserver.configimport kotlinx.serialization.Serializable@Ser
 ## README.md Template
 
 ```markdown
+
 #
 
 {PROJECT_NAME}}A Model Context Protocol (MCP) server built with Kotlin.
@@ -134,7 +141,9 @@ Configure via environment variables:
 
 Run tests:\`\`\`bash ./gradlew test \`\`\`Build:\`\`\`bash ./gradlew build \`\`\`Run with auto-reload (development):\`\`\`bash ./gradlew run --continuous \`\`\`
 
-## MultiplatformThis project uses Kotlin Multiplatform and can target JVM, Wasm, and iOS. See `build.gradle.kts` for platform configuration.
+## Multiplatform
+
+This project uses Kotlin Multiplatform and can target JVM, Wasm, and iOS. See `build.gradle.kts` for platform configuration.
 
 ## License
 
@@ -189,7 +198,7 @@ Detailed templates in `templates/kotlin-mcp-server-generator/`:- `buildgradlekts
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -249,7 +258,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -272,7 +281,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -303,7 +312,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|| ---------- | -------- ||
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

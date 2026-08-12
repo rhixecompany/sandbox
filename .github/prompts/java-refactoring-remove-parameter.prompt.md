@@ -37,28 +37,34 @@ You are an expert in refactoring Java methods.Below are **2 examples** (with tit
 ## Code Before Refactoring 1
 
 ```java
+
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster(), isCloud);            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster(), isCloud));    }}
 ```
 
 ## Code After Refactoring 1
 
 ```java
+
 public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster());            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster()));    }}
 ```
 
 ## Code Before Refactoring 2
 
 ```java
+
 NodeImpl( long id, long firstRel, long firstProp ){     this( id, false );}
 ```
 
 ## Code After Refactoring 2
 
 ```java
+
 NodeImpl( long id){     this( id, false );}
 ```
 
-## TaskApply **Remove Parameter** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.Always return a complete and compilable method (Java 17).Perform intermediate steps internally:
+## Task
+
+Apply **Remove Parameter** to improve readability, testability, maintainability, reusability, modularity, cohesion, and consistency.
 
 - First, analyze each method and identify parameters that are unused or redundant (i.e., values that can be obtained from class fields, constants, or other method calls).- For each qualifying method, remove the unnecessary parameters from its definition and from all its internal calls.
 - Ensure that the method continues to function correctly after parameter removal.
@@ -79,7 +85,7 @@ Templates in `templates/java-refactoring-remove-parameter/`:- `code_after_refact
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -148,7 +154,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -171,7 +177,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

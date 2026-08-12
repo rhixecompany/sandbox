@@ -52,12 +52,12 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ## Phases
 
-| Order  Phase                  Gate                                                 |
-| -----  -----                  ----                                                 |
-| 1      Inventory agents       `--list-agents` prints all platforms with real paths |
-| 2      Refresh inventory doc  `docs/ai-agents-inventory.md` regenerated, committed |
-| 3      Scaffold target repo   `--init <dir>` exit 0, files created                 |
-| 4      Verify resolution      `--verify <dir>` exit 0, RESULT: OK                  |
+| Order | Phase                 | Gate                                                 |
+| ----- | --------------------- | ---------------------------------------------------- |
+| 1     | Inventory agents      | `--list-agents` prints all platforms with real paths |
+| 2     | Refresh inventory doc | `docs/ai-agents-inventory.md` regenerated, committed |
+| 3     | Scaffold target repo  | `--init <dir>` exit 0, files created                 |
+| 4     | Verify resolution     | `--verify <dir>` exit 0, RESULT: OK                  |
 
 ## Verification Checklist
 
@@ -70,10 +70,10 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ## Personas
 
-| Persona        When to Use                                        |
-| -------        -----------                                        |
-| **Developer**  Running the init on a repo, verifying output       |
-| **Reviewer**   Checking idempotency, no-secrets, and completeness |
+| Persona       | When to Use                                        |
+| ------------- | -------------------------------------------------- |
+| **Developer** | Running the init on a repo, verifying output       |
+| **Reviewer**  | Checking idempotency, no-secrets, and completeness |
 
 ## Personality
 
@@ -106,27 +106,27 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server                 Purpose                                             |
-| --------               ---------                                           |
-| `filesystem`           File read/write operations                          |
-| `github`               GitHub API operations (agent inventory cross-check) |
-| `sequential-thinking`  Structured reasoning for complex problems           |
-| `ast-grep`             AST-based code search and replace                   |
-| `fetch`                Web page content extraction                         |
-| `playwright`           Browser automation for interactive pages            |
-| `tavily`               Web search + URL extraction                         |
+| Server                | Purpose                                             |
+| --------------------- | --------------------------------------------------- |
+| `filesystem`          | File read/write operations                          |
+| `github`              | GitHub API operations (agent inventory cross-check) |
+| `sequential-thinking` | Structured reasoning for complex problems           |
+| `ast-grep`            | AST-based code search and replace                   |
+| `fetch`               | Web page content extraction                         |
+| `playwright`          | Browser automation for interactive pages            |
+| `tavily`              | Web search + URL extraction                         |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook                      When               Behavior                     |
-| ------                    ------             ----------                   |
-| `session-logger`          session start/end  Logs session metadata        |
-| `governance-audit`        session events     Audits governance compliance |
-| `session-auto-commit`     session end        Auto-commits session state   |
-| `pre-exec-validate.sh`    before commands    Validates command execution  |
-| `post-exec-state-log.py`  after commands     Appends state log            |
+| Hook                     | When              | Behavior                     |
+| ------------------------ | ----------------- | ---------------------------- |
+| `session-logger`         | session start/end | Logs session metadata        |
+| `governance-audit`       | session events    | Audits governance compliance |
+| `session-auto-commit`    | session end       | Auto-commits session state   |
+| `pre-exec-validate.sh`   | before commands   | Validates command execution  |
+| `post-exec-state-log.py` | after commands    | Appends state log            |
 
 ## Scripts
 

@@ -88,13 +88,16 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 ### Report Format
 
 ```markdown
+
 # Quality Gate Triage Report> Generated: YYYY-MM-DD HH:MM:SS Session: Quality Gate Debugger v2.1 Iterations to zero: N (or "In progress" if stopped early)
 
 ## Execution Summary
 
 - **Started**: YYYY-MM-DD HH:MM:SS- **Completed**: YYYY-MM-DD HH:MM:SS (or "Stopped early due to fail-fast" if applicable)- **Status**: ✓ All passed / ⚠ Partial / ✗ Failed at [gate name]
 
-## Fixes Applied| # | Category | Root Cause | Files Fixed | Attempts | Verified || --
+## Fixes Applied
+
+| # | Category | Root Cause | Files Fixed | Attempts | Verified || --
 
 - | --- | --- | --- | --- | --- || 1 | import-resolution | Kebab-case import paths | 14 | 1 | ✓ || 2 | type-error | Missing await keywords | 1 | 1 | ✓ || 3 | lint-warning | useState in effect | 1 | 2 | ⚠ || … |  |
 
@@ -118,9 +121,13 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 - **Document rationale** — for non-obvious fixes, add a brief inline comment.
 - **PowerShell-safe** — use `Select-Object` instead of `head`/`tail` on Windows.# Quality Gate Triage & Batch-Fix Plan
 
-## ProblemThe repository's quality gate failed: `pnpm lint:strict` returned errors and warnings which stopped the pipeline. The goal is to triage the quality-gate report files (type-check, lint, test, build), cluster root causes, and apply minimal, safe batch fixes until the quality gate passes (zero errors/warnings).
+## Problem
 
-## Proposed approachFollow a structured, iterative fix loop:1. Generate fresh report files by running the quality-gate script (or each command individually) to produce type-check.txt, lint-fixed.txt (and lint output), test-report.txt, build-report.txt.2. Parse and triage all reported issues; cluster by root cause (import-resolution, type-errors, lint-rule violations, test flakiness, build errors).3. Prioritize clusters: import-resolution → type-errors → build-errors → test-failures → lint warnings → deprecations.4. Implement minimal batch edits per cluster (multi-file edits where applicable), then re-run the failing gate to verify. Repeat until all gates pass.
+The repository's quality gate failed: `pnpm lint:strict` returned errors and warnings which stopped the pipeline.
+
+## Proposed approach
+
+Follow a structured, iterative fix loop:
 
 ## Planned phases
 
@@ -136,7 +143,9 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 - Tests and build may require .env.local and a reachable DB (pnpm db:push + seed). If DB not available, tests can be deferred or run selectively.
 - No new dependencies will be added. Follow project's coding standards (no `any`, use Zod, auth-first, DAL patterns).
 
-## Next actionRun the quality-gate script to generate fresh report files. After that the triage step will parse the report files and produce the triage table.
+## Next action
+
+Run the quality-gate script to generate fresh report files.
 
 ## Template References
 
@@ -147,7 +156,7 @@ Detailed templates in `templates/quality-gate-debugger/`:- `final_gate_status.md
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -216,7 +225,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -239,7 +248,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

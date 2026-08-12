@@ -101,36 +101,59 @@ fileName}.length
 ### `"m", "minimal"
 
 ```text
+
 ```markdown
 
-## 1. Introduction    ***Purpose:** Briefly explain why the coding standards are being established (e.g., to improve code quality, maintainability, and team collaboration).*   **Scope:** Define which languages, projects, or modules this specification applies to.
+## 1. Introduction
 
-## 2. Naming Conventions    ***Variables:** `camelCase`*   **Functions/Methods:** `PascalCase` or `camelCase`.    ***Classes/Structs:** `PascalCase`.*   **Constants:** `UPPER_SNAKE_CASE`.
+***Purpose:** Briefly explain why the coding standards are being established (e.g., to improve code quality, maintainability, and team collaboration).*   **Scope:** Define which languages, projects, or modules this specification applies to.
 
-## 3. Formatting and Style    ***Indentation:** Use 4 spaces per indent (or tabs).*   **Line Length:** Limit lines to a maximum of 80 or 120 characters.    ***Braces:** Use the "K&R" style (opening brace on the same line) or the "Allman" style (opening brace on a new line).*   **Blank Lines:** Specify how many blank lines to use for separating logical blocks of code.
+## 2. Naming Conventions
 
-## 4. Commenting    ***Docstrings/Function Comments:** Describe the function's purpose, parameters, and return values.*   **Inline Comments:** Explain complex or non-obvious logic.    *   **File Headers:** Specify what information should be included in a file header, such as author, date, and file description.
+***Variables:** `camelCase`*   **Functions/Methods:** `PascalCase` or `camelCase`.    ***Classes/Structs:** `PascalCase`.*   **Constants:** `UPPER_SNAKE_CASE`.
 
-## 5. Error Handling    ***General:** How to handle and log errors.*   **Specifics:** Which exception types to use, and what information to include in error messages.
+## 3. Formatting and Style
 
-## 6. Best Practices and Anti-Patterns    ***General:** List common anti-patterns to avoid (e.g., global variables, magic numbers).*   **Language-specific:** Specific recommendations based on the project's programming language.
+***Indentation:** Use 4 spaces per indent (or tabs).*   **Line Length:** Limit lines to a maximum of 80 or 120 characters.    ***Braces:** Use the "K&R" style (opening brace on the same line) or the "Allman" style (opening brace on a new line).*   **Blank Lines:** Specify how many blank lines to use for separating logical blocks of code.
 
-## 7. Examples    *Provide a small code example demonstrating the correct application of the rules.*   Provide a small code example of an incorrect implementation and how to fix it.
+## 4. Commenting
 
-## 8. Contribution and Enforcement    *Explain how the standards are to be enforced (e.g., via code reviews).*   Provide a guide for contributing to the standards document itself.    ```````
+***Docstrings/Function Comments:** Describe the function's purpose, parameters, and return values.*   **Inline Comments:** Explain complex or non-obvious logic.    *   **File Headers:** Specify what information should be included in a file header, such as author, date, and file description.
+
+## 5. Error Handling
+
+***General:** How to handle and log errors.*   **Specifics:** Which exception types to use, and what information to include in error messages.
+
+## 6. Best Practices and Anti-Patterns
+
+***General:** List common anti-patterns to avoid (e.g., global variables, magic numbers).*   **Language-specific:** Specific recommendations based on the project's programming language.
+
+## 7. Examples
+
+*Provide a small code example demonstrating the correct application of the rules.*   Provide a small code example of an incorrect implementation and how to fix it.
+
+## 8. Contribution and Enforcement
+
+*Explain how the standards are to be enforced (e.g., via code reviews).*   Provide a guide for contributing to the standards document itself.    ```````
 
 ### `"v", verbose"
 
 ```text
+
 ```markdown
+
 # Style Guide
+
 This document defines the style and conventions used in this project.    All contributions should follow these rules unless otherwise noted.
 
 ## 1. General Code Style
 
 - Favor clarity over brevity.    - Keep functions and methods small and focused.    - Avoid repeating logic; prefer shared helpers/utilities.    - Remove unused variables, imports, code paths, and files.
 
-## 2. Naming Conventions    Use descriptive names. Avoid abbreviations unless well-known.    | Item            | Convention           | Example            |    |-----------------|----------------------|--------------------|    | Variables       | `lower_snake_case`   | `buffer_size`      |    | Functions       | `lower_snake_case()` | `read_file()`      |    | Constants       | `UPPER_SNAKE_CASE`   | `MAX_RETRIES`      |    | Types/Structs   | `PascalCase`         | `FileHeader`       |    | File Names      | `lower_snake_case`   | `file_reader.c`    |
+## 2. Naming Conventions
+
+Use descriptive names. Avoid abbreviations unless well-known.
+| Item            | Convention           | Example            |    |-----------------|----------------------|--------------------|    | Variables       | `lower_snake_case`   | `buffer_size`      |    | Functions       | `lower_snake_case()` | `read_file()`      |    | Constants       | `UPPER_SNAKE_CASE`   | `MAX_RETRIES`      |    | Types/Structs   | `PascalCase`         | `FileHeader`       |    | File Names      | `lower_snake_case`   | `file_reader.c`    |
 
 ## 3. Formatting Rules
 
@@ -139,6 +162,7 @@ This document defines the style and conventions used in this project.    All con
 ### Braces (example in C, adjust for your language)
 
 ```c
+
         if (condition) {            do_something();        } else {            do_something_else();        }
 ```
 
@@ -168,7 +192,10 @@ This document defines the style and conventions used in this project.    All con
 
 - Write tests for new functionality.    - Tests should be deterministic (no randomness without seeding).    - Prefer readable test cases over complex test abstraction.
 
-## 8. Changes to This Guide    Style evolves.    Propose improvements by opening an issue or sending a patch updating this document.    ```````
+## 8. Changes to This Guide
+
+Style evolves.
+Propose improvements by opening an issue or sending a patch updating this document.    ```````
 
 ## Template References
 
@@ -179,7 +206,7 @@ Detailed templates in `templates/write-coding-standards-from-file/`:- `if_fetchs
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -205,7 +232,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -228,7 +255,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

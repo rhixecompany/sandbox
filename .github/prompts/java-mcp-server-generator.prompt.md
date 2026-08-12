@@ -70,7 +70,9 @@ Generate a complete Model Context Protocol server project in Java using the offi
 > import com.fasterxml.jackson.databind.JsonNode;
 > **Full content:**
 
-## ResourceDefinitions.java Template```javapackage com.example.mcp.resources;import io.mcp.server.resource.Resource;import java.util.List;public class ResourceDefinitions {    public static List<Resource
+## ResourceDefinitions.java Template
+
+```javapackage com.example.mcp.resources;import io.mcp.server.resource.Resource;import java.util.List;public class ResourceDefinitions {    public static List<Resource
 
 > getResources() {        return List.of(            Resource.builder()                .name("Example Data")                .uri("resource://data/example")                .description("Example resource data")                .mimeType("application/json")                .build(),            Resource.builder()                .name("Configuration")                .uri("resource://config")                .description("Server configuration")                .mimeType("application/json")                .build()        );    }}```
 
@@ -101,6 +103,7 @@ Generate a complete Model Context Protocol server project in Java using the offi
 ## README.md Template
 
 ````markdown
+
 # My MCP Server
 
 A Model Context Protocol server built with Java and the official MCP Java SDK.
@@ -119,12 +122,14 @@ s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ 
 ### Maven
 
 ```
+
 bashmvn clean package````
 ```
 
 ### Gradle
 
 ```
+
 bash./gradlew build
 ```
 
@@ -133,12 +138,14 @@ bash./gradlew build
 ### Maven
 
 ```
+
 bashjava -jar target/my-mcp-server-1.0.0.jar
 ```
 
 ### Gradle
 
 ```
+
 bash./gradlew run
 ```
 
@@ -149,12 +156,14 @@ ing
 ### Maven
 
 ```
+
 bashmvn test
 ```
 
 ### Gradle
 
 ```
+
 bash./gradlew test
 ```
 
@@ -189,7 +198,7 @@ Detailed section templates in `templates/java-mcp-server-generator/`:- `gradle_b
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -227,18 +236,22 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify scope.
 - Locate relevant files, diffs, references.
 
 ### Phase 2: Execute
+
 - Perform work with smallest safe change set.
 - Keep steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check result against goal, rules, inputs.
 - Confirm output is usable and complete.
 
 ### Phase 4: Hand Off
+
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
@@ -254,7 +267,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -277,7 +290,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -308,7 +321,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|| ---------- | -------- ||
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

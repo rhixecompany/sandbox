@@ -1,0 +1,2065 @@
+{
+  "generated": "2026-08-12T01:33:25",
+  "totals": {
+    "A": 651,
+    "B": 118,
+    "C": 50,
+    "D": 203,
+    "CRLF": 310,
+    "files": 228
+  },
+  "files": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "agents-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "agents-system-prompt-context-fix.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "all-repo-docker-setup.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 141,
+      "score": 0
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "audit-skills-judge-fix.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 7
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "A": 3,
+      "B": 4,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 12
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "A": 3,
+      "B": 4,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 12
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "code-review.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "comprehensive-prompt-enhancer.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "context-map.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "A": 3,
+      "B": 7,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 18
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 1
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "database.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dataverse-python-advanced-patterns.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dataverse-python-quickstart.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "debugger-prompt.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dev-imp.prompt.md",
+      "A": 1,
+      "B": 3,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "A": 3,
+      "B": 9,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 22
+    },
+    {
+      "file": "dev.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "development.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "disk-space-cleanup.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "documentation.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "execute-plan.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "features.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "general.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "A": 3,
+      "B": 4,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 12
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "generator-orchestrator-runbook.md",
+      "A": 18,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 18
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "git-multi-repo-orchestration.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "hermes-comprehensive-setup.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "hermes-doctor-systematic-debugging.prompt.md",
+      "A": 6,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 7
+    },
+    {
+      "file": "index.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 1
+    },
+    {
+      "file": "Initial.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "java-docs.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 1,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 10
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 9
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "list-all-installed-vscode-extension.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "A": 3,
+      "B": 3,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 10
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "migrate-to-next16.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "A": 3,
+      "B": 5,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 14
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "A": 2,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "ngn-earnings-research.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "oh-my-openagent-setup.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "parallel-mcp-install.prompt.md",
+      "A": 6,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 7
+    },
+    {
+      "file": "performance.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 9
+    },
+    {
+      "file": "pl.prompt.md",
+      "A": 4,
+      "B": 1,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 7
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "A": 2,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "A": 3,
+      "B": 3,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 9
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "remember.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "repo-init.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "repo-tooling-implementation.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "repo.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 0
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "security.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "setup-bun-bunx.prompt.md",
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 169,
+      "score": 0
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "setup-groq-cloud.prompt.md",
+      "A": 10,
+      "B": 0,
+      "C": 40,
+      "D": 0,
+      "CRLF": 0,
+      "score": 130
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "setup.prompt.md",
+      "A": 3,
+      "B": 11,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 26
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 8
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "A": 3,
+      "B": 4,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 12
+    },
+    {
+      "file": "smithery-setup.prompt.md",
+      "A": 7,
+      "B": 1,
+      "C": 3,
+      "D": 0,
+      "CRLF": 0,
+      "score": 18
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 3,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 14
+    },
+    {
+      "file": "sync-hermes-opencode.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "test-providers-models.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 1
+    },
+    {
+      "file": "testing.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "tooling-implementation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "typescript.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "uk-earnings-research-pipeline.prompt.md",
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 5
+    },
+    {
+      "file": "uk-earnings-research.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 6
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 2
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "A": 3,
+      "B": 1,
+      "C": 1,
+      "D": 1,
+      "CRLF": 0,
+      "score": 9
+    },
+    {
+      "file": "us-earnings-research.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "CRLF": 0,
+      "score": 3
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "A": 2,
+      "B": 4,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 11
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "A": 3,
+      "B": 14,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 32
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    },
+    {
+      "file": "zod-schema-generation.prompt.md",
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "CRLF": 0,
+      "score": 4
+    }
+  ]
+}

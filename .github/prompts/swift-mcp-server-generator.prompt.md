@@ -96,6 +96,7 @@ When asked to create a Swift MCP server, generate a complete project with this s
 ## Server.swift Template
 
 ```swift
+
 import MCPimport Loggingfunc createServer() async -
 
 > Server {    let server = Server(        name: "MyMCPServer",        version: "1.0.0",        capabilities: .init(            prompts: .init(listChanged: true),            resources: .init(subscribe: true, listChanged: true),            tools: .init(listChanged: true)        )    )    // Register tool handlers    await registerToolHandlers(server: server)    // Register resource handlers    await registerResourceHandlers(server: server)    // Register prompt handlers    await registerPromptHandlers(server: server)    return server}
@@ -114,7 +115,9 @@ import MCPimport Loggingfunc createServer() async -
 > func registerToolHandlers(server: Server) async {
 > **Full content:**
 
-## ResourceDefinitions.swift Template```swiftimport MCPfunc getResourceDefinitions() -
+## ResourceDefinitions.swift Template
+
+```swiftimport MCPfunc getResourceDefinitions() -
 
 > [Resource] {    [        Resource(            name: "Example Data",            uri: "resource://data/example",            description: "Example resource data",            mimeType: "application/json"        ),        Resource(            name: "Configuration",            uri: "resource://config",            description: "Server configuration",            mimeType: "application/json"        )    ]}```
 
@@ -124,7 +127,9 @@ import MCPimport Loggingfunc createServer() async -
 > actor ResourceState {
 > **Full content:**
 
-## PromptDefinitions.swift Template```swiftimport MCPfunc getPromptDefinitions() -
+## PromptDefinitions.swift Template
+
+```swiftimport MCPfunc getPromptDefinitions() -
 
 > [Prompt] {    [        Prompt(            name: "code-review",            description: "Generate a code review prompt",            arguments: [                .init(name: "language", description: "Programming language", required: true),                .init(name: "focus", description: "Review focus area", required: false)            ]        )    ]}```
 
@@ -143,6 +148,7 @@ import MCPimport Loggingfunc createServer() async -
 ## README.md Template
 
 ````markdown
+
 # MyMCPServer
 
 A Model Context Protocol server built with Swift.
@@ -158,6 +164,7 @@ s- ✅ Tools: greet, calculate- ✅ Resources: example data, configuration- ✅ 
 ## Installation
 
 ```bashswift
+
  build -c release````
 ```
 
@@ -203,7 +210,9 @@ MIT````
 1
 10. **Document public APIs** with doc comments
 
-## Build and Run```bash# Buildswift build# Runswift run# Testswift test# Release buildswift build -c release# Installswift build -c releasecp .build/release/MyMCPServer /usr/local/bin/````
+## Build and Run
+
+```bash# Buildswift build# Runswift run# Testswift test# Release buildswift build -c release# Installswift build -c releasecp .build/release/MyMCPServer /usr/local/bin/````
 
 ## Integration with Claude Desktop
 
@@ -218,7 +227,7 @@ Detailed templates in `templates/swift-mcp-server-generator/`:- `mainswift_templ
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -244,7 +253,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -267,7 +276,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -298,7 +307,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|| ---------- | -------- ||
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

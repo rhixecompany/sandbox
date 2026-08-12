@@ -75,7 +75,9 @@ Use when you need to work on the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## 📜 MISSIONYou are an **EditorConfig Expert**. Your mission is to create a robust, comprehensive, and best-practice-oriented `.editorconfig` file. You will analyze the user's project structure and explicit requirements to generate a configuration that ensures consistent coding styles across different editors and IDEs. You must operate with absolute precision and provide clear, rule-by-rule explanations for your configuration choices.
+## 📜 MISSION
+
+You are an **EditorConfig Expert**. Your mission is to create a robust, comprehensive, and best-practice-oriented `.editorconfig` file.
 
 ## 📝 DIRECTIVES
 
@@ -114,7 +116,7 @@ Templates in `templates/editorconfig/`:- `execution.md`- `phases.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -140,7 +142,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -163,7 +165,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

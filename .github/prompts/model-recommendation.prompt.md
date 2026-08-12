@@ -113,7 +113,9 @@ Current frontmatter: \`\`\`yaml---description: "..." tools: [...]---\`\`\`Recomm
 
 Generate a structured markdown report with the following sections:```markdown# AI Model Recommendation Report**File Analyzed**: `[file path]` **File Type**: [chatmode | prompt] **Analysis Date**: [YYYY-MM-DD] **Subscription Tier**: [Free | Pro | Pro+]---
 
-## File Summary**Description**: [from frontmatter] **Mode**: [ask | edit | agent] **Tools**: [tool list] **Current Model**: [specified model or "Not specified"]
+## File Summary**Description**: [from frontmatter] **Mode**: [ask
+
+| edit | agent] **Tools**: [tool list] **Current Model**: [specified model or "Not specified"]
 
 ## Task Analysis
 
@@ -125,7 +127,9 @@ Generate a structured markdown report with the following sections:```markdown# A
 - **Code Generation**: [Minimal | Moderate | Extensive]
 - **Multi-Modal**: [Yes | No]
 
-### Task Category[Primary category from 8 categories listed in Workflow Phase 1]
+### Task Category
+
+[Primary category from 8 categories listed in Workflow Phase 1]
 
 ### Key Characteristics
 
@@ -158,7 +162,9 @@ Generate a structured markdown report with the following sections:```markdown# A
 
 ## Implementation Guidance
 
-### Frontmatter Update[Provide specific code block showing recommended frontmatter change]
+### Frontmatter Update
+
+[Provide specific code block showing recommended frontmatter change]
 
 ### Model Selection in VS Code**To Use Recommended Model**:
 
@@ -167,19 +173,31 @@ Generate a structured markdown report with the following sections:```markdown# A
 3. Select **[Recommended Model Name]**
 4. [Optional: When to switch back to Auto]**Keyboard Shortcut**: `Cmd+Shift+P` → "Copilot: Change Model"
 
-### Tool Alignment Verification[Check results: Are specified tools compatible with recommended model?]✅ **Compatible Tools**: [list] ⚠️ **Potential Limitations**: [list if any]
+### Tool Alignment Verification
 
-## Deprecation Notices[If applicable, list any deprecated models in current configuration]⚠️ **Deprecated Model in Use**: [Model Name] (Deprecation date: [YYYY-MM-DD])**Migration Path**:- **Current**: [Deprecated Model]- **Replacement**: [Recommended Model]- **Action Required**: Update `model:` field in frontmatter by [date]- **Behavioral Changes**: [any expected differences]
+[Check results: Are specified tools compatible with recommended model?]✅ **Compatible Tools**: [list] ⚠️ **Potential Limitations**: [list if any]
+
+## Deprecation Notices
+
+[If applicable, list any deprecated models in current configuration]⚠️ **Deprecated Model in Use**: [Model Name] (Deprecation date: [YYYY-MM-DD])**Migration Path**:- **Current**: [Deprecated Model]- **Replacement**: [Recommended Model]- **Action Required**: Update `model:` field in frontmatter by [date]- **Behavioral Changes**: [any expected differences]
 
 ## Additional Considerations
 
-### Subscription Tier Recommendations[Specific advice based on Free/Pro/Pro+ tier]
+### Subscription Tier Recommendations
 
-### Priority Factor Adjustments[If user specified Speed/Cost/Quality/Balanced, explain how recommendation aligns]
+[Specific advice based on Free/Pro/Pro+ tier]
 
-### Long-Term Model Strategy[Advice for when to re-evaluate model selection as file evolves]---
+### Priority Factor Adjustments
 
-## Quick Reference**TL;DR**: Use **[Primary Model]** for this task due to [one-sentence rationale]. Cost: [X]x multiplier.**One-Line Update**: \`\`\`yaml model: "[Recommended Model Name]" \`\`\````
+[If user specified Speed/Cost/Quality/Balanced, explain how recommendation aligns]
+
+### Long-Term Model Strategy
+
+[Advice for when to re-evaluate model selection as file evolves]---
+
+## Quick Reference
+
+**TL;DR**: Use **[Primary Model]** for this task due to [one-sentence rationale]. Cost: [X]x multiplier. Use **[Primary Model]** for this task due to [one-sentence rationale]. Cost: [X]x multiplier.**One-Line Update**: \`\`\`yaml model: "[Recommended Model Name]" \`\`\````
 
 ### Output Quality Standards
 
@@ -205,7 +223,9 @@ If user provides multiple files:1. Analyze each file individually2. Generate sep
 
 If user asks "Which model is better between X and Y for this file?":1. Focus comparison on those two models only2. Use side-by-side table format3. Declare a winner with specific reasoning4. Include cost comparison for subscription tier
 
-### Migration PlanningIf file specifies a deprecated model:1. Prioritize migration guidance in report2. Test current behavior expectations vs. replacement model capabilities3. Provide phased migration if breaking changes expected4. Include rollback plan if needed
+### Migration Planning
+
+If file specifies a deprecated model:
 
 ## Examples
 
@@ -242,7 +262,7 @@ Detailed section templates in `templates/model-recommendation/`:- `context7_quer
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -268,7 +288,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -291,7 +311,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

@@ -61,7 +61,7 @@ metadata:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Research Analyst** | Platform discovery, data extraction, scoring |
 | **UK Tax Advisor** | HMRC compliance, trading allowance, expense tracking |
 | **QA Engineer** | Signup flow testing, validation gates, quality checks |
@@ -182,7 +182,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Inventory | All prior session data loaded and referenced |
 | 2 | Discovery | 8 categories researched, ≥50 platforms found |
 | 3 | Scoring | All platforms scored, elimination criteria applied |
@@ -199,7 +199,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `user-communication-preferences` | Concise, action-first, DRY output |
 | `brainstorming` | Structured idea generation for categories |
@@ -213,7 +213,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 The following MCP servers and tools are available. Use them in preference to native equivalents per MCP-first tooling policy.
 
 | MCP Server | Tools Used |
-|| ------------ | ------------ ||
+| ------------ | ------------ |
 | `tavily` | `tavily_search`, `tavily_extract`, `tavily_research`, `tavily_crawl`, `tavily_map` |
 | `firecrawl` | `firecrawl_scrape`, `firecrawl_crawl`, `firecrawl_map`, `firecrawl_search`, `firecrawl_extract` |
 | `playwright` | `browser_navigate`, `browser_snapshot`, `browser_click`, `browser_type`, `browser_wait_for` |

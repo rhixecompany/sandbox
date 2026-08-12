@@ -81,6 +81,7 @@ Use when you need to work on the current workspace or task.
 ## Configuration Variables
 
 ```
+
 ${MIGRATION_TYPE="Framework Version|Architecture Refactoring|Technology Migration|Dependencies Update|Pattern Changes"}<!-- Type of migration or evolution -->${SOURCE_REFERENCE="branch|commit|tag"}<!-- Source reference point (before state) -->${TARGET_REFERENCE="branch|commit|tag"}<!-- Target reference point (after state) -->${ANALYSIS_SCOPE="Entire project|Specific folder|Modified files only"}<!-- Scope of analysis -->${CHANGE_FOCUS="Breaking Changes|New Conventions|Obsolete Patterns|API Changes|Configuration"}<!-- Main aspect of changes -->${AUTOMATION_LEVEL="Conservative|Balanced|Aggressive"}<!-- Level of automation for Copilot suggestions -->${GENERATE_EXAMPLES="true|false"}<!-- Include transformation examples -->${VALIDATION_REQUIRED="true|false"}<!-- Require validation before application -->
 ```
 
@@ -106,11 +107,17 @@ ${MIGRATION_TYPE="Framework Version|Architecture Refactoring|Technology Migratio
 
 GENERATE_EXAMPLES == "true" ?  "
 
-### Configuration Files   [CONFIG_TRANSFORMATION_EXAMPLES]
+### Configuration Files
 
-### Main Source Files   [SOURCE_TRANSFORMATION_EXAMPLES]
+[CONFIG_TRANSFORMATION_EXAMPLES]
 
-### Test Files   [TEST_TRANSFORMATION_EXAMPLES]" : ""}
+### Main Source Files
+
+[SOURCE_TRANSFORMATION_EXAMPLES]
+
+### Test Files
+
+[TEST_TRANSFORMATION_EXAMPLES]" : ""}
 
 ## Validation and Security
 
@@ -153,13 +160,21 @@ Useful for adopting new patterns: Repository Pattern, Dependency Injection, Obse
 
 ## Unique Benefits
 
-### 🧠 **Artificial Intelligence Enhancement**Unlike traditional migration documentation, these instructions "train" GitHub Copilot to reproduce your technology evolution decisions automatically during future code modifications.
+### 🧠 **Artificial Intelligence Enhancement**
 
-### 🔄 **Knowledge Capitalization**Transforms specific project experience into reusable rules, avoiding the loss of migration expertise and accelerating future similar transformations.
+Unlike traditional migration documentation, these instructions "train" GitHub Copilot to reproduce your technology evolution decisions automatically during future code modifications.
 
-### 🎯 **Context-Aware Precision**Instead of generic advice, generates instructions tailored to your specific codebase, with real before/after examples from your project evolution.
+### 🔄 **Knowledge Capitalization**
 
-### ⚡ **Automated Consistency**Ensures that new code additions automatically follow the new conventions, preventing architectural regression and maintaining code evolution coherence.
+Transforms specific project experience into reusable rules, avoiding the loss of migration expertise and accelerating future similar transformations.
+
+### 🎯 **Context-Aware Precision**
+
+Instead of generic advice, generates instructions tailored to your specific codebase, with real before/after examples from your project evolution.
+
+### ⚡ **Automated Consistency**
+
+Ensures that new code additions automatically follow the new conventions, preventing architectural regression and maintaining code evolution coherence.
 
 ## Template References
 
@@ -170,7 +185,7 @@ Detailed templates in `templates/generate-custom-instructions-from-codebase/`:- 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -196,7 +211,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -219,7 +234,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

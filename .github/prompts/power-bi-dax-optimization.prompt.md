@@ -56,7 +56,9 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 > - Performance Issues: [List identified issues]
 > **Full content:**
 
-## Request InstructionsTo use this prompt effectively, provide:1. **The DAX formula** you want optimized2. **Context information** such as:
+## Request Instructions
+
+To use this prompt effectively, provide:
 
 - Business purpose of the calculation   - Data model relationships involved   - Performance requirements or concerns   - Current performance issues experienced3. **Specific optimization goals** such as:   - Performance improvement   - Readability enhancement   - Best practice compliance   - Error handling improvement
 
@@ -76,7 +78,7 @@ Templates in `templates/power-bi-dax-optimization/`:- `additional_services.md`- 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -145,7 +147,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -168,7 +170,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
