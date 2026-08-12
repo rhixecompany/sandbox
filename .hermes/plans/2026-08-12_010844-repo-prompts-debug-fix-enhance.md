@@ -22,14 +22,14 @@ consent gates for destructive operations.
 
 ### Files in scope
 
-| File | Size | Version | State |
-|------|------|---------|-------|
-| `repo.prompt.md` | 22,662 B | 2.1.0 | **Heavy corruption** |
-| `repo-management.prompt.md` | 6,812 B | 2.1.0 | Destructive ops w/o consent gate; MCP table mismatch |
-| `repo-research-pipeline.prompt.md` | 5,779 B | 2.1.0 | Frontmatter/plan quoting; MCP table mismatch |
-| `repo-story-time.prompt.md` | 5,781 B | 2.1.0 | Frontmatter/plan quoting; MCP table mismatch |
-| `repo-init.prompt.md` | 3,828 B | 1.0.0 | Core sound; missing sections |
-| `repo-tooling-implementation.prompt.md` | 4,553 B | 1.0.0 | Stub; empty skills/deps/scripts |
+| File                                    | Size     | Version | State                                                |
+| --------------------------------------- | -------- | ------- | ---------------------------------------------------- |
+| `repo.prompt.md`                        | 22,662 B | 2.1.0   | **Heavy corruption**                                 |
+| `repo-management.prompt.md`             | 6,812 B  | 2.1.0   | Destructive ops w/o consent gate; MCP table mismatch |
+| `repo-research-pipeline.prompt.md`      | 5,779 B  | 2.1.0   | Frontmatter/plan quoting; MCP table mismatch         |
+| `repo-story-time.prompt.md`             | 5,781 B  | 2.1.0   | Frontmatter/plan quoting; MCP table mismatch         |
+| `repo-init.prompt.md`                   | 3,828 B  | 1.0.0   | Core sound; missing sections                         |
+| `repo-tooling-implementation.prompt.md` | 4,553 B  | 1.0.0   | Stub; empty skills/deps/scripts                      |
 
 ### Defects found (debug output)
 

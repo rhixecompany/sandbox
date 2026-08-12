@@ -11,24 +11,24 @@
 
 ## ⚡ Summary Table (click section for detail)
 
-| # | App | Category | NG availability | Realistic ₦/month (passive) | Privacy risk | Verdict |
-|---|-----|----------|-----------------|------------------------------|--------------|---------|
-| 1 | **Honeygain** | Bandwidth | ✅ Payout verified (Tipalti list incl. Nigeria); Content-Delivery mode NOT available | ₦4,000–12,000 (multi-device) | MED | **LEGIT** — proven payer, slow |
-| 2 | **EarnApp** (Bright Data) | Bandwidth | ✅ Available globally (NG not excluded) | ₦1,500–4,500 | MED | **LEGIT** — low min payout |
-| 3 | **Pawns.app / IPRoyal** | Bandwidth + surveys | ✅ Verified (official NG page) | ₦2,000–8,000 + surveys | MED | **LEGIT** — best NG fit |
-| 4 | **PacketStream** | Bandwidth | ❌ (unverified); NG demand near zero | ₦0–1,500 | MED-HIGH | Borderline legit; useless in NG |
-| 5 | **TraffMonetizer** | Bandwidth | ❌ (unverified) | ₦0–750 | MED | Legit-but-dust |
-| 6 | **ByteBenefit** | Bandwidth | ❌ (unverified) | n/a | MED | ⚠️ New, affiliate-hyped — caution |
-| 7 | **DistributedMint** | Data donation (AI) | ❌ (unverified — site unreachable; no reviews found) | ₦0–?? | HIGH | 🚩 NO VERIFIABLE INFO — avoid |
-| 8 | **Spilr** | Lockscreen/attention | ❌ (no evidence of app/reviews at all) | ₦0–300 | HIGH | 🚩 RED FLAG — promoters only |
-| 9 | **S'more / LifeSlide / Slidejoy** (class) | Lockscreen | ❌ Not NG (US/EU, gift cards) | ₦0–1,500 (if accessible, VPN) | MED-HIGH | ⚠️ Legit apps, wrong market for NG |
-| 10 | **Chatter** (content-sharing) | Content share | ❌ (no verifiable earning app found) | ₦0 | HIGH | 🚩 RED FLAG — no payout evidence |
-| 11 | **Talkroom / Kito** (paid chat) | Content/chat share | ⚠️ Partial; agency-scam heavy | ₦0–9,000 (ACTIVE, not passive) | HIGH | ⚠️ Active work + scammy agencies |
-| 12 | **Cointiply / FreeBitco.in / FireFaucet** | Crypto faucets | ✅ Global (incl. NG) | ₦150–1,500 | MED | **LEGIT** but dust |
-| 13 | **Pi Network** | Mobile "mining" | ✅ Open Mainnet live (Feb 2025); exchange-listed | ₦500–1,500 (speculative) | MED | 🟡 Speculative lottery — not income |
-| 14 | **Cloud-mining / hashpower apps** | Crypto scam class | ⚠️ Everywhere (scam ads target NG) | **NEGATIVE** (you lose deposits) | HIGH | 🚩🚩 HIGH RISK — AVOID |
-| 15 | **Telegram "tap-to-earn" games** (Hamster Kombat et al.) | Crypto games | ⚠️ Global | ₦0–900 | MED | 🚩 Near-zero; token collapses post-TGE |
-| 16 | **GoJelly** (NG-specific) | Microtasks/referral | ✅ NG-native (pays naira) | ₦0–15,000 (TASKS, not passive) | MED | ⚠️ Marketing-heavy; task-based, not passive |
+| #   | App                                                      | Category             | NG availability                                                                      | Realistic ₦/month (passive)      | Privacy risk | Verdict                                     |
+| --- | -------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ | -------------------------------- | ------------ | ------------------------------------------- |
+| 1   | **Honeygain**                                            | Bandwidth            | ✅ Payout verified (Tipalti list incl. Nigeria); Content-Delivery mode NOT available | ₦4,000–12,000 (multi-device)     | MED          | **LEGIT** — proven payer, slow              |
+| 2   | **EarnApp** (Bright Data)                                | Bandwidth            | ✅ Available globally (NG not excluded)                                              | ₦1,500–4,500                     | MED          | **LEGIT** — low min payout                  |
+| 3   | **Pawns.app / IPRoyal**                                  | Bandwidth + surveys  | ✅ Verified (official NG page)                                                       | ₦2,000–8,000 + surveys           | MED          | **LEGIT** — best NG fit                     |
+| 4   | **PacketStream**                                         | Bandwidth            | ❌ (unverified); NG demand near zero                                                 | ₦0–1,500                         | MED-HIGH     | Borderline legit; useless in NG             |
+| 5   | **TraffMonetizer**                                       | Bandwidth            | ❌ (unverified)                                                                      | ₦0–750                           | MED          | Legit-but-dust                              |
+| 6   | **ByteBenefit**                                          | Bandwidth            | ❌ (unverified)                                                                      | n/a                              | MED          | ⚠️ New, affiliate-hyped — caution           |
+| 7   | **DistributedMint**                                      | Data donation (AI)   | ❌ (unverified — site unreachable; no reviews found)                                 | ₦0–??                            | HIGH         | 🚩 NO VERIFIABLE INFO — avoid               |
+| 8   | **Spilr**                                                | Lockscreen/attention | ❌ (no evidence of app/reviews at all)                                               | ₦0–300                           | HIGH         | 🚩 RED FLAG — promoters only                |
+| 9   | **S'more / LifeSlide / Slidejoy** (class)                | Lockscreen           | ❌ Not NG (US/EU, gift cards)                                                        | ₦0–1,500 (if accessible, VPN)    | MED-HIGH     | ⚠️ Legit apps, wrong market for NG          |
+| 10  | **Chatter** (content-sharing)                            | Content share        | ❌ (no verifiable earning app found)                                                 | ₦0                               | HIGH         | 🚩 RED FLAG — no payout evidence            |
+| 11  | **Talkroom / Kito** (paid chat)                          | Content/chat share   | ⚠️ Partial; agency-scam heavy                                                        | ₦0–9,000 (ACTIVE, not passive)   | HIGH         | ⚠️ Active work + scammy agencies            |
+| 12  | **Cointiply / FreeBitco.in / FireFaucet**                | Crypto faucets       | ✅ Global (incl. NG)                                                                 | ₦150–1,500                       | MED          | **LEGIT** but dust                          |
+| 13  | **Pi Network**                                           | Mobile "mining"      | ✅ Open Mainnet live (Feb 2025); exchange-listed                                     | ₦500–1,500 (speculative)         | MED          | 🟡 Speculative lottery — not income         |
+| 14  | **Cloud-mining / hashpower apps**                        | Crypto scam class    | ⚠️ Everywhere (scam ads target NG)                                                   | **NEGATIVE** (you lose deposits) | HIGH         | 🚩🚩 HIGH RISK — AVOID                      |
+| 15  | **Telegram "tap-to-earn" games** (Hamster Kombat et al.) | Crypto games         | ⚠️ Global                                                                            | ₦0–900                           | MED          | 🚩 Near-zero; token collapses post-TGE      |
+| 16  | **GoJelly** (NG-specific)                                | Microtasks/referral  | ✅ NG-native (pays naira)                                                            | ₦0–15,000 (TASKS, not passive)   | MED          | ⚠️ Marketing-heavy; task-based, not passive |
 
 ---
 
@@ -40,7 +40,7 @@
 - **Battery/data:** Low battery drain; on WiFi uses idle bandwidth only. **On metered data it consumes your bundle — net loss** (data ≈ $0.39/GB in NG vs $0.10/GB earned).
 - **Privacy:** MED. Client traffic flows through your IP address; you can't see what's routed. You can be associated with client activity. No malware historically, but proxy-network exposure is real.
 - **Payout:** PayPal (through Tipalti) or JumpToken (crypto). **Min payout $20 (20,000 credits)** — the single biggest friction point: on 1 device expect **4–8 months to first payout** (independently verified: real user took 5 months; $17.96 net after fees).
-- **Verdict:** 🟢 **LEGIT** — >1M completed payouts, Tipalti 2025 Mass Payments award, ~48h processing, 30+ years of track record... (unverified) *actually: established since 2020*. Small but real. **Only worth starting if you have a PC/old phone to leave on 24/7 + unlimited WiFi.**
+- **Verdict:** 🟢 **LEGIT** — >1M completed payouts, Tipalti 2025 Mass Payments award, ~48h processing, 30+ years of track record... (unverified) _actually: established since 2020_. Small but real. **Only worth starting if you have a PC/old phone to leave on 24/7 + unlimited WiFi.**
 
 ## 2. EarnApp — Bandwidth (Bright Data)
 
@@ -145,13 +145,13 @@
 
 ## ✅ Top 5 LEGIT passive plays for Nigeria (realistic, monthly)
 
-| Rank | Play | Realistic ₦/month (passive) | Why |
-|------|------|--------------|-----|
-| 1 | **Pawns.app** | **₦3,000–8,000** (share) + surveys | Verified NG; $0.20/GB; $5 min → BTC → naira; multi-device allowed |
-| 2 | **Honeygain** | **₦2,000–6,000** (multi-device) | Verified NG payout; proven payer; $20 min = 4–8 mo to first cash |
-| 3 | **EarnApp** | **₦1,500–4,000** | Global availability; $2.50 min payout = fastest first cash |
-| 4 | **Pi Network** | **₦500–1,200** (speculative, not cash) | Free lottery; open mainnet trading; do not invest anything |
-| 5 | **Crypto faucets** (Cointiply/FreeFreeBitco.in) | **₦150–1,200** | Legit dust; hobby only |
+| Rank | Play                                            | Realistic ₦/month (passive)            | Why                                                               |
+| ---- | ----------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------- |
+| 1    | **Pawns.app**                                   | **₦3,000–8,000** (share) + surveys     | Verified NG; $0.20/GB; $5 min → BTC → naira; multi-device allowed |
+| 2    | **Honeygain**                                   | **₦2,000–6,000** (multi-device)        | Verified NG payout; proven payer; $20 min = 4–8 mo to first cash  |
+| 3    | **EarnApp**                                     | **₦1,500–4,000**                       | Global availability; $2.50 min payout = fastest first cash        |
+| 4    | **Pi Network**                                  | **₦500–1,200** (speculative, not cash) | Free lottery; open mainnet trading; do not invest anything        |
+| 5    | **Crypto faucets** (Cointiply/FreeFreeBitco.in) | **₦150–1,200**                         | Legit dust; hobby only                                            |
 
 Stack Pawns + Honeygain + EarnApp on the **same WiFi router at home** with old devices → realistic combo ≈ **₦6,500–18,000/mo** (and only if you can leave a device on 24/7).
 

@@ -14,6 +14,7 @@
 **Servers Added (4):**
 
 1. **`django`** — Django ORM helpers for ecom backend
+
    ```json
    "django": {
      "args": ["-y", "django-mcp"],
@@ -27,6 +28,7 @@
    - Environment variable configured for ecom project
 
 2. **`docs`** — Local documentation search
+
    ```json
    "docs": {
      "args": ["-y", "docs-mcp"],
@@ -37,6 +39,7 @@
    - Useful for architecture docs, research, references
 
 3. **`postgres`** — Direct PostgreSQL queries (Banking, comicwise)
+
    ```json
    "postgres": {
      "args": ["-y", "postgres-mcp"],
@@ -102,22 +105,27 @@
 **Status:** Live and functional
 
 **Before:**
+
 ```markdown
 ## Table of Contents
+
 - [Technology Stack](#-technology-stack)
 - [Project Architecture](#-project-architecture)
-...
+  ...
 ```
 
 **After:**
+
 ```markdown
 ## Table of Contents
+
 - [AI Assistant & Copilot Instructions](#-ai-assistant--copilot-instructions)
 - [Technology Stack](#-technology-stack)
 - [Project Architecture](#-project-architecture)
-...
+  ...
 
 ## 🤖 AI Assistant & Copilot Instructions
+
 **For GitHub Copilot, Claude, or other AI assistants:** See `.github/copilot-instructions.md`
 ...
 ```
@@ -132,17 +140,18 @@
 
 **Verification Results:**
 
-| Aspect                            | Status | Details                                    |
-| --------------------------------- | ------ | ------------------------------------------ |
-| Answer exists in guide?           | ✅     | Found in Comicwise section (line 262-270) |
-| Easy to find?                     | ✅     | Direct section, searchable keywords        |
-| Copy-paste ready?                 | ✅     | Exact commands: `pnpm test -- src/...`    |
-| Multiple options shown?           | ✅     | 3 examples: unit, verbose, E2E            |
-| Project-specific info included?   | ✅     | Notes `pnpm` (not `bun`)                  |
-| Related context provided?         | ✅     | Frameworks, quality gates explained       |
-| Quality of answer?                | ✅     | 5/5 rating — comprehensive and actionable |
+| Aspect                          | Status | Details                                   |
+| ------------------------------- | ------ | ----------------------------------------- |
+| Answer exists in guide?         | ✅     | Found in Comicwise section (line 262-270) |
+| Easy to find?                   | ✅     | Direct section, searchable keywords       |
+| Copy-paste ready?               | ✅     | Exact commands: `pnpm test -- src/...`    |
+| Multiple options shown?         | ✅     | 3 examples: unit, verbose, E2E            |
+| Project-specific info included? | ✅     | Notes `pnpm` (not `bun`)                  |
+| Related context provided?       | ✅     | Frameworks, quality gates explained       |
+| Quality of answer?              | ✅     | 5/5 rating — comprehensive and actionable |
 
 **Answer Provided by Guide:**
+
 ```bash
 cd projects/comicwise
 pnpm test -- src/path/to/test.ts     # Vitest single file
@@ -151,6 +160,7 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ```
 
 **Additional Test Cases Verified:**
+
 - ✅ "How do I run a single test in Banking?" — Answer found
 - ✅ "How do I run a single test in Bash?" — Answer found + shell tests
 - ✅ "How do I run a single test in ecom backend?" — Answer found
@@ -171,23 +181,27 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ## 📊 Complete Enhancement Summary
 
 ### Files Modified
-| File           | Changes          | Status |
-| -------------- | ---------------- | ------ |
-| `.mcp.json`    | +4 servers       | ✅     |
-| `README.md`    | +1 section + QA  | ✅     |
+
+| File        | Changes         | Status |
+| ----------- | --------------- | ------ |
+| `.mcp.json` | +4 servers      | ✅     |
+| `README.md` | +1 section + QA | ✅     |
 
 ### Files Created
-| File                                      | Purpose                        | Status |
-| ----------------------------------------- | ------------------------------ | ------ |
+
+| File                                                | Purpose                  | Status |
+| --------------------------------------------------- | ------------------------ | ------ |
 | `.github/COPILOT_INSTRUCTIONS_TEST_VERIFICATION.md` | Test verification report | ✅     |
 
 ### MCP Servers Now Available (18 Total)
 
 **Original 14:**
+
 - filesystem, github, ast-grep, code-sandbox, playwright, sequential-thinking
 - context7, fetch, memory, neon, sentry, smithery, tavily, mcp-docker
 
 **New 4 Recommended:**
+
 - ✅ django — Django ORM & management
 - ✅ docs — Local documentation
 - ✅ postgres — Direct DB queries
@@ -198,6 +212,7 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ## 🎯 Integration Points
 
 ### README.md Now Points To:
+
 1. `.github/copilot-instructions.md` — main guide
 2. Bash Toolkit section — TS automation
 3. Banking App section — Next.js 16 fintech
@@ -205,6 +220,7 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 5. Ecom section — Django + React
 
 ### MCP Servers Now Ready For:
+
 1. **Django projects** — `django` MCP for ORM queries
 2. **Database projects** — `postgres` MCP for direct queries
 3. **Python testing** — `pytest` MCP for test automation
@@ -215,22 +231,25 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ## ✨ Benefits Achieved
 
 ### For Developers
+
 ✅ Clear entry point to Copilot guidance from README  
 ✅ 18 MCP servers available (14 original + 4 new)  
 ✅ Django, PostgreSQL, pytest support added  
-✅ Faster context switching with quick links  
+✅ Faster context switching with quick links
 
 ### For AI Assistants (Copilot, Claude, etc.)
+
 ✅ Comprehensive guide with 30+ examples  
 ✅ All practical questions answered  
 ✅ MCP servers documented with use cases  
-✅ Guide verified with 10 test scenarios  
+✅ Guide verified with 10 test scenarios
 
 ### For Project Maintenance
+
 ✅ Clear guidance for future updates  
 ✅ Test verification shows guide works  
 ✅ Self-documenting (includes maintenance notes)  
-✅ No duplication of AGENTS.md (links instead)  
+✅ No duplication of AGENTS.md (links instead)
 
 ---
 
@@ -253,6 +272,7 @@ git status
 ```
 
 **Expected changes:**
+
 - `.mcp.json` — 4 new servers
 - `README.md` — New section + quick links
 - `.github/COPILOT_INSTRUCTIONS_TEST_VERIFICATION.md` — New test report
@@ -262,6 +282,7 @@ git status
 ## 🚀 Next Steps (Optional)
 
 ### If you want to activate these servers:
+
 ```bash
 # Restart Copilot MCP connections
 # Methods:
@@ -271,6 +292,7 @@ git status
 ```
 
 ### If you want to validate the guide further:
+
 ```bash
 # Ask Copilot these questions:
 # 1. "How do I run a single test in Banking?"
@@ -301,6 +323,7 @@ git status
    - Test report saved to `.github/COPILOT_INSTRUCTIONS_TEST_VERIFICATION.md`
 
 **Result:** `.github/copilot-instructions.md` is now:
+
 - Discoverable (linked from README)
 - Functional (tested with 10 scenarios)
 - Complete (18 MCP servers documented)
@@ -321,6 +344,7 @@ README.md                              # +1 new section
 ```
 
 **Commit message (suggested):**
+
 ```
 feat: activate recommended MCP servers and update README
 

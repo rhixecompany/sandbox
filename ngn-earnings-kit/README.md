@@ -1,9 +1,11 @@
 # 🪙 NGN Earnings Kit — Better than Outlier & Atapoll
 
 **Owner:** Alexa · **Region:** Nigeria (NGN) · **Status:** ✅ Complete (2026-08-08)
+
 > Goal: identify and validate earning platforms genuinely better than Outlier & Atapoll for a Nigerian user — higher pay, more reliable, NG-friendly, lower barrier, faster payouts.
 
 ## Quick Start (30 days)
+
 1. Read `RESEARCH_REPORT.md` → top-5 picks
 2. Open `references/platform_links.md` → signup links
 3. Use `templates/signup_checklist.md` per platform
@@ -11,16 +13,18 @@
 5. Track tax in `trackers/tax_tracker.md` (₦800k tax-free threshold, NTA 2025)
 
 ## Structure
-| Folder | Purpose |
-|--------|---------|
-| `platforms/` | 8 deep-dive categories (ai-training, surveys-microtasks, user-testing, bank-switching, cashback-receipts, mystery-shopping, freelance-gigs, passive-apps) |
-| `references/` | Master list CSV (64 scored), scoring matrix xlsx, validation report, tax guidance, scam warnings, signup requirements, platform links |
-| `trackers/` | Earnings (csv+xlsx), tax, bank switch, weekly planner, referral |
-| `templates/` | Platform evaluation, weekly routine, expense log, signup checklist |
-| `samples/` | Sample week xlsx, tax snippet, referral messages |
-| `scripts/` | `build_master_list.py` + `extend_master_list.py` (re-score pipeline) |
+
+| Folder        | Purpose                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `platforms/`  | 8 deep-dive categories (ai-training, surveys-microtasks, user-testing, bank-switching, cashback-receipts, mystery-shopping, freelance-gigs, passive-apps) |
+| `references/` | Master list CSV (64 scored), scoring matrix xlsx, validation report, tax guidance, scam warnings, signup requirements, platform links                     |
+| `trackers/`   | Earnings (csv+xlsx), tax, bank switch, weekly planner, referral                                                                                           |
+| `templates/`  | Platform evaluation, weekly routine, expense log, signup checklist                                                                                        |
+| `samples/`    | Sample week xlsx, tax snippet, referral messages                                                                                                          |
+| `scripts/`    | `build_master_list.py` + `extend_master_list.py` (re-score pipeline)                                                                                      |
 
 ## Top 5 (validated Aug 2026)
+
 1. **Mercor** — highest AI ceiling ₦24k–150k/hr, selective, weekly Wise/bank payouts
 2. **Upwork** — most viable global freelance; NG avg $163/job; Cleva/Payoneer rails
 3. **DataAnnotation.tech** — strong AI pay but 2.6% acceptance; verify NGN rails
@@ -28,18 +32,20 @@
 5. **uTest (Applause) / Testlio** — Payoneer ✓ NG; ₦15k–52.5k/hr, daily cycles
 
 ## Top 5 by category (quick picks)
-| Category | Top pick | Why |
-|----------|----------|-----|
-| AI training | **Mercor** | highest ceiling, weekly payout |
-| Freelance | **Upwork** | escrow, USD→NGN via Cleva |
-| User testing | **uTest** | Payoneer ✓, daily cycles |
-| Surveys | **TimeBucks / FreeCash** | $3-min GPTs, PayPal NG ✓ |
-| Field tasks | **SagaPoll** | NGN-native, 5k pts=₦30k |
-| Bank referral | **Kuda** | ₦4–12k/ref, T2 referee |
-| Cashback | **JumiaPay** | 3% + 20% first month |
-| Passive | **Pawns.app** | NG-verified, BTC→naira |
+
+| Category      | Top pick                 | Why                            |
+| ------------- | ------------------------ | ------------------------------ |
+| AI training   | **Mercor**               | highest ceiling, weekly payout |
+| Freelance     | **Upwork**               | escrow, USD→NGN via Cleva      |
+| User testing  | **uTest**                | Payoneer ✓, daily cycles       |
+| Surveys       | **TimeBucks / FreeCash** | $3-min GPTs, PayPal NG ✓       |
+| Field tasks   | **SagaPoll**             | NGN-native, 5k pts=₦30k        |
+| Bank referral | **Kuda**                 | ₦4–12k/ref, T2 referee         |
+| Cashback      | **JumiaPay**             | 3% + 20% first month           |
+| Passive       | **Pawns.app**            | NG-verified, BTC→naira         |
 
 ## Rules (from ngn-earnings-research.prompt.md)
+
 - No fabrication — unverified rates stay "(unverified)"
 - ≥3 sources per platform (deep-dive docs link them)
 - No multi-accounting / referral fraud / VPN spoofing
@@ -47,6 +53,7 @@
 - Affiliate links disclosed
 
 ## Verification Gates
+
 - [x] 8 category deep-dives written (sourced)
 - [x] Master list **83 platforms scored, 46 kept / 37 eliminated** (8 categories)
 - [x] Top picks validated (sentiment + geo + tax)

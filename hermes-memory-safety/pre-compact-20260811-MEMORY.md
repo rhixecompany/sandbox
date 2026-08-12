@@ -8,23 +8,23 @@ Report size-trim pitfall: subagents can loop patch→check→repatch on tight by
 §
 Repo-management branch cleanup for org repos may need gh auth switch: `gh auth switch --user <org-account>` before `gh api repos/...` deletion, then switch back.
 §
-MCP Server Fix (2026-07-28): restored 3 deleted .github/scripts/*.py from git HEAD; fixed .bat wrappers; use 'hermes gateway restart' (not reload). Doc: mcp-script-restoration.md in mcp-server-diagnostics.
+MCP Server Fix (2026-07-28): restored 3 deleted .github/scripts/_.py from git HEAD; fixed .bat wrappers; use 'hermes gateway restart' (not reload). Doc: mcp-script-restoration.md in mcp-server-diagnostics.
 §
 technology-stack-blueprint-generator: user-owned; run `hermes curator adopt` before patching. Generates root blueprint + per-project TECHNOLOGY_STACK.md (29 projects done 2026-07-28).
 §
-Key-sync tooling in ~/AppData/Local/hermes/scripts/: env_sync.py (idempotent .env updater from ~/Desktop/Github/*.txt, dry-run default), add_mcp_servers.py (inserts MCP entries into config.yaml from .env), validate_services.py (validates every API key live, status only).
+Key-sync tooling in ~/AppData/Local/hermes/scripts/: env_sync.py (idempotent .env updater from ~/Desktop/Github/_.txt, dry-run default), add_mcp_servers.py (inserts MCP entries into config.yaml from .env), validate_services.py (validates every API key live, status only).
 §
 Neon official MCP is REMOTE at https://mcp.neon.tech/mcp (Bearer); npm @neondatabase/mcp-server-neon is deprecated. Windows: bare `npx` fails in Python subprocess (WinError 2) — use C:\nvm4w\nodejs\npx.cmd.
 §
-Hermes config.yaml mcp_servers args must be YAML list (string '["a","b"]' breaks pydantic). patch/write_file REFUSE to edit ~/AppData/Local/hermes/config.yaml (security guard) — use python file I/O.
+Hermes config.yaml mcp_servers args must be YAML list (string '["a","b"]' breaks pydantic). patch/write_file REFUSE to edit ~~/AppData/Local/hermes/config.yaml (security guard) — use python file I/O.
 §
-SandBox .enhance toolkit (~/.github/prompts/.enhance/): 8 idempotent LF-only prompt fixers + normalize_lf.py + analyze_prompts.py. Always write LF in SandBox (core.autocrlf=true, *.md eol=lf); never .replace("\n","\r\n") on CRLF (creates \r\r\n corruption).
+SandBox .enhance toolkit (~~/.github/prompts/.enhance/): 8 idempotent LF-only prompt fixers + normalize_lf.py + analyze_prompts.py. Always write LF in SandBox (core.autocrlf=true, _.md eol=lf); never .replace("\n","\r\n") on CRLF (creates \r\r\n corruption).
 §
-hermes-profiles mirror (~/Desktop/SandBox/hermes-profiles/): config.yaml, redacted .env.example, full skills/hooks/plugins trees, profiles/<name>/{SOUL.md, memories}. Default profile = root ~/AppData/Local/hermes/. **WIPED 2026-08-05 per user approval** (gitignored, 0 tracked): config.yaml+inventory backed up to /tmp/hermes-profiles-*.bak; verify_sync.py deleted with mirror.
+hermes-profiles mirror (~/Desktop/SandBox/hermes-profiles/): config.yaml, redacted .env.example, full skills/hooks/plugins trees, profiles/<name>/{SOUL.md, memories}. Default profile = root ~/AppData/Local/hermes/. **WIPED 2026-08-05 per user approval** (gitignored, 0 tracked): config.yaml+inventory backed up to /tmp/hermes-profiles-_.bak; verify_sync.py deleted with mirror.
 §
 Hermes session source of truth = state.db (sessions + messages tables). logs/sessions/*.jsonl are corrupt test artifacts. generate_session_report.py (session-audit-report) and session_audit.py (session-audit) both read state.db; SQLite started_at is epoch float — convert via datetime.fromtimestamp.
 §
-Session Env: whoami=Alexa | Windows 11 (MSYS2/git-bash, hostname adminbot) | Hermes terminal tool = bash (POSIX, NOT PowerShell) | cwd=~/Desktop/SandBox (branch development) | Hermes home=~/AppData/Local/hermes (root profile). Skill loader discovers ONLY skills/**/SKILL.md packages — flat <name>.md ignored. oh-my-opencode v4.19.4 config at ~/.omo/omo.jsonc; free-tier OpenCode Zen 401 'No payment method' on paid models → set models to opencode/deepseek-v4-flash-free. Windows spawn: extensionless `opencode` shim fails CreateProcess — use opencode.cmd.
+Session Env: whoami=Alexa | Windows 11 (MSYS2/git-bash, hostname adminbot) | Hermes terminal tool = bash (POSIX, NOT PowerShell) | cwd=~~/Desktop/SandBox (branch development) | Hermes home=~~/AppData/Local/hermes (root profile). Skill loader discovers ONLY skills/**/SKILL.md packages — flat <name>.md ignored. oh-my-opencode v4.19.4 config at ~/.omo/omo.jsonc; free-tier OpenCode Zen 401 'No payment method' on paid models → set models to opencode/deepseek-v4-flash-free. Windows spawn: extensionless `opencode` shim fails CreateProcess — use opencode.cmd.
 §
 Windows npm quirk: `npm config get omit` = dev globally → npm install/ci silently SKIP devDependencies; pass --include=dev. Global eslint 10.7.0 at C:\nvm4w\nodejs shadows repo-local 9.x — use ./node_modules/.bin/eslint. Ruff .ruff.toml exclude globs brace-expand: `{{cookiecutter.project_slug}}/` doesn't match Jinja dir — use brace-free `*cookiecutter*`.
 §

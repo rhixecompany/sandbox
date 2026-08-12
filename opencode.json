@@ -1,22 +1,13 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-    "MCP_DOCKER": {
-      "command": [
-        "docker",
-        "mcp",
-        "gateway",
-        "run",
-        "--profile",
-        "adminbot"
-      ],
-      "enabled": true,
-      "type": "local"
-    }
-  },
-  "model": "opencode/deepseek-v4-flash-free",
-  "plugin": [
-    "oh-my-openagent@latest"
-  ],
-  "small_model": "opencode/deepseek-v4-flash-free"
+	"$schema": "https://opencode.ai/config.json",
+	"mcp": {
+		"MCP_DOCKER": {
+			"command": ["docker", "mcp", "gateway", "run", "--profile", "adminbot"],
+			"enabled": true,
+			"type": "local"
+		}
+	},
+	"model": "opencode/deepseek-v4-flash-free",
+	"plugin": ["oh-my-openagent@latest"],
+	"small_model": "opencode/deepseek-v4-flash-free"
 }

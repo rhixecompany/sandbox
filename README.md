@@ -27,6 +27,7 @@
 **For GitHub Copilot, Claude, or other AI assistants:** See [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
 
 This guide provides:
+
 - **Quick Start** — Setup for workspace and subprojects
 - **Subproject-Specific Guidance** — Detailed commands & patterns for Bash, Banking, comicwise, and ecom
 - **MCP Server Configuration** — 18 servers (14 configured, 4 recommended)
@@ -34,6 +35,7 @@ This guide provides:
 - **Reference Tables** — Lookup guide for quick answers
 
 **Quick links:**
+
 - [Bash Toolkit](/.github/copilot-instructions.md#bash--automation-toolkit-projectsbash) — TS automation pipeline
 - [Banking App](/.github/copilot-instructions.md#banking--fintech-app-projectsbanking) — Next.js 16 + Drizzle
 - [Comicwise](/.github/copilot-instructions.md#comicwise--comic-streaming-projectscomicwise) — Next.js 15 + Prisma (quality gates)
