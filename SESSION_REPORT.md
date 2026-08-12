@@ -4,41 +4,41 @@
 
 ## Last Session Summary
 
-| Field | Value |
-| ----- | ----- |
-| Session ID | 20260811_213514_45857c |
-| Title | Update prompt files using prompt skills |
-| When | 2026-08-11T21:35+00:00 |
-| Model | deepseek-v4-flash-free (opencode-zen) |
-| Source | tui |
+| Field      | Value                                   |
+| ---------- | --------------------------------------- |
+| Session ID | 20260811_213514_45857c                  |
+| Title      | Update prompt files using prompt skills |
+| When       | 2026-08-11T21:35+00:00                  |
+| Model      | deepseek-v4-flash-free (opencode-zen)   |
+| Source     | tui                                     |
 
 ## Tools Used
 
-| Tool | Calls | Purpose |
-| ---- | ----- | ------- |
-| session_search | 3 | Browse recent sessions + read last session |
-| read_file | 25 | Read skill files, prompt files, hooks, configs |
-| terminal | 22 | rg searches, python verification, git status, diff |
-| execute_code | 11 | Python inline scripts for path verification, lint fixing |
-| patch | 6 | Fix markdownlint issues, update plan status |
-| write_file | 5 | Create reference files, SESSION_REPORT.md |
-| skill_manage | 5 | View + patch msys2-management skill |
-| skill_view | 5 | View skills: mcp-sequential-thinking, windows-dev-environment, msys2-management, session-audit-report, hermes-hooks |
-| todo | 4 | Track multi-step audit+fix work |
-| tool_describe | 1 | Inspect sequential-thinking tool schema |
-| tool_call | 4 | Run sequential thinking chain (4 thoughts) |
-| search_files | 3 | Find MSYS refs (though path-conversion buggy) |
-| memory | 1 | (read - implicit via injection) |
+| Tool           | Calls | Purpose                                                                                                             |
+| -------------- | ----- | ------------------------------------------------------------------------------------------------------------------- |
+| session_search | 3     | Browse recent sessions + read last session                                                                          |
+| read_file      | 25    | Read skill files, prompt files, hooks, configs                                                                      |
+| terminal       | 22    | rg searches, python verification, git status, diff                                                                  |
+| execute_code   | 11    | Python inline scripts for path verification, lint fixing                                                            |
+| patch          | 6     | Fix markdownlint issues, update plan status                                                                         |
+| write_file     | 5     | Create reference files, SESSION_REPORT.md                                                                           |
+| skill_manage   | 5     | View + patch msys2-management skill                                                                                 |
+| skill_view     | 5     | View skills: mcp-sequential-thinking, windows-dev-environment, msys2-management, session-audit-report, hermes-hooks |
+| todo           | 4     | Track multi-step audit+fix work                                                                                     |
+| tool_describe  | 1     | Inspect sequential-thinking tool schema                                                                             |
+| tool_call      | 4     | Run sequential thinking chain (4 thoughts)                                                                          |
+| search_files   | 3     | Find MSYS refs (though path-conversion buggy)                                                                       |
+| memory         | 1     | (read - implicit via injection)                                                                                     |
 
 ## Skills Loaded
 
-| Skill | Trigger |
-| ----- | ------- |
+| Skill                   | Trigger                                                      |
+| ----------------------- | ------------------------------------------------------------ |
 | mcp-sequential-thinking | User invoked `/mcp-sequential-thinking` for structured audit |
-| windows-dev-environment | MSYS path quirks reference |
-| msys2-management | Primary skill under audit |
-| session-audit-report | User invoked `/session-audit-report` |
-| hermes-hooks | Context from prior sessions |
+| windows-dev-environment | MSYS path quirks reference                                   |
+| msys2-management        | Primary skill under audit                                    |
+| session-audit-report    | User invoked `/session-audit-report`                         |
+| hermes-hooks            | Context from prior sessions                                  |
 
 ## Key Insights & Corrections
 
@@ -54,27 +54,27 @@
 
 ## Errors Resolved
 
-| Error | Fix |
-| ----- | --- |
-| `msys2-management` references 0 bytes (dead links) | Populated `environments-quickref.md` (2,150B) + `toolchain-verification.md` (2,342B) |
-| Skill assumed standalone MSYS2 always installed | Added pre-flight detection gate + Git Bash vs MSYS2 distinction + install guidance |
-| Hardcoded `/c/msys64/usr/bin/bash` in invocation pattern | Switched to `"$MSYS2_ROOT/usr/bin/bash"` set by pre-flight gate |
-| Verification checklist didn't require install check | Updated to require "Pre-flight passed" as first item |
+| Error                                                    | Fix                                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `msys2-management` references 0 bytes (dead links)       | Populated `environments-quickref.md` (2,150B) + `toolchain-verification.md` (2,342B) |
+| Skill assumed standalone MSYS2 always installed          | Added pre-flight detection gate + Git Bash vs MSYS2 distinction + install guidance   |
+| Hardcoded `/c/msys64/usr/bin/bash` in invocation pattern | Switched to `"$MSYS2_ROOT/usr/bin/bash"` set by pre-flight gate                      |
+| Verification checklist didn't require install check      | Updated to require "Pre-flight passed" as first item                                 |
 
 ## Session Changelog
 
-| File | Action |
-| ---- | ------ |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\SKILL.md` | Added pre-flight gate, Git Bash/MSYS2 distinction, $MSYS2_ROOT variable, updated verification checklist (3 patches) |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\references\environments-quickref.md` | Created (2,150B) — UCRT64/MINGW64/CLANG64/CLANGARM64 table, paths, invocation, detection pitfalls |
-| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\references\toolchain-verification.md` | Created (2,342B) — detection snippet, compiler/DLL checks, smoke test, failure triage table |
-| `C:\Users\Alexa\Desktop\SandBox\SESSION_REPORT.md` | This report |
+| File                                                                                                      | Action                                                                                                              |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\SKILL.md`                             | Added pre-flight gate, Git Bash/MSYS2 distinction, $MSYS2_ROOT variable, updated verification checklist (3 patches) |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\references\environments-quickref.md`  | Created (2,150B) — UCRT64/MINGW64/CLANG64/CLANGARM64 table, paths, invocation, detection pitfalls                   |
+| `C:\Users\Alexa\AppData\Local\hermes\skills\devops\msys2-management\references\toolchain-verification.md` | Created (2,342B) — detection snippet, compiler/DLL checks, smoke test, failure triage table                         |
+| `C:\Users\Alexa\Desktop\SandBox\SESSION_REPORT.md`                                                        | This report                                                                                                         |
 
 ## Open Items
 
 | Item | Status |
 | ---- | ------ |
-| None | — |
+| None | —      |
 
 ---
 

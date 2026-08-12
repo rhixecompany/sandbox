@@ -33,13 +33,13 @@ dependency-accurate state:
 
 ### Corruption sweep results (all real, regex-verified)
 
-| Class | Pattern | Hits | Files | Severity |
-|-------|---------|------|-------|----------|
-| A. Doubled leading pipes | `^\|\|` | **651** | **219** | Critical (breaks tables) |
-| B. Glued headings | `^#{2,4} <80+ chars inline>` | **105** | 42 | High |
-| C. Fence/blockquote artifacts | ```` ``` ```` or `> /` | **57** | 11 | Medium |
-| D. `plan: 'None'` string | frontmatter `plan == 'None'` | **203** | 203 | Low (frontmatter hygiene) |
-| E. Analyzer findings | `.enhance/analyze_prompts.py` | 8 | 8 | Medium/Info (RULES_INLINE_NOT_SHARED ×7, MISSING_RULES_SECTION + MISSING_EXECUTION_SECTION on test-providers-models) |
+| Class                         | Pattern                       | Hits    | Files   | Severity                                                                                                             |
+| ----------------------------- | ----------------------------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| A. Doubled leading pipes      | `^\|\|`                       | **651** | **219** | Critical (breaks tables)                                                                                             |
+| B. Glued headings             | `^#{2,4} <80+ chars inline>`  | **105** | 42      | High                                                                                                                 |
+| C. Fence/blockquote artifacts | ` ``` ` or `> /`              | **57**  | 11      | Medium                                                                                                               |
+| D. `plan: 'None'` string      | frontmatter `plan == 'None'`  | **203** | 203     | Low (frontmatter hygiene)                                                                                            |
+| E. Analyzer findings          | `.enhance/analyze_prompts.py` | 8       | 8       | Medium/Info (RULES_INLINE_NOT_SHARED ×7, MISSING_RULES_SECTION + MISSING_EXECUTION_SECTION on test-providers-models) |
 
 - Deep-corruption files (all 3 of A+B+C): 5 — `create-tldr-page.prompt.md`,
   `prompt-management.prompt.md`, `skills-fix.prompt.md`,
@@ -83,7 +83,7 @@ Script-assisted repair, then targeted manual patches. Order of operations:
    onto heading + body lines where the 80+ char inline run is a heading glued to
    following text; verify each split manually (sampling) because some long
    headings are legitimately long single lines.
-3. **Class C fix (57 fence artifacts)** — remove empty fence pairs (```` ``` ````)
+3. **Class C fix (57 fence artifacts)** — remove empty fence pairs (` ``` `)
    and `> /` blockquote artifacts inside code blocks.
 4. **Class D fix (203 plan:'None')** — frontmatter rewrite via python
    (yaml round-trip), exactly as proven on the repo files.
@@ -116,24 +116,24 @@ Script-assisted repair, then targeted manual patches. Order of operations:
 ### Phase 2: Class B — Glued Headings (script + manual sampling)
 
 - [ ] Write `split_glued_headings.py`: find `^#{2,4} <run>`, split at the first
-   2+ spaces or `**` boundary where a body sentence begins; only split when the
-   run > 120 chars OR contains code-fence markers
+      2+ spaces or `**` boundary where a body sentence begins; only split when the
+      run > 120 chars OR contains code-fence markers
 - [ ] Manual review list: every file whose split is ambiguous (long legitimate headings) → patch by hand
 - [ ] Re-verify markdownlint
 
 ### Phase 3: Class C — Fence Artifacts
 
-- [ ] Remove empty ```` ``` ```` pairs (adjacent open+close with nothing between)
+- [ ] Remove empty ` ``` ` pairs (adjacent open+close with nothing between)
 - [ ] Remove `> /` blockquote artifacts inside code fences (context-aware: only where inside a fence)
 - [ ] Verify fences balanced per file (count ``` parity)
 
 ### Phase 4: Class D — Frontmatter Normalization
 
 - [ ] For all 226 files with frontmatter: yaml round-trip (sort_keys=False,
-     allow_unicode), set `plan: null` when currently `'None'`, LF-only write
+      allow_unicode), set `plan: null` when currently `'None'`, LF-only write
 - [ ] Do NOT touch `mode: agent`/`system:` semantics; only fix `plan` type
 - [ ] Version strategy decision (OQ3): keep existing versions; bump only files
-     that get meaningful section additions
+      that get meaningful section additions
 
 ### Phase 5: Class E — Analyzer Findings
 
@@ -144,7 +144,7 @@ Script-assisted repair, then targeted manual patches. Order of operations:
 ### Phase 6: Enhancement Pass (reference-only additions)
 
 - [ ] For files lacking them (script scan: grep for `## MCP Servers & Tools`, `## Hooks`, `## Scripts`, `## Related Prompts`): add standard sections with verified asset lists (from Proven Asset Inventory)
-- [ ] Batch by family (setup-*, create-*, csharp-*, java-*, etc.) to keep diffs reviewable
+- [ ] Batch by family (setup-_, create-_, csharp-_, java-_, etc.) to keep diffs reviewable
 - [ ] Verify every new reference resolves (script)
 
 ### Phase 7: Verify (full gate)

@@ -28,31 +28,32 @@ bun run lint && bun run format:check && bun run typecheck
 - **Shared:** `.github/workflows/` (shared CI), `.github/prompts/` (canonical prompt library), tool configs (Prettier, ESLint flat config, Ruff, etc.)
 
 When working on a subproject:
+
 1. Read **that project's AGENTS.md** first (e.g., `projects/Bash/AGENTS.md`)
 2. Use **that project's build/test commands** from `package.json` or `README.md`
 3. Root-level workspace commands apply only to root-level changes
 
 ### Workspace Components
 
-| Layer            | Examples                                                          | Purpose                                  |
-| ---------------- | ----------------------------------------------------------------- | ---------------------------------------- |
-| **Automation**   | `projects/Bash/`                                                  | Multi-phase orchestration (TS/PowerShell) |
-| **Full-Stack**   | `projects/Banking/`, `projects/comicwise/`, `projects/ecom/`      | Next.js/Django apps with DB integration  |
-| **Backend**      | `projects/Python-projects/`, `projects/profile/`, `projects/Resume_maker/` | Standalone services and utilities        |
-| **MCP Servers**  | `projects/mcp-servers/`                                           | 10+ language implementations             |
-| **Prompts**      | `.github/prompts/` (190+)                                         | Canonical prompt library                 |
-| **Docs**         | `docs/`                                                           | Architecture, research, audits           |
+| Layer           | Examples                                                                   | Purpose                                   |
+| --------------- | -------------------------------------------------------------------------- | ----------------------------------------- |
+| **Automation**  | `projects/Bash/`                                                           | Multi-phase orchestration (TS/PowerShell) |
+| **Full-Stack**  | `projects/Banking/`, `projects/comicwise/`, `projects/ecom/`               | Next.js/Django apps with DB integration   |
+| **Backend**     | `projects/Python-projects/`, `projects/profile/`, `projects/Resume_maker/` | Standalone services and utilities         |
+| **MCP Servers** | `projects/mcp-servers/`                                                    | 10+ language implementations              |
+| **Prompts**     | `.github/prompts/` (190+)                                                  | Canonical prompt library                  |
+| **Docs**        | `docs/`                                                                    | Architecture, research, audits            |
 
 ## Technology Stack
 
 ### Runtimes & Package Managers
 
-| Tech              | Version      | Used For                                           |
-| ----------------- | ------------ | -------------------------------------------------- |
-| **Bun**           | 1.3.14+      | TypeScript runtime & package manager (primary)     |
-| **Python**        | 3.11 / 3.13  | Backend, automation, data processing               |
-| **Node.js**       | 18 / 20      | Legacy JavaScript projects (not primary)           |
-| **pnpm / npm**    | latest       | Specific projects (check their AGENTS.md)          |
+| Tech           | Version     | Used For                                       |
+| -------------- | ----------- | ---------------------------------------------- |
+| **Bun**        | 1.3.14+     | TypeScript runtime & package manager (primary) |
+| **Python**     | 3.11 / 3.13 | Backend, automation, data processing           |
+| **Node.js**    | 18 / 20     | Legacy JavaScript projects (not primary)       |
+| **pnpm / npm** | latest      | Specific projects (check their AGENTS.md)      |
 
 ### TypeScript Configuration
 
@@ -73,20 +74,20 @@ When working on a subproject:
 
 ### JavaScript/TypeScript Tooling
 
-| Tool           | Config                | Usage                                    |
-| -------------- | --------------------- | ---------------------------------------- |
-| **ESLint**     | `eslint.config.mjs`   | Flat config; zero-warning gate           |
-| **Prettier**   | `.prettierrc.json`    | Auto-format TS/JS/JSON/YAML              |
-| **TypeScript** | `tsconfig.json`       | Strict mode, strict checking             |
-| **Vitest**     | Via `bun run test`    | Unit testing (Bun projects)              |
+| Tool           | Config              | Usage                          |
+| -------------- | ------------------- | ------------------------------ |
+| **ESLint**     | `eslint.config.mjs` | Flat config; zero-warning gate |
+| **Prettier**   | `.prettierrc.json`  | Auto-format TS/JS/JSON/YAML    |
+| **TypeScript** | `tsconfig.json`     | Strict mode, strict checking   |
+| **Vitest**     | Via `bun run test`  | Unit testing (Bun projects)    |
 
 ### Python Tooling
 
-| Tool       | Config        | Usage                                     |
-| ---------- | ------------- | ----------------------------------------- |
-| **Ruff**   | `.ruff.toml`  | Lint, format (faster than Black/Flake8)   |
-| **Pyright** | `pyrightconfig.json` | Type checking (strict)                    |
-| **pytest** | Via `pytest`  | Unit testing (Python projects)            |
+| Tool        | Config               | Usage                                   |
+| ----------- | -------------------- | --------------------------------------- |
+| **Ruff**    | `.ruff.toml`         | Lint, format (faster than Black/Flake8) |
+| **Pyright** | `pyrightconfig.json` | Type checking (strict)                  |
+| **pytest**  | Via `pytest`         | Unit testing (Python projects)          |
 
 ### Markdown & Spell Check
 
@@ -163,17 +164,18 @@ pytest -k test_name           # Single test by name
 
 ### File Naming
 
-| Language     | Convention                                               | Example                                         |
-| ------------ | -------------------------------------------------------- | ----------------------------------------------- |
-| TypeScript   | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`             |
-| Python       | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py`           |
-| PowerShell   | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`                      |
-| Bash/Shell   | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`                 |
-| Markdown     | `kebab-case.md`                                          | `copilot-instructions.md`, `health-check.md`    |
+| Language   | Convention                                               | Example                                      |
+| ---------- | -------------------------------------------------------- | -------------------------------------------- |
+| TypeScript | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`          |
+| Python     | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py`        |
+| PowerShell | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`                   |
+| Bash/Shell | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`              |
+| Markdown   | `kebab-case.md`                                          | `copilot-instructions.md`, `health-check.md` |
 
 ### Git Workflow & Commit Convention
 
 **Branch naming:**
+
 ```
 <type>/<project>/<kebab-case-description>
 feat/resume-maker/add-html-output
@@ -186,6 +188,7 @@ docs/root/update-readme
 **Target branch:** All PRs merge to `development` (not `main`)
 
 **Commit message format:**
+
 ```
 feat: add HTML output option
 fix: handle empty resume data gracefully
@@ -193,6 +196,7 @@ docs: update README with new flags
 ```
 
 **Best practices:**
+
 - One concern per PR (don't mix feat + refactor)
 - Scope to the project (keep changes focused)
 - Keep <300 lines changed
@@ -201,6 +205,7 @@ docs: update README with new flags
 ### Code Style & Standards
 
 **TypeScript:**
+
 - 2-space indent (tabs configured, but 2-space size)
 - Strict mode always enabled
 - No `any` without explicit comment
@@ -208,12 +213,14 @@ docs: update README with new flags
 - Final newlines, CRLF line endings on Windows
 
 **Python:**
+
 - 4-space indent (PEP 8)
 - Double quotes
 - Type hints on all functions
 - Docstrings for public APIs
 
 **Destructive Operations:**
+
 - All destructive scripts must support `--help` and `--dry-run`
 - Always run dry-run first to preview changes
 - No `.bak` or `.backup` files — use git for rollback
@@ -264,6 +271,7 @@ SandBox/
 **Purpose:** Multi-phase orchestration pipeline (Discovery → Clone → Triage → Debug → Remediation → Cross-Reference)
 
 **Commands:**
+
 ```bash
 cd projects/Bash
 bun install --frozen-lockfile
@@ -273,6 +281,7 @@ powershell -File orchestrator-unified.ps1 -Mode discover
 ```
 
 **Key patterns:**
+
 - Orchestrator modes: `discover`, `clone`, `triage`, `debug`, `remediation`, `cross-ref`
 - All destructive operations support `--dry-run` and `--help`
 - Multi-wrapper parity: `.sh`, `.ps1`, `.bat` implementations
@@ -280,6 +289,7 @@ powershell -File orchestrator-unified.ps1 -Mode discover
 - TypeScript strict mode; Vitest for tests; Bash for shell tests
 
 **Single test:**
+
 ```bash
 cd projects/Bash
 bun run test -- src/path/to/test.ts  # Vitest single file
@@ -291,6 +301,7 @@ bash tests/verify-dryrun.sh           # Shell test verification
 **Purpose:** Next.js fintech dashboard with Plaid/Dwolla integrations and Drizzle ORM
 
 **Commands:**
+
 ```bash
 cd projects/Banking
 bun install --frozen-lockfile
@@ -305,6 +316,7 @@ bun run test             # Vitest unit tests
 ```
 
 **Key patterns:**
+
 - Next.js 16 App Router + Server Actions
 - Drizzle ORM schema in `src/db/schema.ts` (no raw SQL)
 - Auth via `auth()` first in protected actions
@@ -314,6 +326,7 @@ bun run test             # Vitest unit tests
 - `.env.local` for secrets (never commit)
 
 **Single test:**
+
 ```bash
 cd projects/Banking
 bun run test -- src/path/to/test.ts  # Run one test file
@@ -325,6 +338,7 @@ bun run test -- --reporter=verbose   # Verbose output
 **Purpose:** Next.js comic storefront with Prisma ORM and Stripe subscriptions
 
 **Commands:**
+
 ```bash
 cd projects/comicwise
 pnpm install                 # Uses pnpm, not bun
@@ -340,6 +354,7 @@ pnpm test:ui                 # Playwright E2E tests
 ```
 
 **Key patterns:**
+
 - Next.js 15 App Router + Server Components
 - Prisma ORM for schema + migrations
 - Stripe webhooks for subscription lifecycle
@@ -350,6 +365,7 @@ pnpm test:ui                 # Playwright E2E tests
 - `.env.local` for database URL + Stripe keys
 
 **Single test:**
+
 ```bash
 cd projects/comicwise
 pnpm test -- src/path/to/test.ts     # Vitest single file
@@ -358,6 +374,7 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ```
 
 **Pre-commit quality gate:**
+
 ```bash
 cd projects/comicwise
 pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build
@@ -368,6 +385,7 @@ pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build
 **Purpose:** Dual-stack ecommerce platform (Django REST backend + React/Redux frontend)
 
 **Commands (Backend):**
+
 ```bash
 cd projects/ecom/backend
 pip install -r requirements.txt
@@ -379,6 +397,7 @@ python manage.py createsuperuser # Admin access
 ```
 
 **Commands (Frontend):**
+
 ```bash
 cd projects/ecom/frontend
 bun install
@@ -388,6 +407,7 @@ bun run build                    # Production build
 ```
 
 **Key patterns:**
+
 - **Dual dev servers:** Backend `:8000` + Frontend `:3000` (proxied in dev)
 - Django REST Framework with API routes at `/api/v1/`
 - React + Redux Toolkit for state management
@@ -397,6 +417,7 @@ bun run build                    # Production build
 - Backend tests in `backend/tests/`; frontend in `frontend/__tests__/`
 
 **Single test:**
+
 ```bash
 # Backend
 cd projects/ecom/backend
@@ -431,6 +452,7 @@ bun run test -- src/path/to/test.ts      # Jest single file
 ### Debug a Test Failure
 
 For TypeScript (Bash, Banking, comicwise):
+
 ```bash
 cd projects/<name>
 bun run test -- path/to/test.ts  # Run one test file
@@ -438,6 +460,7 @@ bun run test -- --reporter=verbose  # Verbose output
 ```
 
 For Python (ecom backend):
+
 ```bash
 cd projects/ecom/backend
 python -m pytest tests/test_file.py -v  # Verbose output
@@ -445,6 +468,7 @@ python -m pytest tests/test_file.py::TestClass::test_name -v  # Single test
 ```
 
 For React (ecom frontend):
+
 ```bash
 cd projects/ecom/frontend
 bun run test -- src/path/to/test.ts  # Jest single file
@@ -453,6 +477,7 @@ bun run test -- src/path/to/test.ts  # Jest single file
 ### Add a New Dependency
 
 **TypeScript project (Bash, Banking):**
+
 ```bash
 cd projects/<name>
 bun add package-name
@@ -460,6 +485,7 @@ bun add --dev package-name
 ```
 
 **TypeScript project (comicwise with pnpm):**
+
 ```bash
 cd projects/comicwise
 pnpm add package-name
@@ -467,6 +493,7 @@ pnpm add --save-dev package-name
 ```
 
 **Python (ecom backend):**
+
 ```bash
 cd projects/ecom/backend
 pip install package-name
@@ -474,6 +501,7 @@ pip freeze > requirements.txt  # Update requirements
 ```
 
 **React (ecom frontend):**
+
 ```bash
 cd projects/ecom/frontend
 bun add package-name
@@ -486,66 +514,70 @@ This workspace includes 14 pre-configured MCP servers (in `.mcp.json`). They enh
 
 ### Currently Configured (14 servers)
 
-| Server             | Type   | Purpose                                    | Use Case                               |
-| ------------------ | ------ | ------------------------------------------ | -------------------------------------- |
-| **filesystem**     | Local  | File operations (read/write/search)        | Project exploration, editing           |
-| **github**         | Local  | GitHub API, PR/issue operations            | Automation, releases, collaboration    |
-| **ast-grep**       | Local  | AST-based code search & replace            | Refactoring, pattern matching          |
-| **code-sandbox**   | Local  | Node.js jest sandbox                       | Testing, code execution                |
-| **playwright**     | Local  | Browser automation                         | E2E testing (comicwise, ecom frontend) |
-| **sequential-thinking** | Local | Multi-step reasoning                       | Complex problem solving                |
-| **context7**       | HTTP   | Documentation for libraries & frameworks   | API lookup (Next.js, Prisma, Django)   |
-| **fetch**          | Local  | Web content extraction                     | Research, external data                |
-| **memory**         | Local  | Persistent cross-session memory            | Session tracking, preferences          |
-| **neon**           | HTTP   | PostgreSQL database management (Neon)      | Database queries, schema inspection    |
-| **sentry**         | HTTP   | Error tracking (Sentry)                    | Debugging, error investigation         |
-| **smithery**       | HTTP   | MCP registry & discovery                   | Finding new tools/integrations         |
-| **tavily**         | HTTP   | Web search                                 | Research, information gathering        |
-| **mcp-docker**     | Docker | Container management + GitHub ops          | Docker Compose, deployment             |
+| Server                  | Type   | Purpose                                  | Use Case                               |
+| ----------------------- | ------ | ---------------------------------------- | -------------------------------------- |
+| **filesystem**          | Local  | File operations (read/write/search)      | Project exploration, editing           |
+| **github**              | Local  | GitHub API, PR/issue operations          | Automation, releases, collaboration    |
+| **ast-grep**            | Local  | AST-based code search & replace          | Refactoring, pattern matching          |
+| **code-sandbox**        | Local  | Node.js jest sandbox                     | Testing, code execution                |
+| **playwright**          | Local  | Browser automation                       | E2E testing (comicwise, ecom frontend) |
+| **sequential-thinking** | Local  | Multi-step reasoning                     | Complex problem solving                |
+| **context7**            | HTTP   | Documentation for libraries & frameworks | API lookup (Next.js, Prisma, Django)   |
+| **fetch**               | Local  | Web content extraction                   | Research, external data                |
+| **memory**              | Local  | Persistent cross-session memory          | Session tracking, preferences          |
+| **neon**                | HTTP   | PostgreSQL database management (Neon)    | Database queries, schema inspection    |
+| **sentry**              | HTTP   | Error tracking (Sentry)                  | Debugging, error investigation         |
+| **smithery**            | HTTP   | MCP registry & discovery                 | Finding new tools/integrations         |
+| **tavily**              | HTTP   | Web search                               | Research, information gathering        |
+| **mcp-docker**          | Docker | Container management + GitHub ops        | Docker Compose, deployment             |
 
 ### Recommended Additional Servers (Not Yet Configured)
 
 **For comicwise/Banking (Database-heavy):**
+
 - **postgres-mcp** — Direct PostgreSQL queries (Neon + Drizzle/Prisma)
   ```json
   {
-    "postgres": {
-      "command": "npx",
-      "args": ["-y", "postgres-mcp", "--connection", "${env:DATABASE_URL}"]
-    }
+  	"postgres": {
+  		"command": "npx",
+  		"args": ["-y", "postgres-mcp", "--connection", "${env:DATABASE_URL}"]
+  	}
   }
   ```
 
 **For Django projects (ecom):**
+
 - **django-mcp** — Django management commands, ORM helpers
   ```json
   {
-    "django": {
-      "command": "python",
-      "args": ["manage.py", "shell_plus", "--kernel", "mcp"]
-    }
+  	"django": {
+  		"command": "python",
+  		"args": ["manage.py", "shell_plus", "--kernel", "mcp"]
+  	}
   }
   ```
 
 **For Testing (All projects):**
+
 - **pytest-mcp** — Python test automation
   ```json
   {
-    "pytest": {
-      "command": "npx",
-      "args": ["-y", "pytest-mcp"]
-    }
+  	"pytest": {
+  		"command": "npx",
+  		"args": ["-y", "pytest-mcp"]
+  	}
   }
   ```
 
 **For Documentation:**
+
 - **docs-mcp** — Local documentation search
   ```json
   {
-    "docs": {
-      "command": "npx",
-      "args": ["-y", "docs-mcp", "docs/"]
-    }
+  	"docs": {
+  		"command": "npx",
+  		"args": ["-y", "docs-mcp", "docs/"]
+  	}
   }
   ```
 
@@ -573,8 +605,6 @@ This workspace includes 14 pre-configured MCP servers (in `.mcp.json`). They enh
 
 ---
 
-
-
 1. **Subproject Exclusions:** Root linting ignores `projects/` — subprojects lint themselves
 2. **Dual Python Installs:** `python` = 3.11 (venv), `python3` = 3.13 (system). Always activate venv.
 3. **Bun + Windows Paths:** Prefer absolute Windows paths (`C:\...`) over MSYS paths (`/c/...`)
@@ -595,39 +625,42 @@ This workspace includes 14 pre-configured MCP servers (in `.mcp.json`). They enh
 
 ## When to Reference What
 
-| Question                                    | File to Check                      | Section                          |
-| ------------------------------------------- | ---------------------------------- | -------------------------------- |
-| "What's the Bash project structure?"        | `projects/Bash/AGENTS.md`          | Architecture, Stack, Commands    |
-| "How do I test in Banking?"                 | `projects/Banking/AGENTS.md`       | Commands (test examples)         |
-| "What's comicwise's package manager?"       | `projects/comicwise/AGENTS.md`     | Stack (pnpm, not bun)            |
-| "How do I run ecom locally?"                | `projects/ecom/AGENTS.md`          | Commands (dual servers)          |
-| "What CI workflows exist?"                  | `.github/workflows/`               | Per-project `.yml` files         |
-| "How do I commit changes?"                  | `CONTRIBUTING.md`                  | Branch naming, commit format     |
-| "What's the workspace architecture?"        | `AGENTS.md`                        | Section 3: Architecture Overview |
-| "Which MCP servers are available?"          | `.mcp.json`                        | Server definitions               |
-| "How do I configure VS Code?"               | `.vscode/`                         | `settings.json`, `extensions.json` |
-| "What Python tooling is available?"         | `AGENTS.md`                        | Section 2: Python Toolchain      |
+| Question                              | File to Check                  | Section                            |
+| ------------------------------------- | ------------------------------ | ---------------------------------- |
+| "What's the Bash project structure?"  | `projects/Bash/AGENTS.md`      | Architecture, Stack, Commands      |
+| "How do I test in Banking?"           | `projects/Banking/AGENTS.md`   | Commands (test examples)           |
+| "What's comicwise's package manager?" | `projects/comicwise/AGENTS.md` | Stack (pnpm, not bun)              |
+| "How do I run ecom locally?"          | `projects/ecom/AGENTS.md`      | Commands (dual servers)            |
+| "What CI workflows exist?"            | `.github/workflows/`           | Per-project `.yml` files           |
+| "How do I commit changes?"            | `CONTRIBUTING.md`              | Branch naming, commit format       |
+| "What's the workspace architecture?"  | `AGENTS.md`                    | Section 3: Architecture Overview   |
+| "Which MCP servers are available?"    | `.mcp.json`                    | Server definitions                 |
+| "How do I configure VS Code?"         | `.vscode/`                     | `settings.json`, `extensions.json` |
+| "What Python tooling is available?"   | `AGENTS.md`                    | Section 2: Python Toolchain        |
 
 ---
 
 ## Adjustments Made to This Guide
 
 ✅ **Added subproject-specific examples** for Bash, Banking, comicwise, and ecom with:
-  - Project-specific commands for dev, build, test, database operations
-  - Key architectural patterns and conventions for each project
-  - Single test examples (not just full test suite)
-  - Package manager differences (Bash/Banking: bun, comicwise: pnpm, ecom: dual)
+
+- Project-specific commands for dev, build, test, database operations
+- Key architectural patterns and conventions for each project
+- Single test examples (not just full test suite)
+- Package manager differences (Bash/Banking: bun, comicwise: pnpm, ecom: dual)
 
 ✅ **Added MCP Server configuration** with:
-  - Currently configured 14 servers and their purposes
-  - Recommended additional servers for database, Django, testing, docs
-  - JSON examples for adding new servers
-  - Best practices for using MCP servers
+
+- Currently configured 14 servers and their purposes
+- Recommended additional servers for database, Django, testing, docs
+- JSON examples for adding new servers
+- Best practices for using MCP servers
 
 ✅ **Enhanced "Common Tasks"** section with:
-  - Subproject-specific commands for debugging, adding dependencies
-  - Backend/frontend separation for ecom
-  - Quality gates for comicwise pre-commit
+
+- Subproject-specific commands for debugging, adding dependencies
+- Backend/frontend separation for ecom
+- Quality gates for comicwise pre-commit
 
 ✅ **Added reference table** for when to check specific files/sections
 

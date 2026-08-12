@@ -1,6 +1,7 @@
 ---
 user: Alexa
 ---
+
 # USER.md — default profile
 
 Pointer file. Canonical durable rules in MEMORY.md.
@@ -23,7 +24,7 @@ Pointer file. Canonical durable rules in MEMORY.md.
 ## Execution Preferences
 
 - Communication: concise bullets, lead with result, skip fluff
-- Code: TypeScript strict, JSDoc/docstring *why* not *what*
+- Code: TypeScript strict, JSDoc/docstring _why_ not _what_
 - Skills: structured SKILL.md (YAML frontmatter + md body)
 - Hooks: ruff format+check --fix pre-commit
 - Execution: read→patch→verify, MCP-first, no backup files

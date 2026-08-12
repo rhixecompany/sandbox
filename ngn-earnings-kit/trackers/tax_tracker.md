@@ -3,11 +3,13 @@
 Running total of earnings vs the Nigerian personal income tax threshold. Keep receipts!
 
 ## Running Total
+
 | Date | Cumulative NGN | Vs ₦800,000 threshold | Action |
-|------|----------------|------------------------|--------|
-| | | | |
+| ---- | -------------- | --------------------- | ------ |
+|      |                |                       |        |
 
 ## Personal Income Tax basics (Nigeria, 2026 — Nigeria Tax Act 2025, in force 1 Jan 2026)
+
 - Nigeria taxes individuals on worldwide income if **resident**.
 - **₦800,000 tax-free threshold**: the first ₦800,000 of annual income is completely exempt for ALL individuals — freelancers, self-employed workers, and salaried employees alike (0% band).
 - **Progressive bands (NTA 2025)**: First ₦800,000 = 0% · Next ₦2,200,000 = 15% · Next ₦9,000,000 = 18% · Next ₦13,000,000 = 21% · Next ₦25,000,000 = 23% · Above ₦50,000,000 = 25%.
@@ -20,6 +22,7 @@ Running total of earnings vs the Nigerian personal income tax threshold. Keep re
 - Keep records ≥6 years. Deductible expenses: business costs (internet, data, equipment, professional services) with receipts.
 
 ## What to track per month
+
 - Gross earnings (all platforms, even foreign-currency → convert to NGN at the CBN/I&E rate on receipt date)
 - Fees lost (PayPal/Payoneer fees, currency conversion)
 - Expenses (device, data, electricity, equipment, professional services)
@@ -27,6 +30,7 @@ Running total of earnings vs the Nigerian personal income tax threshold. Keep re
 - Self-assessment payment deadline tracking
 
 ## Supporting links (authoritative)
+
 - FIRS: https://www.firs.gov.ng/
 - Nigeria Tax Act 2025 / NTA (effective 1 Jan 2026) — OGA (official gazette) + FIRS guidance
 - PWC Tax Summaries — Nigeria individual (https://taxsummaries.pwc.com/nigeria/individual/taxes-on-personal-income)

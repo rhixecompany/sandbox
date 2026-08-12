@@ -8,9 +8,11 @@
 ## Test Scenario: "How do I run a single test in comicwise?"
 
 ### The Question
+
 A user or AI assistant asks: **"How do I run a single test in comicwise?"**
 
 This is a realistic question because:
+
 - Developers frequently need to test single files (not full suite)
 - comicwise uses `pnpm` (not `bun`), which is project-specific
 - The instructions should provide copy-paste commands
@@ -26,11 +28,13 @@ This is a realistic question because:
 **Section:** "Comicwise — Comic Streaming (`projects/comicwise/`)"
 
 **Location in file:**
+
 - Line 262-270 (exact location may vary with updates)
 - Section title: `### Comicwise — Comic Streaming`
 - Subsection: `**Single test:**`
 
 **Answer Found:**
+
 ```bash
 cd projects/comicwise
 pnpm test -- src/path/to/test.ts     # Vitest single file
@@ -53,22 +57,28 @@ pnpm test:ui -- --headed             # Playwright with browser visible
 ### Command Examples (All Verified ✅)
 
 **Run single Vitest file:**
+
 ```bash
 cd projects/comicwise
 pnpm test -- src/path/to/test.ts
 ```
+
 ✅ **Copy-paste ready** — user can immediately use this
 
 **Run with verbose output:**
+
 ```bash
 pnpm test -- --reporter=verbose
 ```
+
 ✅ **Helpful for debugging**
 
 **Run Playwright E2E tests with browser:**
+
 ```bash
 pnpm test:ui -- --headed
 ```
+
 ✅ **For visual testing**
 
 ---
@@ -78,11 +88,13 @@ pnpm test:ui -- --headed
 The guide not only answers "how" but also provides context:
 
 ### Project-Specific Information
+
 - **Package manager:** `pnpm` (NOT `bun` like Banking/Bash)
 - **Test framework:** Vitest (unit tests) + Playwright (E2E)
 - **Quality gate:** 5-step pre-commit checklist
 
 ### Full Comicwise Section Includes
+
 ```
 ├─ Purpose: Next.js comic streaming platform
 ├─ Build commands (dev, build)
@@ -97,49 +109,60 @@ The guide not only answers "how" but also provides context:
 
 ## Quality of Answer Verification
 
-| Criterion                              | Status | Notes                                 |
-| -------------------------------------- | ------ | ------------------------------------- |
-| **Answer exists in guide?**            | ✅     | Section 2.3 (Comicwise subsection)   |
-| **Easy to find?**                      | ✅     | Direct jump URL or search by project |
-| **Copy-paste ready?**                  | ✅     | Exact commands, no modifications needed |
-| **Multiple options shown?**            | ✅     | 3 examples: unit, verbose, E2E       |
-| **Project-specific info included?**    | ✅     | Notes `pnpm` (not `bun`)             |
-| **Related context provided?**          | ✅     | Explains test frameworks, quality gates |
-| **No duplication of AGENTS.md?**       | ✅     | Links to authoritative source         |
-| **Copilot can find it?**               | ✅     | Clear structure, searchable keywords  |
+| Criterion                           | Status | Notes                                   |
+| ----------------------------------- | ------ | --------------------------------------- |
+| **Answer exists in guide?**         | ✅     | Section 2.3 (Comicwise subsection)      |
+| **Easy to find?**                   | ✅     | Direct jump URL or search by project    |
+| **Copy-paste ready?**               | ✅     | Exact commands, no modifications needed |
+| **Multiple options shown?**         | ✅     | 3 examples: unit, verbose, E2E          |
+| **Project-specific info included?** | ✅     | Notes `pnpm` (not `bun`)                |
+| **Related context provided?**       | ✅     | Explains test frameworks, quality gates |
+| **No duplication of AGENTS.md?**    | ✅     | Links to authoritative source           |
+| **Copilot can find it?**            | ✅     | Clear structure, searchable keywords    |
 
 ---
 
 ## Additional Test Cases (All Verified ✅)
 
 ### Test Case 2: "How do I run a single test in Banking?"
+
 **Answer location:** Section 2.2 (Banking subsection)
+
 ```bash
 cd projects/Banking
 bun run test -- src/path/to/test.ts
 ```
+
 ✅ **Found in guide**, different package manager (bun)
 
 ### Test Case 3: "How do I run a single test in Bash?"
+
 **Answer location:** Section 2.1 (Bash subsection)
+
 ```bash
 cd projects/Bash
 bun run test -- src/path/to/test.ts  # Vitest
 bash tests/verify-dryrun.sh          # Shell tests
 ```
+
 ✅ **Found in guide**, includes shell tests
 
 ### Test Case 4: "How do I run a single test in ecom backend?"
+
 **Answer location:** Section 2.4 (Ecom subsection, Backend)
+
 ```bash
 cd projects/ecom/backend
 python manage.py test path.to.TestClass
 python -m pytest tests/test_file.py -v
 ```
+
 ✅ **Found in guide**, separate backend/frontend
 
 ### Test Case 5: "How do I set up ecom for development?"
+
 **Answer location:** Section 2.4 (Ecom subsection, Commands section)
+
 ```bash
 # Backend
 cd projects/ecom/backend
@@ -152,36 +175,45 @@ cd projects/ecom/frontend
 bun install
 bun run start  # :3000
 ```
+
 ✅ **Found in guide**, dual servers explained
 
 ### Test Case 6: "Which MCP server should I use for E2E testing?"
+
 **Answer location:** Section "MCP Server Configuration"
 **Answer:** `playwright` (local MCP server for E2E browser testing)
 ✅ **Found in guide**, clear use cases
 
 ### Test Case 7: "What's the pre-commit checklist for comicwise?"
+
 **Answer location:** Section 2.3 (Comicwise subsection, "Pre-commit quality gate")
+
 ```bash
 cd projects/comicwise
 pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build
 ```
+
 ✅ **Found in guide**, all 5 gates listed
 
 ### Test Case 8: "How do I add a new MCP server?"
+
 **Answer location:** Section "MCP Server Configuration" → "How to Add an MCP Server"
 **Steps provided:**
+
 1. Edit `.mcp.json`
 2. Add server definition (example shown)
 3. Restart Copilot
 4. Verify with `gh copilot mcp list`
-✅ **Found in guide**, with examples
+   ✅ **Found in guide**, with examples
 
 ### Test Case 9: "What package manager does comicwise use?"
+
 **Answer location:** Section 2.3 (Comicwise), explicitly noted
 **Answer:** `pnpm` (not bun)
 ✅ **Found in guide**, important difference noted
 
 ### Test Case 10: "Where's the reference for all command examples?"
+
 **Answer location:** Section "Quick Command Reference" (bottom of guide)
 **Format:** Copy-paste blocks for all 4 projects
 ✅ **Found in guide**, organized by project
@@ -190,29 +222,31 @@ pnpm lint:strict && pnpm triage && pnpm type-check && pnpm test && pnpm build
 
 ## Test Results Summary
 
-| Aspect                            | Result | Details                                |
-| --------------------------------- | ------ | -------------------------------------- |
-| **Primary test question**         | ✅     | Full answer with 3 code examples       |
-| **Secondary test cases (9 more)** | ✅ 9/9 | All answered, clear locations          |
-| **Answer accessibility**          | ✅     | Searchable, direct jump possible       |
-| **Copy-paste readiness**          | ✅     | All commands tested for format         |
-| **Context & explanation**         | ✅     | Project-specific patterns included     |
-| **No duplication issues**         | ✅     | Links to authoritative sources         |
-| **Copilot usability**             | ✅     | Clear structure, easy navigation       |
+| Aspect                            | Result | Details                            |
+| --------------------------------- | ------ | ---------------------------------- |
+| **Primary test question**         | ✅     | Full answer with 3 code examples   |
+| **Secondary test cases (9 more)** | ✅ 9/9 | All answered, clear locations      |
+| **Answer accessibility**          | ✅     | Searchable, direct jump possible   |
+| **Copy-paste readiness**          | ✅     | All commands tested for format     |
+| **Context & explanation**         | ✅     | Project-specific patterns included |
+| **No duplication issues**         | ✅     | Links to authoritative sources     |
+| **Copilot usability**             | ✅     | Clear structure, easy navigation   |
 
 ---
 
 ## Example Copilot Interaction
 
 ### User Prompt
+
 ```
-I'm working on the comicwise project and need to run a single test file. 
+I'm working on the comicwise project and need to run a single test file.
 How do I do that?
 ```
 
 ### Copilot Response (Using instructions guide)
+
 ```
-Based on .github/copilot-instructions.md, here's how to run a single 
+Based on .github/copilot-instructions.md, here's how to run a single
 test in comicwise:
 
 1. Navigate to the project:
@@ -227,7 +261,7 @@ test in comicwise:
 4. For E2E tests with browser visible:
    pnpm test:ui -- --headed
 
-Note: comicwise uses pnpm (not bun) as its package manager, and includes 
+Note: comicwise uses pnpm (not bun) as its package manager, and includes
 both unit tests (Vitest) and E2E tests (Playwright).
 
 See the full guide at: .github/copilot-instructions.md#subproject-specific-guidance
@@ -259,7 +293,7 @@ See the full guide at: .github/copilot-instructions.md#subproject-specific-guida
 ✅ **All commands are copy-paste ready** — No modifications needed  
 ✅ **Project-specific guidance included** — Package managers, frameworks, patterns  
 ✅ **MCP servers documented** — 14 configured, 4 recommended  
-✅ **Copilot can find and reference it** — Clear structure, searchable  
+✅ **Copilot can find and reference it** — Clear structure, searchable
 
 ---
 
