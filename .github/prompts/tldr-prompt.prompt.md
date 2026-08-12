@@ -105,7 +105,9 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 ### Syntax
 
 ```bash
+
 # UNAMBIGUOUS QUERIES# With specific files (any type)/tldr-prompt #file:{{name.prompt.md}}/tldr-prompt #file:{{name.agent.md}}/tldr-prompt #file:{{name.instructions.md}}/tldr-prompt #file:{{name.collections.md}}# With URLs/tldr-prompt #fetch {{https://example.com/docs}}# AMBIGUOUS QUERIES/tldr-prompt "{{topic or question}}"/tldr-prompt "MCP servers"/tldr-prompt "inline chat shortcuts"
+
 ```
 
 ## Error Handling
@@ -118,7 +120,9 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 
 You MUST follow these steps in order:1. **Validate Input**: Confirm at least one required parameter is provided. If not, output the error message from Error Handling section2. **Identify Context**:   - Determine file type (.prompt.md, .agent.md, .instructions.md, .collections.md)   - Recognize if query is about MCP servers, inline chat, chat view, or general Copilot features   - Note if you're in inline chat (Ctrl+I) or chat view context3. **Fetch Content**:   - For files: Read the file(s) using available file tools   - For URLs: Fetch content using `#tool:fetch`   - For queries: Apply URL Resolver strategy to find and fetch relevant content4. **Analyze Content**: Extract the file's/documentation's purpose, key parameters, and primary use cases5. **Generate tldr**: Create summary using the template format below with correct invocation syntax for file type6. **Format Output**:   - Ensure markdown formatting is correct with proper code blocks and placeholders   - Use appropriate invocation prefix: `/` for prompts, `@` for agents, context-specific for instructions/collections   - Adapt verbosity: inline chat = concise, chat view = detailed
 
-## TemplateUse this template structure when creating tldr pages:```markdown# command
+## TemplateUse this template structure when creating tldr pages:
+
+```markdown# command
 
 > Short, snappy description. One to two sentences summarizing the prompt or prompt documentation. More information: <name.prompt.md
 > | <URL/prompt>.- View documentation for creating something:`/file command-subcommand1`- View documentation for managing something:`/file command-subcommand2`````
@@ -142,7 +146,7 @@ Detailed templates in `templates/tldr-prompt/`:- `error_handling.md`- `url_resol
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -168,7 +172,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -191,7 +195,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

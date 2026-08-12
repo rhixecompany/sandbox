@@ -73,7 +73,7 @@ Review a prompt for safety, bias, security, clarity, and effectiveness, then pro
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
-|| --- | --- ||
+| --- | --- |
 | `context-map` | Preflight mapping for prompt sources, references, and impacted files |
 | `prompt-engineering` | Research-backed prompt optimization patterns (scope analysis, clarity assessment) |
 | `systematic-debugging` | Systematic detection of prompt safety and quality issues (risk detection, bias, clarity checks) |
@@ -100,7 +100,7 @@ Detailed templates in `templates/ai-prompt-engineering-safety-review/`:- `phases
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -126,7 +126,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

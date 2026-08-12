@@ -55,7 +55,7 @@ Fix and verify Hermes/Copilot/Codex agent system prompt context by generating pr
 Full phase instructions live in `templates/agents-system-prompt-context-fix/phases.md`.
 
 | Order | Phase | Gate |
-|| --- | --- | --- ||
+| --- | --- | --- |
 | 1 | Generate Agent Context Files | context docs generated for root and each subproject |
 | 2 | Audit VS Code Configuration | all VS Code JSON configs triaged and verified |
 | 3 | Verify & Implement | verification report written and issues closed |
@@ -73,7 +73,7 @@ Full phase instructions live in `templates/agents-system-prompt-context-fix/phas
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -122,7 +122,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

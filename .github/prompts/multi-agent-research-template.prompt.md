@@ -44,7 +44,7 @@ Reusable prompt for Codex, Copilot, and Hermes. It preserves the current researc
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | codex | Codex agent execution |
 | copilot | Copilot agent execution |
 | hermes | Hermes agent execution |
@@ -155,10 +155,7 @@ Research these sources and extract each page into Markdown:
 - [ ] Frontmatter has all required fields (`name`, `title`, `description`, `trigger`, `tags`)
 - [ ] Frontmatter has recommended fields (`version`, `author`, `license`, `metadata.hermes.related_skills`)
 - [ ] `Skills Required` table is present and populated
-- [ ] Phase headings use H2 (`
-
-## Phase N:`) not H3
-
+- [ ] Phase headings use H2 (`## Phase N:`) not H3)
 - [ ] All phase task lists use `- [ ]` checkbox format- [ ] Phase 3 URLs are markdown links with descriptive titles- [ ] Phase 2 "After research" uses Steps/Tasks structure- [ ] Agent Mapping, Output Requirements, Verification Gates are markdown tables- [ ] Core Workflow references phases (no duplicate detail)- [ ] Template variables table uses inline code for paths- [ ] No `mode` field in frontmatter- [ ] Trigger matches filename stem convention- [ ] File uses `.prompt.md` extension ✅ (renamed from `.txt`)
 
 ## Template References
@@ -170,7 +167,7 @@ Detailed templates in `templates/multi-agent-research-template/`:- `phase_2_mcp_
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |

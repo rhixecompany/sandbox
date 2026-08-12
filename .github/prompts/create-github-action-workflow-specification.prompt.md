@@ -47,7 +47,8 @@ graph TD    A[Trigger Event] --
 > F[Parallel Job]    F --
 > D    style A fill:#e1f5fe    style E fill:#e8f5e8```````
 
-## Jobs & Dependencies| Job Name | Purpose   | Dependencies    | Execution Context    || -------
+## Jobs & Dependencies
+| Job Name | Purpose   | Dependencies    | Execution Context    || -------
 
 - | --------- | --------------- | -------------------- || job-1    | [Purpose] | [Prerequisites] | [Runner/Environment] || job-2    | [Purpose] | job-1           | [Runner/Environment] |
 
@@ -79,7 +80,8 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 
 ```
 
-## Secrets & Variables| Type     | Name     | Purpose   | Scope      || -------
+## Secrets & Variables
+| Type     | Name     | Purpose   | Scope      || -------
 
 - | -------- | --------- | ---------- || Secret   | SECRET_1 | [Purpose] | Workflow   || Variable | VAR_1    | [Purpose] | Repository |
 
@@ -97,13 +99,15 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 - **Network Access**: [External connectivity needs]
 - **Permissions**: [Required access levels]
 
-## Error Handling Strategy| Error Type         | Response   | Recovery Action  || -----------------
+## Error Handling Strategy
+| Error Type         | Response   | Recovery Action  || -----------------
 
 - | ---------- | ---------------- || Build Failure      | [Response] | [Recovery steps] || Test Failure       | [Response] | [Recovery steps] || Deployment Failure | [Response] | [Recovery steps] |
 
 ## Quality Gates
 
-### Gate Definitions| Gate          | Criteria     | Bypass Conditions || ------------
+### Gate Definitions
+| Gate          | Criteria     | Bypass Conditions || ------------
 
 - | ------------ | ----------------- || Code Quality  | [Standards]  | [When allowed]    || Security Scan | [Thresholds] | [When allowed]    || Test Coverage | [Percentage] | [When allowed]    |
 
@@ -115,17 +119,20 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 - **Execution Time**: [Target duration]
 - **Resource Usage**: [Monitoring approach]
 
-### Alerting| Condition   | Severity | Notification Target || ----------
+### Alerting
+| Condition   | Severity | Notification Target || ----------
 
 - | -------- | ------------------- || [Condition] | [Level]  | [Who/Where]         |
 
 ## Integration Points
 
-### External Systems| System   | Integration Type | Data Exchange | SLA Requirements || -------
+### External Systems
+| System   | Integration Type | Data Exchange | SLA Requirements || -------
 
 - | ---------------- | ------------- | ---------------- || [System] | [Type]           | [Data format] | [Requirements]   |
 
-### Dependent Workflows| Workflow   | Relationship | Trigger Mechanism || ---------
+### Dependent Workflows
+| Workflow   | Relationship | Trigger Mechanism || ---------
 
 - | ------------ | ----------------- || [Workflow] | [Type]       | [How triggered]   |
 
@@ -145,7 +152,8 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 
 ## Edge Cases & Exceptions
 
-### Scenario Matrix| Scenario    | Expected Behavior | Validation Method || ----------
+### Scenario Matrix
+| Scenario    | Expected Behavior | Validation Method || ----------
 
 - | ----------------- | ----------------- || [Edge case] | [Behavior]        | [How to verify]   |
 
@@ -171,7 +179,8 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 4. **Testing**: [Validation approach]
 5. **Deployment**: [Release process]
 
-### Version History| Version | Date   | Changes               | Author   || ------
+### Version History
+| Version | Date   | Changes               | Author   || ------
 
 - | ------ | --------------------- | -------- || 1.0     | [Date] | Initial specification | [Author] |
 
@@ -209,7 +218,7 @@ Detailed templates in `templates/create-github-action-workflow-specification/`:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -278,7 +287,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -301,7 +310,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

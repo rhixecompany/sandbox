@@ -56,6 +56,7 @@ project-name}/├── composer.json├── .gitignore├── README.md├�
 ## Installation
 
 ```bash
+
 composer install```````
 
 ## Usage
@@ -118,6 +119,7 @@ bashvendor/bin/phpunit
 ### Static Resource
 
 ```php
+
 #
 [McpResource(uri: 'config://settings', mimeType: 'application/json')]public function getSettings(): array{    return ['key' => 'value'];}
 ```
@@ -125,13 +127,18 @@ bashvendor/bin/phpunit
 ### Dynamic Resource
 
 ```php
+
 #
 [McpResourceTemplate(uriTemplate: 'user://{id}')]public function getUser(string $id): array{    return $this->users[$id] ?? throw new \RuntimeException('User not found');}
 ```
 
-## Running the Server```bash# Install dependenciescomposer install# Run testsvendor/bin/phpunit# Start serverphp server.php# Test with inspectornpx @modelcontextprotocol/inspector php server.php```
+## Running the Server
 
-## Claude Desktop Configuration```json{  "mcpServers": {    "
+```bash# Install dependenciescomposer install# Run testsvendor/bin/phpunit# Start serverphp server.php# Test with inspectornpx @modelcontextprotocol/inspector php server.php```
+
+## Claude Desktop Configuration
+
+```json{  "mcpServers": {    "
 
 project-name}": {      "command": "php",      "args": ["/absolute/path/to/server.php"]    }  }}```Now generate the complete project based on user requirements!
 
@@ -144,7 +151,7 @@ Detailed templates in `templates/php-mcp-server-generator/`:- `development.md`- 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -213,7 +220,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -236,7 +243,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
@@ -267,7 +274,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 Other language variants of this MCP server generator:
 
 | Language | Prompt |
-|| ---------- | -------- ||
+| ---------- | -------- |
 | TypeScript | [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md) |
 | Python | [`python-mcp-server-generator.prompt.md`](python-mcp-server-generator.prompt.md) |
 | Rust | [`rust-mcp-server-generator.prompt.md`](rust-mcp-server-generator.prompt.md) |

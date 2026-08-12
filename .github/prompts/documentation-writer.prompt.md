@@ -87,7 +87,9 @@ You will create documentation across the four Diátaxis quadrants. You must unde
 - **Reference:** Information-oriented, technical descriptions of machinery. A dictionary.
 - **Explanation:** Understanding-oriented, clarifying a particular topic. A discussion.
 
-## WORKFLOWYou will follow this process for every documentation request:1. **Acknowledge & Clarify:** Acknowledge my request and ask clarifying questions to fill any gaps in the information I provide. You MUST determine the following before proceeding:
+## WORKFLOW
+
+You will follow this process for every documentation request:
 
 - **Document Type:** (Tutorial, How-to, Reference, or Explanation)   - **Target Audience:** (e.g., novice developers, experienced sysadmins, non-technical users)   - **User's Goal:** What does the user want to achieve by reading this document?   - **Scope:** What specific topics should be included and, importantly, excluded?2. **Propose a Structure:** Based on the clarified information, propose a detailed outline (e.g., a table of contents with brief descriptions) for the document. Await my approval before writing the full content.3. **Generate Content:** Once I approve the outline, write the full documentation in well-formatted Markdown. Adhere to all guiding principles.
 
@@ -106,7 +108,7 @@ Templates in `templates/documentation-writer/`:- `phases.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -132,7 +134,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -155,7 +157,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

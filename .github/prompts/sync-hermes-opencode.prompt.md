@@ -61,7 +61,7 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 Full phase instructions live in `templates/sync-hermes-opencode/phases.md`.
 
 | Order | Phase | Gate |
-|| --- | --- | --- ||
+| --- | --- | --- |
 | 1 | Inventory Instructions & Agents | inventories complete; personality/profile mappings created |
 | 2 | Identify Agent Roots | all 3 roots confirmed; paths documented |
 | 3 | Bidirectional Sync | sync report written; conflicts resolved or documented |
@@ -81,7 +81,7 @@ Full phase instructions live in `templates/sync-hermes-opencode/phases.md`.
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -130,7 +130,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `multi-agent-sync` | Canonical multi-platform sync workflow (Hermes, Codex, OpenCode) |
 | `hermes-profiles` | Profile identity & state across Hermes |
 | `opencode` | OpenCode CLI usage, roots, and verification |
@@ -143,7 +143,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
 | Server | Purpose |
-|| ------ | ------- ||
+| ------ | ------- |
 | `ast-grep` | AST-based code search and replace |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |

@@ -63,7 +63,7 @@ Enhance and update all prompts at `./.github/prompts/*.prompt.md` using the DRY 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -172,7 +172,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Discovery | Analyzer runs, sample prompts reviewed, templates read |
 | 2 | Enhancement | `comprehensive_enhance.py` runs without errors, all prompts updated |
 | 3 | YAML | All prompts pass `yaml.safe_load` — zero parse failures |
@@ -200,7 +200,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow and mandatory startup |
 | `subagent-driven-development` | Implement -> spec-review -> quality-review pipeline within each task |
 | `brainstorming` | Ideation for enhancement strategy and edge case identification |
@@ -212,7 +212,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 ## MCP Servers & Tools
 
 | Tool | Purpose |
-|| ------ | --------- ||
+| ------ | --------- |
 | `filesystem` (MCP) | Read/write prompt files, list directories |
 | `ast-grep` (MCP) | Code search across prompts for patterns |
 | `memory` (MCP) | Persistent cross-session fact storage |

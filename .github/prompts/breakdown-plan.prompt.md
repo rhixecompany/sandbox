@@ -141,7 +141,9 @@ s in this Epic- [ ] #{feature-issue-number} - {Feature Name}
 
 - [ ] All feature stories completed- [ ] End-to-end testing passed- [ ] Performance benchmarks met- [ ] Documentation updated- [ ] User acceptance testing completed
 
-## Labels`epic`, `
+## Labels
+
+- `epic`,
 
 priority-level}`,`{value-tier}`
 
@@ -156,6 +158,7 @@ Epic-level t-shirt size: XS, S, M, L, XL, XXL}```
 ### Feature Issue Template
 
 ```markdown
+
 # Feature: {Feature Name}
 
 ## Feature Description
@@ -183,7 +186,9 @@ Feature summary from PRD
 
 - [ ] All user stories delivered- [ ] Technical enablers completed- [ ] Integration testing passed- [ ] UX review approved- [ ] Performance testing completed
 
-## Labels`feature`, `
+## Labels
+
+- `feature`,
 
 priority-level}`, `{value-tier}`, `{component-name}`
 
@@ -199,6 +204,7 @@ Story points or t-shirt size}
 ### User Story Issue Template
 
 ```markdown
+
 # User Story: {Story Title}
 
 ## Story Statement
@@ -223,7 +229,9 @@ ing Requirements- [ ] #{test-issue-number} - {Test implementation}
 
 - [ ] Acceptance criteria met- [ ] Code review approved- [ ] Unit tests written and passing- [ ] Integration tests passing- [ ] UX design implemented- [ ] Accessibility requirements met
 
-## Labels`user-story`, `
+## Labels
+
+- `user-story`,
 
 priority-level}`, `frontend/backend/fullstack`, `{component-name}`
 
@@ -239,6 +247,7 @@ Story points: 1, 2, 3, 5, 8}
 ### Technical Enabler Issue Template
 
 ```markdown
+
 # Technical Enabler: {Enabler Title}
 
 ## Enabler Description
@@ -269,7 +278,9 @@ This enabler supports:
 
 - [ ] Implementation completed- [ ] Unit tests written- [ ] Integration tests passing- [ ] Documentation updated- [ ] Code review approved
 
-## Labels`enabler`, `
+## Labels
+
+- `enabler`,
 
 priority-level}`, `infrastructure/api/database`, `{component-name}`
 
@@ -330,7 +341,7 @@ Detailed templates in `templates/breakdown-plan/`:- `estimate.md`- `output_forma
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -356,7 +367,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -375,7 +386,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

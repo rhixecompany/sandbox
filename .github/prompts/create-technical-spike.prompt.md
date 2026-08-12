@@ -112,9 +112,13 @@ title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴
 > - Integration patterns and authentication
 > **Full content:**
 
-## File Naming ConventionsUse descriptive, kebab-case names that indicate the category and specific unknown:**API/Integration Examples:**- `api-copilot-chat-integration-spike.md`- `api-azure-speech-realtime-spike.md`- `api-vscode-extension-capabilities-spike.md`**Performance Examples:**- `performance-audio-processing-latency-spike.md`- `performance-extension-host-limitations-spike.md`- `performance-webrtc-reliability-spike.md`**Architecture Examples:**- `architecture-voice-pipeline-design-spike.md`- `architecture-state-management-spike.md`- `architecture-error-handling-strategy-spike.md`
+## File Naming Conventions
 
-## Best Practices for AI Agents1. **One Question Per Spike:** Each document focuses on a single technical decision or research question2. **Time-Boxed Research:** Define specific time limits and deliverables for each spike3. **Evidence-Based Decisions:** Require concrete evidence (tests, prototypes, documentation) before marking as complete4. **Clear Recommendations:** Document specific recommendations and rationale for implementation5. **Dependency Tracking:** Identify how spikes relate to each other and impact project decisions6. **Outcome-Focused:** Every spike must result in an actionable decision or recommendation
+Use descriptive, kebab-case names that indicate the category and specific unknown.
+
+## Best Practices for AI Agents
+
+1. **One Question Per Spike:** Each document focuses on a single technical decision or research question
 
 ## Research Strategy
 
@@ -149,7 +153,7 @@ Detailed templates in `templates/create-technical-spike/`:- `categories_for_tech
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -218,7 +222,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -241,7 +245,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

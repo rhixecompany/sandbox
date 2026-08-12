@@ -97,7 +97,9 @@ Use when you need to create mcp based declarative agent for microsoft 365 copilo
 
 Use `response_semantics` to extract relevant fields from API responses:```json"capabilities": {  "response_semantics": {    "data_path": "$.results",    "properties": {      "title": "$.name",      "subtitle": "$.description",      "url": "$.link"    }  }}```
 
-### Add Adaptive Cards (Optional)See the `mcp-create-adaptive-cards` prompt for adding visual card templates.
+### Add Adaptive Cards (Optional)
+
+See the `mcp-create-adaptive-cards` prompt for adding visual card templates.
 
 ## Environment Configuration
 
@@ -155,17 +157,21 @@ ing & Deployment
 
 ## Common MCP Server Examples
 
-### GitHub MCP Server```URL: https://api.githubcopilot.com/mcp/Tools: search_repositories, search_users, get_repositoryAuth: OAuth 2.0```
+### GitHub MCP Server
+
+```URL: https://api.githubcopilot.com/mcp/Tools: search_repositories, search_users, get_repositoryAuth: OAuth 2.0```
 
 ### Jira MCP Server
 
 ```
+
 URL: https://your-domain.atlassian.net/mcp/Tools: search_issues, create_issue, update_issueAuth: OAuth 2.0
 ```
 
 ### Custom Service
 
 ```
+
 URL: https://api.your-service.com/mcp/Tools: Custom tools exposed by your serviceAuth: OAuth 2.0 or SSO
 ```
 
@@ -211,7 +217,7 @@ Detailed templates in `templates/mcp-create-declarative-agent/`:- `mcp_server_in
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -228,7 +234,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -251,7 +257,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

@@ -203,7 +203,9 @@ For each missing skill:- create `~/AppData/Local/hermes/skills/<name
 
 > /SKILL.md`- include minimal viable content:  - frontmatter  - when to use  - workflow  - verification checklist- if the skill already exists elsewhere in repo, import/reference it instead
 
-### 5.3 Create missing scriptsIf no script exists for a pattern, create:
+### 5.3 Create missing scripts
+
+If no script exists for a pattern, create:
 
 - `~/AppData/Local/hermes/scripts/<name
 
@@ -223,7 +225,9 @@ For every `*.prompt.md`:
 
 - frontmatter contains required fields- `tags` is non-empty- `version` is semver-like- all `prompt:*` dependencies exist- all `tool:*` dependencies are valid Hermes tools- all `skill:*` dependencies exist as Hermes skills- no orphan references
 
-### 6.2 Write validation reportWrite/update:
+### 6.2 Write validation report
+
+Write/update:
 
 - `docs/prompt-validation-report.md`Report:- file count- failures by category- missing dependencies- broken references- fixed items
 
@@ -233,7 +237,9 @@ Stop and block completion only if:
 
 - a referenced skill or script is missing and cannot be created- a template file is referenced but cannot be written- a prompt cannot be loaded or parsedOtherwise continue to Phase 7.---
 
-## DeliverStop only after the pipeline is complete and the registry confirms zero unresolved issues.By the end, produce:
+## Deliver
+
+Stop only after the pipeline is complete and the registry confirms zero unresolved issues. By the end, produce:
 
 - `docs/prompt-inventory.md`- `docs/prompt-validation-report.md`- updated `.github/prompts/*.prompt.md` files using templates- updated `templates/_shared/**`- any newly created skills/scripts under `~/AppData/Local/hermes/`- explicit status summary in the assistant responseDo not rename prompts, skill names, triggers, or dependency keys unless the user explicitly requests it.The final state must be verifiable by reading the prompt files, the registry, and the validation report.---
 
@@ -242,7 +248,7 @@ Stop and block completion only if:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -289,7 +295,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -312,7 +318,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

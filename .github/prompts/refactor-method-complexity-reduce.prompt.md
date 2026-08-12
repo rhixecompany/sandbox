@@ -75,7 +75,9 @@ Use when you need to work on the current workspace or task.
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-## ObjectiveRefactor the method `$
+## Objective
+
+Refactor the method to reduce its cyclomatic complexity while preserving behavior.
 
 input:methodName}`, to reduce its cognitive complexity to`${input:complexityThreshold}` or below, by extracting logic into focused helper methods.
 
@@ -89,7 +91,9 @@ input:methodName}`, to reduce its cognitive complexity to`${input:complexityThre
 
 - Extract helper methods before refactoring the main flow- Test incrementally to ensure no regressions- Use meaningful names that describe the extracted responsibility- Keep extracted methods close to where they're used- Consider making repeated code patterns into generic methods
 
-## ResultThe refactored method should:
+## Result
+
+The refactored method should:
 
 - Have cognitive complexity reduced to the target threshold of `${input:complexityThreshold}` or below- Be more readable and maintainable- Have clear separation of concerns- Be easier to test and debug- Retain all original functionality
 
@@ -110,7 +114,7 @@ Detailed templates in `templates/refactor-method-complexity-reduce/`:- `instruct
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -136,7 +140,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -159,7 +163,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

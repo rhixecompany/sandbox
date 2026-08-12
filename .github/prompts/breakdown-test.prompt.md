@@ -138,7 +138,8 @@ Summary of testing approach based on ISTQB and ISO 25010
 - [ ] Exit criteria established
 - [ ] Quality thresholds documented
 
-## Labels`test-strategy`, `istqb`, `iso25010`, `quality-gates`
+## Labels
+- `test-strategy`, `istqb`, `iso25010`, `quality-gates`
 
 ## Estimate
 
@@ -154,7 +155,8 @@ Summary of testing approach based on ISTQB and ISO 25010
 
 Specific user story or component being tested
 
-## ISTQB Test Case Design**Test Design Technique**: {Selected ISTQB technique} **Test Type**: {Functional/Non-Functional/Structural/Change-Related}
+## ISTQB Test Case Design
+**Test Design Technique**: {Selected ISTQB technique} **Test Type**: {Functional/Non-Functional/Structural/Change-Related} {Selected ISTQB technique} **Test Type**: {Functional/Non-Functional/Structural/Change-Related}
 
 ## Test Cases to Implement**Functional Tests:**
 
@@ -171,7 +173,8 @@ Specific user story or component being tested
 - [ ] Performance thresholds validated
 - [ ] Accessibility standards verified
 
-## Labels`playwright`, `e2e-test`, `quality-validation`
+## Labels
+- `playwright`, `e2e-test`, `quality-validation`
 
 ## Estimate
 
@@ -201,7 +204,8 @@ s Validation**Entry Criteria:**- [ ] All implementation tasks completed- [ ] Uni
 
 - [ ] Test coverage: {target}%- [ ] Defect density: <{threshold} defects/KLOC- [ ] Performance: Response time <{threshold}ms- [ ] Accessibility: WCAG {level} compliance- [ ] Security: Zero critical vulnerabilities
 
-## Labels`quality-assurance`, `iso25010`, `quality-gates`
+## Labels
+- `quality-assurance`, `iso25010`, `quality-gates`
 
 ## Estimate
 
@@ -240,7 +244,7 @@ Detailed templates in `templates/breakdown-test/`:- `output_format.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -266,7 +270,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -289,7 +293,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

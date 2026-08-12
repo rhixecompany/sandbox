@@ -37,6 +37,7 @@ You are an expert in refactoring Java methods.Below are **2 examples** (with tit
 ## Code Before Refactoring 1
 
 ```java
+
 public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerId) {    assertNotBuild();    if (bpartnerId
 
 > 0) {        setC_BPartner_ID(bpartnerId);    }    return this;}
@@ -45,6 +46,7 @@ public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerId) {    asser
 ## Code After Refactoring 1
 
 ```java
+
 public FactLineBuilder bpartnerIdIfNotNull(final BPartnerId bpartnerId) {    if (bpartnerId != null) {        return bpartnerId(bpartnerId);    } else {        return this;    }}public FactLineBuilder setC_BPartner_ID_IfValid(final int bpartnerRepoId) {    return bpartnerIdIfNotNull(BPartnerId.ofRepoIdOrNull(bpartnerRepoId));}
 ```
 
@@ -60,7 +62,9 @@ public FactLineBuilder bpartnerIdIfNotNull(final BPartnerId bpartnerId) {    if 
 > Direction existingDirection = directions.get(type.name());
 > **Full content:**
 
-## TaskApply **Extract Method** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.Always return a complete and compilable method (Java 17).Perform intermediate steps internally:
+## Task
+
+Apply **Extract Method** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.
 
 - First, analyze each method and identify those exceeding thresholds:  - LOC (Lines of Code)
 
@@ -86,7 +90,7 @@ Templates in `templates/java-refactoring-extract-method/`:- `code_after_refactor
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -155,7 +159,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -178,7 +182,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

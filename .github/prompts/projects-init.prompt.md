@@ -63,7 +63,7 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill              | Purpose                                                 |
-|| ------------------ | ------------------------------------------------------- ||
+| ------------------ | ------------------------------------------------------- |
 | `enhance-markdown` | Audit, enhance, convert, and consolidate markdown files |
 | `hermes-skills`    | List, create, install, and manage skills                |
 | `skill-creator`    | Scaffold new skills with validated frontmatter          |
@@ -112,7 +112,7 @@ Detailed templates in `templates/projects-init/`:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -138,7 +138,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

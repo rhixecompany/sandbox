@@ -69,11 +69,14 @@ Consolidate scripts, patches, and documentation across the workspace with bash m
 
 ## Phases
 
-### Phase 1: Verify Canonical Script Layout (LIGHT)All 54 operational scripts must live under `projects/Bash/` in organized subdirectories.No duplicates outside `projects/projects/projects/projects/Bash/`.
+### Phase 1: Verify Canonical Script Layout (LIGHT)
+
+All 54 operational scripts must live under `projects/Bash/` in organized subdirectories.
 
 ### Target Structure
 
 ```
+
 treeBash/├── Banking/                          # 34 scripts│   ├── install.sh│   ├── install-agents.sh│   ├── install/lib/00-config.sh → 08-install.sh│   └── scripts/                      # 23 files (.sh, .ps1, .bat)├── rhixecompany-comics/               # 0 scripts (pending — new Django + Next.js project)├── rhixe_scans/                      # 7 scripts│   ├── docker-clean.sh, git-setup.sh│   ├── install_chrome.sh, install_firefox.sh│   ├── prod-dev.sh, prod.sh, setup.sh├── ecom/                             # 1 script│   └── install.sh├── root/                             # 2 scripts│   ├── analyze-scripts.sh│   └── sandbox-runtime-commands.ps1├── src/                              # TypeScript core migration targets│   ├── cache-clean.ts│   ├── clean-dep.ts│   ├── upgrade.ts│   ├── git-commit-batches.ts│   ├── core/ (ast-transformer, behavior-test, dry-run, script-runner)│   ├── lib/ (cli, colors, errors, logging)│   └── migration/ (templates, ts-morph-helper)├── docs/                             # Moved from Bash/ root below│   ├── AGENTS.md│   ├── ARCHITECTURE.md│   ├── CODE_STYLE.md│   ├── README.md│   ├── bash-scripts-safety-audit.md│   ├── FINAL-SUMMARY.md│   ├── MIGRATION-GUIDE.md│   └── phase5-verification-report.md├── archive/skills-commit-batches/    # 52 archived batch files (keep as dead code reference)├── lib/                              # log-rotate.sh, log-rotate.ps1├── scripts/                          # Auditing/orchestration scripts├── edits/run-audit.sh.patch          # Patch for run-audit.sh├── tsconfig.json, package.json, bun.lock, bunfig.toml├── README.md                         # STUB — links to docs/README.md
 ```
 
@@ -90,6 +93,7 @@ treeBash/├── Banking/                          # 34 scripts│   ├──
 ### Patch Inventory
 
 ```
+
 textActive:  xamehi.patch                   (6 commits, 32K lines, Django app)  rhixe-company.patch            (3 commits, 1.7K lines, corporate site)  python-projects.patch          (6 commits, 3.3K lines, Python scripts)  youtube-downloader.patch       (23 commits, 5K lines, yt-dlp app)  projects/Bash/edits/run-audit.sh.patch  (local patch for run-audit.sh)Obsolete (patches/obsolete/):  django-scrapy-selenium.patch   (10 commits, 633K lines, cookiecutter template — LIKELY DEAD)  xamehi-tv.patch                (5 commits, 117K lines, React frontend — LIKELY DEAD)  cookiecutter-django-tailwind.patch (4 commits, 54K lines, cookiecutter template — LIKELY DEAD)
 ```
 
@@ -122,18 +126,24 @@ Create patches for any gaps found:1. **Missing documentation patches** — updat
 ### Patch Patch Generation
 
 ```
+
 plaintextpatches/├── enhanced/                     # Enhanced versions of original patches│   ├── xamehi.patch│   ├── rhixe-company.patch│   ├── python-projects.patch│   └── youtube-downloader.patch├── new/                          # Newly created patches│   ├── <project-name>-docs.patch│   └── <project-name>-config.patch└── obsolete/                     # Unchanged archive    ├── django-scrapy-selenium.patch    ├── xamehi-tv.patch    └── cookiecutter-django-tailwind.patch
 ```
 
 ### Phase 5: Document Organization & Optimization
 
-### All Reports Under docs/All workspace-level reports go under `docs/`. All project-level docs go under`docs/project-docs/<name
+### All Reports Under docs/
+
+All workspace-level reports go under `docs/`.
 
 > /`. All Bash-specific docs go under`projects/Bash/docs/`.
 
 ### Doc Optimization for Humans AND AIEach document must be optimal for both human readers and AI consumption: #
 
-### Required Frontmatter (YAML)Every `.md` file should have standard frontmatter:```yaml---title: Human-Readable Titledescription: One-line summary of the document's purpose.status: draft | review | final | archivedtags: [comma, separated, tags]created: YYYY-MM-DDupdated: YYYY-MM-DD---``` #
+### Required Frontmatter (YAML)
+
+Every `.md` file should have standard frontmatter:
+```yaml---title: Human-Readable Titledescription: One-line summary of the document's purpose.status: draft | review | final | archivedtags: [comma, separated, tags]created: YYYY-MM-DDupdated: YYYY-MM-DD---``` #
 
 ### Content Standards
 
@@ -157,10 +167,13 @@ plaintextpatches/├── enhanced/                     # Enhanced versions of 
 ### Files to Optimize
 
 ```
+
 txtdocs/                                         # Workspace-level reports├── bash-migration-final-report.md            → verify frontmatter, add tags├── bash-scripts-audit-results.md             → verify frontmatter, add tags├── bash-scripts-list-context.md              → verify frontmatter, add tags├── bash-fix-implementation-plan.md           → verify frontmatter, add tags├── project-docs/<project>/*.md              → verify each has frontmatterprojects/Bash/docs/                                    # Bash project-specific docs├── AGENTS.md                                 → add frontmatter, optimize├── ARCHITECTURE.md                           → add frontmatter, optimize├── CODE_STYLE.md                             → add frontmatter, optimize├── README.md                                 → add frontmatter, optimize├── bash-scripts-safety-audit.md              → add frontmatter, optimize├── FINAL-SUMMARY.md                          → add frontmatter, optimize├── MIGRATION-GUIDE.md                        → add frontmatter, optimize└── phase5-verification-report.md             → add frontmatter, optimize
 ```
 
-### AI-Readiness Scoring ScriptCreate `projects/Bash/scripts/score-docs.sh` that scores every `.md` file onAI-readiness:| Criterion                             | Points             | Detection Method                                  || ------------------------------------- | ------------------ | ------------------------------------------------- || YAML frontmatter present              | +20                | grep for `^---$` between first 5 lines            || Summary paragraph in first 3 lines    | +15                | non-empty paragraph within first 3 lines after H1 || Language-tagged code blocks           | +10 each (max +30) | count ` ```lang ` patterns                        || Relative cross-refs that resolve      | +10 each (max +20) | check relative paths with `test -f`               || H2/H3 break every <200 lines          | +15                | count lines between headers                       || **Penalty**:
+### AI-Readiness Scoring Script
+
+Create `projects/Bash/scripts/score-docs.sh` that scores every `.md` file on AI-readiness:
 
 > 500 lines with no H2/H3 | −20                | wall-of-text detection                            |Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = rewriterequired.Output `docs/ai-readiness-report.md` with per-file scores and specificremediation per file.
 
@@ -213,7 +226,7 @@ Cross-reference Phase 5 output against the generator-orchestrator manifestexpect
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -260,7 +273,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |

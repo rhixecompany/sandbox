@@ -38,7 +38,10 @@ Review seed system files, create new seeders, fix issues, and implement improvem
 
 > ` template method pattern4. `src/scripts/seed/seed-orchestrator.ts` — Entity ordering, cache management, seeder dispatch5. `src/scripts/seed/index.ts` — Central exports6. `src/schemas/seed/` — Zod validation schemas for each entity
 
-## ArchitectureThe seed system uses the **Template Method Pattern**:```BaseSeeder<T
+## Architecture
+
+The seed system uses the **Template Method Pattern**:
+```BaseSeeder<T
 
 > .seed() → loadData() → validateData() → processBatches() → insertBatch()```- **Abstract methods** each seeder must implement: `getDataSources()`, `getUniqueField()`, `transformData()`, `insertBatch()`- **LookupCache** is shared across all seeders for deduplication (entity name → ID maps)- **SeedOrchestrator** manages dependency order and coordinates seeding- **Entity order**: users → types → authors → artists → genres → comics → comic-images → chapters → chapter-images
 
@@ -67,7 +70,7 @@ Templates in `templates/seed-review-and-create/`:- `tasks.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -136,7 +139,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -159,7 +162,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

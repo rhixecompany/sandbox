@@ -102,7 +102,9 @@ Plans must consist of discrete, atomic phases containing executable tasks. Each 
 
 - Each phase must have measurable completion criteria- Tasks within phases must be executable in parallel unless dependencies are specified- All task descriptions must include specific file paths, function names, and exact implementation details- No task should require human interpretation or decision-making
 
-## AI-Optimized Implementation Standards- Use explicit, unambiguous language with zero interpretation required- Structure all content as machine-parseable formats (tables, lists, structured data)- Include specific file paths, line numbers, and exact code references where applicable- Define all variables, constants, and configuration values explicitly- Provide complete context within each task description- Use standardized prefixes for all identifiers (REQ-, TASK-, etc.)- Include validation criteria that can be automatically verified
+## AI-Optimized Implementation Standards
+
+- Use explicit, unambiguous language with zero interpretation required
 
 ## Output File Specifications
 
@@ -164,7 +166,9 @@ All implementation plans must strictly adhere to the following template. Each se
 
 - **RISK-001**: Risk 1- **ASSUMPTION-001**: Assumption 1
 
-## 8. Related Specifications / Further Reading[Link to related spec 1] [Link to relevant external documentation]````
+## 8. Related Specifications / Further Reading
+
+[Link to related spec 1] [Link to relevant external documentation]````
 
 ## Template References
 
@@ -175,7 +179,7 @@ Detailed templates in `templates/create-implementation-plan/`:
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -201,7 +205,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -224,7 +228,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

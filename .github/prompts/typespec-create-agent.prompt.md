@@ -98,7 +98,9 @@ Use when you need to typespec create agent for the current workspace or task.
 - Scope capabilities (URLs, folders, etc.) when possible for better performance
 - Use triple-quoted strings for multi-line instructions
 
-## ExamplesAsk the user:1. What is the agent's purpose and role?2. What capabilities does it need?3. What knowledge sources should it access?4. What are typical user interactions?Then generate the complete TypeSpec agent definition.
+## Examples
+
+Ask the user:
 
 ## Template References
 
@@ -109,7 +111,7 @@ Templates in `templates/typespec-create-agent/`:- `phases.md`- `requirements.md`
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -126,7 +128,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -149,7 +151,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |

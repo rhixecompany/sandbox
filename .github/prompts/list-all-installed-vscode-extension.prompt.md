@@ -126,7 +126,7 @@ Reference these files by their Markdown links rather than duplicating their cont
 ## Error Handling
 
 | Error | Handling |
-|| ------- | ---------- ||
+| ------- | ---------- |
 | `code` CLI not in PATH | On Windows, the default path is `C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code\bin`. Fall back to the full path `"C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd" --list-extensions`. If still not found, install VS Code or add to PATH. |
 | Marketplace page 404 | Extension may be unpublished or private. Log as `[UNPUBLISHED]` and skip. |
 | Rate-limited by marketplace | Back off 5 seconds between fetches. If still blocked, surface the failure and continue without that dossier — partial data is actionable. |
@@ -147,7 +147,7 @@ Reference these files by their Markdown links rather than duplicating their cont
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
-|| ------- | ----------- ||
+| ------- | ----------- |
 | **Developer** | Implementation, debugging, refactoring |
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
@@ -194,7 +194,7 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 ## Verification Checklist
 
 | # | Gate | Criterion |
-|| --- | ------ | ----------- ||
+| --- | ------ | ----------- |
 | 1 | Scope | Change matches the original request |
 | 2 | Quality | Meets project standards |
 | 3 | Tests | Tests pass (if applicable) |
@@ -217,7 +217,7 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
-|| ------- | --------- ||
+| ------- | --------- |
 | `using-superpowers` | Foundational skill workflow |
 | `systematic-debugging` | Root cause analysis and fix |
 | `git-patch-management` | Patch creation and management |
