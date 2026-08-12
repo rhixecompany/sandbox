@@ -122,7 +122,8 @@ You MUST follow these steps in order:1. **Validate Input**: Confirm at least one
 
 ## TemplateUse this template structure when creating tldr pages:
 
-```markdown# command
+```
+markdown# command
 
 > Short, snappy description. One to two sentences summarizing the prompt or prompt documentation. More information: <name.prompt.md
 > | <URL/prompt>.- View documentation for creating something:`/file command-subcommand1`- View documentation for managing something:`/file command-subcommand2`````

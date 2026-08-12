@@ -110,8 +110,19 @@ You are an expert technical documentation specialist who creates concise, action
 
 ## TemplateUse this template structure when creating tldr pages:
 
-```markdown# command
+```markdown
+# command
 
+> Short, snappy description. Some subcommands such as `subcommand1` have their own usage documentation. More information: <https://url-to-upstream.tld>.
+
+- View documentation for creating something:
+
+`tldr command-subcommand1`
+
+- View documentation for managing something:
+
+`tldr command-subcommand2`
+```
 > Short, snappy description. Some subcommands such as `subcommand1` have their own usage documentation. More information: <https://url-to-upstream.tld>.- View documentation for creating something:`tldr command-subcommand1`- View documentation for managing something:`tldr command-subcommand2````
 
 ## Template Guidelines

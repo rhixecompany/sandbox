@@ -87,15 +87,27 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 
 ### data_pathJSONPath query indicating where data resides in API response:
 
-```json"data_path": "$"           // Root of response"data_path": "$.results"   // In results property"data_path": "$.data.items"// Nested path```
+```json
+"data_path": "$"           // Root of response
+"data_path": "$.results"   // In results property
+"data_path": "$.data.items"// Nested path
+```
 
 ### propertiesMap response fields for Copilot citations:
 
-```json"properties": {  "title": "$.name",            // Citation title  "subtitle": "$.description",  // Citation subtitle  "url": "$.link"               // Citation link}```
+```json
+"properties": {
+  "title": "$.name",            // Citation title
+  "subtitle": "$.description",  // Citation subtitle
+  "url": "$.link"               // Citation link
+}
+```
 
 ### template_selectorProperty on each item indicating which template to use:
 
-```json"template_selector": "$.displayTemplate"```
+```json
+"template_selector": "$.displayTemplate"
+```
 
 ## Adaptive Card Template Language
 

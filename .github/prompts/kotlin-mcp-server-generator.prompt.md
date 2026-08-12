@@ -90,7 +90,17 @@ package com.example.myserver.configimport kotlinx.serialization.Serializable@Ser
 
 ## tools/ToolRegistry.kt Template
 
-```kotlinpackage com.example.myserver.toolsimport io.modelcontextprotocol.kotlin.sdk.server.Serverfun Server.registerTools() {    registerTool1()    registerTool2()    // Register additional tools here}```
+```kotlin
+package com.example.myserver.tools
+
+import io.modelcontextprotocol.kotlin.sdk.server.Server
+
+fun Server.registerTools() {
+    registerTool1()
+    registerTool2()
+    // Register additional tools here
+}
+```
 
 ## ServerTest.kt Template
 

@@ -159,7 +159,9 @@ ing & Deployment
 
 ### GitHub MCP Server
 
-```URL: https://api.githubcopilot.com/mcp/Tools: search_repositories, search_users, get_repositoryAuth: OAuth 2.0```
+```
+URL: https://api.githubcopilot.com/mcp/Tools: search_repositories, search_users, get_repositoryAuth: OAuth 2.0
+```
 
 ### Jira MCP Server
 

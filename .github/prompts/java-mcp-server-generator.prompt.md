@@ -72,8 +72,33 @@ Generate a complete Model Context Protocol server project in Java using the offi
 
 ## ResourceDefinitions.java Template
 
-```javapackage com.example.mcp.resources;import io.mcp.server.resource.Resource;import java.util.List;public class ResourceDefinitions {    public static List<Resource
+```java
+package com.example.mcp.resources;
 
+import io.mcp.server.resource.Resource;
+
+import java.util.List;
+
+public class ResourceDefinitions {
+
+    public static List<Resource> getResources() {
+        return List.of(
+            Resource.builder()
+                .name("Example Data")
+                .uri("resource://data/example")
+                .description("Example resource data")
+                .mimeType("application/json")
+                .build(),
+            Resource.builder()
+                .name("Configuration")
+                .uri("resource://config")
+                .description("Server configuration")
+                .mimeType("application/json")
+                .build()
+        );
+    }
+}
+```
 > getResources() {        return List.of(            Resource.builder()                .name("Example Data")                .uri("resource://data/example")                .description("Example resource data")                .mimeType("application/json")                .build(),            Resource.builder()                .name("Configuration")                .uri("resource://config")                .description("Server configuration")                .mimeType("application/json")                .build()        );    }}```
 
 ## ResourceHandlers.java Template

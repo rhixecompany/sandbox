@@ -134,11 +134,32 @@ bashvendor/bin/phpunit
 
 ## Running the Server
 
-```bash# Install dependenciescomposer install# Run testsvendor/bin/phpunit# Start serverphp server.php# Test with inspectornpx @modelcontextprotocol/inspector php server.php```
+```bash
+# Install dependencies
+composer install
+
+# Run tests
+vendor/bin/phpunit
+
+# Start server
+php server.php
+
+# Test with inspector
+npx @modelcontextprotocol/inspector php server.php
+```
 
 ## Claude Desktop Configuration
 
-```json{  "mcpServers": {    "
+```json
+{
+  "mcpServers": {
+    "{project-name}": {
+      "command": "php",
+      "args": ["/absolute/path/to/server.php"]
+    }
+  }
+}
+```
 
 project-name}": {      "command": "php",      "args": ["/absolute/path/to/server.php"]    }  }}```Now generate the complete project based on user requirements!
 
