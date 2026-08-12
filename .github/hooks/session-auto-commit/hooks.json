@@ -1,11 +1,11 @@
 {
-	"name": "session-auto-commit",
-	"version": "1.0.2",
-	"description": "Automatically commits session changes at session end. Resolves the repo from the envelope cwd field; skips synthetic test session ids.",
-	"events": ["on_session_end"],
-	"entrypoint": "hook.sh",
-	"config": {
-		"commit_message_prefix": "chore(session): ",
-		"include_untracked": false
-	}
+  "name": "session-auto-commit",
+  "version": "1.0.2",
+  "description": "Automatically commits session changes at session end. Resolves the repo from the envelope cwd field; skips synthetic test session ids.",
+  "events": ["on_session_end"],
+  "entrypoint": "hook.sh",
+  "config": {
+    "commit_message_prefix": "chore(session): ",
+    "include_untracked": false
+  }
 }

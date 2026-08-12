@@ -1,7 +1,7 @@
 {
   "name": "session-logger",
-  "version": "1.4.0",
-  "description": "Logs Hermes session lifecycle and prompt events for replay and audit. Start and end capture resolve user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload; end capture derives status (normalized to completed/failed/interrupted/truncated), duration, and turns from wire fields + accumulated JSONL, then runs the full end capture (session_end_capture.py: tools, slash-skills, git changelog, errors, prompt summaries from state.db -> <session_id>.end.json) consumed by session-audit-report at next start. Skips synthetic test session ids.",
+  "version": "1.5.0",
+  "description": "Logs Hermes session lifecycle and prompt events for replay and audit. Start capture resolves user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload, then runs the full start capture (session_start_capture.py: session row, git baseline branch/sha/dirty files, environment snapshot -> <session_id>.start.json) consumed by session-audit-report as the diff anchor for the end changelog. End capture derives status (normalized to completed/failed/interrupted/truncated), duration, and turns from wire fields + accumulated JSONL, then runs the full end capture (session_end_capture.py: tools, slash-skills, git changelog, errors, prompt summaries from state.db -> <session_id>.end.json). Skips synthetic test session ids.",
   "events": ["on_session_start", "on_session_end", "pre_llm_call"],
   "entrypoint": "hook.sh",
   "config": {
