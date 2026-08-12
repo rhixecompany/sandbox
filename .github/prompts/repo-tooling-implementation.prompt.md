@@ -1,8 +1,9 @@
 ---
 name: repo-tooling-implementation
 title: Repo Tooling Implementation
-description: Fully implement the repo-tooling master plan with verification, fixes, and artifact delivery across the SandBox workspace.
-version: 1.0.0
+description: Fully implement the repo-tooling master plan with verification, fixes,
+  and artifact delivery across the SandBox workspace.
+version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
@@ -16,13 +17,27 @@ toolsets:
 - skills
 - todo
 trigger: /repo-tooling-implementation
-skills: []
-dependencies: []
+skills:
+- using-superpowers
+- systematic-debugging
+- verification-before-completion
+- executing-plans
+- tooling-implementation
+dependencies:
+- prompt:repo
+- skill:executing-plans
+- skill:systematic-debugging
+- skill:verification-before-completion
+- skill:using-superpowers
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-sequential-thinking
+- tool:mcp-tavily
 metadata:
   hermes: {}
 scripts: []
 formatter: default
-plan: ''
+plan: null
 ---
 ## Goal
 
@@ -143,15 +158,32 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep` | AST-based code search and replace |
+| Server | Purpose |
+|--------|---------|
 | `filesystem` | File read/write operations |
+| `github` | GitHub API operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
-| `github` | GitHub API operations |
+| `tavily` | Web search + URL extraction |
 
+## Hooks
 
+The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
+| Hook | When | Behavior |
+|------|------|----------|
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
+
+## Scripts
+
+- `.github/prompts/.enhance/analyze_prompts.py` — Prompt-library analyzer (audit/verify)
+- `.github/hooks/*` — Hook implementations listed in the Hooks section
 ## Tasks
 
 - [ ] Understand requirements and scope

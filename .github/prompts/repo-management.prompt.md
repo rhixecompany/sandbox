@@ -1,8 +1,11 @@
 ---
 name: repo-management
 title: Repo Management Pipeline
-description: 'Execute repo management operations across all project repos: branch normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the repo-research-pipeline phase completes. Also provides Quick Repo Overview (Phase 0): repo summary, entrypoint detection, and disk usage on demand.'
-version: 2.1.0
+description: 'Execute repo management operations across all project repos: branch
+  normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
+  repo-research-pipeline phase completes. Also provides Quick Repo Overview (Phase
+  0): repo summary, entrypoint detection, and disk usage on demand.'
+version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
@@ -94,10 +97,30 @@ grep -E '"main"|"start"|main\.py|def main|if __name__|fn main' package.json pypr
 
 Per git-helper skill steps: normalize to `development` + `production`, set `production` as GitHub default.
 
+> **⚠️ Destructive — requires explicit approval.** Deleting branches (local + remote) is irreversible. Do NOT execute the deletion commands until the user has approved the exact branch list.
+
+**Steps:**
+
+1. **Dry-run inventory:** list every branch that is NOT `development`/`production`:
+   `git branch | grep -v -E "development|production"`
+2. **Show remote candidates:** `git branch -r | grep -v -E "development|production"` — confirm which branches exist on origin.
+3. **Present the list to the user** with a proposed action per branch (delete local / delete remote / keep). Wait for explicit typed approval (e.g. `approved`) before running any deletion.
+4. **Execute only after approval:**
+   ```bash
+   # Local: delete one branch at a time after approval
+   git branch -D <branch>
+   # Remote: delete one branch at a time after approval
+   git push origin --delete <branch> || true
+   ```
+5. **Set default branch:** `gh repo edit <owner>/<repo> --default-branch production`
+6. **Verify:** `git branch` shows only `development` + `production`.
+
+**Rollback:** a deleted local branch can be restored via `git reflog` if not yet pruned; a deleted remote branch can be re-pushed from its local ref if the local branch still exists. Record pre-state (`git branch -a` output) before deletion.
+
 ```bash
-git branch | grep -v -E "development|production" | xargs -r git branch -D
-git push origin --delete <branch> || true
-gh repo edit <owner>/<repo> --default-branch production
+# NEVER run this without per-branch approval:
+# git branch | grep -v -E "development|production" | xargs -r git branch -D
+# git push origin --delete <branch> || true
 ```
 
 ### Phase 2: Ignore File Audit
@@ -193,12 +216,33 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep` | AST-based code search and replace |
+| Server | Purpose |
+|--------|---------|
+| `tavily` | Web search + URL extraction |
 | `filesystem` | File read/write operations |
+| `github` | GitHub API operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
-| `github` | GitHub API operations |
+
+## Hooks
+
+The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
+
+| Hook | When | Behavior |
+|------|------|----------|
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
+
+## Scripts
+
+- `scripts/repo-init.py` — Scaffold/verify AI-agent context files for a repo (see repo-init.prompt.md)
+- `.github/prompts/.enhance/analyze_prompts.py` — Prompt-library analyzer (audit/verify)
+- `.github/hooks/*` — Hook implementations listed in the Hooks section
 
 ## Tasks
 

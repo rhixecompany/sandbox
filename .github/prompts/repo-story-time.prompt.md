@@ -1,51 +1,52 @@
 ---
 name: repo-story-time
 title: 'Repository Analysis: Story from Git History'
-description: Generate a comprehensive repository summary and narrative story from commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
-version: 2.1.0
+description: Generate a comprehensive repository summary and narrative story from
+  commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
+version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - browser
-  - code_execution
-  - file
-  - mcp
-  - terminal
-  - web
+- browser
+- code_execution
+- file
+- mcp
+- terminal
+- web
 scripts: []
 skills:
-  - code-wiki
-  - gh-cli
-  - git-commit
-  - writing-clearly-and-concisely
-  - subagent-driven-development
+- code-wiki
+- gh-cli
+- git-commit
+- writing-clearly-and-concisely
+- subagent-driven-development
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
-  - "prompt:repo"
-  - "skill:code-wiki"
-  - "skill:gh-cli"
-  - "skill:git-commit"
-  - "skill:writing-clearly-and-concisely"
-  - "tool:mcp-tavily"
-  - "tool:mcp-github"
-  - "tool:mcp-sequential-thinking"
-  - "skill:subagent-driven-development"
+- prompt:repo
+- skill:code-wiki
+- skill:gh-cli
+- skill:git-commit
+- skill:writing-clearly-and-concisely
+- tool:mcp-tavily
+- tool:mcp-github
+- tool:mcp-sequential-thinking
+- skill:subagent-driven-development
 tags:
-  - architecture
-  - generator
-  - git
-  - mcp
-  - ml
-  - prompts
-  - typescript
-  - vscode
-  - workflow
+- architecture
+- generator
+- git
+- mcp
+- ml
+- prompts
+- typescript
+- vscode
+- workflow
 trigger: /repo-story-time
 metadata:
   hermes: {}
   related_prompts:
-    - repo.prompt.md
+  - repo.prompt.md
 ---
 
 ## Goal
@@ -162,13 +163,31 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep` | AST-based code search and replace |
+| Server | Purpose |
+|--------|---------|
+| `tavily` | Web search + URL extraction (repo context) |
+| `github` | GitHub API operations (commit history) |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
 | `fetch` | Web page content extraction |
 | `playwright` | Browser automation for interactive pages |
-| `github` | GitHub API operations |
 
+## Hooks
+
+The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
+
+| Hook | When | Behavior |
+|------|------|----------|
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
+
+## Scripts
+
+- `.github/hooks/*` — Hook implementations listed in the Hooks section
 ## Tasks
 
 - [ ] Understand requirements and scope

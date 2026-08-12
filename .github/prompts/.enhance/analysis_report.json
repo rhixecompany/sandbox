@@ -1,19 +1,23 @@
 {
-  "total_files": 222,
+  "total_files": 226,
   "issue_counts": {
     "critical": 0,
     "high": 0,
     "medium": 1,
-    "info": 5
+    "info": 9
   },
   "files_no_frontmatter": [],
   "all_issues": {
     "info": {
       "RULES_INLINE_NOT_SHARED": [
         "all-repo-docker-setup",
+        "ngn-earnings-research",
+        "repo-init",
         "setup-bun-bunx",
         "setup-groq-cloud",
-        "smithery-setup"
+        "smithery-setup",
+        "uk-earnings-research",
+        "us-earnings-research"
       ],
       "MISSING_RULES_SECTION": [
         "test-providers-models"
@@ -537,6 +541,10 @@
       "issue_count": 0
     },
     {
+      "name": "ngn-earnings-research",
+      "issue_count": 1
+    },
+    {
       "name": "oh-my-openagent-setup",
       "issue_count": 0
     },
@@ -695,6 +703,10 @@
     {
       "name": "remember",
       "issue_count": 0
+    },
+    {
+      "name": "repo-init",
+      "issue_count": 1
     },
     {
       "name": "repo-management",
@@ -865,6 +877,10 @@
       "issue_count": 0
     },
     {
+      "name": "uk-earnings-research",
+      "issue_count": 1
+    },
+    {
       "name": "update-avm-modules-in-bicep",
       "issue_count": 0
     },
@@ -891,6 +907,10 @@
     {
       "name": "update-specification",
       "issue_count": 0
+    },
+    {
+      "name": "us-earnings-research",
+      "issue_count": 1
     },
     {
       "name": "web-research-pipeline",
