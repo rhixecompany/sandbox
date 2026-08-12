@@ -162,7 +162,13 @@ Run the audit script (`C:/Users/Alexa/AppData/Local/Temp/audit_skills.py`) orimp
 
 ## When to Use`):
 
-```python# F3 fix pattern:content = content.replace(    "
+```python
+# F3 fix pattern:
+content = content.replace(
+    "## Goal\nUse when Use when <desc>",
+    "## Goal\n<desc>"
+)
+```
 
 ## Steps
 

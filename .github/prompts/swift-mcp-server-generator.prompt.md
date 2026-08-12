@@ -117,8 +117,26 @@ import MCPimport Loggingfunc createServer() async -
 
 ## ResourceDefinitions.swift Template
 
-```swiftimport MCPfunc getResourceDefinitions() -
+```swift
+import MCP
 
+func getResourceDefinitions() -> [Resource] {
+    [
+        Resource(
+            name: "Example Data",
+            uri: "resource://data/example",
+            description: "Example resource data",
+            mimeType: "application/json"
+        ),
+        Resource(
+            name: "Configuration",
+            uri: "resource://config",
+            description: "Server configuration",
+            mimeType: "application/json"
+        )
+    ]
+}
+```
 > [Resource] {    [        Resource(            name: "Example Data",            uri: "resource://data/example",            description: "Example resource data",            mimeType: "application/json"        ),        Resource(            name: "Configuration",            uri: "resource://config",            description: "Server configuration",            mimeType: "application/json"        )    ]}```
 
 ## ResourceHandlers.swift Template
@@ -129,8 +147,22 @@ import MCPimport Loggingfunc createServer() async -
 
 ## PromptDefinitions.swift Template
 
-```swiftimport MCPfunc getPromptDefinitions() -
+```swift
+import MCP
 
+func getPromptDefinitions() -> [Prompt] {
+    [
+        Prompt(
+            name: "code-review",
+            description: "Generate a code review prompt",
+            arguments: [
+                .init(name: "language", description: "Programming language", required: true),
+                .init(name: "focus", description: "Review focus area", required: false)
+            ]
+        )
+    ]
+}
+```
 > [Prompt] {    [        Prompt(            name: "code-review",            description: "Generate a code review prompt",            arguments: [                .init(name: "language", description: "Programming language", required: true),                .init(name: "focus", description: "Review focus area", required: false)            ]        )    ]}```
 
 ## PromptHandlers.swift Template
@@ -212,7 +244,9 @@ MIT````
 
 ## Build and Run
 
-```bash# Buildswift build# Runswift run# Testswift test# Release buildswift build -c release# Installswift build -c releasecp .build/release/MyMCPServer /usr/local/bin/````
+```
+bash# Buildswift build# Runswift run# Testswift test# Release buildswift build -c release# Installswift build -c releasecp .build/release/MyMCPServer /usr/local/bin/
+```
 
 ## Integration with Claude Desktop
 

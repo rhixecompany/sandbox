@@ -50,11 +50,37 @@ gem 'mcp', '~
 
 ## Rakefile Template
 
-```rubyrequire 'rake/testtask'require 'rubocop/rake_task'Rake::TestTask.new(:test) do |t|  t.libs << 'test'  t.libs << 'lib'  t.test_files = FileList['test/**/*_test.rb']endRuboCop::RakeTask.newtask default: %i[test rubocop]```
+```ruby
+require 'rake/testtask'
+require 'rubocop/rake_task'
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.test_files = FileList['test/**/*_test.rb']
+end
+
+RuboCop::RakeTask.new
+
+task default: %i[test rubocop]
+```
 
 ## lib/my_mcp_server.rb Template
 
-```ruby# frozen_string_literal: truerequire 'mcp'require_relative 'my_mcp_server/server'require_relative 'my_mcp_server/tools/greet_tool'require_relative 'my_mcp_server/tools/calculate_tool'require_relative 'my_mcp_server/prompts/code_review_prompt'require_relative 'my_mcp_server/resources/example_resource'module MyMcpServer  VERSION = '1.0.0'end```
+```ruby
+# frozen_string_literal: true
+
+require 'mcp'
+require_relative 'my_mcp_server/server'
+require_relative 'my_mcp_server/tools/greet_tool'
+require_relative 'my_mcp_server/tools/calculate_tool'
+require_relative 'my_mcp_server/prompts/code_review_prompt'
+require_relative 'my_mcp_server/resources/example_resource'
+
+module MyMcpServer
+  VERSION = '1.0.0'
+end
+```
 
 ## lib/my_mcp_server/server.rb Template
 
@@ -88,13 +114,35 @@ gem 'mcp', '~
 
 ## bin/mcp-server Template
 
-```ruby#!/usr/bin/env ruby# frozen_string_literal: truerequire_relative '../lib/my_mcp_server'begin  server = MyMcpServer::Server.new  server.start_stdiorescue Interrupt  warn "\nShutting down server..."  exit 0rescue StandardError =
+```ruby
+#!/usr/bin/env ruby
+# frozen_string_literal: true
 
+require_relative '../lib/my_mcp_server'
+
+begin
+  server = MyMcpServer::Server.new
+  server.start_stdio
+rescue Interrupt
+  warn "\nShutting down server..."
+  exit 0
+rescue StandardError => e
+  warn "Error: #{e.message}"
+  warn e.backtrace.join("\n")
+  exit 1
+end
+```
 > e  warn "Error: #{e.message}"  warn e.backtrace.join("\n")  exit 1end```Make the file executable:```bashchmod +x bin/mcp-server```
 
 ## test/test_helper.rb Template
 
-```ruby# frozen_string_literal: true$LOAD_PATH.unshift File.expand_path('../lib', __dir__)require 'my_mcp_server'require 'minitest/autorun'```
+```ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'my_mcp_server'
+require 'minitest/autorun'
+```
 
 ## test/tools/greet_tool_test.rb Template
 
@@ -146,7 +194,24 @@ Add to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server"
 
 ## Project Structure
 
-```my-mcp-server/├── Gemfile              # Dependencies├── Rakefile             # Build tasks├── lib/                 # Source code│   ├── my_mcp_server.rb # Main entry point│   └── my_mcp_server/   # Module namespace│       ├── server.rb    # Server setup│       ├── tools/       # Tool implementations│       ├── prompts/     # Prompt templates│       └── resources/   # Resource handlers├── bin/                 # Executables│   └── mcp-server       # Stdio server├── test/                # Test suite│   ├── test_helper.rb   # Test configuration│   └── tools/           # Tool tests└── README.md            # This file```
+```
+my-mcp-server/
+├── Gemfile              # Dependencies
+├── Rakefile             # Build tasks
+├── lib/                 # Source code
+│   ├── my_mcp_server.rb # Main entry point
+│   └── my_mcp_server/   # Module namespace
+│       ├── server.rb    # Server setup
+│       ├── tools/       # Tool implementations
+│       ├── prompts/     # Prompt templates
+│       └── resources/   # Resource handlers
+├── bin/                 # Executables
+│   └── mcp-server       # Stdio server
+├── test/                # Test suite
+│   ├── test_helper.rb   # Test configuration
+│   └── tools/           # Tool tests
+└── README.md            # This file
+```
 
 ## License
 

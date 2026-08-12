@@ -79,7 +79,9 @@ sMemory instructions can be stored in two scopes:- **Global** (`global` or `user
 
 ## Syntax
 
-```/memory-merger >domain-name [scope]```- `>domain-name` - Required. The domain to merge (e.g., `>clojure`, `>git-workflow`, `>prompt-engineering`)- `[scope]` - Optional. One of: `global`, `user` (both mean global), `workspace`, or `ws`. Defaults to `global`**Examples:**- `/memory-merger >prompt-engineering` - merges global prompt engineering memories- `/memory-merger >clojure workspace` - merges workspace clojure memories- `/memory-merger >git-workflow ws` - merges workspace git-workflow memories
+```
+/memory-merger >domain-name [scope]
+```
 
 ## Process
 
@@ -103,7 +105,8 @@ Review all memory sections and present them for merger consideration:```
 
 ## Example
 
-```User: "/memory-merger
+```
+User: "/memory-merger
 
 > clojure"Agent:1. Reads clojure-memory.instructions.md and clojure.instructions.md2. Proposes 3 memories for merger3. [STOPS]User: "go"Agent:4. Defines quality bar for 10/105. Merges new instructions candidate, iterates to 10/106. Updates clojure.instructions.md7. Cleans clojure-memory.instructions.md```
 

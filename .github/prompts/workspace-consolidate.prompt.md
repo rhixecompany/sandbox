@@ -143,7 +143,16 @@ All workspace-level reports go under `docs/`.
 ### Required Frontmatter (YAML)
 
 Every `.md` file should have standard frontmatter:
-```yaml---title: Human-Readable Titledescription: One-line summary of the document's purpose.status: draft | review | final | archivedtags: [comma, separated, tags]created: YYYY-MM-DDupdated: YYYY-MM-DD---``` #
+```yaml
+---
+title: Human-Readable Title
+description: One-line summary of the document's purpose.
+status: draft | review | final | archived
+tags: [comma, separated, tags]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+---
+```
 
 ### Content Standards
 

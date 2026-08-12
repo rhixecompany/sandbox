@@ -47,7 +47,12 @@ pnpm install                              # Install dependenciescp .env.local.ex
 
 ## 2. ✅ Quality Gate (Before Every PR)
 
-```bashpnpm type-check          # 0 TypeScript errors requiredpnpm lint:fix            # ESLint + Prettier auto-fixpnpm test                # Vitest unit tests (jsdom)pnpm build               # Production build validation```All four commands must pass before merging any code.---
+```bash
+pnpm type-check          # 0 TypeScript errors required
+pnpm lint:fix            # ESLint + Prettier auto-fix
+pnpm test                # Vitest unit tests (jsdom)
+pnpm build               # Production build validation
+```
 
 ## 3. 📚 Reference Resolution Hierarchy
 

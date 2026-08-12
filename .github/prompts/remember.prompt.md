@@ -83,7 +83,9 @@ Transform debugging sessions, workflow discoveries, frequently repeated mistakes
 
 ## Syntax
 
-```/remember [>domain-name [scope]] lesson content```- `>domain-name` - Optional. Explicitly target a domain (e.g., `>clojure`, `>git-workflow`)- `[scope]` - Optional. One of: `global`, `user` (both mean global), `workspace`, or `ws`. Defaults to `global`- `lesson content` - Required. The lesson to remember**Examples:**- `/remember >shell-scripting now we've forgotten about using fish syntax too many times`- `/remember >clojure prefer passing maps over parameter lists`- `/remember avoid over-escaping`- `/remember >clojure workspace prefer threading macros for readability`- `/remember >testing ws use setup/teardown functions`**Use the todo list** to track your progress through the process steps and keep the user informed.
+```
+/remember [>domain-name [scope]] lesson content
+```
 
 ## Memory File Structure
 

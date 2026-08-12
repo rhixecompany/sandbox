@@ -114,7 +114,10 @@ ing Patterns>
 
 **Required** (in `.env.local`):
 
-```DATABASE_URL=postgresql://user:password@host:port/databaseAUTH_SECRET=openssl rand -hex 32```**Optional** (see `.env.local.example` for full list):
+```
+DATABASE_URL=postgresql://user:password@host:port/database
+AUTH_SECRET=openssl rand -hex 32
+```
 
 - `AUTH_GITHUB_ID`, `AUTH_GITHUB_SECRET`- `AUTH_KEYCLOAK_URL`, etc.
 - `NEXTAUTH_URL` (override default)All validated via `src/lib/env.ts` at startup using Zod.
