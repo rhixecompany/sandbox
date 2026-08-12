@@ -1,77 +1,77 @@
 ---
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
-description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage.'
+description: "Research all 17 projects via delegated sub-prompts: web search for similar projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory, set up GitHub PR workflow, check disk usage."
 version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
-- browser
-- code_execution
-- file
-- mcp
-- terminal
-- vision
-- web
+  - browser
+  - code_execution
+  - file
+  - mcp
+  - terminal
+  - vision
+  - web
 scripts: []
 skills:
-- brainstorming
-- code-wiki
-- content-research-writer
-- gh-cli
-- git-commit
-- git-submodule-workflow
-- github-repo-management
-- plans-and-specs
-- spike
-- systematic-debugging
-- web-research-pipeline
-- writing-clearly-and-concisely
-- writing-skills
-- subagent-driven-development
-- firecrawl-search
-- firecrawl-scrape
+  - brainstorming
+  - code-wiki
+  - content-research-writer
+  - gh-cli
+  - git-commit
+  - git-submodule-workflow
+  - github-repo-management
+  - plans-and-specs
+  - spike
+  - systematic-debugging
+  - web-research-pipeline
+  - writing-clearly-and-concisely
+  - writing-skills
+  - subagent-driven-development
+  - firecrawl-search
+  - firecrawl-scrape
 formatter: default
 plan: null
 dependencies:
-- prompt:context-map
-- prompt:repo-management
-- prompt:repo-research-pipeline
-- prompt:repo-story-time
-- prompt:update-implementation-plan
-- prompt:web-research-pipeline
-- skill:brainstorming
-- skill:code-wiki
-- skill:content-research-writer
-- skill:gh-cli
-- skill:git-commit
-- skill:git-submodule-workflow
-- skill:github-repo-management
-- skill:plans-and-specs
-- skill:spike
-- skill:systematic-debugging
-- skill:web-research-pipeline
-- skill:writing-clearly-and-concisely
-- skill:writing-skills
-- skill:subagent-driven-development
-- skill:firecrawl-search
-- skill:firecrawl-scrape
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-memory
-- tool:mcp-sequential-thinking
-- tool:mcp-tavily
+  - prompt:context-map
+  - prompt:repo-management
+  - prompt:repo-research-pipeline
+  - prompt:repo-story-time
+  - prompt:update-implementation-plan
+  - prompt:web-research-pipeline
+  - skill:brainstorming
+  - skill:code-wiki
+  - skill:content-research-writer
+  - skill:gh-cli
+  - skill:git-commit
+  - skill:git-submodule-workflow
+  - skill:github-repo-management
+  - skill:plans-and-specs
+  - skill:spike
+  - skill:systematic-debugging
+  - skill:web-research-pipeline
+  - skill:writing-clearly-and-concisely
+  - skill:writing-skills
+  - skill:subagent-driven-development
+  - skill:firecrawl-search
+  - skill:firecrawl-scrape
+  - tool:mcp-filesystem
+  - tool:mcp-github
+  - tool:mcp-memory
+  - tool:mcp-sequential-thinking
+  - tool:mcp-tavily
 tags:
-- architecture
-- frontend
-- git
-- mcp
-- onboarding
-- performance
-- prompts
-- security
-- typescript
-- vscode
+  - architecture
+  - frontend
+  - git
+  - mcp
+  - onboarding
+  - performance
+  - prompts
+  - security
+  - typescript
+  - vscode
 trigger: /repo
 metadata:
   hermes: {}
@@ -104,25 +104,25 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 
 ### Repo Inventory (17 projects)
 
-| #  | Project                      | Type                                           | Action       |
-| -- | ---------------------------- | ---------------------------------------------- | ------------ |
-| 1  | Banking                      | Fintech (Next.js 16, Drizzle, Plaid/Dwolla)    | ✅ Update     |
-| 2  | comicwise                    | Comic streaming (Next.js 15, Prisma, Stripe)   | ✅ Update     |
-| 3  | cookiecutter-django-tailwind | Django + Tailwind template                     | ✅ Update     |
-| 4  | Django-Scrapy-Selenium       | Web scraping (Django, Scrapy, Selenium)        | ✅ Update     |
-| 5  | ecom                         | Ecommerce (DRF + React/Redux, PayPal)          | ✅ Update     |
-| 6  | profile                      | Blog/CMS (Django, GCS, CKEditor)               | ✅ Update     |
-| 7  | Python-projects              | 18 beginner Python scripts                     | ✅ Update     |
-| 8  | rhixe_scans                  | Comic reader (Next.js 15, Prisma, Stripe/PayPa | l)  ✅ Update |
-| 9  | rhixecompany-comics          | Comics platform (Django + Next.js 16)          | ✅ Update     |
-| 10 | selenium_webdriver           | Browser automation (Node.js, ChromeDriver)     | ✅ Update     |
-| 11 | university-libary-jsm        | Library mgmt (Next.js 15, Drizzle, Neon, Redis | )   ✅ Update |
-| 12 | xamehi                       | Full-stack (Django + Express + React)          | ✅ Update     |
-| 13 | xamehi.tv                    | Streaming (DRF + React 17, Redux, MUI)         | ✅ Update     |
-| 14 | youtube-downloader           | YouTube CLI (yt-dlp, curl_cffi)                | ✅ Update     |
-| 15 | Bash                         | Automation Toolkit (Bun/TypeScript)            | ✅ Update     |
-| 16 | Resume_maker                 | Job Documents Generator (Bun/CLI)              | ✅ Update     |
-| 17 | mcp-servers                  | Multi-language MCP server implementations      | ❌ Create     |
+| #   | Project                      | Type                                           | Action       |
+| --- | ---------------------------- | ---------------------------------------------- | ------------ |
+| 1   | Banking                      | Fintech (Next.js 16, Drizzle, Plaid/Dwolla)    | ✅ Update    |
+| 2   | comicwise                    | Comic streaming (Next.js 15, Prisma, Stripe)   | ✅ Update    |
+| 3   | cookiecutter-django-tailwind | Django + Tailwind template                     | ✅ Update    |
+| 4   | Django-Scrapy-Selenium       | Web scraping (Django, Scrapy, Selenium)        | ✅ Update    |
+| 5   | ecom                         | Ecommerce (DRF + React/Redux, PayPal)          | ✅ Update    |
+| 6   | profile                      | Blog/CMS (Django, GCS, CKEditor)               | ✅ Update    |
+| 7   | Python-projects              | 18 beginner Python scripts                     | ✅ Update    |
+| 8   | rhixe_scans                  | Comic reader (Next.js 15, Prisma, Stripe/PayPa | l) ✅ Update |
+| 9   | rhixecompany-comics          | Comics platform (Django + Next.js 16)          | ✅ Update    |
+| 10  | selenium_webdriver           | Browser automation (Node.js, ChromeDriver)     | ✅ Update    |
+| 11  | university-libary-jsm        | Library mgmt (Next.js 15, Drizzle, Neon, Redis | ) ✅ Update  |
+| 12  | xamehi                       | Full-stack (Django + Express + React)          | ✅ Update    |
+| 13  | xamehi.tv                    | Streaming (DRF + React 17, Redux, MUI)         | ✅ Update    |
+| 14  | youtube-downloader           | YouTube CLI (yt-dlp, curl_cffi)                | ✅ Update    |
+| 15  | Bash                         | Automation Toolkit (Bun/TypeScript)            | ✅ Update    |
+| 16  | Resume_maker                 | Job Documents Generator (Bun/CLI)              | ✅ Update    |
+| 17  | mcp-servers                  | Multi-language MCP server implementations      | ❌ Create    |
 
 ## Constraints
 
@@ -369,9 +369,9 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 
 ## Similar Projects
 
-| Project | URL       | Why Relevant            |
-| ------- | --------- | ----------------------- |
-| <name>  | <github u | rl>  <1-line relevance> |
+| Project | URL       | Why Relevant           |
+| ------- | --------- | ---------------------- |
+| <name>  | <github u | rl> <1-line relevance> |
 
 ## Key Findings
 
@@ -429,17 +429,17 @@ List project name + shared technology. Must be symmetric.>
 
 ## Acceptance Criteria
 
-| Gate             | Condition                            | Verification Command                                             |
-| ---------------- | ------------------------------------ | ---------------------------------------------------------------- |
-| All 17 reports e | xist       count = 17                | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \  wc -l` |
-| Each report ≥ 9  | sections   `grep -c '^## '` ≥ 9      | per-report loop                                                  |
-| No report under  | 1KB        `wc -c` ≥ 1024            | per-report loop                                                  |
-| No report over 5 | KB         `wc -c` ≤ 5120            | per-report loop                                                  |
-| 34 URL spot-chec | ks pass    `web_extract` non-404     | Phase 4 step 3                                                   |
-| RESEARCH_INDEX.m | d current  17 rows, size + date corr | ect            read + verify                                     |
-| No fabricated fi | ndings     every fact traces to `web | _search`       manual review                                     |
-| Scope respected  | no branch/migration work             | started        agent self-check                                  |
-| Sub-prompts acce | ssible     `.github/prompts/*.prompt | .md` resolves  file check                                        |
+| Gate             | Condition                           | Verification Command                                             |
+| ---------------- | ----------------------------------- | ---------------------------------------------------------------- |
+| All 17 reports e | xist count = 17                     | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \  wc -l` |
+| Each report ≥ 9  | sections `grep -c '^## '` ≥ 9       | per-report loop                                                  |
+| No report under  | 1KB `wc -c` ≥ 1024                  | per-report loop                                                  |
+| No report over 5 | KB `wc -c` ≤ 5120                   | per-report loop                                                  |
+| 34 URL spot-chec | ks pass `web_extract` non-404       | Phase 4 step 3                                                   |
+| RESEARCH_INDEX.m | d current 17 rows, size + date corr | ect read + verify                                                |
+| No fabricated fi | ndings every fact traces to `web    | _search` manual review                                           |
+| Scope respected  | no branch/migration work            | started agent self-check                                         |
+| Sub-prompts acce | ssible `.github/prompts/*.prompt    | .md` resolves file check                                         |
 
 ---
 
@@ -448,22 +448,22 @@ List project name + shared technology. Must be symmetric.>
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-| Skill                | Phase             | Purpose                                       |
-| -------------------- | ----------------- | --------------------------------------------- |
-| `brainstorming`      | 1                 | Explore research angles per project           |
-| `plans-and-specs`    | 0                 | Structure research plan                       |
-| `systematic-debuggin | g`           0, 4 | Detect stale/missing reports                  |
-| `context7`           | 1                 | Library API docs and patterns                 |
-| `spike`              | 0                 | Prototype report format before batch          |
-| `writing-skills`     | 2                 | Crisp, compact markdown writing               |
-| `content-research-wr | iter`        2    | Research synthesis                            |
-| `repo-management`    | —                 | Post-research: branch norm, CI, consolidation |
-| `repo-story-time`    | —                 | Git history analysis and repo narrative       |
-| `web-research-pipeli | ne`          1    | Delegated web search + extraction             |
-| `repo-research-pipel | ine`         1    | Multi-project research orchestrator           |
-| `github-repo-managem | ent`         —    | GitHub repo operations for post-research      |
-| `code-wiki`          | —                 | Repo analysis for repo-story-time             |
-| `writing-clearly-and | -concisely`  —    | Clean writing for repo-story-time             |
+| Skill                | Phase         | Purpose                                       |
+| -------------------- | ------------- | --------------------------------------------- |
+| `brainstorming`      | 1             | Explore research angles per project           |
+| `plans-and-specs`    | 0             | Structure research plan                       |
+| `systematic-debuggin | g` 0, 4       | Detect stale/missing reports                  |
+| `context7`           | 1             | Library API docs and patterns                 |
+| `spike`              | 0             | Prototype report format before batch          |
+| `writing-skills`     | 2             | Crisp, compact markdown writing               |
+| `content-research-wr | iter` 2       | Research synthesis                            |
+| `repo-management`    | —             | Post-research: branch norm, CI, consolidation |
+| `repo-story-time`    | —             | Git history analysis and repo narrative       |
+| `web-research-pipeli | ne` 1         | Delegated web search + extraction             |
+| `repo-research-pipel | ine` 1        | Multi-project research orchestrator           |
+| `github-repo-managem | ent` —        | GitHub repo operations for post-research      |
+| `code-wiki`          | —             | Repo analysis for repo-story-time             |
+| `writing-clearly-and | -concisely` — | Clean writing for repo-story-time             |
 
 ---
 
@@ -490,27 +490,27 @@ List project name + shared technology. Must be symmetric.>
 > Execute ONLY after Phase 4 verification passes for all 17 reports.
 > Full specifications live in `prompts/repo-management.prompt.md`.
 
-| # | Goal                                               | Priority                                        |
-| - | -------------------------------------------------- | ----------------------------------------------- |
-| 1 | Consolidation — comicwise + Django-Scrapy-Selenium | + selenium_webdriver → rhixecompany-comics  P1  |
-| 2 | Branch normalization — `development` + `production | ` only per repo                              P2 |
-| 3 | Ignore file audit — fix all `.*ignore` files       | P3                                              |
-| 4 | Dependency audit — clean package.json / requiremen | ts.txt                                       P4 |
-| 5 | Bun migration — npm/pnpm → bun for JS/TS repos     | P5                                              |
-| 6 | CI workflow setup — GitHub Actions for all repos   | P6                                              |
+| #   | Goal                                               | Priority                                      |
+| --- | -------------------------------------------------- | --------------------------------------------- |
+| 1   | Consolidation — comicwise + Django-Scrapy-Selenium | + selenium_webdriver → rhixecompany-comics P1 |
+| 2   | Branch normalization — `development` + `production | ` only per repo P2                            |
+| 3   | Ignore file audit — fix all `.*ignore` files       | P3                                            |
+| 4   | Dependency audit — clean package.json / requiremen | ts.txt P4                                     |
+| 5   | Bun migration — npm/pnpm → bun for JS/TS repos     | P5                                            |
+| 6   | CI workflow setup — GitHub Actions for all repos   | P6                                            |
 
 ---
 
 ## Related Prompts
 
-| Prompt            | Location                              | Purpose                                                        |
-| ----------------- | ------------------------------------- | -------------------------------------------------------------- |
-| `/bash-scripts-fi | x`        `prompts/bash-scripts-fix.p | rompt.md`        Script modernization for all 16 projects      |
-| `/workspace-conso | lidate`   `prompts/workspace-consolid | ate.prompt.md`   Workspace-level consolidation                 |
-| `/repo-management | `         `prompts/repo-management.pr | ompt.md`         Branch norm, Bun migration, CI, consolidation |
-| `/repo-story-time | `         `prompts/repo-story-time.pr | ompt.md`         Git history analysis and repo narrative       |
-| `/web-research-pi | peline`   `prompts/web-research-pipel | ine.prompt.md`   Web search + extraction per project           |
-| `/repo-research-p | ipeline`  `prompts/repo-research-pipe | line.prompt.md`  Multi-project research orchestrator           |
+| Prompt            | Location                              | Purpose                                                |
+| ----------------- | ------------------------------------- | ------------------------------------------------------ |
+| `/bash-scripts-fi | x`        `prompts/bash-scripts-fix.p | rompt.md` Script modernization for all 16 projects     |
+| `/workspace-conso | lidate`   `prompts/workspace-consolid | ate.prompt.md` Workspace-level consolidation           |
+| `/repo-management | `         `prompts/repo-management.pr | ompt.md` Branch norm, Bun migration, CI, consolidation |
+| `/repo-story-time | `         `prompts/repo-story-time.pr | ompt.md` Git history analysis and repo narrative       |
+| `/web-research-pi | peline`   `prompts/web-research-pipel | ine.prompt.md` Web search + extraction per project     |
+| `/repo-research-p | ipeline`  `prompts/repo-research-pipe | line.prompt.md` Multi-project research orchestrator    |
 
 ---
 
@@ -523,11 +523,11 @@ List project name + shared technology. Must be symmetric.>
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona      | When to Use                               |
-| ------------ | ----------------------------------------- |
-| **Developer* | *  Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance            |
-| **User**     | General purpose, operations               |
+| Persona      | When to Use                              |
+| ------------ | ---------------------------------------- |
+| *_Developer_ | * Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance           |
+| **User**     | General purpose, operations              |
 
 ## Personality
 
@@ -567,13 +567,13 @@ See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton
 
 ## Verification Checklist
 
-| # | Gate      | Criterion                           |
-| - | --------- | ----------------------------------- |
-| 1 | Scope     | Change matches the original request |
-| 2 | Quality   | Meets project standards             |
-| 3 | Tests     | Tests pass (if applicable)          |
-| 4 | Regressio | n  No unintended side effects       |
-| 5 | Docs      | Changes documented if needed        |
+| #   | Gate      | Criterion                           |
+| --- | --------- | ----------------------------------- |
+| 1   | Scope     | Change matches the original request |
+| 2   | Quality   | Meets project standards             |
+| 3   | Tests     | Tests pass (if applicable)          |
+| 4   | Regressio | n No unintended side effects        |
+| 5   | Docs      | Changes documented if needed        |
 
 ## Dependencies
 
@@ -597,7 +597,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `filesystem`    | File read/write operations                             |
 | `github`        | GitHub API operations                                  |
 | `memory`        | Persistent memory operations                           |
-| `sequential-thi | nking`  Structured reasoning for complex problems      |
+| `sequential-thi | nking` Structured reasoning for complex problems       |
 | `context7`      | Library API docs and patterns                          |
 | `ast-grep`      | AST-based code search and replace                      |
 | `playwright`    | Browser automation for interactive pages               |
@@ -606,13 +606,13 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook             | When                   | Behavior                            |
-| ---------------- | ---------------------- | ----------------------------------- |
-| `session-logger` | session star           | t/end  Logs session metadata        |
-| `governance-audi | t`        session even | ts     Audits governance compliance |
-| `session-auto-co | mmit`     session end  | Auto-commits session state          |
-| `pre-exec-valida | te.sh`    before comma | nds    Validates command execution  |
-| `post-exec-state | -log.py`  after comman | ds     Appends state log            |
+| Hook             | When                  | Behavior                        |
+| ---------------- | --------------------- | ------------------------------- |
+| `session-logger` | session star          | t/end Logs session metadata     |
+| `governance-audi | t` session even       | ts Audits governance compliance |
+| `session-auto-co | mmit` session end     | Auto-commits session state      |
+| `pre-exec-valida | te.sh` before comma   | nds Validates command execution |
+| `post-exec-state | -log.py` after comman | ds Appends state log            |
 
 ## Tasks
 

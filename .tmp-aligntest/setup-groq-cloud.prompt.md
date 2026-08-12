@@ -6,28 +6,29 @@ version: 1.0.0
 license: MIT
 author: Hermes Agent
 tags:
-- groq
-- llm
-- api
-- setup
-- reference
-- documentation
+  - groq
+  - llm
+  - api
+  - setup
+  - reference
+  - documentation
 toolsets:
-- file
-- terminal
-- web
-- skills
+  - file
+  - terminal
+  - web
+  - skills
 trigger: /setup-groq-cloud
 skills: []
 dependencies: []
 metadata:
   hermes:
     source: setup-groq-cloud.prompt.txt
-    converted: '2026-08-08'
+    converted: "2026-08-08"
 scripts: []
 formatter: default
-plan: ''
+plan: ""
 ---
+
 ## Goal
 
 Guide an agent (or a developer following this prompt) through setting up and using Groq Cloud: create an API key, configure the environment, make the first chat completion, choose models, use OpenAI-compatible client libraries, call the REST API, and respect rate limits. The full reference is embedded under `## Groq Cloud Reference` below.
@@ -92,13 +93,13 @@ The reference content was converted from `setup-groq-cloud.prompt.txt` (a concat
 
 ## Verification Checklist
 
-| # | Gate       | Criterion                                      |
-| - | ---------- | ---------------------------------------------- |
-| 1 | Key        | API key created and exported as `GROQ_API_KEY` |
-| 2 | First call | A chat completion returns content              |
-| 3 | Model      | Model ID matches one in Supported Models       |
-| 4 | Compat     | OpenAI client points at Groq base URL          |
-| 5 | Limits     | Code handles `429` + `retry-after`             |
+| #   | Gate       | Criterion                                      |
+| --- | ---------- | ---------------------------------------------- |
+| 1   | Key        | API key created and exported as `GROQ_API_KEY` |
+| 2   | First call | A chat completion returns content              |
+| 3   | Model      | Model ID matches one in Supported Models       |
+| 4   | Compat     | OpenAI client points at Groq base URL          |
+| 5   | Limits     | Code handles `429` + `retry-after`             |
 
 ## Skills Required
 
@@ -212,12 +213,12 @@ pnpm add ai @ai-sdk/groq
 Then, you can use the Groq provider to generate text. By default, the provider will look for `GROQ_API_KEY` as the API key.
 
 ```javascript
-import { groq } from '@ai-sdk/groq';
-import { generateText } from 'ai';
+import { groq } from "@ai-sdk/groq";
+import { generateText } from "ai";
 
 const { text } = await generateText({
-  model: groq('llama-3.3-70b-versatile'),
-  prompt: 'Write a vegetarian lasagna recipe for 4 people.',
+	model: groq("llama-3.3-70b-versatile"),
+	prompt: "Write a vegetarian lasagna recipe for 4 people.",
 });
 ```
 
@@ -225,9 +226,9 @@ Now that you have successfully received a chat completion, you can try out the o
 
 #### Next Steps
 
-* Check out the [Playground](https://console.groq.com/playground) to try out the Groq API in your browser
-* Join our GroqCloud [developer community](https://community.groq.com/)
-* Add a how-to on your project to the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook)
+- Check out the [Playground](https://console.groq.com/playground) to try out the Groq API in your browser
+- Join our GroqCloud [developer community](https://community.groq.com/)
+- Add a how-to on your project to the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook)
 
 ### Supported Models
 
@@ -297,15 +298,15 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const getModels = async () => {
-  return await groq.models.list();
+	return await groq.models.list();
 };
 
 getModels().then((models) => {
-  // console.log(models);
+	// console.log(models);
 });
 ```
 
-```python
+````python
 import requests
 import os
 
@@ -342,7 +343,7 @@ client = openai.OpenAI(
     base_url="https://api.groq.com/openai/v1",
     api_key=os.environ.get("GROQ_API_KEY")
 )
-```
+````
 
 You can find your API key [here](https://console.groq.com/keys).
 
@@ -354,11 +355,11 @@ Note that although Groq API is mostly OpenAI compatible, there are a few feature
 
 The following fields are currently not supported and will result in a 400 error (yikes) if they are supplied:
 
-* `logprobs`
-* `logit_bias`
-* `top_logprobs`
-* `messages[].name`
-* If `N` is supplied, it must be equal to 1.
+- `logprobs`
+- `logit_bias`
+- `top_logprobs`
+- `messages[].name`
+- If `N` is supplied, it must be equal to 1.
 
 #### Temperature
 
@@ -368,8 +369,8 @@ If you set a `temperature` value of 0, it will be converted to `1e-8`. If you ru
 
 The following values are not supported:
 
-* `vtt`
-* `srt`
+- `vtt`
+- `srt`
 
 ### Responses API
 
@@ -397,139 +398,140 @@ Creates a model response for the given chat conversation.
 
 [Request Body](https://console.groq.com/docs/api-reference#chat-create-request-body)
 
-* messagesarrayRequired
-A list of messages comprising the conversation so far.
-**Show possible types**
-* modelstringRequired
-ID of the model to use. For details on which models are compatible with the Chat API, see available [models](https://console.groq.com/docs/models)
-* citation_optionsstring or nullOptionalDefaults to enabled
-Allowed values: `enabled, disabled`
-Whether to enable citations in the response. When enabled, the model will include citations for information retrieved from provided documents or web searches.
-* compound_customobject or nullOptional
-Custom configuration of models and tools for Compound.
-**Show properties**
-* disable_tool_validationbooleanOptionalDefaults to false
-If set to true, groq will return called tools without validating that the tool is present in request.tools. tool_choice=required/none will still be enforced, but the request cannot require a specific tool be used.
-* documentsarray or nullOptional
-A list of documents to provide context for the conversation. Each document contains text that can be referenced by the model.
-**Show properties**
-* exclude_domainsDeprecatedarray or nullOptional
-Deprecated: Use search_settings.exclude_domains instead. A list of domains to exclude from the search results when the model uses a web search tool.
-* frequency_penaltynumber or nullOptionalDefaults to 0
-Range: -2 - 2
-This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-* function_callDeprecatedstring / object or nullOptional
-Deprecated in favor of `tool_choice`.
-Controls which (if any) function is called by the model. `none` means the model will not call a function and instead generates a message. `auto` means the model can pick between generating a message or calling a function. Specifying a particular function via `{"name": "my_function"}` forces the model to call that function.
-`none` is the default when no functions are present. `auto` is the default if functions are present.
-**Show possible types**
-* functionsDeprecatedarray or nullOptional
-Deprecated in favor of `tools`.
-A list of functions the model may generate JSON inputs for.
-**Show properties**
-* include_domainsDeprecatedarray or nullOptional
-Deprecated: Use search_settings.include_domains instead. A list of domains to include in the search results when the model uses a web search tool.
-* include_reasoningboolean or nullOptional
-Whether to include reasoning in the response. If true, the response will include a `reasoning` field. If false, the model's reasoning will not be included in the response. This field is mutually exclusive with `reasoning_format`.
-* logit_biasobject or nullOptional
-This is not yet supported by any of our models. Modify the likelihood of specified tokens appearing in the completion.
-* logprobsboolean or nullOptionalDefaults to false
-This is not yet supported by any of our models. Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned in the `content` of `message`.
-* max_completion_tokensinteger or nullOptional
-The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
-* max_tokensDeprecatedinteger or nullOptional
-Deprecated in favor of `max_completion_tokens`. The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
-* metadataobject or nullOptional
-This parameter is not currently supported.
-* ninteger or nullOptionalDefaults to 1
-Range: 1 - 1
-How many chat completion choices to generate for each input message. Note that the current moment, only n=1 is supported. Other values will result in a 400 response.
-* parallel_tool_callsboolean or nullOptionalDefaults to true
-Whether to enable parallel function calling during tool use.
-* presence_penaltynumber or nullOptionalDefaults to 0
-Range: -2 - 2
-This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
-* reasoning_effortstring or nullOptional
-Allowed values: `none, default, low, medium, high`
-qwen3 models support the following values Set to 'none' to disable reasoning. Set to 'default' or null to let Qwen reason.
-openai/gpt-oss-20b and openai/gpt-oss-120b support 'low', 'medium', or 'high'. 'medium' is the default value.
-* reasoning_formatstring or nullOptional
-Allowed values: `hidden, raw, parsed`
-Specifies how to output reasoning tokens This field is mutually exclusive with `include_reasoning`.
-* response_formatobject / object / object or nullOptional
-An object specifying the format that the model must output. Setting to `{ "type": "json_schema", "json_schema": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema. `json_schema` response format is only available on [supported models](https://console.groq.com/docs/structured-outputs#supported-models). Setting to `{ "type": "json_object" }` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using `json_schema` is preferred for models that support it.
-**Show possible types**
-* search_settingsobject or nullOptional
-Settings for web search functionality when the model uses a web search tool.
-**Show properties**
-* seedinteger or nullOptional
-If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the `system_fingerprint` response parameter to monitor changes in the backend.
-* service_tierstring or nullOptional
-Allowed values: `auto, on_demand, flex, performance, null`
-The service tier to use for the request. Defaults to `on_demand`.
+- messagesarrayRequired
+  A list of messages comprising the conversation so far.
+  **Show possible types**
+- modelstringRequired
+  ID of the model to use. For details on which models are compatible with the Chat API, see available [models](https://console.groq.com/docs/models)
+- citation_optionsstring or nullOptionalDefaults to enabled
+  Allowed values: `enabled, disabled`
+  Whether to enable citations in the response. When enabled, the model will include citations for information retrieved from provided documents or web searches.
+- compound_customobject or nullOptional
+  Custom configuration of models and tools for Compound.
+  **Show properties**
+- disable_tool_validationbooleanOptionalDefaults to false
+  If set to true, groq will return called tools without validating that the tool is present in request.tools. tool_choice=required/none will still be enforced, but the request cannot require a specific tool be used.
+- documentsarray or nullOptional
+  A list of documents to provide context for the conversation. Each document contains text that can be referenced by the model.
+  **Show properties**
+- exclude_domainsDeprecatedarray or nullOptional
+  Deprecated: Use search_settings.exclude_domains instead. A list of domains to exclude from the search results when the model uses a web search tool.
+- frequency_penaltynumber or nullOptionalDefaults to 0
+  Range: -2 - 2
+  This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+- function_callDeprecatedstring / object or nullOptional
+  Deprecated in favor of `tool_choice`.
+  Controls which (if any) function is called by the model. `none` means the model will not call a function and instead generates a message. `auto` means the model can pick between generating a message or calling a function. Specifying a particular function via `{"name": "my_function"}` forces the model to call that function.
+  `none` is the default when no functions are present. `auto` is the default if functions are present.
+  **Show possible types**
+- functionsDeprecatedarray or nullOptional
+  Deprecated in favor of `tools`.
+  A list of functions the model may generate JSON inputs for.
+  **Show properties**
+- include_domainsDeprecatedarray or nullOptional
+  Deprecated: Use search_settings.include_domains instead. A list of domains to include in the search results when the model uses a web search tool.
+- include_reasoningboolean or nullOptional
+  Whether to include reasoning in the response. If true, the response will include a `reasoning` field. If false, the model's reasoning will not be included in the response. This field is mutually exclusive with `reasoning_format`.
+- logit_biasobject or nullOptional
+  This is not yet supported by any of our models. Modify the likelihood of specified tokens appearing in the completion.
+- logprobsboolean or nullOptionalDefaults to false
+  This is not yet supported by any of our models. Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned in the `content` of `message`.
+- max_completion_tokensinteger or nullOptional
+  The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
+- max_tokensDeprecatedinteger or nullOptional
+  Deprecated in favor of `max_completion_tokens`. The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
+- metadataobject or nullOptional
+  This parameter is not currently supported.
+- ninteger or nullOptionalDefaults to 1
+  Range: 1 - 1
+  How many chat completion choices to generate for each input message. Note that the current moment, only n=1 is supported. Other values will result in a 400 response.
+- parallel_tool_callsboolean or nullOptionalDefaults to true
+  Whether to enable parallel function calling during tool use.
+- presence_penaltynumber or nullOptionalDefaults to 0
+  Range: -2 - 2
+  This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+- reasoning_effortstring or nullOptional
+  Allowed values: `none, default, low, medium, high`
+  qwen3 models support the following values Set to 'none' to disable reasoning. Set to 'default' or null to let Qwen reason.
+  openai/gpt-oss-20b and openai/gpt-oss-120b support 'low', 'medium', or 'high'. 'medium' is the default value.
+- reasoning_formatstring or nullOptional
+  Allowed values: `hidden, raw, parsed`
+  Specifies how to output reasoning tokens This field is mutually exclusive with `include_reasoning`.
+- response_formatobject / object / object or nullOptional
+  An object specifying the format that the model must output. Setting to `{ "type": "json_schema", "json_schema": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema. `json_schema` response format is only available on [supported models](https://console.groq.com/docs/structured-outputs#supported-models). Setting to `{ "type": "json_object" }` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using `json_schema` is preferred for models that support it.
+  **Show possible types**
+- search_settingsobject or nullOptional
+  Settings for web search functionality when the model uses a web search tool.
+  **Show properties**
+- seedinteger or nullOptional
+  If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the `system_fingerprint` response parameter to monitor changes in the backend.
+- service_tierstring or nullOptional
+  Allowed values: `auto, on_demand, flex, performance, null`
+  The service tier to use for the request. Defaults to `on_demand`.
 
-  * `auto` will automatically select the highest tier available within the rate limits of your organization.
-  * `flex` uses the flex tier, which will succeed or fail quickly.
-* stopstring / array or nullOptional
-Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
-**Show possible types**
-* storeboolean or nullOptional
-This parameter is not currently supported.
-* streamboolean or nullOptionalDefaults to false
-If set, partial message deltas will be sent. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent%5Fevents/Using%5Fserver-sent%5Fevents#Event%5Fstream%5Fformat) as they become available, with the stream terminated by a `data: [DONE]` message. [Example code](https://console.groq.com/docs/text-chat#streaming-a-chat-completion).
-* stream_optionsobject or nullOptional
-Options for streaming response. Only set this when you set `stream: true`.
-**Show properties**
-* temperaturenumber or nullOptionalDefaults to 1
-Range: 0 - 2
-What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.
-* tool_choicestring / object or nullOptional
-Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.
-`none` is the default when no tools are present. `auto` is the default if tools are present.
-**Show possible types**
-* toolsarray or nullOptional
-A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
-**Show properties**
-* top_logprobsinteger or nullOptional
-Range: 0 - 20
-This is not yet supported by any of our models. An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. `logprobs` must be set to `true` if this parameter is used.
-* top_pnumber or nullOptionalDefaults to 1
-Range: 0 - 1
-An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.
-* userstring or nullOptional
-A unique identifier representing your end-user, which can help us monitor and detect abuse.
+  - `auto` will automatically select the highest tier available within the rate limits of your organization.
+  - `flex` uses the flex tier, which will succeed or fail quickly.
+
+- stopstring / array or nullOptional
+  Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
+  **Show possible types**
+- storeboolean or nullOptional
+  This parameter is not currently supported.
+- streamboolean or nullOptionalDefaults to false
+  If set, partial message deltas will be sent. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent%5Fevents/Using%5Fserver-sent%5Fevents#Event%5Fstream%5Fformat) as they become available, with the stream terminated by a `data: [DONE]` message. [Example code](https://console.groq.com/docs/text-chat#streaming-a-chat-completion).
+- stream_optionsobject or nullOptional
+  Options for streaming response. Only set this when you set `stream: true`.
+  **Show properties**
+- temperaturenumber or nullOptionalDefaults to 1
+  Range: 0 - 2
+  What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.
+- tool_choicestring / object or nullOptional
+  Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.
+  `none` is the default when no tools are present. `auto` is the default if tools are present.
+  **Show possible types**
+- toolsarray or nullOptional
+  A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
+  **Show properties**
+- top_logprobsinteger or nullOptional
+  Range: 0 - 20
+  This is not yet supported by any of our models. An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. `logprobs` must be set to `true` if this parameter is used.
+- top_pnumber or nullOptionalDefaults to 1
+  Range: 0 - 1
+  An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.
+- userstring or nullOptional
+  A unique identifier representing your end-user, which can help us monitor and detect abuse.
 
 [Response Object](https://console.groq.com/docs/api-reference#chat-create-returns)
 
-* choicesarray
-A list of chat completion choices. Can be more than one if `n` is greater than 1.
-**Show properties**
-* createdinteger
-The Unix timestamp (in seconds) of when the chat completion was created.
-* idstring
-A unique identifier for the chat completion.
-* mcp_list_toolsarray or null
-List of discovered MCP tools from connected servers.
-**Show properties**
-* modelstring
-The model used for the chat completion.
-* objectstring
-Allowed values: `chat.completion`
-The object type, which is always `chat.completion`.
-* service_tierstring or null
-Allowed values: `auto, on_demand, flex, performance, null`
-The service tier used for the request.
-* system_fingerprintstring
-This fingerprint represents the backend configuration that the model runs with.
-Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
-* usageobject
-Usage statistics for the completion request.
-**Show properties**
-* usage_breakdown
-Detailed usage breakdown by model when multiple models are used in the request for compound AI systems.
-* x_groqobject
-Groq-specific metadata for non-streaming chat completion responses.
-**Show properties**
+- choicesarray
+  A list of chat completion choices. Can be more than one if `n` is greater than 1.
+  **Show properties**
+- createdinteger
+  The Unix timestamp (in seconds) of when the chat completion was created.
+- idstring
+  A unique identifier for the chat completion.
+- mcp_list_toolsarray or null
+  List of discovered MCP tools from connected servers.
+  **Show properties**
+- modelstring
+  The model used for the chat completion.
+- objectstring
+  Allowed values: `chat.completion`
+  The object type, which is always `chat.completion`.
+- service_tierstring or null
+  Allowed values: `auto, on_demand, flex, performance, null`
+  The service tier used for the request.
+- system_fingerprintstring
+  This fingerprint represents the backend configuration that the model runs with.
+  Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
+- usageobject
+  Usage statistics for the completion request.
+  **Show properties**
+- usage_breakdown
+  Detailed usage breakdown by model when multiple models are used in the request for compound AI systems.
+- x_groqobject
+  Groq-specific metadata for non-streaming chat completion responses.
+  **Show properties**
 
 ```bash
 curl https://api.groq.com/openai/v1/chat/completions -s \
@@ -550,17 +552,16 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const completion = await groq.chat.completions
-    .create({
-      messages: [
-        {
-          role: "user",
-          content: "Explain the importance of fast language models",
-        },
-      ],
-      model: "llama-3.3-70b-versatile",
-    })
-  console.log(completion.choices[0].message.content);
+	const completion = await groq.chat.completions.create({
+		messages: [
+			{
+				role: "user",
+				content: "Explain the importance of fast language models",
+			},
+		],
+		model: "llama-3.3-70b-versatile",
+	});
+	console.log(completion.choices[0].message.content);
 }
 
 main();
@@ -595,7 +596,7 @@ print(chat_completion.choices[0].message.content)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "chatcmpl-f51b2cd2-bef7-417e-964e-a08f0b513c22",
   "object": "chat.completion",
@@ -761,11 +762,11 @@ curl https://api.groq.com/openai/v1/responses -s \
   "model": "openai/gpt-oss-120b",
   "input": "Tell me a three sentence bedtime story about a unicorn."
 }'
-```
+````
 
 **Example Response**
 
-```json
+````json
 {
   "id": "resp_01k1x6w9ane6d8rfxm05cb45yk",
   "object": "response",
@@ -864,7 +865,7 @@ curl https://api.groq.com/openai/v1/audio/transcriptions \
   -H "Content-Type: multipart/form-data" \
   -F file="@./sample_audio.m4a" \
   -F model="whisper-large-v3"
-```
+````
 
 ```javascript
 import fs from "fs";
@@ -872,15 +873,15 @@ import Groq from "groq-sdk";
 
 const groq = new Groq();
 async function main() {
-  const transcription = await groq.audio.transcriptions.create({
-    file: fs.createReadStream("sample_audio.m4a"),
-    model: "whisper-large-v3",
-    prompt: "Specify context or spelling", // Optional
-    response_format: "json", // Optional
-    language: "en", // Optional
-    temperature: 0.0, // Optional
-  });
-  console.log(transcription.text);
+	const transcription = await groq.audio.transcriptions.create({
+		file: fs.createReadStream("sample_audio.m4a"),
+		model: "whisper-large-v3",
+		prompt: "Specify context or spelling", // Optional
+		response_format: "json", // Optional
+		language: "en", // Optional
+		temperature: 0.0, // Optional
+	});
+	console.log(transcription.text);
 }
 main();
 ```
@@ -906,7 +907,7 @@ with open(filename, "rb") as file:
 
 **Example Response**
 
-```json
+````json
 {
   "text": "Your transcribed text appears here...",
   "x_groq": {
@@ -947,7 +948,7 @@ curl https://api.groq.com/openai/v1/audio/translations \
   -H "Content-Type: multipart/form-data" \
   -F file="@./sample_audio.m4a" \
   -F model="whisper-large-v3"
-```
+````
 
 ```javascript
 // Default
@@ -956,14 +957,14 @@ import Groq from "groq-sdk";
 
 const groq = new Groq();
 async function main() {
-  const translation = await groq.audio.translations.create({
-    file: fs.createReadStream("sample_audio.m4a"),
-    model: "whisper-large-v3",
-    prompt: "Specify context or spelling", // Optional
-    response_format: "json", // Optional
-    temperature: 0.0, // Optional
-  });
-  console.log(translation.text);
+	const translation = await groq.audio.translations.create({
+		file: fs.createReadStream("sample_audio.m4a"),
+		model: "whisper-large-v3",
+		prompt: "Specify context or spelling", // Optional
+		response_format: "json", // Optional
+		temperature: 0.0, // Optional
+	});
+	console.log(translation.text);
 }
 main();
 ```
@@ -988,7 +989,7 @@ with open(filename, "rb") as file:
 
 **Example Response**
 
-```json
+````json
 {
   "text": "Your translated text appears here...",
   "x_groq": {
@@ -1035,15 +1036,15 @@ curl https://api.groq.com/openai/v1/audio/speech \
     "voice": "Fritz-PlayAI",
     "response_format": "wav"
   }'
-```
+````
 
 ```javascript
 import fs from "fs";
 import path from "path";
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY
+	apiKey: process.env.GROQ_API_KEY,
 });
 
 const speechFilePath = "speech.wav";
@@ -1053,15 +1054,15 @@ const text = "I love building and shipping new features for our users!";
 const responseFormat = "wav";
 
 async function main() {
-  const response = await groq.audio.speech.create({
-    model: model,
-    voice: voice,
-    input: text,
-    response_format: responseFormat
-  });
+	const response = await groq.audio.speech.create({
+		model: model,
+		voice: voice,
+		input: text,
+		response_format: responseFormat,
+	});
 
-  const buffer = Buffer.from(await response.arrayBuffer());
-  await fs.promises.writeFile(speechFilePath, buffer);
+	const buffer = Buffer.from(await response.arrayBuffer());
+	await fs.promises.writeFile(speechFilePath, buffer);
 }
 
 main();
@@ -1091,7 +1092,7 @@ response.write_to_file(speech_file_path)
 
 **Example Response**
 
-```json
+````json
 "string"
 ```json
 
@@ -1113,7 +1114,7 @@ Allowed values: `list`
 ```bash
 curl https://api.groq.com/openai/v1/models \
 -H "Authorization: Bearer $GROQ_API_KEY"
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -1121,8 +1122,8 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const models = await groq.models.list();
-  console.log(models);
+	const models = await groq.models.list();
+	console.log(models);
 }
 
 main();
@@ -1144,7 +1145,7 @@ print(models)
 
 **Example Response**
 
-```json
+````json
 {
   "object": "list",
   "data": [
@@ -1245,7 +1246,7 @@ The organization that owns the model.
 ```bash
 curl https://api.groq.com/openai/v1/models/llama-3.3-70b-versatile \
 -H "Authorization: Bearer $GROQ_API_KEY"
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -1253,8 +1254,8 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const model = await groq.models.retrieve("llama-3.3-70b-versatile");
-  console.log(model);
+	const model = await groq.models.retrieve("llama-3.3-70b-versatile");
+	console.log(model);
 }
 
 main();
@@ -1276,7 +1277,7 @@ print(model)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "llama3-8b-8192",
   "object": "model",
@@ -1365,22 +1366,22 @@ curl https://api.groq.com/openai/v1/batches \
     "endpoint": "/v1/chat/completions",
     "completion_window": "24h"
   }'
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.create({
-    completion_window: "24h",
-    endpoint: "/v1/chat/completions",
-    input_file_id: "file_01jh6x76wtemjr74t1fh0faj5t",
-  });
-  console.log(batch.id);
+	const batch = await client.batches.create({
+		completion_window: "24h",
+		endpoint: "/v1/chat/completions",
+		input_file_id: "file_01jh6x76wtemjr74t1fh0faj5t",
+	});
+	console.log(batch.id);
 }
 
 main();
@@ -1403,7 +1404,7 @@ print(batch.id)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
   "object": "batch",
@@ -1487,18 +1488,18 @@ The current status of the batch.
 curl https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.retrieve("batch_01jh6xa7reempvjyh6n3yst2zw");
-  console.log(batch.id);
+	const batch = await client.batches.retrieve("batch_01jh6xa7reempvjyh6n3yst2zw");
+	console.log(batch.id);
 }
 
 main();
@@ -1519,7 +1520,7 @@ print(batch.id)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
   "object": "batch",
@@ -1565,18 +1566,18 @@ Allowed values: `list`
 curl https://api.groq.com/openai/v1/batches \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const batchList = await client.batches.list();
-  console.log(batchList.data);
+	const batchList = await client.batches.list();
+	console.log(batchList.data);
 }
 
 main();
@@ -1595,7 +1596,7 @@ print(batch_list.data)
 
 **Example Response**
 
-```json
+````json
 {
   "object": "list",
   "data": [
@@ -1684,18 +1685,18 @@ The current status of the batch.
 curl -X POST https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw/cancel \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.cancel("batch_01jh6xa7reempvjyh6n3yst2zw");
-  console.log(batch.id);
+	const batch = await client.batches.cancel("batch_01jh6xa7reempvjyh6n3yst2zw");
+	console.log(batch.id);
 }
 
 main();
@@ -1716,7 +1717,7 @@ print(batch.id)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
   "object": "batch",
@@ -1787,23 +1788,24 @@ curl https://api.groq.com/openai/v1/files \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -F purpose="batch" \
   -F "file=@batch_file.jsonl"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
-const fileContent = '{"custom_id": "request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "llama-3.1-8b-instant", "messages": [{"role": "user", "content": "Explain the importance of fast language models"}]}}\n';
+const fileContent =
+	'{"custom_id": "request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "llama-3.1-8b-instant", "messages": [{"role": "user", "content": "Explain the importance of fast language models"}]}}\n';
 
 async function main() {
-  const blob = new Blob([fileContent]);
-  const file = new File([blob], 'batch.jsonl');
+	const blob = new Blob([fileContent]);
+	const file = new File([blob], "batch.jsonl");
 
-  const createdFile = await client.files.create({ file: file, purpose: 'batch' });
-  console.log(createdFile.id);
+	const createdFile = await client.files.create({ file: file, purpose: "batch" });
+	console.log(createdFile.id);
 }
 
 main();
@@ -1847,7 +1849,7 @@ except Exception as e:
 
 **Example Response**
 
-```json
+````json
 {
   "id": "file_01jh6x76wtemjr74t1fh0faj5t",
   "object": "file",
@@ -1875,18 +1877,18 @@ Allowed values: `list`
 curl https://api.groq.com/openai/v1/files \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const fileList = await client.files.list();
-  console.log(fileList.data);
+	const fileList = await client.files.list();
+	console.log(fileList.data);
 }
 
 main();
@@ -1905,7 +1907,7 @@ print(file_list.data)
 
 **Example Response**
 
-```json
+````json
 {
   "object": "list",
   "data": [
@@ -1938,18 +1940,18 @@ Allowed values: `file`
 curl -X DELETE https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-  const fileDelete = await client.files.delete("file_01jh6x76wtemjr74t1fh0faj5t");
-  console.log(fileDelete);
+	const fileDelete = await client.files.delete("file_01jh6x76wtemjr74t1fh0faj5t");
+	console.log(fileDelete);
 }
 
 main();
@@ -1970,7 +1972,7 @@ print(file_delete)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "file_01jh6x76wtemjr74t1fh0faj5t",
   "object": "file",
@@ -2005,18 +2007,18 @@ The intended purpose of the file. Supported values are `batch`, and `batch_outpu
 curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-    const file = await client.files.info('file_01jh6x76wtemjr74t1fh0faj5t');
-    console.log(file);
+	const file = await client.files.info("file_01jh6x76wtemjr74t1fh0faj5t");
+	console.log(file);
 }
 
 main();
@@ -2037,7 +2039,7 @@ print(file)
 
 **Example Response**
 
-```json
+````json
 {
   "id": "file_01jh6x76wtemjr74t1fh0faj5t",
   "object": "file",
@@ -2062,18 +2064,18 @@ The file content
 curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t/content \
   -H "Authorization: Bearer $GROQ_API_KEY" \
   -H "Content-Type: application/json"
-```
+````
 
 ```javascript
-import Groq from 'groq-sdk';
+import Groq from "groq-sdk";
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+	apiKey: process.env["GROQ_API_KEY"], // This is the default and can be omitted
 });
 
 async function main() {
-    const response = await client.files.content('file_01jh6x76wtemjr74t1fh0faj5t');
-    console.log(response);
+	const response = await client.files.content("file_01jh6x76wtemjr74t1fh0faj5t");
+	console.log(response);
 }
 
 main();
@@ -2094,7 +2096,7 @@ print(response)
 
 **Example Response**
 
-```json
+````json
 "string"
 ```json
 
@@ -2116,7 +2118,7 @@ Lists all previously created fine tunings. This endpoint is in closed beta. [Con
 curl https://api.groq.com/v1/fine_tunings -s \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $GROQ_API_KEY"
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -2124,8 +2126,8 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTunings = await groq.fine_tunings.list();
-    console.log(fineTunings);
+	const fineTunings = await groq.fine_tunings.list();
+	console.log(fineTunings);
 }
 
 main();
@@ -2148,7 +2150,7 @@ print(fine_tunings)
 
 **Example Response**
 
-```json
+````json
 {
     "object": "list",
     "data": [
@@ -2199,7 +2201,7 @@ curl https://api.groq.com/v1/fine_tunings -s \
         "type": "lora",
         "base_model": "llama-3.1-8b-instant"
     }'
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -2207,13 +2209,13 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTunings = await groq.fine_tunings.create({
-        input_file_id: "<file-id>",
-        name: "test-1",
-        type: "lora",
-        base_model: "llama-3.1-8b-instant"
-    });
-    console.log(fineTunings);
+	const fineTunings = await groq.fine_tunings.create({
+		input_file_id: "<file-id>",
+		name: "test-1",
+		type: "lora",
+		base_model: "llama-3.1-8b-instant",
+	});
+	console.log(fineTunings);
 }
 
 main();
@@ -2241,7 +2243,7 @@ print(fine_tunings)
 
 **Example Response**
 
-```json
+````json
 {
     "id": "string",
     "object": "object",
@@ -2274,7 +2276,7 @@ Retrieves an existing fine tuning by id This endpoint is in closed beta. [Contac
 curl https://api.groq.com/v1/fine_tunings/:id -s \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $GROQ_API_KEY"
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -2282,8 +2284,8 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTuning = await groq.fine_tunings.get({id: "<id>"});
-    console.log(fineTuning);
+	const fineTuning = await groq.fine_tunings.get({ id: "<id>" });
+	console.log(fineTuning);
 }
 
 main();
@@ -2306,7 +2308,7 @@ print(fine_tuning)
 
 **Example Response**
 
-```json
+````json
 {
     "id": "string",
     "object": "object",
@@ -2338,7 +2340,7 @@ Deletes an existing fine tuning by id This endpoint is in closed beta. [Contact 
 curl -X DELETE https://api.groq.com/v1/fine_tunings/:id -s \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $GROQ_API_KEY"
-```
+````
 
 ```javascript
 import Groq from "groq-sdk";
@@ -2346,7 +2348,7 @@ import Groq from "groq-sdk";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    await groq.fine_tunings.delete({id: "<id>"});
+	await groq.fine_tunings.delete({ id: "<id>" });
 }
 
 main();
@@ -2367,7 +2369,7 @@ client.fine_tunings.delete(id="<id>")
 
 **Example Response**
 
-```json
+````json
 {
     "id": "string",
     "object": "fine_tuning",
@@ -2452,3 +2454,4 @@ The following headers are set (values are illustrative):
 When you exceed rate limits, our API returns a `429 Too Many Requests` HTTP status code.
 
 **Note**: `retry-after` is only set if you hit the rate limit and status code 429 is returned. The other headers are always included.
+````

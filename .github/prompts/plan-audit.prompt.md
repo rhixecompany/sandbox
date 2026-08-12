@@ -17,7 +17,7 @@ skills:
   - simplify
   - subagent-driven-development
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
   - "skill:context-map"
   - "skill:systematic-debugging"
@@ -207,3 +207,25 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`plan-batch-fix.prompt.md`](plan-batch-fix.prompt.md)
+- [`plan-execute.prompt.md`](plan-execute.prompt.md)
+- [`plan-generate.prompt.md`](plan-generate.prompt.md)

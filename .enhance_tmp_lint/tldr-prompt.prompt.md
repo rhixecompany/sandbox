@@ -34,22 +34,27 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
+
 # TLDR Prompt
 
 ## Overview
@@ -94,6 +99,7 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 ## URL Resolver
 
 > ### Ambiguous Queries
+>
 > When no specific URL or file is provided, but instead raw data relevant to worki
 
 > **Full content:** `templates/tldr-prompt/url_resolver.md`
@@ -122,6 +128,7 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 ## Error Handling
 
 > ### Missing Required Parameters
+>
 > **Agent Response when NO Required Data**
 
 > **Full content:** `templates/tldr-prompt/error_handling.md`
@@ -162,7 +169,7 @@ Use this template structure when creating tldr pages:
 - View documentation for managing something:
 
 `/file command-subcommand2`
-````
+```
 
 ## Template Guidelines
 
@@ -198,9 +205,9 @@ Your output is complete when:
 - ✓ Response verbosity is appropriate for chat context (inline chat vs chat view)
 - ✓ MCP server content includes setup and tool usage examples when applicable
 
-
 ## Template References
 
 Detailed templates in `templates/tldr-prompt/`:
+
 - `error_handling.md`
 - `url_resolver.md`

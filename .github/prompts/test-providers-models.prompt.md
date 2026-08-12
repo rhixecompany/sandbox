@@ -42,6 +42,19 @@ Produce a **verified, ordered fallback chain** across all authorized Hermes prov
 
 The heavy lifting (live provider probing) is **delegated to subagents** so the main session is not blocked by rate limits or long background calls, and so each provider cluster is worked in isolation with full context.
 
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
+1. **Inventory from authority** — Enumerate providers/models from `hermes auth list`; never invent a provider or model ID.
+2. **Probe, don't assume** — A model counts as working only after a live capability probe succeeds; no fabricated results.
+3. **Deterministic ordering** — Rank by the fixed rule: vision → reasoning → context size; document every override.
+4. **Free-tier only** — Only models usable on the free tier are candidates for the fallback chain.
+5. **Verify before claiming** — Run the Verification section gates before reporting the chain complete.
+
 ## Subgoals
 
 1. **Inventory** — Enumerate every authorized provider from `hermes auth list` + `hermes config show`.
@@ -162,6 +175,14 @@ hermes config set providers.ollama-cloud.default_model  "nemotron-3-ultra"
 > (CLI) or terminal Python (`yaml` + `open()`). If `fallback_providers` is stored as a
 > string instead of a list, fix it with a terminal Python one-liner before verifying.
 
+## Phases
+
+1. **Phase 1 — Inventory** — `hermes auth list` all authorized providers; collect each provider's working free `default_model` and capabilities.
+2. **Phase 2 — Probe** — Delegate live capability probes to subagents with the full Context Block; each probe returns actual availability, vision/reasoning support, and context size.
+3. **Phase 3 — Rank** — Merge probe results and apply the Ranking Algorithm (vision → reasoning → context size) to produce the ordered candidate list.
+4. **Phase 4 — Configure** — Set the primary model and fallback chain in Hermes config per the Configure section.
+5. **Phase 5 — Verify** — Confirm `fallback_providers` is a real YAML list and every entry resolves to a working free model; fix and re-verify if not.
+
 ## Verification
 
 ```bash
@@ -187,3 +208,24 @@ python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/he
 4. **Provider alias mismatch** — `fallback_providers` uses provider *names* (opencode-zen, openrouter, …), not the `providers:` dict keys (e.g. `ollama-launch`). Set each provider's `default_model` so the right free model is used.
 5. **Root vs profiles drift** — Root config diverged (`nous`/`tencent/hy3:free`); named profiles use `opencode-zen`/`deepseek-v4-flash-free`. Align root, then propagate with `scripts/sync_profile_configs.py`.
 6. **Stale `:free` promotions** — Models expire; always re-probe before presenting as working.
+
+## MCP Servers & Tools
+
+- **Terminal** — `hermes auth list` and provider/model configuration.
+- **Delegation** — `delegate_task` parallel capability probes.
+- **Web tools** — provider documentation lookups.
+- **Skills** — `test-providers-models` skill (this prompt's engine).
+
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

@@ -32,22 +32,27 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
+
 # Swift MCP Server Generator
 
 Generate a complete, production-ready MCP server in Swift using the official Swift SDK package.
@@ -309,13 +314,14 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-  "mcpServers": {
-    "my-mcp-server": {
-      "command": "/path/to/MyMCPServer"
-    }
-  }
+	"mcpServers": {
+		"my-mcp-server": {
+			"command": "/path/to/MyMCPServer"
+		}
+	}
 }
-````
+```
+
 ```
 
 
@@ -329,3 +335,4 @@ Detailed templates in `templates/swift-mcp-server-generator/`:
 - `servertestsswift_template.md`
 - `tooldefinitionsswift_template.md`
 - `toolhandlersswift_template.md`
+```

@@ -198,3 +198,13 @@ The following workspace hooks run around this prompt's execution (see `.github/h
 ## Dependencies
 
 See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`repo-init.prompt.md`](repo-init.prompt.md)
+- [`repo-management.prompt.md`](repo-management.prompt.md)
+- [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
+- [`repo-story-time.prompt.md`](repo-story-time.prompt.md)
+- [`repo.prompt.md`](repo.prompt.md)

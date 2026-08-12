@@ -92,14 +92,15 @@ HTTP Response
 
 ## Project Structure
 
-> ├── app/                     # Next.js App Router pages
-> │   ├── (auth)/             # Public auth pages (/sign-in, /sign-up)
+> ├── app/ # Next.js App Router pages
+> │ ├── (auth)/ # Public auth pages (/sign-in, /sign-up)
 
 > **Full content:** `templates/comicwise-development/project_structure.md`
 
 ## Coding Rules (Enforced)
 
 > ### Type Safety & Code Quality
+>
 > 1. **No `any` types** — ESLint: `no-explicit-any: "error"`
 
 > **Full content:** `templates/comicwise-development/coding_rules_enforced.md`
@@ -126,6 +127,7 @@ tests      → ./src/tests/*
 ## Common Patterns
 
 > ### DAL Query Pattern (with Eager Loading)
+>
 > import { BaseDal } from "./base-dal";
 
 > **Full content:** `templates/comicwise-development/common_patterns.md`
@@ -144,6 +146,7 @@ tests      → ./src/tests/*
 ## Testing Patterns
 
 > ### Unit Tests (Vitest)
+>
 > import { describe, it, expect, beforeEach } from "vitest";
 
 > **Full content:** `templates/comicwise-development/testing_patterns.md`
@@ -180,26 +183,26 @@ All validated via `src/lib/env.ts` at startup using Zod.
 
 ## Reference Documentation
 
-| File | Purpose | Scope |
-| --- | --- | --- |
-| `.github/copilot-instructions.md` | Complete guide (2500+ lines) | Global |
-| `.github/prompts/comicwise-session.prompt.md` | Quick reference (400 lines) | Session shortcuts |
-| `.github/instructions/*.md` | Auto-loaded by file pattern (15+ files) | Specific file types |
-| `docs/dev.content.md` | 26 sections with patterns & examples | Development reference |
-| `docs/MASTER_PHASE_PLAN_4-6.md` | Phase planning & task tracking | Project roadmap |
-| `AGENTS.md` | This project's quick setup guide | Quick start |
+| File                                          | Purpose                                 | Scope                 |
+| --------------------------------------------- | --------------------------------------- | --------------------- |
+| `.github/copilot-instructions.md`             | Complete guide (2500+ lines)            | Global                |
+| `.github/prompts/comicwise-session.prompt.md` | Quick reference (400 lines)             | Session shortcuts     |
+| `.github/instructions/*.md`                   | Auto-loaded by file pattern (15+ files) | Specific file types   |
+| `docs/dev.content.md`                         | 26 sections with patterns & examples    | Development reference |
+| `docs/MASTER_PHASE_PLAN_4-6.md`               | Phase planning & task tracking          | Project roadmap       |
+| `AGENTS.md`                                   | This project's quick setup guide        | Quick start           |
 
 ## Common Troubleshooting
 
-| Issue | Solution |
-| --- | --- |
-| Type errors (TS2307) | Check import path aliases in `tsconfig.json` |
-| N+1 query errors | Add `.with({ relations: true })` to DAL queries |
-| Action throws instead of returns | Wrap in try-catch, return `ActionResult<T>` |
-| Styling not applying | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) |
-| DB connection fails | Verify `DATABASE_URL` and run `pnpm db:studio` to test |
-| Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts` |
-| Hydration mismatch | Use `useCurrentYear()` hook not `new Date()` in server code |
+| Issue                             | Solution                                                             |
+| --------------------------------- | -------------------------------------------------------------------- |
+| Type errors (TS2307)              | Check import path aliases in `tsconfig.json`                         |
+| N+1 query errors                  | Add `.with({ relations: true })` to DAL queries                      |
+| Action throws instead of returns  | Wrap in try-catch, return `ActionResult<T>`                          |
+| Styling not applying              | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) |
+| DB connection fails               | Verify `DATABASE_URL` and run `pnpm db:studio` to test               |
+| Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts`                              |
+| Hydration mismatch                | Use `useCurrentYear()` hook not `new Date()` in server code          |
 
 ## When Stuck
 
@@ -235,10 +238,10 @@ All validated via `src/lib/env.ts` at startup using Zod.
 
 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
 
-
 ## Template References
 
 Detailed templates in `templates/comicwise-development/`:
+
 - `coding_rules_enforced.md`
 - `common_patterns.md`
 - `project_structure.md`

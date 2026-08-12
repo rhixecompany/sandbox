@@ -7,38 +7,39 @@ version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
-- tooling
-- repo
-- verification
-- remediation
+  - tooling
+  - repo
+  - verification
+  - remediation
 toolsets:
-- terminal
-- file
-- skills
-- todo
+  - terminal
+  - file
+  - skills
+  - todo
 trigger: /repo-tooling-implementation
 skills:
-- using-superpowers
-- systematic-debugging
-- verification-before-completion
-- executing-plans
-- tooling-implementation
+  - using-superpowers
+  - systematic-debugging
+  - verification-before-completion
+  - executing-plans
+  - tooling-implementation
 dependencies:
-- prompt:repo
-- skill:executing-plans
-- skill:systematic-debugging
-- skill:verification-before-completion
-- skill:using-superpowers
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-sequential-thinking
-- tool:mcp-tavily
+  - prompt:repo
+  - skill:executing-plans
+  - skill:systematic-debugging
+  - skill:verification-before-completion
+  - skill:using-superpowers
+  - tool:mcp-filesystem
+  - tool:mcp-github
+  - tool:mcp-sequential-thinking
+  - tool:mcp-tavily
 metadata:
   hermes: {}
 scripts: []
 formatter: default
 plan: null
 ---
+
 ## Goal
 
 Execute the `repo-tooling-implementation` workflow. Full details: `templates/repo-tooling-implementation/README.md`.
@@ -70,17 +71,15 @@ See `templates/repo-tooling-implementation/README.md` for phases/steps/workflow.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Personas
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona     | When to Use                                |
-| ----------- | ------------------------------------------ |
-| **Developer | **  Implementation, debugging, refactoring |
-| **Reviewer* | *   Code review, quality assurance         |
-| **User**    | General purpose, operations                |
-
+| Persona     | When to Use                               |
+| ----------- | ----------------------------------------- |
+| **Developer | ** Implementation, debugging, refactoring |
+| *_Reviewer_ | * Code review, quality assurance          |
+| **User**    | General purpose, operations               |
 
 ## Personality
 
@@ -91,11 +90,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Phases
 
@@ -119,7 +116,6 @@ Use when fixing, repairing, or synchronizing files or configs. Diagnose first, a
 - Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
-
 ## Best Practices
 
 See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
@@ -129,56 +125,53 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
-| # | Gate      | Criterion                           |
-| - | --------- | ----------------------------------- |
-| 1 | Scope     | Change matches the original request |
-| 2 | Quality   | Meets project standards             |
-| 3 | Tests     | Tests pass (if applicable)          |
-| 4 | Regressio | n  No unintended side effects       |
-| 5 | Docs      | Changes documented if needed        |
-
+| #   | Gate      | Criterion                           |
+| --- | --------- | ----------------------------------- |
+| 1   | Scope     | Change matches the original request |
+| 2   | Quality   | Meets project standards             |
+| 3   | Tests     | Tests pass (if applicable)          |
+| 4   | Regressio | n No unintended side effects        |
+| 5   | Docs      | Changes documented if needed        |
 
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| `using-superpowers`  | Foundational skill workflow                 |
-| `systematic-debuggin | g`            Root cause analysis and fix   |
-| `git-patch-managemen | t`            Patch creation and management |
-| `executing-plans`    | Execute plans step by step                  |
-| `verification-before | -completion`  Validate before claiming done |
-
+| Skill                | Purpose                                    |
+| -------------------- | ------------------------------------------ |
+| `using-superpowers`  | Foundational skill workflow                |
+| `systematic-debuggin | g` Root cause analysis and fix             |
+| `git-patch-managemen | t` Patch creation and management           |
+| `executing-plans`    | Execute plans step by step                 |
+| `verification-before | -completion` Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server          | Purpose                                           |
-| --------------- | ------------------------------------------------- |
-| `filesystem`    | File read/write operations                        |
-| `github`        | GitHub API operations                             |
-| `sequential-thi | nking`  Structured reasoning for complex problems |
-| `ast-grep`      | AST-based code search and replace                 |
-| `fetch`         | Web page content extraction                       |
-| `playwright`    | Browser automation for interactive pages          |
-| `tavily`        | Web search + URL extraction                       |
+| Server          | Purpose                                          |
+| --------------- | ------------------------------------------------ |
+| `filesystem`    | File read/write operations                       |
+| `github`        | GitHub API operations                            |
+| `sequential-thi | nking` Structured reasoning for complex problems |
+| `ast-grep`      | AST-based code search and replace                |
+| `fetch`         | Web page content extraction                      |
+| `playwright`    | Browser automation for interactive pages         |
+| `tavily`        | Web search + URL extraction                      |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook             | When                   | Behavior                            |
-| ---------------- | ---------------------- | ----------------------------------- |
-| `session-logger` | session star           | t/end  Logs session metadata        |
-| `governance-audi | t`        session even | ts     Audits governance compliance |
-| `session-auto-co | mmit`     session end  | Auto-commits session state          |
-| `pre-exec-valida | te.sh`    before comma | nds    Validates command execution  |
-| `post-exec-state | -log.py`  after comman | ds     Appends state log            |
+| Hook             | When                  | Behavior                        |
+| ---------------- | --------------------- | ------------------------------- |
+| `session-logger` | session star          | t/end Logs session metadata     |
+| `governance-audi | t` session even       | ts Audits governance compliance |
+| `session-auto-co | mmit` session end     | Auto-commits session state      |
+| `pre-exec-valida | te.sh` before comma   | nds Validates command execution |
+| `post-exec-state | -log.py` after comman | ds Appends state log            |
 
 ## Scripts
 
@@ -192,8 +185,6 @@ The following workspace hooks run around this prompt's execution (see `.github/h
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-
 
 ## Dependencies
 

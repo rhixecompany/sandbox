@@ -65,6 +65,12 @@ The source is `all-repo-docker-setup.prompt.txt` — an operational runbook for 
 
 ## Rules
 
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
 1. **One repo at a time** — Clone, build, scan, and report per repository before moving to the next.
 2. **Verify before destructive ops** — Never `docker system prune -a` without confirming the image list first.
 3. **Log everything** — Create/update `docker_setup.log` in the repo root with the exact message for repos with no Docker config.
@@ -139,3 +145,24 @@ cleanup: <items removed>
 ```
 
 Then a global summary of all `docker system prune` results.
+
+## MCP Servers & Tools
+
+- **Docker MCP** — container/image/compose management across repos.
+- **Terminal** — docker CLI builds, scans, and logs.
+- **File tools** — Dockerfile/docker-compose.yml inspection and patches.
+- **GitHub MCP** — repo discovery and clone workflows.
+
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

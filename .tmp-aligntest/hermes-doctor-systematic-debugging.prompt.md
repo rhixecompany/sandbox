@@ -6,36 +6,37 @@ version: 1.0.0
 license: MIT
 author: Alexa
 toolsets:
-- file
-- terminal
-- web
+  - file
+  - terminal
+  - web
 skills:
-- systematic-debugging
-- hermes-agent
-- hermes-mcp
-- verification-before-completion
+  - systematic-debugging
+  - hermes-agent
+  - hermes-mcp
+  - verification-before-completion
 formatter: default
 plan: None
 dependencies:
-- skill:systematic-debugging
-- skill:hermes-agent
-- skill:hermes-mcp
-- skill:verification-before-completion
+  - skill:systematic-debugging
+  - skill:hermes-agent
+  - skill:hermes-mcp
+  - skill:verification-before-completion
 tags:
-- debugging
-- diagnostics
-- doctor
-- errors
-- hermes
-- logs
-- remediation
-- system
-- verification
+  - debugging
+  - diagnostics
+  - doctor
+  - errors
+  - hermes
+  - logs
+  - remediation
+  - system
+  - verification
 trigger: /hermes-doctor-systematic-debugging
 metadata:
   hermes: {}
 scripts: []
 ---
+
 # Hermes Doctor and Systematic Remediation
 
 ## Goal
@@ -281,13 +282,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate       | Criterion                           |
-| - | ---------- | ----------------------------------- |
-| 1 | Scope      | Change matches the original request |
-| 2 | Quality    | Meets project standards             |
-| 3 | Tests      | Tests pass (if applicable)          |
-| 4 | Regression | No unintended side effects          |
-| 5 | Docs       | Changes documented if needed        |
+| #   | Gate       | Criterion                           |
+| --- | ---------- | ----------------------------------- |
+| 1   | Scope      | Change matches the original request |
+| 2   | Quality    | Meets project standards             |
+| 3   | Tests      | Tests pass (if applicable)          |
+| 4   | Regression | No unintended side effects          |
+| 5   | Docs       | Changes documented if needed        |
 
 ## Dependencies
 
@@ -316,12 +317,12 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep`            | AST-based code search and replace         |
-| `filesystem`          | File read/write operations                |
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
-| `fetch`               | Web page content extraction               |
-| `playwright`          | Browser automation for interactive pages  |
-| `github`              | GitHub API operations                     |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
 
 ## Tasks
 

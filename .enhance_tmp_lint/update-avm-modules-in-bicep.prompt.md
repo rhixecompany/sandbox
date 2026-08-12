@@ -13,7 +13,7 @@ tools:
     "search",
     "runCommands",
     "bicepschema",
-    "azure_get_schema_for_Bicep"
+    "azure_get_schema_for_Bicep",
   ]
 ---
 
@@ -46,22 +46,27 @@ Use when you need to work on the current workspace or task.
 ## Phases
 
 ### Phase 1: Intake
+
 - Read the request and identify the exact scope.
 - Locate the relevant files, diffs, or references.
 
 ### Phase 2: Execute
+
 - Perform the requested work with the smallest safe change set.
 - Keep the steps explicit and reproducible.
 
 ### Phase 3: Verify
+
 - Check the result against the goal, rules, and inputs.
 - Confirm the output is usable and complete.
 
 ### Phase 4: Hand off
+
 - Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
+
 # Update Azure Verified Modules in Bicep Files
 
 Update Bicep file `${file}` to use latest Azure Verified Module (AVM) versions. Limit progress updates to non-breaking changes. Don't output information other than the final output table and summary.
@@ -94,10 +99,10 @@ Always use tools `#search`, `#searchResults`,`#fetch`, `#editFiles`, `#runComman
 Only display results in table with icons:
 
 ```markdown
-| Module | Current | Latest | Status | Action | Docs |
-| --- | --- | --- | --- | --- | --- |
-| avm/res/compute/vm | 0.1.0 | 0.2.0 | 🔄 | Updated | [📖](link) |
-| avm/res/storage/account | 0.3.0 | 0.3.0 | ✅ | Current | [📖](link) |
+| Module                  | Current | Latest | Status | Action  | Docs       |
+| ----------------------- | ------- | ------ | ------ | ------- | ---------- |
+| avm/res/compute/vm      | 0.1.0   | 0.2.0  | 🔄     | Updated | [📖](link) |
+| avm/res/storage/account | 0.3.0   | 0.3.0  | ✅     | Current | [📖](link) |
 
 ### Summary of Updates
 
@@ -118,8 +123,8 @@ Describe updates made, any manual reviews needed or issues encountered.
 - Parse JSON tags array and sort by semantic versioning
 - Maintain Bicep file validity and linting compliance
 
-
 ## Template References
 
 Templates in `templates/update-avm-modules-in-bicep/`:
+
 - `phases.md`

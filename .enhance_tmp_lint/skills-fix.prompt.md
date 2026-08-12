@@ -26,10 +26,10 @@ dependencies:
   - tool:write_file
   - tool:execute_code
 skills:
-    - introspection-only-general
-    - no-git-delete
-    - no-net-fetch
-    - skills-tools-preflight-check
+  - introspection-only-general
+  - no-git-delete
+  - no-net-fetch
+  - skills-tools-preflight-check
 ---
 
 ## Goal
