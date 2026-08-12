@@ -1,8 +1,9 @@
 ---
 name: repo-init
 title: Repo Init for All Installed AI Agents
-description: Initialize a new or existing repo for every installed AI coding agent — inventory agents, scaffold context files, verify resolution.
-version: 1.0.0
+description: Initialize a new or existing repo for every installed AI coding agent
+  — inventory agents, scaffold context files, verify resolution.
+version: 1.1.0
 license: MIT
 author: Hermes Agent
 tags:
@@ -23,7 +24,7 @@ toolsets:
 skills:
 - repo-init
 - verification-before-completion
-plan: None
+plan: null
 ---
 
 ## Goal
@@ -96,6 +97,38 @@ Initialize a new or existing repo for **all installed AI coding agents**: invent
 
 - Python 3.10+ on PATH
 - `scripts/repo-init.py` present in the workspace
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| Server | Purpose |
+|--------|---------|
+| `filesystem` | File read/write operations |
+| `github` | GitHub API operations (agent inventory cross-check) |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `tavily` | Web search + URL extraction |
+
+## Hooks
+
+The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
+
+| Hook | When | Behavior |
+|------|------|----------|
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
+
+## Scripts
+
+- `scripts/repo-init.py` — Agent inventory + scaffold + verify (this prompt's engine)
+- `docs/ai-agents-inventory.md` — Regenerated inventory doc output
+- `.github/hooks/*` — Hook implementations listed in the Hooks section
 
 ## Subgoals
 

@@ -1,48 +1,50 @@
 ---
 name: repo-research-pipeline
 title: Repo Research Pipeline (MCP-Enhanced)
-description: Structured workflow for executing web research across multiple projects and writing actionable RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline skill and web-research-pipeline skill.
-version: 2.1.0
+description: Structured workflow for executing web research across multiple projects
+  and writing actionable RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline
+  skill and web-research-pipeline skill.
+version: 2.2.0
 license: MIT
 author: Hermes Agent
 toolsets:
-  - browser
-  - code_execution
-  - file
-  - mcp
-  - terminal
-  - web
+- browser
+- code_execution
+- file
+- mcp
+- terminal
+- web
 scripts: []
 skills:
-  - domain-intel
-  - gh-cli
-  - web-research-pipeline
-  - subagent-driven-development
+- domain-intel
+- gh-cli
+- web-research-pipeline
+- subagent-driven-development
 formatter: default
-plan: 'None'
+plan: null
 dependencies:
-  - "prompt:web-research-pipeline"
-  - "skill:domain-intel"
-  - "skill:gh-cli"
-  - "tool:mcp-tavily"
-  - "tool:mcp-fetch"
-  - "tool:mcp-filesystem"
-  - "tool:mcp-github"
-  - "tool:mcp-memory"
-  - "tool:mcp-playwright"
-  - "tool:mcp-sequential-thinking"
-  - "skill:subagent-driven-development"
-  - "skill:web-research-pipeline"
+- prompt:web-research-pipeline
+- skill:domain-intel
+- skill:gh-cli
+- tool:mcp-tavily
+- tool:mcp-fetch
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-memory
+- tool:mcp-playwright
+- tool:mcp-sequential-thinking
+- skill:subagent-driven-development
+- skill:web-research-pipeline
 tags:
-  - frontend
-  - generator
-  - git
-  - mcp
-  - prompts
-  - skills
-  - typescript
-  - vscode
-  - workflow
+- frontend
+- generator
+- git
+- mcp
+- prompts
+- skills
+- typescript
+- vscode
+- workflow
 trigger: /repo-research-pipeline
 metadata:
   hermes: {}
@@ -147,13 +149,33 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep` | AST-based code search and replace |
+| Server | Purpose |
+|--------|---------|
+| `tavily` | Web search + URL extraction (primary research backend) |
+| `fetch` | Web page content extraction fallback |
 | `filesystem` | File read/write operations |
-| `sequential-thinking` | Structured reasoning for complex problems |
-| `fetch` | Web page content extraction |
-| `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
+| `memory` | Persistent memory operations |
+| `playwright` | Browser automation for interactive pages |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
 
+## Hooks
+
+The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
+
+| Hook | When | Behavior |
+|------|------|----------|
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
+
+## Scripts
+
+- `.github/prompts/.enhance/analyze_prompts.py` — Prompt-library analyzer (audit/verify)
+- `.github/hooks/*` — Hook implementations listed in the Hooks section
 ## Tasks
 
 - [ ] Understand requirements and scope
