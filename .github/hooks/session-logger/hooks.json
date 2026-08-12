@@ -1,11 +1,11 @@
 {
-	"name": "session-logger",
-	"version": "1.3.0",
-	"description": "Logs Hermes session lifecycle and prompt events for replay and audit. Start and end capture resolve user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload; end capture derives status (normalized to completed/failed/interrupted/truncated), duration, and turns from wire fields + accumulated JSONL. Skips synthetic test session ids.",
-	"events": ["on_session_start", "on_session_end", "pre_llm_call"],
-	"entrypoint": "hook.sh",
-	"config": {
-		"log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/sessions",
-		"retention_days": 30
-	}
+  "name": "session-logger",
+  "version": "1.4.0",
+  "description": "Logs Hermes session lifecycle and prompt events for replay and audit. Start and end capture resolve user, profile, model, provider, working dir, host snapshot, and git state from the runtime payload; end capture derives status (normalized to completed/failed/interrupted/truncated), duration, and turns from wire fields + accumulated JSONL, then runs the full end capture (session_end_capture.py: tools, slash-skills, git changelog, errors, prompt summaries from state.db -> <session_id>.end.json) consumed by session-audit-report at next start. Skips synthetic test session ids.",
+  "events": ["on_session_start", "on_session_end", "pre_llm_call"],
+  "entrypoint": "hook.sh",
+  "config": {
+    "log_dir": "C:/Users/Alexa/AppData/Local/hermes/logs/sessions",
+    "retention_days": 30
+  }
 }
