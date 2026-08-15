@@ -1,4 +1,10 @@
 {
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -12,21 +18,11 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.wordWrap": "on"
 	},
-	"[python]": {
-		"editor.defaultFormatter": "charliermarsh.ruff",
-		"editor.codeActionsOnSave": {
-			"source.fixAll.ruff": "explicit",
-			"source.organizeImports.ruff": "explicit"
-		}
-	},
 	"[shellscript]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
 	"[toml]": {
 		"editor.defaultFormatter": "tamasfe.even-better-toml"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -50,7 +46,8 @@
 	"files.exclude": {
 		"**/.venv": true,
 		"**/__pycache__": true,
-		"**/.pytest_cache": true
+		"**/.pytest_cache": true,
+		"**/.worktrees": true
 	},
 	"markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
 	"markdownlint.config": {
@@ -102,7 +99,8 @@
 	"search.exclude": {
 		"**/.venv": true,
 		"**/node_modules": true,
-		"**/dist": true
+		"**/dist": true,
+		"**/.worktrees": true
 	},
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.profiles.windows": {
@@ -118,5 +116,6 @@
 			"icon": "terminal-powershell",
 			"source": "PowerShell"
 		}
-	}
+	},
+	"extensions.ignoreRecommendations": false
 }
