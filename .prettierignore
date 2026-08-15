@@ -7,5 +7,6 @@ build
 coverage
 *.lock
 *.min.js
-docs/reports/
+docs/reports
 .github/prompts
+.pytest_cache
