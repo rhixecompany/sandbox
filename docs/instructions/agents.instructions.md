@@ -128,12 +128,12 @@ handoffs:
 
 Each handoff in the list must include the following properties:
 
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `label` | string | Yes | The display text shown on the handoff button in the chat interface |
-| `agent` | string | Yes | The target agent identifier to switch to (name or filename without `.agent.md`) |
-| `prompt` | string | No | The prompt text to pre-fill in the target agent's chat input |
-| `send` | boolean | No | If `true`, automatically submits the prompt to the target agent (default: `false`) |
+| Property | Type    | Required | Description                                                                        |
+| -------- | ------- | -------- | ---------------------------------------------------------------------------------- |
+| `label`  | string  | Yes      | The display text shown on the handoff button in the chat interface                 |
+| `agent`  | string  | Yes      | The target agent identifier to switch to (name or filename without `.agent.md`)    |
+| `prompt` | string  | No       | The prompt text to pre-fill in the target agent's chat input                       |
+| `send`   | boolean | No       | If `true`, automatically submits the prompt to the target agent (default: `false`) |
 
 ### Handoff Behavior
 
@@ -292,23 +292,23 @@ tools: []
 
 All aliases are case-insensitive:
 
-| Alias | Alternative Names | Category | Description |
-| --- | --- | --- | --- |
-| `execute` | shell, Bash, powershell | Shell execution | Execute commands in appropriate shell |
-| `read` | Read, NotebookRead, view | File reading | Read file contents |
-| `edit` | Edit, MultiEdit, Write, NotebookEdit | File editing | Edit and modify files |
-| `search` | Grep, Glob, search | Code search | Search for files or text in files |
-| `agent` | custom-agent, Task | Agent invocation | Invoke other custom agents |
-| `web` | WebSearch, WebFetch | Web access | Fetch web content and search |
-| `todo` | TodoWrite | Task management | Create and manage task lists (VS Code only) |
+| Alias     | Alternative Names                    | Category         | Description                                 |
+| --------- | ------------------------------------ | ---------------- | ------------------------------------------- |
+| `execute` | shell, Bash, powershell              | Shell execution  | Execute commands in appropriate shell       |
+| `read`    | Read, NotebookRead, view             | File reading     | Read file contents                          |
+| `edit`    | Edit, MultiEdit, Write, NotebookEdit | File editing     | Edit and modify files                       |
+| `search`  | Grep, Glob, search                   | Code search      | Search for files or text in files           |
+| `agent`   | custom-agent, Task                   | Agent invocation | Invoke other custom agents                  |
+| `web`     | WebSearch, WebFetch                  | Web access       | Fetch web content and search                |
+| `todo`    | TodoWrite                            | Task management  | Create and manage task lists (VS Code only) |
 
 ### Built-in MCP Server Tools
 
 **GitHub MCP Server**:
 
 ```yaml
-tools: ['github/*']  # All GitHub tools
-tools: ['github/get_file_contents', 'github/search_repositories']  # Specific tools
+tools: ["github/*"] # All GitHub tools
+tools: ["github/get_file_contents", "github/search_repositories"] # Specific tools
 ```
 
 - All read-only tools available by default
@@ -317,8 +317,8 @@ tools: ['github/get_file_contents', 'github/search_repositories']  # Specific to
 **Playwright MCP Server**:
 
 ```yaml
-tools: ['playwright/*']  # All Playwright tools
-tools: ['playwright/navigate', 'playwright/screenshot']  # Specific tools
+tools: ["playwright/*"] # All Playwright tools
+tools: ["playwright/navigate", "playwright/screenshot"] # Specific tools
 ```
 
 - Configured to access localhost only
@@ -669,13 +669,13 @@ This example shows a more complete orchestration with **pre-flight checks**, **c
 
 **Step trigger conditions:**
 
-| Step | Status | Trigger Condition | On Failure |
-| --- | --- | --- | --- |
-| 1: Security Review | **Required** | Always run | Stop pipeline |
-| 2: Dependency Audit | Optional | If a dependency manifest exists (`package.json`, `pom.xml`, etc.) | Continue |
-| 3: Test Coverage Check | Optional | If test projects/files are present | Continue |
-| 4: Performance Checks | Optional | If perf-sensitive code changed OR a perf config exists | Continue |
-| 5: Aggregate & Verdict | **Required** | Always run if Step 1 completed | Stop pipeline |
+| Step                   | Status       | Trigger Condition                                                 | On Failure    |
+| ---------------------- | ------------ | ----------------------------------------------------------------- | ------------- |
+| 1: Security Review     | **Required** | Always run                                                        | Stop pipeline |
+| 2: Dependency Audit    | Optional     | If a dependency manifest exists (`package.json`, `pom.xml`, etc.) | Continue      |
+| 3: Test Coverage Check | Optional     | If test projects/files are present                                | Continue      |
+| 4: Performance Checks  | Optional     | If perf-sensitive code changed OR a perf config exists            | Continue      |
+| 5: Aggregate & Verdict | **Required** | Always run if Step 1 completed                                    | Stop pipeline |
 
 **Execution flow (natural language):**
 
@@ -747,19 +747,19 @@ Use consistent variable naming conventions:
 ```javascript
 // Good: Clear, descriptive naming
 const variables = {
-  projectName, // What project to work on
-  basePath, // Where project files are located
-  outputDirectory, // Where to save results
-  processingMode, // How to process (detail level)
-  configurationPath // Where config files are
+	projectName, // What project to work on
+	basePath, // Where project files are located
+	outputDirectory, // Where to save results
+	processingMode, // How to process (detail level)
+	configurationPath, // Where config files are
 };
 
 // Avoid: Ambiguous or inconsistent
 const bad_variables = {
-  name, // Too generic
-  path, // Unclear which path
-  mode, // Too short
-  config // Too vague
+	name, // Too generic
+	path, // Unclear which path
+	mode, // Too short
+	config, // Too vague
 };
 ```
 

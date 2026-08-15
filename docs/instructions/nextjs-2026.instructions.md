@@ -49,13 +49,13 @@ This document summarizes the latest, authoritative best practices for building, 
 import DashboardNavbar from "@/components/DashboardNavbar";
 
 export default async function DashboardPage() {
-  // ...server logic...
-  return (
-    <>
-      <DashboardNavbar /> {/* This is a Client Component */}
-      {/* ...rest of server-rendered page... */}
-    </>
-  );
+	// ...server logic...
+	return (
+		<>
+			<DashboardNavbar /> {/* This is a Client Component */}
+			{/* ...rest of server-rendered page... */}
+		</>
+	);
 }
 ```
 

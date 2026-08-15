@@ -1,6 +1,6 @@
 ---
 applyTo: src/dal/**/*.ts,src/database/**/*.ts
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Database Best Practices (Drizzle/Postgres)

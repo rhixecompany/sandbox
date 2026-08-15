@@ -270,20 +270,20 @@ dotnet_diagnostic.VSTHRD*.severity = error
 
 ### Performance Rules
 
-| ID | Rule | Fix |
-| --- | --- | --- |
-| **VSSDK001** | Derive from `AsyncPackage` | Use `ToolkitPackage` (derives from AsyncPackage) |
-| **VSSDK002** | `AllowsBackgroundLoading = true` | Add to `[PackageRegistration]` |
+| ID           | Rule                             | Fix                                              |
+| ------------ | -------------------------------- | ------------------------------------------------ |
+| **VSSDK001** | Derive from `AsyncPackage`       | Use `ToolkitPackage` (derives from AsyncPackage) |
+| **VSSDK002** | `AllowsBackgroundLoading = true` | Add to `[PackageRegistration]`                   |
 
 ### Threading Rules (VSTHRD)
 
-| ID | Rule | Fix |
-| --- | --- | --- |
-| **VSTHRD001** | Avoid `.Wait()` | Use `await` |
-| **VSTHRD002** | Avoid `JoinableTaskFactory.Run` | Use `RunAsync` or `await` |
-| **VSTHRD010** | COM calls require UI thread | `await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync()` |
-| **VSTHRD100** | No `async void` | Use `async Task` |
-| **VSTHRD110** | Observe async results | `await task;` or suppress with pragma |
+| ID            | Rule                            | Fix                                                                |
+| ------------- | ------------------------------- | ------------------------------------------------------------------ |
+| **VSTHRD001** | Avoid `.Wait()`                 | Use `await`                                                        |
+| **VSTHRD002** | Avoid `JoinableTaskFactory.Run` | Use `RunAsync` or `await`                                          |
+| **VSTHRD010** | COM calls require UI thread     | `await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync()` |
+| **VSTHRD100** | No `async void`                 | Use `async Task`                                                   |
+| **VSTHRD110** | Observe async results           | `await task;` or suppress with pragma                              |
 
 ## Visual Studio Theming
 
@@ -329,12 +329,12 @@ For dialog windows, use `DialogWindow`:
 
 ### Common Theme Color Tokens
 
-| Category | Token | Usage |
-| --- | --- | --- |
-| **Background** | `EnvironmentColors.ToolWindowBackgroundBrushKey` | Window/panel background |
-| **Foreground** | `EnvironmentColors.ToolWindowTextBrushKey` | Text |
-| **Command Bar** | `EnvironmentColors.CommandBarTextActiveBrushKey` | Menu items |
-| **Links** | `EnvironmentColors.ControlLinkTextBrushKey` | Hyperlinks |
+| Category        | Token                                            | Usage                   |
+| --------------- | ------------------------------------------------ | ----------------------- |
+| **Background**  | `EnvironmentColors.ToolWindowBackgroundBrushKey` | Window/panel background |
+| **Foreground**  | `EnvironmentColors.ToolWindowTextBrushKey`       | Text                    |
+| **Command Bar** | `EnvironmentColors.CommandBarTextActiveBrushKey` | Menu items              |
+| **Links**       | `EnvironmentColors.ControlLinkTextBrushKey`      | Hyperlinks              |
 
 ### Theme-Aware Icons
 
@@ -567,18 +567,18 @@ In VSCT:
 
 ## Common Pitfalls
 
-| Pitfall | Solution |
-| --- | --- |
-| Blocking UI thread | Always use `async`/`await` |
-| Creating WPF on background thread | Call `SwitchToMainThreadAsync()` first |
-| Ignoring cancellation tokens | Pass them through async chains |
-| VSCommandTable.cs mismatch | Regenerate after VSCT changes |
-| Hardcoded GUIDs | Use `PackageGuids` and `PackageIds` constants |
-| Swallowing exceptions | Log with `await ex.LogAsync()` |
-| Missing DynamicVisibility | Required for `BeforeQueryStatus` to work |
-| Using `.Result`, `.Wait()` | Causes deadlocks; always `await` |
-| Hardcoded colors | Use VS theme colors (`EnvironmentColors`) |
-| `async void` methods | Use `async Task` instead |
+| Pitfall                           | Solution                                      |
+| --------------------------------- | --------------------------------------------- |
+| Blocking UI thread                | Always use `async`/`await`                    |
+| Creating WPF on background thread | Call `SwitchToMainThreadAsync()` first        |
+| Ignoring cancellation tokens      | Pass them through async chains                |
+| VSCommandTable.cs mismatch        | Regenerate after VSCT changes                 |
+| Hardcoded GUIDs                   | Use `PackageGuids` and `PackageIds` constants |
+| Swallowing exceptions             | Log with `await ex.LogAsync()`                |
+| Missing DynamicVisibility         | Required for `BeforeQueryStatus` to work      |
+| Using `.Result`, `.Wait()`        | Causes deadlocks; always `await`              |
+| Hardcoded colors                  | Use VS theme colors (`EnvironmentColors`)     |
+| `async void` methods              | Use `async Task` instead                      |
 
 ## Validation
 
@@ -599,13 +599,13 @@ Test in VS Experimental Instance before release.
 
 ## NuGet Packages
 
-| Package | Purpose |
-| --- | --- |
-| `Community.VisualStudio.Toolkit.17` | Simplifies VS extension development |
-| `Microsoft.VisualStudio.SDK` | Core VS SDK |
-| `Microsoft.VSSDK.BuildTools` | Build tools for VSIX |
-| `Microsoft.VisualStudio.Threading.Analyzers` | Threading analyzers |
-| `Microsoft.VisualStudio.SDK.Analyzers` | VSSDK analyzers |
+| Package                                      | Purpose                             |
+| -------------------------------------------- | ----------------------------------- |
+| `Community.VisualStudio.Toolkit.17`          | Simplifies VS extension development |
+| `Microsoft.VisualStudio.SDK`                 | Core VS SDK                         |
+| `Microsoft.VSSDK.BuildTools`                 | Build tools for VSIX                |
+| `Microsoft.VisualStudio.Threading.Analyzers` | Threading analyzers                 |
+| `Microsoft.VisualStudio.SDK.Analyzers`       | VSSDK analyzers                     |
 
 ## Resources
 
@@ -652,17 +652,17 @@ Description with screenshot...
 
 ### README Best Practices
 
-| Element | Guideline |
-| --- | --- |
-| **Title** | Use the same name as `DisplayName` in vsixmanifest |
-| **Hook line** | Bold, one-sentence value proposition immediately after badges |
-| **Screenshots** | Place in `/art` folder, use relative paths (`art/image.png`) |
-| **Image sizes** | Keep under 1MB, 800-1200px wide for clarity |
-| **Badges** | Version, downloads, rating, build status |
-| **Feature sections** | Use H3 (`###`) with screenshots for each major feature |
-| **Keyboard shortcuts** | Format as **Ctrl+M, Ctrl+C** (bold) |
-| **Tables** | Great for comparing options or listing features |
-| **Links** | Use reference-style links at top for cleaner markdown |
+| Element                | Guideline                                                     |
+| ---------------------- | ------------------------------------------------------------- |
+| **Title**              | Use the same name as `DisplayName` in vsixmanifest            |
+| **Hook line**          | Bold, one-sentence value proposition immediately after badges |
+| **Screenshots**        | Place in `/art` folder, use relative paths (`art/image.png`)  |
+| **Image sizes**        | Keep under 1MB, 800-1200px wide for clarity                   |
+| **Badges**             | Version, downloads, rating, build status                      |
+| **Feature sections**   | Use H3 (`###`) with screenshots for each major feature        |
+| **Keyboard shortcuts** | Format as **Ctrl+M, Ctrl+C** (bold)                           |
+| **Tables**             | Great for comparing options or listing features               |
+| **Links**              | Use reference-style links at top for cleaner markdown         |
 
 ### VSIX Manifest (source.extension.vsixmanifest)
 
@@ -681,14 +681,14 @@ Description with screenshot...
 
 ### Manifest Best Practices
 
-| Element | Guideline |
-| --- | --- |
-| **DisplayName** | 3-5 words, no "for Visual Studio" (implied) |
-| **Description** | Under 200 chars, focus on value not features. Appears in search tiles |
-| **Tags** | 5-10 relevant keywords, comma-separated, helps discoverability |
-| **Icon** | 128x128 or 256x256 PNG, simple design visible at small sizes |
-| **PreviewImage** | 200x200 PNG, can be same as Icon or a feature screenshot |
-| **MoreInfo** | Link to GitHub repo for documentation and issues |
+| Element          | Guideline                                                             |
+| ---------------- | --------------------------------------------------------------------- |
+| **DisplayName**  | 3-5 words, no "for Visual Studio" (implied)                           |
+| **Description**  | Under 200 chars, focus on value not features. Appears in search tiles |
+| **Tags**         | 5-10 relevant keywords, comma-separated, helps discoverability        |
+| **Icon**         | 128x128 or 256x256 PNG, simple design visible at small sizes          |
+| **PreviewImage** | 200x200 PNG, can be same as Icon or a feature screenshot              |
+| **MoreInfo**     | Link to GitHub repo for documentation and issues                      |
 
 ### Writing Tips
 

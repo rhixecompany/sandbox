@@ -111,10 +111,10 @@ To avoid confusion or conflicting information, that may potentially happen in so
 
   > [!NOTE] The Task generators are identified by the `Task Generator` label in the dev box tools. For example, `Customization {task_name} Task Generator`. You can use the information provided in the table below to identify which intrinsic task(s) the selected Task generator is used for. This will help you determine when to use that rather than generating content based on this file, dev box CLI, and/or referenced documentation.
   >
-  > | Task Generator Name | Intrinsic Task Name(s) |
-  > | --- | --- |
-  > | Customization WinGet Task Generator | `__INTRINSIC_WinGet__` &#124; `~/winget` |
-  > | Customization Git Clone Task Generator | `__INTRINSIC_GitClone__` &#124; `~/gitclone` |
+  > | Task Generator Name                     | Intrinsic Task Name(s)                           |
+  > | --------------------------------------- | ------------------------------------------------ |
+  > | Customization WinGet Task Generator     | `__INTRINSIC_WinGet__` &#124; `~/winget`         |
+  > | Customization Git Clone Task Generator  | `__INTRINSIC_GitClone__` &#124; `~/gitclone`     |
   > | Customization PowerShell Task Generator | `__INTRINSIC_PowerShell__` &#124; `~/powershell` |
 
 - If the user has selected the `Customization YAML Generation Planner` tool, this should be used as a first pass to help the user plan and generate the YAML file based on their requirements and the available customization tasks before considering the content of this file, dev box CLI, and/or referenced documentation.

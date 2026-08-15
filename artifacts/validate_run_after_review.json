@@ -1,1 +1,4 @@
-{ "summary": { "total": 189, "ok": 189, "fail": 0 }, "note": "Validator run completed on 2026-08-15T17:XX:00+01:00. Warnings mainly indicate applyTo normalization; no required-field failures. See details in temp output on the runner." }
+{
+	"summary": { "total": 189, "ok": 189, "fail": 0 },
+	"note": "Validator run completed on 2026-08-15T17:XX:00+01:00. Warnings mainly indicate applyTo normalization; no required-field failures. See details in temp output on the runner."
+}

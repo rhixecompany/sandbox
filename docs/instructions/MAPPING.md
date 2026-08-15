@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Copilot Instructions — File Type Mapping
@@ -12,6 +12,7 @@ description: 'PLACEHOLDER: brief description required. Please update before merg
 ## Quick Reference by File Type
 
 ### TypeScript/JavaScript (.ts, .tsx, .js, .jsx, .mjs, .cjs)
+
 - **nextjs.instructions.md** — Next.js 16.1.1 App Router, Server/Client components, caching
 - **nodejs-javascript-vitest.instructions.md** — Node.js ESM, Vitest testing patterns
 - **typescript-mcp-server.instructions.md** — MCP server patterns in TypeScript
@@ -21,48 +22,61 @@ description: 'PLACEHOLDER: brief description required. Please update before merg
 - **svelte.instructions.md** — Svelte framework
 
 ### Python (.py)
+
 - **python-mcp-server.instructions.md** — MCP server patterns in Python
 - **agent-safety.instructions.md** — AI safety & governance patterns (applies to all files)
 - **ai-prompt-engineering-safety-best-practices.instructions.md** — Prompt engineering & safety
 
 ### Go (.go)
+
 - **go-mcp-server.instructions.md** — MCP server patterns in Go
 - **go.instructions.md** — Go language best practices
 
 ### Rust (.rs)
+
 - **rust-mcp-server.instructions.md** — MCP server patterns in Rust
 - **rust.instructions.md** — Rust language best practices
 
 ### Java (.java)
+
 - **java-mcp-server.instructions.md** — MCP server patterns in Java
 
 ### Kotlin (.kt)
+
 - **kotlin-mcp-server.instructions.md** — MCP server patterns in Kotlin
 
 ### C# (.cs, .csproj)
+
 - **csharp-mcp-server.instructions.md** — MCP server patterns in C#
 - **csharp.instructions.md** — C# language development
 
 ### PHP (.php)
+
 - **php-mcp-server.instructions.md** — MCP server patterns in PHP
 
 ### Ruby (.rb)
+
 - **ruby-mcp-server.instructions.md** — MCP server patterns in Ruby
 
 ### Swift (.swift)
+
 - **swift-mcp-server.instructions.md** — MCP server patterns in Swift
 
 ### Shell/PowerShell (.sh, .ps1)
+
 - **shell.instructions.md** — Bash/shell script best practices
 - **powershell.instructions.md** — PowerShell script development
 
 ### YAML/Config (.yaml, .yml, azure-pipelines.yml)
+
 - **azure-devops-pipelines.instructions.md** — Azure DevOps Pipeline YAML patterns
 
 ### Markdown (.md)
+
 - **markdown.instructions.md** — Markdown writing standards
 
 ### Universal (all files)
+
 - **a11y.instructions.md** — Web accessibility (WCAG 2.2)
 - **caveman-mode.instructions.md** — Token-efficient terse responses
 - **performance-optimization.instructions.md** — Performance best practices
@@ -87,15 +101,15 @@ description: 'PLACEHOLDER: brief description required. Please update before merg
 
 ## Coverage Summary
 
-| Coverage Area | Instructions | Files |
-|---|---|---|
-| **Languages** | 14 | .ts, .tsx, .js, .py, .go, .rs, .java, .kt, .cs, .php, .rb, .swift |
-| **Frameworks** | 4 | Next.js, Astro, Vue, Svelte |
-| **MCP Servers** | 10 | All MCP implementations |
-| **AI & Safety** | 3 | Agent patterns, safety governance |
-| **DevOps** | 1 | CI/CD pipelines |
-| **Scripting** | 2 | Shell, PowerShell |
-| **Other** | 4 | Accessibility, performance, markdown, token efficiency |
+| Coverage Area   | Instructions | Files                                                             |
+| --------------- | ------------ | ----------------------------------------------------------------- |
+| **Languages**   | 14           | .ts, .tsx, .js, .py, .go, .rs, .java, .kt, .cs, .php, .rb, .swift |
+| **Frameworks**  | 4            | Next.js, Astro, Vue, Svelte                                       |
+| **MCP Servers** | 10           | All MCP implementations                                           |
+| **AI & Safety** | 3            | Agent patterns, safety governance                                 |
+| **DevOps**      | 1            | CI/CD pipelines                                                   |
+| **Scripting**   | 2            | Shell, PowerShell                                                 |
+| **Other**       | 4            | Accessibility, performance, markdown, token efficiency            |
 
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: 'Deterministic path and instruction routing for monorepo edits'
-applyTo: '**/*'
+description: "Deterministic path and instruction routing for monorepo edits"
+applyTo: "**/*"
 ---
 
 # Monorepo Path Routing

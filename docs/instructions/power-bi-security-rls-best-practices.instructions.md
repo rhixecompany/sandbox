@@ -94,14 +94,14 @@ var rlsidentity = new EffectiveIdentity(
 
 ```json
 {
-  "accessLevel": "View",
-  "identities": [
-    {
-      "username": "France",
-      "roles": ["CountryDynamic"],
-      "datasets": ["fe0a1aeb-f6a4-4b27-a2d3-b5df3bb28bdc"]
-    }
-  ]
+	"accessLevel": "View",
+	"identities": [
+		{
+			"username": "France",
+			"roles": ["CountryDynamic"],
+			"datasets": ["fe0a1aeb-f6a4-4b27-a2d3-b5df3bb28bdc"]
+		}
+	]
 }
 ```
 
@@ -161,10 +161,10 @@ GO
 
 ```json
 {
-  "format": "PDF",
-  "paginatedReportConfiguration": {
-    "identities": [{ "username": "john@contoso.com" }]
-  }
+	"format": "PDF",
+	"paginatedReportConfiguration": {
+		"identities": [{ "username": "john@contoso.com" }]
+	}
 }
 ```
 
@@ -180,38 +180,38 @@ roles:"pagesuser" %}
 
 ```json
 {
-  "datasets": [
-    {
-      "id": "fff1a505-xxxx-xxxx-xxxx-e69f81e5b974"
-    }
-  ],
-  "datasourceIdentities": [
-    {
-      "identityBlob": "eyJ…",
-      "datasources": [
-        {
-          "datasourceType": "Sql",
-          "connectionDetails": {
-            "server": "YourServerName.database.windows.net",
-            "database": "YourDataBaseName"
-          }
-        }
-      ]
-    }
-  ],
-  "identities": [
-    {
-      "username": "YourUsername",
-      "datasets": ["fff1a505-xxxx-xxxx-xxxx-e69f81e5b974"],
-      "roles": ["YourRole"]
-    }
-  ],
-  "reports": [
-    {
-      "allowEdit": false,
-      "id": "10ce71df-xxxx-xxxx-xxxx-814a916b700d"
-    }
-  ]
+	"datasets": [
+		{
+			"id": "fff1a505-xxxx-xxxx-xxxx-e69f81e5b974"
+		}
+	],
+	"datasourceIdentities": [
+		{
+			"identityBlob": "eyJ…",
+			"datasources": [
+				{
+					"datasourceType": "Sql",
+					"connectionDetails": {
+						"server": "YourServerName.database.windows.net",
+						"database": "YourDataBaseName"
+					}
+				}
+			]
+		}
+	],
+	"identities": [
+		{
+			"username": "YourUsername",
+			"datasets": ["fff1a505-xxxx-xxxx-xxxx-e69f81e5b974"],
+			"roles": ["YourRole"]
+		}
+	],
+	"reports": [
+		{
+			"allowEdit": false,
+			"id": "10ce71df-xxxx-xxxx-xxxx-814a916b700d"
+		}
+	]
 }
 ```
 

@@ -70,8 +70,8 @@ When performing a code review, check for:
 ```javascript
 // ❌ BAD: Poor naming and magic numbers
 function calc(x, y) {
-  if (x > 100) return y * 0.15;
-  return y * 0.1;
+	if (x > 100) return y * 0.15;
+	return y * 0.1;
 }
 
 // ✅ GOOD: Clear naming and constants
@@ -80,11 +80,9 @@ const PREMIUM_DISCOUNT_RATE = 0.15;
 const STANDARD_DISCOUNT_RATE = 0.1;
 
 function calculateDiscount(orderTotal, itemPrice) {
-  const isPremiumOrder = orderTotal > PREMIUM_THRESHOLD;
-  const discountRate = isPremiumOrder
-    ? PREMIUM_DISCOUNT_RATE
-    : STANDARD_DISCOUNT_RATE;
-  return itemPrice * discountRate;
+	const isPremiumOrder = orderTotal > PREMIUM_THRESHOLD;
+	const discountRate = isPremiumOrder ? PREMIUM_DISCOUNT_RATE : STANDARD_DISCOUNT_RATE;
+	return itemPrice * discountRate;
 }
 ```
 
@@ -172,18 +170,18 @@ When performing a code review, verify test quality:
 ```typescript
 // ❌ BAD: Vague name and assertion
 test("test1", () => {
-  const result = calc(5, 10);
-  expect(result).toBeTruthy();
+	const result = calc(5, 10);
+	expect(result).toBeTruthy();
 });
 
 // ✅ GOOD: Descriptive name and specific assertion
 test("should calculate 10% discount for orders under $100", () => {
-  const orderTotal = 50;
-  const itemPrice = 20;
+	const orderTotal = 50;
+	const itemPrice = 20;
 
-  const discount = calculateDiscount(orderTotal, itemPrice);
+	const discount = calculateDiscount(orderTotal, itemPrice);
 
-  expect(discount).toBe(2.0);
+	expect(discount).toBe(2.0);
 });
 ```
 
@@ -289,12 +287,12 @@ The `processPayment()` function handles financial transactions but has no tests 
 
 ```javascript
 test("should process full refund when order is cancelled", () => {
-  const order = createOrder({ total: 100, status: "cancelled" });
+	const order = createOrder({ total: 100, status: "cancelled" });
 
-  const result = processPayment(order, { type: "refund" });
+	const result = processPayment(order, { type: "refund" });
 
-  expect(result.refundAmount).toBe(100);
-  expect(result.status).toBe("refunded");
+	expect(result.refundAmount).toBe(100);
+	expect(result.status).toBe("refunded");
 });
 ```
 ````
@@ -313,16 +311,16 @@ The nested if statements on lines 30-40 make the logic hard to follow.
 ```javascript
 // Instead of nested ifs:
 if (user) {
-  if (user.isActive) {
-    if (user.hasPermission("write")) {
-      // do something
-    }
-  }
+	if (user.isActive) {
+		if (user.hasPermission("write")) {
+			// do something
+		}
+	}
 }
 
 // Consider guard clauses:
 if (!user || !user.isActive || !user.hasPermission("write")) {
-  return;
+	return;
 }
 // do something
 ```

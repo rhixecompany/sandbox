@@ -45,28 +45,28 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
 
   ```json
   {
-    "compilerOptions": {
-      "target": "ES2020",
-      "useDefineForClassFields": true,
-      "lib": ["ES2020", "DOM", "DOM.Iterable"],
-      "module": "ESNext",
-      "skipLibCheck": true,
-      "verbatimModuleSyntax": false,
-      "moduleResolution": "bundler",
-      "allowImportingTsExtensions": true,
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "jsx": "react-jsx",
-      "strict": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noFallthroughCasesInSwitch": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["./src/*"]
-      }
-    }
+  	"compilerOptions": {
+  		"target": "ES2020",
+  		"useDefineForClassFields": true,
+  		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+  		"module": "ESNext",
+  		"skipLibCheck": true,
+  		"verbatimModuleSyntax": false,
+  		"moduleResolution": "bundler",
+  		"allowImportingTsExtensions": true,
+  		"resolveJsonModule": true,
+  		"isolatedModules": true,
+  		"noEmit": true,
+  		"jsx": "react-jsx",
+  		"strict": true,
+  		"noUnusedLocals": true,
+  		"noUnusedParameters": true,
+  		"noFallthroughCasesInSwitch": true,
+  		"baseUrl": ".",
+  		"paths": {
+  			"@/*": ["./src/*"]
+  		}
+  	}
   }
   ```
 
@@ -134,15 +134,15 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ```typescript
   // Example: Document processing with AI Builder
   const processDocument = async (file: File) => {
-    const formData = new FormData();
-    formData.append("file", file);
+  	const formData = new FormData();
+  	formData.append("file", file);
 
-    const result = await AIBuilderService.ProcessDocument({
-      modelId: "document-processing-model-id",
-      document: formData
-    });
+  	const result = await AIBuilderService.ProcessDocument({
+  		modelId: "document-processing-model-id",
+  		document: formData,
+  	});
 
-    return result.extractedFields;
+  	return result.extractedFields;
   };
   ```
 
@@ -223,9 +223,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ```typescript
   // Example: User-to-Role many-to-many relationship
   const userRoles = await UserRoleService.getall();
-  const filteredRoles = userRoles.filter(
-    ur => ur.userId === currentUser.id
-  );
+  const filteredRoles = userRoles.filter((ur) => ur.userId === currentUser.id);
   ```
 
 - **Polymorphic lookups**: Handle customer fields that can reference multiple entity types
@@ -235,9 +233,7 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   const customerType = record.customerType; // 'account' or 'contact'
   const customerId = record.customerId;
   const customer =
-    customerType === "account"
-      ? await AccountService.get(customerId)
-      : await ContactService.get(customerId);
+  	customerType === "account" ? await AccountService.get(customerId) : await ContactService.get(customerId);
   ```
 
 - **Complex relationship queries**: Use $expand and $filter for efficient data retrieval
@@ -258,16 +254,12 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ```typescript
   // Example: Service worker registration
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then(registration =>
-          console.log("SW registered:", registration)
-        )
-        .catch(error =>
-          console.log("SW registration failed:", error)
-        );
-    });
+  	window.addEventListener("load", () => {
+  		navigator.serviceWorker
+  			.register("/sw.js")
+  			.then((registration) => console.log("SW registered:", registration))
+  			.catch((error) => console.log("SW registration failed:", error));
+  	});
   }
   ```
 
@@ -276,19 +268,17 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ```typescript
   // Example: IndexedDB wrapper for offline storage
   class OfflineDataStore {
-    async saveData(key: string, data: any) {
-      const db = await this.openDB();
-      const transaction = db.transaction(["data"], "readwrite");
-      transaction
-        .objectStore("data")
-        .put({ id: key, data, timestamp: Date.now() });
-    }
+  	async saveData(key: string, data: any) {
+  		const db = await this.openDB();
+  		const transaction = db.transaction(["data"], "readwrite");
+  		transaction.objectStore("data").put({ id: key, data, timestamp: Date.now() });
+  	}
 
-    async loadData(key: string) {
-      const db = await this.openDB();
-      const transaction = db.transaction(["data"], "readonly");
-      return transaction.objectStore("data").get(key);
-    }
+  	async loadData(key: string) {
+  		const db = await this.openDB();
+  		const transaction = db.transaction(["data"], "readonly");
+  		return transaction.objectStore("data").get(key);
+  	}
   }
   ```
 
@@ -352,14 +342,14 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   // Example: environment-specific config files
   // config/development.json
   {
-    "features": {
-      "enableDebugMode": true,
-      "enableAnalytics": false
-    },
-    "powerPlatform": {
-      "environmentUrl": "https://dev-env.crm.dynamics.com",
-      "apiVersion": "9.2"
-    }
+  	"features": {
+  		"enableDebugMode": true,
+  		"enableAnalytics": false
+  	},
+  	"powerPlatform": {
+  		"environmentUrl": "https://dev-env.crm.dynamics.com",
+  		"apiVersion": "9.2"
+  	}
   }
   ```
 
@@ -479,14 +469,14 @@ Instructions for generating high-quality Power Apps Code Apps using TypeScript, 
   ```css
   /* Example: Container query for responsive components */
   .card-container {
-    container-type: inline-size;
+  	container-type: inline-size;
   }
 
   @container (min-width: 400px) {
-    .card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+  	.card {
+  		display: grid;
+  		grid-template-columns: 1fr 1fr;
+  	}
   }
   ```
 

@@ -1,98 +1,98 @@
 [
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\ansible.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-bicep.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-terraform.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review-generic.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-cassandra-to-spring-data-cosmos.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\cpp-language-service-tools.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\database-best-practices.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-advanced-features.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-agentic-workflows.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-api-reference.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-authentication-security.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-best-practices.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-error-handling.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-file-operations.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-modules.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-pandas-integration.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-performance-optimization.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-real-world-usecases.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-sdk.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-testing-debugging.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-user-project.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\MAPPING.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\memory-bank.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\moodle.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-events.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-power-pages.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-devops-alm-best-practices.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\security-and-owasp.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot-4-migration.instructions.md"
-  },
-  {
-    "FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-mcp-server.instructions.md"
-  }
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\ansible.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-bicep.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-terraform.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review-generic.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-cassandra-to-spring-data-cosmos.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\cpp-language-service-tools.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\database-best-practices.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-advanced-features.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-agentic-workflows.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-api-reference.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-authentication-security.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-best-practices.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-error-handling.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-file-operations.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-modules.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-pandas-integration.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-performance-optimization.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-real-world-usecases.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-sdk.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-testing-debugging.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-user-project.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\MAPPING.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\memory-bank.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\moodle.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-events.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-power-pages.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-devops-alm-best-practices.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\security-and-owasp.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot-4-migration.instructions.md"
+	},
+	{
+		"FullName": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-mcp-server.instructions.md"
+	}
 ]

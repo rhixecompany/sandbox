@@ -27,15 +27,15 @@ All theming flows through the theme provider:
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        <ThemeProvider defaultTheme="system" storageKey="app-theme">
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html>
+			<body>
+				<ThemeProvider defaultTheme="system" storageKey="app-theme">
+					{children}
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
 ```
 
@@ -50,32 +50,32 @@ export default function RootLayout({ children }) {
 ```css
 /* Light theme */
 :root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.6%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --accent: 0 84.2% 60.2%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --border: 0 0% 89.8%;
+	--background: 0 0% 100%;
+	--foreground: 0 0% 3.6%;
+	--primary: 0 0% 9%;
+	--primary-foreground: 0 0% 98%;
+	--secondary: 0 0% 96.1%;
+	--secondary-foreground: 0 0% 9%;
+	--accent: 0 84.2% 60.2%;
+	--muted: 0 0% 96.1%;
+	--muted-foreground: 0 0% 45.1%;
+	--border: 0 0% 89.8%;
 }
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: 0 0% 3.6%;
-    --foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --accent: 0 84.2% 60.2%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --border: 0 0% 14.9%;
-  }
+	:root {
+		--background: 0 0% 3.6%;
+		--foreground: 0 0% 98%;
+		--primary: 0 0% 98%;
+		--primary-foreground: 0 0% 9%;
+		--secondary: 0 0% 14.9%;
+		--secondary-foreground: 0 0% 98%;
+		--accent: 0 84.2% 60.2%;
+		--muted: 0 0% 14.9%;
+		--muted-foreground: 0 0% 63.9%;
+		--border: 0 0% 14.9%;
+	}
 }
 ```
 
@@ -133,20 +133,20 @@ import { ComicDetailClient } from "./comic-detail-client";
 import { comicDal } from "@/dal/comic-dal";
 
 interface ComicDetailProps {
-  slug: string;
+	slug: string;
 }
 
 export async function ComicDetail({ slug }: ComicDetailProps) {
-  // Fetch data server-side
-  const comic = await comicDal.getBySlug(slug);
-  if (!comic) return notFound();
+	// Fetch data server-side
+	const comic = await comicDal.getBySlug(slug);
+	if (!comic) return notFound();
 
-  return (
-    <ComicDetailClient
-      initialComic={comic}
-      // Pass serialized data to client component
-    />
-  );
+	return (
+		<ComicDetailClient
+			initialComic={comic}
+			// Pass serialized data to client component
+		/>
+	);
 }
 ```
 
@@ -158,23 +158,18 @@ import { useState } from "react";
 import { BookmarkButton } from "./bookmark-button";
 
 interface ComicDetailClientProps {
-  initialComic: Comic;
+	initialComic: Comic;
 }
 
-export function ComicDetailClient({
-  initialComic
-}: ComicDetailClientProps) {
-  const [bookmarked, setBookmarked] = useState(false);
+export function ComicDetailClient({ initialComic }: ComicDetailClientProps) {
+	const [bookmarked, setBookmarked] = useState(false);
 
-  return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">{initialComic.title}</h1>
-      <BookmarkButton
-        comicId={initialComic.id}
-        onBookmarkChange={setBookmarked}
-      />
-    </div>
-  );
+	return (
+		<div className="space-y-6">
+			<h1 className="text-3xl font-bold">{initialComic.title}</h1>
+			<BookmarkButton comicId={initialComic.id} onBookmarkChange={setBookmarked} />
+		</div>
+	);
 }
 ```
 
@@ -192,26 +187,26 @@ export function ComicDetailClient({
 import { Suspense } from "react";
 
 export function ComicList() {
-  return (
-    <Suspense fallback={<ComicListSkeleton />}>
-      <ComicListContent />
-    </Suspense>
-  );
+	return (
+		<Suspense fallback={<ComicListSkeleton />}>
+			<ComicListContent />
+		</Suspense>
+	);
 }
 
 async function ComicListContent() {
-  const comics = await comicDal.list();
-  return <div>{/* render comics */}</div>;
+	const comics = await comicDal.list();
+	return <div>{/* render comics */}</div>;
 }
 
 function ComicListSkeleton() {
-  return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6 animate-pulse">
-      {[...Array(6)].map((_, i) => (
-        <div key={i} className="bg-muted aspect-2/3 rounded-lg" />
-      ))}
-    </div>
-  );
+	return (
+		<div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6 animate-pulse">
+			{[...Array(6)].map((_, i) => (
+				<div key={i} className="bg-muted aspect-2/3 rounded-lg" />
+			))}
+		</div>
+	);
 }
 ```
 
@@ -223,30 +218,23 @@ import { LucideIcon } from "lucide-react";
 import { Button } from "./button";
 
 interface EmptyStateProps {
-  action?: React.ReactNode;
-  description?: string;
-  icon: LucideIcon;
-  title: string;
+	action?: React.ReactNode;
+	description?: string;
+	icon: LucideIcon;
+	title: string;
 }
 
-export function EmptyState({
-  icon: Icon,
-  title,
-  description,
-  action
-}: EmptyStateProps) {
-  return (
-    <div className="flex flex-col items-center justify-center gap-4 py-12">
-      <Icon className="h-12 w-12 text-muted-foreground" />
-      <div className="text-center space-y-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        {description && (
-          <p className="text-muted-foreground">{description}</p>
-        )}
-      </div>
-      {action && <div>{action}</div>}
-    </div>
-  );
+export function EmptyState({ icon: Icon, title, description, action }: EmptyStateProps) {
+	return (
+		<div className="flex flex-col items-center justify-center gap-4 py-12">
+			<Icon className="h-12 w-12 text-muted-foreground" />
+			<div className="text-center space-y-2">
+				<h3 className="text-lg font-semibold">{title}</h3>
+				{description && <p className="text-muted-foreground">{description}</p>}
+			</div>
+			{action && <div>{action}</div>}
+		</div>
+	);
 }
 ```
 
@@ -255,14 +243,14 @@ export function EmptyState({
 ```tsx
 // src/app/(root)/bookmarks/page.tsx
 if (bookmarks.length === 0) {
-  return (
-    <EmptyState
-      icon={BookmarkIcon}
-      title="No bookmarks yet"
-      description="Start by saving your favorite comics"
-      action={<Button href="/browse">Browse Comics</Button>}
-    />
-  );
+	return (
+		<EmptyState
+			icon={BookmarkIcon}
+			title="No bookmarks yet"
+			description="Start by saving your favorite comics"
+			action={<Button href="/browse">Browse Comics</Button>}
+		/>
+	);
 }
 ```
 
@@ -439,11 +427,7 @@ For each component, verify:
 
 ```tsx
 export function ComicCard({ comic }: ComicCardProps) {
-  return (
-    <div className="rounded-lg border border-border bg-white dark:bg-slate-900 p-4">
-      {/* Card content */}
-    </div>
-  );
+	return <div className="rounded-lg border border-border bg-white dark:bg-slate-900 p-4">{/* Card content */}</div>;
 }
 ```
 
@@ -451,10 +435,10 @@ export function ComicCard({ comic }: ComicCardProps) {
 
 ```css
 @media (prefers-color-scheme: dark) {
-  .custom-element {
-    background-color: var(--background);
-    color: var(--foreground);
-  }
+	.custom-element {
+		background-color: var(--background);
+		color: var(--foreground);
+	}
 }
 ```
 
@@ -474,87 +458,68 @@ export function ComicCard({ comic }: ComicCardProps) {
 ```tsx
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState
-} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export type Theme = "dark" | "light" | "system";
 
 interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+	theme: Theme;
+	setTheme: (theme: Theme) => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(
-  undefined
-);
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
+	children: React.ReactNode;
+	defaultTheme?: Theme;
+	storageKey?: string;
 }
 
-export function ThemeProvider({
-  children,
-  defaultTheme = "system",
-  storageKey = "theme"
-}: ThemeProviderProps) {
-  const [theme, setThemeState] = useState<Theme>(defaultTheme);
-  const [isMounted, setIsMounted] = useState(false);
+export function ThemeProvider({ children, defaultTheme = "system", storageKey = "theme" }: ThemeProviderProps) {
+	const [theme, setThemeState] = useState<Theme>(defaultTheme);
+	const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-    // Load from localStorage
-    const stored = localStorage.getItem(storageKey) as Theme | null;
-    if (stored) {
-      setThemeState(stored);
-    }
-  }, [storageKey]);
+	useEffect(() => {
+		setIsMounted(true);
+		// Load from localStorage
+		const stored = localStorage.getItem(storageKey) as Theme | null;
+		if (stored) {
+			setThemeState(stored);
+		}
+	}, [storageKey]);
 
-  useEffect(() => {
-    if (!isMounted) return;
+	useEffect(() => {
+		if (!isMounted) return;
 
-    const root = document.documentElement;
+		const root = document.documentElement;
 
-    if (theme === "system") {
-      const systemTheme = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches
-        ? "dark"
-        : "light";
-      root.classList.toggle("dark", systemTheme === "dark");
-    } else {
-      root.classList.toggle("dark", theme === "dark");
-    }
+		if (theme === "system") {
+			const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+			root.classList.toggle("dark", systemTheme === "dark");
+		} else {
+			root.classList.toggle("dark", theme === "dark");
+		}
 
-    localStorage.setItem(storageKey, theme);
-  }, [theme, isMounted, storageKey]);
+		localStorage.setItem(storageKey, theme);
+	}, [theme, isMounted, storageKey]);
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
-  };
+	const setTheme = (newTheme: Theme) => {
+		setThemeState(newTheme);
+	};
 
-  if (!isMounted) {
-    return <>{children}</>;
-  }
+	if (!isMounted) {
+		return <>{children}</>;
+	}
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+	return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
-  }
-  return context;
+	const context = useContext(ThemeContext);
+	if (!context) {
+		throw new Error("useTheme must be used within ThemeProvider");
+	}
+	return context;
 }
 ```
 
@@ -588,10 +553,7 @@ import Image from 'next/image';
 // ✅ GOOD: Lazy load heavy components
 import dynamic from "next/dynamic";
 
-const ReaderComponent = dynamic(
-  () => import("@/components/reader/reader"),
-  { loading: () => <ReaderSkeleton /> }
-);
+const ReaderComponent = dynamic(() => import("@/components/reader/reader"), { loading: () => <ReaderSkeleton /> });
 
 // ❌ BAD: Load everything upfront
 import { ReaderComponent } from "@/components/reader/reader";
@@ -602,15 +564,13 @@ import { ReaderComponent } from "@/components/reader/reader";
 ```tsx
 // ✅ GOOD: Memoize expensive components (React Compiler handles this)
 function ComicCard({ comic }: ComicCardProps) {
-  // If using React Compiler, no need for manual memo()
-  return <div>{/* ... */}</div>;
+	// If using React Compiler, no need for manual memo()
+	return <div>{/* ... */}</div>;
 }
 
 // ❌ BAD: Manual memoization defeats React Compiler optimization
-export const ComicCard = memo(function ComicCard({
-  comic
-}: ComicCardProps) {
-  return <div>{/* ... */}</div>;
+export const ComicCard = memo(function ComicCard({ comic }: ComicCardProps) {
+	return <div>{/* ... */}</div>;
 });
 ```
 
@@ -618,14 +578,14 @@ export const ComicCard = memo(function ComicCard({
 
 ## Common Patterns Reference
 
-| Pattern | Location | Use Case |
-| --- | --- | --- |
-| Card | `src/components/ui/card.tsx` | Content containers |
-| Button | `src/components/ui/button.tsx` | Actions |
-| Dialog | `src/components/ui/dialog.tsx` | Modals |
-| Loading Skeleton | `src/components/states/loading-skeleton.tsx` | Async content |
-| Empty State | `src/components/states/empty-state.tsx` | No data scenario |
-| Error Boundary | `src/components/errors/error-boundary.tsx` | Error handling |
+| Pattern          | Location                                     | Use Case           |
+| ---------------- | -------------------------------------------- | ------------------ |
+| Card             | `src/components/ui/card.tsx`                 | Content containers |
+| Button           | `src/components/ui/button.tsx`               | Actions            |
+| Dialog           | `src/components/ui/dialog.tsx`               | Modals             |
+| Loading Skeleton | `src/components/states/loading-skeleton.tsx` | Async content      |
+| Empty State      | `src/components/states/empty-state.tsx`      | No data scenario   |
+| Error Boundary   | `src/components/errors/error-boundary.tsx`   | Error handling     |
 
 ---
 

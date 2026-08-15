@@ -781,17 +781,17 @@ ListView to CollectionView migration is complex because:
 
 #### Quick Reference: ListView vs CollectionView
 
-| Feature | ListView | CollectionView |
-| --- | --- | --- |
-| **Selection Event** | `ItemSelected` | `SelectionChanged` |
-| **Selection Args** | `SelectedItemChangedEventArgs` | `SelectionChangedEventArgs` |
-| **Getting Selected** | `e.SelectedItem` | `e.CurrentSelection.FirstOrDefault()` |
-| **Context Menus** | `ContextActions` | `SwipeView` |
-| **Grouping** | `IsGroupingEnabled="True"` | `IsGrouped="true"` |
-| **Group Header** | `GroupDisplayBinding` | `GroupHeaderTemplate` |
-| **Even Rows** | `HasUnevenRows="False"` | Auto-sizes (default) |
-| **Empty State** | Manual | `EmptyView` property |
-| **Cells** | TextCell, ImageCell, etc. | Custom DataTemplate |
+| Feature              | ListView                       | CollectionView                        |
+| -------------------- | ------------------------------ | ------------------------------------- |
+| **Selection Event**  | `ItemSelected`                 | `SelectionChanged`                    |
+| **Selection Args**   | `SelectedItemChangedEventArgs` | `SelectionChangedEventArgs`           |
+| **Getting Selected** | `e.SelectedItem`               | `e.CurrentSelection.FirstOrDefault()` |
+| **Context Menus**    | `ContextActions`               | `SwipeView`                           |
+| **Grouping**         | `IsGroupingEnabled="True"`     | `IsGrouped="true"`                    |
+| **Group Header**     | `GroupDisplayBinding`          | `GroupHeaderTemplate`                 |
+| **Even Rows**        | `HasUnevenRows="False"`        | Auto-sizes (default)                  |
+| **Empty State**      | Manual                         | `EmptyView` property                  |
+| **Cells**            | TextCell, ImageCell, etc.      | Custom DataTemplate                   |
 
 ---
 
@@ -811,19 +811,19 @@ warning CS0618: 'ViewExtensions.FadeTo(VisualElement, double, uint, Easing)' is 
 
 **Migration Table:**
 
-| Old Method | New Method | Example |
-| --- | --- | --- |
-| `FadeTo()` | `FadeToAsync()` | `await view.FadeToAsync(0, 500);` |
-| `ScaleTo()` | `ScaleToAsync()` | `await view.ScaleToAsync(1.5, 300);` |
+| Old Method      | New Method           | Example                                       |
+| --------------- | -------------------- | --------------------------------------------- |
+| `FadeTo()`      | `FadeToAsync()`      | `await view.FadeToAsync(0, 500);`             |
+| `ScaleTo()`     | `ScaleToAsync()`     | `await view.ScaleToAsync(1.5, 300);`          |
 | `TranslateTo()` | `TranslateToAsync()` | `await view.TranslateToAsync(100, 100, 250);` |
-| `RotateTo()` | `RotateToAsync()` | `await view.RotateToAsync(360, 500);` |
-| `RotateXTo()` | `RotateXToAsync()` | `await view.RotateXToAsync(45, 300);` |
-| `RotateYTo()` | `RotateYToAsync()` | `await view.RotateYToAsync(45, 300);` |
-| `ScaleXTo()` | `ScaleXToAsync()` | `await view.ScaleXToAsync(2.0, 300);` |
-| `ScaleYTo()` | `ScaleYToAsync()` | `await view.ScaleYToAsync(2.0, 300);` |
-| `RelRotateTo()` | `RelRotateToAsync()` | `await view.RelRotateToAsync(90, 300);` |
-| `RelScaleTo()` | `RelScaleToAsync()` | `await view.RelScaleToAsync(0.5, 300);` |
-| `LayoutTo()` | `LayoutToAsync()` | See special note below |
+| `RotateTo()`    | `RotateToAsync()`    | `await view.RotateToAsync(360, 500);`         |
+| `RotateXTo()`   | `RotateXToAsync()`   | `await view.RotateXToAsync(45, 300);`         |
+| `RotateYTo()`   | `RotateYToAsync()`   | `await view.RotateYToAsync(45, 300);`         |
+| `ScaleXTo()`    | `ScaleXToAsync()`    | `await view.ScaleXToAsync(2.0, 300);`         |
+| `ScaleYTo()`    | `ScaleYToAsync()`    | `await view.ScaleYToAsync(2.0, 300);`         |
+| `RelRotateTo()` | `RelRotateToAsync()` | `await view.RelRotateToAsync(90, 300);`       |
+| `RelScaleTo()`  | `RelScaleToAsync()`  | `await view.RelScaleToAsync(0.5, 300);`       |
+| `LayoutTo()`    | `LayoutToAsync()`    | See special note below                        |
 
 #### Migration Examples
 

@@ -15,16 +15,16 @@ When working with Logic Apps or Power Automate flow JSON files, ensure your work
 
 ```json
 {
-  "definition": {
-    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-    "actions": {},
-    "contentVersion": "1.0.0.0",
-    "outputs": {},
-    "parameters": {},
-    "staticResults": {},
-    "triggers": {}
-  },
-  "parameters": {}
+	"definition": {
+		"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+		"actions": {},
+		"contentVersion": "1.0.0.0",
+		"outputs": {},
+		"parameters": {},
+		"staticResults": {},
+		"triggers": {}
+	},
+	"parameters": {}
 }
 ```
 
@@ -201,15 +201,15 @@ Power Automate supports advanced expressions in conditions to check multiple val
 
 Common logical expression functions for conditions in Power Automate:
 
-| Expression | Description | Example |
-| --- | --- | --- |
-| `and` | Returns true if both arguments are true | `@and(equals(item()?['Status'], 'completed'), equals(item()?['Assigned'], 'John'))` |
-| `or` | Returns true if either argument is true | `@or(equals(item()?['Status'], 'completed'), equals(item()?['Status'], 'unnecessary'))` |
-| `equals` | Checks if values are equal | `@equals(item()?['Status'], 'blocked')` |
-| `greater` | Checks if first value is greater than second | `@greater(item()?['Due'], item()?['Paid'])` |
-| `less` | Checks if first value is less than second | `@less(item()?['dueDate'], addDays(utcNow(),1))` |
-| `empty` | Checks if object, array or string is empty | `@empty(item()?['Status'])` |
-| `not` | Returns opposite of a boolean value | `@not(contains(item()?['Status'], 'Failed'))` |
+| Expression | Description                                  | Example                                                                                 |
+| ---------- | -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `and`      | Returns true if both arguments are true      | `@and(equals(item()?['Status'], 'completed'), equals(item()?['Assigned'], 'John'))`     |
+| `or`       | Returns true if either argument is true      | `@or(equals(item()?['Status'], 'completed'), equals(item()?['Status'], 'unnecessary'))` |
+| `equals`   | Checks if values are equal                   | `@equals(item()?['Status'], 'blocked')`                                                 |
+| `greater`  | Checks if first value is greater than second | `@greater(item()?['Due'], item()?['Paid'])`                                             |
+| `less`     | Checks if first value is less than second    | `@less(item()?['dueDate'], addDays(utcNow(),1))`                                        |
+| `empty`    | Checks if object, array or string is empty   | `@empty(item()?['Status'])`                                                             |
+| `not`      | Returns opposite of a boolean value          | `@not(contains(item()?['Status'], 'Failed'))`                                           |
 
 Example: Check if a status is "completed" OR "unnecessary":
 
@@ -575,35 +575,35 @@ When working with both Azure Logic Apps and Power Automate:
 ```json
 // Example Power Platform solution structure for Power Automate flows
 {
-  "Flows": [
-    {
-      "Name": "OrderProcessingFlow",
-      "Type": "Microsoft.Flow/flows",
-      "Properties": {
-        "DisplayName": "Order Processing Flow",
-        "DefinitionData": {
-          "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-          "triggers": {
-            "When_a_new_order_is_created": {
-              "type": "ApiConnectionWebhook",
-              "inputs": {
-                "host": {
-                  "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "SubscribeWebhookTrigger",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                }
-              }
-            }
-          },
-          "actions": {
-            // Actions would be defined here
-          }
-        }
-      }
-    }
-  ],
-  "SolutionName": "MyEnterpriseFlows",
-  "Version": "1.0.0"
+	"Flows": [
+		{
+			"Name": "OrderProcessingFlow",
+			"Type": "Microsoft.Flow/flows",
+			"Properties": {
+				"DisplayName": "Order Processing Flow",
+				"DefinitionData": {
+					"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+					"triggers": {
+						"When_a_new_order_is_created": {
+							"type": "ApiConnectionWebhook",
+							"inputs": {
+								"host": {
+									"connectionName": "shared_commondataserviceforapps",
+									"operationId": "SubscribeWebhookTrigger",
+									"apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+								}
+							}
+						}
+					},
+					"actions": {
+						// Actions would be defined here
+					}
+				}
+			}
+		}
+	],
+	"SolutionName": "MyEnterpriseFlows",
+	"Version": "1.0.0"
 }
 ```
 
@@ -615,262 +615,262 @@ This example demonstrates a Logic App that accepts an HTTP request, validates th
 
 ```json
 {
-  "definition": {
-    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-    "actions": {
-      "Validate_Input": {
-        "type": "If",
-        "expression": {
-          "and": [
-            {
-              "not": {
-                "equals": ["@triggerBody()?['customerId']", null]
-              }
-            },
-            {
-              "not": {
-                "equals": ["@triggerBody()?['requestType']", null]
-              }
-            }
-          ]
-        },
-        "actions": {
-          "Get_Customer_Data": {
-            "type": "Http",
-            "inputs": {
-              "method": "GET",
-              "uri": "https://api.example.com/customers/@{triggerBody()?['customerId']}",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer @{body('Get_API_Key')?['value']}"
-              }
-            },
-            "runAfter": {
-              "Get_API_Key": ["Succeeded"]
-            }
-          },
-          "Get_API_Key": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['keyvault']['connectionId']"
-                }
-              },
-              "method": "get",
-              "path": "/secrets/@{encodeURIComponent('apiKey')}/value"
-            }
-          },
-          "Parse_Customer_Response": {
-            "type": "ParseJson",
-            "inputs": {
-              "content": "@body('Get_Customer_Data')",
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "id": { "type": "string" },
-                  "name": { "type": "string" },
-                  "email": { "type": "string" },
-                  "status": { "type": "string" },
-                  "createdDate": { "type": "string" },
-                  "orders": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "orderId": { "type": "string" },
-                        "orderDate": { "type": "string" },
-                        "amount": { "type": "number" }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "runAfter": {
-              "Get_Customer_Data": ["Succeeded"]
-            }
-          },
-          "Switch_Request_Type": {
-            "type": "Switch",
-            "expression": "@triggerBody()?['requestType']",
-            "cases": {
-              "Profile": {
-                "actions": {
-                  "Prepare_Profile_Response": {
-                    "type": "SetVariable",
-                    "inputs": {
-                      "name": "responsePayload",
-                      "value": {
-                        "customerId": "@body('Parse_Customer_Response')?['id']",
-                        "customerName": "@body('Parse_Customer_Response')?['name']",
-                        "email": "@body('Parse_Customer_Response')?['email']",
-                        "status": "@body('Parse_Customer_Response')?['status']",
-                        "memberSince": "@formatDateTime(body('Parse_Customer_Response')?['createdDate'], 'yyyy-MM-dd')"
-                      }
-                    }
-                  }
-                }
-              },
-              "OrderSummary": {
-                "actions": {
-                  "Calculate_Order_Statistics": {
-                    "type": "Compose",
-                    "inputs": {
-                      "totalOrders": "@length(body('Parse_Customer_Response')?['orders'])",
-                      "totalSpent": "@sum(body('Parse_Customer_Response')?['orders'], item => item.amount)",
-                      "averageOrderValue": "@if(greater(length(body('Parse_Customer_Response')?['orders']), 0), div(sum(body('Parse_Customer_Response')?['orders'], item => item.amount), length(body('Parse_Customer_Response')?['orders'])), 0)",
-                      "lastOrderDate": "@if(greater(length(body('Parse_Customer_Response')?['orders']), 0), max(body('Parse_Customer_Response')?['orders'], item => item.orderDate), '')"
-                    }
-                  },
-                  "Prepare_Order_Response": {
-                    "type": "SetVariable",
-                    "inputs": {
-                      "name": "responsePayload",
-                      "value": {
-                        "customerId": "@body('Parse_Customer_Response')?['id']",
-                        "customerName": "@body('Parse_Customer_Response')?['name']",
-                        "orderStats": "@outputs('Calculate_Order_Statistics')"
-                      }
-                    },
-                    "runAfter": {
-                      "Calculate_Order_Statistics": ["Succeeded"]
-                    }
-                  }
-                }
-              }
-            },
-            "default": {
-              "actions": {
-                "Set_Default_Response": {
-                  "type": "SetVariable",
-                  "inputs": {
-                    "name": "responsePayload",
-                    "value": {
-                      "error": "Invalid request type specified",
-                      "validTypes": ["Profile", "OrderSummary"]
-                    }
-                  }
-                }
-              }
-            },
-            "runAfter": {
-              "Parse_Customer_Response": ["Succeeded"]
-            }
-          },
-          "Log_Successful_Request": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['applicationinsights']['connectionId']"
-                }
-              },
-              "method": "post",
-              "body": {
-                "LogType": "ApiRequestSuccess",
-                "CustomerId": "@triggerBody()?['customerId']",
-                "RequestType": "@triggerBody()?['requestType']",
-                "ProcessingTime": "@workflow()['run']['duration']"
-              }
-            },
-            "runAfter": {
-              "Switch_Request_Type": ["Succeeded"]
-            }
-          },
-          "Return_Success_Response": {
-            "type": "Response",
-            "kind": "Http",
-            "inputs": {
-              "statusCode": 200,
-              "body": "@variables('responsePayload')",
-              "headers": {
-                "Content-Type": "application/json"
-              }
-            },
-            "runAfter": {
-              "Log_Successful_Request": ["Succeeded"]
-            }
-          }
-        },
-        "else": {
-          "actions": {
-            "Return_Validation_Error": {
-              "type": "Response",
-              "kind": "Http",
-              "inputs": {
-                "statusCode": 400,
-                "body": {
-                  "error": "Invalid request",
-                  "message": "Request must include customerId and requestType",
-                  "timestamp": "@utcNow()"
-                }
-              }
-            }
-          }
-        },
-        "runAfter": {
-          "Initialize_Response_Variable": ["Succeeded"]
-        }
-      },
-      "Initialize_Response_Variable": {
-        "type": "InitializeVariable",
-        "inputs": {
-          "variables": [
-            {
-              "name": "responsePayload",
-              "type": "object",
-              "value": {}
-            }
-          ]
-        }
-      }
-    },
-    "contentVersion": "1.0.0.0",
-    "outputs": {},
-    "parameters": {
-      "$connections": {
-        "defaultValue": {},
-        "type": "Object"
-      }
-    },
-    "triggers": {
-      "manual": {
-        "type": "Request",
-        "kind": "Http",
-        "inputs": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "customerId": {
-                "type": "string"
-              },
-              "requestType": {
-                "type": "string",
-                "enum": ["Profile", "OrderSummary"]
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "parameters": {
-    "$connections": {
-      "value": {
-        "keyvault": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/keyvault",
-          "connectionName": "keyvault",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/keyvault"
-        },
-        "applicationinsights": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/applicationinsights",
-          "connectionName": "applicationinsights",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/applicationinsights"
-        }
-      }
-    }
-  }
+	"definition": {
+		"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+		"actions": {
+			"Validate_Input": {
+				"type": "If",
+				"expression": {
+					"and": [
+						{
+							"not": {
+								"equals": ["@triggerBody()?['customerId']", null]
+							}
+						},
+						{
+							"not": {
+								"equals": ["@triggerBody()?['requestType']", null]
+							}
+						}
+					]
+				},
+				"actions": {
+					"Get_Customer_Data": {
+						"type": "Http",
+						"inputs": {
+							"method": "GET",
+							"uri": "https://api.example.com/customers/@{triggerBody()?['customerId']}",
+							"headers": {
+								"Content-Type": "application/json",
+								"Authorization": "Bearer @{body('Get_API_Key')?['value']}"
+							}
+						},
+						"runAfter": {
+							"Get_API_Key": ["Succeeded"]
+						}
+					},
+					"Get_API_Key": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['keyvault']['connectionId']"
+								}
+							},
+							"method": "get",
+							"path": "/secrets/@{encodeURIComponent('apiKey')}/value"
+						}
+					},
+					"Parse_Customer_Response": {
+						"type": "ParseJson",
+						"inputs": {
+							"content": "@body('Get_Customer_Data')",
+							"schema": {
+								"type": "object",
+								"properties": {
+									"id": { "type": "string" },
+									"name": { "type": "string" },
+									"email": { "type": "string" },
+									"status": { "type": "string" },
+									"createdDate": { "type": "string" },
+									"orders": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"orderId": { "type": "string" },
+												"orderDate": { "type": "string" },
+												"amount": { "type": "number" }
+											}
+										}
+									}
+								}
+							}
+						},
+						"runAfter": {
+							"Get_Customer_Data": ["Succeeded"]
+						}
+					},
+					"Switch_Request_Type": {
+						"type": "Switch",
+						"expression": "@triggerBody()?['requestType']",
+						"cases": {
+							"Profile": {
+								"actions": {
+									"Prepare_Profile_Response": {
+										"type": "SetVariable",
+										"inputs": {
+											"name": "responsePayload",
+											"value": {
+												"customerId": "@body('Parse_Customer_Response')?['id']",
+												"customerName": "@body('Parse_Customer_Response')?['name']",
+												"email": "@body('Parse_Customer_Response')?['email']",
+												"status": "@body('Parse_Customer_Response')?['status']",
+												"memberSince": "@formatDateTime(body('Parse_Customer_Response')?['createdDate'], 'yyyy-MM-dd')"
+											}
+										}
+									}
+								}
+							},
+							"OrderSummary": {
+								"actions": {
+									"Calculate_Order_Statistics": {
+										"type": "Compose",
+										"inputs": {
+											"totalOrders": "@length(body('Parse_Customer_Response')?['orders'])",
+											"totalSpent": "@sum(body('Parse_Customer_Response')?['orders'], item => item.amount)",
+											"averageOrderValue": "@if(greater(length(body('Parse_Customer_Response')?['orders']), 0), div(sum(body('Parse_Customer_Response')?['orders'], item => item.amount), length(body('Parse_Customer_Response')?['orders'])), 0)",
+											"lastOrderDate": "@if(greater(length(body('Parse_Customer_Response')?['orders']), 0), max(body('Parse_Customer_Response')?['orders'], item => item.orderDate), '')"
+										}
+									},
+									"Prepare_Order_Response": {
+										"type": "SetVariable",
+										"inputs": {
+											"name": "responsePayload",
+											"value": {
+												"customerId": "@body('Parse_Customer_Response')?['id']",
+												"customerName": "@body('Parse_Customer_Response')?['name']",
+												"orderStats": "@outputs('Calculate_Order_Statistics')"
+											}
+										},
+										"runAfter": {
+											"Calculate_Order_Statistics": ["Succeeded"]
+										}
+									}
+								}
+							}
+						},
+						"default": {
+							"actions": {
+								"Set_Default_Response": {
+									"type": "SetVariable",
+									"inputs": {
+										"name": "responsePayload",
+										"value": {
+											"error": "Invalid request type specified",
+											"validTypes": ["Profile", "OrderSummary"]
+										}
+									}
+								}
+							}
+						},
+						"runAfter": {
+							"Parse_Customer_Response": ["Succeeded"]
+						}
+					},
+					"Log_Successful_Request": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['applicationinsights']['connectionId']"
+								}
+							},
+							"method": "post",
+							"body": {
+								"LogType": "ApiRequestSuccess",
+								"CustomerId": "@triggerBody()?['customerId']",
+								"RequestType": "@triggerBody()?['requestType']",
+								"ProcessingTime": "@workflow()['run']['duration']"
+							}
+						},
+						"runAfter": {
+							"Switch_Request_Type": ["Succeeded"]
+						}
+					},
+					"Return_Success_Response": {
+						"type": "Response",
+						"kind": "Http",
+						"inputs": {
+							"statusCode": 200,
+							"body": "@variables('responsePayload')",
+							"headers": {
+								"Content-Type": "application/json"
+							}
+						},
+						"runAfter": {
+							"Log_Successful_Request": ["Succeeded"]
+						}
+					}
+				},
+				"else": {
+					"actions": {
+						"Return_Validation_Error": {
+							"type": "Response",
+							"kind": "Http",
+							"inputs": {
+								"statusCode": 400,
+								"body": {
+									"error": "Invalid request",
+									"message": "Request must include customerId and requestType",
+									"timestamp": "@utcNow()"
+								}
+							}
+						}
+					}
+				},
+				"runAfter": {
+					"Initialize_Response_Variable": ["Succeeded"]
+				}
+			},
+			"Initialize_Response_Variable": {
+				"type": "InitializeVariable",
+				"inputs": {
+					"variables": [
+						{
+							"name": "responsePayload",
+							"type": "object",
+							"value": {}
+						}
+					]
+				}
+			}
+		},
+		"contentVersion": "1.0.0.0",
+		"outputs": {},
+		"parameters": {
+			"$connections": {
+				"defaultValue": {},
+				"type": "Object"
+			}
+		},
+		"triggers": {
+			"manual": {
+				"type": "Request",
+				"kind": "Http",
+				"inputs": {
+					"schema": {
+						"type": "object",
+						"properties": {
+							"customerId": {
+								"type": "string"
+							},
+							"requestType": {
+								"type": "string",
+								"enum": ["Profile", "OrderSummary"]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"parameters": {
+		"$connections": {
+			"value": {
+				"keyvault": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/keyvault",
+					"connectionName": "keyvault",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/keyvault"
+				},
+				"applicationinsights": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/applicationinsights",
+					"connectionName": "applicationinsights",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/applicationinsights"
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -880,428 +880,428 @@ This example demonstrates a Logic App that processes events from Azure Service B
 
 ```json
 {
-  "definition": {
-    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-    "actions": {
-      "Parse_Message": {
-        "type": "ParseJson",
-        "inputs": {
-          "content": "@triggerBody()?['ContentData']",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "eventId": { "type": "string" },
-              "eventType": { "type": "string" },
-              "eventTime": { "type": "string" },
-              "dataVersion": { "type": "string" },
-              "data": {
-                "type": "object",
-                "properties": {
-                  "orderId": { "type": "string" },
-                  "customerId": { "type": "string" },
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "productId": { "type": "string" },
-                        "quantity": { "type": "integer" },
-                        "unitPrice": { "type": "number" }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "runAfter": {}
-      },
-      "Try_Process_Order": {
-        "type": "Scope",
-        "actions": {
-          "Get_Customer_Details": {
-            "type": "Http",
-            "inputs": {
-              "method": "GET",
-              "uri": "https://api.example.com/customers/@{body('Parse_Message')?['data']?['customerId']}",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer @{body('Get_API_Key')?['value']}"
-              }
-            },
-            "runAfter": {
-              "Get_API_Key": ["Succeeded"]
-            },
-            "retryPolicy": {
-              "type": "exponential",
-              "count": 5,
-              "interval": "PT10S",
-              "minimumInterval": "PT5S",
-              "maximumInterval": "PT1H"
-            }
-          },
-          "Get_API_Key": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['keyvault']['connectionId']"
-                }
-              },
-              "method": "get",
-              "path": "/secrets/@{encodeURIComponent('apiKey')}/value"
-            }
-          },
-          "Validate_Stock": {
-            "type": "Foreach",
-            "foreach": "@body('Parse_Message')?['data']?['items']",
-            "actions": {
-              "Check_Product_Stock": {
-                "type": "Http",
-                "inputs": {
-                  "method": "GET",
-                  "uri": "https://api.example.com/inventory/@{items('Validate_Stock')?['productId']}",
-                  "headers": {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer @{body('Get_API_Key')?['value']}"
-                  }
-                },
-                "retryPolicy": {
-                  "type": "fixed",
-                  "count": 3,
-                  "interval": "PT15S"
-                }
-              },
-              "Verify_Availability": {
-                "type": "If",
-                "expression": {
-                  "and": [
-                    {
-                      "greater": [
-                        "@body('Check_Product_Stock')?['availableStock']",
-                        "@items('Validate_Stock')?['quantity']"
-                      ]
-                    }
-                  ]
-                },
-                "actions": {
-                  "Add_To_Valid_Items": {
-                    "type": "AppendToArrayVariable",
-                    "inputs": {
-                      "name": "validItems",
-                      "value": {
-                        "productId": "@items('Validate_Stock')?['productId']",
-                        "quantity": "@items('Validate_Stock')?['quantity']",
-                        "unitPrice": "@items('Validate_Stock')?['unitPrice']",
-                        "availableStock": "@body('Check_Product_Stock')?['availableStock']"
-                      }
-                    }
-                  }
-                },
-                "else": {
-                  "actions": {
-                    "Add_To_Invalid_Items": {
-                      "type": "AppendToArrayVariable",
-                      "inputs": {
-                        "name": "invalidItems",
-                        "value": {
-                          "productId": "@items('Validate_Stock')?['productId']",
-                          "requestedQuantity": "@items('Validate_Stock')?['quantity']",
-                          "availableStock": "@body('Check_Product_Stock')?['availableStock']",
-                          "reason": "Insufficient stock"
-                        }
-                      }
-                    }
-                  }
-                },
-                "runAfter": {
-                  "Check_Product_Stock": ["Succeeded"]
-                }
-              }
-            },
-            "runAfter": {
-              "Get_Customer_Details": ["Succeeded"]
-            }
-          },
-          "Check_Order_Validity": {
-            "type": "If",
-            "expression": {
-              "and": [
-                {
-                  "equals": ["@length(variables('invalidItems'))", 0]
-                },
-                {
-                  "greater": ["@length(variables('validItems'))", 0]
-                }
-              ]
-            },
-            "actions": {
-              "Process_Valid_Order": {
-                "type": "Http",
-                "inputs": {
-                  "method": "POST",
-                  "uri": "https://api.example.com/orders",
-                  "headers": {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer @{body('Get_API_Key')?['value']}"
-                  },
-                  "body": {
-                    "orderId": "@body('Parse_Message')?['data']?['orderId']",
-                    "customerId": "@body('Parse_Message')?['data']?['customerId']",
-                    "customerName": "@body('Get_Customer_Details')?['name']",
-                    "items": "@variables('validItems')",
-                    "processedTime": "@utcNow()",
-                    "eventId": "@body('Parse_Message')?['eventId']"
-                  }
-                }
-              },
-              "Send_Order_Confirmation": {
-                "type": "ApiConnection",
-                "inputs": {
-                  "host": {
-                    "connection": {
-                      "name": "@parameters('$connections')['office365']['connectionId']"
-                    }
-                  },
-                  "method": "post",
-                  "path": "/v2/Mail",
-                  "body": {
-                    "To": "@body('Get_Customer_Details')?['email']",
-                    "Subject": "Order Confirmation: @{body('Parse_Message')?['data']?['orderId']}",
-                    "Body": "<p>Dear @{body('Get_Customer_Details')?['name']},</p><p>Your order has been successfully processed.</p><p>Order ID: @{body('Parse_Message')?['data']?['orderId']}</p><p>Thank you for your business!</p>",
-                    "Importance": "Normal",
-                    "IsHtml": true
-                  }
-                },
-                "runAfter": {
-                  "Process_Valid_Order": ["Succeeded"]
-                }
-              },
-              "Complete_Message": {
-                "type": "ApiConnection",
-                "inputs": {
-                  "host": {
-                    "connection": {
-                      "name": "@parameters('$connections')['servicebus']['connectionId']"
-                    }
-                  },
-                  "method": "post",
-                  "path": "/messages/complete",
-                  "body": {
-                    "lockToken": "@triggerBody()?['LockToken']",
-                    "sessionId": "@triggerBody()?['SessionId']",
-                    "queueName": "@parameters('serviceBusQueueName')"
-                  }
-                },
-                "runAfter": {
-                  "Send_Order_Confirmation": ["Succeeded"]
-                }
-              }
-            },
-            "else": {
-              "actions": {
-                "Send_Invalid_Stock_Notification": {
-                  "type": "ApiConnection",
-                  "inputs": {
-                    "host": {
-                      "connection": {
-                        "name": "@parameters('$connections')['office365']['connectionId']"
-                      }
-                    },
-                    "method": "post",
-                    "path": "/v2/Mail",
-                    "body": {
-                      "To": "@body('Get_Customer_Details')?['email']",
-                      "Subject": "Order Cannot Be Processed: @{body('Parse_Message')?['data']?['orderId']}",
-                      "Body": "<p>Dear @{body('Get_Customer_Details')?['name']},</p><p>We regret to inform you that your order cannot be processed due to insufficient stock for the following items:</p><p>@{join(variables('invalidItems'), '</p><p>')}</p><p>Please adjust your order and try again.</p>",
-                      "Importance": "High",
-                      "IsHtml": true
-                    }
-                  }
-                },
-                "Dead_Letter_Message": {
-                  "type": "ApiConnection",
-                  "inputs": {
-                    "host": {
-                      "connection": {
-                        "name": "@parameters('$connections')['servicebus']['connectionId']"
-                      }
-                    },
-                    "method": "post",
-                    "path": "/messages/deadletter",
-                    "body": {
-                      "lockToken": "@triggerBody()?['LockToken']",
-                      "sessionId": "@triggerBody()?['SessionId']",
-                      "queueName": "@parameters('serviceBusQueueName')",
-                      "deadLetterReason": "InsufficientStock",
-                      "deadLetterDescription": "Order contained items with insufficient stock"
-                    }
-                  },
-                  "runAfter": {
-                    "Send_Invalid_Stock_Notification": ["Succeeded"]
-                  }
-                }
-              }
-            },
-            "runAfter": {
-              "Validate_Stock": ["Succeeded"]
-            }
-          }
-        },
-        "runAfter": {
-          "Initialize_Variables": ["Succeeded"]
-        }
-      },
-      "Initialize_Variables": {
-        "type": "InitializeVariable",
-        "inputs": {
-          "variables": [
-            {
-              "name": "validItems",
-              "type": "array",
-              "value": []
-            },
-            {
-              "name": "invalidItems",
-              "type": "array",
-              "value": []
-            }
-          ]
-        },
-        "runAfter": {
-          "Parse_Message": ["Succeeded"]
-        }
-      },
-      "Handle_Process_Error": {
-        "type": "Scope",
-        "actions": {
-          "Log_Error_Details": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['applicationinsights']['connectionId']"
-                }
-              },
-              "method": "post",
-              "body": {
-                "LogType": "OrderProcessingError",
-                "EventId": "@body('Parse_Message')?['eventId']",
-                "OrderId": "@body('Parse_Message')?['data']?['orderId']",
-                "CustomerId": "@body('Parse_Message')?['data']?['customerId']",
-                "ErrorDetails": "@result('Try_Process_Order')",
-                "Timestamp": "@utcNow()"
-              }
-            }
-          },
-          "Abandon_Message": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['servicebus']['connectionId']"
-                }
-              },
-              "method": "post",
-              "path": "/messages/abandon",
-              "body": {
-                "lockToken": "@triggerBody()?['LockToken']",
-                "sessionId": "@triggerBody()?['SessionId']",
-                "queueName": "@parameters('serviceBusQueueName')"
-              }
-            },
-            "runAfter": {
-              "Log_Error_Details": ["Succeeded"]
-            }
-          },
-          "Send_Alert_To_Operations": {
-            "type": "ApiConnection",
-            "inputs": {
-              "host": {
-                "connection": {
-                  "name": "@parameters('$connections')['office365']['connectionId']"
-                }
-              },
-              "method": "post",
-              "path": "/v2/Mail",
-              "body": {
-                "To": "operations@example.com",
-                "Subject": "Order Processing Error: @{body('Parse_Message')?['data']?['orderId']}",
-                "Body": "<p>An error occurred while processing an order:</p><p>Order ID: @{body('Parse_Message')?['data']?['orderId']}</p><p>Customer ID: @{body('Parse_Message')?['data']?['customerId']}</p><p>Error: @{result('Try_Process_Order')}</p>",
-                "Importance": "High",
-                "IsHtml": true
-              }
-            },
-            "runAfter": {
-              "Abandon_Message": ["Succeeded"]
-            }
-          }
-        },
-        "runAfter": {
-          "Try_Process_Order": ["Failed", "TimedOut"]
-        }
-      }
-    },
-    "contentVersion": "1.0.0.0",
-    "outputs": {},
-    "parameters": {
-      "$connections": {
-        "defaultValue": {},
-        "type": "Object"
-      },
-      "serviceBusQueueName": {
-        "type": "string",
-        "defaultValue": "orders"
-      }
-    },
-    "triggers": {
-      "When_a_message_is_received_in_a_queue": {
-        "type": "ApiConnectionWebhook",
-        "inputs": {
-          "host": {
-            "connection": {
-              "name": "@parameters('$connections')['servicebus']['connectionId']"
-            }
-          },
-          "body": {
-            "isSessionsEnabled": true
-          },
-          "path": "/subscriptionListener",
-          "queries": {
-            "queueName": "@parameters('serviceBusQueueName')",
-            "subscriptionType": "Main"
-          }
-        }
-      }
-    }
-  },
-  "parameters": {
-    "$connections": {
-      "value": {
-        "keyvault": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/keyvault",
-          "connectionName": "keyvault",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/keyvault"
-        },
-        "servicebus": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/servicebus",
-          "connectionName": "servicebus",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/servicebus"
-        },
-        "office365": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/office365",
-          "connectionName": "office365",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/office365"
-        },
-        "applicationinsights": {
-          "connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/applicationinsights",
-          "connectionName": "applicationinsights",
-          "id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/applicationinsights"
-        }
-      }
-    }
-  }
+	"definition": {
+		"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+		"actions": {
+			"Parse_Message": {
+				"type": "ParseJson",
+				"inputs": {
+					"content": "@triggerBody()?['ContentData']",
+					"schema": {
+						"type": "object",
+						"properties": {
+							"eventId": { "type": "string" },
+							"eventType": { "type": "string" },
+							"eventTime": { "type": "string" },
+							"dataVersion": { "type": "string" },
+							"data": {
+								"type": "object",
+								"properties": {
+									"orderId": { "type": "string" },
+									"customerId": { "type": "string" },
+									"items": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"productId": { "type": "string" },
+												"quantity": { "type": "integer" },
+												"unitPrice": { "type": "number" }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"runAfter": {}
+			},
+			"Try_Process_Order": {
+				"type": "Scope",
+				"actions": {
+					"Get_Customer_Details": {
+						"type": "Http",
+						"inputs": {
+							"method": "GET",
+							"uri": "https://api.example.com/customers/@{body('Parse_Message')?['data']?['customerId']}",
+							"headers": {
+								"Content-Type": "application/json",
+								"Authorization": "Bearer @{body('Get_API_Key')?['value']}"
+							}
+						},
+						"runAfter": {
+							"Get_API_Key": ["Succeeded"]
+						},
+						"retryPolicy": {
+							"type": "exponential",
+							"count": 5,
+							"interval": "PT10S",
+							"minimumInterval": "PT5S",
+							"maximumInterval": "PT1H"
+						}
+					},
+					"Get_API_Key": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['keyvault']['connectionId']"
+								}
+							},
+							"method": "get",
+							"path": "/secrets/@{encodeURIComponent('apiKey')}/value"
+						}
+					},
+					"Validate_Stock": {
+						"type": "Foreach",
+						"foreach": "@body('Parse_Message')?['data']?['items']",
+						"actions": {
+							"Check_Product_Stock": {
+								"type": "Http",
+								"inputs": {
+									"method": "GET",
+									"uri": "https://api.example.com/inventory/@{items('Validate_Stock')?['productId']}",
+									"headers": {
+										"Content-Type": "application/json",
+										"Authorization": "Bearer @{body('Get_API_Key')?['value']}"
+									}
+								},
+								"retryPolicy": {
+									"type": "fixed",
+									"count": 3,
+									"interval": "PT15S"
+								}
+							},
+							"Verify_Availability": {
+								"type": "If",
+								"expression": {
+									"and": [
+										{
+											"greater": [
+												"@body('Check_Product_Stock')?['availableStock']",
+												"@items('Validate_Stock')?['quantity']"
+											]
+										}
+									]
+								},
+								"actions": {
+									"Add_To_Valid_Items": {
+										"type": "AppendToArrayVariable",
+										"inputs": {
+											"name": "validItems",
+											"value": {
+												"productId": "@items('Validate_Stock')?['productId']",
+												"quantity": "@items('Validate_Stock')?['quantity']",
+												"unitPrice": "@items('Validate_Stock')?['unitPrice']",
+												"availableStock": "@body('Check_Product_Stock')?['availableStock']"
+											}
+										}
+									}
+								},
+								"else": {
+									"actions": {
+										"Add_To_Invalid_Items": {
+											"type": "AppendToArrayVariable",
+											"inputs": {
+												"name": "invalidItems",
+												"value": {
+													"productId": "@items('Validate_Stock')?['productId']",
+													"requestedQuantity": "@items('Validate_Stock')?['quantity']",
+													"availableStock": "@body('Check_Product_Stock')?['availableStock']",
+													"reason": "Insufficient stock"
+												}
+											}
+										}
+									}
+								},
+								"runAfter": {
+									"Check_Product_Stock": ["Succeeded"]
+								}
+							}
+						},
+						"runAfter": {
+							"Get_Customer_Details": ["Succeeded"]
+						}
+					},
+					"Check_Order_Validity": {
+						"type": "If",
+						"expression": {
+							"and": [
+								{
+									"equals": ["@length(variables('invalidItems'))", 0]
+								},
+								{
+									"greater": ["@length(variables('validItems'))", 0]
+								}
+							]
+						},
+						"actions": {
+							"Process_Valid_Order": {
+								"type": "Http",
+								"inputs": {
+									"method": "POST",
+									"uri": "https://api.example.com/orders",
+									"headers": {
+										"Content-Type": "application/json",
+										"Authorization": "Bearer @{body('Get_API_Key')?['value']}"
+									},
+									"body": {
+										"orderId": "@body('Parse_Message')?['data']?['orderId']",
+										"customerId": "@body('Parse_Message')?['data']?['customerId']",
+										"customerName": "@body('Get_Customer_Details')?['name']",
+										"items": "@variables('validItems')",
+										"processedTime": "@utcNow()",
+										"eventId": "@body('Parse_Message')?['eventId']"
+									}
+								}
+							},
+							"Send_Order_Confirmation": {
+								"type": "ApiConnection",
+								"inputs": {
+									"host": {
+										"connection": {
+											"name": "@parameters('$connections')['office365']['connectionId']"
+										}
+									},
+									"method": "post",
+									"path": "/v2/Mail",
+									"body": {
+										"To": "@body('Get_Customer_Details')?['email']",
+										"Subject": "Order Confirmation: @{body('Parse_Message')?['data']?['orderId']}",
+										"Body": "<p>Dear @{body('Get_Customer_Details')?['name']},</p><p>Your order has been successfully processed.</p><p>Order ID: @{body('Parse_Message')?['data']?['orderId']}</p><p>Thank you for your business!</p>",
+										"Importance": "Normal",
+										"IsHtml": true
+									}
+								},
+								"runAfter": {
+									"Process_Valid_Order": ["Succeeded"]
+								}
+							},
+							"Complete_Message": {
+								"type": "ApiConnection",
+								"inputs": {
+									"host": {
+										"connection": {
+											"name": "@parameters('$connections')['servicebus']['connectionId']"
+										}
+									},
+									"method": "post",
+									"path": "/messages/complete",
+									"body": {
+										"lockToken": "@triggerBody()?['LockToken']",
+										"sessionId": "@triggerBody()?['SessionId']",
+										"queueName": "@parameters('serviceBusQueueName')"
+									}
+								},
+								"runAfter": {
+									"Send_Order_Confirmation": ["Succeeded"]
+								}
+							}
+						},
+						"else": {
+							"actions": {
+								"Send_Invalid_Stock_Notification": {
+									"type": "ApiConnection",
+									"inputs": {
+										"host": {
+											"connection": {
+												"name": "@parameters('$connections')['office365']['connectionId']"
+											}
+										},
+										"method": "post",
+										"path": "/v2/Mail",
+										"body": {
+											"To": "@body('Get_Customer_Details')?['email']",
+											"Subject": "Order Cannot Be Processed: @{body('Parse_Message')?['data']?['orderId']}",
+											"Body": "<p>Dear @{body('Get_Customer_Details')?['name']},</p><p>We regret to inform you that your order cannot be processed due to insufficient stock for the following items:</p><p>@{join(variables('invalidItems'), '</p><p>')}</p><p>Please adjust your order and try again.</p>",
+											"Importance": "High",
+											"IsHtml": true
+										}
+									}
+								},
+								"Dead_Letter_Message": {
+									"type": "ApiConnection",
+									"inputs": {
+										"host": {
+											"connection": {
+												"name": "@parameters('$connections')['servicebus']['connectionId']"
+											}
+										},
+										"method": "post",
+										"path": "/messages/deadletter",
+										"body": {
+											"lockToken": "@triggerBody()?['LockToken']",
+											"sessionId": "@triggerBody()?['SessionId']",
+											"queueName": "@parameters('serviceBusQueueName')",
+											"deadLetterReason": "InsufficientStock",
+											"deadLetterDescription": "Order contained items with insufficient stock"
+										}
+									},
+									"runAfter": {
+										"Send_Invalid_Stock_Notification": ["Succeeded"]
+									}
+								}
+							}
+						},
+						"runAfter": {
+							"Validate_Stock": ["Succeeded"]
+						}
+					}
+				},
+				"runAfter": {
+					"Initialize_Variables": ["Succeeded"]
+				}
+			},
+			"Initialize_Variables": {
+				"type": "InitializeVariable",
+				"inputs": {
+					"variables": [
+						{
+							"name": "validItems",
+							"type": "array",
+							"value": []
+						},
+						{
+							"name": "invalidItems",
+							"type": "array",
+							"value": []
+						}
+					]
+				},
+				"runAfter": {
+					"Parse_Message": ["Succeeded"]
+				}
+			},
+			"Handle_Process_Error": {
+				"type": "Scope",
+				"actions": {
+					"Log_Error_Details": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['applicationinsights']['connectionId']"
+								}
+							},
+							"method": "post",
+							"body": {
+								"LogType": "OrderProcessingError",
+								"EventId": "@body('Parse_Message')?['eventId']",
+								"OrderId": "@body('Parse_Message')?['data']?['orderId']",
+								"CustomerId": "@body('Parse_Message')?['data']?['customerId']",
+								"ErrorDetails": "@result('Try_Process_Order')",
+								"Timestamp": "@utcNow()"
+							}
+						}
+					},
+					"Abandon_Message": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['servicebus']['connectionId']"
+								}
+							},
+							"method": "post",
+							"path": "/messages/abandon",
+							"body": {
+								"lockToken": "@triggerBody()?['LockToken']",
+								"sessionId": "@triggerBody()?['SessionId']",
+								"queueName": "@parameters('serviceBusQueueName')"
+							}
+						},
+						"runAfter": {
+							"Log_Error_Details": ["Succeeded"]
+						}
+					},
+					"Send_Alert_To_Operations": {
+						"type": "ApiConnection",
+						"inputs": {
+							"host": {
+								"connection": {
+									"name": "@parameters('$connections')['office365']['connectionId']"
+								}
+							},
+							"method": "post",
+							"path": "/v2/Mail",
+							"body": {
+								"To": "operations@example.com",
+								"Subject": "Order Processing Error: @{body('Parse_Message')?['data']?['orderId']}",
+								"Body": "<p>An error occurred while processing an order:</p><p>Order ID: @{body('Parse_Message')?['data']?['orderId']}</p><p>Customer ID: @{body('Parse_Message')?['data']?['customerId']}</p><p>Error: @{result('Try_Process_Order')}</p>",
+								"Importance": "High",
+								"IsHtml": true
+							}
+						},
+						"runAfter": {
+							"Abandon_Message": ["Succeeded"]
+						}
+					}
+				},
+				"runAfter": {
+					"Try_Process_Order": ["Failed", "TimedOut"]
+				}
+			}
+		},
+		"contentVersion": "1.0.0.0",
+		"outputs": {},
+		"parameters": {
+			"$connections": {
+				"defaultValue": {},
+				"type": "Object"
+			},
+			"serviceBusQueueName": {
+				"type": "string",
+				"defaultValue": "orders"
+			}
+		},
+		"triggers": {
+			"When_a_message_is_received_in_a_queue": {
+				"type": "ApiConnectionWebhook",
+				"inputs": {
+					"host": {
+						"connection": {
+							"name": "@parameters('$connections')['servicebus']['connectionId']"
+						}
+					},
+					"body": {
+						"isSessionsEnabled": true
+					},
+					"path": "/subscriptionListener",
+					"queries": {
+						"queueName": "@parameters('serviceBusQueueName')",
+						"subscriptionType": "Main"
+					}
+				}
+			}
+		}
+	},
+	"parameters": {
+		"$connections": {
+			"value": {
+				"keyvault": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/keyvault",
+					"connectionName": "keyvault",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/keyvault"
+				},
+				"servicebus": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/servicebus",
+					"connectionName": "servicebus",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/servicebus"
+				},
+				"office365": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/office365",
+					"connectionName": "office365",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/office365"
+				},
+				"applicationinsights": {
+					"connectionId": "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/connections/applicationinsights",
+					"connectionName": "applicationinsights",
+					"id": "/subscriptions/{subscription-id}/providers/Microsoft.Web/locations/{location}/managedApis/applicationinsights"
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -1645,45 +1645,45 @@ Implement robust versioning approaches for Logic Apps and Power Automate flows:
 
 ```json
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "logicAppName": {
-      "type": "string",
-      "metadata": {
-        "description": "Base name of the Logic App"
-      }
-    },
-    "version": {
-      "type": "string",
-      "metadata": {
-        "description": "Version of the Logic App to deploy"
-      },
-      "allowedValues": ["v1", "v2", "v3"]
-    }
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Logic/workflows",
-      "apiVersion": "2019-05-01",
-      "name": "[variables('fullLogicAppName')]",
-      "location": "[resourceGroup().location]",
-      "properties": {
-        "definition": "[variables('workflowDefinitionMap')[parameters('version')]]"
-      }
-    }
-  ],
-  "variables": {
-    "fullLogicAppName": "[concat(parameters('logicAppName'), '-', parameters('version'))]",
-    "workflowDefinitionMap": {
-      "v1": "[variables('v1Definition')]",
-      "v2": "[variables('v2Definition')]",
-      "v3": "[variables('v3Definition')]"
-    },
-    "v1Definition": {},
-    "v2Definition": {},
-    "v3Definition": {}
-  }
+	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"logicAppName": {
+			"type": "string",
+			"metadata": {
+				"description": "Base name of the Logic App"
+			}
+		},
+		"version": {
+			"type": "string",
+			"metadata": {
+				"description": "Version of the Logic App to deploy"
+			},
+			"allowedValues": ["v1", "v2", "v3"]
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Logic/workflows",
+			"apiVersion": "2019-05-01",
+			"name": "[variables('fullLogicAppName')]",
+			"location": "[resourceGroup().location]",
+			"properties": {
+				"definition": "[variables('workflowDefinitionMap')[parameters('version')]]"
+			}
+		}
+	],
+	"variables": {
+		"fullLogicAppName": "[concat(parameters('logicAppName'), '-', parameters('version'))]",
+		"workflowDefinitionMap": {
+			"v1": "[variables('v1Definition')]",
+			"v2": "[variables('v2Definition')]",
+			"v3": "[variables('v3Definition')]"
+		},
+		"v1Definition": {},
+		"v2Definition": {},
+		"v3Definition": {}
+	}
 }
 ```
 
@@ -1835,52 +1835,52 @@ Implement comprehensive security measures for Logic Apps and Power Automate work
 
 ```json
 {
-  "resources": [
-    {
-      "type": "Microsoft.Logic/workflows",
-      "apiVersion": "2019-05-01",
-      "name": "[parameters('logicAppName')]",
-      "location": "[parameters('location')]",
-      "identity": {
-        "type": "SystemAssigned"
-      },
-      "properties": {
-        "accessControl": {
-          "triggers": {
-            "allowedCallerIpAddresses": [
-              {
-                "addressRange": "13.91.0.0/16"
-              },
-              {
-                "addressRange": "40.112.0.0/13"
-              }
-            ]
-          },
-          "contents": {
-            "allowedCallerIpAddresses": [
-              {
-                "addressRange": "13.91.0.0/16"
-              },
-              {
-                "addressRange": "40.112.0.0/13"
-              }
-            ]
-          },
-          "actions": {
-            "allowedCallerIpAddresses": [
-              {
-                "addressRange": "13.91.0.0/16"
-              },
-              {
-                "addressRange": "40.112.0.0/13"
-              }
-            ]
-          }
-        },
-        "definition": {}
-      }
-    }
-  ]
+	"resources": [
+		{
+			"type": "Microsoft.Logic/workflows",
+			"apiVersion": "2019-05-01",
+			"name": "[parameters('logicAppName')]",
+			"location": "[parameters('location')]",
+			"identity": {
+				"type": "SystemAssigned"
+			},
+			"properties": {
+				"accessControl": {
+					"triggers": {
+						"allowedCallerIpAddresses": [
+							{
+								"addressRange": "13.91.0.0/16"
+							},
+							{
+								"addressRange": "40.112.0.0/13"
+							}
+						]
+					},
+					"contents": {
+						"allowedCallerIpAddresses": [
+							{
+								"addressRange": "13.91.0.0/16"
+							},
+							{
+								"addressRange": "40.112.0.0/13"
+							}
+						]
+					},
+					"actions": {
+						"allowedCallerIpAddresses": [
+							{
+								"addressRange": "13.91.0.0/16"
+							},
+							{
+								"addressRange": "40.112.0.0/13"
+							}
+						]
+					}
+				},
+				"definition": {}
+			}
+		}
+	]
 }
 ```
 

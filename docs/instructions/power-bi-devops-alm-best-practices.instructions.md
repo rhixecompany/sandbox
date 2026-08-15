@@ -177,26 +177,26 @@ $reportImport = Import-FabricItem -workspaceId $workspaceId -path $pbipReportPat
 
 ```json
 {
-  "environments": {
-    "development": {
-      "workspaceId": "dev-workspace-id",
-      "dataSourceUrl": "dev-database.database.windows.net",
-      "refreshSchedule": "manual",
-      "sensitivityLabel": "Internal"
-    },
-    "test": {
-      "workspaceId": "test-workspace-id",
-      "dataSourceUrl": "test-database.database.windows.net",
-      "refreshSchedule": "daily",
-      "sensitivityLabel": "Internal"
-    },
-    "production": {
-      "workspaceId": "prod-workspace-id",
-      "dataSourceUrl": "prod-database.database.windows.net",
-      "refreshSchedule": "hourly",
-      "sensitivityLabel": "Confidential"
-    }
-  }
+	"environments": {
+		"development": {
+			"workspaceId": "dev-workspace-id",
+			"dataSourceUrl": "dev-database.database.windows.net",
+			"refreshSchedule": "manual",
+			"sensitivityLabel": "Internal"
+		},
+		"test": {
+			"workspaceId": "test-workspace-id",
+			"dataSourceUrl": "test-database.database.windows.net",
+			"refreshSchedule": "daily",
+			"sensitivityLabel": "Internal"
+		},
+		"production": {
+			"workspaceId": "prod-workspace-id",
+			"dataSourceUrl": "prod-database.database.windows.net",
+			"refreshSchedule": "hourly",
+			"sensitivityLabel": "Confidential"
+		}
+	}
 }
 ```
 
@@ -321,47 +321,41 @@ function Test-PowerBIPerformance {
 
 ```json
 {
-  "datasets": [
-    {
-      "name": "Sales Analytics",
-      "refreshSchedule": {
-        "enabled": true,
-        "times": ["06:00", "12:00", "18:00"],
-        "days": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "timeZone": "UTC"
-      },
-      "datasourceCredentials": {
-        "credentialType": "OAuth2",
-        "encryptedConnection": "Encrypted"
-      }
-    }
-  ],
-  "workspace": {
-    "name": "Production Analytics",
-    "description": "Production Power BI workspace for sales analytics",
-    "capacityId": "A1-capacity-id",
-    "users": [
-      {
-        "emailAddress": "admin@contoso.com",
-        "accessRight": "Admin"
-      },
-      {
-        "emailAddress": "powerbi-service-principal@contoso.com",
-        "accessRight": "Member",
-        "principalType": "App"
-      }
-    ],
-    "settings": {
-      "datasetDefaultStorageFormat": "Large",
-      "blockResourceKeyAuthentication": true
-    }
-  }
+	"datasets": [
+		{
+			"name": "Sales Analytics",
+			"refreshSchedule": {
+				"enabled": true,
+				"times": ["06:00", "12:00", "18:00"],
+				"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				"timeZone": "UTC"
+			},
+			"datasourceCredentials": {
+				"credentialType": "OAuth2",
+				"encryptedConnection": "Encrypted"
+			}
+		}
+	],
+	"workspace": {
+		"name": "Production Analytics",
+		"description": "Production Power BI workspace for sales analytics",
+		"capacityId": "A1-capacity-id",
+		"users": [
+			{
+				"emailAddress": "admin@contoso.com",
+				"accessRight": "Admin"
+			},
+			{
+				"emailAddress": "powerbi-service-principal@contoso.com",
+				"accessRight": "Member",
+				"principalType": "App"
+			}
+		],
+		"settings": {
+			"datasetDefaultStorageFormat": "Large",
+			"blockResourceKeyAuthentication": true
+		}
+	}
 }
 ```
 

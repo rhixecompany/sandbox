@@ -105,7 +105,7 @@ const session = await client.createSession({
 
 ```typescript
 const session = await client.resumeSession("session-id", {
-  tools: [myNewTool]
+	tools: [myNewTool],
 });
 ```
 
@@ -125,16 +125,16 @@ const session = await client.resumeSession("session-id", {
 ALWAYS use async/await or Promises for waiting on session events:
 
 ```typescript
-await new Promise<void>(resolve => {
-  session.on(event => {
-    if (event.type === "assistant.message") {
-      console.log(event.data.content);
-    } else if (event.type === "session.idle") {
-      resolve();
-    }
-  });
+await new Promise<void>((resolve) => {
+	session.on((event) => {
+		if (event.type === "assistant.message") {
+			console.log(event.data.content);
+		} else if (event.type === "session.idle") {
+			resolve();
+		}
+	});
 
-  session.send({ prompt: "..." });
+	session.send({ prompt: "..." });
 });
 ```
 
@@ -143,8 +143,8 @@ await new Promise<void>(resolve => {
 The `on()` method returns a function that unsubscribes:
 
 ```typescript
-const unsubscribe = session.on(event => {
-  // handler
+const unsubscribe = session.on((event) => {
+	// handler
 });
 // Later...
 unsubscribe();
@@ -155,30 +155,30 @@ unsubscribe();
 Use discriminated unions with type guards for event handling:
 
 ```typescript
-session.on(event => {
-  switch (event.type) {
-    case "user.message":
-      // Handle user message
-      break;
-    case "assistant.message":
-      console.log(event.data.content);
-      break;
-    case "tool.executionStart":
-      // Tool execution started
-      break;
-    case "tool.executionComplete":
-      // Tool execution completed
-      break;
-    case "session.start":
-      // Session started
-      break;
-    case "session.idle":
-      // Session is idle (processing complete)
-      break;
-    case "session.error":
-      console.error(`Error: ${event.data.message}`);
-      break;
-  }
+session.on((event) => {
+	switch (event.type) {
+		case "user.message":
+			// Handle user message
+			break;
+		case "assistant.message":
+			console.log(event.data.content);
+			break;
+		case "tool.executionStart":
+			// Tool execution started
+			break;
+		case "tool.executionComplete":
+			// Tool execution completed
+			break;
+		case "session.start":
+			// Session started
+			break;
+		case "session.idle":
+			// Session is idle (processing complete)
+			break;
+		case "session.error":
+			console.error(`Error: ${event.data.message}`);
+			break;
+	}
 });
 ```
 
@@ -190,8 +190,8 @@ Set `streaming: true` in SessionConfig:
 
 ```typescript
 const session = await client.createSession({
-  model: "gpt-5",
-  streaming: true
+	model: "gpt-5",
+	streaming: true,
 });
 ```
 
@@ -200,34 +200,34 @@ const session = await client.createSession({
 Handle both delta events (incremental) and final events:
 
 ```typescript
-await new Promise<void>(resolve => {
-  session.on(event => {
-    switch (event.type) {
-      case "assistant.message.delta":
-        // Incremental text chunk
-        process.stdout.write(event.data.deltaContent);
-        break;
-      case "assistant.reasoning.delta":
-        // Incremental reasoning chunk (model-dependent)
-        process.stdout.write(event.data.deltaContent);
-        break;
-      case "assistant.message":
-        // Final complete message
-        console.log("\n--- Final ---");
-        console.log(event.data.content);
-        break;
-      case "assistant.reasoning":
-        // Final reasoning content
-        console.log("--- Reasoning ---");
-        console.log(event.data.content);
-        break;
-      case "session.idle":
-        resolve();
-        break;
-    }
-  });
+await new Promise<void>((resolve) => {
+	session.on((event) => {
+		switch (event.type) {
+			case "assistant.message.delta":
+				// Incremental text chunk
+				process.stdout.write(event.data.deltaContent);
+				break;
+			case "assistant.reasoning.delta":
+				// Incremental reasoning chunk (model-dependent)
+				process.stdout.write(event.data.deltaContent);
+				break;
+			case "assistant.message":
+				// Final complete message
+				console.log("\n--- Final ---");
+				console.log(event.data.content);
+				break;
+			case "assistant.reasoning":
+				// Final reasoning content
+				console.log("--- Reasoning ---");
+				console.log(event.data.content);
+				break;
+			case "session.idle":
+				resolve();
+				break;
+		}
+	});
 
-  session.send({ prompt: "Tell me a story" });
+	session.send({ prompt: "Tell me a story" });
 });
 ```
 
@@ -243,24 +243,24 @@ Use `defineTool` for type-safe tool definitions:
 import { defineTool } from "@github/copilot-sdk";
 
 const session = await client.createSession({
-  model: "gpt-5",
-  tools: [
-    defineTool({
-      name: "lookup_issue",
-      description: "Fetch issue details from tracker",
-      parameters: {
-        type: "object",
-        properties: {
-          id: { type: "string", description: "Issue ID" }
-        },
-        required: ["id"]
-      },
-      handler: async args => {
-        const issue = await fetchIssue(args.id);
-        return issue;
-      }
-    })
-  ]
+	model: "gpt-5",
+	tools: [
+		defineTool({
+			name: "lookup_issue",
+			description: "Fetch issue details from tracker",
+			parameters: {
+				type: "object",
+				properties: {
+					id: { type: "string", description: "Issue ID" },
+				},
+				required: ["id"],
+			},
+			handler: async (args) => {
+				const issue = await fetchIssue(args.id);
+				return issue;
+			},
+		}),
+	],
 });
 ```
 
@@ -272,19 +272,19 @@ The SDK supports Zod schemas for parameters:
 import { z } from "zod";
 
 const session = await client.createSession({
-  tools: [
-    defineTool({
-      name: "get_weather",
-      description: "Get weather for a location",
-      parameters: z.object({
-        location: z.string().describe("City name"),
-        units: z.enum(["celsius", "fahrenheit"]).optional()
-      }),
-      handler: async args => {
-        return { temperature: 72, units: args.units || "fahrenheit" };
-      }
-    })
-  ]
+	tools: [
+		defineTool({
+			name: "get_weather",
+			description: "Get weather for a location",
+			parameters: z.object({
+				location: z.string().describe("City name"),
+				units: z.enum(["celsius", "fahrenheit"]).optional(),
+			}),
+			handler: async (args) => {
+				return { temperature: 72, units: args.units || "fahrenheit" };
+			},
+		}),
+	],
 });
 ```
 
@@ -316,16 +316,16 @@ When Copilot invokes a tool, the client automatically:
 
 ```typescript
 const session = await client.createSession({
-  model: "gpt-5",
-  systemMessage: {
-    mode: "append",
-    content: `
+	model: "gpt-5",
+	systemMessage: {
+		mode: "append",
+		content: `
 <workflow_rules>
 - Always check for security vulnerabilities
 - Suggest performance improvements when applicable
 </workflow_rules>
-`
-  }
+`,
+	},
 });
 ```
 
@@ -333,11 +333,11 @@ const session = await client.createSession({
 
 ```typescript
 const session = await client.createSession({
-  model: "gpt-5",
-  systemMessage: {
-    mode: "replace",
-    content: "You are a helpful assistant."
-  }
+	model: "gpt-5",
+	systemMessage: {
+		mode: "replace",
+		content: "You are a helpful assistant.",
+	},
 });
 ```
 
@@ -347,14 +347,14 @@ Attach files to messages:
 
 ```typescript
 await session.send({
-  prompt: "Analyze this file",
-  attachments: [
-    {
-      type: "file",
-      path: "/path/to/file.ts",
-      displayName: "My File"
-    }
-  ]
+	prompt: "Analyze this file",
+	attachments: [
+		{
+			type: "file",
+			path: "/path/to/file.ts",
+			displayName: "My File",
+		},
+	],
 });
 ```
 
@@ -367,8 +367,8 @@ Use the `mode` property in message options:
 
 ```typescript
 await session.send({
-  prompt: "...",
-  mode: "enqueue"
+	prompt: "...",
+	mode: "enqueue",
 });
 ```
 
@@ -379,12 +379,12 @@ Sessions are independent and can run concurrently:
 ```typescript
 const session1 = await client.createSession({ model: "gpt-5" });
 const session2 = await client.createSession({
-  model: "claude-sonnet-4.5"
+	model: "claude-sonnet-4.5",
 });
 
 await Promise.all([
-  session1.send({ prompt: "Hello from session 1" }),
-  session2.send({ prompt: "Hello from session 2" })
+	session1.send({ prompt: "Hello from session 1" }),
+	session2.send({ prompt: "Hello from session 2" }),
 ]);
 ```
 
@@ -394,11 +394,11 @@ Use custom API providers via `provider`:
 
 ```typescript
 const session = await client.createSession({
-  provider: {
-    type: "openai",
-    baseUrl: "https://api.openai.com/v1",
-    apiKey: "your-api-key"
-  }
+	provider: {
+		type: "openai",
+		baseUrl: "https://api.openai.com/v1",
+		apiKey: "your-api-key",
+	},
 });
 ```
 
@@ -409,7 +409,7 @@ const session = await client.createSession({
 ```typescript
 const sessions = await client.listSessions();
 for (const metadata of sessions) {
-  console.log(`${metadata.sessionId}: ${metadata.summary}`);
+	console.log(`${metadata.sessionId}: ${metadata.summary}`);
 }
 ```
 
@@ -424,7 +424,7 @@ await client.deleteSession(sessionId);
 ```typescript
 const lastId = await client.getLastSessionId();
 if (lastId) {
-  const session = await client.resumeSession(lastId);
+	const session = await client.resumeSession(lastId);
 }
 ```
 
@@ -441,10 +441,10 @@ const state = client.getState();
 
 ```typescript
 try {
-  const session = await client.createSession();
-  await session.send({ prompt: "Hello" });
+	const session = await client.createSession();
+	await session.send({ prompt: "Hello" });
 } catch (error) {
-  console.error(`Error: ${error.message}`);
+	console.error(`Error: ${error.message}`);
 }
 ```
 
@@ -453,10 +453,10 @@ try {
 Monitor `session.error` event type for runtime errors:
 
 ```typescript
-session.on(event => {
-  if (event.type === "session.error") {
-    console.error(`Session Error: ${event.data.message}`);
-  }
+session.on((event) => {
+	if (event.type === "session.error") {
+		console.error(`Session Error: ${event.data.message}`);
+	}
 });
 ```
 
@@ -478,50 +478,45 @@ ALWAYS use try-finally or cleanup in a finally block:
 ```typescript
 const client = new CopilotClient();
 try {
-  await client.start();
-  const session = await client.createSession();
-  try {
-    // Use session...
-  } finally {
-    await session.destroy();
-  }
+	await client.start();
+	const session = await client.createSession();
+	try {
+		// Use session...
+	} finally {
+		await session.destroy();
+	}
 } finally {
-  await client.stop();
+	await client.stop();
 }
 ```
 
 ### Cleanup Function Pattern
 
 ```typescript
-async function withClient<T>(
-  fn: (client: CopilotClient) => Promise<T>
-): Promise<T> {
-  const client = new CopilotClient();
-  try {
-    await client.start();
-    return await fn(client);
-  } finally {
-    await client.stop();
-  }
+async function withClient<T>(fn: (client: CopilotClient) => Promise<T>): Promise<T> {
+	const client = new CopilotClient();
+	try {
+		await client.start();
+		return await fn(client);
+	} finally {
+		await client.stop();
+	}
 }
 
-async function withSession<T>(
-  client: CopilotClient,
-  fn: (session: CopilotSession) => Promise<T>
-): Promise<T> {
-  const session = await client.createSession();
-  try {
-    return await fn(session);
-  } finally {
-    await session.destroy();
-  }
+async function withSession<T>(client: CopilotClient, fn: (session: CopilotSession) => Promise<T>): Promise<T> {
+	const session = await client.createSession();
+	try {
+		return await fn(session);
+	} finally {
+		await session.destroy();
+	}
 }
 
 // Usage
-await withClient(async client => {
-  await withSession(client, async session => {
-    await session.send({ prompt: "Hello!" });
-  });
+await withClient(async (client) => {
+	await withSession(client, async (session) => {
+		await session.send({ prompt: "Hello!" });
+	});
 });
 ```
 
@@ -548,26 +543,26 @@ import { CopilotClient } from "@github/copilot-sdk";
 
 const client = new CopilotClient();
 try {
-  await client.start();
+	await client.start();
 
-  const session = await client.createSession({ model: "gpt-5" });
-  try {
-    await new Promise<void>(resolve => {
-      session.on(event => {
-        if (event.type === "assistant.message") {
-          console.log(event.data.content);
-        } else if (event.type === "session.idle") {
-          resolve();
-        }
-      });
+	const session = await client.createSession({ model: "gpt-5" });
+	try {
+		await new Promise<void>((resolve) => {
+			session.on((event) => {
+				if (event.type === "assistant.message") {
+					console.log(event.data.content);
+				} else if (event.type === "session.idle") {
+					resolve();
+				}
+			});
 
-      session.send({ prompt: "What is 2+2?" });
-    });
-  } finally {
-    await session.destroy();
-  }
+			session.send({ prompt: "What is 2+2?" });
+		});
+	} finally {
+		await session.destroy();
+	}
 } finally {
-  await client.stop();
+	await client.stop();
 }
 ```
 
@@ -577,21 +572,21 @@ try {
 const session = await client.createSession();
 
 async function sendAndWait(prompt: string): Promise<void> {
-  await new Promise<void>((resolve, reject) => {
-    const unsubscribe = session.on(event => {
-      if (event.type === "assistant.message") {
-        console.log(event.data.content);
-      } else if (event.type === "session.idle") {
-        unsubscribe();
-        resolve();
-      } else if (event.type === "session.error") {
-        unsubscribe();
-        reject(new Error(event.data.message));
-      }
-    });
+	await new Promise<void>((resolve, reject) => {
+		const unsubscribe = session.on((event) => {
+			if (event.type === "assistant.message") {
+				console.log(event.data.content);
+			} else if (event.type === "session.idle") {
+				unsubscribe();
+				resolve();
+			} else if (event.type === "session.error") {
+				unsubscribe();
+				reject(new Error(event.data.message));
+			}
+		});
 
-    session.send({ prompt });
-  });
+		session.send({ prompt });
+	});
 }
 
 await sendAndWait("What is the capital of France?");
@@ -602,13 +597,10 @@ await sendAndWait("What is its population?");
 
 ```typescript
 // Use built-in sendAndWait for simpler synchronous interaction
-const response = await session.sendAndWait(
-  { prompt: "What is 2+2?" },
-  60000
-);
+const response = await session.sendAndWait({ prompt: "What is 2+2?" }, 60000);
 
 if (response) {
-  console.log(response.data.content);
+	console.log(response.data.content);
 }
 ```
 
@@ -619,30 +611,30 @@ import { z } from "zod";
 import { defineTool } from "@github/copilot-sdk";
 
 interface UserInfo {
-  id: string;
-  name: string;
-  email: string;
-  role: string;
+	id: string;
+	name: string;
+	email: string;
+	role: string;
 }
 
 const session = await client.createSession({
-  tools: [
-    defineTool({
-      name: "get_user",
-      description: "Retrieve user information",
-      parameters: z.object({
-        userId: z.string().describe("User ID")
-      }),
-      handler: async (args): Promise<UserInfo> => {
-        return {
-          id: args.userId,
-          name: "John Doe",
-          email: "john@example.com",
-          role: "Developer"
-        };
-      }
-    })
-  ]
+	tools: [
+		defineTool({
+			name: "get_user",
+			description: "Retrieve user information",
+			parameters: z.object({
+				userId: z.string().describe("User ID"),
+			}),
+			handler: async (args): Promise<UserInfo> => {
+				return {
+					id: args.userId,
+					name: "John Doe",
+					email: "john@example.com",
+					role: "Developer",
+				};
+			},
+		}),
+	],
 });
 ```
 
@@ -651,16 +643,16 @@ const session = await client.createSession({
 ```typescript
 let currentMessage = "";
 
-const unsubscribe = session.on(event => {
-  if (event.type === "assistant.message.delta") {
-    currentMessage += event.data.deltaContent;
-    process.stdout.write(event.data.deltaContent);
-  } else if (event.type === "assistant.message") {
-    console.log("\n\n=== Complete ===");
-    console.log(`Total length: ${event.data.content.length} chars`);
-  } else if (event.type === "session.idle") {
-    unsubscribe();
-  }
+const unsubscribe = session.on((event) => {
+	if (event.type === "assistant.message.delta") {
+		currentMessage += event.data.deltaContent;
+		process.stdout.write(event.data.deltaContent);
+	} else if (event.type === "assistant.message") {
+		console.log("\n\n=== Complete ===");
+		console.log(`Total length: ${event.data.content.length} chars`);
+	} else if (event.type === "session.idle") {
+		unsubscribe();
+	}
 });
 
 await session.send({ prompt: "Write a long story" });
@@ -669,18 +661,18 @@ await session.send({ prompt: "Write a long story" });
 ### Error Recovery
 
 ```typescript
-session.on(event => {
-  if (event.type === "session.error") {
-    console.error("Session error:", event.data.message);
-    // Optionally retry or handle error
-  }
+session.on((event) => {
+	if (event.type === "session.error") {
+		console.error("Session error:", event.data.message);
+		// Optionally retry or handle error
+	}
 });
 
 try {
-  await session.send({ prompt: "risky operation" });
+	await session.send({ prompt: "risky operation" });
 } catch (error) {
-  // Handle send errors
-  console.error("Failed to send:", error);
+	// Handle send errors
+	console.error("Failed to send:", error);
 }
 ```
 
@@ -689,16 +681,13 @@ try {
 ### Type Inference
 
 ```typescript
-import type {
-  SessionEvent,
-  AssistantMessageEvent
-} from "@github/copilot-sdk";
+import type { SessionEvent, AssistantMessageEvent } from "@github/copilot-sdk";
 
 session.on((event: SessionEvent) => {
-  if (event.type === "assistant.message") {
-    // TypeScript knows event is AssistantMessageEvent here
-    const content: string = event.data.content;
-  }
+	if (event.type === "assistant.message") {
+		// TypeScript knows event is AssistantMessageEvent here
+		const content: string = event.data.content;
+	}
 });
 ```
 
@@ -706,17 +695,17 @@ session.on((event: SessionEvent) => {
 
 ```typescript
 async function waitForEvent<T extends SessionEvent["type"]>(
-  session: CopilotSession,
-  eventType: T
+	session: CopilotSession,
+	eventType: T,
 ): Promise<Extract<SessionEvent, { type: T }>> {
-  return new Promise(resolve => {
-    const unsubscribe = session.on(event => {
-      if (event.type === eventType) {
-        unsubscribe();
-        resolve(event as Extract<SessionEvent, { type: T }>);
-      }
-    });
-  });
+	return new Promise((resolve) => {
+		const unsubscribe = session.on((event) => {
+			if (event.type === eventType) {
+				unsubscribe();
+				resolve(event as Extract<SessionEvent, { type: T }>);
+			}
+		});
+	});
 }
 
 // Usage

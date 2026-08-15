@@ -42,9 +42,9 @@ Add this file to override the default feature flags for a component without modi
 
 **Feature Flags:**
 
-| Flag | Description |
-| --- | --- |
-| `pcfResourceDependency` | Enables the component to use a library resource. |
+| Flag                    | Description                                                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `pcfResourceDependency` | Enables the component to use a library resource.                                                                            |
 | `pcfAllowCustomWebpack` | Enables the component to use a custom web pack. This feature must be enabled for components that define a library resource. |
 
 By default, these values are `off`. Set them to `on` to override the default.
@@ -53,7 +53,7 @@ By default, these values are `off`. Set them to `on` to override the default.
 
 ```json
 {
-  "pcfAllowCustomWebpack": "on"
+	"pcfAllowCustomWebpack": "on"
 }
 ```
 
@@ -61,8 +61,8 @@ By default, these values are `off`. Set them to `on` to override the default.
 
 ```json
 {
-  "pcfAllowCustomWebpack": "off",
-  "pcfResourceDependency": "on"
+	"pcfAllowCustomWebpack": "off",
+	"pcfResourceDependency": "on"
 }
 ```
 
@@ -77,9 +77,9 @@ This file might look like the following when the library alias is `myLib`:
 "use strict";
 
 module.exports = {
-  externals: {
-    myLib: "myLib"
-  }
+	externals: {
+		myLib: "myLib",
+	},
 };
 ```
 

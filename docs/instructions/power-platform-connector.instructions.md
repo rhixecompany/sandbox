@@ -193,45 +193,45 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "get": {
-    "operationId": "GetItems",
-    "summary": "Get items",
-    "x-ms-summary": "Get Items",
-    "x-ms-visibility": "important",
-    "description": "Retrieves a list of items from the API",
-    "parameters": [
-      {
-        "name": "category",
-        "in": "query",
-        "type": "string",
-        "x-ms-summary": "Category",
-        "x-ms-visibility": "important",
-        "x-ms-dynamic-values": {
-          "operationId": "GetCategories",
-          "value-path": "id",
-          "value-title": "name"
-        }
-      }
-    ],
-    "responses": {
-      "200": {
-        "description": "Success",
-        "x-ms-summary": "Success",
-        "schema": {
-          "type": "object",
-          "properties": {
-            "items": {
-              "type": "array",
-              "x-ms-summary": "Items",
-              "items": {
-                "$ref": "#/definitions/Item"
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	"get": {
+		"operationId": "GetItems",
+		"summary": "Get items",
+		"x-ms-summary": "Get Items",
+		"x-ms-visibility": "important",
+		"description": "Retrieves a list of items from the API",
+		"parameters": [
+			{
+				"name": "category",
+				"in": "query",
+				"type": "string",
+				"x-ms-summary": "Category",
+				"x-ms-visibility": "important",
+				"x-ms-dynamic-values": {
+					"operationId": "GetCategories",
+					"value-path": "id",
+					"value-title": "name"
+				}
+			}
+		],
+		"responses": {
+			"200": {
+				"description": "Success",
+				"x-ms-summary": "Success",
+				"schema": {
+					"type": "object",
+					"properties": {
+						"items": {
+							"type": "array",
+							"x-ms-summary": "Items",
+							"items": {
+								"$ref": "#/definitions/Item"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -239,19 +239,19 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "get": {
-    "operationId": "WhenItemCreated",
-    "x-ms-summary": "When an Item is Created",
-    "x-ms-trigger": "batch",
-    "x-ms-trigger-hint": "To see it work now, create an item",
-    "x-ms-trigger-metadata": {
-      "kind": "query",
-      "mode": "polling"
-    },
-    "x-ms-pageable": {
-      "nextLinkName": "@odata.nextLink"
-    }
-  }
+	"get": {
+		"operationId": "WhenItemCreated",
+		"x-ms-summary": "When an Item is Created",
+		"x-ms-trigger": "batch",
+		"x-ms-trigger-hint": "To see it work now, create an item",
+		"x-ms-trigger-metadata": {
+			"kind": "query",
+			"mode": "polling"
+		},
+		"x-ms-pageable": {
+			"nextLinkName": "@odata.nextLink"
+		}
+	}
 }
 ```
 
@@ -259,19 +259,19 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "in": "body",
-  "name": "dynamicSchema",
-  "schema": {
-    "x-ms-dynamic-schema": {
-      "operationId": "GetSchema",
-      "parameters": {
-        "table": {
-          "parameter": "table"
-        }
-      },
-      "value-path": "schema"
-    }
-  }
+	"in": "body",
+	"name": "dynamicSchema",
+	"schema": {
+		"x-ms-dynamic-schema": {
+			"operationId": "GetSchema",
+			"parameters": {
+				"table": {
+					"parameter": "table"
+				}
+			},
+			"value-path": "schema"
+		}
+	}
 }
 ```
 
@@ -279,30 +279,30 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "x-ms-capabilities": {
-    "file-picker": {
-      "open": {
-        "operationId": "OneDriveFilePickerOpen",
-        "parameters": {
-          "dataset": {
-            "value-property": "dataset"
-          }
-        }
-      },
-      "browse": {
-        "operationId": "OneDriveFilePickerBrowse",
-        "parameters": {
-          "dataset": {
-            "value-property": "dataset"
-          }
-        }
-      },
-      "value-title": "DisplayName",
-      "value-collection": "value",
-      "value-folder-property": "IsFolder",
-      "value-media-property": "MediaType"
-    }
-  }
+	"x-ms-capabilities": {
+		"file-picker": {
+			"open": {
+				"operationId": "OneDriveFilePickerOpen",
+				"parameters": {
+					"dataset": {
+						"value-property": "dataset"
+					}
+				}
+			},
+			"browse": {
+				"operationId": "OneDriveFilePickerBrowse",
+				"parameters": {
+					"dataset": {
+						"value-property": "dataset"
+					}
+				}
+			},
+			"value-title": "DisplayName",
+			"value-collection": "value",
+			"value-folder-property": "IsFolder",
+			"value-media-property": "MediaType"
+		}
+	}
 }
 ```
 
@@ -310,14 +310,14 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "x-ms-capabilities": {
-    "testConnection": {
-      "operationId": "TestConnection",
-      "parameters": {
-        "param1": "literal-value"
-      }
-    }
-  }
+	"x-ms-capabilities": {
+		"testConnection": {
+			"operationId": "TestConnection",
+			"parameters": {
+				"param1": "literal-value"
+			}
+		}
+	}
 }
 ```
 
@@ -325,16 +325,16 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "x-ms-operation-context": {
-    "simulate": {
-      "operationId": "SimulateOperation",
-      "parameters": {
-        "param1": {
-          "parameter": "inputParam"
-        }
-      }
-    }
-  }
+	"x-ms-operation-context": {
+		"simulate": {
+			"operationId": "SimulateOperation",
+			"parameters": {
+				"param1": {
+					"parameter": "inputParam"
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -342,13 +342,13 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "oAuthSettings": {
-    "identityProvider": "oauth2",
-    "clientId": "your-client-id",
-    "scopes": ["scope1", "scope2"],
-    "redirectMode": "Global"
-  },
-  "type": "oauthSetting"
+	"oAuthSettings": {
+		"identityProvider": "oauth2",
+		"clientId": "your-client-id",
+		"scopes": ["scope1", "scope2"],
+		"redirectMode": "Global"
+	},
+	"type": "oauthSetting"
 }
 ```
 
@@ -356,23 +356,23 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "securityDefinitions": {
-    "oauth2": {
-      "type": "oauth2",
-      "flow": "accessCode",
-      "authorizationUrl": "https://api.example.com/oauth/authorize",
-      "tokenUrl": "https://api.example.com/oauth/token",
-      "scopes": {
-        "read": "Read access",
-        "write": "Write access"
-      }
-    },
-    "apiKey": {
-      "type": "apiKey",
-      "name": "X-API-Key",
-      "in": "header"
-    }
-  }
+	"securityDefinitions": {
+		"oauth2": {
+			"type": "oauth2",
+			"flow": "accessCode",
+			"authorizationUrl": "https://api.example.com/oauth/authorize",
+			"tokenUrl": "https://api.example.com/oauth/token",
+			"scopes": {
+				"read": "Read access",
+				"write": "Write access"
+			}
+		},
+		"apiKey": {
+			"type": "apiKey",
+			"name": "X-API-Key",
+			"in": "header"
+		}
+	}
 }
 ```
 
@@ -382,11 +382,11 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "x-ms-dynamic-values": {
-    "operationId": "GetItems",
-    "value-path": "id",
-    "value-title": "name"
-  }
+	"x-ms-dynamic-values": {
+		"operationId": "GetItems",
+		"value-path": "id",
+		"value-title": "name"
+	}
 }
 ```
 
@@ -394,12 +394,12 @@ This workspace contains JSON Schema definitions for Power Platform Custom Connec
 
 ```json
 {
-  "parameters": {
-    "x-ms-apimTemplate-operationName": ["GetData"],
-    "x-ms-apimTemplateParameter.newPath": "/api/v2/data"
-  },
-  "templateId": "routerequesttoendpoint",
-  "title": "Route to backend"
+	"parameters": {
+		"x-ms-apimTemplate-operationName": ["GetData"],
+		"x-ms-apimTemplateParameter.newPath": "/api/v2/data"
+	},
+	"templateId": "routerequesttoendpoint",
+	"title": "Route to backend"
 }
 ```
 

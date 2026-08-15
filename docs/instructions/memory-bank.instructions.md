@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 Coding standards, domain knowledge, and preferences that AI should follow.
@@ -254,11 +254,11 @@ Each task file follows this format:
 
 ### Subtasks
 
-| ID | Description | Status | Updated | Notes |
-| --- | --- | --- | --- | --- |
-| 1.1 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date] | [Any relevant notes] |
-| 1.2 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date] | [Any relevant notes] |
-| 1.3 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date] | [Any relevant notes] |
+| ID  | Description           | Status                                     | Updated | Notes                |
+| --- | --------------------- | ------------------------------------------ | ------- | -------------------- |
+| 1.1 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date]  | [Any relevant notes] |
+| 1.2 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date]  | [Any relevant notes] |
+| 1.3 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date]  | [Any relevant notes] |
 
 ## Progress Log
 

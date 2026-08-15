@@ -21,26 +21,26 @@ seed() → loadData() → validateData() → processBatches() → insertBatch() 
 
 ```typescript
 export class MySeeder extends BaseSeeder<MyType> {
-  // Return array of data source identifiers (JSON file names without .json)
-  protected getDataSources(): string[] {
-    return ["my-data"];
-  }
+	// Return array of data source identifiers (JSON file names without .json)
+	protected getDataSources(): string[] {
+		return ["my-data"];
+	}
 
-  // Return the unique field name for deduplication cache lookups
-  protected getUniqueField(): string {
-    return "email"; // or "slug", "name", etc.
-  }
+	// Return the unique field name for deduplication cache lookups
+	protected getUniqueField(): string {
+		return "email"; // or "slug", "name", etc.
+	}
 
-  // Transform raw data into validated shape (Zod coercion, field mapping)
-  protected async transformData(raw: MyType): Promise<unknown> {
-    return { ...raw, createdAt: new Date() };
-  }
+	// Transform raw data into validated shape (Zod coercion, field mapping)
+	protected async transformData(raw: MyType): Promise<unknown> {
+		return { ...raw, createdAt: new Date() };
+	}
 
-  // Perform actual database insertion with conflict handling
-  async insertBatch(data: MyType[]): Promise<EntityResult> {
-    // Use onConflictDoNothing() or onConflictDoUpdate()
-    // Return EntityResult with accurate counts
-  }
+	// Perform actual database insertion with conflict handling
+	async insertBatch(data: MyType[]): Promise<EntityResult> {
+		// Use onConflictDoNothing() or onConflictDoUpdate()
+		// Return EntityResult with accurate counts
+	}
 }
 ```
 
@@ -126,20 +126,17 @@ await db.insert(comicImage).values(data).onConflictDoNothing(); // Don't fail if
 
 // For composite unique constraints
 await db
-  .insert(chapterImage)
-  .values(data)
-  .onConflictDoNothing({
-    target: [chapterImage.chapterId, chapterImage.pageNumber]
-  });
+	.insert(chapterImage)
+	.values(data)
+	.onConflictDoNothing({
+		target: [chapterImage.chapterId, chapterImage.pageNumber],
+	});
 
 // For updates if needed (rare)
-await db
-  .insert(type)
-  .values({ name, description })
-  .onConflictDoUpdate({
-    target: type.name,
-    set: { description }
-  });
+await db.insert(type).values({ name, description }).onConflictDoUpdate({
+	target: type.name,
+	set: { description },
+});
 ```
 
 ### 4. Password Hashing (Security)
@@ -156,8 +153,8 @@ const hash = await bcrypt.hash(raw.password, BCRYPT_SALT_ROUNDS);
 
 // Insert with hashed password
 await db.insert(user).values({
-  ...userFields,
-  password: hash
+	...userFields,
+	password: hash,
 });
 ```
 
@@ -171,18 +168,18 @@ Seeders must resolve foreign keys from `LookupCache` before inserting:
 // Resolve author ID from cache (populated by earlier seeder)
 const authorId = this.cache.authors.get(raw.authorName);
 if (!authorId) {
-  errors.push({
-    itemIndex: i,
-    message: `Author "${raw.authorName}" not found in cache`,
-    value: raw
-  });
-  continue;
+	errors.push({
+		itemIndex: i,
+		message: `Author "${raw.authorName}" not found in cache`,
+		value: raw,
+	});
+	continue;
 }
 
 // Use resolved ID in insert
 await db.insert(comic).values({
-  ...comicFields,
-  authorId // Foreign key from cache
+	...comicFields,
+	authorId, // Foreign key from cache
 });
 ```
 
@@ -193,13 +190,13 @@ await db.insert(comic).values({
 ```typescript
 // ❌ Bad: stripHtmlTags defined in multiple seeders
 function stripHtmlTags(html: string): string {
-  return html.replaceAll(/<[^>]*>/g, "");
+	return html.replaceAll(/<[^>]*>/g, "");
 }
 
 // ✅ Good: extract to helpers
 // src/scripts/seed/helpers/html-utils.ts
 export function stripHtmlTags(html: string): string {
-  return html.replaceAll(/<[^>]*>/g, "");
+	return html.replaceAll(/<[^>]*>/g, "");
 }
 
 // Then import in seeders
@@ -247,15 +244,15 @@ When creating a new seeder, update **all** of these:
 
 ```typescript
 const entityOrder = [
-  "users", // No dependencies
-  "types", // No dependencies
-  "authors", // No dependencies
-  "artists", // No dependencies
-  "genres", // No dependencies
-  "comics", // Depends on: authors, artists, types, genres
-  "comic-images", // Depends on: comics
-  "chapters", // Depends on: comics
-  "chapter-images" // Depends on: chapters
+	"users", // No dependencies
+	"types", // No dependencies
+	"authors", // No dependencies
+	"artists", // No dependencies
+	"genres", // No dependencies
+	"comics", // Depends on: authors, artists, types, genres
+	"comic-images", // Depends on: comics
+	"chapters", // Depends on: comics
+	"chapter-images", // Depends on: chapters
 ];
 ```
 
@@ -319,21 +316,21 @@ jest.mock("../seeders/base-seed");
 
 // Mock cache
 const mockCache: LookupCache = {
-  users: new Map(),
-  authors: new Map()
-  // ... other entities
+	users: new Map(),
+	authors: new Map(),
+	// ... other entities
 };
 
 // Mock db
 const mockDb = {
-  insert: jest.fn(),
-  query: jest.fn()
+	insert: jest.fn(),
+	query: jest.fn(),
 };
 
 // Create seeder instance
 const seeder = new MySeeder(mockCache, {
-  dryRun: false,
-  verbose: false
+	dryRun: false,
+	verbose: false,
 });
 
 // Verify cache updates

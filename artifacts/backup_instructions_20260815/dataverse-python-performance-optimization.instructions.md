@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Dataverse SDK for Python — Performance & Optimization Guide
@@ -481,18 +481,18 @@ def create_accounts(client, payloads):
 
 ## 13. Performance Checklist
 
-| Item | Status | Notes |
-| --- | --- | --- |
-| Reuse client instance | ☐ | Create once, reuse |
-| Use select to limit columns | ☐ | Only retrieve needed data |
-| Filter server-side with OData | ☐ | Don't fetch all and filter |
-| Use pagination with page_size | ☐ | Process incrementally |
-| Batch operations | ☐ | Use create/update for multiple |
-| Tune batch size by table type | ☐ | OOB=200-300, Simple=≤10 |
-| Handle rate limiting (429) | ☐ | Implement exponential backoff |
-| Use chunked upload for large files | ☐ | SDK handles for >128MB |
-| Monitor operation duration | ☐ | Log timing for analysis |
-| Test with production-like data | ☐ | Performance varies with data volume |
+| Item                               | Status | Notes                               |
+| ---------------------------------- | ------ | ----------------------------------- |
+| Reuse client instance              | ☐      | Create once, reuse                  |
+| Use select to limit columns        | ☐      | Only retrieve needed data           |
+| Filter server-side with OData      | ☐      | Don't fetch all and filter          |
+| Use pagination with page_size      | ☐      | Process incrementally               |
+| Batch operations                   | ☐      | Use create/update for multiple      |
+| Tune batch size by table type      | ☐      | OOB=200-300, Simple=≤10             |
+| Handle rate limiting (429)         | ☐      | Implement exponential backoff       |
+| Use chunked upload for large files | ☐      | SDK handles for >128MB              |
+| Monitor operation duration         | ☐      | Log timing for analysis             |
+| Test with production-like data     | ☐      | Performance varies with data volume |
 
 ---
 

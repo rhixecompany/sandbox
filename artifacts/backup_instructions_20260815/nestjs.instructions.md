@@ -88,19 +88,19 @@ src/
 @Controller("users")
 @UseGuards(AuthGuard)
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+	constructor(private readonly usersService: UsersService) {}
 
-  @Get()
-  @UseInterceptors(TransformInterceptor)
-  async findAll(@Query() query: GetUsersDto): Promise<User[]> {
-    return this.usersService.findAll(query);
-  }
+	@Get()
+	@UseInterceptors(TransformInterceptor)
+	async findAll(@Query() query: GetUsersDto): Promise<User[]> {
+		return this.usersService.findAll(query);
+	}
 
-  @Post()
-  @UsePipes(ValidationPipe)
-  async create(@Body() createUserDto: CreateUserDto): Promise<User> {
-    return this.usersService.create(createUserDto);
-  }
+	@Post()
+	@UsePipes(ValidationPipe)
+	async create(@Body() createUserDto: CreateUserDto): Promise<User> {
+		return this.usersService.create(createUserDto);
+	}
 }
 ```
 
@@ -114,18 +114,18 @@ export class UsersController {
 ```typescript
 @Injectable()
 export class UsersService {
-  constructor(
-    @InjectRepository(User)
-    private readonly userRepository: Repository<User>,
-    private readonly emailService: EmailService
-  ) {}
+	constructor(
+		@InjectRepository(User)
+		private readonly userRepository: Repository<User>,
+		private readonly emailService: EmailService,
+	) {}
 
-  async create(createUserDto: CreateUserDto): Promise<User> {
-    const user = this.userRepository.create(createUserDto);
-    const savedUser = await this.userRepository.save(user);
-    await this.emailService.sendWelcomeEmail(savedUser.email);
-    return savedUser;
-  }
+	async create(createUserDto: CreateUserDto): Promise<User> {
+		const user = this.userRepository.create(createUserDto);
+		const savedUser = await this.userRepository.save(user);
+		await this.emailService.sendWelcomeEmail(savedUser.email);
+		return savedUser;
+	}
 }
 ```
 
@@ -137,20 +137,20 @@ export class UsersService {
 
 ```typescript
 export class CreateUserDto {
-  @IsString()
-  @IsNotEmpty()
-  @Length(2, 50)
-  name: string;
+	@IsString()
+	@IsNotEmpty()
+	@Length(2, 50)
+	name: string;
 
-  @IsEmail()
-  email: string;
+	@IsEmail()
+	email: string;
 
-  @IsString()
-  @MinLength(8)
-  @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, {
-    message: "Password must contain uppercase, lowercase and number"
-  })
-  password: string;
+	@IsString()
+	@MinLength(8)
+	@Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, {
+		message: "Password must contain uppercase, lowercase and number",
+	})
+	password: string;
 }
 ```
 
@@ -166,26 +166,26 @@ export class CreateUserDto {
 ```typescript
 @Entity("users")
 export class User {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
+	@PrimaryGeneratedColumn("uuid")
+	id: string;
 
-  @Column({ unique: true })
-  email: string;
+	@Column({ unique: true })
+	email: string;
 
-  @Column()
-  name: string;
+	@Column()
+	name: string;
 
-  @Column({ select: false })
-  password: string;
+	@Column({ select: false })
+	password: string;
 
-  @OneToMany(() => Post, post => post.author)
-  posts: Post[];
+	@OneToMany(() => Post, (post) => post.author)
+	posts: Post[];
 
-  @CreateDateColumn()
-  createdAt: Date;
+	@CreateDateColumn()
+	createdAt: Date;
 
-  @UpdateDateColumn()
-  updatedAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }
 ```
 
@@ -206,16 +206,16 @@ export class User {
 ```typescript
 @Injectable()
 export class JwtAuthGuard extends AuthGuard("jwt") {
-  canActivate(context: ExecutionContext): boolean | Promise<boolean> {
-    return super.canActivate(context);
-  }
+	canActivate(context: ExecutionContext): boolean | Promise<boolean> {
+		return super.canActivate(context);
+	}
 
-  handleRequest(err: any, user: any, info: any) {
-    if (err || !user) {
-      throw err || new UnauthorizedException();
-    }
-    return user;
-  }
+	handleRequest(err: any, user: any, info: any) {
+		if (err || !user) {
+			throw err || new UnauthorizedException();
+		}
+		return user;
+	}
 }
 ```
 
@@ -245,30 +245,24 @@ async remove(@Param('id') id: string): Promise<void> {
 ```typescript
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
-  private readonly logger = new Logger(AllExceptionsFilter.name);
+	private readonly logger = new Logger(AllExceptionsFilter.name);
 
-  catch(exception: unknown, host: ArgumentsHost): void {
-    const ctx = host.switchToHttp();
-    const response = ctx.getResponse<Response>();
-    const request = ctx.getRequest<Request>();
+	catch(exception: unknown, host: ArgumentsHost): void {
+		const ctx = host.switchToHttp();
+		const response = ctx.getResponse<Response>();
+		const request = ctx.getRequest<Request>();
 
-    const status =
-      exception instanceof HttpException
-        ? exception.getStatus()
-        : HttpStatus.INTERNAL_SERVER_ERROR;
+		const status = exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
 
-    this.logger.error(`${request.method} ${request.url}`, exception);
+		this.logger.error(`${request.method} ${request.url}`, exception);
 
-    response.status(status).json({
-      statusCode: status,
-      timestamp: new Date().toISOString(),
-      path: request.url,
-      message:
-        exception instanceof HttpException
-          ? exception.message
-          : "Internal server error"
-    });
-  }
+		response.status(status).json({
+			statusCode: status,
+			timestamp: new Date().toISOString(),
+			path: request.url,
+			message: exception instanceof HttpException ? exception.message : "Internal server error",
+		});
+	}
 }
 ```
 
@@ -288,39 +282,37 @@ export class AllExceptionsFilter implements ExceptionFilter {
 
 ```typescript
 describe("UsersService", () => {
-  let service: UsersService;
-  let repository: Repository<User>;
+	let service: UsersService;
+	let repository: Repository<User>;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        UsersService,
-        {
-          provide: getRepositoryToken(User),
-          useValue: {
-            create: jest.fn(),
-            save: jest.fn(),
-            find: jest.fn()
-          }
-        }
-      ]
-    }).compile();
+	beforeEach(async () => {
+		const module: TestingModule = await Test.createTestingModule({
+			providers: [
+				UsersService,
+				{
+					provide: getRepositoryToken(User),
+					useValue: {
+						create: jest.fn(),
+						save: jest.fn(),
+						find: jest.fn(),
+					},
+				},
+			],
+		}).compile();
 
-    service = module.get<UsersService>(UsersService);
-    repository = module.get<Repository<User>>(
-      getRepositoryToken(User)
-    );
-  });
+		service = module.get<UsersService>(UsersService);
+		repository = module.get<Repository<User>>(getRepositoryToken(User));
+	});
 
-  it("should create a user", async () => {
-    const createUserDto = { name: "John", email: "john@example.com" };
-    const user = { id: "1", ...createUserDto };
+	it("should create a user", async () => {
+		const createUserDto = { name: "John", email: "john@example.com" };
+		const user = { id: "1", ...createUserDto };
 
-    jest.spyOn(repository, "create").mockReturnValue(user as User);
-    jest.spyOn(repository, "save").mockResolvedValue(user as User);
+		jest.spyOn(repository, "create").mockReturnValue(user as User);
+		jest.spyOn(repository, "save").mockResolvedValue(user as User);
 
-    expect(await service.create(createUserDto)).toEqual(user);
-  });
+		expect(await service.create(createUserDto)).toEqual(user);
+	});
 });
 ```
 
@@ -358,11 +350,11 @@ describe("UsersService", () => {
 @Controller("auth")
 @UseGuards(ThrottlerGuard)
 export class AuthController {
-  @Post("login")
-  @Throttle(5, 60) // 5 requests per minute
-  async login(@Body() loginDto: LoginDto) {
-    return this.authService.login(loginDto);
-  }
+	@Post("login")
+	@Throttle(5, 60) // 5 requests per minute
+	async login(@Body() loginDto: LoginDto) {
+		return this.authService.login(loginDto);
+	}
 }
 ```
 
@@ -377,18 +369,18 @@ export class AuthController {
 ```typescript
 @Injectable()
 export class ConfigService {
-  constructor(
-    @Inject(CONFIGURATION_TOKEN)
-    private readonly config: Configuration
-  ) {}
+	constructor(
+		@Inject(CONFIGURATION_TOKEN)
+		private readonly config: Configuration,
+	) {}
 
-  get databaseUrl(): string {
-    return this.config.database.url;
-  }
+	get databaseUrl(): string {
+		return this.config.database.url;
+	}
 
-  get jwtSecret(): string {
-    return this.config.jwt.secret;
-  }
+	get jwtSecret(): string {
+		return this.config.jwt.secret;
+	}
 }
 ```
 

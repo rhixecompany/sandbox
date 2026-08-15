@@ -26,28 +26,15 @@ Always prefer Lightning Web Component library components over plain HTML element
 
 ```html
 <!-- Use Lightning components -->
-<lightning-button
-  label="Save"
-  variant="brand"
-  onclick="{handleSave}"
-></lightning-button>
-<lightning-input
-  type="text"
-  label="Name"
-  value="{name}"
-  onchange="{handleNameChange}"
-></lightning-input>
-<lightning-combobox
-  label="Type"
-  options="{typeOptions}"
-  value="{selectedType}"
-></lightning-combobox>
+<lightning-button label="Save" variant="brand" onclick="{handleSave}"></lightning-button>
+<lightning-input type="text" label="Name" value="{name}" onchange="{handleNameChange}"></lightning-input>
+<lightning-combobox label="Type" options="{typeOptions}" value="{selectedType}"></lightning-combobox>
 <lightning-radio-group
-  name="duration"
-  label="Duration"
-  options="{durationOptions}"
-  value="{duration}"
-  type="radio"
+	name="duration"
+	label="Duration"
+	options="{durationOptions}"
+	value="{duration}"
+	type="radio"
 ></lightning-radio-group>
 ```
 
@@ -58,23 +45,23 @@ Always prefer Lightning Web Component library components over plain HTML element
 <button onclick="{handleSave}">Save</button>
 <input type="text" onchange="{handleNameChange}" />
 <select onchange="{handleTypeChange}">
-  <option value="option1">Option 1</option>
+	<option value="option1">Option 1</option>
 </select>
 ```
 
 ### 2. Lightning Component Mapping Guide
 
-| HTML Element | Lightning Component | Key Attributes |
-| --- | --- | --- |
-| `<button>` | `<lightning-button>` | `variant`, `label`, `icon-name` |
-| `<input>` | `<lightning-input>` | `type`, `label`, `variant` |
-| `<select>` | `<lightning-combobox>` | `options`, `value`, `placeholder` |
-| `<textarea>` | `<lightning-textarea>` | `label`, `max-length` |
-| `<input type="checkbox">` | `<lightning-input type="checkbox">` | `checked`, `label` |
-| `<input type="radio">` | `<lightning-radio-group>` | `options`, `type`, `name` |
-| `<input type="toggle">` | `<lightning-input type="toggle">` | `checked`, `variant` |
-| Custom pills | `<lightning-pill>` | `label`, `name`, `onremove` |
-| Icons | `<lightning-icon>` | `icon-name`, `size`, `variant` |
+| HTML Element              | Lightning Component                 | Key Attributes                    |
+| ------------------------- | ----------------------------------- | --------------------------------- |
+| `<button>`                | `<lightning-button>`                | `variant`, `label`, `icon-name`   |
+| `<input>`                 | `<lightning-input>`                 | `type`, `label`, `variant`        |
+| `<select>`                | `<lightning-combobox>`              | `options`, `value`, `placeholder` |
+| `<textarea>`              | `<lightning-textarea>`              | `label`, `max-length`             |
+| `<input type="checkbox">` | `<lightning-input type="checkbox">` | `checked`, `label`                |
+| `<input type="radio">`    | `<lightning-radio-group>`           | `options`, `type`, `name`         |
+| `<input type="toggle">`   | `<lightning-input type="toggle">`   | `checked`, `variant`              |
+| Custom pills              | `<lightning-pill>`                  | `label`, `name`, `onremove`       |
+| Icons                     | `<lightning-icon>`                  | `icon-name`, `size`, `variant`    |
 
 ### 3. Lightning Design System Compliance
 
@@ -85,20 +72,18 @@ Always use Salesforce Lightning Design System utility classes with the `slds-var
 ```html
 <!-- Spacing -->
 <div class="slds-var-m-around_medium slds-var-p-top_large">
-  <div class="slds-var-m-bottom_small">Content</div>
+	<div class="slds-var-m-bottom_small">Content</div>
 </div>
 
 <!-- Layout -->
 <div class="slds-grid slds-wrap slds-gutters_small">
-  <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3">
-    <!-- Content -->
-  </div>
+	<div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3">
+		<!-- Content -->
+	</div>
 </div>
 
 <!-- Typography -->
-<h2 class="slds-text-heading_medium slds-var-m-bottom_small">
-  Section Title
-</h2>
+<h2 class="slds-text-heading_medium slds-var-m-bottom_small">Section Title</h2>
 <p class="slds-text-body_regular">Description text</p>
 ```
 
@@ -107,25 +92,22 @@ Always use Salesforce Lightning Design System utility classes with the `slds-var
 ```html
 <!-- Card Layout -->
 <article class="slds-card slds-var-m-around_medium">
-  <header class="slds-card__header">
-    <h2 class="slds-text-heading_small">Card Title</h2>
-  </header>
-  <div class="slds-card__body slds-card__body_inner">
-    <!-- Card content -->
-  </div>
-  <footer class="slds-card__footer">
-    <!-- Card actions -->
-  </footer>
+	<header class="slds-card__header">
+		<h2 class="slds-text-heading_small">Card Title</h2>
+	</header>
+	<div class="slds-card__body slds-card__body_inner">
+		<!-- Card content -->
+	</div>
+	<footer class="slds-card__footer">
+		<!-- Card actions -->
+	</footer>
 </article>
 
 <!-- Form Layout -->
 <div class="slds-form slds-form_stacked">
-  <div class="slds-form-element">
-    <lightning-input
-      label="Field Label"
-      value="{fieldValue}"
-    ></lightning-input>
-  </div>
+	<div class="slds-form-element">
+		<lightning-input label="Field Label" value="{fieldValue}"></lightning-input>
+	</div>
 </div>
 ```
 
@@ -135,23 +117,11 @@ Always use Salesforce Lightning Design System utility classes with the `slds-var
 
 ```html
 <!-- Color and theming -->
-<div
-  class="slds-theme_success slds-text-color_inverse slds-var-p-around_small"
->
-  Success message
-</div>
+<div class="slds-theme_success slds-text-color_inverse slds-var-p-around_small">Success message</div>
 
-<div
-  class="slds-theme_error slds-text-color_inverse slds-var-p-around_small"
->
-  Error message
-</div>
+<div class="slds-theme_error slds-text-color_inverse slds-var-p-around_small">Error message</div>
 
-<div
-  class="slds-theme_warning slds-text-color_inverse slds-var-p-around_small"
->
-  Warning message
-</div>
+<div class="slds-theme_warning slds-text-color_inverse slds-var-p-around_small">Warning message</div>
 ```
 
 #### Avoid Custom CSS (Anti-Pattern)
@@ -159,13 +129,13 @@ Always use Salesforce Lightning Design System utility classes with the `slds-var
 ```css
 /* Don't create custom styles that override SLDS */
 .custom-button {
-  background-color: red;
-  padding: 10px;
+	background-color: red;
+	padding: 10px;
 }
 
 .my-special-layout {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 ```
 
@@ -180,8 +150,8 @@ If you must use custom CSS, follow these guidelines:
 ```css
 /* Custom CSS example */
 .my-component-special {
-  border-radius: var(--lwc-borderRadiusMedium);
-  box-shadow: var(--lwc-shadowButton);
+	border-radius: var(--lwc-borderRadiusMedium);
+	box-shadow: var(--lwc-shadowButton);
 }
 ```
 
@@ -193,93 +163,91 @@ If you must use custom CSS, follow these guidelines:
 import { LightningElement, track, api } from "lwc";
 
 export default class MyComponent extends LightningElement {
-  // Use @api for public properties
-  @api recordId;
-  @api title;
+	// Use @api for public properties
+	@api recordId;
+	@api title;
 
-  // Primitive properties (string, number, boolean) are automatically reactive
-  // No decorator needed - reassignment triggers re-render
-  simpleValue = "initial";
-  count = 0;
+	// Primitive properties (string, number, boolean) are automatically reactive
+	// No decorator needed - reassignment triggers re-render
+	simpleValue = "initial";
+	count = 0;
 
-  // Computed properties
-  get displayName() {
-    return this.name ? `Hello, ${this.name}` : "Hello, Guest";
-  }
+	// Computed properties
+	get displayName() {
+		return this.name ? `Hello, ${this.name}` : "Hello, Guest";
+	}
 
-  // @track is NOT needed for simple property reassignment
-  // This will trigger reactivity automatically:
-  handleUpdate() {
-    this.simpleValue = "updated"; // Reactive without @track
-    this.count++; // Reactive without @track
-  }
+	// @track is NOT needed for simple property reassignment
+	// This will trigger reactivity automatically:
+	handleUpdate() {
+		this.simpleValue = "updated"; // Reactive without @track
+		this.count++; // Reactive without @track
+	}
 
-  // @track IS needed when mutating nested properties without reassignment
-  @track complexData = {
-    user: {
-      name: "John",
-      preferences: {
-        theme: "dark"
-      }
-    }
-  };
+	// @track IS needed when mutating nested properties without reassignment
+	@track complexData = {
+		user: {
+			name: "John",
+			preferences: {
+				theme: "dark",
+			},
+		},
+	};
 
-  handleDeepUpdate() {
-    // Requires @track because we're mutating a nested property
-    this.complexData.user.preferences.theme = "light";
-  }
+	handleDeepUpdate() {
+		// Requires @track because we're mutating a nested property
+		this.complexData.user.preferences.theme = "light";
+	}
 
-  // BETTER: Avoid @track by using immutable patterns
-  regularData = {
-    user: {
-      name: "John",
-      preferences: {
-        theme: "dark"
-      }
-    }
-  };
+	// BETTER: Avoid @track by using immutable patterns
+	regularData = {
+		user: {
+			name: "John",
+			preferences: {
+				theme: "dark",
+			},
+		},
+	};
 
-  handleImmutableUpdate() {
-    // No @track needed - we're creating a new object reference
-    this.regularData = {
-      ...this.regularData,
-      user: {
-        ...this.regularData.user,
-        preferences: {
-          ...this.regularData.user.preferences,
-          theme: "light"
-        }
-      }
-    };
-  }
+	handleImmutableUpdate() {
+		// No @track needed - we're creating a new object reference
+		this.regularData = {
+			...this.regularData,
+			user: {
+				...this.regularData.user,
+				preferences: {
+					...this.regularData.user.preferences,
+					theme: "light",
+				},
+			},
+		};
+	}
 
-  // Arrays: @track is needed only for mutating methods
-  @track items = ["a", "b", "c"];
+	// Arrays: @track is needed only for mutating methods
+	@track items = ["a", "b", "c"];
 
-  handleArrayMutation() {
-    // Requires @track
-    this.items.push("d");
-    this.items[0] = "z";
-  }
+	handleArrayMutation() {
+		// Requires @track
+		this.items.push("d");
+		this.items[0] = "z";
+	}
 
-  // BETTER: Use immutable array operations
-  regularItems = ["a", "b", "c"];
+	// BETTER: Use immutable array operations
+	regularItems = ["a", "b", "c"];
 
-  handleImmutableArray() {
-    // No @track needed
-    this.regularItems = [...this.regularItems, "d"];
-    this.regularItems = this.regularItems.map((item, idx) =>
-      idx === 0 ? "z" : item
-    );
-  }
+	handleImmutableArray() {
+		// No @track needed
+		this.regularItems = [...this.regularItems, "d"];
+		this.regularItems = this.regularItems.map((item, idx) => (idx === 0 ? "z" : item));
+	}
 
-  // Use @track only for complex objects/arrays when you mutate nested properties.
-  // For example, updating complexObject.details.status without reassigning complexObject.
-  @track complexObject = {
-    details: {
-      status: "new"
-    }
-  };
+	// Use @track only for complex objects/arrays when you mutate nested properties.
+	// For example, updating complexObject.details.status without reassigning complexObject.
+	@track complexObject = {
+		details: {
+			status: "new",
+		},
+	};
 }
 ```
 
@@ -325,24 +293,20 @@ handleToggleChange(event) {
 import { getRecord } from "lightning/uiRecordApi";
 import { getObjectInfo } from "lightning/uiObjectInfoApi";
 
-const FIELDS = [
-  "Account.Name",
-  "Account.Industry",
-  "Account.AnnualRevenue"
-];
+const FIELDS = ["Account.Name", "Account.Industry", "Account.AnnualRevenue"];
 
 export default class MyComponent extends LightningElement {
-  @api recordId;
+	@api recordId;
 
-  @wire(getRecord, { recordId: "$recordId", fields: FIELDS })
-  record;
+	@wire(getRecord, { recordId: "$recordId", fields: FIELDS })
+	record;
 
-  @wire(getObjectInfo, { objectApiName: "Account" })
-  objectInfo;
+	@wire(getObjectInfo, { objectApiName: "Account" })
+	objectInfo;
 
-  get recordData() {
-    return this.record.data ? this.record.data.fields : {};
-  }
+	get recordData() {
+		return this.record.data ? this.record.data.fields : {};
+	}
 }
 ```
 
@@ -354,46 +318,46 @@ export default class MyComponent extends LightningElement {
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 export default class MyComponent extends LightningElement {
-  isLoading = false;
-  error = null;
+	isLoading = false;
+	error = null;
 
-  async handleAsyncOperation() {
-    this.isLoading = true;
-    this.error = null;
+	async handleAsyncOperation() {
+		this.isLoading = true;
+		this.error = null;
 
-    try {
-      const result = await this.performOperation();
-      this.showSuccessToast();
-    } catch (error) {
-      this.error = error;
-      this.showErrorToast(error.body?.message || "An error occurred");
-    } finally {
-      this.isLoading = false;
-    }
-  }
+		try {
+			const result = await this.performOperation();
+			this.showSuccessToast();
+		} catch (error) {
+			this.error = error;
+			this.showErrorToast(error.body?.message || "An error occurred");
+		} finally {
+			this.isLoading = false;
+		}
+	}
 
-  performOperation() {
-    // Developer-defined async operation
-  }
+	performOperation() {
+		// Developer-defined async operation
+	}
 
-  showSuccessToast() {
-    const event = new ShowToastEvent({
-      title: "Success",
-      message: "Operation completed successfully",
-      variant: "success"
-    });
-    this.dispatchEvent(event);
-  }
+	showSuccessToast() {
+		const event = new ShowToastEvent({
+			title: "Success",
+			message: "Operation completed successfully",
+			variant: "success",
+		});
+		this.dispatchEvent(event);
+	}
 
-  showErrorToast(message) {
-    const event = new ShowToastEvent({
-      title: "Error",
-      message: message,
-      variant: "error",
-      mode: "sticky"
-    });
-    this.dispatchEvent(event);
-  }
+	showErrorToast(message) {
+		const event = new ShowToastEvent({
+			title: "Error",
+			message: message,
+			variant: "error",
+			mode: "sticky",
+		});
+		this.dispatchEvent(event);
+	}
 }
 ```
 
@@ -406,48 +370,32 @@ Prefer `lwc:if`, `lwc:elseif` and `lwc:else` for conditional rendering (API v58.
 ```html
 <!-- Use template directives for conditional rendering -->
 <template lwc:if="{isLoading}">
-  <lightning-spinner
-    alternative-text="Loading..."
-  ></lightning-spinner>
+	<lightning-spinner alternative-text="Loading..."></lightning-spinner>
 </template>
 <template lwc:elseif="{error}">
-  <div
-    class="slds-theme_error slds-text-color_inverse slds-var-p-around_small"
-  >
-    {error.message}
-  </div>
+	<div class="slds-theme_error slds-text-color_inverse slds-var-p-around_small">{error.message}</div>
 </template>
 <template lwc:else>
-  <template for:each="{items}" for:item="item">
-    <div key="{item.id}" class="slds-var-m-bottom_small">
-      {item.name}
-    </div>
-  </template>
+	<template for:each="{items}" for:item="item">
+		<div key="{item.id}" class="slds-var-m-bottom_small">{item.name}</div>
+	</template>
 </template>
 ```
 
 ```html
 <!-- Legacy approach (avoid in new components) -->
 <template if:true="{isLoading}">
-  <lightning-spinner
-    alternative-text="Loading..."
-  ></lightning-spinner>
+	<lightning-spinner alternative-text="Loading..."></lightning-spinner>
 </template>
 <template if:true="{error}">
-  <div
-    class="slds-theme_error slds-text-color_inverse slds-var-p-around_small"
-  >
-    {error.message}
-  </div>
+	<div class="slds-theme_error slds-text-color_inverse slds-var-p-around_small">{error.message}</div>
 </template>
 <template if:false="{isLoading}">
-  <template if:false="{error}">
-    <template for:each="{items}" for:item="item">
-      <div key="{item.id}" class="slds-var-m-bottom_small">
-        {item.name}
-      </div>
-    </template>
-  </template>
+	<template if:false="{error}">
+		<template for:each="{items}" for:item="item">
+			<div key="{item.id}" class="slds-var-m-bottom_small">{item.name}</div>
+		</template>
+	</template>
 </template>
 ```
 
@@ -458,19 +406,17 @@ Prefer `lwc:if`, `lwc:elseif` and `lwc:else` for conditional rendering (API v58.
 ```html
 <!-- Use semantic structure -->
 <section aria-label="Product Selection">
-  <h2 class="slds-text-heading_medium">Products</h2>
+	<h2 class="slds-text-heading_medium">Products</h2>
 
-  <lightning-input
-    type="search"
-    label="Search Products"
-    placeholder="Enter product name..."
-    aria-describedby="search-help"
-  >
-  </lightning-input>
+	<lightning-input
+		type="search"
+		label="Search Products"
+		placeholder="Enter product name..."
+		aria-describedby="search-help"
+	>
+	</lightning-input>
 
-  <div id="search-help" class="slds-assistive-text">
-    Type to filter the product list
-  </div>
+	<div id="search-help" class="slds-assistive-text">Type to filter the product list</div>
 </section>
 ```
 
