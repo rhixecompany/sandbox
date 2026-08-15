@@ -3,7 +3,7 @@ name: csharp-nunit
 title: csharp nunit
 description: Prompt for csharp-nunit
 version: "1.0.0"
-tags: []
+tags: [backend, csharp, nunit, qa, testing]
 trigger: csharp-nunit
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-nunit

@@ -3,7 +3,7 @@ name: generate-docs
 title: generate docs
 description: Prompt for generate-docs
 version: "1.0.0"
-tags: []
+tags: [automation, communication, documentation, generation, tool]
 trigger: generate-docs
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: generate-docs

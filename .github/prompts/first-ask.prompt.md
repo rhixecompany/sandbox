@@ -3,7 +3,7 @@ name: first-ask
 title: first ask
 description: Prompt for first-ask
 version: "1.0.0"
-tags: []
+tags: [beginner, communication, interaction, onboarding, tool]
 trigger: first-ask
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: first-ask

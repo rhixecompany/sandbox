@@ -3,7 +3,7 @@ name: dotnet-design-pattern-review
 title: dotnet design pattern review
 description: Prompt for dotnet-design-pattern-review
 version: "1.0.0"
-tags: []
+tags: [architecture, csharp, design-patterns, dotnet, review]
 trigger: dotnet-design-pattern-review
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dotnet-design-pattern-review

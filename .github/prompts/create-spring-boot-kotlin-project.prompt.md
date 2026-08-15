@@ -3,7 +3,7 @@ name: create-spring-boot-kotlin-project
 title: create spring boot kotlin project
 description: Prompt for create-spring-boot-kotlin-project
 version: "1.0.0"
-tags: []
+tags: [backend, framework, kotlin, setup, springboot]
 trigger: create-spring-boot-kotlin-project
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-spring-boot-kotlin-project

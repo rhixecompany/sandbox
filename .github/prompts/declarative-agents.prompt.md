@@ -3,7 +3,7 @@ name: declarative-agents
 title: declarative agents
 description: Prompt for declarative-agents
 version: "1.0.0"
-tags: []
+tags: [advanced, agents, automation, copilot, m365]
 trigger: declarative-agents
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: declarative-agents

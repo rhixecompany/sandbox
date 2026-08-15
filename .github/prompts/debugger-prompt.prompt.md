@@ -3,7 +3,7 @@ name: debugger-prompt
 title: debugger prompt
 description: Prompt for debugger-prompt
 version: "1.0.0"
-tags: []
+tags: [coding, debugging, development, prompt, tool]
 trigger: debugger-prompt
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: debugger-prompt

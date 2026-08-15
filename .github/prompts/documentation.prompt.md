@@ -3,7 +3,7 @@ name: documentation
 title: documentation
 description: Prompt for documentation
 version: "1.0.0"
-tags: []
+tags: [communication, documentation, general, intermediate, tool]
 trigger: documentation
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: documentation

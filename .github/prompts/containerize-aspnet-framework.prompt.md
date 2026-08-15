@@ -3,7 +3,7 @@ name: containerize-aspnet-framework
 title: containerize aspnet framework
 description: Prompt for containerize-aspnet-framework
 version: "1.0.0"
-tags: []
+tags: [aspnet, containerization, csharp, devops, docker]
 trigger: containerize-aspnet-framework
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: containerize-aspnet-framework

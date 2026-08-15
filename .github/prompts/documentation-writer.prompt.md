@@ -3,7 +3,7 @@ name: documentation-writer
 title: documentation writer
 description: Prompt for documentation-writer
 version: "1.0.0"
-tags: []
+tags: [communication, content, documentation, tool, writing]
 trigger: documentation-writer
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: documentation-writer

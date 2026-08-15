@@ -3,7 +3,7 @@ name: csharp-mcp-server-generator
 title: csharp mcp server generator
 description: Prompt for csharp-mcp-server-generator
 version: "1.0.0"
-tags: []
+tags: [code-generation, csharp, framework, mcp, tool]
 trigger: csharp-mcp-server-generator
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-mcp-server-generator

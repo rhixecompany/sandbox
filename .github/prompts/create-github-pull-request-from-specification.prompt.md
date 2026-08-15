@@ -3,7 +3,7 @@ name: create-github-pull-request-from-specification
 title: create github pull request from specification
 description: Prompt for create-github-pull-request-from-specification
 version: "1.0.0"
-tags: []
+tags: [development, tool, coding]
 trigger: create-github-pull-request-from-specification
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-github-pull-request-from-specification

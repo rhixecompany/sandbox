@@ -3,7 +3,7 @@ name: git-multi-repo-orchestration
 title: git multi repo orchestration
 description: Prompt for git-multi-repo-orchestration
 version: "1.0.0"
-tags: []
+tags: [advanced, automation, devops, git, orchestration]
 trigger: git-multi-repo-orchestration
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: git-multi-repo-orchestration

@@ -3,7 +3,7 @@ name: dotnet-best-practices
 title: dotnet best practices
 description: Prompt for dotnet-best-practices
 version: "1.0.0"
-tags: []
+tags: [coding, csharp, dotnet, review, standards]
 trigger: dotnet-best-practices
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dotnet-best-practices

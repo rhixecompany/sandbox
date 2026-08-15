@@ -3,7 +3,7 @@ name: dev-imp
 title: dev imp
 description: Prompt for dev-imp
 version: "1.0.0"
-tags: []
+tags: [backend, coding, development, implementation, project]
 trigger: dev-imp
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dev-imp

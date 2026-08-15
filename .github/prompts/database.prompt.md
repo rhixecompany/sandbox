@@ -3,7 +3,7 @@ name: database
 title: database
 description: Prompt for database
 version: "1.0.0"
-tags: []
+tags: [architecture, backend, database, design, sql]
 trigger: database
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: database

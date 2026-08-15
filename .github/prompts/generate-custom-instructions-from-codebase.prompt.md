@@ -3,7 +3,7 @@ name: generate-custom-instructions-from-codebase
 title: generate custom instructions from codebase
 description: Prompt for generate-custom-instructions-from-codebase
 version: "1.0.0"
-tags: []
+tags: [automation, codebase, documentation, generation, tool]
 trigger: generate-custom-instructions-from-codebase
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: generate-custom-instructions-from-codebase

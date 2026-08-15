@@ -3,7 +3,7 @@ name: devops-rollout-plan
 title: devops rollout plan
 description: Prompt for devops-rollout-plan
 version: "1.0.0"
-tags: []
+tags: [ci-cd, deployment, devops, planning, tool]
 trigger: devops-rollout-plan
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: devops-rollout-plan

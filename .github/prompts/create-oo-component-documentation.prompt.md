@@ -3,7 +3,7 @@ name: create-oo-component-documentation
 title: create oo component documentation
 description: Prompt for create-oo-component-documentation
 version: "1.0.0"
-tags: []
+tags: [coding, component, documentation, oo-design, tool]
 trigger: create-oo-component-documentation
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-oo-component-documentation

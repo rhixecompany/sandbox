@@ -3,7 +3,7 @@ name: finalize-agent-prompt
 title: finalize agent prompt
 description: Prompt for finalize-agent-prompt
 version: "1.0.0"
-tags: []
+tags: [agents, automation, development, prompt-engineering, tool]
 trigger: finalize-agent-prompt
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: finalize-agent-prompt

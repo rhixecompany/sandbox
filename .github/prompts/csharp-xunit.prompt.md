@@ -3,7 +3,7 @@ name: csharp-xunit
 title: csharp xunit
 description: Prompt for csharp-xunit
 version: "1.0.0"
-tags: []
+tags: [backend, csharp, qa, testing, xunit]
 trigger: csharp-xunit
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-xunit

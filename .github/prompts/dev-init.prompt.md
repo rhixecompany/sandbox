@@ -3,7 +3,7 @@ name: dev-init
 title: dev init
 description: Prompt for dev-init
 version: "1.0.0"
-tags: []
+tags: [development, initialization, project, setup, tool]
 trigger: dev-init
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dev-init

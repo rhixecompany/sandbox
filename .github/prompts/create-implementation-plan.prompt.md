@@ -3,7 +3,7 @@ name: create-implementation-plan
 title: create implementation plan
 description: Prompt for create-implementation-plan
 version: "1.0.0"
-tags: []
+tags: [architecture, documentation, planning, project-management, tool]
 trigger: create-implementation-plan
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-implementation-plan

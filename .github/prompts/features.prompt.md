@@ -3,7 +3,7 @@ name: features
 title: features
 description: Prompt for features
 version: "1.0.0"
-tags: []
+tags: [development, documentation, features, planning, project]
 trigger: features
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: features

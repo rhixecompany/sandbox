@@ -3,7 +3,7 @@ name: create-github-issues-for-unmet-specification-requirements
 title: create github issues for unmet specification requirements
 description: Prompt for create-github-issues-for-unmet-specification-requirements
 version: "1.0.0"
-tags: []
+tags: [automation, devops, github, planning, tool]
 trigger: create-github-issues-for-unmet-specification-requirements
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-github-issues-for-unmet-specification-requirements

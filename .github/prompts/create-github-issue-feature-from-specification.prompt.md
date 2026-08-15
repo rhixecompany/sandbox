@@ -3,7 +3,7 @@ name: create-github-issue-feature-from-specification
 title: create github issue feature from specification
 description: Prompt for create-github-issue-feature-from-specification
 version: "1.0.0"
-tags: []
+tags: [automation, devops, github, planning, tool]
 trigger: create-github-issue-feature-from-specification
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-github-issue-feature-from-specification

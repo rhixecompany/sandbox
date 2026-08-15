@@ -3,7 +3,7 @@ name: csharp-async
 title: csharp async
 description: Prompt for csharp-async
 version: "1.0.0"
-tags: []
+tags: [advanced, async-await, backend, coding, csharp]
 trigger: csharp-async
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-async

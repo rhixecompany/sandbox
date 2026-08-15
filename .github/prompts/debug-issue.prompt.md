@@ -3,7 +3,7 @@ name: debug-issue
 title: debug issue
 description: Prompt for debug-issue
 version: "1.0.0"
-tags: []
+tags: [coding, debugging, development, tool, troubleshooting]
 trigger: debug-issue
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: debug-issue

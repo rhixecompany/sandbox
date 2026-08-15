@@ -3,7 +3,7 @@ name: editorconfig
 title: editorconfig
 description: Prompt for editorconfig
 version: "1.0.0"
-tags: []
+tags: [configuration, devops, project, standards, tooling]
 trigger: editorconfig
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: editorconfig

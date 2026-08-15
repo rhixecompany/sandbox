@@ -3,7 +3,7 @@ name: csharp-mstest
 title: csharp mstest
 description: Prompt for csharp-mstest
 version: "1.0.0"
-tags: []
+tags: [backend, csharp, mstest, qa, testing]
 trigger: csharp-mstest
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-mstest

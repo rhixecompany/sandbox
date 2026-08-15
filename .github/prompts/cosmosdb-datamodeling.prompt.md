@@ -3,7 +3,7 @@ name: cosmosdb-datamodeling
 title: cosmosdb datamodeling
 description: Prompt for cosmosdb-datamodeling
 version: "1.0.0"
-tags: []
+tags: [advanced, azure, backend, database, design]
 trigger: cosmosdb-datamodeling
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: cosmosdb-datamodeling

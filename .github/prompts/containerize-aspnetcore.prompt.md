@@ -3,7 +3,7 @@ name: containerize-aspnetcore
 title: containerize aspnetcore
 description: Prompt for containerize-aspnetcore
 version: "1.0.0"
-tags: []
+tags: [aspnetcore, containerization, csharp, devops, docker]
 trigger: containerize-aspnetcore
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: containerize-aspnetcore

@@ -3,7 +3,7 @@ name: create-llms
 title: create llms
 description: Prompt for create-llms
 version: "1.0.0"
-tags: []
+tags: [ai, llm, model, prompt-engineering, tool]
 trigger: create-llms
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-llms

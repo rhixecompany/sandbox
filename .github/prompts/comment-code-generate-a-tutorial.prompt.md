@@ -3,7 +3,7 @@ name: comment-code-generate-a-tutorial
 title: comment code generate a tutorial
 description: Prompt for comment-code-generate-a-tutorial
 version: "1.0.0"
-tags: []
+tags: [beginner, code-quality, coding, documentation, tutorial]
 trigger: comment-code-generate-a-tutorial
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: comment-code-generate-a-tutorial

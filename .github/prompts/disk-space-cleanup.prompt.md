@@ -3,7 +3,7 @@ name: disk-space-cleanup
 title: disk space cleanup
 description: Prompt for disk-space-cleanup
 version: "1.0.0"
-tags: []
+tags: [devops, maintenance, system-admin, tool, troubleshooting]
 trigger: disk-space-cleanup
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: disk-space-cleanup
