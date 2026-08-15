@@ -1,466 +1,274 @@
----
-name: four-agent-prompt-audit-plan
-title: Four-Agent Prompt Library Audit & Enhancement — Plan
-description: Comprehensive plan to audit, standardize, enhance, and verify .github/prompts/ for Hermes, Copilot, OpenCode, and Codex
-date: 2026-08-15
-status: draft
----
-
-# Four-Agent Prompt Library Audit & Enhancement — Plan
-
-**Goal:** Audit, standardize, enhance, and verify the entire `.github/prompts/` library (226 prompts) to serve as the single source of truth for four AI agents: Hermes, GitHub Copilot, OpenCode, and OpenAI Codex.
-
-**Current State (Discovery 2026-08-15):**
-
-- 226 `.prompt.md` files in `.github/prompts/`
-- 226 legacy Hermes prompts in `%LOCALAPPDATA%\hermes\prompts/` (same filenames, different bodies — all unique)
-- 159 prompts have valid frontmatter, 67 without frontmatter
-- 26 prompts have full 4-agent metadata, 131 have only Hermes metadata, 2 have partial metadata
-- 0 duplicate bodies within SandBox, 0 broken YAML
-- 14 shared templates in `templates/_shared/`
-- 0 cross-location body duplicates (legacy bodies are all different from SandBox bodies)
-
----
-
-## Phase 0: Discovery & Baseline (COMPLETED)
-
-See discovery results above. Key findings:
-
-- All 226 legacy prompts share filenames with SandBox prompts but have different bodies
-- No content hash collisions between locations
-- 67 SandBox prompts lack frontmatter entirely
-- Only 26/226 (11.5%) have complete 4-agent metadata
-
----
-
-## Phase 1: Frontmatter Standardisation — All 226 Prompts
-
-**Goal:** Every `.prompt.md` gets a complete, valid YAML frontmatter with all 4 agent metadata sections.
-
-### Step 1.1: Define the canonical frontmatter schema
-
-Use `templates/_shared/frontmatter-template.md` as the authoritative template. Every prompt gets:
-
-```yaml
----
-name: <kebab-case-id> # Required — matches filename stem
-title: "<Human-readable>" # Required
-description: | # Required — multi-line
-  What this prompt does.
-version: 1.0.0 # Required
-license: MIT # Required
-author: "Hermes Agent" # Required
-trigger: /<trigger-name> # Required — CLI trigger
-toolsets: # Required
-  - file
-  - terminal
-skills: # Required
-  - skill:<skill-name>
-dependencies: [] # Required
-formatter: default # Required
-plan: null # Optional
-metadata: # Required — all 4 agents
-  hermes:
-    profile: default
-    mcp_servers: []
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: "opencode /<trigger>"
-    flags: {}
-    help: ""
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags: [] # Required
-scripts: [] # Optional
----
-```
-
-### Step 1.2: Read existing body content for each prompt
-
-For each of the 226 prompts, extract:
-
-- Existing frontmatter (if any) — preserve `trigger`, `name`, `skills`, `dependencies`, `tags` where present
-- Body content — preserve as-is
-- Template references — note for AC5 verification
-
-### Step 1.3: Generate canonical frontmatter per prompt
-
-For each prompt, populate the canonical schema:
-
-- **name**: from filename stem (or existing frontmatter `name`)
-- **title**: from existing frontmatter or derive from filename
-- **description**: from existing frontmatter or "Auto-generated prompt for <trigger>"
-- **trigger**: from existing frontmatter or `/<name>`
-- **toolsets**: default `["file", "terminal"]` — refine per prompt type
-- **skills**: from existing frontmatter or `[]`
-- **dependencies**: from existing frontmatter or `[]`
-- **formatter**: `default`
-- **metadata.hermes**: `profile: default`, `mcp_servers: []`, `context_size: medium`
-- **metadata.copilot**: `context_size: medium`, `extensions: []`
-- **metadata.opencode**: `command: "opencode /<trigger>"`, empty flags
-- **metadata.codex**: all nulls
-- **tags**: from existing frontmatter or `["agent-type:hermes"]`
-- **scripts**: `[]`
-
-### Step 1.4: Write updated frontmatter to each file
-
-Overwrite each `.prompt.md` with: new frontmatter + original body (preserved exactly).
-
-### Step 1.5: Validation gate
-
-- All 226 files parse with `yaml.safe_load` → 0 errors
-- All 226 files have all required frontmatter fields
-- All 226 files have all 4 metadata sections
-
-**Estimate:** 4-6 hours (scripted bulk operation)
-
----
-
-## Phase 2: Legacy Prompt Migration & Deduplication (AC1, AC2)
-
-**Discovery finding:** All 226 legacy prompts share filenames with SandBox prompts but have different bodies. 0 content hash collisions.
-
-### Step 2.1: Compare legacy vs SandBox bodies semantically
-
-For each of the 226 legacy prompts that share a name with a SandBox prompt:
-
-- If the legacy body is an **older version** of the SandBox body (same intent, SandBox is more complete) → skip legacy, note in report
-- If the legacy body contains **unique content** not in SandBox → migrate body into SandBox prompt (append/merge)
-- If the legacy body is **completely different** from SandBox → create a new prompt with a disambiguated name
-
-### Step 2.2: Migrate unique legacy content
-
-For legacy prompts with unique content:
-
-- Copy body into the corresponding SandBox `.prompt.md` (if same trigger) or create new prompt
-- Add proper frontmatter (from Phase 1 schema)
-- Record migration in `MIGRATION_LOG.md`
-
-### Step 2.3: Deduplicate by SHA-256 content hash (AC2)
-
-After all migrations:
-
-- Compute SHA-256 of normalized body for all 226+ prompts
-- Identify any exact duplicate bodies
-- For duplicates: keep the prompt with better frontmatter, add cross-reference note to the other
-- Remove duplicate prompt files (git rm)
-
-### Step 2.4: Verify zero prompts remain only in legacy location (AC1)
-
-- All legacy prompts either: merged into SandBox, explicitly archived, or noted as superseded
-- Archive remaining legacy-only prompts to `templates/archived/` with justification
-
-**Estimate:** 2-3 hours
-
----
-
-## Phase 3: YAML/JSON Validation & Broken Prompt Fixes (AC4)
-
-### Step 3.1: YAML validation
-
-```bash
-python -c "import yaml; [yaml.safe_load(open(f)) for f in Path('.github/prompts').glob('*.prompt.md')]"
-```
-
-Fix any parse errors by targeted patching.
-
-### Step 3.2: JSON validation
-
-Scan bodies for embedded JSON blocks (````json ... ``` `or inline`{...}`) and validate each.
-
-### Step 3.3: Duplicate frontmatter detection
-
-Check for prompts with duplicate YAML blocks (like `comprehensive-prompt-enhancer.prompt.md` which has frontmatter appearing twice).
-
-### Step 3.4: Duplicate tags normalization
-
-Flags like `typescript - prompts - enhancement - library` (spaces instead of commas) need normalization to proper YAML list format.
-
-### Step 3.5: Run `bun run check` on `.github/prompts/`
-
-```bash
-bun run lint
-bun run format:check
-bun run markdownlint
-bun run spellcheck
-```
-
-Fix all issues found.
-
-**Estimate:** 1-2 hours
-
----
-
-## Phase 4: Reference Integrity Verification (AC5)
-
-### Step 4.1: Scan all file references
-
-For every prompt, extract references to:
-
-- `templates/_shared/<file>.md`
-- `templates/<trigger>/README.md`
-- `templates/<trigger>/<section].md`
-- `../hooks/README.md`
-- Other relative paths
-
-### Step 4.2: Verify each reference resolves
-
-For each extracted reference, check the target file exists.
-
-### Step 4.3: Fix broken references
-
-- If target moved: update path
-- If target deleted: remove reference or update to valid alternative
-- If reference is to a shared template that doesn't exist: create it or remove reference
-
-### Step 4.4: Verify trigger uniqueness
-
-Ensure no two prompts share the same `trigger:` value.
-
-**Estimate:** 1 hour
-
----
-
-## Phase 5: Agent Metadata Enrichment (AC3, AC6)
-
-### Step 5.1: Enrich Hermes metadata
-
-For each prompt, determine appropriate:
-
-- `profile`: based on prompt domain (code-architect for code, research-analyst for research, etc.)
-- `mcp_servers`: based on prompt needs (github for PR prompts, filesystem for file ops, etc.)
-- `context_size`: small/medium/large based on prompt complexity
-
-### Step 5.2: Enrich Copilot metadata
-
-For each prompt:
-
-- `context_size`: estimate based on body length
-- `extensions`: which VS Code extensions are relevant (e.g., `["GitHub.copilot"]` for PR prompts)
-- `keybinding`: optional, only for frequently-used prompts
-
-### Step 5.3: Enrich OpenCode metadata
-
-For each prompt:
-
-- `command`: `"opencode /<trigger>"`
-- `flags`: relevant CLI flags
-- `help`: short description
-
-### Step 5.4: Enrich Codex metadata
-
-For each prompt:
-
-- `model_override`: appropriate model for the task
-- `temperature`: based on task type (0.1 for code, 0.7 for creative)
-- `max_tokens`: estimate based on expected output
-
-**Estimate:** 2-3 hours (scripted with domain-based heuristics)
-
----
-
-## Phase 6: Index & Documentation Updates (AC7)
-
-### Step 6.1: Update `index.md`
-
-- Correct prompt count: `226+` → actual count after all changes
-- Add agent coverage note: "Serves Hermes, Copilot, OpenCode, and Codex"
-- List new/modified prompts
-
-### Step 6.2: Update `copilot-instructions.md`
-
-- Fix prompt library count: `190+` → actual count
-- Add 4-agent coverage note
-
-### Step 6.3: Update `templates/_index.md`
-
-- Add generation date
-- List all template directories
-
-### Step 6.4: Create `MIGRATION_REPORT.md`
-
-Document:
-
-- How many legacy prompts were migrated vs archived
-- Which prompts received new content from legacy
-- Any prompts that were deduplicated
-- Frontmatter statistics before/after
-
-**Estimate:** 30 min
-
----
-
-## Phase 7: Quality Gate — Lint, Format, Spellcheck (AC8)
-
-### Step 7.1: `bun run markdownlint`
-
-Fix all markdownlint errors in `.github/prompts/**/*.md`.
-
-### Step 7.2: `bun run format:check`
-
-Fix all Prettier formatting issues.
-
-### Step 7.3: `bun run spellcheck`
-
-Fix all cspell errors.
-
-### Step 7.4: `bun run check` (full gate)
-
-All four commands must pass.
-
-**Estimate:** 1-2 hours
-
----
-
-## Phase 8: Git Cleanup & Commits (AC9)
-
-### Step 8.1: Remove backup artifacts
-
-Ensure no `.bak`, `.backup`, `.old`, `.orig` files exist in `.github/prompts/`.
-
-### Step 8.2: Conventional commits
-
-Commit in logical batches:
-
-```
-feat(prompts): [B] standardize frontmatter schema for 226 prompts
-fix(prompts): [B] add 4-agent metadata to 200 prompts
-fix(prompts): [B] migrate unique legacy prompt content
-fix(prompts): [B] fix duplicate frontmatter in comprehensive-prompt-enhancer
-fix(prompts): [B] normalize duplicate tags format
-fix(prompts): [B] verify and fix broken template references
-docs(prompts): [I] update index.md with accurate counts
-docs(prompts): [I] update copilot-instructions.md prompt count
-chore(prompts): [I] run markdownlint + spellcheck fixes
-```
-
-### Step 8.3: Verify git state
-
-- No uncommitted changes
-- No stray backup files
-- All changes are meaningful
-
-**Estimate:** 30 min
-
----
-
-## Phase 9: MCP Server Skills/Hooks/Quick Commands Sync
-
-**Goal:** Ensure each MCP server has corresponding skills, hooks, and quick commands configured.
-
-### Step 9.1: Inventory MCP servers
-
-From `.hermes.md` and `config.yaml`, list all configured MCP servers:
-
-- `honcho`, `ast-grep`, `code-sandbox`, `github`, `mcp-docker`, `memory`, `mindstudio`, `playwright`, `sequential-thinking`, `smithery`, `python-quality`, `tooling-lint`, `tooling-config`, `context7`, `sentry`, `tavily`, `parallel-search`, `parallel-task`, `fetch`, `filesystem`
-
-### Step 9.2: Create/update skills for each MCP server
-
-For each MCP server without a dedicated skill, create a SKILL.md in `~/AppData/Local/hermes/skills/mcp/<server-name>/` with:
-
-- Server description and purpose
-- Configuration details
-- Common operations/workflows
-- Tool listing
-- Troubleshooting
-
-### Step 9.3: Create/update hooks
-
-For each MCP server, ensure hooks exist for:
-
-- Health checks
-- Connection validation
-- Rate limit monitoring
-
-### Step 9.4: Quick commands
-
-Add quick command aliases for frequent MCP operations in `.github/copilot-instructions.md` and relevant skill files.
-
-**Estimate:** 2-3 hours
-
----
-
-## Phase 10: Final Verification & Report
-
-### Step 10.1: Run full verification suite
-
-```bash
-# YAML validation
-python -c "import yaml; [yaml.safe_load(open(f)) for f in Path('.github/prompts').glob('*.prompt.md')]"
-
-# Bun check
-bun run check
-
-# Reference check
-python verify_references.py .github/prompts/
-
-# Frontmatter coverage
-python check_frontmatter.py .github/prompts/
-```
-
-### Step 10.2: Verify all 9 ACs
-
-| AC  | Criteria                                                        | Status |
-| --- | --------------------------------------------------------------- | ------ |
-| AC1 | Zero prompts only in legacy location                            | ☐      |
-| AC2 | Zero duplicate bodies by SHA-256                                | ☐      |
-| AC3 | All prompts have valid YAML with 4-agent metadata               | ☐      |
-| AC4 | All YAML/JSON valid, `bun run check` passes                     | ☐      |
-| AC5 | All internal references resolve                                 | ☐      |
-| AC6 | Each prompt has non-empty Hermes/Copilot/OpenCode/Codex configs | ☐      |
-| AC7 | `index.md` and `copilot-instructions.md` counts accurate        | ☐      |
-| AC8 | `bun run markdownlint` + `format:check` + `spellcheck` clean    | ☐      |
-| AC9 | Git clean, conventional commits, no backup artifacts            | ☐      |
-
-### Step 10.3: Generate final report
-
-`PROMPT_AUDIT_REPORT.md` with:
-
-- Phase-by-phase stats
-- Before/after metrics
-- Remaining open items
-- Lessons learned
-
-**Estimate:** 1 hour
-
----
-
-## Total Timeline
-
-| Phase                          | Steps     | Estimate         |
-| ------------------------------ | --------- | ---------------- |
-| 0: Discovery                   | —         | COMPLETED        |
-| 1: Frontmatter standardisation | 1.1–1.5   | 4–6 h            |
-| 2: Migration & dedup           | 2.1–2.4   | 2–3 h            |
-| 3: YAML/JSON validation        | 3.1–3.5   | 1–2 h            |
-| 4: Reference integrity         | 4.1–4.4   | 1 h              |
-| 5: Agent metadata enrichment   | 5.1–5.4   | 2–3 h            |
-| 6: Index updates               | 6.1–6.4   | 30 min           |
-| 7: Quality gate                | 7.1–7.4   | 1–2 h            |
-| 8: Git commits                 | 8.1–8.3   | 30 min           |
-| 9: MCP skills/hooks/commands   | 9.1–9.4   | 2–3 h            |
-| 10: Final verification         | 10.1–10.3 | 1 h              |
-| **Total**                      |           | **~16–22 hours** |
+# Comprehensive Audit & Enhancement of .github/prompts/*.md for Multi-Agent Support — PLAN
+
+## Goal
+Execute the spec at `.hermes/plans/2026-08-15_202608_four-agent-prompt-audit-spec.md` — audit, standardize, enhance, and verify all 226 `.github/prompts/*.prompt.md` files for Hermes, Copilot, OpenCode, and Codex.
+
+## Pre-Flight Checks
+- [ ] `bun run check` passes on root (workspace health)
+- [ ] Git working tree clean or changes staged (backup point)
+- [ ] `analyze_prompts.py --all` runs and establishes baseline
+- [ ] Legacy prompts located at `C:\Users\Alexa\AppData\Local\hermes\prompts\` (226 files)
+
+## Phase 0: Baseline & Discovery (Task 0.1–0.5)
+
+### Task 0.1 — Run analyzer baseline
+- **Action**: `cd .github/prompts && python .enhance/analyze_prompts.py --all`
+- **Output**: Baseline counts for YAML validity, section coverage, DRY compliance
+- **Gate**: Analyzer runs without errors
+
+### Task 0.2 — Inventory legacy prompts
+- **Action**: List all 226 files in `C:\Users\Alexa\AppData\Local\hermes\prompts\`, compute SHA-256 body hashes
+- **Output**: `legacy_inventory.json` — filename, hash, size, first-line preview for each
+- **Gate**: 226 files cataloged
+
+### Task 0.3 — Cross-reference filenames
+- **Action**: Compare legacy filenames against SandBox `.github/prompts/*.prompt.md`
+- **Output**: 3 categories: same-name-different-body / same-name-same-body / legacy-only
+- **Gate**: Categorization complete
+
+### Task 0.4 — Read shared templates
+- **Action**: Read `templates/_shared/frontmatter-template.md`, `skills-table-core.md`, `personas.md`, `personality.md`, `rules-core.md`, `best-practices.md`, `verification-checklist.md`
+- **Output**: Understanding of canonical schema and DRY patterns
+- **Gate**: Templates understood
+
+### Task 0.5 — Sample prompt review
+- **Action**: Read 5 prompts with full 4-agent metadata + 5 with no frontmatter + 2 with duplicate frontmatter (comprehensive-prompt-enhancer, debugger-prompt)
+- **Output**: Understanding of current patterns and edge cases
+- **Gate**: Sample reviewed
+
+## Phase 1: Legacy Prompt Migration (AC1) (Task 1.1–1.4)
+
+### Task 1.1 — Build migration script
+- **Action**: Create `migrate_legacy_prompts.py` in `.enhance/`
+- **Details**:
+  - Reads all 226 legacy prompts from `C:\Users\Alexa\AppData\Local\hermes\prompts\`
+  - For each, finds corresponding SandBox prompt by filename
+  - If SandBox prompt exists: compare bodies; if legacy body is a subset/superset, merge; if different topic, create new prompt with disambiguated name
+  - If no SandBox prompt: create new `.prompt.md` with canonical frontmatter
+  - Generates canonical frontmatter per schema (Task 0.4 templates)
+  - **IDEMPOTENT**: safe to re-run; skips files already migrated
+- **Output**: Migrated prompts in `.github/prompts/`
+- **Estimate**: 2-3 hours (script) + 1 hour (review)
+
+### Task 1.2 — Execute migration
+- **Action**: Run `python .enhance/migrate_legacy_prompts.py --apply`
+- **Output**: Migrated files in `.github/prompts/`
+- **Gate**: No errors; files created
+
+### Task 1.3 — Migration review
+- **Action**: Spot-check 10 migrated prompts (5 same-name merges, 5 new files)
+- **Output**: Confirmation that content is correct, frontmatter is valid
+- **Gate**: Spot-check passes
+
+### Task 1.4 — Archive superseded legacy prompts
+- **Action**: Move legacy prompts that were superseded or redundant to `templates/archived/` with justification note
+- **Output**: Archived files with `ARCHIVED.md` justification
+- **Gate**: Zero legacy prompts remain unaccounted for
+
+## Phase 2: Deduplication (AC2) (Task 2.1–2.3)
+
+### Task 2.1 — Compute body hashes
+- **Action**: `python .enhance/analyze_prompts.py --hashes` (or custom script)
+- **Output**: `body_hashes.json` — SHA-256 of normalized body for all 226+ prompts
+- **Gate**: Hashes computed
+
+### Task 2.2 — Identify duplicates
+- **Action**: Group prompts by hash; identify exact duplicate bodies
+- **Output**: `duplicates.json` — groups of files with identical bodies
+- **Gate**: Duplicates identified
+
+### Task 2.3 — Consolidate duplicates
+- **Action**: For each duplicate group:
+  - Keep the file with better frontmatter (more complete, better trigger)
+  - Add cross-reference comment to other files: `<!-- DUPLICATE OF: <file> -->`
+  - `git rm` the duplicate files (or keep as symlink reference)
+- **Output**: Duplicate files removed/consolidated
+- **Gate**: Zero duplicate bodies remain
+
+## Phase 3: Frontmatter Standardization (AC3) (Task 3.1–3.4)
+
+### Task 3.1 — Bulk frontmatter generation script
+- **Action**: Create `update_frontmatter_4agent.py` in `.enhance/`
+- **Details**:
+  - Reads each `.prompt.md`, preserves body, extracts existing valid frontmatter fields
+  - Generates canonical frontmatter per schema
+  - Populates 4-agent metadata using heuristics
+  - Writes updated frontmatter + original body
+  - **IDEMPOTENT**: re-running produces zero changes on already-standardized files
+- **Output**: Script ready to run
+
+### Task 3.2 — Execute bulk standardization
+- **Action**: `python .enhance/update_frontmatter_4agent.py --apply`
+- **Output**: All 226+ prompts have canonical frontmatter with 4-agent metadata
+- **Estimate**: 1-2 hours (script) + verification
+
+### Task 3.3 — Fix special cases
+- **Action**: Manual review and fix for:
+  - `comprehensive-prompt-enhancer.prompt.md` — duplicate frontmatter (use second occurrence)
+  - `debugger-prompt.prompt.md` — Copilot-style frontmatter cleanup
+  - 67 no-frontmatter prompts — verify generated frontmatter is correct
+  - Any prompts where auto-generated metadata is wrong
+- **Output**: Fixed special cases
+- **Estimate**: 1-2 hours
+
+### Task 3.4 — Validate YAML
+- **Action**: `python -c "import yaml; [yaml.safe_load(open(f)) for f in Path('.github/prompts').glob('*.prompt.md')]"`
+- **Output**: Zero YAML parse errors
+- **Gate**: All YAML valid
+
+## Phase 4: Agent Metadata Enrichment (AC6) (Task 4.1–4.3)
+
+### Task 4.1 — Profile assignment audit
+- **Action**: Review all `metadata.hermes.profile` values; fix misclassifications
+- **Details**: Use domain heuristic; ensure profiles are from valid set
+- **Output**: Correct profile assignments
+
+### Task 4.2 — MCP servers audit
+- **Action**: Review `metadata.hermes.mcp_servers` values; add missing servers referenced in prompt content
+- **Details**: Scan prompt body for MCP tool references (e.g., `mcp__github__`, `mcp__filesystem__`)
+- **Output**: Complete MCP server lists
+
+### Task 4.3 — Context size & extensions audit
+- **Action**: Review `context_size` values (small/medium/large) and Copilot `extensions`
+- **Details**: Body length heuristic; add GitHub.copilot for PR-related prompts
+- **Output**: Correct context sizes and extensions
+
+## Phase 5: Reference Integrity (AC5) (Task 5.1–5.3)
+
+### Task 5.1 — Extract all references
+- **Action**: `python verify_references.py` — scan all prompts for file references
+- **Output**: `references.json` — all references found, resolved status
+- **Gate**: References extracted
+
+### Task 5.2 — Fix broken references
+- **Action**: For each broken reference:
+  - If target moved: update path
+  - If target deleted: remove reference or update to valid alternative
+  - If to shared template that doesn't exist: create it or remove reference
+- **Output**: All references resolve
+- **Estimate**: 1-2 hours
+
+### Task 5.3 — Trigger uniqueness check
+- **Action**: Verify no two prompts share the same `trigger:` value
+- **Output**: Trigger uniqueness confirmed
+- **Gate**: All triggers unique
+
+## Phase 6: YAML/JSON Validation (AC4) (Task 6.1–6.4)
+
+### Task 6.1 — Full YAML validation
+- **Action**: `python -c "import yaml; [yaml.safe_load(open(f)) for f in Path('.github/prompts').glob('*.prompt.md')]"`
+- **Output**: Zero parse errors
+- **Gate**: All YAML valid
+
+### Task 6.2 — JSON validation in bodies
+- **Action**: Scan for embedded JSON blocks (```json ... ```) and inline `{...}`; validate each
+- **Output**: Zero JSON parse errors
+- **Gate**: All JSON valid
+
+### Task 6.3 — Fix duplicate frontmatter
+- **Action**: `python .enhance/fix_prompt_artifacts.py --apply` (or manual patch for comprehensive-prompt-enhancer)
+- **Output**: Zero duplicate frontmatter blocks
+- **Gate**: No duplicate frontmatter
+
+### Task 6.4 — Fix duplicate tags format
+- **Action**: Normalize tags like `typescript - prompts - enhancement - library` to proper YAML list `[typescript, prompts, enhancement, library]`
+- **Output**: All tags are proper YAML lists
+- **Gate**: No space-separated tag strings
+
+## Phase 7: Index & Docs Updates (AC7) (Task 7.1–7.3)
+
+### Task 7.1 — Update `index.md`
+- **Action**: Update prompt count, add multi-agent note
+- **Details**: Count prompts after all phases; update "220+" to actual count
+- **Gate**: Count matches
+
+### Task 7.2 — Update `copilot-instructions.md`
+- **Action**: Update prompt library count from "190+" to actual
+- **Gate**: Count matches
+
+### Task 7.3 — Update `_index.md`
+- **Action**: Update generation date, add 4-agent metadata coverage stat
+- **Gate**: Date current
+
+## Phase 8: Quality Gates (AC8) (Task 8.1–8.4)
+
+### Task 8.1 — markdownlint
+- **Action**: `bun run markdownlint`
+- **Output**: Pass or list of errors
+- **Gate**: Zero markdownlint errors (or accept pre-existing known issues)
+
+### Task 8.2 — format:check
+- **Action**: `bun run format:check`
+- **Output**: Pass or list of formatting issues
+- **Gate**: Zero formatting issues
+
+### Task 8.3 — cspell
+- **Action**: `cspell lint "**/*.md"`
+- **Output**: Pass or list of typos
+- **Gate**: Zero cspell errors (or words added to dictionary)
+
+### Task 8.4 — bun run check (full gate)
+- **Action**: `bun run check`
+- **Output**: All 4 checks pass
+- **Gate**: `bun run check` passes on `.github/prompts/`
+
+## Phase 9: Git Cleanup (AC9) (Task 9.1–9.2)
+
+### Task 9.1 — Remove backup artifacts
+- **Action**: `find .github/prompts -name "*.bak" -o -name "*.backup" -o -name "*.old" -o -name "*.orig" | xargs rm -f`
+- **Gate**: Zero backup artifacts
+
+### Task 9.2 — Commit in batches
+- **Action**: Git commits per the commit sequence in spec
+- **Output**: Meaningful conventional commits with `[B]`/`[I]` markers
+- **Gate**: All changes committed; `git status` clean
 
 ## Parallelization Opportunities
 
-- **Phase 1 + Phase 5** can share the same file-read pass — read all prompts once, generate frontmatter + metadata together
-- **Phase 3 + Phase 7** overlap — YAML fixes inform lint fixes
-- **Phase 9** is independent of Phases 1–8 and can run concurrently
+| Wave | Tasks | Notes |
+|------|-------|-------|
+| **Sequential (must be ordered)** | Phase 0 → Phase 1 → Phase 2 → Phase 3 | Migration must happen before dedup; dedup before frontmatter standardization |
+| **Parallel within Phase 3** | Task 3.2 (bulk script) + Task 3.3 (special cases) | Special cases can be fixed while bulk script runs |
+| **Parallel within Phase 4** | Task 4.1 + Task 4.2 + Task 4.3 | Independent audits |
+| **Parallel within Phase 8** | Task 8.1 + Task 8.2 + Task 8.3 | Independent lint checks |
 
-## Risks
+## Time Estimates
 
-| Risk                                                       | Likelihood | Impact | Mitigation                                                  |
-| ---------------------------------------------------------- | ---------- | ------ | ----------------------------------------------------------- |
-| Legacy bodies are genuinely different (not older versions) | Medium     | High   | Phase 2 semantic comparison determines merge vs. new-prompt |
-| Bulk frontmatter script corrupts bodies                    | Low        | High   | Dry-run first, verify sample, git rollback ready            |
-| 67 no-frontmatter prompts lose body content                | Low        | High   | Script preserves body exactly; verify after                 |
-| markdownlint introduces many new errors                    | Medium     | Medium | Fix in batches, prioritize MD001/MD002/MD003                |
-| MCP skill creation duplicates existing skills              | Low        | Low    | Check skills_list before creating                           |
+| Phase | Tasks | Estimated Time |
+|-------|-------|---------------|
+| 0: Baseline & Discovery | 0.1–0.5 | 1 hour |
+| 1: Legacy Migration | 1.1–1.4 | 3-4 hours (script + review) |
+| 2: Deduplication | 2.1–2.3 | 1 hour |
+| 3: Frontmatter Standardization | 3.1–3.4 | 2-3 hours |
+| 4: Agent Metadata Enrichment | 4.1–4.3 | 1-2 hours |
+| 5: Reference Integrity | 5.1–5.3 | 1-2 hours |
+| 6: YAML/JSON Validation | 6.1–6.4 | 1 hour |
+| 7: Index & Docs | 7.1–7.3 | 30 min |
+| 8: Quality Gates | 8.1–8.4 | 1-2 hours (includes fixes) |
+| 9: Git Cleanup | 9.1–9.2 | 30 min |
+| **Total** | | **~14-20 hours** |
+
+## Risks & Mitigations
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| Legacy body merge creates corrupted prompts | Medium | High | Per-file review for prompts with complex bodies; script has --dry-run |
+| 67 no-frontmatter prompts lose body content | Low | High | Script preserves body exactly; verify after |
+| Bulk frontmatter script corrupts files | Low | High | Dry-run first; verify sample; git rollback ready |
+| markdownlint introduces many new errors | Medium | Medium | Fix in batches; prioritize MD001/MD002/MD003 |
+| Trigger uniqueness violations after migration | Low | High | Check triggers after migration; rename if needed |
+| Memory exhaustion during large script operations | Low | Medium | Process in batches; use execute_code for large loops |
+
+## Success Criteria Summary
+
+| AC | Checkpoint |
+|----|-----------|
+| AC1 | `C:\Users\Alexa\AppData\Local\hermes\prompts\` has 0 `.prompt.md` files (all migrated or archived) |
+| AC2 | `body_hashes.json` shows 226+ unique hashes; 0 duplicate groups |
+| AC3 | All `.prompt.md` files parse with canonical schema; `analyze_prompts.py --all` shows 0 CRITICAL |
+| AC4 | `yaml.safe_load` passes all files; `bun run check` passes |
+| AC5 | `verify_references.py` shows 0 broken references |
+| AC6 | Every prompt has non-empty `metadata.hermes`, `metadata.copilot`, `metadata.opencode`, `metadata.codex` |
+| AC7 | `index.md` count = actual file count; `copilot-instructions.md` count = actual count |
+| AC8 | `bun run markdownlint` + `format:check` + `cspell` all pass |
+| AC9 | `git status --short` shows clean; commits have `[B]`/`[I]` markers |
