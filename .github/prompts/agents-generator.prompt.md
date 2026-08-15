@@ -1,49 +1,39 @@
 ---
 name: agents-generator
-title: Agents Generator
-description: Technology-agnostic blueprint generator for creating comprehensive AGENTS.md
-  files that guide GitHub Copilot to produce code consistent with project standards,
-  architecture patterns, and exact technology versions by analyzing existing codebase
-  patterns and avoiding assumptions.
+title: "Agents Generator"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /agents-generator
 toolsets:
-- file
-- terminal
-- web
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- agents
-- ai-assistant
-- architecture
-- frontend
-- generator
-- git
-- ml
-- prompts
-- typescript
-- agents
-- architecture
-- data
-- debugging
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- testing
-- typescript
-- workflow
-trigger: /agents-generator
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /agents-generator"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - language:typescript
+scripts: []
 ---
-
 ## Goal
 
 Technology-agnostic blueprint generator for creating comprehensive AGENTS.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.
@@ -197,3 +187,7 @@ Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
+
+
+
+

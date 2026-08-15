@@ -1,3 +1,26 @@
+﻿---
+name: debugger-prompt
+title: debugger prompt
+description: Prompt for debugger-prompt
+version: "1.0.0"
+tags: []
+trigger: debugger-prompt
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: debugger-prompt
 title: Debugger Prompt
@@ -216,3 +239,4 @@ Same-family prompts:
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
+

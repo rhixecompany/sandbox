@@ -1,3 +1,26 @@
+﻿---
+name: git-multi-repo-orchestration
+title: git multi repo orchestration
+description: Prompt for git-multi-repo-orchestration
+version: "1.0.0"
+tags: []
+trigger: git-multi-repo-orchestration
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
@@ -267,3 +290,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`git-flow-branch-creator.prompt.md`](git-flow-branch-creator.prompt.md)
+

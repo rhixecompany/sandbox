@@ -1,3 +1,26 @@
+﻿---
+name: dev-imp
+title: dev imp
+description: Prompt for dev-imp
+version: "1.0.0"
+tags: []
+trigger: dev-imp
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dev-imp
 title: Development Implementation Manager
@@ -312,3 +335,4 @@ Same-family prompts:
 
 - [`dev-init.prompt.md`](dev-init.prompt.md)
 - [`dev.prompt.md`](dev.prompt.md)
+

@@ -1,39 +1,40 @@
 ---
 name: comicwise-development
-title: ComicWise Development Workflow
-description: Reusable prompt for ComicWise development sessions.
+title: "ComicWise Development Workflow"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /comicwise-development
 toolsets:
-- file
-- terminal
-- web
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- audit
-- nextjs
-- prompts
-- testing
-- typescript
-- workflow
-- architecture
-- audit
-- nextjs
-- prompts
-- testing
-- typescript
-- workflow
-trigger: /comicwise-development
-applyTo: '**/*'
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /comicwise-development"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:dev
+  - domain:devops
+scripts: []
 ---
-
 ## Goal
 
 Reusable prompt for ComicWise development sessions.
@@ -377,3 +378,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+
+

@@ -1,3 +1,26 @@
+﻿---
+name: create-oo-component-documentation
+title: create oo component documentation
+description: Prompt for create-oo-component-documentation
+version: "1.0.0"
+tags: []
+trigger: create-oo-component-documentation
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-oo-component-documentation
 title: Generate Standard OO Component Documentation
@@ -338,3 +361,4 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+

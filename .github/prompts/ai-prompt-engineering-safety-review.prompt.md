@@ -1,43 +1,40 @@
 ---
 name: ai-prompt-engineering-safety-review
-title: AI Prompt Engineering Safety Review
-description: Review a prompt for safety, bias, security, clarity, and effectiveness,
-  then produce a safer improved version.
+title: "AI Prompt Engineering Safety Review"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /ai-prompt-engineering-safety-review
 toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- prompt-engineering
-- systematic-debugging
-- context-map
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- skill:prompt-engineering
-- skill:systematic-debugging
-- skill:context-map
-tags:
-- audit
-- frontend
-- ml
-- prompts
-- security
-- typescript
-- audit
-- frontend
-- ml
-- prompts
-- security
-- typescript
-trigger: /ai-prompt-engineering-safety-review
 metadata:
-  hermes: {}
+  hermes:
+    profile: code-architect
+    mcp_servers:
+      - filesystem
+      - github
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /ai-prompt-engineering-safety-review"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:code-quality
+scripts: []
 ---
-
 ## Goal
 
 Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
@@ -192,3 +189,7 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
+
+
+
+

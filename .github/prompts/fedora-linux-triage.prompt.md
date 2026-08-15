@@ -1,3 +1,26 @@
+﻿---
+name: fedora-linux-triage
+title: fedora linux triage
+description: Prompt for fedora-linux-triage
+version: "1.0.0"
+tags: []
+trigger: fedora-linux-triage
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: fedora-linux-triage
 title: Fedora Linux Triage
@@ -209,3 +232,4 @@ Same-family prompts:
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
+

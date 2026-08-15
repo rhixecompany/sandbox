@@ -1,3 +1,26 @@
+﻿---
+name: containerize-aspnetcore
+title: containerize aspnetcore
+description: Prompt for containerize-aspnetcore
+version: "1.0.0"
+tags: []
+trigger: containerize-aspnetcore
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: containerize-aspnetcore
 title: ASP.NET Core Docker Containerization Prompt
@@ -257,3 +280,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`containerize-aspnet-framework.prompt.md`](containerize-aspnet-framework.prompt.md)
+

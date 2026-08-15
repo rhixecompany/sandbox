@@ -1,3 +1,26 @@
+﻿---
+name: create-implementation-plan
+title: create implementation plan
+description: Prompt for create-implementation-plan
+version: "1.0.0"
+tags: []
+trigger: create-implementation-plan
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-implementation-plan
 title: Create Implementation Plan
@@ -295,3 +318,4 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+

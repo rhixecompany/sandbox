@@ -1,3 +1,26 @@
+﻿---
+name: dotnet-upgrade
+title: dotnet upgrade
+description: Prompt for dotnet-upgrade
+version: "1.0.0"
+tags: []
+trigger: dotnet-upgrade
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dotnet-upgrade
 title: .Net Upgrade Analysis Prompts
@@ -185,3 +208,4 @@ Same-family prompts:
 
 - [`dotnet-best-practices.prompt.md`](dotnet-best-practices.prompt.md)
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
+

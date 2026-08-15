@@ -1,3 +1,26 @@
+﻿---
+name: comment-code-generate-a-tutorial
+title: comment code generate a tutorial
+description: Prompt for comment-code-generate-a-tutorial
+version: "1.0.0"
+tags: []
+trigger: comment-code-generate-a-tutorial
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: comment-code-generate-a-tutorial
 title: Comment Code Generate A Tutorial
@@ -192,3 +215,4 @@ Same-family prompts:
 - [`postgresql-code-review.prompt.md`](postgresql-code-review.prompt.md)
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`sql-code-review.prompt.md`](sql-code-review.prompt.md)
+

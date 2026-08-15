@@ -1,3 +1,26 @@
+﻿---
+name: dotnet-best-practices
+title: dotnet best practices
+description: Prompt for dotnet-best-practices
+version: "1.0.0"
+tags: []
+trigger: dotnet-best-practices
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dotnet-best-practices
 title: .NET/C# Best Practices
@@ -235,3 +258,4 @@ Same-family prompts:
 
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
+

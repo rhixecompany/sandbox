@@ -1,47 +1,39 @@
 ---
 name: boost-prompt
-title: Boost Prompt
-description: 'Interactive prompt refinement workflow: interrogates scope, deliverables,
-  and constraints, then copies final markdown to clipboard using Joyride.'
+title: "Boost Prompt"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /boost-prompt
 toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- writing-skills
-- writing-plans
-- joyride
-- context-map
-- prompt-engineering
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- skill:writing-skills
-- skill:writing-plans
-- skill:joyride
-- skill:context-map
-- skill:prompt-engineering
-tags:
-- frontend
-- markdown
-- ml
-- prompts
-- typescript
-- workflow
-- frontend
-- markdown
-- ml
-- prompts
-- typescript
-- workflow
-trigger: /boost-prompt
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - github
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /boost-prompt"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+scripts: []
 ---
-
 ## Goal
 
 Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
@@ -201,3 +193,7 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
+
+
+
+

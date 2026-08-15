@@ -1,3 +1,26 @@
+﻿---
+name: dataverse-python-production-code
+title: dataverse python production code
+description: Prompt for dataverse-python-production-code
+version: "1.0.0"
+tags: []
+trigger: dataverse-python-production-code
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dataverse-python-production-code
 title: Dataverse Python   Production Code Generator
@@ -220,3 +243,4 @@ Same-family prompts:
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
+

@@ -1,3 +1,26 @@
+﻿---
+name: documentation-writer
+title: documentation writer
+description: Prompt for documentation-writer
+version: "1.0.0"
+tags: []
+trigger: documentation-writer
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: documentation-writer
 title: Diátaxis Documentation Expert
@@ -210,3 +233,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`documentation.prompt.md`](documentation.prompt.md)
+

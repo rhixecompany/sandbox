@@ -1,65 +1,41 @@
 ---
 name: bash-scripts-fix
-title: Bash Scripts Modernization and Consolidation
-description: Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript
-  scripts across the workspace.
+title: "Bash Scripts Modernization and Consolidation"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /bash-scripts-fix
 toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- brainstorming
-- plans-and-specs
-- dispatching-parallel-agents
-- subagent-driven-development
-- systematic-debugging
-- simplify
-- acpx-executor
-- script-orchestration
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- prompt:context-map.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:dispatching-parallel-agents
-- skill:subagent-driven-development
-- skill:systematic-debugging
-- skill:simplify
-- skill:acpx-executor
-- skill:script-orchestration
-- tool:terminal
-- tool:search_files
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-tags:
-- audit
-- fix
-- migration
-- prompts
-- typescript
-- workflow
-- audit
-- fix
-- migration
-- prompts
-- typescript
-- workflow
-trigger: /bash-scripts-fix
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /bash-scripts-fix"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:debug
+  - language:bash
+  - language:typescript
+scripts: []
 ---
-
 ## Goal
 
 Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
@@ -225,3 +201,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+
+

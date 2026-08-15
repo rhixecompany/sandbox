@@ -1,46 +1,40 @@
 ---
 name: agents-fix
-title: Agents Sync and Deduplication
-description: Sync and deduplicate agent definitions across Hermes, and Copilot with
-  dependency mapping and schema validation.
+title: "Agents Sync and Deduplication"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets: null
-scripts: []
-skills: null
+trigger: /agents-fix
+toolsets:
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- prompt:context-map.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:dispatching-parallel-agents
-- skill:subagent-driven-development
-- skill:systematic-debugging
-- skill:simplify
-- skill:acpx-executor
-- tool:terminal
-- tool:search_files
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-tags:
-- agents
-- ai-assistant
-- configuration
-- fix
-- ml
-- prompts
-- typescript
-- workflow
-trigger: /agents-fix
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /agents-fix"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:debug
+  - language:typescript
+scripts: []
 ---
-
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
@@ -196,3 +190,7 @@ Same-family prompts:
 
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
+
+
+
+

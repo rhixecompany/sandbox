@@ -1,3 +1,26 @@
+﻿---
+name: gen-specs-as-issues
+title: gen specs as issues
+description: Prompt for gen-specs-as-issues
+version: "1.0.0"
+tags: []
+trigger: gen-specs-as-issues
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: gen-specs-as-issues
 title: 'Product Manager Assistant: Feature Identification and Specification'
@@ -241,3 +264,4 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+

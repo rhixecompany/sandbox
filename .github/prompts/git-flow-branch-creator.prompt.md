@@ -1,3 +1,26 @@
+﻿---
+name: git-flow-branch-creator
+title: git flow branch creator
+description: Prompt for git-flow-branch-creator
+version: "1.0.0"
+tags: []
+trigger: git-flow-branch-creator
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: git-flow-branch-creator
 title: Git Flow Branch Creator
@@ -184,3 +207,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`git-multi-repo-orchestration.prompt.md`](git-multi-repo-orchestration.prompt.md)
+

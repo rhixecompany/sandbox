@@ -1,42 +1,40 @@
 ---
 name: architecture-blueprint-generator
-title: Comprehensive Project Architecture Blueprint Generator
-description: Comprehensive project architecture blueprint generator that analyzes
-  codebases to create detailed architectural documentation. Automatically detects
-  technology stacks and architectural patterns, generates visual diagrams, documents
-  implementation patterns, and provides extensible blueprints for maintaining architectural
-  consistency and guiding new development.
+title: "Comprehensive Project Architecture Blueprint Generator"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /architecture-blueprint-generator
 toolsets:
-- file
-- terminal
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- architecture
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- typescript
-- architecture
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- typescript
-trigger: /architecture-blueprint-generator
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - github
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /architecture-blueprint-generator"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:architecture
+scripts: []
 ---
-
 ## Goal
 
 Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
@@ -202,3 +200,7 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`readme-blueprint-generator.prompt.md`](readme-blueprint-generator.prompt.md)
+
+
+
+

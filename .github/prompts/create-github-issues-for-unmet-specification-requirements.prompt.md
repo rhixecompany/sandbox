@@ -1,3 +1,26 @@
+﻿---
+name: create-github-issues-for-unmet-specification-requirements
+title: create github issues for unmet specification requirements
+description: Prompt for create-github-issues-for-unmet-specification-requirements
+version: "1.0.0"
+tags: []
+trigger: create-github-issues-for-unmet-specification-requirements
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-github-issues-for-unmet-specification-requirements
 title: Create GitHub Issues for Unmet Specification Requirements
@@ -223,3 +246,4 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+

@@ -1,3 +1,26 @@
+﻿---
+name: csharp-mcp-server-generator
+title: csharp mcp server generator
+description: Prompt for csharp-mcp-server-generator
+version: "1.0.0"
+tags: []
+trigger: csharp-mcp-server-generator
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: csharp-mcp-server-generator
 title: Generate C# MCP Server
@@ -224,3 +247,4 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+

@@ -1,3 +1,26 @@
+﻿---
+name: comprehensive-prompt-enhancer
+title: comprehensive prompt enhancer
+description: Prompt for comprehensive-prompt-enhancer
+version: "1.0.0"
+tags: []
+trigger: comprehensive-prompt-enhancer
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 trigger: /comprehensive-prompt-enhancer
 name: comprehensive-prompt-enhancer
@@ -266,3 +289,4 @@ Same-family prompts:
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
+

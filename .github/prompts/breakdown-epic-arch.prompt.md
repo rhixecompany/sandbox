@@ -1,37 +1,40 @@
 ---
 name: breakdown-epic-arch
-title: Epic Architecture Specification Prompt
-description: Prompt for creating the high-level technical architecture for an Epic,
-  based on a Product Requirements Document.
+title: "Epic Architecture Specification Prompt"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /breakdown-epic-arch
 toolsets:
-- file
-- terminal
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- architecture
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- architecture
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-trigger: /breakdown-epic-arch
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /breakdown-epic-arch"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:architecture
+  - domain:planning
+scripts: []
 ---
-
 ## Goal
 
 Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document.
@@ -210,3 +213,7 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
+
+
+
+

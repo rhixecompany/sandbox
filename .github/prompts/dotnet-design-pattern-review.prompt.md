@@ -1,3 +1,26 @@
+﻿---
+name: dotnet-design-pattern-review
+title: dotnet design pattern review
+description: Prompt for dotnet-design-pattern-review
+version: "1.0.0"
+tags: []
+trigger: dotnet-design-pattern-review
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dotnet-design-pattern-review
 title: .NET/C# Design Pattern Review
@@ -201,3 +224,4 @@ Same-family prompts:
 
 - [`dotnet-best-practices.prompt.md`](dotnet-best-practices.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
+

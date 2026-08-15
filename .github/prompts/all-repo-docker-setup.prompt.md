@@ -1,37 +1,42 @@
 ---
 name: all-repo-docker-setup
-title: All Repository Docker Setup and Cleanup
-description: For each repository in the rhixecompany org, clone to ./projects, build
-  or update Dockerfiles/images, run security scans, create cleanup plans, fix container
-  errors, and clean up unused Docker resources.
+title: "All Repository Docker Setup and Cleanup"
+description: |
+  No description
 version: 1.1.0
 license: MIT
 author: Hermes Agent
-tags:
-- debugging
-- docker
-- fix
-- frontend
-- ml
-- performance
-- prompts
-- security
-- typescript
-toolsets: null
 trigger: /all-repo-docker-setup
-skills: null
-dependencies:
-- skill:docker-management
-- skill:disk-space-cleanup
+toolsets:
+  - file
+  - terminal
+skills: []
+dependencies: []
+formatter: default
+plan: null
 metadata:
   hermes:
-    source: all-repo-docker-setup.prompt.txt
-    converted: '2026-08-08'
+    profile: alexa
+    mcp_servers:
+      - filesystem
+      - github
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /all-repo-docker-setup"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:infra
+  - domain:setup
+  - tool:docker
 scripts: []
-formatter: default
-plan: ''
 ---
-
 ## Goal
 
 For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.
@@ -166,3 +171,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+
+

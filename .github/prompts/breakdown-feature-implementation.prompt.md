@@ -1,35 +1,40 @@
 ---
 name: breakdown-feature-implementation
-title: Feature Implementation Plan Prompt
-description: Prompt for creating detailed feature implementation plans, following
-  Epoch monorepo structure.
+title: "Feature Implementation Plan Prompt"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /breakdown-feature-implementation
 toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- subagent-driven-development
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- skill:subagent-driven-development
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /breakdown-feature-implementation
 metadata:
-  hermes: {}
+  hermes:
+    profile: code-architect
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /breakdown-feature-implementation"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:dev
+  - domain:planning
+scripts: []
 ---
-
 ## Goal
 
 Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.
@@ -197,3 +202,7 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
+
+
+
+

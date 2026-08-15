@@ -1,3 +1,26 @@
+﻿---
+name: csharp-xunit
+title: csharp xunit
+description: Prompt for csharp-xunit
+version: "1.0.0"
+tags: []
+trigger: csharp-xunit
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: csharp-xunit
 title: XUnit Best Practices
@@ -234,3 +257,4 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
+
