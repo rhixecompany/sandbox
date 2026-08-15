@@ -1,0 +1,373 @@
+From e93bc3337c0314702268b421baf30552c6894b28 Mon Sep 17 00:00:00 2001
+From: rhixecompany <rhixecompany@gmail.com>
+Date: Sat, 15 Aug 2026 16:44:32 +0100
+Subject: [PATCH] chore(session): auto-commit session 20260815_155304_ab36b9 at
+ 2026-08-15T15:44:31Z
+
+---
+ .github/hooks/generate_session_report.py | 155 +++++++++++++++++++++++
+ .github/hooks/session_end_capture.py     |  23 +++-
+ SESSION_REPORT.md                        | 117 ++++++-----------
+ 3 files changed, 212 insertions(+), 83 deletions(-)
+ create mode 100644 .github/hooks/generate_session_report.py
+
+diff --git a/.github/hooks/generate_session_report.py b/.github/hooks/generate_session_report.py
+new file mode 100644
+index 00000000..a87c0c15
+--- /dev/null
++++ b/.github/hooks/generate_session_report.py
+@@ -0,0 +1,155 @@
++
++#!/usr/bin/env python3
++"""generate_session_report.py — Generates a human-readable SESSION_REPORT.md from session end capture artifacts.
++
++Consumes the JSON artifact produced by session_end_capture.py and produces a
++markdown report, intended to be consumed at the start of the next session.
++"""
++
++from __future__ import annotations
++
++import json
++import os
++import sys
++from datetime import datetime, timezone
++from pathlib import Path
++from typing import Any
++
++# Resolve paths
++_HOOK_DIR = Path(__file__).resolve().parent
++_HERMES_HOME = Path(
++    os.environ.get("HERMES_HOME", "C:/Users/Alexa/AppData/Local/hermes")
++)
++_LOG_DIR = _HERMES_HOME / "logs" / "sessions"
++_REPORT_PATH = Path("C:/Users/Alexa/Desktop/SandBox/SESSION_REPORT.md")
++
++# --- Helpers ---
++def _fmt_ts(iso_timestamp: str) -> str:
++    if not iso_timestamp:
++        return ""
++    try:
++        dt = datetime.fromisoformat(iso_timestamp.replace("Z", "+00:00"))
++        return dt.strftime("%Y-%m-%d %H:%M:%S")
++    except ValueError:
++        return iso_timestamp
++
++def _truncate_list(items: list[str], limit: int = 5) -> list[str]:
++    return items[:limit] + [f"[+{len(items) - limit} more]"] if len(items) > limit else items
++
++# --- Report Generation ---
++def generate_report_content(capture_data: dict) -> str:
++    session_info = capture_data.get("session", {})
++    tools = capture_data.get("tools", {})
++    skills = capture_data.get("skills", {})
++    prompts = capture_data.get("prompts", {})
++    errors = capture_data.get("errors", {})
++    changelog = capture_data.get("changelog", [])
++
++    report_lines = []
++    report_lines.append("# SESSION_REPORT.md")
++    report_lines.append("")
++    report_lines.append(f"> Generated: {capture_data.get('captured_at', '')} | cwd: `{session_info.get('cwd', '')}`")
++    report_lines.append("")
++    report_lines.append("## Last Session Summary")
++    report_lines.append("")
++    report_lines.append("| Field      | Value                             |")
++    report_lines.append("| ---------- | --------------------------------- |")
++    report_lines.append(f"| Session ID | {capture_data.get('session_id', '')}            |")
++    report_lines.append(f"| Title      | {session_info.get('title', prompts.get('first_user_message', ''))} |")
++    report_lines.append(f"| When       | {_fmt_ts(session_info.get('started_at', ''))}               |")
++    report_lines.append(f"| Model      | {session_info.get('model', '')}            |")
++    report_lines.append(f"| Source     | {session_info.get('source', '')}                      |")
++    report_lines.append(f"| Status     | {capture_data.get('status', 'unknown')} |")
++    dur = capture_data.get('duration_seconds')
++    dur_str = f"{dur}s" if dur is not None else "N/A"
++    turns = capture_data.get('turns')
++    turns_str = str(turns) if turns is not None else "N/A"
++    report_lines.append(f"| Duration   | {dur_str} |")
++    report_lines.append(f"| Turns      | {turns_str} |")
++    report_lines.append("")
++
++    if tools:
++        report_lines.append("## Tools Used")
++        report_lines.append("")
++        report_lines.append("| Tool | Calls | Purpose |")
++        report_lines.append("| --- | --- | --- |")
++        for tool, count in tools.items():
++            report_lines.append(f"| {tool} | {count} | |")
++        report_lines.append("")
++
++    if skills:
++        report_lines.append("## Skills Loaded")
++        report_lines.append("")
++        report_lines.append("| Skill | Trigger |")
++        report_lines.append("| --- | --- |")
++        for skill, count in skills.items():
++            report_lines.append(f"| {skill} | Loaded ({count} times) |")
++        report_lines.append("")
++
++    report_lines.append("## Key Insights & Corrections")
++    report_lines.append("")
++    # Placeholder for insights, will be filled by agent or derived later
++    report_lines.append("- Session audit performed; roll forward only verified items.")
++    dur = capture_data.get('duration_seconds')
++    dur_str = f"{dur}s" if dur is not None else "N/A"
++    turns = capture_data.get('turns')
++    turns_str = str(turns) if turns is not None else "N/A"
++    report_lines.append(f"- Status: {capture_data.get('status', 'unknown')}, Duration: {dur_str}, Turns: {turns_str}")
++    first_prompt = prompts.get("first_user_message", "")
++    # Truncate first prompt to 220 chars
++    if len(first_prompt) > 220:
++        first_prompt = first_prompt[:220] + "…"
++    report_lines.append(f'- First prompt: "{first_prompt}"')
++    if errors.get('finish_reasons'):
++        report_lines.append(f"- Finish reasons: {', '.join(f'{k}: {v}' for k, v in errors['finish_reasons'].items())}")
++    if errors.get('error_tools'):
++        report_lines.append(f"- Error tools: {', '.join(f'{k}: {v}' for k, v in errors['error_tools'].items())}")
++    report_lines.append("")
++
++    if changelog:
++        report_lines.append("## Session Changelog")
++        report_lines.append("")
++        report_lines.append("| File | Action |")
++        report_lines.append("| --- | --- |")
++        display_changelog = changelog
++        if len(changelog) > 10: # Only display first 10 for brevity in report
++            display_changelog = changelog[:10]
++
++        for entry in display_changelog:
++            report_lines.append(f"| {entry.get('path', '')} | {entry.get('action', '')} |")
++        
++        if len(changelog) > 10:
++            report_lines.append(f"| [+{len(changelog) - 10} more files] | Full list in <session_id>.end.json |")
++        report_lines.append("")
++
++
++    return "\n".join(report_lines)
++
++# --- Entry Point ---
++def main() -> None:
++    if len(sys.argv) < 2:
++        print("Usage: generate_session_report.py <session_id>")
++        sys.exit(1)
++
++    session_id = sys.argv[1]
++    capture_file = _LOG_DIR / f"{session_id}.end.json"
++
++    if not capture_file.exists():
++        print(f"Error: Session end capture file not found at {capture_file}")
++        sys.exit(1)
++
++    try:
++        with open(capture_file, "r", encoding="utf-8") as f:
++            capture_data = json.load(f)
++        report_content = generate_report_content(capture_data)
++        _REPORT_PATH.write_text(report_content, encoding="utf-8")
++        print(f"SESSION_REPORT.md generated for session {session_id} at {_REPORT_PATH}")
++    except json.JSONDecodeError as e:
++        print(f"Error decoding JSON from {capture_file}: {e}")
++        sys.exit(1)
++    except Exception as e:
++        print(f"An unexpected error occurred: {e}")
++        sys.exit(1)
++
++if __name__ == "__main__":
++    main()
+diff --git a/.github/hooks/session_end_capture.py b/.github/hooks/session_end_capture.py
+index a1b73c8a..5b4656ef 100644
+--- a/.github/hooks/session_end_capture.py
++++ b/.github/hooks/session_end_capture.py
+@@ -322,26 +322,39 @@ def build_capture(session_id: str, payload: dict, end_iso: str) -> dict:
+ 
+     cwd = json_get(payload, "cwd") or json_get(payload, "working_dir") or row.get("cwd", "")
+     started_at = row.get("started_at")
++    ended_at = row.get("ended_at")
+     changelog = capture_changelog(cwd, started_at)
+ 
+     status = _resolve_status(payload)
+-    duration_raw = json_get(payload, "duration_seconds", "")
+-    turns_raw = json_get(payload, "turns", "")
++    
++    # Compute duration from session row timestamps (epoch floats)
++    duration_seconds = None
++    if started_at is not None and ended_at is not None:
++        try:
++            duration_seconds = int(float(ended_at) - float(started_at))
++        except (ValueError, TypeError):
++            pass
++    
++    # Compute turns from message count / 2 (rough estimate: user+assistant pairs)
++    turns = None
++    msg_count = row.get("message_count")
++    if msg_count is not None and isinstance(msg_count, int):
++        turns = max(1, msg_count // 2)
+ 
+     return {
+         "event": "session_end_capture",
+         "session_id": session_id,
+         "captured_at": end_iso,
+         "status": status,
+-        "duration_seconds": int(duration_raw) if str(duration_raw).isdigit() else None,
+-        "turns": int(turns_raw) if str(turns_raw).isdigit() else None,
++        "duration_seconds": duration_seconds,
++        "turns": turns,
+         "session": {
+             "title": row.get("title") or prompts["first_user_message"] or "",
+             "source": row.get("source", ""),
+             "user_id": row.get("user_id", ""),
+             "model": row.get("model", ""),
+             "started_at": _fmt_ts(started_at),
+-            "ended_at": _fmt_ts(row.get("ended_at")) or end_iso,
++            "ended_at": _fmt_ts(ended_at) or end_iso,
+             "end_reason": row.get("end_reason", ""),
+             "message_count": row.get("message_count"),
+             "tool_call_count": row.get("tool_call_count"),
+diff --git a/SESSION_REPORT.md b/SESSION_REPORT.md
+index 322dc9f8..d793a38e 100644
+--- a/SESSION_REPORT.md
++++ b/SESSION_REPORT.md
+@@ -1,103 +1,64 @@
+ # SESSION_REPORT.md
+ 
+-> Generated: 2026-08-12T03:15+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
++> Generated: 2026-08-15T15:32+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+ 
+ ## Last Session Summary
+ 
+-| Field      | Value                             |
+-| ---------- | --------------------------------- |
+-| Session ID | 20260812_013142_132880            |
+-| Title      | /executing-plans — fully execute… |
+-| When       | 2026-08-12 00:32:24               |
+-| Model      | deepseek-v4-flash-free            |
+-| Source     | state.db:cli                      |
++| Field | Value |
++| --- | --- |
++| Session ID | 20260815_155304_ab36b9 |
++| Title | ```json #4 |
++| When | 2026-08-15 14:57 |
++| Model | nemotron-3-ultra-free |
++| Source | state.db:cli |
+ 
+ ## Tools Used
+ 
+-| Tool                                  | Calls | Purpose |
+-| ------------------------------------- | ----- | ------- |
+-| terminal                              | 709   |         |
+-| execute_code                          | 350   |         |
+-| patch                                 | 171   |         |
+-| read_file                             | 93    |         |
+-| write_file                            | 48    |         |
+-| todo                                  | 11    |         |
+-| skill_manage                          | 6     |         |
+-| mcp__python_quality__python_typecheck | 3     |         |
+-| tool_describe                         | 2     |         |
+-| skill_view                            | 2     |         |
+-| memory                                | 2     |         |
+-| tool_search                           | 1     |         |
+-| tool_call                             | 1     |         |
++| Tool | Calls | Purpose |
++| --- | --- | --- |
++| read_file | 21 |  |
++| terminal | 12 |  |
++| patch | 9 |  |
++| search_files | 6 |  |
++| write_file | 1 |  |
++| skill_view | 1 |  |
+ 
+ ## Skills Loaded
+ 
+-| Skill                          | Trigger |
+-| ------------------------------ | ------- |
+-| executing-plans                | Loaded  |
+-| using-superpowers              | Loaded  |
+-| user-communication-preferences | Loaded  |
+-| hermes-profiles                | Loaded  |
+-| validate-memories              | Loaded  |
+-| create-tldr-page               | Loaded  |
+-| session-audit-report           | Loaded  |
+-| profile-maintenance            | Loaded  |
++| Skill | Trigger |
++| --- | --- |
++| using-superpowers | Loaded |
++| user-communication-preferences | Loaded |
++| AppData | Loaded |
++| session-audit-report | Loaded |
++| hermes-profiles | Loaded |
++| validate-memories | Loaded |
++| execute-all-prompts | Loaded |
++| hermes | Loaded |
+ 
+ ## Key Insights & Corrections
+ 
+-1. Session ended status=completed duration=?s turns=?
+-2. MCP path unavailable; used local session sources.
+-3. MCP session_search oldest fallback failed: 'NoneType' object is not callable
+-4. State-db source: 153 messages, 79 tool calls, profile=default
+-5. Session goal: [Your active task list was preserved across context compression] - [>] p2. Phase 2: Class B — glued headings (118 hits) (in_progress) - [ ] p3. Phase 3: Class C
+-6. Source: session_end_capture (13 tool kinds, 8 slash-skills, 340 files changed)
+-7. Session audit performed; roll forward only verified items.
++1. MCP path unavailable; used local session sources.
++2. MCP session_search oldest fallback failed: 'NoneType' object is not callable
++3. State-db source: 99 messages, 51 tool calls, profile=default
++4. Session audit performed; roll forward only verified items.
+ 
+ ## Open Items
+ 
+-| Item           | Status  |
+-| -------------- | ------- |
++| Item | Status |
++| --- | --- |
+ | Session replay | Pending |
+ 
+ ## Errors Resolved
+ 
+-| Error                 | Fix                         |
+-| --------------------- | --------------------------- |
++| Error | Fix |
++| --- | --- |
+ | Placeholder generator | Delegated to full generator |
+ 
+ ## Session Changelog
+ 
+-| File                                                          | Action                                |
+-| ------------------------------------------------------------- | ------------------------------------- |
+-| 20260812_013142_132880                                        | Selected as latest MCP session source |
+-| .github/hooks/session-logger/hook.py                          | committed                             |
+-| .github/hooks/session-logger/hooks.json                       | committed                             |
+-| .github/hooks/session_end_capture.py                          | committed                             |
+-| .omo/run-continuation/ses_00c85ba95ffe07NM4Ir7StZcK1.json     | committed                             |
+-| SESSION_REPORT.md                                             | committed                             |
+-| .enhance_tmp_lint/comicwise-development.prompt.md             | committed                             |
+-| .enhance_tmp_lint/create-llms.prompt.md                       | committed                             |
+-| .enhance_tmp_lint/create-oo-component-documentation.prompt.md | committed                             |
+-| .enhance_tmp_lint/java-mcp-server-generator.prompt.md         | committed                             |
+-| .enhance_tmp_lint/memory-merger.prompt.md                     | committed                             |
+-| .enhance_tmp_lint/php-mcp-server-generator.prompt.md          | committed                             |
+-| .enhance_tmp_lint/skills-fix.prompt.md                        | committed                             |
+-| .enhance_tmp_lint/swift-mcp-server-generator.prompt.md        | committed                             |
+-| .enhance_tmp_lint/tldr-prompt.prompt.md                       | committed                             |
+-| .enhance_tmp_lint/update-avm-modules-in-bicep.prompt.md       | committed                             |
+-| .github/prompts/.enhance/enhance_sections.py                  | committed                             |
+-| .github/prompts/.enhance/fix_class_e.py                       | committed                             |
+-| .github/prompts/.enhance/fix_frontmatter_plan.py              | committed                             |
+-| .github/prompts/.enhance/verify_phase3.py                     | committed                             |
+-| .github/prompts/Initial.prompt.md                             | committed                             |
+-| .github/prompts/add-educational-comments.prompt.md            | committed                             |
+-| .github/prompts/agents-fix.prompt.md                          | committed                             |
+-| .github/prompts/agents-generator.prompt.md                    | committed                             |
+-| .github/prompts/agents-system-prompt-context-fix.prompt.md    | committed                             |
+-| .github/prompts/ai-prompt-engineering-safety-review.prompt.md | committed                             |
+-| .github/prompts/all-repo-docker-setup.prompt.md               | committed                             |
+-| .github/prompts/apple-appstore-reviewer.prompt.md             | committed                             |
+-| .github/prompts/arch-linux-triage.prompt.md                   | committed                             |
+-| .github/prompts/architecture-blueprint-generator.prompt.md    | committed                             |
+-| .github/prompts/aspnet-minimal-api-openapi.prompt.md          | committed                             |
+-| [+310 more files]                                             | Full list in <session_id>.end.json    |
++| File | Action |
++| --- | --- |
++| 20260815_155304_ab36b9 | Selected as latest MCP session source |
++| C:\Users\Alexa\Desktop\SandBox | Session working directory |
++
+-- 
+2.55.0.windows.3
+
