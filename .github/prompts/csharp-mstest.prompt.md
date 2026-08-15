@@ -1,40 +1,37 @@
-﻿---
-name: csharp-mstest
-title: csharp mstest
-description: Prompt for csharp-mstest
-version: "1.0.0"
-tags: [backend, csharp, mstest, qa, testing]
-trigger: csharp-mstest
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: csharp-mstest
 title: MSTest Best Practices (MSTest 3.x/4.x)
-description: Get best practices for MSTest 3.x/4.x unit testing, including modern
-  assertion APIs and data-driven tests.
+description: Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven
+  tests.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /csharp-mstest
 toolsets:
 - web
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-mstest
+    flags: {}
+    help: Get best practices for MSTest 3.x/4.x unit testing, including modern assertio...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - api
 - csharp
 - data
@@ -42,47 +39,7 @@ tags:
 - prompts
 - testing
 - typescript
-- api
-- csharp
-- dotnet
-- prompts
-- testing
-- typescript
-trigger: /csharp-mstest
-dependencies: []
-metadata:
-  hermes: {}
-name: csharp-mstest
-title: MSTest Best Practices (MSTest 3.x/4.x)
-description: Get best practices for MSTest 3.x/4.x unit testing, including modern
-  assertion APIs and data-driven tests.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- api
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-- api
-- csharp
-- dotnet
-- prompts
-- testing
-- typescript
-trigger: /csharp-mstest
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -300,4 +257,3 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-

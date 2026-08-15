@@ -1,39 +1,42 @@
 ---
 name: boost-prompt
-title: "Boost Prompt"
-description: |
-  No description
+title: Boost Prompt
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /boost-prompt
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - github
-      - terminal
+    - filesystem
+    - github
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /boost-prompt"
+    command: opencode /boost-prompt
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
+- agent-type:hermes
+- complexity:intermediate
 scripts: []
----
 ## Goal
 
 Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
@@ -193,7 +196,5 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-
-
 
 

@@ -1,25 +1,3 @@
-﻿---
-name: debugger-prompt
-title: debugger prompt
-description: Prompt for debugger-prompt
-version: "1.0.0"
-tags: [coding, debugging, development, prompt, tool]
-trigger: debugger-prompt
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: debugger-prompt
 title: Debugger Prompt
@@ -27,30 +5,36 @@ description: Use when needing to debugger prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /debugger-prompt
 toolsets:
 - web
 - terminal
 - file
 - code_execution
-scripts: []
 skills: []
+dependencies: []
 formatter: default
 plan: plans/debugger.md
-dependencies: []
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /debugger-prompt
+    flags: {}
+    help: Use when needing to debugger prompt.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- agents
-- ai-assistant
-- backend
-- data
-- database
-- debugging
-- fix
-- frontend
-- ml
-- nextjs
-- prompts
-- sql
-- typescript
+- agent-type:hermes
 - agents
 - ai-assistant
 - backend
@@ -67,58 +51,7 @@ tags:
 - errors
 - warnings
 - linting
-trigger: /debugger-prompt
-metadata:
-  hermes: {}
-name: debugger-prompt
-title: Debugger Prompt
-description: Use when needing to debugger prompt.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
-- terminal
-- file
-- code_execution
 scripts: []
-skills: []
-formatter: default
-plan: plans/debugger.md
-dependencies: []
-tags:
-- agents
-- ai-assistant
-- backend
-- data
-- database
-- debugging
-- fix
-- frontend
-- ml
-- nextjs
-- prompts
-- sql
-- typescript
-- agents
-- ai-assistant
-- backend
-- data
-- database
-- debugging
-- fix
-- frontend
-- ml
-- nextjs
-- prompts
-- sql
-- typescript
-- errors
-- warnings
-- linting
-trigger: /debugger-prompt
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -287,4 +220,3 @@ Same-family prompts:
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-

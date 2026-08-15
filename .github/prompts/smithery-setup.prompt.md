@@ -1,13 +1,39 @@
 ---
 name: smithery-setup
 title: Smithery MCP Setup — Comprehensive Reference & Prompt
-description: Converted and consolidated Smithery documentation (Connect to MCPs, Uplink,
-  Token Scoping, Deep Linking, Vercel AI SDK) into a structured reference and agent
-  prompt for setting up and managing Smithery MCP connections.
+description: Converted and consolidated Smithery documentation (Connect to MCPs, Uplink, Token Scoping,
+  Deep Linking, Vercel AI SDK) into a structured reference and agent prompt for setting up and managing
+  Smithery MCP connections.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
+trigger: /smithery-setup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /smithery-setup
+    flags: {}
+    help: Converted and consolidated Smithery documentation (Connect to MCPs, Uplink, T...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - api
 - backend
@@ -19,18 +45,7 @@ tags:
 - ml
 - prompts
 - typescript
-toolsets: null
-trigger: /smithery-setup
-skills: []
-dependencies: []
-metadata:
-  hermes:
-    source: smithery-setup.prompt.txt
-    converted: '2026-08-08'
 scripts: []
-formatter: default
-plan: ''
----
 
 <!-- markdownlint-disable MD024 -->
 ## Goal

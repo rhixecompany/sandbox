@@ -1,40 +1,43 @@
 ---
 name: architecture-blueprint-generator
-title: "Comprehensive Project Architecture Blueprint Generator"
-description: |
-  No description
+title: Comprehensive Project Architecture Blueprint Generator
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /architecture-blueprint-generator
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - github
-      - terminal
+    - filesystem
+    - github
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /architecture-blueprint-generator"
+    command: opencode /architecture-blueprint-generator
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:architecture
+- agent-type:hermes
+- complexity:intermediate
+- domain:architecture
 scripts: []
----
 ## Goal
 
 Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
@@ -200,7 +203,5 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`readme-blueprint-generator.prompt.md`](readme-blueprint-generator.prompt.md)
-
-
 
 

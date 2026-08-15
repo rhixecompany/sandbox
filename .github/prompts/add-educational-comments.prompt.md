@@ -1,39 +1,42 @@
 ---
 name: add-educational-comments
-title: "Add Educational Comments"
-description: |
-  No description
+title: Add Educational Comments
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /add-educational-comments
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /add-educational-comments"
+    command: opencode /add-educational-comments
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - language:typescript
+- agent-type:hermes
+- complexity:intermediate
+- language:typescript
 scripts: []
----
 ## Goal
 
 Add educational comments to the file specified, or prompt asking for file to comment if one is not provided.
@@ -263,7 +266,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

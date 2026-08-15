@@ -1,42 +1,37 @@
-﻿---
-name: database
-title: database
-description: Prompt for database
-version: "1.0.0"
-tags: [architecture, backend, database, design, sql]
-trigger: database
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: database
 title: Database Schema Guide for ComicWise
-description: Database schema knowledge base for ComicWise - use for any database-related
-  tasks.
+description: Database schema knowledge base for ComicWise - use for any database-related tasks.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /database
 toolsets:
 - web
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /database
+    flags: {}
+    help: Database schema knowledge base for ComicWise - use for any database-related t...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - data
 - database
@@ -45,46 +40,7 @@ tags:
 - prompts
 - refactoring
 - sql
-- data
-- database
-- frontend
-- prompts
-- sql
-trigger: /database
-metadata:
-  hermes: {}
-name: database
-title: Database Schema Guide for ComicWise
-description: Database schema knowledge base for ComicWise - use for any database-related
-  tasks.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
-- todo
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- audit
-- data
-- database
-- debugging
-- frontend
-- prompts
-- refactoring
-- sql
-- data
-- database
-- frontend
-- prompts
-- sql
-trigger: /database
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -228,4 +184,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

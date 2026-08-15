@@ -1,40 +1,46 @@
 ---
 name: typespec-create-api-plugin
 title: Create TypeSpec API Plugin
-description: Generate a TypeSpec API plugin with REST operations, authentication,
-  and Adaptive Cards for Microsoft 365 Copilot.
+description: Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for
+  Microsoft 365 Copilot.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /typespec-create-api-plugin
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- api
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- ai-assistant
-- api
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /typespec-create-api-plugin
-mode: agent
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typespec-create-api-plugin
+    flags: {}
+    help: Generate a TypeSpec API plugin with REST operations, authentication, and Adap...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.

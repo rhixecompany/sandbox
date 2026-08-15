@@ -1,98 +1,50 @@
-﻿---
-name: convert-plaintext-to-md
-title: convert plaintext to md
-description: Prompt for convert-plaintext-to-md
-version: "1.0.0"
-tags: [content, conversion, documentation, markdown, tool]
-trigger: convert-plaintext-to-md
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: convert-plaintext-to-md
 title: Convert Plaintext to Markdown
-description: Convert plaintext documentation to properly formatted markdown using
-  explicit instructions, documented options, or reference files.
+description: Convert plaintext documentation to properly formatted markdown using explicit instructions,
+  documented options, or reference files.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /convert-plaintext-to-md
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills:
 - enhance-markdown
 - context-map
-formatter: default
-plan: null
 dependencies:
 - skill:enhance-markdown
 - skill:context-map
-tags:
-- conversion
-- documentation
-- markdown
-- ml
-- prompts
-- typescript
-- conversion
-- documentation
-- markdown
-- ml
-- prompts
-- typescript
-trigger: /convert-plaintext-to-md
+formatter: default
 metadata:
-  hermes: {}
-name: convert-plaintext-to-md
-title: Convert Plaintext to Markdown
-description: Convert plaintext documentation to properly formatted markdown using
-  explicit instructions, documented options, or reference files.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /convert-plaintext-to-md
+    flags: {}
+    help: Convert plaintext documentation to properly formatted markdown using explicit...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- conversion
+- documentation
+- markdown
+- ml
+- prompts
+- typescript
 scripts: []
-skills:
-- enhance-markdown
-- context-map
-formatter: default
-plan: null
-dependencies:
-- skill:enhance-markdown
-- skill:context-map
-tags:
-- conversion
-- documentation
-- markdown
-- ml
-- prompts
-- typescript
-- conversion
-- documentation
-- markdown
-- ml
-- prompts
-- typescript
-trigger: /convert-plaintext-to-md
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -248,4 +200,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

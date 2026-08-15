@@ -1,104 +1,49 @@
-﻿---
-name: cosmosdb-datamodeling
-title: cosmosdb datamodeling
-description: Prompt for cosmosdb-datamodeling
-version: "1.0.0"
-tags: [advanced, azure, backend, database, design]
-trigger: cosmosdb-datamodeling
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: cosmosdb-datamodeling
 title: Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
-description: 'Step-by-step guide for capturing key application requirements for NoSQL
-  use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices
-  and common patterns, artifacts_produced: "cosmosdb_requirements.md" file and "cosmosdb_data_model.md"
-  file.'
+description: 'Step-by-step guide for capturing key application requirements for NoSQL use-case and produce
+  Azure Cosmos DB Data NoSQL Model design using best practices and common patterns, artifacts_produced:
+  "cosmosdb_requirements.md" file and "cosmosdb_data_model.md" file.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /cosmosdb-datamodeling
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- azure
-- data
-- database
-- frontend
-- ml
-- prompts
-- sql
-- typescript
-- architecture
-- azure
-- data
-- database
-- frontend
-- ml
-- prompts
-- sql
-- typescript
-trigger: /cosmosdb-datamodeling
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: cosmosdb-datamodeling
-title: Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
-description: 'Step-by-step guide for capturing key application requirements for NoSQL
-  use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices
-  and common patterns, artifacts_produced: "cosmosdb_requirements.md" file and "cosmosdb_data_model.md"
-  file.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /cosmosdb-datamodeling
+    flags: {}
+    help: Step-by-step guide for capturing key application requirements for NoSQL use-c...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- azure
+- data
+- database
+- frontend
+- ml
+- prompts
+- sql
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- azure
-- data
-- database
-- frontend
-- ml
-- prompts
-- sql
-- typescript
-- architecture
-- azure
-- data
-- database
-- frontend
-- ml
-- prompts
-- sql
-- typescript
-trigger: /cosmosdb-datamodeling
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -376,4 +321,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

@@ -1,47 +1,38 @@
-﻿---
-name: containerize-aspnet-framework
-title: containerize aspnet framework
-description: Prompt for containerize-aspnet-framework
-version: "1.0.0"
-tags: [aspnet, containerization, csharp, devops, docker]
-trigger: containerize-aspnet-framework
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: containerize-aspnet-framework
 title: ASP.NET .NET Framework Containerization Prompt
-description: Containerize an ASP.NET .NET Framework project by creating Dockerfile
-  and .dockerfile files customized for the project.
+description: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files
+  customized for the project.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /containerize-aspnet-framework
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /containerize-aspnet-framework
+    flags: {}
+    help: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .do...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- docker
-- frontend
-- ml
-- prompts
-- specification
-- windows
+- agent-type:hermes
 - docker
 - frontend
 - ml
@@ -50,43 +41,7 @@ tags:
 - windows
 - csharp
 - dotnet
-trigger: /containerize-aspnet-framework
-dependencies: []
-metadata:
-  hermes: {}
-name: containerize-aspnet-framework
-title: ASP.NET .NET Framework Containerization Prompt
-description: Containerize an ASP.NET .NET Framework project by creating Dockerfile
-  and .dockerfile files customized for the project.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- docker
-- frontend
-- ml
-- prompts
-- specification
-- windows
-- docker
-- frontend
-- ml
-- prompts
-- specification
-- windows
-- csharp
-- dotnet
-trigger: /containerize-aspnet-framework
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -298,4 +253,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`containerize-aspnetcore.prompt.md`](containerize-aspnetcore.prompt.md)
-

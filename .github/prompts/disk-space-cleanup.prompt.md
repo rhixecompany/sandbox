@@ -1,72 +1,45 @@
-﻿---
-name: disk-space-cleanup
-title: disk space cleanup
-description: Prompt for disk-space-cleanup
-version: "1.0.0"
-tags: [devops, maintenance, system-admin, tool, troubleshooting]
-trigger: disk-space-cleanup
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: disk-space-cleanup
 title: Disk Space Cleanup
-description: Clean up disk space by removing unused Docker resources, cache, logs,
-  and temporary files with a safe, reversible plan.
+description: Clean up disk space by removing unused Docker resources, cache, logs, and temporary files
+  with a safe, reversible plan.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /disk-space-cleanup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /disk-space-cleanup
+    flags: {}
+    help: Clean up disk space by removing unused Docker resources, cache, logs, and tem...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - docker
 - documentation
 - ml
 - prompts
 - typescript
 - workflow
-toolsets: null
-scripts: null
-trigger: /disk-space-cleanup
-skills: []
-dependencies: []
-metadata:
-  hermes: {}
-formatter: default
-plan: ''
-name: disk-space-cleanup
-title: Disk Space Cleanup
-description: Clean up disk space by removing unused Docker resources, cache, logs,
-  and temporary files with a safe, reversible plan.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-tags:
-- docker
-- documentation
-- ml
-- prompts
-- typescript
-- workflow
-toolsets: null
-scripts: null
-trigger: /disk-space-cleanup
-skills: []
-dependencies: []
-metadata:
-  hermes: {}
-formatter: default
-plan: ''
+scripts: []
 ---
 
 ## Goal
@@ -223,4 +196,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

@@ -1,23 +1,21 @@
 ---
 name: plan-execute
 title: Execute Implementation Plan
-description: Load and execute any implementation plan step-by-step. Reads the plan
-  from a `.prompt.md` or `.md` file, runs each phase sequentially with verification
-  gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.
+description: Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md`
+  or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-*
+  prompts with a single generic executor.
 version: 1.0.0
 license: MIT
 author: Hermes Agent (consolidated)
+trigger: /plan-execute
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - plans-and-specs
 - subagent-driven-development
 - verification-before-completion
 - writing-plans
-formatter: default
-plan: null
 dependencies:
 - skill:plans-and-specs
 - skill:subagent-driven-development
@@ -25,19 +23,32 @@ dependencies:
 - skill:writing-plans
 - tool:terminal
 - tool:search_files
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /plan-execute
+    flags: {}
+    help: Load and execute any implementation plan step-by-step. Reads the plan from a ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - planning
 - prompts
 - typescript
 - debugging
-- planning
-- prompts
-- typescript
-trigger: /plan-execute
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md` or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.

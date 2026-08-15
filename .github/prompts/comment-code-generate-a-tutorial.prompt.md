@@ -1,98 +1,47 @@
-﻿---
-name: comment-code-generate-a-tutorial
-title: comment code generate a tutorial
-description: Prompt for comment-code-generate-a-tutorial
-version: "1.0.0"
-tags: [beginner, code-quality, coding, documentation, tutorial]
-trigger: comment-code-generate-a-tutorial
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: comment-code-generate-a-tutorial
 title: Comment Code Generate A Tutorial
-description: Transform this Python script into a polished, beginner-friendly project
-  by refactoring the code, adding clear instructional comments, and generating a complete
-  markdown tutorial.
+description: Transform this Python script into a polished, beginner-friendly project by refactoring the
+  code, adding clear instructional comments, and generating a complete markdown tutorial.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /comment-code-generate-a-tutorial
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- markdown
-- ml
-- prompts
-- python
-- refactoring
-- specification
-- typescript
-- generator
-- markdown
-- ml
-- prompts
-- python
-- refactoring
-- specification
-- typescript
-trigger: /comment-code-generate-a-tutorial
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: comment-code-generate-a-tutorial
-title: Comment Code Generate A Tutorial
-description: Transform this Python script into a polished, beginner-friendly project
-  by refactoring the code, adding clear instructional comments, and generating a complete
-  markdown tutorial.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /comment-code-generate-a-tutorial
+    flags: {}
+    help: Transform this Python script into a polished, beginner-friendly project by re...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- markdown
+- ml
+- prompts
+- python
+- refactoring
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- markdown
-- ml
-- prompts
-- python
-- refactoring
-- specification
-- typescript
-- generator
-- markdown
-- ml
-- prompts
-- python
-- refactoring
-- specification
-- typescript
-trigger: /comment-code-generate-a-tutorial
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -250,4 +199,3 @@ Same-family prompts:
 - [`postgresql-code-review.prompt.md`](postgresql-code-review.prompt.md)
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`sql-code-review.prompt.md`](sql-code-review.prompt.md)
-

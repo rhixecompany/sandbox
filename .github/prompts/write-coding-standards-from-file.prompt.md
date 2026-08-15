@@ -1,32 +1,42 @@
 ---
 name: write-coding-standards-from-file
 title: Write Coding Standards From File
-description: Write a coding standards document for a project using the coding styles
-  from the file(s) and/or folder(s) passed as arguments in the prompt.
+description: Write a coding standards document for a project using the coding styles from the file(s)
+  and/or folder(s) passed as arguments in the prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /write-coding-standards-from-file
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /write-coding-standards-from-file
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /write-coding-standards-from-file
+    flags: {}
+    help: Write a coding standards document for a project using the coding styles from ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Write a coding standards document for a project using the coding styles from the file(s) and/or folder(s) passed as arguments in the prompt.

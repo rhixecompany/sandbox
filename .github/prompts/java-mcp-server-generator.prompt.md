@@ -1,20 +1,39 @@
 ---
 name: java-mcp-server-generator
 title: Java MCP Server Generator
-description: Generate a complete Model Context Protocol server project in Java using
-  the official MCP Java SDK with reactive streams and optional Spring Boot integration.
+description: Generate a complete Model Context Protocol server project in Java using the official MCP
+  Java SDK with reactive streams and optional Spring Boot integration.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /java-mcp-server-generator
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /java-mcp-server-generator
+    flags: {}
+    help: Generate a complete Model Context Protocol server project in Java using the o...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - backend
 - frontend
 - generator
@@ -25,20 +44,7 @@ tags:
 - react
 - spring
 - typescript
-- backend
-- frontend
-- generator
-- java
-- mcp
-- ml
-- prompts
-- typescript
-trigger: /java-mcp-server-generator
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Generate a complete Model Context Protocol server project in Java using the official MCP Java SDK with reactive streams and optional Spring Boot integration.

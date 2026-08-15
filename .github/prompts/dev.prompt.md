@@ -1,25 +1,3 @@
-﻿---
-name: dev
-title: dev
-description: Prompt for dev
-version: "1.0.0"
-tags: [beginner, coding, development, general, tool]
-trigger: dev
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dev
 title: Task1
@@ -27,68 +5,42 @@ description: The purpose of the prompt is to get my codebase optimized and refac
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dev
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- configuration
-- debugging
-- performance
-- playwright
-- prompts
-- refactoring
-- testing
-- typescript
-- configuration
-- debugging
-- performance
-- playwright
-- prompts
-- refactoring
-- testing
-- typescript
-trigger: /dev
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: dev
-title: Task1
-description: The purpose of the prompt is to get my codebase optimized and refactored.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dev
+    flags: {}
+    help: The purpose of the prompt is to get my codebase optimized and refactored.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- configuration
+- debugging
+- performance
+- playwright
+- prompts
+- refactoring
+- testing
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- configuration
-- debugging
-- performance
-- playwright
-- prompts
-- refactoring
-- testing
-- typescript
-- configuration
-- debugging
-- performance
-- playwright
-- prompts
-- refactoring
-- testing
-- typescript
-trigger: /dev
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -246,4 +198,3 @@ Same-family prompts:
 
 - [`dev-imp.prompt.md`](dev-imp.prompt.md)
 - [`dev-init.prompt.md`](dev-init.prompt.md)
-

@@ -5,30 +5,39 @@ description: Ask Copilot what files it needs to see before answering a question.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /what-context-needed
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-trigger: /what-context-needed
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /what-context-needed
+    flags: {}
+    help: Ask Copilot what files it needs to see before answering a question.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Ask Copilot what files it needs to see before answering a question.

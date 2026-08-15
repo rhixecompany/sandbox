@@ -5,39 +5,44 @@ description: mcp-create-declarative-agent.prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /mcp-create-declarative-agent
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- ai-assistant
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /mcp-create-declarative-agent
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /mcp-create-declarative-agent
+    flags: {}
+    help: mcp-create-declarative-agent.prompt.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- generator
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use this prompt to handle the create mcp based declarative agent for microsoft 365 copilot workflow.

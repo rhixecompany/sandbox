@@ -1,39 +1,45 @@
 ---
 name: hermes-breakdown-epic-pm
 title: Hermes Breakdown Epic Pm
-description: 'Hermes-equivalent: author a complete Epic PRD from a high-level epic
-  idea or request.'
+description: 'Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or request.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /hermes-breakdown-epic-pm
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- specification
-- typescript
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- specification
-- typescript
-trigger: /hermes-breakdown-epic-pm
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-breakdown-epic-pm
+    flags: {}
+    help: 'Hermes-equivalent: author a complete Epic PRD from a high-level epic idea or ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Produce a complete Epic PRD that is ready for downstream feature planning.

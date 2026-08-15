@@ -1,106 +1,51 @@
-﻿---
-name: dev-imp
-title: dev imp
-description: Prompt for dev-imp
-version: "1.0.0"
-tags: [backend, coding, development, implementation, project]
-trigger: dev-imp
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dev-imp
 title: Development Implementation Manager
-description: Meta-prompt that discovers generator prompts, implements them, verifies,
-  code-reviews, debugs, reports.
+description: Meta-prompt that discovers generator prompts, implements them, verifies, code-reviews, debugs,
+  reports.
 version: 1.0.0
 license: MIT
 author: OWL
+trigger: /dev-imp
 toolsets:
 - terminal
 - file
 - web
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- audit
-- debugging
-- fix
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- audit
-- debugging
-- fix
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /dev-imp
+formatter: default
 metadata:
-  hermes: {}
-name: dev-imp
-title: Development Implementation Manager
-description: Meta-prompt that discovers generator prompts, implements them, verifies,
-  code-reviews, debugs, reports.
-version: 1.0.0
-license: MIT
-author: OWL
-toolsets:
-- terminal
-- file
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dev-imp
+    flags: {}
+    help: Meta-prompt that discovers generator prompts, implements them, verifies, code...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- debugging
+- fix
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 scripts: []
-skills:
-- subagent-driven-development
-formatter: default
-plan: null
-dependencies:
-- skill:subagent-driven-development
-tags:
-- audit
-- debugging
-- fix
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- audit
-- debugging
-- fix
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /dev-imp
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -374,4 +319,3 @@ Same-family prompts:
 
 - [`dev-init.prompt.md`](dev-init.prompt.md)
 - [`dev.prompt.md`](dev.prompt.md)
-

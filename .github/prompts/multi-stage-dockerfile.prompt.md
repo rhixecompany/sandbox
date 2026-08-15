@@ -5,32 +5,40 @@ description: Create optimized multi-stage Dockerfiles for any language or framew
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /multi-stage-dockerfile
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- docker
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- docker
-- ml
-- performance
-- prompts
-- specification
-- typescript
-trigger: /multi-stage-dockerfile
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /multi-stage-dockerfile
+    flags: {}
+    help: Create optimized multi-stage Dockerfiles for any language or framework.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- docker
+- ml
+- performance
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Create optimized multi-stage Dockerfiles for any language or framework.

@@ -5,30 +5,39 @@ description: Refactoring using Remove Parameter in Java Language.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /java-refactoring-remove-parameter
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- backend
-- java
-- prompts
-- refactoring
-- typescript
-- backend
-- java
-- prompts
-- refactoring
-- typescript
-trigger: /java-refactoring-remove-parameter
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /java-refactoring-remove-parameter
+    flags: {}
+    help: Refactoring using Remove Parameter in Java Language.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- backend
+- java
+- prompts
+- refactoring
+- typescript
+scripts: []
 ## Goal
 
 Refactoring using Remove Parameter in Java Language.

@@ -1,14 +1,46 @@
 ---
 name: tooling-implementation
-title: 'Full Tooling Implementation: python-quality / tooling-lint / tooling-config
-  across ./ and subrepos'
-description: 'Execute the tooling-implementation plan: verify, check, fix, and validate
-  the python-quality, tooling-lint, and tooling-config stacks across the SandBox root
-  and all projects/ subrepos, then write the artifact.'
+title: 'Full Tooling Implementation: python-quality / tooling-lint / tooling-config across ./ and subrepos'
+description: 'Execute the tooling-implementation plan: verify, check, fix, and validate the python-quality,
+  tooling-lint, and tooling-config stacks across the SandBox root and all projects/ subrepos, then write
+  the artifact.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /tooling-implementation
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:executing-plans
+- skill:executing-prompt-workflows
+- skill:execute-workflow
+- skill:python-quality
+- skill:tooling-lint
+- skill:tooling-config
+- skill:tooling-implementation
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /tooling-implementation
+    flags: {}
+    help: 'Execute the tooling-implementation plan: verify, check, fix, and validate the...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - configuration
 - documentation
 - fix
@@ -18,24 +50,7 @@ tags:
 - python
 - typescript
 - workflow
-toolsets: null
-scripts: null
-skills: null
-trigger: /tooling-implementation
-dependencies:
-- skill:executing-plans
-- skill:executing-prompt-workflows
-- skill:execute-workflow
-- skill:python-quality
-- skill:tooling-lint
-- skill:tooling-config
-- skill:tooling-implementation
-metadata:
-  hermes: {}
-formatter: default
-plan: ''
----
-
+scripts: []
 ## Goal
 
 Execute the `tooling-implementation` workflow. Full details: `templates/tooling-implementation/README.md`.

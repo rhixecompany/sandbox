@@ -1,35 +1,43 @@
-﻿---
-name: execute-all-prompts
-title: execute all prompts
-description: Prompt for execute-all-prompts
-version: "1.0.0"
-tags: [automation, devops, orchestration, tool, workflow]
-trigger: execute-all-prompts
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: execute-all-prompts
 title: Execute All Prompts Orchestrator
 description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix,
-  agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models.
-  Each prompt runs to completion before the next begins.'
+  agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models. Each prompt runs
+  to completion before the next begins.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /execute-all-prompts
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:verification-before-completion
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /execute-all-prompts
+    flags: {}
+    help: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skil...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - ai-assistant
 - audit
@@ -41,52 +49,7 @@ tags:
 - testing
 - typescript
 - workflow
-trigger: /execute-all-prompts
-formatter: default
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:verification-before-completion
-- skill:subagent-driven-development
-metadata:
-  hermes: {}
-toolsets: null
 scripts: []
-skills: null
-plan: null
-name: execute-all-prompts
-title: Execute All Prompts Orchestrator
-description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix,
-  agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models.
-  Each prompt runs to completion before the next begins.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-tags:
-- agents
-- ai-assistant
-- audit
-- data
-- execution
-- fix
-- prompts
-- skills
-- testing
-- typescript
-- workflow
-trigger: /execute-all-prompts
-formatter: default
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:verification-before-completion
-- skill:subagent-driven-development
-metadata:
-  hermes: {}
-toolsets: null
-scripts: []
-skills: null
-plan: null
 ---
 
 ## Goal
@@ -261,4 +224,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`execute-plan.prompt.md`](execute-plan.prompt.md)
-

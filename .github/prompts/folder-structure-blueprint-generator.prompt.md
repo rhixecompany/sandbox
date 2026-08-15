@@ -1,53 +1,40 @@
-﻿---
-name: folder-structure-blueprint-generator
-title: folder structure blueprint generator
-description: Prompt for folder-structure-blueprint-generator
-version: "1.0.0"
-tags: [architecture, blueprint, documentation, planning, tool]
-trigger: folder-structure-blueprint-generator
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: folder-structure-blueprint-generator
 title: Project Folder Structure Blueprint Generator
-description: Comprehensive technology-agnostic prompt for analyzing and documenting
-  project folder structures. Auto-detects project types (.NET, Java, React, Angular,
-  Python, Node.js, Flutter), generates detailed blueprints with visualization options,
-  naming conventions, file placement patterns, and extension templates for maintaining
-  consistent code organization across diverse technology stacks.
+description: Comprehensive technology-agnostic prompt for analyzing and documenting project folder structures.
+  Auto-detects project types (.NET, Java, React, Angular, Python, Node.js, Flutter), generates detailed
+  blueprints with visualization options, naming conventions, file placement patterns, and extension templates
+  for maintaining consistent code organization across diverse technology stacks.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /folder-structure-blueprint-generator
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /folder-structure-blueprint-generator
+    flags: {}
+    help: Comprehensive technology-agnostic prompt for analyzing and documenting projec...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- architecture
-- generator
-- java
-- javascript
-- ml
-- prompts
-- python
-- react
-- typescript
+- agent-type:hermes
 - architecture
 - generator
 - java
@@ -59,52 +46,7 @@ tags:
 - typescript
 - csharp
 - dotnet
-trigger: /folder-structure-blueprint-generator
-dependencies: []
-metadata:
-  hermes: {}
-name: folder-structure-blueprint-generator
-title: Project Folder Structure Blueprint Generator
-description: Comprehensive technology-agnostic prompt for analyzing and documenting
-  project folder structures. Auto-detects project types (.NET, Java, React, Angular,
-  Python, Node.js, Flutter), generates detailed blueprints with visualization options,
-  naming conventions, file placement patterns, and extension templates for maintaining
-  consistent code organization across diverse technology stacks.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- generator
-- java
-- javascript
-- ml
-- prompts
-- python
-- react
-- typescript
-- architecture
-- generator
-- java
-- javascript
-- ml
-- prompts
-- python
-- react
-- typescript
-- csharp
-- dotnet
-trigger: /folder-structure-blueprint-generator
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -266,4 +208,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

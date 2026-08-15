@@ -1,92 +1,45 @@
-﻿---
-name: dotnet-design-pattern-review
-title: dotnet design pattern review
-description: Prompt for dotnet-design-pattern-review
-version: "1.0.0"
-tags: [architecture, csharp, design-patterns, dotnet, review]
-trigger: dotnet-design-pattern-review
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dotnet-design-pattern-review
 title: .NET/C# Design Pattern Review
-description: Review the C#/.NET code for design pattern implementation and suggest
-  improvements.
+description: Review the C#/.NET code for design pattern implementation and suggest improvements.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dotnet-design-pattern-review
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- audit
-- csharp
-- dotnet
-- frontend
-- prompts
-- typescript
-- architecture
-- audit
-- csharp
-- dotnet
-- frontend
-- prompts
-- typescript
-trigger: /dotnet-design-pattern-review
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: dotnet-design-pattern-review
-title: .NET/C# Design Pattern Review
-description: Review the C#/.NET code for design pattern implementation and suggest
-  improvements.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dotnet-design-pattern-review
+    flags: {}
+    help: Review the C#/.NET code for design pattern implementation and suggest improve...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- audit
+- csharp
+- dotnet
+- frontend
+- prompts
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- audit
-- csharp
-- dotnet
-- frontend
-- prompts
-- typescript
-- architecture
-- audit
-- csharp
-- dotnet
-- frontend
-- prompts
-- typescript
-trigger: /dotnet-design-pattern-review
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -256,4 +209,3 @@ Same-family prompts:
 
 - [`dotnet-best-practices.prompt.md`](dotnet-best-practices.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
-

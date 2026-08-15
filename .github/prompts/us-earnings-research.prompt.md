@@ -1,22 +1,51 @@
 ---
+name: us-earnings-research.prompt
+title: Us Earnings Research.Prompt
+description: Auto-generated prompt for /us-earnings-research.prompt
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /us-earnings-research.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: research-analyst
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /us-earnings-research.prompt
+    flags: {}
+    help: Auto-generated prompt for /us-earnings-research.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: us-earnings-research
 title: US Earnings Research Pipeline — Better Than Outlier & Attapoll
-description: Comprehensive research pipeline using stacked skills to identify superior
-  US earning platforms, leveraging all prior session data and MCP tools.
+description: Comprehensive research pipeline using stacked skills to identify superior US earning platforms,
+  leveraging all prior session data and MCP tools.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
-tags:
-- data
-- frontend
-- mcp
-- prompts
-- skills
-- specification
-- typescript
-toolsets: null
 trigger: /us-earnings-research
-skills: null
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - skill:using-superpowers
 - skill:user-communication-preferences
@@ -24,14 +53,35 @@ dependencies:
 - skill:subagent-driven-development
 - skill:web-research-pipeline
 - skill:enhance-markdown
+formatter: default
 metadata:
   hermes:
-    source: us-earnings-research.prompt.txt
-    converted: '2026-08-08'
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /us-earnings-research
+    flags: {}
+    help: Comprehensive research pipeline using stacked skills to identify superior US ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- data
+- frontend
+- mcp
+- prompts
+- skills
+- specification
+- typescript
 scripts: []
-formatter: default
-plan: ''
----
 
 # US Earnings Research Pipeline
 

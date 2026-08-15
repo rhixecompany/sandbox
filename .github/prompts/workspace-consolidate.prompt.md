@@ -1,15 +1,50 @@
 ---
-name: workspace-consolidate
-title: Workspace Consolidation — Scripts, Patches, Docs
-description: Consolidate scripts, patches, and documentation across the workspace
-  with bash migration and audit workflows.
+name: workspace-consolidate.prompt
+title: Workspace Consolidate.Prompt
+description: Auto-generated prompt for /workspace-consolidate.prompt
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /workspace-consolidate.prompt
 toolsets:
 - file
 - terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /workspace-consolidate.prompt
+    flags: {}
+    help: Auto-generated prompt for /workspace-consolidate.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
 scripts: []
+---
+name: workspace-consolidate
+title: Workspace Consolidation — Scripts, Patches, Docs
+description: Consolidate scripts, patches, and documentation across the workspace with bash migration
+  and audit workflows.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /workspace-consolidate
+toolsets:
+- file
+- terminal
 skills:
 - introspection-only-general
 - no-git-delete
@@ -25,8 +60,6 @@ skills:
 - acpx-executor
 - git-patch-management
 - project-consolidation
-formatter: default
-plan: null
 dependencies:
 - prompt:context-map
 - prompt:update-implementation-plan
@@ -46,7 +79,27 @@ dependencies:
 - skill:no-net-fetch
 - skill:skills-tools-preflight-check
 - skill:context-map
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /workspace-consolidate
+    flags: {}
+    help: Consolidate scripts, patches, and documentation across the workspace with bas...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - documentation
 - frontend
@@ -56,16 +109,7 @@ tags:
 - typescript
 - workflow
 - agents
-- documentation
-- frontend
-- ml
-- prompts
-- skills
-- typescript
-trigger: /workspace-consolidate
-metadata:
-  hermes: {}
----
+scripts: []
 
 ## Goal
 

@@ -1,51 +1,49 @@
 ---
 name: multi-agent-research-template
 title: Multi-Agent Research and Implementation Template
-description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current
-  research targets while factoring out the shared workflow.
+description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets
+  while factoring out the shared workflow.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /multi-agent-research-template
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- skills
-- typescript
-- workflow
-- agents
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- skills
-- typescript
-- workflow
-trigger: /multi-agent-research-template
-metadata:
-  hermes: None
-  related_skills:
-  - codex
-  - copilot
-  - hermes
-  - research
-  - planning
-  - automation
 dependencies: []
----
-
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /multi-agent-research-template
+    flags: {}
+    help: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current rese...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.

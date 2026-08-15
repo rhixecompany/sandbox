@@ -1,13 +1,39 @@
 ---
 name: hermes-comprehensive-setup
 title: Comprehensive Hermes and OpenCode Setup, Migration, and Validation
-description: 'Configure Hermes and OpenCode using best practices: load all prompts,
-  plans, markdown files, skills, MCP servers, hooks, and templates. Run enhancement,
-  validation, and dry-run verification end to end.'
+description: 'Configure Hermes and OpenCode using best practices: load all prompts, plans, markdown files,
+  skills, MCP servers, hooks, and templates. Run enhancement, validation, and dry-run verification end
+  to end.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /hermes-comprehensive-setup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-comprehensive-setup
+    flags: {}
+    help: 'Configure Hermes and OpenCode using best practices: load all prompts, plans, ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - ai-assistant
 - backend
 - configuration
@@ -19,17 +45,7 @@ tags:
 - skills
 - typescript
 - workflow
-toolsets: null
-scripts: null
-trigger: /hermes-comprehensive-setup
-skills: []
-dependencies: []
-metadata:
-  hermes: {}
-formatter: default
-plan: ''
----
-
+scripts: []
 ## Goal
 
 Execute the `hermes-comprehensive-setup` workflow. Full details: `templates/hermes-comprehensive-setup/README.md`.

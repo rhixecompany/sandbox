@@ -1,40 +1,78 @@
 ---
+name: comicwise-development.prompt
+title: Comicwise Development.Prompt
+description: Auto-generated prompt for /comicwise-development.prompt
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /comicwise-development.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /comicwise-development.prompt
+    flags: {}
+    help: Auto-generated prompt for /comicwise-development.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: comicwise-development
-title: "ComicWise Development Workflow"
-description: |
-  No description
+title: ComicWise Development Workflow
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /comicwise-development
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /comicwise-development"
+    command: opencode /comicwise-development
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:dev
-  - domain:devops
+- agent-type:hermes
+- complexity:intermediate
+- domain:dev
+- domain:devops
 scripts: []
----
 ## Goal
 
 Reusable prompt for ComicWise development sessions.
@@ -378,7 +416,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 
 

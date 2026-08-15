@@ -5,35 +5,42 @@ description: mcp-create-adaptive-cards.prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /mcp-create-adaptive-cards
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /mcp-create-adaptive-cards
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /mcp-create-adaptive-cards
+    flags: {}
+    help: mcp-create-adaptive-cards.prompt.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use this prompt to handle the create adaptive cards for mcp plugins workflow.

@@ -1,92 +1,46 @@
-﻿---
-name: first-ask
-title: first ask
-description: Prompt for first-ask
-version: "1.0.0"
-tags: [beginner, communication, interaction, onboarding, tool]
-trigger: first-ask
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: first-ask
 title: First Ask
-description: 'Interactive, input-tool powered, task refinement workflow: interrogates
-  scope, deliverables, constraints before carrying out the task; Requires the Joyride
-  extension.'
+description: 'Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables,
+  constraints before carrying out the task; Requires the Joyride extension.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /first-ask
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- frontend
-- linting
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /first-ask
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: first-ask
-title: First Ask
-description: 'Interactive, input-tool powered, task refinement workflow: interrogates
-  scope, deliverables, constraints before carrying out the task; Requires the Joyride
-  extension.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /first-ask
+    flags: {}
+    help: 'Interactive, input-tool powered, task refinement workflow: interrogates scope...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- linting
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- frontend
-- linting
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /first-ask
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -235,4 +189,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

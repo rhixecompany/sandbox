@@ -1,19 +1,38 @@
 ---
 name: rust-mcp-server-generator
 title: Rust Mcp Server Generator
-description: Generate a complete Rust Model Context Protocol server project with tools,
-  prompts, resources, and tests using the official rmcp SDK.
+description: Generate a complete Rust Model Context Protocol server project with tools, prompts, resources,
+  and tests using the official rmcp SDK.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /rust-mcp-server-generator
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /rust-mcp-server-generator
+    flags: {}
+    help: Generate a complete Rust Model Context Protocol server project with tools, pr...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - backend
 - data
 - frontend
@@ -23,20 +42,7 @@ tags:
 - rust
 - testing
 - typescript
-- backend
-- data
-- frontend
-- generator
-- mcp
-- prompts
-- rust
-- typescript
-trigger: /rust-mcp-server-generator
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK.

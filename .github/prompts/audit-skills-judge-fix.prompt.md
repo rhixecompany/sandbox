@@ -1,40 +1,43 @@
 ---
 name: audit-skills-judge-fix
-title: "Audit Skills Judge Fix"
-description: |
-  No description
+title: Audit Skills Judge Fix
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /audit-skills-judge-fix
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: research-analyst
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /audit-skills-judge-fix"
+    command: opencode /audit-skills-judge-fix
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:debug
-  - domain:research
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- domain:research
 scripts: []
----
 ## Goal
 
 Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.
@@ -173,7 +176,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

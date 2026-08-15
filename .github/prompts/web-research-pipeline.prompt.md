@@ -1,43 +1,53 @@
 ---
 name: web-research-pipeline
 title: Web Research Pipeline (Tavily-First)
-description: Search the web, extract full content from discovered pages, and save
-  crisply formatted markdown files — one per source. Uses Tavily MCP as primary search/extract
-  backend.
+description: Search the web, extract full content from discovered pages, and save crisply formatted markdown
+  files — one per source. Uses Tavily MCP as primary search/extract backend.
 version: 2.1.0
 license: MIT
 author: Hermes Agent
+trigger: /web-research-pipeline
 toolsets:
 - file
 - terminal
 - web
 - mcp
-scripts: []
 skills:
 - domain-intel
-formatter: default
-plan: null
 dependencies:
 - tool:mcp-tavily
 - tool:mcp-fetch
 - skill:domain-intel
+formatter: default
+metadata:
+  hermes:
+    profile: research-analyst
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /web-research-pipeline
+    flags: {}
+    help: Search the web, extract full content from discovered pages, and save crisply ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - backend
 - markdown
 - mcp
 - prompts
 - skills
 - workflow
-- backend
-- markdown
-- mcp
 - tavily
 - workflows
-trigger: /web-research-pipeline
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Web search → extract full content → save as formatted markdown. **Tavily-first approach:** prefer `mcp__tavily__tavily_search` + `mcp__tavily__tavily_extract`, fall back to `mcp__fetch__get_markdown`, then `web_extract`.

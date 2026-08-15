@@ -1,21 +1,16 @@
 ---
 name: repo-tooling-implementation
 title: Repo Tooling Implementation
-description: Fully implement the repo-tooling master plan with verification, fixes,
-  and artifact delivery across the SandBox workspace.
+description: Fully implement the repo-tooling master plan with verification, fixes, and artifact delivery
+  across the SandBox workspace.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
-tags:
-- documentation
-- fix
-- ml
-- prompts
-- typescript
-- workflow
-toolsets: null
 trigger: /repo-tooling-implementation
-skills: null
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - prompt:repo
 - skill:executing-plans
@@ -26,13 +21,34 @@ dependencies:
 - tool:mcp-github
 - tool:mcp-sequential-thinking
 - tool:mcp-tavily
-metadata:
-  hermes: {}
-scripts: []
 formatter: default
-plan: null
----
-
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-tooling-implementation
+    flags: {}
+    help: Fully implement the repo-tooling master plan with verification, fixes, and ar...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- fix
+- ml
+- prompts
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Execute the `repo-tooling-implementation` workflow. Full details: `templates/repo-tooling-implementation/README.md`.

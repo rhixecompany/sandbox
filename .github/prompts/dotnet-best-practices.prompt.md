@@ -1,25 +1,3 @@
-﻿---
-name: dotnet-best-practices
-title: dotnet best practices
-description: Prompt for dotnet-best-practices
-version: "1.0.0"
-tags: [coding, csharp, dotnet, review, standards]
-trigger: dotnet-best-practices
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dotnet-best-practices
 title: .NET/C# Best Practices
@@ -27,14 +5,33 @@ description: Ensure .NET/C# code meets best practices for the solution/project.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dotnet-best-practices
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dotnet-best-practices
+    flags: {}
+    help: Ensure .NET/C# code meets best practices for the solution/project.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - csharp
 - documentation
 - dotnet
@@ -43,50 +40,7 @@ tags:
 - specification
 - typescript
 - architecture
-- csharp
-- documentation
-- dotnet
-- ml
-- prompts
-- specification
-- typescript
-trigger: /dotnet-best-practices
-dependencies: []
-metadata:
-  hermes: {}
-name: dotnet-best-practices
-title: .NET/C# Best Practices
-description: Ensure .NET/C# code meets best practices for the solution/project.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- documentation
-- dotnet
-- ml
-- prompts
-- specification
-- typescript
-- architecture
-- csharp
-- documentation
-- dotnet
-- ml
-- prompts
-- specification
-- typescript
-trigger: /dotnet-best-practices
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -290,4 +244,3 @@ Same-family prompts:
 
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
-

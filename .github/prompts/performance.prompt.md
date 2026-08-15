@@ -1,43 +1,47 @@
 ---
 name: performance
 title: Performance
-description: Comprehensive performance prompt focused on measurable improvements and
-  safe optimizations.
+description: Comprehensive performance prompt focused on measurable improvements and safe optimizations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /performance
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- data
-- database
-- frontend
-- performance
-- prompts
-- skills
-- specification
-- sql
-- typescript
-- data
-- database
-- frontend
-- performance
-- prompts
-- skills
-- specification
-- sql
-- typescript
-trigger: /performance
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /performance
+    flags: {}
+    help: Comprehensive performance prompt focused on measurable improvements and safe ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- data
+- database
+- frontend
+- performance
+- prompts
+- skills
+- specification
+- sql
+- typescript
+scripts: []
 ## Goal
 
 Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.

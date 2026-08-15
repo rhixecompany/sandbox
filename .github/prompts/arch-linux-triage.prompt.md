@@ -1,39 +1,42 @@
 ---
 name: arch-linux-triage
-title: "Arch Linux Triage"
-description: |
-  No description
+title: Arch Linux Triage
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /arch-linux-triage
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /arch-linux-triage"
+    command: opencode /arch-linux-triage
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:research
+- agent-type:hermes
+- complexity:intermediate
+- domain:research
 scripts: []
----
 ## Goal
 
 Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices.
@@ -211,7 +214,5 @@ Same-family prompts:
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
-
-
 
 

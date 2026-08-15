@@ -5,35 +5,42 @@ description: Comprehensive testing prompt aligned to repository unit and E2E gui
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /testing
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- audit
-- frontend
-- planning
-- prompts
-- skills
-- testing
-- typescript
-- audit
-- frontend
-- ml
-- planning
-- prompts
-- skills
-- testing
-- typescript
-trigger: /testing
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /testing
+    flags: {}
+    help: Comprehensive testing prompt aligned to repository unit and E2E guidance.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- frontend
+- planning
+- prompts
+- skills
+- testing
+- typescript
+- ml
+scripts: []
 ## Goal
 
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.

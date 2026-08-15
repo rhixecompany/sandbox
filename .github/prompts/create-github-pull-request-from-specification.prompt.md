@@ -1,86 +1,44 @@
-﻿---
-name: create-github-pull-request-from-specification
-title: create github pull request from specification
-description: Prompt for create-github-pull-request-from-specification
-version: "1.0.0"
-tags: [development, tool, coding]
-trigger: create-github-pull-request-from-specification
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-github-pull-request-from-specification
 title: Create GitHub Pull Request from Specification
-description: Create GitHub Pull Request for feature request from specification file
-  using pull_request_template.md template.
+description: Create GitHub Pull Request for feature request from specification file using pull_request_template.md
+  template.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-github-pull-request-from-specification
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-pull-request-from-specification
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-github-pull-request-from-specification
-title: Create GitHub Pull Request from Specification
-description: Create GitHub Pull Request for feature request from specification file
-  using pull_request_template.md template.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-github-pull-request-from-specification
+    flags: {}
+    help: Create GitHub Pull Request for feature request from specification file using ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-pull-request-from-specification
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -267,4 +225,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

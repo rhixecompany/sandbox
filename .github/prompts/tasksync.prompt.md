@@ -1,32 +1,42 @@
 ---
 name: tasksync
 title: Task Sync
-description: Comprehensive prompt for synchronizing tasks, implementations, and updates
-  across projects.
+description: Comprehensive prompt for synchronizing tasks, implementations, and updates across projects.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /tasksync
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /tasksync
+    flags: {}
+    help: Comprehensive prompt for synchronizing tasks, implementations, and updates ac...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - frontend
 - prompts
 - typescript
 - workflow
-- frontend
-- prompts
-- workflow
-trigger: /tasksync
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.

@@ -5,41 +5,45 @@ description: Automate Next.js 16 migration tasks.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /migrate-to-next16
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- api
-- configuration
-- frontend
-- linting
-- migration
-- nextjs
-- prompts
-- react
-- testing
-- typescript
-- api
-- configuration
-- frontend
-- linting
-- migration
-- nextjs
-- prompts
-- react
-- testing
-- typescript
-trigger: /migrate-to-next16
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /migrate-to-next16
+    flags: {}
+    help: Automate Next.js 16 migration tasks.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- configuration
+- frontend
+- linting
+- migration
+- nextjs
+- prompts
+- react
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Automate Next.js 16 migration tasks.

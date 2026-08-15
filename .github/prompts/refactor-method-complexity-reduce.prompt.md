@@ -1,36 +1,44 @@
 ---
 name: refactor-method-complexity-reduce
 title: Refactor Method Complexity Reduce
-description: Refactor given method `${input:methodName}` to reduce its cognitive complexity
-  to `${input:complexityThreshold}` or below, by extracting helper methods.
+description: Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}`
+  or below, by extracting helper methods.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /refactor-method-complexity-reduce
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- refactoring
-- specification
-- typescript
-- ml
-- prompts
-- refactoring
-- specification
-- typescript
-trigger: /refactor-method-complexity-reduce
-argument-hint: methodName=..., complexityThreshold=15
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /refactor-method-complexity-reduce
+    flags: {}
+    help: Refactor given method `${input:methodName}` to reduce its cognitive complexit...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.

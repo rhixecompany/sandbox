@@ -1,40 +1,47 @@
 ---
 name: setup-nextjs-frontend-stack
 title: Setup Next.js Frontend Stack for an Entity
-description: 'Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions,
-  and Zod schemas for a given entity using TypeScript + Tailwind + Zod.'
+description: 'Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions, and Zod schemas
+  for a given entity using TypeScript + Tailwind + Zod.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /setup-nextjs-frontend-stack
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- frontend
-- ml
-- nextjs
-- prompts
-- setup
-- typescript
-- architecture
-- frontend
-- ml
-- nextjs
-- prompts
-- setup
-- specification
-- typescript
-trigger: /setup-nextjs-frontend-stack
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-nextjs-frontend-stack
+    flags: {}
+    help: 'Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions, and ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- frontend
+- ml
+- nextjs
+- prompts
+- setup
+- typescript
+- specification
+scripts: []
 ## Goal
 
 Scaffold a Next.js (App Router) frontend stack: page, DAL, DTO, actions, and Zod schemas for a given entity using TypeScript + Tailwind + Zod.

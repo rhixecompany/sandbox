@@ -1,51 +1,88 @@
 ---
-name: setup-enhanced
-title: ComicWise — AI Agent Setup & Implementation Guide
-description: Enhanced ComicWise AI agent setup — workflow, implementation strategy,
-  and DRY practices.
+name: setup-enhanced.prompt
+title: Setup Enhanced.Prompt
+description: Auto-generated prompt for /setup-enhanced.prompt
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /setup-enhanced.prompt
 toolsets:
 - file
 - terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-enhanced.prompt
+    flags: {}
+    help: Auto-generated prompt for /setup-enhanced.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
 scripts: []
+---
+name: setup-enhanced
+title: ComicWise — AI Agent Setup & Implementation Guide
+description: Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /setup-enhanced
+toolsets:
+- file
+- terminal
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- agents
-- backend
-- configuration
-- data
-- database
-- frontend
-- ml
-- prompts
-- setup
-- sql
-- typescript
-- workflow
-- agents
-- backend
-- configuration
-- data
-- database
-- frontend
-- linting
-- ml
-- prompts
-- setup
-- sql
-- typescript
-- workflow
-trigger: /setup-enhanced
+formatter: default
 metadata:
-  hermes: {}
----
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-enhanced
+    flags: {}
+    help: Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DR...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- backend
+- configuration
+- data
+- database
+- frontend
+- ml
+- prompts
+- setup
+- sql
+- typescript
+- workflow
+- linting
+scripts: []
 
 ## Goal
 

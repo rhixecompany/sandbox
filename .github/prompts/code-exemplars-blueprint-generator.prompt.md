@@ -1,42 +1,45 @@
 ---
 name: code-exemplars-blueprint-generator
-title: "Code Exemplars Blueprint Generator"
-description: |
-  No description
+title: Code Exemplars Blueprint Generator
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /code-exemplars-blueprint-generator
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: code-architect
     mcp_servers:
-      - ast-grep
-      - filesystem
-      - github
-      - terminal
+    - ast-grep
+    - filesystem
+    - github
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /code-exemplars-blueprint-generator"
+    command: opencode /code-exemplars-blueprint-generator
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:architecture
-  - domain:dev
+- agent-type:hermes
+- complexity:intermediate
+- domain:architecture
+- domain:dev
 scripts: []
----
 ## Goal
 
 Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams.
@@ -206,7 +209,5 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`code-review.prompt.md`](code-review.prompt.md)
-
-
 
 

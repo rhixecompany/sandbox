@@ -1,100 +1,47 @@
-﻿---
-name: csharp-docs
-title: csharp docs
-description: Prompt for csharp-docs
-version: "1.0.0"
-tags: [backend, coding, communication, csharp, documentation]
-trigger: csharp-docs
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: csharp-docs
 title: C# Documentation Best Practices
-description: Ensure that C# types are documented with XML comments and follow best
-  practices for documentation.
+description: Ensure that C# types are documented with XML comments and follow best practices for documentation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /csharp-docs
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- api
-- csharp
-- documentation
-- dotnet
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- api
-- csharp
-- documentation
-- dotnet
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-trigger: /csharp-docs
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: csharp-docs
-title: C# Documentation Best Practices
-description: Ensure that C# types are documented with XML comments and follow best
-  practices for documentation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-docs
+    flags: {}
+    help: Ensure that C# types are documented with XML comments and follow best practic...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- csharp
+- documentation
+- dotnet
+- frontend
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- api
-- csharp
-- documentation
-- dotnet
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- api
-- csharp
-- documentation
-- dotnet
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-trigger: /csharp-docs
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -300,4 +247,3 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-

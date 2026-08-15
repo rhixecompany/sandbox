@@ -1,51 +1,53 @@
 ---
 name: update-implementation-plan
 title: Update Implementation Plan
-description: Create or update an implementation plan with new or updated requirements
-  for features, refactoring, package upgrades, design, or infrastructure.
+description: Create or update an implementation plan with new or updated requirements for features, refactoring,
+  package upgrades, design, or infrastructure.
 version: 2.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-implementation-plan
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - writing-plans
 - plans-and-specs
 - context-map
-formatter: default
-plan: null
 dependencies:
 - skill:writing-plans
 - skill:plans-and-specs
 - skill:context-map
-tags:
-- architecture
-- frontend
-- maintenance
-- migration
-- prompts
-- refactoring
-- specification
-- typescript
-- architecture
-- frontend
-- maintenance
-- migration
-- prompts
-- refactoring
-- specification
-- typescript
-trigger: /update-implementation-plan
+formatter: default
 metadata:
-  hermes: None
-  related_skills:
-  - writing-plans
-  - plans-and-specs
-  - context-map
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-implementation-plan
+    flags: {}
+    help: Create or update an implementation plan with new or updated requirements for ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- frontend
+- maintenance
+- migration
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.

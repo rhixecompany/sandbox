@@ -5,33 +5,40 @@ description: Update Azure Verified Modules (AVM) to latest versions in Bicep fil
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-avm-modules-in-bicep
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- azure
-- maintenance
-- ml
-- prompts
-- specification
-- testing
-- typescript
-- azure
-- maintenance
-- ml
-- prompts
-- specification
-- testing
-- typescript
-trigger: /update-avm-modules-in-bicep
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-avm-modules-in-bicep
+    flags: {}
+    help: Update Azure Verified Modules (AVM) to latest versions in Bicep files.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- azure
+- maintenance
+- ml
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Update Azure Verified Modules (AVM) to latest versions in Bicep files.

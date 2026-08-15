@@ -5,32 +5,40 @@ description: Generate a complete, production-ready application from an OpenAPI s
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /openapi-to-application-code
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- api
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- api
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /openapi-to-application-code
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /openapi-to-application-code
+    flags: {}
+    help: Generate a complete, production-ready application from an OpenAPI specification.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Generate a complete, production-ready application from an OpenAPI specification.

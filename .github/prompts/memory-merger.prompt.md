@@ -1,34 +1,43 @@
 ---
 name: memory-merger
 title: Memory Merger
-description: 'Merges mature lessons from a domain memory file into its instruction
-  file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default),
-  `user`, `workspace`, or `ws`.'
+description: 'Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger
+  >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /memory-merger
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /memory-merger
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /memory-merger
+    flags: {}
+    help: Merges mature lessons from a domain memory file into its instruction file. Sy...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`.

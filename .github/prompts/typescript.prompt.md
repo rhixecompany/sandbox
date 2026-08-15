@@ -1,43 +1,47 @@
 ---
 name: typescript
 title: TypeScript & Next.js
-description: Comprehensive TypeScript and Next.js code quality prompt aligned to repository
-  standards.
+description: Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /typescript
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- backend
-- configuration
-- frontend
-- ml
-- nextjs
-- prompts
-- skills
-- typescript
-- architecture
-- backend
-- configuration
-- frontend
-- ml
-- nextjs
-- prompts
-- skills
-- typescript
-trigger: /typescript
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typescript
+    flags: {}
+    help: Comprehensive TypeScript and Next.js code quality prompt aligned to repositor...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- backend
+- configuration
+- frontend
+- ml
+- nextjs
+- prompts
+- skills
+- typescript
+scripts: []
 ## Goal
 
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.

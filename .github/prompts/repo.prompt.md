@@ -1,20 +1,54 @@
 ---
+name: repo.prompt
+title: Repo.Prompt
+description: Auto-generated prompt for /repo.prompt
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /repo.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo.prompt
+    flags: {}
+    help: Auto-generated prompt for /repo.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
-description: 'Research all 17 projects via delegated sub-prompts: web search for similar
-  projects, guides, cheatsheets; create or update RESEARCH_REPORT.md per project in
-  crisp markdown. Delegates web research to web-research-pipeline.prompt.md and post-research
-  ops to repo-management.prompt.md. Also includes Quick Repo Onboarding (Q1-Q4): summarize
-  repo in 5 bullets, find main entrypoint, check current directory, set up GitHub
-  PR workflow, check disk usage.'
+description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides,
+  cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research
+  to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes
+  Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory,
+  set up GitHub PR workflow, check disk usage.'
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets: null
-scripts: []
-skills: null
-formatter: default
-plan: null
+trigger: /repo
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - prompt:context-map
 - prompt:repo-management
@@ -43,7 +77,27 @@ dependencies:
 - tool:mcp-memory
 - tool:mcp-sequential-thinking
 - tool:mcp-tavily
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo
+    flags: {}
+    help: 'Research all 17 projects via delegated sub-prompts: web search for similar pr...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - architecture
 - frontend
 - git
@@ -54,14 +108,7 @@ tags:
 - security
 - typescript
 - workflow
-trigger: /repo
-metadata:
-  hermes: {}
-mode: agent
-system: You are a research orchestrator. Delegate web research to web-research-pipeline
-  sub-prompt. Stop at Phase 4 (verification). Do not start branch normalization or
-  migration — those live in repo-management.prompt.md.
----
+scripts: []
 
 ## Goal
 

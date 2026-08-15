@@ -1,17 +1,17 @@
 ---
 name: prompt-management
 title: Prompt Management
-description: List, triage, catalog, consolidate, dedupe, template, validate, and verify
-  all .prompt.md artifacts in the prompts/ tree. Extract repeated reusable context
-  into shared markdown, update prompts to use shared templates, create missing skills/scripts
-  if they do not exist, and then declare the pipeline clean or continue remediation.
+description: List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md
+  artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts
+  to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline
+  clean or continue remediation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /prompt-management
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - brainstorming
 - plans-and-specs
@@ -25,8 +25,6 @@ skills:
 - writing-skills
 - verification-before-completion
 - test-skill
-formatter: default
-plan: null
 dependencies:
 - skill:brainstorming
 - skill:plans-and-specs
@@ -43,7 +41,27 @@ dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
 - prompt:agents-fix.prompt.md
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /prompt-management
+    flags: {}
+    help: List, triage, catalog, consolidate, dedupe, template, validate, and verify al...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - debugging
 - fix
 - git
@@ -52,18 +70,7 @@ tags:
 - prompts
 - skills
 - typescript
-- debugging
-- git
-- markdown
-- ml
-- prompts
-- skills
-- typescript
-trigger: /prompt-management
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Manage the whole `.github/prompts/` prompt lifecycle end to end: catalog, dedupe, consolidate reusable context into crisp shared markdown templates, update every affected prompt to use those templates, ensure all prompt references resolve, create any missing skills or scripts referenced by prompts, and validate the prompt inventory is clean.

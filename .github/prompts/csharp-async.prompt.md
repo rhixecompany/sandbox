@@ -1,25 +1,3 @@
-﻿---
-name: csharp-async
-title: csharp async
-description: Prompt for csharp-async
-version: "1.0.0"
-tags: [advanced, async-await, backend, coding, csharp]
-trigger: csharp-async
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: csharp-async
 title: C# Async Programming Best Practices
@@ -27,62 +5,41 @@ description: Get best practices for C# async programming.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /csharp-async
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- fix
-- prompts
-- typescript
-- csharp
-- data
-- dotnet
-- fix
-- performance
-- prompts
-- typescript
-trigger: /csharp-async
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: csharp-async
-title: C# Async Programming Best Practices
-description: Get best practices for C# async programming.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-async
+    flags: {}
+    help: Get best practices for C# async programming.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- csharp
+- data
+- dotnet
+- fix
+- prompts
+- typescript
+- performance
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- fix
-- prompts
-- typescript
-- csharp
-- data
-- dotnet
-- fix
-- performance
-- prompts
-- typescript
-trigger: /csharp-async
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -273,4 +230,3 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-

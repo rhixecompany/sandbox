@@ -1,86 +1,45 @@
-﻿---
-name: git-flow-branch-creator
-title: git flow branch creator
-description: Prompt for git-flow-branch-creator
-version: "1.0.0"
-tags: [automation, devops, git, tool, workflow]
-trigger: git-flow-branch-creator
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: git-flow-branch-creator
 title: Git Flow Branch Creator
-description: Intelligent Git Flow branch creator that analyzes git status/diff and
-  creates appropriate branches following the nvie Git Flow branching model.
+description: Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate
+  branches following the nvie Git Flow branching model.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /git-flow-branch-creator
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- git
-- ml
-- prompts
-- specification
-- typescript
-- git
-- linting
-- ml
-- prompts
-- specification
-- typescript
-trigger: /git-flow-branch-creator
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: git-flow-branch-creator
-title: Git Flow Branch Creator
-description: Intelligent Git Flow branch creator that analyzes git status/diff and
-  creates appropriate branches following the nvie Git Flow branching model.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /git-flow-branch-creator
+    flags: {}
+    help: Intelligent Git Flow branch creator that analyzes git status/diff and creates...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- git
+- ml
+- prompts
+- specification
+- typescript
+- linting
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- git
-- ml
-- prompts
-- specification
-- typescript
-- git
-- linting
-- ml
-- prompts
-- specification
-- typescript
-trigger: /git-flow-branch-creator
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -236,4 +195,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`git-multi-repo-orchestration.prompt.md`](git-multi-repo-orchestration.prompt.md)
-

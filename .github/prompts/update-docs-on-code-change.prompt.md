@@ -1,45 +1,49 @@
 ---
 name: update-docs-on-code-change
 title: Update Docs on Code Change
-description: Comprehensive prompt for synchronizing documentation whenever code changes
-  modify behavior, APIs, or workflows.
+description: Comprehensive prompt for synchronizing documentation whenever code changes modify behavior,
+  APIs, or workflows.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-docs-on-code-change
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- api
-- configuration
-- documentation
-- frontend
-- maintenance
-- ml
-- prompts
-- skills
-- typescript
-- workflow
-- api
-- configuration
-- documentation
-- frontend
-- maintenance
-- ml
-- prompts
-- skills
-- typescript
-- workflow
-trigger: /update-docs-on-code-change
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-docs-on-code-change
+    flags: {}
+    help: Comprehensive prompt for synchronizing documentation whenever code changes mo...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- configuration
+- documentation
+- frontend
+- maintenance
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.

@@ -5,35 +5,42 @@ description: Generate unit or E2E tests for a component or module.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /write-tests
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- testing
-- typescript
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- testing
-- typescript
-trigger: /write-tests
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /write-tests
+    flags: {}
+    help: Generate unit or E2E tests for a component or module.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Generate unit or E2E tests for a component or module.

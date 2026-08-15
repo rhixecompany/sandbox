@@ -1,94 +1,46 @@
-﻿---
-name: declarative-agents
-title: declarative agents
-description: Prompt for declarative-agents
-version: "1.0.0"
-tags: [advanced, agents, automation, copilot, m365]
-trigger: declarative-agents
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: declarative-agents
 title: Microsoft 365 Declarative Agents Development Kit
-description: Complete development kit for Microsoft 365 Copilot declarative agents
-  with three comprehensive workflows (basic, advanced, validation), TypeSpec support,
-  and Microsoft 365 Agents Toolkit integration.
+description: Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive
+  workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /declarative-agents
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /declarative-agents
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: declarative-agents
-title: Microsoft 365 Declarative Agents Development Kit
-description: Complete development kit for Microsoft 365 Copilot declarative agents
-  with three comprehensive workflows (basic, advanced, validation), TypeSpec support,
-  and Microsoft 365 Agents Toolkit integration.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /declarative-agents
+    flags: {}
+    help: Complete development kit for Microsoft 365 Copilot declarative agents with th...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /declarative-agents
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -255,4 +207,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

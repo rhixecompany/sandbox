@@ -1,41 +1,44 @@
 ---
 name: breakdown-epic-pm
-title: "Epic Product Requirements Document (PRD) Prompt"
-description: |
-  No description
+title: Epic Product Requirements Document (PRD) Prompt
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /breakdown-epic-pm
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /breakdown-epic-pm"
+    command: opencode /breakdown-epic-pm
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:content
-  - domain:planning
-  - language:typescript
+- agent-type:hermes
+- complexity:intermediate
+- domain:content
+- domain:planning
+- language:typescript
 scripts: []
----
 ## Goal
 
 Prompt for creating an Epic Product Requirements Document (PRD) for a new epic. This PRD will be used as input for generating a technical architecture specification.
@@ -204,7 +207,5 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
-
-
 
 
