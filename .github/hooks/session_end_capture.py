@@ -322,39 +322,26 @@ def build_capture(session_id: str, payload: dict, end_iso: str) -> dict:
 
     cwd = json_get(payload, "cwd") or json_get(payload, "working_dir") or row.get("cwd", "")
     started_at = row.get("started_at")
-    ended_at = row.get("ended_at")
     changelog = capture_changelog(cwd, started_at)
 
     status = _resolve_status(payload)
-    
-    # Compute duration from session row timestamps (epoch floats)
-    duration_seconds = None
-    if started_at is not None and ended_at is not None:
-        try:
-            duration_seconds = int(float(ended_at) - float(started_at))
-        except (ValueError, TypeError):
-            pass
-    
-    # Compute turns from message count / 2 (rough estimate: user+assistant pairs)
-    turns = None
-    msg_count = row.get("message_count")
-    if msg_count is not None and isinstance(msg_count, int):
-        turns = max(1, msg_count // 2)
+    duration_raw = json_get(payload, "duration_seconds", "")
+    turns_raw = json_get(payload, "turns", "")
 
     return {
         "event": "session_end_capture",
         "session_id": session_id,
         "captured_at": end_iso,
         "status": status,
-        "duration_seconds": duration_seconds,
-        "turns": turns,
+        "duration_seconds": int(duration_raw) if str(duration_raw).isdigit() else None,
+        "turns": int(turns_raw) if str(turns_raw).isdigit() else None,
         "session": {
             "title": row.get("title") or prompts["first_user_message"] or "",
             "source": row.get("source", ""),
             "user_id": row.get("user_id", ""),
             "model": row.get("model", ""),
             "started_at": _fmt_ts(started_at),
-            "ended_at": _fmt_ts(ended_at) or end_iso,
+            "ended_at": _fmt_ts(row.get("ended_at")) or end_iso,
             "end_reason": row.get("end_reason", ""),
             "message_count": row.get("message_count"),
             "tool_call_count": row.get("tool_call_count"),
