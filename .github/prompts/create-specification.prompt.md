@@ -55,6 +55,40 @@ trigger: /create-specification
 dependencies: []
 metadata:
   hermes: {}
+name: create-specification
+title: Create Specification
+description: Create a new specification file for the solution, optimized for Generative
+  AI consumption.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- documentation
+- frontend
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
+- documentation
+- frontend
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
+trigger: /create-specification
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

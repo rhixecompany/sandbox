@@ -52,6 +52,37 @@ tags:
 trigger: /dotnet-upgrade
 metadata:
   hermes: {}
+name: dotnet-upgrade
+title: .Net Upgrade Analysis Prompts
+description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis
+  and execution.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+dependencies: []
+tags:
+- audit
+- csharp
+- dotnet
+- migration
+- prompts
+- typescript
+- audit
+- csharp
+- dotnet
+- migration
+- prompts
+- typescript
+trigger: /dotnet-upgrade
+metadata:
+  hermes: {}
 ---
 
 ## Goal

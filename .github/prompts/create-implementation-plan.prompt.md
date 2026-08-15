@@ -55,6 +55,40 @@ tags:
 trigger: /create-implementation-plan
 metadata:
   hermes: {}
+name: create-implementation-plan
+title: Create Implementation Plan
+description: Create a new implementation plan file for new features, refactoring existing
+  code or upgrading packages, design, architecture or infrastructure.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+- browser
+- todo
+scripts: []
+skills: []
+formatter: default
+plan: null
+dependencies: []
+tags:
+- architecture
+- generator
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+- architecture
+- generator
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+trigger: /create-implementation-plan
+metadata:
+  hermes: {}
 ---
 
 ## Goal

@@ -54,6 +54,39 @@ trigger: /containerize-aspnet-framework
 dependencies: []
 metadata:
   hermes: {}
+name: containerize-aspnet-framework
+title: ASP.NET .NET Framework Containerization Prompt
+description: Containerize an ASP.NET .NET Framework project by creating Dockerfile
+  and .dockerfile files customized for the project.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- docker
+- frontend
+- ml
+- prompts
+- specification
+- windows
+- docker
+- frontend
+- ml
+- prompts
+- specification
+- windows
+- csharp
+- dotnet
+trigger: /containerize-aspnet-framework
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

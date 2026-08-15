@@ -60,6 +60,45 @@ trigger: /generate-custom-instructions-from-codebase
 dependencies: []
 metadata:
   hermes: {}
+name: generate-custom-instructions-from-codebase
+title: Migration and Code Evolution Instructions Generator
+description: Migration and code evolution instructions generator for GitHub Copilot.
+  Analyzes differences between two project versions (branches, commits, or releases)
+  to create precise instructions allowing Copilot to maintain consistency during technology
+  migrations, major refactoring, or framework version upgrades.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- ai-assistant
+- generator
+- git
+- migration
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+- ai-assistant
+- generator
+- git
+- migration
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+trigger: /generate-custom-instructions-from-codebase
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

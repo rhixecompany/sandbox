@@ -52,6 +52,37 @@ trigger: /devops-rollout-plan
 dependencies: []
 metadata:
   hermes: {}
+name: devops-rollout-plan
+title: DevOps Rollout Plan Generator
+description: Generate comprehensive rollout plans with preflight checks, step-by-step
+  deployment, verification signals, rollback procedures, and communication plans for
+  infrastructure and application changes.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- deployment
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- deployment
+- generator
+- ml
+- prompts
+- specification
+- typescript
+trigger: /devops-rollout-plan
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

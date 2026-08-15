@@ -50,6 +50,35 @@ trigger: /csharp-xunit
 dependencies: []
 metadata:
   hermes: {}
+name: csharp-xunit
+title: XUnit Best Practices
+description: Get best practices for XUnit unit testing, including data-driven tests.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
+trigger: /csharp-xunit
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

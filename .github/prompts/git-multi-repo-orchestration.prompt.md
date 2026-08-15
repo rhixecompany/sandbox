@@ -58,6 +58,43 @@ tags:
 trigger: /git-multi-repo-orchestration
 metadata:
   hermes: {}
+name: git-multi-repo-orchestration
+title: Git Multi-Repo Orchestration
+description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
+  PRs (gh pr create, review-then-merge), merge directly into development, and sync
+  to production across all repos in ./projects.
+version: 1.0.0
+license: MIT
+author: Alexa
+toolsets: null
+scripts: []
+skills: null
+formatter: default
+plan: plans/git-multi-repo-orchestration.md
+dependencies:
+- skill:gh-cli
+- skill:git-commit
+- skill:git-helper
+- skill:git-submodule-workflow
+- skill:github-pr-workflow
+- skill:github-repo-management
+- skill:github-code-review
+- skill:finishing-a-development-branch
+- skill:git-history-preserving-migration
+- skill:workspace-audit
+- skill:repo-management
+- tool:mcp-github
+tags:
+- audit
+- frontend
+- git
+- prompts
+- skills
+- typescript
+- workflow
+trigger: /git-multi-repo-orchestration
+metadata:
+  hermes: {}
 ---
 
 ## Goal

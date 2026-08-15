@@ -55,6 +55,40 @@ trigger: /create-architectural-decision-record
 dependencies: []
 metadata:
   hermes: {}
+name: create-architectural-decision-record
+title: Create Architectural Decision Record
+description: Create an Architectural Decision Record (ADR) document for AI-optimized
+  decision documentation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- architecture
+- documentation
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
+- architecture
+- documentation
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
+trigger: /create-architectural-decision-record
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

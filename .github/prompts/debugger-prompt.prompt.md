@@ -70,6 +70,55 @@ tags:
 trigger: /debugger-prompt
 metadata:
   hermes: {}
+name: debugger-prompt
+title: Debugger Prompt
+description: Use when needing to debugger prompt.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+- terminal
+- file
+- code_execution
+scripts: []
+skills: []
+formatter: default
+plan: plans/debugger.md
+dependencies: []
+tags:
+- agents
+- ai-assistant
+- backend
+- data
+- database
+- debugging
+- fix
+- frontend
+- ml
+- nextjs
+- prompts
+- sql
+- typescript
+- agents
+- ai-assistant
+- backend
+- data
+- database
+- debugging
+- fix
+- frontend
+- ml
+- nextjs
+- prompts
+- sql
+- typescript
+- errors
+- warnings
+- linting
+trigger: /debugger-prompt
+metadata:
+  hermes: {}
 ---
 
 ## Goal

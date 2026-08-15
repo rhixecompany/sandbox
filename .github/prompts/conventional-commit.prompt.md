@@ -54,6 +54,39 @@ trigger: /conventional-commit
 dependencies: []
 metadata:
   hermes: {}
+name: conventional-commit
+title: Conventional Commit
+description: Prompt and workflow for generating conventional commit messages using
+  a structured XML format. Guides users to create standardized, descriptive commit
+  messages in line with the Conventional Commits specification, including instructions,
+  examples, and validation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+trigger: /conventional-commit
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal
