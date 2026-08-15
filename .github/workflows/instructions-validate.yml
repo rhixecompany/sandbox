@@ -1,0 +1,63 @@
+name: Instructions validation
+
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  validate:
+    name: Validate instruction files
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CI: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml ruamel.yaml pytest
+
+      - name: Install markdownlint
+        run: |
+          npm install -g markdownlint-cli@0.33.0
+
+      - name: Run frontmatter validator (from session-state)
+        run: |
+          if [ -f session-state/validator.py ]; then
+            python session-state/validator.py
+          elif [ -f session-state/validate_instructions.py ]; then
+            python session-state/validate_instructions.py
+          else
+            echo "Validator script not found in session-state" >&2
+            exit 1
+          fi
+
+      - name: Run markdownlint on repository Markdown files
+        run: |
+          # find tracked markdown files and lint them
+          git ls-files "*.md" "**/*.md" | xargs -r markdownlint || exit 1
+
+      - name: Run smoke-tests (mock harness) (from session-state)
+        run: |
+          if [ -f session-state/smoke_tests.py ]; then
+            pytest -q session-state/smoke_tests.py
+          elif [ -f session-state/smoke-tests.py ]; then
+            pytest -q session-state/smoke-tests.py
+          else
+            echo "Smoke tests not found in session-state" >&2
+            exit 1
+          fi
