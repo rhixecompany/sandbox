@@ -56,6 +56,41 @@ trigger: /containerize-aspnetcore
 dependencies: []
 metadata:
   hermes: {}
+name: containerize-aspnetcore
+title: ASP.NET Core Docker Containerization Prompt
+description: Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile
+  files customized for the project.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- docker
+- frontend
+- linux
+- ml
+- prompts
+- specification
+- docker
+- frontend
+- linux
+- ml
+- performance
+- prompts
+- security
+- specification
+- csharp
+- dotnet
+trigger: /containerize-aspnetcore
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

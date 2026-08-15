@@ -59,6 +59,44 @@ tags:
 trigger: /dataverse-python-usecase-builder
 metadata:
   hermes: {}
+name: dataverse-python-usecase-builder
+title: Dataverse Python   Use Case Solution Builder
+description: Generate complete solutions for specific Dataverse SDK use cases with
+  architecture recommendations.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+dependencies: []
+tags:
+- architecture
+- data
+- frontend
+- generator
+- ml
+- prompts
+- python
+- specification
+- typescript
+- architecture
+- data
+- frontend
+- generator
+- ml
+- performance
+- prompts
+- python
+- specification
+- typescript
+trigger: /dataverse-python-usecase-builder
+metadata:
+  hermes: {}
 ---
 
 ## Goal

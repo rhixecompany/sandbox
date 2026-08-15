@@ -63,6 +63,48 @@ trigger: /folder-structure-blueprint-generator
 dependencies: []
 metadata:
   hermes: {}
+name: folder-structure-blueprint-generator
+title: Project Folder Structure Blueprint Generator
+description: Comprehensive technology-agnostic prompt for analyzing and documenting
+  project folder structures. Auto-detects project types (.NET, Java, React, Angular,
+  Python, Node.js, Flutter), generates detailed blueprints with visualization options,
+  naming conventions, file placement patterns, and extension templates for maintaining
+  consistent code organization across diverse technology stacks.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- architecture
+- generator
+- java
+- javascript
+- ml
+- prompts
+- python
+- react
+- typescript
+- architecture
+- generator
+- java
+- javascript
+- ml
+- prompts
+- python
+- react
+- typescript
+- csharp
+- dotnet
+trigger: /folder-structure-blueprint-generator
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

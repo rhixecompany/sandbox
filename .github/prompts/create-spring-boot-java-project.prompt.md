@@ -50,6 +50,35 @@ trigger: /create-spring-boot-java-project
 dependencies: []
 metadata:
   hermes: {}
+name: create-spring-boot-java-project
+title: Create Spring Boot Java project prompt
+description: Create Spring Boot Java Project Skeleton.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- docker
+- generator
+- java
+- prompts
+- spring
+- docker
+- generator
+- java
+- prompts
+- spring
+trigger: /create-spring-boot-java-project
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

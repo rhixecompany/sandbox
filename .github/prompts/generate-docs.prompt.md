@@ -56,6 +56,41 @@ tags:
 trigger: /generate-docs
 metadata:
   hermes: {}
+name: generate-docs
+title: Generate Docs
+description: Generate documentation for code or APIs.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+- browser
+- todo
+scripts: []
+skills: []
+formatter: default
+plan: null
+dependencies: []
+tags:
+- api
+- documentation
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
+- api
+- documentation
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
+trigger: /generate-docs
+metadata:
+  hermes: {}
 ---
 
 ## Goal

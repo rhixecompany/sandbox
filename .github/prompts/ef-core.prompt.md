@@ -47,6 +47,32 @@ trigger: /ef-core
 dependencies: []
 metadata:
   hermes: {}
+name: ef-core
+title: Entity Framework Core Best Practices
+description: Get best practices for Entity Framework Core.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- ml
+- prompts
+- specification
+- typescript
+- ml
+- prompts
+- specification
+- typescript
+trigger: /ef-core
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

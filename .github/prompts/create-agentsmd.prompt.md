@@ -51,6 +51,36 @@ trigger: /create-agentsmd
 dependencies: []
 metadata:
   hermes: {}
+name: create-agentsmd
+title: Create high‑quality AGENTS.md file
+description: Prompt for generating an AGENTS.md file for a repository.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- agents
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- agents
+- generator
+- ml
+- prompts
+- specification
+- typescript
+trigger: /create-agentsmd
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

@@ -60,6 +60,45 @@ trigger: /cosmosdb-datamodeling
 dependencies: []
 metadata:
   hermes: {}
+name: cosmosdb-datamodeling
+title: Azure Cosmos DB NoSQL Data Modeling Expert System Prompt
+description: 'Step-by-step guide for capturing key application requirements for NoSQL
+  use-case and produce Azure Cosmos DB Data NoSQL Model design using best practices
+  and common patterns, artifacts_produced: "cosmosdb_requirements.md" file and "cosmosdb_data_model.md"
+  file.'
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- architecture
+- azure
+- data
+- database
+- frontend
+- ml
+- prompts
+- sql
+- typescript
+- architecture
+- azure
+- data
+- database
+- frontend
+- ml
+- prompts
+- sql
+- typescript
+trigger: /cosmosdb-datamodeling
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

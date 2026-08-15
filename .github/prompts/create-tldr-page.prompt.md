@@ -54,6 +54,39 @@ trigger: /create-tldr-page
 dependencies: []
 metadata:
   hermes: {}
+name: create-tldr-page
+title: Create TLDR Page
+description: Create a tldr page from documentation URLs and command examples, requiring
+  both URL and command name.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- typescript
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- typescript
+trigger: /create-tldr-page
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

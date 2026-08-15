@@ -51,6 +51,36 @@ trigger: /create-github-issue-feature-from-specification
 dependencies: []
 metadata:
   hermes: {}
+name: create-github-issue-feature-from-specification
+title: Create GitHub Issue from Specification
+description: Create GitHub Issue for feature request from specification file using
+  feature_request.yml template.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
+trigger: /create-github-issue-feature-from-specification
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

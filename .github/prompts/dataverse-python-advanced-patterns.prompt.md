@@ -53,6 +53,38 @@ tags:
 trigger: /dataverse-python-advanced-patterns
 metadata:
   hermes: {}
+name: dataverse-python-advanced-patterns
+title: Dataverse Python Advanced Patterns
+description: Generate production code for Dataverse SDK using advanced patterns, error
+  handling, and optimization techniques.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+dependencies: []
+tags:
+- data
+- database
+- generator
+- prompts
+- python
+- sql
+- data
+- database
+- generator
+- prompts
+- python
+- specification
+- sql
+trigger: /dataverse-python-advanced-patterns
+metadata:
+  hermes: {}
 ---
 
 ## Goal

@@ -55,6 +55,40 @@ metadata:
   hermes: null
 formatter: default
 plan: ''
+trigger: /comprehensive-prompt-enhancer
+name: comprehensive-prompt-enhancer
+title: Comprehensive Prompt Library Enhancer
+description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using
+  DRY principle, best practices, and all appropriate structural sections: personas,
+  profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals,
+  checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures
+  each prompt and all its files are verified, validated.'
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets: null
+scripts: null
+skills: null
+dependencies:
+- skill:using-superpowers
+- skill:subagent-driven-development
+- skill:brainstorming
+- skill:prompt-engineering-patterns
+- skill:prompt-management
+- skill:skill-judge
+tags:
+- audit
+- backend
+- git
+- mcp
+- ml
+- prompts
+- skills
+- typescript - prompts - enhancement - library
+metadata:
+  hermes: null
+formatter: default
+plan: ''
 ---
 
 ## Goal

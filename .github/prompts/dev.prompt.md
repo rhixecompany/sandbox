@@ -55,6 +55,40 @@ trigger: /dev
 dependencies: []
 metadata:
   hermes: {}
+name: dev
+title: Task1
+description: The purpose of the prompt is to get my codebase optimized and refactored.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- configuration
+- debugging
+- performance
+- playwright
+- prompts
+- refactoring
+- testing
+- typescript
+- configuration
+- debugging
+- performance
+- playwright
+- prompts
+- refactoring
+- testing
+- typescript
+trigger: /dev
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

@@ -52,6 +52,37 @@ trigger: /fedora-linux-triage
 dependencies: []
 metadata:
   hermes: {}
+name: fedora-linux-triage
+title: Fedora Linux Triage
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware
+  guidance.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- debugging
+- fix
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+trigger: /fedora-linux-triage
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

@@ -54,6 +54,39 @@ trigger: /dotnet-best-practices
 dependencies: []
 metadata:
   hermes: {}
+name: dotnet-best-practices
+title: .NET/C# Best Practices
+description: Ensure .NET/C# code meets best practices for the solution/project.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- csharp
+- documentation
+- dotnet
+- ml
+- prompts
+- specification
+- typescript
+- architecture
+- csharp
+- documentation
+- dotnet
+- ml
+- prompts
+- specification
+- typescript
+trigger: /dotnet-best-practices
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

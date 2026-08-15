@@ -50,6 +50,35 @@ trigger: /create-spring-boot-kotlin-project
 dependencies: []
 metadata:
   hermes: {}
+name: create-spring-boot-kotlin-project
+title: Create Spring Boot Kotlin project prompt
+description: Create Spring Boot Kotlin Project Skeleton.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- file
+- terminal
+- web
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- docker
+- generator
+- java
+- prompts
+- spring
+- docker
+- generator
+- java
+- prompts
+- spring
+trigger: /create-spring-boot-kotlin-project
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal

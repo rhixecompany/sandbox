@@ -58,6 +58,43 @@ trigger: /csharp-docs
 dependencies: []
 metadata:
   hermes: {}
+name: csharp-docs
+title: C# Documentation Best Practices
+description: Ensure that C# types are documented with XML comments and follow best
+  practices for documentation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+toolsets:
+- terminal
+- file
+scripts: []
+skills: []
+formatter: default
+plan: null
+tags:
+- api
+- csharp
+- documentation
+- dotnet
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- api
+- csharp
+- documentation
+- dotnet
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+trigger: /csharp-docs
+dependencies: []
+metadata:
+  hermes: {}
 ---
 
 ## Goal
