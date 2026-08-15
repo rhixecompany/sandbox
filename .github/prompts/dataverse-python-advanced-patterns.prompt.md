@@ -1,3 +1,26 @@
+﻿---
+name: dataverse-python-advanced-patterns
+title: dataverse python advanced patterns
+description: Prompt for dataverse-python-advanced-patterns
+version: "1.0.0"
+tags: []
+trigger: dataverse-python-advanced-patterns
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dataverse-python-advanced-patterns
 title: Dataverse Python Advanced Patterns
@@ -183,3 +206,4 @@ Same-family prompts:
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
+

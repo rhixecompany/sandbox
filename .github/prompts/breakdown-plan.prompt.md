@@ -1,44 +1,41 @@
 ---
 name: breakdown-plan
-title: GitHub Issue Planning & Project Automation Prompt
-description: Issue Planning and Automation prompt that generates comprehensive project
-  plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities,
-  and automated tracking.
+title: "GitHub Issue Planning & Project Automation Prompt"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /breakdown-plan
 toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- subagent-driven-development
+  - file
+  - terminal
+skills: []
+dependencies: []
 formatter: default
 plan: null
-dependencies:
-- skill:subagent-driven-development
-tags:
-- generator
-- git
-- ml
-- planning
-- prompts
-- specification
-- testing
-- typescript
-- generator
-- git
-- ml
-- planning
-- prompts
-- specification
-- testing
-- typescript
-trigger: /breakdown-plan
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /breakdown-plan"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:debug
+  - domain:planning
+  - tool:github
+scripts: []
 ---
-
 ## Goal
 
 Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
@@ -445,3 +442,7 @@ Same-family prompts:
 - [`breakdown-feature-implementation.prompt.md`](breakdown-feature-implementation.prompt.md)
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
+
+
+
+

@@ -1,3 +1,26 @@
+﻿---
+name: dataverse-python-usecase-builder
+title: dataverse python usecase builder
+description: Prompt for dataverse-python-usecase-builder
+version: "1.0.0"
+tags: []
+trigger: dataverse-python-usecase-builder
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dataverse-python-usecase-builder
 title: Dataverse Python   Use Case Solution Builder
@@ -248,3 +271,4 @@ Same-family prompts:
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
+

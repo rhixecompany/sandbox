@@ -1,3 +1,26 @@
+﻿---
+name: csharp-async
+title: csharp async
+description: Prompt for csharp-async
+version: "1.0.0"
+tags: []
+trigger: csharp-async
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: csharp-async
 title: C# Async Programming Best Practices
@@ -220,3 +243,4 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+

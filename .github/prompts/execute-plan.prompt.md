@@ -1,3 +1,26 @@
+﻿---
+name: execute-plan
+title: execute plan
+description: Prompt for execute-plan
+version: "1.0.0"
+tags: []
+trigger: execute-plan
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: execute-plan
 title: Execute Plan
@@ -185,3 +208,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`execute-all-prompts.prompt.md`](execute-all-prompts.prompt.md)
+

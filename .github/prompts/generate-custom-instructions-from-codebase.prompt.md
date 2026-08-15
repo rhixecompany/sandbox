@@ -1,3 +1,26 @@
+﻿---
+name: generate-custom-instructions-from-codebase
+title: generate custom instructions from codebase
+description: Prompt for generate-custom-instructions-from-codebase
+version: "1.0.0"
+tags: []
+trigger: generate-custom-instructions-from-codebase
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: generate-custom-instructions-from-codebase
 title: Migration and Code Evolution Instructions Generator
@@ -291,3 +314,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`generate-docs.prompt.md`](generate-docs.prompt.md)
+

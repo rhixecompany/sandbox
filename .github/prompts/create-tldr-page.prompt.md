@@ -1,3 +1,26 @@
+﻿---
+name: create-tldr-page
+title: create tldr page
+description: Prompt for create-tldr-page
+version: "1.0.0"
+tags: []
+trigger: create-tldr-page
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-tldr-page
 title: Create TLDR Page
@@ -263,3 +286,4 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
+

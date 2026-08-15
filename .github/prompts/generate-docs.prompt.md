@@ -1,3 +1,26 @@
+﻿---
+name: generate-docs
+title: generate docs
+description: Prompt for generate-docs
+version: "1.0.0"
+tags: []
+trigger: generate-docs
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: generate-docs
 title: Generate Docs
@@ -189,3 +212,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`generate-custom-instructions-from-codebase.prompt.md`](generate-custom-instructions-from-codebase.prompt.md)
+

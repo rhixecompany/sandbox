@@ -1,3 +1,26 @@
+﻿---
+name: create-spring-boot-kotlin-project
+title: create spring boot kotlin project
+description: Prompt for create-spring-boot-kotlin-project
+version: "1.0.0"
+tags: []
+trigger: create-spring-boot-kotlin-project
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-spring-boot-kotlin-project
 title: Create Spring Boot Kotlin project prompt
@@ -243,3 +266,4 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+

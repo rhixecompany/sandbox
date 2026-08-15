@@ -1,3 +1,26 @@
+﻿---
+name: documentation
+title: documentation
+description: Prompt for documentation
+version: "1.0.0"
+tags: []
+trigger: documentation
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: documentation
 title: Documentation
@@ -191,3 +214,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`documentation-writer.prompt.md`](documentation-writer.prompt.md)
+

@@ -1,3 +1,26 @@
+﻿---
+name: finalize-agent-prompt
+title: finalize agent prompt
+description: Prompt for finalize-agent-prompt
+version: "1.0.0"
+tags: []
+trigger: finalize-agent-prompt
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: finalize-agent-prompt
 title: Finalize Agent Prompt
@@ -193,3 +216,4 @@ Same-family prompts:
 
 - [`multi-agent-research-template.prompt.md`](multi-agent-research-template.prompt.md)
 - [`refresh-agent-inventory.prompt.md`](refresh-agent-inventory.prompt.md)
+

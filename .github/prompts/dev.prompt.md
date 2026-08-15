@@ -1,3 +1,26 @@
+﻿---
+name: dev
+title: dev
+description: Prompt for dev
+version: "1.0.0"
+tags: []
+trigger: dev
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: dev
 title: Task1
@@ -190,3 +213,4 @@ Same-family prompts:
 
 - [`dev-imp.prompt.md`](dev-imp.prompt.md)
 - [`dev-init.prompt.md`](dev-init.prompt.md)
+

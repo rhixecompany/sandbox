@@ -1,3 +1,26 @@
+﻿---
+name: csharp-mstest
+title: csharp mstest
+description: Prompt for csharp-mstest
+version: "1.0.0"
+tags: []
+trigger: csharp-mstest
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: csharp-mstest
 title: MSTest Best Practices (MSTest 3.x/4.x)
@@ -247,3 +270,4 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+

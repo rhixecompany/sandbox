@@ -1,43 +1,41 @@
 ---
 name: bigquery-pipeline-audit
-title: 'BigQuery Pipeline Audit: Cost, Safety and Production Readiness'
-description: Audits Python + BigQuery pipelines for cost safety, idempotency, and
-  production readiness. Returns a structured report with exact patch locations.
+title: "BigQuery Pipeline Audit: Cost, Safety and Production Readiness"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /bigquery-pipeline-audit
 toolsets:
-- web
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- api
-- audit
-- database
-- ml
-- prompts
-- python
-- security
-- sql
-- typescript
-- api
-- audit
-- configuration
-- database
-- ml
-- prompts
-- python
-- security
-- sql
-- typescript
-trigger: /bigquery-pipeline-audit
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: research-analyst
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /bigquery-pipeline-audit"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:advanced
+  - domain:devops
+  - domain:research
+  - tool:gcp
+scripts: []
 ---
-
 ## Goal
 
 Audits Python + BigQuery pipelines for cost safety, idempotency, and production readiness. Returns a structured report with exact patch locations.
@@ -215,3 +213,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+
+

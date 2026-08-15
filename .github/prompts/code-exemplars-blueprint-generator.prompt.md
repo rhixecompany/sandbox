@@ -1,52 +1,42 @@
 ---
 name: code-exemplars-blueprint-generator
-title: Code Exemplars Blueprint Generator
-description: Technology-agnostic prompt generator that creates customizable AI prompts
-  for scanning codebases and identifying high-quality code exemplars. Supports multiple
-  programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python)
-  with configurable analysis depth, categorization methods, and documentation formats
-  to establish coding standards and maintain consistency across development teams.
+title: "Code Exemplars Blueprint Generator"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /code-exemplars-blueprint-generator
 toolsets:
-- file
-- terminal
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- architecture
-- configuration
-- documentation
-- generator
-- java
-- javascript
-- ml
-- prompts
-- python
-- react
-- typescript
-- architecture
-- configuration
-- documentation
-- generator
-- java
-- javascript
-- ml
-- prompts
-- python
-- react
-- typescript
-- csharp
-- dotnet
-trigger: /code-exemplars-blueprint-generator
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: code-architect
+    mcp_servers:
+      - ast-grep
+      - filesystem
+      - github
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /code-exemplars-blueprint-generator"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:architecture
+  - domain:dev
+scripts: []
 ---
-
 ## Goal
 
 Technology-agnostic prompt generator that creates customizable AI prompts for scanning codebases and identifying high-quality code exemplars. Supports multiple programming languages (.NET, Java, JavaScript, TypeScript, React, Angular, Python) with configurable analysis depth, categorization methods, and documentation formats to establish coding standards and maintain consistency across development teams.
@@ -216,3 +206,7 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`code-review.prompt.md`](code-review.prompt.md)
+
+
+
+

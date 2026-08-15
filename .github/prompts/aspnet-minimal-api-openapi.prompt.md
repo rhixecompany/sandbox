@@ -1,36 +1,40 @@
 ---
 name: aspnet-minimal-api-openapi
-title: ASP.NET Minimal API with OpenAPI
-description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation.
+title: "ASP.NET Minimal API with OpenAPI"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /aspnet-minimal-api-openapi
 toolsets:
-- terminal
-- file
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- api
-- documentation
-- prompts
-- specification
-- typescript
-- api
-- documentation
-- prompts
-- specification
-- typescript
-- csharp
-- dotnet
-trigger: /aspnet-minimal-api-openapi
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /aspnet-minimal-api-openapi"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - framework:aspnet
+  - framework:dotnet
+scripts: []
 ---
-
 ## Goal
 
 Create ASP.NET Minimal API endpoints with proper OpenAPI documentation.
@@ -194,3 +198,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+
+

@@ -1,37 +1,39 @@
 ---
 name: centos-linux-triage
-title: CentOS Linux Triage
-description: Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware
-  practices, and firewalld.
+title: "CentOS Linux Triage"
+description: |
+  No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /centos-linux-triage
 toolsets:
-- web
-scripts: []
+  - file
+  - terminal
 skills: []
+dependencies: []
 formatter: default
 plan: null
-tags:
-- debugging
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-- debugging
-- fix
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-trigger: /centos-linux-triage
-dependencies: []
 metadata:
-  hermes: {}
+  hermes:
+    profile: default
+    mcp_servers:
+      - filesystem
+      - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+  opencode:
+    command: "opencode /centos-linux-triage"
+    flags: {}
+  codex:
+    model_override: null
+tags:
+  - complexity:intermediate
+  - domain:research
+scripts: []
 ---
-
 ## Goal
 
 Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld.
@@ -209,3 +211,7 @@ Same-family prompts:
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
+
+
+
+

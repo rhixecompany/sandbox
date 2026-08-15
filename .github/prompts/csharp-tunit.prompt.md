@@ -1,3 +1,26 @@
+﻿---
+name: csharp-tunit
+title: csharp tunit
+description: Prompt for csharp-tunit
+version: "1.0.0"
+tags: []
+trigger: csharp-tunit
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: csharp-tunit
 title: TUnit Best Practices
@@ -244,3 +267,4 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+

@@ -1,3 +1,26 @@
+﻿---
+name: create-agentsmd
+title: create agentsmd
+description: Prompt for create-agentsmd
+version: "1.0.0"
+tags: []
+trigger: create-agentsmd
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: create-agentsmd
 title: Create high‑quality AGENTS.md file
@@ -307,3 +330,4 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+

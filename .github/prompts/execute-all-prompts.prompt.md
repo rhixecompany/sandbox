@@ -1,3 +1,26 @@
+﻿---
+name: execute-all-prompts
+title: execute all prompts
+description: Prompt for execute-all-prompts
+version: "1.0.0"
+tags: []
+trigger: execute-all-prompts
+metadata:
+  hermes:
+    profile: default
+    priority: medium
+    categories: []
+  copilot:
+    model_required: claude-opus
+    context_length: medium
+  opencode:
+    enabled: true
+    compatibility: compatible
+  codex:
+    enabled: false
+    model_preferred: text-davinci-003
+---
+
 ---
 name: execute-all-prompts
 title: Execute All Prompts Orchestrator
@@ -206,3 +229,4 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`execute-plan.prompt.md`](execute-plan.prompt.md)
+
