@@ -1,42 +1,45 @@
 ---
 name: all-repo-docker-setup
-title: "All Repository Docker Setup and Cleanup"
-description: |
-  No description
+title: All Repository Docker Setup and Cleanup
+description: No description
 version: 1.1.0
 license: MIT
 author: Hermes Agent
 trigger: /all-repo-docker-setup
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: alexa
     mcp_servers:
-      - filesystem
-      - github
-      - terminal
+    - filesystem
+    - github
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /all-repo-docker-setup"
+    command: opencode /all-repo-docker-setup
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:infra
-  - domain:setup
-  - tool:docker
+- agent-type:hermes
+- complexity:intermediate
+- domain:infra
+- domain:setup
+- tool:docker
 scripts: []
----
 ## Goal
 
 For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.
@@ -171,7 +174,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

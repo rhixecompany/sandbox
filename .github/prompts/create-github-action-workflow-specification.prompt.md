@@ -1,98 +1,47 @@
-﻿---
-name: create-github-action-workflow-specification
-title: create github action workflow specification
-description: Prompt for create-github-action-workflow-specification
-version: "1.0.0"
-tags: [automation, ci-cd, devops, github, tool]
-trigger: create-github-action-workflow-specification
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-github-action-workflow-specification
 title: Create GitHub Actions Workflow Specification
-description: Create a formal specification for an existing GitHub Actions CI/CD workflow,
-  optimized for AI consumption and workflow maintenance.
+description: Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for
+  AI consumption and workflow maintenance.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-github-action-workflow-specification
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ci-cd
-- generator
-- git
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- workflow
-- ci-cd
-- generator
-- git
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /create-github-action-workflow-specification
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-github-action-workflow-specification
-title: Create GitHub Actions Workflow Specification
-description: Create a formal specification for an existing GitHub Actions CI/CD workflow,
-  optimized for AI consumption and workflow maintenance.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-github-action-workflow-specification
+    flags: {}
+    help: Create a formal specification for an existing GitHub Actions CI/CD workflow, ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ci-cd
+- generator
+- git
+- ml
+- performance
+- prompts
+- specification
+- typescript
+- workflow
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- ci-cd
-- generator
-- git
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- workflow
-- ci-cd
-- generator
-- git
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /create-github-action-workflow-specification
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -437,4 +386,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

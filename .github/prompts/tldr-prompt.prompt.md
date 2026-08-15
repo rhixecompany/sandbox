@@ -1,44 +1,48 @@
 ---
 name: tldr-prompt
 title: TLDR Prompt
-description: Create tldr summaries for GitHub Copilot files (prompts, agents, instructions,
-  collections), MCP servers, or documentation from URLs and queries.
+description: Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections),
+  MCP servers, or documentation from URLs and queries.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /tldr-prompt
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- backend
-- documentation
-- git
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- ai-assistant
-- backend
-- documentation
-- git
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-trigger: /tldr-prompt
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /tldr-prompt
+    flags: {}
+    help: Create tldr summaries for GitHub Copilot files (prompts, agents, instructions...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- backend
+- documentation
+- git
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries.

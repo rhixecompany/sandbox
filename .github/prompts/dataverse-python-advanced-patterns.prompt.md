@@ -1,90 +1,46 @@
-﻿---
-name: dataverse-python-advanced-patterns
-title: dataverse python advanced patterns
-description: Prompt for dataverse-python-advanced-patterns
-version: "1.0.0"
-tags: [advanced, backend, dataverse, patterns, python]
-trigger: dataverse-python-advanced-patterns
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dataverse-python-advanced-patterns
 title: Dataverse Python Advanced Patterns
-description: Generate production code for Dataverse SDK using advanced patterns, error
-  handling, and optimization techniques.
+description: Generate production code for Dataverse SDK using advanced patterns, error handling, and optimization
+  techniques.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dataverse-python-advanced-patterns
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- data
-- database
-- generator
-- prompts
-- python
-- sql
-- data
-- database
-- generator
-- prompts
-- python
-- specification
-- sql
-trigger: /dataverse-python-advanced-patterns
+formatter: default
 metadata:
-  hermes: {}
-name: dataverse-python-advanced-patterns
-title: Dataverse Python Advanced Patterns
-description: Generate production code for Dataverse SDK using advanced patterns, error
-  handling, and optimization techniques.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dataverse-python-advanced-patterns
+    flags: {}
+    help: Generate production code for Dataverse SDK using advanced patterns, error han...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- data
+- database
+- generator
+- prompts
+- python
+- sql
+- specification
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- data
-- database
-- generator
-- prompts
-- python
-- sql
-- data
-- database
-- generator
-- prompts
-- python
-- specification
-- sql
-trigger: /dataverse-python-advanced-patterns
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -237,4 +193,3 @@ Same-family prompts:
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
-

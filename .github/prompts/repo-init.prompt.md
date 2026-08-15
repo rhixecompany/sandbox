@@ -1,12 +1,40 @@
 ---
 name: repo-init
 title: Repo Init for All Installed AI Agents
-description: Initialize a new or existing repo for every installed AI coding agent
-  — inventory agents, scaffold context files, verify resolution.
+description: Initialize a new or existing repo for every installed AI coding agent — inventory agents,
+  scaffold context files, verify resolution.
 version: 1.1.0
 license: MIT
 author: Hermes Agent
+trigger: /repo-init
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:repo-init
+- skill:verification-before-completion
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-init
+    flags: {}
+    help: Initialize a new or existing repo for every installed AI coding agent — inven...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - ai-assistant
 - generator
@@ -14,16 +42,7 @@ tags:
 - ml
 - prompts
 - typescript
-trigger: /repo-init
-formatter: default
-dependencies:
-- skill:repo-init
-- skill:verification-before-completion
-toolsets: null
-skills: null
-plan: null
----
-
+scripts: []
 ## Goal
 
 Initialize a new or existing repo for **all installed AI coding agents**: inventory every agent (Hermes, OpenCode, Codex, Copilot, Claude, Cursor, GitHub CLI) with its system prompt and context file locations, scaffold generic context files, and verify the result.

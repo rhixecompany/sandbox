@@ -1,94 +1,45 @@
-﻿---
-name: create-architectural-decision-record
-title: create architectural decision record
-description: Prompt for create-architectural-decision-record
-version: "1.0.0"
-tags: [adr, architecture, documentation, planning, tool]
-trigger: create-architectural-decision-record
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-architectural-decision-record
 title: Create Architectural Decision Record
-description: Create an Architectural Decision Record (ADR) document for AI-optimized
-  decision documentation.
+description: Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-architectural-decision-record
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- documentation
-- generator
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- architecture
-- documentation
-- generator
-- ml
-- performance
-- prompts
-- specification
-- typescript
-trigger: /create-architectural-decision-record
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-architectural-decision-record
-title: Create Architectural Decision Record
-description: Create an Architectural Decision Record (ADR) document for AI-optimized
-  decision documentation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-architectural-decision-record
+    flags: {}
+    help: Create an Architectural Decision Record (ADR) document for AI-optimized decis...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- documentation
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- documentation
-- generator
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- architecture
-- documentation
-- generator
-- ml
-- performance
-- prompts
-- specification
-- typescript
-trigger: /create-architectural-decision-record
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -324,4 +275,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

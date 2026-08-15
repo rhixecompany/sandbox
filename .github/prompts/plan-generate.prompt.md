@@ -1,17 +1,16 @@
 ---
 name: plan-generate
 title: Generate Implementation Plan
-description: Generate a detailed, structured implementation plan from a goal or specification.
-  Produces a phased plan with dependencies, references, and verification gates. Replaces
-  ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.)
-  with a single reusable generator.
+description: Generate a detailed, structured implementation plan from a goal or specification. Produces
+  a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts
+  (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
 version: 1.0.0
 license: MIT
 author: Hermes Agent (consolidated)
+trigger: /plan-generate
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - plans-and-specs
 - writing-plans
@@ -19,8 +18,6 @@ skills:
 - brainstorming
 - systematic-debugging
 - verification-before-completion
-formatter: default
-plan: null
 dependencies:
 - skill:plans-and-specs
 - skill:writing-plans
@@ -29,7 +26,27 @@ dependencies:
 - skill:systematic-debugging
 - skill:verification-before-completion
 - prompt:context-map.prompt.md
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /plan-generate
+    flags: {}
+    help: Generate a detailed, structured implementation plan from a goal or specificat...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - debugging
 - generator
@@ -39,17 +56,7 @@ tags:
 - specification
 - typescript
 - ai-assistant
-- generator
-- ml
-- planning
-- prompts
-- specification
-- typescript
-trigger: /plan-generate
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Generate a detailed, structured implementation plan from a goal or specification. Produces a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.

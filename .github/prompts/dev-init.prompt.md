@@ -1,37 +1,15 @@
-﻿---
-name: dev-init
-title: dev init
-description: Prompt for dev-init
-version: "1.0.0"
-tags: [development, initialization, project, setup, tool]
-trigger: dev-init
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dev-init
 title: Dev Init - Prompt Conversion and Enhancement Planning
-description: Create a comprehensive plan for converting plaintext prompts to markdown,
-  enhancing prompt quality, and updating related implementation plans.
+description: Create a comprehensive plan for converting plaintext prompts to markdown, enhancing prompt
+  quality, and updating related implementation plans.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dev-init
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - introspection-only-general
 - no-git-delete
@@ -51,8 +29,6 @@ skills:
 - executing-plans
 - simplify
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:convert-plaintext-to-md.prompt.md
@@ -78,93 +54,27 @@ dependencies:
 - skill:ai-prompt-engineering-safety-review
 - skill:update-implementation-plan
 - skill:prompt-builder
-tags:
-- audit
-- markdown
-- ml
-- planning
-- prompts
-- security
-- typescript
-- workflow
-- audit
-- markdown
-- ml
-- planning
-- prompts
-- security
-- typescript
-- workflow
-- git
-trigger: /dev-init
-metadata:
-  hermes: {}
-name: dev-init
-title: Dev Init - Prompt Conversion and Enhancement Planning
-description: Create a comprehensive plan for converting plaintext prompts to markdown,
-  enhancing prompt quality, and updating related implementation plans.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
-scripts: []
-skills:
-- introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- context-map
-- convert-plaintext-to-md
-- boost-prompt
-- ai-prompt-engineering-safety-review
-- update-implementation-plan
-- prompt-builder
-- brainstorming
-- plans-and-specs
-- writing-skills
-- writing-plans
-- acpx-executor
-- executing-plans
-- simplify
-- subagent-driven-development
 formatter: default
-plan: null
-dependencies:
-- prompt:context-map.prompt.md
-- prompt:convert-plaintext-to-md.prompt.md
-- prompt:boost-prompt.prompt.md
-- prompt:ai-prompt-engineering-safety-review.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- prompt:prompt-builder.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:writing-skills
-- skill:writing-plans
-- skill:acpx-executor
-- skill:executing-plans
-- skill:simplify
-- skill:subagent-driven-development
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-- skill:context-map
-- skill:convert-plaintext-to-md
-- skill:boost-prompt
-- skill:ai-prompt-engineering-safety-review
-- skill:update-implementation-plan
-- skill:prompt-builder
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dev-init
+    flags: {}
+    help: Create a comprehensive plan for converting plaintext prompts to markdown, enh...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- audit
-- markdown
-- ml
-- planning
-- prompts
-- security
-- typescript
-- workflow
+- agent-type:hermes
 - audit
 - markdown
 - ml
@@ -174,9 +84,7 @@ tags:
 - typescript
 - workflow
 - git
-trigger: /dev-init
-metadata:
-  hermes: {}
+scripts: []
 ---
 
 ## Goal
@@ -538,4 +446,3 @@ Same-family prompts:
 
 - [`dev-imp.prompt.md`](dev-imp.prompt.md)
 - [`dev.prompt.md`](dev.prompt.md)
-

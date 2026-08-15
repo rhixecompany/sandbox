@@ -1,33 +1,43 @@
 ---
 name: power-apps-code-app-scaffold
 title: Power Apps Code Apps Project Scaffolding
-description: Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK
-  integration, and connector configuration.
+description: Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and
+  connector configuration.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /power-apps-code-app-scaffold
 toolsets:
 - web
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /power-apps-code-app-scaffold
+    flags: {}
+    help: Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - configuration
 - frontend
 - prompts
 - specification
-- audit
-- frontend
-- prompts
-- specification
-trigger: /power-apps-code-app-scaffold
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration.

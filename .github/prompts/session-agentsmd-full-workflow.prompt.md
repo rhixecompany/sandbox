@@ -1,43 +1,49 @@
 ---
 name: session-agentsmd-full-workflow
 title: Session Agents.md Full Workflow
-description: 'Execute the full session workflow: load agent context, read AGENTS.md,
-  apply rules, and report.'
+description: 'Execute the full session workflow: load agent context, read AGENTS.md, apply rules, and
+  report.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /session-agentsmd-full-workflow
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- agents
-- architecture
-- generator
-- git
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- architecture
-- generator
-- git
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /session-agentsmd-full-workflow
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /session-agentsmd-full-workflow
+    flags: {}
+    help: 'Execute the full session workflow: load agent context, read AGENTS.md, apply ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- architecture
+- generator
+- git
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use when "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output" to accomplish the associated tasks and objectives.

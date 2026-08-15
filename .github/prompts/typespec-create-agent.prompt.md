@@ -1,40 +1,46 @@
 ---
 name: typespec-create-agent
 title: Create TypeSpec Declarative Agent
-description: Generate a complete TypeSpec declarative agent with instructions, capabilities,
-  and conversation starters for Microsoft 365 Copilot.
+description: Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation
+  starters for Microsoft 365 Copilot.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /typespec-create-agent
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- ai-assistant
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /typespec-create-agent
-mode: agent
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typespec-create-agent
+    flags: {}
+    help: Generate a complete TypeSpec declarative agent with instructions, capabilitie...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot.

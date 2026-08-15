@@ -5,28 +5,38 @@ description: List my issues in the current repository.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /my-issues
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /my-issues
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /my-issues
+    flags: {}
+    help: List my issues in the current repository.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 List my issues in the current repository.

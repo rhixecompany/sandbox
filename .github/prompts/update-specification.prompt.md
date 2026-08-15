@@ -1,38 +1,45 @@
 ---
 name: update-specification
 title: Update Specification
-description: Update an existing specification file for the solution, optimized for
-  Generative AI consumption based on new requirements or updates to any existing code.
+description: Update an existing specification file for the solution, optimized for Generative AI consumption
+  based on new requirements or updates to any existing code.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-specification
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- maintenance
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- frontend
-- maintenance
-- ml
-- performance
-- prompts
-- specification
-- typescript
-trigger: /update-specification
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-specification
+    flags: {}
+    help: Update an existing specification file for the solution, optimized for Generat...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- maintenance
+- ml
+- performance
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code.

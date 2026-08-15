@@ -1,13 +1,39 @@
 ---
 name: setup-groq-cloud
 title: Groq Cloud Setup — Comprehensive Reference & Prompt
-description: Converted and consolidated Groq Cloud documentation (Quickstart, Supported
-  Models, OpenAI Compatibility, API Reference, Rate Limits) into a structured reference
-  and agent prompt for setting up and using the Groq API.
+description: Converted and consolidated Groq Cloud documentation (Quickstart, Supported Models, OpenAI
+  Compatibility, API Reference, Rate Limits) into a structured reference and agent prompt for setting
+  up and using the Groq API.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /setup-groq-cloud
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-groq-cloud
+    flags: {}
+    help: Converted and consolidated Groq Cloud documentation (Quickstart, Supported Mo...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - api
 - configuration
@@ -18,19 +44,7 @@ tags:
 - setup
 - specification
 - typescript
-toolsets: null
-trigger: /setup-groq-cloud
-skills: []
-dependencies: []
-metadata:
-  hermes:
-    source: setup-groq-cloud.prompt.txt
-    converted: '2026-08-08'
 scripts: []
-formatter: default
-plan: ''
----
-
 ## Goal
 
 Guide an agent (or a developer following this prompt) through setting up and using Groq Cloud: create an API key, configure the environment, make the first chat completion, choose models, use OpenAI-compatible client libraries, call the REST API, and respect rate limits. The full reference is embedded under `## Groq Cloud Reference` below.

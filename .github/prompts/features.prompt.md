@@ -1,88 +1,44 @@
-﻿---
-name: features
-title: features
-description: Prompt for features
-version: "1.0.0"
-tags: [development, documentation, features, planning, project]
-trigger: features
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: features
 title: ComicWise - Feature Implementation Guide
-description: Complete feature implementation tasks for profiles, comics, chapters,
-  bookmarks.
+description: Complete feature implementation tasks for profiles, comics, chapters, bookmarks.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /features
 toolsets:
 - web
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- frontend
-- linting
-- prompts
-- specification
-- testing
-- typescript
-- frontend
-- linting
-- prompts
-- specification
-- testing
-- typescript
-trigger: /features
+formatter: default
 metadata:
-  hermes: {}
-name: features
-title: ComicWise - Feature Implementation Guide
-description: Complete feature implementation tasks for profiles, comics, chapters,
-  bookmarks.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
-- todo
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /features
+    flags: {}
+    help: Complete feature implementation tasks for profiles, comics, chapters, bookmarks.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- linting
+- prompts
+- specification
+- testing
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- frontend
-- linting
-- prompts
-- specification
-- testing
-- typescript
-- frontend
-- linting
-- prompts
-- specification
-- testing
-- typescript
-trigger: /features
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -244,4 +200,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

@@ -1,41 +1,46 @@
 ---
 name: prompts-strict-template
 title: Prompts Strict Template
-description: Comprehensive prompt for enforcing strict .prompt.md template structure
-  and formatting rules.
+description: Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /prompts-strict-template
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- audit
-- fix
-- frontend
-- markdown
-- ml
-- prompts
-- skills
-- typescript
-- audit
-- fix
-- frontend
-- markdown
-- ml
-- prompts
-- skills
-- typescript
-trigger: /prompts-strict-template
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /prompts-strict-template
+    flags: {}
+    help: Comprehensive prompt for enforcing strict .prompt.md template structure and f...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- fix
+- frontend
+- markdown
+- ml
+- prompts
+- skills
+- typescript
+scripts: []
 ## Goal
 
 Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.

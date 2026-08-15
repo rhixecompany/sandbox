@@ -1,41 +1,44 @@
 ---
 name: breakdown-test
-title: "Test Planning & Quality Assurance Prompt"
-description: |
-  No description
+title: Test Planning & Quality Assurance Prompt
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /breakdown-test
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /breakdown-test"
+    command: opencode /breakdown-test
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:code-quality
-  - domain:planning
-  - domain:testing
+- agent-type:hermes
+- complexity:intermediate
+- domain:code-quality
+- domain:planning
+- domain:testing
 scripts: []
----
 ## Goal
 
 Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.
@@ -348,7 +351,5 @@ Same-family prompts:
 - [`breakdown-feature-implementation.prompt.md`](breakdown-feature-implementation.prompt.md)
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
-
-
 
 

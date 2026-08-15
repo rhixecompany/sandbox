@@ -1,17 +1,16 @@
 ---
 name: repo-research-pipeline
 title: Repo Research Pipeline (MCP-Enhanced)
-description: Structured workflow for executing web research across multiple projects
-  and writing actionable RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline
-  skill and web-research-pipeline skill.
+description: Structured workflow for executing web research across multiple projects and writing actionable
+  RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline skill and web-research-pipeline skill.
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets: null
-scripts: []
-skills: null
-formatter: default
-plan: null
+trigger: /repo-research-pipeline
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - prompt:web-research-pipeline
 - skill:domain-intel
@@ -25,7 +24,27 @@ dependencies:
 - tool:mcp-sequential-thinking
 - skill:subagent-driven-development
 - skill:web-research-pipeline
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-research-pipeline
+    flags: {}
+    help: Structured workflow for executing web research across multiple projects and w...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - backend
 - generator
 - mcp
@@ -33,11 +52,7 @@ tags:
 - skills
 - typescript
 - workflow
-trigger: /repo-research-pipeline
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Run research across all project repos and produce RESEARCH_REPORT.md files

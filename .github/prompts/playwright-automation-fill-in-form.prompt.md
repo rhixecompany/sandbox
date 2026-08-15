@@ -1,44 +1,46 @@
 ---
 name: playwright-automation-fill-in-form
 title: Playwright Automation Fill In Form
-description: Fill a form with Playwright MCP, stop before submission, and ask for
-  a human review.
+description: Fill a form with Playwright MCP, stop before submission, and ask for a human review.
 version: 1.0.0
 license: MIT
 author: Alexa
+trigger: /playwright-automation-fill-in-form
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- audit
-- mcp
-- ml
-- playwright
-- prompts
-- specification
-- typescript
-- audit
-- mcp
-- ml
-- playwright
-- prompts
-- specification
-- typescript
-trigger: /playwright-automation-fill-in-form
-compatibility: None
-created: 2026-05-25 10:50:21.952313+00:00
-mcp_generator: None
-skill_stub: 'True'
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /playwright-automation-fill-in-form
+    flags: {}
+    help: Fill a form with Playwright MCP, stop before submission, and ask for a human ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- mcp
+- ml
+- playwright
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.

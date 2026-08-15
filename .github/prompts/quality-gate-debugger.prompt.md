@@ -1,46 +1,51 @@
 ---
 name: quality-gate-debugger
 title: Quality Gate Debugger — Triage & Batch Fix
-description: Triage quality-gate report files (type-check, lint, test, build) and
-  batch-fix all issues.
+description: Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /quality-gate-debugger
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: plans/debugger.md
 dependencies:
 - skill:subagent-driven-development
-tags:
-- audit
-- debugging
-- fix
-- frontend
-- generator
-- linting
-- prompts
-- testing
-- typescript
-- audit
-- debugging
-- fix
-- frontend
-- generator
-- linting
-- prompts
-- testing
-- typescript
-trigger: /quality-gate-debugger
+formatter: default
+plan: plans/debugger.md
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /quality-gate-debugger
+    flags: {}
+    help: Triage quality-gate report files (type-check, lint, test, build) and batch-fi...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- debugging
+- fix
+- frontend
+- generator
+- linting
+- prompts
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.

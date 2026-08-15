@@ -1,88 +1,44 @@
-﻿---
-name: fedora-linux-triage
-title: fedora linux triage
-description: Prompt for fedora-linux-triage
-version: "1.0.0"
-tags: [devops, linux, system-admin, tool, troubleshooting]
-trigger: fedora-linux-triage
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: fedora-linux-triage
 title: Fedora Linux Triage
-description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware
-  guidance.
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /fedora-linux-triage
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- debugging
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-- debugging
-- fix
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-trigger: /fedora-linux-triage
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: fedora-linux-triage
-title: Fedora Linux Triage
-description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware
-  guidance.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /fedora-linux-triage
+    flags: {}
+    help: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- fix
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- debugging
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-- debugging
-- fix
-- frontend
-- linux
-- ml
-- prompts
-- typescript
-trigger: /fedora-linux-triage
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -262,4 +218,3 @@ Same-family prompts:
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
-

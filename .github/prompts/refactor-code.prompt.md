@@ -1,44 +1,48 @@
 ---
 name: refactor-code
-title: Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle
-  Patterns)
+title: Drizzle ORM + next-auth Migration Plan (2026 Upgrade, DRY, markdownlint, Drizzle Patterns)
 description: Refactor code for maintainability and standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /refactor-code
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- linting
-- markdown
-- migration
-- ml
-- nextjs
-- prompts
-- refactoring
-- specification
-- typescript
-- linting
-- markdown
-- migration
-- ml
-- nextjs
-- prompts
-- refactoring
-- specification
-- typescript
-trigger: /refactor-code
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /refactor-code
+    flags: {}
+    help: Refactor code for maintainability and standards.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- linting
+- markdown
+- migration
+- ml
+- nextjs
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Refactor code for maintainability and standards.

@@ -1,39 +1,46 @@
 ---
 name: prompt-builder
 title: Prompt Builder
-description: Guide users through creating high-quality .prompt.md files with proper
-  structure, tools, and best practices.
+description: Guide users through creating high-quality .prompt.md files with proper structure, tools,
+  and best practices.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /prompt-builder
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ai-assistant
-- frontend
-- git
-- prompts
-- typescript
-- workflow
-- agents
-- ai-assistant
-- frontend
-- git
-- prompts
-- typescript
-- workflow
-trigger: /prompt-builder
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /prompt-builder
+    flags: {}
+    help: Guide users through creating high-quality .prompt.md files with proper struct...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- frontend
+- git
+- prompts
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.

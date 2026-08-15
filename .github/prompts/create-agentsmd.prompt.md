@@ -1,25 +1,3 @@
-﻿---
-name: create-agentsmd
-title: create agentsmd
-description: Prompt for create-agentsmd
-version: "1.0.0"
-tags: [agents, automation, documentation, generation, tool]
-trigger: create-agentsmd
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-agentsmd
 title: Create high‑quality AGENTS.md file
@@ -27,60 +5,40 @@ description: Prompt for generating an AGENTS.md file for a repository.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-agentsmd
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-agentsmd
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-agentsmd
-title: Create high‑quality AGENTS.md file
-description: Prompt for generating an AGENTS.md file for a repository.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-agentsmd
+    flags: {}
+    help: Prompt for generating an AGENTS.md file for a repository.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- generator
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-agentsmd
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -359,4 +317,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

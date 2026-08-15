@@ -1,102 +1,48 @@
-﻿---
-name: dataverse-python-usecase-builder
-title: dataverse python usecase builder
-description: Prompt for dataverse-python-usecase-builder
-version: "1.0.0"
-tags: [backend, dataverse, planning, python, tool]
-trigger: dataverse-python-usecase-builder
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dataverse-python-usecase-builder
 title: Dataverse Python   Use Case Solution Builder
-description: Generate complete solutions for specific Dataverse SDK use cases with
-  architecture recommendations.
+description: Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dataverse-python-usecase-builder
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- architecture
-- data
-- frontend
-- generator
-- ml
-- prompts
-- python
-- specification
-- typescript
-- architecture
-- data
-- frontend
-- generator
-- ml
-- performance
-- prompts
-- python
-- specification
-- typescript
-trigger: /dataverse-python-usecase-builder
+formatter: default
 metadata:
-  hermes: {}
-name: dataverse-python-usecase-builder
-title: Dataverse Python   Use Case Solution Builder
-description: Generate complete solutions for specific Dataverse SDK use cases with
-  architecture recommendations.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dataverse-python-usecase-builder
+    flags: {}
+    help: Generate complete solutions for specific Dataverse SDK use cases with archite...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- data
+- frontend
+- generator
+- ml
+- prompts
+- python
+- specification
+- typescript
+- performance
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- architecture
-- data
-- frontend
-- generator
-- ml
-- prompts
-- python
-- specification
-- typescript
-- architecture
-- data
-- frontend
-- generator
-- ml
-- performance
-- prompts
-- python
-- specification
-- typescript
-trigger: /dataverse-python-usecase-builder
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -308,4 +254,3 @@ Same-family prompts:
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
-

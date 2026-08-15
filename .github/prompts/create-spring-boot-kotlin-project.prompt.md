@@ -1,25 +1,3 @@
-﻿---
-name: create-spring-boot-kotlin-project
-title: create spring boot kotlin project
-description: Prompt for create-spring-boot-kotlin-project
-version: "1.0.0"
-tags: [backend, framework, kotlin, setup, springboot]
-trigger: create-spring-boot-kotlin-project
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-spring-boot-kotlin-project
 title: Create Spring Boot Kotlin project prompt
@@ -27,58 +5,40 @@ description: Create Spring Boot Kotlin Project Skeleton.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-spring-boot-kotlin-project
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- docker
-- generator
-- java
-- prompts
-- spring
-- docker
-- generator
-- java
-- prompts
-- spring
-trigger: /create-spring-boot-kotlin-project
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-spring-boot-kotlin-project
-title: Create Spring Boot Kotlin project prompt
-description: Create Spring Boot Kotlin Project Skeleton.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-spring-boot-kotlin-project
+    flags: {}
+    help: Create Spring Boot Kotlin Project Skeleton.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- docker
+- generator
+- java
+- prompts
+- spring
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- docker
-- generator
-- java
-- prompts
-- spring
-- docker
-- generator
-- java
-- prompts
-- spring
-trigger: /create-spring-boot-kotlin-project
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -294,4 +254,3 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

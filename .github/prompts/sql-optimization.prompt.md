@@ -1,46 +1,50 @@
 ---
 name: sql-optimization
 title: SQL Performance Optimization Assistant
-description: Universal SQL performance optimization assistant for comprehensive query
-  tuning, indexing strategies, and database performance analysis across all SQL databases
-  (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination
-  optimization, batch operations, and performance monitoring guidance.
+description: Universal SQL performance optimization assistant for comprehensive query tuning, indexing
+  strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server,
+  Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance
+  monitoring guidance.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /sql-optimization
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- backend
-- data
-- database
-- frontend
-- performance
-- prompts
-- specification
-- sql
-- typescript
-- backend
-- data
-- database
-- frontend
-- performance
-- prompts
-- specification
-- sql
-- typescript
-trigger: /sql-optimization
-tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /sql-optimization
+    flags: {}
+    help: Universal SQL performance optimization assistant for comprehensive query tuni...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- backend
+- data
+- database
+- frontend
+- performance
+- prompts
+- specification
+- sql
+- typescript
+scripts: []
 ## Goal
 
 Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance.

@@ -1,38 +1,46 @@
 ---
 name: task-implementation
 title: Task Implementation
-description: Comprehensive prompt for implementing tasks with clear phases, goals,
-  and verification.
+description: Comprehensive prompt for implementing tasks with clear phases, goals, and verification.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /task-implementation
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- ai-assistant
-- ml
-- prompts
-- specification
-- workflow
-- ai-assistant
-- ml
-- prompts
-- skills
-- specification
-- workflow
-trigger: /task-implementation
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /task-implementation
+    flags: {}
+    help: Comprehensive prompt for implementing tasks with clear phases, goals, and ver...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- ml
+- prompts
+- specification
+- workflow
+- skills
+scripts: []
 ## Goal
 
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.

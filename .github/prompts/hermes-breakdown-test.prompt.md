@@ -1,45 +1,48 @@
 ---
 name: hermes-breakdown-test
 title: Hermes Breakdown Test
-description: 'Hermes-equivalent: generate a test strategy, issue checklist, and QA
-  plan from feature artifacts.'
+description: 'Hermes-equivalent: generate a test strategy, issue checklist, and QA plan from feature artifacts.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /hermes-breakdown-test
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- debugging
-- frontend
-- generator
-- ml
-- planning
-- prompts
-- specification
-- testing
-- typescript
-- ai-assistant
-- debugging
-- frontend
-- generator
-- ml
-- planning
-- prompts
-- specification
-- testing
-- typescript
-trigger: /hermes-breakdown-test
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-breakdown-test
+    flags: {}
+    help: 'Hermes-equivalent: generate a test strategy, issue checklist, and QA plan fro...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- debugging
+- frontend
+- generator
+- ml
+- planning
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Produce a QA package that turns feature artifacts into a clear test strategy and issue checklist.

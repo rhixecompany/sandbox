@@ -1,25 +1,3 @@
-﻿---
-name: ef-core
-title: ef core
-description: Prompt for ef-core
-version: "1.0.0"
-tags: [backend, csharp, database, dotnet, orm]
-trigger: ef-core
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: ef-core
 title: Entity Framework Core Best Practices
@@ -27,52 +5,38 @@ description: Get best practices for Entity Framework Core.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /ef-core
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /ef-core
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: ef-core
-title: Entity Framework Core Best Practices
-description: Get best practices for Entity Framework Core.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /ef-core
+    flags: {}
+    help: Get best practices for Entity Framework Core.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- prompts
-- specification
-- typescript
-- ml
-- prompts
-- specification
-- typescript
-trigger: /ef-core
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -268,4 +232,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

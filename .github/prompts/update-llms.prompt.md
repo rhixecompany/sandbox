@@ -1,36 +1,44 @@
 ---
 name: update-llms
 title: Update LLMs.txt File
-description: Update the llms.txt file in the root folder to reflect changes in documentation
-  or specifications following the llms.txt specification at https://llmstxt.org/.
+description: Update the llms.txt file in the root folder to reflect changes in documentation or specifications
+  following the llms.txt specification at https://llmstxt.org/.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-llms
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-trigger: /update-llms
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-llms
+    flags: {}
+    help: Update the llms.txt file in the root folder to reflect changes in documentati...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- maintenance
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at <https://llmstxt.org/>.

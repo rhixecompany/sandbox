@@ -1,41 +1,44 @@
 ---
 name: bash-scripts-fix
-title: "Bash Scripts Modernization and Consolidation"
-description: |
-  No description
+title: Bash Scripts Modernization and Consolidation
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /bash-scripts-fix
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /bash-scripts-fix"
+    command: opencode /bash-scripts-fix
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:debug
-  - language:bash
-  - language:typescript
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- language:bash
+- language:typescript
 scripts: []
----
 ## Goal
 
 Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
@@ -201,7 +204,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

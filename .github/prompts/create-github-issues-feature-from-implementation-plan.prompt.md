@@ -1,86 +1,44 @@
-﻿---
-name: create-github-issues-feature-from-implementation-plan
-title: create github issues feature from implementation plan
-description: Prompt for create-github-issues-feature-from-implementation-plan
-version: "1.0.0"
-tags: [automation, devops, github, planning, tool]
-trigger: create-github-issues-feature-from-implementation-plan
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-github-issues-feature-from-implementation-plan
 title: Create GitHub Issue from Implementation Plan
-description: Create GitHub Issues from implementation plan phases using feature_request.yml
-  or chore_request.yml templates.
+description: Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml
+  templates.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-github-issues-feature-from-implementation-plan
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-issues-feature-from-implementation-plan
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-github-issues-feature-from-implementation-plan
-title: Create GitHub Issue from Implementation Plan
-description: Create GitHub Issues from implementation plan phases using feature_request.yml
-  or chore_request.yml templates.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-github-issues-feature-from-implementation-plan
+    flags: {}
+    help: Create GitHub Issues from implementation plan phases using feature_request.ym...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-issues-feature-from-implementation-plan
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -268,4 +226,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

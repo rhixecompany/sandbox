@@ -1,84 +1,43 @@
-﻿---
-name: finalize-agent-prompt
-title: finalize agent prompt
-description: Prompt for finalize-agent-prompt
-version: "1.0.0"
-tags: [agents, automation, development, prompt-engineering, tool]
-trigger: finalize-agent-prompt
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: finalize-agent-prompt
 title: Finalize Agent Prompt
-description: Finalize prompt file using the role of an AI agent to polish the prompt
-  for the end user.
+description: Finalize prompt file using the role of an AI agent to polish the prompt for the end user.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /finalize-agent-prompt
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- ml
-- prompts
-- specification
-- typescript
-trigger: /finalize-agent-prompt
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: finalize-agent-prompt
-title: Finalize Agent Prompt
-description: Finalize prompt file using the role of an AI agent to polish the prompt
-  for the end user.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /finalize-agent-prompt
+    flags: {}
+    help: Finalize prompt file using the role of an AI agent to polish the prompt for t...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- ml
-- prompts
-- specification
-- typescript
-- agents
-- ml
-- prompts
-- specification
-- typescript
-trigger: /finalize-agent-prompt
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -244,4 +203,3 @@ Same-family prompts:
 
 - [`multi-agent-research-template.prompt.md`](multi-agent-research-template.prompt.md)
 - [`refresh-agent-inventory.prompt.md`](refresh-agent-inventory.prompt.md)
-

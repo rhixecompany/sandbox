@@ -1,43 +1,85 @@
 ---
-name: setup
-title: ComicWise — AI Agent Setup & Onboarding
-description: Comprehensive AI agent onboarding prompt for ComicWise — architecture,
-  workflows, real code patterns, and conventions.
+name: setup.prompt
+title: Setup.Prompt
+description: Auto-generated prompt for /setup.prompt
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /setup.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup.prompt
+    flags: {}
+    help: Auto-generated prompt for /setup.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
+name: setup
+title: ComicWise — AI Agent Setup & Onboarding
+description: Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code
+  patterns, and conventions.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /setup
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- agents
-- architecture
-- backend
-- ml
-- nextjs
-- prompts
-- typescript
-- workflow
-- agents
-- architecture
-- backend
-- ml
-- nextjs
-- prompts
-- typescript
-- workflow
-trigger: /setup
+formatter: default
 metadata:
-  hermes: {}
----
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup
+    flags: {}
+    help: Comprehensive AI agent onboarding prompt for ComicWise — architecture, workfl...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- architecture
+- backend
+- ml
+- nextjs
+- prompts
+- typescript
+- workflow
+scripts: []
 
 ## Goal
 

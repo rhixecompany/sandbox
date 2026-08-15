@@ -1,18 +1,17 @@
 ---
 name: repo-management
 title: Repo Management Pipeline
-description: 'Execute repo management operations across all project repos: branch
-  normalization, ignore file audit, dependency audit, and CI setup. Runs AFTER the
-  repo-research-pipeline phase completes. Also provides Quick Repo Overview (Phase
-  0): repo summary, entrypoint detection, and disk usage on demand.'
+description: 'Execute repo management operations across all project repos: branch normalization, ignore
+  file audit, dependency audit, and CI setup. Runs AFTER the repo-research-pipeline phase completes. Also
+  provides Quick Repo Overview (Phase 0): repo summary, entrypoint detection, and disk usage on demand.'
 version: 2.2.0
 license: MIT
 author: Hermes Agent
-toolsets: null
-scripts: []
-skills: null
-formatter: default
-plan: null
+trigger: /repo-management
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - prompt:repo-research-pipeline
 - skill:finishing-a-development-branch
@@ -29,17 +28,33 @@ dependencies:
 - tool:mcp-filesystem
 - tool:mcp-sequential-thinking
 - skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-management
+    flags: {}
+    help: 'Execute repo management operations across all project repos: branch normaliza...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - frontend
 - git
 - prompts
 - workflow
-trigger: /repo-management
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Leave every repo with:

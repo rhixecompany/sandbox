@@ -1,92 +1,46 @@
-﻿---
-name: conventional-commit
-title: conventional commit
-description: Prompt for conventional-commit
-version: "1.0.0"
-tags: [devops, git, standards, tool, workflow]
-trigger: conventional-commit
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: conventional-commit
 title: Conventional Commit
-description: Prompt and workflow for generating conventional commit messages using
-  a structured XML format. Guides users to create standardized, descriptive commit
-  messages in line with the Conventional Commits specification, including instructions,
-  examples, and validation.
+description: Prompt and workflow for generating conventional commit messages using a structured XML format.
+  Guides users to create standardized, descriptive commit messages in line with the Conventional Commits
+  specification, including instructions, examples, and validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /conventional-commit
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /conventional-commit
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: conventional-commit
-title: Conventional Commit
-description: Prompt and workflow for generating conventional commit messages using
-  a structured XML format. Guides users to create standardized, descriptive commit
-  messages in line with the Conventional Commits specification, including instructions,
-  examples, and validation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /conventional-commit
+    flags: {}
+    help: Prompt and workflow for generating conventional commit messages using a struc...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /conventional-commit
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -235,4 +189,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

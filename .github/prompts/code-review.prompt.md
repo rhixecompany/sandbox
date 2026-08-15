@@ -1,41 +1,44 @@
 ---
 name: code-review
-title: "Code Review"
-description: |
-  No description
+title: Code Review
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /code-review
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: code-architect
     mcp_servers:
-      - ast-grep
-      - filesystem
-      - terminal
+    - ast-grep
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /code-review"
+    command: opencode /code-review
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:code-quality
-  - domain:dev
+- agent-type:hermes
+- complexity:intermediate
+- domain:code-quality
+- domain:dev
 scripts: []
----
 ## Goal
 
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
@@ -189,7 +192,5 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`code-exemplars-blueprint-generator.prompt.md`](code-exemplars-blueprint-generator.prompt.md)
-
-
 
 

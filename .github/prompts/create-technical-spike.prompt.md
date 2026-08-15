@@ -1,80 +1,43 @@
-﻿---
-name: create-technical-spike
-title: create technical spike
-description: Prompt for create-technical-spike
-version: "1.0.0"
-tags: [documentation, planning, research, spike, tool]
-trigger: create-technical-spike
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-technical-spike
 title: Create Technical Spike Document
-description: Create time-boxed technical spike documents for researching and resolving
-  critical development decisions before implementation.
+description: Create time-boxed technical spike documents for researching and resolving critical development
+  decisions before implementation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-technical-spike
 toolsets:
 - web
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-technical-spike
+    flags: {}
+    help: Create time-boxed technical spike documents for researching and resolving cri...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - generator
 - prompts
 - specification
 - typescript
 - architecture
-- generator
-- prompts
-- specification
-- typescript
-trigger: /create-technical-spike
-dependencies: []
-metadata:
-  hermes: {}
-name: create-technical-spike
-title: Create Technical Spike Document
-description: Create time-boxed technical spike documents for researching and resolving
-  critical development decisions before implementation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- generator
-- prompts
-- specification
-- typescript
-- architecture
-- generator
-- prompts
-- specification
-- typescript
-trigger: /create-technical-spike
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -358,4 +321,3 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

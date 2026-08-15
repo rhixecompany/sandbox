@@ -1,90 +1,45 @@
-﻿---
-name: create-github-issues-for-unmet-specification-requirements
-title: create github issues for unmet specification requirements
-description: Prompt for create-github-issues-for-unmet-specification-requirements
-version: "1.0.0"
-tags: [automation, devops, github, planning, tool]
-trigger: create-github-issues-for-unmet-specification-requirements
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-github-issues-for-unmet-specification-requirements
 title: Create GitHub Issues for Unmet Specification Requirements
-description: Create GitHub Issues for unimplemented requirements from specification
-  files using feature_request.yml template.
+description: Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml
+  template.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-github-issues-for-unmet-specification-requirements
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- frontend
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-issues-for-unmet-specification-requirements
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-github-issues-for-unmet-specification-requirements
-title: Create GitHub Issues for Unmet Specification Requirements
-description: Create GitHub Issues for unimplemented requirements from specification
-  files using feature_request.yml template.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-github-issues-for-unmet-specification-requirements
+    flags: {}
+    help: Create GitHub Issues for unimplemented requirements from specification files ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- generator
+- git
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- frontend
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-- frontend
-- generator
-- git
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-github-issues-for-unmet-specification-requirements
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -277,4 +232,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

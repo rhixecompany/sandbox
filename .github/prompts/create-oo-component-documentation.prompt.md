@@ -1,4 +1,39 @@
-﻿---
+---
+name: create-oo-component-documentation.prompt
+title: Create Oo Component Documentation.Prompt
+description: Auto-generated prompt for /create-oo-component-documentation.prompt
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /create-oo-component-documentation.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: creative-director
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-oo-component-documentation.prompt
+    flags: {}
+    help: Auto-generated prompt for /create-oo-component-documentation.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 title: [Component Name] - Technical Documentation
 component_path: `${input:ComponentPath}`
 version: [Optional: e.g., 1.0, Date]

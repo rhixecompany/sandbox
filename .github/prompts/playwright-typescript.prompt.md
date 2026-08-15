@@ -1,36 +1,44 @@
 ---
 name: playwright-typescript
 title: Playwright Typescript
-description: Comprehensive Playwright TypeScript prompt aligned to repository testing
-  standards.
+description: Comprehensive Playwright TypeScript prompt aligned to repository testing standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /playwright-typescript
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /playwright-typescript
+    flags: {}
+    help: Comprehensive Playwright TypeScript prompt aligned to repository testing stan...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - playwright
 - prompts
 - skills
 - testing
 - typescript
 - frontend
-- playwright
-- prompts
-- skills
-- testing
-- typescript
-trigger: /playwright-typescript
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.

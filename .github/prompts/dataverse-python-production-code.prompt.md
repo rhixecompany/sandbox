@@ -1,42 +1,38 @@
-﻿---
-name: dataverse-python-production-code
-title: dataverse python production code
-description: Prompt for dataverse-python-production-code
-version: "1.0.0"
-tags: [backend, dataverse, patterns, production, python]
-trigger: dataverse-python-production-code
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dataverse-python-production-code
 title: Dataverse Python   Production Code Generator
-description: Generate production-ready Python code using Dataverse SDK with error
-  handling, optimization, and best practices.
+description: Generate production-ready Python code using Dataverse SDK with error handling, optimization,
+  and best practices.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dataverse-python-production-code
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dataverse-python-production-code
+    flags: {}
+    help: Generate production-ready Python code using Dataverse SDK with error handling...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - data
 - generator
 - prompts
@@ -45,52 +41,9 @@ tags:
 - typescript
 - audit
 - backend
-- data
 - debugging
-- generator
 - ml
-- prompts
-- python
-- specification
-- typescript
-trigger: /dataverse-python-production-code
-metadata:
-  hermes: {}
-name: dataverse-python-production-code
-title: Dataverse Python   Production Code Generator
-description: Generate production-ready Python code using Dataverse SDK with error
-  handling, optimization, and best practices.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- data
-- generator
-- prompts
-- python
-- specification
-- typescript
-- audit
-- backend
-- data
-- debugging
-- generator
-- ml
-- prompts
-- python
-- specification
-- typescript
-trigger: /dataverse-python-production-code
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -277,4 +230,3 @@ Same-family prompts:
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-quickstart.prompt.md`](dataverse-python-quickstart.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
-

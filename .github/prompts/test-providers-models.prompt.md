@@ -1,14 +1,40 @@
 ---
 name: test-providers-models
 title: Test Providers & Models — Benchmark, Delegate, and Configure Fallback Chain
-description: Inventory all authorized LLM providers, delegate live capability probes
-  to subagents with full context, rank working free models by vision → reasoning →
-  context size, and configure the Hermes primary model + fallback chain from proven
-  working models per authorized provider.
+description: Inventory all authorized LLM providers, delegate live capability probes to subagents with
+  full context, rank working free models by vision → reasoning → context size, and configure the Hermes
+  primary model + fallback chain from proven working models per authorized provider.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /test-providers-models
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:test-providers-models
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /test-providers-models
+    flags: {}
+    help: Inventory all authorized LLM providers, delegate live capability probes to su...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - agents
 - ai-assistant
 - configuration
@@ -16,21 +42,7 @@ tags:
 - prompts
 - testing
 - typescript
-toolsets: null
-trigger: /test-providers-models
-skills: null
-dependencies:
-- skill:test-providers-models
-metadata:
-  hermes:
-    source: devops/test-providers-models
-    reimplemented: '2026-08-08'
-    data-snapshot: '2026-08-07'
 scripts: []
-formatter: default
-plan: ''
----
-
 ## Goal
 
 Produce a **verified, ordered fallback chain** across all authorized Hermes providers, using only models that *actually work* (probed live, not assumed), and configure Hermes (`model` + `fallback_providers`) accordingly. The ordering rule is deterministic:

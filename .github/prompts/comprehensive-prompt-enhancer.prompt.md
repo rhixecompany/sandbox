@@ -1,48 +1,46 @@
-﻿---
+---
 name: comprehensive-prompt-enhancer
-title: comprehensive prompt enhancer
-description: Prompt for comprehensive-prompt-enhancer
-version: "1.0.0"
-tags: [ai, improvement, prompt-engineering, quality, tool]
-trigger: comprehensive-prompt-enhancer
+title: Comprehensive Prompt Library Enhancer
+description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY principle, best
+  practices, and all appropriate structural sections: personas, profiles, personalities, steps, rules,
+  goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans,
+  prompts, toolsets. Ensures each prompt and all its files are verified, validated.'
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /comprehensive-prompt-enhancer
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:subagent-driven-development
+- skill:brainstorming
+- skill:prompt-engineering-patterns
+- skill:prompt-management
+- skill:skill-judge
+formatter: default
 metadata:
   hermes:
-    profile: default
-    priority: medium
-    categories: []
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
   copilot:
-    model_required: claude-opus
-    context_length: medium
+    context_size: large
+    extensions: []
+    keybinding: null
   opencode:
-    enabled: true
-    compatibility: compatible
+    command: opencode /comprehensive-prompt-enhancer
+    flags: {}
+    help: Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY p...
   codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
----
-trigger: /comprehensive-prompt-enhancer
-name: comprehensive-prompt-enhancer
-title: Comprehensive Prompt Library Enhancer
-description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using
-  DRY principle, best practices, and all appropriate structural sections: personas,
-  profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals,
-  checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures
-  each prompt and all its files are verified, validated.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets: null
-scripts: null
-skills: null
-dependencies:
-- skill:using-superpowers
-- skill:subagent-driven-development
-- skill:brainstorming
-- skill:prompt-engineering-patterns
-- skill:prompt-management
-- skill:skill-judge
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - backend
 - git
@@ -51,44 +49,7 @@ tags:
 - prompts
 - skills
 - typescript - prompts - enhancement - library
-metadata:
-  hermes: null
-formatter: default
-plan: ''
-trigger: /comprehensive-prompt-enhancer
-name: comprehensive-prompt-enhancer
-title: Comprehensive Prompt Library Enhancer
-description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using
-  DRY principle, best practices, and all appropriate structural sections: personas,
-  profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals,
-  checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures
-  each prompt and all its files are verified, validated.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets: null
-scripts: null
-skills: null
-dependencies:
-- skill:using-superpowers
-- skill:subagent-driven-development
-- skill:brainstorming
-- skill:prompt-engineering-patterns
-- skill:prompt-management
-- skill:skill-judge
-tags:
-- audit
-- backend
-- git
-- mcp
-- ml
-- prompts
-- skills
-- typescript - prompts - enhancement - library
-metadata:
-  hermes: null
-formatter: default
-plan: ''
+scripts: []
 ---
 
 ## Goal
@@ -322,4 +283,3 @@ Same-family prompts:
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-

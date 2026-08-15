@@ -1,40 +1,43 @@
 ---
 name: azure-resource-health-diagnose
-title: "Azure Resource Health & Issue Diagnosis"
-description: |
-  No description
+title: Azure Resource Health & Issue Diagnosis
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /azure-resource-health-diagnose
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /azure-resource-health-diagnose"
+    command: opencode /azure-resource-health-diagnose
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:debug
-  - tool:azure
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- tool:azure
 scripts: []
----
 ## Goal
 
 Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems.
@@ -268,7 +271,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

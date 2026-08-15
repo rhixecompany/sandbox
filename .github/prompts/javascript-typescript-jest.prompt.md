@@ -1,37 +1,45 @@
 ---
 name: javascript-typescript-jest
 title: Javascript Typescript Jest
-description: Best practices for writing JavaScript/TypeScript tests using Jest, including
-  mocking strategies, test structure, and common patterns.
+description: Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies,
+  test structure, and common patterns.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /javascript-typescript-jest
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- javascript
-- ml
-- prompts
-- specification
-- testing
-- typescript
-- javascript
-- ml
-- prompts
-- specification
-- testing
-- typescript
-trigger: /javascript-typescript-jest
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /javascript-typescript-jest
+    flags: {}
+    help: Best practices for writing JavaScript/TypeScript tests using Jest, including ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- javascript
+- ml
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns.

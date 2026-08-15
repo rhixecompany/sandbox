@@ -1,25 +1,3 @@
-﻿---
-name: create-readme
-title: create readme
-description: Prompt for create-readme
-version: "1.0.0"
-tags: [communication, documentation, markdown, project, tool]
-trigger: create-readme
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-readme
 title: Create Readme
@@ -27,62 +5,41 @@ description: Create a README.md file for the project.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-readme
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-readme
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-readme
-title: Create Readme
-description: Create a README.md file for the project.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-readme
+    flags: {}
+    help: Create a README.md file for the project.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-readme
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -262,4 +219,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

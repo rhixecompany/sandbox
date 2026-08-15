@@ -1,38 +1,45 @@
 ---
 name: update-oo-component-documentation
 title: Update Oo Component Documentation
-description: Update existing object-oriented component documentation following industry
-  best practices and architectural documentation standards.
+description: Update existing object-oriented component documentation following industry best practices
+  and architectural documentation standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /update-oo-component-documentation
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-- architecture
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-trigger: /update-oo-component-documentation
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-oo-component-documentation
+    flags: {}
+    help: Update existing object-oriented component documentation following industry be...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- documentation
+- maintenance
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Update existing object-oriented component documentation following industry best practices and architectural documentation standards.

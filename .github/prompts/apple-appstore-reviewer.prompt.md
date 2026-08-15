@@ -1,39 +1,42 @@
 ---
 name: apple-appstore-reviewer
-title: "Apple App Store Reviewer"
-description: |
-  No description
+title: Apple App Store Reviewer
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /apple-appstore-reviewer
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: code-architect
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /apple-appstore-reviewer"
+    command: opencode /apple-appstore-reviewer
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:code-quality
+- agent-type:hermes
+- complexity:intermediate
+- domain:code-quality
 scripts: []
----
 ## Goal
 
 Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons.
@@ -239,7 +242,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

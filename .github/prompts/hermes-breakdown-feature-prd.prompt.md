@@ -1,39 +1,45 @@
 ---
 name: hermes-breakdown-feature-prd
 title: Hermes Breakdown Feature Prd
-description: 'Hermes-equivalent: create a Feature PRD from a feature idea or parent
-  epic.'
+description: 'Hermes-equivalent: create a Feature PRD from a feature idea or parent epic.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /hermes-breakdown-feature-prd
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- specification
-- typescript
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- specification
-- typescript
-trigger: /hermes-breakdown-feature-prd
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-breakdown-feature-prd
+    flags: {}
+    help: 'Hermes-equivalent: create a Feature PRD from a feature idea or parent epic.'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Produce a feature PRD that is ready to hand off for implementation planning.

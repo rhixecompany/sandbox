@@ -1,39 +1,17 @@
-﻿---
-name: git-multi-repo-orchestration
-title: git multi repo orchestration
-description: Prompt for git-multi-repo-orchestration
-version: "1.0.0"
-tags: [advanced, automation, devops, git, orchestration]
-trigger: git-multi-repo-orchestration
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
 description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
-  PRs (gh pr create, review-then-merge), merge directly into development, and sync
-  to production across all repos in ./projects.
+  PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across
+  all repos in ./projects.
 version: 1.0.0
 license: MIT
 author: Alexa
-toolsets: null
-scripts: []
-skills: null
-formatter: default
-plan: plans/git-multi-repo-orchestration.md
+trigger: /git-multi-repo-orchestration
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - skill:gh-cli
 - skill:git-commit
@@ -47,44 +25,28 @@ dependencies:
 - skill:workspace-audit
 - skill:repo-management
 - tool:mcp-github
-tags:
-- audit
-- frontend
-- git
-- prompts
-- skills
-- typescript
-- workflow
-trigger: /git-multi-repo-orchestration
-metadata:
-  hermes: {}
-name: git-multi-repo-orchestration
-title: Git Multi-Repo Orchestration
-description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
-  PRs (gh pr create, review-then-merge), merge directly into development, and sync
-  to production across all repos in ./projects.
-version: 1.0.0
-license: MIT
-author: Alexa
-toolsets: null
-scripts: []
-skills: null
 formatter: default
 plan: plans/git-multi-repo-orchestration.md
-dependencies:
-- skill:gh-cli
-- skill:git-commit
-- skill:git-helper
-- skill:git-submodule-workflow
-- skill:github-pr-workflow
-- skill:github-repo-management
-- skill:github-code-review
-- skill:finishing-a-development-branch
-- skill:git-history-preserving-migration
-- skill:workspace-audit
-- skill:repo-management
-- tool:mcp-github
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /git-multi-repo-orchestration
+    flags: {}
+    help: Load and use all git skills to run add/commit/push, submodule sync, create/up...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - audit
 - frontend
 - git
@@ -92,9 +54,7 @@ tags:
 - skills
 - typescript
 - workflow
-trigger: /git-multi-repo-orchestration
-metadata:
-  hermes: {}
+scripts: []
 ---
 
 ## Goal
@@ -326,4 +286,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`git-flow-branch-creator.prompt.md`](git-flow-branch-creator.prompt.md)
-

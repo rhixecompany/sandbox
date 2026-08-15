@@ -1,25 +1,3 @@
-﻿---
-name: csharp-nunit
-title: csharp nunit
-description: Prompt for csharp-nunit
-version: "1.0.0"
-tags: [backend, csharp, nunit, qa, testing]
-trigger: csharp-nunit
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: csharp-nunit
 title: NUnit Best Practices
@@ -27,58 +5,39 @@ description: Get best practices for NUnit unit testing, including data-driven te
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /csharp-nunit
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-trigger: /csharp-nunit
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: csharp-nunit
-title: NUnit Best Practices
-description: Get best practices for NUnit unit testing, including data-driven tests.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-nunit
+    flags: {}
+    help: Get best practices for NUnit unit testing, including data-driven tests.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-trigger: /csharp-nunit
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -279,4 +238,3 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-

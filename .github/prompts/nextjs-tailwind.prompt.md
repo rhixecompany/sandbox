@@ -1,48 +1,50 @@
 ---
 name: nextjs-tailwind
 title: Nextjs Tailwind
-description: Comprehensive Next.js and Tailwind implementation prompt aligned to project
-  standards.
+description: Comprehensive Next.js and Tailwind implementation prompt aligned to project standards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /nextjs-tailwind
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- audit
-- backend
-- data
-- frontend
-- ml
-- nextjs
-- performance
-- prompts
-- security
-- typescript
-- architecture
-- audit
-- backend
-- data
-- frontend
-- ml
-- nextjs
-- performance
-- prompts
-- security
-- skills
-- typescript
-trigger: /nextjs-tailwind
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /nextjs-tailwind
+    flags: {}
+    help: Comprehensive Next.js and Tailwind implementation prompt aligned to project s...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- audit
+- backend
+- data
+- frontend
+- ml
+- nextjs
+- performance
+- prompts
+- security
+- typescript
+- skills
+scripts: []
 ## Goal
 
 Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.

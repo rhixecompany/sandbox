@@ -5,29 +5,38 @@ description: Add new language to a Next.js + next-intl application.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /next-intl-add-language
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-trigger: /next-intl-add-language
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /next-intl-add-language
+    flags: {}
+    help: Add new language to a Next.js + next-intl application.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Add new language to a Next.js + next-intl application.

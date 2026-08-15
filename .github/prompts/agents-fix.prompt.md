@@ -1,40 +1,43 @@
 ---
 name: agents-fix
-title: "Agents Sync and Deduplication"
-description: |
-  No description
+title: Agents Sync and Deduplication
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /agents-fix
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /agents-fix"
+    command: opencode /agents-fix
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:debug
-  - language:typescript
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- language:typescript
 scripts: []
----
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
@@ -190,7 +193,5 @@ Same-family prompts:
 
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
-
-
 
 

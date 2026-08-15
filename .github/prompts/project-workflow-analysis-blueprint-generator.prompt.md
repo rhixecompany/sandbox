@@ -1,35 +1,41 @@
 ---
 name: project-workflow-analysis-blueprint-generator
 title: Project Workflow Documentation Generator
-description: Comprehensive technology-agnostic prompt generator for documenting end-to-end
-  application workflows. Automatically detects project architecture patterns, technology
-  stacks, and data flow patterns to generate detailed implementation blueprints covering
-  entry points, service layers, data access, error handling, and testing approaches
-  across multiple technologies including .NET, Java/Spring, React, and microservices
-  architectures.
+description: Comprehensive technology-agnostic prompt generator for documenting end-to-end application
+  workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns
+  to generate detailed implementation blueprints covering entry points, service layers, data access, error
+  handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and
+  microservices architectures.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /project-workflow-analysis-blueprint-generator
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
+dependencies: []
 formatter: default
-plan: null
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /project-workflow-analysis-blueprint-generator
+    flags: {}
+    help: Comprehensive technology-agnostic prompt generator for documenting end-to-end...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- architecture
-- data
-- documentation
-- generator
-- java
-- ml
-- prompts
-- react
-- spring
-- testing
-- typescript
-- workflow
+- agent-type:hermes
 - architecture
 - data
 - documentation
@@ -44,12 +50,7 @@ tags:
 - workflow
 - csharp
 - dotnet
-trigger: /project-workflow-analysis-blueprint-generator
-dependencies: []
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures.

@@ -1,51 +1,39 @@
-﻿---
-name: execute-plan
-title: execute plan
-description: Prompt for execute-plan
-version: "1.0.0"
-tags: [automation, implementation, planning, project, tool]
-trigger: execute-plan
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: execute-plan
 title: Execute Plan
-description: Load and execute any plan document from .hermes/plans/ by specifying
-  its filename.
+description: Load and execute any plan document from .hermes/plans/ by specifying its filename.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /execute-plan
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /execute-plan
+    flags: {}
+    help: Load and execute any plan document from .hermes/plans/ by specifying its file...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-- agents
-- ai-assistant
-- execution
-- frontend
-- prompts
-- specification
-- typescript
+- agent-type:hermes
 - agents
 - ai-assistant
 - execution
@@ -55,46 +43,7 @@ tags:
 - typescript
 - plan
 - workflow
-trigger: /execute-plan
-metadata:
-  hermes: {}
-name: execute-plan
-title: Execute Plan
-description: Load and execute any plan document from .hermes/plans/ by specifying
-  its filename.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
 scripts: []
-skills:
-- subagent-driven-development
-formatter: default
-plan: null
-dependencies:
-- skill:subagent-driven-development
-tags:
-- agents
-- ai-assistant
-- execution
-- frontend
-- prompts
-- specification
-- typescript
-- agents
-- ai-assistant
-- execution
-- frontend
-- prompts
-- specification
-- typescript
-- plan
-- workflow
-trigger: /execute-plan
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -244,4 +193,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`execute-all-prompts.prompt.md`](execute-all-prompts.prompt.md)
-

@@ -1,40 +1,43 @@
 ---
 name: breakdown-feature-implementation
-title: "Feature Implementation Plan Prompt"
-description: |
-  No description
+title: Feature Implementation Plan Prompt
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /breakdown-feature-implementation
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: code-architect
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /breakdown-feature-implementation"
+    command: opencode /breakdown-feature-implementation
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:dev
-  - domain:planning
+- agent-type:hermes
+- complexity:intermediate
+- domain:dev
+- domain:planning
 scripts: []
----
 ## Goal
 
 Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.
@@ -202,7 +205,5 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
-
-
 
 

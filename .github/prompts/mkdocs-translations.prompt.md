@@ -5,31 +5,39 @@ description: Generate a language translation for a mkdocs documentation stack.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /mkdocs-translations
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /mkdocs-translations
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /mkdocs-translations
+    flags: {}
+    help: Generate a language translation for a mkdocs documentation stack.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Generate a language translation for a mkdocs documentation stack.

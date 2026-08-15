@@ -1,41 +1,44 @@
 ---
 name: agents-system-prompt-context-fix
-title: "Agents System Prompt Context Fix"
-description: |
-  No description
+title: Agents System Prompt Context Fix
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /agents-system-prompt-context-fix
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - github
-      - terminal
+    - filesystem
+    - github
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /agents-system-prompt-context-fix"
+    command: opencode /agents-system-prompt-context-fix
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - domain:debug
-  - language:typescript
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- language:typescript
 scripts: []
----
 ## Goal
 
 Fix and verify Hermes/Copilot/Codex agent system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion.
@@ -174,7 +177,5 @@ Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
-
-
 
 

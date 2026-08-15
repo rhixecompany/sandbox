@@ -1,39 +1,47 @@
 ---
 name: run-session-agentsmd-workflow
 title: Run Agents.md Workflow
-description: 'Execute the AGENTS.md session workflow: introspection, tool discovery,
-  profile matching, and reporting.'
+description: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching,
+  and reporting.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /run-session-agentsmd-workflow
 toolsets:
 - file
 - terminal
-scripts: []
 skills:
 - subagent-driven-development
-formatter: default
-plan: null
 dependencies:
 - skill:subagent-driven-development
-tags:
-- agents
-- git
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- git
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /run-session-agentsmd-workflow
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /run-session-agentsmd-workflow
+    flags: {}
+    help: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profil...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- git
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.

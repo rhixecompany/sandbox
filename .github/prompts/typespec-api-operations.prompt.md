@@ -1,36 +1,44 @@
 ---
 name: typespec-api-operations
 title: Add TypeSpec API Operations
-description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin
-  with proper routing, parameters, and adaptive cards.
+description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing,
+  parameters, and adaptive cards.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /typespec-api-operations
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- api
-- ml
-- prompts
-- specification
-- typescript
-- api
-- ml
-- prompts
-- specification
-- typescript
-trigger: /typespec-api-operations
-mode: agent
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typespec-api-operations
+    flags: {}
+    help: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with pro...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.

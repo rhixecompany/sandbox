@@ -1,39 +1,42 @@
 ---
 name: az-cost-optimize
-title: "Azure Cost Optimize"
-description: |
-  No description
+title: Azure Cost Optimize
+description: No description
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /az-cost-optimize
 toolsets:
-  - file
-  - terminal
+- file
+- terminal
 skills: []
 dependencies: []
 formatter: default
-plan: null
 metadata:
   hermes:
     profile: default
     mcp_servers:
-      - filesystem
-      - terminal
+    - filesystem
+    - terminal
     context_size: medium
   copilot:
     context_size: medium
     extensions: []
+    keybinding: null
   opencode:
-    command: "opencode /az-cost-optimize"
+    command: opencode /az-cost-optimize
     flags: {}
+    help: No description
   codex:
     model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
-  - complexity:intermediate
-  - tool:azure
+- agent-type:hermes
+- complexity:intermediate
+- tool:azure
 scripts: []
----
 ## Goal
 
 Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.
@@ -250,7 +253,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
 
 

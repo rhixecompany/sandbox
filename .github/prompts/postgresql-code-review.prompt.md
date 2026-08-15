@@ -1,44 +1,48 @@
 ---
 name: postgresql-code-review
 title: PostgreSQL Code Review Assistant
-description: PostgreSQL-specific code review assistant focusing on PostgreSQL best
-  practices, anti-patterns, and unique quality standards. Covers JSONB operations,
-  array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive
-  security features like Row Level Security (RLS).
+description: PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns,
+  and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function
+  optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /postgresql-code-review
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- architecture
-- audit
-- database
-- prompts
-- security
-- specification
-- sql
-- typescript
-- architecture
-- audit
-- database
-- prompts
-- security
-- specification
-- sql
-- typescript
-trigger: /postgresql-code-review
-tested_with: GitHub Copilot Chat (GPT-4o) - Validated July 20, 2025
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /postgresql-code-review
+    flags: {}
+    help: PostgreSQL-specific code review assistant focusing on PostgreSQL best practic...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- audit
+- database
+- prompts
+- security
+- specification
+- sql
+- typescript
+scripts: []
 ## Goal
 
 PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).

@@ -1,25 +1,3 @@
-﻿---
-name: generate-docs
-title: generate docs
-description: Prompt for generate-docs
-version: "1.0.0"
-tags: [automation, communication, documentation, generation, tool]
-trigger: generate-docs
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: generate-docs
 title: Generate Docs
@@ -27,70 +5,43 @@ description: Generate documentation for code or APIs.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /generate-docs
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- api
-- documentation
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-- api
-- documentation
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-trigger: /generate-docs
+formatter: default
 metadata:
-  hermes: {}
-name: generate-docs
-title: Generate Docs
-description: Generate documentation for code or APIs.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
-- browser
-- todo
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /generate-docs
+    flags: {}
+    help: Generate documentation for code or APIs.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- documentation
+- generator
+- ml
+- nextjs
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- api
-- documentation
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-- api
-- documentation
-- generator
-- ml
-- nextjs
-- prompts
-- specification
-- typescript
-trigger: /generate-docs
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -246,4 +197,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`generate-custom-instructions-from-codebase.prompt.md`](generate-custom-instructions-from-codebase.prompt.md)
-

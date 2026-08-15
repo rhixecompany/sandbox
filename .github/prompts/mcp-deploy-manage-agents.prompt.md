@@ -5,37 +5,43 @@ description: mcp-deploy-manage-agents.prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /mcp-deploy-manage-agents
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- agents
-- deployment
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-- agents
-- deployment
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-trigger: /mcp-deploy-manage-agents
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /mcp-deploy-manage-agents
+    flags: {}
+    help: mcp-deploy-manage-agents.prompt.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- deployment
+- mcp
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
 
 Use this prompt to handle the deploy and manage mcp based agents workflow.

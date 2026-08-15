@@ -1,25 +1,3 @@
-﻿---
-name: development
-title: development
-description: Prompt for development
-version: "1.0.0"
-tags: [coding, development, general, intermediate, tool]
-trigger: development
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: development
 title: Development
@@ -27,68 +5,42 @@ description: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /development
 toolsets:
 - web
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- database
-- frontend
-- javascript
-- ml
-- nextjs
-- prompts
-- specification
-- sql
-- database
-- frontend
-- javascript
-- ml
-- nextjs
-- prompts
-- specification
-- sql
-trigger: /development
+formatter: default
 metadata:
-  hermes: {}
-name: development
-title: Development
-description: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
-- todo
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /development
+    flags: {}
+    help: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- database
+- frontend
+- javascript
+- ml
+- nextjs
+- prompts
+- specification
+- sql
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- database
-- frontend
-- javascript
-- ml
-- nextjs
-- prompts
-- specification
-- sql
-- database
-- frontend
-- javascript
-- ml
-- nextjs
-- prompts
-- specification
-- sql
-trigger: /development
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -250,4 +202,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

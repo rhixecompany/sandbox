@@ -1,92 +1,46 @@
-﻿---
-name: create-tldr-page
-title: create tldr page
-description: Prompt for create-tldr-page
-version: "1.0.0"
-tags: [communication, content, documentation, summarization, tool]
-trigger: create-tldr-page
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: create-tldr-page
 title: Create TLDR Page
-description: Create a tldr page from documentation URLs and command examples, requiring
-  both URL and command name.
+description: Create a tldr page from documentation URLs and command examples, requiring both URL and command
+  name.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /create-tldr-page
 toolsets:
 - terminal
 - file
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-tldr-page
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: create-tldr-page
-title: Create TLDR Page
-description: Create a tldr page from documentation URLs and command examples, requiring
-  both URL and command name.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- terminal
-- file
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-tldr-page
+    flags: {}
+    help: Create a tldr page from documentation URLs and command examples, requiring bo...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- typescript
-trigger: /create-tldr-page
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -318,4 +272,3 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
-

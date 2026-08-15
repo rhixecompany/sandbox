@@ -5,33 +5,40 @@ description: Get best practices for JUnit 5 unit testing, including data-driven 
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /java-junit
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- api
-- data
-- frontend
-- java
-- prompts
-- testing
-- typescript
-- api
-- data
-- frontend
-- java
-- prompts
-- testing
-- typescript
-trigger: /java-junit
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /java-junit
+    flags: {}
+    help: Get best practices for JUnit 5 unit testing, including data-driven tests.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- data
+- frontend
+- java
+- prompts
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Get best practices for JUnit 5 unit testing, including data-driven tests.

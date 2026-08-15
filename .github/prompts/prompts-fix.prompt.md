@@ -1,16 +1,16 @@
 ---
 name: prompts-fix
 title: prompts Sync and Deduplication
-description: Sync and deduplicate prompt files across Hermes and Copilot with dependency
-  mapping and platform-specific validation.
+description: Sync and deduplicate prompt files across Hermes and Copilot with dependency mapping and platform-specific
+  validation.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
-toolsets: null
-scripts: []
-skills: null
-formatter: default
-plan: null
+trigger: /prompts-fix
+toolsets:
+- file
+- terminal
+skills: []
 dependencies:
 - prompt:context-map.prompt.md
 - prompt:update-implementation-plan.prompt.md
@@ -23,7 +23,27 @@ dependencies:
 - skill:simplify
 - skill:acpx-executor
 - skill:hermes-agent
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /prompts-fix
+    flags: {}
+    help: Sync and deduplicate prompt files across Hermes and Copilot with dependency m...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
 tags:
+- agent-type:hermes
 - ai-assistant
 - fix
 - ml
@@ -31,11 +51,7 @@ tags:
 - specification
 - typescript
 - workflow
-trigger: /prompts-fix
-metadata:
-  hermes: {}
----
-
+scripts: []
 ## Goal
 
 Sync prompt files across Hermes and Copilot without losing trigger names or platform-specific behavior.

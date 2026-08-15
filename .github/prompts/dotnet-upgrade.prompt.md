@@ -1,88 +1,44 @@
-﻿---
-name: dotnet-upgrade
-title: dotnet upgrade
-description: Prompt for dotnet-upgrade
-version: "1.0.0"
-tags: [backend, devops, dotnet, migration, upgrade]
-trigger: dotnet-upgrade
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dotnet-upgrade
 title: .Net Upgrade Analysis Prompts
-description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis
-  and execution.
+description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dotnet-upgrade
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- audit
-- csharp
-- dotnet
-- migration
-- prompts
-- typescript
-- audit
-- csharp
-- dotnet
-- migration
-- prompts
-- typescript
-trigger: /dotnet-upgrade
+formatter: default
 metadata:
-  hermes: {}
-name: dotnet-upgrade
-title: .Net Upgrade Analysis Prompts
-description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis
-  and execution.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dotnet-upgrade
+    flags: {}
+    help: Ready-to-use prompts for comprehensive .NET framework upgrade analysis and ex...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- csharp
+- dotnet
+- migration
+- prompts
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- audit
-- csharp
-- dotnet
-- migration
-- prompts
-- typescript
-- audit
-- csharp
-- dotnet
-- migration
-- prompts
-- typescript
-trigger: /dotnet-upgrade
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -238,4 +194,3 @@ Same-family prompts:
 
 - [`dotnet-best-practices.prompt.md`](dotnet-best-practices.prompt.md)
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
-

@@ -2,46 +2,50 @@
 name: refactor-mardown-files
 title: Refactor Mardown Files
 description: Refactor and update Banking documentation files (`AGENTS.md` and `.github/copilot-instructions.md`)
-  to maximize clarity, actionability, and AI agent productivity, following project
-  conventions and Diátaxis principles.
+  to maximize clarity, actionability, and AI agent productivity, following project conventions and Diátaxis
+  principles.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /refactor-mardown-files
 toolsets:
 - web
 - browser
 - todo
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- agents
-- ai-assistant
-- documentation
-- git
-- ml
-- nextjs
-- prompts
-- refactoring
-- specification
-- typescript
-- agents
-- ai-assistant
-- documentation
-- git
-- ml
-- nextjs
-- prompts
-- refactoring
-- specification
-- typescript
-trigger: /refactor-mardown-files
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /refactor-mardown-files
+    flags: {}
+    help: Refactor and update Banking documentation files (`AGENTS.md` and `.github/cop...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- documentation
+- git
+- ml
+- nextjs
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Refactor and update Banking documentation files (`AGENTS.md` and `.github/copilot-instructions.md`) to maximize clarity, actionability, and AI agent productivity, following project conventions and Diátaxis principles.

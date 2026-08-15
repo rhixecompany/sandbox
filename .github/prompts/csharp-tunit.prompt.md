@@ -1,25 +1,3 @@
-﻿---
-name: csharp-tunit
-title: csharp tunit
-description: Prompt for csharp-tunit
-version: "1.0.0"
-tags: [backend, csharp, qa, testing, tunit]
-trigger: csharp-tunit
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: csharp-tunit
 title: TUnit Best Practices
@@ -27,60 +5,40 @@ description: Get best practices for TUnit unit testing, including data-driven te
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /csharp-tunit
 toolsets:
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-- csharp
-- data
-- dotnet
-- frontend
-- prompts
-- testing
-- typescript
-trigger: /csharp-tunit
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
-name: csharp-tunit
-title: TUnit Best Practices
-description: Get best practices for TUnit unit testing, including data-driven tests.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-tunit
+    flags: {}
+    help: Get best practices for TUnit unit testing, including data-driven tests.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- csharp
+- data
+- dotnet
+- prompts
+- testing
+- typescript
+- frontend
 scripts: []
-skills: []
-formatter: default
-plan: null
-tags:
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-- csharp
-- data
-- dotnet
-- frontend
-- prompts
-- testing
-- typescript
-trigger: /csharp-tunit
-dependencies: []
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -296,4 +254,3 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-

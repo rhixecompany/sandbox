@@ -1,47 +1,49 @@
 ---
 name: hermes-breakdown-feature-implementation
 title: Hermes Breakdown Feature Implementation
-description: 'Hermes-equivalent: produce a Feature Implementation Plan from a Feature
-  PRD.'
+description: 'Hermes-equivalent: produce a Feature Implementation Plan from a Feature PRD.'
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /hermes-breakdown-feature-implementation
 toolsets:
 - file
 - terminal
-scripts: []
 skills: []
-formatter: default
-plan: null
-tags:
-- ai-assistant
-- api
-- architecture
-- data
-- deployment
-- frontend
-- ml
-- prompts
-- security
-- specification
-- typescript
-- ai-assistant
-- api
-- architecture
-- data
-- deployment
-- frontend
-- ml
-- prompts
-- security
-- specification
-- typescript
-trigger: /hermes-breakdown-feature-implementation
 dependencies: []
+formatter: default
 metadata:
-  hermes: {}
----
-
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-breakdown-feature-implementation
+    flags: {}
+    help: 'Hermes-equivalent: produce a Feature Implementation Plan from a Feature PRD.'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- api
+- architecture
+- data
+- deployment
+- frontend
+- ml
+- prompts
+- security
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Turn a feature PRD into an implementation plan that an engineering team can execute.

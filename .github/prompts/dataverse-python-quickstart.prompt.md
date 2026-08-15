@@ -1,94 +1,46 @@
-﻿---
-name: dataverse-python-quickstart
-title: dataverse python quickstart
-description: Prompt for dataverse-python-quickstart
-version: "1.0.0"
-tags: [backend, beginner, dataverse, python, setup]
-trigger: dataverse-python-quickstart
-metadata:
-  hermes:
-    profile: default
-    priority: medium
-    categories: []
-  copilot:
-    model_required: claude-opus
-    context_length: medium
-  opencode:
-    enabled: true
-    compatibility: compatible
-  codex:
-    enabled: false
-    model_preferred: text-davinci-003
-
 ---
 name: dataverse-python-quickstart
 title: Dataverse Python Quickstart Generator
-description: Generate Python SDK setup + CRUD + bulk + paging snippets using official
-  patterns.
+description: Generate Python SDK setup + CRUD + bulk + paging snippets using official patterns.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
+trigger: /dataverse-python-quickstart
 toolsets:
 - file
 - terminal
 - web
-scripts: []
 skills: []
-formatter: default
-plan: null
 dependencies: []
-tags:
-- audit
-- data
-- frontend
-- generator
-- prompts
-- python
-- typescript
-- audit
-- data
-- frontend
-- generator
-- prompts
-- python
-- typescript
-trigger: /dataverse-python-quickstart
+formatter: default
 metadata:
-  hermes: {}
-name: dataverse-python-quickstart
-title: Dataverse Python Quickstart Generator
-description: Generate Python SDK setup + CRUD + bulk + paging snippets using official
-  patterns.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-toolsets:
-- file
-- terminal
-- web
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dataverse-python-quickstart
+    flags: {}
+    help: Generate Python SDK setup + CRUD + bulk + paging snippets using official patt...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- data
+- frontend
+- generator
+- prompts
+- python
+- typescript
 scripts: []
-skills: []
-formatter: default
-plan: null
-dependencies: []
-tags:
-- audit
-- data
-- frontend
-- generator
-- prompts
-- python
-- typescript
-- audit
-- data
-- frontend
-- generator
-- prompts
-- python
-- typescript
-trigger: /dataverse-python-quickstart
-metadata:
-  hermes: {}
 ---
 
 ## Goal
@@ -241,4 +193,3 @@ Same-family prompts:
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
-
