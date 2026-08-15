@@ -30,7 +30,7 @@
 		"MD045": false,
 		"MD048": true,
 		// Tables
-		"MD060": true,
+		"MD060": false, // prettier owns table formatting; its aligned style conflicts with MD060 "aligned"
 		// Line length/spacing
 		"MD009": false,
 		"MD012": false,
