@@ -85,9 +85,20 @@
 	"python-envs.autoActivate": true,
 	"python.analysis.autoImportCompletions": true,
 	"python.analysis.typeCheckingMode": "basic",
-	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+	"python.defaultInterpreterPath": "C:\\Users\\Alexa\\myvenv\\Scripts\\python.exe",
 	"ruff.lineLength": 120,
-	"ruff.lint.select": ["E", "F", "I", "N", "W", "UP", "B", "SIM", "ARG", "RUF"],
+	"ruff.lint.select": [
+		"E",
+		"F",
+		"I",
+		"N",
+		"W",
+		"UP",
+		"B",
+		"SIM",
+		"ARG",
+		"RUF"
+	],
 	"search.exclude": {
 		"**/.venv": true,
 		"**/node_modules": true,
