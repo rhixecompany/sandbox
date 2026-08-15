@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openrouter-client-py"
+version = "1.0.0"
+description = "Python client wrapper for OpenRouter's chat completions API using the openrouter Python SDK"
+authors = [{name = "Hermes Agent"}]
+requires-python = ">=3.11"
+dependencies = [
+    "openrouter>=1.0.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
