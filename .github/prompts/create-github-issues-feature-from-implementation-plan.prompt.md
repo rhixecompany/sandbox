@@ -3,7 +3,7 @@ name: create-github-issues-feature-from-implementation-plan
 title: create github issues feature from implementation plan
 description: Prompt for create-github-issues-feature-from-implementation-plan
 version: "1.0.0"
-tags: []
+tags: [automation, devops, github, planning, tool]
 trigger: create-github-issues-feature-from-implementation-plan
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-github-issues-feature-from-implementation-plan

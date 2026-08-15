@@ -3,7 +3,7 @@ name: execute-plan
 title: execute plan
 description: Prompt for execute-plan
 version: "1.0.0"
-tags: []
+tags: [automation, implementation, planning, project, tool]
 trigger: execute-plan
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: execute-plan

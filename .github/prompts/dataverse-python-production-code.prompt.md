@@ -3,7 +3,7 @@ name: dataverse-python-production-code
 title: dataverse python production code
 description: Prompt for dataverse-python-production-code
 version: "1.0.0"
-tags: []
+tags: [backend, dataverse, patterns, production, python]
 trigger: dataverse-python-production-code
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dataverse-python-production-code

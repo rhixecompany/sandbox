@@ -3,7 +3,7 @@ name: context-map
 title: context map
 description: Prompt for context-map
 version: "1.0.0"
-tags: []
+tags: [analysis, architecture, planning, tool, visualization]
 trigger: context-map
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: context-map

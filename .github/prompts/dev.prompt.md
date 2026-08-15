@@ -3,7 +3,7 @@ name: dev
 title: dev
 description: Prompt for dev
 version: "1.0.0"
-tags: []
+tags: [beginner, coding, development, general, tool]
 trigger: dev
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dev

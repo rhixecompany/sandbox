@@ -3,7 +3,7 @@ name: dotnet-upgrade
 title: dotnet upgrade
 description: Prompt for dotnet-upgrade
 version: "1.0.0"
-tags: []
+tags: [backend, devops, dotnet, migration, upgrade]
 trigger: dotnet-upgrade
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dotnet-upgrade

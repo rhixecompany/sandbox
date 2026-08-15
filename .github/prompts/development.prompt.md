@@ -3,7 +3,7 @@ name: development
 title: development
 description: Prompt for development
 version: "1.0.0"
-tags: []
+tags: [coding, development, general, intermediate, tool]
 trigger: development
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: development

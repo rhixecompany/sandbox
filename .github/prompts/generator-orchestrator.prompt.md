@@ -3,7 +3,7 @@ name: generator-orchestrator
 title: generator orchestrator
 description: Prompt for generator-orchestrator
 version: "1.0.0"
-tags: []
+tags: [advanced, automation, orchestration, tool, workflow]
 trigger: generator-orchestrator
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: generator-orchestrator

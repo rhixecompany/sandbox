@@ -3,7 +3,7 @@ name: fedora-linux-triage
 title: fedora linux triage
 description: Prompt for fedora-linux-triage
 version: "1.0.0"
-tags: []
+tags: [devops, linux, system-admin, tool, troubleshooting]
 trigger: fedora-linux-triage
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: fedora-linux-triage

@@ -3,7 +3,7 @@ name: create-specification
 title: create specification
 description: Prompt for create-specification
 version: "1.0.0"
-tags: []
+tags: [communication, documentation, planning, requirements, tool]
 trigger: create-specification
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-specification

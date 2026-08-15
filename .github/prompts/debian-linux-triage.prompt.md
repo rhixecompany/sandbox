@@ -3,7 +3,7 @@ name: debian-linux-triage
 title: debian linux triage
 description: Prompt for debian-linux-triage
 version: "1.0.0"
-tags: []
+tags: [devops, linux, system-admin, tool, troubleshooting]
 trigger: debian-linux-triage
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: debian-linux-triage

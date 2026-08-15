@@ -3,7 +3,7 @@ name: create-github-action-workflow-specification
 title: create github action workflow specification
 description: Prompt for create-github-action-workflow-specification
 version: "1.0.0"
-tags: []
+tags: [automation, ci-cd, devops, github, tool]
 trigger: create-github-action-workflow-specification
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-github-action-workflow-specification

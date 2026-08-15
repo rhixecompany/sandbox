@@ -3,7 +3,7 @@ name: convert-plaintext-to-md
 title: convert plaintext to md
 description: Prompt for convert-plaintext-to-md
 version: "1.0.0"
-tags: []
+tags: [content, conversion, documentation, markdown, tool]
 trigger: convert-plaintext-to-md
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: convert-plaintext-to-md

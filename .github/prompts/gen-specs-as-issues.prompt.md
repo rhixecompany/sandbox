@@ -3,7 +3,7 @@ name: gen-specs-as-issues
 title: gen specs as issues
 description: Prompt for gen-specs-as-issues
 version: "1.0.0"
-tags: []
+tags: [automation, documentation, github, planning, tool]
 trigger: gen-specs-as-issues
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: gen-specs-as-issues

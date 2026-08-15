@@ -3,7 +3,7 @@ name: create-agentsmd
 title: create agentsmd
 description: Prompt for create-agentsmd
 version: "1.0.0"
-tags: []
+tags: [agents, automation, documentation, generation, tool]
 trigger: create-agentsmd
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-agentsmd

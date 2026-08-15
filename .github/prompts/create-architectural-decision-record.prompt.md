@@ -3,7 +3,7 @@ name: create-architectural-decision-record
 title: create architectural decision record
 description: Prompt for create-architectural-decision-record
 version: "1.0.0"
-tags: []
+tags: [adr, architecture, documentation, planning, tool]
 trigger: create-architectural-decision-record
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-architectural-decision-record

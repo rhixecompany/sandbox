@@ -3,7 +3,7 @@ name: dataverse-python-usecase-builder
 title: dataverse python usecase builder
 description: Prompt for dataverse-python-usecase-builder
 version: "1.0.0"
-tags: []
+tags: [backend, dataverse, planning, python, tool]
 trigger: dataverse-python-usecase-builder
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dataverse-python-usecase-builder

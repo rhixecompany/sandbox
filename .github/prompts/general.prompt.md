@@ -3,7 +3,7 @@ name: general
 title: general
 description: Prompt for general
 version: "1.0.0"
-tags: []
+tags: [beginner, communication, development, general, tool]
 trigger: general
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: general

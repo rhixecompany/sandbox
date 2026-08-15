@@ -3,7 +3,7 @@ name: create-technical-spike
 title: create technical spike
 description: Prompt for create-technical-spike
 version: "1.0.0"
-tags: []
+tags: [documentation, planning, research, spike, tool]
 trigger: create-technical-spike
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-technical-spike

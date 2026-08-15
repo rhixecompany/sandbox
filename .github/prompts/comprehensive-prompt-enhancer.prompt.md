@@ -3,7 +3,7 @@ name: comprehensive-prompt-enhancer
 title: comprehensive prompt enhancer
 description: Prompt for comprehensive-prompt-enhancer
 version: "1.0.0"
-tags: []
+tags: [ai, improvement, prompt-engineering, quality, tool]
 trigger: comprehensive-prompt-enhancer
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 trigger: /comprehensive-prompt-enhancer

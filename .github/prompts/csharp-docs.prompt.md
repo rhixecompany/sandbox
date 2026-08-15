@@ -3,7 +3,7 @@ name: csharp-docs
 title: csharp docs
 description: Prompt for csharp-docs
 version: "1.0.0"
-tags: []
+tags: [backend, coding, communication, csharp, documentation]
 trigger: csharp-docs
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: csharp-docs

@@ -3,7 +3,7 @@ name: folder-structure-blueprint-generator
 title: folder structure blueprint generator
 description: Prompt for folder-structure-blueprint-generator
 version: "1.0.0"
-tags: []
+tags: [architecture, blueprint, documentation, planning, tool]
 trigger: folder-structure-blueprint-generator
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: folder-structure-blueprint-generator

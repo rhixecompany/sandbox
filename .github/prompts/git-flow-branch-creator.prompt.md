@@ -3,7 +3,7 @@ name: git-flow-branch-creator
 title: git flow branch creator
 description: Prompt for git-flow-branch-creator
 version: "1.0.0"
-tags: []
+tags: [automation, devops, git, tool, workflow]
 trigger: git-flow-branch-creator
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: git-flow-branch-creator

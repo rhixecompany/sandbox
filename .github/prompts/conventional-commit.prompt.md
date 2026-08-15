@@ -3,7 +3,7 @@ name: conventional-commit
 title: conventional commit
 description: Prompt for conventional-commit
 version: "1.0.0"
-tags: []
+tags: [devops, git, standards, tool, workflow]
 trigger: conventional-commit
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: conventional-commit

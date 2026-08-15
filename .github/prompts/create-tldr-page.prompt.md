@@ -3,7 +3,7 @@ name: create-tldr-page
 title: create tldr page
 description: Prompt for create-tldr-page
 version: "1.0.0"
-tags: []
+tags: [communication, content, documentation, summarization, tool]
 trigger: create-tldr-page
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-tldr-page

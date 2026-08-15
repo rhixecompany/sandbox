@@ -3,7 +3,7 @@ name: ef-core
 title: ef core
 description: Prompt for ef-core
 version: "1.0.0"
-tags: []
+tags: [backend, csharp, database, dotnet, orm]
 trigger: ef-core
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: ef-core

@@ -3,7 +3,7 @@ name: dataverse-python-advanced-patterns
 title: dataverse python advanced patterns
 description: Prompt for dataverse-python-advanced-patterns
 version: "1.0.0"
-tags: []
+tags: [advanced, backend, dataverse, patterns, python]
 trigger: dataverse-python-advanced-patterns
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dataverse-python-advanced-patterns

@@ -3,7 +3,7 @@ name: dataverse-python-quickstart
 title: dataverse python quickstart
 description: Prompt for dataverse-python-quickstart
 version: "1.0.0"
-tags: []
+tags: [backend, beginner, dataverse, python, setup]
 trigger: dataverse-python-quickstart
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: dataverse-python-quickstart

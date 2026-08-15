@@ -3,7 +3,7 @@ name: create-readme
 title: create readme
 description: Prompt for create-readme
 version: "1.0.0"
-tags: []
+tags: [communication, documentation, markdown, project, tool]
 trigger: create-readme
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: create-readme

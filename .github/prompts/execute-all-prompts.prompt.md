@@ -3,7 +3,7 @@ name: execute-all-prompts
 title: execute all prompts
 description: Prompt for execute-all-prompts
 version: "1.0.0"
-tags: []
+tags: [automation, devops, orchestration, tool, workflow]
 trigger: execute-all-prompts
 metadata:
   hermes:
@@ -19,7 +19,6 @@ metadata:
   codex:
     enabled: false
     model_preferred: text-davinci-003
----
 
 ---
 name: execute-all-prompts
