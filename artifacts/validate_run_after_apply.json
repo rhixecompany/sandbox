@@ -1,1513 +1,1143 @@
 {
-  "summary": {
-    "total": 189,
-    "ok": 189,
-    "fail": 0
-  },
-  "details": [
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\a11y.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\agent-safety.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\agent-skills.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\agents.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\ai-prompt-engineering-safety-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": []
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\angular.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\ansible.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\apex.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\arch-linux.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\aspnet-rest-apis.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\astro.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-devops-pipelines.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-functions-typescript.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-logic-apps-power-automate.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-bicep.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-terraform.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\bicep-code-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\blazor.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\caveman-mode.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\centos-linux.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\clojure.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\cmake-vcpkg.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review-generic.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\codexer.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\coldfusion-cfc.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\coldfusion-cfm.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\containerization-docker-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\context-engineering.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\context7.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-cassandra-to-spring-data-cosmos.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-jpa-to-spring-data-cosmos.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-csharp.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-go.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-nodejs.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-python.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-thought-logging.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\cpp-language-service-tools.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-ja.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-ko.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dart-n-flutter.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\database-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-advanced-features.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-agentic-workflows.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-api-reference.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-authentication-security.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-error-handling.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-file-operations.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-modules.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-pandas-integration.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-performance-optimization.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-real-world-usecases.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-sdk.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-testing-debugging.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\debian-linux.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\declarative-agents-microsoft365.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\design-system.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\devbox-image-definition.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\devops-core-principles.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\documentation.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-architecture-good-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-framework.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui-9-to-dotnet-maui-10-upgrade.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-upgrade.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-wpf.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\fedora-linux.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\genaiscript.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\generate-modern-terraform-code-for-azure.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\gilfoyle-code-review.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\github-actions-ci-cd-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\go-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\go.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\html-css-style-color-guide.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\instructions.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-11-to-java-17-upgrade.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": []
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-17-to-java-21-upgrade.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": []
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-21-to-java-25-upgrade.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": []
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\java.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-user-project.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-workspace-automation.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\kotlin-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\kubernetes-deployment-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\kubernetes-manifests.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\langchain-python.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\localization.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\lwc.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\makefile.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\MAPPING.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\markdown-accessibility.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\markdown.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\mcp-m365-copilot.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\memory-bank.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\mongo-dba.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\monorepo-path-routing.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\moodle.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\ms-sql-dba.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\nestjs.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs-2026.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs-tailwind.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\no-heredoc.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\nodejs-javascript-vitest.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\object-calisthenics.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\oqtane.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-alm.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-api-reference.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-canvas-apps.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-code-components.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-community-resources.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-dependent-libraries.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-events.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-fluent-modern-theming.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-limitations.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-manifest-schema.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-model-driven-apps.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-overview.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-power-pages.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-react-platform-libraries.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-sample-components.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-tooling.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\performance-optimization.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\performance.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\php-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\php-symfony.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-dotnet.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-python.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-typescript.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-apps-canvas-yaml.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-apps-code-apps.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-custom-visuals-development.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-data-modeling-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-dax-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-devops-alm-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-report-design-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-security-rls-best-practices.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-platform-connector.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-platform-mcp-development.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\powershell-pester-5.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\powershell.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\prompt.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\prompts-strict-template.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\python-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\python.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\quarkus-mcp-server-sse.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\quarkus.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\r.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\reactjs.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\ruby-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\ruby-on-rails.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\rust-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\rust.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\scala2.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\security-and-owasp.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\security.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\seed-system.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\self-explanatory-code-commenting.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\shell.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\spec-driven-workflow-v1.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot-4-migration.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\sql-sp-generation.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\svelte.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\swift-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\tailwind-v4-vite.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\taming-copilot.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\tanstack-start-shadcn-tailwind.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\task-implementation.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\tasksync.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform-azure.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform-sap-btp.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\testing.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-5-es2022.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-mcp-server.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\typespec-m365-copilot.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\update-code-from-shorthand.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\update-docs-on-code-change.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\vsixtoolkit.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\vue.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\vuejs3.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    },
-    {
-      "path": "C:\\Users\\Alexa\\Desktop\\instructions\\wordpress.instructions.md",
-      "ok": true,
-      "errors": [],
-      "warnings": [
-        "normalized_applyTo:converted_string_to_array"
-      ]
-    }
-  ]
+	"summary": {
+		"total": 189,
+		"ok": 189,
+		"fail": 0
+	},
+	"details": [
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\a11y.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\agent-safety.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\agent-skills.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\agents.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\ai-prompt-engineering-safety-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": []
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\angular.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\ansible.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\apex.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\arch-linux.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\aspnet-rest-apis.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\astro.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-devops-pipelines.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-functions-typescript.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-logic-apps-power-automate.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-bicep.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\azure-verified-modules-terraform.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\bicep-code-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\blazor.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\caveman-mode.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\centos-linux.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\clojure.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\cmake-vcpkg.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review-generic.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\code-review.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\codexer.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\coldfusion-cfc.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\coldfusion-cfm.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\containerization-docker-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\context-engineering.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\context7.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-cassandra-to-spring-data-cosmos.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\convert-jpa-to-spring-data-cosmos.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-csharp.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-go.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-nodejs.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-sdk-python.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\copilot-thought-logging.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\cpp-language-service-tools.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-ja.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-ko.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\csharp.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dart-n-flutter.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\database-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-advanced-features.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-agentic-workflows.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-api-reference.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-authentication-security.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-error-handling.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-file-operations.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-modules.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-pandas-integration.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-performance-optimization.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-real-world-usecases.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-sdk.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python-testing-debugging.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dataverse-python.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\debian-linux.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\declarative-agents-microsoft365.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\design-system.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\devbox-image-definition.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\devops-core-principles.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\documentation.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-architecture-good-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-framework.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui-9-to-dotnet-maui-10-upgrade.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-maui.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-upgrade.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\dotnet-wpf.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\fedora-linux.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\genaiscript.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\generate-modern-terraform-code-for-azure.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\gilfoyle-code-review.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\github-actions-ci-cd-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\go-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\go.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\html-css-style-color-guide.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\instructions.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-11-to-java-17-upgrade.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": []
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-17-to-java-21-upgrade.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": []
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-21-to-java-25-upgrade.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": []
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\java-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\java.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-user-project.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\joyride-workspace-automation.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\kotlin-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\kubernetes-deployment-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\kubernetes-manifests.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\langchain-python.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\localization.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\lwc.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\makefile.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\MAPPING.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\markdown-accessibility.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\markdown.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\mcp-m365-copilot.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\memory-bank.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\mongo-dba.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\monorepo-path-routing.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\moodle.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\ms-sql-dba.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\nestjs.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs-2026.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs-tailwind.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\nextjs.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\no-heredoc.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\nodejs-javascript-vitest.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\object-calisthenics.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\oqtane.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-alm.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-api-reference.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-canvas-apps.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-code-components.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-community-resources.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-dependent-libraries.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-events.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-fluent-modern-theming.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-limitations.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-manifest-schema.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-model-driven-apps.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-overview.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-power-pages.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-react-platform-libraries.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-sample-components.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\pcf-tooling.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\performance-optimization.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\performance.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\php-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\php-symfony.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-dotnet.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-python.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\playwright-typescript.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-apps-canvas-yaml.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-apps-code-apps.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-custom-visuals-development.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-data-modeling-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-dax-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-devops-alm-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-report-design-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-bi-security-rls-best-practices.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-platform-connector.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\power-platform-mcp-development.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\powershell-pester-5.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\powershell.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\prompt.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\prompts-strict-template.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\python-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\python.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\quarkus-mcp-server-sse.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\quarkus.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\r.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\reactjs.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\ruby-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\ruby-on-rails.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\rust-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\rust.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\scala2.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\security-and-owasp.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\security.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\seed-system.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\self-explanatory-code-commenting.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\shell.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\spec-driven-workflow-v1.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot-4-migration.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\springboot.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\sql-sp-generation.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\svelte.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\swift-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\tailwind-v4-vite.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\taming-copilot.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\tanstack-start-shadcn-tailwind.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\task-implementation.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\tasksync.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform-azure.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform-sap-btp.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\terraform.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\testing.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-5-es2022.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript-mcp-server.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\typescript.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\typespec-m365-copilot.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\update-code-from-shorthand.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\update-docs-on-code-change.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\vsixtoolkit.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\vue.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\vuejs3.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		},
+		{
+			"path": "C:\\Users\\Alexa\\Desktop\\instructions\\wordpress.instructions.md",
+			"ok": true,
+			"errors": [],
+			"warnings": ["normalized_applyTo:converted_string_to_array"]
+		}
+	]
 }

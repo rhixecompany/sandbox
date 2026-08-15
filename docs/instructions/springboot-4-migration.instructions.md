@@ -153,14 +153,14 @@ spring-boot-webmvc-test = { module = "org.springframework.boot:spring-boot-webmv
 
 Update these starter names in your `libs.versions.toml`:
 
-| Spring Boot 3.x | Spring Boot 4.0 | Notes |
-| --- | --- | --- |
-| `spring-boot-starter-web` | `spring-boot-starter-webmvc` | Explicit naming |
-| `spring-boot-starter-web-services` | `spring-boot-starter-webservices` | Hyphen removed |
-| `spring-boot-starter-aop` | `spring-boot-starter-aspectj` | Only needed if using `org.aspectj.lang.annotation` |
-| `spring-boot-starter-oauth2-authorization-server` | `spring-boot-starter-security-oauth2-authorization-server` | Security namespace |
-| `spring-boot-starter-oauth2-client` | `spring-boot-starter-security-oauth2-client` | Security namespace |
-| `spring-boot-starter-oauth2-resource-server` | `spring-boot-starter-security-oauth2-resource-server` | Security namespace |
+| Spring Boot 3.x                                   | Spring Boot 4.0                                            | Notes                                              |
+| ------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------- |
+| `spring-boot-starter-web`                         | `spring-boot-starter-webmvc`                               | Explicit naming                                    |
+| `spring-boot-starter-web-services`                | `spring-boot-starter-webservices`                          | Hyphen removed                                     |
+| `spring-boot-starter-aop`                         | `spring-boot-starter-aspectj`                              | Only needed if using `org.aspectj.lang.annotation` |
+| `spring-boot-starter-oauth2-authorization-server` | `spring-boot-starter-security-oauth2-authorization-server` | Security namespace                                 |
+| `spring-boot-starter-oauth2-client`               | `spring-boot-starter-security-oauth2-client`               | Security namespace                                 |
+| `spring-boot-starter-oauth2-resource-server`      | `spring-boot-starter-security-oauth2-resource-server`      | Security namespace                                 |
 
 **Migration Example (libs.versions.toml):**
 
@@ -324,11 +324,11 @@ tasks.bootJar {
 
 Jackson 3 changes **group ID and package names**:
 
-| Component | Old (Jackson 2) | New (Jackson 3) |
-| --- | --- | --- |
-| Group ID | `com.fasterxml.jackson` | `tools.jackson` |
-| Packages | `com.fasterxml.jackson.*` | `tools.jackson.*` |
-| Exception | `jackson-annotations` | Still uses `com.fasterxml.jackson.core` group |
+| Component | Old (Jackson 2)           | New (Jackson 3)                               |
+| --------- | ------------------------- | --------------------------------------------- |
+| Group ID  | `com.fasterxml.jackson`   | `tools.jackson`                               |
+| Packages  | `com.fasterxml.jackson.*` | `tools.jackson.*`                             |
+| Exception | `jackson-annotations`     | Still uses `com.fasterxml.jackson.core` group |
 
 **libs.versions.toml:**
 
@@ -349,13 +349,13 @@ jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations
 
 Update imports and annotations:
 
-| Spring Boot 3.x | Spring Boot 4.0 |
-| --- | --- |
+| Spring Boot 3.x                         | Spring Boot 4.0               |
+| --------------------------------------- | ----------------------------- |
 | `Jackson2ObjectMapperBuilderCustomizer` | `JsonMapperBuilderCustomizer` |
-| `JsonObjectSerializer` | `ObjectValueSerializer` |
-| `JsonValueDeserializer` | `ObjectValueDeserializer` |
-| `@JsonComponent` | `@JacksonComponent` |
-| `@JsonMixin` | `@JacksonMixin` |
+| `JsonObjectSerializer`                  | `ObjectValueSerializer`       |
+| `JsonValueDeserializer`                 | `ObjectValueDeserializer`     |
+| `@JsonComponent`                        | `@JacksonComponent`           |
+| `@JsonMixin`                            | `@JacksonMixin`               |
 
 **Migration Example:**
 

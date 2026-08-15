@@ -60,13 +60,13 @@ Choose MCP servers that:
 
 ```json
 {
-  "authorization_url": "https://github.com/login/oauth/authorize",
-  "client_id": "github_client_id",
-  "client_secret": "github_client_secret",
-  "reference_id": "YOUR_AUTH_ID",
-  "scope": "repo read:user",
-  "token_url": "https://github.com/login/oauth/access_token",
-  "type": "OAuthPluginVault"
+	"authorization_url": "https://github.com/login/oauth/authorize",
+	"client_id": "github_client_id",
+	"client_secret": "github_client_secret",
+	"reference_id": "YOUR_AUTH_ID",
+	"scope": "repo read:user",
+	"token_url": "https://github.com/login/oauth/access_token",
+	"type": "OAuthPluginVault"
 }
 ```
 
@@ -74,11 +74,11 @@ Choose MCP servers that:
 
 ```json
 {
-  "authorization_url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
-  "reference_id": "sso_auth",
-  "scope": "User.Read",
-  "token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
-  "type": "OAuthPluginVault"
+	"authorization_url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+	"reference_id": "sso_auth",
+	"scope": "User.Read",
+	"token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+	"type": "OAuthPluginVault"
 }
 ```
 
@@ -137,12 +137,12 @@ Use JSONPath to extract relevant data:
 
 ```json
 {
-  "data_path": "$.items[*]",
-  "properties": {
-    "title": "$.name",
-    "subtitle": "$.description",
-    "url": "$.html_url"
-  }
+	"data_path": "$.items[*]",
+	"properties": {
+		"title": "$.name",
+		"subtitle": "$.description",
+		"url": "$.html_url"
+	}
 }
 ```
 
@@ -152,12 +152,12 @@ For dynamic templates:
 
 ```json
 {
-  "data_path": "$",
-  "properties": {
-    "title": "$.title",
-    "url": "$.url"
-  },
-  "template_selector": "$.templateType"
+	"data_path": "$",
+	"properties": {
+		"title": "$.title",
+		"url": "$.url"
+	},
+	"template_selector": "$.templateType"
 }
 ```
 
@@ -184,8 +184,8 @@ Define in ai-plugin.json for consistent formatting:
 
 ```json
 {
-  "text": "${if(status == 'active', '✅ Active', '❌ Inactive')}",
-  "type": "TextBlock"
+	"text": "${if(status == 'active', '✅ Active', '❌ Inactive')}",
+	"type": "TextBlock"
 }
 ```
 
@@ -193,9 +193,9 @@ Define in ai-plugin.json for consistent formatting:
 
 ```json
 {
-  "text": "${title}",
-  "type": "TextBlock",
-  "weight": "bolder"
+	"text": "${title}",
+	"type": "TextBlock",
+	"weight": "bolder"
 }
 ```
 
@@ -203,8 +203,8 @@ Define in ai-plugin.json for consistent formatting:
 
 ```json
 {
-  "text": "Score: ${formatNumber(score, 0)}",
-  "type": "TextBlock"
+	"text": "Score: ${formatNumber(score, 0)}",
+	"type": "TextBlock"
 }
 ```
 
@@ -269,14 +269,14 @@ Import tools from multiple MCP servers:
 
 ```json
 {
-  "mcpServers": {
-    "github": {
-      "url": "https://github-mcp.example.com"
-    },
-    "jira": {
-      "url": "https://jira-mcp.example.com"
-    }
-  }
+	"mcpServers": {
+		"github": {
+			"url": "https://github-mcp.example.com"
+		},
+		"jira": {
+			"url": "https://jira-mcp.example.com"
+		}
+	}
 }
 ```
 

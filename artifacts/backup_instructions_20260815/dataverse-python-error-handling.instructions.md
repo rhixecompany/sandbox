@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Dataverse SDK for Python — Error Handling & Troubleshooting Guide
@@ -469,16 +469,16 @@ except DataverseError:
 
 ## 7. Common Troubleshooting Checklist
 
-| Issue | Diagnosis | Solution |
-| --- | --- | --- |
-| 401 Unauthorized | Expired token or bad credentials | Re-authenticate with valid credentials |
-| 403 Forbidden | User lacks permissions | Request access from administrator |
-| 404 Not Found | Record/table doesn't exist | Verify schema name and record ID |
-| 429 Rate Limited | Too many requests | Implement exponential backoff retry |
-| 500+ Server Error | Service issue | Retry with exponential backoff; check status page |
-| 400 Bad Request | Invalid request format | Check OData syntax, field names, required fields |
-| Network timeout | Connection issues | Check network, increase timeout in DataverseConfig |
-| InvalidOperationException | Plugin/workflow error | Check plugin logs in Dataverse |
+| Issue                     | Diagnosis                        | Solution                                           |
+| ------------------------- | -------------------------------- | -------------------------------------------------- |
+| 401 Unauthorized          | Expired token or bad credentials | Re-authenticate with valid credentials             |
+| 403 Forbidden             | User lacks permissions           | Request access from administrator                  |
+| 404 Not Found             | Record/table doesn't exist       | Verify schema name and record ID                   |
+| 429 Rate Limited          | Too many requests                | Implement exponential backoff retry                |
+| 500+ Server Error         | Service issue                    | Retry with exponential backoff; check status page  |
+| 400 Bad Request           | Invalid request format           | Check OData syntax, field names, required fields   |
+| Network timeout           | Connection issues                | Check network, increase timeout in DataverseConfig |
+| InvalidOperationException | Plugin/workflow error            | Check plugin logs in Dataverse                     |
 
 ---
 

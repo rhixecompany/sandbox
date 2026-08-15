@@ -60,27 +60,27 @@ defined('ABSPATH') || exit;
 ```json
 // composer.json (snippet)
 {
-  "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-    "wp-coding-standards/wpcs": "^3.0",
-    "phpcompatibility/php-compatibility": "^9.0"
-  },
-  "scripts": {
-    "lint:php": "phpcs -p",
-    "fix:php": "phpcbf -p"
-  }
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpcompatibility/php-compatibility": "^9.0"
+	},
+	"scripts": {
+		"lint:php": "phpcs -p",
+		"fix:php": "phpcbf -p"
+	}
 }
 ```
 
 ```json
 // package.json (snippet)
 {
-  "devDependencies": {
-    "@wordpress/eslint-plugin": "^x.y.z"
-  },
-  "scripts": {
-    "lint:js": "eslint ."
-  }
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^x.y.z"
+	},
+	"scripts": {
+		"lint:js": "eslint ."
+	}
 }
 ```
 

@@ -35,7 +35,7 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [tailwindcss()]
+	plugins: [tailwindcss()],
 });
 ```
 
@@ -48,7 +48,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()]
+	plugins: [react(), tailwindcss()],
 });
 ```
 
@@ -86,11 +86,11 @@ Tailwind v4 uses CSS-first configuration. Do not create a `tailwind.config.js` f
 ```javascript
 // ❌ NOT NEEDED in Tailwind v4
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {}
-  },
-  plugins: []
+	content: ["./src/**/*.{js,ts,jsx,tsx}"],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
 };
 ```
 
@@ -101,10 +101,10 @@ When using the `@tailwindcss/vite` plugin, PostCSS configuration for Tailwind is
 ```javascript
 // ❌ NOT NEEDED when using @tailwindcss/vite
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}
-  }
+	plugins: {
+		tailwindcss: {},
+		autoprefixer: {},
+	},
 };
 ```
 
@@ -132,10 +132,10 @@ Use the `@theme` directive in your CSS to customize your design tokens:
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3b82f6;
-  --color-secondary: #64748b;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --radius-lg: 0.75rem;
+	--color-primary: #3b82f6;
+	--color-secondary: #64748b;
+	--font-sans: "Inter", system-ui, sans-serif;
+	--radius-lg: 0.75rem;
 }
 ```
 
@@ -147,14 +147,14 @@ Define custom utilities directly in CSS:
 @import "tailwindcss";
 
 @utility content-auto {
-  content-visibility: auto;
+	content-visibility: auto;
 }
 
 @utility scrollbar-hidden {
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 ```
 
@@ -186,13 +186,11 @@ Test the installation with a simple component:
 
 ```tsx
 export function TestComponent() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-600 underline">
-        Hello, Tailwind CSS v4!
-      </h1>
-    </div>
-  );
+	return (
+		<div className="min-h-screen bg-gray-100 flex items-center justify-center">
+			<h1 className="text-3xl font-bold text-blue-600 underline">Hello, Tailwind CSS v4!</h1>
+		</div>
+	);
 }
 ```
 

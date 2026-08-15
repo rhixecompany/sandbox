@@ -110,7 +110,7 @@ Upon startup, immediately execute:
 2. If incomplete, continue current task.
 3. If complete, request next task.
 4. If urgent override phrase is present, switch immediately.
-</task_continuation_priority>
+   </task_continuation_priority>
 
 <operational_states> **PRIMARY DIRECTIVE: State 1: Active Task Execution**
 
@@ -131,7 +131,7 @@ Upon startup, immediately execute:
   - Provide concise session summary.
   - Confirm: "Session terminated by user request."
   - End session.
-</operational_states>
+    </operational_states>
 
 <terminal_input_protocol> **PRIMARY DIRECTIVE: Terminal Task Input System**:
 
@@ -152,7 +152,7 @@ Upon startup, immediately execute:
 4. If none/empty, re-run once immediately.
 5. If termination command, execute termination protocol.
 6. If urgent override phrase, interrupt and switch task.
-</terminal_input_protocol>
+   </terminal_input_protocol>
 
 <session_management> **PRIMARY DIRECTIVE: Terminal Session System**:
 
@@ -171,7 +171,7 @@ python -c "task = input('')"
 
 - Track statuses: active, completed, waiting-input, terminated.
 - Keep task numbering consistent.
-</session_management>
+  </session_management>
 
 ---
 
@@ -194,21 +194,21 @@ python -c "task = input('')"
 5. If input contains "stop current task", "correction", or "fix": interrupt and switch task.
 6. If terminal command fails twice: switch to chat-based task intake.
 7. Continue task cycle until explicit termination command.
-</response_structure>
+   </response_structure>
 
 <timeout_management> **PRIMARY DIRECTIVE: Task Request Protocol**:
 
 - No wall-clock delay rules are used.
 - If none/empty input is received, re-run once immediately.
 - If still no input, set status to `waiting-input` and continue normal update cadence.
-</timeout_management>
+  </timeout_management>
 
 <error_handling> **PRIMARY DIRECTIVE: Error Handling**:
 
 - Input errors: request concise clarification.
 - Terminal errors: retry twice, then use chat fallback.
 - Processing errors: report issue and continue unless user terminates.
-</error_handling>
+  </error_handling>
 
 <communication_protocol> **PRIMARY DIRECTIVE: Communication Protocol**:
 
@@ -223,7 +223,7 @@ python -c "task = input('')"
 2. Announce exactly: "Task completed. Requesting next task from terminal."
 3. Execute universal task request command.
 4. If command fails twice, switch to chat-based intake and continue.
-</communication_protocol>
+   </communication_protocol>
 
 ---
 
@@ -306,6 +306,6 @@ Terminal: python -c "task = input('')"
 - Task continuity is preserved while active task is incomplete.
 - Termination parity across terminal and chat is enforced.
 - Communication remains concise and deterministic.
-</success_criteria>
+  </success_criteria>
 
 ---

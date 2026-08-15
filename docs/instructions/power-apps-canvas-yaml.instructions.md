@@ -315,7 +315,7 @@ Visible: =Toggle1.Value
 
 # Parent references (for controls in containers/galleries)
 Width: =Parent.Width - 20
-Height: =Parent.TemplateHeight    # In gallery templates
+Height: =Parent.TemplateHeight # In gallery templates
 
 # Functions
 OnSelect: =Navigate(NextScreen, ScreenTransition.Slide)
@@ -746,10 +746,10 @@ Properties:
 
 ```yaml
 Properties:
-  Text: =Text(123.45, "#,##0.00")        # Number to text
-  Text: =Value("123.45")                 # Text to number
-  Text: =DateValue("12/25/2024")         # Text to date
-  Visible: =Boolean("true")              # Text to boolean
+  Text: =Text(123.45, "#,##0.00") # Number to text
+  Text: =Value("123.45") # Text to number
+  Text: =DateValue("12/25/2024") # Text to date
+  Visible: =Boolean("true") # Text to boolean
 ```
 
 #### **Type Checking**
@@ -859,10 +859,10 @@ Properties:
 ```yaml
 Properties:
   # Delegable operations (executed server-side)
-  Items: =Filter(LargeTable, Status = "Active")    # Efficient
+  Items: =Filter(LargeTable, Status = "Active") # Efficient
 
   # Non-delegable operations (may download all records)
-  Items: =Filter(LargeTable, Len(Description) > 100)  # Warning issued
+  Items: =Filter(LargeTable, Len(Description) > 100) # Warning issued
 ```
 
 ## Troubleshooting and Common Patterns
@@ -892,11 +892,11 @@ Properties:
 ```yaml
 # Efficient data loading
 Properties:
-  Items: =Filter(LargeDataSource, Status = "Active")    # Server-side filtering
+  Items: =Filter(LargeDataSource, Status = "Active") # Server-side filtering
 
 # Use delegation-friendly operations
 Properties:
-  Items: =Sort(Filter(DataSource, Active), Name)        # Delegable
+  Items: =Sort(Filter(DataSource, Active), Name) # Delegable
   # Avoid: Sort(DataSource, If(Active, Name, ""))       # Not delegable
 ```
 

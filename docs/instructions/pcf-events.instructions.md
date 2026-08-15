@@ -60,17 +60,11 @@ Model Driven Apps use the [addEventHandler method](https://learn.microsoft.com/e
 const controlName1 = "cr116_personid";
 
 this.onLoad = function (executionContext) {
-  const formContext = executionContext.getFormContext();
+	const formContext = executionContext.getFormContext();
 
-  const sampleControl1 = formContext.getControl(controlName1);
-  sampleControl1.addEventHandler(
-    "customEvent1",
-    this.onSampleControl1CustomEvent1
-  );
-  sampleControl1.addEventHandler(
-    "customEvent2",
-    this.onSampleControl1CustomEvent2
-  );
+	const sampleControl1 = formContext.getControl(controlName1);
+	sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+	sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
 };
 ```
 
@@ -84,14 +78,14 @@ For model-driven apps you can pass a payload with the event allowing for more co
 
 ```javascript
 this.onSampleControl1CustomEvent1 = function (params) {
-  //alert(`SampleControl1 Custom Event 1: ${params}`);
-  alert(`SampleControl1 Custom Event 1`);
+	//alert(`SampleControl1 Custom Event 1: ${params}`);
+	alert(`SampleControl1 Custom Event 1`);
 }.bind(this);
 
 this.onSampleControl2CustomEvent2 = function (params) {
-  alert(`SampleControl2 Custom Event 2: ${params.message}`);
-  // prevent the default action for the event
-  params.callBackFunction();
+	alert(`SampleControl2 Custom Event 2: ${params.message}`);
+	// prevent the default action for the event
+	params.callBackFunction();
 };
 ```
 

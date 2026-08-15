@@ -13,11 +13,11 @@ Over the past several years, we've written a ton of Dart code and learned a lot 
 
 1. **Be consistent.** When it comes to things like formatting, and casing, arguments about which is better are subjective and impossible to resolve. What we do know is that being _consistent_ is objectively helpful.
 
-    If two pieces of code look different it should be because they _are_ different in some meaningful way. When a bit of code stands out and catches your eye, it should do so for a useful reason.
+   If two pieces of code look different it should be because they _are_ different in some meaningful way. When a bit of code stands out and catches your eye, it should do so for a useful reason.
 
 2. **Be brief.** Dart was designed to be familiar, so it inherits many of the same statements and expressions as C, Java, JavaScript and other languages. But we created Dart because there is a lot of room to improve on what those languages offer. We added a bunch of features, from string interpolation to initializing formals, to help you express your intent more simply and easily.
 
-    If there are multiple ways to say something, you should generally pick the most concise one. This is not to say you should `code golf` yourself into cramming a whole program into a single line. The goal is code that is _economical_, not _dense_.
+   If there are multiple ways to say something, you should generally pick the most concise one. This is not to say you should `code golf` yourself into cramming a whole program into a single line. The goal is code that is _economical_, not _dense_.
 
 ### The topics
 

@@ -26,7 +26,7 @@ counter++; // Increment counter by one
 ```javascript
 // Bad: Comment repeats the code
 function getUserName() {
-  return user.name; // Return the user's name
+	return user.name; // Return the user's name
 }
 ```
 
@@ -55,11 +55,11 @@ const tax = calculateProgressiveTax(income, [0.1, 0.2], [10000]);
 // Using Floyd-Warshall for all-pairs shortest paths
 // because we need distances between all nodes
 for (let k = 0; k < vertices; k++) {
-  for (let i = 0; i < vertices; i++) {
-    for (let j = 0; j < vertices; j++) {
-      // ... implementation
-    }
-  }
+	for (let i = 0; i < vertices; i++) {
+		for (let j = 0; j < vertices; j++) {
+			// ... implementation
+		}
+	}
 }
 ```
 
@@ -68,8 +68,7 @@ for (let k = 0; k < vertices; k++) {
 ```javascript
 // Good: Explains what the regex matches
 // Match email format: username@domain.extension
-const emailPattern =
-  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 ```
 
 **API Constraints or Gotchas**
@@ -104,13 +103,8 @@ Before writing a comment, ask:
  * @param {number} compoundFrequency - How many times per year interest compounds (default: 1)
  * @returns {number} Final amount after compound interest
  */
-function calculateCompoundInterest(
-  principal,
-  rate,
-  time,
-  compoundFrequency = 1
-) {
-  // ... implementation
+function calculateCompoundInterest(principal, rate, time, compoundFrequency = 1) {
+	// ... implementation
 }
 ```
 
@@ -154,7 +148,7 @@ const newFunction = () => { ... };
 // Modified by John on 2023-01-15
 // Fixed bug reported by Sarah on 2023-02-03
 function processData() {
-  // ... implementation
+	// ... implementation
 }
 ```
 

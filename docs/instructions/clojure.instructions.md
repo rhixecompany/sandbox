@@ -18,9 +18,9 @@ Do not over-escape JSON arguments when invoking REPL tools.
 
 ```json
 {
-  "code": "(def foo \"something something\")",
-  "namespace": "<current-namespace>",
-  "replSessionKey": "cljs"
+	"code": "(def foo \"something something\")",
+	"namespace": "<current-namespace>",
+	"replSessionKey": "cljs"
 }
 ```
 

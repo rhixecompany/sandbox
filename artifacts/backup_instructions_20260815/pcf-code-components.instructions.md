@@ -69,12 +69,12 @@ controlObj.init(context, notifyOutputChanged, state, container);
 
 **Init Parameters:**
 
-| Parameter | Description |
-| --- | --- |
-| `context` | Contains all information about how the component is configured and all parameters. Access input properties via `context.parameters.<property name from manifest>`. Includes Power Apps component framework APIs. |
-| `notifyOutputChanged` | Alerts the framework whenever the component has new outputs ready to be retrieved asynchronously. |
-| `state` | Contains component data from the previous page load if explicitly stored using `setControlState` method. |
-| `container` | An HTML div element to which developers can append HTML elements for the UI. |
+| Parameter             | Description                                                                                                                                                                                                      |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `context`             | Contains all information about how the component is configured and all parameters. Access input properties via `context.parameters.<property name from manifest>`. Includes Power Apps component framework APIs. |
+| `notifyOutputChanged` | Alerts the framework whenever the component has new outputs ready to be retrieved asynchronously.                                                                                                                |
+| `state`               | Contains component data from the previous page load if explicitly stored using `setControlState` method.                                                                                                         |
+| `container`           | An HTML div element to which developers can append HTML elements for the UI.                                                                                                                                     |
 
 #### User Changes Data
 

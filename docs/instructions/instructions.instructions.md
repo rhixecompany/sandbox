@@ -127,11 +127,11 @@ Provide concrete examples with clear labels:
 ```markdown
 ## Common Issues
 
-| Issue | Solution | Example |
-| --- | --- | --- |
-| Magic numbers | Use named constants | `const MAX_RETRIES = 3` |
-| Deep nesting | Extract functions | Refactor nested if statements |
-| Hardcoded values | Use configuration | Store API URLs in config |
+| Issue            | Solution            | Example                       |
+| ---------------- | ------------------- | ----------------------------- |
+| Magic numbers    | Use named constants | `const MAX_RETRIES = 3`       |
+| Deep nesting     | Extract functions   | Refactor nested if statements |
+| Hardcoded values | Use configuration   | Store API URLs in config      |
 ```
 
 ### Code Comparison

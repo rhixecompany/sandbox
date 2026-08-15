@@ -22,7 +22,8 @@ Configurable sections have a configuration property appended to the section head
 Before applying a configurable section, check that section's boolean property and optional `apply-condition`. By default, each `apply-condition` is unset. An example of a set `apply-condition` could look like:
 
     - **apply-condition** :
-  ` this.parent.property = (git.branch == "main"); `
+
+`this.parent.property = (git.branch == "main");`
 
 When `apply-condition` is unset, the configurable property boolean alone determines whether the section is applied. `apply-condition` only overrides the boolean when explicitly set.
 
@@ -440,14 +441,14 @@ Example scripts to apply to your project for documentation validation:
 
 ```json
 {
-  "scripts": {
-    "docs:build": "<run-your-doc-build-command>",
-    "docs:test": "<run-your-doc-example-tests>",
-    "docs:lint": "<run-your-doc-linter>",
-    "docs:links": "<run-your-link-checker>",
-    "docs:spell": "<run-your-spell-check>",
-    "docs:validate": "npm run docs:build && npm run docs:test && npm run docs:lint && npm run docs:links && npm run docs:spell"
-  }
+	"scripts": {
+		"docs:build": "<run-your-doc-build-command>",
+		"docs:test": "<run-your-doc-example-tests>",
+		"docs:lint": "<run-your-doc-linter>",
+		"docs:links": "<run-your-link-checker>",
+		"docs:spell": "<run-your-spell-check>",
+		"docs:validate": "npm run docs:build && npm run docs:test && npm run docs:lint && npm run docs:links && npm run docs:spell"
+	}
 }
 ```
 

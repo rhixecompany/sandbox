@@ -11,6 +11,7 @@ status: draft
 **Goal:** Audit, standardize, enhance, and verify the entire `.github/prompts/` library (226 prompts) to serve as the single source of truth for four AI agents: Hermes, GitHub Copilot, OpenCode, and OpenAI Codex.
 
 **Current State (Discovery 2026-08-15):**
+
 - 226 `.prompt.md` files in `.github/prompts/`
 - 226 legacy Hermes prompts in `%LOCALAPPDATA%\hermes\prompts/` (same filenames, different bodies — all unique)
 - 159 prompts have valid frontmatter, 67 without frontmatter
@@ -24,6 +25,7 @@ status: draft
 ## Phase 0: Discovery & Baseline (COMPLETED)
 
 See discovery results above. Key findings:
+
 - All 226 legacy prompts share filenames with SandBox prompts but have different bodies
 - No content hash collisions between locations
 - 67 SandBox prompts lack frontmatter entirely
@@ -41,23 +43,23 @@ Use `templates/_shared/frontmatter-template.md` as the authoritative template. E
 
 ```yaml
 ---
-name: <kebab-case-id>        # Required — matches filename stem
-title: "<Human-readable>"    # Required
-description: |               # Required — multi-line
+name: <kebab-case-id> # Required — matches filename stem
+title: "<Human-readable>" # Required
+description: | # Required — multi-line
   What this prompt does.
-version: 1.0.0               # Required
-license: MIT                 # Required
-author: "Hermes Agent"      # Required
-trigger: /<trigger-name>     # Required — CLI trigger
-toolsets:                    # Required
+version: 1.0.0 # Required
+license: MIT # Required
+author: "Hermes Agent" # Required
+trigger: /<trigger-name> # Required — CLI trigger
+toolsets: # Required
   - file
   - terminal
-skills:                      # Required
+skills: # Required
   - skill:<skill-name>
-dependencies: []             # Required
-formatter: default           # Required
-plan: null                   # Optional
-metadata:                    # Required — all 4 agents
+dependencies: [] # Required
+formatter: default # Required
+plan: null # Optional
+metadata: # Required — all 4 agents
   hermes:
     profile: default
     mcp_servers: []
@@ -75,14 +77,15 @@ metadata:                    # Required — all 4 agents
     system_prompt_id: null
     temperature: null
     max_tokens: null
-tags: []                     # Required
-scripts: []                  # Optional
+tags: [] # Required
+scripts: [] # Optional
 ---
 ```
 
 ### Step 1.2: Read existing body content for each prompt
 
 For each of the 226 prompts, extract:
+
 - Existing frontmatter (if any) — preserve `trigger`, `name`, `skills`, `dependencies`, `tags` where present
 - Body content — preserve as-is
 - Template references — note for AC5 verification
@@ -90,6 +93,7 @@ For each of the 226 prompts, extract:
 ### Step 1.3: Generate canonical frontmatter per prompt
 
 For each prompt, populate the canonical schema:
+
 - **name**: from filename stem (or existing frontmatter `name`)
 - **title**: from existing frontmatter or derive from filename
 - **description**: from existing frontmatter or "Auto-generated prompt for <trigger>"
@@ -126,6 +130,7 @@ Overwrite each `.prompt.md` with: new frontmatter + original body (preserved exa
 ### Step 2.1: Compare legacy vs SandBox bodies semantically
 
 For each of the 226 legacy prompts that share a name with a SandBox prompt:
+
 - If the legacy body is an **older version** of the SandBox body (same intent, SandBox is more complete) → skip legacy, note in report
 - If the legacy body contains **unique content** not in SandBox → migrate body into SandBox prompt (append/merge)
 - If the legacy body is **completely different** from SandBox → create a new prompt with a disambiguated name
@@ -133,6 +138,7 @@ For each of the 226 legacy prompts that share a name with a SandBox prompt:
 ### Step 2.2: Migrate unique legacy content
 
 For legacy prompts with unique content:
+
 - Copy body into the corresponding SandBox `.prompt.md` (if same trigger) or create new prompt
 - Add proper frontmatter (from Phase 1 schema)
 - Record migration in `MIGRATION_LOG.md`
@@ -140,6 +146,7 @@ For legacy prompts with unique content:
 ### Step 2.3: Deduplicate by SHA-256 content hash (AC2)
 
 After all migrations:
+
 - Compute SHA-256 of normalized body for all 226+ prompts
 - Identify any exact duplicate bodies
 - For duplicates: keep the prompt with better frontmatter, add cross-reference note to the other
@@ -166,7 +173,7 @@ Fix any parse errors by targeted patching.
 
 ### Step 3.2: JSON validation
 
-Scan bodies for embedded JSON blocks (````json ... ``` ` or inline `{...}`) and validate each.
+Scan bodies for embedded JSON blocks (````json ... ``` `or inline`{...}`) and validate each.
 
 ### Step 3.3: Duplicate frontmatter detection
 
@@ -196,6 +203,7 @@ Fix all issues found.
 ### Step 4.1: Scan all file references
 
 For every prompt, extract references to:
+
 - `templates/_shared/<file>.md`
 - `templates/<trigger>/README.md`
 - `templates/<trigger>/<section].md`
@@ -225,6 +233,7 @@ Ensure no two prompts share the same `trigger:` value.
 ### Step 5.1: Enrich Hermes metadata
 
 For each prompt, determine appropriate:
+
 - `profile`: based on prompt domain (code-architect for code, research-analyst for research, etc.)
 - `mcp_servers`: based on prompt needs (github for PR prompts, filesystem for file ops, etc.)
 - `context_size`: small/medium/large based on prompt complexity
@@ -232,6 +241,7 @@ For each prompt, determine appropriate:
 ### Step 5.2: Enrich Copilot metadata
 
 For each prompt:
+
 - `context_size`: estimate based on body length
 - `extensions`: which VS Code extensions are relevant (e.g., `["GitHub.copilot"]` for PR prompts)
 - `keybinding`: optional, only for frequently-used prompts
@@ -239,6 +249,7 @@ For each prompt:
 ### Step 5.3: Enrich OpenCode metadata
 
 For each prompt:
+
 - `command`: `"opencode /<trigger>"`
 - `flags`: relevant CLI flags
 - `help`: short description
@@ -246,6 +257,7 @@ For each prompt:
 ### Step 5.4: Enrich Codex metadata
 
 For each prompt:
+
 - `model_override`: appropriate model for the task
 - `temperature`: based on task type (0.1 for code, 0.7 for creative)
 - `max_tokens`: estimate based on expected output
@@ -275,6 +287,7 @@ For each prompt:
 ### Step 6.4: Create `MIGRATION_REPORT.md`
 
 Document:
+
 - How many legacy prompts were migrated vs archived
 - Which prompts received new content from legacy
 - Any prompts that were deduplicated
@@ -345,11 +358,13 @@ chore(prompts): [I] run markdownlint + spellcheck fixes
 ### Step 9.1: Inventory MCP servers
 
 From `.hermes.md` and `config.yaml`, list all configured MCP servers:
+
 - `honcho`, `ast-grep`, `code-sandbox`, `github`, `mcp-docker`, `memory`, `mindstudio`, `playwright`, `sequential-thinking`, `smithery`, `python-quality`, `tooling-lint`, `tooling-config`, `context7`, `sentry`, `tavily`, `parallel-search`, `parallel-task`, `fetch`, `filesystem`
 
 ### Step 9.2: Create/update skills for each MCP server
 
 For each MCP server without a dedicated skill, create a SKILL.md in `~/AppData/Local/hermes/skills/mcp/<server-name>/` with:
+
 - Server description and purpose
 - Configuration details
 - Common operations/workflows
@@ -359,6 +374,7 @@ For each MCP server without a dedicated skill, create a SKILL.md in `~/AppData/L
 ### Step 9.3: Create/update hooks
 
 For each MCP server, ensure hooks exist for:
+
 - Health checks
 - Connection validation
 - Rate limit monitoring
@@ -391,21 +407,22 @@ python check_frontmatter.py .github/prompts/
 
 ### Step 10.2: Verify all 9 ACs
 
-| AC | Criteria | Status |
-|----|----------|--------|
-| AC1 | Zero prompts only in legacy location | ☐ |
-| AC2 | Zero duplicate bodies by SHA-256 | ☐ |
-| AC3 | All prompts have valid YAML with 4-agent metadata | ☐ |
-| AC4 | All YAML/JSON valid, `bun run check` passes | ☐ |
-| AC5 | All internal references resolve | ☐ |
-| AC6 | Each prompt has non-empty Hermes/Copilot/OpenCode/Codex configs | ☐ |
-| AC7 | `index.md` and `copilot-instructions.md` counts accurate | ☐ |
-| AC8 | `bun run markdownlint` + `format:check` + `spellcheck` clean | ☐ |
-| AC9 | Git clean, conventional commits, no backup artifacts | ☐ |
+| AC  | Criteria                                                        | Status |
+| --- | --------------------------------------------------------------- | ------ |
+| AC1 | Zero prompts only in legacy location                            | ☐      |
+| AC2 | Zero duplicate bodies by SHA-256                                | ☐      |
+| AC3 | All prompts have valid YAML with 4-agent metadata               | ☐      |
+| AC4 | All YAML/JSON valid, `bun run check` passes                     | ☐      |
+| AC5 | All internal references resolve                                 | ☐      |
+| AC6 | Each prompt has non-empty Hermes/Copilot/OpenCode/Codex configs | ☐      |
+| AC7 | `index.md` and `copilot-instructions.md` counts accurate        | ☐      |
+| AC8 | `bun run markdownlint` + `format:check` + `spellcheck` clean    | ☐      |
+| AC9 | Git clean, conventional commits, no backup artifacts            | ☐      |
 
 ### Step 10.3: Generate final report
 
 `PROMPT_AUDIT_REPORT.md` with:
+
 - Phase-by-phase stats
 - Before/after metrics
 - Remaining open items
@@ -417,20 +434,20 @@ python check_frontmatter.py .github/prompts/
 
 ## Total Timeline
 
-| Phase | Steps | Estimate |
-|-------|-------|----------|
-| 0: Discovery | — | COMPLETED |
-| 1: Frontmatter standardisation | 1.1–1.5 | 4–6 h |
-| 2: Migration & dedup | 2.1–2.4 | 2–3 h |
-| 3: YAML/JSON validation | 3.1–3.5 | 1–2 h |
-| 4: Reference integrity | 4.1–4.4 | 1 h |
-| 5: Agent metadata enrichment | 5.1–5.4 | 2–3 h |
-| 6: Index updates | 6.1–6.4 | 30 min |
-| 7: Quality gate | 7.1–7.4 | 1–2 h |
-| 8: Git commits | 8.1–8.3 | 30 min |
-| 9: MCP skills/hooks/commands | 9.1–9.4 | 2–3 h |
-| 10: Final verification | 10.1–10.3 | 1 h |
-| **Total** | | **~16–22 hours** |
+| Phase                          | Steps     | Estimate         |
+| ------------------------------ | --------- | ---------------- |
+| 0: Discovery                   | —         | COMPLETED        |
+| 1: Frontmatter standardisation | 1.1–1.5   | 4–6 h            |
+| 2: Migration & dedup           | 2.1–2.4   | 2–3 h            |
+| 3: YAML/JSON validation        | 3.1–3.5   | 1–2 h            |
+| 4: Reference integrity         | 4.1–4.4   | 1 h              |
+| 5: Agent metadata enrichment   | 5.1–5.4   | 2–3 h            |
+| 6: Index updates               | 6.1–6.4   | 30 min           |
+| 7: Quality gate                | 7.1–7.4   | 1–2 h            |
+| 8: Git commits                 | 8.1–8.3   | 30 min           |
+| 9: MCP skills/hooks/commands   | 9.1–9.4   | 2–3 h            |
+| 10: Final verification         | 10.1–10.3 | 1 h              |
+| **Total**                      |           | **~16–22 hours** |
 
 ## Parallelization Opportunities
 
@@ -440,10 +457,10 @@ python check_frontmatter.py .github/prompts/
 
 ## Risks
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|------------|
-| Legacy bodies are genuinely different (not older versions) | Medium | High | Phase 2 semantic comparison determines merge vs. new-prompt |
-| Bulk frontmatter script corrupts bodies | Low | High | Dry-run first, verify sample, git rollback ready |
-| 67 no-frontmatter prompts lose body content | Low | High | Script preserves body exactly; verify after |
-| markdownlint introduces many new errors | Medium | Medium | Fix in batches, prioritize MD001/MD002/MD003 |
-| MCP skill creation duplicates existing skills | Low | Low | Check skills_list before creating |
+| Risk                                                       | Likelihood | Impact | Mitigation                                                  |
+| ---------------------------------------------------------- | ---------- | ------ | ----------------------------------------------------------- |
+| Legacy bodies are genuinely different (not older versions) | Medium     | High   | Phase 2 semantic comparison determines merge vs. new-prompt |
+| Bulk frontmatter script corrupts bodies                    | Low        | High   | Dry-run first, verify sample, git rollback ready            |
+| 67 no-frontmatter prompts lose body content                | Low        | High   | Script preserves body exactly; verify after                 |
+| markdownlint introduces many new errors                    | Medium     | Medium | Fix in batches, prioritize MD001/MD002/MD003                |
+| MCP skill creation duplicates existing skills              | Low        | Low    | Check skills_list before creating                           |

@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Dataverse SDK for Python — Testing & Debugging Strategies
@@ -468,14 +468,14 @@ def test_handles_missing_record(mock_client):
 
 ## 10. Debugging Checklist
 
-| Issue | Debug Steps |
-| --- | --- |
-| Test fails unexpectedly | Add `-s` flag to see print output |
-| Mock not called | Check method name/parameters match exactly |
-| Real API failing | Check credentials, URL, permissions |
-| Rate limiting in tests | Add delays or use smaller batches |
-| Data not found | Verify record created and not cleaned up |
-| Assertion errors | Print actual vs expected values |
+| Issue                   | Debug Steps                                |
+| ----------------------- | ------------------------------------------ |
+| Test fails unexpectedly | Add `-s` flag to see print output          |
+| Mock not called         | Check method name/parameters match exactly |
+| Real API failing        | Check credentials, URL, permissions        |
+| Rate limiting in tests  | Add delays or use smaller batches          |
+| Data not found          | Verify record created and not cleaned up   |
+| Assertion errors        | Print actual vs expected values            |
 
 ---
 

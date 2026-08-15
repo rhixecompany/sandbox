@@ -4,7 +4,6 @@ description: "Documentation standards for this repository"
 applyTo: "**/*.md,**/*.ts,**/*.tsx"
 ---
 
-
 # Code Documentation Standards
 
 - **Priority Tiers:** Required (must exist before merge): TSDoc Comments, Component Props, API Documentation (endpoints). Recommended (must exist before release): README Standards, Architecture Documentation. Optional (add when relevant): Inline Documentation items.

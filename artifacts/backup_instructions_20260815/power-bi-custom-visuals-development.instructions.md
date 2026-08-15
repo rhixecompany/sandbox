@@ -29,20 +29,20 @@ pbiviz start
 
 ```json
 {
-  "compilerOptions": {
-    "jsx": "react",
-    "types": ["react", "react-dom"],
-    "allowJs": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "outDir": "./.tmp/build/",
-    "moduleResolution": "node",
-    "declaration": true,
-    "lib": ["es2015", "dom"]
-  },
-  "files": ["./src/visual.ts"]
+	"compilerOptions": {
+		"jsx": "react",
+		"types": ["react", "react-dom"],
+		"allowJs": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es6",
+		"sourceMap": true,
+		"outDir": "./.tmp/build/",
+		"moduleResolution": "node",
+		"declaration": true,
+		"lib": ["es2015", "dom"]
+	},
+	"files": ["./src/visual.ts"]
 }
 ```
 
@@ -63,29 +63,27 @@ import IVisualHost = powerbi.extensibility.IVisualHost;
 import "./../style/visual.less";
 
 export class Visual implements IVisual {
-  private target: HTMLElement;
-  private host: IVisualHost;
+	private target: HTMLElement;
+	private host: IVisualHost;
 
-  constructor(options: VisualConstructorOptions) {
-    this.target = options.element;
-    this.host = options.host;
-  }
+	constructor(options: VisualConstructorOptions) {
+		this.target = options.element;
+		this.host = options.host;
+	}
 
-  public update(options: VisualUpdateOptions) {
-    const dataView: DataView = options.dataViews[0];
+	public update(options: VisualUpdateOptions) {
+		const dataView: DataView = options.dataViews[0];
 
-    if (!dataView) {
-      return;
-    }
+		if (!dataView) {
+			return;
+		}
 
-    // Visual update logic here
-  }
+		// Visual update logic here
+	}
 
-  public getFormattingModel(): powerbi.visuals.FormattingModel {
-    return this.formattingSettingsService.buildFormattingModel(
-      this.formattingSettings
-    );
-  }
+	public getFormattingModel(): powerbi.visuals.FormattingModel {
+		return this.formattingSettingsService.buildFormattingModel(this.formattingSettings);
+	}
 }
 ```
 
@@ -94,25 +92,25 @@ export class Visual implements IVisual {
 ```typescript
 // Single data mapping example
 export class Visual implements IVisual {
-  private valueText: HTMLParagraphElement;
+	private valueText: HTMLParagraphElement;
 
-  constructor(options: VisualConstructorOptions) {
-    this.target = options.element;
-    this.host = options.host;
-    this.valueText = document.createElement("p");
-    this.target.appendChild(this.valueText);
-  }
+	constructor(options: VisualConstructorOptions) {
+		this.target = options.element;
+		this.host = options.host;
+		this.valueText = document.createElement("p");
+		this.target.appendChild(this.valueText);
+	}
 
-  public update(options: VisualUpdateOptions) {
-    const dataView: DataView = options.dataViews[0];
-    const singleDataView: DataViewSingle = dataView.single;
+	public update(options: VisualUpdateOptions) {
+		const dataView: DataView = options.dataViews[0];
+		const singleDataView: DataViewSingle = dataView.single;
 
-    if (!singleDataView || !singleDataView.value) {
-      return;
-    }
+		if (!singleDataView || !singleDataView.value) {
+			return;
+		}
 
-    this.valueText.innerText = singleDataView.value.toString();
-  }
+		this.valueText.innerText = singleDataView.value.toString();
+	}
 }
 ```
 
@@ -126,36 +124,33 @@ import * as ReactDOM from "react-dom";
 import ReactCircleCard from "./component";
 
 export class Visual implements IVisual {
-  private target: HTMLElement;
-  private reactRoot: React.ComponentElement<any, any>;
+	private target: HTMLElement;
+	private reactRoot: React.ComponentElement<any, any>;
 
-  constructor(options: VisualConstructorOptions) {
-    this.reactRoot = React.createElement(ReactCircleCard, {});
-    this.target = options.element;
+	constructor(options: VisualConstructorOptions) {
+		this.reactRoot = React.createElement(ReactCircleCard, {});
+		this.target = options.element;
 
-    ReactDOM.render(this.reactRoot, this.target);
-  }
+		ReactDOM.render(this.reactRoot, this.target);
+	}
 
-  public update(options: VisualUpdateOptions) {
-    const dataView: DataView = options.dataViews[0];
+	public update(options: VisualUpdateOptions) {
+		const dataView: DataView = options.dataViews[0];
 
-    if (dataView) {
-      const reactProps = this.parseDataView(dataView);
-      this.reactRoot = React.createElement(
-        ReactCircleCard,
-        reactProps
-      );
-      ReactDOM.render(this.reactRoot, this.target);
-    }
-  }
+		if (dataView) {
+			const reactProps = this.parseDataView(dataView);
+			this.reactRoot = React.createElement(ReactCircleCard, reactProps);
+			ReactDOM.render(this.reactRoot, this.target);
+		}
+	}
 
-  private parseDataView(dataView: DataView): any {
-    // Transform Power BI data for React component
-    return {
-      data: dataView.categorical?.values?.[0]?.values || [],
-      categories: dataView.categorical?.categories?.[0]?.values || []
-    };
-  }
+	private parseDataView(dataView: DataView): any {
+		// Transform Power BI data for React component
+		return {
+			data: dataView.categorical?.values?.[0]?.values || [],
+			categories: dataView.categorical?.categories?.[0]?.values || [],
+		};
+	}
 }
 ```
 
@@ -210,93 +205,79 @@ export default ReactCircleCard;
 
 ```typescript
 import * as d3 from "d3";
-type Selection<T extends d3.BaseType> = d3.Selection<
-  T,
-  any,
-  any,
-  any
->;
+type Selection<T extends d3.BaseType> = d3.Selection<T, any, any, any>;
 
 export class Visual implements IVisual {
-  private svg: Selection<SVGElement>;
-  private container: Selection<SVGElement>;
-  private host: IVisualHost;
+	private svg: Selection<SVGElement>;
+	private container: Selection<SVGElement>;
+	private host: IVisualHost;
 
-  constructor(options: VisualConstructorOptions) {
-    this.host = options.host;
-    this.svg = d3
-      .select(options.element)
-      .append("svg")
-      .classed("visual-svg", true);
+	constructor(options: VisualConstructorOptions) {
+		this.host = options.host;
+		this.svg = d3.select(options.element).append("svg").classed("visual-svg", true);
 
-    this.container = this.svg
-      .append("g")
-      .classed("visual-container", true);
-  }
+		this.container = this.svg.append("g").classed("visual-container", true);
+	}
 
-  public update(options: VisualUpdateOptions) {
-    const dataView = options.dataViews[0];
+	public update(options: VisualUpdateOptions) {
+		const dataView = options.dataViews[0];
 
-    if (!dataView) {
-      return;
-    }
+		if (!dataView) {
+			return;
+		}
 
-    const width = options.viewport.width;
-    const height = options.viewport.height;
+		const width = options.viewport.width;
+		const height = options.viewport.height;
 
-    this.svg.attr("width", width).attr("height", height);
+		this.svg.attr("width", width).attr("height", height);
 
-    // D3 data binding and visualization logic
-    this.renderChart(dataView, width, height);
-  }
+		// D3 data binding and visualization logic
+		this.renderChart(dataView, width, height);
+	}
 
-  private renderChart(
-    dataView: DataView,
-    width: number,
-    height: number
-  ): void {
-    const data = this.transformData(dataView);
+	private renderChart(dataView: DataView, width: number, height: number): void {
+		const data = this.transformData(dataView);
 
-    // Create scales
-    const xScale = d3
-      .scaleBand()
-      .domain(data.map(d => d.category))
-      .range([0, width])
-      .padding(0.1);
+		// Create scales
+		const xScale = d3
+			.scaleBand()
+			.domain(data.map((d) => d.category))
+			.range([0, width])
+			.padding(0.1);
 
-    const yScale = d3
-      .scaleLinear()
-      .domain([0, d3.max(data, d => d.value)])
-      .range([height, 0]);
+		const yScale = d3
+			.scaleLinear()
+			.domain([0, d3.max(data, (d) => d.value)])
+			.range([height, 0]);
 
-    // Bind data and create bars
-    const bars = this.container.selectAll(".bar").data(data);
+		// Bind data and create bars
+		const bars = this.container.selectAll(".bar").data(data);
 
-    bars
-      .enter()
-      .append("rect")
-      .classed("bar", true)
-      .merge(bars)
-      .attr("x", d => xScale(d.category))
-      .attr("y", d => yScale(d.value))
-      .attr("width", xScale.bandwidth())
-      .attr("height", d => height - yScale(d.value))
-      .style("fill", "#3498db");
+		bars
+			.enter()
+			.append("rect")
+			.classed("bar", true)
+			.merge(bars)
+			.attr("x", (d) => xScale(d.category))
+			.attr("y", (d) => yScale(d.value))
+			.attr("width", xScale.bandwidth())
+			.attr("height", (d) => height - yScale(d.value))
+			.style("fill", "#3498db");
 
-    bars.exit().remove();
-  }
+		bars.exit().remove();
+	}
 
-  private transformData(dataView: DataView): any[] {
-    // Transform Power BI DataView to D3-friendly format
-    const categorical = dataView.categorical;
-    const categories = categorical.categories[0];
-    const values = categorical.values[0];
+	private transformData(dataView: DataView): any[] {
+		// Transform Power BI DataView to D3-friendly format
+		const categorical = dataView.categorical;
+		const categories = categorical.categories[0];
+		const values = categorical.values[0];
 
-    return categories.values.map((category, index) => ({
-      category: category.toString(),
-      value: values.values[index] as number
-    }));
-  }
+		return categories.values.map((category, index) => ({
+			category: category.toString(),
+			value: values.values[index] as number,
+		}));
+	}
 }
 ```
 
@@ -305,60 +286,53 @@ export class Visual implements IVisual {
 ```typescript
 // Complex D3 visualization with interactions
 export class AdvancedD3Visual implements IVisual {
-  private svg: Selection<SVGElement>;
-  private tooltip: Selection<HTMLDivElement>;
-  private selectionManager: ISelectionManager;
+	private svg: Selection<SVGElement>;
+	private tooltip: Selection<HTMLDivElement>;
+	private selectionManager: ISelectionManager;
 
-  constructor(options: VisualConstructorOptions) {
-    this.host = options.host;
-    this.selectionManager = this.host.createSelectionManager();
+	constructor(options: VisualConstructorOptions) {
+		this.host = options.host;
+		this.selectionManager = this.host.createSelectionManager();
 
-    // Create main SVG
-    this.svg = d3.select(options.element).append("svg");
+		// Create main SVG
+		this.svg = d3.select(options.element).append("svg");
 
-    // Create tooltip
-    this.tooltip = d3
-      .select(options.element)
-      .append("div")
-      .classed("tooltip", true)
-      .style("opacity", 0);
-  }
+		// Create tooltip
+		this.tooltip = d3.select(options.element).append("div").classed("tooltip", true).style("opacity", 0);
+	}
 
-  private createInteractiveElements(data: VisualDataPoint[]): void {
-    const circles = this.svg.selectAll(".data-circle").data(data);
+	private createInteractiveElements(data: VisualDataPoint[]): void {
+		const circles = this.svg.selectAll(".data-circle").data(data);
 
-    const circlesEnter = circles
-      .enter()
-      .append("circle")
-      .classed("data-circle", true);
+		const circlesEnter = circles.enter().append("circle").classed("data-circle", true);
 
-    circlesEnter
-      .merge(circles)
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y)
-      .attr("r", d => d.radius)
-      .style("fill", d => d.color)
-      .style("stroke", d => d.strokeColor)
-      .style("stroke-width", d => `${d.strokeWidth}px`)
-      .on("click", (event, d) => {
-        // Handle selection
-        this.selectionManager.select(d.selectionId, event.ctrlKey);
-      })
-      .on("mouseover", (event, d) => {
-        // Show tooltip
-        this.tooltip
-          .style("opacity", 1)
-          .style("left", event.pageX + 10 + "px")
-          .style("top", event.pageY - 10 + "px")
-          .html(`${d.category}: ${d.value}`);
-      })
-      .on("mouseout", () => {
-        // Hide tooltip
-        this.tooltip.style("opacity", 0);
-      });
+		circlesEnter
+			.merge(circles)
+			.attr("cx", (d) => d.x)
+			.attr("cy", (d) => d.y)
+			.attr("r", (d) => d.radius)
+			.style("fill", (d) => d.color)
+			.style("stroke", (d) => d.strokeColor)
+			.style("stroke-width", (d) => `${d.strokeWidth}px`)
+			.on("click", (event, d) => {
+				// Handle selection
+				this.selectionManager.select(d.selectionId, event.ctrlKey);
+			})
+			.on("mouseover", (event, d) => {
+				// Show tooltip
+				this.tooltip
+					.style("opacity", 1)
+					.style("left", event.pageX + 10 + "px")
+					.style("top", event.pageY - 10 + "px")
+					.html(`${d.category}: ${d.value}`);
+			})
+			.on("mouseout", () => {
+				// Hide tooltip
+				this.tooltip.style("opacity", 0);
+			});
 
-    circles.exit().remove();
-  }
+		circles.exit().remove();
+	}
 }
 ```
 
@@ -369,97 +343,72 @@ export class AdvancedD3Visual implements IVisual {
 ```typescript
 import { formattingSettings } from "powerbi-visuals-utils-formattingmodel";
 
-export class VisualFormattingSettingsModel
-  extends formattingSettings.CompositeFormattingSettingsModel
-{
-  // Color settings card
-  public colorCard: ColorCardSettings = new ColorCardSettings();
+export class VisualFormattingSettingsModel extends formattingSettings.CompositeFormattingSettingsModel {
+	// Color settings card
+	public colorCard: ColorCardSettings = new ColorCardSettings();
 
-  // Data point settings card
-  public dataPointCard: DataPointCardSettings =
-    new DataPointCardSettings();
+	// Data point settings card
+	public dataPointCard: DataPointCardSettings = new DataPointCardSettings();
 
-  // General settings card
-  public generalCard: GeneralCardSettings = new GeneralCardSettings();
+	// General settings card
+	public generalCard: GeneralCardSettings = new GeneralCardSettings();
 
-  public cards: formattingSettings.SimpleCard[] = [
-    this.colorCard,
-    this.dataPointCard,
-    this.generalCard
-  ];
+	public cards: formattingSettings.SimpleCard[] = [this.colorCard, this.dataPointCard, this.generalCard];
 }
 
 export class ColorCardSettings extends formattingSettings.SimpleCard {
-  name: string = "colorCard";
-  displayName: string = "Color";
+	name: string = "colorCard";
+	displayName: string = "Color";
 
-  public defaultColor: formattingSettings.ColorPicker =
-    new formattingSettings.ColorPicker({
-      name: "defaultColor",
-      displayName: "Default color",
-      value: { value: "#3498db" }
-    });
+	public defaultColor: formattingSettings.ColorPicker = new formattingSettings.ColorPicker({
+		name: "defaultColor",
+		displayName: "Default color",
+		value: { value: "#3498db" },
+	});
 
-  public showAllDataPoints: formattingSettings.ToggleSwitch =
-    new formattingSettings.ToggleSwitch({
-      name: "showAllDataPoints",
-      displayName: "Show all",
-      value: false
-    });
+	public showAllDataPoints: formattingSettings.ToggleSwitch = new formattingSettings.ToggleSwitch({
+		name: "showAllDataPoints",
+		displayName: "Show all",
+		value: false,
+	});
 }
 ```
 
 ### 2. Interactivity and Selections
 
 ```typescript
-import {
-  interactivitySelectionService,
-  baseBehavior
-} from "powerbi-visuals-utils-interactivityutils";
+import { interactivitySelectionService, baseBehavior } from "powerbi-visuals-utils-interactivityutils";
 
-export interface VisualDataPoint
-  extends interactivitySelectionService.SelectableDataPoint {
-  value: powerbi.PrimitiveValue;
-  category: string;
-  color: string;
-  selectionId: ISelectionId;
+export interface VisualDataPoint extends interactivitySelectionService.SelectableDataPoint {
+	value: powerbi.PrimitiveValue;
+	category: string;
+	color: string;
+	selectionId: ISelectionId;
 }
 
 export class VisualBehavior extends baseBehavior.BaseBehavior<VisualDataPoint> {
-  protected bindClick() {
-    // Implement click behavior for data point selection
-    this.behaviorOptions.clearCatcher.on("click", () => {
-      this.selectionHandler.handleClearSelection();
-    });
+	protected bindClick() {
+		// Implement click behavior for data point selection
+		this.behaviorOptions.clearCatcher.on("click", () => {
+			this.selectionHandler.handleClearSelection();
+		});
 
-    this.behaviorOptions.elementsSelection.on(
-      "click",
-      (event, dataPoint) => {
-        event.stopPropagation();
-        this.selectionHandler.handleSelection(
-          dataPoint,
-          event.ctrlKey
-        );
-      }
-    );
-  }
+		this.behaviorOptions.elementsSelection.on("click", (event, dataPoint) => {
+			event.stopPropagation();
+			this.selectionHandler.handleSelection(dataPoint, event.ctrlKey);
+		});
+	}
 
-  protected bindContextMenu() {
-    // Implement context menu behavior
-    this.behaviorOptions.elementsSelection.on(
-      "contextmenu",
-      (event, dataPoint) => {
-        this.selectionHandler.handleContextMenu(
-          dataPoint ? dataPoint.selectionId : null,
-          {
-            x: event.clientX,
-            y: event.clientY
-          }
-        );
-        event.preventDefault();
-      }
-    );
-  }
+	protected bindContextMenu() {
+		// Implement context menu behavior
+		this.behaviorOptions.elementsSelection.on("contextmenu", (event, dataPoint) => {
+			this.selectionHandler.handleContextMenu(dataPoint ? dataPoint.selectionId : null, {
+				x: event.clientX,
+				y: event.clientY,
+			});
+			event.preventDefault();
+		});
+	}
 }
 ```
 
@@ -467,51 +416,47 @@ export class VisualBehavior extends baseBehavior.BaseBehavior<VisualDataPoint> {
 
 ```typescript
 export class Visual implements IVisual {
-  private element: HTMLElement;
-  private isLandingPageOn: boolean;
-  private LandingPageRemoved: boolean;
-  private LandingPage: d3.Selection<any>;
+	private element: HTMLElement;
+	private isLandingPageOn: boolean;
+	private LandingPageRemoved: boolean;
+	private LandingPage: d3.Selection<any>;
 
-  constructor(options: VisualConstructorOptions) {
-    this.element = options.element;
-  }
+	constructor(options: VisualConstructorOptions) {
+		this.element = options.element;
+	}
 
-  public update(options: VisualUpdateOptions) {
-    this.HandleLandingPage(options);
-  }
+	public update(options: VisualUpdateOptions) {
+		this.HandleLandingPage(options);
+	}
 
-  private HandleLandingPage(options: VisualUpdateOptions) {
-    if (
-      !options.dataViews ||
-      !options.dataViews[0]?.metadata?.columns?.length
-    ) {
-      if (!this.isLandingPageOn) {
-        this.isLandingPageOn = true;
-        const SampleLandingPage: Element =
-          this.createSampleLandingPage();
-        this.element.appendChild(SampleLandingPage);
-        this.LandingPage = d3.select(SampleLandingPage);
-      }
-    } else {
-      if (this.isLandingPageOn && !this.LandingPageRemoved) {
-        this.LandingPageRemoved = true;
-        this.LandingPage.remove();
-      }
-    }
-  }
+	private HandleLandingPage(options: VisualUpdateOptions) {
+		if (!options.dataViews || !options.dataViews[0]?.metadata?.columns?.length) {
+			if (!this.isLandingPageOn) {
+				this.isLandingPageOn = true;
+				const SampleLandingPage: Element = this.createSampleLandingPage();
+				this.element.appendChild(SampleLandingPage);
+				this.LandingPage = d3.select(SampleLandingPage);
+			}
+		} else {
+			if (this.isLandingPageOn && !this.LandingPageRemoved) {
+				this.LandingPageRemoved = true;
+				this.LandingPage.remove();
+			}
+		}
+	}
 
-  private createSampleLandingPage(): Element {
-    const landingPage = document.createElement("div");
-    landingPage.className = "landing-page";
-    landingPage.innerHTML = `
+	private createSampleLandingPage(): Element {
+		const landingPage = document.createElement("div");
+		landingPage.className = "landing-page";
+		landingPage.innerHTML = `
             <div class="landing-page-content">
                 <h2>Custom Visual</h2>
                 <p>Add data to get started</p>
                 <div class="landing-page-icon">📊</div>
             </div>
         `;
-    return landingPage;
-  }
+		return landingPage;
+	}
 }
 ```
 
@@ -525,43 +470,43 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  devtool: "source-map",
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: "json-loader"
-      },
-      {
-        test: /\.tsx?$/i,
-        enforce: "post",
-        include: path.resolve(__dirname, "src"),
-        exclude: /(node_modules|resources\/js\/vendor)/,
-        loader: "coverage-istanbul-loader",
-        options: { esModules: true }
-      }
-    ]
-  },
-  externals: {
-    "powerbi-visuals-api": "{}"
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js", ".css"]
-  },
-  output: {
-    path: path.resolve(__dirname, ".tmp/test")
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      "powerbi-visuals-api": null
-    })
-  ]
+	devtool: "source-map",
+	mode: "development",
+	module: {
+		rules: [
+			{
+				test: /\.tsx?$/,
+				use: "ts-loader",
+				exclude: /node_modules/,
+			},
+			{
+				test: /\.json$/,
+				loader: "json-loader",
+			},
+			{
+				test: /\.tsx?$/i,
+				enforce: "post",
+				include: path.resolve(__dirname, "src"),
+				exclude: /(node_modules|resources\/js\/vendor)/,
+				loader: "coverage-istanbul-loader",
+				options: { esModules: true },
+			},
+		],
+	},
+	externals: {
+		"powerbi-visuals-api": "{}",
+	},
+	resolve: {
+		extensions: [".tsx", ".ts", ".js", ".css"],
+	},
+	output: {
+		path: path.resolve(__dirname, ".tmp/test"),
+	},
+	plugins: [
+		new webpack.ProvidePlugin({
+			"powerbi-visuals-api": null,
+		}),
+	],
 };
 ```
 
@@ -570,50 +515,42 @@ module.exports = {
 ```typescript
 // Test utilities for Power BI visuals
 export class VisualTestUtils {
-  public static d3Click(element: JQuery, x: number, y: number): void {
-    const event = new MouseEvent("click", {
-      clientX: x,
-      clientY: y,
-      button: 0
-    });
-    element[0].dispatchEvent(event);
-  }
+	public static d3Click(element: JQuery, x: number, y: number): void {
+		const event = new MouseEvent("click", {
+			clientX: x,
+			clientY: y,
+			button: 0,
+		});
+		element[0].dispatchEvent(event);
+	}
 
-  public static d3KeyEvent(
-    element: JQuery,
-    typeArg: string,
-    keyArg: string,
-    keyCode: number
-  ): void {
-    const event = new KeyboardEvent(typeArg, {
-      key: keyArg,
-      code: keyArg,
-      keyCode: keyCode
-    });
-    element[0].dispatchEvent(event);
-  }
+	public static d3KeyEvent(element: JQuery, typeArg: string, keyArg: string, keyCode: number): void {
+		const event = new KeyboardEvent(typeArg, {
+			key: keyArg,
+			code: keyArg,
+			keyCode: keyCode,
+		});
+		element[0].dispatchEvent(event);
+	}
 
-  public static createVisualHost(): IVisualHost {
-    return {
-      createSelectionIdBuilder: () => new SelectionIdBuilder(),
-      createSelectionManager: () => new SelectionManager(),
-      colorPalette: new ColorPalette(),
-      eventService: new EventService(),
-      tooltipService: new TooltipService()
-    } as IVisualHost;
-  }
+	public static createVisualHost(): IVisualHost {
+		return {
+			createSelectionIdBuilder: () => new SelectionIdBuilder(),
+			createSelectionManager: () => new SelectionManager(),
+			colorPalette: new ColorPalette(),
+			eventService: new EventService(),
+			tooltipService: new TooltipService(),
+		} as IVisualHost;
+	}
 
-  public static createUpdateOptions(
-    dataView: DataView,
-    viewport?: IViewport
-  ): VisualUpdateOptions {
-    return {
-      dataViews: [dataView],
-      viewport: viewport || { width: 500, height: 500 },
-      operationKind: VisualDataChangeOperationKind.Create,
-      type: VisualUpdateType.Data
-    };
-  }
+	public static createUpdateOptions(dataView: DataView, viewport?: IViewport): VisualUpdateOptions {
+		return {
+			dataViews: [dataView],
+			viewport: viewport || { width: 500, height: 500 },
+			operationKind: VisualDataChangeOperationKind.Create,
+			type: VisualUpdateType.Data,
+		};
+	}
 }
 ```
 
@@ -674,39 +611,36 @@ import * as ReactDOM from "react-dom";
 import * as React from "react";
 
 export class CustomDialog {
-  private dialogContainer: HTMLElement;
+	private dialogContainer: HTMLElement;
 
-  constructor(options: DialogConstructorOptions) {
-    this.dialogContainer = options.element;
-    this.initializeDialog();
-  }
+	constructor(options: DialogConstructorOptions) {
+		this.dialogContainer = options.element;
+		this.initializeDialog();
+	}
 
-  private initializeDialog(): void {
-    const dialogContent = React.createElement(DialogContent, {
-      onSave: this.handleSave.bind(this),
-      onCancel: this.handleCancel.bind(this)
-    });
+	private initializeDialog(): void {
+		const dialogContent = React.createElement(DialogContent, {
+			onSave: this.handleSave.bind(this),
+			onCancel: this.handleCancel.bind(this),
+		});
 
-    ReactDOM.render(dialogContent, this.dialogContainer);
-  }
+		ReactDOM.render(dialogContent, this.dialogContainer);
+	}
 
-  private handleSave(data: any): void {
-    // Process save action
-    this.closeDialog(DialogAction.Save, data);
-  }
+	private handleSave(data: any): void {
+		// Process save action
+		this.closeDialog(DialogAction.Save, data);
+	}
 
-  private handleCancel(): void {
-    // Process cancel action
-    this.closeDialog(DialogAction.Cancel);
-  }
+	private handleCancel(): void {
+		// Process cancel action
+		this.closeDialog(DialogAction.Cancel);
+	}
 
-  private closeDialog(action: DialogAction, data?: any): void {
-    // Close dialog with action and optional data
-    powerbi.extensibility.visual.DialogUtils.closeDialog(
-      action,
-      data
-    );
-  }
+	private closeDialog(action: DialogAction, data?: any): void {
+		// Close dialog with action and optional data
+		powerbi.extensibility.visual.DialogUtils.closeDialog(action, data);
+	}
 }
 ```
 
@@ -717,39 +651,35 @@ import powerbiVisualsApi from "powerbi-visuals-api";
 import { ColorHelper } from "powerbi-visuals-utils-colorutils";
 
 export class Visual implements IVisual {
-  private colorHelper: ColorHelper;
+	private colorHelper: ColorHelper;
 
-  constructor(options: VisualConstructorOptions) {
-    this.colorHelper = new ColorHelper(
-      options.host.colorPalette,
-      { objectName: "dataPoint", propertyName: "fill" },
-      "#3498db" // Default color
-    );
-  }
+	constructor(options: VisualConstructorOptions) {
+		this.colorHelper = new ColorHelper(
+			options.host.colorPalette,
+			{ objectName: "dataPoint", propertyName: "fill" },
+			"#3498db", // Default color
+		);
+	}
 
-  private applyConditionalFormatting(
-    dataPoints: VisualDataPoint[]
-  ): VisualDataPoint[] {
-    return dataPoints.map(dataPoint => {
-      // Get conditional formatting color
-      const color = this.colorHelper.getColorForDataPoint(
-        dataPoint.dataViewObject
-      );
+	private applyConditionalFormatting(dataPoints: VisualDataPoint[]): VisualDataPoint[] {
+		return dataPoints.map((dataPoint) => {
+			// Get conditional formatting color
+			const color = this.colorHelper.getColorForDataPoint(dataPoint.dataViewObject);
 
-      return {
-        ...dataPoint,
-        color: color,
-        strokeColor: this.darkenColor(color, 0.2),
-        strokeWidth: 2
-      };
-    });
-  }
+			return {
+				...dataPoint,
+				color: color,
+				strokeColor: this.darkenColor(color, 0.2),
+				strokeWidth: 2,
+			};
+		});
+	}
 
-  private darkenColor(color: string, amount: number): string {
-    // Utility function to darken a color for stroke
-    const colorObj = d3.color(color);
-    return colorObj ? colorObj.darker(amount).toString() : color;
-  }
+	private darkenColor(color: string, amount: number): string {
+		// Utility function to darken a color for stroke
+		const colorObj = d3.color(color);
+		return colorObj ? colorObj.darker(amount).toString() : color;
+	}
 }
 ```
 
@@ -757,45 +687,37 @@ export class Visual implements IVisual {
 
 ```typescript
 import {
-  createTooltipServiceWrapper,
-  TooltipEventArgs,
-  ITooltipServiceWrapper
+	createTooltipServiceWrapper,
+	TooltipEventArgs,
+	ITooltipServiceWrapper,
 } from "powerbi-visuals-utils-tooltiputils";
 
 export class Visual implements IVisual {
-  private tooltipServiceWrapper: ITooltipServiceWrapper;
+	private tooltipServiceWrapper: ITooltipServiceWrapper;
 
-  constructor(options: VisualConstructorOptions) {
-    this.tooltipServiceWrapper = createTooltipServiceWrapper(
-      options.host.tooltipService,
-      options.element
-    );
-  }
+	constructor(options: VisualConstructorOptions) {
+		this.tooltipServiceWrapper = createTooltipServiceWrapper(options.host.tooltipService, options.element);
+	}
 
-  private addTooltips(
-    selection: d3.Selection<any, VisualDataPoint, any, any>
-  ): void {
-    this.tooltipServiceWrapper.addTooltip(
-      selection,
-      (tooltipEvent: TooltipEventArgs<VisualDataPoint>) => {
-        const dataPoint = tooltipEvent.data;
-        return [
-          {
-            displayName: "Category",
-            value: dataPoint.category
-          },
-          {
-            displayName: "Value",
-            value: dataPoint.value.toString()
-          },
-          {
-            displayName: "Percentage",
-            value: `${((dataPoint.value / this.totalValue) * 100).toFixed(1)}%`
-          }
-        ];
-      }
-    );
-  }
+	private addTooltips(selection: d3.Selection<any, VisualDataPoint, any, any>): void {
+		this.tooltipServiceWrapper.addTooltip(selection, (tooltipEvent: TooltipEventArgs<VisualDataPoint>) => {
+			const dataPoint = tooltipEvent.data;
+			return [
+				{
+					displayName: "Category",
+					value: dataPoint.category,
+				},
+				{
+					displayName: "Value",
+					value: dataPoint.value.toString(),
+				},
+				{
+					displayName: "Percentage",
+					value: `${((dataPoint.value / this.totalValue) * 100).toFixed(1)}%`,
+				},
+			];
+		});
+	}
 }
 ```
 
@@ -838,52 +760,50 @@ export class Visual implements IVisual {
 
 ```typescript
 export class OptimizedVisual implements IVisual {
-  private animationFrameId: number;
-  private renderQueue: (() => void)[] = [];
+	private animationFrameId: number;
+	private renderQueue: (() => void)[] = [];
 
-  public update(options: VisualUpdateOptions) {
-    // Queue render operation instead of immediate execution
-    this.queueRender(() => this.performUpdate(options));
-  }
+	public update(options: VisualUpdateOptions) {
+		// Queue render operation instead of immediate execution
+		this.queueRender(() => this.performUpdate(options));
+	}
 
-  private queueRender(renderFunction: () => void): void {
-    this.renderQueue.push(renderFunction);
+	private queueRender(renderFunction: () => void): void {
+		this.renderQueue.push(renderFunction);
 
-    if (!this.animationFrameId) {
-      this.animationFrameId = requestAnimationFrame(() => {
-        this.processRenderQueue();
-      });
-    }
-  }
+		if (!this.animationFrameId) {
+			this.animationFrameId = requestAnimationFrame(() => {
+				this.processRenderQueue();
+			});
+		}
+	}
 
-  private processRenderQueue(): void {
-    // Process all queued render operations
-    while (this.renderQueue.length > 0) {
-      const renderFunction = this.renderQueue.shift();
-      if (renderFunction) {
-        renderFunction();
-      }
-    }
+	private processRenderQueue(): void {
+		// Process all queued render operations
+		while (this.renderQueue.length > 0) {
+			const renderFunction = this.renderQueue.shift();
+			if (renderFunction) {
+				renderFunction();
+			}
+		}
 
-    this.animationFrameId = null;
-  }
+		this.animationFrameId = null;
+	}
 
-  private performUpdate(options: VisualUpdateOptions): void {
-    // Use virtual DOM or efficient diffing strategies
-    const currentData = this.transformData(options.dataViews[0]);
+	private performUpdate(options: VisualUpdateOptions): void {
+		// Use virtual DOM or efficient diffing strategies
+		const currentData = this.transformData(options.dataViews[0]);
 
-    if (this.hasDataChanged(currentData)) {
-      this.renderVisualization(currentData);
-      this.previousData = currentData;
-    }
-  }
+		if (this.hasDataChanged(currentData)) {
+			this.renderVisualization(currentData);
+			this.previousData = currentData;
+		}
+	}
 
-  private hasDataChanged(newData: any[]): boolean {
-    // Efficient data comparison
-    return (
-      JSON.stringify(newData) !== JSON.stringify(this.previousData)
-    );
-  }
+	private hasDataChanged(newData: any[]): boolean {
+		// Efficient data comparison
+		return JSON.stringify(newData) !== JSON.stringify(this.previousData);
+	}
 }
 ```
 

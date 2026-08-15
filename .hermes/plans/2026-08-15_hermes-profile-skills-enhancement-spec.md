@@ -16,32 +16,33 @@ Enhance 3 existing profile management skills and create 3 missing ones, forming 
 
 ### 2.1 Existing Skills (to enhance)
 
-| Skill | Location | Current State | Target State |
-|--------|----------|---------------|--------------|
-| `soul-enhancer` | `~/AppData/Local/hermes/skills/devops/soul-enhancer/` | SKILL.md (197L) + `enhance_soul.py` (169L). Validates SOUL.md structure. Has `--check`/`--fix`/`--apply-template`/`--mirror` modes. | Fix REQUIRED_SECTIONS to match actual SOUL.md format. Add `--propagate` mode. Add `--discover-profiles`. Cross-reference `hermes-personality-soul`. Add validation hook. |
-| `hermes-profile-sync` | `~/AppData/Local/hermes/skills/development/hermes-profile-sync/` | SKILL.md (115L) + 2 scripts. Config sync only. Hardcoded 13-profile list. | Add dynamic profile discovery. Add memory sync delegation to `hermes-profile-memory-sync`. Add `--dry-run`. Add quick commands. |
-| `hermes-profile-memory-sync` | `~/AppData/Local/hermes/skills/hermes-profile-memory-sync/` | SKILL.md (147L) + references. Most comprehensive. Covers memory files + aliases + clone-drift fix. | Add `--dry-run`. Add profile discovery. Add alias creation as documented subcommand. Better integration with `validate_memories.py`. |
+| Skill                        | Location                                                         | Current State                                                                                                                       | Target State                                                                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `soul-enhancer`              | `~/AppData/Local/hermes/skills/devops/soul-enhancer/`            | SKILL.md (197L) + `enhance_soul.py` (169L). Validates SOUL.md structure. Has `--check`/`--fix`/`--apply-template`/`--mirror` modes. | Fix REQUIRED_SECTIONS to match actual SOUL.md format. Add `--propagate` mode. Add `--discover-profiles`. Cross-reference `hermes-personality-soul`. Add validation hook. |
+| `hermes-profile-sync`        | `~/AppData/Local/hermes/skills/development/hermes-profile-sync/` | SKILL.md (115L) + 2 scripts. Config sync only. Hardcoded 13-profile list.                                                           | Add dynamic profile discovery. Add memory sync delegation to `hermes-profile-memory-sync`. Add `--dry-run`. Add quick commands.                                          |
+| `hermes-profile-memory-sync` | `~/AppData/Local/hermes/skills/hermes-profile-memory-sync/`      | SKILL.md (147L) + references. Most comprehensive. Covers memory files + aliases + clone-drift fix.                                  | Add `--dry-run`. Add profile discovery. Add alias creation as documented subcommand. Better integration with `validate_memories.py`.                                     |
 
 ### 2.2 Missing Skills (to create)
 
-| Skill | Trigger | Purpose | Target Location |
-|--------|---------|---------|-----------------|
-| `hermes-personality-soul` | `/hermes-personality-soul` | Persona→tone→traits mapping for all 14 Hermes profiles. Reference for SOUL.md personality sections. | `~/AppData/Local/hermes/skills/profiles/hermes-personality-soul/` |
-| `create-missing-souls` | `/create-missing-souls` | Discover profiles missing SOUL.md or with stub SOUL.md. Apply minimal template. Cross-reference personality skill. | `~/AppData/Local/hermes/skills/profiles/create-missing-souls/` |
-| `create-missing-memories` | `/create-missing-memories` | Discover profiles missing USER.md/MEMORY.md. Create from root canonical templates. Validate schema. | `~/AppData/Local/hermes/skills/profiles/create-missing-memories/` |
+| Skill                     | Trigger                    | Purpose                                                                                                            | Target Location                                                   |
+| ------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| `hermes-personality-soul` | `/hermes-personality-soul` | Persona→tone→traits mapping for all 14 Hermes profiles. Reference for SOUL.md personality sections.                | `~/AppData/Local/hermes/skills/profiles/hermes-personality-soul/` |
+| `create-missing-souls`    | `/create-missing-souls`    | Discover profiles missing SOUL.md or with stub SOUL.md. Apply minimal template. Cross-reference personality skill. | `~/AppData/Local/hermes/skills/profiles/create-missing-souls/`    |
+| `create-missing-memories` | `/create-missing-memories` | Discover profiles missing USER.md/MEMORY.md. Create from root canonical templates. Validate schema.                | `~/AppData/Local/hermes/skills/profiles/create-missing-memories/` |
 
 ### 2.3 Skills to Leave As-Is (already adequate)
 
-| Skill | Reason |
-|--------|--------|
+| Skill                 | Reason                                                                                          |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
 | `profile-maintenance` | Comprehensive standalone skill for USER.md/MEMORY.md/SOUL.md audit. 289 lines. Well-documented. |
-| `hermes-profiles` | Thin orchestration wrapper. Will be updated to cross-reference enhanced skills. |
+| `hermes-profiles`     | Thin orchestration wrapper. Will be updated to cross-reference enhanced skills.                 |
 
 ## 3. Skill Specifications
 
 ### 3.1 `soul-enhancer` (Enhance)
 
 #### Changes to SKILL.md
+
 - Fix `REQUIRED_SECTIONS` in script: replace `## Architectural Invariants` with the actual section names from the current root SOUL.md format
 - Add `## Skills Required` table referencing `hermes-personality-soul`
 - Add `## Quick Commands` section with:
@@ -52,6 +53,7 @@ Enhance 3 existing profile management skills and create 3 missing ones, forming 
 - Add post-enhancement validation hook reference
 
 #### Changes to `enhance_soul.py`
+
 - Fix `REQUIRED_SECTIONS` list to match actual SOUL.md format
 - Add `--propagate` flag: reads root SOUL.md, updates profile SOUL.md `**Profile:**` headers and `**Identity:**` lines
 - Add `--discover-profiles` flag: runs `hermes profile list` subprocess to get profile names instead of hardcoding
@@ -61,6 +63,7 @@ Enhance 3 existing profile management skills and create 3 missing ones, forming 
 ### 3.2 `hermes-personality-soul` (Create)
 
 #### SKILL.md Structure
+
 ```markdown
 ---
 name: hermes-personality-soul
@@ -75,28 +78,36 @@ tags: [hermes, profiles, personality, soul, identity]
 # Hermes Personality & SOUL.md Reference
 
 ## Overview
+
 Mapping of all 14 Hermes profiles to their persona, tone, and SOUL.md personality section content.
 
 ## Profile Personality Table
+
 (14 rows: profile | persona label | tone | 3 traits | SOUL.md Identity line)
 
 ## Persona Mapping (for soul-enhancer)
+
 Same data in script-parseable format.
 
 ## SOUL.md Personality Section Template
+
 Minimal template for profile SOUL.md Identity & Tone section.
 
 ## Cross-References
+
 - soul-enhancer: uses this for persona mapping
 - create-missing-souls: uses this for identity content
 - profile-soul-minimal-template: uses this for examples
 ```
 
 #### Supported Profiles (14)
+
 From `hermes profile list`: default, alexa, code-architect, creative-director, cto, designer, dev, exec-assistant, ops, patient-tutor, pm, qa, research-analyst, security
 
 #### Persona Assignments
+
 From `.hermes.md` profile table + `profile.yaml` descriptions:
+
 - default → General-purpose assistant
 - alexa → Operations engineer
 - code-architect → Senior software engineer (TDD-first)
@@ -115,6 +126,7 @@ From `.hermes.md` profile table + `profile.yaml` descriptions:
 ### 3.3 `create-missing-souls` (Create)
 
 #### SKILL.md Structure
+
 ```markdown
 ---
 name: create-missing-souls
@@ -129,9 +141,11 @@ tags: [hermes, profiles, soul, create, identity]
 # Create Missing Profile SOUL.md Files
 
 ## Overview
+
 Discovers all Hermes profiles, checks SOUL.md state, creates missing/stub files using the minimal template from hermes-personality-soul.
 
 ## Workflow
+
 1. Discover profiles via `hermes profile list`
 2. Check each profile's SOUL.md (exists? size? has header? has identity?)
 3. For missing/stub: create from `profile-soul-minimal-template.md` + personality data
@@ -139,11 +153,13 @@ Discovers all Hermes profiles, checks SOUL.md state, creates missing/stub files 
 5. Verify with `validate_memories.py` or manual grep checks
 
 ## Quick Commands
+
 - `python create_missing_souls.py --dry-run` — show what would be created
 - `python create_missing_souls.py --apply` — create missing files
 - `python create_missing_souls.py --profile <name>` — single profile
 
 ## Cross-References
+
 - hermes-personality-soul: identity/tone content source
 - profile-soul-minimal-template: template source
 - soul-enhancer: post-creation validation
@@ -153,6 +169,7 @@ Discovers all Hermes profiles, checks SOUL.md state, creates missing/stub files 
 ### 3.4 `create-missing-memories` (Create)
 
 #### SKILL.md Structure
+
 ```markdown
 ---
 name: create-missing-memories
@@ -167,9 +184,11 @@ tags: [hermes, profiles, memory, create, user, memories]
 # Create Missing Profile Memory Files
 
 ## Overview
+
 Discovers all Hermes profiles, checks for USER.md/MEMORY.md presence, creates missing files from root canonical templates with per-profile customization.
 
 ## Workflow
+
 1. Discover profiles via `hermes profile list`
 2. Check each profile's memories/ dir (exists? USER.md? MEMORY.md?)
 3. For missing: create MEMORY.md (verbatim from root), create USER.md (per-profile authored)
@@ -177,11 +196,13 @@ Discovers all Hermes profiles, checks for USER.md/MEMORY.md presence, creates mi
 5. Verify with `validate_memories.py`
 
 ## Quick Commands
+
 - `python create_missing_memories.py --dry-run`
 - `python create_missing_memories.py --apply`
 - `python create_missing_memories.py --profile <name>`
 
 ## Cross-References
+
 - profile-maintenance: schema and audit reference
 - hermes-profile-memory-sync: broader memory management
 - validate-memories: verification
@@ -190,6 +211,7 @@ Discovers all Hermes profiles, checks for USER.md/MEMORY.md presence, creates mi
 ### 3.5 `hermes-profile-sync` (Enhance)
 
 #### Changes to SKILL.md
+
 - Replace hardcoded PROFILES list with dynamic discovery
 - Add `--dry-run` to all script invocations
 - Add memory sync delegation section referencing `hermes-profile-memory-sync`
@@ -201,12 +223,14 @@ Discovers all Hermes profiles, checks for USER.md/MEMORY.md presence, creates mi
 - Add `## Skills Required` table referencing `hermes-profile-memory-sync`
 
 #### Changes to `sync_profile_configs.py`
+
 - Add `--discover` flag: run `hermes profile list` to get profile names
 - Keep hardcoded list as fallback
 
 ### 3.6 `hermes-profile-memory-sync` (Enhance)
 
 #### Changes to SKILL.md
+
 - Add `--dry-run` to all workflow steps
 - Add profile discovery note (always run `hermes profile list` first)
 - Add alias creation as explicit subcommand in Quick Commands
@@ -216,6 +240,7 @@ Discovers all Hermes profiles, checks for USER.md/MEMORY.md presence, creates mi
 ## 4. Tools to Create
 
 ### 4.1 `profile_discover.py`
+
 Location: `~/AppData/Local/hermes/scripts/profile_discover.py`
 
 Purpose: Discover all Hermes profiles and their state (SOUL.md, USER.md, MEMORY.md existence, sizes, header status).
@@ -313,6 +338,7 @@ if __name__ == "__main__":
 ```
 
 ### 4.2 `soul_propagate.py`
+
 Location: `~/AppData/Local/hermes/scripts/soul_propagate.py`
 
 Purpose: Propagate root SOUL.md profile headers to all profile SOUL.md files.
@@ -350,21 +376,21 @@ def propagate_one(profile, dry_run=False):
     if not target.exists():
         print(f"  {profile}: SKIP (no SOUL.md)")
         return
-    
+
     text = target.read_text()
     root_text = ROOT_SOUL.read_text()
-    
+
     # Extract root's Profile and Identity
     root_profile = PROFILE_RE.search(root_text)
     root_identity = IDENTITY_RE.search(root_text)
-    
+
     # For profile SOUL.md, we use the profile's own name + a generic identity
     # The profile's identity comes from hermes-personality-soul, not root
     profile_name = profile
     profile_identity = f"OWL: {profile} profile. See parent SOUL.md for shared standards."
-    
+
     changes = []
-    
+
     # Fix Profile header if wrong
     existing_profile = PROFILE_RE.search(text)
     if existing_profile:
@@ -381,7 +407,7 @@ def propagate_one(profile, dry_run=False):
             if not dry_run:
                 target.write_text(new_text)
             changes.append(f"added Profile header")
-    
+
     # Fix Identity if missing or stale
     existing_identity = IDENTITY_RE.search(text)
     if not existing_identity:
@@ -398,7 +424,7 @@ def propagate_one(profile, dry_run=False):
         # Check if it's a stub identity (just says the profile name)
         if existing_identity.group(1).strip() == f"OWL: {profile} profile.":
             changes.append(f"Identity is stub — recommend running create-missing-souls for full identity")
-    
+
     if changes:
         action = "DRY-RUN" if dry_run else "UPDATED"
         print(f"  {profile}: {action} — {', '.join(changes)}")
@@ -411,7 +437,7 @@ def main():
     if "--profile" in sys.argv:
         idx = sys.argv.index("--profile")
         profile = sys.argv[idx + 1]
-    
+
     if profile:
         propagate_one(profile, dry_run)
     else:
@@ -428,6 +454,7 @@ if __name__ == "__main__":
 ## 5. Hooks to Create/Reference
 
 ### 5.1 Post-Soul-Enhancement Hook
+
 A lightweight validation hook that runs after soul enhancement operations.
 
 Location: `~/AppData/Local/hermes/hooks/post-soul-enhancement/validate_soul.sh`
@@ -471,6 +498,7 @@ exit $FAILURES
 ```
 
 ### 5.2 Post-Memory-Creation Hook
+
 Validates memory files after creation.
 
 Location: `~/AppData/Local/hermes/hooks/post-memory-creation/validate_memories.sh`
@@ -507,6 +535,7 @@ exit $exit_code
 ## 6. Quick Commands
 
 ### 6.1 Profile Soul Management
+
 ```
 # Validate all profile SOUL.md files
 python ~/AppData/Local/hermes/scripts/soul_propagate.py --dry-run
@@ -526,6 +555,7 @@ python ~/AppData/Local/hermes/skills/devops/soul-enhancer/scripts/enhance_soul.p
 ```
 
 ### 6.2 Profile Memory Management
+
 ```
 # Sync memory files to all profiles
 python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/sync_profile_memories.py
@@ -538,6 +568,7 @@ python ~/AppData/Local/hermes/skills/devops/validate-memories/scripts/validate_m
 ```
 
 ### 6.3 Full Profile Sync
+
 ```
 # Sync configs (normal)
 python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/sync_profile_configs.py
@@ -554,6 +585,7 @@ python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/syn
 ## 7. Verification Criteria
 
 ### 7.1 Skill Verification
+
 - [ ] All 6 skills have valid YAML frontmatter (name, title, description, version, author, license, tags)
 - [ ] All 6 skills have ≥3 workflow phases
 - [ ] All 6 skills have Pitfalls section
@@ -563,6 +595,7 @@ python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/syn
 - [ ] All 6 skills reference shared templates where applicable
 
 ### 7.2 Script Verification
+
 - [ ] `profile_discover.py` runs without errors, discovers all 14 profiles
 - [ ] `soul_propagate.py --dry-run` shows correct profile states
 - [ ] `soul_propagate.py` (without --dry-run) correctly updates profile headers
@@ -570,10 +603,12 @@ python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/syn
 - [ ] `sync_profile_configs.py` discovers profiles dynamically
 
 ### 7.3 Hook Verification
+
 - [ ] `validate_soul.sh` runs and reports correctly
 - [ ] `validate_memories.sh` runs validate_memories.py correctly
 
 ### 7.4 Integration Verification
+
 - [ ] `hermes profile list` shows all 14 profiles
 - [ ] All profile SOUL.md files have `**Profile:**` header matching profile name
 - [ ] All profile SOUL.md files have `**Identity:**` line
@@ -582,15 +617,15 @@ python ~/AppData/Local/hermes/skills/development/hermes-profile-sync/scripts/syn
 
 ## 8. Cross-Reference Matrix
 
-| Skill | References | Referenced By |
-|-------|-----------|---------------|
-| `soul-enhancer` | `hermes-personality-soul`, `profile-soul-minimal-template.md`, `validate_memories.py` | `create-missing-souls`, `hermes-profiles` |
-| `hermes-personality-soul` | `profile-soul-minimal-template.md`, `profile.yaml` descriptions | `soul-enhancer`, `create-missing-souls` |
-| `create-missing-souls` | `hermes-personality-soul`, `profile-soul-minimal-template.md`, `sync_profile_memories.py`, `soul_propagate.py` | `hermes-profiles`, `hermes-profile-memory-sync` |
-| `create-missing-memories` | `profile-maintenance`, `validate_memories.py`, `sync_profile_memories.py` | `hermes-profile-memory-sync`, `hermes-profiles` |
-| `hermes-profile-sync` | `hermes-profile-memory-sync`, `sync_profile_configs.py`, `sync_profile_memories.py`, `profile_discover.py` | `hermes-profiles` |
-| `hermes-profile-memory-sync` | `create-missing-souls`, `create-missing-memories`, `profile-soul-drift-fix.md`, `validate_memories.py` | `hermes-profiles`, `hermes-profile-sync` |
-| `hermes-profiles` | ALL above | — |
+| Skill                        | References                                                                                                     | Referenced By                                   |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `soul-enhancer`              | `hermes-personality-soul`, `profile-soul-minimal-template.md`, `validate_memories.py`                          | `create-missing-souls`, `hermes-profiles`       |
+| `hermes-personality-soul`    | `profile-soul-minimal-template.md`, `profile.yaml` descriptions                                                | `soul-enhancer`, `create-missing-souls`         |
+| `create-missing-souls`       | `hermes-personality-soul`, `profile-soul-minimal-template.md`, `sync_profile_memories.py`, `soul_propagate.py` | `hermes-profiles`, `hermes-profile-memory-sync` |
+| `create-missing-memories`    | `profile-maintenance`, `validate_memories.py`, `sync_profile_memories.py`                                      | `hermes-profile-memory-sync`, `hermes-profiles` |
+| `hermes-profile-sync`        | `hermes-profile-memory-sync`, `sync_profile_configs.py`, `sync_profile_memories.py`, `profile_discover.py`     | `hermes-profiles`                               |
+| `hermes-profile-memory-sync` | `create-missing-souls`, `create-missing-memories`, `profile-soul-drift-fix.md`, `validate_memories.py`         | `hermes-profiles`, `hermes-profile-sync`        |
+| `hermes-profiles`            | ALL above                                                                                                      | —                                               |
 
 ## 9. Implementation Order
 

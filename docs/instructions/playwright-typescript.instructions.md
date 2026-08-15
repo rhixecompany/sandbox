@@ -38,28 +38,26 @@ applyTo: "**"
 import { test, expect } from "@playwright/test";
 
 test.describe("Movie Search Feature", () => {
-  test.beforeEach(async ({ page }) => {
-    // Navigate to the application before each test
-    await page.goto(
-      "https://debs-obrien.github.io/playwright-movies-app"
-    );
-  });
+	test.beforeEach(async ({ page }) => {
+		// Navigate to the application before each test
+		await page.goto("https://debs-obrien.github.io/playwright-movies-app");
+	});
 
-  test("Search for a movie by title", async ({ page }) => {
-    await test.step("Activate and perform search", async () => {
-      await page.getByRole("search").click();
-      const searchInput = page.getByRole("textbox", {
-        name: "Search Input"
-      });
-      await searchInput.fill("Garfield");
-      await searchInput.press("Enter");
-    });
+	test("Search for a movie by title", async ({ page }) => {
+		await test.step("Activate and perform search", async () => {
+			await page.getByRole("search").click();
+			const searchInput = page.getByRole("textbox", {
+				name: "Search Input",
+			});
+			await searchInput.fill("Garfield");
+			await searchInput.press("Enter");
+		});
 
-    await test.step("Verify search results", async () => {
-      // Verify the accessibility tree of the search results
-      await expect(page.getByRole("main")).toMatchAriaSnapshot();
-    });
-  });
+		await test.step("Verify search results", async () => {
+			// Verify the accessibility tree of the search results
+			await expect(page.getByRole("main")).toMatchAriaSnapshot();
+		});
+	});
 });
 ```
 

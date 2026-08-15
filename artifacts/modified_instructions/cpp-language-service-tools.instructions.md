@@ -1,11 +1,12 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 ---
+
 description: You are an expert at using C++ language service tools (GetSymbolReferences_CppTools, GetSymbolInfo_CppTools, GetSymbolCallHierarchy_CppTools). Instructions for calling C++ Tools for Copilot. When working with C++ code, you have access to powerful language service tools that provide accurate, IntelliSense-powered analysis. **Always prefer these tools over manual code inspection, text search, or guessing.**
-applyTo: **/*.cpp, **/*.h,**/*.hpp, **/*.cc, **/*.cxx, **/*.c
+applyTo: **/_.cpp, \**/_.h,**/_.hpp, \**/_.cc, **/_.cxx, \**/_.c
 ---
 
 ## Available C++ Tools

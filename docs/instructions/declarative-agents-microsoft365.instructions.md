@@ -15,13 +15,13 @@ Microsoft 365 Copilot declarative agents are powerful custom AI assistants that 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json",
-  "capabilities": ["array (max 5 items)"],
-  "conversation_starters": ["array (max 4 items, optional)"],
-  "description": "string (max 1000 characters)",
-  "instructions": "string (max 8000 characters)",
-  "name": "string (max 100 characters)",
-  "version": "v1.5"
+	"$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json",
+	"capabilities": ["array (max 5 items)"],
+	"conversation_starters": ["array (max 4 items, optional)"],
+	"description": "string (max 1000 characters)",
+	"instructions": "string (max 8000 characters)",
+	"name": "string (max 100 characters)",
+	"version": "v1.5"
 }
 ```
 
@@ -147,10 +147,10 @@ tsp compile agent.tsp --emit=@typespec/json-schema
 
 ```json
 {
-  "capabilities": ["${REQUIRED_CAPABILITIES}"],
-  "description": "Development version: ${AGENT_DESCRIPTION}",
-  "instructions": "${AGENT_INSTRUCTIONS}",
-  "name": "${DEV_AGENT_NAME}"
+	"capabilities": ["${REQUIRED_CAPABILITIES}"],
+	"description": "Development version: ${AGENT_DESCRIPTION}",
+	"instructions": "${AGENT_INSTRUCTIONS}",
+	"name": "${DEV_AGENT_NAME}"
 }
 ```
 
@@ -158,10 +158,10 @@ tsp compile agent.tsp --emit=@typespec/json-schema
 
 ```json
 {
-  "capabilities": ["${PRODUCTION_CAPABILITIES}"],
-  "description": "${AGENT_DESCRIPTION}",
-  "instructions": "${AGENT_INSTRUCTIONS}",
-  "name": "${PROD_AGENT_NAME}"
+	"capabilities": ["${PRODUCTION_CAPABILITIES}"],
+	"description": "${AGENT_DESCRIPTION}",
+	"instructions": "${AGENT_INSTRUCTIONS}",
+	"name": "${PROD_AGENT_NAME}"
 }
 ```
 
@@ -171,9 +171,7 @@ tsp compile agent.tsp --emit=@typespec/json-schema
 
 ```typescript
 // Validate against v1.5 schema
-const schema = await fetch(
-  "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json"
-);
+const schema = await fetch("https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json");
 const validator = new JSONSchema(schema);
 const isValid = validator.validate(agentManifest);
 ```
@@ -183,15 +181,15 @@ const isValid = validator.validate(agentManifest);
 ```typescript
 // Validation helper functions
 function validateName(name: string): boolean {
-  return name.length > 0 && name.length <= 100;
+	return name.length > 0 && name.length <= 100;
 }
 
 function validateDescription(description: string): boolean {
-  return description.length > 0 && description.length <= 1000;
+	return description.length > 0 && description.length <= 1000;
 }
 
 function validateInstructions(instructions: string): boolean {
-  return instructions.length > 0 && instructions.length <= 8000;
+	return instructions.length > 0 && instructions.length <= 8000;
 }
 ```
 
@@ -236,14 +234,14 @@ graph LR
 
 ```json
 {
-  "description": "Production agent with enhanced capabilities",
-  "metadata": {
-    "version": "1.2.0",
-    "build": "20241208.1",
-    "environment": "production"
-  },
-  "name": "MyAgent v1.2.0",
-  "version": "v1.5"
+	"description": "Production agent with enhanced capabilities",
+	"metadata": {
+		"version": "1.2.0",
+		"build": "20241208.1",
+		"environment": "production"
+	},
+	"name": "MyAgent v1.2.0",
+	"version": "v1.5"
 }
 ```
 
@@ -259,12 +257,12 @@ graph LR
 
 ```json
 {
-  "behavior_overrides": {
-    "response_tone": "professional",
-    "max_response_length": 2000,
-    "citation_requirements": true
-  },
-  "instructions": "You are a specialized financial analyst agent. Always provide disclaimers for financial advice."
+	"behavior_overrides": {
+		"response_tone": "professional",
+		"max_response_length": 2000,
+		"citation_requirements": true
+	},
+	"instructions": "You are a specialized financial analyst agent. Always provide disclaimers for financial advice."
 }
 ```
 
@@ -272,16 +270,16 @@ graph LR
 
 ```json
 {
-  "description": {
-    "en-US": "Provides financial analysis and insights",
-    "es-ES": "Proporciona análisis e insights financieros",
-    "fr-FR": "Fournit des analyses et insights financiers"
-  },
-  "name": {
-    "en-US": "Financial Assistant",
-    "es-ES": "Asistente Financiero",
-    "fr-FR": "Assistant Financier"
-  }
+	"description": {
+		"en-US": "Provides financial analysis and insights",
+		"es-ES": "Proporciona análisis e insights financieros",
+		"fr-FR": "Fournit des analyses et insights financiers"
+	},
+	"name": {
+		"en-US": "Financial Assistant",
+		"es-ES": "Asistente Financiero",
+		"fr-FR": "Assistant Financier"
+	}
 }
 ```
 
@@ -299,13 +297,13 @@ graph LR
 ```typescript
 // Structured logging for agent interactions
 const log = {
-  timestamp: new Date().toISOString(),
-  agentName: "MyAgent",
-  version: "1.2.0",
-  userId: "user123",
-  capability: "WebSearch",
-  responseTime: 1250,
-  success: true
+	timestamp: new Date().toISOString(),
+	agentName: "MyAgent",
+	version: "1.2.0",
+	userId: "user123",
+	capability: "WebSearch",
+	responseTime: 1250,
+	success: true,
 };
 ```
 

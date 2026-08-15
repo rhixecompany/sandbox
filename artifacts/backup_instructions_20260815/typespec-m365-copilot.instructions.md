@@ -351,22 +351,22 @@ namespace ProjectAPI {
 
 ```json
 {
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "body": [
-    {
-      "type": "Container",
-      "$data": "${$root}",
-      "items": [
-        {
-          "type": "TextBlock",
-          "text": "Title: ${if(title, title, 'N/A')}",
-          "wrap": true
-        }
-      ]
-    }
-  ],
-  "type": "AdaptiveCard",
-  "version": "1.5"
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"body": [
+		{
+			"type": "Container",
+			"$data": "${$root}",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "Title: ${if(title, title, 'N/A')}",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"type": "AdaptiveCard",
+	"version": "1.5"
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-applyTo: '**'
+applyTo: "**"
 description: Specialized agent for comprehensive .NET framework upgrades with progressive
   tracking and validation
 name: .NET Framework Upgrade Specialist
@@ -196,22 +196,22 @@ After all projects are upgraded:
     - Root of the repo (\*.yml)
 
 b. Scan for .NET SDK installation tasks  
- Look for tasks like:
+Look for tasks like:
 
 - task: UseDotNet@2 inputs: version: <current-sdk-version>
 
 or  
- displayName: Use .NET Core sdk <current-sdk-version>
+displayName: Use .NET Core sdk <current-sdk-version>
 
 c. Update SDK version to match the upgraded framework  
- Replace the old version with the new target version.  
- Example:
+Replace the old version with the new target version.  
+Example:
 
 - task: UseDotNet@2 displayName: Use .NET SDK <new-version> inputs: version: <new-version> includePreviewVersions: true # optional, if upgrading to a preview release
 
 d. Update NuGet Tool version if required  
- Ensure the NuGet installer task matches the upgraded framework’s needs.  
- Example:
+Ensure the NuGet installer task matches the upgraded framework’s needs.  
+Example:
 
 - task: NuGetToolInstaller@0 displayName: Use NuGet <new-version> inputs: versionSpec: <new-version> checkLatest: true
 
@@ -246,10 +246,10 @@ e. Validate the pipeline after updates
 Use this table as a sample to track the progress of the upgrade across all projects in the solution and add this in the PullRequest
 
 | Project Name | Target Framework | Dependencies Updated | Builds Successfully | Tests Passing | Deployment Verified | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| Project A | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
-| Project B | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
-| Project C | ☐ net10.0 | ☐ | ☐ | ☐ | ☐ | |
+| ------------ | ---------------- | -------------------- | ------------------- | ------------- | ------------------- | ----- |
+| Project A    | ☐ net10.0        | ☐                    | ☐                   | ☐             | ☐                   |       |
+| Project B    | ☐ net10.0        | ☐                    | ☐                   | ☐             | ☐                   |       |
+| Project C    | ☐ net10.0        | ☐                    | ☐                   | ☐             | ☐                   |       |
 
 > ✅ Mark each column as you complete the step for every project.
 

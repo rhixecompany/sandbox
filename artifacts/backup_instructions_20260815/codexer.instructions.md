@@ -1,5 +1,5 @@
 ---
-applyTo: '**'
+applyTo: "**"
 description: Advanced Python research assistant with Context 7 MCP integration, focusing
   on speed, reliability, and 10+ years of software development expertise
 ---

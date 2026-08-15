@@ -1,6 +1,6 @@
 ---
-applyTo: '**'
-description: 'PLACEHOLDER: brief description required. Please update before merging.'
+applyTo: "**"
+description: "PLACEHOLDER: brief description required. Please update before merging."
 ---
 
 # Dataverse SDK for Python — Authentication & Security Patterns
