@@ -321,7 +321,6 @@ export default defineConfig([
         },
       ],
       "unicorn/no-abusive-eslint-disable": "error",
-      "unicorn/no-array-for-each": "warn", // forEach is readable
       "unicorn/no-null": "warn", // Project uses null intentionally
       "unicorn/prefer-at": "warn", // Too strict
       "unicorn/prefer-includes": "error",
