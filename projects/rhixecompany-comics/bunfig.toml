@@ -1,0 +1,13 @@
+# rhixecompany-comics — Bun configuration
+# Dual-stack (Django backend + Next.js frontend)
+
+[build]
+loader = false
+
+[test]
+coverage = true
+
+[install]
+optional = true
+dev = true
+peer = true
