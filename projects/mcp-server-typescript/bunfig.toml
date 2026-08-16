@@ -1,0 +1,13 @@
+# mcp-server-typescript — Bun configuration
+# TypeScript MCP server implementation
+
+[build]
+loader = false
+
+[test]
+coverage = true
+
+[install]
+optional = true
+dev = true
+peer = true
