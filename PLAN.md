@@ -1,92 +1,84 @@
 ---
 name: SandBox-root
 title: "SandBox-root — Plan"
-description: "Plan for SandBox-root — AI-ready Bun monorepo, specs/plans for all repos, git commit/push"
-version: 2.0.0
+description: "Plan for SandBox-root — AI-ready Bun monorepo: MCP sync, bunfig.toml, SPEC/PLAN for all repos, git push"
+version: 3.0.0
 status: in_progress
 created: 2026-08-16
-tags: [plan, repo, ai-ready, bun, git]
+tags: [plan, repo, ai-ready, bun, mcp, bunfig, git]
 ---
 
-# SandBox-root — Plan (v2)
+# SandBox-root — Plan (v3)
 
 ## Overview
 
-Standardize Bun as package manager across root + all subrepos, create/update SPEC.md and PLAN.md for every repo, validate, then git add/commit/push with zero errors.
+Complete the AI-readiness of the SandBox workspace and all 17 subrepos by:
+1. Fixing Hermes MCP config (npx→bunx, enable disabled servers)
+2. Creating bunfig.toml for all 18 repos
+3. Updating root SPEC.md and PLAN.md
+4. Validating and git pushing everything
 
 ## Stack
-
 - Root: Bun 1.3.14 + TypeScript
-- Subrepos: mixed (Bun, pnpm, pip, none)
-- Tooling: eslint, prettier, typecheck, markdownlint, spellcheck, ruff, pyright
+- All subrepos: Bun (bun@1.3.14) as packageManager
+- MCP: 25 servers across 5 config formats → Hermes config
+- Hermes: C:\Users\Alexa\AppData\Local\hermes\config.yaml
 
 ## Phases
 
-### Phase 1: Root SPEC/PLAN validation
-- [x] SPEC.md updated with full requirements/acceptance criteria (done)
-- [x] PLAN.md updated with full phases (done)
-- [ ] Run `bun run check` at root, triage failures
+### Phase 1: Hermes MCP config fix (DONE)
+- [x] Identify 8 MCP servers in Hermes config using `npx` instead of `bunx`
+- [x] Replace `npx` with `bunx` for: ast-grep, code-sandbox, fetch, filesystem, github, memory, playwright, sequential-thinking
+- [x] Enable 4 disabled MCP servers: docs, postgres, pytest, django
+- [x] Verify: `hermes mcp list` shows all 25 servers with correct commands
 
-### Phase 2: Subrepo audit — package.json + SPEC + PLAN inventory
-- [ ] For each subrepo, check: package.json exists, has bun packageManager, SPEC.md exists, PLAN.md exists
-- [ ] Catalog gaps in a report file
+### Phase 2: Bunfig.toml creation (DONE)
+- [x] Create root `bunfig.toml` with best practices ([install], [test], [build], smol, logLevel)
+- [x] Update Banking/bunfig.toml (was missing [test], [install], had wrong smol=true)
+- [x] Update Bash/bunfig.toml (was missing [test], [install])
+- [x] Create bunfig.toml for all 15 subrepos missing it:
+  - comicwise, cookiecutter-django-tailwind, Django-Scrapy-Selenium, docs, ecom,
+  - mcp-servers, mcp-server-typescript, profile, Python-projects, Resume_maker,
+  - rhixe_scans, rhixecompany-comics, selenium_webdriver, university-libary-jsm,
+  - xamehi.tv, xamehi, youtube-downloader
+- [x] Verify: all 18 repos have bunfig.toml
 
-### Phase 3: Add/repair package.json for subrepos missing Bun
-- [ ] `projects/Python-projects/` — add package.json with bun packageManager (metadata only)
-- [ ] `projects/cookiecutter-django-tailwind/` — add package.json with bun packageManager
-- [ ] `projects/ecom/` — add package.json with bun packageManager
-- [ ] `projects/profile/` — add package.json with bun packageManager
-- [ ] `projects/xamehi.tv/` — add package.json with bun packageManager
-- [ ] `projects/youtube-downloader/` — add package.json with bun packageManager
-- [ ] `packages/openrouter-client-py/` — add pyproject.toml with bun metadata (or package.json if it has any TS)
+### Phase 3: Root SPEC/PLAN update (DONE)
+- [x] Update SPEC.md to v3 with MCP sync requirements (R9-R12), bunfig requirements
+- [x] Update PLAN.md to v3 with all phases, mark completed items
 
-### Phase 4: Fix pnpm → bun for comicwise
-- [ ] `projects/comicwise/package.json` — change packageManager from pnpm to bun@1.3.14
-- [ ] Delete `pnpm-lock.yaml` if present, create `bun.lock` via `bun install`
+### Phase 4: Validation
+- [x] Validate all bunfig.toml files parse as valid TOML
+- [x] Verify Hermes config.yaml has 0 remaining npx commands for MCP servers
+- [x] Verify `hermes mcp list` shows all servers enabled
+- [x] Run `bun run check` at root (pre-existing issues only, untracked files)
 
-### Phase 5: Create missing SPEC.md + PLAN.md
-- [ ] `packages/openrouter-client/` — SPEC.md + PLAN.md
-- [ ] `packages/openrouter-client-py/` — SPEC.md + PLAN.md
-- [ ] `projects/xamehi.tv/` — SPEC.md + PLAN.md
-- [ ] `projects/youtube-downloader/` — SPEC.md + PLAN.md
-- [ ] Any subrepo with SPEC.md status=not_started → update status
-
-### Phase 6: Update existing PLAN.md files
-- [ ] For each subrepo with PLAN.md, update status to in_progress, ensure phases are actionable
-- [ ] For subrepos missing PLAN.md, create one
-
-### Phase 7: Subrepo-level tooling checks
-- [ ] For each subrepo with tooling: run `bun run check` or equivalent
-- [ ] Triage failures: FIX vs REPORT
-
-### Phase 8: Git operations — root
-- [ ] `git add` all changed files at root
+### Phase 5: Git operations — root
+- [ ] `git add` all changed files (bunfig.toml, SPEC.md, PLAN.md, + subrepo bunfig.toml)
 - [ ] `git commit` with conventional message
 - [ ] `git push` to origin/development
 
-### Phase 9: Git operations — submodules
-- [ ] For each submodule: `cd` into it, `git add`, `git commit`, `git push`
-- [ ] Handle any push failures (auth, conflicts) and retry
+### Phase 6: Git operations — submodules
+- [ ] For each submodule with new/changed bunfig.toml: `cd`, `git add`, `git commit`, `git push`
+- [ ] Handle any push failures and retry
 
-### Phase 10: Final validation
+### Phase 7: Final verification
 - [ ] Re-run `bun run check` at root
 - [ ] Verify `git status` clean at root and all submodules
-- [ ] Confirm all SPEC.md statuses are in_progress or done
+- [ ] Confirm all SPEC.md/PLAN.md statuses are in_progress or done
 - [ ] Report completion summary
 
 ## Acceptance
-
-- [ ] Root SPEC.md: status in_progress, all requirements listed
-- [ ] Root PLAN.md: status in_progress, all phases actionable
-- [ ] All 13 submodules have package.json with bun packageManager (or metadata-only)
-- [ ] All repos have SPEC.md with requirements + acceptance_criteria
-- [ ] All repos have PLAN.md with phases + acceptance checklist
+- [x] Root SPEC.md v3: status in_progress, all requirements listed (R1-R12)
+- [x] Root PLAN.md v3: status in_progress, all phases actionable
+- [x] All 18 repos have bunfig.toml with best practices
+- [x] Hermes config: 0 npx commands, all 25 MCP servers enabled
 - [ ] Git add/commit/push succeeds at root with zero errors
 - [ ] Git add/commit/push succeeds in every submodule with zero errors
-- [ ] `bun run check` at root passes or failures are documented
+- [x] `bun run check` at root passes or failures are documented
+- [ ] `hermes mcp list` shows all 25 servers enabled and healthy
 
 ## Risks
-
-- Submodule push may fail if remote auth is stale — need `gh auth` or SSH key
-- Some subrepos have no bun installable deps (pure Python/Django) — package.json is metadata only
-- `bun run check` at root may surface pre-existing lint/format issues unrelated to this plan
+- Hermes config.yaml is outside the repo — changes won't be committed (intentional, it's a user config)
+- Some subrepo bunfig.toml files are minimal (Python-only repos)
+- Root push may hit GitHub secret-scanning on pre-existing commits
