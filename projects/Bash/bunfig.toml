@@ -1,4 +1,14 @@
-[run]
-# Automatically run the project with the --bun flag
-# This forces Bun's runtime for all scripts
-bun = false
+# Bash — Bun configuration
+# Automation toolkit (Bun/TypeScript + PowerShell + Bash)
+
+[build]
+loader = false
+
+[test]
+coverage = true
+root = "./src"
+
+[install]
+optional = true
+dev = true
+peer = true

@@ -1,0 +1,7 @@
+# docs — Bun configuration
+# Documentation-only repo (no executable code; Bun metadata only)
+
+[install]
+optional = true
+dev = true
+peer = true
