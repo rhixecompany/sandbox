@@ -1,85 +1,129 @@
 ---
 name: SandBox-root
-title: "SandBox-root — Plan"
-description: "Plan for SandBox-root — AI-ready Bun monorepo: MCP sync, bunfig.toml, SPEC/PLAN for all repos, git push"
-version: 3.0.0
+title: "SandBox-root — Plan: MCP Server Install & Skills Creation"
+description: "Plan for installing all 23 MCP servers globally via bunx, creating SKILL.md for each, syncing profiles, and integrating references"
+version: 1.0.0
 status: in_progress
 created: 2026-08-16
-tags: [plan, repo, ai-ready, bun, mcp, bunfig, git]
+tags: [plan, mcp, skills, bunx, profiles, instructions, tools, git]
+
 ---
 
-# SandBox-root — Plan (v3)
+# MCP Server Install + Skills — Plan
 
 ## Overview
 
-Complete the AI-readiness of the SandBox workspace and all 17 subrepos by:
-1. Fixing Hermes MCP config (npx→bunx, enable disabled servers)
-2. Creating bunfig.toml for all 18 repos
-3. Updating root SPEC.md and PLAN.md
-4. Validating and git pushing everything
+Install all 23 MCP server npm dependencies globally, create SKILL.md for each server, sync all 7 profile identity files, triage references, and create management tools/hooks/quick commands.
 
-## Stack
-- Root: Bun 1.3.14 + TypeScript
-- All subrepos: Bun (bun@1.3.14) as packageManager
-- MCP: 25 servers across 5 config formats → Hermes config
-- Hermes: C:\Users\Alexa\AppData\Local\hermes\config.yaml
+## Phase 1: Install Global Bunx Dependencies
 
-## Phases
+### 1.1 Already-installed packages (skip)
+- [x] @notprolands/ast-grep-mcp (installed, works via npx)
+- [x] mcp-server-fetch-typescript
+- [x] @modelcontextprotocol/server-github
+- [x] @playwright/mcp@0.0.78
 
-### Phase 1: Hermes MCP config fix (COMPLETE)
-- [x] Identify 8 MCP servers in Hermes config using `npx` instead of `bunx`
-- [x] Replace `npx` with `bunx` for: ast-grep, code-sandbox, fetch, filesystem, github, memory, playwright, sequential-thinking
-- [x] Enable 4 disabled MCP servers: docs, postgres, pytest, django
-- [x] Verify: `hermes mcp list` shows all 25 servers with correct commands
+### 1.2 Install remaining npm packages
+- [ ] @modelcontextprotocol/server-memory (installed, works via npx)
+- [ ] @modelcontextprotocol/server-sequential-thinking (installed, works via npx)
+- [ ] @modelcontextprotocol/server-filesystem (fails — investigate)
+- [ ] node-code-sandbox-mcp (fails — investigate)
+- [ ] @mamounalzyoud/django-mcp-server@2.0.0 (correct name for django-mcp)
+- [ ] @speakeasy-api/docs-mcp-core@0.17.1 (correct name for docs-mcp)
+- [ ] pytest-mcp-server@1.1.6 (correct name for pytest-mcp)
+- [ ] @yawlabs/postgres-mcp@0.10.0 (correct name for postgres-mcp)
 
-### Phase 2: Bunfig.toml creation (COMPLETE)
-- [x] Create root `bunfig.toml` with best practices ([install], [test], [build], smol, logLevel)
-- [x] Update Banking/bunfig.toml (was missing [test], [install], had wrong smol=true)
-- [x] Update Bash/bunfig.toml (was missing [test], [install])
-- [x] Create bunfig.toml for all 15 subrepos missing it:
-  - comicwise, cookiecutter-django-tailwind, Django-Scrapy-Selenium, docs, ecom,
-  - mcp-servers, mcp-server-typescript, profile, Python-projects, Resume_maker,
-  - rhixe_scans, rhixecompany-comics, selenium_webdriver, university-libary-jsm,
-  - xamehi.tv, xamehi, youtube-downloader
-- [x] Verify: all 20 bunfig.toml files parse as valid TOML
+### 1.3 Verify all installations
+- [ ] Run `bunx -y <pkg>` for each, verify no errors
+- [ ] For servers that fail, document as REPORT items
 
-### Phase 3: Root SPEC/PLAN update (COMPLETE)
-- [x] Update SPEC.md to v3 with MCP sync requirements (R9-R12), bunfig requirements
-- [x] Update PLAN.md to v3 with all phases, mark completed items
+## Phase 2: Create MCP Skills (23 SKILL.md files)
 
-### Phase 4: Validation (COMPLETE)
-- [x] Validate all bunfig.toml files parse as valid TOML — 20/20 OK
-- [x] Verify Hermes config.yaml has 0 remaining npx commands for MCP servers
-- [x] Verify `hermes mcp list` shows all servers enabled — 25/25 enabled
-- [x] Run `bun run check` at root (pre-existing issues only, untracked files)
+### 2.1 Code/Development MCP Servers (6 skills)
+- [ ] ast-grep — code search/replace, AST pattern matching
+- [ ] code-sandbox — isolated Node.js execution sandbox
+- [ ] playwright — browser automation, screenshots, console logs
+- [ ] sequential-thinking — structured reasoning, chain-of-thought
+- [ ] tooling-lint — ESLint + Prettier + Markdownlint + CSpell
+- [ ] tooling-config — pre-commit + git-cliff + .gitignore validation
 
-### Phase 5: Git operations — root (COMPLETE)
-- [x] `git add` all changed files (bunfig.toml, SPEC.md, PLAN.md, + subrepo bunfig.toml)
-- [x] `git commit` with conventional message (77fabd81)
-- [x] `git push` to origin/development (a25479fb)
+### 2.2 Data/Infrastructure MCP Servers (4 skills)
+- [ ] filesystem — file read/write/search, directory ops
+- [ ] memory — persistent memory storage CRUD
+- [ ] postgres — PostgreSQL query, schema, connection management
+- [ ] mcp-docker — Docker container management via MCP gateway
 
-### Phase 6: Git operations — submodules (COMPLETE)
-- [x] For each submodule with new/changed bunfig.toml: `cd`, `git add`, `git commit`, `git push`
-- [x] Banking: 454a99d2
-- [x] All 16 other subrepos: committed + pushed
+### 2.3 Search/Discovery MCP Servers (4 skills)
+- [ ] context7 — authoritative external docs, API references
+- [ ] tavily — web search with API key
+- [ ] parallel-search — parallel web search
+- [ ] parallel-task — parallel task execution
 
-### Phase 7: Final verification (IN PROGRESS)
-- [ ] Re-run `bun run check` at root
-- [ ] Verify `git status` clean at root and all submodules
-- [ ] Confirm all SPEC.md/PLAN.md statuses are in_progress or done
-- [ ] Report completion summary
+### 2.4 Platform/Integration MCP Servers (5 skills)
+- [ ] github — GitHub API, PRs, issues, repos, code search
+- [ ] fetch — web content extraction, HTTP requests
+- [ ] smithery — MCP toolbox registry, tool discovery
+- [ ] honcho — MCP gateway, session management (✅ DONE)
+- [ ] mindstudio — MindStudio CLI, project management
+
+### 2.5 Testing/Quality/Other MCP Servers (4 skills)
+- [ ] python-quality — ruff linting + pyright type checking
+- [ ] docs — documentation generation/management
+- [ ] pytest — Python test execution
+- [ ] django — Django ORM, settings, migrations
+- [ ] neon — PostgreSQL cloud database (Neon)
+- [ ] sentry — error tracking, issue management
+
+## Phase 3: Profile Identity Sync
+
+### 3.1 Audit profiles
+- [ ] Check each of 7 profiles for SOUL.md, USER.md, MEMORY.md
+- [ ] Identify missing/incomplete files
+
+### 3.2 Create/complete profile files
+- [ ] Create SOUL.md/USER.md/MEMORY.md for any missing
+- [ ] Complete any stubs
+
+### 3.3 Profile sync scripts
+- [ ] Create scripts/profile-audit.py — audit all profiles
+- [ ] Create scripts/profile-sync.py — sync common content
+
+## Phase 4: Reference Triage
+
+### 4.1 Categorize instruction files
+- [ ] Group 189 ~/Desktop/instructions/*.instructions.md by domain
+- [ ] Group 407 ~/Desktop/SandBox/**/*.instructions.md by domain
+- [ ] Map instruction files to MCP servers where relevant
+
+### 4.2 Create reference catalog
+- [ ] Create docs/mcp-server-reference-catalog.md
+
+## Phase 5: Tools, Hooks, Quick Commands
+
+### 5.1 MCP Management Tool
+- [x] hermes-mcp-manager.py: list, test, install, skills commands ✅ DONE
+- [ ] Fix any bugs in the tool
+
+### 5.2 Health Check Hook
+- [x] mcp-health-check.sh created ✅ DONE
+- [ ] Fix bash syntax error in case statement
+- [ ] Register in config.yaml hooks section
+
+### 5.3 Quick Commands
+- [ ] config.yaml: add mcp:list, mcp:test, mcp:install, mcp:skills
+
+## Phase 6: Git Operations
+
+### 6.1 Root
+- [ ] git add, commit, push
+
+### 6.2 Subrepos
+- [ ] For each affected subrepo: git add, commit, push
 
 ## Acceptance
-- [x] Root SPEC.md v3: status in_progress, all requirements listed (R1-R12)
-- [x] Root PLAN.md v3: status in_progress, all phases actionable
-- [x] All 18 repos have bunfig.toml with best practices (20/20 TOML valid)
-- [x] Hermes config: 0 npx commands, all 25 MCP servers enabled
-- [x] Git add/commit/push succeeds at root with zero errors
-- [x] Git add/commit/push succeeds in every submodule with zero errors
-- [x] `bun run check` at root passes or failures are documented
-- [x] `hermes mcp list` shows all 25 servers enabled and healthy
-
-## Risks
-- Hermes config.yaml is outside the repo — changes won't be committed (intentional, it's a user config)
-- Some subrepo bunfig.toml files are minimal (Python-only repos)
-- Root push may hit GitHub secret-scanning on pre-existing commits
+- All bunx packages installed and working
+- 23 SKILL.md files with complete content
+- All 7 profiles complete
+- Reference catalog created
+- Tools/hooks/quick-commands working
+- Git clean + pushed
