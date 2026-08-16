@@ -10,33 +10,41 @@ import { OpenRouterClient } from "./client";
  * @returns Promise resolving to a ChatCompletion response
  */
 export interface SendChatOptions {
-  httpReferer?: string;
-  appTitle?: string;
-  stream?: boolean;
-  max_tokens?: number;
-  temperature?: number;
+	httpReferer?: string;
+	appTitle?: string;
+	stream?: boolean;
+	max_tokens?: number;
+	temperature?: number;
 }
 
 export async function sendChat(
-  apiKey: string,
-  model: string,
-  messages: import("./types").Message[],
-  options?: SendChatOptions
+	apiKey: string,
+	model: string,
+	messages: import("./types").Message[],
+	options?: SendChatOptions,
 ): Promise<import("./types").ChatCompletion> {
-  const client = new OpenRouterClient({
-    apiKey,
-    httpReferer: options?.httpReferer,
-    appTitle: options?.appTitle,
-  });
+	const client = new OpenRouterClient({
+		apiKey,
+		httpReferer: options?.httpReferer,
+		appTitle: options?.appTitle,
+	});
 
-  return client.chatSend({
-    model,
-    messages,
-    stream: options?.stream ?? false,
-    max_tokens: options?.max_tokens,
-    temperature: options?.temperature,
-  });
+	return client.chatSend({
+		model,
+		messages,
+		stream: options?.stream ?? false,
+		max_tokens: options?.max_tokens,
+		temperature: options?.temperature,
+	});
 }
 
 export { OpenRouterClient } from "./client";
-export type { ChatCompletion, Message, ModelChoice, OpenRouterClientConfig, SendChatOptions, ToolCall, Usage } from "./types";
+export type {
+	ChatCompletion,
+	Message,
+	ModelChoice,
+	OpenRouterClientConfig,
+	SendChatOptions,
+	ToolCall,
+	Usage,
+} from "./types";

@@ -1,19 +1,19 @@
 {
-  "name": "openrouter-client",
-  "version": "1.0.0",
-  "description": "TypeScript client wrapper for OpenRouter's chat completions API using @openrouter/sdk",
-  "license": "MIT",
-  "author": "Hermes Agent",
-  "type": "module",
-  "scripts": {
-    "test": "bun test",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@openrouter/sdk": "^1.0.0"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.0.0",
-    "typescript": "^5.0.0"
-  }
+	"name": "openrouter-client",
+	"version": "1.0.0",
+	"description": "TypeScript client wrapper for OpenRouter's chat completions API using @openrouter/sdk",
+	"license": "MIT",
+	"author": "Hermes Agent",
+	"type": "module",
+	"scripts": {
+		"test": "bun test",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@openrouter/sdk": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.0.0",
+		"typescript": "^5.0.0"
+	}
 }
