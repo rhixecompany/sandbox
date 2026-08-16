@@ -1,0 +1,13 @@
+# mcp-servers — Bun configuration
+# Multi-language MCP server implementations (TS, Python, Go, Rust, etc.)
+
+[build]
+loader = false
+
+[test]
+coverage = true
+
+[install]
+optional = true
+dev = true
+peer = true
