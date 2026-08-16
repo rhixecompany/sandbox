@@ -40,8 +40,8 @@ tskey-auth-kPxKD…cDXi
 
 ### 5. Pairs (access key id + secret)
 ```
-LTAI_PLACEHOLDER_16CHAR
-PLACEHOLDER_SECRET_30CHAR
+LTAI_SANITIZED
+SANITIZED_SECRET
 ```
 → `line:0` + `line:1`. In the field these were Alibaba `_ID` / `_SECRET`.
 
