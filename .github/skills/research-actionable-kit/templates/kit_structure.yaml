@@ -1,0 +1,49 @@
+# Standard Kit Structure Template
+# Use this as a scaffold when creating new actionable research kits
+
+kit_structure:
+  root_files:
+    - "<TOPIC>_MASTER.md"          # Main guide: rankings, strategy, synthesis
+    - "README.md"                   # 5-min quick start + directory map
+
+  directories:
+    templates:
+      description: "Copy-and-use starter files (planners, trackers, checklists)"
+      files:
+        - "<routine>_planner.md"     # Printable daily/weekly routine with tick boxes
+        - "<daily>_tracker.csv"      # Importable log for Sheets/Excel
+        - "<onboarding>_checklist.md" # Priority-ordered setup with verification
+
+    trackers:
+      description: "Ongoing monitoring and compliance"
+      files:
+        - "tax_<topic>.md"           # Tax/compliance records for jurisdiction
+        - "monthly_summary.csv"      # Month-end rollup template
+        - "<specific>_log.md"        # Domain-specific logs (bank switches, etc.)
+
+    references:
+      description: "Supporting knowledge, links, warnings"
+      files:
+        - "platform_links.md"        # Direct signup URLs, dashboard bookmarks
+        - "<regulatory>_guidance.md" # Legal/tax rules in plain language
+        - "scam_warnings.md"         # Red flags, verification, avoid list
+
+    scripts:
+      description: "Statically re-runnable verification/generation tools"
+      files:
+        - "verify_kit.py"            # Validates kit completeness
+        - "generate_readme.py"       # Auto-generates README from manifest
+
+naming_conventions:
+  - Use UPPER_SNAKE_CASE for main guide
+  - Use lowercase-with-dashes for template/tracker/reference files
+  - Prefix trackers with domain (tax_, bank_, monthly_)
+  - Suffix references with _links, _guidance, _warnings
+
+required_sections_in_master:
+  - executive_summary_table
+  - tiered_detailed_breakdown
+  - real_user_data_with_sources
+  - strategy_by_user_level
+  - tax_legal_reality_check
+  - confidence_assessment

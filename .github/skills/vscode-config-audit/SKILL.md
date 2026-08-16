@@ -1,0 +1,140 @@
+---
+author: Hermes Agent
+description: Audit and fix VS Code workspace configurations (.vscode/settings.json, launch.json, tasks.json, extensions.json) for ESLint mismatches, hardcoded paths, missing extensions, and stack mismatches. Generates corrected configs and audit reports.
+category: devops
+license: MIT
+metadata:
+  hermes:
+    related_skills:
+    - vscode-workspace-configurator
+    - vscode-ext-commands
+    tags:
+    - vscode
+    - audit
+    - configuration
+    - eslint
+    - workspace
+name: vscode-config-audit
+tags:
+- vscode
+- audit
+- configuration
+- eslint
+- workspace
+- ide
+title: VS Code Config Audit
+version: 1.0.0
+---
+# VS Code Config Audit
+
+## Overview
+
+Audit VS Code workspace configurations for common issues: ESLint code actions without extension, hardcoded absolute paths, missing recommended extensions, formatter conflicts, and tech stack mismatches.
+
+## When to Use
+
+- Onboarding new projects
+- CI/CD workspace validation
+- Debugging IDE integration issues
+- Periodic workspace hygiene
+
+## When NOT to Use
+
+- For generating configs from scratch (use `vscode-workspace-configurator`)
+- For extension management (use `vscode-ext-commands`)
+
+## Audit Categories
+
+| Category | Checks |
+|----------|--------|
+| **ESLint** | Code actions without `dbaeumer.vscode-eslint` extension |
+| **Paths** | Hardcoded `C:\Users\...`, `/home/...`, `$HOME` without expansion |
+| **Extensions** | Missing recommended extensions for detected stack |
+| **Formatters** | Multiple formatters for same language, missing format-on-save |
+| **Tasks** | Shell commands with hardcoded paths, missing problem matchers |
+| **Launch** | Debug configs with absolute paths, missing env vars |
+
+## Workflow
+
+### Phase 1: Run Audit
+
+```bash
+python $LOCALAPPDATA/hermes/scripts/audit_vscode_config.py \
+  --workspace . \
+  --output docs/vscode-audit-report.md
+```
+
+### Phase 2: Review & Fix
+
+```bash
+# Auto-fix common issues
+python $LOCALAPPDATA/hermes/scripts/audit_vscode_config.py \
+  --workspace . --fix --backup
+
+# Generate corrected configs
+python $LOCALAPPDATA/hermes/scripts/generate_vscode_configs.py \
+  --workspace . --output .vscode/
+```
+
+### Phase 3: Verify
+
+```bash
+# Re-audit
+python $LOCALAPPDATA/hermes/scripts/audit_vscode_config.py --workspace .
+```
+
+## Script Reference
+
+**Location:** `~/AppData/Local/hermes/scripts/`
+
+| Script | Purpose |
+|--------|---------|
+| `audit_vscode_config.py` | Core audit engine |
+| `generate_vscode_configs.py` | Generate corrected configs |
+| `validate_vscode_json.py` | JSON syntax + schema validation |
+| `validate_vscode_configs.py` | Full config validation |
+
+## Report Output
+
+- **Markdown:** Human-readable with issue table, file list, fix suggestions
+- **JSON:** Machine-readable for CI/CD
+- **Summary:** Issue counts by category/severity
+
+## Common Fixes
+
+| Issue | Auto-fix | Manual Fix |
+|-------|----------|------------|
+| ESLint action no extension | ✓ Add `dbaeumer.vscode-eslint` | |
+| Hardcoded Windows path | ✓ Replace with `${workspaceFolder}` | |
+| Missing format-on-save | ✓ Add `editor.formatOnSave: true` | |
+| Missing recommended extensions | ✓ Add to `extensions.json` | |
+| Multiple formatters | | Keep one primary |
+
+
+## Pitfalls
+
+- **None identified yet** — Review edge cases and failure modes for this skill's domain.
+- **Assumptions** — Verify platform compatibility (Windows/Mac/Linux) before relying on default paths.
+- **State management** — Terminal state persists across calls; exported vars and working directory carry forward.
+- **Error handling** — Always validate tool output before proceeding to the next step.
+
+## Related Skills
+
+- `vscode-workspace-configurator` — Generate configs from scratch
+- `vscode-ext-commands` — Manage extensions
+
+## Verification Checklist
+
+- [ ] Prerequisites and environment are properly configured
+- [ ] VS Code Config Audit operations completed successfully
+- [ ] Output meets expected quality and requirements
+- [ ] Any errors during execution were resolved
+- [ ] Changes are documented and committed if applicable
+
+## Best Practices
+
+1. **Prepare before executing**: Ensure all prerequisites and dependencies are in place
+2. **Validate inputs**: Check configuration, parameters, and environment before running
+3. **Handle errors gracefully**: Implement proper error handling and recovery
+4. **Document results**: Keep records of what was done, what worked, and what didn't
+5. **Clean up**: Remove temporary files, release resources after completion

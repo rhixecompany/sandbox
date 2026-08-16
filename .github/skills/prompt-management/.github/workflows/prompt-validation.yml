@@ -1,0 +1,84 @@
+name: Prompt Validation CI
+
+on:
+  push:
+    paths:
+      - 'prompts/**'
+      - 'scripts/**'
+      - 'profiles/**'
+      - '.github/workflows/prompt-validation.yml'
+  pull_request:
+    paths:
+      - 'prompts/**'
+      - 'scripts/**'
+      - 'profiles/**'
+      - '.github/workflows/prompt-validation.yml'
+
+jobs:
+  validate-prompts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 'latest'
+
+      - name: Install validation dependencies
+        run: |
+          pip install pyyaml pytest
+          # Add any other linters here
+
+      - name: Validate prompt front‑matter
+        run: |
+          python scripts/validate_prompt_frontmatter.py
+
+      - name: Lint Python scripts
+        run: |
+          find scripts -name "*.py" -exec python -m py_compile {} \;
+
+      - name: Lint TypeScript scripts
+        run: |
+          find scripts -name "*.ts" -exec bunx tsc --noEmit {} \;
+
+      - name: Run prompt lint (skill-judge)
+        run: |
+          # skill-judge can be invoked as a CLI if available
+          # hermes skill judge prompt-management --strict
+          echo "Running skill-judge for prompt-management skill..."
+          # Placeholder - actual command depends on hermes CLI availability in CI
+
+      - name: Dry‑run prompt execution (smoke test)
+        run: |
+          python scripts/dry_run_prompts.py
+
+      - name: Generate changelog entry
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          python scripts/generate_prompt_changelog.py
+
+  sync-prompt-library:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync external prompt library
+        run: |
+          python scripts/sync_prompt_library.py
+        env:
+          PROMPT_LIBRARY_URL: ${{ secrets.PROMPT_LIBRARY_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
