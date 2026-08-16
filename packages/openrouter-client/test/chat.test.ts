@@ -1,40 +1,6 @@
-"""Tests for openrouter-client (TypeScript package)."""
+// Tests for openrouter-client (TypeScript package).
 
-import { sendChat, OpenRouterClient, type ChatCompletion, type Message } from "../src/index";
-
-// Mock the @openrouter/sdk module
-const mockSdkModule = {
-  OpenRouterClient: class {
-    constructor(private apiKey: string) {}
-    async chatSend(params: any) {
-      return {
-        id: "test-completion-id",
-        object: "chat.completion",
-        created: Math.floor(Date.now() / 1000),
-        model: params.model,
-        choices: [
-          {
-            index: 0,
-            message: {
-              role: "assistant",
-              content: "Hello from the mocked OpenRouter API!",
-            },
-            finish_reason: "stop",
-          },
-        ],
-        usage: {
-          prompt_tokens: 10,
-          completion_tokens: 8,
-          total_tokens: 18,
-        },
-      };
-    }
-  },
-};
-
-// Mock import
-import { mock } from "bun";
-// Note: bun.test supports module mocking via mock.module()
+import { sendChat, OpenRouterClient, type Message } from "../src/index";
 
 describe("openrouter-client", () => {
   describe("sendChat", () => {

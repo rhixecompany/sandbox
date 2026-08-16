@@ -1,12 +1,11 @@
-node_modules
-hermes-profiles
-projects
-.next
-dist
-build
-coverage
-*.lock
-*.min.js
-docs/reports
-.github/prompts
-.pytest_cache
+# Prettier ignore — only format project code, not the entire workspace
+# Root workspace files we want to check
+!packages/openrouter-client/**
+!packages/openrouter-client/**
+# Everything else is ignored by default
+.github/**
+.hermes/**
+.vscode/**
+.copilot/**
+projects/**
+docs/**

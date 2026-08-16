@@ -1,30 +1,55 @@
-# Hermes Hooks (Workspace)
+# GitHub Hooks Reference
 
-Shared hooks live in `~/AppData/Local/hermes/hooks/`; the workspace copy under
-`.github/hooks/` is the synced source (see `session-logger`, `session-auto-commit`,
-`governance-audit`).
+This directory contains **reference copies** of active Hermes hooks.
+These are for Copilot/VS Code consumption only — **never overwrite
+active Hermes hooks from this directory**.
 
-## Repo-init hook (optional, post-clone)
+## Sync Direction
 
-When a repo is opened for the first time, initialize it for all installed AI
-agents so every agent sees its context files immediately.
+Hermes `~/AppData/Local/hermes/hooks/` → `.github/hooks/` (one-way, reference copy)
 
-**Hook type:** `on_session_start` (or wire into your clone script).
+## Active Hermes Hooks
 
-**Action:** run the repo-init scaffold if the repo has no `AGENTS.md`:
+| Hook | Trigger | Reference File |
+|---|---|---|
+| session-logger | on_session_start, on_session_end, pre_llm_call | `session-logger/hook.sh` + `01-session-logger-hook.sh` |
+| governance-audit | on_session_start, on_session_end, pre_llm_call | `governance-audit/hook.sh` + `02-governance-audit-hook.sh` |
+| session-auto-commit | on_session_end | `session-auto-commit/hook.sh` + `03-session-auto-commit-hook.sh` |
 
-```bash
-cd <repo>
-if [ ! -f AGENTS.md ]; then
-  MSYS_NO_PATHCONV=1 python scripts/repo-init.py --init .
-fi
+## Standalone Hook Scripts
+
+| Script | Purpose | Reference File |
+|---|---|---|
+| pre-exec-validate.sh | Pre-execution validation | `pre-exec-validate.sh` + `04-pre-exec-validate.sh` |
+| post-exec-state-log.py | Post-execution state logging | `post-exec-state-log.py` + `05-post-exec-state-log.py` |
+
+## Cross-Platform Quick Commands Reference
+
+See `docs/quick-commands-reference.md` for the full cross-platform quick commands documentation.
+
+## Active Hook Locations (canonical)
+
+- Session logger: `~/AppData/Local/hermes/hooks/session-logger/`
+- Governance audit: `~/AppData/Local/hermes/hooks/governance-audit/`
+- Session auto-commit: `~/AppData/Local/hermes/hooks/session-auto-commit/`
+- Pre-exec validate: `~/AppData/Local/hermes/hooks/pre-exec-validate.sh`
+- Post-exec state log: `~/AppData/Local/hermes/hooks/post-exec-state-log.py`
+
+## Configuration
+
+Active hooks are wired in Hermes `config.yaml` under `hooks:`:
+
+```yaml
+hooks:
+  on_session_end:
+    - session-logger/hook.sh
+    - session-auto-commit/hook.sh
+    - governance-audit/hook.sh
+  on_session_start:
+    - session-logger/hook.sh
+    - governance-audit/hook.sh
+  pre_llm_call:
+    - session-logger/hook.sh
+    - governance-audit/hook.sh
+    - mcp_preflight_check.py (inline)
 ```
-
-**Source of truth:** `scripts/repo-init.py` in the workspace; skill
-`repo-init`; prompt `repo-init.prompt.md`. The script is idempotent — it never
-overwrites existing `AGENTS.md`, `CLAUDE.md`, or `.github/agents/` content, so
-it is safe to run on any repo at any time.
-
-**Pitfall:** the script writes only 3 generic files (AGENTS.md,
-docs/ai-agents-inventory.md, .github/agents/README.md). It does not create
-per-profile Hermes context or copy secrets — do not add those to a hook.
