@@ -1,4 +1,4 @@
-import { OpenRouterClient } from "./client";
+import { sendChat } from "./client";
 
 export interface OpenRouterClientConfig {
   apiKey: string;
@@ -87,7 +87,7 @@ export class OpenRouterClient {
     });
 
     // Map SDK response to our ChatCompletion type
-    const choices = response.choices.map((c: any) => ({
+    const choices = response.choices.map((c) => ({
       index: c.index,
       message: c.message as Message,
       logprobs: c.logprobs,

@@ -1,30 +1,43 @@
 {
 	"inputs": [
 		{
-			"default": "${workspaceFolder}",
-			"description": "Workspace root path",
 			"id": "workspaceFolder",
-			"type": "promptString"
+			"type": "promptString",
+			"description": "Workspace root path",
+			"default": "${workspaceFolder}"
 		}
 	],
 	"servers": {
 		"ast-grep": {
-			"args": ["-y", "@notprolands/ast-grep-mcp"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			],
+			"type": "stdio"
 		},
 		"code-sandbox": {
-			"args": ["-y", "node-code-sandbox-mcp"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			],
+			"type": "stdio"
 		},
 		"context7": {
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
 		},
 		"fetch": {
-			"args": ["-y", "mcp-server-fetch-typescript"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			],
+			"type": "stdio"
 		},
 		"filesystem": {
+			"command": "bunx",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-filesystem",
@@ -32,38 +45,61 @@
 				"C:/Users/Alexa/AppData/Local/hermes",
 				"${workspaceFolder}"
 			],
-			"command": "npx"
+			"type": "stdio"
 		},
 		"github": {
-			"args": ["-y", "@modelcontextprotocol/server-github"],
-			"command": "npx",
+			"command": "bunx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
+			"type": "stdio",
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
 			}
 		},
 		"mcp-docker": {
-			"args": ["mcp", "gateway", "run", "--profile", "adminbot"],
-			"command": "docker"
+			"command": "docker",
+			"args": [
+				"mcp",
+				"gateway",
+				"run",
+				"--profile",
+				"adminbot"
+			],
+			"type": "stdio"
 		},
 		"memory": {
-			"args": ["-y", "@modelcontextprotocol/server-memory"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			],
+			"type": "stdio"
 		},
 		"neon": {
 			"type": "http",
 			"url": "https://mcp.neon.tech/mcp"
 		},
 		"playwright": {
-			"args": ["-y", "@playwright/mcp@0.0.78"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"@playwright/mcp@0.0.78"
+			],
+			"type": "stdio"
 		},
 		"sentry": {
 			"type": "http",
 			"url": "https://mcp.sentry.dev/mcp"
 		},
 		"sequential-thinking": {
-			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-			"command": "npx"
+			"command": "bunx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			],
+			"type": "stdio"
 		},
 		"smithery": {
 			"type": "http",
@@ -72,6 +108,84 @@
 		"tavily": {
 			"type": "http",
 			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
+		},
+		"honcho": {
+			"type": "http",
+			"url": "https://mcp.honcho.dev/"
+		},
+		"mindstudio": {
+			"command": "C:\\\\Users\\\\Alexa\\\\.mindstudio\\\\bin\\\\mindstudio.exe",
+			"args": [
+				"mcp"
+			],
+			"type": "stdio"
+		},
+		"python-quality": {
+			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
+			"args": [
+				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\python_quality_mcp_server.py"
+			],
+			"type": "stdio"
+		},
+		"tooling-lint": {
+			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
+			"args": [
+				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_lint_mcp_server.py"
+			],
+			"type": "stdio"
+		},
+		"tooling-config": {
+			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
+			"args": [
+				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_config_mcp_server.py"
+			],
+			"type": "stdio"
+		},
+		"parallel-search": {
+			"type": "http",
+			"url": "https://search.parallel.ai/mcp"
+		},
+		"parallel-task": {
+			"type": "http",
+			"url": "https://task-mcp.parallel.ai/mcp"
+		},
+		"django": {
+			"command": "bunx",
+			"args": [
+				"-y",
+				"django-mcp"
+			],
+			"type": "stdio",
+			"env": {
+				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
+			}
+		},
+		"docs": {
+			"command": "bunx",
+			"args": [
+				"-y",
+				"docs-mcp",
+				"docs/"
+			],
+			"type": "stdio"
+		},
+		"postgres": {
+			"command": "bunx",
+			"args": [
+				"-y",
+				"postgres-mcp"
+			],
+			"type": "stdio",
+			"env": {
+				"DATABASE_URL": "${env:DATABASE_URL}"
+			}
+		},
+		"pytest": {
+			"command": "uvx",
+			"args": [
+				"pytest-mcp"
+			],
+			"type": "stdio"
 		}
 	}
 }

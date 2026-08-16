@@ -17,6 +17,7 @@ export default tseslint.config(
 			".vscode/**",
 			"*.min.js",
 			".pytest_cache/**",
+			".github/skills/**",
 		],
 	},
 	js.configs.recommended,

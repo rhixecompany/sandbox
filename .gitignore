@@ -74,3 +74,6 @@ docs/.vscode/
 .copilot/
 # Hermes profile mirror (local artifact, do not commit)
 hermes-profiles/
+
+# Auth result files (contain tokens — do not commit)
+.hermes/plans/results/
