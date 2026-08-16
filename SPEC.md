@@ -15,10 +15,10 @@ requirements:
   - R6: All PLAN.md files have phases and acceptance criteria (verified)
   - R7: Git add/commit/push succeeds on root and all subrepos with no errors (done)
   - R8: Toolings (lint, format, typecheck, markdownlint, spellcheck) pass or findings are triaged (verified)
-  - R9: All 25 MCP servers are installed in Hermes config with correct command (bunx, not npx)
-  - R10: All 18 repos have a valid bunfig.toml following best practices
-  - R11: Hermes config.yaml has npx replaced with bunx for all stdio MCP servers
-  - R12: All disabled MCP servers (docs, postgres, pytest, django) are enabled in Hermes config
+  - R9: All 25 MCP servers are installed in Hermes config with correct command (bunx, not npx) — DONE
+  - R10: All 18 repos have a valid bunfig.toml following best practices — DONE
+  - R11: Hermes config.yaml has npx replaced with bunx for all stdio MCP servers — DONE (0 remaining)
+  - R12: All disabled MCP servers (docs, postgres, pytest, django) are enabled in Hermes config — DONE
 acceptance_criteria:
   - AC1: Root package.json has "packageManager": "bun@1.3.14" (verified)
   - AC2: All subrepos with package.json have "packageManager": "bun@<version>" (verified)
@@ -28,10 +28,10 @@ acceptance_criteria:
   - AC6: Git operations succeed with zero errors across all repos (done)
   - AC7: bun run check passes at root (or failing items are documented as REPORT debt) (verified)
   - AC8: Subrepo-level checks pass where tooling exists (verified)
-  - AC9: Hermes mcp list shows all 25 servers installed with correct bunx commands
-  - AC10: All 18 repos have bunfig.toml with [install] section (optional=true, dev=true, peer=true)
-  - AC11: Hermes config.yaml has 0 remaining npx commands for MCP servers
-  - AC12: docs, postgres, pytest, django MCP servers are enabled in Hermes config
+  - AC9: Hermes mcp list shows all 25 servers installed with correct bunx commands — VERIFIED
+  - AC10: All 18 repos have bunfig.toml with [install] section (optional=true, dev=true, peer=true) — VERIFIED
+  - AC11: Hermes config.yaml has 0 remaining npx commands for MCP servers — VERIFIED
+  - AC12: docs, postgres, pytest, django MCP servers are enabled in Hermes config — VERIFIED
 ---
 
 # SandBox-root — Spec (v3)
@@ -102,8 +102,8 @@ Every repo must have a `bunfig.toml` with:
 
 ### R8: Hermes config fix
 `C:\Users\Alexa\AppData\Local\hermes\config.yaml`:
-- All `npx` commands for stdio MCP servers replaced with `bunx`
-- All 4 disabled MCP servers (docs, postgres, pytest, django) enabled
+- All `npx` commands for stdio MCP servers replaced with `bunx` — **DONE (0 remaining)**
+- All 4 disabled MCP servers (docs, postgres, pytest, django) enabled — **DONE**
 
 ## Out of Scope
 - Subrepo internal code changes beyond config files
