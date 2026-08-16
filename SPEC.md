@@ -1,111 +1,103 @@
 ---
 name: SandBox-root
-title: "SandBox-root — Spec"
-description: "Spec for SandBox-root — AI-ready Bun monorepo: MCP server sync, bunfig.toml, SPEC/PLAN for all repos"
-version: 3.0.0
+title: "SandBox-root — Spec: MCP Server Install & Skills Creation"
+description: "Spec for installing all 23 MCP servers globally via bunx, creating SKILL.md for each, syncing profiles, and integrating ~/Desktop/instructions/*.instructions.md references"
+version: 1.0.0
 status: in_progress
 created: 2026-08-16
-tags: [spec, repo, ai-ready, bun, mcp, bunfig]
+tags: [spec, mcp, skills, bunx, profiles, instructions, tools, hooks, quick-commands]
+
 requirements:
-  - R1: Root workspace uses Bun as package manager with bun.lock (verified)
-  - R2: All subrepos that have a package.json use Bun as packageManager (verified)
-  - R3: All subrepos without package.json get a Bun-based package.json added (done)
-  - R4: Each repo (root + subrepos) has a SPEC.md and PLAN.md with status in_progress (verified)
-  - R5: All SPEC.md files have requirements and acceptance_criteria sections (verified)
-  - R6: All PLAN.md files have phases and acceptance criteria (verified)
-  - R7: Git add/commit/push succeeds on root and all subrepos with no errors (done)
-  - R8: Toolings (lint, format, typecheck, markdownlint, spellcheck) pass or findings are triaged (verified)
-  - R9: All 25 MCP servers are installed in Hermes config with correct command (bunx, not npx) — DONE
-  - R10: All 18 repos have a valid bunfig.toml following best practices — DONE
-  - R11: Hermes config.yaml has npx replaced with bunx for all stdio MCP servers — DONE (0 remaining)
-  - R12: All disabled MCP servers (docs, postgres, pytest, django) are enabled in Hermes config — DONE
+  - R1: All 23 MCP servers are installed globally and resolvable via bunx without errors
+  - R2: Each MCP server has a SKILL.md in .github/skills/<server>/ with proper frontmatter, description, workflows, gotchas, references
+  - R3: Skills follow best practices from agent-skills.instructions.md, agent-safety.instructions.md, context7.instructions.md
+  - R4: All 7 profiles have complete SOUL.md, USER.md, MEMORY.md
+  - R5: Profile sync scripts created and tested in scripts/
+  - R6: MCP management tool (hermes-mcp-manager.py) works: list, test, install, skills
+  - R7: MCP health check hook (mcp-health-check.sh) works and registered in config
+  - R8: Quick commands for MCP management added to config.yaml
+  - R9: Reference triage complete: all 189 + 407 instruction files categorized by domain
+  - R10: All changes committed to root + subrepos with zero git errors
+
 acceptance_criteria:
-  - AC1: Root package.json has "packageManager": "bun@1.3.14" (verified)
-  - AC2: All subrepos with package.json have "packageManager": "bun@<version>" (verified)
-  - AC3: All subrepos without package.json have one added with Bun as manager (done)
-  - AC4: SPEC.md exists and is valid (status != not_started) for root + each subrepo (verified)
-  - AC5: PLAN.md exists and is valid (status != not_started) for root + each subrepo (verified)
-  - AC6: Git operations succeed with zero errors across all repos (done)
-  - AC7: bun run check passes at root (or failing items are documented as REPORT debt) (verified)
-  - AC8: Subrepo-level checks pass where tooling exists (verified)
-  - AC9: Hermes mcp list shows all 25 servers installed with correct bunx commands — VERIFIED
-  - AC10: All 18 repos have bunfig.toml with [install] section (optional=true, dev=true, peer=true) — VERIFIED
-  - AC11: Hermes config.yaml has 0 remaining npx commands for MCP servers — VERIFIED
-  - AC12: docs, postgres, pytest, django MCP servers are enabled in Hermes config — VERIFIED
+  - AC1: `bunx -y <package>` succeeds for all installable npm packages
+  - AC2: 23 SKILL.md files exist with YAML frontmatter, description (WHAT/WHEN/KEYWORDS), workflows, gotchas
+  - AC3: Skills reference agent-skills, agent-safety, context7, context-engineering, code-review instructions
+  - AC4: All 7 profiles have SOUL.md, USER.md, MEMORY.md — full content
+  - AC5: Profile audit script runs, reports status for all profiles
+  - AC6: `python scripts/hermes-mcp-manager.py list` shows all 23 servers
+  - AC7: `bash hooks/mcp-health-check.sh` runs without errors
+  - AC8: config.yaml has mcp:list, mcp:test, mcp:install, mcp:skills quick commands
+  - AC9: Reference catalog created documenting instruction file categories
+  - AC10: Git status clean at root and all submodules after commit
 ---
 
-# SandBox-root — Spec (v3)
+# MCP Server Install + Skills — Spec
 
 ## Purpose
 
-Make the SandBox workspace and all its subrepos AI-ready by:
-1. Standardizing Bun as the package manager across root + all subrepos
-2. Syncing all 25 MCP servers into Hermes config (bunx, not npx)
-3. Creating bunfig.toml for every repo following best practices
-4. Creating/updating SPEC.md and PLAN.md for every repo
-5. Committing all changes with zero git errors
+Make all 23 Hermes MCP servers fully operational with global bunx dependencies, wrap each in a proper SKILL.md that exposes/uses/tests it, sync all profile identity files, and integrate the large reference library.
 
 ## Scope
 
-### Repos in scope
+### MCP Servers (23 total)
 
-| Repo | Path | PM | Has PKG | Has SPEC | Has PLAN | bunfig | Action |
-|------|------|----|---------|----------|----------|--------|--------|
-| SandBox-root | `.` | bun | yes | yes | yes | yes (new) | Update all |
-| Banking | `projects/Banking` | bun | yes | yes | yes | yes (updated) | Update bunfig |
-| Bash | `projects/Bash` | bun | yes | yes | yes | yes (updated) | Update bunfig |
-| comicwise | `projects/comicwise` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| cookiecutter-django-tailwind | `projects/cookiecutter-django-tailwind` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| Django-Scrapy-Selenium | `projects/Django-Scrapy-Selenium` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| docs | `projects/docs` | none | no | yes | yes | yes (new) | Created bunfig |
-| ecom | `projects/ecom` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| mcp-servers | `projects/mcp-servers` | none | no | yes | yes | yes (new) | Created bunfig |
-| mcp-server-typescript | `projects/mcp-server-typescript` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| profile | `projects/profile` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| Python-projects | `projects/Python-projects` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| Resume_maker | `projects/Resume_maker` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| rhixe_scans | `projects/rhixe_scans` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| rhixecompany-comics | `projects/rhixecompany-comics` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| selenium_webdriver | `projects/selenium_webdriver` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| university-libary-jsm | `projects/university-libary-jsm` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| xamehi.tv | `projects/xamehi.tv` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| xamehi | `projects/xamehi` | bun | yes | yes | yes | yes (new) | Created bunfig |
-| youtube-downloader | `projects/youtube-downloader` | bun | yes | yes | yes | yes (new) | Created bunfig |
+**npm/bunx-based (12):**
+1. ast-grep — @notprolands/ast-grep-mcp ✅
+2. code-sandbox — node-code-sandbox-mcp ⚠ (fails npx too — needs investigation)
+3. fetch — mcp-server-fetch-typescript ✅
+4. filesystem — @modelcontextprotocol/server-filesystem ⚠ (fails npx too)
+5. github — @modelcontextprotocol/server-github ✅
+6. memory — @modelcontextprotocol/server-memory ✅
+7. playwright — @playwright/mcp@0.0.78 ✅
+8. sequential-thinking — @modelcontextprotocol/server-sequential-thinking ✅
+9. django — @mamounalzyoud/django-mcp-server@2.0.0 (correct name)
+10. docs — @speakeasy-api/docs-mcp-core@0.17.1 (correct name)
+11. postgres — @yawlabs/postgres-mcp@0.10.0 (correct name)
+12. pytest — pytest-mcp-server@1.1.6 (correct name)
+
+**HTTP-based (8 — no npm install needed):**
+13. honcho — https://mcp.honcho.dev/
+14. neon — https://mcp.neon.tech/mcp
+15. context7 — https://mcp.context7.com/mcp
+16. sentry — https://mcp.sentry.dev/mcp
+17. tavily — https://mcp.tavily.com/mcp/
+18. parallel-search — https://search.parallel.ai/mcp
+19. parallel-task — https://task-mcp.parallel.ai/mcp
+20. smithery — https://mcp.smithery.ai/alexanderrhixe30
+
+**Binary/executable (3 — no npm install needed):**
+21. mcp-docker — docker mcp gateway
+22. mindstudio — .mindstudio/bin/mindstudio.exe mcp
+23. python-quality/tooling-lint/tooling-config — Python scripts
+
+### Reference Files
+- ~/Desktop/instructions/: 189 *.instructions.md
+- ~/Desktop/docs/: documentation dir
+- ~/Desktop/SandBox/**/*.instructions.md: 407 files
+
+### Profiles (7)
+default, alexa, code-architect, creative-director, exec-assistant, patient-tutor, research-analyst
 
 ## Requirements
 
-### R1: Bun standardization
-Every repo with a JavaScript/TypeScript component must declare `"packageManager": "bun@X.Y.Z"` in its package.json.
+### R1: Global bunx installation
+Install all npm packages globally. For packages not on npm under expected names, use correct names found via npm search.
 
-### R2: Spec completeness
-Every repo must have a SPEC.md with YAML frontmatter, Purpose, Requirements, Acceptance criteria.
+### R2: MCP Skills
+Each MCP server gets SKILL.md with agent-skills.instructions.md format.
 
-### R3: Plan completeness
-Every repo must have a PLAN.md with YAML frontmatter, Overview, Phases, Acceptance checklist.
+### R3: Best Practice Integration
+Skills incorporate agent-skills, agent-safety, context7, context-engineering, code-review guidance.
 
-### R4: Git hygiene
-All repos must be clean after changes — `git status` clean, `git push` succeeds.
+### R4: Profile Sync
+All 7 profiles have complete SOUL.md/USER.md/MEMORY.md.
 
-### R5: Tooling pass
-Where tooling exists, run and either pass or document as REPORT debt.
+### R5: Tools/Hooks/Quick Commands
+MCP management tool, health check hook, quick commands in config.yaml.
 
-### R6: MCP server sync
-All 25 MCP servers defined across `.mcp.json`, `.vscode/mcp.json`, `opencode.json`, `.codex/mcp.json`, `.copilot/mcp.json` must be installed in Hermes config with correct commands.
+### R6: Reference Triage
+Categorize all instruction files by domain.
 
-### R7: Bunfig best practices
-Every repo must have a `bunfig.toml` with:
-- `[install]` section: `optional = true`, `dev = true`, `peer = true`
-- `[test]` section: `coverage = true`
-- `[build]` section where applicable: `loader = false`
-- `smol = false` (performance over memory for dev)
-- `logLevel = "warn"` (not debug in committed config)
-
-### R8: Hermes config fix
-`C:\Users\Alexa\AppData\Local\hermes\config.yaml`:
-- All `npx` commands for stdio MCP servers replaced with `bunx` — **DONE (0 remaining)**
-- All 4 disabled MCP servers (docs, postgres, pytest, django) enabled — **DONE**
-
-## Out of Scope
-- Subrepo internal code changes beyond config files
-- Python-only subrepos: bunfig.toml is metadata only
-- Credential or secrets handling
+## Acceptance Criteria
+- AC1-10 as listed in frontmatter
