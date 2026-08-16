@@ -128,8 +128,8 @@
 			}
 		},
 		"pytest": {
-			"command": "uvx",
-			"args": ["pytest-mcp"],
+			"command": "bunx",
+			"args": ["-y", "pytest-mcp"],
 			"type": "stdio"
 		}
 	}

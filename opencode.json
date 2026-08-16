@@ -135,7 +135,7 @@
 		"MCP_MINDSTUDIO": {
 			"type": "stdio",
 			"enabled": true,
-			"command": "C:\\\\Users\\\\Alexa\\\\.mindstudio\\\\bin\\\\mindstudio.exe",
+			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
 			"args": ["mcp"],
 			"url": null,
 			"env": {}
@@ -143,24 +143,24 @@
 		"MCP_PYTHON-QUALITY": {
 			"type": "stdio",
 			"enabled": true,
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\python_quality_mcp_server.py"],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
 		"MCP_TOOLING-LINT": {
 			"type": "stdio",
 			"enabled": true,
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_lint_mcp_server.py"],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
 		"MCP_TOOLING-CONFIG": {
 			"type": "stdio",
 			"enabled": true,
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_config_mcp_server.py"],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
@@ -211,8 +211,8 @@
 		"MCP_PYTEST": {
 			"type": "local",
 			"enabled": true,
-			"command": "uvx",
-			"args": ["pytest-mcp"],
+			"command": "bunx",
+			"args": ["-y", "pytest-mcp"],
 			"url": null,
 			"env": {}
 		}

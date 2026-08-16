@@ -10,18 +10,12 @@
 	"servers": {
 		"ast-grep": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			],
+			"args": ["-y", "@notprolands/ast-grep-mcp"],
 			"type": "stdio"
 		},
 		"code-sandbox": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"node-code-sandbox-mcp"
-			],
+			"args": ["-y", "node-code-sandbox-mcp"],
 			"type": "stdio"
 		},
 		"context7": {
@@ -30,10 +24,7 @@
 		},
 		"fetch": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"mcp-server-fetch-typescript"
-			],
+			"args": ["-y", "mcp-server-fetch-typescript"],
 			"type": "stdio"
 		},
 		"filesystem": {
@@ -49,10 +40,7 @@
 		},
 		"github": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-github"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-github"],
 			"type": "stdio",
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
@@ -60,21 +48,12 @@
 		},
 		"mcp-docker": {
 			"command": "docker",
-			"args": [
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"adminbot"
-			],
+			"args": ["mcp", "gateway", "run", "--profile", "adminbot"],
 			"type": "stdio"
 		},
 		"memory": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-memory"],
 			"type": "stdio"
 		},
 		"neon": {
@@ -83,10 +62,7 @@
 		},
 		"playwright": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@playwright/mcp@0.0.78"
-			],
+			"args": ["-y", "@playwright/mcp@0.0.78"],
 			"type": "stdio"
 		},
 		"sentry": {
@@ -95,10 +71,7 @@
 		},
 		"sequential-thinking": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
 			"type": "stdio"
 		},
 		"smithery": {
@@ -114,31 +87,23 @@
 			"url": "https://mcp.honcho.dev/"
 		},
 		"mindstudio": {
-			"command": "C:\\\\Users\\\\Alexa\\\\.mindstudio\\\\bin\\\\mindstudio.exe",
-			"args": [
-				"mcp"
-			],
+			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
+			"args": ["mcp"],
 			"type": "stdio"
 		},
 		"python-quality": {
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\python_quality_mcp_server.py"
-			],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"],
 			"type": "stdio"
 		},
 		"tooling-lint": {
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_lint_mcp_server.py"
-			],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"],
 			"type": "stdio"
 		},
 		"tooling-config": {
-			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_config_mcp_server.py"
-			],
+			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"],
 			"type": "stdio"
 		},
 		"parallel-search": {
@@ -151,10 +116,7 @@
 		},
 		"django": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"django-mcp"
-			],
+			"args": ["-y", "django-mcp"],
 			"type": "stdio",
 			"env": {
 				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
@@ -162,29 +124,20 @@
 		},
 		"docs": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"docs-mcp",
-				"docs/"
-			],
+			"args": ["-y", "docs-mcp", "docs/"],
 			"type": "stdio"
 		},
 		"postgres": {
 			"command": "bunx",
-			"args": [
-				"-y",
-				"postgres-mcp"
-			],
+			"args": ["-y", "postgres-mcp"],
 			"type": "stdio",
 			"env": {
 				"DATABASE_URL": "${env:DATABASE_URL}"
 			}
 		},
 		"pytest": {
-			"command": "uvx",
-			"args": [
-				"pytest-mcp"
-			],
+			"command": "bunx",
+			"args": ["-y", "pytest-mcp"],
 			"type": "stdio"
 		}
 	}
