@@ -1,0 +1,25 @@
+# Bun workspace configuration
+# Best practices: deterministic lockfile, dev deps included, peer deps honored
+
+# Reduce memory usage at the cost of performance
+smol = false
+
+logLevel = "warn" # "debug" | "warn" | "error"
+
+[console]
+depth = 3
+
+[install]
+# Force bun to use a specific registry
+optional = true
+dev = true
+peer = true
+
+[test]
+# Coverage enabled for all test runs
+coverage = true
+
+[build]
+# Turboloader off in production for consistency
+# (set to true only when you need HMR in prod)
+# loader = false
