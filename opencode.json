@@ -2,18 +2,13 @@
 	"$schema": "https://opencode.ai/config.json",
 	"model": "opencode/deepseek-v4-flash-free",
 	"small_model": "opencode/deepseek-v4-flash-free",
-	"plugin": [
-		"oh-my-openagent@latest"
-	],
+	"plugin": ["oh-my-openagent@latest"],
 	"mcp": {
 		"MCP_AST-GREP": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			],
+			"args": ["-y", "@notprolands/ast-grep-mcp"],
 			"url": null,
 			"env": {}
 		},
@@ -21,10 +16,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"node-code-sandbox-mcp"
-			],
+			"args": ["-y", "node-code-sandbox-mcp"],
 			"url": null,
 			"env": {}
 		},
@@ -40,10 +32,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"mcp-server-fetch-typescript"
-			],
+			"args": ["-y", "mcp-server-fetch-typescript"],
 			"url": null,
 			"env": {}
 		},
@@ -65,10 +54,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-github"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-github"],
 			"url": null,
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
@@ -78,13 +64,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "docker",
-			"args": [
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"adminbot"
-			],
+			"args": ["mcp", "gateway", "run", "--profile", "adminbot"],
 			"url": null,
 			"env": {}
 		},
@@ -92,10 +72,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-memory"],
 			"url": null,
 			"env": {}
 		},
@@ -111,10 +88,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@playwright/mcp@0.0.78"
-			],
+			"args": ["-y", "@playwright/mcp@0.0.78"],
 			"url": null,
 			"env": {}
 		},
@@ -130,10 +104,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			],
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
 			"url": null,
 			"env": {}
 		},
@@ -165,9 +136,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\\\Users\\\\Alexa\\\\.mindstudio\\\\bin\\\\mindstudio.exe",
-			"args": [
-				"mcp"
-			],
+			"args": ["mcp"],
 			"url": null,
 			"env": {}
 		},
@@ -175,9 +144,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\python_quality_mcp_server.py"
-			],
+			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\python_quality_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
@@ -185,9 +152,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_lint_mcp_server.py"
-			],
+			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_lint_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
@@ -195,9 +160,7 @@
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Scripts\\\\python.exe",
-			"args": [
-				"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_config_mcp_server.py"
-			],
+			"args": ["C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\tooling_config_mcp_server.py"],
 			"url": null,
 			"env": {}
 		},
@@ -221,10 +184,7 @@
 			"type": "local",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"django-mcp"
-			],
+			"args": ["-y", "django-mcp"],
 			"url": null,
 			"env": {
 				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
@@ -234,11 +194,7 @@
 			"type": "local",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"docs-mcp",
-				"docs/"
-			],
+			"args": ["-y", "docs-mcp", "docs/"],
 			"url": null,
 			"env": {}
 		},
@@ -246,10 +202,7 @@
 			"type": "local",
 			"enabled": true,
 			"command": "bunx",
-			"args": [
-				"-y",
-				"postgres-mcp"
-			],
+			"args": ["-y", "postgres-mcp"],
 			"url": null,
 			"env": {
 				"DATABASE_URL": "${env:DATABASE_URL}"
@@ -259,9 +212,7 @@
 			"type": "local",
 			"enabled": true,
 			"command": "uvx",
-			"args": [
-				"pytest-mcp"
-			],
+			"args": ["pytest-mcp"],
 			"url": null,
 			"env": {}
 		}
