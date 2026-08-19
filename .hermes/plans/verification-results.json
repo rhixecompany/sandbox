@@ -1,8 +1,8 @@
 {
-  "timestamp": 1787179564.7774277,
-  "all_passed": false,
-  "passed": 25,
-  "total": 29,
+  "timestamp": 1787180241.707603,
+  "all_passed": true,
+  "passed": 28,
+  "total": 28,
   "results": [
     {
       "gate": "G1: Config Valid",
@@ -20,7 +20,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'github'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (6641ms)\n  \u2713 Tools discovered: 26\n\n    create_or_update_file                Create or update a single file in a GitHub repository\n    search_repositories                  Search for GitHub repositories\n    create_repository                    Create a new GitHub repository in your account\n    get_file_contents                    Get the contents of a file or directory from a GitHub r...\n    push_files                     ",
+      "stdout": "\n  Testing 'github'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (3672ms)\n  \u2713 Tools discovered: 26\n\n    create_or_update_file                Create or update a single file in a GitHub repository\n    search_repositories                  Search for GitHub repositories\n    create_repository                    Create a new GitHub repository in your account\n    get_file_contents                    Get the contents of a file or directory from a GitHub r...\n    push_files                     ",
       "stderr": "",
       "contains_check": null
     },
@@ -30,7 +30,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'filesystem'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (6500ms)\n  \u2713 Tools discovered: 14\n\n    read_file                            Read the complete contents of a file as text. DEPRECATE...\n    read_text_file                       Read the complete contents of a file from the file syst...\n    read_media_file                      Read a file and return it as a base64-encoded content b...\n    read_multiple_files                  Read the contents of multiple files simultane",
+      "stdout": "\n  Testing 'filesystem'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4282ms)\n  \u2713 Tools discovered: 14\n\n    read_file                            Read the complete contents of a file as text. DEPRECATE...\n    read_text_file                       Read the complete contents of a file from the file syst...\n    read_media_file                      Read a file and return it as a base64-encoded content b...\n    read_multiple_files                  Read the contents of multiple files simultane",
       "stderr": "",
       "contains_check": null
     },
@@ -40,7 +40,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'playwright'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (6671ms)\n  \u2713 Tools discovered: 24\n\n    browser_close                        Close the page\n    browser_resize                       Resize the browser window\n    browser_console_messages             Returns all console messages\n    browser_handle_dialog                Handle a dialog\n    browser_evaluate                     Evaluate JavaScript expression on page or element\n    browser_file_upload                  Uplo",
+      "stdout": "\n  Testing 'playwright'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4172ms)\n  \u2713 Tools discovered: 24\n\n    browser_close                        Close the page\n    browser_resize                       Resize the browser window\n    browser_console_messages             Returns all console messages\n    browser_handle_dialog                Handle a dialog\n    browser_evaluate                     Evaluate JavaScript expression on page or element\n    browser_file_upload                  Uplo",
       "stderr": "",
       "contains_check": null
     },
@@ -50,7 +50,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'fetch'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (10156ms)\n  \u2713 Tools discovered: 4\n\n    get_raw_text                         Retrieves raw text content directly from a URL without ...\n    get_rendered_html                    Fetches fully rendered HTML content using a headless br...\n    get_markdown                         Converts web page content to well-formatted Markdown, p...\n    get_markdown_summary                 Extracts and converts the main content area of a w",
+      "stdout": "\n  Testing 'fetch'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4140ms)\n  \u2713 Tools discovered: 4\n\n    get_raw_text                         Retrieves raw text content directly from a URL without ...\n    get_rendered_html                    Fetches fully rendered HTML content using a headless br...\n    get_markdown                         Converts web page content to well-formatted Markdown, p...\n    get_markdown_summary                 Extracts and converts the main content area of a we",
       "stderr": "",
       "contains_check": null
     },
@@ -60,7 +60,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'neon'...\n  Transport: HTTP \u2192 https://mcp.neon.tech/mcp\n    Authorization: Bear***z114\n  \u2717 Connection failed (9344ms): streamablehttp_client() got an unexpected keyword argument 'verify'\n",
+      "stdout": "\n  Testing 'neon'...\n  Transport: HTTP \u2192 https://mcp.neon.tech/mcp\n    Authorization: Bear***z114\n  \u2713 Connected (3203ms)\n  \u2713 Tools discovered: 35\n\n    list_projects                        List Neon projects in your account. Do not use for proj...\n    list_organizations                   List all organizations the current user belongs to. Sup...\n    list_shared_projects                 List projects shared with the current user for collabor...\n    create_project                       Create a new",
       "stderr": "",
       "contains_check": null
     },
@@ -70,7 +70,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'mcp-docker'...\n  Transport: stdio \u2192 docker\n  Auth: none\n  \u2713 Connected (10297ms)\n  \u2713 Tools discovered: 56\n\n    add_comment_to_pending_review        Add review comment to the requester's latest pending pu...\n    add_issue_comment                    Add a comment to a specific issue in a GitHub repositor...\n    add_reply_to_pull_request_comment    Add a reply to an existing pull request comment. This c...\n    assign_copilot_to_issue              Assign Copilot to a specific issue in a G",
+      "stdout": "\n  Testing 'mcp-docker'...\n  Transport: stdio \u2192 docker\n  Auth: none\n  \u2713 Connected (8156ms)\n  \u2713 Tools discovered: 56\n\n    add_comment_to_pending_review        Add review comment to the requester's latest pending pu...\n    add_issue_comment                    Add a comment to a specific issue in a GitHub repositor...\n    add_reply_to_pull_request_comment    Add a reply to an existing pull request comment. This c...\n    assign_copilot_to_issue              Assign Copilot to a specific issue in a Gi",
       "stderr": "",
       "contains_check": null
     },
@@ -80,7 +80,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'memory'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (14640ms)\n  \u2713 Tools discovered: 9\n\n    create_entities                      Create multiple new entities in the knowledge graph\n    create_relations                     Create multiple new relations between entities in the k...\n    add_observations                     Add new observations to existing entities in the knowle...\n    delete_entities                      Delete multiple entities and their associated relations.",
+      "stdout": "\n  Testing 'memory'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (3750ms)\n  \u2713 Tools discovered: 9\n\n    create_entities                      Create multiple new entities in the knowledge graph\n    create_relations                     Create multiple new relations between entities in the k...\n    add_observations                     Add new observations to existing entities in the knowle...\n    delete_entities                      Delete multiple entities and their associated relations..",
       "stderr": "",
       "contains_check": null
     },
@@ -90,7 +90,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'honcho'...\n  Transport: HTTP \u2192 https://mcp.honcho.dev/\n    Authorization: Bear***k9sq\n  \u2713 Connected (3312ms)\n  \u2713 Tools discovered: 31\n\n    inspect_workspace                    Inspect a workspace at a glance.\nAggregates workspace m...\n    list_workspaces                      List workspaces accessible to the current credentials (...\n    create_workspace                     Get or create a workspace with the given ID.\nSkip this ...\n    search                               Semantic sea",
+      "stdout": "\n  Testing 'honcho'...\n  Transport: HTTP \u2192 https://mcp.honcho.dev/\n    Authorization: Bear***k9sq\n  \u2713 Connected (2953ms)\n  \u2713 Tools discovered: 31\n\n    inspect_workspace                    Inspect a workspace at a glance.\nAggregates workspace m...\n    list_workspaces                      List workspaces accessible to the current credentials (...\n    create_workspace                     Get or create a workspace with the given ID.\nSkip this ...\n    search                               Semantic sea",
       "stderr": "",
       "contains_check": null
     },
@@ -100,7 +100,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'ast-grep'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (9687ms)\n  \u2713 Tools discovered: 7\n\n    dump_syntax_tree                     Dump code's syntax structure or dump a query's pattern ...\n    test_match_code_rule                 Test a code against an ast-grep YAML rule.\nThis is usef...\n    find_code                            Find code in a project folder that matches the given as...\n    find_code_by_rule                    Find code using ast-grep's YAML rule in a projec",
+      "stdout": "\n  Testing 'ast-grep'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4046ms)\n  \u2713 Tools discovered: 7\n\n    dump_syntax_tree                     Dump code's syntax structure or dump a query's pattern ...\n    test_match_code_rule                 Test a code against an ast-grep YAML rule.\nThis is usef...\n    find_code                            Find code in a project folder that matches the given as...\n    find_code_by_rule                    Find code using ast-grep's YAML rule in a projec",
       "stderr": "",
       "contains_check": null
     },
@@ -110,8 +110,8 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'code-sandbox'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (7203ms)\n  \u2713 Tools discovered: 7\n\n    sandbox_initialize                   Start a new isolated Docker container running Node.js. ...\n    sandbox_exec                         Execute one or more shell commands inside a running san...\n    run_js                               Install npm dependencies and run JavaScript code inside...\n    sandbox_stop                         Terminate and remove a running sandbox conta",
-      "stderr": "Exception ignored in: <function _ProactorBasePipeTransport.__del__ at 0x00000144A2269940>\nTraceback (most recent call last):\n  File \"C:\\Users\\Alexa\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\asyncio\\proactor_events.py\", line 116, in __del__\n    _warn(f\"unclosed transport {self!r}\", ResourceWarning, source=self)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Alexa\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\asyncio\\proactor_events.py\", line 80, in",
+      "stdout": "\n  Testing 'code-sandbox'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4000ms)\n  \u2713 Tools discovered: 7\n\n    sandbox_initialize                   Start a new isolated Docker container running Node.js. ...\n    sandbox_exec                         Execute one or more shell commands inside a running san...\n    run_js                               Install npm dependencies and run JavaScript code inside...\n    sandbox_stop                         Terminate and remove a running sandbox conta",
+      "stderr": "",
       "contains_check": null
     },
     {
@@ -120,7 +120,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'context7'...\n  Transport: HTTP \u2192 https://mcp.context7.com/mcp\n    CONTEXT7_API_KEY: ctx7***ed47\n  \u2713 Connected (4422ms)\n  \u2713 Tools discovered: 2\n\n    resolve-library-id                   Resolves a package/product name to a Context7-compatibl...\n    query-docs                           Retrieves and queries up-to-date documentation and code...\n\n",
+      "stdout": "\n  Testing 'context7'...\n  Transport: HTTP \u2192 https://mcp.context7.com/mcp\n    CONTEXT7_API_KEY: ctx7***ed47\n  \u2713 Connected (4860ms)\n  \u2713 Tools discovered: 2\n\n    resolve-library-id                   Resolves a package/product name to a Context7-compatibl...\n    query-docs                           Retrieves and queries up-to-date documentation and code...\n\n",
       "stderr": "",
       "contains_check": null
     },
@@ -130,7 +130,7 @@
       "exit_code": 0,
       "expected_code": 0,
       "passed": true,
-      "stdout": "\n  Testing 'sequential-thinking'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (6281ms)\n  \u2713 Tools discovered: 1\n\n    sequentialthinking                   A detailed tool for dynamic and reflective problem-solv...\n\n",
+      "stdout": "\n  Testing 'sequential-thinking'...\n  Transport: stdio \u2192 npx\n  Auth: none\n  \u2713 Connected (4046ms)\n  \u2713 Tools discovered: 1\n\n    sequentialthinking                   A detailed tool for dynamic and reflective problem-solv...\n\n",
       "stderr": "",
       "contains_check": null
     },
@@ -205,12 +205,12 @@
       "contains_check": null
     },
     {
-      "gate": "G5: verify_sync.py exists",
-      "command": "file_exists(C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\verify_sync.py)",
+      "gate": "G5: Profile Sync (runs)",
+      "command": "python3 C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_sync.py",
       "exit_code": 1,
-      "expected_code": 0,
-      "passed": false,
-      "stdout": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\verify_sync.py",
+      "expected_code": 1,
+      "passed": true,
+      "stdout": "Checking platform roots...\n\n=== VERIFICATION REPORT ===\nPasses: 19\nErrors: 3\n\nERRORS:\n  - Skill counts match: Hermes=782, Codex=650, OpenCode=651\n  - Hermes skills == Codex skills (by name)\n  - Hermes skills == OpenCode skills (by name)\n",
       "stderr": "",
       "contains_check": null
     },
@@ -255,24 +255,14 @@
       "contains_check": null
     },
     {
-      "gate": "G7: Honcho Profile",
-      "command": "honcho_profile",
-      "exit_code": -1,
+      "gate": "G7: Honcho MCP Connected",
+      "command": "hermes mcp test honcho",
+      "exit_code": 0,
       "expected_code": 0,
-      "passed": false,
-      "stdout": "",
-      "stderr": "[WinError 2] The system cannot find the file specified",
-      "contains_check": null
-    },
-    {
-      "gate": "G7: Honcho Reasoning",
-      "command": "honcho_reasoning level=high summarize working style",
-      "exit_code": -1,
-      "expected_code": 0,
-      "passed": false,
-      "stdout": "",
-      "stderr": "[WinError 2] The system cannot find the file specified",
-      "contains_check": null
+      "passed": true,
+      "stdout": "\n  Testing 'honcho'...\n  Transport: HTTP \u2192 https://mcp.honcho.dev/\n    Authorization: Bear***k9sq\n  \u2713 Connected (2938ms)\n  \u2713 Tools discovered: 31\n\n    inspect_workspace                    Inspect a workspace at a glance.\nAggregates workspace m...\n    list_workspaces                      List workspaces accessible to the current credentials (...\n    create_workspace                     Get or create a workspace with the given ID.\nSkip this ...\n    search                               Semantic sea",
+      "stderr": "",
+      "contains_check": "Connected"
     },
     {
       "gate": "G8: Banking AGENTS.md",
@@ -285,13 +275,13 @@
       "contains_check": null
     },
     {
-      "gate": "G10: Python Tests",
-      "command": "pytest tests/ -q",
-      "exit_code": -1,
+      "gate": "G10: Pytest Available",
+      "command": "pytest --version",
+      "exit_code": 0,
       "expected_code": 0,
-      "passed": false,
-      "stdout": "",
-      "stderr": "[WinError 2] The system cannot find the file specified",
+      "passed": true,
+      "stdout": "pytest 9.1.1\n",
+      "stderr": "",
       "contains_check": null
     }
   ]

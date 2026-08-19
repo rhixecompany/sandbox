@@ -8,7 +8,7 @@ anthropic==0.87.0
 anyio==4.14.2
 ast-serialize==0.8.0
 attrs==26.1.0
-audioop-lts==0.2.2
+audioop-lts
 av==18.0.0
 boto3==1.42.89
 botocore==1.42.97
