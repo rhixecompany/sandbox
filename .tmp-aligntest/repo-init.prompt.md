@@ -25,6 +25,8 @@ skills:
   - repo-init
   - verification-before-completion
 plan: null
+scripts:
+- scripts/repo-init.py
 ---
 
 ## Goal

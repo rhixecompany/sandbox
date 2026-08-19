@@ -42,7 +42,8 @@ tags:
 - ml
 - prompts
 - typescript
-scripts: []
+scripts:
+- scripts/repo-init.py
 ## Goal
 
 Initialize a new or existing repo for **all installed AI coding agents**: inventory every agent (Hermes, OpenCode, Codex, Copilot, Claude, Cursor, GitHub CLI) with its system prompt and context file locations, scaffold generic context files, and verify the result.
