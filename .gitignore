@@ -81,3 +81,6 @@ hermes-profiles/
 # Plugin directories (embedded git repos — do not commit)
 .hermes/plugins/
 .hermes/profiles/*/plugins/
+
+# Skill directories with embedded git repos (do not commit)
+.hermes/skills/
