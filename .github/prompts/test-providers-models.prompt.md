@@ -1,9 +1,7 @@
 ---
 name: test-providers-models
-title: Test Providers & Models — Benchmark, Delegate, and Configure Fallback Chain
-description: Inventory all authorized LLM providers, delegate live capability probes to subagents with
-  full context, rank working free models by vision → reasoning → context size, and configure the Hermes
-  primary model + fallback chain from proven working models per authorized provider.
+title: Test Providers & Models — Working-Model Verification and Agent Propagation
+description: Inventory authorized providers, probe live working free models only, rank by vision → reasoning → context, then configure Hermes and propagate the verified fallback chain to installed agents.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
@@ -11,13 +9,15 @@ trigger: /test-providers-models
 toolsets:
 - file
 - terminal
+- web
+- delegation
 skills: []
 dependencies:
 - skill:test-providers-models
 formatter: default
 metadata:
   hermes:
-    profile: code-architect
+    profile: exec-assistant
     mcp_servers: []
     context_size: large
   copilot:
@@ -27,7 +27,7 @@ metadata:
   opencode:
     command: opencode /test-providers-models
     flags: {}
-    help: Inventory all authorized LLM providers, delegate live capability probes to su...
+    help: Inventory authorized LLM providers, probe live working free models, configure Hermes and propagate verified fallback chain to installed agents.
   codex:
     model_override: null
     system_prompt_id: null
@@ -45,190 +45,172 @@ tags:
 scripts: []
 ## Goal
 
-Produce a **verified, ordered fallback chain** across all authorized Hermes providers, using only models that *actually work* (probed live, not assumed), and configure Hermes (`model` + `fallback_providers`) accordingly. The ordering rule is deterministic:
+Produce a **verified, ordered fallback chain** across authorized Hermes providers using only models that *actually work* after live probing, then configure Hermes and update installed agents accordingly. The ordering rule is deterministic:
 
-**vision access → reasoning capability → large context size** (each tier breaks ties by the next tier; models lacking a higher tier fall below those that have it).
+**working verified status → vision access → reasoning capability → context size**
 
-The heavy lifting (live provider probing) is **delegated to subagents** so the main session is not blocked by rate limits or long background calls, and so each provider cluster is worked in isolation with full context.
+Models that are not verified working are excluded from the chain and must not be written into config or agent instructions.
 
 ## Rules
 
-> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-> Domain-specific additions below.
+### Core Rules
+See `templates/_shared/rules-core.md`.
 
 ### Domain Rules
-
-1. **Inventory from authority** — Enumerate providers/models from `hermes auth list`; never invent a provider or model ID.
+1. **Inventory from authority** — Enumerate providers/models from `hermes auth list` and installed agent configs; never invent a provider or model ID.
 2. **Probe, don't assume** — A model counts as working only after a live capability probe succeeds; no fabricated results.
-3. **Deterministic ordering** — Rank by the fixed rule: vision → reasoning → context size; document every override.
-4. **Free-tier only** — Only models usable on the free tier are candidates for the fallback chain.
-5. **Verify before claiming** — Run the Verification section gates before reporting the chain complete.
+3. **Working-model gating** — Non-working models are excluded from config updates and agent propagation.
+4. **Deterministic ordering** — Rank by verified working status first, then vision → reasoning → context size; document every override.
+5. **Agent propagation** — After Hermes config is updated, propagate the verified chain to installed AI agents with minimal, traceable edits.
+6. **Verify before claiming** — Run all verification gates before reporting completion.
 
 ## Subgoals
 
-1. **Inventory** — Enumerate every authorized provider from `hermes auth list` + `hermes config show`.
-2. **Delegate probes** — Dispatch one subagent per provider cluster; each carries the full context block + a fixed probe script; each returns structured capability data (working?, vision, reasoning, context_size).
-3. **Rank** — Merge subagent results, drop non-working providers, sort by the vision → reasoning → context rule.
-4. **Configure** — Set `model.provider` / `model.default` (primary = proven working model) and `fallback_providers` (ordered list) via `hermes config set`; fix any string-encoded list artifacts.
-5. **Verify** — `hermes config check` + YAML inspection; update `docs/free-model-selection.md` and `*_models.json` artifacts.
+1. **Inventory** — Enumerate every authorized provider from `hermes auth list` + `hermes config show` + installed agent configs.
+2. **Probe** — Dispatch live capability probes and return structured capability data for each candidate free model.
+3. **Rank** — Merge results, drop non-working providers/models, sort by working status → vision → reasoning → context rule.
+4. **Configure Hermes** — Set primary model and fallback chain via `hermes config set`.
+5. **Propagate** — Update installed AI agents to use only verified working models from the ranked chain.
+6. **Verify** — Confirm Hermes config, agent configs, and prompt guidance all reflect the verified working set.
 
 ## Personas
 
-- **Operator** — Runs the delegation, applies config, verifies.
+- **Operator** — Runs inventory, applies config, verifies.
 - **Benchmark Subagent** — Probes one provider cluster, returns structured capability JSON.
 - **Reviewer** — Checks ordering rule compliance and config validity.
+- **Propagator** — Applies minimal agent-config updates after Hermes config is locked.
 
 ## Profiles
 
-Use profile `exec-assistant` (ops) for the orchestration; subagents inherit the default toolset. Run from the SandBox workspace root.
+Use profile `exec-assistant` for orchestration; subagents inherit the default toolset. Run from the SandBox workspace root.
 
-## Context Block (hand to every subagent verbatim)
+## Context Block
 
 ```text
 WORKSPACE = C:\Users\Alexa\Desktop\SandBox
 HERMES_HOME = C:\Users\Alexa\AppData\Local\hermes
-AUTHORIZED PROVIDERS (hermes auth list, 2026-08-24):
-  gemini, ollama-cloud, openrouter, opencode-zen
-ROOT CONFIG (hermes config show):
-  model.provider = opencode-zen
-  model.default   = deepseek-v4-flash-free
-  fallback_providers = ["opencode-zen","openrouter","gemini","ollama-cloud"]
+AUTHORIZED PROVIDERS (from `hermes auth list`):
+  copilot, deepseek, gemini, huggingface, nous, ollama-cloud, openai-codex, opencode-zen, openrouter, xai, xai-oauth
+ROOT CONFIG (from `hermes config show`):
+  model.provider = nous
+  model.default = stepfun/step-3.7-flash:free
+  fallback_providers = ...
 PROBE METHOD:
-  hermes chat --provider <provider> --model <model> -q "reply with only:
-  vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"  (run background, no timeout)
-  OR web_extract the provider /v1/models catalog and filter free (pricing 0 / ':free').
+  hermes chat --provider <provider> --model <model> -q "reply with only: vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"
 RETURN FORMAT (one line per model):
-  provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int>
-VERIFIED WORKING MODELS (probed 2026-08-24, live verified):
-  opencode-zen: deepseek-v4-flash-free (128K, reasoning✓, WORKING), nemotron-3-ultra-free (1M, ✓, WORKING)
-  openrouter: nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓, WORKING),
-              nvidia/nemotron-3-super-120b-a12b:free (1M, ✓, WORKING),
-              nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (256K, ✓, WORKING)
-  gemini: gemini-2.5-flash (1M, reasoning✓, WORKING)
-  ollama-cloud: nemotron-3-ultra (1M, ✓, WORKING)
-EXCLUDED (non-working): deepseek (402), huggingface (400), nous (403),
-              xai-oauth (402), openai-codex (429), copilot (n/a)
-NOTE: No working free model in the verified set has vision. The rule therefore
-      degrades to reasoning → context for the current free-tier landscape.
+  provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int> | notes=<string>
+VERIFIED WORKING MODELS (example baseline only; re-probe before use):
+  opencode-zen: deepseek-v4-flash-free (128K, reasoning✓)
+  openrouter: nvidia/nemotron-3-ultra-550b-a55b:free (1M)
+  gemini: gemini-2.5-flash (1M, reasoning✓)
+EXCLUDED (example baseline): deepseek (402), huggingface (400), nous (403), xai-oauth (402), openai-codex (429), copilot (n/a)
 ```
 
 ## Delegation Plan (subagents)
 
-Dispatch in parallel (3 clusters). Each subagent gets the full Context Block above.
+Dispatch in parallel by provider cluster. Each subagent gets the Context Block verbatim.
 
 | Subagent | Cluster | Providers |
 | -------- | ------- | --------- |
 | A | Zen/router/deepseek | opencode-zen, openrouter, deepseek |
 | B | Google/cloud/nous/hf | gemini, ollama-cloud, nous, huggingface |
-| C | OAuth/codex/copilot/xai | openai-codex, copilot, xai-oauth |
+| C | OAuth/codex/copilot/xai | openai-codex, copilot, xai-oauth, xai |
 
 Each subagent:
+- Probes candidate free models for its cluster.
+- Reports `working=false` with error on rate-limit or auth failures.
+- Returns only structured capability lines.
+- Does not edit config or write files.
 
-- Runs the probe for every candidate free model of its cluster.
-- If a provider is rate-limited (429) or blocked (403), reports `working=false` with the error and falls back to the baseline entry in the Context Block.
-- Returns ONLY the structured `provider | model | working | vision | reasoning | ctx` lines.
-- Does NOT edit any config or write files (read-only probe).
-
-## Ranking Algorithm (applied after merge)
+## Ranking Algorithm
 
 ```python
 def sort_key(m):
-    # Higher tier wins. vision(2) > reasoning(1) > context(0)
+    working = 1 if m.working else 0
     vision = 2 if m.vision else 0
     reason = 1 if m.reasoning else 0
-    ctx = min(m.ctx, 2_000_000) / 2_000_000   # normalized 0..1
-    return (vision, reason, ctx)   # descending
+    ctx = min(m.ctx, 2_000_000) / 2_000_000
+    return (working, vision, reason, ctx)
+
 chain = sorted(working_models, key=sort_key, reverse=True)
 ```
 
-Result for the 2026-08-07 verified set (no vision anywhere → reasoning then context):
+## Configure Hermes
 
-1. `nemotron-3-ultra-free` (opencode-zen, 1M, reasoning✓)
-2. `nvidia/nemotron-3-ultra-550b-a55b:free` (openrouter, 1M, ✓)
-3. `nvidia/nemotron-3-super-120b-a12b:free` (openrouter, 1M, ✓)
-4. `gemini-2.5-flash` (gemini, 1M, ✓)
-5. `nemotron-3-ultra` (ollama-cloud, 1M, ✓)
-6. `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` (openrouter, 256K, ✓)
-7. `deepseek-v4-flash-free` (opencode-zen, 128K, ✓) — **PRIMARY**
-8. `google/gemma-4-31b-it:free` (openrouter, 262K, ✗)
-9. `google/gemma-4-26b-a4b-it:free` (openrouter, 262K, ✗)
-10. `openai/gpt-oss-20b:free` (openrouter, 131K, ✗)
-
-## Configure (orchestrator only)
-
-Primary model = the proven-working model that has accomplished prior requests:
-`deepseek-v4-flash-free` via `opencode-zen` (set on all 13 named profiles already;
-root currently diverges as `nous` / `tencent/hy3:free` and is aligned here).
+Primary model = highest-ranked verified working model.
 
 ```bash
 # 1. Primary model
-hermes config set model.provider opencode-zen
-hermes config set model.default  deepseek-v4-flash-free
+hermes config set model.provider <provider>
+hermes config set model.default <model>
 
-# 2. Fallback chain — provider names in capability order.
-#    Each provider uses its own working free default_model (set in providers: block).
-hermes config set fallback_providers '["opencode-zen","openrouter","gemini","ollama-cloud"]'
+# 2. Fallback chain — provider names only, ordered by capability.
+hermes config set fallback_providers '["<provider1>","<provider2>","<provider3>"]'
 
 # 3. Ensure each fallback provider resolves to a working free model
-hermes config set providers.opencode-zen.default_model  deepseek-v4-flash-free
-hermes config set providers.openrouter.default_model   "nvidia/nemotron-3-ultra-550b-a55b:free"
-hermes config set providers.gemini.default_model        "gemini-2.5-flash"
-hermes config set providers.ollama-cloud.default_model  "nemotron-3-ultra"
+hermes config set providers.<provider1>.default_model <model1>
+hermes config set providers.<provider2>.default_model <model2>
+hermes config set providers.<provider3>.default_model <model3>
 ```
 
-> Config guard: `write_file`/`patch` refuse to edit `config.yaml`. Use `hermes config set`
-> (CLI) or terminal Python (`yaml` + `open()`). If `fallback_providers` is stored as a
-> string instead of a list, fix it with a terminal Python one-liner before verifying.
+## Propagate to Installed Agents
+
+Propagation rules:
+- Only models marked `working=true` may be written into agent configs.
+- Prefer native agent CLI/config commands; avoid raw file edits unless required.
+- Record every changed file and command for verification.
+
+Propagation targets:
+- Hermes profiles: `~/AppData/Local/hermes/profiles/*/SOUL.md`, `memories/USER.md`, `memories/MEMORY.md`
+- Workspace context files: `.hermes.md`, `AGENTS.md`, `.github/copilot-instructions.md`
+- Agent configs: `opencode.json`, `~/.opencode/*`, Codex/Copilot instruction files if present
 
 ## Phases
 
-1. **Phase 1 — Inventory** — `hermes auth list` all authorized providers; collect each provider's working free `default_model` and capabilities.
-2. **Phase 2 — Probe** — Delegate live capability probes to subagents with the full Context Block; each probe returns actual availability, vision/reasoning support, and context size.
-3. **Phase 3 — Rank** — Merge probe results and apply the Ranking Algorithm (vision → reasoning → context size) to produce the ordered candidate list.
-4. **Phase 4 — Configure** — Set the primary model and fallback chain in Hermes config per the Configure section.
-5. **Phase 5 — Verify** — Confirm `fallback_providers` is a real YAML list and every entry resolves to a working free model; fix and re-verify if not.
+1. **Phase 1 — Inventory** — `hermes auth list`; collect installed agent configs.
+2. **Phase 2 — Probe** — Delegate live capability probes; return structured capability JSON.
+3. **Phase 3 — Rank** — Apply ranking algorithm; exclude non-working models.
+4. **Phase 4 — Configure** — Set Hermes primary + fallback chain via `hermes config set`; validate YAML/list type.
+5. **Phase 5 — Propagate** — Update installed agents to verified working models only.
+6. **Phase 6 — Verify** — Run verification gates; re-probe if drift suspected.
 
 ## Verification
 
 ```bash
 hermes config check
-# YAML inspect
-grep -nE "^(model|fallback_providers|providers):" "$LOCALAPPDATA/hermes/config.yaml"
-# Confirm fallback_providers is a real YAML list, not a string
 python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/hermes/config.yaml')); print(type(c['fallback_providers']), c['fallback_providers'])"
+hermes profile list
 ```
 
 - [ ] `hermes config check` passes
-- [ ] `model.provider` = opencode-zen, `model.default` = deepseek-v4-flash-free
-- [ ] `fallback_providers` is a YAML list (not a string) ordered by capability
+- [ ] `model.provider` and `model.default` set to verified working model
+- [ ] `fallback_providers` is a YAML list ordered by capability
 - [ ] Each listed provider has a working free `default_model`
-- [ ] `docs/free-model-selection.md` updated with the new chain
-- [ ] Non-working providers (deepseek, huggingface, nous, xai-oauth, openai-codex, copilot) excluded
+- [ ] Installed agents updated to verified working models only
+- [ ] Non-working models excluded from config and instruction files
+- [ ] No secrets/tokens introduced
+- [ ] Documentation reflects verified chain
 
 ## Pitfalls
 
-1. **Vision gap** — No verified working free model has vision. Do not promote a paid/vision model into the free fallback chain.
-2. **429 storms** — Live `hermes chat` probes rate-limit fast. Delegate to subagents (parallel, isolated) and let each fall back to the baseline on error.
-3. **String-encoded lists** — `hermes config set fallback_providers '[...]'` may serialize as a string; verify and repair via terminal Python.
-4. **Provider alias mismatch** — `fallback_providers` uses provider *names* (opencode-zen, openrouter, …), not the `providers:` dict keys (e.g. `ollama-launch`). Set each provider's `default_model` so the right free model is used.
-5. **Root vs profiles drift** — Root config diverged (`nous`/`tencent/hy3:free`); named profiles use `opencode-zen`/`deepseek-v4-flash-free`. Align root, then propagate with `scripts/sync_profile_configs.py`.
-6. **Stale `:free` promotions** — Models expire; always re-probe before presenting as working.
+1. **Stale promotions** — Models expire; always re-probe before treating as working.
+2. **String-encoded lists** — `fallback_providers` may serialize as a string; verify and repair via terminal Python if needed.
+3. **Provider alias mismatch** — Use provider names in `fallback_providers`; set each provider's `default_model`.
+4. **Root vs profiles drift** — Align root first, then propagate to named profiles.
+5. **Vision gap** — If no verified working free model has vision, degrade to reasoning → context; do not promote paid models into the free fallback chain.
 
 ## MCP Servers & Tools
 
-- **Terminal** — `hermes auth list` and provider/model configuration.
-- **Delegation** — `delegate_task` parallel capability probes.
-- **Web tools** — provider documentation lookups.
-- **Skills** — `test-providers-models` skill (this prompt's engine).
+- **Terminal** — `hermes auth list`, `hermes config set`, `hermes profile list`
+- **Delegation** — `delegate_task` parallel capability probes
+- **Web tools** — provider documentation lookups
+- **Filesystem** — read/update agent config and instruction files
 
 ## Hooks
 
-Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+Shared workspace hooks run around this prompt's execution — see `.github/hooks/README.md`: `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
 
-Prompt-library tooling (see `.enhance/`):
-
-- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
-- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
-- `.github/hooks/*` — hook implementations referenced in the Hooks section
+- `.enhance/analyze_prompts.py` — prompt-library analyzer
+- `.enhance/verify_phase3.py` — repair/verify tooling
