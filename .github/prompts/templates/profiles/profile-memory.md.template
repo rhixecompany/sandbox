@@ -1,0 +1,10 @@
+---
+# MEMORY.md Template — Profile Agent Notes
+
+Hermes memory store — §-delimited facts (no H1; MD041 false positive).
+
+{{ROOT_MEMORY_FACTS}}
+Multi-File Protocol (≥5 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking /mcp-filesystem /mcp-ast-grep /mcp-memory /plan /plans-and-specs /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development) → plan → verify → execute → verify gates.§
+Profile: {{PROFILE_NAME}}. Model: {{PROFILE_PRIMARY_MODEL}} primary; {{PROFILE_FALLBACK_MODEL}} fallback.§
+Repo: rhixecompany/sandbox. Prompt quality: comprehensive, best practices, all MCP/skills.§
+{{PROFILE_SPECIFIC_FACTS}}

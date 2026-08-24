@@ -1,4 +1,4 @@
-# Copilot Instructions — rhixecompany-comics
+# Copilot Instructions — mcp-servers
 
 **Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../.hermes.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
 
@@ -6,7 +6,7 @@
 
 ```bash
 # Subproject setup
-cd C:/Users/Alexa/Desktop/SandBox/projects/rhixecompany-comics
+cd C:/Users/Alexa/Desktop/SandBox/projects/mcp-servers
 # See project's package.json or README.md for specific commands
 ```
 

@@ -1,0 +1,37 @@
+{
+  "opencode": {
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\opencode.json": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\opencode.json",
+      "size": 4099,
+      "lines": 206,
+      "modified": "2026-08-24T19:03:45.466381",
+      "preview": "{\n\t\"$schema\": \"https://opencode.ai/config.json\",\n\t\"mcp\": {\n\t\t\"ast-grep\": {\n\t\t\t\"command\": [\n\t\t\t\t\"bunx\",\n\t\t\t\t\"-y\",\n\t\t\t\t\"@notprolands/ast-grep-mcp\"\n\t\t\t],\n\t\t\t\"enabled\": true,\n\t\t\t\"type\": \"local\"\n\t\t},\n\t\t\"CODE-SANDBOX\": {\n\t\t\t\"command\": [\n\t\t\t\t\"bunx\",\n\t\t\t\t\"-y\",\n\t\t\t\t\"node-code-sandbox-mcp\"\n\t\t\t],\n\t\t\t\"enabled\":"
+    }
+  },
+  "codex": {
+    "C:\\Users\\Alexa\\.codex\\config.toml": {
+      "path": "C:\\Users\\Alexa\\.codex\\config.toml",
+      "size": 4184,
+      "lines": 127,
+      "modified": "2026-08-05T01:08:24.754804",
+      "preview": "model = \"gpt-5.4-mini\"\nmodel_reasoning_effort = \"xhigh\"\npersonality = \"pragmatic\"\nnotify = [ \"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\f8d2abcb7481383b\\\\bin\\\\node_modules\\\\@oai\\\\sky\\\\bin\\\\windows\\\\codex-computer-use.exe\", \"turn-ended\" ]\n[desktop]\nambient-suggestions-enabl"
+    }
+  },
+  "copilot": {},
+  "vscode": {
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\.vscode\\settings.json": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.vscode\\settings.json",
+      "size": 2545,
+      "lines": 97,
+      "modified": "2026-08-24T17:03:00.395557",
+      "preview": "{\n\t\"[javascript]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n\t},\n\t\"[json]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[jsonc]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[markdown]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscode\",\n\t\t\"editor.wordWrap\": \"on\"\n\t},\n\t\"[python]\": {\n\t\t\"editor.defaultFormatter\": \"charliermarsh.ruff\"\n\t},\n\t\"[shellscript]\": {\n\t\t\"editor.defaultFormatter\": \"foxundermoon.shell-format\"\n\t},\n\t\"[toml]\": {"
+    },
+    "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\User\\settings.json": {
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\User\\settings.json",
+      "size": 16291,
+      "lines": 503,
+      "modified": "2026-08-24T18:52:06.070020",
+      "preview": "{\n\t\"[bat]\": {\n\t\t\"editor.wordWrap\": \"on\"\n\t},\n\t\"[css]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.css-language-features\"\n\t},\n\t\"[html]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.html-language-features\"\n\t},\n\t\"[javascript]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n\t},\n\t\"[json]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[jsonc]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[markdown]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscod"
+    }
+  }
+}
