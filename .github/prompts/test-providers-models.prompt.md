@@ -2,7 +2,7 @@
 name: test-providers-models
 title: Test Providers & Models — Working-Model Verification and Agent Propagation
 description: Inventory authorized providers, probe live working free models only, rank by vision → reasoning → context, then configure Hermes and propagate the verified fallback chain to installed agents.
-version: 1.0.0
+version: 2.0.0
 license: MIT
 author: Hermes Agent
 trigger: /test-providers-models
@@ -84,26 +84,25 @@ See `templates/_shared/rules-core.md`.
 
 Use profile `exec-assistant` for orchestration; subagents inherit the default toolset. Run from the SandBox workspace root.
 
-## Context Block
+## Context Block (Generated at Runtime)
 
 ```text
-WORKSPACE = C:\Users\Alexa\Desktop\SandBox
-HERMES_HOME = C:\Users\Alexa\AppData\Local\hermes
-AUTHORIZED PROVIDERS (from `hermes auth list`):
-  copilot, deepseek, gemini, huggingface, nous, ollama-cloud, openai-codex, opencode-zen, openrouter, xai, xai-oauth
-ROOT CONFIG (from `hermes config show`):
-  model.provider = nous
-  model.default = stepfun/step-3.7-flash:free
-  fallback_providers = ...
+WORKSPACE = {{WORKSPACE_ROOT}}
+HERMES_HOME = {{HERMES_HOME}}
+AUTHORIZED PROVIDERS (from `hermes auth list` at runtime):
+  {{AUTHORIZED_PROVIDERS_LIST}}
+ROOT CONFIG (from `hermes config show` at runtime):
+  model.provider = {{CURRENT_PROVIDER}}
+  model.default = {{CURRENT_MODEL}}
+  fallback_providers = {{CURRENT_FALLBACK_CHAIN}}
 PROBE METHOD:
   hermes chat --provider <provider> --model <model> -q "reply with only: vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"
 RETURN FORMAT (one line per model):
   provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int> | notes=<string>
-VERIFIED WORKING MODELS (example baseline only; re-probe before use):
-  opencode-zen: deepseek-v4-flash-free (128K, reasoning✓)
-  openrouter: nvidia/nemotron-3-ultra-550b-a55b:free (1M)
-  gemini: gemini-2.5-flash (1M, reasoning✓)
-EXCLUDED (example baseline): deepseek (402), huggingface (400), nous (403), xai-oauth (402), openai-codex (429), copilot (n/a)
+VERIFIED WORKING MODELS (from live probes — re-probe before use):
+  {{VERIFIED_MODELS_LIST}}
+EXCLUDED (from live probes):
+  {{EXCLUDED_MODELS_LIST}}
 ```
 
 ## Delegation Plan (subagents)
