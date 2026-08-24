@@ -1,16 +1,23 @@
 ---
+
 # AGENTS.md Template — Canonical Agent Guidance
 #
+
 # USAGE: This is the MASTER template for AGENTS.md at workspace root.
 # Subprojects should have thin AGENTS.md that defer to this root file.
+
 # All shared rules, conventions, workflows defined HERE.
 # Subproject AGENTS.md only contains project-specific overrides.
 #
+
 # REQUIRED VARIABLES:
 #   SandBox       - Workspace name (e.g., "SandBox")
+
 #   C:/Users/Alexa/Desktop/SandBox       - Absolute workspace path
 #   C:/Users/Alexa/AppData/Local/hermes          - Hermes home path
+
 #   2026-08-24        - Last verified date
+
 ---
 
 # SandBox — AGENTS.md
@@ -48,6 +55,7 @@ SandBox/
 ├── venv/ + requirements.txt # Python 3.11 virtualenv
 ├── node_modules/            # Root-level Bun/Node deps
 └── *.py, *.ts, *.json       # Root-level analysis scripts and config
+
 ```
 
 ---
@@ -83,8 +91,11 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 ### Cross-Component Communication
 
 - **Shared CI**: `.github/workflows/` at workspace root applies to `projects/Bash/` and any subproject with matching workflows
+
 - **Prompt Library**: All `.github/prompts/*.prompt.md` are the single source of truth — consumed by Copilot, OpenCode, and Hermes agents
+
 - **Hermes Profile Routing**: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot, general→default
+
 - **MCP Tooling**: 16 MCP servers bridge file ops, GitHub, browser, search, linting, and containers
 
 ---
@@ -92,23 +103,30 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 ## 4. Critical Developer Workflows
 
 ### Workspace Root
+
 ```bash
+
 # Python setup (workspace root)
+
 cd C:/Users/Alexa/Desktop/SandBox
 python -m venv venv
 source venv/Scripts/activate  # or .venv/Scripts/activate
 pip install -r requirements.txt
 
 # Run root-level Python scripts (canonical location)
+
 python C:/Users/Alexa/AppData/Local/hermes/scripts/health_check.py
 python C:/Users/Alexa/AppData/Local/hermes/scripts/build_registry.py
 
 # Bun/TypeScript (workspace root - minimal)
+
 bun install
 bun run index.ts
+
 ```
 
 ### Subproject Workflows
+
 Each subproject has its own AGENTS.md with specific commands. See subproject AGENTS.md for details.
 
 ---
@@ -116,6 +134,7 @@ Each subproject has its own AGENTS.md with specific commands. See subproject AGE
 ## 5. Codebase Patterns & Conventions
 
 ### File Naming
+
 | Language | Convention | Example |
 |----------|------------|---------|
 | TypeScript | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx` |
@@ -125,24 +144,37 @@ Each subproject has its own AGENTS.md with specific commands. See subproject AGE
 | Markdown | `kebab-case.md` | `health-check.md` |
 
 ### Code Style
+
 - **TypeScript**: 2-space indent, single-quotes, strict mode, `noUncheckedIndexedAccess`
+
 - **Python**: 4-space indent (PEP 8), double-quotes, type hints encouraged
+
 - **Line endings**: CRLF (`.editorconfig` — Windows host)
+
 - **No `any`** unless explicitly justified and exempted
+
 - **No backup files** (`.bak`, `.old`) — use git for rollback
+
 - **Dry-run first** on all destructive operations
 
 ### Multi-Wrapper Parity
+
 Every script that could run cross-platform MUST have three wrappers:
+
 ```bash
+
 # Canonical: C:/Users/Alexa/AppData/Local/hermes/scripts/
+
 scripts/operation.sh     # Bash (Linux/WSL/Git Bash)
 scripts/operation.ps1    # PowerShell (Windows)
 scripts/operation.bat    # Batch (Windows fallback)
+
 ```
 
 ### Git Commit Convention
+
 ```
+
 <type>: <description>
 
 Types: feat, fix, docs, refactor, test, chore, perf
@@ -151,16 +183,20 @@ Examples:
   fix: correct Plaid webhook signature validation
   refactor: extract database connection pool
   chore: update bun lockfile
+
 ```
 
 ### Git Branch Convention
+
 ```
+
 <type>/<project>/<kebab-case-description>
 
 Examples:
   feat/bash/add-dry-run-mode
   fix/banking/plaid-webhook-signature
   refactor/ecom/extract-payment-service
+
 ```
 
 - **PR target branch**: `development` (not `main`)
@@ -193,16 +229,20 @@ Before using native tools (terminal commands, direct file access), check MCP ser
 The prompt library at `.github/prompts/` is the single source of truth for all prompt-family content.
 
 ### Structure
+
 ```
+
 .github/prompts/
 ├── index.md                           # Library overview
 ├── *.prompt.md                        # Canonical prompts (190+)
 ├── templates/                         # Shared templates
 ├── .enhance/                          # Enhanced versions
 └── archived/                          # Deprecated prompts
+
 ```
 
 ### Key Prompt Categories
+
 | Category | Example Files | Purpose |
 |----------|---------------|---------|
 | Architecture | `architecture-blueprint-generator.prompt.md`, `folder-structure-blueprint-generator.prompt.md`, `technology-stack-blueprint-generator.prompt.md` | Generate architecture docs |
@@ -218,6 +258,7 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 ## 8. Hermes Agent Integration
 
 ### Profile Configuration
+
 | Profile | Model / Guidance |
 |---------|------------------|
 | **default** ⬤ | Verify with `hermes profile list` / `hermes config show` |
@@ -229,19 +270,26 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 | research-analyst | Verify with `hermes profile list` / `hermes config show` |
 
 ### Session Startup Sequence
+
 ```
+
 1. Read SESSION_REPORT.md (workspace root) — last session summary
+
 2. Load mandatory skills:
    - using-superpowers (foundational workflow)
    - user-communication-preferences (safety constraints)
    - session-audit-report (session analysis)
    - hermes-profiles (profile management)
    - validate-memories (memory verification)
+
 3. Review .hermes/SESSION_REPORT.md for session context
+
 4. If any mandatory skill fails → ABORT and report
+
 ```
 
 ### File Hierarchy (Precedence Order)
+
 | # | File | Purpose | Authority |
 |---|------|---------|-----------|
 | 1 | `.hermes.md` | Hermes-specific overrides | Highest — overrides all below |
@@ -252,9 +300,11 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 | 6 | `.cursorrules` | Cursor IDE rules | Cursor IDE only |
 
 ### Available Hermes Toolsets (16)
+
 `web`, `browser`, `terminal`, `file`, `code_execution`, `vision`, `image_gen`, `tts`, `skills`, `todo`, `memory`, `context_engine`, `session_search`, `clarify`, `delegation`, `cronjob`
 
 ### Active Hooks (3)
+
 `session-logger` | `session-auto-commit` | `governance-audit`
 
 ---
@@ -262,8 +312,13 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 ## 9. Safety Rules
 
 1. **Never commit secrets** — `.env`, tokens, credentials
+
 2. **No destructive ops without approval** — explain risks first
+
 3. **Verify before claim** — test, check, confirm before reporting
+
 4. **MCP-first** — use MCP servers over native tools where available
+
 5. **Profile per task** — switch profile before execution
+
 6. **Strict sequential** — "only then" is a hard constraint

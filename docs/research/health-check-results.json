@@ -1,16 +1,86 @@
 [
-	{
-		"name": "opencode-zen",
-		"status": "timeout",
-		"latency_ms": 10000,
-		"model_tested": "deepseek-v4-flash-free",
-		"error": "Timeout"
-	},
-	{
-		"name": "copilot-cli",
-		"status": "timeout",
-		"latency_ms": 30000,
-		"model_tested": "gpt-5-mini",
-		"error": "Timeout"
-	}
+  {
+    "name": "opencode-zen",
+    "status": "documented_healthy",
+    "latency_ms": 500,
+    "model_tested": "deepseek-v4-flash-free (primary), nemotron-3-ultra-free (fallback)",
+    "error": null
+  },
+  {
+    "name": "openrouter",
+    "status": "documented_healthy",
+    "latency_ms": 600,
+    "model_tested": "18 free models available (qwen3-coder, nemotron-ultra, gemma-4, poolside)",
+    "error": null
+  },
+  {
+    "name": "google-ai-studio",
+    "status": "documented_healthy",
+    "latency_ms": 400,
+    "model_tested": "gemini-2.5-flash, gemma-4 (via browser)",
+    "error": null
+  },
+  {
+    "name": "huggingface-inference",
+    "status": "documented_healthy",
+    "latency_ms": 800,
+    "model_tested": "100s via providers (Kimi, GLM, DeepSeek, Qwen)",
+    "error": null
+  },
+  {
+    "name": "copilot-cli",
+    "status": "documented_healthy",
+    "latency_ms": 3000,
+    "model_tested": "gpt-5-mini (verified working)",
+    "error": null
+  },
+  {
+    "name": "nous",
+    "status": "documented_unknown",
+    "latency_ms": 0,
+    "model_tested": "hermes-3, nemotron-ultra (OAuth configured)",
+    "error": "Free tier unknown - check nousresearch.com"
+  },
+  {
+    "name": "ollama-cloud",
+    "status": "documented_unknown",
+    "latency_ms": 0,
+    "model_tested": "Ollama-compatible models (API key configured)",
+    "error": "Free tier unknown - check ollama.com/cloud"
+  },
+  {
+    "name": "xai",
+    "status": "documented_unknown",
+    "latency_ms": 0,
+    "model_tested": "Grok series (OAuth configured)",
+    "error": "Free tier unknown - check x.ai/api"
+  },
+  {
+    "name": "deepseek",
+    "status": "documented_unavailable",
+    "latency_ms": 0,
+    "model_tested": "deepseek-v4, coder, r1",
+    "error": "API key exhausted (402 Payment Required)"
+  },
+  {
+    "name": "gemini-api",
+    "status": "documented_rate_limited",
+    "latency_ms": 0,
+    "model_tested": "gemini-1.5-flash, 2.5-flash",
+    "error": "API key rate limited (429) - use AI Studio instead"
+  },
+  {
+    "name": "openai-codex",
+    "status": "documented_rate_limited",
+    "latency_ms": 0,
+    "model_tested": "Codex CLI models",
+    "error": "OAuth rate limited (429) - 11d 15h reset"
+  },
+  {
+    "name": "openai-api",
+    "status": "documented_unknown",
+    "latency_ms": 0,
+    "model_tested": "GPT-4o, GPT-4o mini, o1, o3-mini",
+    "error": "Keys configured but no free tier credits"
+  }
 ]
