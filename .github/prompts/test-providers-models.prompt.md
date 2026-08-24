@@ -87,30 +87,26 @@ Use profile `exec-assistant` (ops) for the orchestration; subagents inherit the 
 ```text
 WORKSPACE = C:\Users\Alexa\Desktop\SandBox
 HERMES_HOME = C:\Users\Alexa\AppData\Local\hermes
-AUTHORIZED PROVIDERS (hermes auth list, 2026-08-08):
-  copilot, deepseek, gemini, huggingface, nous, ollama-cloud,
-  openai-codex, openrouter, xai-oauth
+AUTHORIZED PROVIDERS (hermes auth list, 2026-08-24):
+  gemini, ollama-cloud, openrouter, opencode-zen
 ROOT CONFIG (hermes config show):
-  model.provider = nous
-  model.default   = tencent/hy3:free
-  fallback_providers = []
+  model.provider = opencode-zen
+  model.default   = deepseek-v4-flash-free
+  fallback_providers = ["opencode-zen","openrouter","gemini","ollama-cloud"]
 PROBE METHOD:
   hermes chat --provider <provider> --model <model> -q "reply with only:
   vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"  (run background, no timeout)
   OR web_extract the provider /v1/models catalog and filter free (pricing 0 / ':free').
 RETURN FORMAT (one line per model):
   provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int>
-KNOWN BASELINE (probed 2026-08-07, for cross-check only — re-verify live):
+VERIFIED WORKING MODELS (probed 2026-08-24, live verified):
   opencode-zen: deepseek-v4-flash-free (128K, reasoning✓, WORKING), nemotron-3-ultra-free (1M, ✓, WORKING)
   openrouter: nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓, WORKING),
               nvidia/nemotron-3-super-120b-a12b:free (1M, ✓, WORKING),
-              nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (256K, ✓, WORKING),
-              google/gemma-4-31b-it:free (262K, ✗, WORKING),
-              google/gemma-4-26b-a4b-it:free (262K, ✗, WORKING),
-              openai/gpt-oss-20b:free (131K, ✗, WORKING)
+              nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (256K, ✓, WORKING)
   gemini: gemini-2.5-flash (1M, reasoning✓, WORKING)
   ollama-cloud: nemotron-3-ultra (1M, ✓, WORKING)
-  NOT WORKING (2026-08-07): deepseek (402), huggingface (400), nous (403),
+EXCLUDED (non-working): deepseek (402), huggingface (400), nous (403),
               xai-oauth (402), openai-codex (429), copilot (n/a)
 NOTE: No working free model in the verified set has vision. The rule therefore
       degrades to reasoning → context for the current free-tier landscape.
@@ -225,11 +221,9 @@ python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/he
 - **Web tools** — provider documentation lookups.
 - **Skills** — `test-providers-models` skill (this prompt's engine).
 
-
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 
