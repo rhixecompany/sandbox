@@ -1,0 +1,24 @@
+Configured shell hooks (8 total):
+
+  [on_session_end]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:39:54.717431Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:39:57.598547Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:39:58.788402Z
+
+  [on_session_start]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:39:59.824692Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:40:00.892144Z
+
+  [pre_llm_call]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:40:01.953809Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-07-27T16:40:03.343932Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py --hook --critical ast-grep,github,fetch,sequential-thinking" (timeout=30s, ✓ allowed)
+      approved_at: 2026-07-28T00:30:22.384260Z
+

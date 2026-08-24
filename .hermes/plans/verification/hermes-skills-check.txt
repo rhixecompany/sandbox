@@ -1,0 +1,48 @@
+                          Skill Updates                           
+┌─────────────────────────────────┬───────────┬──────────────────┐
+│ Name                            │ Source    │ Status           │
+├─────────────────────────────────┼───────────┼──────────────────┤
+│ code-wiki                       │ official  │ up_to_date       │
+│ subagent-driven-development     │ official  │ up_to_date       │
+│ cloudflare-temporary-deploy     │ official  │ up_to_date       │
+│ antigravity-cli                 │ official  │ up_to_date       │
+│ grok                            │ official  │ up_to_date       │
+│ openhands                       │ official  │ up_to_date       │
+│ evm                             │ official  │ up_to_date       │
+│ hyperliquid                     │ official  │ up_to_date       │
+│ one-three-one-rule              │ official  │ up_to_date       │
+│ baoyu-article-illustrator       │ official  │ up_to_date       │
+│ baoyu-comic                     │ official  │ up_to_date       │
+│ blender-mcp                     │ official  │ unavailable      │
+│ creative-ideation               │ official  │ up_to_date       │
+│ pixel-art                       │ official  │ up_to_date       │
+│ pinggy-tunnel                   │ official  │ up_to_date       │
+│ watchers                        │ official  │ up_to_date       │
+│ stocks                          │ official  │ up_to_date       │
+│ pokemon-player                  │ official  │ up_to_date       │
+│ fitness-nutrition               │ official  │ up_to_date       │
+│ neuroskill-bci                  │ official  │ up_to_date       │
+│ mcp-oauth-remote-gateway        │ official  │ up_to_date       │
+│ outlines                        │ official  │ up_to_date       │
+│ obliteratus                     │ official  │ up_to_date       │
+│ dspy                            │ official  │ up_to_date       │
+│ axolotl                         │ official  │ up_to_date       │
+│ trl-fine-tuning                 │ official  │ up_to_date       │
+│ unsloth                         │ official  │ up_to_date       │
+│ mpp-agent                       │ official  │ up_to_date       │
+│ stripe-link-cli                 │ official  │ up_to_date       │
+│ stripe-projects                 │ official  │ up_to_date       │
+│ memento-flashcards              │ official  │ up_to_date       │
+│ shop                            │ official  │ up_to_date       │
+│ drug-discovery                  │ official  │ up_to_date       │
+│ godmode                         │ official  │ up_to_date       │
+│ unbroker                        │ official  │ up_to_date       │
+│ rest-graphql-debug              │ official  │ up_to_date       │
+│ prompt-engineering              │ skills.sh │ up_to_date       │
+│ search-skills-plugins-subagents │ browse-sh │ unavailable      │
+│ hooks-pattern                   │ skills.sh │ up_to_date       │
+│ agentmemory-hooks               │ skills.sh │ up_to_date       │
+│ data-migration-scripts          │ skills.sh │ update_available │
+└─────────────────────────────────┴───────────┴──────────────────┘
+1 update(s) available across 41 checked skill(s)
+
