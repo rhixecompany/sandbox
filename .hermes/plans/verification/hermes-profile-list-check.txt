@@ -1,0 +1,18 @@
+
+ Profile          Model                        Gateway      Alias        Distribution
+ ───────────────    ───────────────────────────    ───────────    ───────────    ────────────────────
+ ◆default         stepfun/step-3.7-flash:fre   running      —            —
+  alexa           deepseek-v4-flash-free       running      alexa        —
+  code-architect  deepseek-v4-flash-free       running      code-architect —
+  creative-director deepseek-v4-flash-free       running      creative-director —
+  cto             deepseek-v4-flash-free       running      cto          —
+  designer        deepseek-v4-flash-free       running      designer     —
+  dev             deepseek-v4-flash-free       running      dev          —
+  exec-assistant  deepseek-v4-flash-free       running      exec-assistant —
+  ops             deepseek-v4-flash-free       running      ops          —
+  patient-tutor   deepseek-v4-flash-free       running      patient-tutor —
+  pm              deepseek-v4-flash-free       running      pm           —
+  qa              deepseek-v4-flash-free       running      qa           —
+  research-analyst deepseek-v4-flash-free       running      research-analyst —
+  security        deepseek-v4-flash-free       running      security     —
+

@@ -618,6 +618,7 @@ This workspace includes 14 pre-configured MCP servers (in `.mcp.json`). They enh
 - **Subproject Guidance:** Each project's `AGENTS.md` (e.g., `projects/Bash/AGENTS.md`)
 - **Branching/Contributing:** `CONTRIBUTING.md`
 - **Prompt Library:** `.github/prompts/` (190+ templates)
+- **Verified Provider Chain:** `.github/prompts/test-providers-models.prompt.md` (working-model probe + fallback config)
 - **Architecture Docs:** `docs/Project_Architecture/`
 - **MCP Configuration:** `.mcp.json` (14 servers, add more as needed)
 

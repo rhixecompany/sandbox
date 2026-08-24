@@ -4,4 +4,4 @@ Claude-specific behavior. All workspace rules in `AGENTS.md`.
 
 - Prefer `filesystem` MCP for file ops, `ast-grep` for search, `sequential-thinking` for multi-step tasks
 - All toolchain, routing, and conventions: see `AGENTS.md`
-- Multi-file protocol (≥5 files): see .hermes.md lines 75-100
+- Multi-file protocol (≥5 files): see `SOUL.md` canonical block
