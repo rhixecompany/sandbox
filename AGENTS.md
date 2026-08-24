@@ -621,7 +621,36 @@ const Config = z.object({ mode: z.enum(["discover", "clone", ...]) });
 
 ---
 
-## Architecture Documentation
+## 13. Multi-File Change Protocol (≥5 files)
+
+When a user request will modify **more than 4 files**, you MUST invoke the following skill stack before proceeding:
+
+**Required Skills (14):**
+- `/using-superpowers` — Foundational workflow
+- `/brainstorming` — Structured idea generation
+- `/user-communication-preferences` — Alexa's execution style
+- `/mcp-sequential-thinking` — Structured reasoning
+- `/mcp-filesystem` — File operations
+- `/mcp-ast-grep` — Code search/replace
+- `/mcp-memory` — Persistent memory access
+- `/plan` — Write markdown plan to `.hermes/plans/`
+- `/plans-and-specs` — Draft implementation plans
+- `/create-implementation-plan` — Create detailed plans
+- `/implementation-plan` — Modify existing plans
+- `/executing-plans` — Execute written plans
+- `/writing-clearly-and-concisely` — Clear communication
+- `/subagent-driven-development` — Parallel subagent delegation
+
+**Protocol:**
+1. Load all 14 skills above
+2. Create implementation plan via `/create-implementation-plan`
+3. Verify plan with user
+4. Execute via `/executing-plans` or `/subagent-driven-development`
+5. Verify all gates pass before claiming completion
+
+---
+
+## 14. Architecture Documentation
 
 Generated architecture blueprints are available in `docs/Project_Architecture/`:
 

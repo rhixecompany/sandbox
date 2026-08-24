@@ -1,73 +1,96 @@
 {
-	"generated": "2026-08-12",
-	"method": "test-providers-models skill: live OpenRouter catalog + hermes auth + web-verify",
-	"authorized_providers": 10,
-	"free_only_config": true,
-	"primary_model": { "provider": "opencode-zen", "model": "deepseek-v4-flash-free" },
-	"vision_model": {
-		"provider": "openrouter",
-		"model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-		"context": 256000,
-		"verified": true
-	},
-	"fallback_chain": [
-		{ "provider": "opencode-zen", "model": "deepseek-v4-flash-free" },
-		{ "provider": "opencode-zen", "model": "nemotron-3-ultra-free" },
-		{ "provider": "opencode-zen", "model": "mimo-v2.5-free" },
-		{ "provider": "opencode-zen", "model": "ling-3.0-tiny-free" },
-		{ "provider": "opencode-zen", "model": "laguna-s-2.1-free" },
-		{ "provider": "opencode-zen", "model": "north-mini-code-free" },
-		{ "provider": "gemini", "model": "gemini-2.5-flash" },
-		{ "provider": "deepseek", "model": "deepseek-v4-flash" },
-		{ "provider": "huggingface", "model": "Qwen/Qwen3.5-35B-A3B" },
-		{ "provider": "ollama-cloud", "model": "nemotron-3-ultra" },
-		{ "provider": "xai", "model": "grok-4.20-reasoning" },
-		{ "provider": "openai-codex", "model": "gpt-5-mini" },
-		{ "provider": "openrouter", "model": "nvidia/nemotron-3-ultra-550b-a55b:free" }
-	],
-	"openrouter_429": {
-		"error": "Rate limit exceeded: free-models-per-day (X-RateLimit-Limit: 50, Remaining: 0)",
-		"reset_utc": "2026-08-13T00:00:00Z",
-		"remedy": "Daily free cap; purchase 10 credits for 1000/day, or wait for reset. OpenRouter placed LAST in fallback chain.",
-		"opencode_zen_affected": false
-	},
-	"openrouter_free_total": 19,
-	"openrouter_free_models": [
-		{ "id": "google/lyria-3-pro-preview", "context": 1048576, "type": "music" },
-		{ "id": "google/lyria-3-clip-preview", "context": 1048576, "type": "music" },
-		{ "id": "nvidia/nemotron-3.5-lightning:free", "context": 1000000 },
-		{ "id": "nvidia/nemotron-3-ultra-550b-a55b:free", "context": 1000000 },
-		{ "id": "inclusionai/ling-3.0-tiny:free", "context": 262144 },
-		{ "id": "poolside/laguna-s-2.1:free", "context": 262144 },
-		{ "id": "poolside/laguna-xs-2.1:free", "context": 262144 },
-		{ "id": "google/gemma-4-26b-a4b-it:free", "context": 262144 },
-		{ "id": "google/gemma-4-31b-it:free", "context": 262144 },
-		{ "id": "nvidia/nemotron-3-super-120b-a12b:free", "context": 262144 },
-		{ "id": "cohere/north-mini-code:free", "context": 256000 },
-		{ "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free", "context": 256000, "vision": true },
-		{ "id": "nvidia/nemotron-3-nano-30b-a3b:free", "context": 256000, "vision": true },
-		{ "id": "openrouter/free", "context": 200000 },
-		{ "id": "openai/gpt-oss-20b:free", "context": 131072 },
-		{ "id": "liquid/lfm-2.5-2.6b:free", "context": 128000 },
-		{ "id": "nvidia/nemotron-3.5-content-safety:free", "context": 128000 },
-		{ "id": "nvidia/nemotron-nano-12b-v2-vl:free", "context": 128000, "vision": true },
-		{ "id": "nvidia/nemotron-nano-9b-v2:free", "context": 128000, "vision": true }
-	],
-	"opencode_zen_free": [
-		"deepseek-v4-flash-free",
-		"nemotron-3-ultra-free",
-		"mimo-v2.5-free",
-		"ling-3.0-tiny-free",
-		"laguna-s-2.1-free",
-		"big-pickle",
-		"hy3-free(deprecated)"
-	],
-	"validation": {
-		"openrouter_ultra": "ok",
-		"openrouter_omni_vision": "ok",
-		"gemini_2.5_flash": "ok",
-		"deepseek_v4_flash": "ok",
-		"opencode_zen_default": "proxy-timeout-works-in-session",
-		"xai_grok": "proxy-slow-tier-valid"
-	}
+  "providers": [
+    {
+      "name": "opencode-zen",
+      "total_models": 7,
+      "free_models": 7,
+      "working_free_models": ["deepseek-v4-flash-free", "nemotron-3-ultra-free"],
+      "best_free_model": "deepseek-v4-flash-free",
+      "notes": "Primary provider for all 13 named profiles"
+    },
+    {
+      "name": "openrouter",
+      "total_models": 9,
+      "free_models": 9,
+      "working_free_models": [
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      ],
+      "best_free_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "notes": "Only provider with vision-capable free model (nano-omni)"
+    },
+    {
+      "name": "gemini",
+      "total_models": 1,
+      "free_models": 1,
+      "working_free_models": ["gemini-2.5-flash"],
+      "best_free_model": "gemini-2.5-flash",
+      "notes": "Vision + reasoning + 1M context"
+    },
+    {
+      "name": "ollama-cloud",
+      "total_models": 1,
+      "free_models": 1,
+      "working_free_models": ["nemotron-3-ultra"],
+      "best_free_model": "nemotron-3-ultra",
+      "notes": "Reasoning + 256K context"
+    },
+    {
+      "name": "deepseek",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "Blocked (402)"
+    },
+    {
+      "name": "huggingface",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "Blocked (400)"
+    },
+    {
+      "name": "nous",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "Blocked (403)"
+    },
+    {
+      "name": "xai",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "Auth failed (403)"
+    },
+    {
+      "name": "openai-codex",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "Rate limited (429)"
+    },
+    {
+      "name": "copilot",
+      "total_models": 0,
+      "free_models": 0,
+      "working_free_models": [],
+      "best_free_model": null,
+      "notes": "No free models"
+    }
+  ],
+  "summary": {
+    "total_authorized_providers": 10,
+    "providers_with_working_free_models": 4,
+    "total_working_free_models": 7,
+    "vision_capable_free_models": 2,
+    "reasoning_capable_free_models": 6
+  },
+  "timestamp": "2026-08-24T17:15:00Z"
 }
