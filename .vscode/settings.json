@@ -1,10 +1,4 @@
 {
-	"[python]": {
-		"editor.defaultFormatter": "charliermarsh.ruff"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -18,11 +12,17 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.wordWrap": "on"
 	},
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff"
+	},
 	"[shellscript]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
 	"[toml]": {
 		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -37,6 +37,7 @@
 	"editor.formatOnSaveMode": "file",
 	"editor.inlineSuggest.enabled": true,
 	"errorLens.enabled": true,
+	"extensions.ignoreRecommendations": false,
 	"files.associations": {
 		"*.css": "tailwindcss",
 		"*.scss": "tailwindcss",
@@ -44,44 +45,17 @@
 		"**/requirements/**/*.{txt,in}": "pip-requirements"
 	},
 	"files.exclude": {
-		"**/.venv": true,
 		"**/__pycache__": true,
 		"**/.pytest_cache": true,
+		"**/.venv": true,
 		"**/.worktrees": true
 	},
 	"markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
-	"markdownlint.config": {
-		"MD001": false,
-		"MD003": false,
-		"MD007": {
-			"indent": 2
-		},
-		"MD010": {
-			"code_blocks": false
-		},
-		"MD013": false,
-		"MD024": false,
-		"MD025": false,
-		"MD026": false,
-		"MD028": false,
-		"MD031": true,
-		"MD032": true,
-		"MD033": false,
-		"MD034": false,
-		"MD036": false,
-		"MD040": false,
-		"MD041": false,
-		"MD046": true,
-		"MD047": true,
-		"MD048": true,
-		"MD059": false,
-		"MD060": false
-	},
+	"markdownlint.configFile": ".markdownlint.jsonc",
 	"notebook.formatOnSave.enabled": true,
 	"python-envs.alwaysUseUv": true,
 	"python-envs.autoActivate": true,
 	"python.analysis.autoImportCompletions": true,
-	"python.analysis.typeCheckingMode": "basic",
 	"python.defaultInterpreterPath": "C:\\Users\\Alexa\\myvenv\\Scripts\\python.exe",
 	"ruff.lineLength": 120,
 	"ruff.lint.select": [
@@ -98,11 +72,11 @@
 	],
 	"search.exclude": {
 		"**/.venv": true,
-		"**/node_modules": true,
+		"**/.worktrees": true,
 		"**/dist": true,
-		"**/.worktrees": true
+		"**/node_modules": true
 	},
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
 	"terminal.integrated.profiles.windows": {
 		"Command Prompt": {
 			"icon": "terminal-cmd",
@@ -117,5 +91,7 @@
 			"source": "PowerShell"
 		}
 	},
-	"extensions.ignoreRecommendations": false
+	"workbench.browser.dataStorage": "workspace",
+	"workbench.browser.enableRemoteProxy": true,
+	"workbench.browser.experimentalUserTools.enabled": true
 }

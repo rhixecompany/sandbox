@@ -1,0 +1,101 @@
+[
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 1000000,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 1000000,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 256000,
+    "reasoning": true,
+    "vision": true,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "google/gemma-4-31b-it:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 262144,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 262144,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "openai/gpt-oss-20b:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 131072,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "deepseek/deepseek-r1:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 128000,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "meta-llama/llama-3.3-70b-instruct:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 128000,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "google/gemini-2.0-pro-exp-02-05:free",
+    "provider": "openrouter",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "openrouter.ai/api/v1/models",
+    "context_length": 1000000,
+    "reasoning": true,
+    "vision": true,
+    "knowledge_cutoff": "2024-06"
+  }
+]

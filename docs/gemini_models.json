@@ -1,0 +1,13 @@
+[
+  {
+    "id": "gemini-2.5-flash",
+    "provider": "gemini",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "inference-api.nousresearch.com/v1/models (via Google AI)",
+    "context_length": 1048576,
+    "reasoning": true,
+    "vision": true,
+    "knowledge_cutoff": "2024-06"
+  }
+]

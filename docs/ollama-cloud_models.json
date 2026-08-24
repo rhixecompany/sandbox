@@ -1,0 +1,13 @@
+[
+  {
+    "id": "nemotron-3-ultra",
+    "provider": "ollama-cloud",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "ollama.com/library/nemotron-3-ultra",
+    "context_length": 262144,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  }
+]

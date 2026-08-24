@@ -1,0 +1,79 @@
+[
+  {
+    "id": "deepseek-v4-flash-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 200000,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-07"
+  },
+  {
+    "id": "mimo-v2.5-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 262144,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "nemotron-3-ultra-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 1000000,
+    "reasoning": true,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "qwen3.6-plus-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 262144,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "minimax-m3-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 1000000,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "north-mini-code-free",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 131072,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  },
+  {
+    "id": "big-pickle",
+    "provider": "opencode-zen",
+    "prompt_cost": 0,
+    "completion_cost": 0,
+    "known_source": "opencode.ai/zen/v1/models",
+    "context_length": 131072,
+    "reasoning": false,
+    "vision": false,
+    "knowledge_cutoff": "2024-06"
+  }
+]

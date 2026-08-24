@@ -5,44 +5,49 @@
 	"MD001": false,
 	"MD002": false,
 	"MD003": false,
-	"MD024": { "siblings_only": true },
-	"MD018": false,
-	"MD019": false,
-	"MD025": false,
 	// Lists
 	"MD004": false,
 	"MD005": false,
-	"MD007": { "indent": 2 },
-	"MD029": false,
-	"MD030": false,
-	"MD032": true,
-	// Code/fences
-	"MD010": { "code_blocks": false },
-	"MD040": false,
-	"MD013": false,
-	"MD038": false,
-	"MD046": true,
-	// Links/images
-	"MD011": false,
-	"MD034": false,
-	"MD039": false,
-	"MD033": false,
-	"MD042": false,
-	"MD045": false,
-	"MD048": true,
-	// Tables
-	"MD060": false, // prettier owns table formatting; its aligned style conflicts with MD060 "aligned"
+	"MD007": {
+		"indent": 2
+	},
 	// Line length/spacing
 	"MD009": false,
+	// Code/fences
+	"MD010": {
+		"code_blocks": false
+	},
+	// Links/images
+	"MD011": false,
 	"MD012": false,
 	"MD013": false,
+	"MD018": false,
+	"MD019": false,
 	"MD022": true,
 	"MD023": true,
+	"MD024": {
+		"siblings_only": true
+	},
+	"MD025": false,
 	"MD026": false,
 	"MD027": false,
 	"MD028": false,
+	"MD029": false,
+	"MD030": false,
 	"MD031": true,
+	"MD032": true,
+	"MD033": false,
+	"MD034": false,
 	"MD036": false,
+	"MD038": false,
+	"MD039": false,
+	"MD040": false,
+	"MD042": false,
+	"MD045": false,
+	"MD046": true,
 	"MD047": true,
+	"MD048": true,
 	"MD059": false,
+	// Tables
+	"MD060": false // prettier owns table formatting; its aligned style conflicts with MD060 "aligned"
 }
