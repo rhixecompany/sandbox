@@ -1,2 +1,4 @@
+create a comprehensive implementation prompt,plan,scripts,skill that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation create a comprehensive implementation plan that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation.
 /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking  /mcp-filesytem , /mcp-ast-grep /mcp-memory /plan /plans-and-specs  /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development list,triage files both in the repo and in hermes root, and provide a summary of their purpose and any relevant details.
 dedupe,consolidate,delete files to remove duplicates and ensure consistency across the repository and Hermes root.
+**Implementation Prompt: Comprehensive Repository and Hermes Root Management**
