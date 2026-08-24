@@ -1,0 +1,399 @@
+{
+  "timestamp": "2026-08-24T23:18:23.524750",
+  "profiles": {
+    "alexa": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\SOUL.md",
+        "size": 2325,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:48.786401",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 alexa\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| alexa | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-ba"
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\memories\\USER.md",
+        "size": 1214,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.223177",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 alexa profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: alexa\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\memories\\MEMORY.md",
+        "size": 655,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.058855",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "code-architect": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\SOUL.md",
+        "size": 2222,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:48.872132",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 code-architect\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| code-architect | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\memories\\USER.md",
+        "size": 1232,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.275349",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 code-architect profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: code-architect\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- "
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\memories\\MEMORY.md",
+        "size": 664,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.104393",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "creative-director": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\SOUL.md",
+        "size": 2337,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:48.967384",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 creative-director\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| creative-director | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Ho"
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\memories\\USER.md",
+        "size": 1238,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.315900",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 creative-director profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: creative-director\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [prima"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\memories\\MEMORY.md",
+        "size": 667,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.143207",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "cto": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\SOUL.md",
+        "size": 2431,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.054181",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 cto\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| cto | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-bash) "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\memories\\USER.md",
+        "size": 1210,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.360206",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 cto profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: cto\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-free"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\memories\\MEMORY.md",
+        "size": 653,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.184103",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "default": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\SOUL.md",
+        "exists": false
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\memories\\USER.md",
+        "exists": false
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\memories\\MEMORY.md",
+        "exists": false
+      }
+    },
+    "designer": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\SOUL.md",
+        "size": 2377,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.158058",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 designer\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| designer | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 ("
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\memories\\USER.md",
+        "size": 1220,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.399863",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 designer profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: designer\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\memories\\MEMORY.md",
+        "size": 658,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.229455",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "dev": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\SOUL.md",
+        "size": 2377,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.266950",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 dev\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| dev | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-bash) "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\memories\\USER.md",
+        "size": 1210,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.439443",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 dev profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: dev\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-free"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\memories\\MEMORY.md",
+        "size": 653,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.266674",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "exec-assistant": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\SOUL.md",
+        "size": 2465,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.378004",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 exec-assistant\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| exec-assistant | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\memories\\USER.md",
+        "size": 1232,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.492673",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 exec-assistant profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: exec-assistant\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- "
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\memories\\MEMORY.md",
+        "size": 664,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.316390",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "ops": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\SOUL.md",
+        "size": 2373,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.479304",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 ops\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| ops | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-bash) "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\memories\\USER.md",
+        "size": 1210,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.535858",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 ops profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: ops\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-free"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\memories\\MEMORY.md",
+        "size": 653,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.356410",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "patient-tutor": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\SOUL.md",
+        "size": 2455,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.570696",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 patient-tutor\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| patient-tutor | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Wi"
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\memories\\USER.md",
+        "size": 1230,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.580244",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 patient-tutor profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: patient-tutor\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- de"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\memories\\MEMORY.md",
+        "size": 663,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.403988",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "pm": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\SOUL.md",
+        "size": 2409,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.665571",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 pm\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| pm | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-bash) | "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\memories\\USER.md",
+        "size": 1208,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.623301",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 pm profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: pm\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-free ("
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\memories\\MEMORY.md",
+        "size": 652,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.454008",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "qa": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\SOUL.md",
+        "size": 2448,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.760332",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 qa\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| qa | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 (git-bash) | "
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\memories\\USER.md",
+        "size": 1208,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.661671",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 qa profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: qa\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-flash-free ("
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\memories\\MEMORY.md",
+        "size": 652,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.499856",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "research-analyst": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\SOUL.md",
+        "size": 2409,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.839123",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 research-analyst\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| research-analyst | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host"
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\memories\\USER.md",
+        "size": 1236,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.707060",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 research-analyst profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: research-analyst\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\memories\\MEMORY.md",
+        "size": 666,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.555178",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    },
+    "security": {
+      "profile_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security",
+      "SOUL.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\SOUL.md",
+        "size": 2465,
+        "lines": 55,
+        "modified": "2026-08-20T05:29:49.941254",
+        "has_frontmatter": false,
+        "preview": "# SOUL.md \u2014 security\n\n| Profile | Owner | See Also |\n|---------|-------|----------|\n| security | Alexa | ~/SOUL.md (parent) |\n\n**Model:** deepseek-v4-flash-free (opencode-zen) | **Host:** Windows 11 ("
+      },
+      "USER.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\memories\\USER.md",
+        "size": 1220,
+        "lines": 26,
+        "modified": "2026-08-20T05:31:50.749079",
+        "has_frontmatter": true,
+        "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 security profile\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: security\n\n## Model\n- nemotron-3-ultra-free (opencode-zen) [primary]\n- deepseek-v4-"
+      },
+      "MEMORY.md": {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\memories\\MEMORY.md",
+        "size": 658,
+        "lines": 5,
+        "modified": "2026-08-20T05:32:07.603462",
+        "has_frontmatter": false,
+        "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nMulti-File Protocol (\u22655 files): Load 14 skills (/using-superpowers /brainstorming /user-communication-preferences /mcp-sequentia"
+      }
+    }
+  },
+  "root_files": {
+    "SOUL.md": {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\SOUL.md",
+      "size": 12135,
+      "lines": 253,
+      "modified": "2026-08-20T05:28:41.425453",
+      "has_frontmatter": false,
+      "preview": "# SOUL.md \u2014 Core Operating Principles\n\nYou are Hermes Agent, an intelligent AI assistant created by Nous Research. You\nare helpful, knowledgeable, and direct. You assist users with a wide range of\ntas"
+    },
+    "USER.md": {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md",
+      "size": 1817,
+      "lines": 39,
+      "modified": "2026-08-20T05:30:40.435595",
+      "has_frontmatter": true,
+      "preview": "---\nuser: Alexa\n---\n# USER.md \u2014 default profile\n\nPointer file. Canonical durable rules in MEMORY.md.\n\n## Identity\n- Name: Alexa | Workspace: ~/Desktop/SandBox | Profile: default\n\n## Environment Stack\n"
+    },
+    "MEMORY.md": {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md",
+      "size": 4272,
+      "lines": 35,
+      "modified": "2026-08-20T05:31:37.649841",
+      "has_frontmatter": false,
+      "preview": "Hermes memory store \u2014 \u00a7-delimited facts (no H1; MD041 false positive).\n\nbatch-skills-remediation: batch_skill_judge.py --threshold 100 = max verify. MSYS_NO_PATHCONV=1 for native Win Python.\u00a7\nSkill bu"
+    }
+  },
+  "workspace_files": {},
+  "agent_configs": {}
+}

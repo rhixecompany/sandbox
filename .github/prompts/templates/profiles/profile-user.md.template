@@ -1,0 +1,31 @@
+---
+# USER.md Template — Profile User Preferences
+
+user: {{PROFILE_OWNER}}
+---
+# USER.md — {{PROFILE_NAME}} profile
+
+## Identity
+- Name: {{PROFILE_OWNER}} | Workspace: {{WORKSPACE_PATH}} | Profile: {{PROFILE_NAME}}
+
+## Model
+- {{PROFILE_PRIMARY_MODEL}} [primary]
+- {{PROFILE_FALLBACK_MODEL}} [fallback]
+
+## Execution Preferences
+- Communication: concise bullets, lead with result, skip fluff
+- Code: TypeScript strict, JSDoc/docstring *why* not *what*
+- Skills: structured SKILL.md (YAML frontmatter + md body)
+- Hooks: ruff format+check --fix pre-commit
+- Execution: read→patch→verify, MCP-first, no backup files
+- Profile routing: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot
+
+## Multi-File Change Protocol (≥5 files)
+When >4 files modified, agent MUST load 14 skills:
+/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking /mcp-filesystem /mcp-ast-grep /mcp-memory /plan /plans-and-specs /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development
+Protocol: Load skills → create plan → verify → execute → verify gates.
+
+## Honcho Memory
+Active (hybrid mode). Use honcho_profile/context/reasoning/search.
+Interests: motorcycles (Harley Sportster 1200), family travel (Air Peace PNR 1J9A2F).
+Repo: rhixecompany/sandbox. Prompt quality: comprehensive, best practices, all MCP/skills.

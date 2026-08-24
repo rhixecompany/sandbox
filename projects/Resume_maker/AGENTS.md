@@ -1,42 +1,17 @@
-# Resume_maker — Job Docs Generator
+# Resume_maker — AGENTS.md
 
-## Architecture
+**Canonical reference:** See `../../AGENTS.md` for workspace-wide rules, conventions, and workflows.
 
-- **Type:** CLI document generator (JSON → Markdown + PDF)
-- **Pattern:** Pipeline Processing — parse → validate → normalize → generate → convert
-- **Entry Point:** `index.ts`
-- **Reference:** [Workflow Analysis](docs/Project_Architecture/Workflow_Analysis.md), [Exemplars](docs/Project_Architecture/exemplars.md)
+This file contains only Resume_maker-specific overrides and additions.
 
-Generates job-hunting documents (resume, cover letter, LinkedIn guide, interview prep) from structured JSON input. Bun-first, no framework dependencies.
+## Project-Specific Commands
 
-## Stack
+See `package.json` or `README.md` for build/test/lint commands specific to this project.
 
-- **Runtime:** Bun
-- **Language:** TypeScript (strict)
-- **Output:** Markdown + PDF (via `markdown-pdf`)
-- **Linting:** `bun run lint`, `lint:md`, `lint:spell`
+## Project-Specific Conventions
 
-## Commands
+Add any conventions that differ from the workspace root here.
 
-```bash
-bun install
-bun index.ts --input sample-input.json
-bun index.ts -i alexander-input.json -o resume -f both
-bun run typecheck && bun run lint
-bun index.ts --help
-```
+---
 
-## Conventions
-
-- CLI flags: `--input`/`-i`, `--output`/`-o`, `--format`/`-f` (markdown, pdf, both)
-- Validation in `validateResumeData()` before processing
-- Per-document generation is isolated (one failure doesn't block others)
-- Output goes to `output/` directory
-- Update README when CLI behavior changes
-- Align with `copilot-instructions.md` for conventions
-
-## Notes
-
-- Outputs under `output/`; PDF generation failure still saves Markdown
-- Smoke test: `scripts/smoke-resume.ts`
-- Snapshot tests for Markdown output format
+*For all shared rules, toolchain, routing, and conventions, see `../../AGENTS.md`.*

@@ -10,7 +10,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"CODE-SANDBOX": {
+		"code-sandbox": {
 			"command": [
 				"bunx",
 				"-y",
@@ -19,21 +19,24 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"CONTEXT7": {
+		"context7": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.context7.com/mcp"
 		},
-		"DJANGO": {
+		"django": {
 			"command": [
 				"bunx",
 				"-y",
 				"django-mcp"
 			],
 			"enabled": true,
-			"type": "local"
+			"type": "local",
+			"env": {
+				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
+			}
 		},
-		"DOCS": {
+		"docs": {
 			"command": [
 				"bunx",
 				"-y",
@@ -43,7 +46,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"FETCH": {
+		"fetch": {
 			"command": [
 				"bunx",
 				"-y",
@@ -52,7 +55,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"FILESYSTEM": {
+		"filesystem": {
 			"command": [
 				"bunx",
 				"-y",
@@ -64,21 +67,30 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"GITHUB": {
+		"github": {
 			"command": [
 				"bunx",
 				"-y",
 				"@modelcontextprotocol/server-github"
 			],
 			"enabled": true,
-			"type": "local"
+			"type": "local",
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+			}
 		},
-		"HONCHO": {
+		"honcho": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.honcho.dev/"
 		},
-		"MCP-DOCKER": {
+		"mindstudio": {
+			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
+			"args": ["mcp"],
+			"enabled": true,
+			"type": "local"
+		},
+		"mcp-docker": {
 			"command": [
 				"docker",
 				"mcp",
@@ -90,7 +102,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"MEMORY": {
+		"memory": {
 			"command": [
 				"bunx",
 				"-y",
@@ -99,30 +111,22 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"MINDSTUDIO": {
-			"command": [
-				"C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-				"mcp"
-			],
-			"enabled": true,
-			"type": "local"
-		},
-		"NEON": {
+		"neon": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.neon.tech/mcp"
 		},
-		"PARALLEL-SEARCH": {
+		"parallel-search": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://search.parallel.ai/mcp"
 		},
-		"PARALLEL-TASK": {
+		"parallel-task": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://task-mcp.parallel.ai/mcp"
 		},
-		"PLAYWRIGHT": {
+		"playwright": {
 			"command": [
 				"bunx",
 				"-y",
@@ -131,16 +135,19 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"POSTGRES": {
+		"postgres": {
 			"command": [
 				"bunx",
 				"-y",
 				"postgres-mcp"
 			],
 			"enabled": true,
-			"type": "local"
+			"type": "local",
+			"env": {
+				"DATABASE_URL": "${env:DATABASE_URL}"
+			}
 		},
-		"PYTEST": {
+		"pytest": {
 			"command": [
 				"bunx",
 				"-y",
@@ -149,7 +156,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"PYTHON-QUALITY": {
+		"python-quality": {
 			"command": [
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_server.py"
@@ -157,12 +164,12 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"SENTRY": {
+		"sentry": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.sentry.dev/mcp"
 		},
-		"SEQUENTIAL-THINKING": {
+		"sequential-thinking": {
 			"command": [
 				"bunx",
 				"-y",
@@ -171,17 +178,17 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"SMITHERY": {
+		"smithery": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.smithery.ai/alexanderrhixe30"
 		},
-		"TAVILY": {
+		"tavily": {
 			"enabled": true,
 			"type": "remote",
 			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
 		},
-		"TOOLING-CONFIG": {
+		"tooling-config": {
 			"command": [
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_server.py"
@@ -189,7 +196,7 @@
 			"enabled": true,
 			"type": "local"
 		},
-		"TOOLING-LINT": {
+		"tooling-lint": {
 			"command": [
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_server.py"

@@ -1,38 +1,17 @@
-# docs — Documentation Reference
+# docs — AGENTS.md
 
-## Architecture
+**Canonical reference:** See `../../AGENTS.md` for workspace-wide rules, conventions, and workflows.
 
-- **Type:** Documentation-only repository
-- **Pattern:** Static Markdown documentation
-- **Entry Point:** N/A (read-only reference)
-- **Reference:** [Workflow Analysis](docs/Project_Architecture/Workflow_Analysis.md), [Exemplars](docs/Project_Architecture/exemplars.md)
+This file contains only docs-specific overrides and additions.
 
-Contains no executable code. Serves as a centralized reference for dependency audit findings, research appendices, shared VS Code configuration, and architecture blueprints.
+## Project-Specific Commands
 
-## Contents
+See `package.json` or `README.md` for build/test/lint commands specific to this project.
 
-- `README.md` — project overview and navigation
-- `DEPENDENCY_AUDIT.md` — dependency audit findings across the workspace
-- `RESEARCH_APPENDIX.md` — supplementary research documentation
-- `docs/Project_Architecture/` — architecture workflow analysis and exemplars
-- `.vscode/` — shared VS Code workspace settings, launch configs, extensions, tasks
+## Project-Specific Conventions
 
-## Commands
+Add any conventions that differ from the workspace root here.
 
-```bash
-# No build/run commands — static documentation only
-# Markdown linting (inherited from root workspace):
-cd ../.. && bunx markdownlint-cli2 "projects/docs/**/*.md"
-```
+---
 
-## Conventions
-
-- GitHub-Flavored Markdown (GFM)
-- Keep docs DRY — reference rather than duplicate
-- Update `DEPENDENCY_AUDIT.md` when dependencies change
-- VS Code settings in `.vscode/` are shared across workspace
-
-## Notes
-
-- Pure documentation; no CI/CD pipeline needed
-- Cross-reference with root `AGENTS.md` and individual project AGENTS.md files
+*For all shared rules, toolchain, routing, and conventions, see `../../AGENTS.md`.*

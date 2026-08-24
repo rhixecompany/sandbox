@@ -7,24 +7,24 @@
 # Subproject AGENTS.md only contains project-specific overrides.
 #
 # REQUIRED VARIABLES:
-#   SandBox       - Workspace name (e.g., "SandBox")
-#   C:/Users/Alexa/Desktop/SandBox       - Absolute workspace path
-#   C:/Users/Alexa/AppData/Local/hermes          - Hermes home path
-#   2026-08-24        - Last verified date
+#   {{WORKSPACE_NAME}}       - Workspace name (e.g., "SandBox")
+#   {{WORKSPACE_ROOT}}       - Absolute workspace path
+#   {{HERMES_HOME}}          - Hermes home path
+#   {{VERIFIED_DATE}}        - Last verified date
 ---
 
-# SandBox — AGENTS.md
+# {{WORKSPACE_NAME}} — AGENTS.md
 
 Canonical agent guidance. First file agents should read. Other instruction files are thin stubs that defer here.
 
-> Verified 2026-08-24. No aspirational practices.
+> Verified {{VERIFIED_DATE}}. No aspirational practices.
 
 ---
 
 ## 1. Directory Map
 
 ```text
-SandBox/
+{{WORKSPACE_NAME}}/
 ├── AGENTS.md                # This file — canonical agent guidance (read first)
 ├── .hermes.md               # Hermes-specific project overrides (highest priority)
 ├── README.md                # Project overview
@@ -38,7 +38,7 @@ SandBox/
 │   ├── mcp-servers/         # Multi-language MCP server implementations
 │   ├── Python-projects/     # 18 standalone Python scripts
 │   └── ...                  # 10+ additional subprojects
-├── scripts/                 # Pointer README — canonical scripts live in C:/Users/Alexa/AppData/Local/hermes/scripts/
+├── scripts/                 # Pointer README — canonical scripts live in {{HERMES_HOME}}/scripts/
 ├── docs/                    # Documentation, architecture blueprints, audits
 ├── .hermes/                 # Hermes session state, plans, audits
 ├── .vscode/                 # VS Code workspace settings
@@ -78,7 +78,7 @@ SandBox/
 
 ### Workspace Pattern: Hermes-Centric Monorepo
 
-The SandBox is a multi-language monorepo workspace tightly integrated with **Hermes Agent**. Every subproject under `projects/` is autonomous — each has its own `AGENTS.md`, `package.json`, `README.md`, and build system. The workspace root provides shared config, tooling, and prompt libraries.
+The {{WORKSPACE_NAME}} is a multi-language monorepo workspace tightly integrated with **Hermes Agent**. Every subproject under `projects/` is autonomous — each has its own `AGENTS.md`, `package.json`, `README.md`, and build system. The workspace root provides shared config, tooling, and prompt libraries.
 
 ### Cross-Component Communication
 
@@ -94,14 +94,14 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 ### Workspace Root
 ```bash
 # Python setup (workspace root)
-cd C:/Users/Alexa/Desktop/SandBox
+cd {{WORKSPACE_ROOT}}
 python -m venv venv
 source venv/Scripts/activate  # or .venv/Scripts/activate
 pip install -r requirements.txt
 
 # Run root-level Python scripts (canonical location)
-python C:/Users/Alexa/AppData/Local/hermes/scripts/health_check.py
-python C:/Users/Alexa/AppData/Local/hermes/scripts/build_registry.py
+python {{HERMES_HOME}}/scripts/health_check.py
+python {{HERMES_HOME}}/scripts/build_registry.py
 
 # Bun/TypeScript (workspace root - minimal)
 bun install
@@ -135,7 +135,7 @@ Each subproject has its own AGENTS.md with specific commands. See subproject AGE
 ### Multi-Wrapper Parity
 Every script that could run cross-platform MUST have three wrappers:
 ```bash
-# Canonical: C:/Users/Alexa/AppData/Local/hermes/scripts/
+# Canonical: {{HERMES_HOME}}/scripts/
 scripts/operation.sh     # Bash (Linux/WSL/Git Bash)
 scripts/operation.ps1    # PowerShell (Windows)
 scripts/operation.bat    # Batch (Windows fallback)

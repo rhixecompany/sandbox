@@ -1,41 +1,17 @@
-# Bash — Automation Toolkit
+# Bash — AGENTS.md
 
-## Architecture
+**Canonical reference:** See `../../AGENTS.md` for workspace-wide rules, conventions, and workflows.
 
-- **Type:** Multi-phase automation toolkit (Bun/TypeScript + PowerShell + Bash)
-- **Pattern:** Phase-Based Orchestration — 6-phase pipeline: Discovery → Clone → Triage → Debug → Remediation → Cross-Reference
-- **Entry Points:** TypeScript scripts (`src/`), PowerShell orchestrator (`scripts/`), multi-wrapper (`.ps1`, `.sh`, `.bat`)
-- **Reference:** [Workflow Analysis](docs/Project_Architecture/Workflow_Analysis.md), [Exemplars](docs/Project_Architecture/exemplars.md)
+This file contains only Bash-specific overrides and additions.
 
-Bun 1.3.14+ + TypeScript strict + multi-platform shell wrappers (`.ps1`, `.sh`, `.bat`). Primary tooling root for the SandBox workspace; shares `.github/` CI workflows.
+## Project-Specific Commands
 
-## Stack
+See `package.json` or `README.md` for build/test/lint commands specific to this project.
 
-- **Runtime:** Bun 1.3.14+
-- **Language:** TypeScript (strict), PowerShell 5.1+, Bash
-- **Linting:** ESLint flat config (`eslint.config.mts`)
-- **Testing:** Vitest (TypeScript), `test-all.sh`, `tests/verify-dryrun.sh`
-- **CI:** `.github/workflows/bash-scripts-ci.yml`
+## Project-Specific Conventions
 
-## Commands
+Add any conventions that differ from the workspace root here.
 
-```bash
-bun install --frozen-lockfile || bun install
-bun run format && bun run typecheck && bun run lint:strict
-bash tests/verify-dryrun.sh && bash test-all.sh
-powershell -File orchestrator-unified.ps1 -Mode discover
-```
+---
 
-## Conventions
-
-- All destructive ops support `--help` and `--dry-run` for safe preview
-- Multi-wrapper parity: `.sh`, `.ps1`, `.bat` for every script
-- Logs to `logs/` with timestamps; no `.bak`/`.backup` copies
-- TypeScript strict mode; no `any` without explicit justification
-- Vitest for unit tests; shell tests via `test-all.sh`
-
-## Notes
-
-- Orchestrator supports modes: `discover`, `clone`, `triage`, `debug`, `remediation`, `cross-ref`
-- `.github/` CI workflows shared across workspace
-- Cache cleaning via `bun run cache-clean` (dry-run supported)
+*For all shared rules, toolchain, routing, and conventions, see `../../AGENTS.md`.*

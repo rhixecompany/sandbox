@@ -1,0 +1,626 @@
+{
+  "root": {
+    ".hermes.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
+      "size": 5336,
+      "lines": 90,
+      "modified": "2026-08-24T23:00:16.090284",
+      "has_frontmatter": false,
+      "preview": "# Hermes Agent Project Overrides\n\nProject context overrides per hierarchy: `.hermes.md` \u2192 `AGENTS.md` \u2192 `CLAUDE.md` \u2192 `.cursorrules`\n\n## Profiles\n\n| Profile           | Model                      | Pr"
+    },
+    "AGENTS.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md",
+      "size": 35242,
+      "lines": 638,
+      "modified": "2026-08-24T23:06:30.559717",
+      "has_frontmatter": false,
+      "preview": "# SandBox \u2014 AGENTS.md\n\nCanonical agent guidance. First file agents should read. Other instruction files are thin stubs that defer here.\n\n> Verified 2026-07-28. No aspirational practices.\n\n---\n\n## 1. D"
+    },
+    "CLAUDE.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md",
+      "size": 307,
+      "lines": 7,
+      "modified": "2026-08-24T23:05:39.087079",
+      "has_frontmatter": false,
+      "preview": "# CLAUDE.md\n\nClaude-specific behavior. All workspace rules in `AGENTS.md`.\n\n- Prefer `filesystem` MCP for file ops, `ast-grep` for search, `sequential-thinking` for multi-step tasks\n- All toolchain, r"
+    },
+    ".cursorrules": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules",
+      "size": 322,
+      "lines": 8,
+      "modified": "2026-08-24T22:46:45.113478",
+      "has_frontmatter": false,
+      "preview": "# .cursorrules\n\nCursor IDE rules. All workspace rules in `AGENTS.md`.\n\n- Code style: 2-space TS, 4-space Python, single-quotes TS, double-quotes Python\n- No `any`, no backup files, no `.env` writes\n- "
+    },
+    "copilot-instructions.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\copilot-instructions.md",
+      "exists": false
+    },
+    ".github/copilot-instructions.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\copilot-instructions.md",
+      "size": 25236,
+      "lines": 685,
+      "modified": "2026-08-24T22:49:26.917104",
+      "has_frontmatter": false,
+      "preview": "# Copilot Instructions \u2014 SandBox Monorepo\n\n**Canonical reference:** See `AGENTS.md` (general agent guidance), `.hermes.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).\n\n## Quick Start\n\n```bash\n# "
+    }
+  },
+  "subprojects": {
+    "Banking": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\AGENTS.md",
+        "size": 1185,
+        "lines": 43,
+        "modified": "2026-08-08T06:10:41.253263",
+        "has_frontmatter": false,
+        "preview": "# Banking \u2014 Fintech App\n\n## Architecture\n\n- **Type:** Next.js fintech application (banking dashboard)\n- **Pattern:** App Router with Drizzle ORM, Plaid/Dwolla integrations\n- **Reference:** [Workflow A"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\copilot-instructions.md",
+        "size": 1901,
+        "lines": 21,
+        "modified": "2026-08-08T06:10:41.268667",
+        "has_frontmatter": false,
+        "preview": "# Banking \u2014 Fintech App\n\n**Naming**: `dot.camelCase` for Server Actions; `PascalCase` for components; `camelCase` for utils/hooks; `dot.camelCase` for DAL; `snake_case` for database tables; `kebab-cas"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.github\\copilot-instructions.md",
+        "size": 984,
+        "lines": 45,
+        "modified": "2026-07-10T20:03:17.136465",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the Banking app.\n\n## Source of truth\n\n- `projects/Banking/AGENTS.md`\n- `README.md`\n- `package.json`\n- `src/database/`\n- `src/actions/`\n\n## Commands\n\nR"
+      }
+    },
+    "Bash": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\AGENTS.md",
+        "size": 1813,
+        "lines": 41,
+        "modified": "2026-07-10T05:13:50.274208",
+        "has_frontmatter": false,
+        "preview": "# Bash \u2014 Automation Toolkit\n\n## Architecture\n\n- **Type:** Multi-phase automation toolkit (Bun/TypeScript + PowerShell + Bash)\n- **Pattern:** Phase-Based Orchestration \u2014 6-phase pipeline: Discovery \u2192 C"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\copilot-instructions.md",
+        "size": 1673,
+        "lines": 19,
+        "modified": "2026-06-25T03:07:01.663989",
+        "has_frontmatter": false,
+        "preview": "# Bash \u2014 Automation Toolkit\n\n**Naming**: `kebab-case` for `.ts`, `.sh`, `.ps1`, `.bat` files; `camelCase` for variables/functions in TypeScript; `PascalCase` for types/interfaces; `UPPER_SNAKE_CASE` f"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\.github\\copilot-instructions.md",
+        "exists": false
+      }
+    },
+    "comicwise": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\AGENTS.md",
+        "size": 1162,
+        "lines": 43,
+        "modified": "2026-08-08T05:20:57.827146",
+        "has_frontmatter": false,
+        "preview": "# Comicwise \u2014 Comic Streaming\n\n## Architecture\n\n- **Type:** Next.js comic streaming platform\n- **Pattern:** App Router with Prisma ORM, Stripe subscriptions\n- **Reference:** [Workflow Analysis](docs/P"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\.cursorrules",
+        "size": 221,
+        "lines": 12,
+        "modified": "2026-06-12T03:12:47.374711",
+        "has_frontmatter": false,
+        "preview": "[package-manager]\ntool = pnpm\nlockfile = pnpm-lock.yaml\n\n[commands]\ninstall = pnpm install\ndev = pnpm dev\nbuild = pnpm build\nlint = pnpm lint\ntest = pnpm test\nformat = pnpm format\ntype-check = pnpm ty"
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\copilot-instructions.md",
+        "size": 1830,
+        "lines": 21,
+        "modified": "2026-08-08T05:20:57.858616",
+        "has_frontmatter": false,
+        "preview": "# Comicwise \u2014 Comic Streaming\n\n**Naming**: `PascalCase` for components; `camelCase` for utilities/hooks; `dot.camelCase` for Server Actions; `kebab-case` for route segments; `snake_case` for database "
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\.github\\copilot-instructions.md",
+        "size": 33545,
+        "lines": 861,
+        "modified": "2026-08-01T03:36:17.650031",
+        "has_frontmatter": false,
+        "preview": "# ComicWise - AI Agent & Developer Instructions\n\nComicWise \u2014 Next.js 16.1.6 manga/comic reader. React 19 Server Components, Drizzle ORM + PostgreSQL (Neon), NextAuth v5, Zustand, shadcn/Radix UI, Tail"
+      }
+    },
+    "cookiecutter-django-tailwind": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\AGENTS.md",
+        "size": 1770,
+        "lines": 51,
+        "modified": "2026-07-10T05:13:50.274208",
+        "has_frontmatter": false,
+        "preview": "# cookiecutter-django-tailwind\n\n## Architecture\n\n- **Type:** Django project template / cookiecutter generator\n- **Pattern:** Cookiecutter template with layered settings (base \u2192 local \u2192 production)\n- *"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.github\\copilot-instructions.md",
+        "size": 1122,
+        "lines": 40,
+        "modified": "2026-07-10T05:13:50.274208",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the cookiecutter template.\n\n## Source of truth\n\n- `projects/cookiecutter-django-tailwind/AGENTS.md`\n- `README.md`\n- generated-template files\n\n## Comma"
+      }
+    },
+    "Django-Scrapy-Selenium": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\AGENTS.md",
+        "size": 1648,
+        "lines": 51,
+        "modified": "2026-08-08T05:21:03.074983",
+        "has_frontmatter": false,
+        "preview": "# Django-Scrapy-Selenium \u2014 Scraping Platform\n\n## Architecture\n\n- **Type:** Django-based scraping platform with multiple scraping engines\n- **Pattern:** Django monolith with Scrapy spiders + Selenium a"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.cursorrules",
+        "size": 260,
+        "lines": 15,
+        "modified": "2026-06-29T14:06:31.581794",
+        "has_frontmatter": false,
+        "preview": "[package-manager]\ntool = pnpm\nlockfile = pnpm-lock.yaml\n\n[commands]\ninstall = pnpm install\ndev = pnpm dev\nbuild = pnpm build\nlint = pnpm lint\ntest = pnpm test\nformat = pnpm format\ntype-check = pnpm ty"
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\copilot-instructions.md",
+        "size": 2045,
+        "lines": 19,
+        "modified": "2026-08-08T05:21:03.343922",
+        "has_frontmatter": false,
+        "preview": "# Django-Scrapy-Selenium \u2014 Scraping Platform\n\n**Naming**: `snake_case` for Python files/variables/functions; `PascalCase` for Django models/classes; `UPPER_SNAKE_CASE` for settings/constants; camelCas"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.github\\copilot-instructions.md",
+        "size": 983,
+        "lines": 42,
+        "modified": "2026-08-08T05:21:03.565113",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the Django + Scrapy + Selenium platform.\n\n## Source of truth\n\n- `projects/Django-Scrapy-Selenium/AGENTS.md`\n- `README.md`\n- `backend/`\n- `frontend/`\n\n"
+      }
+    },
+    "docs": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\AGENTS.md",
+        "size": 1416,
+        "lines": 38,
+        "modified": "2026-08-15T18:48:41.042929",
+        "has_frontmatter": false,
+        "preview": "# docs \u2014 Documentation Reference\n\n## Architecture\n\n- **Type:** Documentation-only repository\n- **Pattern:** Static Markdown documentation\n- **Entry Point:** N/A (read-only reference)\n- **Reference:** "
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\.github\\copilot-instructions.md",
+        "exists": false
+      }
+    },
+    "ecom": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\AGENTS.md",
+        "size": 1302,
+        "lines": 48,
+        "modified": "2026-08-08T05:21:04.790091",
+        "has_frontmatter": false,
+        "preview": "# Ecom \u2014 Django + React Ecommerce\n\n## Architecture\n\n- **Type:** Dual-stack ecommerce platform (Django REST + React)\n- **Pattern:** DRF backend + React/Redux frontend, separate dev servers\n- **Referenc"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\copilot-instructions.md",
+        "size": 1971,
+        "lines": 19,
+        "modified": "2026-08-08T05:21:04.805990",
+        "has_frontmatter": false,
+        "preview": "# Ecom \u2014 Django + React Ecommerce\n\n**Naming**: `snake_case` for Python files/variables/functions; `PascalCase` for Django classes/models; `PascalCase` for React components; `camelCase` for JS variable"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.github\\copilot-instructions.md",
+        "size": 1003,
+        "lines": 41,
+        "modified": "2026-08-08T05:21:04.837624",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the ecommerce platform.\n\n## Source of truth\n\n- `projects/ecom/AGENTS.md`\n- `README.md`\n- `frontend/`\n- Django backend files\n\n## Commands\n\nRun from the"
+      }
+    },
+    "mcp-servers": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\AGENTS.md",
+        "size": 936,
+        "lines": 39,
+        "modified": "2026-08-15T18:48:41.064505",
+        "has_frontmatter": false,
+        "preview": "# MCP Servers \u2014 Agent Context\n\n## Overview\n\nMulti-language MCP (Model Context Protocol) server implementations. Each directory contains a complete, buildable MCP server in its respective language.\n\n##"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\.github\\copilot-instructions.md",
+        "exists": false
+      }
+    },
+    "profile": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\AGENTS.md",
+        "size": 1238,
+        "lines": 41,
+        "modified": "2026-07-10T05:13:50.288816",
+        "has_frontmatter": false,
+        "preview": "# Profile \u2014 Django Blog/CMS\n\n## Architecture\n\n- **Type:** Django blog/CMS with cloud media storage\n- **Pattern:** Standard Django monolith with CBVs, GCS for media\n- **Reference:** [Workflow Analysis]"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\.github\\copilot-instructions.md",
+        "size": 1033,
+        "lines": 40,
+        "modified": "2026-07-10T05:13:50.288816",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the profile/blog platform.\n\n## Source of truth\n\n- `projects/profile/AGENTS.md`\n- `README.md`\n- Django app files\n\n## Commands\n\nRun from the project roo"
+      }
+    },
+    "Python-projects": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\AGENTS.md",
+        "size": 1280,
+        "lines": 39,
+        "modified": "2026-07-10T05:13:50.290328",
+        "has_frontmatter": false,
+        "preview": "# Python-projects \u2014 18 Beginner Scripts\n\n## Architecture\n\n- **Type:** Collection of standalone Python scripts\n- **Pattern:** Single-file modular scripts, no framework\n- **Reference:** [Workflow Analys"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.github\\copilot-instructions.md",
+        "size": 881,
+        "lines": 35,
+        "modified": "2026-07-10T05:13:50.290328",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the Python scripts collection.\n\n## Source of truth\n\n- `projects/Python-projects/AGENTS.md`\n- `README.md`\n- individual script files\n\n## Commands\n\nRun f"
+      }
+    },
+    "Resume_maker": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\AGENTS.md",
+        "size": 1466,
+        "lines": 42,
+        "modified": "2026-07-10T05:13:16.793459",
+        "has_frontmatter": false,
+        "preview": "# Resume_maker \u2014 Job Docs Generator\n\n## Architecture\n\n- **Type:** CLI document generator (JSON \u2192 Markdown + PDF)\n- **Pattern:** Pipeline Processing \u2014 parse \u2192 validate \u2192 normalize \u2192 generate \u2192 convert\n"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\copilot-instructions.md",
+        "size": 1458,
+        "lines": 17,
+        "modified": "2026-06-25T03:07:25.184675",
+        "has_frontmatter": false,
+        "preview": "# Resume_maker \u2014 Job Docs Generator\n\n**Naming**: `kebab-case.ts` for files; `camelCase` for variables/functions; `PascalCase` for interfaces/types; `kebab-case.json` for input data; `UPPER_CASE.md` fo"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\.github\\copilot-instructions.md",
+        "size": 2361,
+        "lines": 59,
+        "modified": "2026-07-24T17:19:13.189025",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the Resume Maker CLI.\n\n## Source of truth\n\n- `Resume_maker/AGENTS.md`\n- `README.md`\n- `package.json`\n- `index.ts`\n\n## Commands\n\nRun from `Resume_maker"
+      }
+    },
+    "rhixecompany-comics": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\AGENTS.md",
+        "size": 1598,
+        "lines": 53,
+        "modified": "2026-08-15T18:48:41.111891",
+        "has_frontmatter": false,
+        "preview": "# RhixeCompany Comics \u2014 Dual-Stack Platform\n\n## Architecture\n\n- **Type:** Dual-stack web platform (Django backend + Next.js frontend)\n- **Pattern:** Two independent stacks sharing a PostgreSQL databas"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\copilot-instructions.md",
+        "size": 2163,
+        "lines": 23,
+        "modified": "2026-08-15T18:48:41.189709",
+        "has_frontmatter": false,
+        "preview": "# RhixeCompany Comics \u2014 Dual-Stack Platform\n\n**Naming**: `snake_case` for Python/Django files; `PascalCase` for Django classes/models; `PascalCase` for React components; `camelCase` for TypeScript hoo"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\.github\\copilot-instructions.md",
+        "size": 1229,
+        "lines": 44,
+        "modified": "2026-08-15T18:48:41.101707",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for Rhixecompany Comics.\n\n## Source of truth\n\n- `projects/rhixecompany-comics/AGENTS.md`\n- `README.md`\n- `backend/`\n- `frontend/`\n\n## Commands\n\nRun from t"
+      }
+    },
+    "rhixe_scans": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\AGENTS.md",
+        "size": 1628,
+        "lines": 54,
+        "modified": "2026-08-08T05:21:12.190970",
+        "has_frontmatter": false,
+        "preview": "# rhixe_scans \u2014 Comic Reader\n\n## Architecture\n\n- **Type:** Next.js comic reader platform\n- **Pattern:** App Router with Prisma, multiple payment providers, real-time features\n- **Reference:** [Workflo"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\copilot-instructions.md",
+        "size": 2128,
+        "lines": 21,
+        "modified": "2026-08-08T05:21:12.203446",
+        "has_frontmatter": false,
+        "preview": "# rhixe_scans \u2014 Comic Reader\n\n**Naming**: `PascalCase` for React components; `camelCase` for hooks and utilities; `kebab-case` for page segments and files; `snake_case` for database tables; `UPPER_SNA"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.github\\copilot-instructions.md",
+        "size": 903,
+        "lines": 41,
+        "modified": "2026-08-08T05:21:12.266445",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for Rhixescans.\n\n## Source of truth\n\n- `projects/rhixe_scans/AGENTS.md`\n- `README.md`\n- `src/`\n- `tests/`\n- `docs/`\n\n## Commands\n\nRun from the project roo"
+      }
+    },
+    "selenium_webdriver": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\AGENTS.md",
+        "size": 1279,
+        "lines": 41,
+        "modified": "2026-08-08T05:21:20.699124",
+        "has_frontmatter": false,
+        "preview": "# selenium_webdriver \u2014 Chrome Scraper\n\n## Architecture\n\n- **Type:** Node.js Selenium scraper for comics/manga\n- **Pattern:** Script-based scraping with explicit waits and error handling\n- **Reference:"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\copilot-instructions.md",
+        "size": 1630,
+        "lines": 19,
+        "modified": "2026-08-08T05:21:20.709183",
+        "has_frontmatter": false,
+        "preview": "# selenium_webdriver \u2014 Chrome Scraper\n\n**Naming**: `camelCase` for JavaScript variables/functions; `PascalCase` for classes; `UPPER_SNAKE_CASE` for constants; `kebab-case` for file names and directori"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\.github\\copilot-instructions.md",
+        "size": 864,
+        "lines": 37,
+        "modified": "2026-08-08T05:21:20.746834",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the Selenium scraping utility.\n\n## Source of truth\n\n- `projects/selenium_webdriver/AGENTS.md`\n- `README.md`\n- `src/`\n\n## Commands\n\nRun from the projec"
+      }
+    },
+    "university-libary-jsm": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\AGENTS.md",
+        "size": 1282,
+        "lines": 43,
+        "modified": "2026-08-08T05:21:20.800600",
+        "has_frontmatter": false,
+        "preview": "# University Library JSM\n\n## Architecture\n\n- **Type:** Next.js library management system\n- **Pattern:** App Router with Drizzle ORM, Neon serverless PostgreSQL, Redis caching\n- **Reference:** [Workflo"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\.github\\copilot-instructions.md",
+        "size": 900,
+        "lines": 41,
+        "modified": "2026-08-08T05:21:21.066880",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for BookWise.\n\n## Source of truth\n\n- `projects/university-libary-jsm/AGENTS.md`\n- `README.md`\n- `src/`\n\n## Commands\n\nRun from the project root:\n\n```bash\nb"
+      }
+    },
+    "xamehi": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\AGENTS.md",
+        "size": 1639,
+        "lines": 52,
+        "modified": "2026-08-08T05:21:21.331426",
+        "has_frontmatter": false,
+        "preview": "# xamehi \u2014 Dual-Backend + React\n\n## Architecture\n\n- **Type:** Legacy dual-backend app (Django + Express) + React frontend\n- **Pattern:** Three separate services: Django DRF API, Express server, React "
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\.github\\copilot-instructions.md",
+        "size": 947,
+        "lines": 41,
+        "modified": "2026-08-08T05:21:21.372927",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for Xamehi.\n\n## Source of truth\n\n- `projects/xamehi/AGENTS.md`\n- `README.md`\n- `manage.py`\n- `index.js`\n- `src/`\n\n## Commands\n\nRun from the project root:\n"
+      }
+    },
+    "xamehi.tv": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\AGENTS.md",
+        "size": 1425,
+        "lines": 49,
+        "modified": "2026-08-08T05:21:21.410506",
+        "has_frontmatter": false,
+        "preview": "# xamehi.tv \u2014 Django + React Streaming\n\n## Architecture\n\n- **Type:** Django REST + React streaming platform\n- **Pattern:** DRF backend + React 17 frontend (Material-UI, Redux)\n- **Reference:** [Workfl"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\copilot-instructions.md",
+        "size": 2001,
+        "lines": 19,
+        "modified": "2026-08-08T05:21:21.434615",
+        "has_frontmatter": false,
+        "preview": "# xamehi.tv \u2014 Django + React Streaming\n\n**Naming**: `snake_case` for Python files/variables/functions; `PascalCase` for Django models/classes; `PascalCase` for React components; `camelCase` for JS var"
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.github\\copilot-instructions.md",
+        "size": 1099,
+        "lines": 42,
+        "modified": "2026-08-08T05:21:21.475517",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for Xamehi TV.\n\n## Source of truth\n\n- `projects/xamehi.tv/AGENTS.md`\n- `README.md`\n- `frontend/`\n- Django backend files\n\n## Commands\n\nRun from the project"
+      }
+    },
+    "youtube-downloader": {
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\AGENTS.md",
+        "size": 1472,
+        "lines": 43,
+        "modified": "2026-07-10T05:13:50.296370",
+        "has_frontmatter": false,
+        "preview": "# youtube-downloader\n\n## Architecture\n\n- **Type:** Python CLI downloader for YouTube\n- **Pattern:** Single-file scripts with yt-dlp + curl_cffi; supports single video, playlist, and loop modes\n- **Ref"
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\CLAUDE.md",
+        "exists": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.cursorrules",
+        "exists": false
+      },
+      "copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\copilot-instructions.md",
+        "exists": false
+      },
+      ".github/copilot-instructions.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.github\\copilot-instructions.md",
+        "size": 1000,
+        "lines": 40,
+        "modified": "2026-07-10T05:13:50.294357",
+        "has_frontmatter": false,
+        "preview": "# Copilot Instructions\n\nProject-wide guidance for the YouTube downloader CLI.\n\n## Source of truth\n\n- `projects/youtube-downloader/AGENTS.md`\n- `README.md`\n- `main_*.py`\n- `test.py`\n\n## Commands\n\nRun f"
+      }
+    }
+  }
+}

@@ -1,44 +1,13 @@
-# Copilot Instructions
+# Copilot Instructions — rhixecompany-comics
 
-Project-wide guidance for Rhixecompany Comics.
+**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../.hermes.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
 
-## Source of truth
-
-- `projects/rhixecompany-comics/AGENTS.md`
-- `README.md`
-- `backend/`
-- `frontend/`
-
-## Commands
-
-Run from the project root:
+## Quick Start
 
 ```bash
-cd backend && python -m venv .venv
-cd backend && pip install -r requirements.txt
-cd backend && python manage.py migrate
-cd backend && python manage.py createsuperuser
-cd backend && python manage.py runserver
-cd frontend && bun install
-cd frontend && bun run dev
-docker compose up -d
-cd backend && python manage.py test
-cd frontend && bun run test
-cd backend && ruff check .
-cd frontend && bun run lint
-cd backend && python manage.py check --deploy
-cd frontend && bun run build
+# Subproject setup
+cd C:/Users/Alexa/Desktop/SandBox/projects/rhixecompany-comics
+# See project's package.json or README.md for specific commands
 ```
 
-## Architecture
-
-- Django backend and Next.js 16 frontend are separate surfaces in one product.
-- Scrapy and Selenium are inherited scraping/automation layers.
-- Docker Compose wires Django, PostgreSQL, Redis, Celery, and Next.js together.
-
-## Conventions
-
-- Keep backend/frontend/scraping changes separated when possible.
-- Use Django ORM, migrations, and DRF conventions on the backend.
-- Keep TypeScript and App Router code aligned with the inherited ComicWise patterns.
-- Respect robots.txt and scraping rate limits.
+*All conventions, workflows, and rules are in `../../AGENTS.md`.*
